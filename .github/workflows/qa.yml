@@ -1,0 +1,43 @@
+name: notes QA gate
+
+# The whole repo is validated by one command; this workflow runs exactly that command.
+# CONTRIBUTING.md defines "definition of done" as: this job green + the chapter's own
+# content bar met (figures, interleaved questions, checkpoint).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Validate every topic (markup, math, links, renderer tests)
+        run: python3 tools/check_all.py | tee qa.log
+
+      - name: topics.json must agree with the files on disk
+        run: |
+          python3 tools/check_all.py --update >/dev/null
+          if ! git diff --exit-code --quiet topics.json; then
+            echo "::error::topics.json is stale - run: python3 tools/check_all.py --update"
+            git diff topics.json | head -40
+            exit 1
+          fi
+
+      - name: No unfilled template placeholders in any page
+        run: |
+          if grep -rn --include='*.html' --exclude-dir=_templates --exclude-dir=.git '{{' . ; then
+            echo "::error::unfilled {{placeholders}} found above - finish them or delete the scaffold"
+            exit 1
+          fi

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════
+     CHAPTER TEMPLATE — copy to <topic>/NN-slug.html, then replace every {{PLACEHOLDER}}.
+     Read STRUCTURE.md (the layout contract) and CONTRIBUTING.md (the workflow) first.
+
+     Hard rules, all of them machine-checked by <topic>/tools/check.py:
+       • no external URLs — no CDN, no webfonts, no <img src="http…">. Diagrams are inline SVG.
+       • the three scripts below in this order: tex.js, pages.js, notes.js (all defer, all relative).
+       • <title>NN · Short label — <Topic>, from basics to Olympiad</title>  (pages.js reads the label
+         from here; run `python3 tools/setpages.py` after adding the file)
+       • math: <m>…</m> inline, <div class="eqd" data-tag="NN.k">…</div> for display, class "key" adds
+         the box for results worth memorising. No HTML tags inside math, write < as &lt;.
+       • every figure.fig block gets one figcaption whose first bold run is "Fig. NN.k".
+       • every div.q question gets a collapsible details.sol solution, or a pointer to the
+         solutions page if this is an exam paper.
+       • a chapter ends with: summary ("results to own"), <ul class="chks"> checkpoint, <p class="skip">.
+     ═══════════════════════════════════════════════════════════════════════════════════════ -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NN}} &#183; {{TITLE}} — {{TOPIC}}, from basics to Olympiad</title>
+<meta name="description" content="{{LEADONESENTENCE}}">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch {{NN}}</p></nav>
+<main>
+
+<p class="meta" id="top">
+<span class="badges"><span class="b j">JEE Advanced</span><span class="b o">INPhO</span><span class="b n">≈ 40 min · 6 questions</span></span>
+</p>
+<h1>{{NN}} · {{TITLE}}</h1>
+<p class="lead">{{Two or three sentences that say what the reader will be able to do afterwards, and what
+mistake this chapter exists to prevent. No "In this chapter we will…".}}</p>
+
+<h2>{{NN}}.1 {{First concept — name the quantity, not the topic}}</h2>
+
+<div class="box def"><p class="bt">Definition · {{the thing}}</p>
+<p>{{Say it in words first, then the symbol. State what must be held fixed for the definition to make sense —
+that is where exam questions bite.}}</p></div>
+
+<div class="box why"><p class="bt">Why {{the obvious step}} is true</p>
+<p>{{The reasoning the textbook skips. If the step has a name ("superposition", "uniqueness", "energy
+accounting"), use it, and show the alternative that fails.}}</p></div>
+
+<div class="eqd key" data-tag="{{NN}}.1">E = \frac{V}{d},\qquad C=\frac{Q}{V}</div>
+
+<p>{{Prose that derives, with every inequality or assumption spelled out: <m>d \ll \sqrt{A}</m>, "the field is
+uniform to first order", "we dropped the edge terms because…". Inline symbols always in <m>…</m>, never in
+plain italics.}}</p>
+
+<figure class="fig">
+<svg viewBox="0 0 640 200" role="img" aria-label="{{what the picture asserts}}">
+  <rect x="60" y="40" width="220" height="16" class="facc"/>
+  <rect x="360" y="40" width="220" height="16" class="fneg"/>
+  <line x1="120" y1="70" x2="120" y2="140" class="fld" marker-end="url(#ahb)"/>
+  <line x1="300" y1="70" x2="300" y2="140" class="fld" marker-end="url(#ahb)"/>
+  <text x="300" y="30" class="lbl">plate 1: <tspan class="fp">+Q</tspan></text>
+  <text x="470" y="30" class="lbl">plate 2: <tspan class="fneg">−Q</tspan></text>
+  <line x1="280" y1="170" x2="360" y2="170" class="dim"/>
+  <text x="300" y="190" class="mi sm">d</text>
+</svg>
+<figcaption><b>Fig. {{NN}}.1</b> — {{One sentence that says what to look at and what it proves. Caption the
+assertion, not the objects.}}</figcaption>
+</figure>
+
+<h2>{{NN}}.2 A question, asked before the formula is finished</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>{{Prompt, one sentence, no formula that gives it away}}</b><span class="diff">JEE main</span></div>
+<div class="bd">
+<p>{{Setup, then options for MCQs:}}</p>
+<ul class="opts"><li><b>A</b> {{option}}</li><li><b>B</b> {{option}}</li><li><b>C</b> {{option}}</li><li><b>D</b> {{option}}</li></ul>
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>{{Answer first: "B." Then the route, then a line that kills the other three, then a limit check.}}</p>
+<div class="eqd">\lim_{d\to0}\frac{Q}{V} \to \infty \quad\checkmark</div>
+</div></details>
+</div></div>
+
+<h2>{{NN}}.3 {{Advanced / Olympiad extension}}</h2>
+
+<div class="box trap"><p class="bt">The trap in this section</p>
+<p>{{Name the wrong answer students produce, the sentence that produces it, and the one-line reply.}}</p></div>
+
+<div class="ex"><p class="exh">Worked example {{NN}}.1 · {{title}}</p>
+<p>{{Statement.}} <b>Plan:</b> {{one sentence on the approach and why it is the approach.}}
+<b>Do:</b> {{steps, each with its justification.}} <b>Check:</b> {{a limit, a number, or a unit.}}</p></div>
+
+<h2>{{NN}}.4 Chapter summary — the results to own</h2>
+<div class="box thm"><p class="bt">{{Result}}</p>
+<div class="eqd key">F=\frac12V^{2}\frac{dC}{dx}</div>
+<p>{{When it is valid, when it is not, and the one-sentence derivation you can reproduce in an exam.}}</p></div>
+
+<h2>{{NN}}.5 Checkpoint</h2>
+<ul class="chks">
+<li>I can derive {{X}} from {{Y}} without looking.</li>
+<li>I can say why {{the shortcut}} fails when {{the condition}}.</li>
+<li>I can estimate {{the number}} to within a factor of two from memory.</li>
+</ul>
+
+<p class="skip">Next: <a href="{{NEXTFILE}}"><b>{{NEXTLABEL}} →</b></a> — {{one-line hook for the next chapter}}.</p>
+
+</main>
+</div>
+</body>
+</html>

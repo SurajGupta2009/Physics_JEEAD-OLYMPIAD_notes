@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "readme": "Registry of note-sets in this repo. tools/check_all.py verifies every number and every page list here against the files on disk, so this file is the closest thing to a table of contents that cannot lie. To work on a topic, add your entry (or claim a planned one) by setting owner and status — that is the whole coordination protocol; see CONTRIBUTING.md.",
+  "conventions": {
+    "folder": "one self-contained directory per topic, lowercase-kebab-case",
+    "pages": "index.html plus NN-slug.html (NN zero-padded, gaps allowed, order is numeric)",
+    "assets": "each topic ships its own assets/ (css, tex.js, notes.js, generated pages.js) so any page opens from file:// with no network",
+    "tools": "each topic ships its own tools/ (check.py, mathfix.py, setpages.py, test-tex.js); tools/check_all.py at the root runs the whole gate",
+    "counts": "figures/questions/solutions/math are mechanical counts of the markup, recomputed by check_all.py — never hand-edit them"
+  },
+  "topics": [
+    {
+      "slug": "capacitors",
+      "title": "Capacitors — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "capacitors/index.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "pages": [
+        "index.html",
+        "01-foundations.html",
+        "02-capacitance.html",
+        "03-energy-and-force.html",
+        "04-combinations.html",
+        "05-dielectrics.html",
+        "06-networks-and-transients.html",
+        "07-advanced-topics.html",
+        "08-playbook.html",
+        "09-olympiad-paper.html",
+        "10-olympiad-solutions.html",
+        "11-formula-sheet.html"
+      ],
+      "figures": 32,
+      "questions": 135,
+      "solutions": 64,
+      "math_spans": 3442,
+      "bytes_html": 553282,
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 245,
+        "minutes": 180,
+        "file": "09-olympiad-paper.html"
+      },
+      "deliberately_not_covered": [
+        "magnetic fields and inductance (only the L that limits di/dt at a capacitor's terminals)",
+        "quantum capacitance and tunnelling beyond the one-line caveat in ch7",
+        "full transmission-line / RF treatment (lumped π model only)",
+        "circuit simulation: no SPICE, all results are closed-form and checkable by hand"
+      ],
+      "next_candidates": [
+        "12 · noise, kT/C and measurement (dielectric absorption, 1/f, shielded cables)",
+        "13 · supercapacitors and electrochemistry in depth (EDL, Warburg, pseudocapacitance)",
+        "worked-problem chapter: 40 JEE-Advanced-only questions with timed hints"
+      ]
+    },
+    {
+      "slug": "thermodynamics",
+      "title": "Thermodynamics — first principles to Olympiad",
+      "status": "planned",
+      "owner": null,
+      "entry": "thermodynamics/index.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "Suggestion only — claim it by filling this entry in and running tools/new_topic.py thermodynamics."
+    },
+    {
+      "slug": "rotational-mechanics",
+      "title": "Rigid-body rotation — first principles to Olympiad",
+      "status": "planned",
+      "owner": null,
+      "entry": "rotational-mechanics/index.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "Suggestion only — same claiming procedure as above."
+    }
+  ]
+}
