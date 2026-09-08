@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11 &#183; Formula sheet — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="A three-page printable summary of the whole capacitors course: geometry, networks, energy and force, dielectrics, transients and AC, and the advanced toolbox, with the traps and the numbers to memorise.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Sheet · print me</p></nav>
+<main class="sheet">
+<p class="meta" id="top">
+<span class="badges"><span class="b n">3 pages A4</span><span class="b j">JEE</span><span class="b o">INPhO</span></span>
+&nbsp;<button class="btn" onclick="window.print()">Print / save as PDF</button>
+</p>
+<h1>Capacitors — the whole course on three pages</h1>
+
+<div class="pg">
+<h2>1 · Definitions and laws</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S1">C=\frac{Q}{V},\qquad Q=CV,\qquad
+\vec D=\varepsilon_0\vec E+\vec P=\varepsilon\vec E\ (\text{linear})</div>
+<ul class="tight">
+<li><b>Everything is linear</b> because <m>\nabla^{2}V=0</m> is: doubling the charges doubles <m>V</m>, so <m>C</m>
+is a pure <em>geometry</em> number (independent of <m>Q,V</m>), and superposition is legal.</li>
+<li><b>Two-terminal only</b>: <m>C=Q/V</m> is defined <em>between named conductors</em>. A third conductor present
+but unmentioned makes the number undefined — say "with the case grounded".</li>
+<li><b>Boundary conditions</b>: <m>V</m> continuous (unless a surface double layer),
+<m>D_{n,2}-D_{n,1}=\sigma_f</m>, <m>E_{t,1}=E_{t,2}</m>, and inside a conductor
+<m>E=0</m>, <m>V</m> constant.</li>
+<li><b>Gauss with <m>D</m></b>: <m>\oint\vec D\cdot d\vec a=Q_{f,\text{in}}</m> — free charge only, which is why a
+dielectric never changes <m>D</m> at fixed free charge, only <m>E=</m>…<m>/\kappa\varepsilon_0</m>.</li>
+<li><b>Energy</b>: <m>U=\tfrac12CV^{2}=Q^{2}/2C=\tfrac12QV</m>; density
+<m>u=\tfrac12\vec D\cdot\vec E=\tfrac12\varepsilon_0\kappa E^{2}</m>.</li>
+</ul>
+</div>
+<div>
+<table class="tb">
+<thead><tr><th>geometry</th><th class="e"><m>C</m> (or per unit length)</th></tr></thead>
+<tbody>
+<tr><td>parallel plates, area <m>A</m>, gap <m>d</m></td><td class="e"><m>\varepsilon_0A/d</m> (ignore fringing for
+<m>d\ll\sqrt A</m>)</td></tr>
+<tr><td>plates, metal slab <m>t</m> inside</td><td class="e"><m>\varepsilon_0A/(d-t)</m></td></tr>
+<tr><td>plates, dielectric slab <m>t,\kappa</m></td><td class="e"><m>\varepsilon_0A/\left(d-t+t/\kappa\right)</m></td></tr>
+<tr><td>coax, <m>a\to b</m></td><td class="e"><m>2\pi\varepsilon_0L/\ln(b/a)</m></td></tr>
+<tr><td>concentric spheres <m>a\to b</m></td><td class="e"><m>4\pi\varepsilon_0ab/(b-a)</m></td></tr>
+<tr><td>isolated sphere <m>R</m></td><td class="e"><m>4\pi\varepsilon_0R</m> (the second plate is infinity)</td></tr>
+<tr><td>two equal cylinders, <m>a</m>, axes <m>d</m></td><td class="e"><m>\pi\varepsilon_0L/\operatorname{arcosh}(d/2a)</m></td></tr>
+<tr><td>wire <m>a</m>, height <m>h</m>, over a plane</td><td class="e"><m>2\pi\varepsilon_0L/\operatorname{arcosh}(h/a)</m></td></tr>
+<tr><td>isolated disc, radius <m>a</m></td><td class="e"><m>8\varepsilon_0a</m></td></tr>
+<tr><td>thin needle, half-length <m>c</m>, radius <m>a</m></td><td class="e"><m>4\pi\varepsilon_0c/\ln(2c/a)</m></td></tr>
+<tr><td>sphere <m>a</m>, height <m>h</m>, over a plane</td>
+<td class="e"><m>4\pi\varepsilon_0a\sinh\alpha\sum_{n\ge1}\left(\sinh n\alpha\right)^{-1}</m>,
+<m>\cosh\alpha=h/a</m></td></tr>
+<tr><td><m>n</m> interleaved plates</td><td class="e"><m>(n-1)\varepsilon_0A/d</m></td></tr>
+<tr><td>parallel-plate <em>with</em> fringing (guard ring removes it)</td><td class="e">adds
+<m>\sim0.3\varepsilon_0d</m> per unit length of edge</td></tr>
+</tbody></table>
+<p class="note">Every 3-D isolated capacitance is <m>\varepsilon_0\times</m>a length; every 2-D one has a logarithm
+with a <em>dimensionless</em> argument. If your answer violates this, stop and fix it.</p>
+</div>
+</div>
+
+<h2>2 · Networks</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S2">C_{\text{ser}}=\left(\sum_iC_i^{-1}\right)^{-1},\qquad
+C_{\text{par}}=\sum_iC_i,\qquad Q_i=C_{\text{ser}}V\ \text{in series}</div>
+<ul class="tight">
+<li><b>Series is about the island</b>: two capacitors are in series only if the node between them is isolated
+(then they carry equal <m>\Delta Q</m>, and equal <m>Q</m> too if they started uncharged or equal).</li>
+<li><b>Voltage divides inversely</b>: <m>V_1:V_2=1/C_1:1/C_2</m>; charges divide directly at common voltage.</li>
+<li><b>Bridge balance</b>: <m>C_1/C_2=C_3/C_4</m> (same algebra as resistors, since
+<m>Z\propto1/C</m> inverts and the ratio inverts back). Off balance, charge the diamond, don't reduce it.</li>
+<li><b>Symmetry</b>: prove two nodes are equipotential ⇒ merge them (parallel); or that a branch carries no current
+⇒ delete it. A bridge arm at the mean potential can be shorted.</li>
+<li><b>Δ–Y for capacitors</b>: <m>C_{ij}=C_iC_j/(C_1+C_2+C_3)</m> (star→mesh) — the reciprocal of the resistor
+rule.</li>
+<li><b>Cube of <m>C</m>'s</b>: edge <m>6C/5</m>, face diagonal <m>4C/3</m>, body diagonal <m>12C/7</m>.</li>
+<li><b>Infinite ladder</b> (series <m>C</m>, shunt <m>C</m>): <m>C_\infty=0.618C</m>, error ×0.146 per
+section.</li>
+</ul>
+</div>
+<div>
+<div class="eqd" data-tag="S3">Q_i=\sum_jc_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad c_{ij}\le0\ (i\ne j),\qquad
+U=\tfrac12\vec V^{T}\mathbf c\vec V</div>
+<ul class="tight">
+<li><b>Eliminate what you don't control</b>: a floating conductor <m>k</m> gives
+<m>c_{ij}^{\text{red}}=c_{ij}-c_{ik}c_{kj}/c_{kk}</m>. Series, Δ–Y and shielding are all this one line.</li>
+<li><b>Two monotonicities</b>: adding any conductor increases <m>C</m>; <em>earthing</em> it increases <m>C</m>
+further. A zero-thickness floating sheet on an existing equipotential is the equality case.</li>
+<li><b>Node-charge form</b> (the discrete Laplace equation): <m>Q_i=\sum_jC_{ij}(V_i-V_j)</m>; for a network with no
+source on an island, <m>\sum_{\text{plates at node}}Q=0</m>. That single equation beats three loop equations.</li>
+</ul>
+<div class="box thm"><p class="bt">Reciprocity and its two daughters</p>
+<div class="eqd">\sum_iQ_iV_i'=\sum_iQ_i'V_i\qquad\Rightarrow\qquad
+Q_1=-q\frac{d-x}{d},\qquad i_{\text{ind}}=q\,\vec v\cdot\vec E^{w}</div>
+<p>Induced charge without the field; the Ramo/Shockley current of a moving charge, with
+<m>\vec E^{w}</m> the field computed with the receiving electrode at 1 V and all others grounded.</p></div>
+</div>
+</div>
+</div>
+
+<div class="pg">
+<h2>3 · Energy, force, pressure</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S4">\delta W_{\text{mech}}=-\,dU\big|_Q=+\tfrac12V^{2}\,dC\big|_V,
+\qquad F=\frac12V^{2}\frac{dC}{dx}</div>
+<ul class="tight">
+<li>The force formula <m>F=\tfrac12V^{2}dC/dx</m> is valid <em>with the instantaneous</em> <m>V</m> in both cases;
+what differs is the <em>energy ledger</em>: at fixed <m>V</m> the source supplies <m>V^{2}dC</m>, twice the field's
+gain, and the extra half is what you can extract as work.</li>
+<li><b>Plate pressure</b>: <m>p=\tfrac12\varepsilon_0E^{2}=\sigma^{2}/2\varepsilon_0</m> — never
+<m>F=QE</m>; a plate does not act on itself, so <m>F=\tfrac12QE</m>.</li>
+<li><b>Slab pulled in</b> (area <m>A</m>, width <m>w</m>, gap <m>d</m>):
+<m>F=\tfrac12\varepsilon_0(\kappa-1)wV^{2}/d</m>, independent of how far it is in.</li>
+<li><b>Meniscus between plates</b>:
+<m>h=\varepsilon_0(\kappa-1)V^{2}/(2\rho gd^{2})</m> — <m>\propto V^{2}/d^{4}</m>.</li>
+<li><b>Liquid droplet in a non-uniform field</b>: <m>F=\tfrac12\alpha\nabla E^{2}</m>,
+<m>\alpha=4\pi\varepsilon_0a^{3}(\kappa-1)/(\kappa+2)</m>.</li>
+<li><b>Two-capacitor joining</b>: <m>\boxed{\text{loss}=\tfrac12C_{\text{ser}}\left(\Delta V\right)^{2}}</m>,
+independent of the wire's resistance. Charging an uncharged capacitor from a cell:
+the heat is <m>=\tfrac12CV^{2}</m> — the same factor, from the same cause.</li>
+</ul>
+</div>
+<div>
+<div class="box thm"><p class="bt">The fold that ends careers (and capacitors)</p>
+<p>Any energy of the form <m>\Pi=a\xi^{m}-b\xi^{-n}</m> loses its minimum at one point. Parallel-plate MEMS actuator:
+<m>x=\ell_0/3</m> at <m>V_{\text{pi}}^{2}=8k\ell_0^{3}/(27\varepsilon_0A)</m>; charged drop:
+<m>Q_R^{2}=64\pi^{2}\varepsilon_0\gamma R^{3}</m>. Both are the same calculus; the practical statements are
+"stroke ≤ 1/3 of the gap" and "an electrospray drop fissions at <m>\approx4e</m> per nm of radius".</p></div>
+<table class="tb">
+<thead><tr><th>quantity</th><th class="e">formula</th><th class="e">order of magnitude</th></tr></thead>
+<tbody>
+<tr><td>field at a sharp tip</td><td class="e"><m>E_{\text{tip}}\approx V/\rho</m></td><td class="e"><m>\rho=20</m> µm at
+800 V ⇒ 40 MV/m</td></tr>
+<tr><td>max energy density</td><td class="e"><m>u=\tfrac12\varepsilon_0\kappa E_b^{2}</m></td>
+<td class="e">film 5, mica 0.24, class-2 ceramic 0.04 J/cm³</td></tr>
+<tr><td>smallest air gap for self-limiting voltage</td><td class="e">Paschen minimum</td>
+<td class="e"><m>\approx330</m> V at <m>pd\approx1</m> Pa·m</td></tr>
+<tr><td>terminal limit</td><td class="e"><m>C/V_{\max}=4\pi\varepsilon_0\kappa/E_b</m></td>
+<td class="e">6 aF/V in mica</td></tr>
+<tr><td>thermal noise on <m>C</m></td><td class="e"><m>V_{\text{rms}}=\sqrt{kT/C}</m></td>
+<td class="e">64 µV at 1 pF</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<h2>4 · Dielectrics</h2>
+<div class="grid">
+<div>
+<ul class="tight">
+<li><b>Polarisation</b>: <m>\vec P=\varepsilon_0\chi_e\vec E</m>, <m>\kappa=1+\chi_e</m>; bound charges
+<m>\sigma_b=\vec P\cdot\hat n</m>, <m>\rho_b=-\vec\nabla\cdot\vec P</m>.</li>
+<li><b>Molecular</b>: <m>\alpha_e=e^{2}/m\omega_0^{2}\sim4\pi\varepsilon_0a^{3}</m> (electronic), orientational
+<m>\alpha_o=p^{2}/3kT</m>. Hence <m>\kappa-1\propto N/T</m> for a gas: the basis of capacitive density, pressure and
+humidity sensing.</li>
+<li><b>Clausius–Mossotti</b>: <m>(\kappa-1)/(\kappa+2)=N\alpha/3\varepsilon_0</m>; the <m>2</m> is the sphere's
+depolarising factor <m>L=1/3</m>. Catastrophe (<m>\kappa\to\infty</m>) at <m>N\alpha\to3\varepsilon_0</m>.</li>
+<li><b>Local field</b> <m>E_{\text{loc}}=E+P/3\varepsilon_0</m> (Lorentz), which is what turns
+<m>\alpha\to\kappa</m> into the relation above.</li>
+<li><b>Any ellipsoidal inclusion</b>:
+<m>E_{\text{in}}=E_0/\left[1+L\left(\varepsilon_i/\varepsilon_m-1\right)\right]</m>,
+<m>L_1+L_2+L_3=1</m>. Sphere 1/3; needle along the axis → 0; disc across → 1. A <em>disc void</em> in a ceramic
+therefore sees <m>\kappa E_0</m> and a <em>needle void</em> along the field sees <m>E_0</m>.</li>
+<li><b>Field refraction</b>: <m>\tan\theta_1/\tan\theta_2=\varepsilon_1/\varepsilon_2</m>; at a dielectric interface
+with no free charge, <m>D_n</m> is continuous, so the <em>normal</em> component jumps by <m>\kappa_2/\kappa_1</m>.</li>
+<li><b>Two layers in series</b>: <m>E_1/E_2=\varepsilon_2/\varepsilon_1</m> at fixed <m>D</m> (the "field goes to the
+weak material" rule — hence a void in a composite takes almost all the voltage.</li>
+</ul>
+</div>
+<div>
+<ul class="tight">
+<li><b>Debye response</b>:
+<m>\kappa(\omega)=\kappa_\infty+\dfrac{\kappa_s-\kappa_\infty}{1+i\omega\tau}</m>;
+<m>\kappa''</m> peaks at <m>\omega\tau=1</m>, <m>\tan\delta</m> at
+<m>\omega\tau=\sqrt{\kappa_s/\kappa_\infty}</m>. Water: <m>\tau=8.3</m> ps ⇒ peak at 19 GHz (microwave ovens run at
+2.45 GHz for <em>penetration</em>, not resonance).</li>
+<li><b>Losses</b>: <m>P/V=\omega\varepsilon_0\kappa\tan\delta E^{2}</m>;
+<m>D=\tan\delta=1/\omega C R_p=\omega CR_s</m>; <m>Q=1/\tan\delta</m>.</li>
+<li><b>Dielectric absorption</b>: a spread of <m>\tau</m>'s means a discharged capacitor recovers a fraction of its old
+voltage in minutes — a measurement artefact (sample-and-hold) and a safety hazard.</li>
+<li><b>Breakdown</b>: intrinsic <m>\sim</m>1 V per Å of bond ⇒ a few hundred MV/m ideal; practical
+<m>10</m>–<m>700</m> MV/m for films; air 3 kV/mm; Paschen <m>V_b=f(pd)</m> with a minimum near 330 V
+(<m>pd\approx1</m> Pa·m for air) — so <b>no air gap at any pressure can spark below ≈330 V</b>.</li>
+<li><b>Electrostriction / pressure</b>: <m>p=\tfrac12\varepsilon_0E^{2}</m> in a liquid;
+force on a meniscus or a droplet follows from it.</li>
+<li><b> Piezo &amp; pyro</b>: actuator stroke <m>\Delta L=d_{33}V/t</m>; generator voltage
+<m>V=d_{33}Ft/\varepsilon_0\kappa A</m>; pyroelectric current <m>i=A\,dP_s/dT</m>. Ferroelectrics: hysteresis loop
+with remanent <m>P_r</m>, <m>\kappa\sim10^{3}\text{–}10^{4}</m>, Curie point where <m>\kappa\to\infty</m> (soft mode);
+class-2 ceramics are ferroelectric, which is why they are <m>V</m>-dependent, <m>T</m>-dependent and
+microphonic.</li>
+</ul>
+<table class="tb">
+<thead><tr><th>material</th><th class="e"><m>\kappa</m></th><th class="e"><m>E_b</m> MV/m</th><th class="e"><m>u</m> J/cm³</th></tr></thead>
+<tbody>
+<tr><td>vacuum / air (STP)</td><td class="e">1 / 1.00059</td><td class="e">3</td><td class="e">0.04</td></tr>
+<tr><td>PTFE / polypropylene</td><td class="e">2.1 / 2.3</td><td class="e">60 / 700</td><td class="e">0.1 / 5</td></tr>
+<tr><td>glass / mica / alumina</td><td class="e">6 / 5.4 / 9</td><td class="e">30 / 100 / 15</td><td class="e">0.05 / 0.24 / 0.1</td></tr>
+<tr><td>TiO₂ / SrTiO₃</td><td class="e">90 / 300</td><td class="e">8 / 6</td><td class="e">0.03 / 0.01</td></tr>
+<tr><td>water (20 °C)</td><td class="e">80</td><td class="e">≈1 (ionic)</td><td class="e">≪1</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+
+<div class="pg">
+<h2>5 · Time: transients and sinusoids</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S5">V_C(t)=V_\infty+\left(V_0-V_\infty\right)e^{-t/\tau},\qquad \tau=R_{\text{th}}C</div>
+<ul class="tight">
+<li><b>Three numbers only</b>: <m>V_C(0^{+})</m> (continuous across the switch — finite power),
+<m>V_C(\infty)</m> (capacitor branch open, solve the resistor graph), <m>\tau</m> (resistance <em>seen by C</em> with
+sources killed). Kill = voltage source shorted, current source opened.</li>
+<li><b>Charge through a branch</b>: enclose one side in a surface cutting that branch once and nothing else —
+<m>Q_{\text{branch}}=\sum_{\text{plates inside}}\Delta Q</m>. Endpoint data, no integration.</li>
+<li><b>Heat</b>: <m>\tfrac12CV^{2}</m> for a step charge (any <m>R</m>); <m>\approx RCV^{2}/T</m> for a ramp of duration
+<m>T</m>; <m>P_R=P_C</m> at <m>V_C=V/2</m>, <m>t=\tau\ln2</m>, with ¾ of the heat already gone.</li>
+<li><b><m>V_C</m> may jump only if</b> a source or another capacitor <em>forces</em> it; then conserve <m>Q</m> on the
+island, not <m>V</m>.</li>
+<li><m>n</m> capacitors ⇒ up to <m>n</m> exponentials (<m>\tau_k^{-1}=\lambda_k(\mathbf C^{-1}\mathbf G)</m>);
+one exponential only if a symmetry or a compensation hides the rest.</li>
+<li><b>Compensated divider</b>: <m>R_1C_1=R_2C_2</m> makes the step response flat; else
+<m>\tau=(R_1\| R_2)(C_1+C_2)</m>, <m>V(0^{+})=V_sC_1/(C_1+C_2)</m>,
+<m>V(\infty)=V_sR_2/(R_1+R_2)</m>.</li>
+<li><b>Relaxation oscillator</b>: <m>T=RC\ln\frac{V-V_{lo}}{V-V_{hi}}</m>; 555 (symmetric) <m>T=1.386RC</m>;
+oscillates only if <m>V&gt;V_{hi}</m> and <m>r&lt;RV_{lo}/(V-V_{lo})</m>.</li>
+<li><b>Ripple</b>: <m>C\ge I_{\text{load}}T_{\text{rip}}/\Delta V_{\max}</m>; the shortcut
+<m>\Delta V=V_0T/RC</m> needs <m>RC\ge10T</m>.</li>
+</ul>
+</div>
+<div>
+<div class="eqd key" data-tag="S6">\underline{Z_C=\frac1{i\omega C}},\qquad
+H(\omega)=\frac{1}{1+i\omega\tau},\qquad f_{-3\text{dB}}=\frac1{2\pi\tau},\qquad t_r=\frac{0.35}{f_c}</div>
+<ul class="tight">
+<li>At <m>\omega\tau=1</m>: <m>|H|=1/\sqrt2</m>, half the power, <m>45^\circ</m> of lag. All three at once is what
+proves a filter has a single pole.</li>
+<li>A square wave of period <m>\gg\tau</m> shows exponentials; of period <m>\ll\tau</m> it is differentiated — same
+equation, opposite ends.</li>
+<li><b>Distributed electrode</b> (porous, Warburg):
+<m>Z=(1-i)\sqrt{r/2\omega c}</m>, <m>Q\propto\sqrt t</m> until <m>t\sim rc\ell^{2}</m>,
+<m>R_{\text{ESR}}=r\ell/3</m>, <m>E/P\propto rc\ell^{2}</m>.</li>
+<li><b>AC bridge</b>: balance means <m>Z_1/Z_2=Z_3/Z_4</m> — <em>two</em> real conditions, hence two controls.</li>
+</ul>
+<div class="box def"><p class="bt">When the model breaks (say it, don't assume it)</p>
+<ul class="tight">
+<li>Gap below a few nm: tunnelling and Fowler–Nordheim emission; <m>C</m> acquires a quantum capacitance in series.</li>
+<li><m>f&gt;f_0=1/2\pi\sqrt{LC}</m>: the part is inductive; a "short" at high frequency.</li>
+<li>Sub-micron gaps at low pressure: Paschen's left branch, then field emission; <m>V_b</m> rises again as
+<m>d\to0</m>.</li>
+<li><m>t\to0</m>: the leads' inductance and the skin effect, not <m>R_{\text{ESR}}</m>, limit <m>di/dt</m>.</li>
+<li>Large <m>V/d</m>: <m>\kappa</m> is field-dependent (ferroelectrics lose 80% under bias) and
+<m>E_b</m> is area-dependent (Weibull).</li>
+</ul></div>
+</div>
+</div>
+
+<h2>6 · The advanced toolbox</h2>
+<div class="grid">
+<div>
+<table class="tb">
+<thead><tr><th>shape / situation</th><th class="e">the result to use</th></tr></thead>
+<tbody>
+<tr><td>charge <m>q</m>, grounded plane</td><td class="e">image <m>-q</m>;
+<m>\sigma=-\frac{q}{2\pi}\frac{h}{(\rho^{2}+h^{2})^{3/2}}</m>; <m>F=-\frac{q^{2}}{16\pi\varepsilon_0h^{2}}</m></td></tr>
+<tr><td>charge <m>q</m>, grounded sphere <m>a</m> at <m>d</m></td>
+<td class="e"><m>q'=-\frac{a}{d}q</m> at <m>a^{2}/d</m>;
+<m>F=\frac{q^{2}ad}{4\pi\varepsilon_0(d^{2}-a^{2})^{2}}</m></td></tr>
+<tr><td>sphere <m>a</m> at potential <m>V</m>, plane at <m>0</m></td>
+<td class="e">images shrinking by <m>a/2h</m>; <m>C\approx4\pi\varepsilon_0a(1+a/2h)</m></td></tr>
+<tr><td>2-D: two cylinders / wire over plane</td>
+<td class="e"><m>w=\ln\frac{z-f}{z+f}</m> ⇒ strip ⇒
+<m>C'=\frac{\pi\varepsilon_0}{\operatorname{arcosh}(d/2a)}</m></td></tr>
+<tr><td>corner of angle <m>\beta</m> (vacuum)</td><td class="e"><m>E\propto r^{\pi/\beta-1}</m>: knife edge
+<m>r^{-1/2}</m>, square <m>r^{-1/3}</m>, 90° notch <m>r^{+1}</m></td></tr>
+<tr><td>spheroids</td><td class="e">prolate <m>4\pi\varepsilon_0f/\ln\frac{c+f}{a}</m>; oblate
+<m>4\pi\varepsilon_0f/\eta</m>, <m>\tan\eta=f/c</m> ⇒ disc <m>8\varepsilon_0a</m></td></tr>
+<tr><td>charged conducting drop</td><td class="e"><m>Q_R^{2}=64\pi^{2}\varepsilon_0\gamma R^{3}</m>;
+<m>E_R=2\sqrt{\gamma/\varepsilon_0R}</m>; Taylor cone <m>49.3^\circ</m></td></tr>
+</tbody></table>
+</div>
+<div>
+<div class="box why"><p class="bt">Six one-line checks that catch almost every error</p>
+<ol class="tight">
+<li>Isolated body? then <m>C=\varepsilon_0\times</m> length ✓ 2-D? then a logarithm of a <em>ratio</em> ✓.</li>
+<li><m>\kappa\to1</m>, <m>d\to0</m>, <m>R\to\infty</m>, <m>a\to b</m>: does the limit you can do in your head come
+out?</li>
+<li>Is the answer <m>\ge</m> the vacuum value wherever a dielectric or a conductor was inserted? It must be.</li>
+<li>Is the heat positive, and the stable equilibrium the one with <m>\Pi''&gt;0</m>?</li>
+<li>Does the transient start at the right value (<m>V_C</m> continuous) and end at the open-circuit value?</li>
+<li>Did you answer the question about <m>Q</m> or about <m>V</m>? The third terminal decides, and so does whether the
+cell is still connected.</li>
+</ol></div>
+<p class="note">The four numbers worth memorising cold: <m>4\pi\varepsilon_0=1.11\times10^{-10}</m> F/m (so
+<m>C[\text{pF}]\approx1.11R[\text{cm}]</m>), air <m>\kappa-1=5.9\times10^{-4}</m> at STP, air
+<m>E_b=3</m> kV/mm, <m>kT/e=25.9</m> mV.</p>
+</div>
+</div>
+</div>
+
+<p class="skip">This sheet summarises <a href="index.html">the whole course</a>:
+<a href="01-foundations.html">1 foundations</a> · <a href="02-capacitance.html">2 capacitance</a> ·
+<a href="03-energy-and-force.html">3 energy &amp; force</a> · <a href="04-combinations.html">4 combinations</a> ·
+<a href="05-dielectrics.html">5 dielectrics</a> · <a href="06-networks-and-transients.html">6 networks</a> ·
+<a href="07-advanced-topics.html">7 advanced</a> · <a href="08-playbook.html">8 playbook</a> ·
+<a href="09-olympiad-paper.html">9 paper</a> · <a href="10-olympiad-solutions.html">10 solutions</a></p>
+</main>
+</div>
+</body>
+</html>

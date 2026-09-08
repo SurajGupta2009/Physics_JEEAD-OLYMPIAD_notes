@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 &#183; Charge, conductors &amp; Gauss — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="The base of the capacitors chapter: quantisation of charge, why a conductor is an equipotential, fields and flux, Gauss's law, method of images, and the pressure σ²/2ε₀ on a conductor surface.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 1</p></nav>
+<main>
+
+<p class="meta" id="top">
+<span class="badges"><span class="b n">Chapter 1 of 11</span><span class="b j">JEE Advanced · base</span><span class="b n">≈ 55 min read · 8 questions</span></span>
+</p>
+<h1>Charge, conductors and the tools you will actually use</h1>
+<p class="lead">A capacitor is two pieces of metal and something between them. Before any formula about
+<i>C</i> means anything, you must be able to say <b>what the metal did to the charges</b> and <b>what that did to the field</b>.
+This chapter is those two answers, plus the three techniques (Gauss, images, pressure) that the rest of the
+chapter leans on.</p>
+
+<h2>1.1 Charge: three facts, and why each one matters</h2>
+
+<div class="box def"><p class="bt">Fact 1 — quantisation</p>
+<div class="eqd" data-tag="charge">Q = ne,\qquad e = 1.602\times10^{-19}\ \text{C},\qquad n\in\mathbb Z</div>
+Charge comes in indivisible units. (Quarks carry <m>\pm e/3,\ \pm 2e/3</m> but are confined, so <b>no free body</b>
+has ever been observed with non-integer <m>ne</m>. Millikan's oil-drop experiment (1909) measured <i>e</i> by
+balancing gravity and electric force on single drops — a favourite Olympiad setup, see Q8.)</div>
+
+<div class="box def"><p class="bt">Fact 2 — conservation</p>
+<p>The total charge of an isolated system never changes. Pair production creates <m>+e</m> and <m>-e</m> together;
+charging a capacitor moves charge from one plate to the other and creates nothing.</p></div>
+
+<div class="box def"><p class="bt">Fact 3 — additivity</p>
+<p>Charges are algebraic scalars: the net charge is the signed sum. This is why a "capacitor with charge <m>Q</m>"
+means plates of <m>+Q</m> and <m>-Q</m> and a <b>net charge of zero</b> — a point examiners love to test.</p></div>
+
+<div class="box why"><p class="bt">Why quantisation almost never matters in this chapter — and when it does</p>
+<p>A 1 µF capacitor at 1 V holds <m>Q = 10^{-6}</m> C, i.e. <m>6\times10^{12}</m> electrons. Smearing them over a
+plate of area 1 cm² gives a smooth <m>\sigma</m>; discreteness is invisible. So we treat charge as a
+<b>continuous density</b>. It becomes important exactly when the number of electrons is small — problems about
+<i>single-electron tunnelling, Coulomb blockade,</i> or "how many electrons move when the switch closes"
+(divide your answer by <i>e</i>; JEE has asked this in disguise several times).</p></div>
+
+<h3>Coulomb's law — the only force law you need here</h3>
+<div class="eqd" data-tag="vector form">\vec F_{1\to2}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\hat r_{12},\qquad \frac{1}{4\pi\varepsilon_0}=8.988\times10^{9}\ \text{N m}^2\text{C}^{-2}\approx9\times10^{9}</div>
+<p>Read the three conditions hidden in that line, because every "capacitance paradox" you will meet is a violation of one:</p>
+<ul>
+<li><b>Point charges</b> (or spherically symmetric charge distributions, which act as if concentrated at the centre — proved by Gauss in §1.5).</li>
+<li><b>At rest, in vacuum.</b> In a material the interaction is screened; the practical rule is
+<m>F\to F/K</m> only for two charges embedded <em>in</em> an infinite homogeneous dielectric, not for charges on conductors
+near a dielectric surface (which needs images — §1.6).</li>
+<li><b>Superposition holds:</b> the net force is the vector sum of the pairwise forces. This is <em>not</em> a
+consequence of Coulomb's law; it is an independent experimental fact, and it is precisely the linearity that makes
+capacitance constant (§2.1).</li>
+</ul>
+
+<div class="box thm"><p class="bt">Continuous distributions</p>
+<div class="eqd">\lambda\ [\text{C m}^{-1}],\qquad \sigma\ [\text{C m}^{-2}],\qquad \rho\ [\text{C m}^{-3}],\qquad dq = \rho\,dV</div>
+<p>Every field in this chapter comes from <m>\vec E=\dfrac{1}{4\pi\varepsilon_0}\displaystyle\int\frac{dq}{r^2}\hat r</m>.
+You should be able to do two standard ones without thinking, because they are the building blocks of capacitor
+geometry:</p>
+<div class="eqd key" data-tag="ring on axis">E_{\text{axis}}=\frac{1}{4\pi\varepsilon_0}\frac{Qx}{(x^2+R^2)^{3/2}}\qquad\big(\to kQ/x^2\ \text{for}\ x\gg R,\ \to kQx/R^3\ \text{for}\ x\ll R\big)</div>
+<div class="eqd key" data-tag="long rod, radial">E_r=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{r}=\frac{\lambda}{2\pi\varepsilon_0 r}</div>
+<p class="note">Both results you should be able to *guess* before calculating: on the axis of a ring the transverse
+components cancel by symmetry so only <m>\cos\theta=x/r</m> survives (that extra <m>x</m> is why the field is zero at the
+centre); for the rod, only the radial component survives and the integral gives <m>2\lambda/r</m>. The rod result is
+the one that makes the coaxial capacitor (§2.5) a one-line derivation.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 200" role="img" aria-label="Two standard charge elements: a ring and a long rod">
+  <g><circle cx="120" cy="100" r="62" class="fp"/><circle cx="120" cy="100" r="5" class="w ln"/>
+    <path d="M120,100 L182,100" class="ln" marker-end="url(#aho)"/>
+    <line x1="120" y1="100" x2="182" y2="72" class="acc" marker-end="url(#ahb)"/>
+    <text x="148" y="88" class="mi sm">E</text><text x="152" y="112" class="mi sm">R</text>
+    <text x="196" y="70" class="mi sm">x</text><text x="196" y="98" class="lbl sm">field on axis</text>
+    <text x="120" y="182" class="lbl sm" text-anchor="middle">ring, radius R, charge Q</text></g>
+  <g><line x1="430" y1="40" x2="430" y2="160" class="ln2"/>
+    <circle cx="430" cy="60" r="3" class="acc" fill="var(--accent)"/><circle cx="430" cy="90" r="3" fill="var(--accent)"/><circle cx="430" cy="120" r="3" fill="var(--accent)"/><circle cx="430" cy="150" r="3" fill="var(--accent)"/>
+    <line x1="500" y1="100" x2="560" y2="100" class="acc" marker-end="url(#ahb)"/>
+    <path d="M430,100 H560" class="thinl"/>
+    <text x="524" y="92" class="mi sm">r</text><text x="572" y="104" class="mi">E_r</text>
+    <text x="430" y="30" class="lbl sm" text-anchor="middle">λ</text>
+    <text x="620" y="100" class="lbl sm">only the radial</text><text x="620" y="116" class="lbl sm">component survives</text>
+    <text x="500" y="182" class="lbl sm" text-anchor="middle">infinite line, E = λ/2πε₀r</text></g>
+</svg></div>
+<figcaption><b>Fig. 1.1 — Two elements, both by symmetry + one integral.</b> Learn to state the symmetry argument out loud before integrating: it tells you which component to project onto, and it is half the marks in a long-answer question.</figcaption></figure>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Two identical conducting spheres, centres 1 m apart, radii 0.3 m, carry +Q and −Q. Is <m>F = kQ^2/r^2</m> correct?</b><span class="diff">base · reasoning</span></div>
+<div class="bd">
+<p>Give the direction of the error (too big / too small / correct) and justify.</p>
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Wrong, and the true force is <em>larger</em> than <m>kQ^2/r^2</m>.</b> The charges are free to move, and opposite
+charges attract: positive charge on the left sphere migrates to its right face, negative charge on the right sphere
+migrates to its left face. The two "centres of charge" are therefore closer than 1 m apart — the separation is roughly
+<m>2(0.3-t)</m> less than the centre distance. Since <m>F\propto 1/r_{\text{eff}}^2</m>, the actual attraction exceeds
+the point-charge value.</p>
+<p><b>Why this matters here:</b> the moment you write <m>kQ^2/r^2</m> for two <em>conductors</em>, you have assumed the
+charge is fixed. That assumption is legal for <b>insulating</b> spheres with frozen charge, and illegal for metal
+spheres unless <m>r\gg R</m> (then redistribution barely changes anything). This is the reason a capacitor's
+capacitance is not simply "two point charges".</p>
+<p class="note">Same logic in reverse for two like-charged spheres: repulsion pushes charge to the far faces, so the
+actual force is <em>smaller</em> than <m>kQ^2/r^2</m>.</p>
+</div></details>
+</div></div>
+
+<h2>1.2 Conductors, insulators, and the four theorems</h2>
+<p>Microscopically, a metal has <m>\sim10^{29}</m> conduction electrons per m³ that are free to move over macroscopic
+distances; a good insulator has essentially none (electrons are bound, only displaced by an atom's width). That one
+difference — <em>mobile</em> versus <em>bound</em> — generates all four results below.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 210" role="img" aria-label="A conductor reaching electrostatic equilibrium">
+  <text x="10" y="18" class="lbl sm">t = 0 · external field applied</text>
+  <rect x="10" y="30" width="330" height="70" rx="8" class="w ln"/>
+  <g stroke="var(--neg)" stroke-width="1.5" fill="none"><line x1="30" y1="65" x2="120" y2="65" marker-end="url(#ahr)"/><line x1="60" y1="48" x2="150" y2="48" marker-end="url(#ahr)"/><line x1="60" y1="82" x2="150" y2="82" marker-end="url(#ahr)"/></g>
+  <g font-size="13" fill="var(--fg)"><text x="300" y="48">+</text><text x="310" y="65">+</text><text x="295" y="82">+</text></g>
+  <g stroke="var(--accent)" stroke-width="1.6" fill="none"><line x1="20" y1="180" x2="330" y2="180" marker-end="url(#ahb)"/><line x1="20" y1="150" x2="330" y2="150" marker-end="url(#ahb)"/></g>
+  <text x="10" y="128" class="lbl sm">t = τ (≈10⁻¹⁹ s in a good metal) · equilibrium</text>
+  <rect x="10" y="140" width="330" height="70" rx="8" class="w ln"/>
+  <g fill="var(--pos)" font-size="14"><text x="20" y="158">−</text><text x="20" y="203">−</text><text x="40" y="158">−</text><text x="40" y="203">−</text><text x="60" y="158">−</text><text x="60" y="203">−</text></g>
+  <g fill="var(--neg)" font-size="14"><text x="300" y="158">+</text><text x="300" y="203">+</text><text x="320" y="158">+</text><text x="320" y="203">+</text></g>
+  <text x="150" y="182" class="mi sm" text-anchor="middle">E = 0 inside</text>
+  <text x="150" y="66" class="mi sm" text-anchor="middle">charges drift…</text>
+
+  <g><text x="420" y="18" class="lbl sm">the four theorems</text>
+  <rect x="420" y="28" width="330" height="164" rx="10" class="w ln" stroke-dasharray="5 4"/>
+  <text x="436" y="52" class="lbl md">1 · <tspan font-style="italic">E</tspan> = 0 everywhere inside the metal</text>
+  <text x="436" y="76" class="lbl md">2 · net charge sits on the <tspan font-weight="700">surface</tspan> only</text>
+  <text x="436" y="100" class="lbl md">3 · <tspan font-style="italic">E</tspan> at the surface is exactly ⊥ to it</text>
+  <text x="436" y="124" class="lbl md">4 · |<tspan font-style="italic">E</tspan>|<tspan font-size="11">just out</tspan> = σ/ε₀ (not σ/2ε₀)</text>
+  <text x="436" y="152" class="lbl sm">Corollaries: V = const. on a conductor;</text>
+  <text x="436" y="168" class="lbl sm">V cannot have a maximum in free space;</text>
+  <text x="436" y="184" class="lbl sm">a cavity with no charge inside has E = 0.</text></g>
+</svg></div>
+<figcaption><b>Fig. 1.2 — Equilibrium in two frames.</b> Mobile charges drift until the field they leave behind cancels the applied
+field exactly. Relaxation time <m>\tau=\varepsilon_0/\rho_{\text{res}}</m> — for copper that is about
+<m>1.5\times10^{-19}</m> s, which is why "instantaneously" is not a cheat in electrostatics problems.</figcaption></figure>
+
+<details class="fold" open><summary>Theorem 1 — <m>\vec E=0</m> inside a conductor in equilibrium (with proof by contradiction)</summary>
+<div class="bd">
+<p>Suppose <m>\vec E\ne0</m> somewhere inside the metal. Then a free electron feels <m>-e\vec E</m> and accelerates.
+Currents flow, i.e. the state is <b>not</b> equilibrium. Charges keep piling up where the current converges, changing
+<m>\vec E</m>, until cancellation is exact. Equilibrium <em>is defined</em> by "no further motion", so <m>\vec E=0</m>.</p>
+<p>Quantitatively, from the drift model the charge density decays as
+<m>\dot\rho = -\rho/\tau</m> with <m>\tau=\varepsilon_0/\sigma_{\text{cond}}</m>.
+For copper, <m>\sigma_{\text{cond}}=5.8\times10^{7}</m> S m<sup>−1</sup> ⇒ <m>\tau\approx1.5\times10^{-19}</m> s.
+Any <em>net</em> charge inside the bulk therefore drains to the surface in a time no experiment can resolve.</p>
+<div class="box insight"><p class="bt">The useful corollary for capacitors</p>
+<p>Since <m>\vec E=0</m> inside the metal, moving a test charge from any point of a plate to any other point of the
+<b>same</b> plate costs zero work: the whole conductor (bulk + surface) is an <b>equipotential</b>. That is the only
+reason <m>C=Q/V</m> makes sense — "the potential of plate 1" is unambiguous.</p></div>
+</div></details>
+
+<details class="fold"><summary>Theorem 2 — all excess charge is on the outer surface</summary><div class="bd">
+<p>Draw a Gaussian surface <em>entirely inside</em> the metal, hugging any region you like. Since <m>\vec E=0</m>
+everywhere on it, Gauss gives <m>\oint\vec E\cdot d\vec A = 0 = q_{\text{enc}}/\varepsilon_0</m>, so the enclosed
+charge is zero. Because the surface can be shrunk around any interior point, <b>no point in the bulk carries net
+charge</b>. Hence all excess charge is on the boundary.</p>
+<p>Note the logical care needed: the argument excludes <em>net</em> charge density, not charge — a metal always has
+vast <m>+</m> ion and <m>-</m> electron densities that cancel. The theorem is about the <b>excess</b>.</p></div></details>
+
+<details class="fold"><summary>Theorem 3 — the field meets a conducting surface at right angles</summary><div class="bd">
+<p>If a tangential component <m>E_t</m> existed at the surface, a surface charge <m>\sigma</m> per unit area would feel a
+force <m>\sigma E_t</m> per unit area and slide — again contradicting equilibrium. So <m>E_t=0</m>, and
+<m>\vec E\perp</m> surface. Equivalently: the surface is an equipotential, and field lines always cross equipotentials
+at 90°.</p></div></details>
+
+<h3>1.3 The field just outside: why the factor is 1, not ½</h3>
+<p>This is the single most-asked conceptual point in the chapter's first week, and it is where students
+mis-apply the sheet result.</p>
+<table class="tb">
+<thead><tr><th>Source</th><th>Field of the sheet alone</th><th>Field outside a conductor</th></tr></thead>
+<tbody>
+<tr><td>Isolated non-conducting sheet of charge <m>\sigma</m> (charges frozen)</td><td class="c"><m>\sigma/2\varepsilon_0</m> each side</td><td class="c">—</td></tr>
+<tr><td>Surface element of a <b>conductor</b>, all other charges included</td><td class="c"><m>\sigma/2\varepsilon_0</m> each side (still!)</td><td class="c"><m>\sigma/\varepsilon_0</m> outward</td></tr>
+</tbody></table>
+
+<div class="box thm"><p class="bt">Proof of the factor 2</p>
+<p>Split all the conductor's charge into (i) the small flat patch <m>\sigma\,dA</m> you are standing next to and
+(ii) everything else. The patch, being locally flat and huge in extent relative to your distance, gives
+<m>\pm\sigma/2\varepsilon_0</m> on either side of itself. "Everything else" is smooth on that scale, so it gives the
+same field <m>E_{\text{other}}</m> just inside and just outside.</p>
+<ul>
+<li>Inside: <m>0=E_{\text{other}}-\sigma/2\varepsilon_0\Rightarrow E_{\text{other}}=+\sigma/2\varepsilon_0</m> (pointing out).</li>
+<li>Outside: <m>E=E_{\text{other}}+\sigma/2\varepsilon_0=\sigma/\varepsilon_0</m>. <b>∎</b></li>
+</ul>
+<p>Now apply Gauss to a pillbox straddling the surface: flux <m>E\,dA</m> out, no flux through the inner face, and
+<m>q_{\text{enc}}=\sigma\,dA</m> ⇒ the same <m>E=\sigma/\varepsilon_0</m>. The two methods agree, and the pillbox version
+is what you should write in an exam — but <em>know the patch version</em>, because it is the same reasoning that gives
+the force in §1.5 and the plate force in chapter 3.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 200" role="img" aria-label="Pillbox at a conductor surface and the patch decomposition">
+  <g><rect x="20" y="80" width="260" height="100" class="fp"/>
+    <text x="150" y="140" class="mi sm" text-anchor="middle">metal · E = 0</text>
+    <g stroke="var(--accent)" stroke-width="1.8" fill="none">
+      <line x1="110" y1="70" x2="110" y2="20" marker-end="url(#ahb)"/><line x1="160" y1="70" x2="160" y2="20" marker-end="url(#ahb)"/><line x1="210" y1="70" x2="210" y2="20" marker-end="url(#ahb)"/></g>
+    <rect x="120" y="30" width="80" height="120" fill="none" stroke="var(--fg)" stroke-width="1.6" stroke-dasharray="6 3"/>
+    <text x="240" y="46" class="lbl sm">Gaussian pillbox</text>
+    <text x="240" y="60" class="lbl sm">(half in, half out)</text>
+    <text x="86" y="26" class="mi">E A = \sigma A/\epsilon_0</text>
+  </g>
+  <g transform="translate(370,0)">
+    <path d="M0,80 h250" class="ln2"/>
+    <rect x="90" y="72" width="70" height="8" class="hi"/>
+    <text x="125" y="62" class="lbl sm" text-anchor="middle">patch σdA</text>
+    <g stroke="var(--neg)" stroke-width="1.4" fill="none">
+      <line x1="125" y1="70" x2="125" y2="30" marker-end="url(#ahr)"/><line x1="125" y1="90" x2="125" y2="130" marker-end="url(#ahr)"/></g>
+    <text x="140" y="40" class="mi sm">+σ/2ε₀</text><text x="140" y="126" class="mi sm">−σ/2ε₀ (own field)</text>
+    <g stroke="var(--pos)" stroke-width="1.4" fill="none"><line x1="30" y1="50" x2="200" y2="50" marker-end="url(#ahg)"/><line x1="30" y1="112" x2="200" y2="112" marker-end="url(#ahg)"/></g>
+    <text x="205" y="54" class="mi sm">E_other (same both sides)</text>
+    <text x="10" y="160" class="lbl sm">inside:  E_other − σ/2ε₀ = 0</text>
+    <text x="10" y="178" class="lbl sm">outside: E_other + σ/2ε₀ = σ/ε₀</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 1.3 — Left:</b> pillbox ⇒ <m>E=\sigma/\varepsilon_0</m>. <b>Right:</b> the same result by splitting the conductor's
+charge into the local patch (which cannot push itself) plus the rest. Keep the right-hand picture in mind — the force on
+a plate in chapter 3 is <m>\sigma</m> times <em>only</em> the "rest" field, i.e. <m>\sigma/2\varepsilon_0</m>, and that is
+where the ½ in <m>P=\sigma^2/2\varepsilon_0</m> comes from.</figcaption></figure>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>A point charge <m>q</m> sits at distance <m>d</m> from a large uncharged conducting plate. What is the force? Why is it never repulsive?</b><span class="diff">base→JEE-adv</span></div>
+<div class="bd">
+<p>(a) State the direction and use the image idea to give the magnitude. (b) Explain the answer for a
+<b>charged</b> plate at potential <m>V_0</m> instead of grounded — same, different, and why?</p>
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd" data-tag="attractive always">F=\frac{1}{4\pi\varepsilon_0}\frac{q^2}{(2d)^2}=\frac{q^2}{16\pi\varepsilon_0 d^2}</div>
+<p><b>(a)</b> The plate's free electrons redistribute: opposite charge is drawn to the near face, like charge is pushed
+to the far face (or into the earth if grounded). Near the charge, the induced <m>-</m> density is on the
+<em>closer</em> side of the plate, so attraction always wins over repulsion from the far side. Magnitude: see §1.6 for
+the image construction that makes this exact.</p>
+<p><b>(b)</b> With the plate merely held at potential <m>V_0</m> there is an extra, uniform sheet of charge on the
+outside plus the same induced pattern, so the force picks up a term proportional to <m>qV_0</m> and <b>can</b> be
+repulsive. A neutral (or grounded) isolated plate cannot repel a charge; a biased one can. That distinction is exactly
+the "what is held fixed" theme of the whole chapter.</p>
+<p class="note"><b>Wrong route:</b> writing <m>kq^2/d^2</m> (forgetting the image is <m>2d</m> away), or claiming the force is
+zero because the plate is uncharged. Net-zero charge does not mean net-zero <em>dipole</em> moment — the plate is a
+polarised object, and a charge and a dipole always attract.</p>
+</div></details>
+</div></div>
+
+<h2>1.4 Potential, and how to move between <m>V</m> and <m>\vec E</m></h2>
+<p>Electrostatics is conservative: <m>\oint\vec E\cdot d\vec\ell=0</m>, which is why a scalar <m>V</m> exists at all.</p>
+<div class="eqd" data-tag="both directions">V_B-V_A=-\int_A^B\vec E\cdot d\vec\ell
+\qquad\Longleftrightarrow\qquad \vec E=-\vec\nabla V</div>
+<p>Two operational forms you will use constantly for capacitors:</p>
+<div class="eqd key" data-tag="uniform gap">V=Ed\ \ (\text{uniform field over separation }d),\qquad
+V(r)=\frac{Q}{4\pi\varepsilon_0 r}\ \ (\text{outside a sphere / shell})</div>
+<div class="box why"><p class="bt">Which direction do you compute in?</p>
+<ul style="margin:0">
+<li><b>Charge known, field simple (planar, spherical, cylindrical symmetry)</b> ⇒ do <m>\vec E</m> by Gauss, then
+integrate to get <m>V</m>. This is the standard route for every capacitor in chapter 2.</li>
+<li><b>Charge distributed irregularly</b> (rings, rods, discs) ⇒ integrate the scalar <m>V=\int k\,dq/r</m> (no
+directions to worry about) and differentiate at the end. Much easier than integrating <m>\vec E</m>, and it is the
+trick for the "two parallel rods" and "disc" problems.</li>
+<li>Never differentiate a potential you have not yet made direction-aware: <m>E=-\partial V/\partial n</m> needs the
+derivative <b>along the line of the field</b>.</li>
+</ul></div>
+
+<h3>Absolute vs difference, and the earth</h3>
+<p>Only differences are physical, but "the capacitance of an isolated sphere" needs a reference — by convention
+<m>V=0</m> at infinity. Two consequences worth stating explicitly, since questions turn on them:</p>
+<ol>
+<li>A conductor's own charge always contributes the <em>same sign</em> to its potential, so an isolated conductor's
+<m>Q</m> and <m>V</m> have the same sign: <b><m>C&gt;0</m> always</b>.</li>
+<li>Connecting to earth makes <m>V=0</m> while <b><m>Q</m> is free to change</b>. Earthing is a constraint on <m>V</m>,
+never on <m>Q</m>. (Earthing a charged sphere with another charged sphere nearby can leave it with <em>positive</em>
+net charge — see Q3.)</li>
+</ol>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Sphere A (radius <m>a</m>, charge <m>Q</m>) and sphere B (radius <m>a</m>, uncharged) have centres <m>4a</m> apart. B is then earthed, briefly. Is B's final charge (i) 0, (ii) negative, (iii) positive?</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(ii) negative, magnitude <em>less</em> than <m>Q/4</m>.</b> Earthing forces <m>V_B=0</m>. Write <m>V_B</m> as the sum
+of contributions at B's centre (a conductor is equipotential, so its surface potential equals the value computed from
+all charges, and to leading order in <m>a/4a</m> we may put them at the centres):</p>
+<div class="eqd">V_B=\frac{1}{4\pi\varepsilon_0}\left(\frac{Q'}{a}+\frac{Q}{4a}\right)=0\ \Longrightarrow\ Q'=-\frac{Q}{4}</div>
+<p>The approximation used is that A's charge stays at A's centre and B's at B's centre. In reality B's induced charge is
+drawn to the near face, so its own contribution to <m>V_B</m> is larger in magnitude than <m>kQ'/a</m>, and hence
+<m>|Q'|&lt;Q/4</m>. The sign, however, is rigorous: to cancel a positive neighbouring potential, negative charge must
+flow up from the earth.</p>
+<p class="note"><b>Wrong route:</b> "the wire is removed, therefore nothing happened" — or "earth is infinite so it
+absorbs all charge, leaving <m>Q'=0</m>". The earth supplies exactly as much charge as is needed to set <m>V_B=0</m>,
+and no more.</p>
+</div></details>
+</div></div>
+
+<h2>1.5 Flux and solid angle: the two Gauss tricks that recur</h2>
+<p>Gauss's law in the form you will use it:</p>
+<div class="eqd key" data-tag="Gauss">\Phi=\oint\vec E\cdot d\vec A=\frac{q_{\text{enc}}}{\varepsilon_0}</div>
+<p>The reason a <em>closed</em> surface is special is that flux through it depends on nothing but enclosed charge. For
+an <b>open</b> surface this fails — and one open-surface result is used constantly in capacitor problems with point
+charges near plates.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 190" role="img" aria-label="Charge on the axis of a disc; the flux is proportional to the solid angle">
+  <line x1="60" y1="95" x2="640" y2="95" class="thinl"/>
+  <ellipse cx="420" cy="95" rx="26" ry="70" class="w ln"/>
+  <text x="420" y="180" class="lbl sm" text-anchor="middle">disc, radius R, at distance x from q</text>
+  <circle cx="120" cy="95" r="7" fill="var(--pos)"/><text x="104" y="82" class="mi">q</text>
+  <path d="M120,95 L410,28" class="acc"/><path d="M120,95 L410,162" class="acc"/>
+  <path d="M410,28 q10,34 0,67 q10,34 0,67" class="acc" fill="none"/>
+  <text x="300" y="60" class="mi sm">R</text><text x="200" y="110" class="mi sm">x</text>
+  <path d="M160,95 a40,40 0 0 0 0,-24" class="ln" fill="none"/><text x="168" y="82" class="mi sm">θ</text>
+  <g stroke="var(--accent)" stroke-width="1.3" fill="none" opacity=".8">
+    <line x1="150" y1="92" x2="240" y2="70" marker-end="url(#ahb)"/><line x1="150" y1="95" x2="250" y2="95" marker-end="url(#ahb)"/><line x1="150" y1="98" x2="240" y2="120" marker-end="url(#ahb)"/></g>
+  <text x="470" y="50" class="mi sm">Ω = 2π(1 − cos θ)</text>
+  <text x="470" y="70" class="mi sm">Φ = (q/4πε₀)·Ω</text>
+  <text x="470" y="140" class="lbl sm">only cos θ enters ⇒</text>
+  <text x="470" y="156" class="lbl sm">the disc's flux is geometry, not algebra</text>
+</svg></div>
+<figcaption><b>Fig. 1.4 — Flux through a disc on the axis of a charge.</b> Total flux from <m>q</m> is <m>q/\varepsilon_0</m> spread
+over <m>4\pi</m> steradians, so any surface subtending solid angle <m>\Omega</m> takes the fraction
+<m>\Omega/4\pi</m>. For the disc, <m>\cos\theta=x/\sqrt{x^2+R^2}</m>.</figcaption></figure>
+
+<div class="eqd key" data-tag="disc flux">\Phi_{\text{disc}}=\frac{q}{2\varepsilon_0}\left(1-\frac{x}{\sqrt{x^2+R^2}}\right)
+\qquad(x=0\Rightarrow q/2\varepsilon_0;\quad x\gg R\Rightarrow \frac{qR^2}{8\varepsilon_0x^2})</div>
+<p>Check it yourself: at <m>x=0</m> the charge is <em>in</em> the plane of the disc so half of all flux goes one way —
+correct. For <m>x\gg R</m> the disc looks tiny and flat, so <m>\Phi\to E\cdot\pi R^2</m>; the expansion of
+<m>1-x/\sqrt{x^2+R^2}</m> gives exactly that. <b>Both limits agreeing is the real proof you did not drop a factor.</b></p>
+
+<h3>1.6 Method of images — the tool that turns hard problems into arithmetic</h3>
+<p><b>Idea.</b> Replace a conductor by fictitious "image" charges placed <em>behind</em> the region you care about,
+chosen so that the boundary condition (<m>V=0</m> on a grounded surface, or <m>V=V_0</m>) is satisfied. Because the
+solution of the electrostatic problem with given boundary values is <b>unique</b>, any construction that satisfies both
+Laplace's equation in the region and the boundary values <em>is</em> the answer — you need not know what the real
+induced charge looks like.</p>
+<div class="box thm"><p class="bt">Uniqueness, in one honest sentence</p>
+<p>If two potentials <m>V_1,V_2</m> both satisfy <m>\nabla^2V=0</m> in a region with the same boundary values, their
+difference has zero boundary value, and the integral <m>\int|\vec\nabla(V_1-V_2)|^2dV</m> vanishes (integrate by parts)
+⇒ the difference is constant ⇒ <m>V_1=V_2</m>. That is the whole licence for using images, and it also explains why
+field lines cannot cross and why <m>V</m> has no interior maximum.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 230" role="img" aria-label="Image charge across a grounded plane and the resulting field">
+  <line x1="360" y1="10" x2="360" y2="220" class="ln2"/>
+  <text x="372" y="214" class="lbl sm">grounded plane · V = 0</text>
+  <circle cx="140" cy="115" r="9" fill="var(--pos)"/><text x="118" y="106" class="mi">+q</text>
+  <circle cx="580" cy="115" r="9" fill="var(--neg)" opacity=".55"/><text x="592" y="106" class="mi">−q (image, fictitious)</text>
+  <line x1="149" y1="115" x2="353" y2="115" class="ln" stroke-dasharray="3 3"/><text x="245" y="106" class="mi sm">d</text>
+  <line x1="367" y1="115" x2="571" y2="115" class="ln" stroke-dasharray="3 3"/><text x="460" y="106" class="mi sm">d</text>
+  <g stroke="var(--accent)" fill="none" stroke-width="1.4">
+    <path d="M180,115 C240,60 300,40 356,26" marker-end="url(#ahb)"/>
+    <path d="M180,115 C250,150 320,180 356,196" marker-end="url(#ahb)"/>
+    <path d="M140,90 C200,60 280,30 355,14" marker-end="url(#ahb)" opacity=".6"/>
+  </g>
+  <g fill="var(--neg)" font-size="13"><text x="336" y="46">−</text><text x="336" y="86">−</text><text x="336" y="126">−</text><text x="336" y="166">−</text><text x="336" y="200">−</text></g>
+  <text x="150" y="40" class="lbl sm">real region: everything to the left of the plane</text>
+  <text x="150" y="196" class="lbl sm" text-anchor="start">induced σ &lt; 0, denser near the charge;</text>
+  <text x="150" y="212" class="lbl sm" text-anchor="start">total induced charge = −q exactly</text>
+  <text x="420" y="40" class="lbl sm" opacity=".6">to the right: no field at all</text>
+  <text x="420" y="56" class="lbl sm" opacity=".6">(the construction is only valid where</text>
+  <text x="420" y="70" class="lbl sm" opacity=".6">the real charges live)</text>
+</svg></div>
+<figcaption><b>Fig. 1.5 — A charge and a grounded plane, solved by one mirrored charge.</b> The pair's mid-plane is automatically
+<m>V=0</m>, so it satisfies the boundary condition; uniqueness says it is the answer. Nothing exists on the far side.</figcaption></figure>
+
+<div class="eqd key" data-tag="plane">V(x,y,z)=\frac{q}{4\pi\varepsilon_0}\left(\frac1{r_+}-\frac1{r_-}\right),\qquad
+\sigma_{\text{ind}}(r)=-\frac{qd}{2\pi(r^2+d^2)^{3/2}},\qquad Q_{\text{ind}}=-q</div>
+<p>Integrate <m>\sigma_{\text{ind}}</m> over the plane yourself (let <m>u=r^2+d^2</m>) to see the last one — a
+standard 3-minute integral that appears as an INPhO short question.</p>
+<div class="box thm"><p class="bt">The sphere version (Olympiad, used in ch. 7 for capacitance)</p>
+<p>A charge <m>q</m> at distance <m>d</m> from the centre of a grounded conducting sphere of radius <m>R</m>
+(<m>d&gt;R</m>) is matched by an image <m>q'=-qR/d</m> at distance <m>b=R^2/d</m> from the centre, along the same
+radius. Check the two limits that make it believable: bring <m>R\to d</m> (charge touching the sphere) and you get
+<m>q'\to-q</m> at the surface — the charges annihilate, i.e. a charge can be given to a sphere by contact at zero cost
+in work; and letting <m>R\to0</m> gives <m>q'\to0</m> — a small ball is barely polarised. The inversion relation
+<m>db=R^2</m> is the reason "sphere problems" in olympiads so often reduce to a substitution
+<m>r\to R^2/r</m>.</p></div>
+
+<h2>1.7 Pressure on a conductor: the bridge to forces</h2>
+<p>Each surface element feels a force from <em>everything except itself</em> — that is the one-line reason the
+pressure has a ½ in it (§1.3, right-hand picture).</p>
+<div class="eqd">dF = \sigma E_{\text{other}}\,dA = \frac{\sigma^2}{2\varepsilon_0}dA
+\qquad\Rightarrow\qquad \boxed{P=\frac{\sigma^2}{2\varepsilon_0}=\tfrac12\varepsilon_0E^2}</div>
+<p>It is an <b>outward tension</b>, the same number as the field's energy density. Keep both forms: the second one
+tells you that any problem asking for a force can be rephrased as a problem asking for energy — the method of
+chapter 3.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>A soap bubble of radius <m>R</m> is conducting and charged to potential <m>V</m>. It expands by <m>dR</m>. Balance the pressures and find how much electrostatic pressure is needed.</b><span class="diff">JEE-adv → Olympiad</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>For a bubble there are two surfaces, so the film feels an inward Laplace pressure <m>4T/R</m> (<m>T</m> =
+surface tension per surface). The outward electrical pressure is
+<m>P=\sigma^2/2\varepsilon_0</m> with <m>\sigma=Q/4\pi R^2</m> and <m>Q=4\pi\varepsilon_0RV</m> ⇒
+<m>\sigma=\varepsilon_0V/R</m>.</p>
+<div class="eqd">\frac{4T}{R}=\frac{\varepsilon_0V^2}{2R^2}\quad\Longrightarrow\quad V=\sqrt{\frac{8T R}{\varepsilon_0}}</div>
+<p><b>Faster route, and the reason the energy method is worth learning:</b> differentiate the energy at fixed charge.
+<m>U=Q^2/8\pi\varepsilon_0R</m>, so the electrical force tending to increase <m>R</m> is
+<m>F=-dU/dR=Q^2/8\pi\varepsilon_0R^2</m>; divide by the area <m>4\pi R^2</m> and you have the same
+<m>\sigma^2/2\varepsilon_0</m>. Both routes must agree — if they do not, you used the wrong constraint (fixed <m>V</m>
+would have doubled it).</p>
+<p class="note"><b>Is it realisable?</b> For <m>R=1</m> cm and soapy water (<m>T\approx0.025</m> N m<sup>−1</sup>)
+the balance field is <m>E=V/R=\sqrt{8T/(\varepsilon_0R)}\approx1.5\times10^{6}</m> V m<sup>−1</sup>, i.e.
+<m>V\approx15</m> kV — within a factor two of air's breakdown strength <m>3\times10^{6}</m> V m<sup>−1</sup>. So the
+effect is measurable but marginal, and the usual observation is that a strongly charged bubble <em>expands and bursts</em>.
+Adding that one line of numerical judgement is what separates an INPhO answer from a homework answer.</p>
+</div></details>
+</div></div>
+
+<h2>1.8 Cavities, shielding, and what "screened" really means</h2>
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 200" role="img" aria-label="Charge inside a cavity, induced charges, and grounding">
+  <g><rect x="20" y="30" width="300" height="150" rx="16" class="fp"/>
+    <ellipse cx="170" cy="105" rx="86" ry="52" class="w ln"/>
+    <circle cx="170" cy="105" r="8" fill="var(--pos)"/><text x="184" y="100" class="mi">+q</text>
+    <g fill="var(--neg)" font-size="12"><text x="120" y="66">−</text><text x="150" y="58">−</text><text x="186" y="58">−</text><text x="214" y="66">−</text><text x="120" y="152">−</text><text x="152" y="158">−</text><text x="186" y="158">−</text><text x="214" y="152">−</text></g>
+    <g fill="var(--pos)" font-size="12"><text x="34" y="46">+</text><text x="60" y="46">+</text><text x="34" y="174">+</text><text x="60" y="174">+</text><text x="282" y="46">+</text><text x="282" y="174">+</text></g>
+    <text x="170" y="196" class="lbl sm" text-anchor="middle">isolated, neutral conductor: inner wall −q, outer face +q</text></g>
+  <g><rect x="400" y="30" width="300" height="150" rx="16" class="fp"/>
+    <ellipse cx="550" cy="105" rx="86" ry="52" class="w ln"/>
+    <circle cx="550" cy="105" r="8" fill="var(--pos)"/><text x="564" y="100" class="mi">+q</text>
+    <g fill="var(--neg)" font-size="12"><text x="500" y="66">−</text><text x="530" y="58">−</text><text x="566" y="58">−</text><text x="594" y="66">−</text></g>
+    <line x1="700" y1="105" x2="716" y2="105" class="ln"/><path d="M700,105 v22 h-8 m8,-22 a10,10 0 0 0 -20,0" class="ln" fill="none"/>
+    <text x="676" y="98" class="lbl sm">to earth</text>
+    <text x="550" y="196" class="lbl sm" text-anchor="middle">grounded: outer charge drains, field outside = 0</text></g>
+</svg></div>
+<figcaption><b>Fig. 1.6 — Charge inside a cavity.</b> A Gaussian surface inside the metal encloses the cavity, so the inner wall must
+carry exactly <m>-q</m>. If the conductor is neutral and isolated, <m>+q</m> appears on the <b>outer</b> surface and
+there is a field outside; earthing removes it — and nothing else. The cavity's internal field is unaffected either way.</figcaption></figure>
+
+<div class="box def"><p class="bt">Electrostatic shielding, stated precisely</p>
+<ul style="margin:0">
+<li><b>Inside is protected from outside.</b> In a closed conductor, <m>\vec E=0</m> in the cavity when the cavity is
+empty — regardless of what fields exist outside. The outer surface rearranges to cancel the external field in the bulk,
+and nothing inside needs to know about it.</li>
+<li><b>Outside is <em>not</em> protected from inside</b> unless you earth the shell: a charge inside an isolated shell
+produces <m>+q</m> on the outer surface and hence an external field.</li>
+<li>None of this requires a <em>spherical</em> or simply-shaped conductor, and none of it survives if there are
+currents or time-varying fields (a real Faraday cage works only if its seams conduct well and, for good RF
+shielding, if the mesh spacing <m>\ll\lambda</m>).</li>
+</ul></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Inside a cavity at the centre of a neutral conductor sits <m>+q</m>. A student writes "the field inside the metal is zero, so the potential of the conductor is zero". Fix the error.</b><span class="diff">base · concept</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>\vec E=0</m> in the metal implies <m>\vec\nabla V=0</m> there, i.e. the conductor is an equipotential — but the
+<em>value</em> of that constant is set by every charge in the problem, measured against infinity. Here the outer surface
+carries <m>+q</m>, so the conductor sits at a positive potential. For a centred charge in a spherical cavity of radius
+<m>b</m> the cavity's own contribution at the metal cancels (<m>kq/b-kq/b=0</m>), leaving
+<m>V_{\text{cond}}=q/C_{\text{out}}&gt;0</m>, where <m>C_{\text{out}}</m> is the capacitance of the outer surface to
+infinity. The error is reading "field is zero" as "potential is zero": <m>\vec E</m> is a <em>derivative</em> of
+<m>V</m>, so it fixes the slope and never the level.</p>
+<p>Consequences that questions exploit: a charge <em>inside</em> the cavity feels a force from the induced <m>-q</m> on
+the wall (so it is not force-free), while anything outside sees only the outer-surface field and cannot tell where the
+internal charge sits. And if you connect the cavity to the outer surface with a wire, <b>all</b> the charge flows
+outward — which is exactly what a Faraday ice-pail experiment and a Van de Graaff terminal rely on.</p>
+</div></details>
+</div></div>
+
+<h2>1.9 Chapter checkpoint</h2>
+<ul class="chks">
+<li>Explain in one sentence why <m>\vec E=0</m> inside a conductor and why the same argument puts all excess charge on the surface.</li>
+<li>State the field just outside a conductor and give the two independent derivations (pillbox; patch + rest).</li>
+<li>Given a charge and a grounded plane, write down <m>V</m>, the force, and the induced surface density without calculating.</li>
+<li>Use solid angle to get the flux through any planar loop from a charge on its axis.</li>
+<li>Derive <m>P=\sigma^2/2\varepsilon_0</m> and state which field (<m>\sigma/\varepsilon_0</m> or <m>\sigma/2\varepsilon_0</m>) you must multiply <m>\sigma</m> by, and why.</li>
+<li>For a charge in a cavity, list the charge on the inner wall, on the outer surface, and the effect of earthing, in both the isolated and grounded case.</li>
+</ul>
+
+<h2>1.10 Drill (do these before chapter 2)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>A thick, isolated, infinite conducting slab carries net charge <m>Q_{\text{slab}}</m>. A point charge <m>q</m> is held at distance <m>d</m> from one face. Find the <em>total</em> charge on each face, and then do the same when the slab is earthed instead.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Split the problem into two problems you can each solve exactly, then add them. Superposition is legal because the
+boundary condition on a conductor is "constant potential", and the sum of two constants is a constant.</p>
+<ol class="steps">
+<li><b>(A) Grounded slab + charge <m>q</m>.</b> By the image construction the field is exactly that of <m>q</m> and
+<m>-q</m> inside the metal and beyond it, so <m>E=0</m> for <m>x&gt;0</m> (inside and on the far side).
+Near face: total induced charge <m>-q</m>, with density
+<m>\sigma_1(r)=-\dfrac{qd}{2\pi(r^2+d^2)^{3/2}}</m>. Far face: <m>0</m>.</li>
+<li><b>(B) The same slab, uncharged, but lifted to potential <m>V_0</m> by adding net charge.</b> With no external
+charges, and an infinite slab whose two faces are equivalent, that extra charge splits evenly: each face
+<m>+\tfrac12 Q_{\text{add}}</m>, giving a uniform external field <m>Q_{\text{add}}/2\varepsilon_0</m> on either side and
+zero field inside. <b>Both faces are outer faces</b> — this is not a cavity.</li>
+<li><b>Add (A) + (B) and impose conservation:</b> <m>Q_{\text{near}}+Q_{\text{far}}=Q_{\text{slab}}</m> with
+<m>Q_{\text{add}}=Q_{\text{slab}}+q</m>. Therefore
+<div class="eqd">Q_{\text{near}}=-q+\frac{Q_{\text{slab}}+q}{2}=\frac{Q_{\text{slab}}-q}{2},\qquad
+Q_{\text{far}}=\frac{Q_{\text{slab}}+q}{2}\ \text{(uniform)}</div></li>
+</ol>
+<p><b>Earthed:</b> drop step 3 — <m>Q_{\text{slab}}</m> is no longer fixed, and the slab takes exactly the charge needed
+for <m>V=0</m>, which is <m>Q_{\text{near}}=-q</m>, <m>Q_{\text{far}}=0</m>. The field vanishes everywhere outside the
+left half-space: a grounded conductor <em>absorbs</em> the information.</p>
+<p class="note"><b>Wrong route:</b> writing <m>\sigma=q/2A</m> on each face "by symmetry" (the charge <m>q</m> breaks the
+symmetry, it pulls charge toward the near face) or claiming the far face feels nothing at all and must be zero for the
+isolated slab (it is zero only after the extra net charge is included). Also note what is <em>not</em> true:
+"field inside the conductor is zero so both faces must be uncharged" — the individual faces are charged; their fields
+cancel <em>inside</em>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Two light pith balls of mass <m>m</m>, each given charge <m>q</m>, hang from a common point by equal insulating threads of length <m>L</m>, in a horizontal electric field <m>E</m> that pushes them apart. Find <m>q</m> if the threads make angle <m>\theta</m> each side of the vertical.</b><span class="diff">base · bookkeeping</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Free-body diagram on the right-hand ball: tension along the thread, weight down, mutual repulsion <m>kq^2/(2L\sin\theta)^2</m>
+outward, plus the external field force <m>qE</m> outward. Ball 1 is not free: the whole system is in equilibrium so the
+<b>only</b> sensible statement is force balance per ball:</p>
+<div class="eqd">\tan\theta=\frac{1}{mg}\left[\frac{q^2}{4\pi\varepsilon_0(2L\sin\theta)^2}+qE\right]</div>
+<p>This is a quadratic in <m>q</m>; write it as <m>aq^2+bq-c=0</m> with
+<m>a=k/4L^2\sin^2\theta</m>, <m>b=E</m>, <m>c=mg\tan\theta</m>, and take the positive root. <b>Do not</b> "ignore"
+<m>E</m> to make it linear unless the question says so: with the numbers in most such problems <m>qE</m> and the mutual
+term are comparable, and dropping one silently is the standard lost mark.</p>
+<p class="note">Why this is in a capacitors chapter: it is the mechanical twin of Q4. Two charges in a gap,
+forces balanced by a constraint, and the question is whether you kept every term. When you reach §3.3 the same
+problem will be one line of <m>dU/dx</m> — you will be able to check your answer against this exact expression.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>Millikan: an oil drop of radius <m>r=0.6\ \mu</m>m and density <m>900</m> kg m<sup>−3</sup> is suspended between horizontal plates 1.5 cm apart. Estimate the voltage needed for a single extra electron, and state the largest field before air breaks down.</b><span class="diff">Olympiad · estimation</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Balance <m>mg=eE</m> with <m>m=\tfrac43\pi r^3\rho</m>:</p>
+<div class="eqd">m=\frac{4\pi}{3}(0.6\times10^{-6})^3(900)\approx8.1\times10^{-16}\ \text{kg}
+\;\Rightarrow\; E=\frac{mg}{e}\approx\frac{8.0\times10^{-15}}{1.6\times10^{-19}}\approx5\times10^{4}\ \text{V m}^{-1}</div>
+<p>So <m>V=Ed\approx5\times10^4\times0.015\approx750</m> V. (Buoyancy reduces <m>m</m> by
+<m>\rho_{\text{air}}/\rho_{\text{oil}}\approx0.1\%</m>, i.e. by nothing; in a rigorous treatment one also divides the
+weight by the drag correction of Stokes' law when measuring the terminal velocity — that is how Millikan got <i>e</i>,
+not by balancing.)</p>
+<p><b>Which limit bites first?</b> Air would break down at <m>3\times10^{6}</m> V m<sup>−1</sup>, i.e. at a field
+<m>60\times</m> larger than the one needed here. Since the suspendable mass scales as <m>E</m>, drops up to
+<m>60\times</m> heavier (radius <m>60^{1/3}\approx3.9</m> times larger, <m>\approx2.3\ \mu</m>m) could be held — so
+electrical breakdown is <em>not</em> the constraint. The real limits are evaporation of the drop and Brownian jitter,
+both of which grow as the drop shrinks; that is why Millikan used a volatile oil rather than water, and why the
+smallest reliable drops are about <m>0.5\ \mu</m>m. Stating which ceiling actually applies is worth more than the
+number itself in an Olympiad solution.</p>
+</div></details>
+</div></div>
+
+<div class="box trap"><p class="bt">Traps from this chapter (they recur in every later one)</p>
+<ul style="margin:0">
+<li>"Field inside a conductor is zero" is a statement about the <b>metal</b>, not about a cavity inside it, and not
+about the gap between capacitor plates.</li>
+<li>Using <m>\sigma/2\varepsilon_0</m> just outside a conductor. The conductor's surface field is <m>\sigma/\varepsilon_0</m>;
+half of that comes from charges <em>other</em> than the patch you are about to push.</li>
+<li>Saying "the potential of a conductor is zero when earthed, so its charge is zero". Earthing fixes <m>V</m>; <m>Q</m>
+floats.</li>
+<li>Applying images for a conductor held at a fixed <b>non-zero</b> potential: add a point charge at the centre of the
+sphere (or a uniform sheet for a plane) to lift the boundary value from 0 to <m>V_0</m>. The image alone is only the
+<m>V_0=0</m> solution.</li>
+<li>Assuming Gauss's law can give <m>\vec E</m> for a finite rod or a finite plate. It can — you can compute the
+enclosed <m>q</m> — but without symmetry you cannot pull <m>E</m> out of the integral. Symmetry, not Gauss, is what
+earns you a number.</li>
+</ul></div>
+
+<p class="skip">Next: <a href="02-capacitance.html"><b>Chapter 2 · Capacitance and every geometry →</b></a>, where all
+of this becomes one number, and we find that number for six geometries and check each one with a limit.</p>
+
+</main>
+</div>
+</body>
+</html>

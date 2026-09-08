@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 &#183; Advanced topics — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="Capacitance and elastance matrices, Green's reciprocity and the Ramo theorem, monotonicity theorems, images for spheres and planes, the spheroid family and depolarising factors, conformal mapping of the two-cylinder and edge problems, MEMS pull-in, charged drops and the Rayleigh and Taylor limits.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 7</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b o">INPhO / IPhO / IOPT</span><span class="b j">JEE Advanced (top bracket)</span><span class="b n">needs ch. 1–6</span></span>
+</p>
+<h1>7 · Advanced topics: the machinery behind the tricks</h1>
+<p>Chapters 1–6 used four tools: Gauss, superposition of series/parallel pieces, energy, and symmetry. This chapter
+makes each of them systematic and shows what they cost. The capacitance <em>matrix</em> replaces "the capacitor";
+Green's reciprocity answers questions about induced charge that cannot be answered by any amount of image-charge
+ingenuity; the spheroid family and conformal mapping give the exact answer for the shapes that are not planes,
+cylinders or spheres; and the last three sections apply all of it to the places where real capacitors stop behaving:
+a membrane that snaps shut, a droplet that explodes, a tip that sparks.</p>
+
+<h2>7.1 Many conductors: the capacitance matrix, and what its entries mean</h2>
+<p>For <m>N</m> conductors, with everything else (including infinity) at zero, linearity gives</p>
+<div class="eqd" data-tag="7.1">Q_i=\sum_{j=1}^{N}c_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad
+U=\frac12\sum_{i,j}c_{ij}V_iV_j</div>
+<p><m>c_{ii}</m> is the charge needed on conductor <m>i</m> when it alone is raised to unit potential with
+<em>all other conductors grounded</em>; <m>c_{ij}</m> (<m>i\ne j</m>) is the charge that appears on <m>j</m> when
+<m>i</m> is at unit potential. The inverse matrix <m>\mathbf p=\mathbf c^{-1}</m> is the
+<em>coefficients-of-potential</em> (elastance) matrix, <m>V_i=\sum_jp_{ij}Q_j</m>, and it is the one built directly
+by superposition in chapter 2 (<m>p_{ii}=1/4\pi\varepsilon_0a_i</m> for a lone sphere,
+<m>p_{ij}=1/4\pi\varepsilon_0d_{ij}</m> for widely separated ones).</p>
+<div class="box def"><p class="bt">Four structural facts, each provable in one line</p>
+<ol>
+<li><b>Symmetry</b> <m>c_{ij}=c_{ji}</m>: Green's reciprocity (§7.2), or the energy argument that
+<m>\partial Q_i/\partial V_j=\partial Q_j/\partial V_i=\partial^{2}U/\partial V_i\partial V_j</m>.</li>
+<li><b>Sign:</b> <m>c_{ij}\le0</m> for <m>i\ne j</m>. Raise <m>i</m> to <m>+V</m> and ground <m>j</m>: the
+potential in the region has no interior maximum, so it decreases monotonically toward <m>j</m> and
+<m>E_n</m> on <m>j</m> points <em>inward</em> ⇒ <m>Q_j&lt;0</m>. (Physically: a grounded neighbour is always
+negatively charged by its neighbours.)</li>
+<li><b>Row sums are physical:</b> set every conductor to the same <m>V</m>: then
+<m>Q_i=V\sum_jc_{ij}</m> is the share of the charge that lands on conductor <m>i</m> of one merged equipotential
+bundle, and <m>V^{-1}\sum_{i}\sum_{j}c_{ij}</m> is the capacitance of that bundle to infinity. In particular, if
+conductor <m>i</m> is <em>completely enclosed</em> by others the field in the enclosing cavity vanishes, so
+<m>\sum_jc_{ij}=0</m>: Faraday's ice-pail experiment as a matrix identity.</li>
+<li><b>Positive definiteness:</b> <m>U=\tfrac12\vec V^{T}\mathbf c\vec V&gt;0</m> for every nonzero
+<m>\vec V</m> (chapter 1's "the field energy is a sum of squares"), so <m>\det\mathbf c&gt;0</m>, all eigenvalues
+positive, and <m>\mathbf c^{-1}</m> exists. Any matrix proposed as "a capacitance matrix" that violates one of
+(1)–(4) is not one.</li>
+</ol></div>
+
+<p>The payoff is that <em>every</em> reduction you have ever done is one matrix operation.</p>
+<div class="box thm"><p class="bt">Eliminating a node = Schur complement (four uses, one formula)</p>
+<p>If conductor <m>k</m> is <b>floating and uncharged</b>, <m>Q_k=0</m> fixes
+<m>V_k=-\sum_{j\ne k}(c_{kj}/c_{kk})V_j</m>; substituting back leaves the reduced matrix</p>
+<div class="eqd">c^{\,\text{red}}_{ij}=c_{ij}-\frac{c_{ik}c_{kj}}{c_{kk}}</div>
+<ul>
+<li><b>A two-terminal capacitance.</b> Take <m>i=1,j=1</m>, <m>k=2 </m> with conductor 2 floating:
+<m>C_{11}^{\text{float}}=c_{11}-c_{12}^{2}/c_{22}</m>. Since <m>\det\mathbf c=c_{11}c_{22}-c_{12}^{2}&gt;0</m> this is
+positive ✓ and it is <em>smaller</em> than <m>c_{11}</m> — <b>a floating neighbour is always less effective than a
+grounded one</b>.</li>
+<li><b>Chapter 4's series rule.</b> Two conductors plus a floating island: the same algebra, and the reason it works
+is that the island's equation can be solved exactly.</li>
+<li><b>A Δ–Y transform.</b> Eliminating one node of a 4-node network reproduces §4.6's
+<m>C_{ij}=C_iC_j/S</m> — the transform <em>is</em> Gaussian elimination on <m>\mathbf c</m>.</li>
+<li><b>A shield.</b> If <m>k</m> encloses <m>i</m>, then <m>c_{ij}=0</m> for all <m>j</m> outside: the Schur
+complement is exact and there is nothing left to reduce — that is why coax works, and why "guarding" is
+mathematically the same as shielding.</li>
+</ul></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 218" role="img" aria-label="Left: a node and a neighbour conductor drawn three ways with the resulting capacitances. Right: a dashed closed surface cutting one wire, enclosing two capacitor plates">
+  <g transform="translate(40,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">The same conductor, three third terminals</text>
+    <rect x="0" y="20" width="86" height="16" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <text x="22" y="54" class="lbl sm">node 1</text>
+    <rect x="150" y="20" width="86" height="16" stroke="var(--muted)" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+    <text x="146" y="54" class="lbl sm" fill="var(--muted)">neighbour</text>
+    <line x1="88" y1="24" x2="148" y2="24" class="thinl" stroke="var(--muted)"/>
+    <line x1="88" y1="32" x2="148" y2="32" class="thinl" stroke="var(--accent)"/>
+    <text x="86" y="14" class="mi sm">c₁₂ = −s·c₁₁</text>
+    <text x="0" y="88" class="lbl sm">neighbour absent:  C = 4πε₀a</text>
+    <text x="0" y="108" class="lbl sm">neighbour floating:  C = c₁₁ − c₁₂²/c₂₂ = 4.00πε₀a (to this order)</text>
+    <text x="0" y="128" class="lbl sm">neighbour earthed: C = c₁₁ = 4.27πε₀a — the earth supplies the extra</text>
+    <text x="0" y="156" class="lbl md" fill="var(--accent)">Grounding always wins. That is the whole content of §7.2's theorem (b).</text>
+  </g>
+  <g transform="translate(480,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">Surface for the branch rule</text>
+    <path d="M0,26 H170 M0,150 H170 M0,26 V150 M170,26 V150" class="ln2" stroke="var(--violet)" stroke-dasharray="7 4"/>
+    <line x1="80" y1="6" x2="80" y2="24" class="ln2" stroke="var(--pos)" marker-end="url(#ahp)"/>
+    <text x="88" y="16" class="lbl sm" fill="var(--pos)">I(t) from the cell</text>
+    <rect x="44" y="60" width="82" height="12" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <rect x="44" y="104" width="82" height="12" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <text x="34" y="92" class="lbl sm">two plates inside</text>
+    <path d="M85,72 V104" class="ln2" stroke="var(--neg)"/>
+    <text x="0" y="170" class="lbl sm">Nothing else may cross: ΔQ_cell = ΔQ₁ + ΔQ₂,</text>
+    <text x="0" y="186" class="lbl sm">exactly, without solving the transient.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.1</b> — Left: "the capacitance of a conductor" is not defined until the state of every other
+conductor is, and the Schur complement <m>c_{ij}-c_{ik}c_{kj}/c_{kk}</m> is the whole answer (numbers from Q1,
+<m>s=a/d=1/4</m>). Right: the closed surface used by §6.3's branch rule — draw it so only the branch you are asked
+about crosses it, and the answer follows from the two end states alone.</figcaption></figure>
+
+<h2>7.2 Green's reciprocity, and the questions it alone can answer</h2>
+<p><b>Theorem.</b> For two charge/configurations in the same geometry (same conductors, same permittivity map):</p>
+<div class="eqd" data-tag="7.2">\sum_iQ_iV_i'=\sum_iQ_i'V_i</div>
+<p><b>Proof in three lines.</b> Over the whole field region
+<m>\int\varepsilon\vec E\cdot\vec E'\,d\tau</m> is symmetric in
+<m>(V,V')</m>. But <m>\vec E=-\vec\nabla V</m> and
+<m>-\vec\nabla\cdot(V'\varepsilon\vec E)=\varepsilon\vec E\cdot\vec\nabla V'-V'\underbrace{\vec\nabla\cdot(\varepsilon\vec E)}_{=0}</m>,
+so the integral equals <m>-\oint V'\varepsilon\vec E\cdot d\vec a=\sum_iV_i'Q_i</m> (the surface at infinity
+contributes nothing since <m>V\sim1/r</m>, <m>E\sim1/r^{2}</m>). Symmetry in the primed/unprimed pair gives
+(7.2). ∎</p>
+<p>What makes it powerful is that it relates <em>charges</em> to <em>potentials</em> without ever finding the field.
+Three applications of increasing strength:</p>
+
+<div class="box thm"><p class="bt">Application 1 — the induced charge on two plates, exactly</p>
+<p>A point charge <m>q</m> sits between two large grounded parallel plates a distance <m>d</m> apart, at distance
+<m>x</m> from plate 1. What charge is induced on each plate? The <em>field</em> needs an infinite set of images; the
+<em>charges</em> need one line. Choose the primed state: plate 1 at <m>V_1'=1</m>, plate 2 grounded, no point
+charge — a uniform field, so the potential at <m>q</m>'s position is <m>(d-x)/d</m> and <m>Q_2'=0</m>. Reciprocity,
+with <m>V_1=V_2=0</m> in the real state and <m>Q_{\text{source}}'=0</m>:</p>
+<div class="eqd">q\frac{d-x}{d}+Q_1\cdot1+Q_2\cdot0=0\qquad\Longrightarrow\qquad
+\boxed{\;Q_1=-q\frac{d-x}{d},\qquad Q_2=-q\frac{x}{d}\;}
+\qquad\left[Q_1+Q_2=-q\ \checkmark\ \text{(Gauss)}\right]</div>
+<p>Read the result: the charge goes <em>preferentially to the nearer electrode</em>, in inverse proportion to the
+distance. For <m>x\to0</m> plate 1 takes all of it, as it must.</p></div>
+
+<div class="box thm"><p class="bt">Application 2 — the Ramo (Shockley–Ramo) theorem: signals from moving charges</p>
+<p>Keep the same geometry but hold the plates at fixed potentials, so a battery is connected. Move the charge by
+<m>d\vec r</m>: the induced charges change by (from the boxed result) <m>dQ_i=-q\,d\xi_i</m> where
+<m>\xi_i</m> is the value the <em>primed</em> problem's potential would take at the charge's position if plate
+<m>i</m> alone were at unit potential. Dividing by <m>dt</m>:</p>
+<div class="eqd" data-tag="7.3">i_{\text{induced on electrode }k}=-q\,\vec v\cdot\vec E_k^{\,w}
+\qquad\left[\vec E_k^{\,w}=\vec\nabla\xi_k,\ \text{the "weighting field"}\right]</div>
+<p>For the parallel-plate case <m>|\vec E_1^{w}|=1/d</m>, so a charge drifting at <m>v</m> between the plates sends
+a constant current <m>qv/d</m> in the external circuit — the operating principle of an ionisation chamber, a
+multiwire proportional counter and a semiconductor detector, where the pulse shape tells you <em>where</em> the
+carrier drifted and the total integral <m>q</m> is unaffected. Note what the theorem does <em>not</em> require: the
+electrodes need not be simple, and <m>\vec E_k^{w}</m> is computed with <em>all conductors grounded and only k at
+unit potential</em> — an easy single Laplace solve even when the real field is hopeless. This is the most
+under-used tool in elementary electrostatics and a fair game in an IPhO theory question.</p></div>
+
+<div class="box thm"><p class="bt">Application 3 — two monotonicity theorems worth quoting as results</p>
+<p><b>(a) Adding an uncharged conductor can only increase a capacitance.</b> Fix the free charges on the original
+conductors. Thomson's minimum-energy theorem says the real field minimises
+<m>U=\int\tfrac12\varepsilon E^{2}d\tau</m> over all divergence-free fields compatible with those charges. Inserting
+a floating conductor <em>enlarges</em> the admissible set (its surface may now sit at any equipotential), so the
+minimum cannot rise: <m>U\downarrow</m> with <m>Q</m> fixed ⇒ <m>C=Q^{2}/2U\uparrow</m>. The metal slab of chapter 2
+is the extreme case, and this proves the qualitative half of every "which way does C change?" question.</p>
+<p><b>(b) Grounding a neighbour beats leaving it floating.</b> From the Schur complement above,
+<m>c_{11}^{\text{(2 grounded)}}=c_{11}&gt;c_{11}-c_{12}^{2}/c_{22}=c_{11}^{\text{(2 floating)}}</m>. Physically: a
+grounded plate can draw extra charge from the earth; a floating one cannot, so it only partly shelters. And the
+"delete" case (no conductor at all) is the third value — which is exactly the
+<em>fold / short / delete</em> table of §4.5, now proved rather than asserted.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 224" role="img" aria-label="A point charge between two grounded plates with the induced charges proportional to the distances, and beside it the current pulse of an ionisation chamber">
+  <g transform="translate(40,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">Reciprocity: charges without fields</text>
+    <line x1="0" y1="30" x2="300" y2="30" class="ln"/><line x1="0" y1="150" x2="300" y2="150" class="ln"/>
+    <circle cx="118" cy="96" r="6" fill="var(--neg)"/>
+    <text x="128" y="90" class="mi sm">q at x from plate 1</text>
+    <line x1="0" y1="14" x2="118" y2="14" class="dim"/><line x1="118" y1="14" x2="300" y2="14" class="dim"/>
+    <text x="42" y="10" class="mi sm">d − x</text><text x="196" y="10" class="mi sm">x</text>
+    <text x="6" y="48" class="mi sm">Q₁ = −q(d − x)/d</text>
+    <text x="6" y="142" class="mi sm">Q₂ = −qx/d</text>
+    <g class="fp"><circle cx="40" cy="34" r="2.6"/><circle cx="70" cy="34" r="2.6"/><circle cx="100" cy="34" r="2.6"/><circle cx="130" cy="34" r="2.6"/></g>
+    <g class="fn"><circle cx="180" cy="146" r="2.6"/><circle cx="210" cy="146" r="2.6"/><circle cx="240" cy="146" r="2.6"/></g>
+    <text x="0" y="180" class="lbl sm">Weighting field for plate 1: the primed problem — plate 1 at 1 V, plate 2 at 0:</text>
+    <text x="0" y="196" class="lbl sm">a uniform field of 1/d, so the current is qv/d no matter where the charge is.</text>
+  </g>
+  <g transform="translate(430,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">What the electronics sees</text>
+    <line x1="0" y1="150" x2="250" y2="150" class="ln"/><line x1="0" y1="20" x2="0" y2="150" class="ln"/>
+    <text x="212" y="168" class="lbl sm">t →</text><text x="-28" y="86" class="lbl sm">i_ind</text>
+    <path d="M6,150 L6,60 H150 L150,150" fill="none" stroke="var(--accent)" stroke-width="2.8"/>
+    <path d="M150,60 C170,60 180,120 190,146 L250,150" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="30" y="50" class="lbl sm">drift across the gap: constant</text>
+    <text x="156" y="118" class="lbl sm" fill="var(--muted)">collection</text>
+    <text x="0" y="186" class="lbl sm">Area = ∫i dt = q: the pulse height tells you the energy deposited,</text>
+    <text x="0" y="202" class="lbl sm">the shape tells you how far the carrier travelled. Both from one theorem.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.2</b> — Green's reciprocity turns an infinite image sum into two lines of algebra (Q₂ is
+<em>zero</em> in the primed state, which is the whole trick), and the same identity with a time derivative is the
+Shockley–Ramo theorem every radiation detector is designed with.</figcaption></figure>
+
+<h2>7.3 Images, done as a method rather than a trick</h2>
+<p>Every image solution is an appeal to <b>uniqueness</b>: guess a set of auxiliary charges outside the region of
+interest that makes the boundary an equipotential; the field inside is then <em>the</em> answer. The four cases worth
+having in your hands:</p>
+<table class="tb">
+<thead><tr><th>problem</th><th>the image</th><th class="e">what you then get</th></tr></thead>
+<tbody>
+<tr><td>charge <m>q </m>, grounded plane</td><td><m>-q</m> at the mirror point</td>
+<td class="e"><m>\sigma=-\dfrac{q}{2\pi}\dfrac{h}{(\rho^{2}+h^{2})^{3/2}}</m>, <m>F=-\dfrac{q^{2}}{16\pi\varepsilon_0h^{2}}</m></td></tr>
+<tr><td>charge <m>q </m>, grounded sphere <m>a </m> at <m>d </m></td>
+<td><m>q'=-\dfrac{a}{d}q</m> at <m>a^{2}/d</m></td>
+<td class="e"><m>F=-\dfrac{q^{2}ad}{4\pi\varepsilon_0\left(d^{2}-a^{2}\right)^{2}}</m>; add <m>-q'</m> at the centre for an isolated neutral sphere</td></tr>
+<tr><td>sphere at potential <m>V</m>, height <m>h</m> above a grounded plane</td>
+<td>an infinite alternating sequence, ratio <m>a/2h</m></td>
+<td class="e"><m>C=4\pi\varepsilon_0a\sinh\alpha\displaystyle\sum_{n\ge1}\frac1{\sinh n\alpha}</m>, <m>\cosh\alpha=h/a</m></td></tr>
+<tr><td>two plates meeting at a wedge angle <m>\beta</m></td><td>image <em>rotations</em>, only for
+<m>\beta=\pi/n</m></td><td class="e">a solvable set that is disappointingly small — hence §7.5</td></tr>
+</tbody></table>
+<p>The third row deserves a derivation of its leading term, because the argument is reusable. Sphere at potential
+<m>V</m>, centre at height <m>h\gg a</m>. Zeroth order: charge <m>q_0=4\pi\varepsilon_0aV</m> at the centre (an
+isolated sphere). Its mirror <m>-q_0</m> at depth <m>h</m> below the plane then contributes, over the small sphere, an
+almost constant potential <m>-q_0/4\pi\varepsilon_0(2h)</m>, so the sphere's own potential is reduced and more charge
+must be added:</p>
+<div class="eqd">V=\frac{q}{4\pi\varepsilon_0a}-\frac{q}{4\pi\varepsilon_0\cdot2h}
+\qquad\Longrightarrow\qquad C=\frac{q}{V}=4\pi\varepsilon_0a\left(1-\frac{a}{2h}\right)^{-1}
+\approx4\pi\varepsilon_0a\left(1+\frac{a}{2h}\right)</div>
+<p>and the exact series above reproduces this, since
+<m>\sinh\alpha/\sinh2\alpha=1/(2\cosh\alpha)=a/2h</m> is precisely the first correction ✓. <b>Always do this
+first-order check</b>: it takes one line, it verifies a quoted series, and it is often worth a mark on its own.</p>
+
+<h2>7.4 The spheroid family: one formula for needles, discs and everything between</h2>
+<p>Separation of variables in spheroidal coordinates gives the capacitance of an isolated conducting spheroid in
+terms of its focal half-length <m>f</m>:</p>
+<div class="eqd" data-tag="7.4">\text{prolate (needles, }c&gt;a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\ln\dfrac{c+f}{a}},
+\qquad f=\sqrt{c^{2}-a^{2}}\\[2pt]
+\text{oblate (discs, }c&lt;a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\eta},\qquad f=\sqrt{a^{2}-c^{2}},\ \tan\eta=\frac{f}{c}</div>
+<p>Three limits, all of them checkable and all of them useful:</p>
+<ul>
+<li><b>Sphere:</b> <m>c=a,\ f\to0</m>: both formulas give <m>C=4\pi\varepsilon_0a</m> ✓ (the <m>\eta\to0</m> and
+<m>\ln(1)\to0</m> limits are both <m>f/\eta\to c</m> and <m>f/\ln\to c</m>).</li>
+<li><b>Thin needle</b> (<m>c\gg a</m>): <m>f\to c</m>, <m>\ln\frac{2c}{a}</m> in the denominator, so</li>
+</ul>
+<div class="eqd">C_{\text{needle}}\approx\frac{4\pi\varepsilon_0c}{\ln(2c/a)}\qquad
+\left[\ 1\ \text{m of }1\ \text{mm wire}: \ \frac{4\pi\varepsilon_0\times0.5}{\ln(1000)}=6.4\ \text{pF}\ \right]</div>
+<p>— the <em>logarithm</em> is why a long thin wire is such a poor capacitor and why chapter 2's answer
+"about 6 pF per metre of wire" hardly improves when you make the wire thinner: halving <m>a</m> buys you
+<em>0.7%</em>. Any answer that scales the capacitance of a wire linearly with radius is wrong.</p>
+<ul>
+<li><b>Flat disc</b> (<m>c\to0</m>): <m>f\to a</m>, <m>\eta\to\pi/2</m>, so <m>\boxed{C=8\varepsilon_0a}</m>.</li>
+</ul>
+<p>The disc value is the one students are told to memorise, and the <m>4\pi</m> has vanished: a disc of radius
+<m>a</m> has <m>64\%</m> of the capacitance of a sphere of the same radius, and the same capacitance as a sphere of
+radius <m>2a/\pi</m>. Its surface charge is <m>\sigma(\rho)=Q/(2\pi a\sqrt{a^{2}-\rho^{2}})</m> —
+integrable but divergent at the rim, the <m>(r-a)^{-1/2}</m> edge singularity of §7.5, which is why a disc electrode
+sparks at its edge long before the average field reaches the breakdown value.</p>
+
+<div class="box thm"><p class="bt">The same family answers the question chapter 5 left open: shape decides the internal field</p>
+<p>For an <em>ellipsoidal</em> inclusion of permittivity <m>\varepsilon_i</m> in a medium
+<m>\varepsilon_m</m> in a far field <m>E_0</m>, the internal field is uniform and</p>
+<div class="eqd" data-tag="7.5">E_{\text{in}}=\frac{E_0}{1+L\left(\dfrac{\varepsilon_i}{\varepsilon_m}-1\right)},
+\qquad L=\text{depolarising factor along }\vec E_0,\qquad L_1+L_2+L_3=1</div>
+<p>with <m>L=1/3</m> for a sphere, <m>L\to0</m> along a needle's axis and <m>L\to1</m> across a thin disc. Four
+consequences, all of them examinable:</p>
+<ol>
+<li><b>Sphere, </b><m>L=1/3</m>: <m>E_{\text{in}}=3E_0/(\kappa+2)</m> — exactly the result of chapter 5's Q7, so
+(7.5) is its generalisation, not a new fact.</li>
+<li><b>Dilute suspension <m>\to</m> Clausius–Mossotti.</b> Each spheroid is a point dipole,
+<m>\vec p=4\pi\varepsilon_0\varepsilon_m a^{3}\dfrac{\kappa-1}{\kappa+2}\vec E_0</m> along the field, so with
+<m>P=np</m> and <m>E_{\text{loc}}=E_0+P/3\varepsilon_0</m> (chapter 5) one gets
+<m>(\kappa-1)/(\kappa+2)=n\cdot4\pi a^{3}/3</m>. The <m>2</m> in that denominator arises <em>only</em> from
+<m>L=1/3</m>: change the particle to a needle, <m>L\to0</m>, and the longitudinal polarisability diverges — which is
+why a fibre-filled composite percolates at a few per cent loading while spheres need 30–40%.</li>
+<li><b>A crack-shaped void perpendicular to the field</b> (<m>\varepsilon_i=\varepsilon_0</m>, <m>L=1</m>):
+<m>E_{\text{in}}=\kappa E_0</m> — the void takes <em>all</em> of the voltage, exactly the series-layer result of
+§5.5, now seen to be a shape effect. A <b>needle-shaped void along the field</b> (<m>L\to0</m>) sees
+<m>E_0</m>: harmless. This is why porcelain and epoxy insulation is <em>layered</em> with the field and why a
+delamination, which is by shape a disc, is the worst possible defect.</li>
+<li><b>A conducting fibre</b> (<m>\varepsilon_i\to\infty</m>): <m>E_{\text{in}}=0</m> for any
+<m>L&gt;0</m>, but the <em>polarisation</em> <m>\propto1/L</m> diverges as <m>L\to0</m>: a metal needle aligned with
+the field is an almost perfect concentrator, which is the quantitative form of "sharp tips spark" and the reason
+carbon-fibre composites are both structures and antennas.</li>
+</ol></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 216" role="img" aria-label="The spheroid family: needle, sphere, disc with their capacitances, and below them a disc-shaped void and a needle-shaped void in a dielectric showing the internal fields">
+  <g transform="translate(30,24)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">One formula, three shapes (f = focal half-length)</text>
+    <ellipse cx="60" cy="52" rx="9" ry="40" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"/>
+    <text x="76" y="46" class="lbl sm">prolate (needle)</text>
+    <text x="76" y="62" class="mtext">C = 4πε₀f / ln((c+f)/a)</text>
+    <text x="76" y="78" class="lbl sm">→ 4πε₀c / ln(2c/a)</text>
+    <circle cx="250" cy="52" r="30" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"/>
+    <text x="288" y="56" class="lbl sm">sphere: 4πε₀a</text>
+    <ellipse cx="440" cy="52" rx="40" ry="9" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"/>
+    <text x="488" y="46" class="lbl sm">oblate (disc)</text>
+    <text x="488" y="62" class="mtext">C = 4πε₀f/η → 8ε₀a</text>
+  </g>
+  <g transform="translate(30,116)">
+    <text x="0" y="-4" class="lbl md" font-weight="700">The same L decides whether a defect is lethal</text>
+    <rect x="0" y="8" width="200" height="70" fill="var(--surface-2)" stroke="var(--muted)"/>
+    <g class="fld"><path d="M30,4 V78" /><path d="M70,4 V78" /><path d="M110,4 V78" /><path d="M150,4 V78" /><path d="M190,4 V78" /></g>
+    <ellipse cx="100" cy="43" rx="46" ry="6" fill="var(--bg)" stroke="var(--neg)" stroke-width="2"/>
+    <text x="24" y="98" class="lbl sm">disc void ⊥ E:  L = 1,  E_in = κE₀  → corona</text>
+    <rect x="270" y="8" width="200" height="70" fill="var(--surface-2)" stroke="var(--muted)"/>
+    <g class="fld"><path d="M300,4 V78" /><path d="M340,4 V78" /><path d="M380,4 V78" /><path d="M420,4 V78" /></g>
+    <ellipse cx="370" cy="43" rx="6" ry="30" fill="var(--bg)" stroke="var(--pos)" stroke-width="2"/>
+    <text x="288" y="98" class="lbl sm">needle void ∥ E:  L → 0,  E_in = E₀  → harmless</text>
+    <text x="496" y="34" class="lbl sm">E_in = E₀ / [1 + L(εᵢ/ε_m − 1)]</text>
+    <text x="496" y="52" class="lbl sm">L = 1/3 sphere — which is where</text>
+    <text x="496" y="68" class="lbl sm">the "3" in 3E₀/(κ+2) comes from.</text>
+    <text x="496" y="92" class="lbl md" fill="var(--accent)">Layer your insulation along E.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.3</b> — Every "long thin" or "flat wide" conductor is a limit of one spheroid formula, and every
+shape effect inside a dielectric is one depolarising factor. The left pair of panels is the answer to chapter 2's and
+chapter 5's void questions at once: a delamination is a disc, and a disc takes <m>\kappa</m> times the field.</figcaption></figure>
+
+<h2>7.5 Conformal mapping: the 2-D problems that images cannot touch</h2>
+<p>In two dimensions (infinite cylinders, no variation along the axis) <m>\nabla^{2}V=0</m> is invariant under any
+analytic map <m>w=f(z)</m>: harmonicity is preserved, angles are preserved, and since capacitance is
+<em>dimensionless per unit length</em> in 2-D except for a factor <m>\varepsilon_0</m>, the whole problem can be
+solved in whichever <m>w</m>-plane is convenient. The rule that makes this mechanical:</p>
+<div class="eqd" data-tag="7.6">\text{if the map turns the conductors into two straight lines }u=u_1,u_2
+\text{ with a period }P\text{ in }v,\qquad C'=\varepsilon_0\frac{P}{|u_2-u_1|}</div>
+<p><b>Two equal cylinders</b> (radius <m>a</m>, axes <m>d</m> apart) — chapter 2's hardest result, three lines here.
+Use <m>w=\ln\dfrac{z-f}{z+f}</m> with foci <m>\pm f</m>. Lines of constant
+<m>u=\Re w=\ln\left|\dfrac{z-f}{z+f}\right|=u_0</m> are precisely the circles of Apollonius, with centre
+<m>-f\coth u_0</m> and radius <m>f/|\sinh u_0|</m>. Matching to two equal cylinders of radius <m>a</m> centred at
+<m>\pm d/2</m>:</p>
+<div class="eqd">\frac{f}{\sinh u_0}=a,\qquad f\coth u_0=\frac d2
+\qquad\Longrightarrow\qquad\cosh u_0=\frac{d}{2a},</div>
+<p>and since the region between the two circles maps to the strip <m>-u_0&lt;u&lt;u_0</m> with period
+<m>2\pi</m> in <m>v</m>, (7.6) gives <m>C'=\varepsilon_0\cdot2\pi/(2u_0)</m>, i.e.</p>
+<div class="eqd" data-tag="7.7">C'=\frac{\pi\varepsilon_0}{\operatorname{arcosh}\dfrac{d}{2a}}
+\qquad\left[\ d\gg a:\ C'\approx\frac{\pi\varepsilon_0}{\ln(d/a)}\ \text{and}\ V\to\infty\ \text{as}\ d\to2a\ \right]\ \checkmark\ \text{ch. 2, Q5}</div>
+<p><b>One wire above a ground plane</b> is half of the same answer (the plane is the
+<m>d\to</m> mirror image, doubling the charge for the same voltage):</p>
+<div class="eqd">C_{\text{wire above plane}}'=\frac{2\pi\varepsilon_0}{\operatorname{arcosh}(h/a)}
+\approx\frac{2\pi\varepsilon_0}{\ln(2h/a)}</div>
+<p>which is the formula behind every "capacitance of a transmission line / a PCB trace / a coax with the shield far
+away" estimate — and behind chapter 2's "1 m of wire ≈ 6 pF": a wire <em>over ground</em> is the practical
+capacitor, and its logarithm is why you cannot fix its capacitance by changing its thickness.</p>
+<p><b>Edges and corners.</b> The map <m>z=w^{n}</m> turns a wedge of half-angle into a half-plane, so near a
+conducting corner bounding a vacuum region of angle <m>\beta</m> the potential must behave as</p>
+<div class="eqd" data-tag="7.8">V\sim r^{\pi/\beta}\sin\frac{\pi\theta}{\beta},\qquad
+E\sim r^{\pi/\beta-1}
+\qquad\Longrightarrow\qquad \text{knife edge }(\beta=2\pi):\ E\propto r^{-1/2};\quad
+\text{square corner }(\beta=3\pi/2):\ E\propto r^{-1/3};\quad 90^\circ\text{ notch }(\beta=\pi/2):\ E\propto r^{+1}</div>
+<p>Three readings: (i) a sharp <em>convex</em> edge has a diverging field but an <em>integrable</em> charge density,
+so the total charge near it stays finite and the singularity is only a threat through breakdown; (ii) a
+<em>concave</em> corner has <em>zero</em> field — which is why triple-point junctions are made with a fillet, why
+vacuum insulators are corrugated the other way, and why "polish the edges, round the corners" is the whole of HV
+electrode design; (iii) the exponent is <em>universal</em>: it does not depend on the rest of the geometry, so a
+measured <m>r^{-1/2}</m> profile is evidence of a knife edge whatever else is nearby.</p>
+
+<div class="box insight"><p class="bt">Why 2-D capacitances are logarithmic, and why 3-D ones are not</p>
+<p>In 2-D the Green function is <m>\ln r</m>, so an isolated cylinder's capacitance per unit length diverges as the
+outer reference goes to infinity: <m>C'\sim2\pi\varepsilon_0/\ln(R/a)</m> → 0 as <m>R\to\infty</m>. In 3-D the
+Green function is <m>1/r</m> and a finite isolated body has a finite <m>C</m> (chapter 2's
+<m>4\pi\varepsilon_0a</m>). Practical corollary: <em>any</em> "capacitance of a long wire" must name its return
+conductor — the ground, the shield, the neighbouring trace — because the answer is dominated by the distance to it
+through a logarithm. And it explains the <m>\ln(d/a)</m> in (7.7) and the "<m>1.386</m>" of chapter 2's two-sphere
+pair: the same logarithm in different clothes.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 220" role="img" aria-label="Two cylinders and the field lines between them on the left; on the right the same region mapped to a straight strip between two parallel lines with uniform field">
+  <g transform="translate(36,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">z-plane: two cylinders, radius a, axes d apart</text>
+    <circle cx="58" cy="90" r="30" stroke="var(--fg)" stroke-width="2.2" fill="var(--surface)"/>
+    <circle cx="222" cy="90" r="30" stroke="var(--fg)" stroke-width="2.2" fill="var(--surface)"/>
+    <text x="52" y="95" class="mi sm">+V/2</text><text x="216" y="95" class="mi sm">−V/2</text>
+    <path d="M88,90 C110,72 170,72 192,90 M88,90 C110,108 170,108 192,90" fill="none" class="fld"/>
+    <path d="M88,78 C120,50 160,50 192,78 M88,102 C120,130 160,130 192,102" fill="none" stroke="var(--muted)" stroke-width="1.3"/>
+    <path d="M88,90 H192" class="fld"/>
+    <line x1="58" y1="136" x2="222" y2="136" class="dim"/>
+    <text x="128" y="152" class="mi sm">d</text>
+    <text x="0" y="176" class="lbl sm">Circles of Apollonius |z−f| / |z+f| = const.</text>
+  </g>
+  <g transform="translate(400,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">w-plane:  w = ln((z − f)/(z + f))</text>
+    <line x1="30" y1="20" x2="30" y2="150" class="ln" stroke-width="3"/>
+    <line x1="210" y1="20" x2="210" y2="150" class="ln" stroke-width="3"/>
+    <text x="10" y="90" class="mi sm">+u₀</text><text x="216" y="90" class="mi sm">−u₀</text>
+    <g class="fld"><path d="M30,40 H210" /><path d="M30,70 H210" /><path d="M30,100 H210" /><path d="M30,130 H210" /></g>
+    <text x="86" y="168" class="lbl sm">uniform, spacing 2u₀</text>
+    <path d="M210,150 H30" class="dim"/><text x="96" y="184" class="mi sm">2u₀ = 2 arcosh(d/2a)</text>
+    <text x="30" y="16" class="lbl sm">v wraps with period 2π ⇒ "plate width" 2π</text>
+    <text x="0" y="200" class="lbl sm">C′ = ε₀ · (period in v) / (gap in u) = πε₀ / arcosh(d/2a)   — chapter 2's Q5, in four lines.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.4</b> — What a conformal map is <em>for</em>: it moves the boundary conditions, not the physics.
+Laplace's equation, angles and the per-unit-length capacitance all survive, so a curved two-body problem becomes a
+parallel-plate one. The same map with a plane of symmetry gives the wire-over-ground formula used for every overhead
+line and microstrip.</figcaption></figure>
+
+<h2>7.6 Instability: why every electrostatic actuator snaps</h2>
+<p>A plate on a spring (stiffness <m>k</m>, free gap <m>\ell_0</m>) pulled by its own field. For a
+voltage-controlled device chapter 3's rule says the potential governing the mechanics is
+<m>\Pi=U_{\text{spring}}-\tfrac12C(x)V^{2}</m> — the source pays half, so only half the field energy is available to
+pull — hence</p>
+<div class="eqd" data-tag="7.9">\Pi(x)=\frac12kx^{2}-\frac12\frac{\varepsilon_0A}{\left(\ell_0-x\right)^{2}}V^{2},
+\qquad \Pi'(x)=kx-\frac{\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{3}}=0,\qquad
+\Pi''(x)=k+\frac{3\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{4}}</div>
+<p>Equilibrium needs <m>\Pi'=0</m>; <em>stability</em> needs <m>\Pi''&gt;0</m>. Dividing the two, and writing
+<m>\xi=x/\ell_0</m> and the dimensionless voltage <m>v=2\varepsilon_0AV^{2}/(k\ell_0^{3})</m>:</p>
+<div class="eqd">\xi=\frac{v}{2\left(1-\xi\right)^{2}},\qquad
+\frac{\Pi''}{k}=1-\frac{3\xi}{1-\xi}\ \gtrless\ 0\qquad\Longrightarrow\qquad
+\boxed{\ \xi_{\text{pull-in}}=\frac13,\qquad v_{\text{crit}}=\frac{8}{27}\ }</div>
+<p>so <m>V_{\text{pi}}^{2}=\dfrac{8k\ell_0^{3}}{27\varepsilon_0A}</m> — chapter 3's result, now seen to be a
+<em>saddle-node</em> (fold) bifurcation: for <m>v&lt;8/27</m> there are two equilibria (one stable, one unstable),
+at <m>v=8/27</m> they merge and annihilate, and beyond it the plate accelerates all the way to the other electrode.
+Four consequences that are worth more than the formula:</p>
+<ul>
+<li><b>Displacement is capped at 1/3 of the gap</b> — so a MEMS variable capacitor gets at most
+<m>(1-1/3)^{-1}=1.5</m>× tuning, and the entire literature on "pull-in-free" actuators (levers, magnetic
+restoring force, shaped electrodes that make <m>dC/dx</m> fall as <m>x</m> grows) is about escaping this one number.
+A stopper at <m>0.4\ell_0</m> lets you run at <m>1.2V_{\text{pi}}</m> for a larger swing; this is done, not just
+proposed.</li>
+<li><b>Scaling is merciless:</b> <m>V_{\text{pi}}\propto\sqrt{k\ell_0^{3}/A}</m>. With a plate scaled by
+<m>\lambda</m> and the same relative thickness, <m>k\propto\lambda</m>, <m>A\propto\lambda^{2}</m>, so
+<m>V_{\text{pi}}\propto\lambda^{1/2}\cdot\lambda\ldots</m> — for a geometrically similar gap,
+<m>V_{\text{pi}}\propto\sqrt{\lambda}</m>: <b>smaller is more stable in voltage but the field is the same</b>, and the
+energy density <m>\tfrac12\varepsilon_0E^{2}</m> is why MEMS forces dominate at low voltage and vanish at high.
+Check: the pull-in <em>field</em> is <m>E_{\text{pi}}=V_{\text{pi}}/(\tfrac23\ell_0)\propto\lambda^{-1/2}</m>, so at
+the micrometre scale <m>E_{\text{pi}}\sim10^{8}</m> V/m — right at air's breakdown, which is precisely why MEMS
+switches are designed to snap <em>before</em> air breaks down.</li>
+<li><b>Stiction is the failure, not pull-in.</b> After a snap-down the contact patch is held by both the field and
+any capillary water film (chapter 5's <m>1/d^{2}</m> capillary pressure, enormous at small <m>d</m>): releasing
+requires <m>V\to0</m> plus a pull-off force. Hydrophobic coatings and gold contacts exist for this reason.</li>
+<li><b>The same fold explains the two-capacitor paradox's cousin:</b> an <em>isolated</em> charged membrane has
+<m>\Pi=\tfrac12kx^{2}+Q^{2}/2C(x)</m> whose second derivative is always positive at small <m>x</m> — no pull-in at
+all, just as §4.11's fixed-<m>Q</m>/fixed-<m>V</m> inversion predicts. Charge-controlled actuators do not snap;
+voltage-controlled ones always do.</li>
+</ul>
+
+<h2>7.7 When the object is the capacitor: charged drops and the Rayleigh limit</h2>
+<p>A conducting droplet of radius <m>R</m> and surface tension <m>\gamma</m> carrying charge <m>Q</m> is a capacitor
+with self-energy from (7.4)'s sphere limit. Its energy is</p>
+<div class="eqd" data-tag="7.10">U(R)=\frac{Q^{2}}{8\pi\varepsilon_0R}+4\pi\gamma R^{2}
+\qquad\Longrightarrow\qquad \frac{dU}{dR}=0\ \Rightarrow\ Q_{\text{Rayleigh}}^{2}=64\pi^{2}\varepsilon_0\gamma R^{3}</div>
+<p>Beyond this charge the surface tension can no longer confine the liquid and the drop deforms and fissions —
+<i>Coulomb explosion</i>. Define the fissility <m>x_E=(Q/Q_R)^{2}</m>: <m>x_E=1</m> is the barrierless limit (real
+drops fission between <m>x_E\approx1</m> and <m>1.4</m> depending on how fast charge is added, since there is a small
+centrifugal-shaped barrier for <m>x_E&lt;1</m>). Two numbers to keep, for water
+(<m>\gamma=0.072</m> N/m): <m>Q_R=2.0\times10^{-14}(R/\mu\text{m})^{3/2}</m> C — about 126 elementary charges on a
+1 µm drop, at a potential of only 180 V — and the <em>surface field</em> at that limit,
+<div class="eqd">E_R=\frac{Q_R}{4\pi\varepsilon_0R^{2}}=2\sqrt{\frac{\gamma}{\varepsilon_0R}}
+=180\ \text{MV/m}\left(\frac{1\ \mu\text{m}}{R}\right)^{1/2}</div>
+which is 40 MV/m at 20 µm and still 4 MV/m at 2 mm. Air's corona onset is <m>\sim3</m> MV/m, so the two limits cross
+near <m>R\approx3.6</m> mm: <b>in air a drop below a few millimetres is charged to the <em>gas</em> limit, not the
+Rayleigh limit</b> — that is the corona you see from a wet sharp tip — whereas in vacuum the Rayleigh limit always
+binds, which is why mass-spectrometer ion sources are pumped. These are the parameters that set
+droplet size in <b>electrospray</b>: a cone held at the <em>Taylor angle</em> —
+<m>49.3^\circ</m> between the cone surface and its axis, from the Legendre condition
+<m>P_{1/2}(\cos\theta)=0</m> — emits a jet that breaks into drops carrying <m>x_E\approx0.7</m>, which is why
+electrospray ionisation delivers <em>singly</em> charged ions to a mass spectrometer instead of a spray of
+exploding fragments.</p>
+<div class="box why"><p class="bt">Why the Rayleigh criterion is an energy statement and not a force one</p>
+<p>The tempting route is "set the outward electrostatic pressure <m>\tfrac12\varepsilon_0E^{2}</m> equal to the
+inward Laplace pressure <m>2\gamma/R</m>". It gives <m>Q\propto R^{3/2}</m> with the wrong coefficient (a factor
+<m>8/\sqrt{3}\ldots</m>) — and it is conceptually wrong twice over. First, the pressure on the surface of a
+<em>conducting</em> drop is <m>\sigma^{2}/2\varepsilon_0</m> and <m>\sigma</m> is not uniform once the shape departs
+from a sphere. Second, and this is the real reason to use energy: at <m>x_E=1</m> the drop is not at a force
+balance, it is at the <em>loss of a minimum</em> of <m>U(R)</m> — the same fold bifurcation as §7.6, in a
+completely different physical system. Whenever you can write down an energy as a sum of a positive and a negative
+power of a single scale, <m>U=aR^{m}-bR^{-n}</m>, the critical point is
+<m>aR^{m+n}=b\,n/(m)\ldots</m> — the <m>1/3</m> of pull-in, the Rayleigh limit and the "a soap bubble of radius
+<m>\sqrt{3}\,...</m>" problems are all the same one-line calculus. Recognising the family is worth more than
+memorising either member.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 232" role="img" aria-label="MEMS pull-in: a plate on a spring with the energy curves showing two minima merging into one inflection at one third of the gap; and a charged droplet with its Rayleigh limit plus the Taylor cone at 49.3 degrees">
+  <g transform="translate(34,26)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">The fold: two equilibria, then none</text>
+    <rect x="0" y="8" width="120" height="10" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <text x="130" y="20" class="lbl sm">fixed electrode</text>
+    <path d="M20,18 l0,14 M20,32 q10,8 20,0 q10,-8 20,0 q10,8 20,0 q10,-8 20,0 q10,8 20,0" class="thinl"/>
+    <rect x="14" y="44" width="76" height="10" stroke="var(--accent)" stroke-width="2.4" fill="var(--accent-soft)"/>
+    <text x="130" y="56" class="lbl sm">plate at x, spring k</text>
+    <line x1="0" y1="70" x2="120" y2="70" class="dim"/><line x1="0" y1="62" x2="0" y2="78" class="thinl"/><line x1="120" y1="62" x2="120" y2="78" class="thinl"/>
+    <text x="34" y="90" class="mi sm">ℓ₀</text>
+    <path d="M96,8 V62" class="acc" stroke-dasharray="5 4"/>
+    <text x="98" y="110" class="lbl sm" fill="var(--accent)">x = ℓ₀/3 at</text>
+    <text x="98" y="126" class="lbl sm" fill="var(--accent)">V² = 8kℓ₀³/27ε₀A</text>
+    <g transform="translate(0,132)">
+      <line x1="0" y1="60" x2="200" y2="60" class="ln"/><line x1="0" y1="0" x2="0" y2="60" class="ln"/>
+      <text x="150" y="76" class="lbl sm">x/ℓ₀ →</text><text x="-4" y="-6" class="lbl sm" text-anchor="end">Π</text>
+      <path d="M4,20 C18,52 30,54 44,40 C58,26 70,10 84,-4" fill="none" stroke="var(--muted)" stroke-width="1.8"/>
+      <path d="M4,26 C22,58 40,58 60,44 C70,38 76,34 84,26" fill="none" stroke="var(--fg)" stroke-width="1.8"/>
+      <path d="M4,34 C30,58 60,52 84,30" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+      <circle cx="34" cy="50" r="4" fill="var(--pos)"/><circle cx="66" cy="44" r="4" fill="var(--neg)"/>
+      <circle cx="50" cy="53" r="4" fill="var(--amber)"/>
+      <text x="92" y="34" class="lbl sm">below V_pi: a stable well (•) and a barrier (×)</text>
+      <text x="92" y="50" class="lbl sm">at V_pi: the inflection — the well and the</text>
+      <text x="92" y="66" class="lbl sm">barrier merge, and everything falls in</text>
+    </g>
+  </g>
+  <g transform="translate(404,26)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">The same fold in a drop of liquid</text>
+    <circle cx="60" cy="56" r="34" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"/>
+    <g class="fp"><circle cx="60" cy="26" r="2.6"/><circle cx="86" cy="42" r="2.6"/><circle cx="34" cy="42" r="2.6"/><circle cx="86" cy="72" r="2.6"/><circle cx="34" cy="72" r="2.6"/></g>
+    <path d="M60,10 V2 M96,24 l10,-8 M24,24 l-10,-8" class="facc"/>
+    <text x="108" y="40" class="lbl sm">U(R) = Q²/8πε₀R + 4πγR²</text>
+    <text x="108" y="58" class="lbl sm">dU/dR = 0 ⇒ Q² = 64π²ε₀γR³</text>
+    <text x="108" y="76" class="lbl sm">the minimum in R vanishes —</text>
+    <text x="108" y="92" class="lbl sm">not a force balance</text>
+    <g transform="translate(6,112)">
+      <path d="M54,0 V26" class="ln"/>
+      <path d="M54,26 L18,96 M54,26 L90,96" stroke="var(--accent)" stroke-width="2.4" fill="none"/>
+      <path d="M18,96 H90" class="ln"/>
+      <path d="M54,26 V96" class="ln2" stroke="var(--muted)" stroke-dasharray="4 4"/>
+      <path d="M54,60 A34,34 0 0 1 40,55" class="eq0"/>
+      <text x="4" y="64" class="lbl sm">49.3°</text>
+      <text x="98" y="60" class="lbl sm">P_{1/2}(cos θ) = 0: the cone at which</text>
+      <text x="98" y="76" class="lbl sm">E ∝ r^{−1/2} exactly, so the apex can</text>
+      <text x="98" y="92" class="lbl sm">emit without the singularity diverging.</text>
+    </g>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.5</b> — Two systems, one catastrophe. A capacitor plate on a spring and a charged drop both have
+an energy that is a positive power of the scale minus a negative one, so both lose their minimum at a critical
+drive — <m>V_{\text{pi}}</m> and <m>Q_{\text{Rayleigh}}</m>. Recognising the family is worth more than memorising
+either member; the Taylor cone is the shape the liquid adopts to <em>spread</em> the singularity.</figcaption></figure>
+
+<h2>7.8 Choosing a tool: the map this chapter was built to give you</h2>
+<table class="tb">
+<thead><tr><th>if the problem is…</th><th>reach for</th><th class="e">and you get</th></tr></thead>
+<tbody>
+<tr><td>"what is the capacitance / charge" for arbitrary conductors at specified potentials</td>
+<td>the <m>\mathbf c</m> or <m>\mathbf p</m> matrix, then eliminate the nodes you do not control (7.1)</td>
+<td class="e">every series/parallel/Δ–Y/shield result at once</td></tr>
+<tr><td>"what charge is induced on electrode k by <em>anything</em>"</td><td>Green's reciprocity (7.2)</td>
+<td class="e">the answer without the field</td></tr>
+<tr><td>"what signal does a moving charge produce"</td><td>Ramo (7.3)</td><td class="e">a one-line current, exact</td></tr>
+<tr><td>"which way does C change when I add/short/remove something"</td><td>the monotonicity theorems (7.2b)</td>
+<td class="e">a proof, or a refutation, in two lines</td></tr>
+<tr><td>point charges near planes and spheres</td><td>images (7.3)</td><td class="e">forces and <m>\sigma</m> exactly</td></tr>
+<tr><td>needles, discs, fibres, inclusions, voids</td><td>spheroids + depolarising factors (7.4, 7.5)</td>
+<td class="e">C, <m>E_{\text{in}}</m>, the CM law, and the crack-vs-needle void rule</td></tr>
+<tr><td>cylinders, traces, edges, corners, anything 2-D</td><td>conformal maps (7.6)–(7.8)</td>
+<td class="e"><m>C'\rightleftharpoons\pi\varepsilon_0/\operatorname{arcosh}</m> and <m>E\propto r^{\pi/\beta-1}</m></td></tr>
+<tr><td>an object that moves and might snap, or a drop that might explode</td>
+<td>one-parameter energy <m>U=aR^{m}-bR^{-n}</m> (7.9, 7.10)</td>
+<td class="e">the fold, and the critical voltage or charge</td></tr>
+</tbody></table>
+
+<h2>Questions</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Two identical conducting spheres of radius a have their centres a distance <m>d=4a</m> apart. To leading order in <m>a/d</m> write their elastance (<m>\mathbf p</m>) matrix, invert it, and find the charge–voltage ratio <m>Q_1/(V_1-V_2)</m> when (i) the pair is driven as a two-terminal capacitor (<m>Q_2=-Q_1</m>), (ii) sphere 1 is driven and sphere 2 is left <em>floating</em>, (iii) sphere 1 is driven and sphere 2 is <em>earthed</em>. Rank the three.</b><span class="diff">INPhO · matrices at work</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>The elastance matrix.</b> Each sphere's charge sits at its centre (valid to <m>O(a/d)</m>), so superposing the
+two sphere potentials gives <m>V_1=p_{11}Q_1+p_{12}Q_2</m> with, writing <m>s=a/d=1/4</m>,</p>
+<div class="eqd">p_{11}=p_{22}=\frac{1}{4\pi\varepsilon_0a}\equiv P,\qquad p_{12}=p_{21}=\frac{1}{4\pi\varepsilon_0d}=Ps</div>
+<p><b>Invert</b> (<m>\det=P^{2}(1-s^{2})</m>):</p>
+<div class="eqd">\mathbf c=\frac{4\pi\varepsilon_0a}{1-s^{2}}\begin{pmatrix}1&amp;-s\\-s&amp;1\end{pmatrix},
+\qquad c_{11}=\frac{4\pi\varepsilon_0a}{1-s^{2}}=4.27\,\pi\varepsilon_0a,\qquad c_{12}=-s\,c_{11}</div>
+<p><b>(i)</b> <m>Q_2=-Q_1</m> forces <m>V_2=-V_1</m>, so <m>Q_1=c_{11}V_1-c_{12}V_1=V_1c_{11}(1+s)</m> and</p>
+<div class="eqd">C_{\text{two-terminal}}=\frac{Q_1}{2V_1}=\frac{c_{11}(1+s)}{2}=\frac{2\pi\varepsilon_0a}{1-s}
+=2.67\ \pi\varepsilon_0a=\frac{C_{\text{sphere}}/2}{1-s}</div>
+<p>— exactly "two sphere-to-infinity capacitances <m>4\pi\varepsilon_0a</m> in series" (= <m>2\pi\varepsilon_0a</m>)
+lifted by 33% because the neighbour is <em>grounded-side</em> of each, i.e. pulled closer by the opposite charge.</p>
+<p><b>(ii) floating:</b> the Schur complement, <m>C=c_{11}-c_{12}^{2}/c_{11}=c_{11}(1-s^{2})=4\pi\varepsilon_0a</m>
+— to this order the isolated value, unchanged. <b>(iii) earthed:</b> <m>C=c_{11}=4.27\pi\varepsilon_0a</m>, larger by
+<m>1/(1-s^{2})=1.07</m>.</p>
+<p>So <m>C_{\text{(iii)}}&gt;C_{\text{(ii)}}&gt;C_{\text{(i)}}</m> — and note that (i) is smaller than (ii) only
+because it is a <em>different definition</em> (two terminals in series with each other), which is exactly the trap in
+§4.11's "three 6 µF capacitors" and in chapter 5's Q on the third terminal.</p>
+<p class="note"><b>What the truncation cannot see.</b> The answer (ii) is <em>exactly</em> the isolated value because a
+monopole-only <m>\mathbf p</m> matrix has no way to describe a neutral sphere's <em>induced dipole</em>; that effect
+enters at <m>O\!\left((a/d)^{3}\right)</m> and would make (ii) slightly larger than <m>4\pi\varepsilon_0a</m>. Same
+approximation, different chapter: it is why chapter 2 could replace "two spheres at ±V" by "two charges at the
+centres" and get the 1.386 factor. When you truncate, say what order you have thrown away — and here the thrown-away
+term is precisely the physics of the floating conductor.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>An electron drifts a distance dx between two parallel plate electrodes held at fixed voltages by batteries. Use Ramo's theorem to write the induced current, and hence the charge on the electrodes after the electron has crossed half the gap. Then state what changes if the electrodes are isolated (no batteries).</b><span class="diff">Olympiad · detectors</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>With plate 1 at unit potential and plate 2 grounded the weighting field is uniform,
+<m>|E_1^{w}|=1/d</m>, so (7.3) gives</p>
+<div class="eqd">i_1=-e\,v\cdot\hat n\,\frac1d=-\frac{ev}{d},\qquad Q_1(t)=-\frac{e}{d}x(t)
+\qquad\Rightarrow\qquad Q_1\left(\frac d2\right)=-\frac{e}{2}</div>
+<p>half the electron's charge has been drawn onto plate 1 by the time it is halfway across — and <m>\Delta Q</m> is
+exactly the pulse height of an ionisation chamber, independent of <m>d</m>, of the drift velocity, and of the
+charge's path along <m>\hat n</m>. <b>With the plates isolated</b>, the constraint is on <m>Q</m>, not on
+<m>V</m>: the electrode charges still redistribute (the total induced charge on the two-plate island is conserved,
+so a <em>voltage</em> develops: <m>\delta V=\Delta Q/C</m>), but no external circuit can carry current, so the
+signal is picked up only capacitively through the wiring — which is why detectors are run with a bias resistor and
+measured as a current pulse, and why a "charge-sensitive" amplifier (a capacitor in the feedback loop, ch. 6's
+endpoint logic) recovers <m>Q</m> without needing the electrode to be held at fixed potential.</p>
+<p>One more line worth having: the induced current does not depend on the field <em>the charge moves in</em>, only on
+the geometry. That is why a detector's pulse shape is a <em>weighting-field</em> calculation, and why two charges at
+different depths in a semiconductor give different pulse shapes with the same total area — the standard
+"trap-depth" analysis in a INPhO-style experimental problem.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>A circular electrode of radius R = 5 cm sits on a 1 mm-thick sheet of mica (κ = 5.4, E_b = 100 MV/m) above a grounded plane. Using the spheroid/disc results, estimate (i) the capacitance ignoring fringing, (ii) the capacitance including the edge singularity in a sentence, (iii) the voltage at which the edge, not the centre, breaks down, and (iv) what geometry would raise that voltage at the same C.</b><span class="diff">JEE-adv → design</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(i)</b> <m>C_0=\kappa\varepsilon_0\pi R^{2}/t=5.4\times8.85\times10^{-12}\times\pi\times0.05^{2}/10^{-3}=3.75</m>
+nF. <b>Check the flat-disc warning:</b> the <em>isolated</em> disc value <m>8\varepsilon_0R</m> = 11 pF is the
+capacitance to infinity, a completely different quantity — do not mix them.</p>
+<p><b>(ii)</b> The edge correction is <m>\sim\varepsilon_0R</m> per radian of edge times a logarithm
+(chapter 2's fringing rule), i.e. a few percent of <m>C_0</m> here, but it is <em>where the field diverges</em>:
+<m>E\propto(r-R)^{-1/2}</m> at the rim (§7.5), so the peak edge field in the <em>air</em> part is several times the
+average <m>V/t</m> even for <m>R\gg t</m>.</p>
+<p><b>(iii)</b> The mica itself would reach <m>E_b</m> at <m>V=Et=10^{8}\times10^{-3}=100</m> kV, but the air at the
+edge reaches air's <m>3</m> kV/mm at about <m>3\times10^{3}\times10^{-3}/(\text{enhancement}\approx3)\approx1</m> kV
+— and once the air at the rim ionises, the full <m>V</m> is imposed across the last millimetre of mica at the edge.
+So the practical limit is set by <b>creepage along the surface</b>, typically <m>\sim3</m>–<m>10</m> kV for this
+geometry, i.e. an order of magnitude below the bulk number. Real HV bushings deal with this by grading: a
+semi-conductive glaze, a corona ring (a torus of large radius, so <m>\beta\to\pi</m> everywhere) or a stress cone.</p>
+<p><b>(iv) What geometry buys, and what material buys.</b> Rounding the rim (a fillet, a corona ring, a stress
+cone) removes the <m>(r-R)^{-1/2}</m> singularity and with it the creepage limit, and potting the edge in oil
+(<m>E_b\approx15</m>–<m>25</m> MV/m against air's <m>3</m>) buys another factor of six. What no shape can beat is the
+terminal trade-off: a smooth electrode of radius of curvature <m>R</m> in a medium of breakdown field <m>E_b</m>
+holds <m>V\approx E_bR</m> and has <m>C=4\pi\varepsilon_0\kappa R</m>, so</p>
+<div class="eqd">\frac{C}{V_{\max}}\le\frac{4\pi\varepsilon_0\kappa}{E_b}=\begin{cases}6\ \text{aF/V} & \text{mica}\\
+37\ \text{aF/V} & \text{air}\end{cases}\qquad\Longleftrightarrow\qquad u_{\max}=\frac12\varepsilon_0\kappa E_b^{2}</div>
+<p>The equivalence on the right is chapter 5's energy-density row: <m>5</m> J/cm³ for polypropylene film,
+<m>0.24</m> for mica, <m>0.04</m> for a <m>\kappa=90</m> class-2 ceramic. And note the surprise inside the left-hand
+numbers — on <m>C/V</m> bare air <em>beats</em> mica, because <m>E_b</m> enters once in the denominator while
+<m>\kappa</m> enters once in the numerator. Mica's real advantage is that it <em>confines</em> the field, which is a
+statement about <m>u_{\max}\propto\kappa E_b^{2}</m>: the square is everything. That is also why a genuine
+3.75 nF / 10 kV part is never one large smooth terminal but chapter 4's stack of many series elements, each with its
+own graded edge — and why the first question a capacitor datasheet answers is not "how big" but "how many volts per
+unit volume". <b>Geometry buys a factor of two or three; only material buys an order of magnitude.</b></p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>Prove, using only (7.2), that if a conductor <m>k</m> is enclosed by a conductor <m>s</m>, then <m>c_{kj}=0 </m> for every <m>j</m> outside <m>s</m> — and deduce that the capacitance of a concentric spherical pair is independent of what happens outside the outer sphere. Where does this fail?</b><span class="diff">Olympiad · shielding, proved</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Two primed states.</b> State <m>A</m>: everything grounded except <m>k</m> at <m>V</m>. State <m>B</m>:
+everything grounded except <m>j</m> (outside <m>s</m>) at <m>V'</m>. Reciprocity:
+<m>Q_k^{A}V_j^{B}+Q_j^{A}V_j^{B\prime}+\dots</m> — written cleanly,
+<m>\sum_iQ_i^{A}V_i^{B}=\sum_iQ_i^{B}V_i^{A}</m>. In state <m>A</m> the region <em>outside</em> <m>s</m> is
+field-free (a closed grounded shell encloses all of <m>A</m>'s charge, and uniqueness gives
+<m>V\equiv0</m> outside), so <m>V_j^{A}=0</m> for every outside <m>j</m>. In state <m>B</m> the region
+<em>inside</em> <m>s</m> is field-free, so <m>V_k^{B}=0</m>. The sum over inside-conductors on the left is therefore
+<m>Q_k^{A}\cdot0=0</m>, and the right side over outside conductors is <m>\sum_jQ_j^{B}\cdot0=0</m>; matching the
+remaining terms gives <m>Q_k^{A}V_{\text{inside}}^{B}=0</m> for arbitrary <m>V_k</m>, hence no
+<m>k\leftrightarrow j</m> coupling: <m>c_{kj}=0</m> ∎ (this is Kelvin's proof of the Faraday-cage theorem, and it is
+worth knowing that it needs reciprocity rather than only Gauss: Gauss gives <m>\vec E=0</m> outside a closed charged
+surface but says nothing about <m>mutual</m> coefficients in general geometry.)</p>
+<p><b>Failure modes, which is where the marks are:</b> (1) a finite resistance between the shell and ground — then
+the shell's charge can leak and the outside sees the inside's <em>net</em> charge; (2) time-varying fields, where
+skin depth replaces electrostatics and a real shield attenuates as <m>e^{-t/\delta}</m>; (3) apertures, which make
+the "closed surface" argument fail (a wire through the shield's bore carries the coupling — the reason coax
+shields must be bonded at <em>one</em> end to break a ground loop, and why a guard driven at the same potential is
+used instead of a ground); (4) mechanical flexing: the shell's <em>shape</em> need not be preserved, but if the
+inner conductor's charge is fixed, motion inside an ungrounded shell changes <em>nothing</em> outside — which is the
+principle of the "electrostatic screen that does not need to be driven".</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>A water droplet of radius 20 µm in air is charged by contact with a needle. Using (7.10), find the maximum charge, the corresponding potential, and the field at the surface; compare with air's breakdown field and say what limits a real electrospray emitter: the Rayleigh limit, the gas, or the liquid.</b><span class="diff">INPhO → real</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">Q_R=8\pi\sqrt{\varepsilon_0\gamma R^{3}}=8\pi\sqrt{8.85\times10^{-12}\times0.072\times(2\times10^{-5})^{3}}
+=1.14\times10^{-12}\ \text{C}\approx7.1\times10^{6}\ e</div>
+<div class="eqd">V=\frac{Q_R}{4\pi\varepsilon_0R}=\frac{1.14\times10^{-12}}{1.11\times10^{-10}\times2\times10^{-5}}=513\ \text{V},
+\qquad E=\frac VR=2.6\times10^{7}\ \text{V/m}=26\ \text{MV/m}</div>
+<p>The surface field at the Rayleigh limit is <b>nearly ten times air's</b> <m>3</m> kV/mm — so in air a 20 µm drop
+would have been surrounded by a corona long before it could reach <m>x_E=1</m>. Check which limit binds by scaling:
+the Rayleigh field goes as <m>E_R\propto\sqrt{\gamma/R}</m> (∝ <m>R^{-1/2}</m>) while the corona threshold for a
+sphere is roughly <m>E_{\text{air}}\approx3\times10^{6}(1+0.3/\sqrt{R/\text{mm}})</m> V/m (Peek's law, the
+<em>same</em> radius dependence for a different reason). They cross near <m>R\sim10</m> µm: <b>for larger drops the
+liquid explodes first, for smaller ones the gas breaks down first.</b></p>
+<p>That is exactly why electrospray emitters run in vacuum or in a dense gas of their own vapour, and why the
+operating point is <m>x_E\approx0.7</m> with a <em>cone</em> rather than a sphere — the Taylor cone concentrates the
+field at its tip so that emission proceeds by pulling ions and droplets out of the apex at fields the rest of the
+surface never sees. The whole chain (Rayleigh limit → cone angle → droplet charge → Coulomb fission cascading down
+to <m>x_E\approx1</m> at each generation) is one formula from this section, four times: which is the kind of
+"few ideas, long reach" structure Olympiad problems are built from.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Two semi-infinite conducting planes meet along a line at a small angle <m>\beta</m> and are held at 0 and <m>V</m> (a "ridged" tuner, and the idealisation of a variable capacitor's meshing edges). (i) Find <m>V(r,\theta)</m> and <m>E</m>. (ii) Find the capacitance per unit depth between radii <m>r_0</m> and <m>R</m>. (iii) Find the torque per unit depth tending to close the wedge at fixed <m>V</m> and at fixed charge per unit depth <m>\lambda</m>. (iv) What do (ii) and (iii) say about the apex, and about rounding it?</b><span class="diff">JEE-adv → Olympiad</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(i)</b> With only <m>\theta</m> varying, <m>\nabla^{2}V=\partial^{2}V/\partial\theta^{2}=0</m> (the radial terms
+vanish for a function of <m>\theta</m> alone), so the solution is <em>exactly linear</em> in the angle:</p>
+<div class="eqd">V(\theta)=V\frac{\theta}{\beta},\qquad \vec E=-\frac1r\frac{\partial V}{\partial\theta}\hat\theta
+=-\frac{V}{\beta r}\hat\theta</div>
+<p>No exponent appears here — the <m>r^{\pi/\beta}</m> law of (7.8) is for the <em>complementary</em> region, where the
+conductor is the wedge; here the <em>vacuum</em> is the wedge and both faces are equipotentials of a two-terminal
+system. Keeping those two straight is worth a mark.</p>
+<p><b>(ii)</b> Energy per unit depth, integrating <m>u=\tfrac12\varepsilon_0E^{2}</m> over the annular sector:</p>
+<div class="eqd">\frac{U'}{L}=\int_{r_0}^{R}\!\!\int_0^{\beta}\frac{\varepsilon_0V^{2}}{2\beta^{2}r^{2}}\,r\,dr\,d\theta
+=\frac{\varepsilon_0V^{2}}{2\beta}\ln\frac{R}{r_0}
+\qquad\Longrightarrow\qquad \frac{C'}{L}=\frac{\varepsilon_0}{\beta}\ln\frac{R}{r_0}</div>
+<p>The logarithm is the signature of a scale-free geometry (compare §7.5's wire-over-plane). <b>(iii)</b> Torque per
+unit depth, from the master rule <m>T=+\tfrac12V^{2}\,dC'/d\beta</m> at fixed voltage and
+<m>-\tfrac12\lambda^{2}\,d(C'^{-1})/d\beta</m> at fixed charge:</p>
+<div class="eqd">\text{fixed }V:\quad \frac{T}{L}=-\frac{\varepsilon_0V^{2}}{2\beta^{2}}\ln\frac{R}{r_0};
+\qquad \text{fixed }\lambda:\quad \frac{T}{L}=-\frac{\lambda^{2}\beta}{2\varepsilon_0\ln^{2}(R/r_0)}</div>
+<p>Both are negative, i.e. the wedge is driven <em>closed</em> — and note the different dependence on <m>\beta</m>
+(<m>1/\beta^{2}</m> versus <m>\beta</m>), so a voltage-driven taper bites hardest when nearly shut while a
+charge-driven one is gentlest there. Same algebra as chapter 3's <m>\delta W_{\text{mech}}=-dU|_Q</m> versus
+<m>+\tfrac12V^{2}dC</m>, in polar coordinates.</p>
+<p><b>(iv) The apex.</b> As <m>r_0\to0</m>, <m>C'\to\infty</m> logarithmically and
+<m>E(r_0)=V/\beta r_0\to\infty</m>: the model has no answer without a cut-off, and the cut-off <em>is</em> the
+mechanical radius of curvature. Two design readings, both of them why real parts look the way they do: (a) the
+voltage is limited by the apex, not by the average gap, so a wedge is a poor geometry unless <m>r_0</m> is made
+comparable with <m>R</m> — which is what "rounding the edges" means, and why rotary trimmers use <em>parallel</em>
+plates (uniform <m>E=V/d</m>, no singularity) instead of radial sectors whenever the voltage is high; (b) the same
+divergence makes the wedge an excellent <em>field-emission</em> or corona source, which is why ridged waveguides and
+"sharp" counter-electrodes are used deliberately in klystrons, spark gaps and ion sources. Know which of the two you
+are building.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Two large isolated plates carry fixed charges <m>\pm Q</m> and are a distance <m>d</m> apart. A conducting foil of negligible thickness is slid in between them, at distance <m>a</m> from plate 1. Find the charge on each of the six surfaces, and the stored energy, when the foil is (i) left floating, (ii) connected to plate 1 by a thin wire. Which answer contradicts the monotonicity theorem of §7.2, and how is the contradiction resolved?</b><span class="diff">JEE-adv · theorems tested on a real case</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Label the six surface densities (left to right) <m>\sigma_1,\sigma_2</m> on plate 1, <m>\sigma_3,\sigma_4</m> on the
+foil, <m>\sigma_5,\sigma_6</m> on plate 2, all divided by the area <m>A</m>. For an infinite stack the field in any
+gap is <m>(\sum_{\text{left}}-\sum_{\text{right}})/2\varepsilon_0</m>, and the three metal interiors plus the
+total-charge conditions give five equations:</p>
+<div class="eqd">\sigma_1+\sigma_2=\frac QC,\quad \sigma_3+\sigma_4=0,\quad \sigma_5+\sigma_6=-\frac QC;
+\qquad E_{\text{in metal}}=0\ \text{for each of the three conductors}</div>
+<p><b>(i) floating.</b> Solving: <m>\sigma_1=0</m>, <m>\sigma_2=+Q</m>, <m>\sigma_3=-Q</m>,
+<m>\sigma_4=+Q</m>, <m>\sigma_5=-Q</m>, <m>\sigma_6=0</m>. The field is <m>Q/\varepsilon_0A</m> in <em>both</em>
+sub-gaps, so the voltage is unchanged, <m>U=Q^{2}d/2\varepsilon_0A</m>, and</p>
+<div class="eqd">C_{\text{floating}}=\frac{\varepsilon_0A}{d}=C_0\qquad\text{exactly, for any }a</div>
+<p>(the foil merely sits on the equipotential <m>V=V_1(1-a/d)</m> that was already there, and a zero-thickness sheet
+on an equipotential changes nothing — this is the "insert a conductor along an equipotential" move of §7.2
+stated in reverse).</p>
+<p><b>(ii) wired to plate 1.</b> Now plate 1 and the foil are <em>one</em> conductor with total <m>+Q</m>, and
+<m>\sigma_1+\sigma_2+\sigma_3+\sigma_4=Q/A</m> with no separate condition on the foil. Re-solving gives</p>
+<div class="eqd">\sigma_1=\sigma_2=\sigma_3=0,\qquad \sigma_4=+Q,\qquad \sigma_5=-Q,\qquad \sigma_6=0</div>
+<p>— all the charge jumps to the foil's right face, the region between plate 1 and the foil is field-free (as it must
+be, both boundaries at the same potential), and</p>
+<div class="eqd">C_{\text{wired}}=\frac{\varepsilon_0A}{d-a}&gt;C_0,\qquad
+U=\frac{Q^{2}(d-a)}{2\varepsilon_0A}\downarrow</div>
+<p>The energy drops even though no external source is connected, because the charge <em>redistributes</em> onto the
+foil's face and shortens the effective gap: the work appears as kinetic energy of the moving charges plus Joule heat
+in the wire (chapter 3's paradox, in a fifth incarnation).</p>
+<p><b>The apparent contradiction.</b> §7.2's theorem (a) says inserting a floating conductor can only
+<em>increase</em> <m>C</m>, yet (i) leaves it identical. The theorem's inequality is not strict: the energy
+argument compares a minimisation over a larger admissible set, and equality holds precisely when the new conductor
+surface coincides with equipotentials of the <em>old</em> field, as it does for a zero-thickness floating sheet between
+parallel plates. Give the foil a thickness <m>t</m> and the increase appears immediately,
+<m>C=\varepsilon_0A/(d-t)</m>, independent of <m>a</m> (the two sub-gaps carry the same <m>Q</m> and their
+voltages add, so only the <em>sum</em> of the gaps survives: the thickness, not the position, is what matters). <b>The general lesson:</b> a theorem proved from a variational principle usually has an equality case, and
+knowing the equality case is the difference between "C increases" and "C increases unless the conductor sits on an
+equipotential, in which case it is a no-op" — the second version is what a marker gives the mark for.</p>
+</div></details>
+</div></div>
+
+<h2>Drill: say it in one line</h2>
+<table class="tb">
+<thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>"<m>c_{12}</m> is the capacitance between conductors 1 and 2."</td><td>Wrong. It is the charge induced on 2 when 1 is at unit potential with <em>everything else grounded</em>; the two-terminal capacitance between 1 and 2 is a Schur complement, not an entry.</td></tr>
+<tr><td>2</td><td>Reciprocity gives mutual capacitances for free.</td><td>Wrong — it gives <m>c_{ij}=c_{ji}</m> and charge/potential relations; the <em>numbers</em> still need a field solve. Its real power is induced-charge and signal questions (7.2).</td></tr>
+<tr><td>3</td><td>"A closed shell blocks electrostatic influence."</td><td>Right (Q4), and it needs reciprocity/energy, not just Gauss. It fails for leakage, apertures, and time-varying fields.</td></tr>
+<tr><td>4</td><td>"The field at a convex corner of an electrode is infinite, so the charge there is infinite."</td><td>First half right (<m>E\propto r^{\pi/\beta-1}</m>), second half wrong: <m>\sigma\propto r^{-1/2}</m> is integrable, so the charge in any small patch is finite.</td></tr>
+<tr><td>5</td><td>"A needle-shaped void in an insulator is more dangerous than a flat delamination."</td><td>Backwards. <m>L\to0</m> along the field ⇒ the void sees <m>E_0</m>; a disc void perpendicular sees <m>\kappa E_0</m> (7.5) — delaminations are the killers.</td></tr>
+<tr><td>6</td><td>"Electrostatic actuators can be designed to have any stroke you want."</td><td>Not with a parallel-plate gap at fixed voltage: the fold at <m>1/3</m> is structural (7.6). Escapes come from changing <m>dC/dx</m>'s shape (levers, combs, magnetic restoring force) or from controlling charge instead of voltage.</td></tr>
+<tr><td>7</td><td>"A charged drop explodes when the electric pressure equals 2γ/R."</td><td>Close, and wrong in coefficient and in logic; use the energy <m>U\propto R^{-1}</m> vs <m>R^{2}</m> (7.10) — the fold, not the balance, sets the limit.</td></tr>
+<tr><td>8</td><td>"2-D capacitance per unit length of an isolated wire is meaningless."</td><td>Right — <m>C'\sim2\pi\varepsilon_0/\ln(R/a)</m> → 0 as the reference goes to infinity; always name the return conductor (7.5's insight box).</td></tr>
+</tbody></table>
+
+<div class="box thm"><p class="bt">Chapter 7 in six lines</p>
+<ul>
+<li><m>Q_i=\sum c_{ij}V_j</m>: symmetric, <m>c_{ij}\le0</m>, row sums = fused-bundle capacitance to infinity,
+positive definite. Node elimination = Schur complement, and it <em>is</em> series/parallel/Δ–Y/shielding.</li>
+<li>Green reciprocity <m>\sum Q_iV_i'=\sum Q_i'V_i</m>: three lines of proof, and it answers induced-charge questions
+no other method can (Q₁ = <m>-q(d-x)/d</m>), including the Ramo current <m>i=-q\vec v\cdot\vec E^{w}</m>.</li>
+<li>Two monotonicity theorems: adding a floating conductor increases <m>C</m>; grounding it increases <m>C</m>
+further.</li>
+<li>Images for plane/sphere/sphere-plus-plane; the spheroid family gives needles
+(<m>4\pi\varepsilon_0c/\ln(2c/a)</m>), discs (<m>8\varepsilon_0a</m>) and — with the depolarising factor
+<m>L</m> — the internal field of <em>any</em> ellipsoidal inclusion or void.</li>
+<li>2-D ⇒ conformal maps: <m>C'=\pi\varepsilon_0/\operatorname{arcosh}(d/2a)</m> for cylinders,
+<m>C'_{\text{wire-plane}}=2\pi\varepsilon_0/\operatorname{arcosh}(h/a)</m>, and <m>E\propto r^{\pi/\beta-1}</m> at
+every corner.</li>
+<li>Where matter gives out: the fold gives pull-in at <m>x=\ell_0/3</m>, <m>V^{2}=8k\ell_0^{3}/27\varepsilon_0A</m>;
+the same energy-shape gives the Rayleigh charge <m>Q_R^{2}=64\pi^{2}\varepsilon_0\gamma R^{3}</m> and the
+<m>49.3^\circ</m> Taylor cone.</li>
+</ul></div>
+
+<ul class="chks">
+<li>Write the 2-conductor <m>\mathbf c</m> matrix from a <m>\mathbf p</m> matrix, and state the four structural facts
+(§7.1) with one-line proofs.</li>
+<li>Prove reciprocity in three lines, and use it for the two-plate induced-charge result without looking.</li>
+<li>Derive the monotonicity theorems (7.2b) and use them to answer "which is bigger" for any of §4.5's folding
+moves.</li>
+<li>Reproduce the sphere-plane leading correction <m>C\approx4\pi\varepsilon_0a(1+a/2h)</m> and check the first term
+of the sinh series against it.</li>
+<li>Get the needle, disc and sphere limits out of (7.4), and the void rule out of (7.5); say which void shape is
+worst and why.</li>
+<li>Redo the two-cylinder capacitance with <m>w=\ln\frac{z-f}{z+f}</m> and compare with chapter 2's Q5 — if they
+agree you have understood the method, if not, find the range of <m>v</m>.</li>
+<li>Re-derive pull-in as a fold (<m>\xi=1/3</m>) and the Rayleigh limit as a fold, in the same five lines each;
+then state <m>V_{\text{pi}}</m>'s scaling with <m>\lambda</m>.</li>
+</ul>
+<p class="skip">Next: <a href="08-playbook.html">8 · The playbook — twelve moves, twenty-five traps, one timed drill</a></p>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 &#183; Combinations &amp; networks — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="Series and parallel rules proved and un-proved where they fail, voltage division, balanced and unbalanced bridges, symmetry folding, the capacitor cube, infinite ladders, delta-star for capacitors and the node-charge method that solves any network.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 4</p></nav>
+<main>
+
+<p class="meta" id="top">
+<span class="badges"><span class="b n">Chapter 4 of 11</span><span class="b j">JEE Advanced core</span><span class="b o">networks &amp; symmetry</span><span class="b n">≈ 80 min · 10 questions</span></span>
+</p>
+<h1>Combinations and networks</h1>
+<p class="lead">Everyone knows <m>1/C=1/C_1+1/C_2</m>. Almost nobody can say when it is
+<em>false</em>. This chapter proves both rules, shows the exact moment the proof breaks, and then hands you the one
+method — conservation of charge at floating nodes — that works for every network ever set in an exam.</p>
+
+<h2>4.1 Series: what the rule is <em>really</em> saying</h2>
+<p>Two capacitors end to end, nothing else connected to the junction. Charge the pair: the junction plate must
+acquire some charge <m>q</m> — and there is nowhere for it to come <em>from</em>, because that conductor is
+isolated. That observation is the entire content of the series rule.</p>
+<div class="box thm"><p class="bt">The proof, in two steps</p>
+<ol>
+<li><b>Charge equality.</b> Enclose the wire-and-junction island in a Gaussian surface. It was neutral, and no charge
+can cross the surface of an insulator-free isolated conductor ⇒ its net charge stays zero ⇒ the two facing surfaces
+carry <m>+q</m> and <m>-q</m>. <b>Every capacitor in a series string therefore has the same charge</b> — not because
+"the same current flowed", but because the node between them is isolated.</li>
+<li><b>Voltages add.</b> <m>V=V_1+V_2=q/C_1+q/C_2</m>, so with <m>Q=q</m> and
+<m>C=Q/V</m>: <m>1/C=1/C_1+1/C_2</m>.</li>
+</ol></div>
+<div class="eqd key" data-tag="series">n\ \text{in series}:\quad \frac1C=\sum_{i=1}^n\frac1{C_i},\qquad
+V_i=\frac QC_i=\frac{C_{\text{eq}}}{C_i}\,V,\qquad Q\ \text{identical in all}</div>
+<div class="box trap"><p class="bt">Where the proof dies — three cases, all popular in exams</p>
+<ul style="margin:0">
+<li><b>The middle node was already charged</b> (a switch has just closed, or a third wire was disconnected). Then
+charge is <em>not</em> zero on the island but <em>conserved at its initial value</em>: use
+<m>q_1+q_2=q_{\text{initial}}</m>, not <m>q_1=-q_2</m>. This single generalisation solves every "switched capacitor"
+problem; see §4.7.</li>
+<li><b>The middle node touches a battery terminal.</b> Then it is not isolated at all, the charges differ, and the
+two capacitors are in <em>parallel</em> (both see the same <m>V</m>).</li>
+<li><b>There is a bridge</b> (a fifth element across the middle). No series/parallel reduction exists; you must use
+node equations (§4.4–4.5). Students who "simplify" a bridge by force get a wrong answer with clean-looking algebra —
+the single most damaging error pattern in this topic.</li>
+</ul></div>
+
+<div class="box insight"><p class="bt">Two consequences of "same <m>Q</m>, voltage divides inversely as <m>C</m>"</p>
+<p><b>(i) The smallest capacitor takes the largest voltage.</b> <m>V_i=V C_{\text{eq}}/C_i</m>, and since
+<m>C_{\text{eq}}&lt;C_i</m> for all <m>i</m> no element can exceed the total — but the smallest one comes closest. In a
+string of <m>n</m> equal capacitors each sees <m>V/n</m>; with a 20% spread in capacitance the smallest carries 20%
+more than average, which is why <b>high-voltage stacks need balancing resistors</b>: real capacitors also differ in
+leakage resistance, and it is the <em>resistance</em> ratio, not the capacitance ratio, that decides the DC voltage
+sharing. A superb one-line applied question, and the reason "why are resistors placed across each capacitor in a HV
+stack?" appears in interviews and in INPhO vivas.</p>
+<p><b>(ii) Series reduces capacitance because it increases the effective gap.</b> For identical plates,
+<m>C_{\text{eq}}=C/n</m> is precisely <m>\varepsilon_0A/(nd)</m>: you have made the dielectric <m>n</m> times thicker.
+Parallel increases capacitance because it adds area. <b>Every combination rule in electrostatics is one of those two
+statements in disguise.</b></p></div>
+
+<h2>4.2 Parallel, and the reduction algorithm</h2>
+<div class="eqd key" data-tag="parallel">n\ \text{in parallel}:\quad C=\sum_iC_i,\qquad V\ \text{identical},\qquad Q_i=VC_i\ \ (\text{charge divides as }C_i)</div>
+<p>The charges differ but add, since the two top plates are one conductor and so are the two bottom ones. Note the
+beautiful symmetry with series: <b>the quantity that is shared in one case is conserved-as-a-sum in the other</b>, and
+vice versa. That is the whole content of both rules.</p>
+
+<div class="box def"><p class="bt">Reduction algorithm (use it in this order, always)</p>
+<ol class="steps">
+<li><b>Name the nodes.</b> Every point connected by wire alone is <em>one</em> node. Draw dots and label them
+A, B, C… Do this before looking at the topology; it prevents 90% of network errors.</li>
+<li><b>Look for two elements sharing the same pair of nodes</b> ⇒ parallel ⇒ merge.</li>
+<li><b>Look for a node of degree 2</b> (exactly two capacitors meet, nothing else connects) ⇒ series ⇒ merge.
+<em>Check the node is uncharged.</em></li>
+<li><b>Hunt symmetry:</b> if two nodes must be at equal potential by geometry, wire them together (no charge flows)
+or, equivalently, fold the network; if a branch joins two equal-potential nodes, delete it.</li>
+<li><b>Only if stuck:</b> write node equations (§4.5) or use Δ–Y (§4.6).</li>
+</ol>
+<p class="note">Redrawing is 80% of the skill. A bridge drawn as a diamond collapses to nothing; the same bridge drawn
+as two series strings with a link in the middle is instantly recognisable. Spend 20 seconds redrawing before you write
+one equation.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b><m>2,\ 3,\ 6\ \mu</m>F in series across 120 V. Find each voltage and the charge. Each capacitor is rated 50 V — is this combination safe?</b><span class="diff">base</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">\frac1C=\frac12+\frac13+\frac16=1\ \mu\text{F}^{-1}\Rightarrow C=1\ \mu\text{F},\quad Q=120\ \mu\text{C}
+\quad\Rightarrow\quad V_2=60,\ V_3=40,\ V_6=20\ \text{V}</div>
+<p>Check: <m>60+40+20=120</m> ✓. <b>Not safe</b>: the <m>2\ \mu</m>F unit sees 60 V &gt; 50 V and will fail. When it
+fails (short, the usual mode for a dielectric puncture) the other two now see 120 V across
+<m>3\ \mu</m>F∥<m>6\ \mu</m>F… in series, i.e. 40 V and 80 V — and the <m>6\ \mu</m>F then fails too.
+<b>Series strings fail by cascade.</b> That extrapolation from "the first one breaks" to "why do we need balancing and
+derating" is exactly the kind of reasoning that earns the extra marks in a practical question.</p>
+</div></details>
+</div></div>
+
+<h2>4.3 The node-charge method (the method that never fails)</h2>
+<p>For any capacitive network with no resistors, the equations are:</p>
+<div class="eqd">Q_{ij}=C_{ij}(V_i-V_j)\qquad\text{and, at every floating node }k:\quad \sum_{j}C_{kj}(V_k-V_j)=0</div>
+<p>That's it: <b>Kirchhoff's current law with charge in place of current</b>. The floating-node condition is just
+conservation of charge; if a node is attached to an ideal cell, its charge is unknown and its potential is fixed
+instead. Solve the linear system; then get charges from the first line and energy from
+<m>U=\tfrac12\sum C_{ij}(V_i-V_j)^2</m>.</p>
+<div class="box why"><p class="bt">Why this is the right tool, not a fallback</p>
+<p>It is the discrete form of <m>\vec\nabla\cdot(\varepsilon\vec\nabla V)=0</m> — the same equation a finite-element
+capacitance solver uses, with one node per mesh vertex. So when a problem hands you a lattice of capacitors, you are
+not "doing a circuit", you are solving Laplace's equation on a graph. Two immediate payoffs:
+<b>(i)</b> every resistor-network trick you know works with <m>C</m> in place of <m>1/R</m> (conductance
+<em>is</em> capacitance, in the mathematics); <b>(ii)</b> every statement about current dividing at a node becomes a
+statement about charge dividing. Both are used below for the cube and the ladder.</p></div>
+
+<h2>4.4 The bridge: balanced and not</h2>
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 210" role="img" aria-label="Wheatstone bridge of capacitors with the galvanometer branch replaced by a capacitor">
+  <g transform="translate(60,10)">
+    <circle cx="90" cy="90" r="5" class="acc" fill="var(--fg)"/><text x="66" y="94" class="mi">A</text>
+    <circle cx="270" cy="90" r="5" fill="var(--fg)"/><text x="278" y="94" class="mi">B</text>
+    <circle cx="180" cy="20" r="5" fill="var(--fg)"/><text x="176" y="12" class="mi">C</text>
+    <circle cx="180" cy="160" r="5" fill="var(--fg)"/><text x="176" y="182" class="mi">D</text>
+    <line x1="95" y1="86" x2="175" y2="24" class="ln"/><text x="120" y="46" class="mi sm">C₁</text>
+    <line x1="185" y1="24" x2="265" y2="86" class="ln"/><text x="232" y="46" class="mi sm">C₂</text>
+    <line x1="95" y1="94" x2="175" y2="156" class="ln"/><text x="118" y="136" class="mi sm">C₃</text>
+    <line x1="185" y1="156" x2="265" y2="94" class="ln"/><text x="232" y="136" class="mi sm">C₄</text>
+    <line x1="180" y1="26" x2="180" y2="154" class="ln" stroke="var(--neg)"/>
+    <rect x="170" y="72" width="20" height="36" class="w" stroke="var(--neg)" stroke-width="1.6"/>
+    <text x="200" y="94" class="mi sm">C₅ (the bridge arm)</text>
+    <text x="30" y="196" class="lbl sm">cell across A–B</text>
+  </g>
+  <g transform="translate(400,18)">
+    <text x="0" y="14" class="lbl md" style="font-weight:700">Balance condition</text>
+    <text x="0" y="40" class="mtext">V_C = V_D  ⇔  C₁/C₃ = C₂/C₄</text>
+    <text x="0" y="66" class="lbl sm">Then no charge sits on the C₅ plates:</text>
+    <text x="0" y="82" class="lbl sm">Q₅ = C₅(V_C − V_D) = 0,</text>
+    <text x="0" y="98" class="lbl sm">so C₅ may be <tspan font-weight="700">removed</tspan> — or</text>
+    <text x="0" y="114" class="lbl sm">replaced by a wire. Both give the</text>
+    <text x="0" y="130" class="lbl sm">same C_AB. Use whichever reduces faster.</text>
+    <text x="0" y="160" class="lbl sm">Note the ratio pairs <tspan font-style="italic">arms on the same side</tspan>, not crosswise.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 4.1 — Capacitor bridge.</b> Balance makes <m>V_C=V_D</m>, so the fifth element stores nothing and can be
+deleted (or shorted). Which of those two operations to use is a judgement call: usually removing it leaves two
+series strings that reduce instantly.</figcaption></figure>
+
+<div class="eqd" data-tag="balance">V_C=V_D\iff \frac{q_t}{C_1}=\frac{q_b}{C_3}\ \ \text{and}\ \ \frac{q_t}{C_2}=\frac{q_b}{C_4}
+\iff \boxed{\;\frac{C_1}{C_2}=\frac{C_3}{C_4}\;}</div>
+<p>Derive it rather than recall it. Top branch: <m>q</m> flows through <m>C_1</m> and <m>C_2</m> in series, so
+<m>V_{AC}=q/C_1</m>. Bottom branch: <m>V_{AD}=q'/C_3</m>. Balance means <m>V_{AC}=V_{AD}</m>, i.e.
+<m>q/C_1=q'/C_3</m> and simultaneously <m>q/C_2=q'/C_4</m>; dividing gives
+<m>\boxed{C_1/C_2=C_3/C_4}</m>. Note this is the <em>same</em> ratio pattern as the resistor bridge
+(<m>R_1/R_2=R_3/R_4</m>), not its reciprocal — because in a resistor bridge the balance is
+<m>V_C=V_D\iff R_1/(R_1+R_2)=R_3/(R_3+R_4)</m> whereas for capacitors the potential drop goes as <m>1/C</m>, which
+inverts twice and cancels. Confusing "same" with "reciprocal" is the classic lost mark; the two-line derivation above
+is immune to it.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>In the bridge above all capacitors are <m>6\ \mu</m>F except <m>C_5=3\ \mu</m>F. Find <m>C_{AB}</m>. Then change <m>C_4</m> to <m>2\ \mu</m>F and find the charge on <m>C_5</m> for <m>V_{AB}=100</m> V.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Part 1 (balanced).</b> <m>6/6=6/6</m> ✓ so delete <m>C_5</m>: two strings of <m>3\ \mu</m>F in parallel ⇒
+<m>C_{AB}=6\ \mu</m>F. (If instead you short C–D you get <m>(6\|6)</m> in series with <m>(6\|6)</m> =
+<m>12/2=6\ \mu</m>F ✓ — good self-check, both operations are legal only at balance.)</p>
+<p><b>Part 2 (unbalanced).</b> Do not approximate. Node equations with <m>V_A=100</m>, <m>V_B=0</m>, unknowns
+<m>V_C,V_D</m> (all in µF, so charges in µC):</p>
+<div class="eqd">
+\begin{aligned}
+\text{node }C:\quad &6(V_C-100)+6(V_C-0)+3(V_C-V_D)=0\ \Rightarrow\ 15V_C-3V_D=600\\
+\text{node }D:\quad &6(V_D-100)+2(V_D-0)+3(V_D-V_C)=0\ \Rightarrow\ \ 11V_D-3V_C=600
+\end{aligned}
+</div>
+<p>From the first, <m>V_D=5V_C-200</m>; substituting: <m>11(5V_C-200)-3V_C=600\Rightarrow52V_C=2800\Rightarrow V_C=53.85</m> V, <m>V_D=69.23</m> V. Hence <m>V_{CD}=-15.4</m> V and
+<m>Q_5=3\times15.4=46.2\ \mu</m>C (from D to C). <b>Sanity check worth doing in an exam:</b> at balance we would have
+had <m>V_C=V_D=50</m>; the perturbation moved <m>V_D</m> up, which is right because reducing <m>C_4</m> increases its
+share of the bottom branch's voltage, lifting <m>V_D</m>. Your answer must pass that qualitative test.</p>
+</div></details>
+</div></div>
+
+<h2>4.5 Symmetry: folding, and the capacitor cube</h2>
+<p>Two legitimate symmetry operations, and one that is <b>not</b>:</p>
+<table class="tb">
+<thead><tr><th>Operation</th><th>When legal</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><b>Short</b> two nodes</td><td>they are mirror images under a symmetry of the whole network (terminals included)</td><td>equal potential, so no charge moves when you connect them — and their capacitances to each other are in parallel</td></tr>
+<tr><td><b>Open</b> (delete) a branch</td><td>its two ends are mirror images</td><td>zero voltage across it ⇒ zero charge ⇒ removing it changes nothing</td></tr>
+<tr><td class="up">✗ Fuse series pairs "because the picture looks symmetric"</td><td>never without checking the node is uncharged</td><td>symmetry of the drawing is not symmetry of the solution; anti-symmetry (potential <m>V\to-V</m>) is not equality</td></tr>
+</tbody>
+</table>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 240" role="img" aria-label="Cube of twelve equal capacitors with equipotential classes highlighted">
+  <g>
+    <g stroke="var(--fg)" stroke-width="1.5" fill="none">
+      <path d="M120,180 L250,180 L250,80 L120,80 Z"/>
+      <path d="M170,140 L300,140 L300,40 L170,40 Z"/>
+      <path d="M120,180 L170,140 M250,180 L300,140 M250,80 L300,40 M120,80 L170,40"/>
+    </g>
+    <g fill="var(--pos)"><circle cx="120" cy="180" r="7"/><circle cx="300" cy="40" r="7"/></g>
+    <text x="98" y="198" class="mi">A</text><text x="308" y="36" class="mi">B</text>
+    <g fill="var(--accent)"><circle cx="250" cy="180" r="5.5"/><circle cx="120" cy="80" r="5.5"/><circle cx="170" cy="140" r="5.5"/></g>
+    <g fill="var(--violet,#6b3fa0)"><circle cx="250" cy="80" r="5.5"/><circle cx="300" cy="140" r="5.5"/><circle cx="170" cy="40" r="5.5"/></g>
+    <text x="30" y="220" class="lbl sm">body diagonal A→B: 3 nodes at one potential (blue),</text>
+    <text x="30" y="234" class="lbl sm">3 at another (violet) → the 12 edges become 3 groups of 3</text>
+  </g>
+  <g transform="translate(380,10)">
+    <text x="0" y="16" class="lbl md" style="font-weight:700">Folded network (body diagonal)</text>
+    <g stroke="var(--fg)" stroke-width="1.6" fill="none">
+      <line x1="30" y1="120" x2="110" y2="60"/><line x1="30" y1="120" x2="110" y2="120"/><line x1="30" y1="120" x2="110" y2="180"/>
+      <line x1="110" y1="60" x2="200" y2="120"/><line x1="110" y1="120" x2="200" y2="120"/><line x1="110" y1="180" x2="200" y2="120"/>
+    </g>
+    <g stroke="var(--accent)" stroke-width="1.6" fill="none">
+      <line x1="110" y1="60" x2="200" y2="60"/><line x1="200" y1="60" x2="290" y2="120"/>
+      <line x1="110" y1="180" x2="200" y2="180"/><line x1="200" y1="180" x2="290" y2="120"/>
+    </g>
+    <g stroke="var(--fg)" stroke-width="1.6" fill="none">
+      <line x1="200" y1="60" x2="200" y2="120"/><line x1="200" y1="120" x2="200" y2="180"/>
+      <line x1="200" y1="60" x2="200" y2="60"/>
+    </g>
+    <circle cx="30" cy="120" r="6" fill="var(--pos)"/><circle cx="290" cy="120" r="6" fill="var(--pos)"/>
+    <text x="20" y="106" class="mi">A</text><text x="286" y="106" class="mi">B</text>
+    <text x="98" y="52" class="mi sm">P₁</text><text x="98" y="136" class="mi sm">P₂</text><text x="98" y="196" class="mi sm">P₃</text>
+    <text x="205" y="52" class="mi sm">Q₁</text><text x="205" y="136" class="mi sm">Q₂</text><text x="205" y="196" class="mi sm">Q₃</text>
+    <text x="30" y="212" class="lbl sm">12 edges, each C. Along A–B (body diagonal) three of them are</text>
+    <text x="30" y="226" class="lbl sm">in parallel from A to the class P, six connect P to Q, three go Q to B.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 4.2 — A cube of twelve identical capacitors, folded by symmetry.</b> For the body diagonal the six middle
+nodes fall into two equipotential classes of three, so the network collapses to three groups in series — the
+calculation is four lines (below).</figcaption></figure>
+
+<div class="box thm"><p class="bt">The cube, all three answers, derived</p>
+<p><b>The trick that does all three: an anti-symmetry that fixes potentials.</b> The network is invariant if you
+exchange the two terminals <em>and</em> send <m>V\to V_A-V</m> (with <m>V_B=0</m>). Any node that maps to itself
+(possibly after permuting equivalent nodes) must therefore satisfy <m>V=V_A-V</m>, i.e. sit at exactly half the
+applied voltage. That single sentence hands you most of the potentials for free; only the remaining classes need an
+equation.</p>
+<p><b>(a) Body diagonal.</b> The three neighbours of A form one class <m>P</m>, the three neighbours of B one class
+<m>Q</m>, and the swap maps <m>P\leftrightarrow Q</m>. Six edges join <m>P</m> to <m>Q</m>. With
+<m>V_P+p=1</m> where <m>p=V_P</m>:</p>
+<div class="eqd">\text{node }P:\ (V_P-1)\cdot1\cdot 3+6(V_P-V_Q)=0\ \Rightarrow\ 3\!\left(V_P-1
+ight)+6\left(2V_P-1
+ight)=0
+\ \Rightarrow\ V_P=\frac35,\ V_Q=\frac25</div>
+<p>Charge out of A: <m>Q=3C(1-3/5)=6C/5</m> ⇒ <m>C_{\text{body}}=6C/5</m>. Cross-check with the group-in-series
+picture: the twelve edges become <m>3C</m> (A→P) in series with <m>6C</m> (P→Q) in series with <m>3C</m> (Q→B):
+<m>(1/3+1/6+1/3)^{-1}C=6C/5</m> ✓.</p>
+<p><b>(b) Face diagonal.</b> A and B share a face. The two nodes adjacent to <em>both</em> (call them <m>M</m>) and the
+two adjacent to <em>neither</em> (<m>N</m>) each map to themselves ⇒ <m>V_M=V_N=1/2</m>, immediately. The two
+remaining nodes <m>u</m> (next to A) and <m>w</m> (next to B) are exchanged. Conservation at <m>u</m>, whose
+neighbours are A and two <m>N</m> nodes: <m>(u-1)+2(u-\tfrac12)=0\Rightarrow u=2/3</m>. Then
+<m>Q=2C(1-\tfrac12)+C(1-\tfrac23)=\tfrac43C</m> ⇒ <m>C_{\text{face}}=4C/3</m>.</p>
+<p><b>(c) Edge.</b> Now there are four classes: <m>P</m> (2 neighbours of A), <m>Q</m> (2 neighbours of B), and the two
+singletons <m>R</m> (adjacent to A's neighbours only) and <m>S</m>. The swap pairs <m>P\leftrightarrow Q</m> and
+<m>R\leftrightarrow S</m>, so two unknowns suffice, <m>p</m> and <m>r</m>, with the edge set
+<m>\{A\!-\!B,\ 2(A\!-\!P),\ 2(P\!-\!R),\ 2(P\!-\!Q),\ 2(B\!-\!Q),\ 2(Q\!-\!S),\ R\!-\!S\}</m>:</p>
+<div class="eqd">\begin{aligned}
+\text{node }P:&\quad (p-1)+(p-r)+(p-(1-p))=0\ \Rightarrow\ 4p-r=2\
+\text{node }R:&\quad 2(r-p)+(r-(1-r))=0\ \Rightarrow\ 4r=1+2p
+\end{aligned}\qquad\Rightarrow\qquad p=\frac9{14},\ r=\frac47</div>
+<p>Charge out of A: <m>Q=C(1-0)+2C(1-9/14)=C+5C/7=12C/7</m> ⇒ <m>C_{\text{edge}}=12C/7</m>.</p>
+<div class="eqd" data-tag="compare">C_{\text{edge}}=\frac{12}7C=1.714C,\qquad C_{\text{face}}=\frac43C=1.333C,\qquad C_{\text{body}}=\frac65C=1.2C</div>
+<p><b>Check the ordering, which is the physics:</b> <m>C_{\text{edge}}>C_{\text{face}}>C_{\text{body}}</m>. Closer
+terminals ⇒ more direct flux paths ⇒ bigger capacitance. And compare with the resistor cube
+(<m>R_{\text{edge}}=7R/12</m>, <m>R_{\text{face}}=3R/4</m>, <m>R_{\text{body}}=5R/6</m>): <b>the numbers are the same
+with <m>C\leftrightarrow1/R</m></b>, exactly as §4.3 predicted. If you ever remember one and not the other, you can
+recover it — provided you remember which mapping (capacitance maps to <em>conductance</em>).</p>
+</div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Each edge of a cube is a <m>10\ \mu</m>F capacitor. Find the capacitance (i) across an edge, (ii) across a face diagonal, and state which of the three terminal pairs gives the largest value without calculating.</b><span class="diff">JEE-adv → Olympiad</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Set up by classes, then two equations.</b> For (i): terminals at <m>A=(0,0,0)</m>, <m>B=(1,0,0)</m>; classes
+<m>P=\{(0,1,0),(0,0,1)\}</m>, <m>Q=\{(1,1,0),(1,0,1)\}</m>, <m>R=\{(0,1,1)\}</m>, <m>S=\{(1,1,1)\}</m> with
+<m>V_Q=1-V_P</m>, <m>V_S=1-V_R</m>. The two conservation equations are exactly the pair in §4.5(c), giving
+<m>V_P=9/14</m> and</p>
+<div class="eqd">C_{\text{edge}}=\frac QC=1+\frac{10}7\cdot\frac{2C(1-9/14)}{C}\Big/2=\frac{12}7C=17.1\ \mu\text{F}</div>
+<p>(Do it once from scratch: <m>Q=C+2C\cdot\tfrac5{14}=C\left(1+\tfrac57 ight)=\tfrac{12}7C</m> — the displayed line is
+just that, so keep the simple form.)</p>
+<p><b>(ii) Face diagonal:</b> <m>C=\tfrac43C=13.3\ \mu</m>F, obtained in two lines because the four "middle" nodes are
+self-mapping under the terminal exchange and so sit at <m>1/2</m>, leaving only <m>u=2/3</m> to find (§4.5b).</p>
+<p><b>(iii) Ordering without algebra:</b> closer terminals mean more parallel paths for the flux, so
+<m>C_{\text{edge}}>C_{\text{face}}>C_{\text{body}}</m>: <m>1.714C,\ 1.333C,\ 1.200C</m>. Note that all three are
+<em>larger</em> than <m>C</m> but far smaller than the maximum possible (12 in parallel = 120 µF): the cube is a poor
+capacitor, which is why nobody builds one and why it makes a good exam question.</p>
+<p class="note"><b>The skill being tested</b> is the class-identification step, not the algebra. If you find yourself
+writing eight node equations for eight corners, your grouping is wrong — the answer must come from at most three
+unknowns. Check with the resistor cube (<m>7R/12,\ 3R/4,\ 5R/6</m>): replace <m>R\to1/C</m> and you get exactly the
+three numbers above, which is a legitimate independent verification.</p>
+</div></details>
+</div></div>
+
+<h2>4.6 Δ–Y (star–mesh) for capacitors</h2>
+<p>A three-terminal network that will not reduce (a bridge arm, a lattice defect) can always be converted. Write the
+<em>port</em> capacitances (one terminal, other two shorted together) and match them.</p>
+<div class="eqd key" data-tag="star-mesh">Y\to\Delta:\ C_{ij}=\frac{C_iC_j}{C_1+C_2+C_3}
+\qquad\qquad \Delta\to Y:\ C_1=C_{12}+C_{13}+\frac{C_{12}C_{13}}{C_{23}}</div>
+<p>Derive the first one in your head: in the star, terminal 1 sees <m>C_1</m> in series with
+<m>(C_2\|C_3)=C_2+C_3</m>, i.e. <m>C_1(C_2+C_3)/S</m>; in the mesh it sees <m>C_{12}+C_{13}</m>; matching all three
+cyclic equations gives the star–mesh formula. Then check the symmetric case: three equal arms <m>y</m>
+⇒ <m>C_{ij}=y/3</m>, so <m>y=3C_{ij}</m> ✓ (this is the <m>3C</m> that appeared in Q2).</p>
+<div class="box trap"><p class="bt">Note what is different from resistors</p>
+<p>For resistors, <m>R_{ij}=R_i+R_j+R_iR_j/R_k</m> (star→mesh). For capacitors the <em>star→mesh</em> direction is the
+simple one and <em>mesh→star</em> carries the products. Students who memorise "the resistor formula with R→C" get the
+reciprocal of the right answer in the wrong place. The reliable move is: <b>don't recall — match port
+capacitances on the spot.</b> It takes 40 seconds and cannot fail.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>Three <m>6\ \mu</m>F capacitors form a triangle between nodes 1, 2, 3. Find the capacitance between terminals 1 and 2 (i) with 3 left open, (ii) with 3 earthed. What is the general lesson?</b><span class="diff">JEE-adv · definitions</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(i) 3 open</b> — node 3 is floating, so <m>C_{13}</m> and <m>C_{23}</m> carry the same charge (series) and their
+combination is in parallel with <m>C_{12}</m>:</p>
+<div class="eqd">C=C_{12}+\frac{C_{13}C_{23}}{C_{13}+C_{23}}=6+3=9\ \mu\text{F}</div>
+<p><b>(ii) 3 earthed</b> — take <m>V_1=V,\ V_2=0=V_3</m>. Then
+<m>Q_1=C_{12}(V_1-V_2)+C_{13}(V_1-V_3)=6V+6V=12V</m> and
+<m>C=Q_1/(V_1-V_2)=12\ \mu</m>F: the two capacitors now both sit across the full voltage, i.e. in parallel.</p>
+<p><b>Lesson:</b> the capacitance between two terminals is not a property of those two terminals. It depends on the
+boundary condition of <em>every other conductor present</em> — floating, earthed or driven, each gives a different
+number. The three answers (9, 12 and, with 3 driven to some other potential, anything in between) all describe the
+same object. This is precisely why chapter 7 replaces the scalar <m>C</m> by the matrix of coefficients of
+capacitance: <m>Q_i=\sum_jc_{ij}V_j</m> contains all three answers at once.</p>
+</div></details>
+</div></div>
+
+<h2>4.7 Switches, redistribution, and the correct conservation law</h2>
+<p>The universal recipe for "the switch is now closed" problems:</p>
+<div class="eqd">
+\begin{aligned}
+&\textbf{1.}\ \text{Find every isolated island of conductor, and its total charge }Q_{\text{isl}}=\sum C_iv_i\\
+&\textbf{2.}\ \text{After switching, the island's charge is the same (unless a cell touched it)}\\
+&\textbf{3.}\ \text{Add the constraint }V=\text{given (cells) or }V_1=V_2\ (\text{now joined})\\
+&\textbf{4.}\ \text{Solve; then compute }\Delta U\ \text{and, if a cell was involved, its work }W_b=V\,\Delta Q_{\text{through it}}
+\end{aligned}
+</div>
+<div class="box why"><p class="bt">Why charge, not voltage, is the conserved bookkeeping variable</p>
+<p>A switch equalises <em>potentials</em>; a cell fixes them; only <b>an isolated conductor conserves charge</b>. So the
+unknowns are best chosen as node potentials and the equations written as charge conservation. The "loss"
+<m>\Delta U</m> then comes out automatically from §3.7's formula. If instead you try to conserve voltage, or to
+"conserve energy" (a surprisingly common reflex), you will get a wrong answer: energy is <em>not</em> conserved by the
+capacitors alone during a switching transient — it is conserved only for capacitors + battery + heat.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b><m>C_1=2\ \mu</m>F at 100 V and <m>C_2=3\ \mu</m>F at 50 V are connected <b>with opposite polarity</b> (positive plate of one to negative of the other). Find the final voltage and the energy lost.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Assign signs on the connected island: <m>Q_{\text{isl}}=C_1V_1-C_2V_2=200-150=50\ \mu</m>C, so
+<m>V_f=50/(2+3)=10</m> V. <m>U_i=\tfrac12(2)(10^4)+\tfrac12(3)(50^2)=10+3.75=13.75</m> mJ;
+<m>U_f=\tfrac12(5)(10^2)=0.25</m> mJ; loss <m>13.5</m> mJ.</p>
+<p>Check against §3.7's master formula:
+<m>\tfrac12C_{\text{series}}(\Delta V)^2=\tfrac12\cdot\frac{6}{5}\times10^{-6}\times(150)^2=13.5</m> mJ ✓. Note the
+<em>effective</em> voltage difference was <m>100-(-50)=150</m> V because of the reversed connection — that is the only
+thing that changed relative to same-polarity sharing.</p>
+<p class="note">Physically: 13.5 mJ out of 13.75 mJ has left the capacitors — the nearly complete annihilation of the
+stored energy, with the surviving 10 V being what charge conservation demands. Reversing polarity is therefore the most
+violent thing you can do to a pair of capacitors, and it is exactly what a defibrillator's "discharge" phase and a
+capacitor-welder exploit.</p>
+</div></details>
+</div></div>
+
+<h2>4.8 Infinite ladders: self-similarity, and the root you must reject</h2>
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 150" role="img" aria-label="Infinite ladder of series C and shunt C capacitors">
+  <line x1="20" y1="40" x2="90" y2="40" class="ln"/>
+  <g><rect x="90" y="32" width="34" height="16" class="w ln"/><line x1="100" y1="32" x2="100" y2="48" class="ln"/><line x1="114" y1="32" x2="114" y2="48" class="ln"/><text x="94" y="24" class="mi sm">C</text></g>
+  <line x1="124" y1="40" x2="190" y2="40" class="ln"/>
+  <g><rect x="196" y="58" width="16" height="34" class="w ln" transform="rotate(90 204 75)"/><text x="212" y="72" class="mi sm">C</text></g>
+  <line x1="204" y1="40" x2="204" y2="58" class="ln"/><line x1="204" y1="92" x2="204" y2="120" class="ln"/>
+  <line x1="20" y1="120" x2="660" y2="120" class="ln"/>
+  <line x1="204" y1="40" x2="270" y2="40" class="ln"/>
+  <g><rect x="270" y="32" width="34" height="16" class="w ln"/><text x="276" y="24" class="mi sm">C</text></g>
+  <line x1="304" y1="40" x2="380" y2="40" class="ln"/>
+  <line x1="380" y1="40" x2="380" y2="58" class="ln"/><rect x="372" y="58" width="16" height="34" class="w ln" transform="rotate(90 380 75)"/><line x1="380" y1="92" x2="380" y2="120" class="ln"/>
+  <text x="392" y="72" class="mi sm">C</text>
+  <line x1="380" y1="40" x2="446" y2="40" class="ln"/>
+  <g><rect x="446" y="32" width="34" height="16" class="w ln"/><text x="452" y="24" class="mi sm">C</text></g>
+  <line x1="480" y1="40" x2="556" y2="40" class="ln"/>
+  <line x1="556" y1="40" x2="556" y2="58" class="ln"/><rect x="548" y="58" width="16" height="34" class="w ln" transform="rotate(90 556 75)"/><line x1="556" y1="92" x2="556" y2="120" class="ln"/><text x="568" y="72" class="mi sm">C</text>
+  <line x1="556" y1="40" x2="620" y2="40" class="ln" stroke-dasharray="0"/>
+  <text x="622" y="46" class="mi">…</text><text x="622" y="126" class="lbl sm">∞ sections</text>
+  <text x="20" y="24" class="lbl sm">input terminals</text>
+  <line x1="20" y1="40" x2="20" y2="120" class="thinl"/>
+  <text x="34" y="90" class="mi sm">x</text>
+  <path d="M8,52 a10,10 0 0 1 0,56" class="ln" fill="none"/>
+</svg></div>
+<figcaption><b>Fig. 4.3 — The ladder whose tail is identical to itself.</b> If the whole infinite network has capacitance
+<m>x</m>, then so does the network after the first section — which is the only new fact you need.</figcaption></figure>
+
+<div class="eqd">
+\begin{aligned}
+x&=\text{series}\big(C,\ C+x\big)=\frac{C(C+x)}{2C+x}\\
+x(2C+x)&=C^2+Cx\ \Rightarrow\ x^2+Cx-C^2=0\ \Rightarrow\ x=C\cdot\frac{-1\pm\sqrt5}2
+\end{aligned}
+\qquad\Longrightarrow\qquad \boxed{x=\frac{\sqrt5-1}{2}\,C=0.618\,C}
+</div>
+<div class="box why"><p class="bt">Why reject the negative root, and when "self-similarity" is a lie</p>
+<p><b>Negative root:</b> <m>-1.618C</m> is impossible for a passive network, since <m>U=\tfrac12xV^2&gt;0</m> for any
+nonzero state ⇒ <m>x&gt;0</m>. Reject it on physical grounds and say so in one clause; writing "we take the positive root"
+without a reason is a common place where a marker deducts for lack of justification.</p>
+<p><b>Convergence is not automatic.</b> The recursion <m>x_{n+1}=C(C+x_n)/(2C+x_n)</m> has derivative
+<m>|f'|=C^2/(2C+x)^2&lt;1/4</m> at the fixed point, so iterating converges rapidly (factor ≈ 1/4 per section):
+starting from <m>x_1=0</m> (a truncated ladder, open end) the sequence is
+<m>0.5C,\ 0.6C,\ 0.615C,\ 0.618C,\dots</m>. <b>So the 10-section ladder is already within 0.1% of the infinite
+value</b>, and a question that says "nine sections" expects you to use the infinite answer unless it explicitly asks
+for the finite one. Two extra cautions: (i) a ladder of <em>series C, shunt C</em> converges but one of
+<em>series C, shunt C</em> with the roles swapped diverges; (ii) if the network has negative or active elements the
+fixed point may be unstable and self-similarity gives the wrong answer.</p>
+</div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Find the capacitance of the infinite ladder in which every <em>series</em> element is <m>2C</m> and every <em>shunt</em> element is <m>C</m>. Verify by truncating.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">x=\text{series}\big(2C,\ C+x\big)=\frac{2C(C+x)}{3C+x}\ \Rightarrow\ x(3C+x)=2C^2+2Cx\ \Rightarrow\ x^2+Cx-2C^2=0</div>
+<p><m>(x-C)(x+2C)=0</m> ⇒ <m>\boxed{x=C}</m> (rejecting <m>-2C</m> because a passive network has <m>U&gt;0</m> ⇒ <m>x&gt;0</m>).</p>
+<p><b>Truncation check.</b> Let <m>x_1</m> be the ladder cut after one section: <m>\text{series}(2C,C)=2C/3=0.667C</m>.
+Then <m>x_{n+1}=2C(C+x_n)/(3C+x_n)</m>:
+<m>x_2=10C/11=0.909C</m>, <m>x_3=42C/43=0.977C</m>, <m>x_4=170C/171=0.994C</m>. The error is
+<m>1/3,\ 1/11,\ 1/43,\ 1/171</m> — each about a quarter of the previous, which is exactly
+<m>|f'(x_*)|=4C^2/(3C+x)^2=1/4</m> at the fixed point. Two conclusions you can use anywhere:
+<b>(i)</b> the sequence is monotone increasing and bounded, so the fixed point is the limit (this is the missing
+rigour in most textbook "solutions"); <b>(ii)</b> a four-section ladder is already within 0.6% of the infinite value,
+so unless a question specifies a finite number of sections, the self-similar answer is the right one to use.</p>
+</div></details>
+</div></div>
+
+<h2>4.9 Counting combinations, and what to notice while counting</h2>
+<p>Arrange <m>n</m> identical capacitors of value <m>c</m> into every two-terminal series-parallel network you can
+draw and only a handful of distinct values appear (for three: 2, 4, 9, 18 in units of <m>c/3</m> — Q7). The useful
+skill is not enumeration but the <b>monotonicity theorem</b>, which lets you rule answers out without drawing
+anything:</p>
+<ul>
+<li>Adding any capacitor <b>in parallel</b> anywhere always increases <m>C_{\text{eq}}</m>; adding one
+<b>in series</b> anywhere always decreases it. (Proof: <m>\partial C_{\text{eq}}/\partial C_i>0</m> always — a theorem,
+the <em>monotonicity of capacitance</em>, which follows from <m>C=2U/V^2</m> and from the fact that adding a conductor
+can only provide more room for flux.)</li>
+<li>So <m>C_{\text{series}}&lt;\min_i C_i\le\max_i C_i&lt;C_{\text{parallel}}</m>, always, with equality only if some element is bypassed. Any "equivalent capacitance" that violates this is wrong by inspection — including a forced series-reduction of a bridge, which is why the check is worth one second on every network question.</li>
+</ul>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Three capacitors of <m>6\ \mu</m>F each. Give connections giving 2, 4, 9 and 18 µF. Show that 6 µF is impossible if all three must be used, and say which arrangement stores most energy from a 100 V supply.</b><span class="diff">base · design</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">6\|6\|6=18,\qquad (6\|6)\ \text{ser}\ 6=4,\qquad (6\ \text{ser}\ 6)\|6=9,\qquad 6\ \text{ser}\ 6\ \text{ser}\ 6=2</div>
+<p><b>Why 6 cannot be made.</b> Every two-terminal series-parallel network of three elements has one of exactly four
+connection graphs: a chain of three, a pair merged then put in series with the third, a pair merged in parallel with
+the third, or all three in parallel. (A triangle is not new: with one terminal floating it is the third case.) The
+four values are 2, 4, 9, 18 — and by the monotonicity rule of §4.9, <m>C_{\text{series}}&lt;\min C_i&lt; C_{\text{parallel}}</m> with equality only if a capacitor is bypassed or left dangling. So 6 µF requires one capacitor
+to carry nothing. <b>That "prove it is impossible" half is the part worth doing</b> — enumerating is easy, bounding
+requires the theorem.</p>
+<p><b>Energy.</b> On a voltage source, <m>U=\tfrac12CV^2</m> ⇒ the <b>18 µF</b> (all parallel) stores most:
+<m>U=\tfrac12\times18\times10^{-6}\times10^{4}=0.9</m> mJ. If instead each network is charged to 100 V and then
+<em>disconnected carrying the same total charge</em>, <m>U=Q^2/2C</m> and the ranking inverts, the 2 µF chain winning.
+Two questions, identical hardware, opposite answers — the fastest test of whether §3.4 has been understood.</p>
+</div></details>
+</div></div>
+
+<h2>4.10 Capacitor dividers, and one elegant application</h2>
+<p>Series capacitors divide voltage inversely as <m>C</m>, so a capacitive divider gives a frequency-independent
+voltage ratio with <b>no power dissipation</b> — which is why oscilloscope probes are 10:1 capacitive dividers at the
+high end (a 9 pF probe capacitor with the scope's 1 pF input, plus the cable's capacitance absorbed into the 9 pF by
+a trimmer).</p>
+<div class="eqd" data-tag="divider">\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{C_1}{C_1+C_2}\qquad(\text{series pair, output across }C_2)</div>
+<p>Compare the resistor divider <m>R_2/(R_1+R_2)</m>: the capacitor version has <m>C_1</m> (the series arm) on top, not
+<em>bottom</em> — the reciprocal shows up exactly where you would not expect it if you memorised by analogy. Note also
+that a capacitive divider does not work for DC (leakage dominates), and that a compensated divider
+(<m>R_1C_1=R_2C_2</m>) works at <em>all</em> frequencies, which is the real trick in a probe.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>A 10:1 passive probe has <m>C_{\text{scope}}+C_{\text{cable}}=15</m> pF at the oscilloscope input, and the probe's internal capacitor is adjustable. What must it be set to, and why does the compensation matter if the ratio is set by the capacitors?</b><span class="diff">Olympiad · applied</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>For 10:1 we need <m>V_{\text{out}}/V_{\text{in}}=C_1/(C_1+C_2)=1/10</m> ⇒ <m>C_1=C_2/9=1.67</m> pF. The probe's
+series capacitor is therefore set to ≈ 1.7 pF (real probes: 10–15 pF trimmer against a 1 MΩ ∥ ≈ 15 pF input, with the
+resistive path doing the DC division — the number differs because a real probe divides 9 MΩ:1 MΩ and
+<i>compensates</i> so that the RC products match).</p>
+<p><b>Why compensation matters:</b> if only the capacitors set the ratio, the divider is correct at high frequency; at
+DC the ratio is set by the resistors (or by leakage!) and the waveform at the scope is a distorted, differentiated
+version of reality. Matching <m>R_1C_1=R_2C_2</m> makes the transfer ratio frequency-independent:
+<m>V_{\text{out}}/V_{\text{in}}=R_2/(R_1+R_2)=C_1/(C_1+C_2)</m>. The "square wave looks right" test on a probe is
+literally this condition being checked. It is an excellent 4-line answer to "why is there a variable capacitor on a
+probe?", and it is a genuine piece of physics that JEE has paraphrased as a "two RC branches" question.</p>
+</div></details>
+</div></div>
+
+<h2>4.11 Checkpoint</h2>
+<ul class="chks">
+<li>State the two conditions under which "series ⇒ same charge" fails, and fix the equations in each case.</li>
+<li>Prove the bridge balance condition in two lines, and explain why it is <em>not</em> the reciprocal of the resistor
+condition.</li>
+<li>Do the cube: edge, face, body — and check the ordering against the resistor cube.</li>
+<li>Derive Δ–Y on the spot from port capacitances rather than recalling it.</li>
+<li>For a ladder, state the fixed-point equation, justify rejecting the root, and check convergence with one
+truncated section.</li>
+<li>For any switching problem, write down the island charge <m>\sum C_iV_i</m> before doing anything else.</li>
+</ul>
+
+<div class="box insight"><p class="bt">A unifying sentence for the whole chapter</p>
+<p>A capacitive network is a graph whose edges are <em>conductances made of capacitance</em>: the node equation
+<m>\sum_jC_{ij}(V_i-V_j)=Q_i</m> is exactly Kirchhoff's law, and exactly the finite-difference form of
+<m>-\vec\nabla\cdot\varepsilon\vec\nabla V=\rho</m>. So symmetry arguments, folding, Δ–Y, Thévenin, ladders and
+Star–mesh are not five tricks but one trick applied to a graph. When an Olympiad problem looks like "a
+capacitor lattice", write the node equation for the graph and the physics is over — what remains is linear algebra,
+and the physics marks are all in step 1 (identifying the equipotential classes).</p></div>
+
+<p class="skip">Next: <a href="05-dielectrics.html"><b>Chapter 5 · Dielectrics →</b></a> — polarisation from atoms to
+maxwell's equations in matter, why <m>K</m> multiplies <m>C</m>, the slab problems, the dielectric liquid that climbs
+between the plates, and the local field.</p>
+
+</main>
+</div>
+</body>
+</html>
