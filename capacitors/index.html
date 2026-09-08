@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacitors — JEE Advanced &amp; Physics Olympiad notes</title>
+<meta name="description" content="Complete concept-first notes on capacitors for JEE Advanced and NSEP/INPhO-level Physics Olympiad: every derivation explained, worked examples, questions with solutions, and a 36-question Olympiad paper.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="On this page"><p class="lab">On this page</p></nav>
+<main>
+
+<p class="meta" id="top">
+  <span class="badge">11-page chapter set</span>
+  <span class="badge jee">JEE Advanced</span>
+  <span class="badge oly">NSEP · INPhO · IOPT</span>
+  <span>self-contained — opens with no internet, prints cleanly</span>
+</p>
+
+<h1>Capacitors — first principles to Olympiad</h1>
+<p class="lead">A complete, proof-first treatment of capacitance, energy, dielectrics and capacitor networks.
+Every formula here is <b>derived from something you already accept</b> — Coulomb's law, Gauss's law, conservation of
+energy — and every place where a JEE or Olympiad examiner can catch you is marked explicitly.</p>
+
+<figure class="fig">
+  <svg viewBox="0 0 860 258" role="img" aria-label="Parallel plate capacitor connected to a battery, with uniform field in the gap">
+    <rect x="40" y="62" width="300" height="14" class="fp"/>
+    <rect x="40" y="178" width="300" height="14" class="fn"/>
+    <g stroke="var(--accent)" stroke-width="1.5" fill="none">
+      <line x1="95" y1="84" x2="95" y2="168" marker-end="url(#ahb)"/>
+      <line x1="160" y1="84" x2="160" y2="168" marker-end="url(#ahb)"/>
+      <line x1="225" y1="84" x2="225" y2="168" marker-end="url(#ahb)"/>
+      <line x1="290" y1="84" x2="290" y2="168" marker-end="url(#ahb)"/>
+    </g>
+    <path d="M336,74 q14,20 6,42 q-10,20 4,40" class="thinl" fill="none"/>
+    <path d="M340,192 q22,-14 22,-46 q0,-34 -22,-48" class="thinl" fill="none"/>
+    <text x="352" y="136" class="lbl sm" text-anchor="start">fringing</text>
+    <g fill="var(--pos)" font-size="14" text-anchor="middle">
+      <text x="70" y="56">+</text><text x="130" y="56">+</text><text x="190" y="56">+</text><text x="250" y="56">+</text><text x="310" y="56">+</text>
+      <text x="70" y="207">−</text><text x="130" y="207">−</text><text x="190" y="207">−</text><text x="250" y="207">−</text><text x="310" y="207">−</text>
+    </g>
+    <text x="190" y="140" class="mi sm" text-anchor="middle">E = σ/ε₀  (uniform, only here)</text>
+    <text x="190" y="42" class="mi" text-anchor="middle">+Q on this plate, σ = Q/A</text>
+    <line x1="378" y1="76" x2="378" y2="178" class="ln" stroke-width="1" marker-start="url(#dim)" marker-end="url(#dim)"/>
+    <text x="392" y="132" class="mi sm">d</text>
+    <path d="M340,69 H420 V44 H470" class="ln"/><path d="M340,185 H420 V214 H470" class="ln"/>
+    <line x1="470" y1="30" x2="470" y2="58" class="ln2"/><line x1="488" y1="18" x2="488" y2="70" class="ln2"/>
+    <line x1="470" y1="200" x2="470" y2="228" class="ln2"/><line x1="488" y1="188" x2="488" y2="240" class="ln2"/>
+    <path d="M488,44 H556" class="ln"/><path d="M488,214 H556" class="ln"/>
+    <text x="479" y="12" class="lbl sm" text-anchor="middle">+</text><text x="497" y="86" class="lbl sm" text-anchor="middle">−</text>
+    <text x="522" y="134" class="lbl sm" text-anchor="middle">battery V₀</text>
+    <text x="522" y="150" class="lbl sm" text-anchor="middle">(the switch that</text>
+    <text x="522" y="164" class="lbl sm" text-anchor="middle">decides everything)</text>
+    <g>
+      <rect x="640" y="96" width="204" height="146" rx="12" class="w ln" stroke-dasharray="5 4"/>
+      <text x="742" y="122" class="lbl" text-anchor="middle" style="font-weight:700">after chapter 11 you can</text>
+      <text x="742" y="146" class="lbl sm" text-anchor="middle">get C for any geometry</text>
+      <text x="742" y="162" class="lbl sm" text-anchor="middle">force by virtual work</text>
+      <text x="742" y="178" class="lbl sm" text-anchor="middle">any network, any dielectric</text>
+      <text x="742" y="194" class="lbl sm" text-anchor="middle">RC transients, ∞ ladders</text>
+      <text x="742" y="210" class="lbl sm" text-anchor="middle">reciprocity &amp; images</text>
+    </g>
+  </svg>
+  <figcaption><b>The whole chapter in one picture.</b> Two conductors, a potential difference, a field in the gap — and
+  a battery that either holds <i>Q</i> fixed or holds <i>V</i> fixed. Almost every capacitor problem in JEE and every
+  Olympiad problem is a question about <em>which of those two is fixed</em>: that single choice decides the energy
+  change, the force between the plates and the force on a dielectric slab.</figcaption>
+</figure>
+
+<h2>How these notes are organised</h2>
+<p>Each chapter builds only on the ones before it. Chapters <b>1–3</b> are the pure conceptual base (charge and
+conductors, capacitance, energy). Chapters <b>4–6</b> are the JEE-Advanced engine (combinations, dielectrics,
+networks and transients). Chapters <b>7–8</b> push to Olympiad level (coefficients of capacitance, reciprocity,
+images, conformal ideas, variational methods) and consolidate a solving strategy. Chapters <b>9–10</b> are the full
+paper with detailed solutions; chapter <b>11</b> is a printable three-page sheet.</p>
+
+<div class="cards">
+  <div class="card" data-chk="1"><span class="st">→</span><span class="n">Chapter 1</span>
+    <b><a class="go" href="01-foundations.html">Charge, conductors &amp; Gauss</a></b>
+    <span>Why <m>E = 0</m> inside a conductor in equilibrium, why charge lives on the surface, shielding and cavities, flux and solid angle, the method of images, and the pressure <m>\sigma^2/2\varepsilon_0</m>.</span></div>
+
+  <div class="card" data-chk="2"><span class="st">→</span><span class="n">Chapter 2</span>
+    <b><a class="go" href="02-capacitance.html">Capacitance &amp; every geometry</a></b>
+    <span>What the definition means and why <i>C</i> is purely geometric; parallel plate, isolated sphere, concentric shells, coaxial cylinder, two-wire line, metal slab in the gap, fringing and edge corrections.</span></div>
+
+  <div class="card" data-chk="3"><span class="st">→</span><span class="n">Chapter 3</span>
+    <b><a class="go" href="03-energy-and-force.html">Energy, force &amp; pressure</a></b>
+    <span>Energy in the field, energy density, constant-<i>Q</i> versus constant-<i>V</i> force, virtual work, the two-capacitor paradox, pull-in instability, small oscillations of a movable plate.</span></div>
+
+  <div class="card" data-chk="4"><span class="st">→</span><span class="n">Chapter 4</span>
+    <b><a class="go" href="04-combinations.html">Combinations &amp; networks</a></b>
+    <span>Series and parallel with proofs, voltage division, balanced and unbalanced bridges, symmetry folding, the capacitor cube, infinite ladders, Δ–Y for capacitors, charge redistribution.</span></div>
+
+  <div class="card" data-chk="5"><span class="st">→</span><span class="n">Chapter 5</span>
+    <b><a class="go" href="05-dielectrics.html">Dielectrics</a></b>
+    <span>Polarisation, bound charge, the <m>D</m>-field and why <i>K</i> multiplies <i>C</i>; slabs (complete, partial, liquid rise), multi-layer gaps, local field, breakdown, energy bookkeeping with a battery attached.</span></div>
+
+  <div class="card" data-chk="6"><span class="st">→</span><span class="n">Chapter 6</span>
+    <b><a class="go" href="06-networks-and-transients.html">DC networks &amp; RC transients</a></b>
+    <span>Steady state with resistors present, the node-charge method, charge through a cell, Thévenin resistance for <m>\tau</m>, charging and discharging, energy balance, two-time-constant networks, relaxation oscillators.</span></div>
+
+  <div class="card" data-chk="7"><span class="st">→</span><span class="n">Chapter 7</span>
+    <b><a class="go" href="07-advanced-topics.html">Advanced / Olympiad toolkit</a></b>
+    <span>Coefficients of capacitance and potential, Green's reciprocity, images for a sphere and a disc, needle and spheroid limits, wedge capacitors via conformal mapping, MEMS, the charged-droplet (Rayleigh) limit.</span></div>
+
+  <div class="card" data-chk="8"><span class="st">→</span><span class="n">Chapter 8</span>
+    <b><a class="go" href="08-playbook.html">Playbook &amp; traps</a></b>
+    <span>The twelve moves that solve almost everything, twenty-five classic traps with the exact reason each is wrong, and a fifteen-question timed drill.</span></div>
+
+  <div class="card" data-chk="9"><span class="st">→</span><span class="n">Chapter 9</span>
+    <b><a class="go" href="09-olympiad-paper.html">Olympiad paper · 36 questions</a></b>
+    <span>Full length, exam conditions: 12 single-correct, 6 multi-correct, 8 numerical and 10 long-answer problems. Written to cover every concept in chapters 1–8, so no topic escapes.</span></div>
+
+  <div class="card" data-chk="10"><span class="st">→</span><span class="n">Chapter 10</span>
+    <b><a class="go" href="10-olympiad-solutions.html">Detailed solutions</a></b>
+    <span>Every question worked line by line with the reasoning, alternative methods, the standard wrong answer, and a marks distribution for self-grading.</span></div>
+
+  <div class="card" data-chk="11"><span class="st">→</span><span class="n">Chapter 11</span>
+    <b><a class="go" href="11-formula-sheet.html">Formula sheet</a></b>
+    <span>Three printable pages: every result, every geometry, every limiting case, each with its condition of validity attached.</span></div>
+</div>
+
+<p class="toolrow">Progress — click anywhere on a card to tick it (stored in this browser):
+  <b id="overall">0 / 11</b>
+  <span class="pill" id="overallbar" style="display:block;height:6px;width:0;border-radius:99px;background:var(--pos)"></span></p>
+
+<h2>Read this first: the four ideas the chapter rests on</h2>
+<p>Everything below — every trick, every "hard" problem — follows from these four statements. If you can re-derive
+them, you need not memorise anything else in this chapter.</p>
+
+<ol class="steps">
+  <li><b>A conductor in electrostatic equilibrium is an equipotential.</b> Free charges slide until the tangential
+  field vanishes, so <m>\vec E = 0</m> inside the metal and <m>\vec E \perp</m> surface. This is the only reason
+  "the potential difference across a capacitor" is a single well-defined number.</li>
+
+  <li><b>The field is linear in its sources.</b> Coulomb's law is linear, so doubling every charge doubles every
+  potential. Hence <m>Q \propto V</m>, and <m>C \equiv Q/V</m> is a constant that depends on <b>geometry and material
+  only</b> — never on <i>Q</i> or <i>V</i>.</li>
+
+  <li><b>Energy is quadratic in charge.</b> Because <m>V = Q/C</m> climbs while you charge, the work is the area of a
+  <em>triangle</em>, not a rectangle: <m>U = \tfrac12 QV</m>. That factor <m>\tfrac12</m> is the most common slip in
+  the chapter — and the reason exactly half the battery's work is dissipated while charging a capacitor through any
+  resistance.</li>
+
+  <li><b>Know what is being held fixed.</b> Isolated (battery removed) ⇒ <i>Q</i> fixed, and the system moves so as
+  to <em>minimise</em> <m>U</m>. Still connected to a cell ⇒ <i>V</i> fixed, and the quantity to minimise is
+  <m>U - VQ</m> (the battery pays you as charge flows). Forces and energy changes differ by a factor of 2 between the
+  two cases — see <a href="03-energy-and-force.html">§3.4</a>.</li>
+</ol>
+
+<div class="box why"><p class="bt">Why bother with a capacitors chapter at all?</p>
+<p>Because it is the cheapest place in electrostatics to practise the skill that decides an Olympiad score:
+<b>replacing a force calculation by an energy calculation</b>. Getting the force on a partially inserted dielectric
+slab by integrating stress is painful; differentiating <m>\tfrac12 V^2 C(x)</m> is one line. Capacitors are also the
+one electrostatics topic JEE asks <em>quantitatively inside a circuit</em> — it is exactly where Gauss meets Kirchhoff.</p></div>
+
+<h2>Notation used everywhere</h2>
+<table class="tb">
+<thead><tr><th style="width:20%">Symbol</th><th style="width:32%">Meaning</th><th>Convention in these notes</th></tr></thead>
+<tbody>
+<tr><td><m>Q,\;q</m></td><td>charge on a capacitor plate (magnitude)</td><td>Always the charge on the <b>positive</b> plate. The pair carries <m>+Q</m> and <m>-Q</m>; the net charge of a capacitor is zero.</td></tr>
+<tr><td><m>V</m> (or <m>\Delta V</m>)</td><td>potential difference between the plates</td><td>Taken positive on the plate carrying <m>+Q</m>.</td></tr>
+<tr><td><m>C</m></td><td>capacitance</td><td><m>C = Q/V &gt; 0</m>, one farad = one coulomb per volt. Purely geometric.</td></tr>
+<tr><td><m>\sigma</m></td><td>surface charge density</td><td><m>\sigma = Q/A</m> only for a uniformly charged flat plate; otherwise <m>\sigma(\vec r)</m>.</td></tr>
+<tr><td><m>\varepsilon_0</m></td><td>permittivity of free space</td><td><m>8.854\times10^{-12}</m> F m<sup>−1</sup>; <m>(4\pi\varepsilon_0)^{-1} = 9\times10^{9}</m> N m² C<sup>−2</sup>.</td></tr>
+<tr><td><m>K</m> or <m>\varepsilon_r</m></td><td>dielectric constant</td><td><m>K \ge 1</m>, dimensionless. Material permittivity <m>\varepsilon = K\varepsilon_0</m>.</td></tr>
+<tr><td><m>U</m></td><td>electrostatic energy stored</td><td>Some books write <m>W</m> for this; here <m>W</m> <b>always</b> means work <em>done by</em> something.</td></tr>
+<tr><td><m>\vec P,\ \vec D</m></td><td>polarisation, electric displacement</td><td><m>\vec D = \varepsilon_0\vec E + \vec P</m>; linear dielectric: <m>\vec D = \varepsilon\vec E</m>.</td></tr>
+<tr><td><m>\tau</m></td><td>RC time constant</td><td><m>\tau = R_{\text{th}}C</m> in seconds, <m>R_{\text{th}}</m> seen <em>by the capacitor</em>.</td></tr>
+<tr><td><m>\vec E,\ \hat r</m></td><td>vectors and unit vectors</td><td>Arrow over a letter = vector; hat = unit vector. <m>\hat n</m> is the outward normal unless stated.</td></tr>
+<tr><td><m>\partial</m>, <m>\oint</m>, <m>\propto</m>, <m>\ll</m></td><td>partial derivative, closed integral, proportional, much less</td><td>Subscripts on <m>\partial</m> name what is held fixed — in this chapter that is often <m>Q</m> or <m>V</m>, and it is never optional.</td></tr>
+</tbody>
+</table>
+
+<h2>Syllabus coverage</h2>
+<p>Mapping to the JEE Advanced physics syllabus (Electrostatics) and to what NSEP/INPhO papers actually ask.
+The last three rows are outside the JEE list but are standard Olympiad material; they appear in chapters 7 and 10.</p>
+
+<table class="tb">
+<thead><tr><th>Topic as listed in the syllabus</th><th style="width:12%">Where</th><th style="width:40%">Deepest treatment in these notes</th></tr></thead>
+<tbody>
+<tr><td>Capacitance; energy stored in a capacitor; parallel-plate capacitor</td><td>2, 3</td><td>Full derivation plus finite-plate and edge corrections, and the <m>d \to \infty</m> sanity checks</td></tr>
+<tr><td>Insertion of dielectrics; effect on capacitance; energy considerations</td><td>5, 3.4</td><td>Partial-slab force, liquid rise, multi-layer gaps, complete energy bookkeeping with the cell attached</td></tr>
+<tr><td>Series and parallel combinations; networks of capacitors</td><td>4</td><td>Bridges (balanced and not), cube, ladders, Δ–Y, node-charge method, redistribution losses</td></tr>
+<tr><td>RC circuits, charging and discharging, time constant</td><td>6</td><td>Two-loop transients, Thévenin for <m>\tau</m>, energy split, relaxation oscillators</td></tr>
+<tr><td>Electrostatic potential and energy, field lines, Gauss's law</td><td>1</td><td>Flux through a disc, solid angle, potential from the field, why conductors are equipotentials</td></tr>
+<tr><td>Conductors and insulators in an electrostatic field; shielding</td><td>1.3</td><td>Charge in a cavity, Faraday cage, force and pressure on a surface element</td></tr>
+<tr><td class="up">— Method of images (not in the JEE list, common in NSEP)</td><td>1.6, 7.2</td><td>Grounded plane, grounded sphere, sphere-to-plane capacitance, force by images</td></tr>
+<tr><td class="up">— Coefficients of capacitance and potential; reciprocity</td><td>7.1</td><td>Matrix formulation, Green's reciprocity with proof, three fast applications</td></tr>
+<tr><td class="up">— Variational thinking; stability, MEMS pull-in, droplet limit</td><td>3.6, 7.5, 7.6</td><td>Stability of a suspended plate, snap-through, Rayleigh fission limit</td></tr>
+</tbody>
+</table>
+
+<div class="box thm"><p class="bt">A small correction to your wording</p>
+<p>You asked for notes for "JEE Advanced and IOQM". IOQM is the Indian Olympiad Qualifier in <b>Mathematics</b>; the
+physics ladder is <b>NSEP → INPhO → OCQ → IPhO</b>, with <b>IOPT</b> for the theory stream. These notes are aimed at
+JEE Advanced plus that NSEP/INPhO standard. The Olympiad layer is built from the same tools — energy methods, series
+expansion, symmetry, differential equations — which is also the reasoning style an IOQM problem rewards, so nothing
+here is wasted. Anything beyond the JEE syllabus is flagged <span class="badge oly">Olympiad</span>; you can skip
+those flags on a first pass without breaking the chain.</p></div>
+
+<h2>The three-pass study plan</h2>
+<table class="tb">
+<thead><tr><th style="width:12%">Pass</th><th style="width:20%">Goal</th><th>What to actually do</th><th style="width:12%">Time</th></tr></thead>
+<tbody>
+<tr><td><b>1 · Build</b></td><td>Understand, don't store</td><td>Chapters 1–3. For every boxed result, close the page and re-derive it on paper before reading on. Do each <span class="pill">Q</span> block without opening its solution; if you cannot finish, re-read the <em>section</em>, not the solution.</td><td>3–4 days</td></tr>
+<tr><td><b>2 · Connect</b></td><td>Turn understanding into speed</td><td>Chapters 4–6, then the trap list in chapter 8. Now do the question blocks timed: 4 minutes per MCQ. Write down every point where you hesitated — that list is your real weakness, not your score.</td><td>5–6 days</td></tr>
+<tr><td><b>3 · Extend</b></td><td>Olympiad standard</td><td>Chapter 7 slowly, with a notebook for the proofs. Then chapter 9 under real exam conditions (3 h, no notes, no calculator unless the paper allows it), graded against chapter 10. Re-solve every miss <b>48 hours later</b>, not immediately.</td><td>7–10 days</td></tr>
+</tbody>
+</table>
+
+<div class="box def"><p class="bt">How to use the questions inside the chapters</p>
+<ul>
+<li><b>Attempt before you fold.</b> Each question has its solution in a collapsed panel. Opening it before you have
+written something down makes the item worth far less to you.</li>
+<li>Use the <em>mark solved</em> button on each question; the counter in the top bar of the page remembers it.</li>
+<li>Difficulty is labelled <span class="pill">base</span> (board / JEE-main level), <span class="pill">JEE-adv</span>,
+<span class="pill">Olympiad</span>. Do not skip the <em>base</em> ones — those are the marks that quietly disappear.</li>
+<li>Every solution names the <b>wrong route</b> students take. Read that line even when you got the right answer;
+that is where the next question's marks are.</li>
+</ul></div>
+
+<h2>Prerequisite self-check (before chapter 1)</h2>
+<p>Patch any gap now — thirty minutes of algebra here saves a chapter of confusion later. All six should be doable
+without notes.</p>
+<ol>
+<li>Write the field of a point charge as a vector and superpose two charges on a line.</li>
+<li>State Gauss's law and use it for an infinite sheet and for a spherical shell, inside and outside.</li>
+<li>Get <m>\vec E</m> from <m>V</m>, and explain why <m>V</m> is constant over a conductor's surface.</li>
+<li>Differentiate and integrate <m>e^{-x}</m>, <m>\ln x</m>, <m>1/x</m>; solve <m>dy/dt = -y/\tau</m>.</li>
+<li>Use <m>(1+x)^n \approx 1+nx</m> for <m>x \ll 1</m>, and take geometric limits such as <m>d \ll R</m>.</li>
+<li>Do a one-line energy balance with gravity and a spring — that is the exact pattern of a "plate moves" problem.</li>
+</ol>
+<details class="fold"><summary>Answers to the six</summary><div class="bd">
+<ol>
+<li><m>\vec E = \dfrac{q}{4\pi\varepsilon_0 r^2}\,\hat r</m>, pointing away from a positive charge. Superposition is a
+<b>vector</b> sum; adding magnitudes is wrong unless the fields are parallel.</li>
+<li><m>\displaystyle\oint \vec E \cdot d\vec A = q_{\text{enc}}/\varepsilon_0</m>. Infinite sheet:
+<m>E = \sigma/2\varepsilon_0</m> on each side. Shell: <m>E = 0</m> inside, <m>Q/4\pi\varepsilon_0 r^2</m> outside.</li>
+<li><m>E_x = -\partial V/\partial x</m>, i.e. <m>\vec E = -\vec\nabla V</m>; <m>V</m> is constant on a conductor because
+a tangential field would drive a surface current, contradicting equilibrium.</li>
+<li><m>\int e^{-x}dx = -e^{-x}</m>, <m>\int dx/x = \ln x</m>, and <m>y = y_0 e^{-t/\tau}</m> is the only solution of
+<m>dy/dt = -y/\tau</m> — you will use that exponential constantly in chapter 6.</li>
+<li><m>(1+x)^{-1} \approx 1 - x</m>, <m>\ln(1+x) \approx x</m>. Used to check that a spherical capacitor
+<m>4\pi\varepsilon_0 ab/(b-a)</m> becomes <m>\varepsilon_0 A/d</m> when <m>b - a \ll a</m>.</li>
+<li>Set loss in one form equal to gain in the other, e.g. <m>\tfrac12 kx^2 = mgx</m>. In this chapter replace
+<m>\tfrac12 kx^2</m> by the electrical energy <m>\tfrac12 Q^2/C(x)</m> and nothing else changes.</li>
+</ol>
+<p class="note">Extra on (2): just outside a conductor the field is <m>\sigma/\varepsilon_0</m>, <b>not</b>
+<m>\sigma/2\varepsilon_0</m>. §1.4 shows exactly where that factor of 2 comes from — the conductor's own other charges
+contribute the other half.</p>
+</div></details>
+
+<h2>Equipment for this chapter</h2>
+<div class="grid2">
+<div class="box def"><p class="bt">Two mental levers</p>
+<p><b>Lever 1 — geometry only.</b> Never believe a capacitance formula until you have checked it against
+(i) dimensions, (ii) the limit in which the conductors touch or one size grows without bound,
+(iii) the parallel-plate limit for any curved geometry. A formula failing (ii) is wrong even if the algebra looked clean.</p>
+<p><b>Lever 2 — energy with the right constraint.</b> Use <m>U = \tfrac12 Q^2/C</m> when <i>Q</i> is fixed; use
+<m>U = \tfrac12 CV^2</m> when <i>V</i> is fixed <em>and then add the battery's work</em>. Nine of ten "hard" problems
+collapse to one line once the constraint is chosen honestly.</p></div>
+
+<div class="box trap"><p class="bt">Three habits to break today</p>
+<ul style="margin:0">
+<li>Writing <m>U = QV</m>. The <m>\tfrac12</m> is not decoration.</li>
+<li>Using "capacitors in series carry equal charge" on a node that already had charge before the switch was closed.
+The correct rule is conservation of charge <em>on that isolated node</em>.</li>
+<li>Treating a partly filled capacitor as "just <m>K\varepsilon_0</m> everywhere". In series layers the
+<em>displacement field</em> <m>D</m> is continuous, not <m>E</m> — so the field in the air gap differs from the field
+in the slab.</li>
+</ul></div>
+</div>
+
+<div class="box insight"><p class="bt">Numbers worth memorising (they turn three minutes of algebra into a three-second estimate)</p>
+<ul style="margin:0">
+<li><m>4\pi\varepsilon_0 \approx 1.11\times10^{-10}</m> F m<sup>−1</sup>, so a <b>1 cm isolated sphere</b> has
+<m>C \approx 1.1</m> pF. Rule of thumb: <b>1 m of wire has about 10 pF</b> to its surroundings.</li>
+<li>Air breaks down near <m>E_{\max} \approx 3\times10^{6}</m> V m<sup>−1</sup> (≈ 30 kV cm<sup>−1</sup>): a 1 mm gap
+cannot hold more than about 3 kV, no matter what you do. A ceiling on everything you can build.</li>
+<li>Energy density at that limit: <m>u = \tfrac12\varepsilon_0E^2 \approx 40</m> J m<sup>−3</sup> — utterly tiny.
+This is the honest one-line reason a capacitor is not a battery.</li>
+<li>Water <m>K \approx 80</m> (and it is a conductor once impure!), mica <m>K \approx 6</m>, glass
+<m>4\text{–}10</m>, paper <m>2.2</m>, polythene <m>2.3</m>, BaTiO<sub>3</sub> ceramic <m>10^3\text{–}10^4</m>.</li>
+<li>Human body to ground: <m>\sim</m>100–200 pF. That number is why you can light a neon bulb by touching it, and it
+is a favourite Olympiad estimate.</li>
+</ul></div>
+
+<div class="box histo"><p class="bt">Five lines of history, because it makes the ideas stick</p>
+<p>In 1745 Ewald Georg von Kleist and, independently, Pieter van Musschenbroek found that a hand on a water-filled
+bottle could hold a shock strong enough to stun a man — the <em>Leyden jar</em>. For sixty years people argued about
+<em>where</em> the electricity was stored; most thought it was the water. Benjamin Franklin, after shipping jars to
+colleagues across Europe, replied that the metal coatings on <b>both</b> sides must carry equal and opposite charge and
+that the glass only keeps them apart: the first correct statement of "two conductors, one capacitor". Volta then
+inverted the question in 1800 — what matters is not the quantity of charge but the electromotive force able to
+<em>maintain</em> the separation — and built the pile that kept jars charged indefinitely. Faraday, in the 1830s, did
+the experiment this whole chapter really describes: he showed the substance <b>between</b> the coatings is what
+matters, introducing lines of force. Maxwell's field energy, <m>u = \tfrac12\varepsilon_0 E^2</m>, finally said the
+energy was in the empty space all along. When you charge a capacitor you are, quite literally, charging the vacuum —
+and paying for it.</p></div>
+
+<h2>Start here</h2>
+<p><a href="01-foundations.html"><b>Chapter 1 · Charge, conductors &amp; Gauss →</b></a>. It is deliberately the
+shortest chapter, and the only one whose statements are about <em>matter</em> rather than about formulas. Olympiad
+markers can tell within two lines whether a candidate understands it.</p>
+
+</main>
+</div>
+</body>
+</html>

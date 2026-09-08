@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 · Capacitance &amp; every geometry — Capacitors</title>
+<meta name="description" content="Capacitance derived from linearity, then built for every geometry in JEE Advanced and Physics Olympiad work: parallel plate, slab in the gap, layered gaps, isolated and coated spheres, spherical and coaxial capacitors, two wires, two spheres, fringing and limits.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 2</p></nav>
+<main>
+
+<p class="meta" id="top"><span class="badge">Chapter 2 of 11</span><span class="badge jee">JEE Advanced core</span><span class="badge oly">+ Olympiad geometries</span><span>≈ 75 min · 10 questions</span></p>
+<h1>Capacitance, and how to get it for any geometry</h1>
+<p class="lead">This chapter has one job: turn "two conductors and a field" into a single number <m>C</m>. We do that
+by <b>construction</b> for six geometries, and after each one we run the limits that prove the answer could not be
+anything else.</p>
+
+<h2>2.1 What <m>C</m> is, and the one reason it exists at all</h2>
+
+<div class="box def"><p class="bt">Definition</p>
+<p>Take two conductors (the <b>armatures</b>). Give them <m>+Q</m> and <m>-Q</m>, with nothing else charged in the
+universe. Compute the potential difference <m>V=V_+-V_-</m>. Then</p>
+<div class="eqd key" data-tag="definition">C\equiv\frac{Q}{V}\qquad[\,1\ \text{F}=1\ \text{C V}^{-1}=1\ \text{C}^2\text{J}^{-1}=1\ \text{A}^2\text{s}^4\text{kg}^{-1}\text{m}^{-2}\,]</div>
+</div>
+
+<div class="box why"><p class="bt">Why is <m>Q/V</m> a constant? (the linearity argument)</p>
+<p>Scale every charge by <m>\lambda</m>: <m>q_i\to\lambda q_i</m>. Since every potential is a sum
+<m>V_P=\sum_i kq_i/r_i</m>, every potential scales identically, so
+<m>Q/V\to\lambda Q/\lambda V=Q/V</m>. The ratio is <b>independent of how much charge you put on</b>. The concept of
+"capacitance" is nothing but the linearity of Coulomb's law. The moment a material's response stops being linear —
+ferroelectrics, air close to breakdown, a semiconductor depletion layer — <m>C</m> ceases to be a constant and the
+honest language becomes <m>Q(V)</m>, with <m>C=dQ/dV</m>.</p>
+<p>And why does <m>C</m> depend only on geometry? Because there is no other quantity in the problem for it to depend
+on: <m>[C]=[\varepsilon_0]\times</m>length, and geometry supplies the only length. That is a dimensional argument, and
+it is why <b>every formula in this chapter is <m>\varepsilon_0</m> times one length</b>.</p></div>
+
+<h3>An isolated conductor: "second plate at infinity"</h3>
+<p>For a single conductor we write <m>C=Q/V</m> with <m>V</m> measured against infinity. This is not a new definition:
+"a conductor and infinity" <em>is</em> a two-conductor capacitor — the far wall of the room, the ground, the sky.
+Two consequences people get wrong:</p>
+<div class="grid2">
+<div class="box insight"><p class="bt">Bringing any conductor closer raises <m>C</m></p>
+<p>Hold <m>Q</m> fixed on a sphere and bring an uncharged (or grounded) conductor near. Its induced <em>opposite</em>
+charge sits on the near side, so it subtracts from the sphere's potential. <m>V</m> falls while <m>Q</m> is unchanged
+⇒ <m>C=Q/V</m> rises. Never the other way: <b>a nearby conductor can only increase capacitance</b>. This single idea
+explains multi-plate capacitors, PCB trace capacitance, and why a touch sensor works.</p></div>
+<div class="box trap"><p class="bt">"1 farad is enormous"</p>
+<p>1 F at 1 V is 1 C = <m>6\times10^{18}</m> electrons. To make 1 F from an air-gap parallel-plate capacitor with
+<m>d=1</m> mm you need <m>A=\varepsilon_0^{-1}\!\times10^{-3}\approx1.1\times10^{8}</m> m² — a square 10 km on a side.
+Supercapacitors escape only with nanometre-scale double-layer gaps <em>and</em> enormous effective area
+(1000–3000 m² per gram of activated carbon). Keep this scale sense: it turns estimation questions into one line.</p></div>
+</div>
+
+<h2>2.2 The parallel-plate capacitor, derived in four lines</h2>
+<p>Two identical conducting plates of area <m>A</m>, separated by <m>d</m>, with <m>d\ll\sqrt A</m>.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 230" role="img" aria-label="Parallel plate capacitor: charge on inner faces, Gaussian box, and the field profile">
+  <g><rect x="60" y="40" width="250" height="16" class="fp"/><rect x="60" y="150" width="250" height="16" class="fn"/>
+    <g fill="var(--pos)" font-size="13"><text x="80" y="53">+</text><text x="115" y="53">+</text><text x="150" y="53">+</text><text x="185" y="53">+</text><text x="220" y="53">+</text><text x="255" y="53">+</text><text x="290" y="53">+</text></g>
+    <g fill="var(--neg)" font-size="13"><text x="80" y="163">−</text><text x="115" y="163">−</text><text x="150" y="163">−</text><text x="185" y="163">−</text><text x="220" y="163">−</text><text x="255" y="163">−</text><text x="290" y="163">−</text></g>
+    <text x="185" y="32" class="lbl sm" text-anchor="middle">all of +Q on the inner face; the outer face carries nothing</text>
+    <g stroke="var(--accent)" stroke-width="1.6" fill="none"><line x1="90" y1="62" x2="90" y2="144" marker-end="url(#ahb)"/><line x1="140" y1="62" x2="140" y2="144" marker-end="url(#ahb)"/><line x1="190" y1="62" x2="190" y2="144" marker-end="url(#ahb)"/><line x1="240" y1="62" x2="240" y2="144" marker-end="url(#ahb)"/><line x1="290" y1="62" x2="290" y2="144" marker-end="url(#ahb)"/></g>
+    <rect x="150" y="70" width="80" height="96" fill="none" stroke="var(--fg)" stroke-width="1.5" stroke-dasharray="6 3"/>
+    <text x="190" y="122" class="lbl sm" text-anchor="middle">Gaussian box:</text>
+    <text x="190" y="136" class="lbl sm" text-anchor="middle">one face in each metal</text>
+  </g>
+  <g transform="translate(380,20)">
+    <line x1="30" y1="150" x2="292" y2="150" class="ln"/><line x1="30" y1="150" x2="30" y2="16" class="ln"/>
+    <text x="296" y="164" class="lbl sm">x</text><text x="12" y="24" class="lbl sm">E</text>
+    <path d="M30,150 H92 M92,150 V50 H208 V150 M208,150 H288" class="ln2" fill="none" stroke="var(--accent)" marker-end="url(#ahb)"/>
+    <line x1="92" y1="150" x2="92" y2="46" class="thinl"/><line x1="208" y1="150" x2="208" y2="46" class="thinl"/>
+    <text x="150" y="40" class="mi sm" text-anchor="middle">σ/ε₀ = V/d</text>
+    <text x="60" y="166" class="lbl sm" text-anchor="middle">metal</text><text x="150" y="166" class="lbl sm" text-anchor="middle">gap</text><text x="248" y="166" class="lbl sm" text-anchor="middle">metal</text>
+    <line x1="92" y1="126" x2="208" y2="126" class="ln" marker-start="url(#dim)" marker-end="url(#dim)"/><text x="150" y="122" class="mi sm" text-anchor="middle">d</text>
+    <text x="150" y="198" class="lbl sm" text-anchor="middle">V = area under this step = E·d</text>
+  </g>
+</svg></div>
+<figcaption><b>Left:</b> the Gaussian box has <m>E=0</m> on both its faces (they sit in metal) and encloses no charge —
+that is the proof that the facing surfaces carry <m>\pm\sigma</m> and nothing else is needed. <b>Right:</b> the field
+profile. Only here — a truly uniform field — may you write <m>V=Ed</m>; it is the area under the graph.</figcaption></figure>
+
+<div class="eqd">
+\begin{aligned}
+\text{facing surfaces:}&quad\sigma=\frac{Q}{A}\\
+\text{superpose two sheets:}&quad E=\frac{\sigma}{2\varepsilon_0}+\frac{\sigma}{2\varepsilon_0}=\frac{\sigma}{\varepsilon_0}\\
+\text{uniform field:}&quad V=Ed=\frac{Qd}{\varepsilon_0A}\\
+\text{hence:}&quad C=\boxed{\;\dfrac{\varepsilon_0A}{d}\;}
+\end{aligned}
+</div>
+
+<div class="box why"><p class="bt">Three points of reasoning hidden inside those four lines</p>
+<ol>
+<li><b>Why is all the charge on the facing surfaces?</b> Put a Gaussian box with one face in each plate: zero flux
+in, zero flux out ⇒ net enclosed charge zero ⇒ the facing surfaces carry <m>+\sigma,-\sigma</m> and the outer face of
+each plate carries nothing (fringing aside). Physically: opposite charges move together because that is what minimises
+the field energy of the system.</li>
+<li><b>Why is the field exactly uniform?</b> Only because the field of a plane sheet is independent of distance. This
+is the one geometry in electrostatics where a sum of <m>1/r^2</m> laws produces a constant, and it is why the whole
+chapter starts with plates.</li>
+<li><b>Does the ½ from ch. 1 disappear?</b> No. Outside the pair the two sheets' fields cancel; between them they add.
+At the surface of plate 1 the total field is <m>\sigma/\varepsilon_0</m>, exactly the conductor-surface result of §1.3 —
+its own half plus plate 2's half.</li>
+</ol></div>
+
+<h3>Reading the formula three ways</h3>
+<table class="tb c">
+<thead><tr><th>Change</th><th><m>C</m></th><th><m>E</m> at fixed <m>Q</m></th><th><m>E</m> at fixed <m>V</m></th><th><m>U</m> at fixed <m>Q</m></th></tr></thead>
+<tbody>
+<tr><td><m>A\to2A</m></td><td>×2</td><td>÷2</td><td>unchanged</td><td>÷2</td></tr>
+<tr><td><m>d\to2d</m></td><td>÷2</td><td>unchanged</td><td>÷2</td><td>×2 <span class="note">(work you did pulling apart)</span></td></tr>
+<tr><td>both doubled</td><td>×2</td><td>÷2</td><td>unchanged</td><td>unchanged</td></tr>
+<tr><td>metal slab of thickness <m>t</m> inserted</td><td colspan="4">gap shrinks effectively — see §2.6</td></tr>
+</tbody>
+</table>
+
+<p><b>The physical reading:</b> a capacitor is a machine for confining electric field in a small volume. More area =
+more room for flux; smaller gap = less distance to pay in volts. Every commercial capacitor is an engineering trick to
+get huge <m>A</m>, tiny <m>d</m> and large <m>K</m> into a small box: foil rolled into a cylinder (film capacitors),
+sintered pellets with metallised layers (ceramic), an oxide film grown chemically (electrolytic, where
+<m>d\sim10</m> nm gives farads from cm²).</p>
+
+<h2>2.3 Spherical capacitor — the case with no approximation at all</h2>
+<p>Inner sphere radius <m>a</m> with <m>+Q</m>, concentric shell inner radius <m>b</m> with <m>-Q</m>. Here <m>b-a</m>
+need not be small: the geometry closes on itself, so there are no edges to fringe.</p>
+<div class="eqd">
+\begin{aligned}
+E(r)&=\frac{Q}{4\pi\varepsilon_0r^{2}} && (a&lt;r&lt;b)\\
+V&=\int_a^bE\,dr=\frac{Q}{4\pi\varepsilon_0}\left(\frac1a-\frac1b\right)\\
+C&=\frac{Q}{V}=\boxed{\;4\pi\varepsilon_0\,\frac{ab}{b-a}\;}
+\end{aligned}
+</div>
+<div class="box thm"><p class="bt">Run the three limits — for every formula you ever derive</p>
+<ul style="margin:0">
+<li><m>b\to\infty</m>: <m>C\to4\pi\varepsilon_0a</m>, the <b>isolated sphere</b>. "Capacitance of a sphere" is not a
+separate fact; it is this formula with the second electrode at infinity. A 1 cm sphere: 1.1 pF.</li>
+<li><m>b=a+d</m> with <m>d\ll a</m>: <m>ab/(b-a)=(a^2+ad)/d\approx a^2/d</m> ⇒ <m>C\to\varepsilon_0A/d</m> with
+<m>A=4\pi a^2</m> ✓. The first curvature correction is <m>(1+d/a)</m>: a spherical capacitor is slightly <em>better</em>
+than the flat estimate at the same gap, because the outer electrode has more area to spread the same flux.</li>
+<li><m>a\to0</m>: <m>C\to4\pi\varepsilon_0a\to0</m>. A point electrode stores nothing — sharp tips are for making
+<m>E</m> large (emitters, spark gaps), never for making <m>C</m> large.</li>
+</ul></div>
+
+<p>Combine <m>Q=CV</m> with the surface field <m>E_a=Q/4\pi\varepsilon_0a^2=(a/b\,)\cdot V/a\approx V/a</m> (for
+<m>b\gg a</m>): for a fixed <m>V</m>, <m>Q\propto a</m> but <m>E\propto V/a</m>. A bigger electrode stores more charge
+<em>and</em> has a lower peak field — both good. That single line is why HV terminals are spheres and tori, and why
+corona appears on wires.</p>
+
+<h2>2.4 Coaxial (cylindrical) capacitor</h2>
+<p>Inner wire radius <m>a</m>, outer cylindrical shell radius <m>b</m>, length <m>L</m> with <m>L\gg b</m> so the ends can
+be ignored. The cylindrical Gaussian surface is forced on you by symmetry:</p>
+<div class="eqd">
+\begin{aligned}
+E_r\,(2\pi rL)&=\frac{\lambda L}{\varepsilon_0}\ \Rightarrow\ E_r=\frac{\lambda}{2\pi\varepsilon_0r}\\
+V&=\int_a^bE_r\,dr=\frac{\lambda}{2\pi\varepsilon_0}\ln\frac ba\\
+C&=\frac{Q}{V}\ \Rightarrow\ \boxed{\;\frac{C}{L}=\frac{2\pi\varepsilon_0}{\ln(b/a)}\;}
+\end{aligned}
+</div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 205" role="img" aria-label="Coaxial cable cross-section with Gaussian circle and the 1/r field">
+  <g><circle cx="150" cy="98" r="88" class="fp" fill-opacity=".5"/><circle cx="150" cy="98" r="26" fill="var(--panel)" stroke="var(--accent)" stroke-width="2.6"/>
+    <circle cx="150" cy="98" r="55" fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="5 4"/>
+    <g stroke="var(--accent)" stroke-width="1.4" fill="none"><line x1="180" y1="98" x2="236" y2="98" marker-end="url(#ahb)"/><line x1="120" y1="98" x2="64" y2="98" marker-end="url(#ahb)"/><line x1="150" y1="68" x2="150" y2="14" marker-end="url(#ahb)"/><line x1="150" y1="128" x2="150" y2="182" marker-end="url(#ahb)"/></g>
+    <text x="210" y="92" class="mi sm">E_r</text>
+    <line x1="150" y1="150" x2="238" y2="150" class="ln" marker-start="url(#dim)" marker-end="url(#dim)"/>
+    <text x="205" y="144" class="mi sm">b</text><text x="166" y="144" class="mi sm">a</text>
+    <text x="150" y="198" class="lbl sm" text-anchor="middle">Gaussian "can": area ∝ r</text></g>
+  <g transform="translate(330,12)">
+    <line x1="40" y1="150" x2="322" y2="150" class="ln"/><line x1="40" y1="150" x2="40" y2="14" class="ln"/>
+    <text x="326" y="164" class="lbl sm">r</text><text x="24" y="22" class="lbl sm">E</text>
+    <path d="M56,150 C56,38 92,30 132,58 C192,98 252,118 314,130" fill="none" stroke="var(--accent)" stroke-width="2.2" marker-end="url(#ahb)"/>
+    <line x1="56" y1="150" x2="56" y2="32" class="thinl"/><line x1="200" y1="150" x2="200" y2="106" class="thinl"/>
+    <text x="56" y="164" class="mi sm" text-anchor="middle">a</text><text x="200" y="164" class="mi sm" text-anchor="middle">b</text>
+    <text x="112" y="44" class="mi sm">∝ 1/r  (not 1/r²)</text>
+    <text x="176" y="98" class="lbl sm">area grows as r,</text><text x="176" y="112" class="lbl sm">so E falls as 1/r</text>
+    <text x="180" y="188" class="lbl sm" text-anchor="middle">∫E dr over a log ⇒ ln(b/a) in every cylinder</text>
+  </g>
+</svg></div>
+<figcaption><b>Cylinder ⇒ <m>1/r</m> ⇒ logarithm; sphere ⇒ <m>1/r^2</m> ⇒ reciprocal.</b> That single correspondence
+generates the structure of every curved-geometry capacitance. Learn the pattern, not the formulas.</figcaption></figure>
+
+<div class="box insight"><p class="bt">Four things to notice</p>
+<ol style="margin:0">
+<li><m>C/L</m> depends on <m>\ln(b/a)</m>, i.e. only on the <b>ratio</b> of radii. A coaxial line has the same
+capacitance per metre at millimetre or metre scale provided <m>b/a</m> is unchanged — the scale invariance of the 2-D
+Laplace equation, and a very common "trick question" input.</li>
+<li>Small gap: <m>b=a+d</m>, <m>\ln(1+d/a)\approx d/a</m> ⇒ <m>C\to2\pi\varepsilon_0La/d=\varepsilon_0A/d</m> with
+<m>A=2\pi aL</m> ✓.</li>
+<li><m>b/a\to1</m> drives <m>C/L\to\infty</m> — because the conductors are touching, i.e. a short. Always ask "what
+physically stops the divergence?" Answer: breakdown and finite insulation resistance.</li>
+<li>With a dielectric filling the annulus, <m>C/L=2\pi\varepsilon_0K/\ln(b/a)</m>. With a dielectric <em>layer</em> from
+<m>a</m> to <m>c</m> and vacuum from <m>c</m> to <m>b</m>, the two regions are in <b>series</b>:
+<m>C/L=2\pi\varepsilon_0\left[\ln(c/a)/K+\ln(b/c)\right]^{-1}</m> (Q9 of this chapter).</li>
+</ol></div>
+
+<h2>2.5 Two long parallel wires (the transmission-line result)</h2>
+<p>Wires of radius <m>a</m>, centre separation <m>d</m>, carrying <m>\pm\lambda</m>. Superpose two line charges:
+<m>\phi(P)=(\lambda/2\pi\varepsilon_0)\ln(r_-/r_+)</m>, where <m>r_\pm</m> are the distances to the two lines. On the
+surface of wire 1, <m>r_+=a</m> and <m>r_-\approx d</m>; on wire 2 the roles swap. Hence</p>
+<div class="eqd">
+V=\frac{\lambda}{2\pi\varepsilon_0}\Big[\ln\frac da+\ln\frac da\Big]=\frac{\lambda}{\pi\varepsilon_0}\ln\frac da
+\qquad\Rightarrow\qquad \frac CL=\frac{\pi\varepsilon_0}{\ln(d/a)}
+</div>
+<p>The <b>exact</b> result (the same calculation done in bipolar coordinates, where the equipotentials of
+<m>\pm\lambda</m> are exactly circular cylinders) is</p>
+<div class="eqd key" data-tag="exact">\frac{C}{L}=\frac{\pi\varepsilon_0}{\operatorname{arcosh}(d/2a)}
+\;\xrightarrow{\ d\gg a\ }\;\frac{\pi\varepsilon_0}{\ln(d/a)},\qquad
+\operatorname{arcosh}x=\ln\!\left(x+\sqrt{x^2-1}\right)</div>
+<p>Check both limits: <m>d\to2a</m> gives <m>\operatorname{arcosh}1=0</m> ⇒ <m>C\to\infty</m> (wires touching ⇒ short);
+<m>d\gg a</m> recovers the approximate form since <m>\operatorname{arcosh}x\approx\ln2x</m>. With the separation <m>d</m>
+at 10 cm and <m>a=0.5</m> mm this is <m>\approx6</m> pF m<sup>−1</sup> per metre — the origin of the "≈ 10 pF per metre of
+wire" rule of thumb.</p>
+
+<h3>Two spheres far apart — why the series rule feels inevitable</h3>
+<p>Put <m>+Q</m> and <m>-Q</m> on spheres of radii <m>a,b</m> at centre separation <m>d\gg a,b</m>. Write each potential as
+its own term plus the neighbour's (charge treated at the centre, a good approximation when <m>d</m> is large):</p>
+<div class="eqd">
+V_1=k\!\left(\frac Qa-\frac Qd\right),\quad V_2=k\!\left(-\frac Qb+\frac Qd\right)
+\;\Rightarrow\; V_1-V_2=kQ\left(\frac1a+\frac1b-\frac 2d\right),\quad C=\frac{4\pi\varepsilon_0}{\frac1a+\frac1b-\frac 2d}
+</div>
+<p>As <m>d\to\infty</m> this is exactly <m>\left(4\pi\varepsilon_0a\right)^{-1}+\left(4\pi\varepsilon_0b\right)^{-1}</m>
+inverted: <b>two isolated-sphere capacitances in series</b>. The series rule is not a mnemonic — the flux has to cross
+one self-capacitance and then the other, so the "gaps" add. As the spheres approach, the <m>-2/d</m> term makes
+<m>C</m> grow: opposite charges attract their own flux closer.</p>
+
+<h2>2.6 A slab in the gap — the most imitated problem in the chapter</h2>
+<p>Parallel plates, gap <m>d</m>. Insert an <b>uncharged conducting slab</b> of thickness <m>t&lt;d</m>, parallel to and
+not touching the plates. In the metal <m>E=0</m>, so the <m>E</m>–<m>x</m> graph simply loses a strip of width <m>t</m>:</p>
+<div class="eqd" data-tag="metal slab">V=\frac{\sigma}{\varepsilon_0}(d-t)\qquad\Longrightarrow\qquad C=\frac{\varepsilon_0A}{d-t}</div>
+<p>Note what does <em>not</em> matter: where the slab sits, and its shape — only the total vacuum distance over which the
+field is non-zero. Replace the metal by a <b>dielectric</b> of constant <m>K</m> and the same thickness:</p>
+<div class="eqd" data-tag="dielectric slab">C=\frac{\varepsilon_0A}{\,d-t+t/K\,}\qquad\big(K\to\infty\ \text{returns the metal}\ \checkmark\big)</div>
+
+<div class="box why"><p class="bt">Similar formulas, different physics</p>
+<p>Metal: free charge floods the slab's surfaces until <m>E=0</m> <em>exactly</em>, deleting the thickness <m>t</m> from the
+problem. Dielectric: bound charge shifts by a fraction of an atomic radius and reduces the field to
+<m>1/K</m> of its value, never to zero — so the slab counts as only <m>t/K</m> of vacuum. The quantity
+<m>d_{\text{eff}}=d-t+t/K</m> is the whole story, and if you can explain it to someone else you already understand
+chapter 5. Two consequences worth stating: (i) the field in the dielectric is <m>E=V/d_{\text{eff}}K</m>, smaller than
+in the gap; (ii) as <m>K\to1</m> you must recover the empty capacitor — check it, that is the limit that catches sign
+errors.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Two identical large conducting plates, area <m>A</m> each, gap <m>d</m>, carry charges <m>Q_1=+2Q</m> and <m>Q_2=+Q</m>. Find the charge on each of the four surfaces and the potential difference.</b><span class="diff">base → JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Label the faces 1,2 (plate 1, outer then inner) and 3,4 (plate 2, inner then outer). Each face is a sheet of density
+<m>\sigma_i</m>, and inside <em>each</em> conductor the total field must vanish. Solving the two resulting equations with
+<m>\sigma_1+\sigma_2=Q_1/A</m>, <m>\sigma_3+\sigma_4=Q_2/A</m> gives the general pair of rules:</p>
+<div class="eqd key">\sigma_2=-\sigma_3=\frac{Q_1-Q_2}{2A},\qquad \sigma_1=\sigma_4=\frac{Q_1+Q_2}{2A}</div>
+<p><b>The two facing surfaces always carry equal and opposite charge</b>, whatever <m>Q_1,Q_2</m> are; the surplus goes
+to the outer faces, where it charges the pair against infinity. Here <m>\sigma_2=+Q/2A</m>,
+<m>\sigma_3=-Q/2A</m>, <m>\sigma_1=\sigma_4=3Q/2A</m>.</p>
+<p>Field in the gap: <m>E=(Q_1-Q_2)/2\varepsilon_0A=Q/2\varepsilon_0A</m>, so
+<m>V=Qd/2\varepsilon_0A</m>. If you define "the charge of the capacitor" as the facing charge
+<m>Q_{\text{cap}}=(Q_1-Q_2)/2=Q/2</m>, then <m>V=Q_{\text{cap}}d/\varepsilon_0A</m> and <m>C=\varepsilon_0A/d</m> as
+usual — the <m>\tfrac12</m>s cancel, which is why the shortcut "capacitor charge = (difference)/2" is safe.</p>
+<p class="note"><b>Wrong routes:</b> "each plate's charge spreads evenly over its two faces" (true only when
+<m>Q_1=-Q_2</m> — the symmetric special case!); or "the field in the gap is due to the nearer plate only". Note too
+that with <m>Q_1=Q_2=+Q</m> the rule gives <m>\sigma_2=\sigma_3=0</m>: <b>no field in the gap at all</b>, and the pair is
+just a charged conductor of capacitance <m>2\varepsilon_0A/D</m> to its surroundings.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>Plates of unequal area <m>A_1&lt;A_2</m>, facing and parallel, gap <m>d\ll\sqrt{A_1}</m>. Which area appears in <m>C=\varepsilon_0A/d</m>?</b><span class="diff">base · trap</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>A_1</m> — the overlapping (smaller) area.</p>
+<p>Every field line leaving plate 2 must end on plate 1: in the ideal geometry there is nowhere else for the flux to
+go. So the facing surfaces of the overlap carry <m>\pm\sigma</m> with <m>\sigma=Q/A_1</m>, the surplus area of the larger
+plate carries essentially nothing between the plates (it moves to its outer face, producing only external fringing),
+and <m>V=\sigma d/\varepsilon_0\Rightarrow C=\varepsilon_0A_1/d</m>.</p>
+<p class="note"><b>Wrong route:</b> averaging areas, or "using <m>A_2</m> because both plates matter". The governing
+principle is that <b>capacitance is set by the narrowest choke the flux must pass through</b>. Same principle behind the
+multi-plate question (Q6) and behind why a small misalignment on a variable capacitor is linear in angle until the
+overlap vanishes.</p>
+</div></details>
+</div></div>
+
+<h2>2.7 Layers in the gap: series and parallel from one rule</h2>
+<p><b>Layers stacked across the field</b> (interfaces perpendicular to <m>\vec E</m>) are in <b>series</b>. No free
+charge sits at an interface, so the normal component of <m>\vec D</m> is continuous: all layers see the same
+<m>D=\sigma</m> but different fields <m>E_i=\sigma/\varepsilon_0K_i</m>, and the voltages add:</p>
+<div class="eqd key" data-tag="series layers">\frac1C=\sum_i\frac{d_i}{\varepsilon_0K_iA}\qquad\Longleftrightarrow\qquad V=\frac{\sigma}{\varepsilon_0}\sum_i\frac{d_i}{K_i}</div>
+<p><b>Layers side by side</b> (interfaces parallel to <m>\vec E</m>) are in <b>parallel</b>: the same <m>V</m> appears
+across each, <m>E</m> is common, and the areas add: <m>C=\varepsilon_0E^{-1}\!\sum\sigma_iA_i</m>, i.e.
+<m>C=\sum_iK_i\varepsilon_0A_i/d</m>.</p>
+<div class="eqd">
+\text{two layers } (K_1,t_1),(K_2,t_2):\quad
+C=\frac{\varepsilon_0A}{\dfrac{t_1}{K_1}+\dfrac{t_2}{K_2}},\qquad
+E_1=\frac{VK_2}{t_1K_2+t_2K_1},\quad E_2=\frac{VK_1}{t_1K_2+t_2K_1}
+</div>
+<div class="box trap"><p class="bt">"Same <m>E</m>" or "same <m>D</m>" — decide, do not guess</p>
+<p>The rule to memorise is not "slabs are in series" but <b>which component is continuous</b>:
+<m>E_\parallel</m> continuous across an interface ⇒ regions at equal <m>V</m> ⇒ parallel;
+<m>D_\perp</m> continuous ⇒ regions carrying equal <m>Q</m> ⇒ series. Note the fields above: the <em>lower</em>-<m>K</m>
+layer gets the <em>larger</em> field, so a void or air bubble inside a solid insulator takes a disproportionate share
+of the voltage — that is exactly how partial-discharge ageing kills real capacitors, and a favourite
+"applied-physics" line in an INPhO answer.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Plates carry free charge densities <m>\pm\sigma</m>. The gap is half-filled (by thickness) with a dielectric <m>K</m>, the other half is vacuum, the interface being <em>parallel</em> to the plates (side-by-side regions of area <m>A/2</m> each). Find <m>C</m>, <m>E</m> in each part, and the bound charge on the vertical interface.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Areas side-by-side ⇒ same <m>V</m>, same <m>E</m> (the plates are still equipotentials and the gap is the same):</p>
+<div class="eqd">E=\frac{V}{d},\qquad C=\frac{\varepsilon_0(A/2)}{d}\,(1+K)=\frac{\varepsilon_0A}{2d}(1+K)</div>
+<p>Arithmetic mean of the two <m>K</m>'s, as §2.7 predicts. But the free charge is <em>not</em> uniform:
+<m>\sigma_{\text{left}}=\varepsilon_0E</m>, <m>\sigma_{\text{right}}=K\varepsilon_0E</m> — the dielectric side draws
+<m>K</m> times more free charge (why: for the same <m>V</m>, more flux is welcome there).</p>
+<p>On the vertical interface between the two materials, <m>\vec P</m> differs: <m>P=\varepsilon_0(K-1)E</m> on one side,
+<m>0</m> on the other, so a bound surface charge <m>\sigma_b=\vec P\cdot\hat n=\pm\varepsilon_0(K-1)V/d</m> appears on
+that interface. It is <em>not</em> neutral: a dielectric inhomogeneity is a real charge distribution, which is why
+"incomplete impregnation" of a paper capacitor produces internal fields that no simple <m>K</m>-averaging predicts.</p>
+<p class="note"><b>Wrong route:</b> writing <m>C=\varepsilon_0A(1+K)/2d</m> but then "the field is
+<m>\sigma/\varepsilon_0K</m>" using the <em>average</em> <m>\sigma</m>. In a parallel split you must use each region's own
+<m>\sigma_i</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>A metal sphere of radius <m>a</m> is coated with a concentric dielectric shell of constant <m>K</m> out to radius <m>b</m>, and is otherwise alone in vacuum. Find its capacitance. Then state what happens as <m>K\to\infty</m> and as <m>b\to\infty</m>.</b><span class="diff">JEE-adv → Olympiad</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<ol class="steps">
+<li><m>D_r=Q/4\pi r^2</m> everywhere outside the sphere (Gauss, spherical symmetry, free charge <m>Q</m>), so
+<m>E_r=Q/4\pi\varepsilon_0r^2</m> for <m>r&gt;b</m> and <m>E_r=Q/4\pi\varepsilon_0Kr^2</m> for <m>a&lt;r&lt;b</m>.</li>
+<li>Integrate <m>V=-\int_\infty^aE\,dr</m> in two pieces:
+<div class="eqd">V=\frac{Q}{4\pi\varepsilon_0}\left[\frac1b+\frac1K\left(\frac1a-\frac1b\right)\right]
+\quad\Rightarrow\quad C=4\pi\varepsilon_0\left[\frac1b+\frac{b-a}{Kab}\right]^{-1}=4\pi\varepsilon_0\frac{Kab}{(K-1)b+a}\;</div></li>
+<li><b>Limits.</b> <m>K=1</m>: <m>C=4\pi\varepsilon_0a</m> ✓ (bare sphere). <m>b\to\infty</m>:
+<m>C\to4\pi\varepsilon_0Ka</m> — an infinite dielectric multiplies the capacitance by <m>K</m> exactly, which is the
+cleanest possible definition of what <m>K</m> means. <m>K\to\infty</m>:
+<m>C\to4\pi\varepsilon_0b</m> — the coat behaves like metal, i.e. like a bigger electrode. <m>b\to a</m>: both limits
+return to the bare sphere ✓, and the fact that all four checks pass is what makes the single bracket worth trusting.</li>
+</ol>
+<p><b>Physical content:</b> a dielectric coat buys capacitance only to the extent that it occupies space where the field
+is <em>strong</em>. Since <m>E\propto1/r^2</m>, the region near <m>a</m> matters most — the <m>1/b</m> term shows that a coat
+far from the sphere does almost nothing. The same reasoning tells you why high-<m>K</m> ceramic is packed at the inner
+electrode of HV cable insulation, not the outside.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Two spheres of radii <m>a</m> and <m>b</m> are joined by a long thin wire and carry total charge <m>Q</m>. Find the charges and the ratio of surface fields. When is the answer valid?</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Connected ⇒ equal potential. Treating each as isolated (valid when separation <m>L\gg\max(a,b)</m>):
+<m>kq_a/a=kq_b/b</m> ⇒ <m>q_a/q_b=a/b</m>, so
+<m>q_a=Qa/(a+b)</m>, <m>q_b=Qb/(a+b)</m>.</p>
+<p>Surface fields <m>E=kq/a^2</m> ⇒
+<div class="eqd">\frac{E_a}{E_b}=\frac{q_a}{q_b}\cdot\frac{b^2}{a^2}=\frac{a}{b}\cdot\frac{b^2}{a^2}=\boxed{\frac ba}</div>
+<b>The smaller sphere has the larger field</b> — with the labels as given, the ratio is <m>b/a</m> and not <m>a/b</m>.
+Writing the reciprocal is a classic lost mark, so always re-derive it in one line rather than recalling it.</p>
+<p>Reformulated in the way questions prefer: <m>E\propto1/R_{\text{local}}</m> at fixed potential. On a real irregular
+conductor, curvature varies over the surface, so <m>\sigma\propto1/R_{\text{local}}</m> — charge concentrates at points.
+That is the "power of points": a sharp tip at 1 kV can exceed air's breakdown field and emit a corona, while a smooth
+sphere at the same potential does nothing.</p>
+<p><b>Where it fails:</b> if the spheres are close, they polarise each other and charge migrates to the far sides; the
+small one then takes even more than the ratio above (higher field than predicted). For spheres of equal radius
+<em>touching</em>, the exact result needs the image-charge series of §7.2:
+<m>C_{\text{pair}}=8\pi\varepsilon_0R\ln 2\approx1.386\times4\pi\varepsilon_0R</m>, versus
+<m>2\times4\pi\varepsilon_0R</m> for the two disconnected spheres in parallel — the charge is pushed outward by mutual
+repulsion, so <m>C</m> drops. Useful direction to remember: <b>like-potential neighbours lower <m>C</m>; opposite-potential
+(or earthed) neighbours raise it.</b></p>
+</div></details>
+</div></div>
+
+<h2>2.8 Finite plates and fringing — what "neglecting the edges" costs</h2>
+<p><m>C=\varepsilon_0A/d</m> is a leading-order result in <m>d/\sqrt A</m>. The corrections, in the form you can argue
+without a calculation:</p>
+<table class="tb">
+<thead><tr><th>Effect</th><th>Size</th><th>Direction and reason</th></tr></thead>
+<tbody>
+<tr><td>Fringing field outside the overlap</td><td class="e">\Delta C\sim\varepsilon_0\,p\,d\,\ln(a/d)/d\;\;=\;\varepsilon_0\,p\ln(a/d)</td><td><m>C</m> is <b>larger</b> than <m>\varepsilon_0A/d</m>. Extra field lines outside store extra energy at the same <m>V</m>, and <m>C=2U/V^2</m>. Relative error <m>\sim(d/a)\ln(a/d)</m> for square plates of side <m>a</m>.</td></tr>
+<tr><td>Tilt: gap varies from <m>d_1</m> to <m>d_2</m></td><td class="c"><m>C=\varepsilon_0A\langle1/d\rangle</m></td><td>Use the harmonic-type average <m>\frac1{d_2-d_1}\ln(d_2/d_1)</m>, <em>not</em> <m>1/\bar d</m>. Because <m>1/d</m> is convex, a tilted capacitor beats the flat-plate estimate at the same mean gap.</td></tr>
+<tr><td>Surface roughness when <m>d\sim</m> µm</td><td class="c">local <m>d\to d-\delta</m></td><td>Raises <m>C</m> slightly but raises the local field a lot ⇒ early breakdown. In MEMS this is the dominant failure mode.</td></tr>
+</tbody>
+</table>
+<p>For the tilted case, do it yourself in three lines: <m>dQ=\varepsilon_0V\,w\,dx/d(x)</m> over strips ⇒
+<m>C=\varepsilon_0w\int_0^{\ell}dx/d(x)=\varepsilon_0A\,\frac{\ln(d_2/d_1)}{d_2-d_1}</m>. It is the same integral trick that
+gives the wedge capacitor of §7.3, so bank it now.</p>
+
+<div class="box def"><p class="bt">Two engineering facts that come from this section</p>
+<ul style="margin:0">
+<li><b>A guard ring makes the flat formula exact.</b> Surround the plate with a thin co-planar ring at the same
+potential; the ring absorbs the fringe field, so the inner region is a pure 1-D problem. Precision capacitance
+standards are built exactly this way (a Thomson/Cahill "standard capacitor"), and the same idea makes an MEMS
+pressure sensor linear.</li>
+<li><b>Fringing is useful.</b> Interdigital (comb) electrodes on a chip have no overlapping plates at all —
+<m>C</m> is <em>entirely</em> fringe capacitance, and that is how gas sensors and touch screens are made. If you can
+compute <m>C</m> only for overlapping plates you have not understood the definition, only memorised a special case.</li>
+</ul></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>An interleaved capacitor has <m>n</m> identical plates of area <m>A</m>; alternate plates are tied together; consecutive plates are <m>d</m> apart. Find <m>C</m>. Why not simply use one enormous pair of plates?</b><span class="diff">JEE-adv · design</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>There are <m>n-1</m> gaps, each with the same voltage <m>V/(n-1)</m> across it and the same facing area <m>A</m>, so they
+are in <b>parallel</b>:</p>
+<div class="eqd">C=(n-1)\frac{\varepsilon_0A}{d}</div>
+<p>Check <m>n=2</m> ✓. Contrapositive worth storing: if instead you stack <em>dielectric layers inside one gap</em>, they
+are in <b>series</b> and the capacitance <em>falls</em>. "More plates" ≠ "more layers"; confusing them is the trap in
+this question.</p>
+<p><b>Why interleaving wins:</b> for a fixed volume you want many close-spaced electrodes. A single pair scaled up to
+area <m>A</m> grows in <em>two</em> directions, so the volume goes as <m>A^{3/2}/d</m>; a stack (or a rolled foil strip)
+grows the area linearly with one dimension, so for the same volume the interleaved structure buys <m>(n-1)A\propto n</m>
+of effective area. Rolling the strip turns plate rigidity into the only remaining limit — and that is what a real
+capacitor looks like inside.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>The gap of a parallel-plate capacitor is filled with a material whose permittivity varies linearly across the gap from <m>K_1</m> to <m>K_2</m>. Find <m>C</m>, and the voltage if the isolated capacitor originally had <m>V_0</m> with vacuum.</b><span class="diff">Olympiad · one integral</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Inhomogeneous layers are in series ⇒ integrate <m>1/C</m>, with <m>K(x)=K_1+(K_2-K_1)x/d</m>:</p>
+<div class="eqd">\frac1C=\frac1{\varepsilon_0A}\int_0^d\frac{dx}{K(x)}=\frac{d}{\varepsilon_0A}\cdot\frac{\ln(K_2/K_1)}{K_2-K_1}
+\quad\Rightarrow\quad C=\varepsilon_0A\,\frac{K_2-K_1}{d\,\ln(K_2/K_1)}</div>
+<p>The isolated capacitor keeps its charge, so <m>V_f=Q/C</m> with <m>Q=(\varepsilon_0A/d)V_0</m>:</p>
+<div class="eqd key">V_f=V_0\,\frac{\ln(K_2/K_1)}{K_2-K_1},\qquad K_{\text{eff}}=\frac{C}{C_{\text{vac}}}\,\cdot 1=\frac{K_2-K_1}{\ln(K_2/K_1)}</div>
+<p>The effective constant is the <b>logarithmic mean</b> <m>K_{\text{eff}}=(K_2-K_1)/\ln(K_2/K_1)</m> — the same
+averaging that produced the <m>\ln</m> in the coaxial formula, because both problems are "1-D flux through layers in
+series". Check <m>K_2\to K_1\equiv K</m>: writing <m>K_2=K(1+\eta)</m>,
+<m>\ln(1+\eta)/[K\eta]\to1/K</m> ⇒ <m>K_{\text{eff}}\to K</m> ✓ (use <m>\ln(1+\eta)\approx\eta</m>). A log-mean formula
+that failed this limit would be a sign error.</p>
+<p class="note"><b>General principle:</b> the correct average of <m>K</m> is fixed by the field geometry, not by taste —
+harmonic (or log) mean for series layers, arithmetic mean for parallel regions. "What if <m>K</m> varies" questions test
+whether you know which average, not how well you integrate.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>A coaxial cable has dielectric <m>K</m> from <m>a</m> to <m>2a</m> and vacuum from <m>2a</m> to <m>3a</m>. Find <m>C/L</m>, and the <m>K_{\text{eq}}</m> of a single homogeneous dielectric giving the same <m>C/L</m>.</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">\frac{L}{C}=\frac{\ln 2}{2\pi\varepsilon_0K}+\frac{\ln(3/2)}{2\pi\varepsilon_0}
+\quad\Rightarrow\quad \frac CL=\frac{2\pi\varepsilon_0}{\dfrac{\ln2}{K}+\ln1.5}</div>
+<p>Matching <m>C/L=2\pi\varepsilon_0K_{\text{eq}}/\ln 3</m>:</p>
+<div class="eqd">K_{\text{eq}}=\frac{\ln3}{\dfrac{\ln2}{K}+\ln1.5}</div>
+<p>Limits: <m>K=1\Rightarrow K_{\text{eq}}=1</m> ✓; <m>K\to\infty\Rightarrow K_{\text{eq}}=\ln3/\ln1.5\approx2.71</m> —
+which is just "vacuum dielectric between <m>2a</m> and <m>3a</m> with the inner region acting like metal". Both checks
+pass, so the logs are in the right places; that is the only thing that can go wrong here.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>Two large plates carry <m>+Q</m> and <m>-2Q</m>. A student computes the gap voltage as <m>V=Qd/\varepsilon_0A</m> "because the charge on the capacitor is <m>Q</m>". Find the error and the right answer. Then do it for two <em>insulating</em> sheets with densities <m>+\sigma</m>, <m>-2\sigma</m>.</b><span class="diff">base · bookkeeping</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Conducting plates.</b> From Q1's rule, the facing surfaces carry
+<m>\pm(Q_1-Q_2)/2A=\pm3Q/2A</m>, not <m>\pm Q/A</m>. Hence
+<m>E_{\text{gap}}=3Q/2\varepsilon_0A</m> and <m>V=3Qd/2\varepsilon_0A</m>. The student's error is assuming that the
+"capacitor charge" is <m>Q</m>; it is <m>(Q_1-Q_2)/2=3Q/2</m>.</p>
+<p><b>Insulating sheets.</b> The charge cannot move, so each sheet keeps its density and contributes
+<m>\sigma/2\varepsilon_0</m> on either side (rightward positive, gap between them):</p>
+<div class="eqd">E_{\text{left}}=+\frac{\sigma}{2\varepsilon_0},\qquad E_{\text{gap}}=\frac{\sigma+2\sigma}{2\varepsilon_0}=\frac{3\sigma}{2\varepsilon_0},\qquad E_{\text{right}}=-\frac{\sigma}{2\varepsilon_0}</div>
+<p>Same gap field as the conductor case! For infinite sheets the field anywhere depends only on the charge to each
+side, so redistribution is invisible outside the conductors — it changes only the <em>inner</em> structure (and the fact
+that in a conductor <m>E=0</m>, whereas an insulating sheet has no interior to protect). For <b>finite</b> plates the two
+cases do give measurably different answers, because redistribution changes the fringe field. Knowing <em>which</em> of
+these two is a good sign you understand the difference between a theorem and a coincidence.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>Estimate the capacitance of (a) 1 m of thin wire, (b) a 1 F supercapacitor's electrode, (c) the Earth, and (d) say what limits each.</b><span class="diff">Olympiad · estimation</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(a)</b> A single wire of radius <m>a=0.5</m> mm at height <m>h=1</m> m above ground:
+<m>C/L=2\pi\varepsilon_0\big/\!\ln(2h/a)</m>, and <m>\ln(2\times10^{3})\approx7.6</m> so
+<m>C\approx5.6\times10^{-11}/7.6\approx7</m> pF for the whole metre — the "≈10 pF per metre" rule. A metre-long
+object is <em>always</em> a few picofarads, whatever its thickness, because <m>\ln(2h/a)</m> only wanders between 5 and
+15 as <m>a</m> spans nine decades. That insensitivity is the real content of the estimate.</p>
+<p><b>(b)</b> Electric double layer: <m>d\approx1</m> nm, <m>K_{\text{eff}}\sim30</m> for the oriented water/ion layer, so
+<m>C/A\approx\varepsilon_0K/d\approx0.27</m> F m<sup>−2</sup>. A 1 F cell therefore needs <m>\sim4</m> m² of wetted
+surface — available from a few grams of activated carbon. Limit: the <m>\sim2.7</m> V decomposition voltage of the
+electrolyte per cell (hence 6-cell modules for 16 V), and the series resistance of the pores.</p>
+<p><b>(c)</b> Earth alone: <m>C=4\pi\varepsilon_0R_E\approx(1.11\times10^{-10})(6.4\times10^{6})\approx0.7</m> mF.
+With the ionosphere at <m>h\approx50</m> km as the second electrode, use the flat-gap form since <m>h\ll R_E</m>:
+<m>C=\varepsilon_0(4\pi R_E^2)/h\approx8.85\times10^{-12}\times5.1\times10^{14}/5\times10^{4}\approx0.09</m> F.
+The fair-weather potential of the ionosphere is <m>\sim3\times10^{5}</m> V, so the whole globe stores
+<m>U=\tfrac12CV^2\approx4\times10^{9}</m> J and carries <m>Q=CV\sim3\times10^{4}</m> C. The sustained current is
+about <m>10^{3}</m> A (from <m>\sim2</m> pA m<sup>−2</sup> over the globe), i.e. <b>every thunderstorm and shower
+thunderstorm together recharge it</b> — a single large flash moves <m>\sim20</m> C, only 0.1% of <m>Q</m>. That is the
+estimate worth being able to produce.</p>
+<p><b>(d) What limits each.</b> (a) leakage along the insulation, not geometry — which is why "capacitance of a cable"
+and "insulation resistance of a cable" are quoted together; (b) the electrochemical decomposition voltage of the
+electrolyte (≈ 2.7 V per cell) and the pore resistance, <em>not</em> the dielectric strength; (c) the conductivity of
+air, itself set by cosmic-ray ionisation — which is why the global circuit is a genuinely
+atmosphere-physics problem rather than a capacitor problem. Naming the limit is worth as many marks as the number.</p>
+</div></details>
+</div></div>
+
+<h2>2.9 The geometries on one page</h2>
+<table class="tb">
+<thead><tr><th>Geometry</th><th style="width:30%">Capacitance</th><th style="width:24%">Validity</th><th style="width:22%">Limit to check</th></tr></thead>
+<tbody>
+<tr><td>Parallel plate</td><td class="e">C=\varepsilon_0 A/d</td><td><m>d\ll\sqrt A</m>, no slab</td><td><m>d\to0</m>: <m>C\to\infty</m></td></tr>
+<tr><td>Plates + metal slab <m>t</m></td><td class="e">C=\varepsilon_0A/(d-t)</td><td>slab parallel, not touching</td><td><m>t\to d</m>: short</td></tr>
+<tr><td>Plates + dielectric slab <m>t,K</m></td><td class="e">C=\varepsilon_0A/(d-t+t/K)</td><td>linear dielectric</td><td><m>K\to\infty</m>: metal</td></tr>
+<tr><td>Series layers</td><td class="e">C=\varepsilon_0A\big/\!\sum d_i/K_i</td><td>layers normal to <m>\vec E</m></td><td>all <m>K_i=1</m>: plate</td></tr>
+<tr><td>Side-by-side regions</td><td class="e">C=\varepsilon_0\sum K_iA_i/d</td><td>interfaces parallel to <m>\vec E</m></td><td>equal <m>K</m>: plate</td></tr>
+<tr><td>Isolated sphere</td><td class="e">C=4\pi\varepsilon_0R</td><td>exact; nothing nearby</td><td>1 cm ⇒ 1.1 pF</td></tr>
+<tr><td>Sphere + coat <m>K,(a\to b)</m></td><td class="e">C=4\pi\varepsilon_0Kab\big/(a+(K-1)b)</td><td>exact</td><td><m>K\to\infty</m>: <m>4\pi\varepsilon_0b</m></td></tr>
+<tr><td>Spherical</td><td class="e">C=4\pi\varepsilon_0ab/(b-a)</td><td>exact</td><td><m>b\to\infty</m>: isolated</td></tr>
+<tr><td>Coaxial line</td><td class="e">C/L=2\pi\varepsilon_0/\ln(b/a)</td><td><m>L\gg b</m></td><td><m>b=a+d</m>: plate</td></tr>
+<tr><td>Two long wires</td><td class="e">C/L=\pi\varepsilon_0/\operatorname{arcosh}(d/2a)</td><td>exact for long wires</td><td><m>d\gg a</m>: <m>\pi\varepsilon_0/\ln(d/a)</m></td></tr>
+<tr><td>Two far spheres</td><td class="e">C=4\pi\varepsilon_0\big(1/a+1/b-2/d\big)^{-1}</td><td><m>d\gg a,b</m></td><td><m>d\to\infty</m>: series of <m>4\pi\varepsilon_0a,\,4\pi\varepsilon_0b</m></td></tr>
+<tr><td>Tilted plates</td><td class="e">C=\varepsilon_0A\ln(d_2/d_1)/(d_2-d_1)</td><td>linear wedge, small angle</td><td><m>d_2\to d_1</m>: plate</td></tr>
+</tbody>
+</table>
+
+<div class="box insight"><p class="bt">The meta-pattern</p>
+<p>Every entry above is <m>\varepsilon_0\times</m>(one length) — necessarily, since <m>[C]=[\varepsilon_0][\text{length}]</m>.
+So a capacitance can contain <b>no dimensionless surprise except a ratio</b>: <m>A/d</m>, <m>ab/(b-a)</m>,
+<m>1/\ln(b/a)</m>. When you meet an unknown geometry in an Olympiad paper you therefore know the answer's shape before
+you start: find <m>\vec E</m> by symmetry (Gauss), integrate for <m>V</m>, divide, and let the dimensionless function be
+dictated by the algebra. <b>Dimension first, symmetry second, integration last.</b></p></div>
+
+<div class="box trap"><p class="bt">One more trap I have to warn you about, because it is in some books</p>
+<p>You will find "capacitance of a hemisphere of radius <m>R</m> on a grounded plane <m>=2\pi\varepsilon_0R</m>" in
+circulation. Careful: a body in contact with an <em>infinite</em> grounded plane is not a two-conductor capacitor at
+all — the plane and the body form one conductor of infinite extent, and the capacitance per unit <m>V</m> of a body
+approaching a plane diverges logarithmically as the gap closes (for a sphere of radius <m>R</m> at surface separation
+<m>s</m>, <m>C\propto\varepsilon_0R\ln(R/s)\to\infty</m>). A finite, exact and often-quoted cousin is the
+<b>isolated thin disc</b>, <m>C=8\varepsilon_0R</m> (§7.2, by oblate-spheroid coordinates), and the isolated hemisphere
+lies between the disc's value and the sphere's — as it must, since it <em>contains</em> the disc. Use the containment
+argument whenever a "clean" number looks too small: <m>2\pi\varepsilon_0R\approx6.3\varepsilon_0R&lt;8\varepsilon_0R</m>
+is impossible for a body bigger than a disc. That twenty-second check is a genuine olympiad skill.</p></div>
+
+<h2>2.10 Checkpoint</h2>
+<ul class="chks">
+<li>Prove from linearity that <m>C</m> is independent of <m>Q</m>, and name two systems where <m>C</m> genuinely depends on <m>V</m>.</li>
+<li>Derive all the table entries above from <m>E\to V\to C</m> without looking, and check each with its named limit.</li>
+<li>State the facing-surface rule <m>\sigma_{\text{face}}=(Q_1-Q_2)/2A</m> and use it for two plates with arbitrary charges.</li>
+<li>Say, without computing, whether a given slab arrangement is series or parallel — and give the continuity argument.</li>
+<li>Explain why the <m>K</m>-weighted average is a log mean for series layers but arithmetic for side-by-side regions.</li>
+<li>Give the maximum-energy argument: why <m>U_{\max}\propto</m> volume <m>\times E_{\text{break}}^2</m> rather than <m>\propto C</m>.</li>
+</ul>
+
+<p class="skip">Next: <a href="03-energy-and-force.html"><b>Chapter 3 · Energy, force and pressure →</b></a> — where the
+<m>\tfrac12</m> comes from, why exactly half the battery's work is lost while charging, and how one derivative gives
+every force in this chapter.</p>
+
+</main>
+</div>
+</body>
+</html>
