@@ -605,20 +605,21 @@ edge reaches air's <m>3</m> kV/mm at about <m>3\times10^{3}\times10^{-3}/(\text{
 So the practical limit is set by <b>creepage along the surface</b>, typically <m>\sim3</m>–<m>10</m> kV for this
 geometry, i.e. an order of magnitude below the bulk number. Real HV bushings deal with this by grading: a
 semi-conductive glaze, a corona ring (a torus of large radius, so <m>\beta\to\pi</m> everywhere) or a stress cone.</p>
-<p><b>(iv) What geometry buys, and what it cannot.</b> Rounding the rim (a torus, a fillet, a corona ring) removes
-the <m>(r-R)^{-1/2}</m> singularity and with it the creepage limit — but it cannot beat the trade-off that a smooth
-electrode obeys: in a medium of breakdown field <m>E_b</m>, a curved terminal of radius of curvature <m>R</m> holds
-<m>V\approx E_bR</m> and has <m>C\approx4\pi\varepsilon_0\kappa R</m>, so</p>
-<div class="eqd">\frac{C}{V_{\max}}\approx\frac{4\pi\varepsilon_0\kappa}{E_b}
-\qquad\Longleftrightarrow\qquad u_{\max}=\frac12\varepsilon_0\kappa E_b^{2}</div>
-<p>— a <em>material</em> constant times a size, with the second form being exactly chapter 5's energy-density row.
-For this mica: <m>C/V=4\pi\times8.85\times10^{-12}\times5.4/10^{8}=6.0</m> pF per volt, so the 3.75 nF device can
-never hold more than about 625 V, whatever you do to its shape. Mica's <m>\kappa=5.4</m> is what limits it, not its
-admirable <m>E_b</m>: switching to a <m>\kappa=90</m> class-2 ceramic with <m>E_b\approx</m> 10× lower gives
-<m>C/V</m> three times better and <m>u_{\max}</m> worse — which is the entire argument for choosing a dielectric,
-and why film capacitors (thin <m>\kappa=2.3</m> polypropylene, but with <m>E_b\sim700</m> MV/m) still win the energy
-density race against both. Geometry buys you a factor of two or three by removing the edge; only material buys an
-order of magnitude.</p></p>
+<p><b>(iv) What geometry buys, and what material buys.</b> Rounding the rim (a fillet, a corona ring, a stress
+cone) removes the <m>(r-R)^{-1/2}</m> singularity and with it the creepage limit, and potting the edge in oil
+(<m>E_b\approx15</m>–<m>25</m> MV/m against air's <m>3</m>) buys another factor of six. What no shape can beat is the
+terminal trade-off: a smooth electrode of radius of curvature <m>R</m> in a medium of breakdown field <m>E_b</m>
+holds <m>V\approx E_bR</m> and has <m>C=4\pi\varepsilon_0\kappa R</m>, so</p>
+<div class="eqd">\frac{C}{V_{\max}}\le\frac{4\pi\varepsilon_0\kappa}{E_b}=\begin{cases}6\ \text{aF/V} & \text{mica}\\
+37\ \text{aF/V} & \text{air}\end{cases}\qquad\Longleftrightarrow\qquad u_{\max}=\frac12\varepsilon_0\kappa E_b^{2}</div>
+<p>The equivalence on the right is chapter 5's energy-density row: <m>5</m> J/cm³ for polypropylene film,
+<m>0.24</m> for mica, <m>0.04</m> for a <m>\kappa=90</m> class-2 ceramic. And note the surprise inside the left-hand
+numbers — on <m>C/V</m> bare air <em>beats</em> mica, because <m>E_b</m> enters once in the denominator while
+<m>\kappa</m> enters once in the numerator. Mica's real advantage is that it <em>confines</em> the field, which is a
+statement about <m>u_{\max}\propto\kappa E_b^{2}</m>: the square is everything. That is also why a genuine
+3.75 nF / 10 kV part is never one large smooth terminal but chapter 4's stack of many series elements, each with its
+own graded edge — and why the first question a capacitor datasheet answers is not "how big" but "how many volts per
+unit volume". <b>Geometry buys a factor of two or three; only material buys an order of magnitude.</b></p>
 </div></details>
 </div></div>
 
