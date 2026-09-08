@@ -28,3 +28,8 @@ venv/
 *.pdf
 export/
 dist/
+
+# --- CI: ship the workflow file outside .github/ (GitHub refuses a push that
+#     creates .github/workflows/* without the workflows permission). Install it with:
+#       mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/
+.github/workflows/

@@ -67,9 +67,10 @@ python3 tools/check_all.py --update   # recount topics.json after adding or rena
 python3 tools/check_all.py --quick    # skip the node tests
 ```
 
-[![notes QA gate](https://github.com/SurajGupta2009/Physics_JEEAD-OLYMPIAD_notes/actions/workflows/qa.yml/badge.svg)](https://github.com/SurajGupta2009/Physics_JEEAD-OLYMPIAD_notes/actions/workflows/qa.yml)
-runs the same command on every pull request, so a green check means the notes still open, still
-render and still link to each other.
+Optional CI: [`tools/ci/qa.yml`](tools/ci/qa.yml) runs the same gate as a GitHub Action. Install it with
+`mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/` — it ships outside `.github/`
+because GitHub will not let a bot push workflow files without the `workflows` permission. A green
+check there means the notes still open, still render and still link to each other.
 
 ## Adding your own note-set
 

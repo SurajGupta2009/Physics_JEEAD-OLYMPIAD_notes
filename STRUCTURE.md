@@ -30,20 +30,22 @@ Reading order for a newcomer: this file (what the repo looks like), then
 ├── CONTRIBUTING.md           workflow + how to work in parallel
 ├── topics.json               registry of note-sets: paths, status, owner, mechanical counts
 ├── .gitignore                scratch and exports stay out
-├── .github/workflows/qa.yml  runs tools/check_all.py on every PR
 ├── docs/
 │   └── hero.svg              the banner in README.md (SVG, no binaries in this repo)
 ├── _templates/
 │   └── chapter.html          copy this to start a chapter; placeholders are marked {{LIKE_THIS}}
 ├── tools/
 │   ├── check_all.py          repo-wide gate + registry recount (--update, --quick)
-│   └── new_topic.py          scaffold a new topic folder from a donor topic
+│   ├── new_topic.py          scaffold a new topic folder from a donor topic
+│   └── ci/qa.yml             the same gate as a GitHub Action (copy into .github/workflows/ to install)
 └── capacitors/               a topic: index + 11 chapters + its own assets/ and tools/
 ```
 
 Rules about the top level:
 
 * Only topic folders sit at the root, and only if they are registered in `topics.json`.
+  `.github/` is git-ignored: workflow files come from `tools/ci/` and are installed by the repo
+  owner, so no contributor (human or agent) ever needs the `workflows` permission.
   `tools/check_all.py` fails if a folder with `assets/notes.css` is unregistered, or if a registered
   topic has no folder.
 * `_templates/` and `docs/` are the only other allowed directories at the root (underscore =
@@ -203,7 +205,7 @@ repo-wide reformatting tool.
 | `assets/pages.js` matches the folder's files and titles | `tools/setpages.py --check` |
 | renderer unit tests | `node tools/test-tex.js` |
 | `topics.json` counts and page list match the files; every topic folder is registered; every topic has an `owner` | `tools/check_all.py` |
-| no unfilled `{{placeholders}}` in any committed page | `.github/workflows/qa.yml` |
+| no unfilled `{{placeholders}}` in any committed page | `tools/ci/qa.yml`, once installed |
 
 The gate deliberately does **not** check prose quality, physics correctness or figure aesthetics.
 Those are the review (CONTRIBUTING §6): a validator that checks markup keeps the machine work away
