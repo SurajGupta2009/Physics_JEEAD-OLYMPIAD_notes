@@ -77,3 +77,23 @@ node tools/test-tex.js              # if you touched assets/tex.js
 `check.py` exits non-zero if anything is wrong, so it is safe to wire into a pre-commit hook. New symbols or
 commands belong in `assets/tex.js` (`SYM`, `FUN`, `SP`); the validator reads them from there, so nothing else needs
 updating.
+
+## Adding a chapter to this topic
+
+```bash
+cp ../_templates/chapter.html 12-noise-and-measurement.html   # then fill the {{placeholders}}
+python3 tools/mathfix.py && python3 tools/setpages.py && python3 tools/check.py
+cd .. && python3 tools/check_all.py --update                  # recount the registry
+```
+
+One file per chapter, and one card appended at the end of `index.html`'s chapter list: the
+navigation, the breadcrumb and this folder's counts are all generated from the files, so nothing
+else needs editing. The rules for working here alongside other writers (and other agents) are in
+[../CONTRIBUTING.md](../CONTRIBUTING.md); the layout contract is in [../STRUCTURE.md](../STRUCTURE.md).
+
+### What the next chapter should inherit
+
+Chapter 11 is the terminal page: the index's progress board, the prev/next chain and the formula
+sheet all assume it is last. If you add chapters, keep `09`/`10`/`11` as the paper, its solutions
+and the sheet — put new material before them and renumber the tail in one mechanical commit
+(`CONTRIBUTING.md` §5). Nothing in the tooling needs to change: `setpages.py` sorts by `NN`.

@@ -108,6 +108,20 @@ main{min-width:0}
   padding:.16em .55em;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
 .badge.jee{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
 .badge.oly{background:color-mix(in srgb,var(--violet) 16%,transparent);color:var(--violet)}
+
+/* the row form used by chapters 5-11: <p class="meta"><span class="badges"><span class="b j">…</span></span>
+   same pills as .badge above, but grouped and allowed to wrap inside .meta */
+.badges{display:inline-flex;gap:.4rem;flex-wrap:wrap;vertical-align:middle}
+.badges .b{font-family:var(--sans);font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  padding:.18em .58em;border-radius:99px;background:var(--accent-soft);color:var(--accent);line-height:1.4}
+.badges .b.j{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
+.badges .b.o{background:color-mix(in srgb,var(--violet) 16%,transparent);color:var(--violet)}
+.badges .b.n{background:color-mix(in srgb,var(--fg) 8%,transparent);color:var(--muted)}
+.ex .exh{display:block;font-family:var(--sans);font-size:.7rem;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 .45rem}
+svg .dim, .fig .dim{fill:none;stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3;opacity:.85}
+.card a.go{color:inherit;border:0}
+.card a.go:hover{color:var(--accent)}
 .pagenav{display:flex;gap:.6rem;margin-top:3.2rem;padding-top:1.2rem;border-top:2px solid var(--rule);font-family:var(--sans);font-size:.85rem;flex-wrap:wrap}
 .pagenav a{flex:1 1 200px;border:1px solid var(--rule);border-radius:12px;padding:.7rem .85rem;background:var(--panel);box-shadow:var(--shadow)}
 .pagenav a small{display:block;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}

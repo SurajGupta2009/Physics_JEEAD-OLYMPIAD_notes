@@ -77,10 +77,21 @@ def main():
             if href.endswith(('.css', '.js')) and not os.path.exists(os.path.join(ROOT, href)): errs.append('missing asset ' + href)
         for a in re.findall(r'href="#([^"]+)"', src):
             if a not in ids: errs.append(f'anchor #{a} has no target in {name}')
-        # questions should have a solution
-        for qblock in re.findall(r'<div class="q">(.*?)\n</div></div>', src, re.S):
-            if 'details class="sol"' not in qblock and 'Q' in qblock[:200]:
-                pass
+        # every question must be answerable from the page it is on, or from the page it points to.
+        # modes: (default) each <div class="q"> carries a collapsible <details class="sol">;
+        #        <meta name="solutions" content="external:FILE"> for an exam paper;
+        #        <meta name="solutions" content="inline">          for a solutions file (the .q body IS the answer).
+        nq, ns = src.count('<div class="q">'), src.count('<details class="sol">')
+        md = re.search(r'<meta name="solutions" content="([^"]+)"', src)
+        if nq and not ns and not md:
+            errs.append(f'{nq} questions with no solution panels \u2014 add <details class="sol">, or declare '
+                        '<meta name="solutions" content="external:NN-file.html"> / "inline">')
+        elif md and md.group(1).startswith('external:'):
+            tgt = md.group(1).split(':', 1)[1].strip()
+            if tgt not in allfiles:
+                errs.append('declared solutions file missing: ' + tgt)
+        elif ns and ns < nq:
+            errs.append(f'{nq} questions but only {ns} solution panels \u2014 every question needs one')
         # figure captions
         nf = src.count('figure class="fig"'); nc = src.count('<figcaption>')
         if nf != nc: errs.append(f'{nf} figures but {nc} captions')
