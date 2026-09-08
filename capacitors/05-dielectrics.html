@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Dielectrics — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="Polarisation, bound charge, the displacement field, Clausius-Mossotti and the local field, every dielectric capacitor geometry, the force that pulls a slab in, liquid rise, Paschen breakdown, losses and Debye relaxation, ferroelectrics and electrets.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 5</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b j">JEE Advanced</span><span class="b o">INPhO / IPhO</span><span class="b n">needs ch. 1–4</span></span>
+</p>
+<h1>5 · Dielectrics: the material inside</h1>
+<p>Four chapters of <em>geometry</em> and <em>energy</em>; one number, <m>\varepsilon_0</m>, never changed. This chapter
+hands that number to the material. A dielectric is not a mysterious factor that multiplies <m>C</m>: it is a vast
+crowd of bound charges, each displaced by a fraction of an atomic radius, whose combined field cancels part of the
+field you applied. Every "rule" about dielectrics in this chapter — <m>C\to\kappa C</m>, the series law for layers, the
+force on a slab, the liquid climbing between plates — is that one statement plus conservation laws. Where the crowd
+cannot be treated as a continuum (a molecule asking <em>what field do I actually sit in</em>) we will compute the
+answer twice, from the microscopic and macroscopic side, and the discrepancy is the content of §5.4.</p>
+
+<div class="box def"><p class="bt">Notation in this chapter</p>
+<p><m>\vec P</m> dipole moment per unit volume (C m<sup>−1</sup> m<sup>−1</sup> = C/m²) · <m>\alpha</m> molecular
+polarisability, <m>p=\alpha E_{\text{loc}}</m>, units C m² V<sup>−1</sup> = F m² · <m>\chi_e</m> electric
+susceptibility, defined by <m>P=\varepsilon_0\chi_eE</m> · <m>\kappa</m> (also <m>\varepsilon_r</m>) relative
+permittivity, <m>\kappa=1+\chi_e</m> for a linear isotropic solid · <m>\vec D=\varepsilon_0\vec E+\vec P</m>.
+Watch out: several books define <m>p=\alpha\varepsilon_0E</m>, making <m>\alpha</m> a <em>volume</em> in Å³. The two
+conventions differ by <m>4\pi\varepsilon_0</m> or <m>\varepsilon_0</m> — always check which one a problem uses, and
+which field (<m>E</m> or <m>E_{\text{loc}}</m>) it means.</p></div>
+
+<h2>5.1 What happens inside an insulator</h2>
+<p>A conductor has charges free to travel macroscopic distances. An insulator has none — but every atom is a positive
+core and an electron cloud, and the cloud <em>shifts</em>. Displace the cloud by <m>x</m> against the restoring force
+of the nucleus and you have a dipole <m>p=ex</m>. That is all dielectric polarization is: a <em>finite,
+elastic</em> displacement, typically <m>x\sim10^{-6}\ \text{m}\times</m> nothing — a few thousandths of an Ångström in
+a gas, up to ~0.1 Å in a ferroelectric.</p>
+
+<div class="eqd" data-tag="5.1">\text{driven spring:}\quad m\ddot x+m\omega_0^{2}x+\frac{m\dot x}{\tau}=eE
+\quad\Longrightarrow\quad p=ex=\frac{e^{2}}{m\omega_0^{2}}\,E\quad(\text{static})</div>
+
+<p>So a single bound electron has polarisability <m>\alpha_e=e^{2}/m\omega_0^{2}</m>, and taking the "spring" to be the
+whole UV absorption of the atom (<m>\lambda_0\sim100</m> nm, so <m>\omega_0=2\pi c/\lambda_0=1.9\times10^{16}</m>
+rad s<sup>−1</sup>) gives <m>\alpha_e\approx8\times10^{-41}</m> F m². The same number drops out of the crude dimensional
+estimate <m>\alpha\sim4\pi\varepsilon_0a^{3}</m> with <m>a</m> an atomic radius — which is the useful memory hook:
+<b>a molecule's polarisability is its volume, times <m>4\pi\varepsilon_0</m></b>. For hydrogen the estimate is
+<m>(4\pi\varepsilon_0)a_0^{3}=1.11\times10^{-10}\times(0.529\times10^{-10})^{3}=1.7\times10^{-41}</m> F m² while the
+exact quantum-mechanical static value is <m>(9/2)(4\pi\varepsilon_0)a_0^{3}=7.4\times10^{-41}</m> — dimensional
+analysis is good to a factor of 4 here, and nothing better is needed: keep
+<m>\alpha_e\sim10^{-40}</m> F m² for any small molecule (N₂: <m>1.9\times10^{-40}</m>), which is why all the
+gas-phase numbers in this chapter come out right to a few per cent.</p>
+
+<p>Three mechanisms contribute, and their <em>response times</em> explain almost everything about the frequency
+dependence of <m>\kappa</m>:</p>
+<table class="tb">
+<thead><tr><th>mechanism</th><th>what moves</th><th class="e">typical α or Δκ</th><th>response time</th><th>present in</th></tr></thead>
+<tbody>
+<tr><td>electronic</td><td>electron cloud vs nucleus</td><td class="e"><m>\sim10^{-40}</m> F m²</td><td><m>10^{-15}</m> s</td><td>everything</td></tr>
+<tr><td>ionic</td><td>positive vs negative sublattice</td><td class="e">adds 3–6 to κ</td><td><m>10^{-13}</m> s</td><td>NaCl, glass, oxides</td></tr>
+<tr><td>orientational</td><td>a whole permanent dipole rotates</td><td class="e">huge (water: +78)</td><td><m>10^{-12}</m>–<m>10^{-6}</m> s</td><td>polar molecules</td></tr>
+<tr><td>interfacial (space charge)</td><td>ions drift to boundaries</td><td class="e">can dominate</td><td><m>10^{-3}</m> s – minutes</td><td>ceramics, foods, polymers with fillers</td></tr>
+</tbody></table>
+
+<div class="box why"><p class="bt">Why does a dielectric weaken the field instead of strengthening it?</p>
+<p>Because the induced dipole always points <em>along</em> the field that made it: positive charge shifted with
+<m>\vec E</m>, negative against. Look at the slab in Fig. 5.1 — the layer of positive bound charge sits on the face
+toward the negative plate, the negative bound charge toward the positive plate. A sheet of charge
+<m>+\sigma_b</m> at one face and <m>-\sigma_b</m> at the other produces a field pointing from <m>+</m> to
+<m>-</m>, i.e. <em>opposite</em> to the plates' field. Net result <m>E=E_0-\sigma_b/\varepsilon_0&lt;E_0</m>.
+There is no stable configuration in which a passively induced dipole array <em>amplifies</em> the field that
+induced it: that would be positive feedback, and it would mean the material spontaneously polarizes with no
+applied voltage — which is exactly what a ferroelectric below its Curie point does, and why ferroelectrics must be
+handled by the <em>field</em>-versus-<em>displacement</em> hysteresis loop of §5.10, not by a constant κ.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 250" role="img" aria-label="A slab of dielectric between capacitor plates: dipoles drawn as displaced charge pairs, bound surface charge opposing the free plate charge">
+  <g transform="translate(40,20)">
+    <rect x="0" y="10" width="14" height="180" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <rect x="316" y="10" width="14" height="180" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <text x="-16" y="105" class="mi" transform="rotate(-90,-16,105)">+ plate, σ_f</text>
+    <text x="352" y="105" class="mi" transform="rotate(90,352,105)">− plate, −σ_f</text>
+    <rect x="60" y="22" width="210" height="156" class="fp"/>
+    <text x="118" y="16" class="lbl sm">dielectric, κ</text>
+    <g>
+      <circle cx="90" cy="60" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="86" y="64" class="mtext">−</text>
+      <circle cx="118" cy="60" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="115" y="64" class="mtext">+</text>
+      <line x1="100" y1="60" x2="111" y2="60" class="thinl"/>
+      <circle cx="160" cy="60" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="156" y="64" class="mtext">−</text>
+      <circle cx="188" cy="60" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="185" y="64" class="mtext">+</text>
+      <line x1="170" y1="60" x2="181" y2="60" class="thinl"/>
+      <circle cx="230" cy="60" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="226" y="64" class="mtext">−</text>
+      <circle cx="258" cy="60" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="255" y="64" class="mtext">+</text>
+      <line x1="240" y1="60" x2="251" y2="60" class="thinl"/>
+      <circle cx="90" cy="120" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="86" y="124" class="mtext">−</text>
+      <circle cx="118" cy="120" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="115" y="124" class="mtext">+</text>
+      <line x1="100" y1="120" x2="111" y2="120" class="thinl"/>
+      <circle cx="160" cy="120" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="156" y="124" class="mtext">−</text>
+      <circle cx="188" cy="120" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="185" y="124" class="mtext">+</text>
+      <line x1="170" y1="120" x2="181" y2="120" class="thinl"/>
+      <circle cx="230" cy="120" r="9" fill="var(--neg)" opacity=".22" stroke="var(--neg)"/><text x="226" y="124" class="mtext">−</text>
+      <circle cx="258" cy="120" r="6" fill="var(--pos)" opacity=".3" stroke="var(--pos)"/><text x="255" y="124" class="mtext">+</text>
+      <line x1="240" y1="120" x2="251" y2="120" class="thinl"/>
+    </g>
+    <line x1="56" y1="40" x2="56" y2="160" stroke="var(--neg)" stroke-width="2.2"/>
+    <text x="30" y="200" class="lbl sm" fill="var(--neg)">−σ_b</text>
+    <line x1="274" y1="40" x2="274" y2="160" stroke="var(--pos)" stroke-width="2.2"/>
+    <text x="256" y="200" class="lbl sm" fill="var(--pos)">+σ_b</text>
+    <g stroke="var(--accent)" stroke-width="1.6">
+      <line x1="20" y1="100" x2="52" y2="100" marker-end="url(#ahb)"/>
+      <line x1="120" y1="100" x2="152" y2="100" marker-end="url(#ahb)"/>
+      <line x1="220" y1="100" x2="252" y2="100" marker-end="url(#ahb)"/>
+      <line x1="280" y1="100" x2="312" y2="100" marker-end="url(#ahb)"/>
+    </g>
+    <text x="120" y="90" class="mi sm">E = E₀ − σ_b/ε₀  &lt;  E₀</text>
+    <text x="60" y="222" class="lbl">Each dipole is stretched <tspan font-style="italic">with</tspan> the field; the sheet of bound charge it leaves on each face makes a field <tspan font-style="italic">against</tspan> it.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.1</b> — The whole of dielectric physics in one picture: bound charges appear only where
+<m>\vec P</m> terminates, i.e. on the surfaces (and wherever <m>\vec\nabla\cdot\vec P\ne0</m>), and their field always
+subtracts from the applied one.</figcaption></figure>
+
+<h2>5.2 Bound charge: the bookkeeping in one line</h2>
+<p>Take a small rectangular pillbox of volume <m>\delta x\,\delta y\,\delta z</m> inside a polarized material. Dipoles
+crossing a face deposit charge <m>\vec P\cdot d\vec a</m> on it. Summing the six faces and dividing by the volume is
+the divergence, and the charge <em>left inside</em> is the negative of what flowed out:</p>
+<div class="eqd" data-tag="5.2">\rho_b=-\vec\nabla\cdot\vec P\qquad\text{on a surface:}\qquad
+\sigma_b=\vec P\cdot\hat n=\begin{cases}+P_n&amp;\text{where }\vec P\text{ points out}\\-\,P_n&amp;\text{where }\vec P\text{ points in}\end{cases}</div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 200" role="img" aria-label="Pillbox derivation of rho_b = −div P on the left; a uniformly polarized sphere with bound charge on its two hemispheres on the right">
+  <g transform="translate(30,18)">
+    <path d="M60,40 L140,40 L160,60 L80,60 Z" class="w" stroke="var(--fg)" stroke-width="1.6"/>
+    <path d="M80,60 L160,60 L160,130 L80,130 Z" class="w" stroke="var(--fg)" stroke-width="1.6"/>
+    <path d="M60,40 L80,60 L80,130 L60,110 Z" class="w" stroke="var(--fg)" stroke-width="1.6"/>
+    <line x1="30" y1="95" x2="120" y2="95" class="ln2" marker-end="url(#ahb)" stroke="var(--accent)"/>
+    <text x="34" y="86" class="mi" fill="var(--accent)">P(x)</text>
+    <line x1="110" y1="95" x2="205" y2="95" class="ln2" marker-end="url(#ahb)" stroke="var(--accent)"/>
+    <text x="150" y="86" class="mi" fill="var(--accent)">P(x+δx)</text>
+    <text x="163" y="120" class="lbl sm">more flows out than in ⇒</text>
+    <text x="163" y="136" class="lbl sm">net negative charge is left inside:</text>
+    <text x="163" y="152" class="lbl sm">ρ_b δV = −[P(x+δx)−P(x)]δyδz</text>
+    <text x="14" y="166" class="mi">∴ ρ_b = −∂P_x/∂x</text>
+  </g>
+  <g transform="translate(430,10)">
+    <circle cx="120" cy="95" r="78" class="fp"/>
+    <path d="M120,17 A78,78 0 0 1 120,173 Z" fill="var(--pos)" opacity=".12" stroke="none"/>
+    <path d="M120,17 A78,78 0 0 0 120,173 Z" fill="var(--neg)" opacity=".12" stroke="none"/>
+    <line x1="120" y1="17" x2="120" y2="173" class="thinl"/>
+    <text x="146" y="40" class="lbl sm" fill="var(--pos)">+σ_b = +P cosθ</text>
+    <text x="24" y="160" class="lbl sm" fill="var(--neg)">−σ_b</text>
+    <line x1="120" y1="95" x2="186" y2="95" stroke="var(--accent)" stroke-width="2" marker-end="url(#ahb)"/>
+    <text x="126" y="88" class="mi">P</text>
+    <line x1="118" y1="95" x2="60" y2="95" stroke="var(--neg)" stroke-width="2" marker-end="url(#ahr)"/>
+    <text x="62" y="112" class="mi sm">E_in = −P/3ε₀</text>
+    <text x="40" y="188" class="lbl sm">uniform P ⇒ ρ_b = 0 inside, surface charge ∝ cosθ, uniform internal field</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.2</b> — Left: the pillbox proof of <m>\rho_b=-\vec\nabla\cdot\vec P</m>. Right: a uniformly
+polarized sphere — the one geometry whose bound-charge field is uniform inside. Its internal field
+<m>-\vec P/3\varepsilon_0</m> is the number that generates the whole Lorentz local-field story.</figcaption></figure>
+
+<p>Two consequences to keep ready:</p>
+<ul>
+<li><b>A uniformly polarized body has no volume bound charge</b>, only surface bound charge. And its
+<em>total</em> bound charge vanishes identically: <m>\oint\vec P\cdot d\vec a=-\int\rho_b\,dV=Q_b</m>, so
+<m>Q_b=-\oint\vec P\cdot d\hat n\,dA</m>… which for a closed body enclosing all the polarization is zero. A
+dielectric never acquires net charge from being polarized (that is why "the dielectric gets charged" is a wrong
+sentence; it gets <em>separated</em>).</li>
+<li><b>Boundary conditions at an interface</b> (derive them exactly as in ch. 1, now including <m>\vec P</m>):
+tangential <m>E</m> is continuous, and normal <m>D</m> is continuous if no free charge sits there —
+<div class="eqd">E_{1t}=E_{2t},\qquad D_{1n}-D_{2n}=\sigma_f,\qquad
+\varepsilon_1E_{1n}-\varepsilon_2E_{2n}=\sigma_f\ \ (\sigma_f=0\ \text{at a bare dielectric interface})</div>
+Dividing the two laws for a charge-free interface gives the <b>refraction of field lines</b>,
+<m>\tan\theta_1/\tan\theta_2=\varepsilon_1/\varepsilon_2</m>: field lines bend <em>toward the normal</em> on
+entering a high-κ material. (For conductors in electrostatic equilibrium the normal component dominates completely;
+here both survive, which is why the shape of a porcelain insulator matters.)</li>
+</ul>
+
+<h2>5.3 D, or: how to never think about bound charge again</h2>
+<p>Take <m>\vec\nabla\cdot\vec E=\rho_{\text{tot}}/\varepsilon_0=(\rho_f+\rho_b)/\varepsilon_0</m>, substitute
+<m>\rho_b=-\vec\nabla\cdot\vec P</m> and move the term across:</p>
+<div class="eqd" data-tag="5.3">\vec\nabla\cdot\vec D=\rho_f,\qquad \vec D\equiv\varepsilon_0\vec E+\vec P
+\qquad\xrightarrow[\text{linear, isotropic}]{\text{if}}\qquad \vec D=\varepsilon_0\kappa\vec E</div>
+<p>The point is not nomenclature. <m>\vec D</m> is useful because <m>\rho_f</m> is what a <em>circuit</em> tells you
+(you pushed <m>Q</m> coulombs onto that plate) while <m>\rho_b</m> is what a <em>material</em> tells you (and you
+often do not know it). Whenever symmetry fixes <m>\vec D</m>, you can get <m>\vec E</m> in two lines without ever
+computing a bound charge:</p>
+<div class="eqd">\text{parallel plates:}\quad D=\sigma_f,\quad E=\frac{\sigma_f}{\varepsilon_0\kappa},\quad
+V=Ed=\frac{\sigma_fd}{\varepsilon_0\kappa}\quad\Longrightarrow\quad C=\frac{\kappa\varepsilon_0A}{d}\ \checkmark</div>
+
+<div class="box trap"><p class="bt">When D is a tool and when it is a trap</p>
+<p><m>\vec\nabla\cdot\vec D=\rho_f</m> is <em>always</em> true; using it to <em>find</em> <m>\vec D</m> requires
+symmetry, exactly as with <m>\vec E</m> and <m>\rho</m> in chapter 1. It works for plane, cylinder and sphere
+geometry with dielectrics arranged in the same symmetry. It fails for a dielectric <em>inserted sideways</em> into a
+parallel-plate capacitor, for a droplet in a uniform field, and for anything with edges: there the field is not
+known to be normal or constant, the Gaussian surface gives no more than
+<m>\oint\vec D\cdot d\vec a=Q_f</m>, and you must solve Laplace's equation with the interface conditions. The tell:
+if <m>\vec D</m> would be determined by Gauss alone, <m>\vec E</m> in vacuum would have been too.</p>
+<p>A second, subtler trap: <m>\vec D=\varepsilon\vec E</m> is a <em>constitutive</em> relation valid for linear,
+isotropic, non-dispersive media. For a ferroelectric, <m>P</m> is a history-dependent function of <m>E</m>; for water
+at 1 kHz, <m>\kappa</m> is complex; in a crystal, <m>\kappa</m> is a tensor. In all three cases the "D trick" still
+gives you <m>D</m> from <m>\rho_f</m> — what breaks is the step from <m>D</m> to <m>E</m>.</p></div>
+
+<h2>5.4 From α to κ: the local field and Clausius–Mossotti</h2>
+<p>Here is the one genuinely delicate step in the whole subject. The molecule does not sit in the macroscopic
+average field <m>E</m>: it sits in the field of the plates <em>plus</em> the field of every other polarized molecule
+around it. Separate the neighbourhood into (i) the molecules outside a small sphere centred on ours and (ii) those
+inside. For (i), replace the sphere's contents by the continuum: the bound surface charge
+<m>\sigma_b=\vec P\cdot\hat n</m> on a spherical cavity produces a <em>uniform</em> field (Fig. 5.2 right is the
+same calculation with the sign reversed):</p>
+<div class="eqd" data-tag="5.4">\vec E_{\text{Lorentz}}=\frac{\vec P}{3\varepsilon_0}
+\qquad\Longrightarrow\qquad E_{\text{loc}}=E+\frac{P}{3\varepsilon_0}</div>
+<p>(ii), the molecules actually inside the cavity, contribute zero <em>on average</em> for a liquid or cubic crystal —
+the sum of dipole fields over a symmetric arrangement cancels at the centre. That is the Lorentz assumption, and it
+is why the result below works for gases, liquids and cubic solids but needs modification for polar crystals.</p>
+<p>Now close the loop. <m>P=np=n\alpha E_{\text{loc}}</m> with <m>E_{\text{loc}}=E+P/3\varepsilon_0</m>:</p>
+<div class="eqd" data-tag="5.5">P=n\alpha E+\frac{n\alpha P}{3\varepsilon_0}\ \Longrightarrow\
+P=\frac{n\alpha E}{1-\frac{n\alpha}{3\varepsilon_0}}\ \Longrightarrow\ \kappa-1=\frac{n\alpha/\varepsilon_0}{1-n\alpha/3\varepsilon_0}
+\qquad\Longleftrightarrow\qquad \boxed{\dfrac{\kappa-1}{\kappa+2}=\dfrac{n\alpha}{3\varepsilon_0}}</div>
+<p>This is <b>Clausius–Mossotti</b> (Lorentz–Lorenz in optics, where <m>\kappa=n^{2}</m> for the index of refraction).
+Note its shape: the "naive" answer <m>\kappa-1=n\alpha/\varepsilon_0</m> is recovered for a dilute gas, and the
+correction factor is always <em>enhancing</em> — each molecule's dipole helps its neighbours align, which is the
+same positive feedback the Why box of §5.1 warned about.</p>
+
+<div class="box thm"><p class="bt">Three limits of (5.5) worth memorising, because exams live there</p>
+<ul>
+<li><b>Dilute gas.</b> <m>n\alpha\ll\varepsilon_0</m> ⇒ <m>\kappa-1=n\alpha/\varepsilon_0</m>. With
+<m>n=P_{\text{gas}}/k_BT</m>: <m>\kappa-1\propto1/T</m> at fixed pressure and <m>\kappa-1\propto\rho</m> at fixed T. This is
+how <m>\kappa</m> is used as a <em>density meter</em> — and it reproduces the number of chapter 2: air at STP,
+<m>n=2.5\times10^{25}</m>, <m>\alpha=2.1\times10^{-40}</m> F m² ⇒ <m>\kappa-1=5.9\times10^{-4}</m> ✓.</li>
+<li><b>Permanent dipoles (a polar gas).</b> Replace <m>\alpha E</m> by the Langevin alignment
+<m>p^{2}E/3k_BT</m>: <m>\kappa-1=n\!\left(\alpha+\dfrac{p^{2}}{3\varepsilon_0k_BT}\right)/\varepsilon_0</m> —
+Debye's equation, and the reason humidity's contribution to <m>\kappa</m> is strongly temperature dependent while a
+noble gas's is not.</li>
+<li><b>The catastrophe.</b> <m>\kappa\to\infty</m> when <m>n\alpha\to3\varepsilon_0</m>. A material with
+<m>\kappa=1000</m> has <m>n\alpha/3\varepsilon_0=0.997</m>: it sits within 0.3% of the divergence. That is what a
+<i>ferroelectric</i> is — the polarizability density is so large that the feedback loop of §5.1 becomes unstable and
+the material polarizes by itself. Quantum mechanics (the overlap of neighbouring clouds) saturates it at a finite
+<m>P_s</m> instead of letting it blow up; the whole of §5.10 is the physics of that saturation.</li>
+</ul></div>
+
+<p>For a dense polar liquid the Lorentz cavity field is <em>not</em> the right correction (the molecules inside the
+cavity are strongly correlated with the central one); Onsager's sphere-in-a-cavity-of-permittivity-<m>\kappa</m>
+treatment gives a different and better formula. The lesson to keep is the one the exam tests: <b>Clausius–Mossotti is
+a statement about a dilute, isotropic, induced-dipole assembly.</b> Water's <m>\kappa=80</m> is <em>not</em> a
+contradiction of <m>n^{2}=1.77</m>, because at optical frequencies only the electronic term survives:
+<m>\dfrac{1.77-1}{1.77+2}=0.204=\dfrac{n\alpha_e}{3\varepsilon_0}</m> — perfectly ordinary, far from the
+catastrophe. It is the orientational term, absent above ~20 GHz, that makes water strange.</p>
+
+<h2>5.5 The catalogue: every dielectric geometry you will be asked for</h2>
+<p>One question decides everything: <b>do the field lines cross the dielectric interfaces, or run along them?</b>
+Crossing ⇒ same <m>D</m> (free charge is continuous) ⇒ capacitors in <em>series</em>. Running along ⇒ same
+<m>E</m> and same <m>V</m> ⇒ in <em>parallel</em>. Section 4.2's logic with a new label.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 210" role="img" aria-label="Four partial-fill geometries: slab parallel to faces, vertical split, n layers, and a rotating fan, each labelled series or parallel">
+  <g transform="translate(20,26)">
+    <rect x="0" y="0" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="0" y="80" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="24" y="38" width="82" height="42" class="fp"/>
+    <text x="46" y="62" class="mi sm">κ, t</text>
+    <text x="30" y="30" class="lbl sm">air</text>
+    <line x1="65" y1="14" x2="65" y2="36" class="fld" marker-end="url(#ahb)"/>
+    <line x1="65" y1="66" x2="65" y2="78" class="fld" marker-end="url(#ahb)"/>
+    <text x="0" y="110" class="lbl md"><tspan font-weight="700">(a)</tspan> stack ⟹ SERIES</text>
+  </g>
+  <g transform="translate(200,26)">
+    <rect x="0" y="0" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="0" y="80" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="0" y="10" width="62" height="70" class="fp"/>
+    <text x="16" y="50" class="mi sm">κ</text><text x="84" y="50" class="mi sm">air</text>
+    <line x1="31" y1="16" x2="31" y2="74" class="fld" marker-end="url(#ahb)"/>
+    <line x1="93" y1="16" x2="93" y2="74" class="fld" marker-end="url(#ahb)"/>
+    <text x="63" y="50" class="lbl sm">|</text>
+    <text x="0" y="110" class="lbl md"><tspan font-weight="700">(b)</tspan> side by side ⟹ PARALLEL</text>
+  </g>
+  <g transform="translate(380,26)">
+    <rect x="0" y="0" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="0" y="80" width="130" height="10" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <rect x="0" y="10" width="130" height="24" fill="var(--amber)" opacity=".16" stroke="var(--amber)"/>
+    <rect x="0" y="34" width="130" height="24" fill="var(--violet)" opacity=".16" stroke="var(--violet)"/>
+    <rect x="0" y="58" width="130" height="22" fill="var(--pos)" opacity=".16" stroke="var(--pos)"/>
+    <text x="10" y="27" class="lbl sm" fill="var(--amber)">κ₁, d₁ — largest E if κ₁ smallest</text>
+    <text x="10" y="51" class="lbl sm" fill="var(--violet)">κ₂, d₂</text>
+    <text x="10" y="74" class="lbl sm" fill="var(--pos)">κ₃, d₃</text>
+    <text x="0" y="110" class="lbl md"><tspan font-weight="700">(c)</tspan> layers ⟹ SERIES of 1/κ</text>
+  </g>
+  <g transform="translate(560,26)">
+    <path d="M20,90 L20,10 L100,10 L100,90 Z" class="w" stroke="var(--fg)" stroke-width="1.6"/>
+    <path d="M20,90 A70,70 0 0 1 89,42 L60,60 A30,30 0 0 0 34,74 Z" class="fp"/>
+    <text x="52" y="34" class="mi sm">φ</text>
+    <line x1="20" y1="88" x2="100" y2="88" stroke="var(--fg)" stroke-width="2"/>
+    <text x="6" y="110" class="lbl md"><tspan font-weight="700">(d)</tspan> overlap angle ⟹ linear in φ</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.3</b> — (a) slab of thickness <m>t&lt;d</m> parallel to the plates; (b) material filling part of
+the <em>area</em>; (c) <m>n</m> layers; (d) the rotary trimmer, where the variable is the overlap. Only in (a) and (c)
+does the dielectric interface cut the field lines.</figcaption></figure>
+
+<div class="box def"><p class="bt">The results, each one line, and each one <em>derived</em> not quoted</p>
+<table class="tb">
+<thead><tr><th>case</th><th>argument</th><th class="e">capacitance</th></tr></thead>
+<tbody>
+<tr><td>gap full of κ</td><td><m>E=\sigma_f/\varepsilon_0\kappa</m></td>
+<td class="e"><m>C=\kappa\varepsilon_0A/d</m></td></tr>
+<tr><td>slab <m>t</m> in a gap <m>d</m></td>
+<td>three layers in series, air–dielectric–air; add <m>V</m>'s at common <m>Q</m></td>
+<td class="e"><m>C=\dfrac{\varepsilon_0A}{d-t+t/\kappa}</m></td></tr>
+<tr><td>same, area split <m>A_1:A_2</m></td>
+<td>two capacitors sharing the same two nodes ⇒ parallel</td>
+<td class="e"><m>C=\dfrac{\varepsilon_0}{d}\left(\kappa_1A_1+\kappa_2A_2\right)</m></td></tr>
+<tr><td>layers <m>(d_i,\kappa_i)</m></td>
+<td>same <m>D=\sigma_f</m> in every layer ⇒ <m>E_i=\sigma_f/\varepsilon_0\kappa_i</m>; sum <m>V=Ed</m></td>
+<td class="e"><m>C=\dfrac{\varepsilon_0A}{\displaystyle\sum_i d_i/\kappa_i}</m></td></tr>
+<tr><td>radial layers in a coax</td>
+<td>each layer contributes <m>\dfrac{\ln(r_{i+1}/r_i)}{2\pi\varepsilon_0\kappa_iL}</m> of <m>1/C</m></td>
+<td class="e"><m>C=\dfrac{2\pi\varepsilon_0L}{\displaystyle\sum_i\kappa_i^{-1}\ln\dfrac{r_{i+1}}{r_i}}</m></td></tr>
+<tr><td>fan, radius <m>R</m>, angle <m>\varphi</m>, gap <m>d</m></td>
+<td>area <m>\tfrac12\varphi R^{2}</m> in a uniform field</td>
+<td class="e"><m>C=\dfrac{\kappa\varepsilon_0\varphi R^{2}}{2d}</m></td></tr>
+</tbody></table>
+<p>Two checks you should always run. <b>Limits:</b> <m>t\to0</m> returns the empty capacitor and <m>t\to d</m> returns
+<m>\kappa\varepsilon_0A/d</m> ✓. <b>The metal limit:</b> <m>\kappa\to\infty</m> in the slab row gives
+<m>C=\varepsilon_0A/(d-t)</m> — the conducting-slab result of chapter 2, which is therefore not a new fact but a
+special case, and the reason "a conductor is a dielectric of infinite κ" is more than a slogan.</p></div>
+
+<p><b>Field sharing in a layered gap.</b> Since every layer carries the same <m>D</m>,
+<m>E_i=D/\varepsilon_0\kappa_i</m>: the <em>lowest</em>-κ layer endures the <em>largest</em> field, in exact
+proportion. For a solid insulation with an air void of the same thickness fraction, the void sees
+<m>\kappa_{\text{solid}}</m> times the average stress — this is why epoxy-impregnated windings, not dry ones, survive
+their rated voltage, and why the "corona" you can hear in an old transformer is bound charge being argued about in a
+bubble. The bound surface charge at an internal interface follows from (5.2) with
+<m>P_i=D\!\left(1-1/\kappa_i\right)</m> (using <m>D=\varepsilon_0\kappa_iE_i</m>):</p>
+<div class="eqd" data-tag="5.6">\sigma_b^{\text{(interface)}}=P_1-P_2=D\left(\frac1{\kappa_2}-\frac1{\kappa_1}\right)
+\qquad(\text{zero iff }\kappa_1=\kappa_2\ \checkmark)</div>
+
+<div class="box insight"><p class="bt">The bounds that make any "effective κ" question safe</p>
+<p>For a composite of volume fractions <m>f,\ 1-f</m> with permittivities <m>\kappa_1,\kappa_2</m>, layer-parallel and
+layer-perpendicular are the two extremes and by the arithmetic–harmonic mean inequality every other arrangement sits
+between them:</p>
+<div class="eqd">\underbrace{\frac{\kappa_1\kappa_2}{f\kappa_2+(1-f)\kappa_1}}_{\text{layers ⟂ to }E\ (=\text{series})}
+\ \le\ \kappa_{\text{eff}}\ \le\
+\underbrace{f\kappa_1+(1-f)\kappa_2}_{\text{layers }\parallel E\ (=\text{parallel})}</div>
+<p>If a multiple-choice answer lies outside these, it is wrong and you need calculate nothing else. The same bounds
+make the "suspension of conducting particles" problem tractable in the limit <m>\kappa_1\to\infty</m>: the upper bound
+diverges (percolation, a connected metal path) while the lower stays finite — i.e. a few percent of carbon black can
+change a plastic by orders of magnitude <em>only if</em> the particles touch, which is exactly why antistatic packing
+is loaded to just above percolation and conductive adhesives are loaded just above it too.</p></div>
+
+<h2>5.6 The force on a dielectric: where it really comes from</h2>
+<p>A slab of thickness <m>b</m> (into the page), width <m>w</m>, permittivity <m>\kappa</m>, slid a distance <m>x</m>
+between plane plates a distance <m>d</m> apart, voltage <m>V</m>:</p>
+<div class="eqd">C(x)=\frac{\varepsilon_0}{d}\Big[w(\ell-x)+\kappa wx\Big],\qquad \frac{dC}{dx}=\frac{\varepsilon_0w}{d}(\kappa-1)
+\qquad\Longrightarrow\qquad \boxed{F=\frac{\varepsilon_0(\kappa-1)wV^{2}}{2d}}</div>
+<p>Constant in <m>x</m> — the slab is pulled in with a uniform force until it is fully inside. The derivation is
+chapter 3's master rule: at fixed <m>Q</m>, <m>F=-dU/dx=+\tfrac12V^{2}dC/dx</m>; at fixed <m>V</m> the source does
+work <m>V\,dQ=V^{2}dC</m> and <m>dU=\tfrac12V^{2}dC</m>, leaving again <m>+\tfrac12V^{2}dC</m> for mechanics. Both
+routes agree (they must: the force is a property of the state, not of which constraint you used to compute it).</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 220" role="img" aria-label="Slab entering a parallel plate capacitor; fringing field at the entrance bends towards the slab and the force arrow points inwards">
+  <g transform="translate(30,30)">
+    <rect x="0" y="0" width="380" height="9" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <rect x="0" y="101" width="380" height="9" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <text x="330" y="-8" class="lbl sm">+ V (battery held)</text>
+    <rect x="60" y="12" width="150" height="86" class="fp"/>
+    <text x="98" y="60" class="mi">κ</text>
+    <line x1="210" y1="12" x2="210" y2="98" stroke="var(--accent)" stroke-width="1.6"/>
+    <g class="fld">
+      <line x1="100" y1="20" x2="100" y2="90"/><line x1="140" y1="20" x2="140" y2="90"/><line x1="180" y1="20" x2="180" y2="90"/>
+      <line x1="250" y1="20" x2="250" y2="90"/><line x1="300" y1="20" x2="300" y2="90"/><line x1="350" y1="20" x2="350" y2="90"/>
+      <path d="M212,20 C240,26 246,40 248,54"/>
+      <path d="M212,90 C238,84 244,70 246,58"/>
+      <path d="M212,44 C236,46 240,52 242,58"/>
+    </g>
+    <text x="222" y="16" class="lbl sm">fringing / non-uniform field at the mouth</text>
+    <text x="222" y="122" class="lbl sm">E is stronger on the high-κ side of any dipole ⇒ net pull to the right</text>
+    <line x1="150" y1="128" x2="240" y2="128" stroke="var(--neg)" stroke-width="3" marker-end="url(#aho)"/>
+    <text x="120" y="132" class="mi" fill="var(--neg)">F = ε₀(κ−1)wV²/2d</text>
+    <line x1="60" y1="140" x2="210" y2="140" class="thinl"/>
+    <text x="120" y="156" class="lbl sm">x</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.4</b> — The uniform field inside the capacitor cannot push on a dipole array (a uniform field
+exerts no net force on a dipole). The force lives entirely in the few millimetres where the field is
+<em>not</em> uniform: the fringe field at the entrance. The energy method never needs to know this, which is why you
+should use it — but if a question asks you to <em>explain</em> the force, only the fringe field will do.</figcaption></figure>
+
+<div class="box why"><p class="bt">Why "half" and not "all": the battery again</p>
+<p>At fixed <m>V</m>, inserting the slab multiplies <m>C</m> and hence multiplies the stored energy
+<m>U=\tfrac12CV^{2}</m> by <m>\kappa</m>. Where does the extra energy come from, if the slab arrives <em>gaining</em>
+kinetic energy on the way in? From the battery, at twice the rate: <m>dW_{\text{bat}}=V\,dQ=V^{2}dC</m>, of which half
+goes into the field and half into mechanics. This is chapter 3's master rule with a dielectric for
+<m>dC/dx</m> — and it is why the naive "the system minimises <m>U</m>" argument gives the wrong (half, and wrongly
+signed) force unless you include the source. If instead the capacitor is <em>isolated</em>, then <m>U=Q^{2}/2C</m>
+<em>decreases</em> as the slab enters and the energy for the motion comes from the field itself. Same force;
+opposite bookkeeping.</p></div>
+
+<p><b>The general form, worth more than the geometry.</b> For <em>any</em> object that changes the capacitance by
+<m>dC</m> when it moves by <m>dx</m>:</p>
+<div class="eqd" data-tag="5.7">F_x=\frac12V^{2}\frac{dC}{dx}=\frac{Q^{2}}{2C^{2}}\frac{dC}{dx}\ ,\qquad
+\text{and for a small particle:}\quad F=\frac12\alpha_{\text{eff}}\nabla E^{2},\qquad
+\alpha_{\text{eff}}=4\pi\varepsilon_0\kappa_mR^{3}\frac{\kappa_p-\kappa_m}{\kappa_p+2\kappa_m}</div>
+<p>The particle formula is <b>dielectrophoresis</b>: the force is proportional to <m>\nabla E^{2}</m>, not to
+<m>\vec E</m>, so it works with AC (unlike ionic electrophoresis) and its <em>sign</em> is set by
+<m>(\kappa_p-\kappa_m)</m>. High-κ particles collect at the strongest field (used to trap and sort cells, to assemble
+nanowires between electrodes); bubbles and voids, having <m>\kappa_p&lt;\kappa_m</m>, are expelled to weak-field
+regions — which is one reason degassing matters in oil-filled equipment. The factor
+<m>(\kappa_p-\kappa_m)/(\kappa_p+2\kappa_m)</m> is the same Clausius–Mossotti geometry factor as (5.5): a sphere
+inside a medium, solved in Q7.</p>
+
+<h2>5.7 Case study: why the liquid climbs</h2>
+<p>Two vertical plates of width <m>w</m>, separation <m>d</m>, dipped a little into a dielectric liquid of density
+<m>\rho</m> and permittivity <m>\kappa</m>, held at voltage <m>V</m>. The liquid rises to height <m>h</m>. Nothing new is
+required: the capacitor is a slab entering sideways (§5.6) turned through 90°, so the upward force is
+<m>\tfrac12V^{2}dC/dh</m> with <m>C(h)=\dfrac{\varepsilon_0w}{d}\big[(L-h)+\kappa h\big]</m> — and it is balanced by the
+weight of the raised column, whose gravitational energy is <m>\tfrac12\rho g\,wd\,h^{2}</m>:</p>
+<div class="eqd" data-tag="5.8">\frac{\varepsilon_0(\kappa-1)wV^{2}}{2d}=\rho g\,w d\,h
+\qquad\Longrightarrow\qquad \boxed{h=\frac{\varepsilon_0(\kappa-1)V^{2}}{2\rho g d^{2}}}</div>
+<p>Read the scaling before the arithmetic: <m>h\propto V^{2}\kappa_{\text{excess}}/d^{2}</m>. Halving the gap quadruples
+the climb; a 2 kV rating at 1 mm is a very different liquid-manipulation device from 200 V at 10 µm. For water
+(<m>\kappa=80</m>) at <m>d=0.5</m> mm and <m>V=100</m> V: <m>h=1.4</m> mm.</p>
+<div class="box insight"><p class="bt">Compete it against capillarity, and you learn which regime you are in</p>
+<p>The same meniscus rises by surface tension through <m>h_c=2\gamma\cos\theta/\rho g d=2.9</m> cm for water in a
+0.5 mm slit. So at 100 V the electrostatic contribution is <em>20 times smaller</em> and the classic textbook problem
+is, in ordinary conditions, mostly about wetting; the two contributions are equal at
+<m>V=\sqrt{4\gamma d/\varepsilon_0(\kappa-1)}=460</m> V. Exam problems quietly neglect <m>\gamma</m> — fine at kV and
+sub-mm gaps, indefensible for a question that also asks a "realistic" number. Knowing which mechanism dominates is
+worth a mark; being able to say <em>why</em> (both are <m>1/d</m>-versus-<m>1/d^{2}</m> scalings competing) is worth
+another.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 230" role="img" aria-label="Vertical plates dipping into a dielectric liquid with the meniscus raised by height h, plus the force and weight arrows">
+  <g transform="translate(120,18)">
+    <rect x="0" y="0" width="10" height="150" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <rect x="70" y="0" width="10" height="150" class="w" stroke="var(--fg)" stroke-width="2"/>
+    <path d="M10,120 L10,200 L70,200 L70,120 Q60,98 40,98 Q20,98 10,120 Z" fill="var(--accent)" opacity=".14" stroke="var(--accent)"/>
+    <path d="M-40,150 L110,150" class="thinl"/>
+    <text x="-38" y="166" class="lbl sm">outside free surface</text>
+    <path d="M110,150 L110,200 L150,200 L150,150" fill="var(--accent)" opacity=".08" stroke="var(--accent)"/>
+    <line x1="40" y1="98" x2="40" y2="60" stroke="var(--neg)" stroke-width="2.6" marker-end="url(#aho)"/>
+    <text x="46" y="70" class="lbl sm" fill="var(--neg)">F = ½V² dC/dh</text>
+    <line x1="40" y1="150" x2="40" y2="176" stroke="var(--fg)" stroke-width="1.8" marker-end="url(#ahg)"/>
+    <text x="46" y="176" class="lbl sm">weight ρg·wd·h</text>
+    <line x1="86" y1="98" x2="86" y2="150" class="thinl" stroke-dasharray="3 3"/>
+    <text x="92" y="128" class="mi sm">h</text>
+    <text x="-6" y="216" class="lbl sm">gap d, width w, voltage V (or fixed Q — then re-derive with V(h)=Q/C(h))</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.5</b> — Dielectric liquid rise. The energy of the raised column is <m>\tfrac12\rho g wd h^{2}</m>,
+so <m>dU_g/dh=\rho g wdh</m> — a factor <m>h/2</m> smaller than "weight × height" reasoning would give; use the
+derivative, not the picture in your head.</figcaption></figure>
+
+<h2>5.8 Breakdown: how the material says no</h2>
+<p>A field strong enough to rip electrons out of atoms ends the insulator's career. Two completely different
+mechanisms, one for gases and one for solids, and a JEE/INPhO favourite is to distinguish them.</p>
+<p><b>Gas — avalanche (streamer) breakdown.</b> An electron crossing the gap multiplies: <m>n(x)=n_0e^{\alpha x}</m>
+with the first Townsend coefficient <m>\alpha/p=A\,e^{-Bp/E}</m> (collisions must be frequent enough <em>and</em> each
+must gain the ionization energy <m>W_i</m> between collisions — hence the exponential in <m>p/E</m>). Ions racing back
+to the cathode liberate <m>\gamma</m> secondaries each, and self-sustained discharge begins when</p>
+<div class="eqd">\gamma\left(e^{\alpha d}-1\right)=1\qquad\Longrightarrow\qquad
+\boxed{V_B=\frac{B\,pd}{\ln(A\,pd)-\ln\ln\!\left(1+\frac1\gamma\right)}}\qquad\text{(Paschen)}</div>
+<p>Only the product <m>pd</m> matters, because doubling both the pressure and the gap doubles the number of
+collisions per electron while halving the field — an exact trade. The curve therefore has a <b>minimum</b>: too few
+collisions on the low-<m>pd</m> side, electrons too short of breath between collisions on the high-<m>pd</m> side.
+With <m>c\equiv\ln\ln(1+1/\gamma)</m>, setting <m>dV_B/d(pd)=0</m> gives the exact results</p>
+<div class="eqd" data-tag="5.9">pd_{\min}=\frac{e^{1+c}}{A},\qquad V_{\min}=\frac{eB}{A}\ln\!\left(1+\frac1\gamma\right)</div>
+<p>For air these land, memorably, at <m>V_{\min}\approx330</m> V near <m>pd\approx1</m> Pa m
+(<m>\approx0.75</m> torr cm): <b>no uniform air gap at any pressure can be broken down with less than about 330 V</b>
+— unless the electrodes are far apart enough that other things fail first. Practical anchors: <m>3</m> kV/mm for air
+at 1 atm in a uniform field, <m>\sim30</m> kV/mm at the 10 µm scale, and the left branch is why vacuum circuit
+breakers and why <m>10\ \mu</m>m MEMS gaps can switch a few hundred volts "cold".</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 230" role="img" aria-label="Sketch of a Paschen curve: breakdown voltage versus pd on log-log axes, V shaped with the minimum near 330 V, annotated with the air at 1 atm line and the MEMS region">
+  <g transform="translate(70,16)">
+    <line x1="0" y1="180" x2="560" y2="180" class="ln"/><line x1="0" y1="0" x2="0" y2="180" class="ln"/>
+    <text x="500" y="200" class="lbl sm">pd →  (Pa·m, log)</text>
+    <text x="-46" y="16" class="lbl sm">V_B (log)</text>
+    <path d="M30,18 C120,120 200,158 262,164 C330,168 420,120 540,30" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <circle cx="268" cy="166" r="5" fill="var(--neg)"/>
+    <text x="240" y="150" class="lbl sm" fill="var(--neg)">minimum ≈ 330 V, pd ≈ 1 Pa·m (air)</text>
+    <line x1="268" y1="166" x2="268" y2="180" class="thinl"/>
+    <line x1="0" y1="120" x2="560" y2="120" stroke="var(--amber)" stroke-dasharray="5 4"/>
+    <text x="380" y="112" class="lbl sm" fill="var(--amber)">V = 1 kV: only gaps in the shaded pd band flash over</text>
+    <line x1="430" y1="0" x2="430" y2="180" stroke="var(--muted)" stroke-dasharray="4 4"/>
+    <text x="356" y="-4" class="lbl sm">1 atm: pd = 10⁵·d ⇒ d = 1 mm here</text>
+    <line x1="150" y1="0" x2="150" y2="180" stroke="var(--muted)" stroke-dasharray="4 4"/>
+    <text x="60" y="-4" class="lbl sm">vacuum / MEMS: left branch</text>
+    <text x="196" y="196" class="lbl sm">10⁻²</text><text x="386" y="196" class="lbl sm">1</text><text x="526" y="196" class="lbl sm">10²</text>
+    <text x="30" y="66" class="lbl sm">on this branch the electrons</text>
+    <text x="30" y="80" class="lbl sm">never reach W_i: field</text>
+    <text x="30" y="94" class="lbl sm">emission, not gas, decides</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.6</b> — Paschen curve for air, sketched. Log-log, so the two branches are nearly straight with
+slope ≈ 1 on the right. The minimum is the single most useful fact: it makes a low-pressure gap a <em>better</em>
+insulator, which is why "evacuate to increase the withstand voltage" works only until field emission takes over.</figcaption></figure>
+
+<p><b>Solid — intrinsic strength, then defects.</b> An electron needs the band-gap energy <m>W_g</m> before it can
+avalanche; the maximum work a field can do between scattering events is <m>eEa</m> with <m>a</m> a lattice spacing,
+so</p>
+<div class="eqd" data-tag="5.10">E_{\text{ideal}}\sim\frac{W_g}{ea}\ \approx\ \frac{5\ \text{eV}}{e\times0.3\ \text{nm}}=1.7\times10^{10}\ \text{V/m}</div>
+<p>Measured strengths are 20–100× lower (PE ~ 500 MV/m, alumina ~ 10 MV/m) because failure is nucleated by
+inhomogeneity: voids (§5.5), inclusions, electrode asperities that multiply the local field, and by the volume of
+material at risk. That last one is a <em>statistical</em> statement worth knowing in this form — the Weibull law
+<m>P_{\text{fail}}=1-\exp\!\left[-(E/E_0)^{m}(V/V_0)\right]</m>: the same dielectric area in twice the volume is twice
+as likely to fail, and thin films are stronger than thick ones of the same material at the same field. It is the
+reason a 10 nm gate oxide withstands ~10 MV/cm while a 1 mm slab of the same ceramic takes a tenth of that, and the
+reason capacitor datasheets quote <em>rated</em> voltage near half the breakdown value.</p>
+<div class="box histo"><p class="bt">And the vacuum?</p>
+<p>Nothing to ionize, so no gas breakdown at all — until the cathode gives up. Field emission current obeys the
+Fowler–Nordheim law <m>J\propto E^{2}\exp(-b/E)</m>, so a 20% increase in field raises the emission by 10×; the
+emitted electrons cook the tip, the tip melts, plasma forms, and a "vacuum" gap arcs at
+<m>\sim20</m>–<m>\sim100</m> MV/m depending on conditioning history. This is the actual ceiling of particle
+accelerators (copper structures run at ~30 MV/m, superconducting ones are limited to ~35–45 MV/m by the same
+phenomenon, historically parameterised as the Kilpatrick criterion). A question that asks "what limits a capacitor
+in vacuum?" wants <em>this</em>, not "nothing".</p></div>
+
+<h2>5.9 Losses, tan δ, and the frequency dependence of κ</h2>
+<p>Because every mechanism has a finite response time, <m>\kappa</m> is a function of frequency and — when there is a
+phase lag — a <em>complex</em> one. For a single relaxation time (Debye):</p>
+<div class="eqd" data-tag="5.11">\kappa(\omega)=\kappa_\infty+\frac{\kappa_s-\kappa_\infty}{1+i\omega\tau}
+\quad\Rightarrow\quad \kappa'=\kappa_\infty+\frac{\Delta}{1+\omega^{2}\tau^{2}},\qquad
+\kappa''=\frac{\Delta\,\omega\tau}{1+\omega^{2}\tau^{2}},\qquad \Delta=\kappa_s-\kappa_\infty</div>
+<p><m>\kappa''</m> peaks at <m>\omega\tau=1</m> with height <m>\Delta/2</m>, and the pair <m>(\kappa',\kappa'')</m>
+traces a <b>semicircle</b> of radius <m>\Delta/2</m> centred on <m>(\kappa_\infty+\Delta/2,\,0)</m> — a favourite
+"show that" in Olympiad preliminary rounds, and one line of algebra from (5.11):
+<m>(\kappa'-\kappa_\infty-\Delta/2)^{2}+(\kappa'')^{2}=(\Delta/2)^{2}</m>.</p>
+<p>Adding ohmic conduction (free carriers drifting, not relaxing) puts a second, much more important, loss term in the
+imaginary part, <m>\kappa''_{\sigma}=\sigma/\omega\varepsilon_0</m>, which <em>diverges</em> as <m>\omega\to0</m>. The
+measured loss tangent is</p>
+<div class="eqd" data-tag="5.12">\tan\delta=\frac{\kappa''}{\kappa'}=\frac{\text{loss}}{\text{storage}},\qquad
+\langle p\rangle=\frac12\omega\varepsilon_0\kappa'\tan\delta\,E_0^{2}\quad[\text{W/m}^3]</div>
+<p>Everything in capacitor technology is a consequence of those two formulas: why mica and polystyrene and C0G
+ceramics are used in tuned circuits (<m>\tan\delta&lt;10^{-4}</m>, so a high-Q filter is possible), why X7R
+("flexible") ceramics are fine for decoupling but terrible in an oscillator (κ wanders ±15% with temperature
+because BaTiO₃ is marching towards its Curie point), why an electrolytic gets warm at 100 kHz ripple, and why
+"low-ESR" is a loss statement, not a size statement.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 220" role="img" aria-label="Left: Debye dispersion of kappa prime and kappa double prime versus log frequency. Right: the corresponding semicircle in the complex kappa plane">
+  <g transform="translate(60,14)">
+    <line x1="0" y1="160" x2="300" y2="160" class="ln"/><line x1="0" y1="0" x2="0" y2="160" class="ln"/>
+    <text x="230" y="180" class="lbl sm">log ω →</text>
+    <path d="M10,30 L120,32 C160,44 180,120 210,140 L292,144" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+    <text x="16" y="24" class="lbl sm" fill="var(--accent)">κ′ : κs = 80</text>
+    <text x="250" y="134" class="lbl sm" fill="var(--accent)">κ∞ = 1.8</text>
+    <path d="M100,158 C140,150 150,60 165,58 C182,58 196,150 236,158" fill="none" stroke="var(--neg)" stroke-width="2.4" stroke-dasharray="6 3"/>
+    <text x="150" y="46" class="lbl sm" fill="var(--neg)">κ″ peaks at ωτ = 1</text>
+    <line x1="165" y1="58" x2="165" y2="160" class="thinl"/>
+    <text x="146" y="176" class="lbl sm">1/τ</text>
+  </g>
+  <g transform="translate(440,14)">
+    <line x1="0" y1="120" x2="230" y2="120" class="ln"/><line x1="20" y1="120" x2="20" y2="12" class="ln"/>
+    <text x="180" y="138" class="lbl sm">κ′ →</text><text x="-14" y="20" class="lbl sm">κ″</text>
+    <path d="M40,120 A90,90 0 0 0 220,120" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <circle cx="130" cy="120" r="4" fill="var(--fg)"/>
+    <text x="118" y="140" class="lbl sm">κ∞+Δ/2</text>
+    <text x="34" y="112" class="lbl sm">κ∞</text><text x="206" y="112" class="lbl sm">κs</text>
+    <line x1="130" y1="120" x2="184" y2="52" class="thinl"/>
+    <text x="150" y="80" class="mi sm">Δ/2</text>
+    <text x="150" y="34" class="lbl sm">ωτ = 1 at the top</text>
+    <text x="6" y="160" class="lbl sm">Cole–Cole: a real semicircle ⇒ single τ;</text>
+    <text x="6" y="176" class="lbl sm">flattened arc ⇒ a distribution of τ (real polymers).</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.7</b> — Loss is a <em>transition</em>, not a resonance: <m>\kappa''</m> is largest where
+<m>\kappa'</m> is falling fastest, i.e. where the field period matches the relaxation time. The loss peaks at both
+ends of each mechanism's step and vanishes in between — which is precisely why "avoid the absorption line" advice for
+capacitor dielectrics is really "pick a region where <m>\omega\tau\ll1</m> for every mechanism you have".</figcaption></figure>
+
+<div class="box trap"><p class="bt">The microwave myth, done with numbers</p>
+<p>"2.45 GHz matches a water resonance" is false, and a good exam answer says so with arithmetic. Water's orientational
+relaxation at 25 °C is <m>\tau=8.3</m> ps, so its loss peak is at
+<m>f=1/2\pi\tau=19</m> GHz. At 2.45 GHz, <m>\omega\tau=0.128</m>, giving
+<m>\kappa''=\Delta\omega\tau/(1+\omega^{2}\tau^{2})\approx9</m> against <m>\kappa'=78</m>: <m>\tan\delta=0.12</m>,
+i.e. water is a <em>moderately</em> lossy dielectric sitting on the low-frequency flank of its own relaxation, with
+pure water's ionic conduction contributing only <m>\sigma/\omega\varepsilon_0=4\times10^{-2}</m> at tap-water
+conductivity and about 40 at sea water. Consequences that are testable: (i) the oven's 2.45 GHz is a legal ISM band,
+not a molecular line; (ii) penetration depth is <m>\sim</m> cm, which is why a thick chicken heats at the edges and
+cooks inward by conduction; (iii) distilled water in a clean plastic cup stays cold, salt it and it boils — the
+heating is dominated by whatever <m>\sigma</m> you add once <m>\sigma\gtrsim0.1</m> S/m. A cavity, incidentally, is a
+<em>resonator</em>: it resonates at 2.45 GHz whether or not the food does, and the standing-wave pattern, not the
+molecular spectrum, is why you need a turntable.</p></div>
+
+<h2>5.10 When P has a memory: ferroelectrics, piezoelectrics, electrets</h2>
+<p>Everything so far assumed one curve <m>P(E)</m>, single-valued. Below a Curie temperature the feedback of §5.4
+wins and the material has spontaneous polarization; <m>P(E)</m> becomes a <em>loop</em>:</p>
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 700 230" role="img" aria-label="Hysteresis loop of polarisation versus field with remanent polarisation and coercive field marked, and the dielectric constant as the slope of a chord">
+  <g transform="translate(90,14)">
+    <line x1="240" y1="0" x2="240" y2="200" class="ln"/><line x1="0" y1="100" x2="480" y2="100" class="ln"/>
+    <text x="452" y="116" class="lbl sm">E →</text><text x="246" y="12" class="lbl sm">P ↑</text>
+    <path d="M40,180 C120,150 190,60 240,52 C300,44 400,40 440,36" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <path d="M440,164 C380,168 300,150 240,148 C190,142 120,60 40,20" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <path d="M40,20 C60,18 66,24 40,180" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"/>
+    <path d="M440,36 C420,34 414,44 440,164" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"/>
+    <circle cx="240" cy="52" r="4" fill="var(--pos)"/><text x="248" y="46" class="lbl sm" fill="var(--pos)">+P_s</text>
+    <circle cx="240" cy="148" r="4" fill="var(--neg)"/><text x="248" y="162" class="lbl sm" fill="var(--neg)">−P_s</text>
+    <circle cx="176" cy="100" r="4" fill="var(--fg)"/><text x="130" y="92" class="lbl sm">−E_c</text>
+    <circle cx="306" cy="100" r="4" fill="var(--fg)"/><text x="292" y="92" class="lbl sm">+E_c</text>
+    <circle cx="240" cy="100" r="0.5"/>
+    <text x="216" y="86" class="lbl sm"></text>
+    <text x="248" y="86" class="lbl sm">P_r here</text>
+    <line x1="240" y1="100" x2="176" y2="100" stroke="var(--amber)" stroke-width="2.4"/>
+    <line x1="240" y1="100" x2="306" y2="100" stroke="var(--amber)" stroke-width="2.4"/>
+    <text x="30" y="200" class="lbl sm">κ = dD/dE = slope of a chord of this loop: enormous near E_c,</text>
+    <text x="30" y="214" class="lbl sm">finite and history-dependent — a 1000-κ BaTiO₃ is 1000 only because it is near its own catastrophe.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 5.8</b> — Ferroelectric hysteresis. <m>P_r</m> (remanence) is non-volatile memory; <m>E_c</m>
+(coercive field) is the write energy; the loop area is the loss per cycle per unit volume,
+<m>\oint E\,dP</m> — the same object as a <m>\tan\delta</m>, in a different dress:
+<m>\tan\delta=\dfrac{\oint E\,dP}{\pi E_{\max}P_{\max}}</m> for a sinusoid.</figcaption></figure>
+<ul>
+<li><b>Why κ is huge and lossy at once.</b> The chord slope of the loop is what a meter reports; near switching,
+domains move almost for free, so <m>dP/dE</m> is enormous — the same 1000× that makes a BaTiO₃ capacitor 500× smaller
+than a film one makes it a <m>\tan\delta\sim0.02</m> heater and makes its capacitance a function of the DC bias
+voltage (a "10 µF, 16 V" X5R part is 4 µF at 12 V DC: the loop is being traversed in a smaller and smaller chord).
+This single paragraph explains three datasheet oddities that students are told to memorise.</li>
+<li><b>Piezoelectricity</b> is the same loop read sideways: if the crystal has no centre of inversion, strain changes
+<m>\vec P_s</m> and hence <m>\sigma_b</m>, so stress <em>is</em> charge. Quantitatively,
+<m>\Delta P=d_{33}\sigma</m> with <m>d_{33}</m> in C/N, so a force <m>F</m> on an electrode of area <m>A</m> and
+thickness <m>t</m> delivers <m>Q=d_{33}F</m> and <m>V=Q/C=d_{33}Ft/\varepsilon_0\kappa A</m>. Quartz
+<m>d_{33}=2.3</m> pC/N, PZT ceramics 300–600 pC/N — the 200× is a loop-area effect, not a different mechanism.
+Converse form (voltage → strain) is the basis of every ink-jet head and AFM scanner.</li>
+<li><b>Pyroelectricity</b>: <m>P_s</m> is temperature dependent, so <m>i=A\,\dfrac{dP_s}{dT}</m>. A heated sensor
+therefore produces current <em>only while its temperature changes</em> — the reason IR detectors must see a
+<em>chopped</em> or moving source, and the reason a pyro sensor with a 10 GΩ resistor reads dark current, not
+temperature.</li>
+<li><b>Electrets</b> are ferroelectrics with the loop left at <m>E=0,\ P=P_r</m>: a dielectric carrying permanent
+bound charge, hence a capacitor with permanent <m>Q_b</m> and hence a permanent <m>V</m> across an open circuit
+(<m>\sim</m> tens of volts, for years — the leakage is <m>10^{15}\ \Omega</m> m, not infinite, but close enough).
+The microphone in your laptop: an electret layer of charge <m>\sigma_b</m> sits under a conducting diaphragm a distance
+<m>\ell-x</m> away, and with the charge frozen the voltage follows the capacitance,
+<div class="eqd">V=\frac{Q}{C}=\frac{\sigma_b(\ell-x)}{\varepsilon_0}\ \Rightarrow\
+\delta v=-\frac{\sigma_b}{\varepsilon_0}\,\delta x\qquad(\text{and }i=\frac{Q}{C}\frac{dC}{dt})</div>
+Since the source impedance at 1 kHz is <m>1/\omega C\approx16</m> MΩ for a 10 pF capsule, the little three-pin can
+must contain a JFET buffer — not for gain, for impedance. (Tapping noise: the same <m>d_{33}</m> in the supporting
+ceramic, plus triboelectric charge on the insulating ring — which is why a "shock mount" matters more than
+amplifier design.)</li>
+</ul>
+
+<h2>5.11 Materials table, and how to read it</h2>
+<table class="tb">
+<thead><tr><th>material</th><th class="e">κ (1 kHz)</th><th class="e">tan δ</th><th class="e">E_b, MV/m</th><th class="e">u_max = ½ε₀κE_b², J/cm³</th><td>notes</td></tr></thead>
+<tbody>
+<tr><td>vacuum</td><td class="e">1</td><td class="e">—</td><td class="e">electrode-limited (20–100)</td><td class="e">0.09–2</td><td>lossless; the only dielectric with no dispersion</td></tr>
+<tr><td>air (STP)</td><td class="e">1.0006</td><td class="e"><m>10^{-4}</m></td><td class="e">3 (uniform, ≥ mm)</td><td class="e">0.013</td><td>κ−1 ∝ pressure; the pressure gauge <em>is</em> a capacitor</td></tr>
+<tr><td>PTFE</td><td class="e">2.1</td><td class="e"><m>2\times10^{-4}</m></td><td class="e">60</td><td class="e">0.35</td><td>lowest loss of any solid; absorbs nothing</td></tr>
+<tr><td>polypropylene</td><td class="e">2.2</td><td class="e"><m>2\times10^{-5}</m></td><td class="e">650</td><td class="e">41</td><td>the power/film capacitor; self-healing with metallisation</td></tr>
+<tr><td>mica</td><td class="e">5.4</td><td class="e"><m>5\times10^{-5}</m></td><td class="e">100</td><td class="e">2.4</td><td>no bias dependence; RF and HV standards</td></tr>
+<tr><td>alumina (96%)</td><td class="e">9.4</td><td class="e"><m>10^{-3}</m></td><td class="e">10</td><td class="e">4.2</td><td>substrate; strength set by pores, not by Al₂O₃</td></tr>
+<tr><td>glass</td><td class="e">5–10</td><td class="e"><m>10^{-3}\text{–}10^{-2}</m></td><td class="e">10–40</td><td class="e">0.2–2</td><td>huge batch-to-batch spread; ionic loss at high T</td></tr>
+<tr><td>SiO₂</td><td class="e">3.9</td><td class="e"><m>10^{-5}</m></td><td class="e">1000 (thin film)</td><td class="e">17</td><td>why gate oxides are measured in MV/cm</td></tr>
+<tr><td>Si₃N₄ / SiN</td><td class="e">7</td><td class="e"><m>10^{-3}</m></td><td class="e">~600</td><td class="e">11</td><td>MEMS structural + insulating at once</td></tr>
+<tr><td>distilled water</td><td class="e">78</td><td class="e">0.12 (2.45 GHz)</td><td class="e">65 (pulsed)</td><td class="e">1.5</td><td>lossy and dispersive; see the trap box</td></tr>
+<tr><td>TiO₂ (rutile)</td><td class="e">60–170</td><td class="e"><m>10^{-2}</m></td><td class="e">~30</td><td class="e">0.4</td><td>tensor: κ_∥c ≠ κ_⊥c</td></tr>
+<tr><td>SrTiO₃ (cryogenic)</td><td class="e">10⁴–2×10⁴</td><td class="e">—</td><td class="e">—</td><td class="e">—</td><td>quantum paraelectric: never orders, κ saturates by 4 K</td></tr>
+<tr><td>BaTiO₃ / X7R</td><td class="e">1000–6000</td><td class="e"><m>10^{-2}\text{–}10^{-1}</m></td><td class="e">3–10</td><td class="e">0.1–0.5</td><td>bias- and T-dependent; ferroelectric</td></tr>
+<tr><td>PZT</td><td class="e">1200–3000</td><td class="e">0.02</td><td class="e">~15</td><td class="e">0.15</td><td><m>d_{33}</m> 300–600 pC/N; the actuator</td></tr>
+</tbody></table>
+<p>The right-hand column is the one to look at first. <b>Energy density at the breakdown limit</b>,
+<m>u=\tfrac12\varepsilon_0\kappa E_b^{2}</m>, is the figure of merit for a storage capacitor, and it is dominated by
+<m>E_b^{2}</m>, not by <m>\kappa</m>: polypropylene's mediocre 2.2 with a spectacular 650 MV/m beats a 6000-κ
+ferroelectric with 10 MV/m by a factor of 100. That is the entire reason the "biggest capacitor" in a pulse-formation
+line is a stack of film, not ceramic — and that is the correct answer to "why doesn't everybody use BaTiO₃?"</p>
+
+<h2>Questions</h2>
+<p>Try each before opening its solution; the first four are the ones JEE asks with the numbers changed.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>A parallel-plate capacitor (<m>A=100\ \text{cm}^2</m>, <m>d=1.0\ \text{mm}</m>) is charged to 100 V and <em>left connected</em> to the supply. A sheet of mica (<m>\kappa=5.4</m>) is then slid fully into the gap. Compute every quantity in the audit: <m>C,Q,E,D,\sigma_f,\sigma_b,U</m>, the work the battery does, and the mechanical work the slab gains.</b><span class="diff">JEE-adv · the audit</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Vacuum values from <m>\varepsilon_0A/d</m>: <m>C_0=88.5</m> pF, <m>Q_0=8.85</m> nC, <m>E_0=V/d=10^{5}</m> V/m,
+<m>D_0=8.85\times10^{-7}</m> C/m², <m>U_0=\tfrac12C_0V^{2}=0.443</m> µJ.</p>
+<p>With the gap filled and <m>V</m> held: <m>E</m> is <em>fixed</em> by <m>V/d</m> — this is the whole trick, the field
+does <strong>not</strong> fall — so <m>D=\varepsilon_0\kappa E=4.78\times10^{-6}</m> C/m², and
+<m>\sigma_f=D</m> since <m>D_n</m> equals the free surface charge density:</p>
+<div class="eqd">C=478\ \text{pF},\quad Q=47.8\ \text{nC},\quad \sigma_f=4.78\ \mu\text{C/m}^2,\quad
+P=D-\varepsilon_0E=3.89\ \mu\text{C/m}^2=\sigma_b,\quad U=2.39\ \mu\text{J}</div>
+<p>Check the audit: <m>\sigma_b=\varepsilon_0(\kappa-1)E=8.85\times10^{-12}\times4.4\times10^{5}=3.9\times10^{-6}</m>
+✓, and <m>E=(\sigma_f-\sigma_b)/\varepsilon_0=(4.78-3.89)\times10^{-6}/8.85\times10^{-12}=1.0\times10^{5}</m> V/m ✓ —
+the field is exactly what the battery demands, as it must be.</p>
+<p>Energy balance: the battery moved charge <m>\Delta Q=38.9</m> nC through 100 V, so
+<m>W_{\text{bat}}=3.89</m> µJ. The field's energy grew by <m>\Delta U=1.95</m> µJ — exactly half — so</p>
+<div class="eqd">W_{\text{mech}}=W_{\text{bat}}-\Delta U=+1.95\ \mu\text{J}</div>
+<p>is the work the slab delivers (it arrives hot; the same 1.95 µJ is what you must hold back). Half the battery's work
+to the field, half to mechanics, always, for any linear dielectric at fixed voltage. If the capacitor had been
+<em>disconnected</em> first, <m>Q</m> would stay at 8.85 nC, <m>E</m> would drop to <m>1.85\times10^{4}</m> V/m and the
+work available would be only <m>U_0-U=0.443-0.082=0.36</m> µJ, all of it from the field.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>You may insert a slab of dielectric of thickness <m>t</m> into a known gap <m>d</m> and measure <m>C</m>. (i) Derive <m>C(t)</m>. (ii) Show that one measurement with <m>t</m> unknown determines <em>neither</em> <m>t</m> nor <m>\kappa</m>, and that two measurements with the same slab at thicknesses <m>t_1,t_2</m> (measured) suffice for κ but a third is needed to find <m>d</m> if it is unknown. (iii) What extra, non-capacitance measurement makes the mystery slab fully characterised?</b><span class="diff">JEE-adv · identifiability</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(i)</b> Three layers in series (air, slab, air) sharing <m>D=\sigma_f</m>:</p>
+<div class="eqd">\frac1{C(t)}=\frac{d-t}{\varepsilon_0A}+\frac{t}{\kappa\varepsilon_0A}
+=\frac{d-t\!\left(1-\frac1\kappa\right)}{\varepsilon_0A}\qquad\Longrightarrow\qquad
+C(t)=\frac{\varepsilon_0A}{d-s},\quad s\equiv t\!\left(1-\frac1\kappa\right)</div>
+<p><b>(ii)</b> The measurement returns one number, and it can only ever return the combination <m>s</m>. Any pair
+<m>(t,\kappa)</m> with the same <m>s</m> gives the same <m>C</m>: <m>t=0.5</m> mm with <m>\kappa=2</m> and
+<m>t=0.9</m> mm with <m>\kappa=11.25</m> are experimentally identical at one thickness. Two thicknesses give <m>s_1=0.25\,t_1,\ s_2=0.25\,t_2</m> — i.e. two numbers, so both <m>t</m> and <m>\kappa</m> can be had:</p>
+<div class="eqd">\frac{s_1}{s_2}=\frac{t_1}{t_2}\ \Rightarrow\ \text{nothing new unless }s_i\text{ are measured — and }
+\frac{s_1}{t_1}=\frac{s_2}{t_2}=1-\frac1\kappa\ \Rightarrow\ \boxed{\kappa=\left(1-\frac{s_1}{t_1}\right)^{-1}}</div>
+<p>but <m>d</m> still enters only through <m>\varepsilon_0A/d=1/C(0)</m>, so an <m>A</m> or <m>d</m> you do not know is
+a third unknown that no amount of <m>t</m>-variation removes: the empty-gap reading <m>C(0)</m> is the third
+measurement, and if it cannot be made (you cannot remove the spacer), you need an independent length measurement or an
+independent way to know <m>A</m>.</p>
+<p><b>(iii)</b> A <em>weight</em> or a <em>thickness</em> of the free slab (callipers, or Archimedes) plus
+<m>A</m> from the plate geometry pins <m>t</m> directly; alternatively measure the pull-in force of the slab
+(<m>F=\tfrac12V^{2}dC/dx</m> depends on <m>\kappa</m> but not on <m>t</m> once the slab is at the mouth… which is a
+different degeneracy — see the point below).</p>
+<p class="note"><b>The actual lesson.</b> "What can this experiment determine?" is a different and harder question than
+"what does this experiment give me?", and JEE Advanced has asked exactly this form several times (a rod in a wedge, a
+wire of unknown resistivity and area). Write the answer as a statement about which <em>combinations</em> of
+parameters the measurement constrains, not about numbers.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>A sphere of radius R carries a frozen-in uniform polarisation P (an electret). Find the field everywhere, inside and out, and the force on it if it sits in an external uniform field E₀.</b><span class="diff">Olympiad · the local-field geometry</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Bound charge: <m>\rho_b=-\vec\nabla\cdot\vec P=0</m> inside (uniform <m>\vec P</m>), and
+<m>\sigma_b=\vec P\cdot\hat r=P\cos\theta</m> on the surface. A pure <m>\cos\theta</m> sheet is the
+<m>l=1</m> harmonic, so the potential contains no other term:</p>
+<div class="eqd">V_{\text{in}}=\frac{Pr\cos\theta}{3\varepsilon_0},\qquad
+V_{\text{out}}=\frac{P R^{3}\cos\theta}{3\varepsilon_0r^{2}}
+\qquad\Rightarrow\qquad \vec E_{\text{in}}=-\frac{\vec P}{3\varepsilon_0},\quad
+\vec p_{\text{out-dipole}}=\frac{4\pi R^{3}}{3}\vec P=V\vec P\ \checkmark</div>
+<p>(Both follow from the ansatz <m>V_{\text{in}}=Ar\cos\theta</m>, <m>V_{\text{out}}=-E_0r\cos\theta+Br^{-2}\cos\theta</m> with <m>V</m> continuous and <m>D_n</m> jumping by <m>\sigma_b</m>; the exterior check is that the field is a pure dipole whose moment equals the total dipole moment of the material, as it must be at long range.) The internal field is
+<em>uniform and opposite to</em> <m>\vec P</m> — this is the depolarizing field, and the number <m>1/3</m> is the same
+factor as in (5.4): <b>the Lorentz local field of §5.4 is literally the field of this polarized sphere removed.</b></p>
+<p>In an external field the sphere <em>as a whole</em> feels no force (uniform field, net charge zero), but a torque if
+<m>\vec P</m> is not parallel to <m>\vec E_0</m>: <m>\vec\tau=\vec p\times\vec E_0</m>, i.e. the electret aligns. In a
+<em>non-uniform</em> field, <m>\vec F=(\vec p\cdot\vec\nabla)\vec E_0=\frac{4\pi R^{3}}{3}(\vec P\cdot\vec\nabla)\vec E_0</m>.
+Notice what is <em>not</em> here: no <m>1/2</m> and no <m>\kappa</m>, because the polarization is frozen, not induced — a
+permanent electret ball is pulled toward <em>weaker</em> or <em>stronger</em> field depending on its orientation, which
+no induced-dipole dielectric can do. That contrast is the point of the question.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>A high-voltage bushing has a solid dielectric of κ = 4.5 with a thin air gap (a delamination) of thickness 2 % of the total gap between the electrodes. If the working field in the solid is at 40 % of its breakdown strength (30 MV/m), what fraction of the air's breakdown strength (3 MV/mm) is present in the void? Does the void discharge?</b><span class="diff">JEE-adv → real</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Series layers share <m>D</m>, so <m>E_{\text{void}}/E_{\text{solid}}=\kappa_{\text{solid}}/\kappa_{\text{void}}=4.5</m>:</p>
+<div class="eqd">E_{\text{void}}=4.5\times0.4\times30=54\ \text{MV/m}\ \gg 3\ \text{MV/mm}=3\ \text{MV/m}\times10^3/\ldots</div>
+<p><b>Do not use 3 kV/mm here.</b> That rule is for millimetre gaps; a 5 µm void sits far to the left of the Paschen
+minimum, where the <em>voltage</em> needed rises again as the gap shrinks. Compare voltages, not fields: the void
+carries <m>V_{\text{void}}=E_{\text{void}}t_{\text{void}}=54\times10^{6}\times5\times10^{-6}=270</m> V, whereas the
+same void at 1 atm needs <m>pd=10^{5}\times5\times10^{-6}=0.5</m> Pa m, for which Paschen gives
+<m>\approx340</m> V (left of the 330 V minimum). So it does <em>not</em> discharge today — but it is within 20% of
+inception, and any growth of the void raises its voltage and lowers its withstand at the same time, meeting at the
+330 V minimum where <m>pd\approx1</m> Pa m i.e. <m>t_{\text{void}}\approx10\ \mu</m>m. That is the design fact:
+<b>the most dangerous void is a 10 µm one</b>, and delamination walks straight through it.</p>
+<p><b>The general design rule this teaches:</b> the field in a void is <m>\kappa_{\text{solid}}</m> times the average,
+but the <em>strength</em> of a void rises as it shrinks (Paschen). Between them these two effects set a
+worst-case void size, and insulation engineers spend their lives on exactly that calculation; it is also why
+"partial discharge inception voltage" is measured in pC, not kV, and why the answer to "will it fail?" is "not today,
+but the void is the right size for it to be the seed". Expect the JEE version to be one line
+(<m>E_{\text{void}}=\kappa E_{\text{solid}}</m>) and the Olympiad version to be exactly this paragraph.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Liquid argon has ρ = 1.4 g cm⁻³, M = 40 g mol⁻¹ and atomic polarisability 1.64×10⁻⁴⁰ F m². Predict its dielectric constant, and compare with the measured 1.28. Then predict the refractive index of liquid argon from the same α and say what you would conclude if the measurement gave n = 1.25.</b><span class="diff">Olympiad · Clausius–Mossotti at work</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>n_{\text{mol}}=\rho N_A/M=(1.4/40)\times6.02\times10^{23}=2.11\times10^{22}\ \text{cm}^{-3}=2.11\times10^{28}\ \text{m}^{-3}</m>, so</p>
+<div class="eqd">\frac{n\alpha}{3\varepsilon_0}=\frac{2.11\times10^{28}\times1.64\times10^{-40}}{2.656\times10^{-11}}=0.1302
+\quad\Rightarrow\quad \kappa=\frac{1+2y}{1-y}=\frac{1.260}{0.870}=1.449</div>
+<p>Measured 1.28 vs predicted 1.45: a 12% error in the right direction — <m>\kappa</m> is overpredicted because the
+Lorentz field <m>P/3\varepsilon_0</m> assumes a <em>dilute</em> cavity, while at packing fraction ~0.5 the short-range
+correlations of neighbouring atoms <em>reduce</em> the effective field (the "cage" pushes back). This is exactly the
+correction Onsager and Kirkwood make for liquids, and the sign of the discrepancy is a real, classic result.</p>
+<p>At optical frequencies the same formula with the same <m>\alpha</m> gives <m>n^{2}=\kappa_{\text{opt}}=1.45</m>,
+i.e. <m>n=1.20</m>. If the measured index were 1.25 — <em>larger</em> than the Clausius-Mossotti prediction at the same
+density — you would conclude the polarizability the light sees is bigger than the static one, which for a rare gas is
+impossible in this direction (the static value includes everything; dispersion raises <m>\alpha(\omega)</m> only as you
+approach a resonance, and argon's first line is at 105 nm, far above visible). So a 1.25 index in "liquid argon"
+would be a <em>diagnostic</em>: it means you are not looking at pure argon (a heavier contaminant, e.g. dissolved N₂
+or O₂ with much larger <m>\alpha</m>, does exactly this) or that the density is higher than quoted. Turning a
+discrepancy into an instrument is the skill; refractometers are, in fact, how cryogenic liquid level and purity are
+checked.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Water: κ_s = 80, κ_∞ = 1.8, τ = 8.3 ps at 25 °C. Find the frequency of maximum loss, the peak value of κ″, the loss tangent at 2.45 GHz, and the field in which the volumetric heating reaches 1 kW/L.</b><span class="diff">JEE-adv · numbers that matter</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">f_{\max}=\frac1{2\pi\tau}=19.2\ \text{GHz},\qquad \kappa''_{\max}=\frac{\Delta}2=\frac{78.2}2=39.1</div>
+<p>At 2.45 GHz, <m>\omega\tau=2\pi\times2.45\times10^{9}\times8.3\times10^{-12}=0.128</m>:</p>
+<div class="eqd">\kappa'=\kappa_\infty+\frac{78.2}{1+0.016}=78.9,\qquad \kappa''=\frac{78.2\times0.128}{1.016}=9.85,
+\qquad \tan\delta=0.125</div>
+<p>Heating <m>\langle p\rangle=\tfrac12\omega\varepsilon_0\kappa''E_0^{2}</m>; taking 1 kW/L = <m>10^{6}</m> W/m³ and
+<m>10^{6}</m> W/m³:</p>
+<div class="eqd">E_0=\sqrt{\frac{2\times10^{6}}{\omega\varepsilon_0\kappa''}}=\sqrt{\frac{2\times10^{6}}{1.539\times10^{10}\times8.85\times10^{-12}\times9.85}}
+=1.21\times10^{3}\ \text{V/m}</div>
+<p>A kilovolt per metre to boil a litre a second — and correspondingly the penetration depth is only
+<m>1/\alpha=2/(\omega\sqrt{\mu_0\varepsilon_0\kappa'}\tan\delta)\approx3.5</m> cm, which is why a microwave oven is a
+<em>surface</em> heater. Every number here is a direct consequence of (5.11) and (5.12); nothing about "resonant
+water" appears, because it doesn't.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>(Olympiad standard) A dielectric sphere of permittivity ε = κε₀ and radius R is placed in a uniform field E₀. Solve for the potential everywhere, then (i) obtain E inside, (ii) obtain the induced dipole moment and hence the polarizability, (iii) recover the Clausius–Mossotti law for a dilute suspension, and (iv) state the force on the sphere in a field gradient and its sign for κ_p &lt; κ_m.</b><span class="diff">Olympiad · the derivation to know cold</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Ansatz.</b> No free charge anywhere, so <m>\nabla^{2}V=0</m> in both regions; the far field is
+<m>V\to-E_0r\cos\theta</m> and the only way to keep <m>l=1</m> everywhere (the boundary data is <m>\cos\theta</m>) is</p>
+<div class="eqd">V_{\text{in}}=-A\,r\cos\theta,\qquad V_{\text{out}}=-E_0r\cos\theta+\frac{B\cos\theta}{r^{2}}</div>
+<p><b>Match at</b> <m>r=R</m>: continuity of <m>V</m> gives <m>AR=E_0R-B/R^{2}</m>; continuity of <m>D_n=-\varepsilon\partial V/\partial r</m>
+gives <m>\varepsilon A=\varepsilon_0\!\left(E_0+2B/R^{3}\right)</m>. Two linear equations:</p>
+<div class="eqd">A=\frac{3\varepsilon_0}{\varepsilon+2\varepsilon_0}E_0=\frac{3}{\kappa+2}E_0,\qquad
+B=\frac{\kappa-1}{\kappa+2}E_0R^{3}</div>
+<p><b>(i)</b> <m>\vec E_{\text{in}}=-\vec\nabla V_{\text{in}}</m> is uniform with magnitude <m>3E_0/(\kappa+2)</m>.
+Checks: <m>\kappa=1\Rightarrow E_0</m> ✓ (nothing there), <m>\kappa\to\infty\Rightarrow0</m> ✓ (a conductor), and the
+field inside a high-κ sphere is <em>weaker</em> than the applied field, unlike the void of Q4 where it is stronger —
+because there the layers were in <em>series</em> (same D) and here the inclusion is <em>parallel</em> (same V).</p>
+<p><b>(ii)</b> <m>B</m> is the dipole term, so <m>p=4\pi\varepsilon_0B</m> and</p>
+<div class="eqd">\boxed{\alpha_{\text{eff}}=4\pi\varepsilon_0R^{3}\frac{\kappa-1}{\kappa+2}}\qquad
+\left[\ \kappa\to\infty:\ \alpha=4\pi\varepsilon_0R^{3}\ \text{(conducting sphere)}\ \checkmark\ \right]</div>
+<p><b>(iii)</b> Dilute suspension, <m>P=np</m> and <m>\kappa_{\text{mix}}-1=P/\varepsilon_0E_0</m> (as <m>n\to0</m> the
+local and macroscopic fields coincide):</p>
+<div class="eqd">\kappa_{\text{mix}}-1=n\,4\pi R^{3}\frac{\kappa-1}{\kappa+2}
+\quad\xrightarrow[\ \text{now write }P=n\alpha E_{\text{loc}},\ E_{\text{loc}}=E+P/3\varepsilon_0\ ]{}\
+\frac{\kappa-1}{\kappa+2}=\frac{n\alpha}{3\varepsilon_0}</div>
+<p>i.e. <b>(5.5) is the sphere problem, twice.</b> One derivation of the CM relation from molecules in a cavity, one
+from inclusions in a host; the <m>1/3</m> is the depolarizing factor of <em>Fig. 5.2</em> right, and the reason the
+factor is <m>3</m> rather than <m>1</m> is entirely the shape of the cavity. Any other inclusion shape changes it —
+a needle along the field has zero depolarizing factor and would give <m>\kappa-1=n\alpha/\varepsilon_0</m> exactly,
+which is why rod-shaped fillers are so efficient at making a composite conductive.</p>
+<p><b>(iv)</b> Energy of an induced dipole in a field: <m>U=-\tfrac12\alpha_{\text{eff}}E^{2}</m>, so</p>
+<div class="eqd">\vec F=\frac12\alpha_{\text{eff}}\vec\nabla E^{2}=2\pi\varepsilon_0\kappa_mR^{3}
+\frac{\kappa_p-\kappa_m}{\kappa_p+2\kappa_m}\vec\nabla E^{2}</div>
+<p>For a particle in a medium, use the contrast factor with <m>\kappa=\kappa_p/\kappa_m</m>. Sign: particles with
+<m>\kappa_p&gt;\kappa_m</m> go to <em>high</em> field (positive DEP); cells in medium at low frequency go to high field
+through their membrane charge, and at high frequency their cytoplasm short-circuits and they move to
+<em>low</em> field (negative DEP) — that crossover ("Field-Fraunhofer frequency", ~0.1–10 MHz for mammalian cells) is
+how dielectrophoresis sorts live from dead cells, since a broken membrane loses its induced-charge boost. The factor
+<m>(\kappa_p-\kappa_m)/(\kappa_p+2\kappa_m)</m> is worth remembering as <em>the</em> shape factor: it is <m>1/3</m> for
+<m>\kappa_p\gg\kappa_m</m>, and it is <em>minus one half</em> for a void (<m>\kappa_p=1,\ \kappa_m=4</m>:
+<m>(1-4)/(1+8)=-1/3</m>), so voids are expelled from high-field regions with a force one third of what a metal
+particle of the same size would feel — consistent with Q4's claim that voids are found at interfaces, not in the
+bulk stress.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>(i) From Paschen's law as written in §5.8, derive the position and depth of the minimum in terms of <m>A</m>, <m>B</m> and <m>\gamma</m>. (ii) Can a 200 V circuit flash over an air gap <em>at any</em> pressure and gap length? (iii) A 1 cm vessel gap is pumped down from 1 atm: describe what its withstand voltage does, with numbers.</b><span class="diff">JEE-adv → engineering</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Position of the minimum.</b> With <m>c=\ln\ln(1+1/\gamma)</m> and <m>x=pd</m>,
+<m>V_B=Bx/(\ln Ax-c)</m>, so <m>dV_B/dx\propto(\ln Ax-c)-1</m>, which vanishes at <m>\ln Ax=1+c</m>:</p>
+<div class="eqd">pd_{\min}=\frac{e^{1+c}}{A},\qquad V_{\min}=\frac{eB}{A}\,e^{c}=\frac{eB}{A}\ln\!\left(1+\frac1\gamma\right)</div>
+<p>and the minimum's <em>existence</em> is guaranteed for any <m>A,B,\gamma&gt;0</m> — it is not a property of air. Only
+its <m>location</m> and <m>depth</m> are, via <m>A</m> and <m>B</m>.</p>
+<p><b>200 V at 1 atm.</b> Since <m>V_{\min}\approx330</m> V for air, <m>200</m> V can <em>never</em> flash over any
+air gap at <em>any</em> pressure — the whole Paschen curve sits above it. So the honest answer to "largest gap that
+can never be flashed over by 200 V" is <b>all of them</b>, and that is the answer a good student writes (it is why
+telecom and USB lines are lightning-robust in air at 3.3 V logic: no gap, however thin, breaks down, and the only
+failure mode is surface contamination, which is <em>not</em> on this curve because it depends on <m>pd</m> only for
+gaps, not along a solid: surface flashover voltage in vacuum is typically 3–10× <em>lower</em> than the corresponding
+gap voltage). If the question means 200 V <em>peak</em> with a margin, same reasoning.</p>
+<p><b>Pumping a 1 cm gap.</b> At 1 atm, <m>pd=1013\times0.01\approx10</m> Pa m — to the right of the minimum, where
+<m>V_B\propto pd/\ln(pd)</m> is increasing, so lowering <m>p</m> <em>does</em> help, until <m>pd\approx1</m> Pa m
+(the minimum, <m>p\approx100</m> Pa ≈ 0.75 torr) where it is <em>worst</em> — 330 V only! To become better than at
+1 atm you must go past the minimum to <m>pd\lesssim3</m>… i.e. below <m>\sim0.3</m> Pa (a rough order) before
+<m>V_B</m> climbs back above its 1-atm value of <m>\sim30</m> kV. So a vacuum interrupter must be <em>hard</em>
+vacuum (mPa) to beat air, and merely-partial vacuum is actively the worst possible choice. That single curve explains
+both "why vacuum circuit breakers need real vacuum" and "why a slightly leaky HV vessel is worse than a leak-free
+one at a bad pressure".</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>An isolated (uncharged) slab of dielectric κ is inserted <em>fully</em> into a capacitor of capacitance C₀ charged to Q. Find the change in energy and show that the work done by the field equals the integral of the force found in §5.6 with V(x) recomputed at each x. Where does the energy come from, physically?</b><span class="diff">JEE-adv · consistency</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">\Delta U=\frac{Q^{2}}{2C}-\frac{Q^{2}}{2C_0}=\frac{Q^{2}}{2C_0}\left(\frac1\kappa-1\right)=-0.36\ \mu\text{J (Q1 numbers, }\kappa=5.4)</div>
+<p>Energy <em>leaves</em> the field. The variable-voltage force: at insertion fraction <m>x</m>,
+<m>C(x)=C_0[1+(\kappa-1)x]</m>, <m>V(x)=Q/C(x)</m>, so</p>
+<div class="eqd">F(x)=\frac12V(x)^{2}\frac{dC}{dx}=\frac{Q^{2}C_0(\kappa-1)}{2\left[C_0(1+(\kappa-1)x)\right]^{2}}
+=\frac{Q^{2}(\kappa-1)}{2C_0\left(1+(\kappa-1)x\right)^{2}}</div>
+<p>and integrating from 0 to 1:</p>
+<div class="eqd">W=\int_0^1F\,dx=\frac{Q^{2}}{2C_0}\cdot\frac{\kappa-1}{\kappa}=\frac{Q^{2}}{2C_0}\left(1-\frac1\kappa\right)=-\Delta U\ \checkmark</div>
+<p>which is exactly the energy lost by the field — so the two methods agree, as §3.4 demanded. Physically the energy
+goes into the <em>kinetics of the slab</em> (and then into your fingers or a brake as it hits the end: in a real
+insertion the slab overshoots, oscillates, and radiates/dissipates; if you insert it quasi-statically you must hold
+it back and <m>you</m> absorb the work). Note also that <m>U=Q^{2}/2C</m> <em>decreasing</em> is what makes the
+force attractive: at fixed charge, the system runs toward <em>larger</em> capacitance. At fixed voltage it runs
+toward larger capacitance too, for the opposite reason (<m>U=\tfrac12CV^{2}</m> grows but the battery's <m>V^{2}dC</m>
+work grows twice as fast). That sign agreement — the same direction of motion from two opposite-looking energy
+landscapes — is the single best check of whether you understand this chapter or are remembering formulas.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>A "capacitive humidity sensor" is a comb of interdigitated electrodes coated with a polymer of κ = 3 when dry. Water (κ = 80) absorbed into the coating swells it by 8 % in thickness and raises its average κ to 12. Estimate the signal, decide which effect dominates, and identify the mechanism that would ruin the reading at 100 % RH.</b><span class="diff">Olympiad · design</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>The field in an interdigitated sensor occupies a <em>half-space</em> above the plane of the electrodes; only the
+fraction <m>\xi\approx0.5</m> of the energy lies in the coating (this geometry factor is the only hard part — measured
+values are 0.4–0.6). So</p>
+<div class="eqd">\frac{\Delta C}{C_0}\approx\xi\,\frac{\Delta\kappa_{\text{eff}}}{\kappa_{\text{dry}}}+\frac{\Delta t_{\text{film}}}{h_{\text{field}}}\cdot(\ldots)
+\approx0.5\times\frac{12-3}{3}=1.5\ \Rightarrow\ +150\%</div>
+<p>The swelling term, by contrast, is <m>0.5\times8\%\approx4\%</m>: <b>the permittivity change is worth about
+40× the geometry change</b> — which is why these sensors are designed as thin films whose κ changes, not as
+mechanical swell elements (a "swell" capacitor would be 8 % for the same humidity). Sensitivity to κ, not to strain, is
+the design principle; the same is true of the liquid-level probe of §5.7, which relies on
+<m>\Delta\kappa/\kappa_{\text{air}}=40</m>, not on the hydrostatic pressure it exerts on the plates.</p>
+<p>At high RH, the killer is <m>\sigma</m>, not <m>\kappa</m>: a percolating film of absorbed water puts a surface
+conductance between the comb teeth, and the sensor's loss tangent — not its capacitance — runs away
+(<m>\kappa''_{\sigma}=\sigma/\omega\varepsilon_0</m> with <m>\sigma</m> of condensed surface water reaching <m>10^{-2}</m>
+S/m is <m>\sim10^{5}</m>, i.e. the "capacitor" becomes a resistor). Practical consequences, all of which a good answer
+lists: (i) read at <em>high</em> frequency, where <m>1/\omega</m> shrinks the conduction term; (ii) measure
+<m>\tan\delta</m> as well as <m>C</m> and use it to flag contamination (this is done in real chips); (iii) keep the
+coating hydrophobic at the surface so water condenses as discrete drops (which barely change <m>\xi</m>) rather than
+as a film (which shorts it).</p>
+</div></details>
+</div></div>
+
+<h2>Drill: say it in one line</h2>
+<table class="tb">
+<thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>"The dielectric constant of a slab depends on the shape of the sample."</td><td>Right — <m>\kappa</m> is the material's, but the <em>measured</em> "effective" ratio <m>D/\varepsilon_0E</m> is fine; the thing that changes with shape is the relation between <m>\vec E</m> and the free charge, through the depolarizing factor (<m>0</m> for a needle along the field, <m>1</m> for a thin slab ⟂ to it, <m>1/3</m> for a sphere).</td></tr>
+<tr><td>2</td><td>"<m>\rho_b</m> and <m>\sigma_b</m> can be used in Gauss's law for <m>\vec E</m>."</td><td>Right, always: <m>\vec E</m> responds to all charge. But you must know <m>\vec P</m> first, which is the circularity <m>\vec D</m> exists to break.</td></tr>
+<tr><td>3</td><td>"Insert a dielectric in a disconnected capacitor: the field drops; insert it in a connected one: the field is unchanged."</td><td>Right, and it is the most-tested sentence in this chapter. Fixed <m>Q</m> ⇒ <m>D</m> fixed ⇒ <m>\vec E</m> drops by <m>\kappa</m>; fixed <m>V</m> ⇒ <m>\vec E=V/d</m> fixed ⇒ <m>\vec D</m> and <m>Q</m> rise by <m>\kappa</m>.</td></tr>
+<tr><td>4</td><td>"A conductor and a dielectric differ only by a factor of κ."</td><td>Wrong at the level of mechanism (free vs bound charges, and a conductor's <m>\vec E=0</m> is a <em>boundary condition</em>, not a response), right at the level of electrostatics, where a conductor is the <m>\kappa\to\infty</m> limit — the metal slab of ch. 2 <em>is</em> the row of §5.5 at <m>\kappa\to\infty</m>.</td></tr>
+<tr><td>5</td><td>"<m>\tan\delta</m> is a loss angle, so it must be small."</td><td>Wrong as a design statement: <m>\tan\delta=1</m> is possible (lossy ceramics) and <m>1.2</m> (sea water). It is a <em>ratio</em>, not a bound; the smallness is what you engineer <em>for</em>.</td></tr>
+<tr><td>6</td><td>"Heating a ferroelectric through its Curie point destroys its capacitance."</td><td>Wrong: it destroys its <em>remanence</em>; κ survives (indeed it peaks at <m>T_C</m>, the Curie–Weiss law <m>\kappa-1=C/(T-T_0)</m>) and the device becomes an ordinary, very large, very non-linear capacitor.</td></tr>
+</tbody></table>
+
+<div class="box thm"><p class="bt">Chapter 5 in six lines</p>
+<ul>
+<li>Polarization <m>\vec P</m> = dipole density; it produces bound charge <m>\sigma_b=\vec P\cdot\hat n</m>,
+<m>\rho_b=-\vec\nabla\cdot\vec P</m>, whose field always <em>opposes</em> the cause.</li>
+<li><m>\vec D=\varepsilon_0\vec E+\vec P</m> obeys <m>\vec\nabla\cdot\vec D=\rho_f</m>: use it whenever the <em>free</em> charge is known
+and symmetry is enough; never otherwise.</li>
+<li><m>\kappa=1+\chi_e</m>; microscopically <m>(\kappa-1)/(\kappa+2)=n\alpha/3\varepsilon_0</m> — the <m>1/3</m> is the
+field of the polarized sphere, and the divergence at <m>n\alpha=3\varepsilon_0</m> is ferroelectricity.</li>
+<li>Geometry: interfaces ⟂ to <m>\vec E</m> ⇒ series (<m>\sum d_i/\kappa_i</m>), interfaces ∥ to <m>\vec E</m> ⇒ parallel;
+the metal slab and a filled gap are the <m>\kappa\to\infty</m> and <m>t=d</m> limits.</li>
+<li>Forces: <m>\vec F=\tfrac12V^{2}dC/dx</m> for anything that moves a dielectric — slab pull-in, liquid rise
+<m>h=\varepsilon_0(\kappa-1)V^{2}/2\rho gd^{2}</m>, dielectrophoresis <m>\vec F\propto\nabla E^{2}</m> with the sign set by
+<m>(\kappa_p-\kappa_m)</m>.</li>
+<li>Failure and loss: Paschen's <m>pd</m> curve with a 330 V minimum for air; solid strength set by
+<m>\vec E\sim W_g/ea</m> then cut 20× by defects and by volume statistics; losses from
+<m>\kappa''=\Delta\omega\tau/(1+\omega^{2}\tau^{2})+\sigma/\omega\varepsilon_0</m>.</li>
+</ul></div>
+
+<ul class="chks">
+<li>Derive <m>\sigma_b=\vec P\cdot\hat n</m> with a pillbox, without looking.</li>
+<li>Derive Clausius–Mossotti from <m>P=n\alpha(E+P/3\varepsilon_0)</m> in under a minute, and state its three limits (§5.4).</li>
+<li>For each of the six rows of §5.5, say "series" or "parallel" and give the one-line reason <em>before</em> the formula.</li>
+<li>Get the slab force <m>\tfrac12V^{2}dC/dx</m> two ways (§5.6) and explain in one sentence why the half appears.</li>
+<li>Reproduce the liquid-rise formula and the comparison with capillarity; state the 1/d² scaling out loud.</li>
+<li>Minimise the Paschen function from memory and quote the 330 V air minimum and its <m>pd</m>.</li>
+<li>From (5.11): peak of <m>\kappa''</m>, its height, and the semicircle — three results, five lines.</li>
+<li>Solve Q7 with the ansatz, not a formula sheet; it is the most reusable derivation in the whole set.</li>
+</ul>
+<p class="skip">Next: <a href="06-networks-and-transients.html">6 · Networks and transients — RC, the two rules, and what "steady state" really means</a></p>
+</main>
+</div>
+</body>
+</html>
