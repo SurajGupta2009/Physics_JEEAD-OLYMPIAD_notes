@@ -23,7 +23,7 @@
     ll: "≪", gg: "≫", propto: "∝", sim: "∼", simeq: "≃", lesssim:"≲", gtrsim:"≳", cong: "≅",
     to: "→", rightarrow: "→", Rightarrow: "⇒", implies: "⟹", Leftarrow: "⇐",
     leftarrow: "←", leftrightarrow: "↔", Leftrightarrow: "⇔", mapsto: "↦", iff: "⇔",
-    uparrow: "↑", downarrow: "↓",
+    uparrow: "↑", downarrow: "↓", gtrless: "⋇", lesseqgtr: "⋚", rightleftharpoons: "⇌", leftrightharpoons: "⇋",
     infty: "∞", partial: "∂", nabla: "∇", forall: "∀", exists: "∃",
     in: "∈", notin: "∉", subset: "⊂", subseteq: "⊆", cup: "∪", cap: "∩", emptyset: "∅",
     langle: "⟨", rangle: "⟩", lvert: "|", rvert: "|", vert: "|", Vert: "‖",

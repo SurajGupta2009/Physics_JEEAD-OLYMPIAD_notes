@@ -1,0 +1,34 @@
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 218" role="img" aria-label="One capacitor node with a neighbour conductor that can be absent, floating or grounded, with the three resulting capacitances; and the box of the isolated region used by the branch rule">
+  <g transform="translate(40,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">The same object, three third terminals</text>
+    <rect x="0" y="20" width="86" height="16" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <text x="26" y="58" class="lbl sm">node 1</text>
+    <rect x="150" y="20" width="86" height="16" stroke="var(--muted)" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+    <text x="152" y="58" class="lbl sm" fill="var(--muted)">neighbour</text>
+    <line x1="88" y1="28" x2="148" y2="28" class="thinl" stroke="var(--accent)"/>
+    <line x1="88" y1="24" x2="148" y2="24" class="thinl" stroke="var(--muted)"/>
+    <text x="96" y="16" class="mi sm">c₁₂ = −s·c₁₁</text>
+    <text x="0" y="92" class="lbl sm">absent: C = c₁₁ = 4.00πε₀a (lone sphere)</text>
+    <text x="0" y="112" class="lbl sm">floating: C = c₁₁ − c₁₂²/c₂₂ = 4.00πε₀a  (to leading order)</text>
+    <text x="0" y="132" class="lbl sm">grounded: C = c₁₁ = 4.27πε₀a — the earth supplies the extra</text>
+    <text x="0" y="158" class="lbl md" fill="var(--accent)">Grounding always wins; deleting and floating tie only in a truncation.</text>
+  </g>
+  <g transform="translate(470,30)">
+    <text x="0" y="-8" class="lbl md" font-weight="700">Surface for the branch rule</text>
+    <path d="M10,20 H120 M10,150 H120 M10,20 V150 M120,20 V150" class="ln2" stroke="var(--violet)" stroke-dasharray="7 4"/>
+    <text x="20" y="40" class="lbl sm" fill="var(--violet)">the region you count</text>
+    <line x1="65" y1="4" x2="65" y2="18" class="ln2" stroke="var(--pos)" marker-end="url(#ahp)"/>
+    <text x="72" y="12" class="lbl sm" fill="var(--pos)">I(t) from the cell</text>
+    <rect x="34" y="60" width="62" height="12" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <rect x="34" y="100" width="62" height="12" stroke="var(--fg)" stroke-width="2" fill="none"/>
+    <text x="40" y="90" class="lbl sm">two plates inside</text>
+    <path d="M65,72 V100" class="ln2" stroke="var(--neg)"/>
+    <text x="14" y="170" class="lbl sm">Nothing else may cross the boundary:</text>
+    <text x="14" y="186" class="lbl sm">ΔQ_cell = ΔQ₁ + ΔQ₂, always.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 7.1</b> — Left: what "the capacitance of a conductor" means depends on the state of every other
+conductor, and the Schur complement <m>c_{ij}-c_{ik}c_{kj}/c_{kk}</m> is the whole answer (numbers from Q1). Right:
+the surface used by §6.3's branch rule — draw it so that only the branch you are asked about crosses it, and the
+answer is exact whatever the transient looked like.</figcaption></figure>
