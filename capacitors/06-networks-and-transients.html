@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Networks and transients — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="DC steady state as a four-step algorithm, why tau = R_th C for any one-capacitor network, the three-number method, charge that flows through a cell, the exact one-half loss, compensated dividers, two time constants, relaxation oscillators, sinusoidal steady state and impedance, and why supercapacitors charge as sqrt(t).">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 6</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b j">JEE Advanced</span><span class="b o">NSEP / INPhO</span><span class="b n">needs ch. 1–5</span></span>
+</p>
+<h1>6 · Networks and transients: the capacitor in time</h1>
+<p>Everything so far was a photograph. This chapter is the film — and the film is short, because a capacitor in a
+resistive network obeys <em>one</em> differential equation per independent capacitor, that equation is linear with
+constant coefficients, and almost everything you will ever be asked follows from its solution. Two ideas carry the
+chapter: the <b>node-charge variable</b> (chapter 4's <m>Q_i=\sum_jC_{ij}V_j</m>, now with <m>I=dQ/dt</m>) and the
+<b>one-port reduction</b> (whatever resistive network a capacitor sees is just <m>V_{\text{th}}+R_{\text{th}}</m>).
+With them, JEE Advanced problems become arithmetic and the Olympiad ones reduce to the small amount of physics they
+actually contain — thresholds, compensation, and dissipation.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 230" role="img" aria-label="Left: a DC network with capacitors and resistors as drawn. Right: the same network in steady state with the capacitor branch deleted and only the resistor loop carrying current">
+  <g transform="translate(24,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">As drawn</text>
+    <path d="M0,30 H70 M0,150 H70" class="ln"/>
+    <circle cx="86" cy="30" r="4" fill="var(--fg)"/><circle cx="86" cy="150" r="4" fill="var(--fg)"/>
+    <path d="M86,30 V66 M86,110 V150" class="ln"/>
+    <rect x="78" y="66" width="16" height="44" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="102" y="92" class="mi sm">R₁</text>
+    <path d="M86,30 H170 M86,150 H170" class="ln"/>
+    <circle cx="186" cy="30" r="4" fill="var(--fg)"/><circle cx="186" cy="150" r="4" fill="var(--fg)"/>
+    <path d="M186,30 V52 M186,78 V96 M186,110 V150" class="ln"/>
+    <path d="M172,78 h28 M172,96 h28" stroke="var(--fg)" stroke-width="2"/>
+    <text x="200" y="92" class="mi sm">C₁</text>
+    <path d="M186,96 H260 M186,30 H300" class="ln"/>
+    <circle cx="276" cy="96" r="4" fill="var(--fg)"/>
+    <path d="M276,96 V120" class="ln"/>
+    <rect x="268" y="120" width="16" height="30" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="292" y="140" class="mi sm">R₃</text>
+    <path d="M276,150 H186" class="ln"/>
+    <path d="M300,30 V66 M300,110 V150 M300,150 H276" class="ln"/>
+    <rect x="292" y="66" width="16" height="44" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="316" y="92" class="mi sm">R₂</text>
+    <path d="M300,30 H340 M300,150 H340" class="ln"/>
+    <path d="M340,22 v16 M352,28 h-24 M340,142 v16 M352,148 h-24" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="360" y="92" class="lbl sm">V</text>
+    <text x="0" y="184" class="lbl sm">C₁ sits between the R₁–R₂ node and the lower rail; R₃ dangles into C₁'s node from R₂.</text>
+  </g>
+  <g transform="translate(430,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">Step 1: delete every capacitor branch</text>
+    <path d="M0,30 H70 M0,150 H70 M86,30 V150 M86,30 H170 M86,150 H170" class="ln"/>
+    <rect x="78" y="66" width="16" height="44" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="102" y="92" class="mi sm">R₁</text>
+    <path d="M186,30 V150" class="ln2" stroke="var(--muted)" stroke-dasharray="4 4"/>
+    <text x="176" y="92" class="lbl sm" fill="var(--muted)">open</text>
+    <path d="M240,30 V150 M240,30 H300 M240,150 H300" class="ln"/>
+    <rect x="232" y="66" width="16" height="44" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="256" y="92" class="mi sm">R₂</text>
+    <line x1="14" y1="90" x2="52" y2="90" class="ln2" stroke="var(--pos)" marker-end="url(#ahg)"/>
+    <text x="0" y="80" class="lbl sm" fill="var(--pos)">I</text>
+    <text x="0" y="184" class="lbl sm">One loop, current I = V/(R₁+R₂). R₃ carries nothing ⇒</text>
+    <text x="0" y="200" class="lbl sm">it cannot appear in any answer. Then V_{C₁} = I·R₂.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 6.1</b> — Steady state in one picture: a capacitor branch is an <em>open circuit</em>, so the
+currents live entirely in the resistor graph; the capacitors then inherit node voltages. R₃ is dead weight here — a
+favourite JEE trap, and the reason the algorithm below is stated as steps rather than as a formula.</figcaption></figure>
+
+<h2>6.1 Steady state: the four-step algorithm</h2>
+<div class="box def"><p class="bt">The algorithm (four verbs: open, solve, close, check)</p>
+<ol>
+<li><b>Open.</b> Replace every capacitor by a break in the wire. The rest of the circuit is then purely resistive.</li>
+<li><b>Solve.</b> Find the node voltages of that resistor network (one equation per unknown node; for a tree, just
+potential division).</li>
+<li><b>Close.</b> Put each capacitor back. Its voltage is the difference of the two node voltages it spans, and each
+plate carries <m>Q=C\,\Delta V</m>, signed: the plate at higher potential carries <m>+Q</m>.</li>
+<li><b>Check.</b> Two checks, both cheap: any <em>isolated island</em> must still hold the total charge it held before
+the switching (§4.1); and any node that was never wired to a source must have <m>\sum_{\text{plates at node}}Q=0</m>.</li>
+</ol></div>
+
+<p><b>Why step 1 is legitimate.</b> The branch law is <m>I=C\,dV/dt</m>. A <em>constant</em> voltage across a
+capacitor therefore means <em>zero</em> current, whatever else the circuit is doing. Nothing about the size of
+<m>C</m> enters: at <m>t=\infty</m> a 1 pF and a 3000 F capacitor are equally good open circuits. Equally important
+is what step 1 does <em>not</em> say: <m>I=0</m> does not make the branch irrelevant to <m>V</m> — it fixes only the
+current, and the voltage is whatever the rest of the circuit imposes, which is precisely what step 2 computes.</p>
+
+<div class="box trap"><p class="bt">Three steady-state statements that are false, with the reason</p>
+<ul>
+<li>"The capacitor voltage is zero." Only if it is in parallel with a short, or was never connected. It is
+<m>\Delta V_{\text{nodes}}</m>, and nothing else.</li>
+<li>"No current flows, so nothing drops anywhere in that region." Current flows freely in the <em>resistive</em>
+parts; only the capacitor branch is dead. In Fig. 6.1 the loop current is <m>V/(R_1+R_2)</m> even though
+<m>C_1</m> carries none.</li>
+<li>"Charge must be conserved, so the capacitors share." Sharing is a <em>transient</em> phenomenon that requires a
+conducting path while current flows. If the final state is reached with a switch still open, no charge moved:
+conservation constrains only what had a path. Hence step 2 before any talk of charge.</li>
+</ul></div>
+
+<h2>6.2 One capacitor anywhere: why <m>\tau=R_{\text{th}}C</m></h2>
+<p>Take any network of ideal cells and resistors with a single capacitor attached between two terminals. Replace
+everything else by its Thévenin equivalent — <em>kill</em> the sources (voltage sources → short, current sources →
+open), read the resistance <m>R_{\text{th}}</m> between the terminals and the open-circuit voltage
+<m>V_{\text{th}}</m>. Now there is one loop:</p>
+<div class="eqd" data-tag="6.1">V_{\text{th}}=V_C+IR_{\text{th}},\qquad I=C\frac{dV_C}{dt}
+\qquad\Longrightarrow\qquad \frac{dV_C}{dt}=\frac{V_{\text{th}}-V_C}{R_{\text{th}}C}</div>
+<p>whose unique solution from <m>V_C(0)=V_0</m> is</p>
+<div class="eqd" data-tag="6.2">\boxed{\;V_C(t)=V_{\text{th}}+\left(V_0-V_{\text{th}}\right)e^{-t/\tau}\;},
+\qquad \tau=R_{\text{th}}C,\qquad I(t)=\frac{V_0-V_{\text{th}}}{R_{\text{th}}}\,e^{-t/\tau}</div>
+<p>Read the box as a <em>recipe</em>, because that is what it is: the three-number method. Find the initial value,
+the final value and <m>\tau</m>, and the graph is fully determined — and with it <m>V_R</m>, <m>Q</m>, <m>I</m>, the
+energy in each element and the heat in the resistors, since all of them are proportional to
+<m>V_C-V_{\text{th}}</m> or to its derivative.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 240" role="img" aria-label="Universal RC step response with Vc rising, Vr falling, the tau marker at 63.2 percent, the half-life, and the tangent trick; beside it the three-number recipe">
+  <g transform="translate(70,20)">
+    <line x1="0" y1="180" x2="330" y2="180" class="ln"/><line x1="0" y1="0" x2="0" y2="180" class="ln"/>
+    <text x="290" y="198" class="lbl sm">t →</text>
+    <line x1="0" y1="30" x2="330" y2="30" class="thinl"/>
+    <text x="-48" y="34" class="lbl sm">V_th</text>
+    <path d="M0,180 C40,80 80,48 130,38 C190,31 250,30 330,30" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <text x="140" y="70" class="lbl sm" fill="var(--accent)">V_C = V_th(1 − e^(−t/τ))</text>
+    <path d="M0,30 C40,130 80,162 130,172 C190,179 250,180 330,180" fill="none" stroke="var(--neg)" stroke-width="2.4" stroke-dasharray="7 4"/>
+    <text x="140" y="152" class="lbl sm" fill="var(--neg)">V_R = V_th·e^(−t/τ)   (and I = V_R/R)</text>
+    <line x1="90" y1="180" x2="90" y2="30" class="thinl" stroke-dasharray="3 4"/>
+    <text x="84" y="196" class="lbl sm">τ</text>
+    <circle cx="90" cy="86" r="4" fill="var(--accent)"/>
+    <text x="98" y="82" class="lbl sm">63.2 %</text>
+    <line x1="44" y1="180" x2="44" y2="30" class="thinl" stroke-dasharray="3 4"/>
+    <text x="22" y="212" class="lbl sm">t½ = 0.69τ</text>
+    <line x1="0" y1="30" x2="130" y2="180" stroke="var(--amber)" stroke-width="1.8" stroke-dasharray="5 3"/>
+    <text x="118" y="146" class="lbl sm" fill="var(--amber)">tangent at t = 0 reaches V_th at t = τ</text>
+    <text x="196" y="24" class="lbl sm">5τ ⇒ 0.7 % left</text>
+  </g>
+  <g transform="translate(440,20)">
+    <rect x="0" y="0" width="250" height="212" class="w" stroke="var(--muted)" stroke-dasharray="5 4"/>
+    <text x="12" y="24" class="lbl md" font-weight="700">The three numbers</text>
+    <text x="12" y="52" class="lbl sm">1 · V_C(0⁺) — unchanged across the switching</text>
+    <text x="12" y="68" class="lbl sm">     instant (finite power ⇒ finite dV/dt)</text>
+    <text x="12" y="94" class="lbl sm">2 · V_C(∞) — steady state of §6.1</text>
+    <text x="12" y="120" class="lbl sm">3 · τ — (resistance seen by C, sources killed) × C</text>
+    <text x="12" y="150" class="lbl sm">Everything else is derived:</text>
+    <text x="12" y="168" class="mtext">I = C(V_∞ − V_C)/R_th ,  Q = CV_C ,</text>
+    <text x="12" y="186" class="mtext">P_R = I²R_th ,  U_C = ½CV_C² .</text>
+    <text x="12" y="206" class="lbl sm">Nothing else in the problem is needed.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 6.2</b> — The single curve that answers most RC questions. Note what is <em>discontinuous</em> at
+<m>t=0</m>: the current and <m>V_R</m> jump by the full amount while <m>V_C</m> cannot move at all. Note also that
+"the time constant" is a statement about <m>V_C-V_{\text{th}}</m>, not about <m>V_C</m>: if the capacitor starts on
+the other side of <m>V_{\text{th}}</m>, it first discharges and then charges, and the graph crosses zero — a shape
+that surprises anyone who memorised only the rising curve.</figcaption></figure>
+
+<div class="box why"><p class="bt">Why V_C cannot jump — and the three exceptions</p>
+<p><m>V_C=Q/C</m> and <m>dQ/dt=I</m>. Changing <m>V_C</m> by a finite amount in zero time needs infinite current,
+hence infinite power in any element with nonzero resistance. So <b>continuity of capacitor voltage is a consequence
+of finite available power</b>, not a property of capacitors. It fails in exactly three idealisations, and a good
+answer names them: (i) an ideal voltage source wired directly across an uncharged capacitor — the source is
+<em>defined</em> as a zero-impedance infinite-current reservoir, and the model quietly spends the missing energy on
+radiation and a spark (cf. §3.6); (ii) a current impulse, an admissible fiction since <m>\Delta V=\Delta Q/C</m>
+only needs <m>\int I\,dt</m>; (iii) two capacitors joined through a switch, where what is conserved is the
+<em>island's</em> charge, so the pair's final voltage comes from charge conservation rather than from either
+capacitor's continuity. Everything in this chapter assumes none of the three at the switching instant.</p></div>
+
+<h2>6.3 Charge through a branch, and the exact one-half</h2>
+<p>JEE's most common request is not <m>V_C(t)</m> but <em>"find the charge that flowed through the battery /
+through the switch / from B to C"</em>. One rule does all of them:</p>
+<div class="box thm"><p class="bt">Charge-through-a-branch rule</p>
+<p>Choose a closed surface that cuts the branch of interest once and encloses everything on one side of it. Charge is
+conserved inside that volume, so</p>
+<div class="eqd">Q_{\text{through branch}}=\sum_{\text{plates inside}}\Delta Q_{\text{plate}}\qquad\text{(signed)}</div>
+<p>with the convention that <m>Q&gt;0</m> means positive charge entered through the cut in the direction you chose.
+In practice: "charge through the cell" is the increase in charge on all plates connected to its positive terminal;
+"charge through the switch" is the increase in charge of the island it feeds. The surface argument is the
+<em>proof</em> — whatever complicated shape the current has, its time integral is fixed by the end states.</p>
+<p>The rule has one hypothesis, and it is what makes or breaks the shortcut: <b>every other branch leaving the
+surface must end on a capacitor plate.</b> If a resistor leads from the enclosed region to the far rail instead, part
+of the charge drains through it and is not countable from end states alone. Q3 sits exactly on that boundary.</p></div>
+
+<p>Apply the same bookkeeping to energy. Charging an uncharged <m>C</m> from a cell <m>V</m> through <m>R</m>:</p>
+<div class="eqd" data-tag="6.3">I(t)=\frac{V}{R}e^{-t/RC},\qquad
+\underbrace{W_{\text{cell}}=V\!\int_0^\infty\!I\,dt=CV^{2}}_{\text{only }Q=CV\text{ is needed}},\qquad
+\underbrace{\int_0^\infty I^{2}R\,dt=\frac{V^{2}}{R}\cdot\frac{RC}{2}=\frac12CV^{2}}_{\text{heat in }R},\qquad
+U=\frac12CV^{2}</div>
+<p>The three balance, and the heat is <em>independent of</em> <m>R</m>, of whether the capacitor really started at
+zero, and of how long you wait: it is <m>\tfrac12CV^{2}</m> for every <m>R&gt;0</m>, from megohms to milliohms. This
+is chapter 3's two-capacitor paradox with its bookkeeping made explicit — and the reason the <m>R\to0</m> limit is
+finite is visible in the middle term: <m>I\propto1/R</m> makes <m>I^{2}R</m> independent of <m>R</m>.</p>
+
+<div class="box insight"><p class="bt">How to lose less than one half: change the schedule, not the resistor</p>
+<p>The loss is not the resistor's fault; it is the <em>step</em>'s. Drive the same <m>RC</m> with a source whose
+voltage ramps over a time <m>T</m> instead, and at every instant <m>I\approx C\,\dot V_s</m>, so the heat is</p>
+<div class="eqd">H=\int_0^{T}\!RC\,\dot V_s^{2}\,dt=\frac{CV^{2}}{T}\quad(\text{linear ramp})
+\qquad\Longrightarrow\qquad \frac{H}{\frac12CV^{2}}=\frac{2}{T/RC}</div>
+<p>Make the ramp long compared with <m>\tau</m> and the loss vanishes: charging can be made arbitrarily reversible, and
+in a switched-mode supply, a camera flash and the soft-start of every large capacitor bank, that is exactly what is
+done. The lesson generalises well beyond circuits: <b>dissipation is the price of driving a system faster than its
+own relaxation time</b>, and the lever is always "go slower", never "use a better resistor".</p></div>
+
+<h2>6.4 Two or more capacitors: n states, n time constants</h2>
+<p>With several capacitors the state is a vector. Write <m>\vec Q=\mathbf C\vec V</m> (§4.3's capacitance matrix, or
+simply the list <m>Q_k=C_kV_k</m> with one node equation each) and <m>\dot{\vec Q}=-\mathbf G\vec V+\vec i_s</m> with
+<m>\mathbf G</m> the conductance matrix of the resistive network. Eliminating <m>\vec V</m>:</p>
+<div class="eqd" data-tag="6.4">\frac{d\vec V}{dt}=-\mathbf C^{-1}\mathbf G\,\vec V+\mathbf C^{-1}\vec i_s
+\qquad\Longrightarrow\qquad \tau_k^{-1}=\lambda_k\!\left(\mathbf C^{-1}\mathbf G\right)</div>
+<p>so an <m>n</m>-capacitor network has <m>n</m> exponentials and <em>no single time constant</em>: which
+<m>\tau</m> an experiment sees depends on which coordinate you watch and how you started. That is why a
+dielectric's <m>\kappa''</m> is a sum of Debye circles (chapter 5) and why a supercapacitor's discharge is not
+exponential at all (§6.7). Two structurally important cases collapse to one exponential:</p>
+<ul>
+<li><b>The series loop</b> <m>V</m>–<m>R</m>–<m>C_1</m>–<m>C_2</m>: one path, so the same current flows through both
+capacitors at all times and <m>Q_1(t)\equiv Q_2(t)</m>. The pair behaves as a single <m>C_{\text{ser}}</m> with
+<m>\tau=RC_{\text{ser}}</m>, and the final voltage split is <m>V_1:V_2=1/C_1:1/C_2</m> — the series rule holds
+<em>transiently</em>, not just in steady state, for this topology.</li>
+<li><b>A symmetry that removes a mode.</b> If identical arms make one eigenvector of
+<m>\mathbf C^{-1}\mathbf G</m> invisible to the excitation (as in §4.5's folding), only one exponential survives.
+Spotting it is worth the whole calculation, and it is the capacitor analogue of shorting equipotential nodes.</li>
+</ul>
+
+<h2>6.5 The compensated divider: where the transient disappears</h2>
+<p>The circuit of Fig. 6.4 — <m>R_1\parallel C_1</m> in series with <m>R_2\parallel C_2</m>, driven by a step — is
+the oscilloscope probe, the compensating network in every resistive HV divider, and the clearest illustration that
+"the capacitor is the frequency version of the resistor". Node equation at the junction:</p>
+<div class="eqd">\frac{V_s-V_J}{R_1}+C_1\frac{d(V_s-V_J)}{dt}=\frac{V_J}{R_2}+C_2\frac{dV_J}{dt}
+\quad\Longrightarrow\quad V_J(t)=V_\infty+\left[V_J(0^{+})-V_\infty\right]e^{-t/\tau}</div>
+<div class="eqd" data-tag="6.5">V_\infty=V_s\frac{R_2}{R_1+R_2},\qquad V_J(0^{+})=V_s\frac{C_1}{C_1+C_2},
+\qquad \tau=\left(R_1\| R_2\right)\left(C_1+C_2\right)</div>
+<p>At the instant of switching the resistors are irrelevant — uncharged capacitors are shorts — so the step divides
+<em>capacitively</em>; at <m>t=\infty</m> the capacitors are open and it divides <em>resistively</em>. The division
+ratio is therefore frequency-independent iff the two limits agree:</p>
+<div class="eqd" data-tag="6.6">\frac{C_1}{C_1+C_2}=\frac{R_2}{R_1+R_2}\quad\Longleftrightarrow\quad
+\boxed{\;R_1C_1=R_2C_2\;}\qquad\text{then }V_J(t)=V_s\,R_2/(R_1+R_2)\ \text{for all }t</div>
+<p>With the trimmer capacitor of a 10× probe you are watching this equality directly: under-compensation rounds the
+edge, over-compensation spikes it, and the flat top you tune for on the calibration square wave <em>is</em>
+<m>R_1C_1=R_2C_2</m>. The same equality appears as the balance condition of §4.4's bridge (there
+<m>C_1/C_2=C_3/C_4</m>) and as the "no transient" condition of an electret's bias network — one condition, three
+names.</p>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 224" role="img" aria-label="Compensated divider circuit on the left, and on the right three output step responses labelled under-compensated, compensated and over-compensated">
+  <g transform="translate(24,26)">
+    <text x="0" y="-6" class="lbl sm">V_s (step)</text>
+    <path d="M0,30 H60 M0,150 H60" class="ln"/>
+    <path d="M60,30 V66 M60,114 V150" class="ln"/>
+    <rect x="52" y="66" width="16" height="48" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="26" y="96" class="mi sm">R₁</text>
+    <path d="M120,66 V114" stroke="var(--fg)" stroke-width="2"/>
+    <path d="M106,78 h28 M106,102 h28" stroke="var(--fg)" stroke-width="1.6"/>
+    <text x="132" y="96" class="mi sm">C₁</text>
+    <path d="M60,30 H120 M60,90 H120" class="ln"/>
+    <circle cx="150" cy="90" r="4" fill="var(--fg)"/>
+    <text x="158" y="84" class="lbl sm">V_J (output)</text>
+    <path d="M120,90 H210 M210,30 V66 M210,114 V150" class="ln"/>
+    <path d="M210,30 H270 M210,150 H270" class="ln"/>
+    <path d="M256,66 V114" stroke="var(--fg)" stroke-width="2"/>
+    <path d="M242,78 h28 M242,102 h28" stroke="var(--fg)" stroke-width="1.6"/>
+    <text x="222" y="60" class="mi sm">C₂</text>
+    <rect x="272" y="66" width="16" height="48" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="296" y="96" class="mi sm">R₂</text>
+    <path d="M288,66 V30 H270 M288,114 V150 H270 M210,66 V78 M210,114 V102" class="ln"/>
+    <text x="10" y="180" class="lbl sm">τ = (R₁‖R₂)(C₁+C₂) unless R₁C₁ = R₂C₂, in which case the transient simply does not exist.</text>
+  </g>
+  <g transform="translate(400,26)">
+    <line x1="0" y1="150" x2="290" y2="150" class="ln"/><line x1="0" y1="10" x2="0" y2="150" class="ln"/>
+    <line x1="0" y1="46" x2="290" y2="46" class="thinl"/>
+    <path d="M0,150 C30,120 46,60 60,50 C90,47 140,46 290,46" fill="none" stroke="var(--muted)" stroke-width="2"/>
+    <text x="72" y="86" class="lbl sm" fill="var(--muted)">R₁C₁ &lt; R₂C₂ : under — edge rounds up to the flat value</text>
+    <path d="M0,46 H290" fill="none" stroke="var(--accent)" stroke-width="2.8"/>
+    <text x="72" y="38" class="lbl sm" fill="var(--accent)">R₁C₁ = R₂C₂ : exactly flat — what you tune for</text>
+    <path d="M0,150 L6,16 C20,20 34,44 52,46 C90,47 140,46 290,46" fill="none" stroke="var(--neg)" stroke-width="2"/>
+    <text x="72" y="128" class="lbl sm" fill="var(--neg)">R₁C₁ &gt; R₂C₂ : over — spike, then droop</text>
+    <text x="0" y="172" class="lbl sm">t →</text>
+    <text x="0" y="196" class="lbl sm">A 10× probe needs C₁ = C_in/9 with R₁ = 9R_in: the trimmer is C₁, because</text>
+    <text x="0" y="212" class="lbl sm">the scope's 100 pF input is the unknown you must cancel.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 6.4</b> — The compensated divider and the three possible edge shapes. The "spike then droop"
+signature is a diagnostic, not an accident: it says the high-frequency division ratio is <em>too small</em>, i.e.
+<m>C_1</m> is too large (or the cable capacitance too big, which is why probe compensation must be redone when you
+change cables).</figcaption></figure>
+
+<h2>6.6 Relaxation: charging to a threshold is an oscillator</h2>
+<p>Put a device across the capacitor that <em>shorts</em> it above a threshold and <em>opens</em> it below a lower one
+(a neon lamp, a Schmitt trigger, a UJT, a flashlamp, a membrane). Between thresholds the capacitor simply follows
+(6.2) toward <m>V_\infty</m>, so the time between any two voltages is obtained by inverting the exponential — the
+single most useful piece of algebra in this chapter:</p>
+<div class="eqd" data-tag="6.7">t=\tau\ln\frac{V_\infty-V_{\text{start}}}{V_\infty-V_{\text{end}}}
+\qquad\Longrightarrow\qquad T_{\text{period}}=RC\ln\frac{V-V_{\text{lo}}}{V-V_{\text{hi}}}</div>
+<p>Two things to notice. The <em>amplitude</em> of the swing is set by the device and the <em>period</em> by
+<m>RC</m>: that is the definition of a relaxation oscillator, and why a 555's frequency is set by one product
+<m>RC</m> while its duty cycle is set by <em>which</em> resistors charge and discharge it (with the 555's fixed
+thresholds <m>V/3</m> and <m>2V/3</m> each half-cycle is exactly <m>\tau\ln2</m>, giving <m>T=1.386\,RC</m> for
+symmetric paths). And the logarithm is <em>weak</em> in its argument, so the frequency barely depends on the supply
+voltage over a wide range — that robustness, not precision, is why relaxation oscillators drive tone generators,
+turn indicators and clock chimes.</p>
+<div class="box trap"><p class="bt">The two conditions for oscillating at all</p>
+<p><b>Strike:</b> charging must be able to reach <m>V_{\text{hi}}</m>, i.e. <m>V&gt;V_{\text{hi}}</m>.
+<b>Extinguish:</b> while the device conducts, the capacitor sits at the device's own voltage
+<m>Vr/(R+r)</m>, which must fall <em>below</em> <m>V_{\text{lo}}</m>, i.e.
+<m>r\le V_{\text{lo}}R/(V-V_{\text{lo}})</m>. Between them these define the oscillating window; outside it the
+circuit latches. Load-line reasoning is the way to see it without algebra: draw the straight line
+<m>V=V_s-IR</m> across the device's negative-resistance region — oscillation happens iff the line cuts the
+device's <m>V</m>–<m>I</m> curve three times.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 720 214" role="img" aria-label="Neon lamp relaxation oscillator circuit and the sawtooth-like capacitor voltage swinging between the extinguishing and striking levels">
+  <g transform="translate(30,26)">
+    <path d="M0,20 H60 M0,120 H230 M0,20 V120" class="ln"/>
+    <text x="-30" y="24" class="lbl sm">V_s</text>
+    <rect x="60" y="12" width="46" height="16" class="w" stroke="var(--fg)" stroke-width="1.8"/>
+    <text x="70" y="10" class="mi sm">R</text>
+    <path d="M106,20 H200 M200,20 V60" class="ln"/>
+    <path d="M200,120 H160 M120,120 H0" class="ln"/>
+    <path d="M160,120 V96 M200,120 V96" class="ln"/>
+    <path d="M166,72 V96 M194,72 V96" stroke="var(--fg)" stroke-width="2"/>
+    <line x1="162" y1="78" x2="198" y2="92" stroke="var(--amber)" stroke-width="1.6"/>
+    <line x1="162" y1="92" x2="198" y2="78" stroke="var(--amber)" stroke-width="1.6"/>
+    <text x="128" y="66" class="lbl sm">neon: strikes at V_hi,</text>
+    <text x="128" y="80" class="lbl sm">holds above V_lo</text>
+    <path d="M200,60 V72 M160,60 V72 M160,60 H200" class="ln"/>
+    <path d="M170,52 V68 M190,52 V68" stroke="var(--fg)" stroke-width="2"/>
+    <text x="206" y="60" class="mi sm">C</text>
+    <path d="M160,60 H120 M120,60 V120 M120,20 V60" class="ln"/>
+    <text x="0" y="156" class="lbl sm">While the lamp is off, C charges toward V_s with τ = RC. When it strikes, C dumps into</text>
+    <text x="0" y="172" class="lbl sm">the lamp until the current falls below the holding value, and the cycle restarts.</text>
+  </g>
+  <g transform="translate(380,26)">
+    <line x1="0" y1="120" x2="300" y2="120" class="ln"/><line x1="0" y1="0" x2="0" y2="120" class="ln"/>
+    <line x1="0" y1="30" x2="300" y2="30" class="thinl"/><text x="282" y="26" class="lbl sm">V_hi</text>
+    <line x1="0" y1="90" x2="300" y2="90" class="thinl"/><text x="282" y="86" class="lbl sm">V_lo</text>
+    <line x1="0" y1="8" x2="300" y2="8" class="thinl" stroke-dasharray="4 4"/><text x="252" y="4" class="lbl sm">V_s</text>
+    <path d="M0,120 C40,80 60,44 70,30 L74,90 C110,50 130,38 145,30 L150,90 C186,52 206,40 221,30 L226,90 C262,52 282,40 297,30" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+    <text x="76" y="112" class="lbl sm">fast decay, τ′ = (r‖R)C</text>
+    <text x="8" y="146" class="lbl sm">V_C(t)</text>
+    <text x="0" y="170" class="lbl sm">T = RC ln[(V_s−V_lo)/(V_s−V_hi)] — and it diverges as V_s approaches V_hi,</text>
+    <text x="0" y="186" class="lbl sm">because the exponential only reaches the strike level in infinite time.</text>
+  </g>
+</svg></div>
+<figcaption><b>Fig. 6.5</b> — A relaxation oscillator and its waveform. The top of each charging exponential is
+<em>clipped</em> at <m>V_{\text{hi}}</m>; that clipping is what turns a monotone curve into a clock, and it is why
+the period <em>diverges</em> at threshold rather than merely growing.</figcaption></figure>
+
+<h2>6.7 The leaky capacitor, and the two-τ supercapacitor</h2>
+<p>A real capacitor is <m>C</m> in parallel with <m>R_{\text{leak}}</m>, in series with an equivalent series
+resistance <m>R_s</m>. Fed through <m>R</m> from a cell <m>V</m>, its final voltage is <em>not</em> <m>V</m> but the
+divider value <m>V_\infty=V\,R_{\text{leak}}/(R+R_{\text{leak}})</m>, and there are two time constants,
+<m>R_tC</m> and <m>R_{\text{leak}}C</m>. Two consequences worth stating in an exam: a series stack needs balancing
+resistors <em>because</em> the individual leakages differ (§4.2), so <m>R_{\text{leak}}</m> decides which element
+takes the over-voltage; and an electrostatic voltmeter or electrometer reads low across a charged isolated capacitor
+unless its input resistance exceeds <m>R_{\text{leak}}</m> by two decades.</p>
+<p>Supercapacitors are worse, instructively so. Their electrodes are porous carbon: the electrolyte fills a maze of
+micrometre pores whose walls carry the double-layer capacitance. Along a pore the electrolyte has real resistance,
+so the structure is a <em>distributed</em> ladder of series resistance <m>r</m> and shunt capacitance <m>c</m> per
+unit length:</p>
+<div class="eqd" data-tag="6.8">\frac{\partial V}{\partial x}=-ri,\qquad \frac{\partial i}{\partial x}=-c\frac{\partial V}{\partial t}
+\qquad\Longrightarrow\qquad \frac{\partial^{2}V}{\partial x^{2}}=rc\,\frac{\partial V}{\partial t},
+\qquad Z_{\text{in}}(\omega)=\sqrt{\frac{r}{i\omega c}}=(1-i)\sqrt{\frac{r}{2\omega c}}</div>
+<p>— diffusion, not relaxation. <m>Z\propto(1-i)/\sqrt\omega</m> is a <em>Warburg</em> (constant-phase) impedance, a
+45° line on the Smith chart, and in the time domain the charge absorbed grows as</p>
+<div class="eqd" data-tag="6.9">Q(t)\propto\sqrt t\ \ \text{until}\ \ t\sim rc\,\ell^{2},\quad\text{when the far end of the pore finally fills}</div>
+<p>which is why a supercapacitor's "self-discharge time constant" is a marketing number that must be quoted with its
+soak time, why its <m>\tan\delta</m> varies slowly with frequency instead of showing a Debye peak, and why the
+<m>n\to\infty</m> limit of (6.4)'s discrete eigenvalues is a branch cut: <b>a continuous line has infinitely many
+time constants</b>, and for such an object any "the" time constant is a rounding.</p>
+
+<h2>6.8 Sinusoidal steady state: impedance is the same τ in different clothes</h2>
+<p>Put <m>V_s=V_0e^{i\omega t}</m> into (6.1): <m>d/dt\to i\omega</m>, the capacitor becomes
+<m>Z_C=1/i\omega C</m>, and every result of chapter 4 survives with <m>R\to Z</m>. For the single pole:</p>
+<div class="eqd" data-tag="6.10">\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{1}{1+i\omega\tau},\qquad
+|H|=\frac1{\sqrt{1+\omega^{2}\tau^{2}}},\qquad \arg H=-\arctan\omega\tau,
+\qquad f_{-3\,\text{dB}}=\frac1{2\pi\tau}=\frac1{2\pi RC}</div>
+<ul>
+<li><b>One number does both jobs.</b> The same <m>\tau</m> fixes the −3 dB corner and the step-response speed,
+because both are properties of the one pole. Its 10–90% rise time is <m>\tau\ln9=2.20\tau</m>, so
+<m>t_r=2.20/2\pi f_c=0.35/f_c</m>: the "0.35 rule" of oscilloscope bandwidth is this line and nothing else.</li>
+<li><b>Everything happens at the corner.</b> At <m>\omega\tau=1</m>: amplitude <m>1/\sqrt2</m>, power into a fixed
+load exactly <m>\tfrac12</m> (hence "−3 dB"), phase lag exactly <m>45^\circ</m>. That triple coincidence is the
+fastest experimental check that a filter is <em>one</em> pole — measure phase, not just magnitude, and a hiding
+second pole cannot stay quiet.</li>
+<li><b>A square wave is both tests at once.</b> Drive the RC with a square wave of period <m>\gg\tau</m> and you see
+exponentials (this chapter); of period <m>\ll\tau</m> and you see differentiation,
+<m>V_{\text{out}}\approx\tau\,dV_{\text{in}}/dt</m> — a "DC blocker" or a "coupling capacitor". The two limits are
+one equation read at opposite ends, which is why <m>\tau</m> is the only number an engineer ever asks for.</li>
+<li><b>Losses reappear here.</b> <m>\tan\delta=\kappa''/\kappa'</m> of chapter 5 is, in circuit language, the
+dissipation factor <m>D=1/(\omega C R_p)=\omega C\,R_{\text{ESR}}</m> (series form), and the quality factor of the
+capacitor itself is <m>Q=1/\tan\delta</m> — the same symbol doing a different job from the <m>Q</m> of charge. At the
+corner of a <em>lossy</em> capacitor the pole is no longer at <m>1/RC</m> but at
+<m>\omega\sqrt{1+D^{2}}/RC</m>: for <m>D=0.1</m> that is a 0.5% shift, which is why class-2 ceramics are
+unusable in a tuned circuit long before the capacitance drift kills you.</li>
+</ul>
+<div class="box thm"><p class="bt">AC bridges: chapter 4 with complex numbers</p>
+<div class="eqd">\text{balance}\iff \frac{Z_1}{Z_2}=\frac{Z_3}{Z_4}
+\qquad\text{(two real equations)}</div>
+<p>Magnitudes <em>and</em> phases must both balance. This is why an AC bridge has <em>two</em> controls and why "null, then adjust the other knob, then null again"
+iterates: the settings are coupled unless you choose elements so that one changes only phase (a pure capacitor) and
+the other only magnitude (a pure resistor). With <m>Z_2</m> a resistor and <m>Z_4</m> a parallel
+<m>RC</m>, for instance, balance forces <m>\omega=\tan\theta/\dots</m> — the general statement is more useful than any
+one bridge: <b>a complex balance condition is two conditions, and a bridge with only one adjustable element cannot
+null at an unknown frequency.</b></p></div>
+
+<h2>Questions</h2>
+<p>The first five are standard JEE Advanced shapes; the rest are where INPhO pushes.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>A capacitor C is charged from a cell V through R. At what time are the powers in R and in C equal, and what fraction of the total heat has been produced by then?</b><span class="diff">base · two lines</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>P_R=I^{2}R</m> and <m>P_C=V_CI</m> are equal when <m>IR=V_C</m>; the loop says <m>IR=V-V_C</m>, hence
+<m>V_C=V/2</m> — at <m>t=\tau\ln2=0.693\,RC</m>, the same instant as the half-charge time.</p>
+<div class="eqd">\int_0^{\tau\ln2}\!I^{2}R\,dt=\frac{V^{2}}{R}\cdot\frac{\tau}{2}\left(1-e^{-2\ln2}\right)
+=\frac34\cdot\frac12CV^{2}</div>
+<p><b>Three quarters of the total heat is produced before the capacitor reaches half its final voltage.</b> So the
+loss is front-loaded: which is exactly why fast-charge circuits spend all their effort on the first <m>0.7\tau</m>
+and why the ramp trick of §6.3 pays — slowing down the beginning recovers most of the loss.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>Uncharged C₁ = 2 µF and C₂ = 3 µF are connected in series with R = 5 kΩ across a 100 V cell at t = 0. Find the final charge on each, τ, the total heat in R, and the charge that passed through the cell. Is V₁ : V₂ = 3 : 2 only at t = ∞ or at every instant?</b><span class="diff">JEE-adv</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">C_s=1.2\ \mu\text{F},\quad Q_f=C_sV=120\ \mu\text{C},\quad \tau=RC_s=6\ \text{ms},
+\quad H=\tfrac12C_sV^{2}=6\ \text{mJ},\quad Q_{\text{cell}}=120\ \mu\text{C}</div>
+<p>The cell's answer and (i)'s are the same number by the branch rule — the only plate its positive terminal feeds is
+C₁'s, and it ends at <m>+120</m> µC. (Writing <m>Q=\int I\,dt</m> with
+<m>I=(Q_f/\tau)e^{-t/\tau}</m> returns 120 µC ✓ and is a good sanity check on the exponential.)</p>
+<p><b>The ratio question is the point of the problem.</b> One path means the same current through both capacitors at
+all times and, both starting uncharged, <m>Q_1(t)\equiv Q_2(t)</m>. So
+<m>V_1:V_2=1/C_1:1/C_2=3:2</m> for <em>every</em> <m>t&gt;0</m>: 60 V on C₁ and 40 V on C₂, summing to 100 V ✓ at
+all times, not merely at the end. <b>Contrast the version where each capacitor has its own resistor across the
+cell</b>: then the voltages are independent, the charges never equalise, and "series ⇒ equal charge" is revealed as
+a statement about there being one path rather than about capacitors. Mixing the two topologies up is the most common
+single error in this topic.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>A 50 V cell feeds two parallel branches through a switch: branch 1 is R₁ = 10 kΩ in series with C₁ = 1 µF, branch 2 is R₂ = 5 kΩ in series with C₂ = 2 µF, both branches returning to the cell's other terminal. Both capacitors start uncharged. Find the final charges, the total charge through the switch, the two time constants, the total heat, and say whether the switch current is a single exponential.</b><span class="diff">JEE-adv · the algorithm, executed</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Final charges.</b> Opening both capacitor branches opens both branches completely, so no current flows, no
+resistor drops anything, and each capacitor ends at the full cell voltage:
+<m>Q_1=50\ \mu</m>C, <m>Q_2=100\ \mu</m>C.</p>
+<p><b>Charge through the switch.</b> The surface cutting the switch lead encloses the two resistors and the two upper
+plates; the only other things crossing it are capacitor dielectrics, which pass no current. §6.3's rule is legal
+here:</p>
+<div class="eqd">Q_{\text{sw}}=Q_1+Q_2=150\ \mu\text{C}</div>
+<p>Had a third resistor tied the enclosed region to the return rail, charge would have drained through it and the
+endpoint method would fail — that is the hypothesis of the box, and this is the circuit on which it bites.</p>
+<p><b>Time constants.</b> Each branch is an independent single-loop RC:
+<m>\tau_1=R_1C_1=10</m> ms, <m>\tau_2=R_2C_2=10</m> ms.</p>
+<p><b>Heat.</b> <m>\tfrac12CV^{2}</m> per branch whatever <m>R</m> is (6.3):
+<m>H=\tfrac12(1+2)\times10^{-6}\times50^{2}=3.75</m> mJ. Audit: the cell supplied
+<m>VQ_{\text{sw}}=7.5</m> mJ and the field holds <m>\tfrac12(C_1+C_2)V^{2}=3.75</m> mJ ✓.</p>
+<p><b>The current.</b> <m>I_{\text{sw}}(t)=V\left(e^{-t/\tau_1}/R_1+e^{-t/\tau_2}/R_2\right)</m> — a sum of two
+exponentials, hence <em>not</em> a single exponential, so "the time constant of this circuit" is a category error.
+The chosen numbers make the two equal and the sum collapses to <m>\tau=10</m> ms with
+<m>I(0^{+})=5+10=15</m> mA. Change either resistor and a plot of <m>\ln I</m> against <m>t</m> is visibly bent;
+reading <m>\tau</m> from the initial slope then overestimates it, which is the experimental mistake the question is
+built to punish.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>C₁ = 2 µF at 100 V and C₂ = 3 µF at 50 V are joined in parallel through a resistor R. By solving the transient (not by the energy shortcut), find I(t), the total heat, and the heat in each of two unequal parts of R.</b><span class="diff">JEE-adv → ch. 3 proved</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Let <m>q(t)</m> be the charge moved from 1 to 2, <m>q(0)=0</m>. KVL around the single loop:</p>
+<div class="eqd">\left(V_1-\frac{q}{C_1}\right)-\left(V_2+\frac{q}{C_2}\right)=R\frac{dq}{dt}
+\quad\Rightarrow\quad \frac{dq}{dt}+\frac{q}{RC_s}=\frac{\Delta V}{R},
+\qquad q(t)=C_s\Delta V\left(1-e^{-t/\tau}\right)</div>
+<p>with <m>C_s=1.2</m> µF and <m>\tau=RC_s</m>. Therefore</p>
+<div class="eqd">I(t)=\frac{\Delta V}{R}e^{-t/\tau},\qquad
+H=\int_0^\infty I^{2}R\,dt=\frac{\Delta V^{2}}{R}\cdot\frac{RC_s}{2}=\frac12C_s(\Delta V)^{2}=1.5\ \text{mJ}</div>
+<p>— chapter 3's (3.6), obtained by integration rather than by a conservation argument, with the same content: the
+loss is fixed by the end states, and it belongs to the <em>series</em> combination, not to either capacitor. The
+final common voltage is <m>70</m> V and the audit closes:
+<m>U_i=15\ \text{mJ}</m>, <m>U_f=13.5</m> mJ, difference 1.5 mJ ✓.</p>
+<p><b>Unequal halves.</b> There is one loop, so the same <m>I(t)</m> flows through both parts at every instant and
+they divide as resistances: <m>H_1:H_2=R_1:R_2</m>, with the sum pinned. So the <em>total</em> loss is
+endpoint-determined while its <em>location</em> is not — which is why "the capacitor exploded at the switch" is a
+diagnosis you can only make from where the heat went, never from how much there was.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>A half-wave rectifier feeds a load R = 12 Ω through a smoothing capacitor C = 2200 µF; the secondary peak is 17 V and the mains is 50 Hz. Find the ripple and the DC output, and state when the shortcut ΔV = V₀T/RC is legitimate.</b><span class="diff">JEE-adv · design</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Between conduction intervals the capacitor discharges through <m>R</m> alone with
+<m>\tau=RC=0.0264</m> s, so over <m>T=0.02</m> s:</p>
+<div class="eqd">\Delta V=V_0\left(1-e^{-T/\tau}\right)=17\left(1-e^{-0.758}\right)=9.0\ \text{V},
+\qquad V_{\text{DC}}\approx V_0-\frac{\Delta V}{2}=12.5\ \text{V}</div>
+<p>The shortcut gives <m>V_0T/\tau=12.9</m> V, a 43% overestimate, because <m>T/\tau=0.76</m> is not a small
+parameter. <b>Legitimacy condition:</b> <m>1-e^{-x}\approx x</m> needs <m>x=T/\tau\le0.1</m>, i.e.
+<m>RC\ge10T=0.2</m> s. The load here draws <m>12.5/12=1.04</m> A, five times more than this capacitor can filter
+quietly — which is why the same transformer with 22 000 µF is a decent supply.</p>
+<p>The general sizing rule is just <m>\Delta Q=I\,\Delta t</m> and <m>\Delta V=\Delta Q/C</m>:</p>
+<div class="eqd">C\ \ge\ \frac{I_{\text{load}}\,T_{\text{rip}}}{\Delta V_{\max}},\qquad
+T_{\text{rip}}=\frac1f=20\ \text{ms (half-wave)},\quad \frac1{2f}=10\ \text{ms (full-wave)}</div>
+<p><b>The stress the ripple voltage hides.</b> The whole charge <m>\Delta Q=C\Delta V=19.8</m> mC must be returned by
+the diode while the mains sine exceeds the capacitor voltage — a window of a few milliseconds — so the diode's peak
+current is an order of magnitude above the load current and its rms value dominates heating of
+<m>R_{\text{ESR}}</m>. That is why an electrolytic in a cheap adaptor dries out, and why datasheets list ripple
+<em>voltage</em> and ripple <em>current</em> as two separate limits: the first is a specification of your circuit, the
+second a specification of the part's survival.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>A neon lamp (striking 80 V, extinguishing 20 V) is across a 0.5 µF capacitor, and a 200 kΩ resistor connects them to a 120 V supply. Find the flashing frequency. What happens as the supply is lowered to 80 V, and above what lamp on-resistance does the circuit latch on?</b><span class="diff">JEE-adv → INPhO</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Only the charging phase takes appreciable time, so (6.7) gives the period outright:</p>
+<div class="eqd">T=RC\ln\frac{V-V_{\text{lo}}}{V-V_{\text{hi}}}=0.1\ \text{s}\times\ln\frac{100}{40}=0.1\times0.916=91.6\ \text{ms}
+\qquad f=10.9\ \text{Hz}</div>
+<p>As <m>V\to V_{\text{hi}}^{+}</m> the logarithm diverges and <m>f\to0</m>: the lamp flashes ever more slowly, and at
+exactly 80 V the capacitor can only approach the striking voltage asymptotically, so oscillation stops. (Real lamps
+also acquire a statistical <em>waiting time</em> to strike near threshold, so the last flashes are erratic — a
+circuit whose limitation is microscopic rather than circuit-theoretic.)</p>
+<p>For the latch: while the lamp conducts with on-resistance <m>r</m> the capacitor sits at
+<m>Vr/(R+r)</m>, and the discharge can only restart if that is below <m>V_{\text{lo}}</m>:</p>
+<div class="eqd">\frac{120r}{200\ \text{k}\Omega+r}&lt;20\ \text{V}\ \Longrightarrow\ 120r&lt;4\times10^{6}+20r
+\ \Longrightarrow\ r&lt;40\ \text{k}\Omega</div>
+<p>A device harder than 40 kΩ holds the capacitor above the extinguishing voltage and the circuit latches on. The
+same inequality is why a 555's discharge pin must sink more than the charge current at the lower threshold, or the
+output never returns low.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>A 3000 F supercapacitor bank at 2.7 V is left open-circuit: it loses 0.30 V during the first hour and 0.10 V during the second. Is that ohmic leakage? Fit a model, extract an "effective leakage resistance", and say what a designer should conclude.</b><span class="diff">Olympiad · reading data</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Test one exponential two ways: ratio and level.</b> <m>V=V_0e^{-t/\theta}</m> makes the second-hour drop
+<m>e^{-1/\theta}</m> times the first; the observed ratio <m>0.10/0.30=1/3</m> needs
+<m>\theta=1/\ln3=0.91</m> h — but then the first-hour drop should have been
+<m>2.7(1-e^{-1/0.91})=1.8</m> V, six times what was measured. No single exponential has both this ratio and this
+level, so the ohmic-leakage model is dead.</p>
+<p><b>Try a diffusive relaxation.</b> Fit <m>V=V_0-at^{p}</m>: <m>a=0.30</m> V, and
+<m>2^{p}=0.40/0.30</m> ⇒ <m>p=0.42</m> — which is <m>1/2</m> within two data points, the <m>\sqrt t</m> law of §6.7.
+A <m>\sqrt t</m> decay has exactly this fingerprint: a rate that keeps slowing down without ever becoming
+exponential.</p>
+<p><b>What an "effective leakage resistance" is worth.</b> At 1 h,
+<m>I=C|dV/dt|=3000\times0.30\times0.42/3600=0.105</m> A, so <m>R_{\text{eff}}=V/I\approx23\ \Omega</m>. If that
+really were an ohmic conductance the decay would have <m>\theta=R_{\text{eff}}C=6.9\times10^{4}</m> s
+(<m>\approx19</m> h), predicting a first-hour drop of <m>2.7(1-e^{-1/19})=0.14</m> V (measured 0.30) and two
+<em>nearly equal</em> hourly drops (measured 0.30 then 0.10). Both are wrong in the same direction: the real decay is
+far more front-loaded than any single exponential, which is the signature of a <em>continuum</em> of relaxation times
+(the pore distribution of §6.7) rather than of a leak. With only two data points a logarithmic ("glassy") relaxation
+fits just as well as <m>t^{1/2}</m> — deciding between them needs a third hour, and saying so is part of the answer.</p>
+<p><b>What a designer takes away.</b> There is no single leakage resistance to quote, so: series stacks need
+low-value balancing resistors (tens of ohms, not megohms — which is why supercapacitor modules ship with bleed
+networks and idle at milliamps, not nanoamps); the front-loaded drop means most of the useful charge is lost in the
+first minutes after a fast discharge unless the bank is allowed to relax before it is read; and any "self-discharge
+time constant" on a datasheet is a statement about a measurement protocol (soak time, temperature, prior charge
+rate), so two parts with different histories cannot be compared from the numbers alone.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>Design the load resistance of a diode envelope detector for 1 MHz AM with 5 kHz maximum audio and modulation index 0.9, using C = 1 nF. Give each inequality with its reason, and the chosen value.</b><span class="diff">JEE-adv · design with reasons</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Two requirements on <m>RC</m>, pulling in opposite directions:</p>
+<div class="eqd">\text{(a) hold between carrier peaks:}\quad RC\gg\frac1{\omega_c}=0.16\ \mu\text{s};
+\qquad \text{(b) follow the envelope:}\quad RC\le\frac{\sqrt{1-m^{2}}}{m\,\omega_m}=15.4\ \mu\text{s}</div>
+<p>(b) is the one worth deriving. The capacitor can only fall through <m>R</m>; the diode resumes conduction only when
+the rising carrier catches up with the decaying capacitor voltage. If <m>RC</m> is so long that the capacitor's
+exponential droop is steeper than the envelope's fastest fall, the diode stays cut off through the modulation trough
+and the output traces <m>V_0e^{-t/RC}</m> instead of the audio — <em>negative-peak clipping</em>. Equating the two
+slopes at the trough, <m>V_0/RC=m\omega_mV_0/\sqrt{1-m^{2}}</m>, gives (b). At <m>m=0.9</m> the factor
+<m>\sqrt{1-m^{2}}/m=0.48</m> halves the allowance: <b>deep modulation, not the carrier, is what limits the time
+constant</b>, and the carrier merely sets the floor.</p>
+<div class="eqd">1.6\ \text{k}\Omega\ll R\lesssim15\ \text{k}\Omega\qquad\text{choose}\quad R=10\ \text{k}\Omega,\ \ \tau=10\ \mu\text{s}</div>
+<p>Check: over a 100 µs audio half-period the capacitor droops by <m>1-e^{-0.1}=9.5\%</m> while the envelope must
+swing ±90% — the trough is followed, with margin. Broadcast receivers add a third, much longer time constant for the
+AGC (≈0.5–1 s): the identical circuit, deliberately made too slow to respond to audio, which is the neatest
+demonstration in a radio that <m>\tau</m> is not a property of a capacitor but of a <em>choice</em>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>An uncharged capacitor is connected to an ideal cell through (i) a resistor R, (ii) an inductor L, (iii) nothing. Find the energy lost in each case and reconcile the three answers.</b><span class="diff">INPhO · the paradox, properly</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(i)</b> <m>\tfrac12CV^{2}</m>, independent of <m>R</m>, from (6.3).</p>
+<p><b>(ii)</b> The loop <m>V=Li'+q/C</m> with <m>q(0)=i(0)=0</m> gives
+<m>q(t)=CV\left(1-\cos\omega_0t\right)</m>, <m>\omega_0=1/\sqrt{LC}</m>. At <m>t=\pi/\omega_0</m> the current is back
+to zero with <m>q=2CV</m>, so</p>
+<div class="eqd">W_{\text{cell}}=V\cdot2CV=2CV^{2},\qquad U_C=\tfrac12C(2V)^{2}=2CV^{2}
+\qquad\Longrightarrow\qquad \text{loss}=0</div>
+<p>with nothing lost <em>and</em> the capacitor ending at <m>2V</m>, not <m>V</m>. Add a small <m>R</m>: the ringing
+decays, the final state becomes <m>V_C=V</m>, the cell still delivers the same <m>Q=CV</m> over the whole episode —
+so the heat is <m>CV^{2}-\tfrac12CV^{2}=\tfrac12CV^{2}</m> for every <m>R&gt;0</m>, including the limit. The loss is
+therefore <em>discontinuous</em> at <m>R=0</m>: the two limits do not commute.</p>
+<div class="eqd">\lim_{R\to0^{+}}H=\frac12CV^{2}\ \ne\ H\big|_{R=0}=0
+\qquad\text{(and with }L=0:\ \text{no solution at all)}</div>
+<p><b>(iii)</b> With neither <m>R</m> nor <m>L</m> the model has no solution: "the capacitor voltage equals an ideal
+source's voltage" must hold instantly, requiring an impulse of current across zero impedance and infinite power. Any
+number you produce from it ("½CV² lost", "nothing lost") is a statement about the regularisation you smuggled in,
+not about physics. That is the actual lesson, and it is the same mathematics as the two-capacitor paradox of §3.6 —
+there also the loss survives every attempt to make the connection lossless, because the
+<m>R\to0</m> and <m>L\to0</m> limits are taken in the wrong order. Where a question asks "where did the missing half
+go?", the full credit answer is: <em>into whichever element you added to make the problem well-posed, and its
+fraction of the total is determined by that element, not by the capacitors.</em></p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>An RC pair is driven by a square wave of amplitude ±V₀ and half-period T. Find the periodic steady-state waveforms of V_C and I, the peak-to-peak swing and the mean current; show the load behaves as a capacitor of value C·tanh(T/2τ); and deduce why a switched-capacitor voltmeter reading is independent of R.</b><span class="diff">Olympiad · periodic-state analysis</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Let the capacitor voltage reverse between <m>\pm V_a</m>. Ending a half-period of charging toward <m>+V_0</m>
+from <m>-V_a</m> means <m>V_a=V_0-(V_0+V_a)e^{-T/\tau}</m>, so with <m>x=T/\tau</m>:</p>
+<div class="eqd">V_a=V_0\,\frac{1-e^{-x}}{1+e^{-x}}=V_0\tanh\frac{x}{2},
+\qquad V_C(t)=V_0-\left(V_0+V_a\right)e^{-t/\tau},\qquad I(t)=\frac{V_0+V_a}{R}\,e^{-t/\tau}</div>
+<p>(the identity is <m>\tanh(x/2)=(e^{x/2}-e^{-x/2})/(e^{x/2}+e^{-x/2})</m>). The output is a chain of exponential
+arcs of peak-to-peak swing <m>2V_0\tanh(T/2\tau)</m>. Two limits, both worth stating: slow drive
+(<m>T\gg\tau</m>) gives <m>V_a\to V_0</m>, an almost square output; fast drive (<m>T\ll\tau</m>) gives
+<m>V_a\approx V_0T/2\tau</m>, a small triangular ripple — the same component acting as an averager. Hence the mean
+current, from the branch rule rather than by integrating:</p>
+<div class="eqd">\langle I\rangle=\frac{\Delta Q}{T}=\frac{2CV_a}{T}=\frac{2CV_0}{T}\tanh\frac{T}{2\tau}
+\qquad\Longrightarrow\qquad C_{\text{eff}}=C\tanh\frac{T}{2\tau}</div>
+<p>For <m>T\gg\tau</m> the transferred charge is exactly <m>2CV_0</m> and <m>\tau=RC</m> has vanished: charge transfer
+between two known potentials is an <em>endpoint</em> question. That is the principle of the charge-balancing
+(switched-capacitor) integrating voltmeter — transfer the unknown's charge through the same <m>RC</m> network into a
+virtual ground, count cycles to balance, and every series and contact resistance that merely <em>slows</em> the
+transfer drops out of the answer, at the price of having to wait for each transfer to complete.</p>
+<p><b>The theorem to keep:</b> endpoint quantities (charge per cycle, energy computed from charge, mean current over
+a complete cycle) do not depend on <m>R</m>; rate quantities (<m>\tau</m>, ripple, settling time) are proportional to
+it. Half the questions in this chapter are decided by noticing which of the two is being asked.</p>
+</div></details>
+</div></div>
+
+<h2>Drill: say it in one line</h2>
+<table class="tb">
+<thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>"<m>\tau</m> is the time for the capacitor to charge."</td><td>Wrong — it is the time to 63.2%; it never finishes (5τ leaves 0.7%). The half-charge time is <m>0.69\tau</m>.</td></tr>
+<tr><td>2</td><td>"The current through a capacitor cannot change suddenly."</td><td>Wrong — the <em>voltage</em> cannot; the current may jump by the full amount, since nothing bounds <m>dV/dt</m>.</td></tr>
+<tr><td>3</td><td>"For one capacitor in any resistive network, τ = (resistance seen by C with sources killed)·C."</td><td>Right, and it is a theorem (§6.2), not a rule of thumb. "Killed" means voltage sources shorted, current sources opened.</td></tr>
+<tr><td>4</td><td>"Charge through the battery = C × (change in capacitor voltage)."</td><td>Only when nothing else crosses the chosen surface. Use the branch rule of §6.3 and check its hypothesis (Q3).</td></tr>
+<tr><td>5</td><td>"Heat produced in R while charging depends on R."</td><td>Wrong for the total (½CV² for any <m>R&gt;0</m>); right for the rate and for partial intervals — 75% of it within the first <m>0.7\tau</m> (Q1).</td></tr>
+<tr><td>6</td><td>"Capacitors in series always carry equal charge."</td><td>They carry equal <em>changes</em> of charge if they share an island; equality of the charges themselves needs a common initial condition. §4.1, again.</td></tr>
+<tr><td>7</td><td>"A capacitor blocks DC and passes AC."</td><td>A mnemonic, not engineering: <m>Z_C=1/\omega C</m> has magnitude <em>and</em> phase, and near the corner "passes" means 45° of lag and half the power. Say <m>f_c=1/2\pi RC</m>.</td></tr>
+<tr><td>8</td><td>"A 10× probe works because the two dividers match."</td><td>Right, quantitatively: <m>R_1C_1=R_2C_2</m> makes the capacitive and resistive ratios equal, so the ratio is frequency-independent (§6.5) — and it is C₁, not C₂, that carries the trimmer because the scope's input is the unknown.</td></tr>
+<tr><td>9</td><td>"Two capacitors and two resistors always give two time constants."</td><td>Only when neither mode is invisible: <m>n</m> states give up to <m>n</m> exponentials, and symmetry or compensation (Fig. 6.4) can hide all but one.</td></tr>
+<tr><td>10</td><td>"A supercapacitor has a self-discharge time constant."</td><td>Wrong as physics: a distributed pore line has a <m>\sqrt t</m> law and a continuum of τ's (Q7), so the figure is a specification of a measurement, not of a device.</td></tr>
+</tbody></table>
+
+<div class="box thm"><p class="bt">Chapter 6 in six lines</p>
+<ul>
+<li>Steady state = open every capacitor branch, solve the resistor graph, then <m>Q=C\Delta V</m>, then check the
+islands.</li>
+<li>One capacitor anywhere: <m>V_C=V_\infty+(V_0-V_\infty)e^{-t/\tau}</m> with <m>\tau=R_{\text{th}}C</m>;
+<m>V_C</m> is continuous (finite power), everything else may jump.</li>
+<li>Charge through a branch = the signed sum of plate-charge changes inside any surface cutting that branch once —
+provided nothing else crosses it.</li>
+<li>Heat in the series resistance of a step charge is <m>\tfrac12CV^{2}</m> for every <m>R&gt;0</m>; to lose less,
+ramp the source over <m>T\gg RC</m> (and Q9 explains why "R = 0" is not the way out).</li>
+<li><m>n</m> capacitors give <m>n</m> time constants; a compensated divider is the case where one is exactly
+cancelled, a distributed line the case where there are infinitely many and <m>Q\propto\sqrt t</m>.</li>
+<li>Threshold plus RC is a clock: <m>t=\tau\ln\frac{V_\infty-V_{\text{start}}}{V_\infty-V_{\text{end}}}</m> — the
+same <m>\tau</m> that in AC clothes is <m>f_c=1/2\pi\tau</m>.</li>
+</ul></div>
+
+<ul class="chks">
+<li>State the four-step steady-state algorithm and the three false statements in §6.1's trap box, each with its
+reason.</li>
+<li>Prove <m>\tau=R_{\text{th}}C</m> from the Thévenin reduction in three lines, and say why the proof fails when a
+second capacitor is added.</li>
+<li>Do Q1 in your head: <m>V_C=V/2</m>, <m>t=0.69\tau</m>, 75% of the heat. If those three come instantly, the core
+of this chapter is yours.</li>
+<li>Use the branch rule for Q2's cell charge and Q3's 150 µC, and state Q3's hypothesis out loud.</li>
+<li>Derive (6.5)'s three numbers for the compensated divider and explain why the trimmer capacitor is <m>C_1</m>.</li>
+<li>Get the relaxation period from (6.7) and both oscillation conditions from the trap box — the load-line version,
+not just the inequalities.</li>
+<li>Explain why §6.7's porous electrode has <em>no</em> time constant, then re-derive
+<m>Z\propto1/\sqrt\omega</m> from the two ladder equations.</li>
+<li>Answer Q9 in one paragraph, out loud. If you can, you know the difference between a physical limit and the failure
+of a model.</li>
+</ul>
+<p class="skip">Next: <a href="07-advanced-topics.html">7 · Advanced topics — coefficients of capacitance, Green's reciprocity, images, conformal maps, MEMS pull-in and the Rayleigh limit</a></p>
+</main>
+</div>
+</body>
+</html>

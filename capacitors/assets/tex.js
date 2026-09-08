@@ -44,7 +44,10 @@
     Ohm: "Ω", ohm: "Ω", checkmark: "✓", Longleftrightarrow: "⟺", Longrightarrow: "⟹",Longrightarrow: "⟹", Llead: "⇐", star2: "✶", perp2: "⟂", ne2: "≠", hat2: "^", box_: "□", bullet2: "∙", div2: "⊘"
   };
   var SP = { ",": 1, ":": 1, ";": 2, " ": 1 };          /* 1 = thin, 2 = medium */
-  var FUN = { ln: 1, log: 1, exp: 1, sin: 1, cos: 1, tan: 1, sinh: 1, cosh: 1, tanh: 1, max: 1, min: 1, mod: 1, gcd: 1, deg: 1, arg: 1, sgn: 1, const: 1, det: 1, diag: 1 };
+  var FUN = { ln: 1, log: 1, lg: 1, exp: 1, sin: 1, cos: 1, tan: 1, cot: 1, sec: 1, csc: 1,
+    sinh: 1, cosh: 1, tanh: 1, coth: 1, arcsin: 1, arccos: 1, arctan: 1, arcosh: 1, artanh: 1,
+    max: 1, min: 1, mod: 1, gcd: 1, deg: 1, arg: 1, sgn: 1, const: 1, det: 1, diag: 1,
+    Re: 1, Im: 1, re: 1, im: 1, dim: 1, order: 1, resp: 1, const_: 1 };
   var NEG = "\u0001";                                     /* marker for \! */
 
   var BB = { N: "ℕ", Z: "ℤ", Q: "ℚ", R: "ℝ", C: "ℂ", P: "ℙ", H: "ℍ", E: "𝔼", F: "𝔽" };
