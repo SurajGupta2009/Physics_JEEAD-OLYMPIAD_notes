@@ -351,6 +351,27 @@ details.fold>.bd{padding:.3rem .9rem .8rem;border-top:1px solid var(--rule)}
   h1{font-size:1.62rem}
   h2{font-size:1.28rem}
 }
+/* ---- formula sheet (ch 11) ---- */
+.sheet .grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;align-items:start}
+.sheet h2{margin:1.1rem 0 .35rem;font-size:1.02rem;letter-spacing:.01em}
+.sheet h2:first-of-type{margin-top:.4rem}
+.sheet .eqd{margin:.34rem 0;padding:.34rem .5rem}
+.sheet .box{margin:.5rem 0;padding:.5rem .7rem}
+.sheet .box .bt{margin-bottom:.2rem}
+.sheet table.tb{font-size:.84rem;margin:.4rem 0}
+.sheet table.tb th,.sheet table.tb td{padding:.22rem .4rem}
+.sheet ul.tight{margin:.3rem 0 .5rem;padding-left:1.05rem;font-size:.9rem}
+.sheet ul.tight li{margin:.12rem 0}
+.sheet .pg{break-inside:auto}
+@media (max-width:920px){.sheet .grid{grid-template-columns:1fr}}
+@media print{
+  .sheet{font-size:9.3pt}
+  .sheet .grid{grid-template-columns:1fr 1fr;gap:.55rem}
+  .sheet .pg{break-after:page}
+  .sheet .pg:last-child{break-after:auto}
+  .sheet table.tb{font-size:8.1pt}
+  .sheet ul.tight{font-size:8.6pt}
+}
 @media print{
   :root{--bg:#fff;--panel:#fff;--fg:#000;--muted:#444;--rule:#bbb;--shadow:none}
   .topbar,nav.toc,.pagenav,#progress,.toolrow,.btn{display:none !important}

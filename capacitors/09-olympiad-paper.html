@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. The Olympiad paper — Capacitors, from basics to Olympiad</title>
+<meta name="description" content="A 36-question examination on capacitors in three hours: twelve single-correct, six multiple-correct, eight numerical and ten long Olympiad questions, with a coverage map and marking scheme.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Instructions"><p class="lab">Paper · contents</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b o">INPhO / IPhO standard</span><span class="b j">JEE Advanced format</span><span class="b n">3 hours · 36 questions</span></span>
+</p>
+<h1>9 · The paper: capacitors, from Gauss to the Rayleigh limit</h1>
+<p>Thirty-six questions, four sections, three hours. The paper is built to be <em>coverable</em>: every section of
+chapters 1–7 is examined by at least two questions, and the coverage map below says which. Attempt it in one sitting,
+with a non-programmable calculator, and mark yourself with <a href="10-olympiad-solutions.html">part 10</a> only
+afterwards — the value of this paper is the two hours you spend deciding what to write, not the marking.</p>
+
+<div class="box def"><p class="bt">Instructions</p>
+<ul>
+<li><b>Time:</b> 180 minutes. Suggested split — Section A 40 min, B 30 min, C 30 min, D 80 min.</li>
+<li><b>Section A</b> (Q1–Q12): one or more options correct; +3 for the correct option(s), 0 for unanswered, −1 for
+anything else. Do not second-guess a single-correct question you have checked with a limit.</li>
+<li><b>Section B</b> (Q13–Q18): multiple correct; +4 for all correct, +1 for each correct left unmarked with no wrong
+mark, 0 for none, −2 otherwise.</li>
+<li><b>Section C</b> (Q19–Q26): numerical, +4/0; give the value to the precision asked. Units are in the table; a
+correct number with the wrong prefix is marked wrong, so state the prefix.</li>
+<li><b>Section D</b> (Q27–Q36): long questions, marks as printed (total 150). Start every answer with the principle
+you are using and end with a check — both carry marks even when the algebra slips.</li>
+<li><b>Data, unless stated:</b> <m>\varepsilon_0=8.85\times10^{-12}</m> F/m, <m>1/4\pi\varepsilon_0=9\times10^{9}</m>
+N m²/C², <m>g=9.8</m> m/s², <m>k=1.38\times10^{-23}</m> J/K, <m>e=1.6\times10^{-19}</m> C,
+air breakdown <m>3</m> kV/mm at 1 atm.</li>
+</ul></div>
+
+<table class="tb">
+<thead><tr><th>topic</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+<tbody>
+<tr><td>1 · fields, Gauss, potential, <m>D</m></td><td>1, 11</td><td>13</td><td>21</td><td>27, 34</td></tr>
+<tr><td>2 · capacitance of real geometries</td><td>1, 4, 5</td><td>13</td><td>19</td><td>29, 33</td></tr>
+<tr><td>3 · energy and force</td><td>2, 3, 6</td><td>15</td><td>20, 24</td><td>31, 36</td></tr>
+<tr><td>4 · combinations, bridges, symmetry</td><td>4, 5, 7</td><td>13, 15</td><td>19, 20</td><td>27, 32</td></tr>
+<tr><td>5 · dielectrics</td><td>8, 9, 10, 12</td><td>14, 16, 18</td><td>22, 23, 25</td><td>29, 34, 36</td></tr>
+<tr><td>6 · networks and transients</td><td>6, 7</td><td>15, 17</td><td>26</td><td>30, 36</td></tr>
+<tr><td>7 · advanced: matrices, reciprocity, maps, instability</td><td>1, 5, 10, 11</td><td>16, 17, 18</td><td>23, 26</td><td>28, 31, 32, 33, 35</td></tr>
+<tr><td>8 · traps and estimation</td><td>all</td><td>all</td><td>all</td><td>all</td></tr>
+</tbody></table>
+
+<h2>Section A · Single correct (Q1–Q12)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>[3] Two concentric conducting shells of radii <m>a=5</m> cm and <m>b=10</m> cm have the space between them filled with a dielectric of <m>\kappa=3</m> in the lower hemisphere only; the upper half is vacuum. The capacitance between the shells is closest to</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 11 pF</li>
+<li><b>B</b> 22 pF</li>
+<li><b>C</b> 33 pF</li>
+<li><b>D</b> 44 pF</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>[3] An isolated parallel-plate capacitor (area <m>A</m>, gap <m>d</m>) is charged to a voltage <m>V_0</m>. A dielectric slab of the same area, thickness exactly <m>d</m> and constant <m>\kappa</m> is now slipped in. Which set of changes is correct?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> <m>V</m> and <m>U</m> both fall to <m>1/\kappa</m>; <m>E</m> falls to <m>V_0/\kappa d</m></li>
+<li><b>B</b> <m>V</m> falls, <m>U</m> stays, <m>E</m> stays</li>
+<li><b>C</b> <m>V</m>, <m>U</m> and <m>D</m> all fall by <m>\kappa</m></li>
+<li><b>D</b> nothing changes, since <m>Q</m> is fixed</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>[3] A 2 µF capacitor charged to 100 V is connected at <m>t=0</m> across an uncharged 3 µF capacitor through a resistor. The total heat produced is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 6 mJ</li>
+<li><b>B</b> 15 mJ</li>
+<li><b>C</b> 24 mJ</li>
+<li><b>D</b> 0, since the final current is zero</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>[3] Two identical conducting spheres of radius <m>a</m>, centres <m>d=4a</m> apart, are driven to potentials <m>\pm V</m>. Taking their charges to sit at their centres gives the "two isolated spheres in series" value <m>2\pi\varepsilon_0a</m>. Including the neighbour's effect to leading order, the true two-terminal capacitance is larger by about</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 7%</li>
+<li><b>B</b> 33%</li>
+<li><b>C</b> 100%</li>
+<li><b>D</b> 25%, and smaller, not larger</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>[3] The same pair as Q4: the capacitance of sphere 1 (charge on 1 per volt of 1) is measured with sphere 2 (i) absent, (ii) present and uncharged, (iii) present and earthed. Then</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> (iii) &gt; (ii) &gt; (i)</li>
+<li><b>B</b> (ii) &gt; (iii) &gt; (i)</li>
+<li><b>C</b> (i) = (ii) &lt; (iii)</li>
+<li><b>D</b> (i) = (iii) &gt; (ii)</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>[3] A 60 V cell, a 20 kΩ resistor, an uncharged 5 µF capacitor and a 10 kΩ resistor are connected in a single series loop; the switch is closed at <m>t=0</m>. Which pair of values is correct for the final capacitor voltage and the total heat produced?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 60 V and 9 mJ</li>
+<li><b>B</b> 20 V and 5 mJ</li>
+<li><b>C</b> 60 V and 18 mJ</li>
+<li><b>D</b> 40 V and 9 mJ</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>[3] A capacitor <m>C=2</m> µF is connected from node A to the lower rail. Node A is joined to a 60 V cell through <m>R_1=20</m> kΩ, and to the same rail through <m>R_2=20</m> kΩ. The time constant of the charging and the final capacitor voltage are</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 40 ms, 60 V</li>
+<li><b>B</b> 20 ms, 30 V</li>
+<li><b>C</b> 20 ms, 60 V</li>
+<li><b>D</b> 10 ms, 30 V</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>[3] An oscilloscope probe uses <m>R_1=9</m> MΩ in its tip and the scope's own <m>R_2=1</m> MΩ input, with the scope's input capacitance <m>C_2=100</m> pF. For exact 10× compensation the trimmer capacitor in the tip must be</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 11.1 pF</li>
+<li><b>B</b> 900 pF</li>
+<li><b>C</b> 100 pF</li>
+<li><b>D</b> 1 pF</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>[3] A capacitive gas thermometer uses the change in <m>\kappa-1</m> of a gas held at constant pressure. If the sensitivity is taken to be <m>\Delta C/C\approx\Delta(\kappa-1)/(\kappa-1)</m>, a 1% change in capacitance corresponds to a temperature change of about</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 0.03 K</li>
+<li><b>B</b> 3 K</li>
+<li><b>C</b> 30 K</li>
+<li><b>D</b> 300 K</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>[3] A porcelain insulator of constant <m>\kappa=6</m> contains a thin flat void occupying 5% of the wall thickness, with the field perpendicular to the void faces. The ratio of the mean field inside the void to the mean field across the whole wall is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 4.8</li>
+<li><b>B</b> 6.0</li>
+<li><b>C</b> 1.0</li>
+<li><b>D</b> 0.21</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>[3] A point charge <m>q</m> is on the axis of a grounded conducting sphere of radius <m>a</m>, at a distance <m>d=2a</m> from its centre. The force on <m>q</m> has magnitude</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> <m>q^{2}/18\pi\varepsilon_0a^{2}</m></li>
+<li><b>B</b> <m>q^{2}/16\pi\varepsilon_0a^{2}</m></li>
+<li><b>C</b> <m>q^{2}/4\pi\varepsilon_0a^{2}</m></li>
+<li><b>D</b> zero, by symmetry</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>[3] A 1 µm-thick polypropylene film (<m>\kappa=2.3</m>, <m>\tan\delta=2\times10^{-3}</m>) carries 1 kV rms at 1 MHz. The dielectric heating power <em>per unit area of film</em> is closest to</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 260 W/m²</li>
+<li><b>B</b> 2.6×10⁵ W/m²</li>
+<li><b>C</b> 26 W/m²</li>
+<li><b>D</b> 2.6 W/m²</li>
+</ul></div></div>
+
+<h2>Section B · Multiple correct (Q13–Q18)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>[4] Two capacitors <m>C_1&gt;C_2</m> are charged to the same voltage <m>V</m> and then disconnected from the cell and joined positive-to-negative. Which statements are correct?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> The final common voltage is <m> V\left(C_1-C_2\right)/\left(C_1+C_2\right)</m></li>
+<li><b>B</b> The heat produced is <m>\tfrac12C_{\text{ser}}\left(2V\right)^{2}</m></li>
+<li><b>C</b> If <m>C_1=3C_2</m>, the final energy is one quarter of the initial energy</li>
+<li><b>D</b> The heat is smaller if a thicker wire is used</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>[4] A dielectric slab is slowly pushed into a parallel-plate capacitor that remains connected to a cell. Which of the following increase?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the charge on the plates</li>
+<li><b>B</b> the energy stored in the field</li>
+<li><b>C</b> the magnitude of the force pulling the slab in</li>
+<li><b>D</b> the voltage between the plates</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>[4] An uncharged capacitor is charged from a cell through a resistor <m>R</m>. Which quantities are independent of <m>R</m>?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the total heat produced in <m>R</m></li>
+<li><b>B</b> the final charge</li>
+<li><b>C</b> the fraction of the final charge present at <m>t=\tau</m></li>
+<li><b>D</b> the peak current</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q16</span><b>[4] A polar liquid has <m>\kappa'(\omega)=\kappa_\infty+(\kappa_s-\kappa_\infty)/(1+i\omega\tau)</m>. Which are correct?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> <m>\kappa''</m> peaks at <m>\omega\tau=1</m></li>
+<li><b>B</b> <m>\tan\delta</m> peaks at a frequency <em>above</em> the <m>\kappa''</m> peak</li>
+<li><b>C</b> <m>\kappa_s-\kappa_\infty\propto1/T</m> for a liquid of fixed density</li>
+<li><b>D</b> A 2.45 GHz oven heats water at the peak of <m>\kappa''</m></li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q17</span><b>[4] A micro-mirror is a plate on a spring, gap <m>\ell_0</m>, area <m>A</m>, driven at voltage <m>V</m>. Which are correct?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> The maximum stable deflection is <m>\ell_0/3</m></li>
+<li><b>B</b> The pull-in voltage scales as <m>\ell_0^{1/2}/\sqrt A</m></li>
+<li><b>C</b> Driving it from a fixed-charge source instead removes the instability</li>
+<li><b>D</b> A capacitor of the same size but with a floating neighbour electrode has a larger <m>C</m> than with that neighbour earthed</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q18</span><b>[4] Which statements about real capacitors are correct?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> Dielectric absorption can return tens of volts to a capacitor that was short-circuited after a high-voltage charge</li>
+<li><b>B</b> Above its self-resonance a bypass capacitor's impedance rises with frequency</li>
+<li><b>C</b> A class-2 (high-κ ceramic) capacitor loses most of its capacitance when biased to its rated voltage</li>
+<li><b>D</b> The ripple-current rating of an electrolytic is set by its capacitance value</li>
+</ul></div></div>
+
+<h2>Section C · Numerical (Q19–Q26)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q19</span><b>[4] Interleaved aluminium foils, each <m>5</m> cm × <m>5</m> cm, separated by <m>0.5</m> mm of polypropylene (<m>\kappa=2.3</m>), are connected alternately to two terminals. The minimum number of foils needed to make <m>1</m> nF, given that <m>n</m> foils give <m>n-1</m> gaps, is ____.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q20</span><b>[4] Ten identical <m>1</m> nF / 5 kV elements are stacked in series. The energy that can be stored in the stack is ____ J.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q21</span><b>[4] A charge <m>q</m> sits at the centre of a neutral conducting spherical shell of inner radius <m>a</m> and outer radius <m>2a</m>. The potential of the shell, in units of <m>q/4\pi\varepsilon_0a</m>, is ____.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q22</span><b>[4] A dielectric liquid (<m>\kappa=4</m>, <m>\rho=1000</m> kg/m³, negligible surface tension) rises between two vertical plates 1 mm apart held at 10 kV. The rise height is ____ mm.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q23</span><b>[4] A 20 µm-radius oil droplet (<m>\rho=900</m> kg/m³) is to be held between horizontal plates 1 mm apart at 500 V. The minimum number of elementary charges it must carry is ____.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q24</span><b>[4] A 100 pF "source" capacitor charged to 3 kV is read by an electrostatic voltmeter whose input capacitance is 50 pF. The meter reads ____ V.</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q25</span><b>[4] A 555 relaxation oscillator is to give a 1.00 s period with <m>R=1.0</m> MΩ and symmetric charge and discharge paths. The required capacitance is ____ µF (two decimals).</b></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q26</span><b>[4] A supercapacitor electrode is a pore network with electrolyte resistance <m>r=10</m> Ω/m along each pore and double-layer capacitance <m>c=10</m> F/m of pore length, for pores of length <m>\ell=100</m> µm. The time for the far end of a pore to be charged is ____ µs.</b></div></div>
+
+<h2>Section D · Long questions (Q27–Q36)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q27</span><b>[15] Capacitance matrix and a ladder.</b></div>
+<div class="bd"><p>
+(a) <m>N</m> conductors have <m>Q_i=\sum_jc_{ij}V_j</m>. Show that if conductor <m>i</m> is completely enclosed
+by others then <m>\sum_jc_{ij}=0</m>, and that <m>c_{ij}\le0</m> for <m>i\ne j</m> always. <b>[5]</b></p>
+<p>(b) An infinite ladder is built by repeating the section "a capacitor <m>C</m> in series, then a capacitor
+<m>C</m> from the line to the return rail". Let <m>C_n</m> be the capacitance looking into <m>n</m> sections
+terminated by <m>C</m>. Write the recursion for <m>C_n</m> and solve it for <m>n\to\infty</m>. <b>[5]</b></p>
+<p>(c) Show that the approach to the limit is geometric and find the ratio; then state what changes if the
+"shunt" element is replaced by a resistor, and why the ladder then has a <em>frequency</em> rather than a fixed
+capacitance. <b>[5]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q28</span><b>[15] Reciprocity, shielding and a signal.</b></div>
+<div class="bd"><p>
+(a) State and prove Green's reciprocity theorem for a system of conductors in a fixed permittivity distribution.
+<b>[5]</b></p>
+<p>(b) A point charge <m>q</m> is at distance <m>x</m> from one of two large parallel grounded conducting plates a
+distance <m>d</m> apart. Use (a) — do <em>not</em> sum images — to find the charge induced on each plate, and verify
+the result against Gauss's law. <b>[5]</b></p>
+<p>(c) The plates are held at fixed potentials by batteries and the charge moves with velocity <m>v</m>
+perpendicular to them. Find the current in the external circuit, and the current if the charge instead moves
+<em>parallel</em> to the plates at the mid-plane. <b>[5]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q29</span><b>[15] A capacitive level gauge, and what the fringe costs.</b></div>
+<div class="bd"><p>
+Two vertical parallel plates of width <m>w</m> and separation <m>d</m> are dipped into a liquid of constant
+<m>\kappa</m>; the liquid is an insulator and the vessel is earthed so that fringing at the top can be ignored.
+(a) Show that <m>C(x)=C_0\left[1+(\kappa-1)x/h\right]</m> where <m>x</m> is the immersion depth, <m>h</m> the plate
+height and <m>C_0</m> the dry capacitance. <b>[4]</b></p>
+<p>(b) The same gauge is now used on a <em>conducting</em> liquid, with the plates insulated from it by a coating of
+thickness <m>t</m> (<m>t\ll d</m>). Find <m>C(x)</m> and the sensitivity <m>dC/dx</m>; explain why the coating
+desensitises the gauge by a factor you should quote. <b>[5]</b></p>
+<p>(c) A voltage <m>V</m> is applied between the plates. Find the height to which the liquid rises, and evaluate it
+for <m>\kappa=4</m>, <m>d=1</m> mm, <m>V=10</m> kV, <m>\rho=1000</m> kg/m³. Comment on whether the flat-interface
+assumption is self-consistent. <b>[6]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q30</span><b>[15] Two capacitors, two time constants, one exact loss.</b></div>
+<div class="bd"><p>
+A cell of voltage <m>V_0</m> drives, in order, <m>R</m> to node A; from A a capacitor <m>C</m> to the lower rail;
+from A a resistor <m>R</m> to node B; from B a capacitor <m>C</m> to the rail. Both capacitors are uncharged at
+<m>t=0</m>.</p>
+<p>(a) Write the two node equations and put them in matrix form. Find the two eigenvalues. <b>[6]</b></p>
+<p>(b) Find <m>V_B(t)</m> in closed form. <b>[4]</b></p>
+<p>(c) Find the total heat produced in the two resistors and show explicitly that it equals
+<m>\Delta U_{\text{cell-supplied}}-\Delta U_{\text{field}}</m>. <b>[5]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q31</span><b>[15] Spheroids, voids and the field that ruins an insulator.</b></div>
+<div class="bd"><p>
+(a) Using the depolarising factor, find the field inside (i) a thin disc-shaped cavity and (ii) a long needle-shaped
+cavity, both in a dielectric of constant <m>\kappa</m> in an otherwise uniform applied field <m>E_0</m>, with the
+disc perpendicular to the field and the needle parallel to it. <b>[5]</b></p>
+<p>(b) A high-voltage bushing is made of <m>n</m> identical discs of thickness <m>t</m> and area <m>A</m>, with a
+thin air film of thickness <m>s\ll t</m> trapped at each interface. Find the field in the air films and in the
+ceramic (<m>\kappa</m> each), and the voltage at which the first film ionises. <b>[5]</b></p>
+<p>(c) Show that ionisation of the film <em>increases</em> the stress on the ceramic and find the fraction of the
+total voltage the ceramic then carries, treating the ionised film as a conductor. <b>[5]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q32</span><b>[15] Conformal mapping, and the force between two live conductors.</b></div>
+<div class="bd"><p>
+(a) Show that <m>w=\ln\!\left[(z-f)/(z+f)\right]</m> maps the region between two equal circular cylinders of radius
+<m>a</m>, axes <m>d</m> apart, onto a strip, and deduce <m>C'=\pi\varepsilon_0/\operatorname{arcosh}(d/2a)</m> per
+unit length. <b>[7]</b></p>
+<p>(b) Hence find, per unit length, the force between the cylinders when they are (i) at the same potential
+<m>V</m> and (ii) at potentials <m>\pm V</m>. State the direction of each force and explain physically why they are
+opposite. <b>[5]</b></p>
+<p>(c) Two parallel wires 20 cm apart, radius 2 mm, at 100 kV rms between them: estimate the force per metre.
+<b>[3]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q33</span><b>[15] The spheroid family, needles and the power of points.</b></div>
+<div class="bd"><p>
+(a) From <m>C=4\pi\varepsilon_0f/\ln\left[(c+f)/a\right]</m> for a prolate spheroid, obtain the capacitance of a long
+thin needle of length <m>2c</m> and radius <m>a\ll c</m>, and of a thin disc of radius <m>a</m>. <b>[5]</b></p>
+<p>(b) A needle (prolate spheroid, <m>2c=10</m> cm, radius <m>a=1</m> mm) and a sphere are each given the same
+charge <m>Q=1</m> nC. Find the capacitance of the needle, choose the sphere's radius so that the two have
+<em>equal</em> capacitance, and then compare their peak surface fields — model the needle's tip as a sphere of the
+radius of curvature at the pole of the generating ellipse, <m>\rho=a^{2}/c</m>. If corona begins in air at
+<m>3</m> MV/m, what maximum voltage can each electrode carry at that capacitance? <b>[5]</b></p>
+<p>(c) Hence explain the two design rules for HV terminals: "for a given capacitance, be round" and "the lightning
+rod must be sharp". <b>[5]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q34</span><b>[15] A charged drop, a cone, and an electrospray.</b></div>
+<div class="bd"><p>
+(a) A conducting droplet of radius <m>R</m> and surface tension <m>\gamma</m> carries charge <m>Q</m>. Write its
+energy and find the Rayleigh charge. <b>[4]</b></p>
+<p>(b) Find the surface field and the potential at that limit for a 20 µm water drop, and decide whether in air the
+drop or the gas gives out first. <b>[4]</b></p>
+<p>(c) In vacuum the drop emits from a conical tip of half-angle <m>\theta_0=49.3^\circ</m>. Justify that angle from
+the requirement that the field at the apex be no more singular than <m>r^{-1/2}</m>. <b>[4]</b></p>
+<p>(d) A singly charged 1 nm droplet is what a mass spectrometer detects. Estimate the fraction of the Rayleigh
+charge it carries, and say why smaller drops cannot be produced by electrospray at will. <b>[3]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q35</span><b>[15] Porous electrodes: why a supercapacitor is a transmission line.</b></div>
+<div class="bd"><p>
+A pore of length <m>\ell</m> has series resistance per unit length <m>r</m> (the electrolyte) and shunt capacitance
+per unit length <m>c</m> (the double layer), and is fed at <m>x=0</m>.</p>
+<p>(a) Write the two telegrapher's equations and solve them for a sinusoidal drive, showing that for a long pore
+<m>Z_{\text{in}}=(1-i)\sqrt{r/2\omega c}</m>. <b>[5]</b></p>
+<p>(b) Find the charge absorbed by a long pore after a step <m>V</m>, and show <m>Q\propto\sqrt t</m>; state the time
+at which the law must fail and why. <b>[4]</b></p>
+<p>(c) A pore of finite length <m>\ell</m> is charged by a constant total current <m>I</m>. At late times
+(<m>t\gg rc\ell^{2}</m>) the current along the pore is linear from <m>I</m> at the mouth to zero at the closed end:
+use this to show that the instantaneous ohmic loss is <m>I^{2}r\ell/3</m>, so that the electrode behaves as a
+capacitor <m>C=c\ell</m> in series with <m>R_{\text{ESR}}=r\ell/3</m> rather than <m>r\ell</m>. Then, using
+chapter 6's ramp rule, show that holding the ohmic loss below a fraction <m>1/\eta</m> of the stored energy needs a
+charge time <m>T\gtrsim2\eta RC</m>, and that the power is therefore capped at
+<m>P\approx V^{2}/\left(2\eta R_{\text{ESR}}\right)</m>. <b>[4]</b></p>
+<p>(d) Deduce from (c) how the achievable power and the stored energy each scale with <m>\ell</m>, and show that
+their ratio <m>E/P</m> is a characteristic time proportional to <m>rc\ell^{2}</m>. State in one sentence the
+trade-off this imposes on the choice of electrode thickness. <b>[2]</b></p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q36</span><b>[18] Harvesting: a variable capacitor, a diode and the second law.</b></div>
+<div class="bd"><p>
+A transducer capacitor alternates between <m>C_{\max}=10C_0</m> and <m>C_0</m>. A small bias source holds it at
+<m>V_0=1</m> V while its capacitance is <m>C_{\max}</m>; it is then disconnected, the capacitance is reduced to
+<m>C_0</m>, and it is connected to a reservoir held at <m>V_L</m> until its voltage equals <m>V_L</m>, when it is
+reconnected to the bias source at <m>C_{\max}</m> to close the cycle.</p>
+<p>(a) Find the charge taken from the bias source per cycle, and the voltage at the end of the mechanical stroke,
+as functions of <m>V_L</m>. <b>[4]</b></p>
+<p>(b) Find the electrical energy delivered to the reservoir per cycle, and the value of <m>V_L</m> that maximises
+it. Evaluate the maximum for <m>C_0=100</m> pF, <m>V_0=1</m> V. <b>[6]</b></p>
+<p>(c) State the mechanical work per cycle required, and verify energy conservation around the cycle. Show that the
+condition for <em>any</em> net generation is <m>V_L&lt;V_0C_{\max}/C_0</m>, and interpret it. <b>[4]</b></p>
+<p>(d) A real harvester must do this at 100 Hz with a finite series resistance <m>R</m>. Write the condition on
+<m>RC_0</m>, and explain why the optimum <m>V_L</m> is lower than the answer to (b) in practice. <b>[4]</b></p>
+</div></div>
+
+<div class="box thm"><p class="bt">How to sit this paper</p>
+<ul>
+<li>Section A and B are 26 questions in 70 minutes: if a question takes more than four minutes, mark your best answer
+and move on — every question here is reachable in under three minutes by the move it tests, and the ones that are not
+are the ones you will get back to after Section C.</li>
+<li>In Section C the arithmetic is designed to be doable; if it is not, you have the wrong model, not the wrong
+calculator.</li>
+<li>Section D: write the principle first, then the equation, then the number. A long question with a stated
+assumption and a limit check scores more than a complete algebraic solution with neither.</li>
+<li>Questions 28, 33 and 35 contain the only material not examinable by the standard JEE syllabus; if you find them
+unfamiliar, that is the signal to read chapter 7 again, not to skip them.</li>
+</ul></div>
+
+<p class="skip">Continue: <a href="10-olympiad-solutions.html">10 · Solutions to all 36 questions, with marks distributed</a></p>
+</main>
+</div>
+</body>
+</html>

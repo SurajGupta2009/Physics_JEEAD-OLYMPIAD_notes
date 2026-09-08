@@ -281,7 +281,7 @@ names.</p>
     <text x="0" y="212" class="lbl sm">the scope's 100 pF input is the unknown you must cancel.</text>
   </g>
 </svg></div>
-<figcaption><b>Fig. 6.4</b> — The compensated divider and the three possible edge shapes. The "spike then droop"
+<figcaption><b>Fig. 6.3</b> — The compensated divider and the three possible edge shapes. The "spike then droop"
 signature is a diagnostic, not an accident: it says the high-frequency division ratio is <em>too small</em>, i.e.
 <m>C_1</m> is too large (or the cable capacitance too big, which is why probe compensation must be redone when you
 change cables).</figcaption></figure>
@@ -343,7 +343,7 @@ device's <m>V</m>–<m>I</m> curve three times.</p></div>
     <text x="0" y="186" class="lbl sm">because the exponential only reaches the strike level in infinite time.</text>
   </g>
 </svg></div>
-<figcaption><b>Fig. 6.5</b> — A relaxation oscillator and its waveform. The top of each charging exponential is
+<figcaption><b>Fig. 6.4</b> — A relaxation oscillator and its waveform. The top of each charging exponential is
 <em>clipped</em> at <m>V_{\text{hi}}</m>; that clipping is what turns a monotone curve into a clock, and it is why
 the period <em>diverges</em> at threshold rather than merely growing.</figcaption></figure>
 
@@ -642,7 +642,7 @@ it. Half the questions in this chapter are decided by noticing which of the two 
 <tr><td>6</td><td>"Capacitors in series always carry equal charge."</td><td>They carry equal <em>changes</em> of charge if they share an island; equality of the charges themselves needs a common initial condition. §4.1, again.</td></tr>
 <tr><td>7</td><td>"A capacitor blocks DC and passes AC."</td><td>A mnemonic, not engineering: <m>Z_C=1/\omega C</m> has magnitude <em>and</em> phase, and near the corner "passes" means 45° of lag and half the power. Say <m>f_c=1/2\pi RC</m>.</td></tr>
 <tr><td>8</td><td>"A 10× probe works because the two dividers match."</td><td>Right, quantitatively: <m>R_1C_1=R_2C_2</m> makes the capacitive and resistive ratios equal, so the ratio is frequency-independent (§6.5) — and it is C₁, not C₂, that carries the trimmer because the scope's input is the unknown.</td></tr>
-<tr><td>9</td><td>"Two capacitors and two resistors always give two time constants."</td><td>Only when neither mode is invisible: <m>n</m> states give up to <m>n</m> exponentials, and symmetry or compensation (Fig. 6.4) can hide all but one.</td></tr>
+<tr><td>9</td><td>"Two capacitors and two resistors always give two time constants."</td><td>Only when neither mode is invisible: <m>n</m> states give up to <m>n</m> exponentials, and symmetry or compensation (Fig. 6.3) can hide all but one.</td></tr>
 <tr><td>10</td><td>"A supercapacitor has a self-discharge time constant."</td><td>Wrong as physics: a distributed pore line has a <m>\sqrt t</m> law and a continuum of τ's (Q7), so the figure is a specification of a measurement, not of a device.</td></tr>
 </tbody></table>
 

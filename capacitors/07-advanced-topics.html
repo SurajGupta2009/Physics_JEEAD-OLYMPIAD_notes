@@ -42,10 +42,11 @@ by superposition in chapter 2 (<m>p_{ii}=1/4\pi\varepsilon_0a_i</m> for a lone s
 potential in the region has no interior maximum, so it decreases monotonically toward <m>j</m> and
 <m>E_n</m> on <m>j</m> points <em>inward</em> ⇒ <m>Q_j&lt;0</m>. (Physically: a grounded neighbour is always
 negatively charged by its neighbours.)</li>
-<li><b>Row sums are physical:</b> <m>\sum_jc_{ij}</m> is the charge on the <em>fused bundle</em> of all conductors
-when they are all at the same <m>V</m> — i.e. the capacitance of the union to infinity, which is positive. A
-conductor completely enclosed by another has row sum zero: <b>a closed shell screens perfectly</b>, and that is
-Faraday's ice-pail experiment as a matrix identity.</li>
+<li><b>Row sums are physical:</b> set every conductor to the same <m>V</m>: then
+<m>Q_i=V\sum_jc_{ij}</m> is the share of the charge that lands on conductor <m>i</m> of one merged equipotential
+bundle, and <m>V^{-1}\sum_{i}\sum_{j}c_{ij}</m> is the capacitance of that bundle to infinity. In particular, if
+conductor <m>i</m> is <em>completely enclosed</em> by others the field in the enclosing cavity vanishes, so
+<m>\sum_jc_{ij}=0</m>: Faraday's ice-pail experiment as a matrix identity.</li>
 <li><b>Positive definiteness:</b> <m>U=\tfrac12\vec V^{T}\mathbf c\vec V&gt;0</m> for every nonzero
 <m>\vec V</m> (chapter 1's "the field energy is a sum of squares"), so <m>\det\mathbf c&gt;0</m>, all eigenvalues
 positive, and <m>\mathbf c^{-1}</m> exists. Any matrix proposed as "a capacitance matrix" that violates one of
