@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11 &#183; Formula sheet — Current Electricity, from basics to Olympiad</title>
+<meta name="description" content="A three-page printable summary of the whole current-electricity course: drift and materials, cells and the ledger, networks and theorems, instruments, scaling laws, the traps and the numbers to memorise.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Sheet · print me</p></nav>
+<main class="sheet">
+<p class="meta" id="top">
+<span class="badges"><span class="b n">3 pages A4</span><span class="b j">JEE</span><span class="b o">INPhO</span></span>
+&nbsp;<button class="btn" onclick="window.print()">Print / save as PDF</button>
+</p>
+<h1>Current Electricity — the whole course on three pages</h1>
+
+<div class="pg">
+<h2>1 · Carriers, materials, sources</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S1">I=\frac{dq}{dt},\quad \vec j=nq\vec v_d,\quad
+\vec\nabla\cdot\vec j=-\frac{\partial\rho}{\partial t},\quad
+\vec j=\sigma\vec E,\quad \sigma=\frac{ne^{2}\tau}{m}</div>
+<ul class="tight">
+<li><b>Current is a flux</b> (scalar) through a named surface; <m>\vec j</m> is the vector. Node law = continuity
+in steady state; loop law = energy per coulomb.</li>
+<li><b>Drift</b>: <m>v_d=I/neA\sim0.1</m> mm/s in house wiring; <m>\tau\sim10^{-14}</m> s; thermal speed
+<m>\sim10^{6}</m> m/s. Signals travel at <m>\sim c</m> (the field), electrons at centimetres per hour.</li>
+<li><b>Electrons per second</b> through any cross-section: <m>I/e</m> — independent of wire thickness.</li>
+</ul>
+<div class="eqd key" data-tag="S2">R=\frac{\rho l}{A}\ (\text{uniform}),\qquad
+R=\int\frac{\rho\,dl}{A},\qquad R_{\text{shell}}=\frac{\rho(b-a)}{4\pi ab},\qquad
+R_{\text{hemi}\to\infty}=\frac{\rho}{2\pi a}</div>
+<ul class="tight">
+<li><b>Stretch at constant volume</b>: <m>R\propto l^{2}</m>. <b>Taper</b>: frustum = <m>\rho l/\pi ab</m>
+(geometric mean area) — reciprocals add, never averages.</li>
+<li><b>Temperature</b>: <m>R_T=R_0[1+\alpha(T-T_0)]</m> (a local law). Metal: <m>\tau</m> shortens,
+<m>\rho\uparrow\propto T</m> (<m>\alpha_{Cu}=3.9\times10^{-3}</m> K⁻¹). Intrinsic semiconductor:
+<m>n\propto e^{-E_g/2kT}</m> doubles per ~10 K, so <m>\rho</m> falls. Manganin: <m>\alpha\approx2\times10^{-5}</m>.</li>
+<li><b>Non-ohmic three</b>: filament (hot <m>R\approx12\times</m> cold, I–V bends down), NTC thermistor (bends
+up, self-heating), diode (0.7 V threshold — solve piecewise: guess state, solve, <b>check guess</b>).</li>
+</ul>
+</div>
+<div>
+<div class="eqd key" data-tag="S3">I=\frac{\mathcal E}{R+r},\quad V=\mathcal E\mp Ir,\quad
+\mathcal EI=I^{2}R+I^{2}r,\quad \eta=\frac{R}{R+r}</div>
+<ul class="tight">
+<li><b>EMF</b> = work per coulomb by non-electrostatic forces; the only place <m>\oint\vec E\cdot d\vec l\ne0</m>.</li>
+<li>Discharge: <m>V&lt;\mathcal E</m>. Charge: <m>V&gt;\mathcal E</m>. Open: <m>V=\mathcal E</m>.
+The <m>V</m>–<m>I</m> line has intercepts <m>\mathcal E</m> and <m>\mathcal E/r</m>, slope <m>-r</m>.</li>
+<li><b>Grouping</b> (n series × m rows, identical cells): <m>\mathcal E_{eq}=n\mathcal E</m>,
+<m>r_{eq}=nr/m</m>; current <m>=mn\mathcal E/(mR+nr)</m>, maximal at <m>R=nr/m</m>.</li>
+<li><b>Unequal cells in parallel</b>: <m>\mathcal E_{eq}=\dfrac{\mathcal E_1r_2+\mathcal E_2r_1}{r_1+r_2}</m>;
+the weaker cell is being charged — solve the node to see who drives whom.</li>
+<li><b>Max power</b>: <m>R=r\Rightarrow P_{max}=\mathcal E^{2}/4r,\ \eta=50\%</m>. Half-power loads:
+<m>R=r(3\pm2\sqrt2)</m>. Matching is for signals; efficiency is for power.</li>
+</ul>
+<table class="tb">
+<tbody>
+<tr><td>charge conservation</td><td class="e">node law, always</td></tr>
+<tr><td>energy conservation</td><td class="e">loop law + the audit <m>\sum\mathcal EI=\sum I^{2}R</m></td></tr>
+<tr><td>the audit habit</td><td class="e">close every solve with the ledger</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="pg">
+<h2>2 · Networks, theorems, instruments</h2>
+<div class="grid">
+<div>
+<div class="eqd key" data-tag="S4">R_{ser}=\sum R_i,\qquad R_{par}=\Big(\sum R_i^{-1}\Big)^{-1},\qquad
+\text{balance: }\frac{R_1}{R_2}=\frac{R_3}{R_4}\ (R_1R_4=R_2R_3)</div>
+<ul class="tight">
+<li><b>Dividers</b>: <m>V_1=VR_1/(R_1+R_2)</m>; <m>I_1=IR_2/(R_1+R_2)</m> (the <i>other</i> resistor!). Valid
+only unloaded.</li>
+<li><b>Cube of R</b>: edge <m>7R/12</m>, face <m>3R/4</m>, body <m>5R/6</m> — symmetry planes first, algebra second.</li>
+<li><b>Infinite ladder</b>: <m>R_\infty=\big(R_s+\sqrt{R_s^{2}+4R_sR_p}\big)/2</m>; <m>R_s=R_p=R</m> gives
+<m>\varphi R=1.618R</m>.</li>
+<li><b>Delta→star</b>: <m>R_1=R_{12}R_{31}/(R_{12}+R_{23}+R_{31})</m>; symmetric delta <m>R</m> → star <m>R/3</m>.</li>
+</ul>
+<div class="eqd key" data-tag="S5">V_{th}=V_{oc},\qquad R_{th}=\frac{V_{oc}}{I_{sc}},\qquad
+I_N=\frac{V_{th}}{R_{th}},\qquad P_{max}=\frac{V_{th}^{2}}{4R_{th}}\ \text{at}\ R_L=R_{th}</div>
+<ul class="tight">
+<li><b>Kill sources</b>: ideal voltage → wire (<m>r</m> stays), ideal current → break. Superposition sums currents,
+never powers; dies on any nonlinearity.</li>
+<li><b>Reciprocity</b>: swap source and detector ports, same <m>I_{sc}/V</m> ratio; open voltages are
+<i>not</i> preserved.</li>
+<li><b>Compensation</b>: changing <m>R</m> by <m>\Delta R</m> ≡ inserting source <m>-I\Delta R</m>, others killed.</li>
+</ul>
+</div>
+<div>
+<div class="eqd key" data-tag="S6">S=\frac{G}{n-1},\qquad R_m=\frac{V}{I_g}-G,\qquad
+\text{sensitivity}=\frac{1}{I_g}\ \Omega/\text{V}</div>
+<ul class="tight">
+<li><b>Loading</b>: meter across <m>R_2</m> reads <m>V(R_2\parallel R_V)/(R_1+R_2\parallel R_V)</m>. A 10 kΩ meter
+on a 10k+10k divider from 100 V reads 33.3 V, not 50 V.</li>
+<li><b>Meter bridge</b>: <m>R/S=l/(100-l)</m>; end errors killed by interchanging <m>R,S</m> and averaging.</li>
+<li><b>Potentiometer</b>: <m>\mathcal E_1/\mathcal E_2=l_1/l_2</m>; <m>r=R(l_0-l)/l</m>. At balance the cell
+delivers zero current — reads EMF, not terminal voltage.</li>
+<li><b>Low resistance ⇒ four terminals</b>: current leads outside, voltage leads inside; all lead drops vanish by
+topology.</li>
+</ul>
+<div class="eqd key" data-tag="S7">I_{fuse}\propto r^{3/2},\qquad P_{loss}=\frac{P^{2}R_{line}}{V^{2}},\qquad
+T_n=\frac{a}{2b},\quad T_i=\frac{a}{b}=2T_n,\qquad \tau=\frac{L}{R}\to\infty</div>
+<ul class="tight">
+<li><b>Fuse</b>: length cancels; <m>2\times r\Rightarrow2.83\times I</m>. Cable <m>\Delta T\propto j^{2}r</m>.</li>
+<li><b>Transmission</b>: 100 kW over 10 Ω: 200 V loses 2.5 MW; 20 kV loses 250 W. Loss fraction <m>\propto P</m>
+at fixed <m>V</m>.</li>
+<li><b>Thermocouple</b> <m>\mathcal E=aT-bT^{2}</m>: peak at neutral <m>a/2b</m>; zero (current reverses) at
+inversion <m>a/b</m>.</li>
+<li><b>Thermistor stability</b>: needs <m>dP/dT&lt;\delta</m>; a series resistor caps the current (boundary at
+<m>R=R_s</m> — max-power transfer in thermal clothes).</li>
+<li><b>Superconductor ring</b>: <m>I=\Phi/L</m> (flux freezing); <m>E=\tfrac12LI^{2}</m>; nothing decays.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="pg">
+<h2>3 · The traps, and the numbers to own</h2>
+<div class="grid">
+<div>
+<ul class="tight">
+<li>Electrons do <b>not</b> move at light speed; the field does.</li>
+<li>"12 V battery" delivers <m>\mathcal E-Ir</m> under load, <m>\mathcal E+Ir</m> on charge.</li>
+<li>A voltmeter is a load; an ammeter is a resistance in the loop. Check both against the circuit impedance.</li>
+<li>A killed voltage source is a <b>wire</b> (keep <m>r</m>); a killed current source is a <b>break</b>.</li>
+<li>Reciprocity preserves the <m>V/I</m> ratio, not the open-circuit voltage.</li>
+<li>Neutral <m>=a/2b</m> (max EMF); inversion <m>=a/b</m> (zero EMF, current reverses). Never swap them.</li>
+<li>Perfect conductor ≠ superconductor: Meissner expels flux; a mere perfect conductor would trap it.</li>
+<li>Audit the ledger after every solve: <m>\sum\mathcal EI=\sum I^{2}R</m> — including negative (charging)
+branches.</li>
+<li>Stretched wire: <m>R\to k^{2}R</m>. Series favours the bigger R; parallel the smaller.</li>
+<li>Superposition of currents only, never powers; and never with a diode or a hot filament in the loop.</li>
+</ul>
+</div>
+<div>
+<table class="tb">
+<thead><tr><th>number</th><th>value</th></tr></thead>
+<tbody>
+<tr><td>electron charge</td><td class="e"><m>1.6\times10^{-19}</m> C; 1 A = <m>6.25\times10^{18}</m> e/s</td></tr>
+<tr><td>Cu</td><td class="e"><m>\rho=1.7\times10^{-8}\ \Omega</m>m, <m>n=8.5\times10^{28}</m>, <m>\alpha=3.9\times10^{-3}</m></td></tr>
+<tr><td>Al</td><td class="e"><m>\rho=2.7\times10^{-8}</m>, <m>n=1.8\times10^{29}</m> (more carriers than Cu)</td></tr>
+<tr><td>relaxation time / free path</td><td class="e"><m>\sim10^{-14}</m> s, 10–40 nm</td></tr>
+<tr><td>drift speed (household)</td><td class="e"><m>\sim0.1</m> mm/s; AC excursion <m>\sim\mu</m>m at 50 Hz</td></tr>
+<tr><td>cube / ladder</td><td class="e"><m>7R/12,\ 3R/4,\ 5R/6</m>; <m>\varphi R</m></td></tr>
+<tr><td>matched load</td><td class="e"><m>P=V_{th}^{2}/4R_{th}</m>, <m>\eta=50\%</m></td></tr>
+<tr><td>air breakdown</td><td class="e">3 kV/mm</td></tr>
+<tr><td>Cu–Fe couple</td><td class="e"><m>T_n\approx128\ ^\circ</m>C, <m>T_i\approx256\ ^\circ</m>C</td></tr>
+<tr><td>Pt sensor</td><td class="e"><m>\alpha=3.85\times10^{-3}</m> K⁻¹ (Pt-100: 138.5 Ω at 120 °C)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p class="skip">Back to: <a href="index.html"><b>the course map</b></a> · the <a href="09-olympiad-paper.html"><b>paper</b></a></p>
+</main>
+</div>
+</body>
+</html>

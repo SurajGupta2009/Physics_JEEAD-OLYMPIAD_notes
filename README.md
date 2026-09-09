@@ -14,6 +14,7 @@ from `file://`, prints to a clean PDF, and is validated by one command.
 | topic | chapters | figures | questions | paper | status |
 |---|---|---|---|---|---|
 | **[capacitors](capacitors/index.html)** | 11 + front page | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
+| **[current-electricity](current-electricity/index.html)** | 11 + front page | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
 | thermodynamics | — | — | — | — | planned — claim it |
 | rotational-mechanics | — | — | — | — | planned — claim it |
 

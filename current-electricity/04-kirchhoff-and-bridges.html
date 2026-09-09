@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 &#183; Kirchhoff &amp; bridges — Current Electricity, from basics to Olympiad</title>
+<meta name="description" content="Kirchhoff's two laws with bulletproof sign discipline, equivalent resistance by symmetry (the cube done honestly), the Wheatstone bridge balanced and unbalanced, delta–star conversion, and infinite ladders.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 4</p></nav>
+<main>
+
+<p class="meta" id="top">
+<span class="badges"><span class="b n">Chapter 4 of 11</span><span class="b j">JEE Advanced · engine</span><span class="b n">≈ 50 min read · 8 questions</span></span>
+</p>
+<h1>Kirchhoff, bridges and equivalent resistance</h1>
+<p class="lead">Chapters 1–3 gave you the physics; this chapter gives you the <b>algorithm</b>. Two laws — charge
+conservation at nodes, energy conservation round loops — crack any network whatsoever, and symmetry cracks the ones
+the algorithm would crack slowly. After this chapter you can solve a two-loop circuit in three minutes, prove the
+Wheatstone balance condition, find the current in a bridge's galvanometer when it is <em>not</em> balanced, and
+quote the cube's three resistances from a symmetry argument you can reproduce. The mistake this chapter prevents:
+sign errors that survive because nobody drew the currents before writing the equations.</p>
+
+<h2>4.1 The two laws, and the discipline that makes them work</h2>
+
+<div class="box def"><p class="bt">Definition · Kirchhoff's laws</p>
+<p><b>Junction law (KCL):</b> at every node, <m>\sum I_{\text{in}}=\sum I_{\text{out}}</m>. It is the steady-state
+continuity equation (ch 1, §1.2) — charge conservation, unbreakable.</p>
+<p><b>Loop law (KVL):</b> round any closed loop, <m>\sum \mathcal E=\sum IR</m>, with each <m>IR</m> signed by the
+direction you traverse the resistor. It is <m>\oint\vec E\cdot d\vec l=0</m> plus the pump's work
+(ch 3, §3.1) — energy conservation, unbreakable.</p></div>
+
+<div class="box why"><p class="bt">Why the sign convention is the whole method</p>
+<p>The laws cannot fail; your bookkeeping can. The convention that never fails: <b>(1)</b> assign a direction to
+every unknown current — any direction, a guess you are allowed to get wrong; <b>(2)</b> traverse each loop in one
+fixed sense; <b>(3)</b> write <m>+IR</m> if you cross the resistor along the current's arrow, <m>-IR</m> against it;
+<m>+\mathcal E</m> if you cross the cell from − to + (the pump lifts you), <m>-\mathcal E</m> otherwise;
+<b>(4)</b> a negative answer means the current flows opposite to your guess — <b>it is a result, not an error</b>.
+Consistency, not clairvoyance, is what KCL/KVL demand. Redraw Fig. 4.1 in your head until assigning signs feels
+mechanical; every wrong answer in this chapter's problems traces to skipping step 1.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 230" role="img" aria-label="A two-loop circuit with three branch currents assigned and two loop directions chosen">
+  <path d="M120,60 H360 M480,60 H660 M120,180 H660" class="ln"/>
+  <path d="M120,60 V180 M360,60 V180 M660,60 V180" class="ln"/>
+  <line x1="220" y1="75" x2="220" y2="45" class="ln2"/><line x1="240" y1="45" x2="240" y2="75" class="ln"/>
+  <text x="230" y="36" class="lbl sm" text-anchor="middle">E₁, r₁</text>
+  <rect x="300" y="105" width="60" height="30" class="w ln" fill="none"/>
+  <text x="330" y="98" class="lbl sm" text-anchor="middle">R₃</text>
+  <line x1="560" y1="75" x2="560" y2="45" class="ln2"/><line x1="580" y1="45" x2="580" y2="75" class="ln"/>
+  <text x="570" y="36" class="lbl sm" text-anchor="middle">E₂, r₂</text>
+  <rect x="80" y="105" width="40" height="30" class="w ln" fill="none"/>
+  <text x="55" y="125" class="lbl sm">R₁</text>
+  <rect x="620" y="105" width="40" height="30" class="w ln" fill="none"/>
+  <text x="668" y="125" class="lbl sm">R₂</text>
+  <g stroke="var(--accent)" stroke-width="1.5" fill="none">
+    <line x1="150" y1="60" x2="185" y2="60" marker-end="url(#ahb)"/>
+    <line x1="500" y1="60" x2="535" y2="60" marker-end="url(#ahr)"/>
+    <line x1="300" y1="180" x2="335" y2="180" marker-end="url(#ahg)"/>
+  </g>
+  <text x="160" y="50" class="lbl sm">i₁</text><text x="508" y="50" class="lbl sm">i₂</text><text x="306" y="170" class="lbl sm">i₃ = i₁ + i₂</text>
+  <path d="M180,105 q40,-25 80,0" class="thinl" fill="none" marker-end="url(#aho)"/>
+  <path d="M180,130 q40,25 80,0" class="thinl" fill="none" marker-end="url(#aho)"/>
+  <text x="215" y="88" class="lbl sm">loop 1 ↻</text><text x="215" y="152" class="lbl sm">loop 2 ↺</text>
+  <text x="390" y="215" class="lbl sm">guess every arrow first; KCL at the top middle node closes the system</text>
+</svg></div>
+<figcaption><b>Fig. 4.1 — The setup that cannot go wrong.</b> Three branch currents guessed (one already fixed by
+KCL), two loop senses chosen: two unknowns, two independent loops, done. The guessed directions are disposable —
+the solved signs are not.</figcaption></figure>
+
+<div class="ex"><p class="exh">Worked example 4.1 · A full two-loop solve, audited</p>
+<p>Circuit: a 12 V battery with <m>R_1=2\ \Omega</m> in series with a parallel pair <m>R_2=6\ \Omega</m>,
+<m>R_3=3\ \Omega</m> (both batteries ideal). <b>Plan:</b> reduce the parallel pair, but keep the branch currents
+for the audit. <b>Do:</b> <m>R_{23}=6\times3/9=2\ \Omega</m>; <m>I=12/(2+2)=3</m> A;
+<m>V_{23}=3\times2=6</m> V; <m>I_2=6/6=1</m> A, <m>I_3=6/3=2</m> A (KCL: <m>1+2=3</m> ✓).
+<b>Check (the power audit):</b> source <m>12\times3=36</m> W; spent: <m>3^{2}\times2=18</m>,
+<m>1^{2}\times6=6</m>, <m>2^{2}\times3=12</m>; <m>18+6+12=36</m> ✓. <b>Never hand in a network answer without
+the audit line</b> — it costs ten seconds and catches every sign slip.</p></div>
+
+<h2>4.2 Series, parallel, and the two dividers</h2>
+
+<div class="eqd key" data-tag="4.1">R_{\text{ser}}=\sum R_i,\qquad
+\frac{1}{R_{\text{par}}}=\sum\frac{1}{R_i}\quad\Big(R_{\text{par}}=\frac{R_1R_2}{R_1+R_2}\Big)</div>
+
+<div class="box thm"><p class="bt">The two dividers — with their conditions of validity</p>
+<div class="eqd key" data-tag="4.2">\text{voltage divider: }V_1=V\frac{R_1}{R_1+R_2}\quad(\text{series, same }I);
+\qquad \text{current divider: }I_1=I\frac{R_2}{R_1+R_2}\quad(\text{parallel, same }V)</div>
+<p>Note the crossing: the current divider's numerator is the <b>other</b> resistor. Validity: dividers are exact
+only while no third element loads the tapped node — the moment a voltmeter or a load attaches, the effective
+<m>R</m> changes and you must re-reduce (chapter 6 quantifies exactly this error).</p></div>
+
+<div class="box trap"><p class="bt">The trap in this section</p>
+<p>Applying the parallel formula to elements that are not actually in parallel. "Parallel" means <b>the same two
+nodes</b>, not "drawn side by side". In a bridge, the arms <m>R_1</m> and <m>R_3</m> are neither series nor
+parallel (the galvanometer branch joins their middles); that is precisely why bridges need their own machinery in
+§4.3. Before reducing anything, point at the two nodes each element hangs between.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>At a node, 3 A flows in from the west wire and 1 A flows out through the east wire. Find the third branch's current and its direction.</b><span class="diff">JEE main</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>KCL: <m>3=1+I_3\Rightarrow I_3=2</m> A <b>flowing out</b>. <b>Check:</b> total in 3 A, total out
+<m>1+2=3</m> A ✓. If you had guessed the third current inward, the algebra would have returned <m>-2</m> A —
+the same physical answer with the arrow flipped, exactly as promised in §4.1.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>In the circuit of worked example 4.1, an extra <m>2\ \Omega</m> resistor is connected in parallel with the 12 V battery. Find the new battery current and the new total power drawn.</b><span class="diff">JEE main</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>The 2 <m>\Omega</m> hangs directly across the ideal battery, so it sees 12 V whatever else happens — elements
+in parallel with an ideal source do not disturb the rest:</p>
+<div class="eqd">I_{2\Omega}=\frac{12}{2}=6\ \text{A},\qquad I_{\text{batt}}=3+6=9\ \text{A},\qquad
+P=12\times9=108\ \text{W}</div>
+<p><b>Check:</b> 36 W in the original network plus <m>12^{2}/2=72</m> W in the new branch: <m>36+72=108</m> ✓.
+The invariant behaviour of the untouched branch is the whole point: <b>ideal sources are walls</b> — voltage fixed
+on their terminals, current through them free.</p>
+</div></details>
+</div></div>
+
+<h2>4.3 Symmetry: the cube and the balanced bridge</h2>
+
+<p>The fastest solving tool is not a formula but a question: <b>which nodes are at the same potential?</b> Connect
+them, delete them, or erase the branch between them — the network collapses without any algebra. Two canonical
+harvests:</p>
+
+<div class="box thm"><p class="bt">The cube of resistors — all three answers from one argument</p>
+<p>Twelve equal resistors <m>R</m> form a cube. Drive current in at corner A, out at the opposite corner G. The
+three edges from A are equivalent by symmetry, so each carries <m>I/3</m>; the three edges into G likewise carry
+<m>I/3</m>. The six middle edges split as <m>I/6</m>. Then</p>
+<div class="eqd key" data-tag="4.3">V_{AG}=\frac{I}{3}R+\frac{I}{6}R+\frac{I}{3}R=\frac{5IR}{6}
+\ \Rightarrow\ R_{AG}=\frac{5R}{6}\ \text{(body diagonal)}</div>
+<p>The same symmetry-planes argument with <b>edge</b> endpoints gives <m>7R/12</m>, and with <b>face-diagonal</b>
+endpoints gives <m>3R/4</m> (Q3 walks you through the face-diagonal case). Q7 shows the power of the converse:
+when the endpoints are chosen so two nodes are provably equal in potential, the resistor between them may be
+<b>removed with no effect at all</b>.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 240" role="img" aria-label="Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked">
+  <g class="ln" fill="none">
+    <path d="M120,190 L300,190 L300,70 L120,70 Z"/>
+    <path d="M200,150 L380,150 L380,30 L200,30 Z"/>
+    <path d="M120,190 L200,150 M300,190 L380,150 M120,70 L200,30 M300,70 L380,30"/>
+  </g>
+  <g stroke="var(--accent)" stroke-width="3" fill="none">
+    <path d="M120,190 L200,150 M300,190 L380,150"/>
+  </g>
+  <g stroke="var(--neg)" stroke-width="3" fill="none">
+    <path d="M120,70 L200,30"/>
+  </g>
+  <circle cx="120" cy="190" r="5" class="acc" fill="var(--accent)"/>
+  <circle cx="380" cy="150" r="5" class="acc" fill="var(--neg)"/>
+  <text x="100" y="210" class="mi">A (in)</text>
+  <text x="352" y="176" class="mi">G (out)</text>
+  <text x="410" y="40" class="lbl sm">blue: carries I/3 from A</text>
+  <text x="410" y="60" class="lbl sm">red: I/3 into G</text>
+  <text x="410" y="80" class="lbl sm">all six middle edges: I/6</text>
+  <line x1="60" y1="130" x2="440" y2="90" class="dim"/>
+  <text x="446" y="100" class="lbl sm">equipotential plane 1</text>
+  <line x1="60" y1="60" x2="440" y2="20" class="dim"/>
+  <text x="446" y="30" class="lbl sm">plane 2</text>
+  <text x="120" y="235" class="lbl sm">V drops I/3·R, then I/6·R, then I/3·R across the three planes</text>
+</svg></div>
+<figcaption><b>Fig. 4.2 — Symmetry sorts the twelve edges into three current classes.</b> Everything flows from
+naming the equipotential planes perpendicular to the body diagonal; no simultaneous equations are ever written.</figcaption></figure>
+
+<div class="box why"><p class="bt">Why the balanced bridge carries no galvanometer current</p>
+<p>Bridge <m>ABCD</m>: battery across <m>AC</m>, detector across <m>BD</m>, arms
+<m>R_1(AB),R_2(BC),R_3(AD),R_4(DC)</m>. Suppose <m>I_{BD}=0</m>. Then <m>R_1,R_2</m> carry a common current
+<m>I_a</m> and <m>R_3,R_4</m> a common <m>I_b</m>, and equal potentials at B and D force
+<m>I_aR_1=I_bR_3</m> and <m>I_aR_2=I_bR_4</m>. Dividing:</p>
+<div class="eqd key" data-tag="4.4">\boxed{\frac{R_1}{R_2}=\frac{R_3}{R_4}}\qquad\text{(balance: detector current exactly zero)}</div>
+<p>The logic runs both ways: if the ratios match, <m>B</m> and <m>D</m> are at equal potential <em>however</em> you
+feed the bridge, so the detector branch may be deleted (or any resistance inserted there — Q7). This is why the
+null method is king of precision measurement (chapter 6): at balance the detector's own imperfections are irrelevant,
+because no current through it exists to be wrong about.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 220" role="img" aria-label="Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4">
+  <path d="M200,40 H520 M200,180 H520 M200,40 V180 M520,40 V180" class="ln"/>
+  <rect x="330" y="24" width="60" height="32" class="w ln" fill="none"/>
+  <text x="360" y="16" class="lbl sm" text-anchor="middle">battery across A–C</text>
+  <g transform="translate(335,95)"><rect x="0" y="0" width="50" height="30" class="w ln" fill="none"/></g>
+  <text x="360" y="88" class="lbl sm" text-anchor="middle">galv.</text>
+  <text x="360" y="150" class="lbl sm" text-anchor="middle">D</text>
+  <text x="172" y="36" class="lbl sm">R₁</text><text x="532" y="36" class="lbl sm">R₂</text>
+  <text x="172" y="180" class="lbl sm">R₃</text><text x="532" y="180" class="lbl sm">R₄</text>
+  <text x="182" y="200" class="mi">A</text><text x="510" y="200" class="mi">C</text>
+  <circle cx="200" cy="110" r="4" class="acc" fill="var(--accent)"/><circle cx="520" cy="110" r="4" class="acc" fill="var(--accent)"/>
+  <text x="160" y="114" class="mi sm">B</text><text x="532" y="114" class="mi sm">D′ (upper node)</text>
+  <text x="130" y="215" class="lbl sm">balanced ⇔ R₁/R₂ = R₃/R₄ ⇔ you may cut or short the galvanometer branch</text>
+</svg></div>
+<figcaption><b>Fig. 4.3 — The bridge and its licence.</b> At balance the detector diagonal is electrically dead:
+delete it or replace it with a wire, and every other current in the network is unchanged.</figcaption></figure>
+
+<h2>4.4 The unbalanced bridge: the honest calculation</h2>
+
+<p>Off balance, the bridge is just a two-loop network; solve it by nodes (or, faster, by Thevenin — chapter 5
+re-derives the same numbers in three lines). The important skill is knowing <b>which side wins</b> before computing:</p>
+
+<div class="ex"><p class="exh">Worked example 4.2 · Galvanometer current in an unbalanced bridge</p>
+<p>Arms <m>AB=10\ \Omega</m>, <m>BC=20\ \Omega</m>, <m>AD=30\ \Omega</m>, <m>DC=40\ \Omega</m>; 10 V battery
+across <m>AC</m>; galvanometer of 50 <m>\Omega</m> across <m>BD</m>. <b>Plan:</b> name node potentials
+<m>V_B,V_D</m> (C earthed, A at 10 V) and write KCL at B and D. <b>Do:</b></p>
+<div class="eqd">\frac{V_B-10}{10}+\frac{V_B}{20}+\frac{V_B-V_D}{50}=0;\qquad
+\frac{V_D-10}{30}+\frac{V_D}{40}+\frac{V_D-V_B}{50}=0</div>
+<p>Solving the 2×2: <m>V_B=6.581</m> V, <m>V_D=5.935</m> V. Current through the galvanometer:
+<m>(V_B-V_D)/50=0.645/50=12.9</m> mA, from B toward D. <b>Check:</b> B sits at 10×20/30 = 6.67 V and D at
+10×40/70 = 5.71 V on the open-circuit bridge — B is genuinely the higher node, so the direction is right, and the
+loaded potentials have moved toward each other exactly as connecting any load would predict ✓. Ratio
+<m>R_1/R_2=1/2&lt;R_3/R_4=3/4</m>: the pair with the <em>smaller</em> top-arm ratio wins, B rides higher — a
+one-line direction check worth doing before any algebra.</p></div>
+
+<h2>4.5 Delta–star and ladders</h2>
+
+<div class="box thm"><p class="bt">Delta–star (Δ–Y) conversion</p>
+<p>Three resistors <m>R_{12},R_{23},R_{31}</m> in a delta are equivalent, seen from their terminals, to a star of</p>
+<div class="eqd key" data-tag="4.5">R_1=\frac{R_{12}R_{31}}{R_{12}+R_{23}+R_{31}},\qquad
+R_2=\frac{R_{12}R_{23}}{S},\qquad R_3=\frac{R_{23}R_{31}}{S},\qquad S=R_{12}+R_{23}+R_{31}</div>
+<p>each star arm = <b>product of the two delta sides touching that terminal ÷ sum of all three</b>. For a symmetric
+delta <m>(R,R,R)</m> the star is <m>(R/3,R/3,R/3)</m>. Validity: the equivalence is exact for terminal behaviour
+only — internal currents and power splits differ; never mix the two pictures in one audit. Use it to break
+unbalanced bridges: replace one delta of the bridge by its star and the network becomes series–parallel (Q6 does
+this numerically).</p></div>
+
+<div class="box thm"><p class="bt">The infinite ladder — self-similarity as an equation</p>
+<p>Remove one section from an infinite ladder of series <m>R_s</m> and shunt <m>R_p</m>; what remains is the same
+ladder. If its input resistance is <m>R_\infty</m>:</p>
+<div class="eqd key" data-tag="4.6">R_\infty=R_s+\frac{R_pR_\infty}{R_p+R_\infty}
+\ \Rightarrow\ R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2}</div>
+<p>the positive root, because resistance is positive. For <m>R_s=2,R_p=1</m>: <m>R_\infty=1+\sqrt3=2.732\ \Omega</m>;
+for <m>R_s=R_p=1</m>: <m>R_\infty=(1+\sqrt5)/2</m> — the golden ratio appears in a resistor network. <b>Check:</b>
+substitute back: <m>2+2.732/3.732=2.732</m> ✓, and adding sections from the right can no longer move the answer
+— that is what "infinite" means here.</p></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Twelve equal resistors <m>R</m> form a cube. Show the resistance across a face diagonal is <m>3R/4</m>.</b><span class="diff">JEE advanced</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Name the corners: A, its two face-neighbours B and D, the vertical neighbour Z, the mirror partners
+<m>B',D'</m>, the far top corner Y, and the target C (opposite A on the bottom face). The reflection in the face
+diagonal swaps <m>B\leftrightarrow D</m> and <m>B'\leftrightarrow D'</m> while fixing A, C, Z, Y — so
+<m>V_B=V_D\equiv V_1</m> and <m>V_{B'}=V_{D'}\equiv V_2</m>. Put A at 1 V, earth C. Four node equations:</p>
+<div class="eqd">3V_1-V_2=1;\qquad 3V_Z-2V_2=1;\qquad 3V_2=V_1+V_Z+V_Y;\qquad 3V_Y=2V_2</div>
+<p>Solving: <m>V_2=V_1=\tfrac12,\ V_Z=\tfrac23,\ V_Y=\tfrac13</m>. Current drawn from A:
+<m>(1-V_1)+(1-V_1)+(1-V_Z)=\tfrac12+\tfrac12+\tfrac13=\tfrac43</m> A, so <m>R=3R/4</m> for unit <m>R</m>.
+<b>Check:</b> current delivered into C: <m>V_1+V_1+V_Y=\tfrac12+\tfrac12+\tfrac13=\tfrac43</m> ✓ — ledger
+balanced. The three cube answers order as <m>7R/12&lt;3R/4&lt;5R/6</m> (edge, face, body diagonal): closer
+endpoints mean more symmetric parallel paths, hence lower resistance. In an exam, <b>draw the symmetry plane
+first</b>; the arithmetic is then 30 seconds.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>In worked example 4.2, the 50 <m>\Omega</m> galvanometer is replaced by (i) an ideal ammeter (0 <m>\Omega</m>), (ii) an ideal voltmeter (∞ <m>\Omega</m>). Find both readings.</b><span class="diff">JEE advanced</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>(ii)</b> Ideal voltmeter: no current drawn, so it reads the open-circuit difference
+<m>V_B-V_D=6.67-5.71=0.952</m> V ≈ 0.95 V.</p>
+<p><b>(i)</b> Ideal ammeter: shorts B to D. With <m>V_B=V_D</m>, KCL at the merged node (call it B′) with the two
+10 V feeds:</p>
+<div class="eqd">\frac{V_{B'}-10}{10}+\frac{V_{B'}-10}{30}+\frac{V_{B'}}{20}+\frac{V_{B'}}{40}=I_{BD}</div>
+<p>and the ammeter reading is the current in the shorting link. Fastest honest route: superposition/Norton — the
+short-circuit current is <m>V_{th}/R_{th}</m> with <m>V_{th}=0.952</m> V and
+<m>R_{th}=1/(1/10+1/20)+1/(1/30+1/40)=6.667+17.143=23.81\ \Omega</m> (battery killed = replaced by wire, ideal
+cell): <m>I_{BD}=0.952/23.81=40.0</m> mA. <b>Check:</b> 40 mA × nothing opposes it — short-circuit current must
+exceed the 12.9 mA the 50 <m>\Omega</m> detector drew ✓; chapter 5 verifies <m>R_{th}</m> by nodal solve.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>A Wheatstone bridge balances with <m>R_1=20\ \Omega</m>, <m>R_2=30\ \Omega</m>, <m>R_3=40\ \Omega</m> in the arms. Find <m>R_4</m>, and then find it again after the battery and galvanometer diagonals are interchanged.</b><span class="diff">JEE main</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Balance: <m>R_1/R_2=R_3/R_4\Rightarrow R_4=30\times40/20=60\ \Omega</m>.</p>
+<p>After swapping diagonals, the arm ratios re-group but the balance condition is the <b>same products</b>:
+<m>R_1R_4=R_2R_3</m> is symmetric under the swap (it becomes <m>R_1R_4=R_2R_3</m> again, with the arms re-labelled).
+The balance survives: <m>R_4=60\ \Omega</m> either way. <b>Check:</b> this invariance is the reciprocity theorem
+(chapter 5) in its most useful disguise: source and detector may trade places without changing any balance ✓. It
+also explains why meter-bridge measurements survive sloppy end corrections when you swap <m>R</m> and <m>S</m>
+(chapter 6, Q4).</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Convert the delta <m>(6\ \Omega, 6\ \Omega, 6\ \Omega)</m> into its star, and use the result to find the resistance between A and B of the network: A–X 6 <m>\Omega</m>, B–X 6 <m>\Omega</m>, C–X 6 <m>\Omega</m> (a star), with a 6 <m>\Omega</m> resistor also joined directly between A and B, and 6 <m>\Omega</m> between B and C, and 6 <m>\Omega</m> between C and A.</b><span class="diff">JEE advanced</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>The network is a delta <m>(6,6,6)</m> on terminals A,B,C <em>superposed</em> on a star <m>(6,6,6)</m> from centre
+X. Convert the delta to a star <m>(2,2,2)</m>; now two stars share terminals A,B,C — stars in parallel arm-by-arm:
+each terminal arm is <m>6\parallel2=1.5\ \Omega</m>. Between A and B with C open, the two arms in series:
+<m>3.0\ \Omega</m>. <b>Check:</b> brute-force nodal on the original 6-resistor network: inject 1 A at A, draw at
+B, C floating: by symmetry V_A−V_B = 3 V ⇒ <m>R_{AB}=3\ \Omega</m> ✓. Delta–star earns its keep when the
+superposition is <em>not</em> symmetric — then the conversion is the only clean route.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>A Wheatstone bridge has all four arms equal to 10 <m>\Omega</m> and is driven by an ideal 10 V battery across one diagonal. Find the battery current when the detector diagonal is (i) open, (ii) bridged by 10 <m>\Omega</m>, (iii) shorted.</b><span class="diff">JEE main</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>The bridge is balanced, so the detector diagonal is dead in all three cases (§4.3: cut it, or insert anything,
+or short it — no other current changes).</p>
+<div class="eqd">R_{AC}= (10+10)\parallel(10+10)=10\ \Omega,\qquad I_{\text{batt}}=\frac{10}{10}=1\ \text{A in all three cases}</div>
+<p><b>Check:</b> case (iii): shorting B–D merges the four arms into two parallel pairs
+<m>10\parallel10=5</m> in series with <m>10\parallel10=5</m>: <m>R_{AC}=10\ \Omega</m> ✓. The invariance is the
+entire content of "balanced": <b>a null cannot be disturbed by the instrument that detects it.</b></p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>An infinite ladder has <m>R_s=3\ \Omega</m> in the series arms and <m>R_p=1\ \Omega</m> shunts. Find its input resistance, and the input resistance of the network after one more section is appended — verify nothing changed.</b><span class="diff">Olympiad</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<div class="eqd">R_\infty=\frac{3+\sqrt{9+12}}{2}=\frac{3+\sqrt{21}}{2}=\frac{3+4.583}{2}=3.79\ \Omega</div>
+<p>Append one section to the front of the <m>R_\infty</m> network:</p>
+<div class="eqd">3+\frac{1\times3.79}{1+3.79}=3+0.791=3.79\ \Omega\quad\checkmark</div>
+<p>The fixed-point property <em>is</em> the derivation: the quadratic <m>R^{2}-R_sR-R_sR_p=0</m> is just
+"<m>R_\infty</m> with one more section equals <m>R_\infty</m>". <b>Check:</b> truncating after 1 section gives
+<m>3+1=4\ \Omega</m>, after 2: <m>3+3.79/4.79=3.791\ \Omega</m> — the sequence drops from 4 and is already
+within 0.03% of the limit at two sections; infinite-ladder answers converge absurdly fast, so a "three-section"
+exam question is a disguised fixed-point question.</p>
+</div></details>
+</div></div>
+
+<h2>4.6 Chapter summary — the results to own</h2>
+<div class="box thm"><p class="bt">The algorithm and the shortcuts</p>
+<div class="eqd key">\text{KCL: }\sum I_{\text{in}}=\sum I_{\text{out}};\qquad
+\text{KVL: }\sum\mathcal E=\sum IR;\qquad \frac{R_1}{R_2}=\frac{R_3}{R_4}\ \text{(balance)}</div>
+<div class="eqd key">R_{\text{cube}}=\tfrac{7}{12}R,\tfrac34R,\tfrac56R;\qquad
+R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2};\qquad R_Y=\frac{\text{product of touching sides}}{\text{sum of sides}}</div>
+<p>Guess arrows, write consistent signs, audit powers. Symmetry before algebra: name equipotential nodes and delete
+dead branches. Balance makes a bridge's detector diagonal dispensable; off balance, nodal (or Thevenin) gives the
+detector current — direction first, number second.</p></div>
+
+<h2>4.7 Checkpoint</h2>
+<ul class="chks">
+<li>I can set up any two-loop circuit with guessed currents and sign discipline, and audit the power ledger at the end.</li>
+<li>I can prove the Wheatstone balance condition in four lines and state what it licenses (cut/short the detector).</li>
+<li>I can find an unbalanced bridge's galvanometer current by nodal analysis and predict its direction by ratios alone.</li>
+<li>I can produce <m>7R/12, 3R/4, 5R/6</m> for the cube from symmetry, and say which endpoints give which.</li>
+<li>I can convert delta to star and sum an infinite ladder via a fixed-point equation.</li>
+</ul>
+
+<p class="skip">Next: <a href="05-network-theorems.html"><b>Chapter 5 · Superposition, Thevenin, Norton and friends →</b></a> — theorems that replace hard networks with two numbers.</p>
+
+</main>
+</div>
+</body>
+</html>
