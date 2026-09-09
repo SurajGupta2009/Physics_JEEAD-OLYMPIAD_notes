@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9 &#183; The Olympiad paper — Current Electricity, from basics to Olympiad</title>
+<meta name="description" content="A 36-question examination on current electricity in three hours: twelve single-correct, six multiple-correct, eight numerical and ten long Olympiad questions, with a coverage map and marking scheme.">
+<meta name="solutions" content="external:10-olympiad-solutions.html">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Instructions"><p class="lab">Paper · contents</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b o">INPhO / IPhO standard</span><span class="b j">JEE Advanced format</span><span class="b n">3 hours · 36 questions</span></span>
+</p>
+<h1>9 · The paper: current electricity, from drift to reciprocity</h1>
+<p>Thirty-six questions, four sections, three hours. Every section of chapters 1–7 is examined by at least two
+questions; the coverage map below says which. Attempt it in one sitting, with a non-programmable calculator, and
+mark yourself with <a href="10-olympiad-solutions.html">part 10</a> only afterwards — the paper's value is the two
+hours you spend deciding what to write, not the marking.</p>
+
+<div class="box def"><p class="bt">Instructions</p>
+<ul>
+<li><b>Time:</b> 180 minutes. Suggested split — Section A 40 min, B 25 min, C 35 min, D 80 min.</li>
+<li><b>Section A</b> (Q1–Q12): <em>exactly one</em> option is correct; +3 for it, 0 for unanswered, −1 for anything
+else. Do not second-guess a question you have already checked with a limit — a limit is stronger than a doubt.</li>
+<li><b>Section B</b> (Q13–Q18): one or more options correct; +4 if all correct and none wrong, +1 for each correct
+option left unmarked with no wrong mark, 0 for none marked, −2 otherwise.</li>
+<li><b>Section C</b> (Q19–Q26): numerical, +4/0; give the value to the precision asked. Units are stated in the
+table; a correct number with a wrong prefix scores zero, so state the prefix.</li>
+<li><b>Section D</b> (Q27–Q36): long questions, marks as printed — nine at [15] and Q36 at [18], total 153; the
+paper is 245 marks in all. Start every answer with the principle you are using and end with a check — both carry
+marks even when the algebra slips.</li>
+<li><b>Data, unless stated:</b> <m>e=1.6\times10^{-19}</m> C, <m>m_e=9.11\times10^{-31}</m> kg,
+Cu: <m>\rho=1.7\times10^{-8}\ \Omega</m>m, <m>n=8.5\times10^{28}\ \text{m}^{-3}</m>,
+<m>g=9.8</m> m/s², air breakdown <m>3</m> kV/mm at 1 atm.</li>
+</ul></div>
+
+<table class="tb">
+<thead><tr><th>topic</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+<tbody>
+<tr><td>1 · current, drift, continuity, microscopic Ohm</td><td>1, 4</td><td>15</td><td>19</td><td>27, 36</td></tr>
+<tr><td>2 · resistance, resistivity, temperature, non-ohmic</td><td>2, 3, 12</td><td>13, 14</td><td>20, 24</td><td>29, 34</td></tr>
+<tr><td>3 · EMF, internal resistance, grouping, power audit</td><td>4, 5</td><td>16</td><td>25</td><td>27, 30</td></tr>
+<tr><td>4 · Kirchhoff, symmetry, bridges, ladders</td><td>6, 10, 11</td><td>15, 17</td><td>21</td><td>28, 33</td></tr>
+<tr><td>5 · superposition, Thevenin, Norton, reciprocity</td><td>6, 7</td><td>18</td><td>23</td><td>28, 35</td></tr>
+<tr><td>6 · meters, bridges, potentiometer, loading</td><td>5, 9</td><td>17</td><td>22, 23, 25, 26</td><td>31, 32</td></tr>
+<tr><td>7 · fuses, transmission, thermoelectricity, superconductors</td><td>8, 12</td><td>14, 18</td><td>20, 24</td><td>34, 36</td></tr>
+<tr><td>8 · traps and estimation</td><td>all</td><td>all</td><td>all</td><td>all</td></tr>
+</tbody></table>
+
+<h2>Section A · Single correct (Q1–Q12)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>[3] A copper wire carries a steady current. If the wire is replaced by one of the same material with double the cross-section and the same current is maintained, which quantity is unchanged?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the drift speed of the electrons</li>
+<li><b>B</b> the number of electrons crossing a cross-section per second</li>
+<li><b>C</b> the current density</li>
+<li><b>D</b> the electric field inside the wire</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>[3] A wire is drawn through a die so that its length increases by 10% (volume conserved). Its resistance increases by approximately</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 10%</li>
+<li><b>B</b> 21%</li>
+<li><b>C</b> 11%</li>
+<li><b>D</b> 33%</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>[3] Two tungsten lamps rated 60 W and 100 W at 220 V are joined in series to a 220 V supply. Immediately after switch-on, before the filaments heat up, the 100 W lamp briefly</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> glows brighter than the 60 W lamp, because it is rated higher</li>
+<li><b>B</b> glows dimmer, because its cold resistance is lower</li>
+<li><b>C</b> stays dark, because a cold filament does not conduct</li>
+<li><b>D</b> explodes, because cold tungsten cannot carry current</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>[3] A car battery of EMF 12 V and internal resistance 0.01 <m>\Omega</m> drives the starter, which draws 200 A. The terminal voltage during cranking is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 12 V</li>
+<li><b>B</b> 11 V</li>
+<li><b>C</b> 10 V</li>
+<li><b>D</b> 13 V</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>[3] A cell is being charged at 2 A. Compared with its EMF, its terminal voltage during charging is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> lower by <m>Ir</m></li>
+<li><b>B</b> higher by <m>Ir</m></li>
+<li><b>C</b> equal, because EMF is a constant of the cell</li>
+<li><b>D</b> zero, since no net charge is delivered to the load</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>[3] A Wheatstone bridge balances. The battery and the galvanometer are now interchanged. The new balance condition is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the reciprocal of the old one</li>
+<li><b>B</b> the same as the old one</li>
+<li><b>C</b> the old one with arms re-grouped in series</li>
+<li><b>D</b> no balance exists after the swap</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>[3] The current drawn from a real source is halved by increasing the load resistance. The internal power loss <m>I^{2}r</m></b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> halves</li>
+<li><b>B</b> quarters</li>
+<li><b>C</b> stays the same, since <m>r</m> is fixed</li>
+<li><b>D</b> doubles</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>[3] A fuse wire of a given alloy and length is replaced by another of the same alloy, twice the radius, same length. The safe current becomes</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 2 times</li>
+<li><b>B</b> 4 times</li>
+<li><b>C</b> <m>2\sqrt2</m> times</li>
+<li><b>D</b> <m>\sqrt2</m> times</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>[3] To convert a galvanometer into a voltmeter of higher range you add</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> a low shunt in parallel</li>
+<li><b>B</b> a high multiplier in series</li>
+<li><b>C</b> a high shunt in parallel</li>
+<li><b>D</b> a low multiplier in series</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>[3] Twelve equal resistors <m>R</m> form a cube. The equivalent resistance between adjacent corners is</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> <m>7R/12</m></li>
+<li><b>B</b> <m>3R/4</m></li>
+<li><b>C</b> <m>5R/6</m></li>
+<li><b>D</b> <m>11R/12</m></li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>[3] An infinite ladder of series <m>R</m> and shunt <m>R</m> has input resistance</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> <m>2R</m></li>
+<li><b>B</b> <m>1.618R</m></li>
+<li><b>C</b> <m>2.732R</m></li>
+<li><b>D</b> <m>1.5R</m></li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>[3] A 100 W, 220 V lamp is run from a 110 V supply (resistance taken as constant at its hot value). It delivers</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> 50 W</li>
+<li><b>B</b> 100 W</li>
+<li><b>C</b> 25 W</li>
+<li><b>D</b> 200 W</li>
+</ul></div></div>
+
+<h2>Section B · Multiple correct (Q13–Q18)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>[4] Which of the following increase in resistance when their temperature rises moderately (tens of kelvin)?</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> a copper coil</li>
+<li><b>B</b> an NTC thermistor</li>
+<li><b>C</b> a carbon-composition resistor</li>
+<li><b>D</b> a platinum resistance element</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>[4] A metal's resistivity rises roughly linearly with <m>T</m> near room temperature. This is because</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the conduction-electron density grows with <m>T</m></li>
+<li><b>B</b> the relaxation time falls as lattice vibrations grow</li>
+<li><b>C</b> the electron charge changes with temperature</li>
+<li><b>D</b> the conduction-electron density is fixed while <m>\tau</m> shortens</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>[4] Kirchhoff's junction law follows from</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> conservation of charge in steady state</li>
+<li><b>B</b> conservation of energy round a loop</li>
+<li><b>C</b> the continuity equation with <m>\partial\rho/\partial t=0</m> at the node</li>
+<li><b>D</b> Ohm's law applied to the junction</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q16</span><b>[4] For a cell of EMF <m>\mathcal E</m>, internal resistance <m>r</m>, delivering current <m>I</m> to <m>R</m>:</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> chemical power is <m>\mathcal EI</m></li>
+<li><b>B</b> the efficiency of delivery is <m>R/(R+r)</m></li>
+<li><b>C</b> the efficiency at maximum power transfer is 100%</li>
+<li><b>D</b> the internal loss is <m>I^{2}r</m> regardless of <m>R</m></li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q17</span><b>[4] A meter bridge measurement of an unknown <m>S\approx R</m> gains accuracy when</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> the balance point is near 50 cm</li>
+<li><b>B</b> the balance point is near 5 cm</li>
+<li><b>C</b> <m>R</m> and <m>S</m> are interchanged and the two results averaged</li>
+<li><b>D</b> the galvanometer is replaced by one of higher resistance</li>
+</ul></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q18</span><b>[4] Superposition of currents is valid when the network contains</b></div>
+<div class="bd"><ul class="opts">
+<li><b>A</b> resistors and ideal batteries only</li>
+<li><b>B</b> a filament lamp working hot</li>
+<li><b>C</b> an ideal diode conducting steadily in one loop</li>
+<li><b>D</b> a thermistor held at a regulated, constant temperature</li>
+</ul></div></div>
+
+<h2>Section C · Numerical (Q19–Q26)</h2>
+
+<table class="tb">
+<thead><tr><th>Q</th><th>answer as</th><th>Q</th><th>answer as</th></tr></thead>
+<tbody>
+<tr><td>Q19</td><td>mm/s, 2 significant figures</td><td>Q23</td><td>mA, nearest 0.1</td></tr>
+<tr><td>Q20</td><td><m>\Omega</m>, 3 significant figures</td><td>Q24</td><td>kW, 3 significant figures</td></tr>
+<tr><td>Q21</td><td>mA, nearest 0.1</td><td>Q25</td><td>V, 2 significant figures</td></tr>
+<tr><td>Q22</td><td><m>\Omega</m>, 3 significant figures</td><td>Q26</td><td>V, nearest 1</td></tr>
+</tbody></table>
+
+<div class="q"><div class="hd"><span class="lab">Q19</span><b>[4] Copper, <m>n=8.5\times10^{28}\ \text{m}^{-3}</m>, cross-section 2.0 mm², current 6.8 A. Drift speed?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q20</span><b>[4] Two concentric spheres of radii 1.0 cm and 10 cm, the gap filled with material of resistivity 100 <m>\Omega</m>m. Resistance between them?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q21</span><b>[4] Bridge arms <m>AB=10\ \Omega</m>, <m>BC=20\ \Omega</m>, <m>AD=30\ \Omega</m>, <m>DC=40\ \Omega</m>; 10 V battery across <m>AC</m>; a 50 <m>\Omega</m> galvanometer across <m>BD</m>. Current through the galvanometer?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q22</span><b>[4] A galvanometer of resistance 100 <m>\Omega</m>, full scale 1 mA, is shunted into a 0–1 A ammeter. Its shunt resistance?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q23</span><b>[4] The bridge of Q21, but with the galvanometer replaced by an ideal ammeter. Its reading?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q24</span><b>[4] 500 kW is transmitted 20 km over a line of total resistance 8.0 <m>\Omega</m> at 25 kV. Line loss?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q25</span><b>[4] A cell gives a potentiometer null at 150 cm; with 4.0 <m>\Omega</m> connected across it, the null moves to 120 cm. The cell's terminal voltage while delivering current is?</b></div>
+<div class="bd"></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q26</span><b>[4] A 100 V source feeds two series 20 k<m>\Omega</m> resistors; a voltmeter of resistance 20 k<m>\Omega</m> is placed across one of them. What does it read?</b></div>
+<div class="bd"></div></div>
+
+<h2>Section D · Long questions (Q27–Q36)</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q27</span><b>[15] Two batteries are joined in parallel between nodes A and B: battery 1 is <m>\mathcal E_1=12</m> V with <m>r_1=1\ \Omega</m>; battery 2 is <m>\mathcal E_2=6</m> V with <m>r_2=0.5\ \Omega</m>. A resistor <m>R=5\ \Omega</m> is also connected between A and B.</b></div>
+<div class="bd">
+<p>(a) [4] Find the potential difference <m>V_{AB}</m> and the current through each battery and through <m>R</m>.
+(b) [4] Identify what battery 2 is doing and compute the power flowing into or out of each battery, splitting it into stored (chemical) and heated parts.
+(c) [4] Produce a complete power ledger for the circuit and verify it sums.
+(d) [3] What would <m>V_{AB}</m> become if <m>R\to\infty</m> (battery 2 disconnected first, then still present but open)? Comment on the difference, if any.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q28</span><b>[15] A Wheatstone bridge has arms <m>AB=10\ \Omega</m>, <m>BC=20\ \Omega</m>, <m>AD=30\ \Omega</m>, <m>DC=40\ \Omega</m> and a 10 V battery of negligible internal resistance across <m>AC</m>.</b></div>
+<div class="bd">
+<p>(a) [3] State the balance condition and show it fails here.
+(b) [4] Find the Thevenin equivalent seen from the detector diagonal <m>BD</m>: open-circuit voltage and killed-source resistance.
+(c) [4] Find the current through detector resistances of 50 <m>\Omega</m> and 0 <m>\Omega</m>, and the load resistance that extracts maximum power from the bridge, with its value.
+(d) [4] The battery and detector are now interchanged. State the new short-circuit current at the old battery diagonal, justify with the theorem involved, and give the new open-circuit voltage there, computed honestly.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q29</span><b>[15] A hemispherical electrode of radius <m>a=0.5</m> m is embedded with its flat face flush in soil of resistivity <m>\rho=100\ \Omega</m>m; a second, identical electrode is 100 m away.</b></div>
+<div class="bd">
+<p>(a) [4] Show the resistance from one hemisphere to "infinity" is <m>\rho/2\pi a</m> and evaluate it.
+(b) [4] Estimate the two-electrode resistance, including a comment on whether the 100 m separation's mutual term matters.
+(c) [4] A current of 100 A enters the earth at electrode 1. Compute the potential difference between a cow's front and rear feet, 1 m apart, on a radial line at 10 m from the electrode, and again at 100 m.
+(d) [3] Using the same slice method, find the resistance between two concentric spheres <m>a</m> and <m>b</m> and take the limit <m>b\to\infty</m>; relate it to your answer in (a).</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q30</span><b>[15] A battery of EMF 12 V and internal resistance 2.0 <m>\Omega</m> drives a variable load <m>R</m>.</b></div>
+<div class="bd">
+<p>(a) [4] Derive the load power <m>P(R)</m> and the condition for its maximum, including the second-derivative check.
+(b) [3] Compute <m>P_{\max}</m>, the terminal voltage and the efficiency at the maximum.
+(c) [4] Find the two load resistances at which the battery delivers half of <m>P_{\max}</m>, and their efficiencies.
+(d) [4] A designer argues "transmission lines should therefore be matched". Write the two-sentence rebuttal using the numbers of this question and the <m>P^{2}R/V^{2}</m> law.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q31</span><b>[15] A potentiometer has a driver of EMF 6.0 V and a 10 m uniform wire of resistance 20 <m>\Omega</m>; a resistance box in the driver loop is set so the gradient is exactly 0.005 V/cm.</b></div>
+<div class="bd">
+<p>(a) [3] What current flows in the wire, what is the wire's total drop, and what resistance sits in the driver loop besides the wire?</p>
+<p>(b) [4] Cell X balances at 150 cm, cell Y at 120 cm. Give both EMFs and their ratio.</p>
+<p>(c) [4] With a 4.0 <m>\Omega</m> resistor across X, the balance moves to 135 cm. Find X's internal resistance and the current it then delivers.</p>
+<p>(d) [4] Explain — with the balance condition, not slogans — why this instrument reads the EMF while a 10 k<m>\Omega</m> voltmeter across the same cell reads lower; quantify the voltmeter's error for <m>r=1\ \Omega</m>.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q32</span><b>[15] A galvanometer has <m>G=100\ \Omega</m>, full scale 1 mA.</b></div>
+<div class="bd">
+<p>(a) [3] Design the 0–1 A ammeter: shunt value, total meter resistance, and the power the shunt must survive.
+(b) [3] Design the 0–10 V voltmeter: multiplier value, meter resistance, and its <m>\Omega</m>/V rating.
+(c) [4] This voltmeter is placed across the lower 10 k<m>\Omega</m> of a 100 V, 10 k<m>\Omega</m> + 10 k<m>\Omega</m> divider. Compute the reading and the percentage error.
+(d) [5] A "ring circuit" trick connects the same voltmeter <em>twice</em>: once across each resistor, and the sum is taken. Compute both readings and their sum, and state whether summing two loaded readings can beat one loaded reading here — with arithmetic, not hope.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q33</span><b>[15] Twelve equal resistors <m>R</m> form a cube.</b></div>
+<div class="bd">
+<p>(a) [5] For current entering corner A and leaving the body-diagonal opposite G, use symmetry to find the current in every edge and prove <m>R_{AG}=5R/6</m>.
+(b) [5] Repeat the argument for a face diagonal and prove <m>R_{AC}=3R/4</m> (you may use the potential-class method).
+(c) [5] Two opposite edges (no shared corners) of the cube are now short-circuited by wires of negligible resistance. Recompute <m>R_{AG}</m> and justify each step of the collapse of the network.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q34</span><b>[15] <m>P=100</m> kW must be delivered over a line of resistance 10 <m>\Omega</m>.</b></div>
+<div class="bd">
+<p>(a) [3] Compute the line loss at 200 V and at 20 kV, and the loss fraction in each.
+(b) [4] Show generally that <m>P_{loss}\propto1/V^{2}</m>, and find the voltage at which the loss equals 1% of the delivered power for this line.
+(c) [4] A fuse wire in the substation is drawn to radius <m>r</m>. Derive <m>I\propto r^{3/2}</m> from the steady-state balance of <m>I^{2}\rho/\pi r^{2}</m> heating against <m>h\,2\pi rL\,\Delta T</m> cooling, and find the ratio of the safe currents of 0.2 mm and 0.5 mm radius wires of the same alloy.
+(d) [4] If the delivered power must grow to 400 kW at the same voltage and line, find the new loss fraction, and comment on why growth in demand, not efficiency, drives voltage upgrades.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q35</span><b>[15] A network: a 10 V battery in series with 2 <m>\Omega</m>, in parallel with a 6 V battery in series with 1 <m>\Omega</m>, the pair feeding a load <m>R_L</m>.</b></div>
+<div class="bd">
+<p>(a) [4] Find the load current for <m>R_L=4\ \Omega</m> by superposition, showing both components, and verify by a single nodal solve.
+(b) [4] Find the Thevenin equivalent at the load terminals and recompute the load current.
+(c) [3] Determine the current in each battery branch at <m>R_L=4\ \Omega</m> and identify which battery is being charged.
+(d) [4] Find <m>R_L</m> for maximum power and that power; state the efficiency there and the fraction of the 10 V battery's chemical power that ends up in the load at that operating point.</p>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q36</span><b>[18] A laboratory gives you: a 9 V battery of unknown internal resistance (order 1 <m>\Omega</m>), a resistor advertised as <m>R=0.10\ \Omega\pm10\%</m>, an ammeter of resistance 0.50 <m>\Omega</m> and full scale 5 A, a voltmeter of resistance 10 k<m>\Omega</m>, connecting leads of 10 m<m>\Omega</m> each, and a potentiometer wire system of gradient 0.01 V/mm.</b></div>
+<div class="bd">
+<p>(a) [4] Design the best measurement of <m>R</m> with the DC meters alone. Compute the exact error of the naive series connection (ammeter inside the voltmeter's reach) and of the alternative connection, and pick the winner.
+(b) [4] Show why no two-terminal scheme with these instruments can reach 1% on <m>R</m>, and describe the four-terminal rewiring that can — down to which resistance drops out and why.
+(c) [4] The battery's EMF is measured on the potentiometer (null at 0.90 m). With the battery then driving <m>R=0.10\ \Omega</m> through the ammeter (reading 4.0 A — compute whether this is consistent), predict the new null position and deduce the internal resistance.
+(d) [3] Estimate the drift speed of the electrons in a 1 mm² copper wire carrying the 4.0 A of part (c), and the time for one electron to traverse the 10 m of lead wire. Comment on what actually delivers the energy to <m>R</m>.
+(e) [3] The whole experiment is repeated inside a superconducting magnet room where a superconducting loop (inductance 10 <m>\mu</m>H) has trapped 2.0 A. State the loop's stored energy and flux, and what, if anything, in this paper's toolkit is needed to describe its persistence.</p>
+</div></div>
+
+<p class="skip">Continue: <a href="10-olympiad-solutions.html">10 · Solutions to all 36 questions, with marks distributed</a></p>
+
+</main>
+</div>
+</body>
+</html>

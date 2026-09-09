@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 &#183; Solutions to the paper — Current Electricity, from basics to Olympiad</title>
+<meta name="description" content="Complete worked solutions to all 36 questions of the current-electricity paper, with the marking distributed as in the paper, the trap each question punishes, and the limit check that verifies the answer.">
+<meta name="solutions" content="inline">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Solutions · paper</p></nav>
+<main>
+<p class="meta" id="top">
+<span class="badges"><span class="b o">full solutions</span><span class="b j">marks as printed</span><span class="b n">36 questions</span></span>
+</p>
+<h1>10 · Solutions</h1>
+<p>Every solution is written the way chapter 8 recommends: the principle first, then the algebra, then a check.
+The <b>why this is the answer</b> line at the end of each is the part worth reading twice. A compact answer key
+sits at the bottom for fast marking.</p>
+
+<h2>Section A</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Answer: B</b><span class="diff">[3] · §1.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>Principle.</b> Electrons per second = <m>I/e</m>: the definition of current, independent of the wire.
+Double the area at the same current: <m>v_d=I/neA</m> halves, <m>j=I/A</m> halves, and <m>E=\rho j</m> halves —
+only the count survives. <b>Why not A:</b> more carriers on the starting line means each moves slower, not the same.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>Answer: B — 21%</b><span class="diff">[3] · §2.2</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">R\propto\frac{l}{A}=\frac{l^{2}}{V_{\text{vol}}}\ \Rightarrow\ R' /R=(1.1)^{2}=1.21</div>
+<p><b>Why not C:</b> 11% is the naive single-factor answer; the area shrinks too and it multiplies. <b>Check:</b>
+exact <m>l^{2}</m> law for any stretch at constant volume ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Answer: B</b><span class="diff">[3] · §2.4</span></div>
+<div class="bd"><div class="bd">
+<p><b>Principle.</b> In series, power divides as <m>I^{2}R</m> — the <em>smaller</em> resistance glows dimmer. The
+100 W lamp has the lower hot resistance (<m>484\ \Omega</m> vs 807 <m>\Omega</m>), and both cold resistances
+scale the same way, so the 100 W lamp stays the weaker element at every temperature. <b>Why not A:</b> "rated
+higher" is a parallel-circuit intuition; series favours the bigger resistor.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>Answer: C — 10 V</b><span class="diff">[3] · §3.2</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">V=\mathcal E-Ir=12-200\times0.01=10\ \text{V}</div>
+<p><b>Check:</b> the sag equals <m>Ir=2</m> V on a 12 V battery — exactly the cranking whine you hear in a cold car.
+<b>Why not D:</b> 13 V would mean charging, not discharging.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Answer: B</b><span class="diff">[3] · §3.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>Principle.</b> On charge the external supply must defeat both the EMF and the internal drop:
+<m>V=\mathcal E+Ir</m>. Terminal voltage above EMF is the signature of charging — the sign of <m>Ir</m> is the
+whole question. <b>Why not C:</b> EMF is constant, but the <em>terminal voltage</em> is not the EMF.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Answer: B</b><span class="diff">[3] · §5.5</span></div>
+<div class="bd"><div class="bd">
+<p><b>Principle.</b> Reciprocity: source and detector may trade diagonals; the balance condition
+<m>R_1R_4=R_2R_3</m> is symmetric under the swap. <b>Check:</b> ch 4, Q5 verified it arm by arm; the invariant
+underlying it is the port-swap invariance of <m>V/I</m>.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Answer: B — quarters</b><span class="diff">[3] · §3.4</span></div>
+<div class="bd"><div class="bd">
+<p><m>I^{2}r</m> with <m>I\to I/2</m> is <m>I^{2}r/4</m>. <b>Why not C:</b> <m>r</m> fixed does not fix
+<m>I^{2}</m>; the whole point of raising <m>R</m> is that the internal share of the current falls as
+<m>\mathcal E/(R+r)</m>.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>Answer: C — <m>2\sqrt2</m> times</b><span class="diff">[3] · §7.1</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">I^{2}\frac{\rho}{\pi r^{2}}L=h\,2\pi rL\,\Delta T\ \Rightarrow\ I\propto r^{3/2}</div>
+<p>Doubling <m>r</m>: <m>2^{3/2}=2.83</m>. <b>Why not B:</b> 4× would be right if heating alone scaled — it is the
+cooling surface <m>r</m> in the denominator that bends the exponent to 3/2.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>Answer: B</b><span class="diff">[3] · §6.1</span></div>
+<div class="bd"><div class="bd">
+<p>A voltmeter must steal as little current as possible while the coil needs <m>I_g</m>: a large series multiplier,
+<m>R_m=V/I_g-G</m>. Shunts are the ammeter's trick, where most of the current must <em>bypass</em> the coil.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>Answer: A — 7R/12</b><span class="diff">[3] · §4.3</span></div>
+<div class="bd"><div class="bd">
+<p>Adjacent corners: symmetry gives currents <m>I/2, I/4, I/4</m> through the three classes of edges, total drop
+<m>\big(\tfrac12+\tfrac14+\tfrac14\big)IR</m> split as <m>\tfrac12IR+\tfrac14IR</m> along any path ⇒
+<m>7R/12</m>. <b>Check:</b> <m>7/12&lt;3/4&lt;5/6</m> as endpoints separate ✓ (ch 4, Q3 did the face case in full).</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>Answer: B — 1.618R</b><span class="diff">[3] · §4.5</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">R_\infty=\frac{R+\sqrt{R^{2}+4R^{2}}}{2}=\frac{1+\sqrt5}{2}R=\varphi R</div>
+<p><b>Check:</b> <m>R+R\varphi/(1+\varphi)=R(1+1/\varphi)=R\varphi</m> since <m>\varphi^{2}=\varphi+1</m> ✓.
+The golden ratio is a resistor network before it is anything else.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>Answer: C — 25 W</b><span class="diff">[3] · §2.4</span></div>
+<div class="bd"><div class="bd">
+<p>Half the voltage on a fixed resistance: <m>P=V^{2}/R</m> falls by 4, to 25 W. <b>Why not A:</b> 50 W is the
+linear fallacy — power is quadratic in voltage. (A real lamp also runs cooler and dims further; "constant hot
+resistance" is the stated assumption.)</p>
+</div></div></div>
+
+<h2>Section B</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>Answer: A, D</b><span class="diff">[4] · §2.3</span></div>
+<div class="bd"><div class="bd">
+<p>Copper and platinum: <m>\tau</m> shortens, <m>n</m> fixed, <m>R</m> rises. NTC thermistor: carrier flood,
+<m>R</m> falls. Carbon composition: also negative coefficient. <b>Why D matters:</b> platinum's predictability is
+precisely why it is the thermometer standard.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>Answer: B, D</b><span class="diff">[4] · §1.4, §2.3</span></div>
+<div class="bd"><div class="bd">
+<p><m>\sigma=ne^{2}\tau/m</m>: in a metal <m>n</m> is frozen, so everything is the story of <m>\tau</m>.
+<b>Why not A:</b> the carrier density in a metal does not grow with <m>T</m> — that is the semiconductor mechanism;
+a question that offers both mechanisms is testing whether you know which material owns which.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>Answer: A, C</b><span class="diff">[4] · §1.2</span></div>
+<div class="bd"><div class="bd">
+<p>Junction law = charge conservation in steady state = continuity equation at a node with
+<m>\partial\rho/\partial t=0</m>. <b>Why not B:</b> energy conservation is the <em>loop</em> law. <b>Why not D:</b>
+Ohm's law is constitutive, not conserved-anything.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q16</span><b>Answer: A, B, D</b><span class="diff">[4] · §3.4</span></div>
+<div class="bd"><div class="bd">
+<p><m>\mathcal EI</m> in, <m>I^{2}R</m> out, <m>I^{2}r</m> heat, efficiency <m>R/(R+r)</m>. <b>Why not C:</b> at
+<m>R=r</m> — the maximum-power point — efficiency is exactly <m>50\%</m>, the price of matching.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q17</span><b>Answer: A, C</b><span class="diff">[4] · §6.3</span></div>
+<div class="bd"><div class="bd">
+<p>Near 50 cm the length error in <m>l</m> and <m>100-l</m> is fractional-smallest; the swap-and-average cancels end
+errors to first order. <b>Why not B:</b> at 5 cm a 1 mm jockey wobble is 2% of <m>l</m>. <b>Why not D:</b> at
+balance the detector carries no current — its resistance is already irrelevant.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q18</span><b>Answer: A, D</b><span class="diff">[4] · §5.1</span></div>
+<div class="bd"><div class="bd">
+<p>Superposition needs linearity: resistors with fixed values and ideal sources qualify; a thermistor clamped at
+constant temperature is just a resistor. The hot filament (<m>R</m> depends on total current) and the diode
+(<m>R</m> depends on current sign) both revoke the licence. <b>Why not C:</b> "conducting steadily" fixes its drop
+at 0.7 V — still a nonlinearity; superposition must apply to <em>every</em> element.</p>
+</div></div></div>
+
+<h2>Section C</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q19</span><b>Answer: 0.25 mm/s</b><span class="diff">[4] · §1.3</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">v_d=\frac{I}{neA}=\frac{6.8}{8.5\times10^{28}\times2.0\times10^{-6}\times1.6\times10^{-19}}
+=2.5\times10^{-4}\ \text{m/s}</div>
+<p><b>Check:</b> double the ch-1 wire's area at ~7× the current: <m>7.35\times10^{-5}\times3.4=2.5\times10^{-4}</m> ✓.
+The trap was the prefix: 0.25 mm/s, not 0.25 m/s.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q20</span><b>Answer: 716 <m>\Omega</m></b><span class="diff">[4] · §2.2</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">R=\frac{\rho(b-a)}{4\pi ab}=\frac{100\times0.09}{4\pi\times10^{-3}}=716\ \Omega</div>
+<p><b>Check:</b> the thin-sphere limit <m>\rho(b-a)/(4\pi a^{2})</m> with <m>b=10a</m> would give 7160 <m>\Omega</m>;
+the growing area must cut it tenfold ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q21</span><b>Answer: 12.9 mA (B → D)</b><span class="diff">[4] · §4.4</span></div>
+<div class="bd"><div class="bd">
+<p>Nodal: <m>V_B=6.581</m> V, <m>V_D=5.935</m> V ⇒ <m>I=(0.645)/50=12.9</m> mA. <b>Direction check first:</b>
+open-circuit <m>V_B=6.67&gt;V_D=5.71</m>, and <m>R_1/R_2&lt;R_3/R_4</m> — B is the high node; the algebra only
+confirms it.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q22</span><b>Answer: 0.100 <m>\Omega</m></b><span class="diff">[4] · §6.1</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">S=\frac{G}{n-1}=\frac{100}{1000-1}=0.1001\ \Omega</div>
+<p><b>Check:</b> total meter resistance <m>=GS/(G+S)=0.1\ \Omega</m> ✓ — 99.9% of the current bypasses the coil.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q23</span><b>Answer: 40.0 mA</b><span class="diff">[4] · §5.2</span></div>
+<div class="bd"><div class="bd">
+<p>Ideal ammeter = short circuit: <m>I_{sc}=V_{th}/R_{th}=0.952/23.81=40.0</m> mA. <b>Check:</b> 40 mA &gt; 12.9 mA
+— no load current may exceed its own short-circuit value ✓. (Full derivation in Q28.)</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q24</span><b>Answer: 3.20 kW</b><span class="diff">[4] · §7.2</span></div>
+<div class="bd"><div class="bd">
+<div class="eqd">I=\frac{5\times10^{5}}{2.5\times10^{4}}=20\ \text{A};\qquad
+P_{loss}=20^{2}\times8=3.2\times10^{3}\ \text{W}=0.64\%\ \text{of delivery}</div>
+<p><b>Check:</b> at 250 V the same line would demand 2000 A and burn 32 MW — the 10⁴ ratio <m>=100^{2}</m> ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q25</span><b>Answer: 1.2 V</b><span class="diff">[4] · §6.4</span></div>
+<div class="bd"><div class="bd">
+<p>Gradient <m>=1.5/150=0.01</m> V/cm; the loaded null is a <em>terminal-voltage</em> balance:
+<m>V=0.01\times120=1.2</m> V. <b>Check:</b> <m>r=4\times30/120=1\ \Omega</m>,
+<m>I=1.5/5=0.3</m> A, <m>V=1.5-0.3=1.2</m> ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q26</span><b>Answer: 33 V</b><span class="diff">[4] · §6.2</span></div>
+<div class="bd"><div class="bd">
+<p>Meter ∥ 20 k = 10 k; reading <m>=100\times10/30=33.3\approx33</m> V against a true 50 V — a 34% lie.
+<b>Why:</b> the meter's resistance equals the arm it loads; that is not an instrument fault, it is circuit
+modification.</p>
+</div></div></div>
+
+<h2>Section D</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q27</span><b>Two batteries in parallel driving R — answers</b><span class="diff">[15] · §3.2, §3.4</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [4] Principle: one node equation.</b> With <m>V=V_{AB}</m>:
+<m>\frac{12-V}{1}+\frac{6-V}{0.5}=\frac{V}{5}</m>. Multiply by 5: <m>60-5V+60-10V=V\Rightarrow V=120/16=7.5</m> V.
+Then <m>I_1=(12-7.5)/1=4.5</m> A (out of battery 1), <m>I_2=(6-7.5)/0.5=-3.0</m> A — <b>negative: into battery 2</b>
+— and <m>I_R=7.5/5=1.5</m> A. Check: <m>4.5-3.0=1.5</m> ✓.</p>
+<p><b>(b) [4] What battery 2 is doing.</b> Its current is opposite to its EMF: it is <b>being charged</b> by the
+12 V battery while both feed the load. Power: battery 1 chemical out <m>12\times4.5=54</m> W, of which
+<m>4.5^{2}\times1=20.25</m> W heats <m>r_1</m>; battery 2 absorbs <m>7.5\times3=22.5</m> W, splitting into stored
+<m>6\times3=18</m> W and heated <m>3^{2}\times0.5=4.5</m> W; load takes <m>7.5\times1.5=11.25</m> W.</p>
+<p><b>(c) [4] The ledger.</b> Chemical out 54 W. Consumed: <m>20.25+22.5+11.25=54.00</m> W ✓ — and within battery
+2's absorption, 18 W stored + 4.5 W heat is itself a balanced sub-ledger. A circuit with a charging cell has
+<i>negative dissipation</i> in that branch; the audit is what makes that visible.</p>
+<p><b>(d) [3] R removed.</b> Only the loop <m>\mathcal E_1\to r_1\to r_2\to\mathcal E_2</m> remains:
+circulating current <m>I=(12-6)/(1+0.5)=4.0</m> A, and <m>V_{AB}=12-4=8.0</m> V (= <m>6+4\times0.5</m> ✓).
+Battery 1 delivers <m>48</m> W: 16 W heats <m>r_1</m>, 8 W heats <m>r_2</m>, 24 W is pumped into battery 2 as
+stored charge. <b>Why this matters:</b> "open-circuit voltage of a battery pair" is well defined but thermally
+honest — nothing is open about the circulation. Two unequal batteries must never be paralleled bare.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q28</span><b>The bridge by Thevenin, then by reciprocity — answers</b><span class="diff">[15] · §4.4, §5.2, §5.5</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [3]</b> Balance needs <m>R_{AB}/R_{BC}=R_{AD}/R_{DC}</m>: <m>10/20=1/2</m> against <m>30/40=3/4</m>.
+Not equal — B sits higher than D; the bridge is off by a wide margin.</p>
+<p><b>(b) [4]</b> Detector removed: <m>V_B=10\times20/30=6.667</m> V, <m>V_D=10\times40/70=5.714</m> V ⇒
+<m>V_{th}=0.952</m> V. Battery killed (wire): <m>R_{th}=10\parallel20+30\parallel40=6.667+17.143=23.81\ \Omega</m>.</p>
+<p><b>(c) [4]</b> <m>I(50)=0.952/(23.81+50)=12.9</m> mA; <m>I(0)=0.952/23.81=40.0</m> mA. Maximum power at
+<m>R_L=R_{th}=23.8\ \Omega</m>: <m>P_{max}=0.952^{2}/(4\times23.81)=9.5</m> mW. <b>Check:</b> at <m>2R_{th}</m>
+the power is <m>8/9</m> of maximum, as the quadratic demands ✓.</p>
+<p><b>(d) [4]</b> Swap battery and detector. By <b>reciprocity</b> the short-circuit current is invariant:
+40.0 mA again. The <em>open-circuit</em> voltage is not invariant: honest computation with 10 V across B–D gives
+<m>V_A=10-10\times10/(10+30)=7.5</m> V, <m>V_C=10\times40/(20+40)=6.667</m> V, so <m>V_{AC}=0.833</m> V —
+different from 0.952 V. <b>Why:</b> reciprocity equates the ratio <m>I_{sc}/V_{drive}</m>, never the open voltages
+separately.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q29</span><b>Earthing and the slice method — answers</b><span class="diff">[15] · §2.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [4]</b> Hemispherical equipotentials of area <m>2\pi r^{2}</m>:
+<m>R=\int_a^{\infty}\rho\,dr/2\pi r^{2}=\rho/2\pi a=100/\pi=31.8\ \Omega</m>. The integral converges because
+the area grows as <m>r^{2}</m>.</p>
+<p><b>(b) [4]</b> Two far electrodes in series: <m>2\times31.8=63.7\ \Omega</m>. Mutual correction
+<m>\rho/2\pi D=100/628=0.16\ \Omega</m> — 0.25%, negligible; the check <em>is</em> the negligibility.</p>
+<p><b>(c) [4]</b> <m>E(r)=\rho I/2\pi r^{2}</m>: at 10 m, <m>=100\times100/(2\pi\times100)=15.9</m> V/m ⇒
+step voltage <m>\approx15.9</m> V across a 1 m stride — a real hazard (animals are killed by step potentials near
+faulted earths). At 100 m: <m>0.159</m> V/m ⇒ 0.16 V, safe. The <m>1/r^{2}</m> collapse is why earth pits are
+fenced.</p>
+<p><b>(d) [3]</b> Concentric spheres: <m>R=\rho(b-a)/4\pi ab\to\rho/4\pi a</m> as <m>b\to\infty</m> — exactly
+half the hemisphere's <m>\rho/2\pi a</m>, because the hemisphere radiates through half the area at every radius.
+<b>Check:</b> same integral, half the solid angle ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q30</span><b>Maximum power, dissected — answers</b><span class="diff">[15] · §3.4, §7.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [4]</b> <m>P(R)=\mathcal E^{2}R/(R+r)^{2}=144R/(R+2)^{2}</m>.
+<m>dP/dR=144(2-R)/(R+2)^{3}=0\Rightarrow R=2\ \Omega</m>. Second-derivative check:
+<m>d^{2}P/dR^{2}=144(2R-8)/(R+2)^{4}=-2.25&lt;0</m> at <m>R=2</m> ✓ maximum.</p>
+<p><b>(b) [3]</b> <m>P_{max}=144\times2/16=18</m> W; terminal voltage <m>=12-3\times2=6</m> V; efficiency
+<m>6/12=50\%</m> — always, at the match.</p>
+<p><b>(c) [4]</b> Half power = 9 W: <m>144R/(R+2)^{2}=9\Rightarrow R^{2}-12R+4=0\Rightarrow R=2(3\pm2\sqrt2)</m>
+= <m>0.343</m> or <m>11.66</m> <m>\Omega</m>. Efficiencies <m>R/(R+2)=14.7\%</m> and <m>85.3\%</m>.
+<b>Check:</b> product of the two roots <m>=4=r^{2}</m> ✓ (the log-symmetry of the power hill).</p>
+<p><b>(d) [4]</b> Matching buys maximum watts at a ruinous price: here it would burn 18 W inside the battery for
+every 18 W delivered — <m>\eta=50\%</m>. A transmission line delivering 100 kW with 0.25% loss runs at
+<m>\eta=99.75\%</m> precisely because it is <em>not</em> matched; and since <m>P_{loss}=P^{2}R/V^{2}</m>, the
+design variable is <m>V</m>, not the load ratio. Matching is for signals; efficiency is for power.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q31</span><b>The potentiometer, end to end — answers</b><span class="diff">[15] · §6.4</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [3]</b> Gradient <m>=0.005</m> V/cm <m>\times100=0.5</m> V/m over 10 m ⇒ wire drop <m>=5.0</m> V; wire
+current <m>=5/20=0.25</m> A; driver loop resistance <m>=6/0.25=24\ \Omega</m>, i.e. <m>4\ \Omega</m> besides the
+wire. <b>Check:</b> <m>5+0.25\times4=6</m> ✓.</p>
+<p><b>(b) [4]</b> <m>\mathcal E_X=0.005\times150=0.75</m> V; <m>\mathcal E_Y=0.60</m> V; ratio <m>=1.25</m>.
+No current flows at either null, so internal resistance never enters — that is the point of the instrument.</p>
+<p><b>(c) [4]</b> Loaded null 135 cm ⇒ terminal voltage <m>0.675</m> V.
+<m>r=R(l_0-l)/l=4\times15/135=0.444\ \Omega</m>. Current delivered: <m>I=0.675/4=0.169</m> A.
+<b>Check:</b> <m>(0.75-0.675)/0.444=0.169</m> ✓ both routes agree.</p>
+<p><b>(d) [4]</b> At null the cell delivers <em>zero</em> current, so no <m>Ir</m> drop exists and the wire segment
+equals the EMF exactly. The 10 k<m>\Omega</m> voltmeter draws <m>0.75/10001=75\ \mu</m>A, giving terminal voltage
+<m>0.75-75\times10^{-6}\times1=0.749925</m> V — an error of 0.01% for <m>r=1\ \Omega</m>. Honest reading of the
+numbers: with a small <m>r</m> the modern meter is nearly honest; the potentiometer's superiority is
+<i>categorical</i> (zero loading regardless of <m>r</m>, and calibration by length ratio) — and it becomes decisive
+the moment <m>r</m> is comparable to <m>R_V</m>.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q32</span><b>One galvanometer, four instruments — answers</b><span class="diff">[15] · §6.1, §6.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [3]</b> <m>S=G/(n-1)=100/999=0.1001\ \Omega</m>; total resistance 0.1 <m>\Omega</m>; shunt power at
+full scale <m>(0.999)^{2}\times0.1001=0.10</m> W — the shunt is the thermal element, not the coil.</p>
+<p><b>(b) [3]</b> <m>R_m=10/0.001-100=9900\ \Omega</m>; meter resistance 10 k<m>\Omega</m>; sensitivity
+<m>=1/I_g=1000\ \Omega/\text{V}</m>.</p>
+<p><b>(c) [4]</b> Lower arm becomes <m>10k\parallel10k=5k</m>: reading <m>=100\times5/15=33.3</m> V — an error of
+<b>−33%</b> on a true 50 V. The meter is honest; the <em>circuit it joined</em> is different.</p>
+<p><b>(d) [5]</b> Put an identical meter across each resistor: upper arm <m>10k\parallel10k=5k</m>, lower the same
+— the divider is symmetric again and each meter reads 50.0 V, summing to 100.0 V. <b>The verdict, with a
+counterexample:</b> the sum is exact by KVL for <em>any</em> arms (the meters merely close the same series chain),
+but the individual readings are not corrected in general: on 10 k + 20 k the same two meters read 71.4 V and
+28.6 V (true: 33.3 and 66.7). The recovery here is a symmetry miracle of equal arms — not a method. One good
+high-impedance meter beats two clever ones.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q33</span><b>The cube, extended — answers</b><span class="diff">[15] · §4.3</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [5]</b> From A the three edges are equivalent: <m>I/3</m> each; into G likewise. The reflection planes
+through the body diagonal force the six middle edges to carry <m>I/6</m>. Any path drops
+<m>\tfrac{I}{3}R+\tfrac{I}{6}R+\tfrac{I}{3}R=\tfrac{5IR}{6}</m>, so <m>R_{AG}=5R/6</m>. <b>Check:</b> currents
+sum to <m>I</m> at every node class ✓.</p>
+<p><b>(b) [5]</b> Face diagonal A–C: the reflection in that diagonal makes <m>V_B=V_D\equiv V_1</m> and
+<m>V_{B'}=V_{D'}\equiv V_2</m>; earth C, put 1 V on A. The four node equations
+<m>3V_1-V_2=1</m>, <m>3V_Z-2V_2=1</m>, <m>3V_2=V_1+V_Z+V_Y</m>, <m>3V_Y=2V_2</m> give
+<m>V_1=V_2=\tfrac12, V_Z=\tfrac23, V_Y=\tfrac13</m>; input current
+<m>=(1-V_1)+(1-V_1)+(1-V_Z)=\tfrac43</m> ⇒ <m>R_{AC}=3R/4</m>. <b>Check:</b> the current into C,
+<m>V_1+V_1+V_Y=\tfrac43</m> ✓.</p>
+<p><b>(c) [5]</b> Short edge A–B and the antipodal edge G–H. Merge A,B into node P and G,H into node Q: each of
+C, D, Z, F now hangs from <em>both</em> P and Q through unit edges, with two bridges C–D and Z–F between them.
+The swap C↔D maps the network on itself with P, Q fixed, so <m>V_C=V_D</m> — the C–D bridge carries no current and
+may be deleted; likewise Z–F. Four independent 2R paths in parallel: <m>R_{AG}=2R/4=R/2</m>. <b>Check:</b> shorting
+edges can only lower resistance; <m>5R/6\to R/2</m> ✓, and the two deleted bridges carried nothing by the
+balance-type argument of ch 4 ✓.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q34</span><b>Transmission and fuses — answers</b><span class="diff">[15] · §7.1, §7.2</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [3]</b> 200 V: <m>I=500</m> A, loss <m>=2.5</m> MW — <b>25× the delivered power</b>, impossible to run.
+20 kV: <m>I=5</m> A, loss 250 W = 0.25%.</p>
+<p><b>(b) [4]</b> <m>P_{loss}=P^{2}R/V^{2}</m>: quadratic in the step-down ratio. Loss = 1% of 100 kW = 1 kW:
+<m>V^{2}=P^{2}R/1000=10^{11}/10^{3}=10^{8}\Rightarrow V=10</m> kV. <b>Check:</b> 20 kV gave 0.25%; halving the
+voltage quadruples the fraction ✓.</p>
+<p><b>(c) [4]</b> Balance <m>I^{2}\rho L/\pi r^{2}=h\,2\pi rL\,\Delta T</m> ⇒
+<m>I=r^{3/2}\sqrt{2\pi^{2}h\Delta T/\rho}</m>; <m>L</m> cancels, radius enters as 3/2. Ratio for 0.5/0.2 mm:
+<m>(2.5)^{3/2}=3.95</m>.</p>
+<p><b>(d) [4]</b> 400 kW at 20 kV: <m>I=20</m> A, loss 4 kW = <b>1%</b> (was 0.25%). At fixed <m>V</m> and line,
+the loss <em>fraction</em> grows linearly with demand: <m>P_{loss}/P=PR/V^{2}\propto P</m>. Growth, not gadgetry,
+is what forces utilities to step up voltage.</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q35</span><b>Two sources, four theorems — answers</b><span class="diff">[15] · §5.1–§5.4</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [4]</b> 6 V killed (wire, 1 <m>\Omega</m> kept): <m>I_a=\dfrac{10}{2+4/5}\times\tfrac15=0.714</m> A.
+10 V killed: <m>I_b=\dfrac{6}{1+8/6}\times\tfrac26=0.857</m> A. Sum <m>1.571</m> A. Nodal check:
+<m>(10-V)/2+(6-V)/1=V/4\Rightarrow V=44/7=6.286</m> V, <m>I=1.571</m> A ✓.</p>
+<p><b>(b) [4]</b> Open circuit: <m>(10-V)/2+(6-V)/1=0\Rightarrow V_{th}=22/3=7.333</m> V; killed sources:
+<m>R_{th}=2\parallel1=0.667\ \Omega</m>; <m>I=7.333/(4.667)=1.571</m> A ✓ — third route, same number.</p>
+<p><b>(c) [3]</b> <m>I_{10V}=(10-6.286)/2=1.857</m> A out; <m>I_{6V}=(6-6.286)/1=-0.286</m> A — the 6 V battery
+<b>is being charged</b> by the 10 V one even while both serve the load.</p>
+<p><b>(d) [4]</b> <m>R_L=2/3\ \Omega</m>: <m>P_{max}=V_{th}^{2}/4R_{th}=53.78/2.667=20.2</m> W, efficiency 50%.
+Branch currents at this load: <m>V_L=3.667</m> V, <m>I_L=5.5</m> A, <m>I_{10V}=(10-3.667)/2=3.167</m> A ⇒ chemical
+power 31.67 W, of which <m>20.2/31.67=63.7\%</m> reaches the load. <b>Check:</b> full ledger
+<m>31.67+14.0=20.06+5.44+20.17=45.67</m> W ✓ (the 6 V battery now discharges: <m>(6-3.667)/1=2.33</m> A out).</p>
+</div></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q36</span><b>The measurement design — answers</b><span class="diff">[18] · §6.1–§6.4, §1.3, §7.5</span></div>
+<div class="bd"><div class="bd">
+<p><b>(a) [4]</b> Naive (voltmeter across <m>R</m> + ammeter, i.e. ammeter inside): the meter reads
+<m>I(R+R_A)</m>; at 4.0 A that is 2.4 V on 0.1 <m>\Omega</m> — inferred <m>R=0.60\ \Omega</m>, a <b>+500%</b>
+error. Ammeter outside (voltmeter on <m>R</m> alone): voltmeter steals <m>0.4/10^{4}=40\ \mu</m>A against 4 A —
+0.001%; inferred <m>R=0.4/4=0.100\ \Omega</m>. Winner: ammeter outside, always, for small resistances.</p>
+<p><b>(b) [4]</b> One percent of 0.1 <m>\Omega</m> is 1 m<m>\Omega</m>; the leads alone are 2×10 m<m>\Omega</m>
+and the ammeter 500 m<m>\Omega</m>. No rearrangement of <em>two</em> terminals can separate specimen from leads
+because the same pair of wires must both carry current and define the voltage — the topology itself is the error.
+Four terminals: current leads at the outer pair (their drops now merely load the battery), voltage leads on the
+specimen body feeding the 10 k<m>\Omega</m> meter (40 µA ⇒ <m>0.4\ \mu</m>V in the sense leads — 0.0004%).
+The resistance that drops out is everything outside the voltage taps; what remains is the metal you meant.</p>
+<p><b>(c) [4]</b> EMF <m>=0.01\ \text{V/mm}\times900\ \text{mm}=9.0</m> V. Consistency: the loop is
+<m>9/(0.1+0.5+r)</m>; the meter reads 4.0 A ⇒ <m>r=2.25-0.6=1.65\ \Omega</m> (order-1, as advertised ✓).
+Loaded terminal voltage <m>=9-4\times1.65=2.4</m> V ⇒ new null at <m>240</m> mm. <b>Check:</b>
+<m>r=R(l_0-l)/l</m> with <m>R=0.6</m>: <m>0.6\times660/240=1.65\ \Omega</m> ✓.</p>
+<p><b>(d) [3]</b> <m>v_d=I/neA=4/(8.5\times10^{28}\times10^{-6}\times1.6\times10^{-19})=2.9\times10^{-4}</m> m/s;
+one lead traversal takes <m>10/2.9\times10^{-4}=3.4\times10^{4}</m> s ≈ 9.5 h. What delivered the energy was the
+field, established throughout the circuit within <m>L/c\sim10^{-8}</m> s of contact — the electrons at <m>R</m>
+never waited for colleagues from the battery.</p>
+<p><b>(e) [3]</b> Stored energy <m>\tfrac12LI^{2}=\tfrac12\times10^{-5}\times4=20\ \mu</m>J; trapped flux
+<m>\Phi=LI=20\ \mu</m>Wb. Persistence needs nothing from this paper's toolkit but the two conservation laws:
+KCL (the current has nowhere to go) and <m>\rho=0</m> (nothing damps it); the decay time <m>L/R</m> is unbounded
+for <m>R=0</m>. Flux freezing says the <em>current</em> is whatever <m>\Phi/L</m> demands — the ledger, not a
+battery, keeps the books.</p>
+</div></div></div>
+
+<h2>Answer key</h2>
+<table class="tb">
+<thead><tr><th colspan="4">A</th><th colspan="2">B</th><th colspan="4">C</th></tr></thead>
+<tbody><tr>
+<td>1 B</td><td>2 B</td><td>3 B</td><td>4 C</td><td>5 B</td><td>6 B</td>
+<td>7 B</td><td>8 C</td><td>9 B</td><td>10 A</td><td>11 B</td><td>12 C</td>
+</tr><tr>
+<td>13 AD</td><td>14 BD</td><td>15 AC</td><td>16 ABD</td><td>17 AC</td><td>18 AD</td>
+<td>19 0.25 mm/s</td><td>20 716 Ω</td><td>21 12.9 mA</td><td>22 0.100 Ω</td>
+<td>23 40.0 mA</td><td>24 3.20 kW</td><td>25 1.2 V</td><td>26 33 V</td>
+</tr></tbody></table>
+
+<div class="box thm"><p class="bt">After marking: the four things to fix first</p>
+<ol>
+<li>A wrong direction or missing charging battery (Q5, Q16, Q27) ⇒ re-read §3.2 and redo Q27(a) without notes.</li>
+<li>A Thevenin resistance slip (Q21, Q23, Q28, Q35) ⇒ recompute <m>R_{th}</m> by two different routes; they must
+agree before you trust any downstream number.</li>
+<li>A missing limit or check in any long answer (Q29–Q36) ⇒ rewrite with the check sentence first; it is the
+cheapest mark in the paper.</li>
+<li>Any part of Q33 or Q36 blank ⇒ chapters 4 and 6 need one more pass; those two parts are the difference
+between a rank and a compliment.</li>
+</ol></div>
+
+<p class="skip">Last: <a href="11-formula-sheet.html">11 · The formula sheet</a> · back to
+<a href="09-olympiad-paper.html">the paper</a></p>
+
+</main>
+</div>
+</body>
+</html>

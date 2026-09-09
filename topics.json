@@ -87,6 +87,59 @@
         "IPhO"
       ],
       "note": "Suggestion only — same claiming procedure as above."
+    },
+    {
+      "slug": "current-electricity",
+      "title": "Current Electricity — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "current-electricity/index.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "figures": 25,
+      "questions": 143,
+      "solutions": 71,
+      "math_spans": 1612,
+      "bytes_html": 277031,
+      "pages": [
+        "index.html",
+        "01-current-and-drift.html",
+        "02-resistivity-and-materials.html",
+        "03-emf-and-cells.html",
+        "04-kirchhoff-and-bridges.html",
+        "05-network-theorems.html",
+        "06-instruments-and-measurement.html",
+        "07-advanced-topics.html",
+        "08-playbook.html",
+        "09-olympiad-paper.html",
+        "10-olympiad-solutions.html",
+        "11-formula-sheet.html"
+      ],
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 245,
+        "minutes": 180,
+        "file": "09-olympiad-paper.html"
+      },
+      "deliberately_not_covered": [
+        "RC/RL transients and capacitor charging (owned by capacitors ch 6)",
+        "AC circuits, impedance, three-phase power (strictly DC steady state here)",
+        "magnetic effects of current (belongs to the magnetism note-set)",
+        "semiconductor device physics beyond the diode curve and thermistor law",
+        "superconductivity beyond the DC ledger: no BCS, no Josephson junctions",
+        "circuit simulation: no SPICE, all results closed-form and hand-checkable"
+      ],
+      "next_candidates": [
+        "12 · AC steady state: phasors, impedance, power factor, resonance (the natural sequel)",
+        "worked-problem chapter: 40 JEE-Advanced-only numericals with timed hints",
+        "magnetic effects of current: the field twin of this set, sharing its audit discipline"
+      ]
     }
   ]
 }

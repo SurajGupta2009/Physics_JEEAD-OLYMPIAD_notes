@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 &#183; The playbook — Current Electricity, from basics to Olympiad</title>
+<meta name="description" content="The solving manual: a triage table from problem type to method, the twelve moves, every trap in the course with its one-line reply, the numbers to own, and a 15-question timed drill with reasons.">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · ch 8</p></nav>
+<main>
+
+<p class="meta" id="top">
+<span class="badges"><span class="b j">timed drill inside</span><span class="b o">triage + traps</span><span class="b n">≈ 35 min read · 15-question drill</span></span>
+</p>
+<h1>8 · The playbook: triage, moves, traps, numbers</h1>
+<p class="lead">Everything from chapters 1–7, compressed into the form you can carry into a timed room: how to
+<i>classify</i> a problem in twenty seconds, the twelve moves that solve ninety percent of them, the traps with their
+one-line replies, the numbers worth memorising, and a 15-question drill to run against the clock. This chapter is a
+tool, not a read — mark it up.</p>
+
+<h2>8.1 Triage: what kind of problem is this?</h2>
+
+<table class="tb">
+<thead><tr><th>the problem says…</th><th>you are in…</th><th>the move</th></tr></thead>
+<tbody>
+<tr><td>"drift velocity", "number of electrons per second"</td><td>ch 1 ledger</td><td><m>I=neAv_d</m>; count = <m>I/e</m>; sanity: <m>v_d\sim</m> sub-mm/s</td></tr>
+<tr><td>"stretched", "reshaped", cone, shell, "material between spheres"</td><td>ch 2 geometry</td><td><m>R=\int\rho\,dl/A</m>; name the equipotentials first; stretch ⇒ <m>R\propto l^{2}</m></td></tr>
+<tr><td>"temperature rises/falls", "thermistor", "filament"</td><td>ch 2 materials</td><td>which factor of <m>\sigma=ne^{2}\tau/m</m> moved? <m>R_T=R_0(1+\alpha\Delta T)</m> locally</td></tr>
+<tr><td>"terminal voltage", "charging", "internal resistance", "maximum current from n cells"</td><td>ch 3 cell model</td><td><m>V=\mathcal E\mp Ir</m>; sign by charge/discharge; grouping optimum <m>mR=nr</m></td></tr>
+<tr><td>"find all currents", two loops, three loops</td><td>ch 4 algorithm</td><td>guess arrows, KCL+KVL, solve, <b>audit powers</b></td></tr>
+<tr><td>"cube", "symmetric network", "ladder", "bridge is balanced"</td><td>ch 4 symmetry</td><td>find equal potentials; delete dead branches; <m>R_\infty</m> fixed point</td></tr>
+<tr><td>"galvanometer current", "unbalanced bridge", "what the meter reads"</td><td>ch 5 Thevenin</td><td><m>V_{th},R_{th}</m> at the terminals, then one divider; short-circuit current <m>=V_{th}/R_{th}</m></td></tr>
+<tr><td>"maximum power", "matched load", "efficiency"</td><td>ch 3/5</td><td>reduce to Thevenin; <m>R_L=R_{th}</m>, <m>\eta=50\%</m> — then ask if matching is even wanted</td></tr>
+<tr><td>"ammeter", "voltmeter", "shunt", "multiplier", "loading"</td><td>ch 6</td><td>one divider with the meter's resistance inside it; <m>\Omega</m>/V = sensitivity</td></tr>
+<tr><td>"potentiometer", "null", "balance length"</td><td>ch 6</td><td>no current flows at balance: EMF from length ratios; <m>r=R(l_0-l)/l</m></td></tr>
+<tr><td>"fuse", "transmission line", "thermocouple", "persistence of current"</td><td>ch 7 scaling</td><td>name the two flows (heating/cooling, electrical/thermal), equate, scale</td></tr>
+</tbody></table>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 210" role="img" aria-label="Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method">
+  <rect x="20" y="70" width="150" height="60" rx="10" class="w ln"/>
+  <text x="95" y="95" class="lbl sm" text-anchor="middle">any circuit problem</text>
+  <text x="95" y="113" class="lbl sm" text-anchor="middle">20-second read</text>
+  <path d="M170,100 H220" class="ln" marker-end="url(#ah)"/>
+  <rect x="220" y="20" width="180" height="44" rx="10" class="w ln"/>
+  <text x="310" y="47" class="lbl sm" text-anchor="middle">nonlinear element? → piecewise</text>
+  <rect x="220" y="78" width="180" height="44" rx="10" class="w ln"/>
+  <text x="310" y="105" class="lbl sm" text-anchor="middle">one source varied? → Thevenin</text>
+  <rect x="220" y="136" width="180" height="44" rx="10" class="w ln"/>
+  <text x="310" y="163" class="lbl sm" text-anchor="middle">pure geometry? → slice and integrate</text>
+  <path d="M400,42 H470 M400,100 H470 M400,158 H470" class="ln" marker-end="url(#ah)"/>
+  <rect x="470" y="70" width="250" height="60" rx="10" class="w ln"/>
+  <text x="595" y="95" class="lbl sm" text-anchor="middle">solve, then close the loop:</text>
+  <text x="595" y="115" class="lbl sm" text-anchor="middle">audit the power ledger, check a limit</text>
+</svg></div>
+<figcaption><b>Fig. 8.1 — The triage flow.</b> Classification is the solution's first third; the audit line is its
+last third. The middle is arithmetic.</figcaption></figure>
+
+<h2>8.2 The twelve moves</h2>
+<ol class="steps">
+<li><b>Label every current with a guessed direction</b> before writing a single equation (ch 4).</li>
+<li><b>Reduce series/parallel only between named nodes</b> — "drawn side by side" is not parallel.</li>
+<li><b>Audit powers</b> as the closing bracket of every network solve: <m>\sum\mathcal EI=\sum I^{2}R</m>.</li>
+<li><b>Name equal potentials by symmetry</b>; delete or merge them before algebra (cube, balanced bridge).</li>
+<li><b>Thevenin at the terminals of the thing asked about</b> — meters, galvanometers, "what if the load is…".</li>
+<li><b>Kill sources correctly</b>: voltage → wire (keep <m>r</m>), current → break.</li>
+<li><b>Check limits</b>: <m>R\to0</m>, <m>R\to\infty</m>, <m>\kappa</m>-style parameters → their trivial cases.</li>
+<li><b>Convert the meter question into a divider question</b> — every instrument is a resistance wearing a badge.</li>
+<li><b>Null beats deflection</b>: if the problem offers a balance condition, the detector's resistance is irrelevant.</li>
+<li><b>Scale before computing</b>: write <m>I\propto r^{3/2}</m>-type laws first; exponents are the marks.</li>
+<li><b>For cell groupings</b>, compute all three groupings if unsure — the arithmetic is 30 seconds total.</li>
+<li><b>Estimate the answer's size</b> before the exact calculation; trust nothing that violates the estimate.</li>
+</ol>
+
+<h2>8.3 Traps — the wrong answer, and the one-line reply</h2>
+<div class="box trap"><p class="bt">Current and drift (ch 1)</p>
+<ul style="margin:0">
+<li>"Electrons travel near light speed." Reply: <m>v_d=I/neA\sim0.1</m> mm/s; the <em>field</em> travels at <m>\sim c</m>.</li>
+<li>"Current is a vector; wires at an angle add like vectors." Reply: current is a flux (scalar); only <m>\vec j</m> is a vector.</li>
+<li>"Electrons accelerate continuously along a wire." Reply: <m>\tau\sim10^{-14}</m> s; drift is a terminal velocity.</li>
+<li>"Thicker wire, more electrons per second." Reply: count = <m>I/e</m>; only the speed changes.</li>
+</ul></div>
+<div class="box trap"><p class="bt">Resistance and materials (ch 2)</p>
+<ul style="margin:0">
+<li>"Stretch to <m>k\,l</m> ⇒ <m>R\to kR</m>." Reply: volume fixed ⇒ <m>R\to k^{2}R</m>.</li>
+<li>"Average the cross-section for a taper." Reply: reciprocals add; frustum gives <m>\rho l/\pi ab</m> (geometric mean).</li>
+<li>"All conductors heat up in the same direction." Reply: metals via <m>\tau\downarrow</m>, semiconductors via <m>n\uparrow</m> — opposite signs.</li>
+<li>"A diode is a resistor of <m>V/I</m>." Reply: that ratio is an operating point, not a property; dynamic vs static.</li>
+</ul></div>
+<div class="box trap"><p class="bt">Cells and networks (ch 3–5)</p>
+<ul style="margin:0">
+<li>"A 12 V battery supplies 12 V always." Reply: terminal voltage is <m>\mathcal E-Ir</m>, and <m>\mathcal E+Ir</m> on charge.</li>
+<li>"Parallel cells halve the EMF." Reply: EMF never halves; <m>r</m> does.</li>
+<li>"Maximum power ⇒ maximum efficiency." Reply: at <m>R=r</m>, <m>\eta=50\%</m> exactly.</li>
+<li>"Superpose the powers." Reply: superpose currents; square afterwards.</li>
+<li>"Killed voltage source = removed." Reply: killed = wire, <m>r</m> stays; killed current source = break.</li>
+<li>"Reciprocity preserves open-circuit voltages." Reply: it preserves <m>V/I</m> ratios (short-circuit currents), not open voltages.</li>
+</ul></div>
+<div class="box trap"><p class="bt">Instruments and advanced (ch 6–7)</p>
+<ul style="margin:0">
+<li>"The voltmeter reads the true voltage." Reply: the meter is a load; check <m>R_V</m> vs the divider impedance.</li>
+<li>"An ideal ammeter changes nothing." Reply: 0 <m>\Omega</m> is fine in parallel-rich circuits but a 0.5 <m>\Omega</m> real one wrecks low-resistance work — four terminals.</li>
+<li>"Neutral and inversion temperatures are the same." Reply: <m>T_n=a/2b</m> (max EMF), <m>T_i=2T_n</m> (zero EMF).</li>
+<li>"A fuse twice as thick carries twice the current." Reply: <m>2^{3/2}=2.83</m> times.</li>
+<li>"A perfect conductor is a superconductor." Reply: Meissner effect distinguishes them; a perfect conductor traps flux, a superconductor expels it.</li>
+</ul></div>
+
+<h2>8.4 Numbers to own (memorise, with units)</h2>
+<table class="tb">
+<tbody>
+<tr><td><m>e=1.6\times10^{-19}</m> C; 1 A = <m>6.25\times10^{18}</m> electrons/s</td><td>Cu: <m>\rho=1.7\times10^{-8}\ \Omega</m>m, <m>n=8.5\times10^{28}\ \text{m}^{-3}</m>, <m>\alpha=3.9\times10^{-3}\ \text{K}^{-1}</m></td></tr>
+<tr><td>drift speed in house wiring <m>\sim0.1</m> mm/s; <m>\tau\sim10^{-14}</m> s; thermal speed <m>\sim10^{6}</m> m/s</td><td>Al: <m>\rho=2.7\times10^{-8}</m>, <m>n=1.8\times10^{29}</m>; manganin <m>\alpha\approx2\times10^{-5}\ \text{K}^{-1}</m></td></tr>
+<tr><td>cube of <m>R</m>: <m>7R/12, 3R/4, 5R/6</m>; ladder <m>R_s=R_p=R\Rightarrow\varphi R=1.618R</m></td><td>air breakdown <m>\approx3</m> kV/mm; Si <m>E_g=1.1</m> eV, <m>n</m> doubles per <m>\sim</m>10 K</td></tr>
+<tr><td>matched load: <m>P_{\max}=V_{th}^{2}/4R_{th}</m>, <m>\eta=50\%</m></td><td>thermocouple Cu–Fe: <m>T_n\approx128\ ^\circ</m>C, <m>T_i\approx256\ ^\circ</m>C, <m>\mathcal E_{\max}</m> few mV</td></tr>
+</tbody></table>
+
+<h2>8.5 The timed drill — 15 questions, 30 minutes</h2>
+<p>Answers below each question are collapsible; do ten first, then mark. Every answer includes the <b>reason</b>
+worth carrying, not just the number.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Drift speed of electrons in a copper wire of cross-section 0.5 mm² carrying 2 A (<m>n=8.5\times10^{28}</m>).</b><span class="diff">90 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>v_d=I/neA=2/(8.5\times10^{28}\times0.5\times10^{-6}\times1.6\times10^{-19})=0.29</m> mm/s.
+<b>Reason to keep:</b> sub-mm/s always; if your answer exceeds 1 mm/s in copper you slipped a factor of 10.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>A wire is stretched to 3× its length. New resistance?</b><span class="diff">30 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>9R</m> — <m>R\propto l^{2}</m> at fixed volume. <b>Reason:</b> both length and area move, in opposite
+directions in the formula, quadratically overall.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>A 6 V battery of <m>r=0.5\ \Omega</m> drives <m>R=5.5\ \Omega</m>. Terminal voltage?</b><span class="diff">45 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>I=1</m> A, <m>V=6-0.5=5.5</m> V. <b>Reason:</b> with <m>R=r\times11</m>, the sag is <m>r/(R+r)=8.3\%</m>
+of EMF — always sanity-check the sag against the <m>r:R</m> ratio.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>A Wheatstone bridge balances with arms 20, 30, 40, and <m>x</m>. Find <m>x</m>.</b><span class="diff">30 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>x=60\ \Omega</m> — products equal: <m>20x=30\times40</m>. <b>Reason:</b> balance is a products condition,
+immune to which diagonal holds the battery (reciprocity).</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Twelve 10 <m>\Omega</m> resistors form a cube. Resistance across a body diagonal?</b><span class="diff">60 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>5R/6=8.33\ \Omega</m> — currents <m>I/3, I/6, I/3</m> through the three classes. <b>Reason:</b> symmetry
+plane first, arithmetic second; never solve the cube by loop equations.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>A 500 <m>\Omega</m>, 200 µA galvanometer becomes a 1 mA ammeter. Shunt?</b><span class="diff">60 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>S=GI_g/(I-I_g)=500\times0.2/0.8=125\ \Omega</m>. <b>Reason:</b> same voltage: coil and shunt currents in
+inverse ratio to resistances; <m>n=5\Rightarrow S=G/4</m>.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>A 10 V battery of <m>r=1\ \Omega</m>: maximum power deliverable?</b><span class="diff">45 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>V^{2}/4r=25</m> W at <m>R=1\ \Omega</m>. <b>Reason:</b> matched load, half the voltage across each;
+efficiency there is 50% — never quote one without the other.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>A thermocouple follows <m>\mathcal E=30T-0.05T^{2}</m> (µV, °C). Neutral temperature and peak EMF?</b><span class="diff">60 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>T_n=a/2b=300\ ^\circ</m>C; <m>\mathcal E_{max}=30\times300-0.05\times9\times10^{4}=4.5</m> mV.
+<b>Reason:</b> vertex of the parabola; inversion sits at <m>600\ ^\circ</m>C, where <m>\mathcal E=0</m>.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>Infinite ladder: <m>R_s=3\ \Omega</m> series arms, <m>R_p=1\ \Omega</m> shunts. Input resistance?</b><span class="diff">90 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>R=\big(3+\sqrt{9+12}\big)/2=3.79\ \Omega</m>. <b>Reason:</b> fixed point <m>R=R_s+R_pR/(R_p+R)</m>;
+take the positive root; verify by one iteration (<m>3+3.79/4.79=3.79</m> ✓).</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>A 1000 <m>\Omega</m>/V voltmeter on its 50 V range reads a 100 V source divided by two 100 k<m>\Omega</m> resistors. Reading?</b><span class="diff">90 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p>Meter resistance 50 k<m>\Omega</m>; lower arm becomes 100k∥50k=33.3 k<m>\Omega</m>;
+reading <m>=100\times33.3/133.3=25</m> V (true 50). <b>Reason:</b> divider impedance (100 k) vs meter (50 k) —
+the meter is not a passenger, it is a load.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>Potentiometer: null at 150 cm; with <m>R=2\ \Omega</m> across the cell, null at 100 cm. Internal resistance?</b><span class="diff">60 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>r=R(l_0-l)/l=2\times50/100=1.0\ \Omega</m>. <b>Reason:</b> at the second null the cell is delivering
+current <m>\mathcal E/(R+r)</m>; the wire reads its terminal voltage — the ratio does the rest.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>40 W and 100 W lamps (rated 220 V) in series across 220 V. Which is brighter, and total power?</b><span class="diff">90 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>R_{40}=1210\ \Omega</m>, <m>R_{100}=484\ \Omega</m>; <m>I=220/1694=0.13</m> A; powers 20.4 W and
+8.2 W — the <b>40 W lamp is brighter</b>, total 28.6 W. <b>Reason:</b> series favours the larger resistance;
+"bigger lamp" is a parallel intuition.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>In mains (50 Hz) the drift oscillates. Amplitude of the electron's excursion in the ch 1 wire (1 A, 1 mm²)?</b><span class="diff">90 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>v_{d,0}=I/neA=7.35\times10^{-5}</m> m/s; excursion <m>=v_{d,0}/\omega=7.35\times10^{-5}/314=0.23\ \mu</m>m.
+<b>Reason:</b> at 5 A it was 1.2 µm; the excursion scales with current — sub-micrometre at household currents, always.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>A fuse wire's radius is halved. Its rating becomes…?</b><span class="diff">45 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>(1/2)^{3/2}=0.354</m> of the original — about a third. <b>Reason:</b> heating per length grows as
+<m>1/r^{2}</m>, cooling surface as <m>r</m>; the exponent is the quotient's square root.</p>
+</div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>The bridge of ch 5 (arms 10, 20, 30, 40; 10 V): a student swaps battery and galvanometer diagonals and re-measures the short-circuit current. What does she get?</b><span class="diff">60 s</span></div>
+<div class="bd"><details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>V_{th}/R_{th}=40.0</m> mA — identical (reciprocity), though the open-circuit voltage changes to 0.833 V.
+<b>Reason:</b> the invariant is the ratio; the open voltage was never promised to survive the swap.</p>
+</div></details></div></div>
+
+<p class="skip">Next: <a href="09-olympiad-paper.html"><b>Chapter 9 · The paper →</b></a> — 36 questions, 245 marks, three hours. It is time.</p>
+
+</main>
+</div>
+</body>
+</html>
