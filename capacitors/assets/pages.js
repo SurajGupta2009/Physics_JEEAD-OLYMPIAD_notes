@@ -4,18 +4,7 @@ window.NOTES_SITE = {
   brand: "Capacitors",
   ls: "notes:capacitors:",
   pages: [
-    ["index.html", "Home · overview"],
-    ["01-foundations.html", "1 · Charge, conductors & Gauss"],
-    ["02-capacitance.html", "2 · Capacitance & every geometry"],
-    ["03-energy-and-force.html", "3 · Energy, force & pressure"],
-    ["04-combinations.html", "4 · Combinations & networks"],
-    ["05-dielectrics.html", "5 · Dielectrics"],
-    ["06-networks-and-transients.html", "6 · Networks and transients"],
-    ["07-advanced-topics.html", "7 · Advanced topics"],
-    ["08-playbook.html", "8 · The playbook"],
-    ["09-olympiad-paper.html", "9 · The Olympiad paper"],
-    ["10-olympiad-solutions.html", "10 · Solutions to the paper"],
-    ["11-formula-sheet.html", "11 · Formula sheet"]
+    ["final.html", "Capacitors"]
   ]
 };
 window.NOTES_PAGES = window.NOTES_SITE.pages;
