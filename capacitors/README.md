@@ -1,11 +1,11 @@
 # Capacitors — from basics to Olympiad
 
 A self-contained HTML course on **capacitance, dielectrics and capacitive networks**, written for
-**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. Every page works
+**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `final.html`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open capacitors/index.html          ← start here (course map, how to study, the IOQM/NSEP note)
+open capacitors/final.html          ← start here (course map, how to study, the IOQM/NSEP note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):
@@ -16,20 +16,9 @@ cd capacitors && python3 -m http.server 8000
 
 ## What is in the folder
 
-| file | what it covers | figures | questions |
-| --- | --- | --- | --- |
-| `index.html` | course map, how to use the notes, syllabus mapping, the IOQM-vs-INPhO note | 1 | — |
-| `01-foundations.html` | charge, Coulomb, field, potential, work, superposition, Gauss's law, conductors vs insulators, the method of images (motivated, not just stated) | 6 | 10 + drill |
-| `02-capacitance.html` | why `C` is constant, parallel plates, coaxial and spherical geometry, isolated conductors, slab insertion, fringing and the guard ring, interleaved plates | 2 | 10 + drill |
-| `03-energy-and-force.html` | `C = 2U/V²`, field-energy density, force from `½V²dC/dx`, the two sign conventions, pull-in, the two-capacitor paradox, self-energy | 2 | 10 + drill |
-| `04-combinations.html` | series/parallel (proved, with their failure modes), charge sharing, bridges, symmetry folding, Δ–Y, the cube, infinite ladders, three-terminal thinking | 3 | 8 + drill |
-| `05-dielectrics.html` | polarisation, bound charge, `D`, slab problems, Clausius–Mossotti, local field, voids and stress, losses and heating, Debye relaxation, ferroelectrics, piezo/pyro, breakdown and Paschen | 8 | 10 + drill |
-| `06-networks-and-transients.html` | DC steady state as an algorithm, `τ = R_th C` proved, charge through a branch, the exact one-half loss, multi-capacitor eigen-time-constants, compensated dividers, relaxation oscillators, leakage and Warburg diffusion, sinusoidal steady state | 4 | 10 + drill |
-| `07-advanced-topics.html` | capacitance/inductance matrices and node elimination, Green's reciprocity and the Ramo theorem, monotonicity theorems, images as a method, the spheroid family and depolarising factors, conformal mapping and corner singularities, MEMS pull-in as a fold, the Rayleigh limit and the Taylor cone | 5 | 7 + drill |
-| `08-playbook.html` | triage flowchart, the twelve moves, 25 traps with the one-line reply, numbers to own, a 15-question timed drill with reasons | 1 | 15 |
-| `09-olympiad-paper.html` | **the paper: 36 questions** in four sections (12 single-correct, 6 multiple-correct, 8 numerical, 10 long), with a coverage map and marking scheme | — | 36 |
-| `10-olympiad-solutions.html` | complete solutions to all 36, marks distributed, with the check that verifies each answer | — | 36 |
-| `11-formula-sheet.html` | the whole course on three printable A4 pages (2-column, `Ctrl-P` → PDF) | — | — |
+`final.html` is the only HTML file in this folder. It contains the overview, all theory sections,
+the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
+contains only the local stylesheet and scripts needed to render it offline.
 
 ## The teaching contract
 

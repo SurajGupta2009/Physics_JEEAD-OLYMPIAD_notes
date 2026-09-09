@@ -1,11 +1,11 @@
 # Current Electricity — from basics to Olympiad
 
 A self-contained HTML course on **current, resistance, cells, networks, instruments and real-wire physics**,
-written for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. Every page works
+written for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `final.html`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open current-electricity/index.html   ← start here (course map, how to study, the exam note)
+open current-electricity/final.html   ← start here (course map, how to study, the exam note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):
@@ -16,20 +16,9 @@ cd current-electricity && python3 -m http.server 8000
 
 ## What is in the folder
 
-| file | covers | status |
-|---|---|---|
-| `index.html` | course map, how to use the notes, syllabus mapping | done |
-| `01-current-and-drift.html` | current as flux, continuity, drift velocity, relaxation time, microscopic Ohm's law, signal vs carrier speed | done |
-| `02-resistivity-and-materials.html` | resistivity, the slice integral, spherical shell, temperature coefficients, metals vs semiconductors, non-ohmic devices | done |
-| `03-emf-and-cells.html` | EMF as work per coulomb, internal resistance, terminal voltage in charge/discharge, grouping, maximum power, the joule ledger | done |
-| `04-kirchhoff-and-bridges.html` | KCL/KVL with sign discipline, dividers, symmetry (the cube), balanced and unbalanced bridges, delta–star, infinite ladders | done |
-| `05-network-theorems.html` | superposition, Thevenin, Norton, source transformation, maximum power transfer, reciprocity, compensation — all verified on one bridge | done |
-| `06-instruments-and-measurement.html` | galvanometer conversions, loading error, meter bridge with end-error swap, potentiometer, four-terminal measurement | done |
-| `07-advanced-topics.html` | fuse scaling `I∝r³ᐟ²`, transmission efficiency, thermocouples (neutral/inversion), thermistor load lines, superconducting persistence, piecewise diode discipline | done |
-| `08-playbook.html` | triage table, the twelve moves, 20 traps with one-line replies, numbers to own, a 15-question timed drill | done |
-| `09-olympiad-paper.html` | **the paper: 36 questions** in four sections (12 single-correct, 6 multiple-correct, 8 numerical, 10 long), coverage map and marking scheme | done |
-| `10-olympiad-solutions.html` | complete solutions to all 36, marks distributed, with the check that verifies each answer | done |
-| `11-formula-sheet.html` | the whole course on three printable A4 pages (2-column, `Ctrl-P` → PDF) | done |
+`final.html` is the only HTML file in this folder. It contains the overview, all theory sections,
+the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
+contains only the local stylesheet and scripts needed to render it offline.
 
 ## The teaching contract
 

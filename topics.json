@@ -23,24 +23,13 @@
         "IOPT"
       ],
       "pages": [
-        "index.html",
-        "01-foundations.html",
-        "02-capacitance.html",
-        "03-energy-and-force.html",
-        "04-combinations.html",
-        "05-dielectrics.html",
-        "06-networks-and-transients.html",
-        "07-advanced-topics.html",
-        "08-playbook.html",
-        "09-olympiad-paper.html",
-        "10-olympiad-solutions.html",
-        "11-formula-sheet.html"
+        "final.html"
       ],
       "figures": 32,
       "questions": 135,
       "solutions": 64,
-      "math_spans": 3442,
-      "bytes_html": 553282,
+      "math_spans": 3443,
+      "bytes_html": 599685,
       "paper": {
         "questions": 36,
         "sections": 4,
@@ -104,21 +93,10 @@
       "figures": 25,
       "questions": 143,
       "solutions": 71,
-      "math_spans": 1612,
-      "bytes_html": 277031,
+      "math_spans": 1613,
+      "bytes_html": 323812,
       "pages": [
-        "index.html",
-        "01-current-and-drift.html",
-        "02-resistivity-and-materials.html",
-        "03-emf-and-cells.html",
-        "04-kirchhoff-and-bridges.html",
-        "05-network-theorems.html",
-        "06-instruments-and-measurement.html",
-        "07-advanced-topics.html",
-        "08-playbook.html",
-        "09-olympiad-paper.html",
-        "10-olympiad-solutions.html",
-        "11-formula-sheet.html"
+        "final.html"
       ],
       "paper": {
         "questions": 36,

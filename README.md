@@ -4,7 +4,7 @@
 
 ### Physics notes for JEE Advanced and the Olympiad track
 
-Self-contained HTML note-sets. No CDN, no MathJax, no build step, no network — every page renders
+Self-contained HTML note-sets. Each topic has one consolidated final HTML file. No CDN, no MathJax, no build step, no network — every file renders
 from `file://`, prints to a clean PDF, and is validated by one command.
 
 </div>
@@ -13,8 +13,8 @@ from `file://`, prints to a clean PDF, and is validated by one command.
 
 | topic | chapters | figures | questions | paper | status |
 |---|---|---|---|---|---|
-| **[capacitors](capacitors/index.html)** | 11 + front page | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
-| **[current-electricity](current-electricity/index.html)** | 11 + front page | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
+| **[capacitors](capacitors/index.html)** | 1 final HTML | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
+| **[current-electricity](current-electricity/index.html)** | 1 final HTML | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
 | thermodynamics | — | — | — | — | planned — claim it |
 | rotational-mechanics | — | — | — | — | planned — claim it |
 
@@ -40,8 +40,7 @@ opens every collapsed solution, and the formula sheet is laid out for three A4 p
 ```
 capacitors/
 ├── index.html                 front page: syllabus map, how to study, chapter cards with ticks
-├── 01-foundations.html        one file per chapter  ← 01…08 theory, 09 paper, 10 solutions, 11 formula sheet
-├── 11-formula-sheet.html
+└── final.html                  the complete topic: overview, theory, paper, solutions and formula sheet
 ├── README.md                  this topic only: what is in it, what is deliberately not covered
 ├── assets/
 │   ├── notes.css              design tokens, callouts, figures, tables, print + dark mode
