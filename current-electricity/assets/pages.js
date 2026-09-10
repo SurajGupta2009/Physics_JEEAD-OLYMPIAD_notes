@@ -4,7 +4,7 @@ window.NOTES_SITE = {
   brand: "Current Electricity",
   ls: "notes:current-electricity:",
   pages: [
-    ["final.html", "Current Electricity"]
+    ["Current-electricity.html", "Current Electricity"]
   ]
 };
 window.NOTES_PAGES = window.NOTES_SITE.pages;

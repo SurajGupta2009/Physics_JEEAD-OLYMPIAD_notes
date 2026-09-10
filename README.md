@@ -13,9 +13,10 @@ from `file://`, prints to a clean PDF, and is validated by one command.
 
 | topic | chapters | figures | questions | paper | status |
 |---|---|---|---|---|---|
-| **[capacitors](capacitors/index.html)** | 1 final HTML | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
-| **[current-electricity](current-electricity/index.html)** | 1 final HTML | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
-| thermodynamics | — | — | — | — | planned — claim it |
+| **[capacitors](capacitors/Capacitors.html)** | 1 final HTML | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
+| **[current-electricity](current-electricity/Current-electricity.html)** | 1 final HTML | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
+| **[heat](heat/Heat.html)** | 1 final HTML (expandable mind-map) | 24 inline SVG | 48 (38 in-chapter, each with a full solution, + 10-question written gauntlet) | open-book gauntlet | complete |
+| **[thermodynamics](thermodynamics/Thermodynamics.html)** | 1 final HTML (expandable mind-map) | 34 inline SVG | 127 (55 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions section) | 3 h, 245 marks, INPhO standard | complete |
 | rotational-mechanics | — | — | — | — | planned — claim it |
 
 The table above is a summary of [`topics.json`](topics.json), which is a *checked* registry:
@@ -40,7 +41,7 @@ opens every collapsed solution, and the formula sheet is laid out for three A4 p
 ```
 capacitors/
 ├── index.html                 front page: syllabus map, how to study, chapter cards with ticks
-└── final.html                  the complete topic: overview, theory, paper, solutions and formula sheet
+└── Capacitors.html             the complete topic: overview, theory, paper, solutions and formula sheet
 ├── README.md                  this topic only: what is in it, what is deliberately not covered
 ├── assets/
 │   ├── notes.css              design tokens, callouts, figures, tables, print + dark mode
