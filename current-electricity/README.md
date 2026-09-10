@@ -1,11 +1,11 @@
 # Current Electricity — from basics to Olympiad
 
 A self-contained HTML course on **current, resistance, cells, networks, instruments and real-wire physics**,
-written for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `final.html`; it works
+written for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `Current-electricity.html`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open current-electricity/final.html   ← start here (course map, how to study, the exam note)
+open current-electricity/Current-electricity.html   ← start here (course map, how to study, the exam note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):
@@ -16,7 +16,7 @@ cd current-electricity && python3 -m http.server 8000
 
 ## What is in the folder
 
-`final.html` is the only HTML file in this folder. It contains the overview, all theory sections,
+`Current-electricity.html` is the only HTML file in this folder. It contains the overview, all theory sections,
 the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
 contains only the local stylesheet and scripts needed to render it offline.
 

@@ -1,11 +1,11 @@
 # Capacitors — from basics to Olympiad
 
 A self-contained HTML course on **capacitance, dielectrics and capacitive networks**, written for
-**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `final.html`; it works
+**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `Capacitors.html`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open capacitors/final.html          ← start here (course map, how to study, the IOQM/NSEP note)
+open capacitors/Capacitors.html          ← start here (course map, how to study, the IOQM/NSEP note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):
@@ -16,7 +16,7 @@ cd capacitors && python3 -m http.server 8000
 
 ## What is in the folder
 
-`final.html` is the only HTML file in this folder. It contains the overview, all theory sections,
+`Capacitors.html` is the only HTML file in this folder. It contains the overview, all theory sections,
 the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
 contains only the local stylesheet and scripts needed to render it offline.
 

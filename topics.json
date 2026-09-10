@@ -14,7 +14,7 @@
       "title": "Capacitors — first principles to Olympiad",
       "status": "complete",
       "owner": "arena-agent",
-      "entry": "capacitors/index.html",
+      "entry": "capacitors/Capacitors.html",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -23,13 +23,13 @@
         "IOPT"
       ],
       "pages": [
-        "final.html"
+        "Capacitors.html"
       ],
       "figures": 32,
       "questions": 135,
       "solutions": 64,
       "math_spans": 3443,
-      "bytes_html": 599685,
+      "bytes_html": 599325,
       "paper": {
         "questions": 36,
         "sections": 4,
@@ -52,16 +52,42 @@
     {
       "slug": "thermodynamics",
       "title": "Thermodynamics — first principles to Olympiad",
-      "status": "planned",
-      "owner": null,
-      "entry": "thermodynamics/index.html",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "thermodynamics/Thermodynamics.html",
       "exam": [
         "JEE Advanced",
         "NSEP",
         "INPhO",
         "IPhO"
       ],
-      "note": "Suggestion only — claim it by filling this entry in and running tools/new_topic.py thermodynamics."
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 245,
+        "minutes": 180,
+        "file": "09-olympiad-paper.html"
+      },
+      "deliberately_not_covered": [
+        "ensembles and partition functions as a formalism (only single-system state counting in ch 6)",
+        "full engine families: Brayton, Rankine, Atkinson, Stirling cycles by name and one-line results only",
+        "phase-diagram thermodynamics: Clausius-Clapeyron beyond the Trouton note, chemical potential formally",
+        "heat exchangers and LMTD, fins, and transient conduction (lumped Biot criterion is the boundary here)",
+        "Planck/Wien derivations: radiation enters as a thermodynamic fluid, not as a quantum derivation"
+      ],
+      "next_candidates": [
+        "12 · thermal physics of the atmosphere and stars (moist adiabat in full, Eddington standard model, white dwarfs)",
+        "a timed 25-question JEE-Advanced-only set keyed to chapters 3-5",
+        "Thermodynamics II: irreversibility, exergy, and low temperatures (Third Law, dilution refrigerators, negative temperatures)"
+      ],
+      "pages": [
+        "Thermodynamics.html"
+      ],
+      "figures": 34,
+      "questions": 127,
+      "solutions": 55,
+      "math_spans": 943,
+      "bytes_html": 346583
     },
     {
       "slug": "rotational-mechanics",
@@ -82,7 +108,7 @@
       "title": "Current Electricity — first principles to Olympiad",
       "status": "complete",
       "owner": "arena-agent",
-      "entry": "current-electricity/index.html",
+      "entry": "current-electricity/Current-electricity.html",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -94,9 +120,9 @@
       "questions": 143,
       "solutions": 71,
       "math_spans": 1613,
-      "bytes_html": 323812,
+      "bytes_html": 323552,
       "pages": [
-        "final.html"
+        "Current-electricity.html"
       ],
       "paper": {
         "questions": 36,
@@ -118,6 +144,38 @@
         "worked-problem chapter: 40 JEE-Advanced-only numericals with timed hints",
         "magnetic effects of current: the field twin of this set, sharing its audit discipline"
       ]
+    },
+    {
+      "slug": "heat",
+      "title": "Heat — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "heat/Heat.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO"
+      ],
+      "deliberately_not_covered": [
+        "convection correlations (Nu–Ra–Re catalogues) and boundary-layer theory (stagnant-film h and lumped/Bi analysis are the boundary here)",
+        "boiling-crisis curves, condenser and heat-exchanger design (LMTD), porous-media flow",
+        "Planck/Wien as statistical mechanics (the derivation lives in the thermodynamics set, ch 7)",
+        "view-factor catalogues for arbitrary enclosures (large-enclosure and parallel-plate exchange only)",
+        "numerical PDE solution: the heat equation is used through α, L²/α and the sinusoidal skin-depth solution only"
+      ],
+      "next_candidates": [
+        "9 · lab chapter: cooling-curve fitting, ice-calorimeter and mixture-method data tables with error budgets",
+        "a full 36-question timed heat-transfer paper with mirrored solutions",
+        "convection, deeper: boundary layers, Nu correlations, onset of turbulence"
+      ],
+      "pages": [
+        "Heat.html"
+      ],
+      "figures": 24,
+      "questions": 48,
+      "solutions": 48,
+      "math_spans": 566,
+      "bytes_html": 240766
     }
   ]
 }
