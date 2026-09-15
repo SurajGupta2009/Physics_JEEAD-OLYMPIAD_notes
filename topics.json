@@ -176,6 +176,50 @@
       "solutions": 48,
       "math_spans": 566,
       "bytes_html": 240766
+    },
+    {
+      "slug": "geometrical-optics",
+      "title": "Geometrical Optics — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "geometrical-optics/Geometrical-optics.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "pages": [
+        "Geometrical-optics.html"
+      ],
+      "figures": 46,
+      "questions": 152,
+      "solutions": 80,
+      "math_spans": 2598,
+      "bytes_html": 581187,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 143,
+        "minutes": 180,
+        "file": "Geometrical-optics.html",
+        "anchor": "section-10-paper"
+      },
+      "deliberately_not_covered": [
+        "wave optics (Cengage ch 2 — interference, diffraction, polarisation): a separate note-set, by the scope decision for this folder",
+        "Fresnel coefficients, Brewster's angle and polarisation on reflection (they need the wave picture; only the ray geometry is here)",
+        "evanescent-wave depth and frustrated total internal reflection beyond the one-paragraph physical picture in part 4",
+        "third-order aberration coefficients, Zernike polynomials and computer lens optimisation (part 8 stops at the h²/h³ scalings and the two-element achromat)",
+        "graded-index fibre mode theory (only the meridional-ray numerical aperture and the bend-limit estimate are worked)",
+        "computer ray tracing: every figure is drawn from a closed-form geometry or a hand-checked table"
+      ],
+      "next_candidates": [
+        "wave optics: the natural sequel, reusing part 8's Fermat and matrix language in reverse",
+        "lens design lab: spectacles prescription to surface radii, and the achromatic pair worked by hand",
+        "worked-problem companion: the Cengage exercise sets (book pp. 1.89-1.129) re-derived with the part 9 playbook",
+        "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
+      ]
     }
   ]
 }
