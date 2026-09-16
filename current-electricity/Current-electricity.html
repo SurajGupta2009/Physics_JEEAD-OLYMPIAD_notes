@@ -1051,7 +1051,7 @@ chapters <b>9–10</b> are the full paper with detailed solutions; chapter <b>11
   <p>Model any real source, choose cell groupings, and close every circuit with a balanced joule ledger.</p></div>
   <div class="card" data-chk="4"><span class="st">→</span><span class="n">Chapter 4</span>
   <b><a class="go" href="#section-04-kirchhoff-and-bridges">Kirchhoff &amp; bridges</a></b>
-  <p>Solve any two-loop circuit with sign discipline, and crack cubes, bridges and ladders by symmetry.</p></div>
+  <p>Solve any two-loop circuit with sign discipline, crack cubes, bridges and ladders by symmetry, and run an RC circuit through its single time constant.</p></div>
   <div class="card" data-chk="5"><span class="st">→</span><span class="n">Chapter 5</span>
   <b><a class="go" href="#section-05-network-theorems">Network theorems</a></b>
   <p>Replace any linear network by two numbers (Thevenin/Norton) and know exactly when each theorem is illegal.</p></div>
@@ -1082,6 +1082,52 @@ The Olympiad track (NSEP → INPhO) adds the estimation culture — fuses, trans
 superconducting persistence — which is chapter 7's whole content, and expects the audit-and-check discipline of
 chapter 8 in every long answer. The paper of chapter 9 is set to that joint standard: sections A–C in JEE format,
 section D at INPhO length.</p></div>
+
+<h2 id="cengage-coverage">Cengage coverage map — the floor this chapter is built on</h2>
+<p>The specification for this note-set was <b>at least everything in the Cengage chapter</b>, plus the Olympiad
+material that chapter does not reach. The Cengage volume's <i>Electric Current and Circuits</i> is chapter 5,
+<i>Electrical Measuring Instruments</i> is chapter 6 and <i>Heating Effects of Current</i> is chapter 7; every
+numbered contents entry of those three chapters is mapped below. Nothing is missing and nothing is merely named:
+where a row says "derived", the derivation is in the text, and where it says "extended", the extension goes past
+the book.</p>
+<table class="tb">
+<tr><th>Cengage section</th><th>Where it is here</th><th>How it is treated</th></tr>
+<tr><td>5.2 Electric current; statement of Ohm's law</td><td>§1.1, §1.4</td><td>current as a flux; Ohm's law <em>derived</em> from <m>\sigma=ne^{2}\tau/m</m>, not quoted</td></tr>
+<tr><td>5.3 Current density</td><td>§1.2</td><td><m>\vec J = ne\vec v_d</m>, continuity equation <m>\nabla\cdot\vec J+\partial\rho/\partial t=0</m> derived for the 1-D wire case</td></tr>
+<tr><td>5.5 Drift velocity; relation between drift velocity and current</td><td>§1.3</td><td>random-plus-drift picture, <m>I=neAv_d</m>, numerical crawl speeds (mm/s), the AC-cycle displacement</td></tr>
+<tr><td>5.6 Structural model for an electrical conductor</td><td>§1.4</td><td>relaxation time <m>\tau</m> from collisions; the model's three assumptions stated and tested</td></tr>
+<tr><td>5.7 Mobility</td><td>§1.4 (box <i>Mobility</i>)</td><td><m>\mu=v_d/E=e\tau/m</m>, units, <m>\sigma=ne\mu</m>, two-carrier (electron + hole) form</td></tr>
+<tr><td>5.8 Temperature coefficient of resistivity; temperature coefficients of resistance; finding the coefficient</td><td>§2.3</td><td><m>R_T=R_0[1+\alpha\Delta T]</m> with <m>\alpha</m> derived from mechanism for metals and semiconductors; measurement method and the sign of <m>\alpha</m></td></tr>
+<tr><td>5.9 Validity and failure of Ohm's law</td><td>§2.4</td><td>the non-ohmic three (diode, filament, electrolyte/gas) with the <m>I</m>–<m>V</m> shapes</td></tr>
+<tr><td>5.10 Electromotive force and potential difference; <m>E</m> versus <m>V</m></td><td>§3.1</td><td>emf as work per unit charge of the <em>pump</em>, terminal voltage under load, the zero-current measurement problem</td></tr>
+<tr><td>5.11 Internal resistance of a cell</td><td>§3.2</td><td><m>V=\mathcal E-Ir</m>, the <m>V</m>–<m>I</m> line, short-circuit current, efficiency</td></tr>
+<tr><td>5.11 Combination of resistances: series, parallel</td><td>§4.2</td><td>derived from charge and loop conservation, with the conditions each rule needs</td></tr>
+<tr><td>5.12 Voltage divider; current divider for two and for three resistances</td><td>§4.2</td><td>two-resistor forms <em>and</em> the general conductance form <m>I_k=I\,G_k/\sum G</m> (box <i>The general divider</i>), with the loading caveat</td></tr>
+<tr><td>5.13 Calculation of effective resistance</td><td>§4.2–§4.5</td><td>cube, balanced bridge, unbalanced bridge by node equations, Δ–Y, infinite ladders</td></tr>
+<tr><td>5.13 Kirchhoff's laws for electrical networks</td><td>§4.1</td><td>both laws with the sign discipline, plus the nodal form that scales to any number of loops</td></tr>
+<tr><td>5.17 Wheatstone bridge; balanced bridge</td><td>§4.3, §6.3</td><td>balance derived by symmetry and by loop equations; the meter bridge as its laboratory form</td></tr>
+<tr><td>5.20 Combination of cells: series, parallel, mixed</td><td>§3.3</td><td>all three groupings with the mismatched-cell warning and the maximised current condition</td></tr>
+<tr><td>5.21 Superposition principle; concepts</td><td>§5.1</td><td>stated with its linearity condition, used, and the theorem-based alternative given</td></tr>
+<tr><td>5.25 Charging and discharging of a capacitor through a resistance</td><td>§4.6</td><td><em>new section</em>: <m>q=Q_0(1-e^{-t/RC})</m> and <m>q=Q_0e^{-t/RC}</m> derived from Kirchhoff, with the half-life and the 63%/5&#963; milestones</td></tr>
+<tr><td>5.26 Charging of the capacitor — other approach</td><td>§4.6</td><td>the final/initial-value (Thévenin) route: <m>q(t)=q_\infty-(q_\infty-q_0)e^{-t/\tau}</m></td></tr>
+<tr><td>5.30 Equivalent time constant</td><td>§4.6, and capacitors note-set §6</td><td><m>\tau=R_{\text{Th}}C</m> for a network; two-capacitor networks with n states and n time constants are worked in the sister note-set</td></tr>
+<tr><td>5.32 Solved examples; exercises (subjective, objective, multiple-correct, assertion–reasoning, comprehension, matching, integer)</td><td>§1.6, §2.5, §3.5, §6.5, §7.6, §8.5 and the paper (ch 9)</td><td>in-chapter questions after every chapter with folded full solutions; the paper's seven sections mirror the Cengage exercise types</td></tr>
+<tr><td>6.2–6.3 Galvanometer, ammeter, voltmeter</td><td>§6.1, §6.2</td><td>one galvanometer turned into any meter; loading error quantified; the ideal-meter limits</td></tr>
+<tr><td>6.4–6.6 Potentiometer: construction and uses</td><td>§6.4</td><td>null measurement, internal-resistance and emf comparison, sensitivity, the wire's uniform-potential-drop assumption</td></tr>
+<tr><td>6.7–6.8 Meter bridge (slide wire bridge): construction, checking of connections</td><td>§6.3</td><td>balance, end-error correction, and the two-way check (interchange the gaps and confirm the balance point moves the other way) that catches wrong connections</td></tr>
+<tr><td>7.2 Heat produced by an electric current; cause of heating</td><td>§3.4, §7.1</td><td><m>P=I^{2}R</m> from the joule ledger; the fuse's steady-state balance as the worked scaling law</td></tr>
+<tr><td>7.2 Electric power produced in the circuit; units of electric energy and electric power</td><td>§3.4 (box <i>Units ledger</i>)</td><td>watt, joule, the commercial unit kWh and its cost arithmetic, the eV, and the <m>I^{2}R</m>/<m>V^{2}/R</m> trap</td></tr>
+<tr><td>7.5 Maximum power transfer theorem</td><td>§5.4</td><td>derived from Thévenin, with the efficiency at that point (50%) and the reason a power utility does not want it</td></tr>
+<tr><td>7.5 Some applications</td><td>§7.1–§7.5</td><td>bulbs in series and parallel and the rated-voltage trap, heaters, fuses, filament inrush, thermistors, thermocouples, superconductors</td></tr>
+</table>
+
+<div class="box def"><p class="bt">Beyond the Cengage floor — the Olympiad layer</p>
+<p>Chapters 5 and 7 exist to take the same physics past the book: Thévenin, Norton, reciprocity and compensation
+theorems with their legality conditions; symmetry folding for cubes and ladders; the four-terminal Kelvin
+measurement; thermoelectric Seebeck/Peltier coefficients with the Thomson relation; the semiconductor thermistor's
+self-consistent operating point; superconducting persistence and critical fields; and the estimation culture
+(transmission-line loss scaling, fuse-current scaling <m>I\propto r^{3/2}</m>) that NSEP and INPhO reward. The
+paper of chapter 9 is set to that joint standard.</p></div>
 
 <div class="box insight"><p class="bt">How to study this set</p>
 <p>Read chapters 1–3 with a pen and recompute every number (they are all checkable by hand). Do the in-chapter
@@ -1274,6 +1320,23 @@ then use <m>\sigma=ne^{2}\tau/m</m> backwards to find <m>\tau</m>.</p>
 150 atomic spacings, which is why metals conduct so well: an electron sails past many atoms before scattering.
 <b>Check:</b> the drift-to-thermal ratio <m>7.4\times10^{-5}/1.2\times10^{5}\approx6\times10^{-10}</m> — the
 drift is a whisper on top of a storm, exactly as Fig. 1.2 shows.</p></div>
+
+<div class="box def"><p class="bt">Mobility — the carrier's obedience rating</p>
+<p>Define the <b>mobility</b> as the drift speed a carrier acquires per unit driving field:</p>
+<div class="eqd" data-tag="1.7">\mu\equiv\frac{v_d}{E}= \frac{e\tau}{m}\qquad[\,\mu\,]= \frac{\text{m s}^{-1}}{\text{V m}^{-1}}=\text{m}^{2}\text{V}^{-1}\text{s}^{-1}</div>
+<p>It is the third way of writing the same physics — <m>n</m> says how many carriers there are, <m>\tau</m> how long
+each remembers the field, and <m>\mu</m> packages the two into "how fast does one carrier end up moving". Multiplying
+back gives the form used for real materials, including those with two carrier species:</p>
+<div class="eqd key" data-tag="1.8">\sigma=ne\mu\qquad\text{and for two species}\qquad \sigma=e\left(n\mu_e+p\mu_h\right)</div>
+<p>Numbers worth knowing: in copper <m>\mu\approx4.4\times10^{-3}</m> m²V<sup>−1</sup>s<sup>−1</sup> (from
+<m>\tau\approx2.5\times10^{-14}</m> s); in silicon at 300 K, <m>\mu_e\approx0.14</m> and
+<m>\mu_h\approx0.05</m> m²V<sup>−1</sup>s<sup>−1</sup> — ten to thirty times larger than in a metal, because
+carriers scatter far less often. What silicon lacks is carriers: <m>n\sim10^{16}</m> m<sup>−3</sup> against copper's
+<m>8.5\times10^{28}</m>. <b>High mobility with almost no carriers still means a poor conductor</b> — which is exactly
+why doping works: it leaves the mobility roughly alone and multiplies <m>n</m> by a million. Raising the temperature
+<em>lowers</em> <m>\mu</m> in both materials (more lattice vibration, smaller <m>\tau</m>); whether the resistance
+rises or falls is then decided by whether <m>n</m> is fixed (metal: resistance rises) or thermally liberated
+(semiconductor: resistance falls).</p></div>
 
 <h2>1.5 The field travels, not the electrons</h2>
 
@@ -1946,6 +2009,25 @@ is fixed and you choose the <em>cell</em> — then <m>I^{2}R</m> grows without b
 efficiency, not matching, is the design constraint. Power stations transmit at <m>\eta\gg90\%</m>; matching is a
 low-power electronics idea (chapter 5 generalises it to Thevenin sources).</p></div>
 
+<div class="box data"><p class="bt">Units ledger — energy, power and the commercial unit</p>
+<p>Power is a rate, energy is an amount, and every billing question is a conversion between them.</p>
+<table class="tb">
+<tr><th>unit</th><th>equals</th><th>where it is used</th></tr>
+<tr><td>watt (W)</td><td>1 J s<sup>−1</sup></td><td>rating of any appliance: <m>P=VI=I^{2}R=V^{2}/R</m></td></tr>
+<tr><td>joule (J)</td><td>1 W s</td><td>physics answers; <m>Q=I^{2}Rt</m> heat</td></tr>
+<tr><td>kilowatt-hour (kWh), the "unit"</td><td><m>10^{3}\times3600=3.6\times10^{6}</m> J</td><td>electricity bills: cost <m>=</m> power in kW <m>\times</m> hours <m>\times</m> tariff</td></tr>
+<tr><td>electron-volt (eV)</td><td><m>1.60\times10^{-19}</m> J</td><td>single-particle energies; <m>1\ \text{eV}=1</m> V <m>\times</m> <m>e</m></td></tr>
+<tr><td>ampere-hour (Ah)</td><td><m>3600</m> C</td><td>battery capacity: 12 V, 100 Ah stores <m>12\times100\times3600=4.3</m> MJ <m>=1.2</m> kWh</td></tr>
+</table>
+<p><b>The two conversions examiners use.</b> (i) A 100 W lamp for 10 h uses <m>0.1\times10=1</m> kWh — at ₹8 a unit
+that is ₹8, while the same energy as joules is 3.6 MJ. (ii) <m>P=I^{2}R</m> is <em>always</em> the power in a
+resistor, but <m>P=V^{2}/R</m> is only correct when <m>V</m> is the voltage <b>across that same resistor</b>; writing
+<m>P=V_{\text{supply}}^{2}/R</m> for two resistors in series is the standard error. The companion trap is the
+<b>rated-power trap</b>: a "60 W, 220 V" bulb has <m>R=V^{2}/P=807\ \Omega</m> <em>at its rated temperature</em>. Put
+it in series with another bulb and it no longer receives 220 V, so it no longer dissipates 60 W — compute the new
+current first, then <m>I^{2}R</m>. (Its cold resistance is several times smaller still, which is why bulbs fail at
+switch-on.)</p></div>
+
 <figure class="fig"><div class="art">
 <svg viewBox="0 0 760 220" role="img" aria-label="Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends">
   <line x1="80" y1="185" x2="700" y2="185" class="ln" marker-end="url(#ah)"/>
@@ -2190,6 +2272,23 @@ the audit line</b> — it costs ten seconds and catches every sign slip.</p></di
 only while no third element loads the tapped node — the moment a voltmeter or a load attaches, the effective
 <m>R</m> changes and you must re-reduce (chapter 6 quantifies exactly this error).</p></div>
 
+<div class="box def"><p class="bt">The general divider — three resistors, or any number</p>
+<p>The two-resistor forms are special cases of one rule. In a parallel group the currents share in proportion to the
+<b>conductances</b>, <m>G_k=1/R_k</m>:</p>
+<div class="eqd key" data-tag="4.3">I_k=I\,\frac{G_k}{\sum_j G_j}=I\,\frac{1/R_k}{\sum_j 1/R_j}</div>
+<p>For three resistors in parallel (<m>R_1,R_2,R_3</m>) this reads</p>
+<div class="eqd" data-tag="4.4">I_1=I\,\frac{R_2R_3}{R_1R_2+R_2R_3+R_3R_1},\qquad I_2=I\,\frac{R_3R_1}{\Sigma},\qquad I_3=I\,\frac{R_1R_2}{\Sigma},\qquad \Sigma\equiv R_1R_2+R_2R_3+R_3R_1</div>
+<p>The pattern to remember: <b>each numerator is the product of the other resistors</b>. The two-resistor shortcut
+"numerator = the other resistor" is that same statement with one factor left over after cancelling — which is why it
+does <em>not</em> survive at three elements. Sanity check the general form: if <m>R_3\to\infty</m> it collapses to
+<m>I_1=I R_2/(R_1+R_2)</m>, the two-resistor rule ✓, and if all three are equal each carries <m>I/3</m> ✓. In
+conductance language the voltage divider becomes the dual statement <m>V</m> divides in proportion to
+<m>R_k</m>, currents in proportion to <m>G_k</m>: voltage prefers the big resistor, current prefers the small one.</p>
+<p class="note">Worked use: <m>R_1=2\ \Omega</m>, <m>R_2=3\ \Omega</m>, <m>R_3=6\ \Omega</m> in parallel carry
+a total of 6 A. Then <m>\Sigma=6+18+12=36</m>, so <m>I_1=6(18)/36=3</m> A, <m>I_2=6(12)/36=2</m> A and
+<m>I_3=6(6)/36=1</m> A. Check: these are <m>V=6</m> V across each of 2, 3 and 6 <m>\Omega</m> ✓, and the total is
+6 A ✓.</p></div>
+
 <div class="box trap"><p class="bt">The trap in this section</p>
 <p>Applying the parallel formula to elements that are not actually in parallel. "Parallel" means <b>the same two
 nodes</b>, not "drawn side by side". In a bridge, the arms <m>R_1</m> and <m>R_3</m> are neither series nor
@@ -2417,7 +2516,140 @@ exam question is a disguised fixed-point question.</p>
 </div></details>
 </div></div>
 
-<h2>4.6 Chapter summary — the results to own</h2>
+<h2>4.6 The capacitor in a DC circuit: charging, discharging and the time constant</h2>
+
+<p>Cengage puts the capacitor's transient behaviour in the current chapter, and rightly: nothing new is needed —
+Kirchhoff's loop law plus the capacitor's own <m>q=CV</m>. What is new is that the answer depends on <em>time</em>,
+so the circuit has a <b>state</b> (the charge on the capacitor) and an equation of motion for it. This section is the
+one-time-constant theory; networks with two or more capacitors, sinusoids and the full energy bookkeeping are worked
+in the companion note-set <em>Capacitors</em>, chapter 6.</p>
+
+<div class="box def"><p class="bt">The two limits that read a circuit in one second</p>
+<p>An <b>uncharged</b> capacitor has <m>V_C=0</m>: at the instant a switch closes it behaves like a <b>short circuit</b>
+(any current may flow through it, with no voltage across it). A capacitor that has been in a DC circuit for a long
+time has <m>i=C\,dV/dt=0</m>: it behaves like an <b>open circuit</b>. Between those limits the circuit is genuinely
+time-dependent, and the crossover time is</p>
+<div class="eqd key" data-tag="4.5">\tau=RC\qquad[\,\Omega\cdot\text{F}=\text{s}\,]</div>
+<p>The unit check is worth doing once: <m>\Omega\cdot\text{F}=(\text{V}/\text{A})(\text{C}/\text{V}) =\text{C}/\text{A}=\text{s}</m> ✓. Every insulating "why is there no current?" answer in the chapter is the open-circuit
+limit; every "which bulb lights first?" question is the short-circuit limit.</p></div>
+
+<div class="box thm"><p class="bt">Charging: the loop equation and its solution</p>
+<p>Cell <m>\mathcal E</m>, resistor <m>R</m>, uncharged capacitor <m>C</m> in series; switch closed at <m>t=0</m>.
+The loop law around the single mesh is</p>
+<div class="eqd" data-tag="4.6">\mathcal E=iR+\frac{q}{C}=R\frac{dq}{dt}+\frac{q}{C},\qquad q(0)=0</div>
+<p>whose solution (separate the variables, or differentiate to get <m>i</m> first) is</p>
+<div class="eqd key" data-tag="4.7">q(t)=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad
+i(t)=\frac{\mathcal E}{R}e^{-t/\tau},\qquad V_C(t)=\mathcal E\left(1-e^{-t/\tau}\right)</div>
+<p>Read the three factors: the <b>final charge</b> is <m>C\mathcal E</m> and is set by the capacitor alone;
+the <b>initial current</b> is <m>\mathcal E/R</m> and is set by the resistor alone (the capacitor is a short at
+<m>t=0</m>); and the <b>rate</b> at which one gives way to the other is <m>1/\tau</m>. At <m>t=\tau</m> every
+quantity has covered <m>1-e^{-1}=63.2\%</m> of its journey, at <m>3\tau</m> it is 95.0%, and by <m>5\tau</m> it is
+99.3% — the practical end of the transient. The current, being the complementary exponential, has <em>fallen</em> to
+37% at <m>t=\tau</m>: charge and current are not on the same schedule.</p></div>
+
+<div class="box def"><p class="bt">The general formula that covers every case — including "the other approach"</p>
+<p>Charging, discharging, a capacitor that starts part-charged, a capacitor connected to a new cell: all of them are
+the same statement, that the approach to the final value is exponential:</p>
+<div class="eqd key" data-tag="4.8">q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau}</div>
+<p>with <m>q_0</m> the charge at <m>t=0</m> and <m>q_\infty</m> the charge the circuit would settle at if you waited
+forever. Check it against the two cases above: charging has <m>q_0=0,\ q_\infty=C\mathcal E</m>; discharging
+through <m>R</m> with the cell removed has <m>q_\infty=0</m>, giving <m>q=Q_0e^{-t/\tau}</m>. In a network,
+<m>q_\infty</m> is found by treating the capacitor as an open circuit and solving the resistive circuit, and
+<m>\tau</m> is found by killing every source and reading the resistance seen from the capacitor's terminals:
+<m>\tau=R_{\text{Th}}C</m>, the bridge to chapter 5.</p>
+<p class="note"><b>Discharging, explicitly:</b> <m>q(t)=Q_0e^{-t/\tau}</m>, <m>i(t)=\frac{Q_0}{\tau}e^{-t/\tau} =\frac{V_0}{R}e^{-t/\tau}</m>, so the initial current is the same as if the charged capacitor were a battery of
+voltage <m>V_0=Q_0/C</m> shorted through <m>R</m>. Half-life: <m>t_{1/2}=\tau\ln 2=0.693\tau</m>.</p></div>
+
+<div class="box why"><p class="bt">Where the energy goes — and why the resistance does not matter</p>
+<p>Charge the capacitor from a cell: the cell delivers <m>\int\mathcal E\,i\,dt=C\mathcal E^{2}</m>, the capacitor
+stores <m>\tfrac12C\mathcal E^{2}</m>, and the resistor dissipates</p>
+<div class="eqd key" data-tag="4.9">\int I^{2}R\,dt=\tfrac12C\mathcal E^{2}\qquad\text{independent of }R</div>
+<p><b>Exactly half of the energy is lost, whatever the resistance.</b> Make <m>R</m> smaller and the process is
+faster but not cheaper: the current is larger for a shorter time, and the integral is identical. (The same result
+appears in the capacitors note-set as the two-capacitor paradox — charging one capacitor from another instead of from
+a cell loses half the energy too, and the resolution is the same: the integral of <m>i^{2}R</m> does not care how the
+current is spread in time.) A capacitor charged this way can be called a "half-efficiency" store, which is why
+charging circuits for pulsed-power systems use switched inductors or resonant transfer rather than a plain resistor.</p></div>
+
+<figure class="fig"><div class="art">
+<svg viewBox="0 0 760 240" role="img" aria-label="Charging curves: capacitor voltage rising and current falling, both with time constant tau marked">
+  <line x1="80" y1="190" x2="700" y2="190" class="ln"/>
+  <line x1="80" y1="190" x2="80" y2="40" class="ln"/>
+  <text x="76" y="36" class="lbl sm" text-anchor="end">value</text>
+  <text x="700" y="210" class="lbl sm" text-anchor="end">t</text>
+  <text x="80" y="46" class="mi sm">E&#8320;</text>
+  <line x1="200" y1="40" x2="200" y2="196" class="dim"/>
+  <line x1="320" y1="40" x2="320" y2="196" class="dim"/>
+  <line x1="440" y1="40" x2="440" y2="196" class="dim"/>
+  <line x1="560" y1="40" x2="560" y2="196" class="dim"/>
+  <text x="200" y="212" class="lbl sm" text-anchor="middle">&#964;</text>
+  <text x="320" y="212" class="lbl sm" text-anchor="middle">2&#964;</text>
+  <text x="440" y="212" class="lbl sm" text-anchor="middle">3&#964;</text>
+  <text x="560" y="212" class="lbl sm" text-anchor="middle">5&#964;</text>
+  <path d="M80 40 C 130 78 170 116 200 128 C 260 148 300 158 320 162 C 400 172 480 180 560 184 L 700 186" class="acc"/>
+  <text x="330" y="120" class="mi sm">V_C = E(1 &#8722; e^(&#8722;t/&#964;))</text>
+  <path d="M80 40 C 100 40 140 76 200 100 C 260 124 320 144 440 162 C 520 172 620 180 700 184" class="thinl" stroke-dasharray="6 4"/>
+  <text x="470" y="96" class="mi sm">i = (E/R) e^(&#8722;t/&#964;)</text>
+  <line x1="80" y1="128" x2="200" y2="128" class="thinl"/>
+  <text x="86" y="122" class="lbl sm">63.2% at &#964;</text>
+  <text x="580" y="176" class="lbl sm">99.3% at 5&#964;</text>
+</svg></div>
+<figcaption><b>Fig. 4.4 — The two curves of a single time constant.</b> The capacitor voltage climbs toward the cell's
+emf and the current decays toward zero; both are drawn for the same <m>\tau=RC</m>. The tangent at <m>t=0</m> on the
+current curve reaches zero at <m>t=\tau</m>, which is the geometric definition of a time constant: <em>the time the
+initial rate of change would need if it never slowed</em>. Marks at 63% and 99.3% are the ones to quote in an
+answer.</figcaption></figure>
+
+<div class="ex"><p class="exh">Worked example 4.3 · A complete charging cycle</p>
+<p>A <m>2\ \text{V}</m> cell charges a <m>1\ \mu\text{F}</m> capacitor through a <m>1\ \text{M}\Omega</m>
+resistor. Find <m>\tau</m>, the charge at <m>t=\tau</m> and at <m>t=5\tau</m>, the total energy the cell delivers, and
+how much of it the resistor burns.</p>
+<p><b>Do:</b> <m>\tau=RC=10^{6}\times10^{-6}=1</m> s. Final charge
+<m>C\mathcal E=10^{-6}\times2=2\ \mu</m>C; at <m>t=\tau</m> it is <m>0.632\times2=1.26\ \mu</m>C; at
+<m>5\tau</m>, <m>0.993\times2=1.99\ \mu</m>C. Cell energy <m>C\mathcal E^{2}=4\ \mu</m>J, stored
+<m>\tfrac12C\mathcal E^{2}=2\ \mu</m>J, so the resistor dissipates <m>2\ \mu</m>J.</p>
+<p><b>Check:</b> the initial current must be <m>\mathcal E/R=2\ \mu</m>A; integrating
+<m>i=\tfrac{\mathcal E}{R}e^{-t/\tau}</m> gives total charge <m>\mathcal E C=2\ \mu</m>C ✓, and
+<m>\int i^{2}R\,dt=(\mathcal E^{2}/R)\cdot(\tau/2)=4/2=2\ \mu</m>J ✓ — the half-and-half split of the box
+above. Note both energies are independent of <m>R</m>; only the clock (<m>\tau</m>) moves.</p></div>
+
+<div class="box trap"><p class="bt">The three traps in this section</p>
+<ul>
+<li><b>"The capacitor blocks DC, so no current ever flows."</b> It blocks <em>steady</em> current. During the
+transient <m>i</m> is whatever the loop law demands; the block is the <m>t\to\infty</m> limit, not a property of the
+component.</li>
+<li><b>Using <m>RC</m> when the capacitor is not at the end of a simple branch.</b> If other resistors sit around it,
+the relevant resistance is <m>R_{\text{Th}}</m> seen <em>from the capacitor's own terminals</em> with all sources
+killed, not any single resistor in the picture. Two capacitors in one network do not even share a single time
+constant — that circuit has as many <m>\tau</m>'s as it has independent charge variables.</li>
+<li><b>Adding a "current through the capacitor" to the final steady state.</b> Steady state means <m>i_C=0</m>; any
+answer with a steady current through a capacitor is wrong before it is arithmetic.</li>
+</ul></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>A charged capacitor of <m>2\ \mu\text{F}</m> at 50 V is connected across a <m>5\ \text{k}\Omega</m> resistor. How long until the voltage falls below 5 V, and what total energy is dissipated?</b><span class="diff">[3]</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><m>\tau=RC=5000\times2\times10^{-6}=10</m> ms. Discharge: <m>V=V_0e^{-t/\tau}</m>, so
+<m>5=50e^{-t/10\text{ms}}\Rightarrow e^{t/\tau}=10\Rightarrow t=\tau\ln10=23</m> ms.</p>
+<p>Energy: all the stored energy ends in the resistor — <m>\tfrac12CV_0^{2}=\tfrac12(2\times10^{-6})(2500) =2.5</m> mJ. <b>Check:</b> <m>t=2.3\tau</m> on the decaying curve, and <m>e^{-2.3}=0.10</m> ✓.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>In the circuit of worked example 4.3 the cell is removed at <m>t=5\tau</m> and the capacitor is discharged through the same resistor. Sketch <m>q(t)</m> across the whole history and state the current just after the switch.</b><span class="diff">[4]</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p>Charging for <m>0&lt;t&lt;5\tau</m>: rising as <m>2(1-e^{-t/\tau})\ \mu</m>C. After the change, with
+<m>t'=t-5\tau</m>: <m>q=1.99e^{-t'/\tau}\ \mu</m>C — the same time constant, mirrored. Just after the switch the
+capacitor still holds 1.99 <m>\mu</m>C, so the voltage across it is 1.99 V and the current is
+<m>1.99\ \text{V}/1\ \text{M}\Omega=1.99\ \mu</m>A, flowing the other way through the resistor.</p>
+<p><b>Check:</b> the charge is continuous at the switch (charge cannot jump), the current jumps from
+<m>-0.0067\ \mu</m>A to <m>-1.99\ \mu</m>A — a discontinuity in current is allowed, a discontinuity in charge is
+not ✓. This is the "initial value" reading of <m>q(t)=q_\infty-(q_\infty-q_0)e^{-t/\tau}</m> with <m>q_0=1.99</m>
+and <m>q_\infty=0</m>.</p>
+</div></details>
+</div></div>
+
+<h2>4.7 Chapter summary — the results to own</h2>
 <div class="box thm"><p class="bt">The algorithm and the shortcuts</p>
 <div class="eqd key">\text{KCL: }\sum I_{\text{in}}=\sum I_{\text{out}};\qquad
 \text{KVL: }\sum\mathcal E=\sum IR;\qquad \frac{R_1}{R_2}=\frac{R_3}{R_4}\ \text{(balance)}</div>
@@ -2427,13 +2659,14 @@ R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2};\qquad R_Y=\frac{\text{product of 
 dead branches. Balance makes a bridge's detector diagonal dispensable; off balance, nodal (or Thevenin) gives the
 detector current — direction first, number second.</p></div>
 
-<h2>4.7 Checkpoint</h2>
+<h2>4.8 Checkpoint</h2>
 <ul class="chks">
 <li>I can set up any two-loop circuit with guessed currents and sign discipline, and audit the power ledger at the end.</li>
 <li>I can prove the Wheatstone balance condition in four lines and state what it licenses (cut/short the detector).</li>
 <li>I can find an unbalanced bridge's galvanometer current by nodal analysis and predict its direction by ratios alone.</li>
 <li>I can produce <m>7R/12, 3R/4, 5R/6</m> for the cube from symmetry, and say which endpoints give which.</li>
 <li>I can convert delta to star and sum an infinite ladder via a fixed-point equation.</li>
+<li>I can write the loop equation of an RC circuit, solve it, and quote the 63%/5&#964; milestones; I know that exactly half the cell's energy is burnt in the resistor whatever its value.</li>
 </ul>
 
 <p class="skip">Next: <a href="#section-05-network-theorems"><b>Chapter 5 · Superposition, Thevenin, Norton and friends →</b></a> — theorems that replace hard networks with two numbers.</p>
@@ -2858,6 +3091,17 @@ Multiplying and adding the equations eliminates the errors only approximately; t
 <m>\sqrt{RS}</m> exactly from <m>R/l</m> and <m>S/l'</m> products. Example: <m>R=4\ \Omega</m>, balance at
 44.0 cm gives <m>S=4\times56/44=5.091\ \Omega</m>; a 2 mm end error shifts that by about 0.4% — visible, and the
 reason the swap is taught.</p></div>
+
+<div class="box def"><p class="bt">Checking the connections before you trust a balance</p>
+<p>A bridge answers only if the current actually flows the way you are assuming, so run these four checks in order
+before reading a number. (i) <b>Continuity both ways:</b> touch the jockey at the two ends of the wire and confirm the
+galvanometer deflects in <em>opposite</em> senses — if it deflects the same way at both ends, one end connection (or
+the galvanometer's own terminal) is open or crossed. (ii) <b>A balance point exists inside 0–100 cm:</b> if the null
+is only found off the wire, the ratio <m>R/S</m> is outside what the bridge can span — swap the resistors rather than
+hunting. (iii) <b>Deflection reverses about the null:</b> moving the jockey 1 cm either side of balance must send the
+galvanometer the two ways; if it does not, the galvanometer branch is missing its key or is shorted. (iv) <b>Check
+the copper strips:</b> the thick end strips, not the wire, carry the gap currents — a loose screw in a gap is the
+commonest cause of a "dead" bridge, and the reason the null moves when you press the plug.</p></div>
 
 <figure class="fig"><div class="art">
 <svg viewBox="0 0 760 200" role="img" aria-label="Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key">

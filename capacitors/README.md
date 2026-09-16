@@ -20,6 +20,19 @@ cd capacitors && python3 -m http.server 8000
 the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
 contains only the local stylesheet and scripts needed to render it offline.
 
+## Coverage — the Cengage chapter as the floor
+
+The Cengage volume's **Capacitor and Capacitance** is chapter 4 (book pp. 4.1–4.36). Every numbered contents entry
+of that chapter is mapped to a section of `Capacitors.html` in the file's own **Cengage coverage map** (front
+matter, right after *Syllabus coverage*). Three items were added or made explicit so that the floor is genuinely
+covered rather than merely implied:
+
+| added for the Cengage floor | where |
+|---|---|
+| the Kirchhoff sign convention for capacitors, written once: node potentials as unknowns, <m>q_i=C(V_i-V_j)</m>, algebraic charge sums at floating nodes, charges (not currents) conserved | §4.3, box *The sign convention* |
+| energy in a combination: which capacitor holds the joules — <m>U_i/U=C_{\text{eq}}/C_i</m> in series and <m>C_i/C_{\text{eq}}</m> in parallel, with the series-string breakdown warning | §4.2, box *Energy in a combination* |
+| effect of a dielectric on every parameter, both constraints (battery disconnected vs connected): <m>C, Q, V, E, \sigma, U</m>, cell work, force, safe voltage | §3.4, table *Dielectric inserted: every parameter, both constraints* |
+
 ## The teaching contract
 
 * **Concepts before formulas, formulas before problems.** Each chapter opens with *why the quantity exists*, then
@@ -27,7 +40,7 @@ contains only the local stylesheet and scripts needed to render it offline.
 * **Every step's reasoning is written down.** The `.why` boxes are the "but *why* is that true?" answer, and the
   `.trap` boxes name the mistake before the reader can make it.
 * **Questions interleaved with the theory**, not parked at the end: each is followed by a collapsible full solution.
-* **Diagrams over prose wherever geometry does the work** — 31 inline SVG figures, drawn so that the field lines,
+* **Diagrams over prose wherever geometry does the work** — 32 inline SVG figures, drawn so that the field lines,
   the charges and the dimensions sit in the same picture.
 * **The last chapter is a real paper**: 36 questions covering every section, at INPhO standard with JEE-format
   sections, plus a separate solutions file.
