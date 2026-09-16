@@ -13,10 +13,12 @@ from `file://`, prints to a clean PDF, and is validated by one command.
 
 | topic | chapters | figures | questions | paper | status |
 |---|---|---|---|---|---|
-| **[capacitors](capacitors/Capacitors.html)** | 1 final HTML | 32 inline SVG | 99 (63 in-chapter, each with a full solution, + 36 in the paper) | 3 h, 245 marks, INPhO standard | complete |
-| **[current-electricity](current-electricity/Current-electricity.html)** | 1 final HTML | 25 inline SVG | 143 (71 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
+| **[capacitors](capacitors/Capacitors.html)** | 1 final HTML | 32 inline SVG | 150 (78 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
+| **[current-electricity](current-electricity/Current-electricity.html)** | 1 final HTML | 26 inline SVG | 145 (73 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions file) | 3 h, 245 marks, INPhO standard | complete |
 | **[heat](heat/Heat.html)** | 1 final HTML (expandable mind-map) | 24 inline SVG | 48 (38 in-chapter, each with a full solution, + 10-question written gauntlet) | open-book gauntlet | complete |
 | **[thermodynamics](thermodynamics/Thermodynamics.html)** | 1 final HTML (expandable mind-map) | 34 inline SVG | 127 (55 in-chapter, each with a full solution, + 36 in the paper + 36 mirrored in the solutions section) | 3 h, 245 marks, INPhO standard | complete |
+| **[geometrical-optics](geometrical-optics/Geometrical-optics.html)** | 1 final HTML (12 parts) | 46 inline SVG | 152 (80 in-chapter, each with a full solution, + a 36-question paper with 36 worked solutions) | 3 h, 143 marks, INPhO standard | complete |
+| **[wave-optics](wave-optics/Wave-optics.html)** | 1 final HTML (12 parts) | 27 inline SVG | 169 (97 in-chapter, each with a full solution, + a 36-question paper with 36 worked solutions) | 3 h, 143 marks, INPhO standard | complete |
 | rotational-mechanics | — | — | — | — | planned — claim it |
 
 The table above is a summary of [`topics.json`](topics.json), which is a *checked* registry:

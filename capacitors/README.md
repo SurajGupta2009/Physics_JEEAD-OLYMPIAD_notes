@@ -17,8 +17,42 @@ cd capacitors && python3 -m http.server 8000
 ## What is in the folder
 
 `Capacitors.html` is the only HTML file in this folder. It contains the overview, all theory sections,
-the Olympiad paper, complete solutions, and the formula sheet in reading order. The `assets/` folder
+the Olympiad paper, complete solutions, and the formula sheet in reading order: 150 question blocks
+(78 in-chapter ones each with a folded solution, the 36-question paper, and its 36 mirrored solutions).
+The `assets/` folder
 contains only the local stylesheet and scripts needed to render it offline.
+
+## Coverage — the Cengage chapter as the floor
+
+The Cengage volume's **Capacitor and Capacitance** is chapter 4 (book pp. 4.1–4.36). Every numbered contents entry
+of that chapter is mapped to a section of `Capacitors.html` in the file's own **Cengage coverage map** (front
+matter, right after *Syllabus coverage*). Three items were added or made explicit so that the floor is genuinely
+covered rather than merely implied:
+
+| added for the Cengage floor | where |
+|---|---|
+| the Kirchhoff sign convention for capacitors, written once: node potentials as unknowns, <m>q_i=C(V_i-V_j)</m>, algebraic charge sums at floating nodes, charges (not currents) conserved | §4.3, box *The sign convention* |
+| energy in a combination: which capacitor holds the joules — <m>U_i/U=C_{\text{eq}}/C_i</m> in series and <m>C_i/C_{\text{eq}}</m> in parallel, with the series-string breakdown warning | §4.2, box *Energy in a combination* |
+| effect of a dielectric on every parameter, both constraints (battery disconnected vs connected): <m>C, Q, V, E, \sigma, U</m>, cell work, force, safe voltage | §3.4, table *Dielectric inserted: every parameter, both constraints* |
+
+## Order and conventions (the house rules this file follows)
+
+The file is one long document with a strict, checkable order, so that a new chapter or section can be dropped in
+without upsetting anything else:
+
+* **Numbering is contiguous across levels.** Every chapter numbers its sections <m>n.1, n.2, \ldots</m> in document
+  order, whether the heading is an `<h2>` or a sub-topic heading — chapter 1 runs 1.1 … 1.10 with 1.3 and 1.6 as
+  sub-headings, and nothing is skipped.
+* **Every chapter closes the same way.** Questions (folded solutions) → a one-line drill → a "chapter in six lines"
+  summary box → a numbered **Checkpoint** list. Chapters 1–4 keep their questions interleaved and number only the
+  checkpoint/drill; chapters 5–8 park them under a numbered *Questions* heading. Both patterns are allowed; what is
+  not allowed is an unnumbered closing block, which is why 5.12–5.14, 6.9–6.11, 7.9–7.11 and 8.6 exist.
+* **Every question has a solution.** A `<div class="q">` is always followed by a `<details class="sol">`, in-chapter
+  and in the fifteen-question drill alike; the paper's 36 questions are solved under the same numbers in chapter 10.
+* **Equation labels (`data-tag`) are unique within a chapter**, and the answer key covers all four sections of the
+  paper, Section D by headline result.
+* **Cross-references use the section numbers** (<m>§5.6</m>), never page numbers; the section numbers are stable
+  because inserting a section renumbers only its own chapter.
 
 ## The teaching contract
 
@@ -27,7 +61,7 @@ contains only the local stylesheet and scripts needed to render it offline.
 * **Every step's reasoning is written down.** The `.why` boxes are the "but *why* is that true?" answer, and the
   `.trap` boxes name the mistake before the reader can make it.
 * **Questions interleaved with the theory**, not parked at the end: each is followed by a collapsible full solution.
-* **Diagrams over prose wherever geometry does the work** — 31 inline SVG figures, drawn so that the field lines,
+* **Diagrams over prose wherever geometry does the work** — 32 inline SVG figures, drawn so that the field lines,
   the charges and the dimensions sit in the same picture.
 * **The last chapter is a real paper**: 36 questions covering every section, at INPhO standard with JEE-format
   sections, plus a separate solutions file.

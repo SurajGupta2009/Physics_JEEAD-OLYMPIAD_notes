@@ -26,10 +26,10 @@
         "Capacitors.html"
       ],
       "figures": 32,
-      "questions": 135,
-      "solutions": 64,
-      "math_spans": 3443,
-      "bytes_html": 599325,
+      "questions": 150,
+      "solutions": 78,
+      "math_spans": 3527,
+      "bytes_html": 614688,
       "paper": {
         "questions": 36,
         "sections": 4,
@@ -39,14 +39,14 @@
       },
       "deliberately_not_covered": [
         "magnetic fields and inductance (only the L that limits di/dt at a capacitor's terminals)",
-        "quantum capacitance and tunnelling beyond the one-line caveat in ch7",
+        "quantum capacitance and tunnelling beyond the one-line caveat in ch 7",
         "full transmission-line / RF treatment (lumped π model only)",
         "circuit simulation: no SPICE, all results are closed-form and checkable by hand"
       ],
       "next_candidates": [
         "12 · noise, kT/C and measurement (dielectric absorption, 1/f, shielded cables)",
         "13 · supercapacitors and electrochemistry in depth (EDL, Warburg, pseudocapacitance)",
-        "worked-problem chapter: 40 JEE-Advanced-only questions with timed hints"
+        "worked-problem chapter: the Cengage exercise sets (book pp. 4.24–4.36) with timed hints"
       ]
     },
     {
@@ -116,11 +116,11 @@
         "IPhO",
         "IOPT"
       ],
-      "figures": 25,
-      "questions": 143,
-      "solutions": 71,
-      "math_spans": 1613,
-      "bytes_html": 323552,
+      "figures": 26,
+      "questions": 145,
+      "solutions": 73,
+      "math_spans": 1800,
+      "bytes_html": 350594,
       "pages": [
         "Current-electricity.html"
       ],
@@ -132,8 +132,9 @@
         "file": "09-olympiad-paper.html"
       },
       "deliberately_not_covered": [
-        "RC/RL transients and capacitor charging (owned by capacitors ch 6)",
-        "AC circuits, impedance, three-phase power (strictly DC steady state here)",
+        "two-loop and multi-capacitor transients, relaxation oscillators and sinusoidal steady state (the one-time-constant RC circuit is now derived in ch 4 §4.6; the deeper treatment is owned by capacitors/ ch 6)",
+        "RL transients and inductance (belongs to the magnetism note-set)",
+        "AC circuits, impedance, three-phase power (strictly DC here)",
         "magnetic effects of current (belongs to the magnetism note-set)",
         "semiconductor device physics beyond the diode curve and thermistor law",
         "superconductivity beyond the DC ledger: no BCS, no Josephson junctions",
@@ -141,7 +142,7 @@
       ],
       "next_candidates": [
         "12 · AC steady state: phasors, impedance, power factor, resonance (the natural sequel)",
-        "worked-problem chapter: 40 JEE-Advanced-only numericals with timed hints",
+        "worked-problem chapter: the Cengage exercise sets (book pp. 5.38–5.55, 6.11–6.20, 7.12–7.20) re-derived with the ch 8 playbook",
         "magnetic effects of current: the field twin of this set, sharing its audit discipline"
       ]
     },
@@ -176,6 +177,95 @@
       "solutions": 48,
       "math_spans": 566,
       "bytes_html": 240766
+    },
+    {
+      "slug": "geometrical-optics",
+      "title": "Geometrical Optics — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "geometrical-optics/Geometrical-optics.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "pages": [
+        "Geometrical-optics.html"
+      ],
+      "figures": 46,
+      "questions": 152,
+      "solutions": 80,
+      "math_spans": 2598,
+      "bytes_html": 581318,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 143,
+        "minutes": 180,
+        "file": "Geometrical-optics.html",
+        "anchor": "section-10-paper"
+      },
+      "deliberately_not_covered": [
+        "wave optics (Cengage ch 2 — interference, diffraction, polarisation): a separate note-set, by the scope decision for this folder",
+        "Fresnel coefficients, Brewster's angle and polarisation on reflection (they need the wave picture; only the ray geometry is here)",
+        "evanescent-wave depth and frustrated total internal reflection beyond the one-paragraph physical picture in part 4",
+        "third-order aberration coefficients, Zernike polynomials and computer lens optimisation (part 8 stops at the h²/h³ scalings and the two-element achromat)",
+        "graded-index fibre mode theory (only the meridional-ray numerical aperture and the bend-limit estimate are worked)",
+        "computer ray tracing: every figure is drawn from a closed-form geometry or a hand-checked table"
+      ],
+      "next_candidates": [
+        "wave optics: the natural sequel, reusing part 8's Fermat and matrix language in reverse",
+        "lens design lab: spectacles prescription to surface radii, and the achromatic pair worked by hand",
+        "worked-problem companion: the Cengage exercise sets (book pp. 1.89-1.129) re-derived with the part 9 playbook",
+        "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
+      ]
+    },
+    {
+      "slug": "wave-optics",
+      "title": "Wave Optics — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "wave-optics/Wave-optics.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "pages": [
+        "Wave-optics.html"
+      ],
+      "figures": 27,
+      "questions": 169,
+      "solutions": 97,
+      "math_spans": 1967,
+      "bytes_html": 466634,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 143,
+        "minutes": 180,
+        "file": "Wave-optics.html",
+        "anchor": "section-10-paper"
+      },
+      "deliberately_not_covered": [
+        "quantum optics: photon statistics, single-photon interference and the quantum eraser (part 7 stops at the classical coherence picture)",
+        "partial coherence theory in the Born–Wolf sense (mutual coherence functions; only the visibility/path-imbalance picture is worked)",
+        "electromagnetic derivation of the Fresnel coefficients from Maxwell's boundary conditions (they are stated and used, with the physics of the flip explained, not derived from ∇×E)",
+        "anisotropic crystal optics beyond uniaxial calcite and quartz: biaxial indicatrices, conoscopy and interference figures",
+        "nonlinear optics, acousto- and electro-optic modulation, and fibre mode theory",
+        "computer FFTs: every figure is drawn from a closed-form expression or a hand-checked table"
+      ],
+      "next_candidates": [
+        "polarisation optics companion: Jones calculus, Stokes parameters and a lab manual for a polarimeter",
+        "interferometry companion: white-light, phase-shifting and heterodyne interferometry with error budgets",
+        "modern physics sequence from the same Cengage volume: photoelectric effect and atomic physics",
+        "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
+        "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
+      ]
     }
   ]
 }
