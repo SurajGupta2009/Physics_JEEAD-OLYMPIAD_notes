@@ -220,6 +220,51 @@
         "worked-problem companion: the Cengage exercise sets (book pp. 1.89-1.129) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
       ]
+    },
+    {
+      "slug": "wave-optics",
+      "title": "Wave Optics — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "wave-optics/Wave-optics.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO",
+        "IOPT"
+      ],
+      "pages": [
+        "Wave-optics.html"
+      ],
+      "figures": 27,
+      "questions": 169,
+      "solutions": 97,
+      "math_spans": 1967,
+      "bytes_html": 466634,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 143,
+        "minutes": 180,
+        "file": "Wave-optics.html",
+        "anchor": "section-10-paper"
+      },
+      "deliberately_not_covered": [
+        "quantum optics: photon statistics, single-photon interference and the quantum eraser (part 7 stops at the classical coherence picture)",
+        "partial coherence theory in the Born–Wolf sense (mutual coherence functions; only the visibility/path-imbalance picture is worked)",
+        "electromagnetic derivation of the Fresnel coefficients from Maxwell's boundary conditions (they are stated and used, with the physics of the flip explained, not derived from ∇×E)",
+        "anisotropic crystal optics beyond uniaxial calcite and quartz: biaxial indicatrices, conoscopy and interference figures",
+        "nonlinear optics, acousto- and electro-optic modulation, and fibre mode theory",
+        "computer FFTs: every figure is drawn from a closed-form expression or a hand-checked table"
+      ],
+      "next_candidates": [
+        "polarisation optics companion: Jones calculus, Stokes parameters and a lab manual for a polarimeter",
+        "interferometry companion: white-light, phase-shifting and heterodyne interferometry with error budgets",
+        "modern physics sequence from the same Cengage volume: photoelectric effect and atomic physics",
+        "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
+        "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
+      ]
     }
   ]
 }
