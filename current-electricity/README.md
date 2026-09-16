@@ -53,8 +53,13 @@ current-divider — plus the transient material Cengage keeps in this chapter (�
 
 ## Handover notes (for the next writer)
 
-* Chapters 1–3 interleave their questions late (one Questions block per chapter); chapters 4–7 mix them into the
-  flow. Both patterns pass the checker; pick whichever suits the chapter you add.
+* Chapters 1–3 and 6–7 park their questions under a numbered *Questions* section; chapters 4–5 mix them into the
+  flow. Both patterns pass the checker; pick whichever suits the chapter you add — but keep every closing block
+  numbered (summary then checkpoint; §4.6's questions continue the chapter's own count, Q9 and Q10).
+* Equation labels (`data-tag`) are numbered <m>n.1, n.2, \ldots</m> in document order within each chapter and are
+  unique; after inserting a section, renumber the rest of that chapter's tags.
+* The answer key covers Sections A–C as answers and Section D as headline results, so a marked paper can be
+  audited without opening the solutions page.
 * The unbalanced bridge (arms 10/20/30/40 Ω, 10 V) is the recurring worked example: nodal (ch 4) → Thevenin/Norton
   (ch 5) → reciprocity swap (ch 5). Keep new examples consistent with its numbers (V_th = 0.952 V, R_th = 23.81 Ω,
   I_sc = 40.0 mA) rather than re-deriving a second bridge.

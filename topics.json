@@ -26,10 +26,10 @@
         "Capacitors.html"
       ],
       "figures": 32,
-      "questions": 135,
-      "solutions": 64,
+      "questions": 150,
+      "solutions": 78,
       "math_spans": 3527,
-      "bytes_html": 612147,
+      "bytes_html": 614688,
       "paper": {
         "questions": 36,
         "sections": 4,
@@ -119,8 +119,8 @@
       "figures": 26,
       "questions": 145,
       "solutions": 73,
-      "math_spans": 1778,
-      "bytes_html": 348680,
+      "math_spans": 1800,
+      "bytes_html": 350594,
       "pages": [
         "Current-electricity.html"
       ],

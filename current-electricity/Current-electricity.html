@@ -1077,7 +1077,8 @@ chapters <b>9–10</b> are the full paper with detailed solutions; chapter <b>11
 
 <div class="box thm"><p class="bt">Exam note</p>
 <p>JEE Advanced and Main draw this topic from three syllabus lines: Ohm's law with drift velocity and relaxation
-time, Kirchhoff's laws with Wheatstone bridge and potentiometer, and cells, internal resistance and combinations.
+time, Kirchhoff's laws with Wheatstone bridge and potentiometer, cells, internal resistance and combinations, and
+the RC time constant (kept in this chapter, as Cengage does, in §4.6).
 The Olympiad track (NSEP → INPhO) adds the estimation culture — fuses, transmission, thermoelectric EMFs,
 superconducting persistence — which is chapter 7's whole content, and expects the audit-and-check discipline of
 chapter 8 in every long answer. The paper of chapter 9 is set to that joint standard: sections A–C in JEE format,
@@ -1223,7 +1224,7 @@ law of nature</b> (chapter 4 uses it as step one of every network solve).</p></d
   <text x="370" y="160" class="lbl sm" text-anchor="middle">the segment in between stores no charge</text>
   <text x="370" y="176" class="lbl sm" text-anchor="middle">⇒ I₁ = I₂ (steady state)</text>
 </svg></div>
-<figcaption><b>Fig. 1.2 — Steady state means every cross-section passes the same current.</b> If <m>I_2&gt;I_1</m> the segment would
+<figcaption><b>Fig. 1.1 — Steady state means every cross-section passes the same current.</b> If <m>I_2&gt;I_1</m> the segment would
 pile up charge until its field corrected the flow; that correction time is <m>10^{-14}</m> s, which is why series
 elements carry equal currents without exception.</figcaption></figure>
 
@@ -1246,7 +1247,7 @@ elements carry equal currents without exception.</figcaption></figure>
   <text x="560" y="185" class="lbl sm">tilted: I = jA cos θ — only the</text>
   <text x="560" y="198" class="lbl sm">component along the normal counts</text>
 </svg></div>
-<figcaption><b>Fig. 1.1 — Current is the flux of <m>\vec j</m>, so tilt costs a factor of <m>\cos\theta</m>.</b> The wires
+<figcaption><b>Fig. 1.2 — Current is the flux of <m>\vec j</m>, so tilt costs a factor of <m>\cos\theta</m>.</b> The wires
 meeting at an angle in a junction do not add like vectors, yet each <em>surface</em> they cross feels
 <m>\vec j\cdot\hat n</m> — the scalar flux view keeps both facts straight.</figcaption></figure>
 
@@ -1281,7 +1282,7 @@ confusing them is the classic error this chapter exists to prevent.</figcaption>
 <p>1 A in copper of cross-section 1 mm²: worked out in §1.5, the drift speed is
 <m>7\times10^{-5}</m> m s<sup>−1</sup> — about <b>26 cm per hour</b> — while the random speed of the same electrons
 is <m>\sim10^{6}</m> m s<sup>−1</sup>. The ratio is <m>10^{-10}</m>. A wire carries a large current while its
-electrons barely relocate; the energy travels in the field at nearly light speed (§1.6), not in the electron cargo.</p></div>
+electrons barely relocate; the energy travels in the field at nearly light speed (§1.5), not in the electron cargo.</p></div>
 
 <h2>1.4 From collisions to Ohm's law</h2>
 
@@ -1319,7 +1320,7 @@ then use <m>\sigma=ne^{2}\tau/m</m> backwards to find <m>\tau</m>.</p>
 (for <m>E_F\approx7</m> eV), so the mean free path is <m>v_F\tau\approx4\times10^{-8}</m> m ≈ 40 nm — about
 150 atomic spacings, which is why metals conduct so well: an electron sails past many atoms before scattering.
 <b>Check:</b> the drift-to-thermal ratio <m>7.4\times10^{-5}/1.2\times10^{5}\approx6\times10^{-10}</m> — the
-drift is a whisper on top of a storm, exactly as Fig. 1.2 shows.</p></div>
+drift is a whisper on top of a storm, exactly as Fig. 1.3 shows.</p></div>
 
 <div class="box def"><p class="bt">Mobility — the carrier's obedience rating</p>
 <p>Define the <b>mobility</b> as the drift speed a carrier acquires per unit driving field:</p>
@@ -2194,7 +2195,7 @@ voltage is a signed quantity: below EMF in discharge, above in charge. Mixed gro
 
 
 <p class="meta" id="top">
-<span class="badges"><span class="b n">Chapter 4 of 11</span><span class="b j">JEE Advanced · engine</span><span class="b n">≈ 50 min read · 8 questions</span></span>
+<span class="badges"><span class="b n">Chapter 4 of 11</span><span class="b j">JEE Advanced · engine</span><span class="b n">≈ 55 min read · 10 questions</span></span>
 </p>
 <h1>Kirchhoff, bridges and equivalent resistance</h1>
 <p class="lead">Chapters 1–3 gave you the physics; this chapter gives you the <b>algorithm</b>. Two laws — charge
@@ -2327,7 +2328,7 @@ harvests:</p>
 <p>Twelve equal resistors <m>R</m> form a cube. Drive current in at corner A, out at the opposite corner G. The
 three edges from A are equivalent by symmetry, so each carries <m>I/3</m>; the three edges into G likewise carry
 <m>I/3</m>. The six middle edges split as <m>I/6</m>. Then</p>
-<div class="eqd key" data-tag="4.3">V_{AG}=\frac{I}{3}R+\frac{I}{6}R+\frac{I}{3}R=\frac{5IR}{6}
+<div class="eqd key" data-tag="4.5">V_{AG}=\frac{I}{3}R+\frac{I}{6}R+\frac{I}{3}R=\frac{5IR}{6}
 \ \Rightarrow\ R_{AG}=\frac{5R}{6}\ \text{(body diagonal)}</div>
 <p>The same symmetry-planes argument with <b>edge</b> endpoints gives <m>7R/12</m>, and with <b>face-diagonal</b>
 endpoints gives <m>3R/4</m> (Q3 walks you through the face-diagonal case). Q7 shows the power of the converse:
@@ -2368,7 +2369,7 @@ naming the equipotential planes perpendicular to the body diagonal; no simultane
 <m>R_1(AB),R_2(BC),R_3(AD),R_4(DC)</m>. Suppose <m>I_{BD}=0</m>. Then <m>R_1,R_2</m> carry a common current
 <m>I_a</m> and <m>R_3,R_4</m> a common <m>I_b</m>, and equal potentials at B and D force
 <m>I_aR_1=I_bR_3</m> and <m>I_aR_2=I_bR_4</m>. Dividing:</p>
-<div class="eqd key" data-tag="4.4">\boxed{\frac{R_1}{R_2}=\frac{R_3}{R_4}}\qquad\text{(balance: detector current exactly zero)}</div>
+<div class="eqd key" data-tag="4.6">\boxed{\frac{R_1}{R_2}=\frac{R_3}{R_4}}\qquad\text{(balance: detector current exactly zero)}</div>
 <p>The logic runs both ways: if the ratios match, <m>B</m> and <m>D</m> are at equal potential <em>however</em> you
 feed the bridge, so the detector branch may be deleted (or any resistance inserted there — Q7). This is why the
 null method is king of precision measurement (chapter 6): at balance the detector's own imperfections are irrelevant,
@@ -2414,7 +2415,7 @@ one-line direction check worth doing before any algebra.</p></div>
 
 <div class="box thm"><p class="bt">Delta–star (Δ–Y) conversion</p>
 <p>Three resistors <m>R_{12},R_{23},R_{31}</m> in a delta are equivalent, seen from their terminals, to a star of</p>
-<div class="eqd key" data-tag="4.5">R_1=\frac{R_{12}R_{31}}{R_{12}+R_{23}+R_{31}},\qquad
+<div class="eqd key" data-tag="4.7">R_1=\frac{R_{12}R_{31}}{R_{12}+R_{23}+R_{31}},\qquad
 R_2=\frac{R_{12}R_{23}}{S},\qquad R_3=\frac{R_{23}R_{31}}{S},\qquad S=R_{12}+R_{23}+R_{31}</div>
 <p>each star arm = <b>product of the two delta sides touching that terminal ÷ sum of all three</b>. For a symmetric
 delta <m>(R,R,R)</m> the star is <m>(R/3,R/3,R/3)</m>. Validity: the equivalence is exact for terminal behaviour
@@ -2425,7 +2426,7 @@ this numerically).</p></div>
 <div class="box thm"><p class="bt">The infinite ladder — self-similarity as an equation</p>
 <p>Remove one section from an infinite ladder of series <m>R_s</m> and shunt <m>R_p</m>; what remains is the same
 ladder. If its input resistance is <m>R_\infty</m>:</p>
-<div class="eqd key" data-tag="4.6">R_\infty=R_s+\frac{R_pR_\infty}{R_p+R_\infty}
+<div class="eqd key" data-tag="4.8">R_\infty=R_s+\frac{R_pR_\infty}{R_p+R_\infty}
 \ \Rightarrow\ R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2}</div>
 <p>the positive root, because resistance is positive. For <m>R_s=2,R_p=1</m>: <m>R_\infty=1+\sqrt3=2.732\ \Omega</m>;
 for <m>R_s=R_p=1</m>: <m>R_\infty=(1+\sqrt5)/2</m> — the golden ratio appears in a resistor network. <b>Check:</b>
@@ -2529,16 +2530,16 @@ in the companion note-set <em>Capacitors</em>, chapter 6.</p>
 (any current may flow through it, with no voltage across it). A capacitor that has been in a DC circuit for a long
 time has <m>i=C\,dV/dt=0</m>: it behaves like an <b>open circuit</b>. Between those limits the circuit is genuinely
 time-dependent, and the crossover time is</p>
-<div class="eqd key" data-tag="4.5">\tau=RC\qquad[\,\Omega\cdot\text{F}=\text{s}\,]</div>
+<div class="eqd key" data-tag="4.9">\tau=RC\qquad[\,\Omega\cdot\text{F}=\text{s}\,]</div>
 <p>The unit check is worth doing once: <m>\Omega\cdot\text{F}=(\text{V}/\text{A})(\text{C}/\text{V}) =\text{C}/\text{A}=\text{s}</m> ✓. Every insulating "why is there no current?" answer in the chapter is the open-circuit
 limit; every "which bulb lights first?" question is the short-circuit limit.</p></div>
 
 <div class="box thm"><p class="bt">Charging: the loop equation and its solution</p>
 <p>Cell <m>\mathcal E</m>, resistor <m>R</m>, uncharged capacitor <m>C</m> in series; switch closed at <m>t=0</m>.
 The loop law around the single mesh is</p>
-<div class="eqd" data-tag="4.6">\mathcal E=iR+\frac{q}{C}=R\frac{dq}{dt}+\frac{q}{C},\qquad q(0)=0</div>
+<div class="eqd" data-tag="4.10">\mathcal E=iR+\frac{q}{C}=R\frac{dq}{dt}+\frac{q}{C},\qquad q(0)=0</div>
 <p>whose solution (separate the variables, or differentiate to get <m>i</m> first) is</p>
-<div class="eqd key" data-tag="4.7">q(t)=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad
+<div class="eqd key" data-tag="4.11">q(t)=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad
 i(t)=\frac{\mathcal E}{R}e^{-t/\tau},\qquad V_C(t)=\mathcal E\left(1-e^{-t/\tau}\right)</div>
 <p>Read the three factors: the <b>final charge</b> is <m>C\mathcal E</m> and is set by the capacitor alone;
 the <b>initial current</b> is <m>\mathcal E/R</m> and is set by the resistor alone (the capacitor is a short at
@@ -2550,7 +2551,7 @@ quantity has covered <m>1-e^{-1}=63.2\%</m> of its journey, at <m>3\tau</m> it i
 <div class="box def"><p class="bt">The general formula that covers every case — including "the other approach"</p>
 <p>Charging, discharging, a capacitor that starts part-charged, a capacitor connected to a new cell: all of them are
 the same statement, that the approach to the final value is exponential:</p>
-<div class="eqd key" data-tag="4.8">q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau}</div>
+<div class="eqd key" data-tag="4.12">q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau}</div>
 <p>with <m>q_0</m> the charge at <m>t=0</m> and <m>q_\infty</m> the charge the circuit would settle at if you waited
 forever. Check it against the two cases above: charging has <m>q_0=0,\ q_\infty=C\mathcal E</m>; discharging
 through <m>R</m> with the cell removed has <m>q_\infty=0</m>, giving <m>q=Q_0e^{-t/\tau}</m>. In a network,
@@ -2563,7 +2564,7 @@ voltage <m>V_0=Q_0/C</m> shorted through <m>R</m>. Half-life: <m>t_{1/2}=\tau\ln
 <div class="box why"><p class="bt">Where the energy goes — and why the resistance does not matter</p>
 <p>Charge the capacitor from a cell: the cell delivers <m>\int\mathcal E\,i\,dt=C\mathcal E^{2}</m>, the capacitor
 stores <m>\tfrac12C\mathcal E^{2}</m>, and the resistor dissipates</p>
-<div class="eqd key" data-tag="4.9">\int I^{2}R\,dt=\tfrac12C\mathcal E^{2}\qquad\text{independent of }R</div>
+<div class="eqd key" data-tag="4.13">\int I^{2}R\,dt=\tfrac12C\mathcal E^{2}\qquad\text{independent of }R</div>
 <p><b>Exactly half of the energy is lost, whatever the resistance.</b> Make <m>R</m> smaller and the process is
 faster but not cheaper: the current is larger for a shorter time, and the integral is identical. (The same result
 appears in the capacitors note-set as the two-capacitor paradox — charging one capacitor from another instead of from
@@ -2626,7 +2627,7 @@ constant — that circuit has as many <m>\tau</m>'s as it has independent charge
 answer with a steady current through a capacitor is wrong before it is arithmetic.</li>
 </ul></div>
 
-<div class="q"><div class="hd"><span class="lab">Q3</span><b>A charged capacitor of <m>2\ \mu\text{F}</m> at 50 V is connected across a <m>5\ \text{k}\Omega</m> resistor. How long until the voltage falls below 5 V, and what total energy is dissipated?</b><span class="diff">[3]</span></div>
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>A charged capacitor of <m>2\ \mu\text{F}</m> at 50 V is connected across a <m>5\ \text{k}\Omega</m> resistor. How long until the voltage falls below 5 V, and what total energy is dissipated?</b><span class="diff">[3]</span></div>
 <div class="bd">
 <details class="sol"><summary>Solution</summary><div class="bd">
 <p><m>\tau=RC=5000\times2\times10^{-6}=10</m> ms. Discharge: <m>V=V_0e^{-t/\tau}</m>, so
@@ -2635,7 +2636,7 @@ answer with a steady current through a capacitor is wrong before it is arithmeti
 </div></details>
 </div></div>
 
-<div class="q"><div class="hd"><span class="lab">Q4</span><b>In the circuit of worked example 4.3 the cell is removed at <m>t=5\tau</m> and the capacitor is discharged through the same resistor. Sketch <m>q(t)</m> across the whole history and state the current just after the switch.</b><span class="diff">[4]</span></div>
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>In the circuit of worked example 4.3 the cell is removed at <m>t=5\tau</m> and the capacitor is discharged through the same resistor. Sketch <m>q(t)</m> across the whole history and state the current just after the switch.</b><span class="diff">[4]</span></div>
 <div class="bd">
 <details class="sol"><summary>Solution</summary><div class="bd">
 <p>Charging for <m>0&lt;t&lt;5\tau</m>: rising as <m>2(1-e^{-t/\tau})\ \mu</m>C. After the change, with
@@ -2655,6 +2656,8 @@ and <m>q_\infty=0</m>.</p>
 \text{KVL: }\sum\mathcal E=\sum IR;\qquad \frac{R_1}{R_2}=\frac{R_3}{R_4}\ \text{(balance)}</div>
 <div class="eqd key">R_{\text{cube}}=\tfrac{7}{12}R,\tfrac34R,\tfrac56R;\qquad
 R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2};\qquad R_Y=\frac{\text{product of touching sides}}{\text{sum of sides}}</div>
+<div class="eqd key">\tau=RC;\qquad q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau};\qquad
+q_{\text{charge}}=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad q_{\text{discharge}}=Q_0e^{-t/\tau}</div>
 <p>Guess arrows, write consistent signs, audit powers. Symmetry before algebra: name equipotential nodes and delete
 dead branches. Balance makes a bridge's detector diagonal dispensable; off balance, nodal (or Thevenin) gives the
 detector current — direction first, number second.</p></div>
@@ -4493,6 +4496,8 @@ battery, keeps the books.</p>
 </div></div></div>
 
 <h2>Answer key</h2>
+<p class="note">Marks: <m>12\times3+6\times4+8\times4+153=245</m> in total. Section D is marked as printed —
+nine questions at [15] and Q36 at [18] — and part-answers earn partial credit, so never leave one blank.</p>
 <table class="tb">
 <thead><tr><th colspan="4">A</th><th colspan="2">B</th><th colspan="4">C</th></tr></thead>
 <tbody><tr>
@@ -4503,6 +4508,16 @@ battery, keeps the books.</p>
 <td>19 0.25 mm/s</td><td>20 716 Ω</td><td>21 12.9 mA</td><td>22 0.100 Ω</td>
 <td>23 40.0 mA</td><td>24 3.20 kW</td><td>25 1.2 V</td><td>26 33 V</td>
 </tr></tbody></table>
+
+<table class="tb">
+<thead><tr><th>D</th><th class="e">headline result</th><th>D</th><th class="e">headline result</th></tr></thead>
+<tbody>
+<tr><td>27</td><td class="e"><m>V_{AB}=7.5</m> V; 1.5 A in the load, battery 2 <em>charging</em> at 3 A</td><td>32</td><td class="e">shunt 0.1001 <m>\Omega</m>; multiplier 9.90 k<m>\Omega</m>; loading error quantified</td></tr>
+<tr><td>28</td><td class="e">off balance: <m>R_{\text{th}}=23.8\ \Omega</m>, <m>I_g=12.9</m> mA; reciprocity swaps drive and response only</td><td>33</td><td class="e">body diagonal <m>5R/6</m>, face <m>3R/4</m>, edge <m>7R/12</m>; bridged case <m>R/2</m></td></tr>
+<tr><td>29</td><td class="e">hemisphere <m>\rho/2\pi a=31.8\ \Omega</m>; two far electrodes <m>63.7\ \Omega</m>; spheres <m>\rho/4\pi a</m></td><td>34</td><td class="e">200 V: 2.5 MW (25×); 20 kV: 0.25%; fuse current <m>\propto r^{3/2}</m></td></tr>
+<tr><td>30</td><td class="e"><m>R=r=2\ \Omega</m>, <m>P_{\max}=18</m> W, <m>\eta=50\%</m> — matching is not efficiency</td><td>35</td><td class="e"><m>I=1.571</m> A by superposition, Thévenin and Norton; <m>\eta=63.7\%</m></td></tr>
+<tr><td>31</td><td class="e">gradient 0.5 V m<sup>−1</sup>; wire drop 5.0 V; 4 <m>\Omega</m> of driver resistance besides the wire</td><td>36</td><td class="e">naive ammeter-inside scheme reads 0.60 <m>\Omega</m> for 0.10 <m>\Omega</m> (+500%); four-terminal wins</td></tr>
+</tbody></table>
 
 <div class="box thm"><p class="bt">After marking: the four things to fix first</p>
 <ol>

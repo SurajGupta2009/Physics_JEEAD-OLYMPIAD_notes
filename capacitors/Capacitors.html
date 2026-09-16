@@ -1163,7 +1163,7 @@ The last three rows are outside the JEE list but are standard Olympiad material;
 <tr><td>Series and parallel combinations; networks of capacitors</td><td>4</td><td>Bridges (balanced and not), cube, ladders, Δ–Y, node-charge method, redistribution losses</td></tr>
 <tr><td>RC circuits, charging and discharging, time constant</td><td>6</td><td>Two-loop transients, Thévenin for <m>\tau</m>, energy split, relaxation oscillators</td></tr>
 <tr><td>Electrostatic potential and energy, field lines, Gauss's law</td><td>1</td><td>Flux through a disc, solid angle, potential from the field, why conductors are equipotentials</td></tr>
-<tr><td>Conductors and insulators in an electrostatic field; shielding</td><td>1.3</td><td>Charge in a cavity, Faraday cage, force and pressure on a surface element</td></tr>
+<tr><td>Conductors and insulators in an electrostatic field; shielding</td><td>1.2, 1.7, 1.8</td><td>Charge in a cavity, Faraday cage, force and pressure on a surface element</td></tr>
 <tr><td class="up">— Method of images (not in the JEE list, common in NSEP)</td><td>1.6, 7.2</td><td>Grounded plane, grounded sphere, sphere-to-plane capacitance, force by images</td></tr>
 <tr><td class="up">— Coefficients of capacitance and potential; reciprocity</td><td>7.1</td><td>Matrix formulation, Green's reciprocity with proof, three fast applications</td></tr>
 <tr><td class="up">— Variational thinking; stability, MEMS pull-in, droplet limit</td><td>3.6, 7.5, 7.6</td><td>Stability of a suspended plate, snap-through, Rayleigh fission limit</td></tr>
@@ -4107,7 +4107,7 @@ amplifier design.)</li>
 ferroelectric with 10 MV/m by a factor of 100. That is the entire reason the "biggest capacitor" in a pulse-formation
 line is a stack of film, not ceramic — and that is the correct answer to "why doesn't everybody use BaTiO₃?"</p>
 
-<h2>Questions</h2>
+<h2>5.12 Questions</h2>
 <p>Try each before opening its solution; the first four are the ones JEE asks with the numbers changed.</p>
 
 <div class="q"><div class="hd"><span class="lab">Q1</span><b>A parallel-plate capacitor (<m>A=100\ \text{cm}^2</m>, <m>d=1.0\ \text{mm}</m>) is charged to 100 V and <em>left connected</em> to the supply. A sheet of mica (<m>\kappa=5.4</m>) is then slid fully into the gap. Compute every quantity in the audit: <m>C,Q,E,D,\sigma_f,\sigma_b,U</m>, the work the battery does, and the mechanical work the slab gains.</b><span class="diff">JEE-adv · the audit</span></div>
@@ -4358,7 +4358,7 @@ as a film (which shorts it).</p>
 </div></details>
 </div></div>
 
-<h2>Drill: say it in one line</h2>
+<h2>5.13 Drill: say it in one line</h2>
 <table class="tb">
 <thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
 <tbody>
@@ -4388,6 +4388,7 @@ the metal slab and a filled gap are the <m>\kappa\to\infty</m> and <m>t=d</m> li
 <m>\kappa''=\Delta\omega\tau/(1+\omega^{2}\tau^{2})+\sigma/\omega\varepsilon_0</m>.</li>
 </ul></div>
 
+<h2>5.14 Checkpoint</h2>
 <ul class="chks">
 <li>Derive <m>\sigma_b=\vec P\cdot\hat n</m> with a pillbox, without looking.</li>
 <li>Derive Clausius–Mossotti from <m>P=n\alpha(E+P/3\varepsilon_0)</m> in under a minute, and state its three limits (§5.4).</li>
@@ -4616,7 +4617,7 @@ Spotting it is worth the whole calculation, and it is the capacitor analogue of 
 </ul>
 
 <h2>6.5 The compensated divider: where the transient disappears</h2>
-<p>The circuit of Fig. 6.4 — <m>R_1\parallel C_1</m> in series with <m>R_2\parallel C_2</m>, driven by a step — is
+<p>The circuit of Fig. 6.3 — <m>R_1\parallel C_1</m> in series with <m>R_2\parallel C_2</m>, driven by a step — is
 the oscilloscope probe, the compensating network in every resistive HV divider, and the clearest illustration that
 "the capacitor is the frequency version of the resistor". Node equation at the junction:</p>
 <div class="eqd">\frac{V_s-V_J}{R_1}+C_1\frac{d(V_s-V_J)}{dt}=\frac{V_J}{R_2}+C_2\frac{dV_J}{dt}
@@ -4796,7 +4797,7 @@ the other only magnitude (a pure resistor). With <m>Z_2</m> a resistor and <m>Z_
 one bridge: <b>a complex balance condition is two conditions, and a bridge with only one adjustable element cannot
 null at an unknown frequency.</b></p></div>
 
-<h2>Questions</h2>
+<h2>6.9 Questions</h2>
 <p>The first five are standard JEE Advanced shapes; the rest are where INPhO pushes.</p>
 
 <div class="q"><div class="hd"><span class="lab">Q1</span><b>A capacitor C is charged from a cell V through R. At what time are the powers in R and in C equal, and what fraction of the total heat has been produced by then?</b><span class="diff">base · two lines</span></div>
@@ -5021,7 +5022,7 @@ it. Half the questions in this chapter are decided by noticing which of the two 
 </div></details>
 </div></div>
 
-<h2>Drill: say it in one line</h2>
+<h2>6.10 Drill: say it in one line</h2>
 <table class="tb">
 <thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
 <tbody>
@@ -5053,6 +5054,7 @@ cancelled, a distributed line the case where there are infinitely many and <m>Q\
 same <m>\tau</m> that in AC clothes is <m>f_c=1/2\pi\tau</m>.</li>
 </ul></div>
 
+<h2>6.11 Checkpoint</h2>
 <ul class="chks">
 <li>State the four-step steady-state algorithm and the three false statements in §6.1's trap box, each with its
 reason.</li>
@@ -5599,7 +5601,7 @@ either member; the Taylor cone is the shape the liquid adopts to <em>spread</em>
 <td class="e">the fold, and the critical voltage or charge</td></tr>
 </tbody></table>
 
-<h2>Questions</h2>
+<h2>7.9 Questions</h2>
 
 <div class="q"><div class="hd"><span class="lab">Q1</span><b>Two identical conducting spheres of radius a have their centres a distance <m>d=4a</m> apart. To leading order in <m>a/d</m> write their elastance (<m>\mathbf p</m>) matrix, invert it, and find the charge–voltage ratio <m>Q_1/(V_1-V_2)</m> when (i) the pair is driven as a two-terminal capacitor (<m>Q_2=-Q_1</m>), (ii) sphere 1 is driven and sphere 2 is left <em>floating</em>, (iii) sphere 1 is driven and sphere 2 is <em>earthed</em>. Rank the three.</b><span class="diff">INPhO · matrices at work</span></div>
 <div class="bd">
@@ -5807,7 +5809,7 @@ equipotential, in which case it is a no-op" — the second version is what a mar
 </div></details>
 </div></div>
 
-<h2>Drill: say it in one line</h2>
+<h2>7.10 Drill: say it in one line</h2>
 <table class="tb">
 <thead><tr><th>#</th><th>statement</th><th>right / wrong, and why</th></tr></thead>
 <tbody>
@@ -5840,6 +5842,7 @@ the same energy-shape gives the Rayleigh charge <m>Q_R^{2}=64\pi^{2}\varepsilon_
 <m>49.3^\circ</m> Taylor cone.</li>
 </ul></div>
 
+<h2>7.11 Checkpoint</h2>
 <ul class="chks">
 <li>Write the 2-conductor <m>\mathbf c</m> matrix from a <m>\mathbf p</m> matrix, and state the four structural facts
 (§7.1) with one-line proofs.</li>
@@ -6063,74 +6066,115 @@ and a bounded answer written down first is the cheapest insurance in a timed pap
 </tbody></table>
 
 <h2>8.5 Fifteen questions, fifteen minutes</h2>
-<p>One line each, no calculator. Cover the answers, and grade yourself on the <em>reason</em>, not the number: an
-answer arrived at by the right rule and wrong arithmetic is a better exam performance than the reverse.</p>
+<p>One line each, no calculator, sixty seconds apiece. The answer and the one-line reason fold out under each
+question: cover it, answer first, then grade yourself on the <em>reason</em>, not the number — an answer arrived at by
+the right rule with wrong arithmetic is a better exam performance than the reverse.</p>
 
-<div class="ex"><p class="exh">Drill (1 line each)</p>
-<ol>
-<li>Two capacitors <m>C</m> and <m>2C</m> in series across <m>V_0</m>. Voltage across the smaller one?</li>
-<li>A <m>1</m> nF capacitor charged to 100 V is connected across an identical uncharged one. Energy lost?</li>
-<li>An isolated charged capacitor has its slab (<m>\kappa=4</m>, filling half the gap) removed. What happens to
-<m>U</m>, to <m>E</m> in the dielectric part, and to the force you must exert while pulling?</li>
-<li>A resistor is added in parallel with the ideal cell feeding an <m>RC</m> circuit. What changes in
-<m>V_C(t)</m>, and what in <m>\tau</m>?</li>
-<li>The plates of an isolated charged parallel-plate capacitor are pulled to double the gap. Force now, compared
-with before?</li>
-<li>A charge <m>q</m> at the centre of a neutral conducting spherical shell (radii <m>a,b</m>): potential of the
-shell?</li>
-<li>Same radius: which holds more charge at the same potential, a sphere or a disc?</li>
-<li>Can a mutual coefficient <m>c_{12}</m> of a two-conductor capacitance matrix be positive?</li>
-<li>Two capacitors in parallel, one with a dielectric, still joined by a wire. The slab is slid out. Which way does
-charge move, and what happens to <m>V</m>?</li>
-<li>Ratio of heat produced in <m>R</m> to energy finally stored, charging an uncharged capacitor from a cell?</li>
-<li>A 555 with <m>R=1</m> MΩ and <m>C=1</m> µF in the astable connection: period?</li>
-<li>A 10 nm <m>SiO₂</m> gate stack (κ = 3.9) is replaced by HfO₂ (κ = 25) at the same capacitance: thickness?</li>
-<li>Why is the field inside a thin disc-shaped void <m>\kappa E_0</m> while a needle-shaped void along the field sees
-<m>E_0</m>?</li>
-<li>Two spheres, radii <m>R</m> and <m>2R</m>, connected by a long thin wire. Ratio of their surface fields?</li>
-<li>Rms thermal noise voltage on a <m>1</m> pF capacitor at 300 K?</li>
-</ol></div>
-
-<details class="sol"><summary>Answers and one-line reasons</summary><div class="bd">
-<table class="tb">
-<thead><tr><th>#</th><th class="e">answer</th><th>reason in one line</th></tr></thead>
-<tbody>
-<tr><td>1</td><td class="e"><m>2V_0/3</m></td><td>series: equal <m>Q</m>, so <m>V\propto1/C</m>; the <m>C</m> takes
-<m>2/3</m> of the total.</td></tr>
-<tr><td>2</td><td class="e"><m>2.5</m> µJ</td><td><m>\tfrac12C_{\text{ser}}(\Delta V)^{2}=\tfrac12(0.5\ \text{nF})(100\ \text{V})^{2}</m>.</td></tr>
-<tr><td>3</td><td class="e"><m>U</m> rises by 1.6×</td><td><m>C=\varepsilon_0A/(d/2+d/2\kappa)</m> → with the slab gone
-<m>C\to C_0/1.6</m>, and <m>U=Q^{2}/2C</m>; <m>E</m> in the vacuum half is unchanged (it carries the same
-<m>D</m>), the force pulls the slab <em>in</em>, so you do positive work — which is exactly the extra
-<m>U</m>.</td></tr>
-<tr><td>4</td><td class="e">both: nothing</td><td>a resistor across an ideal voltage source is invisible: killing the
-source shorts it, so <m>R_{\text{th}}</m> is unchanged and so is <m>V_\infty</m>.</td></tr>
-<tr><td>5</td><td class="e">the same</td><td><m>F=Q^{2}/2\varepsilon_0A</m> at fixed charge — independent of the gap.
-(At fixed voltage it would have fallen by 4.)</td></tr>
-<tr><td>6</td><td class="e"><m>q/4\pi\varepsilon_0b</m></td><td>inner face <m>-q</m>, outer face <m>+q</m> (shell is
-neutral), and outside it is a point charge at the centre; the shell is one equipotential, so evaluate at
-<m>r=b</m>.</td></tr>
-<tr><td>7</td><td class="e">the sphere, by <m>\pi/2</m></td><td><m>4\pi\varepsilon_0a</m> against <m>8\varepsilon_0a</m>.</td></tr>
-<tr><td>8</td><td class="e">never</td><td>a grounded neighbour is always negatively influenced (§7.1's proof via the
-maximum principle).</td></tr>
-<tr><td>9</td><td class="e">onto the other capacitor; <m>V</m> rises</td><td><m>C_1\downarrow</m> at common
-<m>V</m> means <m>Q_1=C_1V\downarrow</m>; the surplus goes to <m>C_2</m> and the shared <m>V=Q_{\text{tot}}/(C_1+C_2)</m>
-increases.</td></tr>
-<tr><td>10</td><td class="e">1 : 1</td><td>cell gives <m>CV^{2}</m>, field keeps <m>\tfrac12CV^{2}</m>.</td></tr>
-<tr><td>11</td><td class="e"><m>1.39</m> s</td><td><m>T=1.386RC</m> for symmetric charge/discharge between
-<m>V/3</m> and <m>2V/3</m> (each <m>\tau\ln2</m>).</td></tr>
-<tr><td>12</td><td class="e"><m>64</m> nm</td><td><m>t=\kappa_2t_1/\kappa_1</m>: same <m>C=\kappa\varepsilon_0A/t</m>.
-(Real HfO₂ has an interfacial <m>SiO₂</m> dead layer, which is why "EOT" ≠ physical thickness.)</td></tr>
-<tr><td>13</td><td class="e">depolarising factors</td><td><m>E_{\text{in}}=E_0/[1+L(1/\kappa-1)]</m>:
-<m>L=1</m> for a disc perpendicular to the field gives <m>\kappa E_0</m>, <m>L=0</m> along a needle gives
-<m>E_0</m>.</td></tr>
-<tr><td>14</td><td class="e"><m>2:1</m> — the small one is stronger</td><td><m>V</m> equal ⇒
-<m>Q\propto R</m> ⇒ <m>E=Q/4\pi\varepsilon_0R^{2}\propto1/R</m>.</td></tr>
-<tr><td>15</td><td class="e"><m>64</m> µV</td><td><m>\langle V^{2}\rangle=kT/C</m>, one quadratic degree of freedom:
-<m>\sqrt{1.38\times10^{-23}\times300/10^{-12}}</m>.</td></tr>
-</tbody></table>
-<p class="note">Seven of the fifteen needed no formula beyond a conservation law. That is the point of the
-chapter: the moves are cheaper than the equations.</p>
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Two capacitors <m>C</m> and <m>2C</m> in series across <m>V_0</m>. Voltage across the smaller one?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>2V_0/3</m> — series: equal <m>Q</m>, so <m>V\propto1/C</m>; the <m>C</m> takes <m>2/3</m> of the total.</p>
 </div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>A <m>1</m> nF capacitor charged to 100 V is connected across an identical uncharged one. Energy lost?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>2.5</m> µJ — <m>\tfrac12C_{\text{ser}}(\Delta V)^{2}=\tfrac12(0.5\ \text{nF})(100\ \text{V})^{2}</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>An isolated charged capacitor has its slab (<m>\kappa=4</m>, filling half the gap) removed. What happens to <m>U</m>, to <m>E</m> in the dielectric part, and to the force you must exert while pulling?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>U</m> rises by 1.6× — <m>C=\varepsilon_0A/(d/2+d/2\kappa)</m> → with the slab gone <m>C\to C_0/1.6</m>, and <m>U=Q^{2}/2C</m>; <m>E</m> in the vacuum half is unchanged (it carries the same <m>D</m>), the force pulls the slab <em>in</em>, so you do positive work — which is exactly the extra <m>U</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>A resistor is added in parallel with the ideal cell feeding an <m>RC</m> circuit. What changes in <m>V_C(t)</m>, and what in <m>\tau</m>?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> both: nothing — a resistor across an ideal voltage source is invisible: killing the source shorts it, so <m>R_{\text{th}}</m> is unchanged and so is <m>V_\infty</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>The plates of an isolated charged parallel-plate capacitor are pulled to double the gap. Force now, compared with before?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> the same — <m>F=Q^{2}/2\varepsilon_0A</m> at fixed charge — independent of the gap. (At fixed voltage it would have fallen by 4.)</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>A charge <m>q</m> at the centre of a neutral conducting spherical shell (radii <m>a,b</m>): potential of the shell?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>q/4\pi\varepsilon_0b</m> — inner face <m>-q</m>, outer face <m>+q</m> (shell is neutral), and outside it is a point charge at the centre; the shell is one equipotential, so evaluate at <m>r=b</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Same radius: which holds more charge at the same potential, a sphere or a disc?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> the sphere, by <m>\pi/2</m> — <m>4\pi\varepsilon_0a</m> against <m>8\varepsilon_0a</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>Can a mutual coefficient <m>c_{12}</m> of a two-conductor capacitance matrix be positive?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> never — a grounded neighbour is always negatively influenced (§7.1's proof via the maximum principle).</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>Two capacitors in parallel, one with a dielectric, still joined by a wire. The slab is slid out. Which way does charge move, and what happens to <m>V</m>?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> onto the other capacitor; <m>V</m> rises — <m>C_1\downarrow</m> at common <m>V</m> means <m>Q_1=C_1V\downarrow</m>; the surplus goes to <m>C_2</m> and the shared <m>V=Q_{\text{tot}}/(C_1+C_2)</m> increases.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>Ratio of heat produced in <m>R</m> to energy finally stored, charging an uncharged capacitor from a cell?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> 1 : 1 — cell gives <m>CV^{2}</m>, field keeps <m>\tfrac12CV^{2}</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>A 555 with <m>R=1</m> MΩ and <m>C=1</m> µF in the astable connection: period?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>1.39</m> s — <m>T=1.386RC</m> for symmetric charge/discharge between <m>V/3</m> and <m>2V/3</m> (each <m>\tau\ln2</m>).</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>A 10 nm <m>SiO₂</m> gate stack (κ = 3.9) is replaced by HfO₂ (κ = 25) at the same capacitance: thickness?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>64</m> nm — <m>t=\kappa_2t_1/\kappa_1</m>: same <m>C=\kappa\varepsilon_0A/t</m>. (Real HfO₂ has an interfacial <m>SiO₂</m> dead layer, which is why "EOT" ≠ physical thickness.)</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>Why is the field inside a thin disc-shaped void <m>\kappa E_0</m> while a needle-shaped void along the field sees <m>E_0</m>?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> depolarising factors — <m>E_{\text{in}}=E_0/[1+L(1/\kappa-1)]</m>: <m>L=1</m> for a disc perpendicular to the field gives <m>\kappa E_0</m>, <m>L=0</m> along a needle gives <m>E_0</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>Two spheres, radii <m>R</m> and <m>2R</m>, connected by a long thin wire. Ratio of their surface fields?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>2:1</m> — the small one is stronger — <m>V</m> equal ⇒ <m>Q\propto R</m> ⇒ <m>E=Q/4\pi\varepsilon_0R^{2}\propto1/R</m>.</p>
+</div></details>
+</div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>Rms thermal noise voltage on a <m>1</m> pF capacitor at 300 K?</b><span class="diff">60 s</span></div>
+<div class="bd">
+<details class="sol"><summary>Solution</summary><div class="bd">
+<p><b>Answer:</b> <m>64</m> µV — <m>\langle V^{2}\rangle=kT/C</m>, one quadratic degree of freedom: <m>\sqrt{1.38\times10^{-23}\times300/10^{-12}}</m>.</p>
+</div></details>
+</div></div>
+
 
 <div class="box insight"><p class="bt">How to write the solution so that it cannot lose marks</p>
 <p>Four sentences, in this order, for every quantitative question: (1) <em>the principle</em> — "charge on the
@@ -6140,6 +6184,7 @@ resistance"; (3) the algebra, one line per equality, with <m>Q</m> and <m>V</m> 
 marking schemes even when (3) slips, and in JEE's integer-answer papers (4) is what catches the factor of two.
 Solve on paper the way you would want to read it at 01:00 while marking.</p></div>
 
+<h2>8.6 Checkpoint</h2>
 <ul class="chks">
 <li>Do the fifteen-question drill standing up, in fifteen minutes. Anything you miss is a <em>hole</em>, not a
 slip: go back to the section named in the answer and re-read the derivation, not the result.</li>
