@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 300" role="img" aria-label="Fermat&#x27;s principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <rect x="60" y="150" width="740" height="130" class="w ln" fill="var(--accent-soft)" stroke="none"></rect>
+  <line x1="60" y1="150" x2="800" y2="150" class="ln2"></line>
+  <text x="90" y="176" class="lbl sm" text-anchor="start">water: speed 2 m/s</text>
+  <text x="90" y="136" class="lbl sm" text-anchor="start">beach: speed 5 m/s</text>
+  <circle cx="180" cy="60" r="5" class="eq0"></circle><text x="180" y="48" class="lbl" text-anchor="middle">lifeguard</text>
+  <circle cx="700" cy="250" r="5" class="eq0"></circle><text x="700" y="276" class="lbl" text-anchor="middle">swimmer</text>
+  <line x1="180" y1="60" x2="657" y2="150" class="ln" stroke="var(--accent)"></line>
+  <line x1="657" y1="150" x2="700" y2="250" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="657" y1="150" x2="657" y2="100" class="dim"></line>
+  <text x="665" y="112" class="lbl sm" text-anchor="start">normal at the water edge</text>
+  <path d="M657,122 a28,28 0 0 0 -24,-14" class="thinl" fill="none"></path>
+  <path d="M657,122 a22,22 0 0 1 -14,17" class="thinl" fill="none"></path>
+  <text x="618" y="106" class="mi sm">i</text>
+  <text x="642" y="146" class="mi sm">r</text>
+  <line x1="180" y1="60" x2="700" y2="250" class="thinl" stroke-dasharray="5 4"></line>
+  <text x="300" y="222" class="lbl sm" text-anchor="start">the straight line is <tspan style="font-style:italic">not</tspan> the fastest route</text>
+  <text x="560" y="46" class="lbl sm" text-anchor="start">» entering <tspan class="mi">23.8</tspan> m down the shore: 4.77 + 2.73 = 7.50 s</text>
+  <text x="560" y="64" class="lbl sm" text-anchor="start">» swimming the whole way: 13.8 s</text>
+</svg>

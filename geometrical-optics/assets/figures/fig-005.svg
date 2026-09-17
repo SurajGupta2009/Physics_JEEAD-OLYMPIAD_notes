@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 330" role="img" aria-label="Image of a point in a plane mirror: reflected rays produced backwards meet behind the mirror" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <line x1="520" y1="40" x2="520" y2="300" class="ln2"></line>
+  <g fill="var(--muted)" font-size="12">
+    <text x="430" y="60" transform="rotate(-90 430 60)" class="lbl sm">plane mirror (edge on)</text>
+  </g>
+  <circle cx="300" cy="150" r="4" class="eq0"></circle><text x="300" y="138" class="lbl" text-anchor="middle">O</text>
+  <circle cx="740" cy="150" r="4" class="eq0"></circle><text x="740" y="138" class="lbl" text-anchor="middle">I</text>
+  <line x1="300" y1="150" x2="520" y2="225" class="ln" stroke="var(--accent)"></line>
+  <line x1="520" y1="225" x2="300" y2="300" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="520" y1="225" x2="740" y2="150" class="thinl" stroke-dasharray="6 4"></line>
+  <line x1="300" y1="150" x2="520" y2="120" class="ln" stroke="var(--accent)"></line>
+  <line x1="520" y1="120" x2="330" y2="90" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="520" y1="120" x2="740" y2="150" class="thinl" stroke-dasharray="6 4"></line>
+  <ellipse cx="300" cy="300" rx="16" ry="10" class="w ln"></ellipse>
+  <text x="245" y="322" class="lbl sm" text-anchor="middle">eye (pupil, exaggerated)</text>
+  <line x1="300" y1="150" x2="740" y2="150" class="dim" marker-start="url(#dim)" marker-end="url(#dim)"></line>
+  <line x1="520" y1="150" x2="520" y2="180" class="thinl"></line>
+  <text x="400" y="142" class="mi sm" text-anchor="middle">d</text>
+  <text x="620" y="142" class="mi sm" text-anchor="middle">d</text>
+  <text x="560" y="270" class="lbl sm" text-anchor="start">the dashed parts are not light paths:</text>
+  <text x="560" y="286" class="lbl sm" text-anchor="start">they are where the rays <tspan style="font-style:italic">appear</tspan> to come from</text>
+</svg>

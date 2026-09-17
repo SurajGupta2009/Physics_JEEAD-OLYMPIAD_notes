@@ -1,11 +1,13 @@
 # Thermodynamics — from basics to Olympiad
 
-A self-contained HTML course on **heat, work, and the accounts between**: kinetic theory, the two laws,
+> **Portable Markdown edition:** [Thermodynamics.md](Thermodynamics.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Thermodynamics.html](Thermodynamics.html) remains available for the interactive offline view and printing.
+
+A self-contained course on **heat, work, and the accounts between**: kinetic theory, the two laws,
 engines, entropy, real gases and radiation — written for **JEE (Main & Advanced)** and the **physics olympiad
 track (NSEP → INPhO → IPhO)**. It works offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open thermodynamics/Thermodynamics.html   ← the whole course, one file (also served as the topic entry)
+open thermodynamics/Thermodynamics.md      ← the portable course, one file (also served as the topic entry)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):
@@ -16,7 +18,7 @@ cd thermodynamics && python3 -m http.server 8000
 
 ## What is in the folder
 
-`Thermodynamics.html` is the **only** HTML file. Everything lives inside it, in reading order: the overview, the
+`Thermodynamics.md` is the portable reading file; `Thermodynamics.html` is the optional interactive edition. Everything lives inside the note in reading order: the overview, the
 **expandable mind-map**, chapters 1–8 (theory with questions interleaved), the full-length Olympiad paper
 (36 questions · 245 marks · 3 h), its line-by-line solutions, and the printable formula sheet — the stylesheet
 and the TeX renderer are inlined too, so the file is portable on its own. `assets/` keeps copies used by the

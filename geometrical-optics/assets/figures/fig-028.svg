@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 330" role="img" aria-label="Deviation against angle of incidence for a prism of angle 60 degrees and index 1.5, with a minimum at the symmetric ray and a forbidden region at small incidence" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <line x1="120" y1="290" x2="800" y2="290" class="ln" marker-end="url(#ah)"></line>
+  <line x1="120" y1="290" x2="120" y2="50" class="ln" marker-end="url(#ah)"></line>
+  <text x="790" y="318" class="mi sm" text-anchor="end">i</text>
+  <text x="132" y="56" class="mi sm" text-anchor="start">δ</text>
+  <rect x="120" y="50" width="30" height="240" fill="var(--neg)" opacity="0.12"></rect>
+  <text x="136" y="120" class="lbl sm" text-anchor="middle">no</text>
+  <text x="136" y="136" class="lbl sm" text-anchor="middle">emergence</text>
+  <line x1="170.8" y1="290" x2="170.8" y2="282" class="thinl"></line><text x="170.8" y="308" class="mi sm" text-anchor="middle">30</text>
+  <line x1="323" y1="290" x2="323" y2="282" class="thinl"></line><text x="323" y="308" class="mi sm" text-anchor="middle">45</text>
+  <line x1="475.3" y1="290" x2="475.3" y2="282" class="thinl"></line><text x="475.3" y="308" class="mi sm" text-anchor="middle">60</text>
+  <line x1="627.5" y1="290" x2="627.5" y2="282" class="thinl"></line><text x="627.5" y="308" class="mi sm" text-anchor="middle">75</text>
+  <line x1="779.8" y1="290" x2="779.8" y2="282" class="thinl"></line><text x="779.8" y="308" class="mi sm" text-anchor="middle">90</text>
+  <line x1="120" y1="198" x2="128" y2="198" class="thinl"></line><text x="112" y="203" class="mi sm" text-anchor="end">45</text>
+  <line x1="120" y1="106" x2="128" y2="106" class="thinl"></line><text x="112" y="111" class="mi sm" text-anchor="end">55</text>
+  <line x1="120" y1="269.9" x2="790" y2="269.9" class="thinl" stroke-dasharray="5 4"></line>
+  <text x="252" y="262" class="lbl sm" text-anchor="middle">δmin = 37.2°</text>
+  <polyline points="149.4,79.3 170.8,178.7 221.5,234.8 272.3,258.7 359.5,269.9 424.5,265.2 475.3,254.1 576.8,217.3 678.3,159.4 779.8,79.3" class="ln" stroke="var(--accent)" fill="none"></polyline>
+  <circle cx="359.5" cy="269.9" r="4.5" class="eq0"></circle>
+  <circle cx="149.4" cy="79.3" r="4" class="eq0"></circle>
+  <circle cx="779.8" cy="79.3" r="4" class="eq0"></circle>
+  <line x1="359.5" y1="269.9" x2="359.5" y2="290" class="thinl" stroke-dasharray="4 4"></line>
+  <text x="366" y="290" class="lbl sm" text-anchor="start">i = (A+δmin)/2 = 48.6°</text>
+  <text x="170" y="70" class="lbl sm" text-anchor="start">left end: grazing emergence at i = 27.9°, δ = 57.9°</text>
+  <text x="430" y="120" class="lbl sm" text-anchor="start">right end: grazing incidence i = 90°, δ = 57.9°</text>
+  <text x="430" y="140" class="lbl sm" text-anchor="start">(the two ends carry the same deviation — reversibility)</text>
+  <text x="250" y="230" class="lbl sm" text-anchor="middle">falls steeply</text>
+  <text x="620" y="228" class="lbl sm" text-anchor="middle">rises steeply</text>
+  <text x="420" y="215" class="lbl sm" text-anchor="middle">the useful window: δ varies little near the minimum</text>
+</svg>

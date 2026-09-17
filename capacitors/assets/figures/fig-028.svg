@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 720 224" role="img" aria-label="A point charge between two grounded plates with the induced charges proportional to the distances, and beside it the current pulse of an ionisation chamber" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(40,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">Reciprocity: charges without fields</text>
+    <line x1="0" y1="30" x2="300" y2="30" class="ln"></line><line x1="0" y1="150" x2="300" y2="150" class="ln"></line>
+    <circle cx="118" cy="96" r="6" fill="var(--neg)"></circle>
+    <text x="128" y="90" class="mi sm">q at x from plate 1</text>
+    <line x1="0" y1="14" x2="118" y2="14" class="dim"></line><line x1="118" y1="14" x2="300" y2="14" class="dim"></line>
+    <text x="42" y="10" class="mi sm">d − x</text><text x="196" y="10" class="mi sm">x</text>
+    <text x="6" y="48" class="mi sm">Q₁ = −q(d − x)/d</text>
+    <text x="6" y="142" class="mi sm">Q₂ = −qx/d</text>
+    <g class="fp"><circle cx="40" cy="34" r="2.6"></circle><circle cx="70" cy="34" r="2.6"></circle><circle cx="100" cy="34" r="2.6"></circle><circle cx="130" cy="34" r="2.6"></circle></g>
+    <g class="fn"><circle cx="180" cy="146" r="2.6"></circle><circle cx="210" cy="146" r="2.6"></circle><circle cx="240" cy="146" r="2.6"></circle></g>
+    <text x="0" y="180" class="lbl sm">Weighting field for plate 1: the primed problem — plate 1 at 1 V, plate 2 at 0:</text>
+    <text x="0" y="196" class="lbl sm">a uniform field of 1/d, so the current is qv/d no matter where the charge is.</text>
+  </g>
+  <g transform="translate(430,26)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">What the electronics sees</text>
+    <line x1="0" y1="150" x2="250" y2="150" class="ln"></line><line x1="0" y1="20" x2="0" y2="150" class="ln"></line>
+    <text x="212" y="168" class="lbl sm">t →</text><text x="-28" y="86" class="lbl sm">i_ind</text>
+    <path d="M6,150 L6,60 H150 L150,150" fill="none" stroke="var(--accent)" stroke-width="2.8"></path>
+    <path d="M150,60 C170,60 180,120 190,146 L250,150" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="6 4"></path>
+    <text x="30" y="50" class="lbl sm">drift across the gap: constant</text>
+    <text x="156" y="118" class="lbl sm" fill="var(--muted)">collection</text>
+    <text x="0" y="186" class="lbl sm">Area = ∫i dt = q: the pulse height tells you the energy deposited,</text>
+    <text x="0" y="202" class="lbl sm">the shape tells you how far the carrier travelled. Both from one theorem.</text>
+  </g>
+</svg>

@@ -1,11 +1,13 @@
 # Wave Optics — from basics to Olympiad
 
-A self-contained HTML course on **superposition, interference, diffraction and polarisation**, written for
+> **Portable Markdown edition:** [Wave-optics.md](Wave-optics.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Wave-optics.html](Wave-optics.html) remains available for the interactive offline view and printing.
+
+A self-contained course on **superposition, interference, diffraction and polarisation**, written for
 **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course
 is in `Wave-optics.html`; it works offline from `file://`: no CDN, no MathJax, no fonts, no network.
 
 ```
-open wave-optics/Wave-optics.html     ← start here (coverage map, how to study, the 12 parts)
+open wave-optics/Wave-optics.md        ← start here (coverage map, how to study, the 12 parts)
 ```
 
 or, to use the interactive features (theme switch, table of contents, progress ticks, solved-question
@@ -17,7 +19,7 @@ cd wave-optics && python3 -m http.server 8000
 
 ## What is in the folder
 
-`Wave-optics.html` is the only HTML file in this folder, and it is the whole course: front matter, twelve
+`Wave-optics.html` is the only HTML file in this folder, and it is the interactive edition: front matter, twelve
 parts, the paper, its solutions and the formula sheet, in reading order. `assets/` holds only the local
 stylesheet and scripts needed to render it offline. The twelve parts are also kept as separate source
 files under the repository's git-ignored `scratch/wave/parts/`, assembled by `scratch/build.py`; the built

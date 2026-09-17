@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 528" role="img" aria-label="Mind map of the course: root node with 8 chapter branches, each clickable to open its chapter" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+<g class="mmroot"><rect x="30" y="223" width="196" height="86" rx="14"></rect>
+<text x="128" y="254" text-anchor="middle" style="font-size:17px;font-weight:800">Heat</text>
+<text x="128" y="274" text-anchor="middle" class="t2" style="fill:#fff;opacity:.85">the whole course · click a branch</text>
+<text x="128" y="292" text-anchor="middle" class="t2" style="fill:#fff;opacity:.85">every chapter opens in place</text>
+</g>
+<path d="M226,266 C240,266 240,57 252,57"></path>
+<a href="#ch-01"><g class="mmn"><rect x="252" y="34" width="638" height="46" rx="11"></rect>
+<text x="266" y="62" class="num">01</text>
+<text x="296" y="54" class="t1">Heat, temperature and internal energy</text>
+<text x="296" y="72" class="t2">the three-word truce · c, U, f/2 · Joule's number · the latent surcharge</text>
+</g></a>
+<path d="M226,266 C240,266 240,115 252,115"></path>
+<a href="#ch-02"><g class="mmn"><rect x="252" y="92" width="638" height="46" rx="11"></rect>
+<text x="266" y="120" class="num">02</text>
+<text x="296" y="112" class="t1">Thermal expansion</text>
+<text x="296" y="130" class="t2">α, 2α, 3α · holes grow · blocked growth = stress · bimetals · water objects</text>
+</g></a>
+<path d="M226,266 C240,266 240,173 252,173"></path>
+<a href="#ch-03"><g class="mmn"><rect x="252" y="150" width="638" height="46" rx="11"></rect>
+<text x="266" y="178" class="num">03</text>
+<text x="296" y="170" class="t1">Calorimetry and phase change</text>
+<text x="296" y="188" class="t2">sums by legs · plateaus · steam into ice · Clausius–Clapeyron · flash-freeze</text>
+</g></a>
+<path d="M226,266 C240,266 240,231 252,231"></path>
+<a href="#ch-04"><g class="mmn"><rect x="252" y="208" width="638" height="46" rx="11"></rect>
+<text x="266" y="236" class="num">04</text>
+<text x="296" y="228" class="t1">Conduction</text>
+<text x="296" y="246" class="t2">Fourier = Ohm · walls and pipes · generation parabola · ice's √t · variable k</text>
+</g></a>
+<path d="M226,266 C240,266 240,289 252,289"></path>
+<a href="#ch-05"><g class="mmn"><rect x="252" y="266" width="638" height="46" rx="11"></rect>
+<text x="266" y="294" class="num">05</text>
+<text x="296" y="286" class="t1">Convection and Newton cooling</text>
+<text x="296" y="304" class="t2">the film behind h · τ = mc/hA · Biot's licence · lab corrections</text>
+</g></a>
+<path d="M226,266 C240,266 240,347 252,347"></path>
+<a href="#ch-06"><g class="mmn"><rect x="252" y="324" width="638" height="46" rx="11"></rect>
+<text x="266" y="352" class="num">06</text>
+<text x="296" y="344" class="t1">Radiation</text>
+<text x="296" y="362" class="t2">T⁴ and Wien · per-wavelength Kirchhoff · shields · the planetary /4</text>
+</g></a>
+<path d="M226,266 C240,266 240,405 252,405"></path>
+<a href="#ch-07"><g class="mmn"><rect x="252" y="382" width="638" height="46" rx="11"></rect>
+<text x="266" y="410" class="num">07</text>
+<text x="296" y="402" class="t1">Olympiad toolkit</text>
+<text x="296" y="420" class="t2">heat equation · skin depth · effusivity · fins · critical radius</text>
+</g></a>
+<path d="M226,266 C240,266 240,463 252,463"></path>
+<a href="#ch-08"><g class="mmn"><rect x="252" y="440" width="638" height="46" rx="11"></rect>
+<text x="266" y="468" class="num">08</text>
+<text x="296" y="460" class="t1">The gauntlet</text>
+<text x="296" y="478" class="t2">10 written problems · full solutions · trap shelf · constant shelf</text>
+</g></a>
+</svg>

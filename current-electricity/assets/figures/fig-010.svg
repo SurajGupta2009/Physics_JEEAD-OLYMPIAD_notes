@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 210" role="img" aria-label="A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <path d="M120,60 H300 M420,60 H640 M120,150 H300 M420,150 H640" class="ln"></path>
+  <path d="M120,60 V150 M640,60 V150" class="ln"></path>
+  <line x1="300" y1="75" x2="300" y2="45" class="ln2"></line><line x1="320" y1="45" x2="320" y2="75" class="ln"></line>
+  <line x1="340" y1="75" x2="340" y2="45" class="ln"></line><line x1="360" y1="45" x2="360" y2="75" class="ln2"></line>
+  <line x1="380" y1="75" x2="380" y2="45" class="ln"></line><line x1="400" y1="45" x2="400" y2="75" class="ln"></line>
+  <path d="M300,75 H400 M300,45 H400" class="thinl" stroke="none"></path>
+  <rect x="300" y="40" width="100" height="40" class="w thinl" fill="none" stroke="var(--fg)" stroke-dasharray="3 3"></rect>
+  <rect x="470" y="70" width="60" height="70" class="w ln" fill="none"></rect>
+  <text x="350" y="30" class="lbl sm" text-anchor="middle">ideal pump ε</text>
+  <text x="500" y="60" class="lbl sm" text-anchor="middle">r (inside the cell)</text>
+  <text x="500" y="165" class="lbl sm" text-anchor="middle">R (the load)</text>
+  <line x1="120" y1="95" x2="80" y2="95" class="acc" marker-end="url(#ahr)"></line>
+  <text x="30" y="99" class="lbl sm">I = ε/(R+r)</text>
+  <text x="262" y="105" class="lbl sm">+</text>
+  <text x="120" y="185" class="lbl sm">the voltmeter across the + and − terminals reads V = ε − Ir, never ε itself under load</text>
+</svg>

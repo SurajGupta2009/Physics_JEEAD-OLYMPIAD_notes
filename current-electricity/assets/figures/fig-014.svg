@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 230" role="img" aria-label="A two-loop circuit with three branch currents assigned and two loop directions chosen" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <path d="M120,60 H360 M480,60 H660 M120,180 H660" class="ln"></path>
+  <path d="M120,60 V180 M360,60 V180 M660,60 V180" class="ln"></path>
+  <line x1="220" y1="75" x2="220" y2="45" class="ln2"></line><line x1="240" y1="45" x2="240" y2="75" class="ln"></line>
+  <text x="230" y="36" class="lbl sm" text-anchor="middle">E₁, r₁</text>
+  <rect x="300" y="105" width="60" height="30" class="w ln" fill="none"></rect>
+  <text x="330" y="98" class="lbl sm" text-anchor="middle">R₃</text>
+  <line x1="560" y1="75" x2="560" y2="45" class="ln2"></line><line x1="580" y1="45" x2="580" y2="75" class="ln"></line>
+  <text x="570" y="36" class="lbl sm" text-anchor="middle">E₂, r₂</text>
+  <rect x="80" y="105" width="40" height="30" class="w ln" fill="none"></rect>
+  <text x="55" y="125" class="lbl sm">R₁</text>
+  <rect x="620" y="105" width="40" height="30" class="w ln" fill="none"></rect>
+  <text x="668" y="125" class="lbl sm">R₂</text>
+  <g stroke="var(--accent)" stroke-width="1.5" fill="none">
+    <line x1="150" y1="60" x2="185" y2="60" marker-end="url(#ahb)"></line>
+    <line x1="500" y1="60" x2="535" y2="60" marker-end="url(#ahr)"></line>
+    <line x1="300" y1="180" x2="335" y2="180" marker-end="url(#ahg)"></line>
+  </g>
+  <text x="160" y="50" class="lbl sm">i₁</text><text x="508" y="50" class="lbl sm">i₂</text><text x="306" y="170" class="lbl sm">i₃ = i₁ + i₂</text>
+  <path d="M180,105 q40,-25 80,0" class="thinl" fill="none" marker-end="url(#aho)"></path>
+  <path d="M180,130 q40,25 80,0" class="thinl" fill="none" marker-end="url(#aho)"></path>
+  <text x="215" y="88" class="lbl sm">loop 1 ↻</text><text x="215" y="152" class="lbl sm">loop 2 ↺</text>
+  <text x="390" y="215" class="lbl sm">guess every arrow first; KCL at the top middle node closes the system</text>
+</svg>

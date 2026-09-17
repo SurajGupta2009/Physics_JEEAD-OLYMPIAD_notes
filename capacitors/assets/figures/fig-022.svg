@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 230" role="img" aria-label="Hysteresis loop of polarisation versus field with remanent polarisation and coercive field marked, and the dielectric constant as the slope of a chord" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(90,14)">
+    <line x1="240" y1="0" x2="240" y2="200" class="ln"></line><line x1="0" y1="100" x2="480" y2="100" class="ln"></line>
+    <text x="452" y="116" class="lbl sm">E →</text><text x="246" y="12" class="lbl sm">P ↑</text>
+    <path d="M40,180 C120,150 190,60 240,52 C300,44 400,40 440,36" fill="none" stroke="var(--accent)" stroke-width="2.6"></path>
+    <path d="M440,164 C380,168 300,150 240,148 C190,142 120,60 40,20" fill="none" stroke="var(--accent)" stroke-width="2.6"></path>
+    <path d="M40,20 C60,18 66,24 40,180" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"></path>
+    <path d="M440,36 C420,34 414,44 440,164" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"></path>
+    <circle cx="240" cy="52" r="4" fill="var(--pos)"></circle><text x="248" y="46" class="lbl sm" fill="var(--pos)">+P_s</text>
+    <circle cx="240" cy="148" r="4" fill="var(--neg)"></circle><text x="248" y="162" class="lbl sm" fill="var(--neg)">−P_s</text>
+    <circle cx="176" cy="100" r="4" fill="var(--fg)"></circle><text x="130" y="92" class="lbl sm">−E_c</text>
+    <circle cx="306" cy="100" r="4" fill="var(--fg)"></circle><text x="292" y="92" class="lbl sm">+E_c</text>
+    <circle cx="240" cy="100" r="0.5"></circle>
+    <text x="216" y="86" class="lbl sm"></text>
+    <text x="248" y="86" class="lbl sm">P_r here</text>
+    <line x1="240" y1="100" x2="176" y2="100" stroke="var(--amber)" stroke-width="2.4"></line>
+    <line x1="240" y1="100" x2="306" y2="100" stroke="var(--amber)" stroke-width="2.4"></line>
+    <text x="30" y="200" class="lbl sm">κ = dD/dE = slope of a chord of this loop: enormous near E_c,</text>
+    <text x="30" y="214" class="lbl sm">finite and history-dependent — a 1000-κ BaTiO₃ is 1000 only because it is near its own catastrophe.</text>
+  </g>
+</svg>

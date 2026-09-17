@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 230" role="img" aria-label="Sketch of a Paschen curve: breakdown voltage versus pd on log-log axes, V shaped with the minimum near 330 V, annotated with the air at 1 atm line and the MEMS region" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(70,16)">
+    <line x1="0" y1="180" x2="560" y2="180" class="ln"></line><line x1="0" y1="0" x2="0" y2="180" class="ln"></line>
+    <text x="500" y="200" class="lbl sm">pd →  (Pa·m, log)</text>
+    <text x="-46" y="16" class="lbl sm">V_B (log)</text>
+    <path d="M30,18 C120,120 200,158 262,164 C330,168 420,120 540,30" fill="none" stroke="var(--accent)" stroke-width="2.6"></path>
+    <circle cx="268" cy="166" r="5" fill="var(--neg)"></circle>
+    <text x="240" y="150" class="lbl sm" fill="var(--neg)">minimum ≈ 330 V, pd ≈ 1 Pa·m (air)</text>
+    <line x1="268" y1="166" x2="268" y2="180" class="thinl"></line>
+    <line x1="0" y1="120" x2="560" y2="120" stroke="var(--amber)" stroke-dasharray="5 4"></line>
+    <text x="380" y="112" class="lbl sm" fill="var(--amber)">V = 1 kV: only gaps in the shaded pd band flash over</text>
+    <line x1="430" y1="0" x2="430" y2="180" stroke="var(--muted)" stroke-dasharray="4 4"></line>
+    <text x="356" y="-4" class="lbl sm">1 atm: pd = 10⁵·d ⇒ d = 1 mm here</text>
+    <line x1="150" y1="0" x2="150" y2="180" stroke="var(--muted)" stroke-dasharray="4 4"></line>
+    <text x="60" y="-4" class="lbl sm">vacuum / MEMS: left branch</text>
+    <text x="196" y="196" class="lbl sm">10⁻²</text><text x="386" y="196" class="lbl sm">1</text><text x="526" y="196" class="lbl sm">10²</text>
+    <text x="30" y="66" class="lbl sm">on this branch the electrons</text>
+    <text x="30" y="80" class="lbl sm">never reach W_i: field</text>
+    <text x="30" y="94" class="lbl sm">emission, not gas, decides</text>
+  </g>
+</svg>

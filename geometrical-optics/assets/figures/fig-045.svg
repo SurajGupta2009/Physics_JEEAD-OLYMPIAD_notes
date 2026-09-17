@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 300" role="img" aria-label="A lens forming an image of the sun, showing that the image diameter is the focal length times the sun&#x27;s angular size, which sets the concentration limit" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <path d="M60,60 A240,240 0 0 0 60,240" class="ln2" fill="none"></path>
+  <text x="76" y="52" class="lbl sm" text-anchor="start">the Sun: an extended source of</text>
+  <text x="76" y="68" class="lbl sm" text-anchor="start">angular size <tspan class="mi">θs = 0.267°</tspan></text>
+  <line x1="60" y1="118" x2="430" y2="146" class="ln" stroke="var(--accent)"></line>
+  <line x1="60" y1="150" x2="430" y2="150" class="ln" stroke="var(--accent)"></line>
+  <line x1="60" y1="182" x2="430" y2="154" class="ln" stroke="var(--accent)"></line>
+  <ellipse cx="470" cy="150" rx="40" ry="8" fill="none" stroke="var(--rule)" class="ln2"></ellipse>
+  <line x1="430" y1="146" x2="700" y2="165" class="ln" stroke="var(--accent)"></line>
+  <line x1="430" y1="154" x2="700" y2="135" class="ln" stroke="var(--accent)"></line>
+  <line x1="510" y1="150" x2="700" y2="150" class="thinl" stroke-dasharray="4 4"></line>
+  <line x1="668" y1="132" x2="668" y2="168" class="ln2"></line>
+  <text x="676" y="142" class="lbl sm" text-anchor="start">image of the Sun:</text>
+  <text x="676" y="158" class="lbl sm" text-anchor="start">diameter</text>
+  <text x="676" y="174" class="lbl sm" text-anchor="start"><tspan class="mi">dᵢ = fθs = 0.0093f</tspan></text>
+  <text x="240" y="230" class="lbl sm" text-anchor="middle">lens of diameter <tspan class="mi">D</tspan>, focal length <tspan class="mi">f</tspan></text>
+  <text x="470" y="268" class="lbl sm" text-anchor="middle">concentration <tspan class="mi">= (D/dᵢ)² = 1/(0.0093N)²</tspan> with <tspan class="mi">N = f/D</tspan></text>
+  <text x="470" y="288" class="lbl sm" text-anchor="middle">so an <tspan class="mi">f/2</tspan> lens gives about 2900×, and the ceiling is 46 000× — not a matter of workmanship</text>
+</svg>

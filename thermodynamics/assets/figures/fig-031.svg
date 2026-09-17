@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 250" role="img" aria-label="Triage map: a question stem branches into cycle, state-change, transfer, or estimate models, each with its first written line and its check step" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <rect x="14" y="98" width="150" height="52" rx="8" fill="var(--panel2)" stroke="var(--line2)"></rect>
+  <text x="89" y="120" class="lbl" text-anchor="middle">the stem says</text>
+  <text x="89" y="136" class="lbl sm" text-anchor="middle">"gas in a cylinder / engine / kettle"</text>
+  <g>
+  <rect x="230" y="10" width="240" height="52" rx="8" fill="var(--panel2)" stroke="var(--accent)"></rect>
+  <text x="350" y="30" class="lbl" text-anchor="middle">CYCLE — closed path</text>
+  <text x="350" y="48" class="lbl sm" text-anchor="middle">draw PV + TS; stage the legs; ΣΔU=0</text>
+  <rect x="230" y="72" width="240" height="52" rx="8" fill="var(--panel2)" stroke="var(--line2)"></rect>
+  <text x="350" y="92" class="lbl" text-anchor="middle">STATE CHANGE — A→B</text>
+  <text x="350" y="110" class="lbl sm" text-anchor="middle">ΔU = (C_V/R)(P₂V₂−P₁V₁); Q via 1st law</text>
+  <rect x="230" y="134" width="240" height="52" rx="8" fill="var(--panel2)" stroke="var(--line2)"></rect>
+  <text x="350" y="154" class="lbl" text-anchor="middle">TRANSFER — conduction, cooling, radiation</text>
+  <text x="350" y="172" class="lbl sm" text-anchor="middle">rate in = rate out (steady) or dU/dt = net (lumped)</text>
+  <rect x="230" y="196" width="240" height="44" rx="8" fill="var(--panel2)" stroke="var(--line2)"></rect>
+  <text x="350" y="213" class="lbl" text-anchor="middle">ESTIMATE / first principles</text>
+  <text x="350" y="230" class="lbl sm" text-anchor="middle">write what you know, solve symbolically, plug late</text>
+  <path d="M164,110 C200,80 210,50 228,38" fill="none" class="ln2" marker-end="url(#ahb)"></path>
+  <path d="M164,118 C200,108 206,100 228,96" fill="none" class="ln2" marker-end="url(#ahb)"></path>
+  <path d="M164,130 C200,142 206,150 228,158" fill="none" class="ln2" marker-end="url(#ahb)"></path>
+  <path d="M164,138 C200,178 210,204 228,216" fill="none" class="ln2" marker-end="url(#ahb)"></path>
+  </g>
+  <text x="530" y="30" class="lbl">every box ends the same way:</text>
+  <text x="530" y="50" class="lbl sm">a CHECK — sum, limit, or</text>
+  <text x="530" y="66" class="lbl sm">dimension. The last two lines</text>
+  <text x="530" y="82" class="lbl sm">of the solution are where the</text>
+  <text x="530" y="98" class="lbl sm">marks for rigour live (INPhO)</text>
+  <text x="530" y="126" class="lbl">and one currency rule:</text>
+  <text x="530" y="146" class="lbl sm">ΔS only in joules per kelvin,</text>
+  <text x="530" y="162" class="lbl sm">never in "entropy units" you</text>
+  <text x="530" y="178" class="lbl sm">cannot re-spend; if you need</text>
+  <text x="530" y="194" class="lbl sm">work from it, multiply by T₀.</text>
+</svg>

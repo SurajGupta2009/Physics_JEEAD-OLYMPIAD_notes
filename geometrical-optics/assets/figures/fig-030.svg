@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 340" role="img" aria-label="Left: two prisms in opposition giving deviation without dispersion. Right: a direct-vision prism giving dispersion without deviation" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <text x="200" y="24" class="lbl" text-anchor="middle">(a) deviation <tspan style="font-style:italic">without</tspan> dispersion</text>
+  <text x="640" y="24" class="lbl" text-anchor="middle">(b) dispersion <tspan style="font-style:italic">without</tspan> deviation</text>
+  <line x1="200" y1="170" x2="830" y2="170" class="thinl" stroke-dasharray="4 4"></line>
+  <polygon points="130,60 96,120 168,120" fill="var(--accent-soft)" stroke="var(--rule)"></polygon>
+  <polygon points="238,190 204,130 276,130" fill="var(--amber-soft)" stroke="var(--rule)"></polygon>
+  <line x1="20" y1="90" x2="124" y2="90" class="ln" stroke-width="2.8"></line>
+  <line x1="124" y1="90" x2="196" y2="103" stroke="var(--neg)" stroke-width="2.4"></line>
+  <line x1="124" y1="90" x2="198" y2="112" stroke="var(--accent)" stroke-width="2.4"></line>
+  <line x1="196" y1="103" x2="222" y2="130" stroke="var(--neg)" stroke-width="2.4"></line>
+  <line x1="198" y1="112" x2="300" y2="122" stroke="var(--accent)" stroke-width="2.4"></line>
+  <line x1="198" y1="103" x2="300" y2="113" stroke="var(--neg)" stroke-width="2.4" marker-end="url(#ahr)"></line>
+  <line x1="300" y1="122" x2="380" y2="130" stroke="var(--accent)" stroke-width="2.4" marker-end="url(#ahb)"></line>
+  <line x1="300" y1="113" x2="380" y2="121" stroke="var(--neg)" stroke-width="2.4" marker-end="url(#ahr)"></line>
+  <text x="30" y="82" class="lbl sm" text-anchor="start">white</text>
+  <text x="120" y="140" class="lbl sm" text-anchor="middle">crown</text>
+  <text x="240" y="210" class="lbl sm" text-anchor="middle">flint, apex down</text>
+  <text x="392" y="104" class="lbl sm" text-anchor="start">red and violet leave</text>
+  <text x="392" y="120" class="lbl sm" text-anchor="start"><tspan style="font-style:italic">parallel</tspan> — no residual spread —</text>
+  <text x="392" y="136" class="lbl sm" text-anchor="start">but both deviated downward</text>
+  <polygon points="600,120 566,180 706,180" fill="var(--accent-soft)" stroke="var(--rule)"></polygon>
+  <polygon points="646,240 566,180 726,180" fill="var(--amber-soft)" stroke="var(--rule)" opacity="0.6"></polygon>
+  <line x1="480" y1="180" x2="600" y2="180" class="ln" stroke-width="2.8" marker-end="url(#ah)"></line>
+  <line x1="706" y1="180" x2="820" y2="180" class="thinl" stroke-dasharray="4 4"></line>
+  <line x1="700" y1="176" x2="822" y2="120" stroke="var(--neg)" stroke-width="2.4" marker-end="url(#ahr)"></line>
+  <line x1="700" y1="184" x2="822" y2="240" stroke="var(--accent)" stroke-width="2.4" marker-end="url(#ahb)"></line>
+  <text x="470" y="172" class="lbl sm" text-anchor="start">white, along the axis</text>
+  <text x="820" y="112" class="lbl sm" text-anchor="end">red</text>
+  <text x="820" y="258" class="lbl sm" text-anchor="end">violet</text>
+  <text x="640" y="262" class="lbl sm" text-anchor="middle">the mean (yellow) ray is undeviated:</text>
+  <text x="640" y="278" class="lbl sm" text-anchor="middle">a direct-vision spectroscope prism</text>
+</svg>

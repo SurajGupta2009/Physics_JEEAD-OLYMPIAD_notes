@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 150" role="img" aria-label="Three vertical scale columns for kelvin, celsius and Fahrenheit linked at water freezing, triple point and boiling, with the ratio 1.8 marked on an increment arrow" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(90,0)">
+    <rect x="0" y="12" width="46" height="126" rx="6" fill="var(--panel2)" stroke="var(--line2)"></rect>
+    <text x="23" y="8" class="lbl sm" text-anchor="middle">K</text>
+    <text x="52" y="118" class="lbl sm">273.15</text>
+    <text x="52" y="97" class="lbl sm">273.16</text>
+    <text x="52" y="34" class="lbl sm">373.15</text>
+    <line x1="0" y1="114" x2="46" y2="114" class="ln"></line><line x1="0" y1="93" x2="46" y2="93" class="acc" stroke-dasharray="3 3"></line>
+    <line x1="0" y1="30" x2="46" y2="30" class="ln"></line>
+  </g>
+  <g transform="translate(330,0)">
+    <rect x="0" y="12" width="46" height="126" rx="6" fill="var(--panel2)" stroke="var(--line2)"></rect>
+    <text x="23" y="8" class="lbl sm" text-anchor="middle">°C</text>
+    <text x="52" y="118" class="lbl sm">0</text><text x="52" y="34" class="lbl sm">100</text>
+    <line x1="0" y1="114" x2="46" y2="114" class="ln"></line><line x1="0" y1="30" x2="46" y2="30" class="ln"></line>
+    <path d="M-60,114 L-60,30" class="dim" marker-start="url(#dim)" marker-end="url(#dim)"></path>
+    <text x="-56" y="76" class="lbl sm">100</text>
+  </g>
+  <g transform="translate(560,0)">
+    <rect x="0" y="12" width="46" height="126" rx="6" fill="var(--panel2)" stroke="var(--line2)"></rect>
+    <text x="23" y="8" class="lbl sm" text-anchor="middle">°F</text>
+    <text x="52" y="118" class="lbl sm">32</text><text x="52" y="34" class="lbl sm">212</text>
+    <line x1="0" y1="114" x2="46" y2="114" class="ln"></line><line x1="0" y1="30" x2="46" y2="30" class="ln"></line>
+    <path d="M-60,114 L-60,30" class="dim" marker-start="url(#dim)" marker-end="url(#dim)"></path>
+    <text x="-56" y="76" class="lbl sm">180 = 1.8×100</text>
+  </g>
+  <line x1="136" y1="114" x2="330" y2="114" class="thinl" stroke-dasharray="4 4"></line>
+  <line x1="376" y1="114" x2="560" y2="114" class="thinl" stroke-dasharray="4 4"></line>
+  <line x1="136" y1="30" x2="330" y2="30" class="thinl" stroke-dasharray="4 4"></line>
+  <line x1="376" y1="30" x2="560" y2="30" class="thinl" stroke-dasharray="4 4"></line>
+  <text x="150" y="145" class="lbl sm">same two events, three rulers — offsets convert with the intercept, increments never do</text>
+</svg>

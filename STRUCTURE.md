@@ -7,6 +7,20 @@ in one file.
 Reading order for a newcomer: this file (what the repo looks like), then
 [CONTRIBUTING.md](CONTRIBUTING.md) (how to add to it), then the topic's own `README.md`.
 
+## 0. Portable Markdown distribution
+
+Each consolidated HTML note now has a same-named Markdown edition beside it: for example,
+`capacitors/Capacitors.md`. The Markdown files are the portable reading copies; they preserve the
+HTML reading order, stable section anchors, `$...$` / `$$...$$` mathematics, `<details>` solutions,
+and captions. Every source diagram is also exported as a standalone local SVG under that topic's
+`assets/figures/` directory. `tools/html_to_markdown.py` regenerates these files without external
+dependencies.
+
+The HTML files and the rest of the contract below remain intentionally unchanged: they are the
+interactive/offline editions and are still what `tools/check_all.py` validates. Markdown conversion
+is additive, so a reader can choose GitHub/editor reading or the local HTML TOC/theme/print view.
+The cross-topic order and the Cengage-to-Olympiad audit live in [CURRICULUM.md](CURRICULUM.md).
+
 ---
 
 ## 1. The three ideas everything follows from
