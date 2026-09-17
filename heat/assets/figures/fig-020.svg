@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 640 260" role="img" aria-label="A radiation-and-transport audit of the best thermos you own: each wall feature amputates exactly one of the three heat-transfer channels." xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+<rect x="0.5" y="0.5" width="639" height="259" rx="9" fill="var(--panel2)" stroke="var(--line2)" stroke-width="1" stroke-dasharray="1.5 2.5"></rect>
+<text x="320" y="24" text-anchor="middle" class="t2">why a thermos is silvered AND evacuated AND narrow-necked</text>
+<rect x="150" y="70" width="340" height="150" rx="3" fill="var(--panel)" stroke="var(--accent)" stroke-width="1.6"></rect>
+<rect x="190" y="90" width="260" height="110" rx="3" fill="var(--bg)" stroke="var(--line2)" stroke-width="1.2" stroke-dasharray="4 3"></rect>
+<rect x="210" y="105" width="220" height="80" rx="3" fill="color-mix(in srgb,var(--neg) 12%,var(--panel))" stroke="var(--neg)" stroke-width="1.2"></rect>
+<text x="320" y="150" text-anchor="middle" class="t2">contents</text>
+<line x1="170" y1="80" x2="520" y2="80" stroke="none" stroke-width="1.5"></line>
+<text x="140" y="60" text-anchor="middle" class="t2">evacuated annulus — no matter, so no conduction or convection at all</text>
+<text x="320" y="240" text-anchor="middle" class="t2">silvered walls: ε 0.02 vs 0.9 — radiation cut by 45×</text>
+<text x="560" y="120" text-anchor="start" class="t2">short neck</text>
+<text x="560" y="136" text-anchor="start" class="t2">kills the air exchange</text>
+<line x1="210" y1="70" x2="430" y2="55" stroke="var(--line2)" stroke-width="1.2" stroke-dasharray="2 3"></line>
+<line x1="192" y1="105" x2="192" y2="105" stroke="none" stroke-width="1.5"></line>
+<line x1="430" y1="55" x2="470" y2="88" stroke="var(--line2)" stroke-width="1.2" stroke-dasharray="2 3"></line>
+<line x1="280" y1="40" x2="280" y2="40" stroke="none" stroke-width="1.5"></line>
+</svg>

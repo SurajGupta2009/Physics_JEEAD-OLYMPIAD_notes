@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 235" role="img" aria-label="Two panels: left, a PV diagram with a triangle-like cycle whose interior is shaded and labelled net work; right, the same cycle on a TS diagram with its interior shaded and labelled net heat, both closed loops traced in accent colour" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(10,0)">
+    <line x1="55" y1="200" x2="320" y2="200" class="ln" marker-end="url(#ah)"></line>
+    <line x1="55" y1="200" x2="55" y2="25" class="ln" marker-end="url(#ah)"></line>
+    <text x="326" y="204" class="lbl sm">V</text><text x="42" y="20" class="lbl sm">P</text>
+    <path d="M140,80 L140,160 L270,160 C240,124 190,96 140,80 Z" fill="var(--accent)" opacity="0.15" stroke="none"></path>
+    <path d="M140,80 L140,160 L270,160 C240,124 190,96 140,80" fill="none" stroke="var(--accent)" stroke-width="2.4"></path>
+    <text x="96" y="72" class="lbl sm">B (600 K)</text>
+    <text x="148" y="176" class="lbl sm">A</text><text x="276" y="172" class="lbl sm">C (300 K)</text>
+    <line x1="140" y1="200" x2="140" y2="194" class="ln"></line>
+    <text x="140" y="214" class="lbl sm" text-anchor="middle">V₀</text>
+    <line x1="270" y1="200" x2="270" y2="194" class="ln"></line>
+    <text x="270" y="214" class="lbl sm" text-anchor="middle">2V₀</text>
+    <text x="150" y="128" class="lbl sm">A→B isochoric</text>
+    <text x="178" y="188" class="lbl sm">B→C isothermal; C→A isobaric</text>
+    <text x="178" y="150" class="lbl sm" fill="var(--accent)">W_net = enclosed area</text>
+  </g>
+  <g transform="translate(420,0)">
+    <line x1="55" y1="200" x2="320" y2="200" class="ln" marker-end="url(#ah)"></line>
+    <line x1="55" y1="200" x2="55" y2="25" class="ln" marker-end="url(#ah)"></line>
+    <text x="326" y="204" class="lbl sm">S</text><text x="42" y="20" class="lbl sm">T</text>
+    <path d="M150,165 C168,138 176,126 186,120 L250,120 C222,138 196,158 150,165 Z" fill="var(--accent)" opacity="0.15" stroke="none"></path>
+    <path d="M150,165 C168,138 176,126 186,120 L250,120 C222,138 196,158 150,165" fill="none" stroke="var(--accent)" stroke-width="2.4"></path>
+    <line x1="55" y1="120" x2="182" y2="120" class="thinl" stroke-dasharray="3 4"></line>
+    <line x1="55" y1="165" x2="146" y2="165" class="thinl" stroke-dasharray="3 4"></line>
+    <text x="34" y="124" class="lbl sm">600 K</text><text x="34" y="169" class="lbl sm">300 K</text>
+    <text x="118" y="130" class="lbl sm">A→B isochore: steep log, slope by C_V</text>
+    <text x="196" y="110" class="lbl sm">B→C isotherm: flat rail</text>
+    <text x="216" y="158" class="lbl sm">C→A isobar: shallower log (C_P &gt; C_V)</text>
+    <text x="172" y="146" class="lbl sm" fill="var(--accent)">area = Q_net</text>
+    <circle cx="150" cy="165" r="3" fill="var(--pos)"></circle><circle cx="186" cy="120" r="3" fill="var(--pos)"></circle><circle cx="250" cy="120" r="3" fill="var(--pos)"></circle>
+    <text x="140" y="178" class="lbl sm" text-anchor="middle">A</text><text x="186" y="133" class="lbl sm" text-anchor="middle">B</text><text x="258" y="130" class="lbl sm">C</text>
+  </g>
+</svg>

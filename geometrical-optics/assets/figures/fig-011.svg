@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 300" role="img" aria-label="Three-ray construction for a concave mirror with the object beyond the centre of curvature" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <line x1="60" y1="200" x2="820" y2="200" class="thinl"></line>
+  <path d="M671.9,73.2 A300,300 0 0 1 671.9,326.8" class="ln2" fill="none"></path>
+  <circle cx="400" cy="200" r="4" class="eq0"></circle><text x="400" y="228" class="lbl" text-anchor="middle">C</text>
+  <circle cx="550" cy="200" r="4" class="eq0"></circle><text x="550" y="228" class="lbl" text-anchor="middle">F</text>
+  <circle cx="700" cy="200" r="3.5" class="eq0"></circle><text x="712" y="228" class="lbl" text-anchor="start">P</text>
+  <line x1="250" y1="200" x2="250" y2="120" class="ln" stroke="var(--pos)" marker-end="url(#ahg)"></line>
+  <text x="250" y="248" class="lbl sm" text-anchor="middle">object</text>
+  <line x1="250" y1="120" x2="689.1" y2="120" class="ln" stroke="var(--accent)"></line>
+  <line x1="689.1" y1="120" x2="475" y2="240" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="250" y1="120" x2="697.3" y2="239.3" class="ln" stroke="var(--accent)"></line>
+  <line x1="697.3" y1="239.3" x2="475" y2="240" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="250" y1="120" x2="700" y2="200" class="ln" stroke="var(--accent)"></line>
+  <line x1="700" y1="200" x2="475" y2="240" class="ln" stroke="var(--accent)" marker-end="url(#ahb)"></line>
+  <line x1="475" y1="200" x2="475" y2="240" class="ln" stroke="var(--neg)" marker-end="url(#ahr)"></line>
+  <text x="475" y="262" class="lbl sm" text-anchor="middle">image: real, inverted, <tspan class="mi">m = -1/2</tspan></text>
+  <text x="330" y="108" class="lbl sm" text-anchor="middle">parallel ray → through F</text>
+  <text x="330" y="60" class="lbl sm" text-anchor="middle">through F → emerges parallel</text>
+  <text x="530" y="176" class="lbl sm" text-anchor="middle">pole ray: equal angles, so <tspan class="mi">m = -v/u</tspan></text>
+</svg>

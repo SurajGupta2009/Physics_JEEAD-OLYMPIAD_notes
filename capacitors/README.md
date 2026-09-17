@@ -1,11 +1,13 @@
 # Capacitors — from basics to Olympiad
 
-A self-contained HTML course on **capacitance, dielectrics and capacitive networks**, written for
-**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `Capacitors.html`; it works
+> **Portable Markdown edition:** [Capacitors.md](Capacitors.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Capacitors.html](Capacitors.html) remains available for the interactive offline view and printing.
+
+A self-contained course on **capacitance, dielectrics and capacitive networks**, written for
+**JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The portable course is in `Capacitors.md`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open capacitors/Capacitors.html          ← start here (course map, how to study, the IOQM/NSEP note)
+open capacitors/Capacitors.md             ← start here (course map, how to study, the IOQM/NSEP note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):

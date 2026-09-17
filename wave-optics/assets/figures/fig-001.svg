@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 260" role="img" aria-label="Two coherent sources and their hyperbolic fringes" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <line x1="60" y1="230" x2="660" y2="230" class="ln"></line>
+  <line x1="60" y1="230" x2="60" y2="30" class="ln"></line>
+  <text x="90" y="248" class="lbl sm">screen distance D = 1.00 m →</text>
+  <text x="66" y="26" class="lbl sm">y</text>
+  <circle cx="330" cy="40" r="19" class="facc"></circle><circle cx="330" cy="40" r="12" class="facc"></circle><circle cx="330" cy="40" r="5" class="fp"></circle>
+  <circle cx="370" cy="40" r="19" class="fneg"></circle><circle cx="370" cy="40" r="12" class="fneg"></circle><circle cx="370" cy="40" r="5" class="fn"></circle>
+  <text x="350" y="18" class="lbl sm" text-anchor="middle">two slits, d = 0.50 mm apart, λ = 600 nm</text>
+  <line x1="330" y1="40" x2="360" y2="230" class="thinl"></line>
+  <line x1="370" y1="40" x2="340" y2="230" class="thinl"></line>
+  <line x1="60" y1="230" x2="660" y2="230" class="ln"></line>
+  <path d="M330 60 Q 340 140 350 230" class="acc"></path>
+  <path d="M370 60 Q 360 140 350 230" class="acc"></path>
+  <text x="356" y="200" class="lbl sm">every 1.2 mm</text>
+  <g class="dim">
+    <path d="M330 40 C 420 90, 470 160, 480 230"></path>
+    <path d="M370 40 C 460 90, 510 160, 520 230"></path>
+    <path d="M330 40 C 240 90, 190 160, 180 230"></path>
+    <path d="M370 40 C 280 90, 230 160, 220 230"></path>
+  </g>
+  <line x1="60" y1="230" x2="660" y2="230" class="dim"></line>
+  <circle cx="350" cy="230" r="4" class="acc"></circle>
+  <text x="350" y="222" class="lbl sm" text-anchor="middle">central bright fringe</text>
+  <text x="230" y="120" class="lbl sm">bright: path difference = 0, λ, 2λ …</text>
+  <text x="230" y="138" class="lbl sm">dark: path difference = λ/2, 3λ/2 …</text>
+</svg>

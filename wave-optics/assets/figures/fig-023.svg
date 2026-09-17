@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 280" role="img" aria-label="Brewster angle geometry: reflected and refracted rays perpendicular" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <rect x="40" y="0" width="620" height="200" class="facc" opacity="0.35"></rect>
+  <rect x="40" y="200" width="620" height="70" class="fp" opacity="0.5"></rect>
+  <line x1="40" y1="200" x2="660" y2="200" class="ln2"></line>
+  <text x="52" y="30" class="lbl sm">air  n₁ = 1</text>
+  <text x="52" y="224" class="lbl sm">glass  n₂ = 1.5</text>
+  <line x1="330" y1="40" x2="330" y2="262" class="dim"></line>
+  <text x="336" y="52" class="lbl sm">normal</text>
+  <line x1="150" y1="40" x2="330" y2="200" class="acc" marker-end="url(#ah)"></line>
+  <text x="120" y="34" class="lbl sm">incident, unpolarised</text>
+  <line x1="330" y1="200" x2="510" y2="40" class="acc" marker-end="url(#ah)"></line>
+  <text x="516" y="40" class="lbl sm">reflected, fully polarised</text>
+  <g class="negc">
+    <circle cx="380" cy="140" r="3"></circle><circle cx="420" cy="112" r="3"></circle><circle cx="460" cy="84" r="3"></circle>
+  </g>
+  <text x="516" y="62" class="lbl sm">• field perpendicular to the page</text>
+  <line x1="330" y1="200" x2="420" y2="325" class="acc" marker-end="url(#ah)"></line>
+  <text x="426" y="252" class="lbl sm">refracted, partly polarised</text>
+  <path d="M330 130 A 70 70 0 0 0 285 172" class="dim"></path>
+  <text x="250" y="140" class="lbl sm">θₖ = 56.3°</text>
+  <path d="M330 240 A 60 60 0 0 0 375 258" class="dim"></path>
+  <text x="382" y="262" class="lbl sm">θᵣ = 33.7°</text>
+  <path d="M300 170 L 300 200 L 330 200" class="dim"></path>
+  <text x="150" y="266" class="lbl sm">the reflected and refracted rays meet at 90°: θₖ + θᵣ = 90°</text>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 720 240" role="img" aria-label="Universal RC step response with Vc rising, Vr falling, the tau marker at 63.2 percent, the half-life, and the tangent trick; beside it the three-number recipe" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(70,20)">
+    <line x1="0" y1="180" x2="330" y2="180" class="ln"></line><line x1="0" y1="0" x2="0" y2="180" class="ln"></line>
+    <text x="290" y="198" class="lbl sm">t →</text>
+    <line x1="0" y1="30" x2="330" y2="30" class="thinl"></line>
+    <text x="-48" y="34" class="lbl sm">V_th</text>
+    <path d="M0,180 C40,80 80,48 130,38 C190,31 250,30 330,30" fill="none" stroke="var(--accent)" stroke-width="2.6"></path>
+    <text x="140" y="70" class="lbl sm" fill="var(--accent)">V_C = V_th(1 − e^(−t/τ))</text>
+    <path d="M0,30 C40,130 80,162 130,172 C190,179 250,180 330,180" fill="none" stroke="var(--neg)" stroke-width="2.4" stroke-dasharray="7 4"></path>
+    <text x="140" y="152" class="lbl sm" fill="var(--neg)">V_R = V_th·e^(−t/τ)   (and I = V_R/R)</text>
+    <line x1="90" y1="180" x2="90" y2="30" class="thinl" stroke-dasharray="3 4"></line>
+    <text x="84" y="196" class="lbl sm">τ</text>
+    <circle cx="90" cy="86" r="4" fill="var(--accent)"></circle>
+    <text x="98" y="82" class="lbl sm">63.2 %</text>
+    <line x1="44" y1="180" x2="44" y2="30" class="thinl" stroke-dasharray="3 4"></line>
+    <text x="22" y="212" class="lbl sm">t½ = 0.69τ</text>
+    <line x1="0" y1="30" x2="130" y2="180" stroke="var(--amber)" stroke-width="1.8" stroke-dasharray="5 3"></line>
+    <text x="118" y="146" class="lbl sm" fill="var(--amber)">tangent at t = 0 reaches V_th at t = τ</text>
+    <text x="196" y="24" class="lbl sm">5τ ⇒ 0.7 % left</text>
+  </g>
+  <g transform="translate(440,20)">
+    <rect x="0" y="0" width="250" height="212" class="w" stroke="var(--muted)" stroke-dasharray="5 4"></rect>
+    <text x="12" y="24" class="lbl md" font-weight="700">The three numbers</text>
+    <text x="12" y="52" class="lbl sm">1 · V_C(0⁺) — unchanged across the switching</text>
+    <text x="12" y="68" class="lbl sm">     instant (finite power ⇒ finite dV/dt)</text>
+    <text x="12" y="94" class="lbl sm">2 · V_C(∞) — steady state of §6.1</text>
+    <text x="12" y="120" class="lbl sm">3 · τ — (resistance seen by C, sources killed) × C</text>
+    <text x="12" y="150" class="lbl sm">Everything else is derived:</text>
+    <text x="12" y="168" class="mtext">I = C(V_∞ − V_C)/R_th ,  Q = CV_C ,</text>
+    <text x="12" y="186" class="mtext">P_R = I²R_th ,  U_C = ½CV_C² .</text>
+    <text x="12" y="206" class="lbl sm">Nothing else in the problem is needed.</text>
+  </g>
+</svg>

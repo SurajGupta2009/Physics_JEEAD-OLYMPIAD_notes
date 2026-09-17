@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 860 258" role="img" aria-label="Parallel plate capacitor connected to a battery, with uniform field in the gap" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+    <rect x="40" y="62" width="300" height="14" class="fp"></rect>
+    <rect x="40" y="178" width="300" height="14" class="fn"></rect>
+    <g stroke="var(--accent)" stroke-width="1.5" fill="none">
+      <line x1="95" y1="84" x2="95" y2="168" marker-end="url(#ahb)"></line>
+      <line x1="160" y1="84" x2="160" y2="168" marker-end="url(#ahb)"></line>
+      <line x1="225" y1="84" x2="225" y2="168" marker-end="url(#ahb)"></line>
+      <line x1="290" y1="84" x2="290" y2="168" marker-end="url(#ahb)"></line>
+    </g>
+    <path d="M336,74 q14,20 6,42 q-10,20 4,40" class="thinl" fill="none"></path>
+    <path d="M340,192 q22,-14 22,-46 q0,-34 -22,-48" class="thinl" fill="none"></path>
+    <text x="352" y="136" class="lbl sm" text-anchor="start">fringing</text>
+    <g fill="var(--pos)" font-size="14" text-anchor="middle">
+      <text x="70" y="56">+</text><text x="130" y="56">+</text><text x="190" y="56">+</text><text x="250" y="56">+</text><text x="310" y="56">+</text>
+      <text x="70" y="207">−</text><text x="130" y="207">−</text><text x="190" y="207">−</text><text x="250" y="207">−</text><text x="310" y="207">−</text>
+    </g>
+    <text x="190" y="140" class="mi sm" text-anchor="middle">E = σ/ε₀  (uniform, only here)</text>
+    <text x="190" y="42" class="mi" text-anchor="middle">+Q on this plate, σ = Q/A</text>
+    <line x1="378" y1="76" x2="378" y2="178" class="ln" stroke-width="1" marker-start="url(#dim)" marker-end="url(#dim)"></line>
+    <text x="392" y="132" class="mi sm">d</text>
+    <path d="M340,69 H420 V44 H470" class="ln"></path><path d="M340,185 H420 V214 H470" class="ln"></path>
+    <line x1="470" y1="30" x2="470" y2="58" class="ln2"></line><line x1="488" y1="18" x2="488" y2="70" class="ln2"></line>
+    <line x1="470" y1="200" x2="470" y2="228" class="ln2"></line><line x1="488" y1="188" x2="488" y2="240" class="ln2"></line>
+    <path d="M488,44 H556" class="ln"></path><path d="M488,214 H556" class="ln"></path>
+    <text x="479" y="12" class="lbl sm" text-anchor="middle">+</text><text x="497" y="86" class="lbl sm" text-anchor="middle">−</text>
+    <text x="522" y="134" class="lbl sm" text-anchor="middle">battery V₀</text>
+    <text x="522" y="150" class="lbl sm" text-anchor="middle">(the switch that</text>
+    <text x="522" y="164" class="lbl sm" text-anchor="middle">decides everything)</text>
+    <g>
+      <rect x="640" y="96" width="204" height="146" rx="12" class="w ln" stroke-dasharray="5 4"></rect>
+      <text x="742" y="122" class="lbl" text-anchor="middle" style="font-weight:700">after chapter 11 you can</text>
+      <text x="742" y="146" class="lbl sm" text-anchor="middle">get C for any geometry</text>
+      <text x="742" y="162" class="lbl sm" text-anchor="middle">force by virtual work</text>
+      <text x="742" y="178" class="lbl sm" text-anchor="middle">any network, any dielectric</text>
+      <text x="742" y="194" class="lbl sm" text-anchor="middle">RC transients, ∞ ladders</text>
+      <text x="742" y="210" class="lbl sm" text-anchor="middle">reciprocity &amp; images</text>
+    </g>
+</svg>

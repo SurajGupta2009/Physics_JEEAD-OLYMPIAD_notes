@@ -1,11 +1,13 @@
 # Current Electricity — from basics to Olympiad
 
-A self-contained HTML course on **current, resistance, cells, networks, instruments and real-wire physics**,
+> **Portable Markdown edition:** [Current-electricity.md](Current-electricity.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Current-electricity.html](Current-electricity.html) remains available for the interactive offline view and printing.
+
+A self-contained course on **current, resistance, cells, networks, instruments and real-wire physics**,
 written for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**. The complete course is in `Current-electricity.html`; it works
 offline from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open current-electricity/Current-electricity.html   ← start here (course map, how to study, the exam note)
+open current-electricity/Current-electricity.md      ← start here (course map, how to study, the exam note)
 ```
 
 or, to browse with the interactive features (theme switch, progress ticks, solved-question tracking):

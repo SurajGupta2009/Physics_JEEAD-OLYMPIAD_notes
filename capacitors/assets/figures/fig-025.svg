@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 720 224" role="img" aria-label="Compensated divider circuit on the left, and on the right three output step responses labelled under-compensated, compensated and over-compensated" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(24,26)">
+    <text x="0" y="-6" class="lbl sm">V_s (step)</text>
+    <path d="M0,30 H60 M0,150 H60" class="ln"></path>
+    <path d="M60,30 V66 M60,114 V150" class="ln"></path>
+    <rect x="52" y="66" width="16" height="48" class="w" stroke="var(--fg)" stroke-width="1.8"></rect>
+    <text x="26" y="96" class="mi sm">R₁</text>
+    <path d="M120,66 V114" stroke="var(--fg)" stroke-width="2"></path>
+    <path d="M106,78 h28 M106,102 h28" stroke="var(--fg)" stroke-width="1.6"></path>
+    <text x="132" y="96" class="mi sm">C₁</text>
+    <path d="M60,30 H120 M60,90 H120" class="ln"></path>
+    <circle cx="150" cy="90" r="4" fill="var(--fg)"></circle>
+    <text x="158" y="84" class="lbl sm">V_J (output)</text>
+    <path d="M120,90 H210 M210,30 V66 M210,114 V150" class="ln"></path>
+    <path d="M210,30 H270 M210,150 H270" class="ln"></path>
+    <path d="M256,66 V114" stroke="var(--fg)" stroke-width="2"></path>
+    <path d="M242,78 h28 M242,102 h28" stroke="var(--fg)" stroke-width="1.6"></path>
+    <text x="222" y="60" class="mi sm">C₂</text>
+    <rect x="272" y="66" width="16" height="48" class="w" stroke="var(--fg)" stroke-width="1.8"></rect>
+    <text x="296" y="96" class="mi sm">R₂</text>
+    <path d="M288,66 V30 H270 M288,114 V150 H270 M210,66 V78 M210,114 V102" class="ln"></path>
+    <text x="10" y="180" class="lbl sm">τ = (R₁‖R₂)(C₁+C₂) unless R₁C₁ = R₂C₂, in which case the transient simply does not exist.</text>
+  </g>
+  <g transform="translate(400,26)">
+    <line x1="0" y1="150" x2="290" y2="150" class="ln"></line><line x1="0" y1="10" x2="0" y2="150" class="ln"></line>
+    <line x1="0" y1="46" x2="290" y2="46" class="thinl"></line>
+    <path d="M0,150 C30,120 46,60 60,50 C90,47 140,46 290,46" fill="none" stroke="var(--muted)" stroke-width="2"></path>
+    <text x="72" y="86" class="lbl sm" fill="var(--muted)">R₁C₁ &lt; R₂C₂ : under — edge rounds up to the flat value</text>
+    <path d="M0,46 H290" fill="none" stroke="var(--accent)" stroke-width="2.8"></path>
+    <text x="72" y="38" class="lbl sm" fill="var(--accent)">R₁C₁ = R₂C₂ : exactly flat — what you tune for</text>
+    <path d="M0,150 L6,16 C20,20 34,44 52,46 C90,47 140,46 290,46" fill="none" stroke="var(--neg)" stroke-width="2"></path>
+    <text x="72" y="128" class="lbl sm" fill="var(--neg)">R₁C₁ &gt; R₂C₂ : over — spike, then droop</text>
+    <text x="0" y="172" class="lbl sm">t →</text>
+    <text x="0" y="196" class="lbl sm">A 10× probe needs C₁ = C_in/9 with R₁ = 9R_in: the trimmer is C₁, because</text>
+    <text x="0" y="212" class="lbl sm">the scope's 100 pF input is the unknown you must cancel.</text>
+  </g>
+</svg>

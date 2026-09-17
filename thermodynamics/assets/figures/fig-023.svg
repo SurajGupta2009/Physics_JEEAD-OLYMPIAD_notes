@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 760 200" role="img" aria-label="Two routes from A to B on a PV diagram: the reversible curve above and the dashed irreversible straight line below, with the integrals of delta Q over T annotated on each" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <line x1="70" y1="170" x2="470" y2="170" class="ln" marker-end="url(#ah)"></line>
+  <line x1="70" y1="170" x2="70" y2="20" class="ln" marker-end="url(#ah)"></line>
+  <circle cx="140" cy="60" r="4" fill="var(--fg)"></circle><text x="128" y="52" class="mi">B</text>
+  <circle cx="380" cy="140" r="4" fill="var(--fg)"></circle><text x="392" y="140" class="mi">A</text>
+  <path d="M380,140 C300,100 220,72 140,60" fill="none" stroke="var(--accent)" stroke-width="2.2"></path>
+  <path d="M380,140 C320,128 230,88 140,60" fill="none" class="ln2" stroke-dasharray="5 5"></path>
+  <text x="235" y="60" class="lbl sm">any reversible route: ΔS = ∫δQ_rev/T ✓</text>
+  <text x="255" y="150" class="lbl sm">the actual irreversible route: ∫δQ/T &lt; ΔS</text>
+  <g transform="translate(500,20)">
+    <rect x="0" y="0" width="230" height="150" class="w ln" fill="none"></rect>
+    <text x="115" y="26" class="lbl sm" text-anchor="middle">the bookkeeping</text>
+    <text x="16" y="52" class="lbl sm">system: +ΔS (real change)</text>
+    <text x="16" y="70" class="lbl sm">surroundings: −Q/T_bath</text>
+    <text x="16" y="94" class="lbl sm">sum ≥ 0: allowed</text>
+    <text x="16" y="112" class="lbl sm">sum &lt; 0: never happens</text>
+    <text x="16" y="136" class="lbl sm">= 0: reversible, the only way</text>
+  </g>
+</svg>

@@ -1,12 +1,14 @@
 # Heat — from basics to Olympiad
 
-A self-contained HTML course on **thermal expansion, calorimetry and heat transfer** — temperature and internal
+> **Portable Markdown edition:** [Heat.md](Heat.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Heat.html](Heat.html) remains available for the interactive offline view and printing.
+
+A self-contained course on **thermal expansion, calorimetry and heat transfer** — temperature and internal
 energy as the ledger, then expansion, phase change, conduction, convection, radiation, and an Olympiad toolkit —
 written for **JEE (Main & Advanced)** and the **physics olympiad track (NSEP → INPhO → IPhO)**. It works offline
 from `file://`: no CDN, no MathJax, no fonts, no build step.
 
 ```
-open heat/Heat.html   ← the whole course, one file (also served as the topic entry)
+open heat/Heat.md      ← the portable course, one file (also served as the topic entry)
 ```
 
 or, to browse with the interactive features (theme switch, expand/collapse):

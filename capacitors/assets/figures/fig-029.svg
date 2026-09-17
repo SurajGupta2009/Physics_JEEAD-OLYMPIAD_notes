@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 720 216" role="img" aria-label="The spheroid family: needle, sphere, disc with their capacitances, and below them a disc-shaped void and a needle-shaped void in a dielectric showing the internal fields" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
+  --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
+.w { fill:var(--panel); }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.ln2 { stroke:var(--fg); stroke-width:2.6; fill:none; stroke-linecap:round; }
+.thinl { stroke:var(--muted); stroke-width:1; fill:none; stroke-dasharray:4 3; stroke-linecap:round; }
+.acc { stroke:var(--accent); stroke-width:1.8; fill:none; }
+.facc { fill:var(--accent); opacity:.14; stroke:var(--accent); stroke-width:1.4; }
+.fneg { fill:var(--neg); opacity:.13; stroke:var(--neg); stroke-width:1.4; }
+.fp { fill:#edf4fb; stroke:var(--accent); stroke-width:1.6; }
+.fn { fill:#fbeeed; stroke:var(--neg); stroke-width:1.6; }
+.fld { stroke:var(--accent); stroke-width:1.4; fill:none; opacity:.85; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.lbl.md { font-size:12px; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+.mi.sm { font-size:11.5px; fill:var(--muted); }
+.eq0 { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:2 4; }
+.mtext { font-family:Georgia,serif; font-size:13px; fill:var(--fg); }
+.hi { fill:var(--amber); opacity:.16; stroke:var(--amber); stroke-width:1.3; }
+.pos { fill:var(--pos); } .negc { fill:var(--neg); }
+line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--fg)"/></marker>
+<marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--accent)"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--neg)"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9.6,5 L0,9 Z" fill="var(--pos)"/></marker>
+<marker id="aho" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1.4 L8.6,5 L1,8.6" fill="none" stroke="var(--fg)" stroke-width="1.8"/></marker>
+<marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
+</defs>
+
+  <g transform="translate(30,24)">
+    <text x="0" y="-6" class="lbl md" font-weight="700">One formula, three shapes (f = focal half-length)</text>
+    <ellipse cx="60" cy="52" rx="9" ry="40" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"></ellipse>
+    <text x="76" y="46" class="lbl sm">prolate (needle)</text>
+    <text x="76" y="62" class="mtext">C = 4πε₀f / ln((c+f)/a)</text>
+    <text x="76" y="78" class="lbl sm">→ 4πε₀c / ln(2c/a)</text>
+    <circle cx="250" cy="52" r="30" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"></circle>
+    <text x="288" y="56" class="lbl sm">sphere: 4πε₀a</text>
+    <ellipse cx="440" cy="52" rx="40" ry="9" stroke="var(--fg)" stroke-width="2" fill="var(--surface)"></ellipse>
+    <text x="488" y="46" class="lbl sm">oblate (disc)</text>
+    <text x="488" y="62" class="mtext">C = 4πε₀f/η → 8ε₀a</text>
+  </g>
+  <g transform="translate(30,116)">
+    <text x="0" y="-4" class="lbl md" font-weight="700">The same L decides whether a defect is lethal</text>
+    <rect x="0" y="8" width="200" height="70" fill="var(--surface-2)" stroke="var(--muted)"></rect>
+    <g class="fld"><path d="M30,4 V78"></path><path d="M70,4 V78"></path><path d="M110,4 V78"></path><path d="M150,4 V78"></path><path d="M190,4 V78"></path></g>
+    <ellipse cx="100" cy="43" rx="46" ry="6" fill="var(--bg)" stroke="var(--neg)" stroke-width="2"></ellipse>
+    <text x="24" y="98" class="lbl sm">disc void ⊥ E:  L = 1,  E_in = κE₀  → corona</text>
+    <rect x="270" y="8" width="200" height="70" fill="var(--surface-2)" stroke="var(--muted)"></rect>
+    <g class="fld"><path d="M300,4 V78"></path><path d="M340,4 V78"></path><path d="M380,4 V78"></path><path d="M420,4 V78"></path></g>
+    <ellipse cx="370" cy="43" rx="6" ry="30" fill="var(--bg)" stroke="var(--pos)" stroke-width="2"></ellipse>
+    <text x="288" y="98" class="lbl sm">needle void ∥ E:  L → 0,  E_in = E₀  → harmless</text>
+    <text x="496" y="34" class="lbl sm">E_in = E₀ / [1 + L(εᵢ/ε_m − 1)]</text>
+    <text x="496" y="52" class="lbl sm">L = 1/3 sphere — which is where</text>
+    <text x="496" y="68" class="lbl sm">the "3" in 3E₀/(κ+2) comes from.</text>
+    <text x="496" y="92" class="lbl md" fill="var(--accent)">Layer your insulation along E.</text>
+  </g>
+</svg>
