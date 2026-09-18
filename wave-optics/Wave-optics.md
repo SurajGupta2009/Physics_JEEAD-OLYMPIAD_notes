@@ -152,9 +152,8 @@ A ray tells you which way the energy goes; it says nothing about why a wave turn
 
 Light is an electromagnetic wave: the things that oscillate are the electric and magnetic fields, perpendicular to each other and both perpendicular to the direction of travel. For interference we do not need Maxwell's equations; we need only the mathematical description of any travelling wave,
 
-<!-- Equation tag: 1.1 -->
 $$
-y(x,t) = a\sin(\omega t-kx+\varphi_0), \qquad \omega = 2\pi\nu, \qquad k = \frac{2\pi}{\lambda}, \qquad v = \frac{\omega}{k} = \nu\lambda
+y(x,t) = a\sin(\omega t-kx+\varphi_0), \qquad \omega = 2\pi\nu, \qquad k = \frac{2\pi}{\lambda}, \qquad v = \frac{\omega}{k} = \nu\lambda \tag{1.1}
 $$
 
 The quantity inside the sine is the **phase**, $\varphi = \omega t-kx+\varphi_0$. Two facts about it do all the work in this course:
@@ -226,9 +225,8 @@ Now let the wave cross into a medium where it is slower. The construction is the
 
 The two right-angled triangles in the figure give $\sin i = BC/AC$ and $\sin r = AD/AC$ with $BC = v_1\Delta t$, $AD = v_2\Delta t$. Dividing,
 
-<!-- Equation tag: 1.2 -->
 $$
-\frac{\sin i}{\sin r} = \frac{v_1}{v_2} = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1} \Rightarrow n_1\sin i = n_2\sin r
+\frac{\sin i}{\sin r} = \frac{v_1}{v_2} = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1} \Rightarrow n_1\sin i = n_2\sin r \tag{1.2}
 $$
 
 which is Snell's law, and it is now something we have *derived* rather than assumed. Three consequences follow immediately and are worth saying separately, because they are the questions most often asked about this figure:
@@ -249,9 +247,8 @@ When two waves arrive at the same point, the resultant disturbance is the sum of
 
 **Fig. 1.4** — Adding two waves with a phasor triangle. The resultant length is the amplitude of the combined disturbance; it swings from $a_1+a_2$ (in step) through $\sqrt{a_1^{2}+a_2^{2}}$ (quarter-cycle apart, the incoherent answer) to $|a_1-a_2|$ (in antiphase). The intensity, being the square of this length, swings from $(a_1+a_2)^{2}$ to $(a_1-a_2)^{2}$ — never through "the sum of the intensities" unless the phases are random.
 
-<!-- Equation tag: 1.3 -->
 $$
-a^{2} = a_1^{2}+a_2^{2}+2a_1a_2\cos\Delta\varphi, \qquad I = I_1+I_2+2\sqrt{I_1I_2}\,\cos\Delta\varphi
+a^{2} = a_1^{2}+a_2^{2}+2a_1a_2\cos\Delta\varphi, \qquad I = I_1+I_2+2\sqrt{I_1I_2}\,\cos\Delta\varphi \tag{1.3}
 $$
 
 with the special values
@@ -484,9 +481,8 @@ Light from a source S falls on two narrow slits $S_1$ and $S_2$ a distance $d$ a
 
 Let P be a point on the screen at a distance $y$ from the central line, and let $\theta$ be the angle $S_1P$ makes with the axis. Drop a perpendicular from $S_1$ onto $S_2P$: the extra distance travelled by the wave from $S_2$ is the leg of a right triangle with hypotenuse $d$ and angle $\theta$, so
 
-<!-- Equation tag: 2.1 -->
 $$
-\Delta x = S_2P-S_1P = d\sin\theta \approx d\tan\theta = \frac{dy}{D} \qquad (\text{valid for } y \ll D)
+\Delta x = S_2P-S_1P = d\sin\theta \approx d\tan\theta = \frac{dy}{D} \qquad (\text{valid for } y \ll D) \tag{2.1}
 $$
 
 > **Why the rays may be treated as parallel at the screen**
@@ -497,9 +493,8 @@ $$
 
 Bright fringes are places where the two waves arrive in phase, dark where they arrive in antiphase:
 
-<!-- Equation tag: 2.2 -->
 $$
-\Delta x = n\lambda \ \ (n = 0,1,2\ldots) \quad\text{bright}, \qquad \Delta x = (2n-1)\frac{\lambda}{2}\ \ (n = 1,2\ldots) \quad\text{dark}
+\Delta x = n\lambda \ \ (n = 0,1,2\ldots) \quad\text{bright}, \qquad \Delta x = (2n-1)\frac{\lambda}{2}\ \ (n = 1,2\ldots) \quad\text{dark} \tag{2.2}
 $$
 
 With $\Delta x = dy/D$,
@@ -514,9 +509,8 @@ and in terms of the angle, using $\sin\theta$ instead of $y/D$, the same stateme
 
 The distance between consecutive bright fringes (equivalently, between consecutive dark ones) is the same everywhere on the screen:
 
-<!-- Equation tag: 2.3 -->
 $$
-\beta = y_{n+1}-y_n = \frac{\lambda D}{d} \qquad\text{and angularly}\qquad \Delta\theta = \frac{\lambda}{d}
+\beta = y_{n+1}-y_n = \frac{\lambda D}{d} \qquad\text{and angularly}\qquad \Delta\theta = \frac{\lambda}{d} \tag{2.3}
 $$
 
 The constancy of $\beta$ is the reason the pattern looks like a ruler: equally spaced lines. It is also the reason the experiment is a measurement: measure $\beta$, $D$ and $d$, and the wavelength comes out, which is how Young first measured the wavelength of light in 1801. Fringe width is a linear ruler in three ways:
@@ -539,9 +533,8 @@ The constancy of $\beta$ is the reason the pattern looks like a ruler: equally s
 
 Since $\sin\theta \le 1$, the condition $d\sin\theta = n\lambda$ cannot be satisfied for $n\lambda > d$. Hence
 
-<!-- Equation tag: 2.4 -->
 $$
-n_{\max} = \text{int}\!\left(\frac{d}{\lambda}\right) \quad\text{bright fringes on each side of the centre; }\ (2n_{\max}+1)\ \text{in all}
+n_{\max} = \text{int}\!\left(\frac{d}{\lambda}\right) \quad\text{bright fringes on each side of the centre; }\ (2n_{\max}+1)\ \text{in all} \tag{2.4}
 $$
 
 For $d = 0.50$ mm and $\lambda = 600$ nm this gives $n_{\max} = 833$: 833 bright fringes on each side, 1667 in total, with the outermost ones compressed at $\theta \to 90^\circ$ — the pattern is equally spaced *on the screen* only because we are looking at the small-angle part of it.
@@ -589,9 +582,8 @@ With white light every wavelength builds its own pattern, all of them coincident
 
 Cover $S_1$ with a slab of thickness $t$ and refractive index $\mu$. The optical path along that arm increases by $(\mu-1)t$, so the whole pattern shifts toward the covered slit by an amount that restores the balance: the new central fringe (where the optical paths are equal) moves to a place where the *geometrical* path difference equals $(\mu-1)t$:
 
-<!-- Equation tag: 2.5 -->
 $$
-\frac{dy}{D} = (\mu-1)t \Rightarrow \Delta y = \frac{(\mu-1)t\,D}{d}, \qquad N = \frac{\Delta y}{\beta} = \frac{(\mu-1)t}{\lambda}\ \text{fringes shifted}
+\frac{dy}{D} = (\mu-1)t \Rightarrow \Delta y = \frac{(\mu-1)t\,D}{d}, \qquad N = \frac{\Delta y}{\beta} = \frac{(\mu-1)t}{\lambda}\ \text{fringes shifted} \tag{2.5}
 $$
 
 Numbers: $t = 5.0\ \mu$m, $\mu = 1.5$, $\lambda = 600$ nm give $\Delta y = (0.5)(5\times10^{-6})(1000/0.5) = 5.0$ mm, i.e. $N = 4.17$ fringes. The fractional part is meaningful: 4 fringes pass a given point and the pattern comes to rest one-sixth of a fringe past it.
@@ -612,9 +604,8 @@ If one slit is wider it admits more light and radiates a larger amplitude. The p
 
 Put the primary source a distance $y_0$ off the axis, at a distance $D_1$ from the slit plane. The two slits are no longer equidistant from the source, so they start with a built-in path difference $\Delta x_0 = d y_0/D_1$. The whole pattern shifts to compensate, and the central fringe moves to
 
-<!-- Equation tag: 2.6 -->
 $$
-y_{\text{centre}} = -\,y_0\frac{D}{D_1} \qquad (\text{opposite side to the displaced source})
+y_{\text{centre}} = -\,y_0\frac{D}{D_1} \qquad (\text{opposite side to the displaced source}) \tag{2.6}
 $$
 
 This is the reason the arrangement is fiddly: the fringe system is bolted to the *source*, not to the bench. Move the lamp 1 mm sideways, with the lamp 0.5 m from the slits and the screen 1 m away, and the pattern moves 2 mm — over one and a half fringes. It is also the principle of the reversed experiment: measuring where the fringes are tells you where the source is, which is how a stellar interferometer measures the diameter of a star (§7.8).
@@ -643,9 +634,8 @@ Two paths through different media are compared by their **optical** path lengths
 
 With equal slits the field at P is the sum of two sinusoids of equal amplitude and phase difference $\Delta\varphi = 2\pi d\sin\theta/\lambda$, so
 
-<!-- Equation tag: 2.7 -->
 $$
-I(\theta) = 4I_0\cos^{2}\!\left(\frac{\pi d\sin\theta}{\lambda}\right) \approx 4I_0\cos^{2}\!\left(\frac{\pi dy}{\lambda D}\right)
+I(\theta) = 4I_0\cos^{2}\!\left(\frac{\pi d\sin\theta}{\lambda}\right) \approx 4I_0\cos^{2}\!\left(\frac{\pi dy}{\lambda D}\right) \tag{2.7}
 $$
 
 $$
@@ -901,14 +891,12 @@ using $\sin i = \mu\sin r$ from Snell's law. Combining a cosine and a tangent is
 
 Putting the geometry and the phase rule together, for a film of index $\mu$ and thickness $t$ in air, illuminated at angle of refraction $r$:
 
-<!-- Equation tag: 3.1 -->
 $$
-\text{reflected light: } 2\mu t\cos r = \begin{cases} n\lambda & \text{dark (with one } \lambda/2 \text{ shift)} \\ (2n-1)\tfrac{\lambda}{2} & \text{bright} \end{cases}
+\text{reflected light: } 2\mu t\cos r = \begin{cases} n\lambda & \text{dark (with one } \lambda/2 \text{ shift)} \\ (2n-1)\tfrac{\lambda}{2} & \text{bright} \end{cases} \tag{3.1}
 $$
 
-<!-- Equation tag: 3.2 -->
 $$
-\text{transmitted light: } 2\mu t\cos r = \begin{cases} n\lambda & \text{bright} \\ (2n-1)\tfrac{\lambda}{2} & \text{dark} \end{cases}
+\text{transmitted light: } 2\mu t\cos r = \begin{cases} n\lambda & \text{bright} \\ (2n-1)\tfrac{\lambda}{2} & \text{dark} \end{cases} \tag{3.2}
 $$
 
 At normal incidence ($r = 0$, $\cos r = 1$) the conditions simplify to the two you should carry: **reflected bright when $2\mu t = (2n-1)\lambda/2$, transmitted bright when $2\mu t = n\lambda$.** The smallest thickness that reflects brightly is therefore $t = \lambda/4\mu$ — about 111 nm for soap at 589 nm.
@@ -927,9 +915,8 @@ Let two glass plates touch along one edge and be separated by a spacer (a foil, 
 
 Why equally spaced? A fringe appears whenever $2\mu t = (2n-1)\lambda/2$, so the fringe-to-fringe change in thickness is $\Delta t = \lambda/2\mu$. Since $t = x\tan\theta \approx x\theta$ for a thin wedge, the fringe spacing is
 
-<!-- Equation tag: 3.3 -->
 $$
-\beta = \frac{\Delta t}{\theta} = \frac{\lambda}{2\mu\theta} \qquad\text{and}\qquad t_{\text{spacer}} = N\frac{\lambda}{2\mu}\ \text{for } N \text{ fringes across the whole wedge}
+\beta = \frac{\Delta t}{\theta} = \frac{\lambda}{2\mu\theta} \qquad\text{and}\qquad t_{\text{spacer}} = N\frac{\lambda}{2\mu}\ \text{for } N \text{ fringes across the whole wedge} \tag{3.3}
 $$
 
 Numbers: a 1.5 cm long wedge showing 30 fringes of 600 nm light has $\beta = 1.5/30 = 0.5$ mm, giving $\theta = \lambda/2\beta = 6\times10^{-4}$ rad and a spacer of $9\ \mu$m. That is a foil measured to three figures with a ruler and a lamp — the standard demonstration.
@@ -942,16 +929,14 @@ Numbers: a 1.5 cm long wedge showing 30 fringes of 600 nm light has $\beta = 1.5
 
 Replace the wedge by a plano-convex lens resting on a flat plate. The air film between the spherical surface and the plate is now circularly symmetric: its thickness at a distance $r$ from the point of contact is, by the sagitta relation,
 
-<!-- Equation tag: 3.4 -->
 $$
-t = \frac{r^{2}}{2R} \qquad (r \ll R)
+t = \frac{r^{2}}{2R} \qquad (r \ll R) \tag{3.4}
 $$
 
 which follows from $R^{2} = r^{2}+(R-t)^{2}$ on dropping the $t^{2}$. The reflected-light conditions $2t+\lambda/2 = n\lambda$ (bright) and $=(2n+1)\lambda/2$ (dark), with the $\lambda/2$ coming from the reflection at the air–glass boundary below the film, give Newton's two laws:
 
-<!-- Equation tag: 3.5 -->
 $$
-\text{dark rings: } r_n = \sqrt{n\lambda R}, \qquad \text{bright rings: } r_n = \sqrt{\left(n-\tfrac12\right)\lambda R}
+\text{dark rings: } r_n = \sqrt{n\lambda R}, \qquad \text{bright rings: } r_n = \sqrt{\left(n-\tfrac12\right)\lambda R} \tag{3.5}
 $$
 
 $$
@@ -971,9 +956,8 @@ Two consequences are examined every year:
   slope is $4\lambda R$, which is how the experiment measures $R$ or $\lambda$ to a part in
   $10^{4}$:
 
-<!-- Equation tag: 3.6 -->
 $$
-R = \frac{D_{n+m}^{2}-D_{n}^{2}}{4m\lambda} \qquad \text{(differences are taken so that the uncertain central thickness cancels)}
+R = \frac{D_{n+m}^{2}-D_{n}^{2}}{4m\lambda} \qquad \text{(differences are taken so that the uncertain central thickness cancels)} \tag{3.6}
 $$
 
 ### 3.5 Thin films in practice: soap, oil, and antireflection coatings
@@ -1235,9 +1219,8 @@ A biprism is two thin prisms joined base to base with a very obtuse angle betwee
 
 Each half of the biprism deviates the light by the thin-prism angle $\delta = (\mu-1)A$. It is a virtual image, so it appears displaced *sideways* by an amount that grows with the distance from the prism: the two image positions are separated by $d = 2a(\mu-1)A$ on the plane where the images come to rest (the plane of the slit for a thin prism). Hence
 
-<!-- Equation tag: 4.1 -->
 $$
-d = 2a(\mu-1)A, \qquad D = a+b, \qquad \beta = \frac{\lambda(a+b)}{d} = \frac{\lambda(a+b)}{2a(\mu-1)A}
+d = 2a(\mu-1)A, \qquad D = a+b, \qquad \beta = \frac{\lambda(a+b)}{d} = \frac{\lambda(a+b)}{2a(\mu-1)A} \tag{4.1}
 $$
 
 Numbers: $a = 10$ cm, $b = 90$ cm, $\mu = 1.5$, $A = 1^\circ = 0.01745$ rad, $\lambda = 600$ nm give $d = 2(0.10)(0.5)(0.01745) = 1.75$ mm and $\beta = 600\times10^{-9}(1.00)/1.75\times10^{-3} = 0.34$ mm — about 3400 fringes across a 1 m bench, which is why the biprism is a good instrument for measuring wavelengths to four figures.
@@ -1284,9 +1267,8 @@ A beam splitter divides the light into two beams travelling along perpendicular 
 
 **Fig. 4.3** — The Michelson interferometer. The two arms are folded into a compact box, which is what makes the instrument stable enough to count fringes while *slowly* moving a mirror: a change of $\lambda/2 = 0.3\ \mu$m is one fringe, and a turn of the micrometer screw passes hundreds of them past the observer. The compensator plate is inserted so that both beams cross the same thickness of glass.
 
-<!-- Equation tag: 4.2 -->
 $$
-\Delta L = N\frac{\lambda}{2} \qquad \text{(mirror movement per fringe)}, \qquad N = \frac{2\Delta L}{\lambda}
+\Delta L = N\frac{\lambda}{2} \qquad \text{(mirror movement per fringe)}, \qquad N = \frac{2\Delta L}{\lambda} \tag{4.2}
 $$
 
 Three measurements the instrument is built for:
@@ -1296,9 +1278,8 @@ Three measurements the instrument is built for:
 - **Refractive index of a thin plate.** Insert a slide of thickness $t$ and index $\mu$ in one arm; it
   adds $2(\mu-1)t$ of optical path (the $2$ because the light crosses it twice), and the fringe count gives
 
-<!-- Equation tag: 4.3 -->
 $$
-N = \frac{2(\mu-1)t}{\lambda} \Rightarrow \mu = 1+\frac{N\lambda}{2t}
+N = \frac{2(\mu-1)t}{\lambda} \Rightarrow \mu = 1+\frac{N\lambda}{2t} \tag{4.3}
 $$
 
 - **Wavelength difference of a doublet.** With a source containing two close wavelengths the pattern
@@ -1367,9 +1348,8 @@ The fringes fade when the two beams no longer "remember" each other. Two mechani
 >   $sD/L_1$, and the fringes vanish when that displacement reaches half a fringe width. Hence the source must
 >   satisfy $s < \frac{\lambda L_1}{2d}$ — a slit of a few tenths of a millimetre for a bench experiment.
 
-<!-- Equation tag: 4.4 -->
 $$
-\text{temporal: } l_c = \frac{\lambda^{2}}{\Delta\lambda}, \qquad \text{spatial: } s_{\max} = \frac{\lambda L_1}{2d} \quad\text{(fringes just vanish)}
+\text{temporal: } l_c = \frac{\lambda^{2}}{\Delta\lambda}, \qquad \text{spatial: } s_{\max} = \frac{\lambda L_1}{2d} \quad\text{(fringes just vanish)} \tag{4.4}
 $$
 
 The two conditions explain the whole practical design of the experiments in this part. Lloyd's mirror needs a narrow slit (spatial coherence) and a monochromatic source (temporal coherence); the Michelson interferometer needs a narrow line because it deliberately runs with a large path imbalance; and white-light fringes, being confined to a few micrometres of imbalance, are used to find the *zero* of an interferometer precisely — the method behind fringe-counting instruments that need an absolute reference point.
@@ -1639,9 +1619,8 @@ Two limits are worth naming, because the formulas differ:
 
 Slit of width $a$, illuminated normally by a plane wave of wavelength $\lambda$. Divide the slit into strips. At a direction $\theta$ from the axis, the strip at the top and the strip at the bottom differ in path by $a\sin\theta$. If that difference is a whole wavelength, the slit can be paired off strip by strip (top half with bottom half, and so on) in cancelling pairs: zero light. If the difference is $\lambda/2$... that pairing argument fails, but the same argument applied to the whole slit shows the *first* zero occurs at $a\sin\theta = \lambda$, and generally
 
-<!-- Equation tag: 5.1 -->
 $$
-a\sin\theta = m\lambda \ \ (m = \pm1,\pm2,\ldots) \qquad \text{dark (minima)}, \qquad \theta = 0 \qquad \text{central maximum}
+a\sin\theta = m\lambda \ \ (m = \pm1,\pm2,\ldots) \qquad \text{dark (minima)}, \qquad \theta = 0 \qquad \text{central maximum} \tag{5.1}
 $$
 
 Between the minima are secondary maxima, at the angles $a\sin\theta \approx (m+\tfrac12)\lambda$ more precisely at $\tan\beta = \beta$, i.e. $\beta = 1.43\pi, 2.46\pi,\ldots$, with intensities $0.047,\ 0.017,\ 0.008\ldots$ of the central one. No light at all reaches the screen where the pairing is exact.
@@ -1650,9 +1629,8 @@ Between the minima are secondary maxima, at the angles $a\sin\theta \approx (m+\
 
 **Fig. 5.1** — The single-slit pattern: intensity against angle, drawn from $I = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}$ with $\beta = \pi a\sin\theta/\lambda$. The central maximum holds about 90% of the transmitted light and is twice as wide as each secondary maximum; its half-width is $\lambda/a$ in angle (in a radian measure of $\sin\theta$). Narrow the slit and the pattern broadens — the first hint of the uncertainty principle, and the reason a pinhole camera is fuzzy.
 
-<!-- Equation tag: 5.2 -->
 $$
-I(\theta) = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}, \qquad \beta = \frac{\pi a\sin\theta}{\lambda}, \qquad \text{central half-width } \sin\theta = \frac{\lambda}{a}
+I(\theta) = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}, \qquad \beta = \frac{\pi a\sin\theta}{\lambda}, \qquad \text{central half-width } \sin\theta = \frac{\lambda}{a} \tag{5.2}
 $$
 
 On a screen at distance $D$ the **width of the central maximum** — measured between the first minima on either side — is
@@ -1671,9 +1649,8 @@ Numbers: a slit 0.10 mm wide, 1.00 m from the screen, with 600 nm light gives $W
 
 Real slits have width, so the observed pattern is the product of two things: the double-slit interference (modulation) and the single-slit diffraction (envelope).
 
-<!-- Equation tag: 5.3 -->
 $$
-I = \underbrace{4I_0\cos^{2}\!\left(\frac{\pi d\sin\theta}{\lambda}\right)}_{\text{interference}}\times \underbrace{\left(\frac{\sin\beta}{\beta}\right)^{2}}_{\text{diffraction envelope}}, \qquad \beta = \frac{\pi a\sin\theta}{\lambda}
+I = \underbrace{4I_0\cos^{2}\!\left(\frac{\pi d\sin\theta}{\lambda}\right)}_{\text{interference}}\times \underbrace{\left(\frac{\sin\beta}{\beta}\right)^{2}}_{\text{diffraction envelope}}, \qquad \beta = \frac{\pi a\sin\theta}{\lambda} \tag{5.3}
 $$
 
 An interference maximum is **missing** when it falls on a diffraction minimum: $d\sin\theta = n\lambda$ and $a\sin\theta = m\lambda$ simultaneously, i.e. $n = m\,d/a$. This is why a photograph of a double-slit pattern brightens and dims in bands rather than uniformly (Fig. 2.2 was drawn for *point* slits), and why the pattern of a real apparatus has only a few good fringes.
@@ -1684,14 +1661,12 @@ With $N$ equally spaced slits the interference maxima become sharper: the princi
 
 A grating is a plate ruled with thousands of parallel slits separated by $d$ (the *grating element*). The condition for a principal maximum is the double-slit condition — the grating's power is not in where the maxima are but in how narrow they are:
 
-<!-- Equation tag: 5.4 -->
 $$
-d\sin\theta = n\lambda \qquad (n = 0,\pm1,\pm2,\ldots) \qquad\text{with}\qquad n_{\max} = \text{int}\!\left(\frac{d}{\lambda}\right)
+d\sin\theta = n\lambda \qquad (n = 0,\pm1,\pm2,\ldots) \qquad\text{with}\qquad n_{\max} = \text{int}\!\left(\frac{d}{\lambda}\right) \tag{5.4}
 $$
 
-<!-- Equation tag: 5.5 -->
 $$
-\text{dispersion } \frac{d\theta}{d\lambda} = \frac{n}{d\cos\theta}, \qquad \text{resolving power } R = \frac{\lambda}{\Delta\lambda} = nN \ \ (N = \text{total number of rulings})
+\text{dispersion } \frac{d\theta}{d\lambda} = \frac{n}{d\cos\theta}, \qquad \text{resolving power } R = \frac{\lambda}{\Delta\lambda} = nN \ \ (N = \text{total number of rulings}) \tag{5.5}
 $$
 
 ![Diffraction grating geometry and orders](assets/figures/fig-019.svg)
@@ -1721,9 +1696,8 @@ $$
 
 A circular aperture of diameter $D$ gives a pattern that is the two-dimensional Fourier transform of the disc: a bright central spot (the **Airy disc**) surrounded by rings, with the first dark ring at
 
-<!-- Equation tag: 5.6 -->
 $$
-\theta_{\text{first dark}} = 1.22\frac{\lambda}{D}, \qquad \text{Rayleigh resolution limit } \theta_{\min} = 1.22\frac{\lambda}{D}
+\theta_{\text{first dark}} = 1.22\frac{\lambda}{D}, \qquad \text{Rayleigh resolution limit } \theta_{\min} = 1.22\frac{\lambda}{D} \tag{5.6}
 $$
 
 The **Rayleigh criterion** says two point objects are just resolved when the central maximum of one falls on the first minimum of the other — which is the case above. The number to carry:
@@ -1743,9 +1717,8 @@ The **Rayleigh criterion** says two point objects are just resolved when the cen
 
 X-rays have wavelengths comparable with atomic spacings, so a crystal is a natural three-dimensional grating. For parallel planes of atoms a distance $d$ apart, the waves reflected from successive planes differ by $2d\sin\theta$, so
 
-<!-- Equation tag: 5.7 -->
 $$
-2d\sin\theta = n\lambda \qquad \text{(Bragg's law)}
+2d\sin\theta = n\lambda \qquad \text{(Bragg's law)} \tag{5.7}
 $$
 
 Measure the angle of a strong reflection and you have the interplanar spacing — the first direct measurement of the size of atoms (W. L. Bragg, 1913). Numbers: with $\lambda = 0.154$ nm (copper K$\alpha$) and a first-order reflection at $\theta = 15.9^\circ$, $d = 0.154/(2\sin15.9^\circ) = 0.28$ nm. The pattern is sharp only because the crystal has $10^{6}$ planes: a grating of enormous $N$, hence a resolving power that can separate wavelengths differing in the fourth decimal place.
@@ -2016,9 +1989,8 @@ The electric field of a plane wave travelling along $z$ lies in the $xy$ plane. 
 
 A polariser transmits only the component of the electric field along its pass axis, so a wave of amplitude $a$ polarised at an angle $\theta$ to that axis emerges with amplitude $a\cos\theta$ and intensity
 
-<!-- Equation tag: 6.1 -->
 $$
-I = I_0\cos^{2}\theta \qquad \text{(Malus's law)}
+I = I_0\cos^{2}\theta \qquad \text{(Malus's law)} \tag{6.1}
 $$
 
 > **Four results to carry**
@@ -2052,9 +2024,8 @@ $$
 
 Reflect light off a clean dielectric surface at a suitable angle and the reflected beam is completely polarised, with the electric vector vibrating parallel to the surface (perpendicular to the plane of incidence).
 
-<!-- Equation tag: 6.2 -->
 $$
-\tan\theta_B = \frac{n_2}{n_1} \qquad \theta_B+\theta_r = 90^\circ \qquad \text{(the reflected and refracted rays are perpendicular)}
+\tan\theta_B = \frac{n_2}{n_1} \qquad \theta_B+\theta_r = 90^\circ \qquad \text{(the reflected and refracted rays are perpendicular)} \tag{6.2}
 $$
 
 > **Why the reflected ray has no component in the plane of incidence**
@@ -2120,9 +2091,8 @@ Two practical consequences:
 
 A plate of a birefringent crystal with its faces parallel to the optic axis splits an incoming wave into two components travelling at different speeds. On leaving the plate of thickness $t$, the two components differ in phase by
 
-<!-- Equation tag: 6.3 -->
 $$
-\delta = \frac{2\pi}{\lambda}(n_o-n_e)t \qquad \text{quarter-wave: } \delta = \frac{\pi}{2} \Rightarrow t = \frac{\lambda}{4|n_o-n_e|}, \qquad \text{half-wave: } t = \frac{\lambda}{2|n_o-n_e|}
+\delta = \frac{2\pi}{\lambda}(n_o-n_e)t \qquad \text{quarter-wave: } \delta = \frac{\pi}{2} \Rightarrow t = \frac{\lambda}{4|n_o-n_e|}, \qquad \text{half-wave: } t = \frac{\lambda}{2|n_o-n_e|} \tag{6.3}
 $$
 
 | plate | thickness for quartz ($\Delta n = 0.0091$), 589 nm | effect on light polarised at 45° to its axes |
@@ -2140,9 +2110,8 @@ For calcite, $\Delta n$ is about 19 times larger, so the plates are 19 times thi
 
 Some materials (quartz, sugar solution, turpentine) rotate the plane of polarisation of light passing through them. The rotation is proportional to the path length, and for a solution also to the concentration:
 
-<!-- Equation tag: 6.4 -->
 $$
-\theta = [\alpha]\,l\,c \qquad \text{(specific rotation } [\alpha],\ l \text{ in dm},\ c \text{ in g/mL)}
+\theta = [\alpha]\,l\,c \qquad \text{(specific rotation } [\alpha],\ l \text{ in dm},\ c \text{ in g/mL)} \tag{6.4}
 $$
 
 For sugar, $[\alpha] = 66.5^\circ$ per dm per (g/mL) at 589 nm. A 20 cm tube of 0.1 g/mL solution rotates the plane by $66.5\times2\times0.1 = 13.3^\circ$ — easily measured with a polariser and analyser, which is exactly how a **saccharimeter** works and how the sugar industry measures concentration to 0.1%. The rotation is *dispersive* ($[\alpha]$ depends on $\lambda$), which is why "rotatory dispersion" is a sensitive probe of molecular structure, and why the effect is a standard demonstration that the wave carries a *handedness* that no ray picture contains.
@@ -2365,9 +2334,8 @@ Parts 1–6 gave you the results. This part gives you the machinery that produce
 
 Fringes appear when the phase difference between two beams is stable; the visibility measures how stable. The precise statement uses the complex degree of coherence $\gamma_{12}$ (a normalised correlation of the two fields), with
 
-<!-- Equation tag: 7.1 -->
 $$
-V = \frac{2\sqrt{I_1I_2}}{I_1+I_2}\,|\gamma_{12}| \qquad \text{so } |\gamma| = 1 \text{ for perfect coherence, } 0 \text{ for none}
+V = \frac{2\sqrt{I_1I_2}}{I_1+I_2}\,|\gamma_{12}| \qquad \text{so } |\gamma| = 1 \text{ for perfect coherence, } 0 \text{ for none} \tag{7.1}
 $$
 
 Two limits of the same quantity are worth separating because they are produced by different imperfections:
@@ -2400,9 +2368,8 @@ Two limits of the same quantity are worth separating because they are produced b
 
 What is measured in a Michelson interferometer as the mirror moves is the intensity $I(\Delta)$ of the recombined beams; what a spectroscopist wants is $S(\lambda)$. They are related by a Fourier transform, and the consequence you can use without any transform is the uncertainty-like pair
 
-<!-- Equation tag: 7.2 -->
 $$
-\Delta\nu\,\tau_c \approx 1, \qquad \Delta\lambda\,l_c \approx \lambda^{2}, \qquad \Delta\nu = \frac{c}{\lambda^{2}}\Delta\lambda
+\Delta\nu\,\tau_c \approx 1, \qquad \Delta\lambda\,l_c \approx \lambda^{2}, \qquad \Delta\nu = \frac{c}{\lambda^{2}}\Delta\lambda \tag{7.2}
 $$
 
 Three consequences, each examinable in words:
@@ -2424,9 +2391,8 @@ Three consequences, each examinable in words:
 
 The amplitudes reflected and transmitted at a dielectric interface are the Fresnel coefficients. Written for light in medium $n_1$ hitting medium $n_2$ at incidence $i$ and refraction $r$, with $s$ meaning "vibrating perpendicular to the plane of incidence" and $p$ meaning "in the plane":
 
-<!-- Equation tag: 7.3 -->
 $$
-r_s = -\frac{\sin(i-r)}{\sin(i+r)}, \qquad r_p = \frac{\tan(i-r)}{\tan(i+r)}
+r_s = -\frac{\sin(i-r)}{\sin(i+r)}, \qquad r_p = \frac{\tan(i-r)}{\tan(i+r)} \tag{7.3}
 $$
 
 $$
@@ -2454,9 +2420,8 @@ Three results worth having at your fingertips:
 
 Beyond the critical angle there is no transmitted beam, but the field does not simply stop at the surface: solving the boundary conditions gives a wave whose amplitude decays exponentially into the rarer medium, with the penetration depth
 
-<!-- Equation tag: 7.4 -->
 $$
-d = \frac{\lambda}{4\pi\sqrt{n_1^{2}\sin^{2}i-n_2^{2}}} = \frac{\lambda}{4\pi\sqrt{\sin^{2}i-n^{2}}}\ \ (n = n_2/n_1)
+d = \frac{\lambda}{4\pi\sqrt{n_1^{2}\sin^{2}i-n_2^{2}}} = \frac{\lambda}{4\pi\sqrt{\sin^{2}i-n^{2}}}\ \ (n = n_2/n_1) \tag{7.4}
 $$
 
 For light inside glass ($n_1 = 1.5$) at $i = 45^\circ$ and $\lambda = 600$ nm: $n^{2}\sin^{2}i - 1 = 1.125-1 = 0.125$ , so $d = 600/(4\pi\times0.354) = 135$ nm. At 50° the depth is 84 nm; at 60° it is 45 nm. The the closer to the critical angle (41.8°), the *deeper* the field reaches; far beyond it, the field hugs the surface.
@@ -2473,9 +2438,8 @@ For light inside glass ($n_1 = 1.5$) at $i = 45^\circ$ and $\lambda = 600$ nm: $
 
 In a film the light bounces repeatedly, so the observed intensity is the sum of *many* reflected beams, not two. Adding them gives the Airy formula; with $R$ the reflectance of each surface and $\delta = 4\pi\mu t\cos r/\lambda$ the round-trip phase:
 
-<!-- Equation tag: 7.5 -->
 $$
-T = \frac{(1-R)^{2}}{(1-R)^{2}+4R\sin^{2}(\delta/2)} \qquad \text{(transmitted)}, \qquad F_{\text{finesse}} = \frac{\pi\sqrt{R}}{1-R}
+T = \frac{(1-R)^{2}}{(1-R)^{2}+4R\sin^{2}(\delta/2)} \qquad \text{(transmitted)}, \qquad F_{\text{finesse}} = \frac{\pi\sqrt{R}}{1-R} \tag{7.5}
 $$
 
 For $R = 0.5$ the transmitted maxima are already visibly sharper than a $\cos^{2}$ curve; for $R = 0.9$ the finesse is $F = 30$, and for $R = 0.99$ it is 313. Two consequences:

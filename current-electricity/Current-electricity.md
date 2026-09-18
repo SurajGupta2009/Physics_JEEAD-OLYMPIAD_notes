@@ -102,9 +102,8 @@ Every circuit you will ever solve is a bookkeeping problem: charge is never crea
 >
 > Current through a surface is the **rate at which charge crosses that surface**:
 >
->  <!-- Equation tag: 1.1 -->
-> $$
-> I=\frac{dq}{dt},\qquad 1\ \text{A}=1\ \text{C s}^{-1}
+>  $$
+> I=\frac{dq}{dt},\qquad 1\ \text{A}=1\ \text{C s}^{-1} \tag{1.1}
 > $$
 >
 >  The defining surface is part of the definition — "the current in the wire" always means "through a cross-section cutting the wire". Current is a **scalar**. It has a direction of flow, but it does not add like a vector: two currents of 2 A and 3 A crossing the same surface in the same sense give 5 A, regardless of the angle between the wires they flow in.
@@ -115,9 +114,8 @@ Every circuit you will ever solve is a bookkeeping problem: charge is never crea
 
 The sign convention: current is drawn in the direction **positive** charge would move, even in a metal where the movers are electrons going the other way. The convention costs nothing — the field, the current density and the energy flow all come out consistent — but every arrow you draw in a circuit commits you to it. Electrons in a wire move opposite to $\vec j$; a positive ion, a hole, or an ion in electrolyte may move along it. The ledger does not care who carries the charge:
 
-<!-- Equation tag: 1.2 -->
 $$
-I=\sum_s n_s q_s A v_s \quad\text{(one line per carrier species)}
+I=\sum_s n_s q_s A v_s \quad\text{(one line per carrier species)} \tag{1.2}
 $$
 
 ### 1.2 Current density and the continuity equation
@@ -126,18 +124,16 @@ $$
 >
 > $\vec j$ at a point: carriers of charge $q$, number density $n$, mean (drift) velocity $\vec v$ give
 >
->  <!-- Equation tag: 1.3 -->
-> $$
-> \vec j=nq\vec v\qquad\big[\text{A m}^{-2}\big]
+>  $$
+> \vec j=nq\vec v\qquad\big[\text{A m}^{-2}\big] \tag{1.3}
 > $$
 >
 >  valid pointwise, for each carrier species, with the **mean** velocity — not the instantaneous velocity of any one electron. Current is the flux: $I=\int_S\vec j\cdot d\vec a$, and for a uniform $\vec j$ across a plane surface of area $A$, $I=jA$.
 
 Now the bookkeeping law. Charge inside a fixed volume can change in exactly one way: charge crosses the boundary. This is nothing but conservation of charge, written locally:
 
-<!-- Equation tag: 1.4 -->
 $$
-\vec\nabla\cdot\vec j=-\frac{\partial\rho}{\partial t}\qquad\text{(continuity equation)}
+\vec\nabla\cdot\vec j=-\frac{\partial\rho}{\partial t}\qquad\text{(continuity equation)} \tag{1.4}
 $$
 
 > **Why the node rule follows from it**
@@ -158,7 +154,7 @@ Put a field $\vec E$ along a copper wire. Each conduction electron feels $-e\vec
 
 > **Definition · drift velocity**
 >
-> $\vec v_d$ is the **average** velocity of the carriers, averaged over the enormous number inside any small volume. It is the only part of their motion that survives the average; the thermal part, $\sim10^{5}$–$10^{6}$ m s<sup>−1</sup>, cancels because it points randomly in all directions.
+> $\vec v_d$ is the **average** velocity of the carriers, averaged over the enormous number inside any small volume. It is the only part of their motion that survives the average; the thermal part, $\sim10^{5}$–$10^{6}$ m s⁻¹, cancels because it points randomly in all directions.
 
 ![Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire](assets/figures/fig-004.svg)
 
@@ -166,7 +162,7 @@ Put a field $\vec E$ along a copper wire. Each conduction electron feels $-e\vec
 
 > **The number that recalibrates your intuition**
 >
-> 1 A in copper of cross-section 1 mm²: worked out in §1.5, the drift speed is $7\times10^{-5}$ m s<sup>−1</sup> — about **26 cm per hour** — while the random speed of the same electrons is $\sim10^{6}$ m s<sup>−1</sup>. The ratio is $10^{-10}$. A wire carries a large current while its electrons barely relocate; the energy travels in the field at nearly light speed (§1.5), not in the electron cargo.
+> 1 A in copper of cross-section 1 mm²: worked out in §1.5, the drift speed is $7\times10^{-5}$ m s⁻¹ — about **26 cm per hour** — while the random speed of the same electrons is $\sim10^{6}$ m s⁻¹. The ratio is $10^{-10}$. A wire carries a large current while its electrons barely relocate; the energy travels in the field at nearly light speed (§1.5), not in the electron cargo.
 
 ### 1.4 From collisions to Ohm's law
 
@@ -176,16 +172,14 @@ Here is the derivation that turns Newton's second law plus one statistical assum
 >
 > Between collisions an electron accelerates: $a=eE/m$. Just before a collision its directed velocity is $eE\tau/m$, just after it is 0; averaged over the cycle the directed velocity is the **mean of 0 and the final value**:
 >
->  <!-- Equation tag: 1.5 -->
-> $$
-> v_d=\frac{eE\tau}{2m}\quad\text{(cycle average)},\qquad \vec j=ne\vec v_d\ \Rightarrow\ \vec j=\frac{ne^{2}\tau}{2m}\vec E
+>  $$
+> v_d=\frac{eE\tau}{2m}\quad\text{(cycle average)},\qquad \vec j=ne\vec v_d\ \Rightarrow\ \vec j=\frac{ne^{2}\tau}{2m}\vec E \tag{1.5}
 > $$
 >
 >  With the more careful exponential average (velocity decays as $e^{-t/\tau}$ after each collision) the factor $1/2$ disappears: $v_d=eE\tau/m$ and
 >
->  <!-- Equation tag: 1.6 -->
-> $$
-> \boxed{\vec j=\sigma\vec E},\qquad \sigma=\frac{ne^{2}\tau}{m},\qquad \mu=\frac{v_d}{E}=\frac{e\tau}{m}
+>  $$
+> \boxed{\vec j=\sigma\vec E},\qquad \sigma=\frac{ne^{2}\tau}{m},\qquad \mu=\frac{v_d}{E}=\frac{e\tau}{m} \tag{1.6}
 > $$
 >
 >  The exponential argument is the honest one — after a collision the electron's directed velocity decays continuously, it does not stay at zero for half the interval — but both routes give the same **structure**: conductivity is set by how many carriers there are ($n$) and how long they remember the field ($\tau$). Chapter 2 lives off that structure: cool the metal and $\tau$ grows, so $\sigma$ grows; heat a semiconductor and $n$ explodes, so $\sigma$ grows for a different reason.
@@ -204,19 +198,17 @@ Copper: $n=8.5\times10^{28}\ \text{m}^{-3}$, $\rho=1.7\times10^{-8}\ \Omega$m. A
 >
 > Define the **mobility** as the drift speed a carrier acquires per unit driving field:
 >
->  <!-- Equation tag: 1.7 -->
-> $$
-> \mu\equiv\frac{v_d}{E}= \frac{e\tau}{m}\qquad[\,\mu\,]= \frac{\text{m s}^{-1}}{\text{V m}^{-1}}=\text{m}^{2}\text{V}^{-1}\text{s}^{-1}
+>  $$
+> \mu\equiv\frac{v_d}{E}= \frac{e\tau}{m}\qquad[\,\mu\,]= \frac{\text{m s}^{-1}}{\text{V m}^{-1}}=\text{m}^{2}\text{V}^{-1}\text{s}^{-1} \tag{1.7}
 > $$
 >
 >  It is the third way of writing the same physics — $n$ says how many carriers there are, $\tau$ how long each remembers the field, and $\mu$ packages the two into "how fast does one carrier end up moving". Multiplying back gives the form used for real materials, including those with two carrier species:
 >
->  <!-- Equation tag: 1.8 -->
-> $$
-> \sigma=ne\mu\qquad\text{and for two species}\qquad \sigma=e\left(n\mu_e+p\mu_h\right)
+>  $$
+> \sigma=ne\mu\qquad\text{and for two species}\qquad \sigma=e\left(n\mu_e+p\mu_h\right) \tag{1.8}
 > $$
 >
->  Numbers worth knowing: in copper $\mu\approx4.4\times10^{-3}$ m²V<sup>−1</sup>s<sup>−1</sup> (from $\tau\approx2.5\times10^{-14}$ s); in silicon at 300 K, $\mu_e\approx0.14$ and $\mu_h\approx0.05$ m²V<sup>−1</sup>s<sup>−1</sup> — ten to thirty times larger than in a metal, because carriers scatter far less often. What silicon lacks is carriers: $n\sim10^{16}$ m<sup>−3</sup> against copper's $8.5\times10^{28}$. **High mobility with almost no carriers still means a poor conductor** — which is exactly why doping works: it leaves the mobility roughly alone and multiplies $n$ by a million. Raising the temperature *lowers* $\mu$ in both materials (more lattice vibration, smaller $\tau$); whether the resistance rises or falls is then decided by whether $n$ is fixed (metal: resistance rises) or thermally liberated (semiconductor: resistance falls).
+>  Numbers worth knowing: in copper $\mu\approx4.4\times10^{-3}$ m²V⁻¹s⁻¹ (from $\tau\approx2.5\times10^{-14}$ s); in silicon at 300 K, $\mu_e\approx0.14$ and $\mu_h\approx0.05$ m²V⁻¹s⁻¹ — ten to thirty times larger than in a metal, because carriers scatter far less often. What silicon lacks is carriers: $n\sim10^{16}$ m⁻³ against copper's $8.5\times10^{28}$. **High mobility with almost no carriers still means a poor conductor** — which is exactly why doping works: it leaves the mobility roughly alone and multiplies $n$ by a million. Raising the temperature *lowers* $\mu$ in both materials (more lattice vibration, smaller $\tau$); whether the resistance rises or falls is then decided by whether $n$ is fixed (metal: resistance rises) or thermally liberated (semiconductor: resistance falls).
 
 ### 1.5 The field travels, not the electrons
 
@@ -260,7 +252,7 @@ The same in both wires: the **current** $I$ (and, being the same material, the f
 
 </details>
 
-### **Q3** A conductor contains two carrier species: electrons of density $n$, mobility $\mu_e$, and holes of density $p$, mobility $\mu_h$. Show the conductivity is $\sigma=e(n\mu_e+p\mu_h)$ and evaluate it for $n=p=10^{16}\ \text{m}^{-3}$, $\mu_e=0.14$, $\mu_h=0.05$ m²V<sup>−1</sup>s<sup>−1</sup>. _(JEE advanced)_
+### **Q3** A conductor contains two carrier species: electrons of density $n$, mobility $\mu_e$, and holes of density $p$, mobility $\mu_h$. Show the conductivity is $\sigma=e(n\mu_e+p\mu_h)$ and evaluate it for $n=p=10^{16}\ \text{m}^{-3}$, $\mu_e=0.14$, $\mu_h=0.05$ m²V⁻¹s⁻¹. _(JEE advanced)_
 
 <details>
 <summary>Solution</summary>
@@ -301,7 +293,7 @@ $$
 v_d=\frac{j}{ne}=\frac{1.6\times10^{7}}{10^{16}\times1.6\times10^{-19}}=1.0\times10^{10}\ \text{m s}^{-1}
 $$
 
-That is **33 times the speed of light** — impossible, so the assumption that fails is the carrier density. A lightning channel is a fully ionised, avalanche-multiplied plasma with effective carrier densities nearer $10^{22}$–$10^{23}$ m<sup>−3</sup> (and it grows as the stroke develops), which brings $v_d$ back to $\sim10^{3}$–$10^{4}$ m/s. **The lesson:** drift-speed bookkeeping is also a consistency test — when $v_d=c$ pops out, your $n$ was wrong, not relativity. Examiners set this exactly to see who notices.
+That is **33 times the speed of light** — impossible, so the assumption that fails is the carrier density. A lightning channel is a fully ionised, avalanche-multiplied plasma with effective carrier densities nearer $10^{22}$–$10^{23}$ m⁻³ (and it grows as the stroke develops), which brings $v_d$ back to $\sim10^{3}$–$10^{4}$ m/s. **The lesson:** drift-speed bookkeeping is also a consistency test — when $v_d=c$ pops out, your $n$ was wrong, not relativity. Examiners set this exactly to see who notices.
 
 </details>
 
@@ -382,23 +374,20 @@ Chapter 1 gave you the microscopic law $\vec j=\sigma\vec E$. This chapter conve
 
 ### 2.2 Resistivity: the material's own number
 
-<!-- Equation tag: 2.1 -->
 $$
-\vec E=\rho\vec j,\qquad \rho=\frac{1}{\sigma},\qquad [\rho]=\Omega\ \text{m}
+\vec E=\rho\vec j,\qquad \rho=\frac{1}{\sigma},\qquad [\rho]=\Omega\ \text{m} \tag{2.1}
 $$
 
 For a **uniform** conductor of length $l$ and constant cross-section $A$ carrying current along its axis, $j=I/A$ is uniform, so $E=\rho I/A$ is uniform, and $V=El=\rho lI/A$:
 
-<!-- Equation tag: 2.2 -->
 $$
-\boxed{R=\frac{\rho l}{A}}\qquad\text{(uniform section only)}
+\boxed{R=\frac{\rho l}{A}}\qquad\text{(uniform section only)} \tag{2.2}
 $$
 
 For everything else — a cone, a wedge, current spreading through the earth — $j$ varies from point to point and the safe route is to integrate. Slice the conductor into thin slabs *perpendicular to the local current flow*, each of thickness $dl$ and area $A(dl)$; each slab contributes $dR=\rho\,dl/A(dl)$ (equipotential end faces, so slabs are in series):
 
-<!-- Equation tag: 2.3 -->
 $$
-R=\int\frac{\rho\,dl}{A}\qquad\text{(works whenever you can name the flow lines)}
+R=\int\frac{\rho\,dl}{A}\qquad\text{(works whenever you can name the flow lines)} \tag{2.3}
 $$
 
 > **The trap in this section**
@@ -409,9 +398,8 @@ $$
 
 Two concentric conducting spheres of radii $a$ and $b$ ($a<b$) with the space between filled by material of resistivity $\rho$. Find the resistance between them. **Plan:** current flows radially and symmetrically, so equipotentials are spheres; slice at radius $r$. **Do:** $dR=\rho\,dr/(4\pi r^{2})$, so
 
- <!-- Equation tag: 2.4 -->
-$$
-R=\frac{\rho}{4\pi}\int_a^b\frac{dr}{r^{2}}=\frac{\rho}{4\pi}\left(\frac{1}{a}-\frac{1}{b}\right)=\frac{\rho(b-a)}{4\pi ab}
+ $$
+R=\frac{\rho}{4\pi}\int_a^b\frac{dr}{r^{2}}=\frac{\rho}{4\pi}\left(\frac{1}{a}-\frac{1}{b}\right)=\frac{\rho(b-a)}{4\pi ab} \tag{2.4}
 $$
 
  **Check:** as $b\to\infty$, $R\to\rho/4\pi a$ — the resistance of one small sphere dumping current into an infinite medium: finite, because the current spreads through ever-larger areas faster than $1/r^{2}$ resistance accumulates. This limit is the earthing-electrode result, and it reappears in Q4.
@@ -432,9 +420,8 @@ Chapter 1 delivered $\sigma=ne^{2}\tau/m$. Every temperature effect on conductiv
 >
 > Near a reference temperature $T_0$, a material's resistance is parametrised as
 >
->  <!-- Equation tag: 2.5 -->
-> $$
-> R_T=R_0\big[1+\alpha(T-T_0)\big],\qquad \alpha=\frac{1}{R}\frac{dR}{dT}\bigg|_{T_0}
+>  $$
+> R_T=R_0\big[1+\alpha(T-T_0)\big],\qquad \alpha=\frac{1}{R}\frac{dR}{dT}\bigg|_{T_0} \tag{2.5}
 > $$
 >
 >  $\alpha$ is itself temperature-dependent, so the linear law is a local approximation — good over tens of kelvin, bad over hundreds. For platinum $\alpha=3.85\times10^{-3}\ \text{K}^{-1}$; it is the working substance of the platinum-resistance thermometer (a Pt-100 sensor reads 138.5 $\Omega$ at 120 °C).
@@ -560,7 +547,7 @@ Careful with signs: solving for $\alpha$ from $R_1/R_2=(1+\alpha T_1)/(1+\alpha 
 
 </details>
 
-### **Q8** An aluminium transmission wire is replaced by a copper wire of the same length and resistance. Find the ratio of the masses of the two wires, given $\rho_{\text{Cu}}=1.7\times10^{-8}$, $\rho_{\text{Al}}=2.7\times10^{-8}\ \Omega$m and densities 8.9 and 2.7 g cm<sup>−3</sup>. Which metal is the honest choice for overhead lines? _(JEE advanced · synthesis)_
+### **Q8** An aluminium transmission wire is replaced by a copper wire of the same length and resistance. Find the ratio of the masses of the two wires, given $\rho_{\text{Cu}}=1.7\times10^{-8}$, $\rho_{\text{Al}}=2.7\times10^{-8}\ \Omega$m and densities 8.9 and 2.7 g cm⁻³. Which metal is the honest choice for overhead lines? _(JEE advanced · synthesis)_
 
 <details>
 <summary>Solution</summary>
@@ -609,9 +596,8 @@ A battery does not manufacture charge and does not store field; it **pumps** cha
 >
 > The EMF $\mathcal E$ of a source is the **work done per unit charge by the non-electrostatic forces** inside the source (chemical in a cell, mechanical in a generator, thermal in a thermocouple) driving charge from the negative to the positive terminal *through the source*:
 >
->  <!-- Equation tag: 3.1 -->
-> $$
-> \mathcal E=\frac{W_{\text{non-el}}}{q},\qquad [\mathcal E]=\text{volt}
+>  $$
+> \mathcal E=\frac{W_{\text{non-el}}}{q},\qquad [\mathcal E]=\text{volt} \tag{3.1}
 > $$
 >
 >  It is a potential-*difference-like* quantity but not a potential difference: there is no electrostatic field doing this work — inside the cell the chemical forces push charges **up** the potential hill, against $\vec E$. "EMF" is a name, not a force; the unit is the volt and the thing is an energy ledger.
@@ -624,9 +610,8 @@ A battery does not manufacture charge and does not store field; it **pumps** cha
 
 Every real source is modelled as an ideal EMF $\mathcal E$ in series with an internal resistance $r$. The model is not decoration: the electrolyte and plates genuinely resist. Write the loop equation for a cell driving an external $R$ and you get the current, the terminal voltage, and everything else:
 
-<!-- Equation tag: 3.2 -->
 $$
-I=\frac{\mathcal E}{R+r},\qquad V_{\text{term}}=\mathcal E-Ir\quad\text{(discharging)},\qquad V_{\text{term}}=\mathcal E+Ir\quad\text{(charging)}
+I=\frac{\mathcal E}{R+r},\qquad V_{\text{term}}=\mathcal E-Ir\quad\text{(discharging)},\qquad V_{\text{term}}=\mathcal E+Ir\quad\text{(charging)} \tag{3.2}
 $$
 
 ![A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R](assets/figures/fig-010.svg)
@@ -651,18 +636,16 @@ $$
 >
 > Identical cells in parallel are safe; unequal cells fight each other. Combine them by treating each as pump plus $r$ and solving one node: two cells $(\mathcal E_1,r_1)$, $(\mathcal E_2,r_2)$ in parallel are equivalent to one cell of
 >
->  <!-- Equation tag: 3.3 -->
-> $$
-> \mathcal E_{\text{eq}}=\frac{\mathcal E_1r_2+\mathcal E_2r_1}{r_1+r_2},\qquad r_{\text{eq}}=\frac{r_1r_2}{r_1+r_2}\quad\text{(parallel sum)}
+>  $$
+> \mathcal E_{\text{eq}}=\frac{\mathcal E_1r_2+\mathcal E_2r_1}{r_1+r_2},\qquad r_{\text{eq}}=\frac{r_1r_2}{r_1+r_2}\quad\text{(parallel sum)} \tag{3.3}
 > $$
 >
 >  the weighted mean of the EMFs, weights $r$ of the *other* cell. If $\mathcal E_1\ne\mathcal E_2$, the weaker cell carries **negative** current — it is being charged by the stronger one even with no external load. Q6 makes you verify this; the equivalent-cell formula hides it, the node solution shows it.
 
 **Mixed grouping (n in series per row, m rows in parallel):** $\mathcal E_{\text{eq}}=n\mathcal E$, $r_{\text{eq}}=nr/m$, and the current
 
-<!-- Equation tag: 3.4 -->
 $$
-I=\frac{mn\mathcal E}{mR+nr}
+I=\frac{mn\mathcal E}{mR+nr} \tag{3.4}
 $$
 
 is largest when the denominator's two terms balance, $mR=nr$ — i.e. when the battery's internal resistance $nr/m$ equals the load $R$. That is not a coincidence; it is §3.4's maximum-power result wearing grouping clothes.
@@ -675,9 +658,8 @@ You have 12 cells, each $\mathcal E=2$ V, $r=0.5\ \Omega$, and must drive $R=1.5
 
 Multiply the loop equation $\mathcal E=I(R+r)$ by $I$ and every term becomes a power:
 
-<!-- Equation tag: 3.5 -->
 $$
-\mathcal EI=I^{2}R+I^{2}r\qquad \Rightarrow\qquad \eta=\frac{P_{\text{load}}}{P_{\text{chemical}}}=\frac{R}{R+r}
+\mathcal EI=I^{2}R+I^{2}r\qquad \Rightarrow\qquad \eta=\frac{P_{\text{load}}}{P_{\text{chemical}}}=\frac{R}{R+r} \tag{3.5}
 $$
 
 The chemical power $\mathcal EI$ splits into the useful $I^{2}R$ and the internal heat $I^{2}r$. Two results to own, and one warning:
@@ -686,9 +668,8 @@ The chemical power $\mathcal EI$ splits into the useful $I^{2}R$ and the interna
 >
 > With $P=\mathcal E^{2}R/(R+r)^{2}$, maximise in $R$: $dP/dR=\mathcal E^{2}(r-R)/(R+r)^{3}=0$ at
 >
->  <!-- Equation tag: 3.6 -->
-> $$
-> R=r\quad\Rightarrow\quad P_{\max}=\frac{\mathcal E^{2}}{4r},\qquad \eta=\frac{r}{r+r}=50\%
+>  $$
+> R=r\quad\Rightarrow\quad P_{\max}=\frac{\mathcal E^{2}}{4r},\qquad \eta=\frac{r}{r+r}=50\% \tag{3.6}
 > $$
 >
 >  **Validity:** $\mathcal E, r$ fixed, varying $R$. The price is the half: at matched load the cell burns as much inside itself as it delivers. The warning: **never** quote $R=r$ for a problem where $R$ is fixed and you choose the *cell* — then $I^{2}R$ grows without bound with $\mathcal E$, and efficiency, not matching, is the design constraint. Power stations transmit at $\eta\gg90\%$; matching is a low-power electronics idea (chapter 5 generalises it to Thevenin sources).
@@ -699,7 +680,7 @@ The chemical power $\mathcal EI$ splits into the useful $I^{2}R$ and the interna
 >
 >  | unit | equals | where it is used |
 > | --- | --- | --- |
-> | watt (W) | 1 J s<sup>−1</sup> | rating of any appliance: $P=VI=I^{2}R=V^{2}/R$ |
+> | watt (W) | 1 J s⁻¹ | rating of any appliance: $P=VI=I^{2}R=V^{2}/R$ |
 > | joule (J) | 1 W s | physics answers; $Q=I^{2}Rt$ heat |
 > | kilowatt-hour (kWh), the "unit" | $10^{3}\times3600=3.6\times10^{6}$ J | electricity bills: cost $=$ power in kW $\times$ hours $\times$ tariff |
 > | electron-volt (eV) | $1.60\times10^{-19}$ J | single-particle energies; $1\ \text{eV}=1$ V $\times$ $e$ |
@@ -881,16 +862,14 @@ Circuit: a 12 V battery with $R_1=2\ \Omega$ in series with a parallel pair $R_2
 
 ### 4.2 Series, parallel, and the two dividers
 
-<!-- Equation tag: 4.1 -->
 $$
-R_{\text{ser}}=\sum R_i,\qquad \frac{1}{R_{\text{par}}}=\sum\frac{1}{R_i}\quad\Big(R_{\text{par}}=\frac{R_1R_2}{R_1+R_2}\Big)
+R_{\text{ser}}=\sum R_i,\qquad \frac{1}{R_{\text{par}}}=\sum\frac{1}{R_i}\quad\Big(R_{\text{par}}=\frac{R_1R_2}{R_1+R_2}\Big) \tag{4.1}
 $$
 
 > **The two dividers — with their conditions of validity**
 >
-> <!-- Equation tag: 4.2 -->
 > $$
-> \text{voltage divider: }V_1=V\frac{R_1}{R_1+R_2}\quad(\text{series, same }I); \qquad \text{current divider: }I_1=I\frac{R_2}{R_1+R_2}\quad(\text{parallel, same }V)
+> \text{voltage divider: }V_1=V\frac{R_1}{R_1+R_2}\quad(\text{series, same }I); \qquad \text{current divider: }I_1=I\frac{R_2}{R_1+R_2}\quad(\text{parallel, same }V) \tag{4.2}
 > $$
 >
 >  Note the crossing: the current divider's numerator is the **other** resistor. Validity: dividers are exact only while no third element loads the tapped node — the moment a voltmeter or a load attaches, the effective $R$ changes and you must re-reduce (chapter 6 quantifies exactly this error).
@@ -899,16 +878,14 @@ $$
 >
 > The two-resistor forms are special cases of one rule. In a parallel group the currents share in proportion to the **conductances**, $G_k=1/R_k$:
 >
->  <!-- Equation tag: 4.3 -->
-> $$
-> I_k=I\,\frac{G_k}{\sum_j G_j}=I\,\frac{1/R_k}{\sum_j 1/R_j}
+>  $$
+> I_k=I\,\frac{G_k}{\sum_j G_j}=I\,\frac{1/R_k}{\sum_j 1/R_j} \tag{4.3}
 > $$
 >
 >  For three resistors in parallel ($R_1,R_2,R_3$) this reads
 >
->  <!-- Equation tag: 4.4 -->
-> $$
-> I_1=I\,\frac{R_2R_3}{R_1R_2+R_2R_3+R_3R_1},\qquad I_2=I\,\frac{R_3R_1}{\Sigma},\qquad I_3=I\,\frac{R_1R_2}{\Sigma},\qquad \Sigma\equiv R_1R_2+R_2R_3+R_3R_1
+>  $$
+> I_1=I\,\frac{R_2R_3}{R_1R_2+R_2R_3+R_3R_1},\qquad I_2=I\,\frac{R_3R_1}{\Sigma},\qquad I_3=I\,\frac{R_1R_2}{\Sigma},\qquad \Sigma\equiv R_1R_2+R_2R_3+R_3R_1 \tag{4.4}
 > $$
 >
 >  The pattern to remember: **each numerator is the product of the other resistors**. The two-resistor shortcut "numerator = the other resistor" is that same statement with one factor left over after cancelling — which is why it does *not* survive at three elements. Sanity check the general form: if $R_3\to\infty$ it collapses to $I_1=I R_2/(R_1+R_2)$, the two-resistor rule ✓, and if all three are equal each carries $I/3$ ✓. In conductance language the voltage divider becomes the dual statement $V$ divides in proportion to $R_k$, currents in proportion to $G_k$: voltage prefers the big resistor, current prefers the small one.
@@ -951,9 +928,8 @@ The fastest solving tool is not a formula but a question: **which nodes are at t
 >
 > Twelve equal resistors $R$ form a cube. Drive current in at corner A, out at the opposite corner G. The three edges from A are equivalent by symmetry, so each carries $I/3$; the three edges into G likewise carry $I/3$. The six middle edges split as $I/6$. Then
 >
->  <!-- Equation tag: 4.5 -->
-> $$
-> V_{AG}=\frac{I}{3}R+\frac{I}{6}R+\frac{I}{3}R=\frac{5IR}{6} \ \Rightarrow\ R_{AG}=\frac{5R}{6}\ \text{(body diagonal)}
+>  $$
+> V_{AG}=\frac{I}{3}R+\frac{I}{6}R+\frac{I}{3}R=\frac{5IR}{6} \ \Rightarrow\ R_{AG}=\frac{5R}{6}\ \text{(body diagonal)} \tag{4.5}
 > $$
 >
 >  The same symmetry-planes argument with **edge** endpoints gives $7R/12$, and with **face-diagonal** endpoints gives $3R/4$ (Q3 walks you through the face-diagonal case). Q7 shows the power of the converse: when the endpoints are chosen so two nodes are provably equal in potential, the resistor between them may be **removed with no effect at all**.
@@ -966,9 +942,8 @@ The fastest solving tool is not a formula but a question: **which nodes are at t
 >
 > Bridge $ABCD$: battery across $AC$, detector across $BD$, arms $R_1(AB),R_2(BC),R_3(AD),R_4(DC)$. Suppose $I_{BD}=0$. Then $R_1,R_2$ carry a common current $I_a$ and $R_3,R_4$ a common $I_b$, and equal potentials at B and D force $I_aR_1=I_bR_3$ and $I_aR_2=I_bR_4$. Dividing:
 >
->  <!-- Equation tag: 4.6 -->
-> $$
-> \boxed{\frac{R_1}{R_2}=\frac{R_3}{R_4}}\qquad\text{(balance: detector current exactly zero)}
+>  $$
+> \boxed{\frac{R_1}{R_2}=\frac{R_3}{R_4}}\qquad\text{(balance: detector current exactly zero)} \tag{4.6}
 > $$
 >
 >  The logic runs both ways: if the ratios match, $B$ and $D$ are at equal potential *however* you feed the bridge, so the detector branch may be deleted (or any resistance inserted there — Q7). This is why the null method is king of precision measurement (chapter 6): at balance the detector's own imperfections are irrelevant, because no current through it exists to be wrong about.
@@ -997,9 +972,8 @@ $$
 >
 > Three resistors $R_{12},R_{23},R_{31}$ in a delta are equivalent, seen from their terminals, to a star of
 >
->  <!-- Equation tag: 4.7 -->
-> $$
-> R_1=\frac{R_{12}R_{31}}{R_{12}+R_{23}+R_{31}},\qquad R_2=\frac{R_{12}R_{23}}{S},\qquad R_3=\frac{R_{23}R_{31}}{S},\qquad S=R_{12}+R_{23}+R_{31}
+>  $$
+> R_1=\frac{R_{12}R_{31}}{R_{12}+R_{23}+R_{31}},\qquad R_2=\frac{R_{12}R_{23}}{S},\qquad R_3=\frac{R_{23}R_{31}}{S},\qquad S=R_{12}+R_{23}+R_{31} \tag{4.7}
 > $$
 >
 >  each star arm = **product of the two delta sides touching that terminal ÷ sum of all three**. For a symmetric delta $(R,R,R)$ the star is $(R/3,R/3,R/3)$. Validity: the equivalence is exact for terminal behaviour only — internal currents and power splits differ; never mix the two pictures in one audit. Use it to break unbalanced bridges: replace one delta of the bridge by its star and the network becomes series–parallel (Q6 does this numerically).
@@ -1008,9 +982,8 @@ $$
 >
 > Remove one section from an infinite ladder of series $R_s$ and shunt $R_p$; what remains is the same ladder. If its input resistance is $R_\infty$:
 >
->  <!-- Equation tag: 4.8 -->
-> $$
-> R_\infty=R_s+\frac{R_pR_\infty}{R_p+R_\infty} \ \Rightarrow\ R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2}
+>  $$
+> R_\infty=R_s+\frac{R_pR_\infty}{R_p+R_\infty} \ \Rightarrow\ R_\infty=\frac{R_s+\sqrt{R_s^{2}+4R_sR_p}}{2} \tag{4.8}
 > $$
 >
 >  the positive root, because resistance is positive. For $R_s=2,R_p=1$: $R_\infty=1+\sqrt3=2.732\ \Omega$; for $R_s=R_p=1$: $R_\infty=(1+\sqrt5)/2$ — the golden ratio appears in a resistor network. **Check:** substitute back: $2+2.732/3.732=2.732$ ✓, and adding sections from the right can no longer move the answer — that is what "infinite" means here.
@@ -1109,9 +1082,8 @@ Cengage puts the capacitor's transient behaviour in the current chapter, and rig
 >
 > An **uncharged** capacitor has $V_C=0$: at the instant a switch closes it behaves like a **short circuit** (any current may flow through it, with no voltage across it). A capacitor that has been in a DC circuit for a long time has $i=C\,dV/dt=0$: it behaves like an **open circuit**. Between those limits the circuit is genuinely time-dependent, and the crossover time is
 >
->  <!-- Equation tag: 4.9 -->
-> $$
-> \tau=RC\qquad[\,\Omega\cdot\text{F}=\text{s}\,]
+>  $$
+> \tau=RC\qquad[\,\Omega\cdot\text{F}=\text{s}\,] \tag{4.9}
 > $$
 >
 >  The unit check is worth doing once: $\Omega\cdot\text{F}=(\text{V}/\text{A})(\text{C}/\text{V}) =\text{C}/\text{A}=\text{s}$ ✓. Every insulating "why is there no current?" answer in the chapter is the open-circuit limit; every "which bulb lights first?" question is the short-circuit limit.
@@ -1120,16 +1092,14 @@ Cengage puts the capacitor's transient behaviour in the current chapter, and rig
 >
 > Cell $\mathcal E$, resistor $R$, uncharged capacitor $C$ in series; switch closed at $t=0$. The loop law around the single mesh is
 >
->  <!-- Equation tag: 4.10 -->
-> $$
-> \mathcal E=iR+\frac{q}{C}=R\frac{dq}{dt}+\frac{q}{C},\qquad q(0)=0
+>  $$
+> \mathcal E=iR+\frac{q}{C}=R\frac{dq}{dt}+\frac{q}{C},\qquad q(0)=0 \tag{4.10}
 > $$
 >
 >  whose solution (separate the variables, or differentiate to get $i$ first) is
 >
->  <!-- Equation tag: 4.11 -->
-> $$
-> q(t)=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad i(t)=\frac{\mathcal E}{R}e^{-t/\tau},\qquad V_C(t)=\mathcal E\left(1-e^{-t/\tau}\right)
+>  $$
+> q(t)=C\mathcal E\left(1-e^{-t/\tau}\right),\qquad i(t)=\frac{\mathcal E}{R}e^{-t/\tau},\qquad V_C(t)=\mathcal E\left(1-e^{-t/\tau}\right) \tag{4.11}
 > $$
 >
 >  Read the three factors: the **final charge** is $C\mathcal E$ and is set by the capacitor alone; the **initial current** is $\mathcal E/R$ and is set by the resistor alone (the capacitor is a short at $t=0$); and the **rate** at which one gives way to the other is $1/\tau$. At $t=\tau$ every quantity has covered $1-e^{-1}=63.2\%$ of its journey, at $3\tau$ it is 95.0%, and by $5\tau$ it is 99.3% — the practical end of the transient. The current, being the complementary exponential, has *fallen* to 37% at $t=\tau$: charge and current are not on the same schedule.
@@ -1138,9 +1108,8 @@ Cengage puts the capacitor's transient behaviour in the current chapter, and rig
 >
 > Charging, discharging, a capacitor that starts part-charged, a capacitor connected to a new cell: all of them are the same statement, that the approach to the final value is exponential:
 >
->  <!-- Equation tag: 4.12 -->
-> $$
-> q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau}
+>  $$
+> q(t)=q_\infty-\left(q_\infty-q_0\right)e^{-t/\tau} \tag{4.12}
 > $$
 >
 >  with $q_0$ the charge at $t=0$ and $q_\infty$ the charge the circuit would settle at if you waited forever. Check it against the two cases above: charging has $q_0=0,\ q_\infty=C\mathcal E$; discharging through $R$ with the cell removed has $q_\infty=0$, giving $q=Q_0e^{-t/\tau}$. In a network, $q_\infty$ is found by treating the capacitor as an open circuit and solving the resistive circuit, and $\tau$ is found by killing every source and reading the resistance seen from the capacitor's terminals: $\tau=R_{\text{Th}}C$, the bridge to chapter 5.
@@ -1151,9 +1120,8 @@ Cengage puts the capacitor's transient behaviour in the current chapter, and rig
 >
 > Charge the capacitor from a cell: the cell delivers $\int\mathcal E\,i\,dt=C\mathcal E^{2}$, the capacitor stores $\tfrac12C\mathcal E^{2}$, and the resistor dissipates
 >
->  <!-- Equation tag: 4.13 -->
-> $$
-> \int I^{2}R\,dt=\tfrac12C\mathcal E^{2}\qquad\text{independent of }R
+>  $$
+> \int I^{2}R\,dt=\tfrac12C\mathcal E^{2}\qquad\text{independent of }R \tag{4.13}
 > $$
 >
 >  **Exactly half of the energy is lost, whatever the resistance.** Make $R$ smaller and the process is faster but not cheaper: the current is larger for a shorter time, and the integral is identical. (The same result appears in the capacitors note-set as the two-capacitor paradox — charging one capacitor from another instead of from a cell loses half the energy too, and the resolution is the same: the integral of $i^{2}R$ does not care how the current is spread in time.) A capacitor charged this way can be called a "half-efficiency" store, which is why charging circuits for pulsed-power systems use switched inductors or resonant transfer rather than a plain resistor.
@@ -1261,9 +1229,8 @@ A 10 V battery in series with 2 $\Omega$ is connected in parallel with a 6 V bat
 >
 > Seen from two terminals, any network of resistances and sources behaves exactly like an ideal source $V_{th}$ in series with $R_{th}$ (Thevenin), or equivalently a current source $I_N$ in parallel with $R_{th}$ (Norton), where
 >
->  <!-- Equation tag: 5.1 -->
-> $$
-> V_{th}=V_{\text{open-circuit}},\qquad R_{th}=\frac{V_{th}}{I_{\text{short-circuit}}}=R\ \text{seen with all ideal sources killed},\qquad I_N=\frac{V_{th}}{R_{th}}
+>  $$
+> V_{th}=V_{\text{open-circuit}},\qquad R_{th}=\frac{V_{th}}{I_{\text{short-circuit}}}=R\ \text{seen with all ideal sources killed},\qquad I_N=\frac{V_{th}}{R_{th}} \tag{5.1}
 > $$
 >
 >  **Validity:** linear networks only; the equivalence is exact at the terminals for *every* load, including nonlinear ones — that is what makes it useful. Inside the black box the two models disagree (internal dissipation differs); never audit power inside a Thevenin equivalent.
@@ -1296,9 +1263,8 @@ The bridge of worked example 4.2 (arms 10, 20, 30, 40 $\Omega$, 10 V battery, de
 >
 > A Thevenin source $(V_{th},R_{th})$ delivers maximum power to a load $R_L=R_{th}$:
 >
->  <!-- Equation tag: 5.2 -->
-> $$
-> P_{\max}=\frac{V_{th}^{2}}{4R_{th}},\qquad \eta_{\text{at match}}=50\%
+>  $$
+> P_{\max}=\frac{V_{th}^{2}}{4R_{th}},\qquad \eta_{\text{at match}}=50\% \tag{5.2}
 > $$
 >
 >  **Validity:** $V_{th},R_{th}$ fixed, $R_L$ varied. This is ch 3's $R=r$ result — the cell was already a Thevenin source. Two warnings worth marks: (i) at the matched point the source burns as much inside as it delivers — power stations and audio amplifiers driving speakers do **not** match, they maximise $\eta$; matching is for signals, where the watts are microwatts and the information is the cargo. (ii) If the problem fixes $R_L$ and lets the *source* change, there is no interior maximum at all.
@@ -1459,9 +1425,8 @@ Every instrument is a theorem from chapter 5 wearing a case. After this chapter 
 >
 > To read large currents, most of the current must **bypass** the coil. Shunt $S$ in parallel with $G$, total current $I$: same voltage across both, so $I_gG=(I-I_g)S$:
 >
->  <!-- Equation tag: 6.1 -->
-> $$
-> S=\frac{I_gG}{I-I_g}=\frac{G}{n-1},\qquad n=\frac{I}{I_g}
+>  $$
+> S=\frac{I_gG}{I-I_g}=\frac{G}{n-1},\qquad n=\frac{I}{I_g} \tag{6.1}
 > $$
 >
 >  The shunted meter's resistance is $GS/(G+S)\approx S\ll G$. Validity: $n\gg1$ for any honest ammeter — a 1 mA, 100 $\Omega$ movement becomes a 1 A meter with $S=0.1001\ \Omega$ and total resistance $0.1\ \Omega$, which passes 99.9% of the current. The shunt must be low-$\alpha$ (manganin): the calibration would otherwise drift as the shunt warms under load.
@@ -1470,9 +1435,8 @@ Every instrument is a theorem from chapter 5 wearing a case. After this chapter 
 >
 > To read voltage, the meter must draw as little current as possible while its deflection needs $I_g$: a multiplier $R_m$ in series:
 >
->  <!-- Equation tag: 6.2 -->
-> $$
-> R_m=\frac{V}{I_g}-G,\qquad\text{sensitivity in }\Omega/\text{V}=\frac{1}{I_g}
+>  $$
+> R_m=\frac{V}{I_g}-G,\qquad\text{sensitivity in }\Omega/\text{V}=\frac{1}{I_g} \tag{6.2}
 > $$
 >
 >  The same 1 mA, 100 $\Omega$ movement becomes a 10 V meter with $R_m=9900\ \Omega$ — and its 1000 $\Omega$/V rating is the **only** number a practicing engineer needs: on any range, resistance = rating × full-scale volts.
@@ -1487,9 +1451,8 @@ Every instrument is a theorem from chapter 5 wearing a case. After this chapter 
 >
 > A voltmeter of resistance $R_V$ across the lower resistor $R_2$ of a divider fed by $V$ through $R_1$ reads
 >
->  <!-- Equation tag: 6.3 -->
-> $$
-> V_{\text{read}}=V\,\frac{R_2\parallel R_V}{R_1+(R_2\parallel R_V)} \qquad\text{vs the true }V\frac{R_2}{R_1+R_2}
+>  $$
+> V_{\text{read}}=V\,\frac{R_2\parallel R_V}{R_1+(R_2\parallel R_V)} \qquad\text{vs the true }V\frac{R_2}{R_1+R_2} \tag{6.3}
 > $$
 >
 >  **Worked numbers:** 100 V across 10 k$\Omega$ + 10 k$\Omega$, true answer 50 V; a 10 k$\Omega$ meter drags the reading to $100\times5/15=33.3$ V — a **33% lie**. The meter does not malfunction; the *circuit plus meter* is a different circuit. A 1000 $\Omega$/V meter on its 100 V range (100 k$\Omega$) reads $100\times9.09/19.09=47.6$ V; a potentiometer (§6.4) reads 50.0 V exactly.
@@ -1502,9 +1465,8 @@ Every instrument is a theorem from chapter 5 wearing a case. After this chapter 
 
 The Wheatstone bridge (ch 4, §4.3) balances when $R_1/R_2=R_3/R_4$ and draws **no current through the detector at balance** — instrument imperfections are then irrelevant. The **meter bridge** implements the two ratio arms as 100 cm of uniform resistance wire with a jockey: balance at length $l$ gives
 
-<!-- Equation tag: 6.4 -->
 $$
-\frac{R}{S}=\frac{l}{100-l}
+\frac{R}{S}=\frac{l}{100-l} \tag{6.4}
 $$
 
 > **End errors, and why swapping kills them**
@@ -1525,9 +1487,8 @@ $$
 >
 > Drive a uniform wire with a stable source so that every centimetre drops the same voltage $\sigma=V/L$ (the **gradient**). Slide a jockey until the galvanometer between the unknown cell and the wire shows **null**: at that instant the wire segment's drop equals the cell's EMF exactly — and because the detector reads zero, **no current is drawn from the cell**. The internal resistance is invisible, the loading error is zero, and the calibration is a length. The comparison of two EMFs is a pure ratio of balance lengths:
 >
->  <!-- Equation tag: 6.5 -->
-> $$
-> \frac{\mathcal E_1}{\mathcal E_2}=\frac{l_1}{l_2};\qquad r=R\,\frac{l_0-l}{l}\quad\text{(internal resistance from one extra reading)}
+>  $$
+> \frac{\mathcal E_1}{\mathcal E_2}=\frac{l_1}{l_2};\qquad r=R\,\frac{l_0-l}{l}\quad\text{(internal resistance from one extra reading)} \tag{6.5}
 > $$
 >
 >  the second formula: with resistance $R$ shunting the cell, its terminal voltage (now carrying current) balances at $l<l_0$, and $\mathcal E/(\mathcal E-Ir)=l_0/l$ rearranges to the printed result.
@@ -1662,16 +1623,15 @@ Five topics that Olympiad papers love and textbooks compress: why a fuse blows (
 >
 > A straight wire of radius $r$, length $L$, resistivity $\rho$, carrying current $I$ in still air. Steady state: electrical heating = convective loss. Heating $P=I^{2}\rho L/\pi r^{2}$; loss $=h\,(2\pi rL)\,\Delta T$ (Newtons law of cooling, coefficient $h$, allowed temperature rise $\Delta T$). Equate and solve for $I$:
 >
->  <!-- Equation tag: 7.1 -->
-> $$
-> I=\sqrt{\frac{2\pi^{2}h\,\Delta T}{\rho}}\ r^{3/2} \qquad\Rightarrow\qquad \boxed{I\propto r^{3/2}}
+>  $$
+> I=\sqrt{\frac{2\pi^{2}h\,\Delta T}{\rho}}\ r^{3/2} \qquad\Rightarrow\qquad \boxed{I\propto r^{3/2}} \tag{7.1}
 > $$
 >
 >  The length cancels — a longer fuse is not a better fuse, a fact every apprentice electrician rediscovers — and the radius enters as the 3/2 power: **double the radius and the safe current grows by $2^{3/2}=2.83$**, not by 2 or 4. The same law reverse-engineered a fuse: a 32 mm cartridge and a 6 mm one of equal rating have similar wire radii, because $L$ never mattered.
 
 > **The cancellation is a design command**
 >
-> That $r$ drops out of $j=I/\pi r^{2}\propto r^{-1/2}$ says current density alone never fixes thermal safety: a thin wire runs at higher current *density* at the same temperature. For house wiring the relevant scaling is the same equation solved for $\Delta T$: $\Delta T\propto j^{2}r^{?}$ — recompute it: $\Delta T=\rho I^{2}/(2\pi^{2}h r^{3})=\rho j^{2}\pi r^{4}/(2\pi^{2}hr^{3})\propto j^{2}r$: thick cables tolerate a higher current density at the same temperature rise. Codes permit 2–5 A/mm² in copper; the bare-wire air estimate of Q1 lands in that county with nothing but $h\sim10$ W m<sup>−2</sup>K<sup>−1</sup>.
+> That $r$ drops out of $j=I/\pi r^{2}\propto r^{-1/2}$ says current density alone never fixes thermal safety: a thin wire runs at higher current *density* at the same temperature. For house wiring the relevant scaling is the same equation solved for $\Delta T$: $\Delta T\propto j^{2}r^{?}$ — recompute it: $\Delta T=\rho I^{2}/(2\pi^{2}h r^{3})=\rho j^{2}\pi r^{4}/(2\pi^{2}hr^{3})\propto j^{2}r$: thick cables tolerate a higher current density at the same temperature rise. Codes permit 2–5 A/mm² in copper; the bare-wire air estimate of Q1 lands in that county with nothing but $h\sim10$ W m⁻²K⁻¹.
 
 ### 7.2 Transmission: the case for kilovolts
 
@@ -1679,9 +1639,8 @@ Five topics that Olympiad papers love and textbooks compress: why a fuse blows (
 >
 > Deliver power $P$ through a line of total resistance $R_{line}$ at transmission voltage $V$: the line current is $I=P/V$ and the loss is
 >
->  <!-- Equation tag: 7.2 -->
-> $$
-> P_{loss}=I^{2}R_{line}=\frac{P^{2}R_{line}}{V^{2}}
+>  $$
+> P_{loss}=I^{2}R_{line}=\frac{P^{2}R_{line}}{V^{2}} \tag{7.2}
 > $$
 >
 >  Numbers to own: $P=100$ kW over $R_{line}=10\ \Omega$. At 200 V: $I=500$ A and the line burns $2.5$ **MW** — 25 times the delivered power: the scheme is impossible, not merely inefficient. At 20 kV: $I=5$ A, loss 250 W — **0.25%**. Ten thousand-fold reduction for a hundred-fold voltage step; that arithmetic, not corporate conspiracy, is why pylons exist.
@@ -1696,16 +1655,14 @@ Five topics that Olympiad papers love and textbooks compress: why a fuse blows (
 >
 > Two junctions of dissimilar metals at temperatures $T_1$ (cold) and $T_2$ (hot) drive a current — the **Seebeck effect**; the EMF is an energy-per-charge statement exactly like ch 3's $\mathcal E$, with thermal transport playing the pump's role. Over a useful range the EMF against a 0 °C reference follows
 >
->  <!-- Equation tag: 7.3 -->
-> $$
-> \mathcal E=aT-bT^{2}\qquad(\text{Cu--Fe: }a\approx41\ \mu\text{V/K}, \ b\approx0.16\ \mu\text{V/K}^{2})
+>  $$
+> \mathcal E=aT-bT^{2}\qquad(\text{Cu--Fe: }a\approx41\ \mu\text{V/K}, \ b\approx0.16\ \mu\text{V/K}^{2}) \tag{7.3}
 > $$
 >
 >  Define the **neutral temperature** $T_n$: where $\mathcal E$ peaks ($d\mathcal E/dT=0$), and the **inversion temperature** $T_i$: where $\mathcal E$ crosses zero and changes sign. Differentiate:
 >
->  <!-- Equation tag: 7.4 -->
-> $$
-> T_n=\frac{a}{2b},\qquad T_i=\frac{a}{b}=2T_n \qquad\text{(for Cu--Fe: }\approx128\ ^\circ\text{C and }\approx256\ ^\circ\text{C)}
+>  $$
+> T_n=\frac{a}{2b},\qquad T_i=\frac{a}{b}=2T_n \qquad\text{(for Cu--Fe: }\approx128\ ^\circ\text{C and }\approx256\ ^\circ\text{C)} \tag{7.4}
 > $$
 
 > **The trap in this section**
@@ -1742,7 +1699,7 @@ A 3 V battery, a 100 $\Omega$ resistor and a silicon diode (forward drop 0.7 V, 
 
 ### 7.6 Questions
 
-### **Q1** A bare horizontal copper wire must stay within $\Delta T=40$ K of ambient in still air ($h=10$ W m<sup>−2</sup>K<sup>−1</sup>, $\rho=1.7\times10^{-8}\ \Omega$m). Show that the safe current is independent of wire length but scales as $r^{3/2}$, and evaluate the current and current density for a wire of radius 0.5 mm. _(Olympiad · estimation)_
+### **Q1** A bare horizontal copper wire must stay within $\Delta T=40$ K of ambient in still air ($h=10$ W m⁻²K⁻¹, $\rho=1.7\times10^{-8}\ \Omega$m). Show that the safe current is independent of wire length but scales as $r^{3/2}$, and evaluate the current and current density for a wire of radius 0.5 mm. _(Olympiad · estimation)_
 
 <details>
 <summary>Solution</summary>
@@ -2590,7 +2547,7 @@ Marks: $12\times3+6\times4+8\times4+153=245$ in total. Section D is marked as pr
 | 28 | off balance: $R_{\text{th}}=23.8\ \Omega$, $I_g=12.9$ mA; reciprocity swaps drive and response only | 33 | body diagonal $5R/6$, face $3R/4$, edge $7R/12$; bridged case $R/2$ |
 | 29 | hemisphere $\rho/2\pi a=31.8\ \Omega$; two far electrodes $63.7\ \Omega$; spheres $\rho/4\pi a$ | 34 | 200 V: 2.5 MW (25×); 20 kV: 0.25%; fuse current $\propto r^{3/2}$ |
 | 30 | $R=r=2\ \Omega$, $P_{\max}=18$ W, $\eta=50\%$ — matching is not efficiency | 35 | $I=1.571$ A by superposition, Thévenin and Norton; $\eta=63.7\%$ |
-| 31 | gradient 0.5 V m<sup>−1</sup>; wire drop 5.0 V; 4 $\Omega$ of driver resistance besides the wire | 36 | naive ammeter-inside scheme reads 0.60 $\Omega$ for 0.10 $\Omega$ (+500%); four-terminal wins |
+| 31 | gradient 0.5 V m⁻¹; wire drop 5.0 V; 4 $\Omega$ of driver resistance besides the wire | 36 | naive ammeter-inside scheme reads 0.60 $\Omega$ for 0.10 $\Omega$ (+500%); four-terminal wins |
 
 > **After marking: the four things to fix first**
 >
@@ -2612,9 +2569,8 @@ _3 pages A4 · JEE · INPhO_
 
 ### 1 · Carriers, materials, sources
 
-<!-- Equation tag: S1 -->
 $$
-I=\frac{dq}{dt},\quad \vec j=nq\vec v_d,\quad \vec\nabla\cdot\vec j=-\frac{\partial\rho}{\partial t},\quad \vec j=\sigma\vec E,\quad \sigma=\frac{ne^{2}\tau}{m}
+I=\frac{dq}{dt},\quad \vec j=nq\vec v_d,\quad \vec\nabla\cdot\vec j=-\frac{\partial\rho}{\partial t},\quad \vec j=\sigma\vec E,\quad \sigma=\frac{ne^{2}\tau}{m} \tag{S1}
 $$
 
 - **Current is a flux** (scalar) through a named surface; $\vec j$ is the vector. Node law = continuity
@@ -2623,9 +2579,8 @@ $$
   $\sim10^{6}$ m/s. Signals travel at $\sim c$ (the field), electrons at centimetres per hour.
 - **Electrons per second** through any cross-section: $I/e$ — independent of wire thickness.
 
-<!-- Equation tag: S2 -->
 $$
-R=\frac{\rho l}{A}\ (\text{uniform}),\qquad R=\int\frac{\rho\,dl}{A},\qquad R_{\text{shell}}=\frac{\rho(b-a)}{4\pi ab},\qquad R_{\text{hemi}\to\infty}=\frac{\rho}{2\pi a}
+R=\frac{\rho l}{A}\ (\text{uniform}),\qquad R=\int\frac{\rho\,dl}{A},\qquad R_{\text{shell}}=\frac{\rho(b-a)}{4\pi ab},\qquad R_{\text{hemi}\to\infty}=\frac{\rho}{2\pi a} \tag{S2}
 $$
 
 - **Stretch at constant volume**: $R\propto l^{2}$. **Taper**: frustum = $\rho l/\pi ab$
@@ -2636,9 +2591,8 @@ $$
 - **Non-ohmic three**: filament (hot $R\approx12\times$ cold, I–V bends down), NTC thermistor (bends
   up, self-heating), diode (0.7 V threshold — solve piecewise: guess state, solve, **check guess**).
 
-<!-- Equation tag: S3 -->
 $$
-I=\frac{\mathcal E}{R+r},\quad V=\mathcal E\mp Ir,\quad \mathcal EI=I^{2}R+I^{2}r,\quad \eta=\frac{R}{R+r}
+I=\frac{\mathcal E}{R+r},\quad V=\mathcal E\mp Ir,\quad \mathcal EI=I^{2}R+I^{2}r,\quad \eta=\frac{R}{R+r} \tag{S3}
 $$
 
 - **EMF** = work per coulomb by non-electrostatic forces; the only place $\oint\vec E\cdot d\vec l\ne0$.
@@ -2658,9 +2612,8 @@ $$
 
 ### 2 · Networks, theorems, instruments
 
-<!-- Equation tag: S4 -->
 $$
-R_{ser}=\sum R_i,\qquad R_{par}=\Big(\sum R_i^{-1}\Big)^{-1},\qquad \text{balance: }\frac{R_1}{R_2}=\frac{R_3}{R_4}\ (R_1R_4=R_2R_3)
+R_{ser}=\sum R_i,\qquad R_{par}=\Big(\sum R_i^{-1}\Big)^{-1},\qquad \text{balance: }\frac{R_1}{R_2}=\frac{R_3}{R_4}\ (R_1R_4=R_2R_3) \tag{S4}
 $$
 
 - **Dividers**: $V_1=VR_1/(R_1+R_2)$; $I_1=IR_2/(R_1+R_2)$ (the *other* resistor!). Valid
@@ -2670,9 +2623,8 @@ $$
   $\varphi R=1.618R$.
 - **Delta→star**: $R_1=R_{12}R_{31}/(R_{12}+R_{23}+R_{31})$; symmetric delta $R$ → star $R/3$.
 
-<!-- Equation tag: S5 -->
 $$
-V_{th}=V_{oc},\qquad R_{th}=\frac{V_{oc}}{I_{sc}},\qquad I_N=\frac{V_{th}}{R_{th}},\qquad P_{max}=\frac{V_{th}^{2}}{4R_{th}}\ \text{at}\ R_L=R_{th}
+V_{th}=V_{oc},\qquad R_{th}=\frac{V_{oc}}{I_{sc}},\qquad I_N=\frac{V_{th}}{R_{th}},\qquad P_{max}=\frac{V_{th}^{2}}{4R_{th}}\ \text{at}\ R_L=R_{th} \tag{S5}
 $$
 
 - **Kill sources**: ideal voltage → wire ($r$ stays), ideal current → break. Superposition sums currents,
@@ -2681,9 +2633,8 @@ $$
   *not* preserved.
 - **Compensation**: changing $R$ by $\Delta R$ ≡ inserting source $-I\Delta R$, others killed.
 
-<!-- Equation tag: S6 -->
 $$
-S=\frac{G}{n-1},\qquad R_m=\frac{V}{I_g}-G,\qquad \text{sensitivity}=\frac{1}{I_g}\ \Omega/\text{V}
+S=\frac{G}{n-1},\qquad R_m=\frac{V}{I_g}-G,\qquad \text{sensitivity}=\frac{1}{I_g}\ \Omega/\text{V} \tag{S6}
 $$
 
 - **Loading**: meter across $R_2$ reads $V(R_2\parallel R_V)/(R_1+R_2\parallel R_V)$. A 10 kΩ meter
@@ -2694,9 +2645,8 @@ $$
 - **Low resistance ⇒ four terminals**: current leads outside, voltage leads inside; all lead drops vanish by
   topology.
 
-<!-- Equation tag: S7 -->
 $$
-I_{fuse}\propto r^{3/2},\qquad P_{loss}=\frac{P^{2}R_{line}}{V^{2}},\qquad T_n=\frac{a}{2b},\quad T_i=\frac{a}{b}=2T_n,\qquad \tau=\frac{L}{R}\to\infty
+I_{fuse}\propto r^{3/2},\qquad P_{loss}=\frac{P^{2}R_{line}}{V^{2}},\qquad T_n=\frac{a}{2b},\quad T_i=\frac{a}{b}=2T_n,\qquad \tau=\frac{L}{R}\to\infty \tag{S7}
 $$
 
 - **Fuse**: length cancels; $2\times r\Rightarrow2.83\times I$. Cable $\Delta T\propto j^{2}r$.

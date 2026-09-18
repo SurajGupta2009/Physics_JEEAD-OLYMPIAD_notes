@@ -210,9 +210,8 @@ An **object** is a point from which rays *actually diverge* (a *real object*) or
 
 At an interface, part of the light returns into the first medium. Two regimes describe what happens next: **regular (specular) reflection** from a smooth surface, where a parallel beam stays parallel, and **diffused reflection** from a rough surface, where the same parallel beam leaves in all directions because the local normal points everywhere. Both obey the same two laws at every point of the surface:
 
-<!-- Equation tag: 1.1 -->
 $$
-\angle i = \angle r \quad\text{(both measured from the normal)}, \qquad \text{incident ray, reflected ray and normal are coplanar}
+\angle i = \angle r \quad\text{(both measured from the normal)}, \qquad \text{incident ray, reflected ray and normal are coplanar} \tag{1.1}
 $$
 
 > **Why the equal-angle law is a *shortest time* statement (Fermat, 1657)**
@@ -323,9 +322,8 @@ $$
 
 > **Mirror size for a full-length view (person of height $h$, eye at height $e$)**
 >
-> <!-- Equation tag: 1.2 -->
 > $$
-> L_{\min} = \frac{h}{2}, \qquad \text{top edge at } \frac{h+e}{2}, \qquad \text{bottom edge at } \frac{e}{2}
+> L_{\min} = \frac{h}{2}, \qquad \text{top edge at } \frac{h+e}{2}, \qquad \text{bottom edge at } \frac{e}{2} \tag{1.2}
 > $$
 >
 >  Valid for a person standing upright and looking straight ahead, with the mirror vertical and roughly parallel to the body. The *length* needed does not depend on the distance to the mirror; the *position* does. Walk backwards and the required mirror stays the same size but the tolerable error in its placement grows, which is why a cheap fixed bathroom mirror works at all.
@@ -378,9 +376,8 @@ Because the image is the object reflected in the mirror plane, the velocity rela
 
 > **Velocity of the image (mirror of unit normal $\hat n$)**
 >
-> <!-- Equation tag: 1.3 -->
 > $$
-> \vec v_{\text{im}} = \vec v_{\text{ob}} - 2\left(\vec v_{\text{ob}}\cdot\hat n - \vec v_{\text{mir}}\cdot\hat n\right)\hat n
+> \vec v_{\text{im}} = \vec v_{\text{ob}} - 2\left(\vec v_{\text{ob}}\cdot\hat n - \vec v_{\text{mir}}\cdot\hat n\right)\hat n \tag{1.3}
 > $$
 >
 >  Read it as: *the component of the relative velocity along the normal reverses; the components parallel to the mirror survive unchanged.* Three cases cover every question:
@@ -612,9 +609,8 @@ Part 0 fixed the convention. Applied to a mirror it gives this table, which you 
 
 > **The two formulas of a spherical mirror (mirror formula and magnification)**
 >
-> <!-- Equation tag: 2.1 -->
 > $$
-> \frac{1}{v} + \frac{1}{u} = \frac{1}{f} = \frac{2}{R}, \qquad m = \frac{h'}{h} = -\frac{v}{u}
+> \frac{1}{v} + \frac{1}{u} = \frac{1}{f} = \frac{2}{R}, \qquad m = \frac{h'}{h} = -\frac{v}{u} \tag{2.1}
 > $$
 >
 >  **Valid for paraxial rays only**, with the pole as origin and signs from §2.3. Do not "fix" signs by hand afterwards: if $v$ comes out negative for a concave mirror, the image is real and in front, and that is the answer.
@@ -640,9 +636,8 @@ Part 0 fixed the convention. Applied to a mirror it gives this table, which you 
 
 The magnification follows from the ray that strikes the *pole*: for an object of height $h$ with its foot on the axis, the ray from the tip to $P$ reflects at equal angles about the axis, so the two right triangles (object–pole–axis) and (image–pole–axis) are similar. Their heights are in the ratio of their distances from $P$, with a sign flip because the rays cross the axis at the pole:
 
-<!-- Equation tag: 2.2 -->
 $$
-m = \frac{h'}{h} = -\frac{v}{u}
+m = \frac{h'}{h} = -\frac{v}{u} \tag{2.2}
 $$
 
 > **"Cover half the mirror and half the image disappears"**
@@ -710,9 +705,8 @@ If the rays arriving at a mirror are *converging* toward a point behind it, that
 >
 > Differentiate $1/v + 1/u = 1/f$ at fixed $f$: $-dv/v^{2} - du/u^{2} = 0$, so
 >
->  <!-- Equation tag: 2.3 -->
-> $$
-> dv = -\left(\frac{v}{u}\right)^{2} du = -m^{2}\,du \quad\text{(object moving along the axis)}
+>  $$
+> dv = -\left(\frac{v}{u}\right)^{2} du = -m^{2}\,du \quad\text{(object moving along the axis)} \tag{2.3}
 > $$
 >
 >  and for an object moving perpendicular to the axis the image moves with the transverse magnification, so
@@ -882,9 +876,8 @@ $v > 0$: the image is 60 cm *behind* the mirror — virtual (no light goes there
 > 3. **Newton's formula.** With $x_1 = |u|-|f|$ and $x_2 = |v|-|f|$ — the distances of object and image
 >   from the focus — the mirror formula becomes
 >
->  <!-- Equation tag: 2.4 -->
-> $$
-> x_1x_2 = f^{2} \qquad\text{(Newton's relation, mirrors and lenses alike)}
+>  $$
+> x_1x_2 = f^{2} \qquad\text{(Newton's relation, mirrors and lenses alike)} \tag{2.4}
 > $$
 >
 >  Trap: $x_1$ and $x_2$ are measured *from the focus*, and are both positive only for a real image. For a magnified image, $f > x_1$ and $x_2 > f$.
@@ -921,9 +914,8 @@ Check with the mirror formula: $1/v + 1/u = -1/60 - 1/30 = -1/20$ ✓.
 >
 > With the exact crossing distance $d = R\left(1 - \frac{1}{2\cos\phi}\right)$, $\sin\phi = h/R$, the marginal focus lies
 >
->  <!-- Equation tag: 2.5 -->
-> $$
-> \Delta = \frac{R}{2}\left(\sec\phi - 1\right) \approx \frac{R\phi^{2}}{4} = \frac{h^{2}}{4R} \quad\text{closer to the mirror than the paraxial focus}
+>  $$
+> \Delta = \frac{R}{2}\left(\sec\phi - 1\right) \approx \frac{R\phi^{2}}{4} = \frac{h^{2}}{4R} \quad\text{closer to the mirror than the paraxial focus} \tag{2.5}
 > $$
 >
 >  Valid for a parallel beam, paraxial-plus-one-correction accuracy. Two consequences you can quote: the aberration grows as the *square* of the aperture, and it is **independent of the wavelength** — a spherical mirror has no chromatic aberration at all, which is why every large telescope is a mirror and not a lens.
@@ -1020,9 +1012,8 @@ When light crosses from one transparent medium into another, its speed changes. 
 
 > **Snell's law (the second basic law, in full)**
 >
-> <!-- Equation tag: 3.1 -->
 > $$
-> \mu_1\sin i = \mu_2\sin r \qquad\Longleftrightarrow\qquad \frac{\sin i}{\sin r} = \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \mu_{21}
+> \mu_1\sin i = \mu_2\sin r \qquad\Longleftrightarrow\qquad \frac{\sin i}{\sin r} = \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \mu_{21} \tag{3.1}
 > $$
 >
 >  with the incident ray, the refracted ray and the normal **coplanar**, and the two rays on opposite sides of the normal. Three consequences to keep in the same drawer as the formula:
@@ -1108,9 +1099,8 @@ $$
 
 Three-dimensional problems (a ray in a prism whose faces are not perpendicular, a ray inside a slanted fibre, an Olympiad question about a ray meeting a corner) are painful with angles and one-line with vectors. Let $\hat i$ be the unit vector along the incident ray, $\hat n$ the unit normal *pointing from the first medium into the second*, and let $i, r$ be the angles of incidence and refraction. Then
 
-<!-- Equation tag: 3.2 -->
 $$
-\hat r = \frac{\mu_1}{\mu_2}\hat i + \left[\frac{\mu_1}{\mu_2}\cos i - \cos r\right]\hat n, \qquad \cos i = -\hat i\cdot\hat n, \qquad \cos r = \sqrt{1-\left(\frac{\mu_1}{\mu_2}\sin i\right)^{2}}
+\hat r = \frac{\mu_1}{\mu_2}\hat i + \left[\frac{\mu_1}{\mu_2}\cos i - \cos r\right]\hat n, \qquad \cos i = -\hat i\cdot\hat n, \qquad \cos r = \sqrt{1-\left(\frac{\mu_1}{\mu_2}\sin i\right)^{2}} \tag{3.2}
 $$
 
 > **Where it comes from — one sentence you can remember**
@@ -1135,9 +1125,8 @@ $$
 
 > **Apparent depth and the refractive shift (near-normal viewing)**
 >
-> <!-- Equation tag: 3.3 -->
 > $$
-> d_{\text{app}} = d\,\frac{\mu_{\text{observer}}}{\mu_{\text{object}}}, \qquad \text{shift} = d\left(1 - \frac{\mu_{\text{observer}}}{\mu_{\text{object}}}\right)
+> d_{\text{app}} = d\,\frac{\mu_{\text{observer}}}{\mu_{\text{object}}}, \qquad \text{shift} = d\left(1 - \frac{\mu_{\text{observer}}}{\mu_{\text{object}}}\right) \tag{3.3}
 > $$
 >
 >  For an object at depth $d$ in a medium of index $\mu$ viewed from air: $d_{\text{app}} = d/\mu$. For a bird at height $h$ in air viewed by a fish: $h_{\text{app}} = \mu h$ — the fish sees the bird *further* away than it is. The one-line derivation uses the plane-surface limit of part 6's single-surface formula: with $R\to\infty$, $\mu_2/v = \mu_1/u$, and the ratio $v/u$ is $\mu_2/\mu_1$ — the observer's index over the object's ✓.
@@ -1196,9 +1185,8 @@ For the bird, the fish is the object in water seen from air: $1.0\times(1/(4/3))
 >
 > For thickness $t$, index $\mu$, incidence $i$ (external), refraction $r$:
 >
->  <!-- Equation tag: 3.4 -->
-> $$
-> \text{lateral displacement } x = \frac{t\,\sin(i-r)}{\cos r}, \qquad x = 0 \text{ at } i = 0
+>  $$
+> \text{lateral displacement } x = \frac{t\,\sin(i-r)}{\cos r}, \qquad x = 0 \text{ at } i = 0 \tag{3.4}
 > $$
 >
 >  $$
@@ -1253,9 +1241,8 @@ $$
 >
 > Shifts add; an equivalent index exists and is the thickness-weighted *harmonic* mean:
 >
->  <!-- Equation tag: 3.5 -->
-> $$
-> \Delta_{\text{total}} = \sum_i t_i\left(1-\frac{1}{\mu_i}\right), \qquad \mu_{\text{eq}} = \frac{\sum_i t_i}{\sum_i t_i/\mu_i}
+>  $$
+> \Delta_{\text{total}} = \sum_i t_i\left(1-\frac{1}{\mu_i}\right), \qquad \mu_{\text{eq}} = \frac{\sum_i t_i}{\sum_i t_i/\mu_i} \tag{3.5}
 > $$
 >
 >  Note the form: it is $t/\mu$ that behaves additively (that combination is the *optical path* through the layer), which is why $\mu_{\text{eq}}$ is a harmonic mean and not an average. For two equal layers this gives $\mu_{\text{eq}} = 2\mu_1\mu_2/(\mu_1+\mu_2)$ — the harmonic mean, always closer to the smaller index.
@@ -1308,9 +1295,8 @@ $$
 >
 > For an object at depth $d$ under a plane surface, viewed along a direction making angle $i$ with the normal in the observer's medium (so $\mu\sin r = \sin i$ inside), the intersection of two neighbouring emergent rays — the true virtual image for that viewing direction — lies at depth
 >
->  <!-- Equation tag: 3.6 -->
-> $$
-> d_{\text{app}}(i) = d\,\frac{\cos^{3}i}{\mu\cos^{3}r}
+>  $$
+> d_{\text{app}}(i) = d\,\frac{\cos^{3}i}{\mu\cos^{3}r} \tag{3.6}
 > $$
 >
 >  and it is displaced sideways as well, so the image is not directly below the object unless you look straight down. Expand for small $i$ using $\cos^{3}i/\cos^{3}r \approx 1 - \tfrac32 i^{2}(1-1/\mu^{2})$:
@@ -1352,16 +1338,14 @@ compared with the paraxial estimate $d/\mu = 1.50$ m.
 >
 > If $n$ depends only on $y$ (layers perpendicular to $y$), then along any ray
 >
->  <!-- Equation tag: 3.7 -->
-> $$
-> n(y)\,\sin\theta(y) = \text{constant}, \qquad \theta \text{ measured from the } y\text{-axis}
+>  $$
+> n(y)\,\sin\theta(y) = \text{constant}, \qquad \theta \text{ measured from the } y\text{-axis} \tag{3.7}
 > $$
 >
 >  and the ray curves toward larger $n$ with radius of curvature
 >
->  <!-- Equation tag: 3.8 -->
-> $$
-> \frac{1}{R} = \frac{\sin\theta}{n}\left|\frac{dn}{dy}\right|
+>  $$
+> \frac{1}{R} = \frac{\sin\theta}{n}\left|\frac{dn}{dy}\right| \tag{3.8}
 > $$
 >
 >  For a *horizontal* ray ($\sin\theta = 1$) this is the cleanest form: **the radius of curvature of a horizontal ray equals $n/(dn/dy)$**. Rays with a component along the gradient have larger radii, and a ray turns around (never penetrates further) where $n$ falls to the invariant.
@@ -1389,7 +1373,7 @@ $$
 
 It never returns: the invariant is $k = n(0)\sin 90^\circ = 1.5$, and turning around would require $n = k = 1.5$, i.e. $y = 0$ — the entry point itself. Since $n$ only grows with $y$, the ray keeps bending upward and away.
 
-**Check.** Set $a = 0.10$ m<sup>−1</sup> and verify the parabola against the exact invariant: $\sin\theta = k/n = 1/(1+0.1y)$, so $\tan\theta = 1/\sqrt{(1+0.1y)^{2}-1} \approx 1/\sqrt{0.2y}$, and $dy/dx = 1/\tan\theta = \sqrt{0.2y}\Rightarrow y = (0.2)x^{2}/4 = x^{2}/20$ ✓ exactly the parabola above. Note also what is *not* happening: the ray is not being absorbed or scattered, and this is not a "curved space" effect — the wavefront is turning because different parts of it travel at different speeds.
+**Check.** Set $a = 0.10$ m⁻¹ and verify the parabola against the exact invariant: $\sin\theta = k/n = 1/(1+0.1y)$, so $\tan\theta = 1/\sqrt{(1+0.1y)^{2}-1} \approx 1/\sqrt{0.2y}$, and $dy/dx = 1/\tan\theta = \sqrt{0.2y}\Rightarrow y = (0.2)x^{2}/4 = x^{2}/20$ ✓ exactly the parabola above. Note also what is *not* happening: the ray is not being absorbed or scattered, and this is not a "curved space" effect — the wavefront is turning because different parts of it travel at different speeds.
 
 </details>
 
@@ -1420,9 +1404,8 @@ So the ray turns around about 1.5 m above the road and comes back to the eye: th
 >
 > Focus a travelling microscope (one with a vernier scale on the vertical column) on a fine mark on the bottom of a tall container, and read the scale: $x_1$. Pour the liquid in slowly to depth $t$ and focus again on the same mark through the liquid: $x_2$. The microscope has *risen* by the shift, and the apparent depth is $t - (x_2-x_1)$. Then
 >
->  <!-- Equation tag: 3.9 -->
-> $$
-> \mu = \frac{\text{real depth}}{\text{apparent depth}} = \frac{t}{t - \Delta}, \qquad \Delta = x_2-x_1
+>  $$
+> \mu = \frac{\text{real depth}}{\text{apparent depth}} = \frac{t}{t - \Delta}, \qquad \Delta = x_2-x_1 \tag{3.9}
 > $$
 >
 >  Why it works at all: a microscope focuses by making the object's rays emerge parallel, so it is measuring the *paraxial* image position — exactly the approximation under which (3.3) is exact. The accuracy comes from the vernier (0.01 mm) and from using a fine mark; the systematic error to watch is that the apparent depth must be measured from the liquid surface, not from the container's rim.
@@ -1520,9 +1503,8 @@ Take light inside a medium of index $\mu_1$ meeting a boundary with a rarer medi
 >
 > For light travelling in a medium of index $\mu_1$ and meeting a medium of index $\mu_2 < \mu_1$, the **critical angle** $C$ is the angle of incidence whose refracted ray grazes the interface:
 >
->  <!-- Equation tag: 4.1 -->
-> $$
-> \sin C = \frac{\mu_2}{\mu_1}, \qquad C = \sin^{-1}\!\left(\frac{\mu_2}{\mu_1}\right)
+>  $$
+> \sin C = \frac{\mu_2}{\mu_1}, \qquad C = \sin^{-1}\!\left(\frac{\mu_2}{\mu_1}\right) \tag{4.1}
 > $$
 >
 >  For a medium of index $\mu$ in air, $\sin C = 1/\mu$. Beyond $C$ no ray crosses the boundary at all, and the light is **totally internally reflected**. Note carefully whose indices appear: the incident medium goes on top of nothing — it is the *lower* index over the *higher* one that you take the sine of.
@@ -1669,9 +1651,8 @@ An optical fibre is a long glass thread with a **core** of slightly higher index
 
 > **Fibre optics in three formulas**
 >
-> <!-- Equation tag: 4.2 -->
 > $$
-> \sin\theta_{\max} = \sqrt{n_1^{2}-n_2^{2}} = \text{NA}, \qquad C = \sin^{-1}\!\left(\frac{n_2}{n_1}\right), \qquad \theta_{\text{inside,max}} = 90^\circ - C
+> \sin\theta_{\max} = \sqrt{n_1^{2}-n_2^{2}} = \text{NA}, \qquad C = \sin^{-1}\!\left(\frac{n_2}{n_1}\right), \qquad \theta_{\text{inside,max}} = 90^\circ - C \tag{4.2}
 > $$
 >
 >  for core $n_1$, cladding $n_2$, light arriving from air. The wave picture adds one thing the ray picture cannot show: the fibre can also be **graded-index**, with $n$ largest on the axis and falling smoothly to the cladding value. Such a fibre bends the rays continuously (that is the $n\sin\theta = \text{const}$ invariant of §3.9) so that all rays take nearly the same optical path length and arrive together — which is why long-distance fibres are graded-index and not step-index.
@@ -1922,9 +1903,8 @@ Two plane refracting faces meet at the **refracting edge**; the angle between th
 
 > **The prism relations**
 >
-> <!-- Equation tag: 5.1 -->
 > $$
-> A = r_1 + r_2, \qquad \delta = i + e - A
+> A = r_1 + r_2, \qquad \delta = i + e - A \tag{5.1}
 > $$
 >
 >  Both come from the same quadrilateral: in the triangle formed by the two face-normals and the ray inside, the interior angles are $90^\circ - r_1$ and $90^\circ - r_2$, so the third angle is $r_1 + r_2$, and that third angle is the angle between the normals, which equals $A$ (rotate one face onto the other by $A$ and its normal rotates by $A$ as well). The second relation is just bookkeeping: the two refractions deviate the ray by $(i - r_1)$ and $(e - r_2)$ in the same sense, and their sum is $i + e - (r_1+r_2) = i + e - A$.
@@ -1943,9 +1923,8 @@ Two plane refracting faces meet at the **refracting edge**; the angle between th
 >
 > At the minimum, the ray passes symmetrically: $i = e$ and $r_1 = r_2 = A/2$. Then
 >
->  <!-- Equation tag: 5.2 -->
-> $$
-> \delta_{\min} = 2i - A, \qquad \mu = \frac{\sin\left(\dfrac{A+\delta_{\min}}{2}\right)}{\sin\left(\dfrac{A}{2}\right)}
+>  $$
+> \delta_{\min} = 2i - A, \qquad \mu = \frac{\sin\left(\dfrac{A+\delta_{\min}}{2}\right)}{\sin\left(\dfrac{A}{2}\right)} \tag{5.2}
 > $$
 >
 >  For $A = 60^\circ$ and $\mu = 1.5$: $\sin i = 1.5\sin30^\circ = 0.75$, $i = 48.6^\circ$, $\delta_{\min} = 37.2^\circ$. The formula (5.2) is how a spectroscope measures $\mu$ to five figures: find the prism orientation that minimises the deviation (a minimum is easy to locate experimentally, because the image of the slit stops moving near it), read the prism angle off a goniometer, and compute.
@@ -2004,16 +1983,14 @@ and by symmetry $e = i = 48.6^\circ$. The curve (Fig. 5.3) falls steeply from it
 >
 > With $C = \sin^{-1}(1/\mu)$ for the glass–air face, a ray emerges from the second face only if
 >
->  <!-- Equation tag: 5.3 -->
-> $$
-> r_2 = A - r_1 < C \quad\Longleftrightarrow\quad r_1 > A - C, \qquad \text{and always } r_1 \leq C
+>  $$
+> r_2 = A - r_1 < C \quad\Longleftrightarrow\quad r_1 > A - C, \qquad \text{and always } r_1 \leq C \tag{5.3}
 > $$
 >
 >  Combining the two, a ray can pass through the prism only if $A < 2C$, and then the angle of incidence must lie in the window
 >
->  <!-- Equation tag: 5.4 -->
-> $$
-> \sin^{-1}\big[\mu\sin(A-C)\big] < i < 90^\circ
+>  $$
+> \sin^{-1}\big[\mu\sin(A-C)\big] < i < 90^\circ \tag{5.4}
 > $$
 >
 >  For $A = 60^\circ$, $\mu = 1.5$ this window is $27.9^\circ < i < 90^\circ$, and the deviation lies between $\delta_{\min} = 37.2^\circ$ and $57.9^\circ$. If $A > 2C$ — for example $A = 90^\circ$, $\mu = 1.5$, since $2C = 83.6^\circ$ — **no ray whatever** passes through the prism: every ray entering one face is totally internally reflected at the other. That is not a curiosity; it is why you cannot use a 90° glass prism as a "bent window", and why the useful prism angles sit below $2\sin^{-1}(1/\mu)$.
@@ -2068,9 +2045,8 @@ $$
 >
 > When $A$ is small — a few degrees — every angle in the problem is small, so $\sin\theta\approx\theta$ in radians. Then $r_1 + r_2 = A$ becomes a statement about tiny angles, and Snell at the two faces gives $i\approx\mu r_1$, $e\approx\mu r_2$, so
 >
->  <!-- Equation tag: 5.5 -->
-> $$
-> \delta = i + e - A \approx \mu(r_1+r_2) - A = (\mu-1)A
+>  $$
+> \delta = i + e - A \approx \mu(r_1+r_2) - A = (\mu-1)A \tag{5.5}
 > $$
 >
 >  Small angle, large lesson: the deviation of a thin prism is *independent of the angle of incidence*. Every ray is deviated through the same angle, which means a thin prism acts like a "direction shifter" — and two of them combined act like vectors. For $A = 6^\circ$ and $\mu = 1.5$, $\delta = 3.0^\circ$ for every ray, whatever $i$.
@@ -2110,23 +2086,20 @@ $$
 >
 > **Dispersion** is the variation of refractive index with wavelength. For normal, transparent materials the index *decreases* as wavelength increases, and over the visible range it is described well by Cauchy's formula
 >
->  <!-- Equation tag: 5.6 -->
-> $$
-> \mu(\lambda) = a + \frac{b}{\lambda^{2}} \qquad (a, b \text{ positive constants})
+>  $$
+> \mu(\lambda) = a + \frac{b}{\lambda^{2}} \qquad (a, b \text{ positive constants}) \tag{5.6}
 > $$
 >
 >  The **angular dispersion** produced by a prism of angle $A$ is the difference of deviations between two colours, $\delta_v - \delta_r$. At minimum deviation one can differentiate (5.2) to get the practical form
 >
->  <!-- Equation tag: 5.7 -->
-> $$
-> \delta_v - \delta_r = (\mu_v-\mu_r)\frac{d\delta}{d\mu} = (\mu_v-\mu_r)\,\frac{2\sin(A/2)}{\cos i} ;\qquad (A \text{ small: } (\mu_v-\mu_r)A)
+>  $$
+> \delta_v - \delta_r = (\mu_v-\mu_r)\frac{d\delta}{d\mu} = (\mu_v-\mu_r)\,\frac{2\sin(A/2)}{\cos i} ;\qquad (A \text{ small: } (\mu_v-\mu_r)A) \tag{5.7}
 > $$
 >
 >  and the **dispersive power** of the material is the spread per unit deviation, an index-free number:
 >
->  <!-- Equation tag: 5.8 -->
-> $$
-> \omega = \frac{\mu_v-\mu_r}{\mu_y-1} \quad (\text{typical crown glass: } 0.02\text{–}0.03; \text{ flint: } 0.03\text{–}0.05)
+>  $$
+> \omega = \frac{\mu_v-\mu_r}{\mu_y-1} \quad (\text{typical crown glass: } 0.02\text{–}0.03; \text{ flint: } 0.03\text{–}0.05) \tag{5.8}
 > $$
 >
 >  where $\mu_y$ is the index for yellow (the colour the eye is most sensitive to, so it defines the "mean" deviation). A large dispersive power is what a flint glass is *for*: it spreads colours strongly for a given bending, which is exactly what you need to cancel the spread of another prism (§5.6).
@@ -2174,9 +2147,8 @@ $$
 >
 > Two thin prisms, angles $A_1, A_2$, in opposition. Their deviations subtract, and their colour spreads subtract too:
 >
->  <!-- Equation tag: 5.9 -->
-> $$
-> \delta_{\text{net}} = (\mu_1-1)A_1 - (\mu_2-1)A_2, \qquad \text{no dispersion: } (\mu_{1v}-\mu_{1r})A_1 = (\mu_{2v}-\mu_{2r})A_2
+>  $$
+> \delta_{\text{net}} = (\mu_1-1)A_1 - (\mu_2-1)A_2, \qquad \text{no dispersion: } (\mu_{1v}-\mu_{1r})A_1 = (\mu_{2v}-\mu_{2r})A_2 \tag{5.9}
 > $$
 >
 >  Using dispersive powers, the condition becomes $\omega_1(\mu_1-1)A_1 = \omega_2(\mu_2-1)A_2$: the *spreads* must be equal, so the prism with the larger dispersive power must have the smaller angle. The residual mean deviation is then non-zero — that is the whole point, since you wanted a deviation.
@@ -2185,9 +2157,8 @@ $$
 >
 > Now cancel the *deviations* instead:
 >
->  <!-- Equation tag: 5.10 -->
-> $$
-> (\mu_1-1)A_1 = (\mu_2-1)A_2 \quad\text{(mean deviation zero)}, \qquad \text{residual spread} = \omega_1(\mu_1-1)A_1 - \omega_2(\mu_2-1)A_2 = (\mu_1-1)A_1(\omega_1-\omega_2)
+>  $$
+> (\mu_1-1)A_1 = (\mu_2-1)A_2 \quad\text{(mean deviation zero)}, \qquad \text{residual spread} = \omega_1(\mu_1-1)A_1 - \omega_2(\mu_2-1)A_2 = (\mu_1-1)A_1(\omega_1-\omega_2) \tag{5.10}
 > $$
 >
 >  which is non-zero precisely because the two glasses have different dispersive powers. The beam comes out *straight ahead* but fanned into colours — the hand-held spectroscope's trick, and the reason you can look at a lamp through a spectroscope without the instrument pointing off to one side.
@@ -2377,16 +2348,14 @@ A spherical surface of radius $R$ separates a medium of index $\mu_1$ (on the si
 
 > **The single-surface formula**
 >
-> <!-- Equation tag: 6.1 -->
 > $$
-> \frac{\mu_2}{v} - \frac{\mu_1}{u} = \frac{\mu_2-\mu_1}{R}
+> \frac{\mu_2}{v} - \frac{\mu_1}{u} = \frac{\mu_2-\mu_1}{R} \tag{6.1}
 > $$
 >
 >  with $u$ the object distance, $v$ the image distance, $R$ the radius of curvature (positive if the centre of curvature is on the outgoing side), all measured from the pole. The transverse magnification is
 >
->  <!-- Equation tag: 6.2 -->
-> $$
-> m = \frac{h'}{h} = \frac{\mu_1 v}{\mu_2 u}
+>  $$
+> m = \frac{h'}{h} = \frac{\mu_1 v}{\mu_2 u} \tag{6.2}
 > $$
 >
 >  and the two focal distances (object-side and image-side) are
@@ -2483,16 +2452,14 @@ The bubble appears 3.6 cm from the surface, erect and magnified by 1.2 — it lo
 >
 > Apply (6.1) twice — image formed by the first surface acting as the object for the second — and use the thin-lens approximation (the lens is so thin that both surfaces can be taken at the same plane, and the light in the glass travels a negligible distance):
 >
->  <!-- Equation tag: 6.3 -->
-> $$
-> \frac{1}{f} = (\mu-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)
+>  $$
+> \frac{1}{f} = (\mu-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right) \tag{6.3}
 > $$
 >
 >  with $R_1$ the radius of the first surface the light meets and $R_2$ the second, both in the Cartesian sign convention (a convex surface as seen by the incoming light has $R > 0$ if its centre is on the far side). It is usually written in the working form
 >
->  <!-- Equation tag: 6.4 -->
-> $$
-> \frac{1}{v}-\frac{1}{u} = \frac{1}{f}, \qquad m = \frac{v}{u}
+>  $$
+> \frac{1}{v}-\frac{1}{u} = \frac{1}{f}, \qquad m = \frac{v}{u} \tag{6.4}
 > $$
 >
 >  for an object at $u$ on the axis, and **power** $P = 1/f$ measured in dioptres ($\text{m}^{-1}$) — a converging lens has $f > 0$ and $P > 0$.
@@ -2524,16 +2491,14 @@ The bubble appears 3.6 cm from the surface, erect and magnified by 1.2 — it lo
 >
 > Two lenses in contact add powers:
 >
->  <!-- Equation tag: 6.5 -->
-> $$
-> P = P_1+P_2 \qquad\Longleftrightarrow\qquad \frac{1}{F} = \frac{1}{f_1}+\frac{1}{f_2}
+>  $$
+> P = P_1+P_2 \qquad\Longleftrightarrow\qquad \frac{1}{F} = \frac{1}{f_1}+\frac{1}{f_2} \tag{6.5}
 > $$
 >
 >  Separated by a distance $d$ along a common axis, they do not:
 >
->  <!-- Equation tag: 6.6 -->
-> $$
-> \frac{1}{F} = \frac{1}{f_1}+\frac{1}{f_2}-\frac{d}{f_1f_2}
+>  $$
+> \frac{1}{F} = \frac{1}{f_1}+\frac{1}{f_2}-\frac{d}{f_1f_2} \tag{6.6}
 > $$
 >
 >  The correction term is negligible when $d \ll f_1, f_2$ — which is why "lenses in contact" is not just a convenient idealisation but a description of any two lenses mounted in a single barrel with a small gap. Setting $1/F = 0$ in (6.6), i.e. $d = f_1+f_2$, gives an afocal (telescopic) combination: parallel light in, parallel light out — the arrangement of part 7's telescope, arriving here as a special case of a formula.
@@ -2546,9 +2511,8 @@ The bubble appears 3.6 cm from the surface, erect and magnified by 1.2 — it lo
 >
 > Fix an object and a screen a distance $D > 4f$ apart. There are then *two* positions of a converging lens that project a sharp image on the screen, symmetric about the midpoint, separated by some distance $d$. From the two thin-lens equations one gets
 >
->  <!-- Equation tag: 6.7 -->
-> $$
-> f = \frac{D^{2}-d^{2}}{4D}, \qquad D > 4f, \qquad d = \sqrt{D^{2}-4Df}
+>  $$
+> f = \frac{D^{2}-d^{2}}{4D}, \qquad D > 4f, \qquad d = \sqrt{D^{2}-4Df} \tag{6.7}
 > $$
 >
 >  Why the method is preferred in a real laboratory: you never have to locate the lens plane or the object plane accurately (the hardest part of the $v$–$u$ method), you only measure the *displacement* of the lens between two sharp images, and the $D^2 - d^2$ combination makes the result insensitive to a small error in $D$.
@@ -2639,9 +2603,8 @@ The method needs $D > 4f$, so with this lens $D_{\min} = 4(24) = 96$ cm; for $D 
 >
 >  For a lens cut into two halves along a plane containing the principal axis, then separated by a distance $a$ perpendicular to the axis, an object on the original axis gives two images whose separation is
 >
->  <!-- Equation tag: 6.8 -->
-> $$
-> \text{image separation} = a\left(1+\frac{v}{u}\right) = a\,(1+|m|)
+>  $$
+> \text{image separation} = a\left(1+\frac{v}{u}\right) = a\,(1+|m|) \tag{6.8}
 > $$
 >
 >  for a real image ($u, v$ as magnitudes here, $m = v/u$). The derivation is one line: the image formed by a piece whose centre is displaced by $a/2$ lies on the line joining the object to *that* centre, so a ray from the object to the displaced centre makes an angle $(a/2)/u$ with the axis and lands at height $(a/2)(1+v/u)$ at the image plane. Two such pieces, oppositely displaced, are therefore $a(1+v/u)$ apart.
@@ -2675,9 +2638,8 @@ $$
 
 > **The silvered lens as an equivalent mirror**
 >
-> <!-- Equation tag: 6.9 -->
 > $$
-> P_{\text{eq}} = 2P_1+P_m = \frac{2}{f_{\text{lens}}}+\frac{1}{f_{\text{mirror}}}
+> P_{\text{eq}} = 2P_1+P_m = \frac{2}{f_{\text{lens}}}+\frac{1}{f_{\text{mirror}}} \tag{6.9}
 > $$
 >
 >  where $P_1$ is the power contributed by the surface the light crosses *twice* — the unsilvered one, $P_1 = (\mu-1)/R_1$ — and $P_m$ the power of the silvered surface treated as a mirror, $P_m = -2/R_{\text{silvered}}$ (positive when that surface is concave toward the incoming light). The reason the unsilvered surface counts twice is that the light passes it on the way in and again on the way out, while the silvered surface never refracts at all.
@@ -2758,9 +2720,8 @@ and solving the imaging condition for the unfolded system gives the same $v_2 = 
 >
 >  Measure the focal length $F$ of the *combination* (glass lens + liquid lens in contact) by any method of §6.3, and the focal length $f_g$ of the glass lens alone beforehand. Then
 >
->  <!-- Equation tag: 6.10 -->
-> $$
-> \frac{1}{f_{\text{liq}}} = \frac{1}{F}-\frac{1}{f_g}, \qquad\text{and}\qquad \frac{1}{f_{\text{liq}}} = (\mu_{\text{liq}}-1)\left(\frac{1}{-R}-\frac{1}{\infty}\right) = -\frac{\mu_{\text{liq}}-1}{R}
+>  $$
+> \frac{1}{f_{\text{liq}}} = \frac{1}{F}-\frac{1}{f_g}, \qquad\text{and}\qquad \frac{1}{f_{\text{liq}}} = (\mu_{\text{liq}}-1)\left(\frac{1}{-R}-\frac{1}{\infty}\right) = -\frac{\mu_{\text{liq}}-1}{R} \tag{6.10}
 > $$
 >
 >  so $\mu_{\text{liq}} = 1 - R/f_{\text{liq}}$ with $f_{\text{liq}} < 0$. This is the standard laboratory determination, and it is a beautiful application of "lenses in contact": you measure two focal lengths and learn a material constant.
@@ -2913,16 +2874,14 @@ The eye is a fixed-length camera: a cornea and a lens throw a real, inverted ima
 >
 > **Myopia** (short sight): the eye is too powerful, so parallel light focuses *before* the retina; the far point is a finite distance $x$. The correcting lens must image an object at infinity onto the far point, i.e. produce a virtual image at distance $x$:
 >
->  <!-- Equation tag: 7.1 -->
-> $$
-> \text{myopia: } f = -x \quad (\text{concave lens}), \qquad P = -\frac{1}{x}
+>  $$
+> \text{myopia: } f = -x \quad (\text{concave lens}), \qquad P = -\frac{1}{x} \tag{7.1}
 > $$
 >
 >  **Hypermetropia** (long sight): the eye is too weak, the near point is beyond 25 cm. The correcting lens must image an object at 25 cm onto the eye's own near point at distance $x$ (as a virtual image):
 >
->  <!-- Equation tag: 7.2 -->
-> $$
-> \text{hypermetropia: } \frac{1}{f} = \frac{1}{-x}-\frac{1}{-0.25}\ \text{m} = -\frac{1}{x}+4 \quad (\text{convex lens})
+>  $$
+> \text{hypermetropia: } \frac{1}{f} = \frac{1}{-x}-\frac{1}{-0.25}\ \text{m} = -\frac{1}{x}+4 \quad (\text{convex lens}) \tag{7.2}
 > $$
 >
 >  Both formulas are in metres and give $P$ in dioptres. **Presbyopia** is the same arithmetic as hypermetropia but caused by age (loss of accommodation, not of power at rest). **Astigmatism** is different in kind: the cornea's curvature differs in different meridians, so the eye has two focal lengths, and the correction is a *cylindrical* lens, which is a lens of power only along one axis.
@@ -2979,7 +2938,7 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 >
 >  - **Focus** — moves the lens (or an element) to change the image distance, because unlike the eye the camera
 >   keeps its lens power fixed and changes the geometry. Focus at infinity: $v = f$. Focus on something at 25 cm
->   with $f = 5$ cm: $1/v = 1/5-1/25 = 0.16$ cm<sup>−1</sup>, $v = 6.25$ cm — a 1.25 cm movement of the
+>   with $f = 5$ cm: $1/v = 1/5-1/25 = 0.16$ cm⁻¹, $v = 6.25$ cm — a 1.25 cm movement of the
 >   lens, which is why camera focus rings move so little.
 > - **Aperture**, characterised by the **f-number**$N = f/D$: it sets both the light gathered (the
 >   irradiance on the sensor scales as $1/N^{2}$) and the depth of field. From $f/2.8$ to $f/8$ is three
@@ -2999,9 +2958,8 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 >
 > Angular magnification is the ratio of the angle the image subtends at the eye to the angle the object would subtend if placed at the near point $D = 25$ cm:
 >
->  <!-- Equation tag: 7.3 -->
-> $$
-> M = 1+\frac{D}{f} \ \ (\text{image at the near point}), \qquad M = \frac{D}{f} \ \ (\text{image at infinity, relaxed})
+>  $$
+> M = 1+\frac{D}{f} \ \ (\text{image at the near point}), \qquad M = \frac{D}{f} \ \ (\text{image at infinity, relaxed}) \tag{7.3}
 > $$
 >
 >  The two differ by exactly the $1$ that distinguishes "the image is 25 cm away" from "the image is at infinity". Both need $f < D$ to magnify; for $f = 5$ cm the two values are 6 and 5. The relaxed alternative is preferred in practice, because the eye is then unaccommodated and does not tire — which is why a well-designed magnifier is used with the object at its focal point and the eye slightly behind.
@@ -3027,9 +2985,8 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 
 > **Compound microscope**
 >
-> <!-- Equation tag: 7.4 -->
 > $$
-> M = m_o \times m_e = \frac{v_o}{u_o}\left(1+\frac{D}{f_e}\right) \approx \frac{L}{f_o}\left(1+\frac{D}{f_e}\right)
+> M = m_o \times m_e = \frac{v_o}{u_o}\left(1+\frac{D}{f_e}\right) \approx \frac{L}{f_o}\left(1+\frac{D}{f_e}\right) \tag{7.4}
 > $$
 >
 >  where $L$ is the tube length (objective focus to eyepiece focus) and the approximation is good when the object is just outside $f_o$ and $L \gg f_o$. The relaxed version replaces $1+D/f_e$ by $D/f_e$.
@@ -3057,9 +3014,8 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 >
 > No instrument can resolve detail finer than diffraction allows. For a circular aperture of diameter $D$, the smallest resolvable angular separation at wavelength $\lambda$ is
 >
->  <!-- Equation tag: 7.5 -->
-> $$
-> \theta_{\min} = 1.22\,\frac{\lambda}{D} \quad\text{(telescope / eye)}, \qquad d_{\min} = \frac{0.61\,\lambda}{\text{NA}} \quad\text{(microscope)}
+>  $$
+> \theta_{\min} = 1.22\,\frac{\lambda}{D} \quad\text{(telescope / eye)}, \qquad d_{\min} = \frac{0.61\,\lambda}{\text{NA}} \quad\text{(microscope)} \tag{7.5}
 > $$
 >
 >  where the numerical aperture $\text{NA} = n\sin i$ collects the index of the medium and the half-angle of the cone of light the objective accepts. The reciprocal quantities are the **resolving power**.
@@ -3093,9 +3049,8 @@ At 400 nm: $d_{\min} = 0.61(400)/0.9 = 271$ nm, an improvement by the ratio of w
 
 > **Astronomical telescope**
 >
-> <!-- Equation tag: 7.6 -->
 > $$
-> M = \frac{f_o}{f_e} \ (\text{relaxed}), \qquad M = \frac{f_o}{f_e}\left(1+\frac{f_e}{D}\right) \ (\text{image at the near point}), \qquad L = f_o + f_e \ (\text{relaxed})
+> M = \frac{f_o}{f_e} \ (\text{relaxed}), \qquad M = \frac{f_o}{f_e}\left(1+\frac{f_e}{D}\right) \ (\text{image at the near point}), \qquad L = f_o + f_e \ (\text{relaxed}) \tag{7.6}
 > $$
 >
 >  with the near-point tube length $L = f_o + u_e$, where $u_e = f_eD/(D+f_e)$ is the object distance for the eyepiece that puts the final image at 25 cm. For $f_o = 150$ cm, $f_e = 5$ cm: $M = 30$, $L = 155$ cm relaxed; and $u_e = 4.17$ cm, $M = 36$, $L = 154.2$ cm at the near point.
@@ -3282,9 +3237,8 @@ Parts 1 to 7 gave the standard machinery at the level of JEE Advanced: paraxial 
 >
 > Light travelling from a point $A$ to a point $B$ follows the path for which the **optical path length**
 >
->  <!-- Equation tag: 8.1 -->
-> $$
-> \text{OPL} = \int_A^B n\,ds = \int_A^B \frac{c}{v}\,ds = c\int_A^B dt = c\,t_{\text{total}}
+>  $$
+> \text{OPL} = \int_A^B n\,ds = \int_A^B \frac{c}{v}\,ds = c\int_A^B dt = c\,t_{\text{total}} \tag{8.1}
 > $$
 >
 >  is **stationary** — an extremum (minimum in every ordinary situation, maximum or saddle in contrived ones). Equivalently: light takes the path of *stationary time*. Because $c$ is a constant, minimising the optical path is the same as minimising the time, which is why "least time" is the usual name.
@@ -3305,9 +3259,8 @@ Parts 1 to 7 gave the standard machinery at the level of JEE Advanced: paraxial 
 >
 >  The two bracketed expressions are $\sin i$ and $\sin r$ by elementary trigonometry, so the stationarity condition reads
 >
->  <!-- Equation tag: 8.2 -->
-> $$
-> \frac{\sin i}{v_1} = \frac{\sin r}{v_2} \quad\Longleftrightarrow\quad n_1\sin i = n_2\sin r
+>  $$
+> \frac{\sin i}{v_1} = \frac{\sin r}{v_2} \quad\Longleftrightarrow\quad n_1\sin i = n_2\sin r \tag{8.2}
 > $$
 >
 >  The same computation with a reflecting surface instead of an interface — $v_1 = v_2$ — gives $\sin i = \sin r$, the law of reflection. And the second-order test, $d^{2}T/dx^{2} > 0$, confirms that this is a minimum whenever the ray crosses the interface (the "maximum" cases are grazing and total-internal-reflection paths).
@@ -3324,9 +3277,8 @@ Fermat's principle is a variational problem, so it has an Euler–Lagrange equat
 
 > **The ray equation**
 >
-> <!-- Equation tag: 8.3 -->
 > $$
-> \frac{d}{ds}\left(n\frac{d\mathbf{r}}{ds}\right) = \nabla n
+> \frac{d}{ds}\left(n\frac{d\mathbf{r}}{ds}\right) = \nabla n \tag{8.3}
 > $$
 >
 >  where $s$ is arc length along the ray and $\mathbf{r}(s)$ the ray's position. Some immediate consequences:
@@ -3337,9 +3289,8 @@ Fermat's principle is a variational problem, so it has an Euler–Lagrange equat
 >   which is the Snell's-law invariant of §3.9, recovered without slicing the medium into slabs.
 > - **Curvature of a ray:** taking the component perpendicular to the ray gives the useful practical form
 >
->  <!-- Equation tag: 8.4 -->
-> $$
-> \frac{1}{\rho} = \frac{1}{n}\left|\frac{dn}{d\ell}\right| \quad (\ell \perp \text{ ray})
+>  $$
+> \frac{1}{\rho} = \frac{1}{n}\left|\frac{dn}{d\ell}\right| \quad (\ell \perp \text{ ray}) \tag{8.4}
 > $$
 >
 >  a ray bends toward increasing $n$, with radius of curvature $n/|\nabla n|$. Light "falls" into the denser medium — which is the whole physics of mirages, looming, and the atmosphere's refraction of starlight.
@@ -3360,7 +3311,7 @@ Fermat's principle is a variational problem, so it has an Euler–Lagrange equat
 >   Sun's shape). And the last sliver before it sets is green: the dispersion of air differs slightly between
 >   wavelengths, so the blue-green image is bent by about 0.8' more than the red one — a difference comparable to the
 >   sliver's own width, which is the entire phenomenon of the green flash.
-> - **Mirage, inverted:** hot ground makes $n$ increase upward. With $1/\rho = |dn/dz|/n \approx 10^{-5}$ m<sup>−1</sup> per metre of gradient near a road, a ray that starts out horizontal curves up with a radius
+> - **Mirage, inverted:** hot ground makes $n$ increase upward. With $1/\rho = |dn/dz|/n \approx 10^{-5}$ m⁻¹ per metre of gradient near a road, a ray that starts out horizontal curves up with a radius
 >   of about 100 km — enough, over 100 m of road, to turn the sky into what looks like a sheet of water. The inferior
 >   mirage is the sky's image under a "ceiling" that is really the topside of a hot layer.
 
@@ -3370,26 +3321,24 @@ In the paraxial approximation a ray is described by two numbers — its height $
 
 > **The two building blocks**
 >
-> <!-- Equation tag: 8.5 -->
 > $$
-> T(t) = \begin{pmatrix}1 & t/n\ 0 & 1\end{pmatrix}\ \ (\text{propagation of }t\text{ in index }n), \qquad R(P) = \begin{pmatrix}1 & 0\ -P & 1\end{pmatrix}\ \ (\text{an element of power }P)
+> T(t) = \begin{pmatrix}1 & t/n\ 0 & 1\end{pmatrix}\ \ (\text{propagation of }t\text{ in index }n), \qquad R(P) = \begin{pmatrix}1 & 0\ -P & 1\end{pmatrix}\ \ (\text{an element of power }P) \tag{8.5}
 > $$
 >
 >  A whole system is the product of its matrices in the order the light meets them, $M = R_k\cdots T_2R_2T_1R_1$, and a system with the property $M_{12} = 0$ images any object plane onto the same image plane. Three results fall out, and they are the ones to remember:
 >
 >  1. **Thin lenses in contact:**$P = P_1+P_2$ (§6.3).
 > 2. **Thin lenses separated by $d$:**$P = P_1+P_2-dP_1P_2$. For $f_1 = f_2 = 20$ cm and
->   $d = 10$ cm: $P = 0.05+0.05-10(0.05)^{2} = 0.075$ cm<sup>−1</sup>, $F = 13.3$ cm — *shorter*
+>   $d = 10$ cm: $P = 0.05+0.05-10(0.05)^{2} = 0.075$ cm⁻¹, $F = 13.3$ cm — *shorter*
 >   than either lens alone. The translation matrix is the reason for the subtractive term.
 > 3. **Thick lens** (Gullstrand's formula): with $P_1 = (n-1)/R_1$, $P_2 = (1-n)/R_2$ and the
 >   *reduced thickness*$\tau = t/n$,
 >
->  <!-- Equation tag: 8.6 -->
-> $$
-> P = P_1+P_2-\tau P_1P_2
+>  $$
+> P = P_1+P_2-\tau P_1P_2 \tag{8.6}
 > $$
 >
->  For $R_1 = +20$ cm, $R_2 = -20$ cm, $t = 4$ cm, $n = 1.5$: $\tau = 2.667$ cm, $P_1 = P_2 = 0.025$ cm<sup>−1</sup>, so $P = 0.0483$ cm<sup>−1</sup> and $f = 20.7$ cm against the thin-lens 20.0 cm — a 3.5% difference, which is why the thin-lens formula survives for lenses that are thin and fails for the ones in a camera or an eye.
+>  For $R_1 = +20$ cm, $R_2 = -20$ cm, $t = 4$ cm, $n = 1.5$: $\tau = 2.667$ cm, $P_1 = P_2 = 0.025$ cm⁻¹, so $P = 0.0483$ cm⁻¹ and $f = 20.7$ cm against the thin-lens 20.0 cm — a 3.5% difference, which is why the thin-lens formula survives for lenses that are thin and fails for the ones in a camera or an eye.
 
 ![A thick lens with its principal planes H1 and H2 marked inside the glass, and the focal length measured from the principal planes to the focal points](assets/figures/fig-042.svg)
 
@@ -3413,9 +3362,8 @@ Throw away the small-angle approximation and a spherical mirror stops having a f
 >
 >  Read it as one story. Up to $h = R/4$ the mirror is nearly perfect: the crossing misses the paraxial focus by only 0.33 cm, and the estimate $h^{2}/4R = 0.31$ cm is right to 6%. At $h = R/2$ the miss has grown to $10.00-8.45 = 1.55$ cm while the estimate gives 1.25 cm — 20% low, and the approximation keeps degrading. The **longitudinal** spherical aberration is exactly this miss:
 >
->  <!-- Equation tag: 8.7 -->
-> $$
-> \Delta_{\text{long}} = \frac{R}{2}-D \approx \frac{h^{2}}{4R} \qquad (\text{good to a few per cent for } h \lesssim R/2)
+>  $$
+> \Delta_{\text{long}} = \frac{R}{2}-D \approx \frac{h^{2}}{4R} \qquad (\text{good to a few per cent for } h \lesssim R/2) \tag{8.7}
 > $$
 >
 >  The **transverse** aberration is the blur this produces at the paraxial focus. The ray that crosses the axis 1.55 cm short is still travelling at $2\theta = 60^\circ$ to the axis, so by the time it reaches the paraxial plane it is $1.55\tan 60^\circ = 2.7$ cm off-axis — and the ray from the opposite side is 2.7 cm off on the other side. The "image" of a star at $f = R/2$ for this very fast $f/1$ mirror is therefore a disc about 5 cm across: a factor 500 worse than the diffraction limit, and enough to ruin the image of a star completely.
@@ -3477,9 +3425,8 @@ Spherical aberration is the first of five *monochromatic* aberrations (the Seide
 >
 > Let the drop have index $\mu$, let the ray enter at incidence $i$ (refraction $r$, with $\sin i = \mu\sin r$), and let it suffer $k$ internal reflections. Each refraction deviates the ray by $i-r$; each reflection by $180^\circ-2r$. Total:
 >
->  <!-- Equation tag: 8.8 -->
-> $$
-> D_k(i) = 180^\circ k + 2i - 2(k+1)r
+>  $$
+> D_k(i) = 180^\circ k + 2i - 2(k+1)r \tag{8.8}
 > $$
 >
 >  Now extremise with respect to the impact parameter (i.e. set $dD_k/di = 0$). Using $dr/di = \cos i/(\mu\cos r)$:
@@ -3515,9 +3462,8 @@ The last piece of olympiad machinery is a conservation law — the one that says
 >
 > For a beam of cross-sectional area $A$ in a medium of index $n$ filling a solid angle $\Omega$, the product
 >
->  <!-- Equation tag: 8.9 -->
-> $$
-> \text{Étendue} = n^{2}A\,\Omega = \text{constant along any passive system}
+>  $$
+> \text{Étendue} = n^{2}A\,\Omega = \text{constant along any passive system} \tag{8.9}
 > $$
 >
 >  and equivalently, for a ray bundle tracing an object of height $y$ with cone angle $\theta$, the **Lagrange invariant** $n\,y\,\theta$ is conserved through every refraction and reflection. Two consequences are worth more than the formula:
@@ -3531,9 +3477,8 @@ The last piece of olympiad machinery is a conservation law — the one that says
 > - **Concentration has a hard ceiling.** For sunlight filling a half-angle $\theta_s = 0.267^\circ$, the
 >   maximum concentration ratio is
 >
->  <!-- Equation tag: 8.10 -->
-> $$
-> C_{\max} = \frac{1}{\sin^{2}\theta_s} = \frac{1}{(0.00466)^{2}} \approx 4.6\times10^{4}
+>  $$
+> C_{\max} = \frac{1}{\sin^{2}\theta_s} = \frac{1}{(0.00466)^{2}} \approx 4.6\times10^{4} \tag{8.10}
 > $$
 >
 >  only 46 000 times the ambient, no matter how perfect the optics. Real imaging concentrators reach ~1000×; the theoretical limit requires a non-imaging "ideal" concentrator (a compound parabolic cone) which trades image quality for concentration — a very modern piece of optics that follows from one line of geometry.
@@ -3657,7 +3602,7 @@ Six steps, in order, always the same. With this discipline, mirror, lens and sin
 > 4. **Direction check.** Mirror images are laterally inverted, lens images of a real object are inverted when
 >   real, a prism deviates toward the base, a diverging lens moves the image farther out. Say the direction out loud;
 >   if the number contradicts the picture, look again.
-> 5. **Units and orders of magnitude.** Dioptres for power (m<sup>−1</sup>), cm or m consistently, radians or
+> 5. **Units and orders of magnitude.** Dioptres for power (m⁻¹), cm or m consistently, radians or
 >   degrees consistently. An answer of "0.05 cm" for a telescope's objective is a slip, not a result.
 
 ### 9.5 The trap catalogue

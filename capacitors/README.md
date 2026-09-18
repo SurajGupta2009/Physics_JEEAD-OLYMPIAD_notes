@@ -33,16 +33,16 @@ covered rather than merely implied:
 
 | added for the Cengage floor | where |
 |---|---|
-| the Kirchhoff sign convention for capacitors, written once: node potentials as unknowns, <m>q_i=C(V_i-V_j)</m>, algebraic charge sums at floating nodes, charges (not currents) conserved | §4.3, box *The sign convention* |
-| energy in a combination: which capacitor holds the joules — <m>U_i/U=C_{\text{eq}}/C_i</m> in series and <m>C_i/C_{\text{eq}}</m> in parallel, with the series-string breakdown warning | §4.2, box *Energy in a combination* |
-| effect of a dielectric on every parameter, both constraints (battery disconnected vs connected): <m>C, Q, V, E, \sigma, U</m>, cell work, force, safe voltage | §3.4, table *Dielectric inserted: every parameter, both constraints* |
+| the Kirchhoff sign convention for capacitors, written once: node potentials as unknowns, $q_i=C(V_i-V_j)$, algebraic charge sums at floating nodes, charges (not currents) conserved | §4.3, box *The sign convention* |
+| energy in a combination: which capacitor holds the joules — $U_i/U=C_{\text{eq}}/C_i$ in series and $C_i/C_{\text{eq}}$ in parallel, with the series-string breakdown warning | §4.2, box *Energy in a combination* |
+| effect of a dielectric on every parameter, both constraints (battery disconnected vs connected): $C, Q, V, E, \sigma, U$, cell work, force, safe voltage | §3.4, table *Dielectric inserted: every parameter, both constraints* |
 
 ## Order and conventions (the house rules this file follows)
 
 The file is one long document with a strict, checkable order, so that a new chapter or section can be dropped in
 without upsetting anything else:
 
-* **Numbering is contiguous across levels.** Every chapter numbers its sections <m>n.1, n.2, \ldots</m> in document
+* **Numbering is contiguous across levels.** Every chapter numbers its sections $n.1, n.2, \ldots$ in document
   order, whether the heading is an `<h2>` or a sub-topic heading — chapter 1 runs 1.1 … 1.10 with 1.3 and 1.6 as
   sub-headings, and nothing is skipped.
 * **Every chapter closes the same way.** Questions (folded solutions) → a one-line drill → a "chapter in six lines"
@@ -53,7 +53,7 @@ without upsetting anything else:
   and in the fifteen-question drill alike; the paper's 36 questions are solved under the same numbers in chapter 10.
 * **Equation labels (`data-tag`) are unique within a chapter**, and the answer key covers all four sections of the
   paper, Section D by headline result.
-* **Cross-references use the section numbers** (<m>§5.6</m>), never page numbers; the section numbers are stable
+* **Cross-references use the section numbers** (§5.6), never page numbers; the section numbers are stable
   because inserting a section renumbers only its own chapter.
 
 ## The teaching contract

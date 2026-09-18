@@ -35,9 +35,9 @@ current-divider — plus the transient material Cengage keeps in this chapter (�
 
 | added for the Cengage floor | where |
 |---|---|
-| mobility in the theory (not only in a question): <m>\mu=v_d/E=e\tau/m</m>, <m>\sigma=ne\mu</m>, two-carrier form, numbers for Cu and Si | §1.4, box *Mobility* |
+| mobility in the theory (not only in a question): $\mu=v_d/E=e\tau/m$, $\sigma=ne\mu$, two-carrier form, numbers for Cu and Si | §1.4, box *Mobility* |
 | the general current divider for three or more resistors, in conductance form, with the two-resistor case recovered | §4.2, box *The general divider* |
-| charging and discharging through a resistance: loop equation, <m>q=C\mathcal E(1-e^{-t/\tau})</m>, the general <m>q_\infty-(q_\infty-q_0)e^{-t/\tau}</m> form, <m>\tau=R_{\text{Th}}C</m>, the half-energy-loss ledger, Fig. 4.4 and two folded questions | §4.6 (new) |
+| charging and discharging through a resistance: loop equation, $q=C\mathcal E(1-e^{-t/\tau})$, the general $q_\infty-(q_\infty-q_0)e^{-t/\tau}$ form, $\tau=R_{\text{Th}}C$, the half-energy-loss ledger, Fig. 4.4 and two folded questions | §4.6 (new) |
 | units of electric energy and power: the kWh as the commercial unit, cost arithmetic, eV, Ah, the rated-power trap | §3.4, box *Units ledger* |
 | checking the meter-bridge connections before trusting a balance (continuity both ways, null inside the wire, reversal about the null, the copper strips) | §6.3 |
 
@@ -58,7 +58,7 @@ current-divider — plus the transient material Cengage keeps in this chapter (�
 * Chapters 1–3 and 6–7 park their questions under a numbered *Questions* section; chapters 4–5 mix them into the
   flow. Both patterns pass the checker; pick whichever suits the chapter you add — but keep every closing block
   numbered (summary then checkpoint; §4.6's questions continue the chapter's own count, Q9 and Q10).
-* Equation labels (`data-tag`) are numbered <m>n.1, n.2, \ldots</m> in document order within each chapter and are
+* Equation labels (`data-tag`) are numbered $n.1, n.2, \ldots$ in document order within each chapter and are
   unique; after inserting a section, renumber the rest of that chapter's tags.
 * The answer key covers Sections A–C as answers and Section D as headline results, so a marked paper can be
   audited without opening the solutions page.
