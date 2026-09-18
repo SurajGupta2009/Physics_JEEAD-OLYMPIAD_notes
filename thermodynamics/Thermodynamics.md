@@ -61,9 +61,8 @@ A thermometric property must be monotonic and reproducible: the length of a merc
 >
 > Keep a fixed mass of gas at fixed volume; measure its pressure $P$ — the height of a mercury column does the bookkeeping. Define the ratio of temperatures to be the ratio of pressures,
 >
->  <!-- Equation tag: 1.1 -->
-> $$
-> \frac{T_{1}}{T_{2}}=\lim_{P\to 0}\left(\frac{P_{1}}{P_{2}}\right)
+>  $$
+> \frac{T_{1}}{T_{2}}=\lim_{P\to 0}\left(\frac{P_{1}}{P_{2}}\right) \tag{1.1}
 > $$
 >
 >  the limit taken by repeating the experiment with progressively rarefier gas. All gases — He, N₂, even moderately non-ideal ones — converge to the same ratio in that limit, which is what makes the definition thermometer-independent.
@@ -106,9 +105,8 @@ Two fixed points used to hang the scale on it: the steam point and the ice point
 
 Heat an isotropic solid and every interatomic distance grows by the same fractional amount, so the object grows like a photograph. Writing only the linear law (area and volume follow),
 
-<!-- Equation tag: 1.2 -->
 $$
-\Delta L = \alpha L\,\Delta T,\qquad \Delta A \approx 2\alpha A\,\Delta T,\qquad \Delta V \approx 3\alpha V\,\Delta T
+\Delta L = \alpha L\,\Delta T,\qquad \Delta A \approx 2\alpha A\,\Delta T,\qquad \Delta V \approx 3\alpha V\,\Delta T \tag{1.2}
 $$
 
 with $\alpha$ the linear coefficient (steel $1.2\times 10^{-5}$ K⁻¹, brass $1.9\times10^{-5}$ K⁻¹, invar $\approx 6\times10^{-7}$ — all quoted at room temperature, and all valid only while $\alpha\,\Delta T \ll 1$, which for a 100 K swing means a 0.1% effect: a perturbation, not a renovation.
@@ -157,9 +155,8 @@ Two corollaries of "it is a photograph, and the camera is the temperature" belon
 
 **1.3.1 — If you can't move it, you still paid for it.** A rod clamped rigidly at both ends and heated by $\Delta T$ is held at the length it would not have chosen, i.e. compressed by $\epsilon = \alpha\Delta T$, so the stress is
 
-<!-- Equation tag: 1.3 -->
 $$
-\sigma = E\,\alpha\,\Delta T \quad (\text{fully constrained})
+\sigma = E\,\alpha\,\Delta T \quad (\text{fully constrained}) \tag{1.3}
 $$
 
 For steel ($E = 2\times10^{11}$ Pa) a 10 K constrained swing means $2.4$ MPa, and a 200 K swing means 48 MPa — approaching yield, which is why rails get gaps, bridges sit on rollers, and glass cookware is made of low-$\alpha$ borosilicate.
@@ -184,9 +181,8 @@ For steel ($E = 2\times10^{11}$ Pa) a 10 K constrained swing means $2.4$ MPa, an
 
 For a liquid the measured quantity is always *the spill* or *the column height* — i.e. liquid expansion *minus* container expansion. With $\gamma_{\ell}$ the real volume coefficient and $3\alpha_{g}$ that of the glass flask (a solid's volume coefficient is its linear one ×3), the bookkeeping is
 
-<!-- Equation tag: 1.4 -->
 $$
-\Delta V_{\text{apparent}} = V\left(\gamma_{\ell} - 3\alpha_{g}\right)\Delta T\qquad\text{(overflow of a filled flask)}
+\Delta V_{\text{apparent}} = V\left(\gamma_{\ell} - 3\alpha_{g}\right)\Delta T\qquad\text{(overflow of a filled flask)} \tag{1.4}
 $$
 
 > **The trap: quoting mercury's expansion at a DRE without the glass**
@@ -272,9 +268,8 @@ This is the chapter where "hot" becomes a number of joules per molecule. After i
 
 One molecule with velocity component $v_{x}$ hits a wall perpendicular to $x$ and bounces back: momentum change $2mv_{x}$. It makes the next hit on the same wall after $2L/v_{x}$ seconds, so its personal rate of impulse is $2mv_{x}\div(2L/v_{x}) = mv_{x}^{2}/L$. Sum over molecules, divide by the wall area $L^{2}$:
 
-<!-- Equation tag: 2.1 -->
 $$
-P = \frac{N m\overline{v_{x}^{2}}}{V}
+P = \frac{N m\overline{v_{x}^{2}}}{V} \tag{2.1}
 $$
 
 ![A single molecule bouncing between two walls; the wall sees 2mv per hit and f hits per second, the two factors multiplying into mv²/L](assets/figures/fig-007.svg)
@@ -285,16 +280,14 @@ $$
 >
 > Boxes are isotropic: nothing distinguishes $x$ from $y$ from $z$, so $\overline{v_{x}^{2}}=\overline{v_{y}^{2}}=\overline{v_{z}^{2}}=\tfrac{1}{3}\overline{v^{2}}$. Hence $P = \tfrac13 nm\overline{v^{2}}$. Students drop this 1/3 by writing the formula with $v^{2}$ while deriving with $v_{x}^{2}$; the check that catches it is dimensional in spirit: for air at STP, inserting $v_{\text{rms}}\approx 517$ m s⁻¹ without the 1/3 predicts 3× atmospheric pressure — the factor is not a rounding detail.
 
-<!-- Equation tag: 2.2 -->
 $$
-P = \frac{1}{3}\, n m\overline{v^{2}} = \frac{2}{3}\,n\,\overline{K}_{\text{trans}}\qquad\big[\overline{K}_{\text{trans}} = \tfrac12 m\overline{v^{2}}\big]
+P = \frac{1}{3}\, n m\overline{v^{2}} = \frac{2}{3}\,n\,\overline{K}_{\text{trans}}\qquad\big[\overline{K}_{\text{trans}} = \tfrac12 m\overline{v^{2}}\big] \tag{2.2}
 $$
 
 Compare eq. 2.2 with the empirical law $PV = NkT$ and the comparison forces one conclusion — the last missing line of chapter 1's story:
 
-<!-- Equation tag: 2.3 -->
 $$
-\overline{K}_{\text{trans}} = \tfrac32 kT\qquad\text{— temperature IS mean translational kinetic energy, per molecule}
+\overline{K}_{\text{trans}} = \tfrac32 kT\qquad\text{— temperature IS mean translational kinetic energy, per molecule} \tag{2.3}
 $$
 
 > **The trap: "same temperature, same speed"**
@@ -333,16 +326,14 @@ $$
 
 Molecules do not all move at $v_{\text{rms}}$; the equilibrium distribution of speeds (derived from Boltzmann counting in §7.2) is
 
-<!-- Equation tag: 2.4 -->
 $$
-f(v) = 4\pi n\left(\frac{m}{2\pi kT}\right)^{3/2} v^{2}\, e^{-mv^{2}/2kT}
+f(v) = 4\pi n\left(\frac{m}{2\pi kT}\right)^{3/2} v^{2}\, e^{-mv^{2}/2kT} \tag{2.4}
 $$
 
 The $v^{2}$ factor counts the spherical shells of velocity space; the exponential is the Boltzmann weight. Their competition puts a peak at $v_{p}=\sqrt{2kT/m}$. Averaging the same $f$ different ways gives the three speeds with a fixed hierarchy:
 
-<!-- Equation tag: 2.5 -->
 $$
-v_{p}=\sqrt{\frac{2RT}{M}},\qquad \bar v=\sqrt{\frac{8RT}{\pi M}}=1.128\,v_{p},\qquad v_{\text{rms}}=\sqrt{\frac{3RT}{M}}=1.225\,v_{p}
+v_{p}=\sqrt{\frac{2RT}{M}},\qquad \bar v=\sqrt{\frac{8RT}{\pi M}}=1.128\,v_{p},\qquad v_{\text{rms}}=\sqrt{\frac{3RT}{M}}=1.225\,v_{p} \tag{2.5}
 $$
 
 ![Maxwell speed distributions for nitrogen and helium at the same temperature: the lighter gas is shifted right and flattened, and the three characteristic speeds of nitrogen are marked on its curve](assets/figures/fig-008.svg)
@@ -357,9 +348,8 @@ For $\text{N}_{2}$ at 300 K ($M = 0.028$ kg mol⁻¹): **Do:** $v_{p}=\sqrt{2\ti
 
 A molecule of diameter $d$ sweeping speed $v$ through still targets of density $n$ hits anything whose centre lies in the cylinder of cross-section $\pi d^{2}$ it drags: rate $n\pi d^{2}v$. But the targets move too — the relevant speed is the **relative** speed of a pair, whose mean is $\sqrt{2}$ times the mean single speed (velocities at right angles on average: Pythagoras, then an average). Hence:
 
-<!-- Equation tag: 2.6 -->
 $$
-\lambda = \frac{1}{\sqrt{2}\,\pi d^{2} n}\qquad z = \frac{\bar v}{\lambda}\ \text{(collisions per second)}
+\lambda = \frac{1}{\sqrt{2}\,\pi d^{2} n}\qquad z = \frac{\bar v}{\lambda}\ \text{(collisions per second)} \tag{2.6}
 $$
 
 ![The swept collision cylinder of a moving molecule through a gas of targets, annotated with the double diameter and the root-two correction](assets/figures/fig-009.svg)
@@ -398,9 +388,8 @@ Numerics for dry air at STP, worth owning: $d\approx3.7\times10^{-10}$ m, $n = 2
 
 ### 2.5 How many molecules arrive: flux, effusion, escape
 
-<!-- Equation tag: 2.7 -->
 $$
-\Gamma = \frac{n\bar v}{4}\qquad\big[\text{molecules m}^{-2}\,\text{s}^{-1}\ \text{arriving at any surface}\big]
+\Gamma = \frac{n\bar v}{4}\qquad\big[\text{molecules m}^{-2}\,\text{s}^{-1}\ \text{arriving at any surface}\big] \tag{2.7}
 $$
 
 > **Why the 1/4 and not the 1/2 you guessed**
@@ -506,9 +495,8 @@ The first law is an accounting identity, and like all accounting it is unforgivi
 >
 > **Heat Q** is energy transferred *because of a temperature difference alone*. **Work W** is energy transferred by every other mechanism — a moving boundary, a stirring paddle, a current through a resistor seen from the battery side, a spring pulling. **Internal energy U** is the state function whose change makes the books balance:
 >
->  <!-- Equation tag: 3.1 -->
-> $$
-> \Delta U = Q - W \qquad (W\ \text{= work done by the gas; this convention holds through ch 10})
+>  $$
+> \Delta U = Q - W \qquad (W\ \text{= work done by the gas; this convention holds through ch 10}) \tag{3.1}
 > $$
 >
 >  A positive Q (heat into the gas) credits U; a positive W (gas expands against its constraints) debits it. State the convention in every answer — several textbooks use $\Delta U = Q+W$ with $W$ done *on* the gas; the physics is identical, the signs are opposite, and mixing the two mid-problem is a guaranteed zero.
@@ -525,9 +513,8 @@ The first law is an accounting identity, and like all accounting it is unforgivi
 
 Take a gas under a piston of area $A$ carrying a load, open to atmosphere. Force balance on the piston (massless or not — then add $Ma$; quasistatic means $a=0$) reads $P A = P_{0}A + mg$, and if the piston moves $dx$ the gas does $P A\,dx = P\,dV$ of work against the whole world outside. Hence the law:
 
-<!-- Equation tag: 3.2 -->
 $$
-W = \int_{1}^{2}P\,dV \quad\text{(quasistatic; } P \text{ = gas pressure)}\qquad\text{versus}\qquad W = P_{\text{ext}}\,\Delta V\ \text{(sudden, against a fixed }P_{\text{ext}}\text{)}
+W = \int_{1}^{2}P\,dV \quad\text{(quasistatic; } P \text{ = gas pressure)}\qquad\text{versus}\qquad W = P_{\text{ext}}\,\Delta V\ \text{(sudden, against a fixed }P_{\text{ext}}\text{)} \tag{3.2}
 $$
 
 ![Piston cylinder with load and atmosphere; the pressure inside pays the atmosphere, the load and friction, and the work integral charges the gas for all three](assets/figures/fig-011.svg)
@@ -554,9 +541,8 @@ $$
 
 ### 3.3 ΔU of an ideal gas: a function of T, full stop
 
-<!-- Equation tag: 3.3 -->
 $$
-\Delta U = nC_{V}\Delta T\qquad\text{— for an ideal gas on ANY path, not just constant volume}
+\Delta U = nC_{V}\Delta T\qquad\text{— for an ideal gas on ANY path, not just constant volume} \tag{3.3}
 $$
 
 Two facts multiply into this one: kinetic theory (§2.2) says U is the total translational energy $N\times\tfrac32 kT$ plus frozen-in internal stores, which is a function of T alone (Joule's experiment — free expansion changed nothing, so U cannot depend on V); and $C_{V}\equiv(\partial U/\partial T)_{V}$ is the *definition* of the slope, so the slope along any other path is the same number. Students confine eq. 3.3 to isochoric processes; it is the only line in thermodynamics that path-independence *grants*, and the key to every "find the heat along this weird path" problem:
@@ -716,33 +702,30 @@ Every JEE thermodynamics numerical is the first law plus the ideal-gas law plus 
 
 ### 4.1 Two capacities, one difference, and enthalpy
 
-> **Definition · C<sub>V</sub>, C<sub>P</sub>, γ**
+> **Definition · Cᵥ, Cₚ, γ**
 >
-> <!-- Equation tag: 4.1 -->
 > $$
-> C_{V}=\frac{1}{n}\left(\frac{\partial U}{\partial T}\right)_{V},\qquad C_{P}=\frac{1}{n}\left(\frac{\partial H}{\partial T}\right)_{P},\qquad \gamma=\frac{C_{P}}{C_{V}},\qquad H\equiv U+PV
+> C_{V}=\frac{1}{n}\left(\frac{\partial U}{\partial T}\right)_{V},\qquad C_{P}=\frac{1}{n}\left(\frac{\partial H}{\partial T}\right)_{P},\qquad \gamma=\frac{C_{P}}{C_{V}},\qquad H\equiv U+PV \tag{4.1}
 > $$
 >
 >  $C_{V}$ is heat per kelvin with the gas held still; $C_{P}$ is heat per kelvin while the gas is free to push back the world at constant pressure. H — the "enthalpy" — is the quantity whose temperature-slope is heat supplied at constant pressure, because when P is fixed, $\Delta(U+PV) = \Delta U + P\Delta V$ is exactly "energy kept + energy paid out" = energy in. You may not need the word all day; you will use its content.
 
-> **Why C<sub>P</sub> − C<sub>V</sub> = R for an ideal gas — in four lines**
+> **Why Cₚ − Cᵥ = R for an ideal gas — in four lines**
 >
 > Constant pressure, one mole, one kelvin: the gas keeps $C_{V}$ worth of heat as U (eq. 3.3, which is path-blind) and must pay $P\Delta V = R\Delta T$ to lift the atmosphere. So per kelvin $C_{P} = C_{V}+R$. That's the whole derivation — the difference is not a material constant but the expansion tax itself, one R per mole, universal. It also previews the deeper fact (ch 7): a van der Waals gas pays $C_{P}-C_{V}=R\big/\left(1-2a(V-b)^{2}/RTV^{3}\right)$ — *more* than R, diverging as the gas nears its own condensation — while a liquid pays almost nothing, because there is nothing to push.
 
 From kinetic theory plus equipartition (§7.1), one mole of an ideal gas with $f$ quadratic degrees of freedom has $U = \tfrac{f}{2}RT$, so
 
-<!-- Equation tag: 4.2 -->
 $$
-C_{V}=\frac{f}{2}R,\qquad C_{P}=\left(\frac{f}{2}+1\right)R,\qquad \gamma=\frac{f+2}{f}
+C_{V}=\frac{f}{2}R,\qquad C_{P}=\left(\frac{f}{2}+1\right)R,\qquad \gamma=\frac{f+2}{f} \tag{4.2}
 $$
 
 giving the numbers to burn in: monatomic (He, Ar) $\gamma = 5/3 = 1.67$; diatomic (N₂, O₂, air) $\gamma = 7/5 = 1.40$; rigid triatomic non-linear (CH₄ classically, CO₂ with frozen vibration) $\gamma = 4/3 = 1.33$. The order is law, not data: fewer degrees of freedom means more of the heat must become translation (pressure!) per kelvin, which steepens every P–T curve and raises γ.
 
 ### 4.2 The three "iso-" processes
 
-<!-- Equation tag: 4.3 -->
 $$
-\text{isochoric: } W=0,\ Q=nC_{V}\Delta T\qquad \text{isobaric: } W=nR\Delta T,\ Q=nC_{P}\Delta T\qquad \text{isothermal: } \Delta U=0,\ W=Q=nRT\ln\frac{V_{2}}{V_{1}}
+\text{isochoric: } W=0,\ Q=nC_{V}\Delta T\qquad \text{isobaric: } W=nR\Delta T,\ Q=nC_{P}\Delta T\qquad \text{isothermal: } \Delta U=0,\ W=Q=nRT\ln\frac{V_{2}}{V_{1}} \tag{4.3}
 $$
 
 The isothermal work line deserves its five seconds of derivation — plug $P = nRT/V$ into eq. 3.2 and integrate; $\ln$ appears because the hyperbola's area is logarithmic, which is also why "double the volume at fixed T" always buys the same $nRT\ln 2$ of work no matter where you are on the curve. One mole at 300 K doubling its volume: $W = 8.314\times300\times0.6931 = 1729$ J.
@@ -769,16 +752,14 @@ The isothermal work line deserves its five seconds of derivation — plug $P = n
 
 Adiabatic ⇒ $dU = -\delta W$ ⇒ $nC_{V}\,dT = -P\,dV$; substitute $P = nRT/V$, separate, and integrate with $\gamma$'s definition eating the constants:
 
-<!-- Equation tag: 4.4 -->
 $$
-TV^{\gamma-1}=\text{const}\qquad PV^{\gamma}=\text{const}\qquad P^{1-\gamma}T^{\gamma}=\text{const}
+TV^{\gamma-1}=\text{const}\qquad PV^{\gamma}=\text{const}\qquad P^{1-\gamma}T^{\gamma}=\text{const} \tag{4.4}
 $$
 
 All three are the same statement wearing different shoes — derive the first, get the others by dressing it with the gas law. The work along an adiabat follows from $W = -\Delta U$:
 
-<!-- Equation tag: 4.5 -->
 $$
-W_{\text{adiab}} = \frac{P_{1}V_{1}-P_{2}V_{2}}{\gamma-1} = \frac{nR\left(T_{1}-T_{2}\right)}{\gamma-1}
+W_{\text{adiab}} = \frac{P_{1}V_{1}-P_{2}V_{2}}{\gamma-1} = \frac{nR\left(T_{1}-T_{2}\right)}{\gamma-1} \tag{4.5}
 $$
 
 > **The trap: the validity clause is the question**
@@ -797,9 +778,8 @@ A bicycle pump compresses air ($\gamma = 1.4$) from 1 atm to 3 atm fast enough t
 
 Any process obeying $PV^{n} = \text{const}$ (constant $n$, not necessarily 0, 1, γ) has a molar heat capacity you should be able to derive on the spot, then look up only to check:
 
-<!-- Equation tag: 4.6 -->
 $$
-C_{n} = C_{V} + \frac{R}{1-n}\qquad\text{(ideal gas, }PV^{n}=\text{const)}
+C_{n} = C_{V} + \frac{R}{1-n}\qquad\text{(ideal gas, }PV^{n}=\text{const)} \tag{4.6}
 $$
 
 **Three lines:** the ledger with eq. 3.2 gives $\delta Q = nC_{V}\,dT + P\,dV$ (quasistatic, so the work integral is the gas's own P). Combine $PV = nRT$ with $PV^{n} = c$ to get $TV^{n-1} = c'$ — the same dressing trick that produced eq. 4.4. Take its log-differential, $dT/T = (1-n)\,dV/V$, so $P\,dV = nR\,dT/(1-n)$; divide by $n\,dT$ and eq. 4.6 stands. ∎
@@ -842,9 +822,8 @@ Read off the family: $n=0$ isobaric ($C_{P}$ ✓), $n=1$ isothermal ($C\to\infty
 
 A mass $m$ on a frictionless piston (area $A$) over $V_{0}$ of gas at $P_{0}$, with a vacuum above (or atmosphere below — nothing changes but the equilibrium offset): displace by $x$ and the gas's reaction is $\delta P = -\gamma P_{0}\,\delta V/V_{0}$ (adiabatic because sound-like compressions are fast). Newton's law gives
 
-<!-- Equation tag: 4.7 -->
 $$
-\omega = \sqrt{\frac{\gamma P_{0}A^{2}}{mV_{0}}}\qquad\text{(isentropic spring constant } k = \gamma P_{0}A^{2}/V_{0}\text{)}
+\omega = \sqrt{\frac{\gamma P_{0}A^{2}}{mV_{0}}}\qquad\text{(isentropic spring constant } k = \gamma P_{0}A^{2}/V_{0}\text{)} \tag{4.7}
 $$
 
 > **Newton got sound wrong by √γ — and that was the point**
@@ -883,7 +862,7 @@ $m = 5$ kg, $A = 0.01$ m², $V_{0} = 1.0$ L of air at $P_{0} = 10^{5}$ Pa. **Do:
 
 </details>
 
-### **Q6** One mole of monatomic gas follows PV<sup>3/2</sup> = const from (P₀, V₀, 300 K) to V = 8V₀. Find the final temperature, and decide whether the gas absorbs or releases heat. _(INPhO warm-up)_
+### **Q6** One mole of monatomic gas follows PV³⁄² = const from (P₀, V₀, 300 K) to V = 8V₀. Find the final temperature, and decide whether the gas absorbs or releases heat. _(INPhO warm-up)_
 
 <details>
 <summary>Solution</summary>
@@ -965,9 +944,8 @@ The first law says you can't win (energy is conserved); this chapter says why yo
 
 ### 5.2 Engines: the efficiency and its one honest computation
 
-<!-- Equation tag: 5.1 -->
 $$
-\eta = \frac{W}{Q_{1}} = 1-\frac{Q_{2}}{Q_{1}}\qquad\text{(cyclic: } W = Q_{1}-Q_{2}\text{ — the first law at the gate)}
+\eta = \frac{W}{Q_{1}} = 1-\frac{Q_{2}}{Q_{1}}\qquad\text{(cyclic: } W = Q_{1}-Q_{2}\text{ — the first law at the gate)} \tag{5.1}
 $$
 
 The audit that solves every "claim" question: from reservoir temperatures, the ceiling is Carnot's η below; a claim above it is *impossible*, not optimistic; a claim below is merely irreversible. A car engine drawing heat at ~2300 K and dumping at 340 K has a ceiling of $1-340/2300 = 0.85$; it achieves ≈0.25, and the gap is friction, finite-time losses and exhaust, not a law of physics. A claimed engine between 1000 K and 400 K (ceiling 0.60) that swallows 20 kJ and delivers 11 kJ (η = 0.55) is *allowed*; one delivering 13 kJ (0.65) must be rejected on thermodynamic grounds alone, no engineering needed.
@@ -976,9 +954,8 @@ The audit that solves every "claim" question: from reservoir temperatures, the c
 
 Four reversible steps between two heat baths: isothermal expansion at $T_{1}$ (intake), adiabatic expansion (coasting down to T₂), isothermal compression at $T_{2}$ (exhaust), adiabatic compression back up. Each leg is a chapter-3 or chapter-4 computation, and their miracle is in the ratios:
 
-<!-- Equation tag: 5.2 -->
 $$
-Q_{1} = nRT_{1}\ln r,\qquad Q_{2} = nRT_{2}\ln r,\qquad \eta_{C} = 1-\frac{T_{2}}{T_{1}}
+Q_{1} = nRT_{1}\ln r,\qquad Q_{2} = nRT_{2}\ln r,\qquad \eta_{C} = 1-\frac{T_{2}}{T_{1}} \tag{5.2}
 $$
 
 ![The Carnot cycle drawn on the PV plane and on the TS plane: a four-leg closed curve with labelled legs on the left, a rectangle whose top and bottom edges are the two isotherms on the right](assets/figures/fig-020.svg)
@@ -999,9 +976,8 @@ One mole of monatomic ideal gas, baths at 400 K and 300 K, expansion ratio $r=2$
 
 ### 5.4 Running the machine backwards: COPs and the heat-pump trick
 
-<!-- Equation tag: 5.3 -->
 $$
-\text{refrigerator: } \mathrm{COP}_{r} = \frac{Q_{2}}{W} = \frac{T_{2}}{T_{1}-T_{2}}\qquad\qquad \text{heat pump: } \mathrm{COP}_{hp} = \frac{Q_{1}}{W} = \frac{T_{1}}{T_{1}-T_{2}} = 1+\mathrm{COP}_{r}
+\text{refrigerator: } \mathrm{COP}_{r} = \frac{Q_{2}}{W} = \frac{T_{2}}{T_{1}-T_{2}}\qquad\qquad \text{heat pump: } \mathrm{COP}_{hp} = \frac{Q_{1}}{W} = \frac{T_{1}}{T_{1}-T_{2}} = 1+\mathrm{COP}_{r} \tag{5.3}
 $$
 
 Both exceed 1 for mild temperature differences — a freezer lifting 30 K (270 K to 300 K) has ideal $\mathrm{COP}_{r} = 9$: 1 J of work *moves* 9 J of heat; at 150 W of input it removes 1350 W from the ice compartment and dumps 1500 W into your kitchen (check the first law: 1350 + 150 ✓ — kitchen heat comes from inside the fridge *plus* the motor; leaving the door open heats the room). The heat pump's COP ≈ 10 is the whole "electric heating beats a resistance heater by 10×" argument: the resistance heater converts 1 J of work to 1 J of heat; the pump *retrieves* 9 J from the winter ground/air and delivers 10 — the second law only forbids creating the tenth, not borrowing it from outside. A room-temperature difference doubles both; warming from 250 K costs ten times what warming from 270 K costs — why heat-pump economics are location mathematics.
@@ -1156,9 +1132,8 @@ Chapter 5 proved an inequality; this chapter finds the quantity it is an inequal
 
 ### 6.1 The Clausius inequality, and what it buys
 
-<!-- Equation tag: 6.1 -->
 $$
-\oint\frac{\delta Q}{T}\le 0\qquad\text{(any cycle; } = \text{ iff reversible)}
+\oint\frac{\delta Q}{T}\le 0\qquad\text{(any cycle; } = \text{ iff reversible)} \tag{6.1}
 $$
 
 > **Why the inequality is true (two-step proof you can reproduce)**
@@ -1167,16 +1142,14 @@ $$
 
 Now the payoff. Take two states A, B and any **two reversible paths** between them. Going A→B along one and back B→A along the other (reversed) makes a reversible cycle, so eq. 6.1 holds as an equality and the two path integrals are equal:
 
-<!-- Equation tag: 6.2 -->
 $$
-\Delta S \equiv S_{B}-S_{A} = \int_{A}^{B}\frac{\delta Q_{\text{rev}}}{T} \qquad\text{— a state function, because reversible routes agree}
+\Delta S \equiv S_{B}-S_{A} = \int_{A}^{B}\frac{\delta Q_{\text{rev}}}{T} \qquad\text{— a state function, because reversible routes agree} \tag{6.2}
 $$
 
 And for irreversible paths the same tiling argument gives $dS > \delta Q_{\text{irr}}/T$ at the boundary temperature — Clausius' inequality in local form. Everything about entropy follows from this one line, including the two rules that solve every computation:
 
-<!-- Equation tag: 6.3 -->
 $$
-\text{Compute }\Delta S\text{ by inventing ANY reversible route (S is a property);}\qquad \text{Judge possibility by }\Delta S_{\text{universe}} = \Delta S_{\text{sys}}+\Delta S_{\text{surr}}\ge 0.
+\text{Compute }\Delta S\text{ by inventing ANY reversible route (S is a property);}\qquad \text{Judge possibility by }\Delta S_{\text{universe}} = \Delta S_{\text{sys}}+\Delta S_{\text{surr}}\ge 0. \tag{6.3}
 $$
 
 ![Two routes from A to B on a PV diagram: the reversible curve above and the dashed irreversible straight line below, with the integrals of delta Q over T annotated on each](assets/figures/fig-023.svg)
@@ -1187,9 +1160,8 @@ $$
 
 Build the reversible route as "heat it at constant volume to the final T, then expand it isothermally to the final V" (any other route works and must agree — try it once as practice):
 
-<!-- Equation tag: 6.4 -->
 $$
-\Delta S = nC_{V}\ln\frac{T_{2}}{T_{1}} + nR\ln\frac{V_{2}}{V_{1}} \qquad\text{(ideal gas, any path, any amount)}
+\Delta S = nC_{V}\ln\frac{T_{2}}{T_{1}} + nR\ln\frac{V_{2}}{V_{1}} \qquad\text{(ideal gas, any path, any amount)} \tag{6.4}
 $$
 
 Consequences to keep ready: isochoric heating, $nC_{V}\ln(T_{2}/T_{1})$; isothermal doubling, $nR\ln 2 = 0.693\,nR$; reversible adiabatic, **zero** — which is why ch 4 adiabats are called *isentropes* and why the PV and TS pictures of chapter 5 shared one rectangle. Free expansion (Q = 0, W = 0, ΔU = 0): eq. 6.4 with T unchanged gives $nR\ln(V_{2}/V_{1}) > 0$ — the system's entropy rose while $\delta Q = 0$ along the actual path, and the surroundings paid nothing: **all of it is created**That is the one-minute argument for entropy as the measure of irreversibility:
@@ -1284,9 +1256,8 @@ Conduction is the minimal entropy factory. 1200 J walking from a 400 K bath to a
 
 > **Definition · Boltzmann's form**
 >
-> <!-- Equation tag: 6.5 -->
 > $$
-> S = k\ln W\qquad\text{(W: the number of microstates realising the macrostate)}
+> S = k\ln W\qquad\text{(W: the number of microstates realising the macrostate)} \tag{6.5}
 > $$
 >
 >  The bridge between "number of ways" and "joules per kelvin" — logarithm because W multiplies over independent parts while S adds; k because a mole's ln W already carries Avogadro's factor. It is not an alternative definition to eq. 6.2; the demand that they agree is what *fixes* the constant k and the whole gas scale of chapter 1.
@@ -1374,9 +1345,8 @@ Chapters 1–6 are the JEE engine; this chapter is what NSEP/INPhO add on top �
 >
 > At temperature T, every independent quadratic term in the energy of a molecule carries on average $\tfrac12 kT$. Translation supplies three terms always; rotation one per axis with moment of inertia; vibration two per mode (kinetic + potential). So
 >
->  <!-- Equation tag: 7.1 -->
-> $$
-> C_{V} = \frac{f}{2}R\qquad f = 3_{\text{trans}} + f_{\text{rot}} + 2f_{\text{vib}}
+>  $$
+> C_{V} = \frac{f}{2}R\qquad f = 3_{\text{trans}} + f_{\text{rot}} + 2f_{\text{vib}} \tag{7.1}
 > $$
 >
 >  mono: f=3 ⇒ 3R/2 · γ=5/3; rigid diatomic: f=5 ⇒ 5R/2 · γ=7/5; non-linear triatomic (CH₄): f=6 ⇒ 3R · γ=4/3. This is where ch 4's memorised numbers actually *come from*.
@@ -1393,9 +1363,8 @@ Chapters 1–6 are the JEE engine; this chapter is what NSEP/INPhO add on top �
 
 Ch 2 stated the equilibrium speed law (eq. 2.4). Its Olympiad twin is the **flux** distribution — what escapes a hole is not a sample of the population but a sample of the *collisions with the wall*, which selects by one extra power of $v$:
 
-<!-- Equation tag: 7.2 -->
 $$
-f_{\text{beam}}(v) \propto v^{3}e^{-mv^{2}/2kT} \qquad\Longrightarrow\qquad \overline{E}_{\text{beam}} = 2kT\ \ (\text{vs}\ \tfrac32kT\ \text{inside})
+f_{\text{beam}}(v) \propto v^{3}e^{-mv^{2}/2kT} \qquad\Longrightarrow\qquad \overline{E}_{\text{beam}} = 2kT\ \ (\text{vs}\ \tfrac32kT\ \text{inside}) \tag{7.2}
 $$
 
 One extra power because arrival rate is ∝ v; the mean energy rises by exactly ½kT, and the beam's most-probable speed rises from $\sqrt{2kT/m}$ to $\sqrt{3kT/m}$. Two corollaries you will be asked: effusion preferentially removes the fast, so the box cools (§2 Q7 — now proven); and a hot beam emerging from an oven is *not* at the oven temperature, which is how molecular-beam experiments tune their "effective temperature" by skimming.
@@ -1432,9 +1401,8 @@ One extra power because arrival rate is ∝ v; the mean energy rises by exactly 
 
 Weight of the air over a slab (area A, thickness dh): $A\,dP = -\rho g A\,dh$. Close the system with an equation of state and a thermodynamic assumption, and you get *an exam staple each*:
 
-<!-- Equation tag: 7.3 -->
 $$
-\text{isothermal: } P(h) = P_{0}e^{-h/H},\ H = \frac{RT}{Mg}\qquad\qquad \text{adiabatic: } T(h) = T_{0}-\frac{Mg}{C_{P}}\,h\ \ (\text{linear lapse})
+\text{isothermal: } P(h) = P_{0}e^{-h/H},\ H = \frac{RT}{Mg}\qquad\qquad \text{adiabatic: } T(h) = T_{0}-\frac{Mg}{C_{P}}\,h\ \ (\text{linear lapse}) \tag{7.3}
 $$
 
 Isothermal air: $H = 8.314\times288/(0.029\times9.8) = 8.4$ km — the scale height; pressure halves by 5.8 km; at Everest's 8.85 km it reads $e^{-1.05} = 0.35$, the "third of a sea-level breath" that camps feel as half a breath (the body's chemistry does the other half). Adiabatic air: an unsaturated parcel rising expands against its lighter surroundings following $PV^\gamma$, which turns into a **linear** temperature fall with slope $Mg/C_{P} = 9.8$ K km⁻¹ (derivation: combine $TP^{(\gamma-1)/\gamma}$ const with hydrostatics; two lines). Dry 288 K air would reach $180$ K by 11 km; the real tropopause sits nearer 220 K, because rising moist air pays back heat through condensation — the gap between the model and the sky *is* weather.
@@ -1447,9 +1415,8 @@ Isothermal air: $H = 8.314\times288/(0.029\times9.8) = 8.4$ km — the scale hei
 
 The one-idea equation — attractions subtract $a/V^{2}$ of pressure, molecules claim volume $b$:
 
-<!-- Equation tag: 7.4 -->
 $$
-\left(P+\frac{a}{V^{2}}\right)(V-b) = RT\qquad\text{(per mole)}
+\left(P+\frac{a}{V^{2}}\right)(V-b) = RT\qquad\text{(per mole)} \tag{7.4}
 $$
 
 > **Why the critical point is an inflection with a horizontal tangent**
@@ -1498,9 +1465,8 @@ $$
 
 A photon gas in a mirrored cavity obeys thermodynamics with an equation of state you must be able to quote and to *name the source of*: $u = aT^{4}$ (Stefan–Boltzmann energy density) with $P = u/3$ (radiation pressure — the 1/3 is the same angle-average as eq. 2.1's). Adiabatic expansion ($dU = -P\,dV$) then reads $d(aT^{4}V) = -(aT^{4}/3)\,dV$, whose solution is
 
-<!-- Equation tag: 7.5 -->
 $$
-TV^{\gamma-1} = \text{const},\ \ \gamma = \tfrac43\ \Rightarrow\ TV^{1/3} = \text{const}\ \Rightarrow\ T\propto 1/R\ \text{(cavity radius; same law, expanding universe)}
+TV^{\gamma-1} = \text{const},\ \ \gamma = \tfrac43\ \Rightarrow\ TV^{1/3} = \text{const}\ \Rightarrow\ T\propto 1/R\ \text{(cavity radius; same law, expanding universe)} \tag{7.5}
 $$
 
 Run it backwards with numbers: the universe was 3000 K when it became transparent (recombination); a scale factor of 1100 since gives $3000/1101 = 2.72$ K — the measured CMB temperature to three digits. Wien's law moves the peak along with it: 966 nm (near-infrared, the reddest visible light, which is why "first light" is red-shifted into infrared surveys) → 1.06 mm today. Two exam-ready derivatives: Earth's no-atmosphere balance $\pi R^{2}S(1-A) = 4\pi R^{2}\sigma T^{4}$ ⇒ $T = 255$ K, 33 K colder than reality — the greenhouse is that gap; and albedo sensitivity $dT/T = \tfrac14\,d(1-A)/(1-A)$ ⇒ darkening 0.30→0.33 costs 2.8 K — one-quarter-power logic done in your head.
@@ -2231,52 +2197,46 @@ Printed after the paper, this sheet is a compression test, not a crib: every lin
 
 ### Page 1 · The gas and its ledger
 
-<!-- Equation tag: S1 -->
 $$
-T(^{\circ}F) = 1.8\,T(^{\circ}C)+32,\ \ \Delta T^{\circ}F = 1.8\,\Delta T^{\circ}C\ \text{(increments slope-only)};\quad \Delta L = \alpha L\Delta T
+T(^{\circ}F) = 1.8\,T(^{\circ}C)+32,\ \ \Delta T^{\circ}F = 1.8\,\Delta T^{\circ}C\ \text{(increments slope-only)};\quad \Delta L = \alpha L\Delta T \tag{S1}
 $$
 
 - **Zeroth law** defines T; the Carnot scale $\eta_{C} = 1-T_{2}/T_{1}$ defines K without any substance (§1.1–1.3).
 - **Expansion**: linear α, area 2α, volume 3α (isotropic). Void/liquid cavity: contents follow the *container* unless heated harder; apparent expansion = real − vessel (§1.4).
 - **Bimorph/built-in stress**: the constraint, not the rod, decides the sign of the stress (§1.5).
 
-<!-- Equation tag: S2 -->
 $$
-PV = nRT = NkT;\qquad P = \tfrac13 nm\overline{v^{2}} = \tfrac23 n\overline{K}_{\text{trans}};\qquad \overline{K}_{\text{trans}} = \tfrac32 kT
+PV = nRT = NkT;\qquad P = \tfrac13 nm\overline{v^{2}} = \tfrac23 n\overline{K}_{\text{trans}};\qquad \overline{K}_{\text{trans}} = \tfrac32 kT \tag{S2}
 $$
 
 - The 1/3 is the *angle average*, not a fudge: dropping it predicts 3 atm in a 1-atm box (§2.1).
 - U = f/2 nRT: mono $\tfrac32 nRT$, diatomic (rigid) $\tfrac52 nRT$ — U is of T only for ideal gas, on *any* path (§2.2–2.3, ch 3–4).
 
-<!-- Equation tag: S3 -->
 $$
-v_{p}=\sqrt{\tfrac{2RT}{M}},\ \ \bar v=\sqrt{\tfrac{8RT}{\pi M}},\ \ v_{\text{rms}}=\sqrt{\tfrac{3RT}{M}};\qquad \lambda=\frac{kT}{\sqrt2\pi d^{2}P};\qquad \Phi=\frac{n\bar v}{4}
+v_{p}=\sqrt{\tfrac{2RT}{M}},\ \ \bar v=\sqrt{\tfrac{8RT}{\pi M}},\ \ v_{\text{rms}}=\sqrt{\tfrac{3RT}{M}};\qquad \lambda=\frac{kT}{\sqrt2\pi d^{2}P};\qquad \Phi=\frac{n\bar v}{4} \tag{S3}
 $$
 
 - Order $v_{p}<\bar v<v_{\text{rms}}$ always (distribution leans right); beam through a small hole: $v_{p}\to\sqrt{3RT/M}$, $\langle E\rangle = 2kT$ (§7.2).
 - λ ∝ T at fixed P, T-independent at fixed density — know which knob the question turned (§2.5, paper Q12).
 - Effusion rates ∝ 1/√M (Graham; isotope cascades: $N = \ln R/\ln\alpha$) (§2.6).
 
-<!-- Equation tag: S4 -->
 $$
-\Delta U = Q - W\ \ (W\ \text{by the gas});\qquad W_{\text{by}} = \int P\,dV\ (\text{quasistatic only});\qquad \Delta U_{\text{ideal}} = nC_{V}\Delta T\ \text{always}
+\Delta U = Q - W\ \ (W\ \text{by the gas});\qquad W_{\text{by}} = \int P\,dV\ (\text{quasistatic only});\qquad \Delta U_{\text{ideal}} = nC_{V}\Delta T\ \text{always} \tag{S4}
 $$
 
 - **Free expansion (ideal, insulated):** Q = W = ΔU = ΔT = 0; ΔS = nR ln(V₂/V₁) > 0 — the only place "no heat" ≠ "no entropy" (§3.3, §6.2).
 - **Irreversible against constant $P_{\text{ext}}$:**$W = P_{\text{ext}}\Delta V$, then close $\Delta U$ — the pattern of paper Q27(c): a diatomic compressed to V₁/2 from 300 K lands at exactly 500 K.
 - **Cycles:** ΔU = 0; ΣQ = ΣW = enclosed area; clockwise on PV is work out. Staging (list legs, table Q/W/ΔU/ΔS) is the method; ledger closure is the proof (§3.5, §8.4).
 
-<!-- Equation tag: S5 -->
 $$
-C_{P} = C_{V}+R\ (\text{ideal});\quad \gamma = \frac{f+2}{f};\quad C_{n} = C_{V}\frac{n-\gamma}{n-1}\ (\text{polytrope } PV^{n})
+C_{P} = C_{V}+R\ (\text{ideal});\quad \gamma = \frac{f+2}{f};\quad C_{n} = C_{V}\frac{n-\gamma}{n-1}\ (\text{polytrope } PV^{n}) \tag{S5}
 $$
 
 - f=3 mono γ=5/3 · f=5 rigid diatomic 7/5 · f=6 non-linear 4/3 · f=7 vibrating diatomic 9/7 (§4.1, §7.1).
 - Sign map on n: $n<1$ work-in heats *and* absorbs; $1<n<\gamma$ absorbs while cooling (expansion); $n=\gamma$ Q = 0; $n\to\infty$ isobar (§4.4 — one table, five question types).
 
-<!-- Equation tag: S6 -->
 $$
-PV^{\gamma}=\text{const},\ TV^{\gamma-1}=\text{const},\ T^{\gamma}P^{1-\gamma}=\text{const}\ (\text{reversible adiabat, ideal});\qquad v_{\text{sound}} = \sqrt{\gamma RT/M}
+PV^{\gamma}=\text{const},\ TV^{\gamma-1}=\text{const},\ T^{\gamma}P^{1-\gamma}=\text{const}\ (\text{reversible adiabat, ideal});\qquad v_{\text{sound}} = \sqrt{\gamma RT/M} \tag{S6}
 $$
 
 - Adiabat steeper than isotherm by factor γ (slope ratio dlnP/dlnV = γ vs 1): less area under expansion, more heat cost under compression (§4.3).
@@ -2284,51 +2244,45 @@ $$
 
 ### Page 2 · Engines, entropy, and the real world
 
-<!-- Equation tag: S7 -->
 $$
-\eta = 1-\frac{Q_{c}}{Q_{h}} = 1-\frac{T_{2}}{T_{1}}\big|_{\text{Carnot}};\qquad \mathrm{COP}_{\text{ref}} = \frac{T_{c}}{T_{h}-T_{c}};\qquad \mathrm{COP}_{\text{hp}} = \frac{T_{h}}{T_{h}-T_{c}}
+\eta = 1-\frac{Q_{c}}{Q_{h}} = 1-\frac{T_{2}}{T_{1}}\big|_{\text{Carnot}};\qquad \mathrm{COP}_{\text{ref}} = \frac{T_{c}}{T_{h}-T_{c}};\qquad \mathrm{COP}_{\text{hp}} = \frac{T_{h}}{T_{h}-T_{c}} \tag{S7}
 $$
 
 - η divides by *absorbed* heat only; kelvins only; $\eta \le 1-T_{2}/T_{1}$ with equality ⇔ reversible (§5.1–5.3).
 - Engine + pump cascade (paper Q33): per 1 kJ at 600 K, a 300→350 K chain delivers 3.5 kJ at zero entropy — heat is moved, never manufactured (§5.4, §8).
 - Otto $\eta = 1-r^{1-\gamma}$; Diesel $1-\frac{1}{r^{\gamma-1}}\frac{\rho^{\gamma}-1}{\gamma(\rho-1)}$ — derive Otto in two lines from the two isochores, never memorise the second (§4.6, paper Q29).
 
-<!-- Equation tag: S8 -->
 $$
-\oint\frac{\delta Q}{T} \le 0\ (\text{= reversible});\qquad dS \ge \frac{\delta Q}{T_{\text{boundary}}};\qquad \Delta S_{\text{universe}} \ge 0
+\oint\frac{\delta Q}{T} \le 0\ (\text{= reversible});\qquad dS \ge \frac{\delta Q}{T_{\text{boundary}}};\qquad \Delta S_{\text{universe}} \ge 0 \tag{S8}
 $$
 
 - ΔS of a *system*: invent a reversible path and integrate dQ/T — the actual Q never enters (§6.1).
 - Two reservoirs passing Q: $\Delta S = Q(1/T_{c}-1/T_{h}) > 0$; lost work $= T_{0}\Delta S$ (Gouy–Stodola, T₀ = the *environment*'s, name it) (§6.3, paper Q30).
 
-<!-- Equation tag: S9 -->
 $$
-\Delta S = nC_{V}\ln\frac{T_{2}}{T_{1}} + nR\ln\frac{V_{2}}{V_{1}};\qquad \Delta S_{\text{mix}} = -nR\sum x_{i}\ln x_{i};\qquad W\ \text{to unmix} \ge T\Delta S_{\text{mix}};\quad W_{\text{bit}} \ge kT\ln 2
+\Delta S = nC_{V}\ln\frac{T_{2}}{T_{1}} + nR\ln\frac{V_{2}}{V_{1}};\qquad \Delta S_{\text{mix}} = -nR\sum x_{i}\ln x_{i};\qquad W\ \text{to unmix} \ge T\Delta S_{\text{mix}};\quad W_{\text{bit}} \ge kT\ln 2 \tag{S9}
 $$
 
 - Isothermal: nR ln(V₂/V₁). Identical gases, same T,P: **zero** — Gibbs' rebate (§6.2, §6.4).
 - Phase changes: $\Delta S = L/T$; Trouton ≈ 88 J mol⁻¹ K⁻¹ with water's hydrogen-bond surcharge (§6.2).
 - $k\ln W$ + Landauer: erasure, not "disorder", is what entropy bills (§6.4).
 
-<!-- Equation tag: S10 -->
 $$
-\dot Q = \frac{kA\Delta T}{L};\quad \text{series: add } \frac{L}{kA},\ \text{parallel: add } \dot Q;\qquad \theta = \theta_{0}e^{-t/\tau};\qquad P = \sigma A\varepsilon T^{4},\ \ \lambda_{\max}T = 2.90\times10^{-3}\ \text{m K}
+\dot Q = \frac{kA\Delta T}{L};\quad \text{series: add } \frac{L}{kA},\ \text{parallel: add } \dot Q;\qquad \theta = \theta_{0}e^{-t/\tau};\qquad P = \sigma A\varepsilon T^{4},\ \ \lambda_{\max}T = 2.90\times10^{-3}\ \text{m K} \tag{S10}
 $$
 
 - Conduction ledger = Carnot's engine in slow motion: same Q, two T's, ΔS = QΔT/T² (§6.3).
 - Newton only for lumped bodies (small Biot); exponential, never linear: "−20 °C in 10 min" ⇒ next 20° in 17 more (§7.6, trap 9).
 
-<!-- Equation tag: S11 -->
 $$
-\overline{\varepsilon}_{\text{mode}} = \tfrac12 kT\ \text{per quadratic term}\ \ (T \gg \Theta);\qquad \Theta = \frac{\Delta E}{k};\qquad C_{V} = \frac{f}{2}R\big|_{\text{active }f}
+\overline{\varepsilon}_{\text{mode}} = \tfrac12 kT\ \text{per quadratic term}\ \ (T \gg \Theta);\qquad \Theta = \frac{\Delta E}{k};\qquad C_{V} = \frac{f}{2}R\big|_{\text{active }f} \tag{S11}
 $$
 
 - H₂ staircase 3R/2→5R/2→7R/2 at Θ_rot ≈ 85 K, Θ_vib ≈ 6100 K; quote γ only after naming which modes are awake (§7.1).
 - CO₂ at 3000 K has γ < 1.3 — vibration thaws; "7/5 for everything diatomic" is trap 6's cousin (§7.1).
 
-<!-- Equation tag: S12 -->
 $$
-\left(P+\frac{a}{V^{2}}\right)(V-b) = RT;\quad V_{c} = 3b,\ P_{c} = \frac{a}{27b^{2}},\ T_{c} = \frac{8a}{27Rb},\ Z_{c} = \frac38;\quad T_{i} = \frac{2a}{Rb};\quad C_{V}\Delta T = a\left(\frac{1}{V_{2}}-\frac{1}{V_{1}}\right)
+\left(P+\frac{a}{V^{2}}\right)(V-b) = RT;\quad V_{c} = 3b,\ P_{c} = \frac{a}{27b^{2}},\ T_{c} = \frac{8a}{27Rb},\ Z_{c} = \frac38;\quad T_{i} = \frac{2a}{Rb};\quad C_{V}\Delta T = a\left(\frac{1}{V_{2}}-\frac{1}{V_{1}}\right) \tag{S12}
 $$
 
 - Back-calc from measured criticals: CO₂ a ≈ 0.365 Pa m⁶ mol⁻², b ≈ 4.3×10⁻⁵ m³ mol⁻¹ (§7.4, paper Q31).
@@ -2336,24 +2290,21 @@ $$
 
 ### Page 3 · Skies, quanta, and the door-list
 
-<!-- Equation tag: S13 -->
 $$
-P(h) = P_{0}e^{-h/H},\ H = \frac{RT}{Mg} = 8.4\ \text{km (isothermal)};\qquad \frac{dT}{dh} = -\frac{Mg}{C_{P,m}} = -9.8\ \text{K/km (dry adiabat)};\quad P_{2}=P_{1}e^{-\Delta h/H}
+P(h) = P_{0}e^{-h/H},\ H = \frac{RT}{Mg} = 8.4\ \text{km (isothermal)};\qquad \frac{dT}{dh} = -\frac{Mg}{C_{P,m}} = -9.8\ \text{K/km (dry adiabat)};\quad P_{2}=P_{1}e^{-\Delta h/H} \tag{S13}
 $$
 
 - One hydrostatics + one thermodynamic assumption = one sky; the model's zero of the adiabat at 30.6 km is where moisture re-enters the story (§7.3, paper Q21).
 
-<!-- Equation tag: S14 -->
 $$
-U = aT^{4}V,\ P = \tfrac{u}{3};\qquad T\propto 1/R\ (\text{adiabatic expansion});\qquad T_{\text{eq}} = \left[\frac{S(1-A)}{4\sigma}\right]^{1/4}\ \frac{dT}{T} = -\frac14\frac{dA}{1-A}
+U = aT^{4}V,\ P = \tfrac{u}{3};\qquad T\propto 1/R\ (\text{adiabatic expansion});\qquad T_{\text{eq}} = \left[\frac{S(1-A)}{4\sigma}\right]^{1/4}\ \frac{dT}{T} = -\frac14\frac{dA}{1-A} \tag{S14}
 $$
 
 - CMB: 3000 K ÷ 1101 = 2.72 K; Wien's λ rides along: 966 nm → 1.06 mm (§7.5).
 - Earth: 254.6 K without the greenhouse; albedo +0.03 ⇒ −2.8 K — the quarter power does everything (§7.5, paper Q35).
 
-<!-- Equation tag: S15 -->
 $$
-\text{the shelf: } R = 8.314,\ \ kT(300) = 4.14\times10^{-21}\ \text{J} = 0.026\ \text{eV},\ \ N_{A} = 6.02\times10^{23}
+\text{the shelf: } R = 8.314,\ \ kT(300) = 4.14\times10^{-21}\ \text{J} = 0.026\ \text{eV},\ \ N_{A} = 6.02\times10^{23} \tag{S15}
 $$
 
 - water c = 4186, L_f = 334 kJ/kg, L_v = 2256; air 1.2 kg/m³, c_p ≈ 1005, sound 343, γ 1.4, M 28–29 g/mol; σ 5.67×10⁻⁸; Wien 2.90×10⁻³ m K; S = 1361 W/m²; g 9.8; H 8.4 km; λ(air, STP) ≈ 60–70 nm; mole of mono gas at 300 K: U = 3.7 kJ (§8.3, all of it on purpose).

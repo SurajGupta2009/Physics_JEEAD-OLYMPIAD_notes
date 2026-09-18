@@ -4,7 +4,7 @@
 
 ### Physics notes for JEE Advanced and the Olympiad track
 
-Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its consolidated interactive HTML edition for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency.
+Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its consolidated interactive HTML edition for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
 
 </div>
 
@@ -12,27 +12,36 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 
 | topic | Markdown edition | diagrams | questions | paper / endpoint | status |
 |---|---|---:|---:|---|---|
-| **capacitors** | [Capacitors.md](capacitors/Capacitors.md) · [HTML](capacitors/Capacitors.html) | 32 figures + local SVG | 150 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
-| **current electricity** | [Current-electricity.md](current-electricity/Current-electricity.md) · [HTML](current-electricity/Current-electricity.html) | 26 figures + local SVG | 145 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
-| **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
-| **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
-| **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
+| **capacitors** | [Capacitors.md](capacitors/Capacitors.md) · [HTML](capacitors/Capacitors.html) · [site](docs/site/capacitors.html) | 32 figures + local SVG | 150 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
+| **current electricity** | [Current-electricity.md](current-electricity/Current-electricity.md) · [HTML](current-electricity/Current-electricity.html) · [site](docs/site/current-electricity.html) | 26 figures + local SVG | 145 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
+| **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
+| **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
+| **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
+| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
 | rotational mechanics | — | — | — | — | planned — claim it |
 
 The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` remains the checked registry for the interactive HTML editions; `tools/check_all.py` still validates their original markup, equations, figures and question/solution counts.
 
 ## Read it
 
-```bash
-git clone https://github.com/SurajGupta2009/Physics_JEEAD-OLYMPIAD_notes
-cd Physics_JEEAD-OLYMPIAD_notes
-less thermodynamics/Thermodynamics.md       # or open any *.md file in an editor
-```
+Three ways, in order of what you get:
+
+1. **The rendered site (recommended for study).** Open
+   [`docs/site/index.html`](docs/site/index.html) straight from disk — it works
+   offline with no tooling. Diagrams are the local SVGs, equations are typeset
+   with the vendored KaTeX, solutions stay collapsible, and each page has a
+   table of contents plus links to the other topics. Regenerate it any time
+   with `python3 tools/md_site.py` (needs `pip install markdown`).
+2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
+   `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
+   they render with diagrams and equations on GitHub and in viewers with a
+   LaTeX engine (Obsidian, VS Code + math extension). In a plain editor or
+   `less` you see the source: readable text, but raw math and image links.
+3. **The interactive HTML edition.** Theme switching, progress ticks, a
+   generated TOC and **Print / save as PDF**. Fully offline, and still the
+   source of truth the Markdown is generated from.
 
 Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus/Cengage map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Every diagram is a local `assets/figures/*.svg` file with its own styles, arrowheads, alt text and caption; there are no external image links.
-
-The HTML edition is still available when you want theme switching, progress ticks, a generated TOC, or **Print / save as PDF**. It remains fully offline and is not required to read the Markdown.
 
 ## How a note-set is put together
 
@@ -56,10 +65,13 @@ capacitors/
 
 The Markdown exporter is [tools/html_to_markdown.py](tools/html_to_markdown.py). It is dependency-free and deterministic: rerunning it refreshes each `*.md` file and its local SVGs from the corresponding HTML note. The full HTML contract is [STRUCTURE.md](STRUCTURE.md); workflow and authoring conventions are [CONTRIBUTING.md](CONTRIBUTING.md).
 
+The site generator is [tools/md_site.py](tools/md_site.py): it renders the six `*.md` files into `docs/site/*.html` (index, one page per topic, a shared `site.css`) for offline reading with diagrams and typeset maths. The only dependency is the `markdown` package (`pip install markdown`); the generated site itself needs no network and no Python — the KaTeX it uses is vendored in `docs/site/katex/`.
+
 ## Check it
 
 ```bash
 python3 tools/html_to_markdown.py    # refresh all six Markdown editions and SVG diagrams
+python3 tools/md_site.py             # refresh the rendered site in docs/site (needs pip install markdown)
 python3 tools/check_all.py           # validate the original interactive editions
 python3 tools/check_all.py --quick   # skip the Node renderer tests
 ```

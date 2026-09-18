@@ -70,7 +70,7 @@ Everything below — every trick, every "hard" problem — follows from these fo
 | $V$ (or $\Delta V$) | potential difference between the plates | Taken positive on the plate carrying $+Q$. |
 | $C$ | capacitance | $C = Q/V > 0$, one farad = one coulomb per volt. Purely geometric. |
 | $\sigma$ | surface charge density | $\sigma = Q/A$ only for a uniformly charged flat plate; otherwise $\sigma(\vec r)$. |
-| $\varepsilon_0$ | permittivity of free space | $8.854\times10^{-12}$ F m<sup>−1</sup>; $(4\pi\varepsilon_0)^{-1} = 9\times10^{9}$ N m² C<sup>−2</sup>. |
+| $\varepsilon_0$ | permittivity of free space | $8.854\times10^{-12}$ F m⁻¹; $(4\pi\varepsilon_0)^{-1} = 9\times10^{9}$ N m² C⁻². |
 | $K$ or $\varepsilon_r$ | dielectric constant | $K \ge 1$, dimensionless. Material permittivity $\varepsilon = K\varepsilon_0$. |
 | $U$ | electrostatic energy stored | Some books write $W$ for this; here $W$ **always** means work *done by* something. |
 | $\vec P,\ \vec D$ | polarisation, electric displacement | $\vec D = \varepsilon_0\vec E + \vec P$; linear dielectric: $\vec D = \varepsilon\vec E$. |
@@ -203,14 +203,14 @@ Extra on (2): just outside a conductor the field is $\sigma/\varepsilon_0$, **no
 
 > **Numbers worth memorising (they turn three minutes of algebra into a three-second estimate)**
 >
-> - $4\pi\varepsilon_0 \approx 1.11\times10^{-10}$ F m<sup>−1</sup>, so a **1 cm isolated sphere** has
+> - $4\pi\varepsilon_0 \approx 1.11\times10^{-10}$ F m⁻¹, so a **1 cm isolated sphere** has
 >   $C \approx 1.1$ pF. Rule of thumb: **1 m of wire has about 10 pF** to its surroundings.
-> - Air breaks down near $E_{\max} \approx 3\times10^{6}$ V m<sup>−1</sup> (≈ 30 kV cm<sup>−1</sup>): a 1 mm gap
+> - Air breaks down near $E_{\max} \approx 3\times10^{6}$ V m⁻¹ (≈ 30 kV cm⁻¹): a 1 mm gap
 >   cannot hold more than about 3 kV, no matter what you do. A ceiling on everything you can build.
-> - Energy density at that limit: $u = \tfrac12\varepsilon_0E^2 \approx 40$ J m<sup>−3</sup> — utterly tiny.
+> - Energy density at that limit: $u = \tfrac12\varepsilon_0E^2 \approx 40$ J m⁻³ — utterly tiny.
 >   This is the honest one-line reason a capacitor is not a battery.
 > - Water $K \approx 80$ (and it is a conductor once impure!), mica $K \approx 6$, glass
->   $4\text{–}10$, paper $2.2$, polythene $2.3$, BaTiO<sub>3</sub> ceramic $10^3\text{–}10^4$.
+>   $4\text{–}10$, paper $2.2$, polythene $2.3$, BaTiO₃ ceramic $10^3\text{–}10^4$.
 > - Human body to ground: $\sim$100–200 pF. That number is why you can light a neon bulb by touching it, and it
 >   is a favourite Olympiad estimate.
 
@@ -234,9 +234,8 @@ A capacitor is two pieces of metal and something between them. Before any formul
 
 > **Fact 1 — quantisation**
 >
-> <!-- Equation tag: charge -->
 > $$
-> Q = ne,\qquad e = 1.602\times10^{-19}\ \text{C},\qquad n\in\mathbb Z
+> Q = ne,\qquad e = 1.602\times10^{-19}\ \text{C},\qquad n\in\mathbb Z \tag{charge}
 > $$
 >
 >  Charge comes in indivisible units. (Quarks carry $\pm e/3,\ \pm 2e/3$ but are confined, so **no free body** has ever been observed with non-integer $ne$. Millikan's oil-drop experiment (1909) measured *e* by balancing gravity and electric force on single drops — a favourite Olympiad setup, see Q8.)
@@ -255,9 +254,8 @@ A capacitor is two pieces of metal and something between them. Before any formul
 
 #### Coulomb's law — the only force law you need here
 
-<!-- Equation tag: vector form -->
 $$
-\vec F_{1\to2}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\hat r_{12},\qquad \frac{1}{4\pi\varepsilon_0}=8.988\times10^{9}\ \text{N m}^2\text{C}^{-2}\approx9\times10^{9}
+\vec F_{1\to2}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\hat r_{12},\qquad \frac{1}{4\pi\varepsilon_0}=8.988\times10^{9}\ \text{N m}^2\text{C}^{-2}\approx9\times10^{9} \tag{vector form}
 $$
 
 Read the three conditions hidden in that line, because every "capacitance paradox" you will meet is a violation of one:
@@ -278,14 +276,12 @@ Read the three conditions hidden in that line, because every "capacitance parado
 >
 >  Every field in this chapter comes from $\vec E=\dfrac{1}{4\pi\varepsilon_0}\displaystyle\int\frac{dq}{r^2}\hat r$. You should be able to do two standard ones without thinking, because they are the building blocks of capacitor geometry:
 >
->  <!-- Equation tag: ring on axis -->
-> $$
-> E_{\text{axis}}=\frac{1}{4\pi\varepsilon_0}\frac{Qx}{(x^2+R^2)^{3/2}}\qquad\big(\to kQ/x^2\ \text{for}\ x\gg R,\ \to kQx/R^3\ \text{for}\ x\ll R\big)
+>  $$
+> E_{\text{axis}}=\frac{1}{4\pi\varepsilon_0}\frac{Qx}{(x^2+R^2)^{3/2}}\qquad\big(\to kQ/x^2\ \text{for}\ x\gg R,\ \to kQx/R^3\ \text{for}\ x\ll R\big) \tag{ring on axis}
 > $$
 >
->  <!-- Equation tag: long rod, radial -->
-> $$
-> E_r=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{r}=\frac{\lambda}{2\pi\varepsilon_0 r}
+>  $$
+> E_r=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{r}=\frac{\lambda}{2\pi\varepsilon_0 r} \tag{long rod, radial}
 > $$
 >
 >  Both results you should be able to *guess* before calculating: on the axis of a ring the transverse components cancel by symmetry so only $\cos\theta=x/r$ survives (that extra $x$ is why the field is zero at the centre); for the rod, only the radial component survives and the integral gives $2\lambda/r$. The rod result is the one that makes the coaxial capacitor (§2.5) a one-line derivation.
@@ -322,7 +318,7 @@ Microscopically, a metal has $\sim10^{29}$ conduction electrons per m³ that are
 
 Suppose $\vec E\ne0$ somewhere inside the metal. Then a free electron feels $-e\vec E$ and accelerates. Currents flow, i.e. the state is **not** equilibrium. Charges keep piling up where the current converges, changing $\vec E$, until cancellation is exact. Equilibrium *is defined* by "no further motion", so $\vec E=0$.
 
-Quantitatively, from the drift model the charge density decays as $\dot\rho = -\rho/\tau$ with $\tau=\varepsilon_0/\sigma_{\text{cond}}$. For copper, $\sigma_{\text{cond}}=5.8\times10^{7}$ S m<sup>−1</sup> ⇒ $\tau\approx1.5\times10^{-19}$ s. Any *net* charge inside the bulk therefore drains to the surface in a time no experiment can resolve.
+Quantitatively, from the drift model the charge density decays as $\dot\rho = -\rho/\tau$ with $\tau=\varepsilon_0/\sigma_{\text{cond}}$. For copper, $\sigma_{\text{cond}}=5.8\times10^{7}$ S m⁻¹ ⇒ $\tau\approx1.5\times10^{-19}$ s. Any *net* charge inside the bulk therefore drains to the surface in a time no experiment can resolve.
 
 > **The useful corollary for capacitors**
 >
@@ -375,9 +371,8 @@ This is the single most-asked conceptual point in the chapter's first week, and 
 <details>
 <summary>Solution</summary>
 
-<!-- Equation tag: attractive always -->
 $$
-F=\frac{1}{4\pi\varepsilon_0}\frac{q^2}{(2d)^2}=\frac{q^2}{16\pi\varepsilon_0 d^2}
+F=\frac{1}{4\pi\varepsilon_0}\frac{q^2}{(2d)^2}=\frac{q^2}{16\pi\varepsilon_0 d^2} \tag{attractive always}
 $$
 
 **(a)** The plate's free electrons redistribute: opposite charge is drawn to the near face, like charge is pushed to the far face (or into the earth if grounded). Near the charge, the induced $-$ density is on the *closer* side of the plate, so attraction always wins over repulsion from the far side. Magnitude: see §1.6 for the image construction that makes this exact.
@@ -392,16 +387,14 @@ $$
 
 Electrostatics is conservative: $\oint\vec E\cdot d\vec\ell=0$, which is why a scalar $V$ exists at all.
 
-<!-- Equation tag: both directions -->
 $$
-V_B-V_A=-\int_A^B\vec E\cdot d\vec\ell \qquad\Longleftrightarrow\qquad \vec E=-\vec\nabla V
+V_B-V_A=-\int_A^B\vec E\cdot d\vec\ell \qquad\Longleftrightarrow\qquad \vec E=-\vec\nabla V \tag{both directions}
 $$
 
 Two operational forms you will use constantly for capacitors:
 
-<!-- Equation tag: uniform gap -->
 $$
-V=Ed\ \ (\text{uniform field over separation }d),\qquad V(r)=\frac{Q}{4\pi\varepsilon_0 r}\ \ (\text{outside a sphere / shell})
+V=Ed\ \ (\text{uniform field over separation }d),\qquad V(r)=\frac{Q}{4\pi\varepsilon_0 r}\ \ (\text{outside a sphere / shell}) \tag{uniform gap}
 $$
 
 > **Which direction do you compute in?**
@@ -445,9 +438,8 @@ The approximation used is that A's charge stays at A's centre and B's at B's cen
 
 Gauss's law in the form you will use it:
 
-<!-- Equation tag: Gauss -->
 $$
-\Phi=\oint\vec E\cdot d\vec A=\frac{q_{\text{enc}}}{\varepsilon_0}
+\Phi=\oint\vec E\cdot d\vec A=\frac{q_{\text{enc}}}{\varepsilon_0} \tag{Gauss}
 $$
 
 The reason a *closed* surface is special is that flux through it depends on nothing but enclosed charge. For an **open** surface this fails — and one open-surface result is used constantly in capacitor problems with point charges near plates.
@@ -456,9 +448,8 @@ The reason a *closed* surface is special is that flux through it depends on noth
 
 **Fig. 1.4 — Flux through a disc on the axis of a charge.** Total flux from $q$ is $q/\varepsilon_0$ spread over $4\pi$ steradians, so any surface subtending solid angle $\Omega$ takes the fraction $\Omega/4\pi$. For the disc, $\cos\theta=x/\sqrt{x^2+R^2}$.
 
-<!-- Equation tag: disc flux -->
 $$
-\Phi_{\text{disc}}=\frac{q}{2\varepsilon_0}\left(1-\frac{x}{\sqrt{x^2+R^2}}\right) \qquad(x=0\Rightarrow q/2\varepsilon_0;\quad x\gg R\Rightarrow \frac{qR^2}{8\varepsilon_0x^2})
+\Phi_{\text{disc}}=\frac{q}{2\varepsilon_0}\left(1-\frac{x}{\sqrt{x^2+R^2}}\right) \qquad(x=0\Rightarrow q/2\varepsilon_0;\quad x\gg R\Rightarrow \frac{qR^2}{8\varepsilon_0x^2}) \tag{disc flux}
 $$
 
 Check it yourself: at $x=0$ the charge is *in* the plane of the disc so half of all flux goes one way — correct. For $x\gg R$ the disc looks tiny and flat, so $\Phi\to E\cdot\pi R^2$; the expansion of $1-x/\sqrt{x^2+R^2}$ gives exactly that. **Both limits agreeing is the real proof you did not drop a factor.**
@@ -475,9 +466,8 @@ Check it yourself: at $x=0$ the charge is *in* the plane of the disc so half of 
 
 **Fig. 1.5 — A charge and a grounded plane, solved by one mirrored charge.** The pair's mid-plane is automatically $V=0$, so it satisfies the boundary condition; uniqueness says it is the answer. Nothing exists on the far side.
 
-<!-- Equation tag: plane -->
 $$
-V(x,y,z)=\frac{q}{4\pi\varepsilon_0}\left(\frac1{r_+}-\frac1{r_-}\right),\qquad \sigma_{\text{ind}}(r)=-\frac{qd}{2\pi(r^2+d^2)^{3/2}},\qquad Q_{\text{ind}}=-q
+V(x,y,z)=\frac{q}{4\pi\varepsilon_0}\left(\frac1{r_+}-\frac1{r_-}\right),\qquad \sigma_{\text{ind}}(r)=-\frac{qd}{2\pi(r^2+d^2)^{3/2}},\qquad Q_{\text{ind}}=-q \tag{plane}
 $$
 
 Integrate $\sigma_{\text{ind}}$ over the plane yourself (let $u=r^2+d^2$) to see the last one — a standard 3-minute integral that appears as an INPhO short question.
@@ -509,7 +499,7 @@ $$
 
 **Faster route, and the reason the energy method is worth learning:** differentiate the energy at fixed charge. $U=Q^2/8\pi\varepsilon_0R$, so the electrical force tending to increase $R$ is $F=-dU/dR=Q^2/8\pi\varepsilon_0R^2$; divide by the area $4\pi R^2$ and you have the same $\sigma^2/2\varepsilon_0$. Both routes must agree — if they do not, you used the wrong constraint (fixed $V$ would have doubled it).
 
-**Is it realisable?** For $R=1$ cm and soapy water ($T\approx0.025$ N m<sup>−1</sup>) the balance field is $E=V/R=\sqrt{8T/(\varepsilon_0R)}\approx1.5\times10^{6}$ V m<sup>−1</sup>, i.e. $V\approx15$ kV — within a factor two of air's breakdown strength $3\times10^{6}$ V m<sup>−1</sup>. So the effect is measurable but marginal, and the usual observation is that a strongly charged bubble *expands and bursts*. Adding that one line of numerical judgement is what separates an INPhO answer from a homework answer.
+**Is it realisable?** For $R=1$ cm and soapy water ($T\approx0.025$ N m⁻¹) the balance field is $E=V/R=\sqrt{8T/(\varepsilon_0R)}\approx1.5\times10^{6}$ V m⁻¹, i.e. $V\approx15$ kV — within a factor two of air's breakdown strength $3\times10^{6}$ V m⁻¹. So the effect is measurable but marginal, and the usual observation is that a strongly charged bubble *expands and bursts*. Adding that one line of numerical judgement is what separates an INPhO answer from a homework answer.
 
 </details>
 
@@ -596,7 +586,7 @@ Why this is in a capacitors chapter: it is the mechanical twin of Q4. Two charge
 
 </details>
 
-### **Q8** Millikan: an oil drop of radius $r=0.6\ \mu$m and density $900$ kg m<sup>−3</sup> is suspended between horizontal plates 1.5 cm apart. Estimate the voltage needed for a single extra electron, and state the largest field before air breaks down. _(Olympiad · estimation)_
+### **Q8** Millikan: an oil drop of radius $r=0.6\ \mu$m and density $900$ kg m⁻³ is suspended between horizontal plates 1.5 cm apart. Estimate the voltage needed for a single extra electron, and state the largest field before air breaks down. _(Olympiad · estimation)_
 
 <details>
 <summary>Solution</summary>
@@ -609,7 +599,7 @@ $$
 
 So $V=Ed\approx5\times10^4\times0.015\approx750$ V. (Buoyancy reduces $m$ by $\rho_{\text{air}}/\rho_{\text{oil}}\approx0.1\%$, i.e. by nothing; in a rigorous treatment one also divides the weight by the drag correction of Stokes' law when measuring the terminal velocity — that is how Millikan got *e*, not by balancing.)
 
-**Which limit bites first?** Air would break down at $3\times10^{6}$ V m<sup>−1</sup>, i.e. at a field $60\times$ larger than the one needed here. Since the suspendable mass scales as $E$, drops up to $60\times$ heavier (radius $60^{1/3}\approx3.9$ times larger, $\approx2.3\ \mu$m) could be held — so electrical breakdown is *not* the constraint. The real limits are evaporation of the drop and Brownian jitter, both of which grow as the drop shrinks; that is why Millikan used a volatile oil rather than water, and why the smallest reliable drops are about $0.5\ \mu$m. Stating which ceiling actually applies is worth more than the number itself in an Olympiad solution.
+**Which limit bites first?** Air would break down at $3\times10^{6}$ V m⁻¹, i.e. at a field $60\times$ larger than the one needed here. Since the suspendable mass scales as $E$, drops up to $60\times$ heavier (radius $60^{1/3}\approx3.9$ times larger, $\approx2.3\ \mu$m) could be held — so electrical breakdown is *not* the constraint. The real limits are evaporation of the drop and Brownian jitter, both of which grow as the drop shrinks; that is why Millikan used a volatile oil rather than water, and why the smallest reliable drops are about $0.5\ \mu$m. Stating which ceiling actually applies is worth more than the number itself in an Olympiad solution.
 
 </details>
 
@@ -644,9 +634,8 @@ This chapter has one job: turn "two conductors and a field" into a single number
 >
 > Take two conductors (the **armatures**). Give them $+Q$ and $-Q$, with nothing else charged in the universe. Compute the potential difference $V=V_+-V_-$. Then
 >
->  <!-- Equation tag: definition -->
-> $$
-> C\equiv\frac{Q}{V}\qquad[\,1\ \text{F}=1\ \text{C V}^{-1}=1\ \text{C}^2\text{J}^{-1}=1\ \text{A}^2\text{s}^4\text{kg}^{-1}\text{m}^{-2}\,]
+>  $$
+> C\equiv\frac{Q}{V}\qquad[\,1\ \text{F}=1\ \text{C V}^{-1}=1\ \text{C}^2\text{J}^{-1}=1\ \text{A}^2\text{s}^4\text{kg}^{-1}\text{m}^{-2}\,] \tag{definition}
 > $$
 
 > **Why is $Q/V$ a constant? (the linearity argument)**
@@ -758,12 +747,11 @@ $$
 
 The **exact** result (the same calculation done in bipolar coordinates, where the equipotentials of $\pm\lambda$ are exactly circular cylinders) is
 
-<!-- Equation tag: exact -->
 $$
-\frac{C}{L}=\frac{\pi\varepsilon_0}{\operatorname{arcosh}(d/2a)} \;\xrightarrow{\ d\gg a\ }\;\frac{\pi\varepsilon_0}{\ln(d/a)},\qquad \operatorname{arcosh}x=\ln\!\left(x+\sqrt{x^2-1}\right)
+\frac{C}{L}=\frac{\pi\varepsilon_0}{\operatorname{arcosh}(d/2a)} \;\xrightarrow{\ d\gg a\ }\;\frac{\pi\varepsilon_0}{\ln(d/a)},\qquad \operatorname{arcosh}x=\ln\!\left(x+\sqrt{x^2-1}\right) \tag{exact}
 $$
 
-Check both limits: $d\to2a$ gives $\operatorname{arcosh}1=0$ ⇒ $C\to\infty$ (wires touching ⇒ short); $d\gg a$ recovers the approximate form since $\operatorname{arcosh}x\approx\ln2x$. With the separation $d$ at 10 cm and $a=0.5$ mm this is $\approx6$ pF m<sup>−1</sup> per metre — the origin of the "≈ 10 pF per metre of wire" rule of thumb.
+Check both limits: $d\to2a$ gives $\operatorname{arcosh}1=0$ ⇒ $C\to\infty$ (wires touching ⇒ short); $d\gg a$ recovers the approximate form since $\operatorname{arcosh}x\approx\ln2x$. With the separation $d$ at 10 cm and $a=0.5$ mm this is $\approx6$ pF m⁻¹ per metre — the origin of the "≈ 10 pF per metre of wire" rule of thumb.
 
 #### Two spheres far apart — why the series rule feels inevitable
 
@@ -779,16 +767,14 @@ As $d\to\infty$ this is exactly $\left(4\pi\varepsilon_0a\right)^{-1}+\left(4\pi
 
 Parallel plates, gap $d$. Insert an **uncharged conducting slab** of thickness $t<d$, parallel to and not touching the plates. In the metal $E=0$, so the $E$–$x$ graph simply loses a strip of width $t$:
 
-<!-- Equation tag: metal slab -->
 $$
-V=\frac{\sigma}{\varepsilon_0}(d-t)\qquad\Longrightarrow\qquad C=\frac{\varepsilon_0A}{d-t}
+V=\frac{\sigma}{\varepsilon_0}(d-t)\qquad\Longrightarrow\qquad C=\frac{\varepsilon_0A}{d-t} \tag{metal slab}
 $$
 
 Note what does *not* matter: where the slab sits, and its shape — only the total vacuum distance over which the field is non-zero. Replace the metal by a **dielectric** of constant $K$ and the same thickness:
 
-<!-- Equation tag: dielectric slab -->
 $$
-C=\frac{\varepsilon_0A}{\,d-t+t/K\,}\qquad\big(K\to\infty\ \text{returns the metal}\ \checkmark\big)
+C=\frac{\varepsilon_0A}{\,d-t+t/K\,}\qquad\big(K\to\infty\ \text{returns the metal}\ \checkmark\big) \tag{dielectric slab}
 $$
 
 > **Similar formulas, different physics**
@@ -831,9 +817,8 @@ Every field line leaving plate 2 must end on plate 1: in the ideal geometry ther
 
 **Layers stacked across the field** (interfaces perpendicular to $\vec E$) are in **series**. No free charge sits at an interface, so the normal component of $\vec D$ is continuous: all layers see the same $D=\sigma$ but different fields $E_i=\sigma/\varepsilon_0K_i$, and the voltages add:
 
-<!-- Equation tag: series layers -->
 $$
-\frac1C=\sum_i\frac{d_i}{\varepsilon_0K_iA}\qquad\Longleftrightarrow\qquad V=\frac{\sigma}{\varepsilon_0}\sum_i\frac{d_i}{K_i}
+\frac1C=\sum_i\frac{d_i}{\varepsilon_0K_iA}\qquad\Longleftrightarrow\qquad V=\frac{\sigma}{\varepsilon_0}\sum_i\frac{d_i}{K_i} \tag{series layers}
 $$
 
 **Layers side by side** (interfaces parallel to $\vec E$) are in **parallel**: the same $V$ appears across each, $E$ is common, and the areas add: $C=\varepsilon_0E^{-1}\!\sum\sigma_iA_i$, i.e. $C=\sum_iK_i\varepsilon_0A_i/d$.
@@ -1006,9 +991,9 @@ Same gap field as the conductor case! For infinite sheets the field anywhere dep
 
 **(a)** A single wire of radius $a=0.5$ mm at height $h=1$ m above ground: $C/L=2\pi\varepsilon_0\big/\!\ln(2h/a)$, and $\ln(2\times10^{3})\approx7.6$ so $C\approx5.6\times10^{-11}/7.6\approx7$ pF for the whole metre — the "≈10 pF per metre" rule. A metre-long object is *always* a few picofarads, whatever its thickness, because $\ln(2h/a)$ only wanders between 5 and 15 as $a$ spans nine decades. That insensitivity is the real content of the estimate.
 
-**(b)** Electric double layer: $d\approx1$ nm, $K_{\text{eff}}\sim30$ for the oriented water/ion layer, so $C/A\approx\varepsilon_0K/d\approx0.27$ F m<sup>−2</sup>. A 1 F cell therefore needs $\sim4$ m² of wetted surface — available from a few grams of activated carbon. Limit: the $\sim2.7$ V decomposition voltage of the electrolyte per cell (hence 6-cell modules for 16 V), and the series resistance of the pores.
+**(b)** Electric double layer: $d\approx1$ nm, $K_{\text{eff}}\sim30$ for the oriented water/ion layer, so $C/A\approx\varepsilon_0K/d\approx0.27$ F m⁻². A 1 F cell therefore needs $\sim4$ m² of wetted surface — available from a few grams of activated carbon. Limit: the $\sim2.7$ V decomposition voltage of the electrolyte per cell (hence 6-cell modules for 16 V), and the series resistance of the pores.
 
-**(c)** Earth alone: $C=4\pi\varepsilon_0R_E\approx(1.11\times10^{-10})(6.4\times10^{6})\approx0.7$ mF. With the ionosphere at $h\approx50$ km as the second electrode, use the flat-gap form since $h\ll R_E$: $C=\varepsilon_0(4\pi R_E^2)/h\approx8.85\times10^{-12}\times5.1\times10^{14}/5\times10^{4}\approx0.09$ F. The fair-weather potential of the ionosphere is $\sim3\times10^{5}$ V, so the whole globe stores $U=\tfrac12CV^2\approx4\times10^{9}$ J and carries $Q=CV\sim3\times10^{4}$ C. The sustained current is about $10^{3}$ A (from $\sim2$ pA m<sup>−2</sup> over the globe), i.e. **every thunderstorm and shower thunderstorm together recharge it** — a single large flash moves $\sim20$ C, only 0.1% of $Q$. That is the estimate worth being able to produce.
+**(c)** Earth alone: $C=4\pi\varepsilon_0R_E\approx(1.11\times10^{-10})(6.4\times10^{6})\approx0.7$ mF. With the ionosphere at $h\approx50$ km as the second electrode, use the flat-gap form since $h\ll R_E$: $C=\varepsilon_0(4\pi R_E^2)/h\approx8.85\times10^{-12}\times5.1\times10^{14}/5\times10^{4}\approx0.09$ F. The fair-weather potential of the ionosphere is $\sim3\times10^{5}$ V, so the whole globe stores $U=\tfrac12CV^2\approx4\times10^{9}$ J and carries $Q=CV\sim3\times10^{4}$ C. The sustained current is about $10^{3}$ A (from $\sim2$ pA m⁻² over the globe), i.e. **every thunderstorm and shower thunderstorm together recharge it** — a single large flash moves $\sim20$ C, only 0.1% of $Q$. That is the estimate worth being able to produce.
 
 **(d) What limits each.** (a) leakage along the insulation, not geometry — which is why "capacitance of a cable" and "insulation resistance of a cable" are quoted together; (b) the electrochemical decomposition voltage of the electrolyte (≈ 2.7 V per cell) and the pore resistance, *not* the dielectric strength; (c) the conductivity of air, itself set by cosmic-ray ionisation — which is why the global circuit is a genuinely atmosphere-physics problem rather than a capacitor problem. Naming the limit is worth as many marks as the number.
 
@@ -1068,9 +1053,8 @@ $$
 
 Three algebraically identical faces of one number — and choosing the right face is a genuine skill:
 
-<!-- Equation tag: the three forms -->
 $$
-U=\frac{Q^2}{2C}=\frac12CV^2=\frac12QV
+U=\frac{Q^2}{2C}=\frac12CV^2=\frac12QV \tag{the three forms}
 $$
 
 **Which face, when.** $\tfrac12Q^2/C$ when $Q$ is known or frozen (no battery). $\tfrac12CV^2$ when $V$ is known or held. $\tfrac12QV$ when *neither* is fixed but you know both at that instant — it is the only one that never lies, because it needs no assumption about what is held constant.
@@ -1149,9 +1133,8 @@ Two lessons from how neatly it lands. (1) The $4\pi r^2$ from the volume element
 
 Let some coordinate $\xi$ (slab position, gap, overlap area) change the capacitance by $dC$. The mechanical work delivered to whatever moves is
 
-<!-- Equation tag: master rule -->
 $$
-\delta W_{\text{mech}}=\begin{cases}-dU\big|_{Q}=-\dfrac{Q^2}{2}\,d\!\left(\dfrac1C\right), & \text{isolated}\\[10pt] +dU\big|_{V}=+\dfrac12V^2\,dC, & \text{held on a cell}\end{cases}
+\delta W_{\text{mech}}=\begin{cases}-dU\big|_{Q}=-\dfrac{Q^2}{2}\,d\!\left(\dfrac1C\right), & \text{isolated}\\[10pt] +dU\big|_{V}=+\dfrac12V^2\,dC, & \text{held on a cell}\end{cases} \tag{master rule}
 $$
 
 > **Why the sign flips — derive it, do not memorise it**
@@ -1221,9 +1204,8 @@ The force: $F'=\tfrac12Q E'=\tfrac12Q E=F$ — **constant, independent of the ga
 
 Divide the plate force by area and you get ch. 1's result from a completely different direction, which is itself evidence both are sound:
 
-<!-- Equation tag: pressure -->
 $$
-P=\frac FA=\frac{\sigma^2}{2\varepsilon_0}=\frac12\varepsilon_0E^2=u
+P=\frac FA=\frac{\sigma^2}{2\varepsilon_0}=\frac12\varepsilon_0E^2=u \tag{pressure}
 $$
 
 The pressure equals the **energy density**. In modern language: an electric field behaves like a membrane under tension $u$ along its lines and a pressure $-u$ across them. Three uses that save time:
@@ -1247,7 +1229,7 @@ $$
 V=d\sqrt{\frac{2mg}{\varepsilon_0A}}=10^{-3}\sqrt{\frac{2\times10^{-3}\times9.8}{8.85\times10^{-14}}}=10^{-3}\times4.7\times10^{5}\approx470\ \text{V}
 $$
 
-**Then judge it.** The required field is $V/d=4.7\times10^{5}$ V m<sup>−1</sup>, about a sixth of air's breakdown strength — so levitation is feasible in air. But the equilibrium is **unstable under voltage control** (§3.6): any sag raises $E=V/d$ and thus the force, and the plate snaps across. To levitate stably you need charge control, active feedback, or a geometry where the capacitance grows more slowly than $1/d$.
+**Then judge it.** The required field is $V/d=4.7\times10^{5}$ V m⁻¹, about a sixth of air's breakdown strength — so levitation is feasible in air. But the equilibrium is **unstable under voltage control** (§3.6): any sag raises $E=V/d$ and thus the force, and the plate snaps across. To levitate stably you need charge control, active feedback, or a geometry where the capacitance grows more slowly than $1/d$.
 
 **Wrong route:** dropping the ½ (gives 330 V and a "cheaper" answer that is wrong); or balancing against the weight of *both* plates. Check the dimension: $\tfrac12\varepsilon_0E^2$ is energy per volume = force per area ✓, which is the fastest way to confirm the equation you just wrote.
 
@@ -1300,9 +1282,8 @@ For equal capacitors the final energy is exactly **half**, and the loss contains
 >   curiosity — it is exactly how switched-capacitor converters and charge pumps reach high efficiency, and it makes a fine
 >   "explain in words" Olympiad answer.
 
-<!-- Equation tag: general loss -->
 $$
-\text{loss when any two capacitors are joined}=\frac12\,\frac{C_1C_2}{C_1+C_2}\,(V_1-V_2)^2=\frac12C_{\text{series}}(\Delta V)^2
+\text{loss when any two capacitors are joined}=\frac12\,\frac{C_1C_2}{C_1+C_2}\,(V_1-V_2)^2=\frac12C_{\text{series}}(\Delta V)^2 \tag{general loss}
 $$
 
 Four consequences, each derivable in your head:
@@ -1404,9 +1385,8 @@ So the electrical attraction **softens the spring**; at $2\delta=x_0$ (equivalen
 
 Assemble a charged sphere by carrying shells in from infinity. Adding $dq$ to a sphere already holding $q$ costs $kq\,dq/R$, so for surface charge
 
-<!-- Equation tag: shell -->
 $$
-U=\int_0^Q\frac{q\,dq}{4\pi\varepsilon_0R}=\frac{Q^2}{8\pi\varepsilon_0R}=\frac12CV^2\ \checkmark
+U=\int_0^Q\frac{q\,dq}{4\pi\varepsilon_0R}=\frac{Q^2}{8\pi\varepsilon_0R}=\frac12CV^2\ \checkmark \tag{shell}
 $$
 
 For a uniformly charged **solid** sphere there is extra energy in the interior field $E=\rho r/3\varepsilon_0$:
@@ -1564,9 +1544,8 @@ Two capacitors end to end, nothing else connected to the junction. Charge the pa
 > 2. **Voltages add.**$V=V_1+V_2=q/C_1+q/C_2$, so with $Q=q$ and
 >   $C=Q/V$: $1/C=1/C_1+1/C_2$.
 
-<!-- Equation tag: series -->
 $$
-n\ \text{in series}:\quad \frac1C=\sum_{i=1}^n\frac1{C_i},\qquad V_i=\frac QC_i=\frac{C_{\text{eq}}}{C_i}\,V,\qquad Q\ \text{identical in all}
+n\ \text{in series}:\quad \frac1C=\sum_{i=1}^n\frac1{C_i},\qquad V_i=\frac QC_i=\frac{C_{\text{eq}}}{C_i}\,V,\qquad Q\ \text{identical in all} \tag{series}
 $$
 
 > **Where the proof dies — three cases, all popular in exams**
@@ -1589,9 +1568,8 @@ $$
 
 ### 4.2 Parallel, and the reduction algorithm
 
-<!-- Equation tag: parallel -->
 $$
-n\ \text{in parallel}:\quad C=\sum_iC_i,\qquad V\ \text{identical},\qquad Q_i=VC_i\ \ (\text{charge divides as }C_i)
+n\ \text{in parallel}:\quad C=\sum_iC_i,\qquad V\ \text{identical},\qquad Q_i=VC_i\ \ (\text{charge divides as }C_i) \tag{parallel}
 $$
 
 The charges differ but add, since the two top plates are one conductor and so are the two bottom ones. Note the beautiful symmetry with series: **the quantity that is shared in one case is conserved-as-a-sum in the other**, and vice versa. That is the whole content of both rules.
@@ -1626,9 +1604,8 @@ Check: $60+40+20=120$ ✓. **Not safe**: the $2\ \mu$F unit sees 60 V > 50 V and
 >
 > Series and parallel differ in the quantity that is shared, and the energy split follows that quantity.
 >
->  <!-- Equation tag: energy split -->
-> $$
-> \text{series (same }Q\text{):}\quad U_i=\frac{Q^{2}}{2C_i} \ \Rightarrow\ \frac{U_i}{U}=\frac{C_{\text{eq}}}{C_i};\qquad \text{parallel (same }V\text{):}\quad U_i=\tfrac12C_iV^{2}\ \Rightarrow\ \frac{U_i}{U}=\frac{C_i}{C_{\text{eq}}}
+>  $$
+> \text{series (same }Q\text{):}\quad U_i=\frac{Q^{2}}{2C_i} \ \Rightarrow\ \frac{U_i}{U}=\frac{C_{\text{eq}}}{C_i};\qquad \text{parallel (same }V\text{):}\quad U_i=\tfrac12C_iV^{2}\ \Rightarrow\ \frac{U_i}{U}=\frac{C_i}{C_{\text{eq}}} \tag{energy split}
 > $$
 >
 >  So in **series** the *smallest* capacitor stores the *largest* energy (it has the biggest voltage across it, $V_i=Q/C_i$), while in **parallel** the largest capacitor holds the most (same voltage, energy follows $C$). Both are worth a check line: three equal capacitors in series across $V$ store a total $\tfrac16CV^{2}$ against $\tfrac12CV^{2}$ for one alone — a series string is a low-energy way to hold a voltage, which is exactly why energy-storage banks are wired in parallel. And note the practical trap: in series the capacitor with the smallest $C$ sees the largest voltage, so in a series string of unequal electrolytics it is the smallest one that hits breakdown — the reason real banks are built from matched units with balancing resistors.
@@ -1661,9 +1638,8 @@ That's it: **Kirchhoff's current law with charge in place of current**. The floa
 
 **Fig. 4.1 — Capacitor bridge.** Balance makes $V_C=V_D$, so the fifth element stores nothing and can be deleted (or shorted). Which of those two operations to use is a judgement call: usually removing it leaves two series strings that reduce instantly.
 
-<!-- Equation tag: balance -->
 $$
-V_C=V_D\iff \frac{q_t}{C_1}=\frac{q_b}{C_3}\ \ \text{and}\ \ \frac{q_t}{C_2}=\frac{q_b}{C_4} \iff \boxed{\;\frac{C_1}{C_2}=\frac{C_3}{C_4}\;}
+V_C=V_D\iff \frac{q_t}{C_1}=\frac{q_b}{C_3}\ \ \text{and}\ \ \frac{q_t}{C_2}=\frac{q_b}{C_4} \iff \boxed{\;\frac{C_1}{C_2}=\frac{C_3}{C_4}\;} \tag{balance}
 $$
 
 Derive it rather than recall it. Top branch: $q$ flows through $C_1$ and $C_2$ in series, so $V_{AC}=q/C_1$. Bottom branch: $V_{AD}=q'/C_3$. Balance means $V_{AC}=V_{AD}$, i.e. $q/C_1=q'/C_3$ and simultaneously $q/C_2=q'/C_4$; dividing gives $\boxed{C_1/C_2=C_3/C_4}$. Note this is the *same* ratio pattern as the resistor bridge ($R_1/R_2=R_3/R_4$), not its reciprocal — because in a resistor bridge the balance is $V_C=V_D\iff R_1/(R_1+R_2)=R_3/(R_3+R_4)$ whereas for capacitors the potential drop goes as $1/C$, which inverts twice and cancels. Confusing "same" with "reciprocal" is the classic lost mark; the two-line derivation above is immune to it.
@@ -1721,9 +1697,8 @@ Two legitimate symmetry operations, and one that is **not**:
 >
 >  Charge out of A: $Q=C(1-0)+2C(1-9/14)=C+5C/7=12C/7$ ⇒ $C_{\text{edge}}=12C/7$.
 >
->  <!-- Equation tag: compare -->
-> $$
-> C_{\text{edge}}=\frac{12}7C=1.714C,\qquad C_{\text{face}}=\frac43C=1.333C,\qquad C_{\text{body}}=\frac65C=1.2C
+>  $$
+> C_{\text{edge}}=\frac{12}7C=1.714C,\qquad C_{\text{face}}=\frac43C=1.333C,\qquad C_{\text{body}}=\frac65C=1.2C \tag{compare}
 > $$
 >
 >  **Check the ordering, which is the physics:** $C_{\text{edge}}>C_{\text{face}}>C_{\text{body}}$. Closer terminals ⇒ more direct flux paths ⇒ bigger capacitance. And compare with the resistor cube ($R_{\text{edge}}=7R/12$, $R_{\text{face}}=3R/4$, $R_{\text{body}}=5R/6$): **the numbers are the same with $C\leftrightarrow1/R$**, exactly as §4.3 predicted. If you ever remember one and not the other, you can recover it — provided you remember which mapping (capacitance maps to *conductance*).
@@ -1753,9 +1728,8 @@ $$
 
 A three-terminal network that will not reduce (a bridge arm, a lattice defect) can always be converted. Write the *port* capacitances (one terminal, other two shorted together) and match them.
 
-<!-- Equation tag: star-mesh -->
 $$
-Y\to\Delta:\ C_{ij}=\frac{C_iC_j}{C_1+C_2+C_3} \qquad\qquad \Delta\to Y:\ C_1=C_{12}+C_{13}+\frac{C_{12}C_{13}}{C_{23}}
+Y\to\Delta:\ C_{ij}=\frac{C_iC_j}{C_1+C_2+C_3} \qquad\qquad \Delta\to Y:\ C_1=C_{12}+C_{13}+\frac{C_{12}C_{13}}{C_{23}} \tag{star-mesh}
 $$
 
 Derive the first one in your head: in the star, terminal 1 sees $C_1$ in series with $(C_2\|C_3)=C_2+C_3$, i.e. $C_1(C_2+C_3)/S$; in the mesh it sees $C_{12}+C_{13}$; matching all three cyclic equations gives the star–mesh formula. Then check the symmetric case: three equal arms $y$ ⇒ $C_{ij}=y/3$, so $y=3C_{ij}$ ✓ (this is the $3C$ that appeared in Q2).
@@ -1866,9 +1840,8 @@ $$
 
 Series capacitors divide voltage inversely as $C$, so a capacitive divider gives a frequency-independent voltage ratio with **no power dissipation** — which is why oscilloscope probes are 10:1 capacitive dividers at the high end (a 9 pF probe capacitor with the scope's 1 pF input, plus the cable's capacitance absorbed into the 9 pF by a trimmer).
 
-<!-- Equation tag: divider -->
 $$
-\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{C_1}{C_1+C_2}\qquad(\text{series pair, output across }C_2)
+\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{C_1}{C_1+C_2}\qquad(\text{series pair, output across }C_2) \tag{divider}
 $$
 
 Compare the resistor divider $R_2/(R_1+R_2)$: the capacitor version has $C_1$ (the series arm) on top, not *bottom* — the reciprocal shows up exactly where you would not expect it if you memorised by analogy. Note also that a capacitive divider does not work for DC (leakage dominates), and that a compensated divider ($R_1C_1=R_2C_2$) works at *all* frequencies, which is the real trick in a probe.
@@ -1911,18 +1884,17 @@ Four chapters of *geometry* and *energy*; one number, $\varepsilon_0$, never cha
 
 > **Notation in this chapter**
 >
-> $\vec P$ dipole moment per unit volume (C m<sup>−1</sup> m<sup>−1</sup> = C/m²) · $\alpha$ molecular polarisability, $p=\alpha E_{\text{loc}}$, units C m² V<sup>−1</sup> = F m² · $\chi_e$ electric susceptibility, defined by $P=\varepsilon_0\chi_eE$ · $\kappa$ (also $\varepsilon_r$) relative permittivity, $\kappa=1+\chi_e$ for a linear isotropic solid · $\vec D=\varepsilon_0\vec E+\vec P$. Watch out: several books define $p=\alpha\varepsilon_0E$, making $\alpha$ a *volume* in Å³. The two conventions differ by $4\pi\varepsilon_0$ or $\varepsilon_0$ — always check which one a problem uses, and which field ($E$ or $E_{\text{loc}}$) it means.
+> $\vec P$ dipole moment per unit volume (C m⁻¹ m⁻¹ = C/m²) · $\alpha$ molecular polarisability, $p=\alpha E_{\text{loc}}$, units C m² V⁻¹ = F m² · $\chi_e$ electric susceptibility, defined by $P=\varepsilon_0\chi_eE$ · $\kappa$ (also $\varepsilon_r$) relative permittivity, $\kappa=1+\chi_e$ for a linear isotropic solid · $\vec D=\varepsilon_0\vec E+\vec P$. Watch out: several books define $p=\alpha\varepsilon_0E$, making $\alpha$ a *volume* in Å³. The two conventions differ by $4\pi\varepsilon_0$ or $\varepsilon_0$ — always check which one a problem uses, and which field ($E$ or $E_{\text{loc}}$) it means.
 
 ### 5.1 What happens inside an insulator
 
 A conductor has charges free to travel macroscopic distances. An insulator has none — but every atom is a positive core and an electron cloud, and the cloud *shifts*. Displace the cloud by $x$ against the restoring force of the nucleus and you have a dipole $p=ex$. That is all dielectric polarization is: a *finite, elastic* displacement, typically $x\sim10^{-6}\ \text{m}\times$ nothing — a few thousandths of an Ångström in a gas, up to ~0.1 Å in a ferroelectric.
 
-<!-- Equation tag: 5.1 -->
 $$
-\text{driven spring:}\quad m\ddot x+m\omega_0^{2}x+\frac{m\dot x}{\tau}=eE \quad\Longrightarrow\quad p=ex=\frac{e^{2}}{m\omega_0^{2}}\,E\quad(\text{static})
+\text{driven spring:}\quad m\ddot x+m\omega_0^{2}x+\frac{m\dot x}{\tau}=eE \quad\Longrightarrow\quad p=ex=\frac{e^{2}}{m\omega_0^{2}}\,E\quad(\text{static}) \tag{5.1}
 $$
 
-So a single bound electron has polarisability $\alpha_e=e^{2}/m\omega_0^{2}$, and taking the "spring" to be the whole UV absorption of the atom ($\lambda_0\sim100$ nm, so $\omega_0=2\pi c/\lambda_0=1.9\times10^{16}$ rad s<sup>−1</sup>) gives $\alpha_e\approx8\times10^{-41}$ F m². The same number drops out of the crude dimensional estimate $\alpha\sim4\pi\varepsilon_0a^{3}$ with $a$ an atomic radius — which is the useful memory hook: **a molecule's polarisability is its volume, times $4\pi\varepsilon_0$**. For hydrogen the estimate is $(4\pi\varepsilon_0)a_0^{3}=1.11\times10^{-10}\times(0.529\times10^{-10})^{3}=1.7\times10^{-41}$ F m² while the exact quantum-mechanical static value is $(9/2)(4\pi\varepsilon_0)a_0^{3}=7.4\times10^{-41}$ — dimensional analysis is good to a factor of 4 here, and nothing better is needed: keep $\alpha_e\sim10^{-40}$ F m² for any small molecule (N₂: $1.9\times10^{-40}$), which is why all the gas-phase numbers in this chapter come out right to a few per cent.
+So a single bound electron has polarisability $\alpha_e=e^{2}/m\omega_0^{2}$, and taking the "spring" to be the whole UV absorption of the atom ($\lambda_0\sim100$ nm, so $\omega_0=2\pi c/\lambda_0=1.9\times10^{16}$ rad s⁻¹) gives $\alpha_e\approx8\times10^{-41}$ F m². The same number drops out of the crude dimensional estimate $\alpha\sim4\pi\varepsilon_0a^{3}$ with $a$ an atomic radius — which is the useful memory hook: **a molecule's polarisability is its volume, times $4\pi\varepsilon_0$**. For hydrogen the estimate is $(4\pi\varepsilon_0)a_0^{3}=1.11\times10^{-10}\times(0.529\times10^{-10})^{3}=1.7\times10^{-41}$ F m² while the exact quantum-mechanical static value is $(9/2)(4\pi\varepsilon_0)a_0^{3}=7.4\times10^{-41}$ — dimensional analysis is good to a factor of 4 here, and nothing better is needed: keep $\alpha_e\sim10^{-40}$ F m² for any small molecule (N₂: $1.9\times10^{-40}$), which is why all the gas-phase numbers in this chapter come out right to a few per cent.
 
 Three mechanisms contribute, and their *response times* explain almost everything about the frequency dependence of $\kappa$:
 
@@ -1945,9 +1917,8 @@ Three mechanisms contribute, and their *response times* explain almost everythin
 
 Take a small rectangular pillbox of volume $\delta x\,\delta y\,\delta z$ inside a polarized material. Dipoles crossing a face deposit charge $\vec P\cdot d\vec a$ on it. Summing the six faces and dividing by the volume is the divergence, and the charge *left inside* is the negative of what flowed out:
 
-<!-- Equation tag: 5.2 -->
 $$
-\rho_b=-\vec\nabla\cdot\vec P\qquad\text{on a surface:}\qquad \sigma_b=\vec P\cdot\hat n=\begin{cases}+P_n&\text{where }\vec P\text{ points out}\\-\,P_n&\text{where }\vec P\text{ points in}\end{cases}
+\rho_b=-\vec\nabla\cdot\vec P\qquad\text{on a surface:}\qquad \sigma_b=\vec P\cdot\hat n=\begin{cases}+P_n&\text{where }\vec P\text{ points out}\\-\,P_n&\text{where }\vec P\text{ points in}\end{cases} \tag{5.2}
 $$
 
 ![Pillbox derivation of rho_b = −div P on the left; a uniformly polarized sphere with bound charge on its two hemispheres on the right](assets/figures/fig-016.svg)
@@ -1975,9 +1946,8 @@ Two consequences to keep ready:
 
 Take $\vec\nabla\cdot\vec E=\rho_{\text{tot}}/\varepsilon_0=(\rho_f+\rho_b)/\varepsilon_0$, substitute $\rho_b=-\vec\nabla\cdot\vec P$ and move the term across:
 
-<!-- Equation tag: 5.3 -->
 $$
-\vec\nabla\cdot\vec D=\rho_f,\qquad \vec D\equiv\varepsilon_0\vec E+\vec P \qquad\xrightarrow[\text{linear, isotropic}]{\text{if}}\qquad \vec D=\varepsilon_0\kappa\vec E
+\vec\nabla\cdot\vec D=\rho_f,\qquad \vec D\equiv\varepsilon_0\vec E+\vec P \qquad\xrightarrow[\text{linear, isotropic}]{\text{if}}\qquad \vec D=\varepsilon_0\kappa\vec E \tag{5.3}
 $$
 
 The point is not nomenclature. $\vec D$ is useful because $\rho_f$ is what a *circuit* tells you (you pushed $Q$ coulombs onto that plate) while $\rho_b$ is what a *material* tells you (and you often do not know it). Whenever symmetry fixes $\vec D$, you can get $\vec E$ in two lines without ever computing a bound charge:
@@ -1996,18 +1966,16 @@ $$
 
 Here is the one genuinely delicate step in the whole subject. The molecule does not sit in the macroscopic average field $E$: it sits in the field of the plates *plus* the field of every other polarized molecule around it. Separate the neighbourhood into (i) the molecules outside a small sphere centred on ours and (ii) those inside. For (i), replace the sphere's contents by the continuum: the bound surface charge $\sigma_b=\vec P\cdot\hat n$ on a spherical cavity produces a *uniform* field (Fig. 5.2 right is the same calculation with the sign reversed):
 
-<!-- Equation tag: 5.4 -->
 $$
-\vec E_{\text{Lorentz}}=\frac{\vec P}{3\varepsilon_0} \qquad\Longrightarrow\qquad E_{\text{loc}}=E+\frac{P}{3\varepsilon_0}
+\vec E_{\text{Lorentz}}=\frac{\vec P}{3\varepsilon_0} \qquad\Longrightarrow\qquad E_{\text{loc}}=E+\frac{P}{3\varepsilon_0} \tag{5.4}
 $$
 
 (ii), the molecules actually inside the cavity, contribute zero *on average* for a liquid or cubic crystal — the sum of dipole fields over a symmetric arrangement cancels at the centre. That is the Lorentz assumption, and it is why the result below works for gases, liquids and cubic solids but needs modification for polar crystals.
 
 Now close the loop. $P=np=n\alpha E_{\text{loc}}$ with $E_{\text{loc}}=E+P/3\varepsilon_0$:
 
-<!-- Equation tag: 5.5 -->
 $$
-P=n\alpha E+\frac{n\alpha P}{3\varepsilon_0}\ \Longrightarrow\ P=\frac{n\alpha E}{1-\frac{n\alpha}{3\varepsilon_0}}\ \Longrightarrow\ \kappa-1=\frac{n\alpha/\varepsilon_0}{1-n\alpha/3\varepsilon_0} \qquad\Longleftrightarrow\qquad \boxed{\dfrac{\kappa-1}{\kappa+2}=\dfrac{n\alpha}{3\varepsilon_0}}
+P=n\alpha E+\frac{n\alpha P}{3\varepsilon_0}\ \Longrightarrow\ P=\frac{n\alpha E}{1-\frac{n\alpha}{3\varepsilon_0}}\ \Longrightarrow\ \kappa-1=\frac{n\alpha/\varepsilon_0}{1-n\alpha/3\varepsilon_0} \qquad\Longleftrightarrow\qquad \boxed{\dfrac{\kappa-1}{\kappa+2}=\dfrac{n\alpha}{3\varepsilon_0}} \tag{5.5}
 $$
 
 This is **Clausius–Mossotti** (Lorentz–Lorenz in optics, where $\kappa=n^{2}$ for the index of refraction). Note its shape: the "naive" answer $\kappa-1=n\alpha/\varepsilon_0$ is recovered for a dilute gas, and the correction factor is always *enhancing* — each molecule's dipole helps its neighbours align, which is the same positive feedback the Why box of §5.1 warned about.
@@ -2053,9 +2021,8 @@ One question decides everything: **do the field lines cross the dielectric inter
 
 **Field sharing in a layered gap.** Since every layer carries the same $D$, $E_i=D/\varepsilon_0\kappa_i$: the *lowest*-κ layer endures the *largest* field, in exact proportion. For a solid insulation with an air void of the same thickness fraction, the void sees $\kappa_{\text{solid}}$ times the average stress — this is why epoxy-impregnated windings, not dry ones, survive their rated voltage, and why the "corona" you can hear in an old transformer is bound charge being argued about in a bubble. The bound surface charge at an internal interface follows from (5.2) with $P_i=D\!\left(1-1/\kappa_i\right)$ (using $D=\varepsilon_0\kappa_iE_i$):
 
-<!-- Equation tag: 5.6 -->
 $$
-\sigma_b^{\text{(interface)}}=P_1-P_2=D\left(\frac1{\kappa_2}-\frac1{\kappa_1}\right) \qquad(\text{zero iff }\kappa_1=\kappa_2\ \checkmark)
+\sigma_b^{\text{(interface)}}=P_1-P_2=D\left(\frac1{\kappa_2}-\frac1{\kappa_1}\right) \qquad(\text{zero iff }\kappa_1=\kappa_2\ \checkmark) \tag{5.6}
 $$
 
 > **The bounds that make any "effective κ" question safe**
@@ -2088,9 +2055,8 @@ Constant in $x$ — the slab is pulled in with a uniform force until it is fully
 
 **The general form, worth more than the geometry.** For *any* object that changes the capacitance by $dC$ when it moves by $dx$:
 
-<!-- Equation tag: 5.7 -->
 $$
-F_x=\frac12V^{2}\frac{dC}{dx}=\frac{Q^{2}}{2C^{2}}\frac{dC}{dx}\ ,\qquad \text{and for a small particle:}\quad F=\frac12\alpha_{\text{eff}}\nabla E^{2},\qquad \alpha_{\text{eff}}=4\pi\varepsilon_0\kappa_mR^{3}\frac{\kappa_p-\kappa_m}{\kappa_p+2\kappa_m}
+F_x=\frac12V^{2}\frac{dC}{dx}=\frac{Q^{2}}{2C^{2}}\frac{dC}{dx}\ ,\qquad \text{and for a small particle:}\quad F=\frac12\alpha_{\text{eff}}\nabla E^{2},\qquad \alpha_{\text{eff}}=4\pi\varepsilon_0\kappa_mR^{3}\frac{\kappa_p-\kappa_m}{\kappa_p+2\kappa_m} \tag{5.7}
 $$
 
 The particle formula is **dielectrophoresis**: the force is proportional to $\nabla E^{2}$, not to $\vec E$, so it works with AC (unlike ionic electrophoresis) and its *sign* is set by $(\kappa_p-\kappa_m)$. High-κ particles collect at the strongest field (used to trap and sort cells, to assemble nanowires between electrodes); bubbles and voids, having $\kappa_p<\kappa_m$, are expelled to weak-field regions — which is one reason degassing matters in oil-filled equipment. The factor $(\kappa_p-\kappa_m)/(\kappa_p+2\kappa_m)$ is the same Clausius–Mossotti geometry factor as (5.5): a sphere inside a medium, solved in Q7.
@@ -2099,9 +2065,8 @@ The particle formula is **dielectrophoresis**: the force is proportional to $\na
 
 Two vertical plates of width $w$, separation $d$, dipped a little into a dielectric liquid of density $\rho$ and permittivity $\kappa$, held at voltage $V$. The liquid rises to height $h$. Nothing new is required: the capacitor is a slab entering sideways (§5.6) turned through 90°, so the upward force is $\tfrac12V^{2}dC/dh$ with $C(h)=\dfrac{\varepsilon_0w}{d}\big[(L-h)+\kappa h\big]$ — and it is balanced by the weight of the raised column, whose gravitational energy is $\tfrac12\rho g\,wd\,h^{2}$:
 
-<!-- Equation tag: 5.8 -->
 $$
-\frac{\varepsilon_0(\kappa-1)wV^{2}}{2d}=\rho g\,w d\,h \qquad\Longrightarrow\qquad \boxed{h=\frac{\varepsilon_0(\kappa-1)V^{2}}{2\rho g d^{2}}}
+\frac{\varepsilon_0(\kappa-1)wV^{2}}{2d}=\rho g\,w d\,h \qquad\Longrightarrow\qquad \boxed{h=\frac{\varepsilon_0(\kappa-1)V^{2}}{2\rho g d^{2}}} \tag{5.8}
 $$
 
 Read the scaling before the arithmetic: $h\propto V^{2}\kappa_{\text{excess}}/d^{2}$. Halving the gap quadruples the climb; a 2 kV rating at 1 mm is a very different liquid-manipulation device from 200 V at 10 µm. For water ($\kappa=80$) at $d=0.5$ mm and $V=100$ V: $h=1.4$ mm.
@@ -2126,9 +2091,8 @@ $$
 
 Only the product $pd$ matters, because doubling both the pressure and the gap doubles the number of collisions per electron while halving the field — an exact trade. The curve therefore has a **minimum**: too few collisions on the low-$pd$ side, electrons too short of breath between collisions on the high-$pd$ side. With $c\equiv\ln\ln(1+1/\gamma)$, setting $dV_B/d(pd)=0$ gives the exact results
 
-<!-- Equation tag: 5.9 -->
 $$
-pd_{\min}=\frac{e^{1+c}}{A},\qquad V_{\min}=\frac{eB}{A}\ln\!\left(1+\frac1\gamma\right)
+pd_{\min}=\frac{e^{1+c}}{A},\qquad V_{\min}=\frac{eB}{A}\ln\!\left(1+\frac1\gamma\right) \tag{5.9}
 $$
 
 For air these land, memorably, at $V_{\min}\approx330$ V near $pd\approx1$ Pa m ($\approx0.75$ torr cm): **no uniform air gap at any pressure can be broken down with less than about 330 V** — unless the electrodes are far apart enough that other things fail first. Practical anchors: $3$ kV/mm for air at 1 atm in a uniform field, $\sim30$ kV/mm at the 10 µm scale, and the left branch is why vacuum circuit breakers and why $10\ \mu$m MEMS gaps can switch a few hundred volts "cold".
@@ -2139,9 +2103,8 @@ For air these land, memorably, at $V_{\min}\approx330$ V near $pd\approx1$ Pa m 
 
 **Solid — intrinsic strength, then defects.** An electron needs the band-gap energy $W_g$ before it can avalanche; the maximum work a field can do between scattering events is $eEa$ with $a$ a lattice spacing, so
 
-<!-- Equation tag: 5.10 -->
 $$
-E_{\text{ideal}}\sim\frac{W_g}{ea}\ \approx\ \frac{5\ \text{eV}}{e\times0.3\ \text{nm}}=1.7\times10^{10}\ \text{V/m}
+E_{\text{ideal}}\sim\frac{W_g}{ea}\ \approx\ \frac{5\ \text{eV}}{e\times0.3\ \text{nm}}=1.7\times10^{10}\ \text{V/m} \tag{5.10}
 $$
 
 Measured strengths are 20–100× lower (PE ~ 500 MV/m, alumina ~ 10 MV/m) because failure is nucleated by inhomogeneity: voids (§5.5), inclusions, electrode asperities that multiply the local field, and by the volume of material at risk. That last one is a *statistical* statement worth knowing in this form — the Weibull law $P_{\text{fail}}=1-\exp\!\left[-(E/E_0)^{m}(V/V_0)\right]$: the same dielectric area in twice the volume is twice as likely to fail, and thin films are stronger than thick ones of the same material at the same field. It is the reason a 10 nm gate oxide withstands ~10 MV/cm while a 1 mm slab of the same ceramic takes a tenth of that, and the reason capacitor datasheets quote *rated* voltage near half the breakdown value.
@@ -2154,18 +2117,16 @@ Measured strengths are 20–100× lower (PE ~ 500 MV/m, alumina ~ 10 MV/m) becau
 
 Because every mechanism has a finite response time, $\kappa$ is a function of frequency and — when there is a phase lag — a *complex* one. For a single relaxation time (Debye):
 
-<!-- Equation tag: 5.11 -->
 $$
-\kappa(\omega)=\kappa_\infty+\frac{\kappa_s-\kappa_\infty}{1+i\omega\tau} \quad\Rightarrow\quad \kappa'=\kappa_\infty+\frac{\Delta}{1+\omega^{2}\tau^{2}},\qquad \kappa''=\frac{\Delta\,\omega\tau}{1+\omega^{2}\tau^{2}},\qquad \Delta=\kappa_s-\kappa_\infty
+\kappa(\omega)=\kappa_\infty+\frac{\kappa_s-\kappa_\infty}{1+i\omega\tau} \quad\Rightarrow\quad \kappa'=\kappa_\infty+\frac{\Delta}{1+\omega^{2}\tau^{2}},\qquad \kappa''=\frac{\Delta\,\omega\tau}{1+\omega^{2}\tau^{2}},\qquad \Delta=\kappa_s-\kappa_\infty \tag{5.11}
 $$
 
 $\kappa''$ peaks at $\omega\tau=1$ with height $\Delta/2$, and the pair $(\kappa',\kappa'')$ traces a **semicircle** of radius $\Delta/2$ centred on $(\kappa_\infty+\Delta/2,\,0)$ — a favourite "show that" in Olympiad preliminary rounds, and one line of algebra from (5.11): $(\kappa'-\kappa_\infty-\Delta/2)^{2}+(\kappa'')^{2}=(\Delta/2)^{2}$.
 
 Adding ohmic conduction (free carriers drifting, not relaxing) puts a second, much more important, loss term in the imaginary part, $\kappa''_{\sigma}=\sigma/\omega\varepsilon_0$, which *diverges* as $\omega\to0$. The measured loss tangent is
 
-<!-- Equation tag: 5.12 -->
 $$
-\tan\delta=\frac{\kappa''}{\kappa'}=\frac{\text{loss}}{\text{storage}},\qquad \langle p\rangle=\frac12\omega\varepsilon_0\kappa'\tan\delta\,E_0^{2}\quad[\text{W/m}^3]
+\tan\delta=\frac{\kappa''}{\kappa'}=\frac{\text{loss}}{\text{storage}},\qquad \langle p\rangle=\frac12\omega\varepsilon_0\kappa'\tan\delta\,E_0^{2}\quad[\text{W/m}^3] \tag{5.12}
 $$
 
 Everything in capacitor technology is a consequence of those two formulas: why mica and polystyrene and C0G ceramics are used in tuned circuits ($\tan\delta<10^{-4}$, so a high-Q filter is possible), why X7R ("flexible") ceramics are fine for decoupling but terrible in an oscillator (κ wanders ±15% with temperature because BaTiO₃ is marching towards its Curie point), why an electrolytic gets warm at 100 kHz ripple, and why "low-ESR" is a loss statement, not a size statement.
@@ -2551,16 +2512,14 @@ Everything so far was a photograph. This chapter is the film — and the film is
 
 Take any network of ideal cells and resistors with a single capacitor attached between two terminals. Replace everything else by its Thévenin equivalent — *kill* the sources (voltage sources → short, current sources → open), read the resistance $R_{\text{th}}$ between the terminals and the open-circuit voltage $V_{\text{th}}$. Now there is one loop:
 
-<!-- Equation tag: 6.1 -->
 $$
-V_{\text{th}}=V_C+IR_{\text{th}},\qquad I=C\frac{dV_C}{dt} \qquad\Longrightarrow\qquad \frac{dV_C}{dt}=\frac{V_{\text{th}}-V_C}{R_{\text{th}}C}
+V_{\text{th}}=V_C+IR_{\text{th}},\qquad I=C\frac{dV_C}{dt} \qquad\Longrightarrow\qquad \frac{dV_C}{dt}=\frac{V_{\text{th}}-V_C}{R_{\text{th}}C} \tag{6.1}
 $$
 
 whose unique solution from $V_C(0)=V_0$ is
 
-<!-- Equation tag: 6.2 -->
 $$
-\boxed{\;V_C(t)=V_{\text{th}}+\left(V_0-V_{\text{th}}\right)e^{-t/\tau}\;}, \qquad \tau=R_{\text{th}}C,\qquad I(t)=\frac{V_0-V_{\text{th}}}{R_{\text{th}}}\,e^{-t/\tau}
+\boxed{\;V_C(t)=V_{\text{th}}+\left(V_0-V_{\text{th}}\right)e^{-t/\tau}\;}, \qquad \tau=R_{\text{th}}C,\qquad I(t)=\frac{V_0-V_{\text{th}}}{R_{\text{th}}}\,e^{-t/\tau} \tag{6.2}
 $$
 
 Read the box as a *recipe*, because that is what it is: the three-number method. Find the initial value, the final value and $\tau$, and the graph is fully determined — and with it $V_R$, $Q$, $I$, the energy in each element and the heat in the resistors, since all of them are proportional to $V_C-V_{\text{th}}$ or to its derivative.
@@ -2591,9 +2550,8 @@ JEE's most common request is not $V_C(t)$ but *"find the charge that flowed thro
 
 Apply the same bookkeeping to energy. Charging an uncharged $C$ from a cell $V$ through $R$:
 
-<!-- Equation tag: 6.3 -->
 $$
-I(t)=\frac{V}{R}e^{-t/RC},\qquad \underbrace{W_{\text{cell}}=V\!\int_0^\infty\!I\,dt=CV^{2}}_{\text{only }Q=CV\text{ is needed}},\qquad \underbrace{\int_0^\infty I^{2}R\,dt=\frac{V^{2}}{R}\cdot\frac{RC}{2}=\frac12CV^{2}}_{\text{heat in }R},\qquad U=\frac12CV^{2}
+I(t)=\frac{V}{R}e^{-t/RC},\qquad \underbrace{W_{\text{cell}}=V\!\int_0^\infty\!I\,dt=CV^{2}}_{\text{only }Q=CV\text{ is needed}},\qquad \underbrace{\int_0^\infty I^{2}R\,dt=\frac{V^{2}}{R}\cdot\frac{RC}{2}=\frac12CV^{2}}_{\text{heat in }R},\qquad U=\frac12CV^{2} \tag{6.3}
 $$
 
 The three balance, and the heat is *independent of* $R$, of whether the capacitor really started at zero, and of how long you wait: it is $\tfrac12CV^{2}$ for every $R>0$, from megohms to milliohms. This is chapter 3's two-capacitor paradox with its bookkeeping made explicit — and the reason the $R\to0$ limit is finite is visible in the middle term: $I\propto1/R$ makes $I^{2}R$ independent of $R$.
@@ -2612,9 +2570,8 @@ The three balance, and the heat is *independent of* $R$, of whether the capacito
 
 With several capacitors the state is a vector. Write $\vec Q=\mathbf C\vec V$ (§4.3's capacitance matrix, or simply the list $Q_k=C_kV_k$ with one node equation each) and $\dot{\vec Q}=-\mathbf G\vec V+\vec i_s$ with $\mathbf G$ the conductance matrix of the resistive network. Eliminating $\vec V$:
 
-<!-- Equation tag: 6.4 -->
 $$
-\frac{d\vec V}{dt}=-\mathbf C^{-1}\mathbf G\,\vec V+\mathbf C^{-1}\vec i_s \qquad\Longrightarrow\qquad \tau_k^{-1}=\lambda_k\!\left(\mathbf C^{-1}\mathbf G\right)
+\frac{d\vec V}{dt}=-\mathbf C^{-1}\mathbf G\,\vec V+\mathbf C^{-1}\vec i_s \qquad\Longrightarrow\qquad \tau_k^{-1}=\lambda_k\!\left(\mathbf C^{-1}\mathbf G\right) \tag{6.4}
 $$
 
 so an $n$-capacitor network has $n$ exponentials and *no single time constant*: which $\tau$ an experiment sees depends on which coordinate you watch and how you started. That is why a dielectric's $\kappa''$ is a sum of Debye circles (chapter 5) and why a supercapacitor's discharge is not exponential at all (§6.7). Two structurally important cases collapse to one exponential:
@@ -2635,16 +2592,14 @@ $$
 \frac{V_s-V_J}{R_1}+C_1\frac{d(V_s-V_J)}{dt}=\frac{V_J}{R_2}+C_2\frac{dV_J}{dt} \quad\Longrightarrow\quad V_J(t)=V_\infty+\left[V_J(0^{+})-V_\infty\right]e^{-t/\tau}
 $$
 
-<!-- Equation tag: 6.5 -->
 $$
-V_\infty=V_s\frac{R_2}{R_1+R_2},\qquad V_J(0^{+})=V_s\frac{C_1}{C_1+C_2}, \qquad \tau=\left(R_1\| R_2\right)\left(C_1+C_2\right)
+V_\infty=V_s\frac{R_2}{R_1+R_2},\qquad V_J(0^{+})=V_s\frac{C_1}{C_1+C_2}, \qquad \tau=\left(R_1\| R_2\right)\left(C_1+C_2\right) \tag{6.5}
 $$
 
 At the instant of switching the resistors are irrelevant — uncharged capacitors are shorts — so the step divides *capacitively*; at $t=\infty$ the capacitors are open and it divides *resistively*. The division ratio is therefore frequency-independent iff the two limits agree:
 
-<!-- Equation tag: 6.6 -->
 $$
-\frac{C_1}{C_1+C_2}=\frac{R_2}{R_1+R_2}\quad\Longleftrightarrow\quad \boxed{\;R_1C_1=R_2C_2\;}\qquad\text{then }V_J(t)=V_s\,R_2/(R_1+R_2)\ \text{for all }t
+\frac{C_1}{C_1+C_2}=\frac{R_2}{R_1+R_2}\quad\Longleftrightarrow\quad \boxed{\;R_1C_1=R_2C_2\;}\qquad\text{then }V_J(t)=V_s\,R_2/(R_1+R_2)\ \text{for all }t \tag{6.6}
 $$
 
 With the trimmer capacitor of a 10× probe you are watching this equality directly: under-compensation rounds the edge, over-compensation spikes it, and the flat top you tune for on the calibration square wave *is* $R_1C_1=R_2C_2$. The same equality appears as the balance condition of §4.4's bridge (there $C_1/C_2=C_3/C_4$) and as the "no transient" condition of an electret's bias network — one condition, three names.
@@ -2657,9 +2612,8 @@ With the trimmer capacitor of a 10× probe you are watching this equality direct
 
 Put a device across the capacitor that *shorts* it above a threshold and *opens* it below a lower one (a neon lamp, a Schmitt trigger, a UJT, a flashlamp, a membrane). Between thresholds the capacitor simply follows (6.2) toward $V_\infty$, so the time between any two voltages is obtained by inverting the exponential — the single most useful piece of algebra in this chapter:
 
-<!-- Equation tag: 6.7 -->
 $$
-t=\tau\ln\frac{V_\infty-V_{\text{start}}}{V_\infty-V_{\text{end}}} \qquad\Longrightarrow\qquad T_{\text{period}}=RC\ln\frac{V-V_{\text{lo}}}{V-V_{\text{hi}}}
+t=\tau\ln\frac{V_\infty-V_{\text{start}}}{V_\infty-V_{\text{end}}} \qquad\Longrightarrow\qquad T_{\text{period}}=RC\ln\frac{V-V_{\text{lo}}}{V-V_{\text{hi}}} \tag{6.7}
 $$
 
 Two things to notice. The *amplitude* of the swing is set by the device and the *period* by $RC$: that is the definition of a relaxation oscillator, and why a 555's frequency is set by one product $RC$ while its duty cycle is set by *which* resistors charge and discharge it (with the 555's fixed thresholds $V/3$ and $2V/3$ each half-cycle is exactly $\tau\ln2$, giving $T=1.386\,RC$ for symmetric paths). And the logarithm is *weak* in its argument, so the frequency barely depends on the supply voltage over a wide range — that robustness, not precision, is why relaxation oscillators drive tone generators, turn indicators and clock chimes.
@@ -2678,16 +2632,14 @@ A real capacitor is $C$ in parallel with $R_{\text{leak}}$, in series with an eq
 
 Supercapacitors are worse, instructively so. Their electrodes are porous carbon: the electrolyte fills a maze of micrometre pores whose walls carry the double-layer capacitance. Along a pore the electrolyte has real resistance, so the structure is a *distributed* ladder of series resistance $r$ and shunt capacitance $c$ per unit length:
 
-<!-- Equation tag: 6.8 -->
 $$
-\frac{\partial V}{\partial x}=-ri,\qquad \frac{\partial i}{\partial x}=-c\frac{\partial V}{\partial t} \qquad\Longrightarrow\qquad \frac{\partial^{2}V}{\partial x^{2}}=rc\,\frac{\partial V}{\partial t}, \qquad Z_{\text{in}}(\omega)=\sqrt{\frac{r}{i\omega c}}=(1-i)\sqrt{\frac{r}{2\omega c}}
+\frac{\partial V}{\partial x}=-ri,\qquad \frac{\partial i}{\partial x}=-c\frac{\partial V}{\partial t} \qquad\Longrightarrow\qquad \frac{\partial^{2}V}{\partial x^{2}}=rc\,\frac{\partial V}{\partial t}, \qquad Z_{\text{in}}(\omega)=\sqrt{\frac{r}{i\omega c}}=(1-i)\sqrt{\frac{r}{2\omega c}} \tag{6.8}
 $$
 
 — diffusion, not relaxation. $Z\propto(1-i)/\sqrt\omega$ is a *Warburg* (constant-phase) impedance, a 45° line on the Smith chart, and in the time domain the charge absorbed grows as
 
-<!-- Equation tag: 6.9 -->
 $$
-Q(t)\propto\sqrt t\ \ \text{until}\ \ t\sim rc\,\ell^{2},\quad\text{when the far end of the pore finally fills}
+Q(t)\propto\sqrt t\ \ \text{until}\ \ t\sim rc\,\ell^{2},\quad\text{when the far end of the pore finally fills} \tag{6.9}
 $$
 
 which is why a supercapacitor's "self-discharge time constant" is a marketing number that must be quoted with its soak time, why its $\tan\delta$ varies slowly with frequency instead of showing a Debye peak, and why the $n\to\infty$ limit of (6.4)'s discrete eigenvalues is a branch cut: **a continuous line has infinitely many time constants**, and for such an object any "the" time constant is a rounding.
@@ -2696,9 +2648,8 @@ which is why a supercapacitor's "self-discharge time constant" is a marketing nu
 
 Put $V_s=V_0e^{i\omega t}$ into (6.1): $d/dt\to i\omega$, the capacitor becomes $Z_C=1/i\omega C$, and every result of chapter 4 survives with $R\to Z$. For the single pole:
 
-<!-- Equation tag: 6.10 -->
 $$
-\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{1}{1+i\omega\tau},\qquad |H|=\frac1{\sqrt{1+\omega^{2}\tau^{2}}},\qquad \arg H=-\arctan\omega\tau, \qquad f_{-3\,\text{dB}}=\frac1{2\pi\tau}=\frac1{2\pi RC}
+\frac{V_{\text{out}}}{V_{\text{in}}}=\frac{1}{1+i\omega\tau},\qquad |H|=\frac1{\sqrt{1+\omega^{2}\tau^{2}}},\qquad \arg H=-\arctan\omega\tau, \qquad f_{-3\,\text{dB}}=\frac1{2\pi\tau}=\frac1{2\pi RC} \tag{6.10}
 $$
 
 - **One number does both jobs.** The same $\tau$ fixes the −3 dB corner and the step-response speed,
@@ -2996,9 +2947,8 @@ Chapters 1–6 used four tools: Gauss, superposition of series/parallel pieces, 
 
 For $N$ conductors, with everything else (including infinity) at zero, linearity gives
 
-<!-- Equation tag: 7.1 -->
 $$
-Q_i=\sum_{j=1}^{N}c_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad U=\frac12\sum_{i,j}c_{ij}V_iV_j
+Q_i=\sum_{j=1}^{N}c_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad U=\frac12\sum_{i,j}c_{ij}V_iV_j \tag{7.1}
 $$
 
 $c_{ii}$ is the charge needed on conductor $i$ when it alone is raised to unit potential with *all other conductors grounded*; $c_{ij}$ ($i\ne j$) is the charge that appears on $j$ when $i$ is at unit potential. The inverse matrix $\mathbf p=\mathbf c^{-1}$ is the *coefficients-of-potential* (elastance) matrix, $V_i=\sum_jp_{ij}Q_j$, and it is the one built directly by superposition in chapter 2 ($p_{ii}=1/4\pi\varepsilon_0a_i$ for a lone sphere, $p_{ij}=1/4\pi\varepsilon_0d_{ij}$ for widely separated ones).
@@ -3050,9 +3000,8 @@ The payoff is that *every* reduction you have ever done is one matrix operation.
 
 **Theorem.** For two charge/configurations in the same geometry (same conductors, same permittivity map):
 
-<!-- Equation tag: 7.2 -->
 $$
-\sum_iQ_iV_i'=\sum_iQ_i'V_i
+\sum_iQ_iV_i'=\sum_iQ_i'V_i \tag{7.2}
 $$
 
 **Proof in three lines.** Over the whole field region $\int\varepsilon\vec E\cdot\vec E'\,d\tau$ is symmetric in $(V,V')$. But $\vec E=-\vec\nabla V$ and $-\vec\nabla\cdot(V'\varepsilon\vec E)=\varepsilon\vec E\cdot\vec\nabla V'-V'\underbrace{\vec\nabla\cdot(\varepsilon\vec E)}_{=0}$, so the integral equals $-\oint V'\varepsilon\vec E\cdot d\vec a=\sum_iV_i'Q_i$ (the surface at infinity contributes nothing since $V\sim1/r$, $E\sim1/r^{2}$). Symmetry in the primed/unprimed pair gives (7.2). ∎
@@ -3073,9 +3022,8 @@ What makes it powerful is that it relates *charges* to *potentials* without ever
 >
 > Keep the same geometry but hold the plates at fixed potentials, so a battery is connected. Move the charge by $d\vec r$: the induced charges change by (from the boxed result) $dQ_i=-q\,d\xi_i$ where $\xi_i$ is the value the *primed* problem's potential would take at the charge's position if plate $i$ alone were at unit potential. Dividing by $dt$:
 >
->  <!-- Equation tag: 7.3 -->
-> $$
-> i_{\text{induced on electrode }k}=-q\,\vec v\cdot\vec E_k^{\,w} \qquad\left[\vec E_k^{\,w}=\vec\nabla\xi_k,\ \text{the "weighting field"}\right]
+>  $$
+> i_{\text{induced on electrode }k}=-q\,\vec v\cdot\vec E_k^{\,w} \qquad\left[\vec E_k^{\,w}=\vec\nabla\xi_k,\ \text{the "weighting field"}\right] \tag{7.3}
 > $$
 >
 >  For the parallel-plate case $|\vec E_1^{w}|=1/d$, so a charge drifting at $v$ between the plates sends a constant current $qv/d$ in the external circuit — the operating principle of an ionisation chamber, a multiwire proportional counter and a semiconductor detector, where the pulse shape tells you *where* the carrier drifted and the total integral $q$ is unaffected. Note what the theorem does *not* require: the electrodes need not be simple, and $\vec E_k^{w}$ is computed with *all conductors grounded and only k at unit potential* — an easy single Laplace solve even when the real field is hopeless. This is the most under-used tool in elementary electrostatics and a fair game in an IPhO theory question.
@@ -3113,9 +3061,8 @@ and the exact series above reproduces this, since $\sinh\alpha/\sinh2\alpha=1/(2
 
 Separation of variables in spheroidal coordinates gives the capacitance of an isolated conducting spheroid in terms of its focal half-length $f$:
 
-<!-- Equation tag: 7.4 -->
 $$
-\text{prolate (needles, }c>a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\ln\dfrac{c+f}{a}}, \qquad f=\sqrt{c^{2}-a^{2}}\\[2pt] \text{oblate (discs, }c<a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\eta},\qquad f=\sqrt{a^{2}-c^{2}},\ \tan\eta=\frac{f}{c}
+\text{prolate (needles, }c>a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\ln\dfrac{c+f}{a}}, \qquad f=\sqrt{c^{2}-a^{2}}\\[2pt] \text{oblate (discs, }c<a\text{):}\quad C=\frac{4\pi\varepsilon_0f}{\eta},\qquad f=\sqrt{a^{2}-c^{2}},\ \tan\eta=\frac{f}{c} \tag{7.4}
 $$
 
 Three limits, all of them checkable and all of them useful:
@@ -3138,9 +3085,8 @@ The disc value is the one students are told to memorise, and the $4\pi$ has vani
 >
 > For an *ellipsoidal* inclusion of permittivity $\varepsilon_i$ in a medium $\varepsilon_m$ in a far field $E_0$, the internal field is uniform and
 >
->  <!-- Equation tag: 7.5 -->
-> $$
-> E_{\text{in}}=\frac{E_0}{1+L\left(\dfrac{\varepsilon_i}{\varepsilon_m}-1\right)}, \qquad L=\text{depolarising factor along }\vec E_0,\qquad L_1+L_2+L_3=1
+>  $$
+> E_{\text{in}}=\frac{E_0}{1+L\left(\dfrac{\varepsilon_i}{\varepsilon_m}-1\right)}, \qquad L=\text{depolarising factor along }\vec E_0,\qquad L_1+L_2+L_3=1 \tag{7.5}
 > $$
 >
 >  with $L=1/3$ for a sphere, $L\to0$ along a needle's axis and $L\to1$ across a thin disc. Four consequences, all of them examinable:
@@ -3171,9 +3117,8 @@ The disc value is the one students are told to memorise, and the $4\pi$ has vani
 
 In two dimensions (infinite cylinders, no variation along the axis) $\nabla^{2}V=0$ is invariant under any analytic map $w=f(z)$: harmonicity is preserved, angles are preserved, and since capacitance is *dimensionless per unit length* in 2-D except for a factor $\varepsilon_0$, the whole problem can be solved in whichever $w$-plane is convenient. The rule that makes this mechanical:
 
-<!-- Equation tag: 7.6 -->
 $$
-\text{if the map turns the conductors into two straight lines }u=u_1,u_2 \text{ with a period }P\text{ in }v,\qquad C'=\varepsilon_0\frac{P}{|u_2-u_1|}
+\text{if the map turns the conductors into two straight lines }u=u_1,u_2 \text{ with a period }P\text{ in }v,\qquad C'=\varepsilon_0\frac{P}{|u_2-u_1|} \tag{7.6}
 $$
 
 **Two equal cylinders** (radius $a$, axes $d$ apart) — chapter 2's hardest result, three lines here. Use $w=\ln\dfrac{z-f}{z+f}$ with foci $\pm f$. Lines of constant $u=\Re w=\ln\left|\dfrac{z-f}{z+f}\right|=u_0$ are precisely the circles of Apollonius, with centre $-f\coth u_0$ and radius $f/|\sinh u_0|$. Matching to two equal cylinders of radius $a$ centred at $\pm d/2$:
@@ -3184,9 +3129,8 @@ $$
 
 and since the region between the two circles maps to the strip $-u_0<u<u_0$ with period $2\pi$ in $v$, (7.6) gives $C'=\varepsilon_0\cdot2\pi/(2u_0)$, i.e.
 
-<!-- Equation tag: 7.7 -->
 $$
-C'=\frac{\pi\varepsilon_0}{\operatorname{arcosh}\dfrac{d}{2a}} \qquad\left[\ d\gg a:\ C'\approx\frac{\pi\varepsilon_0}{\ln(d/a)}\ \text{and}\ V\to\infty\ \text{as}\ d\to2a\ \right]\ \checkmark\ \text{ch. 2, Q5}
+C'=\frac{\pi\varepsilon_0}{\operatorname{arcosh}\dfrac{d}{2a}} \qquad\left[\ d\gg a:\ C'\approx\frac{\pi\varepsilon_0}{\ln(d/a)}\ \text{and}\ V\to\infty\ \text{as}\ d\to2a\ \right]\ \checkmark\ \text{ch. 2, Q5} \tag{7.7}
 $$
 
 **One wire above a ground plane** is half of the same answer (the plane is the $d\to$ mirror image, doubling the charge for the same voltage):
@@ -3199,9 +3143,8 @@ which is the formula behind every "capacitance of a transmission line / a PCB tr
 
 **Edges and corners.** The map $z=w^{n}$ turns a wedge of half-angle into a half-plane, so near a conducting corner bounding a vacuum region of angle $\beta$ the potential must behave as
 
-<!-- Equation tag: 7.8 -->
 $$
-V\sim r^{\pi/\beta}\sin\frac{\pi\theta}{\beta},\qquad E\sim r^{\pi/\beta-1} \qquad\Longrightarrow\qquad \text{knife edge }(\beta=2\pi):\ E\propto r^{-1/2};\quad \text{square corner }(\beta=3\pi/2):\ E\propto r^{-1/3};\quad 90^\circ\text{ notch }(\beta=\pi/2):\ E\propto r^{+1}
+V\sim r^{\pi/\beta}\sin\frac{\pi\theta}{\beta},\qquad E\sim r^{\pi/\beta-1} \qquad\Longrightarrow\qquad \text{knife edge }(\beta=2\pi):\ E\propto r^{-1/2};\quad \text{square corner }(\beta=3\pi/2):\ E\propto r^{-1/3};\quad 90^\circ\text{ notch }(\beta=\pi/2):\ E\propto r^{+1} \tag{7.8}
 $$
 
 Three readings: (i) a sharp *convex* edge has a diverging field but an *integrable* charge density, so the total charge near it stays finite and the singularity is only a threat through breakdown; (ii) a *concave* corner has *zero* field — which is why triple-point junctions are made with a fillet, why vacuum insulators are corrugated the other way, and why "polish the edges, round the corners" is the whole of HV electrode design; (iii) the exponent is *universal*: it does not depend on the rest of the geometry, so a measured $r^{-1/2}$ profile is evidence of a knife edge whatever else is nearby.
@@ -3218,9 +3161,8 @@ Three readings: (i) a sharp *convex* edge has a diverging field but an *integrab
 
 A plate on a spring (stiffness $k$, free gap $\ell_0$) pulled by its own field. For a voltage-controlled device chapter 3's rule says the potential governing the mechanics is $\Pi=U_{\text{spring}}-\tfrac12C(x)V^{2}$ — the source pays half, so only half the field energy is available to pull — hence
 
-<!-- Equation tag: 7.9 -->
 $$
-\Pi(x)=\frac12kx^{2}-\frac12\frac{\varepsilon_0A}{\left(\ell_0-x\right)^{2}}V^{2}, \qquad \Pi'(x)=kx-\frac{\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{3}}=0,\qquad \Pi''(x)=k+\frac{3\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{4}}
+\Pi(x)=\frac12kx^{2}-\frac12\frac{\varepsilon_0A}{\left(\ell_0-x\right)^{2}}V^{2}, \qquad \Pi'(x)=kx-\frac{\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{3}}=0,\qquad \Pi''(x)=k+\frac{3\varepsilon_0AV^{2}}{\left(\ell_0-x\right)^{4}} \tag{7.9}
 $$
 
 Equilibrium needs $\Pi'=0$; *stability* needs $\Pi''>0$. Dividing the two, and writing $\xi=x/\ell_0$ and the dimensionless voltage $v=2\varepsilon_0AV^{2}/(k\ell_0^{3})$:
@@ -3256,9 +3198,8 @@ so $V_{\text{pi}}^{2}=\dfrac{8k\ell_0^{3}}{27\varepsilon_0A}$ — chapter 3's re
 
 A conducting droplet of radius $R$ and surface tension $\gamma$ carrying charge $Q$ is a capacitor with self-energy from (7.4)'s sphere limit. Its energy is
 
-<!-- Equation tag: 7.10 -->
 $$
-U(R)=\frac{Q^{2}}{8\pi\varepsilon_0R}+4\pi\gamma R^{2} \qquad\Longrightarrow\qquad \frac{dU}{dR}=0\ \Rightarrow\ Q_{\text{Rayleigh}}^{2}=64\pi^{2}\varepsilon_0\gamma R^{3}
+U(R)=\frac{Q^{2}}{8\pi\varepsilon_0R}+4\pi\gamma R^{2} \qquad\Longrightarrow\qquad \frac{dU}{dR}=0\ \Rightarrow\ Q_{\text{Rayleigh}}^{2}=64\pi^{2}\varepsilon_0\gamma R^{3} \tag{7.10}
 $$
 
 Beyond this charge the surface tension can no longer confine the liquid and the drop deforms and fissions — *Coulomb explosion*. Define the fissility $x_E=(Q/Q_R)^{2}$: $x_E=1$ is the barrierless limit (real drops fission between $x_E\approx1$ and $1.4$ depending on how fast charge is added, since there is a small centrifugal-shaped barrier for $x_E<1$). Two numbers to keep, for water ($\gamma=0.072$ N/m): $Q_R=2.0\times10^{-14}(R/\mu\text{m})^{3/2}$ C — about 126 elementary charges on a 1 µm drop, at a potential of only 180 V — and the *surface field* at that limit, $$ E_R=\frac{Q_R}{4\pi\varepsilon_0R^{2}}=2\sqrt{\frac{\gamma}{\varepsilon_0R}} =180\ \text{MV/m}\left(\frac{1\ \mu\text{m}}{R}\right)^{1/2} $$ which is 40 MV/m at 20 µm and still 4 MV/m at 2 mm. Air's corona onset is $\sim3$ MV/m, so the two limits cross near $R\approx3.6$ mm: **in air a drop below a few millimetres is charged to the *gas* limit, not the Rayleigh limit** — that is the corona you see from a wet sharp tip — whereas in vacuum the Rayleigh limit always binds, which is why mass-spectrometer ion sources are pumped. These are the parameters that set droplet size in **electrospray**: a cone held at the *Taylor angle* — $49.3^\circ$ between the cone surface and its axis, from the Legendre condition $P_{1/2}(\cos\theta)=0$ — emits a jet that breaks into drops carrying $x_E\approx0.7$, which is why electrospray ionisation delivers *singly* charged ions to a mass spectrometer instead of a spray of exploding fragments.
@@ -3604,9 +3545,8 @@ Each entry: the move, when it pays, and the one sentence that makes it rigorous.
 
 Six constants and five devices. With these you can bound any answer in this syllabus to within a factor of two, and a bounded answer written down first is the cheapest insurance in a timed paper.
 
-<!-- Equation tag: 8.1 -->
 $$
-\varepsilon_0=8.85\times10^{-12}\ \text{F/m}=\frac{10^{-9}}{4\pi\cdot9},\qquad \frac1{4\pi\varepsilon_0}=9\times10^{9},\qquad \boxed{C_{\text{sphere}}\left[\text{pF}\right]\approx1.11\times R[\text{cm}]} \qquad\frac{kT}{e}=25.9\ \text{mV},\qquad \frac{e^{2}}{4\pi\varepsilon_0}=2.30\ \text{eV nm}
+\varepsilon_0=8.85\times10^{-12}\ \text{F/m}=\frac{10^{-9}}{4\pi\cdot9},\qquad \frac1{4\pi\varepsilon_0}=9\times10^{9},\qquad \boxed{C_{\text{sphere}}\left[\text{pF}\right]\approx1.11\times R[\text{cm}]} \qquad\frac{kT}{e}=25.9\ \text{mV},\qquad \frac{e^{2}}{4\pi\varepsilon_0}=2.30\ \text{eV nm} \tag{8.1}
 $$
 
 | the object | typical $C$ | $\kappa$ / $E_b$ | the number that actually decides its use |
@@ -4565,7 +4505,7 @@ $$
 \underbrace{E_{\text{load}}}_{50V_0^{2}-0.5V_L^{2}}=\underbrace{W_{\text{mech}}}_{45V_0^{2}-0.45V_L^{2}} +\underbrace{W_{\text{bias}}}_{10V_0^{2}-V_0V_L}-\underbrace{H_{\text{conn}}}_{5V_0^{2}+0.05V_L^{2}-V_0V_L} \quad\text{(all in }C_0V_0^2)\ \checkmark
 $$
 
-in units of $C_0V_0^{2}$, and the connection losses are the unavoidable two-capacitor dissipation of §3.6 at each of the two make-contacts: $\tfrac12C_{\text{eff}}(\Delta V)^{2}\$ each. Net generation requires $E_{\text{load}}>0$, i.e. $V_L<10V_0=V_0C_{\max}/C_0$: the load voltage must be below the voltage the stroke can reach, otherwise the capacitor can never push charge "uphill" into it. That inequality, not the capacitance ratio, is the design constraint — and it is why harvesters use a *low* bias with a high-voltage storage capacitor, not the other way round.
+in units of $C_0V_0^{2}$, and the connection losses are the unavoidable two-capacitor dissipation of §3.6 at each of the two make-contacts: $\tfrac12C_{\text{eff}}(\Delta V)^{2}$ each. Net generation requires $E_{\text{load}}>0$, i.e. $V_L<10V_0=V_0C_{\max}/C_0$: the load voltage must be below the voltage the stroke can reach, otherwise the capacitor can never push charge "uphill" into it. That inequality, not the capacitance ratio, is the design constraint — and it is why harvesters use a *low* bias with a high-voltage storage capacitor, not the other way round.
 
 **(d) [4]** Each of the four steps must complete within its quarter of the mechanical period, so
 
@@ -4614,9 +4554,8 @@ _3 pages A4 · JEE · INPhO_
 
 ### 1 · Definitions and laws
 
-<!-- Equation tag: S1 -->
 $$
-C=\frac{Q}{V},\qquad Q=CV,\qquad \vec D=\varepsilon_0\vec E+\vec P=\varepsilon\vec E\ (\text{linear})
+C=\frac{Q}{V},\qquad Q=CV,\qquad \vec D=\varepsilon_0\vec E+\vec P=\varepsilon\vec E\ (\text{linear}) \tag{S1}
 $$
 
 - **Everything is linear** because $\nabla^{2}V=0$ is: doubling the charges doubles $V$, so $C$
@@ -4651,9 +4590,8 @@ Every 3-D isolated capacitance is $\varepsilon_0\times$a length; every 2-D one h
 
 ### 2 · Networks
 
-<!-- Equation tag: S2 -->
 $$
-C_{\text{ser}}=\left(\sum_iC_i^{-1}\right)^{-1},\qquad C_{\text{par}}=\sum_iC_i,\qquad Q_i=C_{\text{ser}}V\ \text{in series}
+C_{\text{ser}}=\left(\sum_iC_i^{-1}\right)^{-1},\qquad C_{\text{par}}=\sum_iC_i,\qquad Q_i=C_{\text{ser}}V\ \text{in series} \tag{S2}
 $$
 
 - **Series is about the island**: two capacitors are in series only if the node between them is isolated
@@ -4669,9 +4607,8 @@ $$
 - **Infinite ladder** (series $C$, shunt $C$): $C_\infty=0.618C$, error ×0.146 per
   section.
 
-<!-- Equation tag: S3 -->
 $$
-Q_i=\sum_jc_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad c_{ij}\le0\ (i\ne j),\qquad U=\tfrac12\vec V^{T}\mathbf c\vec V
+Q_i=\sum_jc_{ij}V_j,\qquad c_{ij}=c_{ji},\qquad c_{ij}\le0\ (i\ne j),\qquad U=\tfrac12\vec V^{T}\mathbf c\vec V \tag{S3}
 $$
 
 - **Eliminate what you don't control**: a floating conductor $k$ gives
@@ -4691,9 +4628,8 @@ $$
 
 ### 3 · Energy, force, pressure
 
-<!-- Equation tag: S4 -->
 $$
-\delta W_{\text{mech}}=-\,dU\big|_Q=+\tfrac12V^{2}\,dC\big|_V, \qquad F=\frac12V^{2}\frac{dC}{dx}
+\delta W_{\text{mech}}=-\,dU\big|_Q=+\tfrac12V^{2}\,dC\big|_V, \qquad F=\frac12V^{2}\frac{dC}{dx} \tag{S4}
 $$
 
 - The force formula $F=\tfrac12V^{2}dC/dx$ is valid *with the instantaneous*$V$ in both cases;
@@ -4773,9 +4709,8 @@ $$
 
 ### 5 · Time: transients and sinusoids
 
-<!-- Equation tag: S5 -->
 $$
-V_C(t)=V_\infty+\left(V_0-V_\infty\right)e^{-t/\tau},\qquad \tau=R_{\text{th}}C
+V_C(t)=V_\infty+\left(V_0-V_\infty\right)e^{-t/\tau},\qquad \tau=R_{\text{th}}C \tag{S5}
 $$
 
 - **Three numbers only**: $V_C(0^{+})$ (continuous across the switch — finite power),
@@ -4797,9 +4732,8 @@ $$
 - **Ripple**: $C\ge I_{\text{load}}T_{\text{rip}}/\Delta V_{\max}$; the shortcut
   $\Delta V=V_0T/RC$ needs $RC\ge10T$.
 
-<!-- Equation tag: S6 -->
 $$
-\underline{Z_C=\frac1{i\omega C}},\qquad H(\omega)=\frac{1}{1+i\omega\tau},\qquad f_{-3\text{dB}}=\frac1{2\pi\tau},\qquad t_r=\frac{0.35}{f_c}
+\underline{Z_C=\frac1{i\omega C}},\qquad H(\omega)=\frac{1}{1+i\omega\tau},\qquad f_{-3\text{dB}}=\frac1{2\pi\tau},\qquad t_r=\frac{0.35}{f_c} \tag{S6}
 $$
 
 - At $\omega\tau=1$: $|H|=1/\sqrt2$, half the power, $45^\circ$ of lag. All three at once is what

@@ -193,6 +193,9 @@ def math_text(text: str) -> str:
     # legacy spans contain a stray literal dollar before </m>; the Markdown
     # delimiters added by this exporter already provide the pair.
     value = re.sub(r"\s+", " ", text.replace("\xa0", " ")).strip()
+    # A stray trailing backslash (a legacy authoring slip) would merge with the
+    # $ delimiter this exporter appends and break the math in every renderer.
+    value = value.rstrip("\\").strip()
     return value.strip("$").strip()
 
 
@@ -200,6 +203,26 @@ def escape_table_cell(text: str) -> str:
     text = re.sub(r"\n{2,}", "<br><br>", text.strip())
     text = text.replace("\n", "<br>")
     return text.replace("|", r"\|")
+
+
+SUPERSCRIPT = {c: s for c, s in zip("0123456789-+/", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺⁄")}
+SUPERSCRIPT["\u2212"] = "\u207b"  # the notes use the true minus sign in units
+SUBSCRIPT = {c: s for c, s in zip("0123456789", "₀₁₂₃₄₅₆₇₈₉")}
+SUBSCRIPT.update({"p": "ₚ", "P": "ₚ", "v": "ᵥ", "V": "ᵥ", "e": "ₑ", "i": "ᵢ", "o": "ₒ", "l": "ₗ", "j": "ⱼ", "h": "ᵪ"})
+
+
+def to_ordinal(text: str, table: dict[str, str]) -> str:
+    """Render a short unit exponent in Unicode; return "" when it cannot."""
+    if not text:
+        return ""
+    return "".join(table.get(ch, "") for ch in text) if all(ch in table for ch in text) else ""
+
+
+def plain_text(text: str) -> str:
+    """Strip inline markup from an attribute like an image aria-label,
+    keeping the words so the alt text stays plain, accessible text."""
+    text = re.sub(r"</?(?:em|i|b|strong|sub|sup|m|var)\b[^>]*>", "", text)
+    return re.sub(r"<[^>]+>", "", text)
 
 
 class MarkdownRenderer:
@@ -273,8 +296,13 @@ class MarkdownRenderer:
             val = math_text(node.text())
             return f"${val}$" if val else ""
         if tag in {"sup", "sub"}:
-            content = self.render_inline_children(node).strip()
-            return f"<{'sup' if tag == 'sup' else 'sub'}>{content}</{'sup' if tag == 'sup' else 'sub'}>"
+            content = clean_space(node.text())
+            table = SUPERSCRIPT if tag == "sup" else SUBSCRIPT
+            value = to_ordinal(content, table)
+            # Unicode keeps the Markdown clean in every viewer; when the
+            # exponent has no Unicode form, keep the (rare) HTML tag, which
+            # GitHub and most renderers still typeset.
+            return value if value else f"<{tag}>{content}</{tag}>"
         if tag == "br":
             return "\n"
         if tag == "a":
@@ -433,15 +461,20 @@ class MarkdownRenderer:
                 parts.append(self.math_content(child))
             else:
                 parts.append(self.math_content(child))
-        return re.sub(r"\s+", " ", "".join(parts)).strip().strip("$").strip()
+        value = re.sub(r"\s+", " ", "".join(parts)).strip()
+        return value.rstrip("\\").strip("$").strip()
 
     def render_equation(self, node: Node) -> str:
         value = self.math_content(node)
         if not value:
             return ""
         tag = attr(node, "data-tag")
-        note = f"<!-- Equation tag: {html.escape(tag)} -->\n" if tag else ""
-        return note + "$$\n" + value + "\n$$\n\n"
+        # The prose cites numbered equations ("use (1.2)"), so the number has
+        # to be visible in the Markdown edition. \tag{} is supported by every
+        # KaTeX-based renderer (GitHub, Obsidian, VS Code) and prints cleanly;
+        # it also keeps the equation content identical to the HTML edition.
+        value = f"{value} \\tag{{{html.escape(tag, quote=False)}}}" if tag else value
+        return "$$\n" + value + "\n$$\n\n"
 
     def render_card(self, node: Node) -> str:
         # The HTML index uses cards for navigation. A list preserves the same
@@ -578,7 +611,7 @@ class MarkdownRenderer:
         self.figures += 1
         filename = f"fig-{self.figures:03d}.svg"
         (self.asset_dir / filename).write_text(standalone_svg(svg), encoding="utf-8")
-        label = clean_space(attr(svg, "aria-label", f"Diagram {self.figures}"))
+        label = clean_space(plain_text(attr(svg, "aria-label", f"Diagram {self.figures}")))
         return f"![{label}](assets/figures/{filename})\n\n"
 
     def render_figure(self, node: Node) -> str:
@@ -589,7 +622,7 @@ class MarkdownRenderer:
         self.figures += 1
         filename = f"fig-{self.figures:03d}.svg"
         (self.asset_dir / filename).write_text(standalone_svg(svg), encoding="utf-8")
-        label = clean_space(attr(svg, "aria-label", f"Diagram {self.figures}"))
+        label = clean_space(plain_text(attr(svg, "aria-label", f"Diagram {self.figures}")))
         cap = clean_space(self.render_inline_children(caption)) if caption else label
         return f"![{label}](assets/figures/{filename})\n\n{cap}\n\n"
 

@@ -65,7 +65,7 @@ $$
 \text{each quadratic mode carries } \tfrac{1}{2}k_{B}T \qquad\Longrightarrow\qquad U = \frac{f}{2}\,nRT
 $$
 
-**Validity clause:** classical, i.e. $k_{B}T$ well above the quantum spacing of each mode. Translations qualify at any laboratory temperature; rotations of H<sub>2</sub>, N<sub>2</sub>, O<sub>2</sub> qualify above ~100 K (so $f=5$ for diatomics at room temperature); vibrations mostly do not until ~1000 K (each active one adds 2). This is why a mole of helium, nitrogen and steam at the same $T$ do *not* have the same $U$ — but their mean *translational* energy per molecule is the same 3kT/2, down to the last digit.
+**Validity clause:** classical, i.e. $k_{B}T$ well above the quantum spacing of each mode. Translations qualify at any laboratory temperature; rotations of H₂, N₂, O₂ qualify above ~100 K (so $f=5$ for diatomics at room temperature); vibrations mostly do not until ~1000 K (each active one adds 2). This is why a mole of helium, nitrogen and steam at the same $T$ do *not* have the same $U$ — but their mean *translational* energy per molecule is the same 3kT/2, down to the last digit.
 
 > **Why temperature picks out only the translational part**
 >
@@ -138,7 +138,7 @@ Along a phase boundary, added energy buys *structure*, not speed: temperature st
 <details>
 <summary>Solution</summary>
 
-**B.** Same $T$ equalises 3kT/2 per molecule (species-blind) — first item. Same $pV = nRT$ gives the same $n$: Avogadro — second item. But $U = \tfrac{f}{2}nRT$ differs by $f$ (3 for He, 5 for N<sub>2</sub>: B would overclaim, C’s first half is false), and rms speed $\sqrt{3RT/M}$ differs by the mass ratio (He 1367 m/s vs N<sub>2</sub> 517 m/s at 300 K). Temperature is the equaliser; energy totals are not.
+**B.** Same $T$ equalises 3kT/2 per molecule (species-blind) — first item. Same $pV = nRT$ gives the same $n$: Avogadro — second item. But $U = \tfrac{f}{2}nRT$ differs by $f$ (3 for He, 5 for N₂: B would overclaim, C’s first half is false), and rms speed $\sqrt{3RT/M}$ differs by the mass ratio (He 1367 m/s vs N₂ 517 m/s at 300 K). Temperature is the equaliser; energy totals are not.
 
 </details>
 
@@ -414,7 +414,7 @@ Calorimetry is bookkeeping: an isolated box trades energy between its contents u
 >
 >  Each body contributes its own path from its initial state to the final one — warm-up legs, plateau legs, cool-down legs — each leg with its own *positive $Q$ into that body* sign. The calorimeter is a body too: its $C = m_w c_w$ “water equivalent” $m_w$ is how a lab report turns a copper can into extra grams of water. Validity: isolation (lag the experiment, insulate the cup, stir to make “one final temperature” true), and no chemistry.
 
-![A 1 kg ice-warm-to-steam run at constant heater power: two flat plateaus are pure reorganisation energy — and their <em>widths</em>, not the slopes, measure L.](assets/figures/fig-008.svg)
+![A 1 kg ice-warm-to-steam run at constant heater power: two flat plateaus are pure reorganisation energy — and their widths, not the slopes, measure L.](assets/figures/fig-008.svg)
 
 **Fig. 3.1 — the plateau graph: where latent heat is read off.** Every segment is Q = mcΔT except the two plateaus, which are Q = mL. Read the plateaus in joules (power × time) and latent heat falls out of a stopwatch.
 
