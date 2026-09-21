@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 320" role="img" aria-label="Decision tree for classifying a wave optics problem" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 250" role="img" aria-label="Michelson interferometer with an evacuated gas cell in one arm" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,50 +33,21 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <rect x="250" y="10" width="200" height="34" rx="8" class="fp"></rect>
-  <text x="350" y="32" class="lbl md" text-anchor="middle">read the question</text>
-  <line x1="350" y1="44" x2="350" y2="66" class="ln"></line>
-  <line x1="70" y1="66" x2="630" y2="66" class="ln"></line>
-  <g>
-    <line x1="70" y1="66" x2="70" y2="88" class="ln"></line><line x1="182" y1="66" x2="182" y2="88" class="ln"></line>
-    <line x1="294" y1="66" x2="294" y2="88" class="ln"></line><line x1="406" y1="66" x2="406" y2="88" class="ln"></line>
-    <line x1="518" y1="66" x2="518" y2="88" class="ln"></line><line x1="630" y1="66" x2="630" y2="88" class="ln"></line>
-  </g>
-  <g class="facc">
-    <rect x="18" y="88" width="104" height="40" rx="6"></rect><rect x="130" y="88" width="104" height="40" rx="6"></rect>
-    <rect x="242" y="88" width="104" height="40" rx="6"></rect><rect x="354" y="88" width="104" height="40" rx="6"></rect>
-    <rect x="466" y="88" width="104" height="40" rx="6"></rect><rect x="578" y="88" width="104" height="40" rx="6"></rect>
-  </g>
-  <g class="lbl sm" text-anchor="middle">
-    <text x="70" y="104">two sources</text><text x="70" y="118">“slits”</text>
-    <text x="182" y="104">a film or</text><text x="182" y="118">a thin layer</text>
-    <text x="294" y="104">one aperture</text><text x="294" y="118">“slit”, “hole”</text>
-    <text x="406" y="104">many slits</text><text x="406" y="118">“grating”</text>
-    <text x="518" y="104">polarisation</text><text x="518" y="118">“filter”</text>
-    <text x="630" y="104">instruments</text><text x="630" y="118">“telescope”</text>
-  </g>
-  <g class="lbl sm" text-anchor="middle">
-    <text x="70" y="156">Δx = d sinθ</text><text x="70" y="172">β = λD/d</text>
-    <text x="182" y="156">2μt cos r</text><text x="182" y="172">+ λ/2 if one flip</text>
-    <text x="294" y="156">a sinθ = mλ</text><text x="294" y="172">(dark!)</text>
-    <text x="406" y="156">d sinθ = nλ</text><text x="406" y="172">R = nN</text>
-    <text x="518" y="156">I = I₀cos²θ</text><text x="518" y="172">tanθₖ = n₂/n₁</text>
-    <text x="630" y="156">1.22λ/D</text><text x="630" y="172">0.61λ/NA</text>
-  </g>
-  <g class="ln" fill="none">
-    <line x1="70" y1="184" x2="70" y2="206"></line><line x1="182" y1="184" x2="182" y2="206"></line>
-    <line x1="294" y1="184" x2="294" y2="206"></line><line x1="406" y1="184" x2="406" y2="206"></line>
-    <line x1="518" y1="184" x2="518" y2="206"></line><line x1="630" y1="184" x2="630" y2="206"></line>
-  </g>
-  <g class="lbl sm" text-anchor="middle">
-    <text x="70" y="222">check D from the</text><text x="70" y="236">virtual sources!</text>
-    <text x="182" y="222">count the</text><text x="182" y="236">reflections</text>
-    <text x="294" y="222">minima here,</text><text x="294" y="236">maxima at θ=0</text>
-    <text x="406" y="222">n_max = d/λ</text><text x="406" y="236">missing orders</text>
-    <text x="518" y="222">transverse wave:</text><text x="518" y="236">project the field</text>
-    <text x="630" y="222">aperture, not</text><text x="630" y="236">magnification</text>
-  </g>
-  <rect x="120" y="262" width="460" height="46" rx="8" class="fneg"></rect>
-  <text x="350" y="282" class="lbl md" text-anchor="middle">if the question mentions a NUMBER for a thickness, an index or a wavelength,</text>
-  <text x="350" y="300" class="lbl md" text-anchor="middle">the answer is a path difference in wavelengths: convert to waves and count.</text>
+  <rect x="200" y="60" width="110" height="40" class="fp"></rect>
+  <text x="255" y="86" class="lbl sm" text-anchor="middle">cell, L = 4 cm</text>
+  <text x="255" y="48" class="lbl sm" text-anchor="middle">gas of index μ, then pumped out</text>
+  <line x1="310" y1="80" x2="560" y2="80" class="acc" marker-end="url(#ah)"></line>
+  <line x1="560" y1="52" x2="560" y2="112" class="ln2"></line>
+  <text x="568" y="76" class="lbl sm">mirror M₁</text>
+  <line x1="120" y1="80" x2="200" y2="80" class="acc" marker-end="url(#ah)"></line>
+  <text x="70" y="70" class="lbl sm">from the source</text>
+  <line x1="120" y1="150" x2="380" y2="150" class="acc" marker-end="url(#ah)"></line>
+  <line x1="380" y1="120" x2="380" y2="182" class="ln2"></line>
+  <text x="388" y="146" class="lbl sm">mirror M₂ (movable)</text>
+  <line x1="120" y1="150" x2="120" y2="230" class="acc" marker-end="url(#ah)"></line>
+  <text x="66" y="246" class="lbl sm">to the eye</text>
+  <rect x="112" y="74" width="16" height="112" class="fp" opacity="0.6"></rect>
+  <text x="150" y="200" class="lbl sm">beam splitter</text>
+  <line x1="380" y1="150" x2="120" y2="80" class="thinl"></line>
+  <text x="120" y="222" class="lbl sm">emptying the cell shortens one arm by 2(μ − 1)L, so N = 2(μ − 1)L/λ ≈ 61 fringes for 4 cm of air</text>
 </svg>

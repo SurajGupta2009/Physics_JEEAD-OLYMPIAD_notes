@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 300" role="img" aria-label="Interference in a thin film with rays reflected from both surfaces" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 250" role="img" aria-label="Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,24 +33,21 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <rect x="60" y="150" width="580" height="70" class="facc"></rect>
-  <line x1="60" y1="150" x2="640" y2="150" class="ln2"></line>
-  <line x1="60" y1="220" x2="640" y2="220" class="ln2"></line>
-  <line x1="240" y1="40" x2="310" y2="150" class="acc" marker-end="url(#ah)"></line>
-  <line x1="310" y1="150" x2="270" y2="40" class="acc" marker-end="url(#ah)"></line>
-  <line x1="310" y1="150" x2="376" y2="220" class="acc" marker-end="url(#ah)"></line>
-  <line x1="376" y1="220" x2="450" y2="105" class="acc" marker-end="url(#ah)"></line>
-  <line x1="290" y1="150" x2="290" y2="60" class="thinl"></line>
-  <line x1="376" y1="220" x2="376" y2="258" class="thinl"></line>
-  <text x="296" y="120" class="lbl sm">i</text>
-  <text x="352" y="176" class="lbl sm">r</text>
-  <text x="196" y="100" class="lbl sm">incident</text>
-  <text x="180" y="72" class="lbl sm">ray 1 (top)</text>
-  <text x="462" y="120" class="lbl sm">ray 2 (bottom)</text>
-  <text x="70" y="140" class="lbl sm">air  n = 1</text>
-  <text x="70" y="196" class="lbl sm">film n = μ, thickness <tspan class="mi">t</tspan></text>
-  <text x="70" y="252" class="lbl sm">air</text>
-  <text x="392" y="248" class="lbl sm">extra path in the film = AB + BC</text>
-  <text x="470" y="196" class="lbl sm">phase change π at the top surface, none at the bottom</text>
-  <text x="120" y="288" class="lbl sm">optical path difference (in air) = 2μ<tspan class="mi">t</tspan> cos <tspan class="mi">r</tspan> ± λ/2</text>
+  <line x1="80" y1="205" x2="640" y2="205" class="ln"></line>
+  <line x1="80" y1="205" x2="80" y2="34" class="ln"></line>
+  <text x="76" y="30" class="lbl sm" text-anchor="end">I</text>
+  <text x="636" y="222" class="lbl sm" text-anchor="end">δ</text>
+  <line x1="360" y1="205" x2="360" y2="46" class="dim"></line>
+  <text x="360" y="222" class="lbl sm" text-anchor="middle">δ = 0, 2π, 4π</text>
+  <polyline class="thinl" points="160,198 164,191 168,182 172,171 176,159 180,147 184,133 188,120 192,107 196,94 200,83 204,74 208,66 212,60 216,56 220,55 224,56 228,60 232,66 236,74 240,83 244,94 248,107 252,120 256,133 260,147 264,159 268,171 272,182 276,191 280,198 284,202 288,205 292,205 296,202 300,198 304,191 308,182 312,171 316,159 320,147 324,133 328,120 332,107 336,94 340,83 344,74 348,66 352,60 356,56 360,55 364,56 368,60 372,66 376,74 380,83 384,94 388,107 392,120 396,133 400,147 404,159 408,171 412,182 416,191 420,198 424,202 428,205 432,205 436,202 440,198 444,191 448,182 452,171 456,159 460,147 464,133 468,120 472,107 476,94 480,83 484,74 488,66 492,60 496,56 500,55 504,56 508,60 512,66 516,74 520,83 524,94 528,107 532,120 536,133 540,147 544,159 548,171 552,182 556,191 560,198"></polyline>
+  <polyline class="acc" points="160,182 164,176 168,168 172,158 176,148 180,137 184,125 188,113 192,101 196,90 200,80 204,71 208,64 212,59 216,56 220,55 224,56 228,59 232,64 236,71 240,80 244,90 248,101 252,113 256,125 260,137 264,148 268,158 272,168 276,176 280,182 284,186 288,188 292,188 296,186 300,182 304,176 308,168 312,158 316,148 320,137 324,125 328,113 332,101 336,90 340,80 344,71 348,64 352,59 356,56 360,55 364,56 368,59 372,64 376,71 380,80 384,90 388,101 392,113 396,125 400,137 404,148 408,158 412,168 416,176 420,182 424,186 428,188 432,188 436,186 440,182 444,176 448,168 452,158 456,148 460,137 464,125 468,113 472,101 476,90 480,80 484,71 488,64 492,59 496,56 500,55 504,56 508,59 512,64 516,71 520,80 524,90 528,101 532,113 536,125 540,137 544,148 548,158 552,168 556,176 560,182"></polyline>
+  <line x1="88" y1="188" x2="640" y2="188" class="dim"></line>
+  <text x="84" y="192" class="lbl sm" text-anchor="end">1/9</text>
+  <line x1="290" y1="186" x2="290" y2="213" class="dim"></line>
+  <line x1="430" y1="186" x2="430" y2="213" class="dim"></line>
+  <text x="430" y="240" class="lbl sm" text-anchor="middle">minima: 0 and I₀</text>
+  <line x1="575" y1="60" x2="602" y2="60" class="thinl"></line>
+  <text x="606" y="64" class="lbl sm">equal</text>
+  <line x1="575" y1="80" x2="602" y2="80" class="acc"></line>
+  <text x="606" y="84" class="lbl sm">2× wider</text>
 </svg>

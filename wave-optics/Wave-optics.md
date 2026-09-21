@@ -2,7 +2,7 @@
 
 <a id="top"></a>
 
-_course map · read this first · 12 parts · 27 figures · 136 questions_
+_course map · read this first · 12 parts · 28 figures · 136 questions_
 
 # Wave Optics — first principles to Olympiad
 
@@ -17,6 +17,8 @@ Geometrical optics told you where light goes; it never asked what light *is*. Th
 Parts 1–4 are the Cengage chapter, in order of what has to be true before the next thing can be said: the wave and Huygens' construction (1), the double slit (2), thin films and Newton's rings (3), and the laboratory interferometers — Fresnel's biprism, Lloyd's mirror, Michelson (4). Parts 5–8 are the material the chapter stops short of but every serious paper examines: diffraction (5), polarisation (6), coherence and the wave toolkit that makes the finite width of a spectral line matter (7), and the measurements and instruments built on all of it (8). Part 9 is the playbook — the triage tree, the phase-bookkeeping algorithm, the trap catalogue and the number sheet. Parts 10–11 are a 36-question paper in JEE format with full solutions, and part 12 is the whole course compressed to three printable pages.
 
 Read 1 → 4 in order the first time. Parts 5 and 6 stand alone: diffraction needs only §1.3 (Huygens) and §1.6 (superposition), and polarisation needs only the sentence *light is a transverse wave*. Nothing in parts 2–8 repeats a result without saying where it came from.
+
+Parts 1–7 each carry a box titled **JEE Advanced advantage**: an alternate route to the result just derived — complex amplitudes instead of trigonometric identities, a count of waves instead of a length, an arc instead of an integral, two components and a phase instead of a matrix. Each sits directly after the derivation it replaces, so either can be read first, and each ends on the limit that proves the shortcut was not luck.
 
 This note is the last stop on the wave sequence of this repository: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Every rule used here about phase, energy and superposition was paid for in the first three of those notes, and §1.1.1 states the debt line by line; the ray results borrowed from the fourth are listed in the prerequisite check below. If the mechanical waves are rusty, spend an hour on parts 1–2 of the string-wave notes before §1.6 — it removes most of the mystery from this subject, because the only genuinely new thing about light is that its wave needs no medium and its disturbance is transverse.
 
@@ -324,6 +326,18 @@ For equal amplitudes $a_1 = a_2 = a$ this collapses to the formula you should ca
 > **Visibility (fringe contrast)**
 >
 > Define $V = \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}$. For two waves of intensities $I_1$ and $I_2$, $V = \frac{2\sqrt{I_1I_2}}{I_1+I_2}$: it is 1 only for equal amplitudes, $0.8$ for a 4 : 1 ratio of intensities, $0.6$ for 9 : 1, and 0 for incoherent light. Fringe patterns are quantified by $V$, not by "how bright they look", and every loss of coherence in this course shows up as a fall in $V$.
+
+> **JEE Advanced advantage · add with complex amplitudes, not identities**
+>
+> Everything in §1.6 is one line if each wave is written as $a_j e^{i\phi_j}$: add the amplitudes, then take the modulus squared against the conjugate $\bar{A}$.
+>
+>  $$
+> A = \sum_j a_j e^{i\phi_j}, \qquad I \propto A\bar{A} = \sum_j a_j^{2} + 2\sum_{\text{pairs } j,k} a_j a_k \cos(\phi_j-\phi_k) \qquad (\text{any number of waves of one frequency in one medium})
+> $$
+>
+>  Three manipulations generate almost every question in this course, and in this language each of them is one multiplication: a slab in one arm contributes $e^{2\pi i(\mu-1)t/\lambda_0}$, a reflection off a denser medium contributes $-1$, and unequal slits contribute unequal *lengths*, never a change of angle. The $N$-slit comb of §5.3 and the arc of §5.2 are the same sum with $\phi_j$ in arithmetic progression, so neither needs a new trigonometric identity.
+>
+>  **Check.** Two equal waves give $I = 2a^{2}(1+\cos\delta)$: $4a^{2}$ at $\delta = 0$, $2a^{2}$ at $\delta = \pi/2$ and nothing at $\delta = \pi$. A shortcut that cannot say those three numbers immediately has the bookkeeping wrong.
 
 ### 1.7 Coherent sources: the condition for a pattern to exist
 
@@ -738,6 +752,18 @@ Two paths through different media are compared by their **optical** path lengths
 >
 > If a change to the apparatus alters the optical path by an integral number of wavelengths, the pattern returns to itself — the fringes look exactly as before. Many questions are built on this: "how thick a film makes the pattern look unchanged", "what angle of incidence restores the fringes". Set the *change* in optical path difference equal to $m\lambda$ and solve; you will almost never have to compute absolute paths.
 
+> **JEE Advanced advantage · count waves, not millimetres**
+>
+> Reduce each arm to a pure number before writing any geometry: $N_j = (\text{optical path})_j/\lambda_0$. The order of the fringe at a point is $n = N_2 - N_1$, so every standard perturbation of a Young's apparatus is one extra term in that difference — and nothing else.
+>
+>  $$
+> \Delta N = \frac{(\mu-1)t}{\lambda_0}\ (\text{sheet over one slit}), \quad \frac{2(\mu-1)t}{\lambda_0}\ (\text{the same sheet in a Michelson arm}), \quad \frac{d\sin\alpha}{\lambda_0}\ (\text{beam tilted by } \alpha), \quad \frac{y_0 d}{\lambda_0 D}\ (\text{source moved across by } y_0) \qquad (\lambda_0 \text{ in vacuum, each count taken against the untilted unsheeted setup})
+> $$
+>
+>  The shift in millimetres is then $\Delta y = \Delta N\,\beta$, and the number of fringes that cross a mark is $\Delta N$ with no reference to the screen at all. That is exactly what an integer-answer question asks for, and the reason the same expression is used backwards as a refractometer (§4.5): shift and fringe width both carry the factor $D/d$, so the geometry cancels out of the count.
+>
+>  **Check.** The 1.0 cm slab of §2.7 at $\mu = 1.5$ and 600 nm is $5\times10^{-3}/(6\times10^{-7}) = 8333$ fringes, a number in which no dimension of the apparatus appears; times $\beta = 1.2$ mm it is the 10 mm shift that the full geometry of §2.7.1 takes four lines to reach.
+
 ### 2.9 The intensity distribution, properly
 
 With equal slits the field at P is the sum of two sinusoids of equal amplitude and phase difference $\Delta\varphi = 2\pi d\sin\theta/\lambda$, so
@@ -749,6 +775,10 @@ $$
 $$
 I_{\text{av}} = 2I_0, \qquad \frac{I_{\max}}{I_{\min}} = \left(\frac{a_1+a_2}{a_1-a_2}\right)^{2}
 $$
+
+![Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis](assets/figures/fig-011.svg)
+
+**Fig. 2.4** — Equal slits and unequal ones, drawn from the two lines above: the dashed curve is $4I_0\cos^{2}(\delta/2)$, the solid curve is $I_0(a_1^{2}+a_2^{2}+2a_1a_2\cos\delta)$ with $a_1 = 2a_2$, both normalised to the same peak. The solid curve never reaches the axis: its minima sit at $I_0(a_1-a_2)^{2} = I_0$, one ninth of the peak, so $I_{\max}/I_{\min} = 9$ and the visibility is $V = 4/5$ — the numbers part 2's Q5 asks for. This is what “washed out” means: a width mismatch never destroys the pattern, it only lifts its floor, which is why the exact zeros of §2.2 are an approximation about equally *illuminated* slits, not about equally *wide* ones.
 
 Two refinements matter for later parts. First, a real slit is not a point: it is a narrow rectangle, and each slit diffracts its own light over an angular width $\lambda/a$ (part 5). The final pattern is the double-slit interference curve multiplied by that single-slit envelope, so the fringes fade out toward the edges of the pattern and may vanish entirely at a particular order. Second, a real source is not a point either: a wide source is a collection of displaced point sources, each giving a pattern shifted by $y_0D/D_1$; when the shift for the two edges of the source reaches $\beta/2$, the maxima of one fill the minima of the other and the pattern vanishes. That is the *spatial* coherence condition, worked out in §7.1.
 
@@ -999,7 +1029,7 @@ A film is the simplest interferometer in nature: the two beams are produced by t
 
 Light falls on a film of thickness $t$ and refractive index $\mu$, in air on both sides. Part of the light reflects at the top surface, part enters the film, reflects at the bottom surface and comes back out. The two reflected beams travel different distances, and the difference is what the colours are made of.
 
-![Interference in a thin film with rays reflected from both surfaces](assets/figures/fig-011.svg)
+![Interference in a thin film with rays reflected from both surfaces](assets/figures/fig-012.svg)
 
 **Fig. 3.1** — The two beams reflected by a film. The lower beam travels an extra distance $AB+BC = 2t/\cos r$ *inside* the film, while the upper beam has already travelled $2t\tan r\cdot\sin i$ less in air before that point. Converting the in-film length to optical path ($\times\mu$) and simplifying with Snell's law gives the famous difference $2\mu t\cos r$. The $\lambda/2$ is not geometry: it is the reflection phase, taken up in the next section.
 
@@ -1046,11 +1076,23 @@ At normal incidence ($r = 0$, $\cos r = 1$) the conditions simplify to the two y
 >
 > Energy must go somewhere. If a wavelength is strongly reflected by a film it cannot also be strongly transmitted, and indeed exchanging the two conditions above swaps bright for dark — the reflected and transmitted patterns are exact negatives of each other. This is the fastest check on any film question: if your answer says that the same wavelength is missing in reflection *and* missing in transmission, the answer is wrong.
 
+> **JEE Advanced advantage · a film is a double slit with the arms folded**
+>
+> Do not keep a second formula set for films. Run the §2.8 bookkeeping on the two reflected rays instead: the second ray travels $2\mu t$ more, and it either gains a half-wave at a reflection or it does not.
+>
+>  $$
+> \Delta N = \frac{2\mu t}{\lambda_0} + \epsilon, \qquad \epsilon = \begin{cases} \tfrac{1}{2} & \text{exactly one reflection off a denser medium} \\ 0 & \text{none, or two} \end{cases} \qquad (\text{near-normal incidence, } 2\mu t \lesssim l_c)
+> $$
+>
+>  Bright in reflection when $\Delta N$ is a whole number, dark when it is a half-integer — in words, *an odd number of quarter-waves inside the film shines when the two reflections disagree, an even number when they agree*. A wedge, a soap bubble and Newton's rings then change only the thickness substituted for $t$, and the transmitted pattern is the complement because $R + T = 1$ is an energy statement, not an arithmetic one.
+>
+>  **Check.** $t = \lambda/4\mu$ with one flip gives $\Delta N = \tfrac{1}{2}+\tfrac{1}{2} = 1$, the bright film of §3.1; letting $t \to 0$ leaves $\Delta N = \tfrac{1}{2}$, black — the drained film of §3.5, and the one limit no formula for films may fail.
+
 ### 3.3 A film of varying thickness: the wedge, and fringes of equal thickness
 
 Let two glass plates touch along one edge and be separated by a spacer (a foil, a hair, a wire) at the other, so the air film between them is a wedge of angle $\theta$. Illuminated from above, the film reflects the familiar bands; the striking fact is that they are *straight and equally spaced*, parallel to the line of contact.
 
-![Wedge film between two glass plates producing fringes of equal thickness](assets/figures/fig-012.svg)
+![Wedge film between two glass plates producing fringes of equal thickness](assets/figures/fig-013.svg)
 
 **Fig. 3.2** — The wedge. Because the film thickness depends only on the distance from the contact edge, each fringe is a line of constant thickness and the pattern is a set of equally spaced straight lines. One fringe is crossed for every $\lambda/2\mu$ of extra thickness, so counting fringes counts thickness — a measurement good to 0.3 $\mu$m with the naked eye.
 
@@ -1084,7 +1126,7 @@ $$
 \text{and in diameters: } D_n^{2} = 4n\lambda R \ \Rightarrow\ \frac{D_1:D_2:D_3:\ldots}{1:\sqrt2:\sqrt3:\ldots} \text{ for dark rings}
 $$
 
-![Newton's rings geometry, ring radii and the fringe pattern](assets/figures/fig-013.svg)
+![Newton's rings geometry, ring radii and the fringe pattern](assets/figures/fig-014.svg)
 
 **Fig. 3.3** — Newton's rings. Left: the geometry that gives $t = r^{2}/2R$. Right: the pattern as it appears in reflected light — a dark centre with rings whose radii grow as the square roots of the natural numbers, so the rings become crowded as you go out (the *spacing* falls as $1/\sqrt n$). Filling the space with water shrinks every diameter by $\sqrt\mu$.
 
@@ -1111,7 +1153,7 @@ A film a few hundred nanometres thick reflects some wavelengths strongly and oth
 
 An uncoated glass surface reflects about 4% at normal incidence — enough to spoil a photograph and to make a lens look ghostly. Coating it with a film of index $\mu_c$ and thickness $t = \lambda/4\mu_c$ makes the two reflected waves (top surface, and film–glass surface) differ by $\lambda/2$ in the film plus $\lambda/2$ from the phase rule, i.e. by $\lambda$: they cancel.
 
-![Antireflection coating: phase cancellation and reflectance versus wavelength](assets/figures/fig-014.svg)
+![Antireflection coating: phase cancellation and reflectance versus wavelength](assets/figures/fig-015.svg)
 
 **Fig. 3.4** — A quarter-wave coating. Left: the two reflected waves are made to arrive in antiphase. Right: the reflectance dips below the 4% of bare glass at the design wavelength and rises again on either side, which is why a coated lens has a purple or green tint — the colour you see is what the coating does *not* cancel. (The drawn curve is the shape of a single-layer coating with $\mu_c = 1.38$ on glass; $R_{\min} \approx [(\mu_c^{2}-\mu_g)/(\mu_c^{2}+\mu_g)]^{2} \approx 1.3\%$.)
 
@@ -1354,7 +1396,7 @@ Young's two slits are the simplest way to split one wave into two, not the only 
 
 A biprism is two thin prisms joined base to base with a very obtuse angle between them. Light from a slit S passes through it and is deviated toward the two bases, so the light appears to come from two virtual images $S_1$ and $S_2$ of S. Those two images are coherent — they come from the same slit — and the rest of the experiment is Young's, with the *images* playing the role of the slits.
 
-![Fresnel biprism producing two virtual sources from one slit](assets/figures/fig-015.svg)
+![Fresnel biprism producing two virtual sources from one slit](assets/figures/fig-016.svg)
 
 **Fig. 4.1** — Fresnel's biprism. The slit S is real; the two sources $S_1$, $S_2$ are virtual images formed by the two halves of the prism, separated by $d = 2a(\mu-1)A$ where $a$ is the slit-to-prism distance and $A$ the prism angle. The pattern on the screen is a Young's pattern with $D = a+b$. The whole apparatus is one bench, which is why the biprism replaced Young's slits in the laboratory: the separation $d$ is set by a micrometer screw that moves the prism, not by slits you cannot see.
 
@@ -1378,7 +1420,7 @@ Numbers: $a = 10$ cm, $b = 90$ cm, $\mu = 1.5$, $A = 1^\circ = 0.01745$ rad, $\l
 
 Hold a long thin mirror nearly flat on the bench, put a slit just above its far end, and look at the light that reaches a screen beyond: half the light comes directly, half after reflection. The reflected light behaves as if it came from the source's mirror image, so the two "sources" are separated by $d = 2h$, where $h$ is the height of the slit above the mirror plane.
 
-![Lloyd's mirror arrangement with a source and its image](assets/figures/fig-016.svg)
+![Lloyd's mirror arrangement with a source and its image](assets/figures/fig-017.svg)
 
 **Fig. 4.2** — Lloyd's mirror. The source is only half a millimetre above the mirror, so the reflection is at grazing incidence. Two features follow, and both are examined: the effective separation is $d = 2h$ with $h$ small, so the fringes are wide; and the reflected wave suffers a $\pi$ phase change that the direct wave does not, which makes the fringe at the mirror edge *dark*.
 
@@ -1404,7 +1446,7 @@ With $h = 0.5$ mm and the screen 1.0 m beyond, $\beta = \lambda D/2h = 600\times
 
 A beam splitter divides the light into two beams travelling along perpendicular arms; each beam returns from a mirror and the two recombine. Moving one mirror by $\Delta L$ changes the round-trip path in that arm by $2\Delta L$, which passes the pattern through one fringe every $\lambda/2$ of movement.
 
-![Michelson interferometer schematic](assets/figures/fig-017.svg)
+![Michelson interferometer schematic](assets/figures/fig-018.svg)
 
 **Fig. 4.3** — The Michelson interferometer. The two arms are folded into a compact box, which is what makes the instrument stable enough to count fringes while *slowly* moving a mirror: a change of $\lambda/2 = 0.3\ \mu$m is one fringe, and a turn of the micrometer screw passes hundreds of them past the observer. The compensator plate is inserted so that both beams cross the same thickness of glass.
 
@@ -1453,6 +1495,18 @@ Every method in this chapter is one idea wearing a different hat: take one wavef
 | Fresnel's mirrors | two images in two mirrors inclined at a small angle | $2r\theta$ ($r$ = source distance, $\theta$ = mirror angle) | the mirrors must meet in a clean edge; both images are virtual, so both beams cover the whole screen |
 | Billet's split lens | two halves of a lens, separated | the separation $a$ of the halves | the lens halves must be cut through the *axis*, and the separation is $a(1+\|m\|)$ between the images |
 | Michelson interferometer | the beam splitter sends one wave down each arm | not a separation but a path imbalance | count the *two* passes through any plate in an arm |
+
+> **JEE Advanced advantage · never trust a computed $d$: measure it with a lens**
+>
+> In a biprism the source separation is $d = 2a(\mu-1)\alpha$, the product of three quantities no ruler reaches. A convex lens handed to you between biprism and screen measures $d$ directly: at the two positions where the two virtual sources image sharply, the image separations are the same object seen through reciprocal magnifications.
+>
+>  $$
+> d = \sqrt{d_1 d_2}, \qquad D = 2f + \sqrt{4f^{2} + x^{2}}, \qquad \lambda = \frac{\beta d}{D} \qquad (\text{paraxial, } D > 4f, \ x \text{ the separation of the two lens positions})
+> $$
+>
+>  This is the displacement method of the lens notes, arriving where it earns its keep: afterwards the only length that has to be measured well is the fringe width $\beta$. It rescues a Lloyd's-mirror calculation too, where $d = 2h$ is a height of half a millimetre set by eye against a razor edge.
+>
+>  **Check.** The two magnifications are reciprocal, so $d_1d_2 = d^{2}$ identically: with $d_1 = 2.0$ mm and $d_2 = 0.50$ mm the separation is $1.0$ mm — and averaging the two readings, the standard wrong answer, would have given 1.25 mm.
 
 ### 4.5 Displacement of fringes as a measurement
 
@@ -1766,7 +1820,7 @@ $$
 
 Between the minima are secondary maxima, at the angles $a\sin\theta \approx (m+\tfrac12)\lambda$ more precisely at $\tan\beta = \beta$, i.e. $\beta = 1.43\pi, 2.46\pi,\ldots$, with intensities $0.047,\ 0.017,\ 0.008\ldots$ of the central one. No light at all reaches the screen where the pairing is exact.
 
-![Single-slit diffraction: geometry and the sinc-squared intensity curve](assets/figures/fig-018.svg)
+![Single-slit diffraction: geometry and the sinc-squared intensity curve](assets/figures/fig-019.svg)
 
 **Fig. 5.1** — The single-slit pattern: intensity against angle, drawn from $I = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}$ with $\beta = \pi a\sin\theta/\lambda$. The central maximum holds about 90% of the transmitted light and is twice as wide as each secondary maximum; its half-width is $\lambda/a$ in angle (in a radian measure of $\sin\theta$). Narrow the slit and the pattern broadens — the first hint of the uncertainty principle, and the reason a pinhole camera is fuzzy.
 
@@ -1785,6 +1839,18 @@ Numbers: a slit 0.10 mm wide, 1.00 m from the screen, with 600 nm light gives $W
 > **"$a\sin\theta = m\lambda$ gives the bright fringes"**
 >
 > For a single slit it gives the *dark* ones — the opposite of the double-slit rule, which is the same equation with $a$ replaced by $d$. The reason: in the two-slit case the two sources are points and the *maxima* are where they agree; in the single-slit case there are infinitely many sources across the opening and the pattern goes to zero where they can be paired off in cancelling pairs. Keep the two conditions in separate boxes in your head: $d\sin\theta = n\lambda$ for *two slits* (bright), $a\sin\theta = m\lambda$ for *one slit* (dark).
+
+> **JEE Advanced advantage · the arc, not the integral**
+>
+> The single-slit formula needs no calculus. Divide the slit into strips: their phasors have equal length and turn through a total angle $2\beta$, so they lie on a circular arc whose *length* is the in-phase amplitude $A_0$ and whose *chord* is the resultant.
+>
+>  $$
+> 2R\beta = A_0, \quad A = 2R\sin\beta \Rightarrow A = A_0\frac{\sin\beta}{\beta}, \qquad I = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}, \quad \beta = \frac{\pi a\sin\theta}{\lambda} \qquad (\text{Fraunhofer, one slit, normal incidence, } a \gg \lambda)
+> $$
+>
+>  The zeroes are the arcs that close ($\beta = m\pi$), and the subsidiary maxima are the turning points of the same picture, $\tan\beta = \beta$, which is why they sit *near* the halfway angles rather than on them. Put one phasor per *slit* instead of per strip, at total turn $2\gamma = 2\pi d\sin\theta/\lambda$, and §5.3's factor $(\sin N\gamma/\sin\gamma)^{2}$ appears with no new tool; multiplying the two chords is what a missing order *is* — the angle at which a grating maximum and a single-slit zero are the same statement.
+>
+>  **Check.** Narrow the slit and $\beta \to 0$ at every angle, so $I \to I_0$ everywhere: a point-like opening stops having a pattern and starts radiating uniformly ✓ — the limit a ray picture pretends is exact, and the reason the pinhole of §5.7 cannot be improved by being made smaller.
 
 ### 5.3 Two slits of finite width, and N slits
 
@@ -1810,7 +1876,7 @@ $$
 \text{dispersion } \frac{d\theta}{d\lambda} = \frac{n}{d\cos\theta}, \qquad \text{resolving power } R = \frac{\lambda}{\Delta\lambda} = nN \ \ (N = \text{total number of rulings}) \tag{5.5}
 $$
 
-![Diffraction grating geometry and orders](assets/figures/fig-019.svg)
+![Diffraction grating geometry and orders](assets/figures/fig-020.svg)
 
 **Fig. 5.2** — A grating and its orders, drawn to scale for 2.0 $\mu$m spacing (5000 lines per cm) with 600 nm light: the first order at 17.5°, the second at 36.9°, and the third at 64° — with a fourth order that cannot exist because $4\lambda = 2.4\ \mu\text{m} > d$. Every order is a spectrum, the violet end nearer the undeviated beam because $\sin\theta\propto\lambda$.
 
@@ -2106,7 +2172,7 @@ Interference and diffraction are consequences of light having a phase; polarisat
 
 The electric field of a plane wave travelling along $z$ lies in the $xy$ plane. If its direction is fixed, the wave is **linearly polarised** (or plane polarised); if it rotates uniformly the wave is **circularly** or **elliptically polarised**; if it changes direction randomly in $10^{-8}$ s, the light is **unpolarised**.
 
-![Unpolarised, linearly polarised and circularly polarised light](assets/figures/fig-020.svg)
+![Unpolarised, linearly polarised and circularly polarised light](assets/figures/fig-021.svg)
 
 **Fig. 6.1** — The three states drawn as the trace of the electric vector along the direction of propagation. Unpolarised light has no preferred direction; linearly polarised light keeps one; circularly polarised light keeps a constant magnitude while its direction rotates uniformly. Elliptical polarisation is the general case, with linear and circular as the two extremes.
 
@@ -2149,7 +2215,7 @@ $$
 >   $I = (I_0/2)\prod_k\cos^{2}\theta_k$, where $\theta_k$ is the angle between neighbouring
 >   axes.
 
-![Malus law and the three-polariser puzzle](assets/figures/fig-021.svg)
+![Malus law and the three-polariser puzzle](assets/figures/fig-022.svg)
 
 **Fig. 6.2** — Malus's law. For unpolarised input the average is the dashed line at $I_0/2$; for polarised input the curve is the $\cos^{2}$ drawn. The two 90° zeros are the crossed-polariser condition, and they are exact: no light at all, which is why the "three polarisers" case is so surprising.
 
@@ -2157,7 +2223,7 @@ $$
 >
 > Because a polariser acts on the *field*, and intensity is the square of the field. If a polariser "absorbed half the light" for every orientation not aligned with it, the third-polariser puzzle would not happen. The projection rule is the content: after the middle polariser the light is genuinely polarised along the middle axis, with full amplitude $a\cos45^\circ$, and it has "forgotten" the original direction. Retrofitting the intensity rule with a cos instead of $\cos^{2}$ breaks the arithmetic of every stack question and contradicts the measured $I_0/8$.
 
-![Three polarisers at 0, 45 and 90 degrees, with the intensity after each](assets/figures/fig-022.svg)
+![Three polarisers at 0, 45 and 90 degrees, with the intensity after each](assets/figures/fig-023.svg)
 
 **Fig. 6.3** — The polariser stack that surprises everyone: with 0° and 90° alone the light is extinguished, but a 45° filter *between* them passes a quarter of the beam, and half of that again through the analyser, so $I_0/8$ emerges. The middle filter does not create light; it re-orients the field it passes, and with the field now at 45° to the analyser there is a component for the analyser to transmit. Stage-by-stage intensity bookkeeping is the reliable way to handle any stack.
 
@@ -2186,7 +2252,7 @@ A single surface reflects only a few per cent, so the reflected beam is dim but 
 >
 > Only the *p*-component vanishes. The reflected beam at $\theta_B$ is fully polarised but its intensity is $r_s^{2}$ of the incident intensity — about 15% for glass, not zero. What vanishes is the amplitude in the plane of incidence, not the beam. (The exception is the internal Brewster angle effect in absorbing media, where the reflectance can genuinely go to zero for *both* components — a curiosity outside this course.)
 
-![Brewster angle geometry: reflected and refracted rays perpendicular](assets/figures/fig-023.svg)
+![Brewster angle geometry: reflected and refracted rays perpendicular](assets/figures/fig-024.svg)
 
 **Fig. 6.4** — Brewster's angle for air → glass. The dots on the reflected ray mark a field vibrating perpendicular to the plane of the page: the reflected beam is completely *s*-polarised, because the $p$-component (the one in the plane of the page) would have to be radiated along the axis of the oscillating dipoles it has just driven, and a dipole radiates nothing along its own axis. Note the result is imperfect in one practical way: the beam is perfectly polarised but weak, only about 15% of the incident intensity for glass.
 
@@ -2204,7 +2270,7 @@ Molecules driven by incident light re-radiate, and (as in §6.3) they radiate le
 
 In a calcite crystal an incident ray splits into two rays: the **ordinary** ray (o), which obeys Snell's law, and the **extraordinary** ray (e), which does not. The two are polarised in perpendicular directions.
 
-![Double refraction in calcite: ordinary and extraordinary rays](assets/figures/fig-024.svg)
+![Double refraction in calcite: ordinary and extraordinary rays](assets/figures/fig-025.svg)
 
 **Fig. 6.5** — Double refraction in calcite cut so that the optic axis lies in the plane of the page. The ordinary ray follows Snell's law and is polarised perpendicular to the page; the extraordinary ray is bent differently (here less, because $n_e < n_o$) and is polarised in the plane of the page. Rotating the crystal rotates the extraordinary image while the ordinary image stays fixed — the classical demonstration.
 
@@ -2246,6 +2312,18 @@ For calcite, $\Delta n$ is about 19 times larger, so the plates are 19 times thi
 > **"A quarter-wave plate polarises the light"**
 >
 > It does not; it *delays* one component. Unpolarised light through a wave plate stays unpolarised, because the two components are incoherent with each other. The plate only does something interesting to light that is already polarised, and then the effect depends on the *angle* between the input vibration and the plate's axes: 0° or 90° (no effect at all), 45° (circular output from a quarter-wave plate), anything else (elliptical output). Half-wave plates, by contrast, always return linear light — rotated.
+
+> **JEE Advanced advantage · two components, one phase, then project**
+>
+> Part 6 is one recipe, and it does not need a matrix formalism (the Jones calculus stays on this note's exclusion list). Resolve the entering amplitude on the axes of the plate, multiply *one* component by $e^{i\delta}$ with $\delta = 2\pi(n_o-n_e)t/\lambda_0$, then project the pair on the analyser and take the modulus squared.
+>
+>  $$
+> \frac{I}{I_0} = \cos^{2}(\theta-\phi) - \sin 2\theta\,\sin 2\phi\,\sin^{2}\frac{\delta}{2} \qquad (\theta \ \text{and} \ \phi \ \text{from the plate's axes, } I_0 \text{ the intensity entering the plate, monochromatic polarised input})
+> $$
+>
+>  Every statement in §6.6 is a substitution into that line. At $\theta = \phi = 45^{\circ}$ an analyser that passes the input untouched goes black for $\delta = \pi$, because the half-wave plate has rotated the vibration into the crossed direction, and reads exactly half for $\delta = \pi/2$, because a circle projects equally on every axis. Take $\phi = 0$ and the $\delta$ term disappears: a wave plate can never change the intensity measured along its own axes, which is the precise reason a quarter-wave plate does not “polarise” unpolarised light.
+>
+>  **Check.** Set $\delta = 0$, no plate, and the line must collapse to Malus, $I/I_0 = \cos^{2}(\theta-\phi)$ ✓. A formula for a plate that fails that limit has put the phase on the wrong component.
 
 ### 6.7 Optical activity: rotating the plane of polarisation
 
@@ -2501,9 +2579,21 @@ Two limits of the same quantity are worth separating because they are produced b
 | He–Ne laser | $10^{-3}$ nm | 0.4 m | fringe counting, holography |
 | stabilised laser | $10^{-6}$ nm | 400 m | gravitational-wave detectors |
 
-![Visibility as a function of path difference, and the fringe pattern it produces](assets/figures/fig-025.svg)
+![Visibility as a function of path difference, and the fringe pattern it produces](assets/figures/fig-026.svg)
 
 **Fig. 7.1** — Coherence measured, not described: the visibility of the fringes as a function of path imbalance. For a line of width $\Delta\lambda$ the contrast is the Fourier transform of the line shape, so it falls to zero at $l_c = \lambda^{2}/\Delta\lambda$, returns faintly near $2l_c$ and dies away within a few such lengths. This is the experiment behind every statement about coherence: nothing is assumed about the source, the visibility curve is measured and the coherence length is read off it.
+
+> **JEE Advanced advantage · two comparisons, no derivation**
+>
+> Every coherence question compares a *spread of path difference* with a length, and the spread is never a spread of positions on the screen. Two lines decide the whole class.
+>
+>  $$
+> \Delta(\text{path imbalance}) \lesssim \frac{\lambda_0^{2}}{\Delta\lambda}\ (\text{spectral width } \Delta\lambda), \qquad d \lesssim \frac{\lambda_0 L_1}{2s}\ (\text{source of width } s \text{ at distance } L_1) \qquad (\text{quasi-monochromatic light, small angles, } s \ll L_1)
+> $$
+>
+>  The first line answers the interferometer and thick-film questions: a 1 cm arm imbalance against sodium's 0.58 mm says no fringes, the same bench with a 0.01 nm cadmium line and 36 mm says yes, and it is also why a film thicker than about $l_c/2\mu$ stops showing colours (§3.5). The second answers the source-size questions: a 1 mm filament 0.5 m in front of slits 0.5 mm apart needs $s$ below 0.3 mm, so the fringes are simply absent — which is why every biprism bench has an adjustable slit and a condenser. Both come from one requirement, that the phase difference be settled to within about $\pi$ by everything the apparatus sums over; the visibility formula (7.1) only measures how badly that failed.
+>
+>  **Check.** Halving the spectral width doubles $\lambda_0^{2}/\Delta\lambda$ and changes nothing else, so a sharper line must let fringes survive a longer imbalance. An answer that says the opposite has compared a path difference with a wavelength instead of with a coherence length.
 
 ### 7.2 The spectrum and the interferogram are Fourier transforms of each other
 
@@ -2880,7 +2970,7 @@ Two numbers to keep as scale references:
   sensitivity that makes interferometry the standard method for measuring refractive indices of gases, and for
   monitoring their density in wind tunnels.
 
-![Michelson interferometer with an evacuated gas cell in one arm](assets/figures/fig-026.svg)
+![Michelson interferometer with an evacuated gas cell in one arm](assets/figures/fig-027.svg)
 
 **Fig. 8.1** — The Michelson as a refractometer: the cell is traversed *twice*, so pumping it out removes $2(\mu-1)L$ of optical path and the pattern walks through $N = 2(\mu-1)L/\lambda$ fringes — about 61 for 4 cm of air. Two cautions: the count is a *double* pass, and the cell must be in one arm only; a cell in each arm measures the difference of the two gases.
 
@@ -3227,7 +3317,7 @@ This is the part you revise from. It contains no new physics: it is the decision
 
 Every wave-optics question is one of six kinds, and each kind has exactly one governing equation. Identify the kind first — the arithmetic is easy and the classification is the whole problem.
 
-![Decision tree for classifying a wave optics problem](assets/figures/fig-027.svg)
+![Decision tree for classifying a wave optics problem](assets/figures/fig-028.svg)
 
 **Fig. 9.1** — The triage tree. The six boxes are the six equations of the subject; the captions beneath each are the first thing to check once you have chosen the box. The box at the bottom is the single habit that prevents most arithmetic errors: *convert path differences into wavelengths* before substituting numbers.
 
@@ -3691,6 +3781,12 @@ _Part 11 of 12 · full solutions · 36 questions · marks as printed_
 ## 11 · Solutions, and how to mark them
 
 Every solution follows the playbook's order: the principle, then the algebra, then a check. Read the solutions you got right as well as the ones you got wrong — the check line is usually the sentence that catches the next mistake. The answer key is at the end.
+
+> **The rubric behind the "Marks." lines**
+>
+> The three long answers are marked in four parts, and the parts are not equally valuable: **30 % for the principle** (the relation the question is really about, with its condition of validity), **30 % for the algebra** (the path from it to the answer, each line earned by a substitution or a limit), **20 % for the numbers** (units carried, powers of ten right) and **20 % for the check** (a limit, a dimension, or an independent estimate). A correct final answer with no stated principle earns at most half the marks; a stated principle with one arithmetic slip in the last line loses only the numbers. That is how these papers are actually marked, and it is why every solution in this part prints its check line — on a bad day that line is worth two marks by itself.
+>
+>  Sections A to E are all-or-nothing except that Section B pays +1 for a correct but incomplete set (part 10's scheme), and Section C pays the integer with no negative marking. No rubric rescues an unchecked answer: the marks here are a measure of how much of a wrong answer is worth keeping, not a licence to leave the physics unstated.
 
 ### Section A
 

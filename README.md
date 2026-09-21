@@ -17,7 +17,7 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
+| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
 | rotational mechanics | — | — | — | — | planned — claim it |
 | string waves | — | — | — | the wave-equation head of the wave sequence (plan.md PART 1) | planned — claim it |
 | sound waves | — | — | — | Laplace, columns, beats and the full Doppler effect (plan.md PART 2) | planned — claim it |
@@ -81,7 +81,7 @@ python3 tools/check_all.py           # validate the original interactive edition
 python3 tools/check_all.py --quick   # skip the Node renderer tests
 ```
 
-The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 189 chapter figures (plus the two expandable-map SVGs).
+The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 190 chapter figures (plus the two expandable-map SVGs).
 
 Optional CI: [`tools/ci/qa.yml`](tools/ci/qa.yml) runs the HTML gate as a GitHub Action. Install it with `mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/` if your checkout has workflow permissions.
 

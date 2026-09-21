@@ -991,7 +991,7 @@ window.NOTES_PAGES = window.NOTES_SITE.pages;
 <section class="merged-page" id="section-index">
 
 <p class="meta" id="top">
-<span class="badges"><span class="b o">course map</span><span class="b j">read this first</span><span class="b n">12 parts</span><span class="b o">27 figures · 136 questions</span></span>
+<span class="badges"><span class="b o">course map</span><span class="b j">read this first</span><span class="b n">12 parts</span><span class="b o">28 figures · 136 questions</span></span>
 </p>
 <h1>Wave Optics — first principles to Olympiad</h1>
 <p class="lead">Geometrical optics told you where light goes; it never asked what light <em>is</em>. This course starts
@@ -1048,6 +1048,7 @@ three printable pages.</p>
 <p>Read 1 → 4 in order the first time. Parts 5 and 6 stand alone: diffraction needs only §1.3 (Huygens) and §1.6
 (superposition), and polarisation needs only the sentence <em>light is a transverse wave</em>. Nothing in parts 2–8
 repeats a result without saying where it came from.</p>
+<p>Parts 1–7 each carry a box titled <b>JEE Advanced advantage</b>: an alternate route to the result just derived — complex amplitudes instead of trigonometric identities, a count of waves instead of a length, an arc instead of an integral, two components and a phase instead of a matrix. Each sits directly after the derivation it replaces, so either can be read first, and each ends on the limit that proves the shortcut was not luck.</p>
 <p>This note is the last stop on the wave sequence of this repository: <b>string waves → sound waves →
 electromagnetic waves → geometrical optics → wave optics</b>. Every rule used here about phase, energy and
 superposition was paid for in the first three of those notes, and §1.1.1 states the debt line by line; the ray
@@ -1527,6 +1528,12 @@ ratio of intensities, <m>0.6</m> for 9 : 1, and 0 for incoherent light. Fringe p
 <m>V</m>, not by "how bright they look", and every loss of coherence in this course shows up as a fall in
 <m>V</m>.</p></div>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · add with complex amplitudes, not identities</p>
+<p>Everything in §1.6 is one line if each wave is written as <m>a_j e^{i\phi_j}</m>: add the amplitudes, then take the modulus squared against the conjugate <m>\bar{A}</m>.</p>
+<div class="eqd">A = \sum_j a_j e^{i\phi_j}, \qquad I \propto A\bar{A} = \sum_j a_j^{2} + 2\sum_{\text{pairs } j,k} a_j a_k \cos(\phi_j-\phi_k) \qquad (\text{any number of waves of one frequency in one medium})</div>
+<p>Three manipulations generate almost every question in this course, and in this language each of them is one multiplication: a slab in one arm contributes <m>e^{2\pi i(\mu-1)t/\lambda_0}</m>, a reflection off a denser medium contributes <m>-1</m>, and unequal slits contribute unequal <em>lengths</em>, never a change of angle. The <m>N</m>-slit comb of §5.3 and the arc of §5.2 are the same sum with <m>\phi_j</m> in arithmetic progression, so neither needs a new trigonometric identity.</p>
+<b>Check.</b> Two equal waves give <m>I = 2a^{2}(1+\cos\delta)</m>: <m>4a^{2}</m> at <m>\delta = 0</m>, <m>2a^{2}</m> at <m>\delta = \pi/2</m> and nothing at <m>\delta = \pi</m>. A shortcut that cannot say those three numbers immediately has the bookkeeping wrong.
+</div>
 <h2>1.7 Coherent sources: the condition for a pattern to exist</h2>
 <p>Two waves produce a stationary pattern of bright and dark only if their phase difference at each point is
 <em>constant in time</em>. Sources that satisfy this are <b>coherent</b>. A lamp is not coherent with another lamp:
@@ -2083,11 +2090,41 @@ itself — the fringes look exactly as before. Many questions are built on this:
 look unchanged", "what angle of incidence restores the fringes". Set the <em>change</em> in optical path difference
 equal to <m>m\lambda</m> and solve; you will almost never have to compute absolute paths.</p></div>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · count waves, not millimetres</p>
+<p>Reduce each arm to a pure number before writing any geometry: <m>N_j = (\text{optical path})_j/\lambda_0</m>. The order of the fringe at a point is <m>n = N_2 - N_1</m>, so every standard perturbation of a Young's apparatus is one extra term in that difference — and nothing else.</p>
+<div class="eqd">\Delta N = \frac{(\mu-1)t}{\lambda_0}\ (\text{sheet over one slit}), \quad \frac{2(\mu-1)t}{\lambda_0}\ (\text{the same sheet in a Michelson arm}), \quad \frac{d\sin\alpha}{\lambda_0}\ (\text{beam tilted by } \alpha), \quad \frac{y_0 d}{\lambda_0 D}\ (\text{source moved across by } y_0) \qquad (\lambda_0 \text{ in vacuum, each count taken against the untilted unsheeted setup})</div>
+<p>The shift in millimetres is then <m>\Delta y = \Delta N\,\beta</m>, and the number of fringes that cross a mark is <m>\Delta N</m> with no reference to the screen at all. That is exactly what an integer-answer question asks for, and the reason the same expression is used backwards as a refractometer (§4.5): shift and fringe width both carry the factor <m>D/d</m>, so the geometry cancels out of the count.</p>
+<b>Check.</b> The 1.0 cm slab of §2.7 at <m>\mu = 1.5</m> and 600 nm is <m>5\times10^{-3}/(6\times10^{-7}) = 8333</m> fringes, a number in which no dimension of the apparatus appears; times <m>\beta = 1.2</m> mm it is the 10 mm shift that the full geometry of §2.7.1 takes four lines to reach.
+</div>
 <h2>2.9 The intensity distribution, properly</h2>
 <p>With equal slits the field at P is the sum of two sinusoids of equal amplitude and phase difference
 <m>\Delta\varphi = 2\pi d\sin\theta/\lambda</m>, so</p>
 <div class="eqd key" data-tag="2.7">I(\theta) = 4I_0\cos^{2}\!\left(\frac{\pi d\sin\theta}{\lambda}\right) \approx 4I_0\cos^{2}\!\left(\frac{\pi dy}{\lambda D}\right)</div>
 <div class="eqd">I_{\text{av}} = 2I_0, \qquad \frac{I_{\max}}{I_{\min}} = \left(\frac{a_1+a_2}{a_1-a_2}\right)^{2}</div>
+<figure class="fig">
+<svg viewBox="0 0 700 250" role="img" aria-label="Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis">
+  <line x1="80" y1="205" x2="640" y2="205" class="ln"/>
+  <line x1="80" y1="205" x2="80" y2="34" class="ln"/>
+  <text x="76" y="30" class="lbl sm" text-anchor="end">I</text>
+  <text x="636" y="222" class="lbl sm" text-anchor="end">&#948;</text>
+  <line x1="360" y1="205" x2="360" y2="46" class="dim"/>
+  <text x="360" y="222" class="lbl sm" text-anchor="middle">&#948; = 0, 2&#960;, 4&#960;</text>
+  <polyline class="thinl" points="160,198 164,191 168,182 172,171 176,159 180,147 184,133 188,120 192,107 196,94 200,83 204,74 208,66 212,60 216,56 220,55 224,56 228,60 232,66 236,74 240,83 244,94 248,107 252,120 256,133 260,147 264,159 268,171 272,182 276,191 280,198 284,202 288,205 292,205 296,202 300,198 304,191 308,182 312,171 316,159 320,147 324,133 328,120 332,107 336,94 340,83 344,74 348,66 352,60 356,56 360,55 364,56 368,60 372,66 376,74 380,83 384,94 388,107 392,120 396,133 400,147 404,159 408,171 412,182 416,191 420,198 424,202 428,205 432,205 436,202 440,198 444,191 448,182 452,171 456,159 460,147 464,133 468,120 472,107 476,94 480,83 484,74 488,66 492,60 496,56 500,55 504,56 508,60 512,66 516,74 520,83 524,94 528,107 532,120 536,133 540,147 544,159 548,171 552,182 556,191 560,198"/>
+  <polyline class="acc" points="160,182 164,176 168,168 172,158 176,148 180,137 184,125 188,113 192,101 196,90 200,80 204,71 208,64 212,59 216,56 220,55 224,56 228,59 232,64 236,71 240,80 244,90 248,101 252,113 256,125 260,137 264,148 268,158 272,168 276,176 280,182 284,186 288,188 292,188 296,186 300,182 304,176 308,168 312,158 316,148 320,137 324,125 328,113 332,101 336,90 340,80 344,71 348,64 352,59 356,56 360,55 364,56 368,59 372,64 376,71 380,80 384,90 388,101 392,113 396,125 400,137 404,148 408,158 412,168 416,176 420,182 424,186 428,188 432,188 436,186 440,182 444,176 448,168 452,158 456,148 460,137 464,125 468,113 472,101 476,90 480,80 484,71 488,64 492,59 496,56 500,55 504,56 508,59 512,64 516,71 520,80 524,90 528,101 532,113 536,125 540,137 544,148 548,158 552,168 556,176 560,182"/>
+  <line x1="88" y1="188" x2="640" y2="188" class="dim"/>
+  <text x="84" y="192" class="lbl sm" text-anchor="end">1/9</text>
+  <line x1="290" y1="186" x2="290" y2="213" class="dim"/>
+  <line x1="430" y1="186" x2="430" y2="213" class="dim"/>
+  <text x="430" y="240" class="lbl sm" text-anchor="middle">minima: 0 and I&#8320;</text>
+  <line x1="575" y1="60" x2="602" y2="60" class="thinl"/>
+  <text x="606" y="64" class="lbl sm">equal</text>
+  <line x1="575" y1="80" x2="602" y2="80" class="acc"/>
+  <text x="606" y="84" class="lbl sm">2&#215; wider</text>
+</svg>
+<figcaption><b>Fig. 2.4</b> &mdash; Equal slits and unequal ones, drawn from the two lines above: the dashed curve is <m>4I_0\cos^{2}(\delta/2)</m>, the solid curve is <m>I_0(a_1^{2}+a_2^{2}+2a_1a_2\cos\delta)</m> with <m>a_1 = 2a_2</m>, both normalised to the same peak. The solid curve never reaches the axis: its minima sit at <m>I_0(a_1-a_2)^{2} = I_0</m>, one ninth of the peak, so <m>I_{\max}/I_{\min} = 9</m> and the visibility is <m>V = 4/5</m> &mdash; the numbers part 2's Q5 asks for. This is what &ldquo;washed out&rdquo; means: a width mismatch never destroys the pattern, it only lifts its floor, which is why the exact zeros of &sect;2.2 are an approximation about equally <em>illuminated</em> slits, not about equally <em>wide</em> ones.</figcaption>
+</figure>
+
+
 <p>Two refinements matter for later parts. First, a real slit is not a point: it is a narrow rectangle, and each slit
 diffracts its own light over an angular width <m>\lambda/a</m> (part 5). The final pattern is the double-slit
 interference curve multiplied by that single-slit envelope, so the fringes fade out toward the edges of the pattern
@@ -2416,6 +2453,12 @@ indeed exchanging the two conditions above swaps bright for dark — the reflect
 negatives of each other. This is the fastest check on any film question: if your answer says that the same
 wavelength is missing in reflection <em>and</em> missing in transmission, the answer is wrong.</p></div>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · a film is a double slit with the arms folded</p>
+<p>Do not keep a second formula set for films. Run the §2.8 bookkeeping on the two reflected rays instead: the second ray travels <m>2\mu t</m> more, and it either gains a half-wave at a reflection or it does not.</p>
+<div class="eqd">\Delta N = \frac{2\mu t}{\lambda_0} + \epsilon, \qquad \epsilon = \begin{cases} \tfrac{1}{2} & \text{exactly one reflection off a denser medium} \\ 0 & \text{none, or two} \end{cases} \qquad (\text{near-normal incidence, } 2\mu t \lesssim l_c)</div>
+<p>Bright in reflection when <m>\Delta N</m> is a whole number, dark when it is a half-integer — in words, <em>an odd number of quarter-waves inside the film shines when the two reflections disagree, an even number when they agree</em>. A wedge, a soap bubble and Newton's rings then change only the thickness substituted for <m>t</m>, and the transmitted pattern is the complement because <m>R + T = 1</m> is an energy statement, not an arithmetic one.</p>
+<b>Check.</b> <m>t = \lambda/4\mu</m> with one flip gives <m>\Delta N = \tfrac{1}{2}+\tfrac{1}{2} = 1</m>, the bright film of §3.1; letting <m>t \to 0</m> leaves <m>\Delta N = \tfrac{1}{2}</m>, black — the drained film of §3.5, and the one limit no formula for films may fail.
+</div>
 <h2>3.3 A film of varying thickness: the wedge, and fringes of equal thickness</h2>
 <p>Let two glass plates touch along one edge and be separated by a spacer (a foil, a hair, a wire) at the other, so
 the air film between them is a wedge of angle <m>\theta</m>. Illuminated from above, the film reflects the familiar
@@ -2963,6 +3006,12 @@ construction.</p>
 <tr><td>Michelson interferometer</td><td>the beam splitter sends one wave down each arm</td><td>not a separation but a path imbalance</td><td>count the <em>two</em> passes through any plate in an arm</td></tr>
 </table>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · never trust a computed <m>d</m>: measure it with a lens</p>
+<p>In a biprism the source separation is <m>d = 2a(\mu-1)\alpha</m>, the product of three quantities no ruler reaches. A convex lens handed to you between biprism and screen measures <m>d</m> directly: at the two positions where the two virtual sources image sharply, the image separations are the same object seen through reciprocal magnifications.</p>
+<div class="eqd">d = \sqrt{d_1 d_2}, \qquad D = 2f + \sqrt{4f^{2} + x^{2}}, \qquad \lambda = \frac{\beta d}{D} \qquad (\text{paraxial, } D > 4f, \ x \text{ the separation of the two lens positions})</div>
+<p>This is the displacement method of the lens notes, arriving where it earns its keep: afterwards the only length that has to be measured well is the fringe width <m>\beta</m>. It rescues a Lloyd's-mirror calculation too, where <m>d = 2h</m> is a height of half a millimetre set by eye against a razor edge.</p>
+<b>Check.</b> The two magnifications are reciprocal, so <m>d_1d_2 = d^{2}</m> identically: with <m>d_1 = 2.0</m> mm and <m>d_2 = 0.50</m> mm the separation is <m>1.0</m> mm — and averaging the two readings, the standard wrong answer, would have given 1.25 mm.
+</div>
 <h2>4.5 Displacement of fringes as a measurement</h2>
 <p>Parts 2 and 3 used the shift of a pattern as a calculation; in the laboratory the same relation is used backwards,
 to measure a thickness or an index. Three standard protocols:</p>
@@ -3305,6 +3354,12 @@ goes to zero where they can be paired off in cancelling pairs. Keep the two cond
 head: <m>d\sin\theta = n\lambda</m> for <em>two slits</em> (bright), <m>a\sin\theta = m\lambda</m> for <em>one
 slit</em> (dark).</p></div>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · the arc, not the integral</p>
+<p>The single-slit formula needs no calculus. Divide the slit into strips: their phasors have equal length and turn through a total angle <m>2\beta</m>, so they lie on a circular arc whose <em>length</em> is the in-phase amplitude <m>A_0</m> and whose <em>chord</em> is the resultant.</p>
+<div class="eqd">2R\beta = A_0, \quad A = 2R\sin\beta \Rightarrow A = A_0\frac{\sin\beta}{\beta}, \qquad I = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}, \quad \beta = \frac{\pi a\sin\theta}{\lambda} \qquad (\text{Fraunhofer, one slit, normal incidence, } a \gg \lambda)</div>
+<p>The zeroes are the arcs that close (<m>\beta = m\pi</m>), and the subsidiary maxima are the turning points of the same picture, <m>\tan\beta = \beta</m>, which is why they sit <em>near</em> the halfway angles rather than on them. Put one phasor per <em>slit</em> instead of per strip, at total turn <m>2\gamma = 2\pi d\sin\theta/\lambda</m>, and §5.3's factor <m>(\sin N\gamma/\sin\gamma)^{2}</m> appears with no new tool; multiplying the two chords is what a missing order <em>is</em> — the angle at which a grating maximum and a single-slit zero are the same statement.</p>
+<b>Check.</b> Narrow the slit and <m>\beta \to 0</m> at every angle, so <m>I \to I_0</m> everywhere: a point-like opening stops having a pattern and starts radiating uniformly ✓ — the limit a ray picture pretends is exact, and the reason the pinhole of §5.7 cannot be improved by being made smaller.
+</div>
 <h2>5.3 Two slits of finite width, and N slits</h2>
 <p>Real slits have width, so the observed pattern is the product of two things: the double-slit interference
 (modulation) and the single-slit diffraction (envelope).</p>
@@ -3918,6 +3973,12 @@ polarised, and then the effect depends on the <em>angle</em> between the input v
 0° or 90° (no effect at all), 45° (circular output from a quarter-wave plate), anything else (elliptical output).
 Half-wave plates, by contrast, always return linear light — rotated.</p></div>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · two components, one phase, then project</p>
+<p>Part 6 is one recipe, and it does not need a matrix formalism (the Jones calculus stays on this note's exclusion list). Resolve the entering amplitude on the axes of the plate, multiply <em>one</em> component by <m>e^{i\delta}</m> with <m>\delta = 2\pi(n_o-n_e)t/\lambda_0</m>, then project the pair on the analyser and take the modulus squared.</p>
+<div class="eqd">\frac{I}{I_0} = \cos^{2}(\theta-\phi) - \sin 2\theta\,\sin 2\phi\,\sin^{2}\frac{\delta}{2} \qquad (\theta \ \text{and} \ \phi \ \text{from the plate's axes, } I_0 \text{ the intensity entering the plate, monochromatic polarised input})</div>
+<p>Every statement in §6.6 is a substitution into that line. At <m>\theta = \phi = 45^{\circ}</m> an analyser that passes the input untouched goes black for <m>\delta = \pi</m>, because the half-wave plate has rotated the vibration into the crossed direction, and reads exactly half for <m>\delta = \pi/2</m>, because a circle projects equally on every axis. Take <m>\phi = 0</m> and the <m>\delta</m> term disappears: a wave plate can never change the intensity measured along its own axes, which is the precise reason a quarter-wave plate does not “polarise” unpolarised light.</p>
+<b>Check.</b> Set <m>\delta = 0</m>, no plate, and the line must collapse to Malus, <m>I/I_0 = \cos^{2}(\theta-\phi)</m> ✓. A formula for a plate that fails that limit has put the phase on the wrong component.
+</div>
 <h2>6.7 Optical activity: rotating the plane of polarisation</h2>
 <p>Some materials (quartz, sugar solution, turpentine) rotate the plane of polarisation of light passing through them.
 The rotation is proportional to the path length, and for a solution also to the concentration:</p>
@@ -4207,6 +4268,12 @@ such lengths. This is the experiment behind every statement about coherence: not
 visibility curve is measured and the coherence length is read off it.</figcaption>
 </figure>
 
+<div class="box why"><p class="bt">JEE Advanced advantage · two comparisons, no derivation</p>
+<p>Every coherence question compares a <em>spread of path difference</em> with a length, and the spread is never a spread of positions on the screen. Two lines decide the whole class.</p>
+<div class="eqd">\Delta(\text{path imbalance}) \lesssim \frac{\lambda_0^{2}}{\Delta\lambda}\ (\text{spectral width } \Delta\lambda), \qquad d \lesssim \frac{\lambda_0 L_1}{2s}\ (\text{source of width } s \text{ at distance } L_1) \qquad (\text{quasi-monochromatic light, small angles, } s \ll L_1)</div>
+<p>The first line answers the interferometer and thick-film questions: a 1 cm arm imbalance against sodium's 0.58 mm says no fringes, the same bench with a 0.01 nm cadmium line and 36 mm says yes, and it is also why a film thicker than about <m>l_c/2\mu</m> stops showing colours (§3.5). The second answers the source-size questions: a 1 mm filament 0.5 m in front of slits 0.5 mm apart needs <m>s</m> below 0.3 mm, so the fringes are simply absent — which is why every biprism bench has an adjustable slit and a condenser. Both come from one requirement, that the phase difference be settled to within about <m>\pi</m> by everything the apparatus sums over; the visibility formula (7.1) only measures how badly that failed.</p>
+<b>Check.</b> Halving the spectral width doubles <m>\lambda_0^{2}/\Delta\lambda</m> and changes nothing else, so a sharper line must let fringes survive a longer imbalance. An answer that says the opposite has compared a path difference with a wavelength instead of with a coherence length.
+</div>
 <h2>7.2 The spectrum and the interferogram are Fourier transforms of each other</h2>
 <p>What is measured in a Michelson interferometer as the mirror moves is the intensity <m>I(\Delta)</m> of the
 recombined beams; what a spectroscopist wants is <m>S(\lambda)</m>. They are related by a Fourier transform, and the
@@ -5429,6 +5496,19 @@ way the paper is marked.</p>
 <p class="lead">Every solution follows the playbook's order: the principle, then the algebra, then a check. Read the
 solutions you got right as well as the ones you got wrong — the check line is usually the sentence that catches the
 next mistake. The answer key is at the end.</p>
+<div class="box data"><p class="bt">The rubric behind the "Marks." lines</p>
+<p>The three long answers are marked in four parts, and the parts are not equally valuable: <b>30&thinsp;% for the
+principle</b> (the relation the question is really about, with its condition of validity), <b>30&thinsp;% for the
+algebra</b> (the path from it to the answer, each line earned by a substitution or a limit), <b>20&thinsp;% for the
+numbers</b> (units carried, powers of ten right) and <b>20&thinsp;% for the check</b> (a limit, a dimension, or an
+independent estimate). A correct final answer with no stated principle earns at most half the marks; a stated
+principle with one arithmetic slip in the last line loses only the numbers. That is how these papers are actually
+marked, and it is why every solution in this part prints its check line &mdash; on a bad day that line is worth two
+marks by itself.</p>
+<p>Sections A to E are all-or-nothing except that Section B pays +1 for a correct but incomplete set (part 10's
+scheme), and Section C pays the integer with no negative marking. No rubric rescues an unchecked answer: the marks
+here are a measure of how much of a wrong answer is worth keeping, not a licence to leave the physics unstated.</p></div>
+
 
 <h2>Section A</h2>
 

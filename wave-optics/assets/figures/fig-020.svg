@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 220" role="img" aria-label="Unpolarised, linearly polarised and circularly polarised light" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 270" role="img" aria-label="Diffraction grating geometry and orders" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,37 +33,27 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <g transform="translate(0,0)">
-    <line x1="40" y1="110" x2="200" y2="110" class="ln"></line>
-    <g class="acc">
-      <line x1="50" y1="110" x2="50" y2="80"></line><line x1="60" y1="110" x2="60" y2="140"></line>
-      <line x1="70" y1="110" x2="70" y2="74"></line><line x1="80" y1="110" x2="80" y2="146"></line>
-      <line x1="90" y1="110" x2="90" y2="86"></line><line x1="100" y1="110" x2="100" y2="134"></line>
-      <line x1="110" y1="110" x2="110" y2="72"></line><line x1="120" y1="110" x2="120" y2="148"></line>
-      <line x1="130" y1="110" x2="130" y2="90"></line><line x1="140" y1="110" x2="140" y2="130"></line>
-      <line x1="150" y1="110" x2="150" y2="78"></line><line x1="160" y1="110" x2="160" y2="142"></line>
-      <line x1="170" y1="110" x2="170" y2="84"></line><line x1="180" y1="110" x2="180" y2="136"></line>
-    </g>
-    <line x1="40" y1="110" x2="200" y2="110" class="acc" marker-end="url(#ah)"></line>
-    <text x="120" y="186" class="lbl sm" text-anchor="middle">unpolarised: all directions</text>
+  <line x1="70" y1="230" x2="70" y2="30" class="ln2"></line>
+  <g>
+    <line x1="70" y1="60" x2="70" y2="72" class="w"></line>
+    <line x1="70" y1="93" x2="70" y2="105" class="w"></line><line x1="70" y1="126" x2="70" y2="138" class="w"></line>
+    <line x1="70" y1="159" x2="70" y2="171" class="w"></line><line x1="70" y1="192" x2="70" y2="204" class="w"></line>
   </g>
-  <g transform="translate(240,0)">
-    <line x1="40" y1="110" x2="200" y2="110" class="ln"></line>
-    <line x1="46" y1="80" x2="46" y2="140" class="acc"></line><line x1="56" y1="72" x2="56" y2="148" class="acc"></line>
-    <line x1="66" y1="66" x2="66" y2="154" class="acc"></line><line x1="76" y1="60" x2="76" y2="160" class="acc"></line>
-    <line x1="86" y1="56" x2="86" y2="164" class="acc"></line><line x1="96" y1="54" x2="96" y2="166" class="acc"></line>
-    <line x1="106" y1="56" x2="106" y2="164" class="acc"></line><line x1="116" y1="60" x2="116" y2="160" class="acc"></line>
-    <line x1="126" y1="66" x2="126" y2="154" class="acc"></line><line x1="136" y1="72" x2="136" y2="148" class="acc"></line>
-    <line x1="146" y1="80" x2="146" y2="140" class="acc"></line>
-    <path d="M60 110 A 30 12 0 0 0 80 110" class="dim"></path>
-    <text x="120" y="186" class="lbl sm" text-anchor="middle">linearly polarised</text>
-  </g>
-  <g transform="translate(480,0)">
-    <line x1="40" y1="110" x2="200" y2="110" class="ln"></line>
-    <path d="M46 110 q 10 -26 20 0 q 10 26 20 0 q 10 -26 20 0 q 10 26 20 0 q 10 -26 20 0" class="acc" fill="none"></path>
-    <path d="M146 110 q 10 -26 20 0" class="acc" fill="none"></path>
-    <line x1="86" y1="84" x2="86" y2="110" class="acc" marker-end="url(#ah)"></line>
-    <line x1="126" y1="136" x2="126" y2="110" class="acc" marker-end="url(#ah)"></line>
-    <text x="120" y="186" class="lbl sm" text-anchor="middle">circularly polarised</text>
-  </g>
+  <rect x="60" y="30" width="20" height="200" class="facc"></rect>
+  <text x="52" y="46" class="lbl sm" text-anchor="end">grating</text>
+  <line x1="70" y1="130" x2="620" y2="130" class="acc" marker-end="url(#ah)"></line>
+  <line x1="70" y1="130" x2="560" y2="60" class="acc" marker-end="url(#ah)"></line>
+  <line x1="70" y1="130" x2="520" y2="20" class="acc" marker-end="url(#ah)"></line>
+  <line x1="70" y1="130" x2="560" y2="200" class="acc" marker-end="url(#ah)"></line>
+  <line x1="70" y1="130" x2="520" y2="240" class="acc" marker-end="url(#ah)"></line>
+  <path d="M120 130 A 50 50 0 0 0 116 112" class="dim"></path>
+  <text x="126" y="120" class="lbl sm">θ₁</text>
+  <path d="M170 130 A 100 100 0 0 0 156 88" class="dim"></path>
+  <text x="180" y="98" class="lbl sm">θ₂</text>
+  <text x="420" y="126" class="lbl sm">n = 0 (white, undeviated)</text>
+  <text x="400" y="50" class="lbl sm">n = 1: θ = 17.5° for 600 nm</text>
+  <text x="360" y="14" class="lbl sm">n = 2: 36.9°</text>
+  <text x="400" y="214" class="lbl sm">n = −1</text>
+  <text x="360" y="256" class="lbl sm">n = −2</text>
+  <text x="80" y="252" class="lbl sm">d = 2.0 μm (5000 lines/cm): each order is a full spectrum, violet nearest the centre</text>
 </svg>

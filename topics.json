@@ -238,11 +238,11 @@
       "pages": [
         "Wave-optics.html"
       ],
-      "figures": 27,
+      "figures": 28,
       "questions": 172,
       "solutions": 100,
-      "math_spans": 2128,
-      "bytes_html": 487463,
+      "math_spans": 2192,
+      "bytes_html": 502787,
       "paper": {
         "questions": 36,
         "sections": 7,
