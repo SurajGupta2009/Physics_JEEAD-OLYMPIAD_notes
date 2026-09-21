@@ -50,7 +50,7 @@ TOPICS = [
      46, 152, "36-question INPhO-standard paper"),
     ("wave-optics.html", "wave-optics", "Wave optics",
      "Interference, diffraction, thin films and polarisation, from Huygens to the resolving power.",
-     27, 169, "36-question INPhO-standard paper"),
+     27, 172, "36-question INPhO-standard paper"),
 ]
 
 PAGE_CSS = """

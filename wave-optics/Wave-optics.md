@@ -2,7 +2,7 @@
 
 <a id="top"></a>
 
-_course map · read this first · 12 parts · 27 figures · 133 questions_
+_course map · read this first · 12 parts · 27 figures · 136 questions_
 
 # Wave Optics — first principles to Olympiad
 
@@ -16,7 +16,9 @@ Geometrical optics told you where light goes; it never asked what light *is*. Th
 
 Parts 1–4 are the Cengage chapter, in order of what has to be true before the next thing can be said: the wave and Huygens' construction (1), the double slit (2), thin films and Newton's rings (3), and the laboratory interferometers — Fresnel's biprism, Lloyd's mirror, Michelson (4). Parts 5–8 are the material the chapter stops short of but every serious paper examines: diffraction (5), polarisation (6), coherence and the wave toolkit that makes the finite width of a spectral line matter (7), and the measurements and instruments built on all of it (8). Part 9 is the playbook — the triage tree, the phase-bookkeeping algorithm, the trap catalogue and the number sheet. Parts 10–11 are a 36-question paper in JEE format with full solutions, and part 12 is the whole course compressed to three printable pages.
 
-Read 1 → 4 in order the first time. Parts 5 and 6 stand alone: diffraction needs only §1.3 (Huygens) and §1.5 (superposition), and polarisation needs only the sentence *light is a transverse wave*. Nothing in parts 2–8 repeats a result without saying where it came from.
+Read 1 → 4 in order the first time. Parts 5 and 6 stand alone: diffraction needs only §1.3 (Huygens) and §1.6 (superposition), and polarisation needs only the sentence *light is a transverse wave*. Nothing in parts 2–8 repeats a result without saying where it came from.
+
+This note is the last stop on the wave sequence of this repository: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Every rule used here about phase, energy and superposition was paid for in the first three of those notes, and §1.1.1 states the debt line by line; the ray results borrowed from the fourth are listed in the prerequisite check below. If the mechanical waves are rusty, spend an hour on parts 1–2 of the string-wave notes before §1.6 — it removes most of the mystery from this subject, because the only genuinely new thing about light is that its wave needs no medium and its disturbance is transverse.
 
 ### Read this first: the five ideas everything rests on
 
@@ -60,21 +62,22 @@ The Cengage *Wave Optics* chapter (book pages 2.1–2.95) is the floor: every on
 
 | Cengage section (page) | where it is covered here |
 | --- | --- |
+| *prerequisite* — the wave itself: the wave equation, energy and reflection at a boundary (string, sound, EM waves) | §1.1.1, with the boundary-flip argument reused in §3.2 and §4.2 |
 | Huygens' Wave Theory · wavefronts · Huygens' construction (2.2–2.4) | §1.1–1.3, with both laws of refraction and reflection derived |
-| Principle of linear superposition (2.4) | §1.4–1.5, including the general two-source intensity $I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\varphi$ |
-| Conditions of interference · coherent sources (2.5) | §1.6–1.7, with the coherence-length condition of part 7 |
+| Principle of linear superposition (2.4) | §1.6, with the general two-source intensity $I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\varphi$ and the phasor triangle of Fig. 1.4 |
+| Conditions of interference · coherent sources (2.5) | §1.7–1.8, with the coherence-length and source-width conditions of §7.1 |
 | Interference (2.5) · thin-film interference (2.10) | part 3 §3.1–3.5 (reflected and transmitted films, wedge, Newton's rings, coatings) |
 | Young's double-slit experiment (2.13) | part 2 §2.1–2.3, from the geometry to the intensity curve |
-| Position of bright and dark fringes · fringe width (2.14–2.15) | §2.3–2.4 |
-| Maximum order of interference fringes (2.16) | §2.5 |
-| Shape of fringe patterns in YDSE (2.19) | §2.6 (hyperboloids in space, straight lines on a screen) |
-| YDSE with white light · different cases in YDSE (2.19–2.20) | §2.7–2.9 (white light, slab in one path, liquid in the apparatus, moving source) |
-| Rays not parallel to the principal axis · source beyond the central line (2.20–2.21) | §2.9 (tilted incidence, displaced source, the $d\sin\theta_0$ shift) |
-| Geometrical and optical paths · optical path (2.22) | §2.10, with the reduced-thickness rule reused from the geometrical-optics notes |
-| Displacement of fringes (2.23) | §2.11 and §4.5, including the $(\mu-1)t$ shift of a slab and the fringe-counter method |
+| Position of bright and dark fringes · fringe width (2.14–2.15) | §2.2–2.3, including the angular fringe width $\lambda/d$ and the exact $\sin\theta$ form it comes from |
+| Maximum order of interference fringes (2.16) | §2.4 |
+| Shape of fringe patterns in YDSE (2.19) | §2.5 (hyperboloids in space, straight lines on a screen, the tilted screen) |
+| YDSE with white light · different cases in YDSE (2.19–2.20) | §2.6–2.7 (white light and the wavelengths missing at a point, slab in one path, liquid in the apparatus, unequal slit widths) |
+| Rays not parallel to the principal axis · source beyond the central line (2.20–2.21) | §2.7.4–2.7.5 (the displaced source and oblique incidence, both written as one built-in $d\sin\alpha$ term) |
+| Geometrical and optical paths · optical path (2.22) | §2.8, with the reduced-thickness rule reused from the geometrical-optics notes |
+| Displacement of fringes (2.23) | §2.7.1, §2.8 and §4.5, including the $(\mu-1)t$ shift of a slab and the fringe-counter method |
 | Fresnel's biprism (2.27) · Lloyd's mirror (2.28) | part 4 §4.1–4.4, with the virtual-source geometry drawn to scale |
-| Change of phase due to reflection (2.28) | §3.2 and §4.6 (Stokes' treatment, the $\lambda/2$ that ruins a naive answer) |
-| Solved examples (2.29) · exercises (2.35–2.63) | 97 worked questions through parts 1–8, then the 36-question paper in part 10 — 133 distinct questions, every one with a full solution |
+| Change of phase due to reflection (2.28) | §3.2 and §4.2 (Stokes' treatment, the $\lambda/2$ that ruins a naive answer) |
+| Solved examples (2.29) · exercises (2.35–2.63) | 100 worked questions through parts 1–8, then the 36-question paper in part 10 — 136 distinct questions, every one with a full solution |
 | *extension* — diffraction, single slit, grating, resolution | part 5 §5.1–5.9 |
 | *extension* — polarisation, Malus, Brewster, double refraction, wave plates | part 6 §6.1–6.8 |
 | *extension* — coherence, Fresnel coefficients, evanescent waves, N-slit theory | part 7 §7.1–7.8 |
@@ -96,16 +99,23 @@ The Cengage *Wave Optics* chapter (book pages 2.1–2.95) is the floor: every on
 
 ### Prerequisite self-check
 
-Wave optics assumes three things from the earlier notes. If any of these is shaky, fix it first — none of them takes more than ten minutes.
+Wave optics assumes four things from the earlier notes. If any of these is shaky, fix it first — none of them takes more than ten minutes.
 
 - **Geometrical optics, refraction:**$n_1\sin i = n_2\sin r$, $\lambda_{\text{medium}} = \lambda_0/n$,
   and the reduced thickness $t/\mu$ of a slab. Everything about optical path uses this.
 - **Trigonometry:** the small-angle limits $\sin\theta \approx \tan\theta \approx \theta$ and
   $\cos\theta \approx 1-\theta^{2}/2$, with $\theta$ in radians. A fringe calculation is a small-angle
   calculation — using degrees in the approximation is the single most common arithmetic error in this chapter.
-- **Waves from mechanics:**$y = A\sin(\omega t - kx)$, $v = \omega/k = \nu\lambda$, the phase
-  relation between two points a distance $x$ apart, and the addition of two sinusoids of the same frequency
-  (the phasor trick).
+- **Waves from mechanics (the string-wave and sound-wave notes):**$y = A\sin(\omega t - kx)$,
+  $v = \omega/k = \nu\lambda$, the phase relation between two points a distance $x$ apart, and the addition
+  of two sinusoids of the same frequency (the phasor trick). Take three things across from those notes: the wave
+  equation $\partial^{2}\psi/\partial t^{2} = v^{2}\partial^{2}\psi/\partial x^{2}$ and why linearity makes
+  superposition legal; the rule that reflection off a *harder* medium flips the phase by $\pi$ and off a
+  softer one does not; and the intensity-as-energy-flux calculation, which is repeated for light in §1.6.
+- **The electromagnetic wave (the EM-wave note):**$c = 1/\sqrt{\mu_0\epsilon_0}$,
+  $\vec E \perp \vec B \perp \hat k$, $E_0 = cB_0$ and $I = \tfrac12\epsilon_0 cE_0^{2}$. Only the
+  transversality of $\vec E$ does active work in this course — it is the reason part 6 exists at all, and the
+  reason two beams polarised at right angles cannot interfere (§1.10 Q8).
 
 ### Numbers to memorise (they turn three lines of algebra into a one-second estimate)
 
@@ -117,7 +127,7 @@ Wave optics assumes three things from the earlier notes. If any of these is shak
 > | frequency of green light | $5.5\times10^{14}$ Hz | to see that $\nu$ is astronomically high and never changes on refraction |
 > | fringe width rule of thumb | $\beta = \lambda D/d$ | with $\lambda=600$ nm and $D/d = 2000$, $\beta = 1.2$ mm |
 > | half-wave film thickness | $t = \lambda/4\mu \approx 100$ nm | the thickness of an antireflection coating |
-> | one wavelength of path | 1 cm of glass $\approx$ 5000 extra waves | why moving a mirror a few micrometres moves thousands of fringes |
+> | extra waves in a slab | 1 cm of glass ($\mu = 1.5$) holds 8300 more waves than 1 cm of vacuum, at 600 nm | why moving a mirror or inserting a plate moves thousands of fringes |
 > | coherence length of a lamp | $\lambda^{2}/\Delta\lambda \approx 0.4$ mm for $\Delta\lambda = 1$ nm | why fringe counting needs a monochromatic source |
 > | diffraction width | $2\lambda D/a$, with $a$ the slit width | the pattern is not a point, it is a spread of order $\lambda/a$ |
 > | polarising angle of glass | 56.3° for $\mu = 1.5$; 53.1° for water | glare suppression, and the fastest way to spot a polariser question |
@@ -142,7 +152,7 @@ Next: [**Part 1 · Waves, wavefronts and Huygens' principle →**](#section-01-w
 
 <a id="section-01-waves-and-huygens"></a>
 
-_Part 1 of 12 · JEE Advanced · base · NSEP · ≈ 50 min read · 10 questions_
+_Part 1 of 12 · JEE Advanced · base · NSEP · ≈ 50 min read · 11 questions_
 
 ## 1 · Waves, wavefronts and Huygens' principle
 
@@ -171,6 +181,54 @@ The second bullet is worth stating as a rule, because it is the one that turns e
 > The frequency is set at the source: the field at the boundary must be continuous, so the number of crests arriving per second cannot jump at a surface. If $\nu$ is fixed and the speed falls to $v = c/n$, the wavelength must fall too: $\lambda = v/\nu = \lambda_0/n$. Everything about colours, films and gratings follows from this single piece of bookkeeping: inside glass the light is *the same colour* (same frequency) but a *shorter wave*.
 >
 >  Numbers: green light of 600 nm in vacuum has $\nu = c/\lambda_0 = 5.0\times10^{14}$ Hz, so in glass of $\mu = 1.5$ the wavelength is 400 nm and one millimetre of glass holds 2500 waves instead of 1667. The extra 833 waves are exactly what a thin film counts when it decides between bright and dark.
+
+#### 1.1.1 One equation, three mechanisms: what light inherits
+
+This course is not a new subject. It is one equation you have already solved twice, with a new choice of what oscillates. For a stretched string, Newton's second law on an element $\mu\,dx$ gives $\partial^{2}y/\partial t^{2} = (T/\mu)\,\partial^{2}y/\partial x^{2}$; for a column of air the same argument with the bulk modulus gives the identical shape. Both, and light, are solutions of
+
+$$
+\frac{\partial^{2}\psi}{\partial t^{2}} = v^{2}\,\frac{\partial^{2}\psi}{\partial x^{2}} \qquad\text{with}\qquad \psi = f(x-vt) + g(x+vt), \qquad v = \frac{\omega}{k} = \nu\lambda \quad\ (\text{linear, non-dispersive medium})
+$$
+
+Only two things change from one wave to the next: which field is $\psi$, and which mechanical property supplies $v$.
+
+| wave | what oscillates | what sets the speed | where it is derived |
+| --- | --- | --- | --- |
+| string | transverse displacement $y$ of the medium | $v = \sqrt{T/\mu}$ — tension over inertia | the string-wave notes, part 1 |
+| sound | longitudinal displacement $s$, with over-pressure $\Delta P = -B\,\partial s/\partial x$ | $v = \sqrt{\gamma P/\rho}$ (Laplace's adiabatic correction) | the sound-wave notes, part 2 |
+| EM wave | $\vec E$ and $\vec B$, each perpendicular to $\hat k$ and to each other | $v = c/n$, with $c = 1/\sqrt{\mu_0\epsilon_0}$ and $n = \sqrt{\epsilon_r}$ for a non-magnetic dielectric | the EM-wave notes, part 3 |
+| **light, in this note** | the electric field $\vec E$ of an EM wave; $\vec B$ rides along with $E_0 = cB_0$ | $v = c/n = \nu\lambda$, with $n = n(\lambda)$ | here, §1.1–§1.2 |
+
+> **What optics inherits, and what it does not**
+>
+> - **From the string.** Linear superposition — the equation is linear, so solutions may be added, which is the
+>   whole of §1.6 and therefore of every fringe in this note. Energy proportional to amplitude squared, which is why a
+>   screen records $I \propto a^{2}$ and why interference moves energy sideways instead of destroying it. The
+>   kinetic/potential interchange of a standing wave, which reappears as the standing light wave in front of a mirror
+>   (§7.7). And the boundary rule: reflection off a harder medium flips the phase by $\pi$, reflection off a
+>   softer one does not.
+> - **From sound.** The intensity formula. $I = \tfrac12 \rho v \omega^{2} s_0^{2}$ for a sound wave and
+>   $I = \tfrac12 \epsilon_0 c E_0^{2}$ for light are the same computation — energy density times the speed at
+>   which it is carried — so every place this note compares two intensities is an acoustic argument with the constants
+>   renamed. The averaging habit carries over too: an ear and a photodiode both read a *time-averaged flux*, never
+>   an instantaneous one, which is why $I_{\text{av}} = 2I_0$ in §2.9 is a statement about the detector as much as
+>   about the wave.
+> - **From the EM wave, and from nowhere else.** Transversality. Neither a string on a table nor a sound wave in
+>   air can be polarised; only light's disturbance is a vector confined to the plane perpendicular to $\hat k$.
+>   Part 6 is nothing but that fact, and it is also why two beams polarised at right angles give no fringes at all
+>   (§1.10 Q8): their $\vec E$ vectors have no common direction in which to add. The second gift is the absence
+>   of a medium — which is why no "wind" term ever appears in a fringe formula here, in pointed contrast with the
+>   acoustic Doppler machinery of the sound notes, where the medium's motion is half the answer.
+> - **Not inherited.** The dispersion-free idealisation. A string under fixed tension and a gas at fixed
+>   temperature carry every $\omega$ at almost the same $v$, so a pulse keeps its shape. Glass is not like
+>   that: because $n = n(\lambda)$, §2.3's fringe spacing is a different number for every colour, white-light
+>   fringes die after two or three orders (§2.6), and a grating (§5.4) is a spectrometer rather than a ruler.
+
+> **The boundary flip is one fact stated three times — and one place the analogy breaks**
+>
+> On a string the reflected amplitude at a junction is $A_r = \frac{v_2-v_1}{v_2+v_1}A_i$, negative (a $\pi$ flip) whenever the second string is slower, i.e. heavier. For light at normal incidence the Fresnel amplitude coefficient of §7.3 is $r = \frac{n_1-n_2}{n_1+n_2}$, negative whenever $n_2 > n_1$ — the same sign rule, because $n \propto 1/v$ translates "optically denser" into "heavier string". Hold on to the parallel and the phase bookkeeping of parts 3 and 4 stops being memorisation: a soap film's front surface reflects off the denser side and flips, its back surface reflects off the rarer side and does not, and Lloyd's mirror at grazing incidence total-reflects, which is exactly a fixed end — so its central fringe is dark for the same reason a string clamped at both ends has a node there.
+>
+>  Where it breaks, and it matters: a string meeting a rigid wall returns everything ($|r| = 1$) while an air–glass surface returns a fifth of the amplitude ($|r| = 0.2$, i.e. 4% of the energy). The $\pi$ of optics is a phase statement about a *weak* beam, so the two beams that interfere in a film have very unequal amplitudes unless the coating is designed for it. That is why a Michelson interferometer uses a metal or dielectric-coated beam splitter rather than bare glass, and why amplitude shows up in the *visibility* of the fringes (§7.1) rather than anywhere in their positions.
 
 ### 1.2 Wavefronts and rays: the same fact in two languages
 
@@ -213,7 +271,7 @@ Written out: in triangles $ABC$ and $ADC$, the hypotenuse $AC$ is common, $AD = 
 
 > **The same picture also explains the partial reflection you usually ignore**
 >
-> Huygens assumes every point of the front re-radiates. At a real interface, the wavelets re-radiated by the surface carry away some of the incident energy, so a single surface reflects a few per cent even when it is perfectly clean (4% for glass at normal incidence, §7.4). In the ray picture we quietly draw one arrow and choose either the reflected or the transmitted branch; in the wave picture both exist and the split is a question about amplitudes, which is what Fresnel's coefficients answer.
+> Huygens assumes every point of the front re-radiates. At a real interface, the wavelets re-radiated by the surface carry away some of the incident energy, so a single surface reflects a few per cent even when it is perfectly clean (4% for glass at normal incidence, §7.3). In the ray picture we quietly draw one arrow and choose either the reflected or the transmitted branch; in the wave picture both exist and the split is a question about amplitudes, which is what Fresnel's coefficients answer.
 
 ### 1.5 The law of refraction from Huygens
 
@@ -330,7 +388,7 @@ $v = c/\mu = 3.0\times10^{8}/1.5 = 2.0\times10^{8}$ m/s; $\nu = c/\lambda_0 = 3.
 
  Waves in 1.00 mm: vacuum $10^{-3}/600\times10^{-9} = 1667$; glass $10^{-3}/400\times10^{-9} = 2500$. Difference $833$ waves.
 
- **Check.** The extra count is also $(\mu-1)t/\lambda_0 = 0.5\times10^{-3}/600\times10^{-9} = 833$ ✓ — the two routes must agree, and this $(\mu-1)t$ is the quantity that shifts fringes in §2.11.
+ **Check.** The extra count is also $(\mu-1)t/\lambda_0 = 0.5\times10^{-3}/600\times10^{-9} = 833$ ✓ — the two routes must agree, and this $(\mu-1)t$ is the quantity that shifts fringes in §2.7.1.
 
 </details>
 
@@ -341,7 +399,7 @@ $v = c/\mu = 3.0\times10^{8}/1.5 = 2.0\times10^{8}$ m/s; $\nu = c/\lambda_0 = 3.
 
 Take the incident front reaching the surface first at A and last at C. In the time $\Delta t$ the wave takes to travel $BC = v\Delta t$, the wavelet from A grows to the same radius $AD = v\Delta t$, because reflection does not change the speed. Triangles ABC and ADC have a common hypotenuse and equal heights, hence equal angles at $A$ and $C$: the front (and therefore the ray, which is normal to it) leaves at the same angle to the surface, so $r = i = 30^\circ$.
 
- At a beam splitter the *geometry* is unchanged — the same envelope is constructed — but the amplitude of the reflected wavelet is smaller than that of the incident wave. Huygens' construction predicts directions; it says nothing about how much energy takes each branch. That is the job of the amplitude (Fresnel) coefficients of §7.4.
+ At a beam splitter the *geometry* is unchanged — the same envelope is constructed — but the amplitude of the reflected wavelet is smaller than that of the incident wave. Huygens' construction predicts directions; it says nothing about how much energy takes each branch. That is the job of the amplitude (Fresnel) coefficients of §7.3.
 
 </details>
 
@@ -449,6 +507,19 @@ At the very edge the thickness tends to zero, so the path difference $2\mu t\cos
 
 </details>
 
+### **Q11** A transverse pulse on a string returns inverted from a rigid wall and upright from a free end. Light reflected from air into glass also picks up a $\pi$ phase change. Explain the analogy using the impedance picture, and state quantitatively where the two situations stop being alike. _([medium])_
+
+<details>
+<summary>Solution</summary>
+
+Both are continuity problems at a junction between two media with different wave speeds. On the string the reflected amplitude is $A_r = \frac{v_2-v_1}{v_2+v_1}A_i$: entering a slower (heavier) string, or a wall, which is the limit $v_2 \to 0$, gives $A_r = -A_i$, the inverted pulse. For light, $n \propto 1/v$, so air-to-glass is the "slower medium" case and the amplitude coefficient $r = \frac{n_1-n_2}{n_1+n_2} = \frac{1-1.5}{1+1.5} = -0.2$ carries exactly that minus sign: a $\pi$ shift.
+
+ What differs is the size of $r$. A wall gives $|r| = 1$, so the reflected pulse carries all the energy and the node is perfect. Glass gives $|r| = 0.2$, i.e. $R = |r|^{2} = 4\%$ of the energy, so the flip is a statement about a weak reflected beam and about a transmitted beam that keeps 96%. The consequences are that thin-film interference works on amplitude bookkeeping rather than on total reflection, and that a film's two beams are of comparable strength only when the film is chosen so (an antireflection coating of index $\sqrt{n_{\text{glass}}} = 1.22$, which no cheap solid has — see §3.5).
+
+ **Check.** Set $n_2 = n_1$ and $r = 0$: no interface, no flip, no film colour ✓. Set $n_2 < n_1$ (glass to air) and $r = +0.2$: no flip, which is why the back surface of a soap film does not add a half-wave ✓.
+
+</details>
+
 ### 1.11 Checkpoint
 
 > **Before moving on, you should be able to answer these without notes**
@@ -458,6 +529,7 @@ At the very edge the thickness tends to zero, so the path difference $2\mu t\cos
 > - Write the intensity of two interfering waves from memory, and say what it gives when (i) the phases are random,
 >   (ii) the amplitudes are equal and the phase difference is $\pi$.
 > - Say what $(\mu-1)t$ measures and why it will keep appearing.
+> - Name the three systems that obey the same wave equation as light, and say what sets $v$ in each.
 > - State the coherence length of a spectral line in terms of $\lambda$ and $\Delta\lambda$, and use it to
 >   explain why you cannot see interference from two different lamps.
 
@@ -465,11 +537,11 @@ Next: [**Part 2 · Young's double slit, from geometry to intensity →**](#secti
 
 <a id="section-02-interference-ydse"></a>
 
-_Part 2 of 12 · JEE Advanced · core · the chapter's centre of gravity · ≈ 60 min read · 12 questions_
+_Part 2 of 12 · JEE Advanced · core · the chapter's centre of gravity · ≈ 65 min read · 14 questions_
 
 ## 2 · Young's double slit, from geometry to intensity
 
-One experiment decides the whole topic. A single slit is illuminated, the light spreads to two narrow slits cut side by side, and the two sets of waves meet on a screen: where they arrive in step you get light, where they arrive out of step you get darkness, and the bands repeat at a distance $\beta = \lambda D/d$. Everything else in parts 1–4 — films, biprisms, Lloyd's mirror — is this same calculation with a different way of producing the two sources. This part does the geometry honestly, including the four cases the chapter lists (slab, liquid, tilted rays, displaced source), and ends with the intensity curve rather than only the positions of the lines.
+One experiment decides the whole topic. A single slit is illuminated, the light spreads to two narrow slits cut side by side, and the two sets of waves meet on a screen: where they arrive in step you get light, where they arrive out of step you get darkness, and the bands repeat at a distance $\beta = \lambda D/d$. Everything else in parts 1–4 — films, biprisms, Lloyd's mirror — is this same calculation with a different way of producing the two sources. This part does the geometry honestly, including the five cases the chapter and its examiners list (slab, liquid, unequal slits, displaced source, tilted beam), and ends with the intensity curve rather than only the positions of the lines.
 
 ### 2.1 The experiment and the one approximation it needs
 
@@ -512,6 +584,14 @@ The distance between consecutive bright fringes (equivalently, between consecuti
 $$
 \beta = y_{n+1}-y_n = \frac{\lambda D}{d} \qquad\text{and angularly}\qquad \Delta\theta = \frac{\lambda}{d} \tag{2.3}
 $$
+
+The angular half deserves to be written as a result of its own, because it is the form that survives when there is no screen at all: the **angular fringe width** is
+
+$$
+\theta_{\beta} = \frac{\beta}{D} = \frac{\lambda}{d} \qquad\text{rad, valid for } \theta \ll 1 \text{ and } y \ll D; \quad \text{the exact statement is } \sin\theta_{n+1}-\sin\theta_n = \frac{\lambda}{d} \text{ for every } \theta
+$$
+
+So the fringes are strictly equally spaced in $\sin\theta$, not in $\theta$ and not in $y$. That is why the 833 orders of §2.4 crowd together toward $\theta = 90^\circ$ while the ones near the axis look perfectly regular, and it is the condition of validity to state next to $\beta = \lambda D/d$ whenever a question pushes the pattern far off axis.
 
 The constancy of $\beta$ is the reason the pattern looks like a ruler: equally spaced lines. It is also the reason the experiment is a measurement: measure $\beta$, $D$ and $d$, and the wavelength comes out, which is how Young first measured the wavelength of light in 1801. Fringe width is a linear ruler in three ways:
 
@@ -576,7 +656,19 @@ With white light every wavelength builds its own pattern, all of them coincident
 >
 > No: the orders drift apart because $y \propto \lambda$, and by the second or third order the red of one order sits on the violet of the next. The only fringe that is genuinely white is the central one. A second trap in the same question: the *width* of the central white fringe is set by the shortest wavelength present (violet spreads least), so the central band is narrower than the red first-order band — often asked, rarely answered correctly.
 
-### 2.7 The four cases that are always examined
+There is a second and sharper question the same picture asks, and it is the one an examiner sets: *which wavelengths are missing at a given point?* Fix a point where the path difference is $\Delta$. A wavelength is destroyed there when $\Delta = (2m-1)\lambda/2$ and reinforced when $\Delta = m\lambda$, so
+
+$$
+\text{absent: } \lambda = \frac{2\Delta}{2m-1}, \qquad \text{bright: } \lambda = \frac{\Delta}{m} \qquad (m = 1,2,3\ldots;\ \text{keep only the roots inside } 400\text{--}700\ \text{nm})
+$$
+
+Work it at $\Delta = 1200$ nm. Absent: $2\Delta/(2m-1) = 2400, 800, 480, 343\ldots$ nm, of which only **480 nm** is visible — the blue-green is taken out. Bright: $\Delta/m = 1200, 600, 400, 300\ldots$ nm, of which **600** and **400 nm** are visible — orange and violet in. The point reads as a warm white with a cyan bite missing: the eye reports the leftover mixture, not the list you computed, so say which wavelengths and then name the colour it leaves.
+
+> **Why this is the thin-film question wearing a different hat**
+>
+> A film's reflected colour comes from $\Delta = 2\mu t\cos r$ (§3.1), a double-slit point's from $\Delta = d\sin\theta$; after that one line both are the same two formulas, with an extra half-wave in the film if one reflection was off the denser side (§3.2). Learn the arithmetic as a single habit — *given a path difference, list the wavelengths that land inside the visible band and say which are in and which are out* — and both question types close. The condition of validity is identical too: two beams of comparable amplitude and a path difference that is fixed across the beam, which is why a film 30 $\mu$m thick shows no colours at all while a wedge a few wavelengths thick shows them brightly (§7.7).
+
+### 2.7 The five cases that are always examined
 
 #### 2.7.1 A transparent slab in front of one slit
 
@@ -608,11 +700,27 @@ $$
 y_{\text{centre}} = -\,y_0\frac{D}{D_1} \qquad (\text{opposite side to the displaced source}) \tag{2.6}
 $$
 
-This is the reason the arrangement is fiddly: the fringe system is bolted to the *source*, not to the bench. Move the lamp 1 mm sideways, with the lamp 0.5 m from the slits and the screen 1 m away, and the pattern moves 2 mm — over one and a half fringes. It is also the principle of the reversed experiment: measuring where the fringes are tells you where the source is, which is how a stellar interferometer measures the diameter of a star (§7.8).
+This is the reason the arrangement is fiddly: the fringe system is bolted to the *source*, not to the bench. Move the lamp 1 mm sideways, with the lamp 0.5 m from the slits and the screen 1 m away, and the pattern moves 2 mm — over one and a half fringes. It is also the principle of the reversed experiment: measuring where the fringes are tells you where the source is, which is how a stellar interferometer measures the diameter of a star (§4.7).
 
 > **Why a displaced source shifts the pattern rather than destroying it**
 >
 > Displacing the source adds the *same* extra path $d y_0/D_1$ to every pair of paths, so the phase difference at each point of the screen is uniformly changed. A uniform phase change is a phase *shift*: the pattern made of hyperboloids rotates slightly about the axis, and on the screen it simply slides. Contrast is untouched, which is the diagnostic: a shift preserves visibility, a loss of coherence destroys it.
+
+#### 2.7.5 Oblique incidence: the beam not parallel to the axis
+
+The case the books list and rarely finish: the light arrives as a plane wave tilted by an angle $\alpha$ to the axis, instead of from a point source on it. The two slits are still fed by one wavefront, so they are still coherent — but they start with a phase difference fixed by the tilt alone. With the convention of Fig. 2.1, $S_2P-S_1P = d\sin\theta$, so the tilt simply subtracts a constant from it:
+
+$$
+\Delta(\theta) = d(\sin\theta-\sin\alpha), \qquad y_n = D\tan\alpha + n\frac{\lambda D}{d} \qquad (\text{uniform plane wave, small } \alpha;\ \text{no screen tilt, no source width})
+$$
+
+The pattern is translated, not distorted: the whole fringe system rides on top of the straight-through beam, which is where the zero-order fringe now sits. Read the first formula backwards and the displaced source of §2.7.4 is the same calculation with $\tan\alpha = -y_0/D_1$, which is exactly equation (2.6) — one mechanism, two appearances.
+
+The tilt that moves the pattern by exactly one fringe satisfies $\tan\alpha = \beta/D = \lambda/d$: the angular fringe width of §2.3, which is the cleanest way to hold both numbers in your head. With $\lambda = 600$ nm, $d = 0.50$ mm and $D = 1.0$ m that is $\alpha = 1.2\times10^{-3}$ rad for a 1.2 mm shift — a visible tilt of four minutes of arc, which is why "the fringes jumped a whole fringe width, something moved" is usually a claim about the mount rather than the physics.
+
+> **"Tilting the beam must change the fringe width"**
+>
+> It cannot: $\beta$ is set by $d$, $D$ and $\lambda$, and a tilt contributes the same extra phase at every point of the screen, which is a shift, not a scale change. What a tilt *does* change is the order limit, because $|\sin\theta| \le 1$ now reads $|\sin\alpha + n\lambda/d| \le 1$. With the numbers above the highest order is $n = 832$ on the side the beam is tilted toward and $n = -834$ on the other, instead of $\pm 833$: one order is taken off the top and handed to the bottom, while the total $2n_{\max}+1 = 1667$ is untouched — and that invariance is the check that your signs are right.
 
 ### 2.8 Geometrical path, optical path, and what "path difference" means
 
@@ -642,11 +750,11 @@ $$
 I_{\text{av}} = 2I_0, \qquad \frac{I_{\max}}{I_{\min}} = \left(\frac{a_1+a_2}{a_1-a_2}\right)^{2}
 $$
 
-Two refinements matter for later parts. First, a real slit is not a point: it is a narrow rectangle, and each slit diffracts its own light over an angular width $\lambda/a$ (part 5). The final pattern is the double-slit interference curve multiplied by that single-slit envelope, so the fringes fade out toward the edges of the pattern and may vanish entirely at a particular order. Second, a real source is not a point either: a wide source is a collection of displaced point sources, each giving a pattern shifted by $y_0D/D_1$; when the shift for the two edges of the source reaches $\beta/2$, the maxima of one fill the minima of the other and the pattern vanishes. That is the *spatial* coherence condition, worked out in §7.2.
+Two refinements matter for later parts. First, a real slit is not a point: it is a narrow rectangle, and each slit diffracts its own light over an angular width $\lambda/a$ (part 5). The final pattern is the double-slit interference curve multiplied by that single-slit envelope, so the fringes fade out toward the edges of the pattern and may vanish entirely at a particular order. Second, a real source is not a point either: a wide source is a collection of displaced point sources, each giving a pattern shifted by $y_0D/D_1$; when the shift for the two edges of the source reaches $\beta/2$, the maxima of one fill the minima of the other and the pattern vanishes. That is the *spatial* coherence condition, worked out in §7.1.
 
 ### 2.10 Summary, and the numbers to carry
 
-> **Part 2 in eight lines**
+> **Part 2 in ten lines**
 >
 > 1. Two slits illuminated by one source are coherent; the path difference to a point at angle $\theta$ is
 >   $d\sin\theta \approx dy/D$.
@@ -655,9 +763,14 @@ Two refinements matter for later parts. First, a real slit is not a point: it is
 > 4. Maximum order $n_{\max} = d/\lambda$; total bright fringes $2n_{\max}+1$.
 > 5. Slab in one arm: shift $(\mu-1)tD/d$, i.e. $(\mu-1)t/\lambda$ fringes; spacing unchanged.
 > 6. Immersed apparatus: $\beta' = \beta/\mu$; central fringe unmoved.
-> 7. Displaced source: the pattern shifts by $y_0D/D_1$, to the opposite side.
-> 8. $I = 4I_0\cos^{2}(\pi d\sin\theta/\lambda)$; unequal slits lift the minima but leave the positions
+> 7. Displaced source, or a tilted beam: the pattern shifts, the fringe width does not.
+>   $y_{\text{centre}} = -y_0D/D_1 = D\tan\alpha$, with $\Delta = d(\sin\theta-\sin\alpha)$.
+> 8. White light at a point of path difference $\Delta$: absent $\lambda = 2\Delta/(2m-1)$, bright
+>   $\lambda = \Delta/m$, visible roots only.
+> 9. $I = 4I_0\cos^{2}(\pi d\sin\theta/\lambda)$; unequal slits lift the minima but leave the positions
 >   alone.
+> 10. Everything above is a shift or a rescaling of the same two lines, $\Delta = d\sin\theta$ and
+>   $\Delta = n\lambda$. If a question is neither, it is a coherence question (§7.1), not an interference one.
 
 ### 2.11 Questions
 
@@ -814,7 +927,7 @@ $$
 <details>
 <summary>Solution</summary>
 
-Each slit diffracts its own light over an envelope with minima at $a\sin\theta = m\lambda$ (§5.4), while the interference fringes sit at $d\sin\theta = n\lambda$. The two conditions coincide when $n = m\,d/a$: interference maxima that fall on a diffraction minimum vanish.
+Each slit diffracts its own light over an envelope with minima at $a\sin\theta = m\lambda$ (§5.2), while the interference fringes sit at $d\sin\theta = n\lambda$. The two conditions coincide when $n = m\,d/a$: interference maxima that fall on a diffraction minimum vanish.
 
  Here $d/a = 0.2/0.05 = 4$, so the **4th, 8th, 12th …** interference fringes are missing, and the pattern weakens progressively as $\theta$ grows because the envelope falls off. The first missing order is $n = 4$.
 
@@ -830,6 +943,34 @@ Each slit diffracts its own light over an envelope with minima at $a\sin\theta =
 Tilting the screen does not change any path difference — the fringes still lie on the same hyperboloids in space. What changes is the *scale* on which they are cut: moving along the tilted screen by a distance $s$ changes the distance from the axis by $s\cos30^\circ$, so the fringes appear $1/\cos30^\circ = 1.15$ times wider, i.e. the measured width at the centre becomes $1.2\times1.15 = 1.39$ mm instead of 1.2 mm.
 
  **Check.** As the tilt approaches 90° the measured width diverges ✓ (the screen then runs along the fringe); at 0° there is no change ✓. The effect is purely geometric, and the same geometry explains why a photographic plate must be placed normal to the axis when a fringe width is being used to measure $\lambda$.
+
+</details>
+
+### **Q13** White light (400–700 nm) is used in a double-slit arrangement with $d = 0.60$ mm and $D = 1.2$ m. At a point 3.0 mm from the central maximum, which visible wavelengths are missing, and which is brightest? _([medium])_
+
+<details>
+<summary>Solution</summary>
+
+First the path difference at that point: $\Delta = dy/D = (0.60\times10^{-3})(3.0\times10^{-3})/1.2 = 1.5\times10^{-6}$ m, i.e. 1500 nm. A wavelength is missing where $\Delta = (2m-1)\lambda/2$, so $\lambda = 2\Delta/(2m-1) = 3000/(2m-1)$ nm, which for $m = 1,2,3,4,5$ gives 3000, 1000, **600**, **429**, 333 nm. Two of those are visible: **600 nm and 429 nm are missing**.
+
+ A wavelength is reinforced where $\Delta = m\lambda$, so $\lambda = \Delta/m = 1500/m$ nm: 1500, 750, **500**, 375 — only **500 nm** is inside the band, so the point is a green one, darkened on both sides by the two wavelengths taken out of it.
+
+ **Check.** $\Delta/\lambda = 1500/600 = 2.5$ and $1500/428.6 = 3.5$ are half-integers (dark) ✓, while $1500/500 = 3$ is an integer (bright) ✓. Had you written the bright list as $2\Delta/m$ you would have found 750 nm reinforced and 600 nm both reinforced and missing — the arithmetic refuses to be self-consistent when the factor of two is wrong.
+
+</details>
+
+### **Q14** In a YDSE with $d = 0.50$ mm, $D = 1.0$ m and $\lambda = 600$ nm the illuminating plane wave is tilted by $\alpha = 1.0$ mrad in the plane of the slit separation, so that it travels slightly upward. (a) Where does the central maximum fall, in millimetres and in fringe widths? (b) How many bright fringes lie above the axis and how many below it? (c) If the same shift is produced by moving the source, which sits $0.5$ m in front of the slits, how far and in which direction must it move? _([hard])_
+
+<details>
+<summary>Solution</summary>
+
+**(a)** The pattern rides on the undeviated beam, so $y_0 = D\tan\alpha = 1.0$ mm above the axis; with $\beta = \lambda D/d = 1.2$ mm that is $1.0/1.2 = 0.83$ of a fringe width, not a whole one.
+
+ **(b)** The bright fringes satisfy $\sin\theta_n = \sin\alpha + n\lambda/d$ with $\lambda/d = 1.2\times10^{-3}$, and $|\sin\theta_n| \le 1$ bounds $n \le 832.5$ and $n \ge -834.2$. Above the axis needs $\sin\theta_n > 0$, i.e. $n > -0.83$, so $n = 0,1,\ldots,832$: **833 fringes above**, the shifted central one included. Below it $n = -1,-2,\ldots,-834$: **834 fringes below**, and none lies exactly on the axis.
+
+ **(c)** A source at height $y_s$ and distance $D_1$ is a tilt of $\tan\alpha = -y_s/D_1$, so to move the pattern *up* by 1.0 mm the source goes *down* by $|y_s| = 1.0\,D_1/D = 0.50$ mm — half the screen-side shift, because it is half the distance.
+
+ **Check.** The total is $833 + 834 = 1667$, exactly the untilted $2\times833+1$ ✓: a tilt carries orders from one side of the axis to the other and never creates or destroys them. Counted instead from the shifted centre the limits are $+832$ and $-834$ — one order off the top, one given to the bottom, the same bookkeeping in the frame of the pattern.
 
 </details>
 
@@ -1361,7 +1502,7 @@ The two conditions explain the whole practical design of the experiments in this
   fringes vanish when the baseline $b$ satisfies $b\theta \approx 1.22\lambda$ for a uniform disc. For
   Betelgeuse ($\theta = 0.047''= 2.3\times10^{-7}$ rad) with $\lambda = 575$ nm this predicts
   $b \approx 3$ m, and Michelson measured the first stellar diameter this way — the same $1.22$ that
-  appears as the diffraction limit of a telescope in §5.7, used here as a *measuring* rule.
+  appears as the diffraction limit of a telescope in §5.5, used here as a *measuring* rule.
 - **Fourier-transform spectroscopy.** Moving a Michelson mirror and recording the intensity against path
   imbalance gives an interferogram whose Fourier transform is the spectrum of the source. The entire instrument is
   "count fringes and watch the contrast", but it is today's standard way to measure infrared spectra, because it reads
@@ -2910,7 +3051,7 @@ $$
 
  That is half the expected 589 nm. Halving the count difference (taking the rings as 5 apart, not 10) gives 589 nm — i.e. the data are consistent only if the rings are separated by 5 in order number, or if every other ring was missed. Correct reading: with 589 nm light, the 10th and 20th dark rings of a 2 m lens have diameters 4.86 mm and 6.87 mm — exactly the measured values — so the quoted diameters are the 10th and 20th *rings* counted as visible rings in the pattern, meaning that what the observer called "the 10th" was actually the 5th dark ring. This is precisely the practical trap of the experiment, and the arithmetic detects it.
 
- **Check.** This is an audit question: the numbers were chosen to look consistent but the order numbers disagree with $\lambda$. The diagnostic is that the answer lands outside the visible range — the same filter used in P2 of §4.9. In the laboratory, count from the centre outward carefully, or better, always use the $D^{2}$-versus-$n$ straight-line method where the slope is fixed by many points and a miscount is obvious.
+ **Check.** This is an audit question: the numbers were chosen to look consistent but the order numbers disagree with $\lambda$. The diagnostic is that the answer lands outside the visible range — the same audit rule of §8.7. In the laboratory, count from the centre outward carefully, or better, always use the $D^{2}$-versus-$n$ straight-line method where the slope is fixed by many points and a miscount is obvious.
 
 </details>
 
@@ -3164,6 +3305,9 @@ Before writing a final answer, push one parameter to an extreme and see whether 
 | Mixing coherence length and path imbalance in a Michelson | The mirror travel is *half* the path imbalance: $\Delta L = \lambda^{2}/2\Delta\lambda$ for a doublet's disappearance |
 | Assuming white-light fringes are visible far from zero order | They are confined to a path imbalance of about $\lambda^{2}/\Delta\lambda \approx 1\ \mu$m — which is exactly why they mark the zero so well |
 | Letting a thin-film colour rule run backwards | From $\lambda = 4\mu t$ for a bright reflection, a *thinner* film reflects a *shorter* wavelength — colours march to the blue as it drains, then go black |
+| Reading a white-light fringe as one colour's fringe | A point is a sum over the band: absent $\lambda = 2\Delta/(2m-1)$, bright $\lambda = \Delta/m$, and the eye reports the leftover mixture, not the list (§2.6) |
+| Re-deriving $\beta$ after tilting the incident beam | A tilt feeds both slits the same extra phase, so it shifts the pattern by $D\tan\alpha$ and leaves $\beta$ alone; only the order limit moves (§2.7.5) |
+| Expecting a glass surface to invert like a string off a wall | The sign rule is the same, the magnitude is not: air–glass returns $\|r\| = 0.2$ of the amplitude, not the whole of it, so the $\pi$ is a statement about a 4% beam (§1.1.1, §3.2) |
 
 ### 9.6 The number sheet
 
@@ -3836,7 +3980,8 @@ Everything in parts 1–8, in the order it is used, with the condition each form
 
 | quantity | relation | condition / note |
 | --- | --- | --- |
-| wave equation | $y = A\cos(\omega t-kx)$, $k = 2\pi/\lambda$, $v = \omega/k = \nu\lambda$ | transverse for light, longitudinal for sound |
+| wave equation | $\partial^{2}\psi/\partial t^{2} = v^{2}\,\partial^{2}\psi/\partial x^{2}$, every solution a sum $f(x-vt)+g(x+vt)$ | linear, non-dispersive medium; $v = \sqrt{T/\mu}$ string, $\sqrt{\gamma P/\rho}$ sound, $c/n$ light (§1.1.1) |
+| travelling-wave solution | $y = A\cos(\omega t-kx)$, $k = 2\pi/\lambda$, $v = \omega/k = \nu\lambda$ | the field is transverse for light (so §12.6 applies), longitudinal for sound |
 | in a medium | $\lambda_{\text{med}} = \lambda_0/\mu$, $v = c/\mu$, $\nu$ unchanged | frequency never changes on refraction |
 | intensity | $I = \tfrac12\epsilon_0 cE_0^{2}$, so $I\propto A^{2}$ | compare intensities in the same medium |
 | superposition, two sources | $I = I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\varphi$ | the cross term needs a common field direction |
@@ -3853,7 +3998,7 @@ Everything in parts 1–8, in the order it is used, with the condition each form
 | path difference | $\Delta = d\sin\theta \approx \frac{dy}{D}$ | exact for angles, approximate for fringes near the axis |
 | fringe positions | bright $y_n = \frac{n\lambda D}{d}$, dark $y_n = \frac{(n+\frac12)\lambda D}{d}$ | $n = 0$ is the central bright fringe |
 | fringe width | $\beta = \frac{\lambda D}{d}$ | same for bright and dark fringes, independent of the order |
-| angular width | $\theta = \frac{\beta}{D} = \frac{\lambda}{d}$ | in a medium of index $\mu$, use $\lambda/\mu$ |
+| angular fringe width | $\theta_{\beta} = \frac{\beta}{D} = \frac{\lambda}{d}$ | exact only for $\theta \ll 1$; the invariant is $\Delta(\sin\theta) = \lambda/d$. In a medium of index $\mu$, use $\lambda/\mu$ |
 | fringe count on a screen of height $2L$ | $N = \frac{2L}{\beta}$ | count the central fringe once |
 | maximum order | $n_{\max} = \text{int}\left(\frac{d}{\lambda}\right)$ | beyond it the two paths cannot differ by whole wavelengths |
 | three slits, spacing $d$ | $I = I_0\left(3+4\cos\delta+2\cos2\delta\right)$, $\delta = \frac{2\pi d\sin\theta}{\lambda}$ | principal maxima at $\delta = 2n\pi$; secondary maxima between them are weaker |
@@ -3862,6 +4007,8 @@ Everything in parts 1–8, in the order it is used, with the condition each form
 | two films, equal thickness | $N = \frac{(\mu_1-\mu_2)t}{\lambda}$ | air is common to both paths, so only the difference of the extra optical paths counts |
 | source at height $a$, distance $r$ | $\Delta = \frac{yd}{D}+\frac{ad}{r}$, so the pattern shifts by $\frac{aD}{r}$ | any part of the geometry that changes the $d\sin\theta$ term shifts the pattern |
 | white light | orders overlap from $m\lambda = (m+1)\lambda'$ | only two or three coloured orders are clean before white returns |
+| white light at one point of path difference $\Delta$ | absent $\lambda = \frac{2\Delta}{2m-1}$, bright $\lambda = \frac{\Delta}{m}$ | keep only roots in 400–700 nm; the same arithmetic as a film with $\Delta = 2\mu t\cos r$ |
+| oblique incidence, tilt $\alpha$ | $\Delta = d(\sin\theta-\sin\alpha)$, central fringe at $y = D\tan\alpha$ | a translation only: $\beta$ and the total number of orders are unchanged |
 | reflection and transmission | $R+T = 1$ at a surface | the two fringe patterns are complementary |
 
 ### 12.3 Films, wedges, Newton's rings

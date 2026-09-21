@@ -17,8 +17,13 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
+| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
 | rotational mechanics | — | — | — | — | planned — claim it |
+| string waves | — | — | — | the wave-equation head of the wave sequence (plan.md PART 1) | planned — claim it |
+| sound waves | — | — | — | Laplace, columns, beats and the full Doppler effect (plan.md PART 2) | planned — claim it |
+| electromagnetic waves | — | — | — | displacement current, Maxwell, Poynting and radiation pressure (plan.md PART 3) | planned — claim it |
+
+The wave rows above are the spine the wave-optics note is written against: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Registering them in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 
 The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` remains the checked registry for the interactive HTML editions; `tools/check_all.py` still validates their original markup, equations, figures and question/solution counts.
 
