@@ -17,7 +17,10 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
+| **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete |
 | **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
+| sound waves & Doppler | [plan.md](plan.md) | — | — | 36-question paper | planned (Part 2) |
+| electromagnetic waves | [plan.md](plan.md) | — | — | 36-question paper | planned (Part 3) |
 | rotational mechanics | — | — | — | — | planned — claim it |
 
 The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` remains the checked registry for the interactive HTML editions; `tools/check_all.py` still validates their original markup, equations, figures and question/solution counts.
