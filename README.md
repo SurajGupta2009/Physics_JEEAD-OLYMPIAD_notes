@@ -36,7 +36,11 @@ Three ways, in order of what you get:
    offline with no tooling. Diagrams are the local SVGs, equations are typeset
    with the vendored KaTeX, solutions stay collapsible, and each page has a
    table of contents plus links to the other topics. Regenerate it any time
-   with `python3 tools/md_site.py` (needs `pip install markdown`).
+   with `python3 tools/md_site.py` (needs `pip install markdown`). To read it
+   over HTTP instead, run the server in the **repository root**
+   (`python3 -m http.server 8080`, then open `/docs/site/`): the pages reach their
+   diagrams at `../../<topic>/assets/figures/`, so a server rooted in `docs/site`
+   itself renders the text but not the figures.
 2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
    `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
    they render with diagrams and equations on GitHub and in viewers with a

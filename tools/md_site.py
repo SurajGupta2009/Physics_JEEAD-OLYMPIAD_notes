@@ -349,7 +349,9 @@ def main() -> None:
         print(f"{file:<28} {source.relative_to(ROOT)}")
     (OUT / "index.html").write_text(render_index(), encoding="utf-8")
     print(f"{'index.html':<28} (topic overview)")
-    print(f"\nOpen {OUT / 'index.html'} — or run `python3 -m http.server` in docs/site for a local server.")
+    print(f"\nOpen {OUT / 'index.html'} — or, to serve it locally, run `python3 -m http.server 8080` "
+          f"in the repository root (not in docs/site: the pages reach the topic assets at ../../<topic>/assets/) "
+          f"and visit http://localhost:8080/docs/site/.")
 
 
 if __name__ == "__main__":
