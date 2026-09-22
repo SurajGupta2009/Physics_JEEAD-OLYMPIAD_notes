@@ -11,7 +11,7 @@ extension, 8-part didactic structure, SVG figures, interleaved solutions,
 final paper, formula sheet — see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 To claim a topic, open a PR (or an issue) that sets its `"owner"` in
-[`topics.json`](topics.json) and flips `"status"` to `"in-progress"`. Nothing
+[`topics.json`](topics.json) and flips `"status"` to `"in-progress"`. **[plan.md](plan.md) numbers every remaining chapter as PART 1 … PART 28** (mechanics 1–12, electricity and magnetism 13–22, modern physics 23–28), so a chapter is claimed by part number — *"execute PART 17"*. Nothing
 below is locked; `rotational-mechanics` is already in the registry as a
 suggestion but not yet scaffolded.
 
@@ -142,9 +142,8 @@ If you are picking up work from scratch, the highest-leverage order is:
      "exam": ["JEE Advanced", "NSEP", "INPhO", "IPhO"] }
    ```
 2. Scaffold: `python3 tools/new_topic.py <slug> --title "<Title>" --chapters "01-..."`.
-3. Write it to the eight-part didactic structure described in
-   [plan.md](plan.md) §0 and enforced across the nine existing topics.
-4. Add figures as local `assets/figures/fig-NNN.svg` (no bitmaps, no CDN).
+3. Write it to the structure in [plan.md](plan.md) §1.4 — the **15-block spine** (for the chapters numbered PART 1–28 below) — or the eight-part structure of the archived v1 blueprint for the wave/optics topics.
+4. Into the note-set: **text-only Markdown with inline `DIAGRAM D<n>.<k>` figure briefs** (plan.md §1.2) for every new chapter — no image files, no SVG, no bitmaps, no CDN. The shipped wave/optics topics keep their existing local SVG figures.
 5. Run `python3 tools/check_all.py --update` to refresh the registry counts
    and validate. Flip `status` to `complete` when the gate is green.
 6. Add the topic to `tools/md_site.py` `TOPICS` and `name_map` lists, regenerate
