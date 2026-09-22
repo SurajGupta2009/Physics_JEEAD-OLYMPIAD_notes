@@ -441,8 +441,19 @@
         "IPhO"
       ],
       "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
-      "beyond_plan": [],
-      "deliberately_not_covered": [],
+      "beyond_plan": [
+        "Rutherford differential cross-section derived in full (plan listed it only for the Olympiad block)",
+        "helium singlet/triplet two-spectrum doorway (plan did not list it)",
+        "21 cm hyperfine line order-of-magnitude in core applications",
+        "spectrometer resolving power and Doppler velocity as a worked practical",
+        "stellar Balmer-temperature Boltzmann window as an Olympiad estimate"
+      ],
+      "deliberately_not_covered": [
+        "X-rays, Moseley derivation, Bragg, Compton (owned by PART 25, the other half of Cengage ch 4)",
+        "Schrodinger-equation origin of the quantum numbers: named, not derived",
+        "line intensities and polarisations",
+        "fine structure beyond its order of magnitude"
+      ],
       "next_candidates": []
     },
     {
