@@ -266,6 +266,52 @@
         "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
       ]
+    },
+    {
+      "slug": "electromagnetic-waves",
+      "title": "Electromagnetic Waves — from Maxwell to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "format": "markdown",
+      "entry": "electromagnetic-waves/Electromagnetic-waves.md",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 180,
+        "minutes": 180,
+        "file": "Paper.md",
+        "solutions": "Solutions.md"
+      },
+      "note": "Markdown-first Part 3 of plan.md. Counts cover the master only, not generated print extracts. words = whitespace-separated source tokens; display_formulas = display math blocks.",
+      "deliberately_not_covered": [
+        "relativistic moving-mirror and electromagnetic Doppler derivations",
+        "Abraham–Minkowski material-momentum theory; force problems use vacuum momentum",
+        "general anisotropic, dispersive and nonlinear propagation; oblique Fresnel coefficients",
+        "antenna radiation patterns, multipole expansion and absolute radiation power",
+        "quantum derivation of photon energy; hf is identified as quantum input",
+        "Mie/Rayleigh scattering, diffuse-sphere reflection and asymmetric thermal recoil"
+      ],
+      "next_candidates": [
+        "antenna far-field radiation and dipole power derivation",
+        "experimental radiation-pressure and microwave standing-wave measurements"
+      ],
+      "pages": [
+        "Electromagnetic-waves.md"
+      ],
+      "figures": 7,
+      "questions": 52,
+      "solutions": 52,
+      "math_spans": 786,
+      "bytes_html": 0,
+      "bytes_markdown": 75918,
+      "words": 9241,
+      "display_formulas": 36
     }
   ]
 }

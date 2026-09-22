@@ -1,6 +1,6 @@
 # Curriculum map: Cengage floor → JEE → Olympiad
 
-This repository now has two readers for the same six consolidated note-sets:
+The six original consolidated note-sets have two editions; Electromagnetic Waves (Part 3 of `plan.md`) is an additional Markdown-first course:
 
 - the `*.md` files are the portable editions, with standard Markdown, `$...$` / `$$...$$` math, collapsible solutions and local SVG diagrams;
 - the `*.html` files are the optional interactive editions, retained for the generated table of contents, progress ticks, theme switch and printing.
@@ -15,12 +15,17 @@ The order below is intentional. Read the theory in the first column before attem
 | 2 | [Heat](heat/Heat.md) | Heat/temperature/internal energy → expansion → calorimetry and phase change → conduction → convection/cooling → radiation | Specific heat, latent heat, thermal expansion, calorimetry, Fourier/Newton/Stefan–Boltzmann laws and thermal resistance | Heat equation and diffusion time, thermal waves, effusivity, fins, critical insulation radius and radiation-balance estimates |
 | 3 | [Current Electricity](current-electricity/Current-electricity.md) | Current/drift → resistance/materials → cells → Kirchhoff/bridges → network theorems → instruments | Cengage *Electric Current and Circuits* (ch. 5), *Electrical Measuring Instruments* (ch. 6) and *Heating Effects of Current* (ch. 7) | Reciprocity/compensation, loaded four-terminal measurements, thermoelectricity, thermistor stability, transmission scaling and superconducting ledgers |
 | 4 | [Capacitors](capacitors/Capacitors.md) | Charge/conductors/Gauss → capacitance geometries → energy/force → combinations → dielectrics → RC networks | Cengage *Capacitor and Capacitance* (ch. 4): capacitance, units, geometries, energy, force, combinations, Kirchhoff, dielectrics, breakdown and exercises | Method of images, coefficients of capacitance, Green reciprocity, conformal/wedge methods, spheroids, MEMS pull-in, dielectric loss and Rayleigh fission |
-| 5 | [Geometrical Optics](geometrical-optics/Geometrical-optics.md) | Rays/plane mirrors → spherical mirrors → plane refraction → TIR → prisms/dispersion → lenses → instruments | Cengage *Optics and Modern Physics*, geometrical-optics chapter 1: mirrors, refraction, slabs, TIR, prisms, dispersion, spherical surfaces, lenses, combinations and instruments | Fermat as a variational principle, ray-transfer matrices, thick lenses, exact non-paraxial results, aberrations, rainbow/atmospheric refraction and étendue |
-| 6 | [Wave Optics](wave-optics/Wave-optics.md) | Waves/Huygens → YDSE → thin films/Newton rings → interferometers → diffraction → polarisation | Cengage *Optics and Modern Physics*, wave-optics chapter 2: wavefronts, superposition/coherence, YDSE, optical path, films, biprism, Lloyd mirror, interferometer and exercises | Diffraction/gratings/resolution, coherence length and visibility, Fresnel coefficients, evanescent waves, Fabry–Perot, Abbe limit and olympiad measurements |
+| 5 | [Electromagnetic Waves](electromagnetic-waves/Electromagnetic-waves.md) | Displacement current → Maxwell → vector waves → energy/momentum → pressure → spectrum | Part 3 plan scope: vacuum/material Maxwell equations, both wave-equation derivations, fields/intensity, normal and oblique pressure, EM spectrum and sources | Poynting/stress derivations, spherical force integration, impedance matching, standing waves, isotropic pressure, conducting-medium limit |
+| 6 | [Geometrical Optics](geometrical-optics/Geometrical-optics.md) | Rays/plane mirrors → spherical mirrors → plane refraction → TIR → prisms/dispersion → lenses → instruments | Cengage *Optics and Modern Physics*, geometrical-optics chapter 1: mirrors, refraction, slabs, TIR, prisms, dispersion, spherical surfaces, lenses, combinations and instruments | Fermat as a variational principle, ray-transfer matrices, thick lenses, exact non-paraxial results, aberrations, rainbow/atmospheric refraction and étendue |
+| 7 | [Wave Optics](wave-optics/Wave-optics.md) | Waves/Huygens → YDSE → thin films/Newton rings → interferometers → diffraction → polarisation | Cengage *Optics and Modern Physics*, wave-optics chapter 2: wavefronts, superposition/coherence, YDSE, optical path, films, biprism, Lloyd mirror, interferometer and exercises | Diffraction/gratings/resolution, coherence length and visibility, Fresnel coefficients, evanescent waves, Fabry–Perot, Abbe limit and olympiad measurements |
 
 ### Why thermodynamics precedes heat
 
 The heat note uses `U`, `Q`, `W` and the first-law ledger as established tools. It repeats every result needed for marks, but the thermodynamics note is the cleanest place to learn the state/process distinction and the sign convention. If those words are already secure, Heat can be read independently from its prerequisite paragraph.
+
+### Waves-to-optics progression
+
+The planned sequence is **String Waves → Sound Waves → Electromagnetic Waves → Geometrical Optics → Wave Optics**. String Waves and Sound Waves remain separate work packages; no missing folders are linked here. The [EM course coverage map](electromagnetic-waves/Electromagnetic-waves.md#13-coverage-and-study-route) maps every Part 3 requirement to theory and retrieval. Its 36-question paper is 180 minutes / 180 marks, with separate printable solutions. This addition does not perform Part 4's existing-optics audit.
 
 ### Why geometrical optics precedes wave optics
 
@@ -66,7 +71,7 @@ The level tags are not a second disconnected syllabus. They mark the point at wh
 - **NSEP/INPhO bridge:** use the advanced/olympiad toolkit chapters, where symmetry, scaling, limits, energy methods, differential equations or matrix methods are made explicit.
 - **IPhO-style practice:** sit the final paper without notes, write the model before the algebra, and finish with a dimensional or limiting check. The full solutions are deliberately after the paper.
 
-Every topic records its exclusions in `topics.json` and its own `README.md`; “covered through Olympiad” therefore means the complete stated scope, not an unbounded claim that every university topic is present. The main omissions are quantum optics, full Maxwell derivations, numerical simulation, advanced convection correlations, and formal statistical-mechanics ensembles; they are named so the reader knows what to study next.
+Every topic records its exclusions in `topics.json` and its own `README.md`; “covered through Olympiad” therefore means the complete stated scope, not an unbounded claim that every university topic is present. The main omissions are quantum optics, relativistic electrodynamics, numerical simulation, advanced convection correlations, and formal statistical-mechanics ensembles; they are named so the reader knows what to study next.
 
 ## Markdown conversion contract
 
