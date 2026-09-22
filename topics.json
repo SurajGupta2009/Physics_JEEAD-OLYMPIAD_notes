@@ -520,6 +520,53 @@
       "bytes_markdown": 75042,
       "words": 11113,
       "display_formulas": 13
+    },
+    {
+      "slug": "nuclear-physics",
+      "title": "Nuclear Structure, Radioactivity, Fission & Fusion — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "nuclear-physics/Nuclear-physics.md",
+      "format": "markdown",
+      "plan_part": 26,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 5 Nuclear Physics (pp. 5.1-5.39)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Semi-empirical mass formula promoted to a core derivation with the valley-floor maximisation",
+        "Geiger-Nuttall law derived from the WKB/Gamow picture, slope fitted from U-238 vs Po-212 data",
+        "Isochron dating (Rb-Sr) method added beyond C-14 and K-Ar",
+        "Gamow peak and the honest solar core temperature (tunnelling times Maxwell tail)",
+        "Solar neutrino flux estimate at Earth and the thumbnail rate",
+        "Lawson criterion for fusion confinement",
+        "Ten-half-life waste rule with the per-GW fuel arithmetic",
+        "Detector themes: cloud-chamber track signatures, Geiger dead time, Poisson counting design",
+        "Fissility Z^2/A and the maximum-Z argument for the periodic table's end",
+        "p-p chain mass audit including positron-annihilation recovery to 26.7 MeV"
+      ],
+      "deliberately_not_covered": [
+        "Shell-model spectroscopy beyond naming magic-number corrections",
+        "Full weak-interaction theory of beta-decay rates",
+        "Reactor kinetics with delayed-neutron fractions and feedback coefficients",
+        "Neutrino oscillation phenomenology (named as the solar-flux caveat only)"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Nuclear-physics.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 544,
+      "bytes_html": 0,
+      "bytes_markdown": 79890,
+      "words": 11608,
+      "display_formulas": 15
     }
   ]
 }
