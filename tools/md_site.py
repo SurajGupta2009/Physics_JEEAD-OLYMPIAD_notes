@@ -33,6 +33,15 @@ OUT = ROOT / "docs" / "site"
 
 # (site file, topic dir, display title, one-line description, figures, questions, endpoint)
 TOPICS = [
+    ("string-waves.html", "string-waves", "String waves",
+     "Transverse mechanical waves: the 1-D wave equation from Newton's second law, energy/power, boundary reflection, standing waves and normal modes.",
+     5, 36, "36-question, 3 h, 144-mark Olympiad paper"),
+    ("sound-waves.html", "sound-waves", "Sound waves",
+     "Longitudinal pressure waves, Laplace v, decibels, organ pipes with end-correction, beats, and the full 2D/wind/echo Doppler effect.",
+     15, 18, "36-question, 3 h, 150-mark paper"),
+    ("electromagnetic-waves.html", "electromagnetic-waves", "Electromagnetic waves",
+     "Displacement current, Maxwell's equations, Poynting vector, radiation pressure at normal and oblique incidence, and the EM spectrum.",
+     7, 52, "36-question, 3 h, 180-mark JEE–Olympiad paper"),
     ("capacitors.html", "capacitors", "Capacitors",
      "Charge storage, energy and the networks built from it — fields, dielectrics, series/parallel machinery.",
      32, 150, "36-question INPhO-standard paper"),
@@ -324,6 +333,9 @@ def main() -> None:
     nav_items = [(file, title) for file, _d, title, _b, _x, _y, _z in TOPICS]
     # The note files follow a fixed naming; map explicitly to be safe.
     name_map = {
+        "string-waves": "String-waves.md",
+        "sound-waves": "Sound-waves.md",
+        "electromagnetic-waves": "Electromagnetic-waves.md",
         "capacitors": "Capacitors.md",
         "current-electricity": "Current-electricity.md",
         "heat": "Heat.md",

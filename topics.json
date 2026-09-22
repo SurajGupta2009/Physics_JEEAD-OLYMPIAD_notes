@@ -271,26 +271,39 @@
       "slug": "string-waves",
       "title": "String waves — first principles to Olympiad",
       "status": "complete",
+      "format": "markdown",
       "owner": "arena-agent",
-      "entry": "string-waves/String-waves.html",
+      "entry": "string-waves/String-waves.md",
       "exam": [
         "JEE Advanced",
         "NSEP",
         "INPhO",
         "IPhO"
       ],
-      "note": "plan.md PART 1 (Agent 1), the head of the wave sequence. Floor: mechanical waves and the 1-D wave equation from Newton's second law on an element μ dx, v = √(T/μ), d'Alembert's solution, particle velocity versus wave velocity, energy and power transmission, reflection at fixed and free ends, junction coefficients, standing waves and normal modes, sonometer laws and Melde's experiment; olympiad extensions: the hanging rope, WKB amplitude scaling and the phasor sum. wave-optics/ already teaches towards this note — its §1.1.1 uses the wave equation, the intensity-is-amplitude-squared argument and the fixed-end phase flip, and §7.7 its standing waves — so the string note should cite back to wave-optics/Wave-optics.md#section-01-waves-and-huygens rather than re-deriving the phase rule from scratch.",
+      "note": "plan.md PART 1 (Agent 1), the head of the wave sequence. Markdown-first. Floor: mechanical waves and the 1-D wave equation from Newton's second law on an element μ dx, v = √(T/μ), d'Alembert's solution, particle velocity versus wave velocity, energy and power transmission, reflection at fixed and free ends, junction coefficients, standing waves and normal modes, sonometer laws and Melde's experiment; olympiad extensions: the hanging rope, WKB amplitude scaling and the phasor sum.",
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 144,
+        "minutes": 180,
+        "file": "String-waves.md",
+        "anchor": "section-09-paper"
+      },
       "next_candidates": [
-        "scaffold with: python3 tools/new_topic.py string-waves --title \"String waves\" --chapters \"01-the-wave-equation,02-energy-and-power,03-boundaries-and-impedance,04-standing-waves,05-playbook,06-paper\"",
-        "register the built counts with python3 tools/check_all.py --update and flip status to in-progress, then complete",
-        "decide the chapter-vs-single-file shape before writing: every note-set in this repo is now one merged HTML + its Markdown export"
+        "worked-problem companion: the Cengage string-waves exercise sets re-derived with the Part 8 playbook",
+        "rotational mechanics and SHM (a natural prerequisite for pendulum/loaded-string coupling)"
       ],
-      "pages": [],
-      "figures": 0,
+      "pages": [
+        "String-waves.md"
+      ],
+      "figures": 5,
       "questions": 0,
       "solutions": 0,
-      "math_spans": 0,
-      "bytes_html": 0
+      "math_spans": 880,
+      "bytes_html": 0,
+      "bytes_markdown": 74844,
+      "words": 11362,
+      "display_formulas": 177
     },
     {
       "slug": "sound-waves",
