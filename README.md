@@ -30,6 +30,13 @@ The cross-topic progression and the Cengage → JEE → Olympiad coverage audit 
 
 Three ways, in order of what you get:
 
+0. **Obsidian (for the chapters written under [plan.md](plan.md)).** Open this repository as a vault
+   (*Open folder as vault* → the repo root). The new note-sets are written for **reading mode**: YAML
+   frontmatter (so the `part:` property lets you filter the vault by plan part and block), Obsidian
+   callouts for definitions / validity conditions / traps / hand-offs, `$...$` and `$$...$$` math,
+   collapsible `<details>` solutions, and `> [!abstract] DIAGRAM …` callout briefs in place of images.
+   Section numbers (`§3.4`), `Q12` and `OL3` are stable so you can link and search them. The nine older
+   note-sets stay in their bold-label HTML/Markdown style — the vault mixes the two on purpose.
 1. **The rendered site (recommended for study).** Open
    [`docs/site/index.html`](docs/site/index.html) straight from disk — it works
    offline with no tooling. Diagrams are the local SVGs, equations are typeset
@@ -69,7 +76,7 @@ Every Markdown file keeps the original reading order: orientation → prerequisi
 
 The Markdown exporter is [tools/html_to_markdown.py](tools/html_to_markdown.py) (for HTML-first topics). The site generator is [tools/md_site.py](tools/md_site.py), which renders all `*.md` master files into `docs/site/*.html` (one page per topic, plus index, plus a shared `site.css`) for offline reading with diagrams and typeset maths. The only dependency is the `markdown` package (`pip install markdown`); the generated site itself needs no network and no Python — the KaTeX it uses is vendored in `docs/site/katex/`.
 
-The full HTML/Markdown layout contract is [STRUCTURE.md](STRUCTURE.md); workflow and authoring conventions are [CONTRIBUTING.md](CONTRIBUTING.md). The four-part wave/optics execution blueprint that produced Parts 1–4 lives in [plan.md](plan.md).
+The full HTML/Markdown layout contract is [STRUCTURE.md](STRUCTURE.md); workflow and authoring conventions are [CONTRIBUTING.md](CONTRIBUTING.md). **[plan.md](plan.md)** is the master multi-agent plan for the 28 remaining chapters (units → mechanics → electrostatics and magnetism → EMI/AC → modern physics and relativity): one PART per chapter, each with its coverage map, teaching order, figure briefs, Olympiad section and 200-mark paper, plus the contracts and a copy-paste kit for the agent writing it. The four-part wave/optics blueprint that produced the wave and optics note-sets (plan v1) is archived at [docs/plan-v1-waves-optics.md](docs/plan-v1-waves-optics.md).
 
 ## Check it
 
