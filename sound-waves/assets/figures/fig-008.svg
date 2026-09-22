@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .axis{stroke:#222;stroke-width:1}
+  .wave{stroke:#1f5fa8;stroke-width:1.5;fill:none}
+  .env{stroke:#c0392b;stroke-width:1.2;fill:none;stroke-dasharray:5 3}
+</style>
+<text x="10" y="18" class="lbl">Beats: superposition of f1≈f2 → envelope frequency f_beat = |f1-f2|</text>
+<line x1="60" y1="150" x2="760" y2="150" class="axis"/>
+<path d="M60,150 Q90,80 120,150 T180,150 T240,150 T300,150 T360,150 T420,150 T480,150 T540,150 T600,150 T660,150 T720,150" class="wave"/>
+<path d="M60,150 Q150,30 300,150 T450,150 Q600,270 760,150" class="env"/>
+<path d="M60,150 Q150,270 300,150 T450,150 Q600,30 760,150" class="env"/>
+<text x="100" y="50" class="sm">Fast: f_avg = (f1+f2)/2</text>
+<text x="100" y="70" class="sm">Slow envelope: f_beat = |f1-f2|, amplitude 2s0 cos(π(f1-f2)t)</text>
+<text x="100" y="200" class="sm">Loud (constructive) → faint → loud. Zero beats when f1=f2 (unison)</text>
+<text x="100" y="230" class="lbl">s(t)=2s0 cos[2π(f1-f2)/2 t] sin[2π(f1+f2)/2 t]</text>
+<text x="100" y="260" class="sm">Valid: |f1-f2|≪f_avg, equal amplitudes ideal, linear superposition, beats audible if f_beat &lt; ~10 Hz</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:11px;fill:#5f5c54}
+  .tube{fill:#e8f0f9;stroke:#1f5fa8;stroke-width:1.2}
+</style>
+<text x="10" y="18" class="lbl">Wind effect on Doppler – master formula with medium velocity w</text>
+<line x1="100" y1="150" x2="700" y2="150" stroke="#222" stroke-width:1" marker-end="url(#ah)"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<text x="100" y="130" class="sm">source S (v_s)</text>
+<circle cx="200" cy="150" r="5" fill="#c0392b"/>
+<circle cx="500" cy="150" r="5" fill="#0b7a4b"/>
+<text x="480" y="130" class="sm">observer O (v_o)</text>
+<text x="300" y="120" class="sm">wind w → (along line S→O positive)</text>
+<line x1="300" y1="100" x2="350" y2="100" stroke="#1f5fa8" stroke-width:1.5" marker-end="url(#ah2)"/>
+<defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker></defs>
+<text x="100" y="200" class="lbl">f' = f * [ (v ± w) ± v_o ] / [ (v ± w) ∓ v_s ]</text>
+<text x="100" y="220" class="sm">Take +w if wind blows from S to O (helps wave reach O faster). In numerator: +v_o if observer moves toward source (against wind? careful)</text>
+<text x="100" y="240" class="sm">Standard sign convention (1D, positive from source to observer):</text>
+<text x="100" y="260" class="sm">f' = f * (v + w + v_o) / (v + w - v_s) with v_o positive toward source? Let's state clearly in text: use line-of-sight projections.</text>
+<text x="100" y="280" class="sm">Simplify: effective sound speed v_eff = v ± w. Then apply usual Doppler with v_eff. Valid: uniform wind, |w|≪v, steady, no turbulence.</text>
+</svg>

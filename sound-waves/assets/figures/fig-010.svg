@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .obs{fill:#0b7a4b}
+  .wave{stroke:#1f5fa8;stroke-width:1;fill:none}
+</style>
+<text x="10" y="18" class="lbl">Doppler: moving observer – relative speed changes, wavelength in medium unchanged</text>
+<circle cx="200" cy="150" r="8" fill="#c0392b"/>
+<text x="180" y="130" class="sm">source fixed</text>
+<circle cx="200" cy="150" r="30" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<circle cx="200" cy="150" r="60" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<circle cx="200" cy="150" r="90" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<!-- observer moving towards -->
+<circle cx="350" cy="150" r="6" class="obs"/>
+<text x="330" y="120" class="sm">observer v_o → source</text>
+<line x1="350" y1="150" x2="320" y2="150" stroke="#0b7a4b" stroke-width:1.5" marker-end="url(#ah)"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a4b"/></marker></defs>
+<text x="400" y="150" class="lbl">f' = f * (v + v_o)/v  (approaching)</text>
+<text x="400" y="170" class="lbl">f' = f * (v - v_o)/v  (receding)</text>
+<text x="400" y="200" class="sm">λ unchanged in medium, but observer meets wavefronts faster/slower</text>
+<text x="60" y="250" class="sm">Distinction: moving source → λ' changes; moving observer → v_rel changes. Valid: v_o &lt; v, non-relativistic, medium at rest</text>
+</svg>

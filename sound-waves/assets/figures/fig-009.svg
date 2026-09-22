@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:11px;fill:#5f5c54}
+  .src{fill:#c0392b}
+  .wave{stroke:#1f5fa8;stroke-width:1;fill:none}
+</style>
+<text x="10" y="18" class="lbl">Doppler: moving source compresses wavefronts ahead, stretches behind</text>
+<!-- stationary -->
+<circle cx="150" cy="150" r="10" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<circle cx="150" cy="150" r="25" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<circle cx="150" cy="150" r="40" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<circle cx="150" cy="150" r="55" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+<text x="100" y="230" class="sm">Stationary source: λ same all directions</text>
+<!-- moving source to right -->
+<g transform="translate(450,150)">
+  <circle cx="0" cy="0" r="4" class="src"/>
+  <text x="-20" y="-70" class="sm">source v_s →</text>
+  <!-- wavefronts emitted at different times, centered behind -->
+  <circle cx="-30" cy="0" r="55" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+  <circle cx="-20" cy="0" r="40" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+  <circle cx="-10" cy="0" r="25" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+  <circle cx="0" cy="0" r="10" fill="none" stroke="#1f5fa8" stroke-width:0.8"/>
+</g>
+<text x="380" y="230" class="sm">Moving source: ahead λ' = (v - v_s)/f, behind λ' = (v + v_s)/f</text>
+<text x="60" y="280" class="lbl">f' = f * v / (v ∓ v_s)  [ - for approaching, + for receding, observer stationary ]</text>
+<text x="60" y="300" class="sm">Physical origin: wavelength in medium changes because source moves during emission. Valid: v_s &lt; v, steady motion, point source</text>
+</svg>
