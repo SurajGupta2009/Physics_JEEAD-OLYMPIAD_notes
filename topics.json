@@ -392,6 +392,78 @@
       "bytes_markdown": 75918,
       "words": 9241,
       "display_formulas": 36
+    },
+    {
+      "slug": "photoelectric-effect",
+      "title": "Photons, Photoelectric Effect & Matter Waves — first principles to Olympiad",
+      "status": "in-progress",
+      "owner": "arena-agent",
+      "entry": "photoelectric-effect/Photoelectric-effect.md",
+      "format": "markdown",
+      "plan_part": 23,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 3 Photoelectric Effect (pp. 3.1-3.41)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "blackbody crisis, Wien shift and Planck hypothesis as the chapter's opening (plan listed it only for the Olympiad block)",
+        "uncertainty-principle derivation of a0 and -13.6 eV placed in core theory, not only the Olympiad block",
+        "wave-packet phase/group velocity structure (v_p v_g = c^2) as a worked Olympiad derivation",
+        "two-photon photoemission and the laser Boltzmann obstruction as exam-grade Olympiad problems",
+        "thermal de Broglie wavelength and the quantum-gas criterion for conduction electrons",
+        "the eye's single-photon sensitivity as a measurement reconstruction"
+      ],
+      "deliberately_not_covered": [
+        "interpretation-level quantum mechanics (which-slit, measurement problem): flagged, not taught",
+        "band structure and semiconductor photoemission (owned by PART 27)",
+        "relativistic mirrors and pair production (owned by PARTS 25, 28)",
+        "full laser engineering: only the Einstein-coefficient threshold argument"
+      ],
+      "next_candidates": []
+    },
+    {
+      "slug": "atomic-structure",
+      "title": "Rutherford, the Bohr Model & Atomic Spectra — first principles to Olympiad",
+      "status": "in-progress",
+      "owner": "arena-agent",
+      "entry": "atomic-structure/Atomic-structure.md",
+      "format": "markdown",
+      "plan_part": 24,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 4 Atomic Physics (pp. 4.1-4.24, Bohr half)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [],
+      "deliberately_not_covered": [],
+      "next_candidates": []
+    },
+    {
+      "slug": "x-rays",
+      "title": "X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad",
+      "status": "in-progress",
+      "owner": "arena-agent",
+      "entry": "x-rays/X-rays.md",
+      "format": "markdown",
+      "plan_part": 25,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 4 Atomic Physics pp. 4.25-4.32 (X-rays, spectra, Moseley)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [],
+      "deliberately_not_covered": [],
+      "next_candidates": []
     }
   ]
 }
