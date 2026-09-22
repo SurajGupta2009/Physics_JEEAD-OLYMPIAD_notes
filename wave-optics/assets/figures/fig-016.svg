@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 250" role="img" aria-label="Lloyd&#x27;s mirror arrangement with a source and its image" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 280" role="img" aria-label="Fresnel biprism producing two virtual sources from one slit" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,21 +33,27 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <line x1="80" y1="170" x2="600" y2="170" class="ln2"></line>
-  <rect x="80" y="170" width="520" height="14" class="facc"></rect>
-  <line x1="80" y1="170" x2="80" y2="52" class="thinl"></line>
-  <circle cx="80" cy="86" r="6" class="fp"></circle>
-  <text x="62" y="82" class="lbl sm" text-anchor="end">S</text>
-  <circle cx="80" cy="254" r="6" class="fn"></circle>
-  <g class="dim"><line x1="80" y1="86" x2="80" y2="254"></line></g>
-  <text x="88" y="150" class="lbl sm">h = 0.5 mm</text>
-  <line x1="80" y1="86" x2="620" y2="80" class="acc"></line>
-  <line x1="80" y1="86" x2="560" y2="170" class="acc"></line>
-  <line x1="560" y1="170" x2="620" y2="112" class="acc"></line>
-  <line x1="620" y1="30" x2="620" y2="230" class="ln2"></line>
-  <text x="626" y="200" class="lbl sm">screen</text>
-  <text x="626" y="80" class="lbl sm">the two beams meet here</text>
-  <text x="180" y="212" class="lbl sm">mirror lying along the bench — reflection is at grazing incidence</text>
-  <text x="250" y="34" class="lbl sm">d = 2h, D = mirror-to-screen distance, β = λD/2h</text>
-  <text x="380" y="140" class="lbl sm">the mirror cuts off half the interference field: the reverse of a biprism</text>
+  <line x1="60" y1="140" x2="580" y2="140" class="thinl"></line>
+  <text x="44" y="136" class="lbl sm" text-anchor="end">S</text>
+  <circle cx="60" cy="140" r="6" class="fp"></circle>
+  <polygon points="260,120 260,160 300,110 300,170" class="fp"></polygon>
+  <text x="280" y="196" class="lbl sm" text-anchor="middle">biprism, angle A</text>
+  <circle cx="180" cy="104" r="5" class="fn"></circle><circle cx="180" cy="176" r="5" class="fn"></circle>
+  <text x="184" y="98" class="lbl sm">S₁ (virtual)</text>
+  <text x="184" y="194" class="lbl sm">S₂ (virtual)</text>
+  <g class="dim"><line x1="60" y1="140" x2="180" y2="104"></line><line x1="60" y1="140" x2="180" y2="176"></line></g>
+  <line x1="60" y1="140" x2="300" y2="64" class="acc"></line>
+  <line x1="300" y1="64" x2="620" y2="18" class="acc"></line>
+  <line x1="60" y1="140" x2="300" y2="216" class="acc"></line>
+  <line x1="300" y1="216" x2="620" y2="262" class="acc"></line>
+  <line x1="580" y1="10" x2="580" y2="272" class="ln2"></line>
+  <text x="586" y="252" class="lbl sm">screen, at distance</text>
+  <text x="586" y="268" class="lbl sm">b from the biprism</text>
+  <line x1="180" y1="104" x2="180" y2="176" class="dim"></line>
+  <text x="140" y="146" class="mi sm">d</text>
+  <line x1="60" y1="230" x2="180" y2="230" class="dim"></line>
+  <text x="106" y="248" class="lbl sm" text-anchor="middle">a</text>
+  <text x="60" y="42" class="lbl sm">d = 2a(μ−1)A ≈ 2aA for a thin prism</text>
+  <text x="60" y="60" class="lbl sm">D = a + b (virtual sources to screen)</text>
+  <text x="60" y="78" class="lbl sm">β = λ(a+b)/d</text>
 </svg>

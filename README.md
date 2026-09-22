@@ -17,11 +17,13 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete |
-| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| sound waves & Doppler | [plan.md](plan.md) | — | — | 36-question paper | planned (Part 2) |
-| electromagnetic waves | [plan.md](plan.md) | — | — | 36-question paper | planned (Part 3) |
+| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
+| **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete — PART 1 |
 | rotational mechanics | — | — | — | — | planned — claim it |
+| sound waves | — | — | — | Laplace, columns, beats and the full Doppler effect (plan.md PART 2) | planned — claim it |
+| electromagnetic waves | — | — | — | displacement current, Maxwell, Poynting and radiation pressure (plan.md PART 3) | planned — claim it |
+
+The wave rows above are the spine the wave-optics note is written against: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Registering them in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 
 The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` remains the checked registry for the interactive HTML editions; `tools/check_all.py` still validates their original markup, equations, figures and question/solution counts.
 
@@ -34,7 +36,11 @@ Three ways, in order of what you get:
    offline with no tooling. Diagrams are the local SVGs, equations are typeset
    with the vendored KaTeX, solutions stay collapsible, and each page has a
    table of contents plus links to the other topics. Regenerate it any time
-   with `python3 tools/md_site.py` (needs `pip install markdown`).
+   with `python3 tools/md_site.py` (needs `pip install markdown`). To read it
+   over HTTP instead, run the server in the **repository root**
+   (`python3 -m http.server 8080`, then open `/docs/site/`): the pages reach their
+   diagrams at `../../<topic>/assets/figures/`, so a server rooted in `docs/site`
+   itself renders the text but not the figures.
 2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
    `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
    they render with diagrams and equations on GitHub and in viewers with a
@@ -79,7 +85,7 @@ python3 tools/check_all.py           # validate the original interactive edition
 python3 tools/check_all.py --quick   # skip the Node renderer tests
 ```
 
-The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 189 chapter figures (plus the two expandable-map SVGs).
+The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 190 chapter figures (plus the two expandable-map SVGs).
 
 Optional CI: [`tools/ci/qa.yml`](tools/ci/qa.yml) runs the HTML gate as a GitHub Action. Install it with `mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/` if your checkout has workflow permissions.
 

@@ -1,16 +1,11 @@
 # MASTER MULTI-AGENT EXECUTION PLAN: WAVES, EM WAVES & OPTICS CURRICULUM
-
 > **Repository**: `Physics_JEEAD-OLYMPIAD_notes`  
 > **Target Audience**: JEE Advanced, NSEP, INPhO, IPhO aspirants  
 > **Standard**: 100% Cengage-complete floor + Olympiad depth + Proof-first rigor  
 > **Format**: Self-contained Markdown (`.md`) with clean standard MathJax/KaTeX syntax (`$...$`, `$$...$$`), collapsible `<details>` solutions, and standalone local SVGs under `assets/figures/`.
-
 ---
-
 ## 0. Architecture & Non-Negotiable Contracts
-
 Every agent working on this repository **MUST** adhere to the repository architecture defined in `STRUCTURE.md` and `CONTRIBUTING.md`:
-
 1. **Folder Autonomy**:
    - Every topic lives in its own kebab-case directory (e.g. `string-waves/`, `sound-waves/`, `electromagnetic-waves/`).
    - Every topic directory must be self-contained:
@@ -36,29 +31,21 @@ Every agent working on this repository **MUST** adhere to the repository archite
    - **Section 6: Topic Playbook**: Triage decision-tree, formula maps, numbers/constants to memorise for high-speed estimation.
    - **Section 7: Olympiad-Grade Paper**: Full 30+ question examination paper (Single-Correct, Multi-Correct, Numerical, Comprehensive Olympiad Long-Form) with full solutions and grading rubrics.
    - **Section 8: Printable Formula Sheet**: High-density reference summary with conditions of validity.
-
 ---
-
 ## 1. Topic Breakdown & Agent Assignments
-
 The curriculum for Waves, EM Waves, and Wave Optics is divided into 4 modular work packages:
-
 | Work Package | Topic Directory | Primary Markdown Deliverable | Scope / Cengage Floor |
 |---|---|---|---|
 | **PART 1** | `string-waves/` | `String-waves.md` | Mechanical waves, 1D wave equation, tension & wave speed, energy/power transmission, boundary reflections, standing waves & harmonics. |
 | **PART 2** | `sound-waves/` | `Sound-waves.md` | Longitudinal pressure waves, speed of sound (Laplace), decibels/intensity, organ pipes & end-correction, beats, resonance, complete Doppler effect. |
 | **PART 3** | `electromagnetic-waves/` | `Electromagnetic-waves.md` | Displacement current, Maxwell's equations, EM wave equations in vacuum/matter, Poynting vector, radiation pressure, EM spectrum. |
 | **PART 4** | `wave-optics/` | `Wave-optics.md` | Wavefronts, Huygens' principle, interference, YDSE in all cases, thin films, biprism, Lloyd's mirror, diffraction, polarisation, coherence. |
-
 ---
-
 ## 2. Detailed Work Package Directives
-
 ### PART 1: String Waves (Transverse Mechanical Waves)
 **Target Directory**: `string-waves/`  
 **Master Deliverable**: `string-waves/String-waves.md`  
 **Agent Role**: Agent 1 (or prompt: *"Execute PART 1 of plan.md: String Waves"*)
-
 #### Required Coverage (The Cengage Floor + Olympiad Bridge):
 1. **Kinematics & Wave Dynamics**:
    - Definition of wave: disturbance propagation vs matter transport.
@@ -93,14 +80,11 @@ The curriculum for Waves, EM Waves, and Wave Optics is divided into 4 modular wo
    - Wave propagation in a hanging heavy rope ($v(y) = \sqrt{gy}$), time for pulse to travel from bottom to top: $t = 2\sqrt{L/g}$.
    - Non-uniform mass density: WKB approximation for wave amplitude scaling $A(x) \propto \mu(x)^{-1/4}$.
    - Phasor method for superposition of multiple harmonic waves with arbitrary phase differences.
-
 ---
-
 ### PART 2: Sound Waves & Doppler Effect
 **Target Directory**: `sound-waves/`  
 **Master Deliverable**: `sound-waves/Sound-waves.md`  
 **Agent Role**: Agent 2 (or prompt: *"Execute PART 2 of plan.md: Sound Waves"*)
-
 #### Required Coverage (The Cengage Floor + Olympiad Bridge):
 1. **Nature of Longitudinal Acoustic Waves**:
    - Longitudinal displacement wave $s(x,t) = s_0 \sin(kx - \omega t)$.
@@ -144,14 +128,11 @@ The curriculum for Waves, EM Waves, and Wave Optics is divided into 4 modular wo
    - Accelerated sources and observers: Frequency variation vs. time during closest approach.
    - Acoustic echo/reflection from a moving wall or vehicle (double Doppler shift).
    - Supersonic speeds, Shock waves, Mach number $M = v_s/v$, and Mach cone angle $\sin\alpha = v/v_s = 1/M$.
-
 ---
-
 ### PART 3: Electromagnetic Waves
 **Target Directory**: `electromagnetic-waves/`  
 **Master Deliverable**: `electromagnetic-waves/Electromagnetic-waves.md`  
 **Agent Role**: Agent 3 (or prompt: *"Execute PART 3 of plan.md: Electromagnetic Waves"*)
-
 #### Required Coverage (The Cengage Floor + Olympiad Bridge):
 1. **Maxwell's Equations & Displacement Current**:
    - Inconsistency of Ampère's circuital law $\oint \vec B \cdot d\vec l = \mu_0 I_{\text{encl}}$ for a charging capacitor: surface bounded by loop passing between capacitor plates.
@@ -195,14 +176,11 @@ The curriculum for Waves, EM Waves, and Wave Optics is divided into 4 modular wo
    - Exact bounds for frequency and wavelength.
    - Production mechanisms (oscillating LC circuits, magnetrons, thermal vibration, atomic transitions, deceleration of fast electrons, nuclear decay).
    - Practical & modern applications (RADAR, cellular communication, greenhouse effect, LASIK, crystallography, radiation therapy).
-
 ---
-
 ### PART 4: Wave Optics (Audit, Harmonization & Review)
 **Target Directory**: `wave-optics/`  
 **Master Deliverable**: `wave-optics/Wave-optics.md`  
 **Agent Role**: Agent 4 (or prompt: *"Execute PART 4 of plan.md: Wave Optics Alignment"*)
-
 #### Required Coverage (Audit & Deep Alignment with Parts 1–3):
 1. **Cross-Topic Harmonization**:
    - Ensure clear pedagogical linkage: String waves $\to$ Sound waves $\to$ EM waves $\to$ Light as transverse EM wave $\to$ Wave optics.
@@ -228,13 +206,9 @@ The curriculum for Waves, EM Waves, and Wave Optics is divided into 4 modular wo
    - Polarisation: Unpolarised light, plane polarised light, Malus's law ($I = I_0 \cos^2\theta$).
    - Brewster's law ($\tan\theta_p = \mu$) and microscopic dipole explanation.
    - Double refraction in calcite/quartz, optic axis, ordinary and extraordinary rays, Quarter-wave ($\lambda/4$) and Half-wave ($\lambda/2$) retarder plates.
-
 ---
-
 ## 3. Parallel Execution Instructions for Multiple Agents
-
 When distributing work among multiple agents, use these copy-paste prompt templates:
-
 ### Prompt for Agent 1 (Part 1):
 ```text
 You are an elite Physics educator working on the repository Physics_JEEAD-OLYMPIAD_notes.
@@ -245,7 +219,6 @@ Ensure all formulas have conditions of validity and math is clean MathJax/KaTeX 
 Generate standalone SVG diagrams under string-waves/assets/figures/ for all key geometries.
 Refer to plan.md for the complete topic syllabus and quality rules.
 ```
-
 ### Prompt for Agent 2 (Part 2):
 ```text
 You are an elite Physics educator working on the repository Physics_JEEAD-OLYMPIAD_notes.
@@ -256,7 +229,6 @@ Cover Laplace correction, organ pipes with end-correction, acoustic impedance, b
 Generate standalone SVG diagrams under sound-waves/assets/figures/.
 Refer to plan.md for the complete topic syllabus and quality rules.
 ```
-
 ### Prompt for Agent 3 (Part 3):
 ```text
 You are an elite Physics educator working on the repository Physics_JEEAD-OLYMPIAD_notes.
@@ -267,7 +239,6 @@ Cover displacement current, full Maxwell curl derivations, Poynting vector, radi
 Generate standalone SVG diagrams under electromagnetic-waves/assets/figures/.
 Refer to plan.md for the complete topic syllabus and quality rules.
 ```
-
 ### Prompt for Agent 4 (Part 4 & Coordinator):
 ```text
 You are the Lead Physics Architect for Physics_JEEAD-OLYMPIAD_notes.
@@ -276,11 +247,8 @@ Audit wave-optics/Wave-optics.md against plan.md to ensure zero gaps in Cengage 
 Update topics.json and CURRICULUM.md to register string-waves, sound-waves, and electromagnetic-waves alongside existing note-sets.
 Run the quality gate: python3 tools/check_all.py.
 ```
-
 ---
-
 ## 4. Final Quality Gate Protocol
-
 Once all parts are synthesized:
 1. Verify math syntax with `python3 tools/mathfix.py` in each topic directory.
 2. Update the master registry `topics.json` with the exact word, question, and formula counts.
