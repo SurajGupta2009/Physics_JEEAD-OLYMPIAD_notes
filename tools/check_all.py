@@ -12,6 +12,8 @@ Checks, per topic:
   2. assets/pages.js is in sync with the folder (tools/setpages.py --check)
   3. the topic's own validator passes (tools/check.py: markup, math, links, anchors, figures)
   4. the math renderer's unit tests pass (node tools/test-tex.js) when node is installed
+  Markdown-first entries use their required local check.py and count only their master
+  (including source words and display formulas); print extracts are excluded.
   5. the mechanical counts in topics.json (figures, questions, solutions, math, bytes) match disk
 
 Exit code is non-zero if anything fails, so it works as a pre-commit hook or CI step.
@@ -33,15 +35,31 @@ def save(data):
 
 
 def read(p):
-    return open(p, encoding='utf-8').read()
+    with open(p, encoding='utf-8') as fh:
+        return fh.read()
 
 
-def count(topic_dir):
+def count(topic_dir, entry=None):
     """The only trustworthy source for the registry numbers: the markup itself."""
+    # Markdown-first work packages (plan.md) count only their authoritative entry,
+    # never the generated paper/solution extracts. Existing HTML counts are unchanged.
+    if entry and entry.endswith('.md'):
+        name = os.path.basename(entry)
+        path = os.path.join(topic_dir, name)
+        source = read(path)
+        displays = re.findall(r'\$\$(.*?)\$\$', source, re.S)
+        inline_source = re.sub(r'\$\$.*?\$\$', '', source, flags=re.S)
+        inline = re.findall(r'(?<![\\$])\$(?!\$)([^\n]*?)(?<!\\)\$(?!\$)', inline_source)
+        questions = re.findall(r'^\*\*C\d+ —|^### E\d+ —|^#### Q\d+\.', source, re.M)
+        return dict(pages=[name], figures=len(re.findall(r'!\[[^\]]+\]\(assets/figures/[^)]+\)', source)),
+                    questions=len(questions), solutions=source.count('<details>'),
+                    math_spans=len(inline) + len(displays), bytes_html=0,
+                    bytes_markdown=os.path.getsize(path), words=len(source.split()),
+                    display_formulas=len(displays))
     files = sorted(glob.glob(os.path.join(topic_dir, '*.html')))
     figs = qs = sols = maths = size = 0
     for f in files:
-        s = open(f, encoding='utf-8').read()
+        s = read(f)
         figs += s.count('<figure class="fig">')
         qs += s.count('<div class="q">')
         sols += s.count('<details class="sol">')
@@ -89,12 +107,19 @@ def main():
             fails.append('%s: registered but the folder is missing' % slug)
             continue
 
+        entry = t.get('entry', '')
+        if entry.endswith('.md') and not os.path.isfile(os.path.join(d, os.path.basename(entry))):
+            fails.append('%s: Markdown entry is missing' % slug)
+            continue
+        if entry.endswith('.md') and not os.path.isfile(os.path.join(d, 'tools', 'check.py')):
+            fails.append('%s: Markdown topic requires tools/check.py' % slug)
+
         if upd:                                             # recount from disk
-            for k, v in count(d).items():
+            for k, v in count(d, entry).items():
                 t[k] = v
 
-        want, have = count(d), t
-        for k in ('pages', 'figures', 'questions', 'solutions', 'math_spans', 'bytes_html'):
+        want, have = count(d, entry), t
+        for k in want:
             if have.get(k) != want[k]:
                 fails.append('%s: topics.json says %s=%s, the files say %s  (fix: --update)'
                              % (slug, k, have.get(k), want[k]))

@@ -1,7 +1,7 @@
 # Curriculum map: Cengage floor → JEE → Olympiad
 
-This repository now has two readers for the same eight consolidated note-sets (one more is registered in
-`topics.json` as the remaining wave link and is not on disk yet):
+This repository now has nine note-sets: seven have Markdown and interactive HTML editions;
+String Waves and Electromagnetic Waves are Markdown-first courses:
 
 - the `*.md` files are the portable editions, with standard Markdown, `$...$` / `$$...$$` math, collapsible solutions and local SVG diagrams;
 - the `*.html` files are the optional interactive editions, retained for the generated table of contents, progress ticks, theme switch and printing.
@@ -14,7 +14,7 @@ The order below is intentional. Read the theory in the first column before attem
 |---:|---|---|---|---|
 | 1 | [String Waves](string-waves/String-waves.md) | disturbance vs matter transport → the 1-D wave equation from Newton's second law → energy and power → boundary reflection and impedance → standing waves and normal modes | the mechanical-wave floor named in plan.md §2 PART 1, plus the sonometer and Melde | hanging-rope waves, WKB amplitude scaling, Bessel standing modes, mechanical impedance |
 | 2 | [Sound Waves](sound-waves/Sound-waves.md) | longitudinal $s$ & pressure $\Delta P$, $v=\sqrt{B/\rho}$, Laplace $\sqrt{\gamma RT/M}$, intensity & dB, organ pipes & end-correction, beats, Doppler with wind/2D/echo, Mach cone | Cengage *Waves and Thermodynamics* – sound: longitudinal waves, speed (Newton vs Laplace), intensity, organ pipes, beats, Doppler, supersonic | Impedance matching, accelerated Doppler & closest approach glide, WKB for horns, acoustic ranging, shock |
-| 3 | Electromagnetic waves · *planned* (plan.md PART 3) | displacement current → Maxwell's equations → the wave equation for E and B → Poynting → radiation pressure → spectrum | the EM floor named in plan.md §2 PART 3 | momentum of light, curved-surface radiation force, spectrum as a working table |
+| 3 | [Electromagnetic Waves](electromagnetic-waves/Electromagnetic-waves.md) | Displacement current → Maxwell → vector waves → energy/momentum → pressure → spectrum | Part 3 plan scope: vacuum/material Maxwell equations, both wave-equation derivations, fields/intensity, normal and oblique pressure, EM spectrum and sources | Poynting/stress derivations, spherical force integration, impedance matching, standing waves, isotropic pressure, conducting-medium limit |
 | 4 | [Thermodynamics](thermodynamics/Thermodynamics.md) | Temperature and equilibrium → kinetic theory → first law → heat capacities/processes → second law → entropy | Temperature scales, expansion, kinetic theory, calorimetry, work, ideal-gas processes, engines and refrigerators | Equipartition limits, distributions/effusion, hydrostatic atmospheres, van der Waals criticality, radiation as a working fluid, entropy counting |
 | 5 | [Heat](heat/Heat.md) | Heat/temperature/internal energy → expansion → calorimetry and phase change → conduction → convection/cooling → radiation | Specific heat, latent heat, thermal expansion, calorimetry, Fourier/Newton/Stefan–Boltzmann laws and thermal resistance | Heat equation and diffusion time, thermal waves, effusivity, fins, critical insulation radius and radiation-balance estimates |
 | 6 | [Current Electricity](current-electricity/Current-electricity.md) | Current/drift → resistance/materials → cells → Kirchhoff/bridges → network theorems → instruments | Cengage *Electric Current and Circuits* (ch. 5), *Electrical Measuring Instruments* (ch. 6) and *Heating Effects of Current* (ch. 7) | Reciprocity/compensation, loaded four-terminal measurements, thermoelectricity, thermistor stability, transmission scaling and superconducting ledgers |
@@ -36,10 +36,11 @@ change of $\pi$); the sound note owns intensity as energy flux and the disciplin
 another (displacement versus pressure); the electromagnetic note owns the fact that light's wave is transverse, that
 it needs no medium, and that $c = 1/\sqrt{\mu_0\epsilon_0}$. Wave optics then needs all three and nothing else,
 which is why [wave-optics/Wave-optics.md §1.1.1](wave-optics/Wave-optics.md#111-one-equation-three-mechanisms-what-light-inherits)
-states the debt explicitly and why the first three links, while still on the drawing board, are registered ahead of
-it in `topics.json`. A reader who has none of them can still use the wave-optics note as written — it re-derives what
+states the debt explicitly. All three wave courses are now present and registered in `topics.json`. A reader who has none of them can still use the wave-optics note as written — it re-derives what
 it uses — but the three notes are what turn "light happens to obey this equation" into "any linear restoring
 mechanism obeys this equation, and light is one of them".
+
+The [EM course coverage map](electromagnetic-waves/Electromagnetic-waves.md#13-coverage-and-study-route) maps every Part 3 requirement to theory and retrieval. Its 36-question paper is 180 minutes / 180 marks, with separate printable solutions. The Part 1, Part 2 and Part 4 work already on `main` is preserved.
 
 ### Why thermodynamics precedes heat
 

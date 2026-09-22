@@ -336,22 +336,49 @@
     },
     {
       "slug": "electromagnetic-waves",
-      "title": "Electromagnetic waves — first principles to Olympiad",
-      "status": "planned",
-      "owner": null,
-      "entry": "electromagnetic-waves/Electromagnetic-waves.html",
+      "title": "Electromagnetic Waves — from Maxwell to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "format": "markdown",
+      "entry": "electromagnetic-waves/Electromagnetic-waves.md",
       "exam": [
         "JEE Advanced",
         "NSEP",
         "INPhO",
         "IPhO"
       ],
-      "note": "plan.md PART 3 (Agent 3), the third link of the wave sequence and the note that entitles wave-optics to exist. Floor: the displacement current and the charging-capacitor inconsistency, Maxwell's equations in vacuum and in linear matter, the wave equation for E and B, c = 1/√(μ₀ε₀), transversality and E₀ = cB₀, energy density equipartition, the Poynting vector and intensity I = ½ε₀cE₀², momentum and radiation pressure at normal and oblique incidence, and the full EM spectrum. wave-optics/ states the Fresnel coefficients and the π-on-reflection rule as facts (its topics.json exclusion list says so explicitly); deriving them from the boundary conditions is this note's job, and it should end by handing the reader back to wave-optics §7.3.",
+      "paper": {
+        "questions": 36,
+        "sections": 4,
+        "marks": 180,
+        "minutes": 180,
+        "file": "Paper.md",
+        "solutions": "Solutions.md"
+      },
+      "note": "Markdown-first Part 3 of plan.md. Counts cover the master only, not generated print extracts. words = whitespace-separated source tokens; display_formulas = display math blocks.",
+      "deliberately_not_covered": [
+        "relativistic moving-mirror and electromagnetic Doppler derivations",
+        "Abraham–Minkowski material-momentum theory; force problems use vacuum momentum",
+        "general anisotropic, dispersive and nonlinear propagation; oblique Fresnel coefficients",
+        "antenna radiation patterns, multipole expansion and absolute radiation power",
+        "quantum derivation of photon energy; hf is identified as quantum input",
+        "Mie/Rayleigh scattering, diffuse-sphere reflection and asymmetric thermal recoil"
+      ],
       "next_candidates": [
-        "scaffold with: python3 tools/new_topic.py electromagnetic-waves --title \"Electromagnetic waves\" --chapters \"01-displacement-current,02-maxwells-equations,03-the-wave-equation,04-energy-and-poynting,05-radiation-pressure,06-spectrum,07-playbook,08-paper\"",
-        "derive the Fresnel amplitude coefficients and cross-link wave-optics/Wave-optics.md#section-07-the-wave-toolkit, then retire that exclusion line in topics.json",
-        "register the built counts with python3 tools/check_all.py --update"
-      ]
+        "antenna far-field radiation and dipole power derivation",
+        "experimental radiation-pressure and microwave standing-wave measurements"
+      ],
+      "pages": [
+        "Electromagnetic-waves.md"
+      ],
+      "figures": 7,
+      "questions": 52,
+      "solutions": 52,
+      "math_spans": 786,
+      "bytes_html": 0,
+      "bytes_markdown": 75918,
+      "words": 9241,
+      "display_formulas": 36
     }
   ]
 }

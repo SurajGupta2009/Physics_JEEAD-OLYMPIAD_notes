@@ -4,7 +4,7 @@
 
 ### Physics notes for JEE Advanced and the Olympiad track
 
-Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its consolidated interactive HTML edition for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
+Portable Markdown note-sets with local SVG diagrams. Seven topics also keep their consolidated interactive HTML editions for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
 
 </div>
 
@@ -20,12 +20,12 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
 | **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete — PART 1 |
 | rotational mechanics | — | — | — | — | planned — claim it |
-| sound waves | — | — | — | Laplace, columns, beats and the full Doppler effect (plan.md PART 2) | planned — claim it |
-| electromagnetic waves | — | — | — | displacement current, Maxwell, Poynting and radiation pressure (plan.md PART 3) | planned — claim it |
+| **sound waves** | [Sound-waves.md](sound-waves/Sound-waves.md) · [HTML](sound-waves/Sound-waves.html) | 15 local SVG | — | 36-question, 3 h, 150-mark paper | complete — PART 2 |
+| **electromagnetic waves** | [Electromagnetic-waves.md](electromagnetic-waves/Electromagnetic-waves.md) · [paper](electromagnetic-waves/Paper.md) · [solutions](electromagnetic-waves/Solutions.md) | 7 local SVG | 52 | 36-question, 3 h, 180-mark JEE–Olympiad paper | complete (Markdown-first) |
 
 The wave rows above are the spine the wave-optics note is written against: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Registering them in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 
-The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` remains the checked registry for the interactive HTML editions; `tools/check_all.py` still validates their original markup, equations, figures and question/solution counts.
+The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` is the checked registry. `tools/check_all.py` validates the registered HTML editions and the new Markdown-first Electromagnetic Waves topic, including its local validator and master-only counts. Part 3 is read directly as Markdown; it has not yet been added to the generated browser site.
 
 ## Read it
 
