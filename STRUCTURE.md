@@ -21,6 +21,14 @@ interactive/offline editions and are still what `tools/check_all.py` validates. 
 is additive, so a reader can choose GitHub/editor reading or the local HTML TOC/theme/print view.
 The cross-topic order and the Cengage-to-Olympiad audit live in [CURRICULUM.md](CURRICULUM.md).
 
+**Markdown-first work packages:** `plan.md` also permits a topic whose authoritative entry is
+`<Topic-Slug>.md`, without a parallel HTML edition. Register it with `format: markdown` and an
+`.md` entry. Its self-contained `tools/check.py` is required by the root gate; registry counts
+come only from that entry (C-numbered checks, E-numbered exemplars, Q-numbered paper questions,
+local SVG links and dollar-delimited math). Generated print extracts are not counted twice.
+`words` counts whitespace-separated source tokens, `display_formulas` counts display blocks,
+and `bytes_markdown` records source size; `bytes_html` is zero. Legacy HTML counts remain unchanged.
+
 ---
 
 ## 1. The three ideas everything follows from
