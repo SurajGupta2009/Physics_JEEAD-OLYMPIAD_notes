@@ -30,6 +30,13 @@ The cross-topic progression and the Cengage → JEE → Olympiad coverage audit 
 
 Three ways, in order of what you get:
 
+0. **Obsidian (for the chapters written under [plan.md](plan.md)).** Open this repository as a vault
+   (*Open folder as vault* → the repo root). The new note-sets are written for **reading mode**: YAML
+   frontmatter (so the `part:` property lets you filter the vault by plan part and block), Obsidian
+   callouts for definitions / validity conditions / traps / hand-offs, `$...$` and `$$...$$` math,
+   collapsible `<details>` solutions, and `> [!abstract] DIAGRAM …` callout briefs in place of images.
+   Section numbers (`§3.4`), `Q12` and `OL3` are stable so you can link and search them. The nine older
+   note-sets stay in their bold-label HTML/Markdown style — the vault mixes the two on purpose.
 1. **The rendered site (recommended for study).** Open
    [`docs/site/index.html`](docs/site/index.html) straight from disk — it works
    offline with no tooling. Diagrams are the local SVGs, equations are typeset

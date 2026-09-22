@@ -6,8 +6,14 @@
 > **Media**: **text only.** No SVG, no PNG/JPG, no HTML figure blocks, no generated art. Every place a
 > picture is genuinely needed, the note carries a **DIAGRAM placeholder** — a described, searchable
 > figure brief — so the reader can find a good version online (§1.2).
-> **Format**: portable Markdown with standard `$...$` / `$$...$$` math, GitHub-collapsible `<details>`
-> solutions, and tables. Markdown-first topics: no parallel HTML edition is required.
+> **Format**: Markdown written for **Obsidian reading mode** (§1.3.1): YAML frontmatter, Obsidian
+> callouts, `$...$` / `$$...$$` math, `<details>` solutions, pipe tables. Markdown-first topics: no
+> parallel HTML edition is required.
+> **Completeness**: each chapter's section list below is a **floor, not a ceiling** — the agent must also
+> sweep the Cengage chapter's own contents page (the PDFs live in this repo, §1.13) and add anything the
+> plan misses (§1.12).
+> **Cross-check**: the five Cengage volumes are committed in the repository root, so the Cengage floor can
+> be verified, not assumed — including which volume really holds a chapter (§1.13).
 
 ---
 
@@ -38,30 +44,42 @@ Read §0, §1 and §2 of plan.md first (the contracts and the teaching doctrine)
 section, then Appendix C (the copy-paste kit).
 Deliverables: the folder <slug>/ with <Title>.md, README.md, notes.json, tools/check.py, exactly as
 plan.md §1.1 and §1.10 specify.
-Rules that matter most: no images at all — use the DIAGRAM placeholder syntax of §1.2 wherever a
-figure is needed; every formula derived with its validity condition; ≥ Cengage floor with a coverage
-map; the 15-block spine of §1.4 in order; a separate Olympiad section and a 36-question / 200-mark
-Olympiad paper at the end; every number recomputed; maths in KaTeX-safe $...$ / $$...$$.
-Finish by running  python3 tools/check_all.py --update  from the repo root and reporting the gate
-output, the word count and the diagram-placeholder count.
+Rules that matter most:
+- The notes are read in **Obsidian reading mode** — obey plan.md §1.3.1 exactly (frontmatter, callouts,
+  math spacing, blank lines around <details>, wikilinks, no #hashtags).
+- No images at all: use the DIAGRAM callout briefs of §1.2 wherever a figure is needed.
+- Every formula derived, with its validity condition and a limit check.
+- The 15-block spine of §1.4 in order, ending in a separate Olympiad section and a 36-question /
+  200-mark Olympiad paper with its marking scheme and formula sheet.
+- **Completeness (§1.12): the PART's section list is a floor.** Sweep the Cengage chapter's own contents
+  page from the PDF committed in this repo (§1.13 — read the page images; four of the five volumes have no
+  text layer), sweep the shipped notes for hand-offs, and add in the right block anything the plan missed.
+  Record additions under "Beyond the plan" in the chapter README + topics.json `beyond_plan`.
+- Every number recomputed; maths in KaTeX-safe $...$ / $$...$$.
+Finish by running  python3 tools/check.py  in the chapter folder and  python3 tools/check_all.py --update
+from the repo root; report the gate output, the word count, the DIAGRAM-brief count and what the book
+sweep added.
 ```
 
 **Resume prompt (an agent continuing half-written work).**
 
 ```text
-Read plan.md §0–§2 and PART <N>. Before writing anything, inspect the existing <slug>/ folder:
-git log --oneline -- <slug>, grep -n 'TODO\|FIXME\|{{' <slug>/*.md, and run the local gate.
-Continue the existing file; do not rewrite reasoning that is already there. Report what was missing
-and finish the definition of done in §1.11.
+Read plan.md §0–§2, PART <N>, §1.12 (completeness) and §1.13 (PDF cross-check). Before writing
+anything: git log --oneline -- <slug>; grep -n 'TODO\|FIXME\|{{' <slug>/*.md; run python3 tools/check.py.
+Continue the existing file and do not rewrite reasoning that is already there — the missing blocks are the
+job. Then complete the book sweep of §1.12 against the Cengage PDF named in your PART's source line, and
+finish the definition of done in §1.11.
 ```
 
 **Coordinator / audit prompt (after every few parts).**
 
 ```text
 You are the lead architect for Physics_JEEAD-OLYMPIAD_notes. Read plan.md §5–§7.
-Audit the parts marked complete in the repo against the plan's per-part exit criteria; run
-python3 tools/check_all.py; repair only cross-part inconsistencies (naming, hand-offs, registry,
-CURRICULUM.md, docs/site). Do not rewrite a chapter's physics.
+Audit the parts marked complete against their per-part exit criteria, their "Beyond the plan" lists and
+their coverage maps (spot-check two rows of each against the Cengage PDF §1.13). Run
+python3 tools/check_all.py. Fold every `beyond_plan` finding back into plan.md as a plan amendment.
+Repair only cross-part inconsistencies (naming, hand-offs, registry, CURRICULUM.md, docs/site, Obsidian
+conventions per §1.3.1). Do not rewrite a chapter's physics.
 ```
 
 ### 0.3 Master index of the 28 parts
@@ -71,36 +89,39 @@ need. Source = the Cengage volume/chapter whose floor it must cover (verify the 
 number on the volume's contents page before writing; the notes' coverage map is keyed to **section
 names**, never to numbers).
 
-| PART | slug | chapter | block | source (Cengage floor) | needs |
+| PART | slug | chapter | block | source (Cengage floor — verified against the PDF, §1.13) | needs |
 |---:|---|---|---|---|---|
-| 1 | `units-measurements` | Units, Dimensions & Measurement Errors | A · Mechanics | *Mechanics I* — Units and Dimensions (+ Basic Mathematics) | — |
-| 2 | `vectors` | Vectors & Vector Algebra | A · Mechanics | *Mechanics I* — Vectors | — |
-| 3 | `kinematics-1d` | Motion in One Dimension | A · Mechanics | *Mechanics I* — Motion in One Dimension | 1, 2 |
-| 4 | `motion-in-two-dimensions` | 2-D Motion: Projectiles, Relative Velocity, Circular Kinematics | A · Mechanics | *Mechanics I* — Motion in Two Dimensions | 2, 3 |
-| 5 | `newtons-laws` | Newton's Laws, Friction, Constraints & Circular Dynamics | A · Mechanics | *Mechanics I* — Newton's Laws of Motion | 4 |
-| 6 | `work-energy-power` | Work, Energy & Power | A · Mechanics | *Mechanics II* — Work, Energy and Power | 5 |
-| 7 | `centre-of-mass-momentum` | Centre of Mass, Momentum & Collisions | A · Mechanics | *Mechanics II* — Centre of Mass, Momentum and Collisions | 6 |
-| 8 | `rotational-mechanics` | Rotational Mechanics | A · Mechanics | *Mechanics II* — Rotational Mechanics | 7 |
-| 9 | `gravitation` | Gravitation & Orbital Motion | A · Mechanics | *Mechanics II* — Gravitation | 8 |
-| 10 | `simple-harmonic-motion` | Simple Harmonic Motion & Oscillations | A · Mechanics | *Mechanics II* — Simple Harmonic Motion | 8 |
-| 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | A · Mechanics | *Mechanics II* — Fluid Mechanics | 5 |
-| 12 | `elasticity` | Elasticity & Properties of Matter | A · Mechanics | *Mechanics II* — Elasticity | 5 |
-| 13 | `electric-field` | Charge, Coulomb's Law & Electric Field | B · E&M | *Electrostatics & Current Electricity* — electrostatics ch. 1 | 2 |
-| 14 | `gauss-law` | Electric Flux & Gauss's Law | B · E&M | same volume — electrostatics ch. 2 | 13 |
-| 15 | `electric-potential` | Potential, Potential Energy & Conductors | B · E&M | same volume — electrostatics ch. 3 | 14 |
-| 16 | `magnetic-field` | Magnetic Field, Biot–Savart & Lorentz Force | B · E&M | magnetism chapters | 15 |
-| 17 | `amperes-law` | Ampère's Law, Currents & Magnetic Dipoles | B · E&M | magnetism chapters | 16 |
-| 18 | `moving-charges-magnetism` | Cyclotron, Velocity Selector, Hall Effect | B · E&M | magnetism chapters | 17 |
-| 19 | `magnetism-and-matter` | Magnetism & Matter, Earth's Magnetism | B · E&M | magnetism chapters | 17 |
-| 20 | `electromagnetic-induction` | Faraday, Lenz, Motional EMF & Eddy Currents | B · E&M | EMI chapter | 17 |
-| 21 | `inductance` | Self & Mutual Inductance, RL, Magnetic Energy | B · E&M | inductance chapter | 20 |
-| 22 | `alternating-current` | AC Circuits, Resonance & Transformers | B · E&M | AC chapter | 21 |
-| 23 | `photoelectric-effect` | Photons, Photoelectric Effect & Matter Waves | C · Modern | *Optics & Modern Physics* — modern ch. 1 | EM waves (shipped), 15 |
-| 24 | `atomic-structure` | Rutherford, Bohr Model & Atomic Spectra | C · Modern | modern ch. 2 | 23 |
-| 25 | `x-rays` | X-rays, Moseley's Law, Bragg & Compton | C · Modern | modern ch. 3 | 24 |
-| 26 | `nuclear-physics` | Nuclear Structure, Radioactivity, Fission & Fusion | C · Modern | modern ch. 4 (+ radioactivity) | 24 |
-| 27 | `semiconductors` | Semiconductors & Electronic Devices | C · Modern | modern ch. 5 | current electricity (shipped), 18 |
-| 28 | `special-relativity` | Special Relativity & Relativistic Mechanics | C · Modern (olympiad) | olympiad extension | 6, EM waves (shipped), 23 |
+| 1 | `units-measurements` | Units, Dimensions & Measurement Errors | A · Mechanics | *Mechanics I* ch 3 Units and Dimensions (+ ch 1 Basic Mathematics as an appendix) | — |
+| 2 | `vectors` | Vectors & Vector Algebra | A · Mechanics | *Mechanics I* ch 2 Vectors | — |
+| 3 | `kinematics-1d` | Motion in One Dimension | A · Mechanics | *Mechanics I* ch 4 Motion in One Dimension | 1, 2 |
+| 4 | `motion-in-two-dimensions` | 2-D Motion: Projectiles, Relative Velocity, Circular Kinematics | A · Mechanics | *Mechanics I* ch 5 Motion in Two Dimensions (+ ch 6 archives) | 2, 3 |
+| 5 | `newtons-laws` | Newton's Laws, Friction, Constraints & Circular Dynamics | A · Mechanics | *Mechanics I* ch 7 Newton's Laws of Motion | 4 |
+| 6 | `work-energy-power` | Work, Energy & Power | A · Mechanics | *Mechanics II* ch 2 Rigid Body Dynamics §2.24–2.26 (rotational work and power, work–energy theorem, conservation of mechanical energy) + ch 1 §1.17–1.19 on impulse | 5 |
+| 7 | `centre-of-mass-momentum` | Centre of Mass, Momentum & Collisions | A · Mechanics | *Mechanics II* ch 1 Centre of Mass, Conservation of Linear Momentum and Collision | 6 |
+| 8 | `rotational-mechanics` | Rotational Mechanics | A · Mechanics | *Mechanics II* ch 2 Rigid Body Dynamics | 7 |
+| 9 | `gravitation` | Gravitation & Orbital Motion | A · Mechanics | *Mechanics II* ch 5 Gravitation | 8 |
+| 10 | `simple-harmonic-motion` | Simple Harmonic Motion & Oscillations | A · Mechanics | *Waves and Thermodynamics* ch 4 Linear and Angular Simple Harmonic Motion (+ ch 7 §7.3–7.7 on springs and their combinations) | 8 |
+| 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | A · Mechanics | *Mechanics II* ch 3 Fluid Mechanics (+ ch 4 Properties of Solids and Fluids for surface tension) | 5 |
+| 12 | `elasticity` | Elasticity & Properties of Matter | A · Mechanics | *Mechanics II* ch 4 Properties of Solids and Fluids (elasticity) | 5 |
+| 13 | `electric-field` | Charge, Coulomb's Law & Electric Field | B · E&M | *Electrostatics & Current Electricity* ch 1 Coulomb's Laws and Electric Field | 2 |
+| 14 | `gauss-law` | Electric Flux & Gauss's Law | B · E&M | same volume ch 2 Electric Flux and Gauss's Law | 13 |
+| 15 | `electric-potential` | Potential, Potential Energy & Conductors | B · E&M | same volume ch 3 Electric Potential | 14 |
+| 16 | `magnetic-field` | Magnetic Field, Biot–Savart & Lorentz Force | B · E&M | **no PDF in this repo** — standard JEE Advanced magnetism chapters (§1.13) | 15 |
+| 17 | `amperes-law` | Ampère's Law, Currents & Magnetic Dipoles | B · E&M | standard magnetism chapter (no PDF in this repo) | 16 |
+| 18 | `moving-charges-magnetism` | Cyclotron, Velocity Selector, Hall Effect | B · E&M | standard magnetism chapter (no PDF in this repo) | 17 |
+| 19 | `magnetism-and-matter` | Magnetism & Matter, Earth's Magnetism | B · E&M | standard magnetism chapter (no PDF in this repo) | 17 |
+| 20 | `electromagnetic-induction` | Faraday, Lenz, Motional EMF & Eddy Currents | B · E&M | standard EMI chapter (no PDF in this repo) | 17 |
+| 21 | `inductance` | Self & Mutual Inductance, RL, Magnetic Energy | B · E&M | standard EMI/inductance chapter (no PDF in this repo) | 20 |
+| 22 | `alternating-current` | AC Circuits, Resonance & Transformers | B · E&M | standard AC chapter (no PDF in this repo) | 21 |
+| 23 | `photoelectric-effect` | Photons, Photoelectric Effect & Matter Waves | C · Modern | *Optics & Modern Physics* ch 3 Photoelectric Effect | EM waves (shipped), 15 |
+| 24 | `atomic-structure` | Rutherford, Bohr Model & Atomic Spectra | C · Modern | same volume ch 4 Atomic Physics (Bohr model and spectra half) | 23 |
+| 25 | `x-rays` | X-rays, Moseley's Law, Bragg & Compton | C · Modern | same volume **ch 4 Atomic Physics, pp. 4.25–4.32** (X-rays, X-ray spectra, Moseley's law) | 24 |
+| 26 | `nuclear-physics` | Nuclear Structure, Radioactivity, Fission & Fusion | C · Modern | same volume ch 5 Nuclear Physics | 24 |
+| 27 | `semiconductors` | Semiconductors & Electronic Devices | C · Modern | **not in this volume** — standard JEE Advanced semiconductor syllabus (grep the other PDFs before writing, §1.13) | current electricity (shipped), 18 |
+| 28 | `special-relativity` | Special Relativity & Relativistic Mechanics | C · Modern (olympiad) | olympiad extension (IPhO-level; nothing in these volumes) | 6, EM waves (shipped), 23 |
+
+> **Book-sweep reminder.** The source column is where the §1.12 sweep starts, not where it ends: read the
+> Cengage chapter's own contents page (page numbers in §1.13) and pull in every heading it lists.
 
 ### 0.4 Execution batches (what can be written simultaneously)
 
@@ -140,7 +161,7 @@ chapters feel like one book.
 ```
 <slug>/
 ├── <Title>.md            the chapter: the notes. THE deliverable.
-├── README.md             scope, coverage map, status, hand-off note (§1.10)
+├── README.md             scope, coverage map, status, hand-off note, `## Beyond the plan` (§1.10, §1.12)
 ├── notes.json            machine-readable config for the local gate (§1.10)
 └── tools/
     └── check.py          the local gate, copied from Appendix C and configured by notes.json
@@ -149,7 +170,8 @@ chapters feel like one book.
 * **No `assets/`.** No `figures/`. No `.html`. No binary of any kind. A chapter that ships an image
   fails review.
 * `<Title>.md` is the single source of truth: orientation → theory → worked questions → Olympiad
-  section → paper → formula sheet, in one file, in that order (§1.4).
+  section → paper → formula sheet, in one file, in that order (§1.4). It opens with YAML frontmatter and
+  is written for Obsidian reading mode (§1.3.1).
 * The folder name is the slug in the index table; the file name is the title with hyphens
   (`Work-energy-power.md`, `Amperes-law.md`, `X-rays.md`, `Magnetism-and-matter.md`,
   `Centre-of-mass-momentum.md`). Register the topic in `topics.json` with `"format": "markdown"`,
@@ -168,10 +190,15 @@ The reader does not want generated diagrams (they are often inaccurate). The rea
   syntax (three lines, blank line after; nothing else on those lines):
 
 ```markdown
-> **DIAGRAM D5.3 · Static friction vs applied force**
+> [!abstract] DIAGRAM D5.3 · Static friction vs applied force
 > *Show:* a plot with the applied force $F$ on the $x$-axis and the friction force $f$ on the $y$-axis; the $45^\circ$ straight line $f=F$ up to the peak $f_{\max}=\mu_s N$, then a sudden drop to the constant kinetic plateau $f_k=\mu_k N$; both plateaux labelled numerically.
 > *Search:* "static friction graph applied force versus friction force threshold kinetic plateau"
 ```
+
+The `[!abstract]` callout is what makes the brief read as a *figure slot* in Obsidian's reading mode
+(tinted, indented, visually distinct from theory). The gate counts these callouts, so the syntax is
+load-bearing: `> [!abstract] DIAGRAM D<part>.<n> · <title>`, then the two `*Show:*` / `*Search:*` lines,
+then a blank line.
 
 * The three required pieces: a **numbered label** `D<part>.<n>`, a **`*Show:*`** line that is a
   complete drawing brief (axes, vectors, labels, angles, what is dashed, what is highlighted), and a
@@ -190,22 +217,48 @@ The reader does not want generated diagrams (they are often inaccurate). The rea
 
 | element | rule |
 |---|---|
+| Frontmatter | the file **opens** with YAML properties (no heading above them): `title:`, `part: <N>`, `slug:`, `aliases:`, `tags:`; then a blank line, then the `#` title |
 | Title | one `#` heading: `# <Chapter> — first principles to Olympiad` |
 | Chapter blocks | `## Part 0 · …` through `## Part 14 · …` — exactly the 15 blocks of §1.4, in order, headings matching the names in Appendix C |
 | Subsections | `### <block>.<k> Title` (e.g. `### 3.4 The validity ledger`), numbered contiguously inside their block |
 | Sub-subsections | `#### ` sparingly (derivation steps, sub-cases) |
 | Maths | inline `$…$`, display `$$…$$` on its own lines; KaTeX-safe: no `\tag`, no `\label`, no `\begin{tikzpicture}`, no `\middle`, no raw `$$` inside a word; one command per brace group as usual; `\text{}` for words |
 | Equation labels | prose "Eq. (3.4)" or a trailing `\qquad (3.4)` **inside** the display block; never `\tag` |
-| Callouts | blockquote + bold label: `> **Definition.**`, `> **Why.**`, `> **Condition of validity.**`, `> **Check.**`, `> **Trap.**`, `> **Insight.**`, `> **Hand-off.**`, `> **Numbers to keep.**`, `> **History.**`, `> **Exam note.**` |
-| Worked examples | `### E7 — Title`, then the problem, then `<details><summary>Solution</summary> … </details>`, closing with a `> **Check.**` limit/unit/dimensional line |
+| Callouts | **Obsidian callouts only** (see the mapping in §1.3.1): `> [!note] Definition`, `> [!info] Why`, `> [!warning] Condition of validity`, `> [!success] Check`, `> [!danger] Trap`, `> [!tip] Insight`, `> [!quote] Hand-off`, `> [!question] Exam note`, `> [!abstract] Numbers to keep`, `> [!example] Worked example`. Never write `> **Definition.**` — the gate rejects it |
+| Worked examples | `### E7 — Title`, then the problem, then `<details><summary>Solution</summary>` (blank line, body, blank line, `</details>`), closing with a `> [!success] Check` limit/unit/dimensional line |
 | Concept checks | `**C4 — concept check.** …` followed by a one-line answer in a `<details>` |
 | Cengage-floor practice | `#### Q12. …` then options or a free answer, then a `<details>` solution |
 | Olympiad problems | `### OL3 — Title`, full multi-part long problem, then a `<details>` solution that names the method and the checks |
 | Paper questions | `### P14 · 5 marks` (36 of them, sections A–D), each with a `<details>` solution |
 | Tables | GitHub pipe tables; a *validity* column wherever the table lists formulas |
 | Traps | one per trap, in the block-8 section, written as the tempting wrong answer then the one-line reply |
-| Empathy markers | `> **Exam note.**` for "this is how it appears in a paper"; `> **Hand-off.**` for "this result is owned by PART k / the shipped note-set X — read it there" |
-| Forbidden | HTML beyond `<details>`/`<summary>`/`<br>`; images; external links; emoji-only headings; `TODO`, `FIXME`, `…`, `??`, `{{PLACEHOLDER}}`; "it can be shown that"; "obviously" |
+| Empathy markers | `> [!question] Exam note` for "this is how it appears in a paper"; `> [!quote] Hand-off` for "this result is owned by PART k / the shipped note-set X — read it there" |
+| Forbidden | HTML beyond `<details>`/`<summary>`/`<br>`; images; external links; `#hashtags` in prose (Obsidian turns them into tags); `\( \)` / `\[ \]` math delimiters; `\tag` / `\label`; blank lines inside a `$$` block; emoji-only headings; `TODO`, `FIXME`, `…`, `??`, `{{PLACEHOLDER}}`; "it can be shown that"; "obviously" |
+
+### 1.3.1 Obsidian reading-mode contract (the notes are read in Obsidian)
+
+The target reader opens the vault in Obsidian and reads in **reading mode**. Everything in this table is a
+hard requirement; §1.10's gate checks all of it.
+
+| # | rule | why (what breaks otherwise) |
+|---:|---|---|
+| 1 | YAML **frontmatter first**, then a blank line, then `# <Chapter> — …` | Obsidian shows the frontmatter as properties; the `part:` property is what lets the reader filter the vault by plan part. A `#` heading before `---` disables properties |
+| 2 | callouts in the form `> [!type] Title`, with **every** continuation line starting `> ` and a blank line after the block | an unmarked or unspaced line breaks out of the callout and the box renders as loose quoted text |
+| 3 | allowed callout types only: `note` (definition), `info` (why), `warning` (validity), `success` (check), `danger` (trap), `tip` (insight), `quote` (hand-off, history), `question` (exam note), `abstract` (numbers to keep, DIAGRAM briefs), `example` (worked example) | unknown types fall back to plain blockquotes, so the visual language of the notes disappears |
+| 4 | inline math `$...$` with **no space** just inside the dollars; display math `$$` alone on its line, formula on the next line | `$ x $` is not recognised as math by Obsidian and prints as raw dollars — a silent, ugly failure |
+| 5 | **no blank lines inside** a `$$ ... $$` block; one display per block | Obsidian closes the math block at a blank line and the rest prints as text |
+| 6 | no `\( \)` or `\[ \]`; no `\tag`, no `\label`, no custom macros/preamble, no `\ce{}` | Obsidian's KaTeX has no preamble and no macro definitions; `\tag` fights the `\qquad (n)` convention the notes use |
+| 7 | solutions stay `<details><summary>Solution</summary>` with a **blank line after `</summary>`** and **before `</details>`** | without the blank lines Obsidian does not parse Markdown inside the block: equations and lists come out raw |
+| 8 | pipe tables: keep to ≤ 6 columns and short cells; put long formulas in display math *above* the table; inside table math use `\lvert x \rvert` (never a bare `|`) | an unescaped pipe silently splits the table; wide cells scroll horizontally in reading mode |
+| 9 | cross-references are **wikilinks**: `[[Work-energy-power#Part 3 · Core derivations|WEP §3]]` — file name first, then the heading after `#` | relative Markdown links to other notes are clumsy in Obsidian; wikilinks also feed the graph view and backlinks panel |
+| 10 | heading numbers stay unique and stable (`### 3.4 …`); never two headings with identical text | the outline pane and `[[#heading]]` links are ambiguous with duplicates |
+| 11 | no `#hashtags` in prose (say *chapter 6*, *Q12*, *§3.4*); tags live only in the frontmatter | Obsidian converts `#word` into a tag, polluting the tag pane |
+| 12 | no HTML beyond `<details>`, `<summary>` and `<br>` (inside tables); `<br>` is allowed nowhere else | anything else prints literally in reading mode |
+| 13 | figures are `[!abstract] DIAGRAM …` briefs (§1.2); images would be inaccurate and are banned | the reader searches the picture online instead |
+| 14 | bold `**…**` for emphasis, `*…*` for figure-brief field names, backticks for commands and symbols only | keeps reading mode calm; backticks around physics symbols render as code and break math |
+| 15 | footnote-style asides are discouraged; if used, keep `[^n]` and its definition in the same block | Obsidian's footnotes jump to the end of the note, which loses the reader's place |
+
+A ready-to-copy skeleton (frontmatter + callout + `<details>` + DIAGRAM brief) is in **Appendix C.3**.
 
 ### 1.4 The 15-block spine (identical in every chapter, in this order)
 
@@ -324,10 +377,14 @@ PR title: `part-<N>: <slug> — <chapter title>`. Never commit to `main` directl
 ### 1.10 The local gate, the registry, the site
 
 Every chapter ships `notes.json` (config) plus `tools/check.py` (the validator, copied verbatim from
-Appendix C). The validator enforces: the 15 block headings; the minimum counts of C/E/Q/OL; the
-DIAGRAM-placeholder syntax and count; contiguous numbering in every family; the paper's section shape
-and the mark total; **absence** of image syntax, `<img`, external links, `TODO`/`FIXME`/`{{…}}`;
-balanced dollar delimiters and balanced TeX braces.
+Appendix C). The validator enforces: the YAML frontmatter (`title`, `part`, `slug`); the 15 block
+headings; the minimum counts of C/E/Q/OL, DIAGRAM briefs and **Obsidian callouts**; contiguous numbering
+in every family; the paper's section shape and the mark total; **absence** of image syntax, `<img`,
+external links, `#hashtags` in prose, `\( \)`/`\[ \]` delimiters, `\tag`/`\label`,
+`TODO`/`FIXME`/`{{…}}`; the retired `> **Label.**` box style; unbalanced dollar delimiters and unbalanced
+TeX braces; a missing blank line after `</summary>`; a blank line *inside* a `$$` block; a stray pipe
+inside table math; and a space just inside the dollars of an inline span — the reading-mode failures of
+§1.3.1 that Obsidian hides silently. It prints one line per failure and exits non-zero.
 
 ```bash
 cd <slug> && python3 tools/check.py          # local gate
@@ -343,11 +400,20 @@ It recounts `figures` (will be **0** — expected and correct here), `questions`
 * [ ] `<slug>/<Title>.md`, `README.md`, `notes.json`, `tools/check.py` exist; `python3 tools/check.py`
       prints ALL GOOD.
 * [ ] The 15 blocks are present, in order, with the required minimums (C ≥ 12, E ≥ 10, Q ≥ 25,
-      OL ≥ 10, DIAGRAM ≥ 12, paper = 36 Q / 200 marks / 180 min).
+      OL ≥ 10, DIAGRAM ≥ 12, callouts ≥ 24, paper = 36 Q / 200 marks / 180 min).
+* [ ] The chapter reads correctly in **Obsidian reading mode**: frontmatter, callouts (no `> **Why.**`
+      boxes), math with no space inside the dollars and no blank line inside a `$$` block, blank lines
+      around `<details>` bodies, table math using `\lvert … \rvert`, wikilinks for cross-references, no
+      `#hashtags` in prose (§1.3.1). Open the file in Obsidian (or in a vault preview) before saying yes.
+* [ ] The **book sweep** of §1.12 is done: the Cengage chapter's contents page was read from the PDF in
+      the repo (§1.13), and every book heading appears in the coverage map with one of the four statuses.
+* [ ] Anything the plan did not ask for but the sweep justified is listed under `## Beyond the plan` in the
+      chapter README and mirrored in `topics.json` as `beyond_plan`; any chapter-sized gap was escalated to
+      `PENDING.md` instead of absorbed.
 * [ ] The coverage map has a row for every Cengage section of the chapter, with a status.
 * [ ] ≥ 15 archetype rows in block 6, each exercised.
-* [ ] Every boxed result has a validity condition; every derivation has a `**Why.**` step where a
-      competent reader would otherwise ask "why?".
+* [ ] Every boxed result has a validity condition; every derivation has an `> [!info] Why` callout where
+      a competent reader would otherwise ask "why?".
 * [ ] Every numerical answer recomputed; every mark total summed; at least one limit check per block.
 * [ ] No images of any kind; ≥ 12 well-written DIAGRAM briefs with usable search terms.
 * [ ] `python3 tools/check_all.py --update` green from the repo root; registry, README row and
@@ -356,6 +422,93 @@ It recounts `figures` (will be **0** — expected and correct here), `questions`
       deliberately skipped and why.
 
 ---
+
+### 1.12 Completeness duty — the plan is a floor, not a ceiling
+
+**The PART section you are given is a checklist of the *minimum*.** It was written from the volume's
+contents page and the standard JEE-Advanced/NSEP/INPhO syllabus, and it can miss a subtopic, a standard
+result, a question archetype or a whole section of the book. It is your job to close that gap, not to
+inherit it. Do all four sweeps, in this order, before you call the chapter finished:
+
+1. **The plan sweep.** Write the PART's section table as your teaching order. Every row of it must exist in
+   the chapter. Nothing else yet.
+2. **The book sweep.** Open the Cengage chapter in the PDF that is committed in this repository (§1.13) and
+   read its **contents list and every heading**. Every heading — including the sub-headings and the
+   `Solved Examples` / `Exercises` structure — must be accounted for in the chapter's coverage map
+   (block 0), one of four ways: *derived*, *stated and used*, *extended beyond the book*, or *excluded with
+   a written reason*. A heading you never looked at is the failure mode this section exists to prevent.
+3. **The vault sweep.** Search the shipped notes (Appendix A) and the other PARTS (Appendix D) for the same
+   subject matter. Anything they own becomes a `> [!quote] Hand-off` pointer. Anything they *do not* cover
+   that belongs to your chapter becomes a new section in the right block.
+4. **The syllabus sweep.** Walk the standard JEE Advanced + NSEP/INPhO topic list for your chapter's
+   subject and ask of each item: *is this in my chapter?* The olympiad layer (block 10) is where the items
+   the book omits belong.
+
+Then:
+
+* **Record what you added.** The chapter's README ends with a `## Beyond the plan` list — one line per
+  section, archetype, exemplar or olympiad problem that the PART section did not ask for — and the same
+  list is mirrored in `topics.json` as `"beyond_plan": [...]`. The coordinator folds it back into this file
+  (see the plan-amendment rule at the end of this document).
+* **Escalate, do not absorb, chapter-sized findings.** If the sweep shows a missing *chapter* (not a
+  section), do **not** write it inside your chapter: add it to `PENDING.md` as a new part with a one-line
+  scope, and add a row to Appendix D's ledger if it takes ownership of a result. One chapter per agent is
+  what keeps 28 agents from colliding.
+* **You may add; you may not subtract.** If a plan section looks wrong, derive the correct result, put it
+  in the chapter with a `> [!warning] Plan amendment` note explaining the correction, and say so in the PR
+  description. Never silently drop a required section.
+* **The gate cannot check completeness** — it counts markers, headings and marks. The coverage map in
+  block 0 is the only artifact that proves the sweep happened, which is exactly why §1.5 requires every
+  row to carry a status and a location.
+
+### 1.13 Cross-checking against the Cengage volumes (they are in this repo)
+
+The five volumes are committed at the repository root (yes, in git — `git ls-files | grep pdf` lists them),
+so *"the Cengage floor"* is verifiable rather than remembered. **Note on the scans:** four of the five are
+image-only (there is no text layer — `pdftotext` returns just the watermark), so search inside them does
+not work; you read the page images. `Cengage  MECHANICS  1-compressed.pdf` **does** have a text layer. The
+verified map (contents pages read directly, 2026-09):
+
+| file in the repo | pages | what it actually holds | use it for |
+|---|---:|---|---|
+| `Cengage  MECHANICS  1-compressed.pdf` | 454 | Basic Mathematics, Vectors, Units and Dimensions, Motion in One Dimension, Motion in Two Dimensions, Ch 6 (Misc. assignments + archives on ch 1–5), Newton's Laws of Motion (friction, constraint relation, springs, Lami, circular dynamics) | PARTS 1, 2, 3, 4, 5; the work-energy, impulse and circular-motion sections of ch 5 and ch 7 |
+| `Cengage MECHANICS 2-compressed.pdf` | 629 | Ch 1 Centre of Mass, Conservation of Linear Momentum and Collision · Ch 2 Rigid Body Dynamics (moment of inertia, torque, angular momentum, **rotational work and power §2.24, work–energy theorem §2.25** — the book's only work-energy treatment) · Ch 3 Fluid Mechanics · Ch 4 Properties of Solids and Fluids (elasticity) · Ch 5 Gravitation | PARTS 6, 7, 8, 9, 11, 12 |
+| `CENGAGE  Electro statics and current electricity-compressed.pdf` | 492 | Ch 1 Coulomb's Laws and Electric Field · Ch 2 Electric Flux and Gauss's Law · Ch 3 Electric Potential · Ch 4 Capacitor and Capacitance · Ch 5 Electric Current and Circuit · Ch 6 Electrical Measuring Instruments · Ch 7 Heating Effects of Current · Appendices A1–A3 | PARTS 13, 14, 15 (chs 1–3); chs 4–7 are already shipped notes |
+| `Cengage Waves and Thermodynamics-compressed.pdf` | 607 | Unit I Thermal Physics (ch 1 Thermal Properties of Matter, ch 2 Kinetic Theory of Gases and First Law of Thermodynamics, ch 3 archives) · Unit II Oscillation and Waves (ch 4 Linear and Angular SHM, ch 5 Travelling Waves, ch 6 Sound Waves and Doppler, ch 7 Superposition and Standing Waves, ch 8 archives) | **PART 10** (ch 4 + ch 7), and the shipped wave/thermal notes |
+| `Cengage. Optics and  Modern Physics. Modern Physics-compressed.pdf` | 588 | Unit I Optics (ch 1 Geometrical Optics, ch 2 Wave Optics) · Unit II Modern Physics: **ch 3 Photoelectric Effect** (photons, photon flux, radiation pressure, de Broglie matter waves, electron emission, photoelectric cell, Einstein's equation, laws, failure of the wave theory) · **ch 4 Atomic Physics** (Thomson model, Bohr model, radii/velocity/frequency/energy, hydrogen-like atoms, ionisation and excitation potentials, limitations, hydrogen spectrum, nuclear-mass effects, atomic collision, **X-rays and Moseley's law, pp. 4.25–4.32**) · **ch 5 Nuclear Physics** (nuclear structure, size, binding energy, Q values, stability, α/β/γ radioactivity, decay law, activity, half-life, average life, dating, decay series and equilibrium, nuclear reactions, fission, reactors, fusion, fusion in the Sun) | PARTS 23, 24, 25, 26 |
+
+Consequences of that map, which override any older note in the repo:
+
+* **X-rays is not a separate chapter in this volume.** It is the second half of **ch 4 Atomic Physics**
+  (pp. 4.25–4.32). PART 25 still owns it as a chapter of its own, but its coverage map must be keyed to
+  the *section names* inside ch 4.
+* **Semiconductors is not in this volume at all** (Unit II holds only chs 3–5). PART 27's floor therefore
+  comes from the standard JEE Main/Advanced semiconductor syllabus, and it must say so in its coverage map
+  instead of citing a chapter that does not exist. Before writing it, the agent should also grep the other
+  four PDFs — if a semiconductors chapter turns up in another volume, cite it.
+* **Magnetism, EMI, inductance, AC circuits and matter-and-magnetism are not in these five volumes.** They
+  are not "the book's chapter 6 and 7"; they are a standalone volume the repo does not have. The source line
+  of PARTS 16–22 therefore names the *standard syllabus headings* (in the PART sections below) as the floor,
+  and the agent must build the coverage map from that list plus the shipped `current-electricity/` and
+  `electromagnetic-waves/` notes.
+* **Everything else is a real chapter in a real PDF**, so the book sweep of §1.12 is compulsory and cheap:
+  read the contents page at the page number in this table, then walk the chapter's own headings and tick
+  them off in the coverage map.
+
+**How to read a scanned contents page (recipe for agents).** Paginate to the page listed above (the contents
+pages sit at PDF indices 4–6, i.e. printed pages v–vii), render it, and read it like a human would. A
+five-line python recipe that works with no setup beyond `pip install pymupdf`:
+
+```python
+import pymupdf                                   # pip install pymupdf
+doc = pymupdf.open("Cengage MECHANICS 2-compressed.pdf")
+doc[4].get_pixmap(dpi=150).save("/tmp/contents.png")   # index 4 = the printed 'Contents' page
+# then open /tmp/contents.png and read the chapter's heading list
+```
+
+Then, for the chapter itself, read its first two or three pages (the contents gives the page number, e.g.
+`Chapter 2 Rigid Body Dynamics 2.1`) to see the section order and the exercise structure. **Never quote the
+book**: the notes are original prose; the PDFs are there to make the coverage claim true.
 
 ## 2 · Teaching doctrine — how an expert teacher orders a chapter
 
@@ -411,17 +564,29 @@ Apply that shape to every PART.
 
 ### 2.3 The micro-template of one subsection (copy this rhythm)
 
-```text
+```markdown
 ### 3.6 Why the centre of mass moves as if it held the whole mass
 
 **The claim.** (one sentence, in words, before any symbol)
-[ derivation, 3–8 lines, every step justified inline or in a Why box ]
-> **Why.** (the step a book hides: "internal forces cancel in pairs — that is Newton's third law
-> applied to a system, and it is the entire content of this result")
-> **Condition of validity.** (the model, and the way it fails)
-**Check.** (a limit, a dimension, a special case — computed, not asserted)
-> **Exam note.** (how this appears in a paper; the 20-second version)
+
+[ derivation, 3-8 lines, every step justified inline or in a callout ]
+
+> [!info] Why
+> The step a book hides: the internal forces cancel in pairs — that is Newton's third law applied to a
+> system, and it is the entire content of this result.
+
+> [!warning] Condition of validity
+> The model, and the way it fails.
+
+> [!success] Check
+> A limit, a dimension or a special case — computed, not asserted.
+
+> [!question] Exam note
+> How this appears in a paper; the 20-second version.
 ```
+
+Every callout needs its own blank line before and after, and every line inside it starts with `> `
+(§1.3.1) — that is what makes it render as a box in Obsidian rather than loose quoted text.
 
 Rules for the rhythm: short sentences; the reader is addressed as "you" and is assumed to be holding a
 pen in a timed room; no "it is easy to see", no "as everyone knows", no hedging; every symbol
@@ -435,8 +600,8 @@ introduced before use; every subsection ends with something the reader can *do*.
   reads the weight of the chain; it reads three times that, and here is why."
 * Use the reader's own experience as the anchor (the lift, the bicycle, the balloon, the torch bulb,
   the MRI magnet, the phone charger).
-* Keep awe available but rationed: one `> **Insight.**` box per block, no more, and it must earn its
-  place by changing how a familiar result looks.
+* Keep awe available but rationed: one `> [!tip] Insight` callout per block, no more, and it must earn
+  its place by changing how a familiar result looks.
 * Never end a chapter without telling the reader what they can read next and what they still cannot
   (block 14).
 
@@ -494,9 +659,10 @@ Quick view of the one idea of each chapter (use it as the first sentence of bloc
 
 ### PART 1 · Units, Dimensions & Measurement Errors
 
-`units-measurements` · folder `units-measurements/` · source: Cengage *Mechanics I*, **Units and
-Dimensions** + the **Basic Mathematics** chapter folded in as a 2-page appendix (calculus you will
-actually use: derivatives, integrals, binomial approximation, maxima–minima) · needs nothing ·
+`units-measurements` · folder `units-measurements/` · source: Cengage *Mechanics I* **ch 3 Units and
+Dimensions** (contents p. 3), with **ch 1 Basic Mathematics** folded in as a 2-page appendix of the
+calculus you will actually use (derivatives, integrals, binomial approximation, maxima–minima) · needs
+nothing ·
 JEE Advanced · NSEP · INPhO · IPhO (the IPhO data-analysis floor).
 *The one idea:* every measurement is a comparison plus an honest statement of how wrong it could be.
 
@@ -559,7 +725,7 @@ coverage map accounts for the Basic-Mathematics appendix.
 
 ### PART 2 · Vectors & Vector Algebra
 
-`vectors` · folder `vectors/` · source: Cengage *Mechanics I*, **Vectors** · needs nothing ·
+`vectors` · folder `vectors/` · source: Cengage *Mechanics I* **ch 2 Vectors** · needs nothing ·
 JEE Advanced · NSEP.
 *The one idea:* vectors are the language in which direction stops being an accident of the coordinate
 system.
@@ -619,8 +785,8 @@ the reader to *choose* coordinates; the "vector calculus you will need" block co
 
 ### PART 3 · Motion in One Dimension
 
-`kinematics-1d` · folder `kinematics-1d/` · source: Cengage *Mechanics I*, **Motion in One Dimension**
-· needs PART 1, PART 2 · JEE Advanced · NSEP · INPhO.
+`kinematics-1d` · folder `kinematics-1d/` · source: Cengage *Mechanics I* **ch 4 Motion in One
+Dimension** · needs PART 1, PART 2 · JEE Advanced · NSEP · INPhO.
 *The one idea:* motion is one function $x(t)$; everything else in kinematics is its slope or its area.
 
 | # | Section | Teach this, in this order | Closes with |
@@ -682,8 +848,8 @@ analysis is in block 10 with two drag laws; ≥ 2 problems require naming the me
 
 ### PART 4 · 2-D Motion: Projectiles, Relative Velocity & Circular Kinematics
 
-`motion-in-two-dimensions` · folder `motion-in-two-dimensions/` · source: Cengage *Mechanics I*,
-**Motion in Two Dimensions** · needs PART 2, PART 3 · JEE Advanced · NSEP · INPhO.
+`motion-in-two-dimensions` · folder `motion-in-two-dimensions/` · source: Cengage *Mechanics I* **ch 5
+Motion in Two Dimensions** (+ the ch 6 archives/exercise patterns) · needs PART 2, PART 3 · JEE Advanced · NSEP · INPhO.
 *The one idea:* two-dimensional motion is two one-dimensional motions that share a clock.
 
 | # | Section | Teach this, in this order | Closes with |
@@ -754,8 +920,10 @@ aircraft); the Olympiad block contains a drag derivation and ≥ 3 estimates.
 
 ### PART 5 · Newton's Laws, Friction, Constraints & Circular Dynamics
 
-`newtons-laws` · folder `newtons-laws/` · source: Cengage *Mechanics I*, **Newton's Laws of Motion**
-(including friction) · needs PART 4 · JEE Advanced · NSEP · INPhO · IPhO (friction and constraint
+`newtons-laws` · folder `newtons-laws/` · source: Cengage *Mechanics I* **ch 7 Newton's Laws of
+Motion** — force classification, impulse, free-body diagrams, tension, friction, spring forces,
+non-inertial frames, Lami's theorem, constraint relations (pulley/wedge/spring combinations) and
+dynamics of circular motion · needs PART 4 · JEE Advanced · NSEP · INPhO · IPhO (friction and constraint
 methods are olympiad core).
 *The one idea:* force changes momentum, constraints are geometry rather than forces, and friction is a
 range rather than a number.
@@ -838,8 +1006,10 @@ Olympiad block includes the chain-on-scale, the rocket and the capstan problems.
 
 ### PART 6 · Work, Energy & Power
 
-`work-energy-power` · folder `work-energy-power/` · source: Cengage *Mechanics II*, **Work, Energy and
-Power** · needs PART 5 · JEE Advanced · NSEP · INPhO · IPhO.
+`work-energy-power` · folder `work-energy-power/` · source: Cengage *Mechanics II* **ch 2 Rigid Body
+Dynamics §2.24–2.26** — rotational work and power, the work–energy theorem, conservation of mechanical
+energy (the volume has no separate work-energy chapter; this is its only work-energy treatment) — plus
+ch 1 §1.17–1.19 on impulse · needs PART 5 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* work is energy in transit; energy bookkeeping replaces force bookkeeping whenever path,
 not time, is the question.
 
@@ -915,8 +1085,10 @@ every numerical answer in the worked problems has a unit check.
 
 ### PART 7 · Centre of Mass, Momentum & Collisions
 
-`centre-of-mass-momentum` · folder `centre-of-mass-momentum/` · source: Cengage *Mechanics II*,
-**Centre of Mass, Momentum and Collisions** · needs PART 6 · JEE Advanced · NSEP · INPhO · IPhO.
+`centre-of-mass-momentum` · folder `centre-of-mass-momentum/` · source: Cengage *Mechanics II* **ch 1
+Centre of Mass, Conservation of Linear Momentum and Collision** (contents p. 4: COM, motion of the COM,
+impulse, collision classification, coefficient of restitution, oblique collisions, variable mass, rocket
+propulsion) · needs PART 6 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* in an isolated system the centre of mass keeps moving in a straight line — every
 collision is a discussion about the motion around it.
 
@@ -992,8 +1164,10 @@ a naive momentum argument fails.
 
 ### PART 8 · Rotational Mechanics
 
-`rotational-mechanics` · folder `rotational-mechanics/` · source: Cengage *Mechanics II*, **Rotational
-Mechanics** · needs PART 7 · JEE Advanced · NSEP · INPhO · IPhO (the biggest single chapter in the
+`rotational-mechanics` · folder `rotational-mechanics/` · source: Cengage *Mechanics II* **ch 2 Rigid
+Body Dynamics** (moment of inertia, axis theorems, radius of gyration, torque, couple, equilibrium,
+rotational kinetic energy, angular momentum and impulse, conservation of angular momentum) · needs
+PART 7 · JEE Advanced · NSEP · INPhO · IPhO (the biggest single chapter in the
 mechanics block: plan 18,000–25,000 words).
 *The one idea:* a rigid body is a mass distribution; rotation is the same $F=ma$ story with $I$,
 $\tau$ and $L$ playing the roles of $m$, $F$ and $p$.
@@ -1078,7 +1252,8 @@ vector-triangle explanation; the overhang and sliding-rod problems appear in blo
 
 ### PART 9 · Gravitation & Orbital Motion
 
-`gravitation` · folder `gravitation/` · source: Cengage *Mechanics II*, **Gravitation** · needs PART 8 ·
+`gravitation` · folder `gravitation/` · source: Cengage *Mechanics II* **ch 5 Gravitation** · needs
+PART 8 ·
 JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* gravity is a central inverse-square field, and every orbit is energy and angular momentum
 trading places.
@@ -1154,8 +1329,10 @@ estimates (collapse time, Roche limit, gravity assist).
 
 ### PART 10 · Simple Harmonic Motion & Oscillations
 
-`simple-harmonic-motion` · folder `simple-harmonic-motion/` · source: Cengage *Mechanics II*, **Simple
-Harmonic Motion** · needs PART 8 (and PART 6 for energy) · JEE Advanced · NSEP · INPhO · IPhO.
+`simple-harmonic-motion` · folder `simple-harmonic-motion/` · source: Cengage ***Waves and
+Thermodynamics* ch 4 Linear and Angular Simple Harmonic Motion**, with the spring material of ch 7
+(§7.3–7.7, springs and their combinations) pulled in — here is where the volume's SHM live · needs
+PART 8 (and PART 6 for energy) · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* if the restoring effect is proportional to the displacement, the motion is sinusoidal —
 and almost everything linear oscillates.
 
@@ -1238,8 +1415,9 @@ large-amplitude correction, $Q$-factor and the general linearisation method.
 
 ### PART 11 · Fluid Mechanics & Surface Tension
 
-`fluid-mechanics` · folder `fluid-mechanics/` · source: Cengage *Mechanics II*, **Fluid Mechanics** ·
-needs PART 5 (and PART 6 for energy methods) · JEE Advanced · NSEP · INPhO · IPhO.
+`fluid-mechanics` · folder `fluid-mechanics/` · source: Cengage *Mechanics II* **ch 3 Fluid Mechanics**
+with surface tension from **ch 4 Properties of Solids and Fluids** · needs PART 5 (and PART 6 for energy
+methods) · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* fluids carry pressure; pressure differences are forces; viscosity and surface tension
 matter only when the length scale is small.
 
@@ -1254,7 +1432,7 @@ matter only when the length scale is small.
 | 7 | Fluid flow and continuity | The Lagrangian vs Eulerian descriptions; steady flow, streamlines, streaklines; derive the equation of continuity from mass conservation; variable-area ducts; the "flow rate is constant but the speed is not" concept | Continuity with a branching pipe |
 | 8 | Bernoulli's equation | Derive from the work–energy theorem on a streamtube; state the four conditions (steady, incompressible, non-viscous, along a streamline) as a 4-point validity box; pressure–speed trade explained physically | A pitot-tube problem with the relevance of each assumption |
 | 9 | Bernoulli's applications | Torricelli's efflux (with the derivation and the range result), Venturi meter, pitot tube, the siphon (and its maximum height limit), the atomiser/spray, the "two holes give equal ranges" result | Venturi flow-rate calculation |
-| 10 | Bernoulli's limits | Why the naive airfoil explanation is wrong (a `> **Insight.**` box), the curved-flow pressure gradient ($\frac{\partial p}{\partial r}=\frac{\rho v^2}{r}$) derived, the rotating fluid's paraboloid surface (derived from the equipotential argument) | Paraboloid surface shape with the derivation |
+| 10 | Bernoulli's limits | Why the naive airfoil explanation is wrong (a `> [!tip] Insight` callout), the curved-flow pressure gradient ($\frac{\partial p}{\partial r}=\frac{\rho v^2}{r}$) derived, the rotating fluid's paraboloid surface (derived from the equipotential argument) | Paraboloid surface shape with the derivation |
 | 11 | Momentum-flux forces | The force of a jet on a plate (normal and inclined, moving plate); the rocket/thrust momentum argument (link PART 7); the pipe bend's reaction force; the "water hammer" estimate | Jet-on-a-moving-vane force |
 | 12 | Viscosity | Newton's law of viscosity; the velocity gradient's meaning; dimensional analysis of $\eta$; laminar flow between plates; temperature dependence qualitatively | The viscous force on a sliding plate |
 | 13 | Poiseuille and Stokes | Derive Poiseuille's law by the force balance on a cylindrical shell (teach the *technique*); the $r^4$ consequence and the "why narrow pipes dominate" scaling; Stokes' law (statement + why it is $\propto\eta rv$ by dimensional analysis); terminal velocity derived and used to measure $\eta$ | Terminal velocity of a falling sphere with numbers |
@@ -1328,7 +1506,8 @@ integration, the paraboloid's three derivations and the shallow-water wave speed
 
 ### PART 12 · Elasticity & Properties of Matter
 
-`elasticity` · folder `elasticity/` · source: Cengage *Mechanics II*, **Elasticity** · needs PART 5 ·
+`elasticity` · folder `elasticity/` · source: Cengage *Mechanics II* **ch 4 Properties of Solids and
+Fluids** (elasticity and moduli; the fluid half is PART 11's) · needs PART 5 ·
 JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* elasticity is the macroscopic face of the interatomic spring: moduli are material
 properties, stiffness is geometry.
@@ -1410,15 +1589,19 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 ## Block B · Electricity & Magnetism
 
 > The shipped notes `capacitors/` and `current-electricity/` own capacitance and circuits. This block
-> supplies what comes *before* them (charge, field, flux, potential) and the whole magnetism → EMI → AC
-> chain that comes after. Do not duplicate a shipped result: cite it as
-> `> **Hand-off.** Capacitance is the shipped `capacitors/` note's property; here we only meet the
+> supplies what comes *before* them (charge, field, flux, potential — Cengage *Electrostatics and Current
+> Electricity* chs 1–3, which **are** in the repo as a PDF) and the whole magnetism → EMI → AC chain that
+> comes after. **That chain has no PDF in this repository** (a standalone magnetism/EMI volume was never
+> supplied), so PARTS 16–22 build their coverage maps from the standard JEE Advanced headings listed in
+> their sections, plus the shipped `current-electricity/` and `electromagnetic-waves/` notes. If you find
+> the volume somewhere in the tree, say so in the PR and cite it. Do not duplicate a shipped result: cite it as
+> `> [!quote] Hand-off` — capacitance is the shipped `capacitors/` note's property; here we only meet the
 > field that makes it.`
 
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 
-`electric-field` · folder `electric-field/` · source: Cengage *Electrostatics and Current Electricity*,
-electrostatics chapter 1 · needs PART 2 (vectors) · JEE Advanced · NSEP · INPhO · IPhO.
+`electric-field` · folder `electric-field/` · source: Cengage ***Electrostatics and Current
+Electricity* ch 1 Coulomb's Laws and Electric Field** · needs PART 2 (vectors) · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* the electric field is the bookkeeping device for forces at a distance, and superposition
 makes every distribution a sum of point charges.
 
@@ -1430,7 +1613,7 @@ makes every distribution a sum of point charges.
 | 4 | Element-and-symmetry method | The named method: choose the element, write $dq$, write $d\mathbf E$, kill components by symmetry, integrate; demonstrated on a charged ring's axis — the template for the whole chapter | Ring's axial field derived |
 | 5 | Line, disc and sheet | Charged rod (finite by angle parametrisation; infinite as a limit); the ring's axial maximum at $x=R/\sqrt2$; a disc's axial field via rings; the infinite sheet's $E=\sigma/2\varepsilon_0$ (derived by integration so that PART 14 can be a *short cut*, not the only route) | Disc and sheet fields, with the limits |
 | 6 | Arc, ring and sphere by integration | The semicircular arc's field at the centre; the "field at the centre of a charged circular arc" family; a spherical shell by integration (to be re-derived by Gauss in PART 14 — state the duplication honestly and use it as the Gauss motivation) | Arc and ring field problems |
-| 7 | Conductors in the field picture | Why $\mathbf E=0$ inside (the "if it were not, charges would move" argument); the field perpendicular to the surface; the charge on the surface; the surface field $\sigma/\varepsilon_0$ and the factor-of-2 resolution (local patch vs total field — a `> **Trap.**` box) | The "which is the field just outside?" problem |
+| 7 | Conductors in the field picture | Why $\mathbf E=0$ inside (the "if it were not, charges would move" argument); the field perpendicular to the surface; the charge on the surface; the surface field $\sigma/\varepsilon_0$ and the factor-of-2 resolution (local patch vs total field — a `> [!danger] Trap` callout) | The "which is the field just outside?" problem |
 | 8 | The dipole | Definition $\mathbf p=q\mathbf d$; the axial and equatorial fields at $r\gg d$ (derived); the dipole's field lines and internal field direction; the two-charge approximation's error | Axial/equatorial comparison |
 | 9 | Dipole in a field | Torque $\boldsymbol\tau=\mathbf p\times\mathbf E$; the potential energy $U=-\mathbf p\cdot\mathbf E$ (derived, with the "why $\cos\theta$" reasoning and the zero at $90^\circ$ convention); the non-uniform-field net force; the "why a charged comb attracts paper" explanation | Dipole-in-a-gradient problem |
 | 10 | Equilibrium of charges | Two-charge, three-charge (collinear and triangle) equilibrium; the sign/position counting rules; the stability question and Earnshaw's theorem's statement; the "charge at the centre of a square" problem | Three-charge equilibrium solved |
@@ -1491,8 +1674,8 @@ off-axis instability.
 
 ### PART 14 · Electric Flux & Gauss's Law
 
-`gauss-law` · folder `gauss-law/` · source: Cengage *Electrostatics and Current Electricity*,
-electrostatics chapter 2 · needs PART 13 · JEE Advanced · NSEP · INPhO · IPhO.
+`gauss-law` · folder `gauss-law/` · source: Cengage ***Electrostatics and Current Electricity* ch 2
+Electric Flux and Gauss's Law** · needs PART 13 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* flux counts field lines through a surface, and symmetry turns that count into the fastest
 way to find a field.
 
@@ -1569,8 +1752,8 @@ two-cylinder uniform field and the non-inverse-square test.
 
 ### PART 15 · Electric Potential, Potential Energy & Conductors
 
-`electric-potential` · folder `electric-potential/` · source: Cengage *Electrostatics and Current
-Electricity*, electrostatics chapter 3 · needs PART 14 · JEE Advanced · NSEP · INPhO · IPhO.
+`electric-potential` · folder `electric-potential/` · source: Cengage ***Electrostatics and Current
+Electricity* ch 3 Electric Potential** · needs PART 14 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* potential turns a vector problem into a scalar one, at the price of a direction you
 recover by differentiating.
 
@@ -1653,8 +1836,10 @@ charged-drop Rayleigh estimate.
 
 ### PART 16 · Magnetic Field, Biot–Savart & the Lorentz Force
 
-`magnetic-field` · folder `magnetic-field/` · source: Cengage *Electrostatics and Current Electricity*,
-magnetism chapters · needs PART 15 · JEE Advanced · NSEP · INPhO · IPhO.
+`magnetic-field` · folder `magnetic-field/` · source: **no PDF in this repo** (the magnetism volume was
+never supplied) — build the coverage map from the standard JEE Advanced headings: magnetic field and
+Biot–Savart, field of straight wire/arc/loop/solenoid/toroid, Lorentz force, motion of a charge, force
+and torque on a current loop, magnetic dipole and parallel currents · needs PART 15 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* a magnetic field is what a moving charge calls the relativistic correction to the
 electric force, and its effects are always perpendicular to motion.
 
@@ -1736,7 +1921,10 @@ relativistic origin of magnetism and the Bohr magneton.
 
 ### PART 17 · Ampère's Law, Currents & Magnetic Dipoles
 
-`amperes-law` · folder `amperes-law/` · source: Cengage magnetism chapters · needs PART 16 ·
+`amperes-law` · folder `amperes-law/` · source: standard JEE Advanced headings (no PDF in this repo):
+Ampère's circuital law and its applications (wire, thick wire, plane sheet, solenoid, toroid), forces
+between currents, magnetic dipole interaction, magnetic pressure, the no-monopoles statement ·
+needs PART 16 ·
 JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* Ampère's law is Gauss's law for currents — symmetry plus a loop integral gives the field
 in one line.
@@ -1808,8 +1996,10 @@ magnetic pressure, the Helmholtz condition and the magnetised-sphere field.
 
 ### PART 18 · Cyclotron, Velocity Selector & the Hall Effect
 
-`moving-charges-magnetism` · folder `moving-charges-magnetism/` · source: Cengage magnetism chapters ·
-needs PART 17 · JEE Advanced · NSEP · INPhO · IPhO.
+`moving-charges-magnetism` · folder `moving-charges-magnetism/` · source: standard JEE Advanced headings
+(no PDF in this repo): circular and helical motion, velocity selector, mass spectrometer, cyclotron,
+$\mathbf E	imes\mathbf B$ drift, magnetic mirror, Hall effect, $e/m$ measurement (plus the olympiad
+extensions listed below) · needs PART 17 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* in a magnetic field a charge circles to a clock whose rate depends only on $q/m$ and $B$ —
 that single fact is an industry.
 
@@ -1884,8 +2074,9 @@ two-method cycloid and the Fermi acceleration; the cloud-chamber reading skill i
 
 ### PART 19 · Magnetism & Matter, Earth's Magnetism
 
-`magnetism-and-matter` · folder `magnetism-and-matter/` · source: Cengage magnetism chapters ·
-needs PART 17 · JEE Advanced · NSEP · INPhO.
+`magnetism-and-matter` · folder `magnetism-and-matter/` · source: standard JEE Advanced headings (no PDF
+in this repo): magnetisation and bound currents, $\mathbf B$–$\mathbf H$–$\mathbf M$, dia/para/ferro
+magnetism, hysteresis, Earth's magnetism (declination, dip, components) · needs PART 17 · JEE Advanced · NSEP · INPhO.
 *The one idea:* matter responds to magnetic fields through induced (dia), aligned (para) or permanently
 ordered (ferro) dipoles.
 
@@ -1958,7 +2149,9 @@ and the Curie-temperature scaling estimate.
 
 ### PART 20 · Electromagnetic Induction: Faraday, Lenz, Motional EMF & Eddy Currents
 
-`electromagnetic-induction` · folder `electromagnetic-induction/` · source: Cengage EMI chapter ·
+`electromagnetic-induction` · folder `electromagnetic-induction/` · source: standard JEE Advanced
+headings (no PDF in this repo): magnetic flux, Faraday's law and Lenz's law, motional EMF, rod-and-rails
+family, induced electric fields, eddy currents, generators and motors, mutual induction preview ·
 needs PART 17 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* a changing magnetic flux drives an electric field, and Lenz's law is energy conservation
 wearing a disguise.
@@ -2041,7 +2234,9 @@ paradox family and the electrodynamic tether.
 
 ### PART 21 · Self & Mutual Inductance, RL Circuits & Magnetic Energy
 
-`inductance` · folder `inductance/` · source: Cengage inductance chapter · needs PART 20 ·
+`inductance` · folder `inductance/` · source: standard JEE Advanced headings (no PDF in this repo):
+self and mutual inductance, $L$ of solenoid/toroid/coaxial cable, RL transients, magnetic energy density,
+inductor combinations, LC oscillations, the coil force $F=\frac12I^2\frac{dM}{dx}$ · needs PART 20 ·
 JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* a coil resists changes in its own current because the energy lives in the field, not in
 the wire.
@@ -2118,7 +2313,9 @@ launcher, the superconducting-flux conservation and the $50\,\Omega$ cable synth
 
 ### PART 22 · Alternating Current, Resonance & Transformers
 
-`alternating-current` · folder `alternating-current/` · source: Cengage AC chapter · needs PART 21 ·
+`alternating-current` · folder `alternating-current/` · source: standard JEE Advanced headings (no PDF
+in this repo): AC through R, L, C, phasors, series and parallel LCR resonance, $Q$ factor, power factor,
+transformers, LC oscillations, rectification · needs PART 21 ·
 JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* in AC everything is a phase relationship; impedance is resistance that knows about time.
 
@@ -2200,13 +2397,20 @@ matching theorem and the Wien bridge.
 ## Block C · Modern Physics
 
 > The shipped `geometrical-optics/` and `wave-optics/` notes already own the optics half of the Cengage
-> volume, and `electromagnetic-waves/` owns light as a wave. This block closes the volume with the
-> quantum half and then adds the olympiad extension that the JEE syllabus stops short of.
+> volume, and `electromagnetic-waves/` owns light as a wave. This block closes the volume with the quantum
+> half — **verified from the volume's own contents page**: Unit II is exactly ch 3 Photoelectric Effect,
+> ch 4 Atomic Physics (which contains the X-ray sections that PART 25 claims) and ch 5 Nuclear Physics.
+> There is **no semiconductors chapter** in these five volumes, and no relativity chapter anywhere, so
+> PARTS 27 and 28 build their floors from the standard JEE/olympiad syllabus and say so in their coverage
+> maps (§1.13).
 
 ### PART 23 · Photons, Photoelectric Effect & Matter Waves
 
-`photoelectric-effect` · folder `photoelectric-effect/` · source: Cengage *Optics and Modern Physics*,
-modern-physics chapter 1 · needs PART 15 and the shipped `electromagnetic-waves/` note · JEE Advanced ·
+`photoelectric-effect` · folder `photoelectric-effect/` · source: Cengage ***Optics and Modern
+Physics* ch 3 Photoelectric Effect** (quantum theory of light, photon counts/flux/density, force and
+radiation pressure of a light beam, matter waves, electron emission, photoelectric cell, Einstein's
+equation, laws, failure of the wave theory) · needs PART 15 and the shipped `electromagnetic-waves/`
+note · JEE Advanced ·
 NSEP · INPhO · IPhO.
 *The one idea:* light delivers its energy in indivisible quanta, and matter waves are the same fact seen
 from the other side.
@@ -2290,8 +2494,11 @@ and the phase/group velocity discussion.
 
 ### PART 24 · Rutherford, the Bohr Model & Atomic Spectra
 
-`atomic-structure` · folder `atomic-structure/` · source: Cengage *Optics and Modern Physics*,
-modern-physics chapter 2 · needs PART 23 · JEE Advanced · NSEP · INPhO · IPhO.
+`atomic-structure` · folder `atomic-structure/` · source: Cengage ***Optics and Modern Physics* ch 4
+Atomic Physics** — Thomson model, Bohr model (radius, velocity, frequency, energy of the $n$th orbit),
+hydrogen-like atoms, ionisation and excitation potentials, limitations of the Bohr model, hydrogen
+spectrum and origin of spectra, effect of nuclear mass, atomic collision — the X-ray half of the same
+chapter is PART 25's · needs PART 23 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* atoms have discrete levels because an electron is a standing wave, not a planet.
 
 | # | Section | Teach this, in this order | Closes with |
@@ -2373,8 +2580,10 @@ correspondence-principle derivations.
 
 ### PART 25 · X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect
 
-`x-rays` · folder `x-rays/` · source: Cengage *Optics and Modern Physics*, modern-physics chapter 3 ·
-needs PART 24 · JEE Advanced · NSEP · INPhO · IPhO.
+`x-rays` · folder `x-rays/` · source: Cengage ***Optics and Modern Physics* ch 4 Atomic Physics,
+pp. 4.25–4.32** (X-rays: discovery, Coolidge tube, properties, applications, absorption, spectra and
+their origin, Moseley's law) — the chapter is shared with PART 24, so key the coverage map to these
+section names · needs PART 24 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* X-rays are photon physics with enough energy to see atoms and to knock electrons free —
 and they prove that the photon carries momentum.
 
@@ -2456,9 +2665,11 @@ inverse-Compton analogy and the depth-of-scattering discussion.
 
 ### PART 26 · Nuclear Structure, Radioactivity, Fission & Fusion
 
-`nuclear-physics` · folder `nuclear-physics/` · source: Cengage *Optics and Modern Physics*,
-modern-physics chapter 4 combined with the radioactivity chapter (this PART merges what PENDING.md listed
-as two) · needs PART 24 · JEE Advanced · NSEP · INPhO · IPhO.
+`nuclear-physics` · folder `nuclear-physics/` · source: Cengage ***Optics and Modern Physics* ch 5
+Nuclear Physics** (nuclear structure, size, binding energy, mass defect, $Q$ values, stability,
+α/β/γ radioactivity, decay law, activity, half-life, average life, dating, decay series and equilibrium,
+nuclear reactions and their kinematics, fission, reactors, fusion including fusion in the Sun) · needs
+PART 24 · JEE Advanced · NSEP · INPhO · IPhO.
 *The one idea:* nuclei are bound by a short-range saturated force, and the binding-energy curve decides
 which way the energy flows.
 
@@ -2548,8 +2759,11 @@ neutrino estimate.
 
 ### PART 27 · Semiconductors & Electronic Devices
 
-`semiconductors` · folder `semiconductors/` · source: Cengage *Optics and Modern Physics*, modern-physics
-chapter 5 · needs the shipped `current-electricity/` note and PART 18 · JEE Advanced · NSEP (JEE Main
+`semiconductors` · folder `semiconductors/` · source: **no semiconductor chapter exists in the supplied
+Cengage volumes** (verified: the *Optics and Modern Physics* volume's Unit II holds only chs 3–5). The
+floor is the standard JEE Main/Advanced semiconductor syllabus, and the coverage map must be built from
+that syllabus — after grepping the other four PDFs in case a chapter turns up there (§1.13) · needs the
+shipped `current-electricity/` note and PART 18 · JEE Advanced · NSEP (JEE Main
 weight is high; keep the olympiad layer about real device physics).
 *The one idea:* bands and doping turn a poor conductor into a controllable one — the whole of
 electronics in two ideas.
@@ -2638,9 +2852,9 @@ binding-energy derivation and the Moore's-law tunnelling limit.
 
 ### PART 28 · Special Relativity & Relativistic Mechanics
 
-`special-relativity` · folder `special-relativity/` · source: olympiad extension (not in the JEE
-syllabus; required for IPhO-level modern physics) · needs PART 6, PART 23 and the shipped
-`electromagnetic-waves/` note · NSEP (light), INPhO, IPhO.
+`special-relativity` · folder `special-relativity/` · source: **olympiad extension** — no Cengage
+chapter in these volumes; the floor is the IPhO relativity syllabus · needs PART 6, PART 23 and the
+shipped `electromagnetic-waves/` note · NSEP (light), INPhO, IPhO.
 *The one idea:* space and time are part of the physics rather than a stage; $c$ is the same for everyone
 and everything else bends to keep it so.
 
@@ -2748,7 +2962,7 @@ Commit in the five steps from §1.9 so a reviewer can see the structure land bef
 * **Between batches:** the coordinator (one agent, 20–40 minutes) updates `CURRICULUM.md` and
   `docs/site` from the finished parts, runs the full gate, and posts one summary.
 * **Hand-offs are one-directional and written down.** If PART 17 needs a result that PART 21 owns
-  (the field energy), it writes `> **Hand-off.**` with the pointer and *does not* derive it. Appendix D
+  (the field energy), it writes `> [!quote] Hand-off` with the pointer and *does not* derive it. Appendix D
   is the ledger; add a row there if you create a new hand-off.
 * **An agent that runs out of context mid-part** must commit what passes the gate with a message that
   says what is missing (`part-13: blocks 0–4 (blocks 5–14 pending)`), then the resume prompt of §0.2
@@ -2769,14 +2983,20 @@ never cut block 10 (Olympiad) or block 11 (the paper), which are the chapter's c
 
 1. Does the 15-block spine exist in order, with the required minimum counts (the gate checks the
    numbers; you check the *content*)?
-2. Pick two derivations at random: is every "therefore" justified, and is the validity condition
-   stated where the result lands?
-3. Recompute one numeric answer and try one limit yourself.
-4. Are the DIAGRAM briefs specific enough that a stranger could find the right picture, and is the prose
+2. Open the chapter in **Obsidian reading mode** (or paste it into a vault): do the callouts colour, do
+   the `$$` blocks typeset, do the `<details>` panels open with their math intact, do the tables fit?
+3. **Book sweep audit:** open the Cengage chapter's contents page (§1.13) and pick two of its headings at
+   random; find their row in the coverage map and read the section that serves them.
+4. Pick two derivations at random: is every "therefore" justified, and is the validity condition stated
+   where the result lands?
+5. Recompute one numeric answer and try one limit yourself.
+6. Are the DIAGRAM briefs specific enough that a stranger could find the right picture, and is the prose
    readable *without* them?
-5. Is anything duplicated from another PART or a shipped note (should be a `> **Hand-off.**` instead)?
-6. Do the paper's marks sum to 200, and does every block 2–4 and 10 appear in the coverage map?
-7. `grep -n 'TODO\|FIXME\|{{' <slug>/*.md` is empty; no image syntax anywhere.
+7. Is anything duplicated from another PART or a shipped note (should be a `> [!quote] Hand-off` instead)?
+8. Do the paper's marks sum to 200, and does every block 2–4 and 10 appear in the coverage map?
+9. Does the chapter README's `## Beyond the plan` list match what the diff actually added beyond the
+   PART's section table?
+10. `grep -n 'TODO\|FIXME\|{{' <slug>/*.md` is empty; no image syntax anywhere.
 
 ---
 
@@ -2787,8 +3007,9 @@ never cut block 10 (Olympiad) or block 11 (the paper), which are the chapter's c
 1. `<slug>/**` — the four files of §1.1.
 2. `topics.json` — append one object (Appendix C has the template): `slug`, `title`, `status`,
    `owner`, `entry` (`<slug>/<Title>.md`), `format: "markdown"`, `plan_part`, `exam`, `media`
-   (`"text-only; diagram placeholders in the Markdown"`), `deliberately_not_covered`, `next_candidates`.
-   Leave every mechanical count to `--update`.
+   (`"text-only; Obsidian reading mode; DIAGRAM callout briefs"`), `source` (the exact Cengage
+   file + chapter/pp. that the coverage map was built from), `beyond_plan` (what the sweep added),
+   `deliberately_not_covered`, `next_candidates`. Leave every mechanical count to `--update`.
 3. `README.md` (root) — append one row to the note-sets table with the Markdown link, `–` in the
    diagrams column (no local figures by design) and the question count.
 4. `PENDING.md` — mark the chapter's row: `→ PART n · <slug> · <status>`.
@@ -2829,26 +3050,42 @@ Run once, when the last part is merged, and again after any later edit:
 2. **The census.** `grep -c '^## PART ' plan.md` is 28, and the topics marked complete in
    `topics.json` equal the shipped topics (Appendix A) plus the completed parts.
 3. **Cross-part consistency.** No chapter re-derives another chapter's owned result (Appendix D);
-   every `> **Hand-off.**` points at a section that exists; the notation is uniform across chapters
+   every `> [!quote] Hand-off` points at a section that exists; the notation is uniform across chapters
    ($\mathbf E$ for fields, $\mu_0$ not $k_m$, eV/nm/km-s conventions fixed once).
-4. **The numbers.** Spot-check five numeric answers across five different chapters by recomputation,
+4. **Obsidian pass over the whole vault.** Open `docs/site`-independent: the repo root as an Obsidian
+   vault; check that every chapter renders in reading mode (callouts, math, details, tables, wikilinks
+   resolving rather than showing as broken links) and that the frontmatter `part:` properties are
+   complete enough to filter the vault by block A/B/C.
+5. **The numbers.** Spot-check five numeric answers across five different chapters by recomputation,
    and confirm each has a unit and a limit check beside it.
-5. **The paper quality.** Read one section-D question per batch as a hostile examiner: is it
+6. **The paper quality.** Read one section-D question per batch as a hostile examiner: is it
    answerable in the stated time, is the marking scheme's sum right, and does the solution name the
    method before the algebra?
-6. **The reader's path.** Read `CURRICULUM.md` top to bottom and confirm a beginner can follow the
+7. **The book sweeps.** For every finished chapter, open its Cengage chapter's contents page and confirm
+   three random headings are covered; then confirm every `beyond_plan` entry has been folded back into
+   plan.md (and delete the `beyond_plan` entry once it is part of the plan proper).
+8. **The reader's path.** Read `CURRICULUM.md` top to bottom and confirm a beginner can follow the
    reading order from units → mechanics → electrostatics → magnetism → EMI/AC → modern physics with no
    forward reference that has not been flagged.
-7. **The honesty pass.** Every chapter keeps its "deliberately not covered" list in `topics.json` and
-   its README, and no chapter claims more scope than it delivers.
+9. **The honesty pass.** Every chapter keeps its "deliberately not covered" list in `topics.json` and
+   its README, and no chapter claims more scope than it delivers — including the two places where the
+   plan overrides an older note: X-rays living inside the atomic-physics chapter, and semiconductors
+   having no Cengage chapter at all.
 
 ---
 
 ## Appendix A · Already shipped (do not rewrite, do not renumber)
 
 These nine note-sets are complete on `main` and pass `python3 tools/check_all.py`. They keep their own
-diagrams (SVGs / HTML editions); the *new* chapters of this plan are text-only by design, so a reader
-who wants a picture uses the DIAGRAM briefs.
+diagrams (SVGs / HTML editions) and stay in HTML-style markup (bold-label boxes); the *new* chapters of
+this plan are text-only, Obsidian-first Markdown (§1.3.1), so a reader who wants a picture uses the
+DIAGRAM callout briefs. Treat these nine as the vault's reference shelf: they define the notation the new
+chapters must match, and their results are hand-offs, not material to re-derive.
+
+**The five Cengage PDFs are in the repository root** (`git ls-files | grep pdf`), which is what makes the
+"≥ Cengage floor" claim checkable: §1.13 maps each file to the chapters it really contains, the pages its
+contents page sits on, and the two places where the older book-notes in the repo were wrong about which
+volume owns which chapter.
 
 | # | note-set | location | origin |
 |---:|---|---|---|
@@ -2883,6 +3120,9 @@ mirrors/lenses/prisms (geometrical optics), Huygens, interference and diffractio
 | Waves on strings, sound, EM waves, ray optics, wave optics | already covered | the shipped notes of Appendix A |
 | Capacitance and circuits (lumped) | already covered | shipped `capacitors/`, `current-electricity/` |
 | Communication systems (AM/FM, modulation) | JEE **Main**-only material, no Olympiad content; a short appendix can be added to PART 22 if the reader wants it | PART 22 §11 (rectifiers/filters) is the closest bridge |
+| A Cengage *magnetism/EMI/AC* volume | never supplied to this repository; PARTS 16–22 therefore have no PDF to sweep and use the standard JEE syllabus as the floor (§1.13) | the PART sections themselves list the headings; the shipped `current-electricity/` and `electromagnetic-waves/` notes carry the neighbouring results |
+| A *semiconductors* chapter | not present in the supplied volumes (the optics/modern volume's Unit II is chs 3–5 only) | PART 27's coverage map is built from the standard JEE syllabus; grep the other PDFs first |
+| A *special-relativity* chapter | not in the JEE syllabus; it is the IPhO extension | PART 28 |
 | Astrophysics, cosmology, stellar structure | a full course of its own; fragments appear inside PART 9 (orbits, tides), PART 24 (spectra), PART 26 (nucleosynthesis), PART 28 (Doppler/beaming) | those blocks, then a dedicated course |
 | General relativity, formal quantum mechanics, statistical mechanics, quantum field theory | university level; the plan stops at the boundary and names it | PART 9 (Newtonian gravity's limit), PART 23–26 (the quantum facts without the formalism), PART 28 §13 |
 | Numerical simulation, SPICE, finite elements, computational physics | not examinable and not needed for understanding | the analytic results everywhere, plus `python` for the numeric checks the plan requires |
@@ -2906,6 +3146,8 @@ and the chapter title; keep the syntax byte-for-byte, because the gate in §C.2 
   "title": "Work, Energy & Power",
   "master": "Work-energy-power.md",
   "part": 6,
+  "source": "Cengage MECHANICS 2-compressed.pdf ch 2 Rigid Body Dynamics (pp. 2.1-2.32)",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels",
   "paper": {
     "questions": 36,
     "marks": 200,
@@ -2918,8 +3160,11 @@ and the chapter title; keep the syntax byte-for-byte, because the gate in §C.2 
     "practice": 25,
     "olympiad": 10,
     "diagrams": 12,
-    "words": 9000
-  }
+    "words": 9000,
+    "callouts": 24
+  },
+  "callout_types": ["note", "info", "warning", "success", "danger", "tip", "quote",
+                    "question", "abstract", "example"]
 }
 ```
 
@@ -2931,7 +3176,7 @@ for the large chapters (16 000–22 000), never lower the others.
 
 ```python
 #!/usr/bin/env python3
-"""Local gate for a text-only Markdown chapter written under plan.md.
+"""Local gate for a text-only, Obsidian-first Markdown chapter written under plan.md.
 
 Run it from the topic folder:   python3 tools/check.py
 Everything it enforces comes from plan.md §1 and this topic's notes.json.
@@ -2954,12 +3199,20 @@ def need(cond: bool, msg: str) -> None:
 
 def contiguous(tag: str, pattern: str, minimum: int) -> int:
     got = [int(n) for n in re.findall(pattern, SRC, re.M)]
-    short = got[:12] + (["..."] if len(got) > 12 else [])
+    shown = got[:12] + (["..."] if len(got) > 12 else [])
     need(got == list(range(1, len(got) + 1)),
-         f"{tag}: numbering must run 1..n with no gaps or repeats (got {short})")
+         f"{tag}: numbering must run 1..n with no gaps or repeats (got {shown})")
     need(len(got) >= minimum, f"{tag}: {len(got)} found, plan.md requires at least {minimum}")
     return len(got)
 
+
+# ---- 0. Obsidian frontmatter ---------------------------------------------------
+need(SRC.startswith("---\n"), "the file must open with a YAML frontmatter block ('---')")
+if SRC.startswith("---\n"):
+    fm = SRC[4:SRC.find("\n---", 4)]
+    for key in ("title:", "part:", "slug:"):
+        need(key in fm, f"frontmatter is missing '{key}'")
+    need(str(CFG["part"]) in fm, f"frontmatter 'part:' must be {CFG['part']}")
 
 # ---- 1. the 15 blocks, in order ------------------------------------------------
 blocks = re.findall(r"^## Part (\d+) · ", SRC, re.M)
@@ -2974,8 +3227,8 @@ n_ol = contiguous("olympiad problems", r"^### OL(\d+) — ", CFG["minimums"]["ol
 
 # ---- 3. the paper --------------------------------------------------------------
 paper = [(int(n), int(m)) for n, m in re.findall(r"^### P(\d+) · (\d+) marks", SRC, re.M)]
-nums = [n for n, _ in paper]
-need(nums == list(range(1, 37)), f"paper must have P1..P36 with no gaps (got {len(nums)})")
+need([n for n, _ in paper] == list(range(1, 37)),
+     f"paper must have P1..P36 with no gaps (got {len(paper)})")
 marks = sum(m for _, m in paper)
 need(marks == CFG["paper"]["marks"],
      f"paper marks sum to {marks}, notes.json says {CFG['paper']['marks']}")
@@ -2986,8 +3239,8 @@ sections = re.findall(r"^#### Section ([A-D]) · ", SRC, re.M)
 need(sections == ["A", "B", "C", "D"], f"paper sections A-D must be present in order (got {sections})")
 need(SRC.count("<details>") >= len(paper), "every paper question needs its own collapsible solution")
 
-# ---- 4. figure briefs ----------------------------------------------------------
-diags = re.findall(r"^> \*\*DIAGRAM D(\d+)\.(\d+) · ", SRC, re.M)
+# ---- 4. figure briefs (Obsidian callouts) --------------------------------------
+diags = re.findall(r"^> \[!abstract\] DIAGRAM D(\d+)\.(\d+) · ", SRC, re.M)
 need(len(diags) >= CFG["minimums"]["diagrams"],
      f"DIAGRAM briefs: {len(diags)} found, plan.md requires at least {CFG['minimums']['diagrams']}")
 need(not [p for p, _ in diags if int(p) != CFG["part"]],
@@ -2996,12 +3249,51 @@ need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a '*Show:*' 
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a '*Search:*' line")
 
 # ---- 5. media policy -----------------------------------------------------------
-fence = chr(96) * 3                                     # never write a literal fence in this file
+fence = chr(96) * 3                          # never write a literal fence in this file
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link"), (fence + "mermaid", "mermaid block")):
     need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
 
-# ---- 6. authoring hygiene ------------------------------------------------------
+# ---- 6. Obsidian reading-mode contract -----------------------------------------
+callouts = re.findall(r"^> \[!([a-z]+)\]", SRC, re.M)
+need(len(callouts) >= CFG["minimums"]["callouts"],
+     f"Obsidian callouts: {len(callouts)} found, notes.json requires at least {CFG['minimums']['callouts']}")
+need(not [c for c in callouts if c not in CFG["callout_types"]],
+     f"unknown callout type: {sorted(set(callouts) - set(CFG['callout_types']))}")
+bold_box = re.findall(r"^> \*\*(Definition|Why|Condition|Check|Trap|Insight|Hand-off|"
+                      r"Exam note|Numbers|History|Example)\.\*\*", SRC, re.M)
+need(not bold_box, "use the Obsidian callout form (> [!type] Title) instead of "
+                   f"'> **Label.**' boxes: {bold_box[:3]}")
+need(not re.search(r"<summary>.*?</summary>\n(?!\n)", SRC, re.S),
+     "leave a blank line after </summary> so Obsidian renders the solution body")
+need(not re.search(r"[^\n]\n</details>", SRC), "leave a blank line before </details>")
+for m in re.finditer(r"\$\$(.*?)\$\$", SRC, re.S):
+    need(not re.search(r"\n\s*\n", m.group(1)), "no blank line inside a $$...$$ block")
+for m in re.finditer(r"(?<![\\$])\$(?!\$)([^\n$]*)(?<!\\)\$(?!\$)", SRC):
+    tex = m.group(1)
+    need(tex == tex.strip(), f"Obsidian needs no space just inside the dollars: {tex[:40]!r}")
+need(not re.search(r"\\\(|\\\[", SRC), r"use $...$ / $$...$$; Obsidian does not render \( \) or \[ \]")
+need("\\tag" not in SRC and "\\label" not in SRC,
+     "no \\tag or \\label; number equations as a trailing \\qquad (n)")
+table_pipes = []
+for line in SRC.split("\n"):
+    if line.startswith("|"):
+        for tex in re.findall(r"(?<![\\$])\$(?!\$)([^\n$]*)(?<!\\)\$(?!\$)", line):
+            if "|" in tex.replace("\\|", ""):
+                table_pipes.append(tex[:40])
+need(not table_pipes, f"escape the pipe or use \\lvert/\\rvert inside table maths: {table_pipes[:3]}")
+tags, inside = [], False
+for line in SRC.split("\n"):
+    if line.startswith(fence):
+        inside = not inside
+        continue
+    if inside or line.lstrip().startswith("#"):
+        continue
+    if re.search(r"(?<!\S)#[A-Za-z][A-Za-z0-9_/-]*", line):
+        tags.append(line[:60])
+need(not tags, f"no #hashtags in prose - they become Obsidian tags: {tags[:3]}")
+
+# ---- 7. authoring hygiene ------------------------------------------------------
 need(not re.search(r"TODO|FIXME|\{\{[A-Z_]+\}\}", SRC), "unfinished authoring placeholder")
 need(not re.search(r"\?\s*no:", SRC), "thinking-out-loud fragment ('? no:')")
 need(SRC.count("<details>") == SRC.count("</details>"), "<details> / </details> mismatch")
@@ -3009,8 +3301,8 @@ need(SRC.count("<summary>") == SRC.count("</summary>"), "<summary> / </summary> 
 need(len(SRC.split()) >= CFG["minimums"]["words"],
      f"only {len(SRC.split())} words, notes.json requires at least {CFG['minimums']['words']}")
 
-# ---- 7. maths hygiene ----------------------------------------------------------
-body = re.sub(r"```.*?```", "", SRC, flags=re.S)            # code fences are not maths
+# ---- 8. maths hygiene ----------------------------------------------------------
+body = re.sub(fence + r".*?" + fence, "", SRC, flags=re.S)   # code fences are not maths
 displays = re.findall(r"\$\$(.*?)\$\$", body, re.S)
 rest = re.sub(r"\$\$.*?\$\$", "", body, flags=re.S)
 inline = re.findall(r"(?<![\\$])\$(?!\$)([^\n$]*)(?<!\\)\$(?!\$)", rest)
@@ -3023,24 +3315,37 @@ for tex in displays + inline:
         if depth < 0:
             break
     need(depth == 0, f"unbalanced TeX braces in: {tex[:60]!r}")
-    need("\\tag" not in tex and "\\label" not in tex,
-         f"label equations as '\\qquad (n)' instead of \\tag/\\label: {tex[:40]!r}")
 
 # ---- report --------------------------------------------------------------------
 if errors:
     print("\n".join(f"FAIL: {e}" for e in errors))
     sys.exit(1)
 print(f"ALL GOOD: 15 blocks · C×{n_c} E×{n_e} Q×{n_q} OL×{n_ol} · "
-      f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · no images")
+      f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · "
+      f"{len(callouts)} callouts · no images")
 ```
 
 Run it from inside the topic folder. It fails with a list of `FAIL:` lines; a clean chapter prints
 `ALL GOOD: …`. It is deliberately independent of any other tool in the repository, so a chapter folder
 copied anywhere still validates itself.
 
-### C.3 The 15 block headings (copy this skeleton, then write into it)
+### C.3 The chapter skeleton (frontmatter + the 15 blocks + the four recurring patterns)
 
 ```markdown
+---
+title: Work, Energy & Power
+part: 6
+slug: work-energy-power
+source: Cengage Mechanics 2, ch 2 (pp. 2.1-2.32)
+aliases: [WEP, work energy power]
+tags: [jee-advanced, olympiad, mechanics]
+---
+
+# Work, Energy & Power — first principles to Olympiad
+
+> [!abstract] How to use this chapter
+> Three passes: read Parts 0-4 for the physics, 5-9 for the exam craft, 10-14 for the Olympiad layer.
+
 ## Part 0 · Orientation
 ## Part 1 · Intuition first
 ## Part 2 · Definitions and bookkeeping
@@ -3058,41 +3363,99 @@ copied anywhere still validates itself.
 ## Part 14 · Checkpoint and hand-off
 ```
 
+**The four patterns you will write hundreds of times.** Copy them exactly; the spacing is part of the
+contract (§1.3.1).
+
+```markdown
+> [!note] Definition
+> Work is energy in transit: $W=\mathbf F\cdot\mathbf d$ for a constant force.
+
+> [!warning] Condition of validity
+> Valid for a constant force along a straight displacement; for a variable force integrate, Eq. (3.4).
+
+### E7 — The block on the accelerating wedge
+
+A block of mass $m$ rests on a wedge of mass $M$ that is pushed with force $F$ ...
+
+> [!success] Check
+> As $F\to 0$ the block slides down the incline with $a=g(\sin\theta-\mu\cos\theta)$, the standard result, so the sign is right.
+
+<details><summary>Solution</summary>
+
+**Method.** System first for the acceleration, then the block alone for the contact force.
+
+$$\mathbf F_{\text{net}} = (M+m)a \qquad (7.2)$$
+
+... algebra, numbers with units, then the check above ...
+
+</details>
+
+> [!abstract] DIAGRAM D6.3 · Work as the area under a force-displacement curve
+> *Show:* force $F$ on the vertical axis against displacement $x$ on the horizontal; the curve rising then falling; the area shaded in two colours for the positive and the negative parts; the turning point where $F$ changes sign circled.
+> *Search:* "work done area under force displacement graph positive negative"
+> *Used in:* §3.4 and Q9.
+```
+
+For the paper, the exemplar pattern is
+
+```markdown
+#### Section D · Comprehensive long-form
+
+### P27 · 9 marks
+
+A chain of mass $M$ and length $L$ hangs over a frictionless peg ...
+
+<details><summary>Solution</summary>
+
+**Method.** Centre-of-mass argument first; energy only after the constraint is written down.
+
+... full solution, marking split in the text (3+3+3) ...
+
+</details>
+```
+
 ### C.4 The markers the gate counts
 
 | marker | use | example |
 |---|---|---|
 | `**C4 — concept check.** …` | a 20-second check with a one-line answer | `**C4 — concept check.** If the block is pushed at the top edge, does it slide?` |
 | `### E7 — …` | a worked exemplar with a full solution | `### E7 — The falling chain on a scale` |
-| `#### Q12. …` | an interleaved practice question | `#### Q12. A spring is compressed by 5 cm…` |
+| `#### Q12. …` | an interleaved practice question | `#### Q12. A spring is compressed by 5 cm …` |
 | `### OL3 — …` | an Olympiad long problem | `### OL3 — The rolling cylinder in a track` |
-| `### P14 · 5 marks` | a paper question | `### P14 · 5 marks` |
-| `### DIAGRAM`-style blockquote | a figure brief | see C.5 |
+| `### P14 · 5 marks` | a paper question (the marks are summed by the gate) | `### P14 · 5 marks` |
+| `> [!abstract] DIAGRAM D6.3 · …` | a figure brief (§1.2) | see C.5 |
+| `> [!note]` / `[!info]` / `[!warning]` / `[!success]` / `[!danger]` / `[!tip]` / `[!quote]` / `[!question]` / `[!example]` | definition · why · validity · check · trap · insight · hand-off/history · exam note · worked example | see C.3 |
 
 Every problem of every family ends with
 
 ```markdown
 <details><summary>Solution</summary>
 
-… full solution, with the method named first and the checks last …
+*Method named first, then the algebra, then the checks.*
 
 </details>
 ```
 
+and the blank lines after `</summary>` and before `</details>` are compulsory (§1.3.1 item 7).
+
 ### C.5 The DIAGRAM brief (the only "diagram" this repository allows in a new chapter)
 
 ```markdown
-> **DIAGRAM D6.3 · Work as area under a force–displacement curve**
+> [!abstract] DIAGRAM D6.3 · Work as area under a force-displacement curve
 > *Show:* the force $F$ on the vertical axis against displacement $x$ on the horizontal; the curve rising then falling; the area between the curve and the axis shaded in two colours for the positive and the negative parts; the turning point where $F$ changes sign marked with a small circle.
 > *Search:* "work done area under force displacement graph positive negative"
 > *Used in:* §3.4 and Q9.
 ```
 
-Rules: numbering `D<PART>.<n>` contiguous; one blank line after the block; `*Show:*` must be a complete
-drawing brief (axes, labels, what is dashed/shaded/marked); `*Search:*` must be 5–12 plain English words;
-the surrounding prose must be readable without the picture.
+Rules: numbering `D<PART>.<n>` contiguous from 1; one blank line after the callout; `*Show:*` must be a
+complete drawing brief (axes, labels, what is dashed, shaded or circled); `*Search:*` must be 5–12 plain
+English words a search engine will match; the surrounding prose must be readable without the picture.
 
 ### C.6 The coverage map (block 0) and the archetype table (block 6)
+
+The coverage map is where the §1.12 book sweep becomes visible. One row per Cengage heading — including the
+chapter's `Solved Examples` band and its exercise **types** — plus one row per section you added beyond the
+plan, marked `added by the sweep`.
 
 ```markdown
 ### 0.4 Cengage coverage map
@@ -3120,10 +3483,18 @@ the surrounding prose must be readable without the picture.
   "entry": "work-energy-power/Work-energy-power.md",
   "format": "markdown",
   "plan_part": 6,
+  "source": "Cengage MECHANICS 2-compressed.pdf, ch 2 Rigid Body Dynamics, pp. 2.1-2.32",
   "exam": ["JEE Advanced", "NSEP", "INPhO", "IPhO"],
-  "media": "text-only; figure briefs inline (no image files by design)",
-  "deliberately_not_covered": ["two-body rotation beyond the energy split (see PART 8)", "…"],
-  "next_candidates": ["…"]
+  "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+  "beyond_plan": [
+    "the variable-mass energy audit (plan asked for the rocket only)",
+    "the effective potential and the reduced-mass energy split"
+  ],
+  "deliberately_not_covered": [
+    "rotational kinetic energy beyond the rolling preview (owned by PART 8)",
+    "two-body Lagrange formalism (not in JEE or IPhO syllabus)"
+  ],
+  "next_candidates": ["a timed 25-question JEE-Advanced-only set keyed to blocks 2-4"]
 }
 ```
 
@@ -3134,18 +3505,21 @@ Never hand-edit those fields.
 ### C.8 The chapter `README.md`
 
 ```markdown
-# <Title> — first principles to Olympiad
+# Work, Energy & Power — first principles to Olympiad
 
-> **Part <N> of [plan.md](../plan.md)** · text-only Markdown chapter · no image files by design
+> [!note] Part 6 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** One paragraph on what this chapter teaches and to what depth.
 **Prerequisites.** PART 5 (Newton's laws), … plus the shipped notes it cites.
 **The one idea.** One sentence (from plan.md §3).
 **Contents.** A bullet per block with the section range.
-**Coverage.** The Cengage floor statement + the two deliberate omissions and why.
+**Coverage (Cengage floor).** The chapter and pages of the PDF the sweep read (e.g. *Cengage Mechanics 2*,
+ch 2 §2.24-2.26), and where the full row-by-row map lives (block 0 of the chapter).
 **Olympiad layer.** What block 10 adds beyond the book: the three derivations, the estimates.
+**Beyond the plan.** The sections, archetypes and problems this chapter added that plan.md PART 6 did not
+ask for — mirrored in `topics.json` as `beyond_plan`, so the coordinator can fold them back into the plan.
 **Hand-off.** What the next PART inherits; what a reader can now attempt.
-**Media.** All figures are described briefs (`DIAGRAM D<n>.<k>`), searchable by their `*Search:*` line.
+**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D6.k`) with a `*Search:*` line.
 **Gate.** `python3 tools/check.py` → ALL GOOD (…).
 ```
 
@@ -3188,7 +3562,7 @@ new questions: E1–E10, Q1–Q25, OL1–OL10, P1–P36 (200 marks). drive-by: n
 ## Appendix D · Cross-part ownership ledger (read this before deriving anything)
 
 If a result appears in the left column, **it is owned by the right column**: write a
-`> **Hand-off.**` pointer and move on. This is what keeps 28 independently written chapters from
+`> [!quote] Hand-off` callout and move on. This is what keeps 28 independently written chapters from
 becoming a pile of near-duplicates.
 
 | result / machinery | owner | consumes it |
@@ -3252,14 +3626,24 @@ becoming a pile of near-duplicates.
 
 ## Closing note on this plan
 
-* **Version.** v2 (2026-09). v1 — the four wave/optics work packages — is archived at
-  [docs/plan-v1-waves-optics.md](docs/plan-v1-waves-optics.md) and complete.
+* **Version.** v2.1 (2026-09). v1 — the four wave/optics work packages — is archived at
+  [docs/plan-v1-waves-optics.md](docs/plan-v1-waves-optics.md) and complete. v2.1 adds the three
+  requirements learned from the first review of this plan: the notes are **Obsidian-first** (§1.3.1), the
+  Cengage chapters are **cross-checked from the PDFs that sit in this repo** (§1.13), and a chapter is
+  required to **close any gap the plan leaves** rather than inherit it (§1.12).
 * **Change rule.** If a chapter's section list below has to change (a discovery that a chapter is two
   chapters, or that a prerequisite is missing), edit *this file in the same commit* as the chapter and
-  note it at the end of the part's entry as `> **Plan amendment.** …`. A plan that is not updated when
+  note it at the end of the part's entry and inside the chapter as `> [!warning] Plan amendment …`.
+  A plan that is not updated when
   reality moves is how the next agent wastes a session.
 * **Adding later chapters.** Append them as PART 29, 30, … in the same shape, add the row to the §0.3
   index and to the §0.4 batch table, and keep Appendix D's ledger accurate.
 * **What "done" means for the whole plan.** All 28 chapters merged, each with its own gate green, the
-  repo gate green, `CURRICULUM.md` covering the full reading order from units to relativity, and a
-  reader who has never seen the Cengage volumes able to sit an INPhO-level paper from these notes alone.
+  repo gate green, `CURRICULUM.md` covering the full reading order from units to relativity, every
+  chapter's Cengage sweep recorded in its coverage map, the whole vault rendering cleanly in Obsidian
+  reading mode, and a reader who has never seen the Cengage volumes able to sit an INPhO-level paper from
+  these notes alone.
+* **The three questions a finished chapter must answer.** (1) *Does the plan's section table exist in it?*
+  (2) *Did the book sweep happen — which Cengage headings does it cover, and which did it exclude, with a
+  reason?* (3) *Does it read correctly in Obsidian?* The gate answers part of (3); the coverage map and
+  the README's `Beyond the plan` list are the evidence for (1) and (2).

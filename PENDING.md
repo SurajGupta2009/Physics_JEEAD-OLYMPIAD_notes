@@ -20,11 +20,33 @@ prerequisites for later ones.
 
 ---
 
+## 0. How these rows map to plan.md's PART numbers
+
+[plan.md](plan.md) is now the authoritative document and numbers every one of these chapters
+**PART 1 … PART 28**; the tables below use the older M/E/P ordering, so use this bridge:
+
+| PENDING rows | plan.md parts |
+|---|---|
+| M1 units-measurements · M3 vectors · M2 kinematics-1d · M4 projectile-motion · M5 newtons-laws · M6 work-energy-power · M7 center-of-mass · M8 rotational-mechanics · M9 gravitation · M10 simple-harmonic-motion · M11 fluid-mechanics · M12 elasticity | **PART 1–12** (in that order: vectors now precedes 1-D kinematics) |
+| E1 coulomb-electric-field · E2 gauss-law · E3 electric-potential · E4 magnetic-field · E5 amperes-law · E6 moving-charges-magnetism · E7 magnetism-matter · E8 electromagnetic-induction · E9 inductance · E10 ac-circuits | **PART 13–22** |
+| P1 photoelectric-effect · P2 atomic-structure · P3 x-rays · P4 nuclear-physics · P5 radioactivity | **PART 23–26** (P5 is merged into PART 26, as its own row suggests) |
+| P6 semiconductors · P7 communication-systems · P8 special-relativity | **PART 27** · *dropped* (JEE-Main-only; see plan.md Appendix B) · **PART 28** |
+| M0 capacitors and the current-electricity rows | already shipped: [capacitors/](capacitors/), [current-electricity/](current-electricity/) — do not rewrite |
+
+Each of those parts carries its own source line, teaching order, must-derive list, figure briefs,
+archetypes, Olympiad block and traps. Claim a chapter by part number and follow plan.md §1.
+
+---
+
 ## 1. Mechanics (Cengage *Mechanics 1* and *Mechanics 2*)
 
-The two mechanics volumes were supplied as reference PDFs (now removed from
-the tree — no binaries in git) but **no note-set yet exists** for any of the
-mechanics chapters. These are the foundation for everything else.
+Both mechanics volumes are supplied as reference PDFs, **committed in this
+repository** (`Cengage  MECHANICS  1-compressed.pdf`, `Cengage MECHANICS 2-compressed.pdf`
+— `git ls-files | grep pdf`), but **no note-set yet exists** for any of the
+mechanics chapters. These are the foundation for everything else. plan.md §1.13 maps each
+PDF to the chapters it really contains — note that *Mechanics II* has no separate
+work-energy chapter (it lives inside ch 2 *Rigid Body Dynamics*) and that SHM is in the
+*Waves and Thermodynamics* volume, not *Mechanics II*.
 
 | order | slug (suggested) | title | scope / Cengage floor | depends on |
 |---:|---|---|---|---|
@@ -143,8 +165,9 @@ If you are picking up work from scratch, the highest-leverage order is:
    ```
 2. Scaffold: `python3 tools/new_topic.py <slug> --title "<Title>" --chapters "01-..."`.
 3. Write it to the structure in [plan.md](plan.md) §1.4 — the **15-block spine** (for the chapters numbered PART 1–28 below) — or the eight-part structure of the archived v1 blueprint for the wave/optics topics.
-4. Into the note-set: **text-only Markdown with inline `DIAGRAM D<n>.<k>` figure briefs** (plan.md §1.2) for every new chapter — no image files, no SVG, no bitmaps, no CDN. The shipped wave/optics topics keep their existing local SVG figures.
-5. Run `python3 tools/check_all.py --update` to refresh the registry counts
+4. Into the note-set: **Obsidian-first, text-only Markdown** (plan.md §1.3.1 — frontmatter, callouts, `$...$`/`$$...$$`, `<details>` solutions) with inline `> [!abstract] DIAGRAM D<n>.<k>` figure briefs (plan.md §1.2) for every new chapter — no image files, no SVG, no bitmaps, no CDN. The shipped wave/optics topics keep their existing local SVG figures.
+5. **Sweep the book.** Read your Cengage chapter's own contents page from the PDF in this repo (plan.md §1.13) and close every gap the plan left, recording what you added under `## Beyond the plan` in the chapter README and in `topics.json` `beyond_plan` (plan.md §1.12).
+6. Run `python3 tools/check_all.py --update` to refresh the registry counts
    and validate. Flip `status` to `complete` when the gate is green.
-6. Add the topic to `tools/md_site.py` `TOPICS` and `name_map` lists, regenerate
+7. Add the topic to `tools/md_site.py` `TOPICS` and `name_map` lists, regenerate
    with `python3 tools/md_site.py`, and update this file and the README table.
