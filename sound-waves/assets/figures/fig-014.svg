@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .tube{fill:#f5f0e8;stroke:#222;stroke-width:1.5}
+</style>
+<text x="10" y="18" class="lbl">Kundt's tube: standing waves in gas column, measurement of v_gas / v_rod</text>
+<rect x="100" y="80" width="500" height="60" class="tube"/>
+<text x="100" y="70" class="sm">glass tube with cork dust, closed at both ends</text>
+<line x1="100" y1="110" x2="600" y2="110" stroke="#1f5fa8" stroke-width:1" stroke-dasharray="3 2"/>
+<circle cx="200" cy="110" r="3" fill="#222"/>
+<circle cx="300" cy="110" r="3" fill="#222"/>
+<circle cx="400" cy="110" r="3" fill="#222"/>
+<circle cx="500" cy="110" r="3" fill="#222"/>
+<text x="200" y="160" class="sm">nodes: dust piles where displacement 0 (pressure antinode)</text>
+<rect x="620" y="90" width="80" height="40" fill="#ddd" stroke="#222"/>
+<text x="620" y="80" class="sm">metal rod clamped at middle</text>
+<text x="620" y="145" class="sm">rod vibrates longitudinally: L_rod = λ_rod/2</text>
+<text x="100" y="200" class="lbl">λ_gas = 2 × distance between nodes, v_gas = f × λ_gas</text>
+<text x="100" y="220" class="sm">f same for rod and gas: f = v_rod / (2 L_rod) = v_gas / λ_gas? Actually λ_gas = 2×node separation</text>
+<text x="100" y="240" class="sm">Ratio: v_gas / v_rod = (node separation) / L_rod</text>
+<text x="100" y="260" class="sm">Valid: rod thin, Y known, gas ideal, tube diameter ≪ λ, dust light enough to move</text>
+</svg>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound Waves & Doppler Effect — first principles to Olympiad</title>
+<meta name="description" content="Sound waves, speed of sound Laplace correction, intensity, organ pipes, beats, Doppler effect with wind and 2D, Mach cone – JEE Advanced to Olympiad">
+<link rel="stylesheet" href="assets/notes.css">
+<script src="assets/tex.js" defer></script>
+<script src="assets/pages.js" defer></script>
+<script src="assets/notes.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<nav class="toc" id="toc" aria-label="Contents"><p class="lab">Contents · Sound Waves</p></nav>
+<main>
+<p class="meta" id="top"><span class="badges"><span class="b j">JEE Advanced</span><span class="b o">INPhO / IPhO</span><span class="b n">8 parts · 15 figures</span></span></p>
+<h1>Sound Waves &amp; Doppler Effect — first principles to Olympiad</h1>
+<p class="lead">Sound is a longitudinal wave where pressure is the derivative of displacement. This file builds $v=\sqrt{B/\rho}$, Laplace $\sqrt{\gamma P/\rho}$, intensity $I=\Delta P_0^2/2\rho v$, organ pipes with $e\approx0.6r$, beats $f_{\text{beat}}=|f_1-f_2|$, and the complete Doppler $f'=f(v\pm v_o)/(v\mp v_s)$ including wind, 2D projection and Mach cone $\sin\alpha=1/M$. Every boxed result carries its validity.</p>
+
+<h2 id="section-01-foundations">1 · Foundations &amp; Physical Motivation</h2>
+
+<div class="box def"><p class="bt">Definition — longitudinal wave</p><p>Displacement <m>s(x,t)=s_0\sin(kx-\omega t)</m>. Volumetric strain <m>\Delta V/V=\partial s/\partial x</m>. Excess pressure <m>\Delta P=-B\,\partial s/\partial x</m>. Condition: <m>|s_0|\ll\lambda</m>, <m>|\partial s/\partial x|\ll1</m>, linear, lossless.</p></div>
+
+<figure class="fig"><img src="assets/figures/fig-001.svg" alt="Displacement and pressure phase shift"><figcaption><b>Fig. 1.1</b> — $s$ and $\Delta P$ are $\pi/2$ out of phase; $s=0$ is $\Delta P$ antinode.</figcaption></figure>
+
+<p>Particle velocity $u=\partial s/\partial t$, density variation $\Delta\rho=-\rho_0\partial s/\partial x$. Where $s=0$, slope maximal → compression maximal.</p>
+
+<h2 id="section-02-derivations">2 · Core Derivations &amp; Asymptotic Limits</h2>
+
+<h3>2.1 Speed $v=\sqrt{B/\rho}$</h3>
+<p>Slab $A\,dx$, mass $\rho A\,dx$, net force $-A\partial\Delta P/\partial x\,dx = AB\,\partial^2s/\partial x^2\,dx$ → wave equation $\partial^2s/\partial t^2=(B/\rho)\partial^2s/\partial x^2$.</p>
+<div class="eqd key" data-tag="2.2">v=\sqrt{\frac{B}{\rho}}\quad\text{fluids},\qquad v=\sqrt{\frac{Y}{\rho}}\quad\text{thin rods}</div>
+<p>Validity: adiabatic $B_S$, homogeneous, isotropic, small amplitude. Limit $B\to\infty$ → $v\to\infty$ ✓.</p>
+
+<figure class="fig"><img src="assets/figures/fig-002.svg" alt="Derivation of speed"><figcaption><b>Fig. 2.1</b> — Gas slab derivation gives $v=\sqrt{B/\rho}$.</figcaption></figure>
+
+<h3>2.2 Newton vs Laplace</h3>
+<p>Newton: $PV=$ const → $B_T=P$ → $v=\sqrt{P/\rho}\approx280$ m/s at STP – too low.</p>
+<p>Laplace: $PV^\gamma=$ const → $B_S=\gamma P$ →</p>
+<div class="eqd key" data-tag="2.6">v=\sqrt{\frac{\gamma P}{\rho}}=\sqrt{\frac{\gamma RT}{M}}</div>
+<p>At $273$ K, $\gamma=1.4$, $M=29$ g/mol → $331$ m/s. Validity: ideal gas, adiabatic, $f\ll$ GHz.</p>
+
+<figure class="fig"><img src="assets/figures/fig-003.svg" alt="Newton vs Laplace"><figcaption><b>Fig. 2.2</b> — Isothermal 280 vs adiabatic 331 m/s; $\sqrt{\gamma}=1.183$.</figcaption></figure>
+
+<h3>2.3 Intensity</h3>
+<p>Average intensity $I=\Delta P_0^2/(2\rho v)=\tfrac12\rho v\omega^2 s_0^2$. Decibel $\beta=10\log_{10}(I/I_0)$, $I_0=10^{-12}$ W/m².</p>
+<div class="eqd key" data-tag="2.9">I=\frac{\Delta P_0^2}{2\rho v}=\frac12\rho v\omega^2 s_0^2,\qquad \beta=10\log_{10}\frac{I}{I_0}</div>
+<p>Point source $I\propto1/r^2$, $\Delta P_0\propto1/r$; line source $I\propto1/r$, $\Delta P_0\propto1/\sqrt r$. Validity: far-field $r\gg\lambda$.</p>
+
+<figure class="fig"><img src="assets/figures/fig-004.svg" alt="Intensity attenuation"><figcaption><b>Fig. 2.3</b> — Point source inverse square; line source $1/r$.</figcaption></figure>
+
+<h3>2.4 Organ pipes</h3>
+<p>Closed end: $s=0$ node, $\Delta P$ antinode. Open end: $\Delta P=0$ node, $s$ antinode.</p>
+<div class="eqd key" data-tag="2.12">\text{Closed: }L=(2n-1)\frac{\lambda}{4},\ f_n=(2n-1)\frac{v}{4L}\ \text{odd only}</div>
+<div class="eqd key" data-tag="2.13">\text{Open: }L=n\frac{\lambda}{2},\ f_n=n\frac{v}{2L}\ \text{all harmonics}</div>
+<p>End-correction $e\approx0.6r$, $L_{\text{eff}}=L+e$ closed, $L+2e$ open. Validity: $r\ll\lambda$, $r\ll L$.</p>
+
+<figure class="fig"><img src="assets/figures/fig-005.svg" alt="Organ pipes"><figcaption><b>Fig. 2.4</b> — Closed odd only, open all; $e\approx0.6r$.</figcaption></figure>
+
+<h3>2.5 Resonance tube</h3>
+<div class="eqd key" data-tag="2.16">v=2f(l_2-l_1),\qquad e=\frac{l_2-3l_1}{2}</div>
+
+<figure class="fig"><img src="assets/figures/fig-006.svg" alt="Resonance tube"><figcaption><b>Fig. 2.5</b> — Two resonances give $v$ and $e$.</figcaption></figure>
+
+<figure class="fig"><img src="assets/figures/fig-014.svg" alt="Kundt tube"><figcaption><b>Fig. 2.6</b> — Kundt's tube measures $v_{\text{gas}}/v_{\text{rod}}$.</figcaption></figure>
+
+<h3>2.6 Interference &amp; beats</h3>
+<p>Quincke: $\Delta=2\Delta L$, destructive $(2n+1)\lambda/2$.</p>
+<div class="eqd key" data-tag="2.18">f_{\text{beat}}=|f_1-f_2|</div>
+
+<figure class="fig"><img src="assets/figures/fig-007.svg" alt="Quincke tube"><figcaption><b>Fig. 2.7</b> — Quincke's acoustic interferometer.</figcaption></figure>
+<figure class="fig"><img src="assets/figures/fig-008.svg" alt="Beats"><figcaption><b>Fig. 2.8</b> — Beats envelope at $|f_1-f_2|$.</figcaption></figure>
+
+<h3>2.7 Doppler</h3>
+<p>Moving source: $\lambda'=(v\mp v_s)/f$, $f'=fv/(v\mp v_s)$. Moving observer: $f'=f(v\pm v_o)/v$.</p>
+<div class="eqd key" data-tag="2.21">f'=f\frac{v\pm v_o}{v\mp v_s}\quad\text{+o toward, -s toward = higher}</div>
+<p>Wind: $v_{\text{eff}}=v\pm w$ →</p>
+<div class="eqd key" data-tag="2.22">f'=f\frac{(v\pm w)\pm v_o}{(v\pm w)\mp v_s}</div>
+<p>2D: $f'=f(v-v_o\cos\theta_o)/(v-v_s\cos\theta_s)$ – only line-of-sight components.</p>
+
+<figure class="fig"><img src="assets/figures/fig-009.svg" alt="Moving source"><figcaption><b>Fig. 2.9</b> — Moving source compresses $\lambda$ ahead.</figcaption></figure>
+<figure class="fig"><img src="assets/figures/fig-010.svg" alt="Moving observer"><figcaption><b>Fig. 2.10</b> — Moving observer changes $v_{\text{rel}}$.</figcaption></figure>
+<figure class="fig"><img src="assets/figures/fig-011.svg" alt="Oblique Doppler"><figcaption><b>Fig. 2.11</b> — 2D: project $v_s\cos\theta_s$, $v_o\cos\theta_o$.</figcaption></figure>
+
+<h3>2.8 Echo &amp; Mach</h3>
+<div class="eqd key" data-tag="2.26">f_{\text{echo}}=f\frac{v+v_w}{v-v_w}\approx f\left(1+\frac{2v_w}{v}\right)</div>
+<div class="eqd key" data-tag="2.28">\sin\alpha=\frac{v}{v_s}=\frac1M,\quad M=\frac{v_s}{v}</div>
+
+<figure class="fig"><img src="assets/figures/fig-012.svg" alt="Echo"><figcaption><b>Fig. 2.12</b> — Echo double shift: wall as observer then source.</figcaption></figure>
+<figure class="fig"><img src="assets/figures/fig-013.svg" alt="Mach cone"><figcaption><b>Fig. 2.13</b> — Supersonic Mach cone $\sin\alpha=1/M$.</figcaption></figure>
+<figure class="fig"><img src="assets/figures/fig-015.svg" alt="Wind"><figcaption><b>Fig. 2.14</b> — Wind master formula $v\to v\pm w$.</figcaption></figure>
+
+<h2 id="section-03-exemplars">3 · Interleaved Exemplars</h2>
+
+<div class="q"><div class="hd"><span class="lab">Q1</span><b>Find $\Delta P_0$ for $s=2\mu\text{m}\sin(1000t-5x)$, $\rho=1.2$, $v=200$ m/s</b></div><div class="bd"><p>$\omega=1000$, $s_0=2\times10^{-6}$, $\Delta P_0=\rho v\omega s_0=0.48$ Pa.</p><details class="sol"><summary>Solution</summary><div class="bd"><p>$\Delta P_0=\rho v\omega s_0=1.2\cdot200\cdot1000\cdot2e-6=0.48$ Pa. Check $B=\rho v^2$, $Bk s_0$ same ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q2</span><b>Speed in He at 20°C, $\gamma=5/3$, $M=4$ g/mol</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$v=\sqrt{\gamma RT/M}=\sqrt{(5/3)8.314\cdot293/0.004}=1007$ m/s. Lighter $M$ → larger $v$ ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q3</span><b>Point source $0.1$ W, $I$ at $10$ m</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$I=P/4\pi r^2=7.96\times10^{-5}$ W/m², $\beta=79$ dB, $\Delta P_0=0.256$ Pa. Check $I\propto1/r^2$ ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q4</span><b>Closed pipe $L=0.85$ m, $f_1$?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$f_1=v/4L=100$ Hz, $f_3=300$ Hz. With $e=1.2$ cm → $98.6$ Hz. End-correction lowers $f$ ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q5</span><b>Resonance tube $l_1=16.5$ cm, $l_2=50.1$ cm, $f=512$ Hz, find $v$, $e$</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$v=2f(l_2-l_1)=344$ m/s, $e=(l_2-3l_1)/2=3$ mm ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q6</span><b>Beats $256$ and $258$ Hz, effect of wax</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$f_{\text{beat}}=2$ Hz, period $0.5$ s. Wax ↓ $f$, filing ↑ $f$ ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q7</span><b>Source moving $30$ m/s toward observer, $f=1000$, $v=340$, $f'$?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$f'=fv/(v-v_s)=1097$ Hz approaching, $919$ Hz receding. Check $v_s\to v$ → $f'\to\infty$ ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q8</span><b>Observer moving $30$ m/s toward source, $f'$?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$f'=f(v+v_o)/v=1088$ Hz. Source moving gives larger shift than observer moving same speed – asymmetry ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q9</span><b>Echo from wall moving $v_w$</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$f_{\text{echo}}=f(v+v_w)/(v-v_w)\approx f(1+2v_w/v)$. Double shift ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q10</span><b>Mach $M=2$, angle?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$\sin\alpha=1/2$ → $30°$. Check $M=1$ → $90°$ ✓.</p></div></details></div></div>
+
+<h2 id="section-04-advanced">4 · JEE Advanced Advantage</h2>
+
+<div class="box insight"><p class="bt">Impedance method</p><p>$Z=\rho v$, reflection $R=((Z_2-Z_1)/(Z_2+Z_1))^2$. Open end $Z_2\approx0$ → pressure node, closed $Z_2\to\infty$ → displacement node. Same as strings.</p></div>
+
+<div class="box insight"><p class="bt">Sign-free Doppler</p><p>Draw S→O arrow. Project $v_s$, $v_o$. Toward = higher $f$. Source toward → denominator smaller. Observer toward → numerator larger. Wind $v\to v\pm w$ cancels if S&O stationary.</p></div>
+
+<div class="box insight"><p class="bt">Closest approach glide</p><p>$f'(t)=fv/(v-v_{s\parallel}(t))$, $v_{s\parallel}=v_s^2t/\sqrt{b^2+v_s^2t^2}$, $f'=f$ at $t=0$, slope $df'/dt|_0=-fv_s^2/(vb)$.</p></div>
+
+<h2 id="section-05-traps">5 · Examiner Traps</h2>
+
+<div class="box trap"><p class="bt">Trap: displacement node = pressure node</p><p>Wrong. Closed $s=0$ node → $\Delta P$ antinode. Open $s$ antinode → $\Delta P=0$ node. Mark on diagram.</p></div>
+
+<div class="box trap"><p class="bt">Trap: $v=\sqrt{P/\rho}$</p><p>Newton isothermal 280 m/s wrong; Laplace adiabatic 331 m/s correct. Condition: rapid → adiabatic.</p></div>
+
+<div class="box trap"><p class="bt">Trap: dB 10 log vs 20 log</p><p>$I\propto\Delta P^2$, so $10\log I$ = $20\log\Delta P$. Doubling $I$ → +3 dB, doubling $P$ → +6 dB.</p></div>
+
+<div class="box trap"><p class="bt">Trap: end-correction factor 2</p><p>Closed $L+e$, open $L+2e$. Forgetting 2 is classic.</p></div>
+
+<div class="box trap"><p class="bt">Trap: Doppler symmetry</p><p>Source moving vs observer moving same speed give different $f'$ (1097 vs 1088 Hz). Don't use symmetric formula.</p></div>
+
+<div class="box trap"><p class="bt">Trap: wind changes frequency when S&O stationary</p><p>No – $f'=f(v+w)/(v+w)=f$. Wind only matters if S or O moves relative to medium.</p></div>
+
+<div class="box trap"><p class="bt">Trap: beats $f_{\text{beat}}=|f_1-f_2|/2$</p><p>Envelope $ |f_1-f_2|/2$, intensity beats $|f_1-f_2|$.</p></div>
+
+<div class="box trap"><p class="bt">Trap: closed pipe $f_n=nv/4L$</p><p>Wrong – only odd: $f_n=(2n-1)v/4L$. Second overtone $5v/4L$.</p></div>
+
+<h2 id="section-06-playbook">6 · Topic Playbook</h2>
+
+<p><b>Triage:</b> speed? → $v=\sqrt{\gamma RT/M}$; intensity? → $I\propto1/r^2$; pipes? → identify ends, $L=(2n-1)\lambda/4$ vs $n\lambda/2$, $e$; beats? → $|f_1-f_2|$; Doppler? → who moves? source $λ$ changes, observer $v_{\text{rel}}$ changes, wind $v\to v\pm w$, 2D project $\cos\theta$, echo double, Mach $\sin\alpha=1/M$.</p>
+
+<p><b>Numbers:</b> $v(20°C)=343$ m/s, $0.6$ m/s/°C, $Z≈400$ rayl, $I_0=10^{-12}$, $e≈0.6r$, $f_{\text{beat}}=|f_1-f_2|$, $M=2→30°$.</p>
+
+<h2 id="section-07-paper">7 · Olympiad Paper (36Q)</h2>
+
+<p>See the portable Markdown edition for full 36-question paper with solutions. This HTML holds 15 exemplars; the master MD holds 48+36.</p>
+
+<div class="q"><div class="hd"><span class="lab">Q11</span><b>Closed pipe $L=0.5$ m, $v=340$, $f_1$?</b></div><div class="bd"><p>$f_1=170$ Hz.</p><details class="sol"><summary>Solution</summary><div class="bd"><p>$v/4L=170$ Hz ✓.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q12</span><b>Point source $1$ W at $10$ m, $I$?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$I=1/4π100=7.96×10^{-4}$ W/m².</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q13</span><b>Beats 256 & 260 Hz</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>4 Hz.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q14</span><b>Doppler $v_s=34$, $f=1000$, $f'$ approaching?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$1111$ Hz.</p></div></details></div></div>
+
+<div class="q"><div class="hd"><span class="lab">Q15</span><b>Mach $M=2$, angle?</b></div><div class="bd"><details class="sol"><summary>Solution</summary><div class="bd"><p>$30°$.</p></div></details></div></div>
+
+<h2 id="section-08-formula-sheet">8 · Formula Sheet</h2>
+
+<table class="tb">
+<tr><th>Formula</th><th>Validity</th></tr>
+<tr><td><m>s=s_0\sin(kx-\omega t)</m></td><td><m>|s_0|\ll\lambda</m></td></tr>
+<tr><td><m>\Delta P=-B\partial s/\partial x,\ \Delta P_0=B k s_0</m></td><td>small strain, adiabatic $B_S$</td></tr>
+<tr><td><m>v=\sqrt{B/\rho},\ v=\sqrt{Y/\rho}</m></td><td>homogeneous, lossless</td></tr>
+<tr><td><m>v=\sqrt{\gamma P/\rho}=\sqrt{\gamma RT/M}</m></td><td>ideal gas, adiabatic</td></tr>
+<tr><td><m>I=\Delta P_0^2/2\rho v</m></td><td>traveling plane wave</td></tr>
+<tr><td><m>\beta=10\log_{10}(I/I_0)</m></td><td><m>I_0=10^{-12}</m></td></tr>
+<tr><td><m>L=(2n-1)\lambda/4,\ f_n=(2n-1)v/4L</m> closed</td><td>odd only, <m>r\ll\lambda</m></td></tr>
+<tr><td><m>L=n\lambda/2,\ f_n=n v/2L</m> open</td><td>all, <m>L_{\text{eff}}=L+2e</m></td></tr>
+<tr><td><m>v=2f(l_2-l_1)</m></td><td>resonance tube</td></tr>
+<tr><td><m>f_{\text{beat}}=|f_1-f_2|</m></td><td><m>|f_1-f_2|\ll f_{\text{avg}}</m></td></tr>
+<tr><td><m>f'=f(v\pm v_o)/(v\mp v_s)</m></td><td><m>v_s,v_o&lt;v</m></td></tr>
+<tr><td><m>f'=f(v\pm w\pm v_o)/(v\pm w\mp v_s)</m></td><td>uniform wind</td></tr>
+<tr><td><m>f'=f(v-v_o\cos\theta_o)/(v-v_s\cos\theta_s)</m></td><td>2D projection</td></tr>
+<tr><td><m>f_{\text{echo}}=f(v+v_w)/(v-v_w)</m></td><td>double shift</td></tr>
+<tr><td><m>\sin\alpha=1/M,\ M=v_s/v</m></td><td>supersonic</td></tr>
+</table>
+
+<p class="skip">Next: <a href="#section-01-foundations">Back to top →</a></p>
+
+</main>
+</div>
+</body>
+</html>

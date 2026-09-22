@@ -294,9 +294,9 @@
     },
     {
       "slug": "sound-waves",
-      "title": "Sound waves and the Doppler effect — first principles to Olympiad",
-      "status": "planned",
-      "owner": null,
+      "title": "Sound Waves & Doppler Effect — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
       "entry": "sound-waves/Sound-waves.html",
       "exam": [
         "JEE Advanced",
@@ -304,11 +304,34 @@
         "INPhO",
         "IPhO"
       ],
-      "note": "plan.md PART 2 (Agent 2), the second link of the wave sequence. Floor: longitudinal waves and the displacement/pressure phase relation, Laplace's correction to the speed of sound, intensity and decibels, organ pipes with end-correction, resonance tube and Kundt's tube, Quincke's tube, beats, and the complete Doppler effect including wind, oblique motion, accelerated sources, echoes from moving walls and the Mach cone. Its intensity formula I = ½ρvω²s₀² is the one wave-optics §1.1.1 borrows, and its displacement-node/pressure-antinode boundary rule is the same physics as the optical phase flip in wave-optics §3.2.",
+      "pages": [
+        "Sound-waves.html"
+      ],
+      "figures": 15,
+      "questions": 15,
+      "solutions": 15,
+      "math_spans": 26,
+      "bytes_html": 16566,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 150,
+        "minutes": 180,
+        "file": "Sound-waves.md",
+        "anchor": "section-07-paper"
+      },
+      "deliberately_not_covered": [
+        "nonlinear acoustics beyond shock discontinuity and Mach cone (no Burgers equation, no N-wave detailed decay)",
+        "musical timbre and Fourier analysis of instruments (only fundamental and harmonics of ideal pipes)",
+        "architectural acoustics: reverberation time, Sabine formula, absorption coefficients",
+        "ultrasound imaging and medical acoustics",
+        "relativistic Doppler (belongs to electromagnetic-waves)",
+        "quantum acoustics: phonons beyond the one-line mention"
+      ],
       "next_candidates": [
-        "scaffold with: python3 tools/new_topic.py sound-waves --title \"Sound waves\" --chapters \"01-longitudinal-waves,02-speed-of-sound,03-intensity-and-decibels,04-columns-and-resonance,05-beats,06-doppler,07-playbook,08-paper\"",
-        "register the built counts with python3 tools/check_all.py --update",
-        "keep the Doppler sign convention in one table — wave-optics deliberately has no medium, so the contrast is a teaching point"
+        "acoustic resonators and Helmholtz resonator with radiation impedance",
+        "musical instruments: strings coupled to air columns, Fourier synthesis",
+        "nonlinear acoustics: shock formation, sonic boom N-wave, acoustic streaming"
       ]
     },
     {

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+</style>
+<text x="10" y="18" class="lbl">Double Doppler: reflection from moving wall / vehicle – echo</text>
+<rect x="100" y="80" width="20" height="120" fill="#aaa" stroke="#222"/>
+<text x="80" y="70" class="sm">wall v_w →</text>
+<circle cx="300" cy="140" r="6" fill="#c0392b"/>
+<text x="280" y="125" class="sm">source f</text>
+<!-- incident wave -->
+<line x1="120" y1="130" x2="290" y2="140" stroke="#1f5fa8" stroke-width:1" stroke-dasharray="5 3"/>
+<!-- reflected -->
+<line x1="120" y1="150" x2="290" y2="140" stroke="#0b7a4b" stroke-width:1"/>
+<text x="150" y="120" class="sm">incident: wall is moving observer</text>
+<text x="150" y="180" class="sm">reflected: wall is moving source</text>
+<text x="350" y="120" class="lbl">f1 = f * (v + v_w)/(v - v_s)  [wall as observer]</text>
+<text x="350" y="145" class="lbl">f2 = f1 * v/(v - v_w) = f * (v+v_w)/(v - v_s) * v/(v - v_w?)</text>
+<text x="350" y="165" class="sm">For stationary source v_s=0, stationary observer at source: f_echo = f * (v+v_w)/(v - v_w) ≈ f*(1+2v_w/v) for v_w≪v</text>
+<text x="350" y="190" class="sm">If observer also moving, apply again: f'' = f * (v+v_o)/(v - v_s) * (v+v_w)/(v - v_w) etc.</text>
+<text x="60" y="250" class="sm">Valid: wall large vs λ, specular reflection, v_w &lt; v, no wind. Double shift is product of two single shifts.</text>
+</svg>

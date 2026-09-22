@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .tube{fill:none;stroke:#222;stroke-width:2}
+  .wave{stroke:#1f5fa8;stroke-width:1.2;fill:none}
+</style>
+<text x="10" y="18" class="lbl">Quincke's tube – acoustic interferometer: path difference Δ = 2ΔL</text>
+<!-- U tubes -->
+<path d="M100,80 L100,180 Q100,210 130,210 L270,210 Q300,210 300,180 L300,80" class="tube"/>
+<path d="M120,80 L120,160 Q120,190 150,190 L250,190 Q280,190 280,160 L280,80" class="tube"/>
+<text x="130" y="70" class="sm">source S</text>
+<text x="270" y="70" class="sm">detector D</text>
+<!-- sliding part -->
+<rect x="150" y="210" width="100" height="40" fill="#f5f0e8" stroke="#c0392b"/>
+<text x="160" y="235" class="sm">sliding U → ΔL</text>
+<text x="400" y="100" class="lbl">Constructive: Δ = nλ, Destructive: Δ = (2n+1)λ/2</text>
+<text x="400" y="130" class="sm">Δ = path diff between two arms = 2× extra length of sliding tube</text>
+<text x="400" y="160" class="sm">Minimum at D when Δ = (2n+1)λ/2 → measure λ = 2ΔL / (2n+1)</text>
+<text x="400" y="190" class="sm">Valid: monochromatic, equal amplitude division, no loss at bends, λ ≪ tube length</text>
+</svg>

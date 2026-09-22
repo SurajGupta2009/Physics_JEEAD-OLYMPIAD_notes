@@ -1,7 +1,7 @@
 # Curriculum map: Cengage floor → JEE → Olympiad
 
-This repository now has two readers for the same six consolidated note-sets (three more are registered in
-`topics.json` as the wave sequence below and are not on disk yet):
+This repository now has two readers for the same eight consolidated note-sets (one more is registered in
+`topics.json` as the remaining wave link and is not on disk yet):
 
 - the `*.md` files are the portable editions, with standard Markdown, `$...$` / `$$...$$` math, collapsible solutions and local SVG diagrams;
 - the `*.html` files are the optional interactive editions, retained for the generated table of contents, progress ticks, theme switch and printing.
@@ -13,7 +13,7 @@ The order below is intentional. Read the theory in the first column before attem
 | order | note | first pass | JEE/Cengage floor | Olympiad extension |
 |---:|---|---|---|---|
 | 1 | [String Waves](string-waves/String-waves.md) | disturbance vs matter transport → the 1-D wave equation from Newton's second law → energy and power → boundary reflection and impedance → standing waves and normal modes | the mechanical-wave floor named in plan.md §2 PART 1, plus the sonometer and Melde | hanging-rope waves, WKB amplitude scaling, Bessel standing modes, mechanical impedance |
-| 2 | Sound waves · *planned* (plan.md PART 2) | displacement vs pressure waves → Laplace's speed → intensity and decibels → columns, end-correction and resonance → beats → Doppler | the acoustic floor named in plan.md §2 PART 2, incl. Quincke's tube and Kundt's tube | oblique and accelerated Doppler, moving-wall echoes, Mach cones |
+| 2 | [Sound Waves](sound-waves/Sound-waves.md) | longitudinal $s$ & pressure $\Delta P$, $v=\sqrt{B/\rho}$, Laplace $\sqrt{\gamma RT/M}$, intensity & dB, organ pipes & end-correction, beats, Doppler with wind/2D/echo, Mach cone | Cengage *Waves and Thermodynamics* – sound: longitudinal waves, speed (Newton vs Laplace), intensity, organ pipes, beats, Doppler, supersonic | Impedance matching, accelerated Doppler & closest approach glide, WKB for horns, acoustic ranging, shock |
 | 3 | Electromagnetic waves · *planned* (plan.md PART 3) | displacement current → Maxwell's equations → the wave equation for E and B → Poynting → radiation pressure → spectrum | the EM floor named in plan.md §2 PART 3 | momentum of light, curved-surface radiation force, spectrum as a working table |
 | 4 | [Thermodynamics](thermodynamics/Thermodynamics.md) | Temperature and equilibrium → kinetic theory → first law → heat capacities/processes → second law → entropy | Temperature scales, expansion, kinetic theory, calorimetry, work, ideal-gas processes, engines and refrigerators | Equipartition limits, distributions/effusion, hydrostatic atmospheres, van der Waals criticality, radiation as a working fluid, entropy counting |
 | 5 | [Heat](heat/Heat.md) | Heat/temperature/internal energy → expansion → calorimetry and phase change → conduction → convection/cooling → radiation | Specific heat, latent heat, thermal expansion, calorimetry, Fourier/Newton/Stefan–Boltzmann laws and thermal resistance | Heat equation and diffusion time, thermal waves, effusivity, fins, critical insulation radius and radiation-balance estimates |
@@ -66,6 +66,18 @@ The four notes that correspond directly to the supplied Cengage volumes carry th
 | Kirchhoff, Wheatstone/meter bridges, dividers, Δ–Y, ladders and network theorems | [Current Electricity.md — parts 4–5](current-electricity/Current-electricity.md#section-04-kirchhoff-and-bridges) | symmetry and nodal routes both taught |
 | Galvanometer, ammeter, voltmeter, potentiometer and meter bridge | [Current Electricity.md — part 6](current-electricity/Current-electricity.md#section-06-instruments-and-measurement) | loading error and null measurement included |
 | Heating effects, fuse, maximum power and applications | [Current Electricity.md — part 7](current-electricity/Current-electricity.md#section-07-advanced-topics) | extended to olympiad estimates |
+
+### Waves and thermodynamics volume
+
+| Cengage floor | Markdown location | status |
+|---|---|---|
+| String waves: disturbance, $v=\sqrt{T/\mu}$, $f(x\mp vt)$, energy/power, reflection, standing waves | [String Waves.md — §1–2](string-waves/String-waves.md#section-01-foundations) | wave equation from $F=ma$, $v$ derived |
+| Longitudinal waves, $s(x,t)$, $\Delta P=-B\partial s/\partial x$, phase $\pi/2$, density variations | [Sound Waves.md — §1](sound-waves/Sound-waves.md#section-01-foundations) | derived, Fig.1.1 |
+| Speed $v=\sqrt{B/\rho}$, $\sqrt{Y/\rho}$, Newton $v=\sqrt{P/\rho}$ vs Laplace $v=\sqrt{\gamma P/\rho}=\sqrt{\gamma RT/M}$, factors $T,M$, humidity, $P$ independence | [Sound Waves.md — §2.1–2.4](sound-waves/Sound-waves.md#section-02-derivations) | full derivation + limit checks |
+| Intensity $I=\Delta P_0^2/2\rho v$, loudness dB $\beta=10\log(I/I_0)$, point $I\propto1/r^2$, line $I\propto1/r$ | [Sound Waves.md — §2.5](sound-waves/Sound-waves.md#section-02-derivations) | energy method, impedance |
+| Organ pipes, closed $L=(2n-1)\lambda/4$ odd only, open $L=n\lambda/2$ all, end-correction $e=0.6r$, resonance tube $v=2f(l_2-l_1)$, Kundt's tube | [Sound Waves.md — §2.6–2.7](sound-waves/Sound-waves.md#section-02-derivations) | boundary conditions derived, Fig.2.4–2.6 |
+| Interference Quincke's tube, beats $f_{\text{beat}}=|f_1-f_2|$, tuning fork wax/filing | [Sound Waves.md — §2.8](sound-waves/Sound-waves.md#section-02-derivations) | superposition + phasor |
+| Doppler: moving source $\lambda'=(v\mp v_s)/f$, moving observer $v_{\text{rel}}=v\pm v_o$, wind $v\pm w$, 2D $v_s\cos\theta_s$, echo double shift, Mach $\sin\alpha=1/M$ | [Sound Waves.md — §2.9–2.12](sound-waves/Sound-waves.md#section-02-derivations) | master formula with projections, Fig.2.9–2.14 |
 
 ### Optics and modern physics volume
 

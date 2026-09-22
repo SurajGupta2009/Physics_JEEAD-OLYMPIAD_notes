@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .cone{fill:#e8f0f9;stroke:#1f5fa8;stroke-width:1.2}
+</style>
+<text x="10" y="18" class="lbl">Supersonic source, Mach cone, shock wave</text>
+<!-- source moving right supersonic -->
+<line x1="100" y1="200" x2="600" y2="200" stroke="#222" stroke-dasharray="3 3"/>
+<circle cx="500" cy="200" r="6" fill="#c0392b"/>
+<text x="480" y="190" class="sm">source v_s > v</text>
+<!-- Mach cone -->
+<path d="M500,200 L100,80 L100,320 Z" class="cone" opacity="0.5"/>
+<line x1="500" y1="200" x2="100" y2="80" stroke="#c0392b" stroke-width:1.5"/>
+<line x1="500" y1="200" x2="100" y2="320" stroke="#c0392b" stroke-width:1.5"/>
+<text x="120" y="100" class="sm">Mach cone: envelope of wavefronts</text>
+<text x="120" y="300" class="sm">Outside cone: no sound heard before arrival</text>
+<text x="350" y="260" class="lbl">sin α = v / v_s = 1 / M,  M = v_s / v = Mach number</text>
+<text x="350" y="280" class="sm">α = half-angle of cone with respect to direction of motion. At M=1, α=90° (plane wave)</text>
+<text x="350" y="300" class="sm">Shock wave: pressure discontinuity at cone surface, energy concentrated. Valid: steady supersonic, point source, homogeneous medium</text>
+</svg>

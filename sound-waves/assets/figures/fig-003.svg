@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .box{fill:#fff;stroke:#222;stroke-width:1}
+  .bar{fill:#1f5fa8}
+  .bar2{fill:#c0392b}
+</style>
+<text x="10" y="18" class="lbl">Newton's isothermal vs Laplace adiabatic correction</text>
+<text x="60" y="50" class="lbl">Newton: B_T = P → v = √(P/ρ) ≈ 280 m/s (air, STP) – too low</text>
+<text x="60" y="75" class="sm">Assumed T constant, heat flows during compression – wrong, process is rapid, adiabatic</text>
+<text x="60" y="105" class="lbl">Laplace: B_S = γ P → v = √(γP/ρ) = √(γRT/M) ≈ 331 m/s at 0°C, 343 m/s at 20°C</text>
+<text x="60" y="130" class="sm">γ = Cp/Cv = 1.40 for diatomic gas. Adiabatic, no heat exchange during acoustic cycle</text>
+<!-- comparison bars -->
+<rect x="100" y="160" width="80" height="80" class="bar"/>
+<rect x="250" y="140" width="80" height="100" class="bar2"/>
+<text x="100" y="260" class="sm">Newton 280 m/s</text>
+<text x="250" y="260" class="sm">Laplace 331 m/s (measured)</text>
+<text x="400" y="170" class="lbl">v ∝ √T, independent of P at fixed T</text>
+<text x="400" y="190" class="sm">v ∝ 1/√M: He (970 m/s) > Air (343) > CO2 (260)</text>
+<text x="400" y="210" class="sm">Humid air lighter M_eff ↓ → v ↑ (~0.3% rise)</text>
+<text x="400" y="230" class="sm">Valid: ideal gas, f ≪ collision freq (~GHz), small amplitude</text>
+</svg>
