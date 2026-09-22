@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 240" role="img" aria-label="Single-slit diffraction: geometry and the sinc-squared intensity curve" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 300" role="img" aria-label="Michelson interferometer schematic" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,19 +33,23 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <line x1="80" y1="200" x2="640" y2="200" class="ln"></line>
-  <line x1="80" y1="200" x2="80" y2="50" class="ln"></line>
-  <text x="76" y="46" class="lbl sm" text-anchor="end">I/I₀</text>
-  <text x="636" y="196" class="lbl sm">θ</text>
-  <text x="360" y="216" class="lbl sm" text-anchor="middle">0</text>
-  <polyline class="acc" fill="none" points="80,200 83,200 87,200 90,200 94,200 97,199 101,199 104,199 108,199 111,198 115,198 118,198 122,198 125,198 129,198 132,198 136,198 139,198 143,198 146,198 150,198 153,199 157,199 160,199 163,200 167,200 170,200 174,200 177,200 181,200 184,199 188,199 191,198 195,198 198,197 202,196 205,196 209,195 212,194 216,194 219,193 223,193 226,193 230,193 233,193 237,194 240,194 243,195 247,196 250,197 254,198 257,199 261,199 264,200 268,200 271,200 275,199 278,197 282,195 285,192 289,188 292,184 296,178 299,172 303,165 306,157 310,149 313,140 317,131 320,121 323,112 327,103 330,93 334,85 337,77 341,70 344,63 348,58 351,54 355,52 358,50 362,50 365,52 369,54 372,58 376,63 379,70 383,77 386,85 390,93 393,103 397,112 400,121 403,131 407,140 410,149 414,157 417,165 421,172 424,178 428,184 431,188 435,192 438,195 442,197 445,199 449,200 452,200 456,200 459,199 463,199 466,198 470,197 473,196 477,195 480,194 483,194 487,193 490,193 494,193 497,193 501,193 504,194 508,194 511,195 515,196 518,196 522,197 525,198 529,198 532,199 536,199 539,200 543,200 546,200 550,200 553,200 557,200 560,199 563,199 567,199 570,198 574,198 577,198 581,198 584,198 588,198 591,198 595,198 598,198 602,198 605,198 609,198 612,199 616,199 619,199 623,199 626,200 630,200 633,200 637,200 640,200"></polyline>
-  <polyline class="thinl" fill="none" points="270,200 275,182 282,178 290,172 300,164 310,148 320,117 330,50 390,50 400,117 410,148 424,168 440,178 460,186 490,192 520,195 560,197 600,198 640,198"></polyline>
-  <text x="360" y="42" class="lbl sm" text-anchor="middle">central maximum: half-width λ<tspan class="mi">D</tspan>/<tspan class="mi">a</tspan></text>
-  <text x="180" y="120" class="lbl sm">secondary maxima</text>
-  <text x="180" y="138" class="lbl sm">4.7%, 1.7%, 0.8%…</text>
-  <text x="200" y="228" class="lbl sm">minima at a sin θ = mλ: equally spaced here, because sin θ ≈ θ</text>
-  <text x="480" y="120" class="lbl sm">dashed: the 1/β² envelope</text>
-  <line x1="80" y1="176" x2="640" y2="176" class="dim"></line>
-  <text x="120" y="170" class="lbl sm">θ = −λ/a</text>
-  <text x="608" y="170" class="lbl sm">θ = +λ/a</text>
+  <line x1="60" y1="150" x2="240" y2="150" class="acc" marker-end="url(#ah)"></line>
+  <rect x="240" y="138" width="16" height="26" class="fp" transform="rotate(45 248 151)"></rect>
+  <line x1="248" y1="151" x2="248" y2="60" class="acc" marker-end="url(#ah)"></line>
+  <line x1="248" y1="60" x2="248" y2="140" class="acc" marker-end="url(#ah)"></line>
+  <line x1="248" y1="151" x2="470" y2="151" class="acc" marker-end="url(#ah)"></line>
+  <line x1="470" y1="151" x2="248" y2="151" class="acc" marker-end="url(#ah)"></line>
+  <line x1="248" y1="40" x2="248" y2="52" class="ln2"></line>
+  <line x1="470" y1="130" x2="470" y2="172" class="ln2"></line>
+  <line x1="60" y1="150" x2="60" y2="236" class="acc" marker-end="url(#ah)"></line>
+  <rect x="52" y="236" width="16" height="12" class="fp"></rect>
+  <text x="20" y="272" class="lbl sm">detector / eye</text>
+  <text x="120" y="140" class="lbl sm">source</text>
+  <text x="180" y="120" class="lbl sm">beam splitter (half-silvered)</text>
+  <text x="252" y="36" class="lbl sm">M₁ (movable) — translation ΔL</text>
+  <text x="400" y="126" class="lbl sm">M₂ (fixed)</text>
+  <text x="252" y="192" class="lbl sm">compensator plate</text>
+  <g class="dim"><line x1="248" y1="60" x2="470" y2="60"></line><text x="340" y="52" class="lbl sm">arm 1</text></g>
+  <text x="252" y="250" class="lbl sm">one fringe per λ/2 of mirror travel: ΔL = Nλ/2</text>
+  <text x="252" y="268" class="lbl sm">field is a set of circular fringes of equal inclination</text>
 </svg>

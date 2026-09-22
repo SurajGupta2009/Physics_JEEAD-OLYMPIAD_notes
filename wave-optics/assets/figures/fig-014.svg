@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 230" role="img" aria-label="Antireflection coating: phase cancellation and reflectance versus wavelength" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 280" role="img" aria-label="Newton&#x27;s rings geometry, ring radii and the fringe pattern" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,22 +33,28 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <g transform="translate(20,0)">
-    <line x1="60" y1="120" x2="260" y2="120" class="ln"></line>
-    <line x1="60" y1="120" x2="230" y2="58" class="acc" marker-end="url(#ah)"></line>
-    <line x1="230" y1="58" x2="278" y2="120" class="acc" marker-end="url(#ah)"></line>
-    <text x="60" y="146" class="lbl sm">the two reflected amplitudes</text>
-    <text x="60" y="164" class="lbl sm">differ by λ at the design wavelength</text>
-    <text x="60" y="182" class="lbl sm">→ they cancel: R ≈ 1% instead of 4%</text>
+  <g transform="translate(0,0)">
+    <path d="M40 150 A 120 120 0 0 1 280 150" class="" fill="none" stroke="currentColor" stroke-width="0"></path>
+    <line x1="30" y1="190" x2="300" y2="190" class="ln2"></line>
+    <path d="M40 190 A 130 130 0 1 1 290 150" class="ln" fill="none"></path>
+    <line x1="165" y1="60" x2="165" y2="190" class="thinl"></line>
+    <line x1="165" y1="60" x2="165" y2="190" class="thinl"></line>
+    <path d="M120 190 L 120 176" class="acc"></path><path d="M210 190 L 210 168" class="acc"></path>
+    <text x="126" y="186" class="mi sm">t</text>
+    <text x="150" y="214" class="lbl sm" text-anchor="middle">flat plate</text>
+    <text x="120" y="52" class="lbl sm">lens, radius R</text>
+    <text x="40" y="248" class="lbl sm">air film between lens and plate: <tspan class="mi">t</tspan> = <tspan class="mi">r²</tspan>/2<tspan class="mi">R</tspan></text>
   </g>
-  <g transform="translate(330,0)">
-    <line x1="60" y1="170" x2="320" y2="170" class="ln"></line>
-    <line x1="60" y1="170" x2="60" y2="40" class="ln"></line>
-    <text x="56" y="46" class="lbl sm" text-anchor="end">R</text>
-    <text x="56" y="60" class="lbl sm" text-anchor="end">4%</text>
-    <line x1="60" y1="58" x2="320" y2="58" class="thinl"></line>
-    <polyline class="acc" fill="none" points="60,74 90,44 120,58 150,96 180,132 210,152 240,160 270,164 300,166 320,167"></polyline>
-    <text x="126" y="186" class="lbl sm" text-anchor="middle">design λ</text>
-    <text x="240" y="196" class="lbl sm">visible band</text>
+  <g transform="translate(380,0)">
+    <circle cx="150" cy="120" r="100" class="hi"></circle><circle cx="150" cy="120" r="86" class="w"></circle>
+    <circle cx="150" cy="120" r="70" class="hi"></circle><circle cx="150" cy="120" r="56" class="w"></circle>
+    <circle cx="150" cy="120" r="42" class="hi"></circle><circle cx="150" cy="120" r="30" class="w"></circle>
+    <circle cx="150" cy="120" r="18" class="hi"></circle><circle cx="150" cy="120" r="7" class="w"></circle>
+    <circle cx="150" cy="120" r="2.5" class="fn"></circle>
+    <line x1="150" y1="120" x2="250" y2="120" class="dim"></line>
+    <text x="196" y="112" class="mi sm">rₙ</text>
+    <text x="150" y="252" class="lbl sm" text-anchor="middle">centre dark: <tspan class="mi">t</tspan> = 0 already gives cancellation</text>
+    <text x="272" y="80" class="lbl sm">r₁ : r₂ : r₃ …</text>
+    <text x="272" y="98" class="lbl sm">= 1 : 1.41 : 1.73</text>
   </g>
 </svg>

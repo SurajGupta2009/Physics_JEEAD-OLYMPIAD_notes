@@ -238,11 +238,11 @@
       "pages": [
         "Wave-optics.html"
       ],
-      "figures": 27,
-      "questions": 169,
-      "solutions": 97,
-      "math_spans": 1967,
-      "bytes_html": 466634,
+      "figures": 28,
+      "questions": 172,
+      "solutions": 100,
+      "math_spans": 2192,
+      "bytes_html": 502787,
       "paper": {
         "questions": 36,
         "sections": 7,
@@ -265,6 +265,63 @@
         "modern physics sequence from the same Cengage volume: photoelectric effect and atomic physics",
         "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
+      ]
+    },
+    {
+      "slug": "string-waves",
+      "title": "String waves — first principles to Olympiad",
+      "status": "planned",
+      "owner": null,
+      "entry": "string-waves/String-waves.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "plan.md PART 1 (Agent 1), the head of the wave sequence. Floor: mechanical waves and the 1-D wave equation from Newton's second law on an element μ dx, v = √(T/μ), d'Alembert's solution, particle velocity versus wave velocity, energy and power transmission, reflection at fixed and free ends, junction coefficients, standing waves and normal modes, sonometer laws and Melde's experiment; olympiad extensions: the hanging rope, WKB amplitude scaling and the phasor sum. wave-optics/ already teaches towards this note — its §1.1.1 uses the wave equation, the intensity-is-amplitude-squared argument and the fixed-end phase flip, and §7.7 its standing waves — so the string note should cite back to wave-optics/Wave-optics.md#section-01-waves-and-huygens rather than re-deriving the phase rule from scratch.",
+      "next_candidates": [
+        "scaffold with: python3 tools/new_topic.py string-waves --title \"String waves\" --chapters \"01-the-wave-equation,02-energy-and-power,03-boundaries-and-impedance,04-standing-waves,05-playbook,06-paper\"",
+        "register the built counts with python3 tools/check_all.py --update and flip status to in-progress, then complete",
+        "decide the chapter-vs-single-file shape before writing: every note-set in this repo is now one merged HTML + its Markdown export"
+      ]
+    },
+    {
+      "slug": "sound-waves",
+      "title": "Sound waves and the Doppler effect — first principles to Olympiad",
+      "status": "planned",
+      "owner": null,
+      "entry": "sound-waves/Sound-waves.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "plan.md PART 2 (Agent 2), the second link of the wave sequence. Floor: longitudinal waves and the displacement/pressure phase relation, Laplace's correction to the speed of sound, intensity and decibels, organ pipes with end-correction, resonance tube and Kundt's tube, Quincke's tube, beats, and the complete Doppler effect including wind, oblique motion, accelerated sources, echoes from moving walls and the Mach cone. Its intensity formula I = ½ρvω²s₀² is the one wave-optics §1.1.1 borrows, and its displacement-node/pressure-antinode boundary rule is the same physics as the optical phase flip in wave-optics §3.2.",
+      "next_candidates": [
+        "scaffold with: python3 tools/new_topic.py sound-waves --title \"Sound waves\" --chapters \"01-longitudinal-waves,02-speed-of-sound,03-intensity-and-decibels,04-columns-and-resonance,05-beats,06-doppler,07-playbook,08-paper\"",
+        "register the built counts with python3 tools/check_all.py --update",
+        "keep the Doppler sign convention in one table — wave-optics deliberately has no medium, so the contrast is a teaching point"
+      ]
+    },
+    {
+      "slug": "electromagnetic-waves",
+      "title": "Electromagnetic waves — first principles to Olympiad",
+      "status": "planned",
+      "owner": null,
+      "entry": "electromagnetic-waves/Electromagnetic-waves.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "plan.md PART 3 (Agent 3), the third link of the wave sequence and the note that entitles wave-optics to exist. Floor: the displacement current and the charging-capacitor inconsistency, Maxwell's equations in vacuum and in linear matter, the wave equation for E and B, c = 1/√(μ₀ε₀), transversality and E₀ = cB₀, energy density equipartition, the Poynting vector and intensity I = ½ε₀cE₀², momentum and radiation pressure at normal and oblique incidence, and the full EM spectrum. wave-optics/ states the Fresnel coefficients and the π-on-reflection rule as facts (its topics.json exclusion list says so explicitly); deriving them from the boundary conditions is this note's job, and it should end by handing the reader back to wave-optics §7.3.",
+      "next_candidates": [
+        "scaffold with: python3 tools/new_topic.py electromagnetic-waves --title \"Electromagnetic waves\" --chapters \"01-displacement-current,02-maxwells-equations,03-the-wave-equation,04-energy-and-poynting,05-radiation-pressure,06-spectrum,07-playbook,08-paper\"",
+        "derive the Fresnel amplitude coefficients and cross-link wave-optics/Wave-optics.md#section-07-the-wave-toolkit, then retire that exclusion line in topics.json",
+        "register the built counts with python3 tools/check_all.py --update"
       ]
     }
   ]
