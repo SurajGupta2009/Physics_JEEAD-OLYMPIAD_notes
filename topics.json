@@ -396,7 +396,7 @@
     {
       "slug": "photoelectric-effect",
       "title": "Photons, Photoelectric Effect & Matter Waves — first principles to Olympiad",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "photoelectric-effect/Photoelectric-effect.md",
       "format": "markdown",
@@ -423,12 +423,23 @@
         "relativistic mirrors and pair production (owned by PARTS 25, 28)",
         "full laser engineering: only the Einstein-coefficient threshold argument"
       ],
-      "next_candidates": []
+      "next_candidates": [],
+      "pages": [
+        "Photoelectric-effect.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 1135,
+      "bytes_html": 0,
+      "bytes_markdown": 97415,
+      "words": 13766,
+      "display_formulas": 18
     },
     {
       "slug": "atomic-structure",
       "title": "Rutherford, the Bohr Model & Atomic Spectra — first principles to Olympiad",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "atomic-structure/Atomic-structure.md",
       "format": "markdown",
@@ -454,12 +465,23 @@
         "line intensities and polarisations",
         "fine structure beyond its order of magnitude"
       ],
-      "next_candidates": []
+      "next_candidates": [],
+      "pages": [
+        "Atomic-structure.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 895,
+      "bytes_html": 0,
+      "bytes_markdown": 78853,
+      "words": 11206,
+      "display_formulas": 14
     },
     {
       "slug": "x-rays",
       "title": "X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "x-rays/X-rays.md",
       "format": "markdown",
@@ -472,9 +494,32 @@
         "IPhO"
       ],
       "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
-      "beyond_plan": [],
-      "deliberately_not_covered": [],
-      "next_candidates": []
+      "beyond_plan": [
+        "Compton derived twice (scalar and four-vector) as the Olympiad centrepiece",
+        "inverse Compton moving-mirror estimate with the gravity-assist cross-link",
+        "Avogadro determination with an explicit error budget",
+        "anode heat and rotating-anode engineering estimate; dose perspective (dental vs flight)",
+        "X-ray laser obstacles paragraph; Rayleigh lambda^-4 as the low-energy contrast",
+        "relativistic electron-wavelength correction cross-linked to PART 23"
+      ],
+      "deliberately_not_covered": [
+        "Klein-Nishina cross-section (named, not derived)",
+        "structure factors beyond a one-paragraph first appearance",
+        "broad-beam build-up factors and medical dosimetry beyond one order of magnitude",
+        "full relativistic pair-production kinematics (owned by PART 28)"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "X-rays.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 481,
+      "bytes_html": 0,
+      "bytes_markdown": 75042,
+      "words": 11113,
+      "display_formulas": 13
     }
   ]
 }
