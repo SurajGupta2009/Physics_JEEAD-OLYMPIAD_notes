@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electromagnetic waves — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="active">Electromagnetic waves</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#1-foundations-physical-motivation">1. Foundations &amp; Physical Motivation</a></li>
+<li><a href="#2-core-derivations-asymptotic-limits">2. Core Derivations &amp; Asymptotic Limits</a></li>
+<li><a href="#3-interleaved-exemplars-concept-checks">3. Interleaved Exemplars &amp; Concept Checks</a></li>
+<li><a href="#4-jee-advanced-advantage-alternate-method">4. JEE Advanced Advantage / Alternate Method</a></li>
+<li><a href="#5-examiner-traps-trap">5. Examiner Traps (.trap)</a></li>
+<li><a href="#6-topic-playbook">6. Topic Playbook</a></li>
+<li><a href="#7-olympiad-grade-paper">7. Olympiad-Grade Paper</a></li>
+<li><a href="#8-printable-formula-sheet">8. Printable Formula Sheet</a></li>
+</ul></details></aside>
+  <main class="page">
+<h1 id="electromagnetic-waves-from-maxwell-to-olympiad">Electromagnetic Waves — from Maxwell to Olympiad</h1>
+<blockquote>
+<p><strong>Part 3 of the waves curriculum · JEE Advanced / NSEP / INPhO / IPhO</strong><br />
+Original explanations and problems; SI units throughout. Read the assumptions before using a result. This file contains the course, worked examples, three-hour paper, solutions and revision sheet.</p>
+</blockquote>
+<h2 id="1-foundations-physical-motivation">1. Foundations &amp; Physical Motivation</h2>
+<h3 id="11-what-you-will-be-able-to-do">1.1 What you will be able to do</h3>
+<p>You will repair the charging-capacitor paradox, derive both electromagnetic wave equations, reconstruct a missing field with its correct direction, turn field amplitudes into power and force, and integrate radiation pressure over a curved surface. You will classify radiation by wavelength <strong>and</strong> production mechanism instead of mistaking a spectrum chart for natural discontinuities.</p>
+<p>A mechanical wave needs material inertia and a restoring interaction. An electromagnetic wave needs no material carrier: Maxwell's coupled equations admit propagating disturbances even when charge and current vanish. “A changing electric field makes a magnetic field, which makes an electric field” is a memory aid, not a derivation or a claim that one field lags the other. In a single travelling vacuum plane wave, both fields are in phase.</p>
+<p><strong>Prerequisite graph:</strong> vectors/cross products + calculus → flux/circulation → Gauss, Faraday and Ampère laws → this course → geometrical and wave optics. Mechanical-wave kinematics is useful but reintroduced here. No other topic folder is required to solve this paper.</p>
+<h3 id="12-symbols-frames-and-models">1.2 Symbols, frames and models</h3>
+<p>Sources, surfaces and media are stationary in the laboratory frame unless stated otherwise.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning and SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf E,\mathbf B$</td>
+<td>Electric field (V/m), magnetic flux density (T)</td>
+</tr>
+<tr>
+<td>$\mathbf D,\mathbf H$</td>
+<td>Electric displacement (C/m²), magnetic field strength (A/m)</td>
+</tr>
+<tr>
+<td>$\rho,\mathbf J$</td>
+<td>Charge density (C/m³), current density (A/m²); subscript $f$ means free</td>
+</tr>
+<tr>
+<td>$\varepsilon,\mu,\sigma$</td>
+<td>Permittivity (F/m), permeability (H/m), conductivity (S/m)</td>
+</tr>
+<tr>
+<td>$\mathbf k=k\hat{\mathbf k},\omega$</td>
+<td>Wave vector (rad/m), angular frequency (rad/s)</td>
+</tr>
+<tr>
+<td>$E_0,B_0,E_{\rm rms}$</td>
+<td>Peak field amplitudes and RMS electric field</td>
+</tr>
+<tr>
+<td>$u,\mathbf S,I$</td>
+<td>Energy density (J/m³), instantaneous energy flux (W/m²), mean intensity</td>
+</tr>
+<tr>
+<td>$p,U,P_{\rm rad}$</td>
+<td>Momentum (kg m/s), energy (J), radiation pressure (Pa)</td>
+</tr>
+<tr>
+<td>$\mathcal A,R,T$</td>
+<td>Absorbed, reflected and transmitted fractions of incident <strong>power</strong></td>
+</tr>
+<tr>
+<td>$Z,v,n$</td>
+<td>Wave impedance (Ω), phase speed (m/s), refractive index</td>
+</tr>
+</tbody>
+</table>
+<p>Never confuse intensity $I$ with capacitor current $I_c$, or pressure $P_{\rm rad}$ with beam power $\mathcal P$.</p>
+<ul>
+<li><strong>V:</strong> vacuum, $\mathbf D=\varepsilon_0\mathbf E$, $\mathbf B=\mu_0\mathbf H$.</li>
+<li><strong>L:</strong> homogeneous, isotropic, linear, lossless, nondispersive medium with positive constant $\varepsilon,\mu$; source-free propagation region.</li>
+<li><strong>Q:</strong> quasistatic capacitor, separation $d\ll a$, negligible fringing where used, variation time $\tau\gg a/c$. Uniform plate charge is an approximation, not an exact finite-frequency Maxwell solution.</li>
+</ul>
+<p>For estimates use $c=3.00\times10^8\,\mathrm{m/s}$, $\varepsilon_0=8.85\times10^{-12}\,\mathrm{F/m}$, $\mu_0\simeq4\pi\times10^{-7}\,\mathrm{H/m}$ and $Z_0\simeq377\,\Omega$. The exact SI speed is $299\,792\,458\,\mathrm{m/s}$; $\mu_0$ is no longer an exact defined constant. Use supplied rounded constants consistently.</p>
+<h3 id="13-coverage-and-study-route">1.3 Coverage and study route</h3>
+<p>This maps the six required groups in <code>plan.md</code>; it is a <strong>plan-syllabus coverage map</strong>, not a page-by-page audit of every textbook exercise. Explanations, problems and diagrams are original.</p>
+<table>
+<thead>
+<tr>
+<th>Required floor / bridge</th>
+<th>Theory</th>
+<th>Retrieval / paper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Displacement current; Maxwell equations in vacuum/matter</td>
+<td>§§2.1–2.3</td>
+<td>C1–C2, E1–E2, Q1–Q2, Q9, Q17–Q18, Q29</td>
+</tr>
+<tr>
+<td>Both curl derivations; vacuum/material speed</td>
+<td>§§2.4–2.5</td>
+<td>C3, E3, Q3, Q10, Q19, Q30</td>
+</tr>
+<tr>
+<td>Transversality, phase, vector fields, $E_0/B_0$</td>
+<td>§§2.5–2.6</td>
+<td>C4, E4, Q4, Q11, Q20, Q30–Q31</td>
+</tr>
+<tr>
+<td>Energy, Poynting theorem, intensity, momentum</td>
+<td>§§2.7–2.9</td>
+<td>C5, E5–E6, Q5, Q12, Q21–Q23, Q31–Q32</td>
+</tr>
+<tr>
+<td>Normal/oblique pressure; absorbing/specular spheres</td>
+<td>§§2.10–2.11</td>
+<td>C6, E7–E8, Q6, Q13–Q14, Q24–Q26, Q33–Q34</td>
+</tr>
+<tr>
+<td>Spectrum, production, applications</td>
+<td>§2.12</td>
+<td>E9–E10, Q7–Q8, Q15, Q27–Q28, Q35</td>
+</tr>
+<tr>
+<td>Impedance, interfaces, standing/isotropic waves</td>
+<td>§4</td>
+<td>Q16, Q31, Q36</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Route:</strong> §2 with its six in-flow checks → §3 with solutions closed → §4 alternate methods → §5 traps → §6 triage → §7 timed paper → §8 revision sheet. State assumptions aloud before calculating.</p>
+<h2 id="2-core-derivations-asymptotic-limits">2. Core Derivations &amp; Asymptotic Limits</h2>
+<h3 id="21-why-the-original-ampere-law-fails-during-charging">2.1 Why the original Ampère law fails during charging</h3>
+<p>Take a circular loop around the lead feeding a parallel-plate capacitor. One spanning surface cuts the wire, giving $\int\mathbf J\cdot d\mathbf A=I_c$. Bulge a second surface between the plates without changing its rim; it cuts no conduction current. The same $\oint\mathbf B\cdot d\boldsymbol\ell$ cannot equal both $\mu_0I_c$ and zero. A magnetostatic law has been used outside its domain.</p>
+<p><img alt="Two spanning surfaces of one loop intercept conduction current or changing electric flux." src="../../electromagnetic-waves/assets/figures/fig-001.svg" /></p>
+<p><em>Figure 1. The boundary loop is identical; changing its spanning surface cannot change the predicted circulation.</em></p>
+<p>Charge conservation counts charge leaving a fixed volume:</p>
+<p>$$
+\frac{d}{dt}\int_V\rho\,dV=-\oint_{\partial V}\mathbf J\cdot d\mathbf A
+\quad\Longrightarrow\quad
+\partial_t\rho+\nabla\cdot\mathbf J=0.
+$$</p>
+<p>The divergence of a curl is zero. Thus $\nabla\times\mathbf B=\mu_0\mathbf J$ would force $\nabla\cdot\mathbf J=0$ even while charge accumulates. Gauss's law repairs this inconsistency:</p>
+<p>$$
+\nabla\cdot(\mathbf J+\varepsilon_0\partial_t\mathbf E)
+=-\partial_t\rho+\varepsilon_0\partial_t(\rho/\varepsilon_0)=0.
+$$</p>
+<p>Charge conservation motivates the added term's divergence; the full Maxwell–Ampère law is an experimentally established field law, not uniquely deduced from this argument alone:</p>
+<p>$$
+\boxed{\oint_C\mathbf B\cdot d\boldsymbol\ell
+=\mu_0(I_c+I_d),\qquad I_d=\varepsilon_0\frac{d}{dt}\int_\Sigma\mathbf E\cdot d\mathbf A.}
+$$</p>
+<p><strong>Validity:</strong> vacuum constitutive relation, fixed loop and spanning surface; evaluate $I_c$ and $I_d$ on the <strong>same</strong> surface. The right-hand rule connects loop orientation and surface normal. In matter use $\mathbf H$, free current, and $d\int\mathbf D\cdot d\mathbf A/dt$.</p>
+<p>The effective current has zero divergence, so its flux through two surfaces with the same rim agrees by the divergence theorem. Displacement current has the units and magnetic effect of current, but need not represent electrons crossing empty space.</p>
+<p><strong>C1 — concept check.</strong> Should you use $I_c+I_d=2I_c$ for a surface lying entirely in the vacuum gap?</p>
+<details>
+<summary>Solution</summary>
+<p>No. Conduction current through that surface is zero; displacement current equals the charging current in model Q. Adding a wire current from a different surface double-counts one process. In steady DC with unchanging fields, displacement current tends to zero.</p>
+</details>
+<h3 id="22-capacitor-flux-radial-magnetic-field-and-dielectric-current">2.2 Capacitor flux, radial magnetic field and dielectric current</h3>
+<p>Vacuum plates of area $A$ have $E=q/(\varepsilon_0A)$ in model Q. Hence $\Phi_E=EA=q/\varepsilon_0$, giving $I_d=\varepsilon_0\dot\Phi_E=\dot q=I_c$. This is signed: both reverse during discharge. Since $E=V/d$, $q=\varepsilon_0AV/d$, so $C=q/V=\varepsilon_0A/d$ and $I_d=C\dot V$ for constant geometry.</p>
+<p>For circular plates of radius $a$, choose a coaxial Amperian circle of radius $r$ in the gap. Uniform $\dot E$ gives enclosed displacement current $I_cr^2/a^2$ for $r&lt;a$. Azimuthal symmetry yields</p>
+<p>$$
+\boxed{B_\phi(r)=\begin{cases}
+\displaystyle\frac{\mu_0I_cr}{2\pi a^2},&amp;r\leq a,\[4pt]
+\displaystyle\frac{\mu_0I_c}{2\pi r},&amp;r\geq a.
+\end{cases}}
+$$</p>
+<p><strong>Validity:</strong> model Q, axial symmetry, approximately uniform displacement-current disk. The outside expression neglects changing fringe flux and nearby return leads; it is not the global exact field of an arbitrary circuit. $B\to0$ on the axis, both branches agree at $a$, and $B$ falls as $1/r$ outside within this approximation. Units: $(\mathrm{T\,m/A})(\mathrm A)/\mathrm m=\mathrm T$.</p>
+<p><img alt="The gap magnetic field rises linearly inside the displacement-current disk and falls inversely outside." src="../../electromagnetic-waves/assets/figures/fig-002.svg" /></p>
+<p><em>Figure 2. The loop radius, not the plate separation, selects the fraction of enclosed flux.</em></p>
+<p>For a uniformly filled dielectric with $\varepsilon=\kappa\varepsilon_0$, $D=q_f/A$ gives $I_{d,\rm macro}=A\dot D=I_c$. Since $\mathbf D=\varepsilon_0\mathbf E+\mathbf P_{\rm pol}$,</p>
+<p>$$
+I_c=\underbrace{\varepsilon_0A\dot E}<em>{I_c/\kappa}
++\underbrace{A\dot P</em>{\rm pol}}_{(1-1/\kappa)I_c}.
+$$</p>
+<p>The second term is polarisation current: bound charges shift locally without free charge crossing the ideal dielectric. The vacuum term alone is not the whole macroscopic displacement current in matter.</p>
+<p><strong>C2 — concept check.</strong> At fixed charging current, does inserting a nonmagnetic dielectric multiply the gap's $B$ by $\kappa$?</p>
+<p><details markdown=1><summary>Solution</summary></p>
+<p>No. $\dot D=I_c/A$ stays fixed, so $B$ does also. Instead $\dot E=I_c/(\varepsilon A)$ decreases. At fixed $\dot V$, $I_c=C\dot V$ increases with $\kappa$; that is a different constraint. As $\kappa\to1$, the polarisation-current contribution vanishes.</p>
+</details>
+<h3 id="23-all-four-field-laws-integral-and-differential">2.3 All four field laws: integral and differential</h3>
+<p>These laws are foundations, not consequences of the wave equation. Divergence and Stokes theorems connect the columns for fixed surfaces/loops. $\partial V$ is a closed surface; $\partial\Sigma$ is the rim of an open surface.</p>
+<table>
+<thead>
+<tr>
+<th>Vacuum law</th>
+<th>Integral form</th>
+<th>Differential form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electric Gauss</td>
+<td>$\oint_{\partial V}\mathbf E\cdot d\mathbf A=Q/\varepsilon_0$</td>
+<td>$\nabla\cdot\mathbf E=\rho/\varepsilon_0$</td>
+</tr>
+<tr>
+<td>Magnetic Gauss</td>
+<td>$\oint_{\partial V}\mathbf B\cdot d\mathbf A=0$</td>
+<td>$\nabla\cdot\mathbf B=0$</td>
+</tr>
+<tr>
+<td>Faraday</td>
+<td>$\oint_{\partial\Sigma}\mathbf E\cdot d\boldsymbol\ell=-d\int_\Sigma\mathbf B\cdot d\mathbf A/dt$</td>
+<td>$\nabla\times\mathbf E=-\partial_t\mathbf B$</td>
+</tr>
+<tr>
+<td>Maxwell–Ampère</td>
+<td>$\oint_{\partial\Sigma}\mathbf B\cdot d\boldsymbol\ell=\mu_0I_c+\mu_0\varepsilon_0d\int_\Sigma\mathbf E\cdot d\mathbf A/dt$</td>
+<td>$\nabla\times\mathbf B=\mu_0\mathbf J+\mu_0\varepsilon_0\partial_t\mathbf E$</td>
+</tr>
+</tbody>
+</table>
+<p>In macroscopic matter separate free charge/current from polarisation and magnetisation:</p>
+<table>
+<thead>
+<tr>
+<th>Material law</th>
+<th>Integral form</th>
+<th>Differential form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electric Gauss</td>
+<td>$\oint_{\partial V}\mathbf D\cdot d\mathbf A=Q_f$</td>
+<td>$\nabla\cdot\mathbf D=\rho_f$</td>
+</tr>
+<tr>
+<td>Magnetic Gauss</td>
+<td>$\oint_{\partial V}\mathbf B\cdot d\mathbf A=0$</td>
+<td>$\nabla\cdot\mathbf B=0$</td>
+</tr>
+<tr>
+<td>Faraday</td>
+<td>$\oint_{\partial\Sigma}\mathbf E\cdot d\boldsymbol\ell=-d\int_\Sigma\mathbf B\cdot d\mathbf A/dt$</td>
+<td>$\nabla\times\mathbf E=-\partial_t\mathbf B$</td>
+</tr>
+<tr>
+<td>Maxwell–Ampère</td>
+<td>$\oint_{\partial\Sigma}\mathbf H\cdot d\boldsymbol\ell=I_f+d\int_\Sigma\mathbf D\cdot d\mathbf A/dt$</td>
+<td>$\nabla\times\mathbf H=\mathbf J_f+\partial_t\mathbf D$</td>
+</tr>
+</tbody>
+</table>
+<p>Close the equations with constitutive laws. Model L uses $\mathbf D=\varepsilon\mathbf E$, $\mathbf B=\mu\mathbf H$, and zero conduction current in the propagation region. Conducting matter may use $\mathbf J_f=\sigma\mathbf E$. Anisotropic matter needs tensors; dispersive media have memory. A static dielectric constant is not automatically its optical value.</p>
+<p>A moving wire's emf includes $\mathbf u\times\mathbf B$; the fixed-loop Faraday expression is not its entire motional emf.</p>
+<h3 id="24-both-curl-derivations-not-just-the-speed">2.4 Both curl derivations, not just the speed</h3>
+<p>In model L, $\rho_f=0$ and constant $\varepsilon$ imply $\nabla\cdot\mathbf E=0$. Taking the curl of Faraday, then using Maxwell–Ampère, gives</p>
+<p>$$
+\nabla\times(\nabla\times\mathbf E)
+=-\partial_t(\nabla\times\mathbf B)
+=-\mu\varepsilon\partial_t^2\mathbf E.
+$$</p>
+<p>Use $\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E$. The divergence term vanishes, yielding the E equation. Independently,</p>
+<p>$$
+\nabla\times(\nabla\times\mathbf B)
+=\mu\varepsilon\partial_t(\nabla\times\mathbf E)
+=-\mu\varepsilon\partial_t^2\mathbf B.
+$$</p>
+<p>Magnetic Gauss removes $\nabla(\nabla\cdot\mathbf B)$, so</p>
+<p>$$
+\boxed{\nabla^2\mathbf E=\mu\varepsilon\partial_t^2\mathbf E,\qquad
+\nabla^2\mathbf B=\mu\varepsilon\partial_t^2\mathbf B,\qquad
+v=\frac1{\sqrt{\mu\varepsilon}}.}
+$$</p>
+<p><strong>Validity:</strong> model L, or vacuum with $\mu_0,\varepsilon_0$, in a source-free region. Each Cartesian component has a scalar wave equation, but Maxwell's divergence and curl constraints still couple the components. Arbitrary independent wave-equation solutions need not form an EM wave.</p>
+<p>Why is this a speed? A component $F(z-vt)$ has $\partial_z^2F=F''$ and $\partial_t^2F=v^2F''$, requiring $\mu\varepsilon v^2=1$. Dimensions give $[\mu\varepsilon]=\mathrm{s^2/m^2}$. Define $\mu_r=\mu/\mu_0$ and $\varepsilon_r=\varepsilon/\varepsilon_0$:</p>
+<p>$$
+c=(\mu_0\varepsilon_0)^{-1/2},\qquad
+n=\frac cv=\sqrt{\mu_r\varepsilon_r}.
+$$</p>
+<p>Vacuum is recovered at $\mu_r=\varepsilon_r=1$. $n=\sqrt{\varepsilon_r}$ requires nonmagnetic matter. Phase speed in a dispersive medium need not equal group/energy speed.</p>
+<p><strong>C3 — concept check.</strong> What breaks if $\varepsilon$ varies with position?</p>
+<details>
+<summary>Solution</summary>
+<p>Charge-free now means $\nabla\cdot(\varepsilon\mathbf E)=0$, so $\nabla\cdot\mathbf E=-\mathbf E\cdot\nabla\varepsilon/\varepsilon$, not generally zero. Varying $\mu$ also generates terms when moved through curls. The homogeneous derivation cannot be reused unchanged.</p>
+</details>
+<h3 id="25-plane-waves-direction-phase-and-transversality">2.5 Plane waves: direction, phase and transversality</h3>
+<p>Write physical fields as real parts of complex amplitudes times $e^{i(\mathbf k\cdot\mathbf r-\omega t)}$. Constant phase $kz-\omega t=\text{constant}$ moves along $+z$ with $v=\omega/k$. Definitions give $k=2\pi/\lambda$, $\omega=2\pi f$; the wave equation imposes $\omega^2=v^2k^2$, hence $v=f\lambda$.</p>
+<p>On this ansatz, divergence becomes $i\mathbf k\cdot$ and curl becomes $i\mathbf k\times$. Maxwell requires</p>
+<p>$$
+\mathbf k\cdot\widetilde{\mathbf E}=0,\quad
+\mathbf k\cdot\widetilde{\mathbf B}=0,\quad
+\mathbf k\times\widetilde{\mathbf E}=\omega\widetilde{\mathbf B},\quad
+\mathbf k\times\widetilde{\mathbf B}=-\mu\varepsilon\omega\widetilde{\mathbf E}.
+$$</p>
+<p>Thus for one travelling plane wave,</p>
+<p>$$
+\boxed{\mathbf B=\frac1v\hat{\mathbf k}\times\mathbf E,\qquad
+E_0=vB_0,\qquad \mathbf E\times\mathbf B\parallel\hat{\mathbf k}.}
+$$</p>
+<p><strong>Validity:</strong> a single travelling wave in model L, with no static background; not an arbitrary superposition, near field or evanescent field. Both fields are transverse and mutually perpendicular at each instant. For linear polarisation their signed components on consistently chosen axes are in phase because the proportionality factor is real and positive.</p>
+<p>For travel along $+z$ choose</p>
+<p>$$
+\mathbf E=E_0\sin(kz-\omega t)\hat{\mathbf x},\qquad
+\mathbf B=\frac{E_0}{v}\sin(kz-\omega t)\hat{\mathbf y}.
+$$</p>
+<p>Direct check: $(\nabla\times\mathbf E)_y=\partial_zE_x=kE_0\cos\phi$ and $-\partial_tB_y=\omega B_0\cos\phi$, fixing both sign and ratio $kE_0=\omega B_0$.</p>
+<p><img alt="Transverse electric and magnetic oscillations propagate along positive z." src="../../electromagnetic-waves/assets/figures/fig-003.svg" /></p>
+<p><em>Figure 3. Both sinusoids cross zero at the same phase; E, B and propagation form a right-handed triad.</em></p>
+<p>At a stationary interface fields must match for every time. Different frequencies would drift out of step, so reflection and transmission preserve $f$. Since $v$ changes, $\lambda=v/f$ changes. Frequency is not divided by refractive index.</p>
+<h3 id="26-polarisation-and-the-limits-of-the-plane-wave-picture">2.6 Polarisation and the limits of the plane-wave picture</h3>
+<p>Superpose transverse components:</p>
+<p>$$
+\mathbf E=E_x\cos\phi\,\hat{\mathbf x}
++E_y\cos(\phi+\delta)\,\hat{\mathbf y},\qquad\phi=kz-\omega t.
+$$</p>
+<p>For $\delta=0$ or $\pi$ the field direction is fixed (linear polarisation). If $E_x=E_y$ and $\delta=\pm\pi/2$, eliminating $\phi$ gives $(E_X/E_x)^2+(E_Y/E_y)^2=1$, a circle. Other nondegenerate choices give an ellipse. All have $E_z=B_z=0$ and $\mathbf B=\hat{\mathbf z}\times\mathbf E/v$. Unpolarised light has fluctuating transverse orientation/phase, not a longitudinal electric component in this model.</p>
+<p>A Coulomb field can be longitudinal. Near an antenna, induction and electrostatic terms coexist with radiation. Far-field radiation does not imply $E=cB$ everywhere around its source.</p>
+<p><strong>C4 — concept check.</strong> A wave travels along $-\hat{\mathbf x}$ and its instantaneous E points along $+\hat{\mathbf z}$. Which way is B?</p>
+<details>
+<summary>Solution</summary>
+<p>$(-\hat{\mathbf x})\times\hat{\mathbf z}=+\hat{\mathbf y}$. Check $\hat{\mathbf z}\times\hat{\mathbf y}=-\hat{\mathbf x}$. Reversing both fields half a cycle later leaves the propagation direction unchanged.</p>
+</details>
+<h3 id="27-field-energy-and-poyntings-theorem">2.7 Field energy and Poynting's theorem</h3>
+<p>First derive storage. Quasistatic charging gives $dU=V\,dq$, $q=CV$, so $U=CV^2/2$. With $C=\varepsilon A/d$, $E=V/d$ and volume $Ad$, this gives $u_E=\varepsilon E^2/2$. For a long linear solenoid of turn density $\nu$, Ampère gives $B=\mu\nu I_c$. Flux linkage gives $L=\mu\nu^2A\ell$; source work $dU=LI_c\,dI_c$ integrates to $LI_c^2/2$. Dividing by $A\ell$ gives $u_B=B^2/(2\mu)$. These simple recoverable-energy expressions assume linear nondispersive material without hysteresis.</p>
+<p>Now use the vector identity</p>
+<p>$$
+\nabla\cdot(\mathbf E\times\mathbf H)
+=\mathbf H\cdot(\nabla\times\mathbf E)-\mathbf E\cdot(\nabla\times\mathbf H).
+$$</p>
+<p>Insert the curl laws and constant constitutive coefficients:</p>
+<p>$$
+\nabla\cdot(\mathbf E\times\mathbf H)
+=-\partial_t\left(\frac{\varepsilon E^2}{2}+\frac{\mu H^2}{2}\right)-\mathbf J_f\cdot\mathbf E.
+$$</p>
+<p>Consequently,</p>
+<p>$$
+\boxed{u=\frac{\varepsilon E^2}{2}+\frac{B^2}{2\mu},\qquad
+\mathbf S=\mathbf E\times\mathbf H,\qquad
+\partial_tu+\nabla\cdot\mathbf S=-\mathbf J_f\cdot\mathbf E.}
+$$</p>
+<p><strong>Validity:</strong> stationary linear nondispersive medium with real constant $\varepsilon,\mu$; free-current work is explicit. In vacuum $\mathbf S=\mathbf E\times\mathbf B/\mu_0$. Integrate over a fixed volume: decrease of stored energy = outward energy flux + work on charges. Positive $\mathbf J_f\cdot\mathbf E$ transfers energy from field to matter; a source can have the opposite sign. Units $EH=(\mathrm{V/m})(\mathrm{A/m})=\mathrm{W/m^2}$. This theorem remains valid for superpositions.</p>
+<h3 id="28-equipartition-intensity-and-inverse-square-spreading">2.8 Equipartition, intensity and inverse-square spreading</h3>
+<p>For a single plane wave, $B=E/v$ and $v^{-2}=\mu\varepsilon$ give</p>
+<p>$$
+u_B=\frac{E^2}{2\mu v^2}=\frac{\varepsilon E^2}{2}=u_E,
+\qquad u=\varepsilon E^2,\qquad
+\mathbf S=\frac{EB}{\mu}\hat{\mathbf k}=uv\hat{\mathbf k}.
+$$</p>
+<p>For a linear harmonic wave, integrating $(1-\cos2\phi)/2$ over a cycle yields $\langle\sin^2\phi\rangle=1/2$, hence $E_{\rm rms}=E_0/\sqrt2$. With $Z=\sqrt{\mu/\varepsilon}$,</p>
+<p>$$
+\boxed{I=\langle S\rangle=\frac12\varepsilon vE_0^2
+=\frac{E_0B_0}{2\mu}=\frac{vB_0^2}{2\mu}
+=\frac{E_{\rm rms}^2}{Z}=v\langle u\rangle.}
+$$</p>
+<p><strong>Validity:</strong> a single linearly polarised harmonic travelling wave in model L. $I$ is power per area <strong>normal to the beam</strong>, not per tilted target area. In vacuum set $v=c$. For circular polarisation of constant total magnitude $E_c$, use $I=\varepsilon vE_c^2$; the half factor applies to each sinusoidal component's peak squared, not to a constant total magnitude.</p>
+<p>For an isotropic far-field source in a transparent medium, conservation across spheres gives $4\pi r^2I=\mathcal P$. Thus $I=\mathcal P/(4\pi r^2)$ and $E_0\propto1/r$. A dipole antenna is not isotropic: use its angular distribution when given. Doubling distance quarters intensity and halves field amplitude.</p>
+<p><strong>C5 — concept check.</strong> Does $\langle\mathbf E\rangle=\langle\mathbf B\rangle=0$ imply $\langle\mathbf S\rangle=0$?</p>
+<details>
+<summary>Solution</summary>
+<p>No. Average the product, not the individual factors. In-phase fields have $\langle E_xB_y\rangle=E_0B_0/2&gt;0$. Both reverse together, so their cross product keeps pointing forward.</p>
+</details>
+<h3 id="29-momentum-from-local-conservation">2.9 Momentum from local conservation</h3>
+<p>Energy transport alone does not prove momentum. In vacuum combine Maxwell with Lorentz force density $\mathbf f=\rho\mathbf E+\mathbf J\times\mathbf B$. Substitute $\rho=\varepsilon_0\nabla\cdot\mathbf E$ and $\mathbf J=\nabla\times\mathbf B/\mu_0-\varepsilon_0\partial_t\mathbf E$. Define Maxwell stress:</p>
+<p>$$
+T_{ij}=\varepsilon_0(E_iE_j-\tfrac12\delta_{ij}E^2)
++\frac1{\mu_0}(B_iB_j-\tfrac12\delta_{ij}B^2).
+$$</p>
+<p>Differentiating $F_iF_j-\delta_{ij}F^2/2$ gives the vector $\mathbf F(\nabla\cdot\mathbf F)-\mathbf F\times(\nabla\times\mathbf F)$. Apply this to E and B. Faraday changes the electric-curl term to $\varepsilon_0\mathbf E\times\partial_t\mathbf B$; Maxwell–Ampère changes the magnetic-curl term to $\mathbf J\times\mathbf B+\varepsilon_0\partial_t\mathbf E\times\mathbf B$. Therefore</p>
+<p>$$
+\nabla\cdot\mathbf T=\mathbf f+\partial_t(\varepsilon_0\mathbf E\times\mathbf B),\qquad
+\mathbf g=\varepsilon_0\mathbf E\times\mathbf B=\frac{\mathbf S}{c^2}.
+$$</p>
+<p>The integrated law is $\mathbf F_{\rm matter}=\oint\mathbf T\cdot d\mathbf A-d\int\mathbf g\,dV/dt$, identifying field momentum density $\mathbf g$. A unidirectional vacuum pulse has $\mathbf S=cu\hat{\mathbf k}$; integrate over its volume:</p>
+<p>$$
+\boxed{\mathbf p=\frac Uc\hat{\mathbf k}.}
+$$</p>
+<p><strong>Validity:</strong> collimated vacuum radiation with all energy travelling in one direction. For multiple directions add momenta as vectors; isotropic radiation has zero net momentum despite nonzero energy. Photon language $E_\gamma=hf$, $p_\gamma=hf/c$ agrees, but $hf$ is a quantum postulate, not derived from classical Maxwell theory. Momentum in material includes the medium: do not assign it the naive value $U/v$.</p>
+<h3 id="210-flat-surface-radiation-pressure-intercepted-energy-first">2.10 Flat-surface radiation pressure: intercepted energy first</h3>
+<p>Let $I$ mean incident power per beam-normal area. A stationary flat patch of actual area $A_s$ at incidence angle $\theta$ to its normal intercepts</p>
+<p>$$
+dU=IA_s\cos\theta\,dt.
+$$</p>
+<p>Its incoming normal momentum is $(dU/c)\cos\theta$. A black absorber removes it; a specular mirror reverses it. Divide the transferred normal momentum by $A_sdt$:</p>
+<p>$$
+\boxed{P_{\rm abs}=\frac Ic\cos^2\theta,\qquad
+P_{\rm spec}=\frac{2I}{c}\cos^2\theta.}
+$$</p>
+<p><strong>Validity:</strong> vacuum incident/emergent radiation, stationary complete absorber or specular mirror, no extra asymmetric emission recoil. This is <strong>normal</strong> force per actual area. Absorption also gives tangential traction $I\sin\theta\cos\theta/c$; total force is along the incident beam. Specular reflection leaves tangential momentum unchanged, so its force is purely normal.</p>
+<p><img alt="Incident and reflected rays retain tangential momentum but reverse normal momentum." src="../../electromagnetic-waves/assets/figures/fig-004.svg" /></p>
+<p><em>Figure 4. One cosine projects area; the other projects momentum. Incidence angle is measured from the normal.</em></p>
+<p>Let $\mathcal A+R+T=1$. If transmission is undeviated in vacuum, transferred normal momentum is $(\mathcal A+2R)dU\cos\theta/c$. Thus $P_n=(1+R-T)I\cos^2\theta/c$. For an opaque surface,</p>
+<p>$$
+\boxed{P_n=(1+R)\frac Ic\cos^2\theta.}
+$$</p>
+<p><strong>Validity:</strong> stationary opaque specular/absorbing surface, $T=0$, vacuum, no additional emission recoil. At $\theta=0$ recover $I/c$, $2I/c$ and $(1+R)I/c$. Diffuse reflection requires an outgoing angular average; refraction changes transmitted momentum direction. Material momentum needs a fuller model.</p>
+<p>Checks: pressure vanishes with $I$ and at grazing incidence for fixed actual area; $R=0,1$ give the endpoints. Units $(\mathrm{W/m^2})/(\mathrm{m/s})=\mathrm{N/m^2}$.</p>
+<p><strong>C6 — concept check.</strong> Known intercepted power $\mathcal P_{\rm hit}$ hits a mirror at $60^\circ$. Is $F_n=2\mathcal P_{\rm hit}\cos^2\theta/c$?</p>
+<details>
+<summary>Solution</summary>
+<p>No. The area projection is already in $\mathcal P_{\rm hit}$. Only momentum projection remains: $F_n=2\mathcal P_{\rm hit}\cos\theta/c=\mathcal P_{\rm hit}/c$. At normal incidence this becomes $2\mathcal P_{\rm hit}/c$.</p>
+</details>
+<h3 id="211-curved-surfaces-a-specular-sphere-is-not-a-mirrored-disk">2.11 Curved surfaces: a specular sphere is not a mirrored disk</h3>
+<p>A uniform collimated beam illuminates a sphere of radius $a\gg\lambda$. On the illuminated hemisphere, $\theta$ is the angle between the inward normal and the beam. An annulus has area $dA=2\pi a^2\sin\theta\,d\theta$ for $0\leq\theta\leq\pi/2$.</p>
+<p>Absorbed rays give axial force $dF_z=(I/c)\cos\theta\,dA$, so</p>
+<p>$$
+F_{z,\rm abs}=\frac{2\pi a^2I}{c}\int_0^{\pi/2}\sin\theta\cos\theta\,d\theta
+=\frac{I\pi a^2}{c}.
+$$</p>
+<p>A specular patch feels normal force $(2I/c)\cos^2\theta\,dA$. Its axial component has one more cosine:</p>
+<p>$$
+F_{z,\rm spec}=\frac{4\pi a^2I}{c}\int_0^{\pi/2}\sin\theta\cos^3\theta\,d\theta
+=\frac{I\pi a^2}{c}.
+$$</p>
+<p><strong>Validity:</strong> opaque large sphere, geometric optics, uniform vacuum illumination, ideal absorption or local specular reflection, negligible diffraction and no asymmetric emission recoil. Azimuthal symmetry cancels transverse forces. These two spheres have the <strong>same</strong> axial force; a normal flat mirror of area $\pi a^2$ feels twice that force. Small-particle scattering, diffuse reflection and retroreflection are different problems.</p>
+<p><img alt="The illuminated sphere annulus introduces a further projection of normal force onto the beam axis." src="../../electromagnetic-waves/assets/figures/fig-005.svg" /></p>
+<p><em>Figure 5. A specular sphere sends rays in different directions rather than reversing the entire beam.</em></p>
+<p>Integrating shells gives $m=\int_0^a4\pi r^2\rho_m\,dr=4\pi a^3\rho_m/3$. Its acceleration is therefore $3I/(4\rho_m ac)$. Area grows as $a^2$, mass as $a^3$: smaller spheres accelerate more, while the ray approximation remains valid.</p>
+<h3 id="212-electromagnetic-spectrum-conventions-sources-and-uses">2.12 Electromagnetic spectrum: conventions, sources and uses</h3>
+<p>All bands travel at $c$ in vacuum with $f\lambda_0=c$. Classification uses frequency or <strong>vacuum</strong> wavelength, not the shortened wavelength in glass. Photon energy increases with $f$ through the quantum input $E_\gamma=hf$. Production and detector responses overlap.</p>
+<p>There are no universal exact physical cutoffs between all bands. The following <strong>classroom convention</strong> uses lower-inclusive wavelength intervals $[a,b)$ and frequency intervals $(c/b,c/a]$. Numbers use $c\simeq3.00\times10^8\,\mathrm{m/s}$ and are rounded; ratios $c/b,c/a$ define the chosen cutoffs. Microwaves are part of radio in broad terminology; “radio” here means its longer-wave remainder. Visible sensitivity has gradual, person-dependent edges.</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Adopted vacuum wavelength</th>
+<th>Frequency (Hz, rounded cutoffs)</th>
+<th>Typical production</th>
+<th>Applications / interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radio remainder</td>
+<td>$\lambda_0\geq1\,\mathrm m$</td>
+<td>$0&lt;f\leq3\times10^8$</td>
+<td>Accelerated antenna charges; LC/electronic oscillators</td>
+<td>Broadcasting, communication, MRI RF excitation</td>
+</tr>
+<tr>
+<td>Microwave</td>
+<td>$1\,\mathrm{mm}\leq\lambda_0&lt;1\,\mathrm m$</td>
+<td>$3\times10^8&lt;f\leq3\times10^{11}$</td>
+<td>Magnetrons, klystrons, semiconductor oscillators</td>
+<td>RADAR, satellite links, many cellular/Wi-Fi bands, dielectric heating</td>
+</tr>
+<tr>
+<td>Infrared</td>
+<td>$700\,\mathrm{nm}\leq\lambda_0&lt;1\,\mathrm{mm}$</td>
+<td>$3\times10^{11}&lt;f\leq4.286\times10^{14}$</td>
+<td>Thermal radiation, molecular rotation/vibration, semiconductor emitters</td>
+<td>Thermal imaging, remotes, near-IR fibre links, greenhouse absorption/emission</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>$400\,\mathrm{nm}\leq\lambda_0&lt;700\,\mathrm{nm}$</td>
+<td>$4.286\times10^{14}&lt;f\leq7.50\times10^{14}$</td>
+<td>Electronic transitions, LEDs, hot bodies</td>
+<td>Vision, imaging, illumination, spectroscopy</td>
+</tr>
+<tr>
+<td>Ultraviolet</td>
+<td>$10\,\mathrm{nm}\leq\lambda_0&lt;400\,\mathrm{nm}$</td>
+<td>$7.50\times10^{14}&lt;f\leq3.00\times10^{16}$</td>
+<td>Electronic transitions, discharges, hot stars, excimer lasers</td>
+<td>Germicidal irradiation, fluorescence, lithography, LASIK photoablation</td>
+</tr>
+<tr>
+<td>X-ray (wavelength convention)</td>
+<td>$0.01\,\mathrm{nm}\leq\lambda_0&lt;10\,\mathrm{nm}$</td>
+<td>$3.00\times10^{16}&lt;f\leq3.00\times10^{19}$</td>
+<td>Fast-electron deceleration, inner-shell transitions</td>
+<td>Medical imaging, CT, crystal diffraction, radiotherapy</td>
+</tr>
+<tr>
+<td>Gamma (wavelength convention)</td>
+<td>$0&lt;\lambda_0&lt;0.01\,\mathrm{nm}$</td>
+<td>$f&gt;3.00\times10^{19}$</td>
+<td>Nuclear transitions, annihilation, high-energy processes</td>
+<td>Nuclear spectroscopy, sterilisation, radiotherapy</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Frequency and photon energy increase from radio to gamma while wavelength decreases." src="../../electromagnetic-waves/assets/figures/fig-006.svg" /></p>
+<p><em>Figure 6. Dividing lines are adopted labels, not changes in Maxwell's laws.</em></p>
+<p><strong>Origin-based names overlap.</strong> Nuclear-transition photons are often called gamma rays even when their wavelength lies in the table's X-ray interval; high-energy bremsstrahlung photons may be called X-rays despite overlapping gamma energies. Frequency alone cannot uniquely determine the source.</p>
+<p><strong>Mechanism bridges:</strong> an ideal lumped LC circuit obeys $L\ddot q+q/C=0$ by loop balance. Comparison with harmonic motion gives $\omega_0=1/\sqrt{LC}$ and $f_0=1/(2\pi\sqrt{LC})$. An attached antenna radiates because charges accelerate; an ideal confined LC model alone does not specify radiated power. Far-field amplitude falls as $1/r$, so flux falls as $1/r^2$; static/induction terms diminish faster and cannot carry a fixed outgoing power through arbitrarily large spheres.</p>
+<p>A magnetron converts electron motion in electric/magnetic fields into microwave oscillations. Thermal emission is broadband, not “only IR”; IR often dominates ordinary-temperature objects. Greenhouse warming involves absorption and emission of outgoing thermal IR by gases/clouds, not simple reflection of all radiation. Some UV is ionising, but thresholds depend on the target. Excimer UV produces corneal photoablation in LASIK; other surgical stages may use different wavelengths. Gamma rays are neither faster nor uniquely more penetrating than X-rays of the same energy.</p>
+<p><strong>Checkpoint — results to own:</strong> draw the surface paradox; derive both curls; fix the E/B direction and phase; distinguish peak/RMS/mean energy; derive both pressure cosines; explain the sphere/disk distinction; classify radiation without claiming universal sharp boundaries.</p>
+<h2 id="3-interleaved-exemplars-concept-checks">3. Interleaved Exemplars &amp; Concept Checks</h2>
+<p>Try these ten examples with solutions closed. They complement C1–C6 inside the derivations. Use §1.2 constants unless another is supplied.</p>
+<h3 id="e1-a-charging-current-measurement">E1 — A charging-current measurement</h3>
+<p>Circular vacuum plates have $a=0.050\,\mathrm m$, $I_c=0.020\,\mathrm A$. Find gap $B$ at $r=0.020\,\mathrm m$ and $0.100\,\mathrm m$ in model Q.</p>
+<details>
+<summary>Solution</summary>
+<p>Inside, $B=(2.00\times10^{-7}\,\mathrm{T\,m/A})(0.020\,\mathrm A)(0.020\,\mathrm m)/(0.050\,\mathrm m)^2=3.20\times10^{-8}\,\mathrm T$. Outside, $B=(2.00\times10^{-7})(0.020)/(0.100)\,\mathrm T=4.00\times10^{-8}\,\mathrm T$. The rim value $8.00\times10^{-8}\,\mathrm T$ exceeds both, consistent with the rise/fall graph. Direction follows the charging current by the right-hand rule.</p>
+</details>
+<h3 id="e2-dielectric-displacement-split">E2 — Dielectric displacement split</h3>
+<p>A $\kappa=5$ capacitor carries $15\,\mathrm{mA}$. Find total macroscopic displacement current, its vacuum part and its polarisation part.</p>
+<details>
+<summary>Solution</summary>
+<p>$A\dot D=15\,\mathrm{mA}$. Vacuum contribution $I_c/\kappa=3\,\mathrm{mA}$; polarisation contribution $(1-1/\kappa)I_c=12\,\mathrm{mA}$. They sum to 15, not 30 mA. The polarisation part vanishes at $\kappa=1$.</p>
+</details>
+<h3 id="e3-frequency-is-not-refracted">E3 — Frequency is not refracted</h3>
+<p>A $6.00\times10^{14}\,\mathrm{Hz}$ wave enters nonmagnetic model-L matter with $\varepsilon_r=2.25$. Find $n,v,\lambda$.</p>
+<details>
+<summary>Solution</summary>
+<p>$n=1.50$, $v=(3.00\times10^8\,\mathrm{m/s})/1.50=2.00\times10^8\,\mathrm{m/s}$, $\lambda=v/f=333\,\mathrm{nm}$. Frequency is unchanged; vacuum wavelength is $500\,\mathrm{nm}$, so the radiation remains visible despite its shorter material wavelength. As $n\to1$, $\lambda\to500\,\mathrm{nm}$.</p>
+</details>
+<h3 id="e4-reconstruct-the-missing-field">E4 — Reconstruct the missing field</h3>
+<p>In vacuum $\mathbf E=(60\,\mathrm{V/m})\cos(2z-6.00\times10^8t)\hat{\mathbf x}$, with SI coordinates. Find $\mathbf B,\lambda,f$.</p>
+<details>
+<summary>Solution</summary>
+<p>$\omega/k=c$ along $+z$. Thus $\mathbf B=(2.00\times10^{-7}\,\mathrm T)\cos(2z-6.00\times10^8t)\hat{\mathbf y}$. $\lambda=2\pi/(2\,\mathrm{m^{-1}})=\pi\,\mathrm m\simeq3.14\,\mathrm m$, $f=(6.00\times10^8\,\mathrm{s^{-1}})/(2\pi)=9.55\times10^7\,\mathrm{Hz}$. Check $f\lambda=c$ and $\hat{\mathbf x}\times\hat{\mathbf y}=\hat{\mathbf z}$.</p>
+</details>
+<h3 id="e5-peak-and-rms-bookkeeping">E5 — Peak and RMS bookkeeping</h3>
+<p>A linear harmonic vacuum wave has $E_0=120\,\mathrm{V/m}$. Find $I,\langle u\rangle,\langle u_E\rangle$.</p>
+<details>
+<summary>Solution</summary>
+<p>$I=\tfrac12(8.85\times10^{-12}\,\mathrm{F/m})(3.00\times10^8\,\mathrm{m/s})(120\,\mathrm{V/m})^2=19.116\,\mathrm{W/m^2}$. $\langle u\rangle=I/c=6.372\times10^{-8}\,\mathrm{J/m^3}$; electric contribution is half, $3.186\times10^{-8}\,\mathrm{J/m^3}$. Independently it is $\varepsilon_0E_0^2/4$. Doubling amplitude quadruples each answer.</p>
+</details>
+<h3 id="e6-pulse-impulse">E6 — Pulse impulse</h3>
+<p>A collimated $6.0\,\mathrm{mJ}$ vacuum pulse strikes normally. Find impulse on an absorber and on a perfect mirror.</p>
+<details>
+<summary>Solution</summary>
+<p>$U/c=(6.0\times10^{-3}\,\mathrm J)/(3.00\times10^8\,\mathrm{m/s})=2.0\times10^{-11}\,\mathrm{N\,s}$. Absorption gives this forward impulse; reflection gives $4.0\times10^{-11}\,\mathrm{N\,s}$. Units J divided by m/s equal kg m/s. Pulse duration affects force, not impulse at fixed energy.</p>
+</details>
+<h3 id="e7-pressure-versus-force">E7 — Pressure versus force</h3>
+<p>An opaque plate of actual area $0.020\,\mathrm{m^2}$, specular $R=0.60$, receives $900\,\mathrm{W/m^2}$ at $60^\circ$. Find normal pressure and force.</p>
+<details>
+<summary>Solution</summary>
+<p>$P_n=1.60(900\,\mathrm{W/m^2})(0.5)^2/(3.00\times10^8\,\mathrm{m/s})=1.20\times10^{-6}\,\mathrm{Pa}$. $F_n=P_nA_s=2.40\times10^{-8}\,\mathrm N$. Check using intercepted power $IA_s\cos\theta=9.0\,\mathrm W$ and $F_n=(1+R)\mathcal P_{\rm hit}\cos\theta/c$. Normal incidence at fixed intensity/area would give four times the force.</p>
+</details>
+<h3 id="e8-a-polished-grain">E8 — A polished grain</h3>
+<p>For a specular sphere with radius $1.00\,\mathrm{mm}$, density $3000\,\mathrm{kg/m^3}$ and incident intensity $1200\,\mathrm{W/m^2}$, find force and acceleration, using geometric optics.</p>
+<details>
+<summary>Solution</summary>
+<p>$F=I\pi a^2/c=1.257\times10^{-11}\,\mathrm N$, $m=4\pi a^3\rho_m/3=1.257\times10^{-5}\,\mathrm{kg}$, giving acceleration $1.00\times10^{-6}\,\mathrm{m/s^2}$. Check with $3I/(4\rho_m ac)$. A millimetre exceeds optical wavelengths; extrapolating the $1/a$ acceleration to nanometres would invalidate the ray approximation.</p>
+</details>
+<h3 id="e9-radar-delay">E9 — Radar delay</h3>
+<p>A $10.0\,\mathrm{GHz}$ radar receives an echo $20.0\,\mu\mathrm s$ later. Treat air as vacuum. Find wavelength, target range and band.</p>
+<details>
+<summary>Solution</summary>
+<p>$\lambda=(3.00\times10^8\,\mathrm{m/s})/(1.00\times10^{10}\,\mathrm{Hz})=0.0300\,\mathrm m$. Range is $c\Delta t/2=3000\,\mathrm m$; the echo is a round trip. This is microwave radiation since $1\,\mathrm{mm}&lt;3\,\mathrm{cm}&lt;1\,\mathrm m$.</p>
+</details>
+<h3 id="e10-equal-energy-different-names">E10 — Equal energy, different names</h3>
+<p>A nuclear transition and an electron deceleration event each produce a $100\,\mathrm{keV}$ photon. Use $hc=1240\,\mathrm{eV\,nm}$. Find wavelength and discuss names.</p>
+<details>
+<summary>Solution</summary>
+<p>Both have $\lambda=(1240\,\mathrm{eV\,nm})/(100000\,\mathrm{eV})=0.0124\,\mathrm{nm}$. The nuclear photon is usually called gamma; the deceleration photon, X-ray. Both fall in the table's wavelength-defined X-ray interval, showing why that table is only a convention. Both travel at $c$ in vacuum; doubling energy halves wavelength.</p>
+</details>
+<h2 id="4-jee-advanced-advantage-alternate-method">4. JEE Advanced Advantage / Alternate Method</h2>
+<h3 id="41-impedance-and-boundary-matching">4.1 Impedance and boundary matching</h3>
+<p>For a travelling wave, $H=B/\mu=E/(\mu v)$, so $E/H=\mu v=\sqrt{\mu/\varepsilon}=Z$. Impedance is a field ratio, not necessarily a dissipative resistance. Equal refractive indices need not imply equal impedances if permeability varies.</p>
+<p>Infinitesimal Faraday and Ampère rectangles across a stationary interface with no free surface current enforce tangential E/H continuity. At normal incidence, use a common electric reference axis for incident/reflected waves; backward propagation reverses $H/E$:</p>
+<p>$$
+E_i+E_r=E_t,\qquad (E_i-E_r)/Z_1=E_t/Z_2.
+$$</p>
+<p>Solving gives</p>
+<p>$$
+r_E=\frac{Z_2-Z_1}{Z_2+Z_1},\qquad t_E=\frac{2Z_2}{Z_1+Z_2},\qquad
+R=r_E^2,\qquad T=\frac{Z_1}{Z_2}t_E^2=\frac{4Z_1Z_2}{(Z_1+Z_2)^2}.
+$$</p>
+<p><strong>Validity:</strong> normal incidence between model-L media, positive real impedances, no absorbing sheet. Algebra verifies $R+T=1$. At $Z_2=Z_1$ reflection vanishes. For nonmagnetic media $Z=Z_0/n$, so reflection toward higher index has $r_E&lt;0$ (electric phase inversion). A perfect-conductor limit gives $r_E\to-1$. This is the electromagnetic bridge to reflection phases in optics.</p>
+<h3 id="42-standing-waves-violate-travelling-wave-shortcuts">4.2 Standing waves violate travelling-wave shortcuts</h3>
+<p>A perfect conductor occupies $z\geq0$. Take incident $\mathbf E_i=E_0\cos(kz-\omega t)\hat{\mathbf x}$ and reflected $\mathbf E_r=-E_0\cos(kz+\omega t)\hat{\mathbf x}$. Tangential E cancels at $z=0$. Compute B from each propagation direction separately, then add:</p>
+<p>$$
+\mathbf E=2E_0\sin kz\sin\omega t\,\hat{\mathbf x},\qquad
+\mathbf B=\frac{2E_0}{c}\cos kz\cos\omega t\,\hat{\mathbf y}.
+$$</p>
+<p>E nodes are $kz=m\pi$; B nodes lie halfway between. Fields have temporal/spatial quadrature, not in-phase behaviour. Their energy is</p>
+<p>$$
+u=2\varepsilon_0E_0^2(\sin^2kz\sin^2\omega t+\cos^2kz\cos^2\omega t),
+\qquad\langle\mathbf S\rangle=0.
+$$</p>
+<p>Averaging gives $\langle u\rangle=\varepsilon_0E_0^2$, independent of position and twice the mean density of one constituent. Electric and magnetic energies are not generally equal locally. Integrating over an integer number of half-wavelengths gives constant total energy while local energy flows between regions.</p>
+<p><img alt="Electric nodes coincide with magnetic antinodes in a standing wave at a conductor." src="../../electromagnetic-waves/assets/figures/fig-007.svg" /></p>
+<p><em>Figure 7. Zero mean energy flow does not imply zero stored energy or zero mirror pressure.</em></p>
+<p>At the mirror $B=2E_0\cos\omega t/c$. Magnetic stress gives mean pressure $\langle B^2/(2\mu_0)\rangle=\varepsilon_0E_0^2=2I_i/c$. Incoming/outgoing energies cancel in flux, but reflection reverses normal momentum.</p>
+<h3 id="43-isotropic-radiation-u3-not-u">4.3 Isotropic radiation: $u/3$, not $u$</h3>
+<p>Uniform angular energy density gives $du=u\,d\Omega/(4\pi)$. A directional group strikes a wall with flux $c\,du\cos\theta$; reflection transfers twice the normal momentum, giving $dP=2du\cos^2\theta$. Integrate the incident hemisphere:</p>
+<p>$$
+P=\frac{2u}{4\pi}\int_0^{2\pi}d\phi\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta=\frac u3.
+$$</p>
+<p><strong>Validity:</strong> isotropic vacuum radiation and a reflecting wall. A black wall absorbing prescribed hemispheric incident radiation receives $u/6$ if $u$ denotes the corresponding full-sphere density; equilibrium emission recoil restores $u/3$. Boundary conditions decide which result applies.</p>
+<h3 id="44-conducting-media-warning">4.4 Conducting-media warning</h3>
+<p>For homogeneous charge-free Ohmic matter with $\mathbf J_f=\sigma\mathbf E$, the curl derivation gives</p>
+<p>$$
+\nabla^2\mathbf E=\mu\sigma\partial_t\mathbf E+\mu\varepsilon\partial_t^2\mathbf E.
+$$</p>
+<p>With $e^{i(kz-\omega t)}$, $k^2=\mu\varepsilon\omega^2+i\mu\sigma\omega$. Complex $k$ means attenuation and potentially an E/B phase difference. For $\sigma\gg\omega\varepsilon$, the decaying root is $k=(1+i)\sqrt{\mu\sigma\omega/2}$; amplitude skin depth is $\delta=\sqrt{2/(\mu\sigma\omega)}$. Check the sign: $e^{ikz}=e^{i\operatorname{Re}(k)z}e^{-\operatorname{Im}(k)z}$. Do not use the lossless intensity formula indiscriminately in metal.</p>
+<h2 id="5-examiner-traps-trap">5. Examiner Traps (<code>.trap</code>)</h2>
+<blockquote>
+<p><strong>.trap — Mixed spanning surfaces:</strong> evaluate conduction and displacement flux on one surface; do not add two copies of the charging current.</p>
+<p><strong>.trap — Vacuum permittivity in a filled capacitor:</strong> macroscopic displacement is $\partial_t\mathbf D$, not just $\varepsilon_0\partial_t\mathbf E$.</p>
+<p><strong>.trap — Lost divergence constraint:</strong> the curl–curl identity contains $\nabla(\nabla\cdot\mathbf E)$; justify setting it to zero.</p>
+<p><strong>.trap — Wrong reflected B sign:</strong> recompute $\hat{\mathbf k}\times\mathbf E/v$ for each direction.</p>
+<p><strong>.trap — Universal $E=cB$:</strong> this holds for one vacuum travelling plane wave, not every static, near or standing field.</p>
+<p><strong>.trap — Peak/RMS factor of two:</strong> $I=E_0^2/(2Z)=E_{\rm rms}^2/Z$ for a linear harmonic travelling wave.</p>
+<p><strong>.trap — Averaging before multiplication:</strong> $\langle EB\rangle\ne\langle E\rangle\langle B\rangle$ for correlated oscillations.</p>
+<p><strong>.trap — Calling $I/c$ an intensity:</strong> its units are Pa (also J/m³), not W/m².</p>
+<p><strong>.trap — One cosine too few or too many:</strong> actual area needs area and momentum projections; intercepted power already includes the former.</p>
+<p><strong>.trap — Absorption force assumed normal:</strong> absorbed momentum points along the beam; normal pressure is only its normal component.</p>
+<p><strong>.trap — $(1+R)I/c$ on a transparent sheet:</strong> subtract outgoing transmitted momentum; $1+R-T$ assumes undeviated vacuum transmission.</p>
+<p><strong>.trap — Doubling a polished sphere's force:</strong> integrate local vector forces; most rays do not reverse their full momentum.</p>
+<p><strong>.trap — Refracted frequency divided by $n$:</strong> stationary interfaces preserve frequency, not wavelength.</p>
+<p><strong>.trap — Exact universal spectrum boundaries:</strong> specify the convention and distinguish origin-based X/gamma names.</p>
+<p><strong>.trap — Zero net flux means zero force:</strong> a standing wave can exert pressure because energy and momentum have different reflection ledgers.</p>
+</blockquote>
+<h2 id="6-topic-playbook">6. Topic Playbook</h2>
+<h3 id="61-triage-decision-tree">6.1 Triage decision tree</h3>
+<ol>
+<li><strong>Changing capacitor?</strong> Draw one loop and one surface. Find $D(t)$ or $E(t)$, integrate enclosed flux, then use justified symmetry.</li>
+<li><strong>Field expression?</strong> Read $\mathbf k,\omega$; follow constant phase; test $\omega/k=v$ and transversality; cross-product for the missing field. Refuse inconsistent data.</li>
+<li><strong>Amplitude or power?</strong> Label peak/RMS. Use $I=E_0^2/(2Z)$ and beam-normal area for power.</li>
+<li><strong>Force?</strong> Draw incident/outgoing momentum. Find intercepted power first. Transfer to matter is <strong>incoming minus outgoing</strong> momentum; project and integrate vectors for curved surfaces.</li>
+<li><strong>Interface/superposition?</strong> Match tangential fields or add fields before squaring. Coherent intensities do not automatically add.</li>
+<li><strong>Spectrum/application?</strong> Convert to vacuum wavelength/frequency, then identify mechanisms. Echo range is $c\Delta t/2$.</li>
+</ol>
+<h3 id="62-formula-map-and-estimates">6.2 Formula map and estimates</h3>
+<p>$\dot q\to\dot D\to B$ is the capacitor route. Maxwell curls $\to v,Z\to E/B\to I$ is propagation. Poynting $\to U\to U/c\to$ momentum balance is the force route.</p>
+<table>
+<thead>
+<tr>
+<th>Estimate</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$c\simeq3\times10^8\,\mathrm{m/s}$</td>
+<td>$1\,\mathrm{ns}$ is $0.30\,\mathrm m$ one-way</td>
+</tr>
+<tr>
+<td>$Z_0\simeq377\,\Omega$</td>
+<td>$I\simeq E_0^2/754$ in W/m² with E in V/m</td>
+</tr>
+<tr>
+<td>$1\,\mathrm{kW/m^2}/c\simeq3.33\,\mu\mathrm{Pa}$</td>
+<td>Ordinary radiation pressures are tiny</td>
+</tr>
+<tr>
+<td>$1\,\mathrm W/c\simeq3.33\,\mathrm{nN}$</td>
+<td>Quick beam-force check</td>
+</tr>
+<tr>
+<td>$hc\simeq1240\,\mathrm{eV\,nm}$</td>
+<td>Optical photons have energies of order eV</td>
+</tr>
+<tr>
+<td>$f$ (GHz) times $\lambda_0$ (cm) is about 30</td>
+<td>Microwave conversion</td>
+</tr>
+</tbody>
+</table>
+<p>These follow from the supplied constants, $p=U/c$ and $E_\gamma=hc/\lambda_0$, not new laws.</p>
+<h3 id="63-exit-checklist">6.3 Exit checklist</h3>
+<ul>
+<li>[ ] Free, bound and displacement currents distinguished?</li>
+<li>[ ] Source-free region and medium model explicit?</li>
+<li>[ ] E, B, propagation in the correct cross-product order?</li>
+<li>[ ] Peak/RMS convention and beam-normal/actual area identified?</li>
+<li>[ ] Absorption's tangential force and reflection type retained?</li>
+<li>[ ] Units, limiting case and order-of-magnitude check included?</li>
+</ul>
+<h2 id="7-olympiad-grade-paper">7. Olympiad-Grade Paper</h2>
+<h3 id="instructions-marking-and-coverage">Instructions, marking and coverage</h3>
+<p><strong>180 minutes · 180 marks · 36 original questions.</strong> This is a mixed JEE–Olympiad training paper, not an official examination. Keep solutions closed. $I$ is beam-normal average intensity. Surfaces are stationary; reflection is specular unless stated otherwise.</p>
+<p>Use $c=3.00\times10^8\,\mathrm{m/s}$, $\varepsilon_0=8.85\times10^{-12}\,\mathrm{F/m}$, $\mu_0=4\pi\times10^{-7}\,\mathrm{H/m}$, $Z_0=377\,\Omega$, $hc=1240\,\mathrm{eV\,nm}$ as independently rounded constants; ignore discrepancies below 0.1%. Numerical tolerance: ±1%, unless an exact expression is requested.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks</th>
+<th style="text-align: right;">Suggested minutes</th>
+<th>Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A — single correct</td>
+<td>Q1–Q8</td>
+<td style="text-align: right;">$8\times3=24$</td>
+<td style="text-align: right;">20</td>
+<td>Capacitor, waves, energy, pressure, spectrum</td>
+</tr>
+<tr>
+<td>B — multi-correct</td>
+<td>Q9–Q16</td>
+<td style="text-align: right;">$8\times4=32$</td>
+<td style="text-align: right;">25</td>
+<td>Model limits, fields, force, interfaces</td>
+</tr>
+<tr>
+<td>C — numerical</td>
+<td>Q17–Q28</td>
+<td style="text-align: right;">$12\times3=36$</td>
+<td style="text-align: right;">35</td>
+<td>All six core groups</td>
+</tr>
+<tr>
+<td>D — comprehensive long form</td>
+<td>Q29–Q36</td>
+<td style="text-align: right;">$8\times11=88$</td>
+<td style="text-align: right;">100</td>
+<td>Maxwell, Poynting, standing waves, curved force, instruments</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scoring:</strong> A: 3 for the correct option, otherwise 0. B: 4 for the exact correct set, otherwise 0; no negative marks. C: 3 for an accepted value with the requested unit, otherwise 0. D: award subpart marks as shown, credit alternate valid methods, and carry forward arithmetic errors without repeated penalties. Total $24+32+36+88=180$. Each long solution distributes its 11 marks explicitly.</p>
+<h3 id="a-single-correct-questions">A — Single-correct questions</h3>
+<h4 id="q1-the-gap-surface-3-marks">Q1. The gap surface [3 marks]</h4>
+<p>A vacuum capacitor charges at $2\,\mathrm A$. A surface bounded by an Amperian loop lies entirely between its plates and encloses their full changing flux. The pair $(I_c,I_d)$ <strong>through this surface</strong> is: A. $(2,2)\,\mathrm A$; B. $(0,2)\,\mathrm A$; C. $(2,0)\,\mathrm A$; D. $(0,0)\,\mathrm A$.</p>
+<details>
+<summary>Solution and marking — Q1</summary>
+<p><strong>B.</strong> No charge crosses the gap; $\varepsilon_0\dot\Phi_E=\dot q=2\,\mathrm A$. A wire-cutting surface gives the same total effective current, not an additional current. Award 3 for B.</p>
+</details>
+<h4 id="q2-a-changing-voltage-dielectric-3-marks">Q2. A changing-voltage dielectric [3 marks]</h4>
+<p>An ideal nonmagnetic capacitor is driven at fixed $\dot V$. Compare the empty capacitor with the same geometry fully filled with relative permittivity 4. The macroscopic displacement current becomes: A. unchanged; B. one quarter; C. twice; D. four times its original value.</p>
+<details>
+<summary>Solution and marking — Q2</summary>
+<p><strong>D.</strong> $I_d=A\dot D=\varepsilon A\dot V/d$ scales fourfold with $\varepsilon$. This compares two fixed filled/empty configurations, not the transient while inserting material. At fixed current instead of fixed $\dot V$, the conclusion differs. Award 3 for D.</p>
+</details>
+<h4 id="q3-a-magnetic-dielectric-3-marks">Q3. A magnetic dielectric [3 marks]</h4>
+<p>A model-L medium has $\varepsilon_r=4$, $\mu_r=9$. Its speed is: A. $c/2$; B. $c/3$; C. $c/6$; D. $c/36$.</p>
+<details>
+<summary>Solution and marking — Q3</summary>
+<p><strong>C.</strong> $v=c/\sqrt{\varepsilon_r\mu_r}=c/\sqrt{36}=c/6$. Both constitutive coefficients matter, and the square root cannot be omitted. Award 3 for C.</p>
+</details>
+<h4 id="q4-the-right-handed-triad-3-marks">Q4. The right-handed triad [3 marks]</h4>
+<p>A vacuum travelling wave has instantaneous E along $+y$ and B along $-x$. Energy travels along: A. $+z$; B. $-z$; C. $+x$; D. $-y$.</p>
+<details>
+<summary>Solution and marking — Q4</summary>
+<p><strong>A.</strong> $\hat{\mathbf y}\times(-\hat{\mathbf x})=+\hat{\mathbf z}$. Reversing the order of the cross product would give the wrong sign. Award 3 for A.</p>
+</details>
+<h4 id="q5-which-amplitude-3-marks">Q5. Which amplitude? [3 marks]</h4>
+<p>For a linear harmonic vacuum travelling wave with electric RMS amplitude $E_r$, mean total energy density is: A. $\varepsilon_0E_r^2/2$; B. $\varepsilon_0E_r^2$; C. $2\varepsilon_0E_r^2$; D. zero.</p>
+<details>
+<summary>Solution and marking — Q5</summary>
+<p><strong>B.</strong> Instantaneously $u=\varepsilon_0E^2$ and by definition $\langle E^2\rangle=E_r^2$. Each field contributes half the total. Award 3 for B.</p>
+</details>
+<h4 id="q6-oblique-mirror-3-marks">Q6. Oblique mirror [3 marks]</h4>
+<p>A mirror is illuminated at $60^\circ$ rather than normally, with unchanged beam-normal intensity. Its normal pressure changes by a factor: A. $1/2$; B. $1/4$; C. $\sqrt3/2$; D. 1.</p>
+<details>
+<summary>Solution and marking — Q6</summary>
+<p><strong>B.</strong> $P_n=2I\cos^2\theta/c$, so the ratio is $\cos^2 60^\circ=1/4$. One projection is area, one is normal momentum. Award 3 for B.</p>
+</details>
+<h4 id="q7-wavelength-conversion-3-marks">Q7. Wavelength conversion [3 marks]</h4>
+<p>A $2.4\,\mathrm{GHz}$ vacuum signal has wavelength closest to: A. $1.25\,\mathrm{mm}$; B. $1.25\,\mathrm m$; C. $12.5\,\mathrm{cm}$; D. $125\,\mathrm m$.</p>
+<details>
+<summary>Solution and marking — Q7</summary>
+<p><strong>C.</strong> $\lambda=(3.00\times10^8\,\mathrm{m/s})/(2.4\times10^9\,\mathrm{Hz})=0.125\,\mathrm m$. GHz frequencies have centimetre-to-decimetre wavelengths, a scale check. Award 3 for C.</p>
+</details>
+<h4 id="q8-naming-radiation-3-marks">Q8. Naming radiation [3 marks]</h4>
+<p>Which statement is reliable? A. All gamma rays exceed all X-rays in energy. B. Gamma rays travel faster than radio in vacuum. C. X/gamma names can depend on production mechanism and their energies overlap. D. Electronic transitions cannot emit infrared.</p>
+<details>
+<summary>Solution and marking — Q8</summary>
+<p><strong>C.</strong> Origin-based classification permits energy overlap. All bands travel at $c$ in vacuum; electronic transitions can emit IR, including semiconductor emitters. Award 3 for C.</p>
+</details>
+<h3 id="b-multi-correct-questions">B — Multi-correct questions</h3>
+<h4 id="q9-currents-in-a-dielectric-4-marks">Q9. Currents in a dielectric [4 marks]</h4>
+<p>For a uniformly filled $\kappa=3$ ideal capacitor in model Q: A. $A\dot D=I_c$. B. $\varepsilon_0A\dot E=I_c$. C. Polarisation current is $2I_c/3$. D. No free conduction charge need cross the gap.</p>
+<details>
+<summary>Solution and marking — Q9</summary>
+<p><strong>A, C, D.</strong> $D=3\varepsilon_0E$, so the vacuum part is $I_c/3$, not $I_c$. The remainder is $2I_c/3$ from $\dot P_{\rm pol}$. The ideal dielectric has no free conduction across it. Award 4 for exactly A, C, D.</p>
+</details>
+<h4 id="q10-wave-equation-conditions-4-marks">Q10. Wave-equation conditions [4 marks]</h4>
+<p>Select correct statements. A. Homogeneous charge-free model L has $\nabla\cdot\mathbf E=0$. B. Inhomogeneous charge-free matter always has $\nabla\cdot\mathbf E=0$. C. Homogeneous Ohmic conduction adds $\mu\sigma\partial_t\mathbf E$ to the charge-free electric wave equation. D. Solving the wave equation alone guarantees all Maxwell constraints.</p>
+<details>
+<summary>Solution and marking — Q10</summary>
+<p><strong>A, C.</strong> Constant $\varepsilon$ permits A; with varying $\varepsilon$, $\nabla\cdot\mathbf E=-\mathbf E\cdot\nabla\varepsilon/\varepsilon$, rejecting B. Independent wave-equation solutions may violate divergence or E/B coupling, rejecting D. Award 4 for exactly A, C.</p>
+</details>
+<h4 id="q11-a-single-travelling-wave-4-marks">Q11. A single travelling wave [4 marks]</h4>
+<p>For one plane wave in model L: A. $\mathbf E\cdot\mathbf B=0$. B. $\mathbf B=\hat{\mathbf k}\times\mathbf E/v$. C. $E_0=cB_0$ in every medium. D. Electric and magnetic energy densities are equal instantaneously.</p>
+<details>
+<summary>Solution and marking — Q11</summary>
+<p><strong>A, B, D.</strong> The cross-product relation gives A/B; $v^{-2}=\mu\varepsilon$ gives D. C incorrectly replaces $v$ with $c$. These properties do not automatically hold for standing-wave sums. Award 4 for exactly A, B, D.</p>
+</details>
+<h4 id="q12-energy-and-momentum-4-marks">Q12. Energy and momentum [4 marks]</h4>
+<p>For vacuum radiation: A. A collimated pulse of energy $U$ has momentum magnitude $U/c$. B. Every collection of beams of total energy $U$ has net momentum magnitude $U/c$. C. Momentum density is $\mathbf S/c^2$. D. Zero mean electric field forces zero mean intensity.</p>
+<details>
+<summary>Solution and marking — Q12</summary>
+<p><strong>A, C.</strong> Opposite beams can cancel momentum, disproving B. In-phase oscillating fields have a nonzero mean cross product despite zero individual means, disproving D. Award 4 for exactly A, C.</p>
+</details>
+<h4 id="q13-oblique-absorber-4-marks">Q13. Oblique absorber [4 marks]</h4>
+<p>A black patch of actual area $A_s$ sees vacuum intensity $I$ at angle $\theta$ to its normal. A. Intercepted power is $IA_s\cos\theta$. B. Force is purely normal. C. Normal pressure is $I\cos^2\theta/c$. D. Tangential traction is $I\sin\theta\cos\theta/c$.</p>
+<details>
+<summary>Solution and marking — Q13</summary>
+<p><strong>A, C, D.</strong> Absorbed momentum is along the incident beam, not generally normal. Force magnitude is $IA_s\cos\theta/c$; its projections give C and D. Award 4 for exactly A, C, D.</p>
+</details>
+<h4 id="q14-spheres-and-disks-4-marks">Q14. Spheres and disks [4 marks]</h4>
+<p>A uniform parallel beam illuminates ideal bodies in geometric optics, each of projected area $\pi a^2$. A. A black sphere receives $I\pi a^2/c$. B. A specular sphere receives $2I\pi a^2/c$. C. A normal flat perfect mirror receives $2I\pi a^2/c$. D. Transverse force on either sphere is zero.</p>
+<details>
+<summary>Solution and marking — Q14</summary>
+<p><strong>A, C, D.</strong> Integrating $\cos^3\theta$ over the specular hemisphere gives $I\pi a^2/c$, not twice that. Azimuthal symmetry cancels transverse forces. Award 4 for exactly A, C, D.</p>
+</details>
+<h4 id="q15-spectrum-applications-4-marks">Q15. Spectrum applications [4 marks]</h4>
+<p>A. Magnetrons generate microwaves. B. Fast-electron deceleration can generate X-rays. C. Frequency necessarily changes at a stationary refracting interface. D. Excimer UV photoablation is used in LASIK.</p>
+<details>
+<summary>Solution and marking — Q15</summary>
+<p><strong>A, B, D.</strong> Stationary-boundary matching preserves frequency; wavelength changes, rejecting C. D identifies the photoablation step, not necessarily every laser used by the surgical system. Award 4 for exactly A, B, D.</p>
+</details>
+<h4 id="q16-normal-incidence-interface-4-marks">Q16. Normal-incidence interface [4 marks]</h4>
+<p>Two model-L media have impedances $Z_1,Z_2$, with no surface sheet. A. $r_E=(Z_2-Z_1)/(Z_2+Z_1)$. B. Always $T=t_E^2$. C. Equal impedance gives no reflection. D. $R+T=1$.</p>
+<details>
+<summary>Solution and marking — Q16</summary>
+<p><strong>A, C, D.</strong> Field matching gives A/C; losslessness gives D. Since $I=E_0^2/(2Z)$, $T=(Z_1/Z_2)t_E^2$, rejecting B except when impedances match. Award 4 for exactly A, C, D.</p>
+</details>
+<h3 id="c-numerical-questions">C — Numerical questions</h3>
+<h4 id="q17-flux-rate-3-marks">Q17. Flux rate [3 marks]</h4>
+<p>Signed electric flux through a fixed vacuum surface grows at $4.00\times10^8\,\mathrm{V\,m/s}$. Find displacement current in mA.</p>
+<details>
+<summary>Solution and marking — Q17</summary>
+<p>$I_d=\varepsilon_0\dot\Phi_E=(8.85\times10^{-12})(4.00\times10^8)\,\mathrm A=3.54\,\mathrm{mA}$. Units $(\mathrm{F/m})(\mathrm{V\,m/s})=\mathrm{C/s}$. Positive flux rate means positive current along the chosen normal. Award 3 for $3.54\,\mathrm{mA}$.</p>
+</details>
+<h4 id="q18-rim-field-3-marks">Q18. Rim field [3 marks]</h4>
+<p>Circular plates of radius $0.040\,\mathrm m$ charge at $0.080\,\mathrm A$. Find model-Q gap rim field in $\mu\mathrm T$.</p>
+<details>
+<summary>Solution and marking — Q18</summary>
+<p>$B=\mu_0I_c/(2\pi a)=(2.00\times10^{-7}\,\mathrm{T\,m/A})(0.080\,\mathrm A)/(0.040\,\mathrm m)=0.400\,\mu\mathrm T$. Interior and exterior formulas agree at the rim, a continuity check. Award 3 for $0.400\,\mu\mathrm T$.</p>
+</details>
+<h4 id="q19-material-wavelength-3-marks">Q19. Material wavelength [3 marks]</h4>
+<p>A nonmagnetic model-L dielectric has $\varepsilon_r=6.25$. Light of vacuum wavelength $600\,\mathrm{nm}$ enters. Find its material wavelength in nm.</p>
+<details>
+<summary>Solution and marking — Q19</summary>
+<p>$n=\sqrt{6.25}=2.50$; $\lambda=\lambda_0/n=(600\,\mathrm{nm})/2.50=240\,\mathrm{nm}$. Frequency stays fixed. At $n\to1$ the original wavelength returns. Award 3 for $240\,\mathrm{nm}$.</p>
+</details>
+<h4 id="q20-magnetic-amplitude-3-marks">Q20. Magnetic amplitude [3 marks]</h4>
+<p>A vacuum travelling wave has peak E of $450\,\mathrm{V/m}$. Find peak B in $\mu\mathrm T$.</p>
+<details>
+<summary>Solution and marking — Q20</summary>
+<p>$B_0=E_0/c=(450\,\mathrm{V/m})/(3.00\times10^8\,\mathrm{m/s})=1.50\,\mu\mathrm T$. Magnetic amplitude scales linearly with electric amplitude. Award 3 for $1.50\,\mu\mathrm T$.</p>
+</details>
+<h4 id="q21-rms-intensity-3-marks">Q21. RMS intensity [3 marks]</h4>
+<p>A vacuum harmonic wave has $E_{\rm rms}=30.0\,\mathrm{V/m}$. Use $Z_0=377\,\Omega$ to find intensity in W/m².</p>
+<details>
+<summary>Solution and marking — Q21</summary>
+<p>$I=E_{\rm rms}^2/Z_0=(30.0\,\mathrm{V/m})^2/(377\,\Omega)=2.39\,\mathrm{W/m^2}$. No extra half factor belongs with RMS. Using peak $30\sqrt2\,\mathrm{V/m}$ in the peak formula verifies it. Award 3 for $2.39\,\mathrm{W/m^2}$.</p>
+</details>
+<h4 id="q22-mean-energy-density-3-marks">Q22. Mean energy density [3 marks]</h4>
+<p>A unidirectional vacuum beam has intensity $240\,\mathrm{W/m^2}$. Find mean total energy density in $\mu\mathrm{J/m^3}$.</p>
+<details>
+<summary>Solution and marking — Q22</summary>
+<p>$\langle u\rangle=I/c=(240\,\mathrm{W/m^2})/(3.00\times10^8\,\mathrm{m/s})=0.800\,\mu\mathrm{J/m^3}$. Multiplying by $c$ recovers the energy flux. Award 3 for $0.800\,\mu\mathrm{J/m^3}$.</p>
+</details>
+<h4 id="q23-pulse-impulse-3-marks">Q23. Pulse impulse [3 marks]</h4>
+<p>A $9.00\,\mathrm{mJ}$ collimated vacuum pulse reflects normally from a perfect mirror. Find impulse in units of $10^{-11}\,\mathrm{N\,s}$.</p>
+<details>
+<summary>Solution and marking — Q23</summary>
+<p>$\Delta p=2U/c=2(9.00\times10^{-3}\,\mathrm J)/(3.00\times10^8\,\mathrm{m/s})=6.00\times10^{-11}\,\mathrm{N\,s}$. Requested number: <strong>6.00</strong>. An absorber receives half. Award 3 for 6.00 in the specified unit.</p>
+</details>
+<h4 id="q24-opaque-coating-3-marks">Q24. Opaque coating [3 marks]</h4>
+<p>An opaque surface with $R=0.25$ receives normal vacuum intensity $600\,\mathrm{W/m^2}$. Find pressure in $\mu\mathrm{Pa}$.</p>
+<details>
+<summary>Solution and marking — Q24</summary>
+<p>$P=1.25(600\,\mathrm{W/m^2})/(3.00\times10^8\,\mathrm{m/s})=2.50\,\mu\mathrm{Pa}$. This lies between black and mirror limits $2.00$ and $4.00\,\mu\mathrm{Pa}$. Award 3 for $2.50\,\mu\mathrm{Pa}$.</p>
+</details>
+<h4 id="q25-intercepted-power-3-marks">Q25. Intercepted power [3 marks]</h4>
+<p>A perfect mirror intercepts $12.0\,\mathrm W$ at $60^\circ$. Find normal force in nN.</p>
+<details>
+<summary>Solution and marking — Q25</summary>
+<p>$F_n=2\mathcal P_{\rm hit}\cos\theta/c=2(12.0\,\mathrm W)(0.5)/(3.00\times10^8\,\mathrm{m/s})=40.0\,\mathrm{nN}$. Only momentum projection remains. At normal incidence with the same intercepted power it is $80.0\,\mathrm{nN}$. Award 3 for $40.0\,\mathrm{nN}$.</p>
+</details>
+<h4 id="q26-sphere-force-3-marks">Q26. Sphere force [3 marks]</h4>
+<p>A black sphere of radius $0.020\,\mathrm m$ receives uniform vacuum intensity $1500\,\mathrm{W/m^2}$. Find axial force in nN in geometric optics.</p>
+<details>
+<summary>Solution and marking — Q26</summary>
+<p>$F=I\pi a^2/c=1500\pi(0.020)^2/(3.00\times10^8)\,\mathrm N=6.28\,\mathrm{nN}$. Intercepted power is about $1.885\,\mathrm W$, giving the same momentum flux. Using full sphere area $4\pi a^2$ incorrectly counts all patches as normally illuminated. Award 3 for $6.28\,\mathrm{nN}$.</p>
+</details>
+<h4 id="q27-radar-range-3-marks">Q27. Radar range [3 marks]</h4>
+<p>An echo returns after $8.00\,\mu\mathrm s$. Ignore instrumental delay and refractive-index corrections. Find range in metres.</p>
+<details>
+<summary>Solution and marking — Q27</summary>
+<p>$r=c\Delta t/2=(3.00\times10^8\,\mathrm{m/s})(8.00\times10^{-6}\,\mathrm s)/2=1200\,\mathrm m$. One-way travel takes $4\,\mu\mathrm s$, verifying the round trip. Award 3 for $1200\,\mathrm m$.</p>
+</details>
+<h4 id="q28-uv-photon-3-marks">Q28. UV photon [3 marks]</h4>
+<p>Using $hc=1240\,\mathrm{eV\,nm}$, find the energy in eV of a $248\,\mathrm{nm}$ vacuum photon.</p>
+<details>
+<summary>Solution and marking — Q28</summary>
+<p>$E_\gamma=(1240\,\mathrm{eV\,nm})/(248\,\mathrm{nm})=5.00\,\mathrm{eV}$. Shorter-than-visible wavelength correctly gives higher energy than typical visible photons. Award 3 for $5.00\,\mathrm{eV}$.</p>
+</details>
+<h3 id="d-comprehensive-olympiad-long-form-questions">D — Comprehensive Olympiad long-form questions</h3>
+<h4 id="q29-charging-as-an-energy-flow-experiment-11-marks">Q29. Charging as an energy-flow experiment [11 marks]</h4>
+<p>Vacuum circular plates of radius $a$ and separation $d\ll a$ carry $q(t)=\alpha t^2$ for $t\geq0$, $\alpha&gt;0$. Use model Q at times when variation is slow compared with $a/c$. Take E along $+z$.</p>
+<p>(a) Find $I_c,E,B_\phi(r)$ for $r&lt;a$. (3)<br />
+(b) Find radial Poynting vector at $r=a$ and integrate inward power through the cylindrical side of the gap. (4)<br />
+(c) Compare with $d(q^2/2C)/dt$ and $VI_c$; explain the entry route and quasistatic limitation. (4)</p>
+<p><details markdown=1><summary>Solution and marking — Q29</summary></p>
+<p><strong>(a), 3 marks:</strong> $I_c=2\alpha t$ (1); $E=\alpha t^2/(\varepsilon_0\pi a^2)$ (1); $B_\phi=\mu_0I_cr/(2\pi a^2)=\mu_0\alpha tr/(\pi a^2)$ (1).</p>
+<p><strong>(b), 4 marks:</strong> $\hat{\mathbf z}\times\hat{\boldsymbol\phi}=-\hat{\mathbf r}$, giving inward energy flow (1). At the rim,</p>
+<p>$$
+\mathbf S(a)=-\frac{EI_c}{2\pi a}\hat{\mathbf r}
+=-\frac{\alpha^2t^3}{\varepsilon_0\pi^2a^3}\hat{\mathbf r}
+$$</p>
+<p>(1). Multiply magnitude by $2\pi ad$: inward power $\mathcal P=EI_cd=2\alpha^2t^3d/(\varepsilon_0\pi a^2)$ (2).</p>
+<p><strong>(c), 4 marks:</strong> $C=\varepsilon_0\pi a^2/d$, $U=\alpha^2t^4d/(2\varepsilon_0\pi a^2)$, whose derivative agrees (1). $V=Ed$ verifies $VI_c$ (1). Energy enters radially via the fields, not via conduction through the vacuum (1). This is the leading electric-storage balance: small magnetic storage and induction/fringing corrections are higher-order quasistatic effects (1). The expressions formally vanish at $t=0$, but the relative slow-variation criterion must be checked before extrapolating to arbitrarily early times.</p>
+</details>
+<h4 id="q30-derive-a-wave-then-test-its-data-11-marks">Q30. Derive a wave, then test its data [11 marks]</h4>
+<p>A source-free model-L medium has $\varepsilon_r=4$, $\mu_r=1$. A proposed field is $\mathbf E=(80\,\mathrm{V/m})\cos(4z-\omega t)\hat{\mathbf x}$, with SI coordinates.</p>
+<p>(a) Derive both E/B wave equations from the curls, using divergence laws explicitly. (4)<br />
+(b) Find $v,\omega$ and complete $\mathbf B$. (3)<br />
+(c) Find $Z,I,\langle u\rangle$ and explain why $E_0=cB_0$ fails here. (4)</p>
+<details>
+<summary>Solution and marking — Q30</summary>
+<p><strong>(a), 4 marks:</strong> $\nabla\times\nabla\times\mathbf E=-\partial_t(\nabla\times\mathbf B)=-\mu\varepsilon\partial_t^2\mathbf E$ (1). Charge-free homogeneous matter gives $\nabla\cdot\mathbf E=0$; curl–curl identity yields $\nabla^2\mathbf E=\mu\varepsilon\partial_t^2\mathbf E$ (1). Independently $\nabla\times\nabla\times\mathbf B=\mu\varepsilon\partial_t(\nabla\times\mathbf E)=-\mu\varepsilon\partial_t^2\mathbf B$ (1); $\nabla\cdot\mathbf B=0$ yields its wave equation (1).</p>
+<p><strong>(b), 3 marks:</strong> $v=c/2=1.50\times10^8\,\mathrm{m/s}$ (1); $\omega=(4\,\mathrm{m^{-1}})v=6.00\times10^8\,\mathrm{s^{-1}}$ (1);</p>
+<p>$$
+\mathbf B=(5.33\times10^{-7}\,\mathrm T)\cos(4z-6.00\times10^8t)\hat{\mathbf y}
+$$</p>
+<p>(1, including direction/phase).</p>
+<p><strong>(c), 4 marks:</strong> $Z=Z_0/2=188.5\,\Omega$ (1); $I=80^2/(2\times188.5)\,\mathrm{W/m^2}=16.98\,\mathrm{W/m^2}$ (1); $\langle u\rangle=I/v=1.13\times10^{-7}\,\mathrm{J/m^3}$ (1). The ratio is $v$, not $c$; using $c$ would halve B (1). Check $\langle u\rangle=\varepsilon E_0^2/2$ within rounding tolerance.</p>
+</details>
+<h4 id="q31-mirror-pressure-with-no-net-energy-flow-11-marks">Q31. Mirror pressure with no net energy flow [11 marks]</h4>
+<p>A linear harmonic vacuum wave of electric peak $E_0$ travels along $+z$ toward a perfect conductor at $z=0$.</p>
+<p>(a) Construct incident/reflected fields with zero tangential E at the mirror; add them. (4)<br />
+(b) Find E/B nodes, mean energy density, mean Poynting vector. (4)<br />
+(c) Use magnetic stress for mean pressure and reconcile it with the energy flux. (3)</p>
+<details>
+<summary>Solution and marking — Q31</summary>
+<p><strong>(a), 4 marks:</strong> Choose $E_i=E_0\cos(kz-\omega t)$, $E_r=-E_0\cos(kz+\omega t)$ along x (1 for cancellation). Both corresponding B amplitudes point along y since reflected propagation and E sign both reverse (1). Addition gives $E_x=2E_0\sin kz\sin\omega t$ (1), $B_y=2E_0\cos kz\cos\omega t/c$ (1).</p>
+<p><strong>(b), 4 marks:</strong> E nodes $z=m\lambda/2$, B nodes $z=(2m+1)\lambda/4$, restricted to $z\leq0$ (1 each). Averaging total energy gives $\langle u\rangle=\varepsilon_0E_0^2$ (1). The time factor of $EB$ is $\sin\omega t\cos\omega t$, so $\langle\mathbf S\rangle=0$ (1).</p>
+<p><strong>(c), 3 marks:</strong> At $z=0$, E vanishes and $B=2E_0\cos\omega t/c$. Mean pressure $\langle B^2/(2\mu_0)\rangle=\varepsilon_0E_0^2=2I_i/c$ (2: stress and averaging). Energy fluxes cancel but normal momentum reverses, leaving nonzero transfer (1). Doubling amplitude quadruples pressure, a scale check.</p>
+</details>
+<h4 id="q32-isotropic-beacon-oblique-detector-11-marks">Q32. Isotropic beacon, oblique detector [11 marks]</h4>
+<p>An ideal source radiates $120\,\mathrm W$ isotropically in vacuum. A small black detector, actual area $0.010\,\mathrm{m^2}$, is at $r=3.00\,\mathrm m$, normal $60^\circ$ from the incident ray. Assume it lies in the far field. For amplitudes treat the local radiation as a linear harmonic travelling wave.</p>
+<p>(a) Find intensity and equivalent E/B peak amplitudes. (4)<br />
+(b) Find absorbed power, total force magnitude and normal force. (4)<br />
+(c) Double distance at fixed orientation: give scaling factors and justify the small-detector approximation. (3)</p>
+<details>
+<summary>Solution and marking — Q32</summary>
+<p><strong>(a), 4 marks:</strong> Conservation gives $I=\mathcal P/(4\pi r^2)$ (1), $I=120/(36\pi)=1.061\,\mathrm{W/m^2}$ (1). $E_0=\sqrt{2I/(\varepsilon_0c)}=28.27\,\mathrm{V/m}$ (1); $B_0=E_0/c=9.42\times10^{-8}\,\mathrm T$ (1).</p>
+<p><strong>(b), 4 marks:</strong> $\mathcal P_{\rm hit}=IA_s\cos60^\circ=5.305\times10^{-3}\,\mathrm W$ (2: expression and value). $F=\mathcal P_{\rm hit}/c=1.768\times10^{-11}\,\mathrm N$ along the ray (1); $F_n=F\cos60^\circ=8.842\times10^{-12}\,\mathrm N$ (1). The mW intercepted from a 120 W source agrees with the small subtended solid angle.</p>
+<p><strong>(c), 3 marks:</strong> Intensity, power and forces become one quarter (1); amplitudes become one half (1). Detector size is small compared with $r$, so rays and intensity are approximately uniform across it in the assumed radiation zone; a real dipole is not isotropic (1).</p>
+</details>
+<h4 id="q33-partially-reflecting-inclined-sail-11-marks">Q33. Partially reflecting inclined sail [11 marks]</h4>
+<p>A flat stationary vacuum sail of actual area $A_s$ has opaque specular reflectance $R$, absorptance $1-R$. Its inward normal $\hat{\mathbf n}$ and tangent $\hat{\mathbf t}$ define incident direction $\hat{\mathbf k}=\cos\theta\hat{\mathbf n}+\sin\theta\hat{\mathbf t}$.</p>
+<p>(a) Derive normal and tangential forces from momentum balance. (5)<br />
+(b) Evaluate for $I=1200\,\mathrm{W/m^2}$, $A_s=2.00\,\mathrm{m^2}$, $R=0.75$, $\theta=60^\circ$. (3)<br />
+(c) Give black, mirror and grazing checks; explain why $(1+R)I/c$ is not a complete force law. (3)</p>
+<details>
+<summary>Solution and marking — Q33</summary>
+<p><strong>(a), 5 marks:</strong> $\mathcal P_{\rm hit}=IA_s\cos\theta$ (1). Absorbed transfer is $(1-R)\mathcal P_{\rm hit}\hat{\mathbf k}/c$ (1). Reflected direction is $-\cos\theta\hat{\mathbf n}+\sin\theta\hat{\mathbf t}$, giving reflected normal transfer $2R\mathcal P_{\rm hit}\cos\theta/c$ and no tangential transfer (1). Hence</p>
+<p>$$
+F_n=(1+R)IA_s\cos^2\theta/c,\qquad
+F_t=(1-R)IA_s\sin\theta\cos\theta/c
+$$</p>
+<p>(1 each).</p>
+<p><strong>(b), 3 marks:</strong> $\mathcal P_{\rm hit}=1200\,\mathrm W$ (1); $F_n=3.50\times10^{-6}\,\mathrm N$ (1); $F_t=8.66\times10^{-7}\,\mathrm N$ (1). Units W divided by m/s give N.</p>
+<p><strong>(c), 3 marks:</strong> $R=0$ gives force along the beam (1); $R=1$ gives zero tangent and doubled normal transfer (1). Both vanish at grazing incidence for fixed area/intensity; $(1+R)I/c$ is only normal-incidence pressure and omits vector/area information (1). Extra thermal recoil has been excluded.</p>
+</details>
+<h4 id="q34-radiation-versus-gravity-for-a-grain-11-marks">Q34. Radiation versus gravity for a grain [11 marks]</h4>
+<p>A star of luminosity $L_\star$, mass $M_\star$, illuminates a sphere of radius $a\gg\lambda$, density $\rho_m$, at $r\gg a$. Treat illumination as locally parallel and isotropic at the source. Neglect emission recoil. The sphere is either perfectly absorbing or locally specular.</p>
+<p>(a) Integrate axial radiation force for both surface types. (5)<br />
+(b) Derive $\beta=F_{\rm rad}/F_g$ using Newtonian gravity and decide whether it depends on $r$. (3)<br />
+(c) Find $a_{\rm crit}$ for $\beta=1$ and discuss two limits. (3)</p>
+<details>
+<summary>Solution and marking — Q34</summary>
+<p><strong>(a), 5 marks:</strong> $I=L_\star/(4\pi r^2)$, $dA=2\pi a^2\sin\theta\,d\theta$ (1). Absorption gives $F_a=(I/c)\int\cos\theta\,dA=I\pi a^2/c$ (2: projection and integration). Specular force gives $F_s=(2I/c)\int\cos^3\theta\,dA=I\pi a^2/c$ (2: local projection and integration).</p>
+<p><strong>(b), 3 marks:</strong> $m=4\pi\rho_ma^3/3$, $F_g=GM_\star m/r^2$ (1). Divide to obtain</p>
+<p>$$
+\beta=\frac{3L_\star}{16\pi cGM_\star\rho_m a}
+$$</p>
+<p>(1). Both forces fall as $r^{-2}$, so distance cancels (1).</p>
+<p><strong>(c), 3 marks:</strong> $a_{\rm crit}=3L_\star/(16\pi cGM_\star\rho_m)$ (1). Larger grains have smaller $\beta$ because mass grows faster than projected area (1). As $a$ approaches wavelength the formal divergence fails: diffraction/scattering efficiency replace geometric optics (1). $\beta=1$ is a force balance, not a universal orbital-escape criterion.</p>
+</details>
+<h4 id="q35-one-instrument-three-spectral-decisions-11-marks">Q35. One instrument, three spectral decisions [11 marks]</h4>
+<p>A system has a $12.0\,\mathrm{GHz}$ radar, a $193\,\mathrm{nm}$ excimer corneal-photoablation beam, and an X-ray tube producing $0.100\,\mathrm{nm}$ photons. Radar target range is $4.50\,\mathrm{km}$.</p>
+<p>(a) Find missing frequencies/wavelength and classify each beam; name one source mechanism each. (4)<br />
+(b) Find radar round-trip delay and UV/X-ray photon energies. (4)<br />
+(c) Explain why a spectrum table proves neither ionisation of a specified target nor unique X/gamma origin. (3)</p>
+<details>
+<summary>Solution and marking — Q35</summary>
+<p><strong>(a), 4 marks:</strong> Radar $\lambda=c/f=0.0250\,\mathrm m=2.50\,\mathrm{cm}$, microwave (1). UV $f=c/(193\times10^{-9}\,\mathrm m)=1.554\times10^{15}\,\mathrm{Hz}$ (1). X-ray $f=c/(1.00\times10^{-10}\,\mathrm m)=3.00\times10^{18}\,\mathrm{Hz}$ (1). Sources: microwave oscillator/antenna (magnetron acceptable); excimer electronic transitions; fast-electron deceleration or inner-shell transitions in the tube (1 for all mechanisms).</p>
+<p><strong>(b), 4 marks:</strong> $\Delta t=2r/c=30.0\,\mu\mathrm s$ (2: round trip and value). $E_{\rm UV}=1240/193\,\mathrm{eV}=6.42\,\mathrm{eV}$ (1); $E_X=1240/0.100\,\mathrm{eV}=12.4\,\mathrm{keV}$ (1). Much shorter X wavelength correctly gives much greater energy.</p>
+<p><strong>(c), 3 marks:</strong> Ionisation depends on target threshold/interaction, not merely the band name (1). Nuclear gamma and electronic X radiation overlap in energy (1). Boundaries are conventions with overlapping source/detector responses, so frequency does not uniquely identify source (1).</p>
+</details>
+<h4 id="q36-match-fields-not-just-refractive-index-11-marks">Q36. Match fields, not just refractive index [11 marks]</h4>
+<p>A normally incident wave passes from medium 1 to medium 2, both model L, with $Z_2=2Z_1$. There is no free surface current or charge.</p>
+<p>(a) Derive the amplitude boundary equations, keeping the backward magnetic sign. (4)<br />
+(b) Find $r_E,t_E,R,T$ and verify energy conservation. (4)<br />
+(c) Can speeds match despite this impedance mismatch? Construct positive $\varepsilon_2,\mu_2$ relative to medium 1 and discuss reflection. (3)</p>
+<details>
+<summary>Solution and marking — Q36</summary>
+<p><strong>(a), 4 marks:</strong> A shrinking Faraday rectangle enforces tangential E continuity, $E_i+E_r=E_t$ (2: loop and equation). A shrinking Ampère rectangle with no free surface current enforces tangential H continuity; $H_r=-E_r/Z_1$ gives $(E_i-E_r)/Z_1=E_t/Z_2$ (2: sign and equation).</p>
+<p><strong>(b), 4 marks:</strong> Solve $r_E=(Z_2-Z_1)/(Z_2+Z_1)=1/3$ (1), $t_E=1+r_E=4/3$ (1). $R=1/9$ (1), $T=(Z_1/Z_2)t_E^2=8/9$, hence $R+T=1$ (1). $t_E&gt;1$ creates no energy: medium 2 has larger impedance.</p>
+<p><strong>(c), 3 marks:</strong> Same speed requires $\mu_2\varepsilon_2=\mu_1\varepsilon_1$ (1). Choose $\mu_2=2\mu_1$, $\varepsilon_2=\varepsilon_1/2$ to preserve the product and double $Z$ (1). Reflection remains $R=1/9$: equal index alone does not match magnetic-media impedances (1). With equal permeability instead, equal index would force matching impedance.</p>
+</details>
+<h3 id="answer-key-and-post-paper-audit">Answer key and post-paper audit</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>Answer</th>
+<th>B</th>
+<th>Exact set</th>
+<th>C</th>
+<th>Numerical answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>B</td>
+<td>Q9</td>
+<td>A, C, D</td>
+<td>Q17</td>
+<td>$3.54\,\mathrm{mA}$</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>D</td>
+<td>Q10</td>
+<td>A, C</td>
+<td>Q18</td>
+<td>$0.400\,\mu\mathrm T$</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>C</td>
+<td>Q11</td>
+<td>A, B, D</td>
+<td>Q19</td>
+<td>$240\,\mathrm{nm}$</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>A</td>
+<td>Q12</td>
+<td>A, C</td>
+<td>Q20</td>
+<td>$1.50\,\mu\mathrm T$</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td>B</td>
+<td>Q13</td>
+<td>A, C, D</td>
+<td>Q21</td>
+<td>$2.39\,\mathrm{W/m^2}$</td>
+</tr>
+<tr>
+<td>Q6</td>
+<td>B</td>
+<td>Q14</td>
+<td>A, C, D</td>
+<td>Q22</td>
+<td>$0.800\,\mu\mathrm{J/m^3}$</td>
+</tr>
+<tr>
+<td>Q7</td>
+<td>C</td>
+<td>Q15</td>
+<td>A, B, D</td>
+<td>Q23</td>
+<td>$6.00$ in $10^{-11}\,\mathrm{N\,s}$</td>
+</tr>
+<tr>
+<td>Q8</td>
+<td>C</td>
+<td>Q16</td>
+<td>A, C, D</td>
+<td>Q24</td>
+<td>$2.50\,\mu\mathrm{Pa}$</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Q25</td>
+<td>$40.0\,\mathrm{nN}$</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Q26</td>
+<td>$6.28\,\mathrm{nN}$</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Q27</td>
+<td>$1200\,\mathrm m$</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Q28</td>
+<td>$5.00\,\mathrm{eV}$</td>
+</tr>
+</tbody>
+</table>
+<p>Rework missed current questions from a drawn spanning surface, vector questions from $\hat{\mathbf k}\times\mathbf E$, and force questions from intercepted energy. A correct number with the wrong model is not transferable understanding.</p>
+<h2 id="8-printable-formula-sheet">8. Printable Formula Sheet</h2>
+<p>Print only this section for compact revision; page count depends on renderer and paper size. Conditions are part of every entry. $I$ is beam-normal mean intensity, $E_0$ a <strong>peak linear-harmonic</strong> amplitude, $A_s$ actual target area, $\theta$ angle from its normal.</p>
+<h3 id="sheet-a-fields-waves-and-energy">Sheet A — Fields, waves and energy</h3>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Conditions / meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\nabla\cdot\mathbf D=\rho_f$, $\nabla\cdot\mathbf B=0$</td>
+<td>Macroscopic Gauss laws</td>
+</tr>
+<tr>
+<td>$\nabla\times\mathbf E=-\partial_t\mathbf B$, $\nabla\times\mathbf H=\mathbf J_f+\partial_t\mathbf D$</td>
+<td>Maxwell curls</td>
+</tr>
+<tr>
+<td>$I_d=d\int\mathbf D\cdot d\mathbf A/dt$</td>
+<td>Fixed surface; vacuum $\mathbf D=\varepsilon_0\mathbf E$</td>
+</tr>
+<tr>
+<td>$I_d=\dot q=C\dot V$</td>
+<td>Ideal fixed capacitor, constant C, full gap flux</td>
+</tr>
+<tr>
+<td>$I_{d,0}=I_c/\kappa$, $I_{\rm pol}=(1-1/\kappa)I_c$</td>
+<td>Uniform linear dielectric</td>
+</tr>
+<tr>
+<td>$B_\phi=\mu_0I_cr/(2\pi a^2)$ inside; $\mu_0I_c/(2\pi r)$ outside</td>
+<td>Circular quasistatic vacuum plates; fringe/return-lead effects neglected</td>
+</tr>
+<tr>
+<td>$\nabla^2\mathbf E=\mu\varepsilon\partial_t^2\mathbf E$; same for B</td>
+<td>Homogeneous isotropic linear lossless source-free region</td>
+</tr>
+<tr>
+<td>$v=1/\sqrt{\mu\varepsilon}=c/n$, $n=\sqrt{\mu_r\varepsilon_r}$</td>
+<td>Model L, phase speed</td>
+</tr>
+<tr>
+<td>$v=f\lambda=\omega/k$, $k=2\pi/\lambda$, $\omega=2\pi f$</td>
+<td>Monochromatic wave; stationary interface preserves f</td>
+</tr>
+<tr>
+<td>$\mathbf B=\hat{\mathbf k}\times\mathbf E/v$, $E_0=vB_0$</td>
+<td>Single travelling plane wave in model L</td>
+</tr>
+<tr>
+<td>$u_E=\varepsilon E^2/2$, $u_B=B^2/(2\mu)$</td>
+<td>Linear nondispersive storage; equal for one travelling plane wave</td>
+</tr>
+<tr>
+<td>$\mathbf S=\mathbf E\times\mathbf H$, $\partial_tu+\nabla\cdot\mathbf S=-\mathbf J_f\cdot\mathbf E$</td>
+<td>Constant real constitutive coefficients</td>
+</tr>
+<tr>
+<td>$Z=\sqrt{\mu/\varepsilon}$, $I=E_0^2/(2Z)=E_{\rm rms}^2/Z=v\langle u\rangle$</td>
+<td>Linear harmonic travelling wave in model L</td>
+</tr>
+<tr>
+<td>$I=\mathcal P/(4\pi r^2)$, $E_0\propto1/r$</td>
+<td>Isotropic transparent far field</td>
+</tr>
+<tr>
+<td>$\mathbf g=\mathbf S/c^2$, $\mathbf p=(U/c)\hat{\mathbf k}$</td>
+<td>Vacuum; latter requires one direction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-b-forces-interfaces-and-spectrum">Sheet B — Forces, interfaces and spectrum</h3>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Conditions / meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathcal P_{\rm hit}=IA_s\cos\theta$</td>
+<td>Flat patch within uniform beam</td>
+</tr>
+<tr>
+<td>$P_{n,\rm abs}=I\cos^2\theta/c$, $P_{n,\rm spec}=2I\cos^2\theta/c$</td>
+<td>Vacuum, stationary absorber/specular mirror; no extra emission recoil</td>
+</tr>
+<tr>
+<td>$P_n=(1+R)I\cos^2\theta/c$</td>
+<td>Opaque specular/absorbing surface, $T=0$</td>
+</tr>
+<tr>
+<td>$F_t=(1-R)IA_s\sin\theta\cos\theta/c$</td>
+<td>Same surface; tangent follows incoming beam</td>
+</tr>
+<tr>
+<td>$P_n=(1+R-T)I\cos^2\theta/c$</td>
+<td>Transmission undeviated in vacuum</td>
+</tr>
+<tr>
+<td>$F_{n,\rm mirror}=2\mathcal P_{\rm hit}\cos\theta/c$</td>
+<td>Intercepted power specified; no extra area cosine</td>
+</tr>
+<tr>
+<td>$F_{\rm sphere}=I\pi a^2/c$</td>
+<td>Black or local-specular sphere, $a\gg\lambda$, geometric optics</td>
+</tr>
+<tr>
+<td>$P=u/3$</td>
+<td>Isotropic vacuum radiation, reflecting wall or equilibrium enclosure</td>
+</tr>
+<tr>
+<td>$r_E=(Z_2-Z_1)/(Z_2+Z_1)$, $t_E=2Z_2/(Z_2+Z_1)$</td>
+<td>Normal incidence between model-L media, no surface current</td>
+</tr>
+<tr>
+<td>$R=r_E^2$, $T=(Z_1/Z_2)t_E^2$, $R+T=1$</td>
+<td>Same lossless interface</td>
+</tr>
+<tr>
+<td>$\lambda_0=c/f$, $E_\gamma=hf=hc/\lambda_0$</td>
+<td>Vacuum wavelength; photon relation is quantum input</td>
+</tr>
+<tr>
+<td>$f_{LC}=1/(2\pi\sqrt{LC})$, $r_{\rm radar}=c\Delta t/2$</td>
+<td>Ideal lumped oscillator; vacuum round-trip echo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constants:</strong> $c\simeq3.00\times10^8\,\mathrm{m/s}$; $\varepsilon_0\simeq8.85\times10^{-12}\,\mathrm{F/m}$; $\mu_0\simeq4\pi\times10^{-7}\,\mathrm{H/m}$; $Z_0\simeq377\,\Omega$; $hc\simeq1240\,\mathrm{eV\,nm}$.</p>
+<p><strong>Decreasing vacuum wavelength:</strong> radio → microwave → IR → visible → UV → X → gamma. Adopted dividing wavelengths: 1 m, 1 mm, 700 nm, 400 nm, 10 nm, 0.01 nm. These are conventions; X/gamma origin-based names overlap. Sources: antennas/oscillators → microwave devices → thermal/molecular → electronic → electronic → bremsstrahlung/inner shell → nuclear/high-energy. All travel at the same $c$ in vacuum.</p>
+<p><strong>Final self-test:</strong> Name the medium, amplitude convention, propagation direction and relevant area before substituting numbers.</p>
+    <footer class="pager"><a href="sound-waves.html">← Sound waves</a><a href="capacitors.html">Capacitors →</a></footer>
+    <p class="colophon">Rendered from <code>electromagnetic-waves/Electromagnetic-waves.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>electromagnetic-waves/Electromagnetic-waves.md</code> and the interactive edition <code>electromagnetic-waves/Electromagnetic-waves.html</code>.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>
