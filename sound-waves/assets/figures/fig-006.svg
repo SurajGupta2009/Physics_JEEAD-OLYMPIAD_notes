@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .tube{fill:#e8f0f9;stroke:#1f5fa8;stroke-width:1.2}
+  .axis{stroke:#222;stroke-width:1}
+</style>
+<text x="10" y="18" class="lbl">Resonance tube: determination of v and end-correction e</text>
+<rect x="100" y="60" width="400" height="180" class="tube"/>
+<line x1="100" y1="60" x2="100" y2="240" stroke="#222" stroke-width:2"/>
+<text x="70" y="150" class="sm">closed</text>
+<text x="510" y="150" class="sm">open → tuning fork f</text>
+<!-- water levels -->
+<line x1="200" y1="150" x2="200" y2="240" stroke="#1f5fa8" stroke-width:2"/>
+<text x="180" y="260" class="sm">l1 = λ/4 + e (1st resonance)</text>
+<line x1="350" y1="90" x2="350" y2="240" stroke="#1f5fa8" stroke-width:2"/>
+<text x="330" y="260" class="sm">l2 = 3λ/4 + e (2nd resonance)</text>
+<!-- formulas -->
+<text x="100" y="300" class="lbl">v = 2f(l2 - l1),   e = (l2 -3l1)/2</text>
+<text x="100" y="320" class="sm">Derived: l1 = λ/4 + e, l2 = 3λ/4 + e → subtract → λ=2(l2-l1). Valid: l1,l2 ≫ r, small amplitude, f fixed</text>
+</svg>

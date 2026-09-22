@@ -31,8 +31,9 @@ The specification was *at least everything in the Cengage Wave Optics chapter* (
 the olympiad material that chapter does not reach. Every numbered topic in the Cengage contents list is
 mapped to a section of this file in part 0's coverage table: Huygens' wave theory and wavefronts, the
 Huygens construction, superposition and the conditions for interference, coherent sources, thin-film
-interference, Young's double slit (bright and dark fringe positions, fringe width, maximum order, shape of
-the fringes, white light, the standard cases, rays off the principal axis, a source off the central line,
+interference, Young's double slit (bright and dark fringe positions, fringe width and the angular fringe
+width, maximum order, shape of the fringes, white light including the wavelengths missing at a point, the
+slab/liquid/unequal-slit cases, rays off the principal axis and oblique incidence, a source off the central line,
 geometrical and optical paths, displacement of the fringes), Fresnel's biprism, Lloyd's mirror and the
 phase change on reflection, the solved examples, and the exercise sets as the model for part 10's paper.
 
@@ -65,11 +66,11 @@ FFTs. `topics.json` records the same list.
 * **Every worked number is checked**, usually against a limit (μ → 1, t → 0, d = a, λ → 0) or by an
   independent route. Part 9 collects the checks into a procedure, and parts 10–11 mark the paper the way
   it will actually be marked.
-* **Questions are interleaved with the theory**, each followed by a collapsible full solution: 97
-  in-chapter questions, then the 36-question paper, then 36 worked paper solutions.
+* **Questions are interleaved with the theory**, each followed by a collapsible full solution: 100
+  in-chapter questions, then the 36-question paper, then 36 worked paper solutions (136 distinct, 172 question blocks).
 * **Phase bookkeeping is taught as an algorithm** — five steps, with a cross drawn at every reflection off
   a denser medium — because a lost λ/2 is the single commonest error in the subject.
-* **Diagrams over prose wherever geometry does the work** — 27 inline SVG figures, drawn to the same scale
+* **Diagrams over prose wherever geometry does the work** — 28 inline SVG figures, drawn to the same scale
   as the numbers in the text.
 * **Olympiad material is derived, not cited**: coherence length and the visibility curve, Fresnel
   coefficients and the degree of polarisation, the evanescent-wave penetration depth and frustrated total
@@ -80,7 +81,7 @@ FFTs. `topics.json` records the same list.
 
 ```
 wave-optics/
-├── Wave-optics.html            the complete course (parts 0–12, 27 figures, 169 question blocks)
+├── Wave-optics.html            the complete course (parts 0–12, 28 figures, 172 question blocks)
 ├── assets/
 │   ├── notes.css               design system: light/dark themes, callout boxes, figure/table/question styles, print CSS
 │   ├── notes.js                TOC, scroll-spy, theme + print + "expand all", progress (localStorage), prev/next
@@ -114,3 +115,41 @@ rebuild run `python3 tools/check_all.py --update` from the repository root.
 
 The rules for working here alongside other writers (and other agents) are in
 [../CONTRIBUTING.md](../CONTRIBUTING.md); the layout contract is in [../STRUCTURE.md](../STRUCTURE.md).
+
+## Audit record — plan.md PART 4 (repository integration, 2026-09-21)
+
+This note-set was audited against `plan.md` §2 PART 4 (Cengage floor + harmonisation with parts 1–3). Findings and
+what was done, all in `Wave-optics.html` (the Markdown is regenerated from it by `tools/html_to_markdown.py`):
+
+| finding | action |
+|---|---|
+| no pedagogical link to the string/sound/EM wave notes (plan §2 PART 4.1) | new **§1.1.1** "One equation, three mechanisms", with the wave-lineage table, the inheritance/non-inheritance list and the boundary-flip box that ties §3.2 and §4.2 to a fixed end on a string |
+| the part 0 coverage table pointed at stale section numbers (superposition, maximum order, fringe shape, white light, optical path, reflection phase) | every row re-pointed at the section that actually carries the material; seven wrong inline pointers (§7.4 → §7.3, §7.8 → §4.7, §7.2 → §7.1, §5.4 → §5.2, §5.7 → §5.5, §2.11 → §2.7.1, an audit rule mis-cited to §4.9 → §8.7) corrected |
+| white-light YDSE covered band overlap but not the *missing wavelengths at a point* (plan §2 PART 4.2) | §2.6 now derives absent $\lambda = 2\Delta/(2m-1)$ and bright $\lambda = \Delta/m$ with a worked example, plus **Q13** |
+| oblique incidence was promised in the part 2 lead and the coverage table but never derived | new **§2.7.5** with $\Delta = d(\sin\theta-\sin\alpha)$, the one-fringe tilt $\tan\alpha = \lambda/d$, the asymmetric order limit and its $2n_{\max}+1$ invariant, a trap box and **Q14**; §2.7 is now "five cases" |
+| $\beta = \lambda D/d$ and $\theta = \lambda/d$ were quoted without their boundary domain (house rule: every boxed formula states one) | §2.3 now states that the fringes are equally spaced in $\sin\theta$, and gives the exact statement next to the paraxial one |
+| "1 cm of glass ≈ 5000 extra waves" in the numbers-to-memorise table is wrong: $0.5\,\text{cm}/600\,\text{nm} = 8333$ | replaced with the checked number (8300, at 600 nm) |
+| the formula sheet called $y = A\cos(\omega t-kx)$ "the wave equation" | §12.1 now gives $\partial^{2}\psi/\partial t^{2} = v^{2}\partial^{2}\psi/\partial x^{2}$ with the three speeds and their conditions, and the sinusoid is labelled a travelling-wave solution |
+| the plan's cross-topic registry | `topics.json` now carries `string-waves`, `sound-waves` and `electromagnetic-waves` as `planned` with the scope each owes; `CURRICULUM.md` gained the wave-sequence section |
+
+Not covered by this audit, and still true of the note: the Fresnel coefficients are stated, not derived from Maxwell's
+boundary conditions — that derivation is owned by the future `electromagnetic-waves/` note-set, whose registry entry
+records the hand-off. `python3 tools/check_all.py` is green (28 figures, 172 question blocks, 100 solution panels).
+
+## Completeness re-audit — plan.md §0 and PART 4 against the whole chapter (2026-09-21)
+
+The second pass asked a harder question than the first: not *are the harmonisation items done*, but *is this the
+complete wave-optics note up to Olympiad level that plan.md promises*. Evidence and outcome:
+
+| contract in `plan.md` | how it was checked | outcome |
+|---|---|---|
+| PART 4.2 — Cengage floor, pages 2.1–2.95 | the scan of the chapter was read directly (it has no text layer): the contents box on book page 2.1 lists fourteen topics, and the part 0 coverage table was matched against it row by row, with spot checks inside the chapter — p. 2.19 (hyperbolic fringes when the screen is in the XY plane), p. 2.43 Q27 (oblique beam with a sheet in front of the lower slit), Illustrations 2.27/2.28 (slit separation in a medium, $\beta = D\lambda/(n d)$), 2.34 (two 1° prisms → biprism) | all fourteen topics present; the two archetypes the book exercises but the note had only half-covered (tilted incidence, fringe shape off-axis) were closed in the first pass (§2.7.5, §2.5) |
+| §0.2 — no hand-waving, validity clause on every boxed formula | the 36 display equations carrying `key`, and then the seven new ones were read for a stated boundary domain; folder autonomy re-checked (no CDN, no remote font, every `img` a local `assets/figures/*.svg`) | passes; the single derived-elsewhere statement is still the Fresnel coefficients, owned by `electromagnetic-waves/` |
+| §0.3 item 4 — a labelled *[JEE Advanced Advantage / Alternate Method]* block | grep for the label: **none** in any note-set. The methods existed (phasor calculus, the path-counting algorithm, symmetry shortcuts) but were not marked, so a reader could not find them | seven labelled boxes added, one per theory part: complex amplitudes (§1.6), count waves not millimetres (§2.8), a film as a folded double slit (§3.2), measuring $d$ with a lens, $d=\sqrt{d_1d_2}$ (§4.4), the phasor arc instead of the integral (§5.2), two components and a phase for retarders (§6.6), two comparisons for coherence (§7.1). Each states its own validity clause and ends on a limit check |
+| §0.3 item 7 — 30+ question paper with full solutions **and grading rubrics** | parsed every `[marks]` tag in part 10: $10\times3 + 5\times4 + 5\times4 + 5\times3 + 6\times3 + 2\times4 + 10 + 10 + 12 = 143$, matching the per-section scheme and `topics.json`'s `paper.marks`; 36 solution blocks match the 36 questions | sums verified; part 11 now carries an explicit rubric box (30 % principle / 30 % algebra / 20 % numbers / 20 % check, and what a correct answer without a principle earns) |
+| §0.2 — diagrams over prose where geometry does the work | every `Fig. N.M` reference in the note was checked against the caption list | one dangling reference found (§2.9's trap pointed at a "Fig. 2.4" that did not exist); it is now real: new Fig. 2.4 plots $4I_0\cos^{2}(\delta/2)$ against $I_0(5+4\cos\delta)$, so unequal slits and the lifting of the zeros are drawn, not asserted. Figures 27 → 28 |
+
+After the second pass: 12 parts, 28 figures, 172 question blocks (136 distinct questions, 100 collapsible solutions,
+plus the 36-question paper and its 36 solutions), 2,192 inline and 123 display maths. `tools/check.py` reports ALL
+GOOD; an independent KaTeX pass with `throwOnError` over the 2,303 expressions in the file found no failure; and
+`tools/check_all.py` is green with the Markdown edition regenerated and byte-stable.

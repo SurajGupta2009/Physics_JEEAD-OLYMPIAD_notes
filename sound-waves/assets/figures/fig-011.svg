@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:11px;fill:#5f5c54}
+  .axis{stroke:#222;stroke-width:1}
+</style>
+<text x="10" y="18" class="lbl">Oblique / 2D Doppler: only line-of-sight components matter</text>
+<!-- diagram -->
+<circle cx="200" cy="180" r="5" fill="#c0392b"/>
+<text x="180" y="165" class="sm">S (v_s)</text>
+<line x1="200" y1="180" x2="240" y2="160" stroke="#c0392b" stroke-width:1.5"/>
+<text x="245" y="160" class="sm">v_s at θ_s to line SO</text>
+<circle cx="550" cy="180" r="5" fill="#0b7a4b"/>
+<text x="530" y="165" class="sm">O (v_o)</text>
+<line x1="550" y1="180" x2="510" y2="200" stroke="#0b7a4b" stroke-width:1.5"/>
+<text x="460" y="215" class="sm">v_o at θ_o to line OS</text>
+<line x1="200" y1="180" x2="550" y2="180" stroke="#222" stroke-dasharray="4 3"/>
+<text x="350" y="170" class="sm">line of sight</text>
+<text x="100" y="250" class="lbl">f' = f * (v - v_o cosθ_o) / (v - v_s cosθ_s)</text>
+<text x="100" y="270" class="sm">θ_s = angle between v_s and SO (source to observer), θ_o = angle between v_o and SO? Convention: cos positive when component along line toward other</text>
+<text x="100" y="290" class="sm">Sign rule: numerator + if observer moves toward source, denominator - if source moves toward observer. Use projection, not total speed.</text>
+<text x="100" y="310" class="sm">Special: closest approach → cosθ=0 instant, but derivative gives frequency glide. Valid: far-field, |v|&lt;v_sound, straight-line motion</text>
+</svg>

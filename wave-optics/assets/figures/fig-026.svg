@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 250" role="img" aria-label="Michelson interferometer with an evacuated gas cell in one arm" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 240" role="img" aria-label="Visibility as a function of path difference, and the fringe pattern it produces" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,21 +33,20 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <rect x="200" y="60" width="110" height="40" class="fp"></rect>
-  <text x="255" y="86" class="lbl sm" text-anchor="middle">cell, L = 4 cm</text>
-  <text x="255" y="48" class="lbl sm" text-anchor="middle">gas of index μ, then pumped out</text>
-  <line x1="310" y1="80" x2="560" y2="80" class="acc" marker-end="url(#ah)"></line>
-  <line x1="560" y1="52" x2="560" y2="112" class="ln2"></line>
-  <text x="568" y="76" class="lbl sm">mirror M₁</text>
-  <line x1="120" y1="80" x2="200" y2="80" class="acc" marker-end="url(#ah)"></line>
-  <text x="70" y="70" class="lbl sm">from the source</text>
-  <line x1="120" y1="150" x2="380" y2="150" class="acc" marker-end="url(#ah)"></line>
-  <line x1="380" y1="120" x2="380" y2="182" class="ln2"></line>
-  <text x="388" y="146" class="lbl sm">mirror M₂ (movable)</text>
-  <line x1="120" y1="150" x2="120" y2="230" class="acc" marker-end="url(#ah)"></line>
-  <text x="66" y="246" class="lbl sm">to the eye</text>
-  <rect x="112" y="74" width="16" height="112" class="fp" opacity="0.6"></rect>
-  <text x="150" y="200" class="lbl sm">beam splitter</text>
-  <line x1="380" y1="150" x2="120" y2="80" class="thinl"></line>
-  <text x="120" y="222" class="lbl sm">emptying the cell shortens one arm by 2(μ − 1)L, so N = 2(μ − 1)L/λ ≈ 61 fringes for 4 cm of air</text>
+  <line x1="70" y1="140" x2="650" y2="140" class="ln"></line>
+  <line x1="70" y1="40" x2="70" y2="230" class="ln"></line>
+  <text x="66" y="36" class="lbl sm" text-anchor="end">V</text>
+  <text x="646" y="158" class="lbl sm">ΔL</text>
+  <text x="76" y="44" class="lbl sm">1</text>
+  <text x="180" y="140" class="lbl sm" text-anchor="middle">lₜ</text>
+  <line x1="180" y1="40" x2="180" y2="228" class="dim"></line>
+  <text x="186" y="224" class="lbl sm">lₜ = λ²/Δλ: first disappearance</text>
+  <line x1="290" y1="40" x2="290" y2="228" class="dim"></line>
+  <text x="296" y="206" class="lbl sm">2lₜ: fringes back, weaker</text>
+  <path class="acc" d="M70 44 C 100 96 140 132 180 140 C 220 132 260 100 290 44"></path>
+  <path class="acc" d="M290 44 C 320 96 360 130 400 138 C 440 130 490 96 540 50 C 570 30 600 26 640 24"></path>
+  <text x="330" y="80" class="lbl sm">envelope: the fringe contrast</text>
+  <polyline class="thinl" points="70,120 76,105 82,120 88,105 94,120 100,105 106,120 112,105 118,120 124,105 130,120 136,105 142,120 148,106 154,120 160,108 166,120 172,114 178,130 184,120 190,112 196,120 202,116 208,120 214,118 220,123 226,120 232,119 238,120 244,121 250,120 256,121 262,120 268,121 274,120"></polyline>
+  <text x="70" y="178" class="lbl sm">the measured fringes: sharp near ΔL = 0, gone once the two wave trains no longer overlap</text>
+  <text x="70" y="196" class="lbl sm">a Michelson with a 1 nm-wide line loses them at 0.36 mm; a laser holds them for tens of metres</text>
 </svg>

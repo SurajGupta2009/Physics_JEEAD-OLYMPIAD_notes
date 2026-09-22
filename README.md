@@ -4,7 +4,7 @@
 
 ### Physics notes for JEE Advanced and the Olympiad track
 
-Portable Markdown note-sets with local SVG diagrams. The six original topics also keep their consolidated interactive HTML editions for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
+Portable Markdown note-sets with local SVG diagrams. Seven topics also keep their consolidated interactive HTML editions for offline browsing and printing. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
 
 </div>
 
@@ -17,11 +17,15 @@ Portable Markdown note-sets with local SVG diagrams. The six original topics als
 | **heat** | [Heat.md](heat/Heat.md) · [HTML](heat/Heat.html) · [site](docs/site/heat.html) | 24 figures + map SVG | 48 | 10-question written gauntlet | complete |
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 27 figures + local SVG | 169 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
-| **electromagnetic waves** | [Electromagnetic-waves.md](electromagnetic-waves/Electromagnetic-waves.md) · [paper](electromagnetic-waves/Paper.md) · [solutions](electromagnetic-waves/Solutions.md) | 7 local SVG | 52 | 36-question, 3 h, 180-mark JEE–Olympiad paper | complete (Markdown-first) |
+| **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
+| **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete — PART 1 |
 | rotational mechanics | — | — | — | — | planned — claim it |
+| **sound waves** | [Sound-waves.md](sound-waves/Sound-waves.md) · [HTML](sound-waves/Sound-waves.html) | 15 local SVG | — | 36-question, 3 h, 150-mark paper | complete — PART 2 |
+| **electromagnetic waves** | [Electromagnetic-waves.md](electromagnetic-waves/Electromagnetic-waves.md) · [paper](electromagnetic-waves/Paper.md) · [solutions](electromagnetic-waves/Solutions.md) | 7 local SVG | 52 | 36-question, 3 h, 180-mark JEE–Olympiad paper | complete (Markdown-first) |
 
-The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` is the checked registry. `tools/check_all.py` validates the original HTML editions and the new Markdown-first Electromagnetic Waves topic, including its local validator and master-only counts. Part 3 is read directly as Markdown; it has not yet been added to the generated browser site.
+The wave rows above are the spine the wave-optics note is written against: **string waves → sound waves → electromagnetic waves → geometrical optics → wave optics**. Registering them in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
+
+The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` is the checked registry. `tools/check_all.py` validates the registered HTML editions and the new Markdown-first Electromagnetic Waves topic, including its local validator and master-only counts. Part 3 is read directly as Markdown; it has not yet been added to the generated browser site.
 
 ## Read it
 
@@ -32,7 +36,11 @@ Three ways, in order of what you get:
    offline with no tooling. Diagrams are the local SVGs, equations are typeset
    with the vendored KaTeX, solutions stay collapsible, and each page has a
    table of contents plus links to the other topics. Regenerate it any time
-   with `python3 tools/md_site.py` (needs `pip install markdown`).
+   with `python3 tools/md_site.py` (needs `pip install markdown`). To read it
+   over HTTP instead, run the server in the **repository root**
+   (`python3 -m http.server 8080`, then open `/docs/site/`): the pages reach their
+   diagrams at `../../<topic>/assets/figures/`, so a server rooted in `docs/site`
+   itself renders the text but not the figures.
 2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
    `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
    they render with diagrams and equations on GitHub and in viewers with a
@@ -77,7 +85,7 @@ python3 tools/check_all.py           # validate the original interactive edition
 python3 tools/check_all.py --quick   # skip the Node renderer tests
 ```
 
-The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 189 chapter figures (plus the two expandable-map SVGs).
+The conversion is intentionally additive: the HTML files remain the source of truth for interactive behaviour, while the generated Markdown is the portable distribution format. A clean run should report six Markdown files and 190 chapter figures (plus the two expandable-map SVGs).
 
 Optional CI: [`tools/ci/qa.yml`](tools/ci/qa.yml) runs the HTML gate as a GitHub Action. Install it with `mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/` if your checkout has workflow permissions.
 

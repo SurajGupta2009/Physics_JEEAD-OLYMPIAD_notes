@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:12px;fill:#5f5c54}
+  .axis{stroke:#222;stroke-width:1}
+  .wave{stroke:#1f5fa8;stroke-width:1.5;fill:none}
+</style>
+<text x="10" y="18" class="lbl">Intensity attenuation: point source I ∝ 1/r², pressure amplitude ∝ 1/r</text>
+<!-- point source -->
+<circle cx="150" cy="150" r="6" fill="#c0392b"/>
+<text x="130" y="130" class="sm">source</text>
+<circle cx="150" cy="150" r="40" fill="none" stroke="#1f5fa8" stroke-width="0.8" stroke-dasharray="4 2"/>
+<circle cx="150" cy="150" r="80" fill="none" stroke="#1f5fa8" stroke-width="0.8" stroke-dasharray="4 2"/>
+<circle cx="150" cy="150" r="120" fill="none" stroke="#1f5fa8" stroke-width="0.8"/>
+<text x="280" y="150" class="sm">4πr² sphere: power P = I·4πr² = const → I ∝ 1/r²</text>
+<text x="280" y="170" class="sm">ΔP0 ∝ √I ∝ 1/r, s0 ∝ 1/r</text>
+<!-- graph -->
+<line x1="450" y1="200" x2="750" y2="200" class="axis"/>
+<line x1="450" y1="200" x2="450" y2="60" class="axis"/>
+<path d="M450,70 Q500,90 550,120 T650,170 T750,190" class="wave"/>
+<text x="460" y="50" class="sm">I(r) ∝ 1/r²</text>
+<text x="460" y="230" class="sm">r →</text>
+<text x="500" y="250" class="lbl">Line source: cylindrical wave I ∝ 1/r, ΔP0 ∝ 1/√r</text>
+<text x="500" y="270" class="sm">Valid: far-field r ≫ λ, lossless, no reflections. Near-field corrections ∝ (λ/r)</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+<style>
+  .lbl{font-family:serif;font-size:14px;fill:#1c1c1a}
+  .sm{font-size:11px;fill:#5f5c54}
+  .tube{fill:#f5f0e8;stroke:#222;stroke-width:1.5}
+  .wave{stroke:#1f5fa8;stroke-width:1.8;fill:none}
+  .wave2{stroke:#c0392b;stroke-width:1.8;fill:none;stroke-dasharray:5 3}
+  .node{fill:#222}
+</style>
+<text x="10" y="18" class="lbl">Standing sound waves: closed vs open organ pipes – displacement s(x) and pressure ΔP(x)</text>
+<!-- Closed pipe -->
+<rect x="50" y="50" width="350" height="50" class="tube"/>
+<text x="50" y="40" class="sm">Closed pipe (one end closed): L = (2n-1)λ/4, only odd harmonics</text>
+<text x="50" y="115" class="sm">Closed end: s=0 (node), ΔP antinode. Open end: s antinode, ΔP=0</text>
+<!-- waves for n=1,2 -->
+<path d="M50,70 Q137,30 225,70 T400,70" class="wave"/>
+<text x="410" y="75" class="sm">n=1, f1=v/4L</text>
+<path d="M50,90 Q100,120 150,90 Q200,60 250,90 Q300,120 350,90 T400,90" class="wave2"/>
+<text x="410" y="95" class="sm">n=2, f3=3v/4L (2nd allowed is 3rd harmonic)</text>
+<!-- Open pipe -->
+<rect x="50" y="160" width="350" height="50" class="tube"/>
+<text x="50" y="150" class="sm">Open pipe (both ends open): L = nλ/2, all harmonics f_n = n v/2L</text>
+<path d="M50,185 Q137,145 225,185 T400,185" class="wave"/>
+<text x="410" y="180" class="sm">n=1, f1=v/2L, λ=2L</text>
+<path d="M50,200 Q100,170 150,200 Q200,230 250,200 Q300,170 350,200 T400,200" class="wave2"/>
+<text x="410" y="205" class="sm">n=2, f2=v/L</text>
+<!-- Pressure antinode vs node labels -->
+<text x="60" y="250" class="lbl">Displacement node ↔ Pressure antinode; Displacement antinode ↔ Pressure node</text>
+<text x="60" y="270" class="sm">Proof: ΔP = -B ∂s/∂x, max slope at s=0 → pressure extremum. Valid for small amplitudes, rigid walls</text>
+<!-- End correction -->
+<rect x="50" y="300" width="350" height="30" class="tube"/>
+<line x1="400" y1="300" x2="400" y2="330" stroke="#c0392b" stroke-width:1.5" stroke-dasharray="3 2"/>
+<line x1="420" y1="300" x2="420" y2="330" stroke="#c0392b" stroke-width:1"/>
+<text x="405" y="345" class="sm">e≈0.6r</text>
+<text x="50" y="360" class="sm">Effective length L_eff = L+e (closed), L+2e (open). Rayleigh correction. Valid for r≪λ, r≪L</text>
+</svg>

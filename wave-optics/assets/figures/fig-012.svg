@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 700 250" role="img" aria-label="Wedge film between two glass plates producing fringes of equal thickness" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 700 300" role="img" aria-label="Interference in a thin film with rays reflected from both surfaces" xmlns="http://www.w3.org/2000/svg">
 <style>
 :root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8;
   --pos:#0b7a4b; --neg:#b3261e; --amber:#8a5a00; --violet:#6b3fa0; }
@@ -33,21 +33,24 @@ line.mk,path.mk { stroke:var(--fg); stroke-width:1.4; }
 <marker id="dim" viewBox="0 0 8 12" refX="4" refY="6" markerWidth="7" markerHeight="10" orient="auto"><path d="M4,0 L4,12" stroke="var(--muted)" stroke-width="1.1"/></marker>
 </defs>
 
-  <line x1="80" y1="60" x2="620" y2="60" class="ln2"></line>
-  <line x1="80" y1="60" x2="620" y2="130" class="ln2"></line>
-  <line x1="620" y1="60" x2="620" y2="130" class="ln2"></line>
-  <text x="626" y="100" class="mi sm">t</text>
-  <path d="M80 62 L 90 52" class="ln"></path><path d="M620 132 L 610 142" class="ln"></path>
-  <line x1="140" y1="40" x2="140" y2="95" class="acc" marker-end="url(#ah)"></line>
-  <line x1="210" y1="40" x2="210" y2="95" class="acc" marker-end="url(#ah)"></line>
-  <line x1="280" y1="40" x2="280" y2="95" class="acc" marker-end="url(#ah)"></line>
-  <text x="120" y="30" class="lbl sm">monochromatic light, normal incidence</text>
-  <path d="M80 84 L 90 74 L 100 94 L 110 74 L 120 94 L 130 74 L 140 94 L 150 74 L 160 94 L 170 74 L 180 94 L 190 74 L 200 94 L 210 74 L 220 94 L 230 74 L 240 94 L 250 74 L 260 94 L 270 74 L 280 94 L 290 74 L 300 94 L 310 74 L 320 94 L 330 74 L 340 94 L 350 74 L 360 94 L 370 74 L 380 94 L 390 74 L 400 94 L 410 74 L 420 94 L 430 74 L 440 94 L 450 74 L 460 94 L 470 74 L 480 94 L 490 74 L 500 94 L 510 74 L 520 94 L 530 74 L 540 94 L 550 74 L 560 94 L 570 74 L 580 94 L 590 74 L 600 94 L 610 74" class="ln"></path>
-  <text x="70" y="120" class="lbl sm">contact edge: the film is thinnest here and the fringe is dark</text>
-  <line x1="80" y1="152" x2="620" y2="152" class="dim"></line>
-  <line x1="80" y1="146" x2="80" y2="158" class="dim"></line><line x1="200" y1="146" x2="200" y2="158" class="dim"></line>
-  <text x="140" y="176" class="lbl sm" text-anchor="middle">β = λ/2μθ</text>
-  <text x="360" y="176" class="lbl sm">each fringe joins points of equal film thickness — so the nails are “fringes of equal thickness”</text>
-  <text x="80" y="212" class="lbl sm">foil of thickness <tspan class="mi">t</tspan> at the far end; over a length <tspan class="mi">L</tspan> with <tspan class="mi">N</tspan> fringes, <tspan class="mi">t</tspan> = Nλ/2μ.</text>
-  <text x="80" y="234" class="lbl sm">Two collimated glass plates never quite touch: the residual tilt is what an optical flat measures.</text>
+  <rect x="60" y="150" width="580" height="70" class="facc"></rect>
+  <line x1="60" y1="150" x2="640" y2="150" class="ln2"></line>
+  <line x1="60" y1="220" x2="640" y2="220" class="ln2"></line>
+  <line x1="240" y1="40" x2="310" y2="150" class="acc" marker-end="url(#ah)"></line>
+  <line x1="310" y1="150" x2="270" y2="40" class="acc" marker-end="url(#ah)"></line>
+  <line x1="310" y1="150" x2="376" y2="220" class="acc" marker-end="url(#ah)"></line>
+  <line x1="376" y1="220" x2="450" y2="105" class="acc" marker-end="url(#ah)"></line>
+  <line x1="290" y1="150" x2="290" y2="60" class="thinl"></line>
+  <line x1="376" y1="220" x2="376" y2="258" class="thinl"></line>
+  <text x="296" y="120" class="lbl sm">i</text>
+  <text x="352" y="176" class="lbl sm">r</text>
+  <text x="196" y="100" class="lbl sm">incident</text>
+  <text x="180" y="72" class="lbl sm">ray 1 (top)</text>
+  <text x="462" y="120" class="lbl sm">ray 2 (bottom)</text>
+  <text x="70" y="140" class="lbl sm">air  n = 1</text>
+  <text x="70" y="196" class="lbl sm">film n = μ, thickness <tspan class="mi">t</tspan></text>
+  <text x="70" y="252" class="lbl sm">air</text>
+  <text x="392" y="248" class="lbl sm">extra path in the film = AB + BC</text>
+  <text x="470" y="196" class="lbl sm">phase change π at the top surface, none at the bottom</text>
+  <text x="120" y="288" class="lbl sm">optical path difference (in air) = 2μ<tspan class="mi">t</tspan> cos <tspan class="mi">r</tspan> ± λ/2</text>
 </svg>

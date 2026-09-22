@@ -238,11 +238,11 @@
       "pages": [
         "Wave-optics.html"
       ],
-      "figures": 27,
-      "questions": 169,
-      "solutions": 97,
-      "math_spans": 1967,
-      "bytes_html": 466634,
+      "figures": 28,
+      "questions": 172,
+      "solutions": 100,
+      "math_spans": 2192,
+      "bytes_html": 502787,
       "paper": {
         "questions": 36,
         "sections": 7,
@@ -265,6 +265,73 @@
         "modern physics sequence from the same Cengage volume: photoelectric effect and atomic physics",
         "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
+      ]
+    },
+    {
+      "slug": "string-waves",
+      "title": "String waves — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "string-waves/String-waves.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "note": "plan.md PART 1 (Agent 1), the head of the wave sequence. Floor: mechanical waves and the 1-D wave equation from Newton's second law on an element μ dx, v = √(T/μ), d'Alembert's solution, particle velocity versus wave velocity, energy and power transmission, reflection at fixed and free ends, junction coefficients, standing waves and normal modes, sonometer laws and Melde's experiment; olympiad extensions: the hanging rope, WKB amplitude scaling and the phasor sum. wave-optics/ already teaches towards this note — its §1.1.1 uses the wave equation, the intensity-is-amplitude-squared argument and the fixed-end phase flip, and §7.7 its standing waves — so the string note should cite back to wave-optics/Wave-optics.md#section-01-waves-and-huygens rather than re-deriving the phase rule from scratch.",
+      "next_candidates": [
+        "scaffold with: python3 tools/new_topic.py string-waves --title \"String waves\" --chapters \"01-the-wave-equation,02-energy-and-power,03-boundaries-and-impedance,04-standing-waves,05-playbook,06-paper\"",
+        "register the built counts with python3 tools/check_all.py --update and flip status to in-progress, then complete",
+        "decide the chapter-vs-single-file shape before writing: every note-set in this repo is now one merged HTML + its Markdown export"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0
+    },
+    {
+      "slug": "sound-waves",
+      "title": "Sound Waves & Doppler Effect — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "sound-waves/Sound-waves.html",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "pages": [
+        "Sound-waves.html"
+      ],
+      "figures": 15,
+      "questions": 15,
+      "solutions": 15,
+      "math_spans": 26,
+      "bytes_html": 16566,
+      "paper": {
+        "questions": 36,
+        "sections": 7,
+        "marks": 150,
+        "minutes": 180,
+        "file": "Sound-waves.md",
+        "anchor": "section-07-paper"
+      },
+      "deliberately_not_covered": [
+        "nonlinear acoustics beyond shock discontinuity and Mach cone (no Burgers equation, no N-wave detailed decay)",
+        "musical timbre and Fourier analysis of instruments (only fundamental and harmonics of ideal pipes)",
+        "architectural acoustics: reverberation time, Sabine formula, absorption coefficients",
+        "ultrasound imaging and medical acoustics",
+        "relativistic Doppler (belongs to electromagnetic-waves)",
+        "quantum acoustics: phonons beyond the one-line mention"
+      ],
+      "next_candidates": [
+        "acoustic resonators and Helmholtz resonator with radiation impedance",
+        "musical instruments: strings coupled to air columns, Fourier synthesis",
+        "nonlinear acoustics: shock formation, sonic boom N-wave, acoustic streaming"
       ]
     },
     {
