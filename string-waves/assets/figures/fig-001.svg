@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 240" role="img" aria-label="Forces on a small curved string element" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8; --pos:#0b7a4b; --neg:#b3261e; }
+.ln { stroke:var(--fg); stroke-width:1.8; fill:none; stroke-linecap:round; }
+.str { stroke:var(--accent); stroke-width:3.2; fill:none; stroke-linecap:round; }
+.dash { stroke:var(--muted); stroke-width:1.2; stroke-dasharray:4 4; fill:none; }
+.vec { stroke:var(--neg); stroke-width:2.2; stroke-linecap:round; }
+.lbl { font-family:Arial,sans-serif; font-size:13px; fill:var(--fg); }
+.lbl.sm { font-size:11px; fill:var(--muted); }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:14px; fill:var(--fg); }
+</style>
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#b3261e"/>
+  </marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<!-- Coordinate axes -->
+<line x1="60" y1="200" x2="640" y2="200" class="ln"/>
+<line x1="60" y1="200" x2="60" y2="30" class="ln"/>
+<text x="645" y="204" class="lbl">x</text>
+<text x="55" y="25" class="lbl">y</text>
+
+<!-- Curved string segment -->
+<path d="M 120 180 Q 350 70 580 140" class="str"/>
+
+<!-- Element slice at x and x+dx -->
+<line x1="280" y1="200" x2="280" y2="128" class="dash"/>
+<line x1="420" y1="200" x2="420" y2="105" class="dash"/>
+<circle cx="280" cy="128" r="4" fill="#1f5fa8"/>
+<circle cx="420" cy="105" r="4" fill="#1f5fa8"/>
+
+<text x="275" y="218" class="mi">x</text>
+<text x="405" y="218" class="mi">x + dx</text>
+<text x="335" y="110" class="mi" fill="#1f5fa8">dm = μ dx</text>
+
+<!-- Tangents / Tensions -->
+<line x1="280" y1="128" x2="190" y2="155" class="vec" marker-end="url(#arr)"/>
+<line x1="420" y1="105" x2="520" y2="120" class="vec" marker-end="url(#arr)"/>
+
+<line x1="280" y1="128" x2="200" y2="128" class="dash"/>
+<line x1="420" y1="105" x2="500" y2="105" class="dash"/>
+
+<text x="170" y="165" class="mi" fill="#b3261e">T(x)</text>
+<text x="525" y="125" class="mi" fill="#b3261e">T(x+dx)</text>
+<text x="220" y="142" class="lbl sm">θ(x)</text>
+<text x="470" y="117" class="lbl sm">θ(x+dx)</text>
+</svg>

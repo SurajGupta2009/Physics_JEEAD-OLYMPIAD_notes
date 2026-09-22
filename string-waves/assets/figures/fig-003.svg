@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 240" role="img" aria-label="Standing wave normal modes: Fundamental, 2nd, and 3rd harmonics" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root { --panel:#ffffff; --fg:#1c1c1a; --muted:#5f5c54; --accent:#1f5fa8; --node:#b3261e; --anti:#0b7a4b; }
+.ln { stroke:var(--fg); stroke-width:1.6; fill:none; }
+.str1 { stroke:var(--accent); stroke-width:2.4; fill:none; }
+.str2 { stroke:var(--accent); stroke-width:1.6; stroke-dasharray:4 4; fill:none; opacity:0.7; }
+.lbl { font-family:Arial,sans-serif; font-size:12px; fill:var(--fg); }
+.lbl.bld { font-weight:bold; }
+.mi { font-family:Georgia,serif; font-style:italic; font-size:13px; fill:var(--fg); }
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<!-- Mode 1: Fundamental n=1 -->
+<text x="30" y="45" class="lbl bld">n = 1 (Fundamental / 1st Harmonic): λ₁ = 2L, f₁ = v/(2L)</text>
+<line x1="200" y1="50" x2="650" y2="50" stroke="#ddd"/>
+<path d="M 200 50 Q 425 15 650 50" class="str1"/>
+<path d="M 200 50 Q 425 85 650 50" class="str2"/>
+<circle cx="200" cy="50" r="4" fill="#b3261e"/>
+<circle cx="650" cy="50" r="4" fill="#b3261e"/>
+<circle cx="425" cy="15" r="3" fill="#0b7a4b"/>
+<text x="195" y="68" class="lbl" fill="#b3261e">N</text>
+<text x="420" y="8" class="lbl" fill="#0b7a4b">A</text>
+<text x="645" y="68" class="lbl" fill="#b3261e">N</text>
+
+<!-- Mode 2: 2nd Harmonic n=2 -->
+<text x="30" y="125" class="lbl bld">n = 2 (2nd Harmonic / 1st Overtone): λ₂ = L, f₂ = 2f₁</text>
+<line x1="200" y1="130" x2="650" y2="130" stroke="#ddd"/>
+<path d="M 200 130 Q 312.5 95 425 130 Q 537.5 165 650 130" class="str1"/>
+<path d="M 200 130 Q 312.5 165 425 130 Q 537.5 95 650 130" class="str2"/>
+<circle cx="200" cy="130" r="4" fill="#b3261e"/>
+<circle cx="425" cy="130" r="4" fill="#b3261e"/>
+<circle cx="650" cy="130" r="4" fill="#b3261e"/>
+<text x="195" y="148" class="lbl" fill="#b3261e">N</text>
+<text x="420" y="148" class="lbl" fill="#b3261e">N</text>
+<text x="645" y="148" class="lbl" fill="#b3261e">N</text>
+
+<!-- Mode 3: 3rd Harmonic n=3 -->
+<text x="30" y="200" class="lbl bld">n = 3 (3rd Harmonic / 2nd Overtone): λ₃ = 2L/3, f₃ = 3f₁</text>
+<line x1="200" y1="205" x2="650" y2="205" stroke="#ddd"/>
+<path d="M 200 205 Q 275 175 350 205 Q 425 235 500 205 Q 575 175 650 205" class="str1"/>
+<path d="M 200 205 Q 275 235 350 205 Q 425 175 500 205 Q 575 235 650 205" class="str2"/>
+<circle cx="200" cy="205" r="4" fill="#b3261e"/>
+<circle cx="350" cy="205" r="4" fill="#b3261e"/>
+<circle cx="500" cy="205" r="4" fill="#b3261e"/>
+<circle cx="650" cy="205" r="4" fill="#b3261e"/>
+<text x="195" y="223" class="lbl" fill="#b3261e">N</text>
+<text x="345" y="223" class="lbl" fill="#b3261e">N</text>
+<text x="495" y="223" class="lbl" fill="#b3261e">N</text>
+<text x="645" y="223" class="lbl" fill="#b3261e">N</text>
+</svg>

@@ -18,8 +18,8 @@ Portable Markdown note-sets with local SVG diagrams. Each topic also keeps its c
 | **thermodynamics** | [Thermodynamics.md](thermodynamics/Thermodynamics.md) · [HTML](thermodynamics/Thermodynamics.html) · [site](docs/site/thermodynamics.html) | 34 figures + map SVG | 127 | 36-question, 3 h, 245-mark INPhO-standard paper | complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | complete |
 | **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | complete — audited against plan.md part 4 |
+| **string waves** | [String-waves.md](string-waves/String-waves.md) | 4 figures + local SVG | 36 | 36-question, 3 h, 144-mark Olympiad paper | complete — PART 1 |
 | rotational mechanics | — | — | — | — | planned — claim it |
-| string waves | — | — | — | the wave-equation head of the wave sequence (plan.md PART 1) | planned — claim it |
 | sound waves | — | — | — | Laplace, columns, beats and the full Doppler effect (plan.md PART 2) | planned — claim it |
 | electromagnetic waves | — | — | — | displacement current, Maxwell, Poynting and radiation pressure (plan.md PART 3) | planned — claim it |
 

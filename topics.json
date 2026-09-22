@@ -270,8 +270,8 @@
     {
       "slug": "string-waves",
       "title": "String waves — first principles to Olympiad",
-      "status": "planned",
-      "owner": null,
+      "status": "complete",
+      "owner": "arena-agent",
       "entry": "string-waves/String-waves.html",
       "exam": [
         "JEE Advanced",
@@ -284,7 +284,13 @@
         "scaffold with: python3 tools/new_topic.py string-waves --title \"String waves\" --chapters \"01-the-wave-equation,02-energy-and-power,03-boundaries-and-impedance,04-standing-waves,05-playbook,06-paper\"",
         "register the built counts with python3 tools/check_all.py --update and flip status to in-progress, then complete",
         "decide the chapter-vs-single-file shape before writing: every note-set in this repo is now one merged HTML + its Markdown export"
-      ]
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0
     },
     {
       "slug": "sound-waves",
