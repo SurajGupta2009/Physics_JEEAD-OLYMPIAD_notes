@@ -567,6 +567,53 @@
       "bytes_markdown": 79890,
       "words": 11608,
       "display_formulas": 15
+    },
+    {
+      "slug": "semiconductors",
+      "title": "Semiconductors & Electronic Devices — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "semiconductors/Semiconductors.md",
+      "format": "markdown",
+      "plan_part": 27,
+      "source": "JEE Main/Advanced semiconductor syllabus — no chapter exists in the supplied Cengage volumes (verified per plan.md PART 27)",
+      "exam": [
+        "JEE Main",
+        "JEE Advanced",
+        "NSEP"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Donor/acceptor binding energy derived from the scaled Bohr atom with the honest factor-1.7 discussion against Si:P's 45 meV",
+        "Diode equation derived from the Boltzmann factor and drift-diffusion balance",
+        "Junction capacitance C proportional to V to the minus half, derived from the depletion width",
+        "Shockley-Queisser single-junction bound at order of magnitude",
+        "Bandgap reference construction from CTAT and PTAT terms (transistor thermometer)",
+        "Hall measurement applied to a real sample for carrier type and density",
+        "Moore's-law tunnelling limit from de Broglie wavelength and uncertainty",
+        "Shot noise floor and receiver detectivity calculation",
+        "Shaded-panel analysis with bypass diodes",
+        "Chip switching power from half C V squared per gate",
+        "Temperature at which a device forgets its doping (intrinsic takeover estimate)"
+      ],
+      "deliberately_not_covered": [
+        "Op-amps and linear IC design",
+        "FET internals beyond one-line mention",
+        "Biasing networks and AC small-signal models beyond load-line gain",
+        "Crystal structure and phonon physics beyond device needs"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Semiconductors.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 102,
+      "math_spans": 489,
+      "bytes_html": 0,
+      "bytes_markdown": 78639,
+      "words": 11418,
+      "display_formulas": 16
     }
   ]
 }

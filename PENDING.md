@@ -99,7 +99,7 @@ The modern-physics half of that volume is the largest single remaining block.
 | P3 | `x-rays` | **PART 25 — complete (arena-agent)** · X-rays — production, spectra & Bragg | continuous/characteristic, $f_{\min}$, Moseley, Bragg diffraction, Compton scattering | P2 |
 | P4 | `nuclear-physics` | **PART 26 — complete (arena-agent)** · Nuclear Physics | nuclear size/density, binding energy / mass defect, radioactivity (α β γ, decay law), half-life/mean-life, chain reaction, fission/fusion | P2 |
 | P5 | `radioactivity` | **PART 26 — merged and complete (arena-agent)** · Radioactivity & Decay Kinetics folded into P4 | decay series, secular/transient equilibrium, carbon dating, statistical nature — all live in `nuclear-physics/` §3.9-3.11, OL5/OL9 | P4 |
-| P6 | `semiconductors` | Semiconductors & Electronic Devices | bands, intrinsic/extrinsic, p-n junction diode, LED, Zener, transistor (BJT) basics, logic gates (intro) | E10 |
+| P6 | `semiconductors` | **PART 27 — complete (arena-agent)** · Semiconductors & Electronic Devices | bands, intrinsic/extrinsic, p-n junction diode, LED, Zener, transistor (BJT) basics, logic gates (intro) | E10 |
 | P7 | `communication-systems` | Communication Systems | amplitude/frequency modulation, bandwidth, EM-propagation modes, signal processing (intro, JEE-main level only) | EM-waves |
 | P8 | `special-relativity` | Special Relativity *(olympiad/extension)* | postulates, time dilation, length contraction, relativistic momentum/energy, $E=mc^2$, Doppler (optical) | M6, EM-waves |
 
