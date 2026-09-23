@@ -21,6 +21,11 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **current electricity** | [Current-electricity.md](current-electricity/Current-electricity.md) · [HTML](current-electricity/Current-electricity.html) · [site](docs/site/current-electricity.html) | 26 figures + local SVG | 145 | 36-question, 3 h, 245-mark INPhO-standard paper | ✅ complete |
 | **geometrical optics** | [Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) · [HTML](geometrical-optics/Geometrical-optics.html) · [site](docs/site/geometrical-optics.html) | 46 figures + local SVG | 152 | 36-question, 3 h, 143-mark INPhO-standard paper | ✅ complete |
 | **wave optics** | [Wave-optics.md](wave-optics/Wave-optics.md) · [HTML](wave-optics/Wave-optics.html) · [site](docs/site/wave-optics.html) | 28 figures + local SVG | 172 | 36-question, 3 h, 143-mark INPhO-standard paper | ✅ complete — audited against plan.md PART 4 |
+| **photoelectric effect** | [Photoelectric-effect.md](photoelectric-effect/Photoelectric-effect.md) | text-only, 16 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 23 |
+| **atomic structure** | [Atomic-structure.md](atomic-structure/Atomic-structure.md) | text-only, 16 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 24 |
+| **x-rays** | [X-rays.md](x-rays/X-rays.md) | text-only, 16 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 25 |
+| **nuclear physics** | [Nuclear-physics.md](nuclear-physics/Nuclear-physics.md) | text-only, 18 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 26 (absorbs PENDING P5) |
+| **semiconductors** | [Semiconductors.md](semiconductors/Semiconductors.md) | text-only, 18 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 27 |
 
 The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 

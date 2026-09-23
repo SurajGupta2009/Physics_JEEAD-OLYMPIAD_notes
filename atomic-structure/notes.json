@@ -1,0 +1,25 @@
+{
+  "slug": "atomic-structure",
+  "title": "Rutherford, the Bohr Model & Atomic Spectra",
+  "master": "Atomic-structure.md",
+  "part": 24,
+  "source": "Cengage Optics and Modern Physics-compressed.pdf ch 4 Atomic Physics (pp. 4.1-4.24)",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels",
+  "paper": {
+    "questions": 36,
+    "marks": 200,
+    "minutes": 180,
+    "sections": { "4": 20, "5": 6, "9": 10 }
+  },
+  "minimums": {
+    "checks": 12,
+    "exemplars": 10,
+    "practice": 25,
+    "olympiad": 10,
+    "diagrams": 12,
+    "words": 9000,
+    "callouts": 24
+  },
+  "callout_types": ["note", "info", "warning", "success", "danger", "tip", "quote",
+                    "question", "abstract", "example"]
+}

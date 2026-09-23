@@ -392,6 +392,228 @@
       "bytes_markdown": 75918,
       "words": 9241,
       "display_formulas": 36
+    },
+    {
+      "slug": "photoelectric-effect",
+      "title": "Photons, Photoelectric Effect & Matter Waves — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "photoelectric-effect/Photoelectric-effect.md",
+      "format": "markdown",
+      "plan_part": 23,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 3 Photoelectric Effect (pp. 3.1-3.41)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "blackbody crisis, Wien shift and Planck hypothesis as the chapter's opening (plan listed it only for the Olympiad block)",
+        "uncertainty-principle derivation of a0 and -13.6 eV placed in core theory, not only the Olympiad block",
+        "wave-packet phase/group velocity structure (v_p v_g = c^2) as a worked Olympiad derivation",
+        "two-photon photoemission and the laser Boltzmann obstruction as exam-grade Olympiad problems",
+        "thermal de Broglie wavelength and the quantum-gas criterion for conduction electrons",
+        "the eye's single-photon sensitivity as a measurement reconstruction"
+      ],
+      "deliberately_not_covered": [
+        "interpretation-level quantum mechanics (which-slit, measurement problem): flagged, not taught",
+        "band structure and semiconductor photoemission (owned by PART 27)",
+        "relativistic mirrors and pair production (owned by PARTS 25, 28)",
+        "full laser engineering: only the Einstein-coefficient threshold argument"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Photoelectric-effect.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 1135,
+      "bytes_html": 0,
+      "bytes_markdown": 97415,
+      "words": 13766,
+      "display_formulas": 18
+    },
+    {
+      "slug": "atomic-structure",
+      "title": "Rutherford, the Bohr Model & Atomic Spectra — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "atomic-structure/Atomic-structure.md",
+      "format": "markdown",
+      "plan_part": 24,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 4 Atomic Physics (pp. 4.1-4.24, Bohr half)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Rutherford differential cross-section derived in full (plan listed it only for the Olympiad block)",
+        "helium singlet/triplet two-spectrum doorway (plan did not list it)",
+        "21 cm hyperfine line order-of-magnitude in core applications",
+        "spectrometer resolving power and Doppler velocity as a worked practical",
+        "stellar Balmer-temperature Boltzmann window as an Olympiad estimate"
+      ],
+      "deliberately_not_covered": [
+        "X-rays, Moseley derivation, Bragg, Compton (owned by PART 25, the other half of Cengage ch 4)",
+        "Schrodinger-equation origin of the quantum numbers: named, not derived",
+        "line intensities and polarisations",
+        "fine structure beyond its order of magnitude"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Atomic-structure.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 895,
+      "bytes_html": 0,
+      "bytes_markdown": 78853,
+      "words": 11206,
+      "display_formulas": 14
+    },
+    {
+      "slug": "x-rays",
+      "title": "X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "x-rays/X-rays.md",
+      "format": "markdown",
+      "plan_part": 25,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 4 Atomic Physics pp. 4.25-4.32 (X-rays, spectra, Moseley)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Compton derived twice (scalar and four-vector) as the Olympiad centrepiece",
+        "inverse Compton moving-mirror estimate with the gravity-assist cross-link",
+        "Avogadro determination with an explicit error budget",
+        "anode heat and rotating-anode engineering estimate; dose perspective (dental vs flight)",
+        "X-ray laser obstacles paragraph; Rayleigh lambda^-4 as the low-energy contrast",
+        "relativistic electron-wavelength correction cross-linked to PART 23"
+      ],
+      "deliberately_not_covered": [
+        "Klein-Nishina cross-section (named, not derived)",
+        "structure factors beyond a one-paragraph first appearance",
+        "broad-beam build-up factors and medical dosimetry beyond one order of magnitude",
+        "full relativistic pair-production kinematics (owned by PART 28)"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "X-rays.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 481,
+      "bytes_html": 0,
+      "bytes_markdown": 75042,
+      "words": 11113,
+      "display_formulas": 13
+    },
+    {
+      "slug": "nuclear-physics",
+      "title": "Nuclear Structure, Radioactivity, Fission & Fusion — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "nuclear-physics/Nuclear-physics.md",
+      "format": "markdown",
+      "plan_part": 26,
+      "source": "Cengage Optics and Modern Physics-compressed.pdf, ch 5 Nuclear Physics (pp. 5.1-5.39)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Semi-empirical mass formula promoted to a core derivation with the valley-floor maximisation",
+        "Geiger-Nuttall law derived from the WKB/Gamow picture, slope fitted from U-238 vs Po-212 data",
+        "Isochron dating (Rb-Sr) method added beyond C-14 and K-Ar",
+        "Gamow peak and the honest solar core temperature (tunnelling times Maxwell tail)",
+        "Solar neutrino flux estimate at Earth and the thumbnail rate",
+        "Lawson criterion for fusion confinement",
+        "Ten-half-life waste rule with the per-GW fuel arithmetic",
+        "Detector themes: cloud-chamber track signatures, Geiger dead time, Poisson counting design",
+        "Fissility Z^2/A and the maximum-Z argument for the periodic table's end",
+        "p-p chain mass audit including positron-annihilation recovery to 26.7 MeV"
+      ],
+      "deliberately_not_covered": [
+        "Shell-model spectroscopy beyond naming magic-number corrections",
+        "Full weak-interaction theory of beta-decay rates",
+        "Reactor kinetics with delayed-neutron fractions and feedback coefficients",
+        "Neutrino oscillation phenomenology (named as the solar-flux caveat only)"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Nuclear-physics.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 103,
+      "math_spans": 544,
+      "bytes_html": 0,
+      "bytes_markdown": 79890,
+      "words": 11608,
+      "display_formulas": 15
+    },
+    {
+      "slug": "semiconductors",
+      "title": "Semiconductors & Electronic Devices — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "semiconductors/Semiconductors.md",
+      "format": "markdown",
+      "plan_part": 27,
+      "source": "JEE Main/Advanced semiconductor syllabus — no chapter exists in the supplied Cengage volumes (verified per plan.md PART 27)",
+      "exam": [
+        "JEE Main",
+        "JEE Advanced",
+        "NSEP"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Donor/acceptor binding energy derived from the scaled Bohr atom with the honest factor-1.7 discussion against Si:P's 45 meV",
+        "Diode equation derived from the Boltzmann factor and drift-diffusion balance",
+        "Junction capacitance C proportional to V to the minus half, derived from the depletion width",
+        "Shockley-Queisser single-junction bound at order of magnitude",
+        "Bandgap reference construction from CTAT and PTAT terms (transistor thermometer)",
+        "Hall measurement applied to a real sample for carrier type and density",
+        "Moore's-law tunnelling limit from de Broglie wavelength and uncertainty",
+        "Shot noise floor and receiver detectivity calculation",
+        "Shaded-panel analysis with bypass diodes",
+        "Chip switching power from half C V squared per gate",
+        "Temperature at which a device forgets its doping (intrinsic takeover estimate)"
+      ],
+      "deliberately_not_covered": [
+        "Op-amps and linear IC design",
+        "FET internals beyond one-line mention",
+        "Biasing networks and AC small-signal models beyond load-line gain",
+        "Crystal structure and phonon physics beyond device needs"
+      ],
+      "next_candidates": [],
+      "pages": [
+        "Semiconductors.md"
+      ],
+      "figures": 0,
+      "questions": 54,
+      "solutions": 102,
+      "math_spans": 489,
+      "bytes_html": 0,
+      "bytes_markdown": 78639,
+      "words": 11418,
+      "display_formulas": 16
     }
   ]
 }
