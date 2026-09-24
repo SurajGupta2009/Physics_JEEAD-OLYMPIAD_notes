@@ -1,0 +1,1904 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X-rays, Moseley & Bragg — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="active">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 25</span><span class="prop"><b>slug</b> x-rays</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 4 Atomic Physics pp. 4.25-4.32 (X-rays, X-ray spectra, Moseley's law)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
+
+<h1 id="x-rays-moseleys-law-bragg-diffraction-the-compton-effect-first-principles-to-olympiad">X-rays, Moseley's Law, Bragg Diffraction &amp; the Compton Effect — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0-4 — the tube, the two spectra, Moseley, absorption, Bragg, Compton. Pass 2: Parts 5-9 — exemplars, archetypes, traps, playbook. Pass 3: Parts 10-14 — the Olympiad layer (Compton twice, Avogadro from a crystal, inverse Compton, doses), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: compute the Duane-Hunt cutoff for any tube voltage and explain why the short-wavelength end is sharp; read a characteristic spectrum and find the minimum voltage that produces a given line; derive Moseley's law from the screened Bohr picture and identify an element from its lines; work the exponential absorption law and half-value thicknesses; derive Bragg's law with a foolproof angle convention and extract lattice spacings and Avogadro's number from a crystal; derive the Compton shift twice, with the electron's recoil energy and angle; and place all three effects (photoelectric, Compton, diffraction) in the single table of what each proves about the photon.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>X-rays are photon physics with enough energy to see atoms and to knock electrons free — and Compton scattering is the experiment that proves the photon carries momentum.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<ol>
+<li>What is the photon energy of a $0.1$ nm X-ray, in keV?</li>
+<li>An electron falls through $50$ kV. What is the richest photon one such electron can make?</li>
+<li>State the standing-wave diffraction condition for a grating of spacing $d$ at glancing angle $\theta$.</li>
+<li>Write energy and momentum conservation for a photon scattering off a free electron at rest.</li>
+<li>What is $m_ec^2$, and why does it set the Compton scale?</li>
+<li>Quote the de Broglie relation and say which experiment of PART 23 verified it.</li>
+<li>What does $I=I_0e^{-\mu x}$ describe, and what is a half-value thickness?</li>
+</ol>
+<details>
+<summary>Solution</summary>
+<ol>
+<li>$E=\frac{1240}{0.1}=12.4$ keV.</li>
+<li>$50$ keV: the whole kinetic energy in one photon, the Duane-Hunt limit.</li>
+<li>$2d\sin\theta=n\lambda$, with $\theta$ measured from the plane.</li>
+<li>$hf+m_ec^2=hf'+E_e$ and $\frac{h}{\lambda}=\frac{h}{\lambda'}\cos\theta+p_e\cos\phi$, $\frac{h}{\lambda'}\sin\theta=p_e\sin\phi$.</li>
+<li>$511$ keV; the Compton shift is $\frac{h}{m_ec}(1-\cos\theta)$.</li>
+<li>$\lambda=\frac{h}{p}$, verified by Davisson-Germer (<a href="photoelectric-effect.html">Photoelectric-effect</a> §3.10).</li>
+<li>Exponential attenuation; the thickness cutting intensity to one half, $x_{1/2}=\frac{\ln2}{\mu}$.</li>
+</ol>
+</details>
+<h3 id="04-numbers-to-keep">0.4 Numbers to keep</h3>
+<div class="callout abstract">
+<p class="callout-title">Numbers to keep</p>
+<p>$hc=1240$ eV nm $=1.24$ keV pm; $\lambda_C=\frac{h}{m_ec}=2.426$ pm; $m_ec^2=511$ keV; Duane-Hunt $\lambda_{\min}=\frac{1240}{V[\text{V}]}$ nm $=\frac{1.24\times10^6}{V}$ pm; Moseley $f_{K\alpha}=\frac34cR(Z-1)^2$ (Cu K$\alpha$: $154$ pm, needs $\sim9$ kV); NaCl $d=0.282$ nm, $\rho=2165$ kg/m$^3$, $N_A=6.02\times10^{23}$; Pb half-value layer at 100 keV $\approx0.12$ mm; Compton shifts: $90^\circ$ $2.43$ pm, $180^\circ$ $4.86$ pm; pair threshold $1.022$ MeV; X-ray tube efficiency $\sim10^{-9}ZV$ (about 1 % at 100 kV on tungsten).</p>
+</div>
+
+<h3 id="05-three-passes">0.5 Three passes</h3>
+<p>Pass 1 for the six mechanisms (bremsstrahlung, characteristic cascade, Moseley screening, absorption, Bragg reflection, Compton recoil). Pass 2 for craft. Pass 3 timed paper, then audit.</p>
+<h3 id="06-cengage-coverage-map">0.6 Cengage coverage map</h3>
+<p>The sweep read the chapter 4 contents page; the X-ray sections sit at pp. 4.25-4.32 inside ch 4 Atomic Physics, so the map is keyed to those section names. Bragg diffraction, Compton scattering, Avogadro-from-crystal and pair production are not headings of this volume — they are INPhO/IPhO syllabus items added by the sweep and marked so.</p>
+<table>
+<thead>
+<tr>
+<th>Cengage section (ch 4, X-ray half)</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discovery of X-rays (4.25)</td>
+<td>history and phenomenology</td>
+<td>§1.1</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Production of X-rays, Coolidge's tube (4.25)</td>
+<td>thermionic source, acceleration, target, vacuum, window</td>
+<td>§3.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Properties of X-rays (4.25)</td>
+<td>penetration, fluorescence, photographic action, neutrality</td>
+<td>§2.4, §3.5</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Application of X-rays (4.26)</td>
+<td>imaging, crystallography, therapy</td>
+<td>§3.5, §3.8</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>X-ray absorption (4.27)</td>
+<td>$I=I_0e^{-\mu x}$, half-value thickness</td>
+<td>§3.5, E5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>X-ray spectra and origin of X-rays (4.27)</td>
+<td>continuous plus characteristic; vacancy cascade</td>
+<td>§3.2-3.3</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Moseley's law (4.30)</td>
+<td>$\sqrt f=a(Z-b)$; ordering the table</td>
+<td>§3.4, E4</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Solved examples band (4.32)</td>
+<td>standard shapes</td>
+<td>§6.1, Q1-Q28</td>
+<td>exercised</td>
+</tr>
+<tr>
+<td>Exercise bands (4.42-4.94)</td>
+<td>exam formats</td>
+<td>Part 11</td>
+<td>exercised</td>
+</tr>
+<tr>
+<td>Duane-Hunt cutoff as measurement of h/e (added by sweep)</td>
+<td>the sharp edge</td>
+<td>§3.2, OL5</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Bragg diffraction and powder rings (added by sweep)</td>
+<td>$2d\sin\theta=n\lambda$</td>
+<td>§3.6-3.8</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Avogadro from a crystal (added by sweep)</td>
+<td>the classic olympiad determination</td>
+<td>§3.8, OL6</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Compton effect, twice derived (added by sweep)</td>
+<td>photon momentum proven</td>
+<td>§3.9-3.10, OL1-OL2</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Pair production threshold (added by sweep)</td>
+<td>$2m_ec^2$</td>
+<td>§3.11</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Production efficiency and anode heat (added by sweep)</td>
+<td>engineering estimate</td>
+<td>§3.1, OL7</td>
+<td>added by sweep</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<h3 id="11-the-inverse-photoelectric-effect">1.1 The inverse photoelectric effect</h3>
+<p>Run the photoelectric effect backwards. There, a photon hands an electron enough energy to leave a metal; here, a fast electron slams into a metal and hands its energy to photons. Two things happen at the target. Most electrons brake in the nuclear field and shed their energy as a smooth smear of photons — bremsstrahlung, "braking radiation" — and the smear has a sharp rich end: no photon can exceed the electron's kinetic energy. That is the Duane-Hunt limit, Einstein's equation read right-to-left. A few electrons knock inner-shell electrons out; the atom refills the hole and emits a photon whose energy is the atom's own ladder — sharp, element-specific lines riding on the smear.</p>
+<h3 id="12-a-ruler-made-of-crystals">1.2 A ruler made of crystals</h3>
+<p>An X-ray's wavelength is a few tenths of a nm — the same scale as the spacing of atoms in a crystal. No manufactured grating is that fine, but every crystal is a three-dimensional grating waiting for exactly this light. When the reflections from successive atomic planes add in phase, a flash appears at a definite angle: Bragg's law. Turn the argument around and the crystal becomes a ruler — for wavelengths, for lattice spacings, and, with a density measurement, for Avogadro's number.</p>
+<h3 id="13-the-photon-catches-its-momentum">1.3 The photon catches its momentum</h3>
+<p>Shine X-rays on electrons and the scattered beam contains two wavelengths: the original, and one shifted longer by an amount that depends only on the scattering angle. Classical waves cannot do that — a wave scatters at the frequency it arrives. A particle can: the shift is exactly the kinematics of a relativistic billiard ball of momentum $\frac{h}{\lambda}$ striking an electron. Compton's 1923 measurement is the single most direct proof that the photon carries momentum, closing the triangle that the photoelectric effect (energy) and diffraction (wave) began.</p>
+<div class="callout info">
+<p class="callout-title">Why X-rays and not visible light for Compton</p>
+<p>The shift is at most $4.9$ pm; against a $550$ nm photon that is one part in $10^5$, invisible, while against a $100$ pm photon it is several percent, obvious. High energy is not a luxury here; it is the resolution.</p>
+</div>
+
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<h3 id="21-the-symbol-table">2.1 The symbol table</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$V$</td>
+<td>tube voltage</td>
+<td>V</td>
+<td>sets $\lambda_{\min}$</td>
+</tr>
+<tr>
+<td>$\lambda_{\min}$</td>
+<td>Duane-Hunt cutoff</td>
+<td>pm</td>
+<td>$\frac{1.24\times10^6}{V}$ pm</td>
+</tr>
+<tr>
+<td>$Z$</td>
+<td>target atomic number</td>
+<td>—</td>
+<td>lines scale as $(Z-1)^2$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>linear attenuation coefficient</td>
+<td>m$^{-1}$</td>
+<td>energy- and material-dependent</td>
+</tr>
+<tr>
+<td>$x_{1/2}$</td>
+<td>half-value thickness</td>
+<td>m</td>
+<td>$\frac{\ln2}{\mu}$</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>plane spacing</td>
+<td>pm or nm</td>
+<td>NaCl $0.282$ nm</td>
+</tr>
+<tr>
+<td>$\theta$</td>
+<td>glancing angle from the plane</td>
+<td>deg</td>
+<td>not the angle from the normal</td>
+</tr>
+<tr>
+<td>$n$</td>
+<td>Bragg order</td>
+<td>—</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>$\lambda_C$</td>
+<td>Compton wavelength</td>
+<td>pm</td>
+<td>$2.426$</td>
+</tr>
+<tr>
+<td>$\theta$, $\phi$</td>
+<td>photon and electron scattering angles</td>
+<td>deg</td>
+<td>§3.10</td>
+</tr>
+<tr>
+<td>$\eta$</td>
+<td>tube efficiency</td>
+<td>—</td>
+<td>$\sim10^{-9}ZV$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-units-and-bands">2.2 Units and bands</h3>
+<p>X-ray energies in keV, wavelengths in pm ($1$ nm $=1000$ pm), voltages in kV. The conversion $E[\text{keV}]=\frac{1.24}{\lambda[\text{nm}]}=\frac{1240}{\lambda[\text{pm}]}$ keeps everything one division. Diagnostic X-rays: $10$-$100$ keV; characteristic K lines of heavy targets: tens of keV; gamma rays overlap the band from the nuclear side (PART 26).</p>
+<h3 id="23-sign-and-angle-conventions">2.3 Sign and angle conventions</h3>
+<p>Bragg's $\theta$ is measured <strong>from the plane</strong>, the glancing angle; the path difference is $2d\sin\theta$. This is the opposite convention from a transmission grating's angle-from-normal, and it is the single most common sign of a muddled solution. Compton's $\theta$ is the photon's deflection from its original direction; $\phi$ the electron's.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Bragg's law treats planes as mirrors and ignores which atoms sit where; absent reflections (structure factors) are the correction, named in §3.8. Compton's free-electron formula applies when the photon energy dwarfs the electron's binding; the unshifted line is the bound-electron remainder.</p>
+</div>
+
+<h3 id="24-assumptions-and-what-is-not-here">2.4 Assumptions and what is not here</h3>
+<p>Assumed: single scattering events; electrons at rest for Compton; monochromatic lines where stated; exponential attenuation (narrow-beam geometry). Not here: full quantum electrodynamics of scattering (Klein-Nishina named in §10), detailed crystal structure factors, X-ray optics and lenses, medical dosimetry beyond one order-of-magnitude.</p>
+<div class="callout question">
+<p class="callout-title">Exam note</p>
+<p>The exam loves the double spectrum drawn together: smear plus lines. If you can sketch it, label $\lambda_{\min}$, the K$\alpha$/K$\beta$ lines, and explain each feature's origin and its voltage dependence, the chapter's core is examinable.</p>
+</div>
+
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-making-x-rays-the-coolidge-tube">3.1 Making X-rays: the Coolidge tube</h3>
+<p>A hot filament boils off electrons (thermionic emission, the same physics as the photoelectric cell's cousin in PART 23); a voltage $V$ of tens of kV accelerates them; they strike a heavy metal target (tungsten, $Z=74$: bremsstrahlung power grows steeply with $Z$, and a high melting point survives the heat) inside a vacuum, and the X-rays leave through a thin window. Rotating anodes spread the heat, because only about one percent of the electron power becomes X-rays.</p>
+<p>Efficiency estimate: the fraction of electron energy radiated is of order</p>
+<p>$$
+\eta\approx10^{-9}\,Z\,V, \qquad (3.1)
+$$</p>
+<p>with $V$ in volts: tungsten at $100$ kV gives $\eta\approx7\times10^{-3}$, the quoted one percent. A dental tube at $70$ kV and $10$ mA takes $700$ W of electron power and radiates a few watts of X-rays; the other $695$ W is an engineering problem — the rotating anode's heat capacity and cooling set the duty cycle.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.1 · The Coolidge tube in section</p>
+<p><em>Show:</em> a glass envelope under vacuum; a heated filament cathode with its focusing cup; the angled tungsten anode with a rotating stem and cooling fins; the electron beam converging on the focal spot; the X-ray fan leaving through a window; the high-voltage supply labelled.
+<em>Search:</em> "Coolidge tube X-ray production diagram filament anode rotating"
+<em>Used in:</em> §3.1.</p>
+</div>
+
+<p>How many X-ray photons per second? A $700$ W tube at one percent efficiency radiates $7$ W; taking a mean photon energy of $30$ keV $=4.8\times10^{-15}$ J, that is $\sim1.5\times10^{15}$ photons per second.</p>
+<h3 id="32-the-continuous-spectrum-and-the-duane-hunt-limit">3.2 The continuous spectrum and the Duane-Hunt limit</h3>
+<p>An electron braking in the nuclear field can shed any fraction of its energy as one photon, so the spectrum is continuous — but never beyond the whole amount. One electron of charge $e$ falling through $V$ carries $eV$; the richest possible photon has $hf_{\max}=eV$, hence</p>
+<p>$$
+\lambda_{\min}=\frac{hc}{eV}=\frac{1.24\times10^6}{V\ [\text{V}]}\ \text{pm}. \qquad (3.2)
+$$</p>
+<p>Numbers: $30$ kV gives $41.3$ pm, $50$ kV gives $24.8$ pm, $100$ kV gives $12.4$ pm. Raising $V$ pushes the cutoff to shorter wavelengths and drags the whole smear up and with it; changing the target changes the intensity (roughly $\propto Z$) but not the cutoff, which depends only on $V$. The short end is sharp because it is a one-electron-one-photon extreme; the long end fades gently because soft photons are reabsorbed in the target and window.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.2 · The continuous spectrum at three voltages</p>
+<p><em>Show:</em> intensity against wavelength for 30, 50 and 100 kV on the same target; each curve rising from a sharp cutoff, peaking, and falling; the cutoffs at 41.3, 24.8, 12.4 pm marked and joined by the hyperbola lambda-min proportional to 1/V; no characteristic lines in this panel.
+<em>Search:</em> "bremsstrahlung continuous X-ray spectrum cutoff voltage dependence"
+<em>Used in:</em> §3.2.</p>
+</div>
+
+<p>Historically the cutoff was a precision instrument: plotting $\lambda_{\min}$ against $\frac1V$ measures $\frac{h}{e}$ — the Duane-Hunt limit as the inverse photoelectric effect, matching Millikan's $V_s$-$f$ slope from the other direction (OL5).</p>
+<h3 id="33-the-characteristic-spectrum">3.3 The characteristic spectrum</h3>
+<p>A fast electron can also eject a K-shell electron. The vacancy is refilled from above: an L electron dropping to K emits K$\alpha$, an M electron K$\beta$; the new L vacancy then produces L lines. Because the levels are the atom's own, the lines are sharp and element-specific — a fingerprint that survives chemistry, which is how Moseley counted the elements.</p>
+<p>The threshold logic examiners love: a line appears only when the tube voltage can create the vacancy it comes from. For copper the K shell binds about $9$ keV, so below $\sim9$ kV the Cu K lines are absent whatever the current, while the continuous spectrum is present from the first volt. A spectrum without its characteristic lines is a spectrum below its threshold voltage.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.3 · Characteristic lines on the continuous spectrum</p>
+<p><em>Show:</em> one curve of intensity against wavelength: the bremsstrahlung hump with its cutoff, and two sharp spikes labelled K-alpha and K-beta (K-beta at shorter wavelength, smaller); a second dashed curve at lower voltage showing the hump without the spikes, captioned "below the K threshold".
+<em>Search:</em> "X-ray spectrum continuous characteristic K alpha K beta lines"
+<em>Used in:</em> §3.3.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.4 · The K-shell vacancy cascade</p>
+<p><em>Show:</em> three levels K, L, M; an outgoing arrow from K labelled "ejected electron"; a downward arrow M to K labelled K-beta, L to K labelled K-alpha, M to L labelled L-alpha; energies in keV for copper beside the arrows.
+<em>Search:</em> "characteristic X-ray emission K alpha L shell vacancy cascade diagram"
+<em>Used in:</em> §3.3.</p>
+</div>
+
+<h3 id="34-moseleys-law-derived-from-the-screened-bohr-picture">3.4 Moseley's law, derived from the screened Bohr picture</h3>
+<p>The K$\alpha$ transition is hydrogen-like arithmetic in a nucleus screened by the one remaining K electron: the falling L electron sees charge $(Z-1)e$, so</p>
+<p>$$
+E_{K\alpha}=\frac34\times13.6\,(Z-1)^2\ \text{eV},\qquad \sqrt{f}=\sqrt{\tfrac34cR}\,(Z-1). \qquad (3.3)
+$$</p>
+<p>Moseley's 1913 plot of $\sqrt f$ against $Z$ is a straight line with intercept $1$ — and gaps where no element exists, which is how the missing elements (43, 61, 72, 75) were identified before they were found. For copper: $f=\frac34\times3\times10^8\times1.097\times10^7\times28^2=1.93\times10^{18}$ Hz, $\lambda=155$ pm, against the measured $154$ pm. The shielding constant $b\approx1$ for K$\alpha$; L lines use larger $b$ (more inner electrons screening), which the exam phrases as "Moseley's constants $a$ and $b$".</p>
+<div class="callout info">
+<p class="callout-title">Why the K-alpha photon is keV while optical photons are eV</p>
+<p>The inner orbit's energy scales as $(Z-1)^2$ and its radius as $\frac{1}{Z-1}$: for copper the factor is $\sim800$, squared into the energy. Optical lines are outer-electron business; X-ray lines are the deep atom.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.5 · Moseley's line</p>
+<p><em>Show:</em> sqrt(f) vertical against Z horizontal; a straight line through measured points; the intercept at Z = 1 marked; gaps at Z = 43 and 61 shown as empty slots on the axis; copper highlighted.
+<em>Search:</em> "Moseley law plot sqrt frequency Z straight line missing elements"
+<em>Used in:</em> §3.4.</p>
+</div>
+
+<h3 id="35-absorption-and-imaging">3.5 Absorption and imaging</h3>
+<p>A narrow beam through thickness $x$ of material loses a fixed <em>fraction</em> per unit length, because every layer presents the same number of absorbers:</p>
+<p>$$
+I=I_0e^{-\mu x},\qquad x_{1/2}=\frac{\ln2}{\mu}. \qquad (3.4)
+$$</p>
+<p>$\mu$ falls with photon energy (roughly $\lambda^3$ away from edges) and rises steeply with atomic number (roughly $Z^3$-$Z^4$): bone's calcium absorbs far more than tissue's carbon and oxygen, which is the entire physics of a radiograph; barium and iodine contrast media exploit the same $Z$ hunger. Lead at 100 keV has $x_{1/2}\approx0.12$ mm, so $\mu=\frac{\ln2}{0.012\ \text{cm}}=58$ cm$^{-1}$. Soft X-rays image with better contrast but deposit more dose — the trade-off is set by the same $\mu(E)$ curve. Computed tomography is this law inverted numerically: many projections, one absorption map per slice, stated here in one paragraph as an application of Eq. (3.4), not derived.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.6 · The attenuation curve with half-value thickness</p>
+<p><em>Show:</em> I over I0 against thickness, an exponential fall; the half and quarter levels marked with dashed lines at x-half and 2 x-half; a second steeper curve for bone against a shallower one for tissue, the contrast region shaded.
+<em>Search:</em> "X-ray attenuation exponential half value thickness bone tissue contrast"
+<em>Used in:</em> §3.5.</p>
+</div>
+
+<h3 id="36-x-ray-diffraction-why-crystals">3.6 X-ray diffraction: why crystals</h3>
+<p>A grating resolves structure of order its spacing. Visible light ($500$ nm) sees a crystal's planes ($0.3$ nm) as perfectly smooth — the ratio is $10^3$ too small, and no Bragg angle exists. X-rays at $100$ pm match the spacing: the crystal is the only grating fine enough, exactly as the electron's wavelength made crystals the grating for matter waves in PART 23. Laue's 1912 spot pattern was the first proof both that X-rays are waves and that crystals are lattices — one experiment, two discoveries.</p>
+<h3 id="37-braggs-law-with-the-angle-made-foolproof">3.7 Bragg's law, with the angle made foolproof</h3>
+<p>Two parallel rays strike successive planes at glancing angle $\theta$ (from the plane, never from the normal). The lower ray travels an extra $d\sin\theta$ down and $d\sin\theta$ up:</p>
+<p>$$
+2d\sin\theta=n\lambda. \qquad (3.5)
+$$</p>
+<p>Orders $n=1,2,3$ are the same geometry with $n$ wavelengths of path; the highest visible order satisfies $n\le\frac{2d}{\lambda}$. Because $\theta$ is from the plane, the diffracted beam leaves at $2\theta$ from the incident direction — the angle the detector actually reads is twice the Bragg angle. A powder of randomly oriented crystallites turns each order into a cone, and the film records rings.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.7 · The Bragg geometry</p>
+<p><em>Show:</em> two parallel atomic planes separated by d; two incoming rays at glancing angle theta measured from the plane, highlighted with an arc; the extra path 2 d sin theta drawn as two dashed perpendiculars; the reflected rays in phase; a note "theta is from the plane, not the normal".
+<em>Search:</em> "Bragg diffraction geometry glancing angle path difference 2d sin theta"
+<em>Used in:</em> §3.7, E7.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.8 · Powder rings</p>
+<p><em>Show:</em> a Debye-Scherrer camera: incident beam, powder sample at centre, concentric arcs on the film; two cones drawn from the sample to the arcs; caption "each ring is one order and one family of planes".
+<em>Search:</em> "powder X-ray diffraction Debye Scherrer rings pattern"
+<em>Used in:</em> §3.7.</p>
+</div>
+
+<h3 id="38-diffraction-in-practice-lattice-constants-and-avogadro">3.8 Diffraction in practice: lattice constants and Avogadro</h3>
+<p>Measure $\theta$ for a known $\lambda$: $d=\frac{n\lambda}{2\sin\theta}$. For NaCl with Cu K$\alpha$ ($154$ pm), first order at $\sin\theta=\frac{154}{2\times282}=0.273$, $\theta=15.8^\circ$; the highest order is $n\le\frac{564}{154}=3.65$, so three orders.</p>
+<p>The classic determination: NaCl's cubic cell of side $a$ holds alternating ions; the volume per ion pair is $2d^3$ with $d$ the adjacent-ion spacing. Density gives the same volume as $\frac{M}{\rho N_A}$:</p>
+<p>$$
+N_A=\frac{M}{2\rho d^3}. \qquad (3.6)
+$$</p>
+<p>With $M=58.44$ g/mol, $\rho=2165$ kg/m$^3$, $d=0.282$ nm: $N_A=\frac{0.05844}{2\times2165\times(2.82\times10^{-10})^3}=6.02\times10^{23}$. A wavelength, an angle and a balance — Avogadro's number from a crystal. Some reflections are absent because atoms at different sites in the cell scatter out of phase (the structure factor's first appearance): the pattern's missing lines are themselves structural information.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.9 · The NaCl cell and the spacing d</p>
+<p><em>Show:</em> a cube with alternating Na and Cl spheres; the edge a and the half-edge d labelled; one plane family shaded; the volume-per-pair argument annotated.
+<em>Search:</em> "sodium chloride crystal structure unit cell spacing Avogadro"
+<em>Used in:</em> §3.8, OL6.</p>
+</div>
+
+<h3 id="39-the-compton-effect-the-experiment">3.9 The Compton effect: the experiment</h3>
+<p>Compton sent monochromatic X-rays ($\sim100$ pm, molybdenum K) onto graphite and measured the scattered beam at angles $\theta$. Two peaks: one at the original wavelength, one shifted by $\Delta\lambda$ that grows with $\theta$ and depends on nothing else — not the target, not the intensity. The shifted peak is the free-electron scatter; the unshifted one comes from electrons so tightly bound that the whole atom recoils, making $m$ in $\frac{h}{mc}(1-\cos\theta)$ the atomic mass and the shift unobservably small. Classical electrodynamics predicts a single unshifted line at every angle; the extra moving line killed it.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.10 · The measured Compton spectrum</p>
+<p><em>Show:</em> intensity against wavelength at three angles (0, 90, 135 degrees): at 0 one peak; at 90 two peaks separated by 2.43 pm; at 135 the shifted peak taller and 4 pm away; the unshifted peak fixed in position.
+<em>Search:</em> "Compton effect scattered X-ray spectrum two peaks wavelength shift angle"
+<em>Used in:</em> §3.9.</p>
+</div>
+
+<h3 id="310-comptons-derivation">3.10 Compton's derivation</h3>
+<p>A photon of momentum $\frac{h}{\lambda}$ strikes an electron at rest. Energy: $\frac{hc}{\lambda}+m_ec^2=\frac{hc}{\lambda'}+E_e$. Momentum along and across the beam: $\frac{h}{\lambda}=\frac{h}{\lambda'}\cos\theta+p_e\cos\phi$ and $\frac{h}{\lambda'}\sin\theta=p_e\sin\phi$. Eliminate $\phi$ and use $E_e^2=(p_ec)^2+(m_ec^2)^2$; the algebra (OL1) or the momentum triangle with the four-vector invariant (OL2) yields</p>
+<p>$$
+\Delta\lambda=\lambda'-\lambda=\frac{h}{m_ec}(1-\cos\theta)=2.426\,(1-\cos\theta)\ \text{pm}. \qquad (3.7)
+$$</p>
+<p>Extremes: $\theta=0$: no shift; $90^\circ$: $2.43$ pm; $180^\circ$: $4.86$ pm, the maximum. The electron's recoil kinetic energy follows from energy conservation; writing $x=\frac{hf}{m_ec^2}$,</p>
+<p>$$
+K_e=hf\,\frac{x(1-\cos\theta)}{1+x(1-\cos\theta)}, \qquad (3.8)
+$$</p>
+<p>so at $90^\circ$ for a $12.4$ keV photon ($x=0.0243$): $K_e=0.29$ keV; at $180^\circ$: $0.57$ keV. The electron's angle satisfies $\tan\phi=\frac{1}{(1+x)\tan\frac{\theta}{2}}$: never backwards, at most $90^\circ$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.11 · Compton scattering geometry and momentum triangle</p>
+<p><em>Show:</em> left panel: incoming photon arrow, outgoing photon at theta, recoil electron at phi; right panel: the triangle of momenta h/lambda = h/lambda-prime + p-e with the angles marked.
+<em>Search:</em> "Compton scattering diagram photon electron recoil momentum triangle"
+<em>Used in:</em> §3.10, OL1.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.12 · The shift against angle</p>
+<p><em>Show:</em> delta-lambda against theta from 0 to 180 degrees, the curve 2.43(1-cos theta); points marked at 90 (2.43 pm) and 180 (4.86 pm); a flat dashed line at 0.005 pm labelled "visible light, magnified ten thousand times" to show invisibility.
+<em>Search:</em> "Compton wavelength shift versus scattering angle curve"
+<em>Used in:</em> §3.10-3.11.</p>
+</div>
+
+<h3 id="311-why-it-matters">3.11 Why it matters</h3>
+<p>Scale check: for $550$ nm light the maximum shift is $\frac{4.86\ \text{pm}}{550\ \text{nm}}=9\times10^{-6}$ of the wavelength — unresolvable, which is why Thomson's classical no-shift picture works for visible light and why Compton needed X-rays. The effect is the decisive evidence that the photon carries momentum $p=\frac{h}{\lambda}$: energy quantisation (photoelectric) plus momentum quantisation (Compton) plus interference (diffraction) is the complete photon. Inverse Compton — a fast electron boosting a soft photon — is the same kinematics reversed, important in astrophysics (one paragraph; the moving-mirror analogue is OL3). At photon energies above $2m_ec^2=1.022$ MeV the photon can disappear into an electron-positron pair near a nucleus — the threshold where the photon picture hands over to PART 28's relativistic bookkeeping.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.13 · The photon evidence table as a spectrum map</p>
+<p><em>Show:</em> a horizontal energy axis from 1 eV to 10 MeV; three bands highlighted: photoelectric dominant at a few eV, diffraction at keV with crystals, Compton at tens to hundreds of keV, pair production beyond 1.02 MeV marked with a vertical line; each band labelled with what it proves (energy quantum, wave, momentum quantum).
+<em>Search:</em> "photon experiments energy scale photoelectric Compton pair production"
+<em>Used in:</em> §3.11-3.12.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.14 · Pair production at the threshold</p>
+<p><em>Show:</em> a photon line ending at a nucleus with an electron and positron curving away in opposite senses in a magnetic field; the caption "needs 1.022 MeV and a nucleus to take momentum".
+<em>Search:</em> "pair production electron positron photon nucleus diagram"
+<em>Used in:</em> §3.11.</p>
+</div>
+
+<h3 id="312-cross-topic-synthesis">3.12 Cross-topic synthesis</h3>
+<table>
+<thead>
+<tr>
+<th>Experiment</th>
+<th>Proves</th>
+<th>Owns</th>
+<th>Needs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Photoelectric (PART 23)</td>
+<td>energy comes in quanta $hf$</td>
+<td>thresholds, $V_s$</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Electron and X-ray diffraction</td>
+<td>wave character, $\lambda$</td>
+<td>gratings, lattices</td>
+<td>wave logic of <a href="wave-optics.html">Wave-optics</a></td>
+</tr>
+<tr>
+<td>Compton</td>
+<td>momentum $p=\frac{h}{\lambda}$</td>
+<td>recoil kinematics</td>
+<td>relativity of PART 28 for the full frame</td>
+</tr>
+<tr>
+<td>Blackbody (PART 23 §3.1)</td>
+<td>quantised exchange</td>
+<td>$T$ scaling</td>
+<td>thermodynamics</td>
+</tr>
+</tbody>
+</table>
+<p>The high-energy end of the spectrum chart links to <a href="electromagnetic-waves.html">Electromagnetic-waves</a>; the atomic ladder the lines ride on is PART 24's; the nucleus that absorbs recoil momentum is PART 26's.</p>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{\lambda_{\min}=\frac{hc}{eV}=\frac{1.24\times10^6}{V[\text{V}]}\ \text{pm}} \qquad (4.1)
+$$</p>
+<p>the continuous spectrum's edge only; characteristic lines ignore it.</p>
+<p>$$
+\boxed{E_{K\alpha}=\frac34\times13.6\,(Z-1)^2\ \text{eV}} \qquad (4.2)
+$$</p>
+<p>screened hydrogenic; L lines need larger screening constants.</p>
+<p>$$
+\boxed{I=I_0e^{-\mu x},\quad x_{1/2}=\frac{\ln2}{\mu}} \qquad (4.3)
+$$</p>
+<p>narrow-beam geometry; broad beams add scatter and need build-up factors (named, not treated).</p>
+<p>$$
+\boxed{2d\sin\theta=n\lambda} \qquad (4.4)
+$$</p>
+<p>$\theta$ from the plane; elastic, coherent scattering.</p>
+<p>$$
+\boxed{\Delta\lambda=\frac{h}{m_ec}(1-\cos\theta),\quad K_e=hf\frac{x(1-\cos\theta)}{1+x(1-\cos\theta)}} \qquad (4.5)
+$$</p>
+<p>free electron at rest; bound electrons give the unshifted line.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$V\to0$: $\lambda_{\min}\to\infty$, no X-rays, correct.</li>
+<li>$Z\to1$ in Eq. (4.2): hydrogen's $10.2$ eV line returns — K$\alpha$ is Lyman $\alpha$ in disguise, correct.</li>
+<li>$\theta\to0$ in Eq. (4.5): shift vanishes, forward scattering undisturbed, correct.</li>
+<li>$m_e\to\infty$ (bound to a heavy atom): shift vanishes, the unshifted line, correct.</li>
+<li>$\lambda\gg d$: no Bragg angle exists, visible light on crystals, correct.</li>
+<li>$hf\ll m_ec^2$: $K_e\to0$, the classical Thomson limit, correct.</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tube voltage</td>
+<td>cutoff</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>element</td>
+<td>K$\alpha$</td>
+<td>Eq. (4.2)</td>
+</tr>
+<tr>
+<td>line energy</td>
+<td>minimum voltage</td>
+<td>$eV\ge E_{\text{K edge}}$</td>
+</tr>
+<tr>
+<td>thickness</td>
+<td>transmission</td>
+<td>Eq. (4.3)</td>
+</tr>
+<tr>
+<td>$\theta$, known $\lambda$</td>
+<td>$d$</td>
+<td>Eq. (4.4)</td>
+</tr>
+<tr>
+<td>$d$, $\rho$, $M$</td>
+<td>$N_A$</td>
+<td>Eq. (3.6)</td>
+</tr>
+<tr>
+<td>$\theta$</td>
+<td>Compton shift, recoil</td>
+<td>Eq. (4.5)</td>
+</tr>
+<tr>
+<td>shift</td>
+<td>identify process</td>
+<td>compare $2.43$ pm scale</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Why is the Duane-Hunt edge sharp but the long-wavelength end soft?</p>
+<details>
+<summary>Answer</summary>
+<p>The edge is a one-electron extreme; the soft end is smeared by partial braking and self-absorption.</p>
+</details>
+<p><strong>C2 — concept check.</strong> Raising the tube voltage changes the characteristic lines' wavelengths?</p>
+<details>
+<summary>Answer</summary>
+<p>No: the lines are the atom's ladder; voltage only switches them on above threshold and changes their intensity.</p>
+</details>
+<p><strong>C3 — concept check.</strong> Why does bone show white on a radiograph?</p>
+<details>
+<summary>Answer</summary>
+<p>Calcium's higher Z absorbs more, fewer photons reach the film behind bone.</p>
+</details>
+<p><strong>C4 — concept check.</strong> In Bragg's law, theta is measured from what?</p>
+<details>
+<summary>Answer</summary>
+<p>From the plane — the glancing angle; the detector reads 2 theta from the beam.</p>
+</details>
+<p><strong>C5 — concept check.</strong> The highest Bragg order for lambda = d?</p>
+<details>
+<summary>Answer</summary>
+<p>$n\le2$: orders 1 and 2.</p>
+</details>
+<p><strong>C6 — concept check.</strong> Why is there an unshifted Compton line?</p>
+<details>
+<summary>Answer</summary>
+<p>Tightly bound electrons make the whole atom recoil; the mass in the shift formula is atomic, the shift negligible.</p>
+</details>
+<p><strong>C7 — concept check.</strong> Why did Compton use X-rays rather than light?</p>
+<details>
+<summary>Answer</summary>
+<p>The shift is absolute (a few pm); only a comparably small wavelength makes it visible.</p>
+</details>
+<p><strong>C8 — concept check.</strong> What sets the pair-production threshold?</p>
+<details>
+<summary>Answer</summary>
+<p>$2m_ec^2=1.022$ MeV, plus a nucleus to absorb momentum.</p>
+</details>
+<p><strong>C9 — concept check.</strong> The Compton shift depends on the target material?</p>
+<details>
+<summary>Answer</summary>
+<p>No: only on theta, because the electron is treated free and at rest.</p>
+</details>
+<p><strong>C10 — concept check.</strong> A 100 keV photon scatters at 90 degrees. Order of the electron's kinetic energy?</p>
+<details>
+<summary>Answer</summary>
+<p>$x=0.196$; $K\approx100\times\frac{0.196}{1.196}\approx16$ keV.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why does Moseley's line use Z minus one for K-alpha?</p>
+<details>
+<summary>Answer</summary>
+<p>The remaining 1s electron screens one unit of nuclear charge from the falling L electron.</p>
+</details>
+<p><strong>C12 — concept check.</strong> X-ray tube efficiency at 100 kV on tungsten, order?</p>
+<details>
+<summary>Answer</summary>
+<p>One percent; the rest is heat.</p>
+</details>
+<p><strong>C13 — concept check.</strong> Three orders visible means what inequality?</p>
+<details>
+<summary>Answer</summary>
+<p>$3\le\frac{2d}{\lambda}&lt;4$.</p>
+</details>
+<p><strong>C14 — concept check.</strong> Which two numbers does the Duane-Hunt plot measure?</p>
+<details>
+<summary>Answer</summary>
+<p>The slope of lambda-min against 1/V is hc/e: with e known, h.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-the-cutoff-at-50-kv">E1 — The cutoff at 50 kV</h3>
+<p>Find the minimum wavelength from a 50 kV tube.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Doubling V must halve lambda-min.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Eq. (4.1): $\lambda_{\min}=\frac{1.24\times10^6}{5\times10^4}=24.8$ pm. At 100 kV it is 12.4 pm, exactly half.</p>
+</details>
+<h3 id="e2-maximum-photon-energy-and-the-photon-count">E2 — Maximum photon energy and the photon count</h3>
+<p>A 100 kV tube runs at 10 mA with efficiency 1 %. Richest photon energy, X-ray power, and photons per second at a mean 30 keV?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The richest photon equals eV; the count is power over mean energy.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E_{\max}=100$ keV. Electron power $P=VI=1000$ W; X-ray power $10$ W; $N=\frac{10}{30\times10^3\times1.602\times10^{-19}}=2.1\times10^{15}$ s$^{-1}$.</p>
+</details>
+<h3 id="e3-the-threshold-voltage-for-coppers-k-lines">E3 — The threshold voltage for copper's K lines</h3>
+<p>Copper's K shell binds about 9 keV. What is the minimum tube voltage for its K-alpha line, and what changes if the voltage is halved?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Below threshold the lines vanish while the smear survives.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $V_{\min}\approx9$ kV. At 4.5 kV the characteristic lines are absent; the continuous spectrum, with cutoff 276 pm, remains.</p>
+</details>
+<h3 id="e4-identify-the-element-from-a-k-alpha-line">E4 — Identify the element from a K-alpha line</h3>
+<p>An unknown target's K-alpha is at 72 pm. Identify it.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The answer must sit between copper (154 pm) and molybdenum's neighbours in Z.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $f=\frac{c}{\lambda}=4.16\times10^{18}$ Hz; $(Z-1)^2=\frac{f}{\frac34cR}=\frac{4.16\times10^{18}}{2.47\times10^{15}}=1686$; $Z-1=41$; $Z=42$, molybdenum.</p>
+</details>
+<h3 id="e5-through-half-a-millimetre-of-lead">E5 — Through half a millimetre of lead</h3>
+<p>Lead's half-value thickness at 100 keV is 0.12 mm. What fraction of a narrow beam survives 0.5 mm?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>0.5 mm is about 4.2 half-layers: 2 to the minus 4.2 is about 5 %.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mu=\frac{\ln2}{0.012\ \text{cm}}=57.8$ cm$^{-1}$; $I/I_0=e^{-57.8\times0.05}=e^{-2.89}=0.055$.</p>
+</details>
+<h3 id="e6-first-order-bragg-angle-for-nacl">E6 — First-order Bragg angle for NaCl</h3>
+<p>Cu K-alpha (154 pm) on NaCl planes with d = 282 pm. First-order glancing angle?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>sin theta must be below 1 and the angle small-ish: the plane convention.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\sin\theta=\frac{154}{2\times282}=0.273$; $\theta=15.8^\circ$; the detector sits at $2\theta=31.7^\circ$ from the beam.</p>
+</details>
+<h3 id="e7-how-many-orders-fit">E7 — How many orders fit?</h3>
+<p>With the same geometry, the highest observable order?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>n must satisfy n at most 2d over lambda.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\frac{2d}{\lambda}=\frac{564}{154}=3.66$: orders 1, 2, 3.</p>
+</details>
+<h3 id="e8-avogadro-from-a-crystal">E8 — Avogadro from a crystal</h3>
+<p>Using d = 0.282 nm, rho = 2165 kg per cubic metre, M = 58.44 g per mole, compute N-A.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The result must land within a percent of 6.022e23.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Eq. (3.6): $N_A=\frac{0.05844}{2\times2165\times(2.82\times10^{-10})^3}=\frac{0.05844}{9.71\times10^{-26}}=6.02\times10^{23}$ mol$^{-1}$.</p>
+</details>
+<h3 id="e9-compton-at-90-degrees-for-a-100-kev-photon">E9 — Compton at 90 degrees for a 100 keV photon</h3>
+<p>Shift and electron kinetic energy.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Shift 2.43 pm; K must be below the photon energy and above zero.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta\lambda=2.43$ pm. $x=\frac{100}{511}=0.196$; $K=100\times\frac{0.196}{1.196}=16.4$ keV; the scattered photon keeps $83.6$ keV at $102.4$ pm.</p>
+</details>
+<h3 id="e10-the-electrons-recoil-angle">E10 — The electron's recoil angle</h3>
+<p>For the same event, the electron's angle phi?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>phi must be below 90 degrees; at theta = 180 it must be 0.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\tan\phi=\frac{1}{(1+x)\tan45^\circ}=\frac{1}{1.196}=0.836$; $\phi=39.9^\circ$, forward of the perpendicular, as momentum demands.</p>
+</details>
+<h3 id="e11-the-shift-for-visible-light">E11 — The shift for visible light</h3>
+<p>Maximum Compton shift as a fraction of a 550 nm wavelength?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Of order 1e-5: the reason light shows no Compton effect.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\frac{4.86\ \text{pm}}{550\ \text{nm}}=8.8\times10^{-6}$; at 90 degrees half that, $4.4\times10^{-6}$.</p>
+</details>
+<h3 id="e12-pair-production-budget">E12 — Pair production budget</h3>
+<p>A 2 MeV photon converts near a nucleus. Total kinetic energy of the pair?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Threshold 1.022 MeV must be subtracted first.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $K=2-1.022=0.98$ MeV, shared between electron and positron.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Cutoff wavelength</td>
+<td>Eq. (4.1)</td>
+<td>E1, Q1</td>
+<td>in frequency form</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Richest photon from V</td>
+<td>$eV$</td>
+<td>E2, Q2</td>
+<td>power and count</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Tube efficiency and heat</td>
+<td>$\eta\approx10^{-9}ZV$</td>
+<td>Q3, OL7</td>
+<td>duty cycle</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>K-line threshold voltage</td>
+<td>$eV\ge E_K$</td>
+<td>E3, Q6</td>
+<td>other elements</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Moseley identification</td>
+<td>$(Z-1)^2=\frac{f}{\frac34cR}$</td>
+<td>E4, Q7</td>
+<td>two-line identification</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>K-alpha energy and wavelength</td>
+<td>Eq. (4.2)</td>
+<td>Q5</td>
+<td>Z ratios</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Exponential attenuation</td>
+<td>Eq. (4.3)</td>
+<td>E5, Q9-Q11</td>
+<td>HVL counting</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Bragg angle</td>
+<td>Eq. (4.4)</td>
+<td>E6, Q12, Q14</td>
+<td>orders</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Order counting</td>
+<td>$n\le\frac{2d}{\lambda}$</td>
+<td>E7, Q13</td>
+<td>change lambda</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Lattice spacing to Avogadro</td>
+<td>Eq. (3.6)</td>
+<td>E8, Q15</td>
+<td>other crystals</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Compton shift</td>
+<td>Eq. (4.5)</td>
+<td>E9, Q16-Q17</td>
+<td>angles</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Recoil energy and angle</td>
+<td>Eqs. (4.5), tan phi</td>
+<td>E10, Q18, Q21</td>
+<td>extremes</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Visible-light shift estimate</td>
+<td>ratio</td>
+<td>E11, Q19</td>
+<td>why X-rays</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Pair threshold</td>
+<td>$2m_ec^2$</td>
+<td>E12, Q22-Q23</td>
+<td>kinetic budget</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Duane-Hunt as h measurement</td>
+<td>slope of lambda-min vs 1/V</td>
+<td>OL5</td>
+<td>Millikan comparison</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Rayleigh contrast at low energy</td>
+<td>$\lambda^{-4}$</td>
+<td>Q24, OL9</td>
+<td>sky and sunset</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-minimum-wavelength-at-30-kv">Q1. Minimum wavelength at 30 kV?</h4>
+<details>
+<summary>Solution</summary>
+<p>$41.3$ pm.</p>
+</details>
+<h4 id="q2-maximum-photon-frequency-at-50-kv">Q2. Maximum photon frequency at 50 kV?</h4>
+<details>
+<summary>Solution</summary>
+<p>$f=\frac{eV}{h}=\frac{5\times10^4}{4.136\times10^{-15}}=1.2\times10^{19}$ Hz.</p>
+</details>
+<h4 id="q3-tungsten-target-at-100-kv-efficiency-order">Q3. Tungsten target at 100 kV: efficiency order?</h4>
+<details>
+<summary>Solution</summary>
+<p>$10^{-9}\times74\times10^5=7.4\times10^{-3}$, about one percent.</p>
+</details>
+<h4 id="q4-a-tube-emits-7-w-of-x-rays-at-mean-30-kev-photons-per-second">Q4. A tube emits 7 W of X-rays at mean 30 keV. Photons per second?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{7}{4.8\times10^{-15}}=1.5\times10^{15}$.</p>
+</details>
+<h4 id="q5-copper-k-alpha-energy-from-moseleys-law">Q5. Copper K-alpha energy from Moseley's law?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac34\times13.6\times28^2=8.0$ keV, $\lambda=155$ pm.</p>
+</details>
+<h4 id="q6-minimum-voltage-for-coppers-k-lines">Q6. Minimum voltage for copper's K lines?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\sim9$ kV (K-edge 8.98 keV).</p>
+</details>
+<h4 id="q7-k-alpha-at-72-pm-identifies-which-element">Q7. K-alpha at 72 pm identifies which element?</h4>
+<details>
+<summary>Solution</summary>
+<p>$Z=42$, molybdenum (E4).</p>
+</details>
+<h4 id="q8-ratio-of-k-alpha-frequencies-copper-to-potassium-z-19">Q8. Ratio of K-alpha frequencies, copper to potassium (Z = 19)?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\left(\frac{28}{18}\right)^2=2.4$.</p>
+</details>
+<h4 id="q9-transmission-through-two-half-value-layers">Q9. Transmission through two half-value layers?</h4>
+<details>
+<summary>Solution</summary>
+<p>$25\%$.</p>
+</details>
+<h4 id="q10-mu-in-per-metres-for-lead-with-hvl-012-mm">Q10. Mu in per-metres for lead with HVL 0.12 mm?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mu=\frac{0.693}{1.2\times10^{-4}}=5.8\times10^3$ m$^{-1}$.</p>
+</details>
+<h4 id="q11-thickness-of-lead-for-1-transmission-at-100-kev">Q11. Thickness of lead for 1 % transmission at 100 keV?</h4>
+<details>
+<summary>Solution</summary>
+<p>$x=\frac{\ln100}{57.8\ \text{cm}^{-1}}=0.08$ cm $=0.8$ mm.</p>
+</details>
+<h4 id="q12-second-order-bragg-angle-for-nacl-with-cu-k-alpha">Q12. Second-order Bragg angle for NaCl with Cu K-alpha?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\sin\theta=\frac{2\times154}{564}=0.546$; $\theta=33.1^\circ$.</p>
+</details>
+<h4 id="q13-highest-order-in-that-geometry">Q13. Highest order in that geometry?</h4>
+<details>
+<summary>Solution</summary>
+<p>$3$.</p>
+</details>
+<h4 id="q14-a-first-order-peak-at-158-degrees-with-154-pm-implies-d">Q14. A first-order peak at 15.8 degrees with 154 pm implies d?</h4>
+<details>
+<summary>Solution</summary>
+<p>$d=\frac{154}{2\sin15.8^\circ}=282$ pm.</p>
+</details>
+<h4 id="q15-with-that-d-and-rho-2165-n-a">Q15. With that d and rho = 2165, N-A?</h4>
+<details>
+<summary>Solution</summary>
+<p>$6.0\times10^{23}$ (E8).</p>
+</details>
+<h4 id="q16-compton-shift-at-60-degrees">Q16. Compton shift at 60 degrees?</h4>
+<details>
+<summary>Solution</summary>
+<p>$2.426\times0.5=1.21$ pm.</p>
+</details>
+<h4 id="q17-maximum-possible-compton-shift">Q17. Maximum possible Compton shift?</h4>
+<details>
+<summary>Solution</summary>
+<p>$4.86$ pm at 180 degrees.</p>
+</details>
+<h4 id="q18-maximum-electron-kinetic-energy-from-a-100-kev-photon">Q18. Maximum electron kinetic energy from a 100 keV photon?</h4>
+<details>
+<summary>Solution</summary>
+<p>$K=100\times\frac{2x}{1+2x}$, $x=0.196$: $28.1$ keV.</p>
+</details>
+<h4 id="q19-90-degree-shift-as-a-fraction-of-550-nm">Q19. 90-degree shift as a fraction of 550 nm?</h4>
+<details>
+<summary>Solution</summary>
+<p>$4.4\times10^{-6}$.</p>
+</details>
+<h4 id="q20-a-100-pm-photon-scatters-at-90-degrees-new-wavelength-and-energy">Q20. A 100 pm photon scatters at 90 degrees. New wavelength and energy?</h4>
+<details>
+<summary>Solution</summary>
+<p>$102.4$ pm; $E'=\frac{1240}{0.1024}=12.1$ keV.</p>
+</details>
+<h4 id="q21-the-electrons-angle-when-the-photon-back-scatters">Q21. The electron's angle when the photon back-scatters?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\phi=0$: the electron goes straight ahead.</p>
+</details>
+<h4 id="q22-pair-production-threshold">Q22. Pair-production threshold?</h4>
+<details>
+<summary>Solution</summary>
+<p>$1.022$ MeV.</p>
+</details>
+<h4 id="q23-a-5-mev-photon-converts-pair-kinetic-energy">Q23. A 5 MeV photon converts. Pair kinetic energy?</h4>
+<details>
+<summary>Solution</summary>
+<p>$3.98$ MeV.</p>
+</details>
+<h4 id="q24-rayleigh-scattering-ratio-of-400-to-700-nm">Q24. Rayleigh scattering ratio of 400 to 700 nm?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\left(\frac{700}{400}\right)^4=9.4$: blue scatters nine times stronger.</p>
+</details>
+<h4 id="q25-compare-a-10-kev-electrons-wavelength-with-the-10-kv-tubes-cutoff">Q25. Compare a 10 keV electron's wavelength with the 10 kV tube's cutoff.</h4>
+<details>
+<summary>Solution</summary>
+<p>Electron: $12.3$ pm; photon cutoff: $124$ pm. Same voltage, the electron's wave is ten times finer — the microscope argument of PART 23.</p>
+</details>
+<h4 id="q26-which-is-shorter-lambda-min-at-20-kv-or-cu-k-alpha">Q26. Which is shorter: lambda-min at 20 kV or Cu K-alpha?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\lambda_{\min}=62$ pm, shorter than 154 pm: at 20 kV the smear extends beyond the lines.</p>
+</details>
+<h4 id="q27-order-of-magnitude-dental-x-ray-dose-versus-a-transatlantic-flight">Q27. Order of magnitude: dental X-ray dose versus a transatlantic flight?</h4>
+<details>
+<summary>Solution</summary>
+<p>A dental film is a few microsievert; a long flight a few tens of microsievert of cosmic rays. The flight is the larger dose — context, not complacency.</p>
+</details>
+<h4 id="q28-resolving-power-needed-to-separate-the-90-degree-compton-line-from-a-100-pm-incident-line">Q28. Resolving power needed to separate the 90-degree Compton line from a 100 pm incident line?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{\lambda}{\Delta\lambda}=\frac{100}{2.43}\approx41$: a modest crystal spectrometer suffices, which is why Compton could do it in 1923.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-pm-kev-bookkeeping">7.1 The pm-keV bookkeeping</h3>
+<p>Work X-rays in pm and keV with $E[\text{keV}]=\frac{1.24}{\lambda[\text{nm}]}=\frac{1240}{\lambda[\text{pm}]}$. Demonstration: 154 pm is $\frac{1240}{154}=8.05$ keV in one division. Fails when joule-level powers enter (tube heat): convert once at the end.</p>
+<h3 id="72-half-value-counting-instead-of-exponentials">7.2 Half-value counting instead of exponentials</h3>
+<p>When thicknesses come in half-layers, skip the exponential: $n$ half-layers transmit $2^{-n}$. Demonstration: 0.5 mm of lead at 100 keV is 4.17 half-layers, $2^{-4.17}\approx5.5\%$, no logarithms touched. Fails when the answer must be a thickness for a given transmission and $n$ is not round — then take the log.</p>
+<h3 id="73-scaling-as-solver">7.3 Scaling as solver</h3>
+<p>$\lambda_{\min}\propto\frac1V$; $f_{K\alpha}\propto(Z-1)^2$; Compton shift independent of $\lambda$ and material. Demonstration: doubling the voltage halves the cutoff; going from copper ($Z=29$) to silver ($Z=47$) multiplies K$\alpha$ frequency by $\left(\frac{46}{28}\right)^2=2.7$. Fails for L lines, where the screening constant differs.</p>
+<h3 id="74-the-extremes-auditor">7.4 The extremes auditor</h3>
+<p>Before submitting any Compton answer: $\theta=0$ must give zero shift and zero recoil; $\theta=180$ the maxima; $m\to\infty$ the unshifted line; $hf\ll m_ec^2$ the Thomson limit. Before any Bragg answer: $\sin\theta\le1$ bounds the orders; $\theta$ from the plane.</p>
+<h3 id="75-the-two-peak-diagnostic">7.5 The two-peak diagnostic</h3>
+<p>A shifted-plus-unshifted pair means Compton on something partly bound; a single shifted line at the free-electron value means free electrons; a single unshifted line means classical (visible) scattering or whole-atom recoil. Reading which peaks exist is reading which masses recoiled.</p>
+<h3 id="76-dimensional-synthesis-for-avogadro">7.6 Dimensional synthesis for Avogadro</h3>
+<p>$N_A$ must come from $\frac{M}{\rho d^3}$ times an order-unity lattice factor (2 for the rock-salt ion-pair cell). A result off by the factor 2 means the cell was miscounted — the dimensional skeleton catches it before the arithmetic does.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — the cutoff applied to lines</p>
+<p>Using lambda-min for a characteristic line. Reply: the cutoff bounds only the continuous spectrum; lines sit where the atom says.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — the missing e</p>
+<p>Equating keV numbers with kV without the charge. Reply: numerically they match for electrons precisely because the charge is e; for alphas they do not.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Bragg's angle from the normal</p>
+<p>Writing 2 d cos theta. Reply: theta is the glancing angle, from the plane; the path difference is 2 d sin theta.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — the wrong order</p>
+<p>Calling the second peak n = 1. Reply: orders count wavelengths of path difference; check n against 2 d over lambda.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — fractional Compton shift</p>
+<p>Applying delta-lambda as a percentage of lambda. Reply: the shift is absolute, 2.43 pm per right angle; the fraction is what varies with lambda.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — the unshifted line misread</p>
+<p>Attributing the unshifted peak to experimental error or classical success. Reply: it is whole-atom recoil off tightly bound electrons.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — classical Compton</p>
+<p>Explaining the shift with wave physics. Reply: a classical wave scatters at its own frequency at every angle; a definite shifted line at a definite angle is particle kinematics.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — energy-momentum units</p>
+<p>Mixing eV and J, or using p = E/c for the recoil electron. Reply: photons take E/c; electrons take sqrt of 2 m K or the relativistic form.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — pair production without a nucleus</p>
+<p>Allowing conversion in empty space. Reply: momentum conservation needs a third body; the nucleus takes the recoil.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — attenuation without geometry</p>
+<p>Using the narrow-beam mu for a broad beam. Reply: scatter returns photons to a broad detector; build-up factors then matter (named, beyond syllabus).</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>Voltage and cutoff words: Eq. (4.1).</li>
+<li>Element, line, fingerprint: Moseley, Eq. (4.2).</li>
+<li>Thickness, shielding, contrast: Eq. (4.3) with HVL counting.</li>
+<li>Angle and crystal: Bragg, Eq. (4.4), angle from the plane.</li>
+<li>Scattered photon, shift, recoil: Compton, Eq. (4.5).</li>
+<li>Above 1 MeV: pair threshold.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eq. (4.1)</td>
+<td>one electron, one photon extreme</td>
+<td>never for the edge</td>
+</tr>
+<tr>
+<td>Eq. (4.2)</td>
+<td>K lines, screened hydrogenic</td>
+<td>L lines need other b</td>
+</tr>
+<tr>
+<td>Eq. (4.3)</td>
+<td>narrow beam</td>
+<td>broad beams, build-up</td>
+</tr>
+<tr>
+<td>Eq. (4.4)</td>
+<td>coherent elastic scattering</td>
+<td>amorphous materials</td>
+</tr>
+<tr>
+<td>Eq. (4.5)</td>
+<td>free electron at rest</td>
+<td>bound electrons (unshifted line)</td>
+</tr>
+<tr>
+<td>$2m_ec^2$ threshold</td>
+<td>near a nucleus</td>
+<td>never in vacuum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-constants-to-carry">9.3 Constants to carry</h3>
+<p>$hc=1240$ eV nm; $\lambda_C=2.43$ pm; $m_ec^2=511$ keV; NaCl $d=0.282$ nm; Pb HVL(100 keV) $0.12$ mm; $\frac34cR=2.47\times10^{15}$ Hz; pair threshold $1.022$ MeV; tube efficiency $10^{-9}ZV$.</p>
+<h3 id="94-timing-plan">9.4 Timing plan</h3>
+<p>A and B: 90 s-2 min. C: 3 min. D: 12 min. A Compton question not reduced to the triangle within two minutes is mis-triaged; a Bragg question without a drawn plane-angle sketch invites trap 3.</p>
+<h3 id="95-pre-submission-audit-ten-points">9.5 Pre-submission audit, ten points</h3>
+<ol>
+<li>pm versus nm versus m consistent.</li>
+<li>Cutoff used only for the continuous spectrum.</li>
+<li>Characteristic threshold checked in voltage.</li>
+<li>Bragg angle from the plane; orders bounded.</li>
+<li>Compton shift absolute, not fractional.</li>
+<li>Unshifted line explained if present.</li>
+<li>Recoil electron momentum relativistic where needed.</li>
+<li>Pair production has its nucleus.</li>
+<li>One limit pushed.</li>
+<li>All sub-parts answered.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-compton-the-scalar-route">OL1 — Compton, the scalar route</h3>
+<p>Derive Eq. (3.7) by algebra alone: write energy and the two momentum components, eliminate the electron's angle $\phi$, and close with $E_e^2=(p_ec)^2+(m_ec^2)^2$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> From the momentum components: $p_e\cos\phi=\frac{h}{\lambda}-\frac{h}{\lambda'}\cos\theta$, $p_e\sin\phi=\frac{h}{\lambda'}\sin\theta$. Square and add: $p_e^2=\left(\frac{h}{\lambda}\right)^2+\left(\frac{h}{\lambda'}\right)^2-2\frac{h^2}{\lambda\lambda'}\cos\theta$. Energy: $E_e=\frac{hc}{\lambda}-\frac{hc}{\lambda'}+m_ec^2$. Insert into $E_e^2=(p_ec)^2+(m_ec^2)^2$; the squared terms cancel, leaving $2m_ec^2\left(\frac{hc}{\lambda}-\frac{hc}{\lambda'}\right)=-2\frac{h^2c^2}{\lambda\lambda'}\cos\theta+2\frac{h^2c^2}{\lambda\lambda'}$, i.e. $\frac{1}{\lambda'}-\frac{1}{\lambda}$ times $m_ec^2$ equals $\frac{h c}{\lambda\lambda'}(1-\cos\theta)$; multiply by $\frac{\lambda\lambda'}{m_ec^2}$... rearranged: $\lambda'-\lambda=\frac{h}{m_ec}(1-\cos\theta)$.</p>
+<p><strong>Checks.</strong> (i) $\theta=0$: zero shift. (ii) Dimensions: $\frac{h}{mc}$ is length.</p>
+</details>
+<h3 id="ol2-compton-the-invariant-route">OL2 — Compton, the invariant route</h3>
+<p>Re-derive the shift in four lines with the four-momentum invariant: $(P_\gamma+P_e-P_{\gamma'})^2=P_{e'}^2$, using $P_\gamma^2=0$, $P_e^2=(m_ec)^2$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Expand: $-2P_\gamma\cdot P_{\gamma'}+2P_e\cdot(P_\gamma-P_{\gamma'})=0$. In the electron's rest frame $P_e=(m_ec,\mathbf0)$, $P_\gamma=(\frac{h}{\lambda},\frac{h}{\lambda}\hat n)m_ec$-units aside: $P_\gamma\cdot P_{\gamma'}=\frac{h^2}{\lambda\lambda'}(1-\cos\theta)$ and $P_e\cdot P_\gamma=\frac{m_ech}{\lambda}$ (times $c$ bookkeeping). Hence $\frac{m_echc}{\lambda}-\frac{m_echc}{\lambda'}=\frac{h^2c^2}{\lambda\lambda'}(\cos\theta-1)$, giving $\Delta\lambda=\frac{h}{m_ec}(1-\cos\theta)$ — and the electron's energy falls out of $E_e=E_\gamma-E_{\gamma'}+m_ec^2$ directly, which is why this route is the elegant one.</p>
+<p><strong>Checks.</strong> (i) Matches OL1 term for term. (ii) Lorentz-invariant derivation: valid in any frame, the scalar route's assumption of a resting electron made explicit.</p>
+</details>
+<h3 id="ol3-why-the-photon-cannot-give-everything">OL3 — Why the photon cannot give everything</h3>
+<p>Show that at $\theta=180^\circ$ the electron receives $K_{\max}=hf\frac{2x}{1+2x}$ with $x=\frac{hf}{m_ec^2}$, and argue in one sentence why $K&lt;hf$ always.</p>
+<p><details markdown=1><summary>Solution</summary></p>
+<p><strong>Method.</strong> From Eq. (3.8) at $\cos\theta=-1$: $K=hf\frac{2x}{1+2x}$. Since the scattered photon's momentum must vanish or reverse, a photon with zero final energy would carry zero momentum while the electron carried some — momentum conservation forbids the photon from disappearing. For a 100 keV photon: $K_{\max}=28.1$ keV; for 1 MeV: $0.85$ MeV, approaching but never reaching $hf$.</p>
+<p><strong>Checks.</strong> (i) $x\to0$: $K\to2x\,hf\to0$ relative fraction vanishes, the classical limit. (ii) $x\to\infty$: $K\to hf$ asymptotically.</p>
+</details>
+<h3 id="ol4-inverse-compton-as-a-moving-mirror">OL4 — Inverse Compton as a moving mirror</h3>
+<p>A 1 GeV electron ($\gamma\approx2000$) collides head-on with a microwave photon of $10^{-3}$ eV. Estimate the boosted photon's energy by the mirror analogy, and name the cross-topic cousin.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In the electron's frame the photon arrives blue-shifted by $\sim\gamma$; it "reflects" and is boosted by $\sim\gamma$ again on the way back: $E'\sim\gamma^2E=4\times10^6\times10^{-3}=4$ keV — soft microwave in, X-ray out. The velocity-triangle logic is identical to a gravity assist (PART 7's slingshot) and to PART 28's moving-mirror Doppler: fast object, slow projectile, energy transfer by reflection.</p>
+<p><strong>Checks.</strong> (i) Exact head-on kinematics gives $E'\approx\frac{4\gamma^2E}{1+4\gamma E/m_ec^2}$, here $\approx4$ keV. (ii) This is how the universe makes some of its X-ray sky.</p>
+</details>
+<h3 id="ol5-duane-hunt-as-the-sharpest-early-he">OL5 — Duane-Hunt as the sharpest early h/e</h3>
+<p>A lab records cutoffs: 30 kV at 41.3 pm, 40 kV at 31.0 pm, 50 kV at 24.8 pm. Extract h from the slope of lambda-min against 1/V, with e known.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Slope $=\lambda_{\min}V$: $41.3\times10^{-12}\times3\times10^4=1.24\times10^{-6}$ V m; $31.0\times10^{-12}\times4\times10^4=1.24\times10^{-6}$; consistent. $h=\frac{e\times\text{slope}}{c}=\frac{1.602\times10^{-19}\times1.24\times10^{-6}}{3\times10^8}=6.62\times10^{-34}$ J s. The three points collinear through the origin is the quantum statement; Millikan's photoelectric slope measures the same ratio from the other side of the mirror.</p>
+<p><strong>Checks.</strong> (i) All three products equal within rounding. (ii) The value matches blackbody h.</p>
+</details>
+<h3 id="ol6-the-shielding-constant-from-the-shell-picture">OL6 — The shielding constant from the shell picture</h3>
+<p>Argue from the shell model why K-alpha uses b of 1, and why K-beta's effective b is slightly larger; quote the measured K-alpha offset for copper.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The L electron falling into the K vacancy spends the transition outside the remaining 1s electron, which screens one full unit: $b=1$. For K$\beta$ the falling M electron is screened by the 1s electron plus, partly, the two L electrons between it and the nucleus on average, so the effective $b$ exceeds 1 (fits give $\sim1.5$-$2$ for heavier atoms' K$\beta$ and larger for L lines). Copper's measured K$\alpha$ (154 pm) against the $b=1$ prediction (155 pm): agreement within the model's one percent, which is why Moseley's line is straight to the eye.</p>
+<p><strong>Checks.</strong> (i) L lines need still larger b, as tables show. (ii) Hydrogen has no screening: b = 0, recovering Lyman alpha.</p>
+</details>
+<h3 id="ol7-the-anode-as-an-engineering-problem">OL7 — The anode as an engineering problem</h3>
+<p>A dental tube runs 70 kV at 10 mA in 0.5 s exposures. Estimate the energy dumped per exposure, the adiabatic temperature rise of a 100 g tungsten anode (specific heat 0.13 J per g per K), and say what the rotating anode buys.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E=VIt=70\times10^3\times10^{-2}\times0.5=350$ J per exposure. $\Delta T=\frac{350}{100\times0.13}=27$ K per shot if the heat stayed in 100 g; in reality the focal spot is a few mm$^2$, so the local rise is hundreds of K — the rotating anode spreads each shot over a ring, multiplying the effective mass by the ring-to-spot ratio, $\sim50$: the difference between a working tube and a melted one.</p>
+<p><strong>Checks.</strong> (i) Tungsten melts at 3700 K; the spot margin is real but thin. (ii) Efficiency 0.7 % means 348 of the 350 J are heat.</p>
+</details>
+<h3 id="ol8-dose-in-perspective">OL8 — Dose in perspective</h3>
+<p>Define absorbed dose (gray: J per kg) and equivalent dose (sievert: weighted), then place a dental X-ray, a chest X-ray and a transatlantic flight on one line.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> A dental film is about 5 µSv, a chest film about 100 µSv, a long flight about 40-80 µSv of cosmic rays. The flight exceeds the dental shot; background life delivers about 10 µSv per day. The numbers teach scale, not licence: the linear-no-threshold model is a convention for regulation, stated here as convention.</p>
+<p><strong>Checks.</strong> (i) Orders match published radiation-protection tables. (ii) A CT scan (mSv) sits two decades above the dental film.</p>
+</details>
+<h3 id="ol9-the-sky-as-the-low-energy-contrast">OL9 — The sky as the low-energy contrast</h3>
+<p>Compute Rayleigh's $\lambda^{-4}$ ratio for 400 versus 700 nm, and contrast the physics with this chapter's scattering.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\left(\frac{700}{400}\right)^4=9.4$: blue scatters about nine times harder — the blue sky, and the red sunset (long path, blue removed). Rayleigh scattering is the low-energy limit where the photon's wavelength dwarfs the scatterer and the cross-section scales as $\lambda^{-4}$; Compton-Thomson scattering is the high-energy limit where the wavelength is comparable to or smaller than the electron's quantum scale and the cross-section is essentially flat (then falling, Klein-Nishina). One chapter of photon physics, two opposite limits.</p>
+<p><strong>Checks.</strong> (i) The ratio is dimensionless and steep. (ii) Sunset redness and Compton flatness share the same parent theory.</p>
+</details>
+<h3 id="ol10-why-x-ray-lasers-are-hard">OL10 — Why X-ray lasers are hard</h3>
+<p>State in one paragraph the three obstacles to lasing at angstrom wavelengths, and name the machine that finally did it.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> (i) Inversion at keV gaps is thermally absurd (Boltzmann $e^{-40}$ at any temperature, PART 23 OL6) and needs violent pumping — nuclear tests and huge lasers. (ii) No mirrors: at X-ray frequencies every material's refractive index is just below 1, so only grazing-incidence or Bragg reflection works. (iii) The upper states live femtoseconds. Free-electron lasers sidestep all three by lasing in the electron beam itself: kilometre linacs producing angstrom pulses, the XFELs of the 2010s.</p>
+<p><strong>Checks.</strong> (i) Each obstacle traces to a result derived earlier in this vault. (ii) The workarounds are engineering, not new physics.</p>
+</details>
+<h3 id="ol11-which-potential-for-the-wavelength">OL11 — Which potential for the wavelength?</h3>
+<p>Electron diffraction through a thin film at 100 kV: should lambda use the accelerating voltage or the total energy, and how large is the difference?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The wavelength wants the momentum, and at 100 kV the electron is mildly relativistic: the non-relativistic formula gives 3.88 pm, the correct momentum gives 3.70 pm, a 4.6 % difference that shifts every inferred lattice constant by the same fraction. Rule: use $p=\sqrt{2m_eK(1+\frac{K}{2m_ec^2})}$ — the first relativistic correction — whenever $K$ exceeds a few keV (PART 23 OL8).</p>
+<p><strong>Checks.</strong> (i) At 10 kV the correction is 1 %, matching the 1 % tolerance line. (ii) The sign: relativity shortens the wavelength.</p>
+</details>
+<h3 id="ol12-avogadro-with-an-error-budget">OL12 — Avogadro with an error budget</h3>
+<p>Re-run E8, but propagate a 0.1 % error in d. Why did this determination historically fix N-A to crystal-quality precision?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $N_A\propto d^{-3}$: a 0.1 % error in d triples to 0.3 % in N-A. Bragg angles can be read to better than 0.1 % (angles, not lengths, are measured), and density to 0.05 %: the chain delivers N-A at the 0.3 % level — which, reversed, is how the modern metre-scale lattice standards propagate. The result $6.02\times10^{23}$ agrees with the modern value because both ends of the chain are now defined quantities.</p>
+<p><strong>Checks.</strong> (i) Cubic propagation correct. (ii) X-ray density and chemical density agree at this level for good crystals.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>The chapter's models hand over at: high precision in Compton scattering (Klein-Nishina, the full quantum-electrodynamic cross-section, named not derived); absent reflections and intensities (structure factors, full crystallography); broad-beam dosimetry (build-up factors); pair production's full kinematics (PART 28); and the characteristic lines of multi-electron atoms beyond Moseley's one-parameter screening (quantum mechanics). Within its domain — keV photons, narrow beams, free electrons, coherent planes — the arithmetic is exact.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each). Solutions follow each question in a collapsible block; the marking scheme is in Part 12.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>blocks 3, 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-single-correct">Section A · Single correct</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The cutoff wavelength of a 40 kV tube is nearest:
+(a) 31 pm (b) 62 pm (c) 12 pm (d) 41 pm</p>
+<details>
+<summary>Solution</summary>
+<p>$\frac{1.24\times10^6}{4\times10^4}=31$ pm. (a).</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>The sharp short-wavelength cutoff of the continuous spectrum is direct evidence that:
+(a) electrons are waves (b) one electron can give its whole energy to one photon (c) the target is crystalline (d) X-rays are longitudinal</p>
+<details>
+<summary>Solution</summary>
+<p>(b), the Duane-Hunt limit.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>A copper target runs at 5 kV. The spectrum shows:
+(a) continuous plus K lines (b) continuous only (c) K lines only (d) nothing</p>
+<details>
+<summary>Solution</summary>
+<p>(b): below the 9 kV K threshold the lines are absent.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>The ratio of K-alpha frequencies of copper (29) to potassium (19) is:
+(a) 1.6 (b) 2.4 (c) 2.7 (d) 0.42</p>
+<details>
+<summary>Solution</summary>
+<p>$(28/18)^2=2.4$. (b).</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>Three half-value layers transmit:
+(a) 33 % (b) 12.5 % (c) 25 % (d) 3 %</p>
+<details>
+<summary>Solution</summary>
+<p>$2^{-3}=12.5\%$. (b).</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>First-order Bragg reflection of 154 pm X-rays from planes 282 pm apart occurs at glancing angle nearest:
+(a) 16 degrees (b) 33 degrees (c) 45 degrees (d) 74 degrees</p>
+<details>
+<summary>Solution</summary>
+<p>$\sin\theta=0.273$, 15.8 degrees. (a).</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>The highest Bragg order in that geometry is:
+(a) 2 (b) 3 (c) 4 (d) 3.66</p>
+<details>
+<summary>Solution</summary>
+<p>(b): 3.66 truncates to 3.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>The Compton shift at 90 degrees is:
+(a) 1.21 pm (b) 2.43 pm (c) 4.86 pm (d) 24.3 pm</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The Compton shift depends on:
+(a) the target material (b) the intensity (c) the scattering angle only (d) the wavelength</p>
+<details>
+<summary>Solution</summary>
+<p>(c).</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>The unshifted line in a Compton spectrum comes from:
+(a) experimental error (b) electrons bound so tightly the whole atom recoils (c) free electrons (d) pair production</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>Pair production becomes possible at photon energies above:
+(a) 511 keV (b) 1.022 MeV (c) 13.6 eV (d) 9 MeV</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>The X-ray production efficiency of tungsten at 100 kV is of order:
+(a) 50 % (b) 10 % (c) 1 % (d) 0.001 %</p>
+<details>
+<summary>Solution</summary>
+<p>(c).</p>
+</details>
+<h4 id="section-b-one-or-more-correct">Section B · One or more correct</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Raising the voltage of an X-ray tube:
+(a) shortens lambda-min (b) raises the continuous intensity (c) shifts the characteristic lines to shorter wavelengths (d) can switch characteristic lines on</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (d). Line wavelengths are atomic, (c) false.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>Moseley's law:
+(a) makes sqrt f linear in Z (b) uses b of 1 for K-alpha (c) ordered the periodic table (d) revealed missing elements as gaps</p>
+<details>
+<summary>Solution</summary>
+<p>All four.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>Bragg diffraction:
+(a) measures theta from the plane (b) bounds orders by 2d over lambda (c) gives rings from powders (d) works for visible light on crystals</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c). (d) false: the wavelength ratio is 1e3 too large.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>Compton scattering:
+(a) the shift is absolute, not fractional (b) two peaks can appear (c) the electron never recoils backwards (d) the electron can take all the photon energy</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c). (d) violates momentum (OL3).</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>X-ray attenuation:
+(a) mu generally falls with energy away from edges (b) high-Z materials absorb much more (c) x-half equals ln 2 over mu (d) broad and narrow beams attenuate identically</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c). (d) false: scatter build-up.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>Pair production:
+(a) needs 1.022 MeV (b) needs a nucleus or electron nearby (c) shares surplus energy as kinetic energy (d) occurs in perfect vacuum</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c).</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>The Coolidge tube:
+(a) converts about one percent of power to X-rays at 100 kV on tungsten (b) must rotate or cool the anode (c) emits characteristic lines from any voltage (d) uses thermionic emission</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (d). (c) false.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>The photon evidence table:
+(a) photoelectric proves energy quanta (b) Compton proves photon momentum (c) crystal diffraction proves the wave character (d) Compton proves light is only a particle</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c). (d) false: complementarity stands.</p>
+</details>
+<h4 id="section-c-numerical">Section C · Numerical</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>Cutoff wavelength at 60 kV, in pm.</p>
+<details>
+<summary>Solution</summary>
+<p>$\frac{1.24\times10^6}{6\times10^4}=20.7$ pm.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A target's K-alpha is at 72 pm. Its atomic number?</p>
+<details>
+<summary>Solution</summary>
+<p>$Z=42$ (molybdenum).</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>Fraction transmitted through 0.24 mm of lead at 100 keV, in percent.</p>
+<details>
+<summary>Solution</summary>
+<p>Two half-layers: 25 %.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>Sin of the third-order Bragg angle for 154 pm on 282 pm planes, to two decimals.</p>
+<details>
+<summary>Solution</summary>
+<p>$\frac{3\times154}{564}=0.82$.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>Maximum electron kinetic energy from a 50 keV photon, in keV to one decimal.</p>
+<details>
+<summary>Solution</summary>
+<p>$x=0.0978$; $K=50\times\frac{0.1957}{1.1957}=8.2$ keV.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A 50 keV photon back-scatters. The scattered wavelength, in pm.</p>
+<details>
+<summary>Solution</summary>
+<p>$\lambda=24.8$ pm; $\lambda'=24.8+4.86=29.7$ pm.</p>
+</details>
+<h4 id="section-d-comprehensive-long-form">Section D · Comprehensive long-form</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Derive lambda-min = hc over eV from energy conservation. (b) Evaluate at 30, 50, 100 kV. (c) Explain how the plot of lambda-min against 1 over V measures h, and why it is the inverse photoelectric effect. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Richest photon: $hf_{\max}=eV$.
+(b) 41.3, 24.8, 12.4 pm.
+(c) Slope is $\frac{hc}{e}$; with e known, h; PART 23's $V_s$-$f$ slope measures $\frac{h}{e}$ from absorption, this from emission.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) Derive Moseley's law from the screened Bohr picture. (b) A line at 72 pm: identify the element. (c) The minimum voltage to excite its K lines (K edge about 20 keV). (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $E_{K\alpha}=\frac34\times13.6(Z-1)^2$ eV; square root linear.
+(b) $Z=42$.
+(c) $\sim20$ kV.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) Derive I = I0 e to the minus mu x from the constant-fraction-per-layer argument. (b) Lead: HVL 0.12 mm; transmission through 0.5 mm. (c) Why bone images white, and the soft-X-ray trade-off in one line each. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $\frac{dI}{dx}=-\mu I$.
+(b) 5.5 %.
+(c) Calcium's Z absorbs more; soft X-rays give contrast but deposit more dose.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) Derive Bragg's law with the glancing-angle convention. (b) First order at 15.8 degrees with 154 pm: find d. (c) With rho = 2165 and M = 58.44, find Avogadro's number. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Path $2d\sin\theta=n\lambda$.
+(b) $d=\frac{154}{2\sin15.8^\circ}=282$ pm.
+(c) $6.02\times10^{23}$.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) By scalar conservation laws, derive the Compton shift. (b) For a 100 keV photon at 90 degrees: shift, electron kinetic energy, electron angle. (c) State the two limits theta to 0 and theta to 180. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) OL1's algebra.
+(b) 2.43 pm; 16.4 keV; 39.9 degrees.
+(c) 0 and 4.86 pm.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>(a) Re-derive the shift with the four-momentum invariant. (b) Which route gives the electron energy more directly, and why? (c) Why can the photon never vanish into the electron alone? (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) OL2.
+(b) The invariant route: $E_e$ falls out of energy conservation with both photon energies already known.
+(c) Momentum: a gone photon leaves the electron with momentum but no partner.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>(a) Maximum Compton shift as a fraction of 550 nm. (b) The same for a 100 pm photon at 90 degrees. (c) Conclude why Compton needed X-rays, and the resolving power his spectrometer required. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $8.8\times10^{-6}$ (at 180), $4.4\times10^{-6}$ at 90.
+(b) 2.4 %.
+(c) Percent-level shifts are resolvable, parts-per-million were not in 1923; R about 41 suffices.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) Why does pair production need 1.022 MeV? (b) Why a nucleus? (c) A 5 MeV photon converts: total pair kinetic energy, and name the chapter that owns the full relativistic bookkeeping. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Two rest masses.
+(b) Momentum conservation needs a recoil partner.
+(c) 3.98 MeV; PART 28.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>A 70 kV, 10 mA dental tube fires 0.5 s. (a) Electron power and energy per shot. (b) X-ray power at 0.7 % efficiency and photons per second at mean 30 keV. (c) The adiabatic rise of a 100 g tungsten anode and what rotation buys. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) 700 W; 350 J.
+(b) 4.9 W; $1.0\times10^{15}$ s$^{-1}$.
+(c) 27 K per shot spread over the whole anode; rotation spreads the spot heat over a ring, the survival factor.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Fill the three-experiment table: photoelectric, Compton, diffraction — what each proves. (b) A 1 GeV electron head-on with a 1 meV photon: estimate the outgoing photon energy and name the process. (c) State one sentence on why the sky is blue as this chapter's low-energy contrast. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Energy quantum; momentum quantum; wave character.
+(b) $\sim\gamma^2E=4$ keV, inverse Compton.
+(c) Rayleigh's lambda to the minus four scatters blue nine times harder than red.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>P1-P12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td>P13-P20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td>P21-P26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td>P27-P36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Block tested</th>
+<th>Question</th>
+<th>Block tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>3, 4</td>
+<td>P19</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>3</td>
+<td>P20</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>3</td>
+<td>P21</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>3, 4</td>
+<td>P22</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>4</td>
+<td>P23</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>3, 4</td>
+<td>P24</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>4</td>
+<td>P25</td>
+<td>4, 10</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>4</td>
+<td>P26</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>3, 4</td>
+<td>P27</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>3</td>
+<td>P28</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>3, 4</td>
+<td>P29</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>3</td>
+<td>P30</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>3</td>
+<td>P31</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>3</td>
+<td>P32</td>
+<td>10</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>3</td>
+<td>P33</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P16</td>
+<td>3, 10</td>
+<td>P34</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P17</td>
+<td>3, 4</td>
+<td>P35</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P18</td>
+<td>3</td>
+<td>P36</td>
+<td>10, 3</td>
+</tr>
+</tbody>
+</table>
+<p>Blocks 2 (definitions and conventions used throughout), 3, 4 and 10 are each tested.</p>
+<table>
+<thead>
+<tr>
+<th>If you lost marks on</th>
+<th>Reread</th>
+<th>Because</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cutoff questions</td>
+<td>§3.2</td>
+<td>the edge is the continuous spectrum's only</td>
+</tr>
+<tr>
+<td>line questions</td>
+<td>§3.3-3.4</td>
+<td>threshold voltage and Moseley screening</td>
+</tr>
+<tr>
+<td>Bragg questions</td>
+<td>§3.7</td>
+<td>the angle convention</td>
+</tr>
+<tr>
+<td>Compton questions</td>
+<td>§3.10, OL1-OL3</td>
+<td>absolute shift, recoil bookkeeping</td>
+</tr>
+<tr>
+<td>attenuation questions</td>
+<td>§3.5</td>
+<td>HVL counting and Z dependence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<div class="callout abstract">
+<p class="callout-title">Numbers to keep</p>
+<p>$hc=1240$ eV nm $=1.24$ keV pm; $\lambda_C=2.426$ pm; $m_ec^2=511$ keV; $\frac34cR=2.47\times10^{15}$ Hz; NaCl $d=0.282$ nm, $\rho=2165$ kg/m$^3$; Pb HVL(100 keV) $0.12$ mm; pair threshold $1.022$ MeV; efficiency $\sim10^{-9}ZV$; Cu K$\alpha$ $154$ pm at $\sim9$ kV threshold; Mo K$\alpha$ $72$ pm.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\lambda_{\min}=\frac{1.24\times10^6}{V}$ pm</td>
+<td>continuous edge only</td>
+</tr>
+<tr>
+<td>$E_{K\alpha}=\frac34\times13.6(Z-1)^2$ eV</td>
+<td>K lines; other b for L, K-beta</td>
+</tr>
+<tr>
+<td>$I=I_0e^{-\mu x}$; $x_{1/2}=\frac{\ln2}{\mu}$</td>
+<td>narrow beam</td>
+</tr>
+<tr>
+<td>$2d\sin\theta=n\lambda$; $n\le\frac{2d}{\lambda}$</td>
+<td>theta from the plane</td>
+</tr>
+<tr>
+<td>$N_A=\frac{M}{2\rho d^3}$</td>
+<td>rock-salt type cells</td>
+</tr>
+<tr>
+<td>$\Delta\lambda=2.426(1-\cos\theta)$ pm</td>
+<td>free electron</td>
+</tr>
+<tr>
+<td>$K_e=hf\frac{x(1-\cos\theta)}{1+x(1-\cos\theta)}$, $x=\frac{hf}{m_ec^2}$</td>
+<td>same</td>
+</tr>
+<tr>
+<td>$\tan\phi=\frac{1}{(1+x)\tan(\theta/2)}$</td>
+<td>same</td>
+</tr>
+<tr>
+<td>$\eta\approx10^{-9}ZV$</td>
+<td>bremsstrahlung fraction</td>
+</tr>
+<tr>
+<td>pair threshold $2m_ec^2$</td>
+<td>with a recoil partner</td>
+</tr>
+<tr>
+<td>Rayleigh $\propto\lambda^{-4}$</td>
+<td>low-energy limit</td>
+</tr>
+<tr>
+<td>$\lambda_e=\frac{1.226}{\sqrt V}$ nm, corrected $p=\sqrt{2mK(1+\frac{K}{2m_ec^2})}$</td>
+<td>electron diffraction (PART 23)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<h3 id="141-can-i-do-this">14.1 Can I do this?</h3>
+<p>One point per honest yes; 24 plus is exam-ready.</p>
+<ol>
+<li>Sketch the double spectrum and explain every feature.</li>
+<li>Derive the Duane-Hunt limit and quote three cutoffs.</li>
+<li>Say why the edge is sharp and the long end soft.</li>
+<li>State the characteristic-line threshold logic and use it.</li>
+<li>Derive Moseley's law and identify an element.</li>
+<li>Explain the shielding constant's value for K-alpha.</li>
+<li>Work the exponential law by HVL counting.</li>
+<li>Explain bone-white and the soft-X-ray trade-off.</li>
+<li>Derive Bragg's law with the plane convention.</li>
+<li>Bound the orders and count them.</li>
+<li>Extract d from an angle, and N-A from d, rho, M.</li>
+<li>Describe powder rings.</li>
+<li>State what the two Compton peaks are.</li>
+<li>Derive the shift by the scalar route.</li>
+<li>Derive it by the invariant route.</li>
+<li>Compute recoil energy and angle at any theta.</li>
+<li>Explain why the photon cannot give everything.</li>
+<li>Estimate the visible-light shift and its consequence.</li>
+<li>Quote the pair threshold and its nucleus requirement.</li>
+<li>Estimate tube efficiency and anode heating.</li>
+<li>Place photoelectric, Compton, diffraction in the evidence table.</li>
+<li>Run the inverse-Compton mirror estimate.</li>
+<li>Defuse each trap of Part 8.</li>
+<li>Run the ten-point audit of 9.5.</li>
+</ol>
+<h3 id="142-what-the-next-chapter-assumes">14.2 What the next chapter assumes</h3>
+<p>PART 26 inherits the pair-production threshold, the eV-keV bookkeeping and the nuclear recoil habit; the binding-energy curve lives where this chapter's K edges hinted at nuclear scales. PART 28 owns the full relativistic kinematics that this chapter used at threshold level (inverse Compton, pair production). The crystallography here closes the diffraction trilogy begun in PART 23 and <a href="wave-optics.html">Wave-optics</a>.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.15 · The X-ray tube spectrum with every label</p>
+<p><em>Show:</em> one spectrum combining the hump, the cutoff labelled lambda-min equals hc over eV, K-alpha and K-beta spikes, the threshold voltage annotation, and a second lower-voltage curve without spikes; all six labels of the chapter's core in one figure.
+<em>Search:</em> "X-ray tube spectrum labelled cutoff K alpha K beta threshold voltage"
+<em>Used in:</em> Part 13 review.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D25.16 · The photon's three proofs and the two limits</p>
+<p><em>Show:</em> a vertical energy axis; at eV scale the photoelectric block, at keV the Bragg and Compton blocks, at MeV the pair block; arrows to "energy quantum", "wave", "momentum quantum"; at the bottom the Rayleigh low-energy limit and the Klein-Nishina high-energy limit bracketing the Compton block.
+<em>Search:</em> "photon interactions energy regimes photoelectric Compton pair production chart"
+<em>Used in:</em> 3.12 and Part 13.</p>
+</div>
+
+<h3 id="143-open-questions-you-can-now-attack">14.3 Open questions you can now attack</h3>
+<p>What does the photon do at energies where the electron's rest mass is small change — PART 28. Why do nuclei bind at MeV scales while atoms bind at eV — PART 26. How does a crystal's absent reflection reveal its hidden atoms — the structure-factor door this chapter opened.</p>
+    <footer class="pager"><a href="atomic-structure.html">← Atomic structure & the Bohr model</a><a href="nuclear-physics.html">Nuclear physics & radioactivity →</a></footer>
+    <p class="colophon">Rendered from <code>x-rays/X-rays.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>x-rays/X-rays.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

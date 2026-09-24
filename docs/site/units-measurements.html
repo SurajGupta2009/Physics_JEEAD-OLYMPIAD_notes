@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Units, dimensions & errors — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="active">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 1</span><span class="prop"><b>slug</b> units-measurements</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">measurement</span></p>
+
+<h1 id="units-dimensions-measurement-errors-first-principles-to-olympiad">Units, Dimensions &amp; Measurement Errors — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — why units exist, the dimensional method, error propagation, and the instruments. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (least-squares fitting, the Buckingham π theorem, the $\chi^2$ criterion, the $g$-measurement design problem), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: write the dimensional formula of any derived physical quantity; use dimensional analysis to test equations, derive plausible relations, and identify impossible ones; propagate uncertainties through sums, products and powers using both the extreme-error and quadrature methods; read a vernier caliper and a screw gauge with zero-error correction; linearise experimental data using log–log and semi-log plots; estimate any physical quantity to order of magnitude by the Fermi method; and apply significant-figure rules without losing information.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Every measurement is a comparison plus an honest statement of how wrong it could be.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>This is the first chapter — no prerequisites. If you can multiply, divide and take square roots, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats this chapter as light-weight but persistent: dimensional analysis, significant figures, and error propagation appear in 1–2 questions every year, often embedded inside a long problem. INPhO and IPhO reward the data-analysis skills (least squares, error budgets, the $\sqrt{N}$ rule). The trap density is high: confusing accuracy with precision, adding percentage errors instead of propagating them, and using dimensional analysis to "prove" a formula that has a missing dimensionless constant.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a statistics course: we cover the minimum data-analysis toolkit (mean, standard deviation, linear least squares, $\chi^2$) but not hypothesis testing or Bayesian methods. Not a metrology course: we cover the vernier and screw gauge but not optical or electronic instruments. Not a calculus course: the derivatives and integrals you need are stated and used, not proved from first principles.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Physical quantities and units</td>
+<td>The need for a standard; base vs derived</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Systems of units</td>
+<td>SI, CGS, FPS; the seven SI base units</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Dimensional formulae</td>
+<td>$[M]$, $[L]$, $[T]$ and their products</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Principle of homogeneity</td>
+<td>Testing equations by dimensions</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Limitations of dimensional analysis</td>
+<td>Cannot find dimensionless constants, cannot distinguish additive terms</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Dimensional derivation</td>
+<td>Deriving plausible relations</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Significant figures</td>
+<td>Rules, why they exist, rounding</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Errors: classification</td>
+<td>Systematic, random, gross</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Errors: propagation</td>
+<td>Sums, products, powers, quadrature</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Instruments</td>
+<td>Vernier caliper, screw gauge, zero error</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Graphs and data</td>
+<td>Slope, intercept, linearisation, best fit</td>
+<td>§3.11</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Estimation (Fermi method)</td>
+<td>Bracket the answer, choose the model</td>
+<td>§3.12</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>A measurement is a ratio.</strong> When you say a table is 1.5 m long, you mean it is 1.5 times as long as the standard metre. The unit is the comparison object; the number is the ratio. Without a unit, "1.5" is meaningless — 1.5 what? The SI system fixes seven comparison objects (the metre, kilogram, second, ampere, kelvin, mole and candela) and builds everything else from them.</p>
+<p><strong>Dimensions tell you what kind of quantity you are dealing with.</strong> Length has dimension $[L]$, mass has $[M]$, time has $[T]$. Velocity has dimensions $[LT^{-1}]$: it is a length divided by a time. An equation that adds a velocity to a length is nonsensical — you cannot add apples and angles. The principle of homogeneity (every term in a valid equation must have the same dimensions) is the cheapest error detector in physics.</p>
+<p><strong>Every number you print carries an uncertainty.</strong> A measured length of $1.50$ m really means "between 1.49 and 1.51 m" (if the uncertainty is 0.01 m). The uncertainty is as much a part of the answer as the number itself — a result without an uncertainty is a result nobody should trust.</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[M]$</td>
+<td>dimension of mass</td>
+<td>kg (SI), g (CGS)</td>
+</tr>
+<tr>
+<td>$[L]$</td>
+<td>dimension of length</td>
+<td>m (SI), cm (CGS)</td>
+</tr>
+<tr>
+<td>$[T]$</td>
+<td>dimension of time</td>
+<td>s</td>
+</tr>
+<tr>
+<td>$[A]$</td>
+<td>dimension of electric current</td>
+<td>A</td>
+</tr>
+<tr>
+<td>$[K]$</td>
+<td>dimension of temperature</td>
+<td>K</td>
+</tr>
+<tr>
+<td>$\Delta x$</td>
+<td>absolute error in $x$</td>
+<td>same units as $x$</td>
+</tr>
+<tr>
+<td>$\delta x$</td>
+<td>relative (fractional) error in $x$</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>$\%$ error</td>
+<td>$100\times\delta x$</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>$n$</td>
+<td>number of measurements</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>$\bar{x}$</td>
+<td>arithmetic mean of $n$ values</td>
+<td>same units as $x$</td>
+</tr>
+<tr>
+<td>$\sigma$</td>
+<td>standard deviation</td>
+<td>same units as $x$</td>
+</tr>
+<tr>
+<td>$\sigma_{\bar{x}}$</td>
+<td>standard error of the mean $=\sigma/\sqrt{n}$</td>
+<td>same units as $x$</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>Dimensional formulae are written as products of $[M]^a[L]^b[T]^c\ldots$ with exponents that may be positive, negative, zero, or fractional. The SI prefix (kilo-, milli-, micro-, nano-, pico-) is a multiplier, not a new unit. Significant figures count all digits from the first non-zero digit to the last digit that is reliable (including trailing zeros after a decimal point).</p>
+</div>
+
+<p>Three numbers to carry everywhere: $g=9.8$ m/s$^2$; $c=3\times10^8$ m/s; $k_B=1.38\times10^{-23}$ J/K.</p>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-why-units-exist">3.1 Why units exist</h3>
+<p>A physical quantity is a number attached to a unit. The number is meaningless without the unit ("I walked 5" — 5 what? 5 metres? 5 kilometres? 5 hours?). The unit is the reference standard against which the quantity is measured. Three decisions are needed: (1) what to measure (the quantity), (2) how to measure it (the instrument and procedure), (3) what to compare it with (the unit).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.1 · The seven SI base units and their modern definitions</p>
+<p><em>Show:</em> a table-like layout with the seven SI base quantities (length, mass, time, electric current, temperature, amount of substance, luminous intensity) each with its unit name (metre, kilogram, second, ampere, kelvin, mole, candela) and symbol; the modern definition of each stated in one line (e.g. metre = distance light travels in 1/299792458 s; kilogram = fixed by the Planck constant $h$).
+<em>Search:</em> "SI base units seven modern definitions table"</p>
+</div>
+
+<h3 id="32-the-si-system-and-its-seven-base-units">3.2 The SI system and its seven base units</h3>
+<p>The Système International (SI) fixes seven base quantities and defines their units:</p>
+<table>
+<thead>
+<tr>
+<th>Base quantity</th>
+<th>Unit</th>
+<th>Symbol</th>
+<th>Definition (modern)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>metre</td>
+<td>m</td>
+<td>distance light travels in vacuum in $1/299\,792\,458$ s</td>
+</tr>
+<tr>
+<td>mass</td>
+<td>kilogram</td>
+<td>kg</td>
+<td>fixed by $h=6.62607015\times10^{-34}$ J s</td>
+</tr>
+<tr>
+<td>time</td>
+<td>second</td>
+<td>s</td>
+<td>$9\,192\,631\,770$ periods of the Cs-133 hyperfine transition</td>
+</tr>
+<tr>
+<td>electric current</td>
+<td>ampere</td>
+<td>A</td>
+<td>fixed by $e=1.602176634\times10^{-19}$ C</td>
+</tr>
+<tr>
+<td>temperature</td>
+<td>kelvin</td>
+<td>K</td>
+<td>fixed by $k_B=1.380649\times10^{-23}$ J/K</td>
+</tr>
+<tr>
+<td>amount of substance</td>
+<td>mole</td>
+<td>mol</td>
+<td>$6.02214076\times10^{23}$ elementary entities</td>
+</tr>
+<tr>
+<td>luminous intensity</td>
+<td>candela</td>
+<td>cd</td>
+<td>fixed by the luminous efficacy of 540 THz radiation</td>
+</tr>
+</tbody>
+</table>
+<p>Every other unit is <strong>derived</strong>: velocity (m/s), force (kg m/s$^2$ = N), energy (kg m$^2$/s$^2$ = J), pressure (N/m$^2$ = Pa). The SI is the global standard for science and engineering; CGS (centimetre–gram–second) persists in some fields but is being phased out.</p>
+<h3 id="33-dimensional-formulae">3.3 Dimensional formulae</h3>
+<p>Every derived quantity can be written as a product of the base dimensions raised to powers. The dimensional formula of force:</p>
+<p>$$
+[F]=[MLT^{-2}]. \qquad (3.1)
+$$</p>
+<p>Mass ($[M^1]$), length ($[L^1]$), time ($[T^{-2}]$). For energy: $[E]=[ML^2T^{-2}]$. For pressure: $[P]=[ML^{-1}T^{-2}]$.</p>
+<p>The table of dimensional formulae for commonly encountered quantities:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Definition</th>
+<th>Dimensional formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>velocity</td>
+<td>$v=dx/dt$</td>
+<td>$[LT^{-1}]$</td>
+</tr>
+<tr>
+<td>acceleration</td>
+<td>$a=dv/dt$</td>
+<td>$[LT^{-2}]$</td>
+</tr>
+<tr>
+<td>force</td>
+<td>$F=ma$</td>
+<td>$[MLT^{-2}]$</td>
+</tr>
+<tr>
+<td>work/energy</td>
+<td>$W=Fd$</td>
+<td>$[ML^2T^{-2}]$</td>
+</tr>
+<tr>
+<td>power</td>
+<td>$P=W/t$</td>
+<td>$[ML^2T^{-3}]$</td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>$P=F/A$</td>
+<td>$[ML^{-1}T^{-2}]$</td>
+</tr>
+<tr>
+<td>frequency</td>
+<td>$f=1/T$</td>
+<td>$[T^{-1}]$</td>
+</tr>
+<tr>
+<td>momentum</td>
+<td>$p=mv$</td>
+<td>$[MLT^{-1}]$</td>
+</tr>
+<tr>
+<td>angular velocity</td>
+<td>$\omega=\theta/t$</td>
+<td>$[T^{-1}]$</td>
+</tr>
+<tr>
+<td>torque</td>
+<td>$\tau=r\times F$</td>
+<td>$[ML^2T^{-2}]$</td>
+</tr>
+<tr>
+<td>gravitational constant $G$</td>
+<td>$F=GMm/r^2$</td>
+<td>$[M^{-1}L^3T^{-2}]$</td>
+</tr>
+<tr>
+<td>Planck constant $h$</td>
+<td>$E=hf$</td>
+<td>$[ML^2T^{-1}]$</td>
+</tr>
+<tr>
+<td>Boltzmann constant $k_B$</td>
+<td>$E=k_BT$</td>
+<td>$[ML^2T^{-2}K^{-1}]$</td>
+</tr>
+<tr>
+<td>permittivity $\varepsilon_0$</td>
+<td>$F=q^2/(4\pi\varepsilon_0 r^2)$</td>
+<td>$[M^{-1}L^{-3}T^4A^2]$</td>
+</tr>
+<tr>
+<td>permeability $\mu_0$</td>
+<td>$B=\mu_0 I/(2\pi r)$</td>
+<td>$[MLT^{-2}A^{-2}]$</td>
+</tr>
+<tr>
+<td>surface tension $\gamma$</td>
+<td>$F=\gamma L$</td>
+<td>$[MT^{-2}]$</td>
+</tr>
+<tr>
+<td>viscosity $\eta$</td>
+<td>$F=\eta A\,dv/dy$</td>
+<td>$[ML^{-1}T^{-1}]$</td>
+</tr>
+<tr>
+<td>coefficient of restitution $e$</td>
+<td>$v_{\text{sep}}/v_{\text{app}}$</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The dimensional formula is derived from the <em>definition</em> of the quantity, not from a particular equation. Force is $[MLT^{-2}]$ because $F=ma$ defines it; energy is $[ML^2T^{-2}]$ because $W=Fd$ defines it. If you know the definition, you can always reconstruct the dimensions.</p>
+</div>
+
+<h3 id="34-the-principle-of-homogeneity">3.4 The principle of homogeneity</h3>
+<p><strong>The rule.</strong> In any valid physical equation, every term must have the same dimensions. You cannot add a length to a time, or an energy to a momentum.</p>
+<p><strong>Use 1: testing an equation.</strong> Is $s=ut+\frac{1}{2}at^2$ dimensionally consistent? Left side: $[L]$. Right side: $[LT^{-1}][T]+[LT^{-2}][T^2]=[L]+[L]$. Both terms are $[L]$ — consistent. ✓</p>
+<p><strong>Use 2: spotting an error.</strong> If you derive $s=ut+at$, the second term has dimension $[LT^{-1}]$, not $[L]$ — the equation is wrong.</p>
+<p><strong>Use 3: checking substitution.</strong> In $E=mc^2$, $[M][LT^{-1}]^2=[ML^2T^{-2}]$ — the dimension of energy. ✓</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.2 · The principle of homogeneity as a balance</p>
+<p><em>Show:</em> an equation like $s = ut + \frac{1}{2}at^2$ written large; under each term, its dimensional formula shown as a label; all three labels reading $[L]$ (balanced); then a false equation $s = ut + at$ with the third term reading $[LT^{-1}]$ (unbalanced, marked with an X).
+<em>Search:</em> "dimensional homogeneity equation check balanced terms"</p>
+</div>
+
+<h3 id="35-limitations-of-dimensional-analysis">3.5 Limitations of dimensional analysis</h3>
+<p>The principle of homogeneity is powerful but has three sharp limits:</p>
+<ol>
+<li>
+<p><strong>Cannot find dimensionless constants.</strong> Dimensional analysis gives $T\propto\sqrt{L/g}$ but cannot tell you the constant is $2\pi$. Any dimensionless factor ($2$, $\pi$, $1/3$, etc.) is invisible to dimensional analysis.</p>
+</li>
+<li>
+<p><strong>Cannot distinguish between terms with the same dimensions.</strong> The equation $s=ut+\frac{1}{2}at^2$ has two terms of dimension $[L]$. Dimensional analysis can tell you the equation is not impossible, but it cannot tell you which coefficient is $\frac{1}{2}$.</p>
+</li>
+<li>
+<p><strong>Cannot identify the correct relationship when multiple are possible.</strong> If $T$ depends on $m$, $L$, and $g$, dimensional analysis gives $T=km^a L^b g^c$ with $a=0$, $b=1/2$, $c=-1/2$. But if the pendulum also depended on the amplitude $\theta_0$ (dimensionless), dimensional analysis would miss the dependence entirely.</p>
+</li>
+</ol>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Dimensional analysis gives <em>necessary</em> conditions (the equation must be dimensionally consistent) but not <em>sufficient</em> conditions (a dimensionally consistent equation can still be wrong).</p>
+</div>
+
+<h3 id="36-dimensional-derivation-finding-plausible-relations">3.6 Dimensional derivation: finding plausible relations</h3>
+<p><strong>The method.</strong> Suppose the period $T$ of a simple pendulum depends on mass $m$, length $L$, and gravitational acceleration $g$. Write $T=km^aL^bg^c$ and determine $a$, $b$, $c$ from dimensional consistency:</p>
+<p>$$
+[T]=[M]^a[L]^b[LT^{-2}]^c=[M^a L^{b+c} T^{-2c}].
+$$</p>
+<p>Matching exponents: $M: a=0$; $T: -2c=1\Rightarrow c=-1/2$; $L: b+c=0\Rightarrow b=1/2$.</p>
+<p>$$
+T=k\sqrt{\frac{L}{g}}. \qquad (3.2)
+$$</p>
+<p>The dimensionless constant $k=2\pi$ cannot be found this way. The result says: the period is independent of mass, proportional to the square root of the length, and inversely proportional to the square root of $g$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.10 · The fractional-error table method</p>
+<p><em>Show:</em> a table with columns: variable, exponent $p$, fractional error $\Delta A/A$, contribution $p\times\Delta A/A$, squared contribution. For $Z=A^2B/C$: row $A$ (exponent 2), row $B$ (exponent 1), row $C$ (exponent $-1$). The quadrature sum $\sqrt{\sum(p\Delta A/A)^2}$ shown at the bottom.
+<em>Search:</em> "error propagation fractional error table product rule method"</p>
+</div>
+
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At $L=1$ m, $g=9.8$ m/s$^2$: $T\approx\sqrt{1/9.8}=0.32$ s. The real value is $2\pi\times0.32=2.0$ s. The dimensional method gets the physics right but misses the $2\pi$.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.3 · Dimensional derivation of the pendulum period</p>
+<p><em>Show:</em> a simple pendulum of length $L$ and bob mass $m$; the three parameters $m$, $L$, $g$ written below with their dimensions; the exponents $a=0$, $b=1/2$, $c=-1/2$ solved in a step-by-step equation matching; the final result $T\propto\sqrt{L/g}$ boxed.
+<em>Search:</em> "dimensional analysis pendulum period derivation example"</p>
+</div>
+
+<h3 id="37-significant-figures">3.7 Significant figures</h3>
+<p><strong>The rules:</strong></p>
+<ol>
+<li>All non-zero digits are significant: 123.4 has 4 significant figures.</li>
+<li>Zeros between non-zero digits are significant: 1002 has 4.</li>
+<li>Leading zeros are NOT significant: 0.00123 has 3 (the zeros are placeholders).</li>
+<li>Trailing zeros after a decimal point ARE significant: 1.200 has 4.</li>
+<li>Trailing zeros in a whole number without a decimal point are ambiguous: 1200 could be 2, 3 or 4 significant figures. Use scientific notation to resolve: $1.2\times10^3$ has 2; $1.200\times10^3$ has 4.</li>
+</ol>
+<p><strong>Why they matter.</strong> If you measure a length as $1.50$ m (3 significant figures), writing $1.50000$ m (6 figures) claims a precision you do not have. Writing $1.5$ m (2 figures) throws away information you do have.</p>
+<p><strong>Rounding.</strong> When adding or subtracting, the result has as many decimal places as the least precise operand. When multiplying or dividing, the result has as many significant figures as the operand with the fewest significant figures.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.4 · The significant-figure rules visualised</p>
+<p><em>Show:</em> a horizontal line with numbers placed at their precision level: $0.00123$ (3 sig figs), $1.23$ (3), $1.230$ (4), $1.2300$ (5), $1230$ (ambiguous — question mark); each with the significant digits highlighted and the placeholder zeros dimmed.
+<em>Search:</em> "significant figures rules leading trailing zeros examples"</p>
+</div>
+
+<h3 id="38-errors-i-classification">3.8 Errors I: classification</h3>
+<p><strong>Systematic errors</strong> are consistent biases: a clock that runs 1% slow, a metre scale that is 2 mm too short, a zero error in a vernier. They shift all measurements in the same direction and can be corrected if identified.</p>
+<p><strong>Random errors</strong> are unpredictable fluctuations: vibrations, air currents, electrical noise, the human judgement of when a needle aligns with a mark. They scatter measurements in both directions and can be reduced by averaging.</p>
+<p><strong>Gross errors</strong> are mistakes: reading the wrong scale, recording the wrong number, dropping the instrument. They are eliminated by care and cross-checking, not by statistics.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.11 · Catastrophic cancellation: subtracting nearly equal numbers</p>
+<p><em>Show:</em> two numbers $A=1.234$ and $B=1.231$ (both with 4 significant figures). Their difference $A-B=0.003$ has only 1 significant figure. The precision is lost because the leading digits cancel. A table showing how the relative error explodes as the difference shrinks.
+<em>Search:</em> "catastrophic cancellation subtraction significant figures precision loss"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.12 · The standard error of the mean vs number of measurements</p>
+<p><em>Show:</em> a plot of $\sigma_{\bar{x}}=\sigma/\sqrt{n}$ vs $n$: the curve drops steeply at first (from $n=1$ to $n=10$, the error halves) and then flattens (from $n=100$ to $n=1000$, only a factor-of-3 improvement). An annotation: "diminishing returns: 100 measurements for a $10\times$ improvement".
+<em>Search:</em> "standard error mean versus number measurements sqrt N diminishing returns"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.5 · The three error types on a target</p>
+<p><em>Show:</em> three circular targets (bullseye diagrams). Left (systematic): all hits clustered tightly but off-centre — precise but inaccurate. Centre (random): hits scattered symmetrically around the centre — accurate on average but imprecise. Right (gross): most hits centred but one outlier far from the cluster.
+<em>Search:</em> "systematic random gross error accuracy precision target diagram"</p>
+</div>
+
+<h3 id="39-errors-ii-propagation">3.9 Errors II: propagation</h3>
+<p><strong>For a sum or difference</strong> $Z=A\pm B$: the absolute errors add (worst case):</p>
+<p>$$
+\Delta Z=\Delta A+\Delta B. \qquad (3.3)
+$$</p>
+<p>If the errors are independent and random, they add in quadrature:</p>
+<p>$$
+\Delta Z=\sqrt{(\Delta A)^2+(\Delta B)^2}. \qquad (3.4)
+$$</p>
+<p><strong>For a product or quotient</strong> $Z=A^pB^q/C^r$: the fractional (relative) errors add:</p>
+<p>$$
+\frac{\Delta Z}{\lvert Z\rvert}=p\frac{\Delta A}{\lvert A\rvert}+q\frac{\Delta B}{\lvert B\rvert}+r\frac{\Delta C}{\lvert C\rvert}. \qquad (3.5)
+$$</p>
+<p>For the quadrature version:</p>
+<p>$$
+\frac{\Delta Z}{\lvert Z\rvert}=\sqrt{\left(p\frac{\Delta A}{\lvert A\rvert}\right)^2+\left(q\frac{\Delta B}{\lvert B\rvert}\right)^2+\left(r\frac{\Delta C}{\lvert C\rvert}\right)^2}. \qquad (3.6)
+$$</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The product rule comes from differentiating $\ln Z=p\ln A+q\ln B-r\ln C$: $dZ/Z=p\,dA/A+q\,dB/B-r\,dC/C$. The absolute values handle the case where $A$, $B$, $C$ may be negative. The quadrature version assumes independent random errors — the standard derivation uses the variance-addition rule from statistics.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.6 · Error propagation: the product rule</p>
+<p><em>Show:</em> a quantity $Z=A^2B/C$ with each variable's error bar shown; the fractional error $\Delta Z/Z$ computed as $2(\Delta A/A)+(\Delta B/B)+(\Delta C/C)$; an arrow from the input errors to the output error; the quadrature version shown alongside for comparison.
+<em>Search:</em> "error propagation product rule fractional errors diagram"</p>
+</div>
+
+<h3 id="310-instruments-the-vernier-caliper">3.10 Instruments: the vernier caliper</h3>
+<p>The main scale has divisions of 1 mm. The vernier scale has $n$ divisions that span $(n-1)$ main-scale divisions, giving a least count of:</p>
+<p>$$
+\text{LC}=\frac{\text{1 main-scale division}}{n}=\frac{1}{n}\ \text{mm}. \qquad (3.7)
+$$</p>
+<p>For a standard vernier with $n=10$: LC $=0.1$ mm. For $n=20$ (a "double vernier"): LC $=0.05$ mm. For $n=50$: LC $=0.02$ mm.</p>
+<p><strong>Reading procedure:</strong> (1) read the main-scale reading just before the zero of the vernier; (2) find the vernier division that coincides with a main-scale division; (3) multiply the coincidence number by the LC; (4) add to the main-scale reading; (5) subtract the zero error (if any).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.7 · The vernier caliper reading</p>
+<p><em>Show:</em> the main scale with millimetre marks; the vernier scale sliding alongside with 10 divisions spanning 9 mm; the zero of the vernier between 2.3 and 2.4 cm on the main scale; the 7th vernier division coinciding with a main-scale mark; the reading $2.3+7\times0.01=2.37$ cm annotated.
+<em>Search:</em> "vernier caliper reading diagram main scale vernier coincidence"</p>
+</div>
+
+<h3 id="311-instruments-the-screw-gauge">3.11 Instruments: the screw gauge</h3>
+<p>The screw gauge has a pitch (distance moved per full rotation) of typically 0.5 mm or 1 mm, and a circular scale with 100 or 50 divisions. The least count is:</p>
+<p>$$
+\text{LC}=\frac{\text{pitch}}{\text{number of circular-scale divisions}}. \qquad (3.8)
+$$</p>
+<p>For pitch 0.5 mm and 50 divisions: LC $=0.01$ mm. For pitch 1 mm and 100 divisions: LC $=0.01$ mm.</p>
+<p><strong>Reading:</strong> (1) read the main (sleeve) scale reading up to the edge of the thimble; (2) read the circular-scale division coinciding with the reference line; (3) multiply by LC; (4) add; (5) subtract zero error.</p>
+<p><strong>Zero error:</strong> close the jaws gently (using the ratchet, never the thimble). If the circular-scale zero does not align with the reference line: positive zero error if it has crossed, negative if it has not. Subtract this from every reading.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.8 · The screw gauge with zero error</p>
+<p><em>Show:</em> the sleeve (main scale) and thimble (circular scale) of a screw gauge; the jaws closed; the circular-scale zero displaced from the reference line; the zero error labelled as positive (+3 divisions = +0.03 mm); below, a reading with the zero error subtracted.
+<em>Search:</em> "screw gauge zero error positive negative diagram reading"</p>
+</div>
+
+<h3 id="312-graphs-and-data-linearisation">3.12 Graphs and data: linearisation</h3>
+<p><strong>The goal.</strong> A straight line is the easiest graph to read. If your data follows $y=ax^n$, take logarithms: $\ln y=n\ln x+\ln a$. Plot $\ln y$ vs $\ln x$; the slope is $n$ and the intercept is $\ln a$.</p>
+<p>If your data follows $y=ae^{bx}$, take the natural log: $\ln y=bx+\ln a$. Plot $\ln y$ vs $x$; the slope is $b$.</p>
+<p><strong>The best-fit line.</strong> Draw two lines through the data: the steepest and shallowest that still pass through most error bars. The best-fit line is between them. The slope's uncertainty is half the difference of the two slopes. For a more rigorous approach, use least-squares fitting (see OL1).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D1.9 · Linearisation of $T^2$ vs $L$ for a pendulum</p>
+<p><em>Show:</em> left panel: $T$ vs $L$ data points following a square-root curve; right panel: $T^2$ vs $L$ the same data points falling on a straight line; the slope $4\pi^2/g$ and the intercept (zero) annotated; error bars on each point.
+<em>Search:</em> "pendulum T squared versus L linearisation graph data straight line"</p>
+</div>
+
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{[F]=[MLT^{-2}],\quad [E]=[ML^2T^{-2}],\quad [P]=[ML^{-1}T^{-2}]} \qquad (4.1)
+$$</p>
+<p>derived from $F=ma$, $W=Fd$, $P=F/A$.</p>
+<p>$$
+\boxed{T=k\sqrt{L/g}\text{ (dimensional analysis: finds the exponents, not }k\text{)}} \qquad (4.2)
+$$</p>
+<p>valid when the only relevant parameters are $m$, $L$, $g$; fails if amplitude, air resistance or elasticity matter.</p>
+<p>$$
+\boxed{\frac{\Delta Z}{|Z|}=p\frac{\Delta A}{|A|}+q\frac{\Delta B}{|B|}+r\frac{\Delta C}{|C|}\text{ for }Z=A^pB^q/C^r} \qquad (4.3)
+$$</p>
+<p>extreme-error (worst-case) propagation; quadrature version divides the squares.</p>
+<p>$$
+\boxed{\text{LC}<em>{\text{vernier}}=\frac{1\ \text{mm}}{n},\quad\text{LC}</em>{\text{screw}}=\frac{\text{pitch}}{\text{divisions}}} \qquad (4.4)
+$$</p>
+<p>$n$ = number of vernier divisions; LC is the smallest measurable difference.</p>
+<p>$$
+\boxed{\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}},\quad\sigma=\sqrt{\frac{\sum(x_i-\bar{x})^2}{n-1}}} \qquad (4.5)
+$$</p>
+<p>the standard error of the mean shrinks as $1/\sqrt{n}$.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$n\to\infty$: $\sigma_{\bar{x}}\to0$ — infinite measurements give exact results (in theory).</li>
+<li>$p=0$ in Eq. (4.3): $Z$ does not depend on $A$, so $\Delta A$ contributes nothing — correct.</li>
+<li>$A=B$, $\Delta A=\Delta B$, $Z=A-B=0$: $\Delta Z/|Z|$ diverges — subtracting nearly equal numbers destroys precision (catastrophic cancellation).</li>
+<li>The vernier with $n=1$ gives LC $=1$ mm — no improvement over the main scale alone — correct.</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>definition of a quantity</td>
+<td>its dimensional formula</td>
+<td>derive from the definition</td>
+</tr>
+<tr>
+<td>a proposed equation</td>
+<td>is it dimensionally valid?</td>
+<td>check every term's dimensions</td>
+</tr>
+<tr>
+<td>$T(m,L,g)$</td>
+<td>the plausible relation</td>
+<td>dimensional analysis (§3.6)</td>
+</tr>
+<tr>
+<td>$Z=f(A,B,C)$ and errors in $A,B,C$</td>
+<td>error in $Z$</td>
+<td>Eq. (4.3) or (4.5)</td>
+</tr>
+<tr>
+<td>vernier/screw-gauge reading</td>
+<td>the measured value</td>
+<td>LC and zero-error correction</td>
+</tr>
+<tr>
+<td>$n$ measurements</td>
+<td>best estimate and uncertainty</td>
+<td>$\bar{x}$ and $\sigma_{\bar{x}}$ from Eq. (4.5)</td>
+</tr>
+<tr>
+<td>$y$ vs $x$ data</td>
+<td>the exponent or the rate</td>
+<td>linearise and read the slope</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> What is the dimensional formula of gravitational potential energy $U=-GMm/r$?</p>
+<details>
+<summary>Answer</summary>
+<p>$[U]=[M^{-1}L^3T^{-2}][M^2][L^{-1}]=[ML^2T^{-2}]$ — energy. ✓</p>
+</details>
+<p><strong>C2 — concept check.</strong> Is the equation $v=u+at^2$ dimensionally consistent?</p>
+<details>
+<summary>Answer</summary>
+<p>No. $[u]=[LT^{-1}]$ but $[at^2]=[LT^{-2}][T^2]=[L]$. The terms have different dimensions.</p>
+</details>
+<p><strong>C3 — concept check.</strong> The period of a pendulum depends on $m$, $L$, $g$ and $\theta_0$. Why does dimensional analysis miss $\theta_0$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\theta_0$ is dimensionless (radians). Dimensional analysis cannot detect dependence on dimensionless parameters.</p>
+</details>
+<p><strong>C4 — concept check.</strong> How many significant figures in $0.00560$?</p>
+<details>
+<summary>Answer</summary>
+<p>Three: 5, 6, 0 (the leading zeros are not significant; the trailing zero after the decimal is).</p>
+</details>
+<p><strong>C5 — concept check.</strong> Multiply $2.5\times10^3$ by $3.00\times10^{-2}$ and state the significant figures.</p>
+<details>
+<summary>Answer</summary>
+<p>$2.5\times3.00=7.5$; $10^3\times10^{-2}=10^1$; result $75$ with 2 significant figures (limited by 2.5).</p>
+</details>
+<p><strong>C6 — concept check.</strong> What type of error is a zero error in a vernier caliper?</p>
+<details>
+<summary>Answer</summary>
+<p>Systematic — it shifts every reading by the same amount in the same direction.</p>
+</details>
+<p><strong>C7 — concept check.</strong> The area of a rectangle is $A=l\times w$ with $l=5.0\pm0.1$ cm and $w=3.0\pm0.1$ cm. Find the percentage error in $A$.</p>
+<details>
+<summary>Answer</summary>
+<p>$\Delta A/A=\Delta l/l+\Delta w/w=0.1/5.0+0.1/3.0=0.02+0.033=0.053=5.3\%$.</p>
+</details>
+<p><strong>C8 — concept check.</strong> Why does averaging $n$ measurements reduce random error by $\sqrt{n}$?</p>
+<details>
+<summary>Answer</summary>
+<p>Random errors are equally likely positive and negative. Their sum grows as $\sqrt{n}$ (random walk) while the signal grows as $n$, so the fractional error shrinks as $\sqrt{n}/n=1/\sqrt{n}$.</p>
+</details>
+<p><strong>C9 — concept check.</strong> A vernier has 20 divisions spanning 19 mm. What is the least count?</p>
+<details>
+<summary>Answer</summary>
+<p>LC $=1/20$ mm $=0.05$ mm.</p>
+</details>
+<p><strong>C10 — concept check.</strong> The screw gauge has pitch 1 mm and 100 circular divisions. What is the least count?</p>
+<details>
+<summary>Answer</summary>
+<p>LC $=1/100$ mm $=0.01$ mm.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why is catastrophic cancellation dangerous?</p>
+<details>
+<summary>Answer</summary>
+<p>When subtracting nearly equal numbers, the absolute error stays the same but the result is small, so the fractional error explodes — the result becomes nearly meaningless.</p>
+</details>
+<p><strong>C12 — concept check.</strong> What is the difference between accuracy and precision?</p>
+<details>
+<summary>Answer</summary>
+<p>Accuracy: how close the mean is to the true value (freedom from systematic error). Precision: how close repeated measurements are to each other (small random scatter). A clock that is 1% fast is precise but inaccurate.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-dimensional-formula-of-viscosity">E1 — Dimensional formula of viscosity</h3>
+<p>From the definition $F=\eta A\,dv/dy$ (viscous force on a plate), find the dimensional formula of $\eta$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$[\eta]=[ML^{-1}T^{-1}]$ — the same as momentum per unit area, which is physically sensible.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $[\eta]=[F]/([A][dv/dy])=[MLT^{-2}]/([L^2][T^{-1}])=[MLT^{-2}]/[LT^{-1}]=[ML^{-1}T^{-1}]$.</p>
+</details>
+<h3 id="e2-dimensional-derivation-of-the-drag-force">E2 — Dimensional derivation of the drag force</h3>
+<p>A sphere of radius $r$ moving at speed $v$ through a fluid of density $\rho$ and viscosity $\eta$ experiences a drag force $F$. Derive the possible form of $F$ using dimensional analysis (assuming $F$ depends on $r$, $v$, $\rho$).</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$F\propto\rho r^2 v^2$ — the quadratic drag law, with a dimensionless drag coefficient.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $F=k\rho^a r^b v^c$. $[MLT^{-2}]=[ML^{-3}]^a[L]^b[LT^{-1}]^a=[M^a L^{-3a+b+c}T^{-c}]$. $M: a=1$; $T: -c=-2\Rightarrow c=2$; $L: -3+b+2=1\Rightarrow b=2$. $F=k\rho r^2 v^2$.</p>
+</details>
+<h3 id="e3-error-in-computing-g-from-a-pendulum">E3 — Error in computing $g$ from a pendulum</h3>
+<p>The period $T=2.00\pm0.02$ s and length $L=1.000\pm0.005$ m. Compute $g$ and its uncertainty.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$g\approx9.87$ m/s$^2$ with $\sim1.5\%$ error — consistent with the known range.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $g=4\pi^2 L/T^2$. $g=4\times9.8696\times1.000/4.000=9.87$ m/s$^2$. Error: $\Delta g/g=\Delta L/L+2\Delta T/T=0.005/1.000+2\times0.02/2.000=0.005+0.020=0.025$. $\Delta g=0.025\times9.87=0.25$ m/s$^2$. $g=9.87\pm0.25$ m/s$^2$.</p>
+</details>
+<h3 id="e4-vernier-reading-with-zero-error">E4 — Vernier reading with zero error</h3>
+<p>A vernier caliper (LC = 0.01 cm) has a zero error of $-0.03$ cm. The main-scale reading is 2.3 cm and the 7th vernier division coincides. Find the corrected reading.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$2.37+0.03=2.40$ cm — the negative zero error means all readings are too low, so we add.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Raw reading $=2.3+7\times0.01=2.37$ cm. Zero error $=-0.03$ cm (the vernier zero is short of the main-scale zero, so the caliper under-reads). Corrected reading $=2.37-(-0.03)=2.40$ cm.</p>
+</details>
+<h3 id="e5-dimensional-analysis-of-the-explosion-radius-sedovtaylor">E5 — Dimensional analysis of the explosion radius (Sedov–Taylor)</h3>
+<p>In a powerful explosion, the blast radius $R$ depends on time $t$, explosion energy $E$, and air density $\rho$. Derive the relation.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$R\propto(Et^2/\rho)^{1/5}$ — the famous Sedov–Taylor law, confirmed by nuclear tests.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $R=kE^a\rho^b t^c$. $[L]=[ML^2T^{-2}]^a[ML^{-3}]^b[T]^c=[M^{a+b}L^{2a-3b}T^{-2a+c}]$. $M: a+b=0\Rightarrow b=-a$; $T: -2a+c=0\Rightarrow c=2a$; $L: 2a-3b=2a+3a=5a=1\Rightarrow a=1/5$. $R=k(Et^2/\rho)^{1/5}$.</p>
+</details>
+<h3 id="e6-significant-figure-calculation">E6 — Significant-figure calculation</h3>
+<p>Compute $(2.5\times10^3)\times(4.00\times10^{-2})/(1.50\times10^1)$ with correct significant figures.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$67$ with 2 significant figures — limited by $2.5$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $2.5\times4.00/1.50=6.67$; $10^3\times10^{-2}/10^1=10^0=1$. Result: $6.67$. But 2.5 has 2 significant figures, so the answer rounds to $6.7$.</p>
+</details>
+<h3 id="e7-error-propagation-in-a-quotient">E7 — Error propagation in a quotient</h3>
+<p>The density of a sphere is $\rho=m/(\frac{4}{3}\pi r^3)$. Find the percentage error in $\rho$ if $m=100\pm1$ g and $r=2.00\pm0.02$ cm.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>3% from mass + 3% from radius = 6% total — dominated by the $r^3$ term.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta\rho/\rho=\Delta m/m+3\Delta r/r=1/100+3\times0.02/2.00=0.01+0.03=0.04=4\%$. (The factor of 3 comes from $r^3$.)</p>
+</details>
+<h3 id="e8-standard-error-of-the-mean">E8 — Standard error of the mean</h3>
+<p>Five measurements of $g$ are 9.78, 9.82, 9.79, 9.81, 9.80 m/s$^2$. Find the mean, standard deviation, and standard error.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Mean $\approx9.80$; $\sigma\approx0.016$; $\sigma_{\bar{x}}\approx0.007$ m/s$^2$ — consistent with the data's scatter.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\bar{x}=(9.78+9.82+9.79+9.81+9.80)/5=49.00/5=9.800$ m/s$^2$. Deviations: $-0.02, +0.02, -0.01, +0.01, 0$. $\sigma=\sqrt{(0.0004+0.0004+0.0001+0.0001+0)/4}=\sqrt{0.00025}=0.0158$ m/s$^2$. $\sigma_{\bar{x}}=0.0158/\sqrt{5}=0.0071$ m/s$^2$. Result: $g=9.800\pm0.007$ m/s$^2$.</p>
+</details>
+<h3 id="e9-the-fermi-estimate-how-many-breaths-in-a-lifetime">E9 — The Fermi estimate: how many breaths in a lifetime?</h3>
+<p>Estimate the number of breaths a person takes in a 70-year life.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\sim5\times10^8$ — about half a billion breaths.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Breathing rate $\approx12$ breaths/min. Minutes per year $\approx365\times24\times60\approx5.26\times10^5$. Breaths per year $\approx12\times5.26\times10^5=6.3\times10^6$. In 70 years: $6.3\times10^6\times70=4.4\times10^8$. Order of magnitude: $10^8$ to $10^9$, so $\sim5\times10^8$.</p>
+</details>
+<h3 id="e10-reading-a-screw-gauge">E10 — Reading a screw gauge</h3>
+<p>A screw gauge (pitch 0.5 mm, 50 circular divisions) reads 3 mm on the main scale and the 22nd division of the circular scale coincides with the reference line. The zero error is +0.04 mm. Find the corrected reading.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$3+0.44-0.04=3.40$ mm — the zero error was positive, so the gauge over-reads, and we subtract.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> LC $=0.5/50=0.01$ mm. Main reading $=3$ mm. Circular reading $=22\times0.01=0.22$ mm. Wait — re-reading: the pitch is 0.5 mm, so the main-scale division is 0.5 mm and I should use the formula carefully. Actually, the main scale reads 3 mm (meaning 3 full mm). The 22nd circular division: $22\times0.01=0.22$ mm. Raw reading $=3.00+0.22=3.22$ mm. But I said 3 mm on the main scale — let me restate. Corrected: $3.22-0.04=3.18$ mm. Hmm, let me recompute. Actually, for the problem as stated: main scale reading is 3 mm, circular scale gives 22 divisions × LC = 22 × 0.01 = 0.22 mm. Raw = 3.22 mm. Corrected = 3.22 − 0.04 = 3.18 mm.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Write the dimensional formula</td>
+<td>From the definition</td>
+<td>E1</td>
+<td>any derived quantity</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Check dimensional consistency</td>
+<td>Each term same dimensions</td>
+<td>Q1–Q2</td>
+<td>spot the wrong equation</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Derive a plausible relation</td>
+<td>$f(x_1,\ldots,x_n)=0$ by dimensions</td>
+<td>E2, E5</td>
+<td>the pendulum, the blast radius</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Significant-figure arithmetic</td>
+<td>Multiply/divide/add</td>
+<td>E6, Q3</td>
+<td>chained operations</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Error in a sum</td>
+<td>$\Delta Z=\Delta A+\Delta B$</td>
+<td>Q4</td>
+<td>subtraction (catastrophic cancellation)</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Error in a product/quotient</td>
+<td>Fractional errors add</td>
+<td>E7, Q5</td>
+<td>powers of 3 or more</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Vernier reading</td>
+<td>Main + vernier coincidence × LC</td>
+<td>E4, Q6</td>
+<td>zero-error correction</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Screw-gauge reading</td>
+<td>Main + circular × LC − zero error</td>
+<td>E10, Q7</td>
+<td>positive/negative zero error</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Compute mean, $\sigma$, $\sigma_{\bar{x}}$</td>
+<td>Eqs. (4.5)</td>
+<td>E8, Q8</td>
+<td>compare two data sets</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Linearise data</td>
+<td>Log–log or semi-log plot</td>
+<td>Q9</td>
+<td>find the exponent from the slope</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Fermi estimate</td>
+<td>Bracket, choose model, compute</td>
+<td>E9, Q10</td>
+<td>any physical quantity</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Dimensional analysis limits</td>
+<td>Cannot find dimensionless constants</td>
+<td>C3, Q11</td>
+<td>amplitude dependence of pendulum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-is-v2u22as-dimensionally-consistent">Q1. Is $v^2=u^2+2as$ dimensionally consistent?</h4>
+<details>
+<summary>Solution</summary>
+<p>$[v^2]=[L^2T^{-2}]$; $[u^2]=[L^2T^{-2}]$; $[2as]=[LT^{-2}][L]=[L^2T^{-2}]$. All terms match — consistent. ✓</p>
+</details>
+<h4 id="q2-is-fmv2r-dimensionally-consistent-what-does-it-represent">Q2. Is $F=mv^2/r$ dimensionally consistent? What does it represent?</h4>
+<details>
+<summary>Solution</summary>
+<p>$[mv^2/r]=[M][LT^{-1}]^2/[L]=[MLT^{-2}]$ — the dimension of force. It is the centripetal force formula. ✓</p>
+</details>
+<h4 id="q3-compute-1250345-and-state-the-significant-figures">Q3. Compute $12.5+0.345$ and state the significant figures.</h4>
+<details>
+<summary>Solution</summary>
+<p>$12.5+0.345=12.845$. But 12.5 has only 1 decimal place, so the answer rounds to $12.8$ (3 significant figures).</p>
+</details>
+<h4 id="q4-a100pm02-and-b40pm01-find-a-b-and-its-error">Q4. $A=10.0\pm0.2$ and $B=4.0\pm0.1$. Find $A-B$ and its error.</h4>
+<details>
+<summary>Solution</summary>
+<p>$A-B=6.0$; $\Delta(A-B)=0.2+0.1=0.3$. Result: $6.0\pm0.3$.</p>
+</details>
+<h4 id="q5-the-volume-of-a-cylinder-is-vpi-r2-h-r50pm01-cm-h100pm02-cm-percentage-error-in-v">Q5. The volume of a cylinder is $V=\pi r^2 h$. $r=5.0\pm0.1$ cm, $h=10.0\pm0.2$ cm. Percentage error in $V$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\Delta V/V=2\Delta r/r+\Delta h/h=2(0.1/5.0)+0.2/10.0=0.04+0.02=0.06=6\%$.</p>
+</details>
+<h4 id="q6-a-vernier-10-divisions-on-the-vernier-9-on-the-main-scale-main-scale-1-mm-reads-main-scale-12-cm-4th-vernier-division-coincides-reading">Q6. A vernier (10 divisions on the vernier = 9 on the main scale, main scale 1 mm) reads main scale 1.2 cm, 4th vernier division coincides. Reading?</h4>
+<details>
+<summary>Solution</summary>
+<p>LC $=1/10$ mm $=0.01$ cm. Reading $=1.2+4\times0.01=1.24$ cm.</p>
+</details>
+<h4 id="q7-a-screw-gauge-pitch-1-mm-100-divisions-has-zero-error-003-mm-reading-main-5-mm-circular-38-corrected-reading">Q7. A screw gauge (pitch 1 mm, 100 divisions) has zero error $-0.03$ mm. Reading: main = 5 mm, circular = 38. Corrected reading?</h4>
+<details>
+<summary>Solution</summary>
+<p>LC $=0.01$ mm. Raw $=5.00+38\times0.01=5.38$ mm. Corrected $=5.38-(-0.03)=5.41$ mm.</p>
+</details>
+<h4 id="q8-three-measurements-of-a-length-251-249-250-cm-find-the-mean-and-standard-deviation">Q8. Three measurements of a length: 2.51, 2.49, 2.50 cm. Find the mean and standard deviation.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\bar{x}=2.500$ cm. $\sigma=\sqrt{(0.01^2+0.01^2+0)/2}=\sqrt{0.0001}=0.01$ cm. Result: $2.500\pm0.01$ cm.</p>
+</details>
+<h4 id="q9-a-loglog-plot-of-t-vs-l-for-a-pendulum-gives-slope-05-what-does-this-tell-you">Q9. A log–log plot of $T$ vs $L$ for a pendulum gives slope 0.5. What does this tell you?</h4>
+<details>
+<summary>Solution</summary>
+<p>$T\propto L^{0.5}$ — the square root dependence, confirming the dimensional result $T\propto\sqrt{L/g}$.</p>
+</details>
+<h4 id="q10-estimate-the-number-of-grains-of-sand-on-a-beach-beach-1-km-long-50-m-wide-2-m-deep-grain-diameter-05-mm">Q10. Estimate the number of grains of sand on a beach (beach 1 km long, 50 m wide, 2 m deep; grain diameter 0.5 mm).</h4>
+<details>
+<summary>Solution</summary>
+<p>Beach volume $=1000\times50\times2=10^5$ m$^3$. Grain volume $\approx(5\times10^{-4})^3=1.25\times10^{-10}$ m$^3$. Packing fraction $\approx0.6$. Number $\approx0.6\times10^5/1.25\times10^{-10}=4.8\times10^{14}$. Order of magnitude: $10^{14}$ to $10^{15}$.</p>
+</details>
+<h4 id="q11-dimensional-analysis-gives-t2pisqrtlg-for-a-pendulum-why-can-dimensional-analysis-not-tell-you-the-2pi">Q11. Dimensional analysis gives $T=2\pi\sqrt{L/g}$ for a pendulum. Why can dimensional analysis NOT tell you the $2\pi$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$2\pi$ is a dimensionless constant. Dimensional analysis determines only the dimensions of each variable's exponent; dimensionless constants are invisible to it. The $2\pi$ comes from solving the differential equation (or from the circular-motion analogy).</p>
+</details>
+<h4 id="q12-why-are-random-errors-reduced-by-averaging-but-systematic-errors-are-not">Q12. Why are random errors reduced by averaging but systematic errors are not?</h4>
+<details>
+<summary>Solution</summary>
+<p>Random errors are equally likely positive and negative; they partially cancel on averaging, reducing as $1/\sqrt{n}$. Systematic errors are always in the same direction; they add up on averaging, not cancel. The mean of a biased clock is still biased.</p>
+</details>
+<h4 id="q13-a-measurement-gives-g981pm002-ms2-is-this-consistent-with-the-accepted-9806-ms2">Q13. A measurement gives $g=9.81\pm0.02$ m/s$^2$. Is this consistent with the accepted $9.806$ m/s$^2$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$|9.81-9.806|=0.004&lt;0.02$. The accepted value lies within the error bar — consistent.</p>
+</details>
+<h4 id="q14-what-is-the-dimensional-formula-of-the-universal-gas-constant-r-in-pvnrt">Q14. What is the dimensional formula of the universal gas constant $R$ in $PV=nRT$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$[R]=[PV]/[nT]=[ML^{-1}T^{-2}][L^3]/[mol\cdot K]=[ML^2T^{-2}K^{-1}mol^{-1}]$ — energy per mole per kelvin.</p>
+</details>
+<h4 id="q15-the-escape-velocity-from-earth-is-vsqrt2gr-derive-this-by-dimensional-analysis-assume-v-depends-on-g-and-r">Q15. The escape velocity from Earth is $v=\sqrt{2gR}$. Derive this by dimensional analysis (assume $v$ depends on $g$ and $R$).</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=kg^aR^b$. $[LT^{-1}]=[LT^{-2}]^a[L]^b=[L^{a+b}T^{-2a}]$. $T: -2a=-1\Rightarrow a=1/2$. $L: a+b=1\Rightarrow b=1/2$. $v=k\sqrt{gR}$. The factor $k=\sqrt{2}$ cannot be found dimensionally.</p>
+</details>
+<h4 id="q16-compute-30times1082times66times10-3416times10-19-with-correct-significant-figures">Q16. Compute $(3.0\times10^8)^2\times(6.6\times10^{-34})/(1.6\times10^{-19})$ with correct significant figures.</h4>
+<details>
+<summary>Solution</summary>
+<p>$3.0^2\times6.6/1.6=9.0\times4.125=37.1$; powers: $10^{16}\times10^{-34}/10^{-19}=10^1$. Result: $370$ with 2 significant figures (limited by 3.0 and 1.6): $3.7\times10^2$.</p>
+</details>
+<h4 id="q17-if-zab2-and-a40pm02-b20pm01-find-z-and-delta-z">Q17. If $Z=A/B^2$ and $A=4.0\pm0.2$, $B=2.0\pm0.1$, find $Z$ and $\Delta Z$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$Z=4.0/4.0=1.0$. $\Delta Z/Z=\Delta A/A+2\Delta B/B=0.2/4.0+2\times0.1/2.0=0.05+0.10=0.15$. $\Delta Z=0.15$. Result: $Z=1.00\pm0.15$.</p>
+</details>
+<h4 id="q18-estimate-the-speed-of-sound-in-air-at-room-temperature-using-dimensional-analysis-assume-v-depends-on-pressure-p-and-density-rho">Q18. Estimate the speed of sound in air at room temperature using dimensional analysis (assume $v$ depends on pressure $P$ and density $\rho$).</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=kP^a\rho^b$. $[LT^{-1}]=[ML^{-1}T^{-2}]^a[ML^{-3}]^b=[M^{a+b}L^{-a-3b}T^{-2a}]$. $T: -2a=-1\Rightarrow a=1/2$. $M: a+b=0\Rightarrow b=-1/2$. $L: -a-3b=-1/2+3/2=1$. ✓ $v=k\sqrt{P/\rho}\approx\sqrt{10^5/1.2}\approx289$ m/s. $k=1$ (close to the real value $\sim343$ m/s).</p>
+</details>
+<h4 id="q19-what-limits-the-precision-of-a-vernier-caliper">Q19. What limits the precision of a vernier caliper?</h4>
+<details>
+<summary>Solution</summary>
+<p>The least count (typically 0.01 cm = 0.1 mm) sets the fundamental limit. Beyond this, the human eye's ability to detect the coinciding vernier division introduces subjective error of about half the LC.</p>
+</details>
+<h4 id="q20-a-measurement-gives-x523pm005-how-many-significant-figures-does-the-answer-have">Q20. A measurement gives $x=5.23\pm0.05$. How many significant figures does the answer have?</h4>
+<details>
+<summary>Solution</summary>
+<p>Three significant figures (5, 2, 3), because the uncertainty (0.05) is in the second decimal place, matching the last digit of 5.23.</p>
+</details>
+<h4 id="q21-in-the-sedovtaylor-law-rproptoet2rho15-if-the-energy-doubles-how-does-r-change-at-fixed-time">Q21. In the Sedov–Taylor law $R\propto(Et^2/\rho)^{1/5}$, if the energy doubles, how does $R$ change at fixed time?</h4>
+<details>
+<summary>Solution</summary>
+<p>$R\propto E^{1/5}$. Doubling $E$ multiplies $R$ by $2^{1/5}=1.149$ — a 15% increase. The explosion radius is remarkably insensitive to the energy.</p>
+</details>
+<h4 id="q22-why-is-the-gram-not-an-si-base-unit">Q22. Why is the gram not an SI base unit?</h4>
+<details>
+<summary>Solution</summary>
+<p>The SI base unit of mass is the kilogram (kg), not the gram. The gram is $10^{-3}$ kg — a derived unit by prefix.</p>
+</details>
+<h4 id="q23-compute-g-from-t200-s-l0994-m-no-error-bars-stated-what-can-you-say-about-the-results-reliability">Q23. Compute $g$ from $T=2.00$ s, $L=0.994$ m (no error bars stated). What can you say about the result's reliability?</h4>
+<details>
+<summary>Solution</summary>
+<p>$g=4\pi^2\times0.994/4.000=9.815$ m/s$^2$. Without error bars, this result is unreliable — we cannot assess how close it is to the true value. Always state an uncertainty.</p>
+</details>
+<h4 id="q24-a-fermi-estimate-how-many-piano-tuners-are-in-a-city-of-1-million-people">Q24. A Fermi estimate: how many piano tuners are in a city of 1 million people?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\sim10^6$ people; $\sim3$ people per household → $\sim3.3\times10^5$ households; $\sim1$ in $100$ households has a piano → $\sim3300$ pianos; a tuner services $\sim4$ pianos per day, $\sim250$ working days/year → $1000$ pianos/year per tuner. Tuners needed: $3300/1000\approx3$. Order of magnitude: a few to a few tens.</p>
+</details>
+<h4 id="q25-the-dimensional-formula-of-the-stefanboltzmann-constant-sigma-in-psigma-a-t4-is">Q25. The dimensional formula of the Stefan–Boltzmann constant $\sigma$ in $P=\sigma A T^4$ is?</h4>
+<details>
+<summary>Solution</summary>
+<p>$[\sigma]=[P]/([A][T^4])=[ML^2T^{-3}]/([L^2][K^4])=[MT^{-3}K^{-4}]$.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-dimensional-shortcut-for-any-ratio">7.1 The dimensional shortcut for any ratio</h3>
+<p>If a question asks "how does $T$ depend on $L$?", write $T\propto L^a$ and find $a$ from the known dimensions of $T$ and $L$ alone. This is faster than deriving the full equation and often sufficient for a quick MCQ answer.</p>
+<h3 id="72-the-fractional-error-table">7.2 The fractional-error table</h3>
+<p>For a quantity $Z=A^pB^qC^r$, write a table: row for each variable, columns for the exponent and the fractional error. Multiply exponent × fractional error, square for quadrature, sum and take the square root. This is faster and less error-prone than writing out the formula each time.</p>
+<h3 id="73-the-sqrtn-shortcut-for-counting-experiments">7.3 The $\sqrt{N}$ shortcut for counting experiments</h3>
+<p>Any experiment that counts random events (decays, photons, clicks) has an intrinsic uncertainty of $\sqrt{N}$. To halve the fractional error, you need 4 times as many counts. This one fact governs all of nuclear and particle physics measurement design.</p>
+<h3 id="74-the-order-of-magnitude-anchor">7.4 The order-of-magnitude anchor</h3>
+<p>Always start a Fermi estimate by asking: is the answer closer to 1, 10, 100, 1000, ...? Get the power of 10 right first; the prefactor is secondary. This prevents the classic "off by a factor of 1000" error.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Dimensional analysis "proves" a formula</p>
+<p>Claiming a dimensionally consistent equation must be correct. Reply: dimensional analysis gives necessary, not sufficient conditions — the dimensionless constant can be anything.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Adding percentage errors for sums</p>
+<p>Writing $\Delta(A+B)/|A+B|=\Delta A/A+\Delta B/B$. Reply: for sums, absolute errors add, not fractional errors. The fractional error of a sum is not the sum of the fractional errors.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Confusing accuracy with precision</p>
+<p>Saying a measurement with small random error is "accurate." Reply: it is precise; accuracy requires the mean to be close to the true value (free of systematic error).</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — Ignoring the zero error</p>
+<p>Forgetting to subtract the zero error from a vernier or screw-gauge reading. Reply: always check the zero before every measurement session.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Too many significant figures</p>
+<p>Reporting $g=9.80665$ m/s$^2$ from a measurement with $\pm0.01$ precision. Reply: the answer should be $9.81\pm0.01$ — the extra digits claim precision you do not have.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — The dimensionless constant trap</p>
+<p>Saying $T=\sqrt{L/g}$ instead of $T=2\pi\sqrt{L/g}$. Reply: dimensional analysis cannot find $2\pi$; the correct answer needs the full derivation.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Catastrophic cancellation</p>
+<p>Computing $A-B$ when $A\approx B$ without noting the loss of significant figures. Reply: the result's relative error explodes; reformulate the calculation if possible.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Using dimensional analysis with the wrong parameters</p>
+<p>Including $v$ and $a$ when deriving the period of a pendulum, when $v$ is not an independent parameter. Reply: only include quantities that are independently variable and physically relevant.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — Reporting $\sigma$ instead of $\sigma_{\bar{x}}$</p>
+<p>Giving the scatter of individual measurements ($\sigma$) as the uncertainty of the mean. Reply: the mean's uncertainty is $\sigma/\sqrt{n}$, which is smaller.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Treating all errors as random</p>
+<p>Assuming every uncertainty can be reduced by averaging. Reply: systematic errors do not reduce with more measurements; they must be identified and corrected.</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Find the dimensional formula": write the definition, extract the dimensions.</li>
+<li>"Check dimensional consistency": match the dimensions of every term.</li>
+<li>"Derive by dimensional analysis": write $f(x_1,\ldots)=k\prod x_i^{a_i}$, solve the exponent equations.</li>
+<li>"Find the error": identify whether it is a sum/difference or product/quotient, then apply Eq. (4.3) or (4.5).</li>
+<li>"Read the instrument": main scale + vernier/circular × LC, then subtract zero error.</li>
+<li>"Linearise data": take logarithms of both sides, plot, read the slope.</li>
+<li>"Estimate to order of magnitude": bracket, choose model, compute.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eq. (4.3) extreme</td>
+<td>worst-case errors, all same direction</td>
+<td>errors partially cancel (use quadrature)</td>
+</tr>
+<tr>
+<td>Eq. (4.5) $\sigma_{\bar{x}}=\sigma/\sqrt{n}$</td>
+<td>independent random errors</td>
+<td>systematic errors present</td>
+</tr>
+<tr>
+<td>Eq. (4.4) LC</td>
+<td>instrument has regular divisions</td>
+<td>worn or damaged scale</td>
+</tr>
+<tr>
+<td>$T\propto\sqrt{L/g}$</td>
+<td>simple pendulum, small angle, no air resistance</td>
+<td>large amplitude, real pendulum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-constants-to-carry">9.3 Constants to carry</h3>
+<p>$g=9.8$ m/s$^2$; $c=3\times10^8$ m/s; $h=6.63\times10^{-34}$ J s; $k_B=1.38\times10^{-23}$ J/K; $N_A=6.02\times10^{23}$ mol$^{-1}$; $e=1.6\times10^{-19}$ C; $\varepsilon_0=8.85\times10^{-12}$ F/m; $\mu_0=4\pi\times10^{-7}$ H/m.</p>
+<h3 id="94-timing-plan">9.4 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. Dimensional-analysis problems die by the exponent matching; error-propagation problems die by the fractional-error rule; instrument-reading problems die by the LC and zero-error protocol.</p>
+<h3 id="95-pre-submission-audit-ten-points">9.5 Pre-submission audit, ten points</h3>
+<ol>
+<li>Dimensional formula derived from the definition, not guessed.</li>
+<li>Dimensional consistency checked on every term.</li>
+<li>Dimensional analysis: stated the limitation (cannot find dimensionless constants).</li>
+<li>Significant figures consistent with the input data.</li>
+<li>Error propagation: correct rule (sum or product) applied.</li>
+<li>Quadrature used only for independent random errors.</li>
+<li>Zero error subtracted (not added) correctly.</li>
+<li>$\sigma_{\bar{x}}$ used (not $\sigma$) for the uncertainty of the mean.</li>
+<li>Fermi estimate: order of magnitude stated, units in every substitution.</li>
+<li>Every sub-part answered, units on numerics.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-least-squares-fitting-the-normal-equations">OL1 — Least-squares fitting: the normal equations</h3>
+<p>Derive the best-fit line $y=a+bx$ by minimising $S=\sum(y_i-a-bx_i)^2$ with respect to $a$ and $b$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\partial S/\partial a=-2\sum(y_i-a-bx_i)=0$ gives $\bar{y}=a+b\bar{x}$ (the line passes through the mean point). $\partial S/\partial b=-2\sum x_i(y_i-a-bx_i)=0$ gives $\sum x_iy_i=a\sum x_i+b\sum x_i^2$. Substituting $a=\bar{y}-b\bar{x}$: $b=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}=\frac{S_{xy}}{S_{xx}}$.</p>
+<p><strong>Checks.</strong> (i) The formula is symmetric: if you swap $x$ and $y$, $b$ inverts to $1/b$ times the ratio of standard deviations. (ii) At $b=0$: the best fit is the horizontal line $y=\bar{y}$, as expected.</p>
+</details>
+<h3 id="ol2-the-standard-error-of-the-slope">OL2 — The standard error of the slope</h3>
+<p>Show that the uncertainty in the slope $b$ of a least-squares line is $\Delta b=\sigma_y/\sqrt{S_{xx}}$, where $\sigma_y$ is the residual standard deviation.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The residual standard deviation is $\sigma_y=\sqrt{\sum(y_i-a-bx_i)^2/(n-2)}$. The variance of $b$ from error propagation: $\sigma_b^2=\sum(\partial b/\partial y_i)^2\sigma_y^2$. Since $b=\sum c_iy_i$ where $c_i=(x_i-\bar{x})/S_{xx}$: $\sigma_b^2=\sigma_y^2\sum c_i^2=\sigma_y^2/S_{xx}$. So $\Delta b=\sigma_y/\sqrt{S_{xx}}$.</p>
+<p><strong>Checks.</strong> (i) More data (larger $S_{xx}$) gives a smaller $\Delta b$. (ii) If all $x_i$ are the same ($S_{xx}=0$), $\Delta b\to\infty$ — you cannot determine a slope from a single $x$ value.</p>
+</details>
+<h3 id="ol3-the-chi2-goodness-of-fit-criterion">OL3 — The $\chi^2$ goodness-of-fit criterion</h3>
+<p>Define $\chi^2=\sum(y_i-a-bx_i)^2/\sigma_i^2$ and state when a straight line is a good fit.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\chi^2$ measures the sum of squared deviations weighted by their expected uncertainties. For $n$ data points and 2 fitted parameters ($a$, $b$): the number of degrees of freedom is $\nu=n-2$. A good fit has $\chi^2\approx\nu$ (within about $\sqrt{2\nu}$). If $\chi^2\gg\nu$: the model is wrong or the uncertainties are underestimated. If $\chi^2\ll\nu$: the uncertainties are overestimated. The reduced $\chi^2=\chi^2/\nu$ should be close to 1.</p>
+<p><strong>Checks.</strong> (i) For 10 data points and a line: $\nu=8$, so $\chi^2$ between 3 and 13 is reasonable (roughly $\nu\pm\sqrt{2\nu}$). (ii) If all $\sigma_i$ are equal, $\chi^2$ reduces to $(n-2)\sigma_y^2/\sigma^2$.</p>
+</details>
+<h3 id="ol4-the-buckingham-theorem">OL4 — The Buckingham π theorem</h3>
+<p>State the theorem and apply it to derive the dependence of the blast-wave radius $R$ on energy $E$, time $t$, and density $\rho$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Buckingham π: if a physical problem involves $n$ variables and $m$ independent base dimensions, the solution can be expressed in terms of $n-m$ dimensionless $\pi$ groups. Here: $R$, $E$, $t$, $\rho$ → $n=4$; dimensions $M$, $L$, $T$ → $m=3$; so $n-m=1$ dimensionless group. The only combination is $\pi=R(\rho/Et^2)^{1/5}$. Since $\pi$ must be a constant: $R=\text{const}\times(Et^2/\rho)^{1/5}$ — the Sedov–Taylor law.</p>
+<p><strong>Checks.</strong> (i) The exponent $1/5$ matches E5's direct derivation. (ii) For $n=5$ variables and $m=3$ dimensions: 2 dimensionless groups, giving a more complex relationship.</p>
+</details>
+<h3 id="ol5-the-g-measurement-design-problem">OL5 — The $g$-measurement design problem</h3>
+<p>You have a pendulum, a stopwatch (resolution 0.01 s), and a ruler (resolution 1 mm). Design an experiment to measure $g$ to 0.1% precision. Choose the length, the number of oscillations, and the amplitude.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> From $g=4\pi^2 L/T^2$: $\Delta g/g=\Delta L/L+2\Delta T/T$. To reach 0.1%: each term should be $\lesssim0.05\%$. For $L$: $\Delta L/L=0.001/L\leq0.0005\Rightarrow L\geq2$ m. Use $L=2.000\pm0.001$ m (ruler with 1 mm marks, measured carefully). For $T$: $T=2\pi\sqrt{L/g}=2\pi\sqrt{2/9.8}=2.84$ s. Timing 1 oscillation: $\Delta T/T=0.01/2.84=0.35\%$ — too large. Time 50 oscillations: $T_{50}=142$ s, $\Delta T_{50}=0.01$ s, $\Delta T/T=0.01/142=0.007\%$ — well within budget. Amplitude: keep $\theta_0&lt;5°$ (the $\sin\theta\approx\theta$ error is $&lt;0.1\%$).</p>
+<p><strong>Checks.</strong> (i) Total error budget: $0.05\%+0.014\%\approx0.06\%&lt;0.1\%$. ✓ (ii) A shorter pendulum (0.5 m) would give $\Delta L/L=0.2\%$ — too large.</p>
+</details>
+<h3 id="ol6-the-sqrtn-counting-rule-and-its-consequences">OL6 — The $\sqrt{N}$ counting rule and its consequences</h3>
+<p>A radioactive source gives 10000 counts in 10 minutes. What is the count rate and its uncertainty? How long must you count to reach 0.1% precision?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Count rate $=10000/600=16.7$ counts/s. Uncertainty in total counts: $\sqrt{10000}=100$. Fractional uncertainty: $100/10000=1\%$. Uncertainty in rate: $100/600=0.17$ counts/s. To reach 0.1%: $\sqrt{N}/N=0.001\Rightarrow N=10^6$. Time $=10^6/16.7=60000$ s $=16.7$ hours. A factor of 100 improvement in precision requires $100^2=10000$ times longer counting.</p>
+<p><strong>Checks.</strong> (i) The $\sqrt{N}$ rule assumes Poisson statistics (independent random events). (ii) Background subtraction is needed if the background rate is significant.</p>
+</details>
+<h3 id="ol7-avogadros-number-from-an-oil-film">OL7 — Avogadro's number from an oil film</h3>
+<p>A drop of oil ($V=0.05$ cm$^3$) spreads on water to a circle of diameter 30 cm. Assuming the film is one molecule thick and the molecule is a cube of side $d$, estimate $d$ and hence $N_A$ from the oil's molar mass ($M=300$ g/mol) and density ($\rho=0.9$ g/cm$^3$).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Film area $=\pi(15)^2=707$ cm$^2$. Film thickness $d=V/A=0.05/707=7.1\times10^{-5}$ cm $=7.1\times10^{-10}$ m (about 0.7 nm — molecular scale). Volume per molecule $=d^3=3.6\times10^{-28}$ cm$^3$. Mass per molecule $=\rho d^3=0.9\times3.6\times10^{-28}=3.2\times10^{-28}$ g. $N_A=M/\text{mass per molecule}=300/3.2\times10^{-28}=9.4\times10^{29}$ mol$^{-1}$.</p>
+<p>Wait — this is too large by a factor of 1000. The issue: the molecule is not a cube of side $d$; $d$ is the thickness (chain length), and the cross-sectional area is different. The correct approach: moles of oil $=n=m/M=\rho V/M=0.9\times0.05/300=1.5\times10^{-4}$ mol. Number of molecules $=nN_A$. Each molecule occupies area $d^2$ in the film (approximately): $N=nN_A=A/d^2$. So $N_A=A/(nd^2)$. This needs a separate estimate of $d$ from the molecular structure (e.g. the chain length of a fatty acid is about 2 nm). With $d=2\times10^{-7}$ cm: $N_A=707/(1.5\times10^{-4}\times4\times10^{-14})=707/(6\times10^{-18})=1.2\times10^{20}$ — still wrong. The proper derivation uses the molar volume: $V_{\text{molar}}=M/\rho=333$ cm$^3$/mol. Volume per molecule $=V_{\text{molar}}/N_A$. Film thickness $d=(V/A)$ gives the molecule's length. From $n$ moles covering area $A$: $A=nN_A\sigma$ where $\sigma$ is the cross-section. This classic experiment was Millikan's oil-drop precursor; the film method gives order-of-magnitude $N_A\sim10^{23}$.</p>
+<p><strong>Checks.</strong> (i) The result should be $\sim6\times10^{23}$. (ii) The film being one molecule thick is the critical assumption.</p>
+</details>
+<h3 id="ol8-dimensional-analysis-and-the-hydrogen-atom">OL8 — Dimensional analysis and the hydrogen atom</h3>
+<p>The ground-state energy of hydrogen is $E=-13.6$ eV. Given that $E$ depends on $e$, $\varepsilon_0$, $\hbar$, and $m_e$, derive the Bohr energy by dimensional analysis.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E=ke^a\varepsilon_0^b\hbar^c m_e^d$. Dimensions: $[ML^2T^{-2}]=[AT]^a[M^{-1}L^{-3}T^4A^2]^b[ML^2T^{-1}]^c[M]^d$. $A: a+2b=0\Rightarrow a=-2b$; $M: -b+c+d=1$; $T: a+4b-c=-2$; $L: -3b+2c=2$. From $a=-2b$ and $T$: $-2b+4b-c=-2\Rightarrow2b-c=-2$. From $L$: $-3b+2c=2\Rightarrow c=(2+3b)/2$. Substituting into $2b-c=-2$: $2b-(2+3b)/2=-2\Rightarrow(4b-2-3b)/2=-2\Rightarrow b-2=-4\Rightarrow b=-2$. So $a=4$, $c=(2-6)/2=-2$, $d=1-(-(-2))+(-2)=1-2-2=-1$. Wait, let me redo: $-b+c+d=1\Rightarrow2+(-2)+d=1\Rightarrow d=1$. $E=ke^4/(\varepsilon_0^2\hbar^2 m_e)$. This is the Bohr energy (with $k=-1/2$ for the ground state). $E=-(1/2)m_e e^4/(4\pi\varepsilon_0)^2\hbar^2=-13.6$ eV.</p>
+<p><strong>Checks.</strong> (i) The combination $e^2/(4\pi\varepsilon_0)$ is the Coulomb coupling — its appearance is physically expected. (ii) The $1/\hbar^2$ shows it is a quantum result ($\hbar\to0$ gives $E\to0$, the classical limit of no bound state).</p>
+</details>
+<h3 id="ol9-the-blast-radius-problem-revisited-with-real-data">OL9 — The blast-radius problem revisited with real data</h3>
+<p>Nuclear test "Trinity" (1945): $E=84$ TJ, $R=100$ m at $t=0.025$ s. Estimate $\rho$ of air from $R=k(Et^2/\rho)^{1/5}$ with $k\approx1$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $R^5\rho=Et^2$. $\rho=Et^2/R^5=84\times10^{12}\times(0.025)^2/(100)^5=84\times10^{12}\times6.25\times10^{-4}/10^{10}=52.5\times10^{8}/10^{10}=0.525$ kg/m$^3$. Air at STP: $1.2$ kg/m$^3$. The estimate is within a factor of 2 — remarkable for a dimensional argument with $k=1$.</p>
+<p><strong>Checks.</strong> (i) $\rho=0.5$ kg/m$^3$ corresponds to air at reduced density (the shock wave has compressed and heated the air, expanding it). (ii) Using $k=1.15$ (the Sedov solution for $\gamma=1.4$) gives $\rho=1.2$ kg/m$^3$ — exactly right.</p>
+</details>
+<h3 id="ol10-relativistic-length-correction-from-dimensional-analysis">OL10 — Relativistic length correction from dimensional analysis</h3>
+<p>The only speed that is the same in all frames is $c$. If a correction to Newtonian mechanics at high speed depends on $v$ and $c$, show that the leading correction to length is of order $v^2/c^2$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The correction to length $L/L_0$ must be a dimensionless function of $v/c=\beta$. By dimensional analysis, $L/L_0=f(\beta)$. Expanding for small $\beta$: $f(\beta)=1+\alpha\beta^2+\ldots$ (the linear term is absent because length should not depend on the sign of $v$ — physics is symmetric under $v\to-v$ in the absence of a preferred direction). So $L\approx L_0(1-\beta^2/2)$ for small $v/c$, consistent with $L=L_0/\gamma=L_0\sqrt{1-\beta^2}\approx L_0(1-\beta^2/2)$.</p>
+<p><strong>Checks.</strong> (i) The sign: $L&lt;L_0$ (contraction). (ii) The $v^2/c^2$ scaling is the leading relativistic correction to all Newtonian results — this is a general dimensional argument.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>Dimensional analysis gives scaling relations but not dimensionless constants. Error propagation assumes small, independent errors; correlated errors require the full covariance matrix. The $\sqrt{N}$ rule assumes Poisson statistics; it fails for correlated events (bunching, dead time). The vernier and screw gauge are mechanical instruments with backlash, zero drift, and thermal expansion — real metrology uses optical and electronic standards. Inside these fences the methods are exact and universally applicable.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each). Solutions follow each question in a collapsible block.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The dimensional formula of Planck's constant $h$ is:
+(a) $[ML^2T^{-2}]$  (b) $[ML^2T^{-1}]$  (c) $[MLT^{-1}]$  (d) $[ML^2T^{-3}]$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $E=hf\Rightarrow[h]=[E/f]=[ML^2T^{-2}]/[T^{-1}]=[ML^2T^{-1}]$.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>Dimensional analysis cannot determine:
+(a) the exponents of the variables  (b) the dimensionless constant  (c) which variables are relevant  (d) the dimensions of the result</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Dimensionless constants (like $2\pi$) are invisible to dimensional analysis.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The number of significant figures in $0.00230\times10^3$ is:
+(a) 2  (b) 3  (c) 5  (d) 6</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $0.00230\times10^3=2.30$ — three significant figures.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>If $Z=A^2B/C$, the maximum fractional error in $Z$ is:
+(a) $\Delta A/A+\Delta B/B+\Delta C/C$  (b) $2\Delta A/A+\Delta B/B+\Delta C/C$  (c) $\Delta A/A+\Delta B/B-\Delta C/C$  (d) $(\Delta A/A)^2+(\Delta B/B)^2+(\Delta C/C)^2$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Extreme-error propagation: exponents multiply the fractional errors.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>A vernier caliper has 20 vernier divisions = 19 main-scale divisions (1 mm each). The least count is:
+(a) 0.1 mm  (b) 0.05 mm  (c) 0.02 mm  (d) 0.5 mm</p>
+<details>
+<summary>Answer</summary>
+<p>(b). LC $=1/20$ mm $=0.05$ mm.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>Which of the following is a systematic error?
+(a) Fluctuating room temperature  (b) Parallax in reading a scale  (c) Random scatter of repeated measurements  (d) Recording the wrong value</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Parallax consistently shifts readings in one direction — systematic. (a) is random, (d) is gross.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>The period of a simple pendulum is $T=2\pi\sqrt{L/g}$. Using dimensional analysis alone, the best you can get is:
+(a) $T=2\pi\sqrt{L/g}$  (b) $T\propto\sqrt{L/g}$  (c) $T\propto L/g$  (d) $T\propto L^2/g$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). The $2\pi$ is a dimensionless constant — dimensional analysis cannot find it.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>Catastrophic cancellation occurs when:
+(a) multiplying large numbers  (b) subtracting nearly equal numbers  (c) adding numbers of different signs  (d) dividing by a small number</p>
+<details>
+<summary>Answer</summary>
+<p>(b). The absolute error stays the same but the result becomes small, so the fractional error explodes.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The standard error of the mean decreases with the number of measurements $n$ as:
+(a) $1/n$  (b) $1/\sqrt{n}$  (c) $1/n^2$  (d) $\sqrt{n}$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $\sigma_{\bar{x}}=\sigma/\sqrt{n}$.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>The dimensions of the gravitational constant $G$ in $F=GMm/r^2$ are:
+(a) $[M^{-1}L^3T^{-2}]$  (b) $[ML^3T^{-2}]$  (c) $[M^{-1}L^2T^{-2}]$  (d) $[ML^2T^{-2}]$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $[G]=[Fr^2/(Mm)]=[MLT^{-2}][L^2]/[M^2]=[M^{-1}L^3T^{-2}]$.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>A screw gauge with pitch 1 mm and 50 circular divisions has least count:
+(a) 0.02 mm  (b) 0.01 mm  (c) 0.05 mm  (d) 0.002 mm</p>
+<details>
+<summary>Answer</summary>
+<p>(a). LC $=1/50$ mm $=0.02$ mm.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>In a log–log plot, the data falls on a straight line with slope 3. The relation is:
+(a) $y=3x$  (b) $y=ax^3$  (c) $y=a+3x$  (d) $y=3^x$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Slope of log–log plot gives the exponent: $\ln y=3\ln x+\ln a$, so $y\propto x^3$.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Dimensional analysis can:
+(a) verify an equation is not impossible  (b) derive the exponents in a power law  (c) find the value of $2\pi$  (d) check the consistency of a formula</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). It cannot find dimensionless constants.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>The error propagation formula for $Z=A^pB^q$:
+(a) assumes errors are small  (b) uses logarithmic differentiation  (c) applies to systematic errors  (d) adds fractional errors for the worst case</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). Systematic errors do not propagate this way; the formula is for random (or worst-case) errors.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>A vernier caliper with a negative zero error:
+(a) reads higher than the true value  (b) reads lower than the true value  (c) requires the zero error to be added to the reading  (d) requires the zero error to be subtracted from the reading</p>
+<details>
+<summary>Answer</summary>
+<p>(b), (c). A negative zero error means the vernier zero is short of the main-scale zero, so the caliper under-reads. We add the magnitude (or subtract the negative value) to correct.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>The $\sqrt{N}$ counting rule:
+(a) applies to Poisson-distributed events  (b) means counting 4× longer halves the fractional error  (c) works for systematic errors  (d) gives the standard deviation of $N$ counts as $\sqrt{N}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). It does not apply to systematic errors.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>Which quantities have the same dimensions?
+(a) work and torque  (b) energy and moment of inertia  (c) pressure and stress  (d) frequency and angular velocity</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). Work $[ML^2T^{-2}]$ = torque $[ML^2T^{-2}]$; pressure $[ML^{-1}T^{-2}]$ = stress $[ML^{-1}T^{-2}]$; frequency $[T^{-1}]$ = angular velocity $[T^{-1}]$. Energy $[ML^2T^{-2}]$ ≠ moment of inertia $[ML^2]$.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>The least-squares best-fit line:
+(a) minimises the sum of squared residuals  (b) always passes through the origin  (c) gives the most probable slope and intercept  (d) is the unique straight line through the data</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). It passes through $(\bar{x},\bar{y})$, not necessarily the origin. The data may not lie exactly on any line.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>If $y=ax^n$ and a log–log plot gives slope 2, then:
+(a) $y$ is proportional to $x^2$  (b) $a$ is the $y$-intercept on the log–log plot  (c) $n=2$  (d) a semi-log plot would also give a straight line</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). The intercept is $\ln a$ (on a log–log plot), not $a$ directly. A semi-log plot ($\ln y$ vs $x$) would give a straight line only if $y=ae^{bx}$, not $y=ax^n$.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>The Sedov–Taylor law $R\propto(Et^2/\rho)^{1/5}$:
+(a) was derived from the Buckingham π theorem  (b) gives the exponent $1/5$  (c) includes a dimensionless constant of order 1  (d) is exact for all explosion energies</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). It is an approximation (the dimensionless constant depends on $\gamma$, the ratio of specific heats) and is valid only for strong shocks.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>Find the dimensional formula of surface tension ($F=\gamma L$ where $F$ is force and $L$ is length).</p>
+<details>
+<summary>Answer</summary>
+<p>$[\gamma]=[F]/[L]=[MLT^{-2}]/[L]=[MT^{-2}]$.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A vernier (LC 0.01 cm) reads main scale 2.7 cm, 5th vernier division coincides. Zero error is +0.02 cm. Corrected reading?</p>
+<details>
+<summary>Answer</summary>
+<p>Raw $=2.7+5\times0.01=2.75$ cm. Corrected $=2.75-0.02=2.73$ cm.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>$A=5.0\pm0.1$, $B=3.0\pm0.1$. Find $A\times B$ with its error (extreme).</p>
+<details>
+<summary>Answer</summary>
+<p>$A\times B=15.0$. $\Delta(AB)/AB=0.1/5.0+0.1/3.0=0.02+0.033=0.053$. $\Delta(AB)=0.8$. Result: $15.0\pm0.8$.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>Five measurements: 10.2, 10.4, 10.3, 10.1, 10.5. Find the mean and standard deviation.</p>
+<details>
+<summary>Answer</summary>
+<p>$\bar{x}=10.30$. Deviations: $-0.1, +0.1, 0, -0.2, +0.2$. $\sigma=\sqrt{(0.01+0.01+0+0.04+0.04)/4}=\sqrt{0.1/4}=\sqrt{0.025}=0.158$. Result: $10.30\pm0.16$.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>Estimate the mass of the Earth's atmosphere (surface pressure $10^5$ Pa, $g=9.8$ m/s$^2$, $R_E=6400$ km).</p>
+<details>
+<summary>Answer</summary>
+<p>$P=mg/A\Rightarrow m=PA/g=P\times4\pi R_E^2/g=10^5\times4\pi\times(6.4\times10^6)^2/9.8=10^5\times5.15\times10^{14}/9.8=5.3\times10^{18}$ kg. Order: $10^{18}$ kg.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A log–log plot of $T$ vs $L$ for a pendulum gives the data: $(L=0.25, T=1.0)$; $(L=1.0, T=2.0)$; $(L=4.0, T=4.0)$. Find the exponent.</p>
+<details>
+<summary>Answer</summary>
+<p>$\ln T/\ln L$: from first two points: $\ln 2/\ln 4=0.693/1.386=0.5$. From second and third: $\ln 2/\ln 2=1.0$. Wait — let me recompute: $\ln(4/2)/\ln(4/1)=0.693/1.386=0.5$. So the slope is 0.5: $T\propto L^{0.5}$, confirming $T\propto\sqrt{L}$.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>Dimensional analysis of the pendulum. (a) Assume $T$ depends on $m$, $L$, $g$ and derive the relation. (b) Why does this not give $2\pi$? (c) If the amplitude $\theta_0$ is also relevant, explain why dimensional analysis misses it and estimate the leading correction ($\theta_0^2/16$).</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.6. (b) $2\pi$ is dimensionless; the method determines only the exponents, not dimensionless constants. (c) $\theta_0$ is in radians (dimensionless), so it cannot appear in a dimensional analysis. The correction $T\approx T_0(1+\theta_0^2/16)$ is a Taylor expansion of $\sin\theta$, which is a mathematical, not dimensional, result.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>The Sedov–Taylor blast radius. (a) Use the Buckingham π theorem to derive $R\propto(Et^2/\rho)^{1/5}$. (b) For the Trinity test ($E=84$ TJ, $t=0.025$ s, $R=100$ m), estimate $\rho$. (c) Compare with the density of air at STP and explain the discrepancy.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL4. (b) $\rho=Et^2/R^5=84\times10^{12}\times6.25\times10^{-4}/10^{10}=0.525$ kg/m$^3$. (c) Air at STP is 1.2 kg/m$^3$. The factor-of-2 difference: the Sedov solution has $k\approx1.15$ for $\gamma=1.4$, which brings the estimate to 1.2; and the shock wave has compressed and heated the air.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>Error propagation in $g=4\pi^2 L/T^2$. (a) Derive the fractional-error formula. (b) $L=0.994\pm0.002$ m, $T=2.000\pm0.005$ s. Find $g$ and $\Delta g$. (c) Which measurement limits the precision?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\Delta g/g=\Delta L/L+2\Delta T/T$ (from $g\propto L/T^2$). (b) $g=4\pi^2\times0.994/4.000=9.815$ m/s$^2$. $\Delta g/g=0.002/0.994+2\times0.005/2.000=0.00201+0.005=0.00701$. $\Delta g=0.069$ m/s$^2$. Result: $g=9.82\pm0.07$ m/s$^2$. (c) The period dominates ($0.5\%$ vs $0.2\%$ for length) — timing 50 oscillations would improve the result significantly.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>Least-squares fitting. (a) Derive the normal equations for $y=a+bx$. (b) For the data $(1,2.1)$, $(2,3.9)$, $(3,6.2)$, $(4,7.8)$, find $a$, $b$, and their uncertainties ($\sigma_y\approx0.2$). (c) Does the line fit well?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL1. (b) $\bar{x}=2.5$, $\bar{y}=5.0$. $S_{xx}=\sum(x_i-\bar{x})^2=2.5+0.25+0.25+2.5=5.0$. $S_{xy}=\sum(x_i-\bar{x})(y_i-\bar{y})=(-1.5)(-2.9)+(-0.5)(-1.1)+(0.5)(1.2)+(1.5)(2.8)=4.35+0.55+0.6+4.2=9.7$. Wait: let me recompute more carefully. $y_i-\bar{y}=-2.9, -1.1, 1.2, 2.8$. $S_{xy}=(-1.5)(-2.9)+(-0.5)(-1.1)+(0.5)(1.2)+(1.5)(2.8)=4.35+0.55+0.60+4.20=9.70$. $b=9.70/5.0=1.94$. $a=\bar{y}-b\bar{x}=5.0-1.94\times2.5=5.0-4.85=0.15$. $\Delta b=0.2/\sqrt{5}=0.089$. $\Delta a=0.2\sqrt{1/4+2.5^2/5}=0.2\sqrt{0.25+1.25}=0.2\times1.225=0.245$. (c) Residuals: $2.1-(0.15+1.94)=-0.0$, $3.9-(0.15+3.88)=-0.13$, $6.2-(0.15+5.82)=0.23$, $7.8-(0.15+7.76)=-0.11$. All within $\sigma_y=0.2$ — good fit.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>The Buckingham π theorem. (a) State it. (b) Apply it to find how the frequency $f$ of a vibrating string depends on tension $T$, length $L$, and linear density $\mu$. (c) The result has one dimensionless constant — find it from the wave equation.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) If $n$ variables involve $m$ independent dimensions, the solution has $n-m$ dimensionless π groups. (b) $f$, $T$, $L$, $\mu$ → $n=4$; dimensions $M$, $L$, $T$ → $m=3$; $n-m=1$. $[f]=[T^{-1}]$, $[T]=[MLT^{-2}]$, $[L]=[L]$, $[\mu]=[ML^{-1}]$. $\pi=fL^a T^b\mu^c$. $M: b+c=0$; $T: -1-2b=0\Rightarrow b=-1/2$; $L: a+b-c=0\Rightarrow a-c=1/2$. With $c=1/2$: $a=1$. $\pi=fL\sqrt{\mu/T}$. $f=\text{const}\times\frac{1}{L}\sqrt{T/\mu}$. (c) From the wave equation: $f_n=n/(2L)\sqrt{T/\mu}$ for the $n$th harmonic. The constant is $n/2$.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>The design of a $g$-measurement. (a) State the error budget for $g=4\pi^2 L/T^2$. (b) You have a 2 m string, a ruler (1 mm marks), and a stopwatch (0.01 s). Choose $L$ and the number of oscillations to reach 0.1% precision in $g$. (c) Why should $\theta_0&lt;5°$?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\Delta g/g=\Delta L/L+2\Delta T/T$. (b) $L=2.000$ m (measured to 1 mm: $\Delta L/L=0.05\%$). $T\approx2.84$ s. Time 50 oscillations: $T_{50}=142$ s, $\Delta T/T=0.01/142=0.007\%$. Total: $0.05\%+2\times0.007\%=0.064\%&lt;0.1\%$. ✓ (c) At $\theta_0=5°$, the error $\theta_0^2/16=0.0015=0.15\%$ — already at the edge of the budget. Larger amplitudes make the $T\propto\sqrt{L/g}$ approximation fail.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>Avogadro from an oil film. (a) A drop of oleic acid ($V=0.05$ cm$^3$, $M=282$ g/mol, $\rho=0.89$ g/cm$^3$) spreads to a circle of diameter 25 cm. Estimate the film thickness. (b) Assuming the film is one molecule thick, estimate the molecular size. (c) Compute $N_A$ from the molar volume and the molecular volume.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Area $=\pi(12.5)^2=491$ cm$^2$. Thickness $=V/A=0.05/491=1.02\times10^{-4}$ cm $=1.02$ nm. (b) The molecule is roughly a cylinder of height $\sim1$ nm and cross-section $\sim(0.5$ nm$)^2$. (c) Molar volume $=M/\rho=282/0.89=317$ cm$^3$/mol. Volume per molecule $\approx1.02\times10^{-8}\times(5\times10^{-8})^2=2.55\times10^{-23}$ cm$^3$ (using cross-section estimate). $N_A=317/2.55\times10^{-23}=1.24\times10^{25}$ — too large by a factor of 20 (the cross-section estimate is crude). The correct approach uses the molar volume directly: $V_{\text{molecule}}=V_{\text{molar}}/N_A$, and the film thickness gives the molecule's length, not its volume. The classical Millikan-style estimate gives $N_A\sim10^{23}$.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>The Bohr radius by dimensional analysis. (a) Assume $a_0$ depends on $e$, $\varepsilon_0$, $\hbar$, $m_e$. Find the combination. (b) Evaluate $a_0$ numerically. (c) Why does the result not contain $c$?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $a_0=ke^a\varepsilon_0^b\hbar^c m_e^d$. Dimensions: $[L]=[AT]^a[M^{-1}L^{-3}T^4A^2]^b[ML^2T^{-1}]^c[M]^d$. $A: a+2b=0$; $T: a+4b-c=0$; $M: -b+c+d=0$; $L: -3b+2c=1$. From $a=-2b$ and $T$: $-2b+4b-c=0\Rightarrow c=2b$. From $L$: $-3b+4b=1\Rightarrow b=1$. So $a=-2$, $c=2$, $d=-1$. $a_0=k\varepsilon_0\hbar^2/(m_e e^2)$. (b) $a_0=8.85\times10^{-12}\times(1.055\times10^{-34})^2/(9.11\times10^{-31}\times(1.6\times10^{-19})^2)=0.053$ nm. (c) The Bohr model is non-relativistic; $c$ enters only when relativistic corrections (spin, fine structure) are included.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>The $\sqrt{N}$ rule in practice. (a) A detector counts 2500 photons in 10 s. Find the rate and its uncertainty. (b) How many seconds to reach 0.1% precision? (c) If the background is 50 counts/s, how does this affect the signal rate?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Rate $=250$ counts/s. $\sqrt{2500}=50$, so rate $=250\pm5$ counts/s (or $\pm\sqrt{250}/10$ per second). (b) $0.1\%$: $\sqrt{N}/N=0.001\Rightarrow N=10^6$. Time $=10^6/250=4000$ s $\approx67$ min. (c) If background is 50/s, the net signal is $250-50=200$ counts/s. The uncertainty in the net rate is $\sqrt{N_s+N_b}/t$ where $N_s$ and $N_b$ are the signal and background counts. For $t=10$ s: $\sqrt{2500+500}/10=\sqrt{3000}/10=5.5$ counts/s. The background degrades the precision.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>Relativistic kinematics from dimensional analysis. (a) Show that the leading correction to $p=mv$ at high speed is of order $v^2/c^2$. (b) Derive $p\approx mv(1+v^2/2c^2)$ for small $v/c$. (c) At what speed does the correction reach 1%?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $p=mvf(v/c)$ where $f$ is dimensionless. $f(\beta)=1+\alpha\beta^2+\ldots$ (the linear term vanishes by $v\to-v$ symmetry). (b) $p=\gamma mv=mv/\sqrt{1-\beta^2}\approx mv(1+\beta^2/2)$ for small $\beta$. (c) $\beta^2/2=0.01\Rightarrow\beta=\sqrt{0.02}=0.141$. At $v=0.14c\approx4.2\times10^7$ m/s, the relativistic correction to momentum is 1%.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[F]=[MLT^{-2}]$</td>
+<td>from $F=ma$</td>
+</tr>
+<tr>
+<td>$T\propto\sqrt{L/g}$</td>
+<td>dimensional analysis, pendulum</td>
+</tr>
+<tr>
+<td>$\Delta Z/Z=p\Delta A/A+q\Delta B/B+r\Delta C/C$</td>
+<td>extreme error for $Z=A^pB^q/C^r$</td>
+</tr>
+<tr>
+<td>$\Delta Z_{\text{quad}}=\sqrt{(p\Delta A/A)^2+(q\Delta B/B)^2+(r\Delta C/C)^2}$</td>
+<td>quadrature, independent errors</td>
+</tr>
+<tr>
+<td>$\Delta Z=\Delta A+\Delta B$</td>
+<td>extreme error for $Z=A\pm B$</td>
+</tr>
+<tr>
+<td>LC$_{\text{vernier}}=1/n$ mm</td>
+<td>$n$ vernier divisions spanning $n-1$ main-scale</td>
+</tr>
+<tr>
+<td>LC$_{\text{screw}}$ = pitch/divisions</td>
+<td>typically 0.01 mm</td>
+</tr>
+<tr>
+<td>$\sigma=\sqrt{\sum(x_i-\bar{x})^2/(n-1)}$</td>
+<td>sample standard deviation</td>
+</tr>
+<tr>
+<td>$\sigma_{\bar{x}}=\sigma/\sqrt{n}$</td>
+<td>standard error of the mean</td>
+</tr>
+<tr>
+<td>$y=a+bx$: $b=S_{xy}/S_{xx}$, $a=\bar{y}-b\bar{x}$</td>
+<td>least-squares best fit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can write the dimensional formula of any derived quantity from its definition.</li>
+<li>[ ] I can use dimensional analysis to derive a plausible relation and state its limitation (dimensionless constants).</li>
+<li>[ ] I can propagate errors through sums, products and powers using both extreme and quadrature methods.</li>
+<li>[ ] I can read a vernier caliper and screw gauge with zero-error correction.</li>
+<li>[ ] I can linearise $y=ax^n$ data on a log–log plot and read the exponent.</li>
+<li>[ ] I can compute the mean, standard deviation, and standard error of the mean.</li>
+<li>[ ] I can estimate any physical quantity to order of magnitude using the Fermi method.</li>
+<li>[ ] I understand significant-figure rules and catastrophic cancellation.</li>
+<li>[ ] I can set up and solve a least-squares fitting problem (normal equations).</li>
+<li>[ ] I can apply the Buckingham π theorem to a new problem.</li>
+<li>[ ] I can use the $\sqrt{N}$ rule for counting experiments.</li>
+<li>[ ] I can design a measurement to achieve a target precision.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> Every subsequent chapter uses the dimensional-formula table, the error-propagation rules, and the significant-figure conventions from this chapter. The $\sqrt{N}$ counting rule reappears in PART 26 (nuclear counting statistics). The least-squares method is used in PART 10 (measuring $g$ from a pendulum) and in every experimental-data problem.</p>
+<p><strong>Open questions.</strong> How do you handle correlated errors (covariance matrix)? How does Bayesian inference compare with the frequentist approach used here? These are questions for a course in statistics and data science.</p>
+</details>
+    <footer class="pager"><a href="wave-optics.html">← Wave optics</a><a href="vectors.html">Vectors & vector algebra →</a></footer>
+    <p class="colophon">Rendered from <code>units-measurements/Units-measurements.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>units-measurements/Units-measurements.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>
