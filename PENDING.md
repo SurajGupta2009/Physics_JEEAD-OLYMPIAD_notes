@@ -1,127 +1,153 @@
 # Pending chapters — JEE Advanced & Olympiad Physics notes
 
-Generated: 2026-09-22. The nine note-sets listed in [README.md](README.md)
-(capacitors, current electricity, heat, thermodynamics, geometrical optics,
-wave optics, string waves, sound waves, electromagnetic waves) are complete
-and pass `python3 tools/check_all.py`. Everything below is the rest of a
-standard JEE Advanced / NSEP / INPhO / IPhO syllabus, organised so a
-contributor can claim one topic, scaffold it with `python3 tools/new_topic.py`,
-and write it to the same standard (proof-first, Cengage floor + Olympiad
-extension, 8-part didactic structure, SVG figures, interleaved solutions,
-final paper, formula sheet — see [CONTRIBUTING.md](CONTRIBUTING.md)).
+Regenerated: 2026-09-24, from the repository state rather than from prose.
+The counts below were produced by walking `topics.json` and the topic folders,
+so they agree with `python3 tools/check_all.py` (26 registered topics, gate
+green).
 
-To claim a topic, open a PR (or an issue) that sets its `"owner"` in
-[`topics.json`](topics.json) and flips `"status"` to `"in-progress"`. **[plan.md](plan.md) numbers every remaining chapter as PART 1 … PART 28** (mechanics 1–12, electricity and magnetism 13–22, modern physics 23–28), so a chapter is claimed by part number — *"execute PART 17"*. Nothing
-below is locked; `rotational-mechanics` is already in the registry as a
-suggestion but not yet scaffolded.
+**Score: 16 of the 28 [plan.md](plan.md) parts are written. 12 remain** —
+`fluid-mechanics` and `elasticity` close out mechanics, and the whole of
+electricity & magnetism (PART 13–22) is untouched. Those twelve are the only
+chapter-sized gaps left in the syllabus this repository set out to cover.
 
-Reading order is the suggested dependency order; earlier topics are
-prerequisites for later ones.
+Everything below is organised so a contributor can claim one topic, scaffold it,
+and write it to the same standard: proof-first, Cengage floor plus an Olympiad
+extension, the 15-block spine of [plan.md](plan.md) §1.4, `DIAGRAM` figure
+briefs instead of images, interleaved solutions, a 36-question 200-mark paper,
+and a formula sheet. The content bar is [CONTRIBUTING.md](CONTRIBUTING.md); the
+layout contract is [STRUCTURE.md](STRUCTURE.md).
+
+**Claim by part number.** [plan.md](plan.md) numbers every chapter PART 1 …
+PART 28, so a chapter is claimed as *"execute PART 17"*. To claim one: set
+`"owner"` and `"status": "in-progress"` for its slug in
+[`topics.json`](topics.json), add its row to the table in
+[README.md](README.md), and mark its line here — those three edits land in the
+same commit as the first draft (plan.md §1.9).
 
 ---
 
-## 0. How these rows map to plan.md's PART numbers
+## 0 · Score board
 
-[plan.md](plan.md) is now the authoritative document and numbers every one of these chapters
-**PART 1 … PART 28**; the tables below use the older M/E/P ordering, so use this bridge:
+| block | parts | written | remaining |
+|---|---|---:|---:|
+| A · Mechanics | 1–12 | 1–10 | **11, 12** |
+| B · Electricity & magnetism | 13–22 | — | **13–22** |
+| C · Modern physics | 23–28 | 23–28 | — |
+| Shipped note-sets (plan.md Appendix A) | — | 9 | — |
 
-| PENDING rows | plan.md parts |
+Reading order is the dependency order; earlier parts are prerequisites for later
+ones. plan.md §0.4 lists which parts can be written in parallel.
+
+### How the older row labels map to plan.md's PART numbers
+
+The tables in §1–§3 below used to be ordered M/E/P. That ordering is retired;
+plan.md is authoritative. The bridge, for anyone holding an old note:
+
+| old label | plan.md part |
 |---|---|
-| M1 units-measurements · M3 vectors · M2 kinematics-1d · M4 projectile-motion · M5 newtons-laws · M6 work-energy-power · M7 center-of-mass · M8 rotational-mechanics · M9 gravitation · M10 simple-harmonic-motion · M11 fluid-mechanics · M12 elasticity | **PART 1–12** (in that order: vectors now precedes 1-D kinematics) |
-| E1 coulomb-electric-field · E2 gauss-law · E3 electric-potential · E4 magnetic-field · E5 amperes-law · E6 moving-charges-magnetism · E7 magnetism-matter · E8 electromagnetic-induction · E9 inductance · E10 ac-circuits | **PART 13–22** |
-| P1 photoelectric-effect · P2 atomic-structure · P3 x-rays · P4 nuclear-physics · P5 radioactivity | **PART 23–26** (P5 is merged into PART 26, as its own row suggests) |
-| P6 semiconductors · P7 communication-systems · P8 special-relativity | **PART 27** · *dropped* (JEE-Main-only; see plan.md Appendix B) · **PART 28** |
+| M1 units · M3 vectors · M2 kinematics-1d · M4 projectiles · M5 Newton's laws · M6 work-energy · M7 centre of mass · M8 rotation · M9 gravitation · M10 SHM · M11 fluids · M12 elasticity | **PART 1–12** in that order (vectors precedes 1-D kinematics) |
+| E1 Coulomb/field · E2 Gauss · E3 potential · E4 magnetic field · E5 Ampère · E6 moving charges · E7 magnetism & matter · E8 EMI · E9 inductance · E10 AC | **PART 13–22** |
+| P1 photoelectric · P2 atom · P3 X-rays · P4 nucleus · P5 radioactivity | **PART 23–26** (P5 is folded into PART 26) |
+| P6 semiconductors · P7 communication systems · P8 relativity | **PART 27** · dropped (JEE-Main only; plan.md Appendix B) · **PART 28** |
 | M0 capacitors and the current-electricity rows | already shipped: [capacitors/](capacitors/), [current-electricity/](current-electricity/) — do not rewrite |
 
-Each of those parts carries its own source line, teaching order, must-derive list, figure briefs,
-archetypes, Olympiad block and traps. Claim a chapter by part number and follow plan.md §1.
+Note the slug corrections plan.md makes against the old table: PART 13 is
+`electric-field` (not `coulomb-electric-field`), PART 19 is
+`magnetism-and-matter`, PART 22 is `alternating-current`.
 
 ---
 
-## 1. Mechanics (Cengage *Mechanics 1* and *Mechanics 2*)
+## 1. Remaining: mechanics (Cengage *Mechanics II*)
 
-Both mechanics volumes are supplied as reference PDFs, **committed in this
-repository** (`Cengage  MECHANICS  1-compressed.pdf`, `Cengage MECHANICS 2-compressed.pdf`
-— `git ls-files | grep pdf`), but **no note-set yet exists** for any of the
-mechanics chapters. These are the foundation for everything else. plan.md §1.13 maps each
-PDF to the chapters it really contains — note that *Mechanics II* has no separate
-work-energy chapter (it lives inside ch 2 *Rigid Body Dynamics*) and that SHM is in the
-*Waves and Thermodynamics* volume, not *Mechanics II*.
+Both mechanics volumes are committed in this repository
+(`Cengage  MECHANICS  1-compressed.pdf`, `Cengage MECHANICS 2-compressed.pdf` —
+`git ls-files | grep pdf`), so the book sweep of plan.md §1.12 is verifiable for
+both of these chapters. plan.md §1.13 maps each PDF to the chapters it really
+contains.
 
-| order | slug (suggested) | title | scope / Cengage floor | depends on |
-|---:|---|---|---|---|
-| M1 | `units-measurements` | Units, Dimensions & Measurement Errors | SI, dimensional analysis, significant figures, error propagation, vernier / screw-gauge | — | ✅ COMPLETE (PART 1) |
-| M2 | `kinematics-1d` | Kinematics in One Dimension | position/velocity/acceleration, graphs, constant-`a` equations, free fall | M1 | |
-| M3 | `vectors` | Vectors & Vector Algebra | components, dot/cross product, unit vectors, resolution | M1 | ✅ COMPLETE (PART 2) |
-| M4 | `motion-in-two-dimensions` | Projectile & 2-D Motion | oblique projection, range/max-height, projection from height/tower, relative velocity | M2, M3 | ✅ COMPLETE (PART 4) |
-| M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 | ✅ COMPLETE (PART 5) |
-| M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 | ✅ COMPLETE (PART 6) |
-| M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 | ✅ COMPLETE (PART 7) |
-| M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 |
-| M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 |
-| M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 |
-| M8 | `rotational-mechanics` | ✅ COMPLETE — PART 8 · Rotational Mechanics | moment of inertia, parallel/perpendicular axes, torque, $\vec{\tau}=I\vec{\alpha}$, angular momentum, rolling motion, gyroscopic precession | M7 |
-| M9 | `gravitation` | ✅ COMPLETE — PART 9 · Gravitation | universal law, g variation (altitude/depth/rotation), orbital motion, Kepler, escape velocity, satellites, gravitational PE | M8 |
-| M10 | `simple-harmonic-motion` | ✅ COMPLETE — PART 10 · Simple Harmonic Motion | differential equation, $x=A\sin(\omega t+\phi)$, spring-mass, simple & compound pendulum, energy, damped/forced (intro), SHM as circular-motion projection | M6, M8 |
-| M11 | `fluid-mechanics` | Fluid Mechanics (Hydrostatics & Hydrodynamics) | pressure, Pascal/Archimedes, surface tension, Bernoulli, Torricelli, Venturi, viscosity, Stokes, Reynolds | M5, M7 |
-| M12 | `elasticity` | Elasticity & Properties of Matter | stress/strain, Hooke, Young/Bulk/Shear moduli, Poisson ratio, beam bending (intro) | M5 |
+| PART | slug | title | scope / Cengage floor | needs | status |
+|---:|---|---|---|---|---|
+| 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | hydrostatics from $\frac{dp}{dy}=-\rho g$; Pascal; Archimedes derived twice; metacentre; buoyancy in non-inertial frames; continuity; Bernoulli and its four validity conditions; Torricelli, Venturi, pitot, siphon; momentum flux; viscosity; Poiseuille derived; Stokes and terminal velocity; Reynolds; surface tension (both definitions, excess pressure, capillarity) | 5, 6 | **pending** |
+| 12 | `elasticity` | Elasticity & Properties of Matter | stress/strain; $Y$, $B$, $G$ from their experiments; the stress–strain curve's landmarks; Poisson's ratio and the two interrelations; extension under load, self-weight, composite rods; thermal stress; torsion; elastic energy density and the suddenly-applied load; bending and the neutral axis; the atomic-spring derivation of $Y$ | 5 | **pending** |
+
+* Cengage floor for 11: *Mechanics II* ch 3 Fluid Mechanics, plus ch 4
+  Properties of Solids and Fluids for surface tension.
+* Cengage floor for 12: *Mechanics II* ch 4 Properties of Solids and Fluids (the
+  elasticity half; the fluid half is PART 11's).
+* plan.md §5.3 sizes 11 as **large** (16 000–22 000 words) and 12 as **compact**
+  (9 000–13 000).
 
 ---
 
-## 2. Electrostatics & Magnetism (Cengage *Electrostatics and Current Electricity* ch. 1–3; standalone magnetism/EMI volumes)
+## 2. Remaining: electricity & magnetism (PART 13–22)
 
-Capacitors (ch. 4) and Current Electricity (chs. 5–7) are **already complete**.
-What is missing is the run-up to capacitors and the entire magnetism / EMI /
-AC block.
+This is the largest single block left, and the second-heaviest on a JEE Advanced
+paper. Capacitors and current electricity are already shipped, so the block sits
+directly on top of existing notes — but note that only PART 13–15 have a PDF in
+this repository to sweep. **There is no magnetism, EMI, inductance or AC volume
+here** (plan.md §1.13): PART 16–22 build their coverage map from the standard
+syllabus headings listed in their plan.md sections, plus the shipped
+`current-electricity/` and `electromagnetic-waves/` notes.
 
-| order | slug (suggested) | title | scope / Cengage floor | depends on |
-|---:|---|---|---|---|
-| E1 | `coulomb-electric-field` | Coulomb's Law & Electric Field | Coulomb, superposition, E due to rod/ring/disc/arc, dipole in E field, electric lines of force | M4 |
-| E2 | `gauss-law` | Gauss's Law & Electric Flux | flux, Gauss, applications (shell, sheet, wire, solid sphere, conductor) | E1 |
-| E3 | `electric-potential` | Electric Potential & Potential Energy | $V = kq/r$, potential due to distributions, equipotentials, $\mathbf{E}=-\nabla V$, conductors in equilibrium, $W=q\Delta V$ | E2 |
-| M0 (placed here because Capacitors depends on it — note: already covered in capacitors §1 from field theory, but a standalone note is a candidate) | — | Capacitors & Capacitance | — | **already in repo: [capacitors/](capacitors/)** |
-| E4 | `magnetic-field` | Magnetic Field & Biot–Savart | $\mathbf{B}$ due to straight wire, loop, arc, solenoid, ampere definition; Lorentz force | E3, M3 |
-| E5 | `amperes-law` | Ampère's Law & Magnetic Forces on Currents | Ampère applications (wire, solenoid, toroid); force on current wire; force between parallel wires; torque on current loop / magnetic dipole | E4 |
-| E6 | `moving-charges-magnetism` | Motion of Charged Particles in B Fields | cyclotron radius/helix, velocity selector, cyclotron, J.J. Thomson, Hall effect | E4 |
-| E7 | `magnetism-matter` | Magnetism & Matter | para/dia/ferro, magnetisation $\mathbf{M}$, $\mathbf{H}$, hysteresis, Earth's magnetism, magnetic materials | E5 |
-| E8 | `electromagnetic-induction` | Electromagnetic Induction (Faraday / Lenz) | magnetic flux, Faraday, Lenz, motional emf, induced E field, eddy currents | E5, M10 |
-| E9 | `inductance` | Self & Mutual Inductance | $L$, $M$, solenoid/toroid inductance, RL circuits, L/R time constant, energy in B field | E8 |
-| E10 | `ac-circuits` | Alternating Current & RLC Circuits | phasors, LCR series/parallel, resonance, Q-factor, power factor, transformer, LC oscillations | E9, M10 |
+| PART | slug | title | scope / floor | needs | status |
+|---:|---|---|---|---|---|
+| 13 | `electric-field` | Charge, Coulomb's Law & Electric Field | Coulomb and superposition; $E$ for rod, ring, disc, arc, shell; dipole in a field; lines of force | 2 | **pending** — PDF available (ch 1) |
+| 14 | `gauss-law` | Electric Flux & Gauss's Law | flux; Gauss; shell, sheet, wire, solid sphere, conductor | 13 | **pending** — PDF available (ch 2) |
+| 15 | `electric-potential` | Potential, Potential Energy & Conductors | $V=kq/r$; distributions; equipotentials; $\mathbf{E}=-\nabla V$; conductors in equilibrium; $W=q\Delta V$ | 14 | **pending** — PDF available (ch 3) |
+| 16 | `magnetic-field` | Magnetic Field, Biot–Savart & the Lorentz Force | $B$ for wire, loop, arc, solenoid; the ampere; Lorentz force | 15 | **pending** — no PDF in repo |
+| 17 | `amperes-law` | Ampère's Law, Currents & Magnetic Dipoles | Ampère for wire, solenoid, toroid; force on a current; force between parallel wires; torque on a loop | 16 | **pending** — no PDF in repo |
+| 18 | `moving-charges-magnetism` | Cyclotron, Velocity Selector & the Hall Effect | cyclotron radius and helix; velocity selector; cyclotron; J.J. Thomson; Hall effect | 17 | **pending** — no PDF in repo |
+| 19 | `magnetism-and-matter` | Magnetism & Matter, Earth's Magnetism | para/dia/ferro; $\mathbf{M}$ and $\mathbf{H}$; hysteresis; Earth's field; magnetic materials | 17 | **pending** — no PDF in repo |
+| 20 | `electromagnetic-induction` | Faraday, Lenz, Motional EMF & Eddy Currents | flux; Faraday; Lenz; motional emf; induced $E$ field; eddy currents | 17 | **pending** — no PDF in repo |
+| 21 | `inductance` | Self & Mutual Inductance, RL Circuits & Magnetic Energy | $L$, $M$; solenoid and toroid inductance; RL transients; $L/R$; energy in a $B$ field | 20 | **pending** — no PDF in repo |
+| 22 | `alternating-current` | AC Circuits, Resonance & Transformers | phasors; series and parallel LCR; resonance; $Q$; power factor; transformer; LC oscillations | 21 | **pending** — no PDF in repo |
 
----
-
-## 3. Optics & Modern Physics (Cengage *Optics and Modern Physics*)
-
-Geometrical Optics (ch. 1) and Wave Optics (ch. 2) are **already complete**.
-The modern-physics half of that volume is the largest single remaining block.
-
-| order | slug (suggested) | title | scope / Cengage floor | depends on |
-|---:|---|---|---|---|
-| P1 | `photoelectric-effect` | **PART 23 — complete (arena-agent)** · Photoelectric Effect & Dual Nature | photon hypothesis, Einstein equation, stopping potential, cutoff, de Broglie, Davisson–Germer | E3 |
-| P2 | `atomic-structure` | **PART 24 — complete (arena-agent)** · Atomic Structure (Bohr Model & Beyond) | Rutherford scattering, Bohr postulates, H-atom spectra, X-rays (Mosley), Bohr shortcomings, Sommerfeld, quantum numbers (intro) | P1 |
-| P3 | `x-rays` | **PART 25 — complete (arena-agent)** · X-rays — production, spectra & Bragg | continuous/characteristic, $f_{\min}$, Moseley, Bragg diffraction, Compton scattering | P2 |
-| P4 | `nuclear-physics` | **PART 26 — complete (arena-agent)** · Nuclear Physics | nuclear size/density, binding energy / mass defect, radioactivity (α β γ, decay law), half-life/mean-life, chain reaction, fission/fusion | P2 |
-| P5 | `radioactivity` | **PART 26 — merged and complete (arena-agent)** · Radioactivity & Decay Kinetics folded into P4 | decay series, secular/transient equilibrium, carbon dating, statistical nature — all live in `nuclear-physics/` §3.9-3.11, OL5/OL9 | P4 |
-| P6 | `semiconductors` | **PART 27 — complete (arena-agent)** · Semiconductors & Electronic Devices | bands, intrinsic/extrinsic, p-n junction diode, LED, Zener, transistor (BJT) basics, logic gates (intro) | E10 |
-| P7 | `communication-systems` | **complete (arena-agent)** · Communication Systems | amplitude/frequency modulation, bandwidth, EM-propagation modes, signal processing (JEE-main level) | EM-waves |
-| P8 | `special-relativity` | **PART 28 — complete (arena-agent)** · Special Relativity | postulates, time dilation, length contraction, relativistic momentum/energy, $E=mc^2$, Doppler (optical) | M6, EM-waves, 23 |
+plan.md §0.4 puts 20, 21 and 22 in one batch on purpose: EMI → inductance → AC
+is a single continuous argument and should not be split across agents.
 
 ---
 
-## 4. Thermodynamics / Matter already covered
+## 3. Done: the sixteen written parts
 
-The two matter-and-heat volumes share several chapter lists with what is
-already in the repo. No duplicate note-sets are wanted here:
+| PART | slug | location |
+|---:|---|---|
+| 1 | `units-measurements` | [Units-measurements.md](units-measurements/Units-measurements.md) |
+| 2 | `vectors` | [Vectors.md](vectors/Vectors.md) |
+| 3 | `kinematics-1d` | [Kinematics-1d.md](kinematics-1d/Kinematics-1d.md) |
+| 4 | `motion-in-two-dimensions` | [Motion-in-two-dimensions.md](motion-in-two-dimensions/Motion-in-two-dimensions.md) |
+| 5 | `newtons-laws` | [Newtons-laws.md](newtons-laws/Newtons-laws.md) |
+| 6 | `work-energy-power` | [Work-energy-power.md](work-energy-power/Work-energy-power.md) |
+| 7 | `centre-of-mass-momentum` | [Centre-of-mass-momentum.md](centre-of-mass-momentum/Centre-of-mass-momentum.md) |
+| 8 | `rotational-mechanics` | [Rotational-mechanics.md](rotational-mechanics/Rotational-mechanics.md) |
+| 9 | `gravitation` | [Gravitation.md](gravitation/Gravitation.md) |
+| 10 | `simple-harmonic-motion` | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) |
+| 23 | `photoelectric-effect` | [Photoelectric-effect.md](photoelectric-effect/Photoelectric-effect.md) |
+| 24 | `atomic-structure` | [Atomic-structure.md](atomic-structure/Atomic-structure.md) |
+| 25 | `x-rays` | [X-rays.md](x-rays/X-rays.md) |
+| 26 | `nuclear-physics` | [Nuclear-physics.md](nuclear-physics/Nuclear-physics.md) — absorbs the old P5 radioactivity row |
+| 27 | `semiconductors` | [Semiconductors.md](semiconductors/Semiconductors.md) |
+| 28 | `special-relativity` | [Special-relativity.md](special-relativity/Special-relativity.md) |
 
-- ✅ thermodynamics (kinetic theory, first & second law, entropy, engines) — [thermodynamics/](thermodynamics/)
-- ✅ heat transfer & calorimetry — [heat/](heat/)
-- ❓ **Thermal expansion / calorimetry / kinetic theory** — already folded into
-  `heat/` and `thermodynamics/` (see their Cengage coverage maps); no separate
-  note-set planned unless a hole is found during review.
+Plus `communication-systems` (the old P7 row): written at JEE-Main depth, and
+**deliberately not a plan.md part** — plan.md Appendix B drops it as a chapter of
+its own, and the note says so.
 
 ---
 
-## 5. Already complete (quick index, so the list above is the complement)
+## 4. Thermodynamics and matter: no separate note-sets planned
+
+The two matter-and-heat volumes share their chapter lists with notes that
+already exist. Nothing is missing here:
+
+- ✅ thermodynamics — kinetic theory, first and second law, entropy, engines: [thermodynamics/](thermodynamics/)
+- ✅ heat transfer and calorimetry: [heat/](heat/)
+- ✅ thermal expansion, calorimetry and kinetic theory are folded into the two
+  above (see their Cengage coverage maps). No separate note-set is planned
+  unless a hole turns up during review.
+
+---
+
+## 5. Shipped note-sets (the complement of everything above)
 
 | # | topic | location |
 |---:|---|---|
@@ -139,38 +165,59 @@ already in the repo. No duplicate note-sets are wanted here:
 
 ## 6. Priority recommendation
 
-If you are picking up work from scratch, the highest-leverage order is:
+1. **PART 11 fluids, then PART 12 elasticity.** They close mechanics, both have a
+   PDF in this repository to sweep, and both are prerequisites for later work
+   (PART 11 hands the shallow-water wave speed to the shipped sound-waves note
+   and the momentum-flux argument back to PART 7).
+2. **PART 13 → 14 → 15 Coulomb/Gauss/potential.** The only E&M parts with a
+   verifiable Cengage floor here, and each is the successor of the one before.
+3. **PART 16 → 17, then 18 and 19 in parallel.** Magnetism proper; 18 and 19 both
+   need only 17.
+4. **PART 20 → 21 → 22 as one batch.** EMI, inductance and AC are one argument.
+5. Nothing else is outstanding. When PART 22 lands, plan.md's 28 parts are
+   complete and this file should say so.
 
-1. **M5 Newton's laws → M6 Work/energy → M7 COM → M8 Rotational mechanics** —
-   these are the spine of every mechanics problem, and mechanics is roughly
-   30–35 % of any JEE Advanced paper. `rotational-mechanics/` is already
-   registered as `planned`.
-2. **E1–E3 Coulomb/Gauss/Potential → E4–E7 Magnetism → E8–E9 EMI/Inductance
-   → E10 AC circuits** — the second-largest weight on JEE Advanced, and all
-   four blocks sit directly on top of the existing capacitors/current notes.
-3. **P1–P4 Photoelectric → Atom → X-rays → Nucleus** — the modern-physics
-   octave that closes the Cengage *Optics and Modern Physics* volume.
-4. **M10 SHM, M11 Fluids, M9 Gravitation, M12 Elasticity** — important
-   standalone topics that can be written in parallel after M5–M8.
-5. **M1–M4 Units, vectors, 1-D kinematics, projectiles** — shorter, mostly
-   school-level, but needed for completeness.
+---
+
+## 7. Repository integration — current state
+
+These are the cross-cutting chores, so a chapter agent knows what is already
+wired up and what it still has to do.
+
+| integration point | state |
+|---|---|
+| `topics.json` registry | 26 topics, all `complete`, all with `format`/`entry`/`owner` and mechanically recounted counts. Gate green. |
+| `tools/check_all.py` | green (`python3 tools/check_all.py --quick`). Every Markdown-first topic now has an `entry`, so its counts are actually checked rather than assumed. |
+| `tools/md_site.py` / `docs/site/` | **all 26 topics render**, grouped by block, with Obsidian callouts, frontmatter properties, wikilinks and `DIAGRAM` briefs styled. Regenerate with `python3 tools/md_site.py` (needs `pip install markdown`). |
+| [README.md](README.md) | one row per note-set in the table; keep the counts matching the registry after each recount. |
+| [CURRICULUM.md](CURRICULUM.md) | **stale** — it still describes nine note-sets and does not mention the sixteen plan.md chapters. Coordinator job (plan.md §6.2), not a chapter-agent job. |
 
 ---
 
 ## Claiming a topic
 
-1. In [`topics.json`](topics.json), add an entry (or copy the existing
-   `rotational-mechanics` stub):
-   ```json
-   { "slug": "<kebab-name>", "title": "...", "status": "in-progress",
-     "owner": "<your-handle>", "entry": "<kebab-name>/index.html",
-     "exam": ["JEE Advanced", "NSEP", "INPhO", "IPhO"] }
-   ```
-2. Scaffold: `python3 tools/new_topic.py <slug> --title "<Title>" --chapters "01-..."`.
-3. Write it to the structure in [plan.md](plan.md) §1.4 — the **15-block spine** (for the chapters numbered PART 1–28 below) — or the eight-part structure of the archived v1 blueprint for the wave/optics topics.
-4. Into the note-set: **Obsidian-first, text-only Markdown** (plan.md §1.3.1 — frontmatter, callouts, `$...$`/`$$...$$`, `<details>` solutions) with inline `> [!abstract] DIAGRAM D<n>.<k>` figure briefs (plan.md §1.2) for every new chapter — no image files, no SVG, no bitmaps, no CDN. The shipped wave/optics topics keep their existing local SVG figures.
-5. **Sweep the book.** Read your Cengage chapter's own contents page from the PDF in this repo (plan.md §1.13) and close every gap the plan left, recording what you added under `## Beyond the plan` in the chapter README and in `topics.json` `beyond_plan` (plan.md §1.12).
-6. Run `python3 tools/check_all.py --update` to refresh the registry counts
-   and validate. Flip `status` to `complete` when the gate is green.
-7. Add the topic to `tools/md_site.py` `TOPICS` and `name_map` lists, regenerate
-   with `python3 tools/md_site.py`, and update this file and the README table.
+1. In [`topics.json`](topics.json), append one object for your slug (template:
+   plan.md Appendix C.7) with `"status": "in-progress"`, your `"owner"`,
+   `"entry": "<slug>/<Title>.md"`, `"format": "markdown"`, `"plan_part": <N>`,
+   `"source"`, `"exam"`, `"media"` and `"beyond_plan"`. Leave every mechanical
+   count to `--update`.
+2. Scaffold the four files of plan.md §1.1: `<Title>.md`, `README.md`,
+   `notes.json`, `tools/check.py` (copied verbatim from Appendix C.2).
+   `tools/new_topic.py` scaffolds the *HTML-first* layout; the plan.md chapters
+   are Markdown-first and text-only, so most agents write the four files
+   directly from the Appendix C templates.
+3. Write it to the **15-block spine** of plan.md §1.4.
+4. **Obsidian-first, text-only Markdown** (plan.md §1.3.1): frontmatter,
+   callouts, `$...$` / `$$...$$`, `<details>` solutions, and inline
+   `> [!abstract] DIAGRAM D<N>.<k>` figure briefs (§1.2) — no image files, no
+   SVG, no bitmaps, no CDN. The nine shipped note-sets keep their local SVGs.
+5. **Sweep the book** (plan.md §1.12). Read your Cengage chapter's own contents
+   page from the PDF in this repo (§1.13) and account for every heading in the
+   block-0 coverage map. Record what you added under `## Beyond the plan` in the
+   chapter README and in `topics.json` `beyond_plan`.
+6. Run `cd <slug> && python3 tools/check.py` until it prints `ALL GOOD`, then
+   `python3 tools/check_all.py --update` from the root. Flip `status` to
+   `complete` when both are green.
+7. Add your row to [README.md](README.md), mark your line in this file, and —
+   coordinator step — append one tuple to `TOPICS` and one line to
+   `SLUG_BY_NOTE` in `tools/md_site.py`, then regenerate `docs/site/`.
