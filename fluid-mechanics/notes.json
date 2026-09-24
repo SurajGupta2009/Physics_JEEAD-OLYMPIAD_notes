@@ -1,0 +1,25 @@
+{
+  "slug": "fluid-mechanics",
+  "title": "Fluid Mechanics & Surface Tension",
+  "master": "Fluid-mechanics.md",
+  "part": 11,
+  "source": "Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (viscosity, surface tension, capillarity, pp. 4.20-4.37)",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels",
+  "paper": {
+    "questions": 36,
+    "marks": 200,
+    "minutes": 180,
+    "sections": { "4": 20, "5": 6, "9": 10 }
+  },
+  "minimums": {
+    "checks": 12,
+    "exemplars": 10,
+    "practice": 25,
+    "olympiad": 10,
+    "diagrams": 12,
+    "words": 16000,
+    "callouts": 24
+  },
+  "callout_types": ["note", "info", "warning", "success", "danger", "tip", "quote",
+                    "question", "abstract", "example"]
+}

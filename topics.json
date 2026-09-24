@@ -1122,6 +1122,55 @@
       "solutions": 93,
       "math_spans": 926,
       "bytes_html": 0
+    },
+    {
+      "slug": "fluid-mechanics",
+      "title": "Fluid Mechanics & Surface Tension — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "fluid-mechanics/Fluid-mechanics.md",
+      "format": "markdown",
+      "plan_part": 11,
+      "part": 11,
+      "source": "Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (pp. 4.20-4.37)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "newtons-laws",
+        "work-energy-power"
+      ],
+      "beyond_plan": [
+        "the rotating-frame pressure statement p - rho omega^2 r^2/2 + rho g z = const unifying the modified manometric equation, equipressure lines and the pendulum comparison",
+        "the finite-vs-infinite emptying-time contrast and the inertial/turbulent honesty note for water drains (OL1)",
+        "the sinking-ball scale-reading family (P16)",
+        "the hydraulic-resistance analogy as an explicit toolkit item (T5, Q19)",
+        "two decision-tree DIAGRAM briefs (D11.16, D11.17) replacing two micro-briefs the prose carries",
+        "the hydraulic jump and entropy-selection closing of the paper (P36)",
+        "the catenoid existence limit stated with its physics (OL4)"
+      ],
+      "deliberately_not_covered": [
+        "the rocket-in-a-fluid retarding-force estimate (plan's olympiad list; its momentum-flux method is taught in 3.11, item cut for space)",
+        "turbulent pipe-flow corrections beyond the Reynolds criterion (named as a failure mode in 10.1)"
+      ],
+      "next_candidates": [
+        "a timed 25-question JEE-Advanced-only set keyed to blocks 2-4"
+      ],
+      "pages": [
+        "Fluid-mechanics.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1410,
+      "bytes_html": 0,
+      "bytes_markdown": 124120,
+      "words": 18099,
+      "display_formulas": 28
     }
   ]
 }

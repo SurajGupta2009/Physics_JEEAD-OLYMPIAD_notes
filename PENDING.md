@@ -5,9 +5,9 @@ The counts below were produced by walking `topics.json` and the topic folders,
 so they agree with `python3 tools/check_all.py` (26 registered topics, gate
 green).
 
-**Score: 16 of the 28 [plan.md](plan.md) parts are written. 12 remain** —
-`fluid-mechanics` and `elasticity` close out mechanics, and the whole of
-electricity & magnetism (PART 13–22) is untouched. Those twelve are the only
+**Score: 17 of the 28 [plan.md](plan.md) parts are written. 12 remain** —
+`fluid-mechanics` and `elasticity` close out mechanics, and elasticity (PART 12, in progress this session) and the whole of
+electricity & magnetism (PART 13–22). Those eleven are the only
 chapter-sized gaps left in the syllabus this repository set out to cover.
 
 Everything below is organised so a contributor can claim one topic, scaffold it,
@@ -67,7 +67,7 @@ contains.
 
 | PART | slug | title | scope / Cengage floor | needs | status |
 |---:|---|---|---|---|---|
-| 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | hydrostatics from $\frac{dp}{dy}=-\rho g$; Pascal; Archimedes derived twice; metacentre; buoyancy in non-inertial frames; continuity; Bernoulli and its four validity conditions; Torricelli, Venturi, pitot, siphon; momentum flux; viscosity; Poiseuille derived; Stokes and terminal velocity; Reynolds; surface tension (both definitions, excess pressure, capillarity) | 5, 6 | **pending** |
+| 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | hydrostatics from $\frac{dp}{dy}=-\rho g$; Pascal; Archimedes derived twice; metacentre; buoyancy in non-inertial frames; continuity; Bernoulli and its four validity conditions; Torricelli, Venturi, pitot, siphon; momentum flux; viscosity; Poiseuille derived; Stokes and terminal velocity; Reynolds; surface tension (both definitions, excess pressure, capillarity) | 5, 6 | **complete** — [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md), gate green, 20 DIAGRAM briefs |
 | 12 | `elasticity` | Elasticity & Properties of Matter | stress/strain; $Y$, $B$, $G$ from their experiments; the stress–strain curve's landmarks; Poisson's ratio and the two interrelations; extension under load, self-weight, composite rods; thermal stress; torsion; elastic energy density and the suddenly-applied load; bending and the neutral axis; the atomic-spring derivation of $Y$ | 5 | **pending** |
 
 * Cengage floor for 11: *Mechanics II* ch 3 Fluid Mechanics, plus ch 4

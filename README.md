@@ -38,6 +38,7 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **rotational mechanics** | [Rotational-mechanics.md](rotational-mechanics/Rotational-mechanics.md) | text-only, 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 8 |
 | **gravitation** | [Gravitation.md](gravitation/Gravitation.md) | text-only, 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 9 |
 | **simple harmonic motion** | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) | text-only, 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 10 |
+| **fluid mechanics & surface tension** | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) | text-only, 20 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 11 |
 
 The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 
