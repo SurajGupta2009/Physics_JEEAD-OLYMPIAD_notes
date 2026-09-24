@@ -50,10 +50,10 @@ work-energy chapter (it lives inside ch 2 *Rigid Body Dynamics*) and that SHM is
 
 | order | slug (suggested) | title | scope / Cengage floor | depends on |
 |---:|---|---|---|---|
-| M1 | `units-measurements` | Units, Dimensions & Measurement Errors | SI, dimensional analysis, significant figures, error propagation, vernier / screw-gauge | — |
-| M2 | `kinematics-1d` | Kinematics in One Dimension | position/velocity/acceleration, graphs, constant-`a` equations, free fall | M1 |
-| M3 | `vectors` | Vectors & Vector Algebra | components, dot/cross product, unit vectors, resolution | M1 |
-| M4 | `projectile-motion` | Projectile & 2-D Motion | oblique projection, range/max-height, projection from height/tower, relative velocity | M2, M3 |
+| M1 | `units-measurements` | Units, Dimensions & Measurement Errors | SI, dimensional analysis, significant figures, error propagation, vernier / screw-gauge | — | ✅ COMPLETE (PART 1) |
+| M2 | `kinematics-1d` | Kinematics in One Dimension | position/velocity/acceleration, graphs, constant-`a` equations, free fall | M1 | |
+| M3 | `vectors` | Vectors & Vector Algebra | components, dot/cross product, unit vectors, resolution | M1 | ✅ COMPLETE (PART 2) |
+| M4 | `motion-in-two-dimensions` | Projectile & 2-D Motion | oblique projection, range/max-height, projection from height/tower, relative velocity | M2, M3 | ✅ COMPLETE (PART 4) |
 | M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 |
 | M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 |
 | M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 |
@@ -100,8 +100,8 @@ The modern-physics half of that volume is the largest single remaining block.
 | P4 | `nuclear-physics` | **PART 26 — complete (arena-agent)** · Nuclear Physics | nuclear size/density, binding energy / mass defect, radioactivity (α β γ, decay law), half-life/mean-life, chain reaction, fission/fusion | P2 |
 | P5 | `radioactivity` | **PART 26 — merged and complete (arena-agent)** · Radioactivity & Decay Kinetics folded into P4 | decay series, secular/transient equilibrium, carbon dating, statistical nature — all live in `nuclear-physics/` §3.9-3.11, OL5/OL9 | P4 |
 | P6 | `semiconductors` | **PART 27 — complete (arena-agent)** · Semiconductors & Electronic Devices | bands, intrinsic/extrinsic, p-n junction diode, LED, Zener, transistor (BJT) basics, logic gates (intro) | E10 |
-| P7 | `communication-systems` | Communication Systems | amplitude/frequency modulation, bandwidth, EM-propagation modes, signal processing (intro, JEE-main level only) | EM-waves |
-| P8 | `special-relativity` | Special Relativity *(olympiad/extension)* | postulates, time dilation, length contraction, relativistic momentum/energy, $E=mc^2$, Doppler (optical) | M6, EM-waves |
+| P7 | `communication-systems` | **complete (arena-agent)** · Communication Systems | amplitude/frequency modulation, bandwidth, EM-propagation modes, signal processing (JEE-main level) | EM-waves |
+| P8 | `special-relativity` | **PART 28 — complete (arena-agent)** · Special Relativity | postulates, time dilation, length contraction, relativistic momentum/energy, $E=mc^2$, Doppler (optical) | M6, EM-waves, 23 |
 
 ---
 

@@ -26,6 +26,12 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **x-rays** | [X-rays.md](x-rays/X-rays.md) | text-only, 16 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 25 |
 | **nuclear physics** | [Nuclear-physics.md](nuclear-physics/Nuclear-physics.md) | text-only, 18 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 26 (absorbs PENDING P5) |
 | **semiconductors** | [Semiconductors.md](semiconductors/Semiconductors.md) | text-only, 18 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 27 |
+| **communication systems** | [Communication-systems.md](communication-systems/Communication-systems.md) | text-only, 12 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — PENDING P7 (JEE Main) |
+| **special relativity** | [Special-relativity.md](special-relativity/Special-relativity.md) | text-only, 12 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark IPhO-standard paper | ✅ complete — plan.md PART 28 |
+| **units & dimensions** | [Units-measurements.md](units-measurements/Units-measurements.md) | text-only, 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 1 |
+| **vectors** | [Vectors.md](vectors/Vectors.md) | text-only, 12 DIAGRAM briefs | 37 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 2 |
+| **kinematics (1-D)** | [Kinematics-1d.md](kinematics-1d/Kinematics-1d.md) | text-only, 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 3 |
+| **2-D motion & projectiles** | [Motion-in-two-dimensions.md](motion-in-two-dimensions/Motion-in-two-dimensions.md) | text-only, 12 DIAGRAM briefs | 35 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 4 |
 
 The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 

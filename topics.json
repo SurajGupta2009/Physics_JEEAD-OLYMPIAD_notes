@@ -614,6 +614,235 @@
       "bytes_markdown": 78639,
       "words": 11418,
       "display_formulas": 16
+    },
+    {
+      "slug": "communication-systems",
+      "title": "Communication Systems — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "communication-systems/Communication-systems.md",
+      "format": "markdown",
+      "plan_part": 100,
+      "source": "JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes; plan.md Appendix B marks this as JEE-Main-only, dropped from the 28-part plan)",
+      "exam": [
+        "JEE Main"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "Shannon's theorem and link-budget arithmetic",
+        "the Friis formula derived from first principles",
+        "the FM capture effect",
+        "the entropy/information-content introduction"
+      ],
+      "deliberately_not_covered": [
+        "Advanced digital modulation (QAM, spread-spectrum, OFDM)",
+        "Error-correcting codes",
+        "Information theory beyond Shannon's theorem",
+        "Radar and lidar",
+        "Fibre-optic communication",
+        "Networking protocols"
+      ],
+      "next_candidates": [
+        "digital communication systems: PCM, quantisation noise, SNR",
+        "spread-spectrum and CDMA techniques"
+      ],
+      "pages": [
+        "Communication-systems.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 638,
+      "bytes_html": 0,
+      "bytes_markdown": 76923,
+      "words": 11147,
+      "display_formulas": 16
+    },
+    {
+      "slug": "special-relativity",
+      "title": "Special Relativity & Relativistic Mechanics — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "special-relativity/Special-relativity.md",
+      "format": "markdown",
+      "plan_part": 28,
+      "source": "olympiad extension (IPhO-level; nothing in these volumes); floor is the IPhO relativity syllabus per plan.md PART 28",
+      "exam": [
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "beyond_plan": [
+        "the rapidity variable and its addition law",
+        "the twin-paradox signal-exchange Doppler resolution (the 'what does each twin see?' table)",
+        "the invariant-mass threshold technique applied to the p+p -> p+p+pi0 reaction with collider vs fixed-target comparison"
+      ],
+      "deliberately_not_covered": [
+        "General relativity (the equivalence principle is stated, not developed)",
+        "Relativistic quantum mechanics (the Dirac equation)",
+        "Quantum field theory",
+        "The covariant four-vector formalism (four-vectors and tensors beyond the invariant interval)",
+        "Gravitational redshift and cosmological expansion"
+      ],
+      "next_candidates": [
+        "general relativity introduction: equivalence principle, gravitational redshift, time dilation in a gravitational field",
+        "four-vector formalism: energy-momentum four-vector, invariant mass as a four-vector dot product"
+      ],
+      "pages": [
+        "Special-relativity.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 926,
+      "bytes_html": 0,
+      "bytes_markdown": 82362,
+      "words": 11554,
+      "display_formulas": 18
+    },
+    {
+      "part": 1,
+      "title": "Units, Dimensions & Measurement Errors",
+      "slug": "units-measurements",
+      "folder": "units-measurements",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [],
+      "plan_sections": [
+        "plan.md §1.5"
+      ],
+      "source": [
+        "Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)"
+      ],
+      "beyond_plan": [
+        "least-squares fitting (normal equations for a straight line)",
+        "the Buckingham π theorem (applied to the pendulum and the blast-radius problem)",
+        "the g-measurement design problem",
+        "the chi-squared goodness-of-fit criterion",
+        "standard error of the mean and the sqrt(N) rule",
+        "Avogadro from an oil-film estimate"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 65000,
+      "words": 10800,
+      "display_formulas": 45
+    },
+    {
+      "part": 2,
+      "title": "Vectors & Vector Algebra",
+      "slug": "vectors",
+      "folder": "vectors",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [],
+      "plan_sections": [
+        "plan.md §1.6"
+      ],
+      "source": [
+        "Cengage Mechanics I-compressed.pdf, ch 2 Vectors"
+      ],
+      "beyond_plan": [
+        "the Lagrange identity and the Cauchy-Schwarz inequality",
+        "the Jacobi identity and Lie algebra structure",
+        "vector equations solved by dotting with a clever vector",
+        "the spherical basis and dot-r = omega cross r",
+        "areas and volumes by vector methods",
+        "the rotating-frame velocity and acceleration preview",
+        "proving the sine rule by vectors",
+        "the radius of curvature by vectors"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 78000,
+      "words": 9010,
+      "display_formulas": 50
+    },
+    {
+      "part": 3,
+      "title": "Kinematics in One Dimension",
+      "slug": "kinematics-1d",
+      "folder": "kinematics-1d",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [
+        "units-measurements",
+        "vectors"
+      ],
+      "plan_sections": [
+        "plan.md §1.7"
+      ],
+      "source": [
+        "Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension"
+      ],
+      "beyond_plan": [
+        "linear drag v(t) = v0 e^{-kt} and terminal speed",
+        "quadratic drag solutions (hyperbolic tangent)",
+        "the exponential-hyperbolic contrast",
+        "the pursuit problem in 1-D",
+        "the v dv/dx method for distance-dependent forces",
+        "does a heavier body fall faster with drag?",
+        "drag-coefficient estimation for a raindrop",
+        "the reaction-time stopping-distance design problem",
+        "relativistic 1-D kinematics as a limit-preview"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 75000,
+      "words": 10200,
+      "display_formulas": 42
+    },
+    {
+      "part": 4,
+      "title": "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics",
+      "slug": "motion-in-two-dimensions",
+      "folder": "motion-in-two-dimensions",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [
+        "vectors",
+        "kinematics-1d"
+      ],
+      "plan_sections": [
+        "plan.md §1.8"
+      ],
+      "source": [
+        "Cengage Mechanics I-compressed.pdf, ch 5 Motion in Two Dimensions (+ ch 6)"
+      ],
+      "beyond_plan": [
+        "projectiles with drag (horizontal and vertical equations, asymptotic behaviour)",
+        "the envelope with a headwind",
+        "the hit-a-moving-target optimisation in the target frame",
+        "the launch-angle problem for a target above an incline",
+        "the radius of curvature at the apex and launch",
+        "the conical-spiral problem",
+        "Coriolis deflection order-of-magnitude",
+        "the how-fast-can-a-stone-be-thrown biomechanical estimate",
+        "the minimum-speed interception problem",
+        "the 2-D pursuit problem"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 80000,
+      "words": 11000,
+      "display_formulas": 48
     }
   ]
 }
