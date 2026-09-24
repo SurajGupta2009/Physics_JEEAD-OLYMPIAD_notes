@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communication systems — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="active">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 100</span><span class="prop"><b>slug</b> communication-systems</span><span class="prop"><b>source</b> JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes)</span><span class="prop tag">jee-main</span><span class="prop tag">modern-physics</span><span class="prop tag">communication</span><span class="prop tag">signals</span></p>
+
+<h1 id="communication-systems-first-principles-to-olympiad">Communication Systems — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — why modulation exists, how AM and FM work, how EM waves propagate, how detection strips the message back out. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (Shannon's capacity theorem, the Friis formula, the link budget, the FM capture effect, entropy and information content), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: explain why a baseband signal cannot be transmitted directly over long distances; derive and use the modulation index for AM; compute the bandwidth of an AM signal from its sidebands; draw and analyse AM and FM transmitter and receiver block diagrams; compare AM, FM and PM on bandwidth, noise immunity and power efficiency; calculate the propagation range for ground-wave, sky-wave and space-wave modes; compute the skip distance and maximum usable frequency for ionospheric reflection; design a simple envelope detector and explain its limitations; state Shannon's channel capacity theorem and use it to compare system designs; perform a link-budget calculation with the Friis transmission formula; and estimate the information content of a message source.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>A message cannot ride a carrier unless the carrier's amplitude, frequency or phase is steered by the message — modulation is the steering, and every system in communication is a chain of modulation, transmission and demodulation fighting noise at every step.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<ol>
+<li>State Maxwell's prediction that electromagnetic waves travel at $c=3\times10^8$ m/s. (<code>electromagnetic-waves/</code>)</li>
+<li>Write the relation between wavelength, frequency and wave speed. (<code>electromagnetic-waves/</code>)</li>
+<li>What is the resonant frequency of an LC circuit? (PART 22)</li>
+<li>Explain the ripple voltage $\Delta V\approx I/(2fC)$ of a rectifier-smoothing capacitor. (PART 22, PART 27)</li>
+<li>State the reactance of a capacitor $X_C=1/(\omega C)$ and an inductor $X_L=\omega L$. (PART 22)</li>
+<li>Define RMS voltage and its relation to peak voltage. (PART 22)</li>
+<li>What is the bandwidth of a signal? (PART 22 — resonance bandwidth $\Delta\omega=R/L$)</li>
+</ol>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Main treats this chapter as formula-friendly and moderate-weight: the modulation index, bandwidth calculation, propagation mode identification, and block diagrams are the standard questions. JEE Advanced rarely asks communication questions directly, but the underlying EM-wave physics and AC-circuit reasoning are tested. NSEP and olympiad rounds reward the Friis formula, link-budget arithmetic, and Shannon's theorem. The trap density here is conceptual: confusing AM bandwidth with FM bandwidth, mixing up ground-wave and sky-wave conditions, and forgetting that noise sets the fundamental limit.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a digital-signal-processing course: QAM, spread-spectrum, OFDM, error-correcting codes and networking protocols are out. Not a radar or lidar course: only the transmission link is covered, not range-finding. Not a fibre-optic course: guided-wave communication appears as a one-paragraph mention.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<p>No Cengage communication chapter exists in the supplied volumes (verified). The coverage map is built from the standard JEE Main syllabus headings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Syllabus topic</th>
+<th>Covered in</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Elements of a communication system: transmitter, channel, receiver</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Bandwidth of signals (audio, video, digital)</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Bandwidth of transmission medium (coaxial cable, optical fibre, free space)</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Propagation of EM waves: ground wave, sky wave, space wave</td>
+<td>§3.4–3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Need for modulation: low-frequency attenuation, antenna size</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Amplitude modulation: modulation index, waveform, sidebands, bandwidth</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Frequency modulation: FM waveform, modulation index, bandwidth (Carson's rule)</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Detection/demodulation: envelope detector, ratio detector (FM)</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>AM and FM transmitter and receiver block diagrams</td>
+<td>§3.11</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Shannon's channel capacity (olympiad sweep)</td>
+<td>§3.12, OL1</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Friis transmission formula and link budget (olympiad sweep)</td>
+<td>OL2, OL3</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Entropy and information content (olympiad sweep)</td>
+<td>OL4</td>
+<td>added by sweep</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>You cannot ship a letter without an envelope.</strong> A voice signal oscillates at 300–3400 Hz. Send it as an electromagnetic wave directly and you would need an antenna hundreds of kilometres tall (a quarter-wave antenna at 1 kHz is 75 km). Modulate a high-frequency carrier — stamp the voice onto a 1 MHz wave — and the antenna shrinks to 75 metres. That is the engineering reason for modulation: antenna size, long-distance propagation, and the ability to multiplex many signals on different carriers.</p>
+<p><strong>AM changes the envelope; FM changes the spacing.</strong> In amplitude modulation the carrier's height tracks the message: louder voice, taller wave. In frequency modulation the carrier's spacing tightens and loosens: louder voice, faster wiggles. FM uses more bandwidth but shrugs off amplitude noise — the lightning crack that ruins AM reception barely dents FM. That trade-off (bandwidth versus noise immunity) is the central engineering decision of the chapter.</p>
+<p><strong>The ionosphere is a mirror for short waves.</strong> Below about 30 MHz the ionosphere reflects radio waves back to Earth, enabling reception beyond the horizon — the sky-wave mode that made global radio possible. Above 30 MHz the waves punch through and travel in straight lines — the space-wave mode of TV, FM and mobile phones. The ground wave hugs the Earth's surface but fades with frequency: long-wave AM travels coast to coast, while VHF barely crosses a city. Three propagation modes, three frequency regimes, one ionosphere.</p>
+<p><strong>Noise is not a nuisance; it is the fundamental limit.</strong> Every receiver picks up thermal noise $P_n=kTB$ from the antenna and its own electronics. Shannon proved that a channel with bandwidth $B$ and signal-to-noise ratio $S/N$ can carry at most $C=B\log_2(1+S/N)$ bits per second — a ceiling no engineering can break. Modulation schemes differ in how close they approach this ceiling.</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Typical value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$f_c$</td>
+<td>carrier frequency</td>
+<td>1 MHz (AM broadcast), 100 MHz (FM broadcast)</td>
+</tr>
+<tr>
+<td>$f_m$</td>
+<td>maximum message frequency (modulating signal)</td>
+<td>3.4 kHz (voice), 15 kHz (music)</td>
+</tr>
+<tr>
+<td>$A_c$, $A_m$</td>
+<td>carrier amplitude, message amplitude</td>
+<td>—</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>modulation index (AM)</td>
+<td>$0&lt;\mu\leq1$; over-modulated if $\mu&gt;1$</td>
+</tr>
+<tr>
+<td>$\Delta f$</td>
+<td>frequency deviation (FM)</td>
+<td>$\pm75$ kHz (FM broadcast)</td>
+</tr>
+<tr>
+<td>$\beta$</td>
+<td>modulation index (FM) $=\Delta f/f_m$</td>
+<td>5 (FM broadcast)</td>
+</tr>
+<tr>
+<td>$B$</td>
+<td>bandwidth</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>$S/N$</td>
+<td>signal-to-noise ratio (power)</td>
+<td>dimensionless, or in dB</td>
+</tr>
+<tr>
+<td>$C$</td>
+<td>channel capacity</td>
+<td>bits/s</td>
+</tr>
+<tr>
+<td>$k$</td>
+<td>Boltzmann constant</td>
+<td>$1.38\times10^{-23}$ J/K</td>
+</tr>
+<tr>
+<td>$T$</td>
+<td>noise temperature</td>
+<td>290 K (standard)</td>
+</tr>
+<tr>
+<td>$G_t$, $G_r$</td>
+<td>transmit and receive antenna gains</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>$P_t$, $P_r$</td>
+<td>transmitted and received power</td>
+<td>W</td>
+</tr>
+<tr>
+<td>$\lambda$</td>
+<td>wavelength $=c/f$</td>
+<td>m</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>All frequencies are in Hz unless flagged. The modulation index $\mu$ for AM is always $A_m/A_c$ and must be $\leq1$ for standard AM. The FM modulation index $\beta=\Delta f/f_m$ can exceed 1. Power ratios use the convention $10\log_{10}(P_1/P_2)$ for dB. The noise temperature $T$ is the equivalent temperature of the noise power $P_n=kTB$.</p>
+</div>
+
+<p>Three numbers to carry everywhere: $c=3\times10^8$ m/s; voice bandwidth $=3.4$ kHz; standard noise temperature $T_0=290$ K.</p>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-the-communication-system-model">3.1 The communication system model</h3>
+<p>Every communication system has three parts: the <strong>transmitter</strong> (converts the message into a signal suitable for the channel), the <strong>channel</strong> (the physical medium — wire, fibre, free space), and the <strong>receiver</strong> (extracts the message from the received signal). Noise enters at every stage but is conventionally modelled as additive noise at the channel output. The block diagram is: message source → modulator → transmitter → channel (+ noise) → receiver → demodulator → destination.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.1 · The communication system block diagram</p>
+<p><em>Show:</em> a horizontal chain: message source (microphone icon) arrow to modulator arrow to transmitter (antenna icon) arrow through a box labelled "channel + noise" to receiver (antenna icon) arrow to demodulator arrow to destination (speaker icon). Noise added as a lightning-bolt arrow into the channel box.
+<em>Search:</em> "communication system block diagram transmitter channel receiver noise"</p>
+</div>
+
+<h3 id="32-bandwidth-of-signals">3.2 Bandwidth of signals</h3>
+<p>A pure sinusoidal signal $A\sin(2\pi f t)$ has zero bandwidth — it occupies a single frequency. A real message signal (voice, music, video) occupies a range of frequencies. Human voice: 300 Hz to 3400 Hz, bandwidth 3.1 kHz (telephone standard rounds to 3.4 kHz). Music: 20 Hz to 20 kHz, bandwidth 20 kHz. Video (broadcast TV): up to 6 MHz. Digital signals: a square wave at bit rate $R$ bits/s has harmonics up to roughly $R/2$ Hz, so bandwidth is proportional to bit rate.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.2 · Frequency spectrum of a voice signal</p>
+<p><em>Show:</em> a horizontal frequency axis from 0 to 5 kHz; a filled spectral envelope peaking around 500–2000 Hz and tapering to zero at 300 Hz and 3400 Hz; the 3.1 kHz bandwidth marked with a double-headed arrow.
+<em>Search:</em> "voice signal frequency spectrum bandwidth 300 3400 Hz"</p>
+</div>
+
+<h3 id="33-bandwidth-of-transmission-media">3.3 Bandwidth of transmission media</h3>
+<p>Each medium has a usable bandwidth: twisted-pair copper wire (up to a few MHz), coaxial cable (up to a few hundred MHz), optical fibre (tens of THz), free space (effectively unlimited, but regulated by allocation). The channel's bandwidth limits the bit rate: a 3 kHz telephone channel cannot carry a 6 MHz video signal without compression.</p>
+<h3 id="34-propagation-ground-wave">3.4 Propagation: ground wave</h3>
+<p>The ground wave follows the Earth's surface, bending around it due to diffraction. Attenuation increases with frequency: long-wave AM (30–300 kHz) propagates over thousands of kilometres, while medium-wave AM (300 kHz–3 MHz) reaches hundreds of km during the day. Above a few MHz the ground wave dies within tens of kilometres. The mechanism: the wave induces currents in the Earth's surface, which absorb energy; higher frequencies are absorbed faster.</p>
+<h3 id="35-propagation-sky-wave">3.5 Propagation: sky wave</h3>
+<p>The ionosphere (60–400 km altitude) contains free electrons produced by solar UV. For frequencies below the critical frequency $f_c$ (typically 5–10 MHz, varying with time of day and solar activity), the ionosphere refracts the wave back to Earth — a virtual mirror. The wave can bounce between ground and ionosphere multiple times, reaching around the globe. The maximum usable frequency (MUF) for a given path depends on the incidence angle:</p>
+<p>$$
+f_{\text{MUF}}=\frac{f_c}{\cos\theta}. \qquad (3.1)
+$$</p>
+<p>Above the MUF the wave escapes into space. The skip distance is the minimum ground distance at which the sky wave is received; closer in, only the ground wave (if any) arrives. The skip zone is the dead region between the ground wave's range and the sky wave's landing point.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The critical frequency $f_c$ is the highest frequency reflected when the wave is incident vertically ($\theta=0$, $\cos\theta=1$). At oblique incidence the effective electron density seen by the wave increases, so a higher frequency is reflected — this is the $\sec\theta$ factor.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.3 · Sky-wave propagation with skip distance</p>
+<p><em>Show:</em> the Earth's surface as a curved line at the bottom; the ionosphere as a horizontal band 100–300 km above; a transmitter antenna on the left sending an oblique ray up to the ionosphere, reflecting back down to a distant receiver; the skip distance (ground range) labelled; a second ray at steeper angle reflecting closer; the skip zone shaded between ground-wave range and first sky-wave landing.
+<em>Search:</em> "sky wave ionospheric reflection skip distance skip zone diagram"</p>
+</div>
+
+<h3 id="36-propagation-space-wave">3.6 Propagation: space wave</h3>
+<p>Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon:</p>
+<p>$$
+d=\sqrt{2Rh} \qquad (3.2)
+$$</p>
+<p>where $R=6400$ km is Earth's radius and $h$ is the antenna height. For a TV tower at 100 m: $d=\sqrt{2\times6400\times0.1}=35.8$ km. Tropospheric scattering extends the range slightly beyond the geometric horizon. FM radio, television, mobile phones, and satellite communication all use space-wave propagation.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.4 · Line-of-sight propagation and horizon distance</p>
+<p><em>Show:</em> the Earth as a circle; a tower of height $h$ on the surface; a tangent line from the tower top to the horizon point; the distance $d$ along the surface; the formula $d=\sqrt{2Rh}$ labelled; a second taller tower with a longer range drawn beside it for comparison.
+<em>Search:</em> "line of sight propagation horizon distance antenna height diagram"</p>
+</div>
+
+<h3 id="37-why-modulation-is-necessary">3.7 Why modulation is necessary</h3>
+<p>Three reasons, all derived from physics rather than asserted:</p>
+<p><strong>Antenna size.</strong> An efficient antenna needs to be comparable to the wavelength. A quarter-wave monopole at 1 kHz (voice) would be $\lambda/4=c/(4f)=75$ km — impractical. At 1 MHz: $\lambda/4=75$ m — standard AM broadcast tower.</p>
+<p><strong>Multiplexing.</strong> Two voice signals both occupying 300–3400 Hz cannot share the same wire or airwave simultaneously. Modulate each onto a different carrier (say 600 kHz and 800 kHz) and they occupy separate frequency bands — frequency-division multiplexing.</p>
+<p><strong>Propagation efficiency.</strong> Low-frequency waves are absorbed rapidly by the ground wave; the ionosphere only reflects waves in the right frequency window. Modulation shifts the signal into the frequency band best suited to the chosen propagation mode.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.5 · Frequency-division multiplexing</p>
+<p><em>Show:</em> a horizontal frequency axis; three message signals each 4 kHz wide centred at different carrier frequencies (600 kHz, 800 kHz, 1000 kHz); the combined spectrum showing non-overlapping bands; the demultiplexer splitting them at the receiver.
+<em>Search:</em> "frequency division multiplexing FDM carrier channels diagram"</p>
+</div>
+
+<h3 id="38-amplitude-modulation-am">3.8 Amplitude modulation (AM)</h3>
+<p><strong>The derivation.</strong> Let the carrier be $c(t)=A_c\sin(2\pi f_ct)$ and the message be $m(t)=A_m\sin(2\pi f_mt)$ with $f_m\ll f_c$. The AM signal is:</p>
+<p>$$
+s(t)=A_c[1+\mu\sin(2\pi f_mt)]\sin(2\pi f_ct), \qquad \mu=\frac{A_m}{A_c}. \qquad (3.3)
+$$</p>
+<p>Expanding with the product-to-sum identity:</p>
+<p>$$
+s(t)=A_c\sin(2\pi f_ct)+\frac{\mu A_c}{2}\cos[2\pi(f_c-f_m)t]-\frac{\mu A_c}{2}\cos[2\pi(f_c+f_m)t]. \qquad (3.4)
+$$</p>
+<p>The AM signal contains three components: the carrier at $f_c$, the lower sideband at $f_c-f_m$, and the upper sideband at $f_c+f_m$. The message is encoded in the sidebands, not in the carrier — the carrier is just a scaffold.</p>
+<p><strong>Bandwidth.</strong> The spectrum extends from $f_c-f_m$ to $f_c+f_m$:</p>
+<p>$$
+B_{\text{AM}}=2f_m. \qquad (3.5)
+$$</p>
+<p>For voice: $B=2\times3.4=6.8$ kHz.</p>
+<p><strong>Power.</strong> The total average power is the sum of carrier and sideband powers:</p>
+<p>$$
+P_{\text{total}}=P_c\left(1+\frac{\mu^2}{2}\right), \qquad P_c=\frac{A_c^2}{2R}. \qquad (3.6)
+$$</p>
+<p>At $\mu=1$ (100% modulation): the sidebands carry $P_c/2$, so the total is $1.5P_c$ — the carrier wastes two-thirds of the power carrying no message. This is AM's main inefficiency.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Eq. (3.6) assumes a single-tone modulating signal. For a complex message with peak amplitude $A_m$, $\mu=A_m/A_c$ and $\mu\leq1$ prevents envelope distortion. Over-modulation ($\mu&gt;1$) causes the envelope to invert, and the envelope detector fails to recover the message.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.6 · AM waveform with modulation index annotation</p>
+<p><em>Show:</em> the carrier as a high-frequency sine; the message as a low-frequency sine below; the AM signal with the envelope traced as a dashed line matching the message; $\mu$ annotated as (envelope peak minus carrier) divided by carrier; three cases: $\mu=0.5$, $\mu=1$, $\mu&gt;1$ (over-modulated with envelope crossing zero).
+<em>Search:</em> "amplitude modulation waveform modulation index 50 percent 100 percent overmodulated"</p>
+</div>
+
+<h3 id="39-frequency-modulation-fm">3.9 Frequency modulation (FM)</h3>
+<p>In FM the carrier's instantaneous frequency tracks the message:</p>
+<p>$$
+f_i(t)=f_c+\Delta f\sin(2\pi f_mt), \qquad (3.7)
+$$</p>
+<p>where $\Delta f$ is the frequency deviation (75 kHz for FM broadcast). The modulation index is:</p>
+<p>$$
+\beta=\frac{\Delta f}{f_m}. \qquad (3.8)
+$$</p>
+<p>For FM broadcast: $\beta=75/15=5$ (using $f_m=15$ kHz for music).</p>
+<p><strong>Bandwidth — Carson's rule.</strong> The FM spectrum contains an infinite number of sidebands at $f_c\pm nf_m$ for $n=0,1,2,\ldots$, but the amplitudes of sidebands beyond $n&gt;\beta+1$ are negligible. Carson's rule gives the effective bandwidth:</p>
+<p>$$
+B_{\text{FM}}\approx2(\Delta f+f_m)=2f_m(\beta+1). \qquad (3.9)
+$$</p>
+<p>For FM broadcast: $B=2(75+15)=180$ kHz — about 26 times the AM bandwidth for the same message. This is the price of noise immunity.</p>
+<p><strong>Wideband FM versus narrowband FM.</strong> When $\beta\ll1$ (narrowband FM), $B\approx2f_m$ — same as AM. When $\beta\gg1$ (wideband FM), $B\approx2\Delta f$ — the bandwidth is set by the deviation, not the message frequency.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.7 · FM waveform and frequency deviation</p>
+<p><em>Show:</em> the message signal as a low-frequency sine below; the FM signal above with the frequency increasing when the message is positive and decreasing when negative; the instantaneous frequency $f_i$ oscillating between $f_c-\Delta f$ and $f_c+\Delta f$; the constant amplitude of the FM wave noted (amplitude does not change).
+<em>Search:</em> "frequency modulation waveform instantaneous frequency deviation diagram"</p>
+</div>
+
+<h3 id="310-demodulation-detection">3.10 Demodulation (detection)</h3>
+<p><strong>AM: the envelope detector.</strong> A diode rectifier followed by an RC low-pass filter extracts the envelope of the AM signal. The diode passes only positive half-cycles; the capacitor charges to the peak and discharges through the resistor between peaks, smoothing the envelope. The time constant $RC$ must satisfy:</p>
+<p>$$
+\frac{1}{f_c}\ll RC\ll\frac{1}{f_m}. \qquad (3.10)
+$$</p>
+<p>Too small: the capacitor follows the carrier, not the envelope (ripple). Too large: the capacitor cannot follow fast message variations (diagonal clipping). The envelope detector is simple but fails if $\mu&gt;1$ or if the signal-to-noise ratio is poor (the detector follows noise peaks as if they were the envelope).</p>
+<p><strong>FM: the discriminator.</strong> FM demodulation converts frequency variations into amplitude variations (using a tuned circuit whose output amplitude depends on frequency), then envelope-detects. The slope detector and the ratio detector are the standard circuits. Because the information is in the frequency, not the amplitude, an FM receiver can include a limiter that clips amplitude noise before detection — this is the source of FM's noise advantage.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.8 · The envelope detector circuit</p>
+<p><em>Show:</em> an AM signal input to a diode (anode left, cathode right); the diode output feeds a parallel RC combination (capacitor C, resistor R to ground); the output across R is the recovered message; the time constant $RC$ annotated with the double inequality; a sketch of the input AM waveform, the diode output (half-wave rectified), and the smooth output (envelope).
+<em>Search:</em> "AM envelope detector diode RC filter circuit waveform"</p>
+</div>
+
+<h3 id="311-block-diagrams">3.11 Block diagrams</h3>
+<p><strong>AM transmitter:</strong> message source → pre-amplifier → modulator (mixer) → RF power amplifier → antenna. The modulator combines the message with the carrier; the RF amplifier boosts the signal to the required transmission power.</p>
+<p><strong>AM receiver (superheterodyne):</strong> antenna → RF amplifier → mixer (with local oscillator) → IF amplifier (fixed intermediate frequency, 455 kHz standard) → detector (envelope detector) → audio amplifier → speaker. The superheterodyne principle converts any incoming carrier to a fixed IF, so the IF amplifier is always optimised for one frequency.</p>
+<p><strong>FM transmitter:</strong> message source → pre-emphasis (boost high frequencies) → modulator (voltage-controlled oscillator) → frequency multiplier (to increase $\Delta f$) → power amplifier → antenna.</p>
+<p><strong>FM receiver:</strong> antenna → RF amplifier → limiter (clip amplitude) → discriminator (frequency-to-amplitude conversion) → de-emphasis (restore flat response) → audio amplifier → speaker.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.11 · FM transmitter and receiver block diagrams</p>
+<p><em>Show:</em> two parallel horizontal chains. Top (transmitter): microphone arrow to pre-emphasis arrow to VCO (modulator, with carrier oscillator input from below) arrow to frequency multiplier arrow to power amplifier arrow to antenna. Bottom (receiver): antenna arrow to RF amplifier arrow to limiter arrow to discriminator arrow to de-emphasis arrow to audio amplifier arrow to speaker. Labels at each stage.
+<em>Search:</em> "FM transmitter receiver block diagram VCO discriminator limiter"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.12 · AM spectrum showing carrier and sidebands</p>
+<p><em>Show:</em> a horizontal frequency axis; a tall vertical line at $f_c$ (carrier); two shorter lines at $f_c-f_m$ and $f_c+f_m$ (sidebands); the bandwidth $2f_m$ marked with a double-headed arrow; the sideband heights proportional to $\mu A_c/2$; the carrier height proportional to $A_c$.
+<em>Search:</em> "AM spectrum carrier upper lower sideband frequency bandwidth diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.9 · AM superheterodyne receiver block diagram</p>
+<p><em>Show:</em> antenna arrow to RF amplifier arrow to mixer (with local oscillator arrow entering from above) arrow to IF amplifier (455 kHz label) arrow to detector arrow to audio amplifier arrow to speaker; the signal frequency at each stage labelled ($f_{\text{RF}}$, $f_{\text{LO}}$, $f_{\text{IF}}=f_{\text{LO}}-f_{\text{RF}}$).
+<em>Search:</em> "superheterodyne receiver block diagram local oscillator IF amplifier"</p>
+</div>
+
+<h3 id="312-signal-to-noise-and-channel-capacity">3.12 Signal-to-noise and channel capacity</h3>
+<p><strong>Thermal noise.</strong> Any resistor at temperature $T$ produces noise power $P_n=kTB$ over bandwidth $B$. At room temperature ($T=290$ K): $kT=4\times10^{-21}$ W/Hz $=-174$ dBm/Hz. A receiver with bandwidth 10 MHz picks up $P_n=4\times10^{-14}$ W $=-104$ dBm of thermal noise — this is the floor below which no signal can be detected.</p>
+<p><strong>Shannon's channel capacity theorem.</strong> A channel with bandwidth $B$ and signal-to-noise ratio $S/N$ can transmit at most:</p>
+<p>$$
+C=B\log_2\left(1+\frac{S}{N}\right)\ \text{bits/s}. \qquad (3.11)
+$$</p>
+<p>For a telephone channel ($B=3.4$ kHz, $S/N=30$ dB $=1000$): $C=3400\log_2(1001)=3400\times10=34$ kbps. No modulation scheme can exceed this rate; practical schemes approach it with coding.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Shannon's theorem is an existence proof: it says a code exists that achieves rate $C$ with arbitrarily small error probability, but it does not construct the code. The proof uses random coding and the law of large numbers — the average error over all random codes vanishes as the block length grows. The result is remarkable because it separates the fundamental limit (set by physics) from the engineering (which code to use).</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D100.10 · Signal-to-noise ratio and channel capacity</p>
+<p><em>Show:</em> a graph with $S/N$ (in dB) on the horizontal axis and $C/B$ (bits/s/Hz, the spectral efficiency) on the vertical; the curve $C/B=\log_2(1+S/N)$ rising steeply at first then saturating; a few labelled points: $S/N=0$ dB gives $C/B=1$, $S/N=20$ dB gives $C/B\approx6.7$, $S/N=30$ dB gives $C/B\approx10$.
+<em>Search:</em> "Shannon channel capacity spectral efficiency signal to noise ratio curve"</p>
+</div>
+
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{B_{\text{AM}}=2f_m,\qquad P_{\text{total}}=P_c\left(1+\frac{\mu^2}{2}\right),\qquad \mu=\frac{A_m}{A_c}\leq1} \qquad (4.1)
+$$</p>
+<p>single-tone AM; $\mu&gt;1$ causes envelope distortion.</p>
+<p>$$
+\boxed{B_{\text{FM}}\approx2(\Delta f+f_m)=2f_m(\beta+1),\qquad\beta=\frac{\Delta f}{f_m}} \qquad (4.2)
+$$</p>
+<p>Carson's rule; good to within a few percent for $\beta&gt;2$.</p>
+<p>$$
+\boxed{d=\sqrt{2Rh}\ \text{(line of sight)},\qquad f_{\text{MUF}}=\frac{f_c}{\cos\theta}\ \text{(sky wave)}} \qquad (4.3)
+$$</p>
+<p>LOS: $R=6400$ km, $h$ in km, $d$ in km. MUF: $f_c$ is the critical frequency, $\theta$ the incidence angle at the ionosphere.</p>
+<p>$$
+\boxed{C=B\log_2\left(1+\frac{S}{N}\right)\ \text{(Shannon)},\qquad P_n=kTB\ \text{(thermal noise)}} \qquad (4.4)
+$$</p>
+<p>$C$ is bits/s; $kT=4\times10^{-21}$ W/Hz at 290 K.</p>
+<p>$$
+\boxed{\frac{P_r}{P_t}=G_tG_r\left(\frac{\lambda}{4\pi d}\right)^2\ \text{(Friis)}} \qquad (4.5)
+$$</p>
+<p>free-space link; $d\gg\lambda$; no obstacles; matched polarisation.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$\mu\to0$: the signal is just the carrier, no message — bandwidth collapses, correct.</li>
+<li>$\mu\to1$: maximum sideband power ($P_c/2$), still safe; $\mu&gt;1$: envelope crosses zero, detector fails.</li>
+<li>$\Delta f\to0$ (FM): $\beta\to0$, $B_{\text{FM}}\to2f_m$, same as AM — narrowband FM recovered.</li>
+<li>$f_m\to0$ (DC message): $B\to0$, no sidebands — nothing to transmit, correct.</li>
+<li>$S/N\to0$: $C\to0$ — no capacity when only noise is present.</li>
+<li>$S/N\to\infty$: $C\to\infty$ — but bandwidth-limited channels still cap $C$ at $2B$ bits/s per Nyquist.</li>
+<li>$d\to\infty$ in Friis: $P_r\to0$ — the inverse-square law.</li>
+<li>$h\to0$: $d\to0$ — antenna on the ground sees only the ground, correct.</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message frequency, carrier frequency</td>
+<td>AM bandwidth</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>modulation index, carrier power</td>
+<td>total transmitted power</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>frequency deviation, message frequency</td>
+<td>FM bandwidth</td>
+<td>Eq. (4.2)</td>
+</tr>
+<tr>
+<td>antenna height</td>
+<td>line-of-sight range</td>
+<td>Eq. (4.3)</td>
+</tr>
+<tr>
+<td>critical frequency, incidence angle</td>
+<td>maximum usable frequency</td>
+<td>Eq. (4.3)</td>
+</tr>
+<tr>
+<td>bandwidth, signal-to-noise ratio</td>
+<td>channel capacity</td>
+<td>Eq. (4.4)</td>
+</tr>
+<tr>
+<td>transmitted power, gains, distance</td>
+<td>received power</td>
+<td>Eq. (4.5)</td>
+</tr>
+<tr>
+<td>temperature, bandwidth</td>
+<td>noise power</td>
+<td>$P_n=kTB$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Why can a voice signal not be transmitted directly as an EM wave?</p>
+<details>
+<summary>Answer</summary>
+<p>An efficient antenna needs to be comparable to the wavelength; at voice frequencies ($\sim1$ kHz), $\lambda\approx300$ km, requiring an antenna tens of kilometres tall. Modulation shifts the signal to a higher frequency where practical antennas exist.</p>
+</details>
+<p><strong>C2 — concept check.</strong> What determines the bandwidth of an AM signal?</p>
+<details>
+<summary>Answer</summary>
+<p>The maximum modulating frequency $f_m$: $B=2f_m$, from the two sidebands.</p>
+</details>
+<p><strong>C3 — concept check.</strong> In AM, where is the message information located: in the carrier or the sidebands?</p>
+<details>
+<summary>Answer</summary>
+<p>In the sidebands. The carrier is a constant-frequency, constant-amplitude scaffold; suppressing it (as in DSB-SC) does not lose the message.</p>
+</details>
+<p><strong>C4 — concept check.</strong> Why does FM have better noise immunity than AM?</p>
+<details>
+<summary>Answer</summary>
+<p>Noise primarily affects amplitude, not frequency. An FM receiver's limiter clips amplitude noise before detection, so the recovered message is clean. AM's envelope detector follows noise peaks directly.</p>
+</details>
+<p><strong>C5 — concept check.</strong> What is the skip zone?</p>
+<details>
+<summary>Answer</summary>
+<p>The region between the ground wave's maximum range and the sky wave's nearest landing point, where neither propagation mode delivers a signal.</p>
+</details>
+<p><strong>C6 — concept check.</strong> Above what frequency does the ionosphere stop reflecting radio waves?</p>
+<details>
+<summary>Answer</summary>
+<p>Above the critical frequency $f_c$ (for vertical incidence), or above the MUF for oblique incidence. Typically 5–10 MHz, varying with solar activity.</p>
+</details>
+<p><strong>C7 — concept check.</strong> Why does the ground wave attenuate faster at higher frequencies?</p>
+<details>
+<summary>Answer</summary>
+<p>Higher-frequency waves induce stronger currents in the lossy Earth surface, dissipating more energy per wavelength of travel.</p>
+</details>
+<p><strong>C8 — concept check.</strong> What happens if the modulation index $\mu$ exceeds 1?</p>
+<details>
+<summary>Answer</summary>
+<p>The envelope crosses zero (over-modulation), causing the envelope detector to produce distortion — it cannot follow the inverted envelope.</p>
+</details>
+<p><strong>C9 — concept check.</strong> Why does the superheterodyne receiver convert all signals to a fixed IF?</p>
+<details>
+<summary>Answer</summary>
+<p>The IF amplifier can be optimised for a single frequency (selectivity, gain stability), regardless of the incoming station's carrier frequency.</p>
+</details>
+<p><strong>C10 — concept check.</strong> At $S/N=0$ dB, what is Shannon's capacity per unit bandwidth?</p>
+<details>
+<summary>Answer</summary>
+<p>$C/B=\log_2(2)=1$ bit/s/Hz. You can send at most one bit per second per hertz of bandwidth.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why is the carrier power in AM considered "wasted"?</p>
+<details>
+<summary>Answer</summary>
+<p>The carrier carries no message information; at $\mu=1$ it uses $2/3$ of the total power. Suppressed-carrier AM (DSB-SC) and SSB reclaim this power.</p>
+</details>
+<p><strong>C12 — concept check.</strong> What is the difference between narrowband and wideband FM?</p>
+<details>
+<summary>Answer</summary>
+<p>Narrowband FM has $\beta\ll1$, $B\approx2f_m$ (like AM). Wideband FM has $\beta\gg1$, $B\approx2\Delta f$, with far more sidebands and better noise immunity.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-am-bandwidth-and-sidebands">E1 — AM bandwidth and sidebands</h3>
+<p>A carrier at 1 MHz is amplitude-modulated by a 5 kHz tone. Find the frequencies of all components in the AM signal and the bandwidth.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Three components spanning 10 kHz — consistent with $B=2f_m$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The AM signal has a carrier at $f_c=1$ MHz, a lower sideband at $f_c-f_m=995$ kHz, and an upper sideband at $f_c+f_m=1005$ kHz. Bandwidth $=2f_m=10$ kHz.</p>
+</details>
+<h3 id="e2-modulation-index-and-power">E2 — Modulation index and power</h3>
+<p>A transmitter with carrier power 10 kW operates at $\mu=0.8$. Find the total power and the power in the sidebands.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Sideband power is $P_c\mu^2/2=3.2$ kW; total is 13.2 kW — less than $2P_c$, consistent.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $P_{\text{total}}=P_c(1+\mu^2/2)=10000(1+0.32)=13200$ W $=13.2$ kW. Sideband power $=P_{\text{total}}-P_c=3.2$ kW. Fraction in sidebands $=3.2/13.2=24.2\%$ — the carrier wastes $75.8\%$.</p>
+</details>
+<h3 id="e3-fm-bandwidth">E3 — FM bandwidth</h3>
+<p>An FM station has $\Delta f=75$ kHz and the maximum audio frequency is 15 kHz. Find $\beta$ and the bandwidth by Carson's rule.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\beta=5$, wideband FM; $B=180$ kHz — the standard FM channel spacing of 200 kHz accommodates this.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\beta=\Delta f/f_m=75/15=5$. $B=2(\Delta f+f_m)=2(75+15)=180$ kHz.</p>
+</details>
+<h3 id="e4-line-of-sight-range">E4 — Line-of-sight range</h3>
+<p>Calculate the maximum line-of-sight distance between a 100 m transmitting tower and a 25 m receiving antenna.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Both distances add: $d_1+d_2=35.8+17.9=53.7$ km — reasonable for VHF/UHF.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $d=\sqrt{2Rh_1}+\sqrt{2Rh_2}=\sqrt{2\times6400\times0.1}+\sqrt{2\times6400\times0.025}=35.8+17.9=53.7$ km. The two square roots add because the horizon distances from each antenna are independent.</p>
+</details>
+<h3 id="e5-skip-distance">E5 — Skip distance</h3>
+<p>The ionosphere's critical frequency is 8 MHz. A signal at 12 MHz is transmitted at an incidence angle of $\theta=60°$. Find the MUF and state whether the signal is reflected.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$f_{\text{MUF}}=16$ MHz $&gt;12$ MHz — reflected.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $f_{\text{MUF}}=f_c/\cos\theta=8/\cos60°=8/0.5=16$ MHz. Since $f=12$ MHz $&lt;f_{\text{MUF}}$, the signal is reflected back to Earth.</p>
+</details>
+<h3 id="e6-thermal-noise-power">E6 — Thermal noise power</h3>
+<p>Find the thermal noise power in a 200 kHz bandwidth receiver at room temperature ($T=290$ K).</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$P_n\approx10^{-15}$ W — typical for a broadcast FM receiver's noise floor.</p>
+</div>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $P_n=kTB=1.38\times10^{-23}\times290\times2\times10^5=8.0\times10^{-16}$ W $\approx0.8$ fW. In dBm: $10\log_{10}(8\times10^{-16}/10^{-3})=-121$ dBm.</p>
+</details>
+<h3 id="e7-shannon-capacity">E7 — Shannon capacity</h3>
+<p>A telephone channel has $B=3.4$ kHz and $S/N=40$ dB. Find the maximum bit rate.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$S/N=10^4$; $C\approx45$ kbps — consistent with dial-up modem speeds.</p>
+</div>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $S/N=10^{40/10}=10000$. $C=B\log_2(1+S/N)=3400\log_2(10001)=3400\times13.29=45.2$ kbps.</p>
+</details>
+<h3 id="e8-am-power-efficiency">E8 — AM power efficiency</h3>
+<p>What fraction of the total AM power carries the message at $\mu=0.5$? At $\mu=1$?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Efficiency increases with $\mu$ — more modulation, more useful power.</p>
+</div>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Sideband power fraction $=\frac{\mu^2/2}{1+\mu^2/2}$. At $\mu=0.5$: $\frac{0.125}{1.125}=11.1\%$. At $\mu=1$: $\frac{0.5}{1.5}=33.3\%$. The carrier is the dominant power consumer.</p>
+</details>
+<h3 id="e9-friis-transmission">E9 — Friis transmission</h3>
+<p>A 1 W transmitter with $G_t=10$ dB sends at 900 MHz to a receiver 1 km away with $G_r=2$ dB. Find $P_r$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Path loss at 900 MHz, 1 km: about 91 dB; with 12 dB total gain, received power is about $-79$ dBm.</p>
+</div>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\lambda=c/f=0.333$ m. Path loss $=(4\pi d/\lambda)^2=(4\pi\times1000/0.333)^2=1.42\times10^{12}=111.5$ dB. $G_t=10$ dB, $G_r=2$ dB. $P_r=P_t+G_t+G_r-L_{\text{path}}=0+10+2-111.5=-99.5$ dBm. In watts: $P_r=1.1\times10^{-13}$ W.</p>
+</details>
+<h3 id="e10-information-content">E10 — Information content</h3>
+<p>A source produces four symbols with probabilities $1/2$, $1/4$, $1/8$, $1/8$. Find the entropy (average information per symbol).</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$H=1.75$ bits/symbol — less than 2 bits (which would be needed for four equally likely symbols).</p>
+</div>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $H=-\sum p_i\log_2 p_i=-\frac{1}{2}\log_2\frac{1}{2}-\frac{1}{4}\log_2\frac{1}{4}-\frac{1}{8}\log_2\frac{1}{8}-\frac{1}{8}\log_2\frac{1}{8}=\frac{1}{2}+\frac{1}{2}+\frac{3}{8}+\frac{3}{8}=1.75$ bits/symbol.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>AM sideband frequencies</td>
+<td>$f_c\pm f_m$</td>
+<td>E1, Q1</td>
+<td>multiple-tone modulation</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>AM modulation index from waveform</td>
+<td>$\mu=(A_{\max}-A_{\min})/(A_{\max}+A_{\min})$</td>
+<td>Q2</td>
+<td>given voltage waveform</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>AM total power</td>
+<td>Eq. (4.1)</td>
+<td>E2, Q3</td>
+<td>sideband power fraction</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>AM bandwidth</td>
+<td>$B=2f_m$</td>
+<td>E1, Q4</td>
+<td>compare with FM</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>FM modulation index</td>
+<td>$\beta=\Delta f/f_m$</td>
+<td>E3</td>
+<td>narrowband vs wideband</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>FM bandwidth (Carson)</td>
+<td>Eq. (4.2)</td>
+<td>E3, Q5</td>
+<td>given different deviation</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Line-of-sight range</td>
+<td>$d=\sqrt{2Rh}$</td>
+<td>E4, Q6</td>
+<td>both antennas elevated</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>MUF and skip distance</td>
+<td>Eq. (4.3)</td>
+<td>E5, Q7</td>
+<td>find critical frequency from MUF</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Ground-wave vs sky-wave identification</td>
+<td>frequency and range</td>
+<td>Q8</td>
+<td>propagation mode choice</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Envelope detector time constant</td>
+<td>Eq. (3.10)</td>
+<td>Q9</td>
+<td>design the RC values</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Thermal noise power</td>
+<td>$P_n=kTB$</td>
+<td>E6, Q10</td>
+<td>dBm conversion</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Shannon capacity</td>
+<td>Eq. (4.4)</td>
+<td>E7, Q11</td>
+<td>bandwidth vs S/N trade-off</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Friis formula link budget</td>
+<td>Eq. (4.5)</td>
+<td>E9, Q12</td>
+<td>find required transmitter power</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>AM power efficiency</td>
+<td>sideband/total</td>
+<td>E8, Q13</td>
+<td>comparison at two modulation indices</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Entropy calculation</td>
+<td>$H=-\sum p_i\log_2 p_i$</td>
+<td>E10, Q14</td>
+<td>uniform distribution</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-a-carrier-at-800-khz-is-am-modulated-by-a-10-khz-signal-list-all-frequency-components">Q1. A carrier at 800 kHz is AM-modulated by a 10 kHz signal. List all frequency components.</h4>
+<details>
+<summary>Solution</summary>
+<p>800 kHz (carrier), 790 kHz (lower sideband), 810 kHz (upper sideband).</p>
+</details>
+<h4 id="q2-an-am-waveform-has-a-maximum-amplitude-of-8-v-and-a-minimum-of-2-v-find-mu">Q2. An AM waveform has a maximum amplitude of 8 V and a minimum of 2 V. Find $\mu$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mu=(8-2)/(8+2)=6/10=0.6$.</p>
+</details>
+<h4 id="q3-a-transmitter-delivers-20-kw-of-carrier-power-at-mu09-what-is-the-total-power">Q3. A transmitter delivers 20 kW of carrier power. At $\mu=0.9$, what is the total power?</h4>
+<details>
+<summary>Solution</summary>
+<p>$P=20000(1+0.81/2)=20000\times1.405=28.1$ kW.</p>
+</details>
+<h4 id="q4-an-am-broadcast-station-uses-a-maximum-audio-frequency-of-45-khz-what-is-the-channel-bandwidth-needed">Q4. An AM broadcast station uses a maximum audio frequency of 4.5 kHz. What is the channel bandwidth needed?</h4>
+<details>
+<summary>Solution</summary>
+<p>$B=2\times4.5=9$ kHz. Standard AM channels are 10 kHz wide.</p>
+</details>
+<h4 id="q5-an-fm-signal-has-delta-f50-khz-and-f_m10-khz-bandwidth">Q5. An FM signal has $\Delta f=50$ kHz and $f_m=10$ kHz. Bandwidth?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\beta=50/10=5$; $B=2(50+10)=120$ kHz.</p>
+</details>
+<h4 id="q6-a-tv-tower-is-200-m-tall-line-of-sight-range-to-a-ground-level-receiver">Q6. A TV tower is 200 m tall. Line-of-sight range to a ground-level receiver?</h4>
+<details>
+<summary>Solution</summary>
+<p>$d=\sqrt{2\times6400\times0.2}=\sqrt{2560}=50.6$ km.</p>
+</details>
+<h4 id="q7-the-critical-frequency-of-the-ionosphere-is-6-mhz-what-is-the-muf-for-an-incidence-angle-of-45">Q7. The critical frequency of the ionosphere is 6 MHz. What is the MUF for an incidence angle of 45°?</h4>
+<details>
+<summary>Solution</summary>
+<p>$f_{\text{MUF}}=6/\cos45°=6/0.707=8.49$ MHz.</p>
+</details>
+<h4 id="q8-a-150-mhz-signal-and-a-1-mhz-signal-are-both-transmitted-from-the-same-tower-which-uses-ground-wave-and-which-uses-space-wave">Q8. A 150 MHz signal and a 1 MHz signal are both transmitted from the same tower. Which uses ground wave, and which uses space wave?</h4>
+<details>
+<summary>Solution</summary>
+<p>1 MHz uses ground wave (medium-wave AM, follows the surface). 150 MHz uses space wave (VHF, line of sight — penetrates the ionosphere).</p>
+</details>
+<h4 id="q9-an-envelope-detector-has-r5-komega-and-c001-muf-the-carrier-is-1-mhz-and-the-message-is-up-to-5-khz-is-the-time-constant-suitable">Q9. An envelope detector has $R=5$ k$\Omega$ and $C=0.01\ \mu$F. The carrier is 1 MHz and the message is up to 5 kHz. Is the time constant suitable?</h4>
+<details>
+<summary>Solution</summary>
+<p>$RC=5\times10^3\times10^{-8}=50\ \mu$s. $1/f_c=1\ \mu$s, $1/f_m=200\ \mu$s. Since $1\ \mu$s $\ll50\ \mu$s $\ll200\ \mu$s, the time constant is suitable.</p>
+</details>
+<h4 id="q10-a-receiver-with-100-khz-bandwidth-operates-at-300-k-what-is-the-noise-power">Q10. A receiver with 100 kHz bandwidth operates at 300 K. What is the noise power?</h4>
+<details>
+<summary>Solution</summary>
+<p>$P_n=kTB=1.38\times10^{-23}\times300\times10^5=4.14\times10^{-16}$ W $=-124$ dBm.</p>
+</details>
+<h4 id="q11-a-channel-has-b1-mhz-and-sn20-db-find-the-shannon-capacity">Q11. A channel has $B=1$ MHz and $S/N=20$ dB. Find the Shannon capacity.</h4>
+<details>
+<summary>Solution</summary>
+<p>$S/N=100$; $C=10^6\log_2(101)=10^6\times6.66=6.66$ Mbps.</p>
+</details>
+<h4 id="q12-using-the-friis-formula-how-does-the-received-power-change-if-the-distance-doubles-all-else-fixed">Q12. Using the Friis formula, how does the received power change if the distance doubles (all else fixed)?</h4>
+<details>
+<summary>Solution</summary>
+<p>$P_r\propto1/d^2$: doubling the distance quarters the received power (a 6 dB loss).</p>
+</details>
+<h4 id="q13-an-am-station-transmits-10-kw-total-at-mu08-what-power-is-in-the-sidebands">Q13. An AM station transmits 10 kW total at $\mu=0.8$. What power is in the sidebands?</h4>
+<details>
+<summary>Solution</summary>
+<p>$P_c=P_{\text{total}}/(1+\mu^2/2)=10/1.32=7.58$ kW. Sideband power $=10-7.58=2.42$ kW.</p>
+</details>
+<h4 id="q14-a-fair-coin-is-tossed-what-is-the-information-content-of-the-outcome">Q14. A fair coin is tossed. What is the information content of the outcome?</h4>
+<details>
+<summary>Solution</summary>
+<p>$H=-2\times(1/2)\log_2(1/2)=1$ bit. One bit of information per toss.</p>
+</details>
+<h4 id="q15-why-can-multiple-am-stations-coexist-in-the-same-city">Q15. Why can multiple AM stations coexist in the same city?</h4>
+<details>
+<summary>Solution</summary>
+<p>Each uses a different carrier frequency; their sidebands occupy non-overlapping bands of width $2f_m$ (about 10 kHz each), separated by the channel spacing (10 kHz for AM broadcast).</p>
+</details>
+<h4 id="q16-what-is-the-antenna-size-advantage-of-modulating-a-1-khz-voice-onto-a-1-mhz-carrier">Q16. What is the antenna size advantage of modulating a 1 kHz voice onto a 1 MHz carrier?</h4>
+<details>
+<summary>Solution</summary>
+<p>Quarter-wave antenna at 1 kHz: 75 km. At 1 MHz: 75 m. A factor of 1000 reduction in antenna size.</p>
+</details>
+<h4 id="q17-an-fm-receiver-picks-up-a-signal-with-sn30-db-before-the-limiter-after-limiting-what-happens-to-the-noise">Q17. An FM receiver picks up a signal with $S/N=30$ dB before the limiter. After limiting, what happens to the noise?</h4>
+<details>
+<summary>Solution</summary>
+<p>The limiter clips amplitude variations, removing most of the amplitude noise. The FM signal's frequency information is preserved; only amplitude noise (which does not carry FM information) is suppressed.</p>
+</details>
+<h4 id="q18-a-channel-has-c56-kbps-and-b4-khz-what-sn-is-required">Q18. A channel has $C=56$ kbps and $B=4$ kHz. What $S/N$ is required?</h4>
+<details>
+<summary>Solution</summary>
+<p>$56000=4000\log_2(1+S/N)$; $\log_2(1+S/N)=14$; $S/N=2^{14}-1=16383$; $S/N=42.1$ dB.</p>
+</details>
+<h4 id="q19-why-does-short-wave-hf-radio-work-for-international-broadcasting-but-vhf-does-not">Q19. Why does short-wave (HF) radio work for international broadcasting but VHF does not?</h4>
+<details>
+<summary>Solution</summary>
+<p>HF (3–30 MHz) is reflected by the ionosphere, enabling sky-wave propagation over thousands of km. VHF ($&gt;30$ MHz) penetrates the ionosphere and is limited to line-of-sight range ($\sim50$ km).</p>
+</details>
+<h4 id="q20-a-signal-occupies-06-mhz-what-is-the-minimum-sampling-rate">Q20. A signal occupies 0–6 MHz. What is the minimum sampling rate?</h4>
+<details>
+<summary>Solution</summary>
+<p>By the Nyquist theorem: $f_s\geq2f_{\max}=12$ Msamples/s.</p>
+</details>
+<h4 id="q21-why-is-fm-preferred-for-music-broadcasting-and-am-for-talk-radio">Q21. Why is FM preferred for music broadcasting and AM for talk radio?</h4>
+<details>
+<summary>Solution</summary>
+<p>Music has wider bandwidth (up to 15 kHz) and benefits from FM's noise immunity. Voice is only 3.4 kHz; AM's narrower channel (10 kHz) is sufficient, and AM's simpler receivers are cheaper.</p>
+</details>
+<h4 id="q22-find-the-wavelength-of-an-fm-broadcast-signal-at-100-mhz">Q22. Find the wavelength of an FM broadcast signal at 100 MHz.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\lambda=c/f=3\times10^8/10^8=3$ m. This is why FM antennas are about 0.75 m (quarter wave).</p>
+</details>
+<h4 id="q23-a-source-emits-three-symbols-with-probabilities-05-03-02-find-the-entropy">Q23. A source emits three symbols with probabilities 0.5, 0.3, 0.2. Find the entropy.</h4>
+<details>
+<summary>Solution</summary>
+<p>$H=-(0.5\log_20.5+0.3\log_20.3+0.2\log_20.2)=0.5+0.521+0.464=1.485$ bits/symbol.</p>
+</details>
+<h4 id="q24-what-limits-the-minimum-detectable-signal-in-a-receiver">Q24. What limits the minimum detectable signal in a receiver?</h4>
+<details>
+<summary>Solution</summary>
+<p>The thermal noise floor $P_n=kTB$ sets the absolute lower bound. Practical receivers also have additional noise from their own electronics, characterised by the noise figure.</p>
+</details>
+<h4 id="q25-in-the-friis-formula-what-happens-if-the-transmitter-and-receiver-have-mismatched-polarisations">Q25. In the Friis formula, what happens if the transmitter and receiver have mismatched polarisations?</h4>
+<details>
+<summary>Solution</summary>
+<p>A polarisation mismatch factor multiplies the right side; for completely cross-polarised antennas (e.g. vertical and horizontal), $P_r=0$ — no power is received.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-db-shortcut-for-link-budgets">7.1 The dB shortcut for link budgets</h3>
+<p>Convert all powers to dB and add/subtract: $P_r(\text{dBm})=P_t+G_t+G_r-L_{\text{path}}$. The path loss $L_{\text{path}}=20\log_{10}(4\pi d/\lambda)$ in dB. Everything becomes addition — a five-step calculation in your head. Fails when the polarisation is mismatched or the path has obstacles (the Friis formula assumes free space).</p>
+<h3 id="72-the-sideband-power-ratio-trick">7.2 The sideband-power ratio trick</h3>
+<p>In AM, the fraction of power in the sidebands is $\mu^2/(2+\mu^2)$. Memorise the anchor values: $\mu=0.5$ gives $11\%$, $\mu=1$ gives $33\%$, $\mu=0.8$ gives $24\%$. These three cover most exam questions.</p>
+<h3 id="73-the-carsons-rule-two-step">7.3 The Carson's-rule two-step</h3>
+<p>For FM bandwidth: (1) add $\Delta f+f_m$, (2) double it. No need to compute $\beta$ unless the question asks for it. The answer is approximate but within a few percent for $\beta&gt;2$, which is the FM-broadcast regime.</p>
+<h3 id="74-the-propagation-mode-frequency-table">7.4 The propagation-mode frequency table</h3>
+<p>Memorise: ground wave $&lt;2$ MHz (medium wave and below), sky wave 2–30 MHz (short wave), space wave $&gt;30$ MHz (VHF and above). One sentence, three regimes, most questions answered by the frequency.</p>
+<h3 id="75-the-inverse-square-check">7.5 The inverse-square check</h3>
+<p>For any link-budget question, verify that the result scales as $1/d^2$ when only the distance changes. This catches unit errors (km vs m, MHz vs Hz) faster than re-deriving.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — AM bandwidth from the carrier frequency</p>
+<p>Writing $B=2f_c$ instead of $B=2f_m$. Reply: the bandwidth is set by the modulating signal, not the carrier. A 1 MHz carrier modulated by 5 kHz has 10 kHz bandwidth, not 2 MHz.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Over-modulation preserving the message</p>
+<p>Assuming $\mu&gt;1$ is just "more power." Reply: over-modulation inverts the envelope, and the envelope detector produces distortion. The message is lost in the inverted regions.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 3 — FM bandwidth equals the deviation</p>
+<p>Writing $B=\Delta f$. Reply: Carson's rule gives $B\approx2(\Delta f+f_m)$ — the factor of 2 accounts for both sidebands, and $f_m$ accounts for the modulating signal's own bandwidth.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 4 — Ground wave at VHF frequencies</p>
+<p>Assuming ground wave works for FM/TV frequencies. Reply: ground-wave attenuation increases steeply with frequency; above a few MHz it is negligible beyond a few kilometres.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Sky wave above the MUF</p>
+<p>Assuming the ionosphere always reflects. Reply: above the critical frequency at vertical incidence (or above the MUF at oblique incidence), the wave escapes to space.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Forgetting both antenna heights in LOS</p>
+<p>Using $d=\sqrt{2Rh}$ with only the transmitter height. Reply: both antennas contribute: $d=\sqrt{2Rh_1}+\sqrt{2Rh_2}$.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Shannon capacity in natural log</p>
+<p>Using $\ln$ instead of $\log_2$ in Shannon's formula. Reply: the formula uses $\log_2$ for bits/s; using $\ln$ gives nats/s — the numerical value differs by a factor of $\ln 2\approx0.693$.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Carrier power in the denominator</p>
+<p>Computing efficiency as sideband power over carrier power instead of over total power. Reply: total power is $P_c(1+\mu^2/2)$, not just $P_c$.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 9 — The Friis formula at $d&lt;\lambda$</p>
+<p>Applying $P_r=P_tG_tG_r(\lambda/4\pi d)^2$ in the near field. Reply: the formula is valid only for $d\gg\lambda$ (far field). In the near field, the $1/d^2$ law breaks down.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Noise temperature and physical temperature</p>
+<p>Assuming $T$ in $P_n=kTB$ is always room temperature. Reply: for low-noise amplifiers, the equivalent noise temperature can be much lower than 290 K; for high-gain antennas pointed at the sky, it can be much higher (the sky is not at 290 K at all frequencies).</p>
+</div>
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Bandwidth of an AM/FM signal": identify $f_m$ or $\Delta f$, apply Eqs. (4.1) or (4.2).</li>
+<li>"Propagation mode": check the frequency — below 2 MHz ground, 2–30 MHz sky, above 30 MHz space/LOS.</li>
+<li>"Range from antenna height": $d=\sqrt{2Rh}$, add both heights.</li>
+<li>"MUF or critical frequency": $f_{\text{MUF}}=f_c/\cos\theta$.</li>
+<li>"Noise power": $P_n=kTB$, convert to dBm.</li>
+<li>"Channel capacity": Shannon's formula, check whether $\log_2$ or $\ln$ is asked.</li>
+<li>"Link budget": Friis in dB — add gains, subtract path loss.</li>
+<li>"Power efficiency of AM": $\mu^2/(2+\mu^2)$.</li>
+<li>"Modulation index from waveform": $\mu=(A_{\max}-A_{\min})/(A_{\max}+A_{\min})$.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eq. (4.1)</td>
+<td>single-tone AM, $\mu\leq1$</td>
+<td>over-modulation, multiple tones</td>
+</tr>
+<tr>
+<td>Eq. (4.2)</td>
+<td>Carson's rule, $\beta&gt;2$</td>
+<td>very narrowband FM</td>
+</tr>
+<tr>
+<td>Eq. (4.3) LOS</td>
+<td>flat Earth, no obstacles</td>
+<td>long paths with terrain</td>
+</tr>
+<tr>
+<td>Eq. (4.3) MUF</td>
+<td>ionospheric reflection model</td>
+<td>solar flares, sudden ionospheric disturbances</td>
+</tr>
+<tr>
+<td>Eq. (4.4)</td>
+<td>AWGN channel, infinite block length</td>
+<td>bursty noise, finite block codes</td>
+</tr>
+<tr>
+<td>Eq. (4.5)</td>
+<td>far field, free space, matched polarisation</td>
+<td>near field, obstacles, atmospheric absorption</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-constants-to-carry">9.3 Constants to carry</h3>
+<p>$c=3\times10^8$ m/s; $kT=4\times10^{-21}$ W/Hz at 290 K ($-174$ dBm/Hz); voice bandwidth 3.4 kHz; AM broadcast channel 10 kHz; FM broadcast $\Delta f=75$ kHz, $f_m=15$ kHz, channel 200 kHz; $R=6400$ km; critical frequency typically 5–10 MHz.</p>
+<h3 id="94-timing-plan">9.4 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. Link-budget and Shannon questions die by formula; propagation questions die by the frequency-regime table.</p>
+<h3 id="95-pre-submission-audit-ten-points">9.5 Pre-submission audit, ten points</h3>
+<ol>
+<li>AM bandwidth uses $2f_m$, not $2f_c$.</li>
+<li>Modulation index $\leq1$ for standard AM.</li>
+<li>FM bandwidth includes both $\Delta f$ and $f_m$.</li>
+<li>Propagation mode matches the frequency regime.</li>
+<li>Both antenna heights included in LOS range.</li>
+<li>MUF uses $\sec\theta$, not $\sin\theta$.</li>
+<li>Shannon uses $\log_2$, not $\ln$.</li>
+<li>Friis is valid in the far field only.</li>
+<li>Noise power uses the correct bandwidth.</li>
+<li>Every sub-part answered, units on numerics.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-shannons-capacity-theorem-and-its-implications">OL1 — Shannon's capacity theorem and its implications</h3>
+<p>Derive the order-of-magnitude argument for why Shannon's capacity sets a fundamental limit: for a channel with bandwidth $B$ and noise power $N$, the maximum number of distinguishable signal levels is $M=\sqrt{1+S/N}$, giving $C=2B\log_2 M=B\log_2(1+S/N)$ bits/s.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The received signal can be represented as $2BT$ samples in time $T$ (Nyquist). Each sample is a point in a one-dimensional signal space contaminated by Gaussian noise of variance $N$. The signal has power $S$, so the signal amplitude spans about $\sqrt{S/N}$ standard deviations — the number of distinguishable levels is $M\approx\sqrt{1+S/N}$. Each sample carries $\log_2 M$ bits, so $C=2B\log_2\sqrt{1+S/N}=B\log_2(1+S/N)$.</p>
+<p><strong>Checks.</strong> (i) At $S/N=0$ dB: $C/B=1$ bit/s/Hz — one bit per sample, the noise fills half the decision space. (ii) The formula is dimensionally correct: $B$ in Hz gives $C$ in bits/s.</p>
+</details>
+<h3 id="ol2-the-friis-transmission-formula">OL2 — The Friis transmission formula</h3>
+<p>Derive the Friis formula $P_r/P_t=G_tG_r(\lambda/4\pi d)^2$ from the isotropic power spread and the effective aperture of the receiving antenna.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> An isotropic antenna radiates power $P_t$ uniformly over a sphere of area $4\pi d^2$. The power flux density at distance $d$ is $S=P_t/(4\pi d^2)$. A directive antenna with gain $G_t$ concentrates this into $S=G_tP_t/(4\pi d^2)$. The receiving antenna's effective aperture is $A_e=G_r\lambda^2/(4\pi)$ (derived from reciprocity and the antenna's radiation pattern). The received power is $P_r=SA_e=G_tP_t/(4\pi d^2)\times G_r\lambda^2/(4\pi)=P_tG_tG_r(\lambda/4\pi d)^2$.</p>
+<p><strong>Checks.</strong> (i) $P_r\propto1/d^2$ — the inverse-square law. (ii) $P_r\propto\lambda^2$: longer wavelengths need larger antennas (larger $A_e$), hence more received power at the same gain.</p>
+</details>
+<h3 id="ol3-link-budget-design-for-a-satellite-link">OL3 — Link-budget design for a satellite link</h3>
+<p>A geostationary satellite at 36,000 km transmits 20 W at 12 GHz with a 30 dB antenna gain. The ground station has a 1 m dish ($G_r\approx34$ dB at 12 GHz). Find the free-space received power and the margin above the $-120$ dBm receiver threshold.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\lambda=0.025$ m. Path loss $=(4\pi d/\lambda)^2=(4\pi\times3.6\times10^7/0.025)^2=3.26\times10^{21}=215.1$ dB. $P_t=13$ dBW $=43$ dBm. $P_r=43+30+34-215.1=-108.1$ dBm. Margin $=-108.1-(-120)=11.9$ dB — comfortable.</p>
+<p><strong>Checks.</strong> (i) The path loss at 36,000 km is enormous ($&gt;200$ dB) — consistent with satellite links requiring high-gain antennas. (ii) The 12 dB margin accommodates rain fade and pointing errors.</p>
+</details>
+<h3 id="ol4-entropy-and-source-coding">OL4 — Entropy and source coding</h3>
+<p>A source produces four symbols A, B, C, D with probabilities 0.5, 0.25, 0.125, 0.125. (a) Compute the entropy $H$. (b) Construct a Huffman code and find its average length. (c) Compare with the entropy and verify the source coding theorem ($\bar{L}\geq H$).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> (a) $H=-0.5\log_20.5-0.25\log_20.25-0.125\log_20.125-0.125\log_20.125=0.5+0.5+0.375+0.375=1.75$ bits/symbol. (b) Huffman code: A=0, B=10, C=110, D=111. Average length $\bar{L}=1\times0.5+2\times0.25+3\times0.125+3\times0.125=0.5+0.5+0.375+0.375=1.75$ bits/symbol. (c) $\bar{L}=H$ — the Huffman code achieves the entropy bound exactly, because the probabilities are powers of $1/2$.</p>
+<p><strong>Checks.</strong> (i) No codeword is a prefix of another — the code is uniquely decodable. (ii) If the probabilities were not powers of $1/2$, $\bar{L}$ would be slightly above $H$, consistent with $\bar{L}\geq H$.</p>
+</details>
+<h3 id="ol5-the-fm-capture-effect">OL5 — The FM capture effect</h3>
+<p>In FM, two signals on the same frequency are received with a power difference $\Delta S$. Show that the stronger signal suppresses the weaker one when $\Delta S$ exceeds a threshold (typically 6–10 dB for broadcast FM).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> An FM discriminator converts frequency to amplitude. When two signals of different power and slightly different frequency are present, the combined signal's instantaneous frequency alternates between the two — but the limiter clips the envelope to the stronger signal's amplitude. The discriminator then predominantly follows the stronger signal's frequency. The capture ratio (the $\Delta S$ needed for the weaker signal to be suppressed) depends on the discriminator's design; typical values are 1–3 (0–5 dB) for well-designed receivers, about 6–10 dB in practice including noise.</p>
+<p><strong>Checks.</strong> (i) AM has no capture effect — both signals contribute to the envelope. (ii) The effect explains why two nearby FM stations on the same frequency do not produce a "blend" but one dominates.</p>
+</details>
+<h3 id="ol6-modulation-and-the-nyquist-theorem">OL6 — Modulation and the Nyquist theorem</h3>
+<p>A baseband signal has bandwidth $W$. The Nyquist sampling theorem requires $f_s\geq2W$ to reconstruct it. Show that AM modulation to carrier $f_c$ produces a signal occupying bandwidth $2W$, and that this matches the Nyquist rate for the modulated signal.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The baseband signal occupies $[0,W]$. AM produces sidebands at $[f_c-W,f_c+W]$, bandwidth $2W$. The modulated signal's highest frequency is $f_c+W$, so the Nyquist rate is $2(f_c+W)\gg2W$. But the modulated signal is bandpass (no DC content), so the bandpass Nyquist rate is $2W$ (not $2(f_c+W)$) — the signal can be sampled at $2W$ samples/s and reconstructed from its complex envelope. This is the basis of digital communication: the modulated signal needs only $2W$ samples per second, regardless of the carrier frequency.</p>
+<p><strong>Checks.</strong> (i) A 5 kHz voice modulated onto a 1 MHz carrier needs only 10 ksamples/s, not 2 Msamples/s. (ii) This efficiency is exploited in software-defined radio.</p>
+</details>
+<h3 id="ol7-noise-figure-cascading-friis-for-noise">OL7 — Noise figure cascading (Friis for noise)</h3>
+<p>Two amplifiers in cascade have gains $G_1, G_2$ and noise figures $F_1, F_2$. Derive the total noise figure $F=F_1+(F_2-1)/G_1$ and explain why the first amplifier's noise figure dominates.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The first amplifier's output noise has two parts: its own amplified noise $N_1=kT_0B(F_1-1)G_1$ (the excess noise above thermal, amplified) and the thermal noise $kT_0BG_1$ that was already at the input. The second amplifier adds its own excess noise $kT_0B(F_2-1)G_2$ and amplifies everything by $G_2$. Referred to the input, the total noise is $kT_0BF_1+kT_0B(F_2-1)/G_1$ — the second stage's contribution is divided by $G_1$. If $G_1$ is large, the second stage's noise is negligible, and $F\approx F_1$. This is why satellite receivers place a low-noise amplifier (LNA, $F\approx0.5$ dB) at the antenna feed — the LNA's noise figure sets the system's.</p>
+<p><strong>Checks.</strong> (i) For identical amplifiers: $F=F_1+(F_1-1)/G_1$, larger than $F_1$ alone but close to it for large $G$. (ii) If $G_1=1$ (no gain): $F=F_1+F_2-1$, the noise figures add (minus 1), as expected for two passive losses in series.</p>
+</details>
+<h3 id="ol8-the-free-space-path-loss-in-different-units">OL8 — The free-space path loss in different units</h3>
+<p>Show that the Friis path loss at frequency $f$ and distance $d$ is $L_{\text{dB}}=32.4+20\log_{10}(f_{\text{MHz}})+20\log_{10}(d_{\text{km}})$, and evaluate it for a 900 MHz cellular link at 5 km.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $L=(4\pi d/\lambda)^2=(4\pi df/c)^2$. In dB: $L_{\text{dB}}=20\log_{10}(4\pi/c)+20\log_{10}(f)+20\log_{10}(d)$. $20\log_{10}(4\pi/c)=20\log_{10}(4\pi/3\times10^8)=20\times(-7.38)=-147.6$ dB for $f$ in Hz, $d$ in m. Converting to MHz and km: add $20\log_{10}(10^6)+20\log_{10}(10^3)=120+60=180$. So $L_{\text{dB}}=-147.6+180+20\log_{10}(f_{\text{MHz}})+20\log_{10}(d_{\text{km}})=32.4+20\log_{10}(f_{\text{MHz}})+20\log_{10}(d_{\text{km}})$. For 900 MHz, 5 km: $L=32.4+20\log_{10}900+20\log_{10}5=32.4+59.1+14.0=105.5$ dB.</p>
+<p><strong>Checks.</strong> (i) The familiar "100 dB per decade of distance at 1 GHz" rule of thumb is recovered. (ii) Doubling the frequency adds 6 dB — consistent with the $\lambda^2$ dependence.</p>
+</details>
+<h3 id="ol9-why-amplitude-modulation-wastes-power">OL9 — Why amplitude modulation wastes power</h3>
+<p>For a single-tone AM signal at $\mu=1$, compute the power efficiency and compare it with DSB-SC (suppressed carrier) and SSB (single sideband).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Standard AM at $\mu=1$: total power $=1.5P_c$, sideband power $=0.5P_c$, efficiency $=33\%$. DSB-SC suppresses the carrier: total power $=0.5P_c$, all in the sidebands, efficiency $=100\%$. SSB transmits one sideband only: total power $=0.25P_c$, efficiency $=100\%$ (no carrier, one sideband). The power savings: SSB uses $1/6$ the power of standard AM for the same message. The price: SSB requires a more complex receiver (carrier regeneration) and has higher sensitivity to frequency drift.</p>
+<p><strong>Checks.</strong> (i) At $\mu=0.5$: standard AM efficiency is $11\%$ — even worse. (ii) The carrier's role is purely to simplify the receiver (envelope detection); suppressed-carrier schemes need coherent detection.</p>
+</details>
+<h3 id="ol10-bandwidthdelay-product-and-its-consequences">OL10 — Bandwidth–delay product and its consequences</h3>
+<p>A channel has bandwidth $B$ and propagation delay $\tau$. Show that the bandwidth–delay product $B\tau$ determines the number of bits "in flight" on the channel, and estimate it for a geostationary satellite link with 10 MHz bandwidth.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At bit rate $R$ bits/s, the number of bits transmitted during the round-trip time $2\tau$ is $N=R\times2\tau$. If $R\approx B$ (Nyquist limit, one bit per Hz), then $N\approx2B\tau$. For a geostationary link: $\tau=d/c=3.6\times10^7/3\times10^8=0.12$ s one-way, round-trip $0.24$ s. $N=2\times10^7\times0.24=4.8\times10^6$ bits — nearly 5 megabits in flight at any instant. This is why satellite protocols need large windows and why TCP's default window (64 KB) is catastrophic for satellite links — it fills the pipe to only $64\times10^3/4.8\times10^6\approx1.3\%$ of capacity.</p>
+<p><strong>Checks.</strong> (i) For a LAN ($d=100$ m, $B=1$ Gbps): $\tau=0.33$ ns, $N\approx0.67$ — barely one bit in flight, consistent with LAN behaviour. (ii) The bandwidth–delay product is the "length" of the channel in bits — a fundamental networking concept.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>The AM/FM model assumes a single-tone modulating signal; real messages are complex and occupy a band. Carson's rule is approximate; the exact FM spectrum involves Bessel functions. The Friis formula assumes free space; real links have atmospheric absorption, rain fade, multipath, and obstacle diffraction. Shannon's theorem assumes an AWGN channel with infinite block length; real channels are bursty, fading, and use finite-length codes. The ionospheric model assumes a single reflecting layer; the real ionosphere has multiple layers (D, E, F1, F2) with time-varying electron densities.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each). Solutions follow each question in a collapsible block; the marking scheme is in Part 12.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-x-4">Section A · Concept MCQ (12 x 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The bandwidth of an AM signal modulated by a 5 kHz signal is:
+(a) 5 kHz  (b) 10 kHz  (c) 15 kHz  (d) 1 MHz</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $B=2f_m=10$ kHz.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>In AM at $\mu=1$, what fraction of the total power is in the carrier?
+(a) 33%  (b) 50%  (c) 67%  (d) 100%</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $P_c/P_{\text{total}}=1/(1+0.5)=2/3\approx67\%$.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>Which propagation mode works above 30 MHz?
+(a) Ground wave  (b) Sky wave  (c) Space wave  (d) Surface wave</p>
+<details>
+<summary>Answer</summary>
+<p>(c). Above 30 MHz the wave penetrates the ionosphere — line of sight.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>The maximum usable frequency depends on:
+(a) antenna height  (b) carrier amplitude  (c) critical frequency and incidence angle  (d) message bandwidth</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $f_{\text{MUF}}=f_c/\cos\theta$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>An FM signal has $\Delta f=75$ kHz and $f_m=15$ kHz. Carson's bandwidth is:
+(a) 90 kHz  (b) 150 kHz  (c) 180 kHz  (d) 75 kHz</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $B=2(75+15)=180$ kHz.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The envelope detector fails when:
+(a) $f_c$ is too high  (b) $\mu&gt;1$  (c) $S/N$ is very high  (d) the message has no DC offset</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Over-modulation inverts the envelope.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>The superheterodyne receiver's IF is typically:
+(a) 455 kHz  (b) 1 MHz  (c) 10.7 MHz  (d) 45.75 MHz</p>
+<details>
+<summary>Answer</summary>
+<p>(a). 455 kHz for AM broadcast receivers; 10.7 MHz for FM.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>Shannon's capacity at $S/N=0$ dB is:
+(a) $C=0$  (b) $C=B$  (c) $C=2B$  (d) $C=B\ln 2$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $C=B\log_2(1+1)=B$ bit/s.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>Which of the following is NOT a reason for modulation?
+(a) Antenna size reduction  (b) Multiplexing  (c) Noise elimination  (d) Efficient propagation</p>
+<details>
+<summary>Answer</summary>
+<p>(c). Modulation does not eliminate noise; it shifts the signal to a suitable frequency.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>The thermal noise power in a receiver at 290 K with 1 MHz bandwidth is approximately:
+(a) $10^{-21}$ W  (b) $10^{-15}$ W  (c) $10^{-9}$ W  (d) $10^{-3}$ W</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $P_n=kTB=4\times10^{-21}\times10^6=4\times10^{-15}$ W.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>In the Friis formula, the received power is proportional to:
+(a) $d$  (b) $1/d$  (c) $1/d^2$  (d) $1/d^4$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The inverse-square law of free-space propagation.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>The FM capture effect means:
+(a) FM captures all noise  (b) the stronger of two same-frequency signals suppresses the weaker  (c) FM captures more bandwidth than AM  (d) FM receivers capture signals from farther away</p>
+<details>
+<summary>Answer</summary>
+<p>(b). The limiter and discriminator prefer the stronger signal.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-x-4">Section B · One-or-more-correct (8 x 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Which of the following statements about AM is/are correct?
+(a) The carrier carries no message information  (b) Sideband power increases with $\mu^2$  (c) Maximum efficiency is 33%  (d) $B=f_c$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). The bandwidth is $2f_m$, not $f_c$.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>For the ground wave:
+(a) Attenuation increases with frequency  (b) It follows the Earth's surface  (c) It works well at VHF  (d) It is used by long-wave AM stations</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). Ground wave fails at VHF frequencies.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>Shannon's capacity increases with:
+(a) bandwidth  (b) signal-to-noise ratio  (c) distance  (d) modulation index</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b). $C=B\log_2(1+S/N)$ — increasing $B$ or $S/N$ increases $C$.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>Which modulation types have constant-amplitude carriers?
+(a) AM  (b) FM  (c) PM  (d) DSB-SC</p>
+<details>
+<summary>Answer</summary>
+<p>(b), (c). FM and PM vary frequency/phase, not amplitude. AM varies amplitude; DSB-SC has no carrier.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>The skip zone is caused by:
+(a) the ground wave dying out  (b) the sky wave not reaching nearby ground  (c) both (a) and (b)  (d) atmospheric absorption</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The dead region is between the ground wave's range and the sky wave's nearest landing point.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>About the Friis formula:
+(a) It assumes free-space propagation  (b) $P_r\propto\lambda^2$ for fixed gains  (c) It works in the near field  (d) Polarisation mismatch reduces $P_r$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). The formula is a far-field result.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>FM is preferred over AM for music because:
+(a) FM has larger bandwidth  (b) FM is immune to amplitude noise  (c) FM transmitters are simpler  (d) FM's capture effect reduces interference</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). FM transmitters are more complex, not simpler.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>The envelope detector's time constant must:
+(a) be much larger than $1/f_c$  (b) be much smaller than $1/f_m$  (c) satisfy both conditions simultaneously  (d) be exactly $1/\sqrt{f_cf_m}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). The double inequality $1/f_c\ll RC\ll1/f_m$.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-x-5">Section C · Numerical answers (6 x 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>A carrier at 1 MHz is AM-modulated at $\mu=0.6$ by a 4 kHz signal. Find the total transmitted power if the carrier power is 5 kW.</p>
+<details>
+<summary>Answer</summary>
+<p>$P=5000(1+0.36/2)=5000\times1.18=5900$ W $=5.9$ kW.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>An FM station has $\Delta f=50$ kHz. What is the maximum modulating frequency for $\beta\leq10$?</p>
+<details>
+<summary>Answer</summary>
+<p>$f_m=\Delta f/\beta=50/10=5$ kHz.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>A 50 m tower communicates with a 20 m antenna. Find the line-of-sight range (take $R=6400$ km).</p>
+<details>
+<summary>Answer</summary>
+<p>$d=\sqrt{2\times6400\times0.05}+\sqrt{2\times6400\times0.02}=25.3+16.0=41.3$ km.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>The ionosphere has $f_c=9$ MHz. A 15 MHz signal is incident at $\theta=50°$. Is it reflected?</p>
+<details>
+<summary>Answer</summary>
+<p>$f_{\text{MUF}}=9/\cos50°=9/0.643=14.0$ MHz. Since $15&gt;14.0$, the signal is NOT reflected — it escapes.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>A satellite channel has $B=36$ MHz and $S/N=25$ dB. Find the Shannon capacity.</p>
+<details>
+<summary>Answer</summary>
+<p>$S/N=10^{2.5}=316.2$; $C=36\times10^6\times\log_2(317.2)=36\times10^6\times8.31=299$ Mbps.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A 2 W transmitter at 2.4 GHz with $G_t=3$ dB sends to a receiver 100 m away with $G_r=0$ dB. Find $P_r$.</p>
+<details>
+<summary>Answer</summary>
+<p>$\lambda=0.125$ m. $P_r=2\times10^{0.3}\times1\times(0.125/(4\pi\times100))^2=3.98\times9.89\times10^{-8}=3.94\times10^{-7}$ W $=-34$ dBm.</p>
+</details>
+<h4 id="section-d-long-form-10-x-9">Section D · Long-form (10 x 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>The AM power budget. (a) A transmitter has $P_c=10$ kW and $\mu=0.8$. Find total power and sideband power. (b) What percentage of the power carries the message? (c) If DSB-SC is used instead (same peak voltage), find the transmitted power.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $P=10(1+0.32)=13.2$ kW; sideband $=3.2$ kW. (b) $3.2/13.2=24.2\%$. (c) DSB-SC has no carrier: $P=3.2$ kW — a factor of 4 saving.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>FM bandwidth and deviation. (a) An FM signal has $\Delta f=75$ kHz and $f_m=15$ kHz. Find $\beta$ and Carson's bandwidth. (b) If $f_m$ is reduced to 3.4 kHz (voice only), find the new $\beta$ and bandwidth. (c) Explain why the bandwidth change is less than proportional to the change in $f_m$.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\beta=5$; $B=180$ kHz. (b) $\beta=75/3.4=22.1$; $B=2(75+3.4)=156.8$ kHz. (c) $B=2(\Delta f+f_m)$; for large $\beta$, $\Delta f$ dominates, so reducing $f_m$ hardly changes $B$. The deviation sets the bandwidth, not the message.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>The ionospheric link. (a) Explain why HF radio works for international broadcasting. (b) The F2 layer has $f_c=10$ MHz. Find the MUF for a 3000 km path (assume $h=300$ km, estimate $\theta$ from the geometry). (c) What happens during a solar flare?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) HF (3–30 MHz) is reflected by the ionosphere, enabling sky-wave propagation over thousands of km via multiple bounces. (b) For a 3000 km path with reflection height 300 km: $\tan\theta\approx1500/300$, so $\theta\approx78.7°$, $\cos\theta\approx0.196$; $f_{\text{MUF}}=10/0.196=51$ MHz (but this exceeds the practical limit — the wave may not be reflected at such high frequencies regardless of angle, because the ionosphere's refractive index drops). (c) Solar flares increase ionisation, raising $f_c$ but also increasing D-layer absorption, which can black out HF communication (a sudden ionospheric disturbance or SID).</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>Shannon's limit applied. (a) A voice channel has $B=3.4$ kHz. At $S/N=30$ dB, find $C$. (b) If the channel is used for data at 28.8 kbps (a dial-up modem), what $S/N$ is required? (c) How close is the modem to the Shannon limit?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $C=3400\log_2(1001)=3400\times9.97=33.9$ kbps. (b) $28800=3400\log_2(1+S/N)$; $\log_2(1+S/N)=8.47$; $S/N=2^{8.47}-1=354$; $S/N=25.5$ dB. (c) The ratio $28.8/33.9=85\%$ — the modem uses 85% of the theoretical capacity, a remarkable engineering achievement.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>The link budget. (a) Derive the Friis formula from first principles (power flux density and effective aperture). (b) A 1 W transmitter at 900 MHz with 10 dB gain sends to a receiver 2 km away with 0 dB gain. Find $P_r$ in dBm. (c) If the receiver sensitivity is $-100$ dBm, what is the margin?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL2. (b) Path loss $=32.4+20\log_{10}900+20\log_{10}2=32.4+59.1+6.0=97.5$ dB. $P_r=30+10+0-97.5=-57.5$ dBm. (c) Margin $=-57.5-(-100)=42.5$ dB — very comfortable.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>FM versus AM noise immunity. (a) Explain physically why FM rejects amplitude noise. (b) The FM improvement factor is approximately $3\beta^2/2$ for $\beta\gg1$. For $\beta=5$, find this factor in dB. (c) What is the trade-off for this improvement?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) The limiter clips amplitude variations; the discriminator reads frequency only, so amplitude noise is suppressed before detection. (b) $3\times25/2=37.5$; in dB: $10\log_{10}37.5=15.7$ dB. (c) The trade-off is bandwidth: FM uses $B=180$ kHz vs AM's 10 kHz — 18 times more bandwidth for 15.7 dB of noise improvement.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>Entropy and source coding. (a) A source emits symbols A, B, C with probabilities 0.6, 0.3, 0.1. Compute the entropy. (b) Design a Huffman code and find the average code length. (c) If the source produces 1000 symbols per second, what is the minimum bit rate?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $H=-(0.6\log_20.6+0.3\log_20.3+0.1\log_20.1)=0.442+0.521+0.332=1.295$ bits/symbol. (b) Huffman: A=0, B=10, C=11. $\bar{L}=1\times0.6+2\times0.3+2\times0.1=1.4$ bits/symbol. (c) Minimum bit rate $=H\times1000=1295$ bits/s; the Huffman code needs 1400 bits/s — the code is 8% above the entropy bound.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>The noise figure cascade. (a) Derive $F_{\text{total}}=F_1+(F_2-1)/G_1$. (b) An LNA has $F_1=0.5$ dB and $G_1=20$ dB. A second stage has $F_2=3$ dB. Find the total noise figure. (c) What happens if the stages are swapped?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL7. (b) $F_1=10^{0.05}=1.122$; $F_2=10^{0.3}=1.995$; $G_1=100$. $F=1.122+(1.995-1)/100=1.122+0.00995=1.132$; in dB: $0.54$ dB — the second stage is negligible. (c) Swapped: $G_1'=10^{0.3}=1.995$; $F'=1.995+(1.122-1)/1.995=1.995+0.061=2.056$; in dB: $3.13$ dB — much worse. The LNA must be first.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>The bandwidth–delay product. (a) Define it and explain its physical meaning. (b) For a 10 Mbps link with 50 ms round-trip delay, find the number of bits in flight. (c) Why does this matter for satellite internet?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $B\times\text{RTT}$ is the number of bits the sender can transmit before the first acknowledgment returns — the "length" of the pipe in bits. (b) $N=10^7\times0.05=5\times10^5$ bits $=62.5$ KB. (c) TCP's default window (64 KB) is barely enough for this link. For a geostationary satellite (RTT $\approx500$ ms, 10 Mbps): $N=5\times10^6$ bits $=625$ KB — far exceeds the default window, and the sender must wait for ACKs before transmitting more, wasting the channel. TCP window scaling is essential.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>The FM capture effect. (a) Explain the physical mechanism. (b) Why does AM not have this effect? (c) A receiver picks up two stations at the same frequency with a 3 dB power difference. What happens in FM versus AM?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) The limiter clips the combined signal to the amplitude of the stronger signal; the discriminator then follows the stronger signal's frequency, suppressing the weaker one. (b) In AM, both signals contribute to the envelope, producing a blend (and beats if they are at slightly different frequencies). (c) FM: the stronger station captures the receiver; the weaker station is suppressed (though 3 dB may not be enough — the typical capture ratio is 6–10 dB). AM: both stations are heard simultaneously, with audible beats and distortion.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<p>Section A (4 each): 4 marks for the correct option with a one-line reason; 2 for a right answer without reasoning. Section B (4 each): 2 for setup, 2 for the final selection. Section C (5 each): 2 for the formula, 3 for the number with units. Section D (9 each): typically three sub-parts at 3 marks each.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$B_{\text{AM}}=2f_m$</td>
+<td>single-tone AM</td>
+</tr>
+<tr>
+<td>$P=P_c(1+\mu^2/2)$, $\mu\leq1$</td>
+<td>standard AM</td>
+</tr>
+<tr>
+<td>$B_{\text{FM}}=2(\Delta f+f_m)$</td>
+<td>Carson's rule, $\beta&gt;2$</td>
+</tr>
+<tr>
+<td>$\beta=\Delta f/f_m$</td>
+<td>FM modulation index</td>
+</tr>
+<tr>
+<td>$d=\sqrt{2Rh}$</td>
+<td>line of sight, flat Earth</td>
+</tr>
+<tr>
+<td>$f_{\text{MUF}}=f_c/\cos\theta$</td>
+<td>ionospheric reflection</td>
+</tr>
+<tr>
+<td>$C=B\log_2(1+S/N)$</td>
+<td>Shannon, AWGN channel</td>
+</tr>
+<tr>
+<td>$P_n=kTB$</td>
+<td>thermal noise at temperature $T$</td>
+</tr>
+<tr>
+<td>$P_r=P_tG_tG_r(\lambda/4\pi d)^2$</td>
+<td>Friis, far field, free space</td>
+</tr>
+<tr>
+<td>$H=-\sum p_i\log_2 p_i$</td>
+<td>entropy</td>
+</tr>
+<tr>
+<td>$1/f_c\ll RC\ll1/f_m$</td>
+<td>envelope detector</td>
+</tr>
+<tr>
+<td>$\lambda=c/f$</td>
+<td>universal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can explain the three reasons for modulation (antenna size, multiplexing, propagation).</li>
+<li>[ ] I can derive the AM sideband frequencies and bandwidth from the modulation equation.</li>
+<li>[ ] I can compute AM total power and sideband power from $\mu$ and $P_c$.</li>
+<li>[ ] I can apply Carson's rule for FM bandwidth.</li>
+<li>[ ] I can identify ground-wave, sky-wave and space-wave propagation from the frequency.</li>
+<li>[ ] I can compute the skip distance and MUF for ionospheric reflection.</li>
+<li>[ ] I can design an envelope detector with the correct RC time constant.</li>
+<li>[ ] I can draw AM and FM transmitter and receiver block diagrams.</li>
+<li>[ ] I can apply Shannon's channel capacity theorem.</li>
+<li>[ ] I can perform a Friis link-budget calculation in dB.</li>
+<li>[ ] I can compute the entropy of a discrete source.</li>
+<li>[ ] I understand the FM capture effect and why AM does not have it.</li>
+<li>[ ] I can explain why the bandwidth–delay product matters for satellite links.</li>
+<li>[ ] I can cascade noise figures and explain why the first amplifier dominates.</li>
+</ul>
+<p><strong>What this chapter assumes from the course.</strong> <code>electromagnetic-waves/</code> (Maxwell, $c$, the EM spectrum), PART 22 (AC circuits, resonance, reactances, RMS, rectifiers), <code>capacitors/</code> (RC time constants, ripple), PART 23 (photon energy for the quantum noise floor).</p>
+<p><strong>What the next chapter inherits.</strong> This chapter is self-contained; no subsequent PART depends on it. The link-budget and Shannon-capacity tools are used in any communication engineering course; the propagation physics connects to the radio-astronomy applications of PART 24 and PART 28.</p>
+<p><strong>Open questions.</strong> What is the information capacity of a fading channel (where $S/N$ varies with time)? How do error-correcting codes approach Shannon's limit? What is the ultimate limit set by quantum mechanics on the signal-to-noise ratio? These are questions for a course in information theory and communication engineering.</p>
+</details>
+    <footer class="pager"><a href="semiconductors.html">← Semiconductors & devices</a><a href="special-relativity.html">Special relativity →</a></footer>
+    <p class="colophon">Rendered from <code>communication-systems/Communication-systems.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>communication-systems/Communication-systems.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

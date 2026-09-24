@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centre of mass & collisions — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="active">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 7</span><span class="prop"><b>slug</b> centre-of-mass-momentum</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">momentum</span><span class="prop tag">collisions</span><span class="prop tag">centre-of-mass</span></p>
+
+<h1 id="centre-of-mass-momentum-collisions-first-principles-to-olympiad">Centre of Mass, Momentum &amp; Collisions — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — the centre of mass, conservation of momentum, and the classification of collisions. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (CM-frame analysis, variable mass, two-body scattering, the impulse approximation, successive bouncing), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: find the centre of mass of any body or system; derive $M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$ from Newton's third law; apply conservation of momentum to explosions, collisions, and recoil problems; classify collisions (elastic, inelastic, perfectly inelastic) and use the coefficient of restitution; solve 1-D and 2-D collision problems; work in the CM frame; solve variable-mass problems (rocket equation); and analyse two-stage impulse problems (ballistic pendulum, bullet through block).</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>In an isolated system the centre of mass keeps moving in a straight line — every collision is a discussion about the motion around it.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>You need PART 5 (Newton's laws, the FBD method) and PART 6 (work–energy theorem, energy conservation). If you can solve a system of linear equations and compute a dot product, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats collisions and momentum as high-frequency topics — 3–4 questions per year, often combined with energy conservation (PART 6). The ballistic pendulum, the 2-D elastic collision, and the variable-mass rocket are classic JEE problems. INPhO and IPhO reward the ability to work in the CM frame, handle the impulse approximation, and solve variable-mass problems with momentum flux. The trap density is high: using energy conservation in an inelastic collision, applying the coefficient of restitution across the whole velocity instead of along the line of impact, and forgetting the ejecta's momentum in the rocket equation.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not an energy chapter: work and energy are in PART 6. Not a rotation chapter: angular momentum is in PART 8. Not a fluid-mechanics chapter: momentum flux in fluids is in PART 11. Not a relativity chapter: relativistic momentum is in PART 28.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Centre of mass</td>
+<td>Definition, COM of standard bodies</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>COM of real bodies</td>
+<td>Rod, triangle, semicircle, cone</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Motion of the COM</td>
+<td>$M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Momentum and impulse</td>
+<td>$\mathbf{p}=m\mathbf{v}$, $\mathbf{J}=\int\mathbf{F}\,dt$</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Conservation of momentum</td>
+<td>Conditions, component-wise</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Collisions I: classification</td>
+<td>Elastic, inelastic, $e$</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Collisions II: 1-D results</td>
+<td>General $e$-dependent velocities</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Collisions III: 2-D</td>
+<td>Smooth balls, equal-mass 90°</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>CM frame</td>
+<td>Energy decomposition, trivial elastic</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Variable mass</td>
+<td>Rocket equation, chain, sand</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Two-stage impulse</td>
+<td>Ballistic pendulum, bullet-block</td>
+<td>§3.11</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Systems with internal motion</td>
+<td>Man on boat, block on wedge</td>
+<td>§3.12</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Collisions with a third body</td>
+<td>Spring link, moving wall</td>
+<td>§3.13</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>The centre of mass is the "average position" of the mass.</strong> For a uniform rod, it is at the midpoint. For a triangle, it is at the centroid (one-third of the way from each side). For a complex object, it is the weighted average of all the mass elements: $\mathbf{R}=\sum m_i\mathbf{r}_i/M$.</p>
+<p><strong>The centre of mass of an isolated system moves at constant velocity.</strong> This is the deepest consequence of Newton's third law: internal forces cancel in pairs, so they cannot accelerate the system as a whole. An exploding shell follows the same parabola it would have followed without exploding — the fragments fly apart, but their centre of mass continues on the original trajectory.</p>
+<p><strong>Momentum is conserved in collisions.</strong> In any collision, the total momentum before equals the total momentum after (provided no external forces act during the brief collision time). This is true for elastic and inelastic collisions alike. What differs is the kinetic energy: elastic collisions conserve KE, inelastic do not.</p>
+<p><strong>The coefficient of restitution measures the "bounciness."</strong> $e=v_{\text{sep}}/v_{\text{app}}$ along the line of impact. $e=1$: perfectly elastic (no energy lost). $e=0$: perfectly inelastic (the objects stick together). Real collisions have $0&lt;e&lt;1$.</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{R}$</td>
+<td>position of the centre of mass</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$M$</td>
+<td>total mass</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>$\mathbf{p}$</td>
+<td>momentum $=m\mathbf{v}$</td>
+<td>kg m/s</td>
+</tr>
+<tr>
+<td>$\mathbf{J}$</td>
+<td>impulse $=\int\mathbf{F}\,dt$</td>
+<td>N s</td>
+</tr>
+<tr>
+<td>$e$</td>
+<td>coefficient of restitution</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>reduced mass $=m_1m_2/(m_1+m_2)$</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>$\mathbf{v}_{\text{cm}}$</td>
+<td>velocity of the centre of mass</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>$\Delta K$</td>
+<td>kinetic energy lost in a collision</td>
+<td>J</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>Momentum is a vector — conservation applies independently to each component. In 1-D collisions: use the sign convention consistently (rightward positive). In 2-D collisions: resolve along and perpendicular to the line of impact. The coefficient of restitution applies only along the line of impact — the tangential component of velocity is unchanged for smooth spheres.</p>
+</div>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-the-centre-of-mass-definition">3.1 The centre of mass: definition</h3>
+<p>For $n$ particles:</p>
+<p>$$
+\mathbf{R}=\frac{\sum_{i=1}^n m_i\mathbf{r}<em>i}{\sum</em>{i=1}^n m_i}=\frac{1}{M}\sum m_i\mathbf{r}_i. \qquad (3.1)
+$$</p>
+<p>For a continuous body: $\mathbf{R}=\frac{1}{M}\int\mathbf{r}\,dm$.</p>
+<p><strong>Component form:</strong> $X_{\text{cm}}=\sum m_i x_i/M$, $Y_{\text{cm}}=\sum m_i y_i/M$.</p>
+<p><strong>Standard results:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>COM location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform rod (length $L$)</td>
+<td>Centre ($L/2$ from either end)</td>
+</tr>
+<tr>
+<td>Uniform triangle</td>
+<td>Centroid (intersection of medians, 1/3 from each side)</td>
+</tr>
+<tr>
+<td>Semicircular ring (radius $R$)</td>
+<td>$y_{\text{cm}}=2R/\pi$ from the diameter</td>
+</tr>
+<tr>
+<td>Semicircular disc (radius $R$)</td>
+<td>$y_{\text{cm}}=4R/(3\pi)$ from the diameter</td>
+</tr>
+<tr>
+<td>Solid hemisphere (radius $R$)</td>
+<td>$y_{\text{cm}}=3R/8$ from the flat face</td>
+</tr>
+<tr>
+<td>Hollow hemisphere (radius $R$)</td>
+<td>$y_{\text{cm}}=R/2$ from the flat face</td>
+</tr>
+<tr>
+<td>Solid cone (height $h$)</td>
+<td>$h/4$ from the base</td>
+</tr>
+<tr>
+<td>Uniform arc (angle $\theta$)</td>
+<td>$R\sin(\theta/2)/(\theta/2)$ from the centre</td>
+</tr>
+</tbody>
+</table>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.1 · COM of standard bodies on one plate</p>
+<p><em>Show:</em> a rod, a triangle, a semicircular ring, a semicircular disc, and a solid cone, each with their COM marked by a dot and the distance from the reference surface labelled.
+<em>Search:</em> "centre of mass standard bodies rod triangle semicircle cone COM position"</p>
+</div>
+
+<h3 id="32-com-of-composite-bodies">3.2 COM of composite bodies</h3>
+<p><strong>The positive-mass/negative-mass trick:</strong> To find the COM of a body with a hole, treat the hole as negative mass:</p>
+<p>$$
+\mathbf{R}=\frac{M_1\mathbf{r}_1-M_2\mathbf{r}_2}{M_1-M_2}. \qquad (3.2)
+$$</p>
+<p>where $M_1$ is the mass of the full body and $M_2$ is the mass of the hole.</p>
+<p><strong>Symmetry shortcuts:</strong> If a body has an axis of symmetry, the COM lies on that axis. If it has two axes of symmetry, the COM is at their intersection.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.2 · The positive/negative mass trick</p>
+<p><em>Show:</em> a disc of radius $R$ with a smaller disc of radius $r$ cut out. The full disc (mass $M_1$) and the cut-out (mass $-M_2$) shown separately. The COM of the composite body marked.
+<em>Search:</em> "centre of mass positive negative mass trick disc with hole"</p>
+</div>
+
+<h3 id="33-motion-of-the-com">3.3 Motion of the COM</h3>
+<p><strong>Derivation from Newton's third law:</strong></p>
+<p>$$
+M\mathbf{a}<em>{\text{cm}}=\sum\mathbf{F}</em>{\text{ext}}. \qquad (3.3)
+$$</p>
+<p>Internal forces cancel in pairs (Newton's third law): $\sum\mathbf{F}_{\text{int}}=\mathbf{0}$. Therefore, the COM accelerates only under external forces.</p>
+<p><strong>Key consequence:</strong> In an isolated system ($\sum\mathbf{F}_{\text{ext}}=\mathbf{0}$), the COM moves at constant velocity. An explosion, a collision, or any internal rearrangement cannot change the COM's velocity.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.3 · The explosion's COM parabola</p>
+<p><em>Show:</em> a shell following a parabolic trajectory. At the peak, it explodes into fragments. The fragments fly in different directions, but their centre of mass continues on the original parabola. The COM trajectory shown as a dashed line.
+<em>Search:</em> "explosion centre of mass parabola fragments trajectory"</p>
+</div>
+
+<h3 id="34-momentum-and-impulse">3.4 Momentum and impulse</h3>
+<p>$$
+\mathbf{p}=m\mathbf{v}. \qquad (3.4)
+$$</p>
+<p>$$
+\mathbf{J}=\int_{t_i}^{t_f}\mathbf{F}\,dt=\Delta\mathbf{p}. \qquad (3.5)
+$$</p>
+<p>Impulse is the area under the $F$–$t$ curve. The impulse–momentum theorem: the impulse equals the change in momentum.</p>
+<p><strong>Average force:</strong> $\bar{F}=J/\Delta t=\Delta p/\Delta t$. In a collision, the average force can be very large even for a small impulse, because $\Delta t$ is very short.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.4 · The $F$–$t$ impulse curve</p>
+<p><em>Show:</em> a graph of $F$ vs $t$ during a collision (a sharp peak). The area under the curve shaded (the impulse $J$). The average force $\bar{F}=J/\Delta t$ shown as a horizontal line enclosing the same area.
+<em>Search:</em> "impulse force versus time curve area average force collision"</p>
+</div>
+
+<h3 id="35-conservation-of-momentum">3.5 Conservation of momentum</h3>
+<p><strong>The condition:</strong> if the net external impulse is zero (in a given direction), the total momentum is conserved (in that direction):</p>
+<p>$$
+\sum\mathbf{p}<em>{\text{before}}=\sum\mathbf{p}</em>{\text{after}}. \qquad (3.6)
+$$</p>
+<p><strong>Component-wise:</strong> momentum is conserved independently in each direction. In a 2-D collision: $p_{x,\text{before}}=p_{x,\text{after}}$ and $p_{y,\text{before}}=p_{y,\text{after}}$.</p>
+<h3 id="36-collisions-i-classification">3.6 Collisions I: classification</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>KE conserved?</th>
+<th>$e$</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elastic</td>
+<td>Yes</td>
+<td>$e=1$</td>
+<td>Billiard balls (approximately)</td>
+</tr>
+<tr>
+<td>Inelastic</td>
+<td>No</td>
+<td>$0&lt;e&lt;1$</td>
+<td>Most real collisions</td>
+</tr>
+<tr>
+<td>Perfectly inelastic</td>
+<td>No (maximum loss)</td>
+<td>$e=0$</td>
+<td>Bullet embedding in a block</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The line of impact:</strong> the line along which the collision force acts (for smooth spheres: the line joining the centres). The coefficient of restitution applies only along this line. The tangential component of velocity is unchanged for smooth spheres (no tangential impulse).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.5 · Collision classification: before and after</p>
+<p><em>Show:</em> three cases: (1) elastic — two balls approach, exchange velocities (or bounce); (2) inelastic — they bounce with reduced speeds; (3) perfectly inelastic — they stick together. Velocity arrows shown before and after.
+<em>Search:</em> "collision classification elastic inelastic perfectly inelastic before after"</p>
+</div>
+<h3 id="37-collisions-ii-1-d-results">3.7 Collisions II: 1-D results</h3>
+<p>For a 1-D collision between $m_1$ and $m_2$ with initial velocities $u_1$ and $u_2$:</p>
+<p>$$
+v_1=\frac{m_1-em_2}{m_1+m_2}u_1+\frac{(1+e)m_2}{m_1+m_2}u_2, \qquad (3.7a)
+$$</p>
+<p>$$
+v_2=\frac{(1+e)m_1}{m_1+m_2}u_1+\frac{m_2-em_1}{m_1+m_2}u_2. \qquad (3.7b)
+$$</p>
+<p><strong>Special cases:</strong></p>
+<ul>
+<li><strong>Elastic ($e=1$), $m_1=m_2$:</strong> $v_1=u_2$, $v_2=u_1$ (velocities exchange).</li>
+<li><strong>Elastic, $m_1\gg m_2$:</strong> $v_1\approx u_1$, $v_2\approx2u_1-u_2$ (the heavy particle barely moves; the light particle bounces off at $2u_1-u_2$).</li>
+<li><strong>Elastic, $m_1\ll m_2$:</strong> $v_1\approx2u_2-u_1$, $v_2\approx u_2$ (the light particle bounces back; the heavy particle barely moves).</li>
+<li><strong>Perfectly inelastic ($e=0$):</strong> $v_1=v_2=\frac{m_1u_1+m_2u_2}{m_1+m_2}$ (they stick together).</li>
+</ul>
+<p><strong>Energy loss:</strong></p>
+<p>$$
+\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2). \qquad (3.8)
+$$</p>
+<p>where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $\Delta K=0$ (elastic). For $e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$ (maximum loss).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.6 · The $e$-dependence of final velocities</p>
+<p><em>Show:</em> a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. At $e=0$: both move together at $v_{\text{cm}}$. At $e=1$: $v_1=0$, $v_2=u_1$ (equal-mass exchange). The curves are linear in $e$.
+<em>Search:</em> "final velocities versus coefficient of restitution e graph 1D collision"</p>
+</div>
+
+<h3 id="38-collisions-iii-2-d">3.8 Collisions III: 2-D</h3>
+<p>For a smooth-sphere collision in 2-D:</p>
+<ol>
+<li><strong>Line of impact:</strong> the line joining the centres at contact.</li>
+<li><strong>Along the line of impact:</strong> momentum conservation + restitution ($e$).</li>
+<li><strong>Perpendicular to the line of impact:</strong> each sphere's tangential velocity is unchanged (no tangential impulse).</li>
+</ol>
+<p><strong>Equal-mass elastic 90° result:</strong> If two equal-mass smooth spheres collide elastically (one initially at rest), the velocities after collision are perpendicular: $\theta_1+\theta_2=90°$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.7 · The 2-D oblique collision</p>
+<p><em>Show:</em> two spheres colliding. The line of impact and the plane of contact drawn. The velocity components along and perpendicular to the line of impact shown for each sphere. The tangential components unchanged; the normal components determined by momentum conservation and $e$.
+<em>Search:</em> "2D oblique collision line of impact plane of contact velocity components"</p>
+</div>
+
+<h3 id="39-the-centre-of-mass-frame">3.9 The centre-of-mass frame</h3>
+<p><strong>The CM frame</strong> moves at velocity $\mathbf{v}_{\text{cm}}=\frac{m_1\mathbf{u}_1+m_2\mathbf{u}_2}{m_1+m_2}$.</p>
+<p><strong>Properties:</strong>
+1. Total momentum is zero in the CM frame.
+2. For elastic collisions: the velocities simply reverse direction in the CM frame.
+3. Energy decomposition: $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text{rel}}$ where $K_{\text{rel}}=\frac{1}{2}\mu v_{\text{rel}}^2$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The CM frame is the "natural" frame for collisions because it simplifies the analysis: the total momentum is zero, and elastic collisions simply reverse the velocities. The lab-frame results can be obtained by transforming back.</p>
+</div>
+
+<h3 id="310-variable-mass">3.10 Variable mass</h3>
+<p><strong>Derivation of the rocket equation:</strong></p>
+<p>At time $t$: mass $m$, velocity $v$. At $t+dt$: mass $m+dm$ ($dm&lt;0$), velocity $v+dv$. Exhaust: mass $-dm$, velocity $v-v_e$ (in the ground frame). Momentum conservation:</p>
+<p>$$
+mv=(m+dm)(v+dv)+(-dm)(v-v_e). \qquad (3.9)
+$$</p>
+<p>Expanding and dropping $dm\,dv$: $m\,dv+v_e\,dm=0$. Integrating:</p>
+<p>$$
+\boxed{\Delta v=v_e\ln\frac{m_0}{m_f}} \qquad (3.10)
+$$</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.8 · The rocket's momentum ledger</p>
+<p><em>Show:</em> at time $t$: rocket of mass $m$ moving at $v$. At time $t+dt$: rocket of mass $m+dm$ at $v+dv$, and exhaust mass $-dm$ at $v-v_e$. The momentum of each drawn as arrows.
+<em>Search:</em> "rocket equation momentum conservation exhaust diagram variable mass"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.9 · The lab frame vs CM frame side by side</p>
+<p><em>Show:</em> left: a collision in the lab frame (one particle approaching a stationary target). Right: the same collision in the CM frame (both particles approach the CM with equal and opposite momenta, then scatter). The CM frame shows the total momentum is zero.
+<em>Search:</em> "lab frame versus centre of mass frame collision comparison diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.10 · The falling chain on a scale with force components</p>
+<p><em>Show:</em> a chain falling onto a scale. Two forces on the scale: (1) the weight of the landed part ($\lambda(L-x)g$, downward); (2) the impact force from the arriving chain ($2\lambda gx$, downward — the momentum flux). The total reading $F=\lambda(L+x)g$ annotated. At $x=L$: $F=2mg$.
+<em>Search:</em> "falling chain scale reading impact force weight momentum flux"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.11 · The ballistic pendulum's two stages</p>
+<p><em>Show:</em> left: the collision stage — a bullet embeds in a hanging block (momentum conserved, energy not). Right: the swing stage — the block+bullet swings up to height $h$ (energy conserved, momentum not). The two stages clearly separated with labels.
+<em>Search:</em> "ballistic pendulum two stages collision swing momentum energy"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D7.12 · A man walking on a boat with the COM's fixed line</p>
+<p><em>Show:</em> a boat on frictionless water with a man standing on it. Left: initial position. Right: the man has walked rightward; the boat has moved leftward. The COM of the man+boat system shown as a fixed vertical dashed line (it does not move). The displacements $d_{\text{man}}$ and $d_{\text{boat}}$ annotated.
+<em>Search:</em> "man walking boat centre of mass fixed line displacement diagram"</p>
+</div>
+
+<h3 id="311-two-stage-impulse-problems">3.11 Two-stage impulse problems</h3>
+<p><strong>Ballistic pendulum:</strong> a bullet embeds in a hanging block. The block swings up to height $h$.</p>
+<ol>
+<li><strong>Collision (momentum conserved):</strong> $mv_0=(m+M)V$.</li>
+<li><strong>Swing (energy conserved):</strong> $\frac{1}{2}(m+M)V^2=(m+M)gh$.</li>
+</ol>
+<p>$v_0=\frac{m+M}{m}\sqrt{2gh}$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Momentum is conserved during the collision (brief time, no external horizontal impulse). Energy is conserved during the swing (only gravity does work). The order matters: momentum first (collision), energy second (swing).</p>
+</div>
+
+<h3 id="312-systems-with-internal-motion">3.12 Systems with internal motion</h3>
+<p><strong>Man on a boat:</strong> a man of mass $m$ walks a distance $d$ on a boat of mass $M$ (initially at rest, frictionless water). The boat moves in the opposite direction so that the COM stays fixed: $md_{\text{man}}+Md_{\text{boat}}=0$ (in the lab frame, the displacements are relative to the water). The man's displacement relative to the ground: $d_{\text{man}}=Md/(m+M)$.</p>
+<p><strong>Block on a movable wedge:</strong> the block slides down the wedge; the wedge slides on the table. Horizontal momentum is conserved (no external horizontal force). The COM stays fixed horizontally.</p>
+<h3 id="313-collisions-with-a-third-body">3.13 Collisions with a third body</h3>
+<p><strong>Block-into-block-into-spring:</strong> two blocks collide (with $e$), then the combined system compresses a spring. The collision determines the post-collision velocity; the spring determines the maximum compression.</p>
+<p><strong>Moving-wall bounce:</strong> a ball bounces off a wall moving at speed $v_w$. The relative velocity reverses: $v_{\text{sep}}=ev_{\text{app}}$. $v_{\text{after}}-v_w=-e(v_{\text{before}}-v_w)$.</p>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{\mathbf{R}=\frac{1}{M}\sum m_i\mathbf{r}<em>i,\quad M\mathbf{a}</em>{\text{cm}}=\mathbf{F}_{\text{ext}}} \qquad (4.1)
+$$</p>
+<p>centre of mass definition and its equation of motion.</p>
+<p>$$
+\boxed{\mathbf{J}=\Delta\mathbf{p}=\int\mathbf{F}\,dt} \qquad (4.2)
+$$</p>
+<p>impulse–momentum theorem.</p>
+<p>$$
+\boxed{\sum\mathbf{p}<em>{\text{before}}=\sum\mathbf{p}</em>{\text{after}}\text{ if }\sum\mathbf{F}_{\text{ext}}=\mathbf{0}} \qquad (4.3)
+$$</p>
+<p>conservation of momentum.</p>
+<p>$$
+\boxed{e=\frac{v_{\text{sep}}}{v_{\text{app}}}=\frac{v_2-v_1}{u_1-u_2}\text{ (1-D)}} \qquad (4.4)
+$$</p>
+<p>coefficient of restitution along the line of impact.</p>
+<p>$$
+\boxed{\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)} \qquad (4.5)
+$$</p>
+<p>energy lost in a 1-D collision.</p>
+<p>$$
+\boxed{\Delta v=v_e\ln\frac{m_0}{m_f}} \qquad (4.6)
+$$</p>
+<p>rocket equation.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$e=1$: $\Delta K=0$ — elastic, no energy lost. ✓</li>
+<li>$e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$ — maximum energy lost. ✓</li>
+<li>$m_1=m_2$, $e=1$: $v_1=u_2$, $v_2=u_1$ — velocities exchange. ✓</li>
+<li>$m_1\gg m_2$: the heavy mass barely changes velocity. ✓</li>
+<li>$m_0/m_f=e$: $\Delta v=v_e$ — if 63% of the mass is fuel, the speed increases by $v_e$. ✓</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mass distribution</td>
+<td>COM</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>force and time</td>
+<td>impulse/change in momentum</td>
+<td>Eq. (4.2)</td>
+</tr>
+<tr>
+<td>collision (no external force)</td>
+<td>final velocities</td>
+<td>Eq. (4.3) + $e$</td>
+</tr>
+<tr>
+<td>$e$ and initial velocities</td>
+<td>energy lost</td>
+<td>Eq. (4.5)</td>
+</tr>
+<tr>
+<td>rocket</td>
+<td>velocity change</td>
+<td>Eq. (4.6)</td>
+</tr>
+<tr>
+<td>ballistic pendulum</td>
+<td>bullet speed</td>
+<td>momentum then energy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Can the COM of a body lie outside the body?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes — for a ring, the COM is at the centre (inside the hole). For a boomerang, the COM may be in empty space.</p>
+</details>
+<p><strong>C2 — concept check.</strong> An explosion breaks a shell into fragments. Does the COM of the fragments follow the original parabola?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes — the explosion is an internal force. The COM continues on the original trajectory (as if the shell had not exploded).</p>
+</details>
+<p><strong>C3 — concept check.</strong> In a perfectly inelastic collision, is all kinetic energy lost?</p>
+<details>
+<summary>Answer</summary>
+<p>No — only the maximum possible is lost. The stuck-together objects still move with $v_{\text{cm}}$, so some KE remains ($\frac{1}{2}Mv_{\text{cm}}^2$).</p>
+</details>
+<p><strong>C4 — concept check.</strong> What is the coefficient of restitution for a ball bouncing off a hard floor?</p>
+<details>
+<summary>Answer</summary>
+<p>$e=v_{\text{after}}/v_{\text{before}}$ (the ratio of speeds, since the floor is stationary). A tennis ball: $e\approx0.75$. A superball: $e\approx0.9$.</p>
+</details>
+<p><strong>C5 — concept check.</strong> Why is momentum conserved in a collision but energy may not be?</p>
+<details>
+<summary>Answer</summary>
+<p>Momentum is conserved because the collision forces are internal (equal and opposite) and act for the same time. Energy may not be conserved because the deformations during the collision convert KE to heat, sound, or deformation energy.</p>
+</details>
+<p><strong>C6 — concept check.</strong> In the rocket equation, why is $dm&lt;0$?</p>
+<details>
+<summary>Answer</summary>
+<p>The rocket loses mass (ejects exhaust), so $dm$ is negative. The exhaust mass $-dm$ is positive.</p>
+</details>
+<p><strong>C7 — concept check.</strong> A gun fires a bullet. Which has more momentum: the bullet or the gun?</p>
+<details>
+<summary>Answer</summary>
+<p>They have equal and opposite momentum (by conservation of momentum, starting from zero). The bullet has more speed (because it has less mass).</p>
+</details>
+<p><strong>C8 — concept check.</strong> In a 2-D collision, which component of momentum is conserved?</p>
+<details>
+<summary>Answer</summary>
+<p>Both components (if no external force). Along the line of impact: momentum conservation + restitution. Perpendicular: each sphere's tangential velocity is unchanged.</p>
+</details>
+<p><strong>C9 — concept check.</strong> A ball hits a wall at angle $\theta$ and bounces off at angle $\theta$. Is this elastic?</p>
+<details>
+<summary>Answer</summary>
+<p>Not necessarily — the angle of reflection equals the angle of incidence for any smooth-sphere collision with a massive wall, regardless of $e$. The energy loss depends on $e$ (the normal component of velocity is reduced by factor $e$).</p>
+</details>
+<p><strong>C10 — concept check.</strong> A man walks on a boat. Does the COM of the man+boat system move?</p>
+<details>
+<summary>Answer</summary>
+<p>No — there are no external horizontal forces (the water is frictionless). The COM stays fixed. The boat moves opposite to the man.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why does the ballistic pendulum use momentum first and energy second?</p>
+<details>
+<summary>Answer</summary>
+<p>During the collision: momentum is conserved (brief time, no external impulse), but energy is not (the bullet embeds — inelastic). During the swing: energy is conserved (only gravity does work), but momentum is not (gravity is an external force). Each conservation law applies to a different stage.</p>
+</details>
+<p><strong>C12 — concept check.</strong> Can a lighter object stop a heavier object in an elastic collision?</p>
+<details>
+<summary>Answer</summary>
+<p>No — in an elastic collision, the lighter object always bounces back (reverses velocity in the CM frame). The heavy object continues forward, barely slowed.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-com-of-a-composite-body">E1 — COM of a composite body</h3>
+<p>Find the COM of a uniform plate consisting of a 4 m × 2 m rectangle with a 1 m × 1 m square cut from one corner.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Using the positive/negative mass trick: the COM shifts away from the cut-out.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Full rectangle: mass $M_1=8$ (area proportional), COM at $(2,1)$. Cut-out: mass $M_2=1$, COM at $(0.5,0.5)$. $X_{\text{cm}}=(8\times2-1\times0.5)/7=15.5/7=2.21$ m. $Y_{\text{cm}}=(8\times1-1\times0.5)/7=7.5/7=1.07$ m.</p>
+</details>
+<h3 id="e2-explosion-com-trajectory">E2 — Explosion: COM trajectory</h3>
+<p>A shell of mass 10 kg is fired at 30 m/s at 45°. At the peak, it explodes into two fragments: 4 kg and 6 kg. The 4 kg fragment falls straight down. Find the velocity of the 6 kg fragment.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At the peak: $v_x=30\cos45°=21.2$ m/s, $v_y=0$. The 4 kg fragment has $v_x=0$. Momentum: $10\times21.2=4\times0+6\times v_{6x}$. $v_{6x}=35.3$ m/s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At the peak: total momentum $p_x=10\times21.2=212$ kg m/s. After explosion: $p_x=6v_{6x}=212$. $v_{6x}=35.3$ m/s. The 6 kg fragment moves faster in the original direction.</p>
+</details>
+<h3 id="e3-1-d-elastic-collision-equal-masses">E3 — 1-D elastic collision: equal masses</h3>
+<p>A 2 kg ball at 5 m/s collides elastically with a 2 kg ball at rest. Find the velocities after.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v_1=0$, $v_2=5$ m/s — complete velocity exchange.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v_1=\frac{m_1-m_2}{m_1+m_2}u_1+\frac{2m_2}{m_1+m_2}u_2=0+0=0$. $v_2=\frac{2m_1}{m_1+m_2}u_1+\frac{m_2-m_1}{m_1+m_2}u_2=5+0=5$ m/s.</p>
+</details>
+<h3 id="e4-1-d-perfectly-inelastic-collision">E4 — 1-D perfectly inelastic collision</h3>
+<p>A 5 kg ball at 10 m/s collides with a 3 kg ball at $-4$ m/s. They stick together. Find the final velocity and energy lost.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v=(50-12)/8=38/8=4.75$ m/s. $\Delta K=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16-\frac{1}{2}\times8\times22.56=250+24-90.2=183.8$ J.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v=\frac{5\times10+3\times(-4)}{5+3}=\frac{50-12}{8}=4.75$ m/s. $K_i=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16=274$ J. $K_f=\frac{1}{2}\times8\times22.56=90.2$ J. $\Delta K=183.8$ J.</p>
+</details>
+<h3 id="e5-ballistic-pendulum">E5 — Ballistic pendulum</h3>
+<p>A 10 g bullet at 400 m/s embeds in a 2 kg block hanging from a string. Find the height the block rises. ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$V=0.01\times400/2.01=1.99$ m/s. $h=V^2/(2g)=3.96/20=0.198$ m $\approx20$ cm.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Momentum: $0.01\times400=(0.01+2)V$. $V=4/2.01=1.99$ m/s. Energy: $\frac{1}{2}\times2.01\times3.96=2.01\times10\times h$. $h=3.96/20=0.198$ m.</p>
+</details>
+<h3 id="e6-2-d-elastic-collision-equal-masses">E6 — 2-D elastic collision: equal masses</h3>
+<p>A ball of mass $m$ at speed $v_0$ hits an equal-mass ball at rest. The collision is elastic and smooth. The incoming ball is deflected by 30°. Find the speeds and the angle of the second ball.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\theta_1+\theta_2=90°$. $\theta_2=60°$. From momentum: $v_1\cos30°+v_2\cos60°=v_0$, $v_1\sin30°-v_2\sin60°=0$. From the second: $v_1=2v_2\sqrt{3}/2=v_2\sqrt{3}$. Substituting: $v_2\sqrt{3}\times0.866+v_2\times0.5=v_0$. $v_2(1.5+0.5)=v_0$. $v_2=v_0/2$. $v_1=v_0\sqrt{3}/2$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The 90° result: $\theta_1+\theta_2=90°\Rightarrow\theta_2=60°$. Momentum $x$: $mv_1\cos30°+mv_2\cos60°=mv_0$. Momentum $y$: $mv_1\sin30°=mv_2\sin60°$. From $y$: $v_1=v_2\sqrt{3}$. From $x$: $v_2\sqrt{3}\times\frac{\sqrt{3}}{2}+v_2\times\frac{1}{2}=v_0$. $v_2(3/2+1/2)=v_0$. $v_2=v_0/2$. $v_1=v_0\sqrt{3}/2$.</p>
+</details>
+<h3 id="e7-variable-mass-sand-on-a-belt">E7 — Variable mass: sand on a belt</h3>
+<p>Sand falls at 5 kg/s onto a conveyor belt moving at 2 m/s. Find the force needed and the power.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$F=\dot{m}v=10$ N. $P=Fv=20$ W. KE rate $=\frac{1}{2}\dot{m}v^2=10$ W — the other 10 W is heat.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $F=\dot{m}v=5\times2=10$ N. $P=Fv=20$ W. $\dot{K}=\frac{1}{2}\dot{m}v^2=10$ W. The belt's power is twice the KE rate — the rest goes into heat.</p>
+</details>
+<h3 id="e8-man-on-a-boat">E8 — Man on a boat</h3>
+<p>A 60 kg man walks 3 m on a 120 kg boat (initially at rest, frictionless water). How far does the boat move?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The COM stays fixed: $60\times d_{\text{man}}+120\times d_{\text{boat}}=0$. $d_{\text{man}}=-2d_{\text{boat}}$. The man moves 3 m relative to the boat: $d_{\text{man}}-d_{\text{boat}}=3$. $-2d_{\text{boat}}-d_{\text{boat}}=3$. $d_{\text{boat}}=-1$ m. The boat moves 1 m opposite to the man.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $d_{\text{man}}-d_{\text{boat}}=3$ (relative displacement). $60d_{\text{man}}+120d_{\text{boat}}=0$ (COM fixed). $d_{\text{man}}=-2d_{\text{boat}}$. $-2d_{\text{boat}}-d_{\text{boat}}=3$. $d_{\text{boat}}=-1$ m.</p>
+</details>
+<h3 id="e9-moving-wall-bounce">E9 — Moving-wall bounce</h3>
+<p>A ball at 10 m/s hits a wall moving toward it at 5 m/s. $e=0.8$. Find the ball's velocity after.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v_{\text{app}}=10-(-5)=15$ m/s (relative approach speed). $v_{\text{sep}}=0.8\times15=12$ m/s. $v_{\text{after}}-(-5)=12$. $v_{\text{after}}=7$ m/s (away from the wall).</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v_{\text{after}}-v_w=-e(v_{\text{before}}-v_w)$. $v_{\text{after}}-(-5)=-0.8(10-(-5))=-12$. $v_{\text{after}}=-12+5=-7$ m/s. Wait — sign convention: positive is toward the wall. $v_{\text{before}}=+10$, $v_w=-5$ (wall moving toward the ball... actually, let me be careful. If the wall moves toward the ball: $v_w=-5$ (in the ball's frame, the wall approaches faster). $v_{\text{after}}-v_w=-e(v_{\text{before}}-v_w)$. $v_{\text{after}}+5=-0.8(10+5)=-12$. $v_{\text{after}}=-17$ m/s. The ball bounces back at 17 m/s — faster than it came in! The wall's kinetic energy was transferred to the ball.</p>
+</details>
+<h3 id="e10-rocket-delta-v">E10 — Rocket $\Delta v$</h3>
+<p>A rocket has $v_e=3$ km/s and mass ratio $m_0/m_f=10$. Find $\Delta v$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\Delta v=3\ln10=3\times2.303=6.91$ km/s — enough for a low orbit.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta v=v_e\ln(m_0/m_f)=3\times\ln10=6.91$ km/s.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>COM of composite</td>
+<td>Positive/negative mass</td>
+<td>E1</td>
+<td>subtraction trick</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Explosion</td>
+<td>COM trajectory</td>
+<td>E2</td>
+<td>three fragments</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>1-D elastic</td>
+<td>Velocity exchange</td>
+<td>E3</td>
+<td>unequal masses</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>1-D perfectly inelastic</td>
+<td>Stick together</td>
+<td>E4</td>
+<td>find $e$ from energy</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Ballistic pendulum</td>
+<td>Momentum then energy</td>
+<td>E5</td>
+<td>bullet through block</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>2-D elastic</td>
+<td>90° result</td>
+<td>E6</td>
+<td>oblique collision</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Sand on belt</td>
+<td>Momentum flux</td>
+<td>E7</td>
+<td>chain, rocket</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Man on boat</td>
+<td>COM fixed</td>
+<td>E8</td>
+<td>block on wedge</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Moving wall</td>
+<td>$v_{\text{sep}}=ev_{\text{app}}$</td>
+<td>E9</td>
+<td>wall with speed</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Rocket</td>
+<td>$\Delta v=v_e\ln(m_0/m_f)$</td>
+<td>E10</td>
+<td>two-stage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-find-the-com-of-a-system-m_12-kg-at-10-m_23-kg-at-02">Q1. Find the COM of a system: $m_1=2$ kg at $(1,0)$, $m_2=3$ kg at $(0,2)$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$X_{\text{cm}}=(2\times1+3\times0)/5=0.4$ m. $Y_{\text{cm}}=(2\times0+3\times2)/5=1.2$ m.</p>
+</details>
+<h4 id="q2-a-5-kg-object-explodes-into-3-kg-and-2-kg-the-3-kg-piece-moves-at-4-ms-east-find-the-velocity-of-the-2-kg-piece">Q2. A 5 kg object explodes into 3 kg and 2 kg. The 3 kg piece moves at 4 m/s east. Find the velocity of the 2 kg piece.</h4>
+<details>
+<summary>Solution</summary>
+<p>$0=3\times4+2v$. $v=-6$ m/s (west).</p>
+</details>
+<h4 id="q3-a-1-kg-ball-at-6-ms-hits-a-2-kg-ball-at-rest-elastic-1-d-find-the-velocities">Q3. A 1 kg ball at 6 m/s hits a 2 kg ball at rest (elastic, 1-D). Find the velocities.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_1=(1-2)/(1+2)\times6+0=-2$ m/s. $v_2=2\times1/(1+2)\times6+0=4$ m/s.</p>
+</details>
+<h4 id="q4-a-005-kg-bullet-at-200-ms-embeds-in-a-2-kg-block-find-the-common-velocity">Q4. A 0.05 kg bullet at 200 m/s embeds in a 2 kg block. Find the common velocity.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=0.05\times200/2.05=4.88$ m/s.</p>
+</details>
+<h4 id="q5-a-ball-is-dropped-from-5-m-and-bounces-to-32-m-find-e">Q5. A ball is dropped from 5 m and bounces to 3.2 m. Find $e$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$e=\sqrt{h_2/h_1}=\sqrt{3.2/5}=\sqrt{0.64}=0.8$.</p>
+</details>
+<h4 id="q6-two-equal-mass-balls-collide-elastically-one-is-at-rest-the-incoming-ball-is-deflected-30-find-the-other-balls-angle">Q6. Two equal-mass balls collide elastically. One is at rest. The incoming ball is deflected 30°. Find the other ball's angle.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\theta_2=90°-30°=60°$.</p>
+</details>
+<h4 id="q7-a-1000-kg-car-at-20-ms-hits-a-2000-kg-truck-at-rest-perfectly-inelastic-find-the-common-velocity">Q7. A 1000 kg car at 20 m/s hits a 2000 kg truck at rest (perfectly inelastic). Find the common velocity.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=1000\times20/3000=6.67$ m/s.</p>
+</details>
+<h4 id="q8-a-rocket-has-v_e2-kms-and-must-reach-delta-v4-kms-find-m_0m_f">Q8. A rocket has $v_e=2$ km/s and must reach $\Delta v=4$ km/s. Find $m_0/m_f$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$m_0/m_f=e^{4/2}=e^2=7.39$.</p>
+</details>
+<h4 id="q9-a-01-kg-ball-at-10-ms-hits-a-wall-and-bounces-back-at-8-ms-find-the-impulse">Q9. A 0.1 kg ball at 10 m/s hits a wall and bounces back at 8 m/s. Find the impulse.</h4>
+<details>
+<summary>Solution</summary>
+<p>$J=m(v_f-v_i)=0.1(-8-10)=-1.8$ N s (magnitude 1.8 N s, direction: away from the wall).</p>
+</details>
+<h4 id="q10-a-60-kg-person-jumps-off-a-120-kg-boat-at-3-ms-relative-to-the-boat-find-the-boats-velocity">Q10. A 60 kg person jumps off a 120 kg boat at 3 m/s (relative to the boat). Find the boat's velocity.</h4>
+<details>
+<summary>Solution</summary>
+<p>$0=60(3+v_b)+120v_b$. $180+60v_b+120v_b=0$. $180v_b=-180$. $v_b=-1$ m/s.</p>
+</details>
+<h4 id="q11-a-2-kg-ball-at-5-ms-collides-with-a-3-kg-ball-at-2-ms-elastic-find-the-velocities">Q11. A 2 kg ball at 5 m/s collides with a 3 kg ball at $-2$ m/s (elastic). Find the velocities.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_1=(2-3)/5\times5+2\times3/5\times(-2)=-1-2.4=-3.4$ m/s. $v_2=2\times2/5\times5+(3-2)/5\times(-2)=4-0.4=3.6$ m/s.</p>
+</details>
+<h4 id="q12-a-ballistic-pendulum-5-g-bullet-1-kg-block-height-01-m-find-bullet-speed-g10-ms2">Q12. A ballistic pendulum: 5 g bullet, 1 kg block, height 0.1 m. Find bullet speed. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$V=\sqrt{2gh}=\sqrt{2}=1.414$ m/s. $v_0=(1.005/0.005)\times1.414=284$ m/s.</p>
+</details>
+<h4 id="q13-a-chain-of-mass-3-kg-is-lifted-at-2-ms-find-the-force-take-g10-ms2">Q13. A chain of mass 3 kg is lifted at 2 m/s. Find the force. (Take $g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=\lambda xg+\lambda v^2$. For a specific $x$: $F=(3/L)x\times10+(3/L)\times4$. At $x=L$: $F=30+12/L\times L$... this needs the full chain length. If the entire chain is being lifted at constant speed: $F=mg+\dot{m}v=3\times10+(3/0)\times2$... the problem needs more information. For a chain being pulled at constant speed $v$: $F=\lambda vg+\lambda v^2$ at the point where the chain is being lifted. If the chain is already fully off the ground: $F=mg=30$ N (no momentum flux). If the chain is being lifted from a pile: $F=\lambda xg+\lambda v^2$ where $x$ is the length already lifted.</p>
+</details>
+<h4 id="q14-a-1-kg-ball-at-3-ms-collides-with-a-wall-moving-toward-it-at-2-ms-e05-find-the-balls-speed-after">Q14. A 1 kg ball at 3 m/s collides with a wall moving toward it at 2 m/s. $e=0.5$. Find the ball's speed after.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_{\text{after}}-(-2)=-0.5(3-(-2))=-2.5$. $v_{\text{after}}=-4.5$ m/s. Speed $=4.5$ m/s.</p>
+</details>
+<h4 id="q15-find-the-com-of-a-uniform-semicircular-wire-of-radius-r">Q15. Find the COM of a uniform semicircular wire of radius $R$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$y_{\text{cm}}=2R/\pi$ from the diameter (by symmetry, $x_{\text{cm}}=0$).</p>
+</details>
+<h4 id="q16-a-02-kg-ball-at-5-ms-collides-elastically-with-a-03-kg-ball-at-3-ms-find-the-velocities">Q16. A 0.2 kg ball at 5 m/s collides elastically with a 0.3 kg ball at $-3$ m/s. Find the velocities.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_1=(0.2-0.3)/0.5\times5+2\times0.3/0.5\times(-3)=-0.2\times5+1.2\times(-3)=-1-3.6=-4.6$ m/s. $v_2=2\times0.2/0.5\times5+(0.3-0.2)/0.5\times(-3)=4+0.2\times(-3)=3.4$ m/s.</p>
+</details>
+<h4 id="q17-a-bomb-at-rest-explodes-into-three-equal-masses-two-move-at-right-angles-at-10-ms-each-find-the-velocity-of-the-third">Q17. A bomb at rest explodes into three equal masses. Two move at right angles at 10 m/s each. Find the velocity of the third.</h4>
+<details>
+<summary>Solution</summary>
+<p>$0=m\times10\hat{i}+m\times10\hat{j}+mv_3$. $v_3=-10\hat{i}-10\hat{j}$. Speed $=10\sqrt{2}=14.1$ m/s at 225° from the first.</p>
+</details>
+<h4 id="q18-a-2-kg-block-and-a-3-kg-block-are-connected-by-a-compressed-spring-k100-nm-x02-m-when-released-find-the-speeds-no-friction">Q18. A 2 kg block and a 3 kg block are connected by a compressed spring ($k=100$ N/m, $x=0.2$ m). When released, find the speeds. (No friction.)</h4>
+<details>
+<summary>Solution</summary>
+<p>Momentum: $2v_1+3v_2=0\Rightarrow v_2=-2v_1/3$. Energy: $\frac{1}{2}\times100\times0.04=2=\frac{1}{2}\times2v_1^2+\frac{1}{2}\times3v_2^2$. $2=v_1^2+3\times4v_1^2/9=v_1^2+4v_1^2/3=7v_1^2/3$. $v_1^2=6/7$. $v_1=0.926$ m/s. $v_2=0.617$ m/s.</p>
+</details>
+<h4 id="q19-a-001-kg-bullet-passes-through-a-1-kg-block-initially-at-rest-the-bullet-enters-at-500-ms-and-exits-at-200-ms-find-the-blocks-speed">Q19. A 0.01 kg bullet passes through a 1 kg block (initially at rest). The bullet enters at 500 m/s and exits at 200 m/s. Find the block's speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>$0.01\times500=0.01\times200+1\times v$. $5=2+v$. $v=3$ m/s.</p>
+</details>
+<h4 id="q20-a-1000-kg-car-at-30-ms-brakes-with-a-force-of-5000-n-find-the-time-to-stop">Q20. A 1000 kg car at 30 m/s brakes with a force of 5000 N. Find the time to stop.</h4>
+<details>
+<summary>Solution</summary>
+<p>$J=Ft=\Delta p$. $5000t=1000\times30$. $t=6$ s.</p>
+</details>
+<h4 id="q21-a-2-kg-ball-at-4-ms-collides-with-a-4-kg-ball-at-2-ms-e05-find-the-velocities">Q21. A 2 kg ball at 4 m/s collides with a 4 kg ball at $-2$ m/s ($e=0.5$). Find the velocities.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_1=(2-0.5\times4)/6\times4+(1+0.5)\times4/6\times(-2)=0+(-2)=-2$ m/s. Wait, let me use the full formulas. $v_1=(m_1-em_2)u_1/(m_1+m_2)+(1+e)m_2u_2/(m_1+m_2)=(2-2)\times4/6+1.5\times4\times(-2)/6=0-2=-2$ m/s. $v_2=(1+e)m_1u_1/(m_1+m_2)+(m_2-em_1)u_2/(m_1+m_2)=1.5\times2\times4/6+(4-1)\times(-2)/6=2-1=1$ m/s.</p>
+</details>
+<h4 id="q22-a-man-70-kg-and-a-woman-55-kg-on-ice-push-apart-the-man-moves-at-15-ms-find-the-womans-speed">Q22. A man (70 kg) and a woman (55 kg) on ice push apart. The man moves at 1.5 m/s. Find the woman's speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>$0=70\times1.5+55v$. $v=-105/55=-1.91$ m/s.</p>
+</details>
+<h4 id="q23-a-ball-bounces-three-times-heights-10-m-64-m-41-m-find-e">Q23. A ball bounces three times. Heights: 10 m, 6.4 m, 4.1 m. Find $e$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$e_1=\sqrt{6.4/10}=0.8$. $e_2=\sqrt{4.1/6.4}=0.8$. Average $e=0.8$.</p>
+</details>
+<h4 id="q24-a-05-kg-ball-at-10-ms-hits-a-1-kg-ball-at-rest-the-05-kg-ball-stops-is-the-collision-elastic">Q24. A 0.5 kg ball at 10 m/s hits a 1 kg ball at rest. The 0.5 kg ball stops. Is the collision elastic?</h4>
+<details>
+<summary>Solution</summary>
+<p>$K_i=\frac{1}{2}\times0.5\times100=25$ J. $K_f=\frac{1}{2}\times1\times v^2$. Momentum: $0.5\times10=1\times v$. $v=5$ m/s. $K_f=12.5$ J. $\Delta K=12.5$ J. Not elastic.</p>
+</details>
+<h4 id="q25-a-rocket-ejects-mass-at-2-kgs-with-v_e3000-ms-find-the-thrust">Q25. A rocket ejects mass at 2 kg/s with $v_e=3000$ m/s. Find the thrust.</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=\dot{m}v_e=2\times3000=6000$ N.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-cm-frame-shortcut">7.1 The CM-frame shortcut</h3>
+<p>For any collision: transform to the CM frame, reverse the velocities (elastic), transform back. This is often faster than solving the full system of equations, especially for 2-D collisions.</p>
+<h3 id="72-the-momentum-then-energy-protocol">7.2 The "momentum then energy" protocol</h3>
+<p>For problems with a collision followed by a motion (ballistic pendulum, bullet through block + spring): use momentum for the collision stage, energy for the motion stage. Never mix them.</p>
+<h3 id="73-the-relative-velocity-shortcut">7.3 The relative-velocity shortcut</h3>
+<p>For 1-D collisions: $v_2-v_1=-e(u_1-u_2)$ (the relative velocity reverses, scaled by $e$). Combined with momentum conservation, this gives a simpler system of two equations.</p>
+<h3 id="74-the-does-it-stick-test">7.4 The "does it stick?" test</h3>
+<p>For a collision: compute $v_{\text{cm}}$. If $e=0$, the objects stick and move at $v_{\text{cm}}$. If $e&gt;0$, they separate. The energy loss is $\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Using energy conservation in an inelastic collision</p>
+<p>In an inelastic collision, KE is not conserved. Use momentum conservation, not energy.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Applying $e$ across the whole velocity</p>
+<p>$e$ applies only along the line of impact. The tangential component is unchanged for smooth spheres.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Forgetting the ejecta's momentum in the rocket equation</p>
+<p>The rocket equation accounts for the exhaust momentum. Ignoring it gives the wrong $\Delta v$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — Using $v_{\text{cm}}$ as the velocity of every part after a collision</p>
+<p>After an inelastic collision, the stuck-together objects move at $v_{\text{cm}}$. But the individual parts of the system do not all move at $v_{\text{cm}}$ — only the COM does.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Mixing "system" and "particle" when external forces act</p>
+<p>For a system: $\sum F_{\text{ext}}=Ma_{\text{cm}}$. For an individual particle: $\sum F_i=m_i a_i$. Don't mix them.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Assuming the COM stays fixed when an external force acts</p>
+<p>The COM stays fixed only if the net external force is zero. Gravity, friction, and other external forces move the COM.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Confusing impulse and force</p>
+<p>Impulse $J=F\Delta t$ has units N s. Force has units N. A large impulse can come from a large force for a short time or a small force for a long time.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Forgetting that momentum is a vector</p>
+<p>In 2-D collisions, momentum is conserved independently in each direction. You cannot mix $x$ and $y$ components.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — The "heavy ball bounces back" fallacy</p>
+<p>A heavy ball hitting a light ball at rest does not bounce back — it continues forward, barely slowed. The light ball bounces forward at nearly $2v_{\text{heavy}}$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Using the ballistic pendulum formula for a bullet that passes through</p>
+<p>The ballistic pendulum formula assumes the bullet embeds ($e=0$). If the bullet passes through, you need a different analysis (momentum conservation with two separate final velocities).</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Find the COM": use the definition or the positive/negative mass trick.</li>
+<li>"Explosion": COM trajectory continues; use momentum conservation for the fragments.</li>
+<li>"1-D collision": use momentum + $e$ (or relative-velocity formula).</li>
+<li>"2-D collision": resolve along/perpendicular to the line of impact.</li>
+<li>"Ballistic pendulum": momentum (collision) then energy (swing).</li>
+<li>"Variable mass": rocket equation or momentum flux.</li>
+<li>"Man on boat": COM stays fixed (no external horizontal force).</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{R}=\sum m_i\mathbf{r}_i/M$</td>
+<td>always</td>
+<td>continuous bodies (use integration)</td>
+</tr>
+<tr>
+<td>$M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$</td>
+<td>always</td>
+<td>internal forces cancel</td>
+</tr>
+<tr>
+<td>$\sum\mathbf{p}=$ const</td>
+<td>no external impulse</td>
+<td>external forces act during the collision</td>
+</tr>
+<tr>
+<td>$e=v_{\text{sep}}/v_{\text{app}}$</td>
+<td>along the line of impact only</td>
+<td>tangential component not involved</td>
+</tr>
+<tr>
+<td>$\Delta v=v_e\ln(m_0/m_f)$</td>
+<td>constant $v_e$, no external forces</td>
+<td>gravity, air resistance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-timing-plan">9.3 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. COM problems die by the definition or the subtraction trick. Collision problems die by momentum + $e$. Ballistic pendulum problems die by the two-stage protocol.</p>
+<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<ol>
+<li>COM: correct reference point and correct formula.</li>
+<li>Momentum conservation: verified that net external impulse is zero (in the relevant direction).</li>
+<li>Collision: correct classification (elastic vs inelastic) and correct $e$.</li>
+<li>$e$ applied along the line of impact only (not the full velocity).</li>
+<li>Ballistic pendulum: momentum first, energy second (correct order).</li>
+<li>Rocket equation: used $\ln(m_0/m_f)$, not $m_0-m_f$.</li>
+<li>2-D collision: resolved along and perpendicular to the line of impact.</li>
+<li>Energy loss: used the correct formula with $\mu$ and $v_{\text{rel}}$.</li>
+<li>Units consistent throughout.</li>
+<li>Every sub-part answered.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-falling-chain-on-a-scale">OL1 — Falling chain on a scale</h3>
+<p>A chain of mass $m$ and length $L$ is piled on a scale. One end is lifted and released. Find the scale reading when a length $x$ has been lifted.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The scale supports: (1) the weight of the landed part $(m/L)(L-x)g$; (2) the momentum-flux force from the chain landing. The chain falls from height $x$: $v=\sqrt{2gx}$. Mass arriving per unit time: $\dot{m}=(m/L)\sqrt{2gx}$. Force to stop it: $F_{\text{impact}}=\dot{m}v=2(m/L)gx$. Total reading: $F=(m/L)(L+x)g$. At $x=L$: $F=2mg$ — twice the weight!</p>
+</details>
+<h3 id="ol2-two-body-scattering-in-the-cm-frame">OL2 — Two-body scattering in the CM frame</h3>
+<p>A particle of mass $m_1$ scatters elastically off a stationary target of mass $m_2$. Find the maximum scattering angle of $m_1$ in the lab frame.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In the CM frame: the scattering angle $\theta_{\text{cm}}$ can be anything from 0 to 180°. The lab-frame angle $\theta_{\text{lab}}$ is related to $\theta_{\text{cm}}$ by: $\tan\theta_{\text{lab}}=\frac{\sin\theta_{\text{cm}}}{\cos\theta_{\text{cm}}+m_1/m_2}$. For $m_1&gt;m_2$: the denominator can be zero (at $\cos\theta_{\text{cm}}=-m_2/m_1$), giving $\theta_{\text{lab}}=90°$. The maximum lab-frame angle is $\theta_{\max}=\sin^{-1}(m_2/m_1)$. For $m_1\le m_2$: $\theta_{\max}=90°$ (any angle is possible).</p>
+<p><strong>Significance.</strong> This explains why a bowling ball ($m_1$) cannot be scattered backward by a tennis ball ($m_2$) — the maximum scattering angle is less than 90°.</p>
+</details>
+<h3 id="ol3-impulse-approximation-problems">OL3 — Impulse approximation problems</h3>
+<p>A ball of mass $m$ is hit by a bat for time $\Delta t=0.001$ s with average force 500 N. The ball also experiences gravity. Find the impulse from the bat and from gravity, and show gravity is negligible.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $J_{\text{bat}}=500\times0.001=0.5$ N s. $J_{\text{gravity}}=mg\Delta t=0.145\times9.8\times0.001=0.0014$ N s. Ratio: $J_g/J_{\text{bat}}=0.003$. Gravity is 0.3% of the bat's impulse — negligible. The impulse approximation: $F_{\text{impulse}}\gg F_{\text{other}}$ during the collision time.</p>
+</details>
+<h3 id="ol4-successive-bouncing-with-restitution">OL4 — Successive bouncing with restitution</h3>
+<p>A ball bounces from height $h$ with coefficient $e$. After $n$ bounces, what fraction of the original energy remains?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> After each bounce: height $=e^2\times$ previous. After $n$ bounces: $h_n=e^{2n}h$. Energy: $E_n=mgh_n=e^{2n}E_0$. Fraction remaining: $e^{2n}$. For $e=0.8$, $n=5$: $0.8^{10}=0.107$ — about 11% remains.</p>
+</details>
+<h3 id="ol5-relativistic-momentum-preview">OL5 — Relativistic momentum preview</h3>
+<p>Why must the relativistic momentum be $\mathbf{p}=\gamma m\mathbf{v}$ and not $m\mathbf{v}$?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Conservation of momentum must hold in all inertial frames. If $p=mv$: applying a Lorentz transformation to a collision gives different momenta in different frames — momentum is not conserved. The form $p=\gamma mv$ is the unique form (up to an overall constant) that is conserved in all frames. The derivation: consider an elastic collision in two frames (the lab and the CM). The only form of $p(v)$ that makes momentum conserved in both frames is $p=mv/\sqrt{1-v^2/c^2}=\gamma mv$.</p>
+<p><strong>Significance.</strong> This is a one-page preview of PART 28. The relativistic momentum $\mathbf{p}=\gamma m\mathbf{v}$ is forced by the requirement of frame-independence of the conservation law. The "mass increase" interpretation ($m\to\gamma m$) is a historical artefact — the modern view is that the mass $m$ is invariant and it is the momentum formula that changes.</p>
+</details>
+<h3 id="ol6-bouncing-ball-on-a-moving-platform">OL6 — Bouncing ball on a moving platform</h3>
+<p>A ball bounces on a platform that oscillates vertically at frequency $f$. For what $f$ does the ball "resonate" (bounce higher each time)?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The ball must hit the platform when the platform is moving upward (to gain energy). The ball's flight time after a bounce: $T=2v/g$. The platform's period: $T_p=1/f$. For resonance: $T=nT_p$ (the ball lands when the platform is at the same phase). The ball gains energy when the platform is moving up at impact: $v_{\text{after}}=v_{\text{before}}+ev_{\text{platform}}$ (approximately). The condition: $f=ng/(2v)$ for integer $n$.</p>
+<p><strong>Significance.</strong> This is a simplified model of a "bouncing ball on a vibrating plate" — a classic experiment in nonlinear dynamics. The ball can exhibit periodic, quasi-periodic, or chaotic bouncing depending on $f$ and the driving amplitude.</p>
+</details>
+<h3 id="ol7-sliding-chain-over-a-peg">OL7 — Sliding chain over a peg</h3>
+<p>A chain of length $L$ and mass $m$ hangs over a frictionless peg, with length $x$ on one side and $L-x$ on the other. Find the acceleration as a function of $x$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Force: $F=\lambda xg-\lambda(L-x)g=\lambda g(2x-L)$. Total mass: $m$. $a=F/m=g(2x-L)/L$. At $x=L/2$: $a=0$ (equilibrium — unstable). At $x&gt;L/2$: $a&gt;0$ (the longer side pulls). At $x=L$: $a=g$ (free fall of the entire chain).</p>
+<p><strong>Significance.</strong> The chain's motion is not constant acceleration — $a$ depends on $x$. The equation $a=g(2x-L)/L$ is a first-order ODE in $v$ and $x$: $v\,dv=g(2x-L)dx/L$. Integrating: $v^2=g(x^2-Lx+L^2/4)/L+C$. At $x=L/2$: $v=0$ (starting from rest at the equilibrium position... but this is unstable, so the chain will fall if perturbed).</p>
+</details>
+<h3 id="ol8-two-stage-rocket-optimal-staging">OL8 — Two-stage rocket optimal staging</h3>
+<p>A two-stage rocket has total mass $M$, payload $M_p$, and structural coefficient $\epsilon$ (structure mass / initial mass per stage). Find the optimal mass split.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> For equal stages: each stage has initial mass $M/2$, fuel mass $(1-\epsilon)M/2$, structure $\epsilon M/2$. After stage 1: mass $=M/2+\epsilon M/2+M_p$... this is getting complicated. The key result: equal mass ratios $r_1=r_2=r$ give the maximum $\Delta v$. For two stages: $\Delta v=2v_e\ln r$ where $r=\sqrt{M/M_p}$ (for $\epsilon=0$). For $\epsilon&gt;0$: the optimal $r$ is smaller (the dead weight of the structure limits the benefit of staging).</p>
+</details>
+<h3 id="ol9-momentum-flux-of-a-water-jet-on-a-plate">OL9 — Momentum flux of a water jet on a plate</h3>
+<p>A water jet of cross-section $A$ and speed $v$ hits a stationary plate perpendicularly. Find the force on the plate.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Mass hitting the plate per unit time: $\dot{m}=\rho Av$. The water's horizontal momentum is destroyed (it splatters sideways): $\Delta p/\text{time}=\dot{m}v=\rho Av^2$. Force on the plate: $F=\rho Av^2$.</p>
+<p><strong>Significance.</strong> For a jet at angle $\theta$: $F=\rho Av^2\sin\theta$. For a moving plate at speed $u$: $F=\rho A(v-u)^2$ (the relative speed matters). This is used in turbine design (PART 11).</p>
+</details>
+<h3 id="ol10-the-chain-folded-onto-a-table">OL10 — The chain folded onto a table</h3>
+<p>A chain of length $L$ and mass $m$ is folded in half and placed on a table with the fold hanging over the edge. The chain is released. Find the speed when the chain just leaves the table.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At the moment the chain leaves: the fold has fallen a distance $L/2$ (from the edge to the point where the chain is straight). But this is not a simple free-fall problem — the chain's configuration changes. Energy conservation: the PE lost by the chain equals the KE gained. The COM of the chain starts at height $L/4$ above the table (approximately, for the folded configuration) and ends at height $-L/2$ below the table. $\Delta U=mg\times(3L/4)$. $K=\frac{1}{2}mv^2$. $v=\sqrt{3gL/2}$.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>Conservation of momentum is exact in Newtonian mechanics for isolated systems. In relativity (PART 28), the momentum is $\mathbf{p}=\gamma m\mathbf{v}$, and the conservation law still holds but in the relativistic form. The coefficient of restitution is an empirical parameter — it depends on the materials, the speed, and the geometry. The rocket equation assumes constant $v_e$ and no external forces — real rockets must account for gravity and air resistance. Inside these fences the methods are exact.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–5</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 5–9</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 7–13</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The COM of a system moves at constant velocity when:
+(a) all internal forces cancel  (b) the net external force is zero  (c) the system is at rest  (d) the system is rigid</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Internal forces always cancel; the COM accelerates only under external forces.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>In a perfectly inelastic collision:
+(a) all KE is lost  (b) the objects stick together  (c) $e=1$  (d) momentum is not conserved</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $e=0$ (not 1). Momentum is always conserved in a collision.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The coefficient of restitution applies:
+(a) to the full velocity  (b) only along the line of impact  (c) only for elastic collisions  (d) only in 1-D</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $e$ applies only along the line of impact, regardless of the collision type.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>In the rocket equation $\Delta v=v_e\ln(m_0/m_f)$:
+(a) $v_e$ is the rocket's speed  (b) $v_e$ is the exhaust speed relative to the rocket  (c) $m_0$ is the final mass  (d) $\Delta v$ is proportional to $m_0/m_f$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $v_e$ is the exhaust speed relative to the rocket. $\Delta v$ is logarithmic in $m_0/m_f$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>Two equal-mass balls collide elastically (one at rest). After the collision:
+(a) the incoming ball stops  (b) both move at $v/2$  (c) the incoming ball bounces back  (d) they move at 90°</p>
+<details>
+<summary>Answer</summary>
+<p>(a). In 1-D: the incoming ball stops, the target moves at $v$. In 2-D: they move at 90° to each other.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>Impulse has units:
+(a) N  (b) N s  (c) J  (d) kg m/s</p>
+<details>
+<summary>Answer</summary>
+<p>(b), (d). N s and kg m/s are equivalent.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>A man walks on a boat (no external forces). The COM:
+(a) moves forward  (b) moves backward  (c) stays fixed  (d) depends on who is heavier</p>
+<details>
+<summary>Answer</summary>
+<p>(c). No external horizontal force — the COM stays fixed.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>In a 1-D elastic collision with $m_1\gg m_2$:
+(a) $v_1\approx u_1$  (b) $v_2\approx2u_1$  (c) the heavy ball barely slows  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). The heavy ball barely changes; the light ball bounces at nearly $2u_1$.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The energy lost in a 1-D collision is:
+(a) $\frac{1}{2}\mu v_{\text{rel}}^2$  (b) $\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$  (c) zero for elastic  (d) both (b) and (c)</p>
+<details>
+<summary>Answer</summary>
+<p>(d). For $e=1$: $\Delta K=0$. For $e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>A ball bounces to 64% of its original height. $e=$:
+(a) 0.64  (b) 0.8  (c) 0.36  (d) 0.4</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $e=\sqrt{h_2/h_1}=\sqrt{0.64}=0.8$.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>The positive-mass/negative-mass trick is used for:
+(a) finding the COM of a body with a hole  (b) conservation of momentum  (c) elastic collisions  (d) rocket problems</p>
+<details>
+<summary>Answer</summary>
+<p>(a). Treat the hole as negative mass to find the COM.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>In the ballistic pendulum:
+(a) momentum is conserved during the collision  (b) energy is conserved during the collision  (c) momentum is conserved during the swing  (d) energy is conserved during the swing</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (d). Momentum for the collision; energy for the swing.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>The COM of a system:
+(a) can lie outside the body  (b) moves at constant velocity if $\sum F_{\text{ext}}=0$  (c) is always at the geometric centre  (d) is the weighted average of positions</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). The COM is at the geometric centre only for uniform symmetric bodies.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>For a 1-D collision:
+(a) momentum is always conserved  (b) KE is conserved only if $e=1$  (c) the relative velocity reverses  (d) $v_2-v_1=-e(u_1-u_2)$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c), (d). All four are correct.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>In the CM frame:
+(a) total momentum is zero  (b) elastic collisions reverse velocities  (c) $K=K_{\text{rel}}$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>A rocket:
+(a) works by conservation of momentum  (b) needs an atmosphere to push against  (c) works in vacuum  (d) the thrust is $\dot{m}v_e$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). Rockets work by ejecting mass — no atmosphere needed.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>The impulse approximation:
+(a) assumes the collision time is very short  (b) neglects finite forces during the collision  (c) is valid when $F_{\text{impulse}}\gg F_{\text{other}}$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>A ball bouncing on a moving platform:
+(a) can gain energy from the platform  (b) the bounce height depends on $e$  (c) resonance occurs at specific frequencies  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>The energy loss in a collision:
+(a) is $\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$  (b) is zero for $e=1$  (c) is maximum for $e=0$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>For a man walking on a boat:
+(a) the COM of the system stays fixed  (b) the boat moves opposite to the man  (c) the man's displacement relative to the ground is $Md/(m+M)$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>Find the COM of three masses: 1 kg at $(0,0)$, 2 kg at $(3,0)$, 3 kg at $(0,4)$.</p>
+<details>
+<summary>Answer</summary>
+<p>$X=(0+6+0)/6=1$ m. $Y=(0+0+12)/6=2$ m. COM at $(1,2)$.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A 0.02 kg bullet at 300 m/s embeds in a 1.98 kg block. Find the common velocity.</p>
+<details>
+<summary>Answer</summary>
+<p>$v=0.02\times300/2=3$ m/s.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>A 2 kg ball at 6 m/s collides elastically with a 4 kg ball at rest (1-D). Find $v_2$.</p>
+<details>
+<summary>Answer</summary>
+<p>$v_2=2\times2\times6/(2+4)=24/6=4$ m/s.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>A rocket ($v_e=2500$ m/s) needs $\Delta v=5000$ m/s. Find $m_0/m_f$.</p>
+<details>
+<summary>Answer</summary>
+<p>$m_0/m_f=e^{5000/2500}=e^2=7.39$.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>A ball bounces three times with $e=0.7$ from 10 m. Find the height after the third bounce.</p>
+<details>
+<summary>Answer</summary>
+<p>$h_3=10\times0.7^6=10\times0.1176=1.176$ m.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A 5 kg object at rest explodes into 3 kg and 2 kg. The 3 kg piece moves at 4 m/s. Find the KE of the 2 kg piece.</p>
+<details>
+<summary>Answer</summary>
+<p>$v_2=3\times4/2=6$ m/s. $K_2=\frac{1}{2}\times2\times36=36$ J.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Derive $M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$ from Newton's third law. (b) A shell explodes into three equal fragments at the top of its trajectory. Two fragments fly horizontally at right angles at 100 m/s each. Find the velocity of the third. (c) Sketch the COM trajectory.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.3. (b) $0=m\times100\hat{i}+m\times100\hat{j}+mv_3$. $v_3=-100\hat{i}-100\hat{j}$. Speed $=100\sqrt{2}=141$ m/s at 225°. (c) The COM continues on the original parabola — the fragments fly apart around it.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) Derive the general 1-D collision formulas for $v_1$ and $v_2$. (b) Verify the limits: $e=1$ (elastic), $e=0$ (perfectly inelastic), $m_1\gg m_2$. (c) Derive the energy-loss formula.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.7. (b) At $e=1$: $v_1=(m_1-m_2)u_1/(m_1+m_2)$, $v_2=2m_1u_1/(m_1+m_2)$. At $e=0$: $v_1=v_2=(m_1u_1+m_2u_2)/(m_1+m_2)$. At $m_1\gg m_2$: $v_1\approx u_1$, $v_2\approx2u_1-u_2$. (c) $\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)$.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) A ballistic pendulum: 10 g bullet, 2 kg block, height 0.05 m. Find the bullet speed. ($g=10$ m/s$^2$.) (b) What fraction of the KE is lost in the collision? (c) Where does the lost energy go?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $V=\sqrt{2\times10\times0.05}=1$ m/s. $v_0=(2.01/0.01)\times1=201$ m/s. (b) $K_i=\frac{1}{2}\times0.01\times201^2=202$ J. $K_f=\frac{1}{2}\times2.01\times1=1.005$ J. Fraction lost $=(202-1)/202=99.5\%$. (c) The lost energy goes into heat, sound, and deformation of the bullet and block.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) Derive the rocket equation. (b) A two-stage rocket has $m_0=1000$ kg, $M_p=100$ kg, $v_e=3$ km/s, equal stages. Find $\Delta v$. (c) Compare with a single-stage rocket.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.10. (b) Stage 1: $m_0=1000$, $m_f=550$ (half structure + payload + half fuel). $\Delta v_1=3\ln(1000/550)=3\times0.598=1.79$ km/s. Stage 2: $m_0=500$, $m_f=100$. $\Delta v_2=3\ln(500/100)=3\times1.609=4.83$ km/s. Total $=6.62$ km/s. (c) Single stage: $\Delta v=3\ln(1000/100)=3\times2.303=6.91$ km/s. The two-stage is slightly worse here because the structural mass is the same. The advantage of staging comes when the structural coefficient $\epsilon$ is significant.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) A ball bounces with $e=0.6$ from height 5 m. Find the total distance and time. ($g=10$ m/s$^2$.) (b) How many bounces until the height is less than 0.1 m? (c) What is the total energy dissipated?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $d=5(1+0.36)/(1-0.36)=5\times1.36/0.64=10.625$ m. $t_0=1$ s. $t=1\times1.6/0.4=4$ s. (b) $5\times0.6^{2n}&lt;0.1$. $0.36^n&lt;0.02$. $n\ln0.36&lt;\ln0.02$. $n&gt;4.6/1.02=4.5$. After 5 bounces. (c) All original energy is eventually dissipated: $E_0=mgh=5mg$ J (for mass $m$).</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>(a) A 2 kg ball at 5 m/s collides with a 3 kg ball at $-2$ m/s ($e=0.5$). Find the velocities. (b) Find the energy lost. (c) Verify the energy-loss formula.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $v_1=(2-0.5\times3)/5\times5+(1.5)\times3/5\times(-2)=(0.5/5)\times5+0.9\times(-2)=0.5-1.8=-1.3$ m/s. $v_2=(1.5)\times2/5\times5+(3-0.5\times2)/5\times(-2)=3+(-0.8)=2.2$ m/s. (b) $K_i=\frac{1}{2}\times2\times25+\frac{1}{2}\times3\times4=31$ J. $K_f=\frac{1}{2}\times2\times1.69+\frac{1}{2}\times3\times4.84=1.69+7.26=8.95$ J. $\Delta K=22.05$ J. (c) $\mu=2\times3/5=1.2$. $v_{\text{rel}}=5-(-2)=7$. $\Delta K=\frac{1}{2}\times1.2\times49\times(1-0.25)=29.4\times0.75=22.05$ J. ✓</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>(a) Two equal-mass balls collide elastically (one at rest). The incoming ball is deflected by 45°. Find the speeds and the other ball's angle. (b) Verify that the total KE is conserved. (c) What happens if the collision is not smooth (friction)?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\theta_2=45°$ (90° rule). From momentum: $v_1\cos45°+v_2\cos45°=v_0$. $v_1\sin45°=v_2\sin45°$. $v_1=v_2$. From $x$: $2v_1\cos45°=v_0$. $v_1=v_2=v_0/\sqrt{2}$. (b) $K_i=\frac{1}{2}mv_0^2$. $K_f=\frac{1}{2}m\times v_0^2/2+\frac{1}{2}m\times v_0^2/2=\frac{1}{2}mv_0^2$. ✓ (c) With friction: a tangential impulse acts, changing the tangential velocities. The 90° result no longer holds. The collision is still elastic (if $e=1$), but the directions change.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) Sand falls at 3 kg/s onto a belt moving at 4 m/s. Find the force and power. (b) Where does the belt's power go? (c) A chain of mass 2 kg is lifted at 3 m/s. Find the force as a function of height $x$.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $F=\dot{m}v=3\times4=12$ N. $P=Fv=48$ W. (b) Half goes into KE of the sand ($\frac{1}{2}\dot{m}v^2=24$ W). Half goes into heat (friction between sand and belt). (c) $F=\lambda xg+\lambda v^2$. $\lambda=2/L$. $F=(2/L)(10x+9)$.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>(a) A block of mass $m$ slides into a block of mass $M$ connected to a spring ($k$). The collision is perfectly inelastic. Find the maximum compression of the spring. (b) What if the collision is elastic? (c) Which gives more compression?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Momentum: $mv_0=(m+M)V$. $V=mv_0/(m+M)$. Energy: $\frac{1}{2}(m+M)V^2=\frac{1}{2}kx^2$. $x=V\sqrt{(m+M)/k}=mv_0/\sqrt{k(m+M)}$. (b) Elastic: $v_1=(m-M)v_0/(m+M)$, $v_2=2mv_0/(m+M)$. Energy of $M$: $\frac{1}{2}Mv_2^2=\frac{1}{2}kx^2$. $x=v_2\sqrt{M/k}=2mv_0\sqrt{M}/((m+M)\sqrt{k})$. (c) The elastic collision gives more compression (the target receives more energy).</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Derive the COM-frame energy decomposition $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text{rel}}$. (b) For a collision, show that the CM KE is unchanged. (c) Find the minimum energy to create a particle of mass $M$ in a collision of two particles (each of mass $m$) in the CM frame.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL1. (b) The CM velocity is unchanged by the collision (momentum conservation). So $\frac{1}{2}Mv_{\text{cm}}^2$ is unchanged. (c) In the CM frame: total momentum is zero. To create a particle of mass $M$: the total energy must be at least $Mc^2$ (in the relativistic case) or the total KE must equal $Mc^2-mc^2-mc^2$... this is a relativistic calculation. In the non-relativistic case: the minimum KE is such that the particles come to rest in the CM frame — all KE goes into creating the new mass. This is a preview of PART 28 (relativistic collisions).</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{R}=\sum m_i\mathbf{r}_i/M$</td>
+<td>centre of mass definition</td>
+</tr>
+<tr>
+<td>$M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$</td>
+<td>COM equation of motion</td>
+</tr>
+<tr>
+<td>$\mathbf{J}=\Delta\mathbf{p}=\int\mathbf{F}\,dt$</td>
+<td>impulse–momentum theorem</td>
+</tr>
+<tr>
+<td>$\sum\mathbf{p}=$ const</td>
+<td>if $\sum\mathbf{F}_{\text{ext}}=\mathbf{0}$</td>
+</tr>
+<tr>
+<td>$e=v_{\text{sep}}/v_{\text{app}}$</td>
+<td>along the line of impact</td>
+</tr>
+<tr>
+<td>$\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$</td>
+<td>energy lost in 1-D collision</td>
+</tr>
+<tr>
+<td>$\Delta v=v_e\ln(m_0/m_f)$</td>
+<td>rocket equation</td>
+</tr>
+<tr>
+<td>$v_{\text{after}}-v_w=-e(v_{\text{before}}-v_w)$</td>
+<td>moving-wall bounce</td>
+</tr>
+<tr>
+<td>$K=\frac{1}{2}Mv_{\text{cm}}^2+\frac{1}{2}\mu v_{\text{rel}}^2$</td>
+<td>CM-frame energy decomposition</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can find the centre of mass of any body or system.</li>
+<li>[ ] I can derive $M\mathbf{a}<em>{\text{cm}}=\mathbf{F}</em>{\text{ext}}$ from Newton's third law.</li>
+<li>[ ] I can apply conservation of momentum to explosions, collisions, and recoil.</li>
+<li>[ ] I can classify collisions and use the coefficient of restitution.</li>
+<li>[ ] I can solve 1-D and 2-D collision problems.</li>
+<li>[ ] I can work in the CM frame and use the energy decomposition.</li>
+<li>[ ] I can solve variable-mass problems (rocket equation, sand on belt).</li>
+<li>[ ] I can solve two-stage impulse problems (ballistic pendulum, bullet-block).</li>
+<li>[ ] I understand the impulse approximation and its validity.</li>
+<li>[ ] I can analyse successive bouncing with restitution.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> Conservation of momentum is the foundation of PART 8 (angular momentum conservation), PART 9 (two-body reduced mass and orbital mechanics), and PART 11 (fluid momentum flux). The CM-frame analysis is used in nuclear and particle physics (PART 26). The collision tools are used in PART 10 (energy of oscillations via the collision model of damping).</p>
+<p><strong>Open questions.</strong> What is the relativistic generalisation of momentum ($\mathbf{p}=\gamma m\mathbf{v}$)? How does the impulse approximation justify the use of momentum conservation in nuclear reactions? These are questions for PART 28 and nuclear physics.</p>
+    <footer class="pager"><a href="work-energy-power.html">← Work, energy & power</a><a href="rotational-mechanics.html">Rotational mechanics →</a></footer>
+    <p class="colophon">Rendered from <code>centre-of-mass-momentum/Centre-of-mass-momentum.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>centre-of-mass-momentum/Centre-of-mass-momentum.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

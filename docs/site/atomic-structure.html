@@ -1,0 +1,2015 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomic structure & the Bohr model — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="active">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 24</span><span class="prop"><b>slug</b> atomic-structure</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 4 Atomic Physics (pp. 4.1-4.24)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
+
+<h1 id="rutherford-the-bohr-model-atomic-spectra-first-principles-to-olympiad">Rutherford, the Bohr Model &amp; Atomic Spectra — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0-4 — the scattering experiment as a hypothesis test, the classical collapse, Bohr's postulates and their consequences, the spectrum. Pass 2: Parts 5-9 — exemplars, archetypes, traps, playbook. Pass 3: Parts 10-14 — the Olympiad layer (cross-section, correspondence principle, exotic atoms), the paper, the sheet, the checkpoint. Every number was recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: predict the distance of closest approach of an alpha particle and say honestly what it does and does not prove; derive $r_n$, $v_n$, $E_n$ and the Rydberg constant from two equations; read any hydrogenic transition as an energy difference and place its series; count spectral lines from a level; handle excitation by photons versus electrons, including the Franck-Hertz logic; scale the atom to He$^+$, Li$^{2+}$, deuterium, muonic hydrogen and positronium; estimate Zeeman splittings; and state exactly where the Bohr model dies and what takes over.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Atoms have discrete levels because an electron is a standing wave, not a planet: the spectrum is the fingerprint, the Bohr model is the first correct arithmetic of it, and every correction after 1913 (reduced mass, fine structure, spin) is a refinement of that arithmetic.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<ol>
+<li>What is the Coulomb potential energy of charges $q_1$, $q_2$ at separation $r$?</li>
+<li>Write the circular-orbit force balance for an electron around a nucleus of charge $Ze$.</li>
+<li>What did PART 23 give you for the angular momentum of a standing wave on a circle?</li>
+<li>A photon of energy $E$ is emitted when an atom drops between levels. Write the relation.</li>
+<li>What is the reduced mass of two bodies $m_1$, $m_2$, and why does it appear when the nucleus moves?</li>
+<li>Quote $hc$ in eV nm and the ground-state energy of hydrogen.</li>
+<li>What is the magnetic moment of a current loop, and of an orbiting charge?</li>
+</ol>
+<details>
+<summary>Solution</summary>
+<ol>
+<li>$U=\frac{kq_1q_2}{r}$.</li>
+<li>$\frac{m_ev^2}{r}=\frac{kZe^2}{r^2}$.</li>
+<li>$L=n\hbar$, from $2\pi r=n\lambda$ with $\lambda=\frac{h}{p}$ (<a href="photoelectric-effect.html">Photoelectric-effect</a> §3.8).</li>
+<li>$hf=E_i-E_f$.</li>
+<li>$\mu=\frac{m_1m_2}{m_1+m_2}$; the electron-nucleus pair orbits their common centre of mass, and the relative coordinate carries $\mu$.</li>
+<li>$1240$ eV nm; $-13.6$ eV.</li>
+<li>$\mu=IA$; for a charge $e$ circling with period $T$: $I=\frac{e}{T}$, so $\mu=\frac{e v r}{2}$.</li>
+</ol>
+</details>
+<h3 id="04-numbers-to-keep">0.4 Numbers to keep</h3>
+<div class="callout abstract">
+<p class="callout-title">Numbers to keep</p>
+<p>$a_0=0.529$ Å; $E_1=-13.6$ eV; $v_1=2.19\times10^6$ m/s $=\frac{c}{137}$; $R_\infty=1.0974\times10^7$ m$^{-1}$; $R_H=1.0968\times10^7$ m$^{-1}$; Lyman $\alpha$ $121.6$ nm; Balmer $\alpha$ $656.1$ nm, $\beta$ $486.1$ nm, $\gamma$ $434.0$ nm; series limits: Lyman $91.2$ nm, Balmer $364.6$ nm, Paschen $820.4$ nm; $\mu_B=5.79\times10^{-5}$ eV/T; H-D shift of H$\alpha$ $0.18$ nm; muonic hydrogen $a=256$ fm, $E_1=-2.81$ keV; positronium $a=1.06$ Å, $E_1=-6.8$ eV.</p>
+</div>
+
+<h3 id="05-three-passes">0.5 Three passes</h3>
+<p>Pass 1 for the argument: experiment, collapse, postulates, consequences, spectrum. Pass 2 for craft: every exemplar by hand. Pass 3 timed: the paper, then the audit.</p>
+<h3 id="06-cengage-coverage-map">0.6 Cengage coverage map</h3>
+<p>The sweep read the chapter 4 contents page of the committed PDF. The X-ray half of the same chapter (pp. 4.25-4.32) is owned by PART 25; rows below cover the Bohr half. Rutherford scattering is not a heading of this Cengage chapter — it is a JEE-Advanced/INPhO syllabus item added by the sweep.</p>
+<table>
+<thead>
+<tr>
+<th>Cengage section (ch 4)</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thomson's atomic model (4.2)</td>
+<td>the plum-pudding picture and its scattering prediction</td>
+<td>§3.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Bohr model of the hydrogen atom (4.3)</td>
+<td>postulates plus circular Coulomb orbits</td>
+<td>§3.4-3.5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Radius of orbit (4.3)</td>
+<td>$r_n=n^2a_0/Z$</td>
+<td>§3.5, §4.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Velocity of electron in nth orbit (4.3)</td>
+<td>$v_n=\frac{v_1 Z}{n}$</td>
+<td>§3.5, §4.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Orbital frequency of electron (4.3)</td>
+<td>$f_{\text{orb}}=\frac{v}{2\pi r}$; correspondence use</td>
+<td>§3.10, OL4</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Energy of electron in nth orbit (4.4)</td>
+<td>$E_n=-13.6\frac{Z^2}{n^2}$ eV; virial structure</td>
+<td>§3.5, §4.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Frequency of emitted radiation (4.5)</td>
+<td>$hf=E_i-E_f$</td>
+<td>§3.4, §3.6</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Hypothetical atomic energy levels (4.5)</td>
+<td>reading level diagrams</td>
+<td>§3.7, Q12</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Hydrogen-like atoms (4.6)</td>
+<td>$Z^2$ scaling</td>
+<td>§3.8, E6</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Ionisation energy and potential (4.7)</td>
+<td>IE versus IP bookkeeping</td>
+<td>§2.1, §3.7, Q9</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Excitation energy and potential (4.8)</td>
+<td>discrete absorption</td>
+<td>§3.7, E7</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Binding or separation energy (4.8)</td>
+<td>energy to remove one electron from level $n$</td>
+<td>§3.7, Q10</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Atomic excitation (4.8)</td>
+<td>photon versus electron impact</td>
+<td>§3.7, E7, Q13</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Limitations of Bohr's model (4.9)</td>
+<td>multi-electron failure, intensities, fine structure</td>
+<td>§3.10, §10.2</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Wavelength of photon in de-excitation (4.11)</td>
+<td>$\frac{1}{\lambda}=RZ^2(\frac{1}{n_f^2}-\frac{1}{n_i^2})$</td>
+<td>§3.6, E5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Hydrogen spectrum (4.12)</td>
+<td>the five series and their bands</td>
+<td>§3.6, §4.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Origin of spectra: emission (4.14), absorption (4.15)</td>
+<td>why elements have fingerprints</td>
+<td>§3.11, D24.16</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Effect of nucleus motion / mass on Bohr model (4.16)</td>
+<td>reduced mass; H-D shift</td>
+<td>§3.8, OL5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Atomic collision (4.17), neutron-electron collision (4.18)</td>
+<td>energy transfer kinematics</td>
+<td>§3.7 (electron impact), Q14</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Solved examples band (4.32)</td>
+<td>standard shapes</td>
+<td>§6.1 archetypes, Q1-Q28</td>
+<td>exercised</td>
+</tr>
+<tr>
+<td>Exercise bands (4.42-4.94)</td>
+<td>exam formats</td>
+<td>Part 11 sections A-D</td>
+<td>exercised</td>
+</tr>
+<tr>
+<td>Rutherford scattering and $r_{\min}$ (added by sweep)</td>
+<td>the experiment as hypothesis test</td>
+<td>§3.2-3.3</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Classical collapse time (added by sweep)</td>
+<td>Larmor estimate</td>
+<td>§3.3, OL3</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Zeeman effect, quantum numbers, selection rule (added by sweep)</td>
+<td>the model's fine structure frontier</td>
+<td>§3.10</td>
+<td>added by sweep</td>
+</tr>
+<tr>
+<td>Franck-Hertz, correspondence principle, 21 cm line (added by sweep)</td>
+<td>measurement anchors</td>
+<td>§3.7, §3.10-3.11, OL4, OL8</td>
+<td>added by sweep</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<h3 id="11-the-atom-before-the-surprise">1.1 The atom before the surprise</h3>
+<p>Imagine positive charge smeared through a sphere the size of the atom, like currants (the electrons) in a pudding. Fire alpha particles at it: each alpha feels many tiny, mostly cancelling pushes, and should emerge with its direction barely changed, the way a rifle bullet crosses a foam mattress. That is the Thomson prediction, and it is specific: large-angle scattering should be essentially impossible.</p>
+<h3 id="12-one-in-eight-thousand-bounces-back">1.2 One in eight thousand bounces back</h3>
+<p>Geiger and Marsden found that about one alpha in eight thousand came back at angles above $90^\circ$. Rutherford's words — it was as if you fired a fifteen-inch shell at tissue paper and it came back and hit you. A diffuse charge cannot do that; only a concentrated charge, small enough that the alpha can get very close and feel a huge Coulomb force, can. The atom is almost entirely empty, with its charge and mass in a lump less than a ten-thousandth of its size.</p>
+<h3 id="13-the-second-surprise-the-atom-should-not-exist">1.3 The second surprise: the atom should not exist</h3>
+<p>A orbiting charge radiates (that is classical electrodynamics, owned by <a href="electromagnetic-waves.html">Electromagnetic-waves</a>). A radiating electron loses energy and spirals into the nucleus in about $10^{-11}$ s, emitting a continuous smear of light as it falls. Atoms neither collapse nor glow continuously: they emit sharp lines. Two failures, one cure: the electron's wave nature forbids the spiral and discretises the levels.</p>
+<h3 id="14-everyday-anchor">1.4 Everyday anchor</h3>
+<p>Every neon sign, sodium street lamp and firework colour is this chapter: hot or excited atoms relax by emitting photons whose colours are the differences of their discrete levels. Spectroscopy — identifying elements by those colours — found helium in the Sun before it was found on Earth.</p>
+<div class="callout info">
+<p class="callout-title">Why lines, not a smear</p>
+<p>A falling electron radiating continuously would smear all frequencies; a ladder of levels emits only the differences. The line spectrum is the direct image of discreteness, and §3.6 turns it into arithmetic.</p>
+</div>
+
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<h3 id="21-the-symbol-table">2.1 The symbol table</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$Z$</td>
+<td>nuclear charge number</td>
+<td>—</td>
+<td>hydrogen $Z=1$</td>
+</tr>
+<tr>
+<td>$n$</td>
+<td>principal quantum number</td>
+<td>—</td>
+<td>$1,2,3,\ldots$</td>
+</tr>
+<tr>
+<td>$r_n$</td>
+<td>orbit radius</td>
+<td>m</td>
+<td>$0.529\frac{n^2}{Z}$ Å</td>
+</tr>
+<tr>
+<td>$v_n$</td>
+<td>orbit speed</td>
+<td>m/s</td>
+<td>$2.19\times10^6\frac{Z}{n}$</td>
+</tr>
+<tr>
+<td>$E_n$</td>
+<td>total energy of level</td>
+<td>eV</td>
+<td>$-13.6\frac{Z^2}{n^2}$</td>
+</tr>
+<tr>
+<td>$K$, $U$</td>
+<td>kinetic, potential energy</td>
+<td>eV</td>
+<td>$K=-E$, $U=2E$</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>ionisation energy from level $n$</td>
+<td>eV</td>
+<td>$-E_n$</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>ionisation potential</td>
+<td>V</td>
+<td>numerically IE in eV</td>
+</tr>
+<tr>
+<td>$R$</td>
+<td>Rydberg constant</td>
+<td>m$^{-1}$</td>
+<td>$1.0974\times10^7$</td>
+</tr>
+<tr>
+<td>$b$</td>
+<td>impact parameter</td>
+<td>m</td>
+<td>§3.2</td>
+</tr>
+<tr>
+<td>$r_{\min}$</td>
+<td>closest approach</td>
+<td>m</td>
+<td>head-on: $\frac{2kZe^2}{K}$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>reduced mass</td>
+<td>kg</td>
+<td>$\frac{m_eM}{m_e+M}$</td>
+</tr>
+<tr>
+<td>$\mu_B$</td>
+<td>Bohr magneton</td>
+<td>eV/T</td>
+<td>$5.79\times10^{-5}$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-sign-convention-for-energies">2.2 Sign convention for energies</h3>
+<p>Bound states have negative total energy: $E=K+U$ with $U=-\frac{kZe^2}{r}$ referenced to zero at infinity. Ionisation energy is the positive number $-E_n$. Excitation energy from $n$ to $m$ is $E_m-E_n&gt;0$. Keeping this sign discipline ends half the sign errors in atomic physics.</p>
+<h3 id="23-assumptions-of-the-bohr-model">2.3 Assumptions of the Bohr model</h3>
+<p>Circular orbits; a static point nucleus (corrected in §3.8 by the reduced mass); one electron (hydrogenic only); non-relativistic speeds (checked: $v_1=\frac{c}{137}$); no radiation in stationary states (postulate); transitions instantaneous with $hf=E_i-E_f$.</p>
+<h3 id="24-what-is-not-in-this-model">2.4 What is NOT in this model</h3>
+<p>No multi-electron atoms (screening is patched in PART 25's Moseley treatment, not derived here). No line intensities or polarisations. No explanation of fine structure, only its size. No chemical bonding. The full replacement is the Schrödinger equation, outside this syllabus; the quantum numbers of §3.10 are its shadow.</p>
+<div class="callout question">
+<p class="callout-title">Exam note</p>
+<p>JEE Advanced frames this chapter as arithmetic on a level diagram: draw the ladder, mark the transition, convert with $1240$. If you can do that blindfolded, the chapter's exam core is safe.</p>
+</div>
+
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-the-atom-before-1911-and-what-thomson-predicted">3.1 The atom before 1911, and what Thomson predicted</h3>
+<p>Thomson's atom: positive charge spread uniformly through a sphere of radius $\sim10^{-10}$ m, electrons embedded in it. Predict the scattering before looking at the data — this is the discipline that makes the experiment a test. An alpha particle crossing the sphere feels a field that grows linearly from the centre and never exceeds $E_{\max}=\frac{kZe}{R^2}$ at the surface; the total transverse impulse is tiny compared with the alpha's momentum, and multiple scattering averages out. Prediction: deflections of order a degree at most, large-angle events exponentially impossible.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.1 · Thomson versus Rutherford predictions</p>
+<p><em>Show:</em> two panels of alpha particles crossing an atom: left, the pudding, with nearly straight tracks and a caption "deflections of order one degree"; right, the nuclear atom, with most tracks straight but one hyperbola bent through more than 90 degrees; the nucleus drawn as a dot.
+<em>Search:</em> "alpha scattering Thomson Rutherford model comparison large angle deflection"
+<em>Used in:</em> §3.1, §3.2.</p>
+</div>
+
+<h3 id="32-rutherford-scattering-impact-parameter-and-angle">3.2 Rutherford scattering: impact parameter and angle</h3>
+<p>Model the nucleus as a fixed charge $Ze$ and the alpha (charge $2e$, mass $m$, speed $v$) as a point on a hyperbola. The impact parameter $b$ is the miss distance the alpha would have had without any force. Angular momentum about the nucleus is $L=mvb$ throughout.</p>
+<p>The direction of the momentum rotates by the scattering angle $\theta$, so the momentum change has magnitude $\Delta p=2mv\sin\frac{\theta}{2}$, directed along the hyperbola's symmetry axis. Compute the same change from the impulse, using $dt=\frac{r^2}{vb}\,d\phi$ (from $L=mr^2\dot\phi=mvb$) with $\phi$ measured from the symmetry axis over $-\left(\frac{\pi-\theta}{2}\right)\le\phi\le+\left(\frac{\pi-\theta}{2}\right)$:</p>
+<p>$$
+\Delta p=\int\frac{k(2Ze^2)}{r^2}\cos\phi\,dt=\frac{2kZe^2}{vb}\int_{-(\pi-\theta)/2}^{(\pi-\theta)/2}\cos\phi\,d\phi=\frac{4kZe^2}{vb}\cos\frac{\theta}{2}. \qquad (3.1)
+$$</p>
+<p>Equating the two expressions for $\Delta p$ and dividing by $2\cos\frac{\theta}{2}$:</p>
+<p>$$
+\tan\frac{\theta}{2}=\frac{kZe^2}{m v^2 b}=\frac{r_h}{2b}, \qquad (3.2)
+$$</p>
+<p>where $r_h=\frac{2kZe^2}{mv^2}$ is the head-on closest approach derived next. Small $b$ gives large $\theta$; $b\to0$ gives back-scattering. The fraction of alphas scattered beyond $\theta$ is the fraction of the nuclear area presented: with a foil of thickness $t$ and $n$ nuclei per volume, $f=\pi b^2 n t$ — for gold foil this reproduces the one-in-eight-thousand figure at $\theta=90^\circ$, the arithmetic of §3.3's sister calculation (OL1).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.2 · Scattering geometry</p>
+<p><em>Show:</em> the nucleus at the focus of a hyperbola; the incoming asymptote with miss distance $b$ labelled; the outgoing asymptote making angle $\theta$; the symmetry axis dashed; the distance of closest approach $r_{\min}$ marked at the vertex.
+<em>Search:</em> "Rutherford scattering impact parameter hyperbola scattering angle diagram"
+<em>Used in:</em> §3.2, OL1.</p>
+</div>
+
+<h3 id="33-distance-of-closest-approach-and-the-classical-collapse">3.3 Distance of closest approach, and the classical collapse</h3>
+<p><strong>Head-on closest approach.</strong> At $b=0$ the alpha stops radially at $r_{\min}$: all kinetic energy is momentarily potential,</p>
+<p>$$
+K=\frac{k(2e)(Ze)}{r_{\min}}\quad\Longrightarrow\quad r_{\min}=\frac{2kZe^2}{K}. \qquad (3.3)
+$$</p>
+<p>For a $5$ MeV alpha on gold ($Z=79$): $r_{\min}=\frac{2\times79\times1.44\ \text{eV nm}}{5\times10^6\ \text{eV}}=4.6\times10^{-5}$ nm $=46$ fm. Because Rutherford's angle formula held even for the back-scattered alphas, the Coulomb law survives down to this distance: the nuclear radius is <em>at most</em> tens of fm, against the atom's $10^5$ fm. The nucleus is to the atom as a marble to a cathedral.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>$r_{\min}$ is an upper bound on the nuclear size, not a measurement of it, and only for head-on collisions; at higher $K$ the formula eventually fails — that failure, when it appears, is the first sign of the nuclear force (PART 26).</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.3 · The one in eight thousand</p>
+<p><em>Show:</em> a square array of 8000 dots representing alphas, 7999 grey and straight, one red track bent back; a caption with the gold-foil numbers (thickness about 400 nm, angle above 90 degrees).
+<em>Search:</em> "Rutherford gold foil experiment one in 8000 alpha back scattering"
+<em>Used in:</em> §3.2-3.3.</p>
+</div>
+
+<p><strong>The classical collapse.</strong> An orbiting electron radiates at the Larmor rate $P=\frac{e^2a^2}{6\pi\varepsilon_0c^3}$. With $a=\frac{v^2}{r}=\frac{ke^2}{m_er^2}$ and orbital energy $E=-\frac{ke^2}{2r}$, energy balance $\frac{dE}{dt}=-P$ becomes $\frac{ke^2}{2r^2}\frac{dr}{dt}=-\frac{C}{r^4}$ with $C=\frac{e^2}{6\pi\varepsilon_0c^3}\left(\frac{ke^2}{m_e}\right)^2$, i.e. $r^2\frac{dr}{dt}=-\frac{2C}{ke^2}$: the radius shrinks at a rate whose integral is</p>
+<p>$$
+\tau=\frac{ke^2\,r_0^3}{6C}. \qquad (3.4)
+$$</p>
+<p>Putting $r_0=a_0=0.529$ Å gives $\tau=1.6\times10^{-11}$ s. A classical atom lives sixteen picoseconds and glows a continuous spectrum while dying; real atoms are stable and line-bright. (Cross-check: $\tau c\approx5$ mm, absurdly larger than the atom — the collapse is a slow spiral, not a plunge.)</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.4 · The classical spiral and its continuum</p>
+<p><em>Show:</em> an inward spiral of an electron around a nucleus with the orbit tightening; beside it, a continuous rainbow band labelled "classical emission: all frequencies", contrasted with three sharp lines labelled "observed".
+<em>Search:</em> "classical atom collapse spiral radiation continuous spectrum versus lines"
+<em>Used in:</em> §3.3.</p>
+</div>
+
+<h3 id="34-bohrs-postulates-and-where-they-came-from">3.4 Bohr's postulates, and where they came from</h3>
+<p>Bohr (1913) postulated: (i) stationary orbits exist in which the electron does not radiate; (ii) among all classical orbits only those with $L=n\hbar$ are allowed; (iii) radiation is emitted or absorbed only in transitions, with $hf=E_i-E_f$.</p>
+<div class="callout info">
+<p class="callout-title">Why these postulates are not arbitrary</p>
+<p>Postulate (ii) is exactly the standing-wave condition $2\pi r=n\lambda$ with $\lambda=\frac{h}{p}$ derived in [Photoelectric-effect](photoelectric-effect.html) §3.8 — the electron's wave refuses to interfere with itself destructively. Postulate (iii) is the photon bookkeeping of the same chapter applied to atomic levels. What was genuinely new in 1913 was applying both inside the atom; today we present them as consequences, which is the honest order.</p>
+</div>
+
+<h3 id="35-the-hydrogen-atom-derived">3.5 The hydrogen atom, derived</h3>
+<p>Force balance plus quantisation, two equations:</p>
+<p>$$
+\frac{m_ev_n^2}{r_n}=\frac{kZe^2}{r_n^2},\qquad m_ev_nr_n=n\hbar. \qquad (3.5)
+$$</p>
+<p>Solving: eliminate $v_n$ to get the radii</p>
+<p>$$
+r_n=\frac{n^2\hbar^2}{m_ekZe^2}=0.529\,\frac{n^2}{Z}\ \text{Å}; \qquad (3.6)
+$$</p>
+<p>substitute back for the speeds</p>
+<p>$$
+v_n=\frac{kZe^2}{n\hbar}=2.19\times10^6\,\frac{Z}{n}\ \text{m/s}; \qquad (3.7)
+$$</p>
+<p>and the total energy $E_n=K+U=\frac{ke^2Z}{2r_n}-\frac{kZe^2}{r_n}=-\frac{kZe^2}{2r_n}$ gives</p>
+<p>$$
+E_n=-\frac{m_ek^2Z^2e^4}{2\hbar^2n^2}=-13.6\,\frac{Z^2}{n^2}\ \text{eV}. \qquad (3.8)
+$$</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The virial structure: $K=-E_n$ and $U=2E_n$, so the kinetic energy is half the potential's magnitude — the same balance the uncertainty estimate found in [Photoelectric-effect](photoelectric-effect.html) OL3. And $v_1=\frac{c}{137}$: the fine-structure constant appears, and its smallness is the model's self-consistency certificate (non-relativistic treatment valid to $\sim\alpha^2$).</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.5 · Bohr orbits to scale</p>
+<p><em>Show:</em> concentric circles at radii 1, 4, 9, 16 in units of a0, labelled n = 1 to 4; a note that the spacing grows as 2n+1; the nucleus a dot; an arrow from n = 2 to n = 1 drawn as a photon.
+<em>Search:</em> "Bohr model orbits to scale n squared spacing hydrogen"
+<em>Used in:</em> §3.5.</p>
+</div>
+
+<h3 id="36-the-spectrum">3.6 The spectrum</h3>
+<p>A transition $n_i\to n_f$ emits $\frac{hc}{\lambda}=E_{n_i}-E_{n_f}$; dividing by $hc$:</p>
+<p>$$
+\frac{1}{\lambda}=RZ^2\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right),\qquad R=\frac{m_ek^2e^4}{4\pi\hbar^3c}=1.0974\times10^7\ \text{m}^{-1}. \qquad (3.9)
+$$</p>
+<p>The model's $R$ agrees with the spectroscopists' constant to four decimals — the first great triumph. The series, by $n_f$:</p>
+<table>
+<thead>
+<tr>
+<th>Series</th>
+<th style="text-align: right;">$n_f$</th>
+<th>Band</th>
+<th>First line</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lyman</td>
+<td style="text-align: right;">1</td>
+<td>ultraviolet</td>
+<td>121.6 nm</td>
+<td>91.2 nm</td>
+</tr>
+<tr>
+<td>Balmer</td>
+<td style="text-align: right;">2</td>
+<td>visible and near UV</td>
+<td>656.1 nm</td>
+<td>364.6 nm</td>
+</tr>
+<tr>
+<td>Paschen</td>
+<td style="text-align: right;">3</td>
+<td>infrared</td>
+<td>1875 nm</td>
+<td>820.4 nm</td>
+</tr>
+<tr>
+<td>Brackett</td>
+<td style="text-align: right;">4</td>
+<td>infrared</td>
+<td>4051 nm</td>
+<td>1458 nm</td>
+</tr>
+<tr>
+<td>Pfund</td>
+<td style="text-align: right;">5</td>
+<td>infrared</td>
+<td>7460 nm</td>
+<td>2279 nm</td>
+</tr>
+</tbody>
+</table>
+<p>From level $n$, the number of distinct lines as the atom cascades down is $\frac{n(n-1)}{2}$: each unordered pair of levels gives one line. Within a series the longest wavelength is the first step ($n_i=n_f+1$) and the shortest is the limit $n_i\to\infty$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.6 · The hydrogen level ladder with its series</p>
+<p><em>Show:</em> horizontal levels n = 1 to 6 converging toward 0 eV; Lyman arrows dropping to n = 1 drawn on the left, Balmer to n = 2 in the middle, Paschen to n = 3 on the right; the ionisation limit dashed; energies in eV beside each level.
+<em>Search:</em> "hydrogen energy level diagram Lyman Balmer Paschen series arrows"
+<em>Used in:</em> §3.6, Q5.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.7 · The Balmer lines of hydrogen</p>
+<p><em>Show:</em> a wavelength axis from 360 to 700 nm with four sharp vertical lines at 656.1, 486.1, 434.0, 410.1 nm, the spacing tightening toward the 364.6 nm limit; the visible rainbow shaded behind.
+<em>Search:</em> "hydrogen Balmer series visible lines wavelengths spectrum"
+<em>Used in:</em> §3.6.</p>
+</div>
+
+<h3 id="37-transitions-excitation-and-who-may-pay">3.7 Transitions, excitation, and who may pay</h3>
+<p>A photon is all-or-nothing: to excite $n\to m$ it must carry <em>exactly</em> $E_m-E_n$ (or at least the ionisation energy, the surplus becoming the free electron's kinetic energy). An impacting electron is a billiard ball: it may hand over any part of its energy, so an $11$ eV electron can excite hydrogen's $10.2$ eV line and keep $0.8$ eV, while an $11$ eV photon passes straight through. The Franck-Hertz experiment is this logic as a measurement: electrons accelerated through mercury vapour lose current sharply at $4.9$ V, and the vapour glows at $\frac{1240}{4.9}=253$ nm — discrete dips proving discrete levels.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.8 · The Franck-Hertz curve</p>
+<p><em>Show:</em> current against accelerating voltage with periodic dips every 4.9 V for mercury; the first dip labelled; a caption naming the 253 nm glow.
+<em>Search:</em> "Franck Hertz experiment current voltage dips mercury 4.9 eV"
+<em>Used in:</em> §3.7.</p>
+</div>
+
+<p>Why is almost every atom in its ground state at room temperature? The Boltzmann factor: $\frac{N_2}{N_1}=4e^{-\Delta E/k_BT}$ (the 4 is the degeneracy ratio). For hydrogen's $10.2$ eV gap at $300$ K the exponent is $e^{-395}$: nothing is excited. Even at $10^4$ K (a hot star's surface) the ratio is $4e^{-11.8}=2.9\times10^{-5}$ — small, but multiplied by a star's atoms it makes the Balmer lines of stellar spectra strong; at $2\times10^4$ K the ratio reaches $0.011$, the peak of Balmer strength in stellar classification.</p>
+<p>Binding (separation) energy of the electron in level $n$ is $-E_n$; ionisation potential in volts is numerically the same for a singly charged electron.</p>
+<h3 id="38-hydrogen-like-ions-and-exotic-atoms">3.8 Hydrogen-like ions and exotic atoms</h3>
+<p>Every result of §3.5 scales. Charge: $E_n\propto Z^2$, $r_n\propto\frac{1}{Z}$ — He$^+$ has a ground energy of $-54.4$ eV and an orbit half the size; Li$^{2+}$ has $-122.4$ eV and a third. Mass: the nucleus is not infinitely heavy; the pair orbits its centre of mass, and the algebra of §3.5 goes through unchanged with $m_e\to\mu=\frac{m_eM}{m_e+M}$. Hence $R_M=R_\infty\frac{\mu}{m_e}$ and every wavelength shifts slightly with nuclear mass.</p>
+<p>Deuterium: $\frac{\mu_D-\mu_H}{\mu_H}\approx\frac{m_e}{2}\left(\frac{1}{m_H}-\frac{1}{m_D}\right)\cdot\frac{1}{\mu/m_e}\approx2.7\times10^{-4}$, shifting H$\alpha$ by $0.18$ nm — the tiny doublet by which Urey discovered deuterium in 1931.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.9 · Scaled level diagrams for H, He+, Li2+</p>
+<p><em>Show:</em> three ladders side by side with ground levels at -13.6, -54.4, -122.4 eV; the first transition of each drawn and labelled 121.6 nm, 30.4 nm, 13.5 nm; a caption "Z-squared scaling".
+<em>Search:</em> "hydrogen like ions energy levels Z squared scaling He+ Li2+"
+<em>Used in:</em> §3.8, E6.</p>
+</div>
+
+<p>Two exotic atoms to fix the scaling instinct. <strong>Muonic hydrogen</strong>: $m_\mu=207m_e$ gives $a=256$ fm and $E_1=-2.81$ keV — the "atom" is nuclear-sized, which is why muonic atoms probe nuclear radii. <strong>Positronium</strong>: $m_1=m_2=m_e$ gives $\mu=\frac{m_e}{2}$, so $a=1.06$ Å and $E_1=-6.8$ eV, a hydrogen twice as big and half as bound.</p>
+<h3 id="39-x-ray-lines-from-the-same-picture-bridge-to-part-25">3.9 X-ray lines from the same picture (bridge to PART 25)</h3>
+<p>Knock an inner-shell electron out of a heavy atom and an outer electron falls into the vacancy. For the K$\alpha$ line ($n=2\to1$) the falling electron sees charge $(Z-1)e$, the remaining 1s electron screening the nucleus; the Bohr arithmetic then gives</p>
+<p>$$
+f_{K\alpha}=\frac{3}{4}cR(Z-1)^2. \qquad (3.10)
+$$</p>
+<p>This is Moseley's law as a corollary: $\sqrt f$ is linear in $Z$. For copper it predicts $\lambda=155$ pm against the measured $154$ pm. The factor $(Z-1)^2\times\frac34\approx784\times0.75$ is why X-ray lines sit at keV energies while optical lines sit at eV: the inner orbits are $Z^2$ deeper and $Z$ smaller. The full treatment — production, spectra, absorption, Bragg, Compton — is PART 25's.</p>
+<div class="callout quote">
+<p class="callout-title">Hand-off</p>
+<p>Moseley's law is <em>derived</em> in [X-rays](x-rays.html) §3.4 from the shielding argument, with the measurement exercise; here it is stated as the Bohr model's heavy-atom corollary.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.10 · Moseley's straight line</p>
+<p><em>Show:</em> sqrt(f) on the vertical axis against Z on the horizontal; a straight line through the plotted points of several elements; the intercept at Z = 1 marked; copper highlighted.
+<em>Search:</em> "Moseley law sqrt frequency atomic number straight line"
+<em>Used in:</em> §3.9.</p>
+</div>
+
+<h3 id="310-fine-structure-zeeman-splitting-and-the-quantum-numbers">3.10 Fine structure, Zeeman splitting, and the quantum numbers</h3>
+<p>An orbiting electron is a current loop with magnetic moment $\mu=\frac{evr}{2}=\frac{e}{2m_e}L$; per unit $\hbar$ this is the Bohr magneton $\mu_B=\frac{e\hbar}{2m_e}=5.79\times10^{-5}$ eV/T. In a field $B$ a level splits by $\Delta E=m_l\mu_BB$ with $m_l$ the orientation number — the Zeeman effect: at $1$ T the H$\alpha$ line splits by $\Delta\lambda=\frac{\lambda^2}{hc}\mu_BB=0.02$ nm, resolvable and observed. Fine structure — the splitting that remains without a field — is of order $\alpha^2\times13.6$ eV $\sim10^{-4}$ eV, the relativistic correction the Bohr model cannot produce; it, plus the Stern-Gerlach result that angular momentum projections come in discrete counts, forced the introduction of $l$ (orbital shape, $0\le l\le n-1$), $m_l$ ($-l\ldots l$), and $m_s=\pm\frac12$, with the selection rule $\Delta l=\pm1$ explaining which lines exist. These numbers are the Schrödinger equation's shadow; the syllabus needs them as bookkeeping, not as derivation.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.11 · Zeeman splitting of a level</p>
+<p><em>Show:</em> one level at B = 0 splitting into three (m_l = -1, 0, +1) as B increases, drawn as a fan; the splitting labelled mu-B times B; the three allowed transitions between two such fans giving the triplet lines.
+<em>Search:</em> "Zeeman effect energy level splitting magnetic field triplet"
+<em>Used in:</em> §3.10.</p>
+</div>
+
+<p>The <strong>correspondence principle</strong> closes the model's self-consistency: for large $n$, the frequency of the photon emitted in $n\to n-1$ must equal the classical orbital frequency, because a large orbit is a classical antenna. At $n=100$: $f_{\text{orb}}=\frac{v}{2\pi r}=6.58\times10^9$ Hz while $\frac{\Delta E}{h}=6.68\times10^9$ Hz — equal to $1.5\%$, and the gap closes as $n^{-1}$: quantum arithmetic melts into classical radiation exactly where it must (OL4).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.12 · The correspondence limit</p>
+<p><em>Show:</em> the fractional difference between transition frequency and orbital frequency plotted against n, falling like 1/n; the classical regime shaded at large n; a caption "quantum melts into classical".
+<em>Search:</em> "correspondence principle Bohr large n classical limit frequency"
+<em>Used in:</em> §3.10, OL4.</p>
+</div>
+
+<h3 id="311-where-the-model-is-used-today">3.11 Where the model is used today</h3>
+<p>Spectroscopic identification: every element's line set is a fingerprint; helium was found in the solar spectrum (1868) before on Earth. The isotope-shift method (§3.8) is still how rare isotopes are detected. Ionisation potentials are measured by photoelectric thresholds on atoms, closing the circle with PART 23. The 21 cm line is a hyperfine transition of hydrogen's ground state — the electron and proton spins flipping from parallel to antiparallel release $5.9\times10^{-6}$ eV, a wavelength of 21 cm; its tiny rate is why the interstellar medium glows in radio and astronomers map galaxies with it.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.13 · Emission versus absorption spectra</p>
+<p><em>Show:</em> a continuous rainbow band; below it the same band with dark lines at exactly the positions where the emission panel above shows bright lines; caption "absorption sees the same gaps emission fills".
+<em>Search:</em> "emission absorption spectrum comparison hydrogen lines"
+<em>Used in:</em> §3.11.</p>
+</div>
+
+<h3 id="312-reading-the-numbers">3.12 Reading the numbers</h3>
+<p>Quick conversions to automate: $\Delta E$ in eV to $\lambda$ in nm via $\frac{1240}{\Delta E}$; $R$ in m$^{-1}$ to eV via $hcR=13.6$ eV; orbital frequency $\frac{6.58\times10^{15}Z^2}{n^3}$ Hz. Energies in eV, wavelengths in nm, frequencies in units of $10^{14}$ Hz: keep the exponents small and the arithmetic stays honest.</p>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{r_n=0.529\,\frac{n^2}{Z}\ \text{Å},\quad v_n=2.19\times10^6\,\frac{Z}{n}\ \text{m/s},\quad E_n=-13.6\,\frac{Z^2}{n^2}\ \text{eV}} \qquad (4.1)
+$$</p>
+<p>valid for one-electron atoms, non-relativistic, point nucleus.</p>
+<p>$$
+\boxed{\frac{1}{\lambda}=RZ^2\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right),\quad hcR=13.6\ \text{eV}} \qquad (4.2)
+$$</p>
+<p>valid as above; use $R_H$ not $R_\infty$ when comparing with hydrogen wavelengths at four-decimal precision.</p>
+<p>$$
+\boxed{r_{\min}=\frac{2kZe^2}{K}\ (\text{head-on}),\qquad \tan\frac{\theta}{2}=\frac{kZe^2}{mv^2b}} \qquad (4.3)
+$$</p>
+<p>valid while the interaction is pure Coulomb and the nucleus recoils negligibly.</p>
+<p>$$
+\boxed{N_{\text{lines}}=\frac{n(n-1)}{2},\qquad \Delta E_{\text{Zeeman}}=m_l\mu_BB} \qquad (4.4)
+$$</p>
+<p>the first exact combinatorics, the second for orbital moment only (spin adds the anomalous factor, beyond syllabus).</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$n\to\infty$: level spacing $\to0$, the spectrum becomes continuous at the ionisation limit, correct.</li>
+<li>$Z\to1$, $n=1$: returns $0.529$ Å, $2.19\times10^6$ m/s, $-13.6$ eV, correct.</li>
+<li>$M_{\text{nucleus}}\to\infty$: $\mu\to m_e$, the fixed-nucleus formulas return, correct.</li>
+<li>$b\to\infty$ in Eq. (4.3): $\theta\to0$, most alphas go straight, correct.</li>
+<li>$K\to\infty$: $r_{\min}\to0$, until the nuclear force interrupts — the stated validity boundary.</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$n$, $Z$</td>
+<td>radius, speed, energy</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>two levels</td>
+<td>photon wavelength</td>
+<td>Eq. (4.2) with $1240$</td>
+</tr>
+<tr>
+<td>level $n$</td>
+<td>ionisation energy</td>
+<td>$-E_n$</td>
+</tr>
+<tr>
+<td>beam energy, foil</td>
+<td>closest approach</td>
+<td>Eq. (4.3)</td>
+</tr>
+<tr>
+<td>field $B$</td>
+<td>splitting</td>
+<td>Eq. (4.4)</td>
+</tr>
+<tr>
+<td>isotope shift</td>
+<td>mass ratio</td>
+<td>reduced-mass scaling §3.8</td>
+</tr>
+<tr>
+<td>cascade from $n$</td>
+<td>line count</td>
+<td>$\frac{n(n-1)}{2}$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-twenty-second-checks">4.4 Twenty-second checks</h3>
+<p><strong>C1 — concept check.</strong> Why are bound-state energies negative here?</p>
+<details>
+<summary>Answer</summary>
+<p>Zero is set at infinity with the electron at rest; a bound electron must be given energy to get there.</p>
+</details>
+<p><strong>C2 — concept check.</strong> An alpha is back-scattered. What does that say about the charge distribution?</p>
+<details>
+<summary>Answer</summary>
+<p>It is concentrated in a region smaller than the closest approach; a diffuse charge cannot reverse an alpha.</p>
+</details>
+<p><strong>C3 — concept check.</strong> Is $r_{\min}$ the nuclear radius?</p>
+<details>
+<summary>Answer</summary>
+<p>No: an upper bound from head-on kinematics, valid only while the force stays Coulomb.</p>
+</details>
+<p><strong>C4 — concept check.</strong> Why does the classical atom radiate a continuum?</p>
+<details>
+<summary>Answer</summary>
+<p>The spiral continuously changes orbital frequency, sweeping all frequencies.</p>
+</details>
+<p><strong>C5 — concept check.</strong> What two equations replace all of Bohr's postulates in modern language?</p>
+<details>
+<summary>Answer</summary>
+<p>Coulomb force balance and the standing-wave condition $2\pi r=n\lambda$.</p>
+</details>
+<p><strong>C6 — concept check.</strong> Kinetic versus potential energy in a Bohr orbit?</p>
+<details>
+<summary>Answer</summary>
+<p>$K=-E$, $U=2E$: kinetic is half the potential's magnitude, opposite sign.</p>
+</details>
+<p><strong>C7 — concept check.</strong> Which is absorbed by hydrogen: an 11 eV photon or an 11 eV electron?</p>
+<details>
+<summary>Answer</summary>
+<p>The electron; the photon matches no exact gap (10.2, then 12.1) and is below 13.6, so it passes.</p>
+</details>
+<p><strong>C8 — concept check.</strong> How many lines from $n=4$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\frac{4\times3}{2}=6$.</p>
+</details>
+<p><strong>C9 — concept check.</strong> He$^+$ ground-state energy and radius?</p>
+<details>
+<summary>Answer</summary>
+<p>$-54.4$ eV and $0.265$ Å: $Z^2$ deeper, $Z$ smaller.</p>
+</details>
+<p><strong>C10 — concept check.</strong> Why is deuterium's H$\alpha$ at shorter wavelength than hydrogen's?</p>
+<details>
+<summary>Answer</summary>
+<p>Heavier nucleus, larger reduced mass, slightly deeper levels, slightly richer photons.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why do K$\alpha$ X-rays scale as $(Z-1)^2$?</p>
+<details>
+<summary>Answer</summary>
+<p>The falling electron sees the nucleus screened by the one remaining 1s electron.</p>
+</details>
+<p><strong>C12 — concept check.</strong> At 1 T, order of the Zeeman splitting in eV?</p>
+<details>
+<summary>Answer</summary>
+<p>$\mu_B B\approx6\times10^{-5}$ eV.</p>
+</details>
+<p><strong>C13 — concept check.</strong> Why are Balmer lines strongest in stars near 10 000 K?</p>
+<details>
+<summary>Answer</summary>
+<p>Hotter than that, hydrogen ionises; cooler, the Boltzmann factor leaves no n = 2 population.</p>
+</details>
+<p><strong>C14 — concept check.</strong> What does the correspondence principle demand at large n?</p>
+<details>
+<summary>Answer</summary>
+<p>Transition frequency equals orbital frequency; quantum lines merge into classical radiation.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-closest-approach-for-a-77-mev-alpha-on-gold">E1 — Closest approach for a 7.7 MeV alpha on gold</h3>
+<p>Find $r_{\min}$ and compare with the nuclear radius scale.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Doubling the energy must halve $r_{\min}$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Eq. (3.3): $r_{\min}=\frac{2kZe^2}{K}=\frac{2\times79\times1.44\ \text{eV nm}}{7.7\times10^6\ \text{eV}}=2.95\times10^{-5}$ nm $=29.5$ fm. Nuclear radii are a few fm, so the Coulomb description is still safe at this energy.</p>
+</details>
+<h3 id="e2-the-impact-parameter-for-a-right-angle">E2 — The impact parameter for a right angle</h3>
+<p>A $5$ MeV alpha on gold scatters through $90^\circ$. Find $b$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\theta=90^\circ$ must give $b=\frac{r_h}{2}$, half the head-on distance.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\tan45^\circ=1=\frac{r_h}{2b}$, with $r_h=45.5$ fm: $b=22.8$ fm.</p>
+</details>
+<h3 id="e3-the-first-three-levels-of-hydrogen">E3 — The first three levels of hydrogen</h3>
+<p>Tabulate $r_n$, $v_n$, $E_n$ for $n=1,2,3$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Radii in ratio $1:4:9$, speeds $1:\frac12:\frac13$, energies $1:\frac14:\frac19$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Eq. (4.1). $r$: $0.529$, $2.12$, $4.76$ Å. $v$: $2.19\times10^6$, $1.10\times10^6$, $7.29\times10^5$ m/s. $E$: $-13.6$, $-3.40$, $-1.51$ eV.</p>
+</details>
+<h3 id="e4-the-first-balmer-lines">E4 — The first Balmer lines</h3>
+<p>Compute the $3\to2$ and $4\to2$ wavelengths.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Both must lie in the visible, $656$ and $486$ nm.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta E=13.6(\frac14-\frac19)=1.89$ eV; $\lambda=\frac{1240}{1.89}=656$ nm. $\Delta E=13.6(\frac14-\frac1{16})=2.55$ eV; $\lambda=486$ nm.</p>
+</details>
+<h3 id="e5-ionising-he-from-its-second-level">E5 — Ionising He+ from its second level</h3>
+<p>Find the energy needed.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>It must equal hydrogen's ground-state value, $13.6$ eV, by the $Z^2/n^2$ coincidence.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E_2=-13.6\times\frac{4}{4}=-13.6$ eV; ionisation energy $=13.6$ eV.</p>
+</details>
+<h3 id="e6-the-li2-resonance-line">E6 — The Li2+ resonance line</h3>
+<p>Find the wavelength of $2\to1$ in Li$^{2+}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>It must be nine times the energy of hydrogen's Lyman $\alpha$, hence a ninth of the wavelength scale.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta E=13.6\times9\times\frac34=91.8$ eV; $\lambda=\frac{1240}{91.8}=13.5$ nm, soft X-ray territory.</p>
+</details>
+<h3 id="e7-counting-lines-from-n-4-and-n-5">E7 — Counting lines from n = 4 and n = 5</h3>
+<p>How many distinct lines as the atom cascades?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The count is pairs of levels: $\binom{n}{2}$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $n=4$: $6$ lines; $n=5$: $10$ lines.</p>
+</details>
+<h3 id="e8-what-a-125-ev-electron-beam-can-excite">E8 — What a 12.5 eV electron beam can excite</h3>
+<p>Hydrogen is bombarded with $12.5$ eV electrons. Which levels are reached, and what lines appear?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Levels: $10.2$ (n=2), $12.09$ (n=3), $12.75$ (n=4): the beam stops at n=3.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The electron may hand over any part of its energy, so $n=2$ and $n=3$ are reachable but $n=4$ is not. Cascades from 3 give three lines: $121.6$ nm, $102.6$ nm and $656.1$ nm.</p>
+</details>
+<h3 id="e9-balmer-extremes">E9 — Balmer extremes</h3>
+<p>Longest and shortest Balmer wavelengths?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Longest is $3\to2$, shortest the limit $n\to\infty$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $656.1$ nm and $\frac{1240}{3.40}=364.6$ nm.</p>
+</details>
+<h3 id="e10-the-rydberg-constant-from-the-model">E10 — The Rydberg constant from the model</h3>
+<p>Compute $R$ from $hcR=13.606$ eV and compare with the spectroscopic hydrogen value.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The model gives $R_\infty$; hydrogen's measured $R_H$ is $0.05\%$ smaller by reduced mass.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $R=\frac{13.606}{1240\times10^{-9}\times\frac{1}{1.602\times10^{-19}}\times1.602\times10^{-19}}$ — directly: $R=\frac{13.606\ \text{eV}}{hc}=\frac{13.606}{1240\ \text{eV nm}}=1.0973\times10^{-2}$ nm$^{-1}=1.0973\times10^7$ m$^{-1}$, against $R_H=1.0968\times10^7$ m$^{-1}$: ratio $1.0005=\frac{\mu_H}{m_e}$ correction, exactly §3.8.</p>
+</details>
+<h3 id="e11-zeeman-splitting-at-2-t">E11 — Zeeman splitting at 2 T</h3>
+<p>Find the splitting in eV and the wavelength separation of the H$\alpha$ line.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Double the field, double the separation: $0.04$ nm.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta E=\mu_BB=1.16\times10^{-4}$ eV; $\Delta\lambda=\frac{\lambda^2}{hc}\Delta E=\frac{(656\ \text{nm})^2}{1240\ \text{eV nm}}\times1.16\times10^{-4}=4.0\times10^{-2}$ nm.</p>
+</details>
+<h3 id="e12-the-deuterium-shift-of-h-alpha">E12 — The deuterium shift of H-alpha</h3>
+<p>Compute the wavelength separation of hydrogen and deuterium H$\alpha$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>It must be of order $10^{-4}$ of $656$ nm, i.e. tenths of a nm.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Fractional shift $\approx\frac{m_e}{2}\left(\frac{1}{m_H}-\frac{1}{m_D}\right)\times\frac{m_H}{m_e}= \frac{m_e}{2m_D}\approx2.7\times10^{-4}$; $\Delta\lambda=656.1\times2.7\times10^{-4}=0.18$ nm.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Closest approach</td>
+<td>$r_{\min}=\frac{2kZe^2}{K}$</td>
+<td>E1, Q1</td>
+<td>change Z, K</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Impact parameter to angle</td>
+<td>$\tan\frac{\theta}{2}=\frac{r_h}{2b}$</td>
+<td>E2, Q2</td>
+<td>fraction scattered</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Level energies and radii</td>
+<td>Eq. (4.1)</td>
+<td>E3, Q4</td>
+<td>any Z</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Transition wavelength</td>
+<td>$\frac{1240}{\Delta E}$</td>
+<td>E4, Q5, Q26</td>
+<td>series extremes</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Ionisation energy of an ion</td>
+<td>$13.6\frac{Z^2}{n^2}$</td>
+<td>E5, Q6</td>
+<td>excitation potentials</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Line counting</td>
+<td>$\frac{n(n-1)}{2}$</td>
+<td>E7, Q7</td>
+<td>"lines in a series" variant</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Electron-beam excitation</td>
+<td>part-payment logic</td>
+<td>E8, Q12</td>
+<td>photon version contrast</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Series extremes</td>
+<td>first step vs limit</td>
+<td>E9, Q8</td>
+<td>other series</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Rydberg from model</td>
+<td>$hcR=13.6$ eV</td>
+<td>E10, Q19</td>
+<td>reduced-mass variant</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Zeeman splitting</td>
+<td>$\mu_BB$</td>
+<td>E11, Q18</td>
+<td>in wavelength units</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Reduced-mass shift</td>
+<td>$\frac{\Delta\lambda}{\lambda}\approx\frac{m_e}{2M}$</td>
+<td>E12, Q17</td>
+<td>muonic, positronium</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Exotic atom scaling</td>
+<td>$m\to\mu$ everywhere</td>
+<td>Q15, Q16</td>
+<td>binding and size</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Moseley as corollary</td>
+<td>$f=\frac34cR(Z-1)^2$</td>
+<td>Q21</td>
+<td>identify element</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Orbital frequency and correspondence</td>
+<td>$f\propto\frac{Z^2}{n^3}$</td>
+<td>Q14, Q19, Q20</td>
+<td>large-n limit</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Boltzmann population</td>
+<td>$4e^{-\Delta E/k_BT}$</td>
+<td>Q22</td>
+<td>stellar temperatures</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Franck-Hertz reading</td>
+<td>dip voltage = gap; glow $\frac{1240}{\Delta E}$</td>
+<td>Q23</td>
+<td>other vapours</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-a-5-mev-alpha-heads-straight-for-a-gold-nucleus-closest-approach">Q1. A 5 MeV alpha heads straight for a gold nucleus. Closest approach?</h4>
+<details>
+<summary>Solution</summary>
+<p>$r_{\min}=\frac{2\times79\times1.44}{5\times10^6}=4.6\times10^{-5}$ nm $=46$ fm.</p>
+</details>
+<h4 id="q2-at-what-impact-parameter-does-that-alpha-scatter-through-90-degrees">Q2. At what impact parameter does that alpha scatter through 90 degrees?</h4>
+<details>
+<summary>Solution</summary>
+<p>$b=\frac{r_{\min}}{2}=23$ fm.</p>
+</details>
+<h4 id="q3-estimate-the-fraction-of-5-mev-alphas-scattered-beyond-90-degrees-by-a-1-m-gold-foil-n-59e28-m-3">Q3. Estimate the fraction of 5 MeV alphas scattered beyond 90 degrees by a 1 µm gold foil (n = 5.9e28 m^-3).</h4>
+<details>
+<summary>Solution</summary>
+<p>$f=\pi b^2nt=\pi(2.3\times10^{-14})^2\times5.9\times10^{28}\times10^{-6}\approx1\times10^{-4}$: one in ten thousand, the right order of the historic one-in-eight-thousand (thinner effective foil, larger angles rarer).</p>
+</details>
+<h4 id="q4-radius-and-energy-of-hydrogens-n-2-orbit">Q4. Radius and energy of hydrogen's n = 2 orbit?</h4>
+<details>
+<summary>Solution</summary>
+<p>$2.12$ Å and $-3.40$ eV.</p>
+</details>
+<h4 id="q5-wavelength-of-the-4-to-3-transition">Q5. Wavelength of the 4-to-3 transition?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\Delta E=13.6(\frac19-\frac1{16})=0.66$ eV; $\lambda=\frac{1240}{0.66}=1875$ nm, Paschen $\alpha$.</p>
+</details>
+<h4 id="q6-ionisation-energy-of-li2">Q6. Ionisation energy of Li2+?</h4>
+<details>
+<summary>Solution</summary>
+<p>$13.6\times9=122.4$ eV.</p>
+</details>
+<h4 id="q7-number-of-lines-from-n-5">Q7. Number of lines from n = 5?</h4>
+<details>
+<summary>Solution</summary>
+<p>$10$.</p>
+</details>
+<h4 id="q8-longest-and-shortest-lyman-wavelengths">Q8. Longest and shortest Lyman wavelengths?</h4>
+<details>
+<summary>Solution</summary>
+<p>$121.6$ nm ($2\to1$) and $91.2$ nm (limit).</p>
+</details>
+<h4 id="q9-ionisation-potential-of-hydrogen-in-the-n-3-state">Q9. Ionisation potential of hydrogen in the n = 3 state?</h4>
+<details>
+<summary>Solution</summary>
+<p>$1.51$ V.</p>
+</details>
+<h4 id="q10-binding-energy-of-hydrogens-n-2-electron">Q10. Binding energy of hydrogen's n = 2 electron?</h4>
+<details>
+<summary>Solution</summary>
+<p>$3.4$ eV.</p>
+</details>
+<h4 id="q11-a-1209-ev-photon-meets-ground-state-hydrogen-what-happens">Q11. A 12.09 eV photon meets ground-state hydrogen. What happens?</h4>
+<details>
+<summary>Solution</summary>
+<p>Resonant absorption to $n=3$: $13.6(1-\frac19)=12.09$ eV exactly.</p>
+</details>
+<h4 id="q12-the-same-energy-carried-by-an-electron-instead-which-excitations-occur">Q12. The same energy carried by an electron instead. Which excitations occur?</h4>
+<details>
+<summary>Solution</summary>
+<p>$n=2$ and $n=3$ (and any partial transfer); the electron keeps the remainder as kinetic energy.</p>
+</details>
+<h4 id="q13-ratio-of-speeds-v2v1-in-hydrogen">Q13. Ratio of speeds v2/v1 in hydrogen?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac12$.</p>
+</details>
+<h4 id="q14-ratio-of-orbital-frequencies-of-n-1-and-n-2">Q14. Ratio of orbital frequencies of n = 1 and n = 2?</h4>
+<details>
+<summary>Solution</summary>
+<p>$f\propto n^{-3}$: ratio $8$.</p>
+</details>
+<h4 id="q15-muonic-hydrogen-2-to-1-wavelength">Q15. Muonic hydrogen 2-to-1 wavelength?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\Delta E=2.81\ \text{keV}\times\frac34=2.11$ keV; $\lambda=\frac{1240}{2110}=0.59$ nm.</p>
+</details>
+<h4 id="q16-positronium-ground-energy-and-2-to-1-wavelength">Q16. Positronium ground energy and 2-to-1 wavelength?</h4>
+<details>
+<summary>Solution</summary>
+<p>$-6.8$ eV; $\Delta E=5.1$ eV; $\lambda=243$ nm.</p>
+</details>
+<h4 id="q17-fractional-h-alpha-shift-between-h-and-d">Q17. Fractional H-alpha shift between H and D?</h4>
+<details>
+<summary>Solution</summary>
+<p>$2.7\times10^{-4}$, i.e. $0.18$ nm.</p>
+</details>
+<h4 id="q18-zeeman-splitting-of-an-orbital-level-at-1-t-in-ev">Q18. Zeeman splitting of an orbital level at 1 T, in eV?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mu_BB=5.8\times10^{-5}$ eV.</p>
+</details>
+<h4 id="q19-orbital-frequency-of-hydrogens-n-100-orbit">Q19. Orbital frequency of hydrogen's n = 100 orbit?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{6.58\times10^{15}}{10^6}=6.6\times10^9$ Hz.</p>
+</details>
+<h4 id="q20-energy-of-the-100-to-99-transition-in-ev">Q20. Energy of the 100-to-99 transition, in eV?</h4>
+<details>
+<summary>Solution</summary>
+<p>$13.6(\frac{1}{99^2}-\frac{1}{100^2})=2.8\times10^{-5}$ eV; its frequency $\frac{\Delta E}{h}=6.7\times10^9$ Hz matches Q19 within $1.5\%$ — the correspondence principle at work.</p>
+</details>
+<h4 id="q21-an-unknown-elements-k-alpha-line-is-at-154-pm-identify-it">Q21. An unknown element's K-alpha line is at 154 pm. Identify it.</h4>
+<details>
+<summary>Solution</summary>
+<p>$f=\frac{c}{\lambda}=1.95\times10^{18}$ Hz; $(Z-1)^2=\frac{f}{\frac34cR}=789$; $Z-1=28$; $Z=29$, copper.</p>
+</details>
+<h4 id="q22-the-n-2-to-n-1-population-ratio-of-hydrogen-at-10-000-k">Q22. The n = 2 to n = 1 population ratio of hydrogen at 10 000 K?</h4>
+<details>
+<summary>Solution</summary>
+<p>$4e^{-10.2\times11600/10^4}$? Directly: $\frac{10.2\ \text{eV}}{k_BT}=\frac{10.2}{0.8617}=11.8$; ratio $4e^{-11.8}=2.9\times10^{-5}$.</p>
+</details>
+<h4 id="q23-franck-hertz-with-mercury-first-dip-at-49-v-what-glow-accompanies-it">Q23. Franck-Hertz with mercury: first dip at 4.9 V. What glow accompanies it?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\lambda=\frac{1240}{4.9}=253$ nm, ultraviolet.</p>
+</details>
+<h4 id="q24-a-12-ev-electron-excites-hydrogen-to-n-2-its-leftover-kinetic-energy">Q24. A 12 eV electron excites hydrogen to n = 2. Its leftover kinetic energy?</h4>
+<details>
+<summary>Solution</summary>
+<p>$12-10.2=1.8$ eV.</p>
+</details>
+<h4 id="q25-an-orbit-in-which-the-electrons-speed-is-v13-its-radius">Q25. An orbit in which the electron's speed is v1/3. Its radius?</h4>
+<details>
+<summary>Solution</summary>
+<p>$n=3$; $r=9a_0=4.76$ Å.</p>
+</details>
+<h4 id="q26-wavelength-of-the-5-to-2-line">Q26. Wavelength of the 5-to-2 line?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\Delta E=13.6(\frac14-\frac1{25})=2.86$ eV; $\lambda=434$ nm.</p>
+</details>
+<h4 id="q27-angular-momentum-of-the-n-3-orbit-in-si-units">Q27. Angular momentum of the n = 3 orbit in SI units?</h4>
+<details>
+<summary>Solution</summary>
+<p>$3\hbar=3.16\times10^{-34}$ J s.</p>
+</details>
+<h4 id="q28-ratio-ku-in-any-bohr-orbit">Q28. Ratio K/|U| in any Bohr orbit?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac12$, the virial theorem for a $\frac1r$ potential.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-level-diagram-first-discipline">7.1 The level-diagram-first discipline</h3>
+<p>Every spectrum question begins by drawing the ladder and marking the transition; the algebra only evaluates what the diagram already shows. Demonstration: "second line of Balmer" reads off the diagram as $4\to2$ before any formula. Fails nowhere; skipping it is the failure.</p>
+<h3 id="72-energy-units-first-rydberg-second">7.2 Energy units first, Rydberg second</h3>
+<p>Work in eV with $hcR=13.6$: $\Delta E=13.6Z^2(\frac{1}{n_f^2}-\frac{1}{n_i^2})$ eV, then $\lambda=\frac{1240}{\Delta E}$. Demonstration: $3\to2$ gives $1.89$ eV and $656$ nm in two divisions, no $10^7$ bookkeeping. Switch to $R$ in m$^{-1}$ only when a question demands four-decimal wavelength precision.</p>
+<h3 id="73-scaling-as-a-solver">7.3 Scaling as a solver</h3>
+<p>Memorise three scalings and most arithmetic disappears: energies $\propto\frac{Z^2}{n^2}$, radii $\propto\frac{n^2}{Z}$, and everything-masses $\propto\mu$. Demonstration: He$^+$ $n=2$ energy is hydrogen's $n=1$ energy, because $\frac{Z^2}{n^2}=1$; its radius is $\frac{4}{2}=2$ times smaller than hydrogen's $n=2$, i.e. $1.06$ Å. Fails when screening matters (inner shells of heavy atoms: PART 25).</p>
+<h3 id="74-combinatorics-for-lines">7.4 Combinatorics for lines</h3>
+<p>Total lines from $n$: $\binom{n}{2}$. Lines <em>within one series</em> ending at $n_f$ from a cascade starting at $n$: $n-n_f$. Demonstration: from $n=5$, total $10$; in Balmer, $3$. Mixing the two counts is a standard trap (§8).</p>
+<h3 id="75-the-reduced-mass-substitution">7.5 The reduced-mass substitution</h3>
+<p>Any result of the fixed-nucleus model becomes the moving-nucleus result by $m_e\to\mu$, hence $R\to R\frac{\mu}{m_e}$, $a_0\to a_0\frac{m_e}{\mu}$, $E_n\to E_n\frac{\mu}{m_e}$. Demonstration: positronium's whole spectrum is hydrogen's halved in energy and doubled in wavelength, in one substitution. Fails only where nuclear structure enters (muonic atoms probing nuclear size).</p>
+<h3 id="76-limits-as-auditors">7.6 Limits as auditors</h3>
+<p>$n\to\infty$ must give continuum at $0$ eV; $Z=1$ must return the memorised trio; $M\to\infty$ must return $R_\infty$; $b\to\infty$ must give $\theta\to0$. Push one before submitting.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — r_min is not the radius</p>
+<p>Quoting the closest approach as the nuclear radius. Reply: it is a head-on upper bound, valid only while the force is Coulomb.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — the forgotten Z</p>
+<p>Using $-13.6/n^2$ for He$^+$. Reply: energies carry $Z^2$, radii carry $1/Z$, always.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — the electron mass in exotic atoms</p>
+<p>Computing muonic hydrogen with $m_e$. Reply: every mass-dependent quantity takes $\mu$; the muon's 207 is the whole point.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — Bohr beyond hydrogenics</p>
+<p>Applying $E_n=-13.6Z^2/n^2$ to neutral helium. Reply: two electrons break the model; screening is patchwork, PART 25's Moseley at best.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — series names backwards</p>
+<p>Calling $n_f=3$ Balmer. Reply: Lyman 1, Balmer 2, Paschen 3, Brackett 4, Pfund 5 — the visible one is Balmer, anchor there.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — ionisation bookkeeping</p>
+<p>Setting the photon energy equal to the level gap in an ionisation problem. Reply: above threshold the surplus is the free electron's kinetic energy.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — excitation versus ionisation energy</p>
+<p>Subtracting two excited levels when asked to ionise. Reply: ionisation always ends at $0$ eV.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — the isotope shift without reduced mass</p>
+<p>Predicting identical spectra for H and D. Reply: the shift is small but it is the discovery of deuterium; carry $\mu$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — photons pay in full</p>
+<p>Letting a 11 eV photon excite the 10.2 eV line. Reply: photons are all-or-nothing; electrons are billiard balls.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — line counts</p>
+<p>Answering $\frac{n(n-1)}{2}$ when asked "lines in the Balmer series". Reply: that is the total; a series counts $n-n_f$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 11 — Zeeman with spin sneaked in</p>
+<p>Using $\mu_BB$ where the question says orbital only, then doubling for spin. Reply: read whether the question includes spin; the syllabus default is orbital, $m_l\mu_BB$.</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>Scattering words (alpha, foil, angle, impact): §3.2-3.3 formulas.</li>
+<li>Wavelength or line words: draw the ladder, §3.6.</li>
+<li>"Excite" with a photon: exact gap; with an electron: part-payment.</li>
+<li>Ion or exotic atom: apply the scalings of §7.3 and §7.5 first.</li>
+<li>Field present: Zeeman, §3.10.</li>
+<li>Temperature present: Boltzmann, §3.7.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eq. (4.1) trio</td>
+<td>one electron, point nucleus</td>
+<td>multi-electron, high Z (relativity)</td>
+</tr>
+<tr>
+<td>Eq. (4.2) Rydberg</td>
+<td>same</td>
+<td>screening, nuclear size</td>
+</tr>
+<tr>
+<td>Eq. (4.3) scattering</td>
+<td>Coulomb to the distance probed</td>
+<td>nuclear-force energies</td>
+</tr>
+<tr>
+<td>$\frac{n(n-1)}{2}$</td>
+<td>full cascade</td>
+<td>single-series questions</td>
+</tr>
+<tr>
+<td>$\mu_B B m_l$</td>
+<td>orbital moment, weak field</td>
+<td>strong field, spin included</td>
+</tr>
+<tr>
+<td>reduced-mass substitution</td>
+<td>structureless nucleus</td>
+<td>muonic precision (nuclear size)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-constants-to-carry">9.3 Constants to carry</h3>
+<p>$13.6$ eV; $a_0=0.53$ Å; $v_1=2.19\times10^6$ m/s; $hcR=13.6$ eV; $\mu_B=5.8\times10^{-5}$ eV/T; $ke^2=1.44$ eV nm; Balmer $\alpha$ $656$ nm; Lyman $\alpha$ $122$ nm.</p>
+<h3 id="94-timing-plan">9.4 Timing plan</h3>
+<p>A and B: under two minutes each, diagram first. C: three minutes. D: twelve minutes. If a hydrogenic number does not come out near a memorised anchor within a minute, the ladder was misdrawn.</p>
+<h3 id="95-pre-submission-audit-ten-points">9.5 Pre-submission audit, ten points</h3>
+<ol>
+<li>Ladder drawn and transition marked.</li>
+<li>$Z$ carried through.</li>
+<li>eV versus J consistent.</li>
+<li>Photon exactness versus electron part-payment decided.</li>
+<li>Series name checked.</li>
+<li>Total versus series line count checked.</li>
+<li>Reduced mass where isotopes or exotic atoms appear.</li>
+<li>$r_{\min}$ interpreted as a bound, not a radius.</li>
+<li>One limit pushed.</li>
+<li>Every sub-part answered.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-the-rutherford-cross-section-in-full">OL1 — The Rutherford cross-section, in full</h3>
+<p>From $\tan\frac{\theta}{2}=\frac{r_h}{2b}$, derive $b(\theta)$, then the differential statement: particles with impact parameters in $(b,b+db)$ scatter into angles $(\theta,\theta+d\theta)$, so the fraction per nucleus is $\frac{2\pi b\,db}{\sigma\text{-weight}}$; show the angular distribution goes like $\frac{1}{\sin^4(\theta/2)}$, and use it to explain why almost all alphas pass straight through.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Invert Eq. (3.2): $b=\frac{r_h}{2}\cot\frac{\theta}{2}$, so $db=-\frac{r_h}{4}\frac{d\theta}{\sin^2(\theta/2)}$. The annulus $2\pi b\,|db|=\frac{r_h^2}{16}\frac{2\pi\cot\frac{\theta}{2}\,d\theta}{\sin^2\frac{\theta}{2}}=\frac{r_h^2}{16}\frac{2\pi\cos\frac{\theta}{2}\,d\theta}{\sin^3\frac{\theta}{2}}$. Writing the solid angle $d\Omega=2\pi\sin\theta\,d\theta=4\pi\sin\frac{\theta}{2}\cos\frac{\theta}{2}\,d\theta$, the ratio is $\frac{d\sigma}{d\Omega}=\left(\frac{r_h}{4}\right)^2\frac{1}{\sin^4\frac{\theta}{2}}$.</p>
+<p>The $\sin^{-4}$ law says small angles dominate monstrously: halving the angle multiplies the probability sixteenfold. Integrating beyond $90^\circ$ against the total gives the $10^{-4}$-$10^{-5}$ fractions of §6.2 Q3 — the arithmetic of "almost all go straight through, one in eight thousand returns".</p>
+<p><strong>Checks.</strong> (i) Dimensions: area per steradian. (ii) The same law fitted Geiger-Marsden data across angles, which is what made it a law rather than a guess.</p>
+</details>
+<h3 id="ol2-bohr-without-postulates">OL2 — Bohr without postulates</h3>
+<p>Derive the entire hydrogen spectrum from exactly two equations — the standing-wave condition and the Coulomb force balance — and name what each of Bohr's three postulates becomes in this language.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $2\pi r=n\frac{h}{p}$ and $\frac{mv^2}{r}=\frac{ke^2}{r^2}$ solve to $r_n=\frac{n^2\hbar^2}{m_eke^2}$, $v_n=\frac{ke^2}{n\hbar}$, $E_n=-\frac{ke^2}{2r_n}$; the photon rule $hf=E_i-E_f$ is then the <em>definition</em> of the emitted frequency, not an extra postulate. Postulate (i) becomes "wave packets with definite $n$ are stationary"; (ii) becomes the standing-wave condition; (iii) becomes energy conservation with a photon carrying the difference.</p>
+<p><strong>Checks.</strong> (i) The numbers reproduce §3.5 exactly. (ii) Removing the standing wave returns the continuous classical family — the discreteness lives entirely in that one condition.</p>
+</details>
+<h3 id="ol3-the-collapse-quantitatively">OL3 — The collapse, quantitatively</h3>
+<p>Re-derive $\tau=\frac{ke^2r_0^3}{6C}$ of §3.3, evaluate it, and compare $\tau c$ with the atom's size. Then explain in two sentences why the emitted spectrum would be continuous.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> With $P=\frac{e^2a^2}{6\pi\varepsilon_0c^3}$, $a=\frac{ke^2}{m_er^2}$, $E=-\frac{ke^2}{2r}$: $\frac{ke^2}{2r^2}\dot r=-\frac{C}{r^4}$, $\dot r=-\frac{2C}{ke^2r^2}$, integrate $r^2dr$: $\tau=\frac{ke^2r_0^3}{6C}=1.6\times10^{-11}$ s for $r_0=a_0$. $\tau c\approx4.8$ mm, five orders of magnitude beyond the atom: a slow, many-million-orbit spiral.</p>
+<p>The orbital frequency rises continuously as $r$ shrinks ($f\propto r^{-3/2}$), sweeping every frequency from optical to X-ray: a continuum, the exact opposite of the observed lines.</p>
+<p><strong>Checks.</strong> (i) $\tau\propto r_0^3$: doubling the atom makes it live eight times longer. (ii) The picosecond scale matches the plan's $10^{-11}$ s benchmark.</p>
+</details>
+<h3 id="ol4-correspondence-by-expansion">OL4 — Correspondence by expansion</h3>
+<p>Expand $\Delta E=E_{n}-E_{n-1}$ for large $n$ and show $\frac{\Delta E}{h}=f_{\text{orb}}(n)\left(1+\frac{3}{2n}+\cdots\right)$; evaluate both sides at $n=100$ and $n=10$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E_n=-\frac{A}{n^2}$ with $A=13.6$ eV. $\Delta E=A\left(\frac{1}{(n-1)^2}-\frac{1}{n^2}\right)=\frac{A}{n^2}\left((1-\frac1n)^{-2}-1\right)\approx\frac{2A}{n^3}\left(1+\frac{3}{2n}\right)$. Meanwhile $f_{\text{orb}}=\frac{v}{2\pi r}=\frac{ke^2}{n\hbar}\frac{1}{2\pi a_0n^2}=\frac{2A}{hn^3}$, using $A=\frac{ke^2}{2a_0}$. Ratio $1+\frac{3}{2n}$.</p>
+<p>At $n=100$: ratio $1.015$ — the $6.58$ vs $6.68\times10^9$ Hz pair of §3.10. At $n=10$: $1.15$, the quantum world visibly non-classical. The limit is approached from above, monotonically.</p>
+<p><strong>Checks.</strong> (i) $n\to\infty$ ratio $\to1$. (ii) Dimensions of $f_{\text{orb}}$ are s$^{-1}$.</p>
+</details>
+<h3 id="ol5-exotic-atoms-as-scaling-exercises">OL5 — Exotic atoms as scaling exercises</h3>
+<p>(a) Muonic hydrogen: compute the ground radius and energy, and explain why such atoms measure nuclear radii. (b) Positronium: same two numbers, and the wavelength of its $2\to1$ line.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Replace $m_e$ by $\mu$.</p>
+<p>(a) $\mu\approx207m_e$: $a=\frac{0.529}{207}$ Å $=256$ fm, $E_1=-13.6\times207=-2.81$ keV. The orbit is <em>inside</em> the nuclear size scale (a few fm times $A^{1/3}$), so the electron spends time inside the charge distribution and the levels shift by a measurable fraction — muonic atoms are nuclear rulers.</p>
+<p>(b) $\mu=\frac{m_e}{2}$: $a=1.06$ Å, $E_1=-6.8$ eV; $2\to1$: $\Delta E=6.8\times\frac34=5.1$ eV, $\lambda=243$ nm.</p>
+<p><strong>Checks.</strong> (i) Energy times radius is constant ($\propto\mu^0$): $13.6\times0.529=2.81\times10^3\times0.00256=7.2$ eV Å both. (ii) Positronium lines at double hydrogen's wavelengths.</p>
+</details>
+<h3 id="ol6-how-hot-must-a-star-be-to-show-balmer-lines">OL6 — How hot must a star be to show Balmer lines?</h3>
+<p>Find the temperature at which $1\%$ of hydrogen atoms have their electron in $n=2$, and comment on why stellar Balmer strength peaks near $10^4$ K.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $4e^{-10.2\,\text{eV}/k_BT}=0.01\Rightarrow\frac{10.2}{k_BT}=\ln400=6.0\Rightarrow k_BT=1.70$ eV, $T=\frac{1.70\times11600}{1}=1.97\times10^4$ K.</p>
+<p>At $10^4$ K the ratio is $2.9\times10^{-5}$ — enough, given stellar numbers, for strong lines; hotter and hydrogen ionises, removing the atom altogether; cooler and the ladder is unclimbed. The peak of Balmer strength is a Boltzmann window, the physical basis of the O-B-A-F-G-K-M sequence.</p>
+<p><strong>Checks.</strong> (i) Ratio monotone in $T$. (ii) The Sun's 5800 K gives $e^{-20}\sim10^{-9}$: weak Balmer in absorption yet visible, again because columns of atoms are enormous.</p>
+</details>
+<h3 id="ol7-extracting-r-from-a-measured-line-list">OL7 — Extracting R from a measured line list</h3>
+<p>A spectroscopist hands you $656.1$, $486.1$, $434.0$ nm. Without assuming the Bohr model's numbers, extract $R_H$ and identify the series.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Assume lines $\frac1\lambda=R(\frac14-\frac1{n^2})$ for $n=3,4,5$. From the first: $R=\frac{1}{656.1\text{nm}\times(\frac14-\frac19)}=1.097\times10^7$ m$^{-1}$; the second predicts $486.2$ nm and the third $434.1$ nm — the fit holds, identifying Balmer. The common $n_f=2$ is forced because no assignment with $n_f=1$ puts these wavelengths in the visible.</p>
+<p><strong>Checks.</strong> (i) Residuals under $0.1$ nm. (ii) The value is $R_H$, $0.05\%$ below $R_\infty$, the reduced-mass signature.</p>
+</details>
+<h3 id="ol8-natural-width-versus-isotope-shift">OL8 — Natural width versus isotope shift</h3>
+<p>Using a $10^{-8}$ s upper-state lifetime, compute the natural width of H$\alpha$ and decide whether the $0.18$ nm H-D shift is resolvable in principle.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta E=\frac{\hbar}{\tau}=6.6\times10^{-8}$ eV; $\Delta\lambda=\frac{\lambda^2}{hc}\Delta E=2.3\times10^{-5}$ nm. The shift exceeds the width by a factor $8000$: resolvable in principle, which is why Urey saw it with a 1930s grating.</p>
+<p><strong>Checks.</strong> (i) Width $\propto\frac1\tau$. (ii) Doppler broadening at room temperature ($\sim10^{-3}$ nm) is the real enemy, not the natural width.</p>
+</details>
+<h3 id="ol9-the-21-cm-line-by-order-of-magnitude">OL9 — The 21 cm line, by order of magnitude</h3>
+<p>The hyperfine splitting of hydrogen's ground state is $5.9\times10^{-6}$ eV. Verify the wavelength, and give one physical reason the line is so extraordinarily weak per atom.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\lambda=\frac{1240\ \text{eV nm}}{5.9\times10^{-6}\ \text{eV}}=2.1\times10^8$ nm $=21$ cm. The splitting is a magnetic dipole interaction of the electron and proton moments — smaller than the Bohr magneton by the mass ratio $\frac{m_e}{m_p}$ and by the cube of the fine-structure constant in atomic units — hence micro-eV, and the transition rate is $\sim10^{-15}$ s$^{-1}$ per atom: only astronomical column lengths make it visible.</p>
+<p><strong>Checks.</strong> (i) $\lambda f=c$ with $f=1.42$ GHz, the radio-astronomy standard. (ii) The energy is $10^{-6}$ of optical lines, matching the radio band.</p>
+</details>
+<h3 id="ol10-why-helium-has-two-line-systems">OL10 — Why helium has two line systems</h3>
+<p>Neutral helium shows two nearly non-interconverting spectra (parhelium and orthohelium). State the mechanism in one paragraph and the scale of the splitting.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The two electrons' spins couple to total spin $S=0$ (singlets) or $S=1$ (triplets); the Pauli principle ties spin symmetry to spatial symmetry, and different spatial symmetry means different Coulomb (exchange) energy — of order $1$ eV, e.g. the $1s2s$ singlet-triplet gap is $0.8$ eV. Electric-dipole selection rules forbid $\Delta S\ne0$, so the two ladders barely talk to each other: two "elements" in one tube. This is the doorway to spin, named here, derived in quantum mechanics beyond the syllabus.</p>
+<p><strong>Checks.</strong> (i) Exchange scale $\sim$ eV, set by the Coulomb energy, not by magnetism. (ii) Hydrogen, one electron, shows no such doubling.</p>
+</details>
+<h3 id="ol11-how-small-a-shift-can-a-spectrometer-see-and-what-it-buys">OL11 — How small a shift can a spectrometer see, and what it buys</h3>
+<p>A grating spectrograph resolves $\frac{\lambda}{\Delta\lambda}=10^5$. At H$\alpha$, what velocity does that correspond to via the Doppler formula, and what does this enable?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\Delta\lambda=\frac{656.1}{10^5}=6.6\times10^{-3}$ nm; $v=c\frac{\Delta\lambda}{\lambda}=3$ km/s. Radial velocities of stars and galaxies at walking-to-driving speeds become measurable — the Doppler method's instrumental root, whose relativistic completion is PART 28.</p>
+<p><strong>Checks.</strong> (i) $v\ll c$, the classical Doppler is adequate. (ii) Exoplanet signals are tens of m/s: they demand $10^6$-$10^7$, the modern echelle frontier.</p>
+</details>
+<h3 id="ol12-when-the-coulomb-picture-must-fail">OL12 — When the Coulomb picture must fail</h3>
+<p>Estimate the alpha energy at which gold's nucleus stops looking point-like (nuclear radius $\approx7$ fm), i.e. where Rutherford scattering deviates.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Set $r_{\min}=R$: $K=\frac{2kZe^2}{R}=\frac{227.5\ \text{eV nm}}{7\times10^{-6}\ \text{nm}}=3.2\times10^7$ eV $=32$ MeV. Natural alphas (5-8 MeV) probe only the pure-Coulomb regime — which is why Rutherford saw the clean law; accelerator alphas above a few tens of MeV see the nuclear force and deviate, the first hint of PART 26.</p>
+<p><strong>Checks.</strong> (i) $K\propto\frac1R$. (ii) The number sits between natural and accelerator energies, historically correct.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>The Bohr model breaks, and hands over, at: multi-electron atoms (screening and exchange — PART 25 uses the screened Moseley form; full treatment is quantum mechanics); line intensities and polarisations (quantum mechanics); fine and hyperfine structure at $10^{-4}$-$10^{-6}$ eV (relativistic quantum mechanics, named in §3.10); nuclear structure probed by muonic atoms and 30 MeV alphas (PART 26); and the interpretation of transitions themselves (beyond syllabus). Inside hydrogenics, to four decimals, it remains exact arithmetic — which is what an excellent model is.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each). Solutions follow each question in a collapsible block; the marking scheme is in Part 12.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>blocks 3, 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-single-correct">Section A · Single correct</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The closest approach of a $5$ MeV alpha to a gold nucleus is nearest:
+(a) $46$ fm (b) $46$ pm (c) $0.46$ fm (d) $4.6$ nm</p>
+<details>
+<summary>Solution</summary>
+<p>$r_{\min}=\frac{2\times79\times1.44}{5\times10^6}=4.6\times10^{-5}$ nm $=46$ fm. (a).</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>The observation that most alphas cross a gold foil undeflected while one in eight thousand back-scatters proves:
+(a) the nucleus is massive but diffuse (b) the atom is mostly empty with a concentrated charge (c) electrons block alphas (d) the foil is too thin to matter</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The energy of hydrogen's $n=2$ level is:
+(a) $-6.8$ eV (b) $-3.4$ eV (c) $-13.6$ eV (d) $-1.51$ eV</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>The $3\to2$ line of hydrogen is at:
+(a) $122$ nm (b) $656$ nm (c) $486$ nm (d) $1875$ nm</p>
+<details>
+<summary>Solution</summary>
+<p>(b), Balmer $\alpha$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>The number of distinct lines from $n=4$ is:
+(a) 3 (b) 4 (c) 6 (d) 10</p>
+<details>
+<summary>Solution</summary>
+<p>(c).</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The ionisation energy of He$^+$ is:
+(a) $13.6$ eV (b) $27.2$ eV (c) $54.4$ eV (d) $122.4$ eV</p>
+<details>
+<summary>Solution</summary>
+<p>(c), $13.6\times2^2$.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>The speed ratio $v_2/v_1$ in hydrogen is:
+(a) $2$ (b) $\frac12$ (c) $\frac14$ (d) $4$</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>The only hydrogen series with lines in the visible is:
+(a) Lyman (b) Balmer (c) Paschen (d) Pfund</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The $2\to1$ wavelength of He$^+$ is nearest:
+(a) $122$ nm (b) $61$ nm (c) $30$ nm (d) $13.5$ nm</p>
+<details>
+<summary>Solution</summary>
+<p>$\Delta E=13.6\times4\times\frac34=40.8$ eV; $\lambda=30.4$ nm. (c).</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>A $12.09$ eV photon meets ground-state hydrogen. It:
+(a) passes through (b) ionises (c) excites to $n=3$ (d) excites to $n=2$ with surplus</p>
+<details>
+<summary>Solution</summary>
+<p>(c): exact resonance.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>The classical lifetime of a radiating Bohr-radius atom is of order:
+(a) $10^{-3}$ s (b) $10^{-8}$ s (c) $10^{-11}$ s (d) $10^{-16}$ s</p>
+<details>
+<summary>Solution</summary>
+<p>(c), the Larmor spiral of §3.3.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>The longest Balmer wavelength is:
+(a) $364.6$ nm (b) $656.1$ nm (c) $486.1$ nm (d) $91.2$ nm</p>
+<details>
+<summary>Solution</summary>
+<p>(b).</p>
+</details>
+<h4 id="section-b-one-or-more-correct">Section B · One or more correct</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Rutherford scattering with a pure Coulomb nucleus:
+(a) most alphas pass nearly straight through (b) the back-scattered fraction scales with foil thickness (c) $r_{\min}$ measures the nuclear radius exactly (d) large angles require small impact parameters</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (d). (c) is trap 1.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>As $n$ increases in a Bohr orbit:
+(a) radius increases (b) speed decreases (c) magnitude of energy decreases (d) angular momentum decreases</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c); $L=n\hbar$ increases, so (d) false.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>Hydrogen in its ground state is struck by (i) a 11 eV photon, (ii) an 11 eV electron:
+(a) the photon is absorbed (b) the photon passes (c) the electron can excite $n=2$ (d) the electron can ionise</p>
+<details>
+<summary>Solution</summary>
+<p>(b) and (c). (a) false: no 11 eV gap; (d) false: $11&lt;13.6$.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>Across hydrogen-like ions, for the same transition:
+(a) energy scales as $Z^2$ (b) wavelength scales as $\frac{1}{Z^2}$ (c) radius of a given $n$ scales as $\frac1Z$ (d) Rydberg constant scales as $Z$</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c). $R$ is independent of $Z$.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>Reduced-mass effects:
+(a) $R_H&lt;R_\infty$ (b) deuterium lines lie at slightly shorter wavelengths than hydrogen's (c) positronium lines lie at double hydrogen's wavelengths (d) nuclear mass never matters</p>
+<p><details markdown=1><summary>Solution</summary></p>
+<p>(a), (b), (c).</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>The normal Zeeman effect of an orbital level:
+(a) splitting proportional to $B$ (b) $2l+1$ sublevels (c) splitting of order $10^{-4}$ eV per tesla (d) splitting independent of the magneton</p>
+<details>
+<summary>Solution</summary>
+<p>(a), (b), (c): $\mu_B\approx5.8\times10^{-5}$ eV/T.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>Hydrogen series facts:
+(a) Lyman lines are ultraviolet (b) the Balmer limit is 364.6 nm (c) Paschen lines are infrared (d) series limits converge to 0 eV</p>
+<details>
+<summary>Solution</summary>
+<p>All four.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>The correspondence principle:
+(a) at large $n$, transition frequency approaches orbital frequency (b) it fixes the value of $\hbar$ (c) the fractional mismatch falls like $\frac{1}{n}$ (d) it applies only to $n=1$</p>
+<details>
+<summary>Solution</summary>
+<p>(a) and (c).</p>
+</details>
+<h4 id="section-c-numerical">Section C · Numerical</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>Closest approach of a $7.7$ MeV alpha on gold, in fm.</p>
+<details>
+<summary>Solution</summary>
+<p>$\frac{2\times79\times1.44}{7.7\times10^6}=2.95\times10^{-5}$ nm $=29.5$ fm.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>The $5\to2$ wavelength of hydrogen, in nm.</p>
+<details>
+<summary>Solution</summary>
+<p>$\Delta E=2.86$ eV; $434$ nm.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>Ionisation energy of Li$^{2+}$, in eV.</p>
+<details>
+<summary>Solution</summary>
+<p>$122.4$ eV.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>Moseley's law for $Z=29$: the K$\alpha$ wavelength, in pm.</p>
+<details>
+<summary>Solution</summary>
+<p>$f=\frac34cR\times28^2=1.93\times10^{18}$ Hz; $\lambda=155$ pm.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>An orbit carries angular momentum $3.16\times10^{-34}$ J s. Its $n$?</p>
+<details>
+<summary>Solution</summary>
+<p>$n=\frac{L}{\hbar}=3$.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>The H-D fractional shift of H$\alpha$, in units of $10^{-4}$, to one decimal.</p>
+<details>
+<summary>Solution</summary>
+<p>$2.7$.</p>
+</details>
+<h4 id="section-d-comprehensive-long-form">Section D · Comprehensive long-form</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Using the impulse method of §3.2, show $\tan\frac{\theta}{2}=\frac{kZe^2}{mv^2b}$. (b) Evaluate $b$ for $90^\circ$ scattering of 5 MeV alphas on gold. (c) With $n=5.9\times10^{28}$ m$^{-3}$ and $t=1$ µm, estimate the fraction scattered beyond $90^\circ$. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $\Delta p=2mv\sin\frac{\theta}{2}$ geometrically; $\Delta p=\frac{4kZe^2}{vb}\cos\frac{\theta}{2}$ from the impulse with $dt=\frac{r^2}{vb}d\phi$; equating gives the result.
+(b) $b=\frac{r_h}{2}=22.8$ fm.
+(c) $f=\pi b^2nt\approx1\times10^{-4}$.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) From $2\pi r=n\lambda$ (with $\lambda=\frac{h}{p}$) and the Coulomb force balance, derive $r_n$ and $E_n$. (b) Numerical values for $n=1,2$. (c) The $3\to2$ wavelength. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $m_ev_nr_n=n\hbar$ plus $\frac{m_ev_n^2}{r_n}=\frac{ke^2}{r_n^2}$ give $r_n=\frac{n^2\hbar^2}{m_eke^2}$, $E_n=-\frac{ke^2}{2r_n}=-\frac{m_ek^2e^4}{2\hbar^2n^2}$.
+(b) $0.529$ and $2.12$ Å; $-13.6$ and $-3.40$ eV.
+(c) $1.89$ eV; $656$ nm.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) Derive the collapse time $\tau=\frac{ke^2r_0^3}{6C}$ with $C=\frac{e^2}{6\pi\varepsilon_0c^3}\left(\frac{ke^2}{m_e}\right)^2$. (b) Evaluate at $r_0=a_0$. (c) Explain why the dying classical atom would radiate a continuum. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $P=\frac{e^2a^2}{6\pi\varepsilon_0c^3}=\frac{C}{r^4}$; $\frac{dE}{dt}=-P$ with $E=-\frac{ke^2}{2r}$ gives $r^2\dot r=-\frac{2C}{ke^2}$; integrate.
+(b) $1.6\times10^{-11}$ s.
+(c) The orbital frequency sweeps continuously as $r$ shrinks.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) Expand $\Delta E_{n\to n-1}$ for large $n$ to first order in $\frac1n$. (b) Show the ratio to $hf_{\text{orb}}$ is $1+\frac{3}{2n}$. (c) Evaluate at $n=100$ and comment. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $\Delta E\approx\frac{2A}{n^3}(1+\frac{3}{2n})$, $A=13.6$ eV.
+(b) $f_{\text{orb}}=\frac{2A}{hn^3}$ from $v/2\pi r$.
+(c) Ratio $1.015$: quantum and classical agree to $1.5\%$ at $n=100$, exactly at infinity.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) Muonic hydrogen: ground radius and energy. (b) Why such atoms measure nuclear radii. (c) Positronium: ground energy and $2\to1$ wavelength. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $256$ fm; $-2.81$ keV.
+(b) The orbit lies within nuclear dimensions, so levels feel the charge distribution.
+(c) $-6.8$ eV; $243$ nm.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>Hydrogen is bombarded with $12.5$ eV electrons. (a) Which levels are excited? (b) List the emission lines with wavelengths. (c) Would a $12.5$ eV photon beam produce the same lines? (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $n=2$ and $n=3$ (gaps $10.2$, $12.09$ eV; $n=4$ needs $12.75$).
+(b) $121.6$ nm, $102.6$ nm, $656.1$ nm.
+(c) No: no exact resonance, the photon passes.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>Given measured lines $656.1$, $486.1$, $434.0$ nm: (a) extract $R$; (b) identify the series; (c) explain why the extracted value differs from $R_\infty$ by $0.05\%$. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $R=\frac{1}{656.1\,\text{nm}\times\frac{5}{36}}=1.097\times10^7$ m$^{-1}$; the other two predicted within $0.1$ nm.
+(b) Balmer: the visible band forces $n_f=2$.
+(c) Nuclear motion: $R_H=R_\infty\frac{\mu}{m_e}$.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) Zeeman splitting of an orbital level at $2$ T, in eV. (b) The wavelength separation of H$\alpha$. (c) Compare with the natural width $2.3\times10^{-5}$ nm and state resolvability. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $1.16\times10^{-4}$ eV.
+(b) $0.040$ nm.
+(c) Three orders above the width: cleanly resolvable.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>(a) Find the temperature at which $1\%$ of hydrogen is in $n=2$. (b) Explain why stellar Balmer strength peaks near $10^4$ K. (c) Estimate the ratio at the Sun's 5800 K. (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $4e^{-10.2/k_BT}=0.01\Rightarrow T\approx2\times10^4$ K.
+(b) Hotter ionises, cooler leaves the ladder unclimbed.
+(c) $4e^{-20.4}\approx5\times10^{-9}$.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Compute the H-D separation of H$\alpha$. (b) A spectrograph resolves $\frac{\lambda}{\Delta\lambda}=10^5$; is the doublet seen? (c) What radial velocity does that resolution correspond to at H$\alpha$? (3+3+3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $0.18$ nm.
+(b) Instrument limit $6.6\times10^{-3}$ nm, far below $0.18$: seen.
+(c) $v=c/10^5=3$ km/s.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>P1-P12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td>P13-P20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td>P21-P26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td>P27-P36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Block tested</th>
+<th>Question</th>
+<th>Block tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>3, 4</td>
+<td>P19</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>3</td>
+<td>P20</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>4</td>
+<td>P21</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>4</td>
+<td>P22</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>4</td>
+<td>P23</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>4</td>
+<td>P24</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>4</td>
+<td>P25</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>4</td>
+<td>P26</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>4</td>
+<td>P27</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>3, 4</td>
+<td>P28</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>3</td>
+<td>P29</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>4</td>
+<td>P30</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>3</td>
+<td>P31</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>4</td>
+<td>P32</td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>3</td>
+<td>P33</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P16</td>
+<td>4</td>
+<td>P34</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P17</td>
+<td>3</td>
+<td>P35</td>
+<td>3, 10</td>
+</tr>
+<tr>
+<td>P18</td>
+<td>3, 4</td>
+<td>P36</td>
+<td>3, 10</td>
+</tr>
+</tbody>
+</table>
+<p>Blocks 2 (via definitions used throughout), 3, 4 and 10 are each tested; the sign-convention and symbol discipline of block 2 is examined inside every numerical solution.</p>
+<table>
+<thead>
+<tr>
+<th>If you lost marks on</th>
+<th>Reread</th>
+<th>Because</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scattering questions</td>
+<td>§3.2-3.3</td>
+<td>the $b$-$\theta$ relation and the bound-interpretation of $r_{\min}$</td>
+</tr>
+<tr>
+<td>spectrum arithmetic</td>
+<td>§3.6, §7.1</td>
+<td>ladder first, eV arithmetic second</td>
+</tr>
+<tr>
+<td>excitation questions</td>
+<td>§3.7</td>
+<td>photon exactness versus electron part-payment</td>
+</tr>
+<tr>
+<td>exotic atoms</td>
+<td>§3.8, §7.5</td>
+<td>the reduced-mass substitution</td>
+</tr>
+<tr>
+<td>Zeeman and fine structure</td>
+<td>§3.10</td>
+<td>the magneton and its scale</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<div class="callout abstract">
+<p class="callout-title">Numbers to keep</p>
+<p>$a_0=0.529$ Å; $-13.6$ eV; $v_1=2.19\times10^6$ m/s $=\frac{c}{137}$; $R_\infty=1.0974\times10^7$ m$^{-1}$; $R_H=1.0968\times10^7$ m$^{-1}$; $ke^2=1.44$ eV nm; $\mu_B=5.79\times10^{-5}$ eV/T; Balmer $\alpha$ $656.1$ nm; Lyman $\alpha$ $121.6$ nm; limits $91.2/364.6/820.4$ nm; H-D shift $0.18$ nm; muonic H: $256$ fm, $-2.81$ keV; positronium: $1.06$ Å, $-6.8$ eV; 21 cm $=5.9\times10^{-6}$ eV.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$r_n=0.529\frac{n^2}{Z}$ Å</td>
+<td>hydrogenic, point nucleus</td>
+</tr>
+<tr>
+<td>$v_n=2.19\times10^6\frac{Z}{n}$ m/s</td>
+<td>same</td>
+</tr>
+<tr>
+<td>$E_n=-13.6\frac{Z^2}{n^2}\frac{\mu}{m_e}$ eV</td>
+<td>hydrogenic; $\mu$ for moving nucleus</td>
+</tr>
+<tr>
+<td>$K=-E$, $U=2E$</td>
+<td>Coulomb orbits</td>
+</tr>
+<tr>
+<td>$\frac{1}{\lambda}=RZ^2(\frac{1}{n_f^2}-\frac{1}{n_i^2})$</td>
+<td>hydrogenic</td>
+</tr>
+<tr>
+<td>$N_{\text{lines}}=\frac{n(n-1)}{2}$; series lines $n-n_f$</td>
+<td>cascade bookkeeping</td>
+</tr>
+<tr>
+<td>$r_{\min}=\frac{2kZe^2}{K}$ head-on</td>
+<td>Coulomb regime</td>
+</tr>
+<tr>
+<td>$\tan\frac{\theta}{2}=\frac{kZe^2}{mv^2b}$; $\frac{d\sigma}{d\Omega}\propto\frac{1}{\sin^4(\theta/2)}$</td>
+<td>Rutherford, no recoil</td>
+</tr>
+<tr>
+<td>$\tau=\frac{ke^2r_0^3}{6C}$ classical collapse</td>
+<td>Larmor, circular</td>
+</tr>
+<tr>
+<td>$f_{\text{orb}}=\frac{6.58\times10^{15}Z^2}{n^3}$ Hz</td>
+<td>Bohr orbits</td>
+</tr>
+<tr>
+<td>$\Delta E_{\text{Zee}}=m_l\mu_BB$</td>
+<td>orbital, weak field</td>
+</tr>
+<tr>
+<td>$\frac{N_m}{N_n}=\frac{g_m}{g_n}e^{-\Delta E/k_BT}$</td>
+<td>thermal populations</td>
+</tr>
+<tr>
+<td>$f_{K\alpha}=\frac34cR(Z-1)^2$</td>
+<td>screened K shell (PART 25 owns the derivation)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<h3 id="141-can-i-do-this">14.1 Can I do this?</h3>
+<p>One point per honest yes; 24 plus is exam-ready.</p>
+<ol>
+<li>Predict Thomson's scattering outcome before seeing data.</li>
+<li>Derive $r_{\min}$ and state exactly what it bounds.</li>
+<li>Derive the $b$-$\theta$ relation and the $\sin^{-4}$ law's consequence.</li>
+<li>Quote the classical collapse time and its derivation route.</li>
+<li>State Bohr's postulates and their standing-wave origin.</li>
+<li>Derive the $r_n$, $v_n$, $E_n$ trio from two equations.</li>
+<li>Explain the virial structure $K=-E$, $U=2E$.</li>
+<li>Derive $R$ and compare with $R_H$ via reduced mass.</li>
+<li>Name the five series and their bands.</li>
+<li>Count total and per-series lines from any $n$.</li>
+<li>Decide photon versus electron excitation in one line.</li>
+<li>Read a Franck-Hertz curve.</li>
+<li>Apply the Boltzmann factor to stellar Balmer strength.</li>
+<li>Scale to He$^+$, Li$^{2+}$ without re-deriving.</li>
+<li>Apply the reduced-mass substitution to H, D, muonic H, positronium.</li>
+<li>State Moseley's law as a corollary and its screening reason.</li>
+<li>Compute a Zeeman splitting in eV and nm.</li>
+<li>Introduce $n,l,m_l,m_s$ and $\Delta l=\pm1$ with their roles.</li>
+<li>Run the correspondence expansion to first order.</li>
+<li>Quote the 21 cm line's energy and its weakness.</li>
+<li>Defuse each trap of Part 8.</li>
+<li>Draw any level diagram blindfolded.</li>
+<li>Extract $R$ from a line list.</li>
+<li>Run the ten-point audit of §9.5.</li>
+</ol>
+<h3 id="142-what-the-next-chapter-assumes">14.2 What the next chapter assumes</h3>
+<p>PART 25 (X-rays) takes the Bohr arithmetic into the inner shells: Moseley's law derived with the shielding argument, the Duane-Hunt limit as the inverse photoelectric effect, and Bragg diffraction using the wave logic of PART 23. PART 26 (nuclear) inherits the $r_{\min}$ logic (where it fails), the reduced-mass habit and the eV bookkeeping. The 21 cm line and stellar Boltzmann factors feed the astrophysics margins of several later chapters.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.14 · Closest approach versus alpha energy</p>
+<p><em>Show:</em> r_min on a log vertical axis against K on a log horizontal axis, a straight falling line of slope minus one; the horizontal band of nuclear radii (a few fm) shaded; the intersection marked near 30 MeV for gold, captioned "where Rutherford must fail".
+<em>Search:</em> "distance of closest approach alpha energy nuclear radius limit"
+<em>Used in:</em> §3.3 and OL12.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.15 · The hydrogen-deuterium H-alpha doublet</p>
+<p><em>Show:</em> the 656 nm line drawn as two close peaks separated by 0.18 nm on an exaggerated axis; the taller labelled H, the shorter D; a grating resolution marker far smaller than the gap.
+<em>Search:</em> "hydrogen deuterium isotope shift H alpha doublet 0.18 nm"
+<em>Used in:</em> §3.8 and P36.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D24.16 · The Rydberg prediction against the measured series</p>
+<p><em>Show:</em> a two-column table drawn as a figure: measured Balmer wavelengths 656.1, 486.1, 434.0, 410.1 nm beside the Bohr-model predictions, differences under 0.1 nm bracketed; a caption "four-decimal agreement".
+<em>Search:</em> "Balmer series measured predicted Bohr model agreement table"
+<em>Used in:</em> §3.6 and OL7.</p>
+</div>
+
+<h3 id="143-open-questions-you-can-now-attack">14.3 Open questions you can now attack</h3>
+<p>Why do heavy atoms emit X-rays at keV scales while their outer electrons trade eV? Why did Rutherford's law eventually fail, and what did the failure reveal? How small a velocity can a spectrum measure? The first is PART 25, the second PART 26, the third PART 28.</p>
+    <footer class="pager"><a href="photoelectric-effect.html">← Photoelectric effect & matter waves</a><a href="x-rays.html">X-rays, Moseley & Bragg →</a></footer>
+    <p class="colophon">Rendered from <code>atomic-structure/Atomic-structure.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>atomic-structure/Atomic-structure.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

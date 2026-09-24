@@ -1,0 +1,1453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion in one dimension — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="active">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 3</span><span class="prop"><b>slug</b> kinematics-1d</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">kinematics</span><span class="prop tag">one-dimension</span></p>
+
+<h1 id="kinematics-in-one-dimension-first-principles-to-olympiad">Kinematics in One Dimension — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — position, velocity, acceleration, the constant-acceleration equations, free fall, and the graph trio. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (variable acceleration, the $v\,dv/dx$ method, the exponential/hyperbolic contrast, the pursuit problem, the reaction-time analysis), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: distinguish distance from displacement, average from instantaneous velocity, and speed from velocity; derive and apply the four constant-acceleration equations; read and construct $x$–$t$, $v$–$t$, $a$–$t$ graphs and extract physical information from each; solve free-fall problems (upward throw, downward drop, multi-stage); solve variable-acceleration problems by integration ($a=f(t)$, $a=f(v)$, $a=f(x)$); compute relative velocity in 1-D; and set up and solve piecewise kinematics problems.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Motion is one function $x(t)$; everything else in kinematics is its slope or its area.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>You need PART 1 (units, significant figures, error propagation) and PART 2 (vectors, components). If you can differentiate and integrate polynomials, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats kinematics as a "free marks" topic — the problems are conceptually simple but algebraically tricky. Expect 2–3 questions per year, often combined with graphs or relative motion. INPhO and IPhO reward the ability to handle variable acceleration and non-standard setups (the $v\,dv/dx$ method, the pursuit problem). The trap density is very high: confusing distance with displacement, misreading graphs, forgetting that acceleration can be negative, and applying constant-acceleration equations to variable-acceleration problems.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a dynamics chapter: we describe motion, not its causes (forces come in PART 5). Not a 2D chapter: projectile motion is in PART 4. Not a calculus chapter: the derivatives and integrals you need are stated and used, not proved from first principles. Not a numerical-methods chapter: we solve problems analytically; numerical integration of the equations of motion is a topic for computational physics and engineering courses.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Position and displacement</td>
+<td>$x(t)$, $\Delta x=x_f-x_i$</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Average velocity</td>
+<td>$\bar{v}=\Delta x/\Delta t$</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Instantaneous velocity</td>
+<td>$v=dx/dt$</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Average and instantaneous acceleration</td>
+<td>$\bar{a}=\Delta v/\Delta t$, $a=dv/dt$</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>The graph trio</td>
+<td>$x$–$t$, $v$–$t$, $a$–$t$</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Constant-acceleration equations</td>
+<td>Derived by integration</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Free fall</td>
+<td>$a=-g$ (upward positive)</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Variable acceleration</td>
+<td>$a=f(t)$, $a=f(v)$, $a=f(x)$</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Relative motion in 1-D</td>
+<td>$v_{AB}=v_{AC}-v_{BC}$</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Piecewise kinematics</td>
+<td>Different $a$ in different intervals</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>Position is a function of time.</strong> A particle on the $x$-axis has position $x(t)$ at time $t$. The function $x(t)$ contains all the information about the motion — velocity and acceleration are derived from it by differentiation.</p>
+<p><strong>Displacement is not distance.</strong> If you walk 3 m east and then 3 m west, your displacement is zero but your distance is 6 m. Displacement is the net change in position: $\Delta x=x_f-x_i$. Distance is the total path length: $d=\int|v|\,dt$.</p>
+<p><strong>Velocity is the slope of $x(t)$; acceleration is the slope of $v(t)$.</strong> $v=dx/dt$ tells you how fast the position is changing. $a=dv/dt$ tells you how fast the velocity is changing. Conversely, $v=\int a\,dt$ and $x=\int v\,dt$ — velocity is the area under the $a$–$t$ graph; position is the area under the $v$–$t$ graph.</p>
+<p><strong>Negative acceleration does not mean deceleration.</strong> If you define "positive" as rightward, then a leftward acceleration is negative. If the particle is moving leftward, a leftward acceleration is actually speeding it up (deceleration is when $a$ and $v$ have opposite signs).</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x(t)$</td>
+<td>position as a function of time</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\Delta x$</td>
+<td>displacement $=x_f-x_i$</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>distance (total path length)</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$v$</td>
+<td>velocity $=dx/dt$</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>$\bar{v}$</td>
+<td>average velocity $=\Delta x/\Delta t$</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>the magnitude of velocity, always nonneg</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>$a$</td>
+<td>acceleration $=dv/dt$</td>
+<td>m/s$^2$</td>
+</tr>
+<tr>
+<td>$g$</td>
+<td>gravitational acceleration $\approx9.8$ m/s$^2$</td>
+<td>m/s$^2$</td>
+</tr>
+<tr>
+<td>$t$</td>
+<td>time</td>
+<td>s</td>
+</tr>
+<tr>
+<td>$v_0$ or $u$</td>
+<td>initial velocity (at $t=0$)</td>
+<td>m/s</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>In 1-D, velocity and acceleration are signed scalars (positive = rightward/upward, negative = leftward/downward). Speed is the absolute value of velocity: $|v|$. In free-fall problems, define "upward" as positive unless stated otherwise.</p>
+</div>
+
+<p>Three numbers to carry: $g=9.8$ m/s$^2$; $1$ km/h $=5/18$ m/s $=0.2778$ m/s; $1$ mi/h $=0.4470$ m/s.</p>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-position-and-displacement">3.1 Position and displacement</h3>
+<p>The position $x(t)$ is a scalar function of time. For a particle on the $x$-axis, $x&gt;0$ means the particle is on the positive side; $x&lt;0$ means the negative side.</p>
+<p><strong>Displacement:</strong> $\Delta x=x(t_2)-x(t_1)$. This can be positive, negative, or zero, depending on the direction of motion.</p>
+<p><strong>Distance:</strong> $d=\int_{t_1}^{t_2}|v(t)|\,dt$. This is always non-negative.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.1 · Position vs displacement vs distance</p>
+<p><em>Show:</em> a number line ($x$-axis) with a particle starting at $x=2$, moving to $x=5$, then back to $x=3$. The displacement from start to finish is $+1$ (from 2 to 3). The total distance is $3+2=5$ (2→5 is 3, 5→3 is 2). Labels: "displacement = 1 m", "distance = 5 m".
+<em>Search:</em> "displacement vs distance one dimension number line diagram"</p>
+</div>
+
+<h3 id="32-average-velocity">3.2 Average velocity</h3>
+<p>$$
+\bar{v}=\frac{\Delta x}{\Delta t}=\frac{x(t_2)-x(t_1)}{t_2-t_1}. \qquad (3.1)
+$$</p>
+<p>Average velocity is the slope of the chord on the $x$–$t$ graph between two points. It can be positive, negative, or zero. For a round trip (returning to the starting point), $\bar{v}=0$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Average velocity uses displacement (a vector), not distance. Average speed uses distance: $\bar{s}=d/\Delta t$. These are different unless the motion is entirely in one direction.</p>
+</div>
+
+<h3 id="33-instantaneous-velocity">3.3 Instantaneous velocity</h3>
+<p>$$
+v(t)=\lim_{\Delta t\to0}\frac{\Delta x}{\Delta t}=\frac{dx}{dt}. \qquad (3.2)
+$$</p>
+<p>Instantaneous velocity is the slope of the tangent to the $x$–$t$ graph at time $t$. It is the limit of the average velocity as the time interval shrinks to zero.</p>
+<p><strong>Speed:</strong> $|v(t)|$ — the absolute value of velocity. Speed is always non-negative.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.2 · Instantaneous velocity as the tangent slope</p>
+<p><em>Show:</em> an $x$–$t$ graph with a curve; at time $t_0$, a tangent line drawn to the curve; the slope of the tangent labelled as $v(t_0)=dx/dt$; the chord between $t_0$ and $t_0+\Delta t$ shown for comparison, with its slope labelled as $\bar{v}$.
+<em>Search:</em> "instantaneous velocity tangent slope x-t graph diagram"</p>
+</div>
+
+<h3 id="34-average-and-instantaneous-acceleration">3.4 Average and instantaneous acceleration</h3>
+<p>$$
+\bar{a}=\frac{\Delta v}{\Delta t},\qquad a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}. \qquad (3.3)
+$$</p>
+<p>Acceleration is the rate of change of velocity. It can be positive (velocity increasing in the positive direction), negative (velocity decreasing in the positive direction or increasing in the negative direction), or zero.</p>
+<p><strong>Deceleration:</strong> when $a$ and $v$ have opposite signs (the speed is decreasing). Note: deceleration is not the same as "negative acceleration."</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.3 · Acceleration and the three graphs</p>
+<p><em>Show:</em> three stacked graphs sharing the same time axis. Top: $x$–$t$ (a parabola for constant positive $a$). Middle: $v$–$t$ (a straight line with positive slope). Bottom: $a$–$t$ (a horizontal line above the axis). Annotations: "slope of $x$–$t$ = $v$", "slope of $v$–$t$ = $a$", "area under $v$–$t$ = $\Delta x$".
+<em>Search:</em> "x-t v-t a-t graphs constant acceleration stacked diagram"</p>
+</div>
+
+<h3 id="35-the-graph-trio">3.5 The graph trio</h3>
+<p><strong>$x$–$t$ graph:</strong>
+- Slope at any point = velocity.
+- A horizontal line ($v=0$): the particle is at rest.
+- A straight line with positive slope: constant positive velocity.
+- A curve: changing velocity (the steeper the curve, the faster).
+- A concave-up curve: positive acceleration (the slope is increasing).
+- A concave-down curve: negative acceleration.</p>
+<p><strong>$v$–$t$ graph:</strong>
+- Slope at any point = acceleration.
+- Area under the curve = displacement ($\Delta x=\int v\,dt$).
+- A horizontal line ($a=0$): constant velocity.
+- A straight line with positive slope: constant positive acceleration.
+- Area above the $t$-axis = positive displacement; area below = negative displacement.</p>
+<p><strong>$a$–$t$ graph:</strong>
+- Area under the curve = change in velocity ($\Delta v=\int a\,dt$).
+- A horizontal line: constant acceleration.
+- The $a$–$t$ graph is the least informative of the three (it tells you about changes in velocity, not position).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.4 · Reading the $v$–$t$ graph for displacement</p>
+<p><em>Show:</em> a $v$–$t$ graph where $v$ starts positive, crosses zero, and becomes negative. The area above the $t$-axis (positive displacement) and below the $t$-axis (negative displacement) are shaded differently. The net displacement is the algebraic sum; the total distance is the sum of the absolute areas.
+<em>Search:</em> "v-t graph area displacement distance positive negative diagram"</p>
+</div>
+
+<h3 id="36-the-constant-acceleration-equations">3.6 The constant-acceleration equations</h3>
+<p>For constant $a$ (and only for constant $a$), integration gives:</p>
+<p>$$
+v=u+at. \qquad (3.4)
+$$</p>
+<p>$$
+s=ut+\frac{1}{2}at^2. \qquad (3.5)
+$$</p>
+<p>$$
+v^2=u^2+2as. \qquad (3.6)
+$$</p>
+<p>$$
+s=\frac{(u+v)}{2}t. \qquad (3.7)
+$$</p>
+<p>$$
+s_n=u+\frac{a}{2}(2n-1). \qquad (3.8)
+$$</p>
+<p>Eq. (3.8) gives the distance travelled in the $n$th second. $u$ is the initial velocity ($v$ at $t=0$), $v$ is the final velocity, $s$ is displacement, $t$ is time.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Eq. (3.4) comes from $v=\int a\,dt=at+C$ with $C=u$. Eq. (3.5) comes from $s=\int v\,dt=\int(u+at)\,dt=ut+\frac{1}{2}at^2+C'$ with $C'=0$. Eq. (3.6) comes from eliminating $t$: $t=(v-u)/a$, substitute into (3.5). Eq. (3.7) comes from eliminating $a$: $a=(v-u)/t$, substitute into (3.5). Eq. (3.8) comes from $s_n=s(n)-s(n-1)$.</p>
+</div>
+
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>These equations apply ONLY for constant acceleration. If $a$ varies, you must integrate $a(t)$ directly. Applying these equations to variable-$a$ problems is the most common error in kinematics.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.5 · Deriving the equations from the $v$–$t$ graph</p>
+<p><em>Show:</em> a $v$–$t$ graph with a straight line from $(0,u)$ to $(t,v)$ with slope $a$. The area under the line (a trapezoid) is labelled $s=\frac{(u+v)}{2}t$. The height of the line at $t$ is $v=u+at$. The area of the triangle on top of the rectangle is $\frac{1}{2}at^2$.
+<em>Search:</em> "constant acceleration v-t graph area trapezoid derivation diagram"</p>
+</div>
+
+<h3 id="37-free-fall">3.7 Free fall</h3>
+<p>Near Earth's surface, all objects (neglecting air resistance) have the same downward acceleration: $g\approx9.8$ m/s$^2$.</p>
+<p><strong>Upward positive convention:</strong> $a=-g=-9.8$ m/s$^2$ (gravity points downward).</p>
+<p><strong>Key results (upward throw from height $h_0$ with speed $v_0$):</strong></p>
+<ul>
+<li>Time to reach maximum height: $t_{\max}=v_0/g$.</li>
+<li>Maximum height above launch: $h_{\max}=v_0^2/(2g)$.</li>
+<li>Time of flight (back to launch level): $T=2v_0/g$.</li>
+<li>Speed on return to launch level: $v=v_0$ (same speed, opposite direction — by symmetry).</li>
+</ul>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.6 · Free-fall: the $v$–$t$ graph for an upward throw</p>
+<p><em>Show:</em> a $v$–$t$ graph for a ball thrown upward with speed $v_0$. The line starts at $v_0$ (positive), crosses zero at $t=v_0/g$ (the peak), and reaches $-v_0$ at $t=2v_0/g$ (return). The slope is $-g$ throughout. The area above the axis (upward trip) equals the area below (downward trip) — equal times.
+<em>Search:</em> "free fall v-t graph upward throw velocity time diagram"</p>
+</div>
+
+<h3 id="38-variable-acceleration">3.8 Variable acceleration</h3>
+<p>When $a$ is not constant, the constant-acceleration equations do not apply. You must integrate:</p>
+<p><strong>Case 1: $a=f(t)$.</strong> $v(t)=\int a(t)\,dt+C_1$, $x(t)=\int v(t)\,dt+C_2$.</p>
+<p><strong>Case 2: $a=f(v)$.</strong> $a=\frac{dv}{dt}\Rightarrow dt=\frac{dv}{a(v)}\Rightarrow t=\int\frac{dv}{a(v)}$. Or use $a=v\frac{dv}{dx}\Rightarrow dx=\frac{v\,dv}{a(v)}\Rightarrow x=\int\frac{v\,dv}{a(v)}$.</p>
+<p><strong>Case 3: $a=f(x)$.</strong> Use $a=v\frac{dv}{dx}\Rightarrow v\,dv=f(x)\,dx\Rightarrow\frac{v^2}{2}=\int f(x)\,dx+C$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The $v\,dv/dx$ method (Case 3) is the most powerful: it converts a second-order ODE in $t$ into a first-order ODE in $x$. It is the key to many Olympiad problems.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.7 · The $v\,dv/dx$ method</p>
+<p><em>Show:</em> the chain rule $a=dv/dt=(dv/dx)(dx/dt)=v\,dv/dx$ written step-by-step; then the integral $\int v\,dv=\int a(x)\,dx$ shown; the result $v^2/2=\int a(x)\,dx+C$ boxed.
+<em>Search:</em> "v dv/dx method variable acceleration chain rule diagram"</p>
+</div>
+
+<h3 id="39-relative-motion-in-1-d">3.9 Relative motion in 1-D</h3>
+<p>If particle $A$ has velocity $v_A$ and particle $B$ has velocity $v_B$ (both measured in the same frame), then the velocity of $A$ relative to $B$ is:</p>
+<p>$$
+v_{AB}=v_A-v_B. \qquad (3.9)
+$$</p>
+<p><strong>Interpretation:</strong> $v_{AB}&gt;0$ means $A$ is moving away from $B$ in the positive direction. $v_{AB}=0$ means they move together. $v_{AB}&lt;0$ means $A$ is moving toward $B$ (in the positive direction, $B$ catches up).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.8 · Relative velocity in 1-D</p>
+<p><em>Show:</em> two particles $A$ and $B$ on a number line, $A$ at $x_A$ and $B$ at $x_B$ with $x_A&gt;x_B$. $v_A=5$ m/s (rightward), $v_B=3$ m/s (rightward). $v_{AB}=5-3=2$ m/s — $A$ is pulling away from $B$ at 2 m/s. The separation $x_A-x_B$ is increasing.
+<em>Search:</em> "relative velocity one dimension two particles diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.10 · The $n$th-second distance</p>
+<p><em>Show:</em> a $v$–$t$ graph for constant acceleration from rest (a straight line through the origin). The area under the curve between $t=n-1$ and $t=n$ shaded (a trapezoid); this area is the distance in the $n$th second. The formula $s_n=u+\frac{a}{2}(2n-1)$ annotated.
+<em>Search:</em> "nth second distance v-t graph constant acceleration shaded area"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.11 · Relative velocity: two particles approaching</p>
+<p><em>Show:</em> two particles $A$ and $B$ on a number line, $A$ at $x_A$ moving right at $v_A$, $B$ at $x_B$ moving left at $v_B$. The closing velocity $v_{AB}=v_A+v_B$ annotated. The separation $x_A-x_B$ decreasing at rate $v_A+v_B$.
+<em>Search:</em> "relative velocity two particles approaching closing speed diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.12 · Variable acceleration: $v$ vs $x$ for $a=-kx$</p>
+<p><em>Show:</em> a $v$–$x$ phase-space plot for $v^2=v_0^2-kx^2$ (an ellipse). The particle oscillates between $x=-v_0/\sqrt{k}$ and $x=+v_0/\sqrt{k}$. The maximum speed $v_0$ at $x=0$ annotated. The area inside the ellipse related to the total distance (not displacement) per cycle.
+<em>Search:</em> "v versus x phase space plot simple harmonic motion ellipse"</p>
+</div>
+
+<h3 id="310-piecewise-kinematics">3.10 Piecewise kinematics</h3>
+<p>Many real problems have different accelerations in different time intervals (e.g., a car accelerating, then moving at constant speed, then braking). The method:</p>
+<ol>
+<li>Identify the intervals and the acceleration in each.</li>
+<li>Solve each interval separately, using the final state of one as the initial state of the next.</li>
+<li>Keep track of signs (the acceleration may change sign).</li>
+</ol>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D3.9 · Piecewise kinematics on a $v$–$t$ graph</p>
+<p><em>Show:</em> a $v$–$t$ graph with three segments: (1) a straight line with positive slope (acceleration phase); (2) a horizontal line (constant velocity); (3) a straight line with negative slope (braking phase). Each segment labelled with its duration and acceleration. The total displacement is the total area under the graph.
+<em>Search:</em> "piecewise kinematics v-t graph acceleration constant velocity braking diagram"</p>
+</div>
+
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{v=u+at,\quad s=ut+\frac{1}{2}at^2,\quad v^2=u^2+2as,\quad s=\frac{(u+v)}{2}t} \qquad (4.1)
+$$</p>
+<p>valid ONLY for constant acceleration.</p>
+<p>$$
+\boxed{a=v\frac{dv}{dx}} \qquad (4.2)
+$$</p>
+<p>the chain-rule identity; valid for any motion; converts $a(x)$ problems into integrable form.</p>
+<p>$$
+\boxed{v_{AB}=v_A-v_B} \qquad (4.3)
+$$</p>
+<p>Galilean velocity subtraction; valid for non-relativistic speeds.</p>
+<p>$$
+\boxed{h_{\max}=\frac{v_0^2}{2g},\quad T=\frac{2v_0}{g}} \qquad (4.4)
+$$</p>
+<p>free-fall results for an upward throw from ground level; valid when air resistance is negligible.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$a=0$: all four equations reduce to $v=u$ (constant velocity), $s=ut$ — correct.</li>
+<li>$u=0$: $s=\frac{1}{2}at^2$, $v=at$, $v^2=2as$ — correct (starting from rest).</li>
+<li>$a\to\infty$: the object instantaneously changes velocity — unphysical but consistent with the equations.</li>
+<li>$g\to0$: $h_{\max}\to\infty$, $T\to\infty$ — the object never falls back — correct (no gravity).</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constant $a$, $u$, $t$</td>
+<td>$v$</td>
+<td>Eq. (3.4)</td>
+</tr>
+<tr>
+<td>constant $a$, $u$, $t$</td>
+<td>$s$</td>
+<td>Eq. (3.5)</td>
+</tr>
+<tr>
+<td>constant $a$, $u$, $v$</td>
+<td>$s$ (no $t$)</td>
+<td>Eq. (3.6)</td>
+</tr>
+<tr>
+<td>constant $a$, $u$, $v$</td>
+<td>$t$ (no $a$)</td>
+<td>Eq. (3.7)</td>
+</tr>
+<tr>
+<td>variable $a(x)$</td>
+<td>$v(x)$</td>
+<td>$v\,dv/dx$ method</td>
+</tr>
+<tr>
+<td>variable $a(v)$</td>
+<td>$t(v)$</td>
+<td>$dv/a(v)=dt$</td>
+</tr>
+<tr>
+<td>two particles</td>
+<td>relative velocity</td>
+<td>Eq. (4.3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Can displacement be negative? Can distance be negative?</p>
+<details>
+<summary>Answer</summary>
+<p>Displacement can be negative (the particle moved in the negative direction). Distance cannot be negative — it is the total path length.</p>
+</details>
+<p><strong>C2 — concept check.</strong> A car is moving east at 60 km/h. Is its acceleration necessarily positive?</p>
+<details>
+<summary>Answer</summary>
+<p>No. The car could be slowing down (negative acceleration if "east" is positive). Velocity and acceleration are independent.</p>
+</details>
+<p><strong>C3 — concept check.</strong> At the highest point of a throw, is the acceleration zero?</p>
+<details>
+<summary>Answer</summary>
+<p>No. The velocity is zero, but the acceleration is $-g$ (still pointing downward). The object immediately begins to fall.</p>
+</details>
+<p><strong>C4 — concept check.</strong> The slope of the $x$–$t$ graph is negative. What does this mean?</p>
+<details>
+<summary>Answer</summary>
+<p>The velocity is negative — the particle is moving in the negative direction. It does not necessarily mean the particle is slowing down.</p>
+</details>
+<p><strong>C5 — concept check.</strong> The area under the $a$–$t$ graph is positive. What does this mean?</p>
+<details>
+<summary>Answer</summary>
+<p>The change in velocity ($\Delta v$) is positive — the velocity has increased (in the positive direction).</p>
+</details>
+<p><strong>C6 — concept check.</strong> Can the average velocity be zero while the average speed is positive?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes — for a round trip. $\bar{v}=\Delta x/\Delta t=0$ (displacement is zero), but $\bar{s}=d/\Delta t&gt;0$ (distance is positive).</p>
+</details>
+<p><strong>C7 — concept check.</strong> A particle moves with $v=t^2-4t+3$ m/s. At what time is the velocity zero?</p>
+<details>
+<summary>Answer</summary>
+<p>$t^2-4t+3=(t-1)(t-3)=0$. $t=1$ s and $t=3$ s. The particle reverses direction at these times.</p>
+</details>
+<p><strong>C8 — concept check.</strong> In the $v\,dv/dx$ method, why is $a=v\,dv/dx$ valid even when $a$ is not constant?</p>
+<details>
+<summary>Answer</summary>
+<p>It is a mathematical identity from the chain rule: $a=dv/dt=(dv/dx)(dx/dt)=v\,dv/dx$. It holds for any differentiable $v(t)$, regardless of whether $a$ is constant.</p>
+</details>
+<p><strong>C9 — concept check.</strong> Two trains approach each other at 60 km/h each. What is their relative velocity?</p>
+<details>
+<summary>Answer</summary>
+<p>$v_{AB}=60-(-60)=120$ km/h (if $A$ is the positive direction). The closing speed is 120 km/h.</p>
+</details>
+<p><strong>C10 — concept check.</strong> A ball is dropped from height $h$. How long does it take to reach the ground?</p>
+<details>
+<summary>Answer</summary>
+<p>$h=\frac{1}{2}gt^2\Rightarrow t=\sqrt{2h/g}$.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Why do the constant-acceleration equations fail for a falling ball in air?</p>
+<details>
+<summary>Answer</summary>
+<p>Air resistance depends on speed, making the acceleration speed-dependent (not constant). The equations assume constant $a$.</p>
+</details>
+<p><strong>C12 — concept check.</strong> If the $v$–$t$ graph is a curve (not a straight line), what does this tell you about the acceleration?</p>
+<details>
+<summary>Answer</summary>
+<p>The acceleration is not constant — it is the slope of the tangent to the curve, which varies with time.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-constant-acceleration-from-rest">E1 — Constant acceleration from rest</h3>
+<p>A car starts from rest and accelerates at 2 m/s$^2$ for 10 s. Find the final velocity and the distance travelled.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v=20$ m/s $=72$ km/h — a reasonable speed for 10 s of acceleration. $s=100$ m — reasonable for a car.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v=u+at=0+2\times10=20$ m/s. $s=ut+\frac{1}{2}at^2=0+\frac{1}{2}\times2\times100=100$ m.</p>
+</details>
+<h3 id="e2-stopping-distance">E2 — Stopping distance</h3>
+<p>A car moving at 72 km/h applies brakes and stops in 5 s. Find the deceleration and the distance travelled during braking.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$a=-4$ m/s$^2$ (negative, so deceleration). $s=50$ m — a typical stopping distance at highway speed.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $u=72\times5/18=20$ m/s. $v=0$. $a=(v-u)/t=(0-20)/5=-4$ m/s$^2$. $s=\frac{(u+v)}{2}t=\frac{20}{2}\times5=50$ m.</p>
+</details>
+<h3 id="e3-free-fall-maximum-height-and-time-of-flight">E3 — Free fall: maximum height and time of flight</h3>
+<p>A ball is thrown upward at 20 m/s. Find the maximum height, the time to reach it, and the total time of flight (return to launch level). ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$t=2$ s, $h=20$ m, $T=4$ s — consistent with $h=v_0^2/(2g)$ and $T=2v_0/g$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $t_{\max}=v_0/g=20/10=2$ s. $h_{\max}=v_0^2/(2g)=400/20=20$ m. $T=2v_0/g=4$ s.</p>
+</details>
+<h3 id="e4-reading-a-vt-graph">E4 — Reading a $v$–$t$ graph</h3>
+<p>A $v$–$t$ graph shows: $v=0$ at $t=0$; $v=10$ m/s at $t=5$ s; $v=10$ m/s at $t=10$ s; $v=0$ at $t=15$ s. Find the displacement and the total distance.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Displacement $=100$ m; distance $=100$ m (no negative-velocity region).</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Area under the $v$–$t$ graph: (1) triangle from $t=0$ to $t=5$: $\frac{1}{2}\times5\times10=25$ m. (2) rectangle from $t=5$ to $t=10$: $5\times10=50$ m. (3) triangle from $t=10$ to $t=15$: $\frac{1}{2}\times5\times10=25$ m. Total displacement $=25+50+25=100$ m. Total distance $=100$ m (all areas are above the axis).</p>
+</details>
+<h3 id="e5-the-vdvdx-method">E5 — The $v\,dv/dx$ method</h3>
+<p>A particle has acceleration $a=-kx$ (proportional to displacement, directed toward the origin). Find $v(x)$ if $v=v_0$ at $x=0$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At $x=0$: $v=v_0$ ✓. At large $x$: $v^2=v_0^2-kx^2$ — the particle stops at $x=v_0/\sqrt{k}$. This is simple harmonic motion (PART 8).</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v\,dv/dx=-kx$. $\int v\,dv=-k\int x\,dx$. $v^2/2=-kx^2/2+C$. At $x=0$: $C=v_0^2/2$. $v^2=v_0^2-kx^2$.</p>
+</details>
+<h3 id="e6-relative-velocity-two-cars">E6 — Relative velocity: two cars</h3>
+<p>Car $A$ is 100 m ahead of car $B$. $A$ moves at 10 m/s, $B$ at 15 m/s. When does $B$ catch $A$?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Relative speed $=5$ m/s; time $=100/5=20$ s. In 20 s, $A$ travels 200 m, $B$ travels 300 m — both at $300$ m from $B$'s start. ✓</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v_{BA}=v_B-v_A=15-10=5$ m/s. Time to close 100 m: $t=100/5=20$ s.</p>
+</details>
+<h3 id="e7-variable-acceleration-abt">E7 — Variable acceleration: $a=bt$</h3>
+<p>A particle starts from rest with $a=bt$ (where $b$ is a constant). Find $v(t)$ and $x(t)$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At $t=0$: $v=0$, $x=0$ ✓. Dimensions: $[b]=[a/t]=[LT^{-3}]$, $[v]=bt^2/2=[LT^{-3}][T^2]=[LT^{-1}]$ ✓.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v=\int a\,dt=\int bt\,dt=bt^2/2+C_1$. $v(0)=0\Rightarrow C_1=0$. $v=bt^2/2$. $x=\int v\,dt=bt^3/6+C_2$. $x(0)=0\Rightarrow C_2=0$. $x=bt^3/6$.</p>
+</details>
+<h3 id="e8-free-fall-from-a-tower">E8 — Free fall from a tower</h3>
+<p>A ball is dropped from a 80 m tower. Find the time to reach the ground and the speed on impact. ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$t=4$ s, $v=40$ m/s. Check: $h=\frac{1}{2}gt^2=\frac{1}{2}\times10\times16=80$ m ✓.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $h=\frac{1}{2}gt^2\Rightarrow t=\sqrt{2h/g}=\sqrt{160/10}=4$ s. $v=gt=10\times4=40$ m/s.</p>
+</details>
+<h3 id="e9-piecewise-acceleration-then-braking">E9 — Piecewise: acceleration then braking</h3>
+<p>A car accelerates from rest at 3 m/s$^2$ for 10 s, then brakes at $-2$ m/s$^2$ until it stops. Find the total distance.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Phase 1: $s_1=150$ m, $v_1=30$ m/s. Phase 2: $s_2=225$ m. Total $=375$ m.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Phase 1: $v_1=3\times10=30$ m/s. $s_1=\frac{1}{2}\times3\times100=150$ m. Phase 2: $0=30-2t_2\Rightarrow t_2=15$ s. $s_2=30\times15+\frac{1}{2}(-2)\times225=450-225=225$ m. Total $=375$ m.</p>
+</details>
+<h3 id="e10-the-nth-second-distance">E10 — The nth-second distance</h3>
+<p>A particle starts from rest with $a=4$ m/s$^2$. Find the distance travelled in the 3rd second.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$s_3=10$ m. Check: $s(3)=\frac{1}{2}\times4\times9=18$ m, $s(2)=\frac{1}{2}\times4\times4=8$ m, $s_3=18-8=10$ m ✓.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $s_n=u+\frac{a}{2}(2n-1)=0+\frac{4}{2}(2\times3-1)=2\times5=10$ m.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Constant acceleration from rest</td>
+<td>$v=at$, $s=\frac{1}{2}at^2$</td>
+<td>E1</td>
+<td>with initial velocity</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Stopping distance</td>
+<td>$v^2=u^2-2as$</td>
+<td>E2</td>
+<td>reaction time included</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Free fall (upward throw)</td>
+<td>$h=v_0^2/(2g)$, $T=2v_0/g$</td>
+<td>E3</td>
+<td>from a height, multi-stage</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Reading graphs</td>
+<td>Slope and area</td>
+<td>E4</td>
+<td>curved graphs</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>$v\,dv/dx$ method</td>
+<td>$v\,dv=a(x)\,dx$</td>
+<td>E5</td>
+<td>with constraints</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Relative velocity</td>
+<td>$v_{AB}=v_A-v_B$</td>
+<td>E6</td>
+<td>two trains, meeting problems</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Variable $a(t)$</td>
+<td>Integrate $a$ to get $v$, $v$ to get $x$</td>
+<td>E7</td>
+<td>polynomial, exponential</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Free fall from a height</td>
+<td>$h=\frac{1}{2}gt^2$</td>
+<td>E8</td>
+<td>with initial velocity</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Piecewise kinematics</td>
+<td>Solve each interval</td>
+<td>E9</td>
+<td>three or more phases</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>nth-second distance</td>
+<td>$s_n=u+a(2n-1)/2$</td>
+<td>E10</td>
+<td>verification by subtraction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-a-car-accelerates-from-20-ms-to-30-ms-in-5-s-find-the-acceleration-and-distance">Q1. A car accelerates from 20 m/s to 30 m/s in 5 s. Find the acceleration and distance.</h4>
+<details>
+<summary>Solution</summary>
+<p>$a=(30-20)/5=2$ m/s$^2$. $s=\frac{(20+30)}{2}\times5=125$ m.</p>
+</details>
+<h4 id="q2-a-ball-is-thrown-upward-at-30-ms-find-the-time-to-reach-40-m-height-g10-ms2">Q2. A ball is thrown upward at 30 m/s. Find the time to reach 40 m height. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$40=30t-5t^2\Rightarrow t^2-6t+8=0\Rightarrow(t-2)(t-4)=0$. $t=2$ s (going up) and $t=4$ s (coming down). Two solutions.</p>
+</details>
+<h4 id="q3-a-particle-has-v3t2-6t-ms-find-the-time-when-it-changes-direction">Q3. A particle has $v=3t^2-6t$ m/s. Find the time when it changes direction.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=0\Rightarrow3t(t-2)=0$. $t=0$ (initial) and $t=2$ s (reversal). Check: $v(1)=-3$ m/s (negative), $v(3)=9$ m/s (positive). ✓</p>
+</details>
+<h4 id="q4-from-the-vt-graph-v2t-for-0leq-tleq5-v10-for-5leq-tleq10-find-the-displacement">Q4. From the $v$–$t$ graph: $v=2t$ for $0\leq t\leq5$, $v=10$ for $5\leq t\leq10$. Find the displacement.</h4>
+<details>
+<summary>Solution</summary>
+<p>Area $=\frac{1}{2}\times5\times10+5\times10=25+50=75$ m.</p>
+</details>
+<h4 id="q5-a-particle-has-a-2v-drag-find-vt-if-vv_0-at-t0">Q5. A particle has $a=-2v$ (drag). Find $v(t)$ if $v=v_0$ at $t=0$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$dv/dt=-2v\Rightarrow dv/v=-2\,dt\Rightarrow\ln v=-2t+C$. $v=v_0 e^{-2t}$. Exponential decay.</p>
+</details>
+<h4 id="q6-two-cars-start-from-the-same-point-a-at-10-ms-east-b-at-10-ms-north-what-is-the-rate-of-separation">Q6. Two cars start from the same point: $A$ at 10 m/s east, $B$ at 10 m/s north. What is the rate of separation?</h4>
+<details>
+<summary>Solution</summary>
+<p>This is a 2D problem — see PART 4. But in 1D, if they are on the same line: $v_{AB}=10-(-10)=20$ m/s (opposite directions on the same line). The rate of separation is 20 m/s.</p>
+</details>
+<h4 id="q7-a-stone-is-dropped-from-a-bridge-it-hits-the-water-in-3-s-find-the-height-of-the-bridge-g10-ms2">Q7. A stone is dropped from a bridge. It hits the water in 3 s. Find the height of the bridge. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$h=\frac{1}{2}gt^2=\frac{1}{2}\times10\times9=45$ m.</p>
+</details>
+<h4 id="q8-a-particle-has-a6t-ms2-v02-ms-x00-find-v2-and-x2">Q8. A particle has $a=6t$ m/s$^2$, $v(0)=2$ m/s, $x(0)=0$. Find $v(2)$ and $x(2)$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=\int6t\,dt=3t^2+2$. $v(2)=14$ m/s. $x=\int(3t^2+2)\,dt=t^3+2t$. $x(2)=8+4=12$ m.</p>
+</details>
+<h4 id="q9-a-train-100-m-long-passes-a-pole-in-5-s-find-its-speed">Q9. A train 100 m long passes a pole in 5 s. Find its speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>Speed $=100/5=20$ m/s $=72$ km/h.</p>
+</details>
+<h4 id="q10-a-particle-moves-with-a-kx-k0-show-that-the-motion-is-bounded">Q10. A particle moves with $a=-kx$ ($k&gt;0$). Show that the motion is bounded.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v^2=v_0^2-kx^2\geq0\Rightarrow x^2\leq v_0^2/k\Rightarrow|x|\leq v_0/\sqrt{k}$. The particle oscillates between $-v_0/\sqrt{k}$ and $v_0/\sqrt{k}$ — bounded.</p>
+</details>
+<h4 id="q11-a-car-starts-from-rest-and-reaches-100-kmh-in-10-s-find-the-distance-assume-constant-acceleration">Q11. A car starts from rest and reaches 100 km/h in 10 s. Find the distance. (Assume constant acceleration.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$u=0$, $v=100\times5/18=27.78$ m/s, $t=10$ s. $s=\frac{(0+27.78)}{2}\times10=138.9$ m.</p>
+</details>
+<h4 id="q12-two-trains-approach-each-other-at-80-kmh-and-60-kmh-they-are-2-km-apart-when-do-they-meet">Q12. Two trains approach each other at 80 km/h and 60 km/h. They are 2 km apart. When do they meet?</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_{\text{closing}}=80+60=140$ km/h $=140\times5/18=38.89$ m/s. $t=2000/38.89=51.4$ s $\approx0.857$ min.</p>
+</details>
+<h4 id="q13-a-ball-is-thrown-upward-at-20-ms-from-a-30-m-building-find-the-time-to-hit-the-ground-g10-ms2">Q13. A ball is thrown upward at 20 m/s from a 30 m building. Find the time to hit the ground. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$-30=20t-5t^2\Rightarrow5t^2-20t-30=0\Rightarrow t^2-4t-6=0$. $t=(4+\sqrt{16+24})/2=(4+\sqrt{40})/2=(4+6.32)/2=5.16$ s (only the positive root).</p>
+</details>
+<h4 id="q14-a-particle-has-vx-ms-find-xt-if-x01-m">Q14. A particle has $v=x$ m/s. Find $x(t)$ if $x(0)=1$ m.</h4>
+<details>
+<summary>Solution</summary>
+<p>$dx/dt=x\Rightarrow dx/x=dt\Rightarrow\ln x=t+C$. $x(0)=1\Rightarrow C=0$. $x=e^t$ m. Exponential growth.</p>
+</details>
+<h4 id="q15-a-car-brakes-from-60-kmh-to-a-stop-in-40-m-find-the-deceleration">Q15. A car brakes from 60 km/h to a stop in 40 m. Find the deceleration.</h4>
+<details>
+<summary>Solution</summary>
+<p>$u=60\times5/18=16.67$ m/s, $v=0$, $s=40$ m. $0=u^2+2as\Rightarrow a=-u^2/(2s)=-16.67^2/80=-3.47$ m/s$^2$.</p>
+</details>
+<h4 id="q16-a-particle-has-a2-6t-ms2-v05-ms-find-the-time-when-v0">Q16. A particle has $a=2-6t$ m/s$^2$, $v(0)=5$ m/s. Find the time when $v=0$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=\int(2-6t)\,dt=2t-3t^2+5$. $v=0\Rightarrow3t^2-2t-5=0\Rightarrow(3t-5)(t+1)=0$. $t=5/3$ s (positive root).</p>
+</details>
+<h4 id="q17-a-stone-is-thrown-downward-at-10-ms-from-45-m-find-the-time-and-speed-on-impact-g10-ms2">Q17. A stone is thrown downward at 10 m/s from 45 m. Find the time and speed on impact. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$45=10t+5t^2\Rightarrow t^2+2t-9=0\Rightarrow t=(-2+\sqrt{4+36})/2=(-2+\sqrt{40})/2=1.16$ s. $v=10+10\times1.16=21.6$ m/s.</p>
+</details>
+<h4 id="q18-the-velocity-of-a-particle-is-v10-2t-ms-for-0leq-tleq5-and-v0-for-t5-find-the-distance-until-it-stops">Q18. The velocity of a particle is $v=10-2t$ m/s for $0\leq t\leq5$ and $v=0$ for $t&gt;5$. Find the distance until it stops.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=0$ at $t=5$ s. $s=\int_0^5(10-2t)\,dt=[10t-t^2]_0^5=50-25=25$ m.</p>
+</details>
+<h4 id="q19-a-ball-is-dropped-from-125-m-after-3-s-another-ball-is-thrown-downward-what-initial-speed-is-needed-for-the-second-ball-to-catch-the-first-at-ground-level-g10-ms2">Q19. A ball is dropped from 125 m. After 3 s, another ball is thrown downward. What initial speed is needed for the second ball to catch the first at ground level? ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>First ball: $t=\sqrt{2\times125/10}=5$ s to reach ground. Second ball is thrown at $t=3$ s, so it has $5-3=2$ s. $125=u\times2+\frac{1}{2}\times10\times4=2u+20$. $u=52.5$ m/s.</p>
+</details>
+<h4 id="q20-a-particle-has-av2-self-acceleration-find-vt">Q20. A particle has $a=v^2$ (self-acceleration). Find $v(t)$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$dv/dt=v^2\Rightarrow dv/v^2=dt\Rightarrow-1/v=t+C$. At $t=0$: $-1/v_0=C$. $-1/v=t-1/v_0\Rightarrow v=\frac{v_0}{1-v_0t}$. The velocity diverges at $t=1/v_0$ — a finite-time blowup.</p>
+</details>
+<h4 id="q21-a-train-accelerates-at-a_1-for-time-t_1-then-at-constant-speed-then-decelerates-at-a_2-for-time-t_2-the-total-distance-is-d-find-the-time-at-constant-speed">Q21. A train accelerates at $a_1$ for time $t_1$, then at constant speed, then decelerates at $a_2$ for time $t_2$. The total distance is $d$. Find the time at constant speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_{\max}=a_1t_1$ (assuming starts from rest). $s_1=\frac{1}{2}a_1t_1^2$, $s_3=v_{\max}t_2+\frac{1}{2}(-a_2)t_2^2=a_1t_1t_2-\frac{1}{2}a_2t_2^2$. But $v_{\max}=a_2t_2$ (to stop), so $a_1t_1=a_2t_2$. $s_{\text{const}}=d-s_1-s_3$. $t_{\text{const}}=s_{\text{const}}/v_{\max}$.</p>
+</details>
+<h4 id="q22-a-particle-starts-from-x0-with-v3t2-12t9-ms-find-the-total-distance-in-t0-to-t4">Q22. A particle starts from $x=0$ with $v=3t^2-12t+9$ m/s. Find the total distance in $t=0$ to $t=4$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=3(t^2-4t+3)=3(t-1)(t-3)$. $v=0$ at $t=1$ and $t=3$. $x(t)=t^3-6t^2+9t$. $x(0)=0$, $x(1)=4$, $x(3)=0$, $x(4)=4$. Distance: $|x(1)-x(0)|+|x(3)-x(1)|+|x(4)-x(3)|=4+4+4=12$ m.</p>
+</details>
+<h4 id="q23-a-particle-moves-with-a-g-bv-gravity-linear-drag-find-the-terminal-velocity">Q23. A particle moves with $a=-g-bv$ (gravity + linear drag). Find the terminal velocity.</h4>
+<details>
+<summary>Solution</summary>
+<p>At terminal velocity, $a=0$: $-g-bv_T=0\Rightarrow v_T=-g/b$. Since $v$ is downward (negative if up is positive), $v_T=-g/b$ means the terminal speed is $g/b$ downward.</p>
+</details>
+<h4 id="q24-a-particle-has-xtt3-6t29t-m-find-the-velocity-and-acceleration-at-t2-s">Q24. A particle has $x(t)=t^3-6t^2+9t$ m. Find the velocity and acceleration at $t=2$ s.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=3t^2-12t+9$. $v(2)=12-24+9=-3$ m/s. $a=6t-12$. $a(2)=0$ m/s$^2$. The particle is decelerating at $t=2$ (since $v&lt;0$ and $a=0$, it is at the inflection point).</p>
+</details>
+<h4 id="q25-a-ball-is-thrown-upward-at-the-highest-point-what-is-the-velocity-what-is-the-acceleration-what-is-the-speed">Q25. A ball is thrown upward. At the highest point, what is the velocity? What is the acceleration? What is the speed?</h4>
+<details>
+<summary>Solution</summary>
+<p>Velocity $=0$ (momentarily at rest). Acceleration $=-g$ (still pointing downward). Speed $=0$ (the magnitude of velocity).</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-symmetry-shortcut-for-free-fall">7.1 The symmetry shortcut for free fall</h3>
+<p>A ball thrown upward returns with the same speed (by energy conservation or by the symmetry of the parabola). Use this to avoid re-solving the downward half.</p>
+<h3 id="72-the-vt-graph-as-a-calculator">7.2 The $v$–$t$ graph as a calculator</h3>
+<p>For any motion with known $v(t)$: displacement = area under the curve; distance = area between the curve and the $t$-axis (absolute value). This is often faster than integrating algebraically.</p>
+<h3 id="73-the-relative-velocity-shortcut">7.3 The relative-velocity shortcut</h3>
+<p>For two particles on the same line: reduce to a single particle with relative velocity $v_{AB}=v_A-v_B$ and relative acceleration $a_{AB}=a_A-a_B$. The problem then becomes a standard 1D problem.</p>
+<h3 id="74-the-nth-second-formula">7.4 The nth-second formula</h3>
+<p>For constant acceleration: $s_n=u+\frac{a}{2}(2n-1)$. This avoids computing $s(n)$ and $s(n-1)$ separately. Useful for "find the distance in the 5th second" problems.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Using constant-acceleration equations for variable $a$</p>
+<p>The equations $v=u+at$, $s=ut+\frac{1}{2}at^2$ are ONLY for constant $a$. If $a$ varies, integrate directly.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Confusing distance with displacement</p>
+<p>Distance is always positive (total path length). Displacement can be negative (net change in position). The area under $v$–$t$ gives displacement; the total area (absolute values) gives distance.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — "Zero velocity means zero acceleration"</p>
+<p>At the top of a throw, $v=0$ but $a=-g$. The object immediately begins to fall — zero velocity does not mean zero acceleration.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — "Negative acceleration means slowing down"</p>
+<p>Negative acceleration means the acceleration is in the negative direction. If the velocity is also negative, the object is speeding up (in the negative direction). Deceleration is when $a$ and $v$ have opposite signs.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Forgetting the sign of $g$</p>
+<p>In the upward-positive convention, $a=-g=-9.8$ m/s$^2$. Forgetting the minus sign gives the wrong answer for free-fall problems.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Misreading the $x$–$t$ graph</p>
+<p>A curved $x$–$t$ graph does not mean the particle is moving in a curve — it is still 1D. The curve shows changing speed.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Applying $v^2=u^2+2as$ without checking for constant $a$</p>
+<p>This equation is derived from the constant-acceleration equations. It fails for variable $a$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Confusing average velocity with average speed</p>
+<p>$\bar{v}=\Delta x/\Delta t$ (can be zero for a round trip). $\bar{s}=d/\Delta t$ (always positive).</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — Two solutions for height in free fall</p>
+<p>$h=v_0t-\frac{1}{2}gt^2$ is quadratic in $t$ — there are often two valid times (going up and coming down). Both must be reported.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — The $v\,dv/dx$ method: forgetting the initial condition</p>
+<p>The integral $v\,dv=a(x)\,dx$ gives $v^2/2=\int a(x)\,dx+C$. The constant $C$ is determined by the initial condition ($v=v_0$ at $x=x_0$).</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Constant acceleration": use Eqs. (4.1).</li>
+<li>"Variable $a(t)$": integrate $a$ to get $v$, $v$ to get $x$.</li>
+<li>"Variable $a(x)$": use $v\,dv/dx$.</li>
+<li>"Variable $a(v)$": use $dv/a(v)=dt$.</li>
+<li>"Free fall": use $a=-g$ and the standard equations.</li>
+<li>"Graphs": use slope and area.</li>
+<li>"Two particles": use relative velocity.</li>
+<li>"Piecewise": solve each interval.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eqs. (4.1)</td>
+<td>constant $a$</td>
+<td>$a$ varies</td>
+</tr>
+<tr>
+<td>$v\,dv/dx=a(x)$</td>
+<td>any motion</td>
+<td>$a$ depends on $t$ (use $dv/dt$ instead)</td>
+</tr>
+<tr>
+<td>$v_{AB}=v_A-v_B$</td>
+<td>non-relativistic</td>
+<td>speeds $\sim c$</td>
+</tr>
+<tr>
+<td>$h_{\max}=v_0^2/(2g)$</td>
+<td>upward throw, no air resistance</td>
+<td>air resistance present</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-timing-plan">9.3 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. Constant-acceleration problems die by direct substitution; variable-acceleration problems die by integration; graph problems die by reading the slope and area.</p>
+<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<ol>
+<li>Constant-acceleration equations: verified that $a$ is indeed constant.</li>
+<li>Free-fall: used the correct sign convention ($a=-g$ for upward positive).</li>
+<li>Graphs: slope = velocity (for $x$–$t$), slope = acceleration (for $v$–$t$), area = displacement (for $v$–$t$).</li>
+<li>Variable acceleration: integrated correctly, applied initial conditions.</li>
+<li>Relative velocity: subtracted in the correct order.</li>
+<li>Piecewise: matched the final state of one phase to the initial state of the next.</li>
+<li>Distance vs displacement: reported the correct one as requested.</li>
+<li>Two solutions for height/time: both reported.</li>
+<li>Units consistent throughout.</li>
+<li>Every sub-part answered.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-linear-drag-a-g-bv">OL1 — Linear drag: $a=-g-bv$</h3>
+<p>A particle is thrown upward with speed $v_0$ in a medium with linear drag $F_{\text{drag}}=-bv$. Find $v(t)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $m\,dv/dt=-mg-bv$. Let $\tau=m/b$: $dv/dt+gv/\tau=-g$. This is a first-order linear ODE. The solution: $v(t)=(v_0+g\tau)e^{-t/\tau}-g\tau$. At $t=0$: $v=v_0$ ✓. As $t\to\infty$: $v\to-g\tau=-mg/b$ — the terminal velocity (downward).</p>
+<p><strong>Checks.</strong> (i) At $b=0$ ($\tau\to\infty$): $v\approx v_0-gt$ — free fall. ✓ (ii) The particle reaches maximum height when $v=0$: $t_{\max}=\tau\ln(1+v_0/(g\tau))$.</p>
+</details>
+<h3 id="ol2-quadratic-drag-a-g-kv2">OL2 — Quadratic drag: $a=-g-kv^2$</h3>
+<p>A particle falls from rest with quadratic drag $F_{\text{drag}}=-kv^2$ (downward velocity positive). Find $v(t)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $m\,dv/dt=mg-kv^2$. Terminal velocity: $v_T=\sqrt{mg/k}$. Let $\alpha=k/m$: $dv/dt=g-\alpha v^2=g(1-v^2/v_T^2)$. Separate: $dv/(1-v^2/v_T^2)=g\,dt$. Integrate: $\frac{v_T}{2}\ln\frac{v_T+v}{v_T-v}=gt$. Solve: $v=v_T\tanh(gt/v_T)$.</p>
+<p><strong>Checks.</strong> (i) At $t=0$: $\tanh(0)=0$, $v=0$ ✓. (ii) As $t\to\infty$: $\tanh\to1$, $v\to v_T$ ✓. (iii) For small $t$: $\tanh(x)\approx x$, $v\approx gt$ — free fall ✓.</p>
+</details>
+<h3 id="ol3-the-exponentialhyperbolic-contrast">OL3 — The exponential–hyperbolic contrast</h3>
+<p>Compare the velocity–time relations for linear drag ($v\sim e^{-t/\tau}$) and quadratic drag ($v\sim\tanh$). What is the physical difference?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Linear drag: the velocity approaches terminal exponentially, with a characteristic time $\tau=m/b$. The approach is from above (if falling) — the velocity overshoots and relaxes. Quadratic drag: the velocity approaches terminal as $\tanh$, which is slower initially (the drag is weaker at low speeds) and faster later (the drag grows with $v^2$). The key physical difference: linear drag is proportional to $v$ (dominant at low speeds, e.g. viscous drag on small objects), quadratic drag is proportional to $v^2$ (dominant at high speeds, e.g. air resistance on cars, bullets, skydivers).</p>
+<p><strong>Checks.</strong> (i) For a sphere of radius $r$ at speed $v$: the Reynolds number $Re=\rho vr/\eta$ determines which regime applies. $Re\ll1$: linear (Stokes). $Re\gg1$: quadratic (Newton). (ii) A raindrop ($r\sim1$ mm, $v\sim5$ m/s): $Re\sim3000$ — quadratic drag.</p>
+</details>
+<h3 id="ol4-the-terminal-velocity-of-a-skydiver">OL4 — The terminal velocity of a skydiver</h3>
+<p>Estimate the terminal velocity of a skydiver (mass 80 kg, cross-section 0.7 m$^2$, drag coefficient $C_D=1$, air density 1.2 kg/m$^3$).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $F_{\text{drag}}=\frac{1}{2}C_D\rho Av^2$. At terminal velocity: $mg=\frac{1}{2}C_D\rho Av_T^2$. $v_T=\sqrt{2mg/(C_D\rho A)}=\sqrt{2\times80\times9.8/(1\times1.2\times0.7)}=\sqrt{1568/0.84}=\sqrt{1867}=43.2$ m/s $\approx156$ km/h.</p>
+<p><strong>Checks.</strong> (i) Real skydivers reach about 200 km/h in a head-down position (smaller $A$) and about 55 km/h in a spread-eagle position (larger $A$). The estimate is in the right range. (ii) The $m^{1/2}$ scaling: a heavier skydiver falls faster.</p>
+</details>
+<h3 id="ol5-the-pursuit-problem-1-d">OL5 — The pursuit problem (1-D)</h3>
+<p>A pursuer moves at speed $v_P$ toward a target that moves at speed $v_T$ ($v_P&gt;v_T$). The initial separation is $d$. Find the time to catch the target.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In the target's frame: the pursuer approaches at $v_P-v_T$. Time $=d/(v_P-v_T)$. This is the simplest pursuit problem — the 2D version (the pursuer always heads toward the target's current position) is much harder (PART 4, OL9).</p>
+<p><strong>Checks.</strong> (i) As $v_P\to v_T$: $t\to\infty$ — the pursuer never catches up. (ii) As $v_P\to\infty$: $t\to0$ — instant catch.</p>
+</details>
+<h3 id="ol6-the-does-a-heavier-body-fall-faster-analysis">OL6 — The "does a heavier body fall faster?" analysis</h3>
+<p>Two spheres of masses $m_1$ and $m_2$ and radii $r_1$ and $r_2$ are dropped in air. Which reaches the ground first?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Terminal velocity $v_T=\sqrt{2mg/(C_D\rho A)}$ with $A=\pi r^2$. For spheres of the same density: $m\propto r^3$, $A\propto r^2$, so $v_T\propto\sqrt{r}$. The larger sphere falls faster. But the question asks about mass: if $r_1=r_2$ (same size, different density), then $v_T\propto\sqrt{m}$ — the heavier sphere falls faster. In vacuum: both fall at the same rate (Galileo's principle). Air resistance breaks the universality.</p>
+<p><strong>Checks.</strong> (i) A feather and a hammer on the Moon: same $g$, no air — they fall together. (ii) In air: the feather falls slower because its $v_T$ is much smaller.</p>
+</details>
+<h3 id="ol7-the-reaction-time-problem">OL7 — The reaction-time problem</h3>
+<p>A driver sees a hazard and brakes. The total stopping distance is $d=d_{\text{reaction}}+d_{\text{braking}}$. For $v_0=72$ km/h, reaction time 0.5 s, and deceleration 5 m/s$^2$, find $d$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v_0=20$ m/s. $d_{\text{reaction}}=v_0\times t_r=20\times0.5=10$ m. $d_{\text{braking}}=v_0^2/(2a)=400/10=40$ m. Total $d=50$ m. The reaction time accounts for 20% of the stopping distance at this speed. At higher speeds, the reaction distance grows linearly but the braking distance grows quadratically — so reaction time becomes less significant at high speeds.</p>
+<p><strong>Checks.</strong> (i) Without reaction time: $d=40$ m. With: $d=50$ m — a 25% increase. (ii) At 144 km/h (40 m/s): $d_r=20$ m, $d_b=160$ m, total 180 m — reaction time is only 11% of the total.</p>
+</details>
+<h3 id="ol8-the-relativistic-limit-preview">OL8 — The relativistic limit preview</h3>
+<p>At what speed does the Newtonian formula $p=mv$ differ from the relativistic $p=\gamma mv$ by 1%?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\gamma=1/\sqrt{1-v^2/c^2}\approx1+v^2/(2c^2)$ for small $v/c$. A 1% difference: $v^2/(2c^2)=0.01\Rightarrow v=c\sqrt{0.02}=0.141c\approx4.2\times10^7$ m/s. At about 14% of the speed of light, relativistic corrections to momentum reach 1%.</p>
+<p><strong>Checks.</strong> (i) At $v=0.14c$: $\gamma=1/\sqrt{1-0.02}=1.0101$ — 1.01% correction. ✓ (ii) This is far above everyday speeds (even satellites orbit at $\sim7$ km/s $=0.00002c$), so Newtonian mechanics is safe for JEE.</p>
+</details>
+<h3 id="ol9-the-drag-coefficient-estimation-for-a-raindrop">OL9 — The drag-coefficient estimation for a raindrop</h3>
+<p>A raindrop of radius 1 mm falls through air ($\rho=1.2$ kg/m$^3$). Estimate the terminal velocity using $C_D\approx0.5$ (a reasonable value for a sphere at moderate Reynolds number).</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $m=\frac{4}{3}\pi r^3\rho_w=\frac{4}{3}\pi(10^{-3})^3\times1000=4.19\times10^{-6}$ kg. $A=\pi r^2=3.14\times10^{-6}$ m$^2$. $v_T=\sqrt{2mg/(C_D\rho A)}=\sqrt{2\times4.19\times10^{-6}\times9.8/(0.5\times1.2\times3.14\times10^{-6})}=\sqrt{8.21\times10^{-5}/1.88\times10^{-6}}=\sqrt{43.7}=6.6$ m/s.</p>
+<p><strong>Checks.</strong> (i) Real raindrops fall at 2–9 m/s depending on size — this is consistent. (ii) The Reynolds number: $Re=\rho v r/\eta=1.2\times6.6\times10^{-3}/(1.8\times10^{-5})\approx440$ — moderate, so $C_D\approx0.5$ is reasonable (not Stokes, not fully turbulent).</p>
+</details>
+<h3 id="ol10-the-how-fast-can-a-stone-be-thrown-biomechanical-estimate">OL10 — The "how fast can a stone be thrown?" biomechanical estimate</h3>
+<p>Estimate the maximum speed at which a human can throw a stone, given that the arm length is about 0.7 m and the hand can exert a force of about 100 N over a distance of about 0.5 m.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Work-energy: $W=Fd=100\times0.5=50$ J. $KE=\frac{1}{2}mv^2$. For a stone of mass 0.2 kg: $v=\sqrt{2\times50/0.2}=\sqrt{500}=22.4$ m/s $\approx80$ km/h. For a cricket ball (0.16 kg): $v=\sqrt{2\times50/0.16}=\sqrt{625}=25$ m/s $\approx90$ km/h.</p>
+<p><strong>Checks.</strong> (i) Fast bowlers in cricket bowl at 140–160 km/h — higher because the run-up adds kinetic energy and the arm rotation increases the effective distance. (ii) Baseball pitchers throw at 150 km/h — similar biomechanics. (iii) The estimate is reasonable for a standing throw without a run-up.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>Newtonian kinematics (this chapter) is exact at speeds $v\ll c$ and in the absence of air resistance. The constant-acceleration equations fail when $a$ varies (which it almost always does in reality). The $v\,dv/dx$ method is exact for any $a(x)$ but requires $a$ to be a function of $x$ alone (not $t$ or $v$). Air resistance (drag) changes the motion qualitatively: it introduces terminal velocity, breaks the symmetry of free fall, and makes the equations non-linear. Relativistic corrections become significant at $v\gtrsim0.1c$. Inside these fences the methods are exact.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>A particle moves with $v=t^2-4t+3$ m/s. At what time(s) is the velocity zero?
+(a) $t=1$ only  (b) $t=3$ only  (c) $t=1$ and $t=3$  (d) $t=0$ and $t=4$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $v=(t-1)(t-3)=0$ at $t=1$ and $t=3$.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>At the highest point of a throw, the acceleration is:
+(a) zero  (b) $g$ upward  (c) $g$ downward  (d) $-g$ upward</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The acceleration is always $g$ downward (taking "upward" as positive: $a=-g$).</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The area under a $v$–$t$ graph gives:
+(a) distance  (b) displacement  (c) acceleration  (d) speed</p>
+<details>
+<summary>Answer</summary>
+<p>(b). The signed area under $v$–$t$ gives displacement. The total area (absolute values) gives distance.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>The constant-acceleration equation that does NOT contain $t$ is:
+(a) $v=u+at$  (b) $s=ut+\frac{1}{2}at^2$  (c) $v^2=u^2+2as$  (d) $s=\frac{(u+v)}{2}t$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $v^2=u^2+2as$ connects $v$, $u$, $a$, $s$ without $t$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>A car moving at 60 km/h brakes to a stop in 20 m. If the speed is doubled to 120 km/h, the stopping distance (same deceleration) is:
+(a) 40 m  (b) 60 m  (c) 80 m  (d) 160 m</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $s\propto v^2$. Doubling $v$ quadruples $s$: $20\times4=80$ m.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The slope of the $x$–$t$ graph at a point gives:
+(a) displacement  (b) velocity  (c) acceleration  (d) distance</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $v=dx/dt$ — the slope of the tangent.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>Two particles move with velocities 5 m/s and $-3$ m/s (same line). The relative velocity of the first with respect to the second is:
+(a) 2 m/s  (b) 8 m/s  (c) $-8$ m/s  (d) $-2$ m/s</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $v_{12}=v_1-v_2=5-(-3)=8$ m/s.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>In the $v\,dv/dx$ method, the identity $a=v\,dv/dx$ comes from:
+(a) Newton's second law  (b) the chain rule  (c) integration by parts  (d) the product rule</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $dv/dt=(dv/dx)(dx/dt)=v\,dv/dx$ — the chain rule.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>A ball is dropped from 80 m. The time to reach the ground is ($g=10$ m/s$^2$):
+(a) 2 s  (b) 3 s  (c) 4 s  (d) 5 s</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $t=\sqrt{2h/g}=\sqrt{16}=4$ s.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>The distance travelled in the $n$th second for a particle starting from rest with $a=2$ m/s$^2$ is:
+(a) $2n-1$  (b) $n^2$  (c) $2n$  (d) $n^2-n$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $s_n=0+\frac{2}{2}(2n-1)=2n-1$.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>A particle has $a=-kv$ (drag). The velocity as $t\to\infty$ is:
+(a) 0  (b) $v_0$  (c) $-g/k$  (d) $v_0e^{-kt}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $v=v_0e^{-kt}\to0$ as $t\to\infty$. (c) would be correct if gravity is also present.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>A particle moves with $v=|t-2|$ m/s. The total distance from $t=0$ to $t=4$ is:
+(a) 4 m  (b) 8 m  (c) 0 m  (d) 2 m</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $\int_0^2(2-t)\,dt+\int_2^4(t-2)\,dt=[2t-t^2/2]_0^2+[t^2/2-2t]_2^4=2+2=4$ m.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>The constant-acceleration equations are valid when:
+(a) $a$ is constant  (b) $a=0$  (c) $a$ varies linearly with $t$  (d) the motion is in a straight line</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). $a=0$ is a special case of constant $a$. The equations are for 1D motion.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>At the highest point of a throw:
+(a) $v=0$  (b) $a=0$  (c) speed $=0$  (d) $a=-g$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). The velocity is zero (and so is the speed), but the acceleration is still $-g$.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>The $v\,dv/dx$ method:
+(a) works for any $a(x)$  (b) works for $a(t)$  (c) converts the problem to a first-order ODE  (d) requires the initial condition</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). It does not directly work for $a(t)$ (you would need to eliminate $t$ first).</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>For a particle thrown upward:
+(a) the time to go up equals the time to come down  (b) the speed going up equals the speed coming down (at the same height)  (c) the acceleration is zero at the top  (d) the velocity changes sign at the top</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). The acceleration is always $-g$ (not zero at the top).</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>Linear drag ($F=-bv$) leads to:
+(a) exponential approach to terminal velocity  (b) terminal velocity $v_T=mg/b$  (c) the particle stopping in finite time  (d) hyperbolic approach to terminal velocity</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b). Linear drag gives $v\sim e^{-t/\tau}$ (exponential). Quadratic drag gives $v\sim\tanh$ (hyperbolic). The particle never truly stops (asymptotic approach).</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>If $v$–$t$ graph is a straight line with negative slope:
+(a) the acceleration is constant  (b) the particle is decelerating  (c) the displacement may be positive or negative  (d) the speed is always decreasing</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). The particle may be decelerating (if $v&gt;0$) or accelerating (if $v&lt;0$ and $a&lt;0$ — speeding up in the negative direction). (d) is not necessarily true: if $v&lt;0$ and $a&lt;0$, the speed is increasing.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>Relative velocity $v_{AB}=v_A-v_B$:
+(a) is positive if $A$ is moving faster in the positive direction  (b) can be negative  (c) is always the closing speed  (d) applies only when $A$ and $B$ move in the same direction</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b). The closing speed is $|v_{AB}|$, not $v_{AB}$. The formula applies regardless of direction.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>The stopping distance of a car:
+(a) is proportional to $v^2$  (b) includes the reaction distance  (c) is proportional to $v$ at constant deceleration  (d) doubles when the speed doubles (constant deceleration)</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b). $d_{\text{braking}}\propto v^2$, so doubling the speed quadruples the braking distance. The reaction distance is proportional to $v$.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>A car accelerates from rest at 3 m/s$^2$ for 8 s. Find the distance.</p>
+<details>
+<summary>Answer</summary>
+<p>$s=\frac{1}{2}\times3\times64=96$ m.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A ball is thrown upward at 25 m/s. Find the maximum height. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$h=25^2/20=625/20=31.25$ m.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>A particle has $v=4t-t^2$ m/s. Find the maximum velocity.</p>
+<details>
+<summary>Answer</summary>
+<p>$dv/dt=4-2t=0\Rightarrow t=2$ s. $v_{\max}=4\times2-4=4$ m/s.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>Two cars are 200 m apart, moving toward each other at 30 m/s and 20 m/s. Find the time to meet.</p>
+<details>
+<summary>Answer</summary>
+<p>$t=200/(30+20)=4$ s.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>A particle has $a=4-2t$ m/s$^2$, $v(0)=0$. Find the velocity at $t=3$ s.</p>
+<details>
+<summary>Answer</summary>
+<p>$v=\int_0^3(4-2t)\,dt=[4t-t^2]_0^3=12-9=3$ m/s.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A stone is dropped from 20 m. Find the speed on impact. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$v=\sqrt{2gh}=\sqrt{400}=20$ m/s.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Derive the four constant-acceleration equations from $a=$ const. (b) Verify that $v^2=u^2+2as$ can be derived from the other three. (c) For what kind of motion do these equations NOT apply?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.6. (b) From $v=u+at$: $t=(v-u)/a$. Substitute into $s=ut+\frac{1}{2}at^2$: $s=u(v-u)/a+\frac{1}{2}a(v-u)^2/a^2=\frac{u(v-u)}{a}+\frac{(v-u)^2}{2a}=\frac{2u(v-u)+(v-u)^2}{2a}=\frac{(v-u)(2u+v-u)}{2a}=\frac{(v-u)(u+v)}{2a}=\frac{v^2-u^2}{2a}$. So $v^2=u^2+2as$. (c) Variable acceleration.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) A ball is thrown upward at 30 m/s. Find the time to reach 35 m. ($g=10$ m/s$^2$.) (b) Why are there two solutions? (c) What is the speed at each time?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $35=30t-5t^2\Rightarrow t^2-6t+7=0\Rightarrow t=(6\pm\sqrt{36-28})/2=(6\pm\sqrt{8})/2=(6\pm2.83)/2$. $t=1.59$ s and $t=4.41$ s. (b) Two solutions because the ball passes through 35 m twice: once going up, once coming down. (c) At $t=1.59$: $v=30-15.9=14.1$ m/s (upward). At $t=4.41$: $v=30-44.1=-14.1$ m/s (downward). Same speed, opposite direction — by symmetry.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) A particle has $a=-kx$. Use the $v\,dv/dx$ method to find $v(x)$. (b) Show that the motion is bounded. (c) Find the maximum displacement.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See E5. $v^2=v_0^2-kx^2$. (b) $v^2\geq0\Rightarrow x^2\leq v_0^2/k$. (c) $x_{\max}=v_0/\sqrt{k}$.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) A particle falls with linear drag $a=-g-bv$. Find $v(t)$. (b) What is the terminal velocity? (c) How does the approach to terminal depend on $b$?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL1. $v=(v_0+g\tau)e^{-t/\tau}-g\tau$ where $\tau=m/b$. (b) $v_T=-g\tau=-mg/b$ (downward). (c) The characteristic time $\tau=m/b$: larger $b$ (stronger drag) gives shorter $\tau$ — faster approach to terminal.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) Two cars $A$ and $B$ are 100 m apart. $A$ moves at 10 m/s toward $B$; $B$ moves at 15 m/s toward $A$. When do they meet? (b) If $B$ starts 2 s late, when do they meet? (c) What is the relative velocity in each case?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $v_{\text{closing}}=25$ m/s. $t=100/25=4$ s. (b) In 2 s, $A$ travels 20 m, reducing the gap to 80 m. $t'=80/25=3.2$ s after $B$ starts. Total time from $A$'s start: $2+3.2=5.2$ s. (c) $v_{AB}=10-(-15)=25$ m/s (same in both cases — the relative velocity does not change).</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>(a) A particle has $v=3t^2-12t+9$ m/s. Find the times when $v=0$. (b) Find the position at each time. (c) Find the total distance from $t=0$ to $t=4$.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $v=3(t-1)(t-3)=0$ at $t=1$ and $t=3$. (b) $x=t^3-6t^2+9t$. $x(0)=0$, $x(1)=4$, $x(3)=0$, $x(4)=4$. (c) Distance $=|4-0|+|0-4|+|4-0|=12$ m.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>(a) Estimate the terminal velocity of a skydiver (mass 80 kg, $C_D=1$, area 0.7 m$^2$, $\rho_{\text{air}}=1.2$ kg/m$^3$). (b) How does this change if the mass is 60 kg? (c) At what fraction of the terminal velocity is the drag force equal to half the weight?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $v_T=\sqrt{2mg/(C_D\rho A)}=\sqrt{1568/0.84}=43.2$ m/s $\approx156$ km/h. (b) $v_T\propto\sqrt{m}$: $v_{T,60}=43.2\sqrt{60/80}=37.4$ m/s. (c) $F_d=\frac{1}{2}C_D\rho Av^2=mg/2\Rightarrow v=v_T/\sqrt{2}=30.5$ m/s.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) A ball is dropped from 125 m. Another ball is thrown downward from the same point 2 s later. What initial speed is needed for the second ball to catch the first at ground level? ($g=10$ m/s$^2$.) (b) What is the speed of each ball at that time?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) First ball: $t=\sqrt{2\times125/10}=5$ s. Second ball has $5-2=3$ s. $125=u\times3+\frac{1}{2}\times10\times9=3u+45$. $u=80/3=26.67$ m/s. (b) First ball: $v=10\times5=50$ m/s. Second ball: $v=26.67+10\times3=56.67$ m/s. The second ball is faster — it had a head start in speed.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>(a) A car starts from rest, accelerates at 2 m/s$^2$ for 10 s, moves at constant speed for 20 s, then decelerates at 4 m/s$^2$ until it stops. Find the total distance. (b) Draw the $v$–$t$ graph. (c) Find the average velocity.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Phase 1: $v_1=20$ m/s, $s_1=100$ m. Phase 2: $s_2=20\times20=400$ m. Phase 3: $t_3=20/4=5$ s, $s_3=20\times5-\frac{1}{2}\times4\times25=100-50=50$ m. Total $=550$ m. (b) A right trapezoid: rising to $(10,20)$, flat to $(30,20)$, falling to $(35,0)$. (c) $\bar{v}=550/35=15.7$ m/s.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) A particle has $a=-g-bv^2/m$ (gravity + quadratic drag), thrown upward at $v_0$. Write the equation of motion. (b) What is the terminal speed? (c) Sketch $v(t)$ qualitatively (the upward and downward phases have different terminal speeds — explain why).</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $m\,dv/dt=-mg-bv^2$. Going up: $v&gt;0$, drag is downward (same as gravity): $dv/dt=-g-(b/m)v^2$. Coming down: $v&lt;0$, drag is upward (opposite to gravity): $dv/dt=-g+(b/m)v^2$. (b) Terminal (downward): $-g+(b/m)v_T^2=0\Rightarrow v_T=\sqrt{mg/b}$. (c) Going up: $v$ decreases faster than free fall (both gravity and drag oppose motion). Coming down: $v$ approaches $v_T$ asymptotically from below (gravity accelerates, drag decelerates). The upward phase takes less time than the downward phase (the average speed is higher going up because the drag is stronger — wait, that's backwards. Actually, the upward phase is shorter because the deceleration is larger, so the ball reaches the top faster. The downward phase is longer because the terminal velocity limits the speed).</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v=u+at$</td>
+<td>constant $a$</td>
+</tr>
+<tr>
+<td>$s=ut+\frac{1}{2}at^2$</td>
+<td>constant $a$</td>
+</tr>
+<tr>
+<td>$v^2=u^2+2as$</td>
+<td>constant $a$</td>
+</tr>
+<tr>
+<td>$s=\frac{(u+v)}{2}t$</td>
+<td>constant $a$</td>
+</tr>
+<tr>
+<td>$a=v\,dv/dx$</td>
+<td>always (chain rule)</td>
+</tr>
+<tr>
+<td>$v_{AB}=v_A-v_B$</td>
+<td>non-relativistic</td>
+</tr>
+<tr>
+<td>$h_{\max}=v_0^2/(2g)$</td>
+<td>upward throw, no drag</td>
+</tr>
+<tr>
+<td>$T=2v_0/g$</td>
+<td>upward throw, no drag</td>
+</tr>
+<tr>
+<td>$t=\sqrt{2h/g}$</td>
+<td>drop from height $h$</td>
+</tr>
+<tr>
+<td>$v_T=\sqrt{2mg/(C_D\rho A)}$</td>
+<td>quadratic drag, terminal velocity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can distinguish distance from displacement and average from instantaneous velocity.</li>
+<li>[ ] I can derive and apply all four constant-acceleration equations.</li>
+<li>[ ] I can read and construct $x$–$t$, $v$–$t$, $a$–$t$ graphs.</li>
+<li>[ ] I can solve free-fall problems (upward throw, drop, multi-stage).</li>
+<li>[ ] I can solve variable-acceleration problems using $v\,dv/dx$.</li>
+<li>[ ] I can compute relative velocity in 1-D.</li>
+<li>[ ] I can set up and solve piecewise kinematics problems.</li>
+<li>[ ] I know when the constant-acceleration equations fail.</li>
+<li>[ ] I can solve pursuit problems using relative velocity.</li>
+<li>[ ] I understand the difference between linear and quadratic drag and their effects on motion.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> The constant-acceleration equations and graph-reading skills are prerequisites for every subsequent mechanics chapter. The $v\,dv/dx$ method reappears in PART 5 (dynamics) and PART 8 (oscillations). The free-fall results are the foundation of PART 4 (projectile motion). The drag analysis is used in PART 4 (projectile with drag) and PART 26 (nuclear recoil).</p>
+<p><strong>Open questions.</strong> How does the motion change in a rotating frame (Coriolis force)? What is the relativistic correction to the equations of motion? These are questions for PART 8 and PART 28.</p>
+    <footer class="pager"><a href="vectors.html">← Vectors & vector algebra</a><a href="motion-in-two-dimensions.html">2-D motion & projectiles →</a></footer>
+    <p class="colophon">Rendered from <code>kinematics-1d/Kinematics-1d.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>kinematics-1d/Kinematics-1d.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

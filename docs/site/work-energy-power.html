@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work, energy & power — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="active">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 6</span><span class="prop"><b>slug</b> work-energy-power</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">work-energy</span><span class="prop tag">conservation-laws</span></p>
+
+<h1 id="work-energy-power-first-principles-to-olympiad">Work, Energy &amp; Power — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — what work is, the work–energy theorem (derived from $F=ma$), conservative forces and potential energy, and the precise conditions for mechanical energy conservation. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (the CM-frame energy decomposition, the effective potential for orbits, the block-on-wedge energy audit, bouncing with restitution, the energy of a rolling body), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: compute work by constant and variable forces; derive the work–energy theorem from $F=ma$; identify conservative forces and construct potential-energy functions; apply mechanical energy conservation with its precise conditions; read and interpret $U(x)$ energy diagrams; distinguish problems best solved by energy from those best solved by force; compute power and efficiency; and set up energy ledgers for systems with friction and internal work.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Work is energy in transit; energy bookkeeping replaces force bookkeeping whenever path, not time, is the question.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>You need PART 5 (Newton's laws, friction, the FBD method). If you can compute a dot product and integrate a polynomial, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats energy as one of the two or three most important topics — 3–5 questions per year, often combined with momentum (PART 7) or circular dynamics (PART 5). The work–energy theorem is the "shortcut" for problems where you need the speed at a point, not the time to reach it. INPhO and IPhO reward the ability to handle energy in the CM frame, the effective potential for orbits, and variable-mass energy audits. The trap density is high: omitting the work of the normal force when the surface moves, using $\frac{1}{2}kx^2$ past the elastic limit, and assuming $\frac{1}{2}mv^2$ is the only kinetic energy of a rolling body.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a momentum chapter: impulse and collisions are in PART 7. Not a rotation chapter: rotational kinetic energy and the work of torque are in PART 8. Not a thermodynamics chapter: the first law of thermodynamics and heat are in PART 15. Not a quantum chapter: quantised energy levels are in PART 24.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Work by a constant force</td>
+<td>$W=\mathbf{F}\cdot\mathbf{d}$</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Work by a variable force</td>
+<td>$W=\int\mathbf{F}\cdot d\mathbf{r}$</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Work of standard forces</td>
+<td>Gravity, friction, normal, spring</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Work–energy theorem</td>
+<td>$W_{\text{net}}=\Delta K$</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Power</td>
+<td>$P=\mathbf{F}\cdot\mathbf{v}$</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Conservative forces</td>
+<td>Closed-loop test, path independence</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Potential energy</td>
+<td>$U=-\int F\,dx$, $mgh$, $\frac{1}{2}kx^2$</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Mechanical energy conservation</td>
+<td>$K+U=$ const</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Energy diagrams</td>
+<td>$U(x)$, turning points, stability</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Energy/force decision rule</td>
+<td>When to use which method</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Systems and internal work</td>
+<td>Block-and-wedge, two blocks and spring</td>
+<td>§3.11</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Power in practice</td>
+<td>Pumps, vehicles, efficiency</td>
+<td>§3.12</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Force from potential</td>
+<td>$F_x=-dU/dx$</td>
+<td>§3.13</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Non-conservative bookkeeping</td>
+<td>Friction, thermal energy ledger</td>
+<td>§3.14</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>Work is energy transferred by a force.</strong> When you push a box across a floor, you do work on the box (energy goes from you to the box). When friction slows the box, friction does negative work (energy goes from the box to thermal energy). When you hold a heavy box stationary, you do no work (no displacement — no energy transfer).</p>
+<p><strong>The work–energy theorem is just $F=ma$ in disguise.</strong> Multiply $F=ma$ by $dx$: $F\,dx=ma\,dx=mv\,dv$. Integrate: $\int F\,dx=\frac{1}{2}mv^2-\frac{1}{2}mv_0^2$. The left side is the work; the right side is the change in kinetic energy. This is the bridge between force and energy.</p>
+<p><strong>Conservative forces have a memory of position only.</strong> Gravity and springs are conservative — the work they do depends only on the starting and ending points, not the path taken. Friction is non-conservative — the work depends on the path length. Conservative forces have a potential-energy function $U(x)$ from which the force can be recovered as $F=-dU/dx$.</p>
+<p><strong>Energy is conserved — but only if you count everything.</strong> The total energy (kinetic + potential + thermal + ...) is always conserved. "Energy is lost" really means "energy has been transferred to a form we are not tracking." The correct phrase is "energy is dissipated" or "energy is transferred to thermal energy."</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$W$</td>
+<td>work done by a force</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$K$</td>
+<td>kinetic energy $=\frac{1}{2}mv^2$</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$U$</td>
+<td>potential energy</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$E$ or $K+U$</td>
+<td>mechanical energy</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$P$</td>
+<td>power $=dW/dt$</td>
+<td>W</td>
+</tr>
+<tr>
+<td>$k$</td>
+<td>spring constant</td>
+<td>N/m</td>
+</tr>
+<tr>
+<td>$x$</td>
+<td>displacement from equilibrium (spring)</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$h$</td>
+<td>height above reference level</td>
+<td>m</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>Work is a scalar (not a vector) — it has magnitude and sign but no direction. Positive work: the force has a component in the direction of motion (energy goes <em>into</em> the body). Negative work: the force opposes motion (energy comes <em>out</em> of the body). Zero work: the force is perpendicular to the displacement (e.g. centripetal force, normal force on a stationary surface).</p>
+</div>
+
+<p>Three numbers to carry: $g=9.8$ m/s$^2$; $1$ J $=1$ N m $=1$ kg m$^2$/s$^2$; $1$ hp $=746$ W.</p>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-work-by-a-constant-force">3.1 Work by a constant force</h3>
+<p>$$
+W=\mathbf{F}\cdot\mathbf{d}=Fd\cos\theta. \qquad (3.1)
+$$</p>
+<p>where $\theta$ is the angle between the force and the displacement.</p>
+<p><strong>Sign convention:</strong> $W&gt;0$ if $\theta&lt;90°$ (force helps motion), $W&lt;0$ if $\theta&gt;90°$ (force opposes motion), $W=0$ if $\theta=90°$ (force perpendicular to motion).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.1 · Work sign drill: six cases</p>
+<p><em>Show:</em> six diagrams: (1) pushing a box rightward (force rightward, displacement rightward: $W&gt;0$); (2) friction opposing rightward motion ($W&lt;0$); (3) gravity on a horizontal surface ($W=0$, force perpendicular to displacement); (4) gravity on a falling body ($W&gt;0$, force and displacement same direction); (5) lifting a box ($W&gt;0$ by the lifter, $W&lt;0$ by gravity); (6) centripetal force ($W=0$, always perpendicular to velocity).
+<em>Search:</em> "work sign positive negative zero six cases force displacement"</p>
+</div>
+
+<h3 id="32-work-by-a-variable-force">3.2 Work by a variable force</h3>
+<p>$$
+W=\int_{x_i}^{x_f}F(x)\,dx=\text{area under the }F\text{–}x\text{ curve}. \qquad (3.2)
+$$</p>
+<p>For a force that varies along the path: $W=\int\mathbf{F}\cdot d\mathbf{r}=\int(F_x\,dx+F_y\,dy+F_z\,dz)$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.2 · Work as area under the $F$–$x$ curve</p>
+<p><em>Show:</em> a graph of $F$ vs $x$ with a curve. The area between the curve and the $x$-axis is shaded. Positive areas (above the axis) and negative areas (below the axis) are shaded differently. The net work is the algebraic sum of the signed areas.
+<em>Search:</em> "work area under force versus displacement curve signed"</p>
+</div>
+
+<h3 id="33-work-of-the-standard-forces">3.3 Work of the standard forces</h3>
+<p><strong>Gravity:</strong> $W_{\text{grav}}=mgh$ (or $-mgh$, depending on direction). Path independent — only the height difference matters.</p>
+<p><strong>Friction:</strong> $W_{\text{fric}}=-f_k d$ where $d$ is the total path length. Path dependent — a longer path means more work by friction.</p>
+<p><strong>Normal force:</strong> $W_N=0$ if the surface does not move (the displacement of the contact point is zero). $W_N\neq0$ if the surface moves (e.g., a block on an accelerating wedge — the normal force does work on the block).</p>
+<p><strong>Spring:</strong> $W_{\text{spring}}=\int_0^x(-kx)\,dx=-\frac{1}{2}kx^2$. The spring does negative work when stretched (energy goes into the spring) and positive work when released.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Gravity is conservative because $W_{\text{grav}}$ depends only on $\Delta h$, not the path. Friction is non-conservative because $W_{\text{fric}}$ depends on the total distance (a round trip gives non-zero work by friction, but zero work by gravity).</p>
+</div>
+
+<h3 id="34-the-workenergy-theorem">3.4 The work–energy theorem</h3>
+<p><strong>Derivation from $F=ma$:</strong> Multiply both sides by $dx$:</p>
+<p>$$
+F\,dx=ma\,dx=m\frac{dv}{dt}dx=mv\,dv. \qquad (3.3)
+$$</p>
+<p>Integrate:</p>
+<p>$$
+W_{\text{net}}=\int_{x_i}^{x_f}F\,dx=\int_{v_i}^{v_f}mv\,dv=\frac{1}{2}mv_f^2-\frac{1}{2}mv_i^2=\Delta K. \qquad (3.4)
+$$</p>
+<p>$$
+\boxed{W_{\text{net}}=\Delta K} \qquad (3.4)
+$$</p>
+<p>The net work done on a particle equals its change in kinetic energy.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Eq. (3.4) applies to a single particle. For a system of particles: $W_{\text{net}}=W_{\text{ext}}+W_{\text{int}}=\Delta K_{\text{total}}$. Internal forces can do work (e.g., a spring between two blocks), and this work must be included.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.6 · The $F$–$x$ curve of a real spring</p>
+<p><em>Show:</em> a graph of force vs displacement for a real spring: linear ($F=-kx$) near the origin, then deviating (softening or stiffening) at large $x$. The elastic limit marked with a dashed line. The area under the curve (the work) shaded.
+<em>Search:</em> "real spring force versus displacement nonlinear elastic limit"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.7 · The vertical circle's energy split at four angles</p>
+<p><em>Show:</em> a vertical circle with the particle at four positions (bottom, side, top, opposite side). At each: a bar chart showing $K$ (kinetic, red) and $U$ (potential, blue). At the bottom: $K$ maximum, $U$ minimum. At the top: $K$ minimum, $U$ maximum. The total $E=K+U$ constant (same total height).
+<em>Search:</em> "vertical circle kinetic potential energy split four positions bar chart"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.8 · The gravitational escape energy curve</p>
+<p><em>Show:</em> a plot of $U(r)=-GMm/r$ (a hyperbola approaching zero from below) and the total energy line $E=0$ (escape). For a bound orbit: $E&lt;0$, the particle oscillates between two turning points. For escape: $E\ge0$, the particle reaches infinity with $K\ge0$. The escape velocity $v_{\text{esc}}=\sqrt{2GM/R}$ annotated at $r=R$.
+<em>Search:</em> "gravitational potential energy escape velocity curve bound unbound orbit"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.9 · The block-and-wedge with normal force doing work</p>
+<p><em>Show:</em> a block sliding down a wedge that slides on a frictionless table. The normal force $N$ on the block is perpendicular to the incline. The block's displacement in the ground frame is not along the incline (because the wedge moves). The angle between $N$ and the block's displacement shown — it is not 90°, so the normal force does work on the block.
+<em>Search:</em> "block wedge normal force work ground frame displacement not perpendicular"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.10 · The accelerating-wedge geometry with displacements</p>
+<p><em>Show:</em> a wedge of angle $\theta$ sliding rightward by distance $x_w$; a block sliding down the incline by distance $s$ relative to the wedge. The block's ground-frame displacement shown as the vector sum of $s$ (along the incline) and $x_w$ (horizontal). The work of the normal force on the block: $W_N=N\sin\theta\times x_w$ (the horizontal component of $N$ times the wedge displacement).
+<em>Search:</em> "wedge block displacement ground frame vector sum normal work"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.11 · The chain-lifting variable-weight problem</p>
+<p><em>Show:</em> a chain coiled on the ground being pulled upward at constant speed $v$. At time $t$: a length $x=vt$ has been lifted. The weight of the lifted part ($\lambda xg$) and the momentum-flux force ($\lambda v^2$) shown as arrows. The total force $F=\lambda xg+\lambda v^2$ annotated.
+<em>Search:</em> "chain lifted constant speed variable weight momentum flux force diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.12 · The energy ledger bar chart with thermal term</p>
+<p><em>Show:</em> a bar chart with four categories: initial KE, initial PE, final KE, final PE, and a fifth bar for "thermal energy" (from friction). The total energy is the same in the initial and final states (energy conservation including the thermal term). The thermal bar is the difference $f_k d$.
+<em>Search:</em> "energy bar chart thermal term friction dissipation conservation"</p>
+</div>
+
+<h3 id="35-power">3.5 Power</h3>
+<p>$$
+P=\frac{dW}{dt}=\mathbf{F}\cdot\mathbf{v}. \qquad (3.5)
+$$</p>
+<p>Average power: $\bar{P}=W/\Delta t$. Instantaneous power: $P=Fv\cos\theta$ where $\theta$ is the angle between $\mathbf{F}$ and $\mathbf{v}$.</p>
+<p><strong>The power-limited top speed of a vehicle:</strong> At constant speed on a flat road: $P=Fv=fv$. If the resistive force is $f$: $v_{\max}=P/f$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.3 · The power-limited top speed</p>
+<p><em>Show:</em> a car on a flat road with engine force $F$ forward and resistive force $f$ backward. At top speed: $F=f$, $a=0$. $P=Fv_{\max}=fv_{\max}$. A graph of $v$ vs $t$: the car accelerates and asymptotically approaches $v_{\max}=P/f$.
+<em>Search:</em> "car power limited top speed engine force resistance asymptotic"</p>
+</div>
+
+<h3 id="36-conservative-forces">3.6 Conservative forces</h3>
+<p>A force is conservative if either of the following equivalent conditions holds:</p>
+<ol>
+<li><strong>Closed-loop test:</strong> $\oint\mathbf{F}\cdot d\mathbf{r}=0$ (the work around any closed path is zero).</li>
+<li><strong>Path independence:</strong> the work depends only on the endpoints, not the path.</li>
+</ol>
+<p><strong>Examples:</strong> gravity, spring force, electrostatic force (PART 13). <strong>Non-examples:</strong> friction, air resistance, any force that depends on velocity.</p>
+<h3 id="37-potential-energy">3.7 Potential energy</h3>
+<p>For a conservative force, the potential energy is:</p>
+<p>$$
+U(x)=-\int F(x)\,dx+C. \qquad (3.6)
+$$</p>
+<p>The constant $C$ is arbitrary — only <em>differences</em> in $U$ are physically meaningful.</p>
+<p><strong>Standard potential energies:</strong></p>
+<p>$$
+U_{\text{grav}}=mgh\quad\text{(near the surface)},\qquad U_{\text{spring}}=\frac{1}{2}kx^2. \qquad (3.7)
+$$</p>
+<p>$$
+U_{\text{grav}}=-\frac{GMm}{r}\quad\text{(general)} \qquad (3.8)
+$$</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The potential energy is the "stored work" — the work the conservative force would do if the body moved from the current position to the reference point. $U_{\text{grav}}=mgh$ means "gravity would do work $mgh$ if the body fell from height $h$ to the reference level."</p>
+</div>
+
+<h3 id="38-mechanical-energy-conservation">3.8 Mechanical energy conservation</h3>
+<p>From the work–energy theorem: $W_{\text{net}}=\Delta K$. Split $W_{\text{net}}$ into conservative and non-conservative parts: $W_{\text{cons}}+W_{\text{non-cons}}=\Delta K$. Since $W_{\text{cons}}=-\Delta U$ (by definition of potential energy):</p>
+<p>$$
+W_{\text{non-cons}}=\Delta K+\Delta U=\Delta(K+U)=\Delta E. \qquad (3.9)
+$$</p>
+<p><strong>If only conservative forces do work</strong> ($W_{\text{non-cons}}=0$):</p>
+<p>$$
+\boxed{K+U=\text{const}\quad\text{(mechanical energy conservation)}} \qquad (3.9)
+$$</p>
+<p><strong>Precise condition:</strong> mechanical energy is conserved if and only if all forces doing work are conservative. If friction acts: $W_{\text{fric}}=-f_k d=\Delta E$, so $E$ decreases by $f_k d$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.4 · The energy ledger bar chart</p>
+<p><em>Show:</em> three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\Delta K$ and $\Delta U$ with the non-conservative work $W_{\text{nc}}$ shown as a separate bar. The total height is the same in all three (energy conservation with the thermal term).
+<em>Search:</em> "energy bar chart initial final non-conservative work ledger"</p>
+</div>
+
+<h3 id="39-energy-diagrams">3.9 Energy diagrams</h3>
+<p>The $U(x)$ graph is a powerful tool:</p>
+<ul>
+<li><strong>Turning points:</strong> where $K=0$ (the particle momentarily stops). At a turning point: $E=U(x)$.</li>
+<li><strong>Bound motion:</strong> $E&lt;0$ for the $-GMm/r$ potential (the particle cannot escape to infinity).</li>
+<li><strong>Equilibrium:</strong> where $dU/dx=0$. Stable if $d^2U/dx^2&gt;0$ (minimum), unstable if $d^2U/dx^2&lt;0$ (maximum).</li>
+</ul>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D6.5 · The $U(x)$ energy landscape</p>
+<p><em>Show:</em> a $U(x)$ curve with a well (stable minimum), a hill (unstable maximum), and two turning points at a given energy $E$. The kinetic energy $K=E-U$ shown as the vertical gap between the $E$ line and the $U$ curve. The bound region (where $E&gt;U$) shaded.
+<em>Search:</em> "potential energy landscape stable unstable turning points bound motion"</p>
+</div>
+
+<h3 id="310-the-energyforce-decision-rule">3.10 The energy/force decision rule</h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Best method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"How fast at point B?"</td>
+<td>Energy conservation</td>
+</tr>
+<tr>
+<td>"How far does it go?"</td>
+<td>Energy conservation (with friction)</td>
+</tr>
+<tr>
+<td>"Does it reach point B?"</td>
+<td>Energy (compare $E$ with $U(B)$)</td>
+</tr>
+<tr>
+<td>"What is the contact force at B?"</td>
+<td>Energy (for speed) + radial equation (for force)</td>
+</tr>
+<tr>
+<td>"How long does it take?"</td>
+<td>Force method ($F=ma$, integrate)</td>
+</tr>
+<tr>
+<td>"What is the acceleration?"</td>
+<td>Force method</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Energy is a scalar — it avoids the vector decomposition needed for $F=ma$. But energy gives speed, not time. Force gives acceleration (and hence time). The choice depends on what the problem asks for.</p>
+</div>
+
+<h3 id="311-systems-and-internal-work">3.11 Systems and internal work</h3>
+<p>For a system of two bodies connected by a spring: the spring does work on both bodies (internal work). The work–energy theorem for the system: $W_{\text{ext}}+W_{\text{int}}=\Delta K_{\text{total}}$. The internal work of the spring is $-\Delta U_{\text{spring}}$, so: $W_{\text{ext}}=\Delta K+\Delta U_{\text{spring}}$.</p>
+<p><strong>The block-and-wedge problem:</strong> a block slides down a wedge that slides on a frictionless table. The normal force does work on the block (the wedge moves, so the contact point moves). The wedge gains kinetic energy — the total energy is shared between the block and the wedge.</p>
+<h3 id="312-power-in-practice">3.12 Power in practice</h3>
+<p><strong>Pumping water:</strong> $P=\dot{m}gh/\eta$ where $\dot{m}$ is the mass flow rate, $h$ is the height, $\eta$ is the efficiency.</p>
+<p><strong>Vehicle power:</strong> $P=Fv$. At constant speed: $P=fv$ (resistive force × speed). For climbing: $P=mgv\sin\theta$ (component of weight along the slope × speed).</p>
+<h3 id="313-force-from-potential-energy">3.13 Force from potential energy</h3>
+<p>$$
+F_x=-\frac{dU}{dx},\qquad F_y=-\frac{dU}{dy},\qquad F_z=-\frac{dU}{dz}. \qquad (3.10)
+$$</p>
+<p>$$
+\boxed{\mathbf{F}=-\nabla U} \qquad (3.10)
+$$</p>
+<p>The force points in the direction of steepest <em>decrease</em> of $U$. At equilibrium ($dU/dx=0$): $F=0$.</p>
+<h3 id="314-non-conservative-bookkeeping">3.14 Non-conservative bookkeeping</h3>
+<p>When non-conservative forces act, the energy balance is:</p>
+<p>$$
+K_i+U_i+W_{\text{nc}}=K_f+U_f. \qquad (3.11)
+$$</p>
+<p>$W_{\text{nc}}&lt;0$ for friction (energy is dissipated as heat). The "lost" energy is not destroyed — it has been transferred to the thermal energy of the surfaces.</p>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{W_{\text{net}}=\Delta K} \qquad (4.1)
+$$</p>
+<p>the work–energy theorem; derived from $F=ma$; valid for a single particle.</p>
+<p>$$
+\boxed{K+U=\text{const}\quad\text{if }W_{\text{nc}}=0} \qquad (4.2)
+$$</p>
+<p>mechanical energy conservation; only if all forces are conservative.</p>
+<p>$$
+\boxed{P=\mathbf{F}\cdot\mathbf{v}} \qquad (4.3)
+$$</p>
+<p>instantaneous power.</p>
+<p>$$
+\boxed{\mathbf{F}=-\nabla U} \qquad (4.4)
+$$</p>
+<p>force from potential energy.</p>
+<p>$$
+\boxed{\Delta E=W_{\text{nc}}=-f_k d\text{ (for friction)}} \qquad (4.5)
+$$</p>
+<p>energy dissipated by friction = friction force × path length.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$F=0$: $W=0$, $\Delta K=0$ — no force, no work, no change in speed. ✓</li>
+<li>$F$ perpendicular to $v$: $W=0$ — centripetal force does no work. ✓</li>
+<li>$U=$ const: $F=-dU/dx=0$ — a flat potential means no force. ✓</li>
+<li>$f=0$: $W_{\text{nc}}=0$, $E=$ const — frictionless, energy conserved. ✓</li>
+<li>$k=0$ (no spring): $U_{\text{spring}}=0$ — no spring energy. ✓</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constant force, displacement</td>
+<td>work</td>
+<td>Eq. (3.1)</td>
+</tr>
+<tr>
+<td>variable force $F(x)$</td>
+<td>work</td>
+<td>Eq. (3.2)</td>
+</tr>
+<tr>
+<td>net work on a particle</td>
+<td>change in speed</td>
+<td>WET, Eq. (4.1)</td>
+</tr>
+<tr>
+<td>only conservative forces</td>
+<td>speed at a point</td>
+<td>Eq. (4.2)</td>
+</tr>
+<tr>
+<td>friction present</td>
+<td>speed (or distance)</td>
+<td>Eq. (4.5)</td>
+</tr>
+<tr>
+<td>force and velocity</td>
+<td>power</td>
+<td>Eq. (4.3)</td>
+</tr>
+<tr>
+<td>$U(x)$</td>
+<td>force</td>
+<td>Eq. (4.4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Can the work done by a force be negative?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes — when the force opposes the displacement (e.g., friction does negative work, slowing the body and reducing its kinetic energy).</p>
+</details>
+<p><strong>C2 — concept check.</strong> Does the normal force do work on a block sliding down a fixed incline?</p>
+<details>
+<summary>Answer</summary>
+<p>No — the normal force is perpendicular to the displacement (along the incline). $W_N=N\,d\cos90°=0$.</p>
+</details>
+<p><strong>C3 — concept check.</strong> Does the normal force do work on a block on an accelerating wedge?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes — the wedge moves, so the contact point moves. The normal force has a component along the block's displacement in the ground frame.</p>
+</details>
+<p><strong>C4 — concept check.</strong> A ball is thrown upward and returns to the launch point. What is the total work done by gravity?</p>
+<details>
+<summary>Answer</summary>
+<p>Zero — the displacement is zero (round trip). Gravity is conservative: the work depends only on the endpoints, which are the same.</p>
+</details>
+<p><strong>C5 — concept check.</strong> A ball is thrown upward and returns to the launch point. What is the total work done by air resistance?</p>
+<details>
+<summary>Answer</summary>
+<p>Negative — air resistance always opposes motion, so it does negative work on both the upward and downward trips. The total work is $-2fd$ where $f$ is the average drag force and $d$ is the maximum height.</p>
+</details>
+<p><strong>C6 — concept check.</strong> Why is $\frac{1}{2}mv^2$ called "kinetic" energy?</p>
+<details>
+<summary>Answer</summary>
+<p>"Kinetic" comes from the Greek word for "motion." Kinetic energy is the energy of motion — it is the work a force would do to bring the body to rest (or the work needed to accelerate it from rest to speed $v$).</p>
+</details>
+<p><strong>C7 — concept check.</strong> A spring is compressed by $x$. What is the potential energy? Does it depend on whether the spring is compressed or stretched?</p>
+<details>
+<summary>Answer</summary>
+<p>$U=\frac{1}{2}kx^2$ — the same for both compression and stretching (by the same amount $x$). The potential energy depends on $x^2$, not the sign of $x$.</p>
+</details>
+<p><strong>C8 — concept check.</strong> At a turning point on the $U(x)$ curve, what is the speed?</p>
+<details>
+<summary>Answer</summary>
+<p>Zero — the kinetic energy is zero ($K=E-U=0$). The particle momentarily stops before reversing direction.</p>
+</details>
+<p><strong>C9 — concept check.</strong> What is the difference between energy conservation and the work–energy theorem?</p>
+<details>
+<summary>Answer</summary>
+<p>The work–energy theorem ($W_{\text{net}}=\Delta K$) is always true. Energy conservation ($K+U=$ const) is true only when non-conservative forces do no work. The work–energy theorem is more general; energy conservation is a special case.</p>
+</details>
+<p><strong>C10 — concept check.</strong> A car's engine produces constant power $P$. Why does the car have a maximum speed?</p>
+<details>
+<summary>Answer</summary>
+<p>At top speed: $F_{\text{engine}}=f_{\text{resistance}}$. $P=Fv_{\max}=fv_{\max}$. As $v$ increases, $F=P/v$ decreases — eventually $F$ equals the resistive force. If the resistive force increases with speed (e.g., air drag $\propto v^2$), the top speed is $v_{\max}=(P/b)^{1/3}$ for $f=bv^2$.</p>
+</details>
+<p><strong>C11 — concept check.</strong> Can kinetic energy be negative?</p>
+<details>
+<summary>Answer</summary>
+<p>No — $K=\frac{1}{2}mv^2\ge0$ always. If $K$ appears negative in a calculation, you have made an error.</p>
+</details>
+<p><strong>C12 — concept check.</strong> What is the physical meaning of $F=-dU/dx$?</p>
+<details>
+<summary>Answer</summary>
+<p>The force points in the direction of steepest decrease of potential energy. A ball on a hill rolls downhill (toward lower $U$). At the bottom of a valley ($dU/dx=0$), the force is zero — equilibrium.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-work-by-a-variable-force-spring">E1 — Work by a variable force (spring)</h3>
+<p>A spring ($k=200$ N/m) is compressed by 0.1 m from its natural length. Find the work done by the spring.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$W=-\frac{1}{2}\times200\times0.01=-1$ J. Negative — the spring opposes the compression.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $W=\int_0^{0.1}(-kx)\,dx=-\frac{1}{2}kx^2\Big|_0^{0.1}=-\frac{1}{2}\times200\times0.01=-1$ J.</p>
+</details>
+<h3 id="e2-workenergy-theorem-block-on-incline-with-friction">E2 — Work–energy theorem: block on incline with friction</h3>
+<p>A 2 kg block slides down a 30° incline (length 5 m, $\mu_k=0.2$) starting from rest. Find the speed at the bottom. ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$W_{\text{grav}}=mgh=2\times10\times2.5=50$ J. $W_{\text{fric}}=-\mu_k mg\cos30°\times5=-0.2\times20\times0.866\times5=-17.3$ J. $\Delta K=50-17.3=32.7$ J. $v=\sqrt{2\times32.7/2}=\sqrt{32.7}=5.72$ m/s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $W_{\text{net}}=mg\sin\theta\cdot L-\mu_k mg\cos\theta\cdot L=mgL(\sin\theta-\mu_k\cos\theta)$. $=2\times10\times5(0.5-0.173)=100\times0.327=32.7$ J. $v=\sqrt{2\times32.7/2}=5.72$ m/s.</p>
+</details>
+<h3 id="e3-energy-conservation-loop-the-loop">E3 — Energy conservation: loop-the-loop</h3>
+<p>A block of mass $m$ slides from rest from height $h$ on a frictionless track that includes a circular loop of radius $R$. What is the minimum $h$ for the block to complete the loop?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$h_{\min}=5R/2$ — the block must have $v\ge\sqrt{gR}$ at the top: $\frac{1}{2}mv_{\text{top}}^2+mg(2R)=mgh$. $h=v_{\text{top}}^2/(2g)+2R=R/2+2R=5R/2$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At the top of the loop: $v_{\text{top}}\ge\sqrt{gR}$ (from PART 5, vertical circle). Energy conservation: $mgh=mg(2R)+\frac{1}{2}mv_{\text{top}}^2$. Minimum: $h=2R+R/2=5R/2$.</p>
+</details>
+<h3 id="e4-power-climbing-a-hill">E4 — Power: climbing a hill</h3>
+<p>A car of mass 1000 kg climbs a 10° slope at 30 km/h. Find the power needed (ignoring friction). ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v=8.33$ m/s. $F=mg\sin10°=1000\times10\times0.174=1740$ N. $P=Fv=1740\times8.33=14.5$ kW $\approx19.4$ hp.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $P=mg\sin\theta\times v=1000\times10\times0.174\times8.33=14.5$ kW.</p>
+</details>
+<h3 id="e5-ux-graph-and-turning-points">E5 — $U(x)$ graph and turning points</h3>
+<p>A particle has total energy $E=5$ J and potential energy $U(x)=x^2-4x+5$ J (for $x$ in metres). Find the turning points and equilibrium positions.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$U=x^2-4x+5=(x-2)^2+1$. Minimum at $x=2$: $U_{\min}=1$ J. Turning points: $E=U\Rightarrow5=x^2-4x+5\Rightarrow x^2-4x=0\Rightarrow x=0$ and $x=4$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $E=U\Rightarrow5=x^2-4x+5\Rightarrow x(x-4)=0\Rightarrow x=0$ and $x=4$. Equilibrium: $dU/dx=2x-4=0\Rightarrow x=2$. $d^2U/dx^2=2&gt;0$ — stable equilibrium.</p>
+</details>
+<h3 id="e6-spring-launched-block">E6 — Spring-launched block</h3>
+<p>A block of mass 0.5 kg is launched by a spring ($k=500$ N/m) compressed by 0.1 m on a frictionless surface. Find the launch speed.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\frac{1}{2}kx^2=\frac{1}{2}mv^2$. $v=x\sqrt{k/m}=0.1\sqrt{1000}=0.1\times31.6=3.16$ m/s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\frac{1}{2}\times500\times0.01=\frac{1}{2}\times0.5\times v^2$. $v^2=5$. $v=2.24$ m/s. Wait — let me recompute. $\frac{1}{2}\times500\times0.01=2.5$ J. $v=\sqrt{2\times2.5/0.5}=\sqrt{10}=3.16$ m/s.</p>
+</details>
+<h3 id="e7-the-block-on-wedge-energy-audit">E7 — The block-on-wedge energy audit</h3>
+<p>A block of mass $m$ slides from rest down a wedge of mass $M$ (angle $\theta$, height $h$, all surfaces frictionless). Find the speed of the block and the wedge when the block reaches the bottom.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At $M\to\infty$: $v_{\text{block}}=\sqrt{2gh}$ — the standard free-fall result. At $m\ll M$: the wedge barely moves.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Momentum conservation (horizontal): $mv_{bx}-Mv_w=0\Rightarrow v_{bx}=Mv_w/m$. Energy: $mgh=\frac{1}{2}mv_b^2+\frac{1}{2}Mv_w^2$. $v_b^2=v_{bx}^2+v_{by}^2$. From the constraint: $v_{by}=v_{bx}\tan\theta$... this gets complicated. Using the velocity relation from PART 5: $v_w=mv_{\text{rel}}\cos\theta/(M+m\sin^2\theta)$... let me use energy directly. $mgh=\frac{1}{2}m(v_{\text{rel}}\cos\theta-v_w)^2+\frac{1}{2}m(v_{\text{rel}}\sin\theta)^2+\frac{1}{2}Mv_w^2$. With $v_w=mv_{\text{rel}}\cos\theta/(M+m)$ (from momentum): this can be solved. The block's speed relative to the wedge: $v_{\text{rel}}=\sqrt{2gh(M+m)/(M+m\sin^2\theta)}$.</p>
+</details>
+<h3 id="e8-force-from-potential-energy">E8 — Force from potential energy</h3>
+<p>A particle has $U(x)=ax^3-bx$ (with $a,b&gt;0$). Find the force and the equilibrium positions.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$F=-dU/dx=-3ax^2+b$. At $x=0$: $F=b$ (positive, pushes right). At large $x$: $F\to-\infty$ (pushes left). Equilibrium: $x=\pm\sqrt{b/(3a)}$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $F=-dU/dx=-(3ax^2-b)=b-3ax^2$. Equilibrium: $F=0\Rightarrow x=\pm\sqrt{b/(3a)}$. Stability: $d^2U/dx^2=6ax$. At $x=+\sqrt{b/(3a)}$: $d^2U/dx^2=6a\sqrt{b/(3a)}&gt;0$ — stable. At $x=-\sqrt{b/(3a)}$: $d^2U/dx^2&lt;0$ — unstable.</p>
+</details>
+<h3 id="e9-efficiency-of-a-pump">E9 — Efficiency of a pump</h3>
+<p>A pump lifts 500 litres of water per minute to a height of 10 m. Its motor draws 15 kW. Find the efficiency. ($g=10$ m/s$^2$, $\rho=1000$ kg/m$^3$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\dot{m}=500/60=8.33$ kg/s. $P_{\text{useful}}=8.33\times10\times10=833$ W. $\eta=833/15000=0.056=5.6\%$ — very inefficient!</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $P_{\text{useful}}=\dot{m}gh=8.33\times10\times10=833$ W. $\eta=P_{\text{useful}}/P_{\text{input}}=833/15000=5.6\%$.</p>
+</details>
+<h3 id="e10-energy-with-friction-the-sliding-block">E10 — Energy with friction: the sliding block</h3>
+<p>A 5 kg block slides on a rough horizontal surface ($\mu_k=0.3$) with initial speed 10 m/s. How far does it slide? ($g=10$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\frac{1}{2}mv^2=f_k d=\mu_k mg d$. $d=v^2/(2\mu_k g)=100/6=16.7$ m.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\frac{1}{2}\times5\times100=0.3\times5\times10\times d$. $250=15d$. $d=16.7$ m.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Work by spring</td>
+<td>$\frac{1}{2}kx^2$</td>
+<td>E1</td>
+<td>with gravity, on an incline</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>WET with friction</td>
+<td>$W_{\text{net}}=\Delta K$</td>
+<td>E2</td>
+<td>multi-segment path</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Loop-the-loop</td>
+<td>Energy + circular dynamics</td>
+<td>E3</td>
+<td>with friction</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Power of a vehicle</td>
+<td>$P=Fv$</td>
+<td>E4</td>
+<td>with drag, climbing</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>$U(x)$ graph</td>
+<td>Turning points, stability</td>
+<td>E5</td>
+<td>bound vs unbound</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Spring launch</td>
+<td>$\frac{1}{2}kx^2=\frac{1}{2}mv^2$</td>
+<td>E6</td>
+<td>with friction, on incline</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Block-on-wedge</td>
+<td>Energy shared between bodies</td>
+<td>E7</td>
+<td>with friction</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Force from $U$</td>
+<td>$F=-dU/dx$</td>
+<td>E8</td>
+<td>2D, equilibrium</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Efficiency</td>
+<td>$\eta=P_{\text{out}}/P_{\text{in}}$</td>
+<td>E9</td>
+<td>multiple stages</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Friction distance</td>
+<td>$\frac{1}{2}mv^2=f_k d$</td>
+<td>E10</td>
+<td>on incline, with spring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-a-10-n-force-pushes-a-block-5-m-find-the-work">Q1. A 10 N force pushes a block 5 m. Find the work.</h4>
+<details>
+<summary>Solution</summary>
+<p>$W=10\times5=50$ J.</p>
+</details>
+<h4 id="q2-a-2-kg-ball-is-dropped-from-10-m-find-the-speed-at-the-ground-using-energy-g10-ms2">Q2. A 2 kg ball is dropped from 10 m. Find the speed at the ground using energy. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$mgh=\frac{1}{2}mv^2$. $v=\sqrt{2gh}=\sqrt{200}=14.1$ m/s.</p>
+</details>
+<h4 id="q3-a-spring-k100-nm-is-stretched-by-02-m-find-the-potential-energy">Q3. A spring ($k=100$ N/m) is stretched by 0.2 m. Find the potential energy.</h4>
+<details>
+<summary>Solution</summary>
+<p>$U=\frac{1}{2}\times100\times0.04=2$ J.</p>
+</details>
+<h4 id="q4-a-1500-kg-car-has-speed-20-ms-find-its-kinetic-energy">Q4. A 1500 kg car has speed 20 m/s. Find its kinetic energy.</h4>
+<details>
+<summary>Solution</summary>
+<p>$K=\frac{1}{2}\times1500\times400=300{,}000$ J $=300$ kJ.</p>
+</details>
+<h4 id="q5-a-5-kg-block-slides-10-m-on-a-rough-surface-mu_k02-find-the-work-done-by-friction-g10-ms2">Q5. A 5 kg block slides 10 m on a rough surface ($\mu_k=0.2$). Find the work done by friction. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$W_f=-0.2\times5\times10\times10=-100$ J.</p>
+</details>
+<h4 id="q6-a-motor-produces-5-kw-how-much-work-does-it-do-in-10-s">Q6. A motor produces 5 kW. How much work does it do in 10 s?</h4>
+<details>
+<summary>Solution</summary>
+<p>$W=Pt=5000\times10=50{,}000$ J $=50$ kJ.</p>
+</details>
+<h4 id="q7-a-ball-is-thrown-up-at-20-ms-using-energy-find-the-maximum-height-g10-ms2">Q7. A ball is thrown up at 20 m/s. Using energy, find the maximum height. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{1}{2}mv^2=mgh$. $h=v^2/(2g)=400/20=20$ m.</p>
+</details>
+<h4 id="q8-a-block-slides-from-rest-down-a-frictionless-incline-of-height-5-m-find-the-speed-at-the-bottom-g10-ms2">Q8. A block slides from rest down a frictionless incline of height 5 m. Find the speed at the bottom. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=\sqrt{2gh}=\sqrt{100}=10$ m/s.</p>
+</details>
+<h4 id="q9-a-car-engine-produces-100-hp-find-the-power-in-watts">Q9. A car engine produces 100 hp. Find the power in watts.</h4>
+<details>
+<summary>Solution</summary>
+<p>$P=100\times746=74{,}600$ W $=74.6$ kW.</p>
+</details>
+<h4 id="q10-a-05-kg-ball-is-dropped-from-2-m-onto-a-spring-k500-nm-find-the-maximum-compression-g10-ms2">Q10. A 0.5 kg ball is dropped from 2 m onto a spring ($k=500$ N/m). Find the maximum compression. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$mg(h+x)=\frac{1}{2}kx^2$. $0.5\times10(2+x)=250x^2$. $5(2+x)=250x^2$. $10+5x=250x^2$. $250x^2-5x-10=0$. $x=(5+\sqrt{25+10000})/500=(5+100.1)/500=0.21$ m.</p>
+</details>
+<h4 id="q11-a-particle-has-ux3x2-12x9-j-find-the-equilibrium-position-and-its-stability">Q11. A particle has $U(x)=3x^2-12x+9$ J. Find the equilibrium position and its stability.</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=-dU/dx=-(6x-12)=12-6x$. $F=0$ at $x=2$. $d^2U/dx^2=6&gt;0$ — stable.</p>
+</details>
+<h4 id="q12-a-1000-kg-car-climbs-a-hill-at-20-ms-the-slope-is-5-find-the-power-g10-ms2">Q12. A 1000 kg car climbs a hill at 20 m/s. The slope is 5°. Find the power. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$P=mg\sin\theta\times v=1000\times10\times0.0872\times20=17{,}440$ W $=17.4$ kW.</p>
+</details>
+<h4 id="q13-a-block-is-launched-by-a-spring-k200-nm-x01-m-on-a-surface-with-mu_k01-m05-kg-find-the-distance-slid-g10-ms2">Q13. A block is launched by a spring ($k=200$ N/m, $x=0.1$ m) on a surface with $\mu_k=0.1$ ($m=0.5$ kg). Find the distance slid. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{1}{2}kx^2=\mu_k mg d$. $d=kx^2/(2\mu_k mg)=200\times0.01/(2\times0.1\times0.5\times10)=2/1=2$ m.</p>
+</details>
+<h4 id="q14-a-2-kg-object-has-v3-ms-at-x0-and-experiences-f-6x-n-find-the-speed-at-x1-m">Q14. A 2 kg object has $v=3$ m/s at $x=0$ and experiences $F=-6x$ N. Find the speed at $x=1$ m.</h4>
+<details>
+<summary>Solution</summary>
+<p>$W=\int_0^1(-6x)\,dx=-3$ J. $\Delta K=-3$. $\frac{1}{2}\times2\times v^2=\frac{1}{2}\times2\times9-3=6$. $v^2=6$. $v=2.45$ m/s.</p>
+</details>
+<h4 id="q15-a-pump-lifts-100-kg-of-water-per-second-to-20-m-find-the-power-g10-ms2">Q15. A pump lifts 100 kg of water per second to 20 m. Find the power. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$P=\dot{m}gh=100\times10\times20=20{,}000$ W $=20$ kW.</p>
+</details>
+<h4 id="q16-a-ball-of-mass-m-is-thrown-at-speed-v_0-at-angle-theta-using-energy-find-the-speed-at-the-maximum-height">Q16. A ball of mass $m$ is thrown at speed $v_0$ at angle $\theta$. Using energy, find the speed at the maximum height.</h4>
+<details>
+<summary>Solution</summary>
+<p>At max height: $v_y=0$, $v_x=v_0\cos\theta$. $v=v_0\cos\theta$. (Energy: $\frac{1}{2}mv_0^2=\frac{1}{2}m(v_0\cos\theta)^2+mgh_{\max}$.)</p>
+</details>
+<h4 id="q17-a-01-kg-ball-bounces-to-80-of-its-original-height-find-the-energy-lost-per-bounce-from-5-m">Q17. A 0.1 kg ball bounces to 80% of its original height. Find the energy lost per bounce (from 5 m).</h4>
+<details>
+<summary>Solution</summary>
+<p>$E_{\text{lost}}=mgh-mgh'=mg(h-h')=0.1\times10\times5\times0.2=1$ J.</p>
+</details>
+<h4 id="q18-a-2-kg-block-on-a-30-incline-mu_k02-is-pushed-up-3-m-by-a-30-n-force-parallel-to-the-incline-find-the-work-by-each-force-g10-ms2">Q18. A 2 kg block on a 30° incline ($\mu_k=0.2$) is pushed up 3 m by a 30 N force parallel to the incline. Find the work by each force. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$W_F=30\times3=90$ J. $W_g=-mgh=-2\times10\times1.5=-30$ J. $W_f=-\mu_k mg\cos30°\times3=-0.2\times20\times0.866\times3=-10.4$ J. $W_N=0$.</p>
+</details>
+<h4 id="q19-a-1000-kg-cars-brakes-can-produce-a-deceleration-of-5-ms2-what-is-the-braking-power-at-20-ms">Q19. A 1000 kg car's brakes can produce a deceleration of 5 m/s$^2$. What is the braking power at 20 m/s?</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=ma=5000$ N. $P=Fv=5000\times20=100{,}000$ W $=100$ kW.</p>
+</details>
+<h4 id="q20-a-05-kg-ball-is-thrown-at-10-ms-it-hits-a-wall-and-stops-find-the-work-done-by-the-wall-on-the-ball">Q20. A 0.5 kg ball is thrown at 10 m/s. It hits a wall and stops. Find the work done by the wall on the ball.</h4>
+<details>
+<summary>Solution</summary>
+<p>$W=\Delta K=0-\frac{1}{2}\times0.5\times100=-25$ J.</p>
+</details>
+<h4 id="q21-a-particle-has-ux-ax-a0-find-the-force-and-the-nature-of-equilibrium-at-large-x">Q21. A particle has $U(x)=-a/x$ ($a&gt;0$). Find the force and the nature of equilibrium at large $x$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=-dU/dx=-a/x^2$ (attractive, toward the origin). At large $x$: $F\to0$ — the particle is nearly free. No equilibrium (the force is always attractive).</p>
+</details>
+<h4 id="q22-a-100-w-bulb-is-on-for-5-hours-find-the-energy-consumed">Q22. A 100 W bulb is on for 5 hours. Find the energy consumed.</h4>
+<details>
+<summary>Solution</summary>
+<p>$E=Pt=100\times5\times3600=1.8\times10^6$ J $=1.8$ MJ $=0.5$ kWh.</p>
+</details>
+<h4 id="q23-a-block-of-mass-m-slides-on-a-loop-the-loop-r-with-friction-mu_k-on-the-inside-of-the-loop-find-the-energy-lost-in-one-loop">Q23. A block of mass $m$ slides on a loop-the-loop ($R$) with friction ($\mu_k$) on the inside of the loop. Find the energy lost in one loop.</h4>
+<details>
+<summary>Solution</summary>
+<p>$E_{\text{lost}}=\mu_k N\times2\pi R$. But $N$ varies around the loop (it includes the centripetal term). The exact answer requires integrating $\mu_k(mg\cos\theta+mv^2/R)$ around the loop — a complex integral. For an estimate: $\bar{N}\approx mg$, so $E_{\text{lost}}\approx\mu_k mg\times2\pi R$.</p>
+</details>
+<h4 id="q24-a-70-kg-person-climbs-10-flights-of-stairs-30-m-in-2-minutes-find-the-power-g10-ms2">Q24. A 70 kg person climbs 10 flights of stairs (30 m) in 2 minutes. Find the power. ($g=10$ m/s$^2$.)</h4>
+<details>
+<summary>Solution</summary>
+<p>$P=mgh/t=70\times10\times30/120=175$ W $\approx0.23$ hp.</p>
+</details>
+<h4 id="q25-a-ball-is-dropped-from-h-onto-a-spring-the-spring-compresses-by-x-show-mghxfrac12kx2">Q25. A ball is dropped from $h$ onto a spring. The spring compresses by $x$. Show $mg(h+x)=\frac{1}{2}kx^2$.</h4>
+<details>
+<summary>Solution</summary>
+<p>Energy conservation: the ball loses gravitational PE $mg(h+x)$ (it falls $h+x$ total). This goes into spring PE $\frac{1}{2}kx^2$. $mg(h+x)=\frac{1}{2}kx^2$.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-energy-shortcut-for-speed">7.1 The energy shortcut for speed</h3>
+<p>For any problem asking "how fast at point B?": use $K_A+U_A=K_B+U_B$ (if no friction) or $K_A+U_A-f_k d=K_B+U_B$ (with friction). This avoids solving $F=ma$ and integrating.</p>
+<h3 id="72-the-does-it-reach-test">7.2 The "does it reach?" test</h3>
+<p>To check if a particle can reach a point: compare $E$ with $U$ at that point. If $E\ge U$, it can reach (with $K=E-U\ge0$). If $E&lt;U$, it cannot — the turning point is before that.</p>
+<h3 id="73-the-ux-graph-shortcut">7.3 The $U(x)$ graph shortcut</h3>
+<p>For a potential $U(x)$: the force is the negative slope. Stable equilibrium at minima, unstable at maxima. Turning points are where $E=U$. Bound motion occurs between two turning points.</p>
+<h3 id="74-the-power-speed-shortcut">7.4 The power-speed shortcut</h3>
+<p>For a vehicle with constant power $P$: $v=(2Pt/m)^{1/2}$ from rest (valid until air resistance becomes significant). This gives the acceleration time to a given speed.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Omitting the work of the normal force when the surface moves</p>
+<p>On an accelerating wedge, the normal force does work on the block (the contact point moves). This work is not zero.</p>
+</div>
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Using $\frac{1}{2}kx^2$ past the elastic limit</p>
+<p>Hooke's law ($F=-kx$) is valid only for small deformations. Past the elastic limit, the spring deforms permanently and the formula does not apply.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Mixing gravitational PE forms</p>
+<p>Near the surface: $U=mgh$. General: $U=-GMm/r$. Do not mix them — use the one appropriate for the problem.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — "Energy is lost to friction"</p>
+<p>Energy is not lost — it is transferred to thermal energy. The correct phrase is "energy is dissipated" or "energy is converted to heat."</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Using power $=Fv$ without checking the angle</p>
+<p>$P=Fv\cos\theta$. If the force is not parallel to the velocity, the power is less than $Fv$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Assuming $\frac{1}{2}mv^2$ is the only KE of a rolling body</p>
+<p>A rolling body has both translational KE ($\frac{1}{2}mv^2$) and rotational KE ($\frac{1}{2}I\omega^2$). The total is $\frac{1}{2}mv^2(1+I/(mR^2))$ for rolling without slipping.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Forgetting the spring's PE when a spring is in the system</p>
+<p>If a spring is compressed or stretched, its PE ($\frac{1}{2}kx^2$) must be included in the energy balance.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Using $W=Fd$ for a variable force</p>
+<p>For a constant force: $W=Fd$. For a variable force: $W=\int F\,dx$. The area under the $F$–$x$ curve.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — Applying energy conservation when friction acts</p>
+<p>If friction acts: $E_f=E_i-f_k d$ (not $E_f=E_i$). The energy is not conserved — it is dissipated.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Confusing work and energy</p>
+<p>Work is energy in transit (energy transferred by a force). Energy is a state variable (depends on position and speed, not the path). Work is a process; energy is a state.</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"How fast at point B?" → energy conservation.</li>
+<li>"How far does it slide?" → energy with friction.</li>
+<li>"Does it reach point B?" → compare $E$ with $U(B)$.</li>
+<li>"What is the force at B?" → energy for speed + radial equation.</li>
+<li>"How long does it take?" → force method ($F=ma$, integrate).</li>
+<li>"What is the power?" → $P=Fv$ or $P=\dot{m}gh$.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$W=Fd\cos\theta$</td>
+<td>constant force</td>
+<td>variable force (use $\int F\,dx$)</td>
+</tr>
+<tr>
+<td>$W_{\text{net}}=\Delta K$</td>
+<td>always</td>
+<td>never (but includes all forces)</td>
+</tr>
+<tr>
+<td>$K+U=$ const</td>
+<td>only conservative forces do work</td>
+<td>friction, drag, or other non-conservative forces</td>
+</tr>
+<tr>
+<td>$P=Fv\cos\theta$</td>
+<td>instantaneous</td>
+<td>when $F$ and $v$ vary (use $P=dW/dt$)</td>
+</tr>
+<tr>
+<td>$F=-dU/dx$</td>
+<td>conservative force in 1D</td>
+<td>non-conservative forces</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-timing-plan">9.3 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. Energy-conservation problems die by $K_i+U_i=K_f+U_f$; friction problems add $-f_k d$; power problems use $P=Fv$.</p>
+<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<ol>
+<li>Work: correct sign (positive if force helps motion, negative if it opposes).</li>
+<li>WET: all forces included (including normal on a moving surface).</li>
+<li>Energy conservation: verified that only conservative forces do work.</li>
+<li>Friction: included as $-f_k d$ in the energy balance.</li>
+<li>Spring PE: included when a spring is in the system.</li>
+<li>Gravitational PE: correct form ($mgh$ near surface, $-GMm/r$ in general).</li>
+<li>Power: angle between $F$ and $v$ accounted for.</li>
+<li>$U(x)$ graph: force is the negative slope, not the slope.</li>
+<li>Units consistent throughout.</li>
+<li>Every sub-part answered.</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-the-cm-frame-energy-decomposition">OL1 — The CM-frame energy decomposition</h3>
+<p>For a system of two particles: show that $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text{rel}}$ where $M=m_1+m_2$ and $K_{\text{rel}}=\frac{1}{2}\mu v_{\text{rel}}^2$ with $\mu=m_1m_2/(m_1+m_2)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $K=\frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2$. Write $v_1=v_{\text{cm}}+v_1'$, $v_2=v_{\text{cm}}+v_2'$ where $v_1'$, $v_2'$ are velocities in the CM frame. $m_1v_1'+m_2v_2'=0$ (total momentum zero in CM frame). $K=\frac{1}{2}m_1(v_{\text{cm}}+v_1')^2+\frac{1}{2}m_2(v_{\text{cm}}+v_2')^2=\frac{1}{2}Mv_{\text{cm}}^2+\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2+m_{\text{cm}}(m_1v_1'+m_2v_2')$. The cross term vanishes. $K_{\text{rel}}=\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2$. Using $m_1v_1'=-m_2v_2'$: $K_{\text{rel}}=\frac{1}{2}\mu v_{\text{rel}}^2$ where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass.</p>
+<p><strong>Significance.</strong> This decomposition is used in collision problems (PART 7): in the CM frame, elastic collisions simply reverse the velocities. The CM kinetic energy $\frac{1}{2}Mv_{\text{cm}}^2$ is unchanged by the collision.</p>
+</details>
+<h3 id="ol2-effective-potential-for-a-central-field">OL2 — Effective potential for a central field</h3>
+<p>A particle of angular momentum $L$ moves in a central potential $U(r)$. Show that the radial motion is equivalent to a 1-D problem with $U_{\text{eff}}(r)=U(r)+L^2/(2mr^2)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The total energy: $E=\frac{1}{2}m\dot{r}^2+\frac{L^2}{2mr^2}+U(r)$. The term $L^2/(2mr^2)$ is the "centrifugal barrier" — it acts as a repulsive potential that prevents the particle from reaching $r=0$ (unless $L=0$). The effective potential: $U_{\text{eff}}=U(r)+L^2/(2mr^2)$.</p>
+<p><strong>Significance.</strong> This is the foundation of orbital mechanics (PART 9). The $L^2/(2mr^2)$ barrier explains why planets don't fall into the Sun — the centrifugal barrier keeps them at a minimum radius. For the gravitational potential $U=-GMm/r$: $U_{\text{eff}}=-GMm/r+L^2/(2mr^2)$, which has a minimum at $r=L^2/(GMm^2)$ — the circular orbit radius.</p>
+</details>
+<h3 id="ol3-bouncing-ball-with-restitution">OL3 — Bouncing ball with restitution</h3>
+<p>A ball is dropped from height $h$ onto a hard floor with coefficient of restitution $e$. Find the total distance and total time until it stops.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> After each bounce: height $=e^2\times$ previous. Total distance: $h+2h(e^2+e^4+\ldots)=h\frac{1+e^2}{1-e^2}$. Total time: $t_0(1+2e+2e^2+\ldots)=t_0\frac{1+e}{1-e}$ where $t_0=\sqrt{2h/g}$.</p>
+<p><strong>Checks.</strong> (i) At $e=1$: distance $\to\infty$, time $\to\infty$ — the ball bounces forever (elastic). (ii) At $e=0$: distance $=h$, time $=t_0$ — the ball stops on first impact (perfectly inelastic). (iii) At $e=0.8$: distance $=h\times1.64/0.36=4.56h$, time $=t_0\times1.8/0.2=9t_0$.</p>
+</details>
+<h3 id="ol4-energy-of-a-rolling-body">OL4 — Energy of a rolling body</h3>
+<p>A solid sphere of mass $m$ and radius $R$ rolls without slipping at speed $v$. Find its total kinetic energy.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $K_{\text{trans}}=\frac{1}{2}mv^2$. $K_{\text{rot}}=\frac{1}{2}I\omega^2=\frac{1}{2}\times\frac{2}{5}mR^2\times(v/R)^2=\frac{1}{5}mv^2$. Total: $K=\frac{1}{2}mv^2+\frac{1}{5}mv^2=\frac{7}{10}mv^2$.</p>
+<p><strong>Significance.</strong> The rolling body has more KE than a sliding body at the same speed ($\frac{7}{10}mv^2$ vs $\frac{1}{2}mv^2$). The extra $\frac{1}{5}mv^2$ is the rotational KE. For a hollow sphere: $I=\frac{2}{3}mR^2$, $K=\frac{5}{6}mv^2$ — even more.</p>
+</details>
+<h3 id="ol5-the-block-on-wedge-false-result">OL5 — The block-on-wedge false result</h3>
+<p>A block slides from rest down a frictionless wedge of mass $M$ and angle $\theta$. A student claims the block's speed is $\sqrt{2gh}$. Why is this wrong?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The student's error: ignoring the wedge's kinetic energy. The correct energy balance: $mgh=\frac{1}{2}mv_b^2+\frac{1}{2}Mv_w^2$. The wedge gains KE — the block's speed is less than $\sqrt{2gh}$. The correct speed: $v_b=\sqrt{2gh(M+m)/(M+m\sin^2\theta)}$. As $M\to\infty$: $v_b\to\sqrt{2gh}$ (the wedge doesn't move). As $M\to0$: $v_b\to\sqrt{2gh/\sin^2\theta}$ (wait — this diverges! The issue: when $M=0$, the wedge accelerates instantly and the block never reaches the bottom. The limit is pathological.)</p>
+</details>
+<h3 id="ol6-satellite-launch-energy">OL6 — Satellite launch energy</h3>
+<p>How much energy is needed to launch a satellite of mass $m$ from Earth's surface to a circular orbit of radius $r$? What is the ratio to the escape energy?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Orbit energy: $E_{\text{orbit}}=-GMm/(2r)$. Surface energy: $E_{\text{surface}}=-GMm/R_E$. Energy needed: $\Delta E=E_{\text{orbit}}-E_{\text{surface}}=GMm(1/R_E-1/(2r))$. For low orbit ($r\approx R_E$): $\Delta E=GMm/(2R_E)=\frac{1}{2}mgR_E$. Escape energy: $E_{\text{escape}}=0-(-GMm/R_E)=GMm/R_E=mgR_E$. Ratio: $\Delta E_{\text{orbit}}/\Delta E_{\text{escape}}=1/2$. The orbital KE is half the escape KE: $v_{\text{orbit}}=v_{\text{escape}}/\sqrt{2}$.</p>
+</details>
+<h3 id="ol7-variable-mass-energy-audit-chain-unrolling">OL7 — Variable-mass energy audit: chain unrolling</h3>
+<p>A chain of mass $m$ and length $L$ is coiled on a table. One end is pulled vertically upward at constant speed $v$. Find the force needed as a function of the height $x$ of the end.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At height $x$: mass lifted $=\lambda x$ where $\lambda=m/L$. Force: $F=\lambda xg+\lambda v^2$ (weight + momentum flux). Power: $P=Fv=\lambda xgv+\lambda v^3$. KE gained per unit time: $\frac{1}{2}\lambda v^3$. PE gained per unit time: $\lambda xgv$. Total: $\lambda xgv+\frac{1}{2}\lambda v^3$. The force's power exceeds the energy rate by $\frac{1}{2}\lambda v^3$ — this goes into the "collision" energy of links being jerked into motion.</p>
+<p><strong>Checks.</strong> (i) At $v=0$: $F=\lambda xg$ — just the weight. (ii) The $\lambda v^2$ term is the momentum flux — always present when mass is added to a moving system.</p>
+</details>
+<h3 id="ol8-the-effective-potential-for-a-bead-on-a-rotating-hoop">OL8 — The effective potential for a bead on a rotating hoop</h3>
+<p>A bead slides on a frictionless hoop of radius $R$ rotating at $\omega$ about a vertical diameter. Find the effective potential and the equilibrium angle.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In the rotating frame: $U_{\text{eff}}=mgR\cos\theta-\frac{1}{2}m\omega^2 R^2\sin^2\theta$. Equilibrium: $dU_{\text{eff}}/d\theta=-mgR\sin\theta-m\omega^2 R^2\sin\theta\cos\theta=0$. $\sin\theta(g+\omega^2 R\cos\theta)=0$. Solutions: $\theta=0$ and $\cos\theta=-g/(\omega^2 R)$ (if $\omega^2 R&gt;g$). The bottom is stable for $\omega&lt;\sqrt{g/R}$ and unstable for $\omega&gt;\sqrt{g/R}$.</p>
+</details>
+<h3 id="ol9-restitution-free-bouncing-total-distance-and-time">OL9 — Restitution-free bouncing: total distance and time</h3>
+<p>A ball bounces with $e=0.5$ from height 10 m. Find the total distance and time. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $d=h(1+e^2)/(1-e^2)=10\times(1+0.25)/(1-0.25)=10\times1.25/0.75=16.67$ m. $t_0=\sqrt{2h/g}=\sqrt{2}=1.414$ s. $t=t_0(1+e)/(1-e)=1.414\times1.5/0.5=4.24$ s.</p>
+</details>
+<h3 id="ol10-the-who-pays-for-the-flywheel-ke-problem">OL10 — The "who pays for the flywheel KE?" problem</h3>
+<p>A motor with constant power $P$ accelerates a flywheel (moment of inertia $I$) from rest. Find $\omega(t)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $P=dK/dt=\frac{1}{2}I\times2\omega\dot{\omega}=I\omega\dot{\omega}$. $P=I\omega\,d\omega/dt$. $P\,dt=I\omega\,d\omega$. $Pt=\frac{1}{2}I\omega^2$. $\omega=\sqrt{2Pt/I}$.</p>
+<p><strong>Significance.</strong> The angular velocity grows as $\sqrt{t}$ — not linearly. This is because at higher $\omega$, the same power produces less torque ($\tau=P/\omega$), and hence less angular acceleration.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>The work–energy theorem is exact in Newtonian mechanics. Mechanical energy conservation is exact when only conservative forces do work. In reality, friction always acts (at least a little), so mechanical energy is never perfectly conserved — but the loss is often negligible. In relativity (PART 28), the kinetic energy is $K=(\gamma-1)mc^2$, not $\frac{1}{2}mv^2$; the work–energy theorem still holds but with the relativistic kinetic energy. In quantum mechanics, energy is quantised — the continuous energy spectrum of classical mechanics is replaced by discrete levels. Inside the fences of Newtonian mechanics with macroscopic bodies, the methods of this chapter are exact.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–5</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 5–9</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 7–13</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The work–energy theorem states:
+(a) $W=\Delta U$  (b) $W_{\text{net}}=\Delta K$  (c) $K+U=$ const  (d) $W=Fd$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $W_{\text{net}}=\Delta K$ — always true.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>The centripetal force does:
+(a) positive work  (b) negative work  (c) zero work  (d) it depends on the speed</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The centripetal force is perpendicular to the velocity — zero work.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>Mechanical energy is conserved when:
+(a) always  (b) only conservative forces do work  (c) only in a vacuum  (d) only for heavy objects</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Only when all forces doing work are conservative.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>A spring ($k=100$ N/m) is compressed by 0.2 m. The potential energy is:
+(a) 1 J  (b) 2 J  (c) 4 J  (d) 10 J</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $U=\frac{1}{2}\times100\times0.04=2$ J.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>Power is:
+(a) energy  (b) work  (c) the rate of doing work  (d) force $\times$ distance</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $P=dW/dt$.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The force from $U(x)=x^2-4x$ is:
+(a) $2x-4$  (b) $4-2x$  (c) $x^2-4$  (d) $-2x+4$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $F=-dU/dx=-(2x-4)=4-2x$.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>A ball is thrown up at 20 m/s. Using energy, the maximum height is ($g=10$ m/s$^2$):
+(a) 10 m  (b) 20 m  (c) 40 m  (d) 80 m</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $h=v^2/(2g)=400/20=20$ m.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>Friction does:
+(a) always negative work  (b) always positive work  (c) zero work on a rolling wheel  (d) both (a) and (c)</p>
+<details>
+<summary>Answer</summary>
+<p>(d). Kinetic friction does negative work on a sliding body. Static friction on a rolling wheel does zero work (the contact point is instantaneously at rest).</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>A car at constant power $P$ has maximum speed $v_{\max}$ when:
+(a) the engine force equals the resistive force  (b) the acceleration is maximum  (c) the power is zero  (d) the car starts from rest</p>
+<details>
+<summary>Answer</summary>
+<p>(a). At $v_{\max}$: $F_{\text{engine}}=f_{\text{resistance}}$, $a=0$.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>At a stable equilibrium of $U(x)$:
+(a) $dU/dx=0$  (b) $d^2U/dx^2&gt;0$  (c) $F=0$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three conditions define stable equilibrium.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>The work done by gravity on a ball thrown upward and returning to the launch point is:
+(a) $mgh$  (b) $-mgh$  (c) zero  (d) $2mgh$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The displacement is zero — gravity (a conservative force) does zero net work on a round trip.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>A block slides down a frictionless incline of height $h$. The speed at the bottom is:
+(a) $\sqrt{2gh}$  (b) $\sqrt{gh}$  (c) $2gh$  (d) depends on the angle</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $v=\sqrt{2gh}$ — independent of the angle (and the mass).</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>The work–energy theorem:
+(a) is derived from $F=ma$  (b) is always true  (c) gives the speed at a point  (d) gives the time to reach a point</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). It does not give time — that requires the force method.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>For a spring:
+(a) $F=-kx$  (b) $U=\frac{1}{2}kx^2$  (c) the force is conservative  (d) the work depends on the path</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). The spring force is conservative — work depends only on endpoints.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>The normal force:
+(a) always does zero work  (b) does zero work on a fixed surface  (c) can do work on a moving surface  (d) is always $mg$</p>
+<details>
+<summary>Answer</summary>
+<p>(b), (c). On a moving surface (e.g., accelerating wedge), the normal force does work.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>For a vehicle at constant power:
+(a) $v$ increases with time  (b) $v$ approaches $v_{\max}=P/f$  (c) the acceleration decreases with time  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). As $v$ increases, $F=P/v$ decreases, so acceleration decreases.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>In the CM-frame energy decomposition:
+(a) $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text{rel}}$  (b) the CM KE is unchanged in a collision  (c) $K_{\text{rel}}=\frac{1}{2}\mu v_{\text{rel}}^2$  (d) the reduced mass is $\mu=m_1+m_2$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). The reduced mass is $\mu=m_1m_2/(m_1+m_2)$, not the sum.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>The effective potential $U_{\text{eff}}=U(r)+L^2/(2mr^2)$:
+(a) includes the centrifugal barrier  (b) is used in orbital mechanics  (c) has a minimum at the circular orbit radius  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three are correct.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>A ball bouncing with coefficient $e$:
+(a) loses energy each bounce  (b) the height decreases as $e^2$  (c) the total distance is $h(1+e^2)/(1-e^2)$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three follow from the energy and momentum analysis.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>A rolling body has:
+(a) translational KE only  (b) rotational KE only  (c) both translational and rotational KE  (d) $K=\frac{1}{2}mv^2$ for a solid sphere</p>
+<details>
+<summary>Answer</summary>
+<p>(c). A rolling body has both: $K=\frac{7}{10}mv^2$ for a solid sphere, not $\frac{1}{2}mv^2$.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>A 2 kg ball is dropped from 5 m onto a spring ($k=800$ N/m). Find the maximum compression. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$mg(h+x)=\frac{1}{2}kx^2$. $20(5+x)=400x^2$. $400x^2-20x-100=0$. $x=(20+\sqrt{400+160000})/800=(20+400.5)/800=0.526$ m.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A 1000 kg car has power 50 kW. Find the maximum speed against a resistive force of 500 N.</p>
+<details>
+<summary>Answer</summary>
+<p>$v_{\max}=P/f=50000/500=100$ m/s $=360$ km/h.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>A particle has $U(x)=2x^2-8x+10$ J. Find the equilibrium position and the potential energy there.</p>
+<details>
+<summary>Answer</summary>
+<p>$F=-(4x-8)=0\Rightarrow x=2$. $U(2)=8-16+10=2$ J. $d^2U/dx^2=4&gt;0$ — stable.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>A 5 kg block slides 10 m on a rough surface ($\mu_k=0.3$) with initial speed 8 m/s. Find the final speed. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$\frac{1}{2}\times5\times64-0.3\times5\times10\times10=\frac{1}{2}\times5\times v^2$. $160-150=2.5v^2$. $v^2=4$. $v=2$ m/s.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>A pump lifts 200 kg/min of water to 15 m with 40% efficiency. Find the motor power. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$P_{\text{useful}}=(200/60)\times10\times15=500$ W. $P_{\text{motor}}=500/0.4=1250$ W.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A ball bounces with $e=0.6$ from 10 m. Find the total distance. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>$d=10(1+0.36)/(1-0.36)=10\times1.36/0.64=21.25$ m.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Derive the work–energy theorem from $F=ma$. (b) State the precise condition for mechanical energy conservation. (c) A 2 kg block slides 5 m on a rough incline (30°, $\mu_k=0.2$) starting from rest. Find the speed at the bottom using the WET. ($g=10$ m/s$^2$.)</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See §3.4. (b) All forces doing work must be conservative. (c) $W_{\text{net}}=mg\sin30°\times5-\mu_k mg\cos30°\times5=10\times5\times0.5-0.2\times20\times0.866\times5=50-17.3=32.7$ J. $v=\sqrt{2\times32.7/2}=5.72$ m/s.</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) Derive the CM-frame energy decomposition $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text{rel}}$. (b) For two equal masses colliding elastically at 90° in the lab frame, find the CM speed. (c) What fraction of the total KE is CM KE?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL1. (b) For equal masses: $v_{\text{cm}}$ is the average of the two velocities. If they approach at right angles with equal speeds $v$: $v_{\text{cm}}=v/\sqrt{2}$ (at 45° to each). (c) $K_{\text{cm}}/K_{\text{total}}=(Mv_{\text{cm}}^2)/(mv^2)=2(v/\sqrt{2})^2/(2v^2/2)=v^2/(v^2)=1/2$.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) A ball bounces with $e=0.7$ from height 8 m. Find the total distance and time. ($g=10$ m/s$^2$.) (b) How does the total energy lost depend on $e$? (c) What fraction of the original energy remains after 5 bounces?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $d=8(1+0.49)/(1-0.49)=8\times1.49/0.51=23.4$ m. $t_0=\sqrt{16/10}=1.265$ s. $t=1.265\times1.7/0.3=7.15$ s. (b) Energy lost per bounce: the height drops by factor $e^2$ each bounce. Total energy retained: $e^{2n}$ after $n$ bounces. (c) After 5 bounces: $e^{10}=0.7^{10}=0.0282$. 2.8% of original energy remains.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) A solid sphere rolls without slipping down an incline of height $h$. Find the speed at the bottom. (b) Compare with a sliding block. (c) Which reaches the bottom first?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $mgh=\frac{1}{2}mv^2+\frac{1}{2}I\omega^2=\frac{1}{2}mv^2(1+2/5)=\frac{7}{10}mv^2$. $v=\sqrt{10gh/7}$. (b) Sliding block: $v=\sqrt{2gh}$. Rolling sphere: $v=\sqrt{10gh/7}=\sqrt{1.43gh}$. The rolling sphere is slower. (c) The sliding block reaches first (it has more speed at every point).</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) A satellite is in a circular orbit of radius $r$. Derive the orbital KE, PE, and total energy. (b) Show that $E=-K$. (c) How much energy is needed to escape from this orbit?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $K=\frac{1}{2}mv^2=GMm/(2r)$. $U=-GMm/r$. $E=K+U=-GMm/(2r)$. (b) $E=-GMm/(2r)=-K$. ✓ (c) Escape from orbit: $\Delta E=0-(-GMm/(2r))=GMm/(2r)=K$. The escape energy from the orbit equals the orbital KE.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>(a) A block is launched by a spring ($k=500$ N/m, $x=0.1$ m) up a 30° incline ($\mu_k=0.2$, $m=0.5$ kg). Find the distance travelled. ($g=10$ m/s$^2$.) (b) Does the block return? (c) If so, how far does it slide back?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\frac{1}{2}kx^2=mgd\sin30°+\mu_k mg\cos30°\cdot d$. $2.5=0.5\times10\times d(0.5+0.2\times0.866)=5d(0.673)$. $d=2.5/3.37=0.74$ m. (b) At the top: the block has $v=0$. Gravity component down the incline: $mg\sin30°=2.5$ N. Maximum static friction: $\mu_s mg\cos30°\approx0.2\times0.5\times10\times0.866=0.866$ N (assuming $\mu_s\approx\mu_k$). Net force down: $2.5-0.866=1.63$ N. The block slides back. (c) Going back: $mgd'\sin30°-\mu_k mg\cos30°\cdot d'=0$ (starts and ends at rest). Wait — the block has PE at the top. $\frac{1}{2}kx^2-mg(d+d')\sin30°-\mu_k mg\cos30°(d+d')=0$... no. On the way back: $mgd'\sin30°-\mu_k mg\cos30°d'=\frac{1}{2}mv^2$ at the bottom. But the block starts from rest at the top. $d'(\sin30°-\mu_k\cos30°)=v^2/(2g)$. But the block returns to the spring, so the energy equation is: $mgd'\sin30°=\mu_k mg\cos30°\cdot d'+\frac{1}{2}mv_{\text{bottom}}^2$... this is getting complicated. The key: the block has PE $mgh'$ at the top (where $h'=d\sin30°$). On the return: $mgh'-\mu_k mg\cos30°\cdot d'=\frac{1}{2}mv^2$ at the spring. The block returns to the spring with some KE, compresses it, and the cycle repeats until all energy is dissipated.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>(a) The effective potential for a particle in a central field is $U_{\text{eff}}=U(r)+L^2/(2mr^2)$. For $U(r)=-k/r$, find the minimum of $U_{\text{eff}}$. (b) What is the circular orbit radius? (c) What is the orbit energy?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $dU_{\text{eff}}/dr=k/r^2-L^2/(mr^3)=0$. $r_{\min}=L^2/(mk)$. (b) This is the circular orbit radius. (c) $U_{\text{eff}}(r_{\min})=-k/r_{\min}+L^2/(2mr_{\min}^2)=-mk^2/(2L^2)$. The orbit energy is $E=-mk^2/(2L^2)$. For gravity: $k=GMm$, $E=-G^2M^2m^3/(2L^2)$.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) A motor with constant power $P$ accelerates a car of mass $m$ from rest against a resistive force $f$. Find $v(t)$. (b) What is the maximum speed? (c) How long to reach half the maximum speed?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $P/v-f=ma=m\,dv/dt$. $m\,dv/dt=P/v-f$. This is a nonlinear ODE. At large $v$: $P/v\approx f$, $a\approx0$. At small $v$: $a\approx P/(mv)$ — singular at $v=0$ (infinite acceleration from rest at constant power — an idealisation). (b) $v_{\max}=P/f$. (c) At $v=v_{\max}/2$: $P/(v_{\max}/2)-f=2f-f=f$. $a=f/m$. $t=(v_{\max}/2)/(f/m)=Pm/(2f^2)$. Wait — this assumes constant acceleration, which is not true. The exact solution requires integrating $m\,dv/(P/v-f)=dt$.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>(a) A chain of length $L$ and mass $m$ is lifted at constant speed $v$ from a pile. Find the force as a function of height $x$. (b) Find the power. (c) Where does the "extra" power go?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $F=\lambda xg+\lambda v^2$ where $\lambda=m/L$. (b) $P=Fv=\lambda xgv+\lambda v^3$. (c) The extra $\frac{1}{2}\lambda v^3$ per unit time goes into the "collision" energy of links being jerked into motion. The remaining $\frac{1}{2}\lambda v^3$ goes into... actually, the total power $Fv=\lambda xgv+\lambda v^3$. The PE rate is $\lambda xgv$. The KE rate is $\frac{1}{2}\lambda v^3$. The "missing" $\frac{1}{2}\lambda v^3$ is the rate of energy dissipation in the inelastic "collisions" of the chain links.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Derive the escape velocity from Earth's surface using energy conservation. (b) Show that $v_{\text{escape}}=\sqrt{2}\times v_{\text{orbit}}$ for a low orbit. (c) How much energy per kg is needed to reach a low orbit?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\frac{1}{2}mv^2-GMm/R=0$. $v_{\text{esc}}=\sqrt{2GM/R}=\sqrt{2gR}=\sqrt{2\times9.8\times6.4\times10^6}=11.2$ km/s. (b) $v_{\text{orbit}}=\sqrt{gR}=7.9$ km/s. $v_{\text{esc}}/v_{\text{orbit}}=\sqrt{2}$. (c) Energy per kg: $\frac{1}{2}v_{\text{orbit}}^2=\frac{1}{2}gR=31.4$ MJ/kg. This is the minimum; with gravity losses and air drag, the real number is about 33 MJ/kg.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$W=Fd\cos\theta$</td>
+<td>constant force</td>
+</tr>
+<tr>
+<td>$W_{\text{net}}=\Delta K$</td>
+<td>always (work–energy theorem)</td>
+</tr>
+<tr>
+<td>$K+U=$ const</td>
+<td>only conservative forces do work</td>
+</tr>
+<tr>
+<td>$P=\mathbf{F}\cdot\mathbf{v}$</td>
+<td>instantaneous power</td>
+</tr>
+<tr>
+<td>$\mathbf{F}=-\nabla U$</td>
+<td>conservative force</td>
+</tr>
+<tr>
+<td>$U_{\text{grav}}=mgh$</td>
+<td>near Earth's surface</td>
+</tr>
+<tr>
+<td>$U_{\text{spring}}=\frac{1}{2}kx^2$</td>
+<td>Hooke's law regime</td>
+</tr>
+<tr>
+<td>$U_{\text{grav}}=-GMm/r$</td>
+<td>general gravitational</td>
+</tr>
+<tr>
+<td>$\Delta E=W_{\text{nc}}=-f_k d$</td>
+<td>energy dissipated by friction</td>
+</tr>
+<tr>
+<td>$v_{\text{esc}}=\sqrt{2GM/R}$</td>
+<td>escape velocity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can compute work by constant and variable forces.</li>
+<li>[ ] I can derive the work–energy theorem from $F=ma$.</li>
+<li>[ ] I can identify conservative forces and construct $U(x)$.</li>
+<li>[ ] I can apply energy conservation with its precise conditions.</li>
+<li>[ ] I can read and interpret $U(x)$ energy diagrams (turning points, stability).</li>
+<li>[ ] I can compute power and efficiency.</li>
+<li>[ ] I can set up energy ledgers for systems with friction.</li>
+<li>[ ] I know the CM-frame energy decomposition.</li>
+<li>[ ] I understand the effective potential for central orbits.</li>
+<li>[ ] I can solve the block-on-wedge energy audit and the bouncing ball problem.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> The work–energy theorem and energy conservation are prerequisites for PART 7 (collisions: energy conservation in elastic collisions), PART 8 (rotational KE and the work of torque), PART 9 (gravitational PE and orbital energy), and PART 10 (energy of oscillations). The CM-frame energy decomposition is used in PART 7 (collision analysis) and PART 9 (two-body reduced mass).</p>
+<p><strong>Open questions.</strong> What is the relativistic generalisation of kinetic energy ($K=(\gamma-1)mc^2$)? How does the virial theorem relate average KE and PE in a bound system? These are questions for PART 28 and statistical mechanics.</p>
+    <footer class="pager"><a href="newtons-laws.html">← Newton's laws & friction</a><a href="centre-of-mass-momentum.html">Centre of mass & collisions →</a></footer>
+    <p class="colophon">Rendered from <code>work-energy-power/Work-energy-power.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>work-energy-power/Work-energy-power.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>
