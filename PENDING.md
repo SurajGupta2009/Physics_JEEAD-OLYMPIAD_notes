@@ -60,9 +60,9 @@ work-energy chapter (it lives inside ch 2 *Rigid Body Dynamics*) and that SHM is
 | M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 |
 | M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 |
 | M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 |
-| M8 | `rotational-mechanics` | Rotational Mechanics *(already in topics.json as planned)* | moment of inertia, parallel/perpendicular axes, torque, $\vec{\tau}=I\vec{\alpha}$, angular momentum, rolling motion, gyroscopic precession | M7 |
-| M9 | `gravitation` | Gravitation | universal law, g variation (altitude/depth/rotation), orbital motion, Kepler, escape velocity, satellites, gravitational PE | M8 |
-| M10 | `simple-harmonic-motion` | Simple Harmonic Motion | differential equation, $x=A\sin(\omega t+\phi)$, spring-mass, simple & compound pendulum, energy, damped/forced (intro), SHM as circular-motion projection | M6, M8 |
+| M8 | `rotational-mechanics` | ✅ COMPLETE — PART 8 · Rotational Mechanics | moment of inertia, parallel/perpendicular axes, torque, $\vec{\tau}=I\vec{\alpha}$, angular momentum, rolling motion, gyroscopic precession | M7 |
+| M9 | `gravitation` | ✅ COMPLETE — PART 9 · Gravitation | universal law, g variation (altitude/depth/rotation), orbital motion, Kepler, escape velocity, satellites, gravitational PE | M8 |
+| M10 | `simple-harmonic-motion` | ✅ COMPLETE — PART 10 · Simple Harmonic Motion | differential equation, $x=A\sin(\omega t+\phi)$, spring-mass, simple & compound pendulum, energy, damped/forced (intro), SHM as circular-motion projection | M6, M8 |
 | M11 | `fluid-mechanics` | Fluid Mechanics (Hydrostatics & Hydrodynamics) | pressure, Pascal/Archimedes, surface tension, Bernoulli, Torricelli, Venturi, viscosity, Stokes, Reynolds | M5, M7 |
 | M12 | `elasticity` | Elasticity & Properties of Matter | stress/strain, Hooke, Young/Bulk/Shear moduli, Poisson ratio, beam bending (intro) | M5 |
 

@@ -1,0 +1,25 @@
+{
+  "part": 8,
+  "master": "Rotational-mechanics.md",
+  "minimums": {
+    "checks": 12,
+    "exemplars": 10,
+    "practice": 25,
+    "olympiad": 10,
+    "diagrams": 12,
+    "callouts": 24,
+    "words": 9000
+  },
+  "paper": {
+    "count": 36,
+    "marks": 200,
+    "sections": {
+      "4": 20,
+      "5": 6,
+      "9": 10
+    }
+  },
+  "callout_types": [
+    "abstract", "info", "success", "warning", "danger", "tip", "note", "question", "quote"
+  ]
+}

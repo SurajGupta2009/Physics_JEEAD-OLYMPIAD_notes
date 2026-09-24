@@ -92,16 +92,32 @@
     {
       "slug": "rotational-mechanics",
       "title": "Rigid-body rotation — first principles to Olympiad",
-      "status": "planned",
-      "owner": null,
-      "entry": "rotational-mechanics/index.html",
+      "status": "complete",
+      "owner": "agent",
+      "entry": "rotational-mechanics/Rotational-mechanics.md",
       "exam": [
         "JEE Advanced",
         "NSEP",
         "INPhO",
         "IPhO"
       ],
-      "note": "Suggestion only — same claiming procedure as above."
+      "note": "Suggestion only — same claiming procedure as above.",
+      "format": "markdown",
+      "part": 8,
+      "dependency": [
+        "centre-of-mass-momentum"
+      ],
+      "words": 9097,
+      "display_formulas": 19,
+      "bytes_markdown": 65325,
+      "pages": [
+        "Rotational-mechanics.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 903,
+      "bytes_html": 0
     },
     {
       "slug": "current-electricity",
@@ -954,6 +970,54 @@
       "bytes_markdown": 92000,
       "words": 13000,
       "display_formulas": 58
+    },
+    {
+      "part": 9,
+      "title": "Gravitation & Orbital Motion",
+      "slug": "gravitation",
+      "folder": "gravitation",
+      "status": "complete",
+      "owner": "agent",
+      "format": "markdown",
+      "entry": "gravitation/Gravitation.md",
+      "dependency": [
+        "rotational-mechanics"
+      ],
+      "words": 9096,
+      "display_formulas": 14,
+      "bytes_markdown": 66569,
+      "pages": [
+        "Gravitation.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 783,
+      "bytes_html": 0
+    },
+    {
+      "part": 10,
+      "title": "Simple Harmonic Motion",
+      "slug": "simple-harmonic-motion",
+      "folder": "simple-harmonic-motion",
+      "status": "complete",
+      "owner": "agent",
+      "format": "markdown",
+      "entry": "simple-harmonic-motion/Simple-harmonic-motion.md",
+      "dependency": [
+        "gravitation"
+      ],
+      "words": 9002,
+      "display_formulas": 16,
+      "bytes_markdown": 66675,
+      "pages": [
+        "Simple-harmonic-motion.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 926,
+      "bytes_html": 0
     }
   ]
 }
