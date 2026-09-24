@@ -1171,6 +1171,55 @@
       "bytes_markdown": 124120,
       "words": 18099,
       "display_formulas": 28
+    },
+    {
+      "slug": "elasticity",
+      "title": "Elasticity & Properties of Matter — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "elasticity/Elasticity.md",
+      "format": "markdown",
+      "plan_part": 12,
+      "part": 12,
+      "source": "Cengage MECHANICS 2-compressed.pdf, ch 4 Properties of Solids and Fluids, elasticity half (pp. 4.1-4.19)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "newtons-laws",
+        "work-energy-power"
+      ],
+      "beyond_plan": [
+        "the straight-wire sag y = l (mg/YA)^(1/3), beside the angled hanger, where the mg/2 trap is sharpest (E5)",
+        "the bolt-and-nut quarter-turn as a numerical cousin of thermal stress (E4)",
+        "the fair I-beam comparison at equal depth and equal area, against the inflated factor from also changing the depth (OL7)",
+        "the wave-transit caveat on the falling-weight integral, L/c against the loading time (OL3)",
+        "a material-selection table with three candidates and two different indices (E10)"
+      ],
+      "deliberately_not_covered": [
+        "plastic buckling after yield (named as the failure of Euler's formula, not derived)",
+        "anisotropic laminate theory",
+        "fracture mechanics beyond the statement that fatigue grows a crack",
+        "large-strain rubber elasticity as an entropy spring (named in 3.11 and OL8, then left alone)"
+      ],
+      "next_candidates": [
+        "a timed 25-question JEE-Advanced-only set keyed to the extension family and thermal stress"
+      ],
+      "pages": [
+        "Elasticity.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1378,
+      "bytes_html": 0,
+      "bytes_markdown": 105472,
+      "words": 15570,
+      "display_formulas": 20
     }
   ]
 }

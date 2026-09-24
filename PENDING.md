@@ -2,13 +2,13 @@
 
 Regenerated: 2026-09-24, from the repository state rather than from prose.
 The counts below were produced by walking `topics.json` and the topic folders,
-so they agree with `python3 tools/check_all.py` (26 registered topics, gate
+so they agree with `python3 tools/check_all.py` (28 registered topics, gate
 green).
 
-**Score: 17 of the 28 [plan.md](plan.md) parts are written. 12 remain** —
-`fluid-mechanics` and `elasticity` close out mechanics, and elasticity (PART 12, in progress this session) and the whole of
-electricity & magnetism (PART 13–22). Those eleven are the only
-chapter-sized gaps left in the syllabus this repository set out to cover.
+**Score: 18 of the 28 [plan.md](plan.md) parts are written. 10 remain** —
+mechanics is closed (PART 1–12). What is left is electricity & magnetism,
+PART 13–22. Those ten are the only chapter-sized gaps left in the syllabus
+this repository set out to cover.
 
 Everything below is organised so a contributor can claim one topic, scaffold it,
 and write it to the same standard: proof-first, Cengage floor plus an Olympiad
@@ -68,14 +68,17 @@ contains.
 | PART | slug | title | scope / Cengage floor | needs | status |
 |---:|---|---|---|---|---|
 | 11 | `fluid-mechanics` | Fluid Mechanics & Surface Tension | hydrostatics from $\frac{dp}{dy}=-\rho g$; Pascal; Archimedes derived twice; metacentre; buoyancy in non-inertial frames; continuity; Bernoulli and its four validity conditions; Torricelli, Venturi, pitot, siphon; momentum flux; viscosity; Poiseuille derived; Stokes and terminal velocity; Reynolds; surface tension (both definitions, excess pressure, capillarity) | 5, 6 | **complete** — [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md), gate green, 20 DIAGRAM briefs |
-| 12 | `elasticity` | Elasticity & Properties of Matter | stress/strain; $Y$, $B$, $G$ from their experiments; the stress–strain curve's landmarks; Poisson's ratio and the two interrelations; extension under load, self-weight, composite rods; thermal stress; torsion; elastic energy density and the suddenly-applied load; bending and the neutral axis; the atomic-spring derivation of $Y$ | 5 | **pending** |
+| 12 | `elasticity` | Elasticity & Properties of Matter | stress/strain; $Y$, $B$, $G$ from their experiments; the stress–strain curve's landmarks; Poisson's ratio and the two interrelations; extension under load, self-weight, composite rods; thermal stress; torsion; elastic energy density and the suddenly-applied load; bending and the neutral axis; the atomic-spring derivation of $Y$ | 5 | **complete** — [Elasticity.md](elasticity/Elasticity.md), gate green, 14 DIAGRAM briefs |
 
 * Cengage floor for 11: *Mechanics II* ch 3 Fluid Mechanics, plus ch 4
   Properties of Solids and Fluids for surface tension.
 * Cengage floor for 12: *Mechanics II* ch 4 Properties of Solids and Fluids (the
   elasticity half; the fluid half is PART 11's).
 * plan.md §5.3 sizes 11 as **large** (16 000–22 000 words) and 12 as **compact**
-  (9 000–13 000).
+  (9 000–13 000). PART 11 landed in band. PART 12 landed at about 15 600 words:
+  the required derivations plus the 200-mark paper do not fit under 13 000
+  without cutting a proof the plan says must be derived. The gate minimum
+  (9 000) is met; the overshoot is recorded rather than hidden.
 
 ---
 
@@ -165,16 +168,13 @@ already exist. Nothing is missing here:
 
 ## 6. Priority recommendation
 
-1. **PART 11 fluids, then PART 12 elasticity.** They close mechanics, both have a
-   PDF in this repository to sweep, and both are prerequisites for later work
-   (PART 11 hands the shallow-water wave speed to the shipped sound-waves note
-   and the momentum-flux argument back to PART 7).
-2. **PART 13 → 14 → 15 Coulomb/Gauss/potential.** The only E&M parts with a
-   verifiable Cengage floor here, and each is the successor of the one before.
-3. **PART 16 → 17, then 18 and 19 in parallel.** Magnetism proper; 18 and 19 both
+1. **PART 13 → 14 → 15 Coulomb/Gauss/potential.** Mechanics is closed. These are
+   the only E&M parts with a verifiable Cengage floor in this repository, and
+   each is the successor of the one before.
+2. **PART 16 → 17, then 18 and 19 in parallel.** Magnetism proper; 18 and 19 both
    need only 17.
-4. **PART 20 → 21 → 22 as one batch.** EMI, inductance and AC are one argument.
-5. Nothing else is outstanding. When PART 22 lands, plan.md's 28 parts are
+3. **PART 20 → 21 → 22 as one batch.** EMI, inductance and AC are one argument.
+4. Nothing else is outstanding. When PART 22 lands, plan.md's 28 parts are
    complete and this file should say so.
 
 ---
@@ -186,9 +186,9 @@ wired up and what it still has to do.
 
 | integration point | state |
 |---|---|
-| `topics.json` registry | 26 topics, all `complete`, all with `format`/`entry`/`owner` and mechanically recounted counts. Gate green. |
+| `topics.json` registry | 28 topics, all `complete`, all with `format`/`entry`/`owner` and mechanically recounted counts. Gate green. |
 | `tools/check_all.py` | green (`python3 tools/check_all.py --quick`). Every Markdown-first topic now has an `entry`, so its counts are actually checked rather than assumed. |
-| `tools/md_site.py` / `docs/site/` | **all 26 topics render**, grouped by block, with Obsidian callouts, frontmatter properties, wikilinks and `DIAGRAM` briefs styled. Regenerate with `python3 tools/md_site.py` (needs `pip install markdown`). |
+| `tools/md_site.py` / `docs/site/` | **all 28 topics render**, grouped by block, with Obsidian callouts, frontmatter properties, wikilinks and `DIAGRAM` briefs styled. Regenerate with `python3 tools/md_site.py` (needs `pip install markdown`). |
 | [README.md](README.md) | one row per note-set in the table; keep the counts matching the registry after each recount. |
 | [CURRICULUM.md](CURRICULUM.md) | **stale** — it still describes nine note-sets and does not mention the sixteen plan.md chapters. Coordinator job (plan.md §6.2), not a chapter-agent job. |
 

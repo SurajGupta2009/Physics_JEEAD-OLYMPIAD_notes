@@ -1,7 +1,6 @@
 # Curriculum map: Cengage floor → JEE → Olympiad
 
-This repository now has nine note-sets: seven have Markdown and interactive HTML editions;
-String Waves and Electromagnetic Waves are Markdown-first courses:
+This repository has two generations of notes. The nine note-sets in the table below were the original courses: seven have Markdown and interactive HTML editions; String Waves and Electromagnetic Waves are Markdown-first. Parts 1–12 and 23–28 of [plan.md](plan.md) are a second generation, text-only and Obsidian-first, with `DIAGRAM` briefs instead of image files. The table is the original wave-first spine. If you are starting from mechanics rather than from waves, read plan.md PART 1–12 in order — that sequence is now complete, and it is tabulated at the end of this file.
 
 - the `*.md` files are the portable editions, with standard Markdown, `$...$` / `$$...$$` math, collapsible solutions and local SVG diagrams;
 - the `*.html` files are the optional interactive editions, retained for the generated table of contents, progress ticks, theme switch and printing.
