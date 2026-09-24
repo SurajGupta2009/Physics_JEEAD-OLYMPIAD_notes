@@ -54,6 +54,9 @@ work-energy chapter (it lives inside ch 2 *Rigid Body Dynamics*) and that SHM is
 | M2 | `kinematics-1d` | Kinematics in One Dimension | position/velocity/acceleration, graphs, constant-`a` equations, free fall | M1 | |
 | M3 | `vectors` | Vectors & Vector Algebra | components, dot/cross product, unit vectors, resolution | M1 | ✅ COMPLETE (PART 2) |
 | M4 | `motion-in-two-dimensions` | Projectile & 2-D Motion | oblique projection, range/max-height, projection from height/tower, relative velocity | M2, M3 | ✅ COMPLETE (PART 4) |
+| M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 | ✅ COMPLETE (PART 5) |
+| M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 | ✅ COMPLETE (PART 6) |
+| M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 | ✅ COMPLETE (PART 7) |
 | M5 | `newtons-laws` | Newton's Laws of Motion | N1/N2/N3, pseudo forces, constraint motion (pulleys, wedges), friction (static/kinetic) | M4 |
 | M6 | `work-energy-power` | Work, Energy & Power | work by constant/variable force, work-energy theorem, conservative forces, potential energy, power | M5 |
 | M7 | `center-of-mass` | Center of Mass, Momentum & Collisions | COM, conservation of momentum, variable mass (rocket), elastic/inelastic collisions, impulse | M6 |

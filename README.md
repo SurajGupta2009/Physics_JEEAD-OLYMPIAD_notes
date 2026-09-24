@@ -32,6 +32,9 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **vectors** | [Vectors.md](vectors/Vectors.md) | text-only, 12 DIAGRAM briefs | 37 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 2 |
 | **kinematics (1-D)** | [Kinematics-1d.md](kinematics-1d/Kinematics-1d.md) | text-only, 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 3 |
 | **2-D motion & projectiles** | [Motion-in-two-dimensions.md](motion-in-two-dimensions/Motion-in-two-dimensions.md) | text-only, 12 DIAGRAM briefs | 35 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 4 |
+| **Newton's laws & friction** | [Newtons-laws.md](newtons-laws/Newtons-laws.md) | text-only, 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 5 |
+| **work, energy & power** | [Work-energy-power.md](work-energy-power/Work-energy-power.md) | text-only, 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 6 |
+| **centre of mass & collisions** | [Centre-of-mass-momentum.md](centre-of-mass-momentum/Centre-of-mass-momentum.md) | text-only, 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 7 |
 
 The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 

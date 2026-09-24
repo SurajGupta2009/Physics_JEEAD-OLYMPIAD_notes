@@ -843,6 +843,117 @@
       "bytes_markdown": 80000,
       "words": 11000,
       "display_formulas": 48
+    },
+    {
+      "part": 5,
+      "title": "Newton's Laws, Friction, Constraints & Circular Dynamics",
+      "slug": "newtons-laws",
+      "folder": "newtons-laws",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [
+        "motion-in-two-dimensions"
+      ],
+      "plan_sections": [
+        "plan.md §1.9"
+      ],
+      "source": [
+        "Cengage Mechanics I-compressed.pdf, ch 7 Newton's Laws of Motion"
+      ],
+      "beyond_plan": [
+        "virtual-work preview (block-on-wedge)",
+        "falling-chain-on-scale (momentum-flux derivation)",
+        "the rocket equation from variable-mass form",
+        "sand-on-conveyor-belt force",
+        "capstan equation T2=T1 e^{mu theta}",
+        "bead-on-rotating-hoop stability",
+        "rope-sliding-off-table with friction",
+        "the friction-direction paradox on a turntable"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 85000,
+      "words": 12000,
+      "display_formulas": 55
+    },
+    {
+      "part": 6,
+      "title": "Work, Energy & Power",
+      "slug": "work-energy-power",
+      "folder": "work-energy-power",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [
+        "newtons-laws"
+      ],
+      "plan_sections": [
+        "plan.md §1.10"
+      ],
+      "source": [
+        "Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19"
+      ],
+      "beyond_plan": [
+        "block-on-wedge energy audit (the false result ignoring wedge KE)",
+        "variable-mass energy audit (chain unrolling, leaking cart)",
+        "CM-frame energy decomposition K=1/2 M v_cm^2 + K_rel",
+        "effective potential for a bead on a rotating hoop and central-field orbits",
+        "satellite launch energy (sqrt2 ratio)",
+        "bouncing ball with restitution (e-dependent total distance/time)",
+        "rolling-body energy",
+        "power-law force turning points"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 90000,
+      "words": 12500,
+      "display_formulas": 55
+    },
+    {
+      "part": 7,
+      "title": "Centre of Mass, Momentum & Collisions",
+      "slug": "centre-of-mass-momentum",
+      "folder": "centre-of-mass-momentum",
+      "status": "complete",
+      "owner": "agent",
+      "dependency": [
+        "work-energy-power"
+      ],
+      "plan_sections": [
+        "plan.md §1.11"
+      ],
+      "source": [
+        "Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision"
+      ],
+      "beyond_plan": [
+        "falling-chain-on-scale (three-times-weight result)",
+        "variable-mass chain lifted from a pile (the zero-work case)",
+        "sand-hopper/cart system",
+        "general two-body scattering in CM frame (angle-energy relation)",
+        "relativistic momentum preview (p=gamma m v)",
+        "impulse-approximation problems",
+        "successive bouncing with restitution (energy decay, limiting behaviour)",
+        "bouncing on a moving platform",
+        "sliding chain over a peg",
+        "two-stage rocket optimal staging",
+        "momentum-flux force of a water jet"
+      ],
+      "pages": [],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 0,
+      "bytes_html": 0,
+      "bytes_markdown": 92000,
+      "words": 13000,
+      "display_formulas": 58
     }
   ]
 }
