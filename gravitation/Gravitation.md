@@ -1,7 +1,8 @@
 ---
-title: "Gravitation & Orbital Motion"
+title: Gravitation & Orbital Motion — first principles to Olympiad
 part: 9
 slug: gravitation
+status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 5 Gravitation
 aliases: [gravitation, orbital-motion, kepler, satellite, escape-velocity]
 tags: [jee-advanced, olympiad, mechanics, gravitation, orbits]
@@ -62,6 +63,23 @@ Not an electrostatics chapter: the $1/r^2$ force in electrostatics (PART 13) has
 
 **The orbital speed decreases with altitude.** $v=\sqrt{GM/r}$ — the higher the orbit, the slower the satellite. This is counter-intuitive: "higher = slower." The reason: a higher orbit has more PE and less KE, and the total energy is more negative.
 
+> [!tip] FIGURE F9.1 · Chapter map
+> *Why:* the chapter is one $1/r^2$ law read three ways — fields, energies, orbits — and the map shows the spine.
+> *Data:* the Part 0–14 structure — the law, shells, field, potential, Kepler, orbits, tides, paper, sheet.
+
+```mermaid
+mindmap
+  root((gravitation))
+    Inverse-square law
+    Shell theorem
+    Field and potential
+    Kepler's laws
+    Orbits
+    Tides
+```
+
+> *Read:* every result is a shell sum, a $GM/r$ energy, or a Kepler exponent.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -110,6 +128,20 @@ $\mathbf{g}$ is the force per unit mass. $V$ is the potential energy per unit ma
 > *Show:* a spherical shell with a particle $P$ outside. Two small cones from $P$ intersect the shell in two areas $dA_1$ and $dA_2$. The nearer area is smaller but closer (stronger pull); the farther area is larger but farther (weaker pull). The two effects exactly cancel for a $1/r^2$ force.
 > *Search:* "shell theorem cone construction inverse square proof diagram"
 
+> [!tip] FIGURE F9.2 · The shell theorem: outside a point, inside nothing
+> *Why:* the single most powerful shortcut in the chapter — a shell acts like a point mass outside, and vanishes inside.
+> *Data:* outside $g=GM/r^2$; inside a shell $g=0$; inside a uniform sphere only the inner mass $M(r)=M(r/R)^3$ counts, so $g=GMr/R^3$.
+
+```mermaid
+flowchart TD
+  A["uniform spherical shell"] --> B{"where is the test mass?"}
+  B -->|"outside"| C["g = GM/r² (all mass at centre)"]
+  B -->|"inside"| D["g = 0 (opposite patches cancel)"]
+  B -->|"inside solid sphere"| E["g = GMr/R³ (inner mass only)"]
+```
+
+> *Read:* outside, collapse the shell to a point; inside, the pull of the whole shell cancels, and only what lies below you counts.
+
 ### 3.4 Sphere, shell and cavity
 
 **Outside a uniform sphere** ($r\ge R$): $g=GM/r^2$, $V=-GM/r$ (same as a point mass).
@@ -140,6 +172,20 @@ $$
 > *Show:* four panels: (1) $g$ vs altitude (decreasing); (2) $g$ vs depth (linear decrease to zero at centre); (3) $g$ vs latitude (slight increase from equator to pole); (4) $g$ vs rotation rate (decreasing as $\omega$ increases).
 > *Search:* "gravitational acceleration variation altitude depth latitude rotation graph"
 
+> [!tip] FIGURE F9.3 · Four ways g changes
+> *Why:* the four variations are separate formulas that students blur; the figure keeps their directions and magnitudes distinct.
+> *Data:* altitude $g'=g\,R^2/(R+h)^2$; depth $g'=g(1-d/R)$; latitude $g'=g-\omega^2R\cos^2\lambda$; rotation lowers $g$ at the equator by ~0.3%.
+
+```mermaid
+flowchart TD
+  A{"where does g change?"} -->|"height h"| B["g' = g R²/(R+h)²"]
+  A -->|"depth d"| C["g' = g(1 - d/R), zero at centre"]
+  A -->|"latitude"| D["g' = g - ω²R cos²λ"]
+  A -->|"spin"| E["equator ~0.3% less than pole"]
+```
+
+> *Read:* height dilutes $g$ quadratically-ish, depth kills it linearly to zero, latitude and spin subtract the centrifugal term.
+
 ### 3.6 Gravitational potential energy
 
 $$
@@ -163,6 +209,20 @@ $$
 > [!abstract] DIAGRAM D9.4 · A Kepler ellipse with the focus, the two radii and the equal-area sectors
 > *Show:* an ellipse with the central mass at one focus. Two radii drawn from the focus to the ellipse at two nearby times. The area swept (a thin sector) shaded. The equal-area property shown: the sector at perigee (narrow, long) has the same area as the sector at apogee (wide, short).
 > *Search:* "Kepler ellipse focus equal area sectors perigee apogee diagram"
+
+> [!tip] FIGURE F9.4 · Kepler's laws, from the same focus
+> *Why:* all of orbital motion is three laws; the figure binds the ellipse, the area law, and the $T^2\propto a^3$ rule into one picture.
+> *Data:* orbits are conics with the central mass at a focus; $\frac{dA}{dt}=\frac{L}{2m}$ constant; $T^2=\frac{4\pi^2}{GM}a^3$.
+
+```mermaid
+flowchart TD
+  A["central mass at one focus"] --> B["law 1: ellipse"]
+  B --> C["law 2: equal areas in equal times"]
+  C --> D["fast near perigee, slow near apogee"]
+  B --> E["law 3: T² = 4π²a³/GM"]
+```
+
+> *Read:* the equal-area law is angular-momentum conservation in costume, and the period law makes the orbit mass-blind — a feather and a cannonball share a period.
 
 ### 3.8 Circular orbits
 
@@ -765,9 +825,38 @@ The only combination of $G$, $M$, and $r$ that gives a speed is $\sqrt{GM/r}$. T
 > *Show:* three energy levels: surface ($E=-GMm/R$), low orbit ($E=-GMm/(2R)$), escape ($E=0$). The energy increments $\Delta E$ between each level marked. The total energy to launch to orbit is $GMm/(2R)$, half the escape energy.
 > *Search:* "energy diagram orbital transfer surface orbit escape ladder"
 
+> [!tip] FIGURE F9.5 · The orbit energy ladder: bind, raise, escape
+> *Why:* every launch and transfer question is a difference between ladder rungs; the figure names the three energies.
+> *Data:* surface $E=-GMm/R$; circular orbit $E=-GMm/2r$ (KE $= +GMm/2r$); escape $E=0$.
+
+```mermaid
+flowchart LR
+  A["surface: -GMm/R"] -->|"launch"| B["orbit: -GMm/2r"]
+  B -->|"raise r"| C["higher orbit: less negative"]
+  C -->|"escape"| D["E = 0"]
+```
+
+> *Read:* bound means negative total energy; the circular energy is half the potential, and reaching zero is the escape ticket.
+
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F9.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the eight triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"g at height/depth/latitude"| B["four variation formulas"]
+  A -->|"orbital speed/period"| C["v = √(GM/r), T = 2πr/v"]
+  A -->|"escape velocity"| D["v = √(2GM/R)"]
+  A -->|"geostationary"| E["r = (GMT²/4π²)^(1/3)"]
+  A -->|"orbit transfer"| F["vis-viva at perigee and apogee"]
+  A -->|"tidal force"| G["ΔF ∝ M/d³"]
+```
+
+> *Read:* height kills $g$ by the sphere formula, orbits live on $GM/r$, transfers ride vis-viva — each keyword has one ladder.
 
 - "Find $g$ at height/depth/latitude": use the four variation formulas.
 - "Orbital speed/period": $v=\sqrt{GM/r}$, $T=2\pi r/v$.

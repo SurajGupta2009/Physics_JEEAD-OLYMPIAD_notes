@@ -1,0 +1,60 @@
+{
+  "slug": "photoelectric-effect",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F23.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
+      "why": "the chapter is one equation Kmax = hf - phi plus one wavelength λ = h/p",
+      "data": "the Part 0-14 structure",
+      "read": "every result is the photon's energy-momentum bookkeeping or the wave it carries to matter",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F23.2",
+      "kind": "flowchart",
+      "title": "The photoelectric apparatus as a current-voltage map",
+      "why": "the retarding voltage is a filter, sweeping away electrons from fastest to slowest",
+      "data": "the evacuated-tube circuit: light onto emitter, retarding collector, ammeter/voltmeter",
+      "read": "below threshold no light triggers emission; at threshold only the collector voltage changes",
+      "source": "DIAGRAM D23.2 (§3.2 The experimental facts)"
+    },
+    {
+      "id": "F23.3",
+      "kind": "flowchart",
+      "title": "The five facts and the two that destroy waves",
+      "why": "three facts look like wave behaviour, two do not - separating discriminators from decoys",
+      "data": "the five experimental facts of §3.2 against the classical wave prediction",
+      "read": "threshold, instantaneity, and Kmax ∝ f rule out waves; current ∝ intensity cannot decide",
+      "source": "§3.2 The experimental facts and the classical predictions they destroy"
+    },
+    {
+      "id": "F23.4",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
+      "why": "the keyword names the equation before any number is touched",
+      "data": "the six triage branches of §9.1",
+      "read": "emission is photon bookkeeping, diffraction is matter waves, a size is uncertainty",
+      "source": "§9.1 Triage decision tree"
+    },
+    {
+      "id": "F23.5",
+      "kind": "xychart-beta",
+      "title": "Kmax versus frequency for two metals",
+      "why": "the shared slope h/e across every metal measures Planck's constant; intercepts are work functions",
+      "data": "Kmax = hf - φ: two parallel lines, slope h/e, thresholds f0(Cs)≈4.6e14 Hz, f0(Zn)≈10.4e14 Hz",
+      "read": "common slope h/e for every metal; cesium turns on first because its φ is smaller",
+      "source": "DIAGRAM D23.5 (§3.5 Einstein's equation)"
+    },
+    {
+      "id": "F23.6",
+      "kind": "flowchart",
+      "title": "de Broglie wavelength: the classical world is the geometry limit",
+      "why": "the same formula describes a cricket ball and a neutron; wave is visible only when λ meets lattice spacing",
+      "data": "λ = h/p on a log axis: ball ~1e-34 m, neutron ~1.8 Å, electron ~0.12 nm, spacing 0.1-1 nm",
+      "read": "wave behaviour shows only when λ is comparable to the geometry it meets",
+      "source": "DIAGRAM D23.6 (§3.7 de Broglie's hypothesis)"
+    }
+  ]
+}

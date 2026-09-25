@@ -1,7 +1,8 @@
 ---
-title: "Simple Harmonic Motion"
+title: Simple Harmonic Motion — first principles to Olympiad
 part: 10
 slug: simple-harmonic-motion
+status: complete
 source: Cengage Waves and Oscillations-compressed.pdf, ch 1 SHM
 aliases: [shm, simple-harmonic-motion, oscillations, spring-mass, pendulum]
 tags: [jee-advanced, olympiad, mechanics, shm, oscillations, waves]
@@ -72,6 +73,23 @@ The most valuable skills from this chapter are: (1) recognising SHM in disguise 
 > *Show:* three panels. Top: $x(t)=A\sin\omega t$. Middle: $v(t)=A\omega\cos\omega t$ (leads $x$ by $90°$). Bottom: $a(t)=-A\omega^2\sin\omega t$ (leads $v$ by $90°$, opposite to $x$). Mark the phase relationships.
 > *Search:* "SHM displacement velocity acceleration phase relationship graph"
 
+> [!tip] FIGURE F10.1 · Chapter map
+> *Why:* the chapter is one equation $a=-\omega^2 x$ played out across springs, pendulums, energy and resonance; the map shows the spine.
+> *Data:* the Part 0–14 structure — the SHM condition, energy, springs, pendulums, damping, resonance, coupled modes, paper, sheet.
+
+```mermaid
+mindmap
+  root((simple harmonic motion))
+    Restoring force
+    Energy
+    Springs
+    Pendulum
+    Damping
+    Resonance
+```
+
+> *Read:* every result is $\omega=\sqrt{k/m}$, an energy share, or a resonance peak.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -125,6 +143,19 @@ $$
 
 ### 3.4 Energy in SHM
 
+> [!tip] FIGURE F10.2 · The phase ladder: v leads x, a leads v
+> *Why:* the three sinusoids differ only by quarter-turns; the ladder fixes which leads which before any value is read.
+> *Data:* $x=A\sin\omega t$, $v=A\omega\cos\omega t$ (leads $x$ by $90°$), $a=-A\omega^2\sin\omega t$ (opposite to $x$).
+
+```mermaid
+flowchart LR
+  A["x = A sin ωt"] -->|"ahead by 90°"| B["v = Aω cos ωt"]
+  B -->|"ahead by 90°"| C["a = -Aω² sin ωt"]
+  C --> D["back to -x: a = -ω² x"]
+```
+
+> *Read:* velocity is always a quarter-cycle ahead of displacement, acceleration another quarter — so acceleration always points back at equilibrium.
+
 $$
 E=\frac{1}{2}kA^2=\frac{1}{2}m\omega^2 A^2. \qquad (3.5)
 $$
@@ -136,6 +167,20 @@ $$
 > [!abstract] DIAGRAM D10.3 · Energy versus displacement in SHM
 > *Show:* $U=\frac{1}{2}kx^2$ (parabola), $K=\frac{1}{2}k(A^2-x^2)$ (inverted parabola), $E=$ constant (horizontal line). At $x=\pm A$: $U=E$, $K=0$. At $x=0$: $U=0$, $K=E$. The energies exchange at every instant.
 > *Search:* "energy versus displacement simple harmonic motion kinetic potential graph"
+
+> [!tip] FIGURE F10.3 · Energy exchange: all kinetic in the middle, all potential at the ends
+> *Why:* the energy bookkeeping of every oscillation — the two shares trade without ever changing the total.
+> *Data:* $K=\tfrac12 k(A^2-x^2)$ and $U=\tfrac12 kx^2$, so $E=K+U=\tfrac12 kA^2$ constant.
+
+```mermaid
+flowchart TD
+  A["E = ½kA² constant"] --> B{"position"}
+  B -->|"x = 0"| C["K = E, U = 0"]
+  B -->|"x = ±A"| D["K = 0, U = E"]
+  B -->|"any x"| E["K = ½k(A²-x²), U = ½kx²"]
+```
+
+> *Read:* the box holds a fixed total; the oscillator just pours it back and forth between the spring and the motion.
 
 ### 3.5 Spring-mass system
 
@@ -150,6 +195,20 @@ $$
 > [!abstract] DIAGRAM D10.4 · Series and parallel spring configurations
 > *Show:* left: two springs in series (one after the other, same force, displacements add). Right: two springs in parallel (side by side, same displacement, forces add). The effective spring constants shown.
 > *Search:* "springs in series parallel effective spring constant diagram"
+
+> [!tip] FIGURE F10.4 · Springs: parallel adds, series reciprocates
+> *Why:* the period is always $2\pi\sqrt{m/k_{\text{eff}}}$ — the only work is finding $k_{\text{eff}}$; the figure fixes which rule goes with which wiring.
+> *Data:* parallel $k_{\text{eff}}=k_1+k_2$; series $\frac{1}{k_{\text{eff}}}=\frac1{k_1}+\frac1{k_2}$.
+
+```mermaid
+flowchart TD
+  A["springs side by side"] --> B["same stretch, forces add"]
+  B --> C["k_eff = k1 + k2"]
+  D["springs end to end"] --> E["same force, stretches add"]
+  E --> F["1/k_eff = 1/k1 + 1/k2"]
+```
+
+> *Read:* parallel is the recipe for stiffer; series is the recipe for softer — then $T=2\pi\sqrt{m/k_{\text{eff}}}$ handles both.
 
 ### 3.6 Simple pendulum
 
@@ -216,6 +275,22 @@ $$
 > [!abstract] DIAGRAM D10.7 · The resonance curve — amplitude vs driving frequency
 > *Show:* $A(\omega)$ vs $\omega/\omega_0$ for three values of damping $\gamma$: small (sharp peak), medium, and large (broad, low peak). The peak shifts slightly below $\omega_0$ for larger $\gamma$. The $Q$-factor $=\omega_0/(2\gamma)$ indicated.
 > *Search:* "resonance amplitude versus driving frequency damping curves graph"
+
+> [!tip] FIGURE F10.5 · Resonance: small damping, tall sharp peak
+> *Why:* every forced-oscillator question is about the peak's height and width; the figure keys both to the damping.
+> *Data:* peak near $\omega=\omega_0$ (exactly at $\omega_0$ for $\gamma\to0$); quality factor $Q=\omega_0/(2\gamma)$ sets height and width.
+
+```mermaid
+xychart-beta
+  title "amplitude vs driving frequency"
+  x-axis ["0.5", "0.8", "1.0", "1.2", "1.5"]
+  y-axis 0 --> 6
+  line [1, 1.8, 6, 1.8, 1]
+  line [1, 1.4, 2.6, 1.4, 1]
+  line [1, 1.1, 1.5, 1.1, 1]
+```
+
+> *Read:* light damping makes a needle-sharp spike at the natural frequency; heavy damping flattens and lowers it — the amplitude never grows without bound.
 
 ### 3.11 Coupled oscillators and normal modes
 
@@ -781,6 +856,22 @@ For a vertical spring with mass $m$: the equilibrium extension is $x_0=mg/k$. Th
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F10.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the eight triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"period from k, m"| B["T = 2π√(m/k)"]
+  A -->|"pendulum"| C["T = 2π√(L/g)"]
+  A -->|"initial conditions"| D["x0 = A sinφ, v0 = Aω cosφ"]
+  A -->|"speed at x"| E["v = ω√(A²-x²)"]
+  A -->|"springs"| F["k_eff: parallel adds, series reciprocates"]
+  A -->|"is it SHM?"| G["F ∝ -x, or U ∝ x² near equilibrium"]
+```
+
+> *Read:* the period wants the system constants, an initial condition wants the phase, and a speed wants the energy balance.
 
 - "Find $T$ from $k$ and $m$": $T=2\pi\sqrt{m/k}$.
 - "Find $T$ for a pendulum": $T=2\pi\sqrt{L/g}$ (small angle).

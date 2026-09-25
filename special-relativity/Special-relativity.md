@@ -1,7 +1,8 @@
 ---
-title: Special Relativity & Relativistic Mechanics
+title: Special Relativity & Relativistic Mechanics — first principles to Olympiad
 part: 28
 slug: special-relativity
+status: complete
 source: olympiad extension (IPhO-level; nothing in these volumes)
 aliases: [special relativity, Lorentz transformation, time dilation, length contraction, E=mc2]
 tags: [olympiad, ipho, relativity, modern-physics, mechanics]
@@ -60,6 +61,24 @@ No Cengage relativity chapter exists in the supplied volumes (verified: no chapt
 | 13 | Relativistic collisions and threshold energies | §3.12 | full |
 | 14 | Applications: GPS, particle accelerators, cosmic rays | §3.13 | full |
 
+> [!tip] FIGURE F28.1 · Chapter map
+> *Why:* the chapter is one cascade — two postulates force a new kinematics, which forces a new dynamics; the map shows the spine.
+> *Data:* the Part 0–14 structure — postulates, simultaneity, Lorentz, dilation, contraction, velocity addition, momentum, energy, Doppler, paper, sheet.
+
+```mermaid
+mindmap
+  root((special relativity))
+    Two postulates
+    Simultaneity
+    Lorentz transform
+    Dilation & contraction
+    Velocity addition
+    E = mc²
+    Doppler
+```
+
+> *Read:* every result is the Lorentz factor, an invariant, or an energy–momentum relation — all forced by one constancy of c.
+
 ## Part 1 · Intuition first
 
 **The ether died in 1887.** Michelson and Morley tried to measure the Earth's motion through the hypothetical luminiferous ether by comparing the speed of light in two perpendicular directions. They found no difference — to one part in $10^{8}$. Two explanations survived: either the Earth drags the ether along (ruled out by stellar aberration), or the speed of light is the same for all observers regardless of their motion. Einstein chose the second in 1905, and everything else followed.
@@ -117,6 +136,20 @@ Einstein's 1905 paper rests on two postulates:
 **Postulate 2 (Constancy of $c$).** The speed of light in vacuum is the same for all inertial observers, regardless of the motion of the source or the observer.
 
 Postulate 1 generalises Newton's first law from mechanics to all of physics (including electromagnetism). Postulate 2 is the consequence of Maxwell's equations and the Michelson–Morley result. Together they are enough to derive the Lorentz transformation — and everything else follows.
+
+> [!tip] FIGURE F28.2 · The two postulates and what they force
+> *Why:* the whole chapter is guessed from two premises; the figure chains premise to conclusion so nothing looks arbitrary.
+> *Data:* Postulate 1 (relativity), Postulate 2 (constancy of $c$); Michelson–Morley null result.
+
+```mermaid
+flowchart TD
+  A["Michelson-Morley: no fringe shift"] --> B["Postulate 2: c same in all frames"]
+  B --> C["simultaneity is relative"]
+  C --> D["time dilation, length contraction"]
+  D --> E["velocity addition, E = mc²"]
+```
+
+> *Read:* relativity of simultaneity comes *before* dilation and contraction — it is the missing step that makes the rest inevitable.
 
 ### 3.3 Simultaneity goes first
 
@@ -185,6 +218,21 @@ The moving rod is shortened along the direction of motion. The contraction is on
 > *Show:* two panels. Left (Earth frame): the atmosphere at 15 km height; the muon travelling downward with $\gamma\approx16$; the dilated lifetime $34.8\ \mu$s giving enough distance. Right (muon frame): the atmosphere contracted to 15/16$\approx0.95$ km; the muon at rest; the contracted atmosphere fitting within the $2.2\ \mu$s lifetime. Both arrive at the same physical conclusion.
 > *Search:* "muon time dilation length contraction two frames explanation diagram"
 
+> [!tip] FIGURE F28.3 · The muon: two frames, one event
+> *Why:* one observable fact — muons reach the ground — is dilation for the Earth observer and contraction for the muon; the figure shows both are the same physics.
+> *Data:* 15 km altitude, lifetime $2.2\ \mu$s at rest, $v=0.998c$, $\gamma\approx15.8$.
+
+```mermaid
+flowchart TD
+  A["muons made at 15 km, lifetime 2.2 µs"] --> B["at 0.998c: γ ≈ 15.8"]
+  B --> C["Earth frame: lifetime 34.8 µs → reach ground"]
+  B --> D["muon frame: atmosphere 0.95 km → reach ground"]
+  C --> E["same event, two descriptions"]
+  D --> E
+```
+
+> *Read:* dilation and contraction are one story read from two frames; the decay is the physical event that breaks the symmetry.
+
 ### 3.7 Relativistic velocity addition
 
 **Derivation.** An object moves at velocity $u'$ in $S'$ (which moves at $v$ relative to $S$). Find $u$ in $S$. From the Lorentz transformation: $dx=\gamma(dx'+v\,dt')$ and $dt=\gamma(dt'+v\,dx'/c^2)$. Divide:
@@ -201,6 +249,19 @@ $$
 > [!abstract] DIAGRAM D28.5 · The velocity-addition curve
 > *Show:* a graph with $u'$ on the horizontal axis (from 0 to $c$) and $u$ on the vertical; the Galilean addition line $u=u'+v$ (a straight line reaching beyond $c$) drawn as a dashed line; the relativistic curve $u=(u'+v)/(1+u'v/c^2)$ drawn as a solid curve approaching $c$ asymptotically; the curve crossing the Galilean line at low speeds; the intercept $u=v$ when $u'=0$ and $u=c$ when $u'=c$ marked.
 > *Search:* "relativistic velocity addition curve versus Galilean addition approaching c"
+
+> [!tip] FIGURE F28.4 · Adding velocities never exceeds c
+> *Why:* Galilean addition overshoots $c$; relativity differs only at high speed, but the difference is the whole chapter.
+> *Data:* $u = (u'+v)/(1+u'v/c^2)$; $0.8c+0.8c = 0.976c$, and $u'=c$ gives $u=c$.
+
+```mermaid
+flowchart LR
+  A["u'+v directly"] --> B["0.8c + 0.8c = 1.6c (wrong)"]
+  C["(u'+v)/(1+u'v/c²)"] --> D["0.8c + 0.8c = 0.976c"]
+  D --> E["u' = c → u = c always"]
+```
+
+> *Read:* at low speed the two formulas agree; at high speed the denominator bends every sum back under $c$.
 
 ### 3.8 Relativistic momentum
 
@@ -253,6 +314,21 @@ $$
 > [!abstract] DIAGRAM D28.7 · The gamma factor versus velocity
 > *Show:* a graph with $v/c$ on the horizontal axis (0 to 1) and $\gamma$ on the vertical (1 to infinity); the curve rising gently until $0.8c$ then steepening sharply; $\gamma=1.01$ at $v/c\approx0.14$, $\gamma=2$ at $v/c=\sqrt{3}/2\approx0.866$, $\gamma=7.09$ at $v/c=0.99$, $\gamma=10$ at $v/c=0.995$; the asymptote at $v=c$.
 > *Search:* "Lorentz gamma factor versus velocity graph approaching infinity"
+
+> [!tip] FIGURE F28.5 · The gamma factor: slow to rise, then vertical
+> *Why:* every exam speed must be converted to $\gamma$ first; the figure pins the headmark values to the curve.
+> *Data:* $\gamma = 1/\sqrt{1-\beta^2}$: $\gamma=2$ at $\beta=0.866$, $\gamma\approx7$ at $\beta=0.99$, $\gamma=10$ at $\beta=0.995$.
+
+```mermaid
+xychart-beta
+  title "the gamma factor climbs only near c"
+  x-axis ["0", "0.5", "0.866", "0.99", "0.995"]
+  y-axis 0 --> 12
+  line [1, 1.15, 2, 7.09, 10]
+  line [1, 1, 1, 1, 1]
+```
+
+> *Read:* from 0 to 0.866 the factor merely doubles; the last percent of light speed multiplies it sixfold — that cliff is why $c$ is a wall.
 
 ### 3.11 The relativistic Doppler effect
 
@@ -876,7 +952,21 @@ In any interaction, $\sum E$ and $\sum\mathbf{p}$ are separately conserved (two 
 
 ### 9.1 Triage decision tree
 
-- "Given velocity, find $\gamma$": $\gamma=1/\sqrt{1-\beta^2}$.
+> [!tip] FIGURE F28.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the nine triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is given?"} -->|"velocity"| B["compute γ first"]
+  A -->|"two events / clock"| C["time dilation: Δt = γΔt0"]
+  A -->|"moving rod"| D["length contraction: L0/γ"]
+  A -->|"add speeds"| E["relativistic addition, never direct"]
+  A -->|"energy or momentum"| F["γ then p = γmv, E = γmc²"]
+  A -->|"threshold"| G["invariant s at threshold"]
+```
+
+> *Read:* velocity goes to $\gamma$ first, events to a proper-time clock, speeds to the addition formula — each keyword has exactly one tool.
 - "Time dilation": identify the two events, find the proper-time clock, apply $\Delta t=\gamma\Delta t_0$.
 - "Length contraction": is the object at rest in some frame? If so, $L_0$ is the proper length, $L=L_0/\gamma$.
 - "Velocity addition": use the relativistic formula; never add directly.

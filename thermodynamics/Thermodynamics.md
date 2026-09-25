@@ -1,8 +1,36 @@
+---
+title: Thermodynamics — first principles to Olympiad
+part: 5
+slug: thermodynamics
+status: complete
+source: Cengage Waves and Thermodynamics-compressed.pdf, Thermodynamics chapters
+aliases: [thermodynamics, first law, second law, engines, entropy, carnot]
+tags: [jee-advanced, olympiad, thermal, thermodynamics]
+---
+
 _12-page chapter set · JEE Advanced · NSEP · INPhO · IPhO · self-contained — opens with no internet, prints cleanly_
 
 # Thermodynamics — first principles to Olympiad
 
 A complete, derivation-first treatment of heat, work and their bookkeeping. Every formula here is earned from something you already accept — the zeroth law, momentum transfer, energy accounting — and every place where a JEE or INPhO examiner can catch you is marked explicitly. Two ideas do all the work: **energy is a ledger**, and **a state function lets you change the route**. Chapter 1–4 build the ledger, chapter 5–6 the tax the ledger charges (entropy), chapter 7 the Olympiad extensions.
+
+> [!tip] FIGURE F5.1 · Chapter map
+> *Why:* the course is one ledger paid in four currencies — heat, work, internal energy and entropy; the map shows the 8 chapters hanging off that spine.
+> *Data:* chapters 1–2 temperature/kinetic theory, 3 first law (ΔU = Q − W), 4 the five processes, 5–6 the second law and entropy, 7 Olympiad extensions, 8 playbook.
+
+```mermaid
+mindmap
+  root((thermodynamics))
+    Temperature
+    Kinetic theory
+    First law
+    The five processes
+    Second law
+    Entropy
+    Dynamics & stats
+```
+
+> *Read:* one ledger and one tax — every chapter is a line in the accounts, and every exam number is a balance check.
 
 ![The whole course on one picture: a cycle on a PV plane exchanging heat between two reservoirs, with the three governing lines annotated](assets/figures/fig-001.svg)
 
@@ -541,6 +569,20 @@ $$
 
 ### 3.3 ΔU of an ideal gas: a function of T, full stop
 
+> [!tip] FIGURE F5.2 · The first law ledger: ΔU = Q − W
+> *Why:* the first law is one line, but its power is bookkeeping — state what crosses the boundary and what stays; the flow fixes the sign before the answer.
+> *Data:* ΔU = Q − W (W by the gas); dU = nC_V dT; free expansion ΔU = 0, W = 0, Q = 0; cyclic ΔU = 0.
+
+```mermaid
+flowchart TD
+  A["boundary + what crosses it"] --> B["ΔU = Q - W"]
+  B --> C["W by the gas only"]
+  B --> D["isothermal free expansion: all three zero"]
+  B --> E["cycle: ΔU = 0 → Q = W"]
+```
+
+> *Read:* three quantities, one is a state function; the heat and work are route-money, only ΔU is the ledger balance.
+
 $$
 \Delta U = nC_{V}\Delta T\qquad\text{— for an ideal gas on ANY path, not just constant volume} \tag{3.3}
 $$
@@ -724,6 +766,20 @@ giving the numbers to burn in: monatomic (He, Ar) $\gamma = 5/3 = 1.67$; diatomi
 
 ### 4.2 The three "iso-" processes
 
+> [!tip] FIGURE F5.3 · The five processes, one template
+> *Why:* every process problem is ΔU = Q − W plus one constraint; the table fixes which term is zero so the work is just reading the row.
+> *Data:* isochoric W = 0; isobaric W = PΔV = nRΔT; isothermal ΔU = 0, W = Q = nRT ln(V₂/V₁); adiabatic Q = 0, W = −ΔU; free expansion all zero.
+
+```mermaid
+flowchart TD
+  T["ΔU = Q - W"] --> I["isochoric: W = 0"]
+  T --> B["isobaric: W = nRΔT"]
+  T --> M["isothermal: ΔU = 0"]
+  T --> A["adiabatic: Q = 0"]
+  T --> F["free expansion: everything zero"]
+```
+
+> *Read:* name the constraint first, the ledger fills itself in; the isotherm's ln is the hyperbola's area.
 $$
 \text{isochoric: } W=0,\ Q=nC_{V}\Delta T\qquad \text{isobaric: } W=nR\Delta T,\ Q=nC_{P}\Delta T\qquad \text{isothermal: } \Delta U=0,\ W=Q=nRT\ln\frac{V_{2}}{V_{1}} \tag{4.3}
 $$
@@ -757,6 +813,20 @@ TV^{\gamma-1}=\text{const}\qquad PV^{\gamma}=\text{const}\qquad P^{1-\gamma}T^{\
 $$
 
 All three are the same statement wearing different shoes — derive the first, get the others by dressing it with the gas law. The work along an adiabat follows from $W = -\Delta U$:
+
+> [!tip] FIGURE F5.4 · Adiabat vs isotherm: which curve pays its own way
+> *Why:* the two curves answer every "which does more work / ends where" MCQ without algebra; misreading them is the classic trap.
+> *Data:* adiabat is steeper than the isotherm (γ > 1); for a given expansion the adiabat lies below and ends colder; W_adia = nC_V(T₁ − T₂), W_iso = nRT ln(V₂/V₁).
+
+```mermaid
+flowchart TD
+  A["expand to twice the volume"] --> B{"which curve?"}
+  B -- "isotherm" --> C["stays at T, W = nRT ln 2"]
+  B -- "adiabat" --> D["cools to T·2^(1-γ), W = nC_VΔT"]
+  C --> E["isotherm ends higher, area bigger"]
+```
+
+> *Read:* the lower curve is always the one that pays for expansion out of savings.
 
 $$
 W_{\text{adiab}} = \frac{P_{1}V_{1}-P_{2}V_{2}}{\gamma-1} = \frac{nR\left(T_{1}-T_{2}\right)}{\gamma-1} \tag{4.5}
@@ -943,6 +1013,24 @@ The first law says you can't win (energy is conserved); this chapter says why yo
 **Fig. 5.1 — An engine, and the machine that would exist if it overperformed.** Arrow width is watts. The right half is the impossibility argument as a picture: an over-Carnot engine driving a Carnot refrigerator pays for its own exhaust heat *and* profits — a perpetual pump. Since that is nonsense, the over-Carnot engine is nonsense: **Carnot is the ceiling because exceeding it self-contradicts**
 
 ### 5.2 Engines: the efficiency and its one honest computation
+
+> [!tip] FIGURE F5.5 · Engine vs refrigerator: two devices, opposite signs
+> *Why:* the second law is one picture read two ways; getting the arrow directions right fixes every efficiency-and-COP sign.
+> *Data:* engine W = Q₁ − Q₂ out (Q₂ is waste); refrigerator COP = Q₂/W; Carnot ceilings η_C = 1 − T₂/T₁ and COP_C = T₂/(T₁ − T₂).
+
+```mermaid
+flowchart TD
+  subgraph engine["heat engine: work OUT"]
+    H1["hot T₁"] -->|"Q₁ in"| W["W = Q₁ - Q₂"]
+    W -->|"Q₂ out"| C1["cold T₂"]
+  end
+  subgraph fridge["refrigerator: work IN"]
+    C2["cold T₂"] -->|"Q₂ lifted"| P["W in"]
+    P -->|"Q₁ = Q₂ + W"| H2["hot T₁"]
+  end
+```
+
+> *Read:* same diagram read backwards — the engine spreads heat downhill, the refrigerator is driven uphill; the ceiling is always in kelvins.
 
 $$
 \eta = \frac{W}{Q_{1}} = 1-\frac{Q_{2}}{Q_{1}}\qquad\text{(cyclic: } W = Q_{1}-Q_{2}\text{ — the first law at the gate)} \tag{5.1}
@@ -1561,6 +1649,21 @@ Thermodynamics questions are few models wearing many costumes. Read the first se
 ![Triage map: a question stem branches into cycle, state-change, transfer, or estimate models, each with its first written line and its check step](assets/figures/fig-031.svg)
 
 **Fig. 8.1 — The first ninety seconds.** Classify before you compute; the class dictates the *first written line*, and the first written line dictates the check. In JEE MCQs, mis-triage (running a cycle as one long state change) is worth more wrong answers than any algebra slip.
+
+> [!tip] FIGURE F5.6 · Triage: which of the four models is this?
+> *Why:* the same ninety seconds — classify before computing; the class chooses the first written line and the check.
+> *Data:* cycle → Q over W mined from the loop; state change → ΔU from T only; transfer → Q = nCΔT or a latent step; estimate → one exponent, order-of-magnitude.
+
+```mermaid
+flowchart TD
+  A["first sentence: what is it a picture of?"] --> B{"the model"}
+  B -- "cycle" --> C["W = loop area, Q's summed"]
+  B -- "state change" --> D["ΔU from T only"]
+  B -- "transfer" --> E["Q = nCΔT or a latent step"]
+  B -- "estimate" --> F["one exponent, order-of-magnitude"]
+```
+
+> *Read:* the class dictates the first written line; the first written line dictates the check.
 
 ### 8.2 The ten traps
 

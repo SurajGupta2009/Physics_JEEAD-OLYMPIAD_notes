@@ -1,7 +1,8 @@
 ---
-title: X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect
+title: X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad
 part: 25
 slug: x-rays
+status: complete
 source: Cengage Optics and Modern Physics, ch 4 Atomic Physics pp. 4.25-4.32 (X-rays, X-ray spectra, Moseley's law)
 aliases: [X-rays, Moseley, Bragg, Compton]
 tags: [jee-advanced, olympiad, modern-physics, quantum]
@@ -74,6 +75,24 @@ The sweep read the chapter 4 contents page; the X-ray sections sit at pp. 4.25-4
 | Compton effect, twice derived (added by sweep) | photon momentum proven | §3.9-3.10, OL1-OL2 | added by sweep |
 | Pair production threshold (added by sweep) | $2m_ec^2$ | §3.11 | added by sweep |
 | Production efficiency and anode heat (added by sweep) | engineering estimate | §3.1, OL7 | added by sweep |
+
+> [!tip] FIGURE F25.1 · Chapter map
+> *Why:* the chapter is three instruments (tube, crystal, Maxwell photon) and one particle — the map shows the spine.
+> *Data:* the Part 0–14 structure — production, spectra, absorption, Bragg, Compton, paper, sheet.
+
+```mermaid
+mindmap
+  root((X-rays))
+    Production
+    Continuous spectrum
+    Characteristic lines
+    Moseley
+    Absorption
+    Bragg diffraction
+    Compton shift
+```
+
+> *Read:* every result is production ($\lambda_{\min}$), the element fingerprint ($Z$-law), geometry (Bragg), or the photon's momentum hook (Compton).
 
 ## Part 1 · Intuition first
 
@@ -159,10 +178,21 @@ $$
 
 Numbers: $30$ kV gives $41.3$ pm, $50$ kV gives $24.8$ pm, $100$ kV gives $12.4$ pm. Raising $V$ pushes the cutoff to shorter wavelengths and drags the whole smear up and with it; changing the target changes the intensity (roughly $\propto Z$) but not the cutoff, which depends only on $V$. The short end is sharp because it is a one-electron-one-photon extreme; the long end fades gently because soft photons are reabsorbed in the target and window.
 
-> [!abstract] DIAGRAM D25.2 · The continuous spectrum at three voltages
-> *Show:* intensity against wavelength for 30, 50 and 100 kV on the same target; each curve rising from a sharp cutoff, peaking, and falling; the cutoffs at 41.3, 24.8, 12.4 pm marked and joined by the hyperbola lambda-min proportional to 1/V; no characteristic lines in this panel.
-> *Search:* "bremsstrahlung continuous X-ray spectrum cutoff voltage dependence"
-> *Used in:* §3.2.
+> [!tip] FIGURE F25.2 · One tube voltage, one cutoff
+> *Why:* the voltage gene $\lambda_{\min}$ is the one fact that separates production intuition from absorption intuition.
+> *Data:* $\lambda_{\min} = hc/(eV) = 1.24\times10^6/V$ pm: 30 kV → 41.3 pm, 50 kV → 24.8 pm, 100 kV → 12.4 pm.
+
+```mermaid
+flowchart LR
+  V["tube voltage V"] --> E["electron energy eV"]
+  E --> F["one photon at full stop"]
+  F --> L["λ_min = hc/(eV)"]
+  L --> D["high V pushes the cutoff shorter"]
+```
+
+> *Read:* the short-wavelength edge is a one-electron-one-photon extreme; it depends only on voltage, never on target or current.
+
+
 
 Historically the cutoff was a precision instrument: plotting $\lambda_{\min}$ against $\frac1V$ measures $\frac{h}{e}$ — the Duane-Hunt limit as the inverse photoelectric effect, matching Millikan's $V_s$-$f$ slope from the other direction (OL5).
 
@@ -181,6 +211,19 @@ The threshold logic examiners love: a line appears only when the tube voltage ca
 > *Show:* three levels K, L, M; an outgoing arrow from K labelled "ejected electron"; a downward arrow M to K labelled K-beta, L to K labelled K-alpha, M to L labelled L-alpha; energies in keV for copper beside the arrows.
 > *Search:* "characteristic X-ray emission K alpha L shell vacancy cascade diagram"
 > *Used in:* §3.3.
+
+> [!tip] FIGURE F25.6 · Moseley: the element fingerprint is a straight line
+> *Why:* the same screened-nucleus formula gives every element a line — plotting $\sqrt f$ against $Z$ is how Moseley counted the elements.
+> *Data:* $\nu^{1/2} \propto (Z - b)$ with $b \approx 1$, stitching Kα frequency to atomic number.
+
+```mermaid
+flowchart LR
+  A["Kα photon"] --> B["vacancy refilled L → K"]
+  B --> C["energy ∝ (Z - b)²"]
+  C --> D["sqrt(f) ∝ Z - b : a straight line"]
+```
+
+> *Read:* each element's K line is a booked position on one straight line, which is why an unlabelled spectrum can still name its element.
 
 ### 3.4 Moseley's law, derived from the screened Bohr picture
 
@@ -281,15 +324,34 @@ $$
 
 so at $90^\circ$ for a $12.4$ keV photon ($x=0.0243$): $K_e=0.29$ keV; at $180^\circ$: $0.57$ keV. The electron's angle satisfies $\tan\phi=\frac{1}{(1+x)\tan\frac{\theta}{2}}$: never backwards, at most $90^\circ$.
 
-> [!abstract] DIAGRAM D25.11 · Compton scattering geometry and momentum triangle
-> *Show:* left panel: incoming photon arrow, outgoing photon at theta, recoil electron at phi; right panel: the triangle of momenta h/lambda = h/lambda-prime + p-e with the angles marked.
-> *Search:* "Compton scattering diagram photon electron recoil momentum triangle"
-> *Used in:* §3.10, OL1.
+> [!tip] FIGURE F25.3 · Compton kinematics in one line
+> *Why:* the shift formula is pure relativistic billiards — the flowchart shows the energy and momentum books in parallel.
+> *Data:* photon $p=h/\lambda$ strikes an electron at rest; scattered photon at $\theta$, recoil electron at $\phi$.
 
-> [!abstract] DIAGRAM D25.12 · The shift against angle
-> *Show:* delta-lambda against theta from 0 to 180 degrees, the curve 2.43(1-cos theta); points marked at 90 (2.43 pm) and 180 (4.86 pm); a flat dashed line at 0.005 pm labelled "visible light, magnified ten thousand times" to show invisibility.
-> *Search:* "Compton wavelength shift versus scattering angle curve"
-> *Used in:* §3.10-3.11.
+```mermaid
+flowchart LR
+  A["photon: E = hc/λ, p = h/λ"] --> C{"collision with resting electron"}
+  C --> B["energy: hc/λ + m c² = hc/λ' + E_e"]
+  C --> D["momentum: h/λ = h/λ' cos θ + p_e cos φ"]
+  C --> E["shift: Δλ = (h/m_e c)(1 - cos θ)"]
+```
+
+> *Read:* energy and momentum close the triangle; the wavelength shift depends only on the scattering angle.
+
+> [!tip] FIGURE F25.4 · The Compton shift versus angle
+> *Why:* the same shift is invisible for visible light and huge for hard X-rays — the graph encodes the scale.
+> *Data:* $\Delta\lambda = 2.43\,(1-\cos\theta)$ pm: at $0^\circ$ → 0, $60^\circ$ → 1.22, $90^\circ$ → 2.43, $120^\circ$ → 3.65, $180^\circ$ → 4.86 pm.
+
+```mermaid
+xychart-beta
+  title "Δλ = 2.43(1 - cos θ) pm : angle-only shift"
+  x-axis ["0°", "45°", "90°", "135°", "180°"]
+  y-axis 0 --> 5
+  line [0, 0.71, 2.43, 4.15, 4.86]
+  line [0, 0, 0, 0, 0]
+```
+
+> *Read:* the shift runs zero (forward) to 4.86 pm (backward), and it is the same for every target — the photon, not the atom, carries the change.
 
 ### 3.11 Why it matters
 
@@ -954,6 +1016,22 @@ $N_A$ must come from $\frac{M}{\rho d^3}$ times an order-unity lattice factor (2
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F25.5 · Triage — match the keyword to the law
+> *Why:* the keyword names the equation before any number is touched.
+> *Data:* the six triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What does the question name?"} -->|"voltage, cutoff"| B["λ_min = hc/(eV)"]
+  A -->|"element, line, fingerprint"| C["Moseley: sqrt(f) ∝ (Z - b)"]
+  A -->|"thickness, shielding"| D["I = I₀ e^(-μx), HVL"]
+  A -->|"angle, crystal"| E["Bragg: 2d sin θ = nλ"]
+  A -->|"scattered photon, shift"| F["Compton: Δλ = ..."]
+  A -->|"above 1 MeV"| G["pair production threshold"]
+```
+
+> *Read:* voltage words go to the cutoff, angle words to Bragg, a scattered wavelength to Compton — no law does another's job.
 
 - Voltage and cutoff words: Eq. (4.1).
 - Element, line, fingerprint: Moseley, Eq. (4.2).
@@ -1632,30 +1710,30 @@ Blocks 2 (definitions and conventions used throughout), 3, 4 and 10 are each tes
 
 One point per honest yes; 24 plus is exam-ready.
 
-1. Sketch the double spectrum and explain every feature.
-2. Derive the Duane-Hunt limit and quote three cutoffs.
-3. Say why the edge is sharp and the long end soft.
-4. State the characteristic-line threshold logic and use it.
-5. Derive Moseley's law and identify an element.
-6. Explain the shielding constant's value for K-alpha.
-7. Work the exponential law by HVL counting.
-8. Explain bone-white and the soft-X-ray trade-off.
-9. Derive Bragg's law with the plane convention.
-10. Bound the orders and count them.
-11. Extract d from an angle, and N-A from d, rho, M.
-12. Describe powder rings.
-13. State what the two Compton peaks are.
-14. Derive the shift by the scalar route.
-15. Derive it by the invariant route.
-16. Compute recoil energy and angle at any theta.
-17. Explain why the photon cannot give everything.
-18. Estimate the visible-light shift and its consequence.
-19. Quote the pair threshold and its nucleus requirement.
-20. Estimate tube efficiency and anode heating.
-21. Place photoelectric, Compton, diffraction in the evidence table.
-22. Run the inverse-Compton mirror estimate.
-23. Defuse each trap of Part 8.
-24. Run the ten-point audit of 9.5.
+- [ ] Sketch the double spectrum and explain every feature.
+- [ ] Derive the Duane-Hunt limit and quote three cutoffs.
+- [ ] Say why the edge is sharp and the long end soft.
+- [ ] State the characteristic-line threshold logic and use it.
+- [ ] Derive Moseley's law and identify an element.
+- [ ] Explain the shielding constant's value for K-alpha.
+- [ ] Work the exponential law by HVL counting.
+- [ ] Explain bone-white and the soft-X-ray trade-off.
+- [ ] Derive Bragg's law with the plane convention.
+- [ ] Bound the orders and count them.
+- [ ] Extract d from an angle, and N-A from d, rho, M.
+- [ ] Describe powder rings.
+- [ ] State what the two Compton peaks are.
+- [ ] Derive the shift by the scalar route.
+- [ ] Derive it by the invariant route.
+- [ ] Compute recoil energy and angle at any theta.
+- [ ] Explain why the photon cannot give everything.
+- [ ] Estimate the visible-light shift and its consequence.
+- [ ] Quote the pair threshold and its nucleus requirement.
+- [ ] Estimate tube efficiency and anode heating.
+- [ ] Place photoelectric, Compton, diffraction in the evidence table.
+- [ ] Run the inverse-Compton mirror estimate.
+- [ ] Defuse each trap of Part 8.
+- [ ] Run the ten-point audit of 9.5.
 
 ### 14.2 What the next chapter assumes
 

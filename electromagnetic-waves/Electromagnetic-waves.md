@@ -1,3 +1,13 @@
+---
+title: Electromagnetic Waves — from Maxwell to Olympiad
+part: 3
+slug: electromagnetic-waves
+status: complete
+source: original Markdown-first course, plan-v1 PART 3 scope (Maxwell, waves, Poynting, pressure, spectrum)
+aliases: [electromagnetic waves, maxwell equations, displacement current, poynting, radiation pressure]
+tags: [jee-advanced, nsep, inpho, ipho, waves, electromagnetism]
+---
+
 # Electromagnetic Waves — from Maxwell to Olympiad
 
 > **Part 3 of the waves curriculum · JEE Advanced / NSEP / INPhO / IPhO**  
@@ -54,6 +64,24 @@ This maps the six required groups in `plan.md`; it is a **plan-syllabus coverage
 
 **Route:** §2 with its six in-flow checks → §3 with solutions closed → §4 alternate methods → §5 traps → §6 triage → §7 timed paper → §8 revision sheet. State assumptions aloud before calculating.
 
+> [!tip] FIGURE F3.1 · Chapter map
+> *Why:* the whole course is one causal chain from a broken magnetostatic law to radiation pressure; the map shows the chain.
+> *Data:* the §1.3 route — displacement current → Maxwell → curl derivations → plane waves → energy/momentum → pressure → spectrum.
+
+```mermaid
+mindmap
+  root((Maxwell))
+    Displacement current
+    Wave equations
+    E cross B along k
+    Energy and Poynting
+    Momentum
+    Radiation pressure
+    Spectrum
+```
+
+> *Read:* every result in §2 is either a divergence/curl of the fields or an integral of their product.
+
 ## 2. Core Derivations & Asymptotic Limits
 
 ### 2.1 Why the original Ampère law fails during charging
@@ -61,6 +89,23 @@ This maps the six required groups in `plan.md`; it is a **plan-syllabus coverage
 Take a circular loop around the lead feeding a parallel-plate capacitor. One spanning surface cuts the wire, giving $\int\mathbf J\cdot d\mathbf A=I_c$. Bulge a second surface between the plates without changing its rim; it cuts no conduction current. The same $\oint\mathbf B\cdot d\boldsymbol\ell$ cannot equal both $\mu_0I_c$ and zero. A magnetostatic law has been used outside its domain.
 
 ![Two spanning surfaces of one loop intercept conduction current or changing electric flux.](assets/figures/fig-001.svg)
+
+> [!tip] FIGURE F3.2 · The charging-capacitor paradox resolved
+> *Why:* one loop, two spanning surfaces, one circulation — the paradox is the single reason displacement current exists.
+> *Data:* surface through the wire gives I_c; surface through the gap gives I_d = ε₀ dΦ_E/dt; they must be equal.
+
+```mermaid
+flowchart LR
+  A["One Amperian loop"] --> B["surface through wire"]
+  A --> C["surface through gap"]
+  B --> D["μ₀ I_c"]
+  C --> E["μ₀ I_d = μ₀ ε₀ dΦ_E/dt"]
+  D --> F{"same circulation?"}
+  E --> F
+  F -->|"yes, only if"| G["add displacement current"]
+```
+
+> *Read:* the same loop boundary cannot give two different circulations; continuity forces I_d = I_c during charging.
 
 *Figure 1. The boundary loop is identical; changing its spanning surface cannot change the predicted circulation.*
 
@@ -236,6 +281,20 @@ Direct check: $(\nabla\times\mathbf E)_y=\partial_zE_x=kE_0\cos\phi$ and $-\part
 
 ![Transverse electric and magnetic oscillations propagate along positive z.](assets/figures/fig-003.svg)
 
+> [!tip] FIGURE F3.3 · E, B and k form a right-handed triad
+> *Why:* the handedness decides whether a guessed B is correct or reversed — the most common sign error in the topic.
+> *Data:* B = (1/v) k̂ × E, E₀ = v B₀, S = E × B / μ parallel to k.
+
+```mermaid
+flowchart LR
+  A["E along x"] --> C{"E × B"}
+  B["B along y"] --> C
+  C --> D["energy flows along +z = k"]
+  D --> E["B = (1/v) k × E"]
+```
+
+> *Read:* for a wave along +z, E × B points along propagation; reverse B and the wave carries energy backwards — a physical impossibility.
+
 *Figure 3. Both sinusoids cross zero at the same phase; E, B and propagation form a right-handed triad.*
 
 At a stationary interface fields must match for every time. Different frequencies would drift out of step, so reflection and transmission preserve $f$. Since $v$ changes, $\lambda=v/f$ changes. Frequency is not divided by refractive index.
@@ -313,6 +372,21 @@ For an isotropic far-field source in a transparent medium, conservation across s
 
 **C5 — concept check.** Does $\langle\mathbf E\rangle=\langle\mathbf B\rangle=0$ imply $\langle\mathbf S\rangle=0$?
 
+> [!tip] FIGURE F3.4 · Inverse-square spreading of isotropic intensity
+> *Why:* intensity is power spread over a growing sphere — the one sentence that converts any isotropic power into a field.
+> *Data:* $I(r) = \mathcal P/(4\pi r^2)$ with $\mathcal P = 120$ W sampled at $r \in \{1, 2, 3, 4, 5\}$ m.
+
+```mermaid
+xychart-beta
+  title "I(r) = 120/(4πr²) : quarters when distance doubles"
+  x-axis ["1", "2", "3", "4", "5"]
+  y-axis 0 --> 10
+  line [9.55, 2.39, 1.06, 0.60, 0.38]
+  line [0, 0, 0, 0, 0]
+```
+
+> *Read:* doubling distance quarters intensity and halves the field amplitude ($E_0 \propto 1/r$) — the two scalings students swap.
+
 <details><summary>Solution</summary>
 
 No. Average the product, not the individual factors. In-phase fields have $\langle E_xB_y\rangle=E_0B_0/2>0$. Both reverse together, so their cross product keeps pointing forward.
@@ -361,6 +435,20 @@ $$
 **Validity:** vacuum incident/emergent radiation, stationary complete absorber or specular mirror, no extra asymmetric emission recoil. This is **normal** force per actual area. Absorption also gives tangential traction $I\sin\theta\cos\theta/c$; total force is along the incident beam. Specular reflection leaves tangential momentum unchanged, so its force is purely normal.
 
 ![Incident and reflected rays retain tangential momentum but reverse normal momentum.](assets/figures/fig-004.svg)
+
+> [!tip] FIGURE F3.5 · Radiation pressure: the two cosines
+> *Why:* pressure has two projection factors and each has its own trap — the figured flow separates them.
+> *Data:* intercepted energy dU = I A cos θ dt; transferred normal momentum = (approach + departure)/c, giving P_abs = (I/c)cos²θ, P_spec = (2I/c)cos²θ.
+
+```mermaid
+flowchart LR
+  A["I (beam-normal)"] --> B["intercepted power = I A cos θ"]
+  B --> C{"which normal momentum?"}
+  C -->|"absorbed"| D["(I/c) cos²θ"]
+  C -->|"specular (reversed)"| E["(2I/c) cos²θ"]
+```
+
+> *Read:* one cosine projects the area, the other projects the momentum — the tangent momentum stays untouched for a mirror.
 
 *Figure 4. One cosine projects area; the other projects momentum. Incidence angle is measured from the normal.*
 
@@ -640,6 +728,22 @@ With $e^{i(kz-\omega t)}$, $k^2=\mu\varepsilon\omega^2+i\mu\sigma\omega$. Comple
 ## 6. Topic Playbook
 
 ### 6.1 Triage decision tree
+
+> [!tip] FIGURE F3.6 · Triage — match the question to a Maxwell tool
+> *Why:* the six-way split decides which law gets derivative work and which gets an integral.
+> *Data:* the six triage rules of §6.1 (capacitor→flux, field expression→k and cross product, amplitude/power→peak/RMS, force→momentum in−out, interface→tangential fields, spectrum→vacuum wavelength).
+
+```mermaid
+flowchart TD
+  A{"What is given?"} -->|"charging capacitor"| B["displacement current / flux"]
+  A -->|"E, B expressions"| C["read k, ω; cross-product"]
+  A -->|"amplitude or power"| D["peak vs RMS; I = E₀²/(2Z)"]
+  A -->|"force"| E["momentum in − out"]
+  A -->|"interface"| F["match tangential fields"]
+  A -->|"spectrum"| G["vacuum λ and mechanism"]
+```
+
+> *Read:* each branch hands the problem to one law — mixing peak with RMS, or area with momentum projection, is the classic misroute.
 
 1. **Changing capacitor?** Draw one loop and one surface. Find $D(t)$ or $E(t)$, integrate enclosed flux, then use justified symmetry.
 2. **Field expression?** Read $\mathbf k,\omega$; follow constant phase; test $\omega/k=v$ and transversality; cross-product for the missing field. Refuse inconsistent data.

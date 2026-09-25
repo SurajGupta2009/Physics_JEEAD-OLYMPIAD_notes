@@ -1,3 +1,13 @@
+---
+title: Wave Optics — first principles to Olympiad
+part: 4
+slug: wave-optics
+status: complete
+source: Cengage Optics and Modern Physics-compressed.pdf, ch 2 Wave Optics (pp. 2.1-2.95)
+aliases: [wave optics, interference, diffraction, polarisation, young double slit, thin films]
+tags: [jee-advanced, olympiad, optics, waves]
+---
+
 <a id="section-index"></a>
 
 <a id="top"></a>
@@ -7,6 +17,24 @@ _course map · read this first · 12 parts · 28 figures · 136 questions_
 # Wave Optics — first principles to Olympiad
 
 Geometrical optics told you where light goes; it never asked what light *is*. This course starts from the wave, the phase and the superposition principle, and from those three ideas rebuilds everything the ray picture could not explain: why two slits give a pattern of bright and dark bands, why a soap film is coloured, why a telescope has a limit that no amount of polish can beat, and why a beam of light can be stopped by two crossed sheets of plastic. It covers the whole of the Cengage *Wave Optics* chapter — Huygens' construction, thin films, the double slit in all its cases, Fresnel's biprism and Lloyd's mirror — and then goes past it to the diffraction, polarisation and coherence material that olympiad papers are built from.
+
+> [!tip] FIGURE F4.1 · Chapter map
+> *Why:* the whole chapter is one idea read at three scales — phase, film, aperture; the map shows the one spine the twelve parts hang from.
+> *Data:* the 12-part structure (Huygens → double slit → films → interferometers → diffraction → polarisation → coherence → instruments → playbook → paper).
+
+```mermaid
+mindmap
+  root((wave optics))
+    Wavefront and Huygens
+    Double slit
+    Thin films
+    Interferometers
+    Diffraction
+    Polarisation
+    Coherence
+```
+
+> *Read:* after part 1 everything is a path difference converted to phase — the double slit, the film, the grating and the polariser each change only what “path” means.
 
 ![Two coherent sources and their hyperbolic fringes](assets/figures/fig-001.svg)
 
@@ -362,6 +390,20 @@ Two waves produce a stationary pattern of bright and dark only if their phase di
 
 Every interference problem in this course — the double slit, the soap film, Newton's rings, the biprism, the grating — is solved by one three-step routine. Learn it now and the rest of the topic is arithmetic.
 
+> [!tip] FIGURE F4.2 · The phase-difference recipe
+> *Why:* every interference number is the same three moves in the same order; the flowchart fixes the order so the $\lambda/2$ cannot be added at the wrong time.
+> *Data:* step 1 geometric path $\Delta x$; step 2 optical path $\sum n_i x_i$; step 3 add $\lambda/2$ per reflection off a denser medium, then compare with $n\lambda$ / $(2n+1)\lambda/2$.
+
+```mermaid
+flowchart TD
+  A["draw the two paths"] --> B["geometric Δx"]
+  B --> C["optical path: Σ nᵢxᵢ"]
+  C --> D["add λ/2 per reflection off a denser medium"]
+  D --> E["compare total with nλ / (2n+1)λ/2"]
+```
+
+> *Read:* preserve this order — the reflection phase can only be added after you know which paths reflect, and a $\pi$ error is invisible until the total meets $\lambda$.
+
 > **The phase-difference recipe**
 >
 > 1. **Draw the two paths** from the common source (or from the two secondary sources) to the point of interest, and
@@ -609,6 +651,21 @@ So the fringes are strictly equally spaced in $\sin\theta$, not in $\theta$ and 
 
 The constancy of $\beta$ is the reason the pattern looks like a ruler: equally spaced lines. It is also the reason the experiment is a measurement: measure $\beta$, $D$ and $d$, and the wavelength comes out, which is how Young first measured the wavelength of light in 1801. Fringe width is a linear ruler in three ways:
 
+> [!tip] FIGURE F4.3 · Fringe width β = λD/d — the one knob per quantity
+> *Why:* $\beta=\lambda D/d$ is the formula to carry, but the dependence is three separate memories; the flow pins each knob to its effect.
+> *Data:* $\beta=\lambda D/d$: $\beta\propto\lambda$, $\beta\propto D$, $\beta\propto 1/d$; immersed apparatus $\beta'=\beta/\mu$; brighter lamp leaves $\beta$ alone.
+
+```mermaid
+flowchart LR
+  A["β = λD/d"] --> B["λ ↑ → wider"]
+  A --> C["D ↑ → wider"]
+  A --> D["d ↑ → narrower"]
+  A --> E["in a medium: β/μ"]
+  A --> F["brightness: no change"]
+```
+
+> *Read:* geometry and wavelength set the spacing; brightness sets only the visibility — and immersion narrows by exactly $\mu$.
+
 > **How $\beta$ responds to each quantity**
 >
 > | change | effect on $\beta = \lambda D/d$ | why |
@@ -775,6 +832,21 @@ $$
 $$
 I_{\text{av}} = 2I_0, \qquad \frac{I_{\max}}{I_{\min}} = \left(\frac{a_1+a_2}{a_1-a_2}\right)^{2}
 $$
+
+> [!tip] FIGURE F4.5 · Intensity: two coherent waves give four, never two
+> *Why:* the whole subject lives or dies on this split — coherent waves add amplitudes, incoherent sources add intensities; the flow names which is which before any number is touched.
+> *Data:* equal coherent sources $I = 4I_0\cos^2(\Delta\varphi/2)$, peaks $4I_0$, average $2I_0$; incoherent lamps $2I_0$; unequal slits lift the minima to $I_0(a_1-a_2)^2$.
+
+```mermaid
+flowchart TD
+  A{"sources coherent?"} -->|"same lamp split"| B["add amplitudes with phase"]
+  B --> C["I = I₁+I₂+2√(I₁I₂)cosΔφ"]
+  C --> D["equal slits: 4I₀ at a bright fringe"]
+  A -->|"independent lamps"| E["add intensities: 2I₀"]
+  E --> F["pattern washes away — V = 0"]
+```
+
+> *Read:* equal coherent waves quadruple the intensity at a bright fringe, but the energy is moved sideways from the dark fringes, never destroyed.
 
 ![Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis](assets/figures/fig-011.svg)
 
@@ -1051,6 +1123,19 @@ using $\sin i = \mu\sin r$ from Snell's law. Combining a cosine and a tangent is
 >   $\pi$, equivalent to a path difference of $\lambda/2$.
 > - **$n_1 > n_2$** (glass to air, soap to air): *no* phase change.
 > - Transmission never carries a phase change of this kind — a transmitted wave simply carries on.
+
+> [!tip] FIGURE F4.4 · The phase-change rule: denser flips, rarer does not
+> *Why:* one lost λ/2 is the commonest error in the subject, and the rule is two cases — the flowchart makes the flip unambiguous.
+> *Data:* $n_1<n_2$ (into the denser medium) → reflected wave gains $\pi$; $n_1>n_2$ → no change; transmission never changes phase this way.
+
+```mermaid
+flowchart TD
+  A{"reflecting into a denser medium?"} -->|"n1 < n2"| B["reflected wave +π (λ/2)"]
+  A -->|"n1 > n2"| C["reflected wave: no change"]
+  A -->|"transmission"| D["no phase change, ever"]
+```
+
+> *Read:* the flip belongs to one specific reflected beam, not to "the film" — mark a cross on the drawing at each denser-boundary reflection and count them.
 
 > **Why a denser medium flips the wave (and why the flip is exactly π)**
 >
@@ -3316,6 +3401,22 @@ This is the part you revise from. It contains no new physics: it is the decision
 ### 9.1 Triage: what kind of problem is this?
 
 Every wave-optics question is one of six kinds, and each kind has exactly one governing equation. Identify the kind first — the arithmetic is easy and the classification is the whole problem.
+
+> [!tip] FIGURE F4.6 · Triage — read the question, then pick the box
+> *Why:* the six kinds are the six equations of the subject; the keyword routes the whole solution before any number is touched.
+> *Data:* slits → $\beta=\lambda D/d$; film → $2\mu t\cos r$; one aperture → $a\sin\theta=m\lambda$ (dark); grating → $d\sin\theta=n\lambda$; filter → Malus/Brewster; telescope → $1.22\lambda/D$.
+
+```mermaid
+flowchart TD
+  A{"what does the question name?"} -->|"two slits"| B["Δx = d sinθ; β = λD/d"]
+  A -->|"a film / layer"| C["2μt cos r + λ/2 if one flip"]
+  A -->|"one slit / hole"| D["a sinθ = mλ (dark fringes)"]
+  A -->|"grating"| E["d sinθ = nλ; R = nN"]
+  A -->|"filter / polariser"| F["Malus I₀cos²θ; Brewster tanθ=n₂/n₁"]
+  A -->|"telescope"| G["1.22λ/D ; 0.61λ/NA"]
+```
+
+> *Read:* name the kind first, then any thickness/index/wavelength is a path difference to convert into waves and count.
 
 ![Decision tree for classifying a wave optics problem](assets/figures/fig-028.svg)
 

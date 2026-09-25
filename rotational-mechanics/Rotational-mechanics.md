@@ -1,7 +1,8 @@
 ---
-title: "Rotational Mechanics"
+title: Rotational Mechanics — first principles to Olympiad
 part: 8
 slug: rotational-mechanics
+status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 2 Rigid Body Dynamics
 aliases: [rotation, moment-of-inertia, torque, angular-momentum, rolling, precession]
 tags: [jee-advanced, olympiad, mechanics, rotation, rigid-body]
@@ -60,6 +61,24 @@ Not a particle-mechanics chapter: we deal with extended bodies. Not a relativity
 **Angular momentum is conserved when no external torque acts.** A spinning ice skater pulls in her arms: $L=I\omega=$ const. As $I$ decreases, $\omega$ increases — she spins faster. This is the rotational analogue of conservation of linear momentum.
 
 **Rolling without slipping is a constraint, not a force.** $v_{\text{cm}}=\omega R$ is the no-slip condition. The static friction at the contact point does no work (the contact point is instantaneously at rest). The kinetic energy splits into translational ($\frac{1}{2}Mv^2$) and rotational ($\frac{1}{2}I\omega^2$).
+
+> [!tip] FIGURE F8.1 · Chapter map
+> *Why:* the chapter is translational mechanics retold in angular language — mass, force, momentum each get a rotational twin; the map shows the spine.
+> *Data:* the Part 0–14 structure — kinematics, $I$, torque, angular momentum, rolling, equilibrium, precession, paper, sheet.
+
+```mermaid
+mindmap
+  root((rotational mechanics))
+    Kinematics
+    Moment of inertia
+    Torque
+    Angular momentum
+    Rolling
+    Equilibrium
+    Precession
+```
+
+> *Read:* every result is an analogue pair, a parallel-axis shift, or a no-slip constraint.
 
 ## Part 2 · Definitions and bookkeeping
 
@@ -150,6 +169,20 @@ where $z$ is perpendicular to the plane and $x$, $y$ are in the plane.
 > *Show:* a disc with the COM axis (through the centre) and a parallel axis through the rim. The distance $d=R$ shown. $I_{\text{rim}}=I_{\text{cm}}+MR^2=MR^2/2+MR^2=3MR^2/2$.
 > *Search:* "parallel axis theorem disc rim tangent geometry diagram"
 
+> [!tip] FIGURE F8.2 · Two axis theorems: shift it or split it
+> *Why:* almost every moment-of-inertia calculation is one of two moves — the figure fixes which move fits which shape.
+> *Data:* parallel axis $I=I_{\text{cm}}+Md^2$; perpendicular axis $I_z=I_x+I_y$ for flat bodies. Disc about rim: $\tfrac12 MR^2+MR^2=\tfrac32 MR^2$.
+
+```mermaid
+flowchart TD
+  A{"which situation?"} -->|"axis parallel to a known one"| B["I = I_cm + Md²"]
+  A -->|"flat body, axis through plane"| C["I_z = I_x + I_y"]
+  B --> D["disc about rim: 3MR²/2"]
+  C --> E["disc: I_z = 2 × (MR²/4)"]
+```
+
+> *Read:* parallel axis pushes the known moment outward by $Md^2$; the perpendicular axis splits a flat body's inertia between two in-plane axes.
+
 ### 3.5 Torque
 
 $$
@@ -167,6 +200,20 @@ The internal torques cancel in pairs (Newton's third law).
 > [!abstract] DIAGRAM D8.4 · Torque about a point with the moment arm
 > *Show:* a force $\mathbf{F}$ applied at point $P$ on a body pivoted at $O$. The moment arm $d=r\sin\theta$ drawn as the perpendicular distance from $O$ to the line of action of $\mathbf{F}$. $\tau=Fd$ annotated.
 > *Search:* "torque moment arm perpendicular distance force pivot diagram"
+
+> [!tip] FIGURE F8.3 · Torque: force times the lever arm
+> *Why:* the same force turns harder from farther out — the figure reduces torque to its two levers of control.
+> *Data:* $\boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}$, magnitude $rF\sin\theta$, and the rotational second law $\tau=I\alpha$.
+
+```mermaid
+flowchart LR
+  A["force at distance r"] --> B["τ = r F sinθ"]
+  B --> C["longer r → more torque"]
+  B --> D["sinθ = the moment-arm factor"]
+  C --> E["τ = Iα (rotational F=ma)"]
+```
+
+> *Read:* torque cares about the perpendicular distance to the line of action, not just the distance — that is why a wrench works best at right angles.
 
 ### 3.6 Angular momentum
 
@@ -202,6 +249,20 @@ If $\tau_{\text{ext}}=0$ (about a chosen point or axis): $\mathbf{L}=$ const.
 > *Show:* a skater spinning with arms out ($I_1$ large, $\omega_1$ small) and arms in ($I_2$ small, $\omega_2$ large). $L=I_1\omega_1=I_2\omega_2$ annotated. The KE increases: $\frac{1}{2}I_2\omega_2^2>\frac{1}{2}I_1\omega_1^2$ — the extra energy comes from the work the skater does pulling her arms in.
 > *Search:* "spinning skater angular momentum conservation arms in out kinetic energy"
 
+> [!tip] FIGURE F8.4 · Angular momentum: constant when torque-free — even as KE changes
+> *Why:* the deep surprise — $L$ is frozen while the kinetic energy rises, paid for by internal work; the figure makes the split explicit.
+> *Data:* no external torque $\Rightarrow L=I\omega$ constant; if $I$ halves, $\omega$ doubles and $K=\tfrac12I\omega^2$ doubles.
+
+```mermaid
+flowchart TD
+  A["τ_ext = 0"] --> B["L = Iω constant"]
+  B --> C["arms in: I halves"]
+  C --> D["ω doubles"]
+  D --> E["K = ½Iω² doubles: paid by muscle work"]
+```
+
+> *Read:* conservation protects the product $I\omega$, not the energy — the skater spends chemical energy to spin faster against a fixed momentum.
+
 ### 3.8 Rolling without slipping
 
 **The no-slip constraint:** $v_{\text{cm}}=\omega R$.
@@ -229,6 +290,20 @@ $$
 > [!abstract] DIAGRAM D8.7 · The rolling race: five bodies at the same time
 > *Show:* an incline with five bodies (solid sphere, solid cylinder, hollow sphere, hollow cylinder, sliding block) at the same time after release. The solid sphere is furthest ahead; the sliding block (no rotation) is even further. The $I/(MR^2)$ values annotated.
 > *Search:* "rolling race incline solid sphere cylinder hollow sphere order diagram"
+
+> [!tip] FIGURE F8.5 · Rolling without slipping: two energies, one race
+> *Why:* the whole rolling toolkit — the constraint, the energy split, and why some bodies win the race — in one figure.
+> *Data:* $v_{\text{cm}}=\omega R$; $K=\tfrac12 Mv^2+\tfrac12 I\omega^2$; acceleration $a=\frac{g\sin\theta}{1+I/MR^2}$, so smaller $I/MR^2$ wins.
+
+```mermaid
+flowchart LR
+  A["v_cm = ωR (no slip)"] --> B["K = ½Mv² + ½Iω²"]
+  B --> C["a = g sinθ / (1 + I/MR²)"]
+  C --> D["smaller I/MR² → faster"]
+  D --> E["sphere 2/5 > cylinder 1/2 > ring 1"]
+```
+
+> *Read:* the no-slip condition forces rotation to eat a share of the energy; the share is set by $I/MR^2$, and the smallest share wins the race.
 
 ### 3.9 Rolling with slipping
 
@@ -846,6 +921,22 @@ Any rigid body oscillating about a pivot has $T=2\pi\sqrt{I/(Mgd)}$. Identify $I
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F8.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the six triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"moment of inertia"| B["standard table + parallel axis"]
+  A -->|"rolling on incline"| C["a = g sinθ / (1 + I/MR²)"]
+  A -->|"conservation of L"| D["find the torque-free axis"]
+  A -->|"rolling with slipping"| E["two phases until v = ωR"]
+  A -->|"physical pendulum"| F["T = 2π√(I/Mgd)"]
+  A -->|"gyroscope"| G["Ω = Mgd / Iω"]
+```
+
+> *Read:* inertia wants the axis theorems, rolling wants the no-slip form, and torque-free words send you to angular-momentum conservation.
 
 - "Find $I$": use the standard table + parallel-axis theorem.
 - "Rolling on incline": use $a=g\sin\theta/(1+I/MR^2)$ or the contact-point torque.

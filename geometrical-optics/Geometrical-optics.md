@@ -1,3 +1,13 @@
+---
+title: Geometrical Optics — first principles to Olympiad
+part: 9
+slug: geometrical-optics
+status: complete
+source: Cengage Optics and Modern Physics-compressed.pdf, ch 1 Geometrical Optics
+aliases: [geometrical optics, ray optics, mirrors, lenses, refraction, prisms, telescopes]
+tags: [jee-advanced, olympiad, optics, ray-optics]
+---
+
 <a id="section-index"></a>
 
 <a id="top"></a>
@@ -11,6 +21,26 @@ A complete, proof-first treatment of rays, mirrors, refraction, prisms, lenses a
 ![Three-ray construction for a converging lens: object between F and 2F, real inverted magnified image](assets/figures/fig-001.svg)
 
 **The whole subject in one picture.** Three rays are always enough, because each one is a *rule* (parallel ray through the focus, central ray straight, focal ray parallel) rather than a calculation. Every question in these notes is one of two things: locating that crossing point, or explaining why a real instrument fails to put all the rays there.
+
+> [!tip] FIGURE F9.1 · Chapter map: 12 parts, one sign convention
+> *Why:* the subject is a chain — each part's formula is the last one with one index flipped; the map shows the reading spine and where the playbook sits.
+> *Data:* parts 1–2 rays & mirrors; 3–4 refraction & TIR; 5 prisms & dispersion; 6 lenses & systems; 7 eye & instruments; 8 Olympiad machinery; 9 playbook; 10–11 paper; 12 formula sheet.
+
+```mermaid
+mindmap
+  root((geometrical optics))
+    Rays & mirrors
+    Refraction & TIR
+    Prisms & dispersion
+    Lenses & systems
+    Eye & instruments
+    Olympiad machinery
+    The playbook
+    Paper & solutions
+```
+
+> *Read:* an image chain is just one arrow per element — read parts 1–8 in order, then revise from part 9.
+
 
 ### How these notes are organised
 
@@ -595,6 +625,21 @@ At the point where a ray meets a curved mirror, the law of reflection uses the *
 
 ### 2.3 The sign convention applied to mirrors
 
+> [!tip] FIGURE F9.2 · Mirror: one formula, sign before algebra
+> *Why:* the mirror has exactly one formula, and the signs are the whole method; filling them in *before* solving turns every curved-mirror question into a substitution.
+> *Data:* 1/v + 1/u = 1/f = 2/R, m = −v/u; concave f < 0, convex f > 0; real object u < 0; v > 0 → same side (real), m < 0 → inverted.
+
+```mermaid
+flowchart TD
+  A["mirror formula 1/v + 1/u = 1/f = 2/R"] --> B{"concave or convex?"}
+  B -- "concave: f < 0" --> C["substitute signed u, f"]
+  B -- "convex: f > 0" --> C
+  C --> D["interpret signs: v > 0 real; m < 0 inverted"]
+```
+
+> *Read:* do not "fix" signs afterwards — a negative v for a concave mirror is the answer, and it means a real image in front.
+
+
 Part 0 fixed the convention. Applied to a mirror it gives this table, which you should be able to reproduce in ten seconds — it answers most numerical questions by itself:
 
 | quantity | concave mirror | convex mirror |
@@ -1010,6 +1055,20 @@ When light crosses from one transparent medium into another, its speed changes. 
 
 ### 3.2 The laws of refraction
 
+> [!tip] FIGURE F9.3 · Snell's law: μ₁ sin i = μ₂ sin r
+> *Why:* refraction is one equation plus one rule — which way it bends, and how the deviation splits; the flow pins both to the index ratio.
+> *Data:* μ₁ sin i = μ₂ sin r, μ = c/v, μ₂₁ = μ₂/μ₁ = v₁/v₂ = λ₁/λ₂; into denser (μ₂ > μ₁) bends toward the normal, δ = i − r; frequency unchanged, wavelength falls to λ/μ.
+
+```mermaid
+flowchart LR
+  A["μ₁ sin i = μ₂ sin r"] --> B{"μ₂ > μ₁? denser"}
+  B -- yes --> C["bend toward the normal, i > r"]
+  B -- no --> D["bend away, i < r"]
+  B --> E["if no angle solves sin r: total internal reflection"]
+```
+
+> *Read:* "optically denser" means higher index, full stop — turpentine floats on water yet is optically denser than it.
+
 > **Snell's law (the second basic law, in full)**
 >
 > $$
@@ -1073,9 +1132,7 @@ $$
 
 </details>
 
-### 3.3 Snell's law from Fermat's principle (and why the lifeguard swims at an angle)
-
-![Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio](assets/figures/fig-017.svg)
+### 3.3 Snell's law from Fermat's principle (and why the lifeguard swims at an angle)![Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio](assets/figures/fig-017.svg)
 
 **Fig. 3.3** — Fermat's principle is not a statement about light's preferences; it is the geometry of "least time through two media". The lifeguard who runs 5 m/s on sand and swims 2 m/s should enter the water at the point where $\sin i/\sin r = v_1/v_2 = 5/2$ — Snell's law with $1/\mu$ playing the role of the speed ratio. Numbers for the drawing (sand 4.5 m deep, water 5.0 m deep, 26 m of shore between them): the best entry is 23.8 m along the shore, giving $23.8/5 + 5.45/2 = 4.77+2.73 = 7.50$ s — better than swimming the whole 27.7 m straight line at 2 m/s ($13.8$ s) and better than running all the way and then swimming straight out ($5.2+2.5 = 7.70$ s). The optimum sits strictly between the two extremes, and it is *stationary*, not extremal in any obvious sense — that is why physicists say least *time*, not shortest path.
 
@@ -1496,6 +1553,19 @@ _Part 4 of 12 · JEE Advanced · base · NSEP · INPhO · ≈ 65 min read · 12 
 Snell's law can fail. Send light from glass into air, tilt it far enough, and there is no angle $r$ that satisfies the equation — the light has nowhere to refract to, so it does the only other thing light can do: it reflects. That failure is not a defect of the theory but one of the most useful effects in optics, and this part is about what it buys you: prisms that turn beams through 90° and 180° with no silvering at all, optical fibres that carry a conversation across an ocean, the fire of a diamond, and the reason a fish sees the entire sky through a circular window in the water above it.
 
 ### 4.1 The critical angle
+
+> [!tip] FIGURE F9.4 · Total internal reflection: beyond sin C
+> *Why:* TIR is Snell's law running out of solutions — nothing new, just the boundary case; the flow states when a ray stops crossing and starts reflecting.
+> *Data:* sin C = μ₂/μ₁ (lower over higher) for μ₁ > μ₂; sin C = 1/μ in air; beyond C no refracted ray exists; conditions: denser → rarer and i ≥ C.
+
+```mermaid
+flowchart TD
+  A["sin r = μ₁/μ₂ · sin i"] --> B{"can μ₁ sin i / μ₂ exceed 1?"}
+  B -- no --> C["refraction, bends away"]
+  B -- "yes (i > C)" --> D["total internal reflection"]
+```
+
+> *Read:* the incident medium's index sits under the other one — take the sine of the *lower over the higher*.
 
 Take light inside a medium of index $\mu_1$ meeting a boundary with a rarer medium of index $\mu_2 < \mu_1$ — glass to air, water to air, glass to water. Because the light speeds up on the way out, the refracted ray bends *away* from the normal: $r > i$. As you increase $i$, the refracted ray marches toward the surface, and at one particular value of $i$ it emerges exactly along the surface, $r = 90^\circ$. That value is the critical angle. Beyond it, Snell's law demands $\sin r > 1$, which no angle satisfies.
 
@@ -2471,6 +2541,19 @@ The bubble appears 3.6 cm from the surface, erect and magnified by 1.2 — it lo
 ![Thin lens construction with the three principal rays and the lensmaker radii](assets/figures/fig-032.svg)
 
 **Fig. 6.2** — Thin-lens construction. The three principal rays: (1) through the first focal point goes out parallel; (2) parallel to the axis comes out through the second focal point; (3) through the optical centre goes straight on. The construction is not a different theory — it is the thin-lens equation drawn, and the two ray-slopes you choose must be consistent with $1/v - 1/u = 1/f$. The object here is beyond $2F$, so the image is real, inverted and diminished: all three signature features of that case.
+
+> [!tip] FIGURE F9.5 · Lens and mirror: the same formula, one index flipped
+> *Why:* a mirror *is* a lens with μ₂ = −μ₁, so one sign machine covers both — memorise the surface formula and you never relearn ray optics.
+> *Data:* lens 1/v − 1/u = 1/f, m = v/u, lensmaker 1/f = (μ−1)(1/R₁ − 1/R₂), P = 1/f (dioptres); single surface μ₂/v − μ₁/u = (μ₂−μ₁)/R; mirror is n₂ = −n₁.
+
+```mermaid
+flowchart TD
+  A["single surface: μ₂/v - μ₁/u = (μ₂-μ₁)/R"] --> B["apply twice, thin-lens: lensmaker"]
+  B --> C["1/v - 1/u = 1/f, m = v/u, P = 1/f"]
+  C --> D["mirror = same formula with μ₂ = -μ₁: f = R/2"]
+```
+
+> *Read:* two surfaces whose intermediate image cancels — turn the lens around and f is unchanged.
 
 > **The six cases of a converging lens (know these cold)**
 >
@@ -3543,6 +3626,21 @@ Parts 1 to 8 are the physics. This part is the craft: how to read an optics ques
 ![A decision tree for classifying an optics question into mirror, refraction, prism, lens, system or instrument branches](assets/figures/fig-046.svg)
 
 **Fig. 9.1** — The triage sheet. Six branches, each with the two or three formulas that actually get used in that branch, and the two questions that decide the rest. Any optics question in JEE Advanced, NSEP or INPhO lands on one of these six branches within fifteen seconds, and the second box — real or virtual object for the *next* element — is where the majority of the marks are lost.
+
+> [!tip] FIGURE F9.6 · Triage: six branches, one chain
+> *Why:* fifteen seconds picking the branch decides which two formulas apply; the hardest step is naming the object for the *next* element.
+> *Data:* which element (plane/curved mirror, slab, prism, lens/surface, instrument) → which image is the next object (O → I₁ → I₂, one formula per arrow) → sign every distance → what is actually asked (position, nature, magnification, angle).
+
+```mermaid
+flowchart TD
+  A["which element?"] --> B["break mixed problems into single elements"]
+  B --> C["O → I₁ → I₂: one formula per arrow"]
+  C --> D["sign every distance before algebra"]
+  D --> E["position? nature? magnification? angle?"]
+```
+
+> *Read:* the second box — real or virtual object for the next element — is where most marks are lost.
+
 
 1. **Which element?** Plane mirror, curved mirror, plane refracting surface (or slab), prism, lens/spherical
   surface, or an instrument. If the question mixes two, break it into two single-element problems joined by one

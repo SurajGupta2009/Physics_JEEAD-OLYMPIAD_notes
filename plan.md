@@ -3,12 +3,15 @@
 > **Repository**: `Physics_JEEAD-OLYMPIAD_notes`
 > **Audience**: JEE Advanced · NSEP · INPhO · IPhO aspirants
 > **Standard**: ≥ Cengage floor + a dedicated Olympiad section + proof-first, teacher-ordered exposition
-> **Media**: **text only.** No SVG, no PNG/JPG, no HTML figure blocks, no generated art. Every place a
-> picture is genuinely needed, the note carries a **DIAGRAM placeholder** — a described, searchable
-> figure brief — so the reader can find a good version online (§1.2).
+> **Media**: **Obsidian-native and deterministic** (see §1.2 and `docs/obsidian-plugin-workflow.md`).
+> Figures are RENDERED, not AI-drawn: ` ```mermaid ` diagrams — mindmaps, flowcharts,
+> `quadrantChart` sign-plots and `xychart-beta` data graphs — each wrapped in a `[!tip] FIGURE`
+> callout with `*Why:*` / `*Data:*` / `*Read:*`. Runtime figures carry their seed as a
+> searchable `> [!abstract] DIAGRAM` brief. **Banned:** AI raster art (PNG/JPG), AI hand-drawn SVG,
+> external image URLs, ASCII art. Existing HTML-heritage topics keep their committed SVG sets.
 > **Format**: Markdown written for **Obsidian reading mode** (§1.3.1): YAML frontmatter, Obsidian
-> callouts, `$...$` / `$$...$$` math, `<details>` solutions, pipe tables. Markdown-first topics: no
-> parallel HTML edition is required.
+> callouts, `$...$` / `$$...$$` math, `<details>` solutions, pipe tables, Mermaid figures.
+> Markdown-first topics: no parallel HTML edition is required.
 > **Completeness**: each chapter's section list below is a **floor, not a ceiling** — the agent must also
 > sweep the Cengage chapter's own contents page (the PDFs live in this repo, §1.13) and add anything the
 > plan misses (§1.12).
@@ -47,7 +50,9 @@ plan.md §1.1 and §1.10 specify.
 Rules that matter most:
 - The notes are read in **Obsidian reading mode** — obey plan.md §1.3.1 exactly (frontmatter, callouts,
   math spacing, blank lines around <details>, wikilinks, no #hashtags).
-- No images at all: use the DIAGRAM callout briefs of §1.2 wherever a figure is needed.
+- No images at all: use the Mermaid FIGURE callouts of §1.2 for rendered figures, and DIAGRAM
+  callout briefs as the runtime seed wherever a hand-drawn picture is wanted (every seed line
+  still carries search words).
 - Every formula derived, with its validity condition and a limit check.
 - The 15-block spine of §1.4 in order, ending in a separate Olympiad section and a 36-question /
   200-mark Olympiad paper with its marking scheme and formula sheet.
@@ -156,7 +161,7 @@ have to pass one at a time.
 Read this section once, completely, before writing a line. It is what makes 28 independently written
 chapters feel like one book.
 
-### 1.1 Deliverables and folder layout (Markdown-first, text-only)
+### 1.1 Deliverables and folder layout (Markdown-first, Obsidian-first)
 
 ```
 <slug>/
@@ -181,10 +186,48 @@ chapters feel like one book.
   pending text to "PART N — in progress (agent)". These three one-line edits land in the same commit
   as the first draft, never as a separate "claim" commit that can collide.
 
-### 1.2 The media policy — no pictures, only figure briefs
+### 1.2 The media policy — rendered figures, never AI art
 
-The reader does not want generated diagrams (they are often inaccurate). The reader wants a
-**described figure plus search words**, so they can pull the right image themselves. Therefore:
+**The media policy (v2).** The vault is Obsidian-first, and figures are *rendered from source the agent
+writes* — deterministic, never AI-art. Two constructs coexist (full contract:
+`docs/obsidian-plugin-workflow.md` §2, with the worked pilot `kinematics-1d`):
+
+**(a) RUNTIME FIGURE — a `[!tip] FIGURE` callout wrapping a ` ```mermaid ` block.** This is the new
+default for anything a diagram adds value to: a mindmap, a flowchart, a `quadrantChart`, or an
+`xychart-beta` data graph. Every FIGURE is both the rendered diagram *and* the described slot:
+
+````markdown
+> [!tip] FIGURE F5.3 · Static friction vs applied force
+> *Why:* the drop from peak to plateau is the single most-misread feature of the curve.
+> *Data:* f = F while F ≤ 60 N, then f = 40 N constant (μ_s N = 60, μ_k N = 40).
+
+```mermaid
+xychart-beta
+  title "friction force vs applied force"
+  x-axis [0, 100]
+  y-axis [0, 70]
+  line [0, 20, 40, 60, 60, 40, 40, 40, 40, 40, 40]
+```
+
+> *Read:* the kink sits at the peak f_max; after it, f is constant at f_k regardless of F.
+````
+
+Hard rules for FIGURE callouts:
+
+* `> [!tip] FIGURE F<part>.<n> · <title>`, then exactly one `*Why:*`, one `*Data:*`, one ` ```mermaid `
+  block, then one `*Read:*` line. Blank line after the callout and around the fence. **LaTeX does not
+  render inside Mermaid** — node/label/title text is plain text or Unicode (`v₀`, `→`, `μ`) only; put
+  `$…$` in the `*Data:*`/`*Read:*` lines or surrounding prose.
+* Numbering contiguous per chapter, matching the PART number (`F8.4` = fourth figure of PART 8).
+  Minimum **6** per chapter, 12–20 for the big ones. **≥ one** `xychart-beta` data graph **per
+  chapter that could support one** (any "graph" content: x–t/v–t, V–I, U–r, stress–strain, spectra),
+  2–4 for the big ones.
+* `xychart-beta` line series must plot the function stated in `*Data:*`; compute the values on a
+  uniform grid. Add `line [0,0]` as a zero axis. Curve shape (concavity, asymptote, symmetry) must
+  match the physics.
+
+**(b) LEGACY SEED — a `> [!abstract] DIAGRAM D<part>.<n>` brief**, kept wherever a diagram is *wanted
+but deferred* (the reader searches for it):
 
 * **Every** place a picture carries part of the argument gets a DIAGRAM placeholder in this exact
   syntax (three lines, blank line after; nothing else on those lines):
@@ -209,9 +252,18 @@ then a blank line.
 * **The prose must survive without the picture.** A DIAGRAM placeholder is a *convenience*, never a
   load-bearing crutch: never write "as the figure shows, the force is zero here". Write the physics
   in words and symbols, then add the brief.
-* Minimum 12 placeholders per chapter, 15–25 for the big ones (rotational mechanics, fluids,
-  electrostatics, EMI, nuclear). The gate counts them (§1.10), so do not leave one out.
-* Never write `![alt](path)`, `<img …>`, a URL to an image, an ASCII-art figure, or a mermaid block.
+* Minimums: **≥ 6** `F`-figures per chapter (12–20 for the big ones), **≥ 6** `D`-seeds per chapter
+  (the seed count is per the D-list in each PART section below). The chapter gate counts them (§1.10).
+
+  A `D`-seed is *not* a rendered figure yet — it is the ground truth a rendering is checked against.
+  Nothing is lost if a seed is later upgraded to an `F`-figure; the current numbering is covered by
+  the gate, so upgrade careful both places (`D`-count and `F`-count) in one commit.
+* **The prose must survive without the picture.** A figure or brief is a *convenience*, never a
+  load-bearing crutch: never write "as the figure shows, the force is zero here". Write the physics
+  in words and symbols, then add the figure/brief.
+* Banned everywhere: `![alt](path)`, `<img …>`, raster art (`png/jpg/gif/webp`), AI-generated SVG,
+  a URL to an image, an ASCII-art figure. Allowed: Mermaid blocks *inside the `[!tip] FIGURE`
+  wrapper only*, and the committed `assets/figures/*.svg` sets of the HTML-heritage topics.
 
 ### 1.3 Markdown formatting contract
 
@@ -254,7 +306,7 @@ hard requirement; §1.10's gate checks all of it.
 | 10 | heading numbers stay unique and stable (`### 3.4 …`); never two headings with identical text | the outline pane and `[[#heading]]` links are ambiguous with duplicates |
 | 11 | no `#hashtags` in prose (say *chapter 6*, *Q12*, *§3.4*); tags live only in the frontmatter | Obsidian converts `#word` into a tag, polluting the tag pane |
 | 12 | no HTML beyond `<details>`, `<summary>` and `<br>` (inside tables); `<br>` is allowed nowhere else | anything else prints literally in reading mode |
-| 13 | figures are `[!abstract] DIAGRAM …` briefs (§1.2); images would be inaccurate and are banned | the reader searches the picture online instead |
+| 13 | figures are the `F`-numbered `[!tip] FIGURE` callouts wrapping ` ```mermaid ` blocks (§1.2); deferred figures are `[!abstract] DIAGRAM …` briefs. Raster art, AI-generated SVG, external image URLs and ASCII art are banned | AI art was inaccurate and wasteful; rendered diagrams are deterministic and always render; hand-drawn pictures remain searchable via the seed brief |
 | 14 | bold `**…**` for emphasis, `*…*` for figure-brief field names, backticks for commands and symbols only | keeps reading mode calm; backticks around physics symbols render as code and break math |
 | 15 | footnote-style asides are discouraged; if used, keep `[^n]` and its definition in the same block | Obsidian's footnotes jump to the end of the note, which loses the reader's place |
 
@@ -415,7 +467,9 @@ It recounts `figures` (will be **0** — expected and correct here), `questions`
 * [ ] Every boxed result has a validity condition; every derivation has an `> [!info] Why` callout where
       a competent reader would otherwise ask "why?".
 * [ ] Every numerical answer recomputed; every mark total summed; at least one limit check per block.
-* [ ] No images of any kind; ≥ 12 well-written DIAGRAM briefs with usable search terms.
+* [ ] Media policy met: ≥ 6 `F`-figures with `*Why:*`/`*Data:*`/`*Read:*` and valid mermaid kinds;
+      ≥ 6 well-written DIAGRAM briefs with usable search terms; ≥ 1 `xychart-beta` data graph where
+      the chapter has graph content; no raster art, no AI SVG, no external images, no bare mermaid.
 * [ ] `python3 tools/check_all.py --update` green from the repo root; registry, README row and
       PENDING line updated; `README.md`'s table row matches the registry's counts.
 * [ ] The chapter README records the hand-off: what it assumes, what the next PART inherits, what was
@@ -2990,13 +3044,14 @@ never cut block 10 (Olympiad) or block 11 (the paper), which are the chapter's c
 4. Pick two derivations at random: is every "therefore" justified, and is the validity condition stated
    where the result lands?
 5. Recompute one numeric answer and try one limit yourself.
-6. Are the DIAGRAM briefs specific enough that a stranger could find the right picture, and is the prose
-   readable *without* them?
+6. Are the DIAGRAM briefs specific enough that a stranger could find the right picture — and are the
+   FIGURE `*Why:*`/`*Data:*`/`*Read:*` lines load-bearing (the prose readable *without* them)?
 7. Is anything duplicated from another PART or a shipped note (should be a `> [!quote] Hand-off` instead)?
 8. Do the paper's marks sum to 200, and does every block 2–4 and 10 appear in the coverage map?
 9. Does the chapter README's `## Beyond the plan` list match what the diff actually added beyond the
    PART's section table?
-10. `grep -n 'TODO\|FIXME\|{{' <slug>/*.md` is empty; no image syntax anywhere.
+10. `grep -n 'TODO\|FIXME\|{{' <slug>/*.md` is empty; no raster/image syntax anywhere; every mermaid
+    block sits inside an `F`-numbered `[!tip] FIGURE` callout.
 
 ---
 
@@ -3007,11 +3062,11 @@ never cut block 10 (Olympiad) or block 11 (the paper), which are the chapter's c
 1. `<slug>/**` — the four files of §1.1.
 2. `topics.json` — append one object (Appendix C has the template): `slug`, `title`, `status`,
    `owner`, `entry` (`<slug>/<Title>.md`), `format: "markdown"`, `plan_part`, `exam`, `media`
-   (`"text-only; Obsidian reading mode; DIAGRAM callout briefs"`), `source` (the exact Cengage
+   (`"Obsidian-first; Mermaid FIGURE callouts + DIAGRAM briefs"`), `source` (the exact Cengage
    file + chapter/pp. that the coverage map was built from), `beyond_plan` (what the sweep added),
    `deliberately_not_covered`, `next_candidates`. Leave every mechanical count to `--update`.
-3. `README.md` (root) — append one row to the note-sets table with the Markdown link, `–` in the
-   diagrams column (no local figures by design) and the question count.
+3. `README.md` (root) — append one row to the note-sets table with the Markdown link, the figure
+   count (Mermaid diagrams) and the question count.
 4. `PENDING.md` — mark the chapter's row: `→ PART n · <slug> · <status>`.
 5. The chapter's own `README.md`: scope, prerequisites, what it hands on, what it deliberately skips.
 
@@ -3034,10 +3089,13 @@ python3 tools/md_site.py                # regenerate docs/site (needs pip instal
 
 ### 6.3 Registering honestly
 
-The registry's `figures` count will be **0** for every chapter in this plan — that is not a failure, it
-is the media policy of §1.2. Say so in the chapter README (`media: text-only, figure briefs inline`) and
+The registry's `figures` count (SVG `assets/figures/` embeds) will be **0** for every chapter in this
+plan — the figures are Mermaid `F`-callouts, not image files. That is not a failure; it is the media
+policy of §1.2 (figures render from ` ```mermaid ` source inside the `.md`). Say so in the chapter
+README (`media: Obsidian-first; Mermaid FIGURE callouts + DIAGRAM briefs`, with the F-count named) and
 in the `topics.json` `media` field, so a future reader does not "fix" it by generating SVGs.
-`tools/md_site.py` needs no change: with no images, it renders the notes as-is.
+`tools/md_site.py` ignores Mermaid blocks gracefully (they remain as fenced source in the HTML export),
+so no change is required.
 
 ---
 
@@ -3078,9 +3136,9 @@ Run once, when the last part is merged, and again after any later edit:
 
 These nine note-sets are complete on `main` and pass `python3 tools/check_all.py`. They keep their own
 diagrams (SVGs / HTML editions) and stay in HTML-style markup (bold-label boxes); the *new* chapters of
-this plan are text-only, Obsidian-first Markdown (§1.3.1), so a reader who wants a picture uses the
-DIAGRAM callout briefs. Treat these nine as the vault's reference shelf: they define the notation the new
-chapters must match, and their results are hand-offs, not material to re-derive.
+this plan are Obsidian-first Markdown (§1.3.1) with Mermaid `F`-figures and DIAGRAM briefs. Treat these
+nine as the vault's reference shelf: they define the notation the new chapters must match, and their
+results are hand-offs, not material to re-derive.
 
 **The five Cengage PDFs are in the repository root** (`git ls-files | grep pdf`), which is what makes the
 "≥ Cengage floor" claim checkable: §1.13 maps each file to the chapters it really contains, the pages its
@@ -3147,7 +3205,7 @@ and the chapter title; keep the syntax byte-for-byte, because the gate in §C.2 
   "master": "Work-energy-power.md",
   "part": 6,
   "source": "Cengage MECHANICS 2-compressed.pdf ch 2 Rigid Body Dynamics (pp. 2.1-2.32)",
-  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, Mermaid FIGURE callouts + DIAGRAM briefs",
   "paper": {
     "questions": 36,
     "marks": 200,
@@ -3159,7 +3217,8 @@ and the chapter title; keep the syntax byte-for-byte, because the gate in §C.2 
     "exemplars": 10,
     "practice": 25,
     "olympiad": 10,
-    "diagrams": 12,
+    "diagrams": 6,
+    "figures": 6,
     "words": 9000,
     "callouts": 24
   },
@@ -3176,7 +3235,7 @@ for the large chapters (16 000–22 000), never lower the others.
 
 ```python
 #!/usr/bin/env python3
-"""Local gate for a text-only, Obsidian-first Markdown chapter written under plan.md.
+"""Local gate for an Obsidian-first Markdown chapter written under plan.md.
 
 Run it from the topic folder:   python3 tools/check.py
 Everything it enforces comes from plan.md §1 and this topic's notes.json.
@@ -3251,8 +3310,24 @@ need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a '*Search
 # ---- 5. media policy -----------------------------------------------------------
 fence = chr(96) * 3                          # never write a literal fence in this file
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
-                     (r"\]\(https?://", "external link"), (fence + "mermaid", "mermaid block")):
+                     (r"\]\(https?://", "external link")):
     need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
+# ── FIGURE system (plan.md §1.2 media policy v2 / docs/obsidian-plugin-workflow.md §2) ──
+figs = re.findall(r"^> \[!tip\] FIGURE F(\d+)\.(\d+) · ", SRC, re.M)
+need(len(figs) >= CFG["minimums"]["figures"],
+     f"FIGURES: {len(figs)} found, requires at least {CFG['minimums']['figures']}")
+need(not [p for p, _ in figs if int(p) != CFG["part"]],
+     f"FIGURE numbers must start with this part's number ({CFG['part']})")
+need(SRC.count("*Why:*") >= len(figs), "every FIGURE needs a '*Why:*' line")
+need(SRC.count("*Data:*") >= len(figs), "every FIGURE needs a '*Data:*' line")
+need(SRC.count("*Read:*") >= len(figs), "every FIGURE needs a '*Read:*' line")
+mm = re.findall(fence + r"mermaid[ \t]*\n([A-Za-z0-9_-]+)", SRC)
+kinds = {"flowchart", "graph", "mindmap", "xychart-beta", "quadrantChart",
+         "sequenceDiagram", "stateDiagram-v2", "stateDiagram", "classDiagram",
+         "pie", "erDiagram", "gitGraph", "gantt", "journey"}
+need(all(k in kinds for k in mm), f"unknown mermaid kind: {sorted(set(mm) - kinds)}")
+need(len(mm) >= len(figs), "every FIGURE needs a ```mermaid block")
 
 # ---- 6. Obsidian reading-mode contract -----------------------------------------
 callouts = re.findall(r"^> \[!([a-z]+)\]", SRC, re.M)
@@ -3322,7 +3397,7 @@ if errors:
     sys.exit(1)
 print(f"ALL GOOD: 15 blocks · C×{n_c} E×{n_e} Q×{n_q} OL×{n_ol} · "
       f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · "
-      f"{len(callouts)} callouts · no images")
+      f"{len(figs)} FIGURES (mermaid) · {len(callouts)} callouts · no raster images")
 ```
 
 Run it from inside the topic folder. It fails with a list of `FAIL:` lines; a clean chapter prints
@@ -3438,7 +3513,7 @@ Every problem of every family ends with
 
 and the blank lines after `</summary>` and before `</details>` are compulsory (§1.3.1 item 7).
 
-### C.5 The DIAGRAM brief (the only "diagram" this repository allows in a new chapter)
+### C.5 The DIAGRAM brief (the runtime seed — a FIGURE F-callout renders the pictures that are ready)
 
 ```markdown
 > [!abstract] DIAGRAM D6.3 · Work as area under a force-displacement curve
@@ -3485,7 +3560,7 @@ plan, marked `added by the sweep`.
   "plan_part": 6,
   "source": "Cengage MECHANICS 2-compressed.pdf, ch 2 Rigid Body Dynamics, pp. 2.1-2.32",
   "exam": ["JEE Advanced", "NSEP", "INPhO", "IPhO"],
-  "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+  "media": "Obsidian-first; Mermaid FIGURE callouts + DIAGRAM briefs (no image files by design)",
   "beyond_plan": [
     "the variable-mass energy audit (plan asked for the rocket only)",
     "the effective potential and the reduced-mass energy split"
@@ -3507,7 +3582,7 @@ Never hand-edit those fields.
 ```markdown
 # Work, Energy & Power — first principles to Olympiad
 
-> [!note] Part 6 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 6 of [plan.md](../plan.md) · Obsidian-first Markdown chapter · written for Obsidian reading mode
 
 **Scope.** One paragraph on what this chapter teaches and to what depth.
 **Prerequisites.** PART 5 (Newton's laws), … plus the shipped notes it cites.
@@ -3519,7 +3594,7 @@ ch 2 §2.24-2.26), and where the full row-by-row map lives (block 0 of the chapt
 **Beyond the plan.** The sections, archetypes and problems this chapter added that plan.md PART 6 did not
 ask for — mirrored in `topics.json` as `beyond_plan`, so the coordinator can fold them back into the plan.
 **Hand-off.** What the next PART inherits; what a reader can now attempt.
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D6.k`) with a `*Search:*` line.
+**Media.** Figures are Obsidian-native and deterministic ([docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2): `F`-numbered Mermaid diagrams (mindmap, quadrant, data graphs, flowchart) in `[!tip] FIGURE` callouts. Deferred hand-drawn figures stay searchable `> [!abstract] DIAGRAM D6.k` briefs with a `*Search:*` line. No raster art, no AI SVG, no external images.
 **Gate.** `python3 tools/check.py` → ALL GOOD (…).
 ```
 

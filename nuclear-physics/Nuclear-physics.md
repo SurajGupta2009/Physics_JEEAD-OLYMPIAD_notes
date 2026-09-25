@@ -1,7 +1,8 @@
 ---
-title: Nuclear Structure, Radioactivity, Fission & Fusion
+title: Nuclear Structure, Radioactivity, Fission & Fusion — first principles to Olympiad
 part: 26
 slug: nuclear-physics
+status: complete
 source: Cengage Optics and Modern Physics, ch 5 Nuclear Physics (pp. 5.1-5.39)
 aliases: [nuclear physics, radioactivity, binding energy, fission fusion]
 tags: [jee-advanced, olympiad, modern-physics, nuclear]
@@ -81,6 +82,24 @@ Sweep read from the committed PDF's chapter 5 contents page (pp. v-vii). The sem
 | Counting statistics (added by sweep) | $\sqrt N$ and measurement time | §3.14, OL8 | added by sweep |
 | Solar neutrino flux and Sun's lifetime (added by sweep) | Fermi estimates | OL6-OL7 | added by sweep |
 | Detectors: cloud chamber, Geiger dead time (added by sweep) | tracks and counting | §3.14 | added by sweep |
+
+> [!tip] FIGURE F26.1 · Chapter map
+> *Why:* the chapter is one negotiation — the drop term versus the Coulomb tax; the map shows the spine.
+> *Data:* the Part 0–14 structure — force balance, binding energy, stability, decay, fission, fusion, paper, sheet.
+
+```mermaid
+mindmap
+  root((the nucleus))
+    Binding energy
+    Valley of stability
+    Radioactivity
+    Decay chains
+    Dating
+    Fission
+    Fusion
+```
+
+> *Read:* every result is a difference of binding energies, an exponential, or a momentum share.
 
 ## Part 1 · Intuition first
 
@@ -184,10 +203,20 @@ independent of $A$. A teaspoon ($5$ cm$^3$) of it weighs $\sim1.2\times10^{12}$ 
 
 Weigh the parts and the whole: the whole is lighter. The mass defect $\Delta m=Zm_H+Nm_n-M_{\text{atom}}$ times $c^2$ is the binding energy $B$ — the energy you must repay to take the nucleus apart. Deuteron: $\Delta m=(1.007825+1.008665-2.014102)=0.002388$ u, $B=2.22$ MeV. Helium-4: $\Delta m=0.030377$ u, $B=28.3$ MeV, $7.07$ per nucleon — the jump from 1.1 (deuteron per nucleon) to 7.1 is why fusion past hydrogen pays so well.
 
-> [!abstract] DIAGRAM D26.3 · The binding-energy-per-nucleon curve
-> *Show:* B over A against A; a steep climb through H-2 (1.1), He-4 (7.1), a bump at C-12 and O-16, the broad summit at Fe-56 and Ni-62 near 8.8, the slow slide to U-238 at 7.6; a fusion arrow climbing the left side and a fission arrow climbing from the right, both pointing toward iron.
-> *Search:* "binding energy per nucleon curve fusion fission iron peak"
-> *Used in:* §3.3-3.4, §3.12-3.13.
+> [!tip] FIGURE F26.2 · The binding-energy curve: everything climbs toward iron
+> *Why:* the curve is the chapter's decision-maker — any process that moves nucleons up it releases energy.
+> *Data:* $B/A$ vs $A$: H-2 ≈ 1.1, He-4 ≈ 7.1, Fe-56 ≈ 8.8, U-238 ≈ 7.6 MeV/nucleon.
+
+```mermaid
+flowchart LR
+  H["H-2 B/A ≈ 1.1"] --> He["He-4 ≈ 7.1"]
+  He --> Fe["Fe-56 ≈ 8.8 (summit)"]
+  U["U-238 ≈ 7.6"] --> Fe
+  He -.->|"fusion climbs"| Fe
+  U -.->|"fission climbs"| Fe
+```
+
+> *Read:* fusion climbs the left slope and fission the right, both toward iron; iron itself has nothing to gain.
 
 Plot $B/A$ against $A$ and the curve becomes the chapter's decision-maker: any process that moves nucleons *up* the curve releases the difference. Fission of uranium to mid-mass fragments climbs from $7.6$ to $\sim8.5$ MeV per nucleon, $\sim0.9$ MeV per nucleon, $\sim200$ MeV per event. Fusion of hydrogen to helium climbs from $\sim0$ to $7.1$. Both dwarf chemistry's eV-scale rearrangements by a factor of $10^7$ per particle. Iron sits at the summit with nothing to gain: the endpoint of stellar burning.
 
@@ -195,6 +224,20 @@ Plot $B/A$ against $A$ and the curve becomes the chapter's decision-maker: any p
 > *Show:* a balance beam; left pan holding separate protons and neutrons labelled with their summed mass; right pan holding the assembled nucleus, lighter, the gap labelled delta-m times c-squared equals B; an arrow "repay B to dismantle".
 > *Search:* "mass defect binding energy balance scale diagram"
 > *Used in:* §3.3.
+
+> [!tip] FIGURE F26.3 · The mass defect is the binding energy
+> *Why:* half of nuclear problems are mass-defect arithmetic in disguise; the flow shows exactly what to subtract from what.
+> *Data:* $B = (Z m_p + N m_n - m_{\text{nucleus}})c^2$ — assembled nucleus lighter than its parts by $\Delta m$.
+
+```mermaid
+flowchart LR
+  A["Z protons + N neutrons"] --> B["sum of part masses"]
+  B -->|"minus"| C["assembled nuclear mass"]
+  C --> D["Δm"]
+  D --> E["B = Δm · c²"]
+```
+
+> *Read:* the nucleus is lighter than its parts; the missing mass is the energy you must repay to dismantle it.
 
 ### 3.4 The semi-empirical mass formula and the valley of stability
 
@@ -286,10 +329,19 @@ $$
 
 Plot $\ln N$ against $t$: a straight line of slope $-\lambda$ — the experimental standard. Because $\lambda$ is a property of the nuclear state and of the weak or strong or tunnelling matrix element alone, no temperature, pressure or chemical environment has moved it measurably; the test is brutal and done — heated, frozen, ionised samples decay on schedule.
 
-> [!abstract] DIAGRAM D26.10 · Exponential decay and its log-linear twin
-> *Show:* left panel N against t with the halving staircase marked at one, two, three half-lives; right panel ln N against t, a straight line, slope labelled minus lambda; the mean life marked where N falls to 1/e.
-> *Search:* "radioactive decay curve half life log linear plot"
-> *Used in:* §3.9.
+> [!tip] FIGURE F26.4 · Exponential decay and its log-linear twin
+> *Why:* the same law is a halving staircase in $N$ and a straight line in $\ln N$; the log plot is the fast tool for exam numbers.
+> *Data:* $N = N_0 e^{-\lambda t}$: after $t = T_{1/2},\ 2T_{1/2},\ 3T_{1/2},\ 4T_{1/2}$ the fraction left is $1/2,\ 1/4,\ 1/8,\ 1/16$.
+
+```mermaid
+flowchart LR
+  A["N(t) = N0 e^(-λt)"] --> B["t = T½ : N0/2"]
+  B --> C["t = 2T½ : N0/4"]
+  C --> D["t = 3T½ : N0/8"]
+  D --> E["slope in ln N : -λ"]
+```
+
+> *Read:* each half-life halves what remains; the log-linear slope is $-\lambda$, and the mean life marks the $1/e$ point.
 
 ### 3.10 Chains, equilibrium and accumulation
 
@@ -325,6 +377,20 @@ A sample at $10$ disintegrations per minute per gram against the living $15$: $t
 > *Show:* activity ratio against age, the exponential fall; horizontal bands at ratio 1 (modern) and about 0.003 (the 50 ka counting limit); a calibration wiggles inset for the last 10 ka captioned "tree rings correct the clock".
 > *Search:* "carbon dating decay curve range limit calibration"
 > *Used in:* §3.11.
+
+> [!tip] FIGURE F26.5 · The carbon-dating clock and its limits
+> *Why:* the same half-life that makes carbon dating work also puts a hard counting limit on its range.
+> *Data:* $t = \frac{T_{1/2}}{\ln2}\ln\frac{A_0}{A}$ with $T_{1/2}=5730$ y; usable from a few hundred to ~50 000 y.
+
+```mermaid
+flowchart LR
+  A["living: A0"] --> B["death stops intake"]
+  B --> C["activity falls as e^(-λt)"]
+  C --> D["age = (T½/ln2) ln(A0/A)"]
+  D --> E["limit ~50 ka by counting statistics"]
+```
+
+> *Read:* the clock runs from the moment exchange stops; calibration from tree rings corrects the raw ratio before the log.
 
 ### 3.12 Fission
 
@@ -1017,6 +1083,22 @@ Want 1 % error: 10 000 counts. Want 0.5 %: 40 000. Plan counting time backwards 
 
 ### 9.1 Triage decision tree
 
+> [!tip] FIGURE F26.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the seven triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is given?"} -->|"masses"| B["Q-value, electron rule"]
+  A -->|"alpha energy"| C["momentum share"]
+  A -->|"time, activity"| D["halving / log-linear"]
+  A -->|"age"| E["activity ratio"]
+  A -->|"chain words"| F["equilibrium regime first"]
+  A -->|"reactor / sun"| G["200 MeV per fission / L over c²"]
+```
+
+> *Read:* masses go to Q-values, time to the half-life ladder, chain problems name their equilibrium regime before arithmetic.
+
 - Masses given: Q-value first, electron rule second.
 - "Energy of the alpha": momentum share, Eq. (4.3).
 - Time and activity: halving ladder or log-linear.
@@ -1579,10 +1661,10 @@ General: exponential arguments must show the ln 2; beta Q-values must show the e
 Primary: Cengage, Optics and Modern Physics, chapter 5 (pp. 5.1-5.39) — structure and radioactivity as above, solved examples and exercises at the chapter's end. Sweep notes: SEMF, Geiger-Nuttall and Gamow theory, counting statistics, the Lawson criterion, the solar neutrino flux and detector themes were added beyond the printed table of contents, as flagged in the coverage map.
 
 Review checklist before the exam:
-1. The six boxed results of Part 4 reproduce from memory with units.
-2. The electron rule survives a surprise beta-plus question.
-3. The halving ladder and the log-linear fit are both in hand.
-4. One equilibrium derivation (OL5) is writable start to finish.
-5. The Sun's three numbers (4.3e9 kg/s, 6e14 neutrinos, 1.5e7 K) each carry their one-line story.
-6. The fission bookkeeping (200 MeV, 8.2e10 J/g, 3 kg per GWe-day) is instant.
-7. Every trap of Part 8 has its one-line reply.
+- [ ] The six boxed results of Part 4 reproduce from memory with units.
+- [ ] The electron rule survives a surprise beta-plus question.
+- [ ] The halving ladder and the log-linear fit are both in hand.
+- [ ] One equilibrium derivation (OL5) is writable start to finish.
+- [ ] The Sun's three numbers (4.3e9 kg/s, 6e14 neutrinos, 1.5e7 K) each carry their one-line story.
+- [ ] The fission bookkeeping (200 MeV, 8.2e10 J/g, 3 kg per GWe-day) is instant.
+- [ ] Every trap of Part 8 has its one-line reply.

@@ -1,6 +1,6 @@
 # String Waves — First Principles to Olympiad
 
-> **Portable Markdown edition:** `String-waves.md` is the GitHub-friendly reading copy with standard MathJax/KaTeX math, collapsible solutions, and local SVG diagrams in `assets/figures/`.
+> **Media.** YAML frontmatter plus rendered figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2: six `F`-numbered Mermaid diagrams (chapter map, sign-rule flowchart, energy-density `xychart-beta`, superposition and triage flowcharts) wrap the local SVG figures in `assets/figures/`. `String-waves.md` stays the GitHub-friendly reading copy with standard MathJax/KaTeX math and collapsible solutions.
 
 A complete, self-contained course on **transverse mechanical waves, string dynamics, boundary reflections, standing waves, harmonics, and energy transport**, engineered for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**.
 

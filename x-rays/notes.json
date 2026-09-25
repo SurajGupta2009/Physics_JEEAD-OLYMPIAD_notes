@@ -4,12 +4,16 @@
   "master": "X-rays.md",
   "part": 25,
   "source": "Cengage Optics and Modern Physics-compressed.pdf ch 4 Atomic Physics, pp. 4.25-4.32 (X-rays, X-ray spectra, Moseley's law)",
-  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, mermaid FIGUREs (docs/obsidian-plugin-workflow.md \u00a72)",
   "paper": {
     "questions": 36,
     "marks": 200,
     "minutes": 180,
-    "sections": { "4": 20, "5": 6, "9": 10 }
+    "sections": {
+      "4": 20,
+      "5": 6,
+      "9": 10
+    }
   },
   "minimums": {
     "checks": 12,
@@ -18,8 +22,19 @@
     "olympiad": 10,
     "diagrams": 12,
     "words": 9000,
-    "callouts": 24
+    "callouts": 24,
+    "figures": 6
   },
-  "callout_types": ["note", "info", "warning", "success", "danger", "tip", "quote",
-                    "question", "abstract", "example"]
+  "callout_types": [
+    "note",
+    "info",
+    "warning",
+    "success",
+    "danger",
+    "tip",
+    "quote",
+    "question",
+    "abstract",
+    "example"
+  ]
 }

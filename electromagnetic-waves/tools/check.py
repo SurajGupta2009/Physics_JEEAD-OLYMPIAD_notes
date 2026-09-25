@@ -8,6 +8,9 @@ import xml.etree.ElementTree as ET
 from export import exports
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
+from tools import mermaid_lint
+
 MASTER = ROOT / 'Electromagnetic-waves.md'
 MATH = re.compile(r'\$\$(.*?)\$\$|(?<![\\$])\$(?!\$)([^\n]*?)(?<!\\)\$(?!\$)', re.S)
 
@@ -74,6 +77,24 @@ def validate(source, root=ROOT):
         except ET.ParseError as exc:
             errors.append(f'{url}: {exc}')
     require(not re.search(r'!\[.*?\]\(https?://|<img|<script|@import|@font-face', source), 'External or active asset in Markdown')
+    require(not re.search(r'\.(png|jpe?g|gif|webp)\b', source, re.I), 'media policy: no raster images')
+
+    # ── FIGURE system (Obsidian-first media policy, docs/obsidian-plugin-workflow.md §2) ──
+    figs = re.findall(r'^> \[!tip\] FIGURE F(\d+)\.(\d+) · ', source, re.M)
+    require(len(figs) >= 6, f'FIGURES: {len(figs)} found, requires at least 6')
+    require(not [part for part, _ in figs if int(part) != 3], 'FIGURE numbers must start with this part number (3)')
+    require(source.count('*Why:*') >= len(figs), 'every FIGURE needs a *Why:* line')
+    require(source.count('*Data:*') >= len(figs), 'every FIGURE needs a *Data:* line')
+    require(source.count('*Read:*') >= len(figs), 'every FIGURE needs a *Read:* line')
+    fence = chr(96) * 3
+    mm = re.findall(fence + r'mermaid[ \t]*\n([A-Za-z0-9_-]+)', source)
+    kinds = {'flowchart', 'graph', 'mindmap', 'xychart-beta', 'quadrantChart',
+             'sequenceDiagram', 'stateDiagram-v2', 'stateDiagram', 'classDiagram',
+             'pie', 'erDiagram', 'gitGraph', 'gantt', 'journey'}
+    require(all(k in kinds for k in mm), f'unknown mermaid kind: {sorted(set(mm) - kinds)}')
+    require(len(mm) >= len(figs), 'every FIGURE needs a ```mermaid block')
+    for _msg in mermaid_lint.lint(source):
+        require(False, f"mermaid: {_msg}")
     return errors
 
 
@@ -94,7 +115,7 @@ def main():
     for test in ('test_physics.py', 'test_content.py'):
         result = subprocess.run([sys.executable, str(ROOT / 'tools' / test)], check=False)
         if result.returncode: return result.returncode
-    print('ALL GOOD: 8 sections, 7 local SVGs, 52 solved prompts, 36-question/180-mark paper; exports current')
+    print('ALL GOOD: 8 sections, 7 local SVGs, 6 mermaid FIGURES, 52 solved prompts, 36-question/180-mark paper; exports current')
     return 0
 
 

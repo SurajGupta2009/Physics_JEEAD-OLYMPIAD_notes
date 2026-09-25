@@ -8,7 +8,8 @@
     "olympiad": 10,
     "diagrams": 12,
     "callouts": 24,
-    "words": 9000
+    "words": 9000,
+    "figures": 6
   },
   "paper": {
     "count": 36,
@@ -20,6 +21,15 @@
     }
   },
   "callout_types": [
-    "abstract", "info", "success", "warning", "danger", "tip", "note", "question", "quote"
-  ]
+    "abstract",
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "tip",
+    "note",
+    "question",
+    "quote"
+  ],
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, mermaid FIGUREs (docs/obsidian-plugin-workflow.md \u00a72)"
 }

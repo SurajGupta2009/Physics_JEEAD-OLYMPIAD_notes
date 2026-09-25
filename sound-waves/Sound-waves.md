@@ -1,3 +1,13 @@
+---
+title: Sound Waves & Doppler Effect — first principles to Olympiad
+part: 2
+slug: sound-waves
+status: complete
+source: Cengage Waves and Thermodynamics-compressed.pdf, Sound chapter (longitudinal waves, speed, Laplace, intensity, pipes, beats, Doppler, supersonic)
+aliases: [sound waves, doppler effect, organ pipes, beats, mach cone, acoustics]
+tags: [jee-advanced, nsep, inpho, ipho, waves, sound]
+---
+
 <a id="top"></a>
 <a id="section-index"></a>
 
@@ -12,6 +22,27 @@ Sound is the textbook example of a longitudinal mechanical wave that you can hea
 **Fig. 0.1** — The core fact of sound: where particles crowd (displacement zero, slope maximal) the pressure is maximal; where they spread, pressure is minimal. Displacement $s$ and excess pressure $\Delta P$ are $\pi/2$ out of phase. All of resonance, beats, and Doppler follow from this.
 
 ### How these notes are organised
+
+> [!tip] FIGURE F2.1 · Chapter map
+> *Why:* the whole chapter hangs on one idea — pressure is the derivative of displacement; the map shows the spine.
+> *Data:* the 8-part structure (foundations → derivations → exemplars → advantage → traps → playbook → paper → formula sheet).
+
+```mermaid
+mindmap
+  root((sound))
+    Displacement s
+    Pressure ΔP = -B ∂s/∂x
+    Speed v = sqrt(γRT/M)
+    Intensity and dB
+    Organ pipes
+    Beats
+    Doppler
+    Mach cone
+```
+
+> *Read:* every result in this chapter is the derivative, the speed, or the Doppler ratio of one longitudinal disturbance.
+
+
 
 The 8-part didactic progression required by the repository contract:
 
@@ -182,6 +213,18 @@ From (1.1) and (1.3): $s\propto\sin$, $\Delta P\propto\cos$. So $\Delta P$ leads
 
 This duality is crucial for organ pipes.
 
+> [!tip] FIGURE F2.3 · The displacement→pressure duality
+> *Why:* a closed end is a displacement node but a pressure antinode — the single most destructive confusion in organ-pipe problems.
+> *Data:* $\Delta P = -B\,\partial s/\partial x$; node of $s$ ⟺ antinode of $\Delta P$ and vice-versa.
+
+```mermaid
+flowchart LR
+  A["s = 0 (displacement node)"] -->|"slope ∂s/∂x max"| B["ΔP max (pressure antinode)"]
+  C["s max (displacement antinode)"] -->|"slope zero"| D["ΔP = 0 (pressure node)"]
+```
+
+> *Read:* displacement and pressure are always $\pi/2$ out of phase, so their nodes and antinodes exchange roles at every boundary.
+
 ### 1.4 State variables and frames
 
 - **Medium frame:** medium at rest on average; wave speed $v$ measured here.
@@ -299,6 +342,20 @@ $$
 - **Molar mass:** moist air: water $M=18$ vs dry $29$, effective $M_{\text{eff}}$ lower → $v$ higher. Humidity increases $v$ by ~0.3% at 100% RH, 20°C.
 - **Pressure:** independent at fixed $T$ (ideal gas). Real gas slight dependence via $Z$ factor.
 - **Wind:** effective $v_{\text{eff}}=v\pm w$ along propagation.
+
+> [!tip] FIGURE F2.2 · What the speed of sound depends on
+> *Why:* the dependences are one formula, but examiners test each factor separately — the flow lays them out.
+> *Data:* $v = \sqrt{\gamma RT/M}$: $v \propto \sqrt T$, $v \propto 1/\sqrt M$, independent of pressure at fixed $T$.
+
+```mermaid
+flowchart LR
+  A["v = sqrt(γRT/M)"] --> B["T ↑ → v ↑ (∝√T)"]
+  A --> C["M ↑ → v ↓ (∝1/√M)"]
+  A --> D["P at fixed T → no change"]
+  B --> E["moist air: M_eff ↓ → v ↑"]
+```
+
+> *Read:* raising temperature raises speed; raising molar mass lowers it; pressure alone, at constant temperature, does nothing.
 
 ### 2.5 Intensity, loudness, decibel
 
@@ -428,6 +485,19 @@ $$
 
 Envelope amplitude $2s_0|\cos(\pi f_{\text{beat}}t)|$, intensity waxes/wanes at $f_{\text{beat}}$. Audible if $f_{\text{beat}}<10$ Hz.
 
+> [!tip] FIGURE F2.5 · Beats: fast carrier, slow envelope
+> *Why:* two close frequencies produce one audible beat — the identity explains both the slow envelope and the average pitch.
+> *Data:* $f_{\text{beat}} = |f_1 - f_2|$, $f_{\text{avg}} = (f_1 + f_2)/2$, from sinusoidal superposition.
+
+```mermaid
+flowchart LR
+  A["sin ω₁t + sin ω₂t"] --> B["2 cos(Δω t/2) sin(ω̄ t)"]
+  B --> C["envelope at |f₁ - f₂|"]
+  B --> D["carrier at (f₁ + f₂)/2"]
+```
+
+> *Read:* beats count the difference frequency; loading a fork with wax lowers its frequency and moves the beat rate.
+
 ![Beats](assets/figures/fig-008.svg)
 
 **Fig. 2.7** — Beats: fast oscillation at average frequency, slow envelope at difference frequency.
@@ -464,6 +534,20 @@ f' = f\frac{v\pm v_o}{v\mp v_s} \tag{2.21}
 $$
 
 Sign convention: numerator + if observer toward source, denominator - if source toward observer. Equivalent to using positive direction S→O: $f'=f(v+w+v_o)/(v+w-v_s)$ with careful signs.
+
+> [!tip] FIGURE F2.4 · Doppler: what moves, what changes
+> *Why:* the source changes wavelength IN the medium; the observer changes the intercept rate — conflating them flips the formula.
+> *Data:* moving source: $f' = f\,v/(v \mp v_s)$; moving observer: $f' = f(v \pm v_o)/v$; combined $f' = f\,\frac{v \pm v_o}{v \mp v_s}$.
+
+```mermaid
+flowchart LR
+  S["moving source"] -->|"λ in medium changes"| L["λ' = (v ∓ v_s)/f"]
+  O["moving observer"] -->|"intercept rate changes"| R["v_rel = v ± v_o"]
+  L --> F["f' = f (v ± v_o)/(v ∓ v_s)"]
+  R --> F
+```
+
+> *Read:* the numerator belongs to the observer, the denominator to the source — same-line motion only; projections handle 2D.
 
 ### 2.10 Wind and 2D oblique Doppler
 
@@ -853,6 +937,22 @@ _Part 5 of 8 · common errors_
 _Part 6 of 8 · triage, formula maps, numbers_
 
 ### 6.1 Triage decision-tree
+
+> [!tip] FIGURE F2.6 · Triage — name the phenomenon first
+> *Why:* the first question routes the whole solution; the flowchart makes the six branches visible.
+> *Data:* the six triage branches of §6.1 (speed, intensity, pipes, beats, Doppler, Mach).
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"speed"| B["v=√(γRT/M) or √(B/ρ)"]
+  A -->|"intensity"| C["I=P/4πr², β=10log(I/I₀)"]
+  A -->|"pipes"| D["closed: odd λ/4; open: all λ/2"]
+  A -->|"beats"| E["f_beat=|f₁-f₂|"]
+  A -->|"Doppler"| F["source changes λ, observer changes v_rel"]
+  A -->|"Mach"| G["sinα=1/M"]
+```
+
+> *Read:* the first question names the law; mixing the wavelength change (source) with the intercept change (observer) is the classic trap.
 
 ![Decision tree](assets/figures/fig-015.svg)
 

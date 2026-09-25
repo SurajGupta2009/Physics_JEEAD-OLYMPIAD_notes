@@ -1,7 +1,8 @@
 ---
-title: Units, Dimensions & Measurement Errors
+title: Units, Dimensions & Measurement Errors — first principles to Olympiad
 part: 1
 slug: units-measurements
+status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)
 aliases: [units, dimensions, measurement, errors, significant figures, vernier, screw gauge]
 tags: [jee-advanced, olympiad, mechanics, measurement]
@@ -58,6 +59,24 @@ Not a statistics course: we cover the minimum data-analysis toolkit (mean, stand
 **Dimensions tell you what kind of quantity you are dealing with.** Length has dimension $[L]$, mass has $[M]$, time has $[T]$. Velocity has dimensions $[LT^{-1}]$: it is a length divided by a time. An equation that adds a velocity to a length is nonsensical — you cannot add apples and angles. The principle of homogeneity (every term in a valid equation must have the same dimensions) is the cheapest error detector in physics.
 
 **Every number you print carries an uncertainty.** A measured length of $1.50$ m really means "between 1.49 and 1.51 m" (if the uncertainty is 0.01 m). The uncertainty is as much a part of the answer as the number itself — a result without an uncertainty is a result nobody should trust.
+
+> [!tip] FIGURE F1.1 · Chapter map
+> *Why:* the chapter is one discipline — say what you measured, in what units, to what precision; the map shows the spine.
+> *Data:* the Part 0–14 structure — units, dimensions, errors, instruments, linearisation, paper, sheet.
+
+```mermaid
+mindmap
+  root((measurement))
+    SI units
+    Dimensions
+    Homogeneity
+    Significant figures
+    Errors
+    Instruments
+    Linearisation
+```
+
+> *Read:* every result is a dimensional formula, an error sum, or a reading minus its zero error.
 
 ## Part 2 · Definitions and bookkeeping
 
@@ -157,6 +176,20 @@ The table of dimensional formulae for commonly encountered quantities:
 > *Show:* an equation like $s = ut + \frac{1}{2}at^2$ written large; under each term, its dimensional formula shown as a label; all three labels reading $[L]$ (balanced); then a false equation $s = ut + at$ with the third term reading $[LT^{-1}]$ (unbalanced, marked with an X).
 > *Search:* "dimensional homogeneity equation check balanced terms"
 
+> [!tip] FIGURE F1.2 · Homogeneity: every term must match
+> *Why:* it is the cheapest error detector in the subject — check the dimensions before you waste minutes on the algebra.
+> *Data:* in $s=ut+\tfrac12 at^2$ every term has dimension $[L]$; in $s=ut+at$ the last term is $[LT^{-1}]$ (wrong).
+
+```mermaid
+flowchart LR
+  A["valid: s = ut + ½at²"] --> B["ut: [L]"]
+  A --> C["½at²: [L]"]
+  D["suspicious: s = ut + at"] --> E["at: [LT⁻¹] ≠ [L]"]
+  E --> F["reject before computing"]
+```
+
+> *Read:* add only same-dimension terms; a mismatch is a free pass to reject the answer.
+
 ### 3.5 Limitations of dimensional analysis
 
 The principle of homogeneity is powerful but has three sharp limits:
@@ -197,6 +230,21 @@ The dimensionless constant $k=2\pi$ cannot be found this way. The result says: t
 > *Show:* a simple pendulum of length $L$ and bob mass $m$; the three parameters $m$, $L$, $g$ written below with their dimensions; the exponents $a=0$, $b=1/2$, $c=-1/2$ solved in a step-by-step equation matching; the final result $T\propto\sqrt{L/g}$ boxed.
 > *Search:* "dimensional analysis pendulum period derivation example"
 
+> [!tip] FIGURE F1.3 · Dimensional analysis as an exponent hunt
+> *Why:* the whole method is one loop — guess $T=k\,m^a L^b g^c$, match exponents, solve; the figure makes that loop explicit.
+> *Data:* for the pendulum, matching $[T]$ gives $a=0$, $b=\tfrac12$, $c=-\tfrac12$, so $T\propto\sqrt{L/g}$ (the $2\pi$ is invisible to this method).
+
+```mermaid
+flowchart TD
+  A["guess: T = k mᵃ Lᵇ gᶜ"] --> B["write dimensions of both sides"]
+  B --> C["match powers of M, L, T"]
+  C --> D["a = 0, b = ½, c = -½"]
+  D --> E["T ∝ √(L/g)"]
+  E -.->|"method cannot see"| F["the 2π"]
+```
+
+> *Read:* matching exponents ships the right functional form but never the dimensionless constant — compare against data or theory for that.
+
 ### 3.7 Significant figures
 
 **The rules:**
@@ -234,6 +282,20 @@ The dimensionless constant $k=2\pi$ cannot be found this way. The result says: t
 > [!abstract] DIAGRAM D1.5 · The three error types on a target
 > *Show:* three circular targets (bullseye diagrams). Left (systematic): all hits clustered tightly but off-centre — precise but inaccurate. Centre (random): hits scattered symmetrically around the centre — accurate on average but imprecise. Right (gross): most hits centred but one outlier far from the cluster.
 > *Search:* "systematic random gross error accuracy precision target diagram"
+
+> [!tip] FIGURE F1.4 · The three errors: precision is not accuracy
+> *Why:* wrong-kind-of-error is the classic trap; naming the error before fixing it is half the answer.
+> *Data:* systematic = precise but off-centre, random = accurate on average but scattered, gross = an outlier.
+
+```mermaid
+flowchart TD
+  A["measurements"] --> B{"clustered but off-centre?"}
+  B -->|"yes"| C["systematic: fix the instrument, not the handling"]
+  B -->|"scattered, centred"| D["random: average; error falls as 1/√n"]
+  B -->|"one outlier"| E["gross: reject and re-measure"]
+```
+
+> *Read:* clustering fixes the wrong problem when the error is systematic — accuracy and precision are two different virtues.
 
 ### 3.9 Errors II: propagation
 
@@ -313,6 +375,20 @@ If your data follows $y=ae^{bx}$, take the natural log: $\ln y=bx+\ln a$. Plot $
 > [!abstract] DIAGRAM D1.9 · Linearisation of $T^2$ vs $L$ for a pendulum
 > *Show:* left panel: $T$ vs $L$ data points following a square-root curve; right panel: $T^2$ vs $L$ the same data points falling on a straight line; the slope $4\pi^2/g$ and the intercept (zero) annotated; error bars on each point.
 > *Search:* "pendulum T squared versus L linearisation graph data straight line"
+
+> [!tip] FIGURE F1.5 · Linearise, then read the slope
+> *Why:* a straight line is the only graph a ruler can read; every curve has a linearising transform.
+> *Data:* $y=ax^n \to \ln y = n\ln x + \ln a$ (slope $n$); for the pendulum $T^2=\frac{4\pi^2}{g}L$ (slope $4\pi^2/g$).
+
+```mermaid
+flowchart LR
+  A["y = axⁿ"] -->|"log both sides"| B["ln y = n ln x + ln a"]
+  B --> C["slope = n, intercept = ln a"]
+  A -.->|"pendulum"| D["T² = (4π²/g) L"]
+  D --> E["slope gives g"]
+```
+
+> *Read:* take logarithms for a power law and plot $T^2$ for the pendulum; the slope is the constant you are after.
 
 ## Part 4 · Results, limits and the validity ledger
 
@@ -871,6 +947,22 @@ Always start a Fermi estimate by asking: is the answer closer to 1, 10, 100, 100
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F1.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the seven triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"dimensional formula"| B["write the definition"]
+  A -->|"check consistency"| C["match every term's dimension"]
+  A -->|"derive via dimensions"| D["man exponents, solve"]
+  A -->|"find the error"| E["sum/difference or product? pick the rule"]
+  A -->|"read an instrument"| F["scale + LC, then zero error"]
+  A -->|"linearise"| G["log both sides, read slope"]
+```
+
+> *Read:* definitions give dimensions, dimensions give errors, and a straight line gives the slope — pick the tool the keyword names.
 
 - "Find the dimensional formula": write the definition, extract the dimensions.
 - "Check dimensional consistency": match the dimensions of every term.

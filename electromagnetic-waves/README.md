@@ -2,7 +2,7 @@
 
 **Status:** complete against the six Part 3 coverage groups in `plan.md`; original Markdown-first course by `arena-agent`. The map in §1.3 states the scope precisely: this is not a page-by-page audit of every exercise in the supplied scanned textbook.
 
-Start with **[Electromagnetic-waves.md](Electromagnetic-waves.md)**. It is the authoritative source, not an export from an HTML edition. It uses standard `$...$` / `$$...$$` math, collapsible solutions and seven standalone local SVGs. No external images, fonts or network resources are needed by the notes. A Markdown viewer with MathJax/KaTeX support is needed to typeset equations.
+Start with **[Electromagnetic-waves.md](Electromagnetic-waves.md)**. It is the authoritative source, not an export from an HTML edition. It uses standard `$...$` / `$$...$$` math, collapsible solutions, YAML frontmatter, and seven standalone local SVGs. Six rendered Mermaid figures (chapter map, Ampère paradox, E–B–k triad, inverse-square graph, radiation-pressure cosines, triage) follow the template in [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2. No external images, fonts or network resources are needed; a Markdown viewer with MathJax/KaTeX support typesets equations.
 
 ## Roadmap and prerequisites
 

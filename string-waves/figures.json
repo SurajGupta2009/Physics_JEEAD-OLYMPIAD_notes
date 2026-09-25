@@ -1,0 +1,60 @@
+{
+  "slug": "string-waves",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F1.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
+      "why": "the whole chapter is one function y(x,t): the map shows the single spine Parts 1-11 hang off",
+      "data": "the eleven-part structure of the notes",
+      "read": "everything in this chapter is a slope, an area, or a boundary condition applied to y(x,t)",
+      "source": "Read this first: the four foundational truths"
+    },
+    {
+      "id": "F1.2",
+      "kind": "flowchart",
+      "title": "The sign rule for direction",
+      "why": "direction is read off the sign inside the argument, not off the algebra",
+      "data": "the four argument forms kx ± ωt and the cases they produce",
+      "read": "opposite signs travel +x; same signs travel -x",
+      "source": "§1.3 Phase Relationships"
+    },
+    {
+      "id": "F1.3",
+      "kind": "flowchart",
+      "title": "The two waveform envelopes",
+      "why": "the peak-valued slope triangle vs the RMS energy slope is the mechanical key",
+      "data": "kinematic slope (∂y/∂x -> v_p, peak values) vs energy slope (RMS)",
+      "read": "the kinematic slope gives velocities peak-to-peak; the energy slope flattens to RMS - mixing them is the trap",
+      "source": "§3.3 Rapid Slope Inspection Algorithm"
+    },
+    {
+      "id": "F1.4",
+      "kind": "xychart-beta",
+      "title": "Energy density is in phase with the wave",
+      "why": "energy crests sit at the zero-crossings, not the amplitude peaks, contradicting oscillator intuition",
+      "data": "u_k = u_p = (1/2) μ ω² A² cos²θ sampled at θ in {0, π/4, π/2, 3π/4, π}",
+      "read": "kinetic and potential energy densities peak together at the zero-crossings and vanish at the crests",
+      "source": "§4.3 Total Energy Density"
+    },
+    {
+      "id": "F1.5",
+      "kind": "flowchart",
+      "title": "Superposition begets standing waves",
+      "why": "a standing wave is two travelling waves, not a new phenomenon",
+      "data": "2A sin(kx)cos(ωt) = A sin(kx-ωt) + A sin(kx+ωt)",
+      "read": "equal amplitude/frequency/wavelength, opposite directions make a standing wave that traps energy",
+      "source": "§6.2 Normal Modes (harmonic vs overtone distinction)"
+    },
+    {
+      "id": "F1.6",
+      "kind": "flowchart",
+      "title": "Triage - travelling or standing first?",
+      "why": "the first question routes the entire solution",
+      "data": "the first rule of §8.1 - argument form decides travelling vs standing",
+      "read": "the argument form names the species first; direction, velocity, and energy follow from the right branch",
+      "source": "§8.1 The 8-Move Wave Triage Tree"
+    }
+  ]
+}

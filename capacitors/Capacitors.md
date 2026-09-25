@@ -1,3 +1,13 @@
+---
+title: Capacitors — first principles to Olympiad
+part: 7
+slug: capacitors
+status: complete
+source: Cengage Electrostatics and Current Electricity-compressed.pdf, Capacitor and Capacitance chapter
+aliases: [capacitors, capacitance, dielectrics, energy, rc circuits, networks]
+tags: [jee-advanced, olympiad, electromagnetism, capacitors]
+---
+
 <a id="section-index"></a>
 
 <a id="top"></a>
@@ -11,6 +21,26 @@ A complete, proof-first treatment of capacitance, energy, dielectrics and capaci
 ![Parallel plate capacitor connected to a battery, with uniform field in the gap](assets/figures/fig-001.svg)
 
 **The whole chapter in one picture.** Two conductors, a potential difference, a field in the gap — and a battery that either holds *Q* fixed or holds *V* fixed. Almost every capacitor problem in JEE and every Olympiad problem is a question about *which of those two is fixed*: that single choice decides the energy change, the force between the plates and the force on a dielectric slab.
+
+> [!tip] FIGURE F7.1 · Chapter map: Q-fixed or V-fixed
+> *Why:* every capacitor question reduces to which side of the master fork you are on; the map hangs the 8 chapters off that first decision.
+> *Data:* ch 1–2 charge & geometry (C = ε₀ × a length) → ch 3 energy & force (U = ½QV) → ch 4 combinations → ch 5 dielectrics → ch 6 RC transients → ch 7 advanced → ch 8 playbook.
+
+```mermaid
+mindmap
+  root((capacitors))
+    Charge & Gauss
+    Geometries
+    Energy & force
+    Networks
+    Dielectrics
+    RC transients
+    Advanced
+    The playbook
+```
+
+> *Read:* chapters 1–3 are the base, 4–6 the JEE engine, 7–8 the Olympiad machinery and the strategy.
+
 
 ### How these notes are organised
 
@@ -626,6 +656,21 @@ _Chapter 2 of 11 · JEE Advanced core · + Olympiad geometries · ≈ 75 min · 
 
 ## Capacitance, and how to get it for any geometry
 
+> [!tip] FIGURE F7.2 · C = ε₀ × a length: geometry is the whole answer
+> *Why:* C depends only on geometry because there is nothing else for it to depend on — so every formula here is ε₀ times one length; the flow picks which length.
+> *Data:* plate A/d; isolated sphere 4πε₀R; shells 4πε₀r₁r₂/(r₂−r₁); coaxial 2πε₀L/ln(r₂/r₁); two-wire πε₀L/ln(d/a); slab-in-gap correction.
+
+```mermaid
+flowchart TD
+  A["two conductors, +Q and -Q"] --> B["C = Q/V, dimension ε₀ × length"]
+  B --> C["parallel plate: ε₀A/d"]
+  B --> D["spheres/shells: 4πε₀ r₁r₂/(r₂-r₁)"]
+  B --> E["cylinders: 2πε₀L/ln(r₂/r₁)"]
+```
+
+> *Read:* scale every charge by λ and Q/V never moves — the concept of capacitance is just the linearity of Coulomb's law.
+
+
 This chapter has one job: turn "two conductors and a field" into a single number $C$. We do that by **construction** for six geometries, and after each one we run the limits that prove the answer could not be anything else.
 
 ### 2.1 What $C$ is, and the one reason it exists at all
@@ -1131,6 +1176,20 @@ Two lessons from how neatly it lands. (1) The $4\pi r^2$ from the volume element
 
 ### 3.4 The master rule: fixed $Q$ versus fixed $V$
 
+> [!tip] FIGURE F7.3 · The master rule: which is fixed, Q or V?
+> *Why:* the answer changes the force, the energy change and the sign in one stroke; misassigning fixed-Q/fixed-V is the chapter's most expensive slip.
+> *Data:* isolated: δW_mech = −d(Q²/2C); held on a cell: δW_mech = +½V² dC (the battery pays the other half); stable = lowers the appropriate potential.
+
+```mermaid
+flowchart TD
+  A["something changes C"] --> B{"what is fixed?"}
+  B -- "isolated (Q fixed)" --> C["force = -d(Q²/2C)/dx → maximise C"]
+  B -- "on a cell (V fixed)" --> D["force = +½V² dC/dx → battery pays both shares"]
+```
+
+> *Read:* a dielectric is sucked in, plates pull together and a movable plate snaps at pull-in — all one rule with two branches.
+
+
 Let some coordinate $\xi$ (slab position, gap, overlap area) change the capacitance by $dC$. The mechanical work delivered to whatever moves is
 
 $$
@@ -1532,6 +1591,21 @@ _Chapter 4 of 11 · JEE Advanced core · networks & symmetry · ≈ 80 min · 10
 Everyone knows $1/C=1/C_1+1/C_2$. Almost nobody can say when it is *false*. This chapter proves both rules, shows the exact moment the proof breaks, and then hands you the one method — conservation of charge at floating nodes — that works for every network ever set in an exam.
 
 ### 4.1 Series: what the rule is *really* saying
+
+> [!tip] FIGURE F7.4 · Series = one shared island; parallel = one shared voltage
+> *Why:* the series rule is charge conservation at an isolated node, not "same current"; parallel is equal voltage, not equal charge.
+> *Data:* series: 1/C = Σ1/Cᵢ (least C wins); parallel: C = ΣCᵢ (most C dominates); the series string stores least in the smallest capacitor (U_i/U = C_eq/C_i).
+
+```mermaid
+flowchart LR
+  A["series: one isolated node"] --> B["equal charge q on every plate"]
+  B --> C["1/C = 1/C₁ + 1/C₂"]
+  D["parallel: one common voltage"] --> E["charges split qᵢ = CᵢV"]
+  E --> F["C = C₁ + C₂"]
+```
+
+> *Read:* prove the rule from the island, and you also learn exactly when it breaks — everything else is that same move repeated.
+
 
 Two capacitors end to end, nothing else connected to the junction. Charge the pair: the junction plate must acquire some charge $q$ — and there is nowhere for it to come *from*, because that conductor is isolated. That observation is the entire content of the series rule.
 
@@ -2484,6 +2558,20 @@ Everything so far was a photograph. This chapter is the film — and the film is
 **Fig. 6.1** — Steady state in one picture: a capacitor branch is an *open circuit*, so the currents live entirely in the resistor graph; the capacitors then inherit node voltages. R₃ is dead weight here — a favourite JEE trap, and the reason the algorithm below is stated as steps rather than as a formula.
 
 ### 6.1 Steady state: the four-step algorithm
+
+> [!tip] FIGURE F7.5 · Transients are three numbers
+> *Why:* V_C(t) = V∞ + (V₀ − V∞)e^(−t/τ) with τ = R_th C; if you can find the two voltages and the Thévenin resistance, you have every RC answer.
+> *Data:* open (capacitors → breaks), solve the resistive net, close (V_C = node difference, q = CΔV), check (isolated-island conservation); τ = R_th C with sources killed; V_C continuous.
+
+```mermaid
+flowchart TD
+  A["find V₀, V∞, τ"] --> B["V_C(t) = V∞ + (V₀ - V∞) e^(-t/τ)"]
+  B --> C["I_C = (V₀ - V∞)/R_th · e^(-t/τ)"]
+  B --> D["heat in every R: ½C(V₀ - V∞)²"]
+```
+
+> *Read:* V_C can never jump while the power stays finite — continuity is a consequence of finite power, not of capacitors.
+
 
 > **The algorithm (four verbs: open, solve, close, check)**
 >
@@ -3458,6 +3546,22 @@ Chapters 1–7 contain roughly a hundred facts. Almost every question you will b
 ![Flowchart: is the configuration asked for? yes then is the medium homogeneous, if yes use Gauss and if no use the matrix or a map; if not then is the circuit a single capacitor with resistors, if yes use the three numbers, if no use charge conservation on the island](assets/figures/fig-032.svg)
 
 **Fig. 8.1** — The triage. The single most common cause of a lost mark in this chapter of physics is choosing the *force/energy* route when the geometry is trivial, or the *geometry* route when the question is only about what is conserved. The diagram is only a way of forcing that first pause.
+
+> [!tip] FIGURE F7.6 · Triage: configuration or conservation?
+> *Why:* ninety seconds deciding whether the question is about a configuration or about charge/energy conservation decides the whole method.
+> *Data:* configuration asked → homogeneous medium: Gauss; inhomogeneous: matrix/map. Otherwise → single capacitor + resistors: three numbers (V₀, V∞, τ); several plates: island charge conservation.
+
+```mermaid
+flowchart TD
+  A["ninety seconds: what is asked?"] --> B{"configuration asked?"}
+  B -- yes --> C["homogeneous medium: Gauss"]
+  B -- yes --> D["inhomogeneous: matrix or map"]
+  B -- no --> E["single capacitor + resistors: three numbers"]
+  E --> F["several plates: island charge conservation"]
+```
+
+> *Read:* the triage is a way of forcing the first pause — pick the method before the algebra.
+
 
 ### 8.2 Twelve moves
 

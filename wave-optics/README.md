@@ -1,5 +1,7 @@
 # Wave Optics — from basics to Olympiad
 
+> **Media note (kept at top).** `Wave-optics.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 4 of the wave sequence, `F4.1`–`F4.6`), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Wave-optics.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 28 reviewed local SVGs and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
+
 > **Portable Markdown edition:** [Wave-optics.md](Wave-optics.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Wave-optics.html](Wave-optics.html) remains available for the interactive offline view and printing.
 
 A self-contained course on **superposition, interference, diffraction and polarisation**, written for

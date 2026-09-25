@@ -5,6 +5,9 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
+from tools import mermaid_lint
+
 CFG = json.loads((ROOT / "notes.json").read_text(encoding="utf-8"))
 SRC = (ROOT / CFG["master"]).read_text(encoding="utf-8")
 errors: list[str] = []
@@ -59,8 +62,26 @@ need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a *Search:
 
 fence = chr(96) * 3
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
-                     (r"\]\(https?://", "external link"), (fence + "mermaid", "mermaid block")):
+                     (r"\]\(https?://", "external link")):
     need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
+# ── FIGURE system (plan.md §1.2 media policy v2 / docs/obsidian-plugin-workflow.md §2) ──
+figs = re.findall(r"^> \[!tip\] FIGURE F(\d+)\.(\d+) · ", SRC, re.M)
+need(len(figs) >= CFG["minimums"]["figures"],
+     f"FIGURES: {len(figs)} found, requires at least {CFG['minimums']['figures']}")
+need(not [p for p, _ in figs if int(p) != CFG["part"]],
+     f"FIGURE numbers must start with this part's number ({CFG['part']})")
+need(SRC.count("*Why:*") >= len(figs), "every FIGURE needs a '*Why:*' line")
+need(SRC.count("*Data:*") >= len(figs), "every FIGURE needs a '*Data:*' line")
+need(SRC.count("*Read:*") >= len(figs), "every FIGURE needs a '*Read:*' line")
+mm = re.findall(fence + r"mermaid[ \t]*\n([A-Za-z0-9_-]+)", SRC)
+kinds = {"flowchart", "graph", "mindmap", "xychart-beta", "quadrantChart",
+         "sequenceDiagram", "stateDiagram-v2", "stateDiagram", "classDiagram",
+         "pie", "erDiagram", "gitGraph", "gantt", "journey"}
+need(all(k in kinds for k in mm), f"unknown mermaid kind: {sorted(set(mm) - kinds)}")
+need(len(mm) >= len(figs), "every FIGURE needs a ```mermaid block")
+for _msg in mermaid_lint.lint(SRC):
+    need(False, f"mermaid: {_msg}")
 
 callouts = re.findall(r"^> \[!([a-z]+)\]", SRC, re.M)
 need(len(callouts) >= CFG["minimums"]["callouts"],
@@ -118,4 +139,4 @@ if errors:
     sys.exit(1)
 print(f"ALL GOOD: 15 blocks · C×{n_c} E×{n_e} Q×{n_q} OL×{n_ol} · "
       f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · "
-      f"{len(callouts)} callouts · no images")
+      f"{len(figs)} FIGURES (mermaid) · {len(callouts)} callouts · no raster images")

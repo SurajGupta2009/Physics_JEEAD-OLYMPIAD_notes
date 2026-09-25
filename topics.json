@@ -47,7 +47,8 @@
         "12 · noise, kT/C and measurement (dielectric absorption, 1/f, shielded cables)",
         "13 · supercapacitors and electrochemistry in depth (EDL, Warburg, pseudocapacitance)",
         "worked-problem chapter: the Cengage exercise sets (book pp. 4.24–4.36) with timed hints"
-      ]
+      ],
+      "part": 7
     },
     {
       "slug": "thermodynamics",
@@ -87,11 +88,12 @@
       "questions": 127,
       "solutions": 55,
       "math_spans": 943,
-      "bytes_html": 346583
+      "bytes_html": 346583,
+      "part": 5
     },
     {
       "slug": "rotational-mechanics",
-      "title": "Rigid-body rotation — first principles to Olympiad",
+      "title": "Rotational Mechanics — first principles to Olympiad",
       "status": "complete",
       "owner": "agent",
       "entry": "rotational-mechanics/Rotational-mechanics.md",
@@ -109,16 +111,16 @@
       "dependency": [
         "centre-of-mass-momentum"
       ],
-      "words": 9097,
+      "words": 9740,
       "display_formulas": 19,
-      "bytes_markdown": 65325,
+      "bytes_markdown": 69447,
       "pages": [
         "Rotational-mechanics.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 903,
+      "math_spans": 922,
       "bytes_html": 0
     },
     {
@@ -162,11 +164,12 @@
         "12 · AC steady state: phasors, impedance, power factor, resonance (the natural sequel)",
         "worked-problem chapter: the Cengage exercise sets (book pp. 5.38–5.55, 6.11–6.20, 7.12–7.20) re-derived with the ch 8 playbook",
         "magnetic effects of current: the field twin of this set, sharing its audit discipline"
-      ]
+      ],
+      "part": 8
     },
     {
       "slug": "heat",
-      "title": "Heat — first principles to Olympiad",
+      "title": "Heat — from first principles to Olympiad, in one expandable map",
       "status": "complete",
       "owner": "arena-agent",
       "entry": "heat/Heat.html",
@@ -194,7 +197,8 @@
       "questions": 48,
       "solutions": 48,
       "math_spans": 566,
-      "bytes_html": 240766
+      "bytes_html": 240766,
+      "part": 6
     },
     {
       "slug": "geometrical-optics",
@@ -238,7 +242,8 @@
         "lens design lab: spectacles prescription to surface radii, and the achromatic pair worked by hand",
         "worked-problem companion: the Cengage exercise sets (book pp. 1.89-1.129) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
-      ]
+      ],
+      "part": 9
     },
     {
       "slug": "wave-optics",
@@ -283,11 +288,13 @@
         "modern physics sequence from the same Cengage volume: photoelectric effect and atomic physics",
         "worked-problem companion: the Cengage exercise sets (book pp. 2.35–2.63) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
-      ]
+      ],
+      "part": 4,
+      "note": ""
     },
     {
       "slug": "string-waves",
-      "title": "String waves — first principles to Olympiad",
+      "title": "String Waves — First Principles to Olympiad",
       "status": "complete",
       "format": "markdown",
       "owner": "arena-agent",
@@ -318,11 +325,12 @@
       "figures": 5,
       "questions": 0,
       "solutions": 0,
-      "math_spans": 880,
+      "math_spans": 887,
       "bytes_html": 0,
-      "bytes_markdown": 74844,
-      "words": 11362,
-      "display_formulas": 177
+      "bytes_markdown": 79189,
+      "words": 12033,
+      "display_formulas": 177,
+      "part": 1
     },
     {
       "slug": "sound-waves",
@@ -364,7 +372,8 @@
         "acoustic resonators and Helmholtz resonator with radiation impedance",
         "musical instruments: strings coupled to air columns, Fourier synthesis",
         "nonlinear acoustics: shock formation, sonic boom N-wave, acoustic streaming"
-      ]
+      ],
+      "part": 2
     },
     {
       "slug": "electromagnetic-waves",
@@ -407,11 +416,12 @@
       "figures": 7,
       "questions": 52,
       "solutions": 52,
-      "math_spans": 786,
+      "math_spans": 790,
       "bytes_html": 0,
-      "bytes_markdown": 75918,
-      "words": 9241,
-      "display_formulas": 36
+      "bytes_markdown": 80388,
+      "words": 9935,
+      "display_formulas": 36,
+      "part": 3
     },
     {
       "slug": "photoelectric-effect",
@@ -450,11 +460,12 @@
       "figures": 0,
       "questions": 54,
       "solutions": 103,
-      "math_spans": 1135,
+      "math_spans": 1147,
       "bytes_html": 0,
-      "bytes_markdown": 97415,
-      "words": 13766,
-      "display_formulas": 18
+      "bytes_markdown": 100484,
+      "words": 14251,
+      "display_formulas": 18,
+      "part": 23
     },
     {
       "slug": "atomic-structure",
@@ -492,11 +503,12 @@
       "figures": 0,
       "questions": 54,
       "solutions": 103,
-      "math_spans": 895,
+      "math_spans": 908,
       "bytes_html": 0,
-      "bytes_markdown": 78853,
-      "words": 11206,
-      "display_formulas": 14
+      "bytes_markdown": 81768,
+      "words": 11672,
+      "display_formulas": 14,
+      "part": 24
     },
     {
       "slug": "x-rays",
@@ -535,11 +547,12 @@
       "figures": 0,
       "questions": 54,
       "solutions": 103,
-      "math_spans": 481,
+      "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 75042,
-      "words": 11113,
-      "display_formulas": 13
+      "bytes_markdown": 77825,
+      "words": 11603,
+      "display_formulas": 13,
+      "part": 25
     },
     {
       "slug": "nuclear-physics",
@@ -582,11 +595,12 @@
       "figures": 0,
       "questions": 54,
       "solutions": 103,
-      "math_spans": 544,
+      "math_spans": 557,
       "bytes_html": 0,
-      "bytes_markdown": 79890,
-      "words": 11608,
-      "display_formulas": 15
+      "bytes_markdown": 82718,
+      "words": 12072,
+      "display_formulas": 15,
+      "part": 26
     },
     {
       "slug": "semiconductors",
@@ -629,11 +643,12 @@
       "figures": 0,
       "questions": 54,
       "solutions": 102,
-      "math_spans": 489,
+      "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 78639,
-      "words": 11418,
-      "display_formulas": 16
+      "bytes_markdown": 82755,
+      "words": 12090,
+      "display_formulas": 16,
+      "part": 27
     },
     {
       "slug": "communication-systems",
@@ -672,11 +687,12 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 638,
+      "math_spans": 648,
       "bytes_html": 0,
-      "bytes_markdown": 76923,
-      "words": 11147,
-      "display_formulas": 16
+      "bytes_markdown": 80959,
+      "words": 11754,
+      "display_formulas": 16,
+      "part": 100
     },
     {
       "slug": "special-relativity",
@@ -715,15 +731,16 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 926,
+      "math_spans": 944,
       "bytes_html": 0,
-      "bytes_markdown": 82362,
-      "words": 11554,
-      "display_formulas": 18
+      "bytes_markdown": 86295,
+      "words": 12174,
+      "display_formulas": 18,
+      "part": 28
     },
     {
       "part": 1,
-      "title": "Units, Dimensions & Measurement Errors",
+      "title": "Units, Dimensions & Measurement Errors — first principles to Olympiad",
       "slug": "units-measurements",
       "folder": "units-measurements",
       "format": "markdown",
@@ -759,15 +776,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1069,
+      "math_spans": 1085,
       "bytes_html": 0,
-      "bytes_markdown": 78847,
-      "words": 10934,
+      "bytes_markdown": 82774,
+      "words": 11554,
       "display_formulas": 14
     },
     {
       "part": 2,
-      "title": "Vectors & Vector Algebra",
+      "title": "Vectors & Vector Algebra — first principles to Olympiad",
       "slug": "vectors",
       "folder": "vectors",
       "format": "markdown",
@@ -805,15 +822,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1156,
+      "math_spans": 1166,
       "bytes_html": 0,
-      "bytes_markdown": 87928,
-      "words": 9005,
+      "bytes_markdown": 91930,
+      "words": 9586,
       "display_formulas": 16
     },
     {
       "part": 3,
-      "title": "Kinematics in One Dimension",
+      "title": "Kinematics in One Dimension — first principles to Olympiad",
       "slug": "kinematics-1d",
       "folder": "kinematics-1d",
       "format": "markdown",
@@ -855,15 +872,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1071,
+      "math_spans": 1075,
       "bytes_html": 0,
-      "bytes_markdown": 63048,
-      "words": 9006,
+      "bytes_markdown": 65398,
+      "words": 9404,
       "display_formulas": 13
     },
     {
       "part": 4,
-      "title": "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics",
+      "title": "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad",
       "slug": "motion-in-two-dimensions",
       "folder": "motion-in-two-dimensions",
       "format": "markdown",
@@ -906,15 +923,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 955,
+      "math_spans": 970,
       "bytes_html": 0,
-      "bytes_markdown": 69184,
-      "words": 9362,
+      "bytes_markdown": 73073,
+      "words": 9957,
       "display_formulas": 19
     },
     {
       "part": 5,
-      "title": "Newton's Laws, Friction, Constraints & Circular Dynamics",
+      "title": "Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad",
       "slug": "newtons-laws",
       "folder": "newtons-laws",
       "format": "markdown",
@@ -954,15 +971,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 904,
+      "math_spans": 921,
       "bytes_html": 0,
-      "bytes_markdown": 75265,
-      "words": 10843,
+      "bytes_markdown": 79375,
+      "words": 11495,
       "display_formulas": 13
     },
     {
       "part": 6,
-      "title": "Work, Energy & Power",
+      "title": "Work, Energy & Power — first principles to Olympiad",
       "slug": "work-energy-power",
       "folder": "work-energy-power",
       "format": "markdown",
@@ -1002,15 +1019,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 836,
+      "math_spans": 852,
       "bytes_html": 0,
-      "bytes_markdown": 66809,
-      "words": 9354,
+      "bytes_markdown": 70513,
+      "words": 9967,
       "display_formulas": 19
     },
     {
       "part": 7,
-      "title": "Centre of Mass, Momentum & Collisions",
+      "title": "Centre of Mass, Momentum & Collisions — first principles to Olympiad",
       "slug": "centre-of-mass-momentum",
       "folder": "centre-of-mass-momentum",
       "format": "markdown",
@@ -1053,15 +1070,15 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 687,
+      "math_spans": 700,
       "bytes_html": 0,
-      "bytes_markdown": 67132,
-      "words": 9531,
+      "bytes_markdown": 71081,
+      "words": 10132,
       "display_formulas": 17
     },
     {
       "part": 9,
-      "title": "Gravitation & Orbital Motion",
+      "title": "Gravitation & Orbital Motion — first principles to Olympiad",
       "slug": "gravitation",
       "folder": "gravitation",
       "status": "complete",
@@ -1079,21 +1096,21 @@
       "dependency": [
         "rotational-mechanics"
       ],
-      "words": 9096,
+      "words": 9701,
       "display_formulas": 14,
-      "bytes_markdown": 66569,
+      "bytes_markdown": 70526,
       "pages": [
         "Gravitation.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 783,
+      "math_spans": 803,
       "bytes_html": 0
     },
     {
       "part": 10,
-      "title": "Simple Harmonic Motion",
+      "title": "Simple Harmonic Motion — first principles to Olympiad",
       "slug": "simple-harmonic-motion",
       "folder": "simple-harmonic-motion",
       "status": "complete",
@@ -1111,16 +1128,16 @@
       "dependency": [
         "gravitation"
       ],
-      "words": 9002,
+      "words": 9606,
       "display_formulas": 16,
-      "bytes_markdown": 66675,
+      "bytes_markdown": 70576,
       "pages": [
         "Simple-harmonic-motion.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 926,
+      "math_spans": 946,
       "bytes_html": 0
     },
     {

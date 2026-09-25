@@ -1,5 +1,7 @@
 # Heat — from basics to Olympiad
 
+> **Media note (kept at top).** `Heat.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 6 of the reading spine, `F6.1`–`F6.6`, numbered per `plan.md` Appendix A), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Heat.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 24 reviewed local SVGs and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
+
 > **Portable Markdown edition:** [Heat.md](Heat.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Heat.html](Heat.html) remains available for the interactive offline view and printing.
 
 A self-contained course on **thermal expansion, calorimetry and heat transfer** — temperature and internal
