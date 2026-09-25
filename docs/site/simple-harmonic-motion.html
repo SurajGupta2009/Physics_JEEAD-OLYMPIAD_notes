@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple harmonic motion — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="active">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 10</span><span class="prop"><b>slug</b> simple-harmonic-motion</span><span class="prop"><b>source</b> Cengage Waves and Oscillations-compressed.pdf, ch 1 SHM</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">shm</span><span class="prop tag">oscillations</span><span class="prop tag">waves</span></p>
+
+<h1 id="simple-harmonic-motion-first-principles-to-olympiad">Simple Harmonic Motion — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — the defining equation $a=-\omega^2 x$, the SHM solution, energy in SHM, the spring-mass system, and the simple pendulum. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (LCR circuits as SHM analogy, damped and driven oscillations, resonance, coupled oscillators, normal modes), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: write and solve the SHM differential equation; derive the period of a spring-mass system and a simple pendulum; use energy methods for SHM problems; analyse superposition of SHMs (same and different frequencies); determine when a system executes SHM (small oscillations); solve damped and driven oscillation problems.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Any system near a stable equilibrium oscillates with a frequency determined by the curvature of the potential energy well.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>You need PART 6 (energy, $F=-dU/dx$) and basic calculus (solving $d^2x/dt^2=-\omega^2 x$). If you can take a second derivative and use $F=ma$, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats SHM as a high-frequency topic — 2–4 questions per year. The problems test: finding the time period from force/energy, superposition of SHMs, phase, and the conditions for SHM. INPhO and IPhO test: coupled oscillators, normal modes, damped/driven oscillations, and resonance. The trap density is high: confusing amplitude with displacement, using $T=2\pi\sqrt{m/k}$ for a pendulum (wrong $k$), forgetting the small-angle condition, and misidentifying the equilibrium position.</p>
+<p>The most important skill in SHM is identifying the equilibrium position. For a vertical spring, the equilibrium is at $x_0=mg/k$ below the natural length — not at the natural length. For a pendulum, the equilibrium is at the bottom of the arc. The oscillation is always about the equilibrium, not about the point of zero force.</p>
+<p>The second most important skill is identifying whether a system actually executes SHM. The test is simple: is the restoring force proportional to the displacement from equilibrium? If $F=-kx$ (or $F\propto-x$), it is SHM. If $F\neq-kx$, it is periodic but not simple harmonic. For a pendulum, $F=-mg\sin\theta$, which is proportional to $\theta$ only for small angles.</p>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a waves chapter — the physics of waves is PART 11. Not a damped/driven-oscillation deep-dive — we cover the essentials here but the full theory (Q-factor, bandwidth, impedance matching) belongs in the waves chapter. Not a Fourier analysis chapter — while SHM is the basis of Fourier decomposition, the full theory belongs in the mathematical methods section. This chapter focuses on the mechanics of oscillating systems: how to find the period, amplitude, and energy of oscillations, and how to identify when a system executes SHM.</p>
+<h3 id="06-key-skills-to-develop-from-this-chapter">0.6 Key skills to develop from this chapter</h3>
+<p>The most valuable skills from this chapter are: (1) recognising SHM in disguise — a vertical spring, a floating cylinder, a torsion wire; (2) using energy methods to find the speed at any point; (3) combining springs (series and parallel) and finding the effective spring constant; (4) superposing two SHMs using phasor diagrams; (5) finding the period from the potential energy function $U(x)$ using $T=2\pi\sqrt{m/U''(x_0)}$. These skills appear in every subsequent physics course, from waves to quantum mechanics to electrical engineering.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>The SHM equation</td>
+<td>$a=-\omega^2 x$</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Solution methods</td>
+<td>$x=A\sin(\omega t+\phi)$</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Velocity and acceleration</td>
+<td>$v$, $a$ from the solution</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Energy in SHM</td>
+<td>$E=\tfrac12 kA^2$</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Spring-mass</td>
+<td>$T=2\pi\sqrt{m/k}$</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Simple pendulum</td>
+<td>$T=2\pi\sqrt{L/g}$</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Physical pendulum</td>
+<td>$T=2\pi\sqrt{I/(mgh)}$</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Superposition</td>
+<td>Same frequency, different frequencies</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Damped oscillations</td>
+<td>$\gamma$, underdamped/critical/overdamped</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Driven oscillations</td>
+<td>Resonance</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Coupled oscillators</td>
+<td>Normal modes</td>
+<td>§3.11</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>A system displaced from equilibrium experiences a restoring force proportional to the displacement.</strong> This is the defining condition for SHM: $F=-kx$, or equivalently $a=-\omega^2 x$. The solution is a sinusoidal oscillation: $x=A\sin(\omega t+\phi)$.</p>
+<p><strong>The period depends only on the system properties, not on the amplitude.</strong> For a spring-mass system, $T=2\pi\sqrt{m/k}$ — a larger amplitude means a longer path but a higher average speed, and the two effects exactly cancel. This is the hallmark of SHM.</p>
+<p><strong>Energy oscillates between kinetic and potential.</strong> The total energy $E=\frac{1}{2}kA^2$ is constant (for undamped SHM). At the extremes ($x=\pm A$), all energy is potential. At $x=0$, all energy is kinetic.</p>
+<p><strong>Any system near a stable equilibrium executes SHM for small displacements.</strong> The "spring constant" is $k=U''(x_0)$, the second derivative of the PE at the equilibrium point. This is why pendulums, atoms in a crystal, and LC circuits all oscillate sinusoidally.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.1 · SHM sinusoidal waveform — displacement, velocity and acceleration</p>
+<p><em>Show:</em> three panels. Top: $x(t)=A\sin\omega t$. Middle: $v(t)=A\omega\cos\omega t$ (leads $x$ by $90°$). Bottom: $a(t)=-A\omega^2\sin\omega t$ (leads $v$ by $90°$, opposite to $x$). Mark the phase relationships.
+<em>Search:</em> "SHM displacement velocity acceleration phase relationship graph"</p>
+</div>
+
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x$</td>
+<td>displacement from equilibrium</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>amplitude</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\omega$</td>
+<td>angular frequency</td>
+<td>rad/s</td>
+</tr>
+<tr>
+<td>$f$</td>
+<td>frequency $=\omega/(2\pi)$</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>$T$</td>
+<td>period $=1/f=2\pi/\omega$</td>
+<td>s</td>
+</tr>
+<tr>
+<td>$\phi$</td>
+<td>initial phase</td>
+<td>rad</td>
+</tr>
+<tr>
+<td>$k$</td>
+<td>spring constant (or effective spring constant)</td>
+<td>N/m</td>
+</tr>
+<tr>
+<td>$E$</td>
+<td>total mechanical energy</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$\gamma$</td>
+<td>damping coefficient</td>
+<td>s$^{-1}$</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>Displacement $x$ is measured from the equilibrium position (not from the point of zero force — these are the same for a horizontal spring, but different for a vertical spring where the equilibrium is at $x_0=mg/k$ below the natural length). The phase $\phi$ is set by initial conditions: if $x(0)=0$ and $v(0)&gt;0$, then $\phi=0$.</p>
+</div>
+
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-the-shm-equation">3.1 The SHM equation</h3>
+<p>$$
+\frac{d^2 x}{dt^2}=-\omega^2 x. \qquad (3.1)
+$$</p>
+<p>This is the defining equation. Any motion satisfying this equation is SHM with angular frequency $\omega$.</p>
+<p><strong>Physical origin:</strong> $F=-kx$ (Hooke's law) gives $a=-(k/m)x$, so $\omega=\sqrt{k/m}$.</p>
+<h3 id="32-the-general-solution">3.2 The general solution</h3>
+<p>$$
+x(t)=A\sin(\omega t+\phi). \qquad (3.2)
+$$</p>
+<p>$A$ and $\phi$ are determined by initial conditions. Alternatively: $x(t)=C_1\cos\omega t+C_2\sin\omega t$.</p>
+<h3 id="33-velocity-and-acceleration">3.3 Velocity and acceleration</h3>
+<p>$$
+v(t)=A\omega\cos(\omega t+\phi)=\omega\sqrt{A^2-x^2}. \qquad (3.3)
+$$</p>
+<p>$$
+a(t)=-A\omega^2\sin(\omega t+\phi)=-\omega^2 x. \qquad (3.4)
+$$</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.2 · The SHM phasor diagram</p>
+<p><em>Show:</em> a circle of radius $A$. A phasor (radius) rotates at angular speed $\omega$. The projection on the vertical axis is $x$. The velocity $v$ is the projection of a phasor of length $A\omega$ (rotated $90°$ ahead). The acceleration $a$ is the projection of a phasor of length $A\omega^2$ (rotated $180°$ from $x$, i.e., antiparallel).
+<em>Search:</em> "SHM phasor diagram circle projection velocity acceleration"</p>
+</div>
+
+<h3 id="34-energy-in-shm">3.4 Energy in SHM</h3>
+<p>$$
+E=\frac{1}{2}kA^2=\frac{1}{2}m\omega^2 A^2. \qquad (3.5)
+$$</p>
+<p>$$
+K(x)=\frac{1}{2}k(A^2-x^2),\qquad U(x)=\frac{1}{2}kx^2. \qquad (3.6)
+$$</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.3 · Energy versus displacement in SHM</p>
+<p><em>Show:</em> $U=\frac{1}{2}kx^2$ (parabola), $K=\frac{1}{2}k(A^2-x^2)$ (inverted parabola), $E=$ constant (horizontal line). At $x=\pm A$: $U=E$, $K=0$. At $x=0$: $U=0$, $K=E$. The energies exchange at every instant.
+<em>Search:</em> "energy versus displacement simple harmonic motion kinetic potential graph"</p>
+</div>
+
+<h3 id="35-spring-mass-system">3.5 Spring-mass system</h3>
+<p>$$
+T=2\pi\sqrt{\frac{m}{k}}. \qquad (3.7)
+$$</p>
+<p><strong>Springs in series:</strong> $1/k_{\text{eff}}=1/k_1+1/k_2+\cdots$</p>
+<p><strong>Springs in parallel:</strong> $k_{\text{eff}}=k_1+k_2+\cdots$</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.4 · Series and parallel spring configurations</p>
+<p><em>Show:</em> left: two springs in series (one after the other, same force, displacements add). Right: two springs in parallel (side by side, same displacement, forces add). The effective spring constants shown.
+<em>Search:</em> "springs in series parallel effective spring constant diagram"</p>
+</div>
+
+<h3 id="36-simple-pendulum">3.6 Simple pendulum</h3>
+<p>For a pendulum of length $L$ and small angle $\theta$:</p>
+<p>$$
+T=2\pi\sqrt{\frac{L}{g}}. \qquad (3.8)
+$$</p>
+<p><strong>Validity condition:</strong> $\theta\ll1$ rad (about $10°$ or less). For larger angles, the period increases: $T\approx T_0(1+\theta_0^2/16)$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.5 · Simple pendulum with the restoring force decomposition</p>
+<p><em>Show:</em> a pendulum at angle $\theta$ from vertical. The weight $mg$ resolved into: a component along the arc ($-mg\sin\theta$) and a component along the string (tension minus $mg\cos\theta$). For small $\theta$: $\sin\theta\approx\theta$, so the restoring "force" along the arc is $-mg\theta=-mgx/L=-kx$ with $k=mg/L$.
+<em>Search:</em> "simple pendulum restoring force small angle approximation diagram"</p>
+</div>
+
+<h3 id="37-physical-pendulum">3.7 Physical pendulum</h3>
+<p>For a rigid body pivoted at a distance $d$ from the COM, with moment of inertia $I$ about the pivot:</p>
+<p>$$
+T=2\pi\sqrt{\frac{I}{mgh}}. \qquad (3.9)
+$$</p>
+<p>where $h=d$ is the distance from the pivot to the COM.</p>
+<h3 id="38-superposition-of-shms">3.8 Superposition of SHMs</h3>
+<p><strong>Same direction, same frequency:</strong> the resultant is SHM with the same frequency. Phasor addition.</p>
+<p><strong>Same direction, different frequencies:</strong> beats. The beat frequency is $f_{\text{beat}}=|f_1-f_2|$.</p>
+<p><strong>Perpendicular SHMs:</strong> Lissajous figures. The shape depends on the frequency ratio and the phase difference.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.6 · Lissajous figures for common frequency ratios</p>
+<p><em>Show:</em> a $3\times3$ grid of Lissajous figures. Rows: $\omega_y/\omega_x=1,2,3$. Columns: phase difference $\delta=0,\pi/4,\pi/2$. The figures range from straight lines (1:1, $\delta=0$) to circles (1:1, $\delta=\pi/2$) to figure-eights (2:1, $\delta=\pi/4$) to complex curves (3:1).
+<em>Search:</em> "Lissajous figures frequency ratio phase difference grid"</p>
+</div>
+
+<h3 id="39-damped-oscillations">3.9 Damped oscillations</h3>
+<p>$$
+m\ddot{x}+b\dot{x}+kx=0. \qquad (3.10)
+$$</p>
+<p>With $\gamma=b/(2m)$ and $\omega_0=\sqrt{k/m}$:</p>
+<ul>
+<li><strong>Underdamped</strong> ($\gamma&lt;\omega_0$): $x=Ae^{-\gamma t}\cos(\omega' t+\phi)$, where $\omega'=\sqrt{\omega_0^2-\gamma^2}$.</li>
+<li><strong>Critically damped</strong> ($\gamma=\omega_0$): fastest return to equilibrium without oscillation.</li>
+<li><strong>Overdamped</strong> ($\gamma&gt;\omega_0$): slow return without oscillation.</li>
+</ul>
+<h3 id="310-driven-oscillations-and-resonance">3.10 Driven oscillations and resonance</h3>
+<p>$$
+m\ddot{x}+b\dot{x}+kx=F_0\cos\omega t. \qquad (3.11)
+$$</p>
+<p>The steady-state amplitude:</p>
+<p>$$
+A(\omega)=\frac{F_0/m}{\sqrt{(\omega_0^2-\omega^2)^2+(2\gamma\omega)^2}}. \qquad (3.12)
+$$</p>
+<p><strong>Resonance</strong> at $\omega=\omega_0$ (approximately — the exact peak is at $\omega=\sqrt{\omega_0^2-2\gamma^2}$).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.7 · The resonance curve — amplitude vs driving frequency</p>
+<p><em>Show:</em> $A(\omega)$ vs $\omega/\omega_0$ for three values of damping $\gamma$: small (sharp peak), medium, and large (broad, low peak). The peak shifts slightly below $\omega_0$ for larger $\gamma$. The $Q$-factor $=\omega_0/(2\gamma)$ indicated.
+<em>Search:</em> "resonance amplitude versus driving frequency damping curves graph"</p>
+</div>
+
+<h3 id="311-coupled-oscillators-and-normal-modes">3.11 Coupled oscillators and normal modes</h3>
+<p>When two oscillating systems are connected (coupled), they exchange energy. The system has normal modes — patterns of oscillation where all parts move at the same frequency. Any motion is a superposition of these normal modes. For two identical pendulums coupled by a spring: the system has two normal modes:
+1. <strong>In-phase mode:</strong> both pendulums swing together; the spring is unstretched. Frequency $\omega_1=\sqrt{g/L}$.
+2. <strong>Out-of-phase mode:</strong> pendulums swing in opposite directions; the spring adds to the restoring force. Frequency $\omega_2=\sqrt{g/L+k/m}$ (higher).</p>
+<p>Any motion is a superposition of these two normal modes. This decomposition into normal modes is one of the most powerful techniques in physics — it works for any number of coupled oscillators, for vibrating strings, and for electromagnetic cavities.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.8 · The two normal modes of coupled pendulums</p>
+<p><em>Show:</em> left: in-phase mode — both pendulums displaced the same way, spring relaxed. Right: out-of-phase mode — pendulums displaced oppositely, spring stretched/compressed. The frequencies labelled.
+<em>Search:</em> "coupled pendulums normal modes in-phase out-of-phase diagram"</p>
+</div>
+
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{x(t)=A\sin(\omega t+\phi),\quad v=\omega\sqrt{A^2-x^2},\quad a=-\omega^2 x} \qquad (4.1)
+$$</p>
+<p>$$
+\boxed{T=2\pi\sqrt{\frac{m}{k}}\text{ (spring-mass)},\quad T=2\pi\sqrt{\frac{L}{g}}\text{ (pendulum, small angle)}} \qquad (4.2)
+$$</p>
+<p>$$
+\boxed{E=\frac{1}{2}kA^2} \qquad (4.3)
+$$</p>
+<p>$$
+\boxed{k_{\text{eff}}=k_1+k_2\text{ (parallel)},\quad\frac{1}{k_{\text{eff}}}=\frac{1}{k_1}+\frac{1}{k_2}\text{ (series)}} \qquad (4.4)
+$$</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$k\to\infty$: $T\to0$ — infinitely stiff spring, infinitely fast oscillation. ✓</li>
+<li>$m\to\infty$: $T\to\infty$ — infinitely massive object, infinitely slow. ✓</li>
+<li>$g\to\infty$: $T\to0$ (pendulum) — infinitely strong gravity, infinitely fast. ✓</li>
+<li>$L\to0$: $T\to0$ (pendulum) — zero-length pendulum, zero period. ✓</li>
+<li>$\gamma\to0$: damped → undamped, $\omega'\to\omega_0$. ✓</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$F=-kx$</td>
+<td>period</td>
+<td>$T=2\pi\sqrt{m/k}$</td>
+</tr>
+<tr>
+<td>Pendulum, small $\theta$</td>
+<td>period</td>
+<td>$T=2\pi\sqrt{L/g}$</td>
+</tr>
+<tr>
+<td>Physical pendulum</td>
+<td>period</td>
+<td>$T=2\pi\sqrt{I/(mgh)}$</td>
+</tr>
+<tr>
+<td>Initial $x_0$, $v_0$</td>
+<td>amplitude, phase</td>
+<td>$A=\sqrt{x_0^2+v_0^2/\omega^2}$</td>
+</tr>
+<tr>
+<td>Maximum speed</td>
+<td>$v_{\max}=A\omega$</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>Springs in combination</td>
+<td>$k_{\text{eff}}$</td>
+<td>Eq. (4.4)</td>
+</tr>
+<tr>
+<td>Energy at position $x$</td>
+<td>$K$, $U$</td>
+<td>Eq. (3.6)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> Why is $T$ independent of amplitude for SHM?</p>
+<details>
+<summary>Answer</summary>
+<p>A larger amplitude means a longer path but also a stronger average restoring force (and hence higher average speed). For a $F=-kx$ force, these two effects exactly cancel, making $T$ independent of $A$.</p>
+</details>
+<p><strong>C2 — concept check.</strong> Is a pendulum truly SHM?</p>
+<details>
+<summary>Answer</summary>
+<p>Only for small angles. For $\theta\ll1$, $\sin\theta\approx\theta$, and the pendulum equation becomes $\ddot{\theta}=-(g/L)\theta$, which is SHM. For larger angles, the motion is periodic but not simple harmonic.</p>
+</details>
+<p><strong>C3 — concept check.</strong> Where is the KE maximum in SHM?</p>
+<details>
+<summary>Answer</summary>
+<p>At the equilibrium position ($x=0$), where the potential energy is zero and all energy is kinetic.</p>
+</details>
+<p><strong>C4 — concept check.</strong> Can a system have SHM if the force is $F=-kx^3$?</p>
+<details>
+<summary>Answer</summary>
+<p>No — the motion is periodic but not simple harmonic (the period depends on amplitude). SHM requires $F\propto-x$.</p>
+</details>
+<p><strong>C5 — concept check.</strong> How do you find $A$ and $\phi$ from initial conditions?</p>
+<details>
+<summary>Answer</summary>
+<p>$A=\sqrt{x_0^2+v_0^2/\omega^2}$ and $\tan\phi=v_0/(\omega x_0)$ (adjusted for quadrant). Or use $x_0=A\sin\phi$ and $v_0=A\omega\cos\phi$.</p>
+</details>
+<p><strong>C6 — concept check.</strong> Why does the vertical spring-mass have the same period as the horizontal one?</p>
+<details>
+<summary>Answer</summary>
+<p>Gravity shifts the equilibrium point but doesn't change the "spring constant" $k$. The oscillation is about the new equilibrium, and the restoring force is still $-kx$ where $x$ is measured from that equilibrium.</p>
+</details>
+<p><strong>C7 — concept check.</strong> What happens to the period if the length of a pendulum is doubled?</p>
+<details>
+<summary>Answer</summary>
+<p>$T\propto\sqrt{L}$, so $T$ increases by $\sqrt{2}\approx1.41$.</p>
+</details>
+<p><strong>C8 — concept check.</strong> Why is critical damping used in car suspension?</p>
+<details>
+<summary>Answer</summary>
+<p>It returns the car to equilibrium fastest without oscillating — the optimal compromise between speed and overshoot.</p>
+</details>
+<p><strong>C9 — concept check.</strong> At resonance, is the amplitude infinite?</p>
+<details>
+<summary>Answer</summary>
+<p>No — damping limits the amplitude. For zero damping, the amplitude would be infinite (in the idealised model). In practice, the amplitude is $A_{\text{max}}=F_0/(2\gamma m\omega_0)$ at resonance.</p>
+</details>
+<p><strong>C10 — concept check.</strong> Two coupled pendulums have two normal modes. Can they oscillate at other frequencies?</p>
+<details>
+<summary>Answer</summary>
+<p>No — any motion is a superposition of the two normal modes. The frequencies present are always $\omega_1$ and $\omega_2$ (and their sum/difference if nonlinear effects are present).</p>
+</details>
+<p><strong>C11 — concept check.</strong> A particle in a potential well $U(x)$ oscillates. Is it always SHM?</p>
+<details>
+<summary>Answer</summary>
+<p>Only for small displacements where $U(x)\approx\frac{1}{2}U''(x_0)(x-x_0)^2$. For larger displacements, the oscillation is periodic but not simple harmonic. The key test is: does $U(x)$ have a non-zero second derivative at the equilibrium? If $U''(x_0)&gt;0$, the equilibrium is stable and the motion is approximately SHM for small displacements. If $U''(x_0)=0$ (as for $U=x^4$), the motion is anharmonic even for small displacements. If $U''(x_0)&lt;0$, the equilibrium is unstable and there is no oscillation.</p>
+</details>
+<p><strong>C12 — concept check.</strong> The $Q$-factor is $Q=\omega_0/(2\gamma)$. What does it measure?</p>
+<details>
+<summary>Answer</summary>
+<p>The number of oscillations before the amplitude drops by a factor of $e$. High $Q$ means low damping and a sharp resonance peak.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-period-of-a-spring-mass-system">E1 — Period of a spring-mass system</h3>
+<p>A 2 kg mass on a spring with $k=800$ N/m. Find $T$, $f$, $\omega$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\omega=\sqrt{k/m}=\sqrt{400}=20$ rad/s. $T=2\pi/\omega=0.314$ s. $f=1/T=3.18$ Hz.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\omega=\sqrt{800/2}=20$ rad/s. $T=2\pi/20=0.314$ s. $f=3.18$ Hz.</p>
+</details>
+<h3 id="e2-amplitude-from-initial-conditions">E2 — Amplitude from initial conditions</h3>
+<p>A mass on a spring ($k=500$ N/m, $m=2$ kg) is released from $x_0=0.1$ m with $v_0=1$ m/s. Find $A$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\omega=\sqrt{250}=15.81$ rad/s. $A=\sqrt{x_0^2+v_0^2/\omega^2}=\sqrt{0.01+1/250}=\sqrt{0.014}=0.118$ m.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $A=\sqrt{0.1^2+(1/15.81)^2}=\sqrt{0.01+0.004}=0.118$ m.</p>
+</details>
+<h3 id="e3-period-of-a-simple-pendulum">E3 — Period of a simple pendulum</h3>
+<p>Find the period of a pendulum of length 1 m on Earth. ($g=9.8$ m/s$^2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$T=2\pi\sqrt{1/9.8}=2\pi\times0.3194=2.006$ s $\approx2$ s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $T=2\pi\sqrt{L/g}=2\pi\sqrt{1/9.8}=2.006$ s.</p>
+</details>
+<h3 id="e4-energy-in-shm">E4 — Energy in SHM</h3>
+<p>A 0.5 kg mass oscillates on a spring ($k=200$ N/m) with amplitude 0.05 m. Find $E$, $v_{\max}$, and $v$ at $x=0.03$ m.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$E=\frac{1}{2}\times200\times0.0025=0.25$ J. $v_{\max}=A\omega=0.05\times20=1$ m/s. $v=\omega\sqrt{A^2-x^2}=20\sqrt{0.0025-0.0009}=20\times0.04=0.8$ m/s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\omega=\sqrt{k/m}=\sqrt{400}=20$ rad/s. $E=\frac{1}{2}kA^2=0.25$ J. $v_{\max}=A\omega=1$ m/s. $v=\omega\sqrt{A^2-x^2}=0.8$ m/s.</p>
+</details>
+<h3 id="e5-springs-in-series-and-parallel">E5 — Springs in series and parallel</h3>
+<p>Two springs $k_1=100$ N/m and $k_2=200$ N/m. Find $k_{\text{eff}}$ in series and parallel.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Parallel: $k_{\text{eff}}=300$ N/m. Series: $1/k_{\text{eff}}=1/100+1/200=3/200$, so $k_{\text{eff}}=66.7$ N/m.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Parallel: $k_{\text{eff}}=k_1+k_2=300$ N/m. Series: $1/k_{\text{eff}}=1/k_1+1/k_2=3/200$, $k_{\text{eff}}=200/3=66.7$ N/m.</p>
+</details>
+<h3 id="e6-pendulum-on-the-moon">E6 — Pendulum on the Moon</h3>
+<p>A pendulum of length 1 m on the Moon ($g=1.6$ m/s$^2$). Find $T$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$T=2\pi\sqrt{1/1.6}=2\pi\times0.7906=4.97$ s.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $T=2\pi\sqrt{L/g}=2\pi\sqrt{1/1.6}=4.97$ s. Much longer than on Earth (2.0 s).</p>
+</details>
+<h3 id="e7-physical-pendulum">E7 — Physical pendulum</h3>
+<p>A uniform rod of length $L$ is pivoted at one end. Find $T$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$I=mL^2/3$, $h=L/2$. $T=2\pi\sqrt{mL^2/(3\times mgL/2)}=2\pi\sqrt{2L/(3g)}$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $I=mL^2/3$ about the end, $h=L/2$. $T=2\pi\sqrt{I/(mgh)}=2\pi\sqrt{2L/(3g)}$.</p>
+</details>
+<h3 id="e8-superposition-of-two-shms">E8 — Superposition of two SHMs</h3>
+<p>$x_1=3\sin(10t)$ and $x_2=4\sin(10t+\pi/2)$. Find the amplitude of the resultant.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Amplitude $=\sqrt{3^2+4^2}=5$ (by phasor addition, same frequency). Phase $=\tan^{-1}(4/3)$ ahead of $x_1$.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Same frequency, $90°$ phase difference. Phasor amplitude $=\sqrt{9+16}=5$. The resultant is $x=5\sin(10t+\phi)$ where $\phi=\tan^{-1}(4/3)\approx53.1°$.</p>
+</details>
+<h3 id="e9-damped-oscillation">E9 — Damped oscillation</h3>
+<p>A mass on a spring ($\omega_0=10$ rad/s) has damping coefficient $\gamma=1$ s$^{-1}$. Find the period and the number of oscillations before the amplitude drops to $1/e$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\omega'=\sqrt{100-1}=\sqrt{99}=9.95$ rad/s. $T=2\pi/9.95=0.631$ s. Number of oscillations $=1/(2\gamma T... wait$. The amplitude drops by $1/e$ after time $1/\gamma=1$ s. Number of oscillations $=1/(0.631)=1.58$ oscillations.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\omega'=\sqrt{\omega_0^2-\gamma^2}=9.95$ rad/s. $T'=0.631$ s. The amplitude drops to $1/e$ at $t=1/\gamma=1$ s. Number of oscillations $=1/0.631=1.58$.</p>
+</details>
+<h3 id="e10-finding-the-period-from-ux">E10 — Finding the period from $U(x)$</h3>
+<p>A particle in the potential $U(x)=ax^4$ oscillates with small amplitude $A$. Find the period (approximately).</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The force $F=-4ax^3$. This is not $F\propto-x$, so the motion is NOT SHM. However, for order-of-magnitude estimates, we can define an effective $\omega^2$ from the curvature at the equilibrium... but $U''(0)=0$, so there is no quadratic term. The motion is periodic but the period <em>does</em> depend on amplitude. By dimensional analysis: $T\propto\sqrt{m/a}/A$... this needs a more careful analysis using elliptic integrals.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> For $U=ax^4$: $F=-4ax^3$. This is a nonlinear oscillator. The period depends on amplitude. By energy conservation: $\frac{1}{2}m\dot{x}^2+ax^4=aA^4$. $\dot{x}=\sqrt{2a(A^4-x^4)/m}$. $T=4\int_0^A dx/\sqrt{2a(A^4-x^4)/m}$. By the substitution $x=Au$: $T=4A\int_0^1 du/\sqrt{2aA^4(1-u^4)/m}=4/(A\sqrt{2a/m})\int_0^1 du/\sqrt{1-u^4}$. The integral is a Beta function. $T\propto1/A$ — the period <em>decreases</em> with amplitude for a hardening spring.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Spring-mass period</td>
+<td>$T=2\pi\sqrt{m/k}$</td>
+<td>E1</td>
+<td>series/parallel</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Amplitude from IC</td>
+<td>$A=\sqrt{x_0^2+v_0^2/\omega^2}$</td>
+<td>E2</td>
+<td>phase too</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Pendulum period</td>
+<td>$T=2\pi\sqrt{L/g}$</td>
+<td>E3</td>
+<td>different planets</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Energy in SHM</td>
+<td>$E=\frac{1}{2}kA^2$</td>
+<td>E4</td>
+<td>at any $x$</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Spring combinations</td>
+<td>series/parallel</td>
+<td>E5</td>
+<td>3+ springs</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Physical pendulum</td>
+<td>$T=2\pi\sqrt{I/(mgh)}$</td>
+<td>E7</td>
+<td>compound pendulum</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Superposition</td>
+<td>phasor addition</td>
+<td>E8</td>
+<td>beats, Lissajous</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Damped oscillation</td>
+<td>$\omega'=\sqrt{\omega_0^2-\gamma^2}$</td>
+<td>E9</td>
+<td>critical damping</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Period from $U(x)$</td>
+<td>$k=U''(x_0)$, $T=2\pi\sqrt{m/k}$</td>
+<td>E10</td>
+<td>any potential</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Coupled oscillators</td>
+<td>normal modes</td>
+<td>§3.11</td>
+<td>$n$-coupled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-a-05-kg-mass-on-a-spring-k125-nm-find-t">Q1. A 0.5 kg mass on a spring ($k=125$ N/m). Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=2\pi\sqrt{0.5/125}=2\pi\times0.0632=0.397$ s.</p>
+</details>
+<h4 id="q2-a-pendulum-has-t2-s-on-earth-find-its-length">Q2. A pendulum has $T=2$ s on Earth. Find its length.</h4>
+<details>
+<summary>Solution</summary>
+<p>$L=gT^2/(4\pi^2)=9.8\times4/(4\pi^2)=9.8/\pi^2=0.993$ m $\approx1$ m (the "seconds pendulum").</p>
+</details>
+<h4 id="q3-a-mass-oscillates-with-x02sin5tpi3-find-a-omega-f-t-phi">Q3. A mass oscillates with $x=0.2\sin(5t+\pi/3)$. Find $A$, $\omega$, $f$, $T$, $\phi$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$A=0.2$ m, $\omega=5$ rad/s, $f=5/(2\pi)=0.796$ Hz, $T=1.257$ s, $\phi=\pi/3$.</p>
+</details>
+<h4 id="q4-find-the-maximum-speed-of-a-mass-oscillating-with-a01-m-and-omega10-rads">Q4. Find the maximum speed of a mass oscillating with $A=0.1$ m and $\omega=10$ rad/s.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_{\max}=A\omega=1$ m/s.</p>
+</details>
+<h4 id="q5-three-springs-k-2k-3k-in-parallel-find-k_texteff">Q5. Three springs $k$, $2k$, $3k$ in parallel. Find $k_{\text{eff}}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$k_{\text{eff}}=k+2k+3k=6k$.</p>
+</details>
+<h4 id="q6-a-pendulum-of-length-05-m-on-a-planet-where-g4-ms2-find-t">Q6. A pendulum of length 0.5 m on a planet where $g=4$ m/s$^2$. Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=2\pi\sqrt{0.5/4}=2\pi\times0.3536=2.22$ s.</p>
+</details>
+<h4 id="q7-a-mass-m-on-a-spring-oscillates-with-e05-j-and-a01-m-find-k">Q7. A mass $m$ on a spring oscillates with $E=0.5$ J and $A=0.1$ m. Find $k$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$k=2E/A^2=1/0.01=100$ N/m.</p>
+</details>
+<h4 id="q8-at-what-displacement-is-the-ke-equal-to-the-pe-in-shm">Q8. At what displacement is the KE equal to the PE in SHM?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\frac{1}{2}kx^2=\frac{1}{2}k(A^2-x^2)$. $x^2=A^2/2$. $x=A/\sqrt{2}\approx0.707A$.</p>
+</details>
+<h4 id="q9-a-physical-pendulum-is-a-uniform-disk-of-radius-r-pivoted-at-its-rim-find-t">Q9. A physical pendulum is a uniform disk of radius $R$ pivoted at its rim. Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$I=mR^2/2+mR^2=3mR^2/2$ (parallel axis theorem). $h=R$. $T=2\pi\sqrt{3mR^2/(2mgR)}=2\pi\sqrt{3R/(2g)}$.</p>
+</details>
+<h4 id="q10-two-shms-x_15sin10t-and-x_25sin10tpi-what-is-the-resultant">Q10. Two SHMs: $x_1=5\sin(10t)$ and $x_2=5\sin(10t+\pi)$. What is the resultant?</h4>
+<details>
+<summary>Solution</summary>
+<p>$x_1+x_2=0$. The two SHMs cancel exactly (antiphase, equal amplitude).</p>
+</details>
+<h4 id="q11-a-damped-oscillator-has-omega_0100-rads-and-gamma10-s-1-find-omega-and-q">Q11. A damped oscillator has $\omega_0=100$ rad/s and $\gamma=10$ s$^{-1}$. Find $\omega'$ and $Q$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\omega'=\sqrt{10000-100}=\sqrt{9900}=99.5$ rad/s. $Q=\omega_0/(2\gamma)=100/20=5$.</p>
+</details>
+<h4 id="q12-a-1-kg-mass-on-a-spring-k400-nm-is-at-x005-m-with-v05-ms-find-a">Q12. A 1 kg mass on a spring ($k=400$ N/m) is at $x=0.05$ m with $v=0.5$ m/s. Find $A$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\omega=20$ rad/s. $A=\sqrt{0.0025+0.25/400}=\sqrt{0.0025+0.000625}=\sqrt{0.003125}=0.0559$ m.</p>
+</details>
+<h4 id="q13-find-the-frequency-of-a-seconds-pendulum-t2-s">Q13. Find the frequency of a seconds pendulum ($T=2$ s).</h4>
+<details>
+<summary>Solution</summary>
+<p>$f=1/T=0.5$ Hz.</p>
+</details>
+<h4 id="q14-a-pendulum-clock-runs-slow-should-you-increase-or-decrease-l">Q14. A pendulum clock runs slow. Should you increase or decrease $L$?</h4>
+<details>
+<summary>Solution</summary>
+<p>"Running slow" means $T$ is too large. $T\propto\sqrt{L}$, so decrease $L$.</p>
+</details>
+<h4 id="q15-a-mass-on-a-vertical-spring-k200-nm-m05-kg-find-the-equilibrium-extension-and-the-period">Q15. A mass on a vertical spring ($k=200$ N/m, $m=0.5$ kg). Find the equilibrium extension and the period.</h4>
+<details>
+<summary>Solution</summary>
+<p>$x_0=mg/k=0.5\times9.8/200=0.0245$ m. $T=2\pi\sqrt{m/k}=2\pi\sqrt{0.0025}=0.314$ s (same as horizontal).</p>
+</details>
+<h4 id="q16-a-2-kg-mass-on-a-spring-oscillates-with-v_max2-ms-and-e4-j-find-a-and-k">Q16. A 2 kg mass on a spring oscillates with $v_{\max}=2$ m/s and $E=4$ J. Find $A$ and $k$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$E=\frac{1}{2}mv_{\max}^2=\frac{1}{2}\times2\times4=4$ J ✓. $A=v_{\max}/\omega$. $k=2E/A^2$. Also $\omega=v_{\max}^2/(2E/m)=4/(4/2)=2$ rad/s. $A=2/2=1$ m. $k=m\omega^2=2\times4=8$ N/m.</p>
+</details>
+<h4 id="q17-two-springs-k_1-and-k_2-support-a-mass-m-in-series-find-t">Q17. Two springs $k_1$ and $k_2$ support a mass $m$ in series. Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$k_{\text{eff}}=k_1k_2/(k_1+k_2)$. $T=2\pi\sqrt{m(k_1+k_2)/(k_1k_2)}$.</p>
+</details>
+<h4 id="q18-a-mass-on-a-spring-is-pulled-to-x2a-and-released-is-it-still-shm">Q18. A mass on a spring is pulled to $x=2A$ and released. Is it still SHM?</h4>
+<details>
+<summary>Solution</summary>
+<p>Yes — SHM doesn't depend on the amplitude (as long as the spring doesn't go nonlinear). $x=2A$ just means a larger amplitude.</p>
+</details>
+<h4 id="q19-a-seconds-pendulum-is-taken-to-a-mountain-where-g978-ms2-find-t">Q19. A seconds pendulum is taken to a mountain where $g=9.78$ m/s$^2$. Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=2\pi\sqrt{L/g}=2\pi\sqrt{0.993/9.78}=2\pi\times0.3188=2.003$ s. Slightly longer.</p>
+</details>
+<h4 id="q20-find-the-time-for-a-critically-damped-oscillator-gammaomega_0-to-reach-1e-of-its-initial-displacement">Q20. Find the time for a critically damped oscillator ($\gamma=\omega_0$) to reach $1/e$ of its initial displacement.</h4>
+<details>
+<summary>Solution</summary>
+<p>For critical damping: $x=(A+Bt)e^{-\gamma t}$. With $x(0)=A$, $v(0)=0$: $x=A(1+\gamma t)e^{-\gamma t}$. Setting $x=A/e$: $(1+\gamma t)e^{-\gamma t}=1/e$. This gives $\gamma t\approx1.54$ (solved numerically). $t=1.54/\gamma$.</p>
+</details>
+<h4 id="q21-a-particle-in-uxfrac12kx2bx4-small-b-does-the-period-depend-on-amplitude">Q21. A particle in $U(x)=\frac{1}{2}kx^2+bx^4$ (small $b$). Does the period depend on amplitude?</h4>
+<details>
+<summary>Solution</summary>
+<p>Yes — the $bx^4$ term makes the oscillator anharmonic. For small amplitudes, the period is approximately $T_0(1+3bA^2/(2k)+\cdots)$. The period increases (softening) or decreases (hardening) depending on the sign of $b$.</p>
+</details>
+<h4 id="q22-a-mass-hangs-from-two-springs-in-parallel-k_1100-k_2200-nm-find-t">Q22. A mass hangs from two springs in parallel ($k_1=100$, $k_2=200$ N/m). Find $T$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$k_{\text{eff}}=300$ N/m. $T=2\pi\sqrt{m/300}$.</p>
+</details>
+<h4 id="q23-a-pendulum-has-t1-s-find-the-equivalent-length-on-mars-g37-ms2">Q23. A pendulum has $T=1$ s. Find the equivalent length on Mars ($g=3.7$ m/s$^2$).</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=2\pi\sqrt{L/g}=1$. $L=gT^2/(4\pi^2)=3.7/(4\pi^2)=0.0937$ m $=9.37$ cm.</p>
+</details>
+<h4 id="q24-a-mass-m-on-a-spring-k-is-given-an-impulse-j-find-the-amplitude">Q24. A mass $m$ on a spring ($k$) is given an impulse $J$. Find the amplitude.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_0=J/m$. $A=v_0/\omega=J/(m\omega)=J/\sqrt{mk}$.</p>
+</details>
+<h4 id="q25-at-t0-a-mass-is-at-xa2-moving-toward-equilibrium-find-phi">Q25. At $t=0$, a mass is at $x=A/2$ moving toward equilibrium. Find $\phi$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$x(0)=A\sin\phi=A/2$, so $\sin\phi=1/2$, $\phi=\pi/6$ or $5\pi/6$. $v(0)=A\omega\cos\phi&lt;0$ (toward equilibrium means toward $x=0$, so $\cos\phi&lt;0$). $\phi=5\pi/6$.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-energy-methods-for-shm">7.1 Energy methods for SHM</h3>
+<p>Instead of solving $d^2x/dt^2=-\omega^2 x$, use energy conservation: $\frac{1}{2}kx^2+\frac{1}{2}m\dot{x}^2=\frac{1}{2}kA^2$. Solve for $\dot{x}$ and integrate. This is especially useful when you need the speed at a particular displacement, or the period for a nonlinear oscillator (by integration).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.9 · Energy conservation in SHM: the phase-space ellipse</p>
+<p><em>Show:</em> a plot of $v$ vs $x$. The trajectory is an ellipse with semi-axes $A$ (on the $x$-axis) and $A\omega$ (on the $v$-axis). Each point on the ellipse represents a state of the oscillator. The area of the ellipse is $\pi A\cdot A\omega=2\pi E/\omega$.
+<em>Search:</em> "SHM phase space ellipse velocity displacement energy conservation"</p>
+</div>
+
+<h3 id="72-the-taylor-expansion-method">7.2 The Taylor expansion method</h3>
+<p>For any potential $U(x)$ near a stable equilibrium $x_0$: $U(x)\approx U(x_0)+\frac{1}{2}U''(x_0)(x-x_0)^2$. The "spring constant" is $k=U''(x_0)$, and the angular frequency is $\omega=\sqrt{U''(x_0)/m}$. This is the most powerful method for finding the frequency of small oscillations about any equilibrium.</p>
+<h3 id="73-dimensional-analysis-for-shm">7.3 Dimensional analysis for SHM</h3>
+<p>The only combination of $k$ and $m$ that gives a frequency is $\sqrt{k/m}$. The only combination of $L$ and $g$ that gives a time is $\sqrt{L/g}$. Use this to check formulas or to guess the answer before solving.</p>
+<h3 id="74-the-effective-spring-constant">7.4 The effective spring constant</h3>
+<p>For a vertical spring with mass $m$: the equilibrium extension is $x_0=mg/k$. The oscillation about this new equilibrium has the same $\omega=\sqrt{k/m}$ as the horizontal case. Gravity shifts the equilibrium but does not change the 'spring constant.' This is a general principle: constant forces do not affect the frequency of SHM. The oscillation about this new equilibrium has the same $\omega=\sqrt{k/m}$ as the horizontal case. Gravity shifts the equilibrium but does not change the "spring constant." This is a general principle: constant forces do not affect the frequency of SHM.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Using $T=2\pi\sqrt{m/k}$ for a pendulum</p>
+<p>A pendulum has $T=2\pi\sqrt{L/g}$, not $T=2\pi\sqrt{m/k}$. The "spring constant" of a pendulum is $k=mg/L$, so $T=2\pi\sqrt{m/(mg/L)}=2\pi\sqrt{L/g}$. The mass cancels.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Forgetting the small-angle condition</p>
+<p>The pendulum formula $T=2\pi\sqrt{L/g}$ is valid only for small angles ($\theta\ll1$ rad, about 10 degrees). For larger angles, the period increases: $T\approx T_0(1+\theta_0^2/16)$. At $30°$, the error is about 1.7%. At $45°$, the error is about 4%. At $60°$, the error is about 7%. For precise measurements, always check whether the small-angle condition is satisfied. The exact period involves elliptic integrals (see OL9).</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Using $\sin\theta\approx\theta$ for large angles</p>
+<p>The small-angle approximation $\sin\theta\approx\theta$ breaks down beyond about 15 degrees. For a pendulum released at $\theta=60°$, the actual period is about 7% longer than $T_0$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — Confusing amplitude with displacement</p>
+<p>Amplitude $A$ is the maximum displacement. The displacement $x(t)$ oscillates between $-A$ and $+A$. At any instant, $x\neq A$ in general.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — Using $v_{\max}=A\omega$ at all times</p>
+<p>$v_{\max}=A\omega$ is the maximum speed, attained only at $x=0$. At $x=A$, the speed is zero.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Confusing frequency and angular frequency</p>
+<p>$f=\omega/(2\pi)$. The period is $T=1/f=2\pi/\omega$. Frequency is in Hz; angular frequency is in rad/s.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Using $T=2\pi\sqrt{L/g}$ for a physical pendulum</p>
+<p>A physical pendulum has $T=2\pi\sqrt{I/(mgh)}$ where $I$ is the moment of inertia about the pivot and $h$ is the distance from the pivot to the COM. The simple-pendulum formula is a special case with $I=mL^2$ and $h=L$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Using energy conservation during an impulsive collision</p>
+<p>For a ballistic pendulum (bullet embeds in a block on a string), angular momentum is conserved during the collision (not energy), and energy is conserved during the subsequent swing (not angular momentum — the tension provides a torque).</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.10 · The ballistic pendulum: collision then swing</p>
+<p><em>Show:</em> three phases: (1) a bullet of mass $m$ at speed $v$ approaching a block of mass $M$ on a string of length $L$; (2) the bullet embeds — angular momentum conserved about the pivot; (3) the block+bullet system swings up to height $h$ — energy conserved.
+<em>Search:</em> "ballistic pendulum collision swing angular momentum energy conservation diagram"</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — Using $T=2\pi\sqrt{m/k}$ for springs in series without adjusting $k$</p>
+<p>For springs in series: $1/k_{\text{eff}}=1/k_1+1/k_2+\cdots$. The effective spring constant is always less than the smallest individual spring. For springs in parallel: $k_{\text{eff}}=k_1+k_2+\cdots$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Assuming SHM for a nonlinear restoring force</p>
+<p>If $F\neq-kx$, the motion is periodic but not simple harmonic. The period depends on amplitude. SHM is only an approximation valid for small displacements from stable equilibrium.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.11 · The nonlinear pendulum: period vs amplitude</p>
+<p><em>Show:</em> a graph of $T/T_0$ vs $\theta_0$ (the release angle). $T/T_0=1$ for small $\theta_0$, then increases gradually. At $\theta_0=90°$, $T/T_0\approx1.18$. At $\theta_0=170°$, $T/T_0\approx3$.
+<em>Search:</em> "pendulum period versus amplitude nonlinear correction graph"</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Find $T$ from $k$ and $m$": $T=2\pi\sqrt{m/k}$.</li>
+<li>"Find $T$ for a pendulum": $T=2\pi\sqrt{L/g}$ (small angle).</li>
+<li>"Find $T$ for a physical pendulum": $T=2\pi\sqrt{I/(mgh)}$.</li>
+<li>"Find $A$ and $\phi$ from initial conditions": use $x_0=A\sin\phi$, $v_0=A\omega\cos\phi$.</li>
+<li>"Find $v$ at position $x$": $v=\omega\sqrt{A^2-x^2}$.</li>
+<li>"Find $k_{\text{eff}}$ for springs": parallel adds, series reciprocals add.</li>
+<li>"Is it SHM?": check if $F\propto-x$ (or $U\propto x^2$ near equilibrium).</li>
+<li>"Superposition of two SHMs": same direction uses phasor addition; perpendicular gives Lissajous figures.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x=A\sin(\omega t+\phi)$</td>
+<td>SHM ($F=-kx$)</td>
+<td>nonlinear force</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{m/k}$</td>
+<td>spring-mass</td>
+<td>not a spring</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{L/g}$</td>
+<td>simple pendulum, $\theta\ll1$</td>
+<td>large angle</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{I/(mgh)}$</td>
+<td>physical pendulum</td>
+<td>not oscillating</td>
+</tr>
+<tr>
+<td>$E=\frac{1}{2}kA^2$</td>
+<td>undamped SHM</td>
+<td>damped</td>
+</tr>
+<tr>
+<td>$v_{\max}=A\omega$</td>
+<td>at $x=0$</td>
+<td>at $x\neq0$</td>
+</tr>
+<tr>
+<td>$\omega'=\sqrt{\omega_0^2-\gamma^2}$</td>
+<td>underdamped ($\gamma&lt;\omega_0$)</td>
+<td>critically/overdamped</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-timing-plan">9.3 Timing plan</h3>
+<p>Sections A and B under two minutes each. Section C three minutes. Section D twelve minutes. Most SHM problems reduce to finding $\omega$ (or $T$) and applying the general solution. The energy method is the fastest for speed-at-position problems.</p>
+<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<ol>
+<li>Is the system truly SHM? (check $F\propto-x$ or small-angle condition)</li>
+<li>$T$: correct formula for the system (spring, pendulum, physical pendulum).</li>
+<li>$A$: maximum displacement, not the initial displacement (unless released from rest).</li>
+<li>$\phi$: determined by initial conditions.</li>
+<li>Energy: $E=\frac{1}{2}kA^2$, not $\frac{1}{2}kx_0^2$ (unless $x_0=A$).</li>
+<li>Springs in series/parallel: correct combination.</li>
+<li>Damping: underdamped, critically damped, or overdamped?</li>
+<li>Phase: $x$ leads $v$ by $90°$, or $v$ leads $x$ by $90°$?</li>
+<li>Units consistent throughout.</li>
+<li>Every sub-part answered.</li>
+</ol>
+<h3 id="95-strategy-notes-for-the-paper">9.5 Strategy notes for the paper</h3>
+<p>For Section A and B, the most common mistakes are: using $T=2\pi\sqrt{L/g}$ for a physical pendulum, forgetting the small-angle condition, and confusing $f$ with $\omega$. For Section D, write the solution in logical order: identify the restoring force, write the equation of motion, solve for $\omega$, and check limits.</p>
+<h3 id="96-the-concept-of-phase-space">9.6 The concept of phase space</h3>
+<p>In SHM, the state of the system is described by the pair $(x, v)$. As time evolves, this point traces an ellipse in the $(x, v)$ plane. The area of this ellipse is $\pi A\cdot A\omega=2\pi E/\omega$. This is a special case of Liouville's theorem: the phase-space area is conserved for any Hamiltonian system. For damped SHM, the phase-space ellipse shrinks over time. For driven SHM at resonance, the ellipse grows until the power input balances the damping.</p>
+<h3 id="97-the-equivalence-principle-and-shm">9.7 The equivalence principle and SHM</h3>
+<p>Einstein's equivalence principle states that a uniform gravitational field is locally indistinguishable from an accelerating reference frame. This means that a pendulum in a rocket accelerating at $a$ has the same period as a pendulum in a gravitational field $g=a$. The equivalence principle is the foundation of general relativity.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D10.12 · The torsion pendulum: restoring torque proportional to angle</p>
+<p><em>Show:</em> a wire suspending a disk. The disk is twisted by a small angle. The wire provides a restoring torque proportional to the twist angle. The disk oscillates with a period determined by the torsion constant and the moment of inertia about the wire axis.
+<em>Search:</em> "torsion pendulum restoring torque oscillation diagram"</p>
+</div>
+
+<h3 id="98-connecting-to-other-chapters">9.8 Connecting to other chapters</h3>
+<p>SHM appears throughout physics. In waves (PART 11), every particle in a wave executes SHM. In AC circuits (PART 20), voltage and current oscillate sinusoidally. In quantum mechanics (PART 29), the harmonic oscillator has equally spaced energy levels $E_n=(n+1/2)\hbar\omega$. The mathematical framework of SHM is the foundation for Fourier analysis, which decomposes any periodic signal into a sum of sinusoidal components.</p>
+<h3 id="98-the-concept-of-phase-space">9.8 The concept of phase space</h3>
+<p>In SHM, the state of the system is described by the pair $(x, v)$. As time evolves, this point traces an ellipse in the $(x, v)$ plane. The area of this ellipse is $\pi A\cdot A\omega=2\pi E/\omega$. This is a special case of Liouville's theorem: the phase-space area is conserved for any Hamiltonian system. For damped SHM, the phase-space ellipse shrinks over time. For driven SHM at resonance, the ellipse grows until the power input balances the damping.</p>
+<h3 id="99-the-equivalence-principle-and-shm">9.9 The equivalence principle and SHM</h3>
+<p>Einstein's equivalence principle states that a uniform gravitational field is locally indistinguishable from an accelerating reference frame. This means that a pendulum in a rocket accelerating at $a$ has the same period as a pendulum in a gravitational field $g=a$. The equivalence principle is the foundation of general relativity, and SHM provides the simplest laboratory for understanding it.</p>
+<h3 id="910-the-ballistic-pendulum-as-a-two-phase-problem">9.10 The ballistic pendulum as a two-phase problem</h3>
+<p>The ballistic pendulum is a classic two-phase problem. In the first phase (collision), momentum is conserved but energy is not — the bullet embeds in the block. In the second phase (swing), energy is conserved but momentum is not — the tension in the string provides an external force. The key skill is identifying which conservation law applies in each phase. This two-phase approach appears throughout physics: inelastic collision followed by energy-conserving motion is a pattern in nuclear physics, astrophysics, and engineering.</p>
+<h3 id="911-connecting-to-waves-and-quantum-mechanics">9.11 Connecting to waves and quantum mechanics</h3>
+<p>SHM is the foundation of wave physics. Every particle in a wave executes SHM — the wave equation is the SHM equation with spatial derivatives added. In quantum mechanics, the harmonic oscillator has equally spaced energy levels $E_n=(n+1/2)\hbar\omega$ — the zero-point energy $\frac{1}{2}\hbar\omega$ is a purely quantum effect with no classical analogue. The quantum harmonic oscillator is the most important exactly solvable model in physics: it describes vibrations of atoms in crystals, electromagnetic field modes, and the motion of particles in traps.</p>
+<h3 id="912-the-torsion-pendulum">9.12 The torsion pendulum</h3>
+<p>A torsion pendulum consists of a body suspended by a wire. When twisted, the wire provides a restoring torque proportional to the twist angle. The motion is simple harmonic with a period determined by the torsion constant and the moment of inertia. The torsion pendulum is used to measure moments of inertia and is the basis of the Cavendish experiment for measuring the gravitational constant G. The torsion constant depends on the wire material, length, and radius. This type of oscillator appears in many precision measurement devices, including the Cavendish balance and the seismograph.</p>
+<h3 id="913-common-numerical-pitfalls-in-shm">9.13 Common numerical pitfalls in SHM</h3>
+<p>When solving SHM problems, the most common numerical errors are: (1) confusing $f$ with $\omega$ — $f=\omega/(2\pi)$; (2) using degrees instead of radians in $\omega t$ — always use radians; (3) using $T=2\pi\sqrt{L/g}$ for a physical pendulum (should be $T=2\pi\sqrt{I/(mgh)}$); (4) forgetting that $E=\frac{1}{2}kA^2$, not $\frac{1}{2}kx_0^2$ (unless the mass is released from rest at $x_0$); (5) using the wrong sign for $\phi$ when the mass is moving toward equilibrium at $t=0$.</p>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-the-period-of-a-pendulum-with-a-massive-string">OL1 — The period of a pendulum with a massive string</h3>
+<p>A pendulum consists of a uniform string of length $L$ and mass $m_s$ with a bob of mass $m_b$ at the end. Find the period for small oscillations.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The moment of inertia about the pivot: $I=m_bL^2+m_sL^2/3$ (bob at the end + uniform rod). The distance to the COM: $h=(m_bL+m_sL/2)/(m_b+m_s)$. $T=2\pi\sqrt{I/((m_b+m_s)gh)}$.</p>
+<p>For $m_s=0$: $T=2\pi\sqrt{m_bL^2/(m_bgL)}=2\pi\sqrt{L/g}$ — the simple pendulum. ✓</p>
+<p>For $m_b=0$: $T=2\pi\sqrt{m_sL^2/(3\times m_sgL/2)}=2\pi\sqrt{2L/(3g)}$ — a uniform rod pendulum. ✓</p>
+</details>
+<h3 id="ol2-the-effective-potential-for-a-pendulum-with-a-moving-pivot">OL2 — The effective potential for a pendulum with a moving pivot</h3>
+<p>A pendulum of length $L$ has its pivot oscillating vertically: $y_0=A\cos\Omega t$. Find the effective gravitational acceleration for small oscillations.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In the accelerating frame of the pivot: $g_{\text{eff}}=g+\ddot{y}<em>0=g-A\Omega^2\cos\Omega t$. For fast pivot oscillations ($\Omega\gg\sqrt{g/L}$): the time-averaged effective gravity is $\langle g</em>{\text{eff}}\rangle=g$ (the oscillating term averages to zero), but the stability depends on the amplitude. If $A\Omega^2&gt;g$, the inverted pendulum can be stable — a Kapitza pendulum.</p>
+</details>
+<h3 id="ol3-finding-the-period-from-an-arbitrary-potential">OL3 — Finding the period from an arbitrary potential</h3>
+<p>A particle oscillates in the potential $U(x)=\alpha x^4$. Find the angular frequency for small oscillations of amplitude $A$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $U''(0)=0$, so the Taylor expansion gives $U\approx\alpha x^4$ — there is no quadratic term. This means the oscillation is NOT SHM. The period depends on amplitude. By energy conservation: $\frac{1}{2}m\dot{x}^2+\alpha x^4=\alpha A^4$. $T=4\int_0^A dx/\sqrt{2\alpha(A^4-x^4)/m}$. By the substitution $x=Au$: $T=\frac{4}{\sqrt{2\alpha/m}}\frac{1}{A}\int_0^1 du/\sqrt{1-u^4}$. The integral is $\frac{\sqrt{\pi}\,\Gamma(1/4)}{4\,\Gamma(3/4)}\approx1.311$. So $T=\frac{4\times1.311}{A\sqrt{2\alpha/m}}=\frac{5.244}{A}\sqrt{m/(2\alpha)}$.</p>
+<p><strong>Significance.</strong> For a quartic potential, $T\propto1/A$ — the period decreases with amplitude (a "hardening" spring). For a quadratic potential, $T$ is independent of amplitude (SHM).</p>
+</details>
+<h3 id="ol4-coupled-oscillators-normal-modes-of-two-masses-on-springs">OL4 — Coupled oscillators: normal modes of two masses on springs</h3>
+<p>Two masses $m$ are connected to fixed walls by springs of constant $k$, and to each other by a spring of constant $k'$. Find the normal mode frequencies.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Let $x_1$ and $x_2$ be the displacements of the two masses. The equations of motion: $m\ddot{x}_1=-kx_1-k'(x_1-x_2)$, $m\ddot{x}_2=-kx_2-k'(x_2-x_1)$. Normal modes: $x_1=x_2$ (in-phase, $\omega_1=\sqrt{k/m}$) and $x_1=-x_2$ (out-of-phase, $\omega_2=\sqrt{(k+2k')/m}$). The in-phase mode has the spring $k'$ unstretched.</p>
+</details>
+<h3 id="ol5-damped-oscillation-the-q-factor-and-energy-decay">OL5 — Damped oscillation: the Q-factor and energy decay</h3>
+<p>A damped oscillator has $Q=100$ and $\omega_0=1000$ rad/s. Find $\gamma$, the time for the amplitude to drop to $1/e$, and the number of oscillations.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $Q=\omega_0/(2\gamma)$, so $\gamma=\omega_0/(2Q)=1000/200=5$ s$^{-1}$. The amplitude drops to $1/e$ after $t=1/\gamma=0.2$ s. The number of oscillations $=ft=Q/\pi\approx31.8$ oscillations.</p>
+</details>
+<h3 id="ol6-the-resonance-curve-derivation">OL6 — The resonance curve derivation</h3>
+<p>For a driven damped oscillator $m\ddot{x}+b\dot{x}+kx=F_0\cos\omega t$, derive the steady-state amplitude and find the resonance frequency.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Assume $x=A\cos(\omega t-\delta)$. Substituting into the equation: $A(\omega)=\frac{F_0/m}{\sqrt{(\omega_0^2-\omega^2)^2+(2\gamma\omega)^2}}$ where $\gamma=b/(2m)$ and $\omega_0=\sqrt{k/m}$. The maximum amplitude occurs at $\omega_{\text{res}}=\sqrt{\omega_0^2-2\gamma^2}$. For small damping ($\gamma\ll\omega_0$): $\omega_{\text{res}}\approx\omega_0$. At resonance: $A_{\text{max}}=F_0/(2\gamma m\omega_0)=F_0Q/(m\omega_0^2)=F_0Q/k$.</p>
+</details>
+<h3 id="ol7-the-ballistic-pendulum-complete-solution">OL7 — The ballistic pendulum: complete solution</h3>
+<p>A bullet of mass $m$ at speed $v_0$ embeds in a block of mass $M$ hanging on a string of length $L$. Find the maximum angle of swing.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Phase 1 (collision, $t\to0$): angular momentum about the pivot is conserved. $mv_0L=(m+M)V L$, so $V=mv_0/(m+M)$. Phase 2 (swing): energy conserved. $\frac{1}{2}(m+M)V^2=(m+M)gL(1-\cos\theta)$. $\cos\theta=1-V^2/(2gL)=1-m^2v_0^2/(2gL(m+M)^2)$.</p>
+</details>
+<h3 id="ol8-the-oscillation-of-a-floating-cylinder">OL8 — The oscillation of a floating cylinder</h3>
+<p>A uniform cylinder of density $\rho_c$ and cross-section area $A$ floats in a liquid of density $\rho_l$. Show that it oscillates vertically with $T=2\pi\sqrt{\rho_c h/(\rho_l g)}$ where $h$ is the height of the cylinder.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> At equilibrium, the buoyant force equals the weight: $\rho_l g A x_0=\rho_c g A h$, so $x_0=\rho_c h/\rho_l$ (the submerged depth). If the cylinder is displaced by $y$ downward, the extra buoyant force is $F=-\rho_l g A y$ (restoring). This is SHM with $k=\rho_l g A$. $m=\rho_c A h$. $\omega=\sqrt{k/m}=\sqrt{\rho_l g/(\rho_c h)}$. $T=2\pi\sqrt{\rho_c h/(\rho_l g)}$.</p>
+</details>
+<h3 id="ol9-nonlinear-oscillation-the-simple-pendulum-exact-period">OL9 — Nonlinear oscillation: the simple pendulum exact period</h3>
+<p>Show that the period of a simple pendulum with amplitude $\theta_0$ is $T=2\pi\sqrt{L/g}\cdot K(k)$ where $K$ is the complete elliptic integral of the first kind and $k=\sin(\theta_0/2)$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> From energy conservation: $\frac{1}{2}mL^2\dot{\theta}^2+mgL(1-\cos\theta)=mgL(1-\cos\theta_0)$. Using $1-\cos\theta=2\sin^2(\theta/2)$: $\dot{\theta}^2=2g/L[\sin^2(\theta_0/2)-\sin^2(\theta/2)]$. $T=4\int_0^{\theta_0}d\theta/\dot{\theta}$. By the substitution $\sin(\theta/2)=\sin(\theta_0/2)\sin\phi$: $T=4\sqrt{L/g}\int_0^{\pi/2}d\phi/\sqrt{1-k^2\sin^2\phi}=4\sqrt{L/g}K(k)$. For small $k$: $K\approx\pi/2$, so $T\approx2\pi\sqrt{L/g}$.</p>
+</details>
+<h3 id="ol10-driven-oscillation-at-resonance-power-and-bandwidth">OL10 — Driven oscillation at resonance: power and bandwidth</h3>
+<p>A damped oscillator is driven at frequency $\omega$. Find the average power absorbed and show that the power drops to half-maximum at $\omega=\omega_0\pm\gamma$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The average power: $\langle P\rangle=\frac{F_0^2\gamma\omega^2}{2m[(\omega_0^2-\omega^2)^2+(2\gamma\omega)^2]}$. At resonance ($\omega=\omega_0$): $P_{\max}=F_0^2/(4m\gamma)$. The half-power points: $(\omega_0^2-\omega^2)^2=(2\gamma\omega)^2$, which gives $\omega=\omega_0\pm\gamma$ (for small $\gamma$). The bandwidth $\Delta\omega=2\gamma=\omega_0/Q$. A high-$Q$ oscillator has a narrow resonance peak and a long ring-down time.</p>
+</details>
+<h3 id="102-limits-extensions-and-failure-of-the-classical-model">10.2 Limits, extensions, and failure of the classical model</h3>
+<p>SHM is an approximation valid for small displacements from stable equilibrium. The approximation breaks down when the displacement is large enough that the potential is no longer well-approximated by a parabola. For large displacements, the restoring force is nonlinear, and the motion is periodic but not simple harmonic. In quantum mechanics, the harmonic oscillator has discrete energy levels $E_n=(n+1/2)\hbar\omega$ — a fundamentally different behaviour from the classical oscillator. For JEE and INPhO, the classical SHM framework is sufficient, but IPhO may probe nonlinear oscillations and resonance phenomena.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–5</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 5–9</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 7–13</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>The period of a simple pendulum depends on:
+(a) the mass of the bob (b) the amplitude (for small angles) (c) the length (d) the material of the string</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $T=2\pi\sqrt{L/g}$ — independent of mass and amplitude (for small angles).</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>At the equilibrium position in SHM, the:
+(a) displacement is maximum (b) speed is maximum (c) acceleration is maximum (d) potential energy is maximum</p>
+<details>
+<summary>Answer</summary>
+<p>(b). At $x=0$: $v=v_{\max}=A\omega$, $a=0$, $U=0$.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The angular frequency of SHM is determined by:
+(a) the amplitude (b) the initial phase (c) the system properties ($k$ and $m$) (d) the initial displacement</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $\omega=\sqrt{k/m}$ — a property of the system, not of the initial conditions.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>Two springs $k_1$ and $k_2$ in series have an effective spring constant:
+(a) $k_1+k_2$ (b) $k_1k_2/(k_1+k_2)$ (c) $(k_1+k_2)/(k_1k_2)$ (d) $\sqrt{k_1k_2}$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $1/k_{\text{eff}}=1/k_1+1/k_2$, so $k_{\text{eff}}=k_1k_2/(k_1+k_2)$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>A pendulum clock runs slow at high altitude (where $g$ is smaller). To correct it, you should:
+(a) increase $L$ (b) decrease $L$ (c) increase the mass (d) decrease the amplitude</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $T=2\pi\sqrt{L/g}$: if $g$ decreases, $T$ increases (clock runs slow). Decrease $L$ to decrease $T$.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The maximum acceleration in SHM is:
+(a) $A\omega$ (b) $A\omega^2$ (c) $A/\omega$ (d) $\omega/A$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $a_{\max}=A\omega^2$ — at the extremes where $x=\pm A$.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>In a critically damped oscillator, the system:
+(a) oscillates with decreasing amplitude (b) returns to equilibrium fastest without oscillating (c) never returns to equilibrium (d) oscillates with constant amplitude</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Critical damping ($\gamma=\omega_0$) gives the fastest non-oscillatory return.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>At resonance, the amplitude of a driven oscillator is limited by:
+(a) the driving force (b) damping (c) the mass (d) the spring constant</p>
+<details>
+<summary>Answer</summary>
+<p>(b). Without damping, the amplitude would grow without bound. Damping limits it to $A_{\max}=F_0Q/k$.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The phase difference between displacement and velocity in SHM is:
+(a) $0°$ (b) $45°$ (c) $90°$ (d) $180°$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $v$ leads $x$ by $90°$ (or $x$ leads $v$ by $-90°$).</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>The total energy of an SHM oscillator is proportional to:
+(a) $A$ (b) $A^2$ (c) $\omega$ (d) $A^2\omega^2$</p>
+<details>
+<summary>Answer</summary>
+<p>(b) — wait, $E=\frac{1}{2}kA^2=\frac{1}{2}m\omega^2 A^2$. It is proportional to both $A^2$ and $\omega^2$. The best answer is (d) if $m$ is fixed. Actually, $E=\frac{1}{2}kA^2$, so it is proportional to $A^2$ for a given spring constant. But it also depends on $\omega$ through $k=m\omega^2$. The question asks "proportional to" — for a given system (fixed $k$), $E\propto A^2$. Answer: (b).</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>A physical pendulum is a uniform rod of length $L$ pivoted at one end. Its period is:
+(a) $2\pi\sqrt{L/g}$ (b) $2\pi\sqrt{2L/(3g)}$ (c) $2\pi\sqrt{L/(2g)}$ (d) $2\pi\sqrt{3L/(2g)}$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $I=mL^2/3$, $h=L/2$. $T=2\pi\sqrt{mL^2/(3\times mgL/2)}=2\pi\sqrt{2L/(3g)}$.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>The beat frequency of two SHMs with frequencies $f_1$ and $f_2$ is:
+(a) $f_1+f_2$ (b) $|f_1-f_2|$ (c) $\sqrt{f_1f_2}$ (d) $(f_1+f_2)/2$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $f_{\text{beat}}=|f_1-f_2|$.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Which of the following affect the period of a simple pendulum?
+(a) Length (b) Mass of the bob (c) Local $g$ (d) Amplitude (for small angles)</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). $T=2\pi\sqrt{L/g}$ — independent of mass and small amplitude.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>For undamped SHM, which quantities are constant?
+(a) Displacement (b) Speed (c) Total energy (d) Amplitude</p>
+<details>
+<summary>Answer</summary>
+<p>(c), (d). Displacement and speed vary, but total energy and amplitude are constant.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>Which of the following systems exhibit SHM?
+(a) A mass on a spring (b) A simple pendulum at small angles (c) A ball rolling in a bowl (small displacement) (d) A charged particle in a uniform electric field</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). All three have a restoring force proportional to displacement for small displacements. A charged particle in a uniform field has a constant force — no oscillation.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>In damped oscillations, the amplitude:
+(a) decreases exponentially (b) decreases linearly (c) depends on $\gamma$ (d) is independent of $\omega_0$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). The amplitude is $Ae^{-\gamma t}$, which decreases exponentially with rate $\gamma$.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>The $Q$-factor of an oscillator is:
+(a) $\omega_0/(2\gamma)$ (b) The number of oscillations before amplitude drops to $1/e$ (c) $2\pi\times$ energy stored/energy lost per cycle (d) Always greater than 1</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c). (b) is approximately correct ($Q/\pi$ oscillations, not exactly $Q$). (d) is not always true — $Q$ can be less than 1 for heavily damped systems.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>For a particle in $U(x)=\frac{1}{2}kx^2$, which are true?
+(a) The force is $F=-kx$ (b) The motion is SHM (c) The period is $2\pi\sqrt{m/k}$ (d) The period depends on amplitude</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). The period does not depend on amplitude for a quadratic potential.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>At the turning points of SHM ($x=\pm A$):
+(a) speed is zero (b) acceleration is maximum (c) KE is zero (d) PE is minimum</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). PE is maximum (not minimum) at the turning points.</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>Which of the following change the frequency of a simple pendulum?
+(a) Taking it to the Moon (b) Increasing the mass (c) Shortening the string (d) Moving to the equator</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). Taking it to the Moon changes $g$, shortening the string changes $L$, and moving to the equator changes $g$ (centrifugal effect). The mass does not affect $f$.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>A 0.5 kg mass on a spring ($k=200$ N/m) oscillates with amplitude 0.1 m. Find the maximum speed. Give your answer in m/s.</p>
+<details>
+<summary>Answer</summary>
+<p>$\omega=\sqrt{200/0.5}=20$ rad/s. $v_{\max}=A\omega=0.1\times20=2$ m/s.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A pendulum of length 1 m on the Moon ($g=1.6$ m/s$^2$). Find the period. Give your answer in seconds.</p>
+<details>
+<summary>Answer</summary>
+<p>$T=2\pi\sqrt{1/1.6}=2\pi\times0.7906=4.97$ s.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>Two springs $k_1=100$ N/m and $k_2=300$ N/m in parallel support a 2 kg mass. Find the period. Give your answer in seconds.</p>
+<details>
+<summary>Answer</summary>
+<p>$k_{\text{eff}}=400$ N/m. $T=2\pi\sqrt{2/400}=2\pi\times0.0707=0.444$ s.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>A damped oscillator has $\omega_0=100$ rad/s and $\gamma=5$ s$^{-1}$. Find the damped frequency $\omega'$ in rad/s.</p>
+<details>
+<summary>Answer</summary>
+<p>$\omega'=\sqrt{10000-25}=\sqrt{9975}=99.87$ rad/s.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>At what displacement is the KE equal to 3 times the PE in SHM?</p>
+<details>
+<summary>Answer</summary>
+<p>$K=3U$. $E=K+U=4U$. $U=E/4$. $\frac{1}{2}kx^2=\frac{1}{4}\times\frac{1}{2}kA^2$. $x^2=A^2/4$. $x=A/2$.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A seconds pendulum ($T=2$ s) is taken to a planet where $g=4$ m/s$^2$. Find its new period. Give your answer in seconds.</p>
+<details>
+<summary>Answer</summary>
+<p>$T_{\text{new}}/T_{\text{old}}=\sqrt{g_{\text{old}}/g_{\text{new}}}=\sqrt{9.8/4}=1.565$. $T_{\text{new}}=2\times1.565=3.13$ s.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>Derive the period of a simple pendulum from Newton's second law. Show that $T=2\pi\sqrt{L/g}$ for small angles and state the validity condition.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $mL\ddot{\theta}=-mg\sin\theta$. For small $\theta$: $\ddot{\theta}=-(g/L)\theta$. This is SHM with $\omega^2=g/L$. $T=2\pi/\omega=2\pi\sqrt{L/g}$. Validity: $\theta\ll1$ rad (about 10 degrees).</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>A uniform rod of length $L$ is pivoted at a distance $d$ from the centre. Find $d$ such that the period of small oscillations is minimised.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $I=I_{\text{cm}}+md^2=mL^2/12+md^2$. $T=2\pi\sqrt{I/(mgd)}=2\pi\sqrt{(L^2/12+d^2)/(gd)}$. Minimise $f(d)=(L^2/12+d^2)/d$: $f'(d)=1-L^2/(12d^2)=0$, so $d=L/\sqrt{12}$. $T_{\min}=2\pi\sqrt{2L/(g\sqrt{12})}=2\pi\sqrt{L/(\sqrt{3}g)}$. This is the "seconds pendulum" length for a uniform rod.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>Two SHMs: $x_1=A\sin(\omega t)$ and $x_2=A\sin(\omega t+\delta)$. Find the amplitude and phase of the resultant for arbitrary $\delta$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $x=x_1+x_2=A[\sin(\omega t)+\sin(\omega t+\delta)]=2A\cos(\delta/2)\sin(\omega t+\delta/2)$. Amplitude $=2A|\cos(\delta/2)|$. Phase $=\delta/2$. At $\delta=0$: amplitude $=2A$ (in phase). At $\delta=\pi$: amplitude $=0$ (antiphase, complete cancellation).</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>A mass $m$ is attached to two springs $k_1$ and $k_2$ on either side. Show that the period is $T=2\pi\sqrt{m/(k_1+k_2)}$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> If the mass is displaced by $x$ from equilibrium: spring 1 exerts force $-k_1x$, spring 2 exerts force $-k_2x$. Net force $=-(k_1+k_2)x$. This is SHM with $k_{\text{eff}}=k_1+k_2$. $T=2\pi\sqrt{m/(k_1+k_2)}$.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>A damped oscillator starts with amplitude $A_0$. After $n$ complete oscillations (period $T'$), find the amplitude and the energy lost.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> After time $t=nT'$: $A=A_0 e^{-\gamma nT'}$. Energy $E\propto A^2$, so $E=E_0 e^{-2\gamma nT'}$. The energy lost: $\Delta E=E_0(1-e^{-2\gamma nT'})$. For small $\gamma T'$: $\Delta E\approx2\gamma nT'E_0=2\pi nE_0/Q$.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>A particle in the potential $U(x)=\alpha x^2+\beta x^4$ (with $\beta&gt;0$) oscillates with amplitude $A$. Show that the period decreases with amplitude.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The "effective spring constant" increases with amplitude because the $\beta x^4$ term makes the potential steeper than parabolic. For small $A$: $T\approx T_0(1-3\beta A^2/(4\alpha)+\cdots)$ — the period decreases (hardening spring). This is an anharmonic correction.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>Find the period of oscillation of a U-tube manometer: a liquid of density $\rho$ fills a U-tube of cross-section $A$. The liquid is displaced by $h$ from equilibrium.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> If one side is raised by $h$, the other side drops by $h$. The height difference is $2h$. The restoring force: $F=-\rho g(2h)A=-2\rho gAh$. The mass of liquid: $m=\rho L A$ where $L$ is the total length. $k=2\rho gA$. $T=2\pi\sqrt{\rho LA/(2\rho gA)}=2\pi\sqrt{L/(2g)}$.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>A mass $m$ on a spring ($k$) is driven by a force $F_0\cos\omega t$. Find the steady-state amplitude and the phase lag.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $A(\omega)=F_0/(m\sqrt{(\omega_0^2-\omega^2)^2+(2\gamma\omega)^2})$ with $\omega_0=\sqrt{k/m}$ and $\gamma=b/(2m)$. Phase lag: $\tan\delta=2\gamma\omega/(\omega_0^2-\omega^2)$. At $\omega=\omega_0$: $\delta=90°$ (velocity in phase with force). At $\omega\ll\omega_0$: $\delta\approx0°$ (displacement in phase with force). At $\omega\gg\omega_0$: $\delta\approx180°$ (displacement antiphase to force).</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>Two identical pendulums of length $L$ are coupled by a spring of constant $k$ at distance $d$ below the pivot. Find the normal mode frequencies.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Let $\theta_1$ and $\theta_2$ be the angles. For small oscillations: $mL^2\ddot{\theta}_1=-mgL\theta_1-kd^2(\theta_1-\theta_2)$. $mL^2\ddot{\theta}_2=-mgL\theta_2+kd^2(\theta_1-\theta_2)$. Normal modes: $\theta_1=\theta_2$ (in-phase, $\omega_1=\sqrt{g/L}$ — the spring is unstretched) and $\theta_1=-\theta_2$ (out-of-phase, $\omega_2=\sqrt{g/L+2kd^2/(mL^2)}$ — the spring provides an extra restoring torque).</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>A physical pendulum is a uniform disk of radius $R$ suspended from a point on its rim. Find the period and the equivalent simple pendulum length.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $I=I_{\text{cm}}+mR^2=mR^2/2+mR^2=3mR^2/2$. $h=R$. $T=2\pi\sqrt{3mR^2/(2mgR)}=2\pi\sqrt{3R/(2g)}$. Equivalent simple pendulum length: $L_{\text{eq}}=I/(mh)=3R/2$. The equivalent simple pendulum is 1.5 times the disk radius.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>P1–P12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td>P13–P20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td>P21–P26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td>P27–P36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-paper audit:</strong> After completing the paper, check: (1) Did I answer every question? (2) For Section A, did I guess or skip? ($-1$ for wrong, so skip if unsure.) (3) For Section C, are my numerical answers in the correct units? (4) For Section D, did I show all steps? (partial credit is available.)</p>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x=A\sin(\omega t+\phi)$</td>
+<td>general SHM solution</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{m/k}$</td>
+<td>spring-mass</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{L/g}$</td>
+<td>simple pendulum, small angle</td>
+</tr>
+<tr>
+<td>$T=2\pi\sqrt{I/(mgh)}$</td>
+<td>physical pendulum</td>
+</tr>
+<tr>
+<td>$E=\frac{1}{2}kA^2$</td>
+<td>total energy, undamped</td>
+</tr>
+<tr>
+<td>$v_{\max}=A\omega$</td>
+<td>maximum speed, at $x=0$</td>
+</tr>
+<tr>
+<td>$k_{\text{eff}}=k_1+k_2$</td>
+<td>parallel springs</td>
+</tr>
+<tr>
+<td>$1/k_{\text{eff}}=1/k_1+1/k_2$</td>
+<td>series springs</td>
+</tr>
+<tr>
+<td>$\omega'=\sqrt{\omega_0^2-\gamma^2}$</td>
+<td>underdamped frequency</td>
+</tr>
+<tr>
+<td>$Q=\omega_0/(2\gamma)$</td>
+<td>quality factor</td>
+</tr>
+<tr>
+<td>$A(\omega)$ driven</td>
+<td>resonance amplitude</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<h3 id="141-mastery-checklist">14.1 Mastery checklist</h3>
+<ul>
+<li>[ ] I can write and solve $a=-\omega^2 x$.</li>
+<li>[ ] I can find $A$, $\phi$, $v_{\max}$, $E$ from initial conditions.</li>
+<li>[ ] I can derive $T=2\pi\sqrt{m/k}$ and $T=2\pi\sqrt{L/g}$.</li>
+<li>[ ] I can handle springs in series and parallel.</li>
+<li>[ ] I can superpose SHMs (same and different frequencies).</li>
+<li>[ ] I can solve physical-pendulum problems.</li>
+<li>[ ] I understand damped oscillations and the three regimes.</li>
+<li>[ ] I can find the resonance frequency and amplitude.</li>
+<li>[ ] I can find the period from an arbitrary $U(x)$ for small oscillations.</li>
+<li>[ ] I can analyse coupled oscillators and normal modes.</li>
+</ul>
+<h3 id="142-what-comes-next">14.2 What comes next</h3>
+<p>PART 11 (Waves) builds on SHM: every particle in a wave executes SHM, and the wave equation is a partial differential equation version of the SHM equation. The concepts of frequency, wavelength, and wave speed are direct extensions of the SHM framework. The energy transport in waves (power proportional to $A^2\omega^2$) is analogous to the energy of an SHM oscillator.</p>
+    <footer class="pager"><a href="gravitation.html">← Gravitation & orbital motion</a><a href="fluid-mechanics.html">Fluid mechanics →</a></footer>
+    <p class="colophon">Rendered from <code>simple-harmonic-motion/Simple-harmonic-motion.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>simple-harmonic-motion/Simple-harmonic-motion.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

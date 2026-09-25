@@ -1,0 +1,2134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluid mechanics — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="active">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 11</span><span class="prop"><b>slug</b> fluid-mechanics</span><span class="prop"><b>source</b> Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (viscosity, surface tension, capillarity, pp. 4.20-4.37)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">fluids</span></p>
+
+<h1 id="fluid-mechanics-surface-tension-first-principles-to-olympiad">Fluid Mechanics &amp; Surface Tension — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — the pressure field, buoyancy, accelerated fluids, the continuity–Bernoulli pair, viscosity and surface tension, each derived before it is used. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (drainage integrals, the paraboloid three ways, two-drag terminal velocity, Young–Laplace from energy, the tree-height limit), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: derive the hydrostatic equation from a force balance on a fluid element and use it in layered liquids and manometers; state Pascal's law as a consequence of incompressibility and audit the energy of a hydraulic lift; compute hydrostatic forces on plane, inclined and curved surfaces with pressure diagrams; handle fluids in linearly accelerating and rotating vessels, including the counter-intuitive balloon; derive Archimedes' principle twice, locate the centre of buoyancy and decide floating-body stability with the metacentre; derive the continuity equation and Bernoulli's equation from mass conservation and the work–energy theorem, and police their four validity conditions; run Torricelli, Venturi, pitot, siphon and efflux-range problems; compute momentum-flux forces of jets and draining vessels; use Newton's viscosity law, derive Poiseuille's law by a shell balance, and get terminal velocity from Stokes; estimate Reynolds numbers and name the laminar–turbulent transition; treat surface tension as both force per length and energy per area, derive the excess-pressure results and Jurin's law two ways, and solve the insufficient-tube capillary problem.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Fluids carry pressure; pressure differences are forces; viscosity and surface tension matter only when the length scale is small.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>Answers are at the end of each item's block in later parts; if two or more of these fail, revisit the named part first.</p>
+<ol>
+<li>Can you write Newton's second law for a small element and take its limit to a differential equation? (<a href="newtons-laws.html">Newton's laws §3</a>)</li>
+<li>Can you compute work done by a force whose magnitude varies with position? (<a href="work-energy-power.html">WEP §3</a>)</li>
+<li>Do you trust that pressure is a scalar, and can you say why a <em>scalar</em> can push in a definite direction? (§3.1)</li>
+<li>Can you find the centre of mass of a composite body, and the torque of a distributed force about a point? (<a href="centre-of-mass-momentum.html">COM §2</a>)</li>
+<li>Can you integrate $v\,dv/dx$ type equations and separable first-order ODEs? (<a href="kinematics-1d.html">Kinematics §3</a>)</li>
+<li>Do you know what a conservative force is, and the statement of the work–energy theorem including non-conservative work? (<a href="work-energy-power.html">WEP §4</a>)</li>
+<li>Can you estimate orders of magnitude (the Fermi method)? (<a href="units-measurements.html">Units §10</a>)</li>
+</ol>
+<h3 id="04-numbers-to-keep">0.4 Numbers to keep</h3>
+<table>
+<thead>
+<tr>
+<th>quantity</th>
+<th>value</th>
+<th>where it bites</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$g$</td>
+<td>$9.8$ m/s$^2$</td>
+<td>every hydrostatic number</td>
+</tr>
+<tr>
+<td>$p_0$ (1 atm)</td>
+<td>$1.013\times10^5$ Pa</td>
+<td>barometers, bubbles, siphons</td>
+</tr>
+<tr>
+<td>$\rho_{\text{water}}$</td>
+<td>$1000$ kg/m$^3$</td>
+<td>buoyancy, Bernoulli</td>
+</tr>
+<tr>
+<td>$\rho_{\text{Hg}}$</td>
+<td>$13.6\times10^3$ kg/m$^3$</td>
+<td>manometers</td>
+</tr>
+<tr>
+<td>water barometer</td>
+<td>$\approx 10.3$ m</td>
+<td>the siphon height limit</td>
+</tr>
+<tr>
+<td>$\gamma_{\text{water}}(20^\circ\text{C})$</td>
+<td>$0.0728$ N/m</td>
+<td>capillarity, drops</td>
+</tr>
+<tr>
+<td>$\eta_{\text{water}}(20^\circ\text{C})$</td>
+<td>$1.0\times10^{-3}$ Pa·s</td>
+<td>Stokes, Poiseuille, Reynolds</td>
+</tr>
+<tr>
+<td>$\eta_{\text{air}}(20^\circ\text{C})$</td>
+<td>$1.8\times10^{-5}$ Pa·s</td>
+<td>drag estimates</td>
+</tr>
+<tr>
+<td>contact angle, water–glass</td>
+<td>$\approx 0^\circ$ (clean)</td>
+<td>meniscus shape, Jurin</td>
+</tr>
+<tr>
+<td>$B_{\text{water}}$</td>
+<td>$2.2\times10^9$ Pa</td>
+<td>compressibility, sound speed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a course in the Navier–Stokes equations: viscosity enters through Newton's law, Poiseuille and Stokes, not through the full tensor. Not gas dynamics: the working fluid is incompressible except where the compressibility of water is explicitly estimated (§3.13, §4.7). Surface waves appear only as the shallow-water speed $v=\sqrt{gh}$, which is the bridge to <a href="string-waves.html">the shipped string-waves note</a>; deep-water dispersion and full wave theory live there.</p>
+<h3 id="06-cengage-coverage-map">0.6 Cengage coverage map</h3>
+<p>The floor is <em>Cengage Mechanics II</em>, ch 3 Fluid Mechanics (pp. 3.1–3.69) for hydrostatics and hydrodynamics, and the fluid half of ch 4 Properties of Solids and Fluids (pp. 4.20–4.37) for viscosity, surface tension and capillarity. Status: <em>derived</em> (proved here from first principles), <em>stated + used</em>, <em>extended beyond book</em>, or <em>excluded with reason</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Cengage section (ch 3)</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pressure; some properties of pressure</td>
+<td>pressure is isotropic; the hydrostatic equation</td>
+<td>§3.1</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Measuring pressure</td>
+<td>barometer, manometer, gauge vs absolute</td>
+<td>§3.2</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Pascal's law</td>
+<td>pressure transmits undiminished in an enclosed incompressible fluid</td>
+<td>§3.2</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Measurement of pressure (manometric equations)</td>
+<td>step method for multi-liquid columns</td>
+<td>§3.2, Q3</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Pressure diagrams; force on boundaries</td>
+<td>triangular load, centre of pressure</td>
+<td>§3.3</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Force on immersed surface and centre of force</td>
+<td>$F=p_c A$, $y_{cp}$ below centroid</td>
+<td>§3.3</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Hydrostatic forces on inclined surfaces</td>
+<td>$\sin\theta$ projection</td>
+<td>§3.3, Q5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Force on curved surface</td>
+<td>horizontal/vertical components as projections and weights</td>
+<td>§3.3, E4</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Fluid in uniformly accelerating motion</td>
+<td>tilted free surface, $\tan\theta=a/g$</td>
+<td>§3.4</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Equipressure lines; modified manometric equation</td>
+<td>$\nabla p=\rho(\mathbf{g}-\mathbf{a})$</td>
+<td>§3.4</td>
+<td>extended beyond book</td>
+</tr>
+<tr>
+<td>Comparison with an accelerated pendulum</td>
+<td>plumb-line analogy</td>
+<td>§3.4</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Liquid rotating with constant angular velocity</td>
+<td>paraboloid $z=\omega^2 r^2/2g$</td>
+<td>§3.4, OL3</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Archimedes' principle; calculation of buoyant force</td>
+<td>$F_b=\rho_f V g$</td>
+<td>§3.5</td>
+<td>derived twice</td>
+</tr>
+<tr>
+<td>Floating body; centre of buoyancy</td>
+<td>fraction submerged; line of action</td>
+<td>§3.5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Buoyant force in accelerating fluid</td>
+<td>$g\to g_{\text{eff}}$; the balloon</td>
+<td>§3.4, §3.5</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Visualization of flow; streamline; turbulent flow</td>
+<td>flow regimes</td>
+<td>§3.7</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Principle of continuity and applications</td>
+<td>$Av=$ const from mass conservation</td>
+<td>§3.7</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Energy associated with a moving liquid</td>
+<td>kinetic, pressure, potential heads</td>
+<td>§3.8</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Bernoulli's equation; other forms; proof</td>
+<td>work–energy on a streamtube</td>
+<td>§3.8</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Venturi meter</td>
+<td>flow rate from a constriction</td>
+<td>§3.9</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Static and dynamic pressure; pitot tube</td>
+<td>$p+\tfrac12\rho v^2$</td>
+<td>§3.9</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Velocity of efflux: Torricelli</td>
+<td>$v=\sqrt{2gh}$</td>
+<td>§3.10</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Horizontal range of escaping liquid</td>
+<td>$x=2\sqrt{h(H-h)}$</td>
+<td>§3.10, Q13</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Force of reaction due to ejection</td>
+<td>$F=\rho a v^2$ thrust</td>
+<td>§3.11</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Solved examples; exercise families</td>
+<td>problem shapes</td>
+<td>Part 5, Part 6, Part 11</td>
+<td>extended beyond book</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Cengage section (ch 4, fluid half)</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viscosity; Newton's formula</td>
+<td>$\eta$; velocity gradient</td>
+<td>§3.12</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Flow in a tube: critical velocity</td>
+<td>transition to turbulence</td>
+<td>§3.13</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Viscosity in fluids; similarities to friction</td>
+<td>molecular origin; contrast with dry friction</td>
+<td>§3.12</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Units; effect of temperature on viscosity</td>
+<td>Poise; liquids vs gases</td>
+<td>§3.12</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Stokes' law; terminal velocity</td>
+<td>$6\pi\eta r v$; $v_t$</td>
+<td>§3.13</td>
+<td>derived by dimensions + stated</td>
+</tr>
+<tr>
+<td>Surface tension; causes; cohesion; adhesion</td>
+<td>molecular picture</td>
+<td>§3.14</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Measuring surface tension</td>
+<td>force and energy methods</td>
+<td>§3.14, OL6</td>
+<td>extended beyond book</td>
+</tr>
+<tr>
+<td>Surface energy; relation to surface tension</td>
+<td>$\gamma$ as energy/area</td>
+<td>§3.14</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Angle of contact; shape of meniscus</td>
+<td>wetting; concave vs convex</td>
+<td>§3.14</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Excess pressure: plane/concave/convex; drop; bubble; soap bubble</td>
+<td>$2\gamma/r$, $4\gamma/r$</td>
+<td>§3.15</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Excess pressure in general; Young–Laplace</td>
+<td>$\Delta p=\gamma(1/r_1+1/r_2)$</td>
+<td>§3.15, OL5</td>
+<td>stated + OL derived</td>
+</tr>
+<tr>
+<td>Capillarity; wetting and non-wetting; Jurin</td>
+<td>$h=2\gamma\cos\theta/\rho g r$</td>
+<td>§3.16</td>
+<td>derived twice</td>
+</tr>
+<tr>
+<td>Rise in a capillary of insufficient length</td>
+<td>$h$ fixed, $R$ adjusts</td>
+<td>§3.16, Q22</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Applications and practical applications of capillarity</td>
+<td>wicks, plants, blotting</td>
+<td>§3.16</td>
+<td>stated + used</td>
+</tr>
+<tr>
+<td>Solved examples; exercises</td>
+<td>problem shapes</td>
+<td>Part 5, Part 6</td>
+<td>extended beyond book</td>
+</tr>
+</tbody>
+</table>
+<div class="callout quote">
+<p class="callout-title">Hand-off</p>
+<p>The elastic half of ch 4 (stress, strain, moduli, bending) is <strong>PART 12's</strong> floor, not this chapter's. The sound-speed formula $v=\sqrt{B/\rho}$ appears here only to <em>use</em> the bulk modulus; its life as a wave speed belongs to [the shipped sound-waves note](sound-waves.html).</p>
+</div>
+
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>A fluid is matter that cannot keep a shape.</strong> Push a solid sideways and it pushes back with a <em>shear</em> force that grows with how far you deform it. Push a fluid sideways and it does not push back at all once it is moving steadily: a fluid at rest cannot sustain shear. That single negative statement is the whole of hydrostatics. Every force a static fluid exerts on a surface is perpendicular to that surface, which is exactly what "pressure" means.</p>
+<p><strong>Pressure is depth, not volume.</strong> Stand behind a dam and what stresses the concrete is the depth of water, never the size of the reservoir: a thin vertical tube of water ten metres high presses the bottom exactly as hard as the ocean at ten metres. This is the hydrostatic paradox, and it is why the dam in a drawing always gets thicker toward its base — the pressure triangle grows linearly with depth.</p>
+<p><strong>Buoyancy is the fluid's memory of itself.</strong> Remove a parcel of water from a swimming pool and the hole stays where it was: the surrounding water was holding that parcel up with a force equal to its weight. Put anything else into the same hole and the surrounding water, unaware of the substitution, pushes with the <em>same</em> force. That is Archimedes, in one image, before any algebra.</p>
+<p><strong>Flow trades pressure for speed.</strong> Where a stream narrows it speeds up (the same water must get through), and where it speeds up the sideways push on the walls drops. Blowing between two hanging sheets of paper pulls them together; a pitot tube reads the speed of an aircraft by letting the air stagnate and measuring the pressure it recovers. The trade is exact as long as the flow is steady, smooth, incompressible and followed along one streamline — and it fails, spectacularly and instructively, the moment any of those four is broken.</p>
+<p><strong>Viscosity is internal friction with a different temperament.</strong> Honey resists being <em>stirred</em>, not being <em>pushed</em>: viscous forces oppose relative motion between layers and vanish at rest. That is why a raindrop does not keep accelerating — the air's viscous drag grows until it balances gravity and the drop cruises at terminal velocity, which is also why drizzle falls gently while hailstones are dangerous.</p>
+<p><strong>Surface tension is the skin that isn't a skin.</strong> Molecules inside a liquid are pulled equally in all directions by their neighbours; molecules at the surface are pulled only inward and sideways, so the surface behaves like a stretched membrane that tries to shrink. A dewdrop rounds itself; a water strider stands on a dented but unbroken surface; water climbs a thin glass tube because glass attracts water more strongly than water attracts itself. Halve the tube radius and the climb doubles — which is the whole of capillarity in one sentence.</p>
+<div class="callout tip">
+<p class="callout-title">Insight</p>
+<p>The single length scale that decides whether the "skin" and the "internal friction" matter is tiny: a millimetre. Above it, pressure and inertia run the show and you may set $\gamma=0$ and $\eta=0$. Below it, drops, bubbles, menisci and creeping flows appear. Most exam traps in this chapter are exactly the mistake of applying the wrong scale's physics.</p>
+</div>
+
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$p$</td>
+<td>pressure (isotropic normal force per area)</td>
+<td>Pa = N/m$^2$</td>
+</tr>
+<tr>
+<td>$p_0$</td>
+<td>atmospheric pressure</td>
+<td>$1.013\times10^5$ Pa</td>
+</tr>
+<tr>
+<td>$\rho$</td>
+<td>mass density</td>
+<td>kg/m$^3$</td>
+</tr>
+<tr>
+<td>$h$, $y$</td>
+<td>depth below free surface; height coordinate</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\gamma$</td>
+<td>surface tension (force/length = energy/area)</td>
+<td>N/m = J/m$^2$</td>
+</tr>
+<tr>
+<td>$\eta$</td>
+<td>coefficient of viscosity</td>
+<td>Pa·s (= 10 poise)</td>
+</tr>
+<tr>
+<td>$Q$</td>
+<td>volume flow rate</td>
+<td>m$^3$/s</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>cross-sectional area of a stream or pipe</td>
+<td>m$^2$</td>
+</tr>
+<tr>
+<td>$v$</td>
+<td>flow speed</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>$F_b$</td>
+<td>buoyant force</td>
+<td>N</td>
+</tr>
+<tr>
+<td>$V$</td>
+<td>displaced volume</td>
+<td>m$^3$</td>
+</tr>
+<tr>
+<td>$g_{\text{eff}}$</td>
+<td>$\lvert\mathbf{g}-\mathbf{a}\rvert$ in an accelerated vessel</td>
+<td>m/s$^2$</td>
+</tr>
+<tr>
+<td>$\theta$</td>
+<td>contact angle, measured <em>through the liquid</em></td>
+<td>rad or deg</td>
+</tr>
+<tr>
+<td>$r$</td>
+<td>radius of tube, drop or bubble</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\text{Re}$</td>
+<td>Reynolds number $\rho v D/\eta$</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<div class="callout note">
+<p class="callout-title">Definition</p>
+<p><strong>Pressure at a point</strong> is the limit $p=\lim_{\Delta A\to 0}\Delta F/\Delta A$ of the normal force per area on a small surface, and hydrostatics' first theorem (§3.1) is that this limit is the same for every orientation of the surface — pressure is a scalar.</p>
+</div>
+
+<p><strong>Sign conventions, fixed once.</strong> Depth $h$ is measured downward from the free surface; $p=p_0+\rho g h$ then needs no sign gymnastics. Gauge pressure means $p-p_0$; absolute pressure means $p$. In manometers, going <em>down</em> a column <em>adds</em> $\rho g h$ and going <em>up</em> subtracts it, whatever the column's shape. Contact angle $\theta$ is measured through the liquid: $\theta&lt;90^\circ$ is wetting (concave meniscus, capillary rise), $\theta&gt;90^\circ$ non-wetting (convex meniscus, capillary depression, mercury).</p>
+<p><strong>The standing assumptions, each flagged where it is used.</strong></p>
+<ol>
+<li><em>Incompressible:</em> $\rho$ constant. Excellent for liquids to hundreds of atmospheres (§3.13 computes the actual correction); wrong for gases above modest pressure differences.</li>
+<li><em>Non-viscous:</em> $\eta=0$ in Bernoulli applications. Viscous losses are restored in §3.12–3.13 (Poiseuille) and in the traps.</li>
+<li><em>Steady:</em> the velocity field does not change with time. A draining tank is <em>not</em> steady; Torricelli still applies quasi-statically when the hole is small (§3.10 makes the condition quantitative).</li>
+<li><em>Along a streamline:</em> Bernoulli compares points on one streamline unless the flow is irrotational (§3.8 states the upgrade).</li>
+<li><em>Hydrostatic equilibrium:</em> the fluid is at rest, or rigidly accelerated/rotated (§3.4), so every element has a single known acceleration.</li>
+</ol>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>The hydrostatic equation $p=p_0+\rho g h$ requires (a) a connected body of one fluid at rest in one frame and (b) constant $\rho$ over the interval. Across an interface, or across a trapped gas pocket, apply it <em>piece by piece</em>: pressure is continuous through the interface, but $\rho$ jumps.</p>
+</div>
+
+<p><strong>What is not in this model.</strong> Elastic solids (PART 12), compressible flow and shocks (<a href="sound-waves.html">sound waves</a>), full turbulence theory (only the Reynolds criterion here), deep-water waves (<a href="string-waves.html">string waves</a>), and thermodynamics of fluids (<a href="thermodynamics.html">thermodynamics</a> owns the equation of state).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.1 · The pressure–depth graph for a two-layer liquid</p>
+<p><em>Show:</em> depth $h$ on the vertical axis (downward), pressure $p$ on the horizontal; a straight line of slope $\rho_1 g$ from $p_0$ at the surface to the interface at $h_1$, then a steeper straight line of slope $\rho_2 g$ below it; the kink at the interface circled with the label "slope changes because $\rho$ changes; $p$ itself is continuous".
+<em>Search:</em> "pressure depth graph two liquids interface kink hydrostatic"
+<em>Used in:</em> §3.1 and Q2.</p>
+</div>
+
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-why-pressure-is-a-scalar-and-the-hydrostatic-equation">3.1 Why pressure is a scalar, and the hydrostatic equation</h3>
+<p>Take a tiny wedge of fluid at rest: two faces of area $A$ perpendicular to $x$ and to $y$, and a slanted face of area $A/\cos\phi$ at angle $\phi$. Let the pressures on the three faces be $p_x$, $p_y$, $p_\phi$. Force balance on the wedge (mass $m\to0$) in $x$ and $y$:</p>
+<p>$$
+p_x A - p_\phi \frac{A}{\cos\phi}\sin\phi\cdot\frac{\cos\phi}{\sin\phi}\sin\phi = p_x A - p_\phi A \tan\phi \sin\phi/\tan\phi
+$$</p>
+<p>That clumsy route hides the point; do it cleanly. The slanted face's normal makes angle $\phi$ with the $x$-axis, so its force components are $p_\phi (A/\cos\phi)\cos\phi=p_\phi A$ in $x$ and $p_\phi (A/\cos\phi)\sin\phi=p_\phi A\tan\phi$ in $y$. Balance:</p>
+<p>$$
+x:\quad p_x A = p_\phi A \quad\Rightarrow\quad p_x = p_\phi,
+$$</p>
+<p>$$
+y:\quad p_y A\tan\phi = p_\phi A\tan\phi + m g \quad\Rightarrow\quad p_y = p_\phi + m g/(A\tan\phi).
+$$</p>
+<p>Shrink the wedge ($m\propto$ volume $\to 0$ faster than areas): the gravity term dies and $p_x=p_y=p_\phi$ for <em>every</em> $\phi$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The weight term is volume-proportional ($\sim \ell^3$) while the pressure forces are area-proportional ($\sim\ell^2$); in the limit $\ell\to0$ weight is negligible of higher order. That is the entire reason pressure at a point has no direction.</p>
+</div>
+
+<p><strong>The hydrostatic equation.</strong> Now a thin horizontal slab of fluid, thickness $dy$, area $A$, height coordinate $y$ (up). Forces: $p(y)A$ up, $p(y+dy)A$ down, weight $\rho g A\,dy$ down:</p>
+<p>$$
+p(y)A - p(y+dy)A - \rho g A\,dy = 0 \quad\Rightarrow\quad \frac{dp}{dy}=-\rho g. \qquad (3.1)
+$$</p>
+<p>With $\rho$ constant and $h$ measured down from the free surface:</p>
+<p>$$
+p = p_0 + \rho g h. \qquad (3.2)
+$$</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Eq. (3.2) needs $\rho$ constant over $h$ and one connected static fluid. For air over kilometres, integrate (3.1) with $\rho(p)$ from the ideal gas law instead ([thermodynamics §3](thermodynamics.html)).</p>
+</div>
+
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Units: $[\rho g h]=$ (kg/m$^3$)(m/s$^2$)(m) $=$ kg/(m·s$^2$) $=$ N/m$^2$ ✓. Limit $\rho\to0$ (a gas pocket) gives $p=p_0$: pressure does not change across a negligible-density layer ✓.</p>
+</div>
+
+<p><strong>The paradox, dissolved.</strong> Eq. (3.2) contains depth only. Three vessels of different shapes connected at the bottom hold the same level (communicating vessels): if any one had higher $p$ at the shared bottom, the fluid would flow until it did not. The total <em>weight</em> of water differs, but the bottom also receives forces from the slanted walls, and those vertical components supply exactly the missing or surplus weight.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.2 · The hydrostatic paradox vessels</p>
+<p><em>Show:</em> three vessels on a common base pipe with a valve: a cylinder, a funnel widening upward, a funnel narrowing upward; equal water levels dashed across all three; arrows on the slanted walls of the widening vessel pointing perpendicular to the wall with their upward vertical components highlighted; caption "same level, same bottom pressure; the walls carry the weight difference".
+<em>Search:</em> "hydrostatic paradox three vessels same height different shapes"
+<em>Used in:</em> §3.1 and C3.</p>
+</div>
+
+<h3 id="32-measuring-pressure-barometer-manometer-pascal">3.2 Measuring pressure: barometer, manometer, Pascal</h3>
+<p><strong>Barometer.</strong> Invert a mercury-filled tube in a mercury dish. Above the column is (near) vacuum, $p\approx0$; at the dish, $p_0$. Eq. (3.2) across the column: $p_0=\rho_{\text{Hg}} g h$, so $h=1.013\times10^5/(13.6\times10^3\times9.8)=0.760$ m. The same argument with water gives $h=1.013\times10^5/(1000\times9.8)=10.3$ m — the number to remember whenever a siphon or a well pump is proposed.</p>
+<p><strong>Manometers and the step method.</strong> To find a trapped gas pressure, walk from one open end to the other, adding $\rho g h$ going down and subtracting going up, switching $\rho$ at each interface. The result depends only on the <em>vertical</em> heights, never on tube shapes or horizontal runs, because $p$ varies only with depth (Eq. 3.1).</p>
+<p><strong>Pascal's law.</strong> Enclose an incompressible fluid and change the pressure at one piston by $\Delta p$. Any other point must change by the same $\Delta p$, else Eq. (3.1) with unchanged $\rho$ and $g$ would be violated at the second point after the change settled. Consequence: the hydraulic lift. Small piston area $a$, large $A$: force ratio $F_2/F_1=A/a$, but stroke ratio $d_2/d_1=a/A$, so $F_1 d_1=F_2 d_2$ — the lift is a lever in pressure clothing and conserves energy exactly.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Hydraulic lift energy audit: $W_1=F_1 d_1$, $W_2=F_2 d_2$, $F_2=F_1 A/a$, $d_2=d_1 a/a\cdot(a/A)=d_1 a/A$; product $F_2 d_2=F_1 d_1$ ✓. No free lunch.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.3 · The hydraulic press with the piston-displacement trade</p>
+<p><em>Show:</em> two connected cylinders, small piston $a$ pushed down $d_1$ with $F_1$, large piston $A$ rising $d_2\ll d_1$ under load $F_2$; shaded equal volumes $a d_1 = A d_2$; labels $F_2=F_1 A/a$ and $W_1=W_2$.
+<em>Search:</em> "hydraulic press pistons force multiplication displacement trade diagram"</p>
+</div>
+
+<h3 id="33-pressure-diagrams-and-forces-on-surfaces">3.3 Pressure diagrams and forces on surfaces</h3>
+<p><strong>Plane vertical surface.</strong> Pressure grows linearly with depth, so the load on a dam face of width $w$ and depth $H$ is a triangle: total force $F=\int_0^H \rho g h\, w\, dh=\tfrac12 \rho g H^2 w=\rho g (H/2)(wH)=p_c A$ — the centroid-pressure rule $F=p_c A$. The resultant acts not at mid-depth but at the triangle's centroid, $2H/3$ down: the <em>centre of pressure</em>.</p>
+<p><strong>Inclined plane at angle $\theta$.</strong> Depth is $h=s\sin\theta$ where $s$ runs along the plate; every force element scales by the same depth, so $F=p_c A$ still holds with $p_c$ at the centroid depth, and the centre of pressure lies below the centroid by $I_c/(A h_c)$ measured along the plate's slope projection; for a rectangle from the surface, again $2/3$ of the slant length.</p>
+<p><strong>Curved surface.</strong> Decompose. The horizontal force on a curved gate equals the force on its <em>vertical projection</em> (every horizontal pressure element acts on the same projected area). The vertical force equals the weight of fluid <em>directly above</em> the surface, taken positive downward if fluid rests above, or the weight of the <em>imagined</em> fluid that would fill above it (upthrust) if the surface holds fluid from below. Combine as vectors; the line of action passes through the appropriate centres.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Both rules are just Eq. (3.1) integrated componentwise: horizontal elements at a given depth are identical to those on the flat projection at that depth, and the vertical balance on the fluid column above the surface involves only its weight and the end pressures.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.4 · Force on a curved gate by projection</p>
+<p><em>Show:</em> a quarter-circle gate holding water on its convex side; left panel: horizontal arrows integrated to $F_H$ acting on the vertical projected rectangle; right panel: the shaded water column above the gate whose weight is $F_V$; the vector sum $F$ drawn through the hinge with its angle.
+<em>Search:</em> "hydrostatic force curved surface horizontal vertical components quarter circle gate"
+<em>Used in:</em> §3.3 and E4.</p>
+</div>
+
+<h3 id="34-accelerated-and-rotating-fluids-one-equation-for-all-of-it">3.4 Accelerated and rotating fluids: one equation for all of it</h3>
+<p>Give the vessel acceleration $\mathbf{a}$. In the vessel's frame each fluid element of mass $m$ feels gravity $m\mathbf{g}$ and pseudo force $-m\mathbf{a}$, so the effective gravity is $\mathbf{g}<em>{\text{eff}}=\mathbf{g}-\mathbf{a}$, and <em>hydrostatics in that frame</em> is unchanged: surfaces of constant pressure are perpendicular to $\mathbf{g}</em>{\text{eff}}$, and $p$ grows along $-\mathbf{g}<em>{\text{eff}}$ at rate $\rho\lvert\mathbf{g}</em>{\text{eff}}\rvert$.</p>
+<p><strong>Linear acceleration $a$ horizontal.</strong> The free surface tilts so that its normal is along $\mathbf{g}_{\text{eff}}$:</p>
+<p>$$
+\tan\theta = \frac{a}{g}. \qquad (3.3)
+$$</p>
+<p>Equipressure lines are parallel to the tilted surface. A plumb bob hangs along $\mathbf{g}<em>{\text{eff}}$ too — the accelerated-fluid/accelerated-pendulum comparison the book makes: both define "down" as $-\mathbf{g}</em>{\text{eff}}$. The <em>modified manometric equation</em> is the step method with $\mathbf{g}\to\mathbf{g}<em>{\text{eff}}$, adding $\rho g</em>{\text{eff}} h$ along $-\mathbf{g}_{\text{eff}}$.</p>
+<div class="callout tip">
+<p class="callout-title">Insight</p>
+<p>The helium balloon in a braking car leans <em>forward</em>, toward the windscreen, and in an accelerating car leans forward into the acceleration — the opposite of a hanging strap. Reason: buoyancy points along $-\mathbf{g}_{\text{eff}}$ (away from the effective "down"), and the lighter-than-air balloon is pushed the way the air is pushed out of. The air piles up at the back; the balloon goes to the front.</p>
+</div>
+
+<p><strong>Rotating vessel, angular speed $\omega$.</strong> In the rotating frame, element at radius $r$ needs centripetal acceleration, i.e. feels pseudo force $\rho\,\omega^2 r$ per volume outward. Balance on a surface element: $\partial p/\partial r=\rho\omega^2 r$ and $\partial p/\partial z=-\rho g$. Along the free surface $dp=0$:</p>
+<p>$$
+\frac{dz}{dr}=\frac{\omega^2 r}{g}\quad\Rightarrow\quad z(r)=z_0+\frac{\omega^2 r^2}{2g}. \qquad (3.4)
+$$</p>
+<p>The free surface is a paraboloid. (OL3 derives it three independent ways.)</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.5 · The rotating fluid's paraboloid</p>
+<p><em>Show:</em> a cylinder of liquid spinning at $\omega$; the parabolic free surface $z=z_0+\omega^2 r^2/2g$; a fluid element at radius $r$ with the outward pseudo-force arrow $\rho\omega^2 r$ and downward gravity arrow; the tangent to the surface drawn with slope $\omega^2 r/g$; dashed level lines below.
+<em>Search:</em> "rotating liquid paraboloid free surface derivation"
+<em>Used in:</em> §3.4 and OL3.</p>
+</div>
+
+<h3 id="35-buoyancy-twice">3.5 Buoyancy, twice</h3>
+<p><strong>First derivation (pressure difference).</strong> A vertical cylinder of area $A$, height $L$, fully submerged at top depth $h_1$. Top face pushed down with $p_1 A$, bottom pushed up with $p_2 A$: $F_b=(p_2-p_1)A=\rho_f g L A=\rho_f V g$.</p>
+<p><strong>Second derivation (the hole argument).</strong> The fluid that <em>used to occupy</em> the volume was in equilibrium, so the surrounding fluid's resultant on that volume was exactly its weight $\rho_f V g$ upward, through its centre of mass. The surroundings do not know the parcel was replaced: same surface, same pressures, same resultant. Hence any body in that hole feels $F_b=\rho_f V g$ acting at the <em>centre of buoyancy</em> — the centroid of the displaced volume.</p>
+<p>$$
+F_b = \rho_f V_{\text{disp}}\, g. \qquad (3.5)
+$$</p>
+<p><strong>Floating.</strong> Equilibrium $F_b=mg$ gives $\rho_f V_{\text{disp}}=\rho_b V$, so the submerged fraction is $V_{\text{disp}}/V=\rho_b/\rho_f$ — an iceberg shows about $0.92/1.03\approx 0.89$ of itself below sea water.</p>
+<p><strong>Stability.</strong> For a floating body the weight acts at $G$, the buoyancy at $B$ (centroid of the <em>submerged</em> part, which moves when the body heels). Tilt slightly: if the new buoyancy line crosses the symmetry axis above $G$ at the <em>metacentre</em> $M$, the couple restores. The metacentric height:</p>
+<p>$$
+GM = \frac{I}{V} - \text{(distance } BG\text{)},\qquad BM=\frac{I}{V}, \qquad (3.6)
+$$</p>
+<p>with $I$ the second moment of the waterline area about the tilt axis and $V$ the displaced volume. Wide waterline, shallow draft: stable barge. A fully submerged body has fixed $B$: stable only if $B$ is below $G$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Heeling changes the submerged wedge: extra volume on one side, missing on the other, a couple of moment $\rho_f g\, x^2\, dA \cdot\theta$ integrated over the waterline, i.e. $\rho_f g I\theta$. That restoring moment equals $F_b\cdot BM\cdot\theta$, giving $BM=I/V$.</p>
+</div>
+
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Limit: a barge with huge beam has $I\to\infty$, $GM&gt;0$ strongly stable ✓. A pencil floating point-down has tiny $I$ and $G$ above $B$: unstable, as experience confirms ✓.</p>
+</div>
+
+<p><strong>Buoyancy in an accelerating fluid.</strong> Replace $g$ by $g_{\text{eff}}=\lvert\mathbf{g}-\mathbf{a}\rvert$ everywhere in (3.5): both the weight and the buoyancy scale, so the <em>fraction submerged is unchanged</em> in a lift accelerating vertically, but a pendulum-like tilt appears for horizontal $\mathbf{a}$ (the balloon case of §3.4).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.6 · Floating body: $G$, $B$, $M$ and the righting moment</p>
+<p><em>Show:</em> a hull cross-section heeled by small $\theta$; weight arrow down at $G$, buoyancy arrow up at shifted $B'$; the buoyancy line extended to meet the axis at $M$ above $G$; the restoring couple arc; a second small sketch of the submerged body case with $B$ fixed and $G$ below required.
+<em>Search:</em> "metacentre metacentric height ship stability diagram G B M"
+<em>Used in:</em> §3.5 and Q8.</p>
+</div>
+
+<h3 id="36-the-melting-ice-family-with-the-correct-answer-for-each-case">3.6 The melting-ice family (with the correct answer for each case)</h3>
+<p>An ice cube floats in water; it melts. Does the level change? The displaced mass equals the ice mass; the meltwater has exactly that mass and exactly the water's density, so it occupies exactly the displaced volume: <strong>level unchanged</strong>, in fresh water. In <em>salt</em> water the ice displaced volume $m/\rho_{sw}$; the melt (fresh) occupies $m/\rho_{fw}&gt;m/\rho_{sw}$: <strong>level rises</strong>. If the ice holds a <em>stone</em> (denser than water): while embedded, the stone's share of displacement is $m_s/\rho_w$; after melting the stone sits on the bottom displacing only $m_s/\rho_{stone}&lt;m_s/\rho_w$: <strong>level falls</strong>. If the ice holds an <em>air bubble</em>: the bubble's mass is negligible both before and after: <strong>unchanged</strong>.</p>
+<div class="callout danger">
+<p class="callout-title">Trap</p>
+<p>The family is decided by one comparison only: compare the volume the extra object displaces <em>while floating</em> (mass-based, $m/\rho_{\text{fluid}}$) with the volume it displaces <em>after melting</em> (geometry-based if it sinks). Every variant is that one sentence with different densities.</p>
+</div>
+<p><strong>C1 — concept check.</strong> A beaker of water on a balance reads $W$. You dip a hanging metal block (not touching the bottom) halfway in. What does the balance read now, and why, without computing any force on the block?</p>
+<details>
+<summary>Solution</summary>
+<p>$W+\rho_w V_{\text{sub}} g$: by Newton's third law the water feels the reaction of the buoyant force; equivalently the water level rises as if $V_{\text{sub}}$ of water were added. No free-body of the block needed.</p>
+</details>
+<p><strong>C2 — concept check.</strong> Two identical vessels hold water to the same height; one also has a floating wooden block. Which vessel is heavier?</p>
+<details>
+<summary>Solution</summary>
+<p>Identical. The floating block displaces its own weight of water, so vessel+water+block equals vessel+water-filled-to-same-level.</p>
+</details>
+<p><strong>C3 — concept check.</strong> The hydrostatic paradox: which force is <em>not</em> equal among the three vessels — on the base, or on the table?</p>
+<details>
+<summary>Solution</summary>
+<p>On the base, equal (same $p$, same area). On the table, different: the table carries each vessel's actual total weight; the slanted walls' vertical force components reconcile the two.</p>
+</details>
+<p><strong>C4 — concept check.</strong> In the rotating vessel, where is the pressure greatest at the bottom?</p>
+<details>
+<summary>Solution</summary>
+<p>At the rim: $p=p_{\text{centre}}+\tfrac12\rho\omega^2 r^2$ from $\partial p/\partial r=\rho\omega^2 r$, and the deeper liquid column there confirms it.</p>
+</details>
+<h3 id="37-flow-language-and-the-continuity-equation">3.7 Flow language and the continuity equation</h3>
+<p>A <em>streamline</em> is a curve everywhere tangent to the velocity; in steady flow streamlines are the actual paths and never cross. <em>Steady</em> means the pattern is fixed in time; <em>uniform</em> would mean fixed in space too. Mass conservation on a streamtube between cross-sections $A_1$, $A_2$: in time $\Delta t$ the inflow mass is $\rho A_1 v_1\Delta t$ and outflow $\rho A_2 v_2\Delta t$; steady flow stores nothing between, so with constant $\rho$:</p>
+<p>$$
+A_1 v_1 = A_2 v_2 = Q. \qquad (3.7)
+$$</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The derivation is bookkeeping, not dynamics: mass cannot accumulate in a fixed streamtube segment under steady conditions. That is why continuity holds even where viscosity matters; it is Bernoulli that is the fragile one.</p>
+</div>
+
+<p>Consequences: a tapering tap-stream thins as it falls ($v$ grows under gravity, $A$ shrinks); a branching pipe splits $Q$ among branches; a river runs fast where shallow.</p>
+<h3 id="38-bernoulli-from-the-workenergy-theorem">3.8 Bernoulli from the work–energy theorem</h3>
+<p>Follow a streamtube from section 1 to section 2. Pressures $p_1,p_2$, speeds $v_1,v_2$, heights $y_1,y_2$, cross-sections $A_1,A_2$. In time $\Delta t$ a mass $m=\rho A_1 v_1\Delta t$ enters and the same mass leaves. Work by pressure at the inlet: $W_1=p_1 A_1 v_1\Delta t$; at the outlet the fluid does work against $p_2$: $W_2=-p_2A_2v_2\Delta t$; gravity does $-mg(y_2-y_1)$. Work–energy theorem on the segment (the interior is unchanged in steady flow, so only the end slugs change their state):</p>
+<p>$$
+p_1 A_1 v_1\Delta t - p_2 A_2 v_2 \Delta t - m g (y_2-y_1) = \tfrac12 m v_2^2 - \tfrac12 m v_1^2.
+$$</p>
+<p>Divide by the volume $A_1 v_1 \Delta t=A_2 v_2\Delta t$:</p>
+<p>$$
+p_1 + \tfrac12\rho v_1^2 + \rho g y_1 = p_2 + \tfrac12\rho v_2^2 + \rho g y_2. \qquad (3.8)
+$$</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity — the four gates</p>
+<p>(1) <strong>Steady</strong> flow; (2) <strong>incompressible</strong> $\rho$; (3) <strong>non-viscous</strong> (no internal friction losses — Poiseuille is the viscous correction, §3.12); (4) <strong>along one streamline</strong>. If the flow is additionally irrotational, the constant becomes the same on every streamline and (3.8) may be used across streamlines.</p>
+</div>
+
+<div class="callout tip">
+<p class="callout-title">Insight</p>
+<p>Bernoulli is energy conservation per volume: $p$ is the flow-work term, $\tfrac12\rho v^2$ the kinetic density, $\rho g y$ the potential density. Reading it as "fast means low pressure" is correct only when the height term is equal and nothing else absorbs the difference.</p>
+</div>
+
+<p><strong>Heads.</strong> Divide (3.8) by $\rho g$: pressure head $p/\rho g$, velocity head $v^2/2g$, elevation head $y$ — the book's "energy associated with a moving liquid" is this ledger, and every friction loss appears as a drop in total head.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.7 · The streamtube used for the Bernoulli derivation</p>
+<p><em>Show:</em> a curved streamtube narrowing from $A_1$ (left, low, slow, wide arrows) to $A_2$ (right, high, fast, thin arrows); the two end slugs of length $v_1\Delta t$, $v_2\Delta t$ shaded; pressure arrows $p_1$ pushing in, $p_2$ pushing back; heights $y_1,y_2$ from a datum line.
+<em>Search:</em> "Bernoulli derivation streamtube work energy diagram"</p>
+</div>
+
+<h3 id="39-bernoullis-applications-each-with-its-gate-checked">3.9 Bernoulli's applications, each with its gate checked</h3>
+<p><strong>Venturi meter.</strong> A constriction in a horizontal pipe. Continuity $v_2=v_1 A_1/A_2$ into (3.8):</p>
+<p>$$
+p_1-p_2=\tfrac12\rho v_1^2\left(\frac{A_1^2}{A_2^2}-1\right),\qquad
+Q=A_1\sqrt{\frac{2(p_1-p_2)}{\rho\left(A_1^2/A_2^2-1\right)}}. \qquad (3.9)
+$$</p>
+<p>The manometer reads $p_1-p_2$; the gates: steady, incompressible, short device so viscous loss is a small calibration correction.</p>
+<p><strong>Pitot tube and static/dynamic pressure.</strong> A tube facing the flow stagnates it ($v=0$ at the mouth): it reads the <em>total</em> pressure $p+\tfrac12\rho v^2$; a wall tap reads the <em>static</em> pressure $p$; the difference is the <em>dynamic</em> pressure, so</p>
+<p>$$
+v=\sqrt{\frac{2\,\Delta p}{\rho}}. \qquad (3.10)
+$$</p>
+<p><strong>The siphon and its height limit.</strong> A tube over a rim drains a vessel because the outlet leg's water column outweighs the inlet leg's. Speed at the outlet is Torricelli-like, $v=\sqrt{2g\Delta h}$ with $\Delta h$ the level difference. But at the top the pressure is $p_{\text{top}}=p_0-\rho g h_{\text{top}}-\tfrac12\rho v^2$; the column breaks (water cavitates near its vapour pressure) when $p_{\text{top}}\to0$, i.e. $h_{\text{top}}\lesssim 10.3$ m minus the velocity-head term. <em>Assuming a siphon works at any height is the classic trap.</em></p>
+<div class="callout danger">
+<p class="callout-title">Trap</p>
+<p>"Suction lifts water" is wrong language: nothing pulls. The atmosphere pushes the supply up the rising leg, and it can push at most $\sim p_0/\rho g\approx10.3$ m of water column.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.8 · The siphon with the pressure at its highest point</p>
+<p><em>Show:</em> a vessel, a bent tube over the rim, outlet below the level; the top point labelled with $p_{\text{top}}=p_0-\rho g h-\tfrac12\rho v^2$; a gauge sketch showing $p_{\text{top}}$ approaching zero as $h\to10.3$ m; flow arrows.
+<em>Search:</em> "siphon maximum height limit pressure at top diagram"</p>
+</div>
+
+<h3 id="310-torricelli-range-of-the-escaping-liquid-and-quasi-steadiness">3.10 Torricelli, range of the escaping liquid, and quasi-steadiness</h3>
+<p>A hole at depth $h$ in a tank of level $H$ above the floor of the tank. Bernoulli between surface (speed $\approx0$ if $a\ll A$) and hole: $v=\sqrt{2gh}$ — <strong>Torricelli</strong>. The jet then falls as a projectile from height $H-h$:</p>
+<p>$$
+x = v t = \sqrt{2gh}\sqrt{2(H-h)/g} = 2\sqrt{h(H-h)}. \qquad (3.11)
+$$</p>
+<p>Symmetric in $h\leftrightarrow H-h$: holes equally above and below mid-depth land at the same spot; maximum range $x_{\max}=H$ at $h=H/2$.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Quasi-steady: the level falls at $V_{\text{level}}=v\,a/A$, negligible against $v$ when $a/A\ll1$. If the hole is not small, the surface speed enters (continuity) and (3.11) must use both speeds from (3.8) — OL1 does exactly this for the drainage <em>time</em>.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.9 · The draining tank with two equal-range holes</p>
+<p><em>Show:</em> a tank, level $H$; holes at $h$ and $H-h$ with both jets drawn as parabolas landing at the same point $x=2\sqrt{h(H-h)}$; the mid-depth jet drawn reaching $x=H$; axis labels.
+<em>Search:</em> "Torricelli theorem two holes same range tank diagram"</p>
+</div>
+
+<h3 id="311-momentum-flux-jets-thrust-and-the-reaction-of-ejection">3.11 Momentum flux: jets, thrust and the reaction of ejection</h3>
+<p>Fluid of density $\rho$ leaving an orifice of area $a$ at speed $v$ carries momentum per time $\dot p=\rho a v\cdot v=\rho a v^2$. The vessel feels the reaction $F=\rho a v^2$ opposite to the jet — the force that spins a sprinkler arm and pushes a punctured can backwards. The same flux idea gives the force of a jet on a plate: mass rate $\rho a v$ meets the plate; a stationary flat plate normal to the jet destroys the normal momentum, $F=\rho a v^2$; a plate moving away at $u$ sees relative speed $v-u$, so $F=\rho a (v-u)^2$; an inclined or curved vane redirects the momentum and the force is the vector change of $\rho a v\,\mathbf{v}$ per time.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Thrust is not pressure at the hole times area: near the hole the streamlines converge (vena contracta) and the pressure there is not $p_0+\rho g h$. The momentum-flux route never needs the messy near-field — it counts what leaves.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.10 · A jet striking a plate: flat, inclined, moving</p>
+<p><em>Show:</em> three panels: (a) jet normal to a fixed plate, splash arrows radial, $F=\rho a v^2$; (b) jet on a plate tilted $\theta$, the tangential split arrows, normal force $\rho a v^2\cos\theta$ component labelled; (c) jet chasing a plate moving at $u$, relative speed $v-u$ marked, $F=\rho a (v-u)^2$.
+<em>Search:</em> "force of water jet on flat inclined moving plate momentum"
+<em>Used in:</em> §3.11 and Q16.</p>
+</div>
+
+<h3 id="312-viscosity-newtons-law-and-poiseuille-by-shell-balance">3.12 Viscosity: Newton's law and Poiseuille by shell balance</h3>
+<p>Between two parallel plates, the lower fixed, the upper dragged at $v$ across gap $d$, the fluid forms a linear velocity profile; the force per area needed is</p>
+<p>$$
+\frac{F}{A}=\eta\frac{dv}{dy}, \qquad (3.12)
+$$</p>
+<p>defining $\eta$ (Pa·s; 1 poise $=0.1$ Pa·s). Liquids: $\eta$ falls as temperature rises (cohesion weakens). Gases: $\eta$ <em>rises</em> with temperature (momentum carried by faster molecules) — the contrast with dry friction the book flags: viscous force needs <em>relative motion</em>, vanishes at rest, and depends on speed gradient, not on normal force.</p>
+<p><strong>Poiseuille by the force balance on a cylindrical shell.</strong> Steady laminar flow in a horizontal pipe of radius $R$, length $L$, pressure difference $\Delta p$. A coaxial fluid cylinder of radius $r$ moves at constant speed: pressure force $\Delta p\,\pi r^2$ forward balances viscous drag on its side, $-\eta\,(dv/dr)\,2\pi r L$ (the gradient is negative, so written with the sign that gives a positive drag):</p>
+<p>$$
+\Delta p\,\pi r^2 = -\eta \frac{dv}{dr} 2\pi r L \quad\Rightarrow\quad \frac{dv}{dr}=-\frac{\Delta p}{2\eta L}r.
+$$</p>
+<p>Integrate with $v(R)=0$ (no slip): $v(r)=\frac{\Delta p}{4\eta L}(R^2-r^2)$ — a paraboloid of velocities. Then</p>
+<p>$$
+Q=\int_0^R v\,2\pi r\,dr=\frac{\pi R^4 \Delta p}{8\eta L}. \qquad (3.13)
+$$</p>
+<p>The $R^4$ is the whole story of plumbing: halve a pipe's radius and you need sixteen times the pressure difference for the same flow — "why narrow pipes dominate" any series network, exactly like resistors with $R_{\text{hyd}}=8\eta L/\pi R^4$ adding in series.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.11 · Poiseuille's parabolic profile with the shell element</p>
+<p><em>Show:</em> a pipe cross-section with the parabolic velocity profile arrows; the coaxial shell of radius $r$ and thickness $dr$ highlighted with the pressure arrows at its ends and the shear arrows on its curved surface; the no-slip wall labelled $v=0$.
+<em>Search:</em> "Poiseuille flow parabolic velocity profile pipe derivation"
+<em>Used in:</em> §3.12 and Q19.</p>
+</div>
+
+<p><strong>Series and parallel pipes.</strong> Series: same $Q$, $\Delta p$ adds; parallel: same $\Delta p$, $Q$ adds. A wide pipe short-circuits a narrow one: with $R$ vs $R/2$ in parallel the narrow carries $1/17$ of the flow.</p>
+<h3 id="313-stokes-terminal-velocity-reynolds">3.13 Stokes, terminal velocity, Reynolds</h3>
+<p>For a sphere at low speed in a viscous fluid, dimensional analysis forces the drag form: $[F]=[\eta]^a[r]^b[v]^c$ gives $a=b=c=1$, so $F=k\eta r v$; Stokes' computation fixes $k=6\pi$:</p>
+<p>$$
+F_d = 6\pi\eta r v. \qquad (3.14)
+$$</p>
+<p>Balance with gravity minus buoyancy, $\tfrac43\pi r^3(\rho-\sigma)g$, for terminal velocity:</p>
+<p>$$
+v_t=\frac{2 r^2(\rho-\sigma)g}{9\eta}. \qquad (3.15)
+$$</p>
+<p><strong>Reynolds number.</strong> The ratio of inertial to viscous forces in a flow scales as</p>
+<p>$$
+\text{Re}=\frac{\rho v D}{\eta}. \qquad (3.16)
+$$</p>
+<p>Pipe flow turns turbulent around $\text{Re}\sim2000$–$4000$; Stokes' law itself is reliable only for $\text{Re}\lesssim1$, beyond which the quadratic drag $F\approx\tfrac12 C_d\rho A v^2$ takes over (OL4 treats the crossover).</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Raindrop sanity: $r=2$ mm, quadratic regime, $v_t\approx\sqrt{8 r\rho_w g/(3 C_d\rho_a)}\approx 8$–$9$ m/s; the Stokes formula would absurdly give $\sim10^2$ m/s — a signal that $\text{Re}\gg1$ there. Small drizzle $r=0.1$ mm sits near the Stokes side: $v_t\approx1.2$ m/s with (3.15) at $\eta_{air}=1.8\times10^{-5}$: $v_t=2(10^{-4})^2(1000)(9.8)/(9\times1.8\times10^{-5})\approx1.2$ m/s ✓ gentle.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.12 · Terminal velocity force diagram and the drag regimes</p>
+<p><em>Show:</em> left: a falling sphere with $mg$ down, $F_b$ and $F_d$ up, $a\to0$ labelled; right: drag coefficient vs Reynolds log-log sketch with the Stokes line $C_d=24/\text{Re}$, the plateau $C_d\approx0.44$, and the drag-crisis dip circled.
+<em>Search:</em> "drag coefficient versus Reynolds number sphere Stokes regime"</p>
+</div>
+
+<p><strong>Compressibility of water, honestly.</strong> $B_{\text{water}}=2.2\times10^9$ Pa; at the ocean floor ($\sim11$ km, $p\approx1.1\times10^8$ Pa) the fractional density rise is $\Delta\rho/\rho=\Delta p/B\approx5\%$ — real, and the reason precise oceanography cares, but small enough that every JEE hydrostatic number may ignore it. The sound-speed link: $v_s=\sqrt{B/\rho}=\sqrt{2.2\times10^9/1000}\approx1480$ m/s, matching measurement; that life of $B$ belongs to <a href="sound-waves.html">sound waves</a>.</p>
+<h3 id="314-surface-tension-two-definitions-one-quantity">3.14 Surface tension: two definitions, one quantity</h3>
+<p><strong>Definition 1 (force):</strong> $\gamma=F/L$, the force per unit length with which a surface pulls along any line drawn in it, perpendicular to the line, in the surface plane. <strong>Definition 2 (energy):</strong> $\gamma=W/\Delta A$, the work to create unit area. Their equivalence, by a sliding wire frame: pulling the wire by $dx$ against the force $F=\gamma L$ (two surfaces of a film: $2\gamma L$) does $W=2\gamma L\,dx=\gamma\,\Delta A$.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Molecularly, a surface molecule has fewer neighbours and higher potential energy; enlarging the surface promotes molecules up that deficit, costing energy, and the surface's tendency to shrink is the force reading of the same deficit.</p>
+</div>
+
+<p><strong>Cohesion and adhesion; contact angle.</strong> At a wall, the liquid surface meets the solid where the resultant of cohesive (liquid pulls liquid) and adhesive (solid pulls liquid) forces on a surface molecule is perpendicular to the surface. Adhesion stronger (water–clean glass): the surface climbs the wall, $\theta&lt;90^\circ$, concave meniscus. Cohesion stronger (mercury–glass): $\theta\approx140^\circ$, convex meniscus, capillary <em>depression</em>. Wetting is this single comparison.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.13 · Meniscus shapes and the contact angle</p>
+<p><em>Show:</em> two tubes side by side: water with concave meniscus, $\theta$ drawn through the liquid below $90^\circ$, adhesion arrows toward the wall; mercury with convex meniscus, $\theta\approx140^\circ$, cohesion arrows; the tangent lines at the contact point emphasised.
+<em>Search:</em> "contact angle concave convex meniscus water mercury glass"</p>
+</div>
+
+<h3 id="315-excess-pressure-across-curved-surfaces">3.15 Excess pressure across curved surfaces</h3>
+<p>A spherical drop of radius $r$: cut it by a plane through the centre. The surface-tension ring pulls the hemisphere inward with $\gamma\cdot2\pi r$; the excess pressure $\Delta p$ pushes it outward with $\Delta p\,\pi r^2$:</p>
+<p>$$
+\Delta p = \frac{2\gamma}{r}\quad(\text{drop, one surface}). \qquad (3.17)
+$$</p>
+<p>A soap bubble has <em>two</em> surfaces: $\Delta p=4\gamma/r$. The factor 2 is the single most-missed point in the book's exercise family. For a general curved surface with principal radii $r_1,r_2$ (stated here; OL5 derives it from energy):</p>
+<p>$$
+\Delta p=\gamma\left(\frac{1}{r_1}+\frac{1}{r_2}\right). \qquad (3.18)
+$$</p>
+<p>Plane surface: $r_{1,2}\to\infty$, no excess. Cylindrical film or a saddle: signs of curvature subtract. Consequences used constantly: two connected bubbles — the smaller one empties into the larger (higher pressure); a drop splitting into many droplets needs work input because total area grows; capillary pressure supports liquid columns.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.14 · Soap-bubble cross-section with the two surfaces</p>
+<p><em>Show:</em> a bubble wall greatly magnified: outer and inner surfaces each carrying $\gamma$, the ring force $2\gamma\cdot2\pi r$ on a hemisphere, excess-pressure arrows $\Delta p=4\gamma/r$ inside; beside it a single-surface drop with $2\gamma/r$; the factor-2 contrast boxed.
+<em>Search:</em> "soap bubble excess pressure two surfaces factor two derivation"</p>
+</div>
+
+<h3 id="316-capillarity-jurins-law-twice-and-the-short-tube">3.16 Capillarity: Jurin's law, twice, and the short tube</h3>
+<p><strong>Force balance.</strong> In a tube of radius $r$ with contact angle $\theta$, the surface pulls the column up along the wall with vertical component $\gamma\cos\theta$ per length, around circumference $2\pi r$; the column's weight is $\rho g h\,\pi r^2$ (meniscus volume neglected at $r\ll h$):</p>
+<p>$$
+2\pi r\,\gamma\cos\theta=\rho g h\,\pi r^2\quad\Rightarrow\quad h=\frac{2\gamma\cos\theta}{\rho g r}. \qquad (3.19)
+$$</p>
+<p><strong>Energy method.</strong> Raising the column by $dh$ trades adhesion for gravity: the surface-energy change per height is $-2\pi r(\gamma_{sg}-\gamma_{sl})=-2\pi r\gamma\cos\theta$ (Young's relation); minimising total energy $U(h)=-2\pi r\gamma\cos\theta\, h+\tfrac12\rho g h^2\pi r^2$ gives the same $h$. (The $\tfrac12$ appears because the column grows from zero: $U_g=\rho g \pi r^2 h\cdot h/2$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Numbers: water, $\gamma=0.0728$, $\theta\approx0$, $r=0.1$ mm: $h=2(0.0728)/(1000\cdot9.8\cdot10^{-4})\approx0.149$ m — a hand-span in a tenth-of-a-millimetre tube, which is why blotting paper works and why the same physics caps at about $10$ m even for microscopic pores (pressure side), setting the tree-height problem for OL9.</p>
+</div>
+
+<p><strong>Insufficient length.</strong> A tube shorter than $h$ does not overflow: the meniscus radius of curvature $R$ increases until $2\gamma/R\cdot\cos(\text{effective})$ supports the actual column, i.e. $R\,=\,r/\cos\theta$ becomes $R'=2\gamma/(\rho g h')$ with $h'$ the tube length; the liquid adjusts its <em>curvature</em>, never spills. $h R = h' R'$ is the working relation at $\theta=0$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.15 · Capillary rise in a tube of insufficient length</p>
+<p><em>Show:</em> left: a long tube with full Jurin height $h$ and tight meniscus radius $R=r$; right: a short tube with the meniscus flattened to $R'&gt;r$, same liquid, no overflow; labels $hR=h'R'$.
+<em>Search:</em> "capillary tube insufficient length meniscus radius adjustment"
+<em>Used in:</em> §3.16 and Q22.</p>
+</div>
+
+<h3 id="317-shallow-water-wave-speed-the-bridge-to-the-wave-notes">3.17 Shallow-water wave speed: the bridge to the wave notes</h3>
+<p>A gravity wave in depth $h$ with wavelength $\lambda\gg h$: the water moves nearly horizontally, and a crest is a moving bump whose excess height $\eta$ is pushed along by the hydrostatic pressure difference $\rho g\eta$. Continuity and momentum on the moving bump (worked fully in OL10) give</p>
+<p>$$
+v=\sqrt{gh}. \qquad (3.20)
+$$</p>
+<p>Validity: shallow water, small amplitude, inviscid. This is the chapter's single deliberate hand-off into <a href="string-waves.html">the shipped wave notes</a>: the same continuity-plus-momentum machinery that produced (3.7) and (3.8) produces a wave speed, showing that the "fluid block" and the "wave block" of the syllabus are one method.</p>
+<div class="callout quote">
+<p class="callout-title">Hand-off</p>
+<p>Deep-water dispersion ($v=\sqrt{g\lambda/2\pi}$), dispersion relations generally, and impedance of wave media live in [string waves §3](string-waves.html); the sound-speed route $\sqrt{B/\rho}$ in [sound waves §2](sound-waves.html).</p>
+</div>
+
+<p><strong>C5 — concept check.</strong> Why does a narrowing falling water stream from a tap eventually break into droplets?</p>
+<details>
+<summary>Solution</summary>
+<p>Continuity thins it as $v$ grows; below a millimetre-scale radius surface tension's inward pull $2\gamma/r$ beats the stream's inertia and the cylinder is unstable to necking (Plateau–Rayleigh). Scale argument: the skin wins at small $r$.</p>
+</details>
+<p><strong>C6 — concept check.</strong> In Poiseuille flow, what carries the "missing" pressure at the wall?</p>
+<details>
+<summary>Solution</summary>
+<p>The wall shear stress $\eta\lvert dv/dr\rvert_{r=R}=\Delta p R/2L$: the pressure force on each fluid shell is exactly balanced by shear, all the way to the wall.</p>
+</details>
+<p><strong>C7 — concept check.</strong> A U-tube holds two immiscible liquids; the interface is level only in the heavier-liquid arm. How do the free levels compare?</p>
+<details>
+<summary>Solution</summary>
+<p>Pressures at the interface must match: $\rho_1 g h_1=\rho_2 g h_2$ measured from the interface; the lighter liquid's column stands taller. The interface itself is not a level surface across two fluids.</p>
+</details>
+<p><strong>C8 — concept check.</strong> Does the buoyant force on a fully submerged ball change as it sinks deeper in an incompressible liquid?</p>
+<details>
+<summary>Solution</summary>
+<p>No, to the extent that both $\rho_f$ and the ball's volume are constant; the pressure <em>difference</em> top–bottom is $\rho g L$ at any depth because the gradient (3.1) is depth-independent.</p>
+</details>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<table>
+<thead>
+<tr>
+<th>result</th>
+<th>formula</th>
+<th>validity</th>
+<th>limit check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hydrostatic pressure</td>
+<td>$p=p_0+\rho g h$</td>
+<td>one static fluid, constant $\rho$</td>
+<td>$\rho\to0\Rightarrow p=p_0$</td>
+</tr>
+<tr>
+<td>Pascal lift</td>
+<td>$F_2=F_1 A/a$</td>
+<td>incompressible, sealed</td>
+<td>$A=a\Rightarrow F_2=F_1$</td>
+</tr>
+<tr>
+<td>plane force</td>
+<td>$F=p_c A$</td>
+<td>plane surface</td>
+<td>centroid depth $0$ gives $0$</td>
+</tr>
+<tr>
+<td>centre of pressure, rectangle from surface</td>
+<td>$2H/3$</td>
+<td>vertical rectangle</td>
+<td>matches triangle centroid</td>
+</tr>
+<tr>
+<td>tilt of accelerated surface</td>
+<td>$\tan\theta=a/g$</td>
+<td>rigid acceleration, settled</td>
+<td>$a\to0\Rightarrow\theta\to0$</td>
+</tr>
+<tr>
+<td>rotating surface</td>
+<td>$z=z_0+\omega^2r^2/2g$</td>
+<td>rigid rotation, settled</td>
+<td>$\omega\to0$ flat</td>
+</tr>
+<tr>
+<td>Archimedes</td>
+<td>$F_b=\rho_f V g$</td>
+<td>fluid in hydrostatic equilibrium</td>
+<td>$\rho_f\to0$ (air) negligible</td>
+</tr>
+<tr>
+<td>float fraction</td>
+<td>$V_s/V=\rho_b/\rho_f$</td>
+<td>floating at rest</td>
+<td>$\rho_b=\rho_f\Rightarrow$ fully submerged, neutral</td>
+</tr>
+<tr>
+<td>metacentric height</td>
+<td>$BM=I/V$</td>
+<td>small heel</td>
+<td>$I\to\infty$ stable</td>
+</tr>
+<tr>
+<td>continuity</td>
+<td>$Av=\text{const}$</td>
+<td>steady, incompressible</td>
+<td>$A\to\infty\Rightarrow v\to0$</td>
+</tr>
+<tr>
+<td>Bernoulli</td>
+<td>$p+\tfrac12\rho v^2+\rho g y=\text{const}$</td>
+<td>the four gates of §3.8</td>
+<td>$v=0$ reduces to (3.2)</td>
+</tr>
+<tr>
+<td>Torricelli</td>
+<td>$v=\sqrt{2gh}$</td>
+<td>small hole, quasi-steady</td>
+<td>$h\to0\Rightarrow v\to0$</td>
+</tr>
+<tr>
+<td>efflux range</td>
+<td>$x=2\sqrt{h(H-h)}$</td>
+<td>as Torricelli + projectile fall</td>
+<td>$h\to0$ or $H$ gives $x\to0$</td>
+</tr>
+<tr>
+<td>jet thrust</td>
+<td>$F=\rho a v^2$</td>
+<td>momentum flux</td>
+<td>$v\to0\Rightarrow0$</td>
+</tr>
+<tr>
+<td>Poiseuille</td>
+<td>$Q=\pi R^4\Delta p/8\eta L$</td>
+<td>laminar, steady, no slip</td>
+<td>$\eta\to0\Rightarrow Q\to\infty$ (inviscid runs free)</td>
+</tr>
+<tr>
+<td>Stokes drag</td>
+<td>$6\pi\eta r v$</td>
+<td>$\text{Re}\lesssim1$</td>
+<td>$\eta\to0\Rightarrow0$</td>
+</tr>
+<tr>
+<td>terminal velocity</td>
+<td>$v_t=2r^2(\rho-\sigma)g/9\eta$</td>
+<td>Stokes regime</td>
+<td>$r\to0\Rightarrow0$</td>
+</tr>
+<tr>
+<td>Reynolds</td>
+<td>$\rho v D/\eta$</td>
+<td>definition</td>
+<td>$\eta\to0\Rightarrow\infty$</td>
+</tr>
+<tr>
+<td>drop excess pressure</td>
+<td>$2\gamma/r$</td>
+<td>spherical, one surface</td>
+<td>$r\to\infty\Rightarrow0$</td>
+</tr>
+<tr>
+<td>bubble excess pressure</td>
+<td>$4\gamma/r$</td>
+<td>two surfaces</td>
+<td>half of two drops' worth</td>
+</tr>
+<tr>
+<td>Jurin</td>
+<td>$h=2\gamma\cos\theta/\rho g r$</td>
+<td>$r\ll h$, wetting equilibrium</td>
+<td>$\theta=90^\circ\Rightarrow h=0$</td>
+</tr>
+<tr>
+<td>shallow-water speed</td>
+<td>$v=\sqrt{gh}$</td>
+<td>$\lambda\gg h$, small amplitude</td>
+<td>deep water invalidates</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which formula when.</strong> Depth and rest → (3.2). Rigidly accelerated vessel → replace $\mathbf g$ by $\mathbf g-\mathbf a$. Floating/stability → §3.5–3.6. Flow speeds and pressures with the four gates → Bernoulli; if a <em>long narrow</em> pipe with a flow rate is named → Poiseuille, not Bernoulli. Sinking sphere at low Re → Stokes. Millimetre-scale surfaces → $\gamma$ family.</p>
+<div class="callout danger">
+<p class="callout-title">Trap</p>
+<p>Bernoulli across a long pipe "because it flows" is the exam favourite: a long pipe's pressure drop is viscous (Poiseuille), not inertial. Bernoulli explains the <em>constriction</em>, Poiseuille explains the <em>length</em>.</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.16 · The decision tree: which pressure tool?</p>
+<p><em>Show:</em> a small flowchart: "fluid at rest?" yes → hydrostatics/manometer; no → "long narrow pipe, flow rate given?" yes → Poiseuille; no → "four gates ok?" yes → Bernoulli; no → momentum flux or full dynamics; each leaf with one worked-problem number (Q2, Q19, Q12, Q16).
+<em>Search:</em> "fluid mechanics choosing bernoulli poiseuille hydrostatic decision"</p>
+</div>
+
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-two-layer-tank-pressure-at-the-bottom-and-the-kink">E1 — Two-layer tank: pressure at the bottom and the kink</h3>
+<p>A tank holds $0.8$ m of oil ($\rho=800$) above $1.2$ m of water. Find the gauge pressure at the interface and at the bottom.</p>
+<details>
+<summary>Solution</summary>
+<p>Interface: $p_i=\rho_o g h_o=800\times9.8\times0.8=6272$ Pa. Bottom adds the water column: $p_b=6272+1000\times9.8\times1.2=6272+11760=18032$ Pa gauge. The graph kinks at the interface (D11.1) but never jumps.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Single-fluid limit $\rho_o\to\rho_w$: $p_b=\rho g(2.0)=19600$ Pa; our $18032&lt;19600$ because oil is lighter ✓.</p>
+</div>
+</details>
+<h3 id="e2-the-manometer-with-a-trapped-gas">E2 — The manometer with a trapped gas</h3>
+<p>A U-tube: left limb open, right limb closed over trapped gas. Mercury stands $18$ cm higher in the right limb; water fills $10$ cm above the mercury in the <em>open</em> limb. Find the trapped gas pressure (absolute).</p>
+<details>
+<summary>Solution</summary>
+<p>Start at the open end: $p_0+\rho_w g(0.10)$ at the water–mercury interface. Descend and climb to the right mercury surface: net mercury height difference $0.18$ m <em>up</em> on the right, so subtract $\rho_{Hg} g(0.18)$: $p_{gas}=1.013\times10^5+1000\times9.8\times0.10-13600\times9.8\times0.18=1.013\times10^5+980-23990=7.83\times10^4$ Pa.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Below atmospheric, consistent with the right column standing higher ✓. Units Pa throughout ✓.</p>
+</div>
+</details>
+<h3 id="e3-hydraulic-lift-energy-audit">E3 — Hydraulic lift energy audit</h3>
+<p>A lift with $a=0.01$ m$^2$, $A=0.5$ m$^2$ raises $2000$ kg by $0.10$ m. Input force, input stroke, and both works.</p>
+<details>
+<summary>Solution</summary>
+<p>$F_2=2000\times9.8=19600$ N; $F_1=F_2 a/A=392$ N. Output stroke $0.10$ m needs volume $A\times0.10=0.05$ m$^3$, so input stroke $0.05/0.01=5$ m. $W_1=392\times5=1960$ J $=W_2=19600\times0.10$ ✓.</p>
+</details>
+<h3 id="e4-quarter-circle-gate">E4 — Quarter-circle gate</h3>
+<p>A quarter-cylinder gate of radius $R=2$ m, width $w=3$ m, holds water with the surface at the gate's top. Find the force components on the gate.</p>
+<details>
+<summary>Solution</summary>
+<p>Horizontal component: the vertical projection is a $2\times3$ m rectangle whose centroid lies $1$ m deep, so $F_H=\rho g h_c A=1000\times9.8\times1\times6=5.88\times10^4$ N. Vertical component: the liquid column directly above the curved face has cross-section (square minus quarter circle) $=R^2-\pi R^2/4=4-\pi=0.858$ m$^2$, hence $F_V=\rho g\times0.858\times3=2.52\times10^4$ N downward. Resultant $\sqrt{F_H^2+F_V^2}=6.4\times10^4$ N at $\tan^{-1}(2.52/5.88)=23.3^\circ$ below horizontal.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Every pressure force on a circular arc is radial and passes through the centre, so the resultant must too — use that as the line of action instead of re-deriving moments ✓.</p>
+</div>
+</details>
+<h3 id="e5-the-accelerating-tank-and-the-uncovered-strip">E5 — The accelerating tank and the uncovered strip</h3>
+<p>An open tank $6$ m long, $2.5$ m high holds water to $2$ m. It accelerates horizontally. (a) At what $a$ does water reach the brim at the back? (b) At what $a$ does the bottom begin to show at the front?</p>
+<details>
+<summary>Solution</summary>
+<p>(a) The surface pivots about the mid-length point while no water spills (volume fixed): rise at back $=0.5$ m over $3$ m, $\tan\theta=0.5/3=a/g$, $a=9.8/6=1.63$ m/s$^2$. (b) Bottom shows when the surface passes through the front bottom corner and the back top corner: $\tan\theta=2.5/6$, $a=9.8\times2.5/6=4.08$ m/s$^2$ — but only after spilling has begun; at the onset of spilling the depth at the back is $2.5$ m and volume conservation no longer holds, so use geometry directly: $a=4.08$ m/s$^2$ is the answer at the instant the front bottom corner is exposed <em>with</em> spilling already accounted (surface through both corners).</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Between (a) and (b) the pivot-about-centre rule holds only until spilling starts at $a$ where the back level hits the brim; afterwards recompute with the surface pinned at the back rim.</p>
+</div>
+</details>
+<h3 id="e6-the-balloon-in-the-braking-car">E6 — The balloon in the braking car</h3>
+<p>A helium balloon is tied to the floor of a car whose acceleration is $\mathbf a$ (forward when speeding up, rearward when braking). Which way does it lean, and why does a hanging strap lean the other way?</p>
+<details>
+<summary>Solution</summary>
+<p>In the car's frame, effective gravity is $\mathbf g_{\text{eff}}=\mathbf g-\mathbf a$; pressure increases along $-\mathbf g_{\text{eff}}$, so the air piles toward the rear when $\mathbf a$ is forward. Buoyancy on the balloon points along $-\mathbf g_{\text{eff}}$, i.e. up <em>plus</em> $\mathbf a$: the balloon leans <strong>along</strong> $\mathbf a$ — forward under acceleration, rearward under braking. The strap, denser than air, hangs along $\mathbf g_{\text{eff}}$, i.e. against $\mathbf a$. Both are the same vector statement applied to bodies lighter and denser than the surrounding fluid.</p>
+<div class="callout tip">
+<p class="callout-title">Insight</p>
+<p>Rule to carry: the balloon leans <em>along</em> $\mathbf a$, the strap <em>against</em> $\mathbf a$.</p>
+</div>
+</details>
+<h3 id="e7-ice-with-a-stone-numerically">E7 — Ice with a stone, numerically</h3>
+<p>A $0.5$ kg ice cube embeds a $0.1$ kg stone ($\rho_s=2500$). It floats in fresh water in a cylinder of area $0.02$ m$^2$. After melting, by how much does the level change?</p>
+<details>
+<summary>Solution</summary>
+<p>While floating, displaced volume $V_1=(0.6)/1000=6.0\times10^{-4}$ m$^3$. After: meltwater $0.5/1000=5.0\times10^{-4}$ m$^3$ joins the tank; stone displaces $0.1/2500=4.0\times10^{-5}$ m$^3$. Total added to the water body: $5.4\times10^{-4}$ m$^3$ vs removed displacement $6.0\times10^{-4}$ m$^3$: deficit $6\times10^{-5}$ m$^3$, level falls by $6\times10^{-5}/0.02=3$ mm.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Sign matches §3.6's qualitative rule (stone denser ⇒ fall) ✓.</p>
+</div>
+</details>
+<h3 id="e8-venturi-flow-rate">E8 — Venturi flow rate</h3>
+<p>A horizontal pipe $A_1=4\times10^{-3}$ m$^2$ narrows to $A_2=10^{-3}$ m$^2$. A water manometer across the pair reads $0.15$ m of water. Find $Q$.</p>
+<details>
+<summary>Solution</summary>
+<p>$\Delta p=\rho g \Delta h=1000\times9.8\times0.15=1470$ Pa. $A_1^2/A_2^2=16$. $v_1=\sqrt{2\times1470/(1000\times15)}=\sqrt{0.196}=0.443$ m/s. $Q=A_1v_1=1.77\times10^{-3}$ m$^3$/s.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v_2=1.77$ m/s; dynamic-pressure rise $\tfrac12\rho(v_2^2-v_1^2)=\tfrac12\times1000\times(3.13-0.196)=1467$ Pa ✓ matches $\Delta p$.</p>
+</div>
+</details>
+<h3 id="e9-raindrop-terminal-velocity-in-the-stokes-regime">E9 — Raindrop terminal velocity in the Stokes regime</h3>
+<p>Find $v_t$ for $r=0.10$ mm in air ($\eta=1.8\times10^{-5}$, $\rho_w=1000$), then check the regime.</p>
+<details>
+<summary>Solution</summary>
+<p>Numerator: $2r^2(\rho-\sigma)g=2\times(10^{-4})^2\times1000\times9.8=1.96\times10^{-4}$. Denominator: $9\eta=9\times1.8\times10^{-5}=1.62\times10^{-4}$. So $v_t=1.21$ m/s. Now the regime: $\text{Re}=\rho_a v_t D/\eta=1.2\times1.21\times2\times10^{-4}/1.8\times10^{-5}\approx16$, well beyond $\text{Re}\lesssim1$ — Stokes overestimates; the honest terminal speed is of order $0.7$–$1$ m/s once quadratic drag enters (OL4 does the crossover). The exercise's real lesson is that a Stokes answer without its Reynolds number is an unfinished answer.</p>
+<div class="callout warning">
+<p class="callout-title">Condition of validity</p>
+<p>Always print Re with a Stokes answer; graders award the check, not the number.</p>
+</div>
+</details>
+<h3 id="e10-capillary-rise-and-the-energy-book">E10 — Capillary rise and the energy book</h3>
+<p>Water rises in a clean tube of $r=0.5$ mm. (a) The height. (b) The surface-energy and gravitational-energy changes, and where the "missing" half went.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $h=2\times0.0728/(1000\times9.8\times5\times10^{-4})=0.0297$ m. (b) $U_g=\tfrac12\rho g h^2\pi r^2=\tfrac12\times1000\times9.8\times(0.0297)^2\times\pi(5\times10^{-4})^2=3.37\times10^{-7}$ J. The adhesion release is $2\pi r h\,\gamma\cos\theta=2\pi(5\times10^{-4})(0.0297)(0.0728)=6.8\times10^{-7}$ J — twice $U_g$; the other half dissipates as heat and sloshing while the column oscillates and damps to rest. Energy methods give the equilibrium height from $dU/dh=0$; the full release explains the factor.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$dU/dh=0$ reproduces Jurin exactly; the factor-2 dissipation is the classic capillary paradox, stated, not hidden.</p>
+</div>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Two-fluid column pressure</td>
+<td>add $\rho g h$ per layer</td>
+<td>E1, Q2</td>
+<td>three layers; tilted tube</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Manometer step method</td>
+<td>walk, add down, subtract up</td>
+<td>E2, Q3</td>
+<td>trapped gas both limbs; accelerated manometer</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Hydraulic lift audit</td>
+<td>force ratio $A/a$, equal works</td>
+<td>E3, Q4</td>
+<td>two-stage lift; spring-loaded piston</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Force on plane/inclined surface</td>
+<td>$F=p_cA$, centre of pressure $2H/3$</td>
+<td>§3.3, Q5</td>
+<td>hinged gate torque; trapezoidal dam</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Curved surface by projection</td>
+<td>$F_H$ on projection, $F_V$ weight above</td>
+<td>E4, Q6</td>
+<td>gate holding from below (upthrust)</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Accelerated tank geometry</td>
+<td>$\tan\theta=a/g$, volume bookkeeping</td>
+<td>E5, Q7</td>
+<td>vertical acceleration; rotation</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Floating fraction</td>
+<td>$\rho_b/\rho_f$</td>
+<td>§3.5, Q8, Q9</td>
+<td>layered liquids; overflow</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Ice-melting levels</td>
+<td>displaced vs added volume</td>
+<td>E7, Q10, Q11</td>
+<td>salt water; bubble; stone; oil layer</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Metacentre/stability</td>
+<td>$BM=I/V$</td>
+<td>§3.5, Q8</td>
+<td>cylinder float; submerged case</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Continuity in tapers</td>
+<td>$Av$ const</td>
+<td>§3.7, Q12</td>
+<td>branching; falling stream radius</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Bernoulli device</td>
+<td>four gates, then (3.8)</td>
+<td>E8, Q12–Q14</td>
+<td>pitot; siphon; atomiser</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Torricelli family</td>
+<td>$v=\sqrt{2gh}$, range, drain time</td>
+<td>§3.10, Q13, OL1</td>
+<td>moving tank; two holes</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Jet thrust</td>
+<td>$F=\rho a v^2$</td>
+<td>§3.11, Q16</td>
+<td>moving plate; curved vane</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Poiseuille networks</td>
+<td>$R_{hyd}=8\eta L/\pi R^4$ series/parallel</td>
+<td>§3.12, Q19</td>
+<td>series pair; ratio flows</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Terminal velocity + regime</td>
+<td>(3.15) then print Re</td>
+<td>E9, Q20</td>
+<td>oil column; density match</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Excess pressure book</td>
+<td>$2\gamma/r$, $4\gamma/r$, merging</td>
+<td>§3.15, Q21</td>
+<td>bubble coalescence; splitting work</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>Jurin and short tube</td>
+<td>(3.19); $hR=h'R'$</td>
+<td>E10, Q22, Q23</td>
+<td>contact angle; mercury depression</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Surface-energy work</td>
+<td>$\gamma\Delta A$ with surface counting</td>
+<td>§3.14, Q24, Q25</td>
+<td>film on frame; drop splitting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-practice">6.2 Practice</h3>
+<h4 id="q1-a-vertical-tube-holds-40-cm-of-water-above-30-cm-of-mercury-gauge-pressure-at-the-bottom">Q1. A vertical tube holds $40$ cm of water above $30$ cm of mercury. Gauge pressure at the bottom?</h4>
+<details>
+<summary>Solution</summary>
+<p>$1000\times9.8\times0.40+13600\times9.8\times0.30=3920+39984=43904$ Pa $\approx4.39\times10^4$ Pa.</p>
+</details>
+<h4 id="q2-in-a-two-layer-lake-3-m-oil-of-900-over-7-m-water-a-ball-rests-exactly-at-the-interface-the-pressures-just-above-and-just-below-it-are-equal-the-buoyant-forces-per-volume-are-not-explain-in-one-line">Q2. In a two-layer lake ($3$ m oil of $900$ over $7$ m water) a ball rests exactly at the interface. The pressures just above and just below it are equal; the <em>buoyant</em> forces per volume are not. Explain in one line.</h4>
+<details>
+<summary>Solution</summary>
+<p>Pressure is continuous, but the local gradient $\rho g$ — which sets the buoyant force per displaced volume — jumps from $900g$ to $1000g$.</p>
+</details>
+<h4 id="q3-a-u-tube-with-both-limbs-open-holds-water-10-cm-of-oil-800-is-poured-into-one-limb-the-difference-of-the-water-levels-in-the-two-limbs">Q3. A U-tube with both limbs open holds water; $10$ cm of oil ($800$) is poured into one limb. The difference of the water levels in the two limbs?</h4>
+<details>
+<summary>Solution</summary>
+<p>Interface balance: $\rho_o g h_o=\rho_w g h_w\Rightarrow h_w=0.8\times10=8$ cm.</p>
+</details>
+<h4 id="q4-a-hydraulic-press-has-aa150-to-hold-500-kg-the-input-force-if-the-load-rises-2-cm-the-input-stroke">Q4. A hydraulic press has $a/A=1/50$. To hold $500$ kg, the input force? If the load rises $2$ cm, the input stroke?</h4>
+<details>
+<summary>Solution</summary>
+<p>$F_1=500\times9.8/50=98$ N; stroke $=50\times0.02=1$ m.</p>
+</details>
+<h4 id="q5-a-2-m-times-3-m-vertical-gate-has-its-top-edge-at-the-water-surface-force-on-it-and-the-torque-about-the-top-hinge">Q5. A $2$ m $\times$ $3$ m vertical gate has its top edge at the water surface. Force on it and the torque about the top hinge.</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=\rho g h_c A=1000\times9.8\times1\times6=5.88\times10^4$ N acting at $2H/3=4/3$ m; torque about top $=5.88\times10^4\times4/3=7.84\times10^4$ N·m.</p>
+</details>
+<h4 id="q6-a-hemispherical-bump-of-radius-05-m-protrudes-from-a-tank-wall-water-outside-at-depth-2-m-to-the-bump-centre-horizontal-force-on-the-bump">Q6. A hemispherical bump of radius $0.5$ m protrudes from a tank wall, water outside at depth $2$ m to the bump centre. Horizontal force on the bump?</h4>
+<details>
+<summary>Solution</summary>
+<p>$F_H=p_c A_{proj}=(\rho g\times2)\times\pi(0.5)^2=19600\times0.785=1.54\times10^4$ N. (Vertical component needs the weight-above argument; the projection trick kills it for $F_H$.)</p>
+</details>
+<h4 id="q7-a-tank-accelerates-upward-at-g-the-pressure-at-depth-h">Q7. A tank accelerates upward at $g$. The pressure at depth $h$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$g_{eff}=2g$: $p=p_0+2\rho g h$. The scale under the tank agrees: apparent weight doubles.</p>
+</details>
+<h4 id="q8-a-wooden-cylinder-of-density-667-kgm3-floats-vertically-in-water-oil-of-density-500-kgm3-is-poured-until-the-cylinder-is-just-covered-what-fraction-of-the-cylinder-now-sits-in-the-water">Q8. A wooden cylinder of density $667$ kg/m$^3$ floats vertically in water. Oil of density $500$ kg/m$^3$ is poured until the cylinder is just covered. What fraction of the cylinder now sits in the water?</h4>
+<details>
+<summary>Solution</summary>
+<p>Buoyancy now has two contributors: $\rho_b V=\rho_w V_w+\rho_o(V-V_w)$. Substituting: $667V=1000V_w+500V-500V_w$, so $167V=500V_w$ and $V_w/V=1/3$. The cylinder rides up because the upper liquid <em>helps</em> buoyancy; the water need hold only a third.</p>
+<p>Limit checks: with $\rho_o\to0$ the fraction returns to $667/1000=2/3$, the original float fraction ✓; with $\rho_o\to667$ the cylinder is neutral in the oil and $V_w\to0$ ✓.</p>
+</details>
+<h4 id="q9-a-cubical-block-floats-half-in-water-half-in-oil-800-its-density">Q9. A cubical block floats half-in water half-in oil ($800$). Its density?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\rho_b=0.5(1000)+0.5(800)=900$ kg/m$^3$.</p>
+</details>
+<h4 id="q10-ice-floats-in-water-with-an-iron-pin-stuck-underneath-it-fully-submerged-pin-on-melting-the-level">Q10. Ice floats in water with an iron pin stuck <em>underneath</em> it (fully submerged pin). On melting, the level?</h4>
+<details>
+<summary>Solution</summary>
+<p>Same as stone-in-ice: falls, by the pin's $(m/\rho_w-m/\rho_{Fe})&gt;0$ deficit.</p>
+</details>
+<h4 id="q11-ice-containing-an-air-pocket-floats-it-melts-level">Q11. Ice containing an air pocket floats; it melts. Level?</h4>
+<details>
+<summary>Solution</summary>
+<p>Unchanged: the pocket's mass is negligible in both states.</p>
+</details>
+<h4 id="q12-water-flows-in-a-pipe-at-12-ms-where-the-radius-is-2-cm-speed-where-the-radius-is-1-cm-if-the-wide-part-is-10-m-lower-the-pressure-difference-ignore-viscosity">Q12. Water flows in a pipe at $1.2$ m/s where the radius is $2$ cm. Speed where the radius is $1$ cm? If the wide part is $10$ m lower, the pressure difference (ignore viscosity)?</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_2=1.2\times4=4.8$ m/s. Bernoulli: $p_1-p_2=\tfrac12\rho(v_2^2-v_1^2)+\rho g(y_2-y_1)=\tfrac12\times1000(23.04-1.44)+1000\times9.8\times10=10800+98000=1.088\times10^5$ Pa.</p>
+</details>
+<h4 id="q13-a-tank-of-water-height-h125-m-has-a-hole-at-h08-m-depth-horizontal-range-on-the-floor">Q13. A tank of water height $H=1.25$ m has a hole at $h=0.8$ m depth. Horizontal range on the floor?</h4>
+<details>
+<summary>Solution</summary>
+<p>$x=2\sqrt{0.8\times0.45}=2\times0.6=1.2$ m.</p>
+</details>
+<h4 id="q14-a-siphons-top-is-3-m-above-the-supply-level-the-outlet-is-2-m-below-it-speed-in-the-tube-uniform-bore">Q14. A siphon's top is $3$ m above the supply level; the outlet is $2$ m below it. Speed in the tube (uniform bore)?</h4>
+<details>
+<summary>Solution</summary>
+<p>$v=\sqrt{2g\times2}=6.26$ m/s; top pressure $p_0-\rho g(3)-\tfrac12\rho v^2=1.013\times10^5-29400-19600=5.23\times10^4$ Pa — safely positive.</p>
+</details>
+<h4 id="q15-a-cylindrical-vessel-of-area-a-has-a-hole-of-area-aa100-time-to-drain-from-h125-m-to-empty">Q15. A cylindrical vessel of area $A$ has a hole of area $a=A/100$. Time to drain from $H=1.25$ m to empty?</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=(A/a)\sqrt{2H/g}=100\times\sqrt{0.255}=100\times0.505=50.5$ s (OL1 derives the formula).</p>
+</details>
+<h4 id="q16-a-fire-hose-a5times10-4-m2-jets-water-at-20-ms-horizontally-at-a-wall-force-on-the-wall-if-the-water-drops-straight-down-after-impact">Q16. A fire hose ($a=5\times10^{-4}$ m$^2$) jets water at $20$ m/s horizontally at a wall. Force on the wall if the water drops straight down after impact?</h4>
+<details>
+<summary>Solution</summary>
+<p>$F=\rho a v^2=1000\times5\times10^{-4}\times400=200$ N.</p>
+</details>
+<h4 id="q17-two-holes-at-depths-h-and-4h-in-a-tall-tank-ratio-of-efflux-speeds-ratio-of-thrusts-equal-areas">Q17. Two holes at depths $h$ and $4h$ in a tall tank. Ratio of efflux speeds? Ratio of thrusts (equal areas)?</h4>
+<details>
+<summary>Solution</summary>
+<p>Speeds $1:2$; thrusts $\rho a v^2\Rightarrow1:4$.</p>
+</details>
+<h4 id="q18-a-balloon-of-volume-v-rises-in-air-why-does-its-ascent-slow-and-stop-name-two-mechanisms">Q18. A balloon of volume $V$ rises in air; why does its ascent slow and stop? (Name two mechanisms.)</h4>
+<details>
+<summary>Solution</summary>
+<p>Air density falls with height, shrinking $F_b=\rho_a V g$ toward the weight; and drag (quadratic at balloon Re) eats the acceleration. Equilibrium where $\rho_a V=!m$.</p>
+</details>
+<h4 id="q19-two-capillaries-in-series-radii-r-and-r2-same-length-carry-oil-under-total-delta-p3times105-pa-the-drop-across-the-narrow-one">Q19. Two capillaries in series, radii $r$ and $r/2$, same length, carry oil under total $\Delta p=3\times10^5$ Pa. The drop across the narrow one?</h4>
+<details>
+<summary>Solution</summary>
+<p>Resistance ratio $1:16$ (from $R^4$); narrow carries $16/17$ of $\Delta p=2.82\times10^5$ Pa.</p>
+</details>
+<h4 id="q20-a-sphere-of-density-2000-kgm3-falls-in-glycerine-rho1260-eta15-pas-reaching-v_t01-ms-its-radius-stokes">Q20. A sphere of density $2000$ kg/m$^3$ falls in glycerine ($\rho=1260$, $\eta=1.5$ Pa·s) reaching $v_t=0.1$ m/s. Its radius (Stokes)?</h4>
+<details>
+<summary>Solution</summary>
+<p>$r=\sqrt{9\eta v_t/(2(\rho-\sigma)g)}=\sqrt{9\times1.5\times0.1/(2\times740\times9.8)}=\sqrt{0.135/14504}=\sqrt{9.31\times10^{-6}}=3.05\times10^{-3}$ m. Regime Re $=1260\times0.1\times6.1\times10^{-3}/1.5\approx0.51&lt;1$ ✓ Stokes honest.</p>
+</details>
+<h4 id="q21-two-soap-bubbles-of-radii-r-and-3r-coalesce-in-vacuum-isothermal-surface-tension-fixed-the-new-radius">Q21. Two soap bubbles of radii $r$ and $3r$ coalesce in vacuum (isothermal, surface tension fixed). The new radius?</h4>
+<details>
+<summary>Solution</summary>
+<p>Isothermal coalescence conserves moles of air: for a bubble $n\propto pV=(4\gamma/r)\tfrac43\pi r^3=\tfrac{16}{3}\pi\gamma r^2$. Bubble 1 gives $\tfrac{16}{3}\pi\gamma r^2$; bubble 2 ($3r$) gives $(4\gamma/3r)\tfrac43\pi(3r)^3=16\pi\gamma r^2$. The new bubble carries $\tfrac{16}{3}\pi\gamma R^2$. Sum: $\tfrac{16}{3}\pi\gamma R^2=\tfrac{16}{3}\pi\gamma r^2+16\pi\gamma r^2=\tfrac{64}{3}\pi\gamma r^2$, so $R^2=4r^2$ and $R=2r$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Volume check: $V_{new}=\tfrac43\pi 8r^3$ vs $V_1+V_2=\tfrac43\pi(28)r^3$ — the new bubble has <em>less</em> volume because its internal pressure is lower; moles, not volume, are conserved ✓.</p>
+</div>
+</details>
+<h4 id="q22-water-rises-12-cm-in-a-capillary-the-tube-is-only-9-cm-long-the-meniscus-radius-ratio-rr">Q22. Water rises $12$ cm in a capillary; the tube is only $9$ cm long. The meniscus radius ratio $R'/R$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$hR=h'R'\Rightarrow R'/R=12/9=4/3$. The meniscus flattens; no overflow.</p>
+</details>
+<h4 id="q23-mercury-gamma0465-theta140circ-rho13600-in-a-1-mm-tube-rise-or-depression-and-by-how-much">Q23. Mercury ($\gamma=0.465$, $\theta=140^\circ$, $\rho=13600$) in a $1$ mm tube: rise or depression, and by how much?</h4>
+<details>
+<summary>Solution</summary>
+<p>$\cos140^\circ=-0.766$, so $h=2\times0.465\times(-0.766)/(13600\times9.8\times5\times10^{-4})=-0.712/66.6=-0.0107$ m: a $1.07$ cm <strong>depression</strong>, as the convex meniscus promised.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Sign check via §3.14: $\theta&gt;90^\circ$ means the liquid is pulled away from the wall, so the column stands lower than the reservoir ✓.</p>
+</div>
+</details>
+<h4 id="q24-a-square-wire-frame-10-cm-side-is-lifted-from-a-water-surface-the-extra-force-just-before-the-film-breaks">Q24. A square wire frame $10$ cm side is lifted from a water surface; the extra force just before the film breaks?</h4>
+<details>
+<summary>Solution</summary>
+<p>Film on both faces: $F=2\gamma\times(4\times0.10)=2\times0.0728\times0.4=0.058$ N.</p>
+</details>
+<h4 id="q25-a-drop-of-radius-r-splits-into-1000-equal-drops-the-work-done">Q25. A drop of radius $R$ splits into $1000$ equal drops. The work done?</h4>
+<details>
+<summary>Solution</summary>
+<p>$r=R/10$. $\Delta A=1000\times4\pi r^2-4\pi R^2=4\pi R^2(10-1)=36\pi R^2$; $W=\gamma\times36\pi R^2$. For $R=1$ mm: $W=0.0728\times36\pi\times10^{-6}=8.2\times10^{-6}$ J.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<p><strong>T1 · The frame trick.</strong> Any rigidly accelerated or rotated vessel is a hydrostatics problem in disguise: replace $\mathbf g$ by $\mathbf g-\mathbf a$ (add $\omega^2 r$ radially for rotation) and reuse every static tool — manometer steps, Archimedes, "level surfaces perpendicular to $g_{eff}$". Cuts E5, E6, Q7-class questions to one line. <em>Fails</em> the moment different parts of the fluid have different accelerations (sloshing, transients): then it is dynamics, not hydrostatics.</p>
+<p><strong>T2 · The displacement-volume ledger.</strong> For any "what happens to the level" question, never integrate pressures: compare <em>volume displaced while floating</em> (mass-based, $m/\rho_f$) with <em>volume occupied or displaced afterwards</em> (geometry-based if sunk, mass-based if floating). The four ice-family answers are one table, not four derivations (§3.6).</p>
+<p><strong>T3 · Pressure-walk (manometric) method with $g_{eff}$.</strong> Walk from any open end to the target point, adding $\rho g_{eff}\Delta h$ per descent; horizontal segments cost nothing. Beats writing force balances for every multi-fluid column (E2, Q3).</p>
+<p><strong>T4 · Projection theorem for curved surfaces.</strong> $F_H$ equals the plane-projection force; $F_V$ equals the real-or-imagined column weight above. Converts a calculus problem into two statics lookups (E4, Q6). <em>Fails</em> only when the surface is not wetted on the assumed side — draw the wetting first.</p>
+<p><strong>T5 · Hydraulic resistance analogy.</strong> Poiseuille gives $R_{hyd}=8\eta L/\pi R^4$; series and parallel combine like electrical resistors with $\Delta p\leftrightarrow V$, $Q\leftrightarrow I$. Q19 becomes a voltage divider. <em>Fails</em> for short fittings and turbulent flow, where the $\Delta p\propto Q$ linearity dies.</p>
+<p><strong>T6 · Energy-vs-force double solve.</strong> Capillary rise, bubble expansion, film stretching: solve once with forces (Jurin balance) and once with $dU/dh=0$ or $dU/dr=0$. Disagreement signals a missed surface (the factor-2 family) — E10 shows the audit including dissipation.</p>
+<p><strong>T7 · Dimensional bootstrap.</strong> Stokes' drag form and the Reynolds number are dimensional statements (§3.13); shallow-water speed $v\propto\sqrt{gh}$ is one too. When an exam says "depends only on...", dimensional analysis <em>is</em> the solution, with the constant left for experiment (<a href="units-measurements.html">units §10</a> owns the method).</p>
+<p><strong>T8 · Scaling/limit audit.</strong> After solving any fluid number, hit it with $r\to0$ (skin physics appears), $\eta\to0$ (Bernoulli world), $a\to0$ (statics), $A/a\to\infty$ (Torricelli exact). Every worked exemplar here closes with one of these; make it reflexive.</p>
+<div class="callout question">
+<p class="callout-title">Exam note</p>
+<p>JEE Advanced loves <em>composite</em> fluid items: a Bernoulli jet feeding a buoyancy balance, a capillary in an accelerating lift. The trap is solving with the wrong $g$ or forgetting that the jet's thrust is momentum flux, not $pA$. Triage by the §9 tree first.</p>
+</div>
+
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<ol>
+<li><strong>Shape dependence.</strong> "More water, more pressure on the base." Reply: pressure is depth, Eq. (3.2); the hydrostatic paradox (D11.2) carries the rest. Paper archetype: three-vessel MCQ.</li>
+<li><strong>Absolute vs gauge.</strong> Plugging $p_0$ into a $\Delta p$ manometer walk, or reporting gauge where absolute is asked (bubbles!). Reply: label every pressure you write as <em>abs</em> or <em>gauge</em> on first use.</li>
+<li><strong>Displaced volume ≠ body volume.</strong> Using the whole body volume for $F_b$ on a floating or partially submerged body. Reply: $V_{disp}$ is what the fluid actually lost.</li>
+<li><strong>The soap-bubble factor 2.</strong> Using $2\gamma/r$ for a bubble. Reply: two surfaces, $4\gamma/r$; a drop has one (D11.14).</li>
+<li><strong>Bernoulli where Poiseuille rules.</strong> Applying (3.8) between the ends of a long pipe with flow. Reply: the four gates; long pipe ⇒ viscous drop (3.13).</li>
+<li><strong>Torricelli with a big hole.</strong> Ignoring the surface speed. Reply: the condition is $a/A\ll1$; otherwise include $v_{surface}$ from continuity.</li>
+<li><strong>Siphon at any height.</strong> Reply: $p_{top}\ge0$ caps the lift at $\sim p_0/\rho g\approx10.3$ m of water (3.10's warning).</li>
+<li><strong>Buoyancy at the wrong point.</strong> Taking moments about the centre of mass with $F_b$ applied there. Reply: $F_b$ acts at the centre of <em>buoyancy</em>, the centroid of displaced volume (3.5).</li>
+<li><strong>Air buoyancy ignored in precision work.</strong> Weighing "in air" as in vacuum. Reply: fine for JEE numbers, fatal for metrology — say so in one line, as §3.5's honesty note does.</li>
+<li><strong>Stokes beyond its regime.</strong> Printing (3.15) without Re. Reply: print Re; if $&gt;1$, say quadratic drag enters (E9).</li>
+<li><strong>Neutral axis at the geometric centre for composite sections.</strong> (Preview for PART 12, but the fluid analogue bites here:) assuming the centre of pressure is the centroid. Reply: it is below, by $I_c/Ah_c$; the pressure triangle decides.</li>
+<li><strong>Contact angle on the wrong side.</strong> Measuring $\theta$ through the gas. Reply: through the liquid; mercury's $140^\circ$ then gives depression with the right sign (Q23).</li>
+</ol>
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<p><strong>Triage tree.</strong></p>
+<ol>
+<li>Fluid at rest (or rigidly accelerated/rotated)? → hydrostatics with $\mathbf g$ or $\mathbf g_{eff}$ (T1, T3).</li>
+<li>Floating/sinking/level-change? → Archimedes plus the displacement ledger (T2).</li>
+<li>Flow with speeds/pressures, short devices, four gates OK? → continuity + Bernoulli (T8's limits after).</li>
+<li>Long narrow pipe, flow rate or viscosity named? → Poiseuille network (T5).</li>
+<li>Jet, thrust, draining-force question? → momentum flux $\rho a v^2$ (and OL1 for times).</li>
+<li>Millimetre scale: drops, bubbles, menisci, tubes? → $\gamma$ family (T6's double solve).</li>
+</ol>
+<p><strong>Formula map with validity.</strong> (3.2) statics; (3.3)–(3.4) rigid acceleration/rotation; (3.5)–(3.6) buoyancy/stability; (3.7) continuity; (3.8) the four gates; (3.9)–(3.11) devices; (3.13) laminar pipe; (3.14)–(3.15) Stokes; (3.17)–(3.19) surface family. Each carries its warning box in Part 3; the Part 4 ledger is the cram version.</p>
+<p><strong>Constants to memorise.</strong> $p_0\approx10^5$ Pa; water barometer $10.3$ m; $\gamma_{water}\approx0.073$ N/m; $\eta_{water}\approx10^{-3}$ Pa·s; $\rho_{Hg}/\rho_w=13.6$; $B_{water}\approx2.2\times10^9$ Pa.</p>
+<p><strong>Timing plan.</strong> Section A items: 90 s each, mostly T2/T3 lookups. Section D fluid longs: 12 min — 2 min to draw and choose the tool, 8 to derive, 2 to limit-check.</p>
+<p><strong>Pre-submission audit (10 points).</strong> (1) Every pressure labelled abs/gauge. (2) $V_{disp}$ drawn, not assumed. (3) Bernoulli gates named if used. (4) Re printed with any Stokes number. (5) Factor 2 audited on every film/bubble surface count. (6) $g_{eff}$ consistent across the item. (7) Units in every substitution. (8) One limit checked per item. (9) Centre of pressure vs centroid not conflated. (10) Answer magnitude sane (metres, not kilometres, of water).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.17 · The toolkit map as a one-page cheat figure</p>
+<p><em>Show:</em> the triage tree of §9 as a compact flowchart with the six toolboxes and their equation numbers at the leaves, and the four Bernoulli gates drawn as a small gate icon on the Bernoulli branch.
+<em>Search:</em> "fluid mechanics summary flowchart hydrostatics bernoulli surface tension"</p>
+</div>
+
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-the-draining-tank-two-regimes-and-two-timescales">OL1 — The draining tank, two regimes and two timescales</h3>
+<p>A cylindrical tank of area $A$ holds water to $H$. (a) With a sharp orifice of area $a\ll A$, derive the emptying time. (b) Replace the orifice by a horizontal capillary tube of radius $r$, length $L$, and derive the late-time behaviour. (c) Find the height $h^*$ where the description crosses over.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Quasi-steady Torricelli: $-A\,dh/dt=a\sqrt{2gh}$. Separate: $\int_0^T dt=\frac{A}{a\sqrt{2g}}\int_0^H h^{-1/2}dh$, giving</p>
+<p>$$
+T=\frac{A}{a}\sqrt{\frac{2H}{g}}. \qquad (10.1)
+$$</p>
+<p>Numerics of Q15: $T=100\sqrt{2\times1.25/9.8}=50.5$ s. Note $h(t)$ is a <em>perfect square</em> in $t$ and the tank is exactly empty at $T$ — inertia-limited drainage has a finite lifetime.</p>
+<p>(b) With a long thin drain the flow is Poiseuille: $Q=\pi r^4\rho g h/(8\eta L)$, so $-A\,dh/dt=Q$ gives exponential decay $h(t)=H e^{-t/\tau}$ with $\tau=8\eta L A/(\pi r^4\rho g)$. Viscous drainage never finishes; the last centimetre takes as long as the first $63\%$ did. That is the honest content of "the last bit takes forever".</p>
+<p>(c) Crossover where the two outflows are equal. Write the viscous outflow as $kh$ with $k=r^2\rho g/(8\eta L)$ and the inertial one as $\sqrt{2gh}$ (taking $a=\pi r^2$); equating and squaring gives $2gh=k^2h^2$, so</p>
+<p>$$
+h^*=\frac{2g}{k^2}=\frac{128\,\eta^2L^2}{\rho^2 g r^4}.
+$$</p>
+<p>Numbers, using glycerine ($\eta=1.5$ Pa·s) so the laminar assumption is honest: $k=r^2\rho g/(8\eta L)=2.5\times10^{-7}\times1260\times9.8/(8\times1.5\times0.2)=1.29\times10^{-3}$ s$^{-1}$, hence $h^<em>=2g/k^2=19.6/1.66\times10^{-6}\approx1.2\times10^7$ m — no bench-scale column ever reaches it, and the glycerine drain is viscous (exponential) from the first millimetre. With water the same $k$ is $1500\times$ larger and $h^</em>\approx5$ m; but water at those speeds in a half-millimetre tube has $\text{Re}\sim10^3$–$10^4$, so the real late regime is <em>turbulent</em>, not laminar Poiseuille — the clean inertial/laminar pair is a teaching model, and the honest water story is inertial-then-turbulent. Say which pair you are using.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\eta\to0$ gives $h^<em>\to0$: the viscous regime shrinks to nothing and (10.1) rules the whole drain ✓. Dimensions of $h^</em>$: $[\eta^2L^2/(\rho^2 g r^4)]=$ (Pa$^2$s$^2$m$^2$)/(kg$^2$m$^{-6}$·m s$^{-2}$·m$^4$)$=$ m ✓.</p>
+</div>
+</details>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.18 · The draining tank with the variable height</p>
+<p><em>Show:</em> tank of area $A$, instantaneous level $h(t)$, orifice $a$ with jet speed $\sqrt{2gh}$; beside it the $h(t)$ curve: a parabola-squared reaching zero at $T$ for the orifice, and the exponential tail for the capillary drain drawn dashed, crossing at $h^<em>$; the two timescales labelled.
+</em>Search:<em> "draining tank Torricelli height versus time exponential viscous"
+</em>Used in:* OL1.</p>
+</div>
+
+<h3 id="ol2-the-paraboloid-three-ways">OL2 — The paraboloid, three ways</h3>
+<p>Derive $z=z_0+\omega^2r^2/2g$ for the free surface of a rotating liquid (a) by force balance on a surface element, (b) by the equipotential argument, (c) by "Bernoulli with a centrifugal head". Then: a bucket of radius $0.30$ m spins at $\omega=4$ rad/s; find the rim-to-centre height difference and the centre's drop relative to the rest level.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Surface element of mass $m$: horizontal $m\omega^2 r=N\sin\alpha$, vertical $mg=N\cos\alpha$; divide: $\tan\alpha=dz/dr=\omega^2r/g$; integrate: (3.4).</p>
+<p>(b) In the rotating frame the fluid is static under $\mathbf g$ and the centrifugal field $\omega^2 r\,\hat r$; both are conservative with potential per mass $\Phi=gz-\tfrac12\omega^2r^2$. A static fluid cannot sustain tangential stress, so $\nabla p\parallel\nabla\Phi$; on the free surface $p$ is constant, so $\Phi$ is constant: $gz-\tfrac12\omega^2r^2=\text{const}$ — the same paraboloid, and the deep reason the force balance integrated at all.</p>
+<p>(c) For a fluid static in the rotating frame, integrate $dp=\rho\omega^2r\,dr-\rho g\,dz$ between any two points: $p-\tfrac12\rho\omega^2r^2+\rho gz=\text{const}$ everywhere — the rotating-frame Bernoulli with centrifugal head $-\omega^2r^2/2g$. Setting $p=p_0$ on the surface recovers (3.4).</p>
+<p>Numbers: rim rise over centre $=\omega^2R^2/2g=16\times0.09/19.6=0.0735$ m. Volume conservation in a cylinder: the rest level sits halfway, so the centre drops $3.7$ cm and the rim rises $3.7$ cm.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\omega\to0$: flat ✓. The three derivations agree because they are the same theorem in three languages (Newton, energy, Bernoulli).</p>
+</div>
+</details>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.19 · The rotating bucket's three derivations in one figure</p>
+<p><em>Show:</em> the paraboloid surface; inset (a) the surface element with $N$, $mg$, $m\omega^2r$; inset (b) equipotential lines of $\Phi=gz-\tfrac12\omega^2r^2$ drawn as nested parabolas with the surface as the $p_0$ member; inset (c) the centrifugal-head column sketch; the numbers $\omega=4$, $R=0.3$ m, $\Delta z=7.35$ cm labelled.
+<em>Search:</em> "rotating bucket paraboloid equipotential surfaces derivation"</p>
+</div>
+
+<h3 id="ol3-terminal-velocity-in-two-drag-regimes-and-the-raindrop-crossover">OL3 — Terminal velocity in two drag regimes, and the raindrop crossover</h3>
+<p>(a) Show that a water sphere of radius $r$ falling in air has $v_t=\frac{2r^2\rho_w g}{9\eta}$ for $\text{Re}\lesssim1$ and $v_t=\sqrt{\frac{8r\rho_w g}{3C_d\rho_a}}$ (with $C_d\approx0.44$) for large Re. (b) Find the crossover radius $r^*$ where the Stokes answer self-destructs (Re$=1$), and the speeds on either side. (c) State the practical consequence for mist versus rain.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Balance $\tfrac43\pi r^3\rho_w g$ against $6\pi\eta r v$ (Stokes) and against $\tfrac12C_d\rho_a\pi r^2v^2$ (quadratic): the two formulas.</p>
+<p>(b) Set $\text{Re}=\rho_a v_t 2r/\eta=1$ with the Stokes $v_t$: $\rho_a\frac{2r^2\rho_w g}{9\eta}\frac{2r}{\eta}=1\Rightarrow r^{<em>3}=\frac{9\eta^2}{4\rho_a\rho_w g}$, $r^</em>=\left(\frac{9(1.8\times10^{-5})^2}{4\times1.2\times1000\times9.8}\right)^{1/3}=\left(6.2\times10^{-14}\right)^{1/3}\approx4\times10^{-5}$ m. At $r^<em>$: $v_t=\eta/(2\rho_a r^</em>)=1.8\times10^{-5}/(2\times1.2\times4\times10^{-5})=0.19$ m/s. A $2$ mm drop in the quadratic formula: $v_t=\sqrt{8\times2\times10^{-3}\times1000\times9.8/(3\times0.44\times1.2)}=\sqrt{156.8/1.584}=\sqrt{99}=9.9$ m/s (measured raindrops of that size fall $\sim6.5$–$9$ m/s; deformation raises the drag — say so).</p>
+<p>(c) Mist ($r&lt;r^*$) drifts at centimetres per second and stays airborne; rain ($r\sim$ mm) cruises at $\sim10$ m/s. The vacuum estimate $\sqrt{2gh}$ from a cloud at $2000$ m would give $200$ m/s — the atmosphere's viscosity is the only reason rain is weather rather than shrapnel.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Both formulas give $v_t\propto r^2$ and $r^{1/2}$ respectively; the crossover is where the curves meet, independent of which is trusted ✓.</p>
+</div>
+</details>
+<h3 id="ol4-younglaplace-from-energy-and-the-soap-film-between-two-rings">OL4 — Young–Laplace from energy, and the soap film between two rings</h3>
+<p>(a) Derive $\Delta p=\gamma(1/r_1+1/r_2)$ by virtual work. (b) A soap film spans two coaxial rings of radius $R$ separated by $d$. What shape, what pressure difference, and when does the film refuse to exist?</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Push a small rectangular patch $A$ of curved surface (principal radii $r_1,r_2$) outward by $\delta n$. The radii grow to $r_i+\delta n$, so $A\to A(1+\delta n/r_1)(1+\delta n/r_2)$ and $\delta A=A\,\delta n(1/r_1+1/r_2)$; the swept volume is $\delta V=A\,\delta n$. At equilibrium the pressure work $\Delta p\,\delta V$ equals the surface work $\gamma\,\delta A$: (3.18).</p>
+<p>(b) Both sides see the same air, $\Delta p=0$, so the mean curvature vanishes: the minimal surface of revolution, a <strong>catenoid</strong>, $r(z)=r_{min}\cosh(z/r_{min})$ with $r(\pm d/2)=R$. The catenoid exists only while $d/R\lesssim1.33$; beyond it the film snaps into two discs — a classic demonstration that minimal surfaces have existence limits, and a beautiful exam "state and explain" item.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Sphere: $r_1=r_2=r$ recovers $2\gamma/r$ ✓; cylinder: $r_2\to\infty$ gives $\gamma/r$ ✓; plane: $0$ ✓.</p>
+</div>
+</details>
+<h3 id="ol5-capillarity-beyond-jurin-the-drop-weight-method-and-the-water-strider">OL5 — Capillarity beyond Jurin: the drop-weight method and the water strider</h3>
+<p>(a) Drops fall from a tube of radius $1.0$ mm; a hundred drops weigh $3.1$ g. Estimate $\gamma$ naively (Tate's law) and then with the Harkins–Brown correction $f\approx0.66$, explaining physically why $f&lt;1$. (b) Estimate the maximum mass a water strider can support on six legs of total contact length $0.24$ m, and use scaling to say why no elephant walks on water.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Tate's law: at detachment the neck's surface-tension ring $2\pi r\gamma$ supports the drop's weight. One drop: $m=3.1\times10^{-5}$ kg, $mg=3.04\times10^{-4}$ N, so $\gamma_{naive}=mg/(2\pi r)=3.04\times10^{-4}/(6.28\times10^{-3})=0.048$ N/m. The naive value undershoots because part of the neck's liquid never falls — it shrinks back onto the tip — so the fallen drop carries only a fraction $f\approx0.66$ of the ideal ring weight (Harkins–Brown). Correcting: $\gamma=\gamma_{naive}/f=0.048/0.66=0.073$ N/m — water's surface tension, recovered from a kitchen balance and a drop count.</p>
+<p>(b) The dented surface pulls up with about $\gamma$ per unit length on each side of each leg: $F_{max}\approx\gamma\times2\times0.24=0.035$ N, supporting $\approx3.6$ g. Real striders weigh $\sim0.01$–$0.1$ g: two orders of margin. Scaling: support $\propto L$ (contact length) but weight $\propto L^3$; at $L\sim100\times$ a strider the margin is gone — which is why the trick is exclusively a small-animal one.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>(a) reproduces the tabulated $0.0728$ N/m within the correction's accuracy ✓. (b) $F$ linear in $\gamma$ and length, dimensionally a force ✓.</p>
+</div>
+</details>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D11.20 · The water strider's dented surface and the drop-weight neck</p>
+<p><em>Show:</em> left: a water strider leg in cross-section denting the surface, the tension vectors $\gamma$ tangent at both edges of the dent with their vertical components summed; right: the pendant drop at a tube tip with the neck radius smaller than the tube, the fraction left behind shaded, Tate's ring force arrow.
+<em>Search:</em> "water strider surface tension dent leg force diagram drop weight method"
+<em>Used in:</em> OL5.</p>
+</div>
+
+<h3 id="ol6-how-high-can-a-tree-suck-water">OL6 — How high can a tree suck water?</h3>
+<p>(a) Compute the capillary height in a xylem vessel of radius $2.5\ \mu$m. (b) Compute the pressure (suction) limit. (c) Redwoods move water past $100$ m; name the mechanism that beats both limits and the physical quantity that makes it possible.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $h=2\gamma/(\rho g r)=2\times0.0728/(1000\times9.8\times2.5\times10^{-6})=5.9$ m. (b) A pump at the top can reduce $p$ to near zero: $h_{max}=p_0/\rho g\approx10.3$ m. (c) Neither: transpiration pull puts the xylem water under <strong>tension</strong> (negative pressure, several MPa), sustained by cohesion of the hydrogen-bonded column; the column hangs from the leaves like a rope rather than being pushed from below. Measured giants exceed $110$ m; the true ceiling is cavitation of the stretched water, not the $10$ m barometer.</p>
+<div class="callout tip">
+<p class="callout-title">Insight</p>
+<p>The "10 m limit" is a limit on <em>suction</em>, i.e. on pressure differences with $p\ge0$ on one side. Tension is a different state of the liquid; the barometer argument never applied to it.</p>
+</div>
+</details>
+<h3 id="ol7-shallow-water-wave-speed-from-continuity-and-momentum">OL7 — Shallow-water wave speed from continuity and momentum</h3>
+<p>A small-amplitude bump of height $\eta$ travels over depth $h$ ($\eta\ll h\ll\lambda$). Work in the bump's frame and derive $v=\sqrt{gh}$, keeping the first correction in $\eta/h$.</p>
+<details>
+<summary>Solution</summary>
+<p>In the wave frame the flow is steady: upstream depth $h$, speed $c$; over the bump depth $h+\eta$, speed $c'$. Continuity: $ch=c'(h+\eta)$. Momentum per unit width: pressure thrusts $\tfrac12\rho g h^2$ and $\tfrac12\rho g(h+\eta)^2$ plus momentum fluxes $\rho c^2h$, $\rho c'^2(h+\eta)$:</p>
+<p>$$
+\tfrac12\rho g h^2+\rho c^2h=\tfrac12\rho g(h+\eta)^2+\rho c'^2(h+\eta).
+$$</p>
+<p>Eliminate $c'$ and solve: $c^2=g(h+\eta)\left(1+\frac{\eta}{2h}\right)=g\,h\left(1+\frac{\eta}{h}\right)\left(1+\frac{\eta}{2h}\right)$; to first order $c\approx\sqrt{gh}\left(1+\frac{3\eta}{4h}\right)$. The leading term is (3.20); the correction explains why big bumps overtake small ones and steepen — the seed of the hydraulic jump and of surf.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Dimensions $\sqrt{gh}$ ✓; $\eta\to0$ exact ✓; deeper bumps travel faster, matching the steepening observation ✓.</p>
+</div>
+</details>
+<h3 id="ol8-the-feynman-sprinkler-as-an-argument">OL8 — The Feynman sprinkler, as an argument</h3>
+<p>A sprinkler that rotates while ejecting water is everyday physics. Its inverse — a head that <em>sucks</em> water in — does what in steady state? Argue without formulas first, then locate the idealisation that decides the answer.</p>
+<details>
+<summary>Solution</summary>
+<p>Transient: as suction starts, water is accelerated toward the nozzles and the head receives a brief torque <em>toward</em> the suction direction. Steady ideal flow: the momentum flux entering the control volume is balanced by pressure forces at the inlet; the inflow pattern is time-independent, so the assembly's angular momentum is constant and the net torque vanishes — the ideal sprinkler does not turn. Real fluids: viscous dissipation in the inner vortices breaks the symmetry of the pressure recovery, leaving a small steady torque toward the suction direction; experiments with low-friction bearings observe exactly that slow creep. The deciding idealisation is reversibility: ejection is ordered-to-ordered, suction is ordered-to-disordered, and the arrow of the effect is the arrow of dissipation.</p>
+<div class="callout quote">
+<p class="callout-title">Hand-off</p>
+<p>The entropy bookkeeping of the dissipative correction belongs to [thermodynamics](thermodynamics.html); here the point is the momentum-flux discipline of §3.11.</p>
+</div>
+</details>
+<h3 id="ol9-bernoulli-in-a-rotating-frame-the-energy-audit">OL9 — Bernoulli in a rotating frame: the energy audit</h3>
+<p>A U-tube rotates about one limb at $\omega$; liquid is driven from the axis limb ($r_1=0.10$ m) out to $r_2=0.30$ m. (a) In the rotating frame, write the pressure difference that drives it. (b) Compute the kinetic energy gained by $0.10$ kg of liquid and name, with a number, the real source of that energy.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $p-\tfrac12\rho\omega^2r^2+\rho gz=\text{const}$ (OL2(c)): at equal heights, $p_2-p_1=\tfrac12\rho\omega^2(r_2^2-r_1^2)$ — the centrifugal head is a pump.</p>
+<p>(b) $\Delta K=\tfrac12 m\omega^2(r_2^2-r_1^2)=0.5\times0.10\times100\times0.08=0.40$ J at $\omega=10$ rad/s. In the lab frame the liquid's tangential speed grows from $\omega r_1$ to $\omega r_2$; something must supply the torque: the <strong>motor</strong> holding $\omega$ constant against the reaction of the outward-moving liquid (the system's moment of inertia grows, and without motor work $\omega$ would sag). The rotating-frame "centrifugal work" is the motor's work in disguise.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Energy and torque accounts agree: $W_{motor}=\Delta K$ for constant $\omega$ with the tube rigid ✓ — the audit closes, answering "where does the energy come from".</p>
+</div>
+</details>
+<h3 id="ol10-reconstructing-a-measurement-glycerines-viscosity-by-stokes">OL10 — Reconstructing a measurement: glycerine's viscosity by Stokes</h3>
+<p>Design the classic falling-sphere viscometer and reconstruct a real number. Steel spheres of $r=2.0$ mm ($\rho=7800$) fall through glycerine ($\sigma=1260$, $\eta\approx1.5$ Pa·s) in a $4$ cm-diameter cylinder; a marked $20$ cm takes $t$ seconds. Predict $t$, including the Ladenburg wall correction $v_{true}=v_{meas}(1+2.4\,r/R)$, and state the two checks that validate the regime.</p>
+<details>
+<summary>Solution</summary>
+<p>Unbounded-fluid $v_t=2r^2(\rho-\sigma)g/9\eta=2(4\times10^{-6})(6540)(9.8)/(13.5)=0.0380$ m/s. Wall correction: measured speed is lower, $v_{meas}=v_t/(1+2.4\times2/20)=0.0380/1.24=0.0307$ m/s. Time over $0.20$ m: $t=6.5$ s. Regime checks: $\text{Re}=\sigma v 2r/\eta=1260\times0.031\times4\times10^{-3}/1.5=0.10&lt;1$ ✓ Stokes honest; end effects avoided by timing the middle third only (state it on the sheet). This is the experiment as a <em>prediction</em>: the numbers are standard, the checks are the physics.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\eta\to\infty$ gives $t\to\infty$ ✓; doubling $r$ quadruples $v_t$ (radius-squared signature) — the experimental fingerprint of Stokes flow ✓.</p>
+</div>
+</details>
+<h3 id="101-limits-and-failure-modes-of-the-chapters-model">10.1 Limits and failure modes of the chapter's model</h3>
+<p>The machinery of Parts 3–4 breaks, in order of encounter: (i) <strong>turbulence</strong> — Re beyond a few thousand; the velocity field becomes a many-scale dissipative cascade and (3.8), (3.13) lose quantitative force (the drag crisis of D11.12); (ii) <strong>unsteady free surfaces</strong> — sloshing and hydraulic jumps are genuinely nonlinear and, past the jump, dissipative; (iii) <strong>compressibility</strong> — water hammer and sound are the $B$-finite world (§3.13 hands the sound speed to <a href="sound-waves.html">sound waves</a>); (iv) <strong>non-Newtonian rheology</strong> — shear-thinning and yield-stress fluids violate (3.12)'s linearity; (v) <strong>microscale</strong> — below microns, no-slip itself fails. The hand-offs: elasticity of containers and solids to PART 12; equations of state to <a href="thermodynamics.html">thermodynamics</a>; wave kinematics to <a href="string-waves.html">string waves</a> and <a href="sound-waves.html">sound waves</a>.</p>
+<p><strong>C9 — concept check.</strong> Which of OL2's three derivations survives if the vessel is accelerated linearly instead of rotated?</p>
+<details>
+<summary>Solution</summary>
+<p>All three, with $\omega^2r\,\hat r\to-\mathbf a$: the field stays conservative, equipotentials stay planar, and the "Bernoulli with pseudo head" integrates identically. Rotation adds nothing essential except a radial coordinate.</p>
+</details>
+<p><strong>C10 — concept check.</strong> In OL1, why is the Torricelli emptying time finite while the viscous one is infinite?</p>
+<details>
+<summary>Solution</summary>
+<p>Outflow $\propto\sqrt h$ gives $dh/\sqrt h$ integrable at $h=0$; outflow $\propto h$ gives $dh/h$, which is not. The exponent of $h$ in the rate law decides finiteness.</p>
+</details>
+<p><strong>C11 — concept check.</strong> A film spans two rings just inside the catenoid limit. Is the pressure inside the film higher, lower, or equal to outside?</p>
+<details>
+<summary>Solution</summary>
+<p>Equal: $\Delta p=0$ is precisely the zero-mean-curvature condition; the principal curvatures are equal and opposite (saddle), so (3.18) gives zero.</p>
+</details>
+<p><strong>C12 — concept check.</strong> Why does the water-strider estimate scale as $L$ while weight scales as $L^3$?</p>
+<details>
+<summary>Solution</summary>
+<p>Support is a line integral of $\gamma$ (a length); weight is a volume. Surface physics is a boundary phenomenon; gravity is a bulk one. The ratio $L^{-2}$ is why smallness is a superpower.</p>
+</details>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each). Solutions follow each question in a collapsible block; the marking scheme is in Part 12.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10 and syntheses</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-single-correct">Section A · Single correct</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>An open tank 2 m wide accelerates horizontally at $a=g/2$. The difference of water levels between the two ends is: (a) 0.5 m (b) 1 m (c) 2 m (d) 0.</p>
+<details>
+<summary>Solution</summary>
+<p>$\tan\theta=a/g=0.5$; $\Delta h=2\times0.5=1$ m while no water spills. <strong>(b)</strong>. Check: $a\to0$ gives 0 ✓ (block 3, §3.4).</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>A beaker of water reads $W$ on a balance. A $50$ g metal piece of density $5000$ kg/m$^3$ is lowered in on a string until fully submerged without touching the bottom. The reading is: (a) $W$ (b) $W+0.49$ N (c) $W+0.10$ N (d) $W+0.39$ N.</p>
+<details>
+<summary>Solution</summary>
+<p>Added force = buoyancy $=\rho_w (m/\rho_m) g=1000\times10^{-5}\times9.8=0.098$ N. <strong>(c)</strong>. (Block 3, §3.5; C1.)</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>A barometer liquid of density $2\rho_{Hg}$ would stand at: (a) 152 cm (b) 76 cm (c) 38 cm (d) 19 cm.</p>
+<details>
+<summary>Solution</summary>
+<p>$h=p_0/(\rho g)\propto1/\rho$: half of 76 = 38 cm. <strong>(c)</strong> (§3.2).</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>Two holes at depths $h_1,h_2$ on a tank give equal horizontal ranges on the ground below the tank base only if: (a) $h_1=h_2$ (b) $h_1+h_2=H$ (where $H$ is the water height above the base) (c) $h_1h_2=H^2/4$ for all cases (d) ranges can never be equal.</p>
+<details>
+<summary>Solution</summary>
+<p>$x=2\sqrt{h(H-h)}$ is symmetric under $h\to H-h$: <strong>(b)</strong> (§3.10). Option (c) is the <em>maximum</em>-range condition misread.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>A soap bubble of radius $r$ has internal excess pressure $\Delta p$. A second bubble with excess pressure $2\Delta p$ has radius: (a) $2r$ (b) $r/2$ (c) $r/\sqrt2$ (d) $r/4$.</p>
+<details>
+<summary>Solution</summary>
+<p>$\Delta p=4\gamma/r\propto1/r$: <strong>(b)</strong> (§3.15).</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>A capillary shows rise $h$ in a stationary lab. The lift accelerates upward at $g$. The rise becomes: (a) $h$ (b) $h/2$ (c) $2h$ (d) $0$.</p>
+<details>
+<summary>Solution</summary>
+<p>$g_{eff}=2g$, $h'\propto1/g_{eff}$: $h/2$. <strong>(b)</strong> (§3.16 with T1).</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>Water exits a tap at $0.2$ m/s through a $1$ cm radius. The stream radius after falling $0.75$ m is nearest: (a) 0.5 cm (b) 0.7 cm (c) 1 cm (d) 0.25 cm.</p>
+<details>
+<summary>Solution</summary>
+<p>$v=\sqrt{v_0^2+2gh}=\sqrt{0.04+14.7}\approx3.84$ m/s; $r=r_0\sqrt{v_0/v}=1\times\sqrt{0.2/3.84}=0.228$ cm ≈ 0.25 cm. <strong>(d)</strong> (§3.7).</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>In the Stokes regime, doubling a falling sphere's radius changes $v_t$ by: (a) $\times2$ (b) $\times4$ (c) $\times\sqrt2$ (d) $\times8$.</p>
+<details>
+<summary>Solution</summary>
+<p>$v_t\propto r^2$: <strong>(b)</strong> (§3.13).</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>Many small drops coalesce into one big drop in isolation. The temperature of the result is: (a) unchanged (b) higher (c) lower (d) unpredictable.</p>
+<details>
+<summary>Solution</summary>
+<p>Surface area shrinks; released $\gamma\Delta A$ thermalises: <strong>(b)</strong> (Q25's energy, block 4).</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>A floating body is stable for small heel when: (a) $G$ above $M$ (b) $M$ above $G$ (c) $B$ above $G$ always (d) $I$ small.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(b)</strong>; metacentre above centre of mass gives a righting couple (§3.5).</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>In a siphon the speed is $2$ m/s and the top is $2$ m above the supply level. With $p_0=10^5$ Pa, $p_{top}$ is nearest: (a) $7.9\times10^4$ Pa (b) $10^5$ Pa (c) $5.9\times10^4$ Pa (d) $2\times10^4$ Pa.</p>
+<details>
+<summary>Solution</summary>
+<p>$p_{top}=p_0-\rho g h-\tfrac12\rho v^2=10^5-19600-2000=7.84\times10^4$ Pa. <strong>(a)</strong> (§3.9).</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>A horizontal tube of length $L$ filled with liquid rotates about one end at $\omega$. The pressure difference between the ends is: (a) $\tfrac12\rho\omega^2L^2$ (b) $\rho\omega^2L^2$ (c) $\rho g L$ (d) $0$.</p>
+<details>
+<summary>Solution</summary>
+<p>$\int_0^L\rho\omega^2r\,dr=\tfrac12\rho\omega^2L^2$. <strong>(a)</strong> (§3.4, OL9).</p>
+</details>
+<h4 id="section-b-one-or-more-correct">Section B · One or more correct</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>Ice floats in water in a vessel. Mark the correct statements: (a) melting ice with an embedded stone <em>denser</em> than water lowers the level; (b) melting ice with an air bubble changes the level; (c) melting pure ice in salt water raises the level; (d) melting pure ice in the same fresh water leaves the level unchanged.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (c), (d)</strong>. (b) is false: negligible bubble mass (§3.6, E7).</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>About Bernoulli's equation as used in this chapter: (a) it is the work–energy theorem per volume; (b) it holds across streamlines in any steady flow; (c) viscosity enters as a head-loss term in its extended engineering form; (d) it requires compressibility.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (c)</strong>. (b) needs irrotational flow; (d) is the opposite (§3.8).</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>A soap bubble is inflated slowly at constant $T$: (a) internal excess pressure falls as it grows; (b) the work you do exceeds $\gamma\Delta A$ of the two surfaces if you count pushing air in against $p_0$; (c) the film tension $\gamma$ of the solution is constant; (d) the bubble's internal pressure is below $p_0$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (b), (c)</strong>. (d) false: $p_0+4\gamma/r$ (§3.15).</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>A ball denser than water is released just below the surface in a tall tank on a scale. During the sinking at terminal-like acceleration (ignore viscous detail): (a) the scale reads more than the water's weight from the instant of release; (b) the reading equals water+ball weight only after the ball rests at the bottom; (c) while the ball accelerates downward, the reading is less than water+ball weight; (d) the reading never changes.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(b), (c)</strong>: while the ball accelerates down, the system's centre of mass accelerates down, so the normal force is below the total weight; after rest, the full weight returns. (Block 3 synthesis.)</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>A vessel accelerates horizontally at $a$: (a) the free surface tilts by $\tan\theta=a/g$; (b) a fully submerged balloon on a string tied to the floor leans along $\mathbf a$; (c) a hanging strap leans along $\mathbf a$; (d) equipressure surfaces stay horizontal.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (b)</strong>. (c) leans against $\mathbf a$; (d) tilt with the surface (§3.4, E6).</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>Capillary rise $h=2\gamma\cos\theta/\rho g r$. Correct: (a) on the Moon ($g/6$) the rise is $6h$; (b) doubling $r$ halves $h$; (c) at $\theta=90^\circ$ there is neither rise nor depression; (d) heating the liquid (lowering $\gamma$) raises $h$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (b), (c)</strong>. (d) is backwards (§3.16).</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>Two tubes of radii $r$ and $2r$, equal lengths, carry a viscous flow under a total drop $\Delta p$. Mark the correct statements: (a) in series, the narrow tube takes $16/17$ of $\Delta p$; (b) in parallel under the same $\Delta p$, the wide tube carries $16\times$ the flow of the narrow one; (c) in series the flow <em>speed</em> is equal in both; (d) doubling both lengths doubles $\Delta p$ at fixed $Q$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (b), (d)</strong>. (c) false: $v\propto1/A$ by continuity (§3.12, Q19).</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>About Stokes' law and terminal velocity: (a) $v_t\propto r^2$ in the Stokes regime; (b) the law is reliable for $\text{Re}\lesssim1$; (c) terminal velocity makes the drag equal to weight minus buoyancy; (d) in a vacuum chamber the same sphere reaches the same $v_t$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>(a), (b), (c)</strong>. (d) nonsense: $\eta\to0$ removes the drag (§3.13).</p>
+</details>
+<h4 id="section-c-numerical">Section C · Numerical</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>A vessel holds $0.5$ m of oil ($800$) over $1.0$ m of water. Gauge pressure at the bottom, in kPa to two significant figures?</p>
+<details>
+<summary>Solution</summary>
+<p>$800\times9.8\times0.5+1000\times9.8\times1.0=3920+9800=13720$ Pa ≈ <strong>14 kPa</strong>. (§3.1.)</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>A tank of water height $1.8$ m has a hole at depth $0.8$ m. Horizontal range on the ground at the tank base, in metres?</p>
+<details>
+<summary>Solution</summary>
+<p>$x=2\sqrt{0.8\times1.0}=1.79$ m ≈ <strong>1.8 m</strong>. (§3.10.)</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>Water in a clean $0.2$ mm radius tube rises $h$ cm. Give $h$ to two significant figures ($\gamma=0.0728$, $\theta=0$).</p>
+<details>
+<summary>Solution</summary>
+<p>$h=2\times0.0728/(1000\times9.8\times2\times10^{-4})=0.0743$ m = <strong>7.4 cm</strong>. (§3.16.)</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>$A/a=200$, $H=0.8$ m. Emptying time in seconds (nearest integer)?</p>
+<details>
+<summary>Solution</summary>
+<p>$T=200\sqrt{1.6/9.8}=200\times0.404=80.8$ ≈ <strong>81 s</strong>. (OL1.)</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>A $1$ mm radius sphere ($\rho=1100$) sinks in water at Stokes terminal speed; give $v_t$ in mm/s (nearest integer; ignore the regime caveat but state it).</p>
+<details>
+<summary>Solution</summary>
+<p>$v_t=2(10^{-3})^2(100)(9.8)/(9\times10^{-3})=2\times10^{-6}\times980/9\times10^{-3}=1.96\times10^{-3}/9\times10^{-3}=0.218$ m/s $=218$ mm/s. Regime: Re$\approx440$ — Stokes invalid; the honest answer would use quadratic drag ($\sim0.06$ m/s). Grading wants the formula value <strong>218</strong> with the caveat named. (§3.13, E9.)</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A cuboid barge $10$ m × $6$ m floats at draft $1$ m. $BM=I/V$ in metres (nearest integer)?</p>
+<details>
+<summary>Solution</summary>
+<p>$I=Lb^3/12=10\times216/12=180$ m$^4$; $V=60$ m$^3$; $BM=3$ m. <strong>3</strong>. (§3.5.)</p>
+</details>
+<h4 id="section-d-comprehensive-long-form">Section D · Comprehensive long-form</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>A cylindrical tank ($A=0.2$ m$^2$) holds water to $H=0.45$ m. A sharp orifice $a=1$ cm$^2$ opens at the base. (a) Derive $T=(A/a)\sqrt{2H/g}$ from first principles (3). (b) Evaluate $T$ (2). (c) State quantitatively when the quasi-steady assumption is safe here, and what changes in the last 1 cm of depth (4).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Continuity $Av_{s}=av$ with $v=\sqrt{2gh}$ (Bernoulli, $a\ll A$): $-A\,dh/dt=a\sqrt{2gh}$; separate and integrate as OL1(a): $T=(A/a)\sqrt{2H/g}$. Marking: continuity 1, Torricelli 1, integration 1. (b) $T=200\times\sqrt{0.9/9.8}=200\times0.303=60.6$ s (2). (c) $a/A=5\times10^{-3}$, surface speed $\le v\,a/A\approx2.9\times0.005=0.015$ m/s against $v\approx2.9$ m/s: 0.5% error, safe (2). In the last centimetre $v$ is small, the orifice's own discharge coefficient and surface tension/viscous effects (ignored throughout) become comparable, and the jet ceases to be a clean Torricelli jet — the model's remainder, stated honestly (2).</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>A bucket of radius $0.25$ m holds water to $0.20$ m and is spun at $\omega$. (a) Show the free surface is a paraboloid (3). (b) Find $\omega$ at which the base centre is first exposed (3). (c) Find the volume spilled by the time the rim is first reached, or show none has spilled yet (3).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) OL2(a): $\tan\alpha=\omega^2r/g$, integrate, paraboloid. (b) While nothing spills, volume conservation pins the surface pivot at the rest level $0.20$ m, so the centre has dropped by half the rim-to-centre difference; the base centre is first exposed when that drop equals $0.20$ m, i.e. when the rim-to-centre difference $\omega^2R^2/2g=0.40$ m. Then $\omega^2=0.40\times2\times9.8/0.0625=125.4$, $\omega=11.2$ rad/s. (c) At that speed the rim level stands at $0.20+0.20=0.40$ m; a bucket taller than $0.40$ m has therefore spilled nothing, which the symmetry of the paraboloid confirms (volume above the rest level equals volume below it). State the bucket-height condition as part of the answer.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>A vertical rectangular gate $1.5$ m wide holds water to depth $2.4$ m on one side, hinged at the bottom. (a) Total force (3). (b) Torque about the hinge (3). (c) The horizontal force at the top latch needed to hold the gate (3).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $F=\rho g h_c A=1000\times9.8\times1.2\times(1.5\times2.4)=4.23\times10^4$ N. (b) Centre of pressure at $2H/3=1.6$ m from top $=0.8$ m above hinge: $\tau=4.23\times10^4\times0.8=3.39\times10^4$ N·m. (c) Latch at $2.4$ m: $F_L=\tau/2.4=1.41\times10^4$ N. Checks: $F$ scales as $H^2$ ✓.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>A U-tube manometer connects a gas bulb (left limb) to the atmosphere (right limb). The left limb holds $20$ cm of water above a water–mercury interface; the right limb's mercury surface stands $12$ cm <em>above</em> that interface. Find the gas gauge pressure, and then the reading when the whole apparatus rides a lift accelerating upward at $g$ (4+5).</p>
+<details>
+<summary>Solution</summary>
+<p>Pressure walk from the bulb: $p_{gas}+\rho_w g(0.20)$ at the interface; climb the mercury column $0.12$ m to the open surface where $p=0$ gauge: $p_{gas}=\rho_{Hg}g(0.12)-\rho_w g(0.20)=13600\times9.8\times0.12-1000\times9.8\times0.20=15994-1960=1.40\times10^4$ Pa gauge. In the lift $g_{eff}=2g$ and every column term doubles: $2.81\times10^4$ Pa gauge — a manometer reads pressure <em>in metres of its own liquid under local gravity</em>, so the height pattern is unchanged while the pascal value doubles. Marking: walk 2, arithmetic 2, $g_{eff}$ identification 2, doubling argument 2, units and gauge/absolute statement 1.</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>Ice of mass $0.9$ kg embeds a stone of $0.1$ kg ($\rho=2500$), floating in fresh water in a cylinder of area $0.05$ m$^2$. (a) Displaced volume while floating (2). (b) Level change after melting, in mm with direction (4). (c) The same ice–stone floating on a $1$ cm oil layer ($800$) over water: does the stone-on-bottom conclusion change qualitatively? (3)</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $V_1=1.0/1000=10^{-3}$ m$^3$. (b) After: melt $0.9/1000=9\times10^{-4}$ plus stone $0.1/2500=4\times10^{-5}$: $9.4\times10^{-4}$; deficit $6\times10^{-5}$ m$^3$; $\Delta h=6\times10^{-5}/0.05=1.2$ mm <strong>fall</strong>. (c) No: the ledger compares displaced weight with after-volumes; the oil merely changes which fluid supplies the displacement while floating, and both after-states (melt in water/ oil, stone at bottom) shift by the same bookkeeping; level still falls. Marks: ledger 2, numbers 2, sign 1, oil argument 3, check 1.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>Air flows in a duct; a pitot-static pair reads $\Delta p=60$ Pa ($\rho_{air}=1.2$). (a) The speed (3). Downstream a venturi of area ratio 2 carries water at $Q=2\times10^{-3}$ m$^3$/s in a $4$ cm$^2$ throat... (b) find the water manometer difference in cm (4). (c) State why the two instruments read differently in kind (2).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $v=\sqrt{2\Delta p/\rho}=\sqrt{120/1.2}=10$ m/s. (b) $v_2=Q/A_2=5$ m/s; $v_1=2.5$ m/s; $\Delta p=\tfrac12\times1000(25-6.25)=9375$ Pa; water column $=9375/(1000\times9.8)=0.957$ m = 95.7 cm. (c) Pitot compares stagnation with static on <em>one</em> streamline (speed sensor); Venturi compares two statics on <em>different</em> sections (flow-rate sensor via continuity); both are (3.8) with different gate uses.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>Water rises $10$ cm in a capillary. (a) The tube is tilted $60^\circ$ from vertical: the length of water column along the tube (3). (b) A second identical tube only $6$ cm long stands vertical: meniscus radius ratio $R'/R$ (3). (c) The short tube is now in the $60^\circ$ tilt: does it overflow? Justify quantitatively (3).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) The supported quantity is the <em>vertical</em> height, so the slant length is $\ell=h/\cos60^\circ=0.20$ m. (b) $hR=h'R'$: $R'/R=10/6=5/3$. (c) No overflow, ever: tilted, the tube offers a vertical height of $6\cos60^\circ=3$ cm against the required $10$ cm, so the meniscus simply flattens to $R''=R\times10/3$ and sits at the lip with a nearly flat face. The invariant is "a capillary adjusts curvature, never overflows"; the $hR$ arithmetic above is its quantitative form.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>A steel sphere ($r=2$ mm, $\rho=7800$) falls through $1$ m of oil ($\rho=900$, $\eta=0.5$) then $1$ m of water ($\eta=10^{-3}$). (a) Terminal speed in oil and the time across the oil assuming terminal from entry (4). (b) In water, which drag regime governs? Estimate the water transit time crudely with quadratic drag, $C_d=0.44$ (5).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) $v_t=2r^2(\rho-\sigma)g/9\eta=2(4\times10^{-6})(6900)(9.8)/(4.5)=0.12$ m/s; Re$=900\times0.12\times4\times10^{-3}/0.5=0.86&lt;1$ ✓ honest; $t=1/0.12=8.3$ s. (b) In water, Stokes would give $v_t=2(4\times10^{-6})(6800)(9.8)/(9\times10^{-3})=59$ m/s at Re$\sim10^5$ — the regime test rejects it, so quadratic drag governs, and even that terminal speed is $v_t=\sqrt{8r(\rho_s-\rho_w)g/(3C_d\rho_w)}=\sqrt{8\times2\times10^{-3}\times6800\times9.8/(3\times0.44\times1000)}=\sqrt{808}=28$ m/s. Neither is attainable over one metre: the approach distance scales as $v_t^2/g'\approx80$ m. The sphere therefore accelerates from its $0.12$ m/s entry at the buoyancy-reduced gravity $g'=g(1-\rho_w/\rho_s)=9.8\times0.872=8.5$ m/s$^2$, and $1=\tfrac12 g't^2$ gives $t=0.49$ s. The exam point is the recognition itself: name the regime, then prove terminal is never reached (the two-timescale thinking of OL1/OL3).</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>A jet of area $a=2$ cm$^2$ at $v=15$ m/s strikes a curved vane moving away at $u=5$ m/s that turns the relative flow by $120^\circ$. (a) Force on the vane along the jet (4). (b) Power delivered (2). (c) The efficiency $\eta=Pu/( \tfrac12\dot m v^2)$ and its maximum over $u$ (3).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) Relative speed $w=v-u=10$ m/s; mass rate arriving at the vane $\dot m=\rho a w=1000\times2\times10^{-4}\times10=2$ kg/s. The exit relative velocity makes $120^\circ$ with the entry direction, so the along-jet momentum change per unit mass is $w-w\cos120^\circ=w(1+\tfrac12)=15$ m/s, and $F=\dot m\times15=30$ N. (b) $P=Fu=30\times5=150$ W. (c) Jet power available $=\tfrac12\rho a v^3=0.5\times1000\times2\times10^{-4}\times3375=337.5$ W, so $\eta=150/337.5=0.44$. In general $P(u)=\rho a(v-u)(1+\cos\phi)\,u$; maximising over $u$ gives $u=v/2$ and $\eta_{max}=(1+\cos\phi)/2=0.75$ for $\phi=120^\circ$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$u\to0$ and $u\to v$ both give $P\to0$, so an interior maximum must exist ✓; $\phi=180^\circ$ (perfect reversal) gives the Pelton-wheel limit $\eta_{max}=1$ ✓.</p>
+</div>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Derive $v=\sqrt{gh}$ for a shallow-water bump from continuity and momentum in the wave frame (4). (b) A $3$ cm high bump moves over $0.5$ m depth; its speed (2). (c) Explain in two sentences why the same machinery predicts a hydraulic jump when a fast shallow stream decelerates, and name the quantity that increases across the jump (3).</p>
+<details>
+<summary>Solution</summary>
+<p>(a) As OL7: continuity $ch=c'(h+\eta)$; momentum $\tfrac12\rho gh^2+\rho c^2h=\tfrac12\rho g(h+\eta)^2+\rho c'^2(h+\eta)$; eliminate $c'$: $c^2=g(h+\eta)(1+\eta/2h)\to gh$. (b) $v=\sqrt{9.8\times0.5}=2.2$ m/s (correction $+3\eta/4h\approx4.5\%$: 2.3 m/s; accept 2.2–2.3). (c) The equations admit a discontinuous (shock-like) solution when the incoming Froude number $v/\sqrt{gh}&gt;1$; the jump is where kinetic energy is irreversibly converted to heat and surface elevation — entropy increases across it, selecting the jump direction. Hand-off: the entropy language is <a href="thermodynamics.html">thermodynamics</a>'; the wave kinematics <a href="string-waves.html">string waves</a>'.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which block each question tested.</strong> A: P1 §3.4, P2 §3.5, P3 §3.2, P4 §3.10, P5 §3.15, P6 §3.16, P7 §3.7, P8 §3.13, P9 §3.14, P10 §3.5, P11 §3.9, P12 §3.4. B: P13 §3.6, P14 §3.8, P15 §3.15, P16 §3.5, P17 §3.4, P18 §3.16, P19 §3.12, P20 §3.13. C: P21 §3.1, P22 §3.10, P23 §3.16, P24 OL1, P25 §3.13, P26 §3.5. D: P27 OL1, P28 OL2, P29 §3.3, P30 §3.2+§3.4, P31 §3.6, P32 §3.9, P33 §3.16, P34 §3.13+OL3, P35 §3.11, P36 OL7+§10.1. Blocks 2–4 and 10 all appear, as §1.7 requires.</p>
+<p><strong>Diagnostic table.</strong></p>
+<table>
+<thead>
+<tr>
+<th>If you lost marks on…</th>
+<th>the likely gap</th>
+<th>reread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1, P6, P17, P30-lift</td>
+<td>$\mathbf g_{eff}$ not automatic</td>
+<td>§3.4, T1</td>
+</tr>
+<tr>
+<td>P2, P13, P16, P31</td>
+<td>displaced-volume ledger</td>
+<td>§3.5–3.6, T2</td>
+</tr>
+<tr>
+<td>P4, P22, P27</td>
+<td>Torricelli family and quasi-steadiness</td>
+<td>§3.10, OL1</td>
+</tr>
+<tr>
+<td>P5, P9, P15</td>
+<td>surface counting and the factor 2</td>
+<td>§3.14–3.15, T6</td>
+</tr>
+<tr>
+<td>P7, P12, P19, P25</td>
+<td>continuity/Poiseuille/regime discipline</td>
+<td>§3.7, §3.12–3.13</td>
+</tr>
+<tr>
+<td>P11, P21, P30</td>
+<td>manometer walking and gauge/absolute</td>
+<td>§3.2, T3</td>
+</tr>
+<tr>
+<td>P26, P10</td>
+<td>stability and the metacentre</td>
+<td>§3.5</td>
+</tr>
+<tr>
+<td>P28, P36</td>
+<td>rotating-frame energy and wave-frame methods</td>
+<td>OL2, OL7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>formula</th>
+<th>validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$dp/dy=-\rho g$; $p=p_0+\rho g h$</td>
+<td>static, constant $\rho$, one fluid</td>
+</tr>
+<tr>
+<td>$F=p_cA$; centre of pressure $2H/3$ (vertical rectangle from surface)</td>
+<td>plane surface</td>
+</tr>
+<tr>
+<td>$\tan\theta=a/g$; $z=z_0+\omega^2r^2/2g$</td>
+<td>rigid acceleration / rotation, settled</td>
+</tr>
+<tr>
+<td>$p-\tfrac12\rho\omega^2r^2+\rho gz=\text{const}$</td>
+<td>rotating-frame statics</td>
+</tr>
+<tr>
+<td>$F_b=\rho_fVg$ at centre of buoyancy</td>
+<td>hydrostatic surroundings</td>
+</tr>
+<tr>
+<td>$V_s/V=\rho_b/\rho_f$; $BM=I/V$</td>
+<td>float; small heel</td>
+</tr>
+<tr>
+<td>$Av=Q$</td>
+<td>steady, incompressible</td>
+</tr>
+<tr>
+<td>$p+\tfrac12\rho v^2+\rho gy=\text{const}$</td>
+<td>the four gates</td>
+</tr>
+<tr>
+<td>$Q=A_1\sqrt{2\Delta p/(\rho(A_1^2/A_2^2-1))}$</td>
+<td>Venturi</td>
+</tr>
+<tr>
+<td>$v=\sqrt{2\Delta p/\rho}$</td>
+<td>pitot</td>
+</tr>
+<tr>
+<td>$v=\sqrt{2gh}$; $x=2\sqrt{h(H-h)}$; $T=(A/a)\sqrt{2H/g}$</td>
+<td>small hole, quasi-steady</td>
+</tr>
+<tr>
+<td>$F=\rho a v^2$ (jet thrust); $\rho a(v-u)^2$ (moving plate)</td>
+<td>momentum flux</td>
+</tr>
+<tr>
+<td>$F/A=\eta\,dv/dy$; $Q=\pi R^4\Delta p/8\eta L$; $R_{hyd}=8\eta L/\pi R^4$</td>
+<td>Newtonian; laminar; no slip</td>
+</tr>
+<tr>
+<td>$F_d=6\pi\eta rv$; $v_t=2r^2(\rho-\sigma)g/9\eta$; $\text{Re}=\rho vD/\eta$</td>
+<td>$\text{Re}\lesssim1$</td>
+</tr>
+<tr>
+<td>$\gamma=F/L=W/\Delta A$</td>
+<td>definition pair</td>
+</tr>
+<tr>
+<td>$\Delta p=2\gamma/r$ (drop), $4\gamma/r$ (bubble), $\gamma(1/r_1+1/r_2)$ (general)</td>
+<td>spherical / smooth patch</td>
+</tr>
+<tr>
+<td>$h=2\gamma\cos\theta/\rho gr$; $hR=h'R'$ (short tube)</td>
+<td>Jurin; curvature adjusts</td>
+</tr>
+<tr>
+<td>$v=\sqrt{gh}$</td>
+<td>shallow-water, small amplitude</td>
+</tr>
+<tr>
+<td>Numbers: $p_0=1.013\times10^5$ Pa; water barometer $10.3$ m; $\gamma_w=0.0728$ N/m; $\eta_w=10^{-3}$ Pa·s; $\eta_{air}=1.8\times10^{-5}$; $B_w=2.2\times10^9$ Pa; $\rho_{Hg}=13.6\rho_w$</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<ul>
+<li>[ ] I can prove pressure is isotropic from a shrinking wedge, and derive $dp/dy=-\rho g$.</li>
+<li>[ ] I can walk any manometer, including accelerated ones, without re-deriving.</li>
+<li>[ ] I can state Pascal's law as a consequence of incompressibility and audit a lift's energy.</li>
+<li>[ ] I can compute forces and centres of pressure on plane, inclined and curved surfaces.</li>
+<li>[ ] I can handle linearly accelerated and rotating vessels, including the balloon and the paraboloid.</li>
+<li>[ ] I can derive Archimedes twice and use the displaced-volume ledger on any level-change question.</li>
+<li>[ ] I can state and police the four Bernoulli gates, and know when Poiseuille replaces Bernoulli.</li>
+<li>[ ] I can run Torricelli, range, drainage-time, Venturi, pitot and siphon problems with their conditions.</li>
+<li>[ ] I can compute jet and ejection thrusts by momentum flux.</li>
+<li>[ ] I can derive Poiseuille by a shell balance and combine hydraulic resistances.</li>
+<li>[ ] I can use Stokes with its Reynolds-number caveat and the quadratic regime beyond.</li>
+<li>[ ] I can treat surface tension as force and energy, count surfaces, and derive the excess-pressure family.</li>
+<li>[ ] I can derive Jurin twice and solve the short-tube and tilted-tube variants.</li>
+<li>[ ] I can derive $v=\sqrt{gh}$ in the wave frame and say where the model breaks.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> PART 12 (elasticity) inherits the shell-balance technique of Poiseuille and the energy-method discipline; the pressure-gradient argument reappears in stress analysis. PART 13 (electrostatics) inherits the flux-and-symmetry habits of the hydrostatic equation (the $\nabla p\parallel\mathbf g_{eff}$ argument has a direct Coulomb analogue). The momentum-flux method returns in PART 11's sibling topics and in <a href="electromagnetic-waves.html">EM waves</a> as radiation pressure. The shallow-water bridge hands wave kinematics to <a href="string-waves.html">string waves</a>.</p>
+<p><strong>Open questions now attackable.</strong> Why does a boiled egg spin differently (rigid-body hand-off to PART 8)? Why do tea leaves gather at the centre of a stirred cup (secondary flows beyond this model)? How tall can a mountain be (elasticity, PART 12)? Each is a one-line extension of a tool in this chapter plus one from a later one.</p>
+    <footer class="pager"><a href="simple-harmonic-motion.html">← Simple harmonic motion</a><a href="elasticity.html">Elasticity →</a></footer>
+    <p class="colophon">Rendered from <code>fluid-mechanics/Fluid-mechanics.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>fluid-mechanics/Fluid-mechanics.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>

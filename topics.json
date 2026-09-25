@@ -97,6 +97,8 @@
       "status": "complete",
       "owner": "agent",
       "entry": "rotational-mechanics/Rotational-mechanics.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "plan_part": 8,
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -297,6 +299,7 @@
       "format": "markdown",
       "owner": "arena-agent",
       "entry": "string-waves/String-waves.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -379,6 +382,7 @@
       "owner": "arena-agent",
       "format": "markdown",
       "entry": "electromagnetic-waves/Electromagnetic-waves.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -739,6 +743,16 @@
       "title": "Units, Dimensions & Measurement Errors — first principles to Olympiad",
       "slug": "units-measurements",
       "folder": "units-measurements",
+      "format": "markdown",
+      "entry": "units-measurements/Units-measurements.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 1,
       "status": "complete",
       "owner": "agent",
       "dependency": [],
@@ -756,21 +770,33 @@
         "standard error of the mean and the sqrt(N) rule",
         "Avogadro from an oil-film estimate"
       ],
-      "pages": [],
+      "pages": [
+        "Units-measurements.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1085,
       "bytes_html": 0,
-      "bytes_markdown": 65000,
-      "words": 10800,
-      "display_formulas": 45
+      "bytes_markdown": 82774,
+      "words": 11554,
+      "display_formulas": 14
     },
     {
       "part": 2,
       "title": "Vectors & Vector Algebra — first principles to Olympiad",
       "slug": "vectors",
       "folder": "vectors",
+      "format": "markdown",
+      "entry": "vectors/Vectors.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 2,
       "status": "complete",
       "owner": "agent",
       "dependency": [],
@@ -790,21 +816,33 @@
         "proving the sine rule by vectors",
         "the radius of curvature by vectors"
       ],
-      "pages": [],
+      "pages": [
+        "Vectors.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1166,
       "bytes_html": 0,
-      "bytes_markdown": 78000,
-      "words": 9010,
-      "display_formulas": 50
+      "bytes_markdown": 91930,
+      "words": 9586,
+      "display_formulas": 16
     },
     {
       "part": 3,
       "title": "Kinematics in One Dimension — first principles to Olympiad",
       "slug": "kinematics-1d",
       "folder": "kinematics-1d",
+      "format": "markdown",
+      "entry": "kinematics-1d/Kinematics-1d.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 3,
       "status": "complete",
       "owner": "agent",
       "dependency": [
@@ -828,21 +866,33 @@
         "the reaction-time stopping-distance design problem",
         "relativistic 1-D kinematics as a limit-preview"
       ],
-      "pages": [],
+      "pages": [
+        "Kinematics-1d.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1075,
       "bytes_html": 0,
-      "bytes_markdown": 75000,
-      "words": 10200,
-      "display_formulas": 42
+      "bytes_markdown": 65398,
+      "words": 9404,
+      "display_formulas": 13
     },
     {
       "part": 4,
       "title": "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad",
       "slug": "motion-in-two-dimensions",
       "folder": "motion-in-two-dimensions",
+      "format": "markdown",
+      "entry": "motion-in-two-dimensions/Motion-in-two-dimensions.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 4,
       "status": "complete",
       "owner": "agent",
       "dependency": [
@@ -867,21 +917,33 @@
         "the minimum-speed interception problem",
         "the 2-D pursuit problem"
       ],
-      "pages": [],
+      "pages": [
+        "Motion-in-two-dimensions.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 970,
       "bytes_html": 0,
-      "bytes_markdown": 80000,
-      "words": 11000,
-      "display_formulas": 48
+      "bytes_markdown": 73073,
+      "words": 9957,
+      "display_formulas": 19
     },
     {
       "part": 5,
       "title": "Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad",
       "slug": "newtons-laws",
       "folder": "newtons-laws",
+      "format": "markdown",
+      "entry": "newtons-laws/Newtons-laws.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 5,
       "status": "complete",
       "owner": "agent",
       "dependency": [
@@ -903,21 +965,33 @@
         "rope-sliding-off-table with friction",
         "the friction-direction paradox on a turntable"
       ],
-      "pages": [],
+      "pages": [
+        "Newtons-laws.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 921,
       "bytes_html": 0,
-      "bytes_markdown": 85000,
-      "words": 12000,
-      "display_formulas": 55
+      "bytes_markdown": 79375,
+      "words": 11495,
+      "display_formulas": 13
     },
     {
       "part": 6,
       "title": "Work, Energy & Power — first principles to Olympiad",
       "slug": "work-energy-power",
       "folder": "work-energy-power",
+      "format": "markdown",
+      "entry": "work-energy-power/Work-energy-power.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 6,
       "status": "complete",
       "owner": "agent",
       "dependency": [
@@ -939,21 +1013,33 @@
         "rolling-body energy",
         "power-law force turning points"
       ],
-      "pages": [],
+      "pages": [
+        "Work-energy-power.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 852,
       "bytes_html": 0,
-      "bytes_markdown": 90000,
-      "words": 12500,
-      "display_formulas": 55
+      "bytes_markdown": 70513,
+      "words": 9967,
+      "display_formulas": 19
     },
     {
       "part": 7,
       "title": "Centre of Mass, Momentum & Collisions — first principles to Olympiad",
       "slug": "centre-of-mass-momentum",
       "folder": "centre-of-mass-momentum",
+      "format": "markdown",
+      "entry": "centre-of-mass-momentum/Centre-of-mass-momentum.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 7,
       "status": "complete",
       "owner": "agent",
       "dependency": [
@@ -978,15 +1064,17 @@
         "two-stage rocket optimal staging",
         "momentum-flux force of a water jet"
       ],
-      "pages": [],
+      "pages": [
+        "Centre-of-mass-momentum.md"
+      ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 700,
       "bytes_html": 0,
-      "bytes_markdown": 92000,
-      "words": 13000,
-      "display_formulas": 58
+      "bytes_markdown": 71081,
+      "words": 10132,
+      "display_formulas": 17
     },
     {
       "part": 9,
@@ -997,6 +1085,14 @@
       "owner": "agent",
       "format": "markdown",
       "entry": "gravitation/Gravitation.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 9,
       "dependency": [
         "rotational-mechanics"
       ],
@@ -1021,6 +1117,14 @@
       "owner": "agent",
       "format": "markdown",
       "entry": "simple-harmonic-motion/Simple-harmonic-motion.md",
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "plan_part": 10,
       "dependency": [
         "gravitation"
       ],
@@ -1035,6 +1139,104 @@
       "solutions": 93,
       "math_spans": 946,
       "bytes_html": 0
+    },
+    {
+      "slug": "fluid-mechanics",
+      "title": "Fluid Mechanics & Surface Tension — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "fluid-mechanics/Fluid-mechanics.md",
+      "format": "markdown",
+      "plan_part": 11,
+      "part": 11,
+      "source": "Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (pp. 4.20-4.37)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "newtons-laws",
+        "work-energy-power"
+      ],
+      "beyond_plan": [
+        "the rotating-frame pressure statement p - rho omega^2 r^2/2 + rho g z = const unifying the modified manometric equation, equipressure lines and the pendulum comparison",
+        "the finite-vs-infinite emptying-time contrast and the inertial/turbulent honesty note for water drains (OL1)",
+        "the sinking-ball scale-reading family (P16)",
+        "the hydraulic-resistance analogy as an explicit toolkit item (T5, Q19)",
+        "two decision-tree DIAGRAM briefs (D11.16, D11.17) replacing two micro-briefs the prose carries",
+        "the hydraulic jump and entropy-selection closing of the paper (P36)",
+        "the catenoid existence limit stated with its physics (OL4)"
+      ],
+      "deliberately_not_covered": [
+        "the rocket-in-a-fluid retarding-force estimate (plan's olympiad list; its momentum-flux method is taught in 3.11, item cut for space)",
+        "turbulent pipe-flow corrections beyond the Reynolds criterion (named as a failure mode in 10.1)"
+      ],
+      "next_candidates": [
+        "a timed 25-question JEE-Advanced-only set keyed to blocks 2-4"
+      ],
+      "pages": [
+        "Fluid-mechanics.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1410,
+      "bytes_html": 0,
+      "bytes_markdown": 124120,
+      "words": 18099,
+      "display_formulas": 28
+    },
+    {
+      "slug": "elasticity",
+      "title": "Elasticity & Properties of Matter — first principles to Olympiad",
+      "status": "complete",
+      "owner": "arena-agent",
+      "entry": "elasticity/Elasticity.md",
+      "format": "markdown",
+      "plan_part": 12,
+      "part": 12,
+      "source": "Cengage MECHANICS 2-compressed.pdf, ch 4 Properties of Solids and Fluids, elasticity half (pp. 4.1-4.19)",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "newtons-laws",
+        "work-energy-power"
+      ],
+      "beyond_plan": [
+        "the straight-wire sag y = l (mg/YA)^(1/3), beside the angled hanger, where the mg/2 trap is sharpest (E5)",
+        "the bolt-and-nut quarter-turn as a numerical cousin of thermal stress (E4)",
+        "the fair I-beam comparison at equal depth and equal area, against the inflated factor from also changing the depth (OL7)",
+        "the wave-transit caveat on the falling-weight integral, L/c against the loading time (OL3)",
+        "a material-selection table with three candidates and two different indices (E10)"
+      ],
+      "deliberately_not_covered": [
+        "plastic buckling after yield (named as the failure of Euler's formula, not derived)",
+        "anisotropic laminate theory",
+        "fracture mechanics beyond the statement that fatigue grows a crack",
+        "large-strain rubber elasticity as an entropy spring (named in 3.11 and OL8, then left alone)"
+      ],
+      "next_candidates": [
+        "a timed 25-question JEE-Advanced-only set keyed to the extension family and thermal stress"
+      ],
+      "pages": [
+        "Elasticity.md"
+      ],
+      "figures": 0,
+      "questions": 47,
+      "solutions": 93,
+      "math_spans": 1378,
+      "bytes_html": 0,
+      "bytes_markdown": 105472,
+      "words": 15570,
+      "display_formulas": 20
     }
   ]
 }

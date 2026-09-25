@@ -45,6 +45,8 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **rotational mechanics** | [Rotational-mechanics.md](rotational-mechanics/Rotational-mechanics.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 8 |
 | **gravitation** | [Gravitation.md](gravitation/Gravitation.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 9 |
 | **simple harmonic motion** | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 10 |
+| **fluid mechanics & surface tension** | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) | text-only, 20 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 11 |
+| **elasticity & properties of matter** | [Elasticity.md](elasticity/Elasticity.md) | text-only, 14 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 12 |
 
 The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
 
@@ -63,14 +65,20 @@ Three ways, in order of what you get:
    note-sets stay in their bold-label HTML/Markdown style — the vault mixes the two on purpose.
 1. **The rendered site (recommended for study).** Open
    [`docs/site/index.html`](docs/site/index.html) straight from disk — it works
-   offline with no tooling. Diagrams are the local SVGs, equations are typeset
-   with the vendored KaTeX, solutions stay collapsible, and each page has a
-   table of contents plus links to the other topics. Regenerate it any time
-   with `python3 tools/md_site.py` (needs `pip install markdown`). To read it
-   over HTTP instead, run the server in the **repository root**
-   (`python3 -m http.server 8080`, then open `/docs/site/`): the pages reach their
-   diagrams at `../../<topic>/assets/figures/`, so a server rooted in `docs/site`
-   itself renders the text but not the figures.
+   offline with no tooling, and it covers **all 28 note-sets**, grouped by block
+   (waves & thermodynamics · electricity & magnetism · optics · mechanics ·
+   modern physics). Diagrams are the local SVGs, equations are typeset with the
+   vendored KaTeX, solutions stay collapsible, and each page has a table of
+   contents plus links to the other topics. The plan.md chapters render with
+   their Obsidian callouts tinted by type, their `DIAGRAM` briefs as bordered
+   figure slots, their wikilinks as real links, and their frontmatter as a
+   property strip. Regenerate it any time with `python3 tools/md_site.py` (needs
+   `pip install markdown`); it takes each topic's master from the `entry` field
+   of `topics.json`, so a chapter appears on the site as soon as it is
+   registered. To read it over HTTP instead, run the server in the **repository
+   root** (`python3 -m http.server 8080`, then open `/docs/site/`): the pages
+   reach their diagrams at `../../<topic>/assets/figures/`, so a server rooted in
+   `docs/site` itself renders the text but not the figures.
 2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
    `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
    they render with diagrams and equations on GitHub and in viewers with a

@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vectors & vector algebra — JEE / Olympiad physics notes</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Physics notes</a>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="active">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+</header>
+<div class="layout">
+  <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#part-0-orientation">Part 0 · Orientation</a></li>
+<li><a href="#part-1-intuition-first">Part 1 · Intuition first</a></li>
+<li><a href="#part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</a></li>
+<li><a href="#part-3-core-derivations">Part 3 · Core derivations</a></li>
+<li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
+<li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
+<li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
+<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
+<li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
+<li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
+<li><a href="#part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</a></li>
+<li><a href="#part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</a></li>
+<li><a href="#part-13-formula-sheet">Part 13 · Formula sheet</a></li>
+<li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
+</ul></details></aside>
+  <main class="page">
+<p class="props"><span class="prop"><b>part</b> 2</span><span class="prop"><b>slug</b> vectors</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 2 Vectors</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">vectors</span></p>
+
+<h1 id="vectors-vector-algebra-first-principles-to-olympiad">Vectors &amp; Vector Algebra — first principles to Olympiad</h1>
+<div class="callout abstract">
+<p class="callout-title">How to use this chapter</p>
+<p>Three passes. Pass 1: Parts 0–4 — what vectors are, how to add and multiply them, and why direction matters. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (the Lagrange identity, the vector triple product proof, vector equations, the spherical basis and $\dot{\hat{r}}=\boldsymbol{\omega}\times\hat{r}$, areas and volumes by vector methods), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+</div>
+
+<h2 id="part-0-orientation">Part 0 · Orientation</h2>
+<h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
+<p>After this chapter you can: decompose a vector into components in any coordinate system; add, subtract and resolve vectors using the triangle and parallelogram laws; compute the dot product (projection) and cross product (area, torque); manipulate scalar and vector triple products; solve vector equations by dotting with a clever vector; differentiate vectors in a rotating frame; and apply vector methods to compute areas, volumes, and curvatures.</p>
+<h3 id="02-the-one-idea">0.2 The one idea</h3>
+<p>Vectors are the language in which direction stops being an accident of the coordinate system.</p>
+<h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
+<p>You need PART 1 (units, significant figures). If you can add and multiply, take square roots and sines/cosines, you are ready.</p>
+<h3 id="04-exam-orientation">0.4 Exam orientation</h3>
+<p>JEE Advanced treats vectors as infrastructure — they appear in every mechanics and electromagnetism problem. Direct vector questions (find the dot product, the angle, the area) appear in 1–2 questions per year. INPhO and IPhO reward the ability to set up and solve vector equations efficiently, especially the vector triple product and the rotating-frame velocity. The trap density is moderate: confusing $\mathbf{a}\cdot\mathbf{b}$ with $\mathbf{a}\times\mathbf{b}$, forgetting that the cross product is anti-commutative, and not checking the direction of the resultant.</p>
+<p>A common JEE pattern: given two vectors, ask for the angle between them (dot product), the area of the triangle they form (cross product), or a condition for perpendicularity or parallelity. These are mechanical computations once you know the definitions. A harder pattern: given a vector equation like $\mathbf{a}\times\mathbf{x}=\mathbf{b}$, find the solution family — this requires the BAC–CAB trick and the "necessary condition" $\mathbf{a}\cdot\mathbf{b}=0$. An Olympiad pattern: prove a geometric result (sine rule, concurrency of medians) using vectors — this requires translating geometric conditions into vector equations and manipulating them algebraically.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.9 · The scalar triple product as a signed volume</p>
+<p><em>Show:</em> three vectors $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ forming a parallelepiped; the sign of $[\mathbf{a},\mathbf{b},\mathbf{c}]$ indicated by the right-hand rule: positive if $(\mathbf{a},\mathbf{b},\mathbf{c})$ form a right-handed triad, negative if left-handed.
+<em>Search:</em> "scalar triple product signed volume right hand rule parallelepiped"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.10 · Vector addition in components</p>
+<p><em>Show:</em> two vectors $\mathbf{a}=3\hat{i}+2\hat{j}$ and $\mathbf{b}=1\hat{i}+4\hat{j}$ drawn from the origin; their components shown as dashed projections onto the $x$ and $y$ axes; the sum $\mathbf{c}=4\hat{i}+6\hat{j}$ drawn as the diagonal of the parallelogram; each component of $\mathbf{c}$ shown as the sum of the corresponding components.
+<em>Search:</em> "vector addition components x y axis sum diagram"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.11 · The projection of a vector onto another</p>
+<p><em>Show:</em> vector $\mathbf{a}$ at angle $\theta$ to vector $\mathbf{b}$; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length $a\cos\theta$ labelled; the projection vector $a\cos\theta\,\hat{b}$ drawn along $\mathbf{b}$.
+<em>Search:</em> "vector projection onto another vector dot product cos theta"</p>
+</div>
+
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.12 · Anti-commutativity of the cross product</p>
+<p><em>Show:</em> vectors $\mathbf{a}$ and $\mathbf{b}$ in the $xy$-plane; $\mathbf{a}\times\mathbf{b}$ pointing in the $+z$ direction (out of page); $\mathbf{b}\times\mathbf{a}$ pointing in the $-z$ direction (into page); the magnitudes equal, the directions opposite; the right-hand rule applied to each.
+<em>Search:</em> "cross product anti commutativity a times b versus b times a"</p>
+</div>
+
+<h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
+<p>Not a linear-algebra course: we cover vectors in 2 and 3 dimensions, not $n$ dimensions. Not a tensor course: we cover the dot and cross products but not the general tensor product. Not a complex-number course: complex numbers are a powerful alternative representation of 2D vectors (with multiplication by $i$ equivalent to rotation by $90°$), but we focus on the Cartesian/polar vector language that generalises naturally to 3D. Not a computer-graphics course: we cover the mathematical theory but not the implementation of rotation matrices, quaternions, or the cross product in graphics pipelines.</p>
+<h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Cengage section</th>
+<th>What it establishes</th>
+<th>Where it lives here</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Scalars and vectors</td>
+<td>Definition, graphical representation</td>
+<td>§3.1</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Addition: triangle and parallelogram</td>
+<td>Commutativity, associativity</td>
+<td>§3.2</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Subtraction</td>
+<td>$\mathbf{a}-\mathbf{b}=\mathbf{a}+(-\mathbf{b})$</td>
+<td>§3.3</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Components and resolution</td>
+<td>$x$, $y$, $z$ components; unit vectors $\hat{i}$, $\hat{j}$, $\hat{k}$</td>
+<td>§3.4</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Direction cosines</td>
+<td>$l=\cos\alpha$, $m=\cos\beta$, $n=\cos\gamma$; $l^2+m^2+n^2=1$</td>
+<td>§3.5</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Dot product</td>
+<td>$\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; projection</td>
+<td>§3.6</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Cross product</td>
+<td>$\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$; area</td>
+<td>§3.7</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Scalar triple product</td>
+<td>$\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$; volume</td>
+<td>§3.8</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Vector triple product</td>
+<td>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$; the BAC–CAB rule</td>
+<td>§3.9</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Vector equations</td>
+<td>$\mathbf{a}\times\mathbf{x}=\mathbf{b}$; dotting with a clever vector</td>
+<td>§3.10</td>
+<td>full</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
+<p><strong>A scalar has magnitude only; a vector has magnitude and direction.</strong> Temperature is a scalar (37°C). Displacement is a vector (3 m east). The displacement from $A$ to $B$ is $\overrightarrow{AB}$; its magnitude is $|\overrightarrow{AB}|=AB$.</p>
+<p><strong>Adding vectors is not like adding numbers.</strong> If you walk 3 m east and then 4 m north, the net displacement is not 7 m — it is 5 m northeast. The triangle law (place the tail of the second vector at the head of the first) and the parallelogram law (complete the parallelogram; the diagonal is the sum) give the same result: $\mathbf{c}=\mathbf{a}+\mathbf{b}$.</p>
+<p><strong>A vector lives in all coordinate systems at once.</strong> The displacement "3 m east" is the same physical quantity whether you call it $(3,0)$ in Cartesian or $(3, 0°)$ in polar. The components change; the vector does not. Writing $\mathbf{a}=a_x\hat{i}+a_y\hat{j}+a_z\hat{k}$ is just choosing a language to describe it.</p>
+<p><strong>Two kinds of multiplication, two kinds of output.</strong> The dot product $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ gives a scalar — the projection of one vector onto the other. The cross product $\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$ gives a vector — the area of the parallelogram, directed perpendicular to both. Neither is more "correct"; they answer different questions.</p>
+<h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{a}$, $\vec{a}$</td>
+<td>vector (bold or arrow notation)</td>
+<td>vector</td>
+</tr>
+<tr>
+<td>$a$</td>
+<td>magnitude of $\mathbf{a}$, i.e. sqrt of a dot a</td>
+<td>scalar</td>
+</tr>
+<tr>
+<td>$\hat{a}$, $\hat{\mathbf{a}}$</td>
+<td>unit vector in direction of $\mathbf{a}=\mathbf{a}/a$</td>
+<td>vector</td>
+</tr>
+<tr>
+<td>$\hat{i}$, $\hat{j}$, $\hat{k}$</td>
+<td>unit vectors along $x$, $y$, $z$</td>
+<td>vectors</td>
+</tr>
+<tr>
+<td>$\alpha$, $\beta$, $\gamma$</td>
+<td>angles with $x$, $y$, $z$ axes</td>
+<td>scalars</td>
+</tr>
+<tr>
+<td>$l$, $m$, $n$</td>
+<td>direction cosines $=\cos\alpha$, $\cos\beta$, $\cos\gamma$</td>
+<td>scalars</td>
+</tr>
+<tr>
+<td>$\theta$</td>
+<td>angle between two vectors</td>
+<td>scalar</td>
+</tr>
+<tr>
+<td>$\mathbf{a}\cdot\mathbf{b}$</td>
+<td>dot (scalar) product</td>
+<td>scalar</td>
+</tr>
+<tr>
+<td>$\mathbf{a}\times\mathbf{b}$</td>
+<td>cross (vector) product</td>
+<td>vector</td>
+</tr>
+<tr>
+<td>$[\mathbf{a},\mathbf{b},\mathbf{c}]$</td>
+<td>scalar triple product $=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$</td>
+<td>scalar</td>
+</tr>
+</tbody>
+</table>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>Vectors are printed bold ($\mathbf{a}$) or with arrows ($\vec{a}$). Unit vectors get hats ($\hat{a}$). The cross product exists only in 3D (and 7D — a mathematical curiosity). The dot product exists in any dimension. In this chapter all vectors are in 3D Euclidean space unless stated otherwise.</p>
+</div>
+
+<p>Three numbers to carry: $\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\cos45°=1/\sqrt{2}=0.707$; $\sin60°=\sqrt{3}/2=0.866$, $\cos60°=0.5$.</p>
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<h3 id="31-scalars-and-vectors-the-definition">3.1 Scalars and vectors: the definition</h3>
+<p><strong>Scalar.</strong> A quantity with magnitude only: mass, temperature, energy, speed. Scalars are ordinary numbers (with units).</p>
+<p><strong>Vector.</strong> A quantity with magnitude, direction, and a sense (which way along the line): displacement, velocity, acceleration, force, momentum. Vectors obey the triangle law of addition.</p>
+<p><strong>Pseudovector (axial vector).</strong> A quantity that transforms like a vector under rotations but flips sign under a reflection: angular velocity $\boldsymbol{\omega}$, torque $\boldsymbol{\tau}$, magnetic field $\mathbf{B}$. Pseudovectors arise from cross products of true (polar) vectors.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.1 · The difference between a vector and a scalar</p>
+<p><em>Show:</em> left: a temperature reading "37°C" (a number with a unit, no arrow). Right: a displacement "3 m east" (an arrow from a point, with the length representing 3 m and the direction pointing east). Below: two vectors $\mathbf{a}$ and $\mathbf{b}$ drawn from the same point, with their sum $\mathbf{a}+\mathbf{b}$ shown by the parallelogram diagonal.
+<em>Search:</em> "vector vs scalar displacement temperature diagram"</p>
+</div>
+
+<h3 id="32-vector-addition-the-triangle-and-parallelogram-laws">3.2 Vector addition: the triangle and parallelogram laws</h3>
+<p><strong>Triangle law.</strong> Place the tail of $\mathbf{b}$ at the head of $\mathbf{a}$. The sum $\mathbf{c}=\mathbf{a}+\mathbf{b}$ goes from the tail of $\mathbf{a}$ to the head of $\mathbf{b}$.</p>
+<p><strong>Parallelogram law.</strong> Place the tails of $\mathbf{a}$ and $\mathbf{b}$ at the same point. Complete the parallelogram. The diagonal from the common tail is $\mathbf{a}+\mathbf{b}$.</p>
+<p><strong>Commutativity:</strong> $\mathbf{a}+\mathbf{b}=\mathbf{b}+\mathbf{a}$ (the parallelogram has two diagonals; both give the same sum, the other diagonal is $\mathbf{a}-\mathbf{b}$).</p>
+<p><strong>Associativity:</strong> $(\mathbf{a}+\mathbf{b})+\mathbf{c}=\mathbf{a}+(\mathbf{b}+\mathbf{c})$ (the polygon law of addition).</p>
+<p><strong>Magnitude:</strong> $|\mathbf{a}+\mathbf{b}|=\sqrt{a^2+b^2+2ab\cos\theta}$ from the cosine rule. At $\theta=0$: $|\mathbf{a}+\mathbf{b}|=a+b$ (same direction). At $\theta=\pi$: $|\mathbf{a}+\mathbf{b}|=|a-b|$ (opposite directions).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.2 · The triangle and parallelogram laws</p>
+<p><em>Show:</em> top: triangle law — vector $\mathbf{a}$ followed by vector $\mathbf{b}$, sum $\mathbf{c}$ closing the triangle. Bottom: parallelogram law — $\mathbf{a}$ and $\mathbf{b}$ from the same point, the diagonal showing $\mathbf{a}+\mathbf{b}$, the other diagonal showing $\mathbf{a}-\mathbf{b}$.
+<em>Search:</em> "vector addition triangle parallelogram law diagram"</p>
+</div>
+
+<h3 id="33-vector-subtraction">3.3 Vector subtraction</h3>
+<p>$\mathbf{a}-\mathbf{b}=\mathbf{a}+(-\mathbf{b})$. Graphically: reverse $\mathbf{b}$ (flip its direction) and add it to $\mathbf{a}$ using the triangle law. The vector $\mathbf{a}-\mathbf{b}$ goes from the head of $\mathbf{b}$ to the head of $\mathbf{a}$ (when both tails coincide).</p>
+<p><strong>Magnitude:</strong> $|\mathbf{a}-\mathbf{b}|=\sqrt{a^2+b^2-2ab\cos\theta}$ from the cosine rule. At $\theta=0$: $|\mathbf{a}-\mathbf{b}|=|a-b|$. At $\theta=\pi$: $|\mathbf{a}-\mathbf{b}|=a+b$.</p>
+<h3 id="34-components-and-resolution">3.4 Components and resolution</h3>
+<p>Any vector $\mathbf{a}$ in 3D can be written as:</p>
+<p>$$
+\mathbf{a}=a_x\hat{i}+a_y\hat{j}+a_z\hat{k}. \qquad (3.1)
+$$</p>
+<p>The components are: $a_x=\mathbf{a}\cdot\hat{i}=a\cos\alpha$, $a_y=a\cos\beta$, $a_z=a\cos\gamma$. The magnitude is $a=\sqrt{a_x^2+a_y^2+a_z^2}$.</p>
+<p><strong>In 2D:</strong> $\mathbf{a}=a\cos\theta\,\hat{i}+a\sin\theta\,\hat{j}$ where $\theta$ is the angle from the $x$-axis.</p>
+<p><strong>Addition by components:</strong> $\mathbf{a}+\mathbf{b}=(a_x+b_x)\hat{i}+(a_y+b_y)\hat{j}+(a_z+b_z)\hat{k}$.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.3 · Components of a vector in 2D</p>
+<p><em>Show:</em> a vector $\mathbf{a}$ of magnitude $a$ at angle $\theta$ from the $x$-axis; the $x$-component $a\cos\theta$ and $y$-component $a\sin\theta$ drawn as perpendicular projections onto the axes; the three sides of the right triangle labelled.
+<em>Search:</em> "vector components 2D x y cos sin theta diagram"</p>
+</div>
+
+<h3 id="35-direction-cosines">3.5 Direction cosines</h3>
+<p>The direction cosines of a vector are $l=\cos\alpha$, $m=\cos\beta$, $n=\cos\gamma$, where $\alpha$, $\beta$, $\gamma$ are the angles with the $x$, $y$, $z$ axes. The fundamental relation:</p>
+<p>$$
+l^2+m^2+n^2=\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1. \qquad (3.2)
+$$</p>
+<p>The unit vector is $\hat{a}=l\hat{i}+m\hat{j}+n\hat{k}$. If two direction cosines are known, the third is fixed (up to a sign). Direction cosines are a standard tool in engineering and crystallography: they specify the orientation of a line in 3D without choosing a coordinate system.</p>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>Eq. (3.2) is just the Pythagorean theorem in disguise: $a_x^2+a_y^2+a_z^2=a^2$, divided by $a^2$. The direction cosines are the components of the unit vector $\hat{a}$ along the coordinate axes.</p>
+</div>
+
+<h3 id="36-the-dot-product">3.6 The dot product</h3>
+<p>$$
+\mathbf{a}\cdot\mathbf{b}=ab\cos\theta=a_xb_x+a_yb_y+a_zb_z. \qquad (3.3)
+$$</p>
+<p><strong>Properties:</strong></p>
+<ol>
+<li><strong>Commutative:</strong> $\mathbf{a}\cdot\mathbf{b}=\mathbf{b}\cdot\mathbf{a}$.</li>
+<li><strong>Distributive:</strong> $\mathbf{a}\cdot(\mathbf{b}+\mathbf{c})=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\cdot\mathbf{c}$.</li>
+<li><strong>Perpendicular:</strong> $\mathbf{a}\cdot\mathbf{b}=0$ iff $\mathbf{a}\perp\mathbf{b}$ (assuming non-zero vectors).</li>
+<li><strong>Self-product:</strong> $\mathbf{a}\cdot\mathbf{a}=a^2$.</li>
+<li><strong>Projection:</strong> $\text{proj}_{\mathbf{b}}\mathbf{a}=\frac{\mathbf{a}\cdot\mathbf{b}}{b}$ (the component of $\mathbf{a}$ along $\mathbf{b}$).</li>
+</ol>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.4 · The dot product as projection</p>
+<p><em>Show:</em> vectors $\mathbf{a}$ and $\mathbf{b}$ with angle $\theta$ between them; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length of the projection labelled $a\cos\theta$; the formula $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ shown alongside.
+<em>Search:</em> "dot product projection formula diagram angle between vectors"</p>
+</div>
+
+<h3 id="37-the-cross-product">3.7 The cross product</h3>
+<p>$$
+\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}=\begin{vmatrix}\hat{i}&amp;\hat{j}&amp;\hat{k}\a_x&amp;a_y&amp;a_z\b_x&amp;b_y&amp;b_z\end{vmatrix}. \qquad (3.4)
+$$</p>
+<p>The direction of $\hat{n}$ is given by the right-hand rule: curl the fingers from $\mathbf{a}$ to $\mathbf{b}$; the thumb points in the direction of $\mathbf{a}\times\mathbf{b}$.</p>
+<p><strong>Properties:</strong></p>
+<ol>
+<li><strong>Anti-commutative:</strong> $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$.</li>
+<li><strong>Distributive:</strong> $\mathbf{a}\times(\mathbf{b}+\mathbf{c})=\mathbf{a}\times\mathbf{b}+\mathbf{a}\times\mathbf{c}$.</li>
+<li><strong>Parallel:</strong> $\mathbf{a}\times\mathbf{b}=\mathbf{0}$ iff $\mathbf{a}\parallel\mathbf{b}$.</li>
+<li><strong>Self-product:</strong> $\mathbf{a}\times\mathbf{a}=\mathbf{0}$.</li>
+<li><strong>Area:</strong> $|\mathbf{a}\times\mathbf{b}|$ = area of the parallelogram formed by $\mathbf{a}$ and $\mathbf{b}$.</li>
+</ol>
+<p><strong>Component form:</strong></p>
+<p>$$
+\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\hat{i}+(a_zb_x-a_xb_z)\hat{j}+(a_xb_y-a_yb_x)\hat{k}. \qquad (3.5)
+$$</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.5 · The cross product and the right-hand rule</p>
+<p><em>Show:</em> vectors $\mathbf{a}$ and $\mathbf{b}$ lying in the $xy$-plane; $\mathbf{a}\times\mathbf{b}$ pointing in the $+z$ direction (right-hand rule); the magnitude $ab\sin\theta$ equal to the area of the parallelogram; the parallelogram shaded.
+<em>Search:</em> "cross product right hand rule area parallelogram diagram"</p>
+</div>
+
+<h3 id="38-the-scalar-triple-product">3.8 The scalar triple product</h3>
+<p>$$
+[\mathbf{a},\mathbf{b},\mathbf{c}]=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\begin{vmatrix}a_x&amp;a_y&amp;a_z\b_x&amp;b_y&amp;b_z\c_x&amp;c_y&amp;c_z\end{vmatrix}. \qquad (3.6)
+$$</p>
+<p><strong>Geometric meaning:</strong> the volume of the parallelepiped formed by $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ (with a sign indicating handedness). The scalar triple product is the most efficient way to compute volumes in 3D and to test for coplanarity.</p>
+<p><strong>Properties:</strong></p>
+<ol>
+<li><strong>Cyclic:</strong> $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})=\mathbf{c}\cdot(\mathbf{a}\times\mathbf{b})$.</li>
+<li><strong>Anti-cyclic:</strong> swapping any two vectors changes the sign.</li>
+<li><strong>Coplanarity:</strong> $[\mathbf{a},\mathbf{b},\mathbf{c}]=0$ iff the three vectors are coplanar.</li>
+</ol>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.6 · The scalar triple product as volume</p>
+<p><em>Show:</em> three vectors $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ from a common origin forming a skewed box (parallelepiped); the base (parallelogram of $\mathbf{b}$ and $\mathbf{c}$) shaded; the height (component of $\mathbf{a}$ perpendicular to the base) shown as a dashed line; volume $=|\mathbf{b}\times\mathbf{c}|\times|a_{\perp}|$ annotated.
+<em>Search:</em> "scalar triple product volume parallelepiped diagram"</p>
+</div>
+
+<h3 id="39-the-vector-triple-product">3.9 The vector triple product</h3>
+<p>$$
+\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}). \qquad (3.7)
+$$</p>
+<p>This is the <strong>BAC–CAB rule</strong>: replace the outer vectors ($\mathbf{b}$ and $\mathbf{c}$) in the expression $\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$.</p>
+<p><strong>Key points:</strong></p>
+<ol>
+<li>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$ lies in the plane of $\mathbf{b}$ and $\mathbf{c}$ (it is a linear combination of $\mathbf{b}$ and $\mathbf{c}$).</li>
+<li>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\neq(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ in general — the vector triple product is NOT associative.</li>
+<li>The BAC–CAB rule simplifies otherwise terrifying cross products.</li>
+</ol>
+<div class="callout info">
+<p class="callout-title">Why</p>
+<p>The vector $\mathbf{b}\times\mathbf{c}$ is perpendicular to the plane of $\mathbf{b}$ and $\mathbf{c}$. Crossing $\mathbf{a}$ with this vector gives something perpendicular to both $\mathbf{a}$ and $\mathbf{b}\times\mathbf{c}$ — which must lie in the plane of $\mathbf{b}$ and $\mathbf{c}$ (the only plane perpendicular to $\mathbf{b}\times\mathbf{c}$). Hence the result is a linear combination of $\mathbf{b}$ and $\mathbf{c}$.</p>
+</div>
+
+<h3 id="310-vector-equations">3.10 Vector equations</h3>
+<p><strong>Example.</strong> Solve $\mathbf{a}\times\mathbf{x}=\mathbf{b}$ for $\mathbf{x}$.</p>
+<p><strong>Method.</strong> Cross both sides with $\mathbf{a}$: $\mathbf{a}\times(\mathbf{a}\times\mathbf{x})=\mathbf{a}\times\mathbf{b}$. Using BAC–CAB: $\mathbf{a}(\mathbf{a}\cdot\mathbf{x})-\mathbf{x}(\mathbf{a}\cdot\mathbf{a})=\mathbf{a}\times\mathbf{b}$. So $\mathbf{a}(\mathbf{a}\cdot\mathbf{x})-a^2\mathbf{x}=\mathbf{a}\times\mathbf{b}$. If $\mathbf{a}\cdot\mathbf{x}=k$ (some constant): $\mathbf{x}=\frac{\mathbf{a}k-\mathbf{a}\times\mathbf{b}}{a^2}$.</p>
+<p><strong>Existence:</strong> $\mathbf{a}\cdot\mathbf{b}=0$ is a necessary condition (since $\mathbf{a}\cdot(\mathbf{a}\times\mathbf{x})=0$ always).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.7 · Solving $\mathbf{a}\times\mathbf{x}=\mathbf{b}$</p>
+<p><em>Show:</em> the vector $\mathbf{a}$ drawn vertically; $\mathbf{b}$ drawn perpendicular to $\mathbf{a}$ (the necessary condition $\mathbf{a}\cdot\mathbf{b}=0$); $\mathbf{x}$ drawn such that $\mathbf{a}\times\mathbf{x}=\mathbf{b}$; the family of solutions $\mathbf{x}=\mathbf{x}_0+\lambda\mathbf{a}$ shown as a dashed line parallel to $\mathbf{a}$.
+<em>Search:</em> "vector equation cross product solution family diagram"</p>
+</div>
+
+<h3 id="311-the-polar-basis-hatr-and-hattheta">3.11 The polar basis: $\hat{r}$ and $\hat{\theta}$</h3>
+<p>In 2D, any point can be described by $(r,\theta)$ (polar coordinates). The unit vectors are:</p>
+<p>$$
+\hat{r}=\cos\theta\,\hat{i}+\sin\theta\,\hat{j},\qquad\hat{\theta}=-\sin\theta\,\hat{i}+\cos\theta\,\hat{j}. \qquad (3.8)
+$$</p>
+<p><strong>Key property:</strong> as $\theta$ changes, $\hat{r}$ and $\hat{\theta}$ rotate. Their time derivatives are:</p>
+<p>$$
+\dot{\hat{r}}=\dot{\theta}\hat{\theta}=\omega\hat{\theta},\qquad\dot{\hat{\theta}}=-\dot{\theta}\hat{r}=-\omega\hat{r}. \qquad (3.9)
+$$</p>
+<p>This is the foundation for circular-motion kinematics (PART 4) and the rotating-frame dynamics (PART 8).</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D2.8 · The polar basis and its rotation</p>
+<p><em>Show:</em> the unit vectors $\hat{r}$ (pointing radially outward) and $\hat{\theta}$ (pointing tangentially, in the direction of increasing $\theta$) at a point on a circle; the angle $\theta$ from the $x$-axis; the rotation of $\hat{r}$ by $d\theta$ showing $d\hat{r}=\hat{\theta}\,d\theta$; the relation $\dot{\hat{r}}=\omega\hat{\theta}$ annotated.
+<em>Search:</em> "polar unit vectors r hat theta hat rotation time derivative diagram"</p>
+</div>
+
+<h3 id="312-vector-calculus-basics">3.12 Vector calculus basics</h3>
+<p><strong>Product rules:</strong></p>
+<p>$$
+\frac{d}{dt}(\mathbf{a}\cdot\mathbf{b})=\dot{\mathbf{a}}\cdot\mathbf{b}+\mathbf{a}\cdot\dot{\mathbf{b}}. \qquad (3.10)
+$$</p>
+<p>$$
+\frac{d}{dt}(\mathbf{a}\times\mathbf{b})=\dot{\mathbf{a}}\times\mathbf{b}+\mathbf{a}\times\dot{\mathbf{b}}. \qquad (3.11)
+$$</p>
+<p>Note the order: in the cross-product rule, the order matters (the cross product is anti-commutative).</p>
+<p><strong>Differentiating a unit vector:</strong> if $\hat{a}$ changes direction but not magnitude ($|\hat{a}|=1$), then $\dot{\hat{a}}\perp\hat{a}$ (since $\hat{a}\cdot\dot{\hat{a}}=0$ from differentiating $\hat{a}\cdot\hat{a}=1$).</p>
+<h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
+<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<p>$$
+\boxed{\mathbf{a}\cdot\mathbf{b}=ab\cos\theta=a_xb_x+a_yb_y+a_zb_z} \qquad (4.1)
+$$</p>
+<p>commutative, distributive; zero iff $\mathbf{a}\perp\mathbf{b}$.</p>
+<p>$$
+\boxed{\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}=(a_yb_z-a_zb_y)\hat{i}+\cdots} \qquad (4.2)
+$$</p>
+<p>anti-commutative; zero iff $\mathbf{a}\parallel\mathbf{b}$; $|\mathbf{a}\times\mathbf{b}|$ = area of parallelogram.</p>
+<p>$$
+\boxed{\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\begin{vmatrix}a_x&amp;a_y&amp;a_z\b_x&amp;b_y&amp;b_z\c_x&amp;c_y&amp;c_z\end{vmatrix}} \qquad (4.3)
+$$</p>
+<p>volume of parallelepiped; zero iff $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are coplanar.</p>
+<p>$$
+\boxed{\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})\text{ (BAC–CAB)}} \qquad (4.4)
+$$</p>
+<p>result lies in the plane of $\mathbf{b}$ and $\mathbf{c}$; NOT associative.</p>
+<p>$$
+\boxed{\dot{\hat{r}}=\omega\hat{\theta},\quad\dot{\hat{\theta}}=-\omega\hat{r}} \qquad (4.5)
+$$</p>
+<p>valid for the polar basis in 2D; $\omega=\dot{\theta}$.</p>
+<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<ul>
+<li>$\theta=0$ (parallel vectors): $\mathbf{a}\cdot\mathbf{b}=ab$, $\mathbf{a}\times\mathbf{b}=\mathbf{0}$ — correct. Maximum dot product, zero cross product.</li>
+<li>$\theta=\pi/2$ (perpendicular): $\mathbf{a}\cdot\mathbf{b}=0$, $|\mathbf{a}\times\mathbf{b}|=ab$ — correct. Zero dot product, maximum cross product.</li>
+<li>$\mathbf{b}=\mathbf{a}$: $\mathbf{a}\times\mathbf{a}=\mathbf{0}$ — correct (the parallelogram has zero area).</li>
+<li>$\mathbf{a}\cdot\mathbf{a}=a^2$ — correct (the dot product of a vector with itself gives the square of its magnitude).</li>
+<li>BAC–CAB with $\mathbf{a}\perp\mathbf{b}$ and $\mathbf{a}\perp\mathbf{c}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})=\mathbf{0}$ — this means $\mathbf{a}$ is perpendicular to $\mathbf{b}\times\mathbf{c}$, i.e. $\mathbf{a}$ lies in the plane of $\mathbf{b}$ and $\mathbf{c}$, which is only true if $\mathbf{a}=\mathbf{0}$ or $\mathbf{b}\parallel\mathbf{c}$ — need to be careful with special cases.</li>
+<li>BAC–CAB with $\mathbf{a}\perp\mathbf{b}$ and $\mathbf{a}\perp\mathbf{c}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{0}$ (since $\mathbf{a}\cdot\mathbf{c}=0$ and $\mathbf{a}\cdot\mathbf{b}=0$) — this means $\mathbf{a}$ is perpendicular to $\mathbf{b}\times\mathbf{c}$, i.e. $\mathbf{a}$ lies in the plane of $\mathbf{b}$ and $\mathbf{c}$, which is only true if $\mathbf{a}=\mathbf{0}$ or $\mathbf{b}\parallel\mathbf{c}$ — need to be careful with special cases.</li>
+</ul>
+<h3 id="43-which-formula-when">4.3 Which formula when</h3>
+<table>
+<thead>
+<tr>
+<th>Given</th>
+<th>Need</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>two vectors and the angle</td>
+<td>their dot product</td>
+<td>Eq. (4.1)</td>
+</tr>
+<tr>
+<td>two vectors</td>
+<td>whether they are perpendicular</td>
+<td>$\mathbf{a}\cdot\mathbf{b}=0$</td>
+</tr>
+<tr>
+<td>two vectors</td>
+<td>the area of the parallelogram</td>
+<td>$\lvert\mathbf{a}\times\mathbf{b}\rvert$ from Eq. (4.2)</td>
+</tr>
+<tr>
+<td>three vectors</td>
+<td>whether they are coplanar</td>
+<td>$[\mathbf{a},\mathbf{b},\mathbf{c}]=0$ from Eq. (4.3)</td>
+</tr>
+<tr>
+<td>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$</td>
+<td>simplify</td>
+<td>BAC–CAB, Eq. (4.4)</td>
+</tr>
+<tr>
+<td>a vector in 2D</td>
+<td>its rate of change in a rotating frame</td>
+<td>Eq. (4.5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-concept-checks">4.4 Concept checks</h3>
+<p><strong>C1 — concept check.</strong> What is $\hat{i}\cdot\hat{j}$? What is $\hat{i}\times\hat{j}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\hat{i}\cdot\hat{j}=0$ (perpendicular). $\hat{i}\times\hat{j}=\hat{k}$ (right-hand rule).</p>
+</details>
+<p><strong>C2 — concept check.</strong> Is the dot product of two vectors ever negative?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes, when $\theta&gt;90°$: $\cos\theta&lt;0$. For example, $\mathbf{a}=\hat{i}$ and $\mathbf{b}=-\hat{i}$: $\mathbf{a}\cdot\mathbf{b}=-1$.</p>
+</details>
+<p><strong>C3 — concept check.</strong> What is the angle between $\mathbf{a}=3\hat{i}+4\hat{j}$ and $\mathbf{b}=4\hat{i}-3\hat{j}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\mathbf{a}\cdot\mathbf{b}=12-12=0$. The vectors are perpendicular.</p>
+</details>
+<p><strong>C4 — concept check.</strong> Does $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ in general?</p>
+<details>
+<summary>Answer</summary>
+<p>No. Try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\hat{i}\times\hat{i}=\mathbf{0}$. $(\mathbf{a}\times\mathbf{b})\times\mathbf{c}=\hat{k}\times\hat{k}=\mathbf{0}$. They agree here, but try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{i}$: $\hat{i}\times(\hat{j}\times\hat{i})=\hat{i}\times(-\hat{k})=\hat{j}$. $(\hat{i}\times\hat{j})\times\hat{i}=\hat{k}\times\hat{i}=\hat{j}$. Same again! Actually, the vector triple product is not associative in general: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$ (the Jacobi identity), but $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\neq(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ for generic vectors. Example: $\mathbf{a}=\hat{i}+\hat{j}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$. LHS: $\mathbf{b}\times\mathbf{c}=\hat{i}$; $(\hat{i}+\hat{j})\times\hat{i}=-\hat{k}$. RHS: $\mathbf{a}\times\mathbf{b}=(\hat{i}+\hat{j})\times\hat{j}=\hat{k}$; $\hat{k}\times\hat{k}=\mathbf{0}$. $-\hat{k}\neq\mathbf{0}$. ✓</p>
+</details>
+<p><strong>C5 — concept check.</strong> What is the area of the triangle with vertices at $\mathbf{0}$, $\mathbf{a}$, $\mathbf{b}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\frac{1}{2}|\mathbf{a}\times\mathbf{b}|$ — half the area of the parallelogram.</p>
+</details>
+<p><strong>C6 — concept check.</strong> If $\mathbf{a}\cdot\mathbf{b}=\mathbf{a}\cdot\mathbf{c}$, does $\mathbf{b}=\mathbf{c}$?</p>
+<details>
+<summary>Answer</summary>
+<p>No. $\mathbf{a}\cdot(\mathbf{b}-\mathbf{c})=0$ means $\mathbf{b}-\mathbf{c}\perp\mathbf{a}$, not that $\mathbf{b}=\mathbf{c}$. The dot product loses information about the component perpendicular to $\mathbf{a}$.</p>
+</details>
+<p><strong>C7 — concept check.</strong> What are the direction cosines of $\mathbf{a}=2\hat{i}+3\hat{j}+6\hat{k}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$a=\sqrt{4+9+36}=7$. $l=2/7$, $m=3/7$, $n=6/7$. Check: $4/9+9/49+36/49=49/49=1$. ✓</p>
+</details>
+<p><strong>C8 — concept check.</strong> What is $\hat{k}\times\hat{i}$? What is $\hat{i}\times\hat{k}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\hat{k}\times\hat{i}=\hat{j}$. $\hat{i}\times\hat{k}=-\hat{j}$ (anti-commutativity).</p>
+</details>
+<p><strong>C9 — concept check.</strong> If $\mathbf{a}+\mathbf{b}+\mathbf{c}=\mathbf{0}$, what can you say about $\mathbf{a}\times\mathbf{b}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\mathbf{a}\times\mathbf{b}=\mathbf{a}\times(-\mathbf{a}-\mathbf{c})=-\mathbf{a}\times\mathbf{c}=\mathbf{c}\times\mathbf{a}$. Similarly $\mathbf{b}\times\mathbf{c}=\mathbf{a}\times\mathbf{b}$. All three cross products are equal (and the three vectors are coplanar).</p>
+</details>
+<p><strong>C10 — concept check.</strong> In the polar basis, what is $\hat{r}\times\hat{\theta}$?</p>
+<details>
+<summary>Answer</summary>
+<p>$\hat{r}\times\hat{\theta}=\hat{k}$ (the unit vector perpendicular to the plane, pointing out of the page in 2D). This is the standard result for right-handed polar coordinates.</p>
+</details>
+<p><strong>C11 — concept check.</strong> If $\mathbf{a}\cdot\mathbf{b}=\mathbf{a}\cdot\mathbf{c}$ and $\mathbf{a}\times\mathbf{b}=\mathbf{a}\times\mathbf{c}$, does $\mathbf{b}=\mathbf{c}$?</p>
+<details>
+<summary>Answer</summary>
+<p>Yes. The dot product condition gives $\mathbf{a}\cdot(\mathbf{b}-\mathbf{c})=0$, so $\mathbf{b}-\mathbf{c}\perp\mathbf{a}$. The cross product condition gives $\mathbf{a}\times(\mathbf{b}-\mathbf{c})=\mathbf{0}$, so $\mathbf{b}-\mathbf{c}\parallel\mathbf{a}$. Both conditions together: $\mathbf{b}-\mathbf{c}$ is both perpendicular and parallel to $\mathbf{a}$, so $\mathbf{b}-\mathbf{c}=\mathbf{0}$.</p>
+</details>
+<p><strong>C12 — concept check.</strong> What is the physical meaning of the scalar triple product $[\mathbf{a},\mathbf{b},\mathbf{c}]$?</p>
+<details>
+<summary>Answer</summary>
+<p>It is the (signed) volume of the parallelepiped formed by $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$. The sign indicates the handedness: positive for a right-handed triad, negative for left-handed. If $[\mathbf{a},\mathbf{b},\mathbf{c}]=0$, the three vectors are coplanar (zero volume). The scalar triple product is also called the box product or the mixed product in some textbooks.</p>
+</details>
+<h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
+<h3 id="e1-finding-the-angle-between-two-vectors">E1 — Finding the angle between two vectors</h3>
+<p>Find the angle between $\mathbf{a}=2\hat{i}+3\hat{j}-\hat{k}$ and $\mathbf{b}=\hat{i}-2\hat{j}+2\hat{k}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\theta=112.0°$ — obtuse, as expected from the negative dot product.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mathbf{a}\cdot\mathbf{b}=2-6-2=-6$. $|\mathbf{a}|=\sqrt{4+9+1}=\sqrt{14}$. $|\mathbf{b}|=\sqrt{1+4+4}=3$. $\cos\theta=-6/(3\sqrt{14})=-6/11.22=-0.5345$. $\theta=\cos^{-1}(-0.5345)=112.0°$.</p>
+<p><strong>Physical interpretation.</strong> The angle is obtuse ($&gt;90°$) because the dot product is negative. This means the two vectors point in "roughly opposite" directions — the projection of $\mathbf{a}$ onto $\mathbf{b}$ is negative. In the context of forces, if $\mathbf{a}$ is a force and $\mathbf{b}$ is a displacement, the work done is negative (the force opposes the displacement).</p>
+</details>
+<h3 id="e2-area-of-a-parallelogram">E2 — Area of a parallelogram</h3>
+<p>Find the area of the parallelogram formed by $\mathbf{a}=2\hat{i}+3\hat{j}$ and $\mathbf{b}=\hat{i}-\hat{j}+2\hat{k}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>Area $=|\mathbf{a}\times\mathbf{b}|=\sqrt{36+16+25}=\sqrt{77}=8.77$ — dimensionally $[L^2]$ if $\mathbf{a}$, $\mathbf{b}$ are displacements.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\hat{i}&amp;\hat{j}&amp;\hat{k}\2&amp;3&amp;0\1&amp;-1&amp;2\end{vmatrix}=(6-0)\hat{i}-(4-0)\hat{j}+(-2-3)\hat{k}=6\hat{i}-4\hat{j}-5\hat{k}$. Area $=\sqrt{36+16+25}=\sqrt{77}=8.77$ square units.</p>
+</details>
+<h3 id="e3-checking-coplanarity">E3 — Checking coplanarity</h3>
+<p>Are $\mathbf{a}=\hat{i}+2\hat{j}+3\hat{k}$, $\mathbf{b}=2\hat{i}+\hat{j}+3\hat{k}$, $\mathbf{c}=\hat{i}+\hat{j}+\hat{k}$ coplanar?</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The determinant is non-zero, so the vectors are NOT coplanar — they span a 3D volume.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $[\mathbf{a},\mathbf{b},\mathbf{c}]=\begin{vmatrix}1&amp;2&amp;3\2&amp;1&amp;3\1&amp;1&amp;1\end{vmatrix}=1(1-3)-2(2-3)+3(2-1)=-2+2+3=3\neq0$. Not coplanar.</p>
+<p><strong>Geometric meaning.</strong> The scalar triple product equals 3, so the parallelepiped formed by the three vectors has volume 3 cubic units. If the three vectors were coplanar, the volume would be zero — they would lie in a flat sheet with no "thickness" in the third dimension. This test is the standard way to check coplanarity in JEE and Olympiad problems.</p>
+</details>
+<h3 id="e4-the-baccab-rule-in-action">E4 — The BAC–CAB rule in action</h3>
+<p>Simplify $\hat{i}\times(\hat{i}\times\hat{j})$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\hat{i}\times(\hat{i}\times\hat{j})=\hat{i}\times\hat{k}=-\hat{j}$. BAC–CAB: $\hat{i}(\hat{i}\cdot\hat{j})-\hat{j}(\hat{i}\cdot\hat{i})=\hat{i}(0)-\hat{j}(1)=-\hat{j}$. ✓</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> By BAC–CAB: $\hat{i}\times(\hat{i}\times\hat{j})=\hat{i}(\hat{i}\cdot\hat{j})-\hat{j}(\hat{i}\cdot\hat{i})=0-\hat{j}=-\hat{j}$.</p>
+</details>
+<h3 id="e5-vector-equation-solving-mathbfatimesmathbfxmathbfb">E5 — Vector equation: solving $\mathbf{a}\times\mathbf{x}=\mathbf{b}$</h3>
+<p>Solve $\hat{i}\times\mathbf{x}=\hat{j}$ for $\mathbf{x}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$\hat{i}\times(-\hat{k}+\lambda\hat{i})=\hat{i}\times(-\hat{k})+\lambda\hat{i}\times\hat{i}=\hat{j}+\mathbf{0}=\hat{j}$. ✓</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mathbf{a}\cdot\mathbf{b}=\hat{i}\cdot\hat{j}=0$ — the necessary condition is satisfied. Cross both sides with $\hat{i}$: $\hat{i}\times(\hat{i}\times\mathbf{x})=\hat{i}\times\hat{j}=\hat{k}$. BAC–CAB: $\hat{i}(\hat{i}\cdot\mathbf{x})-\mathbf{x}=\hat{k}$. Let $\hat{i}\cdot\mathbf{x}=k$ (free parameter): $k\hat{i}-\mathbf{x}=\hat{k}$, so $\mathbf{x}=k\hat{i}-\hat{k}$. The solution family is $\mathbf{x}=k\hat{i}-\hat{k}$ for any scalar $k$.</p>
+<p><strong>Geometric interpretation.</strong> The equation $\mathbf{a}\times\mathbf{x}=\mathbf{b}$ says that $\mathbf{x}$ must be perpendicular to $\mathbf{b}$ (since $\mathbf{a}\times\mathbf{x}$ is perpendicular to $\mathbf{x}$) and must have a specific component perpendicular to $\mathbf{a}$. The component of $\mathbf{x}$ along $\mathbf{a}$ is free — adding any multiple of $\mathbf{a}$ to $\mathbf{x}$ does not change $\mathbf{a}\times\mathbf{x}$ (since $\mathbf{a}\times\mathbf{a}=\mathbf{0}$). This is why the solution is a one-parameter family (a line parallel to $\mathbf{a}$).</p>
+</details>
+<h3 id="e6-the-lagrange-identity">E6 — The Lagrange identity</h3>
+<p>Prove $|\mathbf{a}\times\mathbf{b}|^2=|\mathbf{a}|^2|\mathbf{b}|^2-(\mathbf{a}\cdot\mathbf{b})^2$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$|\mathbf{a}\times\mathbf{b}|^2=a^2b^2\sin^2\theta$. $|\mathbf{a}|^2|\mathbf{b}|^2-(\mathbf{a}\cdot\mathbf{b})^2=a^2b^2-a^2b^2\cos^2\theta=a^2b^2\sin^2\theta$. ✓</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $|\mathbf{a}\times\mathbf{b}|^2=(ab\sin\theta)^2=a^2b^2\sin^2\theta=a^2b^2(1-\cos^2\theta)=a^2b^2-(ab\cos\theta)^2=|\mathbf{a}|^2|\mathbf{b}|^2-(\mathbf{a}\cdot\mathbf{b})^2$.</p>
+<p><strong>Why this matters.</strong> The Lagrange identity is the bridge between the dot product and the cross product. It implies that $|\mathbf{a}\cdot\mathbf{b}|\leq ab$ (the Cauchy–Schwarz inequality) because $|\mathbf{a}\times\mathbf{b}|^2\geq0$. It also shows that the dot product and cross product are not independent: knowing one constrains the other. In quantum mechanics, the analogous relation connects the uncertainties of position and momentum.</p>
+</details>
+<h3 id="e7-volume-of-a-tetrahedron">E7 — Volume of a tetrahedron</h3>
+<p>Find the volume of the tetrahedron with vertices at $\mathbf{0}$, $\hat{i}$, $\hat{j}$, $\hat{k}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$V=1/6$ — the unit tetrahedron, one-sixth of the unit cube.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $V=\frac{1}{6}|[\hat{i},\hat{j},\hat{k}]|=\frac{1}{6}\begin{vmatrix}1&amp;0&amp;0\0&amp;1&amp;0\0&amp;0&amp;1\end{vmatrix}=\frac{1}{6}$.</p>
+</details>
+<h3 id="e8-rate-of-change-in-polar-coordinates">E8 — Rate of change in polar coordinates</h3>
+<p>A particle moves in a circle of radius $R$ with constant angular velocity $\omega$. Write its velocity and acceleration in the polar basis.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$v=R\omega$ (tangential speed), $a=R\omega^2$ (centripetal acceleration) — both well-known results.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mathbf{r}=R\hat{r}$. $\mathbf{v}=\dot{\mathbf{r}}=R\dot{\hat{r}}=R\omega\hat{\theta}$. $\mathbf{a}=\dot{\mathbf{v}}=R\omega\dot{\hat{\theta}}=R\omega(-\omega\hat{r})=-R\omega^2\hat{r}$.</p>
+<p><strong>Why the polar basis is essential.</strong> In Cartesian coordinates, the basis vectors $\hat{i}$, $\hat{j}$ are fixed — their time derivatives are zero. In polar coordinates, the basis vectors $\hat{r}$, $\hat{\theta}$ rotate with the particle — their time derivatives are non-zero (Eq. 4.5). This is why the acceleration has two terms: one from the changing direction of $\hat{r}$ (the centripetal part) and one from the changing speed (the tangential part, zero here because $\omega=$ const). For non-uniform circular motion ($\omega$ varying), the tangential acceleration $a_t=R\dot{\omega}$ also appears.</p>
+<p><strong>The connection to PART 4.</strong> This derivation is the mathematical foundation of centripetal acceleration. In PART 4, we will use $a_c=v^2/R$ to analyse circular motion dynamics (what force is needed to maintain the circle). In PART 8 (oscillations), the same polar basis is used to derive the equations of simple harmonic motion from uniform circular motion.</p>
+</details>
+<h3 id="e9-projection-of-a-vector">E9 — Projection of a vector</h3>
+<p>Find the component of $\mathbf{a}=3\hat{i}+4\hat{j}$ along $\mathbf{b}=5\hat{i}-12\hat{j}$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>The projection is negative — $\mathbf{a}$ points "against" $\mathbf{b}$ somewhat.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\text{proj}=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{b}|}=\frac{15-48}{13}=\frac{-33}{13}=-2.54$ units. The negative sign means the projection is in the direction opposite to $\mathbf{b}$.</p>
+</details>
+<h3 id="e10-vector-proof-of-the-cosine-rule">E10 — Vector proof of the cosine rule</h3>
+<p>Using vectors, prove $c^2=a^2+b^2-2ab\cos C$ for a triangle with sides $a$, $b$, $c$ and angle $C$ opposite $c$.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>At $C=90°$: $c^2=a^2+b^2$ — the Pythagorean theorem. ✓</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Let the vertices be $\mathbf{0}$, $\mathbf{a}$, $\mathbf{b}$. Then $c=|\mathbf{a}-\mathbf{b}|$. $c^2=(\mathbf{a}-\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=a^2-2\mathbf{a}\cdot\mathbf{b}+b^2=a^2+b^2-2ab\cos\theta$ where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$ (which is $C$).</p>
+<p><strong>Why vectors simplify geometry.</strong> This two-line proof replaces a classical construction involving perpendiculars and the Pythagorean theorem. The vector method works because the dot product encodes the angle between two vectors directly, without needing auxiliary constructions. The same technique proves the sine rule (see OL7), the midpoint theorem, and the concurrency of medians — all in a few lines.</p>
+</details>
+<h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-archetypes">6.1 Archetypes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Archetype</th>
+<th>Template</th>
+<th>Where worked</th>
+<th>Variations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Dot product and angle</td>
+<td>$\cos\theta=\mathbf{a}\cdot\mathbf{b}/(ab)$</td>
+<td>E1</td>
+<td>2D and 3D</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Cross product and area</td>
+<td>$\lvert\mathbf{a}\times\mathbf{b}\rvert$</td>
+<td>E2</td>
+<td>triangle, parallelogram</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Coplanarity</td>
+<td>$[\mathbf{a},\mathbf{b},\mathbf{c}]=0$</td>
+<td>E3</td>
+<td>find the unknown for coplanarity</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>BAC–CAB</td>
+<td>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$</td>
+<td>E4</td>
+<td>nested triple products</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Vector equations</td>
+<td>$\mathbf{a}\times\mathbf{x}=\mathbf{b}$</td>
+<td>E5</td>
+<td>with constraints</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Lagrange identity</td>
+<td>$\lvert\mathbf{a}\times\mathbf{b}\rvert^2+\lvert\mathbf{a}\cdot\mathbf{b}\rvert^2=a^2b^2$</td>
+<td>E6</td>
+<td>inequality applications</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Volume by vectors</td>
+<td>$V=\frac{1}{6}\lvert[\mathbf{a},\mathbf{b},\mathbf{c}]\rvert$</td>
+<td>E7</td>
+<td>tetrahedron, parallelepiped</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Polar basis derivatives</td>
+<td>$\dot{\hat{r}}=\omega\hat{\theta}$</td>
+<td>E8</td>
+<td>acceleration, non-uniform $\omega$</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Projection</td>
+<td>$\text{proj}=\mathbf{a}\cdot\hat{b}$</td>
+<td>E9</td>
+<td>decompose into components</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Geometric proofs by vectors</td>
+<td>Cosine rule, sine rule</td>
+<td>E10</td>
+<td>midpoints, centroids</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-in-flow-practice">6.2 In-flow practice</h3>
+<h4 id="q1-find-mathbfacdotmathbfb-for-mathbfa2hati-hatj3hatk-mathbfbhati2hatj-hatk">Q1. Find $\mathbf{a}\cdot\mathbf{b}$ for $\mathbf{a}=2\hat{i}-\hat{j}+3\hat{k}$, $\mathbf{b}=\hat{i}+2\hat{j}-\hat{k}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\cdot\mathbf{b}=2-2-3=-3$.</p>
+</details>
+<h4 id="q2-find-mathbfatimesmathbfb-for-the-same-vectors">Q2. Find $\mathbf{a}\times\mathbf{b}$ for the same vectors.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\hat{i}&amp;\hat{j}&amp;\hat{k}\2&amp;-1&amp;3\1&amp;2&amp;-1\end{vmatrix}=(1-6)\hat{i}-(-2-3)\hat{j}+(4+1)\hat{k}=-5\hat{i}+5\hat{j}+5\hat{k}$.</p>
+</details>
+<h4 id="q3-find-the-unit-vector-perpendicular-to-both-mathbfahatihatj-and-mathbfbhatjhatk">Q3. Find the unit vector perpendicular to both $\mathbf{a}=\hat{i}+\hat{j}$ and $\mathbf{b}=\hat{j}+\hat{k}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\hat{i}&amp;\hat{j}&amp;\hat{k}\1&amp;1&amp;0\0&amp;1&amp;1\end{vmatrix}=\hat{i}-\hat{j}+\hat{k}$. $|\mathbf{a}\times\mathbf{b}|=\sqrt{3}$. $\hat{n}=\frac{1}{\sqrt{3}}(\hat{i}-\hat{j}+\hat{k})$.</p>
+</details>
+<h4 id="q4-if-mathbfa3-mathbfb4-mathbfacdotmathbfb6-find-mathbfatimesmathbfb">Q4. If $|\mathbf{a}|=3$, $|\mathbf{b}|=4$, $\mathbf{a}\cdot\mathbf{b}=6$, find $|\mathbf{a}\times\mathbf{b}|$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$|\mathbf{a}\times\mathbf{b}|^2=a^2b^2-(\mathbf{a}\cdot\mathbf{b})^2=144-36=108$. $|\mathbf{a}\times\mathbf{b}|=6\sqrt{3}=10.39$.</p>
+</details>
+<h4 id="q5-simplify-mathbfatimesmathbfbtimesmathbfa">Q5. Simplify $\mathbf{a}\times(\mathbf{b}\times\mathbf{a})$.</h4>
+<details>
+<summary>Solution</summary>
+<p>BAC–CAB: $\mathbf{b}(\mathbf{a}\cdot\mathbf{a})-\mathbf{a}(\mathbf{a}\cdot\mathbf{b})=a^2\mathbf{b}-(\mathbf{a}\cdot\mathbf{b})\mathbf{a}$.</p>
+</details>
+<h4 id="q6-find-the-volume-of-the-parallelepiped-with-edges-hatihatj-hatjhatk-hatkhati">Q6. Find the volume of the parallelepiped with edges $\hat{i}+\hat{j}$, $\hat{j}+\hat{k}$, $\hat{k}+\hat{i}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$[\mathbf{a},\mathbf{b},\mathbf{c}]=\begin{vmatrix}1&amp;1&amp;0\0&amp;1&amp;1\1&amp;0&amp;1\end{vmatrix}=1(1-0)-1(0-1)+0=1+1=2$. Volume $=2$.</p>
+</details>
+<h4 id="q7-a-particles-position-is-mathbfrrcosomega-thatirsinomega-thatj-find-mathbfv-and-mathbfa">Q7. A particle's position is $\mathbf{r}=R\cos\omega t\,\hat{i}+R\sin\omega t\,\hat{j}$. Find $\mathbf{v}$ and $\mathbf{a}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{v}=-R\omega\sin\omega t\,\hat{i}+R\omega\cos\omega t\,\hat{j}=R\omega\hat{\theta}$. $\mathbf{a}=-R\omega^2\cos\omega t\,\hat{i}-R\omega^2\sin\omega t\,\hat{j}=-R\omega^2\hat{r}$. Centripetal, directed toward the centre.</p>
+</details>
+<h4 id="q8-if-mathbfamathbfbmathbfc-and-mathbfamathbfbmathbfc-what-is-the-angle-between-mathbfa-and-mathbfb">Q8. If $\mathbf{a}+\mathbf{b}=\mathbf{c}$ and $|\mathbf{a}|=|\mathbf{b}|=|\mathbf{c}|$, what is the angle between $\mathbf{a}$ and $\mathbf{b}$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$|\mathbf{c}|^2=(\mathbf{a}+\mathbf{b})\cdot(\mathbf{a}+\mathbf{b})=a^2+2\mathbf{a}\cdot\mathbf{b}+b^2=a^2+2ab\cos\theta+a^2=2a^2(1+\cos\theta)$. Setting $|\mathbf{c}|^2=a^2$: $1=2(1+\cos\theta)\Rightarrow\cos\theta=-1/2\Rightarrow\theta=120°$.</p>
+</details>
+<h4 id="q9-prove-that-the-diagonals-of-a-parallelogram-bisect-each-other-using-vectors">Q9. Prove that the diagonals of a parallelogram bisect each other using vectors.</h4>
+<details>
+<summary>Solution</summary>
+<p>Let the vertices be $\mathbf{0}$, $\mathbf{a}$, $\mathbf{b}$, $\mathbf{a}+\mathbf{b}$. The midpoints of the two diagonals: $\frac{\mathbf{a}+\mathbf{b}}{2}$ and $\frac{\mathbf{0}+(\mathbf{a}+\mathbf{b})}{2}=\frac{\mathbf{a}+\mathbf{b}}{2}$. Same point — they bisect each other.</p>
+</details>
+<h4 id="q10-find-the-angle-between-mathbfahatihatjhatk-and-each-coordinate-axis">Q10. Find the angle between $\mathbf{a}=\hat{i}+\hat{j}+\hat{k}$ and each coordinate axis.</h4>
+<details>
+<summary>Solution</summary>
+<p>$|\mathbf{a}|=\sqrt{3}$. $\cos\alpha=1/\sqrt{3}$, $\alpha=54.7°$. Same for $\beta$ and $\gamma$ by symmetry. Check: $3\cos^2\alpha=3\times1/3=1$. ✓</p>
+</details>
+<h4 id="q11-if-mathbfatimesmathbfbmathbfctimesmathbfb-does-mathbfamathbfc">Q11. If $\mathbf{a}\times\mathbf{b}=\mathbf{c}\times\mathbf{b}$, does $\mathbf{a}=\mathbf{c}$?</h4>
+<details>
+<summary>Solution</summary>
+<p>No. $(\mathbf{a}-\mathbf{c})\times\mathbf{b}=\mathbf{0}$ means $\mathbf{a}-\mathbf{c}\parallel\mathbf{b}$, i.e. $\mathbf{a}=\mathbf{c}+\lambda\mathbf{b}$ for some scalar $\lambda$. The cross product with $\mathbf{b}$ kills the component along $\mathbf{b}$.</p>
+</details>
+<h4 id="q12-find-the-area-of-the-triangle-with-vertices-a100-b010-c001">Q12. Find the area of the triangle with vertices $A(1,0,0)$, $B(0,1,0)$, $C(0,0,1)$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\overrightarrow{AB}=-\hat{i}+\hat{j}$, $\overrightarrow{AC}=-\hat{i}+\hat{k}$. $\overrightarrow{AB}\times\overrightarrow{AC}=\hat{i}+\hat{j}+\hat{k}$. Area $=\frac{1}{2}\sqrt{3}=\frac{\sqrt{3}}{2}$.</p>
+</details>
+<h4 id="q13-the-dot-product-is-distributive-prove-mathbfacdotmathbfbmathbfcmathbfacdotmathbfbmathbfacdotmathbfc-using-components">Q13. The dot product is distributive. Prove $\mathbf{a}\cdot(\mathbf{b}+\mathbf{c})=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\cdot\mathbf{c}$ using components.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\cdot(\mathbf{b}+\mathbf{c})=a_x(b_x+c_x)+a_y(b_y+c_y)+a_z(b_z+c_z)=a_xb_x+a_xc_x+a_yb_y+a_yc_y+a_zb_z+a_zc_z=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\cdot\mathbf{c}$.</p>
+</details>
+<h4 id="q14-in-a-regular-hexagon-abcdef-overrightarrowabmathbfa-overrightarrowbcmathbfb-express-overrightarrowac-overrightarrowad-overrightarrowae-in-terms-of-mathbfa-and-mathbfb">Q14. In a regular hexagon $ABCDEF$, $\overrightarrow{AB}=\mathbf{a}$, $\overrightarrow{BC}=\mathbf{b}$. Express $\overrightarrow{AC}$, $\overrightarrow{AD}$, $\overrightarrow{AE}$ in terms of $\mathbf{a}$ and $\mathbf{b}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\overrightarrow{AC}=\mathbf{a}+\mathbf{b}$. By the symmetry of a regular hexagon: $\overrightarrow{AD}=2\mathbf{b}$ (the long diagonal). $\overrightarrow{AE}=\overrightarrow{AD}+\overrightarrow{DE}$. By symmetry $\overrightarrow{DE}=-\mathbf{a}$. So $\overrightarrow{AE}=2\mathbf{b}-\mathbf{a}$.</p>
+</details>
+<h4 id="q15-find-lambda-such-that-mathbfahatilambdahatj3hatk-is-perpendicular-to-mathbfb2hati-hatj2hatk">Q15. Find $\lambda$ such that $\mathbf{a}=\hat{i}+\lambda\hat{j}+3\hat{k}$ is perpendicular to $\mathbf{b}=2\hat{i}-\hat{j}+2\hat{k}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\cdot\mathbf{b}=2-\lambda+6=0\Rightarrow\lambda=8$.</p>
+</details>
+<h4 id="q16-the-jacobi-identity-mathbfatimesmathbfbtimesmathbfcmathbfbtimesmathbfctimesmathbfamathbfctimesmathbfatimesmathbfbmathbf0-verify-for-mathbfahati-mathbfbhatj-mathbfchatk">Q16. The Jacobi identity: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$. Verify for $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\hat{i}\times(\hat{j}\times\hat{k})=\hat{i}\times\hat{i}=\mathbf{0}$. $\hat{j}\times(\hat{k}\times\hat{i})=\hat{j}\times\hat{j}=\mathbf{0}$. $\hat{k}\times(\hat{i}\times\hat{j})=\hat{k}\times\hat{k}=\mathbf{0}$. Sum $=\mathbf{0}$. ✓</p>
+</details>
+<h4 id="q17-if-hatafrac1sqrt2hatihatj-hatbfrac1sqrt2hati-hatj-verify-hatacdothatb0-and-find-hatatimeshatb">Q17. If $\hat{a}=\frac{1}{\sqrt{2}}(\hat{i}+\hat{j})$, $\hat{b}=\frac{1}{\sqrt{2}}(\hat{i}-\hat{j})$, verify $\hat{a}\cdot\hat{b}=0$ and find $\hat{a}\times\hat{b}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\hat{a}\cdot\hat{b}=\frac{1}{2}(1-1)=0$. $\hat{a}\times\hat{b}=\frac{1}{2}(\hat{i}+\hat{j})\times(\hat{i}-\hat{j})=\frac{1}{2}(-\hat{k}-\hat{k})=-\hat{k}$.</p>
+</details>
+<h4 id="q18-express-the-vector-mathbfa3hati4hatj-in-the-polar-basis-at-theta30">Q18. Express the vector $\mathbf{a}=3\hat{i}+4\hat{j}$ in the polar basis at $\theta=30°$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\hat{r}=\cos30°\hat{i}+\sin30°\hat{j}=0.866\hat{i}+0.5\hat{j}$. $\hat{\theta}=-0.5\hat{i}+0.866\hat{j}$. $a_r=\mathbf{a}\cdot\hat{r}=3(0.866)+4(0.5)=2.598+2.0=4.598$. $a_\theta=\mathbf{a}\cdot\hat{\theta}=3(-0.5)+4(0.866)=-1.5+3.464=1.964$. $\mathbf{a}=4.60\hat{r}+1.96\hat{\theta}$.</p>
+</details>
+<h4 id="q19-prove-by-vectors-the-medians-of-a-triangle-meet-at-a-point-the-centroid-that-divides-each-median-in-the-ratio-21">Q19. Prove by vectors: the medians of a triangle meet at a point (the centroid) that divides each median in the ratio 2:1.</h4>
+<details>
+<summary>Solution</summary>
+<p>Let vertices be $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$. Midpoint of $BC$: $\frac{\mathbf{b}+\mathbf{c}}{2}$. The median from $A$: $\mathbf{r}=\mathbf{a}+t\left(\frac{\mathbf{b}+\mathbf{c}}{2}-\mathbf{a}\right)=(1-t)\mathbf{a}+\frac{t}{2}(\mathbf{b}+\mathbf{c})$. At $t=2/3$: $\mathbf{r}=\frac{1}{3}\mathbf{a}+\frac{1}{3}\mathbf{b}+\frac{1}{3}\mathbf{c}=\frac{\mathbf{a}+\mathbf{b}+\mathbf{c}}{3}$. By symmetry, this point lies on all three medians (at $t=2/3$ from each vertex), dividing each median in ratio 2:1.</p>
+</details>
+<h4 id="q20-a-unit-vector-hatn-makes-equal-angles-with-hati-hatj-hatk-find-hatn">Q20. A unit vector $\hat{n}$ makes equal angles with $\hat{i}$, $\hat{j}$, $\hat{k}$. Find $\hat{n}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\hat{n}=l\hat{i}+l\hat{j}+l\hat{k}$ (equal direction cosines). $3l^2=1\Rightarrow l=1/\sqrt{3}$. $\hat{n}=\frac{1}{\sqrt{3}}(\hat{i}+\hat{j}+\hat{k})$.</p>
+</details>
+<h4 id="q21-find-fracddtmathbfatimesmathbfb-if-mathbfathatit2hatj-and-mathbfbhati-hatjthatk">Q21. Find $\frac{d}{dt}(\mathbf{a}\times\mathbf{b})$ if $\mathbf{a}=t\hat{i}+t^2\hat{j}$ and $\mathbf{b}=\hat{i}-\hat{j}+t\hat{k}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\hat{i}&amp;\hat{j}&amp;\hat{k}\t&amp;t^2&amp;0\1&amp;-1&amp;t\end{vmatrix}=(t^3)\hat{i}-(t^2)\hat{j}+(-t-t^2)\hat{k}$. $\frac{d}{dt}(\mathbf{a}\times\mathbf{b})=3t^2\hat{i}-2t\hat{j}+(-1-2t)\hat{k}$.</p>
+</details>
+<h4 id="q22-verify-the-product-rule-fracddtmathbfacdotmathbfbdotmathbfacdotmathbfbmathbfacdotdotmathbfb-for-mathbfathati-mathbfbt2hatj">Q22. Verify the product rule $\frac{d}{dt}(\mathbf{a}\cdot\mathbf{b})=\dot{\mathbf{a}}\cdot\mathbf{b}+\mathbf{a}\cdot\dot{\mathbf{b}}$ for $\mathbf{a}=t\hat{i}$, $\mathbf{b}=t^2\hat{j}$.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\mathbf{a}\cdot\mathbf{b}=0$ always. $\dot{\mathbf{a}}=\hat{i}$, $\dot{\mathbf{b}}=2t\hat{j}$. $\dot{\mathbf{a}}\cdot\mathbf{b}+\mathbf{a}\cdot\dot{\mathbf{b}}=0+0=0$. ✓</p>
+</details>
+<h4 id="q23-if-mathbfa-mathbfb-mathbfc-are-mutually-perpendicular-unit-vectors-what-is-mathbfatimesmathbfbcdotmathbfc">Q23. If $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are mutually perpendicular unit vectors, what is $|(\mathbf{a}\times\mathbf{b})\cdot\mathbf{c}|$?</h4>
+<details>
+<summary>Solution</summary>
+<p>$|(\mathbf{a}\times\mathbf{b})\cdot\mathbf{c}|=1$ (the scalar triple product of three mutually perpendicular unit vectors is $\pm1$ — the volume of a unit cube).</p>
+</details>
+<h4 id="q24-find-the-shortest-distance-from-the-point-123-to-the-z-axis-using-vectors">Q24. Find the shortest distance from the point $(1,2,3)$ to the $z$-axis, using vectors.</h4>
+<details>
+<summary>Solution</summary>
+<p>The $z$-axis is ${t\hat{k}:t\in\mathbb{R}}$. The vector from the origin to the point is $\mathbf{p}=\hat{i}+2\hat{j}+3\hat{k}$. The component along $\hat{k}$ is $\mathbf{p}\cdot\hat{k}=3$. The perpendicular component is $\mathbf{p}-(\mathbf{p}\cdot\hat{k})\hat{k}=\hat{i}+2\hat{j}$. Distance $=\sqrt{1+4}=\sqrt{5}$.</p>
+</details>
+<h4 id="q25-in-a-parallelogram-abcd-prove-ac2bd22ab2bc2-using-vectors">Q25. In a parallelogram $ABCD$, prove $AC^2+BD^2=2(AB^2+BC^2)$ using vectors.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\overrightarrow{AB}=\mathbf{a}$, $\overrightarrow{AD}=\mathbf{b}$. $\overrightarrow{AC}=\mathbf{a}+\mathbf{b}$, $\overrightarrow{BD}=\mathbf{b}-\mathbf{a}$. $AC^2+BD^2=|\mathbf{a}+\mathbf{b}|^2+|\mathbf{b}-\mathbf{a}|^2=a^2+2\mathbf{a}\cdot\mathbf{b}+b^2+a^2-2\mathbf{a}\cdot\mathbf{b}+b^2=2a^2+2b^2=2(AB^2+BC^2)$.</p>
+</details>
+<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
+<h3 id="71-the-component-shortcut">7.1 The component shortcut</h3>
+<p>For any vector problem in 3D: (1) write all vectors in components; (2) apply the algebra; (3) convert back if needed. This is always safe but sometimes slower than a geometric argument.</p>
+<h3 id="72-the-geometric-shortcut-for-the-cross-product">7.2 The geometric shortcut for the cross product</h3>
+<p>If you know the angle between the vectors, $|\mathbf{a}\times\mathbf{b}|=ab\sin\theta$ is faster than computing the determinant. The direction follows from the right-hand rule. Use this for area calculations.</p>
+<h3 id="73-the-baccab-instant-recall">7.3 The BAC–CAB instant recall</h3>
+<p>For any $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$: write the "outer" vectors $\mathbf{b}$ and $\mathbf{c}$ as the terms, with the "inner" vector $\mathbf{a}$ dotted into each: $\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$. The sign is positive for the vector paired with the last dot product and negative for the other.</p>
+<h3 id="74-the-perpendicularity-shortcut">7.4 The perpendicularity shortcut</h3>
+<p>If a problem asks "find $k$ such that $\mathbf{a}+k\mathbf{b}$ is perpendicular to $\mathbf{c}$": dot both sides with $\mathbf{c}$ and solve for $k$: $\mathbf{a}\cdot\mathbf{c}+k\mathbf{b}\cdot\mathbf{c}=0$.</p>
+<h3 id="75-the-coplanarity-shortcut">7.5 The coplanarity shortcut</h3>
+<p>Three vectors are coplanar iff their scalar triple product is zero. In practice: compute the $3\times3$ determinant. If it is zero, the vectors are coplanar. If it is non-zero, the volume of the parallelepiped is $|[\mathbf{a},\mathbf{b},\mathbf{c}]|$.</p>
+<h3 id="76-the-two-vectors-equal-shortcut">7.6 The "two vectors equal" shortcut</h3>
+<p>If $\mathbf{a}\cdot\mathbf{c}=\mathbf{b}\cdot\mathbf{c}$ for all vectors $\mathbf{c}$, then $\mathbf{a}=\mathbf{b}$. This is the "test with all vectors" principle — in practice, you test with $\hat{i}$, $\hat{j}$, $\hat{k}$ to get three component equations.</p>
+<h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
+<div class="callout danger">
+<p class="callout-title">Trap 1 — Confusing dot and cross products</p>
+<p>$\mathbf{a}\cdot\mathbf{b}$ is a scalar; $\mathbf{a}\times\mathbf{b}$ is a vector. You cannot set them equal.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 2 — Forgetting anti-commutativity</p>
+<p>$\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$. Swapping the order flips the sign.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 3 — Assuming the vector triple product is associative</p>
+<p>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\neq(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ in general.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 4 — The "dot cancellation" fallacy</p>
+<p>$\mathbf{a}\cdot\mathbf{b}=\mathbf{a}\cdot\mathbf{c}$ does NOT imply $\mathbf{b}=\mathbf{c}$. The dot product destroys information.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 5 — The "cross cancellation" fallacy</p>
+<p>$\mathbf{a}\times\mathbf{b}=\mathbf{a}\times\mathbf{c}$ does NOT imply $\mathbf{b}=\mathbf{c}$ (only $\mathbf{b}-\mathbf{c}\parallel\mathbf{a}$).</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 6 — Forgetting the right-hand rule</p>
+<p>The cross product direction follows the right-hand rule, not the left-hand rule. In a coordinate system, $\hat{i}\times\hat{j}=\hat{k}$, not $-\hat{k}$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 7 — Treating direction cosines as independent</p>
+<p>$l^2+m^2+n^2=1$. Only two of the three direction cosines are independent.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 8 — Using polar basis derivatives in Cartesian problems</p>
+<p>$\dot{\hat{r}}=\omega\hat{\theta}$ is valid only in the polar basis, where the basis vectors rotate with the particle. In Cartesian coordinates, $\dot{\hat{i}}=\dot{\hat{j}}=\mathbf{0}$.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 9 — Confusing the scalar triple product with a determinant</p>
+<p>The scalar triple product $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$ equals the $3\times3$ determinant of the components. But the determinant is a computational tool, not a definition — the physical meaning is the signed volume of the parallelepiped.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 10 — Forgetting that the cross product is anti-commutative</p>
+<p>$\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$. In the BAC–CAB rule, swapping the outer vectors changes the sign. In the scalar triple product, swapping any two vectors changes the sign.</p>
+</div>
+
+<h2 id="part-9-playbook">Part 9 · Playbook</h2>
+<h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<ul>
+<li>"Find the angle": dot product, then $\cos^{-1}$.</li>
+<li>"Find the area": cross product, then magnitude.</li>
+<li>"Check coplanarity": scalar triple product $=0$?</li>
+<li>"Simplify a triple cross product": BAC–CAB.</li>
+<li>"Solve a vector equation": dot or cross both sides with a clever vector.</li>
+<li>"Differentiate a vector in polar coordinates": use $\dot{\hat{r}}=\omega\hat{\theta}$.</li>
+</ul>
+<h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+<th>Breaks when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eq. (4.1) dot product</td>
+<td>any dimension, any angle</td>
+<td>not applicable</td>
+</tr>
+<tr>
+<td>Eq. (4.2) cross product</td>
+<td>3D only; right-hand rule</td>
+<td>2D (use area = $ab\sin\theta$); 7D (the only other dimension with a cross product); higher dimensions (use the exterior product from geometric algebra)</td>
+</tr>
+<tr>
+<td>Eq. (4.3) scalar triple product</td>
+<td>3D only; gives signed volume</td>
+<td>coplanar vectors (gives 0 — the volume is zero, not the formula)</td>
+</tr>
+<tr>
+<td>Eq. (4.4) BAC–CAB</td>
+<td>always valid for the expansion of $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$</td>
+<td>not associative — $(\mathbf{a}\times\mathbf{b})\times\mathbf{c}\neq\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$ in general</td>
+</tr>
+<tr>
+<td>Eq. (4.5) polar basis derivatives</td>
+<td>2D; $\hat{r}$ and $\hat{\theta}$ defined</td>
+<td>3D (need the spherical or cylindrical basis); non-rotating frames (derivatives are zero)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight.</strong> The dot product and cross product answer complementary questions. The dot product asks "how much do these vectors point in the same direction?" (a scalar answer). The cross product asks "how much do these vectors span a parallelogram, and in what direction?" (a vector answer). The scalar triple product combines both: "how much volume do three vectors span?" (a scalar answer, with a sign for handedness).</p>
+<h3 id="93-constants-to-carry">9.3 Constants to carry</h3>
+<p>$\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\cos45°=1/\sqrt{2}=0.707$; $\sin60°=\sqrt{3}/2=0.866$, $\cos60°=0.5$; $\hat{i}\times\hat{j}=\hat{k}$, $\hat{j}\times\hat{k}=\hat{i}$, $\hat{k}\times\hat{i}=\hat{j}$ (and the negatives for the reversed orders); $\hat{i}\cdot\hat{j}=0$ (and all other distinct pairs).</p>
+<h3 id="94-timing-plan">9.4 Timing plan</h3>
+<p>Sections A and B under two minutes each; Section C three minutes; Section D twelve minutes. Dot and cross product problems die by direct computation; triple product problems die by the determinant; vector equation problems die by the "dot with a clever vector" technique.</p>
+<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<ol>
+<li>Dot product: used the component form to verify the geometric form (or vice versa).</li>
+<li>Cross product: direction checked by the right-hand rule.</li>
+<li>BAC–CAB: applied correctly (not assuming associativity).</li>
+<li>Scalar triple product: checked for coplanarity (result = 0).</li>
+<li>Direction cosines: verified $l^2+m^2+n^2=1$.</li>
+<li>Polar basis: used only in 2D, verified $\dot{\hat{r}}\perp\hat{r}$.</li>
+<li>Units consistent throughout.</li>
+<li>All vectors in bold or with arrows (never confused with scalars).</li>
+<li>Every sub-part answered.</li>
+<li>The answer makes geometric sense (areas are positive, volumes are positive).</li>
+</ol>
+<h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
+<h3 id="ol1-the-lagrange-identity-and-its-consequences">OL1 — The Lagrange identity and its consequences</h3>
+<p>Prove the Lagrange identity $|\mathbf{a}\times\mathbf{b}|^2+|\mathbf{a}\cdot\mathbf{b}|^2=|\mathbf{a}|^2|\mathbf{b}|^2$ and deduce the Cauchy–Schwarz inequality.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $|\mathbf{a}\times\mathbf{b}|^2=a^2b^2\sin^2\theta$. $|\mathbf{a}\cdot\mathbf{b}|^2=a^2b^2\cos^2\theta$. Sum $=a^2b^2(\sin^2\theta+\cos^2\theta)=a^2b^2$. ✓</p>
+<p>The Cauchy–Schwarz inequality follows: $|\mathbf{a}\cdot\mathbf{b}|\leq|\mathbf{a}||\mathbf{b}|$, with equality iff $\mathbf{a}\parallel\mathbf{b}$ (since $|\mathbf{a}\times\mathbf{b}|^2\geq0$). This is one of the most important inequalities in mathematics.</p>
+<p><strong>Checks.</strong> (i) Equality: $\theta=0$ or $\pi$ — parallel vectors. (ii) The bound $|\mathbf{a}\cdot\mathbf{b}|\leq ab$ is just $|\cos\theta|\leq1$.</p>
+</details>
+<h3 id="ol2-the-jacobi-identity">OL2 — The Jacobi identity</h3>
+<p>Prove $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Apply BAC–CAB to each term: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$. $\mathbf{b}\times(\mathbf{c}\times\mathbf{a})=\mathbf{c}(\mathbf{b}\cdot\mathbf{a})-\mathbf{a}(\mathbf{b}\cdot\mathbf{c})$. $\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{a}(\mathbf{c}\cdot\mathbf{b})-\mathbf{b}(\mathbf{c}\cdot\mathbf{a})$. Sum: all terms cancel pairwise. ✓</p>
+<p><strong>Significance.</strong> The Jacobi identity is one of the defining properties of a Lie algebra. The cross product makes $\mathbb{R}^3$ into a Lie algebra.</p>
+</details>
+<h3 id="ol3-vector-equations-by-the-dot-with-a-clever-vector-technique">OL3 — Vector equations by the "dot with a clever vector" technique</h3>
+<p>Solve the system $\mathbf{a}\cdot\mathbf{x}=p$, $\mathbf{b}\cdot\mathbf{x}=q$, $\mathbf{c}\cdot\mathbf{x}=r$ where $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are non-coplanar.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Write $\mathbf{x}=\alpha\mathbf{a}+\beta\mathbf{b}+\gamma\mathbf{c}$ (possible since $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are non-coplanar and thus form a basis). Dot with $\mathbf{a}$: $\alpha a^2+\beta\mathbf{a}\cdot\mathbf{b}+\gamma\mathbf{a}\cdot\mathbf{c}=p$. Similarly for $\mathbf{b}$ and $\mathbf{c}$. This gives a $3\times3$ system for $\alpha$, $\beta$, $\gamma$. The system has a unique solution because the Gram determinant $[\mathbf{a},\mathbf{b},\mathbf{c}]^2\neq0$ (since the vectors are non-coplanar).</p>
+<p><strong>Alternative (more elegant).</strong> Let $\mathbf{V}=\mathbf{b}\times\mathbf{c}$, $\mathbf{W}=\mathbf{c}\times\mathbf{a}$, $\mathbf{U}=\mathbf{a}\times\mathbf{b}$. Then $\mathbf{a}\cdot\mathbf{V}=[\mathbf{a},\mathbf{b},\mathbf{c}]=V$, $\mathbf{b}\cdot\mathbf{V}=0$, $\mathbf{c}\cdot\mathbf{V}=0$. Dot both sides of $\mathbf{x}=\alpha\mathbf{a}+\ldots$ with $\mathbf{V}$: $\mathbf{x}\cdot\mathbf{V}=\alpha V\Rightarrow\alpha=\mathbf{x}\cdot\mathbf{V}/V$. But $\mathbf{x}\cdot\mathbf{V}$ is not directly known — we need to use the three equations. The elegant solution: $\mathbf{x}=\frac{p(\mathbf{b}\times\mathbf{c})+q(\mathbf{c}\times\mathbf{a})+r(\mathbf{a}\times\mathbf{b})}{[\mathbf{a},\mathbf{b},\mathbf{c}]}$.</p>
+<p><strong>Checks.</strong> (i) Dot with $\mathbf{a}$: $\frac{p[\mathbf{a},\mathbf{b},\mathbf{c}]}{[\mathbf{a},\mathbf{b},\mathbf{c}]}=p$. ✓ (ii) If $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$: $\mathbf{x}=p\hat{i}+q\hat{j}+r\hat{k}$ — just the components. ✓</p>
+</details>
+<h3 id="ol4-the-rotating-frame-velocity-and-acceleration">OL4 — The rotating-frame velocity and acceleration</h3>
+<p>A particle moves in a plane. In a frame rotating with angular velocity $\boldsymbol{\omega}=\omega\hat{k}$, the particle's position is $\mathbf{r}'$. Show that the velocity in the fixed frame is $\mathbf{v}=\mathbf{v}'+\boldsymbol{\omega}\times\mathbf{r}$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\mathbf{r}=r_x\hat{i}+r_y\hat{j}$ in the fixed frame. In the rotating frame: $\hat{i}'=\cos\omega t\,\hat{i}+\sin\omega t\,\hat{j}$, $\hat{j}'=-\sin\omega t\,\hat{i}+\cos\omega t\,\hat{j}$. $\mathbf{r}=r_x'\hat{i}'+r_y'\hat{j}'$. Differentiate: $\dot{\mathbf{r}}=(\dot{r}_x'\hat{i}'+\dot{r}_y'\hat{j}')+(r_x'\dot{\hat{i}}'+r_y'\dot{\hat{j}}')$. The first bracket is $\mathbf{v}'$ (velocity in the rotating frame). The second: $\dot{\hat{i}}'=\omega\hat{j}'$, $\dot{\hat{j}}'=-\omega\hat{i}'$. So $r_x'\dot{\hat{i}}'+r_y'\dot{\hat{j}}'=\omega(r_x'\hat{j}'-r_y'\hat{i}')=\omega\hat{k}\times(r_x'\hat{i}'+r_y'\hat{j}')=\boldsymbol{\omega}\times\mathbf{r}$. $\mathbf{v}=\mathbf{v}'+\boldsymbol{\omega}\times\mathbf{r}$. ✓</p>
+<p><strong>Significance.</strong> This is the Galilean velocity-addition formula for rotating frames. The Coriolis and centrifugal accelerations follow from differentiating again (PART 8).</p>
+</details>
+<h3 id="ol5-areas-and-volumes-by-vector-methods">OL5 — Areas and volumes by vector methods</h3>
+<p>Find the area of a triangle with vertices at $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ using vector methods.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Area $=\frac{1}{2}|(\mathbf{b}-\mathbf{a})\times(\mathbf{c}-\mathbf{a})|$. This is the magnitude of the cross product of two side vectors, divided by 2.</p>
+<p><strong>Alternative form:</strong> Area $=\frac{1}{2}|\mathbf{a}\times\mathbf{b}+\mathbf{b}\times\mathbf{c}+\mathbf{c}\times\mathbf{a}|$. (This can be verified by expanding.)</p>
+<p><strong>Checks.</strong> (i) If $\mathbf{a}=\mathbf{0}$: Area $=\frac{1}{2}|\mathbf{b}\times\mathbf{c}|$ — the standard formula. (ii) The area is independent of the choice of origin.</p>
+</details>
+<h3 id="ol6-the-spherical-basis-and-3d-rotations">OL6 — The spherical basis and 3D rotations</h3>
+<p>Extend the polar basis to 3D: define $\hat{r}$, $\hat{\theta}$, $\hat{\phi}$ for spherical coordinates. Show that $\dot{\hat{r}}=\dot{\theta}\hat{\theta}+\sin\theta\,\dot{\phi}\hat{\phi}$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> In spherical coordinates, the three unit vectors at a point $(r, \theta, \phi)$ are defined as follows. $\hat{r}$ points radially outward from the origin. $\hat{\theta}$ points in the direction of increasing polar angle $\theta$ (southward, from the north pole toward the equator). $\hat{\phi}$ points in the direction of increasing azimuthal angle $\phi$ (eastward, around the $z$-axis). In terms of Cartesian unit vectors: $\hat{r}=\sin\theta\cos\phi\,\hat{i}+\sin\theta\sin\phi\,\hat{j}+\cos\theta\,\hat{k}$. $\hat{\theta}=\cos\theta\cos\phi\,\hat{i}+\cos\theta\sin\phi\,\hat{j}-\sin\theta\,\hat{k}$. $\hat{\phi}=-\sin\phi\,\hat{i}+\cos\phi\,\hat{j}$. Differentiate $\hat{r}$: $\dot{\hat{r}}=(\dot{\theta}\cos\theta\cos\phi-\dot{\phi}\sin\theta\sin\phi)\hat{i}+(\dot{\theta}\cos\theta\sin\phi+\dot{\phi}\sin\theta\cos\phi)\hat{j}-\dot{\theta}\sin\theta\hat{k}$. Rearranging: $\dot{\hat{r}}=\dot{\theta}\hat{\theta}+\sin\theta\,\dot{\phi}\hat{\phi}$. ✓</p>
+<p><strong>Significance.</strong> This is the key formula for angular velocity in 3D: $\boldsymbol{\omega}=\dot{\theta}\hat{\phi}+\dot{\phi}\hat{k}$ (for rotations about the $z$-axis and the node). The spherical basis is used in quantum mechanics (the hydrogen atom), in electrodynamics (multipole expansions), and in astronomy (celestial coordinates).</p>
+</details>
+<h3 id="ol7-proving-the-sine-rule-by-vectors">OL7 — Proving the sine rule by vectors</h3>
+<p>In a triangle $ABC$ with sides $a$, $b$, $c$ opposite angles $A$, $B$, $C$, prove $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Let $\overrightarrow{AB}=\mathbf{c}$, $\overrightarrow{BC}=\mathbf{a}$, $\overrightarrow{CA}=\mathbf{b}$, so $\mathbf{a}+\mathbf{b}+\mathbf{c}=\mathbf{0}$. Cross with $\mathbf{a}$: $\mathbf{a}\times\mathbf{b}+\mathbf{a}\times\mathbf{c}=\mathbf{0}$, so $\mathbf{a}\times\mathbf{b}=-\mathbf{a}\times\mathbf{c}=\mathbf{c}\times\mathbf{a}$. Taking magnitudes: $ab\sin C=ca\sin B$. So $\frac{b}{\sin B}=\frac{c}{\sin C}$. Similarly, cross $\mathbf{b}$ with the closure equation: $\frac{a}{\sin A}=\frac{c}{\sin C}$.</p>
+<p><strong>Checks.</strong> (i) At $C=90°$: $c$ is the hypotenuse, $\sin C=1$, so $c/\sin C=c$. (ii) The proof uses only the closure of the triangle and the cross product — very elegant.</p>
+</details>
+<h3 id="ol8-the-radius-of-curvature-by-vectors">OL8 — The radius of curvature by vectors</h3>
+<p>A curve is given parametrically by $\mathbf{r}(t)$. Show that the radius of curvature is $\rho=|\mathbf{v}|^3/|\mathbf{v}\times\mathbf{a}|$.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> The curvature is $\kappa=|\mathbf{v}\times\mathbf{a}|/|\mathbf{v}|^3$ (from the Frenet–Serret formulas). The radius of curvature is $\rho=1/\kappa=|\mathbf{v}|^3/|\mathbf{v}\times\mathbf{a}|$.</p>
+<p><strong>Checks.</strong> (i) For uniform circular motion: $\mathbf{v}\perp\mathbf{a}$, $|\mathbf{v}\times\mathbf{a}|=va=v\times v^2/R=v^3/R$, so $\rho=R$. ✓ (ii) For straight-line motion: $\mathbf{v}\times\mathbf{a}=\mathbf{0}$, $\rho\to\infty$ — no curvature. ✓</p>
+</details>
+<h3 id="ol9-proving-hatrtimeshatthetahatk-and-its-physical-meaning">OL9 — Proving $\hat{r}\times\hat{\theta}=\hat{k}$ and its physical meaning</h3>
+<p>Verify that $\hat{r}\times\hat{\theta}=\hat{k}$ for the 2D polar basis. What does this mean for angular momentum?</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $\hat{r}=\cos\theta\hat{i}+\sin\theta\hat{j}$, $\hat{\theta}=-\sin\theta\hat{i}+\cos\theta\hat{j}$. $\hat{r}\times\hat{\theta}=(\cos^2\theta+\sin^2\theta)\hat{k}=\hat{k}$. ✓</p>
+<p><strong>Physical meaning:</strong> $\mathbf{L}=\mathbf{r}\times m\mathbf{v}=r\hat{r}\times m v_\theta\hat{\theta}=rmv_\theta\hat{k}$. Angular momentum is always in the $\hat{k}$ direction for 2D motion. The sign: positive $L$ means counter-clockwise rotation.</p>
+</details>
+<h3 id="ol10-the-vector-proof-that-the-diagonals-of-a-rhombus-are-perpendicular">OL10 — The vector proof that the diagonals of a rhombus are perpendicular</h3>
+<p>Prove that the diagonals of a rhombus (parallelogram with equal sides) are perpendicular.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Let the sides be $\mathbf{a}$ and $\mathbf{b}$ with $|\mathbf{a}|=|\mathbf{b}|$. The diagonals are $\mathbf{a}+\mathbf{b}$ and $\mathbf{a}-\mathbf{b}$. $(\mathbf{a}+\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=a^2-b^2=0$ since $|\mathbf{a}|=|\mathbf{b}|$. So the diagonals are perpendicular.</p>
+<p><strong>Checks.</strong> (i) The proof uses only the equal-side condition — it works for any rhombus, not just a square. (ii) For a square ($\mathbf{a}\perp\mathbf{b}$): the diagonals are also equal, which is an additional property. (iii) The converse is also true: if the diagonals of a parallelogram are perpendicular, then it is a rhombus — this follows because $(\mathbf{a}+\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=0$ implies $a^2=b^2$.</p>
+<p><strong>Generalisation.</strong> In a rectangle (parallelogram with equal angles), the diagonals are equal: $|\mathbf{a}+\mathbf{b}|=|\mathbf{a}-\mathbf{b}|$ iff $\mathbf{a}\cdot\mathbf{b}=0$ (the sides are perpendicular). These two results — rhombus has perpendicular diagonals, rectangle has equal diagonals — are dual to each other.</p>
+</details>
+<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<p>Vector algebra in 3D Euclidean space is exact. The limitations are: (1) the cross product is specific to 3D (in 2D there is no natural cross product; in higher dimensions the exterior product replaces it); (2) the polar basis is specific to 2D (in 3D use the spherical or cylindrical basis); (3) the vector triple product is not associative (parentheses matter); (4) the scalar triple product gives a signed volume, not just a magnitude — the sign encodes the handedness of the coordinate system (right-hand rule vs left-hand rule). In curved spaces (general relativity), vectors must be replaced by tangent vectors on a manifold, and the cross product is replaced by the wedge product. In quantum mechanics, the "vectors" are complex-valued functions (state vectors in Hilbert space), and the dot product becomes an inner product with complex conjugation. Inside the fences of 3D Euclidean space, the methods of this chapter are exact and universally applicable.</p>
+<h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
+<p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
+Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B — 8 one-or-more-correct (4 marks each, no negative marking); C — 6 numerical answers (5 marks each); D — 10 long-form (9 marks each).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Subtotal</th>
+<th>Topic coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>1–12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">48</td>
+<td>blocks 2–4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>13–20</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32</td>
+<td>blocks 3–4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>21–26</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td>blocks 4, 10</td>
+</tr>
+<tr>
+<td>D</td>
+<td>27–36</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td>block 10</td>
+</tr>
+<tr>
+<td></td>
+<td>36</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-a-concept-mcq-12-4">Section A · Concept MCQ (12 × 4)</h4>
+<h3 id="p1-4-marks">P1 · 4 marks</h3>
+<p>$\hat{i}\cdot(\hat{j}\times\hat{k})$ equals:
+(a) 0  (b) 1  (c) $-1$  (d) undefined</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $\hat{j}\times\hat{k}=\hat{i}$. $\hat{i}\cdot\hat{i}=1$.</p>
+</details>
+<h3 id="p2-4-marks">P2 · 4 marks</h3>
+<p>If $\mathbf{a}\cdot\mathbf{b}=0$ and $\mathbf{a}\times\mathbf{b}=\mathbf{0}$, then:
+(a) $\mathbf{a}=\mathbf{0}$ or $\mathbf{b}=\mathbf{0}$  (b) $\mathbf{a}\perp\mathbf{b}$  (c) $\mathbf{a}\parallel\mathbf{b}$  (d) $\mathbf{a}=\mathbf{b}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $\mathbf{a}\cdot\mathbf{b}=0$ means $\perp$ or one is zero. $\mathbf{a}\times\mathbf{b}=\mathbf{0}$ means $\parallel$ or one is zero. Both conditions together: one must be the zero vector.</p>
+</details>
+<h3 id="p3-4-marks">P3 · 4 marks</h3>
+<p>The direction cosines of the $y$-axis are:
+(a) $(1,0,0)$  (b) $(0,1,0)$  (c) $(0,0,1)$  (d) $(1,1,0)/\sqrt{2}$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). The $y$-axis makes $90°$ with $x$ and $z$ and $0°$ with $y$.</p>
+</details>
+<h3 id="p4-4-marks">P4 · 4 marks</h3>
+<p>BAC–CAB applied to $\hat{j}\times(\hat{k}\times\hat{i})$ gives:
+(a) $\hat{k}$  (b) $\hat{i}$  (c) $\hat{j}$  (d) $\mathbf{0}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $\hat{k}\times\hat{i}=\hat{j}$. $\hat{j}\times\hat{j}=\mathbf{0}$. Hmm, let me recompute. $\hat{j}\times(\hat{k}\times\hat{i})$. BAC–CAB: $\hat{k}(\hat{j}\cdot\hat{i})-\hat{i}(\hat{j}\cdot\hat{k})=\hat{k}(0)-\hat{i}(0)=\mathbf{0}$. Wait — but $\hat{k}\times\hat{i}=\hat{j}$, so $\hat{j}\times\hat{j}=\mathbf{0}$. So the answer is (d) $\mathbf{0}$.</p>
+</details>
+<h3 id="p5-4-marks">P5 · 4 marks</h3>
+<p>The area of the parallelogram formed by $\mathbf{a}=\hat{i}+\hat{j}$ and $\mathbf{b}=\hat{j}+\hat{k}$ is:
+(a) 1  (b) $\sqrt{2}$  (c) $\sqrt{3}$  (d) 2</p>
+<details>
+<summary>Answer</summary>
+<p>(c). $\mathbf{a}\times\mathbf{b}=\hat{i}-\hat{j}+\hat{k}$. $|\mathbf{a}\times\mathbf{b}|=\sqrt{3}$.</p>
+</details>
+<h3 id="p6-4-marks">P6 · 4 marks</h3>
+<p>The scalar triple product $[\mathbf{a},\mathbf{b},\mathbf{c}]$ is zero when:
+(a) the vectors are coplanar  (b) the vectors are perpendicular  (c) the vectors are parallel  (d) the vectors are unit vectors</p>
+<details>
+<summary>Answer</summary>
+<p>(a). Coplanar vectors span zero volume.</p>
+</details>
+<h3 id="p7-4-marks">P7 · 4 marks</h3>
+<p>In the polar basis, $\dot{\hat{\theta}}$ equals:
+(a) $\omega\hat{r}$  (b) $-\omega\hat{r}$  (c) $\omega\hat{\theta}$  (d) $-\omega\hat{\theta}$</p>
+<details>
+<summary>Answer</summary>
+<p>(b). $\dot{\hat{\theta}}=-\omega\hat{r}$ — the rate of change of $\hat{\theta}$ is directed toward the centre.</p>
+</details>
+<h3 id="p8-4-marks">P8 · 4 marks</h3>
+<p>If $|\mathbf{a}+\mathbf{b}|=|\mathbf{a}-\mathbf{b}|$, then:
+(a) $\mathbf{a}\perp\mathbf{b}$  (b) $\mathbf{a}\parallel\mathbf{b}$  (c) $|\mathbf{a}|=|\mathbf{b}|$  (d) $\mathbf{a}=\mathbf{b}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). Squaring both sides: $a^2+2\mathbf{a}\cdot\mathbf{b}+b^2=a^2-2\mathbf{a}\cdot\mathbf{b}+b^2$, so $\mathbf{a}\cdot\mathbf{b}=0$.</p>
+</details>
+<h3 id="p9-4-marks">P9 · 4 marks</h3>
+<p>The projection of $\hat{i}+\hat{j}$ along $\hat{i}-\hat{j}$ is:
+(a) 0  (b) 1  (c) $\sqrt{2}$  (d) $1/\sqrt{2}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $(\hat{i}+\hat{j})\cdot(\hat{i}-\hat{j})=1-1=0$. The vectors are perpendicular — zero projection.</p>
+</details>
+<h3 id="p10-4-marks">P10 · 4 marks</h3>
+<p>$\mathbf{a}\times(\mathbf{a}\times\mathbf{a})$ equals:
+(a) $\mathbf{0}$  (b) $a^2\mathbf{a}$  (c) $-a^2\mathbf{a}$  (d) $\mathbf{a}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a). $\mathbf{a}\times\mathbf{a}=\mathbf{0}$, so $\mathbf{a}\times\mathbf{0}=\mathbf{0}$.</p>
+</details>
+<h3 id="p11-4-marks">P11 · 4 marks</h3>
+<p>The volume of the tetrahedron with vertices $\mathbf{0}$, $\hat{i}$, $\hat{j}$, $\hat{k}$ is:
+(a) 1  (b) 1/2  (c) 1/3  (d) 1/6</p>
+<details>
+<summary>Answer</summary>
+<p>(d). $V=\frac{1}{6}|[\hat{i},\hat{j},\hat{k}]|=\frac{1}{6}$.</p>
+</details>
+<h3 id="p12-4-marks">P12 · 4 marks</h3>
+<p>If $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are mutually perpendicular unit vectors, then $\mathbf{a}\times\mathbf{b}$ is:
+(a) $\mathbf{c}$  (b) $-\mathbf{c}$  (c) $\pm\mathbf{c}$  (d) $\mathbf{0}$</p>
+<details>
+<summary>Answer</summary>
+<p>(c). The sign depends on the handedness of the triad $(\mathbf{a},\mathbf{b},\mathbf{c})$.</p>
+</details>
+<h4 id="section-b-one-or-more-correct-8-4">Section B · One-or-more-correct (8 × 4)</h4>
+<h3 id="p13-4-marks">P13 · 4 marks</h3>
+<p>The dot product $\mathbf{a}\cdot\mathbf{b}$ is:
+(a) commutative  (b) distributive  (c) associative  (d) always positive</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b). The dot product is not associative (it takes two vectors, not three). It can be negative.</p>
+</details>
+<h3 id="p14-4-marks">P14 · 4 marks</h3>
+<p>The cross product $\mathbf{a}\times\mathbf{b}$:
+(a) is anti-commutative  (b) exists only in 3D  (c) is always perpendicular to $\mathbf{a}$ and $\mathbf{b}$  (d) is zero when $\mathbf{a}\perp\mathbf{b}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). It is maximum (not zero) when $\mathbf{a}\perp\mathbf{b}$.</p>
+</details>
+<h3 id="p15-4-marks">P15 · 4 marks</h3>
+<p>If $[\mathbf{a},\mathbf{b},\mathbf{c}]=V$, then:
+(a) $[\mathbf{b},\mathbf{a},\mathbf{c}]=-V$  (b) $[\mathbf{b},\mathbf{c},\mathbf{a}]=V$  (c) $[\mathbf{c},\mathbf{b},\mathbf{a}]=V$  (d) $[\mathbf{a},\mathbf{c},\mathbf{b}]=-V$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (d). Swapping two vectors changes the sign; cyclic permutations preserve it.</p>
+</details>
+<h3 id="p16-4-marks">P16 · 4 marks</h3>
+<p>The BAC–CAB rule $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$ shows that:
+(a) the result lies in the plane of $\mathbf{b}$ and $\mathbf{c}$  (b) the cross product is associative  (c) the result is perpendicular to $\mathbf{a}$  (d) both (a) and (c)</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), so (d). The result is in the $\mathbf{b}$–$\mathbf{c}$ plane AND perpendicular to $\mathbf{a}$.</p>
+</details>
+<h3 id="p17-4-marks">P17 · 4 marks</h3>
+<p>For a particle in circular motion ($\mathbf{r}=R\hat{r}$):
+(a) $\mathbf{v}=R\omega\hat{\theta}$  (b) $\mathbf{a}=-R\omega^2\hat{r}$  (c) $\mathbf{v}\perp\mathbf{r}$  (d) $\mathbf{a}\parallel\mathbf{v}$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c). $\mathbf{a}$ is radial (centripetal), $\mathbf{v}$ is tangential — they are perpendicular, not parallel.</p>
+</details>
+<h3 id="p18-4-marks">P18 · 4 marks</h3>
+<p>The Lagrange identity implies:
+(a) $|\mathbf{a}\cdot\mathbf{b}|\leq|\mathbf{a}||\mathbf{b}|$ (Cauchy–Schwarz)  (b) the cross product is related to the dot product  (c) $|\mathbf{a}\times\mathbf{b}|\leq|\mathbf{a}||\mathbf{b}|$  (d) all of the above</p>
+<details>
+<summary>Answer</summary>
+<p>(d). All three follow from $|\mathbf{a}\times\mathbf{b}|^2+|\mathbf{a}\cdot\mathbf{b}|^2=a^2b^2$.</p>
+</details>
+<h3 id="p19-4-marks">P19 · 4 marks</h3>
+<p>If $\mathbf{a}\times\mathbf{x}=\mathbf{b}$ has a solution, then:
+(a) $\mathbf{a}\cdot\mathbf{b}=0$  (b) $\mathbf{x}$ is unique  (c) $\mathbf{b}$ is perpendicular to $\mathbf{a}$  (d) there is a one-parameter family of solutions</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (c), (d). $\mathbf{a}\cdot\mathbf{b}=0$ (equivalent to (c)). The solution has a free parameter (the component of $\mathbf{x}$ along $\mathbf{a}$).</p>
+</details>
+<h3 id="p20-4-marks">P20 · 4 marks</h3>
+<p>In a regular hexagon with centre $O$ and vertices $A$, $B$, $C$, $D$, $E$, $F$:
+(a) $\overrightarrow{AB}=\overrightarrow{ED}$  (b) $\overrightarrow{AB}+\overrightarrow{BC}+\overrightarrow{CD}+\overrightarrow{DE}+\overrightarrow{EF}+\overrightarrow{FA}=\mathbf{0}$  (c) $\overrightarrow{AC}=\overrightarrow{FD}$  (d) $|\overrightarrow{AD}|=2|\overrightarrow{AB}|$</p>
+<details>
+<summary>Answer</summary>
+<p>(a), (b), (c), (d). All four follow from the symmetry and the polygon law of addition.</p>
+</details>
+<h4 id="section-c-numerical-answers-6-5">Section C · Numerical answers (6 × 5)</h4>
+<h3 id="p21-5-marks">P21 · 5 marks</h3>
+<p>Find the angle (in degrees) between $\mathbf{a}=3\hat{i}+4\hat{j}$ and $\mathbf{b}=-4\hat{i}+3\hat{j}$.</p>
+<details>
+<summary>Answer</summary>
+<p>$\mathbf{a}\cdot\mathbf{b}=-12+12=0$. Angle $=90°$.</p>
+</details>
+<h3 id="p22-5-marks">P22 · 5 marks</h3>
+<p>Find $|\mathbf{a}\times\mathbf{b}|$ if $\mathbf{a}=2\hat{i}-\hat{j}+\hat{k}$, $\mathbf{b}=\hat{i}+2\hat{j}-3\hat{k}$.</p>
+<details>
+<summary>Answer</summary>
+<p>$\mathbf{a}\times\mathbf{b}=(3-2)\hat{i}-(−6−1)\hat{j}+(4+1)\hat{k}=\hat{i}+7\hat{j}+5\hat{k}$. $|\mathbf{a}\times\mathbf{b}|=\sqrt{1+49+25}=\sqrt{75}=5\sqrt{3}=8.66$.</p>
+</details>
+<h3 id="p23-5-marks">P23 · 5 marks</h3>
+<p>Find the volume of the parallelepiped with edges $\hat{i}+\hat{j}$, $\hat{j}+\hat{k}$, $\hat{i}+\hat{k}$.</p>
+<details>
+<summary>Answer</summary>
+<p>$[\mathbf{a},\mathbf{b},\mathbf{c}]=\begin{vmatrix}1&amp;1&amp;0\0&amp;1&amp;1\1&amp;0&amp;1\end{vmatrix}=1(1-0)-1(0-1)+0=1+1=2$. Volume $=2$.</p>
+</details>
+<h3 id="p24-5-marks">P24 · 5 marks</h3>
+<p>Find $\lambda$ such that $\hat{i}+\lambda\hat{j}+2\hat{k}$ is perpendicular to $2\hat{i}-\hat{j}+3\hat{k}$.</p>
+<details>
+<summary>Answer</summary>
+<p>$2-\lambda+6=0\Rightarrow\lambda=8$.</p>
+</details>
+<h3 id="p25-5-marks">P25 · 5 marks</h3>
+<p>Find the area of the triangle with vertices $A(1,0,0)$, $B(0,2,0)$, $C(0,0,3)$.</p>
+<details>
+<summary>Answer</summary>
+<p>$\overrightarrow{AB}=-\hat{i}+2\hat{j}$, $\overrightarrow{AC}=-\hat{i}+3\hat{k}$. $\overrightarrow{AB}\times\overrightarrow{AC}=6\hat{i}+3\hat{j}+2\hat{k}$. Area $=\frac{1}{2}\sqrt{36+9+4}=\frac{7}{2}=3.5$.</p>
+</details>
+<h3 id="p26-5-marks">P26 · 5 marks</h3>
+<p>A particle moves in a circle of radius 2 m with $\omega=3$ rad/s. Find the speed and centripetal acceleration.</p>
+<details>
+<summary>Answer</summary>
+<p>$v=R\omega=6$ m/s. $a=R\omega^2=18$ m/s$^2$.</p>
+</details>
+<h4 id="section-d-long-form-10-9">Section D · Long-form (10 × 9)</h4>
+<h3 id="p27-9-marks">P27 · 9 marks</h3>
+<p>(a) Derive the BAC–CAB rule for $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$ using components. (b) Verify it for $\mathbf{a}=\hat{i}+\hat{j}$, $\mathbf{b}=\hat{j}+\hat{k}$, $\mathbf{c}=\hat{k}+\hat{i}$. (c) Show that $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Direct component expansion. (b) $\mathbf{b}\times\mathbf{c}=\hat{j}\times\hat{k}+\hat{j}\times\hat{i}+\hat{k}\times\hat{k}+\hat{k}\times\hat{i}=\hat{i}-\hat{k}+\hat{j}$. $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=(\hat{i}+\hat{j})\times(\hat{i}-\hat{k}+\hat{j})=\hat{i}\times\hat{i}-\hat{i}\times\hat{k}+\hat{i}\times\hat{j}+\hat{j}\times\hat{i}-\hat{j}\times\hat{k}+\hat{j}\times\hat{j}=\hat{j}+\hat{k}-\hat{k}-\hat{i}=\hat{j}-\hat{i}$. BAC–CAB: $\mathbf{b}(1)-\mathbf{c}(1)=(\hat{j}+\hat{k})-(\hat{k}+\hat{i})=\hat{j}-\hat{i}$. ✓ (c) Direct verification or by BAC–CAB expansion (all terms cancel).</p>
+</details>
+<h3 id="p28-9-marks">P28 · 9 marks</h3>
+<p>(a) Prove the Lagrange identity. (b) Deduce the Cauchy–Schwarz inequality. (c) When does equality hold?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL1. (b) $|\mathbf{a}\cdot\mathbf{b}|^2=a^2b^2-|\mathbf{a}\times\mathbf{b}|^2\leq a^2b^2$. (c) Equality when $\mathbf{a}\times\mathbf{b}=\mathbf{0}$, i.e. $\mathbf{a}\parallel\mathbf{b}$.</p>
+</details>
+<h3 id="p29-9-marks">P29 · 9 marks</h3>
+<p>(a) Solve $\mathbf{a}\times\mathbf{x}=\mathbf{b}$ for $\mathbf{x}$ where $\mathbf{a}=\hat{i}+\hat{j}$ and $\mathbf{b}=\hat{k}$. (b) Verify the solution. (c) Describe the family of solutions geometrically.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\mathbf{a}\cdot\mathbf{b}=0$ ✓. Cross both sides with $\mathbf{a}$: $\mathbf{a}\times(\mathbf{a}\times\mathbf{x})=\mathbf{a}\times\hat{k}=\hat{i}\times\hat{k}+\hat{j}\times\hat{k}=-\hat{j}+\hat{i}$. BAC–CAB: $\mathbf{a}(\mathbf{a}\cdot\mathbf{x})-2\mathbf{x}=\hat{i}-\hat{j}$. Let $\mathbf{a}\cdot\mathbf{x}=\lambda$: $\lambda(\hat{i}+\hat{j})-2\mathbf{x}=\hat{i}-\hat{j}$. $\mathbf{x}=\frac{\lambda-1}{2}\hat{i}+\frac{\lambda+1}{2}\hat{j}$. (b) $\mathbf{a}\times\mathbf{x}=(\hat{i}+\hat{j})\times\left(\frac{\lambda-1}{2}\hat{i}+\frac{\lambda+1}{2}\hat{j}\right)=\frac{\lambda+1}{2}\hat{k}-\frac{\lambda-1}{2}\hat{k}=\hat{k}$. ✓ (c) The solutions form a line parallel to $\mathbf{a}$: $\mathbf{x}=\frac{-1}{2}\hat{i}+\frac{1}{2}\hat{j}+\mu(\hat{i}+\hat{j})$.</p>
+</details>
+<h3 id="p30-9-marks">P30 · 9 marks</h3>
+<p>(a) Find the area of the triangle with vertices $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ using vectors. (b) For $\mathbf{a}=(1,0)$, $\mathbf{b}=(3,0)$, $\mathbf{c}=(2,4)$, compute the area. (c) Verify using the base–height formula.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) Area $=\frac{1}{2}|(\mathbf{b}-\mathbf{a})\times(\mathbf{c}-\mathbf{a})|$. (b) $\mathbf{b}-\mathbf{a}=2\hat{i}$, $\mathbf{c}-\mathbf{a}=\hat{i}+4\hat{j}$. Cross product $=8\hat{k}$. Area $=4$. (c) Base $=|\mathbf{b}-\mathbf{a}|=2$. Height $=4$ (the $y$-coordinate of $\mathbf{c}$). Area $=\frac{1}{2}\times2\times4=4$. ✓</p>
+</details>
+<h3 id="p31-9-marks">P31 · 9 marks</h3>
+<p>(a) Derive $\mathbf{v}=R\omega\hat{\theta}$ and $\mathbf{a}=-R\omega^2\hat{r}$ for uniform circular motion. (b) Find the velocity and acceleration at $\theta=45°$ for $R=2$ m, $\omega=3$ rad/s. (c) What is the relationship between $v$ and $a$?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See E8. (b) $\hat{r}=\frac{1}{\sqrt{2}}(\hat{i}+\hat{j})$, $\hat{\theta}=\frac{1}{\sqrt{2}}(-\hat{i}+\hat{j})$. $\mathbf{v}=6\hat{\theta}=\frac{6}{\sqrt{2}}(-\hat{i}+\hat{j})$. $\mathbf{a}=-18\hat{r}=\frac{-18}{\sqrt{2}}(\hat{i}+\hat{j})$. (c) $a=v^2/R=R\omega^2$ — the centripetal acceleration formula.</p>
+</details>
+<h3 id="p32-9-marks">P32 · 9 marks</h3>
+<p>(a) Prove by vectors that the medians of a triangle are concurrent. (b) Find the centroid. (c) Show it divides each median in ratio 2:1.</p>
+<details>
+<summary>Answer</summary>
+<p>(a)–(c) See Q19.</p>
+</details>
+<h3 id="p33-9-marks">P33 · 9 marks</h3>
+<p>(a) Prove the sine rule $\frac{a}{\sin A}=\frac{b}{\sin B}$ using the cross product. (b) For a triangle with $a=5$, $b=7$, $A=30°$, find $\sin B$. (c) Is the triangle uniquely determined?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL7. (b) $\frac{5}{\sin30°}=\frac{7}{\sin B}\Rightarrow\sin B=7\sin30°/5=0.7$. $B=44.4°$ or $135.6°$. (c) No — two solutions (the ambiguous case of the sine rule). The triangle is uniquely determined only if $B$ is constrained to be acute.</p>
+</details>
+<h3 id="p34-9-marks">P34 · 9 marks</h3>
+<p>(a) Define the scalar triple product. (b) Find the volume of the parallelepiped with edges $\hat{i}+\hat{j}$, $\hat{j}+\hat{k}$, $\hat{i}+\hat{k}$. (c) Are these vectors coplanar?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=$ volume of parallelepiped. (b) $[\mathbf{a},\mathbf{b},\mathbf{c}]=2$ (from P23). (c) No — the scalar triple product is non-zero, so the vectors are not coplanar.</p>
+</details>
+<h3 id="p35-9-marks">P35 · 9 marks</h3>
+<p>(a) Solve the system $\hat{i}\cdot\mathbf{x}=2$, $\hat{j}\cdot\mathbf{x}=3$, $\hat{k}\cdot\mathbf{x}=4$ for $\mathbf{x}$. (b) Generalise: if $\mathbf{a}\cdot\mathbf{x}=p$, $\mathbf{b}\cdot\mathbf{x}=q$, $\mathbf{c}\cdot\mathbf{x}=r$ with non-coplanar $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$, write $\mathbf{x}$. (c) Explain why the solution is unique.</p>
+<details>
+<summary>Answer</summary>
+<p>(a) $\mathbf{x}=2\hat{i}+3\hat{j}+4\hat{k}$. (b) $\mathbf{x}=\frac{p(\mathbf{b}\times\mathbf{c})+q(\mathbf{c}\times\mathbf{a})+r(\mathbf{a}\times\mathbf{b})}{[\mathbf{a},\mathbf{b},\mathbf{c}]}$. (c) The Gram determinant $[\mathbf{a},\mathbf{b},\mathbf{c}]^2\neq0$ (non-coplanar), so the system has a unique solution.</p>
+</details>
+<h3 id="p36-9-marks">P36 · 9 marks</h3>
+<p>(a) Derive the formula $\rho=|\mathbf{v}|^3/|\mathbf{v}\times\mathbf{a}|$ for the radius of curvature. (b) For a projectile $\mathbf{r}(t)=v_0t\hat{i}+\frac{1}{2}gt^2\hat{j}$, find $\rho$ at the apex. (c) What is $\rho$ at the launch point?</p>
+<details>
+<summary>Answer</summary>
+<p>(a) See OL8. (b) At the apex ($t=v_0/g$): $\mathbf{v}=v_0\hat{i}$, $\mathbf{a}=-g\hat{j}$. $\mathbf{v}\times\mathbf{a}=-v_0g\hat{k}$. $\rho=v_0^3/(v_0g)=v_0^2/g$. (c) At launch ($t=0$): $\mathbf{v}=v_0\hat{i}+0\hat{j}$... wait — at $t=0$, $\mathbf{v}=v_0\cos\theta\hat{i}+v_0\sin\theta\hat{j}$, $\mathbf{a}=-g\hat{j}$. $|\mathbf{v}\times\mathbf{a}|=v_0\cos\theta\cdot g$. $\rho=v_0^3/(v_0\cos\theta\cdot g)=v_0^2/(g\cos\theta)$.</p>
+</details>
+<h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">Marks each</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{a}\cdot\mathbf{b}=ab\cos\theta=a_xb_x+a_yb_y+a_zb_z$</td>
+<td>always; commutative; zero iff perpendicular</td>
+</tr>
+<tr>
+<td>$\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$</td>
+<td>3D only; right-hand rule; anti-commutative</td>
+</tr>
+<tr>
+<td>$[\mathbf{a},\mathbf{b},\mathbf{c}]=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$</td>
+<td>volume of parallelepiped; zero iff coplanar; cyclic</td>
+</tr>
+<tr>
+<td>$\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$</td>
+<td>BAC–CAB; result in plane of b, c; not associative</td>
+</tr>
+<tr>
+<td>$\dot{\hat{r}}=\omega\hat{\theta}$, $\dot{\hat{\theta}}=-\omega\hat{r}$</td>
+<td>2D polar basis; omega = d theta / dt</td>
+</tr>
+<tr>
+<td>$l^2+m^2+n^2=1$</td>
+<td>direction cosines; only two independent</td>
+</tr>
+<tr>
+<td>$\lvert\mathbf{a}\times\mathbf{b}\rvert^2+\lvert\mathbf{a}\cdot\mathbf{b}\rvert^2=a^2b^2$</td>
+<td>Lagrange identity; implies Cauchy-Schwarz</td>
+</tr>
+</tbody>
+</table>
+<h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
+<div class="callout tip">
+<p class="callout-title">Checkpoint</p>
+<p>Before moving to the next chapter, verify that you can do each of the following. If any item is shaky, review the indicated section.</p>
+</div>
+
+<ul>
+<li>[ ] I can decompose a vector into components in Cartesian and polar coordinates.</li>
+<li>[ ] I can compute the dot product and use it to find angles, projections, and perpendicularity.</li>
+<li>[ ] I can compute the cross product and use it to find areas and the direction of the normal.</li>
+<li>[ ] I can evaluate the scalar triple product and use it to check coplanarity and find volumes.</li>
+<li>[ ] I can apply the BAC–CAB rule to simplify triple cross products.</li>
+<li>[ ] I can solve vector equations by dotting/crossing both sides with a clever vector.</li>
+<li>[ ] I can differentiate vectors in the polar basis using $\dot{\hat{r}}=\omega\hat{\theta}$.</li>
+<li>[ ] I know the Lagrange identity and can deduce the Cauchy–Schwarz inequality.</li>
+<li>[ ] I can prove geometric results (cosine rule, sine rule, concurrency of medians) using vectors.</li>
+<li>[ ] I understand the Jacobi identity and its significance.</li>
+</ul>
+<p><strong>What the next chapters inherit.</strong> The polar basis ($\hat{r}$, $\hat{\theta}$) and the time-derivative rules are prerequisites for PART 3 (kinematics in 1D), PART 4 (projectile and circular motion), and PART 8 (rotating frames). The cross product and area calculation are prerequisites for PART 6 (torque: $\boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}$) and PART 7 (angular momentum: $\mathbf{L}=\mathbf{r}\times m\mathbf{v}$). The vector equation techniques are used in PART 10 (equilibrium: $\sum\mathbf{F}=\mathbf{0}$ and $\sum\boldsymbol{\tau}=\mathbf{0}$) and PART 13 (electromagnetism: the Lorentz force $\mathbf{F}=q\mathbf{v}\times\mathbf{B}$). The Lagrange identity and the Cauchy–Schwarz inequality appear in the uncertainty principle (PART 28: $\Delta x\,\Delta p\geq\hbar/2$) and in signal processing (PART 7: the matched filter).</p>
+<p><strong>Open questions.</strong> How does the exterior product generalise the cross product to higher dimensions? What is the geometric algebra perspective on the dot and cross products? These are questions for a course in mathematical physics.</p>
+    <footer class="pager"><a href="units-measurements.html">← Units, dimensions & errors</a><a href="kinematics-1d.html">Motion in one dimension →</a></footer>
+    <p class="colophon">Rendered from <code>vectors/Vectors.md</code> by <code>tools/md_site.py</code>.
+    Fully offline: diagrams are local SVGs, maths is vendored KaTeX.
+    The source of truth is <code>vectors/Vectors.md</code> and there is no separate HTML edition — this chapter is Markdown-only by design.</p>
+  </main>
+</div>
+<script src="katex/katex.min.js"></script>
+<script src="katex/contrib/auto-render.min.js"></script>
+<script>
+renderMathInElement(document.body, {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$",  right: "$",  display: false}
+  ],
+  throwOnError: false
+});
+</script>
+</body>
+</html>
