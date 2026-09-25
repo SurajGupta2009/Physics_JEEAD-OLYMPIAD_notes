@@ -1,8 +1,9 @@
 ---
-title: Vectors & Vector Algebra
+title: Vectors & Vector Algebra — first principles to Olympiad
 part: 2
 slug: vectors
 source: Cengage Mechanics I-compressed.pdf, ch 2 Vectors
+status: complete
 aliases: [vectors, dot product, cross product, triple product, unit vector]
 tags: [jee-advanced, olympiad, mechanics, vectors]
 ---
@@ -77,6 +78,23 @@ Not a linear-algebra course: we cover vectors in 2 and 3 dimensions, not $n$ dim
 
 **Two kinds of multiplication, two kinds of output.** The dot product $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ gives a scalar — the projection of one vector onto the other. The cross product $\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$ gives a vector — the area of the parallelogram, directed perpendicular to both. Neither is more "correct"; they answer different questions.
 
+> [!tip] FIGURE F2.1 · Chapter map
+> *Why:* the chapter is one toolbox — add, resolve, project, cross — and the map shows which tool answers which question.
+> *Data:* the Part 0–14 structure — addition, components, dot, cross, triple products, polar basis, paper, sheet.
+
+```mermaid
+mindmap
+  root((vectors))
+    Addition laws
+    Components
+    Dot product
+    Cross product
+    Triple products
+    Polar basis
+```
+
+> *Read:* an angle wants the dot product, an area the cross product, coplanarity the triple product.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | Type |
@@ -126,6 +144,20 @@ Three numbers to carry: $\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\
 > [!abstract] DIAGRAM D2.2 · The triangle and parallelogram laws
 > *Show:* top: triangle law — vector $\mathbf{a}$ followed by vector $\mathbf{b}$, sum $\mathbf{c}$ closing the triangle. Bottom: parallelogram law — $\mathbf{a}$ and $\mathbf{b}$ from the same point, the diagonal showing $\mathbf{a}+\mathbf{b}$, the other diagonal showing $\mathbf{a}-\mathbf{b}$.
 > *Search:* "vector addition triangle parallelogram law diagram"
+
+> [!tip] FIGURE F2.2 · Adding vectors is not adding numbers
+> *Why:* the one intuition the whole chapter keeps returning to — 3 m east plus 4 m north is 5 m, not 7.
+> *Data:* $|\mathbf{a}+\mathbf{b}|=\sqrt{a^2+b^2+2ab\cos\theta}$; the difference is $\sqrt{a^2+b^2-2ab\cos\theta}$.
+
+```mermaid
+flowchart LR
+  A["3 m east"] --> B{"+ 4 m north"}
+  B -->|"naive"| C["7 m (wrong)"]
+  B -->|"triangle law"| D["√(3²+4²) = 5 m NE"]
+  D --> E["|c| = √(a² + b² + 2ab cosθ)"]
+```
+
+> *Read:* the direction matters as much as the length — the cosine term is the whole difference from scalar sum.
 
 ### 3.3 Vector subtraction
 
@@ -182,6 +214,20 @@ $$
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ with angle $\theta$ between them; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length of the projection labelled $a\cos\theta$; the formula $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ shown alongside.
 > *Search:* "dot product projection formula diagram angle between vectors"
 
+> [!tip] FIGURE F2.3 · The dot product answers "how much along?"
+> *Why:* work, component extraction, and every "find the angle" problem are one machinery; the figure fixes which output is which.
+> *Data:* $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; projection of $\mathbf{a}$ on $\mathbf{b}$ is $(\mathbf{a}\cdot\mathbf{b})/b = a\cos\theta$.
+
+```mermaid
+flowchart LR
+  A["two vectors, angle θ"] --> B["a·b = ab cos θ"]
+  B --> C["scalar: the projection-times-length"]
+  B --> D["cos θ = a·b / ab → find the angle"]
+  D --> E["a·a = a², perpendicular gives 0"]
+```
+
+> *Read:* the dot product is a scalar meant for projecting and for angle-finding; perpendicular vectors dot to zero.
+
 ### 3.7 The cross product
 
 $$
@@ -208,6 +254,20 @@ $$
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ lying in the $xy$-plane; $\mathbf{a}\times\mathbf{b}$ pointing in the $+z$ direction (right-hand rule); the magnitude $ab\sin\theta$ equal to the area of the parallelogram; the parallelogram shaded.
 > *Search:* "cross product right hand rule area parallelogram diagram"
 
+> [!tip] FIGURE F2.4 · The cross product answers "how much around?"
+> *Why:* torque, angular momentum, and magnetic force all ask the same question; the figure pins sign and magnitude.
+> *Data:* $|\mathbf{a}\times\mathbf{b}|=ab\sin\theta$, direction by the right-hand rule, and $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$.
+
+```mermaid
+flowchart LR
+  A["two vectors, angle θ"] --> B["a×b = ab sinθ n̂"]
+  B --> C["magnitude = parallelogram area"]
+  B --> D["direction: right-hand rule"]
+  D --> E["b×a = -a×b (order matters)"]
+```
+
+> *Read:* the cross product is a vector normal to both, with magnitude the parallelogram area — and its sign flips if you swap the order.
+
 ### 3.8 The scalar triple product
 
 $$
@@ -225,6 +285,21 @@ $$
 > [!abstract] DIAGRAM D2.6 · The scalar triple product as volume
 > *Show:* three vectors $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ from a common origin forming a skewed box (parallelepiped); the base (parallelogram of $\mathbf{b}$ and $\mathbf{c}$) shaded; the height (component of $\mathbf{a}$ perpendicular to the base) shown as a dashed line; volume $=|\mathbf{b}\times\mathbf{c}|\times|a_{\perp}|$ annotated.
 > *Search:* "scalar triple product volume parallelepiped diagram"
+
+> [!tip] FIGURE F2.5 · The trips: scalar triple = signed volume, vector triple = BAC-CAB
+> *Why:* the two triple products are the standard confusables; here they sit side by side so their jobs never blur.
+> *Data:* $[\mathbf{a}\,\mathbf{b}\,\mathbf{c}] = \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$ is a determinant and a signed volume; $\mathbf{a}\times(\mathbf{b}\times\mathbf{c}) = \mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})$.
+
+```mermaid
+flowchart TD
+  A["three vectors"] --> B["a·(b×c)"]
+  B --> C["scalar; signed volume"]
+  C --> D["= 0 iff coplanar"]
+  A --> E["a×(b×c)"]
+  E --> F["BAC-CAB: b(a·c) - c(a·b)"]
+```
+
+> *Read:* the scalar triple product tests coplanarity (zero means coplanar); the vector triple product is always rearranged by BAC–CAB.
 
 ### 3.9 The vector triple product
 
@@ -869,6 +944,22 @@ If $\mathbf{a}\cdot\mathbf{c}=\mathbf{b}\cdot\mathbf{c}$ for all vectors $\mathb
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F2.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the six triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"angle"| B["dot product, then cos⁻¹"]
+  A -->|"area"| C["cross product, then magnitude"]
+  A -->|"coplanar"| D["scalar triple product = 0?"]
+  A -->|"triple cross"| E["BAC-CAB"]
+  A -->|"solve vector equation"| F["dot/cross both sides with a clever vector"]
+  A -->|"polar derivative"| G["ḋr = ω θ̂"]
+```
+
+> *Read:* angle wants the dot, area the cross, coplanarity the triple — no tool does another's question.
 
 - "Find the angle": dot product, then $\cos^{-1}$.
 - "Find the area": cross product, then magnitude.

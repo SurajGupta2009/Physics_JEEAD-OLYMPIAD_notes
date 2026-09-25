@@ -1,7 +1,8 @@
 ---
-title: Kinematics in One Dimension
+title: Kinematics in One Dimension — first principles to Olympiad
 part: 3
 slug: kinematics-1d
+status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension
 aliases: [kinematics, 1D motion, velocity, acceleration, free fall, graphs]
 tags: [jee-advanced, olympiad, mechanics, kinematics, one-dimension]
@@ -49,6 +50,25 @@ Not a dynamics chapter: we describe motion, not its causes (forces come in PART 
 | 9 | Relative motion in 1-D | $v_{AB}=v_{AC}-v_{BC}$ | §3.9 | full |
 | 10 | Piecewise kinematics | Different $a$ in different intervals | §3.10 | full |
 
+> [!tip] FIGURE F3.1 · Chapter map
+> *Why:* the chapter is one function $x(t)$; this map shows the single spine the parts hang off.
+> *Data:* the part structure of the chapter (Part 0–14).
+
+```mermaid
+mindmap
+  root(("x(t)"))
+    Slope = velocity
+    Slope of v = acceleration
+    Constant-acceleration
+    Free fall
+    Variable acceleration
+    Relative motion
+    Piecewise
+    Olympiad
+```
+
+> *Read:* every tool in this chapter is the slope or the area of one function.
+
 ## Part 1 · Intuition first
 
 **Position is a function of time.** A particle on the $x$-axis has position $x(t)$ at time $t$. The function $x(t)$ contains all the information about the motion — velocity and acceleration are derived from it by differentiation.
@@ -58,6 +78,23 @@ Not a dynamics chapter: we describe motion, not its causes (forces come in PART 
 **Velocity is the slope of $x(t)$; acceleration is the slope of $v(t)$.** $v=dx/dt$ tells you how fast the position is changing. $a=dv/dt$ tells you how fast the velocity is changing. Conversely, $v=\int a\,dt$ and $x=\int v\,dt$ — velocity is the area under the $a$–$t$ graph; position is the area under the $v$–$t$ graph.
 
 **Negative acceleration does not mean deceleration.** If you define "positive" as rightward, then a leftward acceleration is negative. If the particle is moving leftward, a leftward acceleration is actually speeding it up (deceleration is when $a$ and $v$ have opposite signs).
+
+> [!tip] FIGURE F3.2 · The four sign quadrants of motion
+> *Why:* "negative" is a label on a chosen axis, not a statement about speeding up; the quadrant picture kills that trap before it forms.
+> *Data:* the four sign combinations of velocity and acceleration.
+
+```mermaid
+quadrantChart
+  title "Speed: increases or decreases?"
+  x-axis "v negative" --> "v positive"
+  y-axis "a negative" --> "a positive"
+  quadrant-1 "speeding up rightward"
+  quadrant-2 "slowing down leftward"
+  quadrant-3 "speeding up leftward"
+  quadrant-4 "slowing down rightward"
+```
+
+> *Read:* same signs of $v$ and $a$ mean speeding up; opposite signs mean slowing down — regardless of which way is called "positive".
 
 ## Part 2 · Definitions and bookkeeping
 
@@ -154,9 +191,20 @@ Acceleration is the rate of change of velocity. It can be positive (velocity inc
 - A horizontal line: constant acceleration.
 - The $a$–$t$ graph is the least informative of the three (it tells you about changes in velocity, not position).
 
-> [!abstract] DIAGRAM D3.4 · Reading the $v$–$t$ graph for displacement
-> *Show:* a $v$–$t$ graph where $v$ starts positive, crosses zero, and becomes negative. The area above the $t$-axis (positive displacement) and below the $t$-axis (negative displacement) are shaded differently. The net displacement is the algebraic sum; the total distance is the sum of the absolute areas.
-> *Search:* "v-t graph area displacement distance positive negative diagram"
+> [!tip] FIGURE F3.3 · Area under the $v$–$t$ graph is displacement
+> *Why:* the area picture is the whole "graphs are calculators" toolkit, and the sign of the area is where examiners set traps.
+> *Data:* $v(t)=10-5t$ m/s on $t\in[0,4]$ s — velocity crosses zero at $t=2$ s.
+
+```mermaid
+xychart-beta
+  title "v(t) = 10 - 5t : area above v=0 is positive displacement"
+  x-axis 0 --> 4
+  y-axis -10 --> 10
+  line [10, 5, 0, -5, -10]
+  line [0, 0]
+```
+
+> *Read:* net displacement is the signed total (areas above minus areas below); total distance is the unsigned total — they coincide only while the velocity keeps one sign.
 
 ### 3.6 The constant-acceleration equations
 
@@ -207,9 +255,20 @@ Near Earth's surface, all objects (neglecting air resistance) have the same down
 - Time of flight (back to launch level): $T=2v_0/g$.
 - Speed on return to launch level: $v=v_0$ (same speed, opposite direction — by symmetry).
 
-> [!abstract] DIAGRAM D3.6 · Free-fall: the $v$–$t$ graph for an upward throw
-> *Show:* a $v$–$t$ graph for a ball thrown upward with speed $v_0$. The line starts at $v_0$ (positive), crosses zero at $t=v_0/g$ (the peak), and reaches $-v_0$ at $t=2v_0/g$ (return). The slope is $-g$ throughout. The area above the axis (upward trip) equals the area below (downward trip) — equal times.
-> *Search:* "free fall v-t graph upward throw velocity time diagram"
+> [!tip] FIGURE F3.4 · Free-fall $v$–$t$ graph for an upward throw
+> *Why:* one straight line with slope $-g$ holds the whole throw — peak, symmetry, and return speed are slope-and-area facts, not separate formulas.
+> *Data:* $v(t)=20-10t$ m/s ($v_0=20$ m/s, $g=10$ m/s²) on $t\in[0,4]$ s.
+
+```mermaid
+xychart-beta
+  title "v(t) = 20 - 10t : upward throw, peak at t = 2 s"
+  x-axis 0 --> 4
+  y-axis -20 --> 20
+  line [20, 10, 0, -10, -20]
+  line [0, 0]
+```
+
+> *Read:* the slope is $-g$ throughout; the zero crossing is the peak ($t=v_0/g$); the return speed at $t=2v_0/g$ is $-v_0$ — the same speed, opposite direction.
 
 ### 3.8 Variable acceleration
 
@@ -250,9 +309,20 @@ $$
 > *Show:* two particles $A$ and $B$ on a number line, $A$ at $x_A$ moving right at $v_A$, $B$ at $x_B$ moving left at $v_B$. The closing velocity $v_{AB}=v_A+v_B$ annotated. The separation $x_A-x_B$ decreasing at rate $v_A+v_B$.
 > *Search:* "relative velocity two particles approaching closing speed diagram"
 
-> [!abstract] DIAGRAM D3.12 · Variable acceleration: $v$ vs $x$ for $a=-kx$
-> *Show:* a $v$–$x$ phase-space plot for $v^2=v_0^2-kx^2$ (an ellipse). The particle oscillates between $x=-v_0/\sqrt{k}$ and $x=+v_0/\sqrt{k}$. The maximum speed $v_0$ at $x=0$ annotated. The area inside the ellipse related to the total distance (not displacement) per cycle.
-> *Search:* "v versus x phase space plot simple harmonic motion ellipse"
+> [!tip] FIGURE F3.5 · Phase-space ellipse for $a=-kx$
+> *Why:* the $v$–$x$ loop shows boundedness and turning points at a glance — the fastest way to read a variable-acceleration solution.
+> *Data:* $v^2=v_0^2-kx^2$ with $v_0=4$ m/s, $k=4$ s⁻² (upper half $v(x)=\sqrt{16-4x^2}$) on $x\in[-2,2]$ m.
+
+```mermaid
+xychart-beta
+  title "v(x) = sqrt(16 - 4x^2) : upper half of the phase ellipse"
+  x-axis -2 --> 2
+  y-axis 0 --> 4
+  line [0, 3.464, 4, 3.464, 0]
+  line [0, 0]
+```
+
+> *Read:* the turning points $x=\pm v_0/\sqrt{k}$ sit where $v=0$; the speed peaks at $v_0$ at the centre $x=0$ — the motion is confined to the ellipse.
 
 ### 3.10 Piecewise kinematics
 
@@ -815,6 +885,21 @@ For constant acceleration: $s_n=u+\frac{a}{2}(2n-1)$. This avoids computing $s(n
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F3.6 · Triage — route by what is given
+> *Why:* the triage list is a decision tree; the flowchart makes the first discriminating question and its branches visible at a glance.
+> *Data:* the triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"Is the acceleration constant?"} -->|"yes"| B["constant-acceleration equations"]
+  A -->|"no: a(t)"| C["integrate a, then v"]
+  A -->|"no: a(x)"| D["v dv/dx method"]
+  B --> F["free fall if a = -g"]
+  D --> G["an ellipse in the v-x plane"]
+```
+
+> *Read:* the first question names the tool; the rest is execution.
 
 - "Constant acceleration": use Eqs. (4.1).
 - "Variable $a(t)$": integrate $a$ to get $v$, $v$ to get $x$.

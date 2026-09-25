@@ -1,3 +1,13 @@
+---
+title: Current Electricity — first principles to Olympiad
+part: 8
+slug: current-electricity
+status: complete
+source: Cengage Electrostatics and Current Electricity-compressed.pdf, Electric Current chapters
+aliases: [current electricity, drift, resistance, kirchhoff, wheatstone bridge, potentiometer]
+tags: [jee-advanced, olympiad, electromagnetism, circuits]
+---
+
 <a id="section-index"></a>
 
 <a id="top"></a>
@@ -11,6 +21,25 @@ A complete, proof-first treatment of current, resistance, cells, networks, instr
 ![A cell driving a lamp through two resistors, with the ledger and the divider annotated](assets/figures/fig-001.svg)
 
 **The whole course in one picture.** A source that pumps and taxes, resistances that divide, and a load that takes what the divider allows. Chapter 3 owns the pump, chapter 4 the network, chapter 5 the replacement of everything left of the lamp by two numbers — and the audit line at the bottom is the habit that turns solves into marks.
+
+> [!tip] FIGURE F8.1 · Chapter map: the ledger and the divider
+> *Why:* the whole course is two ideas — charge is a ledger, and every device is a divider wearing a badge; the map pins the 7 chapters to that spine.
+> *Data:* ch 1 drift & continuity → ch 2 resistance → ch 3 EMF/cells → ch 4 Kirchhoff → ch 5 network theorems → ch 6 instruments → ch 7 scaling/advanced.
+
+```mermaid
+mindmap
+  root((current electricity))
+    Drift
+    Resistance
+    EMF and cells
+    Kirchhoff
+    Network theorems
+    Instruments
+    Scaling and advanced
+```
+
+> *Read:* chapters 1–3 are the physics, 4–6 the JEE engine, 7 the Olympiad extension.
+
 
 ### How these notes are organised
 
@@ -97,6 +126,20 @@ _Chapter 1 of 11 · JEE Advanced · base · ≈ 45 min read · 8 questions_
 Every circuit you will ever solve is a bookkeeping problem: charge is never created or destroyed, it only moves, and it moves because a field pushed it. After this chapter you can say precisely what current *is*, compute how fast the electrons in a wire actually crawl, and derive — not quote — why a metal that obeys Newton plus collisions obeys Ohm's law. The mistake this chapter exists to kill is the picture of electrons sprinting through wires at the speed of light.
 
 ### 1.1 Current: a flux, not a vector
+
+> [!tip] FIGURE F8.2 · Current = charge flux: I = neAv_d
+> *Why:* the lamp lights instantly while the electrons crawl at mm/s — only the *field* travels fast; the flow fixes how many carriers cross each second.
+> *Data:* I = dq/dt = n e A v_d (add one line per carrier species); j⃗ = nqv⃗, I = ∫ j⃗·dá; current is a scalar, current density is the vector.
+
+```mermaid
+flowchart LR
+  A["drift velocity v_d ~ mm/s"] --> B["I = n e A v_d"]
+  B --> C["count of electrons per second = I/e"]
+  C --> D["sanity: v_d is sub-mm/s, not light speed"]
+```
+
+> *Read:* the current is charge per second through a named surface — the arrow you draw is a sign convention, not the electrons' speed.
+
 
 > **Definition · electric current**
 >
@@ -592,6 +635,20 @@ A battery does not manufacture charge and does not store field; it **pumps** cha
 
 ### 3.1 EMF: work done per unit charge, and by whom
 
+> [!tip] FIGURE F8.3 · The real source: ideal pump in series with r
+> *Why:* the battery's 12 V is only 12 V when no current flows — the model converts every "terminal voltage" question into one divider.
+> *Data:* V = ℰ − Ir on discharge, V = ℰ + Ir on charge; ℰ = W_non-el/q (a pump, not a force); loop for one cell: ℰ = IR + Ir.
+
+```mermaid
+flowchart LR
+  A["ideal pump ℰ"] --> B["internal resistance r"] --> C["terminals"]
+  C --> D["discharge: V = ℰ - Ir"]
+  C --> E["charging: V = ℰ + Ir"]
+```
+
+> *Read:* "EMF" is a name, not a force — the source is where the loop integral is violated by non-electrostatic forces.
+
+
 > **Definition · electromotive force**
 >
 > The EMF $\mathcal E$ of a source is the **work done per unit charge by the non-electrostatic forces** inside the source (chemical in a cell, mechanical in a generator, thermal in a thermocouple) driving charge from the negative to the positive terminal *through the source*:
@@ -841,6 +898,20 @@ _Chapter 4 of 11 · JEE Advanced · engine · ≈ 55 min read · 10 questions_
 Chapters 1–3 gave you the physics; this chapter gives you the **algorithm**. Two laws — charge conservation at nodes, energy conservation round loops — crack any network whatsoever, and symmetry cracks the ones the algorithm would crack slowly. After this chapter you can solve a two-loop circuit in three minutes, prove the Wheatstone balance condition, find the current in a bridge's galvanometer when it is *not* balanced, and quote the cube's three resistances from a symmetry argument you can reproduce. The mistake this chapter prevents: sign errors that survive because nobody drew the currents before writing the equations.
 
 ### 4.1 The two laws, and the discipline that makes them work
+
+> [!tip] FIGURE F8.4 · Kirchhoff: guess, loop, audit
+> *Why:* KCL and KVL cannot fail — only the bookkeeping can; the three-step discipline turns every network solve into safe arithmetic.
+> *Data:* assign a direction to every unknown current; traverse each loop one way; +IR along the current, +ℰ from − to +; a negative answer means the current runs opposite your guess; close with the power audit ΣℰI = ΣI²R.
+
+```mermaid
+flowchart TD
+  A["guess: direction for every unknown current"] --> B["KCL at nodes + KVL round loops"]
+  B --> C["solve; negative means opposite to guess"]
+  C --> D["audit powers: ΣℰI = ΣI²R"]
+```
+
+> *Read:* consistency, not clairvoyance — every wrong answer in this chapter traces to skipping the guess.
+
 
 > **Definition · Kirchhoff's laws**
 >
@@ -1225,7 +1296,20 @@ A 10 V battery in series with 2 $\Omega$ is connected in parallel with a 6 V bat
 
 ### 5.2 Thevenin: any linear network is a battery
 
-> **Theorem · Thevenin (and Norton)**
+> [!tip] FIGURE F8.5 · Thevenin: replace everything with two numbers
+> *Why:* meters, "what if the load changes" and max-power questions all ask about the terminals — two numbers answer every one of them.
+> *Data:* V_th = open-circuit voltage; R_th = resistance with all ideal sources killed (voltage → wire, current → gap); short-circuit current = V_th/R_th; max power at R_L = R_th with η = 50%.
+
+```mermaid
+flowchart LR
+  A["black box"] --> B["V_th = open-circuit voltage"]
+  A --> C["R_th = resistance with sources killed"]
+  B --> D["the load sees V_th + R_th"]
+  C --> D
+  D --> E["matched load: R_L = R_th, η = 50%"]
+```
+
+> *Read:* exact at the terminals for every load — including nonlinear ones — but never audit power inside the equivalent.
 >
 > Seen from two terminals, any network of resistances and sources behaves exactly like an ideal source $V_{th}$ in series with $R_{th}$ (Thevenin), or equivalently a current source $I_N$ in parallel with $R_{th}$ (Norton), where
 >
@@ -1416,6 +1500,7 @@ _Chapter 6 of 11 · JEE Advanced · applied · ≈ 45 min read · 8 questions_
 Every instrument is a theorem from chapter 5 wearing a case. After this chapter you can convert one galvanometer into any ammeter or voltmeter range you like, compute the error a real meter commits the moment you connect it, run a meter bridge with its end-error correction, and explain why the potentiometer — a stretched wire and a jockey — outperforms every dial instrument ever made. The mistake this chapter prevents: believing a meter changes nothing in the circuit it measures.
 
 ### 6.1 The galvanometer and its two careers
+
 
 > **Definition · the moving-coil galvanometer**
 >
@@ -1842,6 +1927,21 @@ Everything from chapters 1–7, compressed into the form you can carry into a ti
 ![Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method](assets/figures/fig-026.svg)
 
 **Fig. 8.1 — The triage flow.** Classification is the solution's first third; the audit line is its last third. The middle is arithmetic.
+
+> [!tip] FIGURE F8.6 · Triage: which problem kind, which move
+> *Why:* classifying in twenty seconds and reading the right row of the §8.1 table decides the method; the flow is the chapter's fastest route to a start.
+> *Data:* drift → I = n e A v_d; geometry → R = ∫ρ dl/A; cell → V = ℰ ∓ Ir; two loops → KCL+KVL then audit; symmetry → equal potentials; meter → one divider; null → balance length.
+
+```mermaid
+flowchart TD
+  A["twenty seconds: name the problem kind"] --> B["ledger? geometry? source? network?"]
+  B --> C["pick the row of the §8.1 table"]
+  C --> D["execute the move"]
+  D --> E["close with the power audit"]
+```
+
+> *Read:* classification is a third of the solution, the audit line is the last third — the middle is only arithmetic.
+
 
 ### 8.2 The twelve moves
 

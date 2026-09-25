@@ -1,5 +1,7 @@
 # Sound Waves & Doppler Effect — first principles to Olympiad
 
+> **Media note (kept at top).** `Sound-waves.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2, added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Sound-waves.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html` and its gate remain the validated source.
+
 > **Portable Markdown edition:** [Sound-waves.md](Sound-waves.md) is the GitHub-friendly reading copy with standard Markdown math ($...$ / $$...$$), collapsible solutions and local SVG diagrams in `assets/figures/`. The interactive HTML edition [Sound-waves.html](Sound-waves.html) remains for offline TOC/theme/print.
 
 A self-contained course on **longitudinal acoustic waves, speed of sound (Laplace correction), intensity & decibels, organ pipes with end-correction, beats, and the complete Doppler effect (wind, 2D oblique, echo double shift, Mach cone)**, written for **JEE Advanced** and **physics olympiad track (NSEP → INPhO → IPhO)**.

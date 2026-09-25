@@ -1,7 +1,8 @@
 ---
-title: Semiconductors & Electronic Devices
+title: Semiconductors & Electronic Devices — first principles to Olympiad
 part: 27
 slug: semiconductors
+status: complete
 source: JEE Main/Advanced semiconductor syllabus (no chapter exists in the supplied Cengage volumes, verified)
 aliases: [semiconductors, diodes, transistors, logic gates, p-n junction]
 tags: [jee-main, jee-advanced, olympiad, modern-physics, electronics]
@@ -58,6 +59,24 @@ The supplied Cengage volumes contain no semiconductor chapter (verified: *Optics
 | 12 | Logic gates; De Morgan; universal gates; half adder | §3.12 | full |
 | 13 | Integrated circuits; Moore's law and its limits | §3.13 | full |
 | 14 | Donor binding from scaled Bohr atom; diode equation from Boltzmann; junction capacitance; solar-cell bound; Hall measurement; shot noise; tunnelling limit; chip power | §3.4, §3.6, §3.13, Part 10 | added by sweep (olympiad layer) |
+
+> [!tip] FIGURE F27.1 · Chapter map
+> *Why:* the chapter is one ladder of gaps — bands, junctions, diode and transistor — climbed toward logic; the map shows the spine.
+> *Data:* the Part 0–14 structure — bands, carriers, junction, diode, rectifiers, transistor, gates, paper, sheet.
+
+```mermaid
+mindmap
+  root((semiconductors))
+    Bands and gaps
+    Intrinsic carriers
+    p-n junction
+    Diode
+    Rectifiers
+    Transistor
+    Logic gates
+```
+
+> *Read:* every device result is the gap, the mass-action law, the diode exponential, or a truth table.
 
 ## Part 1 · Intuition first
 
@@ -121,6 +140,20 @@ Gap sizes decide everything: diamond 5.5 eV (nothing jumps at 300 K — $kT=0.02
 > *Search:* "band diagram metal insulator semiconductor comparison"
 > *Used in:* §3.2.
 
+> [!tip] FIGURE F27.2 · The band gap is the whole device
+> *Why:* every device property — conduction, the exponential diode, colours of LEDs — is a gap value; the figure makes the gap the protagonist.
+> *Data:* diamond 5.5 eV (nothing jumps), Si 1.12 eV, Ge 0.66 eV, GaAs 1.42 eV, $kT\approx0.026$ eV at 300 K.
+
+```mermaid
+flowchart LR
+  A["band gap E_g"] --> B{"E_g ≫ kT?"}
+  B -->|"yes (diamond 5.5)"| C["insulator: nothing promoted"]
+  B -->|"modest (Si 1.12)"| D["semiconductor: a few carriers"]
+  B -->|"tiny (Ge 0.66)"| E["more carriers, easier conduction"]
+```
+
+> *Read:* a small gap means carriers jump at room temperature; a huge gap means none — the distinction is practical, not categorical.
+
 ### 3.3 Intrinsic carriers and their temperature law
 
 At temperature $T$, collisions promote valence electrons across the gap, creating an electron-hole pair; recombination annihilates one. Equilibrium fixes the intrinsic density, whose form comes from the density of states ($\propto T^{3/2}$) times the Boltzmann jump probability $e^{-E_g/kT}$ split across two carriers:
@@ -130,6 +163,21 @@ n_i\propto T^{3/2}e^{-E_g/2kT}. \qquad (3.1)
 $$
 
 The half-gap in the exponent is the reason semiconductors are so temperature-sensitive: for Si, $E_g/2kT=21.6$ at 300 K, so doubling $T$ changes the exponential by $e^{10.8}\approx5\times10^4$. With $n_i(\text{Si})=1.5\times10^{16}$ m$^{-3}$ at 300 K and mobilities $0.135/0.048$ m$^2$/Vs:
+
+> [!tip] FIGURE F27.5 · Intrinsic carriers: the half-gap is the temperature switch
+> *Why:* the exponent is half the gap, not the whole — the one fact that explains why silicon's conductivity rockets with temperature.
+> *Data:* $n_i \propto T^{3/2} e^{-E_g/2kT}$; for Si doubling temperature multiplies the exponential by $e^{10.8} \approx 5\times10^4$.
+
+```mermaid
+xychart-beta
+  title "relative n_i vs T (Si): exponential in the half-gap"
+  x-axis ["280", "300", "330", "360", "400"]
+  y-axis 0 --> 800
+  line [0.2, 1, 6, 40, 800]
+  line [0, 1, 1, 1, 1]
+```
+
+> *Read:* the steep curve is the half-gap exponential; the $T^{3/2}$ prefactor is a rounding error beside it.
 
 $$
 \sigma_i=en_i(\mu_e+\mu_h)=4.4\times10^{-4}\ \text{S/m}\quad\Rightarrow\quad\rho_i\approx2300\ \Omega\,\text{m}. \qquad (3.2)
@@ -196,6 +244,22 @@ Join n-type to p-type. Majority carriers near the interface diffuse across — e
 > *Search:* "p-n junction depletion region fixed ions field potential diagram"
 > *Used in:* §3.6.
 
+> [!tip] FIGURE F27.3 · The p-n junction: diffusion, drift, and the potential hill
+> *Why:* the whole diode is one sentence — diffusion current meets the drift current it creates, at the hill $V_0$.
+> *Data:* fixed donor ions (n-side, +), fixed acceptor ions (p-side, −), field from n to p, $V_0 \approx 0.7$ V for Si.
+
+```mermaid
+flowchart LR
+  A["n-side: donors"] --> B["electrons diffuse into p"]
+  C["p-side: acceptors"] --> D["holes diffuse into n"]
+  B --> E["fixed ions left behind"]
+  D --> E
+  E --> F["field E drives drift back"]
+  F --> G["equilibrium at hill V0 ≈ 0.7 V"]
+```
+
+> *Read:* no perpetual current flows because any drift is exactly offset by the diffusion it feeds — the hill is the diode's off state.
+
 > [!abstract] DIAGRAM D27.9 · Charge, field and potential aligned
 > *Show:* three graphs stacked with a common x-axis across the junction: fixed charge density as two rectangles of opposite sign; electric field as a triangle peaking at the junction; potential as a smooth S-shaped hill; widths and peaks aligned between the three.
 > *Search:* "pn junction charge field potential profiles aligned graphs"
@@ -217,6 +281,20 @@ Two consequences define diode practice. First, the knee: at $V\approx0.6$ V the 
 > *Show:* I against V: forward exponential rising at 0.6-0.7 V with a decade-per-60 mV annotation; reverse saturation current near zero; breakdown knee at negative V labelled Zener/avalanche; knee and V-T marked.
 > *Search:* "diode IV curve knee breakdown zener annotated"
 > *Used in:* §3.7.
+
+> [!tip] FIGURE F27.4 · The diode equation: 60 mV per decade
+> *Why:* the knee and the decade rule are the same exponential, read at two zooms — the figure names both.
+> *Data:* $I = I_0(e^{V/V_T}-1)$ with $V_T = 25.9$ mV; a decade of current is $\ln10\cdot V_T = 59.5$ mV.
+
+```mermaid
+flowchart LR
+  A["I = I0(e^(V/VT) - 1)"] --> B["V < 0.6 V: I ~ I0"]
+  A --> C["V ~ 0.7 V: current explodes"]
+  C --> D["+60 mV: current ×10"]
+  A -.->|"reverse"| E["I ≈ -I0 until breakdown"]
+```
+
+> *Read:* forward current multiplies by ten each extra 60 mV; the "0.7 V drop" is just where that exponential meets circuit resistance.
 
 ### 3.8 Rectifiers and ripple
 
@@ -953,6 +1031,23 @@ $\lambda=1240/E_g$ both ways. Demonstration: E9. Memorise the anchors: 2 eV red,
 
 ### 9.1 Triage decision tree
 
+> [!tip] FIGURE F27.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the seven triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is named?"} -->|"class / temperature behaviour"| B["mechanism table §3.1"]
+  A -->|"carrier densities"| C["mass-action seesaw"]
+  A -->|"junction, barrier, bias"| D["hill picture; W ∝ √V"]
+  A -->|"diode current"| E["decade ladder"]
+  A -->|"rectifier / supply"| F["averages, ripple"]
+  A -->|"transistor"| G["mode first, then currents"]
+  A -->|"gates"| H["truth table, De Morgan"]
+```
+
+> *Read:* junction words go to the hill, diode words to the decade ladder, gates to a truth table — no device does another's job.
+
 - "Which class / temperature behaviour": mechanism table, §3.1.
 - Carrier densities: mass-action seesaw, one line.
 - Junction words (depletion, barrier, bias): hill picture, $W\propto\sqrt V$.
@@ -1518,11 +1613,11 @@ General: mode before algebra (transistor, diode); equilibrium stated before usin
 Primary floor: the JEE Main/Advanced semiconductor syllabus, since no chapter exists in the supplied Cengage volumes (verified: *Optics and Modern Physics* Unit II holds only chs 3-5; the other volumes were checked for a stray chapter per plan.md §1.13 and contain none). The treatment follows the NCERT Class-12 sequence (classification, doping, junction, devices, logic) at JEE-Advanced depth, with the olympiad layer added by sweep.
 
 Review checklist before the exam:
-1. The mechanism table (§3.1) survives a swapped-statement trap.
-2. Mass-action and neutrality each take one line, cold.
-3. The donor scaling reproduces 26 meV and 2.4 nm with the honesty line.
-4. The decade ladder and the knee story are fluent.
-5. Ripple and Zener formulas carry their worst-case conditions.
-6. Alpha-beta bookkeeping plus the saturation test resolve any transistor circuit.
-7. De Morgan and the half adder are writable without a reference table.
-8. The five olympiad stories (donor, diode origin, capacitance, solar bound, Moore's wall) each open with one sentence.
+- [ ] The mechanism table (§3.1) survives a swapped-statement trap.
+- [ ] Mass-action and neutrality each take one line, cold.
+- [ ] The donor scaling reproduces 26 meV and 2.4 nm with the honesty line.
+- [ ] The decade ladder and the knee story are fluent.
+- [ ] Ripple and Zener formulas carry their worst-case conditions.
+- [ ] Alpha-beta bookkeeping plus the saturation test resolve any transistor circuit.
+- [ ] De Morgan and the half adder are writable without a reference table.
+- [ ] The five olympiad stories (donor, diode origin, capacitance, solar bound, Moore's wall) each open with one sentence.

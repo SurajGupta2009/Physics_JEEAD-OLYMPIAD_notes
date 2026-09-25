@@ -1,0 +1,60 @@
+{
+  "slug": "kinematics-1d",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F3.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
+      "why": "the chapter is one function x(t): the map shows the single spine the parts hang off",
+      "data": "the part structure of the chapter (Part 0-14)",
+      "read": "every tool in this chapter is the slope or the area of one function",
+      "source": "chapter overview (Part 0)"
+    },
+    {
+      "id": "F3.2",
+      "kind": "quadrantChart",
+      "title": "The four sign quadrants of motion",
+      "why": "negative is a label on a chosen axis, not a statement about speeding up",
+      "data": "the four sign combinations of velocity and acceleration",
+      "read": "same signs of v and a mean speeding up; opposite signs mean slowing down",
+      "source": "Part 1 · Intuition first"
+    },
+    {
+      "id": "F3.3",
+      "kind": "xychart-beta",
+      "title": "Area under the v-t graph is displacement",
+      "why": "the area picture is the graphs-as-calculators toolkit; the sign of the area is a trap",
+      "data": "v(t) = 10 - 5t m/s on t in [0,4], crossing zero at t = 2 s",
+      "read": "net displacement is the signed total; distance is the unsigned total",
+      "source": "DIAGRAM D3.4 (§3.5)"
+    },
+    {
+      "id": "F3.4",
+      "kind": "xychart-beta",
+      "title": "Free-fall v-t graph for an upward throw",
+      "why": "one line of slope -g holds the whole throw: peak, symmetry, return speed",
+      "data": "v(t) = 20 - 10t m/s (v0 = 20, g = 10) to 4 s",
+      "read": "slope -g throughout; zero crossing is the peak; return speed -v0 at 2v0/g",
+      "source": "DIAGRAM D3.6 (§3.7)"
+    },
+    {
+      "id": "F3.5",
+      "kind": "xychart-beta",
+      "title": "Phase-space ellipse for a = -kx",
+      "why": "the v-x loop shows boundedness and turning points at a glance",
+      "data": "v^2 = v0^2 - k x^2 with v0 = 4, k = 4 (upper half, x in [-2,2])",
+      "read": "turning points at x = ± v0/sqrt(k) where v = 0; speed peaks at v0 at x = 0",
+      "source": "DIAGRAM D3.12 (§3.8)"
+    },
+    {
+      "id": "F3.6",
+      "kind": "flowchart",
+      "title": "Triage — route by what is given",
+      "why": "the triage list is a decision tree; the flowchart makes the first question visible",
+      "data": "the triage branches of §9.1",
+      "read": "the first question names the tool; the rest is execution",
+      "source": "Part 9 · Playbook (§9.1)"
+    }
+  ]
+}

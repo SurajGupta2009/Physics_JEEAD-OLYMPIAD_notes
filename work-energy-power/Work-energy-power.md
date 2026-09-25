@@ -1,7 +1,8 @@
 ---
-title: "Work, Energy & Power"
+title: Work, Energy & Power — first principles to Olympiad
 part: 6
 slug: work-energy-power
+status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19
 aliases: [work, energy, power, kinetic-energy, potential-energy, conservation, WET]
 tags: [jee-advanced, olympiad, mechanics, work-energy, conservation-laws]
@@ -63,6 +64,23 @@ Not a momentum chapter: impulse and collisions are in PART 7. Not a rotation cha
 
 **Energy is conserved — but only if you count everything.** The total energy (kinetic + potential + thermal + ...) is always conserved. "Energy is lost" really means "energy has been transferred to a form we are not tracking." The correct phrase is "energy is dissipated" or "energy is transferred to thermal energy."
 
+> [!tip] FIGURE F6.1 · Chapter map
+> *Why:* the chapter is one question — energy or force? — and the map shows where each tool lives.
+> *Data:* the Part 0–14 structure — work, WET, standard-force work, power, conservation, energy diagrams, paper, sheet.
+
+```mermaid
+mindmap
+  root((work & energy))
+    Work
+    Work-energy theorem
+    Power
+    Conservative forces
+    Conservation
+    Energy diagrams
+```
+
+> *Read:* every result is an energy ledger, a $U(x)$ reading, or a power limit.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -108,6 +126,19 @@ For a force that varies along the path: $W=\int\mathbf{F}\cdot d\mathbf{r}=\int(
 > [!abstract] DIAGRAM D6.2 · Work as area under the $F$–$x$ curve
 > *Show:* a graph of $F$ vs $x$ with a curve. The area between the curve and the $x$-axis is shaded. Positive areas (above the axis) and negative areas (below the axis) are shaded differently. The net work is the algebraic sum of the signed areas.
 > *Search:* "work area under force versus displacement curve signed"
+
+> [!tip] FIGURE F6.2 · The work–energy theorem: F = ma, integrated
+> *Why:* the whole bridge between the two methods is one step — multiply the second law by displacement and integrate.
+> *Data:* $F\,dx = ma\,dx = mv\,dv \Rightarrow \int F\,dx = \tfrac12 mv^2 - \tfrac12 mv_0^2$.
+
+```mermaid
+flowchart LR
+  A["F = ma"] -->|"multiply by dx"| B["F dx = mv dv"]
+  B -->|"integrate"| C["∫F dx = ½mv² - ½mv0²"]
+  C --> D["work = ΔK"]
+```
+
+> *Read:* the left side is the work, the right side the kinetic-energy change — the theorem converts a force problem into a bookkeeping problem.
 
 ### 3.3 Work of the standard forces
 
@@ -187,6 +218,19 @@ Average power: $\bar{P}=W/\Delta t$. Instantaneous power: $P=Fv\cos\theta$ where
 > *Show:* a car on a flat road with engine force $F$ forward and resistive force $f$ backward. At top speed: $F=f$, $a=0$. $P=Fv_{\max}=fv_{\max}$. A graph of $v$ vs $t$: the car accelerates and asymptotically approaches $v_{\max}=P/f$.
 > *Search:* "car power limited top speed engine force resistance asymptotic"
 
+> [!tip] FIGURE F6.3 · Power: the top speed is P/f
+> *Why:* top-speed questions all collapse to one balance — at constant speed the drive force equals the resistance, so $v_{\max}=P/f$.
+> *Data:* $P=Fv\cos\theta$ (instantaneous); at top speed on a flat road $v_{\max}=P/f$; up a slope $P=(f+mg\sin\theta)v$.
+
+```mermaid
+flowchart LR
+  A["P = Fv"] --> B["top speed: F = resistance"]
+  B --> C["flat: v_max = P/f"]
+  B --> D["up slope: P = (f + mg sinθ)v"]
+```
+
+> *Read:* the power sets a ceiling — once the force drops to the resistance, speed can climb no further.
+
 ### 3.6 Conservative forces
 
 A force is conservative if either of the following equivalent conditions holds:
@@ -239,6 +283,20 @@ $$
 > *Show:* three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\Delta K$ and $\Delta U$ with the non-conservative work $W_{\text{nc}}$ shown as a separate bar. The total height is the same in all three (energy conservation with the thermal term).
 > *Search:* "energy bar chart initial final non-conservative work ledger"
 
+> [!tip] FIGURE F6.4 · The energy ledger: account for every non-conservative term
+> *Why:* friction turns conservation into an accounting problem; the figure names where the missing energy goes.
+> *Data:* $K_i+U_i = K_f+U_f - W_{\text{nc}}$; with friction $W_{\text{nc}}=-f_k d$, so $E_f = E_i - f_k d$.
+
+```mermaid
+flowchart TD
+  A["K_i + U_i"] --> B["conservative only?"]
+  B -->|"yes"| C["K_f + U_f = K_i + U_i"]
+  B -->|"friction/air"| D["K_f + U_f = K_i + U_i - f_k d"]
+  D --> E["W_nc goes to thermal"]
+```
+
+> *Read:* mechanical energy is conserved only while every working force is conservative; friction bleeds $f_k d$ into the thermal ledger.
+
 ### 3.9 Energy diagrams
 
 The $U(x)$ graph is a powerful tool:
@@ -250,6 +308,22 @@ The $U(x)$ graph is a powerful tool:
 > [!abstract] DIAGRAM D6.5 · The $U(x)$ energy landscape
 > *Show:* a $U(x)$ curve with a well (stable minimum), a hill (unstable maximum), and two turning points at a given energy $E$. The kinetic energy $K=E-U$ shown as the vertical gap between the $E$ line and the $U$ curve. The bound region (where $E>U$) shaded.
 > *Search:* "potential energy landscape stable unstable turning points bound motion"
+
+> [!tip] FIGURE F6.5 · The U(x) landscape: read it like a map
+> *Why:* the same curve answers reach, turning points, and stability — the figure keys the reading rules to the shape.
+> *Data:* turning point $E=U$; equilibrium $dU/dx=0$ (stable if $d^2U/dx^2>0$); bound motion where $E<U(\infty)$.
+
+```mermaid
+flowchart TD
+  A["U(x) curve"] --> B{"E vs U at a point"}
+  B -->|"E = U"| C["turning point: K = 0"]
+  B -->|"E < U"| D["forbidden region"]
+  B -->|"E > U"| E["allowed: K = E - U"]
+  A --> F["dU/dx = 0 → equilibrium"]
+  F --> G["min = stable, max = unstable"]
+```
+
+> *Read:* the particle lives where $E\ge U$, turns where $E=U$, and comes to rest at the minima and saddles of the landscape.
 
 ### 3.10 The energy/force decision rule
 
@@ -855,6 +929,22 @@ For a vehicle with constant power $P$: $v=(2Pt/m)^{1/2}$ from rest (valid until 
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F6.6 · Triage — energy or force?
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the six triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What is asked?"} -->|"speed at a point"| B["energy conservation"]
+  A -->|"distance slid"| C["energy with friction"]
+  A -->|"does it reach"| D["compare E with U(B)"]
+  A -->|"force at a point"| E["energy for speed, radial equation for force"]
+  A -->|"time taken"| F["force method: F = ma, integrate"]
+  A -->|"power"| G["P = Fv"]
+```
+
+> *Read:* a speed or a distance wants energy; a time wants forces — pick the tool the question names.
 
 - "How fast at point B?" → energy conservation.
 - "How far does it slide?" → energy with friction.

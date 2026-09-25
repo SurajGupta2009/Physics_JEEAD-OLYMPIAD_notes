@@ -1,3 +1,13 @@
+---
+title: String Waves — First Principles to Olympiad
+part: 1
+slug: string-waves
+status: complete
+source: Cengage Waves and Thermodynamics-compressed.pdf, Wave Motion & String Waves chapter
+aliases: [string waves, wave motion, standing waves, normal modes, sonometer]
+tags: [jee-advanced, nsep, inpho, ipho, waves, oscillations]
+---
+
 <a id="section-index"></a>
 <a id="top"></a>
 
@@ -31,11 +41,31 @@ A complete, proof-first treatment of transverse mechanical waves, string dynamic
 
 ### Read this first: the four foundational truths
 
+> [!tip] FIGURE F1.1 · Chapter map
+> *Why:* the whole chapter is one function $y(x,t)$; the map shows the single spine Parts 1–11 hang off.
+> *Data:* the eleven-part structure of the notes (foundations → wave equation → particles → energy → reflections → standing waves → olympiad → paper → solutions → sheet).
+
+```mermaid
+mindmap
+  root(("y(x,t)"))
+    Wave equation
+    v = sqrt(T/μ)
+    Particle velocity
+    Energy and power
+    Reflections
+    Standing waves
+    Hanging rope
+    Paper and solutions
+```
+
+> *Read:* everything in this chapter is a slope, an area, or a boundary condition applied to one function $y(x,t)$.
+
 1. **Matter does not travel; the disturbance travels.** Each particle of the medium oscillates purely transversely about its local equilibrium position. No mass is transported across the $x$-axis.
 2. **Phase velocity depends purely on the properties of the medium.** For an ideal, flexible string, the speed $v = \sqrt{T/\mu}$ depends strictly on elastic restoring force $T$ and inertia per unit length $\mu$. It does not depend on amplitude, frequency, or wave profile (in the linear limit).
 3. **In a progressive wave, kinetic and potential energy densities peak at the exact same location.** Unlike a simple harmonic oscillator where kinetic energy peaks at equilibrium and potential energy peaks at maximum displacement, a traveling wave's kinetic and elastic potential energy densities are **in phase**: both reach their absolute maximum at the zero-crossings (where slope is steepest) and are zero at the wave crests.
 4. **Boundary conditions dictate phase jumps via mechanical impedance.** A fixed wall has infinite mechanical impedance, forcing the displacement to zero, which requires the reflected pulse to invert ($\Delta \phi = \pi$). A free end has zero transverse impedance, forcing the net transverse force (and slope) to zero, reflecting in phase ($\Delta \phi = 0$) and doubling the displacement amplitude at the boundary.
 
+---
 ---
 
 <a id="section-01-foundations"></a>
@@ -77,6 +107,21 @@ Where:
 - $\phi_0$: Initial phase constant (determined by the initial condition $y(0,0)$ and sign of $\dot y(0,0)$).
 
 #### Phase Relationships
+
+> [!tip] FIGURE F1.2 · The sign rule for direction
+> *Why:* the single but non-obvious fact from the harmonic wave section — direction is read off the sign inside the argument, not off the algebra.
+> *Data:* the four argument forms and the cases they produce.
+
+```mermaid
+flowchart LR
+  A["signs between x and t"] -->|"opposite: kx - ωt"| B["travels +x"]
+  A -->|"opposite: -kx + ωt"| B
+  A -->|"same: kx + ωt"| C["travels -x"]
+  A -->|"same: -kx - ωt"| C
+```
+
+> *Read:* opposite signs ($kx - \omega t$) travel right; same-sign arguments ($kx + \omega t$) travel left — the rest is execution.
+
 The phase difference $\Delta \Phi$ between two points separated by spatial distance $\Delta x$ at the same instant $t$:
 $$\Delta \Phi = k \, \Delta x = \frac{2\pi}{\lambda} \Delta x$$
 
@@ -186,6 +231,23 @@ To determine the direction of velocity of any particle on a given snapshot curve
 2. At position $x$, observe whether the new curve is above or below the original curve.
 3. If the new curve is higher, the particle is moving upward ($v_p > 0$). If lower, it is moving downward ($v_p < 0$).
 
+> [!tip] FIGURE F1.3 · The two waveform envelopes
+> *Why:* the peak-valued slope triangle is the mechanical key to the whole chapter — particle speed is a slope, not a height.
+> *Data:* the contrast between the peak-valued kinematic slope (∂y/∂x ↦ v_p) and the root-mean-square-valued energy slope.
+
+```mermaid
+flowchart LR
+  A["Waveform y(x,t)"] --> B["Kinematic slope ∂y/∂x, peak values"]
+  A --> C["Energy slope, RMS average"]
+  B --> D["particle velocity v_p"]
+  C --> E["power"]
+```
+
+> *Read:* the first square gives velocities peak-to-peak; the second flattens them to their RMS value — mixing the two is the classic trap.
+
+
+
+
 ---
 
 <a id="section-04-energy-and-power"></a>
@@ -233,6 +295,21 @@ $$u_p = \frac{1}{2} \mu \omega^2 A^2 \cos^2(kx - \omega t)$$
 ### 4.3 Total Energy Density ($u$)
 The total mechanical energy per unit length is:
 $$u(x,t) = u_k + u_p = \mu \omega^2 A^2 \cos^2(kx - \omega t)$$
+
+> [!tip] FIGURE F1.4 · Energy density is in phase with the wave
+> *Why:* the energy crests sit at the wave's zero-crossings, not its amplitude peaks — a fact that contradicts harmonic-oscillator intuition.
+> *Data:* $u_k = u_p = \frac{1}{2}\mu\omega^2 A^2 \cos^2\theta$ sampled at $\theta \in \{0, \pi/4, \pi/2, 3\pi/4, \pi\}$.
+
+```mermaid
+xychart-beta
+  title "u_k = u_p vs phase: twin peaks at the zero-crossings"
+  x-axis ["0", "π/4", "π/2", "3π/4", "π"]
+  y-axis 0 --> 1
+  line [1, 0.5, 0, 0.5, 1]
+  line [0, 0, 0, 0, 0]
+```
+
+> *Read:* kinetic and potential energy densities peak together at the displacement zero-crossings and vanish at the wave crests — unlike an oscillator, never out of phase.
 
 The spatial or temporal average over a full cycle (since $\langle \cos^2\theta \rangle = \frac{1}{2}$) is:
 
@@ -425,6 +502,21 @@ $$\boxed{f_n = \frac{v}{\lambda_n} = n \left(\frac{v}{2L}\right) = \frac{n}{2L}\
 > - **Harmonic** refers to integer multiples of the fundamental frequency ($n \cdot f_1$).
 > - **Overtone** refers to the sequence of actual resonant physical modes above the fundamental. For a string fixed at both ends, all integer harmonics exist, so the $m$-th overtone is the $(m+1)$-th harmonic.
 
+> [!tip] FIGURE F1.5 · Superposition begets standing waves
+> *Why:* a standing wave is two travelling waves, not a new phenomenon — the flowchart prevents the most persistent misconception in Part 6.
+> *Data:* the decomposition $2A \sin(kx)\cos(\omega t) = A\sin(kx-\omega t) + A\sin(kx+\omega t)$.
+
+```mermaid
+flowchart LR
+  A["A sin(kx - ωt)"] --> S{"superposition"}
+  B["A sin(kx + ωt)"] --> S
+  S -->|"same A, f, λ; opposite directions"| C["2A sin(kx) cos(ωt)"]
+  C --> D["standing wave: nodes and antinodes"]
+  D --> E["no net power across a node"]
+```
+
+> *Read:* equal amplitude, frequency, and wavelength with opposite directions make a standing wave — and it traps, rather than transmits, energy.
+
 ---
 
 ### 6.3 Normal Modes of a String Fixed at One End and Free at the Other
@@ -544,6 +636,23 @@ $$\boxed{A(x) \propto [\mu(x)]^{-1/4}}$$
 ## Part 8: The Playbook, Traps & Mental Decision Trees
 
 ### 8.1 The 8-Move Wave Triage Tree
+
+> [!tip] FIGURE F1.6 · Triage — travelling or standing first?
+> *Why:* the first question routes the entire solution; the flowchart makes the discrimination explicit.
+> *Data:* the first rule of §8.1 — the form of the argument decides travelling vs standing.
+
+```mermaid
+flowchart TD
+  A{"Argument form?"} -->|"f(kx ± ωt)"| B["travelling wave"]
+  A -->|"f(x)·g(t)"| C["standing wave"]
+  B --> D["sign rule gives direction"]
+  B --> E["v_p = -v ∂y/∂x"]
+  C --> F["nodes/antinodes"]
+  C --> G["no net power across nodes"]
+```
+
+> *Read:* the form of the argument names the species first; direction, particle velocity, and energy each follow from the right branch.
+
 When faced with an unfamiliar wave mechanics problem in JEE Advanced or INPhO, follow this decision tree:
 
 1. **Traveling or Standing?**

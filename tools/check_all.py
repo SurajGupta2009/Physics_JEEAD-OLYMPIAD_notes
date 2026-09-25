@@ -22,6 +22,11 @@ import json, os, re, subprocess, sys, glob, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, 'topics.json')
+sys.path.insert(0, ROOT)
+try:
+    from tools import mermaid_lint
+except Exception:  # pragma: no cover - offline linter is part of the repo
+    mermaid_lint = None
 
 
 def load():
@@ -141,6 +146,12 @@ def main():
             else:
                 notes.append('%s: check.py \u2713 (%s figures, %s question blocks)'
                              % (slug, want['figures'], want['questions']))
+        if mermaid_lint is not None:                        # vault-wide figure-syntax lint (HTML-first topics too)
+            for md in glob.glob(os.path.join(d, '*.md')):
+                if os.path.basename(md) == 'README.md':
+                    continue
+                for msg in mermaid_lint.lint(read(md)):
+                    fails.append('%s/%s: %s' % (slug, os.path.basename(md), msg))
         node = subprocess.run(['which', 'node'], capture_output=True, text=True).stdout.strip() if not quick else ''
         tt = os.path.join(d, 'tools', 'test-tex.js')
         if node and os.path.exists(tt):

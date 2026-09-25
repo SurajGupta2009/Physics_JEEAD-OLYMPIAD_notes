@@ -4,6 +4,9 @@ from pathlib import Path
 import re, sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
+from tools import mermaid_lint
+
 MASTER = ROOT / 'String-waves.md'
 MATH = re.compile(r'\$\$(.*?)\$\$|(?<![\\$])\$(?!\$)([^\n]*?)(?<!\\)\$(?!\$)', re.S)
 
@@ -53,11 +56,30 @@ def main() -> int:
 
     require(not re.search(r'!\[.*?\]\(https?://|<img|<script|@import|@font-face', src),
             'External or active asset in Markdown')
+    require(not re.search(r'\.(png|jpe?g|gif|webp)\b', src, re.I), 'media policy: no raster images')
+
+    # ── FIGURE system (Obsidian-first media policy, docs/obsidian-plugin-workflow.md §2) ──
+    figs = re.findall(r'^> \[!tip\] FIGURE F(\d+)\.(\d+) · ', src, re.M)
+    require(len(figs) >= 6, f'FIGURES: {len(figs)} found, requires at least 6')
+    require(not [part for part, _ in figs if int(part) != 1],
+            'FIGURE numbers must start with this part number (1)')
+    require(src.count('*Why:*') >= len(figs), 'every FIGURE needs a *Why:* line')
+    require(src.count('*Data:*') >= len(figs), 'every FIGURE needs a *Data:* line')
+    require(src.count('*Read:*') >= len(figs), 'every FIGURE needs a *Read:* line')
+    fence = chr(96) * 3
+    mm = re.findall(fence + r'mermaid[ \t]*\n([A-Za-z0-9_-]+)', src)
+    kinds = {'flowchart', 'graph', 'mindmap', 'xychart-beta', 'quadrantChart',
+             'sequenceDiagram', 'stateDiagram-v2', 'stateDiagram', 'classDiagram',
+             'pie', 'erDiagram', 'gitGraph', 'gantt', 'journey'}
+    require(all(k in kinds for k in mm), f'unknown mermaid kind: {sorted(set(mm) - kinds)}')
+    require(len(mm) >= len(figs), 'every FIGURE needs a ```mermaid block')
+    for _msg in mermaid_lint.lint(src):
+        require(False, f"mermaid: {_msg}")
 
     if errors:
         print('\n'.join(errors))
         return 1
-    print(f'ALL GOOD: 11 parts, {len(images)} local SVGs, 36 Qs + 36 S-answers')
+    print(f'ALL GOOD: 11 parts, {len(images)} local SVGs, {len(figs)} mermaid FIGURES, 36 Qs + 36 S-answers')
     return 0
 
 

@@ -1,7 +1,8 @@
 ---
-title: "Newton\u2019s Laws, Friction, Constraints & Circular Dynamics"
+title: Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad
 part: 5
 slug: newtons-laws
+status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 7 Newton's Laws of Motion
 aliases: [newtons-laws, friction, constraints, circular-dynamics, FBD, pseudo-force]
 tags: [jee-advanced, olympiad, mechanics, newtons-laws, friction, circular-motion]
@@ -63,6 +64,24 @@ Not an energy chapter: work and energy are in PART 6. Not a rotation chapter: to
 
 **Friction is a range, not a fixed value.** Static friction adjusts itself to prevent slipping, up to a maximum: $f_s\le\mu_s N$. Only when the maximum is exceeded does the body slip, and then kinetic friction ($f_k=\mu_k N$, usually smaller) takes over. The direction of friction is always opposite to the direction of impending or actual slipping.
 
+> [!tip] FIGURE F5.1 · Chapter map
+> *Why:* the chapter is one flow — identify the frame and forces, then $\mathbf{F}=m\mathbf{a}$ per body; the map shows the spine.
+> *Data:* the Part 0–14 structure — three laws, FBDs, standard forces, friction, constraints, pseudo forces, circular dynamics, paper, sheet.
+
+```mermaid
+mindmap
+  root((Newton's laws))
+    Three laws
+    Free-body diagrams
+    Standard forces
+    Friction
+    Constraints
+    Pseudo forces
+    Circular dynamics
+```
+
+> *Read:* every result is a free-body diagram plus the second law in a chosen frame.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -94,6 +113,20 @@ Not an energy chapter: work and energy are in PART 6. Not a rotation chapter: to
 > [!abstract] DIAGRAM D5.1 · Inertial vs non-inertial frames
 > *Show:* left: a ball sitting on a frictionless table in a stationary room — it stays put (inertial frame, first law holds). Right: the same ball in a car that brakes suddenly — the ball appears to slide forward (non-inertial frame, first law appears violated unless a pseudo force is included).
 > *Search:* "inertial versus non-inertial frame ball sliding car braking"
+
+> [!tip] FIGURE F5.2 · The three laws: one chain of meaning
+> *Why:* the laws are a discipline, not three facts — frame, then force, then the pair; the figure chains them in the order you use them.
+> *Data:* First law — no net force → constant velocity (defines inertial frames); Second — $\mathbf{F}=d\mathbf{p}/dt = m\mathbf{a}$; Third — forces come in pairs on *different* bodies.
+
+```mermaid
+flowchart TD
+  A["First law"] --> B["no net force → constant velocity; defines inertial frames"]
+  B --> C["Second law: F = dp/dt = ma, per axis"]
+  C --> D["Third law: equal-opposite pair on a different body"]
+  D --> E["reaction to gravity ≠ normal force"]
+```
+
+> *Read:* use the first to pick a frame, the second to write equations, the third to pair forces across bodies — never on the same diagram.
 
 ### 3.2 The second law
 
@@ -140,6 +173,20 @@ $$
 > *Show:* left: the physical setup — a block on a ramp inclined at angle $\theta$. Right: the FBD — the block isolated, with weight $mg$ pointing vertically down, normal $N$ perpendicular to the surface, friction $f$ up the incline. Axes: $x$ along the incline (downhill), $y$ perpendicular to the incline. Components: $mg\sin\theta$ along $x$, $mg\cos\theta$ along $y$.
 > *Search:* "free body diagram block inclined plane components axes"
 
+> [!tip] FIGURE F5.3 · The FBD protocol: isolate, draw, resolve, solve
+> *Why:* every mechanics problem is the same five steps; do them in order and the equations write themselves.
+> *Data:* the incline block: $mg$ down, $N$ perpendicular, $f$ up; components $mg\sin\theta$ (along) and $mg\cos\theta$ (perpendicular).
+
+```mermaid
+flowchart TD
+  A["isolate one body"] --> B["draw every force touching it"]
+  B --> C["choose axes along the acceleration"]
+  C --> D["resolve to components"]
+  D --> E["ΣFx = max , ΣFy = may"]
+```
+
+> *Read:* isolation kills the reaction confusion, and axes along the acceleration decouple the two equations.
+
 ### 3.5 Standard forces
 
 **Weight:** $\mathbf{W}=m\mathbf{g}$, always pointing vertically downward. Magnitude $W=mg\approx9.8m$ N.
@@ -153,6 +200,20 @@ $$
 > [!abstract] DIAGRAM D5.4 · Apparent weight in a lift
 > *Show:* a person standing on a scale in a lift. Three cases: (a) lift at rest — scale reads $mg$; (b) lift accelerating up at $a$ — scale reads $m(g+a)$; (c) lift in free fall — scale reads 0 (weightlessness). The FBD for each case with the normal force and weight drawn.
 > *Search:* "apparent weight lift accelerating upward downward free fall scale"
+
+> [!tip] FIGURE F5.4 · Apparent weight: the scale reads the normal force
+> *Why:* "weight in a lift" is a normal-force question — the scale reads $N$, not $mg$; the figure pins the three cases.
+> *Data:* at rest $N=mg$; accelerating up $N=m(g+a)$; accelerating down $N=m(g-a)$; free fall $N=0$.
+
+```mermaid
+flowchart LR
+  A["scale reads N"] --> B["at rest: N = mg"]
+  A --> C["accelerating up: N = m(g+a)"]
+  A --> D["accelerating down: N = m(g-a)"]
+  A --> E["free fall: N = 0"]
+```
+
+> *Read:* upward acceleration adds to the reading, downward subtracts, free fall cancels it — the weight itself never changed.
 
 ### 3.6 Equilibrium and Lami's theorem
 
@@ -184,6 +245,21 @@ The direction of $f_s$ is opposite to the direction of *impending* slip. To find
 > [!abstract] DIAGRAM D5.5 · The friction force vs applied force graph
 > *Show:* a graph of friction $f$ vs applied horizontal force $F$ on a block. For $F<F_{\max}$: $f=F$ (static friction adjusts). At $F=\mu_s N$: the block slips, friction drops to $\mu_k N$ (kinetic regime, roughly constant). The peak is at $\mu_s N$, the plateau at $\mu_k N$.
 > *Search:* "friction force versus applied force graph static kinetic peak plateau"
+
+> [!tip] FIGURE F5.5 · Friction is a range, then a plateau
+> *Why:* the single most missed subtlety — static friction grows to a cap, then collapses to the lower kinetic value; the figure draws both regimes.
+> *Data:* below the cap $f=F$ (static, adjusts); at slip the peak is $\mu_s N$, then the plateau $\mu_k N < \mu_s N$.
+
+```mermaid
+xychart-beta
+  title "friction vs applied force"
+  x-axis ["0", "F1", "μsN", "2F1", "3F1"]
+  y-axis 0 --> 1.0
+  line [0, 0.5, 1.0, 1.0, 1.0]
+  line [0, 0.5, 0.78, 0.68, 0.68]
+```
+
+> *Read:* before the cap friction mirrors the push exactly; after it, friction is the smaller constant $\mu_k N$ — the drop is why objects jerk into motion.
 
 ### 3.8 Friction II: kinetic friction and modelling
 
@@ -860,6 +936,22 @@ In an accelerating frame: replace $g$ by $g_{\text{eff}}=\sqrt{g^2+a_0^2}$ (for 
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F5.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the six triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What kind of problem?"} -->|"block on incline"| B["resolve along/perpendicular, friction regime"]
+  A -->|"pulleys"| C["string-length constraint, F=ma per mass"]
+  A -->|"circular"| D["centre, then ΣFr = mv²/R"]
+  A -->|"banked road"| E["tanθ = v²/Rg, add friction for limits"]
+  A -->|"non-inertial"| F["add -ma0 as pseudo force"]
+  A -->|"multi-body"| G["system equation first, then isolate"]
+```
+
+> *Read:* incline words resolve the weight, pulley words differentiate the string, circular words sum forces toward the centre.
 
 - "Block on incline": resolve gravity along/perpendicular to incline; check friction regime.
 - "Pulley system": differentiate the string-length constraint for accelerations; write $F=ma$ for each mass.

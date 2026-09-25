@@ -1,7 +1,8 @@
 ---
-title: 2-D Motion — Projectiles, Relative Velocity & Circular Kinematics
+title: "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad"
 part: 4
 slug: motion-in-two-dimensions
+status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 5 Motion in Two Dimensions (+ ch 6)
 aliases: [projectile, relative velocity, circular motion, angular velocity, centripetal acceleration]
 tags: [jee-advanced, olympiad, mechanics, projectile, circular-motion, relative-velocity]
@@ -59,6 +60,21 @@ Not a dynamics chapter: forces and Newton's laws are in PART 5 (circular dynamic
 
 **Circular motion requires acceleration even at constant speed.** The velocity vector changes direction (even if its magnitude is constant), so there must be an acceleration. The centripetal acceleration $a_c=v^2/R$ points toward the centre — it changes the direction of $\mathbf{v}$, not its magnitude.
 
+> [!tip] FIGURE F4.1 · Chapter map
+> *Why:* the chapter is three separations — horizontal from vertical, one frame from another, tangential from radial; the map shows the spine.
+> *Data:* the Part 0–14 structure — independence, projectiles, relative velocity, circular kinematics, paper, sheet.
+
+```mermaid
+mindmap
+  root((2-D motion))
+    Independence principle
+    Projectiles
+    Relative velocity
+    Circular kinematics
+```
+
+> *Read:* every result is a split into components, a frame subtraction, or $a_c = v^2/R$.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -104,6 +120,21 @@ The $x$-motion is uniform (constant velocity); the $y$-motion is uniformly accel
 > [!abstract] DIAGRAM D4.1 · The independence principle
 > *Show:* a ball launched horizontally from a cliff and a ball dropped vertically from the same height, shown at three equal time intervals. The dropped ball falls straight down; the launched ball falls the same vertical distance but also moves horizontally. At each time, both balls are at the same height — proving the vertical motions are identical.
 > *Search:* "independence principle projectile horizontal drop same height diagram"
+
+> [!tip] FIGURE F4.2 · The independence principle: every 2-D motion is two 1-D motions
+> *Why:* the chapter's single organising idea — split the motion, solve each axis, rejoin at time $t$.
+> *Data:* horizontal: uniform at $v_{0x}$; vertical: uniformly accelerated at $-g$; the two share only $t$.
+
+```mermaid
+flowchart TD
+  A["2-D motion"] --> B["x-axis: uniform, x = v0x t"]
+  A --> C["y-axis: accelerated, y = v0y t - ½gt²"]
+  B --> D["share only t"]
+  C --> D
+  D --> E["eliminate t → parabola"]
+```
+
+> *Read:* gravity acts vertically only; the horizontal glide has no force, so the two axes never talk except through the clock.
 
 ### 3.2 Projectile: horizontal launch
 
@@ -158,6 +189,20 @@ The range formula $R=\frac{v_0^2\sin2\theta}{g}$ has two key properties:
 > [!abstract] DIAGRAM D4.3 · Complementary angles: same range, different trajectories
 > *Show:* two trajectories on the same axes: one at $\theta=30°$ (flatter, longer time) and one at $\theta=60°$ (steeper, shorter time). Both land at the same range $R$. The 45° trajectory (dashed) has the maximum range.
 > *Search:* "projectile complementary angles same range 30 60 degrees diagram"
+
+> [!tip] FIGURE F4.3 · The range formula: one question, two angles
+> *Why:* the symmetry behind half of projectile puzzles — two launch angles land on the same spot, and 45° wins the range.
+> *Data:* $R=\frac{v_0^2\sin2\theta}{g}$: $R(\theta)=R(90°-\theta)$, maximum at $\theta=45°$ with $R_{\max}=v_0^2/g$.
+
+```mermaid
+flowchart LR
+  A["R = v0² sin2θ / g"] --> B["θ and 90°-θ: same sin2θ"]
+  B --> C["same range, different flight"]
+  A --> D["θ = 45°: sin2θ = 1"]
+  D --> E["R_max = v0²/g"]
+```
+
+> *Read:* complementary angles are the range twins; 45° is the range champion — and the trajectory shapes are never the same.
 
 ### 3.5 Projectile: variations
 
@@ -225,6 +270,20 @@ The acceleration points toward the centre ($-\hat{r}$ direction) — hence "cent
 > *Show:* a particle on a circle at two nearby positions, with velocity vectors $\mathbf{v}_1$ and $\mathbf{v}_2$ tangent to the circle. The change $\Delta\mathbf{v}=\mathbf{v}_2-\mathbf{v}_1$ is drawn, pointing toward the centre. The magnitude $|\Delta\mathbf{v}|=v\Delta\theta$ for small $\Delta\theta$. The acceleration $a=|\Delta\mathbf{v}|/\Delta t=v^2/R$ annotated.
 > *Search:* "centripetal acceleration derivation geometric velocity change diagram"
 
+> [!tip] FIGURE F4.4 · Centripetal acceleration: turning uses no speed
+> *Why:* the one fact that surprises — acceleration with constant speed, because the direction of $\mathbf{v}$ is changing.
+> *Data:* $a_c = \frac{v^2}{R} = \omega^2 R = v\omega$, pointing toward the centre.
+
+```mermaid
+flowchart LR
+  A["speed constant"] --> B["v turns through Δθ"]
+  B --> C["Δv = v Δθ toward centre"]
+  C --> D["a_c = v Δθ/Δt = v²/R"]
+  D --> E["direction only, not speed"]
+```
+
+> *Read:* constant-speed circular motion is still accelerated; the acceleration is purely radial, curving the path without touching the speed.
+
 ### 3.9 Non-uniform circular motion
 
 When the speed changes, there is a tangential acceleration in addition to the centripetal:
@@ -256,6 +315,21 @@ The direction of $\mathbf{a}$ is not toward the centre (unless $a_t=0$).
 > [!abstract] DIAGRAM D4.11 · The safety parabola envelope
 > *Show:* several projectile trajectories for different launch angles (30°, 45°, 60°) from the same point with the same speed, all on the same axes. The envelope (safety parabola) drawn as a dashed curve touching all trajectories. The vertex of the envelope at height $v_0^2/(2g)$ and the far intercept at $R_{\max}=v_0^2/g$ annotated.
 > *Search:* "safety parabola envelope projectile trajectories different angles diagram"
+
+> [!tip] FIGURE F4.5 · The safety parabola: can the projectile reach this point?
+> *Why:* "hit or miss" problems for a fixed launch speed reduce to one curve — the envelope above which no trajectory goes.
+> *Data:* the envelope $y=\frac{v_0^2}{2g}-\frac{g}{2v_0^2}x^2$ has vertex $\frac{v_0^2}{2g}$ and intercept $R_{\max}=\frac{v_0^2}{g}$.
+
+```mermaid
+flowchart LR
+  A["all launch angles, fixed v0"] --> B["family of parabolas"]
+  B --> C["envelope: y = v0²/2g - g x²/2v0²"]
+  C --> D{"target below envelope?"}
+  D -->|"yes"| E["reachable, some θ"]
+  D -->|"no"| F["unreachable at any θ"]
+```
+
+> *Read:* a point is reachable exactly when it lies on or under the safety parabola; the envelope is the boundary of all possible shots.
 
 > [!abstract] DIAGRAM D4.12 · Non-uniform circular motion: the acceleration vector
 > *Show:* a particle on a circle with speed increasing (tangential acceleration $a_t$ forward); the centripetal acceleration $a_c$ pointing toward the centre; the resultant acceleration $\mathbf{a}$ tilted forward from the radial direction; the angle $\phi=\tan^{-1}(a_t/a_c)$ between $\mathbf{a}$ and the inward radial direction annotated.
@@ -829,6 +903,22 @@ If you know the period $T$ and radius $R$: $a_c=4\pi^2 R/T^2$. If you know $f$ (
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F4.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the seven triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What kind of problem?"} -->|"ground-to-ground"| B["Eqs. (4.1)"]
+  A -->|"from a height"| C["y-equation with y0 = h"]
+  A -->|"on an incline"| D["incline coordinates"]
+  A -->|"relative velocity"| E["vector triangle, v_AB = v_A - v_B"]
+  A -->|"circular motion"| F["a_c = v²/R (add a_t if speeding)"]
+  A -->|"radius of curvature"| G["ρ = v²/a_⊥"]
+```
+
+> *Read:* projectile words split axes, relative words subtract frames, circular words reach for $v^2/R$.
 
 - "Projectile, ground-to-ground": use Eqs. (4.1).
 - "Projectile, from a height": solve the $y$-equation with $y_0=h$.

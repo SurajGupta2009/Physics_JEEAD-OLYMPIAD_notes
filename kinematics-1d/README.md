@@ -18,6 +18,6 @@
 
 **Hand-off.** The constant-acceleration equations and graph-reading skills are prerequisites for every subsequent mechanics chapter. The $v\,dv/dx$ method reappears in PART 5 and PART 6.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D3.k`) with a `*Search:*` line; no image files by design.
+**Media.** Figures are Obsidian-native and deterministic per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2: `F`-numbered diagrams (mindmap chart, sign quadrants, x–y data graphs, triage flowchart) render from ` ```mermaid ` source. The remaining `DIAGRAM D3.k` briefs stay as searchable drawing seeds. No raster art, no external images.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

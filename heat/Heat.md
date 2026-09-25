@@ -1,8 +1,38 @@
+---
+title: Heat — from first principles to Olympiad, in one expandable map
+part: 6
+slug: heat
+status: complete
+source: Cengage Waves and Thermodynamics-compressed.pdf, thermal-properties chapters
+aliases: [heat, conduction, convection, radiation, calorimetry, thermal expansion, cooling]
+tags: [jee-advanced, olympiad, thermal, heat-transfer]
+---
+
 # Heat — from first principles to Olympiad, in one expandable map
 
 Thermal physics has a second ledger besides the energy accounts: the *transport* ledger — how energy moves through matter as heat, and how matter resists the trip. This page is the whole course in one file: seven theory chapters and a written gauntlet, from “what is temperature for” to skin-depth cellars, effusivity, and the critical radius of insulation. It needs no internet, no MathJax, no build step — and nothing of it lives on another page.
 
 Prerequisite etiquette: the quantities $U$, $Q$, $W$ and the first law are built properly in the thermodynamics set (ch 3); here they are assumed and spent. Temperature scales and expansion’s metrology likewise lean on the thermodynamics set’s ch 1 where noted — but nothing is quoted from there without being re-derived or recounted if it carries marks.
+
+> [!tip] FIGURE F6.1 · Chapter map: the transport ledger
+> *Why:* the topic is one extra ledger on top of the energy accounts — how heat *moves* and what resists it; the map pins the 8 chapters to that spine.
+> *Data:* ch 1 vocabulary (T, Q, U) → ch 2 expansion → ch 3 calorimetry → ch 4 conduction → ch 5 convection → ch 6 radiation → ch 7 Olympiad toolkit → ch 8 gauntlet.
+
+```mermaid
+mindmap
+  root((heat))
+    Vocabulary
+    Expansion
+    Calorimetry
+    Conduction
+    Convection
+    Radiation
+    Toolkit
+    Gauntlet
+```
+
+> *Read:* chapters 3–4 are the money (budget lines and resistor sums); 5–6 are the two film stories; 7 is the Olympiad floor.
+
 
 > **How to study this map**
 >
@@ -36,6 +66,21 @@ Every formula in this topic is a sentence about one of three quantities that eve
 **Fig. 1.1 — heat, work, and what a body actually stores.** The three words people mix up. A 1 kg block at 60 °C does not “contain heat” — it stores $U$; *heat* is the joules still crossing its surface. Two bodies at the same temperature can hold wildly different $U$: per kilogram, water over iron by a factor of about 4.5.
 
 ### 1.1 Three words that must never be mixed up
+
+> [!tip] FIGURE F6.2 · Three words, one sign rule
+> *Why:* almost every “obvious” wrong answer in calorimetry is a slip between $T$, $Q$ and $U$; name which quantity a phrase refers to before counting joules.
+> *Data:* $T$ = pointer (state); $Q$ = joules in transit (process); $U$ = balance (state); ΔU = Q − W_by with Q > 0 in, W_by > 0 out.
+
+```mermaid
+flowchart TD
+  A["three quantities"] --> B["T: the pointer reading (state)"]
+  A --> C["Q: joules in transit (process)"]
+  A --> D["U: the balance in the bank (state)"]
+  C --> E["first law: ΔU = Q - W_by"]
+```
+
+> *Read:* a body at 100 °C does not "contain heat" — it stores U; heat is a verb disguised as a noun.
+
 
 > **The three quantities**
 >
@@ -428,6 +473,20 @@ Feed a kilogram of ice, 100 W at a time (ch 1’s figure of the T-curve), and th
 
 ### 3.3 The final-state algorithm (and why steam beats boiling water)
 
+> [!tip] FIGURE F6.3 · The final-state algorithm: budget before you solve
+> *Why:* mixing answers are decided by which side exhausts first; solving mcΔT before checking the plateau is the chapter's biggest mark-loss.
+> *Data:* (1) budget both sides to the nearest plateau; (2) if supply < demand, T_final = plateau T and the answer is a mass fraction; (3) only if both budgets clear, solve mcΔT legs for T.
+
+```mermaid
+flowchart TD
+  A["budget: hotter side's supply, colder side's demand"] --> B{"supply < demand?"}
+  B -- yes --> C["T_final = plateau T; answer = mass fraction on the plateau"]
+  B -- no --> D["subtract plateau costs, solve mcΔT legs for T_final"]
+```
+
+> *Read:* whichever plateau is still occupied sets the temperature — steam can't lift ice past 0 °C until it has melted 0.80 kg of it.
+
+
 > **Three steps, never fewer**
 >
 > 1. **Budget both sides to the nearest plateau.** Hotter side: energy it can give up reaching its nearest
@@ -621,6 +680,19 @@ Conduction is Ohm's law for heat: a “conductivity” times an area times a slo
 
 ### 4.2 Worked template: the composite wall
 
+> [!tip] FIGURE F6.4 · Conduction is a resistor network
+> *Why:* every wall, pipe and junction is Ohm's law for heat; drawing it as an R-chain turns interface-temperature and condensation questions into resistor arithmetic.
+> *Data:* R = L/(kA); series adds R, parallel adds conductance; Q̇ = ΔT/R_total; each interface ΔT_i = Q̇ R_i; pipe R = ln(r₂/r₁)/(2πkL).
+
+```mermaid
+flowchart LR
+  T0["inside 20 °C"] --> R1["film 0.10"] --> R2["insulation 1.25"]
+  R2 --> R3["brick 0.314"] --> R4["film 0.10"] --> T1["outside −10 °C"]
+```
+
+> *Read:* 50 mm of insulation resists four times more than 220 mm of brick — the log of a pipe is only a different R.
+
+
 A house wall: 220 mm brick ($k = 0.7$) lined with 50 mm insulation ($k = 0.04$), plus the two surface air films ($h = 10$ W/m²K each — ch 5; treated as fixed $R'' = 0.1$). Per square metre, inside 20 °C, outside −10 °C:
 
 $$
@@ -810,6 +882,22 @@ A moving fluid is a conduction problem in disguise: right at the wall the no-sli
 >  Read $h = k_{\text{fluid}}/\delta$: the film conductance. The table of $h$ is a table of film thicknesses: natural convection in air 2–25 W/m²K (≈ a few mm of stagnant air — compare ch 4's R'' = 0.1 per film), forced air 25–250, water in motion 500–10 000, boiling 2 500–100 000 (the latent-heat pump of bubbles stirs at mm scale), condensing steam of course at the same high end. Two consequences worth saying out loud: **h is a property of the situation, not of the solid** (same plate, still air vs fan: factor 10), and **blowing on soup is shrinking δ**.
 
 ### 5.2 Lumped cooling: the discharge curve
+
+> [!tip] FIGURE F6.5 · Newton's law is an RC discharge
+> *Why:* Newton's cooling is Fourier through a film — one time constant; the discharge form answers every "time to reach T" and "read h from the curve" question.
+> *Data:* T(t) − T∞ = (T₀ − T∞) e^(−t/τ), τ = mc/(hA) = R_th C_th, t_1/2 = 0.69 τ; the asymptote fixes T∞, the slope ratio fixes hA.
+
+```mermaid
+flowchart LR
+  T0["hot body T₀"] -->|"hA"| ROOM["room T∞"]
+  subgraph discharge["discharge"]
+    direction TB
+    TC["τ = mc/hA = R_th C_th"] --> HALF["t½ = 0.69 τ"]
+  end
+```
+
+> *Read:* two data points on a cooling curve give both the ambient and the conductance — a classic practical question.
+
 
 Give a small hot body a conductance $hA$ to the room and a capacity $mc$, and the ledger of ch 1 (one door, now the only one) reads $mc\,dT/dt = -hA(T - T_\infty)$:
 
@@ -1395,6 +1483,20 @@ $\delta = \sqrt{2\alpha/\omega_{yr}} = 2.24$ m. Swing under 1 K needs $e^{-x/\de
 </details>
 
 ### 8.1 Trap shelf — the whole topic in ten warnings
+
+> [!tip] FIGURE F6.6 · The trap shelf: ten ways to lose the mark
+> *Why:* the topic's losses are a short list; each trap below has a one-line fix, so every warning doubles as a pre-exam checklist.
+> *Data:* (1) "contains heat" → U, not Q; (2) sign rule; (3) holes grow; (4) thermal stress is two-step; (5) liquid expansion needs −3γ_glass; (6) budget before mcΔT; (7) steady ≠ no-flow; (8) plane vs log R; (9) Biot licence; (10) always subtract the room's radiation.
+
+```mermaid
+flowchart TD
+  A["ten traps"] --> B["words: U vs Q, sign rule"]
+  A --> C["geometry: holes grow, stress two-step, -3γ_glass"]
+  A --> D["books: budget first, steady ≠ no-flow, plane vs log R"]
+  A --> E["law: Biot licence, subtract the room's radiation"]
+```
+
+> *Read:* every warning is a sentence you already know — re-read them the night before, not the week after.
 
 > **Where heat problems are lost**
 >

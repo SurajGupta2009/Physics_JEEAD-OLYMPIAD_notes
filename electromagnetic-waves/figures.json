@@ -1,0 +1,60 @@
+{
+  "slug": "electromagnetic-waves",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F3.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
+      "why": "the whole course is one causal chain from a broken magnetostatic law to radiation pressure",
+      "data": "the §1.3 route: displacement current → Maxwell → curl derivations → plane waves → energy/momentum → pressure → spectrum",
+      "read": "every result in §2 is either a divergence/curl of the fields or an integral of their product",
+      "source": "§1.3 Coverage and study route"
+    },
+    {
+      "id": "F3.2",
+      "kind": "flowchart",
+      "title": "The charging-capacitor paradox resolved",
+      "why": "one loop, two spanning surfaces, one circulation - the paradox is why displacement current exists",
+      "data": "surface through wire gives I_c; surface through gap gives I_d = ε₀ dΦ_E/dt; they must agree",
+      "read": "the same loop boundary cannot give two circulations; continuity forces I_d = I_c during charging",
+      "source": "§2.1 Why the original Ampère law fails during charging"
+    },
+    {
+      "id": "F3.3",
+      "kind": "flowchart",
+      "title": "E, B and k form a right-handed triad",
+      "why": "the handedness decides whether a guessed B is correct or reversed - the most common sign error",
+      "data": "B = (1/v) k̂ × E, E₀ = v B₀, S = E × B / μ parallel to k",
+      "read": "for a wave along +z, E × B points along propagation; reverse B and energy flows backwards",
+      "source": "§2.5 Plane waves: direction, phase and transversality"
+    },
+    {
+      "id": "F3.4",
+      "kind": "xychart-beta",
+      "title": "Inverse-square spreading of isotropic intensity",
+      "why": "intensity is power spread over a growing sphere - converts any isotropic power into a field",
+      "data": "I(r) = P/(4πr²) with P = 120 W sampled at r in {1,2,3,4,5} m",
+      "read": "doubling distance quarters intensity and halves the field amplitude (E₀ ∝ 1/r)",
+      "source": "§2.8 Equipartition, intensity and inverse-square spreading"
+    },
+    {
+      "id": "F3.5",
+      "kind": "flowchart",
+      "title": "Radiation pressure: the two cosines",
+      "why": "pressure has two projection factors, each with its own trap",
+      "data": "dU = I A cos θ dt; P_abs = (I/c)cos²θ, P_spec = (2I/c)cos²θ",
+      "read": "one cosine projects the area, the other the momentum; tangent momentum stays untouched for a mirror",
+      "source": "§2.10 Flat-surface radiation pressure"
+    },
+    {
+      "id": "F3.6",
+      "kind": "flowchart",
+      "title": "Triage - match the question to a Maxwell tool",
+      "why": "the six-way split decides which law gets derivative work and which gets an integral",
+      "data": "the six triage rules of §6.1",
+      "read": "each branch hands the problem to one law; mixing peak with RMS is the classic misroute",
+      "source": "§6.1 Triage decision tree"
+    }
+  ]
+}

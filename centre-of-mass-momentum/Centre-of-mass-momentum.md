@@ -1,7 +1,8 @@
 ---
-title: "Centre of Mass, Momentum & Collisions"
+title: Centre of Mass, Momentum & Collisions — first principles to Olympiad
 part: 7
 slug: centre-of-mass-momentum
+status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision
 aliases: [centre-of-mass, momentum, impulse, collisions, restitution, rocket-equation]
 tags: [jee-advanced, olympiad, mechanics, momentum, collisions, centre-of-mass]
@@ -62,6 +63,23 @@ Not an energy chapter: work and energy are in PART 6. Not a rotation chapter: an
 
 **The coefficient of restitution measures the "bounciness."** $e=v_{\text{sep}}/v_{\text{app}}$ along the line of impact. $e=1$: perfectly elastic (no energy lost). $e=0$: perfectly inelastic (the objects stick together). Real collisions have $0<e<1$.
 
+> [!tip] FIGURE F7.1 · Chapter map
+> *Why:* the chapter is one idea — when external forces vanish, the COM coast and momentum survives every collision — and the map shows the spine.
+> *Data:* the Part 0–14 structure — COM, impulse, conservation, collisions, the e-parameter, variable mass, paper, sheet.
+
+```mermaid
+mindmap
+  root((COM & collisions))
+    Centre of mass
+    Impulse
+    Momentum conservation
+    Collisions
+    Coefficient e
+    Variable mass
+```
+
+> *Read:* every result is a COM position, a momentum balance, or an e-bookkeeping.
+
 ## Part 2 · Definitions and bookkeeping
 
 | Symbol | Meaning | SI unit |
@@ -108,6 +126,20 @@ For a continuous body: $\mathbf{R}=\frac{1}{M}\int\mathbf{r}\,dm$.
 > [!abstract] DIAGRAM D7.1 · COM of standard bodies on one plate
 > *Show:* a rod, a triangle, a semicircular ring, a semicircular disc, and a solid cone, each with their COM marked by a dot and the distance from the reference surface labelled.
 > *Search:* "centre of mass standard bodies rod triangle semicircle cone COM position"
+
+> [!tip] FIGURE F7.2 · The COM: an isolated system coasts
+> *Why:* the chapter's deepest consequence — internal forces cancel in pairs, so nothing inside can steer the system.
+> *Data:* $\mathbf{R}=\sum m_i\mathbf{r}_i/M$; no external force $\Rightarrow \mathbf{v}_{\text{cm}}$ constant; exploding shell keeps its parabola.
+
+```mermaid
+flowchart TD
+  A["internal forces cancel in pairs"] --> B["no self-acceleration"]
+  B --> C["no external force → v_cm constant"]
+  C --> D["explosion: COM keeps the parabola"]
+  D --> E["fragments separate around it"]
+```
+
+> *Read:* the fragments scatter, but their mass-weighted average keeps the unperturbed path — the COM is the one point you can always trust.
 
 ### 3.2 COM of composite bodies
 
@@ -159,6 +191,19 @@ Impulse is the area under the $F$–$t$ curve. The impulse–momentum theorem: t
 > *Show:* a graph of $F$ vs $t$ during a collision (a sharp peak). The area under the curve shaded (the impulse $J$). The average force $\bar{F}=J/\Delta t$ shown as a horizontal line enclosing the same area.
 > *Search:* "impulse force versus time curve area average force collision"
 
+> [!tip] FIGURE F7.3 · Impulse: the area that changes momentum
+> *Why:* collisions are too brief to track the force, so we trade the force's shape for its area — the impulse.
+> *Data:* $\mathbf{J}=\int\mathbf{F}\,dt=\Delta\mathbf{p}$; average force $\bar{F}=J/\Delta t$.
+
+```mermaid
+flowchart LR
+  A["force spike over Δt"] --> B["area under F-t = J"]
+  B --> C["J = Δp"]
+  C --> D["shorter Δt → larger average force"]
+```
+
+> *Read:* the same momentum change hurts more when it happens fast — that is why a seatbelt stretches the collision time.
+
 ### 3.5 Conservation of momentum
 
 **The condition:** if the net external impulse is zero (in a given direction), the total momentum is conserved (in that direction):
@@ -182,6 +227,21 @@ $$
 > [!abstract] DIAGRAM D7.5 · Collision classification: before and after
 > *Show:* three cases: (1) elastic — two balls approach, exchange velocities (or bounce); (2) inelastic — they bounce with reduced speeds; (3) perfectly inelastic — they stick together. Velocity arrows shown before and after.
 > *Search:* "collision classification elastic inelastic perfectly inelastic before after"
+
+> [!tip] FIGURE F7.4 · Collisions: momentum always, kinetic energy sometimes
+> *Why:* the one rule that survives every collision and the one that does not — momentum vs energy is the chapter's split point.
+> *Data:* momentum conserved (no external impulse); $e = v_{\text{sep}}/v_{\text{app}}$: 1 elastic, 0 perfectly inelastic, between otherwise.
+
+```mermaid
+flowchart TD
+  A["collision"] --> B["momentum conserved (always)"]
+  A --> C["kinetic energy?"]
+  C -->|"e = 1"| D["elastic: ΔK = 0"]
+  C -->|"0 < e < 1"| E["inelastic: some ΔK lost"]
+  C -->|"e = 0"| F["stick together: max ΔK lost"]
+```
+
+> *Read:* momentum is non-negotiable; the restitution $e$ decides how much kinetic energy survives the crash.
 
 ### 3.7 Collisions II: 1-D results
 
@@ -213,6 +273,19 @@ where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $\Delta K=0$ (elast
 > [!abstract] DIAGRAM D7.6 · The $e$-dependence of final velocities
 > *Show:* a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. At $e=0$: both move together at $v_{\text{cm}}$. At $e=1$: $v_1=0$, $v_2=u_1$ (equal-mass exchange). The curves are linear in $e$.
 > *Search:* "final velocities versus coefficient of restitution e graph 1D collision"
+
+> [!tip] FIGURE F7.5 · The energy loss: the (1 - e²) rule
+> *Why:* one formula prices every imperfect collision — the lost kinetic energy scales with $1-e^2$ times the squared approach speed.
+> *Data:* $\Delta K = \tfrac12\mu(u_1-u_2)^2(1-e^2)$ with $\mu = \frac{m_1m_2}{m_1+m_2}$; loss is zero at $e=1$, maximal at $e=0$.
+
+```mermaid
+flowchart LR
+  A["approach speed u1-u2"] --> B["ΔK = ½μ(u1-u2)²(1-e²)"]
+  B --> C["e = 1: ΔK = 0"]
+  B --> D["e = 0: max loss, stick together"]
+```
+
+> *Read:* the reduced mass and the approach speed set the stakes; the $(1-e^2)$ factor sets how much of the stake is lost.
 
 ### 3.8 Collisions III: 2-D
 
@@ -861,6 +934,23 @@ For a collision: compute $v_{\text{cm}}$. If $e=0$, the objects stick and move a
 ## Part 9 · Playbook
 
 ### 9.1 Triage decision tree
+
+> [!tip] FIGURE F7.6 · Triage — route by the keyword
+> *Why:* the keyword names the route before any number is touched.
+> *Data:* the seven triage branches of §9.1.
+
+```mermaid
+flowchart TD
+  A{"What kind of problem?"} -->|"find the COM"| B["definition or negative-mass trick"]
+  A -->|"explosion"| C["COM continues; momentum for fragments"]
+  A -->|"1-D collision"| D["momentum + e"]
+  A -->|"2-D collision"| E["resolve along line of impact"]
+  A -->|"ballistic pendulum"| F["momentum then energy"]
+  A -->|"variable mass"| G["rocket equation / momentum flux"]
+  A -->|"man on boat"| H["COM stays fixed"]
+```
+
+> *Read:* explosions ride the COM, collisions balance momentum against $e$, and boats drift just enough to hold the COM in place.
 
 - "Find the COM": use the definition or the positive/negative mass trick.
 - "Explosion": COM trajectory continues; use momentum conservation for the fragments.
