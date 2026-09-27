@@ -5,9 +5,10 @@ taught: every chapter uses only what the chapters above it have already derived.
 the `order:` and `block:` properties in each chapter's frontmatter (registered in `topics.json`
 and checked by `tools/check_all.py`), so the live table at the bottom cannot drift from this one.
 
-The ten **pending** rows are the Electricity & Magnetism chapters still to be written
-([PENDING.md](../../PENDING.md) · [pending dashboard](pending.md)); their slots are reserved so
-the numbering will not move when they land.
+Slot 17 is the electrostatics module (plan.md PARTs 13–15 merged into one chapter, being written
+in three stages). The seven **pending** rows are the magnetism → induction → AC chapters still to
+be written ([PENDING.md](../../PENDING.md) · [pending dashboard](pending.md)); their slots are
+reserved so the numbering will not move when they land.
 
 ## Block A · Mechanics (plan.md PART 1–12)
 
@@ -39,38 +40,36 @@ the numbering will not move when they land.
 
 | # | chapter | plan PART | status | why here |
 |--:|---|:-:|:-:|---|
-| 17 | Charge, Coulomb's law & electric field — `electric-field` | 13 | **pending** | force at a distance made bookkeeping: superposition, the element-and-symmetry method, dipoles |
-| 18 | Electric flux & Gauss's law — `gauss-law` | 14 | **pending** | symmetry turns the field integral into a one-liner; conductors and cavities |
-| 19 | Electric potential & conductors — `electric-potential` | 15 | **pending** | the scalar route: $V$, equipotentials, $\mathbf E=-\nabla V$, energy of distributions |
-| 20 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
-| 21 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
-| 22 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | 16 | **pending** | the field of a current; the force on a moving charge and on a wire |
-| 23 | Ampère's law, currents & magnetic dipoles — `amperes-law` | 17 | **pending** | Gauss's law for currents; solenoid, toroid, forces between wires, loop torque |
-| 24 | Cyclotron, velocity selector & the Hall effect — `moving-charges-magnetism` | 18 | **pending** | one fact — the cyclotron frequency — and the instruments built on it |
-| 25 | Magnetism & matter, Earth's magnetism — `magnetism-and-matter` | 19 | **pending** | dia/para/ferro, $\mathbf B$–$\mathbf H$–$\mathbf M$, hysteresis, dip and declination |
-| 26 | Electromagnetic induction — `electromagnetic-induction` | 20 | **pending** | Faraday, Lenz as energy conservation, motional EMF, induced fields, eddy currents |
-| 27 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | 21 | **pending** | the inertia of current; $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
-| 28 | Alternating current, resonance & transformers — `alternating-current` | 22 | **pending** | phasors, impedance, LCR resonance, power factor, transformers, rectifiers |
+| 17 | [Electrostatics](../../electrostatics/Electrostatics.md) | 13–15 | **in progress** (stage 1/3: theory done) | Coulomb's law summed three ways — vectors (field), surfaces (flux), scalars (potential); the element-and-symmetry method; conductors; dipoles; energy |
+| 18 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
+| 19 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
+| 20 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | 16 | **pending** | the field of a current; the force on a moving charge and on a wire |
+| 21 | Ampère's law, currents & magnetic dipoles — `amperes-law` | 17 | **pending** | Gauss's law for currents; solenoid, toroid, forces between wires, loop torque |
+| 22 | Cyclotron, velocity selector & the Hall effect — `moving-charges-magnetism` | 18 | **pending** | one fact — the cyclotron frequency — and the instruments built on it |
+| 23 | Magnetism & matter, Earth's magnetism — `magnetism-and-matter` | 19 | **pending** | dia/para/ferro, $\mathbf B$–$\mathbf H$–$\mathbf M$, hysteresis, dip and declination |
+| 24 | Electromagnetic induction — `electromagnetic-induction` | 20 | **pending** | Faraday, Lenz as energy conservation, motional EMF, induced fields, eddy currents |
+| 25 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | 21 | **pending** | the inertia of current; $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
+| 26 | Alternating current, resonance & transformers — `alternating-current` | 22 | **pending** | phasors, impedance, LCR resonance, power factor, transformers, rectifiers |
 
 ## Block D · Electromagnetic waves and optics
 
 | # | chapter | why here |
 |--:|---|---|
-| 29 | [Electromagnetic waves](../../electromagnetic-waves/Electromagnetic-waves.md) | Maxwell's equations close the E&M story: displacement current, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure |
-| 30 | [Geometrical optics](../../geometrical-optics/Geometrical-optics.md) | the short-wavelength limit: mirrors, refraction, prisms, lenses, instruments |
-| 31 | [Wave optics](../../wave-optics/Wave-optics.md) | the wavelength back in: Huygens, YDSE, thin films, diffraction, polarisation — needs 13, 14 and 29 |
+| 27 | [Electromagnetic waves](../../electromagnetic-waves/Electromagnetic-waves.md) | Maxwell's equations close the E&M story: displacement current, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure |
+| 28 | [Geometrical optics](../../geometrical-optics/Geometrical-optics.md) | the short-wavelength limit: mirrors, refraction, prisms, lenses, instruments |
+| 29 | [Wave optics](../../wave-optics/Wave-optics.md) | the wavelength back in: Huygens, YDSE, thin films, diffraction, polarisation — needs 13, 14 and 29 |
 
 ## Block E · Modern physics (plan.md PART 23–28)
 
 | # | chapter | plan PART | why here |
 |--:|---|:-:|---|
-| 32 | [Photoelectric effect & matter waves](../../photoelectric-effect/Photoelectric-effect.md) | 23 | light as quanta; de Broglie |
-| 33 | [Atomic structure](../../atomic-structure/Atomic-structure.md) | 24 | Rutherford, Bohr, spectra — quantisation applied to the atom |
-| 34 | [X-rays](../../x-rays/X-rays.md) | 25 | Moseley, Bragg, Compton — the photon picture tested at high energy |
-| 35 | [Nuclear physics](../../nuclear-physics/Nuclear-physics.md) | 26 | binding energy, radioactivity, fission and fusion |
-| 36 | [Semiconductors](../../semiconductors/Semiconductors.md) | 27 | band picture, diodes, transistors, logic gates |
-| 37 | [Communication systems](../../communication-systems/Communication-systems.md) | appendix | JEE-Main depth only; modulation, bandwidth, propagation |
-| 38 | [Special relativity](../../special-relativity/Special-relativity.md) | 28 | the Olympiad capstone: Lorentz transformations, $E=mc^2$, relativistic dynamics |
+| 30 | [Photoelectric effect & matter waves](../../photoelectric-effect/Photoelectric-effect.md) | 23 | light as quanta; de Broglie |
+| 31 | [Atomic structure](../../atomic-structure/Atomic-structure.md) | 24 | Rutherford, Bohr, spectra — quantisation applied to the atom |
+| 32 | [X-rays](../../x-rays/X-rays.md) | 25 | Moseley, Bragg, Compton — the photon picture tested at high energy |
+| 33 | [Nuclear physics](../../nuclear-physics/Nuclear-physics.md) | 26 | binding energy, radioactivity, fission and fusion |
+| 34 | [Semiconductors](../../semiconductors/Semiconductors.md) | 27 | band picture, diodes, transistors, logic gates |
+| 35 | [Communication systems](../../communication-systems/Communication-systems.md) | appendix | JEE-Main depth only; modulation, bandwidth, propagation |
+| 36 | [Special relativity](../../special-relativity/Special-relativity.md) | 28 | the Olympiad capstone: Lorentz transformations, $E=mc^2$, relativistic dynamics |
 
 ## Live view (Dataview)
 

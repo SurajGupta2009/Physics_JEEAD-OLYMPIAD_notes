@@ -2,7 +2,7 @@
 title: Photons, Photoelectric Effect & Matter Waves — first principles to Olympiad
 part: 23
 slug: photoelectric-effect
-order: 32
+order: 30
 block: modern
 status: complete
 source: Cengage Optics and Modern Physics, ch 3 Photoelectric Effect (pp. 3.1-3.41)

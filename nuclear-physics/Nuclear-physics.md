@@ -2,7 +2,7 @@
 title: Nuclear Structure, Radioactivity, Fission & Fusion — first principles to Olympiad
 part: 26
 slug: nuclear-physics
-order: 35
+order: 33
 block: modern
 status: complete
 source: Cengage Optics and Modern Physics, ch 5 Nuclear Physics (pp. 5.1-5.39)

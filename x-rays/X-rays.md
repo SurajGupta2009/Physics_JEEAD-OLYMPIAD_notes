@@ -2,7 +2,7 @@
 title: X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad
 part: 25
 slug: x-rays
-order: 34
+order: 32
 block: modern
 status: complete
 source: Cengage Optics and Modern Physics, ch 4 Atomic Physics pp. 4.25-4.32 (X-rays, X-ray spectra, Moseley's law)

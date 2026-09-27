@@ -119,13 +119,14 @@ Regenerate all six with:
 python3 tools/html_to_markdown.py
 ```
 
-## The course order (all 38 slots)
+## The course order (all 36 slots)
 
 The way the syllabus is taught, and the order the Obsidian dashboards use
 ([`_obsidian/dashboards/spine.md`](_obsidian/dashboards/spine.md)): every chapter relies only on the
 ones above it. The `order` is registered in `topics.json` and written into each chapter's
-frontmatter; `tools/check_all.py` keeps the two equal. The ten **pending** slots are the
-Electricity & Magnetism chapters listed in [PENDING.md](PENDING.md).
+frontmatter; `tools/check_all.py` keeps the two equal. Slot 17, the electrostatics module
+(plan.md PARTs 13–15 merged into one chapter), is **in progress**; the seven **pending** slots are
+the magnetism → induction → AC chapters listed in [PENDING.md](PENDING.md).
 
 | order | chapter | block | plan.md PART | status | it supplies the next chapters with |
 |:-:|---|---|:-:|:-:|---|
@@ -145,28 +146,26 @@ Electricity & Magnetism chapters listed in [PENDING.md](PENDING.md).
 | 14 | [Sound waves](sound-waves/Sound-waves.md) | waves | — | ✅ | intensity as energy flux, pipes, beats, Doppler |
 | 15 | [Thermodynamics](thermodynamics/Thermodynamics.md) | thermal | — | ✅ | kinetic theory, the two laws, $\gamma$, entropy |
 | 16 | [Heat](heat/Heat.md) | thermal | — | ✅ | expansion, calorimetry, conduction / convection / radiation |
-| 17 | Charge, Coulomb's law & electric field — `electric-field` | electricity-magnetism | 13 | ⏳ pending | superposition, the element-and-symmetry method, dipoles |
-| 18 | Electric flux & Gauss's law — `gauss-law` | electricity-magnetism | 14 | ⏳ pending | flux, symmetry fields, conductors and cavities |
-| 19 | Electric potential & conductors — `electric-potential` | electricity-magnetism | 15 | ⏳ pending | $V$, equipotentials, $\mathbf E=-\nabla V$, energy of distributions |
-| 20 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
-| 21 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
-| 22 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | electricity-magnetism | 16 | ⏳ pending | fields of currents, force on charges and wires |
-| 23 | Ampère's law, currents & magnetic dipoles — `amperes-law` | electricity-magnetism | 17 | ⏳ pending | solenoid, toroid, forces between currents, loop torque |
-| 24 | Cyclotron, velocity selector & the Hall effect — `moving-charges-magnetism` | electricity-magnetism | 18 | ⏳ pending | the cyclotron frequency and its instruments |
-| 25 | Magnetism & matter, Earth's magnetism — `magnetism-and-matter` | electricity-magnetism | 19 | ⏳ pending | $\mathbf B$–$\mathbf H$–$\mathbf M$, hysteresis, dip and declination |
-| 26 | Electromagnetic induction — `electromagnetic-induction` | electricity-magnetism | 20 | ⏳ pending | Faraday, Lenz, motional EMF, induced fields, eddy currents |
-| 27 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | electricity-magnetism | 21 | ⏳ pending | $L$, $M$, $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
-| 28 | Alternating current, resonance & transformers — `alternating-current` | electricity-magnetism | 22 | ⏳ pending | phasors, impedance, resonance, power factor, transformers |
-| 29 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
-| 30 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
-| 31 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |
-| 32 | [Photoelectric effect & matter waves](photoelectric-effect/Photoelectric-effect.md) | modern | 23 | ✅ | photons, de Broglie |
-| 33 | [Atomic structure](atomic-structure/Atomic-structure.md) | modern | 24 | ✅ | Rutherford, Bohr, spectra |
-| 34 | [X-rays](x-rays/X-rays.md) | modern | 25 | ✅ | Moseley, Bragg, Compton |
-| 35 | [Nuclear physics](nuclear-physics/Nuclear-physics.md) | modern | 26 | ✅ | binding energy, radioactivity, fission and fusion |
-| 36 | [Semiconductors](semiconductors/Semiconductors.md) | modern | 27 | ✅ | bands, diodes, transistors, logic |
-| 37 | [Communication systems](communication-systems/Communication-systems.md) | modern | appendix | ✅ | modulation, bandwidth, propagation (JEE-Main depth) |
-| 38 | [Special relativity](special-relativity/Special-relativity.md) | modern | 28 | ✅ | Lorentz transformations, $E=mc^2$, relativistic dynamics |
+| 17 | [Electrostatics](electrostatics/Electrostatics.md) | electricity-magnetism | 13–15 | 🚧 stage 1/3 | charge and Coulomb, the field of any distribution, Gauss, potential, energy of charges, conductors |
+| 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
+| 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
+| 20 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | electricity-magnetism | 16 | ⏳ pending | fields of currents, force on charges and wires |
+| 21 | Ampère's law, currents & magnetic dipoles — `amperes-law` | electricity-magnetism | 17 | ⏳ pending | solenoid, toroid, forces between currents, loop torque |
+| 22 | Cyclotron, velocity selector & the Hall effect — `moving-charges-magnetism` | electricity-magnetism | 18 | ⏳ pending | the cyclotron frequency and its instruments |
+| 23 | Magnetism & matter, Earth's magnetism — `magnetism-and-matter` | electricity-magnetism | 19 | ⏳ pending | $\mathbf B$–$\mathbf H$–$\mathbf M$, hysteresis, dip and declination |
+| 24 | Electromagnetic induction — `electromagnetic-induction` | electricity-magnetism | 20 | ⏳ pending | Faraday, Lenz, motional EMF, induced fields, eddy currents |
+| 25 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | electricity-magnetism | 21 | ⏳ pending | $L$, $M$, $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
+| 26 | Alternating current, resonance & transformers — `alternating-current` | electricity-magnetism | 22 | ⏳ pending | phasors, impedance, resonance, power factor, transformers |
+| 27 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
+| 28 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
+| 29 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |
+| 30 | [Photoelectric effect & matter waves](photoelectric-effect/Photoelectric-effect.md) | modern | 23 | ✅ | photons, de Broglie |
+| 31 | [Atomic structure](atomic-structure/Atomic-structure.md) | modern | 24 | ✅ | Rutherford, Bohr, spectra |
+| 32 | [X-rays](x-rays/X-rays.md) | modern | 25 | ✅ | Moseley, Bragg, Compton |
+| 33 | [Nuclear physics](nuclear-physics/Nuclear-physics.md) | modern | 26 | ✅ | binding energy, radioactivity, fission and fusion |
+| 34 | [Semiconductors](semiconductors/Semiconductors.md) | modern | 27 | ✅ | bands, diodes, transistors, logic |
+| 35 | [Communication systems](communication-systems/Communication-systems.md) | modern | appendix | ✅ | modulation, bandwidth, propagation (JEE-Main depth) |
+| 36 | [Special relativity](special-relativity/Special-relativity.md) | modern | 28 | ✅ | Lorentz transformations, $E=mc^2$, relativistic dynamics |
 
 ### Why this order
 
@@ -180,7 +179,7 @@ Electricity & Magnetism chapters listed in [PENDING.md](PENDING.md).
   sound.
 - **Thermodynamics before heat** (see the section above): heat uses $U$, $Q$, $W$ and the first-law
   ledger as established tools; thermodynamics also supplies the $\gamma$ in Laplace's speed of sound.
-- **Electrostatics in the order field → flux → potential**, then the two shipped circuit chapters
+- **Electrostatics as one module in the order field → flux → potential**, then the two shipped circuit chapters
   (capacitors need potential and Gauss; current needs potential difference), then magnetism in the
   order field → Ampère → applications → matter, then induction → inductance → AC as one continuous
   argument (plan.md §0.4).

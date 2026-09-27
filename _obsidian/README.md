@@ -16,14 +16,14 @@
 
 The course spine — mechanics → waves → thermal → electricity & magnetism → EM waves → optics →
 modern — is **[dashboards/spine.md](dashboards/spine.md)**. Every chapter's frontmatter carries its
-slot as `order:` (1–38) and its syllabus `block:`; the Dataview tables sort on those, and
+slot as `order:` (1–36) and its syllabus `block:`; the Dataview tables sort on those, and
 `tools/check_all.py` keeps them equal to `topics.json`.
 
 ## Dashboards
 
 | view | file | what it shows |
 |---|---|---|
-| Reading spine | [dashboards/spine.md](dashboards/spine.md) | the 38-slot course order with the one-line reason for each position |
+| Reading spine | [dashboards/spine.md](dashboards/spine.md) | the 36-slot course order with the one-line reason for each position |
 | Library | [dashboards/README.md](dashboards/README.md) | every chapter by order and by block, self-clearing "missing properties" list |
 | Pending chapters | [dashboards/pending.md](dashboards/pending.md) | the ten unwritten E&M chapters, dependencies, batches, definition of done |
 | Task queue | [dashboards/tasks.md](dashboards/tasks.md) | checkbox mirror of plan/PENDING + every open task in the vault |

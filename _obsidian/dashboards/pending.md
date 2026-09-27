@@ -1,7 +1,8 @@
 # Pending chapters — live queue
 
 > Mirror of [PENDING.md](../../PENDING.md) (the canonical list, kept in sync with `topics.json`).
-> Ten chapters remain, all in **Electricity & Magnetism** (plan.md PART 13–22). Mechanics
+> Seven chapters remain, all in **Electricity & Magnetism** (plan.md PART 16–22); PART 13–15 are
+> in progress as the single `electrostatics/` module (stage 1 of 3 — theory — done). Mechanics
 > (PART 1–12) and Modern Physics (PART 23–28) are complete. Tick a box here as bookkeeping only —
 > the registry (`topics.json` → `status`) is the source of truth.
 
@@ -10,18 +11,19 @@
 Each row depends on the one above it (the dependency *is* the teaching order). `order` is the
 course-spine slot the chapter takes in [spine.md](spine.md); `size` is plan.md §5.3's word band.
 
-- [ ] **PART 13** · `electric-field` · Charge, Coulomb's Law & Electric Field · order 17 · large (16–22k words) · needs PART 2 · Cengage *Electrostatics* ch 1 ✅ PDF in repo
-- [ ] **PART 14** · `gauss-law` · Electric Flux & Gauss's Law · order 18 · standard (12–16k) · needs 13 · Cengage *Electrostatics* ch 2 ✅ PDF in repo
-- [ ] **PART 15** · `electric-potential` · Electric Potential, Potential Energy & Conductors · order 19 · standard · needs 14 · Cengage *Electrostatics* ch 3 ✅ PDF in repo
-- [ ] **PART 16** · `magnetic-field` · Magnetic Field, Biot–Savart & the Lorentz Force · order 22 · large · needs 15 · no PDF — standard JEE Advanced headings
-- [ ] **PART 17** · `amperes-law` · Ampère's Law, Currents & Magnetic Dipoles · order 23 · standard · needs 16 · no PDF
-- [ ] **PART 18** · `moving-charges-magnetism` · Cyclotron, Velocity Selector & the Hall Effect · order 24 · standard · needs 17 · no PDF
-- [ ] **PART 19** · `magnetism-and-matter` · Magnetism & Matter, Earth's Magnetism · order 25 · compact (9–13k) · needs 17 · no PDF
-- [ ] **PART 20** · `electromagnetic-induction` · Faraday, Lenz, Motional EMF & Eddy Currents · order 26 · standard · needs 17 · no PDF
-- [ ] **PART 21** · `inductance` · Self & Mutual Inductance, RL Circuits & Magnetic Energy · order 27 · standard · needs 20 · no PDF
-- [ ] **PART 22** · `alternating-current` · Alternating Current, Resonance & Transformers · order 28 · large · needs 21 · no PDF
+- [/] **PART 13 + 14 + 15** · [`electrostatics`](../../electrostatics/Electrostatics.md) · Electrostatics — first principles to Olympiad · order 17 · one merged chapter in three stages · Cengage *Electrostatics* ch 1–3 ✅ PDF in repo
+    - [x] stage 1 · Parts 0–3 · the complete theory in teaching order (§3.1–§3.37) ✅ 2026-09-27
+    - [ ] stage 2 · Parts 4–9 · validity ledger, E1–E20, archetypes + Q1–Q50, toolkit, traps, playbook
+    - [ ] stage 3 · Parts 10–14 · Olympiad extension OL1–OL12, the 36-question / 200-mark paper, formula sheet, checkpoint
+- [ ] **PART 16** · `magnetic-field` · Magnetic Field, Biot–Savart & the Lorentz Force · order 20 · large · needs electrostatics (13–15) · no PDF — standard JEE Advanced headings
+- [ ] **PART 17** · `amperes-law` · Ampère's Law, Currents & Magnetic Dipoles · order 21 · standard · needs 16 · no PDF
+- [ ] **PART 18** · `moving-charges-magnetism` · Cyclotron, Velocity Selector & the Hall Effect · order 22 · standard · needs 17 · no PDF
+- [ ] **PART 19** · `magnetism-and-matter` · Magnetism & Matter, Earth's Magnetism · order 23 · compact (9–13k) · needs 17 · no PDF
+- [ ] **PART 20** · `electromagnetic-induction` · Faraday, Lenz, Motional EMF & Eddy Currents · order 24 · standard · needs 17 · no PDF
+- [ ] **PART 21** · `inductance` · Self & Mutual Inductance, RL Circuits & Magnetic Energy · order 25 · standard · needs 20 · no PDF
+- [ ] **PART 22** · `alternating-current` · Alternating Current, Resonance & Transformers · order 26 · large · needs 21 · no PDF
 
-Batches that may run in parallel (plan.md §0.4): **13 → 14 → 15** serially; **16 → 17**, then **18 ∥ 19**;
+Batches that may run in parallel (plan.md §0.4): **13 + 14 + 15** as one module (stages 2 and 3 left); **16 → 17**, then **18 ∥ 19**;
 **20 → 21 → 22 is one continuous argument — never split it across writers.**
 
 ## What "done" means for each

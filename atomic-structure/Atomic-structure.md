@@ -2,7 +2,7 @@
 title: Rutherford, the Bohr Model & Atomic Spectra — first principles to Olympiad
 part: 24
 slug: atomic-structure
-order: 33
+order: 31
 block: modern
 status: complete
 source: Cengage Optics and Modern Physics, ch 4 Atomic Physics (pp. 4.1-4.24)

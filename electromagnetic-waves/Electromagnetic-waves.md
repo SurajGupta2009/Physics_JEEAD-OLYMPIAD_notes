@@ -2,7 +2,7 @@
 title: Electromagnetic Waves — from Maxwell to Olympiad
 part: 3
 slug: electromagnetic-waves
-order: 29
+order: 27
 block: waves
 status: complete
 source: original Markdown-first course, plan-v1 PART 3 scope (Maxwell, waves, Poynting, pressure, spectrum)

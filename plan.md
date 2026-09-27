@@ -1652,6 +1652,16 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 > `> [!quote] Hand-off` — capacitance is the shipped `capacitors/` note's property; here we only meet the
 > field that makes it.`
 
+> [!note] Amendment 2026-09-27 — PARTs 13, 14 and 15 are one module
+> At the owner's direction the three electrostatics parts are delivered as **one chapter in one
+> folder, `electrostatics/`** (`Electrostatics.md`, spine slot 17, `part: 13`, `plan_parts: [13, 14, 15]`),
+> written in three stages (theory → exemplars/practice/toolkit/traps/playbook → Olympiad block, paper,
+> formula sheet, checkpoint). The section tables, must-derive lists, figure briefs and Olympiad minimums
+> of PART 13, 14 and 15 below remain the content contract; their §1.4 blocks are merged (one Part 3 in
+> the order field → flux → potential, one paper of 36 questions / 200 marks, one archetype table of at
+> least the union of the three mandatory lists). The folders `electric-field/`, `gauss-law/` and
+> `electric-potential/` are **not** to be created; the course spine has 36 slots, not 38.
+
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 
 `electric-field` · folder `electric-field/` · source: Cengage ***Electrostatics and Current
