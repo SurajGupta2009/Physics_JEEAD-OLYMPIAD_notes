@@ -5,8 +5,8 @@ plan_parts: [16, 17, 18, 19]
 slug: magnetism
 order: 20
 block: electricity-magnetism
-status: in-progress
-stage: 1
+status: complete
+stage: 3
 source: no Cengage volume in this repository for magnetism; the coverage map is built from the standard JEE Advanced headings listed in plan.md PART 16–19 and the shipped current-electricity and electromagnetic-waves notes
 aliases: [magnetism, magnetic field, lorentz force, biot-savart law, ampere's law, cyclotron, hall effect, magnetic dipole, magnetism and matter, earth's magnetism]
 tags: [jee-advanced, olympiad, electricity-magnetism, magnetism]
@@ -17,14 +17,14 @@ tags: [jee-advanced, olympiad, electricity-magnetism, magnetism]
 > [!abstract] How to use this chapter
 > One module for the whole of magnetostatics and magnetic matter, in three passes. **Pass 1: Parts 0–3** — the theory in teaching order: the force on a moving charge first (the *effect*), then everything a charge does in a field (circles, helices, selectors, cyclotrons, mirrors, the Hall effect, drifts), then the *cause* — currents as sources through Biot–Savart and Ampère — then forces and torques on currents, the magnetic dipole, matter's three responses, and the Earth as a magnet. **Pass 2: Parts 4–9** — the validity ledger, worked exemplars, the archetype table with practice, the toolkit, the traps, the playbook. **Pass 3: Parts 10–14** — the Olympiad layer (magnetism as relativity, the cycloid two ways, magnetic pressure and the pinch, Helmholtz coils, the magnetised sphere, Fermi acceleration, the Curie-temperature estimate), the 200-mark paper, the marking scheme, the formula sheet and the checkpoint. Every number is recomputed; every boxed result carries its condition of validity.
 
-> [!warning] Stage 1 of 3 — what is on the page today
-> The module merges plan.md PARTs 16, 17, 18 and 19 into one chapter, written in three turns. **This stage ships Parts 0–3 in full** — the complete theory from the Lorentz force to the Earth's dipole. Parts 4–14 carry a one-paragraph statement of what they will contain and are written in stages 2 and 3; the local gate (`tools/check.py`) enforces the reading-mode, media and maths rules now and the question families and the paper when their stage arrives. Nothing in Parts 0–3 will be rewritten later: later stages *add* blocks.
+> [!note] One module for four plan parts
+> The module merges plan.md PARTs 16, 17, 18 and 19 into one chapter and was written in three stages — theory (Parts 0–3), exam craft (Parts 4–9), Olympiad layer and paper (Parts 10–14). All three are now on the page; `tools/check.py` enforces the full plan.md §1 contract.
 
 ## Part 0 · Orientation
 
 ### 0.1 What you will be able to do
 
-After this chapter you can: write the Lorentz force and get its direction from $\mathbf v\times\mathbf B$ with the sign of the charge applied afterwards, and say why a magnetic field never changes a particle's speed; derive the radius and the period of a charge's circle and explain why the period does not depend on the speed — then build the cyclotron, the mass spectrometer and the velocity selector on that one fact; run the three-region method for a particle crossing field boundaries; derive the pitch of a helix, the magnetic-mirror invariant and the loss cone; derive the Hall voltage and read a carrier's sign from it; derive the $\mathbf E\times\mathbf B$ drift and the cycloid; reconstruct Thomson's $e/m$; write Biot–Savart and integrate it for a finite wire, a loop on its axis, an arc, a solenoid and a toroid, with every limit checked; motivate and state Ampère's law with its sign convention, and use it for the wire, the thick wire, the coaxial cable, the sheet, the solenoid, the toroid and the overlapping cylinders; decide between Ampère and Biot–Savart in ten seconds; derive $\mathbf F=I\mathbf L\times\mathbf B$ from the force on carriers, the chord theorem, the torque $\boldsymbol\mu\times\mathbf B$ and the energy $-\boldsymbol\mu\cdot\mathbf B$, the force between parallel currents and the magnetic pressure $B^2/2\mu_0$; explain how a motor does work when the magnetic force does none; derive the gyromagnetic ratio of a rotating charge; describe a magnet as a solenoid of bound currents, relate $\mathbf B$, $\mathbf H$ and $\mathbf M$, explain dia-, para- and ferromagnetism mechanically, read a hysteresis loop as an energy diagram, and derive the core's amplification; and resolve the Earth's field into its three components at any place. The Olympiad layer (Part 10, stage 3) adds the derivation of magnetism from electrostatics and relativity, the pinch, Helmholtz coils, the magnetised sphere and Fermi acceleration.
+After this chapter you can: write the Lorentz force and get its direction from $\mathbf v\times\mathbf B$ with the sign of the charge applied afterwards, and say why a magnetic field never changes a particle's speed; derive the radius and the period of a charge's circle and explain why the period does not depend on the speed — then build the cyclotron, the mass spectrometer and the velocity selector on that one fact; run the three-region method for a particle crossing field boundaries; derive the pitch of a helix, the magnetic-mirror invariant and the loss cone; derive the Hall voltage and read a carrier's sign from it; derive the $\mathbf E\times\mathbf B$ drift and the cycloid; reconstruct Thomson's $e/m$; write Biot–Savart and integrate it for a finite wire, a loop on its axis, an arc, a solenoid and a toroid, with every limit checked; motivate and state Ampère's law with its sign convention, and use it for the wire, the thick wire, the coaxial cable, the sheet, the solenoid, the toroid and the overlapping cylinders; decide between Ampère and Biot–Savart in ten seconds; derive $\mathbf F=I\mathbf L\times\mathbf B$ from the force on carriers, the chord theorem, the torque $\boldsymbol\mu\times\mathbf B$ and the energy $-\boldsymbol\mu\cdot\mathbf B$, the force between parallel currents and the magnetic pressure $B^2/2\mu_0$; explain how a motor does work when the magnetic force does none; derive the gyromagnetic ratio of a rotating charge; describe a magnet as a solenoid of bound currents, relate $\mathbf B$, $\mathbf H$ and $\mathbf M$, explain dia-, para- and ferromagnetism mechanically, read a hysteresis loop as an energy diagram, and derive the core's amplification; and resolve the Earth's field into its three components at any place. The Olympiad layer (Part 10) adds the derivation of magnetism from electrostatics and relativity, the pinch, Helmholtz coils, the magnetised sphere and Fermi acceleration.
 
 ### 0.2 The one idea
 
@@ -62,11 +62,11 @@ A magnetic field acts only on *moving* charge, always at right angles to the mot
 
 ### 0.5 How to use the chapter
 
-Read Part 3 straight through once, doing the worked examples with pencil (there are ten of them inside the theory; the exemplars E1–E20 of stage 2 add the exam craft). Every derivation ends with a check; do not skip it, because the checks are where the traps of Part 8 are first defused. Then come back to §3.3 and §3.13 and make sure you can say why the cyclotron period is independent of speed and why Biot–Savart has a cross product in it — the chapter hangs on those two.
+Read Part 3 straight through once, doing the worked examples with pencil (there are ten of them inside the theory; the exemplars E1–E20 of Part 5 add the exam craft). Every derivation ends with a check; do not skip it, because the checks are where the traps of Part 8 are first defused. Then come back to §3.3 and §3.13 and make sure you can say why the cyclotron period is independent of speed and why Biot–Savart has a cross product in it — the chapter hangs on those two.
 
 ### 0.6 Coverage map
 
-There is no Cengage magnetism volume in this repository (plan.md Block B). The floor is therefore the standard JEE Advanced syllabus as itemised in plan.md PART 16–19 (headings as printed there), plus what the shipped [[Current-electricity|current-electricity]] and [[Electromagnetic-waves|electromagnetic-waves]] notes assume of this chapter. Status vocabulary: **derived**, **stated + used**, **extended beyond floor**, and — for exam craft — **archetypes (Parts 5–6, stage 2)**.
+There is no Cengage magnetism volume in this repository (plan.md Block B). The floor is therefore the standard JEE Advanced syllabus as itemised in plan.md PART 16–19 (headings as printed there), plus what the shipped [[Current-electricity|current-electricity]] and [[Electromagnetic-waves|electromagnetic-waves]] notes assume of this chapter. Status vocabulary: **derived**, **stated + used**, **extended beyond floor**, and — for exam craft — **archetypes (Parts 5–6)**.
 
 **PART 16 · Magnetic field, Biot–Savart and the Lorentz force**
 
@@ -1149,55 +1149,1808 @@ To a first approximation the Earth's field is that of a dipole at its centre, ti
 
 ## Part 4 · Results, limits and the validity ledger
 
-> [!warning] Stage 2 deliverable
-> Written in the module's second stage: the boxed results of Part 3 with their conditions of validity and limit checks in one table, the "which formula when" table for sources and forces, and the correspondence chain (finite wire → infinite wire → sheet; loop → dipole; solenoid → sheet pair → toroid; two-level paramagnet → Curie law).
+Every boxed result of Part 3, with the condition under which it holds and the limit that checks it.
+
+| result | formula | valid when | limit check |
+|---|---|---|---|
+| Lorentz force | $\mathbf F=q(\mathbf E+\mathbf v\times\mathbf B)$ | always (defines $\mathbf B$) | $\mathbf v\parallel\mathbf B$: magnetic part $0$ ✓ |
+| no work | $\mathbf F_{\text{mag}}\cdot\mathbf v=0$ | always | speed constant in any pure $\mathbf B$ ✓ |
+| circle | $r=mv_\perp/\lvert q\rvert B$, $\omega_c=\lvert q\rvert B/m$, $T=2\pi m/\lvert q\rvert B$ | uniform $\mathbf B$, $v\ll c$ | $T$ independent of $v$; relativistic: $m\to\gamma m$ |
+| helix | pitch $2\pi mv\cos\theta/\lvert q\rvert B$ | uniform $\mathbf B$ | $\theta=90^\circ$: circle; $0$: straight ✓ |
+| selector | $v=E/B$ | $\mathbf E\perp\mathbf B\perp\mathbf v$ | independent of $q$, $m$ ✓ |
+| strip of width $d$ | crosses if $r>d$, $\sin\varphi=d/r$, $t=\varphi m/qB$ | uniform field in the strip | $r<d$: half turn, $t=\pi m/qB$ |
+| spectrometer | $r=\sqrt{2mV/q}/B$; $r_1/r_2=\sqrt{m_1/m_2}$ | same $q$, $V$, $B$ | $\Delta r/r=\tfrac12\Delta m/m$ |
+| cyclotron | $f=qB/2\pi m$, $K_{\max}=q^2B^2R^2/2m$ | $\gamma-1\ll1$ | fails at $K\sim$ few % of $mc^2$ |
+| mirror | $\mu=mv_\perp^2/2B$ const; trapped if $\sin^2\theta_0>B_0/B_{\max}$ | $B$ slowly varying over an orbit | $B_{\max}\to\infty$: everything trapped ✓ |
+| Hall | $V_H=IB/nqt$, $R_H=1/nq$ | one carrier type | sign of $V_H$ = sign of carriers |
+| $\mathbf E\times\mathbf B$ drift | $\mathbf v_d=\mathbf E\times\mathbf B/B^2$ | $E<cB$ | same for $\pm q$, any $m$ ✓ |
+| cycloid | $r_c=mE/qB^2$, height $2r_c$, $v_{\max}=2E/B$ | from rest | energy: $\tfrac12m(2E/B)^2=qE\cdot2r_c$ ✓ |
+| gradient drift | $\mathbf v=\pm\tfrac12v_\perp r\,\mathbf B\times\nabla B/B^2$ | $r\lvert\nabla B\rvert\ll B$ | opposite for $\pm q$: a current |
+| Thomson | $q/m=2yE/B^2L^2$; $v=E/B$ | small deflection | gives only the ratio |
+| track rule | $p\,[\text{MeV}/c]=300\,B\,[\text{T}]\,r\,[\text{m}]$ | any speed (uses $p$) | non-relativistic: $K=p^2/2m$ |
+| Biot–Savart | $d\mathbf B=\tfrac{\mu_0}{4\pi}I\,d\mathbf l\times\hat{\mathbf r}/r^2$ | steady currents | on the element's line: $0$ ✓ |
+| moving charge | $\mathbf B=\tfrac{\mu_0}{4\pi}q\mathbf v\times\hat{\mathbf r}/r^2=\mathbf v\times\mathbf E/c^2$ | $v\ll c$ | ratio to $E$: $v/c$ |
+| finite wire | $\tfrac{\mu_0I}{4\pi d}(\sin\alpha+\sin\beta)$ | straight segment | $\alpha=\beta=90^\circ$: $\mu_0I/2\pi d$; semi-infinite $\mu_0I/4\pi d$ |
+| loop | centre $\mu_0I/2R$; axis $\mu_0IR^2/2(R^2+x^2)^{3/2}$ | thin loop | $x\gg R$: $\tfrac{\mu_0}{4\pi}2\mu/x^3$ ✓ |
+| arc | $\mu_0I\theta_0/4\pi R$ | at the centre | $\theta_0=2\pi$: loop ✓; straight pieces through the centre: $0$ |
+| solenoid | $\tfrac12\mu_0nI(\cos\theta_1+\cos\theta_2)$; $\mu_0nI$ inside | long; $L\gg R$ for the plateau | end: $\tfrac12\mu_0nI$; outside $\to0$ |
+| toroid | $\mu_0NI/2\pi r$ | inside the winding | hole and outside: $0$ |
+| dipole | $\tfrac{\mu_0}{4\pi}2\mu/r^3$ axis, $\tfrac{\mu_0}{4\pi}\mu/r^3$ equator | $r\gg\sqrt A$ | electric twin with $kp\to\mu_0\mu/4\pi$ |
+| Ampère | $\oint\mathbf B\cdot d\mathbf l=\mu_0I_{\text{enc}}$ | steady currents; useful with symmetry | non-enclosing loop: $0$ ✓ |
+| thick wire | $\mu_0Ir/2\pi a^2$ in, $\mu_0I/2\pi r$ out | uniform $J$, long | continuous at $a$ ✓ |
+| coax shell | $\tfrac{\mu_0I}{2\pi r}\tfrac{c^2-r^2}{c^2-b^2}$ | $b<r<c$ | $r=b$: $\mu_0I/2\pi b$; $r=c$: $0$ ✓ |
+| sheet | $\mu_0K/2$ each side; two sheets $\mu_0K$ between | infinite sheets | independent of distance |
+| overlap / hole | $\mathbf B=\tfrac12\mu_0\mathbf J\times\mathbf d$ | long cylinders | $d\to0$: $0$ ✓ |
+| no monopoles | $\oint\mathbf B\cdot d\mathbf A=0$ | always | cut magnet: two magnets |
+| force on current | $\mathbf F=I\mathbf L\times\mathbf B$; curved $=$ chord; closed loop $0$ | uniform $\mathbf B$ | non-uniform: $\nabla(\boldsymbol\mu\cdot\mathbf B)$ |
+| torque, energy | $\boldsymbol\mu\times\mathbf B$, $-\boldsymbol\mu\cdot\mathbf B$, $T=2\pi\sqrt{I_m/\mu B}$ | uniform $\mathbf B$; small angles | galvanometer: $\varphi=NABI/\kappa$ |
+| parallel wires | $F/L=\mu_0I_1I_2/2\pi d$ | long, parallel | same direction attracts |
+| magnetic pressure | $(B_1^2-B_2^2)/2\mu_0$; $B^2/2\mu_0$ | current sheet | $1$ T: $4\times10^5$ Pa |
+| gyromagnetic | $\mu/L=q/2m$; $\mu_B=e\hbar/2m_e$ | charge distributed like mass | spin: twice this |
+| rotating disc | $B_{\text{centre}}=\mu_0\sigma\omega R/2$ | uniform $\sigma$ | $\propto R$ |
+| bound current | $K_b=M$; magnetised sphere $\tfrac23\mu_0M$ | uniform $\mathbf M$ | long cylinder: $\mu_0M$ |
+| $B$, $H$, $M$ | $\mathbf B=\mu_0(\mathbf H+\mathbf M)$; $\mathbf M=\chi\mathbf H$; $\mu_r=1+\chi$ | linear media | ferromagnets: $\mu_r$ not constant |
+| diamagnet | $\chi=-\mu_0nZe^2\langle r^2\rangle/6m_e$ | closed shells | $\sim-10^{-5}$, $T$-independent |
+| paramagnet | $M=n\mu\tanh(\mu B/k_BT)$; $\chi=\mu_0n\mu^2/k_BT$ | independent moments | saturation at $x\gtrsim1$ |
+| hysteresis | loss/cycle/volume $=\oint H\,dB$ | ferromagnet | soft: small; hard: large |
+| core | $B=\mu_r\mu_0nI$; gapped $\mu_0NI/(g+\ell/\mu_r)$ | below saturation | $B\le B_s\approx2.1$ T |
+| lift | $F=B^2A/2\mu_0$ | small gap | $1$ T, $10$ cm$^2$: $400$ N |
+| Earth | $B_H=B\cos\theta_{\text{dip}}$, $B_V=B\sin\theta_{\text{dip}}$; $\mu_\oplus=B_{\text{eq}}R^3/10^{-7}$ | dipole model | equator: dip $0$; poles: $90^\circ$ |
+
+### 4.1 Which formula when
+
+| the question gives | reach for | not for |
+|---|---|---|
+| a charge with a velocity and a field | $q\mathbf v\times\mathbf B$, then the sign; circle, helix, strip | "the field accelerates it" |
+| crossed $\mathbf E$ and $\mathbf B$ | $v=E/B$ if undeflected; otherwise the drift plus a circle | adding the two forces as scalars |
+| a straight wire, polygon, arc, loop, short coil | Biot–Savart: angles, $\theta_0$, the axis formula | Ampère (no symmetry) |
+| a long wire, thick wire, coax, sheet, solenoid, toroid | Ampère with the matching loop | points near ends |
+| a wire or loop in a field | $I\mathbf L\times\mathbf B$, the chord, $\boldsymbol\mu\times\mathbf B$ | the loop's own field |
+| a magnet | its moment $\mu$: dipole field, $\boldsymbol\mu\times\mathbf B$, $T=2\pi\sqrt{I_m/\mu B}$ | pole strengths inside the material |
+| a material in a field | $\chi$, $\mu_r$, $B=\mu_0(H+M)$; saturation for iron | Curie's law below $T_c$ |
+| the Earth | $B_H$, $B_V$, dip, declination as a 3-D vector | dip for declination |
+
+### 4.2 The correspondence chain
+
+> [!tip] FIGURE F16.8 · How the standard fields reduce to one another
+> *Why:* the ledger has forty rows and four independent facts; every arrow is a limit you can take in one line.
+> *Data:* the limits of Part 3: finite wire → infinite wire ($L\to\infty$) and → element ($d\gg L$); loop → dipole ($x\gg R$) and → arc (partial); stacked loops → solenoid → sheet pair ($R\to\infty$) and → toroid (bent); thick wire → thin wire (outside) and → hole (superposed); electric twins beside each.
+
+```mermaid
+flowchart LR
+  FW["finite wire: angles"] -- "L to infinity" --> IW["infinite wire: mu0 I / 2 pi d"]
+  FW -- "d much greater than L" --> EL["one element: Biot-Savart"]
+  LOOP["loop on axis"] -- "x much greater than R" --> DIP["dipole: mu0 2 mu / 4 pi r^3"]
+  ARC["arc: mu0 I theta / 4 pi R"] -- "theta = 2 pi" --> LOOP
+  LOOP -- "stack with n per metre" --> SOL["solenoid: mu0 n I"]
+  SOL -- "R to infinity" --> SH["two sheets: mu0 K between"]
+  SOL -- "bend into a ring" --> TOR["toroid: mu0 N I / 2 pi r"]
+  TW["thick wire: mu0 I r / 2 pi a^2"] -- "outside" --> IW
+  TW -- "subtract a cylinder" --> HOLE["hole: uniform mu0 J d / 2"]
+  MAG["magnetised cylinder: K = M"] -- "same currents" --> SOL
+  DIP -- "twin" --> EDIP["electric dipole: 2 k p / r^3"]
+  IW -- "twin" --> LINE["line charge: lambda / 2 pi eps0 d"]
+```
+
+> *Read:* the infinite wire and the dipole are the two hubs; if a derived field does not reach one of them in the appropriate limit, it is wrong.
+
+> [!danger] Trap — the row is right, the column is wrong
+> The commonest Section D loss: a correct formula outside its "valid when" cell — $\mu_0nI$ at the end of a solenoid, $r=mv/qB$ with the full speed for a helix, the period where the time in a strip was asked, $\mu_0I/2\pi d$ for a finite wire, Curie's law for iron, $B=\mu_rnI$ without the $\mu_0$.
 
 ## Part 5 · Worked exemplars
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: concept checks C1–C14 and exemplars E1–E20 at the point of theory they use — force directions with signs, radius and period, a helix, the three-region strip, a mass-spectrometer separation, a cyclotron, a mirror ratio, a Hall probe, a cycloid, Thomson's tube, the square and the hexagon, a compound loop, a finite solenoid, a coaxial cable, the hole in a wire, a torque and a galvanometer, parallel wires, the magnetic pressure, an oscillating magnet, a core and a gap, the Earth's components — each with a collapsible solution and a check.
+**C1 — concept check.** A proton is at rest in a region of uniform magnetic field. Describe its motion. Then it is given a small push along the field; and finally a small push across it.
+
+<details><summary>Solution</summary>
+
+At rest it stays at rest — no velocity, no magnetic force. Pushed along $\mathbf B$ it moves uniformly along the field line, still feeling nothing. Pushed across it circles at the cyclotron frequency with a radius proportional to the push. A magnetic field never *starts* anything.
+
+</details>
+
+**C2 — concept check.** Two particles with the same charge and the same kinetic energy but different masses enter the same field perpendicularly. Which circle is larger, and by what factor?
+
+<details><summary>Solution</summary>
+
+$r=p/qB=\sqrt{2mK}/qB$: the heavier one, by $\sqrt{m_1/m_2}$. At the same *momentum* the radii would be equal; at the same *speed* the ratio would be $m_1/m_2$.
+
+</details>
+
+**C3 — concept check.** Why can a fixed-frequency voltage accelerate a cyclotron's protons through hundreds of turns, and why does it eventually fail?
+
+<details><summary>Solution</summary>
+
+Because $T=2\pi m/qB$ contains no speed: every half-turn takes the same time whatever the energy. It fails when relativity increases the effective mass by a few per cent — the period lengthens and the voltage arrives early.
+
+</details>
+
+**C4 — concept check.** A charged particle spirals along a field line towards a region where the field lines converge. What happens to its speed, its perpendicular speed, and its direction?
+
+<details><summary>Solution</summary>
+
+Speed constant (no work). Perpendicular speed grows as $\sqrt B$ ($mv_\perp^2/2B$ invariant), so the parallel speed falls; if $B$ reaches $B_0/\sin^2\theta_0$ the particle stops advancing and is reflected.
+
+</details>
+
+**C5 — concept check.** A copper strip and a silicon strip of the same dimensions carry the same current in the same field. Which shows the larger Hall voltage, and how does the polarity tell you the carrier sign?
+
+<details><summary>Solution</summary>
+
+Silicon, by the ratio of carrier densities ($\sim10^{7}$–$10^{8}$). The carriers of either sign are pushed to the *same* edge by $q\mathbf v_d\times\mathbf B$; that edge becomes positive for holes and negative for electrons.
+
+</details>
+
+**C6 — concept check.** A long straight wire and a point on its own line, beyond one end. What is the field there, and why?
+
+<details><summary>Solution</summary>
+
+Zero: every element has $d\mathbf l\parallel\hat{\mathbf r}$, so $d\mathbf l\times\hat{\mathbf r}=0$. Straight segments whose line passes through the field point never contribute — the rule that simplifies every compound-loop problem.
+
+</details>
+
+**C7 — concept check.** Is the field of a long solenoid zero outside? Exactly, approximately, or not at all?
+
+<details><summary>Solution</summary>
+
+Exactly zero only for an infinite solenoid (Ampère's rectangle). For a finite one the return flux spreads over an area that grows with length, so the outside field is of order $R/L$ times the inside field — small, not zero.
+
+</details>
+
+**C8 — concept check.** A loop of wire carrying current sits in a uniform field. Can it have a net force on it? A net torque? What about a non-uniform field?
+
+<details><summary>Solution</summary>
+
+Uniform field: no net force ($\oint d\mathbf l=0$), but a torque $\boldsymbol\mu\times\mathbf B$ unless $\boldsymbol\mu\parallel\mathbf B$. Non-uniform: a net force $\nabla(\boldsymbol\mu\cdot\mathbf B)$ as well — towards stronger field when aligned.
+
+</details>
+
+**C9 — concept check.** Ampère's law around a loop that encloses no current gives zero circulation. Does it follow that $\mathbf B=0$ on the loop?
+
+<details><summary>Solution</summary>
+
+No. Zero *circulation* means the along-loop component integrates to zero; the field can be large everywhere on the loop (a loop beside a wire). Ampère's law gives $B$ only when symmetry makes $B$ constant along the loop.
+
+</details>
+
+**C10 — concept check.** Why does a magnetic field exert a pressure on the windings of a solenoid, and in which direction?
+
+<details><summary>Solution</summary>
+
+The windings are a current sheet in the field of the rest of the solenoid, $B/2$ on average; the force per area $K\cdot B/2=B^2/2\mu_0$ points from the strong-field side (inside) to the weak (outside) — outward, a hoop stress.
+
+</details>
+
+**C11 — concept check.** The magnetic force does no work. A motor lifts a load. Who does the work?
+
+<details><summary>Solution</summary>
+
+The battery. The magnetic force on the carriers has a component that pushes the wire (positive work) and an equal-and-opposite component along the wire that opposes the current (a back-EMF, negative work); the battery must supply $\mathcal EI=Fu$ to keep the current flowing.
+
+</details>
+
+**C12 — concept check.** A bar magnet is cut in half. What are the fields of the pieces, and what would a "pole" picture have predicted?
+
+<details><summary>Solution</summary>
+
+Two complete magnets, each with a north and a south, because a magnet is a solenoid of bound currents and half a solenoid is a solenoid. A naive pole picture would have expected an isolated north and an isolated south.
+
+</details>
+
+**C13 — concept check.** Why is iron attracted to either pole of a magnet, while bismuth is (feebly) repelled by either?
+
+<details><summary>Solution</summary>
+
+The magnet's field induces a moment: parallel to the field in iron (huge, ferromagnetic), antiparallel in bismuth (tiny, diamagnetic). The gradient force $\nabla(\boldsymbol\mu\cdot\mathbf B)$ then pulls iron towards strong field and pushes bismuth away, whichever pole made the field.
+
+</details>
+
+**C14 — concept check.** At the magnetic equator, what does a dip needle do, and what does a compass do at the magnetic pole?
+
+<details><summary>Solution</summary>
+
+The dip needle lies horizontal (dip $0$, $B_V=0$). At the pole the field is vertical, $B_H=0$, and a compass has no torque — it points anywhere.
+
+</details>
+
+### E1 — Directions with signs, and the numbers that follow
+
+$\mathbf B=0.50\,\hat{\mathbf y}$ T. (a) An alpha particle ($q=+2e$, $m=6.64\times10^{-27}$ kg) moves with $\mathbf v=2.0\times10^{6}\,\hat{\mathbf x}$ m s$^{-1}$: find the force, the acceleration and the radius of its path. (b) An electron with the same velocity: the force and the sense of its circle.
+
+<details><summary>Solution</summary>
+
+(a) $\mathbf v\times\mathbf B=(2\times10^6)(0.5)\,\hat{\mathbf x}\times\hat{\mathbf y}=10^{6}\,\hat{\mathbf z}$; $\mathbf F=2e\times10^6\,\hat{\mathbf z}=3.2\times10^{-13}\,\hat{\mathbf z}$ N; $a=F/m=4.8\times10^{13}$ m s$^{-2}$; $r=mv/qB=(6.64\times10^{-27})(2\times10^6)/(3.2\times10^{-19}\times0.5)=8.3$ cm, in the $xz$-plane. (b) Same cross product, $q=-e$: $\mathbf F=-1.6\times10^{-13}\,\hat{\mathbf z}$ N — the electron curves the other way, and with $r=mv/eB=2.3\times10^{-5}$ m its circle is $3600$ times smaller ($m_\alpha/m_e=7300$, $q_\alpha/q_e=2$).
+
+> [!success] Check
+> $F\perp\mathbf v$ and $\perp\mathbf B$ ✓. Period of the alpha: $2\pi m/qB=2.6\times10^{-7}$ s, independent of the $2\times10^6$ m s$^{-1}$ ✓.
+
+</details>
+
+### E2 — Radius and period from an accelerating voltage
+
+Electrons accelerated from rest through $500$ V enter a $2.0$ mT field perpendicularly. Find the speed, radius and period. What would a proton accelerated through the same voltage do?
+
+<details><summary>Solution</summary>
+
+$v=\sqrt{2eV/m}=\sqrt{2(1.6\times10^{-19})(500)/9.11\times10^{-31}}=1.33\times10^{7}$ m s$^{-1}$ ($0.044c$). $r=mv/eB=(9.11\times10^{-31})(1.33\times10^7)/(1.6\times10^{-19}\times2\times10^{-3})=3.8$ cm. $T=2\pi m/eB=17.9$ ns ($f=56$ MHz). A proton at $500$ V: $r=\sqrt{2mV/e}/B$ scales as $\sqrt m$, so $r=3.8\text{ cm}\times\sqrt{1836}=1.6$ m, and $T$ scales as $m$: $33\ \mu$s.
+
+> [!success] Check
+> $r=\sqrt{2mV/e}/B$ directly: $\sqrt{2(9.11\times10^{-31})(500)/1.6\times10^{-19}}/2\times10^{-3}=3.8$ cm ✓. Doubling $V$ multiplies $r$ by $\sqrt2$ and leaves $T$ alone ✓.
+
+</details>
+
+### E3 — A helix
+
+A proton moves at $4.0\times10^{5}$ m s$^{-1}$ at $30^\circ$ to a uniform field of $0.10$ T. Find the radius, period and pitch of its path.
+
+<details><summary>Solution</summary>
+
+$v_\perp=v\sin30^\circ=2.0\times10^5$, $v_\parallel=v\cos30^\circ=3.46\times10^5$ m s$^{-1}$. $r=mv_\perp/eB=(1.67\times10^{-27})(2\times10^5)/(1.6\times10^{-20})=2.1$ cm. $T=2\pi m/eB=0.66\ \mu$s. Pitch $=v_\parallel T=3.46\times10^5\times6.56\times10^{-7}=0.23$ m: a loose helix, eleven radii per turn.
+
+> [!success] Check
+> Using the full speed in $r$ would give $4.2$ cm — the standard error, off by $1/\sin30^\circ$. Pitch/radius $=2\pi\cot\theta=2\pi\sqrt3=10.9$ ✓, independent of $B$ and $v$.
+
+</details>
+
+### E4 — Through a strip, or back out
+
+Electrons at $1.0\times10^{7}$ m s$^{-1}$ enter perpendicularly a $2.0$ cm wide strip of $2.0$ mT. Do they cross? Find the deflection angle, the time inside and the sideways displacement; and the minimum speed that crosses.
+
+<details><summary>Solution</summary>
+
+$r=mv/eB=2.84$ cm $>2.0$ cm: they cross. $\sin\varphi=d/r=0.704$, $\varphi=44.7^\circ$. Time inside $t=\varphi m/eB=(0.780)(9.11\times10^{-31})/(3.2\times10^{-22})=2.2$ ns (a full period would be $17.9$ ns). Sideways displacement $r(1-\cos\varphi)=8.2$ mm. Minimum speed: $r=d$, $v_{\min}=eBd/m=(1.6\times10^{-19})(2\times10^{-3})(0.02)/9.11\times10^{-31}=7.0\times10^{6}$ m s$^{-1}$; below it the electrons turn through $180^\circ$ and leave through the entry face $2r$ away.
+
+> [!success] Check
+> At $v=v_{\min}$, $\varphi=90^\circ$ and the displacement is $r=d$ ✓. Time fraction $\varphi/2\pi=0.124$ of a period ✓.
+
+</details>
+
+### E5 — Separating neon's isotopes
+
+Singly charged $^{20}$Ne and $^{22}$Ne ions are accelerated through $2.0$ kV and bent through a semicircle in $0.20$ T. Where do they land relative to each other?
+
+<details><summary>Solution</summary>
+
+$r=\sqrt{2mV/e}/B$. $m_{20}=20u=3.32\times10^{-26}$ kg: $r_{20}=\sqrt{2(3.32\times10^{-26})(2000)/1.6\times10^{-19}}/0.2=14.4$ cm. $r_{22}=r_{20}\sqrt{22/20}=15.1$ cm. After the semicircle the landing points are $2r$ from the slit: $28.8$ and $30.2$ cm, $1.4$ cm apart — a comfortable separation; the abundances at the two spots ($91\%$ and $9\%$) are how neon's isotopes were first seen (Aston, 1919).
+
+> [!success] Check
+> $\Delta r/r=\tfrac12\Delta m/m=\tfrac12(2/20)=5\%$ ✓ ($0.7/14.4=4.9\%$).
+
+</details>
+
+### E6 — A deuteron cyclotron
+
+Deuterons ($q=e$, $m=3.34\times10^{-27}$ kg) in a cyclotron of dee radius $0.60$ m and field $1.2$ T, with $40$ kV across the gap. Find the frequency, the final energy, the number of turns and the time.
+
+<details><summary>Solution</summary>
+
+$f=eB/2\pi m=(1.6\times10^{-19})(1.2)/(2\pi\times3.34\times10^{-27})=9.2$ MHz. $K_{\max}=q^2B^2R^2/2m=(1.6\times10^{-19}\times1.2\times0.6)^2/(2\times3.34\times10^{-27})=2.0\times10^{-12}$ J $=12.4$ MeV. Energy per turn $2eV_0=80$ keV: $155$ turns, in $155/9.2\times10^6=17\ \mu$s.
+
+> [!success] Check
+> $\gamma-1=12.4/1876=0.7\%$: the resonance holds ✓. Protons in the same machine would need $f=18.3$ MHz and reach $24.8$ MeV ($K\propto q^2/m$, and $m_d=2m_p$) ✓.
+
+</details>
+
+### E7 — A mirror machine's loss cone
+
+A magnetic bottle has mirror ratio $B_{\max}/B_0=4$. (a) Find the loss-cone half-angle. (b) A particle at the centre has pitch angle $45^\circ$: where does it reflect? (c) What fraction of an isotropic population is lost immediately?
+
+<details><summary>Solution</summary>
+
+(a) $\sin\theta_{\text{lc}}=\sqrt{B_0/B_{\max}}=0.5$, $\theta_{\text{lc}}=30^\circ$. (b) It reflects where $B=B_0/\sin^2\theta_0=2B_0$ — halfway up to the throat in field terms, safely inside. (c) The two cones of half-angle $30^\circ$ subtend $2\times2\pi(1-\cos30^\circ)$ of the $4\pi$ sphere: fraction $1-\cos30^\circ=13\%$. The rest are trapped until collisions scatter them into the cone — which is why mirror machines leak steadily.
+
+> [!success] Check
+> Mirror ratio $\to\infty$: cone $\to0$, nothing lost ✓. Ratio $1$: cone $90^\circ$, everything lost ✓.
+
+</details>
+
+### E8 — A Hall probe
+
+An $n$-type probe $0.20$ mm thick with $n=1.0\times10^{21}$ m$^{-3}$ carries $5.0$ mA and reads $V_H=25$ mV. Find the field. Which face is negative?
+
+<details><summary>Solution</summary>
+
+$B=V_Hnet/I=(0.025)(10^{21})(1.6\times10^{-19})(2\times10^{-4})/(5\times10^{-3})=0.16$ T. The electrons drift against the current; $q\mathbf v_d\times\mathbf B$ (with $q<0$ and $\mathbf v_d$ reversed, the same vector as $I\hat{\mathbf L}\times\mathbf B$) pushes them to the face on the side of $\hat{\mathbf I}\times\mathbf B$; that face goes negative. Holes would go to the same face and make it positive.
+
+> [!success] Check
+> Copper of the same geometry would read $V_H=IB/net=5\times10^{-3}\times0.16/(8.5\times10^{28}\times1.6\times10^{-19}\times2\times10^{-4})=0.3\ \mu$V — $10^5$ times smaller ✓ (the ratio of carrier densities).
+
+</details>
+
+### E9 — A cycloid
+
+An electron is released from rest in $\mathbf E=5.0\times10^{3}\,\hat{\mathbf y}$ V m$^{-1}$ and $\mathbf B=0.050\,\hat{\mathbf z}$ T. Describe its path: drift speed, maximum height, maximum speed, period and the length of one arch.
+
+<details><summary>Solution</summary>
+
+Drift $\mathbf v_d=\mathbf E\times\mathbf B/B^2$: magnitude $E/B=1.0\times10^{5}$ m s$^{-1}$ along $\hat{\mathbf y}\times\hat{\mathbf z}=\hat{\mathbf x}$ (independent of the electron's sign). Rolling-circle radius $r_c=mE/eB^2=(9.11\times10^{-31})(5\times10^3)/(1.6\times10^{-19}\times2.5\times10^{-3})=11\ \mu$m; height of each arch $2r_c=23\ \mu$m; maximum speed $2E/B=2\times10^{5}$ m s$^{-1}$; period $2\pi m/eB=0.71$ ns; arch length $v_dT=2\pi r_c=71\ \mu$m. The electron's arches bulge towards $-\hat{\mathbf y}$ (it is pushed against $\mathbf E$): a cycloid drifting along $+x$ with cusps every $71\ \mu$m.
+
+> [!success] Check
+> Energy at the top of an arch: $\tfrac12m(2E/B)^2=1.8\times10^{-20}$ J; $eE\cdot2r_c=1.8\times10^{-20}$ J ✓. A proton would drift at the same $10^5$ m s$^{-1}$ with arches $1836$ times taller ($2.1$ cm) ✓.
+
+</details>
+
+### E10 — Thomson's tube, reconstructed
+
+Cathode rays pass between plates $4.0$ cm long with $E=2.0\times10^{4}$ V m$^{-1}$; a magnetic field of $8.0\times10^{-4}$ T perpendicular to both restores the undeflected spot. With the magnetic field off, the beam leaves the plates deflected by $4.5$ mm. Find $v$ and $e/m$.
+
+<details><summary>Solution</summary>
+
+Null condition: $v=E/B=2.0\times10^4/8\times10^{-4}=2.5\times10^{7}$ m s$^{-1}$. Electric deflection inside the plates $y=(e/m)EL^2/2v^2$, so $e/m=2yv^2/EL^2=2(4.5\times10^{-3})(6.25\times10^{14})/(2\times10^4\times1.6\times10^{-3})=1.76\times10^{11}$ C kg$^{-1}$.
+
+> [!success] Check
+> Magnetic bend alone: $r=mv/eB=(2.5\times10^7)/(1.76\times10^{11}\times8\times10^{-4})=0.18$ m — a deflection over $4$ cm of $L^2/2r=4.5$ mm, the same as the electric one, as the null condition requires ✓. The ratio is $1836$ times hydrogen's $9.6\times10^7$ C kg$^{-1}$: Thomson's "corpuscle" was either very light or very highly charged; Millikan settled which.
+
+</details>
+
+### E11 — The same wire, three shapes
+
+A wire of length $1.2$ m carrying $2.0$ A is bent into (a) a square, (b) a regular hexagon, (c) a circle. Find the field at the centre of each.
+
+<details><summary>Solution</summary>
+
+(a) Side $0.30$ m: $B=2\sqrt2\mu_0I/\pi a=2.828\times(4\pi\times10^{-7})(2)/(\pi\times0.3)=7.5\ \mu$T. (b) Side $0.20$ m: $B=\sqrt3\mu_0I/\pi a=6.9\ \mu$T. (c) $R=1.2/2\pi=0.191$ m: $B=\mu_0I/2R=6.6\ \mu$T. The square wins: for a fixed length of wire the corners bring current closer to the centre than the circle does.
+
+> [!success] Check
+> The $n$-gon formula $B=\mu_0In\tan(\pi/n)/2\pi R_c$ with the circumradius $R_c=a/2\sin(\pi/n)$: $n=4$, $R_c=0.212$ m, $\tan45^\circ=1$: $B=(4\pi\times10^{-7})(2)(4)/(2\pi\times0.212)=7.5\ \mu$T ✓; $n\to\infty$ gives (c) ✓.
+
+</details>
+
+### E12 — A compound loop
+
+A long wire carrying $3.0$ A is bent into a semicircle of radius $4.0$ cm with (a) straight leads along the line of the diameter, (b) straight leads leaving the ends of the semicircle perpendicular to the diameter, away from the centre. Find the field at the centre of the semicircle in each case.
+
+<details><summary>Solution</summary>
+
+(a) Leads through the centre's line contribute nothing: $B=\mu_0I/4R=(4\pi\times10^{-7})(3)/(0.16)=24\ \mu$T, perpendicular to the plane. (b) Each lead is a semi-infinite wire at perpendicular distance $R$ with the centre level with its end: $\mu_0I/4\pi R=7.5\ \mu$T each, in the same sense as the arc's field (grip rule on each piece): $B=24+2\times7.5=39\ \mu$T.
+
+> [!success] Check
+> (b) exceeds (a) by $2\mu_0I/4\pi R$; if the leads bent *inward* instead their contribution would reverse and $B=24-15=9\ \mu$T ✓ (still the same sign, since $\mu_0I/4R>2\mu_0I/4\pi R$ because $\pi>2$).
+
+</details>
+
+### E13 — A finite solenoid
+
+A solenoid $30$ cm long, radius $2.0$ cm, $2000$ turns per metre, carries $3.0$ A. Find the field at its centre and at one end, and compare with $\mu_0nI$.
+
+<details><summary>Solution</summary>
+
+$\mu_0nI=(4\pi\times10^{-7})(2000)(3)=7.54$ mT. Centre: both ends at $\cos\theta=15/\sqrt{15^2+2^2}=0.991$, $B=\tfrac12\mu_0nI(2\times0.991)=7.47$ mT ($1\%$ below the infinite value). End: $\cos\theta_1=30/\sqrt{30^2+2^2}=0.998$, $\cos\theta_2=0$: $B=\tfrac12(7.54)(0.998)=3.76$ mT — half.
+
+> [!success] Check
+> $L/R=15$: the plateau is flat to $1\%$ over the middle half, as F16.3 shows for $L/R=10$ ✓. Total flux at the centre $\pi R^2B=9.4\times10^{-6}$ Wb.
+
+</details>
+
+### E14 — A coaxial cable, three radii
+
+Inner conductor radius $1.0$ mm carrying $20$ A; outer shell from $3.0$ to $3.5$ mm carrying $20$ A back. Find $B$ at $r=0.50$, $2.0$ and $3.25$ mm, and outside.
+
+<details><summary>Solution</summary>
+
+$r=0.5$ mm (inside the inner conductor): $\mu_0Ir/2\pi a^2=(2\times10^{-7})(20)(5\times10^{-4})/10^{-6}=2.0$ mT. $r=2.0$ mm: $\mu_0I/2\pi r=2.0$ mT — the same value, because $r_1=a/2$ inside gives half the surface field of $4.0$ mT and $r_2=2a$ outside also gives half of it. $r=3.25$ mm, in the shell: $\dfrac{\mu_0I}{2\pi r}\dfrac{c^2-r^2}{c^2-b^2}=\dfrac{(2\times10^{-7})(20)}{3.25\times10^{-3}}\cdot\dfrac{12.25-10.56}{12.25-9}=1.23\text{ mT}\times0.52=0.64$ mT. Outside: zero.
+
+> [!success] Check
+> Surface of the inner conductor: $4.0$ mT, the maximum; the shell's inner face $r=b$: $1.33$ mT; its outer face: $0$ ✓ continuous at every boundary.
+
+</details>
+
+### E15 — A hole in a wire
+
+A wire of radius $6.0$ mm carries $50$ A uniformly, except for a cylindrical hole of radius $2.0$ mm whose axis is $3.0$ mm from the wire's. Find the field inside the hole.
+
+<details><summary>Solution</summary>
+
+$J=I/\pi(a^2-b^2)=50/\pi(36-4)\times10^{-6}=5.0\times10^{5}$ A m$^{-2}$. Full wire plus a $-J$ cylinder in the hole: $B=\tfrac12\mu_0Jd=\tfrac12(4\pi\times10^{-7})(5\times10^5)(3\times10^{-3})=0.94$ mT, uniform, perpendicular to the line of centres.
+
+> [!success] Check
+> Without the hole the field at the hole's centre would be $\mu_0Jd/2$ as well ✓ (the full wire's field at radius $d$); the hole's negative cylinder adds nothing at its own centre. $d\to0$: zero ✓.
+
+</details>
+
+### E16 — Torque, energy and a galvanometer
+
+A coil of $200$ turns, $2.0\times2.0$ cm, carries $2.0$ mA in $0.30$ T. (a) Its moment and maximum torque. (b) The work to turn it from aligned to perpendicular. (c) Hung on a fibre of torsion constant $1.0\times10^{-4}$ N m rad$^{-1}$ in a radial field of the same strength: its deflection.
+
+<details><summary>Solution</summary>
+
+(a) $\mu=NIA=200\times2\times10^{-3}\times4\times10^{-4}=1.6\times10^{-4}$ A m$^2$; $\tau_{\max}=\mu B=4.8\times10^{-5}$ N m. (b) $W=\mu B(\cos0-\cos90^\circ)=4.8\times10^{-5}$ J. (c) Radial field: $\tau=NIAB$ at every angle; $\varphi=NIAB/\kappa=4.8\times10^{-5}/10^{-4}=0.48$ rad $=28^\circ$. Current sensitivity $NAB/\kappa=240$ rad A$^{-1}$: a microampere gives $0.24$ mrad.
+
+> [!success] Check
+> Units of $\mu B$: A m$^2$ T $=$ A m$^2$ N A$^{-1}$ m$^{-1}$ $=$ N m ✓. Doubling $N$ doubles the deflection and doubles the coil's resistance — the voltage sensitivity gains nothing, which is why galvanometer design is a trade.
+
+</details>
+
+### E17 — Two wires
+
+Two straight parallel wires $5.0$ m long and $4.0$ cm apart carry $150$ A each, in opposite directions (a supply pair). Find the force between them and its sense.
+
+<details><summary>Solution</summary>
+
+$F=\mu_0I_1I_2L/2\pi d=(2\times10^{-7})(150)^2(5)/0.04=0.56$ N, repulsive (antiparallel currents). A short-circuit surge of $10$ kA would make it $2.5$ kN — the reason bus bars are braced.
+
+> [!success] Check
+> Field of one wire at the other: $\mu_0I/2\pi d=7.5\times10^{-4}$ T; times $IL=750$ A m gives $0.56$ N ✓.
+
+</details>
+
+### E18 — Magnetic pressure in a real magnet
+
+A $5.0$ T solenoid has a bore of radius $5.0$ cm and volume $1.0$ L. Find the pressure on its windings, the hoop tension per unit length of winding, and the energy stored in the bore.
+
+<details><summary>Solution</summary>
+
+$P=B^2/2\mu_0=25/(2\times4\pi\times10^{-7})=9.9\times10^{6}$ Pa $\approx100$ atm, outward. For a thin cylinder the hoop tension per unit length is $PR=5.0\times10^{5}$ N m$^{-1}$ — the winding must be held by a shell able to take half a meganewton per metre. Energy $u\,V=(B^2/2\mu_0)V=9.9\times10^6\times10^{-3}=10$ kJ.
+
+> [!success] Check
+> $B^2/2\mu_0$ in J m$^{-3}$ equals it in Pa ✓ (energy density and pressure share units). At $1$ T the same magnet would need a twenty-fifth of everything.
+
+</details>
+
+### E19 — Measuring a magnet's moment
+
+A bar magnet of mass $20$ g and length $6.0$ cm oscillates with period $4.0$ s in a horizontal field of $35\ \mu$T. Find its moment. What is its period inside a solenoid producing $5.0$ mT?
+
+<details><summary>Solution</summary>
+
+$I_m=mL^2/12=(0.02)(0.06)^2/12=6.0\times10^{-6}$ kg m$^2$. From $T=2\pi\sqrt{I_m/\mu B}$: $\mu=4\pi^2I_m/T^2B=39.5\times6\times10^{-6}/(16\times3.5\times10^{-5})=0.42$ A m$^2$. In $5.0$ mT: $T\propto B^{-1/2}$, $T=4.0\sqrt{35\times10^{-6}/5\times10^{-3}}=0.33$ s.
+
+> [!success] Check
+> $\mu=0.42$ A m$^2$ in a $20$ g magnet (volume $\sim3$ cm$^3$ of ferrite) is $M\approx1.4\times10^5$ A m$^{-1}$ — a modest ferrite, plausible ✓. Small-angle validity: keep the swing under $\sim10^\circ$.
+
+</details>
+
+### E20 — An electromagnet with a gap
+
+A $400$-turn coil carrying $3.0$ A is wound on an iron core of magnetic path length $40$ cm and $\mu_r=1500$ with a $2.0$ mm air gap. Find the gap field and the force with which it holds an iron bar across two pole faces of $4.0$ cm$^2$ each.
+
+<details><summary>Solution</summary>
+
+$B=\mu_0NI/(g+\ell/\mu_r)=(4\pi\times10^{-7})(1200)/(2\times10^{-3}+0.4/1500)=1.51\times10^{-3}/2.27\times10^{-3}=0.67$ T. Force: $F=B^2A/2\mu_0$ with $A=8\times10^{-4}$ m$^2$: $(0.443)(8\times10^{-4})/(2.51\times10^{-6})=140$ N — it holds $14$ kg.
+
+> [!success] Check
+> Without the gap $B$ would be $\mu_r\mu_0NI/\ell=5.7$ T — above saturation, so the gapless answer is "about $2$ T, saturated"; the $2$ mm gap costs a factor of $8$ and buys linearity ✓. The iron's $\ell/\mu_r=0.27$ mm is an eighth of the gap: the gap dominates.
+
+</details>
 
 ## Part 6 · Archetypes and practice
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the archetype table (the union of the mandatory lists of plan.md PARTs 16–19, at least 40 rows) and the practice questions Q1–Q60 with collapsible solutions, each archetype worked once and varied once.
+The recurring shapes of the four plan parts, each worked once and varied once below.
+
+| archetype | the move | the trap |
+|---|---|---|
+| force on a charge with a given velocity | $q\mathbf v\times\mathbf B$ in components, sign last | the left hand |
+| radius and period | $r=mv_\perp/qB$, $T=2\pi m/qB$ | putting $v$ into $T$ |
+| entering at an angle (helix) | $v_\perp$ for $r$, $v_\parallel T$ for the pitch | the full speed in $r$ |
+| velocity selector | $v=E/B$; faster bends to the magnetic side | thinking it selects mass |
+| centre of a square / polygon | one side by angles, times $n$ | the loop formula for a polygon |
+| axis of a coil | $N\mu_0IR^2/2(R^2+x^2)^{3/2}$ | $\mu_0NI/2R$ off the centre |
+| inside a solenoid | $\mu_0nI$, $n=N/L$ | $\mu_0NI$ |
+| toroid | $\mu_0NI/2\pi r$ | using the outer radius for the whole ring |
+| wire at an angle in a field | $ILB\sin\theta$ | $\cos\theta$ |
+| curved wire | the chord | integrating when the chord suffices |
+| closed loop in a uniform field | zero net force, torque $\mu B\sin\theta$ | "no torque because no force" |
+| torque on an $N$-turn coil | $\mu=NIA$; $\theta$ between $\hat{\mathbf n}$ and $\mathbf B$ | forgetting $N$; using the plane's angle |
+| galvanometer deflection | $NIAB=\kappa\varphi$ (radial field) | $\sin\theta$ in a radial field |
+| parallel wires | $\mu_0I_1I_2/2\pi d$ per length; same direction attracts | using the *sum* of the fields |
+| rotating charged ring | $I=Q\omega/2\pi$, $\mu=\tfrac12Q\omega R^2$, $\mu/L=Q/2m$ | $I=Q\omega$ |
+| thick wire / shell | $\mu_0Ir/2\pi a^2$ in; shell interior $0$ | $\mu_0I/2\pi r$ inside |
+| coaxial cable | $I_{\text{enc}}$ region by region | forgetting the return current |
+| current sheet(s) | $\mu_0K/2$; two sheets $\mu_0K$ between | $K$ confused with $I$ |
+| overlapping cylinders / hole | $\tfrac12\mu_0\mathbf J\times\mathbf d$ | Gauss-like reasoning on the hollowed shape |
+| magnet's period | $T=2\pi\sqrt{I_m/\mu B}$ | $I_m$ about the wrong axis |
+| time in a field region | $\varphi m/qB$ with $\sin\varphi=d/r$ | the whole period |
+| isotope radii | $r\propto\sqrt m$ at fixed $V$; $\propto m$ at fixed $v$ | mixing the two |
+| cyclotron | $f=qB/2\pi m$, $K=q^2B^2R^2/2m$ | $V_0$ in the energy |
+| Hall voltage and sign | $IB/nqt$; polarity from the carriers | thickness $t$ vs width $w$ |
+| conductivity from Hall data | $n$ from $R_H$, $\mu_m=\sigma/ne$ | quoting $R_H$ for $n$ |
+| $\mathbf E\times\mathbf B$ drift | $E/B$, both signs the same way | treating it as a force |
+| cycloid dimensions | $r_c=mE/qB^2$, height $2r_c$, speed $2E/B$ | $r$ from the drift speed and the wrong $B$ power |
+| gradient-drift direction | $\pm\mathbf B\times\nabla B$: charges split | forgetting the sign dependence |
+| Thomson deflection | $y=(q/m)EL^2/2v^2$, $v=E/B$ | measuring $e$ or $m$ alone |
+| mirror trap | $\sin^2\theta_0>B_0/B_{\max}$ | the pitch angle at the wrong place |
+| $\chi$ comparison | dia $-10^{-5}$, para $+10^{-5}$–$10^{-3}$, ferro $10^3$–$10^5$ | "$\mu_r=0$ for diamagnets" |
+| $\mu_r$ from an inductance | $L\propto\mu_r$ at fixed geometry | saturation ignored |
+| hysteresis loss | area $\times$ frequency $\times$ volume | area as energy per cycle for the whole core |
+| core amplification | $B=\mu_r\mu_0nI$, capped at $B_s$ | $6$ T from iron |
+| Earth's components | $B\cos\theta_{\text{dip}}$, $B\sin\theta_{\text{dip}}$, then $\delta$ | dip for declination |
+| dip at equator / poles | $0$ / $90^\circ$ | swapping them |
+| magnet oscillating in the Earth's field | uses $B_H$, not $B$ | the total field |
+| material choice | soft: cores; hard: magnets | coercivity confused with remanence |
+| induced-magnet attraction | $\nabla(\boldsymbol\mu\cdot\mathbf B)$ towards strong field | "unlike poles" with no pole present |
+| tangent galvanometer | $B_{\text{coil}}=B_H\tan\theta$ | using the total field |
+
+#### Q1. A proton moves at $5.0\times10^{5}$ m s$^{-1}$ along $+x$ in $\mathbf B=0.20\,\hat{\mathbf z}$ T. Find the force.
+
+<details><summary>Solution</summary>
+
+$\mathbf v\times\mathbf B=5\times10^5\times0.2\,(\hat{\mathbf x}\times\hat{\mathbf z})=-10^{5}\,\hat{\mathbf y}$; $\mathbf F=e(-10^5\hat{\mathbf y})=-1.6\times10^{-14}\,\hat{\mathbf y}$ N.
+
+</details>
+
+#### Q2. Repeat Q1 for an electron moving along $+y$ in the same field.
+
+<details><summary>Solution</summary>
+
+$\hat{\mathbf y}\times\hat{\mathbf z}=\hat{\mathbf x}$: $\mathbf v\times\mathbf B=10^5\hat{\mathbf x}$; with $q=-e$, $\mathbf F=-1.6\times10^{-14}\,\hat{\mathbf x}$ N.
+
+</details>
+
+#### Q3. Electrons of $1.0$ keV enter a $1.0$ mT field perpendicularly. Find the radius and period.
+
+<details><summary>Solution</summary>
+
+$v=\sqrt{2K/m}=1.88\times10^{7}$ m s$^{-1}$; $r=mv/eB=10.7$ cm; $T=2\pi m/eB=36$ ns.
+
+</details>
+
+#### Q4. Protons of $1.0$ keV in the same field: radius and period.
+
+<details><summary>Solution</summary>
+
+$r\propto\sqrt m$: $10.7\text{ cm}\times\sqrt{1836}=4.6$ m; $T\propto m$: $36\text{ ns}\times1836=66\ \mu$s.
+
+</details>
+
+#### Q5. An electron at $2.0\times10^{6}$ m s$^{-1}$ enters a $5.0$ mT field at $60^\circ$ to it. Find the radius and pitch.
+
+<details><summary>Solution</summary>
+
+$v_\perp=1.73\times10^6$, $v_\parallel=1.0\times10^6$ m s$^{-1}$; $r=mv_\perp/eB=2.0$ mm; $T=2\pi m/eB=7.1$ ns; pitch $v_\parallel T=7.1$ mm.
+
+</details>
+
+#### Q6. The electron of Q5 enters at $30^\circ$ instead. Radius and pitch?
+
+<details><summary>Solution</summary>
+
+$v_\perp=1.0\times10^6$: $r=1.1$ mm; $v_\parallel=1.73\times10^6$: pitch $12.4$ mm. Same period.
+
+</details>
+
+#### Q7. A selector has $E=2.0\times10^{5}$ V m$^{-1}$ and $B=0.40$ T. What speed passes? What happens to a particle at half that speed?
+
+<details><summary>Solution</summary>
+
+$v=E/B=5.0\times10^{5}$ m s$^{-1}$. At half the speed the magnetic force is halved and the electric force wins: the particle bends towards the electric force's side, for either sign of charge.
+
+</details>
+
+#### Q8. What $B$ lets $3.0\times10^{6}$ m s$^{-1}$ ions pass a selector with $E=6.0\times10^{4}$ V m$^{-1}$? Does the answer depend on the ion?
+
+<details><summary>Solution</summary>
+
+$B=E/v=0.020$ T. No — neither $q$ nor $m$ enters.
+
+</details>
+
+#### Q9. Find the field at the centre of a square loop of side $10$ cm carrying $10$ A.
+
+<details><summary>Solution</summary>
+
+$B=2\sqrt2\mu_0I/\pi a=2.828\times(4\pi\times10^{-7})(10)/(\pi\times0.1)=1.13\times10^{-4}$ T.
+
+</details>
+
+#### Q10. Find the field at the centroid of an equilateral triangle of side $10$ cm carrying $10$ A.
+
+<details><summary>Solution</summary>
+
+Each side is at $d=a/2\sqrt3=2.89$ cm and subtends $60^\circ$ each way: $B_{\text{side}}=\dfrac{\mu_0I}{4\pi d}(2\sin60^\circ)=6.0\times10^{-5}$ T; three sides: $1.8\times10^{-4}$ T — more than the square's, the current being closer.
+
+</details>
+
+#### Q11. A $50$-turn coil of radius $10$ cm carries $2.0$ A. Find the axial field at $10$ cm from the centre and at the centre.
+
+<details><summary>Solution</summary>
+
+Centre: $N\mu_0I/2R=6.3\times10^{-4}$ T. At $x=R$: multiply by $2^{-3/2}=0.354$: $2.2\times10^{-4}$ T.
+
+</details>
+
+#### Q12. Where on the axis of the coil in Q11 is the field one tenth of the centre value?
+
+<details><summary>Solution</summary>
+
+$(1+x^2/R^2)^{-3/2}=0.1\Rightarrow1+x^2/R^2=10^{2/3}=4.64$, $x=1.91R=19$ cm.
+
+</details>
+
+#### Q13. A solenoid of $500$ turns on $25$ cm carries $4.0$ A. Find the interior field.
+
+<details><summary>Solution</summary>
+
+$n=2000$ m$^{-1}$; $B=\mu_0nI=(4\pi\times10^{-7})(2000)(4)=1.0\times10^{-2}$ T.
+
+</details>
+
+#### Q14. How many turns on a $40$ cm former give $10$ mT at $2.0$ A?
+
+<details><summary>Solution</summary>
+
+$N=BL/\mu_0I=(0.01)(0.4)/(4\pi\times10^{-7}\times2)=1.6\times10^{3}$ turns.
+
+</details>
+
+#### Q15. A toroid of $1200$ turns and mean radius $15$ cm carries $1.5$ A. Find the field at the mean radius.
+
+<details><summary>Solution</summary>
+
+$B=\mu_0NI/2\pi r=(4\pi\times10^{-7})(1200)(1.5)/(2\pi\times0.15)=2.4$ mT.
+
+</details>
+
+#### Q16. The toroid of Q15 has inner radius $12$ cm and outer $18$ cm. Ratio of the fields at the two edges, and the field in the hole?
+
+<details><summary>Solution</summary>
+
+$B\propto1/r$: ratio $18/12=1.5$ (inner edge stronger). In the hole: zero — no enclosed current.
+
+</details>
+
+#### Q17. A $40$ cm wire carrying $8.0$ A lies at $30^\circ$ to a $0.50$ T field. Find the force.
+
+<details><summary>Solution</summary>
+
+$F=ILB\sin\theta=8\times0.4\times0.5\times0.5=0.80$ N, perpendicular to both the wire and the field.
+
+</details>
+
+#### Q18. The same wire turned perpendicular to the field, and then parallel.
+
+<details><summary>Solution</summary>
+
+$1.6$ N; zero.
+
+</details>
+
+#### Q19. A semicircular wire of radius $10$ cm carries $6.0$ A in a $0.30$ T field perpendicular to its plane. Find the force on it.
+
+<details><summary>Solution</summary>
+
+Chord theorem: $F=I(2R)B=6\times0.2\times0.3=0.36$ N, perpendicular to the diameter in the plane.
+
+</details>
+
+#### Q20. The semicircle of Q19 is closed by its diameter to form a loop. Net force on the loop?
+
+<details><summary>Solution</summary>
+
+Zero: the diameter feels $0.36$ N the other way. The loop feels only a torque, and none at all if its plane is perpendicular to $\mathbf B$ (then $\boldsymbol\mu\parallel\mathbf B$).
+
+</details>
+
+#### Q21. A $100$-turn coil of area $20$ cm$^2$ carries $0.50$ A in $0.40$ T. Find the maximum torque.
+
+<details><summary>Solution</summary>
+
+$\tau=NIAB=100\times0.5\times2\times10^{-3}\times0.4=4.0\times10^{-2}$ N m.
+
+</details>
+
+#### Q22. The coil's *plane* makes $60^\circ$ with the field. Torque?
+
+<details><summary>Solution</summary>
+
+The normal makes $30^\circ$ with $\mathbf B$: $\tau=NIAB\sin30^\circ=2.0\times10^{-2}$ N m.
+
+</details>
+
+#### Q23. A galvanometer coil ($150$ turns, $1.5$ cm$^2$) in a radial field of $0.20$ T on a fibre of $3.0\times10^{-6}$ N m rad$^{-1}$ carries $0.10$ mA. Find the deflection.
+
+<details><summary>Solution</summary>
+
+$\varphi=NIAB/\kappa=150\times10^{-4}\times1.5\times10^{-4}\times0.2/3\times10^{-6}=0.15$ rad $=8.6^\circ$.
+
+</details>
+
+#### Q24. Its current sensitivity, and the deflection per microampere.
+
+<details><summary>Solution</summary>
+
+$NAB/\kappa=1.5\times10^{3}$ rad A$^{-1}$; $1.5$ mrad per $\mu$A.
+
+</details>
+
+#### Q25. Two long parallel wires $5.0$ cm apart carry $10$ A and $15$ A in the same direction. Force per metre?
+
+<details><summary>Solution</summary>
+
+$\mu_0I_1I_2/2\pi d=(2\times10^{-7})(150)/0.05=6.0\times10^{-4}$ N m$^{-1}$, attractive.
+
+</details>
+
+#### Q26. A $30$ cm straight segment carrying $5.0$ A lies perpendicular to a long wire carrying $20$ A, its near end $10$ cm from the wire. Find the force on the segment.
+
+<details><summary>Solution</summary>
+
+$dF=I_2\,dr\,\mu_0I_1/2\pi r$ along the long wire's direction: $F=\dfrac{\mu_0I_1I_2}{2\pi}\ln\dfrac{a+L}{a}=(2\times10^{-7})(100)\ln4=2.8\times10^{-5}$ N.
+
+</details>
+
+#### Q27. A ring of radius $5.0$ cm carrying $2.0\ \mu$C spins at $50$ rev s$^{-1}$. Find the equivalent current and the moment.
+
+<details><summary>Solution</summary>
+
+$I=Qf=1.0\times10^{-4}$ A; $\mu=I\pi R^2=7.9\times10^{-7}$ A m$^2$.
+
+</details>
+
+#### Q28. The ring of Q27 has mass $1.0$ g. Find $\mu/L$ and check it against $Q/2m$.
+
+<details><summary>Solution</summary>
+
+$L=mR^2\omega=(10^{-3})(2.5\times10^{-3})(314)=7.85\times10^{-4}$; $\mu/L=1.0\times10^{-3}$ C kg$^{-1}$ $=Q/2m=2\times10^{-6}/2\times10^{-3}$ ✓.
+
+</details>
+
+#### Q29. A wire of radius $4.0$ mm carries $40$ A uniformly. Find $B$ at $2.0$ mm from the axis and at the surface.
+
+<details><summary>Solution</summary>
+
+Inside: $\mu_0Ir/2\pi a^2=1.0$ mT; surface: $\mu_0I/2\pi a=2.0$ mT.
+
+</details>
+
+#### Q30. The current now flows only in a thin shell at the wire's surface. Fields at the same two radii?
+
+<details><summary>Solution</summary>
+
+Inside: zero (no enclosed current, long shell). Surface and beyond: unchanged, $2.0$ mT at $r=a$.
+
+</details>
+
+#### Q31. A coaxial cable (inner radius $1.0$ mm, outer conductor at $5.0$ mm) carries $8.0$ A each way. Find $B$ at $3.0$ mm.
+
+<details><summary>Solution</summary>
+
+Only the inner current is enclosed: $\mu_0I/2\pi r=(2\times10^{-7})(8)/(3\times10^{-3})=0.53$ mT.
+
+</details>
+
+#### Q32. For the cable of Q31, find $B$ at $0.50$ mm and at $8.0$ mm.
+
+<details><summary>Solution</summary>
+
+$0.5$ mm (inside the inner conductor): $\mu_0Ir/2\pi a^2=0.80$ mT. $8$ mm: outside both, net enclosed current zero, $B=0$.
+
+</details>
+
+#### Q33. A large flat sheet carries $500$ A per metre of width. Find the field near it.
+
+<details><summary>Solution</summary>
+
+$B=\mu_0K/2=(4\pi\times10^{-7})(500)/2=0.31$ mT on each side, parallel to the sheet, perpendicular to the current, reversing across it.
+
+</details>
+
+#### Q34. Find the magnetic pressure on the windings of a $2.0$ T solenoid, and the force on a $50$ cm$^2$ end cap that confines the field.
+
+<details><summary>Solution</summary>
+
+$B^2/2\mu_0=4/(2.51\times10^{-6})=1.6\times10^{6}$ Pa ($16$ atm); on $50$ cm$^2$: $8.0$ kN.
+
+</details>
+
+#### Q35. A wire of radius $5.0$ mm with a $1.0$ mm hole $2.0$ mm off-axis carries $30$ A. Field in the hole?
+
+<details><summary>Solution</summary>
+
+$J=30/\pi(25-1)\times10^{-6}=4.0\times10^{5}$ A m$^{-2}$; $B=\tfrac12\mu_0Jd=0.50$ mT, uniform.
+
+</details>
+
+#### Q36. In Q35, the hole is moved to the axis. Field in the hole, and just outside the wire?
+
+<details><summary>Solution</summary>
+
+On-axis hole: zero inside it. Outside the wire the field is unchanged by any hole: $\mu_0I/2\pi a=1.2$ mT at the surface.
+
+</details>
+
+#### Q37. A magnet ($I_m=5.0\times10^{-6}$ kg m$^2$, $\mu=0.50$ A m$^2$) oscillates in $B_H=30\ \mu$T. Period?
+
+<details><summary>Solution</summary>
+
+$T=2\pi\sqrt{I_m/\mu B_H}=2\pi\sqrt{5\times10^{-6}/1.5\times10^{-5}}=3.6$ s.
+
+</details>
+
+#### Q38. The same magnet is taken to a place where $B_H$ is twice as large. New period? And if the magnet were cut in half lengthwise?
+
+<details><summary>Solution</summary>
+
+$T\propto B_H^{-1/2}$: $3.6/\sqrt2=2.6$ s. Halving lengthwise halves both $\mu$ and $I_m$: the period is unchanged.
+
+</details>
+
+#### Q39. Protons at $2.0\times10^{6}$ m s$^{-1}$ cross a $2.0$ cm region of $0.50$ T perpendicularly. Time inside?
+
+<details><summary>Solution</summary>
+
+$r=mv/eB=4.2$ cm $>2$ cm; $\sin\varphi=2/4.18=0.479$, $\varphi=28.6^\circ=0.50$ rad; $t=\varphi m/eB=1.0\times10^{-8}$ s.
+
+</details>
+
+#### Q40. The region in Q39 is widened to $5.0$ cm. What happens, and how long do the protons spend inside?
+
+<details><summary>Solution</summary>
+
+$r=4.2$ cm $<5$ cm: they turn back through $180^\circ$, spending half a period, $\pi m/eB=6.6\times10^{-8}$ s, and exit $8.4$ cm from the entry point.
+
+</details>
+
+#### Q41. $^{12}$C$^+$ and $^{13}$C$^+$ ions with the same accelerating voltage in the same field: ratio of radii?
+
+<details><summary>Solution</summary>
+
+$r\propto\sqrt m$: $\sqrt{13/12}=1.041$.
+
+</details>
+
+#### Q42. If the $^{12}$C radius is $30$ cm, how far apart do the two isotopes land after a semicircle?
+
+<details><summary>Solution</summary>
+
+$\Delta r=0.30\times0.041=1.2$ cm; landing points $2\Delta r=2.4$ cm apart.
+
+</details>
+
+#### Q43. A cyclotron with $B=1.6$ T and $R=0.40$ m accelerates protons. Find the frequency and the final energy.
+
+<details><summary>Solution</summary>
+
+$f=eB/2\pi m=24$ MHz; $K=e^2B^2R^2/2m=3.1\times10^{-12}$ J $=20$ MeV.
+
+</details>
+
+#### Q44. The same machine run with alpha particles: frequency and energy?
+
+<details><summary>Solution</summary>
+
+$f\propto q/m$: half, $12$ MHz; $K\propto q^2/m$: $4/4=1$ times, $20$ MeV — the same energy (twice the charge, four times the mass).
+
+</details>
+
+#### Q45. A copper strip $0.20$ mm thick carries $5.0$ A across $2.0$ T ($n=8.5\times10^{28}$ m$^{-3}$). Hall voltage?
+
+<details><summary>Solution</summary>
+
+$V_H=IB/net=10/(8.5\times10^{28}\times1.6\times10^{-19}\times2\times10^{-4})=3.7\ \mu$V.
+
+</details>
+
+#### Q46. A semiconductor strip $0.10$ mm thick with $I=20$ mA in $0.50$ T gives $V_H=40$ mV; its resistivity is $0.010\ \Omega$ m. Find $n$ and the mobility.
+
+<details><summary>Solution</summary>
+
+$n=IB/etV_H=1.6\times10^{22}$ m$^{-3}$; $\mu_m=\sigma/ne=1/(\rho ne)=0.040$ m$^2$ V$^{-1}$ s$^{-1}$.
+
+</details>
+
+#### Q47. Crossed fields $E=3.0\times10^{3}$ V m$^{-1}$, $B=0.030$ T. Drift speed of an electron released from rest, and the height of its cycloid?
+
+<details><summary>Solution</summary>
+
+$v_d=E/B=1.0\times10^{5}$ m s$^{-1}$; $r_c=mE/eB^2=19\ \mu$m, height $2r_c=38\ \mu$m.
+
+</details>
+
+#### Q48. In the Earth's field, which weakens outward, protons and electrons trapped at the equator drift in which directions?
+
+<details><summary>Solution</summary>
+
+$\mathbf v_{\nabla B}\propto\pm\mathbf B\times\nabla B$: with $\mathbf B$ northward and $\nabla B$ inward, protons drift westward and electrons eastward — opposite ways, making the westward ring current.
+
+</details>
+
+#### Q49. In a Thomson tube, $E=1.5\times10^{4}$ V m$^{-1}$ and the null field is $6.0\times10^{-4}$ T. Find $v$ and the electric deflection over $3.0$ cm plates.
+
+<details><summary>Solution</summary>
+
+$v=E/B=2.5\times10^{7}$ m s$^{-1}$; $y=(e/m)EL^2/2v^2=1.9$ mm.
+
+</details>
+
+#### Q50. With the plates off and only the magnetic field of Q49 on, what is the beam's radius of curvature?
+
+<details><summary>Solution</summary>
+
+$r=mv/eB=2.5\times10^7/(1.76\times10^{11}\times6\times10^{-4})=0.24$ m.
+
+</details>
+
+#### Q51. A bottle has mirror ratio $6$. Loss-cone half-angle?
+
+<details><summary>Solution</summary>
+
+$\sin\theta=\sqrt{1/6}$, $\theta=24^\circ$.
+
+</details>
+
+#### Q52. A particle at the centre with pitch angle $40^\circ$: at what field does it reflect, and is it trapped in the bottle of Q51?
+
+<details><summary>Solution</summary>
+
+$B=B_0/\sin^240^\circ=2.4B_0<6B_0$: trapped, reflecting well before the throat.
+
+</details>
+
+#### Q53. Rank by susceptibility: water, aluminium, iron, bismuth.
+
+<details><summary>Solution</summary>
+
+Iron ($\sim10^3$–$10^5$) $\gg$ aluminium ($+2\times10^{-5}$) $>0>$ water ($-9\times10^{-6}$) $>$ bismuth ($-1.7\times10^{-4}$).
+
+</details>
+
+#### Q54. A coil's inductance rises from $2.4$ mH in air to $1.2$ H with an iron core. Relative permeability?
+
+<details><summary>Solution</summary>
+
+$L\propto\mu_r$: $\mu_r=500$ (at that operating point; iron's $\mu_r$ depends on $B$).
+
+</details>
+
+#### Q55. A core of volume $5.0\times10^{-4}$ m$^3$ has a hysteresis loop of area $250$ J m$^{-3}$ and runs at $60$ Hz. Power lost?
+
+<details><summary>Solution</summary>
+
+$250\times60\times5\times10^{-4}=7.5$ W.
+
+</details>
+
+#### Q56. A solenoid of $1500$ turns per metre carries $0.50$ A. Field in air, and with a core of $\mu_r=800$ (below saturation)?
+
+<details><summary>Solution</summary>
+
+Air: $\mu_0nI=0.94$ mT; core: $\mu_r$ times, $0.75$ T.
+
+</details>
+
+#### Q57. At a place $B=45\ \mu$T and the dip is $30^\circ$. Find $B_H$ and $B_V$.
+
+<details><summary>Solution</summary>
+
+$B_H=45\cos30^\circ=39\ \mu$T; $B_V=45\sin30^\circ=22.5\ \mu$T.
+
+</details>
+
+#### Q58. Elsewhere $B_H=20\ \mu$T and $B_V=40\ \mu$T. Dip and total field?
+
+<details><summary>Solution</summary>
+
+$\tan\theta_{\text{dip}}=2$, $63^\circ$; $B=\sqrt{20^2+40^2}=45\ \mu$T.
+
+</details>
+
+#### Q59. Choose the material for (a) a transformer core, (b) a loudspeaker magnet, (c) a shield around a sensitive detector, and say why.
+
+<details><summary>Solution</summary>
+
+(a) Soft, laminated silicon steel: narrow loop, high $\mu_r$, low eddy loss. (b) Hard: NdFeB or ferrite, large $H_c$ so it cannot be demagnetised by the coil. (c) Very high $\mu_r$, soft: mu-metal, to divert the flux.
+
+</details>
+
+#### Q60. A tangent galvanometer ($50$ turns, radius $10$ cm) deflects a compass by $\theta$ when $0.10$ A flows, where $B_H=30\ \mu$T. Find $\theta$.
+
+<details><summary>Solution</summary>
+
+$B_{\text{coil}}=\mu_0NI/2R=3.1\times10^{-5}$ T; $\tan\theta=B_{\text{coil}}/B_H=1.05$, $\theta=46^\circ$.
+
+</details>
 
 ## Part 7 · Toolkit
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the grip rule and cross products as bookkeeping, the three-region protocol, Ampère versus Biot–Savart, superposition with negative current, the $p=300Br$ rule, energy methods for forces at fixed current, the magnetic-circuit analogy, dimensional and limit checks, and the scaling laws — each with a demonstration and its failure case.
+**T1 · Cross products as bookkeeping.** Write $\mathbf v$ and $\mathbf B$ in components and multiply; apply the sign of $q$ *after*. *Demonstration:* Q1–Q2 in one line each, with no hand. *Fails when* you skip the components for a "simple" picture and the third dimension bites — an electron moving into the page in a field pointing up is the classic.
+
+**T2 · The three-region protocol.** Regions → radius in each → geometry (centre on the perpendicular at the entry point; arc to the boundary; exit tangent; angle turned gives the time). *Demonstration:* E4, Q39–Q40. *Fails when* the field is not uniform within a region (fringing at a magnet's edge) — then the adiabatic-invariant picture of §3.8 replaces it.
+
+**T3 · Ampère or Biot–Savart.** Three symmetries → a loop; otherwise angles and arcs (F16.5). *Demonstration:* the solenoid both ways (§3.21). *Fails when* a symmetric-looking source is finite: a short solenoid, a loop, a wire with ends — Ampère's law is true and useless.
+
+**T4 · Superposition with negative current.** A hole is a full body plus a negative body; a gap in a loop is a full loop minus the missing arc; two overlapping cylinders are a uniform field. *Demonstration:* E15, §3.20. *Fails when* the pieces are not each symmetric — then you have only gained a harder integral.
+
+**T5 · Straight pieces through the point.** Any straight segment whose line passes through the field point contributes nothing there. *Demonstration:* E12(a) — the leads vanish and the answer is $\mu_0I/4R$. *Fails when* the point is not on the segment's line, however close (then it is a semi-infinite wire: $\mu_0I/4\pi d$).
+
+**T6 · The $300Br$ rule.** $p\,[\text{MeV}/c]=300\,B\,[\text{T}]\,r\,[\text{m}]$, valid at any speed because it uses momentum. *Demonstration:* $10$ cm in $1.5$ T is $45$ MeV/$c$; for an electron ($0.511$ MeV) that is ultrarelativistic, $K\approx pc=44.5$ MeV; for a proton, $K=p^2/2m=1.1$ MeV. *Fails when* you convert to kinetic energy with the wrong regime formula.
+
+**T7 · Energy methods at fixed current.** For a circuit held at constant $I$ by a source, the mechanical force is $F=+\partial U_B/\partial x$ (the source supplies twice the mechanical work; PART 21 proves it), with $U_B=\int B^2/2\mu_0\,dV$. *Demonstration:* separating the halves of a solenoid by $dx$ creates $A\,dx$ of field volume, $U_B$ rises by $(B^2/2\mu_0)A\,dx$, so the halves attract with $B^2A/2\mu_0$ — the end force of §3.26 without integrating anything. *Fails when* the current is *not* held fixed (an isolated superconducting loop conserves flux instead, and the sign flips to $-\partial U/\partial x$ at fixed flux).
+
+**T8 · The magnetic circuit.** For iron paths with gaps, $\oint\mathbf H\cdot d\mathbf l=NI$ becomes "magnetomotive force $=$ flux $\times$ reluctance", with reluctance $\ell/\mu A$ per segment adding in series like resistances. *Demonstration:* E20, (3.54). *Fails when* the iron saturates ($\mu$ collapses) or the gap is wide enough for the flux to fringe out of the pole area.
+
+**T9 · Dimensional and limit checks.** $\mu_0I/(\text{length})$ is a field; $\mu_0nI$ has no radius in it; every finite result must reach the infinite one as its size grows. *Demonstration:* a candidate "solenoid end field" $\mu_0nI$ fails the $L\to\infty$ *from one side* limit — the end of an infinite solenoid sees only half the turns. *Fails when* two candidates share all the limits; then test an intermediate value against the exact formula.
+
+**T10 · Scaling.** Fields of currents scale as $I/\text{length}$; forces between currents as $I^2$; cyclotron frequency as $q/m$; energy as $q^2B^2R^2/m$; magnetic pressure as $B^2$; hysteresis loss as frequency. *Demonstration:* Q44 — alphas in a proton cyclotron reach the *same* energy at half the frequency, without recomputing anything. *Fails when* a saturating material breaks the linearity (a core's $B$ does not scale with $I$ past $2$ T).
 
 ## Part 8 · Traps
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the trap list of plan.md PARTs 16–19 in the "tempting answer, one-line reply, paper archetype" format — the left hand, the speed that "changes", the loop that does not enclose, $\mu_0/2\pi$ against $\mu_0/4\pi$, the forgotten $N$, the sum of the fields in the parallel-wire force, $v_\parallel$ in the radius, the period against the time in the region, the Hall polarity, $\mathbf B$ against $\mathbf H$, Curie's law for iron, north that is south, dip against declination.
+1. **The left hand for negative charges.** Tempting: it works once. Reply: $\mathbf v\times\mathbf B$ first, the sign of $q$ second, always. Archetype: E1(b), Q2.
+2. **"The field speeds it up."** Reply: the force is perpendicular to $\mathbf v$; speed and kinetic energy are constants of the motion. Archetype: "find the change in kinetic energy of the electron in the magnetic field" — zero.
+3. **Full speed in the helix radius.** Reply: $r=mv_\perp/qB$; the parallel part rides free. Archetype: E3, Q5.
+4. **The period for the time in a strip.** Reply: $t=\varphi m/qB$ with $\sin\varphi=d/r$; the full period only if the particle completes a circle. Archetype: E4, Q39.
+5. **"The cyclotron frequency depends on the energy."** Reply: not classically — that is the whole point; relativistically yes, by $1/\gamma$, which is the machine's limit. Archetype: C3, P28.
+6. **A loop that does not enclose the current.** Reply: zero circulation says nothing about $B$ on the loop. Archetype: C9.
+7. **$\mu_0/2\pi$ against $\mu_0/4\pi$.** Reply: infinite wire, semi-infinite wire at a point level with its end, and the Biot–Savart constant — three different things. Archetype: E12, the bent-wire corner.
+8. **The forgotten $N$.** Reply: $\mu=NIA$, $I_{\text{enc}}=NI$ for a toroid, $n\ell I$ for a solenoid's loop. Archetype: Q13–Q16, Q21.
+9. **The sum of the fields in the parallel-wire force.** Reply: wire 2 feels wire 1's field only; a wire does not push on itself. Archetype: Q25.
+10. **Adding fields as scalars for a compound loop.** Reply: each piece's direction by the grip rule, then add with signs. Archetype: E12(b) and its inward-lead variant.
+11. **$\mu_0I/2R$ off the centre.** Reply: on the axis it is $\mu_0IR^2/2(R^2+x^2)^{3/2}$; off the axis, no closed form. Archetype: Q11–Q12.
+12. **"The field outside a solenoid is exactly zero."** Reply: only for an infinite one; a finite solenoid leaks of order $R/L$. Archetype: C7.
+13. **The Hall polarity.** Reply: both carrier signs go to the *same* edge; the edge's sign is the carriers' sign. Archetype: E8.
+14. **The $\mathbf E\times\mathbf B$ drift as a force.** Reply: it is a velocity, the same for every charge and mass; the *gradient* drift is the one that separates charges. Archetype: Q47–Q48.
+15. **$\mathbf B$ for $\mathbf H$.** Reply: $H=nI$ in A m$^{-1}$, $B=\mu_r\mu_0nI$ in tesla; and $\mu_r$ is not a constant for iron. Archetype: Q56, P35.
+16. **Curie's law for a ferromagnet.** Reply: independent moments only; below $T_c$ the moments are locked and the loop rules. Archetype: P34's last part.
+17. **"Diamagnets have $\mu_r=0$."** Reply: $\mu_r=1+\chi\approx0.99999$; only a superconductor reaches $0$. Archetype: Q53.
+18. **North is south; dip is not declination.** Reply: the pole in the Arctic is the dipole's south; dip is a tilt below the horizontal, declination a swing from true north. Archetype: Q57–Q58, P36.
+19. **The total field in the magnet's period.** Reply: a horizontal magnet feels $B_H$ only. Archetype: E19, Q37.
 
 ## Part 9 · Playbook
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the triage tree, the formula map with validity, the constants card, the paper timing plan and the ten-point pre-submission audit.
+### 9.1 Triage
+
+> [!tip] FIGURE F16.9 · Triage for a magnetism question
+> *Why:* the opening line of the question decides the tool; the tree makes the decision in ten seconds.
+> *Data:* the branches of Part 4.1 and the toolkit, with the exit blocks.
+
+```mermaid
+flowchart TD
+  S["Read the question: what is asked, what is given?"] --> A{"a charge with a velocity?"}
+  A -- "yes" --> A1["q v cross B, sign last; circle, helix, strip, selector, drift"]
+  A -- "no" --> B{"a current as a source of B?"}
+  B -- "yes" --> B1{"long wire, thick wire, coax, sheet, solenoid, toroid?"}
+  B1 -- "yes" --> B2["Ampere with the matching loop; count N"]
+  B1 -- "no" --> B3["Biot-Savart: angles, arcs, axis formula; straight pieces through the point vanish"]
+  B -- "no" --> C{"a wire, loop or magnet in a field?"}
+  C -- "yes" --> C1["I L cross B, chord theorem, mu cross B, minus mu dot B, T = 2 pi sqrt(I/mu B)"]
+  C -- "no" --> D{"a material or the Earth?"}
+  D -- "yes" --> D1["chi, mu_r, B = mu0 (H + M), saturation; B_H, B_V, dip, declination"]
+  D -- "no" --> E["energy and pressure: B^2 / 2 mu0, fixed-current forces, Part 10 methods"]
+  A1 --> Z["check: limit, dimension, direction, magnitude against Part 0 numbers"]
+  B2 --> Z
+  B3 --> Z
+  C1 --> Z
+  D1 --> Z
+  E --> Z
+```
+
+> *Read:* two of the five branches hold three quarters of the paper; the magnitude check against §0.4 (a wire's $0.2$ mT, a coil's tens of $\mu$T, a solenoid's mT, a magnet's tesla) catches most slips.
+
+### 9.2 Formula map with validity
+
+| need | formula | remember |
+|---|---|---|
+| force / motion of a charge | $q\mathbf v\times\mathbf B$; $r=mv_\perp/qB$; $T=2\pi m/qB$; $v=E/B$ | speed constant; $v_\perp$ only |
+| instruments | $f=qB/2\pi m$, $K=q^2B^2R^2/2m$; $r\propto\sqrt m$; $V_H=IB/nqt$; $p=300Br$ | resonance needs $\gamma\approx1$ |
+| sources | ledger rows: wire, loop, arc, solenoid, toroid, dipole | limits; grip rule |
+| Ampère | $B\times(\text{length})=\mu_0I_{\text{enc}}$ | symmetry; $N$ |
+| forces on currents | $I\mathbf L\times\mathbf B$; chord; $\mu_0I_1I_2/2\pi d$; $\boldsymbol\mu\times\mathbf B$; $-\boldsymbol\mu\cdot\mathbf B$ | uniform field for the chord |
+| pressure / energy | $B^2/2\mu_0$ for both | $1$ T $=4$ atm |
+| matter | $\mathbf B=\mu_0(\mathbf H+\mathbf M)$; $\chi$, $\mu_r$; $\chi=C/T$; loop area | saturation $2.1$ T |
+| Earth | $B_H=B\cos\theta_{\text{dip}}$; $\tan\theta_{\text{dip}}=B_V/B_H$; $B_{\text{coil}}=B_H\tan\theta$ | $B_H$ for compasses and periods |
+
+### 9.3 Numbers to carry
+
+$\mu_0=4\pi\times10^{-7}$ T m A$^{-1}$ · $\mu_0/4\pi=10^{-7}$ · $e/m_e=1.76\times10^{11}$ C kg$^{-1}$ · $e/m_p=9.58\times10^{7}$ · electron $28$ GHz T$^{-1}$, proton $15.2$ MHz T$^{-1}$ · $\mu_B=9.27\times10^{-24}$ A m$^2$ · $B^2/2\mu_0$ at $1$ T $=4\times10^5$ Pa · $B_s(\text{Fe})=2.1$ T · $T_c(\text{Fe})=1043$ K · Earth $25$–$65\ \mu$T, $\mu_\oplus=8\times10^{22}$ A m$^2$ · $\chi$: water $-9\times10^{-6}$, Al $+2\times10^{-5}$ · $u=1.66\times10^{-27}$ kg · $1$ eV $=1.6\times10^{-19}$ J.
+
+### 9.4 Timing for the paper
+
+A ($12\times4$): $2$ min each. B ($8\times4$): $3$ min. C ($6\times5$): $5$ min. D ($10\times9$): $9$ min. Ten minutes for the audit. In D, write the direction of every vector before its magnitude — the marking scheme pays for it.
+
+### 9.5 The ten-point audit
+
+1. Every magnetic force is perpendicular to $\mathbf v$ (or to $\mathbf L$) and to $\mathbf B$; the sign of $q$ was applied last.
+2. Radii used $v_\perp$; periods used no speed; times in regions used the angle turned.
+3. Every Biot–Savart piece has a direction from the grip rule and the pieces were added as vectors.
+4. Every Ampère loop encloses what you counted, with $N$ where there are turns.
+5. Forces between currents used the *other* current's field.
+6. Torques used the angle between $\hat{\mathbf n}$ and $\mathbf B$, with $N$ in the moment.
+7. $B$ and $H$ were not confused; iron was not taken past $2$ T; Curie's law was not applied to iron.
+8. The Earth's $B_H$ was used where a horizontal needle or magnet was involved.
+9. A limit or a scaling was checked on every derived result.
+10. Units in every substitution; magnitudes plausible against §0.4.
 
 ## Part 10 · Olympiad extension
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: magnetism derived from electrostatics and relativity (the length-contracted wire, with the constant coming out right); the field of a moving charge and Biot–Savart; the finite solenoid by direct integration and the Helmholtz condition $d=R$ with the vanishing second derivative; the rotating charged disc and sphere and the gyromagnetic ratio, with the Bohr magneton; the magnetised sphere's $\tfrac23\mu_0M$; magnetic pressure applied to the solenoid's end, the wire's self-pinch and a levitating superconductor; the two-cylinder uniform field as a design; dipole–dipole forces; the cycloid solved twice; gradient and curvature drifts and the radiation belts' timescales; Fermi acceleration; the relativistic cyclotron and the synchrotron; the betatron's 2:1 condition; the Hall effect with two carrier types; the demagnetising factor; the Meissner levitation estimate; the Curie–Weiss law and the Curie-temperature estimate from the exchange energy; adiabatic demagnetisation; the compass's accuracy near a wire; the heart's field and the SQUID; the Earth's core current; the limits-and-failure section; and OL1–OL12 solved long problems, each with a named method, a numeric answer and two checks.
+Three first-principles derivations the school books state without proof (10.1, 10.2, 10.3), estimates with the algebra shown (10.5), two measurements reconstructed (10.6), the places the model breaks (10.7), and twelve long problems, each solved twice where a second method exists.
+
+### 10.1 What magnetism is: electrostatics plus relativity
+
+Take a neutral wire along $x$: positive ions at rest with linear density $\lambda$, conduction electrons with density $-\lambda$ moving at speed $u$ in the $-x$ direction, so the current $I=\lambda u$ flows along $+x$. A test charge $q>0$ moves parallel to the wire at speed $v$ along $+x$, at distance $r$. In the laboratory the wire is neutral, there is no electric force, and the magnetic force $qvB=qv\mu_0\lambda u/2\pi r$ pulls the charge towards the wire (parallel currents attract).
+
+Now sit on the test charge. In its rest frame $S'$ the ions move at $-v$ and their spacing is Lorentz-contracted: density $\gamma_v\lambda$. The electrons move at the relativistic sum $u'=(u+v)/(1+uv/c^2)$ (in the $-x$ direction); their *rest* density is $\lambda/\gamma_u$ (in the lab they were already contracted from it), and in $S'$ it is contracted by $\gamma_{u'}$. The identity $\gamma_{u'}=\gamma_u\gamma_v(1+uv/c^2)$ gives the electron density in $S'$ as $\lambda\gamma_v(1+uv/c^2)$. The wire's net charge per unit length in $S'$ is therefore
+
+$$
+\lambda'=\gamma_v\lambda-\gamma_v\lambda\left(1+\frac{uv}{c^2}\right)=-\gamma_v\,\frac{\lambda uv}{c^2}=-\gamma_v\,\frac{Iv}{c^2}: \qquad (10.1)
+$$
+
+**in the charge's frame the wire is negatively charged**, and it attracts the charge electrostatically with $F'=q\lambda'/2\pi\varepsilon_0r=\gamma_v\,qv\,\dfrac{I}{2\pi\varepsilon_0c^2r}$. A transverse force transforms as $F=F'/\gamma_v$ back to the laboratory, so
+
+$$
+F=qv\,\frac{I}{2\pi\varepsilon_0c^2r}=qv\,\frac{\mu_0I}{2\pi r}=qvB\qquad\text{with}\quad\mu_0=\frac{1}{\varepsilon_0c^2}, \qquad (10.2)
+$$
+
+exactly the Lorentz force, constant and all. There is no separate magnetic interaction: the "magnetic" force is the Coulomb force of a charge imbalance that exists only in the moving charge's frame, and $\mu_0\varepsilon_0=1/c^2$ (§2.5) is the fingerprint. The effect is of order $uv/c^2$ — for a drift speed of $10^{-4}$ m s$^{-1}$ and $v=10^6$ m s$^{-1}$, one part in $10^{15}$ of the ions' charge — and it is visible only because the wire's enormous electric charges cancel to that precision while their motions do not. The field of a moving charge, (3.18), is the same statement for a single source: $\mathbf B=\mathbf v\times\mathbf E/c^2$ is what the Coulomb field of a moving charge looks like to another moving charge.
+
+> [!abstract] DIAGRAM D16.30 · The wire in two frames
+> *Show:* the laboratory frame with ions ($+$) at spacing $a$ and electrons ($-$) at the same spacing moving left, a test charge moving right at $v$, and the magnetic force towards the wire; the charge's rest frame beneath, with the ion spacing contracted to $a/\gamma_v$ and the electron spacing *expanded* relative to it, a net negative wire, and the electric force towards the wire; the caption "$\lambda'=-\gamma_vIv/c^2$".
+> *Search:* "magnetism as relativistic effect current carrying wire length contraction charge density test charge frame purcell"
+
+### 10.2 The Helmholtz pair
+
+Two coaxial loops of radius $R$ and $N$ turns each, distance $d$ apart, carrying the same current the same way. On the axis, with $z$ from the midpoint,
+
+$$
+B(z)=\frac{\mu_0NIR^2}{2}\left[\frac{1}{(R^2+(z-d/2)^2)^{3/2}}+\frac{1}{(R^2+(z+d/2)^2)^{3/2}}\right]. \qquad (10.3)
+$$
+
+By symmetry $B'(0)=0$. For the flattest possible field make $B''(0)=0$ too. With $f(s)=(R^2+s^2)^{-3/2}$, $f''(s)=(R^2+s^2)^{-7/2}(12s^2-3R^2)$, which vanishes at $s=R/2$; each coil sits at $s=\pm d/2$ from the midpoint, so the condition is $d=R$: **the Helmholtz spacing equals the radius.** Then
+
+$$
+B(0)=\frac{8}{5\sqrt5}\,\frac{\mu_0NI}{R}=0.716\,\frac{\mu_0NI}{R},\qquad \frac{B(z)}{B(0)}\approx1-\frac{144}{125}\left(\frac zR\right)^4, \qquad (10.4)
+$$
+
+the fourth-order coefficient following from the next non-vanishing derivative. The field is uniform to $0.1\%$ for $\lvert z\rvert<0.17R$ and to $1\%$ for $\lvert z\rvert<0.3R$ — a cheap way to make a known uniform field over a hand-sized volume, which is how $e/m$ tubes, magnetometer calibrations and the cancellation of the Earth's field are done. Closer coils give a peak at the centre, farther coils a dip (F16.10).
+
+> [!tip] FIGURE F16.10 · Axial field of two coils at three spacings
+> *Why:* the Helmholtz condition is the *only* spacing without a bump or a dip at the centre; seeing the neighbours makes the fourth-order flatness visible.
+> *Data:* $B(z)/B(0)$ from (10.3) for $d=R$ (flat), $d=1.5R$ (dip at the centre) and $d=0.5R$ (peak), on $z/R$ from $-1$ to $1$ in steps of $0.2$.
+
+```mermaid
+xychart-beta
+  title "two coaxial coils: B(z)/B(0) against z/R for spacings d = R, 1.5R, 0.5R"
+  x-axis -1 --> 1
+  y-axis 0.3 --> 1.2
+  line [0.619, 0.772, 0.901, 0.975, 0.998, 1.0, 0.998, 0.975, 0.901, 0.772, 0.619]
+  line [1.011, 1.129, 1.15, 1.097, 1.029, 1.0, 1.029, 1.097, 1.15, 1.129, 1.011]
+  line [0.414, 0.548, 0.703, 0.852, 0.961, 1.0, 0.961, 0.852, 0.703, 0.548, 0.414]
+```
+
+> *Read:* at $d=R$ the curve is flat to $0.2\%$ out to $z=0.2R$ and $2.5\%$ at $0.4R$; at $d=1.5R$ the field is $15\%$ higher under each coil than at the centre; at $d=0.5R$ it falls $4\%$ by $z=0.2R$ — a single fat coil's profile.
+
+### 10.3 The magnetised sphere, and the rotating shell
+
+A uniformly magnetised sphere carries the bound surface current $K=M\sin\theta$ (§3.30); a uniformly charged shell of density $\sigma$ rotating at $\omega$ carries $K=\sigma\omega R\sin\theta$ — the same distribution with $M\leftrightarrow\sigma\omega R$. **At the centre**, slice the sphere into rings at polar angle $\theta$: radius $R\sin\theta$, width $R\,d\theta$, current $dI=K\,R\,d\theta=M R\sin\theta\,d\theta$, contributing by (3.22) with $x=R\cos\theta$: $dB=\dfrac{\mu_0\,dI\,(R\sin\theta)^2}{2R^3}=\dfrac{\mu_0M}{2}\sin^3\theta\,d\theta$, so
+
+$$
+B_{\text{centre}}=\frac{\mu_0M}{2}\int_0^\pi\sin^3\theta\,d\theta=\frac{\mu_0M}{2}\cdot\frac43=\frac23\mu_0M. \qquad (10.5)
+$$
+
+**Everywhere inside** the field is the same — the interior field of a uniformly magnetised sphere is uniform (a result of potential theory: the sphere's $\mathbf H$ inside is $-\mathbf M/3$, the demagnetising field with $N_d=\tfrac13$, and $\mathbf B=\mu_0(\mathbf H+\mathbf M)=\tfrac23\mu_0\mathbf M$ — consistent with (10.5), which is the second method) — and outside it is exactly the dipole field of $\boldsymbol\mu=\tfrac43\pi R^3\mathbf M$. For the rotating shell, $B_{\text{inside}}=\tfrac23\mu_0\sigma\omega R$. Numbers: a neodymium sphere with $M=10^6$ A m$^{-1}$ has $B=0.84$ T inside; a $1$ cm sphere has $\mu=0.52$ A m$^2$ and a field of $0.84$ mT at $5$ cm on its axis.
+
+### 10.4 Magnetic pressure at work: the pinch, the levitated slab, the cosine-theta coil
+
+**The pinch.** A wire of radius $a$ carrying $I$ has surface field $\mu_0I/2\pi a$ and its own current sits in half that field (§3.26): an inward pressure $B^2/2\mu_0=\mu_0I^2/8\pi^2a^2$ squeezes it. For $10^5$ A in a $1$ cm conductor: $B=2$ T, $1.6$ MPa, $16$ atmospheres — a copper bar holds it. For $10^6$ A in a $1$ mm channel: $200$ T and $1.6\times10^{10}$ Pa, beyond any material's strength — the wire vaporises, the current continues in the plasma, and the pinch compresses it (the Bennett relation of plasma physics equates $\mu_0I^2/8\pi$ to the plasma's line pressure $2Nk_BT$). Pulsed z-pinches reach $10^7$ A and are among the brightest X-ray sources on Earth; the "sausage" and "kink" instabilities that break them are magnetic pressure's own doing.
+
+**The superconducting slab.** A type-I superconductor excludes the field (the Meissner effect, $\chi=-1$): its surface is a current sheet with $B$ outside and $0$ inside, so the field presses on it with $B^2/2\mu_0$. A field of $1$ T pushes with $4\times10^5$ Pa — enough to support a steel slab $5$ m thick; $0.1$ T supports $5$ cm. Levitation is not the problem; making the superconductor is.
+
+**The cosine-theta coil.** Let the two overlapping cylinders of §3.20 approach each other ($d\to0$) with $Jd\equiv K_0$ fixed: the crescents of net current become a cylindrical sheet with $K=K_0\cos\varphi$ ($\varphi$ measured from the line of centres), and the interior field stays $\mu_0Jd/2=\mu_0K_0/2$, uniform and transverse. That is the current distribution of every accelerator dipole magnet: a $\cos\varphi$ winding on a cylinder gives a perfectly uniform transverse field inside, and the LHC's $8.3$ T dipoles are this construction in superconducting cable, held against their own $B^2/2\mu_0=2.7\times10^{7}$ Pa by steel collars.
+
+### 10.5 Estimates
+
+**The Earth's core current.** The dipole moment $8\times10^{22}$ A m$^2$, if made by a single loop of the outer core's radius ($3.5\times10^{6}$ m, area $3.8\times10^{13}$ m$^2$), needs $I=\mu/A\approx2\times10^{9}$ A — two billion amperes circulating in liquid iron, driven by convection and rotation (the dynamo), decaying in a few $10^4$ years if not sustained ($\tau\sim\mu_0\sigma R^2/\pi^2$ with $\sigma\sim5\times10^5$ S m$^{-1}$ and $R=3.5\times10^6$ m gives $2.5\times10^4$ years), which is why the field's persistence for $10^9$ years requires the dynamo.
+
+**A compass's honesty near a wire.** A wire's field $\mu_0I/2\pi d$ deflects a compass by $\arctan(B_{\text{wire}}/B_H)$; for an error under $1^\circ$ ($\tan1^\circ=0.017$) with $B_H=30\ \mu$T, $B_{\text{wire}}<0.5\ \mu$T: at $10$ cm the wire may carry at most $0.25$ A. A car's wiring at $10$ A must be a metre away; a ship's compass is corrected with iron spheres and magnets for exactly this reason.
+
+**The heart's field.** The heart's depolarisation wave is a current dipole of order $10^{-5}$ A m; at $10$ cm the dipole field $\sim(\mu_0/4\pi)(10^{-5})/(0.1)^2=10^{-10}$ T $=100$ pT, a millionth of the Earth's — measured (magnetocardiography) only with a SQUID magnetometer, whose noise floor of a few femtotesla per root hertz comes from the flux quantum $h/2e=2\times10^{-15}$ Wb threading a loop. The brain's fields are a hundred times weaker still.
+
+**How far can a magnet float over a superconductor?** A dipole $\mu$ above a perfect diamagnet sees an image dipole, antiparallel, at the same depth; the repulsion between antiparallel coaxial dipoles at separation $2h$ is $F=3\mu_0\mu^2/(2\pi(2h)^4)=3\mu_0\mu^2/32\pi h^4$. For a $1$ cm$^3$ NdFeB cube ($\mu=1$ A m$^2$, weight $7.4\times10^{-2}$ N): $h=(3\mu_0\mu^2/32\pi mg)^{1/4}=2.7$ cm — the height of the classic demonstration, from one line.
+
+**Adiabatic demagnetisation.** For an ideal paramagnet $M$ is a function of $B/T$ only (3.50), so an isentropic (constant-$M$) reduction of the field from $B_i$ to $B_f$ takes $T_f=T_i(B_f/B_i)$: a salt magnetised at $1$ K in $1$ T and demagnetised to $0.01$ T (the internal field sets the floor) reaches $10$ mK — the standard route below liquid helium, and the magnetocaloric effect that room-temperature magnetic refrigerators exploit with gadolinium near its Curie point.
+
+### 10.6 The physics behind two numbers
+
+**The Curie temperature of iron.** Could magnetic forces between atomic moments hold them parallel? The dipole–dipole energy of two Bohr magnetons at $0.25$ nm is $\mu_0\mu_B^2/4\pi a^3=5.5\times10^{-25}$ J, which is $k_BT$ at $0.04$ K: magnetic coupling alone would give a Curie temperature of a few hundredths of a kelvin. Iron's is $1043$ K, four orders of magnitude higher, so the coupling is not magnetic at all. It is the **exchange** energy $J$ — the difference in Coulomb energy between parallel and antiparallel spins forced by the Pauli principle — and in a mean-field estimate $k_BT_c\approx zJ/3$ with $z$ nearest neighbours: $z=8$ (body-centred cubic iron) and $J\approx0.05$ eV give $T_c\approx1500$ K, the right order. Above $T_c$ the same mean field yields the Curie–Weiss law $\chi=C/(T-T_c)$, whose divergence at $T_c$ is the phase transition seen from the paramagnetic side. The chapter's contribution: the *magnetic* number that rules it out.
+
+**Gauss's absolute measurement of the Earth's field (1832).** Oscillate a magnet in the horizontal field: $T=2\pi\sqrt{I_m/\mu B_H}$ gives the *product* $\mu B_H$. Then place the same magnet on the east–west line through a compass at distance $d$: its axial field $(\mu_0/4\pi)(2\mu/d^3)$ deflects the compass by $\theta$ with $\tan\theta=(\mu_0/4\pi)2\mu/d^3B_H$, giving the *ratio* $\mu/B_H$. Two measurements, two unknowns. With $I_m=6.0\times10^{-6}$ kg m$^2$, $T=4.0$ s, $d=20$ cm and $\theta=30^\circ$: $\mu B_H=4\pi^2I_m/T^2=1.48\times10^{-5}$; $\mu/B_H=\tan\theta\,d^3/2\times10^{-7}=2.31\times10^{4}$; hence $\mu=0.58$ A m$^2$ and $B_H=25\ \mu$T — the first time a magnetic field was expressed in mechanical units (mass, length, time), which is why the old unit of $\mathbf B$ bore Gauss's name.
+
+### 10.7 Where the model breaks
+
+* **Speed.** The cyclotron frequency is $qB/\gamma m$: at $\gamma=1.03$ the classical machine fails; at $\gamma=2000$ (a GeV electron) the synchrotron must ramp $B$ and radiate. PART 28.
+* **Radiation.** A circling charge radiates (synchrotron radiation, $\propto\gamma^4/R$ per turn); for electrons in accelerators this is the energy limit, and for electrons in space it is how we see magnetic fields in nebulae.
+* **Quantum mechanics.** Orbits in a field are quantised (Landau levels, $\hbar\omega_c$ apart — the quantum Hall effect lives there); spin has no classical model ($g=2$); exchange, not dipole coupling, makes ferromagnets; superconductivity's perfect diamagnetism and flux quantisation are quantum from the ground up.
+* **Non-linearity.** Iron saturates at $2.1$ T; $\mu_r$ is a slope on a loop, not a constant; permanent magnets demagnetise themselves if their shape's $N_dM$ exceeds $H_c$ (§3.31).
+* **Time dependence.** Let any flux change and an electric field appears with $\oint\mathbf E\cdot d\mathbf l\neq0$: Faraday's law, PART 20, which this chapter has kept at arm's length except for one page (§3.27) and one line (§3.34).
+* **Collective effects.** In a plasma the particles' own fields matter: Debye shielding, the pinch's instabilities, Alfvén waves. Single-particle orbits are the beginning of plasma physics, not the end.
+
+### OL1 — The magnetic force from the charge's own frame
+
+A wire carries $I=10$ A; a proton moves parallel to it at $v=1.0\times10^{6}$ m s$^{-1}$, $1.0$ cm away. Find the force on the proton (a) in the laboratory, from the magnetic field; (b) in the proton's rest frame, from the wire's net charge; and show they agree.
+
+*Method 1 — laboratory.* $B=\mu_0I/2\pi r=2.0\times10^{-4}$ T; $F=evB=(1.6\times10^{-19})(10^6)(2\times10^{-4})=3.2\times10^{-17}$ N, towards the wire if the proton moves with the current.
+
+*Method 2 — the proton's frame.* By (10.1) the wire carries $\lambda'=-\gamma_vIv/c^2=-(10)(10^6)/(9\times10^{16})=-1.1\times10^{-10}$ C m$^{-1}$ ($\gamma_v=1+6\times10^{-6}$). Its field at $1$ cm: $E'=\lambda'/2\pi\varepsilon_0r=(1.1\times10^{-10})(1.8\times10^{10})/0.01=200$ V m$^{-1}$; force $eE'=3.2\times10^{-17}$ N, towards the wire ✓. (The $\gamma_v$ factors cancel between the density and the force transformation.)
+
+*Checks.* The wire's charge in the proton's frame is $1.1\times10^{-10}$ C m$^{-1}$ against an ion density of $\lambda=I/u\sim10^5$ C m$^{-1}$ (for $u\sim10^{-4}$ m s$^{-1}$): a relative imbalance of $10^{-15}$, as $uv/c^2$ says ✓. Reverse $v$ and $\lambda'$ changes sign: repulsion, as antiparallel currents require ✓.
+
+### OL2 — Designing a Helmholtz pair
+
+Two $100$-turn coils of radius $20$ cm carry $1.0$ A. (a) Derive the spacing that makes the axial field flattest at the midpoint and find that field. (b) Over what length is it uniform to $0.1\%$? (c) What current cancels the Earth's $45\ \mu$T inside the pair?
+
+(a) From (10.3), $B''(0)=0$ requires $d=R$ (the $12s^2=3R^2$ condition at $s=d/2$); then $B(0)=(8/5\sqrt5)\mu_0NI/R=0.716\times(4\pi\times10^{-7})(100)(1)/0.2=0.45$ mT. (b) $\tfrac{144}{125}(z/R)^4<10^{-3}\Rightarrow\lvert z\rvert<0.17R=3.4$ cm on either side: a $7$ cm region. (c) $I=45\times10^{-6}/(4.5\times10^{-4})=0.10$ A, with the axis aligned along the local field.
+
+*Second method for (a):* expand each coil's field about the midpoint, $B_1(z)=B_1(0)+B_1'z+\tfrac12B_1''z^2+\dots$; the odd terms cancel between the coils by symmetry and the even ones add, so the first correction is $B''$, and $B''$ of a single loop changes sign at $s=R/2$ — the field of one loop has its inflection there. *Checks.* $d\to0$: a single $200$-turn loop, $B=\mu_0NI/R=0.63$ mT ✓ ($0.716\to1$). Dimensions of $\mu_0NI/R$: T ✓.
+
+### OL3 — The magnetised sphere two ways
+
+A sphere of radius $R$ carries uniform magnetisation $M$. Find the field at its centre by integrating over rings, and confirm it with the demagnetising factor. Then find its external dipole moment and the field at $r=5R$ on the axis, for $M=10^6$ A m$^{-1}$ and $R=1$ cm.
+
+*Method 1 — rings.* (10.5): $B=\tfrac23\mu_0M=0.84$ T. *Method 2 — demagnetising field.* Inside a uniformly magnetised ellipsoid $\mathbf H=-N_d\mathbf M$; for a sphere $N_d=\tfrac13$ (the three axes share $N_x+N_y+N_z=1$ equally), so $\mathbf B=\mu_0(\mathbf M-\tfrac13\mathbf M)=\tfrac23\mu_0\mathbf M$ ✓ — and this method says the interior field is *uniform*, which the ring integral at the centre alone could not.
+
+*Moment and far field.* $\mu=\tfrac43\pi R^3M=0.52$ A m$^2$; at $r=5R=5$ cm on the axis, $B=(\mu_0/4\pi)2\mu/r^3=8.4\times10^{-4}$ T.
+
+*Checks.* A long cylinder ($N_d\to0$) would have $B=\mu_0M=1.26$ T inside — more than the sphere's, because the sphere's poles are close and their demagnetising field opposes $\mathbf M$ ✓. Just outside the sphere at the pole, the dipole field is $(\mu_0/4\pi)2\mu/R^3=\tfrac23\mu_0M$ — continuous with the inside, as the normal component must be ✓; at the equator outside it is $-\tfrac13\mu_0M$, against $\tfrac23\mu_0M$ inside — a tangential jump of $\mu_0M=\mu_0K$ ✓ (§3.26).
+
+### OL4 — Pressure three ways: solenoid, pinch, superconductor
+
+(a) A solenoid of bore $10$ cm$^2$ runs at $3.0$ T. Find the hoop pressure on its winding and the force pulling its two halves together. (b) A lightning return stroke carries $30$ kA in a channel $5$ mm in radius; find the surface field and the pinch pressure. (c) A superconducting plate supports a $2.0$ kg magnet over $4.0$ cm$^2$; what field must exist at its surface?
+
+(a) $P=B^2/2\mu_0=9/(2.51\times10^{-6})=3.6\times10^{6}$ Pa ($36$ atm) outward on the winding; end force $PA=3.6$ kN pulling the halves together (T7's energy argument: separating them by $dx$ creates $A\,dx$ of $3$ T field at $3.6\times10^6$ J m$^{-3}$). (b) $B=\mu_0I/2\pi a=(2\times10^{-7})(3\times10^4)/(5\times10^{-3})=1.2$ T; pressure on the channel's own current $B^2/2\mu_0=5.7\times10^{5}$ Pa, six atmospheres inward — the channel is a plasma at thousands of kelvin, and its thermal pressure balances this (the Bennett condition). (c) $B^2A/2\mu_0=mg\Rightarrow B=\sqrt{2\mu_0mg/A}=\sqrt{2(1.26\times10^{-6})(19.6)/(4\times10^{-4})}=0.35$ T at the plate's surface under the magnet — a strong but ordinary permanent-magnet field.
+
+*Second method for (a):* force on the sheet, $K\cdot B/2$ with $K=B/\mu_0$: $B^2/2\mu_0$ ✓. *Checks.* Scaling $B^2$: at $1$ T, (a) is $4$ atm and $400$ N ✓ (§3.26). In (b), $30$ kA in a $5$ mm channel is $J=4\times10^8$ A m$^{-2}$, which would melt copper in microseconds — the channel *is* plasma ✓.
+
+### OL5 — The cycloid family from any initial velocity
+
+Protons in $\mathbf E=2.0\times10^{3}\,\hat{\mathbf y}$ V m$^{-1}$, $\mathbf B=0.020\,\hat{\mathbf z}$ T are launched along $+x$ with speed (a) $1.0\times10^{5}$, (b) $2.0\times10^{5}$, (c) $0$, (d) $1.0\times10^{5}$ along $-x$. Classify each path and give its dimensions.
+
+*Method — the drifting frame.* $\mathbf v_d=\mathbf E\times\mathbf B/B^2=(E/B)\hat{\mathbf x}=1.0\times10^{5}\,\hat{\mathbf x}$ m s$^{-1}$. In the frame moving at $\mathbf v_d$ there is no electric field and the proton circles at the cyclotron frequency ($T=2\pi m/eB=3.3\ \mu$s) with speed $\lvert\mathbf v_0-\mathbf v_d\rvert$ and radius $r=m\lvert\mathbf v_0-\mathbf v_d\rvert/eB$; the laboratory path is that circle carried along at $\mathbf v_d$ — the trace of a point at distance $r$ from the centre of a wheel of radius $r_c=mv_d/eB=5.2$ cm rolling at $v_d$. (a) $\mathbf v_0=\mathbf v_d$: $r=0$, a **straight line** at constant speed (the selector). (b) $\lvert\mathbf v_0-\mathbf v_d\rvert=v_d$: $r=r_c$, a **cycloid** with cusps, the same curve as release from rest but starting at the top of an arch. (c) $r=r_c$: the ordinary **cycloid** with cusps, height $2r_c=10.4$ cm, top speed $2v_d$. (d) $\lvert\mathbf v_0-\mathbf v_d\rvert=2v_d$: $r=2r_c=10.4$ cm, a **prolate** cycloid with loops — the proton moves backwards at the bottom of each loop, since its gyration speed exceeds the drift.
+
+*Second method — direct integration.* Solving $m\dot{\mathbf v}=e(\mathbf E+\mathbf v\times\mathbf B)$ with $v_x=v_d+A\cos(\omega t+\phi)$, $v_y=-A\sin(\omega t+\phi)$ and fitting $\mathbf v(0)$ reproduces each case: (3.13) is the $A=v_d$, $\phi=\pi$ member. *Checks.* Energy in (d): at the bottom of a loop the speed is $3v_d$ and at the top $v_d$; $\tfrac12m(9-1)v_d^2=4mv_d^2$ must equal $eE\cdot2r=eE\cdot4r_c=4eEmv_d/eB=4mv_d^2$ ✓. The drift is the same $10^5$ m s$^{-1}$ for an electron; only the circle's size changes ✓.
+
+### OL6 — Three clocks in the radiation belts
+
+A $1.0$ MeV proton is trapped at $L=2$ (geocentric distance $2R_\oplus$ at the equator), where the Earth's field is $B_0/L^3$ with $B_0=31\ \mu$T. Find its gyration period, its bounce time between mirror points (order of magnitude), and its drift period around the Earth.
+
+*Gyration.* $B=3.9\ \mu$T; $T_c=2\pi m/eB=17$ ms; $v=1.4\times10^7$ m s$^{-1}$ ($K\ll m_pc^2$), gyroradius $mv/eB=37$ km — small against $R_\oplus$, so the guiding-centre picture holds. *Bounce.* The mirror points are roughly a field line's length apart, $\sim2LR_\oplus$; at $v\sim1.4\times10^7$ m s$^{-1}$ the bounce time is $\sim2$ s. *Drift.* The gradient drift (3.14) with $\lvert\nabla B\rvert/B=3/r$ for a dipole and a $90^\circ$ pitch angle: $v_{\nabla}=\tfrac32v_\perp r_L/r=3K/eBr$; the drift period $T_d=2\pi r/v_\nabla=2\pi eBr^2/3K=2\pi(1.6\times10^{-19})(3.9\times10^{-6})(1.27\times10^7)^2/(3\times1.6\times10^{-13})=1.3\times10^{3}$ s $\approx22$ min, westward. (Curvature drift, for particles with parallel velocity, adds a comparable term; the standard result $T_d\approx1/(LK_{\text{MeV}})$ hours gives $30$ min.)
+
+*Checks.* Three timescales separated by two orders each — $10^{-2}$, $10^0$, $10^3$ s — which is what makes each motion an adiabatic invariant of the next ✓. $T_d\propto1/K$: a $10$ MeV proton circles in $2$ min, a $10$ keV one in $1.5$ days; the belts' particles of all energies form a ring current of a few MA ✓.
+
+### OL7 — Fermi acceleration
+
+A charged particle of speed $v$ bounces between two magnetic mirrors that approach each other at speed $V\ll v$. Show that each reflection increases its energy by a fraction $\approx4V/v$ (for a head-on encounter), find the number of reflections needed to double the energy, and estimate the time for a cosmic-ray proton reflecting off magnetised clouds moving at $10$ km s$^{-1}$ spaced $1$ light-year apart.
+
+*Method 1 — the moving wall.* In the mirror's frame the reflection is elastic; back in the laboratory the speed becomes $v+2V$ (PART 7's ball off an approaching bat), so $K\propto v^2$ grows by $(v+2V)^2/v^2-1\approx4V/v$. To double $K$ the speed must grow by $\sqrt2$: $(\sqrt2-1)v/2V\approx0.21\,v/V$ reflections. For $v\approx c$ and $V=10$ km s$^{-1}$: $6\times10^{3}$ reflections; at one per light-year, $6000$ years to double — and since clouds recede as often as they approach, only the second-order net gain $\propto(V/c)^2$ survives, making the true time $\sim c/V$ times longer: $10^{8}$ years. Too slow; which is why the modern picture uses *shocks* (first-order Fermi), where every crossing is head-on and the gain per cycle is $\propto V/c$ with $V\sim10^3$ km s$^{-1}$.
+
+*Method 2 — the adiabatic invariant.* Between mirrors a distance $L$ apart, the longitudinal invariant $\oint p_\parallel\,dl=2p_\parallel L$ is conserved as $L$ shrinks slowly, so $p_\parallel\propto1/L$: halving the gap doubles the parallel momentum — the same $2V$ per bounce integrated. *Checks.* $V\to0$: no gain ✓. Momentum conservation: the mirror (a cloud of $10^{30}$ kg) recoils immeasurably ✓. The energy spectrum this produces is a power law, as the cosmic-ray spectrum is.
+
+### OL8 — Why the synchrotron is not a cyclotron
+
+A $1.0$ GeV electron ($\gamma=1958$) circulates in $B=1.0$ T. Find its orbit radius, its revolution frequency, the frequency a cyclotron would have assumed, and the energy it radiates per turn.
+
+*Radius.* $p\approx E/c=1$ GeV/$c$; $r=p/eB=1/(0.2998\times1)=3.3$ m (the $300Br$ rule with GeV and km reads $p[\text{GeV}/c]=0.3B[\text{T}]r[\text{m}]$). *Frequency.* $f=c/2\pi r=14.3$ MHz; the cyclotron formula $eB/2\pi m_e=28$ GHz is wrong by the factor $\gamma=1958$: $f=eB/2\pi\gamma m$. A fixed-frequency machine cannot follow an electron even from $0.5$ to $1$ MeV; the synchrotron holds $r$ fixed by ramping $B$ with $p$ and ramps the cavity frequency towards $c/2\pi r$ as $v\to c$. *Radiation.* Per turn, $\Delta E=\dfrac{e^2\beta^3\gamma^4}{3\varepsilon_0r}=88.5\ \text{keV}\times\dfrac{E^4[\text{GeV}]}{r[\text{m}]}=27$ keV — replaced each turn by the cavities; at a beam current of $1$ mA that is $27$ W of synchrotron light, the by-product that became an industry.
+
+*Checks.* $\gamma^4$: a $10$ GeV electron in the same ring radiates $10^4$ times more per turn, $270$ MeV — comparable to its energy per turn, the practical ceiling for electron rings ✓. A proton of the same momentum radiates $(m_e/m_p)^4=10^{-13}$ times less ✓ — protons go to TeV in rings, electrons do not.
+
+### OL9 — The Hall effect with two kinds of carrier
+
+A semiconductor has electron density $n$, hole density $p$, mobilities $\mu_n$, $\mu_p$. Show that the Hall coefficient is $R_H=\dfrac{p\mu_p^2-n\mu_n^2}{e(p\mu_p+n\mu_n)^2}$, and find when its sign flips. Germanium at room temperature: $p=10^{21}$, $n=10^{20}$ m$^{-3}$, $\mu_n=0.39$, $\mu_p=0.19$ m$^2$ V$^{-1}$ s$^{-1}$; and the same sample heated until $n=p=3\times10^{20}$.
+
+*Derivation.* In the transverse Hall field $E_y$ each carrier type drifts sideways with velocity $\pm\mu E_y-\mu(\mu E_xB)$ (the magnetic deflection is $\mu B$ times the longitudinal drift, in the same sense for both signs, §3.9); the *total* transverse current must vanish: $e[p\mu_p(E_y-\mu_pE_xB)-n\mu_n(E_y+\mu_nE_xB)]=0$ to first order in $B$, so $E_y=\dfrac{p\mu_p^2-n\mu_n^2}{p\mu_p+n\mu_n}E_xB$; with $J_x=e(p\mu_p+n\mu_n)E_x$, $R_H=E_y/J_xB$ gives the result. It vanishes when $n\mu_n^2=p\mu_p^2$, i.e. $n/p=(\mu_p/\mu_n)^2$: **a sample can be $p$-type by count and $n$-type by Hall sign**, because the faster electrons are deflected more. Germanium: $R_H=(10^{21}\times0.036-10^{20}\times0.152)/(1.6\times10^{-19}(1.9\times10^{20}+3.9\times10^{19})^2)=+2.5\times10^{-3}$ m$^3$ C$^{-1}$ — positive, $p$-type. Heated to intrinsic ($n=p$): $R_H=(\mu_p-\mu_n)/e\,n(\mu_p+\mu_n)=-7.2\times10^{-3}$ m$^3$ C$^{-1}$ — negative: the sign has flipped with temperature, a well-known trap in semiconductor characterisation.
+
+*Checks.* One carrier ($n=0$): $R_H=1/pe$ ✓ (3.11). $\mu_n=\mu_p$ and $n=p$: $R_H=0$ ✓ — equal and opposite Hall fields cancel.
+
+### OL10 — Levitating a magnet over a superconductor
+
+A $1$ cm$^3$ NdFeB cube ($\mu=1.0$ A m$^2$, mass $7.5$ g) rests above a large type-I superconductor. Find its floating height, by the image method and by the pressure method.
+
+*Method 1 — image.* A perfect diamagnet reflects the dipole into an antiparallel image at the mirror position; two antiparallel coaxial dipoles at separation $s$ repel with $F=\dfrac{3\mu_0\mu^2}{2\pi s^4}$ (from $U=\mu_0\mu_1\mu_2\cdot2/4\pi s^3$ for the collinear antiparallel pair and $F=-dU/ds$). With $s=2h$: $F=3\mu_0\mu^2/32\pi h^4=mg$, so $h=\left(\dfrac{3\mu_0\mu^2}{32\pi mg}\right)^{1/4}=\left(\dfrac{3(1.26\times10^{-6})(1)}{32\pi(7.4\times10^{-2})}\right)^{1/4}=2.7$ cm.
+
+*Method 2 — pressure.* The superconductor's surface under the magnet sees the magnet's field plus its image's, of order $B\sim2\times(\mu_0/4\pi)(2\mu/h^3)=4\times10^{-7}/h^3$; the pressure $B^2/2\mu_0$ acts over an area $\sim h^2$: $F\sim(4\times10^{-7})^2/(2\mu_0h^4)=6\times10^{-8}/h^4$ against the image method's $3\mu_0\mu^2/32\pi h^4=3.7\times10^{-8}/h^4$ — the same form and within a factor of two, as an area estimate should be. *Checks.* Dimensions of $\mu_0\mu^2/h^4$: (T m A$^{-1}$)(A$^2$ m$^4$)/m$^4$ $=$ T A m $=$ N ✓. A magnet twice as heavy with the same $\mu$ floats at $2^{-1/4}h=2.3$ cm ✓ (weak dependence — levitation is forgiving).
+
+### OL11 — Why iron is a magnet and water is not: the numbers
+
+(a) Show that the magnetic dipole–dipole interaction between neighbouring atomic moments cannot order iron at room temperature. (b) Estimate iron's Curie temperature from an exchange energy of $0.05$ eV and eight neighbours. (c) Estimate water's diamagnetic susceptibility from the Larmor formula and compare with $-9\times10^{-6}$.
+
+(a) $U_{dd}=\mu_0\mu_B^2/4\pi a^3$ at $a=0.25$ nm: $10^{-7}\times(9.27\times10^{-24})^2/(1.56\times10^{-29})=5.5\times10^{-25}$ J $=k_B\times0.04$ K. Above $0.04$ K thermal motion wins: magnetic forces order nothing at room temperature. (b) Mean field: $k_BT_c\approx zJ/3=8\times0.05\text{ eV}/3=0.13$ eV, $T_c\approx1500$ K — iron's $1043$ K to within the crudeness of "$J\approx0.05$ eV". (c) Water: $n=3.3\times10^{28}$ molecules m$^{-3}$, $Z=10$ electrons, $\langle r^2\rangle\approx(0.07\ \text{nm})^2$ (mostly the oxygen's outer shell): $\chi=-\mu_0nZe^2\langle r^2\rangle/6m_e=-(1.26\times10^{-6})(3.3\times10^{29})(2.56\times10^{-38})(4.9\times10^{-21})/(5.5\times10^{-30})=-9.5\times10^{-6}$ ✓ — the measured $-9.0\times10^{-6}$, from a one-line classical estimate (the agreement is partly luck in $\langle r^2\rangle$; the order of magnitude is not).
+
+*Second method for (a):* compare with (b) directly — exchange at $0.05$ eV is $10^5$ times the dipole energy of $3\ \mu$eV; nothing magnetic competes. *Checks.* (b) with $J\to0$: $T_c\to0$, a paramagnet ✓. (c) scales as $Z\langle r^2\rangle$: bismuth's large, loosely bound outer electrons give $-1.7\times10^{-4}$ ✓ direction of the trend.
+
+### OL12 — Reading the Earth: from a compass to the core
+
+At a station, a magnet of $I_m=6.0\times10^{-6}$ kg m$^2$ swings with period $4.0$ s; placed east–west $20$ cm from a compass, it deflects the needle by $30^\circ$; a dip circle reads $60^\circ$. Find $\mu$, $B_H$, the total field and its vertical component; then estimate the Earth's dipole moment and the current in a core-sized loop that would produce it.
+
+*Gauss's method* (§10.6): $\mu B_H=4\pi^2I_m/T^2=1.48\times10^{-5}$ A m$^2$ T; $\mu/B_H=\tan30^\circ\,d^3/(\mu_0/4\pi\cdot2)=(0.577)(8\times10^{-3})/(2\times10^{-7})=2.31\times10^{4}$ A m$^2$ T$^{-1}$; $\mu=\sqrt{1.48\times10^{-5}\times2.31\times10^4}=0.58$ A m$^2$, $B_H=1.48\times10^{-5}/0.58=25\ \mu$T. Dip $60^\circ$: $B=B_H/\cos60^\circ=51\ \mu$T, $B_V=B_H\tan60^\circ=44\ \mu$T. *The Earth.* At the magnetic equator the dipole's surface field is $\mu_0\mu_\oplus/4\pi R_\oplus^3\approx30\ \mu$T (a station at dip $60^\circ$ sits at magnetic latitude $\lambda$ with $\tan\theta_{\text{dip}}=2\tan\lambda$, i.e. $\lambda=41^\circ$, where the dipole field is $B_{\text{eq}}\sqrt{1+3\sin^2\lambda}=1.5B_{\text{eq}}$ — consistent with $51\ \mu$T for $B_{\text{eq}}\approx34\ \mu$T), so $\mu_\oplus=B_{\text{eq}}R_\oplus^3/10^{-7}=8\times10^{22}$ A m$^2$, and a loop of the outer core's radius ($3.5\times10^6$ m) would need $I=\mu_\oplus/\pi r^2=2\times10^{9}$ A.
+
+*Second method for $B_H$:* a tangent galvanometer reading would give $B_H$ directly and the oscillation then $\mu$ alone; the two-instrument route is the independent check. *Checks.* $\tan\theta_{\text{dip}}=2\tan\lambda$ is the dipole's own geometry (radial $2\cos\theta$ against tangential $\sin\theta$) ✓; at the poles it gives $90^\circ$, at the equator $0$ ✓. Units of $\mu_\oplus$: T m$^3$/(T m A$^{-1}$) $=$ A m$^2$ ✓.
 
 ## Part 11 · Olympiad-grade paper
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: 36 questions, 200 marks, 180 minutes — Section A (12 single-correct, 4 marks), Section B (8 one-or-more-correct, 4 marks), Section C (6 numerical, 5 marks), Section D (10 long-form, 9 marks) — with a coverage map naming the block each question tests and a collapsible solution under every question. It is not on the page yet so that no reader sits a half-built paper.
+**Time: 180 minutes · Maximum marks: 200 · 36 questions.**
+Sections: A — 12 single-correct (4 marks each, $-1$ for a wrong answer); B — 8 one-or-more-correct (4 marks each, full marks only for the complete set, no negative marking); C — 6 numerical answers (5 marks each, to the precision stated); D — 10 long-form (9 marks each; method and checks carry marks). Take $\mu_0=4\pi\times10^{-7}$ T m A$^{-1}$, $e=1.60\times10^{-19}$ C, $m_e=9.11\times10^{-31}$ kg, $m_p=1.67\times10^{-27}$ kg, $u=1.66\times10^{-27}$ kg, $k_B=1.38\times10^{-23}$ J K$^{-1}$, $\mu_B=9.27\times10^{-24}$ A m$^2$. Solutions follow each question.
+
+| Section | Questions | Marks each | Subtotal | What it tests |
+|---|---|---:|---:|---|
+| A | 1–12 | 4 | 48 | blocks 2–4 |
+| B | 13–20 | 4 | 32 | blocks 3–4 |
+| C | 21–26 | 5 | 30 | blocks 3–6 |
+| D | 27–36 | 9 | 90 | blocks 3, 4, 10 |
+| | 36 | | 200 | |
+
+#### Section A · Single correct
+
+### P1 · 4 marks
+
+A charged particle is at rest in a uniform magnetic field. It (a) accelerates along the field (b) begins to circle (c) remains at rest (d) accelerates opposite to the field.
+
+<details><summary>Solution</summary>
+
+No velocity, no force. **(c)**.
+
+</details>
+
+### P2 · 4 marks
+
+An electron and a proton with the *same kinetic energy* enter the same field perpendicularly. The ratio of their radii $r_e/r_p$ is (a) $m_e/m_p$ (b) $\sqrt{m_e/m_p}$ (c) $1$ (d) $m_p/m_e$.
+
+<details><summary>Solution</summary>
+
+$r=\sqrt{2mK}/qB\propto\sqrt m$. **(b)** ($=1/43$).
+
+</details>
+
+### P3 · 4 marks
+
+The period of a charge's circular motion in a uniform field depends on (a) its speed (b) its radius (c) only on $q/m$ and $B$ (d) its kinetic energy.
+
+<details><summary>Solution</summary>
+
+$T=2\pi m/qB$. **(c)**.
+
+</details>
+
+### P4 · 4 marks
+
+The field at the centre of a flat circular coil of $N$ turns and radius $R$ carrying $I$ is (a) $\mu_0NI/2\pi R$ (b) $\mu_0NI/2R$ (c) $\mu_0NI/4\pi R$ (d) $\mu_0NI/R$.
+
+<details><summary>Solution</summary>
+
+Biot–Savart with every element at distance $R$ and perpendicular to $\hat{\mathbf r}$. **(b)**.
+
+</details>
+
+### P5 · 4 marks
+
+Two long parallel wires carry currents in the same direction. They (a) attract (b) repel (c) exert no force (d) exert a torque but no force.
+
+<details><summary>Solution</summary>
+
+Wire 1's field at wire 2 crossed with wire 2's current points towards wire 1. **(a)**.
+
+</details>
+
+### P6 · 4 marks
+
+Inside a long solenoid of $n$ turns per metre the field is (a) $\mu_0nI$ on the axis only (b) $\mu_0nI$ and uniform across the cross-section (c) zero except near the windings (d) $\mu_0nI/2$.
+
+<details><summary>Solution</summary>
+
+Ampère's rectangle with its inner side anywhere inside. **(b)**.
+
+</details>
+
+### P7 · 4 marks
+
+A current loop in a uniform magnetic field experiences (a) a net force and no torque (b) no net force and, in general, a torque (c) neither (d) a net force along $\mathbf B$.
+
+<details><summary>Solution</summary>
+
+$\oint d\mathbf l=0$; couple $\boldsymbol\mu\times\mathbf B$. **(b)**.
+
+</details>
+
+### P8 · 4 marks
+
+Ampère's law alone gives the field of (a) a finite straight wire (b) a circular loop at its centre (c) an infinitely long solenoid (d) a square loop at its centre.
+
+<details><summary>Solution</summary>
+
+Only (c) has a loop along which $B$ is constant. **(c)**.
+
+</details>
+
+### P9 · 4 marks
+
+For a given current and field, the Hall voltage across a strip is (a) proportional to the carrier density (b) inversely proportional to the carrier density (c) independent of the carrier density (d) proportional to the strip's thickness.
+
+<details><summary>Solution</summary>
+
+$V_H=IB/nqt$. **(b)**.
+
+</details>
+
+### P10 · 4 marks
+
+At the magnetic equator the angle of dip is (a) $0$ (b) $45^\circ$ (c) $90^\circ$ (d) undefined.
+
+<details><summary>Solution</summary>
+
+The field is horizontal there. **(a)**.
+
+</details>
+
+### P11 · 4 marks
+
+Which of these is diamagnetic? (a) aluminium (b) iron (c) bismuth (d) liquid oxygen.
+
+<details><summary>Solution</summary>
+
+Bismuth has closed shells and the largest known ordinary diamagnetism; O$_2$ has unpaired electrons and is paramagnetic. **(c)**.
+
+</details>
+
+### P12 · 4 marks
+
+A ring of charge $Q$ and mass $m$ rotates about its axis. The ratio of its magnetic moment to its angular momentum is (a) $Q/m$ (b) $Q/2m$ (c) $2Q/m$ (d) $QR/m$.
+
+<details><summary>Solution</summary>
+
+$\mu=\tfrac12Q\omega R^2$, $L=mR^2\omega$. **(b)**.
+
+</details>
+
+#### Section B · One or more correct
+
+### P13 · 4 marks
+
+For a charged particle in a uniform magnetic field: (A) its kinetic energy is constant; (B) its momentum vector is constant; (C) its speed is constant; (D) its angular frequency is independent of its speed.
+
+<details><summary>Solution</summary>
+
+The momentum's *direction* changes. **A, C, D**.
+
+</details>
+
+### P14 · 4 marks
+
+A velocity selector has $\mathbf E\perp\mathbf B$: (A) particles with $v=E/B$ pass undeflected; (B) it works for both signs of charge; (C) it selects a single mass; (D) a particle faster than $E/B$ bends towards the side of the magnetic force.
+
+<details><summary>Solution</summary>
+
+No mass enters the condition. **A, B, D**.
+
+</details>
+
+### P15 · 4 marks
+
+For a straight wire carrying a steady current: (A) far from a finite wire's ends, $B\propto1/r$; (B) the field lines circle the wire; (C) the field is zero at points on the wire's own line beyond its ends; (D) $B\propto1/r^2$ for an infinite wire.
+
+<details><summary>Solution</summary>
+
+**A, B, C**.
+
+</details>
+
+### P16 · 4 marks
+
+Ampère's circuital law: (A) holds for every closed loop in magnetostatics; (B) yields $B$ only when symmetry makes $B$ constant along a loop; (C) gives zero circulation for a loop that encloses no current; (D) implies that $B=0$ wherever no current is enclosed.
+
+<details><summary>Solution</summary>
+
+(D) confuses zero circulation with zero field. **A, B, C**.
+
+</details>
+
+### P17 · 4 marks
+
+A long solenoid has $N$ turns on length $L$: (A) $B=\mu_0NI/L$ inside; (B) $B$ is independent of the solenoid's radius; (C) doubling both $N$ and $L$ leaves $B$ unchanged; (D) the field at either end equals $\mu_0NI/L$.
+
+<details><summary>Solution</summary>
+
+The end field is half. **A, B, C**.
+
+</details>
+
+### P18 · 4 marks
+
+Forces on currents in a uniform field: (A) a curved wire feels the force on its chord; (B) a closed loop feels no net force; (C) a closed loop feels no net force in *any* field; (D) parallel currents attract.
+
+<details><summary>Solution</summary>
+
+In a non-uniform field a loop feels $\nabla(\boldsymbol\mu\cdot\mathbf B)$. **A, B, D**.
+
+</details>
+
+### P19 · 4 marks
+
+Ferromagnetism: (A) $\mu_r$ is a constant of the material; (B) the area of the hysteresis loop is the energy dissipated per unit volume per cycle; (C) above the Curie temperature the material is paramagnetic; (D) soft magnetic materials have small coercivity.
+
+<details><summary>Solution</summary>
+
+**B, C, D**.
+
+</details>
+
+### P20 · 4 marks
+
+The Earth's field: (A) the magnetic pole near geographic north is a south pole of the Earth's dipole; (B) the dip is $90^\circ$ at the magnetic poles; (C) $B_H=B\sin\theta_{\text{dip}}$; (D) declination is the angle between magnetic north and geographic north.
+
+<details><summary>Solution</summary>
+
+$B_H=B\cos\theta_{\text{dip}}$. **A, B, D**.
+
+</details>
+
+#### Section C · Numerical
+
+### P21 · 5 marks
+
+An electron moving at $4.0\times10^{6}$ m s$^{-1}$ enters a $0.50$ mT field perpendicularly. Find the radius of its path in cm (one decimal place).
+
+<details><summary>Solution</summary>
+
+$r=mv/eB=(9.11\times10^{-31})(4\times10^6)/(1.6\times10^{-19}\times5\times10^{-4})=4.55\times10^{-2}$ m. **4.6**.
+
+</details>
+
+### P22 · 5 marks
+
+Find the field at the centre of a square loop of side $20$ cm carrying $5.0$ A, in $\mu$T (one decimal place).
+
+<details><summary>Solution</summary>
+
+$B=2\sqrt2\mu_0I/\pi a=2.828\times(4\pi\times10^{-7})(5)/(\pi\times0.2)=2.83\times10^{-5}$ T. **28.3**.
+
+</details>
+
+### P23 · 5 marks
+
+Two long parallel wires $2.0$ cm apart carry $30$ A and $50$ A. Find the force per metre between them in mN m$^{-1}$ (one decimal place).
+
+<details><summary>Solution</summary>
+
+$\mu_0I_1I_2/2\pi d=(2\times10^{-7})(1500)/0.02=1.5\times10^{-2}$ N m$^{-1}$. **15.0**.
+
+</details>
+
+### P24 · 5 marks
+
+Find the cyclotron frequency of an alpha particle ($q=2e$, $m=6.64\times10^{-27}$ kg) in $0.80$ T, in MHz (one decimal place).
+
+<details><summary>Solution</summary>
+
+$f=qB/2\pi m=(3.2\times10^{-19})(0.8)/(2\pi\times6.64\times10^{-27})=6.14\times10^{6}$ Hz. **6.1**.
+
+</details>
+
+### P25 · 5 marks
+
+A copper strip $0.50$ mm thick carries $2.0$ A across a $0.40$ T field; $n=5.0\times10^{28}$ m$^{-3}$. Find the Hall voltage in $\mu$V (two decimal places).
+
+<details><summary>Solution</summary>
+
+$V_H=IB/net=0.8/(5\times10^{28}\times1.6\times10^{-19}\times5\times10^{-4})=2.0\times10^{-7}$ V. **0.20**.
+
+</details>
+
+### P26 · 5 marks
+
+At a place $B_H=30\ \mu$T and the dip is $45^\circ$. Find the total field in $\mu$T (one decimal place).
+
+<details><summary>Solution</summary>
+
+$B=B_H/\cos45^\circ=42.4\ \mu$T. **42.4**.
+
+</details>
+
+#### Section D · Comprehensive long-form
+
+### P27 · 9 marks
+
+Protons at $3.0\times10^{6}$ m s$^{-1}$ enter perpendicularly a region of width $10$ cm containing $0.20$ T. (a) Show that they cross, and find the deflection angle, the time spent in the field and the sideways displacement. (b) Find the minimum speed that crosses. (c) Below that speed, describe the exit and the time inside.
+
+<details><summary>Solution</summary>
+
+(a) $r=mv/eB=(1.67\times10^{-27})(3\times10^6)/(1.6\times10^{-19}\times0.2)=15.7$ cm $>10$ cm: they cross. $\sin\varphi=10/15.7=0.639$, $\varphi=39.7^\circ=0.693$ rad; $t=\varphi m/eB=(0.693)(5.22\times10^{-8}\text{ s})=3.6\times10^{-8}$ s; displacement $r(1-\cos\varphi)=15.7(1-0.770)=3.6$ cm. (b) $r=d$: $v_{\min}=eBd/m=(1.6\times10^{-19})(0.2)(0.1)/1.67\times10^{-27}=1.9\times10^{6}$ m s$^{-1}$. (c) The protons turn through $180^\circ$ and leave through the entry face a distance $2r$ from where they entered, after half a period, $\pi m/eB=1.6\times10^{-7}$ s, regardless of speed.
+
+> [!success] Check
+> Full period $2\pi m/eB=3.3\times10^{-7}$ s; the crossing takes $\varphi/2\pi=11\%$ of it ✓. At $v_{\min}$, $\varphi=90^\circ$ and the displacement equals $d$ ✓.
+
+</details>
+
+### P28 · 9 marks
+
+Design a cyclotron to give protons $15$ MeV with $B=1.0$ T. (a) Find the dee radius and the oscillator frequency. (b) With $60$ kV across the gap, find the number of turns and the time to full energy. (c) Estimate the relativistic increase of the period at full energy and explain what it does to the resonance; state the remedy.
+
+<details><summary>Solution</summary>
+
+(a) $K=q^2B^2R^2/2m\Rightarrow R=\sqrt{2mK}/qB=\sqrt{2(1.67\times10^{-27})(2.4\times10^{-12})}/(1.6\times10^{-19})=0.56$ m; $f=eB/2\pi m_p=15.2$ MHz. (b) $120$ keV per turn: $125$ turns; time $125/15.2\times10^6=8.2\ \mu$s. (c) $\gamma-1=K/m_pc^2=15/938=1.6\%$: the period lengthens by $1.6\%$, so after $\sim30$ turns the gap voltage is a quarter-cycle early and the proton begins to be decelerated; the machine's useful energy is set by this slip. Remedies: modulate the frequency downward during the acceleration (synchrocyclotron), or shape $B$ to rise with radius so that $B/\gamma$ stays constant (isochronous cyclotron), which needs additional focusing.
+
+> [!success] Check
+> $v=qBR/m=5.4\times10^7$ m s$^{-1}$ at exit, $\tfrac12mv^2=2.4\times10^{-12}$ J $=15$ MeV ✓. Doubling $B$ would give $60$ MeV at the same radius ($K\propto B^2$) but $\gamma-1=6\%$ — the slip grows with the energy, not the field ✓.
+
+</details>
+
+### P29 · 9 marks
+
+(a) Starting from the axial field of a single loop, derive the field on the axis of a solenoid of $n$ turns per metre in terms of the angles subtended by its ends. (b) A solenoid $20$ cm long and $5.0$ cm in radius has $1000$ turns per metre and carries $2.0$ A: find the field at its centre and at an end. (c) By what percentage does the infinite-solenoid formula overestimate the centre field, and why?
+
+<details><summary>Solution</summary>
+
+(a) A slice $dz$ at axial distance $z$ carries $nI\,dz$ and contributes $\mu_0nI\,dz\,R^2/2(R^2+z^2)^{3/2}$; with $z=R\cot\theta$ this is $\tfrac12\mu_0nI\sin\theta\,d\theta$, and integrating between the angles to the two end rims gives $B=\tfrac12\mu_0nI(\cos\theta_1+\cos\theta_2)$. (b) $\mu_0nI=2.51$ mT. Centre: $\cos\theta=10/\sqrt{10^2+5^2}=0.894$ for both ends, $B=2.51\times0.894=2.25$ mT. End: $\cos\theta_1=20/\sqrt{20^2+5^2}=0.970$, $\cos\theta_2=0$: $B=\tfrac12(2.51)(0.970)=1.22$ mT. (c) $2.51/2.25=1.12$: $12\%$ high, because a solenoid only four times as long as its radius loses the contributions of the turns that an infinite solenoid would have beyond its ends — turns that would subtend the angles between $\theta=0$ and $\theta_{\text{end}}=26.6^\circ$ at the centre; each end's missing turns account for $\tfrac12(1-\cos26.6^\circ)=5.3\%$ of $\mu_0nI$, $10.6\%$ between them.
+
+> [!success] Check
+> $\theta_1=\theta_2\to0$: $\mu_0nI$ ✓; end of an infinite solenoid: $\tfrac12\mu_0nI$ ✓. The end value $1.22$ mT is $0.54$ of the centre's, not exactly half, because this solenoid is short ✓ (F16.3).
+
+</details>
+
+### P30 · 9 marks
+
+A coaxial cable has an inner conductor of radius $a=2.0$ mm carrying $400$ A and an outer conductor from $b=6.0$ mm to $c=7.0$ mm carrying the return current. (a) Derive $B(r)$ in all four regions. (b) Evaluate $B$ at $r=4.0$ mm and $r=6.5$ mm. (c) Find the magnetic pressure on the surface of the inner conductor and state its direction. (d) Explain why the cable exerts no force on a parallel wire outside it.
+
+<details><summary>Solution</summary>
+
+(a) Ampère on circles: $r<a$: $\mu_0Ir/2\pi a^2$; $a<r<b$: $\mu_0I/2\pi r$; $b<r<c$: $\dfrac{\mu_0I}{2\pi r}\dfrac{c^2-r^2}{c^2-b^2}$; $r>c$: $0$. (b) $r=4$ mm: $(2\times10^{-7})(400)/(4\times10^{-3})=20$ mT. $r=6.5$ mm: $\dfrac{(2\times10^{-7})(400)}{6.5\times10^{-3}}\cdot\dfrac{49-42.25}{49-36}=12.3\text{ mT}\times0.519=6.4$ mT. (c) At $r=a$, $B=\mu_0I/2\pi a=40$ mT; the inner conductor's own surface current sits in the average of $B$ just outside ($40$ mT) and the field of *everything else* — the pressure on a current-carrying conductor's surface is $B^2/2\mu_0=(0.04)^2/(2.51\times10^{-6})=640$ Pa, directed *inward* (the pinch: the conductor's field is outside it and squeezes it). (d) Outside the cable the enclosed current is zero and, by the cylindrical symmetry, so is $B$; a wire there sits in no field and feels no force — and, by the third law, exerts none on the cable as a whole.
+
+> [!success] Check
+> Continuity: $r=a$ from inside, $\mu_0I/2\pi a=40$ mT ✓; $r=b$, $13.3$ mT from both formulas ✓; $r=c$: $0$ ✓. Pressure scaling: doubling $I$ quadruples the $640$ Pa ✓.
+
+</details>
+
+### P31 · 9 marks
+
+A coil of $50$ turns, $3.0\times4.0$ cm, carries $0.10$ A in a uniform $0.25$ T field. (a) Derive the torque on it from the forces on its sides and find the maximum torque. (b) Find the work needed to turn it from its stable orientation to the unstable one. (c) Its moment of inertia about the rotation axis is $2.0\times10^{-5}$ kg m$^2$: find the period of small oscillations about the stable orientation. (d) Explain why a galvanometer uses a *radial* field instead.
+
+<details><summary>Solution</summary>
+
+(a) The two sides of length $b$ perpendicular to $\mathbf B$ feel $NIbB$ each, opposite, separated by $a\sin\theta$: $\tau=NIabB\sin\theta=\mu B\sin\theta$ with $\mu=NIA=50\times0.1\times1.2\times10^{-3}=6.0\times10^{-3}$ A m$^2$; the other two sides' forces are collinear and cancel. $\tau_{\max}=\mu B=1.5\times10^{-3}$ N m. (b) $W=U(\pi)-U(0)=2\mu B=3.0\times10^{-3}$ J. (c) $I_m\ddot\theta=-\mu B\theta$: $T=2\pi\sqrt{I_m/\mu B}=2\pi\sqrt{2\times10^{-5}/1.5\times10^{-3}}=0.73$ s. (d) In a uniform field $\tau\propto\sin\theta$, so the deflection–current relation is non-linear and depends on the rest position; in a radial field the coil's plane is always parallel to the local $\mathbf B$, $\sin\theta=1$ at every angle, $\tau=NIAB$, and the fibre's $\kappa\varphi$ makes $\varphi\propto I$ — a linear scale.
+
+> [!success] Check
+> Units: A m$^2$ T $=$ N m ✓. If $N$ were doubled with the same wire gauge the torque doubles and so does the resistance: the *voltage* sensitivity is unchanged ✓ (E16).
+
+</details>
+
+### P32 · 9 marks
+
+(a) Derive the force per unit length between two long parallel wires and state how it defined the ampere until 2019. (b) A proton moves at $1.0\times10^{6}$ m s$^{-1}$ parallel to a wire carrying $10$ A, $1.0$ cm away: find the force on it. (c) Explain, in the proton's rest frame, where that force comes from, and estimate the wire's charge per unit length in that frame. (d) State why Newton's third law can fail between two moving point charges and what saves momentum conservation.
+
+<details><summary>Solution</summary>
+
+(a) $B_1=\mu_0I_1/2\pi d$ at wire 2; a length $L$ of wire 2 feels $I_2LB_1$: $F/L=\mu_0I_1I_2/2\pi d$, attractive for parallel currents. With $I_1=I_2=1$ A and $d=1$ m this is $2\times10^{-7}$ N m$^{-1}$ — the pre-2019 definition of the ampere, which fixed $\mu_0=4\pi\times10^{-7}$ exactly. (b) $B=2\times10^{-4}$ T; $F=evB=3.2\times10^{-17}$ N, towards the wire if the proton moves with the current. (c) In the proton's frame the ions (moving at $-v$) are length-contracted and the electrons less so; the wire acquires $\lambda'=-\gamma_vIv/c^2=-(10)(10^6)/(9\times10^{16})=-1.1\times10^{-10}$ C m$^{-1}$ and attracts the proton electrostatically with $eE'=e\lambda'/2\pi\varepsilon_0r=3.2\times10^{-17}$ N — the same force, now called electric. (d) Magnetic forces between two point charges moving at right angles are not antiparallel; the field carries momentum ($\varepsilon_0\mathbf E\times\mathbf B$ per unit volume), and particles plus field conserve momentum exactly. For closed steady circuits the field's momentum is constant and the third law holds in total.
+
+> [!success] Check
+> (c) $\gamma_v-1=6\times10^{-6}$ — the relativistic bookkeeping matters at the $10^{-15}$ level of the wire's charge and yet produces the whole force ✓. Reversing $v$ reverses $\lambda'$: repulsion, as for antiparallel currents ✓.
+
+</details>
+
+### P33 · 9 marks
+
+(a) Derive the Hall voltage $V_H=IB/nqt$ and explain how its polarity gives the sign of the carriers. (b) A sample $0.10$ mm thick carrying $10$ mA in $0.30$ T shows $V_H=15$ mV; find the carrier density. (c) Its resistivity is $0.020\ \Omega$ m; find the mobility. (d) A second sample of the same geometry shows $V_H$ of the opposite sign with $n=p$: explain, using the mobilities, how a material with equal numbers of electrons and holes can have a non-zero Hall voltage.
+
+<details><summary>Solution</summary>
+
+(a) Carriers drifting at $v_d$ are pushed sideways by $qv_dB$ until the transverse field $E_H=v_dB$ balances it; $V_H=E_Hw=v_dBw$ and $I=nqv_dwt$ give $V_H=IB/nqt$. Both carrier signs are pushed to the same edge ($q\mathbf v_d$ is the current's direction for either); electrons make that edge negative, holes positive. (b) $n=IB/qtV_H=(3\times10^{-3})/(1.6\times10^{-19}\times10^{-4}\times0.015)=1.2\times10^{22}$ m$^{-3}$. (c) $\mu_m=1/nq\rho=1/(1.25\times10^{22}\times1.6\times10^{-19}\times0.02)=0.025$ m$^2$ V$^{-1}$ s$^{-1}$. (d) With two carrier types the Hall field must cancel the *total* transverse current, and each type is deflected in proportion to $\mu^2$: $R_H\propto p\mu_p^2-n\mu_n^2$. With $n=p$, $R_H\propto\mu_p^2-\mu_n^2$, negative when electrons are the more mobile — the usual case — so the sample reads $n$-type although it is intrinsic.
+
+> [!success] Check
+> (b) is a lightly doped semiconductor ($10^{22}$ against copper's $10^{29}$) ✓, and $0.025$ m$^2$ V$^{-1}$ s$^{-1}$ is a typical hole mobility ✓. $V_H$ for copper of the same geometry would be $2$ nV ✓.
+
+</details>
+
+### P34 · 9 marks
+
+(a) A moment $\mu$ can point along or against a field $B$ (energies $\mp\mu B$). Derive the mean moment per atom at temperature $T$ and hence Curie's law for small $\mu B/k_BT$. (b) A salt has $n=5.0\times10^{27}$ ions per m$^3$ with $\mu=2\mu_B$: find $\chi$ at $300$ K and at $4.0$ K. (c) At $4.0$ K in $5.0$ T, what fraction of saturation is reached? (d) Why must none of this be applied to iron at room temperature?
+
+<details><summary>Solution</summary>
+
+(a) Boltzmann populations $\propto e^{\pm x}$, $x=\mu B/k_BT$: mean moment $\mu(e^x-e^{-x})/(e^x+e^{-x})=\mu\tanh x$; for $x\ll1$, $\langle\mu\rangle=\mu^2B/k_BT$, so $M=n\mu^2B/k_BT$ and $\chi=\mu_0n\mu^2/k_BT=C/T$. (b) $\chi=\mu_0n\mu^2/k_BT=(1.26\times10^{-6})(5\times10^{27})(1.85\times10^{-23})^2/(1.38\times10^{-23}\times300)=5.2\times10^{-4}$ at $300$ K; at $4$ K, $75$ times larger, $0.039$. (c) $x=2\mu_BB/k_BT=(1.85\times10^{-23})(5)/(1.38\times10^{-23}\times4)=1.68$, $\tanh x=0.93$: $93\%$ saturated — Curie's law ($x$ itself, $1.68$) would overshoot saturation, so it has failed. (d) In iron the moments are not independent: exchange locks neighbours parallel into domains, the response is the hysteresis loop, and $\chi$ is neither small nor $\propto1/T$ below $1043$ K.
+
+> [!success] Check
+> $x$ at $300$ K and $5$ T is $0.022$: linear regime ✓. $\chi\propto\mu^2$: doubling the moment quadruples the susceptibility ✓.
+
+</details>
+
+### P35 · 9 marks
+
+A transformer core of mass $20$ kg (density $7650$ kg m$^{-3}$) has a hysteresis loop of area $150$ J m$^{-3}$ and runs at $50$ Hz. (a) Derive the statement that the loop area is the energy lost per unit volume per cycle, starting from the work the source does. (b) Find the hysteresis power loss. (c) The core is wound with $1000$ turns per metre carrying $0.50$ A; its effective $\mu_r$ at that point is $2000$: find $B$, and say whether the operating point is reasonable. (d) Why is the core laminated, and why is a *hard* magnetic material never used for it?
+
+<details><summary>Solution</summary>
+
+(a) For a toroidal core (length $\ell$, area $A$, $N$ turns) the changing flux induces an EMF $NA\,dB/dt$; the source's work in $dt$ is $\mathcal EI\,dt=NAI\,dB$, and with $H=NI/\ell$ this is $(H\,dB)(A\ell)$: work per unit volume $H\,dB$, and around a cycle $\oint H\,dB$, the loop's area. (b) Volume $20/7650=2.6\times10^{-3}$ m$^3$; loss $=150\times50\times2.6\times10^{-3}=20$ W (about $1$ W kg$^{-1}$, typical of silicon steel). (c) $H=nI=500$ A m$^{-1}$; $B=\mu_r\mu_0H=2000\times4\pi\times10^{-7}\times500=1.26$ T — below iron's $2.1$ T saturation, a sensible operating point. (d) Laminations interrupt the eddy currents that a changing flux drives around the core's cross-section (Joule loss $\propto$ thickness$^2$); a hard material's wide loop would dissipate its area — $10^5$ J m$^{-3}$, a thousand times more — every cycle.
+
+> [!success] Check
+> Units of $\oint H\,dB$: (A m$^{-1}$)(T) $=$ A m$^{-1}$ N A$^{-1}$ m$^{-1}$ $=$ N m$^{-2}$ $=$ J m$^{-3}$ ✓. Doubling the frequency doubles the hysteresis loss and quadruples the eddy loss ✓.
+
+</details>
+
+### P36 · 9 marks
+
+At a station the total field is $52\ \mu$T, the dip $65^\circ$ and the declination $3^\circ$ E. (a) Find the horizontal and vertical components and the geographic north and east components. (b) A magnet of moment of inertia $4.0\times10^{-6}$ kg m$^2$ swings there with period $3.0$ s; find its moment. (c) Taking the Earth's field as a central dipole, show that the dip and the magnetic latitude $\lambda$ are related by $\tan\theta_{\text{dip}}=2\tan\lambda$, and find $\lambda$ for this station. (d) From an equatorial surface field of $30\ \mu$T estimate the Earth's dipole moment.
+
+<details><summary>Solution</summary>
+
+(a) $B_H=52\cos65^\circ=22.0\ \mu$T, $B_V=52\sin65^\circ=47.1\ \mu$T; north $22.0\cos3^\circ=21.9\ \mu$T, east $22.0\sin3^\circ=1.15\ \mu$T. (b) $\mu=4\pi^2I_m/T^2B_H=39.5\times4\times10^{-6}/(9\times2.2\times10^{-5})=0.80$ A m$^2$. (c) A dipole's field has radial component $(\mu_0/4\pi)2\mu\sin\lambda/r^3$ and tangential (northward) component $(\mu_0/4\pi)\mu\cos\lambda/r^3$ at magnetic latitude $\lambda$; dip is the angle of the total below the horizontal, so $\tan\theta_{\text{dip}}=B_r/B_\theta=2\tan\lambda$. Here $\tan\lambda=\tan65^\circ/2=1.07$, $\lambda=47^\circ$. (d) $B_{\text{eq}}=\mu_0\mu_\oplus/4\pi R_\oplus^3\Rightarrow\mu_\oplus=B_{\text{eq}}R_\oplus^3/10^{-7}=(3\times10^{-5})(6.37\times10^6)^3/10^{-7}=7.8\times10^{22}$ A m$^2$.
+
+> [!success] Check
+> (a) $\sqrt{21.9^2+1.15^2+47.1^2}=52.0$ ✓. (c) at $\lambda=47^\circ$ the dipole field is $B_{\text{eq}}\sqrt{1+3\sin^2\lambda}=1.6B_{\text{eq}}=48\ \mu$T — close to the $52$ measured; the difference is the non-dipole part ✓. (d) the polar field would be $2B_{\text{eq}}=60\ \mu$T ✓ within the observed range.
+
+</details>
 
 ## Part 12 · Marking scheme and post-paper audit
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3 with the paper: the mark distribution summing to 200, the question-to-block map, and the diagnostic table.
+| Section | Marks each | Questions | Subtotal |
+|---|---:|---:|---:|
+| A | 4 | 12 | 48 |
+| B | 4 | 8 | 32 |
+| C | 5 | 6 | 30 |
+| D | 9 | 10 | 90 |
+| **Total** | | 36 | **200** |
+
+**Which block each question tested.** A: P1 §3.2, P2 §3.3, P3 §3.3, P4 §3.15, P5 §3.25, P6 §3.19, P7 §3.23–§3.24, P8 §3.21, P9 §3.9, P10 §3.37, P11 §3.32, P12 §3.28. B: P13 §3.2–§3.3, P14 §3.4, P15 §3.14, P16 §3.18, P17 §3.16 and §3.19, P18 §3.23 and §3.25, P19 §3.34, P20 §3.37. C: P21 §3.3, P22 §3.14, P23 §3.25, P24 §3.7, P25 §3.9, P26 §3.37. D: P27 §3.5, P28 §3.7, P29 §3.16, P30 §3.19 and §3.26, P31 §3.24, P32 §3.25 and §10.1, P33 §3.9 and OL9, P34 §3.33, P35 §3.34–§3.35, P36 §3.37–§3.38 and OL12. Blocks 2, 3, 4 and 10 are each tested by at least three questions.
+
+**Section D partial credit.** 3 marks for the method set up correctly with directions stated, 4 for the derivation or computation with units, 2 for the checks (limit, dimension or second method). A correct number with no method earns 4 of 9.
+
+**Diagnostic table.**
+
+| If you lost marks on | the likely gap | reread |
+|---|---|---|
+| P1, P13, P21 | the Lorentz force and the circle | §3.2–§3.3, E1–E2 |
+| P2, P3, P24, P28 | the speed-independent period and the cyclotron | §3.3, §3.7, E6 |
+| P14 | the selector | §3.4 |
+| P27 | the three-region protocol | §3.5, E4, T2 |
+| P4, P15, P22, P29 | Biot–Savart: wire, loop, solenoid | §3.14–§3.16, E11, E13 |
+| P6, P8, P16, P17, P30 | Ampère's law and its symmetries | §3.18–§3.21, E14, T3 |
+| P5, P7, P18, P23, P31, P32 | forces and torques on currents | §3.23–§3.25, E16–E17 |
+| P9, P25, P33 | the Hall effect, one and two carriers | §3.9, E8, OL9 |
+| P11, P19, P34, P35 | matter: dia, para, ferro, hysteresis | §3.32–§3.35, OL11 |
+| P10, P20, P26, P36 | the Earth's elements | §3.37–§3.38, OL12 |
+| P12 | the gyromagnetic ratio | §3.28 |
+| P32(c) | magnetism as relativity | §10.1, OL1 |
 
 ## Part 13 · Formula sheet
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: every formula of Parts 3–4 with its validity condition, the right-hand rules of §2.2, the source-law decision table, the material constants and the Earth's elements, laid out for two printed A4 pages.
+| formula | validity |
+|---|---|
+| $\mathbf F=q(\mathbf E+\mathbf v\times\mathbf B)$; magnetic part does no work | always |
+| $r=mv_\perp/\lvert q\rvert B$, $\omega_c=\lvert q\rvert B/m$, $T=2\pi m/\lvert q\rvert B$; pitch $2\pi mv_\parallel/\lvert q\rvert B$ | uniform $\mathbf B$, $v\ll c$; relativistic $m\to\gamma m$ |
+| selector $v=E/B$; drift $\mathbf E\times\mathbf B/B^2$; cycloid $r_c=mE/qB^2$, height $2r_c$, $v_{\max}=2E/B$ | $\mathbf E\perp\mathbf B$ |
+| strip: cross if $r>d$; $\sin\varphi=d/r$; $t=\varphi m/qB$; else $t=\pi m/qB$, exit $2r$ away | uniform strip |
+| spectrometer $r=\sqrt{2mV/q}/B$; cyclotron $f=qB/2\pi m$, $K=q^2B^2R^2/2m$, turns $K/2qV_0$ | $\gamma\approx1$ |
+| mirror: $mv_\perp^2/2B$ invariant; trapped if $\sin^2\theta_0>B_0/B_{\max}$; loss cone $\arcsin\sqrt{B_0/B_{\max}}$ | slowly varying $B$ |
+| Hall $V_H=IB/nqt$, $R_H=1/nq$; two carriers $R_H=(p\mu_p^2-n\mu_n^2)/e(p\mu_p+n\mu_n)^2$ | steady state |
+| gradient drift $\pm\tfrac12v_\perp r\,\mathbf B\times\nabla B/B^2$; Thomson $q/m=2yE/B^2L^2$; $p[\text{MeV}/c]=300B[\text{T}]r[\text{m}]$ | $r\lvert\nabla B\rvert\ll B$; small $y$; any $v$ |
+| Biot–Savart $d\mathbf B=\tfrac{\mu_0}{4\pi}I\,d\mathbf l\times\hat{\mathbf r}/r^2$; moving charge $\tfrac{\mu_0}{4\pi}q\mathbf v\times\hat{\mathbf r}/r^2=\mathbf v\times\mathbf E/c^2$ | steady; $v\ll c$ |
+| wire $\tfrac{\mu_0I}{4\pi d}(\sin\alpha+\sin\beta)$; infinite $\mu_0I/2\pi d$; semi-infinite $\mu_0I/4\pi d$; square $2\sqrt2\mu_0I/\pi a$; hexagon $\sqrt3\mu_0I/\pi a$ | straight segments |
+| loop $\mu_0NI/2R$; axis $\mu_0NIR^2/2(R^2+x^2)^{3/2}$; arc $\mu_0I\theta_0/4\pi R$; straight pieces through the point: $0$ | thin conductors |
+| solenoid $\tfrac12\mu_0nI(\cos\theta_1+\cos\theta_2)$, $\mu_0nI$ inside, $\tfrac12\mu_0nI$ at an end; toroid $\mu_0NI/2\pi r$ | long; inside the winding |
+| Helmholtz: $d=R$, $B=0.716\mu_0NI/R$, flat to $\tfrac{144}{125}(z/R)^4$ | on the axis |
+| dipole $\boldsymbol\mu=NI\mathbf A$: $\tfrac{\mu_0}{4\pi}2\mu/r^3$ axis, $\tfrac{\mu_0}{4\pi}\mu/r^3$ equator; magnetised sphere $\tfrac23\mu_0M$ inside | $r\gg$ size; uniform $M$ |
+| Ampère $\oint\mathbf B\cdot d\mathbf l=\mu_0I_{\text{enc}}$; $\oint\mathbf B\cdot d\mathbf A=0$ | steady; always |
+| thick wire $\mu_0Ir/2\pi a^2$; coax shell $\tfrac{\mu_0I}{2\pi r}\tfrac{c^2-r^2}{c^2-b^2}$; sheet $\mu_0K/2$; two sheets $\mu_0K$; hole $\tfrac12\mu_0\mathbf J\times\mathbf d$ | long / infinite |
+| $\mathbf F=I\mathbf L\times\mathbf B$; curved $=$ chord; loop: $0$ force, $\boldsymbol\tau=\boldsymbol\mu\times\mathbf B$, $U=-\boldsymbol\mu\cdot\mathbf B$, $T=2\pi\sqrt{I_m/\mu B}$, galvanometer $\varphi=NABI/\kappa$ | uniform $\mathbf B$ |
+| parallel wires $\mu_0I_1I_2/2\pi d$ per length (same direction attracts); pressure $B^2/2\mu_0$; energy density $B^2/2\mu_0$; tangential $B$ jumps by $\mu_0K$ | long wires; current sheets |
+| $\mu/L=q/2m$; $\mu_B=e\hbar/2m_e=9.27\times10^{-24}$ A m$^2$; rotating disc $B_c=\mu_0\sigma\omega R/2$ | charge like mass |
+| $K_b=M$; $\mathbf B=\mu_0(\mathbf H+\mathbf M)$; $\mathbf M=\chi\mathbf H$; $\mu_r=1+\chi$; $H=nI$ in a long solenoid, $B=\mu_r\mu_0nI$; gapped $B\approx\mu_0NI/(g+\ell/\mu_r)$ | linear; below saturation |
+| $\chi_{\text{dia}}=-\mu_0nZe^2\langle r^2\rangle/6m_e$; $M=n\mu\tanh(\mu B/k_BT)$, $\chi=\mu_0n\mu^2/k_BT$; loss/cycle/volume $=\oint H\,dB$; lift $B^2A/2\mu_0$ | closed shells; independent moments; ferromagnets; small gap |
+| Earth: $B_H=B\cos\theta_{\text{dip}}$, $B_V=B\sin\theta_{\text{dip}}$, $\tan\theta_{\text{dip}}=2\tan\lambda$; $B_{\text{coil}}=B_H\tan\theta$; $\mu_\oplus=B_{\text{eq}}R^3/10^{-7}\approx8\times10^{22}$ A m$^2$ | dipole model |
+| magnetism from relativity: $\lambda'=-\gamma Iv/c^2$, $F=qvB$ with $\mu_0=1/\varepsilon_0c^2$ | parallel motion |
+| Numbers: $\mu_0=4\pi\times10^{-7}$; $e/m_e=1.76\times10^{11}$; electron $28$ GHz T$^{-1}$, proton $15.2$ MHz T$^{-1}$; $B_s(\text{Fe})=2.1$ T, $T_c=1043$ K; Earth $25$–$65\ \mu$T; $1$ T $\to4$ atm | |
 
 ## Part 14 · Checkpoint and hand-off
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: the 25 "can I do this?" statements with self-scoring, what the next module assumes from this one (the flux through a loop, the motional EMF of §3.27, the force on a current, the field of a solenoid and its energy density for induction, inductance and alternating current; the cyclotron frequency and the Bohr magneton for atomic and nuclear physics; the field momentum for electromagnetic waves), and the open questions the reader is now equipped to attack.
+- [ ] I can write the Lorentz force, get every direction from $\mathbf v\times\mathbf B$ with the sign applied last, and prove it does no work.
+- [ ] I can derive $r$, $\omega_c$ and $T$ and say why the period is independent of the speed.
+- [ ] I can split a helix into $v_\perp$ and $v_\parallel$ and find its pitch.
+- [ ] I can run the three-region method: cross or turn back, angle, time, displacement, minimum speed.
+- [ ] I can derive the selector condition and say what happens to slower and faster particles of either sign.
+- [ ] I can set up a mass spectrometer and a cyclotron with numbers, and state the cyclotron's relativistic limit.
+- [ ] I can derive the mirror invariant from $\nabla\cdot\mathbf B=0$ and find a loss cone.
+- [ ] I can derive the Hall voltage, read the carrier sign, and handle two carrier types.
+- [ ] I can derive the $\mathbf E\times\mathbf B$ drift two ways, describe the cycloid family, and give the gradient drift's direction for each sign.
+- [ ] I can reconstruct Thomson's $e/m$ and read a chamber track with $p=300Br$.
+- [ ] I can write Biot–Savart with its cross product and integrate it for a finite wire, a loop on its axis, an arc, a solenoid and a toroid.
+- [ ] I can find the centre field of any polygon and any compound loop, dropping the straight pieces through the point.
+- [ ] I can motivate Ampère's law from the wire's circulation, fix its sign convention, and apply it to eight symmetric sources.
+- [ ] I can do the overlap trick and the hole in a wire.
+- [ ] I can decide Ampère against Biot–Savart in ten seconds.
+- [ ] I can derive $I\mathbf L\times\mathbf B$ from the carriers, the chord theorem, $\boldsymbol\mu\times\mathbf B$ and $-\boldsymbol\mu\cdot\mathbf B$, and the galvanometer's linear scale.
+- [ ] I can derive the parallel-wire force, state the ampere's old definition, and say when the third law fails.
+- [ ] I can derive the magnetic pressure and use it for a solenoid, a pinch and a superconductor.
+- [ ] I can explain how a motor does work when the magnetic force does none.
+- [ ] I can derive the gyromagnetic ratio and the Bohr magneton.
+- [ ] I can describe a magnet as bound currents, relate $\mathbf B$, $\mathbf H$, $\mathbf M$, and derive the core's amplification.
+- [ ] I can explain dia-, para- and ferromagnetism mechanically, derive Curie's law, and read a hysteresis loop as energy.
+- [ ] I can resolve the Earth's field into its components, relate dip to magnetic latitude, and reconstruct the dipole moment.
+- [ ] I can derive the magnetic force from electrostatics and relativity.
+- [ ] I can derive the Helmholtz condition and the magnetised sphere's interior field.
+
+Score one point per honest tick. Below 15: reread Part 3 in order. 15–20: work Part 6's variations and Part 8's traps. Above 20: sit Part 11 against the clock.
+
+**What the next module inherits.** Induction (PART 20) begins where §3.27 stopped: the motional EMF $BLu$ is Faraday's law for a moving conductor, and the flux through a loop is well defined because of §3.22. Inductance (PART 21) needs the solenoid's $\mu_0nI$ and the energy density $B^2/2\mu_0$ announced in §3.26; the transformer needs the core, the laminations and the hysteresis loss of §3.34–§3.35; alternating current needs the torque on a coil (§3.24) for the motor and the generator. [[Atomic-structure|Atomic structure]] takes the Bohr magneton and the cyclotron frequency (Zeeman splitting, magnetic resonance); [[Nuclear-physics|nuclear physics]] takes the cyclotron and the spectrometer; [[Electromagnetic-waves|electromagnetic waves]] take the field momentum of §3.25 and the displacement current that completes Ampère's law; [[Special-relativity|special relativity]] takes §10.1 as its first non-trivial application.
+
+**Open questions now attackable.** How uniform can a field be made over a metre — and why do MRI magnets use many coils rather than two? (§10.2's expansion, carried to sixth order.) Why does a pulsed magnet's coil fail at $\sim100$ T? (§3.26's pressure against the strength of copper, $\sim4\times10^8$ Pa.) How does a magnetic bottle leak, and how fast? (§3.8's loss cone plus a collision rate.) Why do superconducting magnets "quench"? (The energy of §3.26 released into a few grams of wire.) How strong is the field at a pulsar's surface, and what does $B^2/2\mu_0$ do to matter there? ($10^8$ T: a pressure of $4\times10^{21}$ Pa.)

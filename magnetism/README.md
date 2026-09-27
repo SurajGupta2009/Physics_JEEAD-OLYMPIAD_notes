@@ -5,18 +5,20 @@
 | file | what it is |
 |---|---|
 | `Magnetism.md` | the chapter — the single deliverable, written for Obsidian reading mode |
-| `notes.json` | gate configuration: the **stage** the chapter is at and the minimums that apply at each stage |
+| `notes.json` | gate configuration: the stage the chapter is at (now 3 of 3) and the minimums that apply |
 | `tools/check.py` | the local gate (the stage-aware electrostatics gate, unchanged apart from the docstring); `python3 tools/check.py` from this folder |
 
-## Status: stage 1 of 3 — the theory is complete, the exam craft and the Olympiad layer are not
+## Status: complete (stage 3 of 3)
 
-| stage | blocks | what it delivers | state |
+Written in three stages so that each turn shipped something whole; all three are on the page and the gate enforces the full plan.md §1 contract:
+
+| stage | blocks | what it delivers | size |
 |---|---|---|---|
-| 1 | Parts 0–3 | orientation with the four-part coverage map, intuition, definitions and right-hand rules fixed once, and **the complete theory in teaching order** (§3.1–§3.38): every result of the four plan parts derived, the electric twins cited at each correspondence | **done** — 22 500 words, 7 rendered FIGUREs, 29 DIAGRAM briefs, 75 callouts |
-| 2 | Parts 4–9 | validity ledger, C1–C14, E1–E20, the archetype table (≥ 40 rows) with Q1–Q60, toolkit, traps, playbook | next turn |
-| 3 | Parts 10–14 | Olympiad extension with OL1–OL12 (magnetism from relativity, the cycloid twice, the pinch, Helmholtz, the magnetised sphere, Fermi acceleration, the Curie estimate), the 36-question / 200-mark paper, marking scheme, formula sheet, checkpoint | the turn after |
+| 1 | Parts 0–3 | orientation with the four-part coverage map, intuition, definitions and right-hand rules fixed once, and **the complete theory in teaching order** (§3.1–§3.38): every result of the four plan parts derived, the electric twins cited at each correspondence | 22 500 words |
+| 2 | Parts 4–9 | the validity ledger (44 rows), C1–C14 concept checks, exemplars E1–E20 with checks, the archetype table (41 rows) and practice Q1–Q60 (each archetype worked once and varied once), toolkit T1–T10, 19 traps, playbook with triage tree | + 8 000 words |
+| 3 | Parts 10–14 | Olympiad extension (magnetism from electrostatics and relativity with the constant coming out right, the Helmholtz condition and its fourth-order flatness, the magnetised sphere two ways, the pinch and the levitated slab and the cosine-theta coil, five estimates, the Curie temperature and Gauss's absolute measurement reconstructed, limits) with OL1–OL12 solved twice where a second method exists; the 36-question / 200-mark paper with a solution under every question; marking scheme and diagnostic table; two-page formula sheet; 25-point checkpoint and hand-off | + 10 000 words |
 
-Blocks not yet written carry a `> [!warning] Stage n deliverable` notice stating their contents. The gate enforces every reading-mode, media and maths rule from stage 1; the question families and the paper become hard requirements when their stage arrives (`notes.json` → `stages`). `topics.json` lists the chapter as `in-progress` until stage 3 is green.
+Totals: 40 000 words · 10 rendered FIGUREs (Mermaid) · 30 DIAGRAM briefs · 99 callouts · C×14 E×20 Q×60 OL×12 · paper 36 Q / 200 marks (A 12×4, B 8×4, C 6×5, D 10×9).
 
 ## Teaching order (block 3), and why
 
@@ -33,7 +35,7 @@ Blocks not yet written carry a `> [!warning] Stage n deliverable` notice stating
 
 ## Media
 
-Text-only Markdown, Obsidian-first. Seven `[!tip] FIGURE` callouts render from Mermaid (module map, the loop's axial field, the finite solenoid's profile, the thick wire's $B(r)$, the source-law decision tree, the two-level paramagnet's alignment curve, a hysteresis loop drawn as two branches); 29 `[!abstract] DIAGRAM` briefs give the pictures that carry an argument and the search terms that find a textbook version. No raster art, no AI images, no external links.
+Text-only Markdown, Obsidian-first. Ten `[!tip] FIGURE` callouts render from Mermaid (module map, the loop's axial field, the finite solenoid's profile, the thick wire's $B(r)$, the source-law decision tree, the two-level paramagnet's alignment curve, a hysteresis loop drawn as two branches, the correspondence chain, the triage tree, the Helmholtz pair at three spacings); 30 `[!abstract] DIAGRAM` briefs give the pictures that carry an argument and the search terms that find a textbook version. No raster art, no AI images, no external links.
 
 ## Hand-off
 
@@ -43,7 +45,7 @@ Text-only Markdown, Obsidian-first. Seven `[!tip] FIGURE` callouts render from M
 
 ## Beyond the plan
 
-Added at the theory level (mirrored in `topics.json` as `beyond_plan`):
+Added because the merge or the derivations justified it (mirrored in `topics.json` as `beyond_plan`):
 
 * the adiabatic invariant $\mu=mv_\perp^2/2B$ derived from $\nabla\cdot\mathbf B=0$ and energy conservation, with the loss cone (§3.8);
 * the gradient drift derived from the averaged force, with the ring current as its consequence (§3.10);
@@ -56,11 +58,16 @@ Added at the theory level (mirrored in `topics.json` as `beyond_plan`):
 * the Larmor-frequency derivation of the diamagnetic susceptibility with its magnitude checked against real materials (§3.32);
 * the hysteresis loss derived as $\oint H\,dB$ from the source's work, with transformer numbers (§3.34);
 * the gapped magnetic circuit $B\approx\mu_0NI/(g+\ell/\mu_r)$ (§3.35) and the lift cap set by iron's saturation (§3.36);
-* the Earth's dipole moment reconstructed from the equatorial field, and the thermal-energy argument for biological compasses (§3.38).
+* the Earth's dipole moment reconstructed from the equatorial field, and the thermal-energy argument for biological compasses (§3.38);
+* the cycloid family classified by the drifting-frame gyration speed (OL5) and the three radiation-belt clocks with numbers (OL6);
+* the Hall coefficient with two carrier types and its temperature sign-flip (OL9, P33);
+* the Meissner levitation height by the image method and by pressure (OL10);
+* the dip–latitude relation $\tan\theta_{\text{dip}}=2\tan\lambda$ used as a consistency check on a station's field (OL12, P36);
+* the free-decay time of the Earth's field as the argument for the dynamo (§10.5).
 
 ## Local gate
 
 ```bash
-cd magnetism && python3 tools/check.py           # stage-aware local gate
+cd magnetism && python3 tools/check.py           # stage-aware local gate (stage 3 = full contract)
 cd .. && python3 tools/check_all.py --update     # repo gate + registry recount
 ```

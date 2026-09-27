@@ -467,7 +467,7 @@
     {
       "slug": "magnetism",
       "title": "Magnetism — from the Lorentz force to the Earth's field",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "magnetism/Magnetism.md",
       "format": "markdown",
@@ -481,7 +481,7 @@
       "part": 16,
       "order": 20,
       "block": "electricity-magnetism",
-      "stage": "1 of 3 — Parts 0–3 (theory) complete; Parts 4–9 in stage 2, Parts 10–14 in stage 3",
+      "stage": "3 of 3 — complete (theory, exam craft, Olympiad layer and paper)",
       "source": "no Cengage magnetism volume in this repository; coverage map from the standard JEE Advanced headings in plan.md PART 16-19 plus the shipped current-electricity and electromagnetic-waves notes",
       "exam": [
         "JEE Advanced",
@@ -511,7 +511,12 @@
         "the Larmor derivation of the diamagnetic susceptibility checked against real materials (3.32)",
         "the hysteresis loss as the closed integral of H dB from the source's work, with transformer numbers (3.34)",
         "the gapped magnetic circuit B = mu0 N I / (g + l/mu_r) and the lift cap set by saturation (3.35, 3.36)",
-        "the Earth's dipole moment reconstructed from the equatorial field; the thermal-energy argument for biological compasses (3.38)"
+        "the Earth's dipole moment reconstructed from the equatorial field; the thermal-energy argument for biological compasses (3.38)",
+        "the cycloid family classified by the drifting-frame gyration speed (OL5) and the three radiation-belt clocks with numbers (OL6)",
+        "the Hall coefficient with two carrier types and its temperature sign-flip (OL9, P33)",
+        "the Meissner levitation height by the image method and by pressure (OL10)",
+        "the dip-latitude relation tan(dip) = 2 tan(lat) as a consistency check on a station's field (OL12, P36)",
+        "the free-decay time of the Earth's field as the argument for the dynamo (10.5)"
       ],
       "deliberately_not_covered": [
         "anything with a changing flux: Faraday, Lenz, inductance, AC (PART 20-22)",
@@ -520,20 +525,20 @@
         "the quantum origin of spin and exchange (named, not derived)"
       ],
       "next_candidates": [
-        "stage 2: Parts 4-9 (validity ledger, C1-C14, E1-E20, archetype table + Q1-Q60, toolkit, traps, playbook)",
-        "stage 3: Parts 10-14 (Olympiad extension OL1-OL12, 36-question paper, marking, formula sheet, checkpoint)"
+        "a companion Excalidraw sheet for the 30 DIAGRAM briefs",
+        "upgrade D16.2 (right-hand rules) and D16.9 (cycloid) to rendered figures if a suitable Mermaid idiom appears"
       ],
       "pages": [
         "Magnetism.md"
       ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 1703,
+      "questions": 94,
+      "solutions": 130,
+      "math_spans": 3947,
       "bytes_html": 0,
-      "bytes_markdown": 144391,
-      "words": 22489,
-      "display_formulas": 56
+      "bytes_markdown": 269651,
+      "words": 39946,
+      "display_formulas": 61
     },
     {
       "slug": "electromagnetic-waves",

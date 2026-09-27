@@ -126,7 +126,7 @@ The way the syllabus is taught, and the order the Obsidian dashboards use
 ones above it. The `order` is registered in `topics.json` and written into each chapter's
 frontmatter; `tools/check_all.py` keeps the two equal. Slot 17 is the electrostatics module
 (plan.md PARTs 13–15 merged into one chapter, complete) and slot 20 the magnetism module (PARTs 16–19,
-**in progress**); the three **pending** slots are the induction → inductance → AC chapters listed in
+complete); the three **pending** slots are the induction → inductance → AC chapters listed in
 [PENDING.md](PENDING.md).
 
 | order | chapter | block | plan.md PART | status | it supplies the next chapters with |
@@ -150,7 +150,7 @@ frontmatter; `tools/check_all.py` keeps the two equal. Slot 17 is the electrosta
 | 17 | [Electrostatics](electrostatics/Electrostatics.md) | electricity-magnetism | 13–15 | ✅ | charge and Coulomb, the field of any distribution, Gauss, potential, energy of charges, conductors |
 | 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
 | 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
-| 20 | [Magnetism](magnetism/Magnetism.md) | electricity-magnetism | 16–19 | 🚧 stage 1/3 | the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, matter, the Earth |
+| 20 | [Magnetism](magnetism/Magnetism.md) | electricity-magnetism | 16–19 | ✅ | the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, matter, the Earth |
 | 21 | Electromagnetic induction — `electromagnetic-induction` | electricity-magnetism | 20 | ⏳ pending | Faraday, Lenz, motional EMF, induced fields, eddy currents |
 | 22 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | electricity-magnetism | 21 | ⏳ pending | $L$, $M$, $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
 | 23 | Alternating current, resonance & transformers — `alternating-current` | electricity-magnetism | 22 | ⏳ pending | phasors, impedance, resonance, power factor, transformers |

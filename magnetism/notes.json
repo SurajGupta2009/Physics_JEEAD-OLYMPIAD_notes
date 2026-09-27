@@ -11,7 +11,7 @@
   ],
   "source": "no Cengage volume in this repository for magnetism; coverage map built from the standard JEE Advanced headings listed in plan.md PART 16-19 plus the shipped current-electricity and electromagnetic-waves notes",
   "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, mermaid FIGUREs (docs/obsidian-plugin-workflow.md §2)",
-  "stage": 1,
+  "stage": 3,
   "stages": {
     "1": {
       "name": "theory: blocks 0-3 (Lorentz force and motion, charged particles at work, Biot-Savart, Ampere, forces on currents and dipoles, matter, Earth)",

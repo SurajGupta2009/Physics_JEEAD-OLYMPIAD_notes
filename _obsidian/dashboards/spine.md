@@ -6,7 +6,7 @@ the `order:` and `block:` properties in each chapter's frontmatter (registered i
 and checked by `tools/check_all.py`), so the live table at the bottom cannot drift from this one.
 
 Slot 17 is the electrostatics module (plan.md PARTs 13–15 merged into one chapter, complete) and slot
-20 the magnetism module (PARTs 16–19, in progress). The three **pending** rows are the induction → inductance → AC chapters still to
+20 the magnetism module (PARTs 16–19, complete). The three **pending** rows are the induction → inductance → AC chapters still to
 be written ([PENDING.md](../../PENDING.md) · [pending dashboard](pending.md)); their slots are
 reserved so the numbering will not move when they land.
 
@@ -43,7 +43,7 @@ reserved so the numbering will not move when they land.
 | 17 | [Electrostatics](../../electrostatics/Electrostatics.md) | 13–15 | complete | Coulomb's law summed three ways — vectors (field), surfaces (flux), scalars (potential); the element-and-symmetry method; conductors; dipoles; energy |
 | 18 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
 | 19 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
-| 20 | [Magnetism](../../magnetism/Magnetism.md) | 16–19 | **in progress** (stage 1/3: theory done) | effect before cause: the Lorentz force and the speed-independent period, then currents as sources, then forces, dipoles, matter and the Earth |
+| 20 | [Magnetism](../../magnetism/Magnetism.md) | 16–19 | complete | effect before cause: the Lorentz force and the speed-independent period, then currents as sources, then forces, dipoles, matter and the Earth |
 | 21 | Electromagnetic induction — `electromagnetic-induction` | 20 | **pending** | Faraday, Lenz as energy conservation, motional EMF, induced fields, eddy currents |
 | 22 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | 21 | **pending** | the inertia of current; $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
 | 23 | Alternating current, resonance & transformers — `alternating-current` | 22 | **pending** | phasors, impedance, LCR resonance, power factor, transformers, rectifiers |
