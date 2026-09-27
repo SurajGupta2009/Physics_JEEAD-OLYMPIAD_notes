@@ -5,8 +5,8 @@ plan_parts: [13, 14, 15]
 slug: electrostatics
 order: 17
 block: electricity-magnetism
-status: in-progress
-stage: 1
+status: complete
+stage: 3
 source: CENGAGE Electro statics and current electricity-compressed.pdf, ch 1 Coulomb's Laws and Electric Field (pp. 1.2-1.41), ch 2 Electric Flux and Gauss's Law (pp. 2.1-2.25), ch 3 Electric Potential (pp. 3.1-3.30)
 aliases: [electrostatics, electric charge, coulomb law, electric field, electric flux, gauss law, electric potential, electric dipole, conductors in electrostatics]
 tags: [jee-advanced, olympiad, electricity-magnetism, electrostatics]
@@ -17,14 +17,14 @@ tags: [jee-advanced, olympiad, electricity-magnetism, electrostatics]
 > [!abstract] How to use this chapter
 > This is one module in three passes. **Pass 1: Parts 0–3** — the theory of charge, force, field, flux and potential, derived in the order a teacher would teach it: Coulomb's law and superposition first, then the field and the *element-and-symmetry method* for continuous distributions, then flux and Gauss's law as the symmetric shortcut, then the potential as the scalar route, then energy and conductors. **Pass 2: Parts 4–9** — the validity ledger, worked exemplars, the archetype table with practice, the toolkit, the traps, the playbook. **Pass 3: Parts 10–14** — the Olympiad layer (Earnshaw's theorem, image charges, electrostatic pressure, self-energy and the classical electron radius, the charged drop, the field inside a cube), the 200-mark paper, the marking scheme, the formula sheet and the checkpoint. Every number is recomputed; every boxed result carries its condition of validity.
 
-> [!warning] Stage 1 of 3 — what is on the page today
-> The module merges plan.md PARTs 13, 14 and 15 (Cengage *Electrostatics and Current Electricity* chapters 1–3) into one chapter, written in three turns. **This stage ships Parts 0–3 in full** — the complete theory from charge to the energy of a charge system. Parts 4–14 carry a one-paragraph statement of what they will contain and are written in stages 2 and 3; the local gate (`tools/check.py`) enforces the reading-mode, media and maths rules now and the question families and the paper when their stage arrives. Nothing in Parts 0–3 will be rewritten later: later stages *add* blocks and upgrade some DIAGRAM briefs to rendered FIGUREs.
+> [!note] One module for three plan parts
+> The module merges plan.md PARTs 13, 14 and 15 (Cengage *Electrostatics and Current Electricity* chapters 1–3) into one chapter and was written in three stages — theory (Parts 0–3), exam craft (Parts 4–9), Olympiad layer and paper (Parts 10–14). All three are now on the page; `tools/check.py` enforces the full plan.md §1 contract.
 
 ## Part 0 · Orientation
 
 ### 0.1 What you will be able to do
 
-After this chapter you can: state Coulomb's law in a vector form that never gets the direction wrong, and add forces from several charges as vectors; define the electric field so that the test charge drops out, sketch field lines by their rules and know what the lines cannot tell you; run the *element-and-symmetry method* to derive the field of a ring, a rod, an arc, a disc, a sheet and a shell, and take every limit of every result; explain why a conductor's interior is field-free, why its charge sits on the surface and why the field just outside is $\sigma/\varepsilon_0$ and not $\sigma/2\varepsilon_0$; derive the dipole's fields, torque, potential energy and gradient force; solve the equilibrium of point charges and say why no such equilibrium is stable; treat a charge in a uniform field as a projectile and a charged pendulum as a pendulum with a new $g$; define flux, prove Gauss's law from the solid angle, run the Gaussian-surface protocol for spherical, cylindrical and planar symmetry, and get flux through a face or a disc without ever computing a field; prove that the electrostatic field is conservative, define the potential and its reference, compute $V$ for the standard distributions by scalar superposition, recover $\mathbf E$ by differentiating, read equipotential maps, derive the factor $\tfrac12$ in the energy of a charge system, handle induced charges on shells and the energy lost when two spheres are connected, and locate the field's energy in space. The Olympiad layer (Part 10, stage 3) adds Earnshaw's theorem, the image method, electrostatic pressure, self-energy and the charged-drop limit.
+After this chapter you can: state Coulomb's law in a vector form that never gets the direction wrong, and add forces from several charges as vectors; define the electric field so that the test charge drops out, sketch field lines by their rules and know what the lines cannot tell you; run the *element-and-symmetry method* to derive the field of a ring, a rod, an arc, a disc, a sheet and a shell, and take every limit of every result; explain why a conductor's interior is field-free, why its charge sits on the surface and why the field just outside is $\sigma/\varepsilon_0$ and not $\sigma/2\varepsilon_0$; derive the dipole's fields, torque, potential energy and gradient force; solve the equilibrium of point charges and say why no such equilibrium is stable; treat a charge in a uniform field as a projectile and a charged pendulum as a pendulum with a new $g$; define flux, prove Gauss's law from the solid angle, run the Gaussian-surface protocol for spherical, cylindrical and planar symmetry, and get flux through a face or a disc without ever computing a field; prove that the electrostatic field is conservative, define the potential and its reference, compute $V$ for the standard distributions by scalar superposition, recover $\mathbf E$ by differentiating, read equipotential maps, derive the factor $\tfrac12$ in the energy of a charge system, handle induced charges on shells and the energy lost when two spheres are connected, and locate the field's energy in space. The Olympiad layer (Part 10) adds Earnshaw's theorem, the image method, electrostatic pressure, self-energy and the charged-drop limit.
 
 ### 0.2 The one idea
 
@@ -71,7 +71,7 @@ Not capacitance: the systematic treatment of $C$, dielectrics, energy of a capac
 
 ### 0.6 Cengage coverage map
 
-Floor: *Cengage Electrostatics and Current Electricity*, chapters 1–3 (contents pages v–vi read from the PDF in this repository; section names as printed). Status vocabulary: **derived**, **stated + used**, **extended beyond book**, and — for the exercise structure, which is exam craft — **stage 2 (Part 6)**.
+Floor: *Cengage Electrostatics and Current Electricity*, chapters 1–3 (contents pages v–vi read from the PDF in this repository; section names as printed). Status vocabulary: **derived**, **stated + used**, **extended beyond book**, and — for the exercise structure, which is exam craft — **archetypes (Parts 5–6)**.
 
 **Chapter 1 · Coulomb's Laws and Electric Field (pp. 1.2–1.41)**
 
@@ -92,7 +92,7 @@ Floor: *Cengage Electrostatics and Current Electricity*, chapters 1–3 (content
 | Field of a Short Dipole at a General Point | $\frac{kp}{r^3}\sqrt{1+3\cos^2\theta}$ | §3.9, re-derived from $V$ in §3.31 | derived twice |
 | Net Force on a Dipole in a Non-Uniform Field | $F=p\,dE/dx$ | §3.10 | derived |
 | Dipole in a Uniform Electric Field | torque, $U=-\mathbf p\cdot\mathbf E$, oscillation | §3.10 | derived |
-| Solved Examples; Exercises (subjective to integer type) | the archetypes | Parts 5–6 | stage 2 (Part 6) |
+| Solved Examples; Exercises (subjective to integer type) | the archetypes | Parts 5–6 | archetypes (Parts 5–6) |
 
 **Chapter 2 · Electric Flux and Gauss's Law (pp. 2.1–2.25)**
 
@@ -108,7 +108,7 @@ Floor: *Cengage Electrostatics and Current Electricity*, chapters 1–3 (content
 | Field Due to a Long Uniformly Charged Cylinder | $\rho r/2\varepsilon_0$ inside | §3.19 | derived |
 | Field Near a Uniformly Volume-Charged Plane; Field Inside the Plane | the slab's linear profile | §3.20 | derived; F13.6 |
 | Appendix: Solid Angle | $\Omega=A\cos\alpha/r^2$, $4\pi$ total | §3.15, §3.22 | derived and used for the flux family |
-| Solved Examples; Exercises | the archetypes | Parts 5–6 | stage 2 (Part 6) |
+| Solved Examples; Exercises | the archetypes | Parts 5–6 | archetypes (Parts 5–6) |
 
 **Chapter 3 · Electric Potential (pp. 3.1–3.30)**
 
@@ -122,7 +122,7 @@ Floor: *Cengage Electrostatics and Current Electricity*, chapters 1–3 (content
 | Potential of Continuous Distributions: Conducting Sphere, Non-Conducting Solid Sphere, Uniform Line, Ring, Disk | the five standard $V$'s | §3.27 | derived; F13.7 |
 | Potential Due to an Electric Dipole | $kp\cos\theta/r^2$ | §3.31 | derived, and differentiated back to the field |
 | Work Done in Rotating a Dipole; Potential Energy of a Dipole | $W=pE(\cos\theta_1-\cos\theta_2)$, $U=-\mathbf p\cdot\mathbf E$ | §3.10, §3.31 | derived twice |
-| Solved Examples; Exercises | the archetypes | Parts 5–6 | stage 2 (Part 6) |
+| Solved Examples; Exercises | the archetypes | Parts 5–6 | archetypes (Parts 5–6) |
 
 Beyond the book, at the theory level: the finite rod by angle parametrisation (§3.5), the shell by direct integration (§3.7), the conductor's factor-of-2 resolution (§3.8), equilibrium counting and the stability question (§3.11), the charge-in-a-field family with Millikan's balance (§3.13), the solid-angle proof (§3.15), the $\rho\propto r^n$ table (§3.18), conductors with cavities (§3.21), flux without the field (§3.22), Gauss for gravity (§3.24), the differentiate-instead-of-integrate method (§3.29), the zeros of $V$ and $\mathbf E$ (§3.30), the assembly derivation of the half factor (§3.32), the connected-spheres energy audit (§3.34) and the field-energy integral (§3.36).
 
@@ -1165,55 +1165,1821 @@ $$
 
 ## Part 4 · Results, limits and the validity ledger
 
-> [!warning] Stage 2 deliverable
-> This block is written in the module's second stage: the boxed results of Part 3 collected with their conditions of validity, the limit checks in one table, the "which formula when" decision table for fields and potentials, and the correspondence of every result to its next simplest case (rod → line → point; disc → sheet; shell → point; dipole → charge pair).
+Every boxed result of Part 3, with the condition under which it is true and the limit that checks it. A formula used outside its column is the commonest way to lose nine marks in Section D.
+
+| result | formula | valid when | limit check |
+|---|---|---|---|
+| Coulomb | $\mathbf F_{12}=kq_1q_2\hat{\mathbf r}_{12}/r^2$ | point charges at rest, vacuum | swap labels: $\mathbf F_{21}=-\mathbf F_{12}$ ✓ |
+| point-charge field | $E=kq/r^2$ | $q$ static; $q_0\to0$ | $\Phi=q/\varepsilon_0$ through any sphere ✓ |
+| ring, axis | $E=kQx/(x^2+R^2)^{3/2}$ | uniform $\lambda$, on the axis only | $x\gg R$: $kQ/x^2$; $x=0$: $0$ ✓ |
+| ring maximum | $x=R/\sqrt2$, $E=0.385\,kQ/R^2$ | as above | $dE/dx=0$ there ✓ |
+| finite rod | $E_\perp=\tfrac{k\lambda}{d}(\sin\alpha+\sin\beta)$, $E_\parallel=\tfrac{k\lambda}{d}(\cos\beta-\cos\alpha)$ | uniform $\lambda$, $d\neq0$ | $\alpha=\beta\to90^\circ$: $2k\lambda/d$ ✓ |
+| infinite line | $E=\lambda/2\pi\varepsilon_0r$ | $L\gg r$, away from ends | $1\%$ high at the midpoint once $L>14r$ |
+| rod, on its line | $E=kQ/a(a+L)$ | point beyond an end | $a\gg L$: $kQ/a^2$ ✓ |
+| disc, axis | $E=\tfrac{\sigma}{2\varepsilon_0}\bigl(1-x/\sqrt{x^2+R^2}\bigr)$ | uniform $\sigma$ | $x\to0$: $\sigma/2\varepsilon_0$; $x\gg R$: $kQ/x^2$ ✓ |
+| sheet | $E=\sigma/2\varepsilon_0$ | infinite, or $x\ll R$ | independent of $x$; two opposite sheets: $\sigma/\varepsilon_0$ between ✓ |
+| arc, centre | $E=2k\lambda\sin(\theta_0/2)/R$ | uniform $\lambda$ | $\theta_0=2\pi$: $0$; small $\theta_0$: $kQ/R^2$ ✓ |
+| shell | $kQ/r^2$ outside, $0$ inside | spherical, uniform $\sigma$ | jump $\sigma/\varepsilon_0$ at $R$ ✓ |
+| solid sphere | $kQr/R^3$ inside, $kQ/r^2$ outside | uniform $\rho$ | continuous at $R$; $\rho\propto r^n\Rightarrow E\propto r^{n+1}$ |
+| off-centre cavity | $\mathbf E=\rho\,\mathbf a/3\varepsilon_0$ | inside the hole, uniform $\rho$ | $\mathbf a\to0$: $0$ ✓ |
+| line, thick wire | $\rho r/2\varepsilon_0$ inside, $\lambda/2\pi\varepsilon_0r$ outside | infinite, uniform | continuous at $r=a$ ✓ |
+| slab | $\rho x/\varepsilon_0$ inside, $\rho d/2\varepsilon_0$ outside | infinite slab, uniform $\rho$ | outside $=\sigma_{\text{eff}}/2\varepsilon_0$ ✓ |
+| conductor surface | $E=\sigma/\varepsilon_0$, normal | electrostatic equilibrium | patch $\sigma/2\varepsilon_0$ + rest $\sigma/2\varepsilon_0$ ✓ |
+| two conducting plates | outer faces $\tfrac12(Q_1+Q_2)$, inner $\pm\tfrac12(Q_1-Q_2)$ | large, close plates | $Q_2=-Q_1$: bare outer faces ✓ |
+| dipole, axis / equator | $2kp/r^3$ / $kp/r^3$ | $r\gg d$ | exact: $2kpr/(r^2-a^2)^2$, $kp/(r^2+a^2)^{3/2}$; error $\sim d^2/2r^2$ |
+| dipole, general | $E=\tfrac{kp}{r^3}\sqrt{1+3\cos^2\theta}$, $\tan\alpha=\tfrac12\tan\theta$ | $r\gg d$ | $\theta=0,90^\circ$ recover the two above ✓ |
+| dipole in a field | $\boldsymbol\tau=\mathbf p\times\mathbf E$, $U=-\mathbf p\cdot\mathbf E$, $F_x=p\,dE/dx$ | uniform $\mathbf E$ for the first two | $\omega=\sqrt{pE/I}$ small angles |
+| null point | $x=L\sqrt{q_1}/(\sqrt{q_1}+\sqrt{q_2})$ | like charges, on the line | equal charges: midpoint ✓ |
+| flux | $\Phi=\oint\mathbf E\cdot d\mathbf A=q_{\text{enc}}/\varepsilon_0$ | closed surface, static | outside charge: $0$ ✓ |
+| flux fractions | cube centre $\tfrac16$, corner $\tfrac1{24}$, edge $\tfrac1{16}$ | charge exactly at the symmetric point | sums: $1$, $\tfrac18$, $\tfrac14$ ✓ |
+| disc flux | $\Phi=\tfrac{q}{2\varepsilon_0}(1-x/\sqrt{x^2+R^2})$ | point charge on the axis | $x\to0$: $q/2\varepsilon_0$ ✓ |
+| potential, point | $V=kq/r$, $V(\infty)=0$ | finite distribution | $E_r=-dV/dr=kq/r^2$ ✓ |
+| ring / disc, axis | $kQ/\sqrt{R^2+x^2}$ / $\tfrac{\sigma}{2\varepsilon_0}(\sqrt{R^2+x^2}-x)$ | on the axis | $-dV/dx$ gives the field rows ✓ |
+| shell / solid sphere $V$ | $kQ/R$ inside; $kQ(3R^2-r^2)/2R^3$ inside | uniform | $V(0)=1.5\,kQ/R$ for the solid sphere ✓ |
+| infinite line $V$ | $V(d)-V(d_0)=(\lambda/2\pi\varepsilon_0)\ln(d_0/d)$ | reference at $d_0$, not $\infty$ | $-dV/dd=\lambda/2\pi\varepsilon_0d$ ✓ |
+| dipole $V$ | $kp\cos\theta/r^2$ | $r\gg d$ | $\theta=90^\circ$: $0$ with $E\neq0$ |
+| energy, system | $U=\sum_{i<j}kq_iq_j/r_{ij}=\tfrac12\sum q_iV_i$ | mutual energy; no self-terms | external field: $qV_{\text{ext}}$, no half |
+| conductors joined | $Q_1/Q_2=R_1/R_2$, $\sigma_1/\sigma_2=R_2/R_1$ | far-apart spheres, one potential | $R_1=R_2$: equal shares ✓ |
+| connection loss | $\Delta U=\tfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2$ | any two conductors | $V_1=V_2$: $0$ ✓ |
+| shells | $V_a=kq/a+kQ/b$, $V_b=k(q+Q)/b$ | concentric, $a<b$ | earth outer: $Q=-q$; earth inner: $q=-Qa/b$ |
+| self-energy | shell $kQ^2/2R$, sphere $3kQ^2/5R$ | uniform | field integral gives the same ✓ |
+| energy density | $u=\tfrac12\varepsilon_0E^2$ | static fields (general) | shell: $\int u\,dV=kQ^2/2R$ ✓ |
+| breakdown | $Q_{\max}=E_bR^2/k$, $V_{\max}=E_bR$ | isolated sphere in air, $E_b=3\times10^6$ V m$^{-1}$ | $R=1$ cm: $33$ nC, $30$ kV |
+
+### 4.1 Which formula when
+
+| the question gives | reach for | not for |
+|---|---|---|
+| a few point charges | vector sum of $kq/r^2$ terms; scalar sum of $kq/r$ for $V$ | Gauss (no symmetry) |
+| a symmetric distribution (sphere, long cylinder, large sheet) | Gauss with the surface of §3.17 | points near the ends or edges |
+| a ring, disc or rod and a point *on the axis* | $V$ on the axis, then $-dV/dx$; or the ledger row | off-axis points |
+| an arc or a shape with a symmetry line through the point | element-and-symmetry, one component | shapes with no such line (two components) |
+| a conductor | $\mathbf E=0$ inside, $\sigma/\varepsilon_0$ outside, one potential, Gauss for induced charges | "uniform $\sigma$" unless it is a lone sphere |
+| a potential map or a $V(x,y,z)$ formula | $\mathbf E=-\nabla V$; spacing of contours | reading $E$ from the *value* of $V$ |
+| energies, work, speeds | $W=q\Delta V$; $U=\sum$ pairs; $\tfrac12QV$ for a conductor | $\tfrac12qV$ for a test charge |
+| a dipole far away | $p$ and the $1/r^3$ family | $r\lesssim5d$ (use the exact two-charge forms) |
+
+### 4.2 The correspondence chain
+
+Each result reduces to the next simpler one in a limit; if yours does not, it is wrong.
+
+> [!tip] FIGURE F13.8 · The correspondence chain of the standard fields
+> *Why:* the ledger has thirty rows but only four independent facts; seeing how each row collapses into the next is the fastest error detector on the paper.
+> *Data:* the limits of Part 3: rod → line ($L\to\infty$) → point ($d\gg L$); disc → sheet ($R\to\infty$) and → point ($x\gg R$); shell → point (outside) and → zero (inside); slab → sheet; dipole → two charges (near) and → $1/r^3$ (far); solid sphere → shell (charge pushed to the surface).
+
+```mermaid
+flowchart LR
+  ROD["finite rod: angles"] -- "L to infinity" --> LINE["infinite line: 2k lambda / d"]
+  ROD -- "d much greater than L" --> PT["point charge: kQ / r^2"]
+  DISC["disc: sigma/2eps0 (1 - x/sqrt(x^2+R^2))"] -- "R to infinity" --> SHEET["sheet: sigma / 2 eps0"]
+  DISC -- "x much greater than R" --> PT
+  RING["ring: kQx/(x^2+R^2)^(3/2)"] -- "x much greater than R" --> PT
+  RING -- "stack rings" --> DISC
+  SHELL["shell: kQ/r^2 outside, 0 inside"] -- "outside" --> PT
+  SPHERE["solid sphere: kQr/R^3 inside"] -- "charge to surface" --> SHELL
+  SLAB["slab: rho x / eps0 inside"] -- "outside" --> SHEET
+  DIP["dipole: 2kp/r^3, kp/r^3"] -- "r comparable to d" --> TWO["two charges: exact vector sum"]
+  TWO -- "r much greater than d" --> DIP
+```
+
+> *Read:* every arrow is a limit you can take in one line; the point charge is where all roads end, and the sheet is where all near-surface fields begin.
+
+> [!danger] Trap — the row is right, the column is wrong
+> Nine times out of ten a wrong Section D answer is a correct formula applied outside its "valid when" cell: the infinite-line field at the end of a rod, the short-dipole field at $r=d$, $\sigma/\varepsilon_0$ for an insulating sheet, $\tfrac12qV$ for a test charge, the far-field ring formula at $x=R$. Check the column before the arithmetic.
 
 ## Part 5 · Worked exemplars
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the exemplars E1–E20 at the exact point of theory they use — force on a corner charge, ring-axis maximum, rod at an angle, two sheets, conductor faces, dipole torque and gradient force, third-charge equilibrium, electron deflection, charged pendulum, flux through a face, sphere and cavity, coaxial field, concentric shells, connected spheres, energy of a square, potential from a field map, work to move a charge — each with a collapsible full solution and a check.
+**C1 — concept check.** A negatively charged rod is brought near an isolated neutral metal sphere, which is then earthed briefly, and finally the rod is taken away. What charge does the sphere carry, and where did it come from?
+
+<details><summary>Solution</summary>
+
+Positive. The rod pushed the sphere's free electrons to the far side; earthing let them leave through the wire; removing the wire trapped the deficit; removing the rod let the remaining positive charge spread over the surface. The rod lost nothing — the electrons went to the Earth.
+
+</details>
+
+**C2 — concept check.** Three equal positive charges sit at the corners of an equilateral triangle. Is the field zero anywhere on the plane other than at infinity?
+
+<details><summary>Solution</summary>
+
+Yes: at the centroid, by symmetry (three equal vectors at $120^\circ$). It is the only finite zero: the potential there is $3kq/(a/\sqrt3)$, a saddle in the plane and a minimum along the perpendicular axis for a positive test charge.
+
+</details>
+
+**C3 — concept check.** The axial field of a ring vanishes at the centre and far away. Without calculus, why must it have a maximum, and roughly where?
+
+<details><summary>Solution</summary>
+
+A continuous non-negative function that is zero at both ends of $[0,\infty)$ and positive between must have a maximum. Near the centre each element's field is nearly perpendicular to the axis (small axial component); far away the whole field is small; the compromise is at $x\sim R$, and the calculation says $R/\sqrt2$.
+
+</details>
+
+**C4 — concept check.** Why does the field of an infinite sheet not fall off with distance, when every element of it obeys $1/r^2$?
+
+<details><summary>Solution</summary>
+
+Moving away, each element's field weakens as $1/r^2$, but the number of elements within a given angular cone grows as $r^2$ — the sheet subtends the same solid angle from every distance. The two effects cancel exactly, which is the solid-angle statement of §3.15 seen from the other side.
+
+</details>
+
+**C5 — concept check.** A charged conductor has a sharp point. Compare the field just outside the point with that just outside a flat region of the same conductor, and say what is *not* different between the two places.
+
+<details><summary>Solution</summary>
+
+The field is far larger at the point ($\sigma$ is larger there, and $E=\sigma/\varepsilon_0$ locally). What is the same: the potential — a conductor in equilibrium is one equipotential, tip and flat alike.
+
+</details>
+
+**C6 — concept check.** A dipole is placed in a uniform field at $60^\circ$ to it and released. Describe its motion and state the energies at $60^\circ$ and at $0^\circ$.
+
+<details><summary>Solution</summary>
+
+It swings towards alignment, overshoots to $-60^\circ$, and oscillates (not simple harmonic at this amplitude). $U(60^\circ)=-pE/2$, $U(0)=-pE$; the difference $pE/2$ is the maximum rotational kinetic energy.
+
+</details>
+
+**C7 — concept check.** A point charge sits outside a closed surface, very close to it. What is the flux through the surface, and does the answer change if the surface is a conductor?
+
+<details><summary>Solution</summary>
+
+Zero and zero. Every field line that enters leaves. A conductor rearranges its own charge, but its total charge is unchanged, so the enclosed charge — and the flux — is still whatever the conductor carries, unaffected by the outside charge.
+
+</details>
+
+**C8 — concept check.** Two Gaussian spheres, radii $R$ and $2R$, are centred on the same point charge. Compare the fluxes, then compare the fields on them.
+
+<details><summary>Solution</summary>
+
+Equal fluxes ($q/\varepsilon_0$ each). The field on the larger sphere is a quarter of the field on the smaller; its area is four times larger. Same product, as Gauss guarantees.
+
+</details>
+
+**C9 — concept check.** A charge $q$ is inside the cavity of a neutral conducting shell. Someone says "the outside of the shell feels nothing because the metal shields it". What is wrong, and what is right?
+
+<details><summary>Solution</summary>
+
+Wrong: the outer surface carries $+q$ and its field is felt everywhere outside. Right: the outside cannot tell *where* inside the charge is, because the inner surface's $-q$ cancels the charge's field throughout the metal. Earth the shell and the outside becomes field-free.
+
+</details>
+
+**C10 — concept check.** In a region the potential is constant, $V=500$ V. What is the field there? And if the potential is zero throughout a region?
+
+<details><summary>Solution</summary>
+
+Zero in both cases: $\mathbf E=-\nabla V$, and the gradient of a constant is zero whatever the constant. A field-free region can sit at any potential — the inside of a charged conductor is the standard example.
+
+</details>
+
+**C11 — concept check.** A proton and an electron are released from rest at the same point in a uniform field. After the same *time*, which has more kinetic energy? After the same *distance*?
+
+<details><summary>Solution</summary>
+
+Same time: $K=(qEt)^2/2m$, so the electron, by a factor $m_p/m_e=1836$. Same distance: $K=qEd$, equal — the work done is the same.
+
+</details>
+
+**C12 — concept check.** The potential at the surface of a charged conducting sphere is $V$. Is the energy stored $QV$ or $\tfrac12QV$, and why not the other?
+
+<details><summary>Solution</summary>
+
+$\tfrac12QV$: the charge was brought up while the potential rose from $0$ to $V$, and the average was $V/2$. $QV$ would be the energy of a *test* charge $Q$ placed in someone else's fixed potential $V$.
+
+</details>
+
+**C13 — concept check.** Two concentric conducting shells carry charges $+q$ (inner) and $+q$ (outer). They are joined by a wire. What are the final charges?
+
+<details><summary>Solution</summary>
+
+$0$ inside, $2q$ outside. Between connected shells the region must be field-free, so the inner shell can hold no net charge; all of it moves to the outer surface. This holds whatever the potentials were before.
+
+</details>
+
+**C14 — concept check.** The potential at a point is zero. Can a charge placed there be in equilibrium? Can it be in *stable* equilibrium?
+
+<details><summary>Solution</summary>
+
+Equilibrium needs $\mathbf E=0$, which has nothing to do with $V=0$; it may or may not hold. Stable equilibrium is impossible anywhere in a static field (Earnshaw), zero potential or not.
+
+</details>
+
+### E1 — Force on a corner charge with mixed signs
+
+Charges $+2\ \mu$C sit at the corners $A(0,0)$, $B(a,0)$, $C(a,a)$ of a square of side $a=10$ cm, and $-2\ \mu$C at $D(0,a)$. Find the force on the charge at $B$.
+
+<details><summary>Solution</summary>
+
+Pairwise magnitudes: neighbours at distance $a$, $F_1=kq^2/a^2=(8.99\times10^9)(2\times10^{-6})^2/(0.1)^2=3.60$ N; the diagonal at $a\sqrt2$, $F_D=F_1/2=1.80$ N. Directions on $B$: from $A$ (like), away from $A$: $+3.60\,\hat{\mathbf x}$. From $C$ (like), away from $C$: $-3.60\,\hat{\mathbf y}$. From $D$ (unlike), *towards* $D$, along $(-1,1)/\sqrt2$: $1.80(-0.707,0.707)=(-1.27,1.27)$ N. Sum: $(2.32,-2.32)$ N, magnitude $3.29$ N, directed along the diagonal $DB$ produced, i.e. $45^\circ$ below the $+x$ axis, away from $D$.
+
+> [!success] Check
+> With all four charges positive the diagonal force would reverse to $(+1.27,-1.27)$ and the total would be $(4.87,-4.87)$, magnitude $6.88$ N along the same line — the standard "square" result $kq^2(2\sqrt2+1)/2a^2=6.88$ N ✓. Flipping one sign halved the force but kept its line; the vector method never had to guess.
+
+</details>
+
+### E2 — A ring: field, maximum, and a small oscillation
+
+A ring of radius $R=5.0$ cm carries $Q=20$ nC. (a) Field on the axis at $x=5.0$ cm. (b) The maximum axial field and where it occurs. (c) A particle of charge $-1.0$ nC and mass $1.0$ mg is released on the axis $2$ mm from the centre; find its period.
+
+<details><summary>Solution</summary>
+
+(a) $E=kQx/(x^2+R^2)^{3/2}=(8.99\times10^9)(2\times10^{-8})(0.05)/(0.005)^{3/2}=8.99/3.54\times10^{-4}=2.54\times10^{4}$ V m$^{-1}$, away from the ring. (b) At $x=R/\sqrt2=3.54$ cm, $E_{\max}=0.385\,kQ/R^2=0.385\times7.19\times10^4=2.77\times10^4$ V m$^{-1}$. (c) Near the centre $E\approx kQx/R^3$, so the restoring force on the negative charge is $F=-(k\lvert q\rvert Q/R^3)x$: $\omega^2=k\lvert q\rvert Q/mR^3=(8.99\times10^9)(10^{-9})(2\times10^{-8})/(10^{-6}\times1.25\times10^{-4})=1.44\times10^3$ s$^{-2}$, $\omega=37.9$ rad s$^{-1}$, $T=0.166$ s.
+
+> [!success] Check
+> $2$ mm is $0.04R$: the linear approximation's error is of order $(x/R)^2\approx0.2\%$ ✓. The equilibrium is stable only along the axis — in the plane of the ring the same particle runs away (OL1).
+
+</details>
+
+### E3 — A finite rod, two field points
+
+A rod of length $1.0$ m carries $\lambda=10$ nC m$^{-1}$. Find the field (a) at $30$ cm from its midpoint on the perpendicular bisector, comparing with the infinite-line formula, and (b) at a point on the rod's own line $30$ cm beyond one end.
+
+<details><summary>Solution</summary>
+
+(a) Each end subtends $\sin\alpha=0.5/\sqrt{0.5^2+0.3^2}=0.857$; $E_\perp=\frac{k\lambda}{d}(2\sin\alpha)=\frac{(8.99\times10^9)(10^{-8})}{0.3}(1.715)=514$ V m$^{-1}$, $E_\parallel=0$. The infinite-line value $2k\lambda/d=599$ V m$^{-1}$ is $17\%$ high. (b) $E=kQ/a(a+L)$ with $Q=10$ nC, $a=0.3$ m: $E=(8.99\times10^9)(10^{-8})/(0.3\times1.3)=230$ V m$^{-1}$, along the rod's line away from it.
+
+> [!success] Check
+> (a) The infinite-line error is $1-\sin\alpha=14\%$ of the *finite* value, i.e. the infinite formula is $1/0.857=1.17$ times too big ✓ (§3.5 predicts $<1\%$ only for $L>14d=4.2$ m). (b) Far away, $kQ/a^2$ would give $999$ V m$^{-1}$ at $a=0.3$ m; the rod's charge is spread out to $1.3$ m, so the true value is smaller ✓.
+
+</details>
+
+### E4 — Two parallel conducting plates with unequal charges
+
+Two large parallel conducting plates of area $1.0$ m$^2$ carry $Q_1=+6\ \mu$C and $Q_2=-2\ \mu$C. Find the charge on each face and the field in each of the three regions.
+
+<details><summary>Solution</summary>
+
+Four-face rule (§3.8): outer faces $\tfrac12(Q_1+Q_2)=+2\ \mu$C each; inner faces $\pm\tfrac12(Q_1-Q_2)=\pm4\ \mu$C, positive on plate 1's inner face. Between the plates: $E=\sigma_{\text{inner}}/\varepsilon_0=4\times10^{-6}/8.85\times10^{-12}=4.52\times10^{5}$ V m$^{-1}$, from plate 1 to plate 2. Outside, on either side: $E=\sigma_{\text{outer}}/\varepsilon_0=2.26\times10^{5}$ V m$^{-1}$, pointing away from the plates on both sides.
+
+> [!success] Check
+> Total on plate 1: $2+4=6\ \mu$C ✓; on plate 2: $2-4=-2\ \mu$C ✓. Superpose the four sheets in the outer region: $(2+4-4+2)/2\varepsilon_0=4/2\varepsilon_0$ in units of $\mu$C m$^{-2}$, i.e. $2.26\times10^5$ V m$^{-1}$ ✓.
+
+</details>
+
+### E5 — Just outside a charged sphere, and the pull on its surface
+
+A metal sphere of radius $10$ cm is raised to $100$ kV. Find the surface field, the surface charge density, the total charge, and the outward pressure on the surface. Is it near breakdown?
+
+<details><summary>Solution</summary>
+
+$E=V/R=10^{6}$ V m$^{-1}$ (for a lone sphere $V=kQ/R$ and $E=kQ/R^2$). $\sigma=\varepsilon_0E=8.85\ \mu$C m$^{-2}$. $Q=4\pi R^2\sigma=1.11\ \mu$C. Pressure $=\sigma E_{\text{rest}}=\sigma^2/2\varepsilon_0=4.4$ Pa (OL3 derives it twice). At $10^6$ V m$^{-1}$ the sphere is at a third of air's breakdown field; it could be raised to about $300$ kV before corona.
+
+> [!success] Check
+> $Q=VR/k=(10^5)(0.1)/(8.99\times10^9)=1.11\ \mu$C ✓. Pressure by the other route, $\tfrac12\varepsilon_0E^2=\tfrac12(8.85\times10^{-12})(10^{12})=4.4$ Pa ✓ — the energy density just outside *is* the pressure.
+
+</details>
+
+### E6 — A molecular dipole
+
+HCl has $p=3.6\times10^{-30}$ C m. In a field of $10^{5}$ V m$^{-1}$, find the maximum torque, the work to turn the molecule from aligned to anti-aligned, and the molecule's own field $1.0$ nm away on its axis and on its equator.
+
+<details><summary>Solution</summary>
+
+$\tau_{\max}=pE=3.6\times10^{-25}$ N m. $W=U(\pi)-U(0)=2pE=7.2\times10^{-25}$ J $=4.5\ \mu$eV — a ten-thousandth of $k_BT$ at room temperature, so thermal motion randomises the orientation almost completely (§3.10). Own field: axial $2kp/r^3=2(8.99\times10^9)(3.6\times10^{-30})/10^{-27}=6.5\times10^{7}$ V m$^{-1}$; equatorial half that, $3.2\times10^{7}$ V m$^{-1}$.
+
+> [!success] Check
+> The molecule's length is $\sim0.13$ nm, so at $r=1$ nm the short-dipole formulas are within $\sim1\%$ ✓. $6.5\times10^7$ V m$^{-1}$ at a nanometre is twenty times air's breakdown field — molecular fields dwarf laboratory ones, as §3.37's scales say.
+
+</details>
+
+### E7 — A dipole pulled by a point charge, both ways
+
+A small dipole $p=1.0\times10^{-12}$ C m points radially away from a point charge $Q=1.0\ \mu$C at distance $r=10$ cm. Find the force on the dipole, and check it against the force on $Q$.
+
+<details><summary>Solution</summary>
+
+The dipole sits in the non-uniform field $E=kQ/r^2$ of $Q$, aligned with it. By (3.16), $F=p\,dE/dr=p(-2kQ/r^3)=-(10^{-12})(2)(8.99\times10^9)(10^{-6})/(10^{-3})=-1.80\times10^{-5}$ N; the minus sign means towards $Q$ — the dipole is pulled towards the stronger field, which is where $Q$ is. Reaction: $Q$ sits on the dipole's axis, where the dipole's field is $2kp/r^3=2(8.99\times10^9)(10^{-12})/10^{-3}=18.0$ V m$^{-1}$, pointing away from the dipole; the force on $Q$ is $QE=(10^{-6})(18.0)=1.80\times10^{-5}$ N, directed away from the dipole — equal and opposite, as Newton's third law requires.
+
+> [!success] Check
+> Both routes give $2kpQ/r^3$ ✓. Reverse the dipole and both forces reverse: a dipole pointing *towards* the charge is pushed away. Scaling: doubling $r$ divides the force by $8$, the signature of a $1/r^3$ interaction between a charge and a dipole.
+
+</details>
+
+### E8 — Where a third charge sits, and what it must be
+
+$q_1=+4\ \mu$C is at $x=0$ and $q_2=+1\ \mu$C at $x=30$ cm. (a) Where is the field zero? (b) What charge placed there leaves all three in equilibrium? (c) Is that equilibrium stable?
+
+<details><summary>Solution</summary>
+
+(a) Between them, nearer the smaller: $x=L\sqrt{q_1}/(\sqrt{q_1}+\sqrt{q_2})=30\times2/(2+1)=20$ cm from $q_1$. (b) Force on $q_1$ must vanish: $kq_1q_2/L^2=kq_1\lvert Q\rvert/x^2$, so $\lvert Q\rvert=q_2x^2/L^2=1\times(20/30)^2=0.444\ \mu$C, negative: $Q=-4/9\ \mu$C, i.e. $Q=-q_1q_2/(\sqrt{q_1}+\sqrt{q_2})^2$ ✓. (c) No. Displace $Q$ towards $q_1$: the attraction to $q_1$ grows faster than that to $q_2$ and pulls it further — unstable along the line (it is stable sideways, which does not rescue it; Earnshaw).
+
+> [!success] Check
+> The force on $q_2$: $kq_2q_1/L^2$ outward, $kq_2\lvert Q\rvert/(L-x)^2=kq_2(4/9)/(0.1)^2$ inward in units of $\mu$C: $4/0.09=44.4$ versus $(4/9)/0.01=44.4$ ✓ — fixing $q_1$'s balance fixed $q_2$'s automatically, as symmetry of the pair sum demands.
+
+</details>
+
+### E9 — Electrons through deflecting plates
+
+Electrons accelerated through $2.0$ kV enter, along the mid-plane, between plates $4.0$ cm long and $8.0$ mm apart with $100$ V across them. A screen stands $25$ cm beyond the plates' exit. Find the entry speed, the deflection at exit, the exit angle, and the spot position on the screen.
+
+<details><summary>Solution</summary>
+
+$v_0=\sqrt{2eV/m}=\sqrt{2(1.6\times10^{-19})(2000)/9.11\times10^{-31}}=2.65\times10^{7}$ m s$^{-1}$ ($0.09c$: Newtonian is adequate). $E=100/0.008=1.25\times10^{4}$ V m$^{-1}$. Deflection $y=EL^2/4V_{\text{acc}}=(1.25\times10^4)(0.04)^2/8000=2.5$ mm (clears the $4$ mm half-gap). $\tan\theta=EL/2V_{\text{acc}}=0.125$. Spot: $Y=(D+L/2)\tan\theta=(0.25+0.02)(0.125)=3.4$ cm.
+
+> [!success] Check
+> Long route: $a=eE/m=2.2\times10^{15}$ m s$^{-2}$, $t=L/v_0=1.51$ ns, $y=\tfrac12at^2=2.5$ mm ✓. The answer is independent of $e/m$: a proton beam at the same voltages lands on the same spot — one of the paper's favourite "which of these changes the deflection" items.
+
+</details>
+
+### E10 — Two charged balls on strings
+
+Two identical balls of mass $0.50$ g hang from a common point on $50$ cm threads. Given equal charges, each thread settles at $10^\circ$ to the vertical. Find the charge.
+
+<details><summary>Solution</summary>
+
+Separation $r=2\ell\sin\theta=2(0.5)\sin10^\circ=0.174$ m. Each ball: $T\cos\theta=mg$, $T\sin\theta=F$, so $F=mg\tan\theta=(5\times10^{-4})(9.8)(0.176)=8.64\times10^{-4}$ N. Then $q^2=Fr^2/k=(8.64\times10^{-4})(0.0301)/(8.99\times10^9)=2.90\times10^{-15}$ C$^2$, $q=5.4\times10^{-8}$ C $=54$ nC.
+
+> [!success] Check
+> Units: N m$^2$/(N m$^2$ C$^{-2}$) $=$ C$^2$ ✓. Small-angle version, $\tan\theta\approx\sin\theta$, gives $r^3=2kq^2\ell/mg$: with $q=54$ nC, $r=0.173$ m ✓ (within $1\%$ at $10^\circ$). P30 uses this cube law for the leaking-charge problem.
+
+</details>
+
+### E11 — Flux without the field
+
+A $5.0\ \mu$C charge sits exactly at one corner of a cube. Find the flux through each face, through the whole cube, and through a sphere of radius $1$ m centred on the charge.
+
+<details><summary>Solution</summary>
+
+Three faces contain the corner: the field is tangential to them, flux $0$. The three far faces take $q/24\varepsilon_0$ each $=5\times10^{-6}/(24\times8.85\times10^{-12})=2.35\times10^{4}$ V m (§3.22). Whole cube: $3\times2.35\times10^4=7.06\times10^{4}$ V m $=q/8\varepsilon_0$. Sphere: the charge is inside, $\Phi=q/\varepsilon_0=5.65\times10^{5}$ V m, whatever the radius.
+
+> [!success] Check
+> Eight such cubes tile the sphere's interior around the charge: $8\times q/8\varepsilon_0=q/\varepsilon_0$ ✓. The word "exactly" matters: nudge the charge slightly inside the corner and the cube's total becomes $q/\varepsilon_0$; nudge it outside and it becomes $0$.
+
+</details>
+
+### E12 — A uniformly charged sphere, with and without a hole
+
+A non-conducting sphere of radius $R=10$ cm has uniform $\rho=10\ \mu$C m$^{-3}$. Find $E$ at $r=5$ cm, at the surface, and at $r=20$ cm. Then a spherical hole of radius $2$ cm is cut with its centre $5$ cm from the sphere's centre; find the field inside the hole.
+
+<details><summary>Solution</summary>
+
+Inside, $E=\rho r/3\varepsilon_0$: at $5$ cm, $(10^{-5})(0.05)/(3\times8.85\times10^{-12})=1.88\times10^{4}$ V m$^{-1}$; at the surface $3.76\times10^{4}$. Outside, $E=\rho R^3/3\varepsilon_0r^2$: at $20$ cm, a quarter of the surface value, $9.4\times10^{3}$ V m$^{-1}$. ($Q=\tfrac43\pi R^3\rho=41.9$ nC; $kQ/R^2=3.76\times10^4$ ✓.) The hole: superpose the full sphere and a sphere of $-\rho$ filling the hole (§3.18): $\mathbf E=\rho\,\mathbf a/3\varepsilon_0$, uniform, magnitude $(10^{-5})(0.05)/(3\times8.85\times10^{-12})=1.88\times10^{4}$ V m$^{-1}$, directed from the sphere's centre towards the hole's centre — the same value the full sphere had at $r=a$, now everywhere in the hole.
+
+> [!success] Check
+> The hole's field does not depend on the hole's radius ✓ (a point-sized hole at $r=a$ sees the full sphere's field there). A charge $q$ placed anywhere in the hole feels the same force $q\rho a/3\varepsilon_0$, so it cannot be in equilibrium anywhere inside — consistent with Earnshaw.
+
+</details>
+
+### E13 — A coaxial cable
+
+The inner conductor of a coaxial cable has radius $a=1.0$ mm and carries $\lambda=20$ nC m$^{-1}$; the outer conductor, inner radius $b=5.0$ mm, carries $-\lambda$. Find the field at the inner conductor's surface and at the outer's inner surface, the potential difference, and the capacitance per metre.
+
+<details><summary>Solution</summary>
+
+Between the conductors (§3.19), $E=2k\lambda/r$: at $r=a$, $2(8.99\times10^9)(2\times10^{-8})/10^{-3}=3.60\times10^{5}$ V m$^{-1}$; at $r=b$, $7.2\times10^{4}$. Outside the outer conductor the enclosed charge is zero: $E=0$. $V_a-V_b=\int_a^b2k\lambda\,dr/r=2k\lambda\ln(b/a)=360\ln5=579$ V. $C/L=\lambda/V=3.46\times10^{-11}$ F m$^{-1}=34.6$ pF m$^{-1}$.
+
+> [!success] Check
+> $2\pi\varepsilon_0/\ln(b/a)=5.56\times10^{-11}/1.609=3.46\times10^{-11}$ F m$^{-1}$ ✓, the capacitors note's formula. The field is strongest at the *inner* conductor: that is where a cable breaks down, and why high-voltage cables use a thick inner conductor.
+
+</details>
+
+### E14 — A charge inside a charged conducting shell
+
+A conducting shell (inner radius $5$ cm, outer $8$ cm) carries $+2\ \mu$C; a point charge $+3\ \mu$C sits at its centre. Find the charges on the two surfaces, the fields at $r=3$ cm, $6$ cm, $10$ cm, and the potential at $r=3$ cm. Then the shell is earthed; what changes?
+
+<details><summary>Solution</summary>
+
+Inner surface: $-3\ \mu$C (Gauss in the metal). Outer surface: $2-(-3)=+5\ \mu$C. Fields: $r=3$ cm, $kq/r^2=(8.99\times10^9)(3\times10^{-6})/(9\times10^{-4})=3.0\times10^{7}$ V m$^{-1}$; $r=6$ cm (in the metal), $0$; $r=10$ cm, $k(5\ \mu\text{C})/r^2=4.5\times10^{6}$ V m$^{-1}$. Potential at $3$ cm: sum of three shells' potentials, $k\left[\dfrac{3}{0.03}-\dfrac{3}{0.05}+\dfrac{5}{0.08}\right]\times10^{-6}=(8.99\times10^9)(1.025\times10^{-4})=9.2\times10^{5}$ V. Earthed: the outer surface's $+5\ \mu$C drains (it is the only charge free to leave), the field outside vanishes, and $V(3\text{ cm})=k(3/0.03-3/0.05)\times10^{-6}=3.6\times10^{5}$ V; the inner $-3\ \mu$C is untouched.
+
+> [!success] Check
+> Before earthing the shell's own potential is $k(5\ \mu\text{C})/0.08=5.6\times10^5$ V, and $V(3\text{ cm})$ exceeds it by $kq(1/0.03-1/0.05)=3.6\times10^5$ V — exactly the earthed value, since earthing subtracts the shell's potential from everything inside ✓.
+
+</details>
+
+### E15 — Earthing the inner shell
+
+Concentric shells of radii $a=10$ cm and $b=20$ cm; the outer carries $Q=8.0$ nC and the inner is earthed. Find the inner shell's charge and the outer shell's potential.
+
+<details><summary>Solution</summary>
+
+$V_a=0$: $kq'/a+kQ/b=0\Rightarrow q'=-Qa/b=-4.0$ nC — half of $Q$ in magnitude, not all of it. Outer potential: $V_b=k(q'+Q)/b=(8.99\times10^9)(4\times10^{-9})/0.2=180$ V.
+
+> [!success] Check
+> $V_b$ by the other route: the field between the shells is that of $q'$ alone, so $V_b-V_a=kq'(1/b-1/a)=-(8.99\times10^9)(4\times10^{-9})(5-10)=+180$ V ✓, and outside, $V=k(q'+Q)/r$ falls from $180$ V as $1/r$.
+
+</details>
+
+### E16 — Two spheres, one wire
+
+A sphere of radius $5.0$ cm carrying $20$ nC is connected by a long thin wire to a neutral sphere of radius $15$ cm far away. Find the final charges, the surface densities, the common potential, and the energy lost.
+
+<details><summary>Solution</summary>
+
+Before: $V_1=kQ/R_1=3.6$ kV, $U_i=\tfrac12QV_1=kQ^2/2R_1=36\ \mu$J. After: one potential, $Q_1/Q_2=R_1/R_2=1/3$, so $Q_1=5.0$ nC, $Q_2=15$ nC; $V=kQ/(R_1+R_2)=899$ V. Densities: $\sigma_1=Q_1/4\pi R_1^2=1.59\times10^{-7}$ C m$^{-2}$, $\sigma_2=5.3\times10^{-8}$ — the smaller sphere three times denser. Energy: $U_f=\tfrac12QV=9.0\ \mu$J; lost $27\ \mu$J, three quarters — $R_2/(R_1+R_2)$, as (3.45) predicts with $V_2=0$.
+
+> [!success] Check
+> $\Delta U=\dfrac{C_1C_2}{2(C_1+C_2)}V_1^2$ with $C_i=4\pi\varepsilon_0R_i$: $C_1=5.56$ pF, $C_2=16.7$ pF, $\Delta U=\tfrac12(4.17\text{ pF})(3600)^2=27\ \mu$J ✓. The loss goes to heat and radiation, and is the same for any wire resistance.
+
+</details>
+
+### E17 — The energy of a square, and what it becomes
+
+Four charges of $1.0\ \mu$C, each of mass $1.0$ g, are held at the corners of a square of side $10$ cm. Find the stored energy. They are released simultaneously; find the speed of each when far apart.
+
+<details><summary>Solution</summary>
+
+$U=(4+\sqrt2)kq^2/a=5.414\times(8.99\times10^9)(10^{-12})/0.1=0.487$ J. By symmetry each carries away a quarter: $\tfrac12mv^2=0.122$ J, $v=\sqrt{2\times0.122/10^{-3}}=15.6$ m s$^{-1}$, each along its diagonal outward.
+
+> [!success] Check
+> Momentum: four equal speeds along the diagonals sum to zero ✓. If only *one* charge were released, it would carry the energy of its own three pairs, $kq^2(2+1/\sqrt2)/a=0.243$ J, and reach $22$ m s$^{-1}$ — more than in the simultaneous release, because the others are then not sharing the energy.
+
+</details>
+
+### E18 — Field from a potential function
+
+In a region, $V=5x^2y-3y^2+2$ (volts, metres). Find $\mathbf E$ at $(1,2,0)$, and comment on the value of $V$ there.
+
+<details><summary>Solution</summary>
+
+$\mathbf E=-\nabla V=\bigl(-10xy,\ -5x^2+6y,\ 0\bigr)$; at $(1,2,0)$: $(-20,\ 7,\ 0)$ V m$^{-1}$, magnitude $21.2$ V m$^{-1}$. And $V(1,2,0)=10-12+2=0$: the potential vanishes at a point where the field is $21$ V m$^{-1}$ — §3.30 in a formula.
+
+> [!success] Check
+> Dimensions: the $5$ carries V m$^{-3}$, the $3$ V m$^{-2}$, so each component of $-\nabla V$ is in V m$^{-1}$ ✓. $\nabla^2V=10y-6$, non-zero: this $V$ needs a charge density $\rho=-\varepsilon_0(10y-6)$ to exist — a reminder that not every polynomial is a vacuum potential.
+
+</details>
+
+### E19 — Work between two points in the field of two charges
+
+$+3\ \mu$C is at the origin and $-2\ \mu$C at $(0.40,0)$ m. A charge of $1.0$ nC is carried from $A=(0.20,0)$ to $B=(0.20,0.30)$. Find the work done by the external agent.
+
+<details><summary>Solution</summary>
+
+$V_A=k\left[\dfrac{3}{0.2}-\dfrac{2}{0.2}\right]\times10^{-6}=(8.99\times10^9)(5\times10^{-6})=4.49\times10^{4}$ V. Both charges are $\sqrt{0.2^2+0.3^2}=0.361$ m from $B$: $V_B=k(3-2)\times10^{-6}/0.361=2.49\times10^{4}$ V. $W_{\text{ext}}=q(V_B-V_A)=(10^{-9})(-2.00\times10^4)=-2.0\times10^{-5}$ J: the field does $+20\ \mu$J; the agent receives it.
+
+> [!success] Check
+> The path is irrelevant — straight, curved, via infinity ✓. Sign sense: the positive test charge moves from a place dominated by the nearer, larger positive charge to one farther from both; the potential falls, and a positive charge going downhill is pushed by the field ✓.
+
+</details>
+
+### E20 — An alpha particle and a gold nucleus
+
+An alpha particle ($q=2e$, $m=6.64\times10^{-27}$ kg) is accelerated from rest through $2.0$ MV. Find its speed, and the distance of closest approach in a head-on collision with a gold nucleus ($Z=79$), treated as fixed. Compare with the nuclear radius ($\approx7$ fm).
+
+<details><summary>Solution</summary>
+
+$K=qV=4.0$ MeV $=6.4\times10^{-13}$ J; $v=\sqrt{2K/m}=1.39\times10^{7}$ m s$^{-1}$ ($0.046c$). At closest approach all kinetic energy is potential: $k(2e)(79e)/r_{\min}=K$, so $r_{\min}=158\,ke^2/K=158\times1.44\text{ MeV fm}/4.0\text{ MeV}=57$ fm — eight nuclear radii away. The alpha never touches the nucleus; Rutherford's scattering law holds, and it is the *deviation* from it at higher energies (above $\sim25$ MeV for gold, §3.37) that first revealed the nuclear size.
+
+> [!success] Check
+> Units: MeV fm / MeV $=$ fm ✓. Doubling the voltage halves $r_{\min}$ ✓. The recoil correction: gold is $49$ times heavier, so the reduced-mass correction is $2\%$ — within the precision quoted.
+
+</details>
 
 ## Part 6 · Archetypes and practice
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the archetype table (the mandatory shapes of plan.md PARTs 13–15, at least 30 rows across the three: triangle/square forces, ring/disc/rod axis fields, arc centres, conductor surfaces, dipole field/torque/work, equilibrium positions, maximum-field positions, hanging charged balls, electrons in fields, parallel sheets, ring-with-centre-charge stability, shell fields at three radii, solid-sphere interiors, cylinders, sheets, cube fluxes, cavities with charges, slabs, coaxial cables, zero-field points, sphere-with-cavity, zero-flux surfaces, potentials of configurations, $V$ from $\mathbf E$ and $\mathbf E$ from $V$, axis potentials, three-charge energies, work between points, shells with inner charges, connected spheres, equipotential spacing, acceleration through $V$, assembling a sphere, dipole potential at an angle), then the practice questions Q1–Q50 with collapsible solutions, each archetype worked once and varied once.
+The recurring shapes of the three Cengage chapters and the papers built on them. Each appears below once as a worked question and once as a variation with the numbers or the sign changed, because recognising the shape is half the mark and the variation is the other half.
+
+| archetype | the move | the trap |
+|---|---|---|
+| force on one charge of a triangle / square | pairwise magnitudes, then vector sum with the signs deciding directions | adding magnitudes; "deciding by eye" with mixed signs |
+| field on the axis of a ring / disc / rod | ledger row, or $V$ then $-dV/dx$ | using the far-field form at $x\sim R$ |
+| field at the centre of a ring / arc | $2k\lambda\sin(\theta_0/2)/R$; full ring $0$ | forgetting the direction (away from the arc's midpoint) |
+| field just outside a conductor | $\sigma/\varepsilon_0$, local $\sigma$ | $\sigma/2\varepsilon_0$ |
+| dipole field and torque | $2kp/r^3$, $kp/r^3$, $pE\sin\theta$ | $r\lesssim5d$ |
+| work to rotate a dipole | $pE(\cos\theta_1-\cos\theta_2)$ | $U$'s zero taken at $\theta=0$ |
+| equilibrium position of a third charge | (3.17); opposite sign, smaller, nearer the smaller | "midpoint" |
+| maximum-field positions | differentiate; ring and two-charge bisector share $R/\sqrt2$ | reporting $E$ at $x=R$ |
+| charged ball hanging on a string | $\tan\theta=F/mg$; $T=mg/\cos\theta$ | using $\ell$ where the separation $2\ell\sin\theta$ belongs |
+| electron in a uniform field | projectile with $a=qE/m$; $y=EL^2/4V_{\text{acc}}$ | including gravity; forgetting $D+L/2$ |
+| two parallel sheets | superpose $\sigma/2\varepsilon_0$ each; conductors: four faces | $\sigma/\varepsilon_0$ everywhere |
+| ring with a charge at its centre | $F=0$; axial $\omega^2=k\lvert qQ\rvert/mR^3$ if $qQ<0$ | calling it stable |
+| shell at three radii | $0$, $kQ/R^2$, $kQ/r^2$ | a linear interior |
+| inside a solid sphere | $kQr/R^3$; $\rho\propto r^n\Rightarrow E\propto r^{n+1}$ | $kQ/r^2$ inside |
+| long cylinder inside / outside | $\rho r/2\varepsilon_0$; $\lambda/2\pi\varepsilon_0r$ | using $4\pi r^2$ |
+| flux fractions of a cube | $\tfrac16,\tfrac1{24},\tfrac1{16}$; adjacent faces $0$ | dividing by the number of faces regardless |
+| charge inside a conducting shell | $-q$ inside, $+q+Q$ outside; outside field of the total | "no effect outside" |
+| slab field profile | $\rho x/\varepsilon_0$ inside, $\rho d/2\varepsilon_0$ outside | a jump at the surface |
+| coaxial cable at the inner surface | $2k\lambda/a$ — the maximum | evaluating at the outer radius |
+| where the field is zero between / outside two charges | between for like, outside for unlike | between for unlike |
+| sphere with a cavity | add a negative sphere; $\rho\mathbf a/3\varepsilon_0$ | Gauss on the hollowed shape |
+| which surfaces have zero flux | enclosed charge zero; outside charges irrelevant | counting outside charges |
+| potential of a configuration | scalar sum with signs | components |
+| $V$ from $\mathbf E$ along a path | $-\int\mathbf E\cdot d\mathbf l$ | the sign |
+| $\mathbf E$ from $V(x,y)$ | $-\nabla V$, component by component | dropping the minus |
+| potential of ring / disc / rod on the axis | (3.34), (3.35), the log | using the field's formula |
+| energy of three charges | three pair terms | six terms, or the half misapplied |
+| work between two points | $q(V_B-V_A)$ | path dependence |
+| shell with a charge inside: potentials | sum of shell potentials at each radius | forgetting the induced $-q$ |
+| two spheres connected | $Q\propto R$, $\sigma\propto1/R$, loss $\propto(V_1-V_2)^2$ | equal charges |
+| field from equipotential spacing | $\Delta V/\Delta l$, downhill | uphill |
+| acceleration through $V$ | $\tfrac12mv^2=qV$ | relativity above $\sim50$ kV for electrons |
+| assembling a sphere | $3kQ^2/5R$ (solid), $kQ^2/2R$ (shell) | $QV$ |
+| dipole potential at an angle | $kp\cos\theta/r^2$, then (3.40) | $kp/r^2$ everywhere |
+
+#### Q1. Three charges of $+3\ \mu$C sit at the corners of an equilateral triangle of side $20$ cm. Find the force on any one.
+
+<details><summary>Solution</summary>
+
+Each pair: $kq^2/a^2=(8.99\times10^9)(9\times10^{-12})/0.04=2.02$ N; two such at $60^\circ$ give $2.02\sqrt3=3.50$ N, directed away from the centroid.
+
+</details>
+
+#### Q2. Replace one of the three charges in Q1 by $-3\ \mu$C. Find the force on one of the remaining positive charges.
+
+<details><summary>Solution</summary>
+
+$2.02$ N repulsion along one edge and $2.02$ N attraction along the other, at $120^\circ$: resultant $2.02$ N, directed at $60^\circ$ to the base, pointing to the far side of the negative charge. Halved in size, turned by $90^\circ$.
+
+</details>
+
+#### Q3. A ring of radius $10$ cm carries $50$ nC. Find the axial field $10$ cm from the centre.
+
+<details><summary>Solution</summary>
+
+$E=kQx/(x^2+R^2)^{3/2}=(8.99\times10^9)(5\times10^{-8})(0.1)/(0.02)^{3/2}=45/2.83\times10^{-3}=1.59\times10^{4}$ V m$^{-1}$.
+
+</details>
+
+#### Q4. A disc of radius $10$ cm carries $\sigma=1.0\ \mu$C m$^{-2}$. Find the axial field $10$ cm from its centre, and the field very close to its centre.
+
+<details><summary>Solution</summary>
+
+$\sigma/2\varepsilon_0=5.65\times10^{4}$ V m$^{-1}$; at $x=R$, multiply by $1-1/\sqrt2=0.293$: $1.65\times10^{4}$ V m$^{-1}$. Very close: $5.65\times10^4$ V m$^{-1}$, the sheet value.
+
+</details>
+
+#### Q5. A semicircular wire of radius $5.0$ cm carries $10$ nC uniformly. Find the field at its centre.
+
+<details><summary>Solution</summary>
+
+$E=2k\lambda/R=2kQ/\pi R^2=2(8.99\times10^9)(10^{-8})/(\pi\times2.5\times10^{-3})=2.29\times10^{4}$ V m$^{-1}$, along the symmetry axis away from the wire.
+
+</details>
+
+#### Q6. The wire of Q5 is cut to a quarter circle with the same $\lambda$. Find the field at the centre.
+
+<details><summary>Solution</summary>
+
+$\lambda=Q/\pi R=6.37\times10^{-8}$ C m$^{-1}$; $E=2k\lambda\sin45^\circ/R=\sqrt2k\lambda/R=1.62\times10^{4}$ V m$^{-1}$ along the bisector of the quadrant — $\sin45^\circ/\sin90^\circ=0.707$ of the semicircle's value.
+
+</details>
+
+#### Q7. A metal sphere of radius $2.0$ cm carries $5.0$ nC. Find the field just outside it, by two routes.
+
+<details><summary>Solution</summary>
+
+$kQ/R^2=(8.99\times10^9)(5\times10^{-9})/(4\times10^{-4})=1.12\times10^{5}$ V m$^{-1}$; or $\sigma=Q/4\pi R^2=9.95\times10^{-7}$ C m$^{-2}$ and $\sigma/\varepsilon_0=1.12\times10^5$ ✓.
+
+</details>
+
+#### Q8. At a place on an irregular conductor the surface density is $2.0\ \mu$C m$^{-2}$. Find the field just outside there, and the field a thin insulating sheet of the same $\sigma$ would produce.
+
+<details><summary>Solution</summary>
+
+Conductor: $\sigma/\varepsilon_0=2.26\times10^{5}$ V m$^{-1}$. Sheet: $\sigma/2\varepsilon_0=1.13\times10^{5}$ V m$^{-1}$. The conductor's other charges supply the second half.
+
+</details>
+
+#### Q9. A dipole has $p=1.6\times10^{-29}$ C m. Find its field $2.0$ nm away on its axis.
+
+<details><summary>Solution</summary>
+
+$2kp/r^3=2(8.99\times10^9)(1.6\times10^{-29})/(8\times10^{-27})=3.6\times10^{7}$ V m$^{-1}$, along $\mathbf p$.
+
+</details>
+
+#### Q10. The dipole of Q9 is in a field of $1.0\times10^{4}$ V m$^{-1}$. Find the maximum torque and the work to turn it from alignment to $90^\circ$.
+
+<details><summary>Solution</summary>
+
+$\tau_{\max}=pE=1.6\times10^{-25}$ N m; $W=pE(\cos0-\cos90^\circ)=1.6\times10^{-25}$ J.
+
+</details>
+
+#### Q11. Charges $\pm5$ nC are $2.0$ cm apart in a uniform field of $2.0\times10^{4}$ V m$^{-1}$. Find the work to turn the dipole from aligned to anti-aligned.
+
+<details><summary>Solution</summary>
+
+$p=qd=1.0\times10^{-10}$ C m; $W=2pE=4.0\times10^{-6}$ J.
+
+</details>
+
+#### Q12. For the dipole of Q11, find the work to turn it from $60^\circ$ to $120^\circ$, and the torque at $90^\circ$.
+
+<details><summary>Solution</summary>
+
+$W=pE(\cos60^\circ-\cos120^\circ)=pE=2.0\times10^{-6}$ J; $\tau=pE\sin90^\circ=2.0\times10^{-6}$ N m.
+
+</details>
+
+#### Q13. $+9\ \mu$C is at $x=0$ and $+4\ \mu$C at $x=50$ cm. Where is the field zero?
+
+<details><summary>Solution</summary>
+
+$x=L\sqrt{q_1}/(\sqrt{q_1}+\sqrt{q_2})=50\times3/5=30$ cm from the $9\ \mu$C charge (check: $9/0.3^2=100=4/0.2^2$ ✓).
+
+</details>
+
+#### Q14. $+4\ \mu$C is at $x=0$ and $-1\ \mu$C at $x=30$ cm. Where is the field zero?
+
+<details><summary>Solution</summary>
+
+Outside, beyond the smaller charge: at $x$, $4/x^2=1/(x-0.3)^2\Rightarrow x-0.3=x/2\Rightarrow x=60$ cm. Between them the fields add and never cancel.
+
+</details>
+
+#### Q15. A ring of radius $6.0$ cm carries $30$ nC. Where on the axis is the field largest, and how large is it?
+
+<details><summary>Solution</summary>
+
+$x=R/\sqrt2=4.2$ cm; $E_{\max}=\dfrac{2}{3\sqrt3}\dfrac{kQ}{R^2}=0.385\times7.49\times10^4=2.9\times10^{4}$ V m$^{-1}$.
+
+</details>
+
+#### Q16. Two charges of $10$ nC sit at $x=\pm5.0$ cm. Where on the $y$-axis is the field largest, and how large?
+
+<details><summary>Solution</summary>
+
+$E_y=2kqy/(y^2+a^2)^{3/2}$ — the ring's formula with $Q\to2q$ — maximum at $y=a/\sqrt2=3.5$ cm, $E=\dfrac{4kq}{3\sqrt3a^2}=2.8\times10^{4}$ V m$^{-1}$.
+
+</details>
+
+#### Q17. A $2.0$ g ball carrying $0.50\ \mu$C hangs on a thread in a horizontal field of $2.0\times10^{4}$ V m$^{-1}$. Find the angle of the thread and its tension.
+
+<details><summary>Solution</summary>
+
+$\tan\theta=qE/mg=0.01/0.0196=0.51$, $\theta=27^\circ$; $T=mg/\cos\theta=0.0196/0.891=2.2\times10^{-2}$ N.
+
+</details>
+
+#### Q18. Two $2.0$ g balls with equal charges hang from one point on $80$ cm threads and settle with each thread at $8.0^\circ$ to the vertical. Find the charge.
+
+<details><summary>Solution</summary>
+
+$r=2\ell\sin8^\circ=0.223$ m; $F=mg\tan8^\circ=2.75\times10^{-3}$ N; $q=\sqrt{Fr^2/k}=1.2\times10^{-7}$ C.
+
+</details>
+
+#### Q19. An electron moving at $3.0\times10^{6}$ m s$^{-1}$ enters a region where a uniform field of $1.0\times10^{4}$ V m$^{-1}$ opposes its motion. How far does it go, and how long does it take to stop?
+
+<details><summary>Solution</summary>
+
+$a=eE/m=1.76\times10^{15}$ m s$^{-2}$; $s=v^2/2a=2.6$ mm; $t=v/a=1.7$ ns. Then it comes back out with the same speed.
+
+</details>
+
+#### Q20. A proton accelerated through $500$ V enters a transverse field of $2.0\times10^{4}$ V m$^{-1}$ that extends $2.0$ cm. Find the deflection and the exit angle.
+
+<details><summary>Solution</summary>
+
+$y=EL^2/4V_{\text{acc}}=(2\times10^4)(4\times10^{-4})/2000=4.0$ mm; $\tan\theta=EL/2V_{\text{acc}}=0.40$. ($v_0=3.1\times10^5$ m s$^{-1}$ is never needed.)
+
+</details>
+
+#### Q21. Two large parallel sheets carry $+3.0$ and $-3.0\ \mu$C m$^{-2}$. Find the field between and outside.
+
+<details><summary>Solution</summary>
+
+Between: $\sigma/\varepsilon_0=3.4\times10^{5}$ V m$^{-1}$, from $+$ to $-$. Outside: $0$.
+
+</details>
+
+#### Q22. The sheets carry $+2.0$ and $+6.0\ \mu$C m$^{-2}$. Find the fields.
+
+<details><summary>Solution</summary>
+
+Between: $(6-2)/2\varepsilon_0=2.3\times10^{5}$ V m$^{-1}$, pointing from the $6$ towards the $2$. Outside: $(6+2)/2\varepsilon_0=4.5\times10^{5}$ V m$^{-1}$, away from the pair on both sides.
+
+</details>
+
+#### Q23. A ring ($40$ nC, radius $8.0$ cm) has a $-2.0$ nC, $5.0$ mg particle at its centre. Find the force on it and the period of small axial oscillations.
+
+<details><summary>Solution</summary>
+
+Force $0$ by symmetry. $\omega^2=k\lvert qQ\rvert/mR^3=(8.99\times10^9)(8\times10^{-17})/(5\times10^{-6}\times5.12\times10^{-4})=281$ s$^{-2}$, $\omega=16.8$ rad s$^{-1}$, $T=0.37$ s.
+
+</details>
+
+#### Q24. The particle in Q23 is made $+2.0$ nC. Describe the equilibrium and give the frequency of small oscillations in the plane of the ring.
+
+<details><summary>Solution</summary>
+
+Now unstable along the axis, stable in the plane (OL1: the in-plane curvature is half the axial one with the sign reversed): $\omega_\rho=\omega/\sqrt2=11.9$ rad s$^{-1}$; along the axis it departs with the same rate constant $16.8$ s$^{-1}$.
+
+</details>
+
+#### Q25. A thin shell of radius $10$ cm carries $8.0$ nC. Find $E$ at $r=5$, $10^+$ and $20$ cm.
+
+<details><summary>Solution</summary>
+
+$0$; $kQ/R^2=7.2\times10^{3}$ V m$^{-1}$; $1.8\times10^{3}$ V m$^{-1}$.
+
+</details>
+
+#### Q26. A solid insulating sphere of the same radius and charge as in Q25. Find $E$ at the same three radii.
+
+<details><summary>Solution</summary>
+
+$kQr/R^3=3.6\times10^{3}$ V m$^{-1}$ at $5$ cm; $7.2\times10^3$ at the surface; $1.8\times10^3$ at $20$ cm — only the interior changes.
+
+</details>
+
+#### Q27. A sphere of radius $R$ has $\rho=\rho_0r/R$. Find the total charge and the field inside.
+
+<details><summary>Solution</summary>
+
+$Q=\int_0^R\rho_0(r/R)4\pi r^2dr=\pi\rho_0R^3$. $q_{\text{enc}}(r)=\pi\rho_0r^4/R$, so $E=\rho_0r^2/4\varepsilon_0R$ — quadratic, reaching $\rho_0R/4\varepsilon_0=kQ/R^2$ at the surface ✓.
+
+</details>
+
+#### Q28. For a uniformly charged solid sphere, at what radii is the field half its surface value?
+
+<details><summary>Solution</summary>
+
+Inside, $E\propto r$: $r=R/2$. Outside, $E\propto1/r^2$: $r=\sqrt2R$.
+
+</details>
+
+#### Q29. A long straight wire of radius $2.0$ mm carries $5.0$ nC m$^{-1}$. Find the field at $1.0$ cm from its axis and at its surface.
+
+<details><summary>Solution</summary>
+
+$E=2k\lambda/r$: $9.0\times10^{3}$ V m$^{-1}$ at $1$ cm; $4.5\times10^{4}$ V m$^{-1}$ at the surface.
+
+</details>
+
+#### Q30. A long insulating cylinder of radius $2.0$ cm has uniform $\rho=5.0\ \mu$C m$^{-3}$. Find $E$ at $r=1.0$ cm and $r=4.0$ cm.
+
+<details><summary>Solution</summary>
+
+Inside: $\rho r/2\varepsilon_0=2.8\times10^{3}$ V m$^{-1}$. Outside: $\rho a^2/2\varepsilon_0r=2.8\times10^{3}$ V m$^{-1}$ — equal, because $a^2/r_{\text{out}}=r_{\text{in}}$ here.
+
+</details>
+
+#### Q31. A $2.0\ \mu$C charge is at the centre of a cube. Find the flux through one face.
+
+<details><summary>Solution</summary>
+
+$q/6\varepsilon_0=3.8\times10^{4}$ V m.
+
+</details>
+
+#### Q32. The charge of Q31 is moved to the midpoint of an edge. Find the flux through each face.
+
+<details><summary>Solution</summary>
+
+The two faces containing the edge: $0$. The other four: $q/16\varepsilon_0=1.4\times10^{4}$ V m each. Total $q/4\varepsilon_0$: four cubes share the charge.
+
+</details>
+
+#### Q33. A neutral conducting shell (inner radius $4.0$ cm, outer $6.0$ cm) has $2.0$ nC at its centre. Find the surface charge densities.
+
+<details><summary>Solution</summary>
+
+Inner: $-2$ nC over $4\pi(0.04)^2$: $\sigma_{\text{in}}=-9.9\times10^{-8}$ C m$^{-2}$. Outer: $+2$ nC over $4\pi(0.06)^2$: $\sigma_{\text{out}}=+4.4\times10^{-8}$ C m$^{-2}$.
+
+</details>
+
+#### Q34. The charge in Q33 is moved off-centre inside the cavity. What changes?
+
+<details><summary>Solution</summary>
+
+The inner density becomes non-uniform (denser near the charge) but still totals $-2$ nC; the outer density stays uniform at $4.4\times10^{-8}$ C m$^{-2}$, and the field outside is unchanged.
+
+</details>
+
+#### Q35. A slab $4.0$ cm thick has uniform $\rho=2.0\ \mu$C m$^{-3}$. Find $E$ at $1.0$ cm from the mid-plane and outside the slab.
+
+<details><summary>Solution</summary>
+
+Inside: $\rho x/\varepsilon_0=2.3\times10^{3}$ V m$^{-1}$. Outside: $\rho d/2\varepsilon_0=4.5\times10^{3}$ V m$^{-1}$.
+
+</details>
+
+#### Q36. For the slab of Q35, find the potential difference between the mid-plane and a surface.
+
+<details><summary>Solution</summary>
+
+$\Delta V=\int_0^{d/2}\rho x\,dx/\varepsilon_0=\rho d^2/8\varepsilon_0=45$ V, the mid-plane being higher.
+
+</details>
+
+#### Q37. A coaxial cable's inner conductor has radius $0.50$ mm and carries $10$ nC m$^{-1}$. Find the field at its surface.
+
+<details><summary>Solution</summary>
+
+$2k\lambda/a=2(8.99\times10^9)(10^{-8})/(5\times10^{-4})=3.6\times10^{5}$ V m$^{-1}$.
+
+</details>
+
+#### Q38. What line charge would bring the inner conductor of Q37 to air's breakdown field, $3.0\times10^{6}$ V m$^{-1}$, and what is then the voltage to an outer conductor of radius $5.0$ mm?
+
+<details><summary>Solution</summary>
+
+$\lambda=E_ba/2k=8.3\times10^{-8}$ C m$^{-1}$; $V=2k\lambda\ln10=3.5$ kV.
+
+</details>
+
+#### Q39. Charges $+2,+2,+2,-2\ \mu$C sit at the corners of a square of side $20$ cm. Find the potential at the centre.
+
+<details><summary>Solution</summary>
+
+All at $a/\sqrt2=0.141$ m: $V=k(2+2+2-2)\times10^{-6}/0.141=2.5\times10^{5}$ V.
+
+</details>
+
+#### Q40. In a uniform field of $500$ V m$^{-1}$ along $+x$, find $V(3,4)-V(0,0)$ (coordinates in metres).
+
+<details><summary>Solution</summary>
+
+$-E\,\Delta x=-500\times3=-1500$ V; the $y$-displacement does nothing.
+
+</details>
+
+#### Q41. $V=3x^2-2y$ (SI). Find $\mathbf E$ at $(1,1)$.
+
+<details><summary>Solution</summary>
+
+$\mathbf E=(-6x,\ 2)=(-6,\ 2)$ V m$^{-1}$.
+
+</details>
+
+#### Q42. $V=100/r$ (volts, metres). Find the field at $r=2.0$ m and identify the source.
+
+<details><summary>Solution</summary>
+
+$E_r=-dV/dr=100/r^2=25$ V m$^{-1}$ outward; a point charge $q=100/k=1.1\times10^{-8}$ C at the origin.
+
+</details>
+
+#### Q43. A ring of radius $6.0$ cm carries $30$ nC. Find the potential $8.0$ cm along its axis.
+
+<details><summary>Solution</summary>
+
+$V=kQ/\sqrt{R^2+x^2}=270/0.10=2.7\times10^{3}$ V.
+
+</details>
+
+#### Q44. A disc of radius $5.0$ cm carries $2.0\ \mu$C m$^{-2}$. Find the potential at its centre and at $x=5.0$ cm on the axis.
+
+<details><summary>Solution</summary>
+
+Centre: $\sigma R/2\varepsilon_0=5.6\times10^{3}$ V. At $x=R$: $(\sigma/2\varepsilon_0)(\sqrt2-1)R=2.3\times10^{3}$ V.
+
+</details>
+
+#### Q45. Charges $1,2,3\ \mu$C sit at the corners of an equilateral triangle of side $10$ cm. Find the system's energy.
+
+<details><summary>Solution</summary>
+
+$U=k(1\cdot2+2\cdot3+1\cdot3)\times10^{-12}/0.1=k(11\times10^{-11})=0.99$ J.
+
+</details>
+
+#### Q46. Make the $3\ \mu$C charge in Q45 negative. Find the energy and interpret its sign.
+
+<details><summary>Solution</summary>
+
+$U=k(2-6-3)\times10^{-11}=-0.63$ J: bound; $0.63$ J must be supplied to separate the three completely.
+
+</details>
+
+#### Q47. A $5.0$ nC charge is moved from $20$ cm to $10$ cm from a fixed $4.0\ \mu$C charge. Find the external work.
+
+<details><summary>Solution</summary>
+
+$W=qkQ(1/0.1-1/0.2)=(5\times10^{-9})(8.99\times10^9)(4\times10^{-6})(5)=9.0\times10^{-4}$ J.
+
+</details>
+
+#### Q48. The charge of Q47 is then carried a quarter of the way round a circle of radius $10$ cm about the fixed charge. Find the work.
+
+<details><summary>Solution</summary>
+
+Zero: the path lies on an equipotential.
+
+</details>
+
+#### Q49. A neutral conducting shell (radii $5$ and $10$ cm) has $4.0$ nC at its centre. Find the potential at $r=2.0$ cm and the shell's potential.
+
+<details><summary>Solution</summary>
+
+$V(2\text{ cm})=kq\left[\tfrac1{0.02}-\tfrac1{0.05}+\tfrac1{0.10}\right]=36\times40=1.4\times10^{3}$ V; shell: $kq/0.10=360$ V.
+
+</details>
+
+#### Q50. The shell of Q49 is earthed. Find the potential at $r=2.0$ cm.
+
+<details><summary>Solution</summary>
+
+The outer $+4$ nC leaves: $V=kq(1/0.02-1/0.05)=36\times30=1.1\times10^{3}$ V — the old value minus the shell's $360$ V.
+
+</details>
+
+#### Q51. A sphere of radius $2.0$ cm at $3000$ V is connected by a long wire to a neutral sphere of radius $6.0$ cm. Find the final potential.
+
+<details><summary>Solution</summary>
+
+$Q=VR/k=6.7\times10^{-9}$ C; $V_f=kQ/(R_1+R_2)=750$ V; the charges become $1.7$ and $5.0$ nC.
+
+</details>
+
+#### Q52. For Q51, find the energy before and after, and the fraction lost.
+
+<details><summary>Solution</summary>
+
+$U_i=\tfrac12QV_1=1.0\times10^{-5}$ J; $U_f=\tfrac12QV_f=2.5\times10^{-6}$ J; lost $75\%=R_2/(R_1+R_2)$.
+
+</details>
+
+#### Q53. Equipotentials $5.0$ V apart are $0.50$ mm apart near a point. Find the field there.
+
+<details><summary>Solution</summary>
+
+$E\approx\Delta V/\Delta l=5/(5\times10^{-4})=1.0\times10^{4}$ V m$^{-1}$, pointing from the higher contour to the lower.
+
+</details>
+
+#### Q54. Find the speeds of an electron and a proton after acceleration from rest through $200$ V.
+
+<details><summary>Solution</summary>
+
+$v=\sqrt{2qV/m}$: electron $8.4\times10^{6}$ m s$^{-1}$; proton $2.0\times10^{5}$ m s$^{-1}$ (ratio $\sqrt{1836}=43$).
+
+</details>
+
+#### Q55. Find the energy needed to assemble a uniformly charged sphere of $2.0\ \mu$C and radius $5.0$ cm.
+
+<details><summary>Solution</summary>
+
+$U=3kQ^2/5R=0.6(8.99\times10^9)(4\times10^{-12})/0.05=0.43$ J (a shell of the same charge: $0.36$ J).
+
+</details>
+
+#### Q56. A dipole $p=1.0\times10^{-10}$ C m. Find $V$ and $E$ at $10$ cm, $60^\circ$ from its axis.
+
+<details><summary>Solution</summary>
+
+$V=kp\cos\theta/r^2=(8.99\times10^9)(10^{-10})(0.5)/0.01=45$ V; $E=(kp/r^3)\sqrt{1+3\cos^2\theta}=899\sqrt{1.75}=1.2\times10^{3}$ V m$^{-1}$, at $\alpha=\arctan(\tfrac12\tan60^\circ)=41^\circ$ to the radial line.
+
+</details>
 
 ## Part 7 · Toolkit
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: superposition with negative charge (the cavity trick, the missing arc), symmetry that kills components before you integrate, Gauss versus integration versus potential as a decision, the "differentiate $V$" shortcut, energy methods for forces ($F=-dU/dx$ at fixed charge), the four-face rule for parallel plates, the solid-angle table for fluxes, dimensional and limit checks as error detectors, and the scaling laws ($1/r^2$, $1/r^3$, $1/r^4$) as sanity checks — each with a worked demonstration and its failure case.
+Methods that turn a six-minute problem into ninety seconds — each with the demonstration and the case where it fails.
+
+**T1 · Superposition with negative charge.** Any shape with a piece missing is the whole shape plus the piece with its sign reversed. *Demonstration:* a ring of radius $R$ and density $\lambda$ has a small gap of arc length $\ell\ll R$; the field at the centre is that of the full ring (zero) minus that of the missing piece, a point charge $\lambda\ell$ at distance $R$: $E=k\lambda\ell/R^2$, pointing *towards* the gap. The sphere with a cavity (§3.18, E12) is the same move in three dimensions. *Fails when* the missing piece is not small compared with the distances involved and you still treat it as a point — then integrate the piece (the arc formula) before subtracting.
+
+**T2 · Kill components before you integrate.** Name the partner element that cancels the transverse component; if you can, integrate one component; if you cannot, you have no symmetry axis and must integrate two (or use $V$). *Demonstration:* the semicircle's field at the centre is $\int(k\lambda/R)\cos\varphi\,d\varphi$ over $\pm90^\circ$ — one integral, $2k\lambda/R$ — instead of two. *Fails when* the point is off the symmetry line: a point above one end of a rod has both $E_\perp$ and $E_\parallel$, and (3.6) with $\beta=0$ is the honest answer.
+
+**T3 · Gauss, integrate, or differentiate $V$?** Three symmetries → Gauss (one line). A symmetry *axis* through the point → $V$ on the axis, then $-dV/dx$ (one scalar integral, one derivative). Otherwise → element-and-symmetry. *Demonstration:* the disc's axial field, three ways: Gauss cannot (no symmetry); the direct integral needs the $\cos\alpha$ factor; $V=(\sigma/2\varepsilon_0)(\sqrt{R^2+x^2}-x)$ differentiates in one line. *Fails when* you need $\mathbf E$ off the axis from an axial $V(x)$ — the derivative along the axis says nothing about the transverse components elsewhere.
+
+**T4 · Energy methods for forces.** At fixed charges, $F_x=-dU/dx$. *Demonstration:* two spheres of the same charge $Q$ and radius $R$ at large separation $r$: $U=kQ^2/r$ plus constants, $F=kQ^2/r^2$ — trivial here, but the same move gives the force between the hemispheres of a shell (OL3), the pressure on a conductor, and the plate attraction in the capacitors note without integrating any field. *Fails when* something other than position changes with $x$ — a conductor held at fixed *potential* by a battery exchanges energy with the battery, and $F=-dU/dx$ needs the battery's work included (the capacitors note's $+dU/dx$ at fixed $V$).
+
+**T5 · The four-face rule.** For two large parallel conducting plates, outer faces share $\tfrac12(Q_1+Q_2)$ each; inner faces carry $\pm\tfrac12(Q_1-Q_2)$. *Demonstration:* E4 in one line. Extends to $n$ plates: the two outermost faces carry half the total each; every inner pair carries equal and opposite charges fixed by "zero field inside each plate". *Fails when* the plates are not large compared with their separation (edge fields) or not parallel.
+
+**T6 · Solid angle for fluxes.** A charge at a symmetric point shares $q/\varepsilon_0$ equally among equivalent faces; where symmetry stops, $\Phi=q\Omega/4\pi\varepsilon_0$ with $\Omega$ from the rectangle formula $4\arcsin\!\bigl[ab/\sqrt{(a^2+4d^2)(b^2+4d^2)}\bigr]$ or the cone $2\pi(1-\cos\theta)$. *Demonstration:* the face-centre case of §3.22 ($0.0641$ for the far face). *Fails when* the charge is not a point — for a distribution, integrate the fractions charge by charge, or find the field.
+
+**T7 · Dimensional and limit checks.** Before trusting a result, send one parameter to zero and one to infinity. *Demonstration:* a candidate "ring field" $kQ/(x^2+R^2)$ has the right dimensions but does not vanish at $x=0$ — wrong; $kQx/(x^2+R^2)^{3/2}$ vanishes at the centre and tends to $kQ/x^2$ — right. *Fails when* two candidates share all the limits (the disc's $1-x/\sqrt{x^2+R^2}$ and $R^2/2(x^2+R^2)$ agree at both ends) — then check an intermediate value, $x=R$: $0.293$ against $0.25$.
+
+**T8 · Scaling as arithmetic.** Charge–charge $1/r^2$, charge–dipole $1/r^3$, dipole–dipole $1/r^4$; potentials one power slower. *Demonstration:* "the force between two dipoles at $1$ cm is $F$; at $2$ cm it is $F/16$" — no formula needed. In the same spirit, $E\propto\rho r^{n+1}$ inside $\rho\propto r^n$, and the ring's oscillation frequency scales as $R^{-3/2}$. *Fails when* the geometry changes with the distance (near field of an extended body).
+
+**T9 · Read the conductor before computing.** Write the induced charges first (Gauss in the metal gives the inner surface; conservation gives the outer), then treat each surface as a shell. *Demonstration:* E14 in four lines. *Fails when* the conductor is not spherical and you still assume uniform $\sigma$ — only the *total* on each surface is fixed by this method; the distribution needs the boundary-value problem (Part 10's image charge is the one solvable case).
+
+**T10 · The half, and when not to use it.** $\tfrac12\sum q_iV_i$ for a system's mutual energy; $qV_{\text{ext}}$ for a charge in a fixed external field; $\tfrac12QV$ for a conductor; $\tfrac12\varepsilon_0E^2$ per unit volume. *Demonstration:* E16 by $\tfrac12QV$ before and after. *Fails when* the external field is *not* fixed — a charge near a conductor polarises it, and then the energy is $\tfrac12qV_{\text{induced}}$ (OL2's image energy is half the naive two-charge value for exactly this reason).
 
 ## Part 8 · Traps
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the trap list of plan.md PARTs 13–15 in the "tempting answer, one-line reply, paper archetype" format — direction by hand in Coulomb's law, field lines as trajectories, $V=0$ read as $\mathbf E=0$, patch field versus total field at a conductor, $\sigma/\varepsilon_0$ for a sheet, adding magnitudes of non-parallel fields, large test charges, dipole formulas at $r\sim d$, Gauss without symmetry, enclosed-charge bookkeeping through a distribution, cavities and the outside, flux as flow, open Gaussian surfaces, the potential as a vector, the sign in $\Delta V$, the half in the wrong place, non-zero potential of a field-free interior, uniform $\sigma$ on a conductor, forgotten induced charges, mixed references.
+The wrong answer, why it is tempting, the one-line reply, and the paper archetype that lives on it.
+
+1. **Directions by hand in Coulomb's law.** Tempting: magnitudes are easy, directions "obvious". Reply: with mixed signs, write $\mathbf F_{12}=kq_1q_2\hat{\mathbf r}_{12}/r^2$ and let the sign choose. Archetype: E1 — one sign flipped, force halved and turned.
+2. **Field lines as trajectories.** Tempting: the line points where the force points. Reply: force is acceleration, not velocity; only straight lines are paths. Archetype: "sketch the path of a charge projected across a dipole's field" (a curve crossing the lines).
+3. **$V=0$ read as $\mathbf E=0$, and the converse.** Tempting: both are "nothing there". Reply: $V=0$ is a reference choice; $\mathbf E=0$ is a stationary point of $V$. Archetype: the dipole's equatorial plane (P15), the ring's centre, E18.
+4. **Patch field for the conductor's total.** Tempting: "a charged surface gives $\sigma/2\varepsilon_0$". Reply: the rest of the conductor supplies the other half; the total is $\sigma/\varepsilon_0$. Archetype: P3, Q8.
+5. **$\sigma/\varepsilon_0$ for an insulating sheet.** The mirror of trap 4. Reply: a sheet has no "rest" to double it; $\sigma/2\varepsilon_0$ each side. Archetype: Q21 with a plate replaced by a sheet.
+6. **Adding magnitudes of non-parallel fields.** Tempting: fast. Reply: components, always — two equal fields at $60^\circ$ give $\sqrt3E$, not $2E$. Archetype: Q1.
+7. **A test charge that is not small.** Tempting: "a $1$ C test charge for easy numbers". Reply: it would rearrange every conductor in the room; $\mathbf E=\lim\mathbf F/q_0$. Archetype: "why is the test charge required to be small?" (one-line theory question).
+8. **Dipole formulas at $r\sim d$.** Tempting: $2kp/r^3$ is memorable. Reply: it is a far-field limit with error $d^2/2r^2$; at $r=d$ use the exact two-charge sum. Archetype: "find the field at the midpoint of a dipole" — $8kq/d^2$, antiparallel to $\mathbf p$; the far-field axial formula gives neither the value nor the direction there.
+9. **Gauss without symmetry.** Tempting: the law is always true. Reply: true is not useful; if $E$ is not constant and normal on the surface, it cannot leave the integral. Archetype: "use Gauss's law to find the field of a finite rod" (a trick question: it cannot).
+10. **Enclosed-charge bookkeeping.** Tempting: using the total $Q$ inside a sphere. Reply: only the charge *inside* the Gaussian surface counts — $Q(r/R)^3$ for a uniform sphere, the integral for $\rho(r)$. Archetype: Q27, P34.
+11. **The cavity that "has no effect outside".** Reply: the outer surface carries $+q$; only its *position* is hidden. Archetype: C9, Q34, P7.
+12. **Flux as flow, and open surfaces.** Tempting: a charge close outside "pushes lines through". Reply: as many in as out, zero net; and Gauss's law is a statement about *closed* surfaces only. Archetype: "a charge outside a cube: flux through the cube" ($0$), "through one face" (not zero, needs solid angle).
+13. **The potential as a vector.** Reply: scalars add with signs, not directions; $+kq/a$ and $-kq/a$ cancel, $+kq/a$ and $+kq/a$ double. Archetype: Q39, P19.
+14. **The sign in $\Delta V=-\int\mathbf E\cdot d\mathbf l$.** Reply: $V$ falls along $\mathbf E$. Archetype: Q40.
+15. **The half in the wrong place.** Reply: $\tfrac12QV$ for a self-charged conductor, $qV$ for a charge in a fixed field. Archetype: C12, Q47 against Q55.
+16. **A field-free interior "at zero potential".** Reply: constant is not zero; the inside of a charged shell sits at $kQ/R$. Archetype: Q49.
+17. **Uniform $\sigma$ on any conductor.** Reply: only a lone sphere; joined spheres, points and plates near other charges are not uniform. Archetype: E16, C5.
+18. **Mixing "ground $=0$" with "infinity $=0$".** Reply: pick one reference per problem; an earthed shell is at $0$ in *both* only if the Earth is far from everything else. Archetype: E14 after earthing.
 
 ## Part 9 · Playbook
 
-> [!warning] Stage 2 deliverable
-> Written in stage 2: the triage tree ("if the question gives point charges, distributions with symmetry, distributions without, a conductor, a potential map, an energy"), the formula map with validity, the constants of §0.4 as a memorisation card, the paper timing plan and the ten-point pre-submission audit.
+### 9.1 Triage
+
+> [!tip] FIGURE F13.9 · Triage for an electrostatics question
+> *Why:* the first thirty seconds decide whether the question takes two minutes or ten; the tree routes each opening line to its cheapest tool.
+> *Data:* the decision points of Part 4.1 and Part 7 T3, with the exits named by the block that owns them.
+
+```mermaid
+flowchart TD
+  S["Read the question: what is asked, what is given?"] --> A{"a few point charges?"}
+  A -- "yes" --> A1["vector sum for E, scalar sum for V, pairs for U"]
+  A -- "no" --> B{"sphere, long cylinder or large sheet?"}
+  B -- "yes" --> B1["Gauss with the matching surface; write q enclosed carefully"]
+  B -- "no" --> C{"ring, disc, rod, arc with the point on a symmetry line?"}
+  C -- "yes" --> C1["V on the axis then minus dV/dx, or the ledger row"]
+  C -- "no" --> D{"a conductor in the problem?"}
+  D -- "yes" --> D1["E = 0 inside; induced charges first; each surface a shell"]
+  D -- "no" --> E{"energy, work or speed asked?"}
+  E -- "yes" --> E1["W = q delta V; U = sum over pairs; half QV for a conductor"]
+  E -- "no" --> F["element-and-symmetry with two components, or Part 10 methods"]
+  A1 --> Z["check: limit, dimension, sign, magnitude against Part 0 numbers"]
+  B1 --> Z
+  C1 --> Z
+  D1 --> Z
+  E1 --> Z
+  F --> Z
+```
+
+> *Read:* most Section A and B items exit at the first two branches; Section D items visit three or four and end at the conductor or energy branch.
+
+### 9.2 Formula map with validity
+
+| need | formula | remember |
+|---|---|---|
+| force / field of points | $kq_1q_2/r^2$; $kq/r^2$ | vector, sign-carried |
+| ring, disc, rod, arc, sheet | Part 4 ledger rows 3–10 | on-axis only; limits |
+| Gauss | $E\cdot(\text{area})=q_{\text{enc}}/\varepsilon_0$ | $4\pi r^2$, $2\pi rL$, $2A$ or $A$ |
+| conductor | $0$ inside; $\sigma/\varepsilon_0$; one $V$ | induced $-q$ inside a cavity |
+| dipole | $2kp/r^3$, $kp/r^3$, $kp\cos\theta/r^2$; $\mathbf p\times\mathbf E$, $-\mathbf p\cdot\mathbf E$, $p\,dE/dx$ | $r\gg d$ |
+| potential | $kq/r$; $-\int\mathbf E\cdot d\mathbf l$; $-\nabla V$ | reference; sign |
+| energy | pairs; $\tfrac12QV$; $\tfrac12\varepsilon_0E^2$; $qV_{\text{ext}}$ | which half |
+| sharing | $Q\propto R$, $\sigma\propto1/R$; $\Delta U=\tfrac{C_1C_2}{2(C_1+C_2)}\Delta V^2$ | far-apart spheres |
+| motion | $a=qE/m$; $y=EL^2/4V_{\text{acc}}$; $\tfrac12mv^2=qV$ | non-relativistic |
+
+### 9.3 Numbers to carry
+
+$k=8.99\times10^9$ N m$^2$ C$^{-2}$ · $\varepsilon_0=8.85\times10^{-12}$ F m$^{-1}$ · $e=1.60\times10^{-19}$ C · $m_e=9.11\times10^{-31}$ kg · $m_p=1.67\times10^{-27}$ kg · $ke^2=1.44$ eV nm $=1.44$ MeV fm · $e/m_e=1.76\times10^{11}$ C kg$^{-1}$ · $E_{\text{breakdown, air}}=3\times10^6$ V m$^{-1}$ · $k_BT_{300}=0.026$ eV · $a_0=0.0529$ nm · $1/4\pi\varepsilon_0\approx9\times10^9$ for mental arithmetic, then correct by $0.1\%$.
+
+### 9.4 Timing for the paper
+
+Section A ($12\times4$): $2$ min each, $25$ min. Section B ($8\times4$): $3$ min each, $25$ min. Section C ($6\times5$): $5$ min each, $30$ min. Section D ($10\times9$): $9$ min each, $90$ min. Ten minutes in hand for the audit. Do D before C if you are strong on derivations: D's marks are partial, C's are not.
+
+### 9.5 The ten-point audit before you hand in
+
+1. Every force and field has a direction written, decided by signs, not by eye.
+2. Every formula was used inside its "valid when" column (Part 4).
+3. Every Gaussian surface is closed, symmetric, and its $q_{\text{enc}}$ was recomputed.
+4. Conductors: interior zero, surfaces as shells, induced charges written before fields.
+5. Potentials added with signs; $\Delta V$ has its minus sign; the reference is stated once.
+6. Energies: the correct half; pairs counted once; bound states negative.
+7. A limit was checked on every derived result ($x\to0$, $x\to\infty$).
+8. Units are in every substitution; the magnitude is plausible against Part 0's numbers.
+9. Section D answers name their method and end with two checks.
+10. Nothing outside the model: no relativity above $50$ kV for electrons, no dielectric without $\kappa$, no moving sources.
 
 ## Part 10 · Olympiad extension
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: Earnshaw's theorem by the Laplacian and the off-axis instability of the ring's centre by second derivatives; the image charge for a plane (construction, uniqueness argument, force, induced charge, and the potential map); electrostatic pressure $\sigma^2/2\varepsilon_0$ by the force argument and by the energy argument, applied to the charged soap bubble against surface tension; the self-energy of a sphere both ways and the classical electron radius as a warning; the full field map of the sphere with an off-centre cavity and the two overlapping cylinders' uniform field; the field inside a uniformly charged cube by the eight-cubes trick; the exponent test of Coulomb's law inside a cavity; the self-force and why a shell does not push itself; the interatomic field estimate; the charge needed to lift a paper scrap by the gradient force; the precipitator and inkjet estimates; the maximum charge on a sphere before breakdown; the charged-drop Rayleigh limit against surface tension; the energy released when two charged drops merge; the rotating charged ring as a magnetic-moment preview; the ring's off-axis potential as an elliptic integral; the limits-and-failure section (moving charges, radiation, quantum, dielectrics); and OL1–OL12 solved long problems, each with a named method, a numeric answer and two checks.
+Not harder JEE questions: different tools. Three first-principles derivations the school books state without proof (10.1, 10.2, 10.4), order-of-magnitude estimates with the algebra shown (10.6), two measurements reconstructed from the chapter's results (10.7), the places where the model breaks (10.8), and twelve long problems, each solved twice where a second method exists.
+
+### 10.1 Earnshaw's theorem by the Laplacian, and the ring's saddle
+
+In empty space $\nabla\cdot\mathbf E=0$, so $\nabla^2V=\partial_x^2V+\partial_y^2V+\partial_z^2V=0$. A stable equilibrium for a positive charge would be a local *minimum* of $V$, where all three second derivatives are positive — impossible, since they must sum to zero. For a negative charge the same argument forbids a maximum. Every equilibrium point of a static field is a **saddle**: what curves up in one direction curves down in another, and the sum of the curvatures is exactly zero. (Gauss's flux version was §3.16; this is the same statement in derivatives.)
+
+**The ring's centre, quantified.** On the axis, $V=kQ(R^2+x^2)^{-1/2}\approx\dfrac{kQ}{R}\Bigl(1-\dfrac{x^2}{2R^2}\Bigr)$: axial curvature $\partial_x^2V=-kQ/R^3$. By cylindrical symmetry the two transverse curvatures are equal, and Laplace demands $\partial_x^2V+2\partial_\rho^2V=0$, so $\partial_\rho^2V=+kQ/2R^3$ and, near the centre,
+
+$$
+V(x,\rho)\approx\frac{kQ}{R}\left(1-\frac{x^2}{2R^2}+\frac{\rho^2}{4R^2}\right). \qquad (10.1)
+$$
+
+For a charge $q<0$ at the centre, $U=qV$ is a minimum along the axis (frequency $\omega_x^2=k\lvert q\rvert Q/mR^3$, the §3.4 result) and a maximum in the plane: the radial displacement grows as $e^{t/\tau}$ with $1/\tau^2=k\lvert q\rvert Q/2mR^3$, i.e. $\tau=\sqrt2/\omega_x$. The transverse *curvature* is half the axial one with the opposite sign — Laplace's exact bookkeeping. No static arrangement can fix this: the only ways to hold a charge are dynamic (the Paul trap's oscillating saddle), diamagnetic (energy $\propto+B^2$, which Earnshaw does not cover) or active feedback.
+
+> [!tip] FIGURE F13.10 · A ring's potential along its axis and across its plane
+> *Why:* the two curves are the saddle of (10.1) made visible — one bends down, the other up, from the same centre value.
+> *Data:* $V/(kQ/R)$ against distance from the centre in units of $R$, $0$ to $0.9$ in steps of $0.1$: along the axis $1/\sqrt{1+x^2}$; in the plane the exact ring potential $(2/\pi)K(m)/(1+\rho)$ with $m=4\rho/(1+\rho)^2$ and $K$ the complete elliptic integral of the first kind, evaluated by the arithmetic–geometric mean.
+
+```mermaid
+xychart-beta
+  title "ring potential near the centre: in-plane (upper) and axial (lower), units kQ/R"
+  x-axis 0 --> 0.9
+  y-axis 0.7 --> 1.5
+  line [1.0, 1.003, 1.01, 1.024, 1.044, 1.073, 1.115, 1.175, 1.27, 1.452]
+  line [1.0, 0.995, 0.981, 0.958, 0.928, 0.894, 0.857, 0.819, 0.781, 0.743]
+```
+
+> *Read:* near the centre the in-plane curve rises half as fast as the axial one falls — $+\rho^2/4R^2$ against $-x^2/2R^2$; towards the ring the in-plane potential diverges logarithmically (§10.5).
+
+### 10.2 The image charge: the one boundary-value problem worth owning
+
+A point charge $q$ at height $h$ above an infinite earthed conducting plane. The metal's induced charge is unknown, so the field cannot be summed directly. **Construction:** remove the plane and place $-q$ at the mirror point, $h$ below where the plane was. In the upper half-space the potential of the pair,
+
+$$
+V(\mathbf r)=kq\left[\frac{1}{\lvert\mathbf r-h\hat{\mathbf z}\rvert}-\frac{1}{\lvert\mathbf r+h\hat{\mathbf z}\rvert}\right], \qquad (10.2)
+$$
+
+satisfies Laplace's equation everywhere except at $q$ (the image is *outside* the region), vanishes on the plane $z=0$ (every point of it is equidistant from $q$ and $-q$) and at infinity, and has the right singularity at $q$. **Uniqueness:** the potential in a region is fixed by its sources inside the region and its values on the boundary (if two solutions existed, their difference would satisfy Laplace with zero boundary values and no sources, and a harmonic function with zero boundary values is zero — it can have no interior maximum or minimum, by 10.1). So (10.2) is *the* field above the plane; below the plane the true field is zero, not the image's.
+
+**Consequences.** Force on $q$: that of the image, $F=kq^2/(2h)^2=kq^2/4h^2$, attractive. Induced surface density: $\sigma=\varepsilon_0E_z(z=0)=-\dfrac{qh}{2\pi(\rho^2+h^2)^{3/2}}$, whose integral over the plane is $-q$ (substitute $u=\rho^2+h^2$) — every field line from $q$ ends on the plane. Energy: $U=-kq^2/4h$, *half* the two-charge value $-kq^2/2h$, because the field exists only in the upper half-space and the image's "energy" is fictitious; equivalently, the work to drag $q$ from $h$ to infinity is $\int_h^\infty kq^2\,dz/4z^2=kq^2/4h$ ✓. Field lines meet the plane perpendicularly (an equipotential) and crowd under the charge. The same construction with two mirrors at right angles (three images), a sphere (an image of $-qR/d$ at $R^2/d$) and a dielectric half-space belongs to the Olympiad literature; the capacitors note uses the plane.
+
+> [!abstract] DIAGRAM D13.24 · The image construction
+> *Show:* a charge $+q$ at height $h$ above a horizontal earthed plane; below the plane, dashed, the image $-q$ at depth $h$; field lines from $q$ curving down to meet the plane at right angles; the induced density $\sigma(\rho)$ sketched as a negative bell curve beneath, peaked under the charge with $\sigma(0)=-q/2\pi h^2$; the force arrow on $q$ pointing down with $kq^2/4h^2$.
+> *Search:* "method of images point charge grounded conducting plane induced surface charge density field lines"
+
+### 10.3 Electrostatic pressure, and what it does to a soap bubble
+
+**Force argument.** A surface patch of density $\sigma$ feels the field of everything but itself, $E_{\text{rest}}=\sigma/2\varepsilon_0$ (§3.8): force per area $P=\sigma E_{\text{rest}}=\sigma^2/2\varepsilon_0=\tfrac12\varepsilon_0E^2$, outward, whatever the sign of $\sigma$. **Energy argument.** Let a charged conducting sphere expand from $R$ to $R+dR$ at fixed $Q$: the stored energy $kQ^2/2R$ falls by $(kQ^2/2R^2)dR$; the field did that much work on the surface, $P\cdot4\pi R^2dR$, so $P=kQ^2/8\pi R^4=\sigma^2/2\varepsilon_0$ ✓ — the same formula from a different principle, which is what makes it trustworthy. **Capacitor plate:** $F=PA=Q^2/2\varepsilon_0A$, the attraction the capacitors note derives from $dU/dx$. **The charged soap bubble:** a bubble of radius $R$ with surface tension $\gamma$ (two surfaces) holds an excess pressure $4\gamma/R$ inside. Charge it: the electrostatic pressure pulls outward. With charge $Q$ such that
+
+$$
+\frac{\sigma^2}{2\varepsilon_0}=\frac{4\gamma}{R}\quad\Rightarrow\quad Q=8\pi\sqrt{2\varepsilon_0\gamma R^3}, \qquad (10.3)
+$$
+
+the bubble holds its shape with *no* excess pressure — it would survive with a hole in it. For $R=2$ cm and $\gamma=0.025$ N m$^{-1}$: $Q=47$ nC, potential $kQ/R=21$ kV, surface field $1.1\times10^6$ V m$^{-1}$, a third of breakdown: feasible. The version with air trapped inside (Boyle's law, atmospheric pressure) is OL4, and it teaches a lesson about which pressures matter.
+
+> [!abstract] DIAGRAM D13.25 · Pressures on a charged bubble
+> *Show:* a soap bubble in cross-section with its two surfaces; inward arrows labelled $4\gamma/R$ (surface tension), outward arrows labelled $\sigma^2/2\varepsilon_0$ (electrostatic); a second panel with the pressures balanced and the charge $Q=8\pi\sqrt{2\varepsilon_0\gamma R^3}$ written; an inset of the field lines leaving the charged bubble radially.
+> *Search:* "charged soap bubble electrostatic pressure surface tension balance radius"
+
+### 10.4 The Coulomb exponent, tested from inside a shell
+
+Suppose the force went as $1/r^{2+\epsilon}$, so that a point charge's potential is $\varphi=kq/s^{1+\epsilon}$ (lengths in units of some $R_0$). For a thin shell of charge $Q$ and radius $R$, the ring construction of §3.7 gives, at distance $r<R$ from the centre,
+
+$$
+V(r)=\frac{kQ}{2Rr}\int_{R-r}^{R+r}s^{-\epsilon}\,ds\ \approx\ \frac{kQ}{2Rr}\int_{R-r}^{R+r}(1-\epsilon\ln s)\,ds \qquad (10.4)
+$$
+
+to first order in $\epsilon$. The integral of $\ln s$ is $s\ln s-s$; expanding the result for $r\ll R$ (the odd function $(R+r)\ln(R+r)-(R-r)\ln(R-r)\approx2r(1+\ln R)-r^3/3R^2$) leaves
+
+$$
+V(r)\approx\frac{kQ}{R}\left(1-\epsilon\ln R+\frac{\epsilon\,r^2}{6R^2}\right),\qquad E_{\text{in}}=-\frac{dV}{dr}=-\frac{\epsilon}{3}\,\frac{kQ\,r}{R^3}. \qquad (10.5)
+$$
+
+For the exact inverse square ($\epsilon=0$) the interior field vanishes identically ✓; for any other exponent it is a radial field proportional to $\epsilon$, linear in $r$, inward for $\epsilon>0$ — a third of the interior field of a *solid* sphere of the same charge, scaled by $\epsilon$. That is what Cavendish (1773), Maxwell (1873) and Williams, Faller and Hill (1971) measured: charge an outer shell to a high potential, connect and disconnect an inner one, earth the outer, and look for any potential left on the inner. A null to one part in $10^{16}$ of the applied potential bounds $\lvert\epsilon\rvert<10^{-16}$; in field language it bounds the photon's mass, because a massive photon gives a Yukawa potential $e^{-r/\lambda}/r$ whose deviation from $1/r$ inside a shell is of the same form.
+
+### 10.5 The ring off its axis, the rod up close, and the charged cube
+
+**Ring.** At a general point $(\rho,z)$ (cylindrical coordinates, ring in the plane $z=0$), summing $k\,dq/s$ gives
+
+$$
+V(\rho,z)=\frac{kQ}{\pi}\int_0^{\pi}\frac{d\varphi}{\sqrt{R^2+\rho^2+z^2-2R\rho\cos\varphi}}=\frac{2kQ}{\pi}\,\frac{K(m)}{\sqrt{(R+\rho)^2+z^2}},\qquad m=\frac{4R\rho}{(R+\rho)^2+z^2}, \qquad (10.6)
+$$
+
+with $K$ the complete elliptic integral of the first kind — a function you need not evaluate by hand, but whose limits you can check: $\rho=0$ gives $m=0$, $K=\pi/2$, $V=kQ/\sqrt{R^2+z^2}$ ✓ (3.34); as $\rho\to R$ in the plane, $m\to1$ and $K$ diverges logarithmically — the potential near a thin charged wire, $-(\lambda/2\pi\varepsilon_0)\ln(\text{distance})$, as it must (§3.27). F13.10 plots it. The pairing "field zero at the centre, potential maximal on the axis there" is (10.1): the centre is a maximum *along the axis* and a minimum *in the plane* — a saddle, never an extremum.
+
+**Rod, up close.** The finite rod's potential $2k\lambda\ln[(L+\sqrt{L^2+d^2})/d]$ (§3.27) behaves as $2k\lambda\ln(2L/d)$ for $d\ll L$: logarithmic, like the infinite line's, with the rod's length setting the reference distance. At the very surface of a real wire of radius $a$ it saturates at $2k\lambda\ln(2L/a)$ — the reason a thin wire's potential, and hence its capacitance, depends only weakly (logarithmically) on its thickness. The idealised *edge* of a charged disc is worse: for uniform $\sigma$ the field diverges (logarithmically) at the rim, and on a *conducting* disc the surface density itself goes as $1/\sqrt{R^2-\rho^2}$ — infinite at the rim. Real edges are rounded; the divergence is the model's, not nature's, and it is why corona starts at edges.
+
+**Cube.** A uniformly charged cube has no symmetry that Gauss can use; but scaling and superposition still speak. The potential at the centre of a cube of side $2a$ is the sum of the potentials, at their shared corner, of the eight cubes of side $a$ that tile it: $V_{\text{centre}}(2a)=8V_{\text{corner}}(a)$. Potentials of similar distributions scale as (density) $\times$ (length)$^2$, so $V_{\text{corner}}(a)=\tfrac14V_{\text{corner}}(2a)$, whence
+
+$$
+V_{\text{centre}}=2\,V_{\text{corner}} \qquad (10.7)
+$$
+
+for any uniformly charged cube — an exact result obtained without a single integral. (The numbers, for the record: $V_{\text{centre}}=2.380\,k\rho a^2$ and $V_{\text{corner}}=1.190\,k\rho a^2$ for side $a$, by numerical integration.) The field at the centre is zero by symmetry; at a corner it points along the body diagonal, and the same eight-cube trick shows that the field at the centre of a *face* of the big cube is the sum of four corner fields of the small cubes plus the far four — no closed form, which is the honest limit of symmetry arguments.
+
+### 10.6 Estimates
+
+**How strong is the field inside matter?** The hydrogen electron sits at $a_0=0.053$ nm in the proton's field $ke/a_0^2=5.1\times10^{11}$ V m$^{-1}$ — or, without Bohr, an ionisation energy of $13.6$ eV over a distance of $0.05$ nm is a field of order $13.6\ \text{V}/5\times10^{-11}\ \text{m}\approx3\times10^{11}$ V m$^{-1}$. Air breaks down at $3\times10^6$ V m$^{-1}$, a hundred thousand times less: lightning is a tiny perturbation of the fields that hold atoms together, which is why chemistry survives thunderstorms. A laser field that rivals $10^{11}$ V m$^{-1}$ (intensity $\tfrac12\varepsilon_0cE^2\sim10^{15}$ W cm$^{-2}$) ionises anything.
+
+**How much charge lifts a paper scrap?** A scrap of mass $m=10$ mg and volume $v=5\times5\times0.1$ mm$^3$, dielectric constant $\kappa\approx3$, near a comb modelled as a point charge $Q$ at distance $d$. The comb's field polarises it: induced moment $p=\alpha E$ with $\alpha\approx3\varepsilon_0v(\kappa-1)/(\kappa+2)=2.7\times10^{-20}$ C m$^2$ V$^{-1}$ (the Clausius–Mossotti sphere; a flake is within a factor of two). The gradient force $\tfrac12\alpha\,d(E^2)/dx$ with $E=kQ/d^2$ is $2\alpha k^2Q^2/d^5$. Setting it equal to $mg$: $Q=\sqrt{mgd^5/2\alpha k^2}$. At $d=1$ cm, $Q\approx50$ nC and the field at the scrap is $4\times10^6$ V m$^{-1}$ — above breakdown, so a comb cannot lift the scrap from a centimetre. At $d=5$ mm, $Q\approx8$ nC and $E=3\times10^6$ V m$^{-1}$ — just possible, and that is the experience: you must bring the comb to within a few millimetres, and lighter scraps jump first. The $d^{5/2}$ dependence of the required charge is the whole story of why the effect is so short-ranged.
+
+**Inkjet.** A drop of radius $30\ \mu$m ($m=1.1\times10^{-10}$ kg) carrying $1$ pC crosses $1$ cm of a $10^6$ V m$^{-1}$ deflection field at $20$ m s$^{-1}$: $a=qE/m=8.8\times10^3$ m s$^{-2}$, $t=0.5$ ms, deflection $\tfrac12at^2=1.1$ mm — the scale of a printed line. The drop's Rayleigh limit (10.9) is $3.3$ pC, so $1$ pC is a safe third of it. An electrostatic precipitator is the same physics at industrial scale: micron dust charged by corona to $\sim10^{-16}$ C crosses a $5\times10^5$ V m$^{-1}$ field between plates $10$ cm apart in a few seconds, in gas moving at $1$ m s$^{-1}$ — which sets the length of the duct.
+
+**A Van de Graaff's current.** The belt, $20$ cm wide, moving at $20$ m s$^{-1}$, can carry at most the density that air tolerates on its surface, $\sigma=\varepsilon_0E_b=2.7\times10^{-5}$ C m$^{-2}$: current $I=\sigma wv=1.1\times10^{-4}$ A. Real machines deliver $0.1$ mA — the estimate is the design. A $1$ m dome reaches $3$ MV holding $Q=E_bR^2/k=0.33$ mC and $\tfrac12QV=500$ J; at $0.1$ mA it charges in $3$ s.
+
+### 10.7 The physics behind two numbers
+
+**Millikan's $e$.** A $1\ \mu$m oil drop ($\rho=900$ kg m$^{-3}$, $m=3.8\times10^{-15}$ kg) falls at terminal speed $v_t=2r^2(\rho-\rho_{\text{air}})g/9\eta=1.1\times10^{-4}$ m s$^{-1}$ ($\eta_{\text{air}}=1.8\times10^{-5}$ Pa s) — measured through a microscope to give $r$. Switched on, a field $E$ holds it still when $qE=mg$: for $q=e$, $E=2.3\times10^{5}$ V m$^{-1}$; for $q=5e$, $4.6\times10^4$ V m$^{-1}$. Millikan found that the balancing fields for hundreds of drops, and their changes when a drop caught an ion, were always integer multiples of one value — quantisation seen directly, and $e=1.6\times10^{-19}$ C measured to $1\%$ once Stokes' law was corrected for the mean free path of air (Cunningham's factor, a $10\%$ effect at $1\ \mu$m). The chapter supplies $qE=mg$; PART 11 supplies the drag; the integers are the discovery.
+
+**The Earth's leaking charge.** The fair-weather field of $100$ V m$^{-1}$ means a surface charge $\sigma=-\varepsilon_0E$ and a total $Q=-\varepsilon_0E\cdot4\pi R_\oplus^2=-4.5\times10^{5}$ C (§3.35). Air is slightly conducting (cosmic-ray ions), $\sigma_{\text{air}}\approx3\times10^{-14}$ S m$^{-1}$ near the ground, so a current density $j=\sigma_{\text{air}}E=3\times10^{-12}$ A m$^{-2}$ flows down everywhere: over the Earth, $I\approx1500$ A. At that rate the charge would be gone in $Q/I\approx300$ s — five minutes. It is not gone because some $2000$ thunderstorms are active at any moment, each pumping about an ampere of negative charge to the ground: the atmosphere is a leaky spherical capacitor charged by lightning, discharged by fair weather, and the numbers close. (The classical estimate is Feynman's; the chapter's contribution is $\sigma=\varepsilon_0E$ and $Q=\sigma A$.)
+
+### 10.8 Where the model breaks
+
+* **Moving sources.** Coulomb's law is for charges at rest. A charge moving at $v$ carries a field compressed by $\gamma$ across its motion and a magnetic field $\mathbf B=\mathbf v\times\mathbf E/c^2$; forces between moving charges are not central. PART 16 begins there, and PART 28 shows that magnetism *is* electrostatics seen from a moving frame.
+* **Accelerating sources.** An accelerating charge radiates (Larmor: $P=q^2a^2/6\pi\varepsilon_0c^3$). For the CRT electron of E9, $a=2\times10^{15}$ m s$^{-2}$ radiates $3\times10^{-23}$ W — $10^{-13}$ eV over the flight, utterly negligible; for an electron in a Bohr orbit the same formula predicts collapse in $10^{-11}$ s, which is the failure that quantum mechanics repairs.
+* **Small distances.** At $10^{-15}$ m the strong interaction dominates; at the classical electron radius the classical self-energy is nonsense (OL5); below $\sim1$ nm, tunnelling (the Coulomb barrier), exchange forces and the Pauli principle replace "point charge".
+* **Matter.** Dielectrics add bound charge ($\kappa$, the capacitors note); conductors at high frequency are not equipotentials; air above $3\times10^6$ V m$^{-1}$ is not an insulator — the breakdown field is the ceiling on every static number in this chapter.
+* **Fields that are not static.** A changing magnetic field makes a circulating $\mathbf E$ with $\oint\mathbf E\cdot d\mathbf l\neq0$ — no potential, closed field lines, §3.25 overturned. PART 20.
+
+### OL1 — The charge at the centre of a ring: stable, unstable, and how fast
+
+A ring of radius $R=5.0$ cm carries $Q=20$ nC; a particle of charge $q=-1.0$ nC and mass $m=1.0$ mg sits at its centre. Find the small-oscillation frequency along the axis and the $e$-folding time of a small in-plane displacement, by two methods.
+
+*Method 1 — Laplace's equation.* By (10.1), $U=qV=-\lvert q\rvert\dfrac{kQ}{R}\Bigl(1-\dfrac{x^2}{2R^2}+\dfrac{\rho^2}{4R^2}\Bigr)$: $m\ddot x=-\dfrac{k\lvert q\rvert Q}{R^3}x$ and $m\ddot\rho=+\dfrac{k\lvert q\rvert Q}{2R^3}\rho$. With $k\lvert q\rvert Q/mR^3=(8.99\times10^9)(2\times10^{-17})/(10^{-6}\times1.25\times10^{-4})=1.44\times10^3$ s$^{-2}$: $\omega_x=37.9$ rad s$^{-1}$ ($T=0.166$ s), and $\rho\propto e^{t/\tau}$ with $\tau=\sqrt{2mR^3/k\lvert q\rvert Q}=37$ ms.
+
+*Method 2 — direct field.* Along the axis, (3.4) gives $E_x\approx kQx/R^3$ ✓ the same $\omega_x$. In the plane, displace the charge by $\rho\ll R$: the near side of the ring is at distance $R-\rho\cos\varphi$, the far side at $R+\rho\cos\varphi$; expanding $k\lambda R\,d\varphi/s^2$ to first order in $\rho$ and keeping the component along the displacement gives $E_\rho=\dfrac{kQ}{2R^3}\rho$, *outward* — i.e. towards the nearer part of the ring, since the nearer charge repels a positive test charge more — so for $q<0$ the force is $-\lvert q\rvert E_\rho$, towards the ring: unstable, with the same coefficient $kQ/2R^3$ ✓.
+
+*Checks.* The two curvatures sum with weights $1$ and $2$ to zero ✓ (Laplace). Dimensions of $k\lvert q\rvert Q/mR^3$: (N m$^2$ C$^{-2}$)(C$^2$)/(kg m$^3$) $=$ s$^{-2}$ ✓.
+
+### OL2 — An electron near a metal surface
+
+An electron is $1.0$ nm outside a flat metal surface (earthed). Find the force on it, its potential energy relative to infinity, the induced surface density directly beneath it, and the total induced charge — and show that the pressure integral over the surface reproduces the force.
+
+*Method 1 — image.* Image $+e$ at $1$ nm inside. $F=ke^2/(2h)^2=(2.31\times10^{-28})/(4\times10^{-18})=5.8\times10^{-11}$ N, towards the metal. $U=-ke^2/4h=-1.44\text{ eV nm}/4\text{ nm}=-0.36$ eV (this "image potential" is what lowers a metal's work function in a strong field — the Schottky effect, PART 23). $\sigma(0)=+e/2\pi h^2=2.5\times10^{-2}$ C m$^{-2}$ (positive: the electron attracts positive charge). Total induced charge: $\int_0^\infty\dfrac{eh}{2\pi(\rho^2+h^2)^{3/2}}2\pi\rho\,d\rho=eh\left[-\dfrac{1}{\sqrt{\rho^2+h^2}}\right]_0^\infty=+e$.
+
+*Method 2 — pressure on the surface.* The surface feels $\sigma^2/2\varepsilon_0$ pointing *towards the electron* everywhere (the field pulls the induced charge). Its resultant, by symmetry along the normal: $\int_0^\infty\dfrac{\sigma^2}{2\varepsilon_0}2\pi\rho\,d\rho=\dfrac{e^2h^2}{4\pi\varepsilon_0}\int_0^\infty\dfrac{\rho\,d\rho}{(\rho^2+h^2)^3}=\dfrac{e^2h^2}{4\pi\varepsilon_0}\cdot\dfrac{1}{4h^4}=\dfrac{ke^2}{4h^2}$ ✓ — Newton's third law between the electron and the metal, verified by integration.
+
+*Checks.* $U=-\int_\infty^hF\,dz'$ with $F=ke^2/4z'^2$ gives $-ke^2/4h$ ✓. At $h=1\ \mu$m the force is $10^{-6}$ of its $1$ nm value ($1/h^2$) ✓.
+
+### OL3 — Electrostatic pressure and the two hemispheres
+
+A thin conducting shell of radius $R=10$ cm carries $Q=1.0\ \mu$C. Find the outward pressure on its surface two ways, and the force with which its two halves push apart.
+
+*Method 1 — force on a patch.* $\sigma=Q/4\pi R^2=7.96\times10^{-6}$ C m$^{-2}$; $P=\sigma^2/2\varepsilon_0=3.6$ Pa.
+
+*Method 2 — virtual work.* $U=kQ^2/2R$; $P\cdot4\pi R^2=-dU/dR=kQ^2/2R^2$, so $P=kQ^2/8\pi R^4=(8.99\times10^9)(10^{-12})/(8\pi\times10^{-4})=3.6$ Pa ✓.
+
+*The halves.* Pressure normal to a hemisphere integrates to $P\times$ (projected area) $=P\pi R^2$ along the symmetry axis (the same theorem as for a hemisphere in a fluid, PART 11): $F=\dfrac{\sigma^2}{2\varepsilon_0}\pi R^2=\dfrac{Q^2}{32\pi\varepsilon_0R^2}=0.11$ N. If the shell were cut along an equator and the halves held by a thread, that thread would carry $0.11$ N.
+
+*Checks.* The whole shell feels zero net force (the two hemispheres' forces cancel, Newton III): the self-force of §3.8's "a charge does not feel its own field", in integrated form ✓. Doubling $Q$ quadruples $F$; doubling $R$ quarters it ✓ ($F\propto Q^2/R^2$).
+
+### OL4 — The charged bubble, with the air inside
+
+A soap bubble of radius $R_0=2.0$ cm ($\gamma=0.025$ N m$^{-1}$) is blown at atmospheric pressure $p_0=1.013\times10^5$ Pa, sealed, and charged to $Q=47$ nC. (a) Find the new radius. (b) Explain why (a) is so different from the "zero excess pressure" balance of §10.3, which used the same charge.
+
+(a) Inside pressure before: $p_0+4\gamma/R_0=p_0+5.0$ Pa. Boyle's law at fixed temperature: $(p_0+4\gamma/R_0)R_0^3=p_{\text{in}}R^3$. Mechanical balance of the charged film: $p_{\text{in}}-p_0=4\gamma/R-\sigma^2/2\varepsilon_0$, with $\sigma^2/2\varepsilon_0=Q^2/32\pi^2\varepsilon_0R^4$. Because every pressure difference here is a few pascals against $p_0=10^5$ Pa, linearise: $3p_0\,\Delta R/R_0\approx\sigma^2/2\varepsilon_0=5.0$ Pa, so $\Delta R/R_0=1.6\times10^{-5}$, $\Delta R=0.33\ \mu$m. (A numerical solution of the cubic gives $0.329\ \mu$m.)
+
+(b) In §10.3 the bubble was open to the atmosphere in the sense that its inside pressure was *free to equal* the outside pressure; the charge then replaced the surface-tension pressure, and the geometry was set by the balance of two small pressures. Sealed, the air inside is a spring with stiffness $3p_0$ per unit fractional radius change, $2\times10^4$ times stiffer than the film: the same $5$ Pa of electrostatic pressure now moves the radius by parts in $10^5$. The lesson is general — before balancing pressures, ask which is the largest stiffness in the problem.
+
+*Checks.* With $Q=0$, $\Delta R=0$ ✓. Dimensions of $Q^2/32\pi^2\varepsilon_0R^4$: C$^2$/(F m$^{-1}$ m$^4$) $=$ C$^2$/(C V$^{-1}$ m$^3$) $=$ J m$^{-3}$ $=$ Pa ✓.
+
+### OL5 — Self-energy, two ways, and the classical electron radius
+
+Compute the electrostatic energy of a uniformly charged sphere by the field integral and by layer assembly; then find the radius at which a spherical electron's self-energy equals $m_ec^2$, and say what the number means.
+
+*Method 1 — assembly* (§3.36): $U=\tfrac35kQ^2/R$. *Method 2 — field:* outside, $\int_R^\infty\tfrac12\varepsilon_0(kQ/r^2)^24\pi r^2dr=kQ^2/2R$; inside, $\int_0^R\tfrac12\varepsilon_0(kQr/R^3)^24\pi r^2dr=kQ^2/10R$; total $\tfrac35kQ^2/R$ ✓. The factor is not $\tfrac12$ of $QV_{\text{surface}}$ because the charge is *not* all at one potential: the interior layers sit at up to $1.5\,kQ/R$.
+
+*The electron.* Set $ke^2/r=m_ec^2$ (the convention that defines the classical electron radius; a shell would give $ke^2/2r$, a sphere $\tfrac35ke^2/r$ — factors of order one): $r_e=ke^2/m_ec^2=1.44\ \text{MeV fm}/0.511\ \text{MeV}=2.8$ fm. Scattering experiments put the electron's size below $10^{-18}$ m, a thousand times smaller, at which scale the classical self-energy would exceed the electron's mass a thousandfold. The number is therefore a **warning**, not a prediction: below $\sim r_e$ classical electrostatics has nothing correct to say about the electron, and quantum electrodynamics takes over (where $r_e$ reappears, legitimately, as the scale of Thomson scattering, $\sigma_T=\tfrac{8\pi}{3}r_e^2$, PART 25).
+
+*Checks.* $\tfrac35>\tfrac12$: the solid sphere stores more than a shell of the same $Q$, $R$ ✓ (charge closer together). $r_e=2.8$ fm is comparable to nuclear radii — a coincidence that misled a generation of physicists and is worth knowing as a coincidence.
+
+### OL6 — Cavities and overlapping cylinders: uniform fields from superposition
+
+(a) A sphere of uniform $\rho$ and radius $R$ has a spherical cavity of radius $b$ centred at $\mathbf a$ ($\lvert\mathbf a\rvert+b<R$). Give the field everywhere. (b) Two infinitely long cylinders of radius $R$ with uniform densities $+\rho$ and $-\rho$ have parallel axes a distance $d<2R$ apart; find the field in the overlap. Numbers: $\rho=1.0\ \mu$C m$^{-3}$, $a=d=1.0$ cm.
+
+(a) Superpose the full sphere ($+\rho$) and the cavity sphere ($-\rho$). Inside the cavity: $\mathbf E=\rho\mathbf r/3\varepsilon_0-\rho(\mathbf r-\mathbf a)/3\varepsilon_0=\rho\mathbf a/3\varepsilon_0$, uniform, $376$ V m$^{-1}$ along $\mathbf a$. In the body of the sphere outside the cavity: $\mathbf E=\dfrac{\rho\mathbf r}{3\varepsilon_0}-\dfrac{\rho b^3}{3\varepsilon_0}\dfrac{\mathbf r-\mathbf a}{\lvert\mathbf r-\mathbf a\rvert^3}$ (the cavity acts as a point charge $-\tfrac43\pi b^3\rho$ at $\mathbf a$). Outside the sphere: $\mathbf E=k\left[Q\dfrac{\mathbf r}{r^3}-q_{\text{cav}}\dfrac{\mathbf r-\mathbf a}{\lvert\mathbf r-\mathbf a\rvert^3}\right]$ with $Q=\tfrac43\pi R^3\rho$, $q_{\text{cav}}=\tfrac43\pi b^3\rho$ — a point charge plus a displaced negative point charge, i.e. at large $r$ a monopole $Q-q_{\text{cav}}$ plus a dipole of moment $-q_{\text{cav}}\mathbf a$.
+
+(b) Inside a uniform cylinder $\mathbf E=\rho\boldsymbol\rho_\perp/2\varepsilon_0$ (§3.19, vector form, $\boldsymbol\rho_\perp$ the perpendicular vector from the axis). In the overlap, $\mathbf E=\dfrac{\rho}{2\varepsilon_0}\left[\boldsymbol\rho_\perp-(\boldsymbol\rho_\perp-\mathbf d)\right]=\dfrac{\rho\,\mathbf d}{2\varepsilon_0}$: uniform, $565$ V m$^{-1}$, from the positive cylinder's axis towards the negative one's. This lens-shaped region with a uniform field is the electrostatic model of a uniformly polarised dielectric (the bound charges are the crescents), and it previews the magnetic version (PART 17): two overlapping cylinders carrying opposite currents produce a uniform $\mathbf B$ in the overlap.
+
+*Second method for (a):* Gauss on the full sphere and on the cavity sphere separately, each spherically symmetric about its own centre; superposition does the rest — the whole solution is two applications of (3.24). *Checks.* $\mathbf a\to0$ in (a): a concentric shell, zero field inside ✓. $d\to0$ in (b): the cylinders cancel, zero field ✓. Dimensions $\rho a/\varepsilon_0$: V m$^{-1}$ ✓.
+
+> [!abstract] DIAGRAM D13.26 · Overlapping cylinders and the off-centre cavity
+> *Show:* left, two circles of equal radius overlapping, one shaded $+\rho$, one $-\rho$, their axes $d$ apart, with parallel field arrows filling the lens-shaped overlap and the crescent regions labelled as the only places with net charge; right, a sphere with an off-centre cavity, uniform parallel arrows inside the cavity along the line of centres, and the two "component" spheres drawn dashed.
+> *Search:* "two overlapping charged cylinders uniform field superposition; sphere with off-centre cavity uniform field"
+
+### OL7 — The potential at the centre and corner of a charged cube
+
+A cube of side $a$ carries uniform $\rho$. Show without integrating that the potential at its centre is twice the potential at a corner, and give the field at the centre.
+
+*Method 1 — scaling and superposition* (§10.5): tile a cube of side $2a$ with eight cubes of side $a$; the big cube's centre is a corner of each small cube, so $V_c(2a)=8V_{\text{corner}}(a)$; potentials scale as $\rho L^2$, so $V_{\text{corner}}(a)=V_{\text{corner}}(2a)/4$; hence $V_c(2a)=2V_{\text{corner}}(2a)$ for a cube of *any* side. The field at the centre is zero by symmetry (inversion through the centre reverses every element's contribution).
+
+*Method 2 — dimensional analysis alone* gets the scaling: $V$ has dimensions of $k\rho L^2$ (from $k\,dq/s$ with $dq\sim\rho L^3$, $s\sim L$), so $V_{\text{corner}}(L)=c\,k\rho L^2$ with the same constant $c$ for every cube; then Method 1's counting is forced. (The constant is $c=1.190$; the centre's is $2.380$.)
+
+*Checks.* A corner "sees" charge on one side only, over a solid angle of $\pi/2$; the centre sees $4\pi$ — a ratio of $8$ in charge within a given distance, but the corner's charge is on average *farther* by a factor that the scaling argument fixes at exactly $4$ ✓. The same argument for a square sheet (potential $\propto\sigma L$) gives $V_{\text{centre}}=2V_{\text{corner}}$ too, and for a rod ($V\propto\lambda\ln$) it fails — the log has no scaling.
+
+### OL8 — Designing a test of the inverse square
+
+An outer conducting shell of radius $b=0.5$ m is charged to $V_0=10$ kV; an inner shell of radius $a=0.25$ m is briefly connected to it, then isolated; the outer shell is then earthed. Using (10.5), estimate the potential left on the inner shell if the exponent were $2+\epsilon$, and the smallest $\epsilon$ a detector sensitive to $1\ \mu$V could see.
+
+For an exact inverse square the inner shell, connected to the outer, acquired no charge (no field between them once at equal potential — all charge sits on the outer surface, C13) and stays at zero when the outer is earthed. With $\epsilon\neq0$, the outer shell's interior potential is not constant: by (10.5), between centre and radius $a$ it varies by $\Delta V\approx V_0\,\epsilon\,a^2/6b^2$, so the inner shell, forced to the outer's potential while connected, must carry a small charge to cancel that variation, and keeps it when the outer is earthed: a residual potential of order $V_{\text{res}}\sim V_0\,\epsilon\,a^2/6b^2$ (the exact coefficient is a logarithm-containing function of $a/b$ of order one; Maxwell's is $\tfrac12\epsilon V_0[\ldots]$ of the same size). With $a/b=\tfrac12$: $V_{\text{res}}\approx V_0\epsilon/24$. A $1\ \mu$V sensitivity on $10$ kV detects $\epsilon\sim24\times10^{-10}=2\times10^{-9}$ — Maxwell's own bound was $\epsilon<5\times10^{-5}$ with a far less sensitive electrometer; the 1971 experiment used $10$ kV at $4$ MHz with lock-in detection at the $10^{-12}$ V level and concentric icosahedra to reach $10^{-16}$.
+
+*Checks.* $\epsilon\to0$: no residual ✓. Larger $a/b$ improves the lever arm ($a^2/b^2$), but the shells must not touch; real designs use $a/b\approx0.9$.
+
+### OL9 — The Rayleigh limit and merging drops
+
+(a) Show that a charged conducting drop of radius $R$ and surface tension $\gamma$ becomes unstable when $Q$ exceeds $Q_R=8\pi\sqrt{\varepsilon_0\gamma R^3}$, and evaluate it for water drops of $1$ mm, $50\ \mu$m and $10\ \mu$m. (b) Two identical drops of radius $r=10\ \mu$m, each with charge $q$, merge. For what $q$ is merging energetically favourable?
+
+(a) *Pressure argument:* the drop is stable while surface tension's inward pressure $2\gamma/R$ exceeds the outward electrostatic pressure $\sigma^2/2\varepsilon_0$; equality, with $\sigma=Q/4\pi R^2$, gives $Q^2=64\pi^2\varepsilon_0\gamma R^3$, i.e. $Q_R=8\pi\sqrt{\varepsilon_0\gamma R^3}$ — which is exactly Rayleigh's 1882 result from the full normal-mode analysis (the pressure balance happens to give the correct threshold for the $l=2$ mode). Water ($\gamma=0.072$): $R=1$ mm, $Q_R=0.63$ nC, $V=kQ_R/R=5.7$ kV, surface field $5.7\times10^6$ V m$^{-1}$ — above air's breakdown, so a millimetre drop loses charge by corona before it can fission. $R=50\ \mu$m: $7.1$ pC, $1.3$ kV, $2.6\times10^7$ V m$^{-1}$. $R=10\ \mu$m: $0.63$ pC, $570$ V. The surface field at the limit grows as $R^{-1/2}$, but breakdown fields also rise steeply for small gaps, and below $\sim50\ \mu$m the Rayleigh limit is what governs: this is the physics of electrospray ionisation and of charged cloud droplets.
+
+(b) *Energy audit.* Before: surface $2\cdot4\pi r^2\gamma$, electrostatic $2\cdot kq^2/2r=kq^2/r$. After: radius $2^{1/3}r$, charge $2q$: surface $4\pi(2^{2/3}r^2)\gamma$, electrostatic $k(2q)^2/(2\cdot2^{1/3}r)=2^{2/3}kq^2/r$. Surface energy released: $(2-2^{2/3})4\pi r^2\gamma=0.413\times4\pi r^2\gamma=3.7\times10^{-11}$ J. Electrostatic energy *cost*: $(2^{2/3}-1)kq^2/r=0.587\,kq^2/r$. Merging is favourable while $0.587\,kq^2/r<3.7\times10^{-11}$ J, i.e. $q<2.7\times10^{-13}$ C — about $0.42\,Q_R(r)$. Drops carrying more than $\sim40\%$ of their Rayleigh charge will not coalesce even if they touch; they bounce or fission. This sets the size distribution of electrosprays and is one reason charged cloud droplets grow slowly.
+
+*Checks.* $q=0$: merging always favourable (surface energy only) ✓. The ratio $q/Q_R$ at the threshold is a pure number, independent of $r$ and $\gamma$ ✓: $(0.413\cdot4\pi/0.587)^{1/2}/(8\pi)\times\sqrt{4\pi\varepsilon_0k}$ with $4\pi\varepsilon_0k=1$, $=0.42$.
+
+### OL10 — Lifting a paper scrap: the gradient force as a Fermi problem
+
+A comb is modelled as a point charge $Q$; a paper scrap of mass $10$ mg, volume $2.5$ mm$^3$ and $\kappa=3$ lies on a table. Find the charge needed to lift it from $d=1$ cm and from $d=5$ mm, and decide whether either is achievable.
+
+*Method 1 — induced dipole in a gradient* (§10.6): $\alpha\approx3\varepsilon_0v\dfrac{\kappa-1}{\kappa+2}=2.7\times10^{-20}$ C m$^2$ V$^{-1}$; $F=\tfrac12\alpha\,\dfrac{d(E^2)}{dz}=2\alpha k^2Q^2/d^5$; $Q=\sqrt{mgd^5/2\alpha k^2}$: $Q(1\text{ cm})=4.8\times10^{-8}$ C, $Q(5\text{ mm})=8.4\times10^{-9}$ C.
+
+*Method 2 — energy.* The scrap's energy in the field is $U=-\tfrac12\alpha E^2$; the force is $-dU/dz$, the same expression — and the *sign* is now transparent: $U$ falls where $E^2$ grows, so any polarisable neutral body is pulled towards strong field, whatever the sign of $Q$ ✓.
+
+*Achievability.* The field at the scrap must stay below breakdown: $kQ/d^2=4.3\times10^6$ V m$^{-1}$ at $1$ cm (no), $3.0\times10^6$ at $5$ mm (marginal). The comb's potential, $\sim kQ/(10\text{ cm})$, is $4$ kV and $0.8$ kV respectively — both easily reached by rubbing. So: bring the comb to within about $5$ mm, and the lightest scraps jump; from a centimetre nothing happens. Both are everyday experience.
+
+*Checks.* $F\propto Q^2/d^5$: halving $d$ multiplies the force by $32$ ✓ — the effect's abruptness. Dimensions: $\alpha k^2Q^2/d^5$ $=$ (C m$^2$ V$^{-1}$)(V m C$^{-1}$)$^2$/m$^5$ $=$ C V m$^{-1}$ $=$ N ✓.
+
+### OL11 — A Van de Graaff generator from first principles
+
+A dome of radius $R=1.0$ m in air is fed by a belt $w=20$ cm wide moving at $v=20$ m s$^{-1}$. Find the maximum dome potential and charge, the maximum belt current, the time to charge from zero, and explain why the charge goes to the outside of the dome even when the dome is already at megavolts.
+
+*Limits.* Surface field at breakdown: $kQ/R^2=E_b\Rightarrow Q_{\max}=E_bR^2/k=0.33$ mC, $V_{\max}=E_bR=3.0$ MV. Belt: its surface density cannot exceed $\varepsilon_0E_b=2.7\times10^{-5}$ C m$^{-2}$ (else the air beside the belt breaks down), so $I_{\max}=\sigma wv=0.11$ mA. Charging time: $Q_{\max}/I=3$ s; energy at full charge $\tfrac12QV=500$ J.
+
+*Why the inside works.* The belt delivers charge to a comb *inside* the dome. Inside a closed conductor the field of the dome's own charge is zero (§3.21) whatever its potential, so the comb's charge feels only the field of the belt and comb — it moves to the dome's inner surface and thence, by C13's argument, entirely to the outside. The dome's potential never opposes the transfer; only the belt's motor works against the field (power $IV=0.3$ kW at full potential).
+
+*Second method for $V_{\max}$:* energy density at the surface $\tfrac12\varepsilon_0E_b^2=40$ J m$^{-3}$ equals the electrostatic pressure, $40$ Pa — the same number §3.36 quoted, now as the pressure that corona relieves.
+
+*Checks.* Real machines: $0.1$ mA, $2$–$5$ MV per metre of radius in air, more in pressurised SF$_6$ ✓. Doubling $R$ doubles $V_{\max}$ and quadruples $Q_{\max}$ ✓.
+
+### OL12 — Reading a real measurement: Coulomb's law inside the nucleus
+
+Alpha particles of kinetic energy $K$ are fired at gold ($Z=79$, $A=197$, $R_{\text{Au}}=1.2A^{1/3}=7.0$ fm). (a) At what $K$ does the head-on distance of closest approach equal the nuclear radius plus the alpha's ($2$ fm)? (b) What is the field at the gold nucleus's surface? (c) What is the Coulomb energy of the gold nucleus as a uniform sphere, and how does it compare with its total binding energy ($1560$ MeV)?
+
+(a) $r_{\min}=2\cdot79\,ke^2/K$; with $r_{\min}=9$ fm: $K=158\times1.44/9=25$ MeV. Below this the scattering follows Rutherford's $1/\sin^4(\theta/2)$ law exactly (Coulomb all the way in); above it, the alpha touches the nuclear force and the law fails — which is how Rutherford's group first sized nuclei (they saw the deviation with aluminium, whose barrier is only about $7$ MeV, within reach of the $7.7$ MeV alphas of RaC$'$).
+
+(b) $E=kZe/R^2=(8.99\times10^9)(79)(1.6\times10^{-19})/(7\times10^{-15})^2=2.3\times10^{21}$ V m$^{-1}$ — ten orders of magnitude above the atomic field, the strongest static field in ordinary matter.
+
+(c) $U=\tfrac35k(Ze)^2/R=0.6\times1.44\times79^2/7.0$ MeV $=770$ MeV, half the binding energy: the nuclear force must supply $\sim2.3$ GeV of attraction to hold gold together against its own charge. Per the semi-empirical mass formula, $a_cZ^2/A^{1/3}=0.71\times6241/5.82=760$ MeV ✓ — the same number, because that term *is* (3.47).
+
+*Checks.* (a) with Rutherford's original $K=7.7$ MeV: $r_{\min}=30$ fm ✓, four radii out — no deviation, as he found for gold. (c) scales as $Z^2/A^{1/3}$: uranium's $980$ MeV (§3.37) is $1.27\times$ gold's, and $(92/79)^2(197/238)^{1/3}=1.27$ ✓.
 
 ## Part 11 · Olympiad-grade paper
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: 36 questions, 200 marks, 180 minutes — Section A (12 single-correct, 4 marks), Section B (8 one-or-more-correct, 4 marks), Section C (6 numerical, 5 marks), Section D (10 long-form, 9 marks) — with a coverage map naming the block each question tests and a collapsible solution under every question. It is not on the page yet so that no reader sits a half-built paper.
+**Time: 180 minutes · Maximum marks: 200 · 36 questions.**
+Sections: A — 12 single-correct (4 marks each, $-1$ for a wrong answer); B — 8 one-or-more-correct (4 marks each, full marks only for the complete set, no negative marking); C — 6 numerical answers (5 marks each, to the precision stated); D — 10 long-form (9 marks each, method and checks carry marks). Take $k=8.99\times10^9$ N m$^2$ C$^{-2}$, $\varepsilon_0=8.85\times10^{-12}$ F m$^{-1}$, $e=1.60\times10^{-19}$ C, $m_e=9.11\times10^{-31}$ kg, $g=9.8$ m s$^{-2}$. Solutions follow each question.
+
+| Section | Questions | Marks each | Subtotal | What it tests |
+|---|---|---:|---:|---|
+| A | 1–12 | 4 | 48 | blocks 2–4 |
+| B | 13–20 | 4 | 32 | blocks 3–4 |
+| C | 21–26 | 5 | 30 | blocks 3–6 |
+| D | 27–36 | 9 | 90 | blocks 3, 4, 10 |
+| | 36 | | 200 | |
+
+#### Section A · Single correct
+
+### P1 · 4 marks
+
+Charges $+q$ and $+4q$ are a distance $L$ apart. The field is zero at (a) $L/3$ from $q$ (b) $L/3$ from $4q$ (c) $L/2$ (d) $L/3$ beyond $q$ on the far side.
+
+<details><summary>Solution</summary>
+
+Between like charges, nearer the smaller: $x=L\sqrt{q}/(\sqrt q+\sqrt{4q})=L/3$ from $q$. **(a)**.
+
+</details>
+
+### P2 · 4 marks
+
+On the axis of a uniformly charged ring of radius $R$, the field is largest at distance (a) $R$ (b) $R/\sqrt2$ (c) $R/2$ (d) $0$.
+
+<details><summary>Solution</summary>
+
+$d/dx\bigl[x(x^2+R^2)^{-3/2}\bigr]=0\Rightarrow x^2+R^2=3x^2$. **(b)**.
+
+</details>
+
+### P3 · 4 marks
+
+The surface density at a point on a charged conductor is $\sigma$. The field just outside that point is (a) $\sigma/2\varepsilon_0$ (b) $\sigma/\varepsilon_0$ (c) $2\sigma/\varepsilon_0$ (d) zero, because the conductor is an equipotential.
+
+<details><summary>Solution</summary>
+
+Pillbox with one face in the metal: $EA=\sigma A/\varepsilon_0$. **(b)**. (a) is the patch's own contribution only.
+
+</details>
+
+### P4 · 4 marks
+
+A dipole in a uniform electric field experiences (a) zero torque and zero net force (b) zero net force but in general a torque (c) a net force along the field (d) zero torque but a net force.
+
+<details><summary>Solution</summary>
+
+$\pm q\mathbf E$ cancel; the couple $\mathbf p\times\mathbf E$ does not unless $\mathbf p\parallel\mathbf E$. **(b)**.
+
+</details>
+
+### P5 · 4 marks
+
+A charge $q$ sits at one corner of a cube. The total flux through the three faces *not* containing that corner is (a) $q/8\varepsilon_0$ (b) $q/24\varepsilon_0$ (c) $q/6\varepsilon_0$ (d) $q/2\varepsilon_0$.
+
+<details><summary>Solution</summary>
+
+The cube is one of eight around the charge: $q/8\varepsilon_0$ in total, all through the three far faces (the adjacent faces carry none). **(a)**.
+
+</details>
+
+### P6 · 4 marks
+
+For a uniformly charged non-conducting solid sphere, $V(\text{centre})/V(\text{surface})$ equals (a) $1$ (b) $3/2$ (c) $2$ (d) $3$.
+
+<details><summary>Solution</summary>
+
+$V_{\text{in}}=kQ(3R^2-r^2)/2R^3$: at $r=0$, $\tfrac32kQ/R$. **(b)**.
+
+</details>
+
+### P7 · 4 marks
+
+A point charge $q$ sits off-centre inside the cavity of an isolated neutral conducting shell. Which is true? (a) The field outside depends on where $q$ is. (b) The inner-surface charge is $-q$, uniformly spread. (c) The outer-surface charge is $+q$, uniformly spread. (d) The field inside the metal is non-zero near $q$.
+
+<details><summary>Solution</summary>
+
+The inner surface's $-q$ is *non*-uniform (it must cancel $q$'s field in the metal); the outer $+q$ is uniform and its field is independent of $q$'s position. **(c)**.
+
+</details>
+
+### P8 · 4 marks
+
+The work done by the electrostatic field on a charge moved from $A$ to $B$ (a) depends on the path taken (b) depends only on the positions of $A$ and $B$ (c) depends on how fast the charge is moved (d) is always negative.
+
+<details><summary>Solution</summary>
+
+Conservative field: $W=-q(V_B-V_A)$, path-independent and speed-independent (quasistatic or not, the field's work is the same; only radiation, negligible here, would care about speed). **(b)**.
+
+</details>
+
+### P9 · 4 marks
+
+Spheres of radii $R$ and $2R$, far apart, are joined by a wire and charged. The ratio of surface fields $E_R/E_{2R}$ is (a) $1/2$ (b) $2$ (c) $1/4$ (d) $4$.
+
+<details><summary>Solution</summary>
+
+Equal potentials: $Q\propto R$, $E=kQ/R^2\propto1/R$. **(b)**.
+
+</details>
+
+### P10 · 4 marks
+
+An isolated *neutral* conducting sphere of radius $R$ has a point charge $q$ at distance $d>R$ from its centre. The potential of the sphere is (a) $0$ (b) $kq/d$ (c) $kq/(d-R)$ (d) $kq/R$.
+
+<details><summary>Solution</summary>
+
+The induced charges sum to zero and all lie at distance $R$ from the centre, so they contribute nothing to the potential *at the centre*; that potential is $kq/d$, and the whole conductor shares it. **(b)**.
+
+</details>
+
+### P11 · 4 marks
+
+An electron and a proton are released from rest in the same uniform field. After equal *times*, the ratio of their kinetic energies $K_e/K_p$ is (a) $m_p/m_e$ (b) $m_e/m_p$ (c) $1$ (d) $\sqrt{m_p/m_e}$.
+
+<details><summary>Solution</summary>
+
+$K=(qEt)^2/2m$: same $qEt$, so $K\propto1/m$. **(a)** ($=1836$). After equal *distances* the answer would be (c).
+
+</details>
+
+### P12 · 4 marks
+
+$\varepsilon_0E^2$ has the dimensions of (a) force (b) energy per unit volume (c) charge per unit area (d) potential.
+
+<details><summary>Solution</summary>
+
+$\tfrac12\varepsilon_0E^2$ is the energy density, and also the electrostatic pressure. **(b)**.
+
+</details>
+
+#### Section B · One or more correct
+
+### P13 · 4 marks
+
+For a thin uniformly charged spherical shell of radius $R$: (A) $E=0$ everywhere inside; (B) $V=0$ everywhere inside; (C) $V$ is constant inside; (D) $E$ is discontinuous at $r=R$.
+
+<details><summary>Solution</summary>
+
+(A) Gauss; (C) $E=0\Rightarrow V$ constant, equal to $kQ/R$, not zero; (D) jump $\sigma/\varepsilon_0$. **A, C, D**.
+
+</details>
+
+### P14 · 4 marks
+
+Electrostatic field lines: (A) never cross; (B) are the trajectories of charges released from rest; (C) cannot form closed loops; (D) begin on positive charges or at infinity.
+
+<details><summary>Solution</summary>
+
+(B) fails as soon as the line curves. (C) from $\oint\mathbf E\cdot d\mathbf l=0$. **A, C, D**.
+
+</details>
+
+### P15 · 4 marks
+
+A dipole $\mathbf p$ at the origin points along $z$. At distances $r\gg d$: (A) $V=0$ on the $xy$-plane; (B) $\mathbf E=0$ on the $xy$-plane; (C) on the axis $E$ is twice its value at the same $r$ on the equator; (D) $E\propto1/r^3$.
+
+<details><summary>Solution</summary>
+
+(A) $\cos\theta=0$; (B) false, $E=kp/r^3$ there; (C) $2kp/r^3$ against $kp/r^3$; (D) yes. **A, C, D**.
+
+</details>
+
+### P16 · 4 marks
+
+A point charge $q$ is at the centre of a cube of side $a$: (A) the flux through each face is $q/6\varepsilon_0$; (B) moved to a corner, the total flux through the cube becomes $q/8\varepsilon_0$; (C) the field is uniform over each face; (D) the flux through a face does not depend on $a$.
+
+<details><summary>Solution</summary>
+
+(C) is false (the field varies over the face; only the *flux* is simple). **A, B, D**.
+
+</details>
+
+### P17 · 4 marks
+
+For a conductor in electrostatic equilibrium: (A) $\mathbf E=0$ inside the material; (B) $\sigma$ is uniform over the surface; (C) the potential is the same at every point of the conductor; (D) $\mathbf E$ at the surface is perpendicular to it.
+
+<details><summary>Solution</summary>
+
+(B) only for a lone sphere. **A, C, D**.
+
+</details>
+
+### P18 · 4 marks
+
+Two large parallel conducting plates of area $A$ carry $+Q$ and $-Q$: (A) the outer faces carry no charge; (B) the inner faces carry $\pm Q$; (C) the field outside the pair is zero; (D) the field between them is $Q/\varepsilon_0A$.
+
+<details><summary>Solution</summary>
+
+Four-face rule with $Q_1+Q_2=0$. **A, B, C, D**.
+
+</details>
+
+### P19 · 4 marks
+
+$+q$ is at the origin and $-q$ at $(a,0,0)$. (A) $V=0$ on the whole plane $x=a/2$; (B) $V=0$ on the whole $y$-axis; (C) $V=0$ at the midpoint; (D) $\mathbf E=0$ at the midpoint.
+
+<details><summary>Solution</summary>
+
+(A) the bisecting plane is equidistant from both; (B) false (the $y$-axis passes through $+q$'s neighbourhood only); (C) yes; (D) false, $E=8kq/a^2$ there. **A, C**.
+
+</details>
+
+### P20 · 4 marks
+
+Two identical conducting spheres, far apart, carry $Q$ and $0$ and are joined by a thin wire: (A) each ends with $Q/2$; (B) the electrostatic energy is conserved; (C) half the initial energy is lost; (D) the loss is independent of the wire's resistance.
+
+<details><summary>Solution</summary>
+
+$U_i=kQ^2/2R$, $U_f=2\cdot k(Q/2)^2/2R=kQ^2/4R$: half lost, to heat and radiation, whatever the resistance. **A, C, D**.
+
+</details>
+
+#### Section C · Numerical
+
+### P21 · 5 marks
+
+A ring of radius $3.0$ cm carries $15$ nC. Find the axial field $4.0$ cm from the centre, in kV m$^{-1}$ (one decimal place).
+
+<details><summary>Solution</summary>
+
+$r=\sqrt{3^2+4^2}=5$ cm: $E=kQx/r^3=(8.99\times10^9)(1.5\times10^{-8})(0.04)/(1.25\times10^{-4})=4.31\times10^{4}$ V m$^{-1}$. **43.1**.
+
+</details>
+
+### P22 · 5 marks
+
+A metal sphere of radius $5.0$ cm is at $45$ kV. Find its charge in nC.
+
+<details><summary>Solution</summary>
+
+$Q=VR/k=(4.5\times10^4)(0.05)/(8.99\times10^9)=2.50\times10^{-7}$ C. **250**. (Surface field $9.0\times10^5$ V m$^{-1}$, safely below breakdown.)
+
+</details>
+
+### P23 · 5 marks
+
+A $3.0$ nC charge sits at the midpoint of an edge of a cube. Find the total flux through the cube, in V m (one decimal place).
+
+<details><summary>Solution</summary>
+
+Four cubes share the edge: $\Phi=q/4\varepsilon_0=3\times10^{-9}/(4\times8.85\times10^{-12})=84.7$ V m. **84.7**.
+
+</details>
+
+### P24 · 5 marks
+
+Concentric conducting shells: the inner (radius $5.0$ cm) carries $+6.0$ nC; the outer (radius $15$ cm) is earthed. Find the potential of the inner shell in volts.
+
+<details><summary>Solution</summary>
+
+Outer carries $-6$ nC; $V_a=kq(1/a-1/b)=(8.99\times10^9)(6\times10^{-9})(20-6.67)=719$ V. **719** (accept $720$).
+
+</details>
+
+### P25 · 5 marks
+
+Electrons accelerated through $1500$ V pass between plates $6.0$ cm long with a transverse field of $3.0$ kV m$^{-1}$. Find the deflection at the exit, in mm (one decimal place).
+
+<details><summary>Solution</summary>
+
+$y=EL^2/4V_{\text{acc}}=(3000)(0.0036)/(6000)=1.8\times10^{-3}$ m. **1.8**.
+
+</details>
+
+### P26 · 5 marks
+
+Four charges of $2.0\ \mu$C sit at the corners of a square of side $30$ cm. Find the electrostatic energy of the system in joules (two decimal places).
+
+<details><summary>Solution</summary>
+
+$U=(4+\sqrt2)kq^2/a=5.414\times(8.99\times10^9)(4\times10^{-12})/0.3=0.649$ J. **0.65**.
+
+</details>
+
+#### Section D · Comprehensive long-form
+
+### P27 · 9 marks
+
+A thin hemispherical shell of radius $R=5.0$ cm carries uniform $\sigma=2.0\ \mu$C m$^{-2}$. (a) Find the field at its centre of curvature, by integration. (b) Find the potential there. (c) A *complete* spherical shell of the same $\sigma$ is cut along an equator into two hemispheres held together by a thread. Find the tension in the thread by two methods.
+
+<details><summary>Solution</summary>
+
+(a) Rings at polar angle $\theta$: $dq=\sigma2\pi R^2\sin\theta\,d\theta$, all at distance $R$, axial component $\cos\theta$: $E=\int_0^{\pi/2}\dfrac{k\sigma2\pi R^2\sin\theta\cos\theta}{R^2}d\theta=\pi k\sigma=\dfrac{\sigma}{4\varepsilon_0}=5.65\times10^{4}$ V m$^{-1}$, along the axis away from the shell. (b) Every element at distance $R$: $V=kQ/R=k\sigma2\pi R^2/R=\sigma R/2\varepsilon_0=5.65\times10^{3}$ V. (c) *Method 1 — pressure.* Each element of the full shell feels $\sigma^2/2\varepsilon_0$ outward; on a hemisphere the normal components integrate to pressure $\times$ projected area: $F=\dfrac{\sigma^2}{2\varepsilon_0}\pi R^2=\dfrac{(2\times10^{-6})^2}{2(8.85\times10^{-12})}\pi(0.05)^2=1.77\times10^{-3}$ N. *Method 2 — field of the rest.* The charge $dq$ on one hemisphere feels the field of the *other* charges, $E_{\text{rest}}=\sigma/2\varepsilon_0$ radially (§3.8); the axial component of $E_{\text{rest}}\,dq$ integrates to $\dfrac{\sigma}{2\varepsilon_0}\int\sigma\cos\theta\,dA=\dfrac{\sigma^2}{2\varepsilon_0}\pi R^2$, the same. Tension $1.8\times10^{-3}$ N.
+
+> [!success] Check
+> (a) is half of $\sigma/2\varepsilon_0$: a hemisphere fills half the solid angle a large sheet would ✓. (c) in terms of $Q=4\pi R^2\sigma=6.3\times10^{-8}$ C: $Q^2/32\pi\varepsilon_0R^2=1.77\times10^{-3}$ N ✓.
+
+</details>
+
+### P28 · 9 marks
+
+A non-conducting sphere of radius $R=6.0$ cm has uniform $\rho=3.0\ \mu$C m$^{-3}$, except for a spherical cavity of radius $b=1.0$ cm whose centre $C$ is $a=2.0$ cm from the sphere's centre $O$. (a) Find the field everywhere inside the cavity. (b) Find the field at $O$. (c) Find $V(O)-V(C)$. (d) A charge of $1.0$ nC is released at rest inside the cavity; describe its motion.
+
+<details><summary>Solution</summary>
+
+(a) Full sphere plus a $-\rho$ sphere in the cavity: $\mathbf E=\rho\mathbf a/3\varepsilon_0$, uniform, $(3\times10^{-6})(0.02)/(3\times8.85\times10^{-12})=2.26\times10^{3}$ V m$^{-1}$, directed from $O$ towards $C$. (b) At $O$ the full sphere gives zero; the cavity sphere (charge $-\tfrac43\pi b^3\rho=-1.26\times10^{-11}$ C at $C$, and $O$ is outside it) gives $k\lvert q_{\text{cav}}\rvert/a^2=\rho b^3/3\varepsilon_0a^2=282$ V m$^{-1}$, pointing from $O$ towards $C$ (towards the negative charge). (c) $V(O)-V(C)=\int_O^CE_x\,dx$ along the line of centres ($x$ measured from $O$ towards $C$). Between $O$ and the cavity's near wall ($0\le x\le a-b$) the field is the full sphere's $\rho x/3\varepsilon_0$ plus the cavity sphere's $\rho b^3/3\varepsilon_0(a-x)^2$, both towards $C$; inside the cavity ($a-b\le x\le a$) it is the uniform $\rho a/3\varepsilon_0$. Integrating: $V(O)-V(C)=\dfrac{\rho}{3\varepsilon_0}\Bigl[\dfrac{(a-b)^2}{2}+b^3\Bigl(\dfrac1b-\dfrac1a\Bigr)+ab\Bigr]$; with $\rho/3\varepsilon_0=1.13\times10^{5}$ V m$^{-2}$ and the bracket $=0.5\times10^{-4}+0.5\times10^{-4}+2.0\times10^{-4}=3.0\times10^{-4}$ m$^2$, $V(O)-V(C)=+34$ V. (The naive "uniform field over the whole distance $a$", $Ea=45$ V, overestimates, because between $O$ and the cavity wall the field is weaker than inside the cavity.) (d) Uniform force $qE=2.26\times10^{-6}$ N along $OC$: constant acceleration towards the cavity wall on the far side from $O$ — it cannot rest anywhere inside (Earnshaw).
+
+> [!success] Check
+> (a) equals the full sphere's field at $r=a$ ✓ and is independent of $b$. (b) $\to0$ as $b\to0$ ✓. The bracket in (c) reduces to $a^2/2$ when $b\to0$, the full sphere's $V(0)-V(a)=\rho a^2/6\varepsilon_0$ ✓.
+
+</details>
+
+### P29 · 9 marks
+
+A short dipole $\mathbf p$ sits at the origin. (a) Starting from $V=kp\cos\theta/r^2$, derive $E_r$ and $E_\theta$. (b) Find the angle $\theta$ at which $\mathbf E$ is perpendicular to $\mathbf p$. (c) Find where $\mathbf E$ is perpendicular to $\mathbf r$. (d) With $p=1.0\times10^{-10}$ C m and $r=10$ cm, give $E$ at the angle found in (b).
+
+<details><summary>Solution</summary>
+
+(a) $E_r=-\partial_rV=2kp\cos\theta/r^3$; $E_\theta=-r^{-1}\partial_\theta V=kp\sin\theta/r^3$. (b) $\mathbf E\cdot\hat{\mathbf p}=E_r\cos\theta-E_\theta\sin\theta=\dfrac{kp}{r^3}(2\cos^2\theta-\sin^2\theta)=0\Rightarrow\tan\theta=\sqrt2$, $\theta=54.7^\circ$ (and $125.3^\circ$) — the field there points straight "across" the dipole. (c) $E_r=0\Rightarrow\theta=90^\circ$: the equatorial plane, where $\mathbf E$ is antiparallel to $\mathbf p$. (d) $\cos^2\theta=1/3$: $E=\dfrac{kp}{r^3}\sqrt{1+3\cos^2\theta}=\dfrac{(8.99\times10^9)(10^{-10})}{10^{-3}}\sqrt2=1.27\times10^{3}$ V m$^{-1}$.
+
+> [!success] Check
+> Second method for (a): superpose the axial and equatorial fields of the components $p\cos\theta$ and $p\sin\theta$ — (3.12) ✓. At $54.7^\circ$, $\tan\alpha=\tfrac12\tan\theta=0.707$, so $\alpha=35.3^\circ$ and $\alpha+\theta=90^\circ$ ✓ — consistent with $\mathbf E\perp\mathbf p$.
+
+</details>
+
+### P30 · 9 marks
+
+Two identical small balls of mass $m$ hang from a common point on light threads of length $\ell$; each carries charge $q$, and the separation $x$ is small compared with $\ell$. (a) Show that $x^3=2kq^2\ell/mg$. (b) The charge leaks away slowly at a constant rate $\beta=-dq/dt$. Show that the balls approach each other with speed proportional to $x^{-1/2}$ and find the constant. (c) For $m=1.0$ g, $\ell=1.0$ m and an initial separation of $10$ cm, find the initial charge.
+
+<details><summary>Solution</summary>
+
+(a) Small angles: $\tan\theta\approx\sin\theta=x/2\ell$, and $\tan\theta=F/mg=kq^2/mgx^2$; equate: $x^3=2kq^2\ell/mg$. (b) Differentiate: $3x^2\dot x=(4k\ell/mg)\,q\dot q=-(4k\ell\beta/mg)\,q$, and from (a) $q=\sqrt{mgx^3/2k\ell}$, so $\dot x=-\dfrac{4k\ell\beta}{3mg}\cdot\dfrac{1}{x^2}\sqrt{\dfrac{mgx^3}{2k\ell}}=-\dfrac{4}{3\sqrt2}\sqrt{\dfrac{k\ell}{mg}}\;\beta\,x^{-1/2}$: the speed grows as the balls approach, $\lvert\dot x\rvert=0.943\,\beta\sqrt{k\ell/mg}\;x^{-1/2}$. (c) $q_0=\sqrt{mgx^3/2k\ell}=\sqrt{(10^{-3})(9.8)(10^{-3})/(2\times8.99\times10^9)}=2.3\times10^{-8}$ C.
+
+> [!success] Check
+> Dimensions of $\beta\sqrt{k\ell/mg}\,x^{-1/2}$: (C s$^{-1}$)(N m$^2$ C$^{-2}$ m/N)$^{1/2}$ m$^{-1/2}$ $=$ m s$^{-1}$ ✓. The $10$ cm separation at $\ell=1$ m gives $\theta=2.9^\circ$: the small-angle forms are good to $0.1\%$ ✓.
+
+</details>
+
+### P31 · 9 marks
+
+A sphere of radius $R_1=4.0$ cm at $12$ kV is connected by a long thin wire to a distant neutral sphere of radius $R_2=12$ cm. (a) Find the final potential and charges. (b) Find the energy before and after, and derive the general loss formula $\Delta U=\dfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2$. (c) Where does the energy go, and why does the wire's resistance not appear? (d) What happens if the wire is a superconductor?
+
+<details><summary>Solution</summary>
+
+(a) $Q=V_1R_1/k=5.34\times10^{-8}$ C. Final $V=kQ/(R_1+R_2)=3.0$ kV; $Q_1=QR_1/(R_1+R_2)=1.34\times10^{-8}$ C, $Q_2=4.0\times10^{-8}$ C. (b) $U_i=\tfrac12QV_1=3.20\times10^{-4}$ J; $U_f=\tfrac12QV=8.0\times10^{-5}$ J; lost $2.4\times10^{-4}$ J, $75\%$. General: charge conserved, $C_1V_1+C_2V_2=(C_1+C_2)V$; $U_i-U_f=\tfrac12C_1V_1^2+\tfrac12C_2V_2^2-\tfrac12(C_1+C_2)V^2$; substitute $V$ and simplify to $\dfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2$ — with $C_i=4\pi\varepsilon_0R_i$ this gives $2.4\times10^{-4}$ J ✓. (c) Joule heat in the wire and electromagnetic radiation from the transient current. The final state is fixed by charge conservation and equal potentials alone, so the *amount* of energy that must leave is fixed too; the resistance only sets how fast it leaves ($\tau=RC$), exactly as the coefficient of restitution does not enter the energy loss of a perfectly inelastic collision once the final common velocity is fixed by momentum. (d) With no resistance the circuit's unavoidable inductance makes the charge oscillate between the spheres (an LC circuit, PART 21); the oscillating current radiates, and the same $2.4\times10^{-4}$ J leaves as radiation until the spheres settle at $3.0$ kV.
+
+> [!success] Check
+> Loss fraction with $V_2=0$: $C_2/(C_1+C_2)=R_2/(R_1+R_2)=0.75$ ✓. Equal spheres would lose exactly half (P20) ✓.
+
+</details>
+
+### P32 · 9 marks
+
+A point charge $q=10$ nC is held $h=5.0$ cm above a large earthed conducting plane. (a) State the image construction and show that it satisfies the boundary conditions; say why the solution is unique. (b) Find the force on $q$. (c) Find the induced surface density directly beneath $q$ and the total induced charge. (d) Find the work needed to move $q$ to infinity, and explain why it is not $kq^2/2h$.
+
+<details><summary>Solution</summary>
+
+(a) Replace the plane by $-q$ at the mirror point. The pair's potential is harmonic above the plane (the only source there is $q$), zero on the plane (equidistant from $\pm q$) and at infinity — the boundary data of the real problem. Uniqueness: two solutions would differ by a harmonic function vanishing on the boundary, which has no interior extremum and so is zero. (b) $F=kq^2/(2h)^2=(8.99\times10^9)(10^{-16})/(0.01)=9.0\times10^{-5}$ N, towards the plane. (c) $\sigma(0)=\varepsilon_0E_z(0)=-q/2\pi h^2=-(10^{-8})/(2\pi\times2.5\times10^{-3})=-6.4\times10^{-7}$ C m$^{-2}$; integrating $-qh/2\pi(\rho^2+h^2)^{3/2}$ over the plane gives $-q=-10$ nC. (d) $W=\int_h^\infty\dfrac{kq^2}{4z^2}dz=\dfrac{kq^2}{4h}=4.5\times10^{-6}$ J. It is half the two-charge energy because the image moves as $q$ moves: the integrand is the *actual* force $kq^2/4z^2$ at each stage, whereas a *fixed* partner $-q$ at distance $2h$ would need $\int_h^\infty kq^2\,dz/(z+h)^2=kq^2/2h$. Equivalently, the field — and hence the field energy $\int\tfrac12\varepsilon_0E^2dV$ — occupies only the upper half-space.
+
+> [!success] Check
+> $F=-dW/dh$: $d(kq^2/4h)/dh=-kq^2/4h^2$ ✓. Field lines meet the plane at right angles (an equipotential), and $\sigma$ falls to a quarter of its peak at $\rho=h\sqrt{2^{2/3}-1}=0.77h$ ✓ (from the $(\rho^2+h^2)^{-3/2}$ profile).
+
+</details>
+
+### P33 · 9 marks
+
+(a) Show that a charged conducting liquid drop of radius $R$ and surface tension $\gamma$ becomes unstable when its charge exceeds $Q_R=8\pi\sqrt{\varepsilon_0\gamma R^3}$. (b) Evaluate $Q_R$, the potential and the surface field for a water drop ($\gamma=0.072$ N m$^{-1}$) of radius $50\ \mu$m, and express $Q_R$ in electrons. (c) The drop at the limit splits into two equal drops sharing the charge equally. Are the daughters stable?
+
+<details><summary>Solution</summary>
+
+(a) Surface tension's inward pressure $2\gamma/R$ against the outward electrostatic pressure $\sigma^2/2\varepsilon_0=Q^2/32\pi^2\varepsilon_0R^4$; equality gives $Q^2=64\pi^2\varepsilon_0\gamma R^3$. (Rayleigh's full mode analysis gives the same threshold.) (b) $Q_R=8\pi\sqrt{(8.85\times10^{-12})(0.072)(1.25\times10^{-13})}=7.1\times10^{-12}$ C $=4.4\times10^{7}$ electrons; $V=kQ_R/R=1.28$ kV; $E=V/R=2.6\times10^{7}$ V m$^{-1}$ — above air's large-gap breakdown field, but breakdown fields rise steeply for gaps of tens of microns (Paschen), so the drop reaches the Rayleigh limit first. (c) Daughters: $R'=R/2^{1/3}=39.7\ \mu$m, $Q'=Q_R/2=3.55$ pC; their own limit is $Q_R(R')=Q_R/2^{1/2}=5.0$ pC. Each carries $0.71$ of its limit: stable. Fission relieves the instability, which is why electrospray produces a cascade of ever smaller charged droplets rather than a single explosion.
+
+> [!success] Check
+> $Q_R\propto R^{3/2}$ and $V\propto R^{1/2}$: a $1$ mm drop holds $0.63$ nC at $5.7$ kV ✓ (§10.9 numbers). Energy view: at the limit the electrostatic energy is $kQ_R^2/2R=k(64\pi^2\varepsilon_0\gamma R^3)/2R=8\pi\gamma R^2$ (using $4\pi\varepsilon_0k=1$), exactly twice the surface energy $4\pi R^2\gamma$ — a pure number, independent of $R$ and $\gamma$ ✓.
+
+</details>
+
+### P34 · 9 marks
+
+A sphere of radius $R=6.0$ cm carries $\rho=\rho_0(1-r/R)$ with $\rho_0=2.0\ \mu$C m$^{-3}$. (a) Find the total charge. (b) Find $E(r)$ inside and show that it has a maximum *inside* the sphere; locate it. (c) Compare the maximum with the surface field. (d) Find the potential at the centre.
+
+<details><summary>Solution</summary>
+
+(a) $Q=\int_0^R\rho_0(1-r/R)4\pi r^2dr=4\pi\rho_0\bigl(R^3/3-R^3/4\bigr)=\pi\rho_0R^3/3=4.5\times10^{-10}$ C. (b) $q_{\text{enc}}(r)=4\pi\rho_0(r^3/3-r^4/4R)$; Gauss: $E=\dfrac{\rho_0}{\varepsilon_0}\Bigl(\dfrac r3-\dfrac{r^2}{4R}\Bigr)$. $dE/dr=0$ at $\tfrac13=\tfrac{r}{2R}$: $r=\tfrac23R=4.0$ cm, where $E_{\max}=\rho_0R/9\varepsilon_0=1.51\times10^{3}$ V m$^{-1}$. (c) At the surface $E=\rho_0R/12\varepsilon_0=1.13\times10^{3}$ V m$^{-1}=\tfrac34E_{\max}$: the outer layers are so sparse that adding them increases $r^2$ faster than $q_{\text{enc}}$. (d) $V(R)=kQ/R=\rho_0R^2/12\varepsilon_0=67.8$ V; $V(0)-V(R)=\int_0^RE\,dr=\dfrac{\rho_0}{\varepsilon_0}\Bigl(\dfrac{R^2}{6}-\dfrac{R^2}{12}\Bigr)=\dfrac{\rho_0R^2}{12\varepsilon_0}=67.8$ V; $V(0)=\rho_0R^2/6\varepsilon_0=136$ V.
+
+> [!success] Check
+> $kQ/R$ from (a): $(8.99\times10^9)(4.52\times10^{-10})/0.06=67.7$ V ✓ matches $\rho_0R^2/12\varepsilon_0$. Uniform-sphere limit (drop the $r/R$ term): $E=\rho_0r/3\varepsilon_0$, monotonic, maximum at the surface ✓ — the interior maximum is a property of the decreasing density.
+
+</details>
+
+### P35 · 9 marks
+
+(a) For an electron in a circular orbit of radius $r$ about a proton, show from the force law alone that the kinetic energy is $-\tfrac12$ of the potential energy, and evaluate the total energy at $r=a_0=0.0529$ nm. (b) Two protons touch at a separation of $2.0$ fm; find the Coulomb barrier in MeV. (c) The Sun's core is at $1.5\times10^7$ K; compare $k_BT$ with the barrier, and find the temperature at which $k_BT$ would equal it. (d) State in one sentence why the Sun shines anyway.
+
+<details><summary>Solution</summary>
+
+(a) $mv^2/r=ke^2/r^2\Rightarrow K=\tfrac12mv^2=ke^2/2r=-\tfrac12U$ with $U=-ke^2/r$; total $E=U/2=-ke^2/2r$. At $a_0$: $U=-1.44\text{ eV nm}/0.0529\text{ nm}=-27.2$ eV, $E=-13.6$ eV — hydrogen's ionisation energy (the radius is Bohr's input; the energy ratio is pure electrostatics). (b) $U=ke^2/r=1.44\text{ MeV fm}/2\text{ fm}=0.72$ MeV. (c) $k_BT=(1.38\times10^{-23})(1.5\times10^7)/(1.6\times10^{-19})=1.3$ keV, $560$ times smaller than the barrier. Equality would need $T=0.72\text{ MeV}/k_B=8.4\times10^{9}$ K. (d) Quantum tunnelling through the barrier, weighted by the high-energy tail of the Maxwell distribution, gives a small but sufficient fusion rate — small enough that the Sun lasts $10^{10}$ years.
+
+> [!success] Check
+> The virial ratio $K=-U/2$ holds for any $1/r$ potential ✓ (gravity too: PART 9's orbital energies). Dimensions in (b): MeV fm / fm ✓.
+
+</details>
+
+### P36 · 9 marks
+
+(a) Prove that a point charge cannot be in stable equilibrium in the field of fixed charges, using Gauss's law. (b) A ring of radius $R$ carries $Q>0$; a charge $q<0$ of mass $m$ sits at its centre. Using $\nabla^2V=0$ and the axial potential, find the potential near the centre to second order and hence the axial oscillation frequency and the in-plane instability rate. (c) Evaluate for $Q=50$ nC, $R=10$ cm, $q=-5.0$ nC, $m=2.0$ mg. (d) Explain how the Paul trap evades (a).
+
+<details><summary>Solution</summary>
+
+(a) Stable equilibrium of a positive charge at $P$ requires the field on a small sphere around $P$ to point inward everywhere (restoring); then the flux is negative and the sphere encloses negative charge — but it encloses none. For a negative charge, replace inward by outward. (b) $V_{\text{axis}}=kQ(R^2+x^2)^{-1/2}\approx\dfrac{kQ}{R}\bigl(1-\tfrac{x^2}{2R^2}\bigr)$; with $V=V_0+Ax^2+B\rho^2$, Laplace gives $2A+4B=0$, so $B=-A/2=kQ/4R^3$: $V\approx\dfrac{kQ}{R}\Bigl(1-\dfrac{x^2}{2R^2}+\dfrac{\rho^2}{4R^2}\Bigr)$. For $q<0$: $m\ddot x=-\dfrac{k\lvert q\rvert Q}{R^3}x$, $\omega_x=\sqrt{k\lvert q\rvert Q/mR^3}$; $m\ddot\rho=+\dfrac{k\lvert q\rvert Q}{2R^3}\rho$, growth rate $\omega_x/\sqrt2$. (c) $k\lvert q\rvert Q/mR^3=(8.99\times10^9)(2.5\times10^{-16})/(2\times10^{-6}\times10^{-3})=1.12\times10^{3}$ s$^{-2}$: $\omega_x=33.5$ rad s$^{-1}$ ($5.3$ Hz), in-plane $e$-folding time $\sqrt2/\omega_x=42$ ms. (d) A Paul trap applies a saddle potential that *rotates* (oscillates) faster than the ion can respond; averaged over a cycle, the ion feels a net restoring force in every direction (the ponderomotive force, $\propto\nabla E^2$, the same physics as OL10 with the sign reversed). Earnshaw's theorem concerns *static* fields only.
+
+> [!success] Check
+> Second method for (b): the direct in-plane field expansion (OL1, method 2) gives $E_\rho=kQ\rho/2R^3$ outward ✓. Weighted curvature sum $-kQ/R^3+2(kQ/2R^3)=0$ ✓ (Laplace).
+
+</details>
 
 ## Part 12 · Marking scheme and post-paper audit
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3 with the paper: the mark distribution summing to 200, the question-to-block map, and the diagnostic table ("if you lost marks here, reread §…").
+| Section | Marks each | Questions | Subtotal |
+|---|---:|---:|---:|
+| A | 4 | 12 | 48 |
+| B | 4 | 8 | 32 |
+| C | 5 | 6 | 30 |
+| D | 9 | 10 | 90 |
+| **Total** | | 36 | **200** |
+
+**Which block each question tested.** A: P1 §3.11, P2 §3.4, P3 §3.8, P4 §3.10, P5 §3.22, P6 §3.27, P7 §3.21, P8 §3.25, P9 §3.33, P10 §3.33 and Part 10 (mean-value idea), P11 §3.13, P12 §3.36. B: P13 §3.18 and §3.27, P14 §3.3 and §3.25, P15 §3.9 and §3.31, P16 §3.22, P17 §3.33, P18 §3.8, P19 §3.30, P20 §3.34. C: P21 §3.4, P22 §3.33, P23 §3.22, P24 §3.34, P25 §3.13, P26 §3.32. D: P27 §3.7 and OL3, P28 §3.18 and OL6, P29 §3.31, P30 §3.13 and E10, P31 §3.34, P32 OL2, P33 OL9, P34 §3.18 and §3.27, P35 §3.37 and §3.2's force balance, P36 §3.16 and OL1. Blocks 2, 3, 4 and 10 are each tested by at least three questions.
+
+**Section D partial credit.** 3 marks for the method named and set up correctly, 4 for the derivation or computation with units, 2 for the checks (limit, dimension or second method). A correct number with no method earns 4 of 9.
+
+**Diagnostic table.**
+
+| If you lost marks on | the likely gap | reread |
+|---|---|---|
+| P1, P13, P14 | field-line rules and null points | §3.3, §3.11 |
+| P2, P21 | the ring's axial family and its maximum | §3.4, E2 |
+| P3, P17, P18, P22 | conductor properties and the factor of two | §3.8, §3.33, T5 |
+| P4, P15, P29 | the dipole family, exact and far-field | §3.9–§3.10, §3.31 |
+| P5, P16, P23 | flux without the field | §3.22, T6 |
+| P6, P24, P34 | potentials of spheres and shells | §3.27, §3.34 |
+| P7, P32 | induced charges; the image construction | §3.21, OL2 |
+| P8, P19, P20 | conservative field; zeros; sharing | §3.25, §3.30, §3.34 |
+| P9, P31 | equal potentials, $Q\propto R$, the energy audit | §3.33–§3.34, E16 |
+| P10 | the mean-value property of harmonic functions | §10.1–§10.2 |
+| P11, P25, P30 | charges in fields; the hanging-ball geometry | §3.13, E9, E10 |
+| P12, P27, P33 | pressure and energy density | §3.36, §10.3, OL3, OL9 |
+| P26 | pair energies | §3.32, E17 |
+| P28 | superposition with negative charge | §3.18, T1, OL6 |
+| P35 | the $1.44$ scales | §3.37, OL12 |
+| P36 | Earnshaw by Gauss and by Laplace | §3.16, §10.1, OL1 |
 
 ## Part 13 · Formula sheet
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: every formula of Parts 3–4 with its validity condition, the sign conventions of §2.2, the flux-fraction table, the $\rho\propto r^n$ table, the standard potentials, and the constants of §0.4, laid out for two printed A4 pages.
+| formula | validity |
+|---|---|
+| $\mathbf F_{12}=kq_1q_2\hat{\mathbf r}_{12}/r^2$, $k=1/4\pi\varepsilon_0=8.99\times10^9$ | point charges at rest; $\hat{\mathbf r}_{12}$ from 1 to 2 |
+| $\mathbf E=\mathbf F/q_0$, $q_0\to0$; $\mathbf E=kq\hat{\mathbf r}/r^2$; superpose vectors | static sources |
+| ring $kQx/(x^2+R^2)^{3/2}$, max $0.385\,kQ/R^2$ at $R/\sqrt2$ | axis |
+| rod $\tfrac{k\lambda}{d}(\sin\alpha+\sin\beta)$, $\tfrac{k\lambda}{d}(\cos\beta-\cos\alpha)$; line $2k\lambda/d$; end-on $kQ/a(a+L)$ | uniform $\lambda$ |
+| disc $\tfrac{\sigma}{2\varepsilon_0}(1-x/\sqrt{x^2+R^2})$; sheet $\sigma/2\varepsilon_0$; arc $2k\lambda\sin(\theta_0/2)/R$ | axis / centre |
+| shell $0$, $kQ/r^2$; sphere $kQr/R^3$, $kQ/r^2$; cavity $\rho\mathbf a/3\varepsilon_0$ | uniform; $\rho\propto r^n\Rightarrow E\propto r^{n+1}$ |
+| cylinder $\rho r/2\varepsilon_0$, $\lambda/2\pi\varepsilon_0r$; slab $\rho x/\varepsilon_0$, $\rho d/2\varepsilon_0$ | infinite |
+| conductor: $E=0$ inside, $\sigma/\varepsilon_0$ outside, normal, one $V$; cavity wall $-q$, outside $+q$ | equilibrium |
+| plates: outer $\tfrac12(Q_1+Q_2)$, inner $\pm\tfrac12(Q_1-Q_2)$ | large parallel conductors |
+| dipole $\mathbf p=q\mathbf d$ ($-$ to $+$): $2kp/r^3$, $kp/r^3$, $\tfrac{kp}{r^3}\sqrt{1+3\cos^2\theta}$, $\tan\alpha=\tfrac12\tan\theta$; $V=kp\cos\theta/r^2$ | $r\gg d$; exact $2kpr/(r^2-a^2)^2$, $kp/(r^2+a^2)^{3/2}$ |
+| $\boldsymbol\tau=\mathbf p\times\mathbf E$, $U=-\mathbf p\cdot\mathbf E$, $W=pE(\cos\theta_1-\cos\theta_2)$, $\omega=\sqrt{pE/I}$, $F=p\,dE/dx$ | uniform $\mathbf E$ (first four) |
+| null point $L\sqrt{q_1}/(\sqrt{q_1}+\sqrt{q_2})$; third charge $-q_1q_2/(\sqrt{q_1}+\sqrt{q_2})^2$; square centre $-(1+2\sqrt2)q/4$ | collinear like charges; all saddles |
+| $a=qE/m$; $y=EL^2/4V_{\text{acc}}$, $\tan\theta=EL/2V_{\text{acc}}$, apparent origin $L/2$; pendulum $\tan\theta_0=qE/mg$ | uniform field, $v\ll c$ |
+| $\Phi=\oint\mathbf E\cdot d\mathbf A=q_{\text{enc}}/\varepsilon_0$; $d\Phi=q\,d\Omega/4\pi\varepsilon_0$ | closed surface; outward normal |
+| cube: centre $\tfrac16$, corner $\tfrac1{24}$ (far faces), edge $\tfrac1{16}$, face-centre far face $0.064$; disc $\tfrac{q}{2\varepsilon_0}(1-\cos\theta)$ | charge exactly at the point |
+| $\oint\mathbf E\cdot d\mathbf l=0$; $V=-\int\mathbf E\cdot d\mathbf l$; $\mathbf E=-\nabla V$; $E_r=-\partial_rV$, $E_\theta=-r^{-1}\partial_\theta V$ | statics |
+| $V=kq/r$; ring $kQ/\sqrt{R^2+x^2}$; disc $\tfrac{\sigma}{2\varepsilon_0}(\sqrt{R^2+x^2}-x)$; shell $kQ/R$ in; sphere $kQ(3R^2-r^2)/2R^3$; line $2k\lambda\ln(d_0/d)$ | $V(\infty)=0$ except the line |
+| $U=\sum_{i<j}kq_iq_j/r_{ij}=\tfrac12\sum q_iV_i$; external $qV_{\text{ext}}$; square $(4+\sqrt2)kq^2/a$; triangle $3kq^2/a$ | mutual energy, no self-terms |
+| spheres joined: $Q\propto R$, $\sigma\propto1/R$, $E\propto1/R$; $\Delta U=\tfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2$, $C=4\pi\varepsilon_0R$ | far apart |
+| shells: $V_a=kq/a+kQ/b$, $V_b=k(q+Q)/b$; earth outer $\Rightarrow Q=-q$; earth inner $\Rightarrow q=-Qa/b$ | concentric |
+| self-energy $kQ^2/2R$ (shell), $3kQ^2/5R$ (sphere); $u=\tfrac12\varepsilon_0E^2$; pressure $\sigma^2/2\varepsilon_0$ | static |
+| image: $-q$ at mirror; $F=kq^2/4h^2$; $\sigma=-qh/2\pi(\rho^2+h^2)^{3/2}$; $U=-kq^2/4h$ | earthed plane |
+| Rayleigh $Q_R=8\pi\sqrt{\varepsilon_0\gamma R^3}$; bubble $8\pi\sqrt{2\varepsilon_0\gamma R^3}$; $Q_{\max}=E_bR^2/k$, $V_{\max}=E_bR$ | conducting drop; two surfaces; air |
+| $\tfrac12mv^2=qV$; $1$ eV $=1.60\times10^{-19}$ J; $ke^2=1.44$ eV nm $=1.44$ MeV fm; $r_e=2.8$ fm | non-relativistic below $\sim50$ kV (electrons) |
+| Numbers: $\varepsilon_0=8.85\times10^{-12}$ F m$^{-1}$, $e=1.60\times10^{-19}$ C, $m_e=9.11\times10^{-31}$ kg, $m_p=1.67\times10^{-27}$ kg, $E_b=3\times10^6$ V m$^{-1}$, $a_0=0.0529$ nm, $k_BT_{300}=0.026$ eV, fair-weather $100$ V m$^{-1}$ | |
 
 ## Part 14 · Checkpoint and hand-off
 
-> [!warning] Stage 3 deliverable
-> Written in stage 3: the 25 "can I do this?" statements with self-scoring, what the next modules assume from this one (the field and potential of a charge distribution for [[Capacitors|capacitors]], the conservative-field argument for [[Current-electricity|circuits]], the charge-in-a-field kinematics and the dipole family for the magnetism module, the energy density for [[Electromagnetic-waves|EM waves]]), and the open questions the reader is now equipped to attack.
+- [ ] I can write Coulomb's law in vector form and get every direction from the signs.
+- [ ] I can explain why the test charge must be small, and what field lines can and cannot tell me.
+- [ ] I can run the element-and-symmetry method on a ring, a rod, a disc, an arc and a shell, and take each limit.
+- [ ] I can derive $\sigma/2\varepsilon_0$ for a sheet and $\sigma/\varepsilon_0$ for a conductor, and say where the factor of two comes from.
+- [ ] I can apply the four-face rule to parallel plates.
+- [ ] I can derive the dipole's axial, equatorial and general fields, its torque, energy and gradient force, and bound the far-field error.
+- [ ] I can place a third charge for equilibrium and say why it is a saddle.
+- [ ] I can solve the electron-through-plates, charged-pendulum and Millikan problems.
+- [ ] I can prove Gauss's law from the solid angle and state what it rests on.
+- [ ] I can run the Gaussian-surface protocol for the three symmetries and write $q_{\text{enc}}$ for a non-uniform $\rho$.
+- [ ] I can find the field inside an off-centre cavity by superposition.
+- [ ] I can write the induced charges on a conductor with a cavity, earthed or not, and say what the outside can and cannot learn.
+- [ ] I can share a charge's flux among the faces of a cube in every standard position, and use the solid angle where symmetry stops.
+- [ ] I can prove the Coulomb field is conservative and hence that field lines never close.
+- [ ] I can define the potential with a reference, and choose the reference correctly for finite and infinite distributions.
+- [ ] I can write the potentials of the standard distributions and read $V$ and $E$ graphs of a shell.
+- [ ] I can go from $V$ to $\mathbf E$ and back, in Cartesian and in polar coordinates.
+- [ ] I can explain why $V=0$ and $\mathbf E=0$ are unrelated, with three examples each.
+- [ ] I can derive the half in $\tfrac12\sum q_iV_i$ and say when there is no half.
+- [ ] I can derive the conductor's properties, the $Q\propto R$ sharing rule, and the energy lost on connection, and say where it goes.
+- [ ] I can compute self-energies by assembly and by the field integral, and interpret the classical electron radius as a warning.
+- [ ] I can prove Earnshaw's theorem two ways and quantify the ring's saddle.
+- [ ] I can set up the image charge for a plane, justify it, and extract force, induced charge and energy.
+- [ ] I can derive the electrostatic pressure two ways and apply it to a bubble and to a drop's Rayleigh limit.
+- [ ] I can estimate the interatomic field, the charge that lifts a paper scrap, an inkjet deflection and a Van de Graaff's current.
+
+Score one point per honest tick. Below 15: reread Part 3 in order. 15–20: work Part 6's variations and Part 8's traps. Above 20: sit Part 11 against the clock.
+
+**What the next chapters inherit.** The [[Capacitors|capacitors]] note starts from two conductors at a potential difference — this chapter's §3.6, §3.8, §3.33 and the energy density of §3.36 — and its dielectric section extends §3.23. [[Current-electricity|Current electricity]] assumes that a potential difference is a conservative line integral (§3.25) and that a conductor in equilibrium is an equipotential, then breaks the equilibrium with a battery. The magnetism module (PART 16 onward) reuses the charge-in-a-field kinematics of §3.13, the dipole family of §3.9–§3.10 as the template for magnetic moments, and the superposition tricks of OL6 for currents. Induction (PART 20) is the sentence "§3.25 no longer holds". [[Electromagnetic-waves|Electromagnetic waves]] carry the energy density $\tfrac12\varepsilon_0E^2$ into empty space.
+
+**Open questions now attackable.** Why is the capacitance of a thin wire almost independent of its thickness? (§10.5's logarithm.) How does a lightning rod work quantitatively — what field enhancement does a tip of radius $1$ mm give at $10$ kV? (§3.33 with $\sigma\propto1/R_{\text{local}}$.) How small can a charged droplet be before it evaporates its own charge as ions? (OL9's Rayleigh scaling against the ionisation energy.) Why do dust and pollen stick to screens? (OL10's gradient force with the screen's field.) What is the smallest charge a single-electron device can detect? (P32's induced charge, read as a signal.)

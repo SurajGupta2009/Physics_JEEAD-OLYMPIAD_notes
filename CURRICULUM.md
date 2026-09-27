@@ -124,9 +124,9 @@ python3 tools/html_to_markdown.py
 The way the syllabus is taught, and the order the Obsidian dashboards use
 ([`_obsidian/dashboards/spine.md`](_obsidian/dashboards/spine.md)): every chapter relies only on the
 ones above it. The `order` is registered in `topics.json` and written into each chapter's
-frontmatter; `tools/check_all.py` keeps the two equal. Slot 17, the electrostatics module
-(plan.md PARTs 13–15 merged into one chapter), is **in progress**; the seven **pending** slots are
-the magnetism → induction → AC chapters listed in [PENDING.md](PENDING.md).
+frontmatter; `tools/check_all.py` keeps the two equal. Slot 17 is the electrostatics module
+(plan.md PARTs 13–15 merged into one chapter, complete); the seven **pending** slots are the
+magnetism → induction → AC chapters listed in [PENDING.md](PENDING.md).
 
 | order | chapter | block | plan.md PART | status | it supplies the next chapters with |
 |:-:|---|---|:-:|:-:|---|
@@ -146,7 +146,7 @@ the magnetism → induction → AC chapters listed in [PENDING.md](PENDING.md).
 | 14 | [Sound waves](sound-waves/Sound-waves.md) | waves | — | ✅ | intensity as energy flux, pipes, beats, Doppler |
 | 15 | [Thermodynamics](thermodynamics/Thermodynamics.md) | thermal | — | ✅ | kinetic theory, the two laws, $\gamma$, entropy |
 | 16 | [Heat](heat/Heat.md) | thermal | — | ✅ | expansion, calorimetry, conduction / convection / radiation |
-| 17 | [Electrostatics](electrostatics/Electrostatics.md) | electricity-magnetism | 13–15 | 🚧 stage 1/3 | charge and Coulomb, the field of any distribution, Gauss, potential, energy of charges, conductors |
+| 17 | [Electrostatics](electrostatics/Electrostatics.md) | electricity-magnetism | 13–15 | ✅ | charge and Coulomb, the field of any distribution, Gauss, potential, energy of charges, conductors |
 | 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
 | 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | electricity-magnetism | 16 | ⏳ pending | fields of currents, force on charges and wires |

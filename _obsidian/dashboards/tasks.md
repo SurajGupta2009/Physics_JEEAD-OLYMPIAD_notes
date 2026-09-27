@@ -7,7 +7,7 @@
 
 ## Chapters (PART 13–22, Electricity & Magnetism)
 
-- [/] `electrostatics` — plan.md PART 13 + 14 + 15 as one module: stage 1 (theory) done; stage 2 (exemplars, practice, toolkit, traps, playbook) and stage 3 (Olympiad block, paper, formula sheet, checkpoint) open
+- [x] `electrostatics` — plan.md PART 13 + 14 + 15 as one module (all three stages shipped 2026-09-27)
 - [ ] `magnetic-field` — plan.md PART 16
 - [ ] `amperes-law` — plan.md PART 17
 - [ ] `moving-charges-magnetism` — plan.md PART 18
@@ -21,8 +21,8 @@
 - [ ] run `python3 tools/obsidian_plugins.py` once on a machine with internet, then commit `.obsidian/plugins/*/{main.js,manifest.json,styles.css}` so the vault works out of the box (`.obsidian/README` section of [`_obsidian/README.md`](../README.md))
 - [ ] when PART 22 lands: mark plan.md complete in [PENDING.md](../../PENDING.md), regenerate `docs/site/` (`python3 tools/md_site.py`)
 
-**Shipped** (do not re-queue): 28 of the 29 topics registered in `topics.json` have status `complete` —
-PART 1–12, PART 23–28, the nine original note-sets and `communication-systems`.
+**Shipped** (do not re-queue): all 29 topics registered in `topics.json`, status `complete` —
+PART 1–12, PART 13–15 (as `electrostatics`), PART 23–28, the nine original note-sets and `communication-systems`.
 
 ## Every open checkbox in the vault (Tasks plugin)
 

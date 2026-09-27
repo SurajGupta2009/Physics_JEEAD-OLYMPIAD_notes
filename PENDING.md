@@ -4,38 +4,38 @@ Regenerated 2026-09-27 from the repository state (`topics.json` + the topic fold
 with `python3 tools/check_all.py` (29 registered topics, gate green). The Obsidian mirror of this
 list is [`_obsidian/dashboards/pending.md`](_obsidian/dashboards/pending.md).
 
-**Score: 18 of the 28 [plan.md](plan.md) parts are written, 3 are in progress as one module, 7
-remain.** Mechanics (PART 1–12) and Modern Physics (PART 23–28) are closed. PART 13–15 are being
-written as the single **`electrostatics/`** module (stage 1 of 3 done — see §1a). Everything left
-after it is **magnetism → induction → AC, PART 16–22** — the only chapter-sized gaps in the syllabus
-this repository set out to cover.
+**Score: 21 of the 28 [plan.md](plan.md) parts are written; 7 remain.** Mechanics (PART 1–12),
+Electrostatics (PART 13–15, shipped as the single **`electrostatics/`** module — see §1a) and Modern
+Physics (PART 23–28) are closed. Everything left is **magnetism → induction → AC, PART 16–22** —
+the only chapter-sized gaps in the syllabus this repository set out to cover.
 
 ## 0 · Score board
 
 | block | parts | written | remaining |
 |---|---|---:|---:|
 | A · Mechanics | 1–12 | 12 | — |
-| B · Electricity & magnetism | 13–22 | 0 (+ 13–15 in progress as `electrostatics/`) | **7** |
+| B · Electricity & magnetism | 13–22 | 3 (13–15 as `electrostatics/`) | **7** |
 | C · Modern physics | 23–28 | 6 | — |
 | Original note-sets (plan.md Appendix A: waves, thermal, capacitors, current, optics) | — | 9 | — |
 | Appendix chapter (`communication-systems`, JEE-Main depth) | — | 1 | — |
 
-## 1a · In progress — the electrostatics module (PART 13 + 14 + 15)
+## 1a · Shipped as one module — electrostatics (PART 13 + 14 + 15)
 
 At the owner's direction (2026-09-27) the three electrostatics parts are one chapter,
 [`electrostatics/Electrostatics.md`](electrostatics/Electrostatics.md), slot **17** of the course
-spine, written in three stages so that every turn ships something whole:
+spine, written in three stages in one day:
 
-| stage | blocks | delivers | state |
-|:-:|---|---|---|
-| 1 | Parts 0–3 | orientation, intuition, definitions, and the **complete theory** of Cengage chs 1–3 in teaching order (§3.1–§3.37, every result derived, most twice) | **done** — 21 500 words, 7 FIGUREs, 23 DIAGRAM briefs |
-| 2 | Parts 4–9 | validity ledger, E1–E20, archetype table (≥ 30 rows) + Q1–Q50, toolkit, traps, playbook | next |
-| 3 | Parts 10–14 | Olympiad extension OL1–OL12, the 36-question / 200-mark paper, marking scheme, formula sheet, checkpoint | after that |
+| stage | blocks | delivered |
+|:-:|---|---|
+| 1 | Parts 0–3 | orientation, intuition, definitions, and the **complete theory** of Cengage chs 1–3 in teaching order (§3.1–§3.37, every result derived, most twice) |
+| 2 | Parts 4–9 | validity ledger, C1–C14, E1–E20, archetype table (34 rows) + Q1–Q56, toolkit T1–T10, 18 traps, playbook |
+| 3 | Parts 10–14 | Olympiad extension with OL1–OL12, the 36-question / 200-mark paper, marking scheme, formula sheet, checkpoint |
 
-Its gate (`electrostatics/tools/check.py`) is stage-aware: reading-mode, media and maths rules from
-stage 1, question families and the paper when their stage arrives (`electrostatics/notes.json`).
-The plan.md sections for PART 13, 14 and 15 remain the content checklist; the chapter's block-0
-coverage map accounts for every heading of the three Cengage chapters.
+Totals: 41 000 words, 10 Mermaid FIGUREs, 26 DIAGRAM briefs. Its gate (`electrostatics/tools/check.py`)
+is stage-aware and now runs the full plan.md §1 contract (`electrostatics/notes.json` → `stage: 3`).
+The plan.md sections for PART 13, 14 and 15 were the content checklist; the chapter's block-0
+coverage map accounts for every heading of the three Cengage chapters. This is the model for a
+future merge should the owner want one (e.g. PART 20–22 as a single induction → AC chapter).
 
 ## 1 · The seven pending chapters, in teaching order
 
@@ -58,7 +58,6 @@ must-derive list, the figure briefs and the Olympiad block for every part are in
 
 ### Scope, chapter by chapter (the JEE floor each must cover; the Olympiad layer is plan.md §4)
 
-- **13–15 · electrostatics** (in progress, §1a) — the scope of the three plan.md parts, now the block-3 teaching order of one chapter: charge → Coulomb → field and the element-and-symmetry method → conductors and dipoles → charges in fields → flux and Gauss → potential, energy, conductors and sharing.
 - **16 · magnetic-field** — Biot–Savart; the field of a straight wire (finite and infinite), arc, loop (on axis), solenoid, toroid; the Lorentz force and its perpendicularity; force on a current element and on a wire; torque on a loop and the magnetic moment; the ampere; parallel currents.
 - **17 · amperes-law** — Ampère's circuital law and the symmetry protocol; wire, thick wire, sheet, solenoid, toroid; forces between currents; the dipole interaction; magnetic pressure; no monopoles ($\nabla\cdot\mathbf B=0$); the displacement-current preview that `electromagnetic-waves/` completes.
 - **18 · moving-charges-magnetism** — circular and helical motion, the cyclotron frequency; velocity selector; mass spectrometer; the cyclotron and its relativistic limit; $\mathbf E\times\mathbf B$ drift; magnetic mirror; Hall effect; the $e/m$ measurement.
@@ -71,7 +70,7 @@ must-derive list, the figure briefs and the Olympiad block for every part are in
 
 | batch | parts | rule |
 |---|---|---|
-| 1 | 13 + 14 + 15 | **merged** into `electrostatics/`, written in three stages (§1a); the only batch with a PDF to sweep |
+| 1 | 13 + 14 + 15 | **shipped** as the merged `electrostatics/` module (§1a) |
 | 2 | 16 → 17 | serial |
 | 3 | 18 ∥ 19 | parallel — both need only 17 |
 | 4 | 20 → 21 → 22 | **one continuous argument; never split across writers** |
@@ -95,7 +94,7 @@ them:
 Anything a reader still misses after all 28 parts is a *new* part: add it as PART 29+ at the end
 of plan.md with the same §1 contracts, and register it the same way.
 
-## 3 · Done — the eighteen written parts
+## 3 · Done — the twenty-one written parts
 
 | PART | slug | order | location |
 |---:|---|:-:|---|
@@ -111,6 +110,7 @@ of plan.md with the same §1 contracts, and register it the same way.
 | 10 | `simple-harmonic-motion` | 10 | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) |
 | 11 | `fluid-mechanics` | 11 | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) — landed in band (large) |
 | 12 | `elasticity` | 12 | [Elasticity.md](elasticity/Elasticity.md) — ~15 600 words, above the compact band; the overshoot is recorded, not hidden |
+| 13–15 | `electrostatics` | 17 | [Electrostatics.md](electrostatics/Electrostatics.md) — one merged chapter, ~41 000 words (three large-band parts in one file) |
 | 23 | `photoelectric-effect` | 30 | [Photoelectric-effect.md](photoelectric-effect/Photoelectric-effect.md) |
 | 24 | `atomic-structure` | 31 | [Atomic-structure.md](atomic-structure/Atomic-structure.md) |
 | 25 | `x-rays` | 32 | [X-rays.md](x-rays/X-rays.md) |
@@ -165,7 +165,7 @@ Plus `communication-systems` (order 35): JEE-Main depth, deliberately not a plan
 
 | integration point | state |
 |---|---|
-| `topics.json` registry | 29 topics (28 `complete`, `electrostatics` `in-progress`), each with `format` / `entry` / `owner` / `order` / `block` and mechanically recounted counts; gate green |
+| `topics.json` registry | 29 topics, all `complete`, each with `format` / `entry` / `owner` / `order` / `block` and mechanically recounted counts; gate green |
 | `tools/check_all.py` | green; also checks that every master's frontmatter `order`/`block` equals the registry |
 | Obsidian vault | `.obsidian/` committed (settings, CSS snippet, eight plugins configured and pinned in `plugins.lock.json`); plugin binaries are fetched by `python3 tools/obsidian_plugins.py` — see [`_obsidian/README.md`](_obsidian/README.md) |
 | `tools/md_site.py` / `docs/site/` | all 29 topics render; regenerated 2026-09-27 |

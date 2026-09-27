@@ -5,8 +5,8 @@ taught: every chapter uses only what the chapters above it have already derived.
 the `order:` and `block:` properties in each chapter's frontmatter (registered in `topics.json`
 and checked by `tools/check_all.py`), so the live table at the bottom cannot drift from this one.
 
-Slot 17 is the electrostatics module (plan.md PARTs 13–15 merged into one chapter, being written
-in three stages). The seven **pending** rows are the magnetism → induction → AC chapters still to
+Slot 17 is the electrostatics module (plan.md PARTs 13–15 merged into one chapter, complete). The
+seven **pending** rows are the magnetism → induction → AC chapters still to
 be written ([PENDING.md](../../PENDING.md) · [pending dashboard](pending.md)); their slots are
 reserved so the numbering will not move when they land.
 
@@ -40,7 +40,7 @@ reserved so the numbering will not move when they land.
 
 | # | chapter | plan PART | status | why here |
 |--:|---|:-:|:-:|---|
-| 17 | [Electrostatics](../../electrostatics/Electrostatics.md) | 13–15 | **in progress** (stage 1/3: theory done) | Coulomb's law summed three ways — vectors (field), surfaces (flux), scalars (potential); the element-and-symmetry method; conductors; dipoles; energy |
+| 17 | [Electrostatics](../../electrostatics/Electrostatics.md) | 13–15 | complete | Coulomb's law summed three ways — vectors (field), surfaces (flux), scalars (potential); the element-and-symmetry method; conductors; dipoles; energy |
 | 18 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
 | 19 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | Magnetic field, Biot–Savart & the Lorentz force — `magnetic-field` | 16 | **pending** | the field of a current; the force on a moving charge and on a wire |

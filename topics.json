@@ -12,7 +12,7 @@
     {
       "slug": "electrostatics",
       "title": "Electrostatics — first principles to Olympiad",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "electrostatics/Electrostatics.md",
       "format": "markdown",
@@ -25,7 +25,7 @@
       "part": 13,
       "order": 17,
       "block": "electricity-magnetism",
-      "stage": "1 of 3 — Parts 0–3 (theory) complete; Parts 4–9 in stage 2, Parts 10–14 in stage 3",
+      "stage": "3 of 3 — complete (theory, exam craft, Olympiad layer and paper)",
       "source": "CENGAGE Electro statics and current electricity-compressed.pdf, ch 1 Coulomb's Laws and Electric Field (pp. 1.2-1.41), ch 2 Electric Flux and Gauss's Law (pp. 2.1-2.25), ch 3 Electric Potential (pp. 3.1-3.30)",
       "exam": [
         "JEE Advanced",
@@ -51,7 +51,11 @@
         "the which-fields-are-conservative drill with a circulating counter-example that previews induction (3.25)",
         "the two-connected-spheres energy audit as the electrostatic inelastic collision, with the resistance-independence argument (3.34)",
         "the field-energy integral checked on the solid sphere, interior and exterior, against layer assembly (3.36)",
-        "the uranium Coulomb self-energy against the total binding energy, tying 3/5 kQ^2/R to the semi-empirical mass formula (3.37)"
+        "the uranium Coulomb self-energy against the total binding energy, tying 3/5 kQ^2/R to the semi-empirical mass formula (3.37)",
+        "the first-order interior field of a shell for a 1/r^(2+eps) law, E = -(eps/3) kQ r/R^3, and the design of a null test (10.4, OL8)",
+        "the charged-drop coalescence threshold at about 0.42 of the Rayleigh charge (OL9)",
+        "the sealed charged bubble as a lesson in stiffness (OL4)",
+        "the mean-value argument for the potential of a neutral sphere near a point charge (P10)"
       ],
       "deliberately_not_covered": [
         "capacitance and dielectrics beyond the D-vector pointer (owned by capacitors/)",
@@ -61,20 +65,20 @@
         "quantum effects beyond the classical-electron-radius warning"
       ],
       "next_candidates": [
-        "stage 2: Parts 4-9 (validity ledger, E1-E20, archetype table + Q1-Q50, toolkit, traps, playbook)",
-        "stage 3: Parts 10-14 (Olympiad extension OL1-OL12, 36-question paper, marking, formula sheet, checkpoint)"
+        "upgrade DIAGRAM D13.4 (field-line patterns) and D13.20 (equipotential maps) to rendered figures if a suitable Mermaid idiom appears",
+        "a companion Excalidraw sheet for the 26 DIAGRAM briefs"
       ],
       "pages": [
         "Electrostatics.md"
       ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 1,
-      "math_spans": 1579,
+      "questions": 90,
+      "solutions": 127,
+      "math_spans": 3958,
       "bytes_html": 0,
-      "bytes_markdown": 141617,
-      "words": 21559,
-      "display_formulas": 49
+      "bytes_markdown": 281301,
+      "words": 40988,
+      "display_formulas": 56
     },
     {
       "slug": "capacitors",
