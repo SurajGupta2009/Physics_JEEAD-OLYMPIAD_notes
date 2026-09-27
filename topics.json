@@ -325,7 +325,7 @@
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
       ],
       "part": 9,
-      "order": 28,
+      "order": 25,
       "block": "optics"
     },
     {
@@ -373,7 +373,7 @@
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
       ],
       "part": 4,
-      "order": 29,
+      "order": 26,
       "block": "optics",
       "note": ""
     },
@@ -465,6 +465,77 @@
       "block": "waves"
     },
     {
+      "slug": "magnetism",
+      "title": "Magnetism — from the Lorentz force to the Earth's field",
+      "status": "in-progress",
+      "owner": "arena-agent",
+      "entry": "magnetism/Magnetism.md",
+      "format": "markdown",
+      "plan_part": 16,
+      "plan_parts": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "part": 16,
+      "order": 20,
+      "block": "electricity-magnetism",
+      "stage": "1 of 3 — Parts 0–3 (theory) complete; Parts 4–9 in stage 2, Parts 10–14 in stage 3",
+      "source": "no Cengage magnetism volume in this repository; coverage map from the standard JEE Advanced headings in plan.md PART 16-19 plus the shipped current-electricity and electromagnetic-waves notes",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; mermaid FIGURE callouts + DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "vectors",
+        "motion-in-two-dimensions",
+        "rotational-mechanics",
+        "simple-harmonic-motion",
+        "thermodynamics",
+        "electrostatics",
+        "current-electricity"
+      ],
+      "beyond_plan": [
+        "the adiabatic invariant mu = m v_perp^2 / 2B derived from div B = 0 and energy conservation, with the loss cone (3.8)",
+        "the gradient drift derived from the averaged force, with the ring current as consequence (3.10)",
+        "the n-gon field with its circular limit as a check on wire and loop formulas (3.14)",
+        "the moving charge's field as v x E / c^2 with mu0 eps0 = 1/c^2, previewing the relativistic origin (3.13, 2.5)",
+        "the wire-with-a-hole uniform field as an application of the overlap trick, with numbers (3.20)",
+        "the current-sheet force (B1^2 - B2^2)/2mu0 derived with the electrostatic factor-of-two logic (3.26)",
+        "the motor puzzle resolved with the back-EMF accounting (3.27)",
+        "the rotating disc's field and moment checked against the gyromagnetic ratio (3.28)",
+        "the Larmor derivation of the diamagnetic susceptibility checked against real materials (3.32)",
+        "the hysteresis loss as the closed integral of H dB from the source's work, with transformer numbers (3.34)",
+        "the gapped magnetic circuit B = mu0 N I / (g + l/mu_r) and the lift cap set by saturation (3.35, 3.36)",
+        "the Earth's dipole moment reconstructed from the equatorial field; the thermal-energy argument for biological compasses (3.38)"
+      ],
+      "deliberately_not_covered": [
+        "anything with a changing flux: Faraday, Lenz, inductance, AC (PART 20-22)",
+        "the derivation of the energy density B^2/2mu0 (announced and checked; PART 21 derives it)",
+        "displacement current and radiation (electromagnetic-waves)",
+        "the quantum origin of spin and exchange (named, not derived)"
+      ],
+      "next_candidates": [
+        "stage 2: Parts 4-9 (validity ledger, C1-C14, E1-E20, archetype table + Q1-Q60, toolkit, traps, playbook)",
+        "stage 3: Parts 10-14 (Olympiad extension OL1-OL12, 36-question paper, marking, formula sheet, checkpoint)"
+      ],
+      "pages": [
+        "Magnetism.md"
+      ],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 1703,
+      "bytes_html": 0,
+      "bytes_markdown": 144391,
+      "words": 22489,
+      "display_formulas": 56
+    },
+    {
       "slug": "electromagnetic-waves",
       "title": "Electromagnetic Waves — from Maxwell to Olympiad",
       "status": "complete",
@@ -511,7 +582,7 @@
       "words": 9939,
       "display_formulas": 36,
       "part": 3,
-      "order": 27,
+      "order": 24,
       "block": "waves"
     },
     {
@@ -557,7 +628,7 @@
       "words": 14255,
       "display_formulas": 18,
       "part": 23,
-      "order": 30,
+      "order": 27,
       "block": "modern"
     },
     {
@@ -602,7 +673,7 @@
       "words": 11676,
       "display_formulas": 14,
       "part": 24,
-      "order": 31,
+      "order": 28,
       "block": "modern"
     },
     {
@@ -648,7 +719,7 @@
       "words": 11607,
       "display_formulas": 13,
       "part": 25,
-      "order": 32,
+      "order": 29,
       "block": "modern"
     },
     {
@@ -698,7 +769,7 @@
       "words": 12076,
       "display_formulas": 15,
       "part": 26,
-      "order": 33,
+      "order": 30,
       "block": "modern"
     },
     {
@@ -748,7 +819,7 @@
       "words": 12094,
       "display_formulas": 16,
       "part": 27,
-      "order": 34,
+      "order": 31,
       "block": "modern"
     },
     {
@@ -794,7 +865,7 @@
       "words": 11758,
       "display_formulas": 16,
       "part": 100,
-      "order": 35,
+      "order": 32,
       "block": "modern"
     },
     {
@@ -840,7 +911,7 @@
       "words": 12178,
       "display_formulas": 18,
       "part": 28,
-      "order": 36,
+      "order": 33,
       "block": "modern"
     },
     {

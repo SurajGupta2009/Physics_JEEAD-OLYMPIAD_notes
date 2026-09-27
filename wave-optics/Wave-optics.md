@@ -2,7 +2,7 @@
 title: Wave Optics — first principles to Olympiad
 part: 4
 slug: wave-optics
-order: 29
+order: 26
 block: optics
 status: complete
 source: Cengage Optics and Modern Physics-compressed.pdf, ch 2 Wave Optics (pp. 2.1-2.95)

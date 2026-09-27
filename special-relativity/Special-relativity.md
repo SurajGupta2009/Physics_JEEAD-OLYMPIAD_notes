@@ -2,7 +2,7 @@
 title: Special Relativity & Relativistic Mechanics — first principles to Olympiad
 part: 28
 slug: special-relativity
-order: 36
+order: 33
 block: modern
 status: complete
 source: olympiad extension (IPhO-level; nothing in these volumes)

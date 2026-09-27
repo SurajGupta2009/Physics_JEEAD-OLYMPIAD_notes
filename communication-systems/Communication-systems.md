@@ -2,7 +2,7 @@
 title: Communication Systems — first principles to Olympiad
 part: 100
 slug: communication-systems
-order: 35
+order: 32
 block: modern
 status: complete
 source: JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes)

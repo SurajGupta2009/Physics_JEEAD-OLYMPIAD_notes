@@ -1662,6 +1662,15 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 > least the union of the three mandatory lists). The folders `electric-field/`, `gauss-law/` and
 > `electric-potential/` are **not** to be created; the course spine has 36 slots, not 38.
 
+> [!note] Amendment 2026-09-27 — PARTs 16, 17, 18 and 19 are one module
+> Likewise, the four magnetism parts are delivered as **one chapter in one folder, `magnetism/`**
+> (`Magnetism.md`, spine slot 20, `part: 16`, `plan_parts: [16, 17, 18, 19]`), written in the same three
+> stages. Their section tables, must-derive lists, figure briefs, archetypes and Olympiad minimums remain
+> the content contract, merged as for electrostatics; the teaching order is effect before cause (PART 16
+> §1–4, then PART 18, then PART 16 §5–13 and PART 17, then PART 19). The folders `magnetic-field/`,
+> `amperes-law/`, `moving-charges-magnetism/` and `magnetism-and-matter/` are **not** to be created; the
+> course spine has 33 slots. PART 20–22 stay one continuous argument and are the natural third module.
+
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 
 `electric-field` · folder `electric-field/` · source: Cengage ***Electrostatics and Current

@@ -4,17 +4,19 @@ Regenerated 2026-09-27 from the repository state (`topics.json` + the topic fold
 with `python3 tools/check_all.py` (29 registered topics, gate green). The Obsidian mirror of this
 list is [`_obsidian/dashboards/pending.md`](_obsidian/dashboards/pending.md).
 
-**Score: 21 of the 28 [plan.md](plan.md) parts are written; 7 remain.** Mechanics (PART 1–12),
-Electrostatics (PART 13–15, shipped as the single **`electrostatics/`** module — see §1a) and Modern
-Physics (PART 23–28) are closed. Everything left is **magnetism → induction → AC, PART 16–22** —
-the only chapter-sized gaps in the syllabus this repository set out to cover.
+**Score: 21 of the 28 [plan.md](plan.md) parts are written, 4 are in progress as one module, 3
+remain.** Mechanics (PART 1–12), Electrostatics (PART 13–15, shipped as the single
+**`electrostatics/`** module — §1a) and Modern Physics (PART 23–28) are closed. PART 16–19 are being
+written as the single **`magnetism/`** module (stage 1 of 3 done — §1b). Everything left after it is
+**induction → inductance → AC, PART 20–22** — one continuous argument, the last chapter-sized gap in
+the syllabus this repository set out to cover.
 
 ## 0 · Score board
 
 | block | parts | written | remaining |
 |---|---|---:|---:|
 | A · Mechanics | 1–12 | 12 | — |
-| B · Electricity & magnetism | 13–22 | 3 (13–15 as `electrostatics/`) | **7** |
+| B · Electricity & magnetism | 13–22 | 3 (13–15 as `electrostatics/`) + 16–19 in progress as `magnetism/` | **3** |
 | C · Modern physics | 23–28 | 6 | — |
 | Original note-sets (plan.md Appendix A: waves, thermal, capacitors, current, optics) | — | 9 | — |
 | Appendix chapter (`communication-systems`, JEE-Main depth) | — | 1 | — |
@@ -37,7 +39,22 @@ The plan.md sections for PART 13, 14 and 15 were the content checklist; the chap
 coverage map accounts for every heading of the three Cengage chapters. This is the model for a
 future merge should the owner want one (e.g. PART 20–22 as a single induction → AC chapter).
 
-## 1 · The seven pending chapters, in teaching order
+## 1b · In progress — the magnetism module (PART 16 + 17 + 18 + 19)
+
+Same pattern as §1a, at the owner's direction (2026-09-27): the four magnetism parts are one chapter,
+[`magnetism/Magnetism.md`](magnetism/Magnetism.md), slot **20** of the course spine, written in three
+stages:
+
+| stage | blocks | delivers | state |
+|:-:|---|---|---|
+| 1 | Parts 0–3 | orientation with a four-part coverage map (no Cengage volume: the floor is the plan's JEE headings), intuition, definitions and right-hand rules, and the **complete theory** in teaching order (§3.1–§3.38: Lorentz force and motion → charged particles at work → Biot–Savart → Ampère → forces, dipoles, pressure, the motor puzzle, the gyromagnetic ratio → matter → Earth) | **done** — 22 500 words, 7 FIGUREs, 29 DIAGRAM briefs |
+| 2 | Parts 4–9 | validity ledger, C1–C14, E1–E20, archetype table (≥ 40 rows) + Q1–Q60, toolkit, traps, playbook | next |
+| 3 | Parts 10–14 | Olympiad extension OL1–OL12, the 36-question / 200-mark paper, marking scheme, formula sheet, checkpoint | after that |
+
+Its gate (`magnetism/tools/check.py`) is the stage-aware electrostatics gate; the plan.md sections for
+PART 16–19 remain the content checklist.
+
+## 1 · The three pending chapters, in teaching order
 
 The order below is the dependency order and the course order: each chapter uses only what the
 ones above it have derived. `order` is the slot the chapter takes in the course spine
@@ -48,20 +65,13 @@ must-derive list, the figure briefs and the Olympiad block for every part are in
 
 | PART | slug | title | order | size | needs | Cengage floor | the one idea |
 |---:|---|---|:-:|---|---|---|---|
-| 16 | `magnetic-field` | Magnetic Field, Biot–Savart & the Lorentz Force | 20 | large | electrostatics (13–15) | no PDF — standard JEE Advanced headings | a magnetic field is what a moving charge calls the relativistic correction to the electric force; its effects are always perpendicular to motion |
-| 17 | `amperes-law` | Ampère's Law, Currents & Magnetic Dipoles | 21 | standard | 16 | no PDF | Ampère's law is Gauss's law for currents — symmetry plus a loop integral gives the field |
-| 18 | `moving-charges-magnetism` | Cyclotron, Velocity Selector & the Hall Effect | 22 | standard | 17 | no PDF | in a magnetic field a charge circles to a clock whose rate depends only on $q/m$ and $B$ — that single fact is an industry |
-| 19 | `magnetism-and-matter` | Magnetism & Matter, Earth's Magnetism | 23 | compact | 17 | no PDF | matter responds through induced (dia), aligned (para) or permanently ordered (ferro) dipoles |
-| 20 | `electromagnetic-induction` | Faraday, Lenz, Motional EMF & Eddy Currents | 24 | standard | 17 | no PDF | a changing flux drives an electric field, and Lenz's law is energy conservation in disguise |
-| 21 | `inductance` | Self & Mutual Inductance, RL Circuits & Magnetic Energy | 25 | standard | 20 | no PDF | a coil resists changes in its own current because the energy lives in the field, not in the wire |
-| 22 | `alternating-current` | Alternating Current, Resonance & Transformers | 26 | large | 21 | no PDF | in AC everything is a phase relationship; impedance is resistance that knows about time |
+| 20 | `electromagnetic-induction` | Faraday, Lenz, Motional EMF & Eddy Currents | 21 | standard | magnetism (16–19) | no PDF | a changing flux drives an electric field, and Lenz's law is energy conservation in disguise |
+| 21 | `inductance` | Self & Mutual Inductance, RL Circuits & Magnetic Energy | 22 | standard | 20 | no PDF | a coil resists changes in its own current because the energy lives in the field, not in the wire |
+| 22 | `alternating-current` | Alternating Current, Resonance & Transformers | 23 | large | 21 | no PDF | in AC everything is a phase relationship; impedance is resistance that knows about time |
 
 ### Scope, chapter by chapter (the JEE floor each must cover; the Olympiad layer is plan.md §4)
 
-- **16 · magnetic-field** — Biot–Savart; the field of a straight wire (finite and infinite), arc, loop (on axis), solenoid, toroid; the Lorentz force and its perpendicularity; force on a current element and on a wire; torque on a loop and the magnetic moment; the ampere; parallel currents.
-- **17 · amperes-law** — Ampère's circuital law and the symmetry protocol; wire, thick wire, sheet, solenoid, toroid; forces between currents; the dipole interaction; magnetic pressure; no monopoles ($\nabla\cdot\mathbf B=0$); the displacement-current preview that `electromagnetic-waves/` completes.
-- **18 · moving-charges-magnetism** — circular and helical motion, the cyclotron frequency; velocity selector; mass spectrometer; the cyclotron and its relativistic limit; $\mathbf E\times\mathbf B$ drift; magnetic mirror; Hall effect; the $e/m$ measurement.
-- **19 · magnetism-and-matter** — magnetisation and bound currents; $\mathbf B$, $\mathbf H$, $\mathbf M$ and susceptibility; dia-, para- (Curie's law) and ferromagnetism; hysteresis and its energy loss; Earth's field: declination, dip, horizontal/vertical components; magnetic materials in devices.
+- **16–19 · magnetism** (in progress, §1b) — the scope of the four plan.md parts, now the block-3 teaching order of one chapter: Lorentz force → motion and its instruments → Biot–Savart → Ampère → forces, dipoles, pressure → matter → Earth.
 - **20 · electromagnetic-induction** — flux, Faraday's law, Lenz's law as energy conservation; motional EMF and the rod-and-rails family (with the energy audit); induced electric fields and why they are non-conservative; the betatron condition; eddy currents and magnetic braking; generators and motors, back-EMF; the two-voltmeter paradox.
 - **21 · inductance** — flux linkage and $L$; $L$ of solenoid, toroid, coaxial cable; mutual inductance and reciprocity; RL transients and $\tau=L/R$; the inductive kick; $U=\tfrac12LI^2$ and $u=B^2/2\mu_0$; the mechanical analogy; inductors in combination with the $\pm2M$ correction; coupled-coil energy and $F=\tfrac12I^2\,dM/dx$; LC oscillations; flux conservation in zero-resistance loops.
 - **22 · alternating-current** — the generator's EMF and the waveform vocabulary; RMS by integration (and the half-cycle average trap); R, L, C alone with derived phase relations; phasors; series LCR, $Z$ and $\tan\phi$; resonance, $Q$ two ways, bandwidth; power and power factor; parallel circuits and admittance; the complex-impedance method; transformers and transmission losses; rectification and filters (link `semiconductors/`); LC oscillations as the bridge to `electromagnetic-waves/`.
@@ -71,8 +81,7 @@ must-derive list, the figure briefs and the Olympiad block for every part are in
 | batch | parts | rule |
 |---|---|---|
 | 1 | 13 + 14 + 15 | **shipped** as the merged `electrostatics/` module (§1a) |
-| 2 | 16 → 17 | serial |
-| 3 | 18 ∥ 19 | parallel — both need only 17 |
+| 2–3 | 16 + 17 + 18 + 19 | **merged** into `magnetism/`, written in three stages (§1b) |
 | 4 | 20 → 21 → 22 | **one continuous argument; never split across writers** |
 
 ## 2 · Syllabus audit — is anything else missing?
@@ -111,14 +120,14 @@ of plan.md with the same §1 contracts, and register it the same way.
 | 11 | `fluid-mechanics` | 11 | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) — landed in band (large) |
 | 12 | `elasticity` | 12 | [Elasticity.md](elasticity/Elasticity.md) — ~15 600 words, above the compact band; the overshoot is recorded, not hidden |
 | 13–15 | `electrostatics` | 17 | [Electrostatics.md](electrostatics/Electrostatics.md) — one merged chapter, ~41 000 words (three large-band parts in one file) |
-| 23 | `photoelectric-effect` | 30 | [Photoelectric-effect.md](photoelectric-effect/Photoelectric-effect.md) |
-| 24 | `atomic-structure` | 31 | [Atomic-structure.md](atomic-structure/Atomic-structure.md) |
-| 25 | `x-rays` | 32 | [X-rays.md](x-rays/X-rays.md) |
-| 26 | `nuclear-physics` | 33 | [Nuclear-physics.md](nuclear-physics/Nuclear-physics.md) — absorbs the old P5 radioactivity row |
-| 27 | `semiconductors` | 34 | [Semiconductors.md](semiconductors/Semiconductors.md) |
-| 28 | `special-relativity` | 36 | [Special-relativity.md](special-relativity/Special-relativity.md) |
+| 23 | `photoelectric-effect` | 27 | [Photoelectric-effect.md](photoelectric-effect/Photoelectric-effect.md) |
+| 24 | `atomic-structure` | 28 | [Atomic-structure.md](atomic-structure/Atomic-structure.md) |
+| 25 | `x-rays` | 29 | [X-rays.md](x-rays/X-rays.md) |
+| 26 | `nuclear-physics` | 30 | [Nuclear-physics.md](nuclear-physics/Nuclear-physics.md) — absorbs the old P5 radioactivity row |
+| 27 | `semiconductors` | 31 | [Semiconductors.md](semiconductors/Semiconductors.md) |
+| 28 | `special-relativity` | 33 | [Special-relativity.md](special-relativity/Special-relativity.md) |
 
-Plus `communication-systems` (order 35): JEE-Main depth, deliberately not a plan.md part.
+Plus `communication-systems` (order 32): JEE-Main depth, deliberately not a plan.md part.
 
 ## 4 · The nine original note-sets (plan.md Appendix A — do not rewrite, do not renumber)
 
@@ -130,9 +139,9 @@ Plus `communication-systems` (order 35): JEE-Main depth, deliberately not a plan
 | 16 | Heat | [heat/Heat.md](heat/Heat.md) |
 | 18 | Capacitors | [capacitors/Capacitors.md](capacitors/Capacitors.md) |
 | 19 | Current electricity | [current-electricity/Current-electricity.md](current-electricity/Current-electricity.md) |
-| 27 | Electromagnetic waves | [electromagnetic-waves/Electromagnetic-waves.md](electromagnetic-waves/Electromagnetic-waves.md) |
-| 28 | Geometrical optics | [geometrical-optics/Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) |
-| 29 | Wave optics | [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) |
+| 24 | Electromagnetic waves | [electromagnetic-waves/Electromagnetic-waves.md](electromagnetic-waves/Electromagnetic-waves.md) |
+| 25 | Geometrical optics | [geometrical-optics/Geometrical-optics.md](geometrical-optics/Geometrical-optics.md) |
+| 26 | Wave optics | [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) |
 
 ## 5 · Claiming and writing a pending chapter
 
@@ -165,9 +174,9 @@ Plus `communication-systems` (order 35): JEE-Main depth, deliberately not a plan
 
 | integration point | state |
 |---|---|
-| `topics.json` registry | 29 topics, all `complete`, each with `format` / `entry` / `owner` / `order` / `block` and mechanically recounted counts; gate green |
+| `topics.json` registry | 30 topics (29 `complete`, `magnetism` `in-progress`), each with `format` / `entry` / `owner` / `order` / `block` and mechanically recounted counts; gate green |
 | `tools/check_all.py` | green; also checks that every master's frontmatter `order`/`block` equals the registry |
 | Obsidian vault | `.obsidian/` committed (settings, CSS snippet, eight plugins configured and pinned in `plugins.lock.json`); plugin binaries are fetched by `python3 tools/obsidian_plugins.py` — see [`_obsidian/README.md`](_obsidian/README.md) |
-| `tools/md_site.py` / `docs/site/` | all 29 topics render; regenerated 2026-09-27 |
+| `tools/md_site.py` / `docs/site/` | all 30 topics render; regenerated 2026-09-27 |
 | [README.md](README.md) | one row per note-set; keep the counts matching the registry after each recount |
-| [CURRICULUM.md](CURRICULUM.md) | carries the full course order (all 36 slots) at the end |
+| [CURRICULUM.md](CURRICULUM.md) | carries the full course order (all 33 slots) at the end |
