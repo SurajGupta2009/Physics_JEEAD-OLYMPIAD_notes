@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 1</span><span class="prop"><b>slug</b> units-measurements</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">measurement</span></p>
+<p class="props"><span class="prop"><b>part</b> 1</span><span class="prop"><b>slug</b> units-measurements</span><span class="prop"><b>order</b> 1</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">measurement</span></p>
 
 <h1 id="units-dimensions-measurement-errors-first-principles-to-olympiad">Units, Dimensions &amp; Measurement Errors — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -152,6 +152,25 @@
 <p><strong>A measurement is a ratio.</strong> When you say a table is 1.5 m long, you mean it is 1.5 times as long as the standard metre. The unit is the comparison object; the number is the ratio. Without a unit, "1.5" is meaningless — 1.5 what? The SI system fixes seven comparison objects (the metre, kilogram, second, ampere, kelvin, mole and candela) and builds everything else from them.</p>
 <p><strong>Dimensions tell you what kind of quantity you are dealing with.</strong> Length has dimension $[L]$, mass has $[M]$, time has $[T]$. Velocity has dimensions $[LT^{-1}]$: it is a length divided by a time. An equation that adds a velocity to a length is nonsensical — you cannot add apples and angles. The principle of homogeneity (every term in a valid equation must have the same dimensions) is the cheapest error detector in physics.</p>
 <p><strong>Every number you print carries an uncertainty.</strong> A measured length of $1.50$ m really means "between 1.49 and 1.51 m" (if the uncertainty is 0.01 m). The uncertainty is as much a part of the answer as the number itself — a result without an uncertainty is a result nobody should trust.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one discipline — say what you measured, in what units, to what precision; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — units, dimensions, errors, instruments, linearisation, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((measurement))
+    SI units
+    Dimensions
+    Homogeneity
+    Significant figures
+    Errors
+    Instruments
+    Linearisation
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is a dimensional formula, an error sum, or a reading minus its zero error.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -420,6 +439,21 @@ $$</p>
 <em>Search:</em> "dimensional homogeneity equation check balanced terms"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.2 · Homogeneity: every term must match</p>
+<p><em>Why:</em> it is the cheapest error detector in the subject — check the dimensions before you waste minutes on the algebra.
+<em>Data:</em> in $s=ut+\tfrac12 at^2$ every term has dimension $[L]$; in $s=ut+at$ the last term is $[LT^{-1}]$ (wrong).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;valid: s = ut + ½at²&quot;] --&gt; B[&quot;ut: [L]&quot;]
+  A --&gt; C[&quot;½at²: [L]&quot;]
+  D[&quot;suspicious: s = ut + at&quot;] --&gt; E[&quot;at: [LT⁻¹] ≠ [L]&quot;]
+  E --&gt; F[&quot;reject before computing&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> add only same-dimension terms; a mismatch is a free pass to reject the answer.</p>
+</blockquote>
 <h3 id="35-limitations-of-dimensional-analysis">3.5 Limitations of dimensional analysis</h3>
 <p>The principle of homogeneity is powerful but has three sharp limits:</p>
 <ol>
@@ -465,6 +499,22 @@ $$</p>
 <em>Search:</em> "dimensional analysis pendulum period derivation example"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.3 · Dimensional analysis as an exponent hunt</p>
+<p><em>Why:</em> the whole method is one loop — guess $T=k\,m^a L^b g^c$, match exponents, solve; the figure makes that loop explicit.
+<em>Data:</em> for the pendulum, matching $[T]$ gives $a=0$, $b=\tfrac12$, $c=-\tfrac12$, so $T\propto\sqrt{L/g}$ (the $2\pi$ is invisible to this method).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;guess: T = k mᵃ Lᵇ gᶜ&quot;] --&gt; B[&quot;write dimensions of both sides&quot;]
+  B --&gt; C[&quot;match powers of M, L, T&quot;]
+  C --&gt; D[&quot;a = 0, b = ½, c = -½&quot;]
+  D --&gt; E[&quot;T ∝ √(L/g)&quot;]
+  E -.-&gt;|&quot;method cannot see&quot;| F[&quot;the 2π&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> matching exponents ships the right functional form but never the dimensionless constant — compare against data or theory for that.</p>
+</blockquote>
 <h3 id="37-significant-figures">3.7 Significant figures</h3>
 <p><strong>The rules:</strong></p>
 <ol>
@@ -504,6 +554,21 @@ $$</p>
 <em>Search:</em> "systematic random gross error accuracy precision target diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.4 · The three errors: precision is not accuracy</p>
+<p><em>Why:</em> wrong-kind-of-error is the classic trap; naming the error before fixing it is half the answer.
+<em>Data:</em> systematic = precise but off-centre, random = accurate on average but scattered, gross = an outlier.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;measurements&quot;] --&gt; B{&quot;clustered but off-centre?&quot;}
+  B --&gt;|&quot;yes&quot;| C[&quot;systematic: fix the instrument, not the handling&quot;]
+  B --&gt;|&quot;scattered, centred&quot;| D[&quot;random: average; error falls as 1/√n&quot;]
+  B --&gt;|&quot;one outlier&quot;| E[&quot;gross: reject and re-measure&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> clustering fixes the wrong problem when the error is systematic — accuracy and precision are two different virtues.</p>
+</blockquote>
 <h3 id="39-errors-ii-propagation">3.9 Errors II: propagation</h3>
 <p><strong>For a sum or difference</strong> $Z=A\pm B$: the absolute errors add (worst case):</p>
 <p>$$
@@ -569,6 +634,21 @@ $$</p>
 <em>Search:</em> "pendulum T squared versus L linearisation graph data straight line"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.5 · Linearise, then read the slope</p>
+<p><em>Why:</em> a straight line is the only graph a ruler can read; every curve has a linearising transform.
+<em>Data:</em> $y=ax^n \to \ln y = n\ln x + \ln a$ (slope $n$); for the pendulum $T^2=\frac{4\pi^2}{g}L$ (slope $4\pi^2/g$).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;y = axⁿ&quot;] --&gt;|&quot;log both sides&quot;| B[&quot;ln y = n ln x + ln a&quot;]
+  B --&gt; C[&quot;slope = n, intercept = ln a&quot;]
+  A -.-&gt;|&quot;pendulum&quot;| D[&quot;T² = (4π²/g) L&quot;]
+  D --&gt; E[&quot;slope gives g&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> take logarithms for a power law and plot $T^2$ for the pendulum; the slope is the constant you are after.</p>
+</blockquote>
 <h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
 <h3 id="41-boxed-results">4.1 Boxed results</h3>
 <p>$$
@@ -1104,6 +1184,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the seven triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is asked?&quot;} --&gt;|&quot;dimensional formula&quot;| B[&quot;write the definition&quot;]
+  A --&gt;|&quot;check consistency&quot;| C[&quot;match every term's dimension&quot;]
+  A --&gt;|&quot;derive via dimensions&quot;| D[&quot;man exponents, solve&quot;]
+  A --&gt;|&quot;find the error&quot;| E[&quot;sum/difference or product? pick the rule&quot;]
+  A --&gt;|&quot;read an instrument&quot;| F[&quot;scale + LC, then zero error&quot;]
+  A --&gt;|&quot;linearise&quot;| G[&quot;log both sides, read slope&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> definitions give dimensions, dimensions give errors, and a straight line gives the slope — pick the tool the keyword names.</p>
+</blockquote>
 <ul>
 <li>"Find the dimensional formula": write the definition, extract the dimensions.</li>
 <li>"Check dimensional consistency": match the dimensions of every term.</li>

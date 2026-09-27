@@ -2,6 +2,8 @@
 title: Kinematics in One Dimension — first principles to Olympiad
 part: 3
 slug: kinematics-1d
+order: 3
+block: mechanics
 status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension
 aliases: [kinematics, 1D motion, velocity, acceleration, free fall, graphs]

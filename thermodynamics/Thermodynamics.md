@@ -2,6 +2,8 @@
 title: Thermodynamics — first principles to Olympiad
 part: 5
 slug: thermodynamics
+order: 15
+block: thermal
 status: complete
 source: Cengage Waves and Thermodynamics-compressed.pdf, Thermodynamics chapters
 aliases: [thermodynamics, first law, second law, engines, entropy, carnot]

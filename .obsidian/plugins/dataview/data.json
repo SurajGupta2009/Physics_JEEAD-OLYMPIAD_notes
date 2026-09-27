@@ -1,0 +1,21 @@
+{
+  "renderNullAs": "\\-",
+  "warnOnEmptyResult": true,
+  "refreshEnabled": true,
+  "refreshInterval": 2500,
+  "defaultDateFormat": "yyyy-MM-dd",
+  "defaultDateTimeFormat": "yyyy-MM-dd HH:mm",
+  "tableIdColumnName": "Note",
+  "tableGroupColumnName": "Group",
+  "showResultCount": true,
+  "inlineQueryPrefix": "=",
+  "inlineJsQueryPrefix": "$=",
+  "inlineQueriesInCodeblocks": true,
+  "enableInlineDataview": true,
+  "enableDataviewJs": false,
+  "enableInlineDataviewJs": false,
+  "prettyRenderInlineFields": true,
+  "prettyRenderInlineFieldsInLivePreview": true,
+  "dataviewJsKeyword": "dataviewjs",
+  "allowHtml": true
+}

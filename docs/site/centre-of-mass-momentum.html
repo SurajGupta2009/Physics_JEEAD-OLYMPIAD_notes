@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 7</span><span class="prop"><b>slug</b> centre-of-mass-momentum</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">momentum</span><span class="prop tag">collisions</span><span class="prop tag">centre-of-mass</span></p>
+<p class="props"><span class="prop"><b>part</b> 7</span><span class="prop"><b>slug</b> centre-of-mass-momentum</span><span class="prop"><b>order</b> 7</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">momentum</span><span class="prop tag">collisions</span><span class="prop tag">centre-of-mass</span></p>
 
 <h1 id="centre-of-mass-momentum-collisions-first-principles-to-olympiad">Centre of Mass, Momentum &amp; Collisions — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -160,6 +160,23 @@
 <p><strong>The centre of mass of an isolated system moves at constant velocity.</strong> This is the deepest consequence of Newton's third law: internal forces cancel in pairs, so they cannot accelerate the system as a whole. An exploding shell follows the same parabola it would have followed without exploding — the fragments fly apart, but their centre of mass continues on the original trajectory.</p>
 <p><strong>Momentum is conserved in collisions.</strong> In any collision, the total momentum before equals the total momentum after (provided no external forces act during the brief collision time). This is true for elastic and inelastic collisions alike. What differs is the kinetic energy: elastic collisions conserve KE, inelastic do not.</p>
 <p><strong>The coefficient of restitution measures the "bounciness."</strong> $e=v_{\text{sep}}/v_{\text{app}}$ along the line of impact. $e=1$: perfectly elastic (no energy lost). $e=0$: perfectly inelastic (the objects stick together). Real collisions have $0&lt;e&lt;1$.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one idea — when external forces vanish, the COM coast and momentum survives every collision — and the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — COM, impulse, conservation, collisions, the e-parameter, variable mass, paper, sheet.</p>
+</div>
+<pre><code class="language-mermaid">mindmap
+  root((COM &amp; collisions))
+    Centre of mass
+    Impulse
+    Momentum conservation
+    Collisions
+    Coefficient e
+    Variable mass
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is a COM position, a momentum balance, or an e-bookkeeping.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -216,6 +233,7 @@
 <p class="callout-title">Bookkeeping rules</p>
 <p>Momentum is a vector — conservation applies independently to each component. In 1-D collisions: use the sign convention consistently (rightward positive). In 2-D collisions: resolve along and perpendicular to the line of impact. The coefficient of restitution applies only along the line of impact — the tangential component of velocity is unchanged for smooth spheres.</p>
 </div>
+
 <h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
 <h3 id="31-the-centre-of-mass-definition">3.1 The centre of mass: definition</h3>
 <p>For $n$ particles:</p>
@@ -273,6 +291,21 @@ $$</p>
 <em>Search:</em> "centre of mass standard bodies rod triangle semicircle cone COM position"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.2 · The COM: an isolated system coasts</p>
+<p><em>Why:</em> the chapter's deepest consequence — internal forces cancel in pairs, so nothing inside can steer the system.
+<em>Data:</em> $\mathbf{R}=\sum m_i\mathbf{r}<em>i/M$; no external force $\Rightarrow \mathbf{v}</em>{\text{cm}}$ constant; exploding shell keeps its parabola.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;internal forces cancel in pairs&quot;] --&gt; B[&quot;no self-acceleration&quot;]
+  B --&gt; C[&quot;no external force → v_cm constant&quot;]
+  C --&gt; D[&quot;explosion: COM keeps the parabola&quot;]
+  D --&gt; E[&quot;fragments separate around it&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the fragments scatter, but their mass-weighted average keeps the unperturbed path — the COM is the one point you can always trust.</p>
+</blockquote>
 <h3 id="32-com-of-composite-bodies">3.2 COM of composite bodies</h3>
 <p><strong>The positive-mass/negative-mass trick:</strong> To find the COM of a body with a hole, treat the hole as negative mass:</p>
 <p>$$
@@ -314,6 +347,20 @@ $$</p>
 <em>Search:</em> "impulse force versus time curve area average force collision"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.3 · Impulse: the area that changes momentum</p>
+<p><em>Why:</em> collisions are too brief to track the force, so we trade the force's shape for its area — the impulse.
+<em>Data:</em> $\mathbf{J}=\int\mathbf{F}\,dt=\Delta\mathbf{p}$; average force $\bar{F}=J/\Delta t$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;force spike over Δt&quot;] --&gt; B[&quot;area under F-t = J&quot;]
+  B --&gt; C[&quot;J = Δp&quot;]
+  C --&gt; D[&quot;shorter Δt → larger average force&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the same momentum change hurts more when it happens fast — that is why a seatbelt stretches the collision time.</p>
+</blockquote>
 <h3 id="35-conservation-of-momentum">3.5 Conservation of momentum</h3>
 <p><strong>The condition:</strong> if the net external impulse is zero (in a given direction), the total momentum is conserved (in that direction):</p>
 <p>$$
@@ -357,6 +404,22 @@ $$</p>
 <p><em>Show:</em> three cases: (1) elastic — two balls approach, exchange velocities (or bounce); (2) inelastic — they bounce with reduced speeds; (3) perfectly inelastic — they stick together. Velocity arrows shown before and after.
 <em>Search:</em> "collision classification elastic inelastic perfectly inelastic before after"</p>
 </div>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.4 · Collisions: momentum always, kinetic energy sometimes</p>
+<p><em>Why:</em> the one rule that survives every collision and the one that does not — momentum vs energy is the chapter's split point.
+<em>Data:</em> momentum conserved (no external impulse); $e = v_{\text{sep}}/v_{\text{app}}$: 1 elastic, 0 perfectly inelastic, between otherwise.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;collision&quot;] --&gt; B[&quot;momentum conserved (always)&quot;]
+  A --&gt; C[&quot;kinetic energy?&quot;]
+  C --&gt;|&quot;e = 1&quot;| D[&quot;elastic: ΔK = 0&quot;]
+  C --&gt;|&quot;0 &lt; e &lt; 1&quot;| E[&quot;inelastic: some ΔK lost&quot;]
+  C --&gt;|&quot;e = 0&quot;| F[&quot;stick together: max ΔK lost&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> momentum is non-negotiable; the restitution $e$ decides how much kinetic energy survives the crash.</p>
+</blockquote>
 <h3 id="37-collisions-ii-1-d-results">3.7 Collisions II: 1-D results</h3>
 <p>For a 1-D collision between $m_1$ and $m_2$ with initial velocities $u_1$ and $u_2$:</p>
 <p>$$
@@ -383,6 +446,20 @@ $$</p>
 <em>Search:</em> "final velocities versus coefficient of restitution e graph 1D collision"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.5 · The energy loss: the (1 - e²) rule</p>
+<p><em>Why:</em> one formula prices every imperfect collision — the lost kinetic energy scales with $1-e^2$ times the squared approach speed.
+<em>Data:</em> $\Delta K = \tfrac12\mu(u_1-u_2)^2(1-e^2)$ with $\mu = \frac{m_1m_2}{m_1+m_2}$; loss is zero at $e=1$, maximal at $e=0$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;approach speed u1-u2&quot;] --&gt; B[&quot;ΔK = ½μ(u1-u2)²(1-e²)&quot;]
+  B --&gt; C[&quot;e = 1: ΔK = 0&quot;]
+  B --&gt; D[&quot;e = 0: max loss, stick together&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the reduced mass and the approach speed set the stakes; the $(1-e^2)$ factor sets how much of the stake is lost.</p>
+</blockquote>
 <h3 id="38-collisions-iii-2-d">3.8 Collisions III: 2-D</h3>
 <p>For a smooth-sphere collision in 2-D:</p>
 <ol>
@@ -987,6 +1064,24 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the seven triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What kind of problem?&quot;} --&gt;|&quot;find the COM&quot;| B[&quot;definition or negative-mass trick&quot;]
+  A --&gt;|&quot;explosion&quot;| C[&quot;COM continues; momentum for fragments&quot;]
+  A --&gt;|&quot;1-D collision&quot;| D[&quot;momentum + e&quot;]
+  A --&gt;|&quot;2-D collision&quot;| E[&quot;resolve along line of impact&quot;]
+  A --&gt;|&quot;ballistic pendulum&quot;| F[&quot;momentum then energy&quot;]
+  A --&gt;|&quot;variable mass&quot;| G[&quot;rocket equation / momentum flux&quot;]
+  A --&gt;|&quot;man on boat&quot;| H[&quot;COM stays fixed&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> explosions ride the COM, collisions balance momentum against $e$, and boats drift just enough to hold the COM in place.</p>
+</blockquote>
 <ul>
 <li>"Find the COM": use the definition or the positive/negative mass trick.</li>
 <li>"Explosion": COM trajectory continues; use momentum conservation for the fragments.</li>

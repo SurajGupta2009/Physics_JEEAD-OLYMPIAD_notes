@@ -2,6 +2,8 @@
 title: Units, Dimensions & Measurement Errors — first principles to Olympiad
 part: 1
 slug: units-measurements
+order: 1
+block: mechanics
 status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 3 Units and Dimensions (+ ch 1 Basic Mathematics)
 aliases: [units, dimensions, measurement, errors, significant figures, vernier, screw gauge]

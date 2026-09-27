@@ -2,6 +2,8 @@
 title: Fluid Mechanics & Surface Tension
 part: 11
 slug: fluid-mechanics
+order: 11
+block: mechanics
 source: Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (viscosity, surface tension, capillarity, pp. 4.20-4.37)
 aliases: [fluids, hydrostatics, hydrodynamics, buoyancy, bernoulli, surface tension, viscosity]
 tags: [jee-advanced, olympiad, mechanics, fluids]

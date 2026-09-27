@@ -1,0 +1,123 @@
+/* physics-notes.css — the vault's reading-mode styling.
+   Enabled in .obsidian/appearance.json (enabledCssSnippets). Pure CSS, theme-agnostic:
+   everything is expressed through Obsidian's own variables so light/dark both work.
+
+   What it does, in order:
+     1. wider reading column for maths-heavy pages
+     2. the figure system (plan.md §1.2 / docs/obsidian-plugin-workflow.md §2)
+        – [!tip] FIGURE callouts + the Mermaid block that follows them
+        – [!abstract] DIAGRAM briefs rendered as bordered figure slots
+     3. <details> solutions (collapsible answers inside questions)
+     4. tables and display maths that are wider than the column
+     5. print                                                                 */
+
+/* 1 ── reading width ──────────────────────────────────────────────────────── */
+body {
+  --file-line-width: 46rem;          /* default is 40rem; long display equations need more */
+}
+
+/* 2 ── figures ────────────────────────────────────────────────────────────── */
+/* Mermaid diagrams: centred, framed, never overflowing the column            */
+.markdown-rendered .mermaid,
+.markdown-source-view .mermaid {
+  display: flex;
+  justify-content: center;
+  padding: 0.75em 0.5em;
+  margin: 0.25em 0 0.75em;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-primary-alt);
+  overflow-x: auto;
+}
+.markdown-rendered .mermaid svg { max-width: 100%; height: auto; }
+
+/* FIGURE callouts (rendered figure + its caption text) — a soft teal frame   */
+.callout[data-callout="tip"] {
+  --callout-color: 0, 150, 136;
+  border-left-width: 4px;
+}
+.callout[data-callout="tip"] .callout-title-inner { letter-spacing: 0.01em; }
+
+/* DIAGRAM briefs — the "figure slot" look: dashed frame, muted background    */
+.callout[data-callout="abstract"] {
+  --callout-color: 100, 116, 139;
+  border: 1px dashed rgba(var(--callout-color), 0.6);
+  border-left-width: 4px;
+  background: rgba(var(--callout-color), 0.05);
+}
+
+/* the other six callout roles keep Obsidian's colours; only tighten spacing  */
+.callout { margin: 0.9em 0; }
+.callout .callout-content > :first-child { margin-top: 0.35em; }
+.callout .callout-content > :last-child  { margin-bottom: 0.35em; }
+
+/* 3 ── solutions ──────────────────────────────────────────────────────────── */
+.markdown-rendered details {
+  margin: 0.6em 0 1em;
+  padding: 0.35em 0.9em;
+  border: 1px solid var(--background-modifier-border);
+  border-left: 4px solid var(--interactive-accent);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+}
+.markdown-rendered details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-accent);
+  padding: 0.25em 0;
+  list-style: none;
+}
+.markdown-rendered details > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 120ms ease;
+}
+.markdown-rendered details[open] > summary::before { transform: rotate(90deg); }
+.markdown-rendered details > summary::-webkit-details-marker { display: none; }
+.markdown-rendered details[open] > summary {
+  border-bottom: 1px solid var(--background-modifier-border);
+  margin-bottom: 0.5em;
+}
+
+/* 4 ── tables and maths ───────────────────────────────────────────────────── */
+.markdown-rendered table {
+  display: block;                      /* lets a wide formula table scroll instead of overflow */
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.markdown-rendered thead th {
+  background: var(--background-secondary);
+  position: sticky; top: 0;
+  text-align: left;
+}
+.markdown-rendered th, .markdown-rendered td {
+  padding: 0.35em 0.7em;
+  border: 1px solid var(--background-modifier-border);
+  vertical-align: top;
+}
+.markdown-rendered tbody tr:nth-child(even) td { background: var(--background-primary-alt); }
+
+.markdown-rendered .math-block {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2em 0;
+}
+.markdown-rendered mjx-container[display="true"] { margin: 0.6em 0; }
+
+/* the question / exemplar / olympiad headers used by the plan.md chapters      */
+.markdown-rendered h4 { margin-top: 1.4em; }
+
+/* checkpoints: make the Part 14 task lists breathe                            */
+.markdown-rendered .task-list-item { margin: 0.2em 0; }
+
+/* 5 ── print (File → Export to PDF) ───────────────────────────────────────── */
+@media print {
+  body { --file-line-width: 100%; }
+  .markdown-rendered .mermaid,
+  .markdown-rendered details,
+  .callout,
+  .markdown-rendered table { break-inside: avoid; }
+  .markdown-rendered details > summary::before { content: ""; }
+}

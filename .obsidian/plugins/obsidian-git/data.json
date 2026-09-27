@@ -1,0 +1,22 @@
+{
+  "commitMessage": "notes: {{date}}",
+  "autoCommitMessage": "notes: auto-commit {{date}}",
+  "listChangedFilesInMessageBody": true,
+  "differentIntervalCommitAndPush": true,
+  "autoSaveInterval": 15,
+  "autoBackupAfterFileChange": true,
+  "autoPushInterval": 0,
+  "autoPullInterval": 0,
+  "autoPullOnBoot": true,
+  "disablePush": false,
+  "pullBeforePush": true,
+  "syncMethod": "merge",
+  "disablePopups": false,
+  "disablePopupsForNoChanges": true,
+  "showStatusBar": true,
+  "showBranchStatusBar": true,
+  "changedFilesInStatusBar": true,
+  "treeStructure": true,
+  "refreshSourceControl": true,
+  "showedMobileNotice": true
+}

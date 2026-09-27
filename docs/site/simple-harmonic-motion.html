@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 10</span><span class="prop"><b>slug</b> simple-harmonic-motion</span><span class="prop"><b>source</b> Cengage Waves and Oscillations-compressed.pdf, ch 1 SHM</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">shm</span><span class="prop tag">oscillations</span><span class="prop tag">waves</span></p>
+<p class="props"><span class="prop"><b>part</b> 10</span><span class="prop"><b>slug</b> simple-harmonic-motion</span><span class="prop"><b>order</b> 10</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Waves and Oscillations-compressed.pdf, ch 1 SHM</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">shm</span><span class="prop tag">oscillations</span><span class="prop tag">waves</span></p>
 
 <h1 id="simple-harmonic-motion-first-principles-to-olympiad">Simple Harmonic Motion — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -156,6 +156,24 @@
 <em>Search:</em> "SHM displacement velocity acceleration phase relationship graph"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one equation $a=-\omega^2 x$ played out across springs, pendulums, energy and resonance; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — the SHM condition, energy, springs, pendulums, damping, resonance, coupled modes, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((simple harmonic motion))
+    Restoring force
+    Energy
+    Springs
+    Pendulum
+    Damping
+    Resonance
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is $\omega=\sqrt{k/m}$, an energy share, or a resonance peak.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -244,6 +262,20 @@ $$</p>
 </div>
 
 <h3 id="34-energy-in-shm">3.4 Energy in SHM</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.2 · The phase ladder: v leads x, a leads v</p>
+<p><em>Why:</em> the three sinusoids differ only by quarter-turns; the ladder fixes which leads which before any value is read.
+<em>Data:</em> $x=A\sin\omega t$, $v=A\omega\cos\omega t$ (leads $x$ by $90°$), $a=-A\omega^2\sin\omega t$ (opposite to $x$).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;x = A sin ωt&quot;] --&gt;|&quot;ahead by 90°&quot;| B[&quot;v = Aω cos ωt&quot;]
+  B --&gt;|&quot;ahead by 90°&quot;| C[&quot;a = -Aω² sin ωt&quot;]
+  C --&gt; D[&quot;back to -x: a = -ω² x&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> velocity is always a quarter-cycle ahead of displacement, acceleration another quarter — so acceleration always points back at equilibrium.</p>
+</blockquote>
 <p>$$
 E=\frac{1}{2}kA^2=\frac{1}{2}m\omega^2 A^2. \qquad (3.5)
 $$</p>
@@ -256,6 +288,21 @@ $$</p>
 <em>Search:</em> "energy versus displacement simple harmonic motion kinetic potential graph"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.3 · Energy exchange: all kinetic in the middle, all potential at the ends</p>
+<p><em>Why:</em> the energy bookkeeping of every oscillation — the two shares trade without ever changing the total.
+<em>Data:</em> $K=\tfrac12 k(A^2-x^2)$ and $U=\tfrac12 kx^2$, so $E=K+U=\tfrac12 kA^2$ constant.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;E = ½kA² constant&quot;] --&gt; B{&quot;position&quot;}
+  B --&gt;|&quot;x = 0&quot;| C[&quot;K = E, U = 0&quot;]
+  B --&gt;|&quot;x = ±A&quot;| D[&quot;K = 0, U = E&quot;]
+  B --&gt;|&quot;any x&quot;| E[&quot;K = ½k(A²-x²), U = ½kx²&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the box holds a fixed total; the oscillator just pours it back and forth between the spring and the motion.</p>
+</blockquote>
 <h3 id="35-spring-mass-system">3.5 Spring-mass system</h3>
 <p>$$
 T=2\pi\sqrt{\frac{m}{k}}. \qquad (3.7)
@@ -268,6 +315,21 @@ $$</p>
 <em>Search:</em> "springs in series parallel effective spring constant diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.4 · Springs: parallel adds, series reciprocates</p>
+<p><em>Why:</em> the period is always $2\pi\sqrt{m/k_{\text{eff}}}$ — the only work is finding $k_{\text{eff}}$; the figure fixes which rule goes with which wiring.
+<em>Data:</em> parallel $k_{\text{eff}}=k_1+k_2$; series $\frac{1}{k_{\text{eff}}}=\frac1{k_1}+\frac1{k_2}$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;springs side by side&quot;] --&gt; B[&quot;same stretch, forces add&quot;]
+  B --&gt; C[&quot;k_eff = k1 + k2&quot;]
+  D[&quot;springs end to end&quot;] --&gt; E[&quot;same force, stretches add&quot;]
+  E --&gt; F[&quot;1/k_eff = 1/k1 + 1/k2&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> parallel is the recipe for stiffer; series is the recipe for softer — then $T=2\pi\sqrt{m/k_{\text{eff}}}$ handles both.</p>
+</blockquote>
 <h3 id="36-simple-pendulum">3.6 Simple pendulum</h3>
 <p>For a pendulum of length $L$ and small angle $\theta$:</p>
 <p>$$
@@ -321,6 +383,23 @@ $$</p>
 <em>Search:</em> "resonance amplitude versus driving frequency damping curves graph"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.5 · Resonance: small damping, tall sharp peak</p>
+<p><em>Why:</em> every forced-oscillator question is about the peak's height and width; the figure keys both to the damping.
+<em>Data:</em> peak near $\omega=\omega_0$ (exactly at $\omega_0$ for $\gamma\to0$); quality factor $Q=\omega_0/(2\gamma)$ sets height and width.</p>
+</div>
+
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;amplitude vs driving frequency&quot;
+  x-axis [&quot;0.5&quot;, &quot;0.8&quot;, &quot;1.0&quot;, &quot;1.2&quot;, &quot;1.5&quot;]
+  y-axis 0 --&gt; 6
+  line [1, 1.8, 6, 1.8, 1]
+  line [1, 1.4, 2.6, 1.4, 1]
+  line [1, 1.1, 1.5, 1.1, 1]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> light damping makes a needle-sharp spike at the natural frequency; heavy damping flattens and lowers it — the amplitude never grows without bound.</p>
+</blockquote>
 <h3 id="311-coupled-oscillators-and-normal-modes">3.11 Coupled oscillators and normal modes</h3>
 <p>When two oscillating systems are connected (coupled), they exchange energy. The system has normal modes — patterns of oscillation where all parts move at the same frequency. Any motion is a superposition of these normal modes. For two identical pendulums coupled by a spring: the system has two normal modes:
 1. <strong>In-phase mode:</strong> both pendulums swing together; the spring is unstretched. Frequency $\omega_1=\sqrt{g/L}$.
@@ -863,6 +942,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F10.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the eight triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is asked?&quot;} --&gt;|&quot;period from k, m&quot;| B[&quot;T = 2π√(m/k)&quot;]
+  A --&gt;|&quot;pendulum&quot;| C[&quot;T = 2π√(L/g)&quot;]
+  A --&gt;|&quot;initial conditions&quot;| D[&quot;x0 = A sinφ, v0 = Aω cosφ&quot;]
+  A --&gt;|&quot;speed at x&quot;| E[&quot;v = ω√(A²-x²)&quot;]
+  A --&gt;|&quot;springs&quot;| F[&quot;k_eff: parallel adds, series reciprocates&quot;]
+  A --&gt;|&quot;is it SHM?&quot;| G[&quot;F ∝ -x, or U ∝ x² near equilibrium&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the period wants the system constants, an initial condition wants the phase, and a speed wants the energy balance.</p>
+</blockquote>
 <ul>
 <li>"Find $T$ from $k$ and $m$": $T=2\pi\sqrt{m/k}$.</li>
 <li>"Find $T$ for a pendulum": $T=2\pi\sqrt{L/g}$ (small angle).</li>

@@ -2,6 +2,8 @@
 title: Geometrical Optics — first principles to Olympiad
 part: 9
 slug: geometrical-optics
+order: 30
+block: optics
 status: complete
 source: Cengage Optics and Modern Physics-compressed.pdf, ch 1 Geometrical Optics
 aliases: [geometrical optics, ray optics, mirrors, lenses, refraction, prisms, telescopes]

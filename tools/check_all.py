@@ -44,6 +44,19 @@ def read(p):
         return fh.read()
 
 
+def frontmatter(src):
+    """The scalar `key: value` pairs of a note's YAML frontmatter (no YAML dependency needed)."""
+    if not src.startswith('---\n'):
+        return {}
+    end = src.find('\n---', 4)
+    out = {}
+    for line in src[4:end].splitlines():
+        m = re.match(r'^([A-Za-z_][\w-]*):\s*(.*?)\s*$', line)
+        if m:
+            out[m.group(1)] = m.group(2)
+    return out
+
+
 def count(topic_dir, entry=None):
     """The only trustworthy source for the registry numbers: the markup itself."""
     # Markdown-first work packages (plan.md) count only their authoritative entry,
@@ -131,6 +144,15 @@ def main():
 
         if t.get('owner') is None:
             fails.append('%s: nobody owns it \u2014 set "owner" before editing (CONTRIBUTING.md \u00a77)' % slug)
+
+        # course spine: the Markdown master's frontmatter `order:`/`block:` (what the Obsidian
+        # dashboards sort on) must agree with the registry, so the two cannot drift apart
+        master = os.path.join(d, os.path.basename(entry if entry.endswith('.md') else entry[:-5] + '.md'))
+        if os.path.isfile(master) and ('order' in t or 'block' in t):
+            fm = frontmatter(read(master))
+            for k in ('order', 'block'):
+                if k in t and str(fm.get(k)) != str(t[k]):
+                    fails.append('%s: frontmatter %s=%s but topics.json says %s' % (slug, k, fm.get(k), t[k]))
 
         sp = os.path.join(d, 'tools', 'setpages.py')
         if os.path.exists(sp):

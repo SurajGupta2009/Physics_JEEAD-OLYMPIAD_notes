@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 6</span><span class="prop"><b>slug</b> work-energy-power</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">work-energy</span><span class="prop tag">conservation-laws</span></p>
+<p class="props"><span class="prop"><b>part</b> 6</span><span class="prop"><b>slug</b> work-energy-power</span><span class="prop"><b>order</b> 6</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">work-energy</span><span class="prop tag">conservation-laws</span></p>
 
 <h1 id="work-energy-power-first-principles-to-olympiad">Work, Energy &amp; Power — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -167,6 +167,24 @@
 <p><strong>The work–energy theorem is just $F=ma$ in disguise.</strong> Multiply $F=ma$ by $dx$: $F\,dx=ma\,dx=mv\,dv$. Integrate: $\int F\,dx=\frac{1}{2}mv^2-\frac{1}{2}mv_0^2$. The left side is the work; the right side is the change in kinetic energy. This is the bridge between force and energy.</p>
 <p><strong>Conservative forces have a memory of position only.</strong> Gravity and springs are conservative — the work they do depends only on the starting and ending points, not the path taken. Friction is non-conservative — the work depends on the path length. Conservative forces have a potential-energy function $U(x)$ from which the force can be recovered as $F=-dU/dx$.</p>
 <p><strong>Energy is conserved — but only if you count everything.</strong> The total energy (kinetic + potential + thermal + ...) is always conserved. "Energy is lost" really means "energy has been transferred to a form we are not tracking." The correct phrase is "energy is dissipated" or "energy is transferred to thermal energy."</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one question — energy or force? — and the map shows where each tool lives.
+<em>Data:</em> the Part 0–14 structure — work, WET, standard-force work, power, conservation, energy diagrams, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((work &amp; energy))
+    Work
+    Work-energy theorem
+    Power
+    Conservative forces
+    Conservation
+    Energy diagrams
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is an energy ledger, a $U(x)$ reading, or a power limit.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -249,6 +267,20 @@ $$</p>
 <em>Search:</em> "work area under force versus displacement curve signed"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.2 · The work–energy theorem: F = ma, integrated</p>
+<p><em>Why:</em> the whole bridge between the two methods is one step — multiply the second law by displacement and integrate.
+<em>Data:</em> $F\,dx = ma\,dx = mv\,dv \Rightarrow \int F\,dx = \tfrac12 mv^2 - \tfrac12 mv_0^2$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;F = ma&quot;] --&gt;|&quot;multiply by dx&quot;| B[&quot;F dx = mv dv&quot;]
+  B --&gt;|&quot;integrate&quot;| C[&quot;∫F dx = ½mv² - ½mv0²&quot;]
+  C --&gt; D[&quot;work = ΔK&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the left side is the work, the right side the kinetic-energy change — the theorem converts a force problem into a bookkeeping problem.</p>
+</blockquote>
 <h3 id="33-work-of-the-standard-forces">3.3 Work of the standard forces</h3>
 <p><strong>Gravity:</strong> $W_{\text{grav}}=mgh$ (or $-mgh$, depending on direction). Path independent — only the height difference matters.</p>
 <p><strong>Friction:</strong> $W_{\text{fric}}=-f_k d$ where $d$ is the total path length. Path dependent — a longer path means more work by friction.</p>
@@ -331,6 +363,20 @@ $$</p>
 <em>Search:</em> "car power limited top speed engine force resistance asymptotic"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.3 · Power: the top speed is P/f</p>
+<p><em>Why:</em> top-speed questions all collapse to one balance — at constant speed the drive force equals the resistance, so $v_{\max}=P/f$.
+<em>Data:</em> $P=Fv\cos\theta$ (instantaneous); at top speed on a flat road $v_{\max}=P/f$; up a slope $P=(f+mg\sin\theta)v$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;P = Fv&quot;] --&gt; B[&quot;top speed: F = resistance&quot;]
+  B --&gt; C[&quot;flat: v_max = P/f&quot;]
+  B --&gt; D[&quot;up slope: P = (f + mg sinθ)v&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the power sets a ceiling — once the force drops to the resistance, speed can climb no further.</p>
+</blockquote>
 <h3 id="36-conservative-forces">3.6 Conservative forces</h3>
 <p>A force is conservative if either of the following equivalent conditions holds:</p>
 <ol>
@@ -372,6 +418,21 @@ $$</p>
 <em>Search:</em> "energy bar chart initial final non-conservative work ledger"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.4 · The energy ledger: account for every non-conservative term</p>
+<p><em>Why:</em> friction turns conservation into an accounting problem; the figure names where the missing energy goes.
+<em>Data:</em> $K_i+U_i = K_f+U_f - W_{\text{nc}}$; with friction $W_{\text{nc}}=-f_k d$, so $E_f = E_i - f_k d$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;K_i + U_i&quot;] --&gt; B[&quot;conservative only?&quot;]
+  B --&gt;|&quot;yes&quot;| C[&quot;K_f + U_f = K_i + U_i&quot;]
+  B --&gt;|&quot;friction/air&quot;| D[&quot;K_f + U_f = K_i + U_i - f_k d&quot;]
+  D --&gt; E[&quot;W_nc goes to thermal&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> mechanical energy is conserved only while every working force is conservative; friction bleeds $f_k d$ into the thermal ledger.</p>
+</blockquote>
 <h3 id="39-energy-diagrams">3.9 Energy diagrams</h3>
 <p>The $U(x)$ graph is a powerful tool:</p>
 <ul>
@@ -385,6 +446,23 @@ $$</p>
 <em>Search:</em> "potential energy landscape stable unstable turning points bound motion"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.5 · The U(x) landscape: read it like a map</p>
+<p><em>Why:</em> the same curve answers reach, turning points, and stability — the figure keys the reading rules to the shape.
+<em>Data:</em> turning point $E=U$; equilibrium $dU/dx=0$ (stable if $d^2U/dx^2&gt;0$); bound motion where $E&lt;U(\infty)$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;U(x) curve&quot;] --&gt; B{&quot;E vs U at a point&quot;}
+  B --&gt;|&quot;E = U&quot;| C[&quot;turning point: K = 0&quot;]
+  B --&gt;|&quot;E &lt; U&quot;| D[&quot;forbidden region&quot;]
+  B --&gt;|&quot;E &gt; U&quot;| E[&quot;allowed: K = E - U&quot;]
+  A --&gt; F[&quot;dU/dx = 0 → equilibrium&quot;]
+  F --&gt; G[&quot;min = stable, max = unstable&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the particle lives where $E\ge U$, turns where $E=U$, and comes to rest at the minima and saddles of the landscape.</p>
+</blockquote>
 <h3 id="310-the-energyforce-decision-rule">3.10 The energy/force decision rule</h3>
 <table>
 <thead>
@@ -966,6 +1044,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.6 · Triage — energy or force?</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the six triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is asked?&quot;} --&gt;|&quot;speed at a point&quot;| B[&quot;energy conservation&quot;]
+  A --&gt;|&quot;distance slid&quot;| C[&quot;energy with friction&quot;]
+  A --&gt;|&quot;does it reach&quot;| D[&quot;compare E with U(B)&quot;]
+  A --&gt;|&quot;force at a point&quot;| E[&quot;energy for speed, radial equation for force&quot;]
+  A --&gt;|&quot;time taken&quot;| F[&quot;force method: F = ma, integrate&quot;]
+  A --&gt;|&quot;power&quot;| G[&quot;P = Fv&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> a speed or a distance wants energy; a time wants forces — pick the tool the question names.</p>
+</blockquote>
 <ul>
 <li>"How fast at point B?" → energy conservation.</li>
 <li>"How far does it slide?" → energy with friction.</li>

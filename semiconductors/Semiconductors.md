@@ -2,6 +2,8 @@
 title: Semiconductors & Electronic Devices — first principles to Olympiad
 part: 27
 slug: semiconductors
+order: 36
+block: modern
 status: complete
 source: JEE Main/Advanced semiconductor syllabus (no chapter exists in the supplied Cengage volumes, verified)
 aliases: [semiconductors, diodes, transistors, logic gates, p-n junction]

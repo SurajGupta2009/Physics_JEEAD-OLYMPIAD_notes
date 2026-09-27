@@ -50,17 +50,32 @@ and `bytes_markdown` records source size; `bytes_html` is zero. Legacy HTML coun
 ├── README.md                 front page: what exists, how to read it, the teaching contract
 ├── STRUCTURE.md              this file
 ├── CONTRIBUTING.md           workflow + how to work in parallel
-├── topics.json               registry of note-sets: paths, status, owner, mechanical counts
-├── .gitignore                scratch and exports stay out
-├── docs/
-│   └── hero.svg              the banner in README.md (SVG, no binaries in this repo)
+├── CURRICULUM.md             reading order, Cengage → JEE → Olympiad audit, the 38-slot course spine
+├── PENDING.md                the chapters still to be written (plan.md PART 13–22) and how to claim one
+├── plan.md                   the master plan: one PART per chapter, contracts, copy-paste kit
+├── topics.json               registry of note-sets: paths, status, owner, order/block, mechanical counts
+├── .gitignore                scratch and exports stay out; Obsidian per-device state stays out
+├── .obsidian/                the Obsidian vault configuration — COMMITTED (settings, CSS snippet,
+│                             enabled plugins + their settings, plugins.lock.json; per-device files ignored)
+├── _obsidian/                the vault home: dashboards (spine, library, pending, tasks), the Templater
+│                             chapter skeleton, the LaTeX Suite snippet set
 ├── _templates/
-│   └── chapter.html          copy this to start a chapter; placeholders are marked {{LIKE_THIS}}
+│   └── chapter.html          HTML-first chapter scaffold; placeholders are marked {{LIKE_THIS}}
+├── docs/
+│   ├── hero.svg              the banner in README.md
+│   ├── obsidian-plugin-workflow.md   the Obsidian-first authoring contract (figure system, plugins)
+│   ├── plan-v1-waves-optics.md       the archived plan that produced the wave/optics note-sets
+│   └── site/                 GENERATED offline website of every Markdown master (tools/md_site.py)
 ├── tools/
 │   ├── check_all.py          repo-wide gate + registry recount (--update, --quick)
-│   ├── new_topic.py          scaffold a new topic folder from a donor topic
+│   ├── md_site.py            renders docs/site/ from the Markdown masters (needs pip install markdown)
+│   ├── html_to_markdown.py   HTML → Markdown + SVG exporter for the HTML-first topics
+│   ├── mermaid_lint.py       offline linter for the Mermaid subset the figures use
+│   ├── obsidian_plugins.py   fetches the pinned Obsidian plugins into .obsidian/plugins/
+│   ├── new_topic.py          scaffold an HTML-first topic folder from a donor topic
 │   └── ci/qa.yml             the same gate as a GitHub Action (copy into .github/workflows/ to install)
-└── capacitors/               a topic: index + 11 chapters + its own assets/ and tools/
+├── <topic>/ × 28             one folder per chapter (anatomy in §3)
+└── Cengage … .pdf × 5        the source textbooks — the "floor" every chapter is audited against
 ```
 
 Rules about the top level:
@@ -70,18 +85,32 @@ Rules about the top level:
   owner, so no contributor (human or agent) ever needs the `workflows` permission.
   `tools/check_all.py` fails if a folder with `assets/notes.css` is unregistered, or if a registered
   topic has no folder.
-* `_templates/` and `docs/` are the only other allowed directories at the root (underscore =
-  tooling, not content).
-* Nothing binary. Diagrams are inline SVG in the HTML; the only image file is `docs/hero.svg`.
+* `_templates/`, `_obsidian/`, `docs/` and `tools/` are the only other directories at the root
+  (underscore = tooling, not content). `.obsidian/` is Obsidian's own configuration directory and
+  is committed deliberately: it is what makes the repository a working vault.
+* Nothing binary **except the five Cengage PDFs**, which are tracked on purpose (`.gitignore`
+  un-ignores them by name) because plan.md §1.12 requires each chapter to be swept against its
+  source chapter. Diagrams are SVG (inline in the HTML editions, standalone under
+  `<topic>/assets/figures/`) or Mermaid source; no PNG/JPG anywhere.
 
 ## 3. Topic anatomy
 
+Two anatomies coexist, on purpose. Which one a folder has is recorded by `format` in `topics.json`.
+
+**(a) HTML-first** — the seven original note-sets (`capacitors`, `current-electricity`,
+`geometrical-optics`, `wave-optics`, `thermodynamics`, `heat`, `sound-waves`). Their chapters were
+consolidated into **one** `<Topic>.html` per topic; the multi-file `index.html` + `NN-slug.html`
+layout that §4–§5 were written for survives only as the page contract that single file still obeys.
+
 ```
 <topic>/
-├── index.html                front page: how to study, badges, chapter cards with ticks
-├── 01-<slug>.html … NN-<slug>.html
-├── README.md                 this topic alone: file table, how to edit, "deliberately not covered"
+├── <Topic>.html              the whole course in one file — the validated interactive edition
+├── <Topic>.md                the portable Markdown edition (exported once by tools/html_to_markdown.py,
+│                             then given frontmatter and Mermaid F-figures — do NOT re-export, see figures.json)
+├── README.md                 this topic alone: scope, how to edit, "deliberately not covered"
+├── figures.json              figure provenance (which figures exist, of which kind, and why)
 ├── assets/
+│   ├── figures/fig-NNN.svg   the standalone diagrams the Markdown links to
 │   ├── notes.css             design system: tokens, callouts, figures, tables, print, dark mode
 │   ├── tex.js                math renderer (LaTeX subset → HTML); no dependencies
 │   ├── notes.js              TOC, scroll-spy, theme, progress, prev/next, print, expand-all
@@ -92,6 +121,26 @@ Rules about the top level:
     ├── check.py              the topic gate (see §8)
     └── test-tex.js           unit tests for the renderer (node tools/test-tex.js)
 ```
+
+**(b) Markdown-first, Obsidian-first** — every chapter written under `plan.md` (PART 1–12,
+23–28, `communication-systems`) and the two Markdown-first wave notes (`string-waves`,
+`electromagnetic-waves`, which additionally keep `assets/figures/*.svg`).
+
+```
+<slug>/
+├── <Title>.md                THE deliverable: frontmatter, the 15-block spine, maths, callouts,
+│                             <details> solutions, Mermaid FIGURE callouts, DIAGRAM briefs
+├── README.md                 scope, coverage map, Olympiad layer, hand-off, "Beyond the plan"
+├── notes.json                the local gate's configuration: part, paper, minimum counts
+├── figures.json              figure provenance
+└── tools/
+    └── check.py              the local gate (copied from kinematics-1d/, configured by notes.json)
+```
+
+No `assets/`, no `.html`, no image files: figures render from Mermaid source in Obsidian
+(`docs/obsidian-plugin-workflow.md` §2). Frontmatter is the vault's metadata — `title`, `part`,
+`slug`, `order`, `block`, `status`, `source`, `aliases`, `tags` — and `tools/check_all.py` checks
+`order`/`block` against `topics.json`.
 
 **Self-containment is the point.** A topic folder copied anywhere — a USB stick, a phone, a
 `file://` tab — must still work. That is why there is no shared root `assets/`, no npm manifest, and
@@ -278,4 +327,6 @@ solutions are force-opened. Two consequences for authors:
 
 GitHub renders the HTML as source, not as a page. To show a reviewer the real thing, print to PDF
 locally (or paste the folder into a gist with a raw viewer) — do not commit the PDF: `*.pdf` is
-ignored on purpose.
+ignored on purpose (the five Cengage source volumes are the one named exception, see §2). The
+Obsidian vault is the other way to read it rendered: `docs/site/` is the same Markdown as a static
+site, and Obsidian's *Export to PDF* prints a chapter with the `physics-notes` CSS snippet applied.

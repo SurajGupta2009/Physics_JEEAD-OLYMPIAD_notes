@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 100</span><span class="prop"><b>slug</b> communication-systems</span><span class="prop"><b>source</b> JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes)</span><span class="prop tag">jee-main</span><span class="prop tag">modern-physics</span><span class="prop tag">communication</span><span class="prop tag">signals</span></p>
+<p class="props"><span class="prop"><b>part</b> 100</span><span class="prop"><b>slug</b> communication-systems</span><span class="prop"><b>order</b> 37</span><span class="prop"><b>block</b> modern</span><span class="prop"><b>source</b> JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes)</span><span class="prop tag">jee-main</span><span class="prop tag">modern-physics</span><span class="prop tag">communication</span><span class="prop tag">signals</span></p>
 
 <h1 id="communication-systems-first-principles-to-olympiad">Communication Systems — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -149,6 +149,24 @@
 <p><strong>AM changes the envelope; FM changes the spacing.</strong> In amplitude modulation the carrier's height tracks the message: louder voice, taller wave. In frequency modulation the carrier's spacing tightens and loosens: louder voice, faster wiggles. FM uses more bandwidth but shrugs off amplitude noise — the lightning crack that ruins AM reception barely dents FM. That trade-off (bandwidth versus noise immunity) is the central engineering decision of the chapter.</p>
 <p><strong>The ionosphere is a mirror for short waves.</strong> Below about 30 MHz the ionosphere reflects radio waves back to Earth, enabling reception beyond the horizon — the sky-wave mode that made global radio possible. Above 30 MHz the waves punch through and travel in straight lines — the space-wave mode of TV, FM and mobile phones. The ground wave hugs the Earth's surface but fades with frequency: long-wave AM travels coast to coast, while VHF barely crosses a city. Three propagation modes, three frequency regimes, one ionosphere.</p>
 <p><strong>Noise is not a nuisance; it is the fundamental limit.</strong> Every receiver picks up thermal noise $P_n=kTB$ from the antenna and its own electronics. Shannon proved that a channel with bandwidth $B$ and signal-to-noise ratio $S/N$ can carry at most $C=B\log_2(1+S/N)$ bits per second — a ceiling no engineering can break. Modulation schemes differ in how close they approach this ceiling.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one journey — modulate, propagate, receive, and count the noise — and the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — the system model, bandwidth, propagation, AM, FM, noise, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((communication systems))
+    System model
+    Bandwidth
+    Propagation
+    AM
+    FM
+    Noise &amp; capacity
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is a bandwidth, a modulation index, a range formula, or Shannon's ceiling.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -246,6 +264,24 @@
 <em>Search:</em> "communication system block diagram transmitter channel receiver noise"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.2 · The three-part system: modulate, send, demodulate</p>
+<p><em>Why:</em> every communication question walks the same chain; the figure fixes the stages and where noise enters.
+<em>Data:</em> source → modulator → transmitter → channel (+noise) → receiver → demodulator → destination.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;message source&quot;] --&gt; B[&quot;modulator&quot;]
+  B --&gt; C[&quot;transmitter&quot;]
+  C --&gt; D[&quot;channel&quot;]
+  N[&quot;noise&quot;] --&gt; D
+  D --&gt; E[&quot;receiver&quot;]
+  E --&gt; F[&quot;demodulator&quot;]
+  F --&gt; G[&quot;destination&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the modulator stamps the message onto a carrier, the channel adds noise, and the demodulator unstamps it — the chain is the map.</p>
+</blockquote>
 <h3 id="32-bandwidth-of-signals">3.2 Bandwidth of signals</h3>
 <p>A pure sinusoidal signal $A\sin(2\pi f t)$ has zero bandwidth — it occupies a single frequency. A real message signal (voice, music, video) occupies a range of frequencies. Human voice: 300 Hz to 3400 Hz, bandwidth 3.1 kHz (telephone standard rounds to 3.4 kHz). Music: 20 Hz to 20 kHz, bandwidth 20 kHz. Video (broadcast TV): up to 6 MHz. Digital signals: a square wave at bit rate $R$ bits/s has harmonics up to roughly $R/2$ Hz, so bandwidth is proportional to bit rate.</p>
 <div class="callout abstract">
@@ -275,6 +311,21 @@ $$</p>
 <em>Search:</em> "sky wave ionospheric reflection skip distance skip zone diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.3 · Propagation: three modes, three frequency bands</p>
+<p><em>Why:</em> the propagation question is decided by frequency alone — the figure routes each band to its mode.
+<em>Data:</em> ground wave &lt; 2 MHz; sky wave 2–30 MHz (ionosphere); space wave &gt; 30 MHz (line-of-sight, range $\sqrt{2Rh}$).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;frequency?&quot;} --&gt;|&quot;&lt; 2 MHz&quot;| B[&quot;ground wave: hugs the Earth&quot;]
+  A --&gt;|&quot;2 - 30 MHz&quot;| C[&quot;sky wave: ionosphere reflection&quot;]
+  A --&gt;|&quot;&gt; 30 MHz&quot;| D[&quot;space wave: line of sight&quot;]
+  D --&gt; E[&quot;range = √(2Rh), add both heights&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> low frequencies bend around the Earth, mid frequencies bounce off the ionosphere, high frequencies must see their target — one ionosphere, three careers.</p>
+</blockquote>
 <h3 id="36-propagation-space-wave">3.6 Propagation: space wave</h3>
 <p>Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon:</p>
 <p>$$
@@ -329,6 +380,22 @@ $$</p>
 <em>Search:</em> "amplitude modulation waveform modulation index 50 percent 100 percent overmodulated"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.4 · AM: the envelope carries the message — until it inverts</p>
+<p><em>Why:</em> amplitude modulation is read entirely from the envelope, and the modulation index is its single dial — the figure binds them.
+<em>Data:</em> $\mu=\frac{A_{\max}-A_{\min}}{A_{\max}+A_{\min}}=\frac{A_m}{A_c}$; $\mu\le1$ required; power efficiency $\frac{\mu^2}{2+\mu^2}$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;carrier + message&quot;] --&gt; B[&quot;μ = A_m / A_c&quot;]
+  B --&gt; C{&quot;μ ≤ 1?&quot;}
+  C --&gt;|&quot;yes&quot;| D[&quot;envelope clean; detected fine&quot;]
+  C --&gt;|&quot;μ &gt; 1&quot;| E[&quot;over-modulation: envelope inverts&quot;]
+  E --&gt; F[&quot;detector fails to recover&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> keep the index at or under one, or the envelope folds over and the message is lost; the index also prices how little carrier power is actually message.</p>
+</blockquote>
 <h3 id="39-frequency-modulation-fm">3.9 Frequency modulation (FM)</h3>
 <p>In FM the carrier's instantaneous frequency tracks the message:</p>
 <p>$$
@@ -405,6 +472,21 @@ $$</p>
 <em>Search:</em> "Shannon channel capacity spectral efficiency signal to noise ratio curve"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.5 · Shannon's ceiling: bandwidth × signal-to-noise</p>
+<p><em>Why:</em> the chapter's end-of-the-line result — no scheme can beat the capacity formula, so every design is measured against it.
+<em>Data:</em> $C=B\log_2(1+S/N)$; thermal noise $P_n=kTB$; $S/N=30$ dB $\Rightarrow C/B\approx10$ bits/s/Hz.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;noise P_n = kTB&quot;] --&gt; B[&quot;S/N ratio&quot;]
+  B --&gt; C[&quot;C = B log2(1 + S/N)&quot;]
+  C --&gt; D[&quot;30 dB → 10 bits/s/Hz&quot;]
+  C --&gt; E[&quot;ceiling no code can break&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> more bandwidth or more signal buys capacity, but logarithmically — doubling $S/N$ adds only $\sim1$ bit/s per hertz at high SNR.</p>
+</blockquote>
 <h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
 <h3 id="41-boxed-results">4.1 Boxed results</h3>
 <p>$$
@@ -957,6 +1039,22 @@ $$</p>
 </div>
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F100.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the nine triage branches of §9.1.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is asked?&quot;} --&gt;|&quot;AM/FM bandwidth&quot;| B[&quot;Eqs. (4.1)/(4.2)&quot;]
+  A --&gt;|&quot;propagation mode&quot;| C[&quot;frequency: &lt;2 MHz, 2-30, &gt;30&quot;]
+  A --&gt;|&quot;antenna-height range&quot;| D[&quot;d = √(2Rh), add heights&quot;]
+  A --&gt;|&quot;critical frequency / MUF&quot;| E[&quot;f_MUF = f_c / cosθ&quot;]
+  A --&gt;|&quot;noise power&quot;| F[&quot;P_n = kTB&quot;]
+  A --&gt;|&quot;channel capacity&quot;| G[&quot;Shannon: C = B log2(1+S/N)&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> frequency picks the propagation mode, a waveform picks the modulation index, and every capacity question stops at Shannon's ceiling.</p>
+</blockquote>
 <ul>
 <li>"Bandwidth of an AM/FM signal": identify $f_m$ or $\Delta f$, apply Eqs. (4.1) or (4.2).</li>
 <li>"Propagation mode": check the frequency — below 2 MHz ground, 2–30 MHz sky, above 30 MHz space/LOS.</li>

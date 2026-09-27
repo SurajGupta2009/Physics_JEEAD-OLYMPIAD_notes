@@ -24,6 +24,8 @@
 <li><a href="#8-printable-formula-sheet">8 · Printable Formula Sheet</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 2</span><span class="prop"><b>slug</b> sound-waves</span><span class="prop"><b>order</b> 14</span><span class="prop"><b>block</b> waves</span><span class="prop"><b>source</b> Cengage Waves and Thermodynamics-compressed.pdf, Sound chapter (longitudinal waves, speed, Laplace, intensity, pipes, beats, Doppler, supersonic)</span><span class="prop tag">jee-advanced</span><span class="prop tag">nsep</span><span class="prop tag">inpho</span><span class="prop tag">ipho</span><span class="prop tag">waves</span><span class="prop tag">sound</span></p>
+
 <p><a id="top"></a>
 <a id="section-index"></a></p>
 <p><em>course map · read this first · 8 parts · 15 figures · 48+30 questions</em></p>
@@ -32,6 +34,26 @@
 <p><img alt="Longitudinal wave: displacement and pressure are π/2 out of phase" src="../../sound-waves/assets/figures/fig-001.svg" /></p>
 <p><strong>Fig. 0.1</strong> — The core fact of sound: where particles crowd (displacement zero, slope maximal) the pressure is maximal; where they spread, pressure is minimal. Displacement $s$ and excess pressure $\Delta P$ are $\pi/2$ out of phase. All of resonance, beats, and Doppler follow from this.</p>
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.1 · Chapter map</p>
+<p><em>Why:</em> the whole chapter hangs on one idea — pressure is the derivative of displacement; the map shows the spine.
+<em>Data:</em> the 8-part structure (foundations → derivations → exemplars → advantage → traps → playbook → paper → formula sheet).</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((sound))
+    Displacement s
+    Pressure ΔP = -B ∂s/∂x
+    Speed v = sqrt(γRT/M)
+    Intensity and dB
+    Organ pipes
+    Beats
+    Doppler
+    Mach cone
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result in this chapter is the derivative, the speed, or the Doppler ratio of one longitudinal disturbance.</p>
+</blockquote>
 <p>The 8-part didactic progression required by the repository contract:</p>
 <ol>
 <li><strong>Foundations &amp; Physical Motivation</strong> — what sound <em>is</em>, state variables, frames.</li>
@@ -289,6 +311,19 @@ $$</p>
 <li><strong>Displacement antinode</strong> $|s|=s_0$ → slope zero → $\Delta P=0$ (pressure node).</li>
 </ul>
 <p>This duality is crucial for organ pipes.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.3 · The displacement→pressure duality</p>
+<p><em>Why:</em> a closed end is a displacement node but a pressure antinode — the single most destructive confusion in organ-pipe problems.
+<em>Data:</em> $\Delta P = -B\,\partial s/\partial x$; node of $s$ ⟺ antinode of $\Delta P$ and vice-versa.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;s = 0 (displacement node)&quot;] --&gt;|&quot;slope ∂s/∂x max&quot;| B[&quot;ΔP max (pressure antinode)&quot;]
+  C[&quot;s max (displacement antinode)&quot;] --&gt;|&quot;slope zero&quot;| D[&quot;ΔP = 0 (pressure node)&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> displacement and pressure are always $\pi/2$ out of phase, so their nodes and antinodes exchange roles at every boundary.</p>
+</blockquote>
 <h3 id="14-state-variables-and-frames">1.4 State variables and frames</h3>
 <ul>
 <li><strong>Medium frame:</strong> medium at rest on average; wave speed $v$ measured here.</li>
@@ -372,6 +407,21 @@ $$</p>
 <li><strong>Pressure:</strong> independent at fixed $T$ (ideal gas). Real gas slight dependence via $Z$ factor.</li>
 <li><strong>Wind:</strong> effective $v_{\text{eff}}=v\pm w$ along propagation.</li>
 </ul>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.2 · What the speed of sound depends on</p>
+<p><em>Why:</em> the dependences are one formula, but examiners test each factor separately — the flow lays them out.
+<em>Data:</em> $v = \sqrt{\gamma RT/M}$: $v \propto \sqrt T$, $v \propto 1/\sqrt M$, independent of pressure at fixed $T$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;v = sqrt(γRT/M)&quot;] --&gt; B[&quot;T ↑ → v ↑ (∝√T)&quot;]
+  A --&gt; C[&quot;M ↑ → v ↓ (∝1/√M)&quot;]
+  A --&gt; D[&quot;P at fixed T → no change&quot;]
+  B --&gt; E[&quot;moist air: M_eff ↓ → v ↑&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> raising temperature raises speed; raising molar mass lowers it; pressure alone, at constant temperature, does nothing.</p>
+</blockquote>
 <h3 id="25-intensity-loudness-decibel">2.5 Intensity, loudness, decibel</h3>
 <p>Particle velocity $u=\partial s/\partial t = -s_0\omega\cos(kx-\omega t)$. Kinetic energy density $u_k=\tfrac12\rho u^2$. Potential $u_p=\tfrac12 B(\partial s/\partial x)^2$. For traveling wave $u_k=u_p$ pointwise, total $u=\rho\omega^2 s_0^2\cos^2/2? Actually average.</p>
 <p>Power transmission: $P = F\cdot u = (-A\Delta P) u$ → instantaneous intensity</p>
@@ -452,6 +502,20 @@ $$</p>
 f_{\text{beat}}=|f_1-f_2|,\quad f_{\text{avg}}=(f_1+f_2)/2 \tag{2.18}
 $$</p>
 <p>Envelope amplitude $2s_0|\cos(\pi f_{\text{beat}}t)|$, intensity waxes/wanes at $f_{\text{beat}}$. Audible if $f_{\text{beat}}&lt;10$ Hz.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.5 · Beats: fast carrier, slow envelope</p>
+<p><em>Why:</em> two close frequencies produce one audible beat — the identity explains both the slow envelope and the average pitch.
+<em>Data:</em> $f_{\text{beat}} = |f_1 - f_2|$, $f_{\text{avg}} = (f_1 + f_2)/2$, from sinusoidal superposition.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;sin ω₁t + sin ω₂t&quot;] --&gt; B[&quot;2 cos(Δω t/2) sin(ω̄ t)&quot;]
+  B --&gt; C[&quot;envelope at |f₁ - f₂|&quot;]
+  B --&gt; D[&quot;carrier at (f₁ + f₂)/2&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> beats count the difference frequency; loading a fork with wax lowers its frequency and moves the beat rate.</p>
+</blockquote>
 <p><img alt="Beats" src="../../sound-waves/assets/figures/fig-008.svg" /></p>
 <p><strong>Fig. 2.7</strong> — Beats: fast oscillation at average frequency, slow envelope at difference frequency.</p>
 <p>Tuning fork: loading with wax increases effective mass → $f$ decreases; filing prongs reduces mass / increases stiffness → $f$ increases.</p>
@@ -476,6 +540,21 @@ $$</p>
 f' = f\frac{v\pm v_o}{v\mp v_s} \tag{2.21}
 $$</p>
 <p>Sign convention: numerator + if observer toward source, denominator - if source toward observer. Equivalent to using positive direction S→O: $f'=f(v+w+v_o)/(v+w-v_s)$ with careful signs.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.4 · Doppler: what moves, what changes</p>
+<p><em>Why:</em> the source changes wavelength IN the medium; the observer changes the intercept rate — conflating them flips the formula.
+<em>Data:</em> moving source: $f' = f\,v/(v \mp v_s)$; moving observer: $f' = f(v \pm v_o)/v$; combined $f' = f\,\frac{v \pm v_o}{v \mp v_s}$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  S[&quot;moving source&quot;] --&gt;|&quot;λ in medium changes&quot;| L[&quot;λ' = (v ∓ v_s)/f&quot;]
+  O[&quot;moving observer&quot;] --&gt;|&quot;intercept rate changes&quot;| R[&quot;v_rel = v ± v_o&quot;]
+  L --&gt; F[&quot;f' = f (v ± v_o)/(v ∓ v_s)&quot;]
+  R --&gt; F
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the numerator belongs to the observer, the denominator to the source — same-line motion only; projections handle 2D.</p>
+</blockquote>
 <h3 id="210-wind-and-2d-oblique-doppler">2.10 Wind and 2D oblique Doppler</h3>
 <p>Wind $w$ along line S→O: effective sound speed $v_{\text{eff}}=v\pm w$ (+ if wind S→O). Then replace $v$ by $v_{\text{eff}}$ in (2.21):</p>
 <p>$$
@@ -714,6 +793,22 @@ $$</p>
 <h2 id="6-topic-playbook">6 · Topic Playbook</h2>
 <p><em>Part 6 of 8 · triage, formula maps, numbers</em></p>
 <h3 id="61-triage-decision-tree">6.1 Triage decision-tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F2.6 · Triage — name the phenomenon first</p>
+<p><em>Why:</em> the first question routes the whole solution; the flowchart makes the six branches visible.
+<em>Data:</em> the six triage branches of §6.1 (speed, intensity, pipes, beats, Doppler, Mach).</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is asked?&quot;} --&gt;|&quot;speed&quot;| B[&quot;v=√(γRT/M) or √(B/ρ)&quot;]
+  A --&gt;|&quot;intensity&quot;| C[&quot;I=P/4πr², β=10log(I/I₀)&quot;]
+  A --&gt;|&quot;pipes&quot;| D[&quot;closed: odd λ/4; open: all λ/2&quot;]
+  A --&gt;|&quot;beats&quot;| E[&quot;f_beat=|f₁-f₂|&quot;]
+  A --&gt;|&quot;Doppler&quot;| F[&quot;source changes λ, observer changes v_rel&quot;]
+  A --&gt;|&quot;Mach&quot;| G[&quot;sinα=1/M&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the first question names the law; mixing the wavelength change (source) with the intercept change (observer) is the classic trap.</p>
+</blockquote>
 <p><img alt="Decision tree" src="../../sound-waves/assets/figures/fig-015.svg" /></p>
 <pre><code>Is it about speed?
   → Gas? Use v=√(γRT/M), check T, M, humidity.

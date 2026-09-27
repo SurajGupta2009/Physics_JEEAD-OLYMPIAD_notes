@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 23</span><span class="prop"><b>slug</b> photoelectric-effect</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 3 Photoelectric Effect (pp. 3.1-3.41)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
+<p class="props"><span class="prop"><b>part</b> 23</span><span class="prop"><b>slug</b> photoelectric-effect</span><span class="prop"><b>order</b> 32</span><span class="prop"><b>block</b> modern</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 3 Photoelectric Effect (pp. 3.1-3.41)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
 
 <h1 id="photons-photoelectric-effect-matter-waves-first-principles-to-olympiad">Photons, Photoelectric Effect &amp; Matter Waves — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -221,6 +221,26 @@
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one equation $K_{\max}=hf-\phi$ plus one wavelength $\lambda=h/p$; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — photons, the apparatus, Einstein's line, matter waves, uncertainty, instruments, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((light as particles))
+    Photon E = hf
+    Work function
+    Kmax = hf - phi
+    Stopping potential
+    Matter waves
+    Uncertainty
+    Instruments
+    Olympiad paper
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is either the photon's energy-momentum bookkeeping or the wave it carries to matter.</p>
+</blockquote>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <h3 id="11-light-as-a-rain-of-packets">1.1 Light as a rain of packets</h3>
 <p>Stand in rain and in drizzle made from the same water. The drizzle wets you slowly because fewer drops arrive per second, not because each drop is smaller. Classical light is like a mist that can be made arbitrarily fine: the wave theory says the energy arrives continuously, spread over the wavefront, so a dim light should take a long time to deliver a fixed amount of energy to a small target. The photoelectric effect says otherwise: even light so dim that the wave picture predicts hours of waiting ejects electrons within nanoseconds. The resolution is that light is not a mist. It is a rain of indivisible drops, each carrying $hf$. A dim beam is fewer drops per second, never smaller drops.</p>
@@ -348,13 +368,22 @@ $$</p>
 
 <h3 id="32-the-experimental-facts-and-the-classical-predictions-they-destroy">3.2 The experimental facts and the classical predictions they destroy</h3>
 <p>The apparatus is an evacuated tube with two electrodes: an emitter plate (the metal under test) and a collector. Light of chosen frequency falls on the emitter; a variable battery pushes the collector positive (accelerating photoelectrons) or negative (retarding them); a sensitive ammeter reads the photocurrent.</p>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D23.2 · The photoelectric apparatus</p>
-<p><em>Show:</em> evacuated glass tube; emitter plate E lit by a monochromatic beam entering a quartz window; collector C opposite; a variable supply with a reversing switch; a microammeter in series and a voltmeter across the tube; arrows showing electrons crossing when the collector is positive.
-<em>Search:</em> "photoelectric effect experiment apparatus stopping potential circuit diagram"
-<em>Used in:</em> §3.2, §3.5, §3.6.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.2 · The photoelectric apparatus as a current-voltage map</p>
+<p><em>Why:</em> the retarding voltage is a filter — raising it sweeps away electrons from fastest to slowest; the flow shows the stopping-potential logic.
+<em>Data:</em> the evacuated-tube circuit — monochromatic light onto emitter, retarding/accelerating collector voltage, ammeter and voltmeter.</p>
 </div>
 
+<pre><code class="language-mermaid">flowchart LR
+  L[&quot;light hf&quot;] --&gt; E[&quot;emitter plate&quot;]
+  E --&gt;|&quot;photoelectrons&quot;| C[&quot;collector&quot;]
+  C --&gt; V{&quot;collector voltage&quot;}
+  V --&gt;|&quot;accelerating&quot;| S[&quot;saturation current&quot;]
+  V --&gt;|&quot;retarding = -Vs&quot;| Z[&quot;current cut off&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> below threshold no light of any brightness triggers emission; at and beyond threshold, only the collector voltage changes.</p>
+</blockquote>
 <p>The five facts, each against the wave prediction:</p>
 <table>
 <thead>
@@ -392,6 +421,22 @@ $$</p>
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.3 · The five facts and the two that destroy waves</p>
+<p><em>Why:</em> three facts look like wave behaviour; two do not — the figure separates the discriminators from the decoys.
+<em>Data:</em> the five experimental facts of §3.2 against the classical wave prediction.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;threshold f0&quot;] --&gt;|&quot;no emission below it&quot;| W1[&quot;kills waves&quot;]
+  B[&quot;instantaneity &lt;1 ns&quot;] --&gt;|&quot;no accumulation&quot;| W1
+  C[&quot;current ∝ intensity&quot;] --&gt;|&quot;waves agree&quot;| W2[&quot;decoy, not a discriminator&quot;]
+  D[&quot;Kmax ∝ f, not intensity&quot;] --&gt; W1
+  E[&quot;Vs ∝ f (slope h/e)&quot;] --&gt; W1
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the threshold, the instantaneity, and the frequency-only $K_{\max}$ rule out classical waves; the current-intensity proportionality cannot decide.</p>
+</blockquote>
 <div class="callout info">
 <p class="callout-title">Why the current being proportional to intensity is not a victory for waves</p>
 <p>In the photon picture, doubling intensity at fixed $f$ doubles the photon flux $n=\frac{I}{hf}$, hence doubles the electron rate. The wave picture predicts the same proportionality, so this single fact cannot discriminate. The discriminators are the threshold, the instantaneity, and the intensity-independence of $V_s$.</p>
@@ -449,13 +494,22 @@ $$</p>
 <p>$$
 eV_s=K_{\max}=hf-\phi\quad\Longrightarrow\quad V_s=\frac{h}{e}f-\frac{\phi}{e}. \qquad (3.8)
 $$</p>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D23.5 · $K_{\max}$ versus frequency for two metals</p>
-<p><em>Show:</em> $K_{\max}$ on the vertical axis, $f$ on the horizontal; two straight lines for cesium and zinc, both with the same slope $\frac{h}{e}$, crossing the $f$-axis at their threshold frequencies $f_0^{\text{Cs}}&lt;f_0^{\text{Zn}}$; the common slope annotated $\frac{h}{e}$; the vertical intercepts $-\phi$ marked on the dashed backward extension.
-<em>Search:</em> "photoelectric effect kinetic energy frequency graph slope h/e two metals work function"
-<em>Used in:</em> §3.5, E4, Q10.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.5 · $K_{\max}$ versus frequency for two metals</p>
+<p><em>Why:</em> the shared slope $\frac{h}{e}$ across every metal is the measurement of Planck's constant; the different intercepts are the work functions.
+<em>Data:</em> $K_{\max} = h f - \phi$ — two parallel lines, slope $h/e$, thresholds $f_0^{\text{Cs}}\approx4.6\times10^{14}$ Hz and $f_0^{\text{Zn}}\approx10.4\times10^{14}$ Hz.</p>
 </div>
 
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;Kmax vs f: same slope h/e, different thresholds&quot;
+  x-axis &quot;f&quot; 0 --&gt; 12
+  y-axis &quot;Kmax&quot; 0 --&gt; 3
+  line [0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0.8, 1.4, 2.0, 2.6]
+  line [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the common slope is $\frac{h}{e}$ for every metal; the horizontal intercepts mark the threshold frequencies — cesium turns on first because its $\phi$ is smaller.</p>
+</blockquote>
 <p>Eq. (3.8) is the measurement of Planck's constant: the slope of $V_s$ against $f$ is $\frac{h}{e}$ for <em>every</em> metal, and the horizontal intercept is $f_0=\frac{\phi}{h}$. Millikan's decade of such graphs confirmed Einstein's line and measured $h$ to agree with the blackbody value — the decisive cross-check that one quantum governs both phenomena.</p>
 <div class="callout warning">
 <p class="callout-title">Condition of validity</p>
@@ -509,13 +563,20 @@ $$</p>
 \lambda=\frac{h}{\sqrt{2m_e eV}}=\frac{1.226\ \text{nm}}{\sqrt{V\ [\text{V}]}}. \qquad (3.10)
 $$</p>
 <p>Numbers: $54$ V gives $0.167$ nm; $100$ V gives $0.123$ nm; $10$ kV gives $0.0123$ nm. A thermal particle at temperature $T$ has a typical momentum $p\sim\sqrt{3mk_BT}$, so a neutron at room temperature ($k_BT\approx25$ meV) has $\lambda\approx1.8$ Å — atomic scale, which is why thermal neutrons diffract from crystals (PART 26 will use this). A $0.15$ kg cricket ball at $30$ m/s has $\lambda\sim10^{-34}$ m: no interface in the universe has slits that fine, so the ball shows no wave behaviour. The classical world is the $\lambda\ll$ geometry limit.</p>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D23.6 · de Broglie wavelength across the world</p>
-<p><em>Show:</em> a log axis of wavelength from $10^{-34}$ m to $1$ m with five labelled markers: cricket ball, running person, thermal neutron (1.8 Å), 100 V electron (0.12 nm), X-ray band; a shaded band "atomic spacings 0.1-1 nm" overlapping only the neutron and electron markers.
-<em>Search:</em> "de Broglie wavelength scale macroscopic electron neutron atomic spacing"
-<em>Used in:</em> §3.7, Q12.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.6 · de Broglie wavelength: the classical world is the geometry limit</p>
+<p><em>Why:</em> the same formula $\lambda=h/p$ describes a cricket ball and a neutron — the wave is visible only when $\lambda$ meets the lattice spacing.
+<em>Data:</em> $\lambda = h/p$ on a log axis — cricket ball $\sim10^{-34}$ m, thermal neutron $\sim1.8\,\text{Å}$, 100 V electron $\sim0.12$ nm, X-rays $\sim0.1$ nm, atomic spacings $0.1$–$1$ nm.</p>
 </div>
 
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;ball: λ ~ 10^-34 m&quot;] --&gt;|&quot;λ ≪ atom spacing&quot;| B[&quot;no wave behaviour&quot;]
+  C[&quot;neutron / electron: λ ~ Å&quot;] --&gt;|&quot;λ ≈ lattice spacing&quot;| D[&quot;diffraction visible&quot;]
+  D --&gt; E[&quot;Davisson-Germer, crystal diffraction&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> wave behaviour shows only when $\lambda$ is comparable to the geometry it meets; the classical world is the $\lambda \ll$ scale limit.</p>
+</blockquote>
 <h3 id="38-the-bohr-orbit-as-a-standing-wave">3.8 The Bohr orbit as a standing wave</h3>
 <p>Demand that the matter wave on a circular orbit close on itself in phase: circumference $=$ integer wavelengths,</p>
 <p>$$
@@ -1289,6 +1350,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F23.4 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the equation before any number is touched.
+<em>Data:</em> the six triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What does the question name?&quot;} --&gt;|&quot;emission, threshold, stopping potential&quot;| B[&quot;photon bookkeeping §3.5&quot;]
+  A --&gt;|&quot;wavelength, diffraction of electrons&quot;| C[&quot;de Broglie / matter waves&quot;]
+  A --&gt;|&quot;force or pressure of light&quot;| D[&quot;momentum P/c (1+R)&quot;]
+  A --&gt;|&quot;graph&quot;| E[&quot;linearise §7.5&quot;]
+  A --&gt;|&quot;why not classically&quot;| F[&quot;waiting time + threshold&quot;]
+  A --&gt;|&quot;size or minimum energy&quot;| G[&quot;uncertainty §3.9&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the keyword names the route — emission is photon bookkeeping, diffraction is matter waves, a size is uncertainty.</p>
+</blockquote>
 <ul>
 <li>If the question mentions emission, threshold, stopping potential: photon bookkeeping, §3.5.</li>
 <li>If it mentions wavelength of a particle, diffraction of electrons or neutrons: §3.7-3.10.</li>
@@ -2051,32 +2129,32 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
 <h3 id="141-can-i-do-this">14.1 Can I do this?</h3>
 <p>Score yourself one point per honest yes; 24 plus is exam-ready.</p>
-<ol>
-<li>Convert any wavelength in the visible band to eV in five seconds.</li>
-<li>Count photons per second from power and wavelength.</li>
-<li>State the five photoelectric facts and the classical failure each kills.</li>
-<li>Derive the classical waiting time and quote its nine-hour value.</li>
-<li>Write Einstein's equation and define every symbol.</li>
-<li>Read $h$ and $\phi$ off a $V_s$-$f$ graph.</li>
-<li>Predict the effect on current and $V_s$ of each of the three knobs.</li>
-<li>Explain why $K_{\max}$ is a maximum.</li>
-<li>Compute an electron's wavelength from its voltage.</li>
-<li>Compute a neutron's or proton's wavelength from its energy.</li>
-<li>Say why a cricket ball shows no fringes, with a number.</li>
-<li>Derive $L=n\hbar$ from the standing-wave condition.</li>
-<li>State and derive the uncertainty principle from a wave packet.</li>
-<li>Derive $a_0$ and $-13.6$ eV by minimisation.</li>
-<li>Explain in one sentence why the atom does not collapse.</li>
-<li>Compute a natural linewidth from a lifetime.</li>
-<li>Describe Davisson-Germer and verify its numbers.</li>
-<li>Classify five scenarios into photon, wave or packet reasoning.</li>
-<li>Compute the force of a light beam with partial reflection.</li>
-<li>Quote the relativistic correction threshold for electron wavelengths.</li>
-<li>Explain why thermal electrons in metals form a quantum gas.</li>
-<li>Explain why lasers need pumping, with the Boltzmann number.</li>
-<li>Recognise and defuse each trap of Part 8.</li>
-<li>Run the ten-point audit of §9.5 without looking.</li>
-</ol>
+<ul>
+<li>[ ] Convert any wavelength in the visible band to eV in five seconds.</li>
+<li>[ ] Count photons per second from power and wavelength.</li>
+<li>[ ] State the five photoelectric facts and the classical failure each kills.</li>
+<li>[ ] Derive the classical waiting time and quote its nine-hour value.</li>
+<li>[ ] Write Einstein's equation and define every symbol.</li>
+<li>[ ] Read $h$ and $\phi$ off a $V_s$-$f$ graph.</li>
+<li>[ ] Predict the effect on current and $V_s$ of each of the three knobs.</li>
+<li>[ ] Explain why $K_{\max}$ is a maximum.</li>
+<li>[ ] Compute an electron's wavelength from its voltage.</li>
+<li>[ ] Compute a neutron's or proton's wavelength from its energy.</li>
+<li>[ ] Say why a cricket ball shows no fringes, with a number.</li>
+<li>[ ] Derive $L=n\hbar$ from the standing-wave condition.</li>
+<li>[ ] State and derive the uncertainty principle from a wave packet.</li>
+<li>[ ] Derive $a_0$ and $-13.6$ eV by minimisation.</li>
+<li>[ ] Explain in one sentence why the atom does not collapse.</li>
+<li>[ ] Compute a natural linewidth from a lifetime.</li>
+<li>[ ] Describe Davisson-Germer and verify its numbers.</li>
+<li>[ ] Classify five scenarios into photon, wave or packet reasoning.</li>
+<li>[ ] Compute the force of a light beam with partial reflection.</li>
+<li>[ ] Quote the relativistic correction threshold for electron wavelengths.</li>
+<li>[ ] Explain why thermal electrons in metals form a quantum gas.</li>
+<li>[ ] Explain why lasers need pumping, with the Boltzmann number.</li>
+<li>[ ] Recognise and defuse each trap of Part 8.</li>
+<li>[ ] Run the ten-point audit of §9.5 without looking.</li>
+</ul>
 <h3 id="142-what-the-next-chapter-assumes">14.2 What the next chapter assumes</h3>
 <p>PART 24 (atomic structure) takes the standing-wave condition §3.8 and the uncertainty estimate §3.9 as inputs and adds the Coulomb force to derive $r_n$, $v_n$, $E_n$ and the Rydberg constant; it also inherits the photon bookkeeping for transitions. PART 25 inherits $E=hf$ and $p=\frac{h}{\lambda}$ for X-rays and Compton scattering, and the diffraction logic of §3.10 for Bragg's law. The shipped <a href="electromagnetic-waves.html">Electromagnetic-waves</a> note remains the owner of radiation pressure as field theory; this chapter's photon counting is its particle-side twin.</p>
 <h3 id="143-open-questions-you-can-now-attack">14.3 Open questions you can now attack</h3>

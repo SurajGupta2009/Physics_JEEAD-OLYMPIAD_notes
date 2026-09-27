@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 24</span><span class="prop"><b>slug</b> atomic-structure</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 4 Atomic Physics (pp. 4.1-4.24)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
+<p class="props"><span class="prop"><b>part</b> 24</span><span class="prop"><b>slug</b> atomic-structure</span><span class="prop"><b>order</b> 33</span><span class="prop"><b>block</b> modern</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics, ch 4 Atomic Physics (pp. 4.1-4.24)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">quantum</span></p>
 
 <h1 id="rutherford-the-bohr-model-atomic-spectra-first-principles-to-olympiad">Rutherford, the Bohr Model &amp; Atomic Spectra — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -238,6 +238,25 @@
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one experiment (scattering) plus one equation ($E_n = -13.6\,Z^2/n^2$) plus one spectral rule; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — scattering, orbits, levels, spectra, exotic atoms, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((the atom))
+    Rutherford scattering
+    Bohr postulates
+    Energy levels
+    Hydrogen spectrum
+    Hydrogen-like ions
+    Zeeman and fine structure
+    Olympiad paper
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is either the scattering geometry, the level energy $E_n$, or the transition difference $E_i - E_f$.</p>
+</blockquote>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <h3 id="11-the-atom-before-the-surprise">1.1 The atom before the surprise</h3>
 <p>Imagine positive charge smeared through a sphere the size of the atom, like currants (the electrons) in a pudding. Fire alpha particles at it: each alpha feels many tiny, mostly cancelling pushes, and should emerge with its direction barely changed, the way a rifle bullet crosses a foam mattress. That is the Thomson prediction, and it is specific: large-angle scattering should be essentially impossible.</p>
@@ -358,13 +377,21 @@
 <h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
 <h3 id="31-the-atom-before-1911-and-what-thomson-predicted">3.1 The atom before 1911, and what Thomson predicted</h3>
 <p>Thomson's atom: positive charge spread uniformly through a sphere of radius $\sim10^{-10}$ m, electrons embedded in it. Predict the scattering before looking at the data — this is the discipline that makes the experiment a test. An alpha particle crossing the sphere feels a field that grows linearly from the centre and never exceeds $E_{\max}=\frac{kZe}{R^2}$ at the surface; the total transverse impulse is tiny compared with the alpha's momentum, and multiple scattering averages out. Prediction: deflections of order a degree at most, large-angle events exponentially impossible.</p>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D24.1 · Thomson versus Rutherford predictions</p>
-<p><em>Show:</em> two panels of alpha particles crossing an atom: left, the pudding, with nearly straight tracks and a caption "deflections of order one degree"; right, the nuclear atom, with most tracks straight but one hyperbola bent through more than 90 degrees; the nucleus drawn as a dot.
-<em>Search:</em> "alpha scattering Thomson Rutherford model comparison large angle deflection"
-<em>Used in:</em> §3.1, §3.2.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.2 · Thomson versus Rutherford: the same beam, two predictions</p>
+<p><em>Why:</em> the same alpha beam must come out nearly straight (pudding) or occasionally back-scattered (nucleus); the difference is the decisive test.
+<em>Data:</em> Thomson's soft pudding → deflections of order 1°; Rutherford's point nucleus → Coulomb hyperbola, with deflections beyond 90°.</p>
 </div>
 
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;alpha beam&quot;] --&gt; B{&quot;what is the target?&quot;}
+  B --&gt;|&quot;diffuse pudding (Thomson)&quot;| C[&quot;all tracks nearly straight&quot;]
+  B --&gt;|&quot;point nucleus (Rutherford)&quot;| D[&quot;most straight, rare big deflections&quot;]
+  D --&gt; E[&quot;one in 8000 bounces backward&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the rare large-angle scattering is the smoking gun for a concentrated charge — no soft cloud can produce it.</p>
+</blockquote>
 <h3 id="32-rutherford-scattering-impact-parameter-and-angle">3.2 Rutherford scattering: impact parameter and angle</h3>
 <p>Model the nucleus as a fixed charge $Ze$ and the alpha (charge $2e$, mass $m$, speed $v$) as a point on a hyperbola. The impact parameter $b$ is the miss distance the alpha would have had without any force. Angular momentum about the nucleus is $L=mvb$ throughout.</p>
 <p>The direction of the momentum rotates by the scattering angle $\theta$, so the momentum change has magnitude $\Delta p=2mv\sin\frac{\theta}{2}$, directed along the hyperbola's symmetry axis. Compute the same change from the impulse, using $dt=\frac{r^2}{vb}\,d\phi$ (from $L=mr^2\dot\phi=mvb$) with $\phi$ measured from the symmetry axis over $-\left(\frac{\pi-\theta}{2}\right)\le\phi\le+\left(\frac{\pi-\theta}{2}\right)$:</p>
@@ -442,13 +469,22 @@ $$</p>
 <p>The virial structure: $K=-E_n$ and $U=2E_n$, so the kinetic energy is half the potential's magnitude — the same balance the uncertainty estimate found in [Photoelectric-effect](photoelectric-effect.html) OL3. And $v_1=\frac{c}{137}$: the fine-structure constant appears, and its smallness is the model's self-consistency certificate (non-relativistic treatment valid to $\sim\alpha^2$).</p>
 </div>
 
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D24.5 · Bohr orbits to scale</p>
-<p><em>Show:</em> concentric circles at radii 1, 4, 9, 16 in units of a0, labelled n = 1 to 4; a note that the spacing grows as 2n+1; the nucleus a dot; an arrow from n = 2 to n = 1 drawn as a photon.
-<em>Search:</em> "Bohr model orbits to scale n squared spacing hydrogen"
-<em>Used in:</em> §3.5.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.5 · Energy levels: the $E_n$ ladder in one line</p>
+<p><em>Why:</em> the whole spectrum is differences between rungs of one ladder; the graph makes $E_n \propto 1/n^2$ visible.
+<em>Data:</em> $E_n = -13.6/n^2$ eV for $n = 1..5$ — rungs at $-13.6, -3.4, -1.51, -0.85, -0.54$ eV.</p>
 </div>
 
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;n=1: -13.6 eV&quot;] --&gt; B[&quot;n=2: -3.4 eV&quot;]
+  B --&gt; C[&quot;n=3: -1.51 eV&quot;]
+  C --&gt; D[&quot;n=4: -0.85 eV&quot;]
+  D --&gt; E[&quot;n=5: -0.54 eV&quot;]
+  E --&gt; F[&quot;ionisation: 0 eV&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> rungs crowd toward zero as $1/n^2$; a transition's photon is exactly the energy difference between two rungs.</p>
+</blockquote>
 <h3 id="36-the-spectrum">3.6 The spectrum</h3>
 <p>A transition $n_i\to n_f$ emits $\frac{hc}{\lambda}=E_{n_i}-E_{n_f}$; dividing by $hc$:</p>
 <p>$$
@@ -511,13 +547,21 @@ $$</p>
 <em>Used in:</em> §3.6, Q5.</p>
 </div>
 
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D24.7 · The Balmer lines of hydrogen</p>
-<p><em>Show:</em> a wavelength axis from 360 to 700 nm with four sharp vertical lines at 656.1, 486.1, 434.0, 410.1 nm, the spacing tightening toward the 364.6 nm limit; the visible rainbow shaded behind.
-<em>Search:</em> "hydrogen Balmer series visible lines wavelengths spectrum"
-<em>Used in:</em> §3.6.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.6 · The Balmer series: lines crowd toward a limit</p>
+<p><em>Why:</em> the tightening spacing is the $1/n^2$ ladder in wavelength space — the single most tested feature of $n=2$ spectra.
+<em>Data:</em> $\frac{1}{\lambda}=R(\frac14-\frac1{n^2})$: first four Balmer lines at 656.1, 486.1, 434.0, 410.1 nm, limit 364.6 nm.</p>
 </div>
 
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;n=3 → 2: 656.1 nm&quot;] --&gt; B[&quot;n=4 → 2: 486.1 nm&quot;]
+  B --&gt; C[&quot;n=5 → 2: 434.0 nm&quot;]
+  C --&gt; D[&quot;n=6 → 2: 410.1 nm&quot;]
+  D --&gt;|&quot;tighten&quot;| E[&quot;limit: 364.6 nm&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the first line is the longest and most separated; higher lines bunch toward the 364.6 nm series limit.</p>
+</blockquote>
 <h3 id="37-transitions-excitation-and-who-may-pay">3.7 Transitions, excitation, and who may pay</h3>
 <p>A photon is all-or-nothing: to excite $n\to m$ it must carry <em>exactly</em> $E_m-E_n$ (or at least the ionisation energy, the surplus becoming the free electron's kinetic energy). An impacting electron is a billiard ball: it may hand over any part of its energy, so an $11$ eV electron can excite hydrogen's $10.2$ eV line and keep $0.8$ eV, while an $11$ eV photon passes straight through. The Franck-Hertz experiment is this logic as a measurement: electrons accelerated through mercury vapour lose current sharply at $4.9$ V, and the vapour glows at $\frac{1240}{4.9}=253$ nm — discrete dips proving discrete levels.</p>
 <div class="callout abstract">
@@ -527,6 +571,20 @@ $$</p>
 <em>Used in:</em> §3.7.</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.3 · Photon vs electron: who may pay</p>
+<p><em>Why:</em> the all-or-nothing photon versus the part-paying electron is the single sharpest conceptual test in quantum chapters.
+<em>Data:</em> a photon must carry exactly $E_m - E_n$; an electron may hand over any part of its kinetic energy.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;excite n → m, gap ΔE&quot;] --&gt; B{&quot;what is the incident particle?&quot;}
+  B --&gt;|&quot;photon&quot;| C[&quot;needs exactly ΔE, else passes through&quot;]
+  B --&gt;|&quot;electron&quot;| D[&quot;may pay part: keeps remainder as kinetic&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the quantum of light is all-or-nothing; the electron is a billiard ball that can pay in instalments.</p>
+</blockquote>
 <p>Why is almost every atom in its ground state at room temperature? The Boltzmann factor: $\frac{N_2}{N_1}=4e^{-\Delta E/k_BT}$ (the 4 is the degeneracy ratio). For hydrogen's $10.2$ eV gap at $300$ K the exponent is $e^{-395}$: nothing is excited. Even at $10^4$ K (a hot star's surface) the ratio is $4e^{-11.8}=2.9\times10^{-5}$ — small, but multiplied by a star's atoms it makes the Balmer lines of stellar spectra strong; at $2\times10^4$ K the ratio reaches $0.011$, the peak of Balmer strength in stellar classification.</p>
 <p>Binding (separation) energy of the electron in level $n$ is $-E_n$; ionisation potential in volts is numerically the same for a singly charged electron.</p>
 <h3 id="38-hydrogen-like-ions-and-exotic-atoms">3.8 Hydrogen-like ions and exotic atoms</h3>
@@ -1202,6 +1260,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F24.4 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the six triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What does the question name?&quot;} --&gt;|&quot;alpha, foil, angle, impact&quot;| B[&quot;scattering formulas §3.2-3.3&quot;]
+  A --&gt;|&quot;wavelength or line&quot;| C[&quot;draw the ladder §3.6&quot;]
+  A --&gt;|&quot;excite with a photon&quot;| D[&quot;exact energy gap&quot;]
+  A --&gt;|&quot;excite with an electron&quot;| E[&quot;part-payment allowed&quot;]
+  A --&gt;|&quot;ion or exotic atom&quot;| F[&quot;Z² / reduced-mass scalings&quot;]
+  A --&gt;|&quot;field or temperature&quot;| G[&quot;Zeeman / Boltzmann&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> scattering words go to Rutherford, wavelength words to the ladder, and the excitation rule differs for photons versus electrons.</p>
+</blockquote>
 <ul>
 <li>Scattering words (alpha, foil, angle, impact): §3.2-3.3 formulas.</li>
 <li>Wavelength or line words: draw the ladder, §3.6.</li>
@@ -1943,32 +2018,32 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
 <h3 id="141-can-i-do-this">14.1 Can I do this?</h3>
 <p>One point per honest yes; 24 plus is exam-ready.</p>
-<ol>
-<li>Predict Thomson's scattering outcome before seeing data.</li>
-<li>Derive $r_{\min}$ and state exactly what it bounds.</li>
-<li>Derive the $b$-$\theta$ relation and the $\sin^{-4}$ law's consequence.</li>
-<li>Quote the classical collapse time and its derivation route.</li>
-<li>State Bohr's postulates and their standing-wave origin.</li>
-<li>Derive the $r_n$, $v_n$, $E_n$ trio from two equations.</li>
-<li>Explain the virial structure $K=-E$, $U=2E$.</li>
-<li>Derive $R$ and compare with $R_H$ via reduced mass.</li>
-<li>Name the five series and their bands.</li>
-<li>Count total and per-series lines from any $n$.</li>
-<li>Decide photon versus electron excitation in one line.</li>
-<li>Read a Franck-Hertz curve.</li>
-<li>Apply the Boltzmann factor to stellar Balmer strength.</li>
-<li>Scale to He$^+$, Li$^{2+}$ without re-deriving.</li>
-<li>Apply the reduced-mass substitution to H, D, muonic H, positronium.</li>
-<li>State Moseley's law as a corollary and its screening reason.</li>
-<li>Compute a Zeeman splitting in eV and nm.</li>
-<li>Introduce $n,l,m_l,m_s$ and $\Delta l=\pm1$ with their roles.</li>
-<li>Run the correspondence expansion to first order.</li>
-<li>Quote the 21 cm line's energy and its weakness.</li>
-<li>Defuse each trap of Part 8.</li>
-<li>Draw any level diagram blindfolded.</li>
-<li>Extract $R$ from a line list.</li>
-<li>Run the ten-point audit of §9.5.</li>
-</ol>
+<ul>
+<li>[ ] Predict Thomson's scattering outcome before seeing data.</li>
+<li>[ ] Derive $r_{\min}$ and state exactly what it bounds.</li>
+<li>[ ] Derive the $b$-$\theta$ relation and the $\sin^{-4}$ law's consequence.</li>
+<li>[ ] Quote the classical collapse time and its derivation route.</li>
+<li>[ ] State Bohr's postulates and their standing-wave origin.</li>
+<li>[ ] Derive the $r_n$, $v_n$, $E_n$ trio from two equations.</li>
+<li>[ ] Explain the virial structure $K=-E$, $U=2E$.</li>
+<li>[ ] Derive $R$ and compare with $R_H$ via reduced mass.</li>
+<li>[ ] Name the five series and their bands.</li>
+<li>[ ] Count total and per-series lines from any $n$.</li>
+<li>[ ] Decide photon versus electron excitation in one line.</li>
+<li>[ ] Read a Franck-Hertz curve.</li>
+<li>[ ] Apply the Boltzmann factor to stellar Balmer strength.</li>
+<li>[ ] Scale to He$^+$, Li$^{2+}$ without re-deriving.</li>
+<li>[ ] Apply the reduced-mass substitution to H, D, muonic H, positronium.</li>
+<li>[ ] State Moseley's law as a corollary and its screening reason.</li>
+<li>[ ] Compute a Zeeman splitting in eV and nm.</li>
+<li>[ ] Introduce $n,l,m_l,m_s$ and $\Delta l=\pm1$ with their roles.</li>
+<li>[ ] Run the correspondence expansion to first order.</li>
+<li>[ ] Quote the 21 cm line's energy and its weakness.</li>
+<li>[ ] Defuse each trap of Part 8.</li>
+<li>[ ] Draw any level diagram blindfolded.</li>
+<li>[ ] Extract $R$ from a line list.</li>
+<li>[ ] Run the ten-point audit of §9.5.</li>
+</ul>
 <h3 id="142-what-the-next-chapter-assumes">14.2 What the next chapter assumes</h3>
 <p>PART 25 (X-rays) takes the Bohr arithmetic into the inner shells: Moseley's law derived with the shielding argument, the Duane-Hunt limit as the inverse photoelectric effect, and Bragg diffraction using the wave logic of PART 23. PART 26 (nuclear) inherits the $r_{\min}$ logic (where it fails), the reduced-mass habit and the eV bookkeeping. The 21 cm line and stellar Boltzmann factors feed the astrophysics margins of several later chapters.</p>
 <div class="callout abstract">

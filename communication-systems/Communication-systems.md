@@ -2,6 +2,8 @@
 title: Communication Systems — first principles to Olympiad
 part: 100
 slug: communication-systems
+order: 37
+block: modern
 status: complete
 source: JEE Main communication systems syllabus (no chapter in the supplied Cengage volumes)
 aliases: [communication systems, AM, FM, modulation, demodulation, signal processing]

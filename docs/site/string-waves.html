@@ -14,6 +14,7 @@
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
+<li><a href="#-">---</a></li>
 <li><a href="#part-1-foundations-harmonic-wave-kinematics">Part 1: Foundations &amp; Harmonic Wave Kinematics</a></li>
 <li><a href="#part-2-rigorous-derivations-of-wave-speed-wave-equation">Part 2: Rigorous Derivations of Wave Speed &amp; Wave Equation</a></li>
 <li><a href="#part-3-particle-kinematics-vs-wave-motion">Part 3: Particle Kinematics vs. Wave Motion</a></li>
@@ -27,6 +28,8 @@
 <li><a href="#part-11-printable-formula-reference-sheet">Part 11: Printable Formula Reference Sheet</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 1</span><span class="prop"><b>slug</b> string-waves</span><span class="prop"><b>order</b> 13</span><span class="prop"><b>block</b> waves</span><span class="prop"><b>source</b> Cengage Waves and Thermodynamics-compressed.pdf, Wave Motion & String Waves chapter</span><span class="prop tag">jee-advanced</span><span class="prop tag">nsep</span><span class="prop tag">inpho</span><span class="prop tag">ipho</span><span class="prop tag">waves</span><span class="prop tag">oscillations</span></p>
+
 <p><a id="section-index"></a>
 <a id="top"></a></p>
 <p><em>11-part master note-set · JEE Advanced · NSEP · INPhO · IPhO · self-contained — opens with no internet, prints cleanly</em></p>
@@ -51,13 +54,33 @@
 </ul>
 <hr />
 <h3 id="read-this-first-the-four-foundational-truths">Read this first: the four foundational truths</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.1 · Chapter map</p>
+<p><em>Why:</em> the whole chapter is one function $y(x,t)$; the map shows the single spine Parts 1–11 hang off.
+<em>Data:</em> the eleven-part structure of the notes (foundations → wave equation → particles → energy → reflections → standing waves → olympiad → paper → solutions → sheet).</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((&quot;y(x,t)&quot;))
+    Wave equation
+    v = sqrt(T/μ)
+    Particle velocity
+    Energy and power
+    Reflections
+    Standing waves
+    Hanging rope
+    Paper and solutions
+</code></pre>
+<blockquote>
+<p><em>Read:</em> everything in this chapter is a slope, an area, or a boundary condition applied to one function $y(x,t)$.</p>
+</blockquote>
 <ol>
 <li><strong>Matter does not travel; the disturbance travels.</strong> Each particle of the medium oscillates purely transversely about its local equilibrium position. No mass is transported across the $x$-axis.</li>
 <li><strong>Phase velocity depends purely on the properties of the medium.</strong> For an ideal, flexible string, the speed $v = \sqrt{T/\mu}$ depends strictly on elastic restoring force $T$ and inertia per unit length $\mu$. It does not depend on amplitude, frequency, or wave profile (in the linear limit).</li>
 <li><strong>In a progressive wave, kinetic and potential energy densities peak at the exact same location.</strong> Unlike a simple harmonic oscillator where kinetic energy peaks at equilibrium and potential energy peaks at maximum displacement, a traveling wave's kinetic and elastic potential energy densities are <strong>in phase</strong>: both reach their absolute maximum at the zero-crossings (where slope is steepest) and are zero at the wave crests.</li>
 <li><strong>Boundary conditions dictate phase jumps via mechanical impedance.</strong> A fixed wall has infinite mechanical impedance, forcing the displacement to zero, which requires the reflected pulse to invert ($\Delta \phi = \pi$). A free end has zero transverse impedance, forcing the net transverse force (and slope) to zero, reflecting in phase ($\Delta \phi = 0$) and doubling the displacement amplitude at the boundary.</li>
 </ol>
-<hr />
+<h2 id="-">---</h2>
 <p><a id="section-01-foundations"></a></p>
 <h2 id="part-1-foundations-harmonic-wave-kinematics">Part 1: Foundations &amp; Harmonic Wave Kinematics</h2>
 <h3 id="11-the-definition-of-a-wave">1.1 The Definition of a Wave</h3>
@@ -90,6 +113,21 @@ The shape invariance $y = f(x \mp vt)$ holds strictly for <strong>non-dispersive
 - $\Phi(x,t) = kx - \omega t + \phi_0$: Total phase of the wave at position $x$ and time $t$.
 - $\phi_0$: Initial phase constant (determined by the initial condition $y(0,0)$ and sign of $\dot y(0,0)$).</p>
 <h4 id="phase-relationships">Phase Relationships</h4>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.2 · The sign rule for direction</p>
+<p><em>Why:</em> the single but non-obvious fact from the harmonic wave section — direction is read off the sign inside the argument, not off the algebra.
+<em>Data:</em> the four argument forms and the cases they produce.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;signs between x and t&quot;] --&gt;|&quot;opposite: kx - ωt&quot;| B[&quot;travels +x&quot;]
+  A --&gt;|&quot;opposite: -kx + ωt&quot;| B
+  A --&gt;|&quot;same: kx + ωt&quot;| C[&quot;travels -x&quot;]
+  A --&gt;|&quot;same: -kx - ωt&quot;| C
+</code></pre>
+<blockquote>
+<p><em>Read:</em> opposite signs ($kx - \omega t$) travel right; same-sign arguments ($kx + \omega t$) travel left — the rest is execution.</p>
+</blockquote>
 <p>The phase difference $\Delta \Phi$ between two points separated by spatial distance $\Delta x$ at the same instant $t$:
 $$\Delta \Phi = k \, \Delta x = \frac{2\pi}{\lambda} \Delta x$$</p>
 <p>The phase difference $\Delta \Phi$ at a fixed spatial location $x$ over a time interval $\Delta t$:
@@ -173,6 +211,21 @@ $$a_p \equiv \frac{\partial^2 y}{\partial t^2} = -\omega^2 A \sin(kx - \omega t)
 1. Sketch the waveform at a slightly later time $t = t_0 + \Delta t$ by shifting the entire curve slightly in the direction of wave travel.
 2. At position $x$, observe whether the new curve is above or below the original curve.
 3. If the new curve is higher, the particle is moving upward ($v_p &gt; 0$). If lower, it is moving downward ($v_p &lt; 0$).</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.3 · The two waveform envelopes</p>
+<p><em>Why:</em> the peak-valued slope triangle is the mechanical key to the whole chapter — particle speed is a slope, not a height.
+<em>Data:</em> the contrast between the peak-valued kinematic slope (∂y/∂x ↦ v_p) and the root-mean-square-valued energy slope.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;Waveform y(x,t)&quot;] --&gt; B[&quot;Kinematic slope ∂y/∂x, peak values&quot;]
+  A --&gt; C[&quot;Energy slope, RMS average&quot;]
+  B --&gt; D[&quot;particle velocity v_p&quot;]
+  C --&gt; E[&quot;power&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the first square gives velocities peak-to-peak; the second flattens them to their RMS value — mixing the two is the classic trap.</p>
+</blockquote>
 <hr />
 <p><a id="section-04-energy-and-power"></a></p>
 <h2 id="part-4-energy-density-power-transmission-intensity">Part 4: Energy Density, Power Transmission &amp; Intensity</h2>
@@ -210,6 +263,22 @@ In a traveling progressive wave, the kinetic energy density and potential energy
 <h3 id="43-total-energy-density-u">4.3 Total Energy Density ($u$)</h3>
 <p>The total mechanical energy per unit length is:
 $$u(x,t) = u_k + u_p = \mu \omega^2 A^2 \cos^2(kx - \omega t)$$</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.4 · Energy density is in phase with the wave</p>
+<p><em>Why:</em> the energy crests sit at the wave's zero-crossings, not its amplitude peaks — a fact that contradicts harmonic-oscillator intuition.
+<em>Data:</em> $u_k = u_p = \frac{1}{2}\mu\omega^2 A^2 \cos^2\theta$ sampled at $\theta \in {0, \pi/4, \pi/2, 3\pi/4, \pi}$.</p>
+</div>
+
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;u_k = u_p vs phase: twin peaks at the zero-crossings&quot;
+  x-axis [&quot;0&quot;, &quot;π/4&quot;, &quot;π/2&quot;, &quot;3π/4&quot;, &quot;π&quot;]
+  y-axis 0 --&gt; 1
+  line [1, 0.5, 0, 0.5, 1]
+  line [0, 0, 0, 0, 0]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> kinetic and potential energy densities peak together at the displacement zero-crossings and vanish at the wave crests — unlike an oscillator, never out of phase.</p>
+</blockquote>
 <p>The spatial or temporal average over a full cycle (since $\langle \cos^2\theta \rangle = \frac{1}{2}$) is:</p>
 <p>$$\boxed{\langle u \rangle = \frac{1}{2} \mu \omega^2 A^2}$$</p>
 <h3 id="44-instantaneous-and-average-power-transmission">4.4 Instantaneous and Average Power Transmission</h3>
@@ -367,6 +436,22 @@ $$\frac{2\pi}{\lambda_n} L = n\pi \implies \boxed{\lambda_n = \frac{2L}{n}} \qua
 - <strong>Harmonic</strong> refers to integer multiples of the fundamental frequency ($n \cdot f_1$).
 - <strong>Overtone</strong> refers to the sequence of actual resonant physical modes above the fundamental. For a string fixed at both ends, all integer harmonics exist, so the $m$-th overtone is the $(m+1)$-th harmonic.</p>
 </blockquote>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.5 · Superposition begets standing waves</p>
+<p><em>Why:</em> a standing wave is two travelling waves, not a new phenomenon — the flowchart prevents the most persistent misconception in Part 6.
+<em>Data:</em> the decomposition $2A \sin(kx)\cos(\omega t) = A\sin(kx-\omega t) + A\sin(kx+\omega t)$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;A sin(kx - ωt)&quot;] --&gt; S{&quot;superposition&quot;}
+  B[&quot;A sin(kx + ωt)&quot;] --&gt; S
+  S --&gt;|&quot;same A, f, λ; opposite directions&quot;| C[&quot;2A sin(kx) cos(ωt)&quot;]
+  C --&gt; D[&quot;standing wave: nodes and antinodes&quot;]
+  D --&gt; E[&quot;no net power across a node&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> equal amplitude, frequency, and wavelength with opposite directions make a standing wave — and it traps, rather than transmits, energy.</p>
+</blockquote>
 <hr />
 <h3 id="63-normal-modes-of-a-string-fixed-at-one-end-and-free-at-the-other">6.3 Normal Modes of a String Fixed at One End and Free at the Other</h3>
 <p>Let the string be clamped rigidly at $x = 0$ (Node) and attached to a frictionless ring at $x = L$ (Antinode).
@@ -461,6 +546,23 @@ As a wave propagates into a tapering region where the string becomes thinner ($\
 <p><a id="section-08-playbook"></a></p>
 <h2 id="part-8-the-playbook-traps-mental-decision-trees">Part 8: The Playbook, Traps &amp; Mental Decision Trees</h2>
 <h3 id="81-the-8-move-wave-triage-tree">8.1 The 8-Move Wave Triage Tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F1.6 · Triage — travelling or standing first?</p>
+<p><em>Why:</em> the first question routes the entire solution; the flowchart makes the discrimination explicit.
+<em>Data:</em> the first rule of §8.1 — the form of the argument decides travelling vs standing.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;Argument form?&quot;} --&gt;|&quot;f(kx ± ωt)&quot;| B[&quot;travelling wave&quot;]
+  A --&gt;|&quot;f(x)·g(t)&quot;| C[&quot;standing wave&quot;]
+  B --&gt; D[&quot;sign rule gives direction&quot;]
+  B --&gt; E[&quot;v_p = -v ∂y/∂x&quot;]
+  C --&gt; F[&quot;nodes/antinodes&quot;]
+  C --&gt; G[&quot;no net power across nodes&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the form of the argument names the species first; direction, particle velocity, and energy each follow from the right branch.</p>
+</blockquote>
 <p>When faced with an unfamiliar wave mechanics problem in JEE Advanced or INPhO, follow this decision tree:</p>
 <ol>
 <li><strong>Traveling or Standing?</strong>

@@ -535,7 +535,7 @@ def render_topic(source: Path, title: str, nav: str, pager: str) -> str:
     if props:
         chips = "".join(
             f'<span class="prop"><b>{k}</b> {v}</span>'
-            for k, v in props.items() if k in ("part", "slug", "source")
+            for k, v in props.items() if k in ("order", "block", "part", "slug", "source")
         )
         tags = props.get("tags", "").strip("[]")
         if tags:

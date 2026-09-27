@@ -1,0 +1,14 @@
+{
+  "templates_folder": "_obsidian/templates",
+  "trigger_on_file_creation_mode": "none",
+  "auto_jump_to_cursor": true,
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "user_scripts_folder": "",
+  "folder_templates": [],
+  "file_templates": [],
+  "startup_templates": [],
+  "enabled_templates_hotkeys": [
+    "_obsidian/templates/chapter.md"
+  ]
+}

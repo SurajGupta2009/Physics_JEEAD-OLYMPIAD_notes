@@ -2,6 +2,8 @@
 title: Sound Waves & Doppler Effect — first principles to Olympiad
 part: 2
 slug: sound-waves
+order: 14
+block: waves
 status: complete
 source: Cengage Waves and Thermodynamics-compressed.pdf, Sound chapter (longitudinal waves, speed, Laplace, intensity, pipes, beats, Doppler, supersonic)
 aliases: [sound waves, doppler effect, organ pipes, beats, mach cone, acoustics]

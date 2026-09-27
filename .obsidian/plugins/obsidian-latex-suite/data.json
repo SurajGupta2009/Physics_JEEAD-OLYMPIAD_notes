@@ -1,0 +1,20 @@
+{
+  "snippetsEnabled": true,
+  "loadSnippetsFromFile": true,
+  "snippetsFileLocation": "_obsidian/latex-suite/snippets.js",
+  "loadSnippetVariablesFromFile": false,
+  "removeSnippetWhitespace": true,
+  "autoDelete$": true,
+  "concealEnabled": true,
+  "concealRevealTimeout": 0,
+  "colorPairedBracketsEnabled": true,
+  "highlightCursorBracketsEnabled": true,
+  "mathPreviewEnabled": true,
+  "mathPreviewPositionIsAbove": true,
+  "autofractionEnabled": true,
+  "matrixShortcutsEnabled": true,
+  "taboutEnabled": true,
+  "autoEnlargeBrackets": true,
+  "forceMathLanguages": "math",
+  "excalidrawSupportEnabled": true
+}

@@ -2,6 +2,8 @@
 title: Vectors & Vector Algebra — first principles to Olympiad
 part: 2
 slug: vectors
+order: 2
+block: mechanics
 source: Cengage Mechanics I-compressed.pdf, ch 2 Vectors
 status: complete
 aliases: [vectors, dot product, cross product, triple product, unit vector]

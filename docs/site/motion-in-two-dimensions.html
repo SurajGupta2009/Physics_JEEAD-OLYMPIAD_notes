@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 4</span><span class="prop"><b>slug</b> motion-in-two-dimensions</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 5 Motion in Two Dimensions (+ ch 6)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">projectile</span><span class="prop tag">circular-motion</span><span class="prop tag">relative-velocity</span></p>
+<p class="props"><span class="prop"><b>part</b> 4</span><span class="prop"><b>slug</b> motion-in-two-dimensions</span><span class="prop"><b>order</b> 4</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 5 Motion in Two Dimensions (+ ch 6)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">projectile</span><span class="prop tag">circular-motion</span><span class="prop tag">relative-velocity</span></p>
 
 <h1 id="2-d-motion-projectiles-relative-velocity-circular-kinematics-first-principles-to-olympiad">2-D Motion: Projectiles, Relative Velocity &amp; Circular Kinematics — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -139,6 +139,22 @@
 <p><strong>The projectile path is a parabola.</strong> For an oblique launch, $x=v_0\cos\theta\,t$ and $y=v_0\sin\theta\,t-\frac{1}{2}gt^2$. Eliminating $t$: $y=x\tan\theta-\frac{gx^2}{2v_0^2\cos^2\theta}$, a parabola. The symmetry: the time to reach the peak equals the time from the peak to the ground (at the same height).</p>
 <p><strong>Relative velocity is vector subtraction.</strong> If you walk north on a train moving east, your velocity relative to the ground is the vector sum of your velocity relative to the train and the train's velocity relative to the ground: $\mathbf{v}<em>{\text{you,ground}}=\mathbf{v}</em>{\text{you,train}}+\mathbf{v}<em>{\text{train,ground}}$. Equivalently, $\mathbf{v}</em>{AB}=\mathbf{v}_A-\mathbf{v}_B$.</p>
 <p><strong>Circular motion requires acceleration even at constant speed.</strong> The velocity vector changes direction (even if its magnitude is constant), so there must be an acceleration. The centripetal acceleration $a_c=v^2/R$ points toward the centre — it changes the direction of $\mathbf{v}$, not its magnitude.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is three separations — horizontal from vertical, one frame from another, tangential from radial; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — independence, projectiles, relative velocity, circular kinematics, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((2-D motion))
+    Independence principle
+    Projectiles
+    Relative velocity
+    Circular kinematics
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is a split into components, a frame subtraction, or $a_c = v^2/R$.</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -227,6 +243,22 @@ $$</p>
 <em>Search:</em> "independence principle projectile horizontal drop same height diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.2 · The independence principle: every 2-D motion is two 1-D motions</p>
+<p><em>Why:</em> the chapter's single organising idea — split the motion, solve each axis, rejoin at time $t$.
+<em>Data:</em> horizontal: uniform at $v_{0x}$; vertical: uniformly accelerated at $-g$; the two share only $t$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;2-D motion&quot;] --&gt; B[&quot;x-axis: uniform, x = v0x t&quot;]
+  A --&gt; C[&quot;y-axis: accelerated, y = v0y t - ½gt²&quot;]
+  B --&gt; D[&quot;share only t&quot;]
+  C --&gt; D
+  D --&gt; E[&quot;eliminate t → parabola&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> gravity acts vertically only; the horizontal glide has no force, so the two axes never talk except through the clock.</p>
+</blockquote>
 <h3 id="32-projectile-horizontal-launch">3.2 Projectile: horizontal launch</h3>
 <p>A ball launched horizontally from height $h$ with speed $v_0$:</p>
 <ul>
@@ -275,6 +307,21 @@ $$</p>
 <em>Search:</em> "projectile complementary angles same range 30 60 degrees diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.3 · The range formula: one question, two angles</p>
+<p><em>Why:</em> the symmetry behind half of projectile puzzles — two launch angles land on the same spot, and 45° wins the range.
+<em>Data:</em> $R=\frac{v_0^2\sin2\theta}{g}$: $R(\theta)=R(90°-\theta)$, maximum at $\theta=45°$ with $R_{\max}=v_0^2/g$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;R = v0² sin2θ / g&quot;] --&gt; B[&quot;θ and 90°-θ: same sin2θ&quot;]
+  B --&gt; C[&quot;same range, different flight&quot;]
+  A --&gt; D[&quot;θ = 45°: sin2θ = 1&quot;]
+  D --&gt; E[&quot;R_max = v0²/g&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> complementary angles are the range twins; 45° is the range champion — and the trajectory shapes are never the same.</p>
+</blockquote>
 <h3 id="35-projectile-variations">3.5 Projectile: variations</h3>
 <p><strong>From a height $h$:</strong> Launch from $(0,h)$ with angle $\theta$. The time of flight is found from $-h=v_0\sin\theta\,T-\frac{1}{2}gT^2$, a quadratic in $T$. The range is $R=v_0\cos\theta\,T$.</p>
 <p><strong>On an incline of angle $\alpha$:</strong> Resolve the velocity into components along and perpendicular to the incline. The effective gravity along the incline is $g\sin\alpha$ and perpendicular is $g\cos\alpha$. The "perpendicular to incline" motion is like a 1-D projectile with $g_{\perp}=g\cos\alpha$.</p>
@@ -328,6 +375,21 @@ $$</p>
 <em>Search:</em> "centripetal acceleration derivation geometric velocity change diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.4 · Centripetal acceleration: turning uses no speed</p>
+<p><em>Why:</em> the one fact that surprises — acceleration with constant speed, because the direction of $\mathbf{v}$ is changing.
+<em>Data:</em> $a_c = \frac{v^2}{R} = \omega^2 R = v\omega$, pointing toward the centre.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;speed constant&quot;] --&gt; B[&quot;v turns through Δθ&quot;]
+  B --&gt; C[&quot;Δv = v Δθ toward centre&quot;]
+  C --&gt; D[&quot;a_c = v Δθ/Δt = v²/R&quot;]
+  D --&gt; E[&quot;direction only, not speed&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> constant-speed circular motion is still accelerated; the acceleration is purely radial, curving the path without touching the speed.</p>
+</blockquote>
 <h3 id="39-non-uniform-circular-motion">3.9 Non-uniform circular motion</h3>
 <p>When the speed changes, there is a tangential acceleration in addition to the centripetal:</p>
 <p>$$
@@ -362,6 +424,22 @@ $$</p>
 <em>Search:</em> "safety parabola envelope projectile trajectories different angles diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.5 · The safety parabola: can the projectile reach this point?</p>
+<p><em>Why:</em> "hit or miss" problems for a fixed launch speed reduce to one curve — the envelope above which no trajectory goes.
+<em>Data:</em> the envelope $y=\frac{v_0^2}{2g}-\frac{g}{2v_0^2}x^2$ has vertex $\frac{v_0^2}{2g}$ and intercept $R_{\max}=\frac{v_0^2}{g}$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;all launch angles, fixed v0&quot;] --&gt; B[&quot;family of parabolas&quot;]
+  B --&gt; C[&quot;envelope: y = v0²/2g - g x²/2v0²&quot;]
+  C --&gt; D{&quot;target below envelope?&quot;}
+  D --&gt;|&quot;yes&quot;| E[&quot;reachable, some θ&quot;]
+  D --&gt;|&quot;no&quot;| F[&quot;unreachable at any θ&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> a point is reachable exactly when it lies on or under the safety parabola; the envelope is the boundary of all possible shots.</p>
+</blockquote>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D4.12 · Non-uniform circular motion: the acceleration vector</p>
 <p><em>Show:</em> a particle on a circle with speed increasing (tangential acceleration $a_t$ forward); the centripetal acceleration $a_c$ pointing toward the centre; the resultant acceleration $\mathbf{a}$ tilted forward from the radial direction; the angle $\phi=\tan^{-1}(a_t/a_c)$ between $\mathbf{a}$ and the inward radial direction annotated.
@@ -896,6 +974,23 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the seven triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What kind of problem?&quot;} --&gt;|&quot;ground-to-ground&quot;| B[&quot;Eqs. (4.1)&quot;]
+  A --&gt;|&quot;from a height&quot;| C[&quot;y-equation with y0 = h&quot;]
+  A --&gt;|&quot;on an incline&quot;| D[&quot;incline coordinates&quot;]
+  A --&gt;|&quot;relative velocity&quot;| E[&quot;vector triangle, v_AB = v_A - v_B&quot;]
+  A --&gt;|&quot;circular motion&quot;| F[&quot;a_c = v²/R (add a_t if speeding)&quot;]
+  A --&gt;|&quot;radius of curvature&quot;| G[&quot;ρ = v²/a_⊥&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> projectile words split axes, relative words subtract frames, circular words reach for $v^2/R$.</p>
+</blockquote>
 <ul>
 <li>"Projectile, ground-to-ground": use Eqs. (4.1).</li>
 <li>"Projectile, from a height": solve the $y$-equation with $y_0=h$.</li>

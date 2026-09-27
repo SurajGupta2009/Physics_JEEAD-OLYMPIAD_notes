@@ -27,6 +27,8 @@
 <li><a href="#capacitors-the-whole-course-on-three-pages">Capacitors — the whole course on three pages</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 7</span><span class="prop"><b>slug</b> capacitors</span><span class="prop"><b>order</b> 20</span><span class="prop"><b>block</b> electricity-magnetism</span><span class="prop"><b>source</b> Cengage Electrostatics and Current Electricity-compressed.pdf, Capacitor and Capacitance chapter</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">electromagnetism</span><span class="prop tag">capacitors</span></p>
+
 <p><a id="section-index"></a></p>
 <p><a id="top"></a></p>
 <p><em>11-page chapter set · JEE Advanced · NSEP · INPhO · IOPT · self-contained — opens with no internet, prints cleanly</em></p>
@@ -34,6 +36,26 @@
 <p>A complete, proof-first treatment of capacitance, energy, dielectrics and capacitor networks. Every formula here is <strong>derived from something you already accept</strong> — Coulomb's law, Gauss's law, conservation of energy — and every place where a JEE or Olympiad examiner can catch you is marked explicitly.</p>
 <p><img alt="Parallel plate capacitor connected to a battery, with uniform field in the gap" src="../../capacitors/assets/figures/fig-001.svg" /></p>
 <p><strong>The whole chapter in one picture.</strong> Two conductors, a potential difference, a field in the gap — and a battery that either holds <em>Q</em> fixed or holds <em>V</em> fixed. Almost every capacitor problem in JEE and every Olympiad problem is a question about <em>which of those two is fixed</em>: that single choice decides the energy change, the force between the plates and the force on a dielectric slab.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.1 · Chapter map: Q-fixed or V-fixed</p>
+<p><em>Why:</em> every capacitor question reduces to which side of the master fork you are on; the map hangs the 8 chapters off that first decision.
+<em>Data:</em> ch 1–2 charge &amp; geometry (C = ε₀ × a length) → ch 3 energy &amp; force (U = ½QV) → ch 4 combinations → ch 5 dielectrics → ch 6 RC transients → ch 7 advanced → ch 8 playbook.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((capacitors))
+    Charge &amp; Gauss
+    Geometries
+    Energy &amp; force
+    Networks
+    Dielectrics
+    RC transients
+    Advanced
+    The playbook
+</code></pre>
+<blockquote>
+<p><em>Read:</em> chapters 1–3 are the base, 4–6 the JEE engine, 7–8 the Olympiad machinery and the strategy.</p>
+</blockquote>
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
 <p>Each chapter builds only on the ones before it. Chapters <strong>1–3</strong> are the pure conceptual base (charge and conductors, capacitance, energy). Chapters <strong>4–6</strong> are the JEE-Advanced engine (combinations, dielectrics, networks and transients). Chapters <strong>7–8</strong> push to Olympiad level (coefficients of capacitance, reciprocity, images, conformal ideas, variational methods) and consolidate a solving strategy. Chapters <strong>9–10</strong> are the full paper with detailed solutions; chapter <strong>11</strong> is a printable three-page sheet.</p>
 <ul>
@@ -763,6 +785,20 @@ $$</p>
 <p><a id="section-02-capacitance"></a></p>
 <p><em>Chapter 2 of 11 · JEE Advanced core · + Olympiad geometries · ≈ 75 min · 10 questions</em></p>
 <h2 id="capacitance-and-how-to-get-it-for-any-geometry">Capacitance, and how to get it for any geometry</h2>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.2 · C = ε₀ × a length: geometry is the whole answer</p>
+<p><em>Why:</em> C depends only on geometry because there is nothing else for it to depend on — so every formula here is ε₀ times one length; the flow picks which length.
+<em>Data:</em> plate A/d; isolated sphere 4πε₀R; shells 4πε₀r₁r₂/(r₂−r₁); coaxial 2πε₀L/ln(r₂/r₁); two-wire πε₀L/ln(d/a); slab-in-gap correction.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;two conductors, +Q and -Q&quot;] --&gt; B[&quot;C = Q/V, dimension ε₀ × length&quot;]
+  B --&gt; C[&quot;parallel plate: ε₀A/d&quot;]
+  B --&gt; D[&quot;spheres/shells: 4πε₀ r₁r₂/(r₂-r₁)&quot;]
+  B --&gt; E[&quot;cylinders: 2πε₀L/ln(r₂/r₁)&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> scale every charge by λ and Q/V never moves — the concept of capacitance is just the linearity of Coulomb's law.</p>
+</blockquote>
 <p>This chapter has one job: turn "two conductors and a field" into a single number $C$. We do that by <strong>construction</strong> for six geometries, and after each one we run the limits that prove the answer could not be anything else.</p>
 <h3 id="21-what-c-is-and-the-one-reason-it-exists-at-all">2.1 What $C$ is, and the one reason it exists at all</h3>
 <blockquote>
@@ -1244,6 +1280,19 @@ $$</p>
 <p>giving $F_x=-Q^2/2\varepsilon_0A$: an attraction of Method 1's magnitude ✓. The agreement is not luck — Method 1 is the local form of Method 2 (that is what "stress tensor" means).</p>
 </blockquote>
 <h3 id="34-the-master-rule-fixed-q-versus-fixed-v">3.4 The master rule: fixed $Q$ versus fixed $V$</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.3 · The master rule: which is fixed, Q or V?</p>
+<p><em>Why:</em> the answer changes the force, the energy change and the sign in one stroke; misassigning fixed-Q/fixed-V is the chapter's most expensive slip.
+<em>Data:</em> isolated: δW_mech = −d(Q²/2C); held on a cell: δW_mech = +½V² dC (the battery pays the other half); stable = lowers the appropriate potential.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;something changes C&quot;] --&gt; B{&quot;what is fixed?&quot;}
+  B -- &quot;isolated (Q fixed)&quot; --&gt; C[&quot;force = -d(Q²/2C)/dx → maximise C&quot;]
+  B -- &quot;on a cell (V fixed)&quot; --&gt; D[&quot;force = +½V² dC/dx → battery pays both shares&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> a dielectric is sucked in, plates pull together and a movable plate snaps at pull-in — all one rule with two branches.</p>
+</blockquote>
 <p>Let some coordinate $\xi$ (slab position, gap, overlap area) change the capacitance by $dC$. The mechanical work delivered to whatever moves is</p>
 <p>$$
 \delta W_{\text{mech}}=\begin{cases}-dU\big|<em>{Q}=-\dfrac{Q^2}{2}\,d!\left(\dfrac1C\right), &amp; \text{isolated}\[10pt] +dU\big|</em>{V}=+\dfrac12V^2\,dC, &amp; \text{held on a cell}\end{cases} \tag{master rule}
@@ -1564,6 +1613,20 @@ $$</p>
 <h2 id="combinations-and-networks">Combinations and networks</h2>
 <p>Everyone knows $1/C=1/C_1+1/C_2$. Almost nobody can say when it is <em>false</em>. This chapter proves both rules, shows the exact moment the proof breaks, and then hands you the one method — conservation of charge at floating nodes — that works for every network ever set in an exam.</p>
 <h3 id="41-series-what-the-rule-is-really-saying">4.1 Series: what the rule is <em>really</em> saying</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.4 · Series = one shared island; parallel = one shared voltage</p>
+<p><em>Why:</em> the series rule is charge conservation at an isolated node, not "same current"; parallel is equal voltage, not equal charge.
+<em>Data:</em> series: 1/C = Σ1/Cᵢ (least C wins); parallel: C = ΣCᵢ (most C dominates); the series string stores least in the smallest capacitor (U_i/U = C_eq/C_i).</p>
+</div>
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;series: one isolated node&quot;] --&gt; B[&quot;equal charge q on every plate&quot;]
+  B --&gt; C[&quot;1/C = 1/C₁ + 1/C₂&quot;]
+  D[&quot;parallel: one common voltage&quot;] --&gt; E[&quot;charges split qᵢ = CᵢV&quot;]
+  E --&gt; F[&quot;C = C₁ + C₂&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> prove the rule from the island, and you also learn exactly when it breaks — everything else is that same move repeated.</p>
+</blockquote>
 <p>Two capacitors end to end, nothing else connected to the junction. Charge the pair: the junction plate must acquire some charge $q$ — and there is nowhere for it to come <em>from</em>, because that conductor is isolated. That observation is the entire content of the series rule.</p>
 <blockquote>
 <p><strong>The proof, in two steps</strong></p>
@@ -2467,7 +2530,18 @@ $$</p>
 <p><img alt="Left: a DC network with capacitors and resistors as drawn. Right: the same network in steady state with the capacitor branch deleted and only the resistor loop carrying current" src="../../capacitors/assets/figures/fig-023.svg" /></p>
 <p><strong>Fig. 6.1</strong> — Steady state in one picture: a capacitor branch is an <em>open circuit</em>, so the currents live entirely in the resistor graph; the capacitors then inherit node voltages. R₃ is dead weight here — a favourite JEE trap, and the reason the algorithm below is stated as steps rather than as a formula.</p>
 <h3 id="61-steady-state-the-four-step-algorithm">6.1 Steady state: the four-step algorithm</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.5 · Transients are three numbers</p>
+<p><em>Why:</em> V_C(t) = V∞ + (V₀ − V∞)e^(−t/τ) with τ = R_th C; if you can find the two voltages and the Thévenin resistance, you have every RC answer.
+<em>Data:</em> open (capacitors → breaks), solve the resistive net, close (V_C = node difference, q = CΔV), check (isolated-island conservation); τ = R_th C with sources killed; V_C continuous.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;find V₀, V∞, τ&quot;] --&gt; B[&quot;V_C(t) = V∞ + (V₀ - V∞) e^(-t/τ)&quot;]
+  B --&gt; C[&quot;I_C = (V₀ - V∞)/R_th · e^(-t/τ)&quot;]
+  B --&gt; D[&quot;heat in every R: ½C(V₀ - V∞)²&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> V_C can never jump while the power stays finite — continuity is a consequence of finite power, not of capacitors.</p>
 <p><strong>The algorithm (four verbs: open, solve, close, check)</strong></p>
 <ol>
 <li><strong>Open.</strong> Replace every capacitor by a break in the wire. The rest of the circuit is then purely resistive.</li>
@@ -3326,6 +3400,21 @@ $$</p>
 <h3 id="81-triage-ninety-seconds-that-decide-the-mark">8.1 Triage: ninety seconds that decide the mark</h3>
 <p><img alt="Flowchart: is the configuration asked for? yes then is the medium homogeneous, if yes use Gauss and if no use the matrix or a map; if not then is the circuit a single capacitor with resistors, if yes use the three numbers, if no use charge conservation on the island" src="../../capacitors/assets/figures/fig-032.svg" /></p>
 <p><strong>Fig. 8.1</strong> — The triage. The single most common cause of a lost mark in this chapter of physics is choosing the <em>force/energy</em> route when the geometry is trivial, or the <em>geometry</em> route when the question is only about what is conserved. The diagram is only a way of forcing that first pause.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F7.6 · Triage: configuration or conservation?</p>
+<p><em>Why:</em> ninety seconds deciding whether the question is about a configuration or about charge/energy conservation decides the whole method.
+<em>Data:</em> configuration asked → homogeneous medium: Gauss; inhomogeneous: matrix/map. Otherwise → single capacitor + resistors: three numbers (V₀, V∞, τ); several plates: island charge conservation.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;ninety seconds: what is asked?&quot;] --&gt; B{&quot;configuration asked?&quot;}
+  B -- yes --&gt; C[&quot;homogeneous medium: Gauss&quot;]
+  B -- yes --&gt; D[&quot;inhomogeneous: matrix or map&quot;]
+  B -- no --&gt; E[&quot;single capacitor + resistors: three numbers&quot;]
+  E --&gt; F[&quot;several plates: island charge conservation&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the triage is a way of forcing the first pause — pick the method before the algebra.</p>
+</blockquote>
 <h3 id="82-twelve-moves">8.2 Twelve moves</h3>
 <p>Each entry: the move, when it pays, and the one sentence that makes it rigorous. All twelve are provable from the material in chapters 1–7; the proofs are where they are cited.</p>
 <blockquote>

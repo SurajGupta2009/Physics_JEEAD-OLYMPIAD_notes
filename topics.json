@@ -48,7 +48,9 @@
         "13 · supercapacitors and electrochemistry in depth (EDL, Warburg, pseudocapacitance)",
         "worked-problem chapter: the Cengage exercise sets (book pp. 4.24–4.36) with timed hints"
       ],
-      "part": 7
+      "part": 7,
+      "order": 20,
+      "block": "electricity-magnetism"
     },
     {
       "slug": "thermodynamics",
@@ -89,7 +91,9 @@
       "solutions": 55,
       "math_spans": 943,
       "bytes_html": 346583,
-      "part": 5
+      "part": 5,
+      "order": 15,
+      "block": "thermal"
     },
     {
       "slug": "rotational-mechanics",
@@ -108,12 +112,14 @@
       "note": "Suggestion only — same claiming procedure as above.",
       "format": "markdown",
       "part": 8,
+      "order": 8,
+      "block": "mechanics",
       "dependency": [
         "centre-of-mass-momentum"
       ],
-      "words": 9740,
+      "words": 9744,
       "display_formulas": 19,
-      "bytes_markdown": 69447,
+      "bytes_markdown": 69473,
       "pages": [
         "Rotational-mechanics.md"
       ],
@@ -165,7 +171,9 @@
         "worked-problem chapter: the Cengage exercise sets (book pp. 5.38–5.55, 6.11–6.20, 7.12–7.20) re-derived with the ch 8 playbook",
         "magnetic effects of current: the field twin of this set, sharing its audit discipline"
       ],
-      "part": 8
+      "part": 8,
+      "order": 21,
+      "block": "electricity-magnetism"
     },
     {
       "slug": "heat",
@@ -198,7 +206,9 @@
       "solutions": 48,
       "math_spans": 566,
       "bytes_html": 240766,
-      "part": 6
+      "part": 6,
+      "order": 16,
+      "block": "thermal"
     },
     {
       "slug": "geometrical-optics",
@@ -243,7 +253,9 @@
         "worked-problem companion: the Cengage exercise sets (book pp. 1.89-1.129) re-derived with the part 9 playbook",
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
       ],
-      "part": 9
+      "part": 9,
+      "order": 30,
+      "block": "optics"
     },
     {
       "slug": "wave-optics",
@@ -290,6 +302,8 @@
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
       ],
       "part": 4,
+      "order": 31,
+      "block": "optics",
       "note": ""
     },
     {
@@ -327,10 +341,12 @@
       "solutions": 0,
       "math_spans": 887,
       "bytes_html": 0,
-      "bytes_markdown": 79189,
-      "words": 12033,
+      "bytes_markdown": 79212,
+      "words": 12037,
       "display_formulas": 177,
-      "part": 1
+      "part": 1,
+      "order": 13,
+      "block": "waves"
     },
     {
       "slug": "sound-waves",
@@ -373,7 +389,9 @@
         "musical instruments: strings coupled to air columns, Fourier synthesis",
         "nonlinear acoustics: shock formation, sonic boom N-wave, acoustic streaming"
       ],
-      "part": 2
+      "part": 2,
+      "order": 14,
+      "block": "waves"
     },
     {
       "slug": "electromagnetic-waves",
@@ -418,10 +436,12 @@
       "solutions": 52,
       "math_spans": 790,
       "bytes_html": 0,
-      "bytes_markdown": 80388,
-      "words": 9935,
+      "bytes_markdown": 80411,
+      "words": 9939,
       "display_formulas": 36,
-      "part": 3
+      "part": 3,
+      "order": 29,
+      "block": "waves"
     },
     {
       "slug": "photoelectric-effect",
@@ -462,10 +482,12 @@
       "solutions": 103,
       "math_spans": 1147,
       "bytes_html": 0,
-      "bytes_markdown": 100484,
-      "words": 14251,
+      "bytes_markdown": 100508,
+      "words": 14255,
       "display_formulas": 18,
-      "part": 23
+      "part": 23,
+      "order": 32,
+      "block": "modern"
     },
     {
       "slug": "atomic-structure",
@@ -505,10 +527,12 @@
       "solutions": 103,
       "math_spans": 908,
       "bytes_html": 0,
-      "bytes_markdown": 81768,
-      "words": 11672,
+      "bytes_markdown": 81792,
+      "words": 11676,
       "display_formulas": 14,
-      "part": 24
+      "part": 24,
+      "order": 33,
+      "block": "modern"
     },
     {
       "slug": "x-rays",
@@ -549,10 +573,12 @@
       "solutions": 103,
       "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 77825,
-      "words": 11603,
+      "bytes_markdown": 77849,
+      "words": 11607,
       "display_formulas": 13,
-      "part": 25
+      "part": 25,
+      "order": 34,
+      "block": "modern"
     },
     {
       "slug": "nuclear-physics",
@@ -597,10 +623,12 @@
       "solutions": 103,
       "math_spans": 557,
       "bytes_html": 0,
-      "bytes_markdown": 82718,
-      "words": 12072,
+      "bytes_markdown": 82742,
+      "words": 12076,
       "display_formulas": 15,
-      "part": 26
+      "part": 26,
+      "order": 35,
+      "block": "modern"
     },
     {
       "slug": "semiconductors",
@@ -645,10 +673,12 @@
       "solutions": 102,
       "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 82755,
-      "words": 12090,
+      "bytes_markdown": 82779,
+      "words": 12094,
       "display_formulas": 16,
-      "part": 27
+      "part": 27,
+      "order": 36,
+      "block": "modern"
     },
     {
       "slug": "communication-systems",
@@ -689,10 +719,12 @@
       "solutions": 93,
       "math_spans": 648,
       "bytes_html": 0,
-      "bytes_markdown": 80959,
-      "words": 11754,
+      "bytes_markdown": 80983,
+      "words": 11758,
       "display_formulas": 16,
-      "part": 100
+      "part": 100,
+      "order": 37,
+      "block": "modern"
     },
     {
       "slug": "special-relativity",
@@ -733,13 +765,17 @@
       "solutions": 93,
       "math_spans": 944,
       "bytes_html": 0,
-      "bytes_markdown": 86295,
-      "words": 12174,
+      "bytes_markdown": 86319,
+      "words": 12178,
       "display_formulas": 18,
-      "part": 28
+      "part": 28,
+      "order": 38,
+      "block": "modern"
     },
     {
       "part": 1,
+      "order": 1,
+      "block": "mechanics",
       "title": "Units, Dimensions & Measurement Errors — first principles to Olympiad",
       "slug": "units-measurements",
       "folder": "units-measurements",
@@ -778,12 +814,14 @@
       "solutions": 93,
       "math_spans": 1085,
       "bytes_html": 0,
-      "bytes_markdown": 82774,
-      "words": 11554,
+      "bytes_markdown": 82800,
+      "words": 11558,
       "display_formulas": 14
     },
     {
       "part": 2,
+      "order": 2,
+      "block": "mechanics",
       "title": "Vectors & Vector Algebra — first principles to Olympiad",
       "slug": "vectors",
       "folder": "vectors",
@@ -824,12 +862,14 @@
       "solutions": 93,
       "math_spans": 1166,
       "bytes_html": 0,
-      "bytes_markdown": 91930,
-      "words": 9586,
+      "bytes_markdown": 91956,
+      "words": 9590,
       "display_formulas": 16
     },
     {
       "part": 3,
+      "order": 3,
+      "block": "mechanics",
       "title": "Kinematics in One Dimension — first principles to Olympiad",
       "slug": "kinematics-1d",
       "folder": "kinematics-1d",
@@ -874,12 +914,14 @@
       "solutions": 93,
       "math_spans": 1075,
       "bytes_html": 0,
-      "bytes_markdown": 65398,
-      "words": 9404,
+      "bytes_markdown": 65424,
+      "words": 9408,
       "display_formulas": 13
     },
     {
       "part": 4,
+      "order": 4,
+      "block": "mechanics",
       "title": "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad",
       "slug": "motion-in-two-dimensions",
       "folder": "motion-in-two-dimensions",
@@ -925,12 +967,14 @@
       "solutions": 93,
       "math_spans": 970,
       "bytes_html": 0,
-      "bytes_markdown": 73073,
-      "words": 9957,
+      "bytes_markdown": 73099,
+      "words": 9961,
       "display_formulas": 19
     },
     {
       "part": 5,
+      "order": 5,
+      "block": "mechanics",
       "title": "Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad",
       "slug": "newtons-laws",
       "folder": "newtons-laws",
@@ -973,12 +1017,14 @@
       "solutions": 93,
       "math_spans": 921,
       "bytes_html": 0,
-      "bytes_markdown": 79375,
-      "words": 11495,
+      "bytes_markdown": 79401,
+      "words": 11499,
       "display_formulas": 13
     },
     {
       "part": 6,
+      "order": 6,
+      "block": "mechanics",
       "title": "Work, Energy & Power — first principles to Olympiad",
       "slug": "work-energy-power",
       "folder": "work-energy-power",
@@ -1021,12 +1067,14 @@
       "solutions": 93,
       "math_spans": 852,
       "bytes_html": 0,
-      "bytes_markdown": 70513,
-      "words": 9967,
+      "bytes_markdown": 70539,
+      "words": 9971,
       "display_formulas": 19
     },
     {
       "part": 7,
+      "order": 7,
+      "block": "mechanics",
       "title": "Centre of Mass, Momentum & Collisions — first principles to Olympiad",
       "slug": "centre-of-mass-momentum",
       "folder": "centre-of-mass-momentum",
@@ -1072,12 +1120,14 @@
       "solutions": 93,
       "math_spans": 700,
       "bytes_html": 0,
-      "bytes_markdown": 71081,
-      "words": 10132,
+      "bytes_markdown": 71107,
+      "words": 10136,
       "display_formulas": 17
     },
     {
       "part": 9,
+      "order": 9,
+      "block": "mechanics",
       "title": "Gravitation & Orbital Motion — first principles to Olympiad",
       "slug": "gravitation",
       "folder": "gravitation",
@@ -1096,9 +1146,9 @@
       "dependency": [
         "rotational-mechanics"
       ],
-      "words": 9701,
+      "words": 9705,
       "display_formulas": 14,
-      "bytes_markdown": 70526,
+      "bytes_markdown": 70552,
       "pages": [
         "Gravitation.md"
       ],
@@ -1110,6 +1160,8 @@
     },
     {
       "part": 10,
+      "order": 10,
+      "block": "mechanics",
       "title": "Simple Harmonic Motion — first principles to Olympiad",
       "slug": "simple-harmonic-motion",
       "folder": "simple-harmonic-motion",
@@ -1128,9 +1180,9 @@
       "dependency": [
         "gravitation"
       ],
-      "words": 9606,
+      "words": 9610,
       "display_formulas": 16,
-      "bytes_markdown": 70576,
+      "bytes_markdown": 70603,
       "pages": [
         "Simple-harmonic-motion.md"
       ],
@@ -1149,6 +1201,8 @@
       "format": "markdown",
       "plan_part": 11,
       "part": 11,
+      "order": 11,
+      "block": "mechanics",
       "source": "Cengage MECHANICS 2-compressed.pdf, ch 3 Fluid Mechanics (pp. 3.1-3.69) + ch 4 Properties of Solids and Fluids (pp. 4.20-4.37)",
       "exam": [
         "JEE Advanced",
@@ -1185,8 +1239,8 @@
       "solutions": 93,
       "math_spans": 1410,
       "bytes_html": 0,
-      "bytes_markdown": 124120,
-      "words": 18099,
+      "bytes_markdown": 124147,
+      "words": 18103,
       "display_formulas": 28
     },
     {
@@ -1198,6 +1252,8 @@
       "format": "markdown",
       "plan_part": 12,
       "part": 12,
+      "order": 12,
+      "block": "mechanics",
       "source": "Cengage MECHANICS 2-compressed.pdf, ch 4 Properties of Solids and Fluids, elasticity half (pp. 4.1-4.19)",
       "exam": [
         "JEE Advanced",
@@ -1234,8 +1290,8 @@
       "solutions": 93,
       "math_spans": 1378,
       "bytes_html": 0,
-      "bytes_markdown": 105472,
-      "words": 15570,
+      "bytes_markdown": 105499,
+      "words": 15574,
       "display_formulas": 20
     }
   ]

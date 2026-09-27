@@ -6,12 +6,16 @@
 
 Portable Markdown note-sets with local SVG diagrams. Six topics also keep a consolidated interactive HTML edition for offline browsing and printing; three wave topics are Markdown-first. The Markdown is readable on GitHub or in any editor, uses standard `$...$` / `$$...$$` math, and has no network dependency. A rendered offline site of the Markdown — with the diagrams inline and the equations typeset — is in **[docs/site/index.html](docs/site/index.html)**.
 
-> **Obsidian vault.** Open this repository as an **Obsidian vault** to read the notes the way they
-> are written for: KaTeX math, callouts, Mermaid figures and checklists. Every chapter carries
-> YAML frontmatter (`title`, `part`, `status`, `source`, `aliases`, `tags`) and six rendered
-> Mermaid `F`-figures. The vault home — the canonical reading spine, live Dataview dashboards, the
-> Templater chapter skeleton and the LaTeX Suite snippets — is in **[`_obsidian/`](_obsidian/README.md)**
-> (install/configure per [`docs/obsidian-plugin-workflow.md`](docs/obsidian-plugin-workflow.md) §4 & §9.3).
+> **This repository is an Obsidian vault.** Open the repo root in Obsidian (*Open folder as vault*,
+> then *Trust author and enable plugins*) to read the notes the way they are written for: typeset
+> maths, callouts, Mermaid figures, collapsible solutions and checklists. The configuration is
+> committed in **`.obsidian/`** — reading-mode defaults, a CSS snippet, and eight plugins already
+> configured (Dataview, Templater, LaTeX Suite, Git, Advanced Tables, Spaced Repetition, Tasks,
+> Excalidraw), pinned in `.obsidian/plugins.lock.json`; fetch their files once with
+> `python3 tools/obsidian_plugins.py`. Every chapter carries YAML frontmatter (`title`, `part`,
+> `slug`, `order`, `block`, `status`, `source`, `aliases`, `tags`) and six rendered Mermaid
+> `F`-figures. The vault home — the **course spine**, live dashboards, the pending-chapter queue,
+> the Templater skeleton and the LaTeX Suite snippets — is **[`_obsidian/`](_obsidian/README.md)**.
 
 </div>
 
@@ -48,7 +52,9 @@ Portable Markdown note-sets with local SVG diagrams. Six topics also keep a cons
 | **fluid mechanics & surface tension** | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) | text-only, 20 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 11 |
 | **elasticity & properties of matter** | [Elasticity.md](elasticity/Elasticity.md) | text-only, 14 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 12 |
 
-The recommended reading spine is **string waves → sound waves → electromagnetic waves → thermodynamics → heat → capacitors → current electricity → geometrical optics → wave optics**. Registering the three wave note-sets in `topics.json` is what lets [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hand the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the notes that own them.
+**Read the vault in course order**, not in the order the notes were written: mechanics (units → vectors → kinematics → Newton → energy → momentum → rotation → gravitation → SHM → fluids → elasticity) → string and sound waves → thermodynamics → heat → electrostatics (field → Gauss → potential → capacitors) → current electricity → magnetism → induction → inductance → AC → electromagnetic waves → geometrical optics → wave optics → modern physics → special relativity. Each chapter's frontmatter carries its slot as `order:` (1–38); the full table with the reason for every position is [`_obsidian/dashboards/spine.md`](_obsidian/dashboards/spine.md) and the end of [CURRICULUM.md](CURRICULUM.md). Within the wave block the hand-offs are explicit: [wave-optics/Wave-optics.md](wave-optics/Wave-optics.md) §1.1.1 hands the wave equation, the intensity–amplitude argument and the fixed-end phase flip back to the string, sound and EM-wave notes that own them.
+
+**Ten chapters are still to be written** — all of Electricity & Magnetism between capacitors and EM waves (plan.md PART 13–22). The list, with dependencies and scope, is **[PENDING.md](PENDING.md)**.
 
 The cross-topic progression and the Cengage → JEE → Olympiad coverage audit are in **[CURRICULUM.md](CURRICULUM.md)**. `topics.json` is the checked registry. `tools/check_all.py` validates every registered topic, whether HTML or Markdown-first.
 
@@ -56,13 +62,16 @@ The cross-topic progression and the Cengage → JEE → Olympiad coverage audit 
 
 Three ways, in order of what you get:
 
-0. **Obsidian (for the chapters written under [plan.md](plan.md)).** Open this repository as a vault
-   (*Open folder as vault* → the repo root). The new note-sets are written for **reading mode**: YAML
-   frontmatter (so the `part:` property lets you filter the vault by plan part and block), Obsidian
-   callouts for definitions / validity conditions / traps / hand-offs, `$...$` and `$$...$$` math,
-   collapsible `<details>` solutions, and `> [!abstract] DIAGRAM …` callout briefs in place of images.
-   Section numbers (`§3.4`), `Q12` and `OL3` are stable so you can link and search them. The nine older
-   note-sets stay in their bold-label HTML/Markdown style — the vault mixes the two on purpose.
+0. **Obsidian (recommended).** Open this repository as a vault (*Open folder as vault* → the repo
+   root); the committed `.obsidian/` makes it open in **reading mode** with the plugins configured
+   (see [`_obsidian/README.md`](_obsidian/README.md) for the one-command plugin install). The
+   chapters use YAML frontmatter (`order:` / `block:` sort the vault into the course spine, `part:`
+   is the plan.md number), Obsidian callouts for definitions / validity conditions / traps /
+   hand-offs, `$...$` and `$$...$$` math, collapsible `<details>` solutions, rendered Mermaid
+   `FIGURE` callouts and `> [!abstract] DIAGRAM …` briefs in place of images. Section numbers
+   (`§3.4`), `Q12` and `OL3` are stable so you can link and search them. The nine older note-sets
+   keep their bold-label HTML/Markdown style — the vault mixes the two on purpose. The five Cengage
+   PDFs open in Obsidian's PDF viewer next to the notes.
 1. **The rendered site (recommended for study).** Open
    [`docs/site/index.html`](docs/site/index.html) straight from disk — it works
    offline with no tooling, and it covers **all 28 note-sets**, grouped by block
@@ -117,6 +126,7 @@ python3 tools/html_to_markdown.py    # refresh the HTML-derived Markdown edition
 python3 tools/md_site.py             # refresh the rendered site in docs/site (needs pip install markdown)
 python3 tools/check_all.py           # validate every registered topic
 python3 tools/check_all.py --quick   # skip the Node renderer tests
+python3 tools/obsidian_plugins.py    # fetch the pinned Obsidian plugins into .obsidian/plugins (once, needs internet)
 ```
 
 Optional CI: [`tools/ci/qa.yml`](tools/ci/qa.yml) runs the gate as a GitHub Action. Install it with `mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/` if your checkout has workflow permissions.
@@ -130,7 +140,7 @@ python3 tools/new_topic.py <slug> --title "<Title>" \
 
 The scaffold is HTML-first because the interactive edition is the validated source; Markdown-first topics (like `electromagnetic-waves` and `string-waves`) are also supported — register with `"format": "markdown"` and supply a local `tools/check.py`. See [CONTRIBUTING.md](CONTRIBUTING.md) for the content bar and [STRUCTURE.md](STRUCTURE.md) for the layout contract.
 
-A list of the remaining JEE / Olympiad chapters still pending notes is in **[PENDING.md](PENDING.md)**.
+The pending chapters — ten, all Electricity & Magnetism (plan.md PART 13–22), with their teaching order, dependencies and scope — are listed in **[PENDING.md](PENDING.md)** and mirrored live in [`_obsidian/dashboards/pending.md`](_obsidian/dashboards/pending.md).
 
 ## The teaching contract
 
