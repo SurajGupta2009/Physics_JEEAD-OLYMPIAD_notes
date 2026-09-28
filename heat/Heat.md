@@ -2,6 +2,8 @@
 title: Heat — from first principles to Olympiad, in one expandable map
 part: 6
 slug: heat
+order: 16
+block: thermal
 status: complete
 source: Cengage Waves and Thermodynamics-compressed.pdf, thermal-properties chapters
 aliases: [heat, conduction, convection, radiation, calorimetry, thermal expansion, cooling]

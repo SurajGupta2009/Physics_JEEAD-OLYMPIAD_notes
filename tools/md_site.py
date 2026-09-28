@@ -107,6 +107,15 @@ TOPICS = [
     ("elasticity.html", "elasticity", "Elasticity",
      "PART 12 · stress and strain, the three moduli and Poisson's ratio, thermal stress, torsion, elastic energy, bending, and the atomic spring.",
      14, 47, "36-question, 3 h, 200-mark paper", MECHANICS),
+    ("emi-ac.html", "emi-ac", "Induction, inductance and alternating current",
+     "PART 20–22 · Faraday and Lenz, the rod family, induced fields, eddy currents, inductance and RL/LC, AC through R L C, phasors, resonance, power, transformers, rectifiers, then the flux-rule paradoxes, the tether, the 50 Ω cable and the Wien bridge.",
+     22, 94, "36-question, 3 h, 200-mark paper", ELECTRICITY),
+    ("magnetism.html", "magnetism", "Magnetism",
+     "PART 16–19 · the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, magnetism in matter and the Earth's field, then magnetism as relativity, Helmholtz, the pinch and Fermi acceleration.",
+     30, 94, "36-question, 3 h, 200-mark paper", ELECTRICITY),
+    ("electrostatics.html", "electrostatics", "Electrostatics",
+     "PART 13–15 · charge and Coulomb's law, the field of any distribution by the element-and-symmetry method, conductors and dipoles, flux and Gauss's law, potential, energy and conductors, then Earnshaw, images, pressure, the Rayleigh limit.",
+     26, 90, "36-question, 3 h, 200-mark paper", ELECTRICITY),
     ("photoelectric-effect.html", "photoelectric-effect", "Photoelectric effect & matter waves",
      "PART 23 · the photon hypothesis, Einstein's equation, stopping potential and the cutoff, de Broglie waves and Davisson–Germer.",
      16, 54, "36-question, 3 h, 200-mark INPhO-standard paper", MODERN),
@@ -145,7 +154,8 @@ SLUG_BY_NOTE = {
     "Rotational-mechanics": "rotational-mechanics", "Gravitation": "gravitation",
     "Simple-harmonic-motion": "simple-harmonic-motion",
     "Fluid-mechanics": "fluid-mechanics",
-    "Elasticity": "elasticity",
+    "Elasticity": "elasticity", "Electrostatics": "electrostatics",
+    "Magnetism": "magnetism", "Emi-ac": "emi-ac",
     "Photoelectric-effect": "photoelectric-effect",
     "Atomic-structure": "atomic-structure", "X-rays": "x-rays",
     "Nuclear-physics": "nuclear-physics", "Semiconductors": "semiconductors",
@@ -535,7 +545,7 @@ def render_topic(source: Path, title: str, nav: str, pager: str) -> str:
     if props:
         chips = "".join(
             f'<span class="prop"><b>{k}</b> {v}</span>'
-            for k, v in props.items() if k in ("part", "slug", "source")
+            for k, v in props.items() if k in ("order", "block", "part", "slug", "source")
         )
         tags = props.get("tags", "").strip("[]")
         if tags:

@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="active">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="active">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -28,11 +28,32 @@
 <li><a href="#12-the-formula-sheet">12 · The formula sheet</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 4</span><span class="prop"><b>slug</b> wave-optics</span><span class="prop"><b>order</b> 24</span><span class="prop"><b>block</b> optics</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics-compressed.pdf, ch 2 Wave Optics (pp. 2.1-2.95)</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">optics</span><span class="prop tag">waves</span></p>
+
 <p><a id="section-index"></a></p>
 <p><a id="top"></a></p>
 <p><em>course map · read this first · 12 parts · 28 figures · 136 questions</em></p>
 <h1 id="wave-optics-first-principles-to-olympiad">Wave Optics — first principles to Olympiad</h1>
 <p>Geometrical optics told you where light goes; it never asked what light <em>is</em>. This course starts from the wave, the phase and the superposition principle, and from those three ideas rebuilds everything the ray picture could not explain: why two slits give a pattern of bright and dark bands, why a soap film is coloured, why a telescope has a limit that no amount of polish can beat, and why a beam of light can be stopped by two crossed sheets of plastic. It covers the whole of the Cengage <em>Wave Optics</em> chapter — Huygens' construction, thin films, the double slit in all its cases, Fresnel's biprism and Lloyd's mirror — and then goes past it to the diffraction, polarisation and coherence material that olympiad papers are built from.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.1 · Chapter map</p>
+<p><em>Why:</em> the whole chapter is one idea read at three scales — phase, film, aperture; the map shows the one spine the twelve parts hang from.
+<em>Data:</em> the 12-part structure (Huygens → double slit → films → interferometers → diffraction → polarisation → coherence → instruments → playbook → paper).</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((wave optics))
+    Wavefront and Huygens
+    Double slit
+    Thin films
+    Interferometers
+    Diffraction
+    Polarisation
+    Coherence
+</code></pre>
+<blockquote>
+<p><em>Read:</em> after part 1 everything is a path difference converted to phase — the double slit, the film, the grating and the polariser each change only what “path” means.</p>
+</blockquote>
 <p><img alt="Two coherent sources and their hyperbolic fringes" src="../../wave-optics/assets/figures/fig-001.svg" /></p>
 <p><strong>Fig. 0.1</strong> — The whole of interference in one picture. Two slits 0.50 mm apart, 1.00 m from a screen, lit by light of wavelength 600 nm: the places on the screen where the two waves arrive in step form a ladder of bright bands (fringes) 1.2 mm apart, and halfway between them the waves arrive in antiphase and cancel. Notice that the pattern is a fixed set of <em>positions</em>, not a spreading fog: every question in parts 1–4 is a question about the path difference at one point of the screen.</p>
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
@@ -488,7 +509,20 @@ $$</p>
 </blockquote>
 <h3 id="18-the-master-recipe-how-to-compute-any-phase-difference">1.8 The master recipe: how to compute any phase difference</h3>
 <p>Every interference problem in this course — the double slit, the soap film, Newton's rings, the biprism, the grating — is solved by one three-step routine. Learn it now and the rest of the topic is arithmetic.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.2 · The phase-difference recipe</p>
+<p><em>Why:</em> every interference number is the same three moves in the same order; the flowchart fixes the order so the $\lambda/2$ cannot be added at the wrong time.
+<em>Data:</em> step 1 geometric path $\Delta x$; step 2 optical path $\sum n_i x_i$; step 3 add $\lambda/2$ per reflection off a denser medium, then compare with $n\lambda$ / $(2n+1)\lambda/2$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;draw the two paths&quot;] --&gt; B[&quot;geometric Δx&quot;]
+  B --&gt; C[&quot;optical path: Σ nᵢxᵢ&quot;]
+  C --&gt; D[&quot;add λ/2 per reflection off a denser medium&quot;]
+  D --&gt; E[&quot;compare total with nλ / (2n+1)λ/2&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> preserve this order — the reflection phase can only be added after you know which paths reflect, and a $\pi$ error is invisible until the total meets $\lambda$.</p>
 <p><strong>The phase-difference recipe</strong></p>
 <ol>
 <li><strong>Draw the two paths</strong> from the common source (or from the two secondary sources) to the point of interest, and
@@ -652,7 +686,21 @@ $$</p>
 $$</p>
 <p>So the fringes are strictly equally spaced in $\sin\theta$, not in $\theta$ and not in $y$. That is why the 833 orders of §2.4 crowd together toward $\theta = 90^\circ$ while the ones near the axis look perfectly regular, and it is the condition of validity to state next to $\beta = \lambda D/d$ whenever a question pushes the pattern far off axis.</p>
 <p>The constancy of $\beta$ is the reason the pattern looks like a ruler: equally spaced lines. It is also the reason the experiment is a measurement: measure $\beta$, $D$ and $d$, and the wavelength comes out, which is how Young first measured the wavelength of light in 1801. Fringe width is a linear ruler in three ways:</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.3 · Fringe width β = λD/d — the one knob per quantity</p>
+<p><em>Why:</em> $\beta=\lambda D/d$ is the formula to carry, but the dependence is three separate memories; the flow pins each knob to its effect.
+<em>Data:</em> $\beta=\lambda D/d$: $\beta\propto\lambda$, $\beta\propto D$, $\beta\propto 1/d$; immersed apparatus $\beta'=\beta/\mu$; brighter lamp leaves $\beta$ alone.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;β = λD/d&quot;] --&gt; B[&quot;λ ↑ → wider&quot;]
+  A --&gt; C[&quot;D ↑ → wider&quot;]
+  A --&gt; D[&quot;d ↑ → narrower&quot;]
+  A --&gt; E[&quot;in a medium: β/μ&quot;]
+  A --&gt; F[&quot;brightness: no change&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> geometry and wavelength set the spacing; brightness sets only the visibility — and immersion narrows by exactly $\mu$.</p>
 <p><strong>How $\beta$ responds to each quantity</strong></p>
 <table>
 <thead>
@@ -805,6 +853,22 @@ $$</p>
 <p>$$
 I_{\text{av}} = 2I_0, \qquad \frac{I_{\max}}{I_{\min}} = \left(\frac{a_1+a_2}{a_1-a_2}\right)^{2}
 $$</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.5 · Intensity: two coherent waves give four, never two</p>
+<p><em>Why:</em> the whole subject lives or dies on this split — coherent waves add amplitudes, incoherent sources add intensities; the flow names which is which before any number is touched.
+<em>Data:</em> equal coherent sources $I = 4I_0\cos^2(\Delta\varphi/2)$, peaks $4I_0$, average $2I_0$; incoherent lamps $2I_0$; unequal slits lift the minima to $I_0(a_1-a_2)^2$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;sources coherent?&quot;} --&gt;|&quot;same lamp split&quot;| B[&quot;add amplitudes with phase&quot;]
+  B --&gt; C[&quot;I = I₁+I₂+2√(I₁I₂)cosΔφ&quot;]
+  C --&gt; D[&quot;equal slits: 4I₀ at a bright fringe&quot;]
+  A --&gt;|&quot;independent lamps&quot;| E[&quot;add intensities: 2I₀&quot;]
+  E --&gt; F[&quot;pattern washes away — V = 0&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> equal coherent waves quadruple the intensity at a bright fringe, but the energy is moved sideways from the dark fringes, never destroyed.</p>
+</blockquote>
 <p><img alt="Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis" src="../../wave-optics/assets/figures/fig-011.svg" /></p>
 <p><strong>Fig. 2.4</strong> — Equal slits and unequal ones, drawn from the two lines above: the dashed curve is $4I_0\cos^{2}(\delta/2)$, the solid curve is $I_0(a_1^{2}+a_2^{2}+2a_1a_2\cos\delta)$ with $a_1 = 2a_2$, both normalised to the same peak. The solid curve never reaches the axis: its minima sit at $I_0(a_1-a_2)^{2} = I_0$, one ninth of the peak, so $I_{\max}/I_{\min} = 9$ and the visibility is $V = 4/5$ — the numbers part 2's Q5 asks for. This is what “washed out” means: a width mismatch never destroys the pattern, it only lifts its floor, which is why the exact zeros of §2.2 are an approximation about equally <em>illuminated</em> slits, not about equally <em>wide</em> ones.</p>
 <p>Two refinements matter for later parts. First, a real slit is not a point: it is a narrow rectangle, and each slit diffracts its own light over an angular width $\lambda/a$ (part 5). The final pattern is the double-slit interference curve multiplied by that single-slit envelope, so the fringes fade out toward the edges of the pattern and may vanish entirely at a particular order. Second, a real source is not a point either: a wide source is a collection of displaced point sources, each giving a pattern shifted by $y_0D/D_1$; when the shift for the two edges of the source reaches $\beta/2$, the maxima of one fill the minima of the other and the pattern vanishes. That is the <em>spatial</em> coherence condition, worked out in §7.1.</p>
@@ -977,6 +1041,20 @@ $$</p>
 <li><strong>$n_1 &gt; n_2$</strong> (glass to air, soap to air): <em>no</em> phase change.</li>
 <li>Transmission never carries a phase change of this kind — a transmitted wave simply carries on.</li>
 </ul>
+</blockquote>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.4 · The phase-change rule: denser flips, rarer does not</p>
+<p><em>Why:</em> one lost λ/2 is the commonest error in the subject, and the rule is two cases — the flowchart makes the flip unambiguous.
+<em>Data:</em> $n_1<n_2$ (into the denser medium) → reflected wave gains $\pi$; $n_1>n_2$ → no change; transmission never changes phase this way.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;reflecting into a denser medium?&quot;} --&gt;|&quot;n1 &lt; n2&quot;| B[&quot;reflected wave +π (λ/2)&quot;]
+  A --&gt;|&quot;n1 &gt; n2&quot;| C[&quot;reflected wave: no change&quot;]
+  A --&gt;|&quot;transmission&quot;| D[&quot;no phase change, ever&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the flip belongs to one specific reflected beam, not to "the film" — mark a cross on the drawing at each denser-boundary reflection and count them.</p>
 <p><strong>Why a denser medium flips the wave (and why the flip is exactly π)</strong></p>
 <p>The boundary conditions demand that the total tangential field is continuous. On the far (denser) side, the wave that penetrates is a driven oscillation: the driven oscillator lags, and for a wave of very low frequency the reflected amplitude has the opposite sign to the incident one — that is the $\pi$. For a real interface the flip is not exactly $\pi$ unless the index jump is real and the light is below the critical angle, which is why a multilayer mirror made of dielectrics behaves slightly differently from an ideal metal mirror. For films in air the approximation "flip $= \pi$ when going into the denser medium" is accurate to better than a part in $10^{4}$ and is what every exam question uses.</p>
 <p>Stokes' remark, worth knowing: reversibility of optical paths forces the transmitted and reflected amplitudes at one interface to satisfy $t\,t' = 1-r^{2}$ and $r' = -r$. The minus sign <em>is</em> the $\pi$ — the reflection coefficient changes sign when the same interface is approached from the other side.</p>
@@ -2725,6 +2803,23 @@ $$</p>
 <p>This is the part you revise from. It contains no new physics: it is the decision procedure that turns a sentence of prose into an equation, the bookkeeping that stops you dropping a $\lambda/2$, the catalogue of the twenty traps that catch almost everybody, and the number sheet that makes the arithmetic quick. Read it after parts 1–8, then use it as the index you return to before every test.</p>
 <h3 id="91-triage-what-kind-of-problem-is-this">9.1 Triage: what kind of problem is this?</h3>
 <p>Every wave-optics question is one of six kinds, and each kind has exactly one governing equation. Identify the kind first — the arithmetic is easy and the classification is the whole problem.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F4.6 · Triage — read the question, then pick the box</p>
+<p><em>Why:</em> the six kinds are the six equations of the subject; the keyword routes the whole solution before any number is touched.
+<em>Data:</em> slits → $\beta=\lambda D/d$; film → $2\mu t\cos r$; one aperture → $a\sin\theta=m\lambda$ (dark); grating → $d\sin\theta=n\lambda$; filter → Malus/Brewster; telescope → $1.22\lambda/D$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;what does the question name?&quot;} --&gt;|&quot;two slits&quot;| B[&quot;Δx = d sinθ; β = λD/d&quot;]
+  A --&gt;|&quot;a film / layer&quot;| C[&quot;2μt cos r + λ/2 if one flip&quot;]
+  A --&gt;|&quot;one slit / hole&quot;| D[&quot;a sinθ = mλ (dark fringes)&quot;]
+  A --&gt;|&quot;grating&quot;| E[&quot;d sinθ = nλ; R = nN&quot;]
+  A --&gt;|&quot;filter / polariser&quot;| F[&quot;Malus I₀cos²θ; Brewster tanθ=n₂/n₁&quot;]
+  A --&gt;|&quot;telescope&quot;| G[&quot;1.22λ/D ; 0.61λ/NA&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> name the kind first, then any thickness/index/wavelength is a path difference to convert into waves and count.</p>
+</blockquote>
 <p><img alt="Decision tree for classifying a wave optics problem" src="../../wave-optics/assets/figures/fig-028.svg" /></p>
 <p><strong>Fig. 9.1</strong> — The triage tree. The six boxes are the six equations of the subject; the captions beneath each are the first thing to check once you have chosen the box. The box at the bottom is the single habit that prevents most arithmetic errors: <em>convert path differences into wavelengths</em> before substituting numbers.</p>
 <h3 id="92-the-phase-bookkeeping-algorithm">9.2 The phase-bookkeeping algorithm</h3>

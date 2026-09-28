@@ -2,6 +2,8 @@
 title: Work, Energy & Power — first principles to Olympiad
 part: 6
 slug: work-energy-power
+order: 6
+block: mechanics
 status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 2 §2.24-2.26 + ch 1 §1.17-1.19
 aliases: [work, energy, power, kinetic-energy, potential-energy, conservation, WET]

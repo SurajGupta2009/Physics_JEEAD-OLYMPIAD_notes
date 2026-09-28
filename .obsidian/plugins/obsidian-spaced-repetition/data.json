@@ -1,0 +1,25 @@
+{
+  "flashcardTags": [
+    "#flashcards"
+  ],
+  "convertFoldersToDecks": false,
+  "convertHighlightsToClozes": true,
+  "convertBoldTextToClozes": false,
+  "convertCurlyBracketsToClozes": false,
+  "singleLineCardSeparator": "::",
+  "singleLineReversedCardSeparator": ":::",
+  "multilineCardSeparator": "?",
+  "multilineReversedCardSeparator": "??",
+  "noteFoldersToIgnore": [
+    "_obsidian",
+    "_templates",
+    "docs",
+    "tools"
+  ],
+  "tagsToReview": [
+    "#review"
+  ],
+  "showContextInCards": true,
+  "randomizeCardOrder": true,
+  "burySiblingCards": true
+}

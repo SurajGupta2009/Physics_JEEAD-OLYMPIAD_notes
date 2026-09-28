@@ -2,6 +2,8 @@
 title: <Chapter Title — first principles to Olympiad>
 part: <N>
 slug: <slug>
+order: <course-spine slot — see _obsidian/dashboards/spine.md; pending E&M chapters have theirs reserved>
+block: <mechanics | waves | thermal | electricity-magnetism | optics | modern>
 status: in-progress
 source: <Cengage volume + chapter, verbatim from the PDF>
 aliases: [alias-one, alias-two]

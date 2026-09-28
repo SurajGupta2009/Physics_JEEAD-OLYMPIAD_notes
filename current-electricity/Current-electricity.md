@@ -2,6 +2,8 @@
 title: Current Electricity — first principles to Olympiad
 part: 8
 slug: current-electricity
+order: 19
+block: electricity-magnetism
 status: complete
 source: Cengage Electrostatics and Current Electricity-compressed.pdf, Electric Current chapters
 aliases: [current electricity, drift, resistance, kirchhoff, wheatstone bridge, potentiometer]

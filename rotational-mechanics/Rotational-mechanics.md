@@ -2,6 +2,8 @@
 title: Rotational Mechanics — first principles to Olympiad
 part: 8
 slug: rotational-mechanics
+order: 8
+block: mechanics
 status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 2 Rigid Body Dynamics
 aliases: [rotation, moment-of-inertia, torque, angular-momentum, rolling, precession]

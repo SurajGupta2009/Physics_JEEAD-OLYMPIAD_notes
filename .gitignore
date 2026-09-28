@@ -28,8 +28,24 @@ venv/
 *.pdf
 export/
 dist/
+# The five Cengage source volumes at the repo root are the deliberate exception: they are the
+# "floor" every chapter is audited against (plan.md §1.12–§1.13, PENDING.md), so they stay tracked.
+!/CENGAGE*.pdf
+!/Cengage*.pdf
 
 # --- CI: ship the workflow file outside .github/ (GitHub refuses a push that
 #     creates .github/workflows/* without the workflows permission). Install it with:
 #       mkdir -p .github/workflows && cp tools/ci/qa.yml .github/workflows/
 .github/workflows/
+
+# --- Obsidian: the vault config IS committed (settings, CSS snippet, plugin list, plugin
+#     settings and — once tools/obsidian_plugins.py has run — the pinned plugin files), so the
+#     vault works the moment it is opened. Only per-device / per-session state stays local.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/plugins/*/node_modules/
+.obsidian/plugins/obsidian-git/.git-credentials
+.trash/
+_obsidian/excalidraw/*.excalidraw.md.bak

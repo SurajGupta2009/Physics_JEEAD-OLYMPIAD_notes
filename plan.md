@@ -1652,6 +1652,36 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 > `> [!quote] Hand-off` — capacitance is the shipped `capacitors/` note's property; here we only meet the
 > field that makes it.`
 
+> [!note] Amendment 2026-09-27 — PARTs 13, 14 and 15 are one module
+> At the owner's direction the three electrostatics parts are delivered as **one chapter in one
+> folder, `electrostatics/`** (`Electrostatics.md`, spine slot 17, `part: 13`, `plan_parts: [13, 14, 15]`),
+> written in three stages (theory → exemplars/practice/toolkit/traps/playbook → Olympiad block, paper,
+> formula sheet, checkpoint). The section tables, must-derive lists, figure briefs and Olympiad minimums
+> of PART 13, 14 and 15 below remain the content contract; their §1.4 blocks are merged (one Part 3 in
+> the order field → flux → potential, one paper of 36 questions / 200 marks, one archetype table of at
+> least the union of the three mandatory lists). The folders `electric-field/`, `gauss-law/` and
+> `electric-potential/` are **not** to be created; the course spine has 36 slots, not 38.
+
+> [!note] Amendment 2026-09-27 — PARTs 16, 17, 18 and 19 are one module
+> Likewise, the four magnetism parts are delivered as **one chapter in one folder, `magnetism/`**
+> (`Magnetism.md`, spine slot 20, `part: 16`, `plan_parts: [16, 17, 18, 19]`), written in the same three
+> stages. Their section tables, must-derive lists, figure briefs, archetypes and Olympiad minimums remain
+> the content contract, merged as for electrostatics; the teaching order is effect before cause (PART 16
+> §1–4, then PART 18, then PART 16 §5–13 and PART 17, then PART 19). The folders `magnetic-field/`,
+> `amperes-law/`, `moving-charges-magnetism/` and `magnetism-and-matter/` are **not** to be created; the
+> course spine has 33 slots. PART 20–22 stay one continuous argument and are the natural third module.
+
+> [!note] Amendment 2026-09-27 — PARTs 20, 21 and 22 are one module
+> The third and last Electricity & Magnetism module: **one chapter in one folder, `emi-ac/`**
+> (`Emi-ac.md`, spine slot 21, `part: 20`, `plan_parts: [20, 21, 22]`), written in the same three stages,
+> in the order induction → inductance → alternating current that §0.4 already requires. The section
+> tables, must-derive lists, figure briefs, archetypes and Olympiad minimums of PART 20, 21 and 22 remain
+> the content contract, merged as before. The folders `electromagnetic-induction/`, `inductance/` and
+> `alternating-current/` are **not** to be created; the course spine has 31 slots.
+>
+> **Status 2026-09-27:** all three merged modules are complete at stage 3, and with them every part of
+> this plan (PART 1–28) has a chapter that passes its local gate and `tools/check_all.py`.
+
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 
 `electric-field` · folder `electric-field/` · source: Cengage ***Electrostatics and Current

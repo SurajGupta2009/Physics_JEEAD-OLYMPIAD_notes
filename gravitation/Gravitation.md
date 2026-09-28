@@ -2,6 +2,8 @@
 title: Gravitation & Orbital Motion — first principles to Olympiad
 part: 9
 slug: gravitation
+order: 9
+block: mechanics
 status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 5 Gravitation
 aliases: [gravitation, orbital-motion, kepler, satellite, escape-velocity]

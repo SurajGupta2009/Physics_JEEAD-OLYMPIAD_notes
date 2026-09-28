@@ -2,6 +2,8 @@
 title: Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad
 part: 5
 slug: newtons-laws
+order: 5
+block: mechanics
 status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 7 Newton's Laws of Motion
 aliases: [newtons-laws, friction, constraints, circular-dynamics, FBD, pseudo-force]

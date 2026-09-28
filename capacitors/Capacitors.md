@@ -2,6 +2,8 @@
 title: Capacitors — first principles to Olympiad
 part: 7
 slug: capacitors
+order: 18
+block: electricity-magnetism
 status: complete
 source: Cengage Electrostatics and Current Electricity-compressed.pdf, Capacitor and Capacitance chapter
 aliases: [capacitors, capacitance, dielectrics, energy, rc circuits, networks]

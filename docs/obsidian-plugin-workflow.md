@@ -143,7 +143,10 @@ Every chapter that ships `F`-figures also ships `figures.json` — one object pe
 
 ## 4. The stack — Tier 1–4 plugins
 
-These are the adopted plugins; an agent's output is written **for** them. (Install/configure per §9.3.)
+These are the adopted plugins; an agent's output is written **for** them. The eight in bold in
+`_obsidian/README.md` (Dataview, Templater, LaTeX Suite, Git, Spaced Repetition, Advanced Tables,
+Tasks, Excalidraw) are configured in the committed `.obsidian/` and pinned in
+`.obsidian/plugins.lock.json`; the rest are optional (§9.3).
 
 | Plugin | Tier | Agent emits / does | Notes |
 |---|---|---|---|
@@ -334,7 +337,7 @@ Decks by folder (default) or `#deck/<slug>/<sub>` tags. Prefer `==…==` cloze; 
 
 ### 7.5 LaTeX Suite / Templater / spine / tasks
 
-- `_obsidian/latex-suite/snippets.md` — curated shorthand (`ph→physics`, `eps→\varepsilon`, `[[!ab]]→> [!abstract]`, …), load once in plugin settings.
+- `_obsidian/latex-suite/snippets.js` — the plugin's default set plus the vault's shorthand (`eps→\varepsilon`, `ep0→\varepsilon_0`, `;fig`, `;dia`, `;q`, `;sol`, `;trap`, …); already wired in `.obsidian/plugins/obsidian-latex-suite/data.json`. The plugin evaluates the file as a JavaScript module, so it stays `export default [ … ]` — the human-readable table is `_obsidian/latex-suite/README.md`.
 - `_obsidian/templates/chapter.md` — the full 15-block skeleton with frontmatter, `[!abstract] How to use`, `<details>` idiom, and the `F`-figure slot pre-planted.
 - `_obsidian/dashboards/spine.md` — canonical cross-topic order (mirrors README): string-waves → sound-waves → electromagnetic-waves → thermodynamics → heat → capacitors → current-electricity → geometrical-optics → wave-optics.
 - `_obsidian/dashboards/tasks.md` — `- [ ]` mirror of plan/PENDING (not canonical).
@@ -368,8 +371,20 @@ See §4 table (Tier 1–4). Mermaid, Canvas, and checklist/tasks support are **c
 
 ### 9.3 One-time human setup
 
-1. Enable Community Plugins; install Tier 1–4 (§4).
-2. LaTeX Suite → load `_obsidian/latex-suite/snippets.md`; Templater → `_obsidian/templates/`.
-3. Settings → Files & Links → default attachment location `assets/figures`; exclude the five root PDFs from search/graph if the graph feels noisy.
-4. Obsidian Git → auto-commit interval + message format; confirm the working branch is the session branch.
-5. Keep `.obsidian/` under version control deliberately or ignore it — never let it drift in.
+The configuration is **committed** in `.obsidian/` (settings, CSS snippet, enabled-plugin list,
+every plugin's `data.json`, `plugins.lock.json`), so steps 2–4 of the old checklist are already
+done. What remains:
+
+1. `python3 tools/obsidian_plugins.py` once on a machine with internet — it fetches the pinned
+   `main.js` / `manifest.json` / `styles.css` of the eight plugins (Dataview, Templater, LaTeX Suite,
+   Git, Advanced Tables, Spaced Repetition, Tasks, Excalidraw) into `.obsidian/plugins/`; commit
+   them so every later clone opens configured. Obsidian's own *Community plugins → Browse* gives the
+   same result by hand; the committed settings are picked up either way.
+2. Open the repository root as a vault → **Trust author and enable plugins**.
+3. Optional: Obsidian Git auto-commits 15 min after the last edit and never auto-pushes; run
+   *Git: Push* when a batch is done, and confirm the working branch is the session branch.
+4. Per-device files (`.obsidian/workspace*.json`, `cache`) are git-ignored; everything else in
+   `.obsidian/` is shared state — change it in a commit that says so, never let it drift in.
+
+The Tier-2/3 extras of §4 that are *not* pre-installed (MathLive, TikZJax, Breadcrumbs, Anki
+bridge, Style Settings) remain optional per-human tools; nothing in the notes depends on them.

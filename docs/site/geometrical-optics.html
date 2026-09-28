@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="active">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="active">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -28,6 +28,8 @@
 <li><a href="#12-the-formula-sheet">12 · The formula sheet</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 9</span><span class="prop"><b>slug</b> geometrical-optics</span><span class="prop"><b>order</b> 23</span><span class="prop"><b>block</b> optics</span><span class="prop"><b>source</b> Cengage Optics and Modern Physics-compressed.pdf, ch 1 Geometrical Optics</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">optics</span><span class="prop tag">ray-optics</span></p>
+
 <p><a id="section-index"></a></p>
 <p><a id="top"></a></p>
 <p><em>12-part note-set · JEE Advanced · NSEP · INPhO · IPhO · self-contained — opens with no internet, prints cleanly</em></p>
@@ -35,6 +37,26 @@
 <p>A complete, proof-first treatment of rays, mirrors, refraction, prisms, lenses and instruments. Every formula is <strong>derived from something you already accept</strong> — Fermat's principle, Snell's law, or plain triangle geometry — every boxed result carries its condition of validity, and every place where an examiner can catch you is named before you can make the mistake. The last part is a real three-hour paper with full solutions.</p>
 <p><img alt="Three-ray construction for a converging lens: object between F and 2F, real inverted magnified image" src="../../geometrical-optics/assets/figures/fig-001.svg" /></p>
 <p><strong>The whole subject in one picture.</strong> Three rays are always enough, because each one is a <em>rule</em> (parallel ray through the focus, central ray straight, focal ray parallel) rather than a calculation. Every question in these notes is one of two things: locating that crossing point, or explaining why a real instrument fails to put all the rays there.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.1 · Chapter map: 12 parts, one sign convention</p>
+<p><em>Why:</em> the subject is a chain — each part's formula is the last one with one index flipped; the map shows the reading spine and where the playbook sits.
+<em>Data:</em> parts 1–2 rays &amp; mirrors; 3–4 refraction &amp; TIR; 5 prisms &amp; dispersion; 6 lenses &amp; systems; 7 eye &amp; instruments; 8 Olympiad machinery; 9 playbook; 10–11 paper; 12 formula sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((geometrical optics))
+    Rays &amp; mirrors
+    Refraction &amp; TIR
+    Prisms &amp; dispersion
+    Lenses &amp; systems
+    Eye &amp; instruments
+    Olympiad machinery
+    The playbook
+    Paper &amp; solutions
+</code></pre>
+<blockquote>
+<p><em>Read:</em> an image chain is just one arrow per element — read parts 1–8 in order, then revise from part 9.</p>
+</blockquote>
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
 <p>Parts <strong>1–8</strong> are the course, in order of what has to be true before the next thing can be said: rays and mirrors (1–2), refraction and total internal reflection (3–4), prisms and dispersion (5), lenses and lens systems (6), the eye and optical instruments (7), then the Olympiad machinery (8) — Fermat as a variational principle, ray-transfer matrices, thick lenses, the exact non-paraxial answers, aberrations and the rainbow. Part <strong>9</strong> is a playbook (triage, traps, numbers, the sign-convention algorithm). Parts <strong>10–11</strong> are the 36-question paper and its full solutions. Part <strong>12</strong> is the same course compressed to three printable pages.</p>
 <p>Read 1 → 8 in order the first time; after that use part 9 as the index you actually revise from. Nothing in parts 2–8 repeats a result without saying where it came from: the mirror formula is derived once, in part 2, and part 6 gets it by <em>treating the lens as two spherical surfaces</em>, which is where the $R$ dependence belongs.</p>
@@ -604,6 +626,21 @@ $$</p>
 <p>A reflection is a refraction with $n_2 = -n_1$ (the ray goes back into the same medium). Put $n_1 = 1$, $n_2 = -1$ in the single-spherical-surface formula $n_2/v - n_1/u = (n_2-n_1)/R$ from part 6 and you get $-1/v - 1/u = -2/R$, i.e. $1/v + 1/u = 2/R = 1/f$ — the mirror formula, with $f = R/2$ falling out automatically. That identity is worth knowing because it means you never need to memorise mirror optics as a separate subject from lens optics: it is the same formula with a negative index.</p>
 </blockquote>
 <h3 id="23-the-sign-convention-applied-to-mirrors">2.3 The sign convention applied to mirrors</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.2 · Mirror: one formula, sign before algebra</p>
+<p><em>Why:</em> the mirror has exactly one formula, and the signs are the whole method; filling them in <em>before</em> solving turns every curved-mirror question into a substitution.
+<em>Data:</em> 1/v + 1/u = 1/f = 2/R, m = −v/u; concave f &lt; 0, convex f &gt; 0; real object u &lt; 0; v &gt; 0 → same side (real), m &lt; 0 → inverted.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;mirror formula 1/v + 1/u = 1/f = 2/R&quot;] --&gt; B{&quot;concave or convex?&quot;}
+  B -- &quot;concave: f &lt; 0&quot; --&gt; C[&quot;substitute signed u, f&quot;]
+  B -- &quot;convex: f &gt; 0&quot; --&gt; C
+  C --&gt; D[&quot;interpret signs: v &gt; 0 real; m &lt; 0 inverted&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> do not "fix" signs afterwards — a negative v for a concave mirror is the answer, and it means a real image in front.</p>
+</blockquote>
 <p>Part 0 fixed the convention. Applied to a mirror it gives this table, which you should be able to reproduce in ten seconds — it answers most numerical questions by itself:</p>
 <table>
 <thead>
@@ -987,7 +1024,20 @@ $$</p>
 <p><img alt="Refraction at a plane surface with wavefronts showing the wavelength shrinking in the denser medium" src="../../geometrical-optics/assets/figures/fig-015.svg" /></p>
 <p><strong>Fig. 3.1</strong> — Why the ray bends, and why the bending is toward the normal. The wavefronts are drawn perpendicular to the rays; in the denser medium they are closer together (shorter wavelength) and travel more slowly, so the part of the front that has already entered falls behind and the front pivots toward the normal. $i &gt; r$ here because $\mu_2 &gt; \mu_1$. At normal incidence ($i = 0$) the whole front enters at once and there is no bending at all, even though the light slows down.</p>
 <h3 id="32-the-laws-of-refraction">3.2 The laws of refraction</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.3 · Snell's law: μ₁ sin i = μ₂ sin r</p>
+<p><em>Why:</em> refraction is one equation plus one rule — which way it bends, and how the deviation splits; the flow pins both to the index ratio.
+<em>Data:</em> μ₁ sin i = μ₂ sin r, μ = c/v, μ₂₁ = μ₂/μ₁ = v₁/v₂ = λ₁/λ₂; into denser (μ₂ &gt; μ₁) bends toward the normal, δ = i − r; frequency unchanged, wavelength falls to λ/μ.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;μ₁ sin i = μ₂ sin r&quot;] --&gt; B{&quot;μ₂ &gt; μ₁? denser&quot;}
+  B -- yes --&gt; C[&quot;bend toward the normal, i &gt; r&quot;]
+  B -- no --&gt; D[&quot;bend away, i &lt; r&quot;]
+  B --&gt; E[&quot;if no angle solves sin r: total internal reflection&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> "optically denser" means higher index, full stop — turpentine floats on water yet is optically denser than it.</p>
 <p><strong>Snell's law (the second basic law, in full)</strong></p>
 <p>$$
 \mu_1\sin i = \mu_2\sin r \qquad\Longleftrightarrow\qquad \frac{\sin i}{\sin r} = \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \mu_{21} \tag{3.1}
@@ -1034,8 +1084,7 @@ $$</p>
 $$</p>
 <p><strong>Check.</strong> Beyond $i = C$ there is no emergent ray at all — the deviation jumps to the reflection branch of part 4. So $\delta$ on exit can never exceed $54.7^\circ$ for this glass, however you aim the ray: a fact that feels wrong until you check it, and exactly the sort of thing Olympiad questions ask you to justify.</p>
 </details>
-<h3 id="33-snells-law-from-fermats-principle-and-why-the-lifeguard-swims-at-an-angle">3.3 Snell's law from Fermat's principle (and why the lifeguard swims at an angle)</h3>
-<p><img alt="Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio" src="../../geometrical-optics/assets/figures/fig-017.svg" /></p>
+<h3 id="33-snells-law-from-fermats-principle-and-why-the-lifeguard-swims-at-an-angle">3.3 Snell's law from Fermat's principle (and why the lifeguard swims at an angle)<img alt="Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio" src="../../geometrical-optics/assets/figures/fig-017.svg" /></h3>
 <p><strong>Fig. 3.3</strong> — Fermat's principle is not a statement about light's preferences; it is the geometry of "least time through two media". The lifeguard who runs 5 m/s on sand and swims 2 m/s should enter the water at the point where $\sin i/\sin r = v_1/v_2 = 5/2$ — Snell's law with $1/\mu$ playing the role of the speed ratio. Numbers for the drawing (sand 4.5 m deep, water 5.0 m deep, 26 m of shore between them): the best entry is 23.8 m along the shore, giving $23.8/5 + 5.45/2 = 4.77+2.73 = 7.50$ s — better than swimming the whole 27.7 m straight line at 2 m/s ($13.8$ s) and better than running all the way and then swimming straight out ($5.2+2.5 = 7.70$ s). The optimum sits strictly between the two extremes, and it is <em>stationary</em>, not extremal in any obvious sense — that is why physicists say least <em>time</em>, not shortest path.</p>
 <blockquote>
 <p><strong>Derivation of Snell's law (one derivative, no optics)</strong></p>
@@ -1320,6 +1369,20 @@ $$</p>
 <h2 id="4-total-internal-reflection">4 · Total internal reflection</h2>
 <p>Snell's law can fail. Send light from glass into air, tilt it far enough, and there is no angle $r$ that satisfies the equation — the light has nowhere to refract to, so it does the only other thing light can do: it reflects. That failure is not a defect of the theory but one of the most useful effects in optics, and this part is about what it buys you: prisms that turn beams through 90° and 180° with no silvering at all, optical fibres that carry a conversation across an ocean, the fire of a diamond, and the reason a fish sees the entire sky through a circular window in the water above it.</p>
 <h3 id="41-the-critical-angle">4.1 The critical angle</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.4 · Total internal reflection: beyond sin C</p>
+<p><em>Why:</em> TIR is Snell's law running out of solutions — nothing new, just the boundary case; the flow states when a ray stops crossing and starts reflecting.
+<em>Data:</em> sin C = μ₂/μ₁ (lower over higher) for μ₁ &gt; μ₂; sin C = 1/μ in air; beyond C no refracted ray exists; conditions: denser → rarer and i ≥ C.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;sin r = μ₁/μ₂ · sin i&quot;] --&gt; B{&quot;can μ₁ sin i / μ₂ exceed 1?&quot;}
+  B -- no --&gt; C[&quot;refraction, bends away&quot;]
+  B -- &quot;yes (i &gt; C)&quot; --&gt; D[&quot;total internal reflection&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the incident medium's index sits under the other one — take the sine of the <em>lower over the higher</em>.</p>
+</blockquote>
 <p>Take light inside a medium of index $\mu_1$ meeting a boundary with a rarer medium of index $\mu_2 &lt; \mu_1$ — glass to air, water to air, glass to water. Because the light speeds up on the way out, the refracted ray bends <em>away</em> from the normal: $r &gt; i$. As you increase $i$, the refracted ray marches toward the surface, and at one particular value of $i$ it emerges exactly along the surface, $r = 90^\circ$. That value is the critical angle. Beyond it, Snell's law demands $\sin r &gt; 1$, which no angle satisfies.</p>
 <blockquote>
 <p><strong>Critical angle</strong></p>
@@ -1993,7 +2056,19 @@ $$</p>
 </blockquote>
 <p><img alt="Thin lens construction with the three principal rays and the lensmaker radii" src="../../geometrical-optics/assets/figures/fig-032.svg" /></p>
 <p><strong>Fig. 6.2</strong> — Thin-lens construction. The three principal rays: (1) through the first focal point goes out parallel; (2) parallel to the axis comes out through the second focal point; (3) through the optical centre goes straight on. The construction is not a different theory — it is the thin-lens equation drawn, and the two ray-slopes you choose must be consistent with $1/v - 1/u = 1/f$. The object here is beyond $2F$, so the image is real, inverted and diminished: all three signature features of that case.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.5 · Lens and mirror: the same formula, one index flipped</p>
+<p><em>Why:</em> a mirror <em>is</em> a lens with μ₂ = −μ₁, so one sign machine covers both — memorise the surface formula and you never relearn ray optics.
+<em>Data:</em> lens 1/v − 1/u = 1/f, m = v/u, lensmaker 1/f = (μ−1)(1/R₁ − 1/R₂), P = 1/f (dioptres); single surface μ₂/v − μ₁/u = (μ₂−μ₁)/R; mirror is n₂ = −n₁.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;single surface: μ₂/v - μ₁/u = (μ₂-μ₁)/R&quot;] --&gt; B[&quot;apply twice, thin-lens: lensmaker&quot;]
+  B --&gt; C[&quot;1/v - 1/u = 1/f, m = v/u, P = 1/f&quot;]
+  C --&gt; D[&quot;mirror = same formula with μ₂ = -μ₁: f = R/2&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> two surfaces whose intermediate image cancels — turn the lens around and f is unchanged.</p>
 <p><strong>The six cases of a converging lens (know these cold)</strong></p>
 <table>
 <thead>
@@ -2944,6 +3019,21 @@ $$</p>
 <h3 id="91-triage-classify-in-fifteen-seconds">9.1 Triage: classify in fifteen seconds</h3>
 <p><img alt="A decision tree for classifying an optics question into mirror, refraction, prism, lens, system or instrument branches" src="../../geometrical-optics/assets/figures/fig-046.svg" /></p>
 <p><strong>Fig. 9.1</strong> — The triage sheet. Six branches, each with the two or three formulas that actually get used in that branch, and the two questions that decide the rest. Any optics question in JEE Advanced, NSEP or INPhO lands on one of these six branches within fifteen seconds, and the second box — real or virtual object for the <em>next</em> element — is where the majority of the marks are lost.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.6 · Triage: six branches, one chain</p>
+<p><em>Why:</em> fifteen seconds picking the branch decides which two formulas apply; the hardest step is naming the object for the <em>next</em> element.
+<em>Data:</em> which element (plane/curved mirror, slab, prism, lens/surface, instrument) → which image is the next object (O → I₁ → I₂, one formula per arrow) → sign every distance → what is actually asked (position, nature, magnification, angle).</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;which element?&quot;] --&gt; B[&quot;break mixed problems into single elements&quot;]
+  B --&gt; C[&quot;O → I₁ → I₂: one formula per arrow&quot;]
+  C --&gt; D[&quot;sign every distance before algebra&quot;]
+  D --&gt; E[&quot;position? nature? magnification? angle?&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the second box — real or virtual object for the next element — is where most marks are lost.</p>
+</blockquote>
 <ol>
 <li><strong>Which element?</strong> Plane mirror, curved mirror, plane refracting surface (or slab), prism, lens/spherical
   surface, or an instrument. If the question mixes two, break it into two single-element problems joined by one

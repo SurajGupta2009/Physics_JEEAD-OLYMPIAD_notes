@@ -1,0 +1,24 @@
+{
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "defaultViewMode": "preview",
+  "livePreview": true,
+  "propertiesInDocument": "visible",
+  "foldHeading": true,
+  "foldIndent": true,
+  "showUnsupportedFiles": false,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "./assets/figures",
+  "newFileLocation": "current",
+  "promptDelete": true,
+  "trashOption": "local",
+  "userIgnoreFilters": [
+    "docs/site/",
+    "_templates/",
+    "tools/"
+  ]
+}

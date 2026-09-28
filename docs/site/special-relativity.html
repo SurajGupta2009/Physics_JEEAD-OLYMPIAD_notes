@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="active">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="active">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 28</span><span class="prop"><b>slug</b> special-relativity</span><span class="prop"><b>source</b> olympiad extension (IPhO-level; nothing in these volumes)</span><span class="prop tag">olympiad</span><span class="prop tag">ipho</span><span class="prop tag">relativity</span><span class="prop tag">modern-physics</span><span class="prop tag">mechanics</span></p>
+<p class="props"><span class="prop"><b>part</b> 28</span><span class="prop"><b>slug</b> special-relativity</span><span class="prop"><b>order</b> 31</span><span class="prop"><b>block</b> modern</span><span class="prop"><b>source</b> olympiad extension (IPhO-level; nothing in these volumes)</span><span class="prop tag">olympiad</span><span class="prop tag">ipho</span><span class="prop tag">relativity</span><span class="prop tag">modern-physics</span><span class="prop tag">mechanics</span></p>
 
 <h1 id="special-relativity-relativistic-mechanics-first-principles-to-olympiad">Special Relativity &amp; Relativistic Mechanics — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -155,6 +155,25 @@
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one cascade — two postulates force a new kinematics, which forces a new dynamics; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — postulates, simultaneity, Lorentz, dilation, contraction, velocity addition, momentum, energy, Doppler, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((special relativity))
+    Two postulates
+    Simultaneity
+    Lorentz transform
+    Dilation &amp; contraction
+    Velocity addition
+    E = mc²
+    Doppler
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every result is the Lorentz factor, an invariant, or an energy–momentum relation — all forced by one constancy of c.</p>
+</blockquote>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <p><strong>The ether died in 1887.</strong> Michelson and Morley tried to measure the Earth's motion through the hypothetical luminiferous ether by comparing the speed of light in two perpendicular directions. They found no difference — to one part in $10^{8}$. Two explanations survived: either the Earth drags the ether along (ruled out by stellar aberration), or the speed of light is the same for all observers regardless of their motion. Einstein chose the second in 1905, and everything else followed.</p>
 <p><strong>Simultaneity goes first.</strong> Two lightning bolts strike the front and back of a moving train. A platform observer sees the strikes as simultaneous; a passenger in the middle of the train does not — the light from the front strike reaches the passenger first because the train has moved toward it. Both observers are correct; there is no absolute "at the same time." This is the deepest result in the chapter: time dilation and length contraction are consequences, not causes.</p>
@@ -273,6 +292,21 @@
 <p><strong>Postulate 1 (Principle of relativity).</strong> The laws of physics are the same in all inertial frames.</p>
 <p><strong>Postulate 2 (Constancy of $c$).</strong> The speed of light in vacuum is the same for all inertial observers, regardless of the motion of the source or the observer.</p>
 <p>Postulate 1 generalises Newton's first law from mechanics to all of physics (including electromagnetism). Postulate 2 is the consequence of Maxwell's equations and the Michelson–Morley result. Together they are enough to derive the Lorentz transformation — and everything else follows.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.2 · The two postulates and what they force</p>
+<p><em>Why:</em> the whole chapter is guessed from two premises; the figure chains premise to conclusion so nothing looks arbitrary.
+<em>Data:</em> Postulate 1 (relativity), Postulate 2 (constancy of $c$); Michelson–Morley null result.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;Michelson-Morley: no fringe shift&quot;] --&gt; B[&quot;Postulate 2: c same in all frames&quot;]
+  B --&gt; C[&quot;simultaneity is relative&quot;]
+  C --&gt; D[&quot;time dilation, length contraction&quot;]
+  D --&gt; E[&quot;velocity addition, E = mc²&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> relativity of simultaneity comes <em>before</em> dilation and contraction — it is the missing step that makes the rest inevitable.</p>
+</blockquote>
 <h3 id="33-simultaneity-goes-first">3.3 Simultaneity goes first</h3>
 <p><strong>The thought experiment.</strong> A train moves at speed $v$. Lightning strikes the front and back of the train. A platform observer standing at the midpoint between the two strike points sees both flashes simultaneously (the light from both strikes travels the same distance at $c$). A passenger at the midpoint of the train has moved toward the front strike by the time the light arrives from both strikes — the front flash arrives first.</p>
 <p><strong>The conclusion.</strong> Events that are simultaneous in one frame are not simultaneous in another. This is not an illusion; it is a fact about the structure of spacetime. The "now" of one observer is a slice through spacetime that is tilted relative to the "now" of another. Once simultaneity is relative, time dilation and length contraction follow inevitably.</p>
@@ -327,6 +361,22 @@ $$</p>
 <em>Search:</em> "muon time dilation length contraction two frames explanation diagram"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.3 · The muon: two frames, one event</p>
+<p><em>Why:</em> one observable fact — muons reach the ground — is dilation for the Earth observer and contraction for the muon; the figure shows both are the same physics.
+<em>Data:</em> 15 km altitude, lifetime $2.2\ \mu$s at rest, $v=0.998c$, $\gamma\approx15.8$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;muons made at 15 km, lifetime 2.2 µs&quot;] --&gt; B[&quot;at 0.998c: γ ≈ 15.8&quot;]
+  B --&gt; C[&quot;Earth frame: lifetime 34.8 µs → reach ground&quot;]
+  B --&gt; D[&quot;muon frame: atmosphere 0.95 km → reach ground&quot;]
+  C --&gt; E[&quot;same event, two descriptions&quot;]
+  D --&gt; E
+</code></pre>
+<blockquote>
+<p><em>Read:</em> dilation and contraction are one story read from two frames; the decay is the physical event that breaks the symmetry.</p>
+</blockquote>
 <h3 id="37-relativistic-velocity-addition">3.7 Relativistic velocity addition</h3>
 <p><strong>Derivation.</strong> An object moves at velocity $u'$ in $S'$ (which moves at $v$ relative to $S$). Find $u$ in $S$. From the Lorentz transformation: $dx=\gamma(dx'+v\,dt')$ and $dt=\gamma(dt'+v\,dx'/c^2)$. Divide:</p>
 <p>$$
@@ -344,6 +394,20 @@ $$</p>
 <em>Search:</em> "relativistic velocity addition curve versus Galilean addition approaching c"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.4 · Adding velocities never exceeds c</p>
+<p><em>Why:</em> Galilean addition overshoots $c$; relativity differs only at high speed, but the difference is the whole chapter.
+<em>Data:</em> $u = (u'+v)/(1+u'v/c^2)$; $0.8c+0.8c = 0.976c$, and $u'=c$ gives $u=c$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;u'+v directly&quot;] --&gt; B[&quot;0.8c + 0.8c = 1.6c (wrong)&quot;]
+  C[&quot;(u'+v)/(1+u'v/c²)&quot;] --&gt; D[&quot;0.8c + 0.8c = 0.976c&quot;]
+  D --&gt; E[&quot;u' = c → u = c always&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> at low speed the two formulas agree; at high speed the denominator bends every sum back under $c$.</p>
+</blockquote>
 <h3 id="38-relativistic-momentum">3.8 Relativistic momentum</h3>
 <p><strong>The problem with $p=mv$.</strong> In Newtonian mechanics, momentum is conserved in all frames. But $p=mv$ is not conserved under the Lorentz transformation: two observers disagree on velocities, and the Newtonian momentum does not transform correctly. The fix: define momentum as</p>
 <p>$$
@@ -383,6 +447,22 @@ $$</p>
 <em>Search:</em> "Lorentz gamma factor versus velocity graph approaching infinity"</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.5 · The gamma factor: slow to rise, then vertical</p>
+<p><em>Why:</em> every exam speed must be converted to $\gamma$ first; the figure pins the headmark values to the curve.
+<em>Data:</em> $\gamma = 1/\sqrt{1-\beta^2}$: $\gamma=2$ at $\beta=0.866$, $\gamma\approx7$ at $\beta=0.99$, $\gamma=10$ at $\beta=0.995$.</p>
+</div>
+
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;the gamma factor climbs only near c&quot;
+  x-axis [&quot;0&quot;, &quot;0.5&quot;, &quot;0.866&quot;, &quot;0.99&quot;, &quot;0.995&quot;]
+  y-axis 0 --&gt; 12
+  line [1, 1.15, 2, 7.09, 10]
+  line [1, 1, 1, 1, 1]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> from 0 to 0.866 the factor merely doubles; the last percent of light speed multiplies it sixfold — that cliff is why $c$ is a wall.</p>
+</blockquote>
 <h3 id="311-the-relativistic-doppler-effect">3.11 The relativistic Doppler effect</h3>
 <p>A source emits light at frequency $f_0$ in its rest frame. It moves at speed $v$ toward the observer. The relativistic Doppler formula for the longitudinal case (source moving directly toward or away from the observer):</p>
 <p>$$
@@ -971,17 +1051,30 @@ $$</p>
 </div>
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
-<ul>
-<li>"Given velocity, find $\gamma$": $\gamma=1/\sqrt{1-\beta^2}$.</li>
-<li>"Time dilation": identify the two events, find the proper-time clock, apply $\Delta t=\gamma\Delta t_0$.</li>
-<li>"Length contraction": is the object at rest in some frame? If so, $L_0$ is the proper length, $L=L_0/\gamma$.</li>
-<li>"Velocity addition": use the relativistic formula; never add directly.</li>
-<li>"Energy or momentum at a given speed": compute $\gamma$ first, then $p=\gamma mv$, $E=\gamma mc^2$.</li>
-<li>"Given energy, find momentum": $pc=\sqrt{E^2-(mc^2)^2}$.</li>
-<li>"Threshold energy": compute $s$ at threshold, solve for the lab energy.</li>
-<li>"Doppler": use the relativistic formula; check whether approaching or receding.</li>
-<li>"Invariant interval": compute $s^2$ and classify.</li>
-</ul>
+<div class="callout tip">
+<p class="callout-title">FIGURE F28.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the nine triage branches of §9.1.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is given?&quot;} --&gt;|&quot;velocity&quot;| B[&quot;compute γ first&quot;]
+  A --&gt;|&quot;two events / clock&quot;| C[&quot;time dilation: Δt = γΔt0&quot;]
+  A --&gt;|&quot;moving rod&quot;| D[&quot;length contraction: L0/γ&quot;]
+  A --&gt;|&quot;add speeds&quot;| E[&quot;relativistic addition, never direct&quot;]
+  A --&gt;|&quot;energy or momentum&quot;| F[&quot;γ then p = γmv, E = γmc²&quot;]
+  A --&gt;|&quot;threshold&quot;| G[&quot;invariant s at threshold&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> velocity goes to $\gamma$ first, events to a proper-time clock, speeds to the addition formula — each keyword has exactly one tool.
+- "Time dilation": identify the two events, find the proper-time clock, apply $\Delta t=\gamma\Delta t_0$.
+- "Length contraction": is the object at rest in some frame? If so, $L_0$ is the proper length, $L=L_0/\gamma$.
+- "Velocity addition": use the relativistic formula; never add directly.
+- "Energy or momentum at a given speed": compute $\gamma$ first, then $p=\gamma mv$, $E=\gamma mc^2$.
+- "Given energy, find momentum": $pc=\sqrt{E^2-(mc^2)^2}$.
+- "Threshold energy": compute $s$ at threshold, solve for the lab energy.
+- "Doppler": use the relativistic formula; check whether approaching or receding.
+- "Invariant interval": compute $s^2$ and classify.</p>
+</blockquote>
 <h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
 <table>
 <thead>

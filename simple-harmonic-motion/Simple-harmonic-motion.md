@@ -2,6 +2,8 @@
 title: Simple Harmonic Motion — first principles to Olympiad
 part: 10
 slug: simple-harmonic-motion
+order: 10
+block: mechanics
 status: complete
 source: Cengage Waves and Oscillations-compressed.pdf, ch 1 SHM
 aliases: [shm, simple-harmonic-motion, oscillations, spring-mass, pendulum]

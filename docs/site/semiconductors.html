@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="active">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="active">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -31,7 +31,7 @@
 <li><a href="#part-14-sources-and-review-checklist">Part 14 · Sources and review checklist</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 27</span><span class="prop"><b>slug</b> semiconductors</span><span class="prop"><b>source</b> JEE Main/Advanced semiconductor syllabus (no chapter exists in the supplied Cengage volumes, verified)</span><span class="prop tag">jee-main</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">electronics</span></p>
+<p class="props"><span class="prop"><b>part</b> 27</span><span class="prop"><b>slug</b> semiconductors</span><span class="prop"><b>order</b> 29</span><span class="prop"><b>block</b> modern</span><span class="prop"><b>source</b> JEE Main/Advanced semiconductor syllabus (no chapter exists in the supplied Cengage volumes, verified)</span><span class="prop tag">jee-main</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">modern-physics</span><span class="prop tag">electronics</span></p>
 
 <h1 id="semiconductors-electronic-devices-first-principles-to-olympiad">Semiconductors &amp; Electronic Devices — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -154,6 +154,25 @@
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one ladder of gaps — bands, junctions, diode and transistor — climbed toward logic; the map shows the spine.
+<em>Data:</em> the Part 0–14 structure — bands, carriers, junction, diode, rectifiers, transistor, gates, paper, sheet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((semiconductors))
+    Bands and gaps
+    Intrinsic carriers
+    p-n junction
+    Diode
+    Rectifiers
+    Transistor
+    Logic gates
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every device result is the gap, the mass-action law, the diode exponential, or a truth table.</p>
+</blockquote>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <p><strong>Silicon is not a metal because of a gap, not because of weak atoms.</strong> Four electrons per silicon atom make four covalent bonds; at low temperature every electron is committed to a bond, and a filled band cannot carry current — there is nowhere to go. Warm the crystal and a few electrons jump the 1.1 eV gap, leaving behind vacancies that behave as positive carriers. The gap is the whole story: diamond with a 5.5 eV gap is an insulator, silicon with 1.1 eV a semiconductor, a metal has no gap at all.</p>
 <p><strong>Doping is a numbers game, and the numbers are absurd.</strong> Pure silicon at room temperature has about $1.5\times10^{16}$ carriers per m$^3$ — one in $10^{12}$ atoms. Replace one atom in a million with phosphorus and the carrier count jumps by a factor of $10^5$. The crystal's conductivity is no longer silicon's; it is the dopant's. Electronics is the art of placing those impurities.</p>
@@ -270,12 +289,43 @@
 <em>Used in:</em> §3.2.</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.2 · The band gap is the whole device</p>
+<p><em>Why:</em> every device property — conduction, the exponential diode, colours of LEDs — is a gap value; the figure makes the gap the protagonist.
+<em>Data:</em> diamond 5.5 eV (nothing jumps), Si 1.12 eV, Ge 0.66 eV, GaAs 1.42 eV, $kT\approx0.026$ eV at 300 K.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;band gap E_g&quot;] --&gt; B{&quot;E_g ≫ kT?&quot;}
+  B --&gt;|&quot;yes (diamond 5.5)&quot;| C[&quot;insulator: nothing promoted&quot;]
+  B --&gt;|&quot;modest (Si 1.12)&quot;| D[&quot;semiconductor: a few carriers&quot;]
+  B --&gt;|&quot;tiny (Ge 0.66)&quot;| E[&quot;more carriers, easier conduction&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> a small gap means carriers jump at room temperature; a huge gap means none — the distinction is practical, not categorical.</p>
+</blockquote>
 <h3 id="33-intrinsic-carriers-and-their-temperature-law">3.3 Intrinsic carriers and their temperature law</h3>
 <p>At temperature $T$, collisions promote valence electrons across the gap, creating an electron-hole pair; recombination annihilates one. Equilibrium fixes the intrinsic density, whose form comes from the density of states ($\propto T^{3/2}$) times the Boltzmann jump probability $e^{-E_g/kT}$ split across two carriers:</p>
 <p>$$
 n_i\propto T^{3/2}e^{-E_g/2kT}. \qquad (3.1)
 $$</p>
 <p>The half-gap in the exponent is the reason semiconductors are so temperature-sensitive: for Si, $E_g/2kT=21.6$ at 300 K, so doubling $T$ changes the exponential by $e^{10.8}\approx5\times10^4$. With $n_i(\text{Si})=1.5\times10^{16}$ m$^{-3}$ at 300 K and mobilities $0.135/0.048$ m$^2$/Vs:</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.5 · Intrinsic carriers: the half-gap is the temperature switch</p>
+<p><em>Why:</em> the exponent is half the gap, not the whole — the one fact that explains why silicon's conductivity rockets with temperature.
+<em>Data:</em> $n_i \propto T^{3/2} e^{-E_g/2kT}$; for Si doubling temperature multiplies the exponential by $e^{10.8} \approx 5\times10^4$.</p>
+</div>
+
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;relative n_i vs T (Si): exponential in the half-gap&quot;
+  x-axis [&quot;280&quot;, &quot;300&quot;, &quot;330&quot;, &quot;360&quot;, &quot;400&quot;]
+  y-axis 0 --&gt; 800
+  line [0.2, 1, 6, 40, 800]
+  line [0, 1, 1, 1, 1]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the steep curve is the half-gap exponential; the $T^{3/2}$ prefactor is a rounding error beside it.</p>
+</blockquote>
 <p>$$
 \sigma_i=en_i(\mu_e+\mu_h)=4.4\times10^{-4}\ \text{S/m}\quad\Rightarrow\quad\rho_i\approx2300\ \Omega\,\text{m}. \qquad (3.2)
 $$</p>
@@ -335,6 +385,23 @@ $$</p>
 <em>Used in:</em> §3.6.</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.3 · The p-n junction: diffusion, drift, and the potential hill</p>
+<p><em>Why:</em> the whole diode is one sentence — diffusion current meets the drift current it creates, at the hill $V_0$.
+<em>Data:</em> fixed donor ions (n-side, +), fixed acceptor ions (p-side, −), field from n to p, $V_0 \approx 0.7$ V for Si.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;n-side: donors&quot;] --&gt; B[&quot;electrons diffuse into p&quot;]
+  C[&quot;p-side: acceptors&quot;] --&gt; D[&quot;holes diffuse into n&quot;]
+  B --&gt; E[&quot;fixed ions left behind&quot;]
+  D --&gt; E
+  E --&gt; F[&quot;field E drives drift back&quot;]
+  F --&gt; G[&quot;equilibrium at hill V0 ≈ 0.7 V&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> no perpetual current flows because any drift is exactly offset by the diffusion it feeds — the hill is the diode's off state.</p>
+</blockquote>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D27.9 · Charge, field and potential aligned</p>
 <p><em>Show:</em> three graphs stacked with a common x-axis across the junction: fixed charge density as two rectangles of opposite sign; electric field as a triangle peaking at the junction; potential as a smooth S-shaped hill; widths and peaks aligned between the three.
@@ -356,6 +423,21 @@ $$</p>
 <em>Used in:</em> §3.7.</p>
 </div>
 
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.4 · The diode equation: 60 mV per decade</p>
+<p><em>Why:</em> the knee and the decade rule are the same exponential, read at two zooms — the figure names both.
+<em>Data:</em> $I = I_0(e^{V/V_T}-1)$ with $V_T = 25.9$ mV; a decade of current is $\ln10\cdot V_T = 59.5$ mV.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;I = I0(e^(V/VT) - 1)&quot;] --&gt; B[&quot;V &lt; 0.6 V: I ~ I0&quot;]
+  A --&gt; C[&quot;V ~ 0.7 V: current explodes&quot;]
+  C --&gt; D[&quot;+60 mV: current ×10&quot;]
+  A -.-&gt;|&quot;reverse&quot;| E[&quot;I ≈ -I0 until breakdown&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> forward current multiplies by ten each extra 60 mV; the "0.7 V drop" is just where that exponential meets circuit resistance.</p>
+</blockquote>
 <h3 id="38-rectifiers-and-ripple">3.8 Rectifiers and ripple</h3>
 <p>Half-wave: one diode passes alternate half-cycles; the average output over a full period is $V_{\text{dc}}=\frac{V_p}{\pi}=0.318V_p$. Full-wave (bridge of four diodes, or centre-tap) flips the negative halves: $V_{\text{dc}}=\frac{2V_p}{\pi}=0.637V_p$, RMS $=\frac{V_p}{\sqrt2}$, and the ripple frequency doubles. A smoothing capacitor charges to the peak and discharges into the load between peaks; with discharge time $\approx\frac{1}{2f}$ (full-wave) and constant load current $I$:</p>
 <p>$$
@@ -1066,6 +1148,24 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F27.6 · Triage — route by the keyword</p>
+<p><em>Why:</em> the keyword names the route before any number is touched.
+<em>Data:</em> the seven triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;What is named?&quot;} --&gt;|&quot;class / temperature behaviour&quot;| B[&quot;mechanism table §3.1&quot;]
+  A --&gt;|&quot;carrier densities&quot;| C[&quot;mass-action seesaw&quot;]
+  A --&gt;|&quot;junction, barrier, bias&quot;| D[&quot;hill picture; W ∝ √V&quot;]
+  A --&gt;|&quot;diode current&quot;| E[&quot;decade ladder&quot;]
+  A --&gt;|&quot;rectifier / supply&quot;| F[&quot;averages, ripple&quot;]
+  A --&gt;|&quot;transistor&quot;| G[&quot;mode first, then currents&quot;]
+  A --&gt;|&quot;gates&quot;| H[&quot;truth table, De Morgan&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> junction words go to the hill, diode words to the decade ladder, gates to a truth table — no device does another's job.</p>
+</blockquote>
 <ul>
 <li>"Which class / temperature behaviour": mechanism table, §3.1.</li>
 <li>Carrier densities: mass-action seesaw, one line.</li>
@@ -1474,14 +1574,14 @@ $$</p>
 <h2 id="part-14-sources-and-review-checklist">Part 14 · Sources and review checklist</h2>
 <p>Primary floor: the JEE Main/Advanced semiconductor syllabus, since no chapter exists in the supplied Cengage volumes (verified: <em>Optics and Modern Physics</em> Unit II holds only chs 3-5; the other volumes were checked for a stray chapter per plan.md §1.13 and contain none). The treatment follows the NCERT Class-12 sequence (classification, doping, junction, devices, logic) at JEE-Advanced depth, with the olympiad layer added by sweep.</p>
 <p>Review checklist before the exam:
-1. The mechanism table (§3.1) survives a swapped-statement trap.
-2. Mass-action and neutrality each take one line, cold.
-3. The donor scaling reproduces 26 meV and 2.4 nm with the honesty line.
-4. The decade ladder and the knee story are fluent.
-5. Ripple and Zener formulas carry their worst-case conditions.
-6. Alpha-beta bookkeeping plus the saturation test resolve any transistor circuit.
-7. De Morgan and the half adder are writable without a reference table.
-8. The five olympiad stories (donor, diode origin, capacitance, solar bound, Moore's wall) each open with one sentence.</p>
+- [ ] The mechanism table (§3.1) survives a swapped-statement trap.
+- [ ] Mass-action and neutrality each take one line, cold.
+- [ ] The donor scaling reproduces 26 meV and 2.4 nm with the honesty line.
+- [ ] The decade ladder and the knee story are fluent.
+- [ ] Ripple and Zener formulas carry their worst-case conditions.
+- [ ] Alpha-beta bookkeeping plus the saturation test resolve any transistor circuit.
+- [ ] De Morgan and the half adder are writable without a reference table.
+- [ ] The five olympiad stories (donor, diode origin, capacitance, solar bound, Moore's wall) each open with one sentence.</p>
     <footer class="pager"><a href="nuclear-physics.html">← Nuclear physics & radioactivity</a><a href="communication-systems.html">Communication systems →</a></footer>
     <p class="colophon">Rendered from <code>semiconductors/Semiconductors.md</code> by <code>tools/md_site.py</code>.
     Fully offline: diagrams are local SVGs, maths is vendored KaTeX.

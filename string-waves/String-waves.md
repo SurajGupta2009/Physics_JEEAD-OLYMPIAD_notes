@@ -2,6 +2,8 @@
 title: String Waves — First Principles to Olympiad
 part: 1
 slug: string-waves
+order: 13
+block: waves
 status: complete
 source: Cengage Waves and Thermodynamics-compressed.pdf, Wave Motion & String Waves chapter
 aliases: [string waves, wave motion, standing waves, normal modes, sonometer]

@@ -2,6 +2,8 @@
 title: "2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad"
 part: 4
 slug: motion-in-two-dimensions
+order: 4
+block: mechanics
 status: complete
 source: Cengage Mechanics I-compressed.pdf, ch 5 Motion in Two Dimensions (+ ch 6)
 aliases: [projectile, relative velocity, circular motion, angular velocity, centripetal acceleration]

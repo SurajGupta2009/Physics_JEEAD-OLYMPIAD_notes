@@ -148,7 +148,9 @@ can start safely. Concretely, on your first turn:
    the current state in one go. `check_all.py` failing means someone left the tree mid-edit; fix or
    report it before adding your own changes.
 2. Read `topics.json`: your topic's `owner`, `status`, `pages`, `deliberately_not_covered`,
-   `next_candidates`. Do not write a chapter that another agent owns.
+   `next_candidates`, and its `order`/`block` (the course-spine slot; the chapter's frontmatter must
+   carry the same two values — `check_all.py` compares them). Do not write a chapter that another
+   agent owns. For a chapter that does not exist yet, start from [PENDING.md](PENDING.md).
 3. Find whether your chapter is already half-written: `git log --oneline -- capacitors/NN-*.html`,
    `grep -c '{{' capacitors/NN-*.html`, `grep -n 'TODO\|FIXME'`. If it exists, continue it; do not
    rewrite it — the reasoning in the boxes is the expensive part and it is already reviewed work.

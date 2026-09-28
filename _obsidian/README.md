@@ -1,47 +1,93 @@
 # _obsidian — the vault home
 
-> **What this folder is.** The Obsidian-native harness for the whole vault, per
-> [`docs/obsidian-plugin-workflow.md`](../docs/obsidian-plugin-workflow.md) §7.5:
-> the shared snippets, the chapter template, and the live dashboards. Chapters share the same
-> frontmatter schema, so the dashboards resolve without special-casing any topic.
+> **What this folder is.** The human-facing half of the Obsidian harness, per
+> [`docs/obsidian-plugin-workflow.md`](../docs/obsidian-plugin-workflow.md) §7.5: the live
+> dashboards, the chapter template and the LaTeX Suite snippet set. The machine half — Obsidian's
+> own settings, the enabled-plugin list, every plugin's configuration and the CSS snippet — is the
+> hidden **`.obsidian/`** directory at the repository root, and it is committed on purpose so the
+> vault opens configured.
 >
-> **Open this vault** by pointing Obsidian at the repository root (`Physics_JEEAD-OLYMPIAD_notes`).
-> The chapter notes are the `*/X.md` files at the top level; this folder only holds the
-> authoring harness and the live views. Folders are backed by Dataview (Tier 1).
+> **Open this vault** by pointing Obsidian at the repository root (*Open folder as vault* →
+> `Physics_JEEAD-OLYMPIAD_notes`). When it asks, choose **Trust author and enable plugins**. The
+> chapter notes are the `<topic>/<Title>.md` files; the five Cengage PDFs open in Obsidian's own PDF
+> viewer, so "sweep the book" (plan.md §1.12) happens without leaving the vault.
 
-## Reading order (canonical spine)
+## Reading order
 
-| # | chapter | part | file | status |
-|---:|---|---|---|---|
-| 1 | String Waves | 1 | [`string-waves/String-waves.md`](../string-waves/String-waves.md) | complete |
-| 2 | Sound Waves & Doppler | 2 | [`sound-waves/Sound-waves.md`](../sound-waves/Sound-waves.md) | complete |
-| 3 | Electromagnetic Waves | 3 | [`electromagnetic-waves/Electromagnetic-waves.md`](../electromagnetic-waves/Electromagnetic-waves.md) | complete |
-| 4 | Wave Optics | 4 | [`wave-optics/Wave-optics.md`](../wave-optics/Wave-optics.md) | complete |
-| 5 | Thermodynamics | 5 | [`thermodynamics/Thermodynamics.md`](../thermodynamics/Thermodynamics.md) | complete |
-| 6 | Heat | 6 | [`heat/Heat.md`](../heat/Heat.md) | complete |
-| 7 | Capacitors | 7 | [`capacitors/Capacitors.md`](../capacitors/Capacitors.md) | complete |
-| 8 | Current Electricity | 8 | [`current-electricity/Current-electricity.md`](../current-electricity/Current-electricity.md) | complete |
-| 9 | Geometrical Optics | 9 | [`geometrical-optics/Geometrical-optics.md`](../geometrical-optics/Geometrical-optics.md) | complete |
-
-*The wave spine (parts 1–4) precedes the thermal/material spine (parts 5–8); both feed
-geometrical optics (part 9), per `CURRICULUM.md`. The mechanics (parts 1–10 per `plan.md`) and
-modern-physics (parts 23–28) chapters are listed by part in the dashboards below.*
+The course spine — mechanics → waves → thermal → electricity & magnetism → EM waves → optics →
+modern — is **[dashboards/spine.md](dashboards/spine.md)**. Every chapter's frontmatter carries its
+slot as `order:` (1–31) and its syllabus `block:`; the Dataview tables sort on those, and
+`tools/check_all.py` keeps them equal to `topics.json`.
 
 ## Dashboards
 
 | view | file | what it shows |
 |---|---|---|
-| Master index | [dashboards/README.md](dashboards/README.md) | every chapter by part, status, links, paper endpoint |
-| Reading spine | [dashboards/spine.md](dashboards/spine.md) | the canonical cross-topic order |
-| Task queue | [dashboards/tasks.md](dashboards/tasks.md) | live mirror of plan/PENDING work |
+| Reading spine | [dashboards/spine.md](dashboards/spine.md) | the 31-slot course order with the one-line reason for each position |
+| Library | [dashboards/README.md](dashboards/README.md) | every chapter by order and by block, self-clearing "missing properties" list |
+| Pending chapters | [dashboards/pending.md](dashboards/pending.md) | the delivery record of the E&M block (nothing unwritten), batches, definition of done |
+| Task queue | [dashboards/tasks.md](dashboards/tasks.md) | checkbox mirror of plan/PENDING + every open task in the vault |
 
 ## Authoring harness
 
 | file | consumed by | purpose |
 |---|---|---|
-| [templates/chapter.md](templates/chapter.md) | Templater | the full 15-block skeleton for a new chapter |
-| [latex-suite/snippets.md](latex-suite/snippets.md) | LaTeX Suite | curated `$…$`/`$$…$$` shorthand |
+| [templates/chapter.md](templates/chapter.md) | Templater (folder is pre-configured) | the full 15-block skeleton for a new chapter — *Templater: Insert template* |
+| [latex-suite/snippets.js](latex-suite/snippets.js) · [latex-suite/README.md](latex-suite/README.md) | LaTeX Suite (path is pre-configured) | default snippet set + the vault's physics shorthands and callout skeletons |
+| `excalidraw/` (created on first drawing) | Excalidraw | scratch drawings; export the finished figure as SVG into `<topic>/assets/figures/` |
 
-Load the snippet file once in **LaTeX Suite → Settings → "Load snippets from file or folder"** and
-set **Templater → template folder** to `_obsidian/templates`. Plugin list and setup order are in
-[`docs/obsidian-plugin-workflow.md`](../docs/obsidian-plugin-workflow.md) §4 and §9.3.
+## The `.obsidian/` configuration (committed)
+
+| file | what it sets |
+|---|---|
+| `app.json` | reading mode by default, readable line length, Markdown links (relative), attachments to `./assets/figures`, unsupported files hidden, `docs/site/`, `_templates/`, `tools/` excluded from search and graph |
+| `appearance.json` | system light/dark, base font 16, CSS snippet `physics-notes` enabled |
+| `core-plugins.json` | outline, backlinks, tags, properties, canvas, bookmarks, word count, file recovery on; daily notes, slides, sync, publish off |
+| `community-plugins.json` | the eight plugins below, enabled |
+| `plugins/<id>/data.json` | each plugin's settings, already pointed at this vault's files |
+| `plugins.lock.json` | the pinned plugin versions read by `tools/obsidian_plugins.py` |
+| `snippets/physics-notes.css` | wider maths column, framed Mermaid figures, dashed `DIAGRAM` slots, styled `<details>` solutions, scrollable tables and display maths, print rules |
+
+Per-device state (`workspace.json`, `workspace-mobile.json`, `cache`) is git-ignored.
+
+### Plugins
+
+| plugin | id · pinned | tier | role in this vault |
+|---|---|:-:|---|
+| **Dataview** | `dataview` · 0.5.70 | 1 | the dashboards above; frontmatter is the vault's metadata. DataviewJS is off (nothing needs it) |
+| **Templater** | `templater-obsidian` · 2.25.1 | 1 | template folder = `_obsidian/templates` |
+| **LaTeX Suite** | `obsidian-latex-suite` · 1.13.3 | 1 | snippets from `_obsidian/latex-suite/snippets.js`; auto-fraction, matrix shortcuts, tab-out, conceal, bracket colouring |
+| **Git** | `obsidian-git` · 2.40.0 | 1 | source-control pane, history, blame; **auto-commit 15 min after the last edit, no auto-push** — push is an explicit command (*Git: Push*); pulls on start |
+| **Advanced Tables** | `table-editor-obsidian` · 0.23.2 | 4 | aligned pipe tables, `Tab`/`Enter` cell navigation, sort, CSV export |
+| **Spaced Repetition** | `obsidian-spaced-repetition` · 1.15.4 | 1 | `==cloze==` and `::` cards — **opt-in per note**: add `#flashcards` to a note's tags and its boxed results become a deck (nothing is scanned otherwise) |
+| **Tasks** | `obsidian-tasks-plugin` · 8.4.0 | 4 | the pending queue and Part 14 checkpoints as live task lists; no global filter |
+| **Excalidraw** | `obsidian-excalidraw-plugin` · 2.27.3 | 2 | hand-drawn diagrams (ray diagrams, free-body diagrams, circuits); drawings live in `_obsidian/excalidraw/`, the committed figure is the exported **SVG** |
+
+Mermaid (the figure system of plan.md §1.2), Canvas, checklists, properties and the PDF viewer are
+**core Obsidian** — nothing to install.
+
+### Finishing the install (one command, once)
+
+Obsidian does not download plugins from a config list; the plugin files are GitHub release
+artefacts. From the repository root, on a machine with internet:
+
+```bash
+python3 tools/obsidian_plugins.py            # fetches main.js / manifest.json / styles.css at the pinned versions
+python3 tools/obsidian_plugins.py --check    # shows what is installed
+git add .obsidian/plugins && git commit -m "vault: vendor the pinned Obsidian plugins"
+```
+
+That commit is what makes the vault work "out of the box" for every later clone. Without it, the
+same result comes from Obsidian's own *Settings → Community plugins → Browse* for the eight ids
+above — the committed `data.json` settings are picked up either way. `--latest` re-pins to the
+newest releases and updates `plugins.lock.json`.
+
+### Vault conventions the plugins rely on
+
+- Chapters are written for **reading mode**: YAML frontmatter, the eight callout roles, `$…$` /
+  `$$…$$`, `<details>` solutions with blank lines inside, `> [!tip] FIGURE` + ` ```mermaid `,
+  `> [!abstract] DIAGRAM` briefs. HTML beyond `<details>/<summary>/<br>` is banned
+  (docs/obsidian-plugin-workflow.md §3).
+- Links are standard Markdown links (relative paths), so the same files render on GitHub.
+- New attachments land in `./assets/figures` next to the note (app setting) — only SVG is committed.
+- Dataview lives in this folder's dashboards, never inside a chapter.

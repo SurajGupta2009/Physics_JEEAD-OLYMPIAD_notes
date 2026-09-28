@@ -1,0 +1,53 @@
+{
+  "_comment": "Pinned Obsidian community plugins. Install/refresh with: python3 tools/obsidian_plugins.py  (add --latest to re-pin). Folder name == plugin id == manifest.json id.",
+  "plugins": {
+    "dataview": {
+      "repo": "blacksmithgu/obsidian-dataview",
+      "version": "0.5.70",
+      "tier": 1,
+      "why": "frontmatter -> live dashboards in _obsidian/dashboards/"
+    },
+    "templater-obsidian": {
+      "repo": "SilentVoid13/Templater",
+      "version": "2.25.1",
+      "tier": 1,
+      "why": "the 15-block chapter skeleton (_obsidian/templates/chapter.md)"
+    },
+    "obsidian-latex-suite": {
+      "repo": "artisticat1/obsidian-latex-suite",
+      "version": "1.13.3",
+      "tier": 1,
+      "why": "fast LaTeX: snippets, auto-fractions, matrix shortcuts, tab-out (_obsidian/latex-suite/snippets.js)"
+    },
+    "obsidian-git": {
+      "repo": "Vinzent03/obsidian-git",
+      "version": "2.40.0",
+      "tier": 1,
+      "why": "commit / pull / push from inside the vault; auto-commit timer"
+    },
+    "table-editor-obsidian": {
+      "repo": "tgrosinger/advanced-tables-obsidian",
+      "version": "0.23.2",
+      "tier": 4,
+      "why": "aligned pipe tables, Tab/Enter navigation, sort, formulas"
+    },
+    "obsidian-spaced-repetition": {
+      "repo": "st3v3nmw/obsidian-spaced-repetition",
+      "version": "1.15.4",
+      "tier": 1,
+      "why": "==cloze== and :: flashcards for boxed results and traps (opt-in per note with #flashcards)"
+    },
+    "obsidian-tasks-plugin": {
+      "repo": "obsidian-tasks-group/obsidian-tasks",
+      "version": "8.4.0",
+      "tier": 4,
+      "why": "the pending-chapter queue and Part 14 checkpoints as live task lists"
+    },
+    "obsidian-excalidraw-plugin": {
+      "repo": "zsviczian/obsidian-excalidraw-plugin",
+      "version": "2.27.3",
+      "tier": 2,
+      "why": "hand-drawn physics diagrams (ray diagrams, FBDs, circuits) exported as SVG into assets/figures/"
+    }
+  }
+}

@@ -2,6 +2,8 @@
 title: Elasticity & Properties of Matter
 part: 12
 slug: elasticity
+order: 12
+block: mechanics
 source: Cengage MECHANICS 2-compressed.pdf, ch 4 Properties of Solids and Fluids — elasticity half (pp. 4.1-4.19)
 aliases: [elasticity, stress strain, youngs modulus, hooke, bending, torsion]
 tags: [jee-advanced, olympiad, mechanics, elasticity]

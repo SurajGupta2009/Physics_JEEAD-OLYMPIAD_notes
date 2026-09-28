@@ -1,6 +1,6 @@
 # Curriculum map: Cengage floor → JEE → Olympiad
 
-This repository has two generations of notes. The nine note-sets in the table below were the original courses: seven have Markdown and interactive HTML editions; String Waves and Electromagnetic Waves are Markdown-first. Parts 1–12 and 23–28 of [plan.md](plan.md) are a second generation, text-only and Obsidian-first, with `DIAGRAM` briefs instead of image files. The table is the original wave-first spine. If you are starting from mechanics rather than from waves, read plan.md PART 1–12 in order — that sequence is now complete, and it is tabulated at the end of this file.
+This repository has two generations of notes. The nine note-sets in the table below were the original courses: seven have Markdown and interactive HTML editions; String Waves and Electromagnetic Waves are Markdown-first. Parts 1–12 and 23–28 of [plan.md](plan.md) are a second generation, text-only and Obsidian-first, with Mermaid `FIGURE` callouts and `DIAGRAM` briefs instead of image files. The table immediately below is the original **wave-first spine** — the order in which the first nine notes were written, and still the right order *within* the wave/optics material. **The order to study the whole vault is the course spine in [§ The course order](#the-course-order-all-38-slots) at the end of this file** — mechanics first, then waves and thermal physics, then electricity and magnetism, then EM waves and optics, then modern physics. Every chapter carries that slot in its frontmatter as `order:`.
 
 - the `*.md` files are the portable editions, with standard Markdown, `$...$` / `$$...$$` math, collapsible solutions and local SVG diagrams;
 - the `*.html` files are the optional interactive editions, retained for the generated table of contents, progress ticks, theme switch and printing.
@@ -57,6 +57,9 @@ The four notes that correspond directly to the supplied Cengage volumes carry th
 
 | Cengage floor | Markdown location | status |
 |---|---|---|
+| Coulomb's Laws and Electric Field, chapter 1: charge, Coulomb, superposition, field of ring/line/disc/sheets, dipole, dipole in a field | [Electrostatics.md — coverage map and §3.1–§3.13](electrostatics/Electrostatics.md) | derived, most results twice (integration and Gauss; vector sum and potential) |
+| Electric Flux and Gauss's Law, chapter 2: flux, the law, spherical/cylindrical/planar symmetry, conductors, solid angle | [Electrostatics.md — §3.14–§3.24](electrostatics/Electrostatics.md) | solid-angle proof precedes the law; cavities, slab, flux-without-the-field family |
+| Electric Potential, chapter 3: potential and energy, equipotentials, `E` from `V`, potentials of distributions, dipole, dipole energy | [Electrostatics.md — §3.25–§3.37](electrostatics/Electrostatics.md) | conservative-field proof first; the half-factor derived; conductors, sharing, field energy |
 | Capacitor and Capacitance, chapter 4: definition, units, parallel plate, sphere, spherical/cylindrical capacitors, energy and energy density | [Capacitors.md — Cengage coverage map](capacitors/Capacitors.md#cengage-coverage) and parts 1–3 | derived, with limit checks |
 | Combinations, capacitor Kirchhoff/sign convention, bridges, cube, ladders and redistribution | [Capacitors.md — part 4](capacitors/Capacitors.md#section-04-combinations) | derived before problems |
 | Dielectric constant, polarisation, bound charge, `D`, breakdown, force and parameter changes | [Capacitors.md — part 5](capacitors/Capacitors.md#section-05-dielectrics) | battery-connected and isolated cases both explicit |
@@ -103,6 +106,14 @@ The level tags are not a second disconnected syllabus. They mark the point at wh
 
 Every topic records its exclusions in `topics.json` and its own `README.md`; “covered through Olympiad” therefore means the complete stated scope, not an unbounded claim that every university topic is present. The main omissions are quantum optics, numerical simulation, advanced convection correlations and formal statistical-mechanics ensembles, named so the reader knows what to study next. One item that used to sit on that list is now a hand-off rather than a gap: the Maxwell-equation derivation of the Fresnel coefficients, which wave optics states without deriving, is the electromagnetic-waves note's own deliverable (see the wave-sequence section above).
 
+### Final recheck (2026-09-28)
+
+Every registered chapter was re-read against the three-level contract and the repository gate before the pull request:
+
+- **Basics → JEE Advanced → Olympiad, in that order, in every chapter.** The 21 plan.md-generation chapters carry the 15-block spine (Parts 0–2 basics, Part 3 derivations, Parts 4–9 JEE craft, Parts 10–11 the Olympiad layer and paper, Parts 12–14 apparatus) and pass their local gates at the full contract: concept checks ≥ 12, exemplars ≥ 10, practice ≥ 25, Olympiad problems ≥ 10, a 36-question / 200-mark paper, ≥ 6 rendered figures. The nine original note-sets keep their own structure (plan.md Appendix A) and each ends in an Olympiad section and a full paper (string waves 144 marks, sound 150, thermodynamics 245, capacitors 245, current electricity 245, geometrical optics 143, wave optics 143, EM waves 180) or, for `heat`, the ten-problem written gauntlet.
+- **Syllabus sweep.** A keyword sweep of 124 JEE Advanced syllabus items (general physics and experiments, mechanics, fluids and elasticity, waves, thermal, electrostatics and circuits, magnetism and induction, EM waves and optics, modern physics) finds every item in at least one master file.
+- **Gate.** `python3 tools/check_all.py` is green for all 31 topics; the registry, the frontmatter `order`/`block` of every master and the 31-slot spine agree.
+
 ## Markdown conversion contract
 
 Each converted note has:
@@ -118,3 +129,68 @@ Regenerate all six with:
 ```bash
 python3 tools/html_to_markdown.py
 ```
+
+## The course order (all 31 slots)
+
+The way the syllabus is taught, and the order the Obsidian dashboards use
+([`_obsidian/dashboards/spine.md`](_obsidian/dashboards/spine.md)): every chapter relies only on the
+ones above it. The `order` is registered in `topics.json` and written into each chapter's
+frontmatter; `tools/check_all.py` keeps the two equal. Slots 17, 20 and 21 are the three merged
+Electricity & Magnetism modules — electrostatics (plan.md PARTs 13–15, complete), magnetism (PARTs
+16–19, complete) and induction–inductance–AC (PARTs 20–22, complete). Nothing is pending: every plan.md part is
+written ([PENDING.md](PENDING.md)).
+
+| order | chapter | block | plan.md PART | status | it supplies the next chapters with |
+|:-:|---|---|:-:|:-:|---|
+| 1 | [Units, dimensions & errors](units-measurements/Units-measurements.md) | mechanics | 1 | ✅ | SI, dimensional analysis, error propagation |
+| 2 | [Vectors](vectors/Vectors.md) | mechanics | 2 | ✅ | components, dot and cross products |
+| 3 | [Kinematics in 1-D](kinematics-1d/Kinematics-1d.md) | mechanics | 3 | ✅ | $x(t)$, slopes and areas, $v\,dv/dx$ |
+| 4 | [Motion in 2-D](motion-in-two-dimensions/Motion-in-two-dimensions.md) | mechanics | 4 | ✅ | projectiles, relative velocity, circular kinematics |
+| 5 | [Newton's laws & friction](newtons-laws/Newtons-laws.md) | mechanics | 5 | ✅ | free-body diagrams, constraints, pseudo-forces |
+| 6 | [Work, energy & power](work-energy-power/Work-energy-power.md) | mechanics | 6 | ✅ | conservative forces, potential-energy curves |
+| 7 | [Centre of mass, momentum & collisions](centre-of-mass-momentum/Centre-of-mass-momentum.md) | mechanics | 7 | ✅ | systems of particles, impulse |
+| 8 | [Rotational mechanics](rotational-mechanics/Rotational-mechanics.md) | mechanics | 8 | ✅ | torque, $I$, angular momentum, rolling |
+| 9 | [Gravitation](gravitation/Gravitation.md) | mechanics | 9 | ✅ | the first field, shell theorem, orbits |
+| 10 | [Simple harmonic motion](simple-harmonic-motion/Simple-harmonic-motion.md) | mechanics | 10 | ✅ | the oscillator every wave is built from; phasors; resonance |
+| 11 | [Fluid mechanics & surface tension](fluid-mechanics/Fluid-mechanics.md) | mechanics | 11 | ✅ | pressure, buoyancy, Bernoulli, viscosity |
+| 12 | [Elasticity & properties of matter](elasticity/Elasticity.md) | mechanics | 12 | ✅ | $Y$, $B$, $G$ — the restoring constants of waves |
+| 13 | [String waves](string-waves/String-waves.md) | waves | — | ✅ | the wave equation, $v=\sqrt{T/\mu}$, reflection phase, standing waves |
+| 14 | [Sound waves](sound-waves/Sound-waves.md) | waves | — | ✅ | intensity as energy flux, pipes, beats, Doppler |
+| 15 | [Thermodynamics](thermodynamics/Thermodynamics.md) | thermal | — | ✅ | kinetic theory, the two laws, $\gamma$, entropy |
+| 16 | [Heat](heat/Heat.md) | thermal | — | ✅ | expansion, calorimetry, conduction / convection / radiation |
+| 17 | [Electrostatics](electrostatics/Electrostatics.md) | electricity-magnetism | 13–15 | ✅ | charge and Coulomb, the field of any distribution, Gauss, potential, energy of charges, conductors |
+| 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
+| 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
+| 20 | [Magnetism](magnetism/Magnetism.md) | electricity-magnetism | 16–19 | ✅ | the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, matter, the Earth |
+| 21 | [Induction, inductance & AC](emi-ac/Emi-ac.md) | electricity-magnetism | 20–22 | ✅ | Faraday and Lenz, the rod family, induced fields, eddy currents, inductance and RL/LC, AC through R L C, resonance, power, transformers, rectifiers |
+| 22 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
+| 23 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
+| 24 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |
+| 25 | [Photoelectric effect & matter waves](photoelectric-effect/Photoelectric-effect.md) | modern | 23 | ✅ | photons, de Broglie |
+| 26 | [Atomic structure](atomic-structure/Atomic-structure.md) | modern | 24 | ✅ | Rutherford, Bohr, spectra |
+| 27 | [X-rays](x-rays/X-rays.md) | modern | 25 | ✅ | Moseley, Bragg, Compton |
+| 28 | [Nuclear physics](nuclear-physics/Nuclear-physics.md) | modern | 26 | ✅ | binding energy, radioactivity, fission and fusion |
+| 29 | [Semiconductors](semiconductors/Semiconductors.md) | modern | 27 | ✅ | bands, diodes, transistors, logic |
+| 30 | [Communication systems](communication-systems/Communication-systems.md) | modern | appendix | ✅ | modulation, bandwidth, propagation (JEE-Main depth) |
+| 31 | [Special relativity](special-relativity/Special-relativity.md) | modern | 28 | ✅ | Lorentz transformations, $E=mc^2$, relativistic dynamics |
+
+### Why this order
+
+- **Mechanics first, in plan.md order.** Each part is the tool the next one uses: kinematics gives
+  Newton's laws something to describe; energy and momentum are the two integrals of $F=ma$;
+  rotation is the same laws for extended bodies; gravitation is the first field; SHM is the
+  small-oscillation limit of everything before it; fluids and elasticity apply Newton to a
+  continuum and supply the moduli that waves need.
+- **Waves right after SHM and elasticity**, because a wave is SHM propagated through a medium and
+  its speed is $\sqrt{\text{restoring modulus}/\text{inertia}}$ — $T/\mu$ for a string, $B/\rho$ for
+  sound.
+- **Thermodynamics before heat** (see the section above): heat uses $U$, $Q$, $W$ and the first-law
+  ledger as established tools; thermodynamics also supplies the $\gamma$ in Laplace's speed of sound.
+- **Electrostatics as one module in the order field → flux → potential**, then the two shipped circuit chapters
+  (capacitors need potential and Gauss; current needs potential difference), then magnetism as one module in the
+  order force → motion → sources → Ampère → forces and dipoles → matter → Earth, then induction →
+  inductance → AC as one module and one continuous argument (plan.md §0.4).
+- **EM waves after AC**: Maxwell's displacement current completes Ampère's law, and the LC
+  oscillator of the AC chapter is the radiating source. Geometrical optics is the short-wavelength
+  limit; wave optics puts the wavelength back and needs the string, sound and EM-wave notes.
+- **Modern physics last**, in plan.md order, with special relativity as the Olympiad capstone.

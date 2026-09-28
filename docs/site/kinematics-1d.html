@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="active">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="active">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -31,7 +31,7 @@
 <li><a href="#part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</a></li>
 </ul></details></aside>
   <main class="page">
-<p class="props"><span class="prop"><b>part</b> 3</span><span class="prop"><b>slug</b> kinematics-1d</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">kinematics</span><span class="prop tag">one-dimension</span></p>
+<p class="props"><span class="prop"><b>part</b> 3</span><span class="prop"><b>slug</b> kinematics-1d</span><span class="prop"><b>order</b> 3</span><span class="prop"><b>block</b> mechanics</span><span class="prop"><b>source</b> Cengage Mechanics I-compressed.pdf, ch 4 Motion in One Dimension</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">mechanics</span><span class="prop tag">kinematics</span><span class="prop tag">one-dimension</span></p>
 
 <h1 id="kinematics-in-one-dimension-first-principles-to-olympiad">Kinematics in One Dimension — first principles to Olympiad</h1>
 <div class="callout abstract">
@@ -134,11 +134,49 @@
 </tr>
 </tbody>
 </table>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.1 · Chapter map</p>
+<p><em>Why:</em> the chapter is one function $x(t)$; this map shows the single spine the parts hang off.
+<em>Data:</em> the part structure of the chapter (Part 0–14).</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((&quot;x(t)&quot;))
+    Slope = velocity
+    Slope of v = acceleration
+    Constant-acceleration
+    Free fall
+    Variable acceleration
+    Relative motion
+    Piecewise
+    Olympiad
+</code></pre>
+<blockquote>
+<p><em>Read:</em> every tool in this chapter is the slope or the area of one function.</p>
+</blockquote>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <p><strong>Position is a function of time.</strong> A particle on the $x$-axis has position $x(t)$ at time $t$. The function $x(t)$ contains all the information about the motion — velocity and acceleration are derived from it by differentiation.</p>
 <p><strong>Displacement is not distance.</strong> If you walk 3 m east and then 3 m west, your displacement is zero but your distance is 6 m. Displacement is the net change in position: $\Delta x=x_f-x_i$. Distance is the total path length: $d=\int|v|\,dt$.</p>
 <p><strong>Velocity is the slope of $x(t)$; acceleration is the slope of $v(t)$.</strong> $v=dx/dt$ tells you how fast the position is changing. $a=dv/dt$ tells you how fast the velocity is changing. Conversely, $v=\int a\,dt$ and $x=\int v\,dt$ — velocity is the area under the $a$–$t$ graph; position is the area under the $v$–$t$ graph.</p>
 <p><strong>Negative acceleration does not mean deceleration.</strong> If you define "positive" as rightward, then a leftward acceleration is negative. If the particle is moving leftward, a leftward acceleration is actually speeding it up (deceleration is when $a$ and $v$ have opposite signs).</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.2 · The four sign quadrants of motion</p>
+<p><em>Why:</em> "negative" is a label on a chosen axis, not a statement about speeding up; the quadrant picture kills that trap before it forms.
+<em>Data:</em> the four sign combinations of velocity and acceleration.</p>
+</div>
+
+<pre><code class="language-mermaid">quadrantChart
+  title &quot;Speed: increases or decreases?&quot;
+  x-axis &quot;v negative&quot; --&gt; &quot;v positive&quot;
+  y-axis &quot;a negative&quot; --&gt; &quot;a positive&quot;
+  quadrant-1 &quot;speeding up rightward&quot;
+  quadrant-2 &quot;slowing down leftward&quot;
+  quadrant-3 &quot;speeding up leftward&quot;
+  quadrant-4 &quot;slowing down rightward&quot;
+</code></pre>
+<blockquote>
+<p><em>Read:</em> same signs of $v$ and $a$ mean speeding up; opposite signs mean slowing down — regardless of which way is called "positive".</p>
+</blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
 <table>
 <thead>
@@ -270,12 +308,22 @@ $$</p>
 - Area under the curve = change in velocity ($\Delta v=\int a\,dt$).
 - A horizontal line: constant acceleration.
 - The $a$–$t$ graph is the least informative of the three (it tells you about changes in velocity, not position).</p>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D3.4 · Reading the $v$–$t$ graph for displacement</p>
-<p><em>Show:</em> a $v$–$t$ graph where $v$ starts positive, crosses zero, and becomes negative. The area above the $t$-axis (positive displacement) and below the $t$-axis (negative displacement) are shaded differently. The net displacement is the algebraic sum; the total distance is the sum of the absolute areas.
-<em>Search:</em> "v-t graph area displacement distance positive negative diagram"</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.3 · Area under the $v$–$t$ graph is displacement</p>
+<p><em>Why:</em> the area picture is the whole "graphs are calculators" toolkit, and the sign of the area is where examiners set traps.
+<em>Data:</em> $v(t)=10-5t$ m/s on $t\in[0,4]$ s — velocity crosses zero at $t=2$ s.</p>
 </div>
 
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;v(t) = 10 - 5t : area above v=0 is positive displacement&quot;
+  x-axis 0 --&gt; 4
+  y-axis -10 --&gt; 10
+  line [10, 5, 0, -5, -10]
+  line [0, 0]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> net displacement is the signed total (areas above minus areas below); total distance is the unsigned total — they coincide only while the velocity keeps one sign.</p>
+</blockquote>
 <h3 id="36-the-constant-acceleration-equations">3.6 The constant-acceleration equations</h3>
 <p>For constant $a$ (and only for constant $a$), integration gives:</p>
 <p>$$
@@ -320,12 +368,22 @@ $$</p>
 <li>Time of flight (back to launch level): $T=2v_0/g$.</li>
 <li>Speed on return to launch level: $v=v_0$ (same speed, opposite direction — by symmetry).</li>
 </ul>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D3.6 · Free-fall: the $v$–$t$ graph for an upward throw</p>
-<p><em>Show:</em> a $v$–$t$ graph for a ball thrown upward with speed $v_0$. The line starts at $v_0$ (positive), crosses zero at $t=v_0/g$ (the peak), and reaches $-v_0$ at $t=2v_0/g$ (return). The slope is $-g$ throughout. The area above the axis (upward trip) equals the area below (downward trip) — equal times.
-<em>Search:</em> "free fall v-t graph upward throw velocity time diagram"</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.4 · Free-fall $v$–$t$ graph for an upward throw</p>
+<p><em>Why:</em> one straight line with slope $-g$ holds the whole throw — peak, symmetry, and return speed are slope-and-area facts, not separate formulas.
+<em>Data:</em> $v(t)=20-10t$ m/s ($v_0=20$ m/s, $g=10$ m/s²) on $t\in[0,4]$ s.</p>
 </div>
 
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;v(t) = 20 - 10t : upward throw, peak at t = 2 s&quot;
+  x-axis 0 --&gt; 4
+  y-axis -20 --&gt; 20
+  line [20, 10, 0, -10, -20]
+  line [0, 0]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the slope is $-g$ throughout; the zero crossing is the peak ($t=v_0/g$); the return speed at $t=2v_0/g$ is $-v_0$ — the same speed, opposite direction.</p>
+</blockquote>
 <h3 id="38-variable-acceleration">3.8 Variable acceleration</h3>
 <p>When $a$ is not constant, the constant-acceleration equations do not apply. You must integrate:</p>
 <p><strong>Case 1: $a=f(t)$.</strong> $v(t)=\int a(t)\,dt+C_1$, $x(t)=\int v(t)\,dt+C_2$.</p>
@@ -366,12 +424,22 @@ $$</p>
 <em>Search:</em> "relative velocity two particles approaching closing speed diagram"</p>
 </div>
 
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D3.12 · Variable acceleration: $v$ vs $x$ for $a=-kx$</p>
-<p><em>Show:</em> a $v$–$x$ phase-space plot for $v^2=v_0^2-kx^2$ (an ellipse). The particle oscillates between $x=-v_0/\sqrt{k}$ and $x=+v_0/\sqrt{k}$. The maximum speed $v_0$ at $x=0$ annotated. The area inside the ellipse related to the total distance (not displacement) per cycle.
-<em>Search:</em> "v versus x phase space plot simple harmonic motion ellipse"</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.5 · Phase-space ellipse for $a=-kx$</p>
+<p><em>Why:</em> the $v$–$x$ loop shows boundedness and turning points at a glance — the fastest way to read a variable-acceleration solution.
+<em>Data:</em> $v^2=v_0^2-kx^2$ with $v_0=4$ m/s, $k=4$ s⁻² (upper half $v(x)=\sqrt{16-4x^2}$) on $x\in[-2,2]$ m.</p>
 </div>
 
+<pre><code class="language-mermaid">xychart-beta
+  title &quot;v(x) = sqrt(16 - 4x^2) : upper half of the phase ellipse&quot;
+  x-axis -2 --&gt; 2
+  y-axis 0 --&gt; 4
+  line [0, 3.464, 4, 3.464, 0]
+  line [0, 0]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the turning points $x=\pm v_0/\sqrt{k}$ sit where $v=0$; the speed peaks at $v_0$ at the centre $x=0$ — the motion is confined to the ellipse.</p>
+</blockquote>
 <h3 id="310-piecewise-kinematics">3.10 Piecewise kinematics</h3>
 <p>Many real problems have different accelerations in different time intervals (e.g., a car accelerating, then moving at constant speed, then braking). The method:</p>
 <ol>
@@ -902,6 +970,22 @@ $$</p>
 
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F3.6 · Triage — route by what is given</p>
+<p><em>Why:</em> the triage list is a decision tree; the flowchart makes the first discriminating question and its branches visible at a glance.
+<em>Data:</em> the triage branches of §9.1.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A{&quot;Is the acceleration constant?&quot;} --&gt;|&quot;yes&quot;| B[&quot;constant-acceleration equations&quot;]
+  A --&gt;|&quot;no: a(t)&quot;| C[&quot;integrate a, then v&quot;]
+  A --&gt;|&quot;no: a(x)&quot;| D[&quot;v dv/dx method&quot;]
+  B --&gt; F[&quot;free fall if a = -g&quot;]
+  D --&gt; G[&quot;an ellipse in the v-x plane&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the first question names the tool; the rest is execution.</p>
+</blockquote>
 <ul>
 <li>"Constant acceleration": use Eqs. (4.1).</li>
 <li>"Variable $a(t)$": integrate $a$ to get $v$, $v$ to get $x$.</li>

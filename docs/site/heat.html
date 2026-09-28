@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="active">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="active">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -24,10 +24,30 @@
 <li><a href="#the-gauntlet-ten-written-problems-solved-line-by-line">The gauntlet: ten written problems, solved line by line</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 6</span><span class="prop"><b>slug</b> heat</span><span class="prop"><b>order</b> 16</span><span class="prop"><b>block</b> thermal</span><span class="prop"><b>source</b> Cengage Waves and Thermodynamics-compressed.pdf, thermal-properties chapters</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">thermal</span><span class="prop tag">heat-transfer</span></p>
+
 <h1 id="heat-from-first-principles-to-olympiad-in-one-expandable-map">Heat — from first principles to Olympiad, in one expandable map</h1>
 <p>Thermal physics has a second ledger besides the energy accounts: the <em>transport</em> ledger — how energy moves through matter as heat, and how matter resists the trip. This page is the whole course in one file: seven theory chapters and a written gauntlet, from “what is temperature for” to skin-depth cellars, effusivity, and the critical radius of insulation. It needs no internet, no MathJax, no build step — and nothing of it lives on another page.</p>
 <p>Prerequisite etiquette: the quantities $U$, $Q$, $W$ and the first law are built properly in the thermodynamics set (ch 3); here they are assumed and spent. Temperature scales and expansion’s metrology likewise lean on the thermodynamics set’s ch 1 where noted — but nothing is quoted from there without being re-derived or recounted if it carries marks.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.1 · Chapter map: the transport ledger</p>
+<p><em>Why:</em> the topic is one extra ledger on top of the energy accounts — how heat <em>moves</em> and what resists it; the map pins the 8 chapters to that spine.
+<em>Data:</em> ch 1 vocabulary (T, Q, U) → ch 2 expansion → ch 3 calorimetry → ch 4 conduction → ch 5 convection → ch 6 radiation → ch 7 Olympiad toolkit → ch 8 gauntlet.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((heat))
+    Vocabulary
+    Expansion
+    Calorimetry
+    Conduction
+    Convection
+    Radiation
+    Toolkit
+    Gauntlet
+</code></pre>
 <blockquote>
+<p><em>Read:</em> chapters 3–4 are the money (budget lines and resistor sums); 5–6 are the two film stories; 7 is the Olympiad floor.</p>
 <p><strong>How to study this map</strong></p>
 <p>Chapters <strong>1–2</strong> fix the vocabulary and the geometry of expansion — both are quick reads if you already trust the first law. Chapters <strong>3–4</strong> are the money: calorimetry’s plateau arithmetic and conduction’s resistor networks; every mixture or wall problem is a budget line and a sum of $R$’s. Chapters <strong>5–6</strong> carry the two “film” stories — convection as a thickness, radiation as a spectrum — and the cooling law that every practical exam tests. Chapter <strong>7</strong> is the Olympiad floor: diffusion time-scales, thermal waves, effusivity, fins. Chapter <strong>8</strong> is the gauntlet: ten written problems, graded solutions, and the trap shelf for the whole topic. Recompute every printed number with a pen at least once; they are all two-significant-figure doable.</p>
 <p><strong>The one-sentence syllabi</strong></p>
@@ -46,7 +66,19 @@
 <p><img alt="The money diagram: a body stores internal energy, not heat; heat and work are the two doors it enters through, and temperature is the pointer every thermometer reads." src="../../heat/assets/figures/fig-002.svg" /></p>
 <p><strong>Fig. 1.1 — heat, work, and what a body actually stores.</strong> The three words people mix up. A 1 kg block at 60 °C does not “contain heat” — it stores $U$; <em>heat</em> is the joules still crossing its surface. Two bodies at the same temperature can hold wildly different $U$: per kilogram, water over iron by a factor of about 4.5.</p>
 <h3 id="11-three-words-that-must-never-be-mixed-up">1.1 Three words that must never be mixed up</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.2 · Three words, one sign rule</p>
+<p><em>Why:</em> almost every “obvious” wrong answer in calorimetry is a slip between $T$, $Q$ and $U$; name which quantity a phrase refers to before counting joules.
+<em>Data:</em> $T$ = pointer (state); $Q$ = joules in transit (process); $U$ = balance (state); ΔU = Q − W_by with Q &gt; 0 in, W_by &gt; 0 out.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;three quantities&quot;] --&gt; B[&quot;T: the pointer reading (state)&quot;]
+  A --&gt; C[&quot;Q: joules in transit (process)&quot;]
+  A --&gt; D[&quot;U: the balance in the bank (state)&quot;]
+  C --&gt; E[&quot;first law: ΔU = Q - W_by&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> a body at 100 °C does not "contain heat" — it stores U; heat is a verb disguised as a noun.</p>
 <p><strong>The three quantities</strong></p>
 <p><strong>Temperature $T$</strong> is a state variable: a number a system has, defined operationally by “what two bodies agree on when they stop changing after contact” (the zeroth law; the full construction of scales, gas thermometers and the kelvin is in the thermodynamics notes, ch 1, and we will use that machinery without rebuilding it). <strong>Heat $Q$</strong> is energy <em>crossing a boundary</em> because of a temperature difference and nothing else — a process quantity, joules in transit, defined only for a complete process. <strong>Internal energy $U$</strong> is the balance: the total microscopic kinetic and potential energy of everything inside. It is a state function; heat and work are the only two doors it changes through:</p>
 <p>$$
@@ -373,7 +405,18 @@ $$</p>
 <p>Melting breaks the <em>order</em> of the lattice while leaving neighbours touching: about a tenth of the bond energy per molecule is spent. Boiling removes the neighbours: all of it (plus the $p\,\Delta V$ shove that pushes the atmosphere aside — for water at 100 °C that’s $R T = 3.1$ kJ/mol of the 40.7). The two numbers you should be able to quote for water without checking: $L_f = 334$ kJ/kg and $L_v = 2256$ kJ/kg — 6.8 K worth of boiling per 1 K of nothing.</p>
 </blockquote>
 <h3 id="33-the-final-state-algorithm-and-why-steam-beats-boiling-water">3.3 The final-state algorithm (and why steam beats boiling water)</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.3 · The final-state algorithm: budget before you solve</p>
+<p><em>Why:</em> mixing answers are decided by which side exhausts first; solving mcΔT before checking the plateau is the chapter's biggest mark-loss.
+<em>Data:</em> (1) budget both sides to the nearest plateau; (2) if supply &lt; demand, T_final = plateau T and the answer is a mass fraction; (3) only if both budgets clear, solve mcΔT legs for T.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;budget: hotter side's supply, colder side's demand&quot;] --&gt; B{&quot;supply &lt; demand?&quot;}
+  B -- yes --&gt; C[&quot;T_final = plateau T; answer = mass fraction on the plateau&quot;]
+  B -- no --&gt; D[&quot;subtract plateau costs, solve mcΔT legs for T_final&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> whichever plateau is still occupied sets the temperature — steam can't lift ice past 0 °C until it has melted 0.80 kg of it.</p>
 <p><strong>Three steps, never fewer</strong></p>
 <ol>
 <li><strong>Budget both sides to the nearest plateau.</strong> Hotter side: energy it can give up reaching its nearest
@@ -519,6 +562,18 @@ $$</p>
 <p>In steady conduction $\partial T/\partial t = 0$ everywhere — nothing warms any more — yet <em>heat is flowing at full rate</em>: each slice receives and sheds the same current, so its temperature stands still. Equilibrium is the special steady state with $\dot Q = 0$. Confusing the two produces the wrong “no flow because no warming” answer in composite-wall questions, and hides why an insulated water pipe left running in winter can freeze even though every point of the ice is at the same temperature.</p>
 </blockquote>
 <h3 id="42-worked-template-the-composite-wall">4.2 Worked template: the composite wall</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.4 · Conduction is a resistor network</p>
+<p><em>Why:</em> every wall, pipe and junction is Ohm's law for heat; drawing it as an R-chain turns interface-temperature and condensation questions into resistor arithmetic.
+<em>Data:</em> R = L/(kA); series adds R, parallel adds conductance; Q̇ = ΔT/R_total; each interface ΔT_i = Q̇ R_i; pipe R = ln(r₂/r₁)/(2πkL).</p>
+</div>
+<pre><code class="language-mermaid">flowchart LR
+  T0[&quot;inside 20 °C&quot;] --&gt; R1[&quot;film 0.10&quot;] --&gt; R2[&quot;insulation 1.25&quot;]
+  R2 --&gt; R3[&quot;brick 0.314&quot;] --&gt; R4[&quot;film 0.10&quot;] --&gt; T1[&quot;outside −10 °C&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> 50 mm of insulation resists four times more than 220 mm of brick — the log of a pipe is only a different R.</p>
+</blockquote>
 <p>A house wall: 220 mm brick ($k = 0.7$) lined with 50 mm insulation ($k = 0.04$), plus the two surface air films ($h = 10$ W/m²K each — ch 5; treated as fixed $R'' = 0.1$). Per square metre, inside 20 °C, outside −10 °C:</p>
 <p>$$
 R'' = \underbrace{0.10}<em>{\text{film}} + \underbrace{0.05/0.04 = 1.25}</em>{\text{insulation}} + \underbrace{0.22/0.7 = 0.314}<em>{\text{brick}} + \underbrace{0.10}</em>{\text{film}} = 1.764\ \text{m}^2\text{K/W}
@@ -655,6 +710,21 @@ $$</p>
 <p>Read $h = k_{\text{fluid}}/\delta$: the film conductance. The table of $h$ is a table of film thicknesses: natural convection in air 2–25 W/m²K (≈ a few mm of stagnant air — compare ch 4's R'' = 0.1 per film), forced air 25–250, water in motion 500–10 000, boiling 2 500–100 000 (the latent-heat pump of bubbles stirs at mm scale), condensing steam of course at the same high end. Two consequences worth saying out loud: <strong>h is a property of the situation, not of the solid</strong> (same plate, still air vs fan: factor 10), and <strong>blowing on soup is shrinking δ</strong>.</p>
 </blockquote>
 <h3 id="52-lumped-cooling-the-discharge-curve">5.2 Lumped cooling: the discharge curve</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.5 · Newton's law is an RC discharge</p>
+<p><em>Why:</em> Newton's cooling is Fourier through a film — one time constant; the discharge form answers every "time to reach T" and "read h from the curve" question.
+<em>Data:</em> T(t) − T∞ = (T₀ − T∞) e^(−t/τ), τ = mc/(hA) = R_th C_th, t_1/2 = 0.69 τ; the asymptote fixes T∞, the slope ratio fixes hA.</p>
+</div>
+<pre><code class="language-mermaid">flowchart LR
+  T0[&quot;hot body T₀&quot;] --&gt;|&quot;hA&quot;| ROOM[&quot;room T∞&quot;]
+  subgraph discharge[&quot;discharge&quot;]
+    direction TB
+    TC[&quot;τ = mc/hA = R_th C_th&quot;] --&gt; HALF[&quot;t½ = 0.69 τ&quot;]
+  end
+</code></pre>
+<blockquote>
+<p><em>Read:</em> two data points on a cooling curve give both the ambient and the conductance — a classic practical question.</p>
+</blockquote>
 <p>Give a small hot body a conductance $hA$ to the room and a capacity $mc$, and the ledger of ch 1 (one door, now the only one) reads $mc\,dT/dt = -hA(T - T_\infty)$:</p>
 <p><img alt="Plot it against the room temperature line, and it is a discharge curve: time constant = thermal resistance × heat capacity, half-life = 0.69τ." src="../../heat/assets/figures/fig-016.svg" /></p>
 <p><strong>Fig. 5.2 — cooling as a discharge curve.</strong> Two data points on any cooling curve are enough to read off both the ambient (the asymptote) and hA (from the slope ratio) — a classic practical-skill question.</p>
@@ -1062,7 +1132,19 @@ $$</p>
 <p>$\delta = \sqrt{2\alpha/\omega_{yr}} = 2.24$ m. Swing under 1 K needs $e^{-x/\delta} &lt; 1/15$ ⇒ $x &gt; \delta\ln 15 = 6.05$ m. Phase at that depth: $x/\delta = 2.70$ rad — a 0.43-year lag, so a surface that peaks mid-July leaves the cellar peaking around late November and bottoming in May; the <em>sign</em> of the response has flipped almost completely (full inversion sits at $\pi\delta = 7.0$ m). The design sentence writes itself: “the lag eats half a year, the swing is down to one kelvin, and the mean is 10 °C — which is the wine spec, the root-vegetable spec, and the ice-house of every pre-electric culture at one depth.” <strong>Check:</strong> $15\,e^{-2.70} = 1.0$ K against the under-1-K spec ✓; and one clause for the marker: this assumes no water movement — wet soil advects (an “h” bolted onto conduction, ch 5), and real clay cellars drift warmer than dry-sand predictions for exactly that reason.</p>
 </details>
 <h3 id="81-trap-shelf-the-whole-topic-in-ten-warnings">8.1 Trap shelf — the whole topic in ten warnings</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F6.6 · The trap shelf: ten ways to lose the mark</p>
+<p><em>Why:</em> the topic's losses are a short list; each trap below has a one-line fix, so every warning doubles as a pre-exam checklist.
+<em>Data:</em> (1) "contains heat" → U, not Q; (2) sign rule; (3) holes grow; (4) thermal stress is two-step; (5) liquid expansion needs −3γ_glass; (6) budget before mcΔT; (7) steady ≠ no-flow; (8) plane vs log R; (9) Biot licence; (10) always subtract the room's radiation.</p>
+</div>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;ten traps&quot;] --&gt; B[&quot;words: U vs Q, sign rule&quot;]
+  A --&gt; C[&quot;geometry: holes grow, stress two-step, -3γ_glass&quot;]
+  A --&gt; D[&quot;books: budget first, steady ≠ no-flow, plane vs log R&quot;]
+  A --&gt; E[&quot;law: Biot licence, subtract the room's radiation&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> every warning is a sentence you already know — re-read them the night before, not the week after.</p>
 <p><strong>Where heat problems are lost</strong></p>
 <ol>
 <li>“Contains heat”: bodies store U; heat is transit. (ch 1)</li>

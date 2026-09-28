@@ -10,7 +10,7 @@
 <body>
 <header class="top">
   <a class="brand" href="index.html">Physics notes</a>
-  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="active">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
+  <nav><a href="string-waves.html" class="">String waves</a><a href="sound-waves.html" class="">Sound waves</a><a href="electromagnetic-waves.html" class="">Electromagnetic waves</a><a href="heat.html" class="">Heat</a><a href="thermodynamics.html" class="">Thermodynamics</a><a href="capacitors.html" class="">Capacitors</a><a href="current-electricity.html" class="active">Current electricity</a><a href="geometrical-optics.html" class="">Geometrical optics</a><a href="wave-optics.html" class="">Wave optics</a><a href="units-measurements.html" class="">Units, dimensions & errors</a><a href="vectors.html" class="">Vectors & vector algebra</a><a href="kinematics-1d.html" class="">Motion in one dimension</a><a href="motion-in-two-dimensions.html" class="">2-D motion & projectiles</a><a href="newtons-laws.html" class="">Newton's laws & friction</a><a href="work-energy-power.html" class="">Work, energy & power</a><a href="centre-of-mass-momentum.html" class="">Centre of mass & collisions</a><a href="rotational-mechanics.html" class="">Rotational mechanics</a><a href="gravitation.html" class="">Gravitation & orbital motion</a><a href="simple-harmonic-motion.html" class="">Simple harmonic motion</a><a href="fluid-mechanics.html" class="">Fluid mechanics</a><a href="elasticity.html" class="">Elasticity</a><a href="emi-ac.html" class="">Induction, inductance and alternating current</a><a href="magnetism.html" class="">Magnetism</a><a href="electrostatics.html" class="">Electrostatics</a><a href="photoelectric-effect.html" class="">Photoelectric effect & matter waves</a><a href="atomic-structure.html" class="">Atomic structure & the Bohr model</a><a href="x-rays.html" class="">X-rays, Moseley & Bragg</a><a href="nuclear-physics.html" class="">Nuclear physics & radioactivity</a><a href="semiconductors.html" class="">Semiconductors & devices</a><a href="communication-systems.html" class="">Communication systems</a><a href="special-relativity.html" class="">Special relativity</a></nav>
 </header>
 <div class="layout">
   <aside class="toc"><details open><summary>Contents</summary><ul>
@@ -27,6 +27,8 @@
 <li><a href="#current-electricity-the-whole-course-on-three-pages">Current Electricity — the whole course on three pages</a></li>
 </ul></details></aside>
   <main class="page">
+<p class="props"><span class="prop"><b>part</b> 8</span><span class="prop"><b>slug</b> current-electricity</span><span class="prop"><b>order</b> 19</span><span class="prop"><b>block</b> electricity-magnetism</span><span class="prop"><b>source</b> Cengage Electrostatics and Current Electricity-compressed.pdf, Electric Current chapters</span><span class="prop tag">jee-advanced</span><span class="prop tag">olympiad</span><span class="prop tag">electromagnetism</span><span class="prop tag">circuits</span></p>
+
 <p><a id="section-index"></a></p>
 <p><a id="top"></a></p>
 <p><em>11-page chapter set · JEE Advanced · NSEP · INPhO · IOPT · self-contained — opens with no internet, prints cleanly</em></p>
@@ -34,6 +36,25 @@
 <p>A complete, proof-first treatment of current, resistance, cells, networks, instruments and the physics of real wires. Every formula here is <strong>derived from something you already accept</strong> — charge conservation, Newton's law plus collisions, energy accounting — and every place where a JEE or Olympiad examiner can catch you is marked explicitly. Two ideas do all the work: charge is a ledger, and every real device is a divider wearing a badge.</p>
 <p><img alt="A cell driving a lamp through two resistors, with the ledger and the divider annotated" src="../../current-electricity/assets/figures/fig-001.svg" /></p>
 <p><strong>The whole course in one picture.</strong> A source that pumps and taxes, resistances that divide, and a load that takes what the divider allows. Chapter 3 owns the pump, chapter 4 the network, chapter 5 the replacement of everything left of the lamp by two numbers — and the audit line at the bottom is the habit that turns solves into marks.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.1 · Chapter map: the ledger and the divider</p>
+<p><em>Why:</em> the whole course is two ideas — charge is a ledger, and every device is a divider wearing a badge; the map pins the 7 chapters to that spine.
+<em>Data:</em> ch 1 drift &amp; continuity → ch 2 resistance → ch 3 EMF/cells → ch 4 Kirchhoff → ch 5 network theorems → ch 6 instruments → ch 7 scaling/advanced.</p>
+</div>
+
+<pre><code class="language-mermaid">mindmap
+  root((current electricity))
+    Drift
+    Resistance
+    EMF and cells
+    Kirchhoff
+    Network theorems
+    Instruments
+    Scaling and advanced
+</code></pre>
+<blockquote>
+<p><em>Read:</em> chapters 1–3 are the physics, 4–6 the JEE engine, 7 the Olympiad extension.</p>
+</blockquote>
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
 <p>Each chapter builds only on the ones before it. Chapters <strong>1–3</strong> are the conceptual base: what current is, what resistance is, and what a battery actually sells. Chapters <strong>4–6</strong> are the JEE-Advanced engine: Kirchhoff and symmetry, the network theorems, and the instruments built from them. Chapter <strong>7</strong> is the Olympiad extension (scaling laws, transmission, thermoelectricity, superconductors). Chapter <strong>8</strong> consolidates a solving strategy; chapters <strong>9–10</strong> are the full paper with detailed solutions; chapter <strong>11</strong> is a printable formula sheet.</p>
 <ul>
@@ -236,7 +257,19 @@
 <h2 id="current-drift-and-the-ledger-of-charge">Current, drift and the ledger of charge</h2>
 <p>Every circuit you will ever solve is a bookkeeping problem: charge is never created or destroyed, it only moves, and it moves because a field pushed it. After this chapter you can say precisely what current <em>is</em>, compute how fast the electrons in a wire actually crawl, and derive — not quote — why a metal that obeys Newton plus collisions obeys Ohm's law. The mistake this chapter exists to kill is the picture of electrons sprinting through wires at the speed of light.</p>
 <h3 id="11-current-a-flux-not-a-vector">1.1 Current: a flux, not a vector</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.2 · Current = charge flux: I = neAv_d</p>
+<p><em>Why:</em> the lamp lights instantly while the electrons crawl at mm/s — only the <em>field</em> travels fast; the flow fixes how many carriers cross each second.
+<em>Data:</em> I = dq/dt = n e A v_d (add one line per carrier species); j⃗ = nqv⃗, I = ∫ j⃗·dá; current is a scalar, current density is the vector.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;drift velocity v_d ~ mm/s&quot;] --&gt; B[&quot;I = n e A v_d&quot;]
+  B --&gt; C[&quot;count of electrons per second = I/e&quot;]
+  C --&gt; D[&quot;sanity: v_d is sub-mm/s, not light speed&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> the current is charge per second through a named surface — the arrow you draw is a sign convention, not the electrons' speed.</p>
 <p><strong>Definition · electric current</strong></p>
 <p>Current through a surface is the <strong>rate at which charge crosses that surface</strong>:</p>
 <p>$$
@@ -554,7 +587,19 @@ $$</p>
 <h2 id="emf-internal-resistance-and-real-sources">EMF, internal resistance and real sources</h2>
 <p>A battery does not manufacture charge and does not store field; it <strong>pumps</strong> charge, spending chemical energy to do it. After this chapter you can model every real source as an ideal pump in series with its own resistance, read a $V$–$I$ graph of a cell the way you read a person's ECG, choose a cell grouping for maximum current, and account for every joule the circuit spends. The mistake this chapter prevents: treating the battery's stated voltage as its terminal voltage at every current.</p>
 <h3 id="31-emf-work-done-per-unit-charge-and-by-whom">3.1 EMF: work done per unit charge, and by whom</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.3 · The real source: ideal pump in series with r</p>
+<p><em>Why:</em> the battery's 12 V is only 12 V when no current flows — the model converts every "terminal voltage" question into one divider.
+<em>Data:</em> V = ℰ − Ir on discharge, V = ℰ + Ir on charge; ℰ = W_non-el/q (a pump, not a force); loop for one cell: ℰ = IR + Ir.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;ideal pump ℰ&quot;] --&gt; B[&quot;internal resistance r&quot;] --&gt; C[&quot;terminals&quot;]
+  C --&gt; D[&quot;discharge: V = ℰ - Ir&quot;]
+  C --&gt; E[&quot;charging: V = ℰ + Ir&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> "EMF" is a name, not a force — the source is where the loop integral is violated by non-electrostatic forces.</p>
 <p><strong>Definition · electromotive force</strong></p>
 <p>The EMF $\mathcal E$ of a source is the <strong>work done per unit charge by the non-electrostatic forces</strong> inside the source (chemical in a cell, mechanical in a generator, thermal in a thermocouple) driving charge from the negative to the positive terminal <em>through the source</em>:</p>
 <p>$$
@@ -741,7 +786,19 @@ $$</p>
 <h2 id="kirchhoff-bridges-and-equivalent-resistance">Kirchhoff, bridges and equivalent resistance</h2>
 <p>Chapters 1–3 gave you the physics; this chapter gives you the <strong>algorithm</strong>. Two laws — charge conservation at nodes, energy conservation round loops — crack any network whatsoever, and symmetry cracks the ones the algorithm would crack slowly. After this chapter you can solve a two-loop circuit in three minutes, prove the Wheatstone balance condition, find the current in a bridge's galvanometer when it is <em>not</em> balanced, and quote the cube's three resistances from a symmetry argument you can reproduce. The mistake this chapter prevents: sign errors that survive because nobody drew the currents before writing the equations.</p>
 <h3 id="41-the-two-laws-and-the-discipline-that-makes-them-work">4.1 The two laws, and the discipline that makes them work</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.4 · Kirchhoff: guess, loop, audit</p>
+<p><em>Why:</em> KCL and KVL cannot fail — only the bookkeeping can; the three-step discipline turns every network solve into safe arithmetic.
+<em>Data:</em> assign a direction to every unknown current; traverse each loop one way; +IR along the current, +ℰ from − to +; a negative answer means the current runs opposite your guess; close with the power audit ΣℰI = ΣI²R.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;guess: direction for every unknown current&quot;] --&gt; B[&quot;KCL at nodes + KVL round loops&quot;]
+  B --&gt; C[&quot;solve; negative means opposite to guess&quot;]
+  C --&gt; D[&quot;audit powers: ΣℰI = ΣI²R&quot;]
+</code></pre>
 <blockquote>
+<p><em>Read:</em> consistency, not clairvoyance — every wrong answer in this chapter traces to skipping the guess.</p>
 <p><strong>Definition · Kirchhoff's laws</strong></p>
 <p><strong>Junction law (KCL):</strong> at every node, $\sum I_{\text{in}}=\sum I_{\text{out}}$. It is the steady-state continuity equation (ch 1, §1.2) — charge conservation, unbreakable.</p>
 <p><strong>Loop law (KVL):</strong> round any closed loop, $\sum \mathcal E=\sum IR$, with each $IR$ signed by the direction you traverse the resistor. It is $\oint\vec E\cdot d\vec l=0$ plus the pump's work (ch 3, §3.1) — energy conservation, unbreakable.</p>
@@ -989,8 +1046,20 @@ $$</p>
 <p>A 10 V battery in series with 2 $\Omega$ is connected in parallel with a 6 V battery in series with 1 $\Omega$; the pair drives a 4 $\Omega$ load. Find the load current. <strong>Plan:</strong> superpose, because the two sources make a single loop reduction ambiguous.</p>
 <p><strong>Do:</strong> 6 V killed (replaced by wire, its 1 $\Omega$ stays): $I_a=\dfrac{10}{2+(1\times4)/5}\times\dfrac{1}{5}=\dfrac{10}{2.8}\times0.2=0.714$ A. 10 V killed: $I_b=\dfrac{6}{1+(2\times4)/6}\times\dfrac{2}{6}=\dfrac{6}{2.333}\times\tfrac13=0.857$ A. Total: $I=0.714+0.857=1.571$ A. <strong>Check:</strong> direct nodal solve, $(10-V)/2+(6-V)/1=V/4\Rightarrow V=44/7=6.286$ V, $I=V/4=1.571$ A ✓. Bonus finding: the 6 V branch carries $(6-6.286)/1=-0.286$ A — <strong>it is being charged</strong> by the stronger source, exactly the ch 3, Q6 phenomenon in theorem's clothing.</p>
 <h3 id="52-thevenin-any-linear-network-is-a-battery">5.2 Thevenin: any linear network is a battery</h3>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.5 · Thevenin: replace everything with two numbers</p>
+<p><em>Why:</em> meters, "what if the load changes" and max-power questions all ask about the terminals — two numbers answer every one of them.
+<em>Data:</em> V_th = open-circuit voltage; R_th = resistance with all ideal sources killed (voltage → wire, current → gap); short-circuit current = V_th/R_th; max power at R_L = R_th with η = 50%.</p>
+</div>
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;black box&quot;] --&gt; B[&quot;V_th = open-circuit voltage&quot;]
+  A --&gt; C[&quot;R_th = resistance with sources killed&quot;]
+  B --&gt; D[&quot;the load sees V_th + R_th&quot;]
+  C --&gt; D
+  D --&gt; E[&quot;matched load: R_L = R_th, η = 50%&quot;]
+</code></pre>
 <blockquote>
-<p><strong>Theorem · Thevenin (and Norton)</strong></p>
+<p><em>Read:</em> exact at the terminals for every load — including nonlinear ones — but never audit power inside the equivalent.</p>
 <p>Seen from two terminals, any network of resistances and sources behaves exactly like an ideal source $V_{th}$ in series with $R_{th}$ (Thevenin), or equivalently a current source $I_N$ in parallel with $R_{th}$ (Norton), where</p>
 <p>$$
 V_{th}=V_{\text{open-circuit}},\qquad R_{th}=\frac{V_{th}}{I_{\text{short-circuit}}}=R\ \text{seen with all ideal sources killed},\qquad I_N=\frac{V_{th}}{R_{th}} \tag{5.1}
@@ -1437,6 +1506,21 @@ $$</p>
 </table>
 <p><img alt="Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method" src="../../current-electricity/assets/figures/fig-026.svg" /></p>
 <p><strong>Fig. 8.1 — The triage flow.</strong> Classification is the solution's first third; the audit line is its last third. The middle is arithmetic.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F8.6 · Triage: which problem kind, which move</p>
+<p><em>Why:</em> classifying in twenty seconds and reading the right row of the §8.1 table decides the method; the flow is the chapter's fastest route to a start.
+<em>Data:</em> drift → I = n e A v_d; geometry → R = ∫ρ dl/A; cell → V = ℰ ∓ Ir; two loops → KCL+KVL then audit; symmetry → equal potentials; meter → one divider; null → balance length.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;twenty seconds: name the problem kind&quot;] --&gt; B[&quot;ledger? geometry? source? network?&quot;]
+  B --&gt; C[&quot;pick the row of the §8.1 table&quot;]
+  C --&gt; D[&quot;execute the move&quot;]
+  D --&gt; E[&quot;close with the power audit&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> classification is a third of the solution, the audit line is the last third — the middle is only arithmetic.</p>
+</blockquote>
 <h3 id="82-the-twelve-moves">8.2 The twelve moves</h3>
 <ol>
 <li><strong>Label every current with a guessed direction</strong> before writing a single equation (ch 4).</li>

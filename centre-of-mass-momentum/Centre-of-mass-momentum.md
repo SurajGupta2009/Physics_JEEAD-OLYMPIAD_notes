@@ -2,6 +2,8 @@
 title: Centre of Mass, Momentum & Collisions — first principles to Olympiad
 part: 7
 slug: centre-of-mass-momentum
+order: 7
+block: mechanics
 status: complete
 source: Cengage Mechanics II-compressed.pdf, ch 1 Centre of Mass, Conservation of Linear Momentum and Collision
 aliases: [centre-of-mass, momentum, impulse, collisions, restitution, rocket-equation]
