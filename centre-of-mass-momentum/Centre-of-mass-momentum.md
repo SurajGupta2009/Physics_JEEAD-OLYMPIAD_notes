@@ -93,7 +93,7 @@ mindmap
 | $e$ | coefficient of restitution | dimensionless |
 | $\mu$ | reduced mass $=m_1m_2/(m_1+m_2)$ | kg |
 | $\mathbf{v}_{\text{cm}}$ | velocity of the centre of mass | m/s |
-| $\Delta K$ | kinetic energy lost in a collision | J |
+| $K_{\rm loss}$ | kinetic energy lost in a collision | J |
 
 > [!info] Bookkeeping rules
 > Momentum is a vector — conservation applies independently to each component. In 1-D collisions: use the sign convention consistently (rightward positive). In 2-D collisions: resolve along and perpendicular to the line of impact. The coefficient of restitution applies only along the line of impact — the tangential component of velocity is unchanged for smooth spheres.
@@ -224,7 +224,7 @@ $$
 | Inelastic | No | $0<e<1$ | Most real collisions |
 | Perfectly inelastic | No (maximum loss) | $e=0$ | Bullet embedding in a block |
 
-**The line of impact:** the line along which the collision force acts (for smooth spheres: the line joining the centres). The coefficient of restitution applies only along this line. The tangential component of velocity is unchanged for smooth spheres (no tangential impulse).
+**The line of impact:** the line along which the impulsive normal force acts (for smooth spheres: the line joining the centres). The coefficient of restitution applies only along this line. The tangential component of velocity is unchanged for smooth spheres (no tangential impulse). The usual table describes passive impacts with $0\le e\le1$; an active or explosive collision can be superelastic ($e>1$), so kinetic energy need not always decrease.
 
 > [!abstract] DIAGRAM D7.5 · Collision classification: before and after
 > *Show:* three cases: (1) elastic — two balls approach, exchange velocities (or bounce); (2) inelastic — they bounce with reduced speeds; (3) perfectly inelastic — they stick together. Velocity arrows shown before and after.
@@ -238,9 +238,9 @@ $$
 flowchart TD
   A["collision"] --> B["momentum conserved (always)"]
   A --> C["kinetic energy?"]
-  C -->|"e = 1"| D["elastic: ΔK = 0"]
-  C -->|"0 < e < 1"| E["inelastic: some ΔK lost"]
-  C -->|"e = 0"| F["stick together: max ΔK lost"]
+  C -->|"e = 1"| D["elastic: K_loss = 0"]
+  C -->|"0 < e < 1"| E["inelastic: some K_loss lost"]
+  C -->|"e = 0"| F["stick together: max K_loss lost"]
 ```
 
 > *Read:* momentum is non-negotiable; the restitution $e$ decides how much kinetic energy survives the crash.
@@ -264,13 +264,13 @@ $$
 - **Elastic, $m_1\ll m_2$:** $v_1\approx2u_2-u_1$, $v_2\approx u_2$ (the light particle bounces back; the heavy particle barely moves).
 - **Perfectly inelastic ($e=0$):** $v_1=v_2=\frac{m_1u_1+m_2u_2}{m_1+m_2}$ (they stick together).
 
-**Energy loss:**
+**Kinetic-energy loss ($K_{\rm loss}=K_i-K_f\ge0$):**
 
 $$
-\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2). \qquad (3.8)
+K_{\rm loss}=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2). \qquad (3.8)
 $$
 
-where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $\Delta K=0$ (elastic). For $e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$ (maximum loss).
+where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $K_{\rm loss}=0$ (elastic). For $e=0$: $K_{\rm loss}=\frac{1}{2}\mu v_{\text{rel}}^2$ (maximum loss).
 
 > [!abstract] DIAGRAM D7.6 · The $e$-dependence of final velocities
 > *Show:* a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. At $e=0$: both move together at $v_{\text{cm}}$. At $e=1$: $v_1=0$, $v_2=u_1$ (equal-mass exchange). The curves are linear in $e$.
@@ -278,12 +278,12 @@ where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $\Delta K=0$ (elast
 
 > [!tip] FIGURE F7.5 · The energy loss: the (1 - e²) rule
 > *Why:* one formula prices every imperfect collision — the lost kinetic energy scales with $1-e^2$ times the squared approach speed.
-> *Data:* $\Delta K = \tfrac12\mu(u_1-u_2)^2(1-e^2)$ with $\mu = \frac{m_1m_2}{m_1+m_2}$; loss is zero at $e=1$, maximal at $e=0$.
+> *Data:* $K_{\rm loss} = \tfrac12\mu(u_1-u_2)^2(1-e^2)$ with $\mu = \frac{m_1m_2}{m_1+m_2}$; loss is zero at $e=1$, maximal at $e=0$.
 
 ```mermaid
 flowchart LR
-  A["approach speed u1-u2"] --> B["ΔK = ½μ(u1-u2)²(1-e²)"]
-  B --> C["e = 1: ΔK = 0"]
+  A["approach speed u1-u2"] --> B["K_loss = ½μ(u1-u2)²(1-e²)"]
+  B --> C["e = 1: K_loss = 0"]
   B --> D["e = 0: max loss, stick together"]
 ```
 
@@ -317,9 +317,7 @@ For a smooth-sphere collision in 2-D:
 
 ### 3.10 Variable mass
 
-**Derivation of the rocket equation:**
-
-At time $t$: mass $m$, velocity $v$. At $t+dt$: mass $m+dm$ ($dm<0$), velocity $v+dv$. Exhaust: mass $-dm$, velocity $v-v_e$ (in the ground frame). Momentum conservation:
+**Rocket equation (ideal 1-D case):** Assume the rocket-plus-exhaust system has negligible external impulse during $dt$, the exhaust speed $v_e$ relative to the rocket is constant, and motion/exhaust are collinear. At time $t$: rocket mass $m$, velocity $v$. At $t+dt$: rocket mass $m+dm$ ($dm<0$), velocity $v+dv$. The expelled mass $-dm$ has ground-frame velocity $v-v_e$. Momentum conservation for the closed rocket-plus-ejected-gas system:
 
 $$
 mv=(m+dm)(v+dv)+(-dm)(v-v_e). \qquad (3.9)
@@ -404,7 +402,7 @@ $$
 coefficient of restitution along the line of impact.
 
 $$
-\boxed{\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)} \qquad (4.5)
+\boxed{K_{\rm loss}=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)} \qquad (4.5)
 $$
 
 energy lost in a 1-D collision.
@@ -417,8 +415,8 @@ rocket equation.
 
 ### 4.2 Limit checks
 
-- $e=1$: $\Delta K=0$ — elastic, no energy lost. ✓
-- $e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$ — maximum energy lost. ✓
+- $e=1$: $K_{\rm loss}=0$ — elastic, no energy lost. ✓
+- $e=0$: $K_{\rm loss}=\frac{1}{2}\mu v_{\text{rel}}^2$ — maximum energy lost. ✓
 - $m_1=m_2$, $e=1$: $v_1=u_2$, $v_2=u_1$ — velocities exchange. ✓
 - $m_1\gg m_2$: the heavy mass barely changes velocity. ✓
 - $m_0/m_f=e$: $\Delta v=v_e$ — if 63% of the mass is fuel, the speed increases by $v_e$. ✓
@@ -578,11 +576,11 @@ A 2 kg ball at 5 m/s collides elastically with a 2 kg ball at rest. Find the vel
 A 5 kg ball at 10 m/s collides with a 3 kg ball at $-4$ m/s. They stick together. Find the final velocity and energy lost.
 
 > [!success] Check
-> $v=(50-12)/8=38/8=4.75$ m/s. $\Delta K=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16-\frac{1}{2}\times8\times22.56=250+24-90.2=183.8$ J.
+> $v=(50-12)/8=38/8=4.75$ m/s. $K_{\rm loss}=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16-\frac{1}{2}\times8\times22.56=250+24-90.2=183.8$ J.
 
 <details><summary>Solution</summary>
 
-**Method.** $v=\frac{5\times10+3\times(-4)}{5+3}=\frac{50-12}{8}=4.75$ m/s. $K_i=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16=274$ J. $K_f=\frac{1}{2}\times8\times22.56=90.2$ J. $\Delta K=183.8$ J.
+**Method.** $v=\frac{5\times10+3\times(-4)}{5+3}=\frac{50-12}{8}=4.75$ m/s. $K_i=\frac{1}{2}\times5\times100+\frac{1}{2}\times3\times16=274$ J. $K_f=\frac{1}{2}\times8\times22.56=90.2$ J. $K_{\rm loss}=183.8$ J.
 
 </details>
 
@@ -871,7 +869,7 @@ $e_1=\sqrt{6.4/10}=0.8$. $e_2=\sqrt{4.1/6.4}=0.8$. Average $e=0.8$.
 
 <details><summary>Solution</summary>
 
-$K_i=\frac{1}{2}\times0.5\times100=25$ J. $K_f=\frac{1}{2}\times1\times v^2$. Momentum: $0.5\times10=1\times v$. $v=5$ m/s. $K_f=12.5$ J. $\Delta K=12.5$ J. Not elastic.
+$K_i=\frac{1}{2}\times0.5\times100=25$ J. $K_f=\frac{1}{2}\times1\times v^2$. Momentum: $0.5\times10=1\times v$. $v=5$ m/s. $K_f=12.5$ J. $K_{\rm loss}=12.5$ J. Not elastic.
 
 </details>
 
@@ -1065,7 +1063,7 @@ A chain of length $L$ and mass $m$ hangs over a frictionless peg, with length $x
 
 **Method.** Force: $F=\lambda xg-\lambda(L-x)g=\lambda g(2x-L)$. Total mass: $m$. $a=F/m=g(2x-L)/L$. At $x=L/2$: $a=0$ (equilibrium — unstable). At $x>L/2$: $a>0$ (the longer side pulls). At $x=L$: $a=g$ (free fall of the entire chain).
 
-**Significance.** The chain's motion is not constant acceleration — $a$ depends on $x$. The equation $a=g(2x-L)/L$ is a first-order ODE in $v$ and $x$: $v\,dv=g(2x-L)dx/L$. Integrating: $v^2=g(x^2-Lx+L^2/4)/L+C$. At $x=L/2$: $v=0$ (starting from rest at the equilibrium position... but this is unstable, so the chain will fall if perturbed).
+**Significance.** The chain's motion is not constant acceleration — $a$ depends on $x$. The equation $a=g(2x-L)/L$ is a first-order ODE in $v$ and $x$: $v\,dv=g(2x-L)dx/L$. Integrating: $v^2=(2g/L)(x^2-Lx)+C$. At $x=L/2$: $v=0$ (starting from rest at the equilibrium position... but this is unstable, so the chain will fall if perturbed).
 
 </details>
 
@@ -1206,7 +1204,7 @@ The energy lost in a 1-D collision is:
 
 <details><summary>Answer</summary>
 
-(d). For $e=1$: $\Delta K=0$. For $e=0$: $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2$.
+(d). For $e=1$: $K_{\rm loss}=0$. For $e=0$: $K_{\rm loss}=\frac{1}{2}\mu v_{\text{rel}}^2$.
 
 </details>
 
@@ -1394,7 +1392,7 @@ $v_2=3\times4/2=6$ m/s. $K_2=\frac{1}{2}\times2\times36=36$ J.
 
 <details><summary>Answer</summary>
 
-(a) See §3.7. (b) At $e=1$: $v_1=(m_1-m_2)u_1/(m_1+m_2)$, $v_2=2m_1u_1/(m_1+m_2)$. At $e=0$: $v_1=v_2=(m_1u_1+m_2u_2)/(m_1+m_2)$. At $m_1\gg m_2$: $v_1\approx u_1$, $v_2\approx2u_1-u_2$. (c) $\Delta K=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)$.
+(a) See §3.7. (b) At $e=1$: $v_1=(m_1-m_2)u_1/(m_1+m_2)$, $v_2=2m_1u_1/(m_1+m_2)$. At $e=0$: $v_1=v_2=(m_1u_1+m_2u_2)/(m_1+m_2)$. At $m_1\gg m_2$: $v_1\approx u_1$, $v_2\approx2u_1-u_2$. (c) $K_{\rm loss}=\frac{1}{2}\mu(u_1-u_2)^2(1-e^2)$.
 
 </details>
 
@@ -1430,7 +1428,7 @@ $v_2=3\times4/2=6$ m/s. $K_2=\frac{1}{2}\times2\times36=36$ J.
 
 <details><summary>Answer</summary>
 
-(a) $v_1=(2-0.5\times3)/5\times5+(1.5)\times3/5\times(-2)=(0.5/5)\times5+0.9\times(-2)=0.5-1.8=-1.3$ m/s. $v_2=(1.5)\times2/5\times5+(3-0.5\times2)/5\times(-2)=3+(-0.8)=2.2$ m/s. (b) $K_i=\frac{1}{2}\times2\times25+\frac{1}{2}\times3\times4=31$ J. $K_f=\frac{1}{2}\times2\times1.69+\frac{1}{2}\times3\times4.84=1.69+7.26=8.95$ J. $\Delta K=22.05$ J. (c) $\mu=2\times3/5=1.2$. $v_{\text{rel}}=5-(-2)=7$. $\Delta K=\frac{1}{2}\times1.2\times49\times(1-0.25)=29.4\times0.75=22.05$ J. ✓
+(a) $v_1=(2-0.5\times3)/5\times5+(1.5)\times3/5\times(-2)=(0.5/5)\times5+0.9\times(-2)=0.5-1.8=-1.3$ m/s. $v_2=(1.5)\times2/5\times5+(3-0.5\times2)/5\times(-2)=3+(-0.8)=2.2$ m/s. (b) $K_i=\frac{1}{2}\times2\times25+\frac{1}{2}\times3\times4=31$ J. $K_f=\frac{1}{2}\times2\times1.69+\frac{1}{2}\times3\times4.84=1.69+7.26=8.95$ J. $K_{\rm loss}=22.05$ J. (c) $\mu=2\times3/5=1.2$. $v_{\text{rel}}=5-(-2)=7$. $K_{\rm loss}=\frac{1}{2}\times1.2\times49\times(1-0.25)=29.4\times0.75=22.05$ J. ✓
 
 </details>
 
@@ -1489,7 +1487,7 @@ $v_2=3\times4/2=6$ m/s. $K_2=\frac{1}{2}\times2\times36=36$ J.
 | $\mathbf{J}=\Delta\mathbf{p}=\int\mathbf{F}\,dt$ | impulse–momentum theorem |
 | $\sum\mathbf{p}=$ const | if $\sum\mathbf{F}_{\text{ext}}=\mathbf{0}$ |
 | $e=v_{\text{sep}}/v_{\text{app}}$ | along the line of impact |
-| $\Delta K=\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$ | energy lost in 1-D collision |
+| $K_{\rm loss}=\frac{1}{2}\mu v_{\text{rel}}^2(1-e^2)$ | energy lost in 1-D collision |
 | $\Delta v=v_e\ln(m_0/m_f)$ | rocket equation |
 | $v_{\text{after}}-v_w=-e(v_{\text{before}}-v_w)$ | moving-wall bounce |
 | $K=\frac{1}{2}Mv_{\text{cm}}^2+\frac{1}{2}\mu v_{\text{rel}}^2$ | CM-frame energy decomposition |

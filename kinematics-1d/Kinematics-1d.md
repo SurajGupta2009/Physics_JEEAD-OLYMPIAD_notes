@@ -77,7 +77,7 @@ mindmap
 
 **Displacement is not distance.** If you walk 3 m east and then 3 m west, your displacement is zero but your distance is 6 m. Displacement is the net change in position: $\Delta x=x_f-x_i$. Distance is the total path length: $d=\int|v|\,dt$.
 
-**Velocity is the slope of $x(t)$; acceleration is the slope of $v(t)$.** $v=dx/dt$ tells you how fast the position is changing. $a=dv/dt$ tells you how fast the velocity is changing. Conversely, $v=\int a\,dt$ and $x=\int v\,dt$ — velocity is the area under the $a$–$t$ graph; position is the area under the $v$–$t$ graph.
+**Velocity is the slope of $x(t)$; acceleration is the slope of $v(t)$.** $v=dx/dt$ tells you how fast position changes. $a=dv/dt$ tells you how fast velocity changes. Conversely, $\Delta v=\int a\,dt$ and $\Delta x=\int v\,dt$: the signed area under the $a$–$t$ graph gives change in velocity, and the signed area under the $v$–$t$ graph gives displacement. Add the initial value to recover $v$ or $x$.
 
 **Negative acceleration does not mean deceleration.** If you define "positive" as rightward, then a leftward acceleration is negative. If the particle is moving leftward, a leftward acceleration is actually speeding it up (deceleration is when $a$ and $v$ have opposite signs).
 
@@ -121,6 +121,16 @@ Three numbers to carry: $g=9.8$ m/s$^2$; $1$ km/h $=5/18$ m/s $=0.2778$ m/s; $1$
 ## Part 3 · Core derivations
 
 ### 3.1 Position and displacement
+
+#### Frame of reference
+
+A one-dimensional frame of reference consists of an origin, a chosen positive axis, and a clock. Position, displacement, and velocity are measured relative to that frame; state the frame and sign convention before solving a problem. For two frames with parallel axes, where the primed frame moves at constant velocity $U$ in the positive direction relative to the unprimed frame and their origins coincide at $t=0$, the Galilean transformation is
+
+$$
+x'=x-Ut,\qquad v'=v-U,\qquad a'=a.
+$$
+
+Thus relative velocity is a difference measured with a shared time coordinate. Under a constant-velocity change of frame, acceleration is unchanged; this simple transformation does not apply to accelerating frames (which require additional inertial terms in dynamics).
 
 The position $x(t)$ is a scalar function of time. For a particle on the $x$-axis, $x>0$ means the particle is on the positive side; $x<0$ means the negative side.
 
@@ -229,10 +239,10 @@ s=\frac{(u+v)}{2}t. \qquad (3.7)
 $$
 
 $$
-s_n=u+\frac{a}{2}(2n-1). \qquad (3.8)
+\Delta x_n=u+\frac{a}{2}(2n-1). \qquad (3.8)
 $$
 
-Eq. (3.8) gives the distance travelled in the $n$th second. $u$ is the initial velocity ($v$ at $t=0$), $v$ is the final velocity, $s$ is displacement, $t$ is time.
+Eq. (3.8) gives the signed displacement during the $n$th one-second interval, for constant acceleration and integer $n\ge1$. It equals the distance travelled in that interval only if velocity does not reverse there; otherwise split at the turning time and sum the absolute displacements. Here $u$ is the velocity at $t=0$, $a$ is constant acceleration, and $\Delta x_n=x(n)-x(n-1)$.
 
 > [!info] Why
 > Eq. (3.4) comes from $v=\int a\,dt=at+C$ with $C=u$. Eq. (3.5) comes from $s=\int v\,dt=\int(u+at)\,dt=ut+\frac{1}{2}at^2+C'$ with $C'=0$. Eq. (3.6) comes from eliminating $t$: $t=(v-u)/a$, substitute into (3.5). Eq. (3.7) comes from eliminating $a$: $a=(v-u)/t$, substitute into (3.5). Eq. (3.8) comes from $s_n=s(n)-s(n-1)$.
@@ -297,14 +307,14 @@ $$
 v_{AB}=v_A-v_B. \qquad (3.9)
 $$
 
-**Interpretation:** $v_{AB}>0$ means $A$ is moving away from $B$ in the positive direction. $v_{AB}=0$ means they move together. $v_{AB}<0$ means $A$ is moving toward $B$ (in the positive direction, $B$ catches up).
+Define the signed separation as $r_{AB}=x_A-x_B$. Then $v_{AB}=dr_{AB}/dt=v_A-v_B$. The sign of $v_{AB}$ alone does not determine whether the particles are approaching: they approach when $r_{AB}v_{AB}<0$ (for nonzero separation), recede when $r_{AB}v_{AB}>0$, and have constant separation instantaneously when $v_{AB}=0$. For example, if $x_A>x_B$, then $v_{AB}<0$ means their separation is decreasing; if $x_A<x_B$, the sign criterion reverses.
 
 > [!abstract] DIAGRAM D3.8 · Relative velocity in 1-D
 > *Show:* two particles $A$ and $B$ on a number line, $A$ at $x_A$ and $B$ at $x_B$ with $x_A>x_B$. $v_A=5$ m/s (rightward), $v_B=3$ m/s (rightward). $v_{AB}=5-3=2$ m/s — $A$ is pulling away from $B$ at 2 m/s. The separation $x_A-x_B$ is increasing.
 > *Search:* "relative velocity one dimension two particles diagram"
 
 > [!abstract] DIAGRAM D3.10 · The $n$th-second distance
-> *Show:* a $v$–$t$ graph for constant acceleration from rest (a straight line through the origin). The area under the curve between $t=n-1$ and $t=n$ shaded (a trapezoid); this area is the distance in the $n$th second. The formula $s_n=u+\frac{a}{2}(2n-1)$ annotated.
+> *Show:* a $v$–$t$ graph for constant positive acceleration with velocity remaining non-negative. Shade the area from $t=n-1$ to $t=n$; it is the signed displacement $\Delta x_n=u+\frac{a}{2}(2n-1)$ in that one-second interval, and equals distance here because velocity does not reverse.
 > *Search:* "nth second distance v-t graph constant acceleration shaded area"
 
 > [!abstract] DIAGRAM D3.11 · Relative velocity: two particles approaching
@@ -850,7 +860,7 @@ For two particles on the same line: reduce to a single particle with relative ve
 
 ### 7.4 The nth-second formula
 
-For constant acceleration: $s_n=u+\frac{a}{2}(2n-1)$. This avoids computing $s(n)$ and $s(n-1)$ separately. Useful for "find the distance in the 5th second" problems.
+For constant acceleration, the displacement during the $n$th second is $\Delta x_n=u+\frac{a}{2}(2n-1)$ (with $n$ in seconds). It equals the distance travelled in that interval only if velocity does not change sign during it; otherwise split the interval at the turning time and add the absolute displacements. This avoids computing $x(n)$ and $x(n-1)$ separately when no reversal occurs.
 
 ## Part 8 · Examiner traps
 
@@ -970,7 +980,7 @@ Compare the velocity–time relations for linear drag ($v\sim e^{-t/\tau}$) and 
 
 <details><summary>Solution</summary>
 
-**Method.** Linear drag: the velocity approaches terminal exponentially, with a characteristic time $\tau=m/b$. The approach is from above (if falling) — the velocity overshoots and relaxes. Quadratic drag: the velocity approaches terminal as $\tanh$, which is slower initially (the drag is weaker at low speeds) and faster later (the drag grows with $v^2$). The key physical difference: linear drag is proportional to $v$ (dominant at low speeds, e.g. viscous drag on small objects), quadratic drag is proportional to $v^2$ (dominant at high speeds, e.g. air resistance on cars, bullets, skydivers).
+**Method.** With downward chosen positive and release from rest, both models approach terminal speed monotonically from below: linear drag gives an exponential approach with characteristic time $\tau=m/b$, while quadratic drag gives a hyperbolic-tangent solution. At low speeds, quadratic drag is weaker than linear drag with a comparable coefficient scale because it is proportional to $v^2$ rather than $v$. Linear drag is a useful low-Reynolds-number model (for example, Stokes drag on a small sphere); quadratic drag is often useful at higher Reynolds numbers. The actual regime depends on Reynolds number and shape, not speed alone.
 
 **Checks.** (i) For a sphere of radius $r$ at speed $v$: the Reynolds number $Re=\rho vr/\eta$ determines which regime applies. $Re\ll1$: linear (Stokes). $Re\gg1$: quadratic (Newton). (ii) A raindrop ($r\sim1$ mm, $v\sim5$ m/s): $Re\sim3000$ — quadratic drag.
 
@@ -1425,7 +1435,7 @@ $v=\sqrt{2gh}=\sqrt{400}=20$ m/s.
 
 <details><summary>Answer</summary>
 
-(a) $m\,dv/dt=-mg-bv^2$. Going up: $v>0$, drag is downward (same as gravity): $dv/dt=-g-(b/m)v^2$. Coming down: $v<0$, drag is upward (opposite to gravity): $dv/dt=-g+(b/m)v^2$. (b) Terminal (downward): $-g+(b/m)v_T^2=0\Rightarrow v_T=\sqrt{mg/b}$. (c) Going up: $v$ decreases faster than free fall (both gravity and drag oppose motion). Coming down: $v$ approaches $v_T$ asymptotically from below (gravity accelerates, drag decelerates). The upward phase takes less time than the downward phase (the average speed is higher going up because the drag is stronger — wait, that's backwards. Actually, the upward phase is shorter because the deceleration is larger, so the ball reaches the top faster. The downward phase is longer because the terminal velocity limits the speed).
+(a) Taking upward as positive, quadratic drag always opposes velocity, so $m\,dv/dt=-mg-bv|v|$. On the ascent ($v>0$), $dv/dt=-g-(b/m)v^2$; on descent ($v<0$), $dv/dt=-g+(b/m)v^2$. (b) The terminal velocity is downward: setting $dv/dt=0$ gives $v_T=-\sqrt{mg/b}$, so the terminal speed is $\sqrt{mg/b}$. (c) On ascent the speed falls to zero under gravity and drag. On descent, the speed rises from zero and approaches the terminal speed asymptotically. For a return to the launch height, the descent takes longer than the ascent: drag makes the downward speed at a given height less than the corresponding upward speed.
 
 </details>
 

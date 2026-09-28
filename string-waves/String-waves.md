@@ -74,9 +74,9 @@ mindmap
 ## Part 1: Foundations & Harmonic Wave Kinematics
 
 ### 1.1 The Definition of a Wave
-A wave is an organized, self-propagating disturbance traveling through a medium (or field) that transports **energy**, **momentum**, and **information** without executing a net transport of matter.
+A wave is a disturbance that propagates through a medium or field and can transfer energy and momentum. In the usual linear-wave model, the medium's elements oscillate about equilibrium without sustained bulk transport; nonlinear waves can also produce a mean drift.
 
-In a **transverse mechanical wave**, the displacement $\vec y(x,t)$ of each constituent element of the medium is strictly perpendicular to the direction of energy propagation $\hat x$:
+In a **transverse mechanical wave on a string**, the transverse displacement $\vec y(x,t)$ of each element is perpendicular to the direction of propagation $\hat x$:
 $$\vec y(x,t) \cdot \vec v_{\text{wave}} = 0$$
 
 ### 1.2 The General Mathematical Form of a 1D Traveling Wave
@@ -89,9 +89,7 @@ For any arbitrary profile to preserve its shape as it translates uniformly along
 > **Condition of Validity:**
 > The shape invariance $y = f(x \mp vt)$ holds strictly for **non-dispersive, linear media** where wave speed $v$ is independent of frequency $\omega$ and the amplitude is sufficiently small that Hooke's elastic limit is not exceeded.
 
-To test whether any arbitrary mathematical expression $y(x,t)$ represents a valid traveling wave:
-1. It must be expressible as a function of the single combined linear argument $\xi = kx \pm \omega t$ or $\xi = x \mp vt$.
-2. It must remain finite and bounded for all real physical domains of $x$ and $t$ (no infinite singularities).
+For a profile to travel without changing shape at constant speed in this model, it must have the form $y(x,t)=f(x-vt)$ or $f(x+vt)$ (equivalently, for a harmonic component, a function of $kx\mp\omega t$ with $v=\omega/k$). A sufficiently differentiable profile of this form solves the constant-speed 1-D wave equation. Boundedness is a physical amplitude/energy requirement for a particular string, not a mathematical criterion for solving the wave equation; a dispersive medium generally changes the shape of a non-sinusoidal profile.
 
 ### 1.3 Plane Progressive Harmonic Waves
 When the source executes Simple Harmonic Motion (SHM) of frequency $f = \frac{\omega}{2\pi}$ and amplitude $A$, the resulting disturbance is sinusoidal:
@@ -154,9 +152,7 @@ We assume paraxial displacements: the slope of the string everywhere is very sma
 $$\left|\frac{\partial y}{\partial x}\right| \ll 1 \implies \sin\theta \approx \tan\theta \approx \theta, \quad \cos\theta \approx 1 - \frac{\theta^2}{2} \approx 1$$
 
 Under this approximation:
-1. The horizontal component of tension remains constant:
-   $$T_x = T \cos\theta \approx T = \text{constant}$$
-   Consequently, there is no net horizontal force, and the element undergoes zero longitudinal displacement.
+1. To first order in the small slope, the horizontal component of tension is $T_x\approx T$ at both ends, so the net horizontal force is negligible. Longitudinal motion and the second-order increase in string length are neglected in this linear transverse-wave model; zero horizontal force alone would not rule out a pre-existing uniform longitudinal motion.
 2. The transverse (vertical) force component exerted by the right part of the string on the segment at $x + dx$ is:
    $$F_{y,\text{right}} = + T \sin\theta(x + dx, t) \approx T \tan\theta(x + dx, t) = T \left.\frac{\partial y}{\partial x}\right|_{x+dx}$$
 3. The transverse force exerted by the left part of the string at $x$ is:

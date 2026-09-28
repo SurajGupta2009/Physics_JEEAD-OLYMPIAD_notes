@@ -124,7 +124,13 @@ $\mathbf{g}$ is the force per unit mass. $V$ is the potential energy per unit ma
 
 **Statement:** (1) A uniform spherical shell attracts a particle outside as if all the shell's mass were concentrated at the centre. (2) A uniform spherical shell exerts no net gravitational force on a particle inside it.
 
-**Proof sketch:** Consider a shell of radius $R$ and a particle at distance $r>R$. Divide the shell into thin rings. Each ring's contribution is $dF=GM\,dm\cos\phi/r'^2$ where $r'$ is the distance from the ring to the particle. By geometry, the $\cos\phi$ factor and the $1/r'^2$ combine to give $dF=G(M\,dm/M)/r^2$ — the same as if all mass were at the centre. For $r<R$: the contributions from opposite sides of the shell cancel exactly.
+**Proof (ring integration):** Put the test point a distance $s$ from the centre and let $\theta$ be the polar angle of a shell element measured from that radial direction. For a uniform shell of radius $R$ and surface density $\sigma$, the signed radial field is
+
+$$
+g_r=2\pi G\sigma R^2\int_0^\pi \frac{(R\cos\theta-s)\sin\theta}{(s^2+R^2-2sR\cos\theta)^{3/2}}\,d\theta.
+$$
+
+Evaluating gives $g_r=0$ for $s<R$ and $g_r=-GM/s^2$ for $s>R$ (negative is toward the centre), where $M=4\pi R^2\sigma$. Thus the interior cancellation and exterior point-mass result follow from the inverse-square law; they do not follow merely from Gauss's law without spherical symmetry.
 
 > [!abstract] DIAGRAM D9.1 · The shell theorem cone construction
 > *Show:* a spherical shell with a particle $P$ outside. Two small cones from $P$ intersect the shell in two areas $dA_1$ and $dA_2$. The nearer area is smaller but closer (stronger pull); the farther area is larger but farther (weaker pull). The two effects exactly cancel for a $1/r^2$ force.
@@ -154,7 +160,7 @@ $$
 g(r)=\frac{GM(r)}{r^2}=\frac{GMr}{R^3},\qquad V(r)=-\frac{GM}{2R^3}(3R^2-r^2). \qquad (3.3)
 $$
 
-**Spherical cavity** (by superposition): field at a point in a cavity = field of the full sphere minus the field of the removed sphere.
+**Spherical cavity** (by superposition): for a uniform-density sphere, represent the cavity as a negative-mass sphere of the same density. At cavity point $\mathbf r$, let $\mathbf c$ be the displacement from the full sphere's centre to the cavity's centre. The field is $\mathbf g_{\rm full}-\mathbf g_{\rm removed}=-(4\pi G\rho/3)\mathbf r+(4\pi G\rho/3)(\mathbf r-\mathbf c)=-(4\pi G\rho/3)\mathbf c$, a uniform field throughout the cavity (with vectors measured from the full sphere's centre).
 
 > [!abstract] DIAGRAM D9.2 · Field inside a uniform sphere and the cavity
 > *Show:* left: $g(r)$ vs $r$ for a uniform sphere — linear rise from zero at the centre to $GM/R^2$ at the surface, then $1/r^2$ falloff. Right: a sphere with a cavity, with the superposition method shown (full sphere minus small sphere).
@@ -166,9 +172,9 @@ $$
 
 **Depth:** $g'=g(1-d/R)$ (inside a uniform sphere, $g$ decreases linearly).
 
-**Latitude:** $g_{\text{eff}}=g-\omega^2 R\cos^2\lambda$ (centrifugal reduction, $\lambda$ = latitude).
+**Latitude (spherical, non-deforming Earth approximation):** at latitude $\lambda$, the centrifugal acceleration has magnitude $\omega^2R\cos\lambda$. Its component opposing local gravity is approximately $\omega^2R\cos^2\lambda$, giving $g_{\rm eff}\approx g-\omega^2R\cos^2\lambda$. This is a scalar approximation to the apparent vertical gravity; the centrifugal acceleration also has a horizontal component except at the equator and poles. Earth's oblateness and local geology are neglected.
 
-**Rotation:** $g_{\text{eff}}$ at the equator is $g-\omega^2 R\approx9.78$ m/s$^2$ (0.3% less than at the pole).
+**Rotation:** in this approximation, $g_{\rm eff}$ at the equator is $g-\omega^2R\approx9.78$ m/s$^2$ (about 0.3% less than the non-rotating value, not a universal local pole-to-equator difference).
 
 > [!abstract] DIAGRAM D9.3 · The four $g$-variation curves on one plate
 > *Show:* four panels: (1) $g$ vs altitude (decreasing); (2) $g$ vs depth (linear decrease to zero at centre); (3) $g$ vs latitude (slight increase from equator to pole); (4) $g$ vs rotation rate (decreasing as $\omega$ increases).
@@ -207,6 +213,8 @@ The reference is at infinity ($U=0$). The PE is always negative for a bound syst
 $$
 T^2=\frac{4\pi^2}{GM}a^3. \qquad (3.5)
 $$
+
+Here $M$ is the central mass and the orbiting body's mass is assumed negligible compared with $M$; for the exact two-body relative orbit replace $M$ by $M+m$. The same assumption applies to the circular-orbit and vis-viva formulas below unless their central parameter is explicitly replaced by $G(M+m)$.
 
 > [!abstract] DIAGRAM D9.4 · A Kepler ellipse with the focus, the two radii and the equal-area sectors
 > *Show:* an ellipse with the central mass at one focus. Two radii drawn from the focus to the ellipse at two nearby times. The area swept (a thin sector) shaded. The equal-area property shown: the sector at perigee (narrow, long) has the same area as the sector at apogee (wide, short).
@@ -250,7 +258,7 @@ At apogee ($r=a(1+e)$): $v_a=\sqrt{\frac{GM}{a}\frac{1-e}{1+e}}$.
 
 ### 3.10 Geostationary orbit
 
-A satellite in a geostationary orbit orbits above the equator with a period of 24 hours, so it appears stationary in the sky.
+A satellite in a geostationary orbit orbits above the equator with a period equal to one sidereal day (about 23 h 56 min), so it appears stationary in the sky.
 
 $$
 r_{\text{geo}}=\left(\frac{GMT^2}{4\pi^2}\right)^{1/3}\approx42{,}164\text{ km}. \qquad (3.8)
@@ -272,7 +280,7 @@ $$
 
 ### 3.13 Tides and the Roche limit
 
-The tidal force is the differential pull across the Earth: $F_{\text{tidal}}\approx2GMmr/R^3$ (where $r$ is the Earth's radius and $R$ is the Moon's distance). The Roche limit: the distance within which tidal forces tear a satellite apart: $d_{\text{Roche}}\approx2.44R_p(\rho_p/\rho_s)^{1/3}$.
+Across a body of radius $r_s$ at distance $d$ from a planet of mass $M_p$, the near-to-far differential pull is approximately $F_{\text{tidal}}\approx2GM_pm r_s/d^3$. The classical fluid Roche limit is $d_{\text{Roche}}\approx2.44R_p(\rho_p/\rho_s)^{1/3}$; this coefficient comes from a rotating-fluid equilibrium model, not from the simple order-unity rigid-body force balance alone.
 
 > [!abstract] DIAGRAM D9.6 · The tide-raising differential-pull diagram
 > *Show:* the Earth with the Moon on the right. The Moon's pull on the near side (stronger) and the far side (weaker) shown as arrows. The differential (tidal) force creates two bulges: one toward the Moon, one away.
@@ -890,7 +898,7 @@ Sections A and B under two minutes each. Section C three minutes. Section D twel
 2. $U$: the negative sign is correct.
 3. $v_{\text{esc}}$: the factor of $\sqrt{2}$ is correct.
 4. Kepler's third law: $M$ is the central mass (or $m_1+m_2$ for binary stars).
-5. Geostationary orbit: period is exactly 24 hours.
+5. Geostationary orbit: period is one sidereal day, about 23 h 56 min (not a 24-hour mean solar day).
 6. $g$ inside a sphere: $g$ is proportional to $r$.
 7. $g$ at a depth: $g'=g(1-d/R)$, not $g(1-d/R)^2$.
 8. Energy: $E=-GMm/(2a)$ for elliptical orbits.
@@ -953,13 +961,13 @@ The gravitational potential $V=-GM/r$ has exactly the same form as the electric 
 
 ### OL1 — Shell theorem by Gauss's law for gravity
 
-Use Gauss's law for gravity ($\oint \mathbf{g}\cdot d\mathbf{A}=-4\pi GM_{\text{enc}}$) to prove the shell theorem: a uniform spherical shell exerts no net force on a particle inside it.
+Explain why Gauss's law for gravity alone does not prove that the field inside a uniform spherical shell is zero, then establish the interior result using spherical-shell integration (see §3.3).
 
 <details><summary>Solution</summary>
 
-**Method.** For a Gaussian surface inside the shell (radius $r<R$): $M_{\text{enc}}=0$ (no mass enclosed). By Gauss's law: $\oint \mathbf{g}\cdot d\mathbf{A}=0$. By symmetry, $\mathbf{g}$ is radial and constant on the sphere: $g\times4\pi r^2=0$, so $g=0$.
+**Method.** Gauss's law alone does not establish the result: it gives zero flux through an interior Gaussian sphere, but the field need not be constant on that surface because the shell is not enclosed by it. Instead, use the ring-integration proof in §3.3 (or a valid equal-solid-angle cone-pair proof): inverse-square weighting makes the contributions from paired shell patches cancel exactly. The field is zero everywhere inside the uniform spherical shell.
 
-**Significance.** This is the gravitational analogue of the result for electric fields inside a conducting shell. The proof is exact and does not require integration over rings.
+**Significance.** Spherical symmetry is essential; a non-uniform shell need not have zero interior field.
 
 </details>
 
@@ -969,7 +977,7 @@ A uniform spherical cloud of mass $M$ and initial radius $R$ starts at rest and 
 
 <details><summary>Solution</summary>
 
-**Method.** By energy conservation: $\frac{1}{2}M\dot{r}^2-GM^2/r=-GM^2/R$ (using $U=-GM^2/r$ for self-gravitating sphere, with some care about factors). The time to collapse from $R$ to $0$: $t=\pi\sqrt{R^3/(8GM)}$. This is a special case of the free-fall time for a self-gravitating sphere, important in astrophysics for star formation.
+**Method (pressureless, initially uniform sphere):** Follow a spherical mass shell initially at radius $r_0$. By the shell theorem, only its fixed enclosed mass $M(r_0)=M(r_0/R)^3$ affects it; exterior shells exert zero net force. Its equation is $\ddot r=-GM(r_0)/r^2$, and it starts from rest at $r_0$. Integrating this radial free-fall equation gives $t_{\rm ff}=\pi\sqrt{r_0^3/[8GM(r_0)]}=\pi\sqrt{R^3/(8GM)}$, independent of $r_0$. The uniform sphere therefore collapses homologously in this idealized model. This is not obtained by assigning the whole sphere the point-mass potential $-GM^2/r$.
 
 **Check.** Dimensionally: $t\propto\sqrt{R^3/(GM)}$ — same as Kepler's third law. ✓
 
@@ -981,7 +989,7 @@ Find the two $\Delta v$ values for a Hohmann transfer from Earth orbit ($r_1=1$ 
 
 <details><summary>Solution</summary>
 
-**Method.** Transfer ellipse: $a=(r_1+r_2)/2=1.262$ AU. At perigee: $v_p=\sqrt{GM(2/r_1-1/a)}$. At apogee: $v_a=\sqrt{GM(2/r_2-1/a)}$. Circular orbit speeds: $v_1=\sqrt{GM/r_1}$, $v_2=\sqrt{GM/r_2}$. $\Delta v_1=v_p-v_1$, $\Delta v_2=v_2-v_a$. In Earth-orbit units: $\Delta v_1=29.8\times(\sqrt{2-1/1.262}-1)=29.8\times0.257=7.66$ km/s. $\Delta v_2=24.1\times(1-\sqrt{2/1.524-1/1.262})=24.1\times0.148=3.57$ km/s. Total: $11.2$ km/s.
+**Method.** Transfer ellipse: $a=(r_1+r_2)/2=1.262$ AU. At perigee: $v_p=\sqrt{GM(2/r_1-1/a)}$. At apogee: $v_a=\sqrt{GM(2/r_2-1/a)}$. Circular orbit speeds: $v_1=\sqrt{GM/r_1}$, $v_2=\sqrt{GM/r_2}$. $\Delta v_1=v_p-v_1$, $\Delta v_2=v_2-v_a$. Using $v_1\approx29.8$ km/s and $v_2\approx24.1$ km/s: $\Delta v_1=29.8[\sqrt{2-1/1.262}-1]\approx2.95$ km/s; $\Delta v_2=24.1-29.8\sqrt{2/1.524-1/1.262}\approx2.65$ km/s. Total: approximately $5.60$ km/s.
 
 </details>
 
@@ -1003,7 +1011,7 @@ Derive the Roche limit: the distance at which a satellite is torn apart by tidal
 
 <details><summary>Solution</summary>
 
-**Method.** The tidal force on a small body of radius $r_s$ at distance $d$ from a planet of mass $M_p$ and radius $R_p$: $F_{\text{tidal}}=2GM_p m r_s/d^3$ (differential force across the body). The self-gravity holding the satellite together: $F_{\text{self}}=Gm^2/r_s^2=G\rho_s(4\pi r_s^3/3)^2/r_s^2$. Setting $F_{\text{tidal}}=F_{\text{self}}$ and simplifying: $d_{\text{Roche}}=R_p(2\rho_p/\rho_s)^{1/3}\approx2.44R_p(\rho_p/\rho_s)^{1/3}$ (the numerical factor accounts for the detailed geometry).
+**Method.** The tidal force on a small body of radius $r_s$ at distance $d$ from a planet of mass $M_p$ and radius $R_p$: $F_{\text{tidal}}=2GM_p m r_s/d^3$ (differential force across the body). The self-gravity holding the satellite together: $F_{\text{self}}=Gm^2/r_s^2=G\rho_s(4\pi r_s^3/3)^2/r_s^2$. Equating these gives only an order-unity, rigid-body tidal-balance estimate, $d\sim R_p(2\rho_p/\rho_s)^{1/3}$ (the exact prefactor depends on the adopted failure criterion and geometry). The classical fluid Roche limit $d\approx2.44R_p(\rho_p/\rho_s)^{1/3}$ is a separate result from a rotating-fluid equilibrium model; it does not follow just by inserting a coefficient into this force balance.
 
 </details>
 
@@ -1045,7 +1053,7 @@ A small body sits at the L1 Lagrange point between the Earth and the Sun. Show t
 
 <details><summary>Solution</summary>
 
-**Method.** At L1, the gravitational pulls of the Sun and Earth, plus the centrifugal force in the rotating frame, balance. The Sun's pull: $GM_\odot/r^2$. The Earth's pull: $GM_E/d^2$ (where $d$ is the distance from Earth). The centrifugal acceleration: $\omega^2 r$ (where $\omega$ is the orbital angular velocity). The balance condition is approximately: $r_1\approx R(1-(M_E/(3M_\odot))^{1/3})$. For Earth–Sun: $r_1\approx1.5\times10^6$ km from Earth — about 1% of the Earth–Sun distance.
+**Method.** At L1, the gravitational pulls of the Sun and Earth, plus the centrifugal force in the rotating frame, balance. The Sun's pull: $GM_\odot/r^2$. The Earth's pull: $GM_E/d^2$ (where $d$ is the distance from Earth). The centrifugal acceleration: $\omega^2 r$ (where $\omega$ is the orbital angular velocity). Let $x$ denote the distance from Earth toward the Sun, and $R$ the Earth–Sun separation. In the small-mass-ratio approximation, $x\approx R(M_E/(3M_\odot))^{1/3}\approx1.5\times10^6$ km. The distance from the Sun is $R-x$; the quoted $1.5\times10^6$ km is from Earth, about 1% of $R$.
 
 </details>
 
@@ -1156,7 +1164,7 @@ The period of a geostationary satellite is:
 
 <details><summary>Answer</summary>
 
-(b). 24 hours — the satellite must appear stationary in the sky.
+(b). One sidereal day (about 23 h 56 min) — the satellite must match Earth's rotation relative to the stars.
 
 </details>
 

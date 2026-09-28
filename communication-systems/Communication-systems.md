@@ -189,13 +189,13 @@ flowchart TD
 
 ### 3.6 Propagation: space wave
 
-Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon:
+Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon. For one antenna of height $h$ above a spherical Earth of radius $R$, the geometric horizon distance is
 
 $$
 d=\sqrt{2Rh} \qquad (3.2)
 $$
 
-where $R=6400$ km is Earth's radius and $h$ is the antenna height. For a TV tower at 100 m: $d=\sqrt{2\times6400\times0.1}=35.8$ km. Tropospheric scattering extends the range slightly beyond the geometric horizon. FM radio, television, mobile phones, and satellite communication all use space-wave propagation.
+for $h\ll R$. For transmitting and receiving antennas at heights $h_t$ and $h_r$, the ideal geometric line-of-sight range is approximately $d_{\max}=\sqrt{2Rh_t}+\sqrt{2Rh_r}$ (heights and distances in the same units). With $R=6400$ km, a 100 m tower alone sees a horizon about $35.8$ km away. Atmospheric refraction can extend the practical radio horizon beyond the geometric value; terrain and obstacles can shorten it. FM radio, television, mobile phones, and satellite communication use space-wave propagation.
 
 > [!abstract] DIAGRAM D100.4 · Line-of-sight propagation and horizon distance
 > *Show:* the Earth as a circle; a tower of height $h$ on the surface; a tangent line from the tower top to the horizon point; the distance $d$ along the surface; the formula $d=\sqrt{2Rh}$ labelled; a second taller tower with a longer range drawn beside it for comparison.
@@ -339,7 +339,7 @@ Too small: the capacitor follows the carrier, not the envelope (ripple). Too lar
 
 ### 3.12 Signal-to-noise and channel capacity
 
-**Thermal noise.** Any resistor at temperature $T$ produces noise power $P_n=kTB$ over bandwidth $B$. At room temperature ($T=290$ K): $kT=4\times10^{-21}$ W/Hz $=-174$ dBm/Hz. A receiver with bandwidth 10 MHz picks up $P_n=4\times10^{-14}$ W $=-104$ dBm of thermal noise — this is the floor below which no signal can be detected.
+**Thermal noise.** Any resistor at temperature $T$ produces noise power $P_n=kTB$ over bandwidth $B$. At room temperature ($T=290$ K): $kT=4\times10^{-21}$ W/Hz $=-174$ dBm/Hz. An ideal matched receiver with bandwidth 10 MHz has available thermal-noise power $P_n=kTB=4\times10^{-14}$ W $=-104$ dBm, before receiver noise figure and other noise sources. This sets a practical sensitivity scale, not an absolute detection threshold: detectability also depends on required SNR, integration time, coding, and interference.
 
 **Shannon's channel capacity theorem.** A channel with bandwidth $B$ and signal-to-noise ratio $S/N$ can transmit at most:
 

@@ -45,7 +45,7 @@ A magnetic field acts only on *moving* charge, always at right angles to the mot
 
 | quantity | value | why it matters |
 |---|---|---|
-| $\mu_0$ | $4\pi\times10^{-7}$ T m A$^{-1}$ (exactly, to $10^{-9}$) | $\mu_0/4\pi=10^{-7}$ is the Biot–Savart constant; $\mu_0/2\pi=2\times10^{-7}$ the wire's |
+| $\mu_0$ | $4\pi\times10^{-7}$ T m A$^{-1}$ (JEE approximation; measured value differs by about $5.5\times10^{-10}$ fractionally) | $\mu_0/4\pi\approx10^{-7}$ is the Biot–Savart constant; $\mu_0/2\pi\approx2\times10^{-7}$ the wire's |
 | $\mu_0\varepsilon_0$ | $1/c^2$ | magnetism and electricity are one theory (§2.5) |
 | Earth's field | $25$–$65\ \mu$T; $\approx45\ \mu$T at mid-latitudes | the scale every laboratory field is compared with |
 | field of $10$ A at $1$ cm | $0.2$ mT $=4\times$ Earth | why a compass near a wire swings (Oersted) |
@@ -205,7 +205,7 @@ mindmap
 | $\mathbf M$, $\mathbf H$ | magnetisation (moment per volume), auxiliary field | A m$^{-1}$, A m$^{-1}$ | $\mathbf B=\mu_0(\mathbf H+\mathbf M)$; $\mathbf H$ is what a free current makes, $\mathbf M$ what matter adds |
 | $\chi$, $\mu_r$, $\mu$ | susceptibility, relative permeability, permeability | —, —, T m A$^{-1}$ | $\mathbf M=\chi\mathbf H$, $\mu_r=1+\chi$, $\mu=\mu_r\mu_0$; linear media only |
 | $\Phi_B$ | magnetic flux | weber, Wb $=$ T m$^2$ | $\int\mathbf B\cdot d\mathbf A$; through any *closed* surface, zero |
-| $\mu_0$ | permeability of free space | $4\pi\times10^{-7}$ T m A$^{-1}$ | $\mu_0/4\pi=10^{-7}$ exactly enough for every problem |
+| $\mu_0$ | permeability of free space | $4\pi\times10^{-7}$ T m A$^{-1}$ (JEE approximation) | $\mu_0/4\pi\approx10^{-7}$ at the precision needed here |
 | $\delta$, $\theta_{\text{dip}}$, $B_H$, $B_V$ | declination, dip (inclination), horizontal and vertical components of the Earth's field | °, °, T, T | $B_H=B\cos\theta_{\text{dip}}$, $B_V=B\sin\theta_{\text{dip}}$; dip positive when the north-seeking end points down |
 
 ### 2.2 Right-hand rules, fixed once
@@ -2802,7 +2802,7 @@ A coil of $50$ turns, $3.0\times4.0$ cm, carries $0.10$ A in a uniform $0.25$ T 
 
 <details><summary>Solution</summary>
 
-(a) $B_1=\mu_0I_1/2\pi d$ at wire 2; a length $L$ of wire 2 feels $I_2LB_1$: $F/L=\mu_0I_1I_2/2\pi d$, attractive for parallel currents. With $I_1=I_2=1$ A and $d=1$ m this is $2\times10^{-7}$ N m$^{-1}$ — the pre-2019 definition of the ampere, which fixed $\mu_0=4\pi\times10^{-7}$ exactly. (b) $B=2\times10^{-4}$ T; $F=evB=3.2\times10^{-17}$ N, towards the wire if the proton moves with the current. (c) In the proton's frame the ions (moving at $-v$) are length-contracted and the electrons less so; the wire acquires $\lambda'=-\gamma_vIv/c^2=-(10)(10^6)/(9\times10^{16})=-1.1\times10^{-10}$ C m$^{-1}$ and attracts the proton electrostatically with $eE'=e\lambda'/2\pi\varepsilon_0r=3.2\times10^{-17}$ N — the same force, now called electric. (d) Magnetic forces between two point charges moving at right angles are not antiparallel; the field carries momentum ($\varepsilon_0\mathbf E\times\mathbf B$ per unit volume), and particles plus field conserve momentum exactly. For closed steady circuits the field's momentum is constant and the third law holds in total.
+(a) $B_1=\mu_0I_1/2\pi d$ at wire 2; a length $L$ of wire 2 feels $I_2LB_1$: $F/L=\mu_0I_1I_2/2\pi d$, attractive for parallel currents. With $I_1=I_2=1$ A and $d=1$ m this is $2\times10^{-7}$ N m$^{-1}$ — the pre-2019 definition of the ampere, which fixed $\mu_0=4\pi\times10^{-7}$ exactly; since 2019 the ampere is defined via the elementary charge and $\mu_0$ is measured (the difference is negligible at this precision). (b) $B=2\times10^{-4}$ T; $F=evB=3.2\times10^{-17}$ N, towards the wire if the proton moves with the current. (c) In the proton's frame the ions (moving at $-v$) are length-contracted and the electrons less so; the wire acquires $\lambda'=-\gamma_vIv/c^2=-(10)(10^6)/(9\times10^{16})=-1.1\times10^{-10}$ C m$^{-1}$ and attracts the proton electrostatically with $eE'=e\lambda'/2\pi\varepsilon_0r=3.2\times10^{-17}$ N — the same force, now called electric. (d) Magnetic forces between two point charges moving at right angles are not antiparallel; the field carries momentum ($\varepsilon_0\mathbf E\times\mathbf B$ per unit volume), and particles plus field conserve momentum exactly. For closed steady circuits the field's momentum is constant and the third law holds in total.
 
 > [!success] Check
 > (c) $\gamma_v-1=6\times10^{-6}$ — the relativistic bookkeeping matters at the $10^{-15}$ level of the wire's charge and yet produces the whole force ✓. Reversing $v$ reverses $\lambda'$: repulsion, as for antiparallel currents ✓.

@@ -77,9 +77,7 @@ python3 tools/obsidian_plugins.py --check    # shows what is installed
 git add .obsidian/plugins && git commit -m "vault: vendor the pinned Obsidian plugins"
 ```
 
-That commit is what makes the vault work "out of the box" for every later clone. Without it, the
-same result comes from Obsidian's own *Settings → Community plugins → Browse* for the eight ids
-above — the committed `data.json` settings are picked up either way. `--latest` re-pins to the
+The vault configuration and content are committed, and the five Cengage PDFs are tracked in the repository; those source books are an intentional part of the project, not optional external dependencies. Community-plugin binaries are separate release artefacts: until they are vendored, each clone must complete the one-time install above (or install the eight listed plugins through Obsidian's *Settings → Community plugins → Browse*). The committed `data.json` settings are picked up either way. Do not remove the tracked Cengage PDFs or treat the Obsidian vault as optional. `--latest` re-pins to the
 newest releases and updates `plugins.lock.json`.
 
 ### Vault conventions the plugins rely on

@@ -144,11 +144,11 @@ flowchart LR
 
 ### 3.3 Work of the standard forces
 
-**Gravity:** $W_{\text{grav}}=mgh$ (or $-mgh$, depending on direction). Path independent — only the height difference matters.
+**Gravity:** for upward coordinate $y$, $W_{\text{grav}}=mg(y_i-y_f)=-\Delta(mgy)$. It is path independent; only the height difference matters.
 
-**Friction:** $W_{\text{fric}}=-f_k d$ where $d$ is the total path length. Path dependent — a longer path means more work by friction.
+**Friction:** for constant kinetic-friction magnitude, $W_{\text{fric}}=-f_k d$, where $d$ is the sliding distance. More generally, $W_{\text{fric}}=-\int f_k\,ds$ along the relative sliding path. It is path dependent.
 
-**Normal force:** $W_N=0$ if the surface does not move (the displacement of the contact point is zero). $W_N\neq0$ if the surface moves (e.g., a block on an accelerating wedge — the normal force does work on the block).
+**Normal force:** for a fixed, smooth surface the normal is perpendicular to the object's instantaneous displacement, so it does no work. If the surface moves (for example, a block on a moving wedge), the normal force can do work on the block because its ground-frame displacement need not be perpendicular to the normal.
 
 **Spring:** $W_{\text{spring}}=\int_0^x(-kx)\,dx=-\frac{1}{2}kx^2$. The spring does negative work when stretched (energy goes into the spring) and positive work when released.
 
@@ -279,7 +279,7 @@ $$
 \boxed{K+U=\text{const}\quad\text{(mechanical energy conservation)}} \qquad (3.9)
 $$
 
-**Precise condition:** mechanical energy is conserved if and only if all forces doing work are conservative. If friction acts: $W_{\text{fric}}=-f_k d=\Delta E$, so $E$ decreases by $f_k d$.
+**Precise condition:** between two states, $\Delta(K+U)=W_{\text{nc}}$. Mechanical energy is unchanged when the net work of all non-conservative forces over that interval is zero; it is conserved for arbitrary allowed motion when all forces doing work are conservative. If constant-magnitude kinetic friction acts through sliding distance $d$, $W_{\text{fric}}=-f_kd$, so the mechanical energy change is $-f_kd$ (other non-conservative work, if present, must also be included).
 
 > [!abstract] DIAGRAM D6.4 · The energy ledger bar chart
 > *Show:* three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\Delta K$ and $\Delta U$ with the non-conservative work $W_{\text{nc}}$ shown as a separate bar. The total height is the same in all three (energy conservation with the thermal term).
@@ -304,8 +304,8 @@ flowchart TD
 The $U(x)$ graph is a powerful tool:
 
 - **Turning points:** where $K=0$ (the particle momentarily stops). At a turning point: $E=U(x)$.
-- **Bound motion:** $E<0$ for the $-GMm/r$ potential (the particle cannot escape to infinity).
-- **Equilibrium:** where $dU/dx=0$. Stable if $d^2U/dx^2>0$ (minimum), unstable if $d^2U/dx^2<0$ (maximum).
+- **Bound motion:** for $U(r)=-GMm/r$ with $U(\infty)=0$, negative total energy implies the particle cannot reach infinity. (For general potentials, determine boundedness from the allowed region $E\ge U$ and its turning points.)
+- **Equilibrium:** where $dU/dx=0$. In one dimension, a strict local minimum is stable and a strict local maximum is unstable. If $U''\ne0$, then $U''>0$ identifies a stable minimum and $U''<0$ an unstable maximum; when $U''=0$, inspect higher-order terms or the full local shape.
 
 > [!abstract] DIAGRAM D6.5 · The $U(x)$ energy landscape
 > *Show:* a $U(x)$ curve with a well (stable minimum), a hill (unstable maximum), and two turning points at a given energy $E$. The kinetic energy $K=E-U$ shown as the vertical gap between the $E$ line and the $U$ curve. The bound region (where $E>U$) shaded.
@@ -325,7 +325,7 @@ flowchart TD
   F --> G["min = stable, max = unstable"]
 ```
 
-> *Read:* the particle lives where $E\ge U$, turns where $E=U$, and comes to rest at the minima and saddles of the landscape.
+> *Read:* classically allowed positions satisfy $E\ge U$; a turning point has $E=U$. At a stable minimum, a particle at the equilibrium position may remain at rest; at other energies it generally passes through the minimum with nonzero speed. Stability at a point with $U''=0$ needs a higher-order or direct local analysis.
 
 ### 3.10 The energy/force decision rule
 
@@ -603,20 +603,26 @@ A block of mass 0.5 kg is launched by a spring ($k=500$ N/m) compressed by 0.1 m
 
 <details><summary>Solution</summary>
 
-**Method.** $\frac{1}{2}\times500\times0.01=\frac{1}{2}\times0.5\times v^2$. $v^2=5$. $v=2.24$ m/s. Wait — let me recompute. $\frac{1}{2}\times500\times0.01=2.5$ J. $v=\sqrt{2\times2.5/0.5}=\sqrt{10}=3.16$ m/s.
+**Method.** The spring stores $U=\frac12kx^2=\frac12(500)(0.1)^2=2.5$ J. On the frictionless surface this becomes translational kinetic energy: $\frac12mv^2=2.5$, so $v=\sqrt{2U/m}=\sqrt{10}=3.16$ m/s.
 
 </details>
 
 ### E7 — The block-on-wedge energy audit
 
-A block of mass $m$ slides from rest down a wedge of mass $M$ (angle $\theta$, height $h$, all surfaces frictionless). Find the speed of the block and the wedge when the block reaches the bottom.
+A block of mass $m$ slides from rest down a frictionless wedge of mass $M$ and angle $\theta$ (the incline descends to the right). Its vertical drop is $h$, and the wedge moves without friction on a horizontal floor. Find the block's speed relative to the wedge, its ground-frame speed, and the wedge's speed at the bottom.
 
 > [!success] Check
 > At $M\to\infty$: $v_{\text{block}}=\sqrt{2gh}$ — the standard free-fall result. At $m\ll M$: the wedge barely moves.
 
 <details><summary>Solution</summary>
 
-**Method.** Momentum conservation (horizontal): $mv_{bx}-Mv_w=0\Rightarrow v_{bx}=Mv_w/m$. Energy: $mgh=\frac{1}{2}mv_b^2+\frac{1}{2}Mv_w^2$. $v_b^2=v_{bx}^2+v_{by}^2$. From the constraint: $v_{by}=v_{bx}\tan\theta$... this gets complicated. Using the velocity relation from PART 5: $v_w=mv_{\text{rel}}\cos\theta/(M+m\sin^2\theta)$... let me use energy directly. $mgh=\frac{1}{2}m(v_{\text{rel}}\cos\theta-v_w)^2+\frac{1}{2}m(v_{\text{rel}}\sin\theta)^2+\frac{1}{2}Mv_w^2$. With $v_w=mv_{\text{rel}}\cos\theta/(M+m)$ (from momentum): this can be solved. The block's speed relative to the wedge: $v_{\text{rel}}=\sqrt{2gh(M+m)/(M+m\sin^2\theta)}$.
+**Method.** Let $u$ be the block's speed relative to the wedge. Horizontal momentum conservation gives the wedge velocity $V=-mu\cos\theta/(M+m)$. The block's ground-frame components are $v_x=Mu\cos\theta/(M+m)$ and $v_y=-u\sin\theta$. From energy conservation,
+
+$$
+u^2=\frac{2gh(M+m)}{M+m\sin^2\theta},\qquad v_{\rm wedge}=\frac{m u\cos\theta}{M+m},\qquad v_{\rm block}=u\sqrt{\sin^2\theta+\left(\frac{M}{M+m}\right)^2\cos^2\theta}.
+$$
+
+The wedge moves left; the formula for $v_{\rm block}$ is its speed in the ground frame, while $u$ is the relative speed. The signs and energy balance are checked by $mgh=\frac12M V^2+\frac12m v_{\rm block}^2$.
 
 </details>
 
@@ -990,7 +996,13 @@ For a system of two particles: show that $K=\frac{1}{2}Mv_{\text{cm}}^2+K_{\text
 
 <details><summary>Solution</summary>
 
-**Method.** $K=\frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2$. Write $v_1=v_{\text{cm}}+v_1'$, $v_2=v_{\text{cm}}+v_2'$ where $v_1'$, $v_2'$ are velocities in the CM frame. $m_1v_1'+m_2v_2'=0$ (total momentum zero in CM frame). $K=\frac{1}{2}m_1(v_{\text{cm}}+v_1')^2+\frac{1}{2}m_2(v_{\text{cm}}+v_2')^2=\frac{1}{2}Mv_{\text{cm}}^2+\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2+m_{\text{cm}}(m_1v_1'+m_2v_2')$. The cross term vanishes. $K_{\text{rel}}=\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2$. Using $m_1v_1'=-m_2v_2'$: $K_{\text{rel}}=\frac{1}{2}\mu v_{\text{rel}}^2$ where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass.
+**Method.** Write $\mathbf{v}_i=\mathbf{V}_{\rm cm}+\mathbf{v}'_i$, where primes denote velocities relative to the centre of mass. Then $m_1\mathbf{v}'_1+m_2\mathbf{v}'_2=\mathbf{0}$. Expanding the kinetic energy,
+
+$$
+K=\frac12 M V_{\rm cm}^2+\mathbf{V}_{\rm cm}\cdot(m_1\mathbf{v}'_1+m_2\mathbf{v}'_2)+\frac12m_1v_1'^2+\frac12m_2v_2'^2.
+$$
+
+The cross term vanishes. In the CM frame, $m_1\mathbf{v}'_1=-m_2\mathbf{v}'_2$, so the remaining internal kinetic energy is $K_{\rm rel}=\frac12\mu v_{\rm rel}^2$, where $\mu=m_1m_2/(m_1+m_2)$ and $v_{\rm rel}=|\mathbf{v}_1-\mathbf{v}_2|$.
 
 **Significance.** This decomposition is used in collision problems (PART 7): in the CM frame, elastic collisions simply reverse the velocities. The CM kinetic energy $\frac{1}{2}Mv_{\text{cm}}^2$ is unchanged by the collision.
 
@@ -1038,7 +1050,13 @@ A block slides from rest down a frictionless wedge of mass $M$ and angle $\theta
 
 <details><summary>Solution</summary>
 
-**Method.** The student's error: ignoring the wedge's kinetic energy. The correct energy balance: $mgh=\frac{1}{2}mv_b^2+\frac{1}{2}Mv_w^2$. The wedge gains KE — the block's speed is less than $\sqrt{2gh}$. The correct speed: $v_b=\sqrt{2gh(M+m)/(M+m\sin^2\theta)}$. As $M\to\infty$: $v_b\to\sqrt{2gh}$ (the wedge doesn't move). As $M\to0$: $v_b\to\sqrt{2gh/\sin^2\theta}$ (wait — this diverges! The issue: when $M=0$, the wedge accelerates instantly and the block never reaches the bottom. The limit is pathological.)
+**Method.** Let $u$ be the block's speed relative to the wedge along the incline, and let the incline descend to the right at angle $\theta$. Horizontal momentum is conserved: the wedge velocity is $V=-mu\cos\theta/(M+m)$. The block's ground-frame velocity components are $v_x=Mu\cos\theta/(M+m)$ and $v_y=-u\sin\theta$. Energy conservation gives
+
+$$
+u^2=\frac{2gh(M+m)}{M+m\sin^2\theta},\qquad v_{\rm wedge}=|V|=\frac{m u\cos\theta}{M+m}.
+$$
+
+Here $u$ is the **relative** speed, not the block's ground-frame speed; confusing these leads to erroneous claims. The block's ground-frame speed is $v_b=u\sqrt{\sin^2\theta+\left(\frac{M}{M+m}\right)^2\cos^2\theta}$, and the energy balance is $mgh=\frac12 M V^2+\frac12m v_b^2$. For finite $M$ and a nonvertical incline, $v_b<\sqrt{2gh}$ because the wedge also carries kinetic energy. As $M\to\infty$, $v_b\to\sqrt{2gh}$; as $M\to0$, $u\to\sqrt{2gh}/\sin\theta$ while the ground-frame speed tends to $\sqrt{2gh}$ (the wedge recoils with negligible kinetic energy).
 
 </details>
 
@@ -1070,7 +1088,13 @@ A bead slides on a frictionless hoop of radius $R$ rotating at $\omega$ about a 
 
 <details><summary>Solution</summary>
 
-**Method.** In the rotating frame: $U_{\text{eff}}=mgR\cos\theta-\frac{1}{2}m\omega^2 R^2\sin^2\theta$. Equilibrium: $dU_{\text{eff}}/d\theta=-mgR\sin\theta-m\omega^2 R^2\sin\theta\cos\theta=0$. $\sin\theta(g+\omega^2 R\cos\theta)=0$. Solutions: $\theta=0$ and $\cos\theta=-g/(\omega^2 R)$ (if $\omega^2 R>g$). The bottom is stable for $\omega<\sqrt{g/R}$ and unstable for $\omega>\sqrt{g/R}$.
+**Method.** Measure $\theta$ from the downward vertical, so the bead's height relative to the hoop centre is $z=-R\cos\theta$ and its distance from the rotation axis is $R\sin\theta$. In the frame rotating with the hoop,
+
+$$
+U_{\rm eff}(\theta)=-mgR\cos\theta-\frac12m\omega^2R^2\sin^2\theta.
+$$
+
+Equilibrium requires $dU_{\rm eff}/d\theta=mR\sin\theta(g-\omega^2R\cos\theta)=0$. The bottom, $\theta=0$, is always an equilibrium; it is stable for $\omega<\sqrt{g/R}$ and unstable for faster rotation. When $\omega^2R>g$, two additional stable equilibria appear, at $\theta=\pm\cos^{-1}(g/(\omega^2R))$.
 
 </details>
 
@@ -1443,7 +1467,13 @@ $d=10(1+0.36)/(1-0.36)=10\times1.36/0.64=21.25$ m.
 
 <details><summary>Answer</summary>
 
-(a) $P/v-f=ma=m\,dv/dt$. $m\,dv/dt=P/v-f$. This is a nonlinear ODE. At large $v$: $P/v\approx f$, $a\approx0$. At small $v$: $a\approx P/(mv)$ — singular at $v=0$ (infinite acceleration from rest at constant power — an idealisation). (b) $v_{\max}=P/f$. (c) At $v=v_{\max}/2$: $P/(v_{\max}/2)-f=2f-f=f$. $a=f/m$. $t=(v_{\max}/2)/(f/m)=Pm/(2f^2)$. Wait — this assumes constant acceleration, which is not true. The exact solution requires integrating $m\,dv/(P/v-f)=dt$.
+(a) The equation is $m\,dv/dt=P/v-f$. Separating variables and integrating from rest gives
+
+$$
+t(v)=\frac{mP}{f^2}\ln\!\left(\frac{P}{P-fv}\right)-\frac{mv}{f},\qquad 0\le v<P/f.
+$$
+
+The ideal constant-power model has unbounded initial acceleration at $v=0$; real motors have a force/torque limit. (b) The terminal speed is approached asymptotically: $v_{\max}=P/f$. (c) At half this speed, $t=\frac{mP}{f^2}(\ln2-\frac12)$.
 
 </details>
 
@@ -1452,7 +1482,7 @@ $d=10(1+0.36)/(1-0.36)=10\times1.36/0.64=21.25$ m.
 
 <details><summary>Answer</summary>
 
-(a) $F=\lambda xg+\lambda v^2$ where $\lambda=m/L$. (b) $P=Fv=\lambda xgv+\lambda v^3$. (c) The extra $\frac{1}{2}\lambda v^3$ per unit time goes into the "collision" energy of links being jerked into motion. The remaining $\frac{1}{2}\lambda v^3$ goes into... actually, the total power $Fv=\lambda xgv+\lambda v^3$. The PE rate is $\lambda xgv$. The KE rate is $\frac{1}{2}\lambda v^3$. The "missing" $\frac{1}{2}\lambda v^3$ is the rate of energy dissipation in the inelastic "collisions" of the chain links.
+(a) With $\lambda=m/L$ and upward speed $v$, $F=\lambda xg+\lambda v^2$. (b) The applied power is $P=Fv=\lambda xgv+\lambda v^3$. (c) The gravitational-potential-energy rate is $\lambda xgv$ and the kinetic-energy rate of the moving length is $\frac12\lambda v^3$. The remaining $\frac12\lambda v^3$ is dissipated as links are picked up in inelastic impacts with the moving chain.
 
 </details>
 
