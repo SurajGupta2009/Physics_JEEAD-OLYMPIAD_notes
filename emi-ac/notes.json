@@ -1,0 +1,80 @@
+{
+  "slug": "emi-ac",
+  "title": "Electromagnetic induction, inductance and alternating current",
+  "master": "Emi-ac.md",
+  "part": 20,
+  "plan_parts": [
+    20,
+    21,
+    22
+  ],
+  "source": "no Cengage volume in this repository for induction/AC; coverage map built from the standard JEE Advanced headings listed in plan.md PART 20-22 plus the shipped current-electricity, capacitors and electromagnetic-waves notes",
+  "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, mermaid FIGUREs (docs/obsidian-plugin-workflow.md §2)",
+  "stage": 1,
+  "stages": {
+    "1": {
+      "name": "theory: blocks 0-3 (flux and Faraday, motional EMF, Lenz, the rod family, induced fields, eddy currents, inductance, RL and LC, AC through R L C, phasors, resonance, power, transformers, rectifiers)",
+      "minimums": {
+        "checks": 0,
+        "exemplars": 0,
+        "practice": 0,
+        "olympiad": 0,
+        "diagrams": 6,
+        "figures": 6,
+        "words": 12000,
+        "callouts": 24
+      },
+      "paper": false
+    },
+    "2": {
+      "name": "exam craft: blocks 4-9 (ledger, exemplars, archetypes and practice, toolkit, traps, playbook)",
+      "minimums": {
+        "checks": 12,
+        "exemplars": 10,
+        "practice": 25,
+        "olympiad": 0,
+        "diagrams": 12,
+        "figures": 8,
+        "words": 24000,
+        "callouts": 40
+      },
+      "paper": false
+    },
+    "3": {
+      "name": "olympiad layer and apparatus: blocks 10-14 (OL problems, paper, marking, formula sheet, checkpoint)",
+      "minimums": {
+        "checks": 12,
+        "exemplars": 10,
+        "practice": 25,
+        "olympiad": 10,
+        "diagrams": 16,
+        "figures": 10,
+        "words": 32000,
+        "callouts": 48
+      },
+      "paper": true
+    }
+  },
+  "paper": {
+    "questions": 36,
+    "marks": 200,
+    "minutes": 180,
+    "sections": {
+      "4": 20,
+      "5": 6,
+      "9": 10
+    }
+  },
+  "callout_types": [
+    "note",
+    "info",
+    "warning",
+    "success",
+    "danger",
+    "tip",
+    "quote",
+    "question",
+    "abstract",
+    "example"
+  ]
+}

@@ -119,15 +119,15 @@ Regenerate all six with:
 python3 tools/html_to_markdown.py
 ```
 
-## The course order (all 33 slots)
+## The course order (all 31 slots)
 
 The way the syllabus is taught, and the order the Obsidian dashboards use
 ([`_obsidian/dashboards/spine.md`](_obsidian/dashboards/spine.md)): every chapter relies only on the
 ones above it. The `order` is registered in `topics.json` and written into each chapter's
-frontmatter; `tools/check_all.py` keeps the two equal. Slot 17 is the electrostatics module
-(plan.md PARTs 13–15 merged into one chapter, complete) and slot 20 the magnetism module (PARTs 16–19,
-complete); the three **pending** slots are the induction → inductance → AC chapters listed in
-[PENDING.md](PENDING.md).
+frontmatter; `tools/check_all.py` keeps the two equal. Slots 17, 20 and 21 are the three merged
+Electricity & Magnetism modules — electrostatics (plan.md PARTs 13–15, complete), magnetism (PARTs
+16–19, complete) and induction–inductance–AC (PARTs 20–22, **in progress**, theory complete); nothing
+is pending once it lands ([PENDING.md](PENDING.md)).
 
 | order | chapter | block | plan.md PART | status | it supplies the next chapters with |
 |:-:|---|---|:-:|:-:|---|
@@ -151,19 +151,17 @@ complete); the three **pending** slots are the induction → inductance → AC c
 | 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
 | 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | [Magnetism](magnetism/Magnetism.md) | electricity-magnetism | 16–19 | ✅ | the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, matter, the Earth |
-| 21 | Electromagnetic induction — `electromagnetic-induction` | electricity-magnetism | 20 | ⏳ pending | Faraday, Lenz, motional EMF, induced fields, eddy currents |
-| 22 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | electricity-magnetism | 21 | ⏳ pending | $L$, $M$, $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
-| 23 | Alternating current, resonance & transformers — `alternating-current` | electricity-magnetism | 22 | ⏳ pending | phasors, impedance, resonance, power factor, transformers |
-| 24 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
-| 25 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
-| 26 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |
-| 27 | [Photoelectric effect & matter waves](photoelectric-effect/Photoelectric-effect.md) | modern | 23 | ✅ | photons, de Broglie |
-| 28 | [Atomic structure](atomic-structure/Atomic-structure.md) | modern | 24 | ✅ | Rutherford, Bohr, spectra |
-| 29 | [X-rays](x-rays/X-rays.md) | modern | 25 | ✅ | Moseley, Bragg, Compton |
-| 30 | [Nuclear physics](nuclear-physics/Nuclear-physics.md) | modern | 26 | ✅ | binding energy, radioactivity, fission and fusion |
-| 31 | [Semiconductors](semiconductors/Semiconductors.md) | modern | 27 | ✅ | bands, diodes, transistors, logic |
-| 32 | [Communication systems](communication-systems/Communication-systems.md) | modern | appendix | ✅ | modulation, bandwidth, propagation (JEE-Main depth) |
-| 33 | [Special relativity](special-relativity/Special-relativity.md) | modern | 28 | ✅ | Lorentz transformations, $E=mc^2$, relativistic dynamics |
+| 21 | [Induction, inductance & AC](emi-ac/Emi-ac.md) | electricity-magnetism | 20–22 | 🚧 stage 1/3 | Faraday and Lenz, the rod family, induced fields, eddy currents, inductance and RL/LC, AC through R L C, resonance, power, transformers, rectifiers |
+| 22 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
+| 23 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
+| 24 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |
+| 25 | [Photoelectric effect & matter waves](photoelectric-effect/Photoelectric-effect.md) | modern | 23 | ✅ | photons, de Broglie |
+| 26 | [Atomic structure](atomic-structure/Atomic-structure.md) | modern | 24 | ✅ | Rutherford, Bohr, spectra |
+| 27 | [X-rays](x-rays/X-rays.md) | modern | 25 | ✅ | Moseley, Bragg, Compton |
+| 28 | [Nuclear physics](nuclear-physics/Nuclear-physics.md) | modern | 26 | ✅ | binding energy, radioactivity, fission and fusion |
+| 29 | [Semiconductors](semiconductors/Semiconductors.md) | modern | 27 | ✅ | bands, diodes, transistors, logic |
+| 30 | [Communication systems](communication-systems/Communication-systems.md) | modern | appendix | ✅ | modulation, bandwidth, propagation (JEE-Main depth) |
+| 31 | [Special relativity](special-relativity/Special-relativity.md) | modern | 28 | ✅ | Lorentz transformations, $E=mc^2$, relativistic dynamics |
 
 ### Why this order
 
@@ -180,7 +178,7 @@ complete); the three **pending** slots are the induction → inductance → AC c
 - **Electrostatics as one module in the order field → flux → potential**, then the two shipped circuit chapters
   (capacitors need potential and Gauss; current needs potential difference), then magnetism as one module in the
   order force → motion → sources → Ampère → forces and dipoles → matter → Earth, then induction →
-  inductance → AC as one continuous argument (plan.md §0.4).
+  inductance → AC as one module and one continuous argument (plan.md §0.4).
 - **EM waves after AC**: Maxwell's displacement current completes Ampère's law, and the LC
   oscillator of the AC chapter is the radiating source. Geometrical optics is the short-wavelength
   limit; wave optics puts the wavelength back and needs the string, sound and EM-wave notes.

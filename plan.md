@@ -1671,6 +1671,14 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 > `amperes-law/`, `moving-charges-magnetism/` and `magnetism-and-matter/` are **not** to be created; the
 > course spine has 33 slots. PART 20–22 stay one continuous argument and are the natural third module.
 
+> [!note] Amendment 2026-09-27 — PARTs 20, 21 and 22 are one module
+> The third and last Electricity & Magnetism module: **one chapter in one folder, `emi-ac/`**
+> (`Emi-ac.md`, spine slot 21, `part: 20`, `plan_parts: [20, 21, 22]`), written in the same three stages,
+> in the order induction → inductance → alternating current that §0.4 already requires. The section
+> tables, must-derive lists, figure briefs, archetypes and Olympiad minimums of PART 20, 21 and 22 remain
+> the content contract, merged as before. The folders `electromagnetic-induction/`, `inductance/` and
+> `alternating-current/` are **not** to be created; the course spine has 31 slots.
+
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 
 `electric-field` · folder `electric-field/` · source: Cengage ***Electrostatics and Current

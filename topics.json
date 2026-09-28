@@ -325,7 +325,7 @@
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 8's machinery"
       ],
       "part": 9,
-      "order": 25,
+      "order": 23,
       "block": "optics"
     },
     {
@@ -373,7 +373,7 @@
         "a second paper at IPhO length (5 problems, 5 hours) drawn from part 7's toolkit"
       ],
       "part": 4,
-      "order": 26,
+      "order": 24,
       "block": "optics",
       "note": ""
     },
@@ -541,6 +541,75 @@
       "display_formulas": 61
     },
     {
+      "slug": "emi-ac",
+      "title": "Electromagnetic induction, inductance and alternating current — one continuous argument",
+      "status": "in-progress",
+      "owner": "arena-agent",
+      "entry": "emi-ac/Emi-ac.md",
+      "format": "markdown",
+      "plan_part": 20,
+      "plan_parts": [
+        20,
+        21,
+        22
+      ],
+      "part": 20,
+      "order": 21,
+      "block": "electricity-magnetism",
+      "stage": "1 of 3 — Parts 0–3 (theory) complete; Parts 4–9 in stage 2, Parts 10–14 in stage 3",
+      "source": "no Cengage volume in this repository for induction/AC; coverage map from the standard JEE Advanced headings in plan.md PART 20-22 plus the shipped current-electricity, capacitors and electromagnetic-waves notes",
+      "exam": [
+        "JEE Advanced",
+        "NSEP",
+        "INPhO",
+        "IPhO"
+      ],
+      "media": "text-only; Obsidian reading mode; mermaid FIGURE callouts + DIAGRAM callout briefs (no image files by design)",
+      "dependency": [
+        "vectors",
+        "simple-harmonic-motion",
+        "electrostatics",
+        "current-electricity",
+        "capacitors",
+        "magnetism"
+      ],
+      "beyond_plan": [
+        "the falling-magnet terminal speed with the derived drag coefficient (45/1024) mu0^2 mu^2 sigma t / a^4 and numbers for copper and aluminium (3.4)",
+        "the rod with a spring as a damped oscillator with a magnetic dashpot, and with an inductor as an LC circuit (3.6)",
+        "the impulse-per-unit-charge result for a bead on a ring around a changing flux (3.7)",
+        "the betatron worked with numbers: 75 MeV, 4.8e5 turns, 157 V per turn (3.8)",
+        "the braking time rho_m / (k sigma B^2), material-dependent and size-independent (3.9)",
+        "the lamination loss derived as sigma omega^2 B0^2 d^2 / 24 with silicon-steel numbers (3.9)",
+        "the coaxial cable's L'C' = 1/c^2 and sqrt(L'/C') = 60 ln(b/a) ohm (3.14)",
+        "reciprocity M12 = M21 proved from the coupled-coil energy (3.21)",
+        "Q shown three ways and the ring-down as Q cycles (3.22, 3.30)",
+        "a radio's tuned circuit with numbers (3.30); a four-element network solved by complex numbers and by phasors (3.33)",
+        "power-factor correction sized for an industrial and a workshop load (3.31)",
+        "the transmission-loss arithmetic and the HVDC remark (3.34)"
+      ],
+      "deliberately_not_covered": [
+        "displacement current and radiation (the shipped electromagnetic-waves note)",
+        "the skin effect beyond an estimate",
+        "three-phase and power electronics beyond a paragraph (stage 3 adds three-phase)",
+        "the quantum origin of superconductivity (flux conservation used, not explained)"
+      ],
+      "next_candidates": [
+        "stage 2: Parts 4-9 (validity ledger, C1-C14, E1-E20, archetype table + Q1-Q60, toolkit, traps, playbook)",
+        "stage 3: Parts 10-14 (Olympiad extension OL1-OL12, 36-question paper, marking, formula sheet, checkpoint)"
+      ],
+      "pages": [
+        "Emi-ac.md"
+      ],
+      "figures": 0,
+      "questions": 0,
+      "solutions": 0,
+      "math_spans": 1552,
+      "bytes_html": 0,
+      "bytes_markdown": 122671,
+      "words": 19009,
+      "display_formulas": 44
+    },
+    {
       "slug": "electromagnetic-waves",
       "title": "Electromagnetic Waves — from Maxwell to Olympiad",
       "status": "complete",
@@ -587,7 +656,7 @@
       "words": 9939,
       "display_formulas": 36,
       "part": 3,
-      "order": 24,
+      "order": 22,
       "block": "waves"
     },
     {
@@ -633,7 +702,7 @@
       "words": 14255,
       "display_formulas": 18,
       "part": 23,
-      "order": 27,
+      "order": 25,
       "block": "modern"
     },
     {
@@ -678,7 +747,7 @@
       "words": 11676,
       "display_formulas": 14,
       "part": 24,
-      "order": 28,
+      "order": 26,
       "block": "modern"
     },
     {
@@ -724,7 +793,7 @@
       "words": 11607,
       "display_formulas": 13,
       "part": 25,
-      "order": 29,
+      "order": 27,
       "block": "modern"
     },
     {
@@ -774,7 +843,7 @@
       "words": 12076,
       "display_formulas": 15,
       "part": 26,
-      "order": 30,
+      "order": 28,
       "block": "modern"
     },
     {
@@ -824,7 +893,7 @@
       "words": 12094,
       "display_formulas": 16,
       "part": 27,
-      "order": 31,
+      "order": 29,
       "block": "modern"
     },
     {
@@ -870,7 +939,7 @@
       "words": 11758,
       "display_formulas": 16,
       "part": 100,
-      "order": 32,
+      "order": 30,
       "block": "modern"
     },
     {
@@ -916,7 +985,7 @@
       "words": 12178,
       "display_formulas": 18,
       "part": 28,
-      "order": 33,
+      "order": 31,
       "block": "modern"
     },
     {

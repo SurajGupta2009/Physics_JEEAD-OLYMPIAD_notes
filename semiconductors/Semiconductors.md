@@ -2,7 +2,7 @@
 title: Semiconductors & Electronic Devices — first principles to Olympiad
 part: 27
 slug: semiconductors
-order: 31
+order: 29
 block: modern
 status: complete
 source: JEE Main/Advanced semiconductor syllabus (no chapter exists in the supplied Cengage volumes, verified)

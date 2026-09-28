@@ -5,10 +5,10 @@ taught: every chapter uses only what the chapters above it have already derived.
 the `order:` and `block:` properties in each chapter's frontmatter (registered in `topics.json`
 and checked by `tools/check_all.py`), so the live table at the bottom cannot drift from this one.
 
-Slot 17 is the electrostatics module (plan.md PARTs 13–15 merged into one chapter, complete) and slot
-20 the magnetism module (PARTs 16–19, complete). The three **pending** rows are the induction → inductance → AC chapters still to
-be written ([PENDING.md](../../PENDING.md) · [pending dashboard](pending.md)); their slots are
-reserved so the numbering will not move when they land.
+Slots 17, 20 and 21 are the three merged Electricity & Magnetism modules: electrostatics (plan.md
+PARTs 13–15, complete), magnetism (PARTs 16–19, complete) and induction–inductance–AC (PARTs 20–22,
+in progress with its theory complete). Nothing else is pending ([PENDING.md](../../PENDING.md) ·
+[pending dashboard](pending.md)).
 
 ## Block A · Mechanics (plan.md PART 1–12)
 
@@ -44,29 +44,27 @@ reserved so the numbering will not move when they land.
 | 18 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
 | 19 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | [Magnetism](../../magnetism/Magnetism.md) | 16–19 | complete | effect before cause: the Lorentz force and the speed-independent period, then currents as sources, then forces, dipoles, matter and the Earth |
-| 21 | Electromagnetic induction — `electromagnetic-induction` | 20 | **pending** | Faraday, Lenz as energy conservation, motional EMF, induced fields, eddy currents |
-| 22 | Self & mutual inductance, RL circuits & magnetic energy — `inductance` | 21 | **pending** | the inertia of current; $\tfrac12LI^2$, $B^2/2\mu_0$, LC oscillations |
-| 23 | Alternating current, resonance & transformers — `alternating-current` | 22 | **pending** | phasors, impedance, LCR resonance, power factor, transformers, rectifiers |
+| 21 | [Induction, inductance & AC](../../emi-ac/Emi-ac.md) | 20–22 | **in progress** (stage 1/3: theory done) | one continuous argument: a changing flux drives an electric field; a coil resists changes in its own current; a sinusoidal drive makes every element a phase relationship |
 
 ## Block D · Electromagnetic waves and optics
 
 | # | chapter | why here |
 |--:|---|---|
-| 24 | [Electromagnetic waves](../../electromagnetic-waves/Electromagnetic-waves.md) | Maxwell's equations close the E&M story: displacement current, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure |
-| 25 | [Geometrical optics](../../geometrical-optics/Geometrical-optics.md) | the short-wavelength limit: mirrors, refraction, prisms, lenses, instruments |
-| 26 | [Wave optics](../../wave-optics/Wave-optics.md) | the wavelength back in: Huygens, YDSE, thin films, diffraction, polarisation — needs 13, 14 and 29 |
+| 22 | [Electromagnetic waves](../../electromagnetic-waves/Electromagnetic-waves.md) | Maxwell's equations close the E&M story: displacement current, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure |
+| 23 | [Geometrical optics](../../geometrical-optics/Geometrical-optics.md) | the short-wavelength limit: mirrors, refraction, prisms, lenses, instruments |
+| 24 | [Wave optics](../../wave-optics/Wave-optics.md) | the wavelength back in: Huygens, YDSE, thin films, diffraction, polarisation — needs 13, 14 and 29 |
 
 ## Block E · Modern physics (plan.md PART 23–28)
 
 | # | chapter | plan PART | why here |
 |--:|---|:-:|---|
-| 27 | [Photoelectric effect & matter waves](../../photoelectric-effect/Photoelectric-effect.md) | 23 | light as quanta; de Broglie |
-| 28 | [Atomic structure](../../atomic-structure/Atomic-structure.md) | 24 | Rutherford, Bohr, spectra — quantisation applied to the atom |
-| 29 | [X-rays](../../x-rays/X-rays.md) | 25 | Moseley, Bragg, Compton — the photon picture tested at high energy |
-| 30 | [Nuclear physics](../../nuclear-physics/Nuclear-physics.md) | 26 | binding energy, radioactivity, fission and fusion |
-| 31 | [Semiconductors](../../semiconductors/Semiconductors.md) | 27 | band picture, diodes, transistors, logic gates |
-| 32 | [Communication systems](../../communication-systems/Communication-systems.md) | appendix | JEE-Main depth only; modulation, bandwidth, propagation |
-| 33 | [Special relativity](../../special-relativity/Special-relativity.md) | 28 | the Olympiad capstone: Lorentz transformations, $E=mc^2$, relativistic dynamics |
+| 25 | [Photoelectric effect & matter waves](../../photoelectric-effect/Photoelectric-effect.md) | 23 | light as quanta; de Broglie |
+| 26 | [Atomic structure](../../atomic-structure/Atomic-structure.md) | 24 | Rutherford, Bohr, spectra — quantisation applied to the atom |
+| 27 | [X-rays](../../x-rays/X-rays.md) | 25 | Moseley, Bragg, Compton — the photon picture tested at high energy |
+| 28 | [Nuclear physics](../../nuclear-physics/Nuclear-physics.md) | 26 | binding energy, radioactivity, fission and fusion |
+| 29 | [Semiconductors](../../semiconductors/Semiconductors.md) | 27 | band picture, diodes, transistors, logic gates |
+| 30 | [Communication systems](../../communication-systems/Communication-systems.md) | appendix | JEE-Main depth only; modulation, bandwidth, propagation |
+| 31 | [Special relativity](../../special-relativity/Special-relativity.md) | 28 | the Olympiad capstone: Lorentz transformations, $E=mc^2$, relativistic dynamics |
 
 ## Live view (Dataview)
 

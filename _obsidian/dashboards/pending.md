@@ -1,8 +1,10 @@
 # Pending chapters — live queue
 
 > Mirror of [PENDING.md](../../PENDING.md) (the canonical list, kept in sync with `topics.json`).
-> Three chapters remain (plan.md PART 20–22, induction → inductance → AC). PART 13–15 shipped as the
-> single `electrostatics/` module and PART 16–19 as the single `magnetism/` module. Mechanics (PART 1–12) and Modern Physics (PART 23–28) are complete. Tick a box here as bookkeeping only —
+> No chapter is unclaimed. PART 13–15 shipped as the single `electrostatics/` module, PART 16–19 as the
+> single `magnetism/` module, and PART 20–22 (induction → inductance → AC) are in progress as the
+> single `emi-ac/` module (stage 1 of 3 — theory — done). Mechanics (PART 1–12) and Modern Physics
+> (PART 23–28) are complete. Tick a box here as bookkeeping only —
 > the registry (`topics.json` → `status`) is the source of truth.
 
 ## Write in this order
@@ -12,12 +14,13 @@ course-spine slot the chapter takes in [spine.md](spine.md); `size` is plan.md �
 
 - [x] **PART 13 + 14 + 15** · [`electrostatics`](../../electrostatics/Electrostatics.md) · Electrostatics — first principles to Olympiad · order 17 · one merged chapter, three stages, all shipped 2026-09-27 · Cengage *Electrostatics* ch 1–3 ✅ PDF in repo
 - [x] **PART 16 + 17 + 18 + 19** · [`magnetism`](../../magnetism/Magnetism.md) · Magnetism — from the Lorentz force to the Earth's field · order 20 · one merged chapter, three stages, all shipped 2026-09-27 · no PDF — standard JEE Advanced headings
-- [ ] **PART 20** · `electromagnetic-induction` · Faraday, Lenz, Motional EMF & Eddy Currents · order 21 · standard · needs magnetism (16–19) · no PDF
-- [ ] **PART 21** · `inductance` · Self & Mutual Inductance, RL Circuits & Magnetic Energy · order 22 · standard · needs 20 · no PDF
-- [ ] **PART 22** · `alternating-current` · Alternating Current, Resonance & Transformers · order 23 · large · needs 21 · no PDF
+- [/] **PART 20 + 21 + 22** · [`emi-ac`](../../emi-ac/Emi-ac.md) · Induction, inductance and alternating current — one continuous argument · order 21 · one merged chapter in three stages · no PDF — standard JEE Advanced headings
+    - [x] stage 1 · Parts 0–3 · the complete theory in teaching order (§3.1–§3.36) ✅ 2026-09-27
+    - [ ] stage 2 · Parts 4–9 · validity ledger, C1–C14, E1–E20, archetypes + Q1–Q60, toolkit, traps, playbook
+    - [ ] stage 3 · Parts 10–14 · Olympiad extension OL1–OL12, the 36-question / 200-mark paper, formula sheet, checkpoint
 
 Batches that may run in parallel (plan.md §0.4): **13 + 14 + 15** shipped as one module; **16 + 17 + 18 + 19** shipped as one module;
-**20 → 21 → 22 is one continuous argument — never split it across writers.**
+**20 + 21 + 22** as one module too (stages 2 and 3 left) — the plan's one-continuous-argument rule, honoured by merging.
 
 ## What "done" means for each
 

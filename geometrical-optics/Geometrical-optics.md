@@ -2,7 +2,7 @@
 title: Geometrical Optics — first principles to Olympiad
 part: 9
 slug: geometrical-optics
-order: 25
+order: 23
 block: optics
 status: complete
 source: Cengage Optics and Modern Physics-compressed.pdf, ch 1 Geometrical Optics
