@@ -57,6 +57,9 @@ The four notes that correspond directly to the supplied Cengage volumes carry th
 
 | Cengage floor | Markdown location | status |
 |---|---|---|
+| Coulomb's Laws and Electric Field, chapter 1: charge, Coulomb, superposition, field of ring/line/disc/sheets, dipole, dipole in a field | [Electrostatics.md — coverage map and §3.1–§3.13](electrostatics/Electrostatics.md) | derived, most results twice (integration and Gauss; vector sum and potential) |
+| Electric Flux and Gauss's Law, chapter 2: flux, the law, spherical/cylindrical/planar symmetry, conductors, solid angle | [Electrostatics.md — §3.14–§3.24](electrostatics/Electrostatics.md) | solid-angle proof precedes the law; cavities, slab, flux-without-the-field family |
+| Electric Potential, chapter 3: potential and energy, equipotentials, `E` from `V`, potentials of distributions, dipole, dipole energy | [Electrostatics.md — §3.25–§3.37](electrostatics/Electrostatics.md) | conservative-field proof first; the half-factor derived; conductors, sharing, field energy |
 | Capacitor and Capacitance, chapter 4: definition, units, parallel plate, sphere, spherical/cylindrical capacitors, energy and energy density | [Capacitors.md — Cengage coverage map](capacitors/Capacitors.md#cengage-coverage) and parts 1–3 | derived, with limit checks |
 | Combinations, capacitor Kirchhoff/sign convention, bridges, cube, ladders and redistribution | [Capacitors.md — part 4](capacitors/Capacitors.md#section-04-combinations) | derived before problems |
 | Dielectric constant, polarisation, bound charge, `D`, breakdown, force and parameter changes | [Capacitors.md — part 5](capacitors/Capacitors.md#section-05-dielectrics) | battery-connected and isolated cases both explicit |
@@ -102,6 +105,14 @@ The level tags are not a second disconnected syllabus. They mark the point at wh
 - **IPhO-style practice:** sit the final paper without notes, write the model before the algebra, and finish with a dimensional or limiting check. The full solutions are deliberately after the paper.
 
 Every topic records its exclusions in `topics.json` and its own `README.md`; “covered through Olympiad” therefore means the complete stated scope, not an unbounded claim that every university topic is present. The main omissions are quantum optics, numerical simulation, advanced convection correlations and formal statistical-mechanics ensembles, named so the reader knows what to study next. One item that used to sit on that list is now a hand-off rather than a gap: the Maxwell-equation derivation of the Fresnel coefficients, which wave optics states without deriving, is the electromagnetic-waves note's own deliverable (see the wave-sequence section above).
+
+### Final recheck (2026-09-28)
+
+Every registered chapter was re-read against the three-level contract and the repository gate before the pull request:
+
+- **Basics → JEE Advanced → Olympiad, in that order, in every chapter.** The 21 plan.md-generation chapters carry the 15-block spine (Parts 0–2 basics, Part 3 derivations, Parts 4–9 JEE craft, Parts 10–11 the Olympiad layer and paper, Parts 12–14 apparatus) and pass their local gates at the full contract: concept checks ≥ 12, exemplars ≥ 10, practice ≥ 25, Olympiad problems ≥ 10, a 36-question / 200-mark paper, ≥ 6 rendered figures. The nine original note-sets keep their own structure (plan.md Appendix A) and each ends in an Olympiad section and a full paper (string waves 144 marks, sound 150, thermodynamics 245, capacitors 245, current electricity 245, geometrical optics 143, wave optics 143, EM waves 180) or, for `heat`, the ten-problem written gauntlet.
+- **Syllabus sweep.** A keyword sweep of 124 JEE Advanced syllabus items (general physics and experiments, mechanics, fluids and elasticity, waves, thermal, electrostatics and circuits, magnetism and induction, EM waves and optics, modern physics) finds every item in at least one master file.
+- **Gate.** `python3 tools/check_all.py` is green for all 31 topics; the registry, the frontmatter `order`/`block` of every master and the 31-slot spine agree.
 
 ## Markdown conversion contract
 

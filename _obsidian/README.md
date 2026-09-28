@@ -25,7 +25,7 @@ slot as `order:` (1–31) and its syllabus `block:`; the Dataview tables sort on
 |---|---|---|
 | Reading spine | [dashboards/spine.md](dashboards/spine.md) | the 31-slot course order with the one-line reason for each position |
 | Library | [dashboards/README.md](dashboards/README.md) | every chapter by order and by block, self-clearing "missing properties" list |
-| Pending chapters | [dashboards/pending.md](dashboards/pending.md) | the ten unwritten E&M chapters, dependencies, batches, definition of done |
+| Pending chapters | [dashboards/pending.md](dashboards/pending.md) | the delivery record of the E&M block (nothing unwritten), batches, definition of done |
 | Task queue | [dashboards/tasks.md](dashboards/tasks.md) | checkbox mirror of plan/PENDING + every open task in the vault |
 
 ## Authoring harness

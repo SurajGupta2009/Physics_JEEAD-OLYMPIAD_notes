@@ -143,7 +143,7 @@ python3 tools/new_topic.py <slug> --title "<Title>" \
 
 The scaffold is HTML-first because the interactive edition is the validated source; Markdown-first topics (like `electromagnetic-waves` and `string-waves`) are also supported — register with `"format": "markdown"` and supply a local `tools/check.py`. See [CONTRIBUTING.md](CONTRIBUTING.md) for the content bar and [STRUCTURE.md](STRUCTURE.md) for the layout contract.
 
-The pending chapters — ten, all Electricity & Magnetism (plan.md PART 13–22), with their teaching order, dependencies and scope — are listed in **[PENDING.md](PENDING.md)** and mirrored live in [`_obsidian/dashboards/pending.md`](_obsidian/dashboards/pending.md).
+No chapter is pending: all 28 plan.md parts are written. **[PENDING.md](PENDING.md)** keeps the record of how the Electricity & Magnetism block was delivered (three merged modules) and the procedure for adding a new part; [`_obsidian/dashboards/pending.md`](_obsidian/dashboards/pending.md) mirrors it live.
 
 ## The teaching contract
 
