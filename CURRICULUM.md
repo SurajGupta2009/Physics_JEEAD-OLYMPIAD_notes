@@ -126,8 +126,8 @@ The way the syllabus is taught, and the order the Obsidian dashboards use
 ones above it. The `order` is registered in `topics.json` and written into each chapter's
 frontmatter; `tools/check_all.py` keeps the two equal. Slots 17, 20 and 21 are the three merged
 Electricity & Magnetism modules — electrostatics (plan.md PARTs 13–15, complete), magnetism (PARTs
-16–19, complete) and induction–inductance–AC (PARTs 20–22, **in progress**, theory complete); nothing
-is pending once it lands ([PENDING.md](PENDING.md)).
+16–19, complete) and induction–inductance–AC (PARTs 20–22, complete). Nothing is pending: every plan.md part is
+written ([PENDING.md](PENDING.md)).
 
 | order | chapter | block | plan.md PART | status | it supplies the next chapters with |
 |:-:|---|---|:-:|:-:|---|
@@ -151,7 +151,7 @@ is pending once it lands ([PENDING.md](PENDING.md)).
 | 18 | [Capacitors](capacitors/Capacitors.md) | electricity-magnetism | — | ✅ | capacitance, dielectrics, RC transients |
 | 19 | [Current electricity](current-electricity/Current-electricity.md) | electricity-magnetism | — | ✅ | drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | [Magnetism](magnetism/Magnetism.md) | electricity-magnetism | 16–19 | ✅ | the Lorentz force and everything a charge does in a field, Biot–Savart and Ampère, forces and dipoles, matter, the Earth |
-| 21 | [Induction, inductance & AC](emi-ac/Emi-ac.md) | electricity-magnetism | 20–22 | 🚧 stage 1/3 | Faraday and Lenz, the rod family, induced fields, eddy currents, inductance and RL/LC, AC through R L C, resonance, power, transformers, rectifiers |
+| 21 | [Induction, inductance & AC](emi-ac/Emi-ac.md) | electricity-magnetism | 20–22 | ✅ | Faraday and Lenz, the rod family, induced fields, eddy currents, inductance and RL/LC, AC through R L C, resonance, power, transformers, rectifiers |
 | 22 | [Electromagnetic waves](electromagnetic-waves/Electromagnetic-waves.md) | waves | — | ✅ | Maxwell's equations, $c=1/\sqrt{\mu_0\varepsilon_0}$, energy and pressure of light |
 | 23 | [Geometrical optics](geometrical-optics/Geometrical-optics.md) | optics | — | ✅ | mirrors, refraction, prisms, lenses, instruments |
 | 24 | [Wave optics](wave-optics/Wave-optics.md) | optics | — | ✅ | interference, diffraction, polarisation |

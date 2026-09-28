@@ -7,7 +7,7 @@ and checked by `tools/check_all.py`), so the live table at the bottom cannot dri
 
 Slots 17, 20 and 21 are the three merged Electricity & Magnetism modules: electrostatics (plan.md
 PARTs 13–15, complete), magnetism (PARTs 16–19, complete) and induction–inductance–AC (PARTs 20–22,
-in progress with its theory complete). Nothing else is pending ([PENDING.md](../../PENDING.md) ·
+complete). Nothing is pending — every plan.md part is written ([PENDING.md](../../PENDING.md) ·
 [pending dashboard](pending.md)).
 
 ## Block A · Mechanics (plan.md PART 1–12)
@@ -44,7 +44,7 @@ in progress with its theory complete). Nothing else is pending ([PENDING.md](../
 | 18 | [Capacitors](../../capacitors/Capacitors.md) | — | complete | potential and Gauss applied to two conductors; dielectrics; RC transients |
 | 19 | [Current electricity](../../current-electricity/Current-electricity.md) | — | complete | charge in motion: drift, Kirchhoff, bridges, network theorems, instruments |
 | 20 | [Magnetism](../../magnetism/Magnetism.md) | 16–19 | complete | effect before cause: the Lorentz force and the speed-independent period, then currents as sources, then forces, dipoles, matter and the Earth |
-| 21 | [Induction, inductance & AC](../../emi-ac/Emi-ac.md) | 20–22 | **in progress** (stage 1/3: theory done) | one continuous argument: a changing flux drives an electric field; a coil resists changes in its own current; a sinusoidal drive makes every element a phase relationship |
+| 21 | [Induction, inductance & AC](../../emi-ac/Emi-ac.md) | 20–22 | complete | one continuous argument: a changing flux drives an electric field; a coil resists changes in its own current; a sinusoidal drive makes every element a phase relationship |
 
 ## Block D · Electromagnetic waves and optics
 

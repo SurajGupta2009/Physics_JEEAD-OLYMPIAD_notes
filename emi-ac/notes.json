@@ -10,7 +10,7 @@
   ],
   "source": "no Cengage volume in this repository for induction/AC; coverage map built from the standard JEE Advanced headings listed in plan.md PART 20-22 plus the shipped current-electricity, capacitors and electromagnetic-waves notes",
   "obsidian": "reading mode: frontmatter, callouts, $...$ / $$...$$, details panels, mermaid FIGUREs (docs/obsidian-plugin-workflow.md §2)",
-  "stage": 1,
+  "stage": 3,
   "stages": {
     "1": {
       "name": "theory: blocks 0-3 (flux and Faraday, motional EMF, Lenz, the rod family, induced fields, eddy currents, inductance, RL and LC, AC through R L C, phasors, resonance, power, transformers, rectifiers)",

@@ -1678,6 +1678,9 @@ neutral-axis argument and one integrated deflection; the atomic-spring derivatio
 > tables, must-derive lists, figure briefs, archetypes and Olympiad minimums of PART 20, 21 and 22 remain
 > the content contract, merged as before. The folders `electromagnetic-induction/`, `inductance/` and
 > `alternating-current/` are **not** to be created; the course spine has 31 slots.
+>
+> **Status 2026-09-27:** all three merged modules are complete at stage 3, and with them every part of
+> this plan (PART 1–28) has a chapter that passes its local gate and `tools/check_all.py`.
 
 ### PART 13 · Charge, Coulomb's Law & Electric Field
 

@@ -9,15 +9,15 @@
 
 - [x] `electrostatics` — plan.md PART 13 + 14 + 15 as one module (all three stages shipped 2026-09-27)
 - [x] `magnetism` — plan.md PART 16 + 17 + 18 + 19 as one module (all three stages shipped 2026-09-27)
-- [/] `emi-ac` — plan.md PART 20 + 21 + 22 as one module: stage 1 (theory) done; stage 2 (exemplars, practice, toolkit, traps, playbook) and stage 3 (Olympiad block, paper, formula sheet, checkpoint) open
+- [x] `emi-ac` — plan.md PART 20 + 21 + 22 as one module (all three stages shipped 2026-09-27) — **plan.md complete**
 
 ## Repository chores
 
 - [ ] run `python3 tools/obsidian_plugins.py` once on a machine with internet, then commit `.obsidian/plugins/*/{main.js,manifest.json,styles.css}` so the vault works out of the box (`.obsidian/README` section of [`_obsidian/README.md`](../README.md))
-- [ ] when `emi-ac` reaches stage 3: mark plan.md complete in [PENDING.md](../../PENDING.md), regenerate `docs/site/` (`python3 tools/md_site.py`)
+- [x] `emi-ac` reached stage 3: plan.md marked complete in [PENDING.md](../../PENDING.md), `docs/site/` regenerated
 
-**Shipped** (do not re-queue): 30 of the 31 topics registered in `topics.json` have status `complete` —
-PART 1–12, PART 13–15 (as `electrostatics`), PART 16–19 (as `magnetism`), PART 23–28, the nine original note-sets and `communication-systems`.
+**Shipped** (do not re-queue): all 31 topics registered in `topics.json`, status `complete` —
+PART 1–12, PART 13–15 (as `electrostatics`), PART 16–19 (as `magnetism`), PART 20–22 (as `emi-ac`), PART 23–28, the nine original note-sets and `communication-systems`.
 
 ## Every open checkbox in the vault (Tasks plugin)
 

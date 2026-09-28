@@ -543,7 +543,7 @@
     {
       "slug": "emi-ac",
       "title": "Electromagnetic induction, inductance and alternating current — one continuous argument",
-      "status": "in-progress",
+      "status": "complete",
       "owner": "arena-agent",
       "entry": "emi-ac/Emi-ac.md",
       "format": "markdown",
@@ -556,7 +556,7 @@
       "part": 20,
       "order": 21,
       "block": "electricity-magnetism",
-      "stage": "1 of 3 — Parts 0–3 (theory) complete; Parts 4–9 in stage 2, Parts 10–14 in stage 3",
+      "stage": "3 of 3 — complete (theory, exam craft, Olympiad layer and paper); plan.md is complete",
       "source": "no Cengage volume in this repository for induction/AC; coverage map from the standard JEE Advanced headings in plan.md PART 20-22 plus the shipped current-electricity, capacitors and electromagnetic-waves notes",
       "exam": [
         "JEE Advanced",
@@ -585,7 +585,13 @@
         "Q shown three ways and the ring-down as Q cycles (3.22, 3.30)",
         "a radio's tuned circuit with numbers (3.30); a four-element network solved by complex numbers and by phasors (3.33)",
         "power-factor correction sized for an industrial and a workshop load (3.31)",
-        "the transmission-loss arithmetic and the HVDC remark (3.34)"
+        "the transmission-loss arithmetic and the HVDC remark (3.34)",
+        "the Faraday disc solved by following the charges and by a correctly chosen moving circuit (OL1)",
+        "the betatron's radial-stability condition 0 < n < 1 alongside the 2:1 rule (OL2)",
+        "the eddy drag law's three regimes from the coupled equations (OL8)",
+        "the characteristic impedance derived from the charging front, with the open-circuit reflection (10.6, OL9)",
+        "the driven LCR's beats between transient and steady state (OL10)",
+        "three-phase's constant total power and the idle neutral (OL11); critical coupling of two tanks (OL12)"
       ],
       "deliberately_not_covered": [
         "displacement current and radiation (the shipped electromagnetic-waves note)",
@@ -594,20 +600,20 @@
         "the quantum origin of superconductivity (flux conservation used, not explained)"
       ],
       "next_candidates": [
-        "stage 2: Parts 4-9 (validity ledger, C1-C14, E1-E20, archetype table + Q1-Q60, toolkit, traps, playbook)",
-        "stage 3: Parts 10-14 (Olympiad extension OL1-OL12, 36-question paper, marking, formula sheet, checkpoint)"
+        "a companion Excalidraw sheet for the 22 DIAGRAM briefs",
+        "upgrade D20.11 (two voltmeters) and D20.19 (phasors) to rendered figures if a suitable Mermaid idiom appears"
       ],
       "pages": [
         "Emi-ac.md"
       ],
       "figures": 0,
-      "questions": 0,
-      "solutions": 0,
-      "math_spans": 1552,
+      "questions": 94,
+      "solutions": 130,
+      "math_spans": 3902,
       "bytes_html": 0,
-      "bytes_markdown": 122671,
-      "words": 19009,
-      "display_formulas": 44
+      "bytes_markdown": 251558,
+      "words": 37852,
+      "display_formulas": 47
     },
     {
       "slug": "electromagnetic-waves",

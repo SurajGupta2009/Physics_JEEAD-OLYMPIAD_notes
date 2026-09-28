@@ -51,7 +51,7 @@ and `bytes_markdown` records source size; `bytes_html` is zero. Legacy HTML coun
 ├── STRUCTURE.md              this file
 ├── CONTRIBUTING.md           workflow + how to work in parallel
 ├── CURRICULUM.md             reading order, Cengage → JEE → Olympiad audit, the 31-slot course spine
-├── PENDING.md                the last module in progress (plan.md PART 20–22 as emi-ac/) and the claiming procedure
+├── PENDING.md                the record that every plan.md part is written, and the claiming procedure for new parts
 ├── plan.md                   the master plan: one PART per chapter, contracts, copy-paste kit
 ├── topics.json               registry of note-sets: paths, status, owner, order/block, mechanical counts
 ├── .gitignore                scratch and exports stay out; Obsidian per-device state stays out
@@ -74,7 +74,7 @@ and `bytes_markdown` records source size; `bytes_html` is zero. Legacy HTML coun
 │   ├── obsidian_plugins.py   fetches the pinned Obsidian plugins into .obsidian/plugins/
 │   ├── new_topic.py          scaffold an HTML-first topic folder from a donor topic
 │   └── ci/qa.yml             the same gate as a GitHub Action (copy into .github/workflows/ to install)
-├── <topic>/ × 31             one folder per chapter (anatomy in §3); emi-ac/ is the in-progress one
+├── <topic>/ × 31             one folder per chapter (anatomy in §3)
 └── Cengage … .pdf × 5        the source textbooks — the "floor" every chapter is audited against
 ```
 
@@ -123,7 +123,7 @@ layout that §4–§5 were written for survives only as the page contract that s
 ```
 
 **(b) Markdown-first, Obsidian-first** — every chapter written under `plan.md` (PART 1–12,
-13–15 as the merged `electrostatics/` module, 16–19 as the merged `magnetism/` module, 20–22 as the staged `emi-ac/` module, 23–28, `communication-systems`) and the two Markdown-first wave notes (`string-waves`,
+13–15 as the merged `electrostatics/` module, 16–19 as the merged `magnetism/` module, 20–22 as the merged `emi-ac/` module, 23–28, `communication-systems`) and the two Markdown-first wave notes (`string-waves`,
 `electromagnetic-waves`, which additionally keep `assets/figures/*.svg`).
 
 ```

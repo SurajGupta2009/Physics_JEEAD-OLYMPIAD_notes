@@ -5,18 +5,20 @@
 | file | what it is |
 |---|---|
 | `Emi-ac.md` | the chapter — the single deliverable, written for Obsidian reading mode |
-| `notes.json` | gate configuration: the **stage** the chapter is at and the minimums that apply at each stage |
+| `notes.json` | gate configuration: the stage the chapter is at (now 3 of 3) and the minimums that apply |
 | `tools/check.py` | the local gate (the stage-aware electrostatics gate, unchanged apart from the docstring); `python3 tools/check.py` from this folder |
 
-## Status: stage 1 of 3 — the theory is complete, the exam craft and the Olympiad layer are not
+## Status: complete (stage 3 of 3) — and with it, plan.md is complete
 
-| stage | blocks | what it delivers | state |
+Written in three stages so that each turn shipped something whole; all three are on the page and the gate enforces the full plan.md §1 contract:
+
+| stage | blocks | what it delivers | size |
 |---|---|---|---|
-| 1 | Parts 0–3 | orientation with the three-part coverage map, intuition, definitions with the sign conventions fixed once, and **the complete theory in teaching order** (§3.1–§3.36): every result of the three plan parts derived, the previous chapters cited at each borrowing | **done** — 19 000 words, 8 rendered FIGUREs, 22 DIAGRAM briefs, 62 callouts |
-| 2 | Parts 4–9 | validity ledger, C1–C14, E1–E20, the archetype table (≥ 40 rows) with Q1–Q60, toolkit, traps, playbook | next turn |
-| 3 | Parts 10–14 | Olympiad extension with OL1–OL12 (the flux-rule paradoxes, the betatron twice, the falling magnet, the tether, the coil launcher, superconducting flux conservation, the 50 Ω cable, the full transient-plus-steady-state solution, impedance matching, the Wien bridge, three-phase), the 36-question / 200-mark paper, marking scheme, formula sheet, checkpoint | the turn after |
+| 1 | Parts 0–3 | orientation with the three-part coverage map, intuition, definitions with the sign conventions fixed once, and **the complete theory in teaching order** (§3.1–§3.36) | 19 000 words |
+| 2 | Parts 4–9 | the validity ledger (45 rows), C1–C14 concept checks, exemplars E1–E20 with checks, the archetype table (51 rows) and practice Q1–Q60 (each archetype worked once and varied once), toolkit T1–T10, 22 traps, playbook with triage tree | + 7 500 words |
+| 3 | Parts 10–14 | Olympiad extension (the flux-rule paradoxes, the betatron from canonical angular momentum, the falling magnet's drag coefficient derived, magnetic braking as a damped oscillator, superconducting flux conservation, the tether, the coil launcher, the eddy drag law, the characteristic impedance of a cable, the driven LCR transient plus steady state, impedance matching and three-phase, coupled tuned circuits and the Wien bridge, estimates and two reconstructions, limits) with OL1–OL12 solved twice where a second method exists; the 36-question / 200-mark paper with a solution under every question; marking scheme and diagnostic table; two-page formula sheet; 25-point checkpoint and hand-off | + 11 500 words |
 
-Blocks not yet written carry a `> [!warning] Stage n deliverable` notice stating their contents. The gate enforces every reading-mode, media and maths rule from stage 1; the question families and the paper become hard requirements when their stage arrives (`notes.json` → `stages`). `topics.json` lists the chapter as `in-progress` until stage 3 is green.
+Totals: 38 000 words · 10 rendered FIGUREs (Mermaid) · 22 DIAGRAM briefs · 84 callouts · C×14 E×20 Q×60 OL×12 · paper 36 Q / 200 marks (A 12×4, B 8×4, C 6×5, D 10×9).
 
 ## Teaching order (block 3), and why
 
@@ -37,7 +39,7 @@ Blocks not yet written carry a `> [!warning] Stage n deliverable` notice stating
 
 ## Media
 
-Text-only Markdown, Obsidian-first. Eight `[!tip] FIGURE` callouts render from Mermaid (module map, the sign protocol, the rod on rails coasting and driven, the induced field profile, the RL transient, the LC energy exchange, a sinusoid and its square, resonance curves for three $Q$); 22 `[!abstract] DIAGRAM` briefs give the pictures that carry an argument and the search terms that find a textbook version. No raster art, no AI images, no external links.
+Text-only Markdown, Obsidian-first. Ten `[!tip] FIGURE` callouts render from Mermaid (module map, the sign protocol, the rod on rails coasting and driven, the induced field profile, the RL transient, the LC energy exchange, a sinusoid and its square, resonance curves for three $Q$, the correspondence chain, the triage tree); 22 `[!abstract] DIAGRAM` briefs give the pictures that carry an argument and the search terms that find a textbook version. No raster art, no AI images, no external links.
 
 ## Hand-off
 
@@ -60,11 +62,17 @@ Added at the theory level (mirrored in `topics.json` as `beyond_plan`):
 * $Q$ shown three ways — magnification, bandwidth, energy ratio — and the ring-down as $Q$ cycles (§3.22, §3.30);
 * a radio's tuned circuit with numbers (§3.30) and a four-element network solved by complex numbers and by phasors (§3.33);
 * the power-factor correction sized for an industrial and a workshop load (§3.31);
-* the transmission-loss arithmetic and the note on HVDC (§3.34).
+* the transmission-loss arithmetic and the note on HVDC (§3.34);
+* the Faraday disc solved by following the charges and by a correctly chosen moving circuit (OL1);
+* the betatron's radial-stability condition $0<n<1$ alongside the 2:1 rule (OL2);
+* the eddy drag law's three regimes — linear, peaked, elastic — from the coupled equations (OL8);
+* the characteristic impedance derived from the charging front, with the open-circuit reflection (§10.6, OL9);
+* the driven LCR's beats between the transient and the steady state (OL10);
+* three-phase's constant total power and the neutral's idleness (OL11); critical coupling of two tanks (OL12).
 
 ## Local gate
 
 ```bash
-cd emi-ac && python3 tools/check.py              # stage-aware local gate
+cd emi-ac && python3 tools/check.py              # stage-aware local gate (stage 3 = full contract)
 cd .. && python3 tools/check_all.py --update     # repo gate + registry recount
 ```
