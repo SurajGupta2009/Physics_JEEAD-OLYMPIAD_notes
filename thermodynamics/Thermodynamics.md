@@ -97,7 +97,7 @@ A thermometric property must be monotonic and reproducible: the length of a merc
 >
 >  the limit taken by repeating the experiment with progressively rarefier gas. All gases — He, N₂, even moderately non-ideal ones — converge to the same ratio in that limit, which is what makes the definition thermometer-independent.
 
-Two fixed points used to hang the scale on it: the steam point and the ice point. Since 1954 the anchor is a single point — the **triple point of water**, where ice, liquid water and vapour coexist at $T_{\text{tp}} = 273.16$ K and $P \approx 611.7$ Pa — a uniquely reproducible state (one pure phase boundary intersection, no "how packed is the ice?" ambiguity). Since 2019 the kelvin is defined even more directly: the Boltzmann constant is fixed, $k = 1.380649\times 10^{-23}$ J K⁻¹ **exactly**, and temperature is whatever makes the kinetic theory of chapter 2 come out with $\tfrac{3}{2}kT$ per translational degree of freedom. The size of the kelvin was chosen to survive the old one, so $T(^{\circ}\text{C}) = T(\text{K}) - 273.15$ by convention — note the offset 273.15 versus the triple-point 273.16; different numbers, different jobs, not a typo.
+Two fixed points used to hang the scale on it: the steam point and the ice point. Since 1954 the anchor is a single point — the **triple point of water**, where ice, liquid water and vapour coexist at $T_{\text{tp}} = 273.16$ K and $P \approx 611.7$ Pa — a uniquely reproducible state (one pure phase boundary intersection, no "how packed is the ice?" ambiguity). Since 2019 the kelvin is defined by fixing the Boltzmann constant at $k = 1.380649\times 10^{-23}$ J K⁻¹ **exactly**. In the classical ideal-gas regime, kinetic theory then gives mean translational energy $\tfrac{3}{2}kT$ per molecule; that relation is a consequence of the model, not the general definition of thermodynamic temperature. The size of the kelvin was chosen to survive the old one, so $T(^{\circ}\text{C}) = T(\text{K}) - 273.15$ by convention — note the offset 273.15 versus the triple-point 273.16; different numbers, different jobs, not a typo.
 
 > **Why "degrees" survived the kelvin**
 >
@@ -586,10 +586,11 @@ flowchart TD
 > *Read:* three quantities, one is a state function; the heat and work are route-money, only ΔU is the ledger balance.
 
 $$
-\Delta U = nC_{V}\Delta T\qquad\text{— for an ideal gas on ANY path, not just constant volume} \tag{3.3}
+\Delta U = n\int_{T_1}^{T_2} C_{V}(T)\,dT
+\qquad\text{— for an ideal gas on any path. If $C_V$ is effectively constant, this is }nC_V\Delta T. \tag{3.3}
 $$
 
-Two facts multiply into this one: kinetic theory (§2.2) says U is the total translational energy $N\times\tfrac32 kT$ plus frozen-in internal stores, which is a function of T alone (Joule's experiment — free expansion changed nothing, so U cannot depend on V); and $C_{V}\equiv(\partial U/\partial T)_{V}$ is the *definition* of the slope, so the slope along any other path is the same number. Students confine eq. 3.3 to isochoric processes; it is the only line in thermodynamics that path-independence *grants*, and the key to every "find the heat along this weird path" problem:
+For an ideal gas, kinetic theory makes the internal energy a function of temperature alone (with additional internal degrees of freedom contributing according to the model); hence $dU=nC_V(T)\,dT$ along any path. Joule's free-expansion result motivates this idealisation, while the ideal-gas model states it exactly. If the heat capacity varies appreciably with temperature, integrate it as in (3.3) rather than pulling a single $C_V$ outside the integral. Students confine eq. 3.3 to isochoric processes; it is the only line in thermodynamics that path-independence *grants*, and the key to every "find the heat along this weird path" problem:
 
 $$
 \Delta U\ \text{from eq.\ 3.3 (path-blind)}\quad\Longrightarrow\quad Q = \Delta U + W\quad\text{(with } W \text{ done properly, path-aware)}
@@ -712,7 +713,7 @@ A gas runs A→B→C→A. Given: $Q_{AB} = +600$ J, $W_{AB} = +200$ J; $W_{BC} =
 > **The ledger and its three entries**
 >
 > $$
-> \Delta U = Q-W,\qquad W=\int P\,dV\ (\text{quasistatic}),\qquad \Delta U_{\text{ideal}} = nC_{V}\Delta T\ (\text{any path})
+> \Delta U = Q-W,\qquad W=\int P\,dV\ (\text{quasistatic}),\qquad \Delta U_{\text{ideal}} = n\int_{T_1}^{T_2}C_V(T)\,dT\ (\text{any path; }nC_V\Delta T\text{ if }C_V\text{ constant})
 > $$
 >
 >  The first is a definition-plus-experiment (Joule), the second a force balance, the third a gift of $U=U(T)$. The free-expansion clause — $W=0$ through a vacuum — is the validity condition hiding in plain sight: work is counted at the receiver.
@@ -752,7 +753,7 @@ Every JEE thermodynamics numerical is the first law plus the ideal-gas law plus 
 > C_{V}=\frac{1}{n}\left(\frac{\partial U}{\partial T}\right)_{V},\qquad C_{P}=\frac{1}{n}\left(\frac{\partial H}{\partial T}\right)_{P},\qquad \gamma=\frac{C_{P}}{C_{V}},\qquad H\equiv U+PV \tag{4.1}
 > $$
 >
->  $C_{V}$ is heat per kelvin with the gas held still; $C_{P}$ is heat per kelvin while the gas is free to push back the world at constant pressure. H — the "enthalpy" — is the quantity whose temperature-slope is heat supplied at constant pressure, because when P is fixed, $\Delta(U+PV) = \Delta U + P\Delta V$ is exactly "energy kept + energy paid out" = energy in. You may not need the word all day; you will use its content.
+>  $C_{V}$ is the molar heat capacity measured with volume fixed; $C_{P}$ is the molar heat capacity measured at constant pressure, where the gas may expand and do boundary work. H — the "enthalpy" — is the quantity whose temperature-slope is heat supplied at constant pressure, because when P is fixed, $\Delta(U+PV) = \Delta U + P\Delta V$ is exactly "energy kept + energy paid out" = energy in. You may not need the word all day; you will use its content.
 
 > **Why Cₚ − Cᵥ = R for an ideal gas — in four lines**
 >
@@ -767,6 +768,8 @@ $$
 giving the numbers to burn in: monatomic (He, Ar) $\gamma = 5/3 = 1.67$; diatomic (N₂, O₂, air) $\gamma = 7/5 = 1.40$; rigid triatomic non-linear (CH₄ classically, CO₂ with frozen vibration) $\gamma = 4/3 = 1.33$. The order is law, not data: fewer degrees of freedom means more of the heat must become translation (pressure!) per kelvin, which steepens every P–T curve and raises γ.
 
 ### 4.2 The three "iso-" processes
+
+Unless explicitly treated as temperature-dependent, $C_V$, $C_P$, and $\gamma$ in the standard process formulas below are approximated as constant over the temperature interval (the usual JEE ideal-gas model). If a gas's internal degrees of freedom change appreciably, use heat-capacity integrals and do not apply constant-$\gamma$ power laws without justification.
 
 > [!tip] FIGURE F5.3 · The five processes, one template
 > *Why:* every process problem is ΔU = Q − W plus one constraint; the table fixes which term is zero so the work is just reading the row.
@@ -1251,10 +1254,11 @@ $$
 Build the reversible route as "heat it at constant volume to the final T, then expand it isothermally to the final V" (any other route works and must agree — try it once as practice):
 
 $$
-\Delta S = nC_{V}\ln\frac{T_{2}}{T_{1}} + nR\ln\frac{V_{2}}{V_{1}} \qquad\text{(ideal gas, any path, any amount)} \tag{6.4}
+\Delta S = n\int_{T_1}^{T_2}\frac{C_V(T)}{T}\,dT+nR\ln\frac{V_2}{V_1}
+\qquad\text{(ideal gas; any path). For constant }C_V\text{, the integral is }nC_V\ln\frac{T_2}{T_1}. \tag{6.4}
 $$
 
-Consequences to keep ready: isochoric heating, $nC_{V}\ln(T_{2}/T_{1})$; isothermal doubling, $nR\ln 2 = 0.693\,nR$; reversible adiabatic, **zero** — which is why ch 4 adiabats are called *isentropes* and why the PV and TS pictures of chapter 5 shared one rectangle. Free expansion (Q = 0, W = 0, ΔU = 0): eq. 6.4 with T unchanged gives $nR\ln(V_{2}/V_{1}) > 0$ — the system's entropy rose while $\delta Q = 0$ along the actual path, and the surroundings paid nothing: **all of it is created**That is the one-minute argument for entropy as the measure of irreversibility:
+Consequences to keep ready: for constant $C_V$, isochoric heating gives $nC_V\ln(T_{2}/T_{1})$ (otherwise use the integral in (6.4)); isothermal doubling gives $nR\ln 2 = 0.693\,nR$; a reversible adiabatic change gives **zero** — which is why ch 4 reversible adiabats are called *isentropes* and why the PV and TS pictures of chapter 5 shared one rectangle. Free expansion (Q = 0, W = 0, ΔU = 0): eq. 6.4 with T unchanged gives $nR\ln(V_{2}/V_{1}) > 0$ — the system's entropy rose while $\delta Q = 0$ along the actual path, and the surroundings paid nothing: **all of it is created**That is the one-minute argument for entropy as the measure of irreversibility:
 
 > **The trap: "no heat, no entropy change"**
 >

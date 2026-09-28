@@ -351,7 +351,7 @@ $$
 
 **The twin paradox.** Twin A stays on Earth; twin B travels to a star at $0.8c$, turns around, and returns. A's clock reads $T_A=2d/(0.8c)$; B's clock reads $T_B=T_A/\gamma$ for each leg (the proper time of the traveller). B returns younger. The "paradox" is that B says A's clock runs slow (by symmetry of the Lorentz transformation) — but B accelerates at the turnaround, breaking the symmetry. In A's frame, B's clock runs slow continuously. In B's frame, the turnaround changes the simultaneity convention, and A's clock jumps forward — the two calculations agree on the age difference.
 
-**Pair production.** A photon with energy $E_\gamma$ near a nucleus can create an electron-positron pair ($e^-+e^+$). The minimum photon energy is $2m_ec^2=1.022$ MeV (both particles at rest in the CM frame). A photon in vacuum cannot pair-produce because momentum conservation cannot be satisfied simultaneously with energy conservation — the nucleus absorbs the recoil.
+**Pair production.** A photon with energy $E_\gamma$ near a nucleus can create an electron-positron pair ($e^-+e^+$). Neglecting nuclear recoil, the threshold is $2m_ec^2=1.022$ MeV (the pair has zero relative kinetic energy in its centre-of-momentum frame). For a stationary nucleus of mass $M$, exact energy–momentum conservation gives $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$; the correction is tiny for a heavy nucleus but nonzero. A photon in vacuum cannot pair-produce by itself because energy and momentum cannot both be conserved; the nearby nucleus takes the recoil.
 
 **Nuclear binding energy.** The mass of a nucleus is less than the sum of its nucleon masses by the binding energy: $B=\Delta mc^2$, where $\Delta m$ is the mass defect. This is why fission (heavy nuclei splitting) and fusion (light nuclei merging) release energy.
 
@@ -364,7 +364,7 @@ $$
 > *Search:* "relativistic momentum versus velocity diverging at speed of light"
 
 > [!abstract] DIAGRAM D28.10 · Pair production threshold energy bookkeeping
-> *Show:* a photon with energy $E_\gamma$ approaching a heavy nucleus; the photon disappearing and an electron-positron pair appearing; the energy ledger: $E_\gamma=2m_ec^2+K_{e^-}+K_{e^+}+K_{\text{nucleus}}$; at threshold all kinetic energies are zero and $E_\gamma=2m_ec^2=1.022$ MeV; the nucleus recoil marked as negligible.
+> *Show:* a photon with energy $E_\gamma$ approaching a heavy nucleus; the photon disappearing and an electron-positron pair appearing; the energy ledger includes pair rest energies and nuclear recoil; at exact threshold the products move together in the lab (zero relative kinetic energy in the CM frame), with $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$; annotate $1.022$ MeV as the heavy-nucleus approximation.
 > *Search:* "pair production photon energy threshold electron positron nucleus diagram"
 
 > [!abstract] DIAGRAM D28.11 · GPS relativistic correction components
@@ -645,7 +645,7 @@ What is the minimum photon energy for pair production near a heavy nucleus?
 
 <details><summary>Solution</summary>
 
-**Method.** At threshold, the electron and positron are created at rest in the CM frame (any extra energy goes into kinetic energy, so the minimum is when they have none). The photon energy must equal the total rest energy: $E_\gamma=2m_ec^2=2\times0.511=1.022$ MeV. The heavy nucleus absorbs negligible recoil.
+**Method.** At threshold, the pair has zero relative kinetic energy in the centre-of-momentum frame, but the nucleus and pair must recoil together in the lab to conserve momentum. For a stationary nucleus of mass $M$, invariant energy gives $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$. For a heavy nucleus the recoil correction is negligible, giving $1.022$ MeV.
 
 </details>
 
@@ -689,7 +689,7 @@ Event A occurs at $(t=0, x=0)$ and event B at $(t=3\ \mu\text{s}, x=700$ m). Cla
 | 6 | Energy–momentum relation | $E^2=(pc)^2+(mc^2)^2$ | E6, Q6 | find any one from the other two |
 | 7 | Photon energy and momentum | $E=hf$, $p=E/c$ | Q7 | photoelectric threshold |
 | 8 | Relativistic Doppler | Eq. (4.5) | E7, Q8 | approaching vs receding |
-| 9 | Pair production threshold | $E_\gamma\geq2m_ec^2$ | E8, Q9 | with recoil |
+| 9 | Pair production threshold | $E_\gamma\gtrsim2m_ec^2$ (heavy-nucleus approximation) | E8, Q9 | exact threshold includes nuclear recoil |
 | 10 | Invariant interval | $s^2=c^2\Delta t^2-\Delta x^2$ | E10, Q10 | classify timelike/lightlike/spacelike |
 | 11 | Rest energy and mass defect | $\Delta E=\Delta mc^2$ | Q11 | nuclear reactions |
 | 12 | GPS / accelerator corrections | $\gamma-1$ applied to real clocks | E9, Q12 | cyclotron frequency |
@@ -764,7 +764,7 @@ $\lambda=\lambda_0\sqrt{(1+\beta)/(1-\beta)}=400\sqrt{1.5/0.5}=400\sqrt{3}=693$ 
 
 <details><summary>Solution</summary>
 
-$E_\gamma=2m_ec^2=1.022$ MeV (the nucleus absorbs recoil; its rest mass barely changes).
+$E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/m_p)\approx1.02256$ MeV; $1.022$ MeV is the heavy-nucleus approximation.
 
 </details>
 
@@ -1242,12 +1242,12 @@ The relativistic Doppler effect for a receding source gives:
 </details>
 
 ### P10 · 4 marks
-Pair production near a nucleus requires a photon of at least:
+Pair production near a heavy nucleus requires a photon of approximately:
 (a) 0.511 MeV  (b) 1.022 MeV  (c) 2.044 MeV  (d) 13.6 eV
 
 <details><summary>Answer</summary>
 
-(b). $2m_ec^2=1.022$ MeV.
+(b), to the usual heavy-nucleus approximation. Exact threshold for a stationary nucleus of mass $M$ is $2m_ec^2(1+m_e/M)$.
 
 </details>
 

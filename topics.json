@@ -188,16 +188,16 @@
       "dependency": [
         "centre-of-mass-momentum"
       ],
-      "words": 9744,
+      "words": 10010,
       "display_formulas": 19,
-      "bytes_markdown": 69473,
+      "bytes_markdown": 71582,
       "pages": [
         "Rotational-mechanics.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 922,
+      "math_spans": 941,
       "bytes_html": 0
     },
     {
@@ -410,11 +410,11 @@
       "figures": 5,
       "questions": 0,
       "solutions": 0,
-      "math_spans": 887,
+      "math_spans": 886,
       "bytes_html": 0,
-      "bytes_markdown": 79212,
-      "words": 12037,
-      "display_formulas": 177,
+      "bytes_markdown": 79604,
+      "words": 12094,
+      "display_formulas": 176,
       "part": 1,
       "order": 13,
       "block": "waves"
@@ -1034,11 +1034,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1085,
+      "math_spans": 1055,
       "bytes_html": 0,
-      "bytes_markdown": 82800,
-      "words": 11558,
-      "display_formulas": 14
+      "bytes_markdown": 86276,
+      "words": 12079,
+      "display_formulas": 15
     },
     {
       "part": 2,
@@ -1082,11 +1082,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1166,
+      "math_spans": 1150,
       "bytes_html": 0,
-      "bytes_markdown": 91956,
-      "words": 9590,
-      "display_formulas": 16
+      "bytes_markdown": 91777,
+      "words": 9636,
+      "display_formulas": 17
     },
     {
       "part": 3,
@@ -1134,11 +1134,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1075,
+      "math_spans": 1078,
       "bytes_html": 0,
-      "bytes_markdown": 65424,
-      "words": 9408,
-      "display_formulas": 13
+      "bytes_markdown": 66862,
+      "words": 9607,
+      "display_formulas": 14
     },
     {
       "part": 4,
@@ -1189,9 +1189,9 @@
       "solutions": 93,
       "math_spans": 970,
       "bytes_html": 0,
-      "bytes_markdown": 73099,
+      "bytes_markdown": 73323,
       "words": 9961,
-      "display_formulas": 19
+      "display_formulas": 22
     },
     {
       "part": 5,
@@ -1237,11 +1237,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 921,
+      "math_spans": 924,
       "bytes_html": 0,
-      "bytes_markdown": 79401,
-      "words": 11499,
-      "display_formulas": 13
+      "bytes_markdown": 81169,
+      "words": 11802,
+      "display_formulas": 16
     },
     {
       "part": 6,
@@ -1287,11 +1287,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 852,
+      "math_spans": 848,
       "bytes_html": 0,
-      "bytes_markdown": 70539,
-      "words": 9971,
-      "display_formulas": 19
+      "bytes_markdown": 72131,
+      "words": 10235,
+      "display_formulas": 24
     },
     {
       "part": 7,
@@ -1340,10 +1340,10 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 700,
+      "math_spans": 705,
       "bytes_html": 0,
-      "bytes_markdown": 71107,
-      "words": 10136,
+      "bytes_markdown": 71631,
+      "words": 10194,
       "display_formulas": 17
     },
     {
@@ -1368,16 +1368,16 @@
       "dependency": [
         "rotational-mechanics"
       ],
-      "words": 9705,
-      "display_formulas": 14,
-      "bytes_markdown": 70552,
+      "words": 10034,
+      "display_formulas": 15,
+      "bytes_markdown": 72864,
       "pages": [
         "Gravitation.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 803,
+      "math_spans": 817,
       "bytes_html": 0
     },
     {
@@ -1402,16 +1402,16 @@
       "dependency": [
         "gravitation"
       ],
-      "words": 9610,
+      "words": 9685,
       "display_formulas": 16,
-      "bytes_markdown": 70603,
+      "bytes_markdown": 71172,
       "pages": [
         "Simple-harmonic-motion.md"
       ],
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 946,
+      "math_spans": 954,
       "bytes_html": 0
     },
     {
@@ -1459,11 +1459,11 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 1410,
+      "math_spans": 1390,
       "bytes_html": 0,
-      "bytes_markdown": 124147,
-      "words": 18103,
-      "display_formulas": 28
+      "bytes_markdown": 124150,
+      "words": 18101,
+      "display_formulas": 25
     },
     {
       "slug": "elasticity",

@@ -18,6 +18,6 @@
 
 **Hand-off.** Every subsequent chapter assumes the dimensional-formula table and the error-propagation rules from this chapter.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D1.k`) with a `*Search:*` line; no image files by design.
+**Media and Obsidian support.** Six Mermaid `FIGURE` callouts render directly in Obsidian. Twelve `DIAGRAM` briefs remain as drawing specifications rather than rendered illustrations; prioritize apparatus, graphs, and instrument-reading visuals when expanding this chapter. The note is tagged `flashcards` and includes question–answer cards for the configured Spaced Repetition plugin (the plugin must be installed/enabled for review scheduling). No terminal-style ASCII diagrams are used.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

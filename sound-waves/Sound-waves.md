@@ -187,13 +187,13 @@ Derivation: consider slab from $x$ to $x+dx$. New length $dx + s(x+dx)-s(x) \app
 Excess pressure (acoustic pressure):
 
 $$
-\Delta P(x,t) = -B\frac{\partial s}{\partial x} = \Delta P_0\cos(kx-\omega t) \tag{1.3}
+\Delta P(x,t) = -B\frac{\partial s}{\partial x} = -\Delta P_0\cos(kx-\omega t+\phi) \tag{1.3}
 $$
 
-with
+for $s(x,t)=s_0\sin(kx-\omega t+\phi)$, where the positive pressure-amplitude magnitude is
 
 $$
-\Delta P_0 = B k s_0 = \rho v\omega s_0 = Z\omega s_0 \tag{1.4}
+\Delta P_0 = B k s_0 = \rho v\omega s_0 = Z\omega s_0. \tag{1.4}
 $$
 
 **Condition:** Linear Hooke-like law $\Delta P = -B(\Delta V/V)$, small amplitude, adiabatic bulk modulus for sound.
@@ -208,7 +208,7 @@ At compression ($\Delta P>0$), density higher.
 
 ### 1.3 Phase relationship
 
-From (1.1) and (1.3): $s\propto\sin$, $\Delta P\propto\cos$. So $\Delta P$ leads $s$ by $90°$ ($\pi/2$). Physically:
+With the chosen right-travelling convention $s=s_0\sin(kx-\omega t+\phi)$, Eq. (1.3) gives $\Delta P=-\Delta P_0\cos(kx-\omega t+\phi)$. Thus pressure and displacement are in quadrature (here pressure lags displacement by $90°$); pressure and particle velocity are in phase because $u=\partial s/\partial t=-s_0\omega\cos(\cdots)$. The node/antinode swap is unaffected by the sign convention. Physically:
 
 - **Displacement node** $s=0$ → slope $|\partial s/\partial x|$ maximal → $|\Delta P|$ maximal (pressure antinode).
 - **Displacement antinode** $|s|=s_0$ → slope zero → $\Delta P=0$ (pressure node).
@@ -361,9 +361,9 @@ flowchart LR
 
 ### 2.5 Intensity, loudness, decibel
 
-Particle velocity $u=\partial s/\partial t = -s_0\omega\cos(kx-\omega t)$. Kinetic energy density $u_k=\tfrac12\rho u^2$. Potential $u_p=\tfrac12 B(\partial s/\partial x)^2$. For traveling wave $u_k=u_p$ pointwise, total $u=\rho\omega^2 s_0^2\cos^2/2? Actually average.
+For a plane longitudinal wave $s=s_0\sin(kx-\omega t)$, particle velocity is $u=\partial s/\partial t=-s_0\omega\cos(kx-\omega t)$. In the linear, lossless model, kinetic and elastic potential energy densities are $u_k=\tfrac12\rho u^2$ and $u_p=\tfrac12B(\partial s/\partial x)^2$. Using $B=\rho v^2$ and $v=\omega/k$, they are equal pointwise for this progressive harmonic wave, and the instantaneous total density is $u=u_k+u_p=\rho\omega^2s_0^2\cos^2(kx-\omega t)$.
 
-Power transmission: $P = F\cdot u = (-A\Delta P) u$ → instantaneous intensity
+For a right-travelling plane wave, the acoustic intensity (energy flux per unit area in the propagation direction) is $I(x,t)=\Delta P\,u$; here pressure and particle velocity are in phase, so this flux is positive. The instantaneous intensity is
 
 $$
 I(x,t)=\Delta P\cdot u = \rho v\omega^2 s_0^2\cos^2(kx-\omega t) \tag{2.8}
@@ -553,25 +553,13 @@ flowchart LR
 
 ### 2.10 Wind and 2D oblique Doppler
 
-Wind $w$ along line S→O: effective sound speed $v_{\text{eff}}=v\pm w$ (+ if wind S→O). Then replace $v$ by $v_{\text{eff}}$ in (2.21):
+For a uniform wind $\vec w$, let $\hat r$ point along the sound ray from source to observer and set the ground-frame propagation speed along that ray to $c_g=v+\vec w\cdot\hat r$. If $\vec v_s$ and $\vec v_o$ are the source and observer velocities in the ground frame, their line-of-sight components give
 
 $$
-f' = f\frac{(v\pm w)\pm v_o}{(v\pm w)\mp v_s} \tag{2.22}
+f'=f\,\frac{c_g-\vec v_o\cdot\hat r}{c_g-\vec v_s\cdot\hat r}. \tag{2.22}
 $$
 
-**Master formula** (with $w$ positive S→O):
-
-$$
-f' = f\left(\frac{v+w+v_o}{v+w-v_s}\right) \tag{2.23}
-$$
-
-where $v_o$ positive toward source? Many textbooks write $f'=f[(v\pm w)\pm v_o]/[(v\pm w)\mp v_s]$ and define signs in words. Better use vector projection:
-
-$$
-f' = f\frac{v - \vec v_o\cdot\hat r_{SO}}{v - \vec v_s\cdot\hat r_{SO}} \tag{2.24}
-$$
-
-where $\hat r_{SO}$ unit vector from source to observer, $v$ is sound speed in medium at rest, no wind. With wind $\vec w$, replace $v\to v+ \vec w\cdot\hat r_{SO}$? Actually effective: $f'=f\frac{v+\vec w\cdot\hat r - \vec v_o\cdot\hat r}{v+\vec w\cdot\hat r - \vec v_s\cdot\hat r}$.
+This assumes a uniform medium and wind, a well-defined ray, and non-relativistic speeds. With no wind, set $c_g=v$. For collinear motion, one may instead take $w$ positive S$\to$O, $v_s$ positive toward O, and $v_o$ positive toward S; then $f'=f(v+w+v_o)/(v+w-v_s)$. The signed vector form avoids ambiguous $\pm$ choices.
 
 ![Oblique](assets/figures/fig-011.svg)
 
@@ -580,12 +568,18 @@ where $\hat r_{SO}$ unit vector from source to observer, $v$ is sound speed in m
 For 2D without wind:
 
 $$
-f' = f\frac{v - v_o\cos\theta_o}{v - v_s\cos\theta_s} \tag{2.25}
+f'=f\frac{v-v_o\cos\theta_o}{v-v_s\cos\theta_s}. \tag{2.23}
 $$
 
-$\theta_o$ angle between $\vec v_o$ and line from observer to source? Consistent definition needed. Use: $\theta_s$ between $\vec v_s$ and SO line, $\theta_o$ between $\vec v_o$ and SO line (or OS). We adopt: $\cos\theta_s$ positive if source moving toward observer, $\cos\theta_o$ positive if observer moving away from source. Then (2.25) with minus signs as written is common.
+Here $\hat r$ points from source to observer; $\theta_s$ is between the source velocity and $\hat r$, and $\theta_o$ is between the observer velocity and $\hat r$. Thus a source moving toward the observer has $\cos\theta_s>0$, while an observer moving toward the source has $\cos\theta_o<0$; both raise the observed frequency. This is the no-wind form of (2.22).
 
-**Closest approach:** source passes observer at impact parameter $b$ with speed $v_s$. At time $t$ (t=0 at closest), $\cos\theta_s = -v_s t/\sqrt{b^2+v_s^2t^2}$ (if moving along x). Frequency vs time glides from high to low, with $f'=f$ at $t=0$ (transverse Doppler zero in non-relativistic acoustics). Derivative $df'/dt$ maximal at closest approach.
+**Closest approach:** let the source move at constant speed $v_s$ along $+x$, with the stationary observer at perpendicular distance $b$; take $t=0$ at closest approach. Then $\cos\theta_s=-v_st/\sqrt{b^2+v_s^2t^2}$, and
+
+$$
+f'(t)=f\frac{v}{v+v_s^2t/\sqrt{b^2+v_s^2t^2}}.
+$$
+
+The frequency passes through $f$ at closest approach: it is higher while the source approaches ($t<0$) and lower while it recedes ($t>0$).
 
 ### 2.11 Echo / double Doppler
 
@@ -824,9 +818,9 @@ $$
 
 For organ pipe, open end $Z_2≈0$ (atmosphere large volume) → $R≈1$ with phase flip (pressure node). Closed end $Z_2→∞$ → $R≈1$ no flip (displacement node). **Advantage:** Same as string impedance matching, no need to remember node rules.
 
-### 4.3 Image method for organ pipes
+### 4.3 Boundary conditions and organ-pipe modes
 
-Closed end → image source in phase for pressure, out of phase for displacement? Equivalent to extending pipe to mirror: closed pipe $L$ is half of open pipe $2L$ with only odd harmonics. So $f_{\text{closed}}=(2n-1)f_{\text{open,2L}}$.
+At a rigid closed end, air-particle displacement is a node and pressure variation is an antinode. At an open end, pressure variation is approximately zero (a pressure node) and displacement is an antinode; the displacement antinode lies slightly beyond the physical opening, which is accounted for by the end correction. Therefore an ideal pipe closed at one end supports $L_{\rm eff}=(2n-1)\lambda/4$ and only odd harmonics, while an ideal pipe open at both ends supports $L_{\rm eff}=n\lambda/2$ and all integer harmonics. Use effective length including end corrections where required.
 
 ### 4.4 Energy method for resonance
 
@@ -834,17 +828,13 @@ Standing wave energy: $E=\int (\tfrac12\rho\omega^2 s_0^2\sin^2 kx) dx$ etc. At 
 
 ### 4.5 Doppler sign-free method
 
-Instead of memorizing signs, use:
+Use the same signed line-of-sight convention as §2.10. Let $\hat r$ point from source to observer and $c_g=v+\vec w\cdot\hat r$ be the sound-wave speed along that ray in the ground frame. Then
 
-1. Write $v_{\text{sound, medium}}=v$.
-2. Effective $v_{\text{eff}}=v+\vec w\cdot\hat r_{SO}$.
-3. $f' = f \times (v_{\text{eff}} - \vec v_o\cdot\hat r_{SO})? Actually observer moving toward source reduces denominator? Let's use consistent: frequency observed = (relative speed of wave vs observer)/λ_received. λ_received = (v_{\text{eff}} - \vec v_s\cdot\hat r)/f. So $f'=f(v_{\text{eff}} - \vec v_o\cdot\hat r_{obs?})...$.
+$$
+f'=f\frac{c_g-\vec v_o\cdot\hat r}{c_g-\vec v_s\cdot\hat r}.
+$$
 
-Simpler: draw S→O arrow, project $v_s$ and $v_o$ onto it. If source component toward observer, subtract from denominator (reduces λ, increases f). If observer component toward source, add to numerator (increases relative speed).
-
-**Rule:** “Toward = higher frequency”. Source toward observer → denominator smaller → f'↑. Observer toward source → numerator larger → f'↑. Wind toward observer → both numerator and denominator larger by same amount → if both stationary, cancel.
-
-This avoids sign confusion.
+The source projection changes the wavelength laid down in the medium; the observer projection changes the rate at which wavefronts are encountered. A source moving toward the observer has $\vec v_s\cdot\hat r>0$ and lowers the denominator; an observer moving toward the source has $\vec v_o\cdot\hat r<0$ and raises the numerator. With source and observer at rest, a uniform wind changes both numerator and denominator equally, so it does not change the measured frequency.
 
 ### 4.6 Accelerated Doppler – closest approach frequency glide
 
@@ -860,7 +850,7 @@ Derivative at $t=0$: $df'/dt|_0 = -f v_s^2/(v b)$. Gives estimate of $b$ from fr
 
 ### 4.7 WKB for non-uniform tube
 
-If cross-section $A(x)$ varies slowly ($dA/dx \ll A/\lambda$), amplitude scales as $A^{-1/2}$ to conserve power $I A = const$ → $s_0\propto A^{-1/2}$, $\Delta P_0\propto A^{-1/2}$. For horn, $A$ increases → amplitude decreases but intensity? Actually $I\propto1/A$.
+For a slowly varying duct of cross-sectional area $A(x)$, with negligible reflection and uniform medium properties, conservation of time-averaged acoustic power gives $I(x)A(x)\approx\text{constant}$. Since $I\propto s_0^2$ (and $I\propto\Delta P_0^2$) for a plane progressive wave in the same medium, the displacement and pressure amplitudes scale approximately as $A^{-1/2}$, while intensity scales as $A^{-1}$. This is a WKB/slow-variation approximation, not a general law for abrupt changes or strongly reflecting ducts.
 
 ---
 

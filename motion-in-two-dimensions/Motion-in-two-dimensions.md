@@ -210,9 +210,15 @@ flowchart LR
 
 **From a height $h$:** Launch from $(0,h)$ with angle $\theta$. The time of flight is found from $-h=v_0\sin\theta\,T-\frac{1}{2}gT^2$, a quadratic in $T$. The range is $R=v_0\cos\theta\,T$.
 
-**On an incline of angle $\alpha$:** Resolve the velocity into components along and perpendicular to the incline. The effective gravity along the incline is $g\sin\alpha$ and perpendicular is $g\cos\alpha$. The "perpendicular to incline" motion is like a 1-D projectile with $g_{\perp}=g\cos\alpha$.
+**On an incline of angle $\alpha$:** For a launch uphill at angle $\beta$ above the incline, resolve motion into tangent and normal components. The accelerations are $-g\sin\alpha$ along the slope and $-g\cos\alpha$ normal to it. Returning to the same incline, the flight time is $T=2v_0\sin\beta/(g\cos\alpha)$ and the range measured along the incline is
 
-**With a headwind:** If the wind blows horizontally with speed $v_w$ (opposing the motion), $a_x=-k v_w$ (or whatever the drag model gives) and $v_{0x}=v_0\cos\theta$. The trajectory is no longer a parabola.
+$$
+R_{\rm incline}=\frac{2v_0^2\sin\beta\cos(\alpha+\beta)}{g\cos^2\alpha}.
+$$
+
+For $0\le\alpha<90°$, maximizing this range gives $\beta=45°-\alpha/2$ above the incline (equivalently, launch angle $45°+\alpha/2$ from horizontal).
+
+**With a headwind:** The trajectory depends on the drag law and the air's velocity relative to the projectile. A constant horizontal force gives constant $a_x$; linear or quadratic air drag generally makes $a_x$ vary with relative airspeed. In either case, the vacuum parabolic trajectory no longer applies.
 
 > [!abstract] DIAGRAM D4.4 · Projectile from a height
 > *Show:* a projectile launched at angle $\theta$ from the edge of a cliff of height $h$. The trajectory extends beyond the cliff edge and hits the ground at a range $R$ beyond the cliff. The time of flight is longer than for ground-to-ground because the ball must fall the additional height $h$.
@@ -226,7 +232,7 @@ $$
 
 **Rain-and-man:** A man walks east at $v_m$. Rain falls vertically at $v_r$. The velocity of rain relative to the man: $\mathbf{v}_{\text{rain,man}}=\mathbf{v}_{\text{rain}}-\mathbf{v}_{\text{man}}=-v_m\hat{i}+(-v_r)\hat{j}$. The rain appears to come from an angle $\tan\alpha=v_m/v_r$ from the vertical (tilted toward the man).
 
-**River crossing:** A boat points at angle $\alpha$ to the bank with speed $v_b$ relative to the water. The river flows at $v_r$ perpendicular to the bank. The boat's velocity relative to the ground: $\mathbf{v}_{\text{boat,ground}}=v_b\cos\alpha\,\hat{i}+(v_b\sin\alpha-v_r)\hat{j}$ (if $\hat{i}$ is across the river). To cross directly: $v_b\sin\alpha=v_r$, so $\alpha=\sin^{-1}(v_r/v_b)$. To minimise crossing time: $\alpha=0$ (point straight across).
+**River crossing:** Let $+x$ point straight across the river and $+y$ point downstream. The water flows at $v_r\hat{j}$. A boat with speed $v_b$ relative to the water is aimed at angle $\alpha$ upstream from the straight-across direction, so $\mathbf{v}_{\text{boat,water}}=v_b\cos\alpha\,\hat{i}-v_b\sin\alpha\,\hat{j}$. Its ground velocity is $\mathbf{v}_{\text{boat,ground}}=v_b\cos\alpha\,\hat{i}+(v_r-v_b\sin\alpha)\hat{j}$. To land directly opposite, choose $v_b\sin\alpha=v_r$ (possible only if $v_b\ge v_r$). For minimum crossing time, aim straight across ($\alpha=0$); then crossing speed is $v_b$ and the boat drifts downstream.
 
 **Aircraft-and-wind:** An aircraft must fly from $A$ to $B$ (a distance $d$ at bearing $\beta$). The wind blows at $\mathbf{v}_w$. The aircraft's airspeed is $v_a$. The required heading angle $\alpha$ satisfies: $v_a\sin\alpha=v_w\sin\phi$ (where $\phi$ is the angle between the wind and the bearing). The ground speed is $v_g=v_a\cos\alpha+v_w\cos\phi$.
 
@@ -386,7 +392,7 @@ radius of curvature; valid for any curved path.
 
 ### 4.2 Limit checks
 
-- $\theta=0$ (horizontal launch): $T=0$, $H=0$, $R=0$ — the projectile is launched along the ground. Wait — $T=2v_0\sin0/g=0$ — this means it lands immediately, which is correct for ground-level launch. For a launch from a cliff, $T=\sqrt{2h/g}$.
+- $\theta=0$ for a launch from ground level: $T=H=R=0$ in the idealized ground-to-ground formulas because the projectile immediately meets the ground. For a horizontal launch from height $h>0$, instead $T=\sqrt{2h/g}$ and $R=v_0\sqrt{2h/g}$. The ground-to-ground range formula is not applicable to that case.
 - $\theta=90°$ (vertical launch): $T=2v_0/g$, $H=v_0^2/(2g)$, $R=0$ — straight up and down.
 - $g=0$: $T\to\infty$, $H\to\infty$, $R\to\infty$ — the projectile goes straight forever.
 - $R\to0$ at $\theta=0°$ and $\theta=90°$, maximum at $45°$ — correct.
@@ -586,7 +592,7 @@ A particle on a circle of radius 2 m has speed $v=3t$ m/s. Find the total accele
 A projectile is launched at 20 m/s at $60°$. Find the radius of curvature at the apex. ($g=10$ m/s$^2$.)
 
 > [!success] Check
-> $\rho=20$ m. At the apex, $v=10$ m/s (horizontal), $a_\perp=g=10$ m/s$^2$: $\rho=100/10=10$ m. Wait — let me recompute. $v_0\cos60°=10$ m/s. $\rho=10^2/10=10$ m. Hmm, I said 20. Let me recalculate: $v_0=20$, $\theta=60°$. $v_x=20\cos60°=10$. $\rho=v_x^2/g=100/10=10$ m.
+> At the apex, $v=v_0\cos60°=10$ m/s and $a_\perp=g=10$ m/s$^2$, so $\rho=v^2/a_\perp=100/10=10$ m.
 
 <details><summary>Solution</summary>
 
@@ -625,7 +631,7 @@ A projectile is launched at angle $\beta$ to an incline of angle $\alpha$ (where
 For a fixed $v_0$, the range $R=\frac{v_0^2\sin2\theta}{g}$. The maximum height for a given range $R$ is $H=\frac{R}{2}\tan\theta$. Eliminate $\theta$ to find the "safety parabola" — the boundary of all reachable points.
 
 > [!success] Check
-> At $R=0$: $H=0$ (launch point). At $R_{\max}=v_0^2/g$: $H=v_0^2/(2g)$ (the $45°$ trajectory reaches the maximum range and the maximum height simultaneously... wait, that's not right. At $45°$: $H=v_0^2\sin^245°/(2g)=v_0^2/(4g)$, not $v_0^2/(2g)$.
+> The safety-parabola envelope has its vertex at $x=0$, $y=v_0^2/(2g)$ (the vertical-launch maximum height), and its ground intercept at $x=R_{\max}=v_0^2/g$. The single $45°$ ground-to-ground trajectory has height $v_0^2/(4g)$ at its endpoint; do not confuse that with the envelope's vertex.
 
 <details><summary>Solution</summary>
 
@@ -1015,9 +1021,15 @@ A projectile is launched from the base of an incline of angle $\alpha$. A target
 
 <details><summary>Solution</summary>
 
-**Method.** The target is at $(d\cos\alpha, d\sin\alpha)$. The trajectory equation: $d\sin\alpha=d\cos\alpha\tan\theta-\frac{gd^2\cos^2\alpha}{2v_0^2\cos^2\theta}$. This is a transcendental equation in $\theta$ — it can be solved numerically or by the substitution $u=\tan\theta$. In general, there are two solutions (two launch angles hit the same target on the incline).
+**Method.** The target is at $(d\cos\alpha,d\sin\alpha)$. Substitution into the trajectory equation gives, with $t=\tan\theta$ and $q=gd\cos\alpha/(2v_0^2)$,
 
-**Checks.** (i) At $\alpha=0$: $0=d\tan\theta-gd^2/(2v_0^2\cos^2\theta)$, which gives $\tan\theta=gd/(2v_0^2\cos^2\theta)=gd/(v_0^2\sin2\theta)$ — the standard range formula. (ii) At $\alpha=90°$: the incline is a vertical wall — only one solution (the projectile hits the wall or misses).
+$$
+q t^2-t+(\tan\alpha+q)=0.
+$$
+
+This is a quadratic, not a transcendental equation. Real launch angles exist when $1-4q(\tan\alpha+q)\ge0$; the roots give the possible launch angles $\theta=\tan^{-1}t$ (for a target on the uphill incline, both roots are positive when distinct).
+
+**Checks.** For a horizontal target plane, $\alpha=0$, the discriminant condition reduces to $d\le v_0^2/g$, the familiar maximum-range condition. At the limiting distance, the two launch angles coincide.
 
 </details>
 
@@ -1051,9 +1063,17 @@ A pursuer at the origin must intercept a target moving at velocity $\mathbf{v}_t
 
 <details><summary>Solution</summary>
 
-**Method.** In the target's frame, the pursuer's velocity is $\mathbf{v}_p-\mathbf{v}_t$. For interception, the pursuer must reach the origin (target's position) in the target's frame. The pursuer's speed in the target's frame is $|\mathbf{v}_p-\mathbf{v}_t|$, which must be directed toward the origin. The minimum $v_p$ occurs when $\mathbf{v}_p$ is perpendicular to $\mathbf{v}_t$... wait, that's not right. The minimum $v_p$ is such that the pursuer's velocity circle (radius $v_p$) just touches the line from the pursuer to the target in the target's frame. This gives $v_{p,\min}=v_t\sin\phi$ where $\phi$ is the angle between $\mathbf{v}_t$ and the line from pursuer to target.
+**Method.** Let $\mathbf{r}$ point from the pursuer to the target initially. Interception at a finite time $t>0$ requires $|\mathbf{r}+\mathbf{v}_t t|=v_p t$, so
 
-**Checks.** (i) If the target moves directly away: $v_{p,\min}=v_t$ — the pursuer must be at least as fast. (ii) If the target moves perpendicular: $v_{p,\min}$ can be very small (the pursuer just needs to reach the target's path).
+$$
+v_p^2=v_t^2+\frac{r^2}{t^2}+\frac{2\mathbf{r}\cdot\mathbf{v}_t}{t}.
+$$
+
+If the target initially has a component toward the pursuer ($\mathbf{r}\cdot\mathbf{v}_t<0$), minimizing over $t>0$ gives $t_*=-r^2/(\mathbf{r}\cdot\mathbf{v}_t)$ and $v_{p,\min}=v_t\sin\phi$, where $\phi$ is the angle between $\mathbf{r}$ and $\mathbf{v}_t$ (so $\phi>90°$ here). The required heading is along $\mathbf{r}+\mathbf{v}_t t_*$.
+
+If the target is receding or moves exactly perpendicular initially, there is no attained finite-time minimum: the required speed has infimum $v_t$ as $t\to\infty$, and a finite interception requires $v_p>v_t$.
+
+**Checks.** A target moving directly toward the pursuer ($\phi=180°$) can be intercepted even by a stationary pursuer, so $v_{p,\min}=0$. A target moving directly away cannot be caught in finite time unless $v_p>v_t$.
 
 </details>
 
@@ -1293,12 +1313,12 @@ The relative velocity $\mathbf{v}_{AB}$:
 </details>
 
 ### P20 · 4 marks
-For a projectile on an incline:
-(a) the effective gravity is $g\cos\alpha$ perpendicular to the incline  (b) the range along the incline can be derived from the perpendicular motion  (c) the maximum range occurs at $\theta=45°$ from horizontal  (d) the maximum range occurs at $\theta=45°+\alpha/2$ from the incline
+For a projectile launched uphill from the base of an incline at angle $\alpha$, which launch angle from the horizontal maximizes the range along the incline?
+(a) $45°$  (b) $45°+\alpha/2$  (c) $45°-\alpha/2$  (d) $\alpha$
 
 <details><summary>Answer</summary>
 
-(a), (b), (d). The maximum-range angle from the incline is $45°-\alpha/2$ from horizontal, or $45°+\alpha/2$ from the incline surface. Wait — let me re-check. The range along the incline is $R=2v_0^2\sin\beta\cos(\beta+\alpha)/(g\cos^2\alpha)$ where $\beta$ is the angle from the incline. Maximum at $\beta=45°-\alpha/2$. So the angle from the incline is $45°-\alpha/2$, not $45°+\alpha/2$. Correcting: (a), (b), and the angle from the incline is $45°-\alpha/2$.
+(b). Equivalently, the optimum angle measured above the incline is $45°-\alpha/2$. This follows by maximizing $R=2v_0^2\sin\beta\cos(\beta+\alpha)/(g\cos^2\alpha)$ with respect to $\beta$, the launch angle from the incline.
 
 </details>
 

@@ -64,7 +64,7 @@ Not a linear-algebra course: we cover vectors in 2 and 3 dimensions, not $n$ dim
 | 3 | Subtraction | $\mathbf{a}-\mathbf{b}=\mathbf{a}+(-\mathbf{b})$ | §3.3 | full |
 | 4 | Components and resolution | $x$, $y$, $z$ components; unit vectors $\hat{i}$, $\hat{j}$, $\hat{k}$ | §3.4 | full |
 | 5 | Direction cosines | $l=\cos\alpha$, $m=\cos\beta$, $n=\cos\gamma$; $l^2+m^2+n^2=1$ | §3.5 | full |
-| 6 | Dot product | $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; projection | §3.6 | full |
+| 6 | Dot product | $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; scalar component and vector projection | §3.6 | full |
 | 7 | Cross product | $\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$; area | §3.7 | full |
 | 8 | Scalar triple product | $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$; volume | §3.8 | full |
 | 9 | Vector triple product | $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$; the BAC–CAB rule | §3.9 | full |
@@ -78,7 +78,7 @@ Not a linear-algebra course: we cover vectors in 2 and 3 dimensions, not $n$ dim
 
 **A vector lives in all coordinate systems at once.** The displacement "3 m east" is the same physical quantity whether you call it $(3,0)$ in Cartesian or $(3, 0°)$ in polar. The components change; the vector does not. Writing $\mathbf{a}=a_x\hat{i}+a_y\hat{j}+a_z\hat{k}$ is just choosing a language to describe it.
 
-**Two kinds of multiplication, two kinds of output.** The dot product $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ gives a scalar — the projection of one vector onto the other. The cross product $\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$ gives a vector — the area of the parallelogram, directed perpendicular to both. Neither is more "correct"; they answer different questions.
+**Two kinds of multiplication, two kinds of output.** The dot product $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ is a scalar. Dividing it by $|\mathbf{b}|$ gives the signed scalar component of $\mathbf{a}$ along $\mathbf{b}$; multiplying that component by $\hat{\mathbf b}$ gives the vector projection. The cross product $\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}$ gives a vector perpendicular to both, whose magnitude is the parallelogram area. Neither operation is more "correct"; they answer different questions.
 
 > [!tip] FIGURE F2.1 · Chapter map
 > *Why:* the chapter is one toolbox — add, resolve, project, cross — and the map shows which tool answers which question.
@@ -113,7 +113,7 @@ mindmap
 | $[\mathbf{a},\mathbf{b},\mathbf{c}]$ | scalar triple product $=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$ | scalar |
 
 > [!info] Bookkeeping rules
-> Vectors are printed bold ($\mathbf{a}$) or with arrows ($\vec{a}$). Unit vectors get hats ($\hat{a}$). The cross product exists only in 3D (and 7D — a mathematical curiosity). The dot product exists in any dimension. In this chapter all vectors are in 3D Euclidean space unless stated otherwise.
+> Vectors are printed bold ($\mathbf{a}$) or with arrows ($\vec{a}$). Unit vectors get hats ($\hat{a}$), and $\hat{a}$ is defined only when $\mathbf{a}\ne\mathbf{0}$. The familiar cross product that returns a vector perpendicular to both inputs with the usual area magnitude is defined in 3D; an exceptional analogue exists in 7D with different algebraic context. The dot product exists in any Euclidean dimension. Unless stated otherwise, this chapter works in 3D Euclidean space.
 
 Three numbers to carry: $\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\cos45°=1/\sqrt{2}=0.707$; $\sin60°=\sqrt{3}/2=0.866$, $\cos60°=0.5$.
 
@@ -210,7 +210,7 @@ $$
 2. **Distributive:** $\mathbf{a}\cdot(\mathbf{b}+\mathbf{c})=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\cdot\mathbf{c}$.
 3. **Perpendicular:** $\mathbf{a}\cdot\mathbf{b}=0$ iff $\mathbf{a}\perp\mathbf{b}$ (assuming non-zero vectors).
 4. **Self-product:** $\mathbf{a}\cdot\mathbf{a}=a^2$.
-5. **Projection:** $\text{proj}_{\mathbf{b}}\mathbf{a}=\frac{\mathbf{a}\cdot\mathbf{b}}{b}$ (the component of $\mathbf{a}$ along $\mathbf{b}$).
+5. **Scalar component along $\mathbf b$:** $\operatorname{comp}_{\mathbf b}\mathbf a=\frac{\mathbf a\cdot\mathbf b}{|\mathbf b|}=|\mathbf a|\cos\theta$. The vector projection is $\operatorname{proj}_{\mathbf b}\mathbf a=\frac{\mathbf a\cdot\mathbf b}{|\mathbf b|^2}\mathbf b$. These are defined for $\mathbf b\ne\mathbf 0$.
 
 > [!abstract] DIAGRAM D2.4 · The dot product as projection
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ with angle $\theta$ between them; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length of the projection labelled $a\cos\theta$; the formula $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ shown alongside.
@@ -218,7 +218,7 @@ $$
 
 > [!tip] FIGURE F2.3 · The dot product answers "how much along?"
 > *Why:* work, component extraction, and every "find the angle" problem are one machinery; the figure fixes which output is which.
-> *Data:* $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; projection of $\mathbf{a}$ on $\mathbf{b}$ is $(\mathbf{a}\cdot\mathbf{b})/b = a\cos\theta$.
+> *Data:* $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$; the scalar component of $\mathbf{a}$ along $\mathbf{b}$ is $(\mathbf{a}\cdot\mathbf{b})/|\mathbf{b}|=a\cos\theta$, and the vector projection is $((\mathbf{a}\cdot\mathbf{b})/|\mathbf{b}|^2)\mathbf{b}$.
 
 ```mermaid
 flowchart LR
@@ -242,7 +242,7 @@ The direction of $\hat{n}$ is given by the right-hand rule: curl the fingers fro
 
 1. **Anti-commutative:** $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$.
 2. **Distributive:** $\mathbf{a}\times(\mathbf{b}+\mathbf{c})=\mathbf{a}\times\mathbf{b}+\mathbf{a}\times\mathbf{c}$.
-3. **Parallel:** $\mathbf{a}\times\mathbf{b}=\mathbf{0}$ iff $\mathbf{a}\parallel\mathbf{b}$.
+3. **Parallel:** for non-zero vectors $\mathbf{a}$ and $\mathbf{b}$, $\mathbf{a}\times\mathbf{b}=\mathbf{0}$ iff $\mathbf{a}\parallel\mathbf{b}$. If either vector is zero, the cross product is zero but the direction of the zero vector is undefined.
 4. **Self-product:** $\mathbf{a}\times\mathbf{a}=\mathbf{0}$.
 5. **Area:** $|\mathbf{a}\times\mathbf{b}|$ = area of the parallelogram formed by $\mathbf{a}$ and $\mathbf{b}$.
 
@@ -376,13 +376,13 @@ $$
 \boxed{\mathbf{a}\cdot\mathbf{b}=ab\cos\theta=a_xb_x+a_yb_y+a_zb_z} \qquad (4.1)
 $$
 
-commutative, distributive; zero iff $\mathbf{a}\perp\mathbf{b}$.
+commutative, distributive; for non-zero vectors, zero iff $\mathbf{a}\perp\mathbf{b}$.
 
 $$
 \boxed{\mathbf{a}\times\mathbf{b}=ab\sin\theta\,\hat{n}=(a_yb_z-a_zb_y)\hat{i}+\cdots} \qquad (4.2)
 $$
 
-anti-commutative; zero iff $\mathbf{a}\parallel\mathbf{b}$; $|\mathbf{a}\times\mathbf{b}|$ = area of parallelogram.
+anti-commutative; for non-zero vectors, zero iff $\mathbf{a}\parallel\mathbf{b}$; $|\mathbf{a}\times\mathbf{b}|$ is the parallelogram area.
 
 $$
 \boxed{\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\begin{vmatrix}a_x&a_y&a_z\\b_x&b_y&b_z\\c_x&c_y&c_z\end{vmatrix}} \qquad (4.3)
@@ -408,8 +408,7 @@ valid for the polar basis in 2D; $\omega=\dot{\theta}$.
 - $\theta=\pi/2$ (perpendicular): $\mathbf{a}\cdot\mathbf{b}=0$, $|\mathbf{a}\times\mathbf{b}|=ab$ — correct. Zero dot product, maximum cross product.
 - $\mathbf{b}=\mathbf{a}$: $\mathbf{a}\times\mathbf{a}=\mathbf{0}$ — correct (the parallelogram has zero area).
 - $\mathbf{a}\cdot\mathbf{a}=a^2$ — correct (the dot product of a vector with itself gives the square of its magnitude).
-- BAC–CAB with $\mathbf{a}\perp\mathbf{b}$ and $\mathbf{a}\perp\mathbf{c}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})=\mathbf{0}$ — this means $\mathbf{a}$ is perpendicular to $\mathbf{b}\times\mathbf{c}$, i.e. $\mathbf{a}$ lies in the plane of $\mathbf{b}$ and $\mathbf{c}$, which is only true if $\mathbf{a}=\mathbf{0}$ or $\mathbf{b}\parallel\mathbf{c}$ — need to be careful with special cases.
-- BAC–CAB with $\mathbf{a}\perp\mathbf{b}$ and $\mathbf{a}\perp\mathbf{c}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{0}$ (since $\mathbf{a}\cdot\mathbf{c}=0$ and $\mathbf{a}\cdot\mathbf{b}=0$) — this means $\mathbf{a}$ is perpendicular to $\mathbf{b}\times\mathbf{c}$, i.e. $\mathbf{a}$ lies in the plane of $\mathbf{b}$ and $\mathbf{c}$, which is only true if $\mathbf{a}=\mathbf{0}$ or $\mathbf{b}\parallel\mathbf{c}$ — need to be careful with special cases.
+- If $\mathbf{a}\perp\mathbf{b}$ and $\mathbf{a}\perp\mathbf{c}$, BAC–CAB gives $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{0}$. For non-parallel $\mathbf{b},\mathbf{c}$, their cross product is normal to their plane, and $\mathbf{a}$ is parallel to that normal; hence the cross product is zero. If $\mathbf{b}\parallel\mathbf{c}$, then $\mathbf{b}\times\mathbf{c}=\mathbf{0}$ and the same result holds.
 
 ### 4.3 Which formula when
 
@@ -452,7 +451,7 @@ $\mathbf{a}\cdot\mathbf{b}=12-12=0$. The vectors are perpendicular.
 
 <details><summary>Answer</summary>
 
-No. Try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\hat{i}\times\hat{i}=\mathbf{0}$. $(\mathbf{a}\times\mathbf{b})\times\mathbf{c}=\hat{k}\times\hat{k}=\mathbf{0}$. They agree here, but try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{i}$: $\hat{i}\times(\hat{j}\times\hat{i})=\hat{i}\times(-\hat{k})=\hat{j}$. $(\hat{i}\times\hat{j})\times\hat{i}=\hat{k}\times\hat{i}=\hat{j}$. Same again! Actually, the vector triple product is not associative in general: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$ (the Jacobi identity), but $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\neq(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ for generic vectors. Example: $\mathbf{a}=\hat{i}+\hat{j}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$. LHS: $\mathbf{b}\times\mathbf{c}=\hat{i}$; $(\hat{i}+\hat{j})\times\hat{i}=-\hat{k}$. RHS: $\mathbf{a}\times\mathbf{b}=(\hat{i}+\hat{j})\times\hat{j}=\hat{k}$; $\hat{k}\times\hat{k}=\mathbf{0}$. $-\hat{k}\neq\mathbf{0}$. ✓
+No. Try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\hat{i}\times\hat{i}=\mathbf{0}$. $(\mathbf{a}\times\mathbf{b})\times\mathbf{c}=\hat{k}\times\hat{k}=\mathbf{0}$. They agree here, but try $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{i}$: $\hat{i}\times(\hat{j}\times\hat{i})=\hat{i}\times(-\hat{k})=\hat{j}$. $(\hat{i}\times\hat{j})\times\hat{i}=\hat{k}\times\hat{i}=\hat{j}$. Same again! The vector triple product is not associative in general: $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=\mathbf{0}$ (the Jacobi identity), but $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\neq(\mathbf{a}\times\mathbf{b})\times\mathbf{c}$ for generic vectors. Example: $\mathbf{a}=\hat{i}+\hat{j}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$. LHS: $\mathbf{b}\times\mathbf{c}=\hat{i}$; $(\hat{i}+\hat{j})\times\hat{i}=-\hat{k}$. RHS: $\mathbf{a}\times\mathbf{b}=(\hat{i}+\hat{j})\times\hat{j}=\hat{k}$; $\hat{k}\times\hat{k}=\mathbf{0}$. $-\hat{k}\neq\mathbf{0}$. ✓
 
 </details>
 
@@ -1039,7 +1038,11 @@ Solve the system $\mathbf{a}\cdot\mathbf{x}=p$, $\mathbf{b}\cdot\mathbf{x}=q$, $
 
 **Method.** Write $\mathbf{x}=\alpha\mathbf{a}+\beta\mathbf{b}+\gamma\mathbf{c}$ (possible since $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ are non-coplanar and thus form a basis). Dot with $\mathbf{a}$: $\alpha a^2+\beta\mathbf{a}\cdot\mathbf{b}+\gamma\mathbf{a}\cdot\mathbf{c}=p$. Similarly for $\mathbf{b}$ and $\mathbf{c}$. This gives a $3\times3$ system for $\alpha$, $\beta$, $\gamma$. The system has a unique solution because the Gram determinant $[\mathbf{a},\mathbf{b},\mathbf{c}]^2\neq0$ (since the vectors are non-coplanar).
 
-**Alternative (more elegant).** Let $\mathbf{V}=\mathbf{b}\times\mathbf{c}$, $\mathbf{W}=\mathbf{c}\times\mathbf{a}$, $\mathbf{U}=\mathbf{a}\times\mathbf{b}$. Then $\mathbf{a}\cdot\mathbf{V}=[\mathbf{a},\mathbf{b},\mathbf{c}]=V$, $\mathbf{b}\cdot\mathbf{V}=0$, $\mathbf{c}\cdot\mathbf{V}=0$. Dot both sides of $\mathbf{x}=\alpha\mathbf{a}+\ldots$ with $\mathbf{V}$: $\mathbf{x}\cdot\mathbf{V}=\alpha V\Rightarrow\alpha=\mathbf{x}\cdot\mathbf{V}/V$. But $\mathbf{x}\cdot\mathbf{V}$ is not directly known — we need to use the three equations. The elegant solution: $\mathbf{x}=\frac{p(\mathbf{b}\times\mathbf{c})+q(\mathbf{c}\times\mathbf{a})+r(\mathbf{a}\times\mathbf{b})}{[\mathbf{a},\mathbf{b},\mathbf{c}]}$.
+**Reciprocal-basis solution.** Let $D=[\mathbf{a},\mathbf{b},\mathbf{c}]\ne0$. The vectors $\mathbf{b}\times\mathbf{c}$, $\mathbf{c}\times\mathbf{a}$, and $\mathbf{a}\times\mathbf{b}$ are orthogonal to two of the three basis vectors, while their dot product with the remaining one is $D$. Therefore the solution is
+
+$$
+\mathbf{x}=\frac{p(\mathbf{b}\times\mathbf{c})+q(\mathbf{c}\times\mathbf{a})+r(\mathbf{a}\times\mathbf{b})}{D}.
+$$
 
 **Checks.** (i) Dot with $\mathbf{a}$: $\frac{p[\mathbf{a},\mathbf{b},\mathbf{c}]}{[\mathbf{a},\mathbf{b},\mathbf{c}]}=p$. ✓ (ii) If $\mathbf{a}=\hat{i}$, $\mathbf{b}=\hat{j}$, $\mathbf{c}=\hat{k}$: $\mathbf{x}=p\hat{i}+q\hat{j}+r\hat{k}$ — just the components. ✓
 
@@ -1188,7 +1191,7 @@ BAC–CAB applied to $\hat{j}\times(\hat{k}\times\hat{i})$ gives:
 
 <details><summary>Answer</summary>
 
-(a). $\hat{k}\times\hat{i}=\hat{j}$. $\hat{j}\times\hat{j}=\mathbf{0}$. Hmm, let me recompute. $\hat{j}\times(\hat{k}\times\hat{i})$. BAC–CAB: $\hat{k}(\hat{j}\cdot\hat{i})-\hat{i}(\hat{j}\cdot\hat{k})=\hat{k}(0)-\hat{i}(0)=\mathbf{0}$. Wait — but $\hat{k}\times\hat{i}=\hat{j}$, so $\hat{j}\times\hat{j}=\mathbf{0}$. So the answer is (d) $\mathbf{0}$.
+(d) $\mathbf{0}$. Directly, $\hat{k}\times\hat{i}=\hat{j}$, so $\hat{j}\times(\hat{k}\times\hat{i})=\hat{j}\times\hat{j}=\mathbf{0}$. The BAC–CAB identity gives the same result.
 
 </details>
 
@@ -1498,7 +1501,7 @@ $v=R\omega=6$ m/s. $a=R\omega^2=18$ m/s$^2$.
 
 <details><summary>Answer</summary>
 
-(a) See OL8. (b) At the apex ($t=v_0/g$): $\mathbf{v}=v_0\hat{i}$, $\mathbf{a}=-g\hat{j}$. $\mathbf{v}\times\mathbf{a}=-v_0g\hat{k}$. $\rho=v_0^3/(v_0g)=v_0^2/g$. (c) At launch ($t=0$): $\mathbf{v}=v_0\hat{i}+0\hat{j}$... wait — at $t=0$, $\mathbf{v}=v_0\cos\theta\hat{i}+v_0\sin\theta\hat{j}$, $\mathbf{a}=-g\hat{j}$. $|\mathbf{v}\times\mathbf{a}|=v_0\cos\theta\cdot g$. $\rho=v_0^3/(v_0\cos\theta\cdot g)=v_0^2/(g\cos\theta)$.
+(a) See OL8. (b) At the apex ($t=v_0/g$): $\mathbf{v}=v_0\hat{i}$, $\mathbf{a}=-g\hat{j}$. $\mathbf{v}\times\mathbf{a}=-v_0g\hat{k}$. $\rho=v_0^3/(v_0g)=v_0^2/g$. (c) For launch angle $\theta$ measured above the horizontal, at launch $\mathbf{v}=v_0\cos\theta\,\hat{i}+v_0\sin\theta\,\hat{j}$ and $\mathbf{a}=-g\hat{j}$. $|\mathbf{v}\times\mathbf{a}|=v_0\cos\theta\cdot g$. $\rho=v_0^3/(v_0\cos\theta\cdot g)=v_0^2/(g\cos\theta)$.
 
 </details>
 

@@ -272,7 +272,7 @@ $$
 A(\omega)=\frac{F_0/m}{\sqrt{(\omega_0^2-\omega^2)^2+(2\gamma\omega)^2}}. \qquad (3.12)
 $$
 
-**Resonance** at $\omega=\omega_0$ (approximately — the exact peak is at $\omega=\sqrt{\omega_0^2-2\gamma^2}$).
+The steady-state amplitude peaks at $\omega_{\rm peak}=\sqrt{\omega_0^2-2\gamma^2}$ when $\gamma<\omega_0/\sqrt2$; for light damping this is close to $\omega_0$. At the driving frequency $\omega=\omega_0$, the response amplitude is $F_0/(2m\gamma\omega_0)$, but that is not exactly the peak frequency when damping is finite.
 
 > [!abstract] DIAGRAM D10.7 · The resonance curve — amplitude vs driving frequency
 > *Show:* $A(\omega)$ vs $\omega/\omega_0$ for three values of damping $\gamma$: small (sharp peak), medium, and large (broad, low peak). The peak shifts slightly below $\omega_0$ for larger $\gamma$. The $Q$-factor $=\omega_0/(2\gamma)$ indicated.
@@ -298,7 +298,7 @@ xychart-beta
 
 When two oscillating systems are connected (coupled), they exchange energy. The system has normal modes — patterns of oscillation where all parts move at the same frequency. Any motion is a superposition of these normal modes. For two identical pendulums coupled by a spring: the system has two normal modes:
 1. **In-phase mode:** both pendulums swing together; the spring is unstretched. Frequency $\omega_1=\sqrt{g/L}$.
-2. **Out-of-phase mode:** pendulums swing in opposite directions; the spring adds to the restoring force. Frequency $\omega_2=\sqrt{g/L+k/m}$ (higher).
+2. **Out-of-phase mode:** pendulums swing in opposite directions; if the spring connects equal bobs and its extension is $L(\theta_1-\theta_2)$ for small angles, the spring force contributes to both equations. The normal-mode frequency is $\omega_2=\sqrt{g/L+2k/m}$ (higher). This result depends on that stated geometry; a different attachment or spring direction changes the coupling term.
 
 Any motion is a superposition of these two normal modes. This decomposition into normal modes is one of the most powerful techniques in physics — it works for any number of coupled oscillators, for vibrating strings, and for electromagnetic cavities.
 
@@ -416,7 +416,7 @@ It returns the car to equilibrium fastest without oscillating — the optimal co
 
 <details><summary>Answer</summary>
 
-No — damping limits the amplitude. For zero damping, the amplitude would be infinite (in the idealised model). In practice, the amplitude is $A_{\text{max}}=F_0/(2\gamma m\omega_0)$ at resonance.
+No — damping limits the amplitude. For zero damping, the ideal driven oscillator's response is unbounded at $\omega=\omega_0$. For finite damping, the amplitude at $\omega=\omega_0$ is $F_0/(2m\gamma\omega_0)$; the actual peak lies slightly below $\omega_0$ (when $\gamma<\omega_0/\sqrt2$), as described in §3.10.
 
 </details>
 
