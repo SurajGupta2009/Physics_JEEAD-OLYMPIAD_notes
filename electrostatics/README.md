@@ -18,7 +18,7 @@ Written in three stages so that each turn shipped something whole; all three are
 | 2 | Parts 4–9 | the validity ledger (36 rows), C1–C14 concept checks, exemplars E1–E20 with checks, the archetype table (34 rows) and practice Q1–Q56 (each archetype worked once and varied once), toolkit T1–T10, 18 traps, playbook with triage tree | + 9 000 words |
 | 3 | Parts 10–14 | Olympiad extension (Earnshaw by the Laplacian, the image charge with uniqueness, electrostatic pressure two ways and the charged bubble, the Coulomb-exponent test, the ring off-axis and the charged cube, estimates, two measurements reconstructed, limits) with OL1–OL12 solved twice where a second method exists; the 36-question / 200-mark paper with a solution under every question; marking scheme and diagnostic table; two-page formula sheet; 25-point checkpoint and hand-off | + 11 000 words |
 
-Totals: 41 000 words · 10 rendered FIGUREs (Mermaid) · 26 DIAGRAM briefs · 107 callouts · C×14 E×20 Q×56 OL×12 · paper 36 Q / 200 marks (A 12×4, B 8×4, C 6×5, D 10×9).
+Totals: 41 000 words · 10 rendered FIGUREs (Mermaid) · 26 DIAGRAM briefs with 26 editable Excalidraw scenes · 107 callouts · C×14 E×20 Q×56 OL×12 · paper 36 Q / 200 marks (A 12×4, B 8×4, C 6×5, D 10×9).
 
 ## Teaching order (block 3), and why
 
@@ -42,7 +42,7 @@ Blocks 4–9 follow the same order (ledger → exemplars → archetypes → meth
 
 ## Media
 
-Text-only Markdown, Obsidian-first. Ten `[!tip] FIGURE` callouts render deterministically from Mermaid (module map, the element-and-symmetry flow, the ring's axial field, the Gaussian-surface protocol, the solid sphere's $E(r)$, the slab's $E(x)$, the shell's $V(r)$ and $E(r)$, the correspondence chain of the standard fields, the triage tree, the ring's potential along its axis and across its plane — the last computed from the complete elliptic integral by the arithmetic–geometric mean); 26 `[!abstract] DIAGRAM` briefs mark the pictures that carry part of an argument and give the search terms that find a textbook version. No raster art, no AI images, no external links.
+Obsidian-first Markdown. Ten `[!tip] FIGURE` callouts render deterministically from Mermaid; all 26 `[!abstract] DIAGRAM D13.k` briefs now have editable native Excalidraw scenes embedded below them in `_obsidian/excalidraw/`. D13 consolidates plan Parts 13–15. No raster art, AI images, or external image links are used.
 
 ## Hand-off
 

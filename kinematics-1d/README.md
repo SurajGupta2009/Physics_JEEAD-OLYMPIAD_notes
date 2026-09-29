@@ -1,6 +1,6 @@
 # Kinematics in One Dimension — first principles to Olympiad
 
-> [!note] Part 3 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 3 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Frame of reference, position, distance vs displacement, average and instantaneous velocity and acceleration, the $x$–$t$, $v$–$t$, $a$–$t$ graph trio, constant-acceleration equations derived by integration, free fall, variable acceleration ($a=f(t)$, $a=f(v)$, $a=f(x)$), relative motion in 1-D, and piecewise kinematics.
 

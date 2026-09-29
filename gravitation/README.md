@@ -1,6 +1,6 @@
 # Gravitation & Orbital Motion — first principles to Olympiad
 
-> [!note] Part 9 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 9 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** The inverse-square law; gravitational field and potential; the shell theorem (proved); $g$ variations (altitude, depth, latitude, rotation); gravitational PE ($U=-GMm/r$); Kepler's laws (derived); circular and elliptical orbits; vis-viva equation; geostationary orbit; Hohmann transfers; binary stars; tides and the Roche limit.
 

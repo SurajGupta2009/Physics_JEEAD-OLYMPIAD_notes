@@ -166,7 +166,7 @@
 <p><strong>The first law defines what "no force" means.</strong> A body with no net force on it moves at constant velocity (which may be zero). This sounds trivial but it is the definition of an inertial frame — the first law holds only in frames that are not accelerating. The deep content: "no force" is not the same as "no motion."</p>
 <p><strong>The second law is a vector equation.</strong> $\mathbf{F}=m\mathbf{a}$ applies independently to each component. If you choose your axes along the acceleration (as you should), the equations decouple. The second law is really $\mathbf{F}=d\mathbf{p}/dt$; the form $m\mathbf{a}$ assumes constant mass.</p>
 <p><strong>The third law is about pairs.</strong> Every force has an equal and opposite counterpart on a <em>different</em> body. The "reaction to gravity on the block" is <em>not</em> the normal force — it is the gravitational pull of the block on the Earth. Confusing these is the single most common FBD error.</p>
-<p><strong>Friction is a range, not a fixed value.</strong> Static friction adjusts itself to prevent slipping, up to a maximum: $f_s\le\mu_s N$. Only when the maximum is exceeded does the body slip, and then kinetic friction ($f_k=\mu_k N$, usually smaller) takes over. The direction of friction is always opposite to the direction of impending or actual slipping.</p>
+<p><strong>Friction is a range, not a fixed value.</strong> Static friction adjusts itself to prevent relative slipping at a contact, up to a maximum: $f_s\le\mu_s N$. When the contact slides, kinetic friction is modelled as $f_k=\mu_k N$ (often, but not universally, with $\mu_k&lt;\mu_s$). Friction opposes the actual relative sliding, or the tendency to slide if the surfaces were frictionless; it need not oppose the body's motion relative to the ground.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F5.1 · Chapter map</p>
 <p><em>Why:</em> the chapter is one flow — identify the frame and forces, then $\mathbf{F}=m\mathbf{a}$ per body; the map shows the spine.
@@ -276,7 +276,7 @@
 <div class="callout tip">
 <p class="callout-title">FIGURE F5.2 · The three laws: one chain of meaning</p>
 <p><em>Why:</em> the laws are a discipline, not three facts — frame, then force, then the pair; the figure chains them in the order you use them.
-<em>Data:</em> First law — no net force → constant velocity (defines inertial frames); Second — $\mathbf{F}=d\mathbf{p}/dt = m\mathbf{a}$; Third — forces come in pairs on <em>different</em> bodies.</p>
+<em>Data:</em> First law — in an inertial frame, no net force means constant velocity; second — $\mathbf{F}_{\rm net}=d\mathbf{p}/dt$, reducing to $m\mathbf{a}$ for fixed mass; third — forces come in equal-opposite pairs on <em>different</em> bodies.</p>
 </div>
 
 <pre><code class="language-mermaid">flowchart TD
@@ -290,10 +290,10 @@
 </blockquote>
 <h3 id="32-the-second-law">3.2 The second law</h3>
 <p>$$
-\mathbf{F}_{\text{net}}=m\mathbf{a}=m\frac{d\mathbf{v}}{dt}=\frac{d\mathbf{p}}{dt}. \qquad (3.1)
+\mathbf{F}_{\text{net}}=\frac{d\mathbf{p}}{dt};\qquad \mathbf{p}=m\mathbf{v}. \qquad (3.1)
 $$</p>
-<p>The net force is the vector sum of all external forces. The acceleration is in the same direction as the net force. For constant mass: $\mathbf{F}=m\mathbf{a}$. For variable mass (rocket): $\mathbf{F}=d\mathbf{p}/dt$ must be used.</p>
-<p><strong>Component form (2-D):</strong></p>
+<p>For a fixed-mass body in an inertial frame, this becomes $\mathbf{F}_{\text{net}}=m\,d\mathbf{v}/dt=m\mathbf{a}$. The net force is the vector sum of external forces, and the acceleration points along it for positive mass. Variable-mass systems such as rockets require an open-system momentum balance that explicitly includes momentum carried by the mass crossing the system boundary; one must not simply apply $\mathbf{F}=m\mathbf{a}$ to the changing mass.</p>
+<p><strong>Component form for fixed mass (2-D):</strong></p>
 <p>$$
 F_x=ma_x,\qquad F_y=ma_y. \qquad (3.2)
 $$</p>
@@ -347,7 +347,7 @@ $$</p>
 </blockquote>
 <h3 id="35-standard-forces">3.5 Standard forces</h3>
 <p><strong>Weight:</strong> $\mathbf{W}=m\mathbf{g}$, always pointing vertically downward. Magnitude $W=mg\approx9.8m$ N.</p>
-<p><strong>Normal force:</strong> the contact force perpendicular to a surface. Its magnitude is <em>not</em> always $mg$ — it adjusts to satisfy $\sum F_y=ma_y$. On an incline: $N=mg\cos\theta$. In a lift: $N=m(g+a)$ (ascending) or $N=m(g-a)$ (descending).</p>
+<p><strong>Normal force:</strong> the contact force perpendicular to a surface. Its magnitude is <em>not</em> always $mg$ — it adjusts to satisfy Newton's second law perpendicular to the surface. On a stationary incline of angle $\theta$, with no other perpendicular forces and no acceleration normal to the plane, $N=mg\cos\theta$. In a lift accelerating upward with magnitude $a$, $N=m(g+a)$; accelerating downward, $N=m(g-a)$ (these depend on acceleration direction, not whether the lift is moving up or down).</p>
 <p><strong>Tension:</strong> the pulling force in a string or rope. For an ideal (massless, inextensible) string: the tension is the same throughout. For a real string: tension varies if the string has mass.</p>
 <p><strong>Spring force:</strong> $F=-kx$ (Hooke's law), where $x$ is the displacement from the natural length. The force is always directed toward the equilibrium position.</p>
 <div class="callout abstract">
@@ -417,7 +417,7 @@ $$</p>
 <p>$$
 f_k=\mu_k N. \qquad (3.5)
 $$</p>
-<p>$\mu_k&lt;\mu_s$ (kinetic friction is smaller than the maximum static friction). The kinetic friction is approximately independent of the sliding speed and the contact area (Amontons' laws — with honest limits: at very high speeds, thermal effects matter; at very small areas, adhesion matters).</p>
+<p>For many ordinary dry contacts, $\mu_k&lt;\mu_s$, though this is an empirical trend rather than a universal law. In the Coulomb-friction model, kinetic friction is approximately independent of sliding speed and apparent contact area; this approximation can fail when speed, temperature, lubrication or surface adhesion becomes important.</p>
 <div class="callout danger">
 <p class="callout-title">Trap — Using $\mu_s$ and $\mu_k$ interchangeably</p>
 <p>$\mu_s$ is the <em>maximum</em> static friction coefficient. $\mu_k$ is the kinetic friction coefficient. They are different numbers and must not be confused. Using $\mu_s$ when the block is sliding over-estimates the friction.</p>
@@ -435,7 +435,7 @@ $$</p>
 
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D5.10 · The wedge-block constraint triangle</p>
-<p><em>Show:</em> a wedge of angle $\theta$ sliding rightward on a table; a block sliding down the wedge. The block's displacement relative to the wedge is along the incline (length $s$). The wedge's displacement is horizontal ($x_w$). The geometric relation: the block's vertical drop is $s\sin\theta$, horizontal shift relative to ground is $s\cos\theta-x_w$. The constraint: the block stays on the wedge.
+<p><em>Show:</em> a wedge of angle $\theta$ sliding rightward on a table; a block sliding down the wedge. The block's displacement relative to the wedge is along the incline (length $s$). The wedge's displacement is horizontal ($x_w$). Take the incline to slope downward to the right; the block slides down-right relative to the wedge by $s$, while the wedge moves right by $x_w$. The block's ground-frame displacement is $(x_w+s\cos\theta, -s\sin\theta)$, so its horizontal shift is $x_w+s\cos\theta$ and its vertical drop is $s\sin\theta$. The block remains on the incline.
 <em>Search:</em> "wedge block constraint displacement triangle geometry diagram"</p>
 </div>
 
@@ -447,7 +447,7 @@ $$</p>
 
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D5.12 · The two-pulley single-string system</p>
-<p><em>Show:</em> a fixed pulley at the ceiling and a movable pulley below it, connected by a single string. Mass $m_1$ hangs from the movable pulley; mass $m_2$ hangs from the fixed pulley (the string goes from $m_2$ up to the fixed pulley, across, down to the movable pulley, across, and up to a fixed point). The string lengths labelled: $l=x_1+2x_2+$ const. The accelerations $a_1=2a_2$ annotated.
+<p><em>Show:</em> a fixed pulley at the ceiling and a movable pulley below it, connected by a single string. Mass $m_1$ is attached to the movable pulley and mass $m_2$ hangs from the free end after the string passes over the ceiling-fixed pulley. With downward coordinates $x_1$ for the movable pulley and $x_2$ for the free end, $l=2x_1+x_2+\mathrm{const}$. Thus $a_2=-2a_1$ when both downward directions are positive; the free end has twice the acceleration magnitude.
 <em>Search:</em> "two pulley single string system constraint acceleration diagram"</p>
 </div>
 
@@ -455,15 +455,15 @@ $$</p>
 <p><strong>The constraint method.</strong> A constraint is a geometric relation between the positions of the bodies (e.g., the length of a string is constant, a block stays on a wedge). Differentiate once for velocity, twice for acceleration.</p>
 <p><strong>Fixed pulley:</strong> string length $=x_1+x_2=$ const. $\dot{x}_1+\dot{x}_2=0\Rightarrow v_1=-v_2$ (one goes up, the other goes down). $\ddot{x}_1+\ddot{x}_2=0\Rightarrow a_1=-a_2$.</p>
 <p><strong>Movable pulley:</strong> string length $=x_1+2x_2+$ const (one end fixed, the rope wraps around the movable pulley). $\dot{x}_1+2\dot{x}_2=0\Rightarrow v_1=-2v_2$. $\ddot{x}_1+2\ddot{x}_2=0\Rightarrow a_1=-2a_2$.</p>
-<p><strong>Wedge:</strong> block slides on a wedge that slides on a table. The block's vertical displacement is related to the wedge's horizontal displacement by the incline angle: $y=x_w\tan\theta$.</p>
+<p><strong>Wedge:</strong> write the incline constraint using coordinates in the ground frame and the wedge frame. For an incline sloping down-right, if $s$ is the block's down-slope displacement relative to the wedge and $x_w$ is the wedge's rightward displacement, then $x_b=x_w+s\cos\theta$ and $y_b=y_0-s\sin\theta$. Differentiate these signed relations to obtain velocity and acceleration constraints.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D5.7 · The movable pulley constraint</p>
-<p><em>Show:</em> a fixed pulley at the ceiling, a movable pulley hanging from it, with masses $m_1$ (hanging from the movable pulley) and $m_2$ (hanging from the fixed pulley). The string lengths labelled: $l=x_1+2x_2+$ const. The constraint $a_1=2a_2$ annotated (the movable pulley's mass accelerates at half the rate of $m_1$... wait, let me think about this more carefully.
-<em>Search:</em> "movable pulley constraint relation acceleration diagram"</p>
+<p><em>Show:</em> one end of a light inextensible string is fixed overhead; the string passes down around a movable pulley carrying mass $m_2$, then up over a fixed pulley and down to a free end carrying mass $m_1$. Choose downward coordinates $x_1$ for the free end and $x_2$ for the movable pulley. The variable string length is $x_1+2x_2$, so $x_1+2x_2=\text{constant}$ and hence $a_1=-2a_2$ (signed); the free end's acceleration magnitude is twice the movable pulley's.
+<em>Search:</em> "movable pulley string constraint acceleration relation diagram"</p>
 </div>
 
 <h3 id="311-pseudo-forces">3.11 Pseudo forces</h3>
-<p>In a non-inertial frame accelerating at $\mathbf{a}_0$, Newton's second law becomes:</p>
+<p>In a frame that translates with acceleration $\mathbf{a}_0$ but whose axes do not rotate, Newton's second law becomes:</p>
 <p>$$
 \mathbf{F}<em>{\text{real}}-m\mathbf{a}_0=m\mathbf{a}</em>{\text{frame}}. \qquad (3.6)
 $$</p>
@@ -495,13 +495,16 @@ $$</p>
 <p><strong>Energy conservation</strong> (from PART 6): $\frac{1}{2}mv^2+mgR(1-\cos\theta)=\frac{1}{2}mv_0^2$.</p>
 <p><strong>Minimum speed at the top</strong> (string taut): $T\ge0$ at $\theta=\pi$: $v_{\min}=\sqrt{gR}$.</p>
 <p><strong>Minimum speed at the top</strong> (rod, can push): $v_{\min}=0$ (the rod supports the weight).</p>
-<p><strong>Where does the string slack?</strong> If $v_0&lt;\sqrt{5gR}$, the string goes slack before the top. Find $\theta_0$ from $v^2/R=g\cos\theta_0$: $\cos\theta_0=\frac{v_0^2}{3gR}-\frac{2}{3}$.</p>
+<p><strong>Where does the string slack?</strong> For a launch from the bottom, if $2gR&lt;v_0^2&lt;5gR$, tension first reaches zero on the ascending arc before the top. At slack, $T=0$, so the inward radial equation gives $v^2/R=-g\cos\theta_0$. Combining this with energy conservation, $v^2=v_0^2-2gR(1-\cos\theta_0)$, yields</p>
+<p>$$
+\cos\theta_0=\frac{2}{3}-\frac{v_0^2}{3gR}.
+$$</p>
+<p>If $v_0^2&lt;2gR$, the particle turns before reaching the horizontal and the string does not slack on the ascent. At $v_0^2=2gR$, tension reaches zero at the horizontal; at $v_0^2=5gR$, it reaches zero at the top (the limiting complete-loop case).</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D5.9 · Vertical circle: $T(\theta)$ and $v(\theta)$ graphs</p>
 <p><em>Show:</em> left: a graph of tension $T$ vs angle $\theta$ (0 at bottom, minimum near the top, maximum at the bottom). Right: a graph of speed $v$ vs $\theta$ (maximum at the bottom, minimum at the top). The minimum speed at the top $\sqrt{gR}$ annotated. The string-slack angle $\theta_0$ marked.
 <em>Search:</em> "vertical circle tension versus angle speed versus angle graph"</p>
 </div>
-
 <h3 id="314-multi-body-systems">3.14 Multi-body systems</h3>
 <p><strong>The system + parts duality.</strong> For a system of bodies: $\sum F_{\text{ext}}=Ma_{\text{cm}}$. For individual bodies: $\sum F_i=m_i a_i$. The choice depends on what you need:
 - To find the acceleration of the system: use the system equation (internal forces cancel).
@@ -647,7 +650,7 @@ $$</p>
 <p><strong>C11 — concept check.</strong> Does friction always do negative work?</p>
 <details>
 <summary>Answer</summary>
-<p>No — friction on a rolling wheel (static friction) does zero work (the contact point is instantaneously at rest). Friction can also do positive work (e.g., friction on a box pushed across a table by a person — wait, friction opposes motion, so it does negative work on the box. But friction on the person's feet when walking does positive work on the person).</p>
+<p>No. On a wheel rolling without slipping on a stationary floor, static friction does zero instantaneous work because the contact point is instantaneously at rest. But friction can do positive work: a block initially at rest on a moving conveyor belt is accelerated forward by friction, and the contact point on the block moves in the force direction. Work must be evaluated using the ground-frame displacement of the point where the force acts.</p>
 </details>
 <p><strong>C12 — concept check.</strong> A block is placed on a rough incline. It does not slide. If the incline angle is slowly increased, at what point does it slip?</p>
 <details>
@@ -719,18 +722,18 @@ $$</p>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> At the top: $T+mg=mv_{\text{top}}^2/R$. Minimum: $T=0\Rightarrow v_{\text{top}}=\sqrt{gR}=\sqrt{10}=3.16$ m/s. Energy: $\frac{1}{2}mv_{\text{bot}}^2=\frac{1}{2}mv_{\text{top}}^2+mg(2R)$. $v_{\text{bot}}^2=gR+4gR=5gR=50$. $v_{\text{bot}}=7.07$ m/s. At bottom: $T-mg=mv_{\text{bot}}^2/R=0.5\times50/1=25$. $T=25+5=30$ N. Hmm — let me re-check. $mv^2/R=0.5\times50=25$. $T=mg+mv^2/R=5+25=30$ N.</p>
+<p><strong>Method.</strong> At the top, $T+mg=mv_{\text{top}}^2/R$. At the limiting speed, $T=0$, so $v_{\text{top}}=\sqrt{gR}=\sqrt{10}=3.16$ m/s. Energy conservation gives $v_{\text{bot}}^2=v_{\text{top}}^2+4gR=5gR=50$, hence $v_{\text{bot}}=7.07$ m/s. At the bottom, $T-mg=mv_{\text{bot}}^2/R=25$ N, so $T=25+5=30$ N.</p>
 </details>
-<h3 id="e7-pseudo-force-block-in-an-accelerating-wedge">E7 — Pseudo force: block in an accelerating wedge</h3>
-<p>A wedge accelerates to the right at $a_0$. A block of mass $m$ rests on the wedge (incline angle $\theta$, frictionless). Find the block's acceleration relative to the wedge.</p>
+<h3 id="e7-pseudo-force-block-on-an-accelerating-wedge">E7 — Pseudo force: block on an accelerating wedge</h3>
+<p>A wedge accelerates to the right at $a_0$. Its frictionless incline descends to the right at angle $\theta$. Find the block's acceleration relative to the wedge and the normal force while contact is maintained.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>In the wedge's frame, the block feels gravity $mg$ and pseudo force $ma_0$ to the left. The component along the incline: $m(g\sin\theta-a_0\cos\theta)$. $a_{\text{rel}}=g\sin\theta-a_0\cos\theta$.</p>
+<p>In the wedge frame, $a_{\rm rel}=g\sin\theta-a_0\cos\theta$ down the incline (a negative value means acceleration up the incline), and $N=m(g\cos\theta+a_0\sin\theta)&gt;0$.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> In the wedge's frame: forces along the incline are $mg\sin\theta$ (down the incline) and $ma_0\cos\theta$ (up the incline, from the pseudo force). $ma_{\text{rel}}=mg\sin\theta-ma_0\cos\theta$. $a_{\text{rel}}=g\sin\theta-a_0\cos\theta$. The block stays on the wedge if $a_0&lt;g\tan\theta$.</p>
+<p><strong>Method.</strong> In the wedge frame, the pseudo force $ma_0$ points left. Its component up the down-right incline is $ma_0\cos\theta$, so $a_{\rm rel}=g\sin\theta-a_0\cos\theta$ along the incline (positive down-slope). Perpendicular to the plane, gravity and pseudo force press the block into the surface; contact requires $N=m(g\cos\theta+a_0\sin\theta)&gt;0$. The condition $a_0=g\tan\theta$ marks zero relative acceleration along the incline, not loss of contact.</p>
 </details>
 <h3 id="e8-movable-pulley-system">E8 — Movable pulley system</h3>
 <p>A mass $m_1$ hangs from a movable pulley. A mass $m_2$ hangs from a string over the movable pulley (the other end of the string is fixed). Find the accelerations.</p>
@@ -738,9 +741,10 @@ $$</p>
 <p class="callout-title">Check</p>
 <p>For $m_1=m_2=m$: $a_1=g/5$, $a_2=2g/5$. System: total weight $2mg$, effective mass... the result is consistent.</p>
 </div>
+
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> String constraint: $a_1=2a_2$ (movable pulley moves at half the rate). Let $a_2=a$, $a_1=2a$. $m_1$: $m_1g-2T=m_1(2a)$. $m_2$: $T-m_2g=m_2a$. From the second: $T=m_2(g+a)$. Substitute: $m_1g-2m_2(g+a)=2m_1a$. $a=(m_1-2m_2)g/(2m_1+2m_2)$.</p>
+<p><strong>Method.</strong> Take downward as positive for both masses. If $a_1$ is the acceleration of the mass attached to the movable pulley and $a_2$ that of the free-end mass, the string constraint is $a_2=-2a_1$. Newton's laws are $m_1g-2T=m_1a_1$ and $m_2g-T=m_2a_2=-2m_2a_1$. Solving gives $a_1=(m_1-2m_2)g/(m_1+4m_2)$ and $a_2=-2a_1$. For $m_1=m_2=m$, the movable mass accelerates upward at $g/5$ and the free mass downward at $2g/5$, as expected.</p>
 </details>
 <h3 id="e9-block-on-a-moving-belt">E9 — Block on a moving belt</h3>
 <p>A block is placed on a conveyor belt moving at speed $v_0$. The block is initially at rest. Coefficient of friction $\mu_k$. Find the time until the block moves at speed $v_0$ and the distance travelled.</p>
@@ -748,6 +752,7 @@ $$</p>
 <p class="callout-title">Check</p>
 <p>$a=\mu_k g$, $t=v_0/(\mu_k g)$, $d=v_0^2/(2\mu_k g)$. At $v_0=2$ m/s, $\mu_k=0.4$: $t=0.51$ s, $d=0.51$ m. ✓</p>
 </div>
+
 <details>
 <summary>Solution</summary>
 <p><strong>Method.</strong> Kinetic friction accelerates the block: $f=\mu_k mg$. $a=\mu_k g$. $v_0=at\Rightarrow t=v_0/(\mu_k g)$. $d=v_0^2/(2\mu_k g)$.</p>
@@ -758,6 +763,7 @@ $$</p>
 <p class="callout-title">Check</p>
 <p>At $\alpha=\beta=45°$: $T_1=T_2=W/\sqrt{2}\approx0.707W$. Check: $T_1\sin45°+T_2\sin45°=W$ ✓.</p>
 </div>
+
 <details>
 <summary>Solution</summary>
 <p><strong>Method.</strong> By Lami's theorem: $\frac{W}{\sin(\alpha+\beta)}=\frac{T_1}{\sin(90°+\beta)}=\frac{T_2}{\sin(90°+\alpha)}$. $T_1=W\cos\beta/\sin(\alpha+\beta)$, $T_2=W\cos\alpha/\sin(\alpha+\beta)$.</p>
@@ -966,7 +972,11 @@ $$</p>
 <h4 id="q24-a-wedge-of-mass-m-and-angle-theta-rests-on-a-frictionless-table-a-block-of-mass-m-slides-down-the-wedge-frictionless-find-the-wedges-acceleration">Q24. A wedge of mass $M$ and angle $\theta$ rests on a frictionless table. A block of mass $m$ slides down the wedge (frictionless). Find the wedge's acceleration.</h4>
 <details>
 <summary>Solution</summary>
-<p>Horizontal momentum is conserved (no external horizontal force): $m v_{bx}+M v_{wx}=0$. In terms of accelerations: $ma_{bx}+Ma_{wx}=0$. The block's horizontal acceleration relative to the wedge is $a_{\text{rel}}\cos\theta$. $a_{bx}=a_{\text{rel}}\cos\theta-a_w$. $a_{bx}=-Ma_w/m$. $-Ma_w/m=a_{\text{rel}}\cos\theta-a_w$. $a_w(1-M/m)=a_{\text{rel}}\cos\theta$... this gets complicated. Using the constraint and Newton's laws: $a_w=mg\sin\theta\cos\theta/(M+m\sin^2\theta)$.</p>
+<p>Take rightward as positive and let $a_{\rm rel}$ be the block's acceleration down the incline relative to the wedge. The block's horizontal acceleration is $a_w+a_{\rm rel}\cos\theta$. The block's equation projected along the incline is $a_w\cos\theta+a_{\rm rel}=g\sin\theta$, while conservation of horizontal momentum gives $(M+m)a_w+m a_{\rm rel}\cos\theta=0$. Solving,</p>
+<p>$$
+a_{\rm rel}=\frac{(M+m)g\sin\theta}{M+m\sin^2\theta},\qquad a_w=-\frac{m g\sin\theta\cos\theta}{M+m\sin^2\theta}.
+$$</p>
+<p>Thus the wedge accelerates leftward; the displayed magnitude is $m g\sin\theta\cos\theta/(M+m\sin^2\theta)$.</p>
 </details>
 <h4 id="q25-a-chain-of-length-l-and-mass-m-hangs-over-the-edge-of-a-table-with-length-l-hanging-off-find-the-acceleration-of-the-chain-when-released">Q25. A chain of length $L$ and mass $m$ hangs over the edge of a table with length $l$ hanging off. Find the acceleration of the chain when released.</h4>
 <details>
@@ -987,42 +997,52 @@ $$</p>
 <p class="callout-title">Trap 1 — Drawing the "reaction to weight" as the normal force</p>
 <p>The reaction to weight is the gravitational pull of the body on the Earth. The normal force is the reaction to the body pushing on the surface.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 2 — Adding $mv^2/r$ as a real force on the FBD</p>
 <p>The centripetal force is the <em>resultant</em> of real forces. Never draw it as a separate force.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 3 — Using $\mu_s$ when the block is sliding</p>
 <p>Once the block slides, kinetic friction ($\mu_k$) applies, not static ($\mu_s$).</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 4 — Assuming $N=mg$ on an incline</p>
 <p>On an incline: $N=mg\cos\theta$, not $mg$. In a lift: $N=m(g+a)$, not $mg$.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 5 — Forgetting the constraint relates *displacements*, not forces</p>
 <p>The string-length constraint gives a relationship between accelerations, not forces. You still need $F=ma$ for the forces.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 6 — Using the pseudo force in the wrong direction</p>
 <p>The pseudo force is $-ma_0$ (opposite to the frame's acceleration). If the frame accelerates right, the pseudo force acts left.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 7 — Assuming a rope stays taut through a whole motion</p>
 <p>In a vertical circle, the string may go slack if the speed is too low. Always check the tension condition.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 8 — Confusing friction direction</p>
 <p>Friction opposes the direction of (impending) slip. On a moving belt, friction on the block acts in the direction of the belt (to accelerate the block).</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 9 — The "block never slides" insight</p>
 <p>If the entire system is in free fall ($a=g$), there is no normal force between the blocks, so there is no friction — the blocks don't slip relative to each other even without friction.</p>
 </div>
+
 <div class="callout danger">
 <p class="callout-title">Trap 10 — Rolling friction vs static friction</p>
 <p>A rolling wheel has static friction at the contact point (no slipping). Rolling resistance is a different phenomenon (deformation of the surfaces).</p>
 </div>
+
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
 <div class="callout tip">
@@ -1030,6 +1050,7 @@ $$</p>
 <p><em>Why:</em> the keyword names the route before any number is touched.
 <em>Data:</em> the six triage branches of §9.1.</p>
 </div>
+
 <pre><code class="language-mermaid">flowchart TD
   A{&quot;What kind of problem?&quot;} --&gt;|&quot;block on incline&quot;| B[&quot;resolve along/perpendicular, friction regime&quot;]
   A --&gt;|&quot;pulleys&quot;| C[&quot;string-length constraint, F=ma per mass&quot;]
@@ -1119,8 +1140,12 @@ $$</p>
 <p>A rope wraps around a cylinder with angle $\theta$ and coefficient of friction $\mu$. If the tension on one side is $T_1$, find the tension $T_2$ on the other side.</p>
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> Consider a small element of rope subtending angle $d\theta$. The normal force: $dN=T\,d\theta$ (from the balance of radial forces). The friction force: $df=\mu\,dN=\mu T\,d\theta$. The tension change: $dT=-\mu T\,d\theta$ (friction opposes the slip). Integrating: $\int_{T_1}^{T_2}dT/T=-\mu\int_0^\theta d\theta$. $\ln(T_2/T_1)=-\mu\theta$. $T_2=T_1 e^{-\mu\theta}$.</p>
-<p><strong>Applications.</strong> The capstan is used in sailing (a few turns around a winch can hold a huge load), in rope-climbing devices, and in belt drives. A single wrap ($\theta=2\pi$) with $\mu=0.3$: $T_2/T_1=e^{-0.3\times2\pi}=0.15$ — the rope can hold 6.5 times more on the loaded side.</p>
+<p><strong>Method.</strong> For a small rope element subtending $d\theta$, radial balance gives $dN\simeq T\,d\theta$. At impending slip, the friction magnitude is $df=\mu dN=\mu T\,d\theta$. Integrating the tension change along the wrap gives the capstan bound</p>
+<p>$$
+\frac{T_{\rm high}}{T_{\rm low}}\le e^{\mu\theta},
+$$</p>
+<p>with equality at impending slip; the inequality covers static equilibrium below the slip threshold. Which end has the higher tension depends on the impending direction of motion.</p>
+<p><strong>Applications.</strong> The capstan is used in sailing, rope-climbing devices and belt drives. For a single wrap ($\theta=2\pi$) with $\mu=0.3$, the limiting tension ratio is $e^{0.3\times2\pi}\approx6.6$.</p>
 </details>
 <h3 id="ol4-sand-on-a-conveyor-belt">OL4 — Sand on a conveyor belt</h3>
 <p>Sand falls vertically onto a horizontal conveyor belt moving at speed $v$. Sand falls at rate $\dot{m}$ (kg/s). Find the force needed to maintain the belt speed and the power.</p>
@@ -1133,7 +1158,7 @@ $$</p>
 <p>A bead slides on a frictionless circular hoop of radius $R$ that rotates about a vertical diameter at angular velocity $\omega$. Find the equilibrium positions of the bead.</p>
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> In the rotating frame: the bead feels gravity $mg$ downward and the centrifugal force $m\omega^2 R\sin\theta$ outward (radially). The component along the hoop: $mg\sin\theta-m\omega^2 R\sin\theta\cos\theta=0$ (for equilibrium). $\sin\theta(g-\omega^2 R\cos\theta)=0$. Solutions: $\theta=0$ (bottom) always; $\theta=\cos^{-1}(g/(\omega^2 R))$ if $\omega^2 R&gt;g$ (a second equilibrium above the bottom). Stability: the bottom is stable for slow rotation ($\omega&lt;\sqrt{g/R}$). For $\omega&gt;\sqrt{g/R}$: the bottom becomes unstable and the bead moves to $\theta_0=\cos^{-1}(g/(\omega^2 R))$ — the symmetric position becomes unstable, and the bead settles at an asymmetric angle.</p>
+<p><strong>Method.</strong> Measure $\theta$ from the downward vertical. In the hoop's rotating frame, gravity and centrifugal force have components along the hoop that yield $\sin\theta(g-\omega^2R\cos\theta)=0$. The bottom equilibrium $\theta=0$ is stable for $\omega&lt;\sqrt{g/R}$ and unstable for faster rotation. When $\omega^2R&gt;g$, two stable off-axis equilibria occur symmetrically at $\theta=\pm\cos^{-1}(g/(\omega^2R))$.</p>
 <p><strong>Checks.</strong> (i) At $\omega=0$: only $\theta=0$ is stable. (ii) At $\omega\to\infty$: $\theta_0\to90°$ — the bead approaches the equator.</p>
 </details>
 <h3 id="ol6-the-variable-mass-chain-lifted-from-a-pile">OL6 — The variable-mass chain lifted from a pile</h3>
@@ -1151,11 +1176,10 @@ $$</p>
 <p><strong>Checks.</strong> (i) Both frames agree on the friction direction (inward). (ii) The paradox is that "outward centrifugal force" suggests friction should act inward — and it does, but for different reasons in each frame.</p>
 </details>
 <h3 id="ol8-two-stage-rocket-optimal-staging">OL8 — Two-stage rocket: optimal staging</h3>
-<p>A two-stage rocket has total mass $M$ (payload $M_p$, fuel+structure for each stage). Find the optimal split that maximises the final velocity.</p>
+<p>A two-stage rocket has total initial mass $1000$ kg, including a $100$ kg payload, $100$ kg of total structure (two equal $50$ kg dry stages), and $800$ kg of fuel split equally between stages. Both stages have exhaust speed $v_e=2$ km/s. Compare its ideal vacuum $\Delta v$ with a single-stage rocket having the same initial mass, payload, total structure and exhaust speed.</p>
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> For a two-stage rocket with exhaust speed $v_e$, structural coefficient $\epsilon$ (structure mass / initial mass for each stage): $\Delta v=v_e\ln\frac{M}{M_1}+v_e\ln\frac{M_2}{M_p}$ where $M_1$ is the mass after stage 1 burns, $M_2$ after stage 2. Optimising (by calculus or by symmetry): equal mass ratios for each stage give the maximum $\Delta v$. The optimal staging gives a significant improvement over a single-stage rocket — this is why all orbital rockets use staging.</p>
-<p><strong>Checks.</strong> (i) For a single stage: $\Delta v=v_e\ln(M/M_p)$. For two equal stages: $\Delta v=2v_e\ln(\sqrt{M/M_p})=v_e\ln(M/M_p)$ — same! Wait, that can't be right. The improvement comes from dropping the structural mass of the first stage. With structural coefficient $\epsilon$: the two-stage $\Delta v$ is larger because the dead weight is shed.</p>
+<p><strong>Method.</strong> The Tsiolkovsky equation applies separately during each powered burn; dropping a dry stage contributes no instantaneous $\Delta v$ but reduces the mass carried by later stages. Here the first burn goes from $1000$ kg to $600$ kg (after using $400$ kg of fuel), giving $\Delta v_1=2\ln(1000/600)=1.02$ km/s. Drop the first $50$ kg dry stage, leaving $550$ kg. The second burn goes from $550$ kg to $150$ kg, giving $\Delta v_2=2\ln(550/150)=2.60$ km/s. Thus $\Delta v_{2\text{-stage}}\approx3.62$ km/s. A single stage carrying both structures burns $800$ kg, from $1000$ kg to $200$ kg: $\Delta v_{1\text{-stage}}=2\ln(1000/200)=3.22$ km/s. Staging helps here because it discards the first-stage dry mass before the second burn. The optimal fuel/structure split depends on the imposed stage dry-mass model; equal ratios are not a universal optimum.</p>
 </details>
 <h3 id="ol9-the-impulse-approximation">OL9 — The impulse approximation</h3>
 <p>A ball of mass $m$ is hit by a bat for a time $\Delta t=0.001$ s with average force 1000 N. The ball also experiences gravity. Show that gravity is negligible during the collision.</p>
@@ -1411,16 +1435,16 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <p>(a) See E5. (b) $v_{\min}=\sqrt{500(\sin15°-0.3\cos15°)/(\cos15°+0.3\sin15°)}=\sqrt{500(0.259-0.290)/(0.966+0.078)}=\sqrt{500(-0.031)/1.044}$ — negative, so $v_{\min}=0$ (friction alone prevents sliding). $v_{\max}=\sqrt{500(0.259+0.290)/(0.966-0.078)}=\sqrt{500\times0.549/0.888}=\sqrt{309}=17.6$ m/s. (c) Mass cancels in $F=ma$ — all objects accelerate the same under the same force (Galileo's principle).</p>
 </details>
 <h3 id="p28-9-marks">P28 · 9 marks</h3>
-<p>(a) Derive the rocket equation from momentum conservation. (b) A two-stage rocket has $m_0=1000$ kg, $M_p=100$ kg, $v_e=2$ km/s, equal stages. Find $\Delta v$. (c) Compare with a single-stage rocket.</p>
+<p>(a) Derive the rocket equation from momentum conservation. (b) A two-stage rocket has initial mass $1000$ kg: payload $100$ kg, total dry structure $100$ kg (two $50$ kg stages), and $800$ kg of fuel split equally; $v_e=2$ km/s. Find its ideal $\Delta v$. (c) Compare with one stage using the same total structure, fuel and payload.</p>
 <details>
 <summary>Answer</summary>
-<p>(a) See OL2. (b) For two equal stages: each stage burns $450$ kg of fuel, drops $50$ kg of structure. $\Delta v_1=2\ln(1000/550)=2\times0.598=1.20$ km/s. $\Delta v_2=2\ln(500/100)=2\times1.609=3.22$ km/s. Total $\Delta v=4.42$ km/s. (c) Single stage: $\Delta v=2\ln(1000/100)=2\times2.303=4.61$ km/s. Wait — the single stage is actually better here because the structural mass is the same. The staging advantage comes when the structural coefficient $\epsilon$ is significant — dropping dead weight helps.</p>
+<p>(a) See OL2. (b) First burn: $2\ln(1000/600)=1.02$ km/s; drop the first $50$ kg dry stage. Second burn: $2\ln(550/150)=2.60$ km/s. Total $\Delta v\approx3.62$ km/s. (c) Single stage: $2\ln(1000/200)=3.22$ km/s. The two-stage version gains about $0.40$ km/s because it discards the first-stage structure before the second burn.</p>
 </details>
 <h3 id="p29-9-marks">P29 · 9 marks</h3>
-<p>(a) A block of mass $m$ is on a wedge of mass $M$ (angle $\theta$, frictionless). The wedge is pushed with force $F$ on a frictionless table. Find the condition for the block to stay on the wedge. (b) Solve in the wedge's frame using pseudo forces. (c) What happens if $F$ exceeds the limit?</p>
+<p>A frictionless wedge has an incline descending to the right at angle $\theta$ and accelerates rightward on a frictionless table. (a) Find the acceleration $a_0$ for which a block remains at rest relative to the incline. (b) Find the corresponding applied force $F$. (c) Explain the block's relative acceleration when $a_0$ is greater or smaller than this value.</p>
 <details>
 <summary>Answer</summary>
-<p>(a) In the ground frame: the block accelerates at $a_x=F/(M+m)$ (same as the wedge). The block's FBD: $N\sin\theta=ma_x$, $N\cos\theta=mg$. $\tan\theta=a_x/g=F/((M+m)g)$. The block stays if $F\le(M+m)g\tan\theta$. (b) In the wedge's frame: pseudo force $ma_0$ to the left. The block stays if $mg\sin\theta\ge ma_0\cos\theta$, i.e. $a_0\le g\tan\theta$. $a_0=F/(M+m)$. Same condition. (c) If $F$ exceeds the limit: the block slides up the wedge (in the wedge's frame).</p>
+<p>(a) In the wedge frame, the acceleration component along the down-right incline is $a_{\rm rel}=g\sin\theta-a_0\cos\theta$. Rest relative to the wedge requires $a_0=g\tan\theta$. (b) The whole wedge-plus-block system accelerates at $a_0=F/(M+m)$, so $F=(M+m)g\tan\theta$. (c) If $a_0<g\tan\theta$, the block accelerates down the incline relative to the wedge; if $a_0>g\tan\theta$, it accelerates up the incline. Its normal force remains $N=m(g\cos\theta+a_0\sin\theta)&gt;0$, so this threshold is not a loss-of-contact condition.</p>
 </details>
 <h3 id="p30-9-marks">P30 · 9 marks</h3>
 <p>(a) Derive the capstan equation $T_2=T_1e^{\mu\theta}$. (b) How many turns ($\theta=2\pi N$) are needed for $T_2/T_1=100$ with $\mu=0.3$? (c) Explain why a few wraps around a bollard can moor a ship.</p>
@@ -1573,7 +1597,6 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 </ul>
 <p><strong>What the next chapters inherit.</strong> The force tools and constraint methods from this chapter are prerequisites for every subsequent mechanics chapter. The work–energy theorem (PART 6) provides an alternative to $F=ma$ when path, not time, is the question. Conservation of momentum (PART 7) provides another alternative when internal forces are complex. The circular-dynamics results are the foundation of PART 9 (orbital mechanics) and PART 10 (oscillations).</p>
 <p><strong>Open questions.</strong> How do you handle friction in rolling motion (PART 8)? What is the equivalence principle and its consequences (PART 28)? How does the Lagrangian formulation replace the FBD method? These are questions for PART 8, PART 28, and analytical mechanics.</p>
-</details>
     <footer class="pager"><a href="motion-in-two-dimensions.html">← 2-D motion & projectiles</a><a href="work-energy-power.html">Work, energy & power →</a></footer>
     <p class="colophon">Rendered from <code>newtons-laws/Newtons-laws.md</code> by <code>tools/md_site.py</code>.
     Fully offline: diagrams are local SVGs, maths is vendored KaTeX.

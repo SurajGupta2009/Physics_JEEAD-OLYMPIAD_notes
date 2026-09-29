@@ -260,6 +260,8 @@ Rubbing, touching and approaching are the three ways a body's charge changes, an
 > *Show:* three rows. Friction: a rod and a cloth before and after, with a handful of $e^-$ arrows crossing from cloth to rod and the final $+$/$-$ labels. Conduction: a charged sphere touching a neutral one, electrons flowing through the contact, both spheres ending with the same sign. Induction: a negative rod near a neutral sphere with $+$ on the near face and $-$ on the far face, then an earth wire draining the far-side electrons, then the wire removed, then the rod removed and the $+$ charge spreading over the sphere.
 > *Search:* "charging by friction conduction induction electron transfer diagram grounded sphere"
 
+![[../_obsidian/excalidraw/electrostatics-D13-1.excalidraw|900]]
+
 > [!danger] Trap — induction gives the opposite sign, and the rod keeps its charge
 > "The rod charged the sphere, so the sphere has the rod's sign." No: nothing left the rod. The earth supplied (or took) the electrons, and the sphere ends with the sign *opposite* to the rod. The paper archetype: "a negatively charged rod is brought near an earthed sphere; the earth connection is removed, then the rod. The sphere is now" — positively charged.
 
@@ -284,6 +286,8 @@ $\mathbf F_{12}$ is the force **on charge 2 due to charge 1**, and $\hat{\mathbf
 > *Show:* charges $q_1$ at $\mathbf r_1$ and $q_2$ at $\mathbf r_2$ with the vector $\mathbf r_{12}=\mathbf r_2-\mathbf r_1$ drawn from 1 to 2 and $\hat{\mathbf r}_{12}$ marked; two panels: like charges with $\mathbf F_{12}$ on 2 pointing away from 1 and $\mathbf F_{21}$ on 1 pointing away from 2; unlike charges with both forces reversed; both pairs equal in length.
 > *Search:* "coulomb's law vector form unit vector r12 force on q2 due to q1 diagram"
 
+![[../_obsidian/excalidraw/electrostatics-D13-2.excalidraw|900]]
+
 > [!example] Worked example — the corner of a triangle
 > Three charges of $+2\ \mu$C sit at the corners of an equilateral triangle of side $10$ cm. The force on any one of them: each of the other two pushes it with $F=kq^2/a^2=(8.988\times10^9)(2\times10^{-6})^2/(0.1)^2=3.60$ N, along the two edges, $60^\circ$ apart. The resultant of two equal vectors at $60^\circ$ is $2F\cos30^\circ=F\sqrt3=6.23$ N, directed away from the triangle's centre along the bisector. Replace the top charge by $-2\ \mu$C and the force on a base charge becomes $3.60$ N repulsion from its neighbour along the base plus $3.60$ N *attraction* towards the apex: the two are now $120^\circ$ apart, the resultant is $F$ itself, $3.60$ N, at $60^\circ$ below the base, pointing away from the triangle. The magnitude halved, and the direction swung by $90^\circ$ — that is what a sign does.
 
@@ -292,6 +296,8 @@ $\mathbf F_{12}$ is the force **on charge 2 due to charge 1**, and $\hat{\mathbf
 > [!abstract] DIAGRAM D13.3 · The torsion balance
 > *Show:* a horizontal insulating rod hung from a thin fibre, a charged pith ball at one end and a counterweight at the other; a second fixed charged ball brought near; the rod's deflection angle $\theta$ marked, with the torsion torque $\kappa\theta$ balancing $F\times(\text{arm})$; an inset noting that doubling the separation quarters the angle.
 > *Search:* "coulomb torsion balance experiment diagram pith balls fibre deflection"
+
+![[../_obsidian/excalidraw/electrostatics-D13-3.excalidraw|900]]
 
 > [!abstract] Numbers to keep — how strong is it
 > Two protons $1$ fm apart repel with $ke^2/r^2=2.31\times10^{-28}/10^{-30}=230$ N — the weight of a large dog, on two particles of mass $10^{-27}$ kg. For the electron and proton in hydrogen, electric attraction divided by gravitational attraction is $ke^2/Gm_em_p=2.3\times10^{39}$: gravity is irrelevant to chemistry. Two charges of $1$ C, $1$ m apart, repel with $9\times10^9$ N; the coulomb is a huge unit, and the charges in a static-electricity problem are nano- to microcoulombs.
@@ -327,6 +333,8 @@ What field lines *cannot* do: give you a number. Density is proportional to $\lv
 > [!abstract] DIAGRAM D13.4 · Field-line patterns side by side
 > *Show:* four panels with the same line density convention: (a) a single positive charge, radial lines outward; (b) a dipole $+q$, $-q$, lines leaving $+$ and curving into $-$, densest between them; (c) two equal positive charges, lines repelling each other with a neutral point midway where no line passes; (d) a large uniformly charged sheet, parallel lines perpendicular to it on both sides. Mark the neutral point in (c) with a cross.
 > *Search:* "electric field lines point charge dipole two like charges parallel plate patterns"
+
+![[../_obsidian/excalidraw/electrostatics-D13-4.excalidraw|900]]
 
 > [!danger] Trap — field lines are not trajectories
 > "The electron follows the field line from the negative plate to the positive plate along a curve." Only if it is released from rest *and* the line is straight. In the dipole's curved field a charge released from rest moves off the line within a fraction of the curvature radius, because velocity is a memory and the field line has none. The exam version: "a charged particle is projected perpendicular to a uniform field; sketch its path" — a parabola, which crosses every field line.
@@ -395,6 +403,8 @@ xychart-beta
 > *Show:* a ring of radius $R$ seen in perspective, the axis with $P$ at distance $x$, an element $dq$ at the top and its partner at the bottom, both $d\mathbf E$ vectors drawn at $P$ making angle $\alpha$ with the axis, their perpendicular components crossed out and the axial components added; $s=\sqrt{x^2+R^2}$ labelled.
 > *Search:* "electric field on axis of uniformly charged ring element symmetry cancellation derivation"
 
+![[../_obsidian/excalidraw/electrostatics-D13-5.excalidraw|900]]
+
 ### 3.5 The rod: finite by angles, infinite as a limit
 
 A straight rod of uniform density $\lambda$; field point $P$ at perpendicular distance $d$ from the line of the rod. Set the foot of the perpendicular as the origin along the rod, and let an element at position $l$ subtend angle $\theta$ at $P$ measured from the perpendicular: $l=d\tan\theta$, $dl=d\sec^2\theta\,d\theta$, $s=d\sec\theta$. Element field $dE=k\lambda\,dl/s^2=k\lambda\,d\theta/d$ — the angle parametrisation makes the element's contribution *uniform in $\theta$*, which is why it is the right variable. Components: perpendicular to the rod $dE_\perp=(k\lambda/d)\cos\theta\,d\theta$, along the rod (towards the far end) $dE_\parallel=(k\lambda/d)\sin\theta\,d\theta$. For a rod whose ends subtend angles $\alpha$ (one side) and $\beta$ (the other side) at $P$:
@@ -411,6 +421,8 @@ with $E_\parallel$ pointing from the end that subtends the larger angle towards 
 > [!abstract] DIAGRAM D13.6 · The rod with its two angles
 > *Show:* a horizontal rod, point $P$ above it at distance $d$, the foot of the perpendicular, an element at angle $\theta$ with $s$ and $dl$ marked, the end-angles $\alpha$ and $\beta$ drawn from the perpendicular to the two ends; the components $E_\perp$ and $E_\parallel$ at $P$, with $E_\parallel$ pointing towards the end with the smaller angle.
 > *Search:* "electric field finite line charge angles alpha beta perpendicular parallel components derivation"
+
+![[../_obsidian/excalidraw/electrostatics-D13-6.excalidraw|900]]
 
 > [!question] Exam note
 > The paper never gives $\alpha,\beta$; it gives lengths. Convert: $\sin\alpha=a/\sqrt{a^2+d^2}$ for the end at distance $a$ along the rod. For a point *on the axis* of the rod (in line with it) at distance $a$ from the near end of a rod of length $L$, the element-and-symmetry method gives $E=k\lambda\int_a^{a+L}dl/l^2=kQ/[a(a+L)]$ — the geometric mean of the distances to the two ends replaces $r$ in the point-charge formula.
@@ -436,9 +448,13 @@ $$
 > *Show:* a disc of radius $R$ face-on with a shaded ring of radius $r$ and width $dr$; a side view with the axis, $P$ at distance $x$, and the ring's $d\mathbf E$ along the axis; a small graph of $E_x$ against $x$ starting at $\sigma/2\varepsilon_0$ and falling to the $kQ/x^2$ tail.
 > *Search:* "electric field on axis of uniformly charged disc rings integration sigma over two epsilon"
 
+![[../_obsidian/excalidraw/electrostatics-D13-7.excalidraw|900]]
+
 > [!abstract] DIAGRAM D13.8 · Two sheets, three regions
 > *Show:* two vertical sheets labelled $+\sigma$ and $-\sigma$; in each of the three regions, two rows of arrows (one from each sheet) with their sum written underneath: $0$, $\sigma/\varepsilon_0$, $0$; a second panel for $+\sigma$, $+\sigma$ giving $\sigma/\varepsilon_0$, $0$, $\sigma/\varepsilon_0$.
 > *Search:* "field of two parallel infinite charged sheets superposition three regions"
+
+![[../_obsidian/excalidraw/electrostatics-D13-8.excalidraw|900]]
 
 > [!danger] Trap — $\sigma/2\varepsilon_0$ or $\sigma/\varepsilon_0$
 > A *sheet of charge* (an insulator, or an isolated thin plate with charge on both faces counted together) gives $\sigma/2\varepsilon_0$ on each side. The *surface of a conductor* gives $\sigma/\varepsilon_0$ just outside, where $\sigma$ is the local density on that face. Both are correct and §3.8 shows they are the same theorem: the extra $\sigma/2\varepsilon_0$ near a conductor is supplied by all the *other* charge on the conductor, which is exactly what makes its interior field zero.
@@ -456,6 +472,8 @@ pointing from the arc's midpoint through $O$ and away from the arc (for $\lambda
 > [!abstract] DIAGRAM D13.9 · The arc's field at its centre
 > *Show:* an arc of angle $\theta_0$ with its bisector, an element at $+\varphi$ and its partner at $-\varphi$, both $d\mathbf E$ vectors at $O$ with the perpendicular components crossed out; the chord drawn dashed with its length $2R\sin(\theta_0/2)$; a second panel for the semicircle with the resultant $2k\lambda/R$.
 > *Search:* "electric field at centre of uniformly charged arc semicircle derivation cancellation components"
+
+![[../_obsidian/excalidraw/electrostatics-D13-9.excalidraw|900]]
 
 **The spherical shell, by integration.** Radius $R$, uniform $\sigma$, total $Q=4\pi R^2\sigma$; field point $P$ at distance $r$ from the centre. Element: a ring at polar angle $\theta$ (measured from the line $OP$), radius $R\sin\theta$, width $R\,d\theta$, charge $dq=\sigma\,2\pi R^2\sin\theta\,d\theta$, all of it at distance $s$ from $P$ with $s^2=R^2+r^2-2Rr\cos\theta$. By (3.4) its field at $P$ is along $OP$ with magnitude $k\,dq\,(r-R\cos\theta)/s^3$. Change variable to $s$: $2s\,ds=2Rr\sin\theta\,d\theta$, and $r-R\cos\theta=(r^2-R^2+s^2)/2r$. Then
 
@@ -488,6 +506,8 @@ A conductor holds free charges. If there were a field inside it, they would move
 > [!abstract] DIAGRAM D13.10 · The conductor's surface: patch field and the field of the rest
 > *Show:* a magnified surface patch of density $\sigma$; on both sides of the patch a short arrow $\sigma/2\varepsilon_0$ pointing away from it; a longer smooth arrow $\mathbf E_{\text{rest}}=\sigma/2\varepsilon_0$ pointing outward that crosses the patch unchanged; the sums written inside (0) and outside ($\sigma/\varepsilon_0$).
 > *Search:* "field just outside conductor sigma over epsilon0 local patch argument factor two"
+
+![[../_obsidian/excalidraw/electrostatics-D13-10.excalidraw|900]]
 
 **A conducting plate in an external uniform field $E_0$.** Its two faces take $\sigma=\mp\varepsilon_0E_0$ so that the faces' own fields ($\varepsilon_0E_0/2\varepsilon_0$ each, both pointing against $E_0$ inside the plate) cancel the external field in the metal — and the field just outside each face is $\sigma/\varepsilon_0=E_0$, unchanged. The plate distorts nothing far away and shields everything between its faces.
 
@@ -568,9 +588,13 @@ towards the *stronger* field when $\mathbf p$ is aligned with $\mathbf E$. This 
 > *Show:* a dipole at angle $\theta$ to horizontal field lines, forces $+q\mathbf E$ and $-q\mathbf E$ drawn at the two charges, the couple's moment arm $d\sin\theta$ marked; beside it the $U(\theta)=-pE\cos\theta$ curve from $0$ to $\pi$ with the stable minimum at $0$ and the unstable maximum at $\pi$ labelled.
 > *Search:* "electric dipole uniform field torque couple potential energy minus p dot E graph"
 
+![[../_obsidian/excalidraw/electrostatics-D13-11.excalidraw|900]]
+
 > [!abstract] DIAGRAM D13.12 · Dipole in a gradient
 > *Show:* converging field lines (stronger to the right), a dipole aligned with the field, the two forces drawn with the one on $+q$ visibly longer; the net force arrow towards the strong-field side; an inset of a comb and a paper scrap with induced $\pm$ charges.
 > *Search:* "dipole in non-uniform electric field net force gradient comb attracts paper induced dipole"
+
+![[../_obsidian/excalidraw/electrostatics-D13-12.excalidraw|900]]
 
 ### 3.11 Equilibrium of point charges, and the stability question
 
@@ -593,6 +617,8 @@ The same method for an equilateral triangle with a charge at the centroid gives 
 > [!abstract] DIAGRAM D13.13 · Three-charge equilibrium geometries
 > *Show:* (a) $q_1$ and $q_2$ on a line with the zero-field point marked between them nearer the smaller charge, and the outside zero for opposite signs; (b) the square with $q$ at the corners and $Q$ at the centre, the three forces on one corner charge drawn with the inward pull from $Q$; (c) the triangle with the centroid charge.
 > *Search:* "equilibrium of three point charges collinear square centre charge value diagram"
+
+![[../_obsidian/excalidraw/electrostatics-D13-13.excalidraw|900]]
 
 **Stability.** Every equilibrium above is a saddle. The negative charge between two positives is stable to sideways displacement (both attractions pull it back) and *unstable* along the line (moving towards one charge increases that attraction). The positive charge between two positives is the reverse. A charge $q$ at the centre of a charged ring of charge $Q$ with $qQ<0$ is stable along the axis (§3.4: $\omega^2=k\lvert qQ\rvert/mR^3$) and unstable in the plane of the ring. This is not bad luck; it is **Earnshaw's theorem**: no arrangement of static charges can hold a charge in stable equilibrium in empty space. §3.16 gives the one-paragraph proof by flux, and Part 10 the version by the potential's second derivatives, with the honest caveats (diamagnets, oscillating fields, and feedback all escape it — which is how ion traps and magnetic levitation exist).
 
@@ -629,6 +655,8 @@ If the particle was accelerated from rest through $V_{\text{acc}}$ before enteri
 > *Show:* left, a bob on a string in horizontal field lines with $mg$ down, $qE$ sideways and the tension along the string tilted by $\theta_0$; the effective-gravity direction dashed. Right, two plates with an electron's parabola inside, the straight exit path extrapolated back to the plate centre, the screen at distance $D$ with $Y$ marked.
 > *Search:* "charged pendulum in horizontal electric field effective gravity; electron deflection parallel plates apparent origin"
 
+![[../_obsidian/excalidraw/electrostatics-D13-14.excalidraw|900]]
+
 **Millikan's balance.** An oil drop of radius $r\approx1\ \mu$m and density $900$ kg m$^{-3}$ has mass $m=\tfrac43\pi r^3\rho=3.8\times10^{-15}$ kg and weight $3.7\times10^{-14}$ N. Held stationary between plates by a field, $qE=mg-F_{\text{buoy}}$ (buoyancy in air is $0.13\%$ of the weight — kept for honesty, dropped for arithmetic); with a single electronic charge, $E=mg/e=2.3\times10^{5}$ V m$^{-1}$, or $3.7$ kV across Millikan's $16$ mm gap. The radius is not measured with a ruler: switch the field off, time the terminal fall, and use Stokes ([[Fluid-mechanics|PART 11]]): $v_t=2r^2(\rho-\rho_{\text{air}})g/9\eta=1.1\times10^{-4}$ m s$^{-1}$ — a tenth of a millimetre per second, which is why the experiment is done through a microscope. Charges came out as integer multiples of $1.6\times10^{-19}$ C: quantisation, measured.
 
 > [!warning] Condition of validity
@@ -651,6 +679,8 @@ with $d\mathbf A$ the outward normal on a closed surface (so flux *leaving* is p
 > *Show:* parallel field lines crossing a flat rectangle tilted at angle $\theta$; the normal $\hat{\mathbf n}$ drawn with the angle to $\mathbf E$ marked; the projected rectangle of area $A\cos\theta$ drawn dashed perpendicular to the field with the same number of lines crossing both.
 > *Search:* "electric flux tilted surface projected area E A cos theta diagram"
 
+![[../_obsidian/excalidraw/electrostatics-D13-15.excalidraw|900]]
+
 ### 3.15 Why the flux rule is what it is: the solid-angle proof
 
 A small patch of area $dA$ at distance $r$ from a point $O$, its normal at angle $\alpha$ to the line from $O$, subtends the **solid angle** $d\Omega=dA\cos\alpha/r^2$ at $O$ — the area it projects onto the unit sphere around $O$. A closed surface seen from a point inside subtends $4\pi$; from a point outside, zero net (every direction from $O$ enters and leaves the surface equally often).
@@ -671,6 +701,8 @@ By superposition the flux of many charges is the sum of their fluxes, and only t
 > [!abstract] DIAGRAM D13.16 · The cone argument
 > *Show:* a charge $q$ and a closed, lumpy surface; a narrow cone from $q$ cutting the surface at two patches at different distances and tilts, both with the same solid angle; the outward normals drawn, one making an acute angle with the cone (flux out), one obtuse (flux in). A second panel with $q$ outside the surface and the cone cutting it twice, entering then leaving.
 > *Search:* "gauss law solid angle proof cone cuts closed surface charge inside outside"
+
+![[../_obsidian/excalidraw/electrostatics-D13-16.excalidraw|900]]
 
 ### 3.16 Gauss's law
 
@@ -821,6 +853,8 @@ xychart-beta
 > *Show:* an irregular conductor with an off-centre cavity containing $+q$; $-q$ crowded on the near wall of the cavity, thinner on the far wall, with field lines from $q$ ending on it; $+q$ spread uniformly over the outer surface (drawn spherical) with radial lines outward; a dashed Gaussian surface in the metal between them labelled $\Phi=0$; a second panel with the outer surface earthed and no outside lines.
 > *Search:* "point charge inside cavity of conductor induced charge inner surface outer surface gauss earthed shell"
 
+![[../_obsidian/excalidraw/electrostatics-D13-17.excalidraw|900]]
+
 > [!danger] Trap — the outside knows the total, not the position
 > "A charge inside a closed conducting shell has no effect outside." It has exactly one effect: the outer surface carries $+q$ more, and its field is felt everywhere outside. What the outside cannot learn is *where* the inner charge is. Only an earthed shell hides the inside completely.
 
@@ -854,6 +888,8 @@ which is $q/2\varepsilon_0$ as $x\to0$ (half the lines go through any plane cont
 > [!abstract] DIAGRAM D13.18 · The eight-cube construction
 > *Show:* a charge at the corner of a cube; the $2\times2\times2$ block of eight identical cubes with the charge at its centre; the three faces of the original cube touching the charge shaded "zero flux" and the three far faces labelled $q/24\varepsilon_0$; beside it the disc-and-cone geometry with half-angle $\theta$ and $\cos\theta=x/\sqrt{x^2+R^2}$.
 > *Search:* "flux through cube face charge at corner eight cubes symmetry; flux through disc solid angle point charge on axis"
+
+![[../_obsidian/excalidraw/electrostatics-D13-18.excalidraw|900]]
 
 ### 3.23 Gauss in matter: a pointer
 
@@ -891,6 +927,8 @@ Three things follow. **Path independence:** the work done by the field between t
 > [!abstract] DIAGRAM D13.19 · A closed loop in a point charge's field
 > *Show:* a charge at the centre, a closed path made of two radial segments and two circular arcs at radii $r_1<r_2$; on the arcs $\mathbf E\perp d\mathbf l$ (no work), on the radial legs the works $kq(1/r_1-1/r_2)$ out and back cancel; a second, wiggly loop with the caption "same: only $dr$ counts".
 > *Search:* "electrostatic field conservative closed loop line integral zero point charge radial arcs"
+
+![[../_obsidian/excalidraw/electrostatics-D13-19.excalidraw|900]]
 
 **Which fields are conservative?** Any radial field $f(r)\hat{\mathbf r}$ — Coulomb's, the line charge's $2k\lambda/r$, the sphere's interior $\rho r/3\varepsilon_0$ — by the argument above. $\mathbf E=c(y\hat{\mathbf x}+x\hat{\mathbf y})$: yes, it is $-\nabla(-cxy)$. $\mathbf E=c(-y\hat{\mathbf x}+x\hat{\mathbf y})$: no — around a circle of radius $r$ centred at the origin it does work $2\pi r\cdot cr\neq0$; such a field circulates and is what a *changing magnetic field* produces (PART 20), never static charges.
 
@@ -984,6 +1022,8 @@ $\mathbf E$ points *down* the steepest slope of $V$ and has the magnitude of tha
 > *Show:* three panels with equipotentials as thin closed curves at equal $\Delta V$ and field lines as arrows crossing them at right angles: (a) a point charge — concentric circles crowding inward; (b) a dipole — the straight zero-potential line midway, lobes around each charge; (c) two like charges — the figure-of-eight contour through the neutral point. Contour spacing visibly tightest where the arrows are densest.
 > *Search:* "equipotential surfaces field lines perpendicular point charge dipole two positive charges map"
 
+![[../_obsidian/excalidraw/electrostatics-D13-20.excalidraw|900]]
+
 > [!example] Worked example — reading a map
 > Equipotentials at $10$ V intervals are $2.0$ mm apart near a point $P$, and the $30$ V contour lies to the right of the $20$ V contour. The field at $P$ is $E\approx10/0.002=5\times10^{3}$ V m$^{-1}$, pointing *left* (downhill, from $30$ to $20$). A $-2\ \mu$C charge there feels $10^{-2}$ N to the right. Moving it $3$ mm along a contour costs nothing; moving it from the $20$ V to the $30$ V contour costs the field $q\Delta V=-2\times10^{-5}$ J, i.e. the external agent *gains* $20\ \mu$J.
 
@@ -1064,6 +1104,8 @@ The energy needed to *disperse* a bound configuration is $-U$; the energy releas
 > *Show:* a square with corners numbered 1–4 and charges arriving from infinity one at a time; under each arrival the work written: $0$, $kq^2/a$, $kq^2/a+kq^2/a\sqrt2$, $2kq^2/a+kq^2/a\sqrt2$; the six pair-lines drawn (four sides, two diagonals) and the total $(4+\sqrt2)kq^2/a$.
 > *Search:* "potential energy system of point charges assembly work pairs square corners"
 
+![[../_obsidian/excalidraw/electrostatics-D13-21.excalidraw|900]]
+
 ### 3.33 Conductors in equilibrium: the complete list, derived
 
 Every property follows from two facts — $\mathbf E=0$ inside (charges have stopped) and $\oint\mathbf E\cdot d\mathbf l=0$ (§3.25):
@@ -1085,6 +1127,8 @@ The larger sphere takes more *charge*, but the smaller has the larger *density* 
 > *Show:* a large and a small sphere joined by a long thin wire; charges drawn as dots, sparser on the large sphere but more numerous in total; field lines emerging, crowded at the small sphere; the ratios $Q_1/Q_2=R_1/R_2$ and $\sigma_1/\sigma_2=R_2/R_1$ written; an inset of a pointed conductor with lines crowding at the tip.
 > *Search:* "two charged spheres connected by wire same potential charge density inversely proportional radius lightning rod"
 
+![[../_obsidian/excalidraw/electrostatics-D13-22.excalidraw|900]]
+
 **How much charge can a sphere hold?** Until its surface field reaches breakdown: $kQ_{\max}/R^2=E_b$, so $Q_{\max}=E_bR^2/k$ and $V_{\max}=E_bR$. For $R=1$ cm: $Q_{\max}=33$ nC, $V_{\max}=30$ kV. For a Van de Graaff dome of $R=1$ m: $3$ MV and $0.33$ mC — and the generator works at all because charge delivered to the *inside* of the dome goes entirely to its outer surface (§3.21), regardless of how high the dome's potential already is.
 
 > [!question] Exam note — "which property fails when a charge approaches?"
@@ -1103,6 +1147,8 @@ The difference depends on $q$ alone — the outer shell's charge raises both equ
 > [!abstract] DIAGRAM D13.23 · Concentric shells, four cases
 > *Show:* two concentric circles; four small panels: (a) $q$ inside, $Q$ outside, isolated, with the potentials $V_a$, $V_b$ written; (b) outer earthed — outer charge becomes $-q$, no field outside; (c) inner earthed — inner charge becomes $-Qa/b$; (d) a wire joining the two shells — all charge moves to the outer shell. Field lines drawn between the shells in (a)–(c), none in (d).
 > *Search:* "concentric conducting shells potential earthed outer shell inner shell induced charge connected by wire"
+
+![[../_obsidian/excalidraw/electrostatics-D13-23.excalidraw|900]]
 
 **Join the shells with a wire:** they become one conductor, and *all* the inner charge moves to the outer surface (the region between is then field-free, so $V_a=V_b$, which (3.44) allows only with $q=0$). Charge always moves from the inner conductor to the outer *whatever their potentials before contact* — the principle of the Van de Graaff and of Faraday's pail.
 
@@ -2270,6 +2316,8 @@ satisfies Laplace's equation everywhere except at $q$ (the image is *outside* th
 > *Show:* a charge $+q$ at height $h$ above a horizontal earthed plane; below the plane, dashed, the image $-q$ at depth $h$; field lines from $q$ curving down to meet the plane at right angles; the induced density $\sigma(\rho)$ sketched as a negative bell curve beneath, peaked under the charge with $\sigma(0)=-q/2\pi h^2$; the force arrow on $q$ pointing down with $kq^2/4h^2$.
 > *Search:* "method of images point charge grounded conducting plane induced surface charge density field lines"
 
+![[../_obsidian/excalidraw/electrostatics-D13-24.excalidraw|900]]
+
 ### 10.3 Electrostatic pressure, and what it does to a soap bubble
 
 **Force argument.** A surface patch of density $\sigma$ feels the field of everything but itself, $E_{\text{rest}}=\sigma/2\varepsilon_0$ (§3.8): force per area $P=\sigma E_{\text{rest}}=\sigma^2/2\varepsilon_0=\tfrac12\varepsilon_0E^2$, outward, whatever the sign of $\sigma$. **Energy argument.** Let a charged conducting sphere expand from $R$ to $R+dR$ at fixed $Q$: the stored energy $kQ^2/2R$ falls by $(kQ^2/2R^2)dR$; the field did that much work on the surface, $P\cdot4\pi R^2dR$, so $P=kQ^2/8\pi R^4=\sigma^2/2\varepsilon_0$ ✓ — the same formula from a different principle, which is what makes it trustworthy. **Capacitor plate:** $F=PA=Q^2/2\varepsilon_0A$, the attraction the capacitors note derives from $dU/dx$. **The charged soap bubble:** a bubble of radius $R$ with surface tension $\gamma$ (two surfaces) holds an excess pressure $4\gamma/R$ inside. Charge it: the electrostatic pressure pulls outward. With charge $Q$ such that
@@ -2283,6 +2331,8 @@ the bubble holds its shape with *no* excess pressure — it would survive with a
 > [!abstract] DIAGRAM D13.25 · Pressures on a charged bubble
 > *Show:* a soap bubble in cross-section with its two surfaces; inward arrows labelled $4\gamma/R$ (surface tension), outward arrows labelled $\sigma^2/2\varepsilon_0$ (electrostatic); a second panel with the pressures balanced and the charge $Q=8\pi\sqrt{2\varepsilon_0\gamma R^3}$ written; an inset of the field lines leaving the charged bubble radially.
 > *Search:* "charged soap bubble electrostatic pressure surface tension balance radius"
+
+![[../_obsidian/excalidraw/electrostatics-D13-25.excalidraw|900]]
 
 ### 10.4 The Coulomb exponent, tested from inside a shell
 
@@ -2409,6 +2459,8 @@ Compute the electrostatic energy of a uniformly charged sphere by the field inte
 > [!abstract] DIAGRAM D13.26 · Overlapping cylinders and the off-centre cavity
 > *Show:* left, two circles of equal radius overlapping, one shaded $+\rho$, one $-\rho$, their axes $d$ apart, with parallel field arrows filling the lens-shaped overlap and the crescent regions labelled as the only places with net charge; right, a sphere with an off-centre cavity, uniform parallel arrows inside the cavity along the line of centres, and the two "component" spheres drawn dashed.
 > *Search:* "two overlapping charged cylinders uniform field superposition; sphere with off-centre cavity uniform field"
+
+![[../_obsidian/excalidraw/electrostatics-D13-26.excalidraw|900]]
 
 ### OL7 — The potential at the centre and corner of a charged cube
 

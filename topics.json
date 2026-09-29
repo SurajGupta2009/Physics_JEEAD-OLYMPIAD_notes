@@ -33,7 +33,7 @@
         "INPhO",
         "IPhO"
       ],
-      "media": "text-only; Obsidian reading mode; mermaid FIGURE callouts + DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 10 Mermaid FIGURE callouts and 26 editable native Excalidraw scenes embedded at their D13 briefs; no raster image files.",
       "dependency": [
         "vectors",
         "motion-in-two-dimensions",
@@ -65,19 +65,18 @@
         "quantum effects beyond the classical-electron-radius warning"
       ],
       "next_candidates": [
-        "upgrade DIAGRAM D13.4 (field-line patterns) and D13.20 (equipotential maps) to rendered figures if a suitable Mermaid idiom appears",
-        "a companion Excalidraw sheet for the 26 DIAGRAM briefs"
+        "Verify the D13.1–D13.26 native scenes in the pinned Obsidian runtime when the vault is available."
       ],
       "pages": [
         "Electrostatics.md"
       ],
-      "figures": 0,
+      "figures": 26,
       "questions": 90,
       "solutions": 127,
       "math_spans": 3958,
       "bytes_html": 0,
-      "bytes_markdown": 281301,
-      "words": 40988,
+      "bytes_markdown": 283034,
+      "words": 41014,
       "display_formulas": 56
     },
     {
@@ -172,7 +171,7 @@
       "status": "complete",
       "owner": "agent",
       "entry": "rotational-mechanics/Rotational-mechanics.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D8 briefs; no raster image files.",
       "plan_part": 8,
       "exam": [
         "JEE Advanced",
@@ -1003,7 +1002,7 @@
       "folder": "units-measurements",
       "format": "markdown",
       "entry": "units-measurements/Units-measurements.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D1 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1049,7 +1048,7 @@
       "folder": "vectors",
       "format": "markdown",
       "entry": "vectors/Vectors.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D2 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1097,7 +1096,7 @@
       "folder": "kinematics-1d",
       "format": "markdown",
       "entry": "kinematics-1d/Kinematics-1d.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 9 editable native Excalidraw scenes embedded at their D3 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1149,7 +1148,7 @@
       "folder": "motion-in-two-dimensions",
       "format": "markdown",
       "entry": "motion-in-two-dimensions/Motion-in-two-dimensions.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D4 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1202,7 +1201,7 @@
       "folder": "newtons-laws",
       "format": "markdown",
       "entry": "newtons-laws/Newtons-laws.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D5 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1252,7 +1251,7 @@
       "folder": "work-energy-power",
       "format": "markdown",
       "entry": "work-energy-power/Work-energy-power.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D6 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1302,7 +1301,7 @@
       "folder": "centre-of-mass-momentum",
       "format": "markdown",
       "entry": "centre-of-mass-momentum/Centre-of-mass-momentum.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D7 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1357,7 +1356,7 @@
       "owner": "agent",
       "format": "markdown",
       "entry": "gravitation/Gravitation.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D9 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1391,7 +1390,7 @@
       "owner": "agent",
       "format": "markdown",
       "entry": "simple-harmonic-motion/Simple-harmonic-motion.md",
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 6 Mermaid FIGURE callouts and 12 editable native Excalidraw scenes embedded at their D10 briefs; no raster image files.",
       "exam": [
         "JEE Advanced",
         "NSEP",
@@ -1432,7 +1431,7 @@
         "INPhO",
         "IPhO"
       ],
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 20 editable native Excalidraw scenes embedded at their D11 briefs; no raster image files.",
       "dependency": [
         "newtons-laws",
         "work-energy-power"
@@ -1483,7 +1482,7 @@
         "INPhO",
         "IPhO"
       ],
-      "media": "text-only; Obsidian reading mode; DIAGRAM callout briefs (no image files by design)",
+      "media": "Obsidian-first Markdown; 14 editable native Excalidraw scenes embedded at their D12 briefs; no raster image files.",
       "dependency": [
         "newtons-laws",
         "work-energy-power"
@@ -1507,13 +1506,13 @@
       "pages": [
         "Elasticity.md"
       ],
-      "figures": 0,
+      "figures": 14,
       "questions": 47,
       "solutions": 93,
       "math_spans": 1378,
       "bytes_html": 0,
-      "bytes_markdown": 105499,
-      "words": 15574,
+      "bytes_markdown": 106372,
+      "words": 15588,
       "display_formulas": 20
     }
   ]

@@ -138,9 +138,9 @@ layout that §4–§5 were written for survives only as the page contract that s
 ```
 
 No topic-local `assets/`, `.html`, or raster image files: standard figures render from Mermaid
-source in Obsidian (`docs/obsidian-plugin-workflow.md` §2). The scoped mechanics D1–D7 retrofit
-also uses editable Excalidraw Markdown scenes centrally in `_obsidian/excalidraw/`, embedded at
-the corresponding D-briefs. Frontmatter is the vault's metadata — `title`, `part`, `slug`, `order`,
+source in Obsidian (`docs/obsidian-plugin-workflow.md` §2). The scoped D1–D13 retrofit uses
+editable Excalidraw Markdown scenes centrally in `_obsidian/excalidraw/`, embedded at the
+corresponding D-briefs (Electrostatics D13 consolidates plan Parts 13–15). Frontmatter is the vault's metadata — `title`, `part`, `slug`, `order`,
 `block`, `status`, `source`, `aliases`, `tags` — and `tools/check_all.py` checks `order`/`block`
 against `topics.json`.
 

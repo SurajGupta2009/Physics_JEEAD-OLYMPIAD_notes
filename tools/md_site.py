@@ -33,8 +33,8 @@ OUT = ROOT / "docs" / "site"
 
 # (site file, topic dir, display title, one-line description, figures, questions, endpoint, group)
 # `figures` counts local SVG diagrams for the nine shipped note-sets and DIAGRAM
-# figure briefs (plan.md §1.2) for the text-only plan.md chapters — no chapter in
-# this plan ships an image file, by design.
+# briefs for the plan.md chapters. The D1–D13 retrofit adds native Excalidraw
+# scenes to selected plan chapters; those scenes are rendered by Obsidian, not here.
 WAVES_THERMO = "Waves & thermodynamics"
 ELECTRICITY = "Electricity & magnetism"
 OPTICS = "Optics"
@@ -540,6 +540,10 @@ def render_topic(source: Path, title: str, nav: str, pager: str) -> str:
     )
     text = source.read_text(encoding="utf-8")
     text, props = strip_frontmatter(text)
+    # Excalidraw wiki embeds are rendered by the Obsidian plugin, not by this
+    # offline Markdown site. Keep their searchable DIAGRAM briefs, but omit the
+    # plugin-specific embed syntax rather than emitting broken image placeholders.
+    text = re.sub(r"(?m)^!\[\[[^\]\n]+\.excalidraw(?:\|[^\]\n]*)?\]\]\s*(?:\n|$)", "", text)
     text = callouts_to_html(text)
     text = wikilinks_to_links(text)
     if props:
@@ -587,10 +591,43 @@ def grouped() -> list[tuple[str, list[tuple]]]:
     return out
 
 
-def media_phrase(figures: int, group: str) -> str:
-    """The nine shipped note-sets carry SVG files; the plan.md chapters carry briefs."""
-    if group in (WAVES_THERMO, ELECTRICITY, OPTICS):
-        return f"{figures} local SVG figures"
+LOCAL_SVG_TOPICS = {
+    "string-waves": 5,
+    "sound-waves": 15,
+    "electromagnetic-waves": 7,
+    "heat": 25,
+    "thermodynamics": 35,
+    "capacitors": 32,
+    "current-electricity": 26,
+    "geometrical-optics": 46,
+    "wave-optics": 28,
+}
+
+EXCALIDRAW_SCENES = {
+    "units-measurements": 12,
+    "vectors": 12,
+    "kinematics-1d": 9,
+    "motion-in-two-dimensions": 12,
+    "newtons-laws": 12,
+    "work-energy-power": 12,
+    "centre-of-mass-momentum": 12,
+    "rotational-mechanics": 12,
+    "gravitation": 12,
+    "simple-harmonic-motion": 12,
+    "fluid-mechanics": 20,
+    "elasticity": 14,
+    "electrostatics": 26,
+}
+
+
+def media_phrase(figures: int, topic: str) -> str:
+    """Report local SVGs, Obsidian-native scenes, or remaining text briefs."""
+    local_svgs = LOCAL_SVG_TOPICS.get(topic)
+    if local_svgs is not None:
+        return f"{local_svgs} local SVG figures"
+    scenes = EXCALIDRAW_SCENES.get(topic)
+    if scenes:
+        return f"{scenes} editable Excalidraw scenes (in Obsidian)"
     return f"text-only · {figures} figure briefs"
 
 
@@ -600,8 +637,8 @@ def render_index() -> str:
         cards = "".join(
             f'<a class="card" href="{file}"><h2>{title}</h2>'
             f'<p>{blurb}</p>'
-            f'<span class="meta">{media_phrase(figures, group)} · {questions} question blocks · {endpoint}</span></a>'
-            for file, _topic, title, blurb, figures, questions, endpoint, _g in rows
+            f'<span class="meta">{media_phrase(figures, topic)} · {questions} question blocks · {endpoint}</span></a>'
+            for file, topic, title, blurb, figures, questions, endpoint, _g in rows
         )
         sections.append(f'<h2 class="group">{group}</h2><div class="cards">{cards}</div>')
     nav = "".join(
@@ -630,8 +667,9 @@ def render_index() -> str:
      offline, no network needed. The same content lives as <code>*.md</code> in each topic
      folder (readable on GitHub, and as an Obsidian vault). The nine shipped note-sets keep
      local SVG diagrams and an interactive single-file HTML edition; the
-     <code>plan.md</code> chapters are text-only and describe every figure as a
-     <code>DIAGRAM</code> brief with search words instead of shipping an image.</p>
+     <code>plan.md</code> chapters retain searchable <code>DIAGRAM</code> briefs. D1–D13
+     add 177 editable Excalidraw scenes for Obsidian; plugin-native scenes are omitted
+     from this static site, which continues to show the briefs.</p>
   {''.join(sections)}
   <p><a href="https://github.com/SurajGupta2009/Physics_JEEAD-OLYMPIAD_notes">Repository</a>
      · <a href="../../README.md">README</a> · cross-topic plan in <a href="../../CURRICULUM.md">CURRICULUM.md</a></p>

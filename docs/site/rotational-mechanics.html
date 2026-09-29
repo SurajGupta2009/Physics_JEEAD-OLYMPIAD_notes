@@ -150,7 +150,7 @@
 </table>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
 <p><strong>Every particle in a rigid body moves in a circle.</strong> When a rigid body rotates about a fixed axis, each particle moves in a circle centred on the axis. The farther from the axis, the faster the particle moves: $v=r\omega$. The moment of inertia $I=\sum m_i r_i^2$ measures how much the mass distribution resists angular acceleration — it is the rotational analogue of mass.</p>
-<p><strong>Torque is the rotational analogue of force.</strong> A force applied far from the axis produces more torque ($\tau=rF\sin\theta$) — this is why a longer wrench makes it easier to turn a bolt. The rotational second law: $\tau=I\alpha$.</p>
+<p><strong>Torque is the rotational analogue of force.</strong> A force applied far from the axis produces more torque ($\tau=rF\sin\theta$) — this is why a longer wrench makes it easier to turn a bolt. For a fixed axis, the rotational second law is $\tau_{\rm axis}=I_{\rm axis}\alpha$; in general use $\boldsymbol\tau_O=d\mathbf L_O/dt$ about a fixed inertial origin.</p>
 <p><strong>Angular momentum is conserved when no external torque acts.</strong> A spinning ice skater pulls in her arms: $L=I\omega=$ const. As $I$ decreases, $\omega$ increases — she spins faster. This is the rotational analogue of conservation of linear momentum.</p>
 <p><strong>Rolling without slipping is a constraint, not a force.</strong> $v_{\text{cm}}=\omega R$ is the no-slip condition. The static friction at the contact point does no work (the contact point is instantaneously at rest). The kinetic energy splits into translational ($\frac{1}{2}Mv^2$) and rotational ($\frac{1}{2}I\omega^2$).</p>
 <div class="callout tip">
@@ -348,9 +348,9 @@ $$</p>
 $$</p>
 <p>For a rigid body about a fixed axis:</p>
 <p>$$
-\tau_{\text{net}}=I\alpha. \qquad (3.7)
+\tau_{\text{axis}}=I_{\text{axis}}\alpha. \qquad (3.7)
 $$</p>
-<p>The internal torques cancel in pairs (Newton's third law).</p>
+<p>Internal torques cancel pairwise only when the forces are central (as in ordinary particle interactions); Newton's third law alone does not guarantee cancellation of torque about an arbitrary origin.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D8.4 · Torque about a point with the moment arm</p>
 <p><em>Show:</em> a force $\mathbf{F}$ applied at point $P$ on a body pivoted at $O$. The moment arm $d=r\sin\theta$ drawn as the perpendicular distance from $O$ to the line of action of $\mathbf{F}$. $\tau=Fd$ annotated.
@@ -378,10 +378,11 @@ $$</p>
 <p>$$
 L=I\omega. \qquad (3.8)
 $$</p>
-<p>The general angular momentum about a point:</p>
+<p>The angular momentum about an origin $O$ separates into spin about the centre of mass and orbital angular momentum:</p>
 <p>$$
-\mathbf{L}=\mathbf{L}<em>{\text{spin}}+\mathbf{r}</em>{\text{cm}}\times M\mathbf{v}<em>{\text{cm}}=I</em>{\text{cm}}\boldsymbol{\omega}+\mathbf{r}<em>{\text{cm}}\times M\mathbf{v}</em>{\text{cm}}. \qquad (3.9)
+\mathbf{L}<em>O=\mathbf{I}</em>{\text{cm}}\cdot\boldsymbol{\omega}+\mathbf{r}<em>{\text{cm}}\times M\mathbf{v}</em>{\text{cm}}. \qquad (3.9)
 $$</p>
+<p>Here $\mathbf{I}<em>{\text{cm}}$ is the inertia tensor. The simpler vector relation $\mathbf{L}</em>{\text{spin}}=I\boldsymbol{\omega}$ is valid when rotation is about a principal axis; in general $\mathbf{L}$ need not be parallel to $\boldsymbol{\omega}$. For rotation about a fixed axis, the component along that axis is $L_{\text{axis}}=I_{\text{axis}}\omega$.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D8.5 · The rolling wheel's velocity field with the contact point at rest</p>
 <p><em>Show:</em> a wheel rolling to the right at speed $v$. At the contact point: $v_{\text{contact}}=v-\omega R=0$ (no-slip condition). At the top: $v_{\text{top}}=v+\omega R=2v$. At the centre: $v_{\text{cm}}=v$. The velocity field shown as arrows of varying length around the wheel.
@@ -389,10 +390,11 @@ $$</p>
 </div>
 
 <h3 id="37-conservation-of-angular-momentum">3.7 Conservation of angular momentum</h3>
+<p>About a fixed inertial origin $O$, the external torque satisfies</p>
 <p>$$
-\tau_{\text{ext}}=\frac{d\mathbf{L}}{dt}. \qquad (3.10)
+\boldsymbol{\tau}_{\text{ext},O}=\frac{d\mathbf{L}_O}{dt}. \qquad (3.10)
 $$</p>
-<p>If $\tau_{\text{ext}}=0$ (about a chosen point or axis): $\mathbf{L}=$ const.</p>
+<p>If this torque is zero, $\mathbf{L}_O$ is constant. The scalar component about a fixed axis is conserved when the external torque component along that axis is zero. For a moving origin, the angular-momentum rate equation needs an additional term; do not apply this fixed-origin form unchanged.</p>
 <p><strong>Applications:</strong> the spinning skater (pulls arms in, $I$ decreases, $\omega$ increases); a bullet hitting a hinged rod ($L$ conserved about the hinge during the brief collision); a disc dropped on a spinning disc ($L$ conserved, KE is not).</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D8.6 · The spinning skater: angular momentum conservation</p>
@@ -446,7 +448,7 @@ $$</p>
   A[&quot;v_cm = ωR (no slip)&quot;] --&gt; B[&quot;K = ½Mv² + ½Iω²&quot;]
   B --&gt; C[&quot;a = g sinθ / (1 + I/MR²)&quot;]
   C --&gt; D[&quot;smaller I/MR² → faster&quot;]
-  D --&gt; E[&quot;sphere 2/5 &gt; cylinder 1/2 &gt; ring 1&quot;]
+  D --&gt; E[&quot;sphere 2/5 &lt; cylinder 1/2 &lt; ring 1 (fast to slow)&quot;]
 </code></pre>
 <blockquote>
 <p><em>Read:</em> the no-slip condition forces rotation to eat a share of the energy; the share is set by $I/MR^2$, and the smallest share wins the race.</p>
@@ -483,10 +485,11 @@ $$</p>
 </div>
 
 <h3 id="312-gyroscopic-precession">3.12 Gyroscopic precession</h3>
-<p>A spinning top with angular momentum $\mathbf{L}$ (along the spin axis) experiences a torque $\boldsymbol{\tau}$ from gravity (perpendicular to $\mathbf{L}$). The torque changes $\mathbf{L}$ in the direction of $\boldsymbol{\tau}$ — the top precesses instead of falling.</p>
+<p>For a rapidly spinning, approximately symmetric top, let $I_3$ be the moment of inertia about its spin axis, $\omega$ the spin rate, and $d$ the distance from the fixed pivot to the centre of mass. In steady precession at tilt $\theta$, gravity gives $|\boldsymbol{\tau}|=Mgd\sin\theta$, while $|d\mathbf L/dt|=\Omega L\sin\theta$ and $L\approx I_3\omega$. Equating these gives</p>
 <p>$$
-\Omega=\frac{\tau}{L}=\frac{Mgd}{I\omega}. \qquad (3.14)
+\Omega\approx\frac{Mgd}{I_3\omega}. \qquad (3.14)
 $$</p>
+<p>This is the slow-precession approximation; it neglects nutation and assumes the spin angular momentum dominates the transverse angular momentum.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D8.11 · A gyroscope with $\mathbf{L}$, $\tau$ and the precession cone</p>
 <p><em>Show:</em> a spinning top tilted at angle $\theta$ from the vertical. $\mathbf{L}$ along the spin axis. $\boldsymbol{\tau}=\mathbf{r}_{\text{cm}}\times M\mathbf{g}$ perpendicular to $\mathbf{L}$ (horizontal). $d\mathbf{L}=\boldsymbol{\tau}\,dt$ causes $\mathbf{L}$ to precess around the vertical. The precession cone drawn.
@@ -500,9 +503,9 @@ $$</p>
 $$</p>
 <p>$d$ is the distance between the COM axis and the new parallel axis.</p>
 <p>$$
-\boxed{\tau=I\alpha\text{ (about a fixed axis or the COM)}} \qquad (4.2)
+\boxed{\tau_{\rm axis}=I_{\rm axis}\alpha_{\rm axis}\text{ (fixed-axis rotation)}} \qquad (4.2)
 $$</p>
-<p>valid for fixed-axis rotation or rotation about the COM.</p>
+<p>valid for the torque component and angular acceleration about a fixed axis with constant moment of inertia. About the COM in general 3-D rotation, use $\boldsymbol{\tau}<em>{\rm cm}=d\mathbf L</em>{\rm cm}/dt$ with $\mathbf L_{\rm cm}=\mathbf I_{\rm cm}\cdot\boldsymbol{\omega}$; the vectors need not be parallel.</p>
 <p>$$
 \boxed{a=\frac{g\sin\theta}{1+I/(MR^2)}\text{ (rolling without slipping on an incline)}} \qquad (4.3)
 $$</p>
@@ -599,7 +602,7 @@ $$</p>
 <p><strong>C7 — concept check.</strong> Can $\tau=I\alpha$ be used about any point?</p>
 <details>
 <summary>Answer</summary>
-<p>Only about a fixed axis or the COM. About a general accelerating point, additional terms appear.</p>
+<p>The scalar form $\tau_{\rm axis}=I_{\rm axis}\alpha_{\rm axis}$ applies to fixed-axis rotation. For a general 3-D rigid body, including about its COM, use $\boldsymbol{\tau}=d\mathbf L/dt$; if the origin is the COM, $\mathbf L=\mathbf I_{\rm cm}\cdot\boldsymbol{\omega}$ and in general $\boldsymbol{\tau}\ne I\boldsymbol{\alpha}$. A moving, non-COM origin also requires extra terms.</p>
 </details>
 <p><strong>C8 — concept check.</strong> A spinning ice skater pulls in her arms. What happens to the kinetic energy?</p>
 <details>
@@ -965,7 +968,7 @@ $$</p>
 
 <div class="callout danger">
 <p class="callout-title">Trap 2 — Taking $\tau=I\alpha$ about a non-fixed, non-CM point</p>
-<p>$\tau=I\alpha$ is valid only about a fixed axis or the COM. About a general point, additional terms appear.</p>
+<p>The scalar form $\tau_{\rm axis}=I_{\rm axis}\alpha_{\rm axis}$ is for fixed-axis rotation. For general 3-D rotation about the COM, use $\boldsymbol{\tau}=d\mathbf L/dt$ and $\mathbf L=\mathbf I_{\rm cm}\cdot\boldsymbol{\omega}$; the vectors need not be parallel. About a moving non-COM point, extra terms also enter.</p>
 </div>
 
 <div class="callout danger">
@@ -1077,9 +1080,9 @@ $$</p>
 <td>non-parallel axes</td>
 </tr>
 <tr>
-<td>$\tau=I\alpha$</td>
-<td>fixed axis or about the COM</td>
-<td>general accelerating point</td>
+<td>$\tau_{\rm axis}=I_{\rm axis}\alpha_{\rm axis}$</td>
+<td>fixed-axis rotation</td>
+<td>general 3-D rotation: use $\boldsymbol{\tau}=d\mathbf L/dt$</td>
 </tr>
 <tr>
 <td>$v=\omega R$</td>
@@ -1103,7 +1106,7 @@ $$</p>
 <h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
 <ol>
 <li>$I$: correct axis, parallel-axis theorem applied correctly.</li>
-<li>$\tau=I\alpha$: about a fixed axis or the COM.</li>
+<li>$\tau_{\rm axis}=I_{\rm axis}\alpha_{\rm axis}$ for fixed-axis rotation; in general use $\boldsymbol{\tau}=d\mathbf L/dt$.</li>
 <li>Rolling: $v=\omega R$ verified (no slipping).</li>
 <li>Energy: included rotational KE for rolling bodies.</li>
 <li>$L$ conservation: identified the axis with zero external torque.</li>
