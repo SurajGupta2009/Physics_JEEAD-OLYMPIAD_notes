@@ -99,7 +99,7 @@ Three ways, in order of what you get:
 3. **The interactive HTML edition** (where present). Theme switching, progress
    ticks, a generated TOC and **Print / save as PDF**. Fully offline.
 
-Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Every diagram is a local `assets/figures/*.svg` file with its own styles, arrowheads, alt text and caption; there are no external image links and no binary files committed to the repo.
+Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the mechanics D1–D7 diagram retrofit, 81 editable Excalidraw scenes are also embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`. No raster or remote image assets are used.
 
 ## How a note-set is put together
 

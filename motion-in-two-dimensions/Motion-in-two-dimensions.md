@@ -120,6 +120,9 @@ $$
 The $x$-motion is uniform (constant velocity); the $y$-motion is uniformly accelerated (constant acceleration $-g$). They share $t$ but are otherwise independent.
 
 > [!abstract] DIAGRAM D4.1 · The independence principle
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-1.excalidraw|900]]
+
 > *Show:* a ball launched horizontally from a cliff and a ball dropped vertically from the same height, shown at three equal time intervals. The dropped ball falls straight down; the launched ball falls the same vertical distance but also moves horizontally. At each time, both balls are at the same height — proving the vertical motions are identical.
 > *Search:* "independence principle projectile horizontal drop same height diagram"
 
@@ -177,7 +180,10 @@ $$
 This is a parabola opening downward.
 
 > [!abstract] DIAGRAM D4.2 · The oblique projectile: trajectory, $T$, $H$, $R$
-> *Show:* the parabolic trajectory of a projectile launched at angle $\theta$ with speed $v_0$ from the origin. $R$ (range) labelled on the $x$-axis; $H$ (maximum height) labelled on the $y$-axis; $T$ (time of flight) labelled on the time axis. The velocity vectors at launch, peak, and landing drawn: at launch ($v_0$ at angle $\theta$), at peak ($v_0\cos\theta$ horizontal), at landing ($v_0$ at angle $-\theta$). The symmetry of the parabola shown.
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-2.excalidraw|900]]
+
+> *Show:* the parabolic trajectory of a projectile launched at angle $\theta$ with speed $v_0$ from the origin. $R$ (range) labelled on the $x$-axis; $H$ (maximum height) labelled on the $y$-axis; $T$ shown on a separate $t$-axis inset beneath the trajectory. The velocity vectors at launch, peak, and landing drawn: at launch ($v_0$ at angle $\theta$), at peak ($v_0\cos\theta$ horizontal), at landing ($v_0$ at angle $-\theta$). The symmetry of the parabola shown.
 > *Search:* "oblique projectile trajectory range maximum height time of flight diagram"
 
 ### 3.4 Projectile: complementary angles and the range formula
@@ -189,7 +195,10 @@ The range formula $R=\frac{v_0^2\sin2\theta}{g}$ has two key properties:
 2. **Maximum range at $\theta=45°$.** $\sin2\theta=1$ when $\theta=45°$: $R_{\max}=v_0^2/g$.
 
 > [!abstract] DIAGRAM D4.3 · Complementary angles: same range, different trajectories
-> *Show:* two trajectories on the same axes: one at $\theta=30°$ (flatter, longer time) and one at $\theta=60°$ (steeper, shorter time). Both land at the same range $R$. The 45° trajectory (dashed) has the maximum range.
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-3.excalidraw|900]]
+
+> *Show:* two trajectories on the same axes: one at $\theta=30°$ (flatter, shorter flight time) and one at $\theta=60°$ (steeper, longer flight time). Both land at the same range $R$. The 45° trajectory (dashed) has the maximum range.
 > *Search:* "projectile complementary angles same range 30 60 degrees diagram"
 
 > [!tip] FIGURE F4.3 · The range formula: one question, two angles
@@ -221,6 +230,9 @@ For $0\le\alpha<90°$, maximizing this range gives $\beta=45°-\alpha/2$ above t
 **With a headwind:** The trajectory depends on the drag law and the air's velocity relative to the projectile. A constant horizontal force gives constant $a_x$; linear or quadratic air drag generally makes $a_x$ vary with relative airspeed. In either case, the vacuum parabolic trajectory no longer applies.
 
 > [!abstract] DIAGRAM D4.4 · Projectile from a height
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-4.excalidraw|900]]
+
 > *Show:* a projectile launched at angle $\theta$ from the edge of a cliff of height $h$. The trajectory extends beyond the cliff edge and hits the ground at a range $R$ beyond the cliff. The time of flight is longer than for ground-to-ground because the ball must fall the additional height $h$.
 > *Search:* "projectile from cliff height h launch angle range diagram"
 
@@ -237,6 +249,9 @@ $$
 **Aircraft-and-wind:** An aircraft must fly from $A$ to $B$ (a distance $d$ at bearing $\beta$). The wind blows at $\mathbf{v}_w$. The aircraft's airspeed is $v_a$. The required heading angle $\alpha$ satisfies: $v_a\sin\alpha=v_w\sin\phi$ (where $\phi$ is the angle between the wind and the bearing). The ground speed is $v_g=v_a\cos\alpha+v_w\cos\phi$.
 
 > [!abstract] DIAGRAM D4.5 · Relative velocity: rain-and-man
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-5.excalidraw|900]]
+
 > *Show:* a man walking east (rightward) at $v_m$; rain falling vertically downward at $v_r$; the velocity of rain relative to the man drawn as a vector tilted from the vertical by angle $\alpha=\tan^{-1}(v_m/v_r)$. The man must tilt his umbrella forward (in the direction of the apparent rain).
 > *Search:* "relative velocity rain man walking umbrella tilt angle diagram"
 
@@ -257,6 +272,9 @@ $$
 The angular velocity $\omega$ is measured in rad/s. One full revolution: $\Delta\theta=2\pi$ rad, period $T=2\pi/\omega$, frequency $f=1/T=\omega/(2\pi)$.
 
 > [!abstract] DIAGRAM D4.6 · Angular velocity and the tangential speed
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-6.excalidraw|900]]
+
 > *Show:* a particle on a circle of radius $R$ at angle $\theta$; the arc length $s=R\theta$ traced out; the tangential velocity $v=R\omega$ drawn tangent to the circle; the angular velocity $\omega=d\theta/dt$ shown as the rate of sweeping out the angle.
 > *Search:* "angular velocity tangential speed circle diagram omega R"
 
@@ -275,6 +293,9 @@ The acceleration points toward the centre ($-\hat{r}$ direction) — hence "cent
 **Derivation 2 (geometric):** Consider two velocities $\mathbf{v}_1$ and $\mathbf{v}_2$ at nearby times, both of magnitude $v$ but in slightly different directions. The change $\Delta\mathbf{v}$ has magnitude $v\Delta\theta$ (for small $\Delta\theta$) and points toward the centre. $a=|\Delta\mathbf{v}|/\Delta t=v\Delta\theta/\Delta t=v\omega=v^2/R$.
 
 > [!abstract] DIAGRAM D4.7 · Deriving centripetal acceleration (geometric method)
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-7.excalidraw|900]]
+
 > *Show:* a particle on a circle at two nearby positions, with velocity vectors $\mathbf{v}_1$ and $\mathbf{v}_2$ tangent to the circle. The change $\Delta\mathbf{v}=\mathbf{v}_2-\mathbf{v}_1$ is drawn, pointing toward the centre. The magnitude $|\Delta\mathbf{v}|=v\Delta\theta$ for small $\Delta\theta$. The acceleration $a=|\Delta\mathbf{v}|/\Delta t=v^2/R$ annotated.
 > *Search:* "centripetal acceleration derivation geometric velocity change diagram"
 
@@ -309,18 +330,30 @@ $$
 The direction of $\mathbf{a}$ is not toward the centre (unless $a_t=0$).
 
 > [!abstract] DIAGRAM D4.8 · Non-uniform circular motion: tangential and centripetal components
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-8.excalidraw|900]]
+
 > *Show:* a particle on a circle with velocity $v$ (tangent arrow); the centripetal acceleration $a_c=v^2/R$ (pointing inward); the tangential acceleration $a_t=dv/dt$ (tangent arrow, in the direction of increasing speed); the resultant $\mathbf{a}$ (diagonal arrow, tilted inward and forward).
 > *Search:* "non-uniform circular motion tangential centripetal acceleration diagram"
 
 > [!abstract] DIAGRAM D4.9 · Projectile on an incline
-> *Show:* an incline of angle $\alpha$ from the horizontal; a projectile launched at angle $\beta$ from the incline surface; the velocity components along and perpendicular to the incline shown; the trajectory (a parabola in 3D but projected onto the incline plane); the range along the incline labelled.
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-9.excalidraw|900]]
+
+> *Show:* an incline of angle $\alpha$ from the horizontal; a projectile launched at angle $\beta$ from the incline surface; the velocity components along and perpendicular to the incline shown; the parabolic trajectory in the vertical plane containing the launch direction and the incline; the range along the incline labelled.
 > *Search:* "projectile on inclined plane angle from incline range diagram"
 
 > [!abstract] DIAGRAM D4.10 · River crossing: pointing directly across vs pointing upstream
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-10.excalidraw|900]]
+
 > *Show:* a river of width $d$ flowing at $v_r$ to the right; two boats starting from the left bank. Boat A points directly across (resultant path slanted downstream). Boat B points upstream at angle $\alpha$ (resultant path straight across). Both paths drawn as arrows; the drift of boat A and the crossing time of each annotated.
 > *Search:* "river crossing boat drift straight across versus pointing upstream diagram"
 
 > [!abstract] DIAGRAM D4.11 · The safety parabola envelope
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-11.excalidraw|900]]
+
 > *Show:* several projectile trajectories for different launch angles (30°, 45°, 60°) from the same point with the same speed, all on the same axes. The envelope (safety parabola) drawn as a dashed curve touching all trajectories. The vertex of the envelope at height $v_0^2/(2g)$ and the far intercept at $R_{\max}=v_0^2/g$ annotated.
 > *Search:* "safety parabola envelope projectile trajectories different angles diagram"
 
@@ -340,6 +373,9 @@ flowchart LR
 > *Read:* a point is reachable exactly when it lies on or under the safety parabola; the envelope is the boundary of all possible shots.
 
 > [!abstract] DIAGRAM D4.12 · Non-uniform circular motion: the acceleration vector
+
+![[../_obsidian/excalidraw/motion-in-two-dimensions-D4-12.excalidraw|900]]
+
 > *Show:* a particle on a circle with speed increasing (tangential acceleration $a_t$ forward); the centripetal acceleration $a_c$ pointing toward the centre; the resultant acceleration $\mathbf{a}$ tilted forward from the radial direction; the angle $\phi=\tan^{-1}(a_t/a_c)$ between $\mathbf{a}$ and the inward radial direction annotated.
 > *Search:* "non-uniform circular motion total acceleration angle forward tilt"
 

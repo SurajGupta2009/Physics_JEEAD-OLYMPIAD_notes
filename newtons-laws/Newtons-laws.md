@@ -113,6 +113,9 @@ mindmap
 **Content.** This law defines what an inertial frame is: a frame in which the first law holds. A frame fixed to the ground is approximately inertial (ignoring Earth's rotation). A frame fixed to an accelerating car is not inertial — objects appear to accelerate without any real force on them (these "fictitious accelerations" are handled by pseudo forces, §3.11).
 
 > [!abstract] DIAGRAM D5.1 · Inertial vs non-inertial frames
+
+![[../_obsidian/excalidraw/newtons-laws-D5-1.excalidraw|900]]
+
 > *Show:* left: a ball sitting on a frictionless table in a stationary room — it stays put (inertial frame, first law holds). Right: the same ball in a car that brakes suddenly — the ball appears to slide forward (non-inertial frame, first law appears violated unless a pseudo force is included).
 > *Search:* "inertial versus non-inertial frame ball sliding car braking"
 
@@ -158,6 +161,9 @@ $$
 4. They act along the line joining the two bodies.
 
 > [!abstract] DIAGRAM D5.2 · Action–reaction pairs
+
+![[../_obsidian/excalidraw/newtons-laws-D5-2.excalidraw|900]]
+
 > *Show:* a block on a table. Force pair 1: Earth pulls block down (weight $mg$), block pulls Earth up ($mg$). Force pair 2: table pushes block up (normal $N$), block pushes table down ($N$). Each pair drawn with equal-length arrows on the two bodies.
 > *Search:* "Newton third law action reaction pairs block on table diagram"
 
@@ -172,6 +178,9 @@ $$
 5. **Solve** $\sum F_x=ma_x$, $\sum F_y=ma_y$.
 
 > [!abstract] DIAGRAM D5.3 · FBD of a block on an incline
+
+![[../_obsidian/excalidraw/newtons-laws-D5-3.excalidraw|900]]
+
 > *Show:* left: the physical setup — a block on a ramp inclined at angle $\theta$. Right: the FBD — the block isolated, with weight $mg$ pointing vertically down, normal $N$ perpendicular to the surface, friction $f$ up the incline. Axes: $x$ along the incline (downhill), $y$ perpendicular to the incline. Components: $mg\sin\theta$ along $x$, $mg\cos\theta$ along $y$.
 > *Search:* "free body diagram block inclined plane components axes"
 
@@ -200,6 +209,9 @@ flowchart TD
 **Spring force:** $F=-kx$ (Hooke's law), where $x$ is the displacement from the natural length. The force is always directed toward the equilibrium position.
 
 > [!abstract] DIAGRAM D5.4 · Apparent weight in a lift
+
+![[../_obsidian/excalidraw/newtons-laws-D5-4.excalidraw|900]]
+
 > *Show:* a person standing on a scale in a lift. Three cases: (a) lift at rest — scale reads $mg$; (b) lift accelerating up at $a$ — scale reads $m(g+a)$; (c) lift in free fall — scale reads 0 (weightlessness). The FBD for each case with the normal force and weight drawn.
 > *Search:* "apparent weight lift accelerating upward downward free fall scale"
 
@@ -245,6 +257,9 @@ The direction of $f_s$ is opposite to the direction of *impending* slip. To find
 **Angle of repose:** on an incline, the block starts to slip when $\tan\theta=\mu_s$. This is derived from $mg\sin\theta=\mu_s mg\cos\theta$.
 
 > [!abstract] DIAGRAM D5.5 · The friction force vs applied force graph
+
+![[../_obsidian/excalidraw/newtons-laws-D5-5.excalidraw|900]]
+
 > *Show:* a graph of friction $f$ vs applied horizontal force $F$ on a block. For $F<F_{\max}$: $f=F$ (static friction adjusts). At $F=\mu_s N$: the block slips, friction drops to $\mu_k N$ (kinetic regime, roughly constant). The peak is at $\mu_s N$, the plateau at $\mu_k N$.
 > *Search:* "friction force versus applied force graph static kinetic peak plateau"
 
@@ -285,19 +300,31 @@ For many ordinary dry contacts, $\mu_k<\mu_s$, though this is an empirical trend
 **Minimum force to drag a block:** Pull at angle $\theta$ above horizontal. The normal force is $N=mg-F\sin\theta$. The friction is $f=\mu N=\mu(mg-F\sin\theta)$. The horizontal component of the pull must overcome friction: $F\cos\theta=\mu(mg-F\sin\theta)$. Solving: $F=\mu mg/(\cos\theta+\mu\sin\theta)$. Minimising over $\theta$: $\tan\theta=\mu$.
 
 > [!abstract] DIAGRAM D5.6 · Stacked blocks: which block slips first?
+
+![[../_obsidian/excalidraw/newtons-laws-D5-6.excalidraw|900]]
+
 > *Show:* two blocks ($m$ on top of $M$) on a frictionless table, pushed by force $F$ on $M$. The friction between the blocks provides the top block's acceleration. If $F$ is too large, the top block slips backward relative to $M$. The critical force $F_{\max}=(M+m)\mu_s g$ annotated.
 > *Search:* "stacked blocks maximum force before slipping friction diagram"
 
 > [!abstract] DIAGRAM D5.10 · The wedge-block constraint triangle
-> *Show:* a wedge of angle $\theta$ sliding rightward on a table; a block sliding down the wedge. The block's displacement relative to the wedge is along the incline (length $s$). The wedge's displacement is horizontal ($x_w$). The geometric relation: the block's vertical drop is $s\sin\theta$, horizontal shift relative to ground is $s\cos\theta-x_w$. The constraint: the block stays on the wedge.
+
+![[../_obsidian/excalidraw/newtons-laws-D5-10.excalidraw|900]]
+
+> *Show:* a wedge of angle $\theta$ sliding rightward on a table; a block sliding down the wedge. The block's displacement relative to the wedge is along the incline (length $s$). The wedge's displacement is horizontal ($x_w$). Take the incline to slope downward to the right; the block slides down-right relative to the wedge by $s$, while the wedge moves right by $x_w$. The block's ground-frame displacement is $(x_w+s\cos\theta, -s\sin\theta)$, so its horizontal shift is $x_w+s\cos\theta$ and its vertical drop is $s\sin\theta$. The block remains on the incline.
 > *Search:* "wedge block constraint displacement triangle geometry diagram"
 
 > [!abstract] DIAGRAM D5.11 · The vertical circle at four positions
+
+![[../_obsidian/excalidraw/newtons-laws-D5-11.excalidraw|900]]
+
 > *Show:* a vertical circle with the particle at four positions: bottom (0°), side (90°), top (180°), and an intermediate angle $\theta$. At each: the tension $T$ (toward centre), weight $mg$ (downward), and the centripetal direction shown. At the top: $T$ and $mg$ both point toward the centre. At the bottom: $T$ points up, $mg$ points down.
 > *Search:* "vertical circle four positions tension weight centripetal direction"
 
 > [!abstract] DIAGRAM D5.12 · The two-pulley single-string system
-> *Show:* a fixed pulley at the ceiling and a movable pulley below it, connected by a single string. Mass $m_1$ hangs from the movable pulley; mass $m_2$ hangs from the fixed pulley (the string goes from $m_2$ up to the fixed pulley, across, down to the movable pulley, across, and up to a fixed point). The string lengths labelled: $l=x_1+2x_2+$ const. The accelerations $a_1=2a_2$ annotated.
+
+![[../_obsidian/excalidraw/newtons-laws-D5-12.excalidraw|900]]
+
+> *Show:* a fixed pulley at the ceiling and a movable pulley below it, connected by a single string. Mass $m_1$ is attached to the movable pulley and mass $m_2$ hangs from the free end after the string passes over the ceiling-fixed pulley. With downward coordinates $x_1$ for the movable pulley and $x_2$ for the free end, $l=2x_1+x_2+\mathrm{const}$. Thus $a_2=-2a_1$ when both downward directions are positive; the free end has twice the acceleration magnitude.
 > *Search:* "two pulley single string system constraint acceleration diagram"
 
 ### 3.10 Constraints
@@ -308,9 +335,12 @@ For many ordinary dry contacts, $\mu_k<\mu_s$, though this is an empirical trend
 
 **Movable pulley:** string length $=x_1+2x_2+$ const (one end fixed, the rope wraps around the movable pulley). $\dot{x}_1+2\dot{x}_2=0\Rightarrow v_1=-2v_2$. $\ddot{x}_1+2\ddot{x}_2=0\Rightarrow a_1=-2a_2$.
 
-**Wedge:** block slides on a wedge that slides on a table. The block's vertical displacement is related to the wedge's horizontal displacement by the incline angle: $y=x_w\tan\theta$.
+**Wedge:** write the incline constraint using coordinates in the ground frame and the wedge frame. For an incline sloping down-right, if $s$ is the block's down-slope displacement relative to the wedge and $x_w$ is the wedge's rightward displacement, then $x_b=x_w+s\cos\theta$ and $y_b=y_0-s\sin\theta$. Differentiate these signed relations to obtain velocity and acceleration constraints.
 
 > [!abstract] DIAGRAM D5.7 · The movable pulley constraint
+
+![[../_obsidian/excalidraw/newtons-laws-D5-7.excalidraw|900]]
+
 > *Show:* one end of a light inextensible string is fixed overhead; the string passes down around a movable pulley carrying mass $m_2$, then up over a fixed pulley and down to a free end carrying mass $m_1$. Choose downward coordinates $x_1$ for the free end and $x_2$ for the movable pulley. The variable string length is $x_1+2x_2$, so $x_1+2x_2=\text{constant}$ and hence $a_1=-2a_2$ (signed); the free end's acceleration magnitude is twice the movable pulley's.
 > *Search:* "movable pulley string constraint acceleration relation diagram"
 
@@ -344,6 +374,9 @@ The centripetal force is the *resultant* of real forces (tension, gravity, frict
 **Banked road (with friction):** Two limits — maximum speed (friction acts inward) and minimum speed (friction acts outward). Each gives a different $\tan\theta$ relation.
 
 > [!abstract] DIAGRAM D5.8 · The banked road with friction — both limits
+
+![[../_obsidian/excalidraw/newtons-laws-D5-8.excalidraw|900]]
+
 > *Show:* a car on a banked curve of angle $\theta$. Left (maximum speed): friction $f$ acts inward (down the incline). The FBD shows $N$, $mg$, $f$ and the centripetal direction. Right (minimum speed): friction acts outward (up the incline). The two speed limits annotated: $v_{\max}$ and $v_{\min}$.
 > *Search:* "banked road friction maximum minimum speed both limits diagram"
 
@@ -370,6 +403,9 @@ $$
 If $v_0^2<2gR$, the particle turns before reaching the horizontal and the string does not slack on the ascent. At $v_0^2=2gR$, tension reaches zero at the horizontal; at $v_0^2=5gR$, it reaches zero at the top (the limiting complete-loop case).
 
 > [!abstract] DIAGRAM D5.9 · Vertical circle: $T(\theta)$ and $v(\theta)$ graphs
+
+![[../_obsidian/excalidraw/newtons-laws-D5-9.excalidraw|900]]
+
 > *Show:* left: a graph of tension $T$ vs angle $\theta$ (0 at bottom, minimum near the top, maximum at the bottom). Right: a graph of speed $v$ vs $\theta$ (maximum at the bottom, minimum at the top). The minimum speed at the top $\sqrt{gR}$ annotated. The string-slack angle $\theta_0$ marked.
 > *Search:* "vertical circle tension versus angle speed versus angle graph"
 

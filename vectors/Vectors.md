@@ -39,17 +39,25 @@ A common JEE pattern: given two vectors, ask for the angle between them (dot pro
 > *Show:* three vectors $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ forming a parallelepiped; the sign of $[\mathbf{a},\mathbf{b},\mathbf{c}]$ indicated by the right-hand rule: positive if $(\mathbf{a},\mathbf{b},\mathbf{c})$ form a right-handed triad, negative if left-handed.
 > *Search:* "scalar triple product signed volume right hand rule parallelepiped"
 
+![[../_obsidian/excalidraw/vectors-D2-9.excalidraw|900]]
+
 > [!abstract] DIAGRAM D2.10 · Vector addition in components
 > *Show:* two vectors $\mathbf{a}=3\hat{i}+2\hat{j}$ and $\mathbf{b}=1\hat{i}+4\hat{j}$ drawn from the origin; their components shown as dashed projections onto the $x$ and $y$ axes; the sum $\mathbf{c}=4\hat{i}+6\hat{j}$ drawn as the diagonal of the parallelogram; each component of $\mathbf{c}$ shown as the sum of the corresponding components.
 > *Search:* "vector addition components x y axis sum diagram"
+
+![[../_obsidian/excalidraw/vectors-D2-10.excalidraw|900]]
 
 > [!abstract] DIAGRAM D2.11 · The projection of a vector onto another
 > *Show:* vector $\mathbf{a}$ at angle $\theta$ to vector $\mathbf{b}$; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length $a\cos\theta$ labelled; the projection vector $a\cos\theta\,\hat{b}$ drawn along $\mathbf{b}$.
 > *Search:* "vector projection onto another vector dot product cos theta"
 
+![[../_obsidian/excalidraw/vectors-D2-11.excalidraw|900]]
+
 > [!abstract] DIAGRAM D2.12 · Anti-commutativity of the cross product
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ in the $xy$-plane; $\mathbf{a}\times\mathbf{b}$ pointing in the $+z$ direction (out of page); $\mathbf{b}\times\mathbf{a}$ pointing in the $-z$ direction (into page); the magnitudes equal, the directions opposite; the right-hand rule applied to each.
 > *Search:* "cross product anti commutativity a times b versus b times a"
+
+![[../_obsidian/excalidraw/vectors-D2-12.excalidraw|900]]
 
 ### 0.5 What this chapter is not
 
@@ -131,6 +139,8 @@ Three numbers to carry: $\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\
 > *Show:* left: a temperature reading "37°C" (a number with a unit, no arrow). Right: a displacement "3 m east" (an arrow from a point, with the length representing 3 m and the direction pointing east). Below: two vectors $\mathbf{a}$ and $\mathbf{b}$ drawn from the same point, with their sum $\mathbf{a}+\mathbf{b}$ shown by the parallelogram diagonal.
 > *Search:* "vector vs scalar displacement temperature diagram"
 
+![[../_obsidian/excalidraw/vectors-D2-1.excalidraw|900]]
+
 ### 3.2 Vector addition: the triangle and parallelogram laws
 
 **Triangle law.** Place the tail of $\mathbf{b}$ at the head of $\mathbf{a}$. The sum $\mathbf{c}=\mathbf{a}+\mathbf{b}$ goes from the tail of $\mathbf{a}$ to the head of $\mathbf{b}$.
@@ -146,6 +156,8 @@ Three numbers to carry: $\sin30°=0.5$, $\cos30°=\sqrt{3}/2=0.866$; $\sin45°=\
 > [!abstract] DIAGRAM D2.2 · The triangle and parallelogram laws
 > *Show:* top: triangle law — vector $\mathbf{a}$ followed by vector $\mathbf{b}$, sum $\mathbf{c}$ closing the triangle. Bottom: parallelogram law — $\mathbf{a}$ and $\mathbf{b}$ from the same point, the diagonal showing $\mathbf{a}+\mathbf{b}$, the other diagonal showing $\mathbf{a}-\mathbf{b}$.
 > *Search:* "vector addition triangle parallelogram law diagram"
+
+![[../_obsidian/excalidraw/vectors-D2-2.excalidraw|900]]
 
 > [!tip] FIGURE F2.2 · Adding vectors is not adding numbers
 > *Why:* the one intuition the whole chapter keeps returning to — 3 m east plus 4 m north is 5 m, not 7.
@@ -185,6 +197,8 @@ The components are: $a_x=\mathbf{a}\cdot\hat{i}=a\cos\alpha$, $a_y=a\cos\beta$, 
 > *Show:* a vector $\mathbf{a}$ of magnitude $a$ at angle $\theta$ from the $x$-axis; the $x$-component $a\cos\theta$ and $y$-component $a\sin\theta$ drawn as perpendicular projections onto the axes; the three sides of the right triangle labelled.
 > *Search:* "vector components 2D x y cos sin theta diagram"
 
+![[../_obsidian/excalidraw/vectors-D2-3.excalidraw|900]]
+
 ### 3.5 Direction cosines
 
 The direction cosines of a vector are $l=\cos\alpha$, $m=\cos\beta$, $n=\cos\gamma$, where $\alpha$, $\beta$, $\gamma$ are the angles with the $x$, $y$, $z$ axes. The fundamental relation:
@@ -215,6 +229,8 @@ $$
 > [!abstract] DIAGRAM D2.4 · The dot product as projection
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ with angle $\theta$ between them; the projection of $\mathbf{a}$ onto $\mathbf{b}$ shown as a dashed line from the head of $\mathbf{a}$ perpendicular to $\mathbf{b}$; the length of the projection labelled $a\cos\theta$; the formula $\mathbf{a}\cdot\mathbf{b}=ab\cos\theta$ shown alongside.
 > *Search:* "dot product projection formula diagram angle between vectors"
+
+![[../_obsidian/excalidraw/vectors-D2-4.excalidraw|900]]
 
 > [!tip] FIGURE F2.3 · The dot product answers "how much along?"
 > *Why:* work, component extraction, and every "find the angle" problem are one machinery; the figure fixes which output is which.
@@ -256,6 +272,8 @@ $$
 > *Show:* vectors $\mathbf{a}$ and $\mathbf{b}$ lying in the $xy$-plane; $\mathbf{a}\times\mathbf{b}$ pointing in the $+z$ direction (right-hand rule); the magnitude $ab\sin\theta$ equal to the area of the parallelogram; the parallelogram shaded.
 > *Search:* "cross product right hand rule area parallelogram diagram"
 
+![[../_obsidian/excalidraw/vectors-D2-5.excalidraw|900]]
+
 > [!tip] FIGURE F2.4 · The cross product answers "how much around?"
 > *Why:* torque, angular momentum, and magnetic force all ask the same question; the figure pins sign and magnitude.
 > *Data:* $|\mathbf{a}\times\mathbf{b}|=ab\sin\theta$, direction by the right-hand rule, and $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$.
@@ -287,6 +305,8 @@ $$
 > [!abstract] DIAGRAM D2.6 · The scalar triple product as volume
 > *Show:* three vectors $\mathbf{a}$, $\mathbf{b}$, $\mathbf{c}$ from a common origin forming a skewed box (parallelepiped); the base (parallelogram of $\mathbf{b}$ and $\mathbf{c}$) shaded; the height (component of $\mathbf{a}$ perpendicular to the base) shown as a dashed line; volume $=|\mathbf{b}\times\mathbf{c}|\times|a_{\perp}|$ annotated.
 > *Search:* "scalar triple product volume parallelepiped diagram"
+
+![[../_obsidian/excalidraw/vectors-D2-6.excalidraw|900]]
 
 > [!tip] FIGURE F2.5 · The trips: scalar triple = signed volume, vector triple = BAC-CAB
 > *Why:* the two triple products are the standard confusables; here they sit side by side so their jobs never blur.
@@ -332,6 +352,8 @@ This is the **BAC–CAB rule**: replace the outer vectors ($\mathbf{b}$ and $\ma
 > *Show:* the vector $\mathbf{a}$ drawn vertically; $\mathbf{b}$ drawn perpendicular to $\mathbf{a}$ (the necessary condition $\mathbf{a}\cdot\mathbf{b}=0$); $\mathbf{x}$ drawn such that $\mathbf{a}\times\mathbf{x}=\mathbf{b}$; the family of solutions $\mathbf{x}=\mathbf{x}_0+\lambda\mathbf{a}$ shown as a dashed line parallel to $\mathbf{a}$.
 > *Search:* "vector equation cross product solution family diagram"
 
+![[../_obsidian/excalidraw/vectors-D2-7.excalidraw|900]]
+
 ### 3.11 The polar basis: $\hat{r}$ and $\hat{\theta}$
 
 In 2D, any point can be described by $(r,\theta)$ (polar coordinates). The unit vectors are:
@@ -351,6 +373,8 @@ This is the foundation for circular-motion kinematics (PART 4) and the rotating-
 > [!abstract] DIAGRAM D2.8 · The polar basis and its rotation
 > *Show:* the unit vectors $\hat{r}$ (pointing radially outward) and $\hat{\theta}$ (pointing tangentially, in the direction of increasing $\theta$) at a point on a circle; the angle $\theta$ from the $x$-axis; the rotation of $\hat{r}$ by $d\theta$ showing $d\hat{r}=\hat{\theta}\,d\theta$; the relation $\dot{\hat{r}}=\omega\hat{\theta}$ annotated.
 > *Search:* "polar unit vectors r hat theta hat rotation time derivative diagram"
+
+![[../_obsidian/excalidraw/vectors-D2-8.excalidraw|900]]
 
 ### 3.12 Vector calculus basics
 

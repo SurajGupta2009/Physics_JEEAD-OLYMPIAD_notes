@@ -56,5 +56,89 @@
       "read": "the first question names the tool; the rest is execution",
       "source": "Part 9 · Playbook (§9.1)"
     }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D3.1",
+      "kind": "excalidraw",
+      "title": "Position vs displacement vs distance",
+      "show": "a number line ($x$-axis) with a particle starting at $x=2$, moving to $x=5$, then back to $x=3$. The displacement from start to finish is $+1$ (from 2 to 3). The total distance is $3+2=5$ (2→5 is 3, 5→3 is 2). Labels: \"displacement = 1 m\", \"distance = 5 m\".",
+      "search": "\"displacement vs distance one dimension number line diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-1.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.1"
+    },
+    {
+      "id": "D3.2",
+      "kind": "excalidraw",
+      "title": "Instantaneous velocity as the tangent slope",
+      "show": "an $x$–$t$ graph with a curve; at time $t_0$, a tangent line drawn to the curve; the slope of the tangent labelled as $v(t_0)=dx/dt$; the chord between $t_0$ and $t_0+\\Delta t$ shown for comparison, with its slope labelled as $\\bar{v}$.",
+      "search": "\"instantaneous velocity tangent slope x-t graph diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-2.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.2"
+    },
+    {
+      "id": "D3.3",
+      "kind": "excalidraw",
+      "title": "Acceleration and the three graphs",
+      "show": "three stacked graphs sharing the same time axis. Top: $x$–$t$ (a parabola for constant positive $a$). Middle: $v$–$t$ (a straight line with positive slope). Bottom: $a$–$t$ (a horizontal line above the axis). Annotations: \"slope of $x$–$t$ = $v$\", \"slope of $v$–$t$ = $a$\", \"area under $v$–$t$ = $\\Delta x$\".",
+      "search": "\"x-t v-t a-t graphs constant acceleration stacked diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-3.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.3"
+    },
+    {
+      "id": "D3.5",
+      "kind": "excalidraw",
+      "title": "Deriving the equations from the $v$–$t$ graph",
+      "show": "a $v$–$t$ graph with a straight line from $(0,u)$ to $(t,v)$ with slope $a$. The area under the line (a trapezoid) is labelled $s=\\frac{(u+v)}{2}t$. The height of the line at $t$ is $v=u+at$. The area of the triangle on top of the rectangle is $\\frac{1}{2}at^2$.",
+      "search": "\"constant acceleration v-t graph area trapezoid derivation diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-5.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.5"
+    },
+    {
+      "id": "D3.7",
+      "kind": "excalidraw",
+      "title": "The $v\\,dv/dx$ method",
+      "show": "the chain rule $a=dv/dt=(dv/dx)(dx/dt)=v\\,dv/dx$ written step-by-step; then the integral $\\int v\\,dv=\\int a(x)\\,dx$ shown; the result $v^2/2=\\int a(x)\\,dx+C$ boxed.",
+      "search": "\"v dv/dx method variable acceleration chain rule diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-7.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.7"
+    },
+    {
+      "id": "D3.8",
+      "kind": "excalidraw",
+      "title": "Relative velocity in 1-D",
+      "show": "two particles $A$ and $B$ on a number line, $A$ at $x_A$ and $B$ at $x_B$ with $x_A>x_B$. $v_A=5$ m/s (rightward), $v_B=3$ m/s (rightward). $v_{AB}=5-3=2$ m/s — $A$ is pulling away from $B$ at 2 m/s. The separation $x_A-x_B$ is increasing.",
+      "search": "\"relative velocity one dimension two particles diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-8.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.8"
+    },
+    {
+      "id": "D3.9",
+      "kind": "excalidraw",
+      "title": "Piecewise kinematics on a $v$–$t$ graph",
+      "show": "a $v$–$t$ graph with three segments: (1) a straight line with positive slope (acceleration phase); (2) a horizontal line (constant velocity); (3) a straight line with negative slope (braking phase). Each segment labelled with its duration and acceleration. The total displacement is the total area under the graph.",
+      "search": "\"piecewise kinematics v-t graph acceleration constant velocity braking diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-9.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.9"
+    },
+    {
+      "id": "D3.10",
+      "kind": "excalidraw",
+      "title": "The $n$th-second distance",
+      "show": "a $v$–$t$ graph for constant positive acceleration with velocity remaining non-negative. Shade the area from $t=n-1$ to $t=n$; it is the signed displacement $\\Delta x_n=u+\\frac{a}{2}(2n-1)$ in that one-second interval, and equals distance here because velocity does not reverse.",
+      "search": "\"nth second distance v-t graph constant acceleration shaded area\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-10.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.10"
+    },
+    {
+      "id": "D3.11",
+      "kind": "excalidraw",
+      "title": "Relative velocity: two particles approaching",
+      "show": "$A$ is to the left of $B$ ($x_A<x_B$). $A$ moves right at speed $v_A$ and $B$ moves left at speed $v_B$. The positive separation $d=x_B-x_A$ decreases; the relative velocity of $A$ with respect to $B$ is $v_{AB}=v_A-(-v_B)=v_A+v_B$, the closing speed.",
+      "search": "\"relative velocity two particles approaching closing speed diagram\"",
+      "file": "_obsidian/excalidraw/kinematics-1d-D3-11.excalidraw.md",
+      "source": "kinematics-1d/Kinematics-1d.md · D3.11"
+    }
   ]
 }

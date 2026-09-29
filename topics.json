@@ -534,10 +534,10 @@
       "figures": 0,
       "questions": 94,
       "solutions": 130,
-      "math_spans": 3947,
+      "math_spans": 3948,
       "bytes_html": 0,
-      "bytes_markdown": 269651,
-      "words": 39946,
+      "bytes_markdown": 269880,
+      "words": 39975,
       "display_formulas": 61
     },
     {
@@ -843,10 +843,10 @@
       "figures": 0,
       "questions": 54,
       "solutions": 103,
-      "math_spans": 557,
+      "math_spans": 558,
       "bytes_html": 0,
-      "bytes_markdown": 82742,
-      "words": 12076,
+      "bytes_markdown": 83397,
+      "words": 12161,
       "display_formulas": 15,
       "part": 26,
       "order": 28,
@@ -939,10 +939,10 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 648,
+      "math_spans": 653,
       "bytes_html": 0,
-      "bytes_markdown": 80983,
-      "words": 11758,
+      "bytes_markdown": 81477,
+      "words": 11824,
       "display_formulas": 16,
       "part": 100,
       "order": 30,
@@ -985,10 +985,10 @@
       "figures": 0,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 944,
+      "math_spans": 950,
       "bytes_html": 0,
-      "bytes_markdown": 86319,
-      "words": 12178,
+      "bytes_markdown": 86848,
+      "words": 12241,
       "display_formulas": 18,
       "part": 28,
       "order": 31,
@@ -1031,13 +1031,13 @@
       "pages": [
         "Units-measurements.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
       "math_spans": 1055,
       "bytes_html": 0,
-      "bytes_markdown": 86276,
-      "words": 12079,
+      "bytes_markdown": 87107,
+      "words": 12091,
       "display_formulas": 15
     },
     {
@@ -1079,13 +1079,13 @@
       "pages": [
         "Vectors.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
       "math_spans": 1150,
       "bytes_html": 0,
-      "bytes_markdown": 91777,
-      "words": 9636,
+      "bytes_markdown": 92476,
+      "words": 9648,
       "display_formulas": 17
     },
     {
@@ -1131,13 +1131,13 @@
       "pages": [
         "Kinematics-1d.md"
       ],
-      "figures": 0,
+      "figures": 9,
       "questions": 47,
       "solutions": 93,
       "math_spans": 1078,
       "bytes_html": 0,
-      "bytes_markdown": 66862,
-      "words": 9607,
+      "bytes_markdown": 67473,
+      "words": 9621,
       "display_formulas": 14
     },
     {
@@ -1184,13 +1184,13 @@
       "pages": [
         "Motion-in-two-dimensions.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 970,
+      "math_spans": 971,
       "bytes_html": 0,
-      "bytes_markdown": 73323,
-      "words": 9961,
+      "bytes_markdown": 74291,
+      "words": 9978,
       "display_formulas": 22
     },
     {
@@ -1234,13 +1234,13 @@
       "pages": [
         "Newtons-laws.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 924,
+      "math_spans": 931,
       "bytes_html": 0,
-      "bytes_markdown": 81169,
-      "words": 11802,
+      "bytes_markdown": 82385,
+      "words": 11874,
       "display_formulas": 16
     },
     {
@@ -1284,13 +1284,13 @@
       "pages": [
         "Work-energy-power.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 848,
+      "math_spans": 858,
       "bytes_html": 0,
-      "bytes_markdown": 72131,
-      "words": 10235,
+      "bytes_markdown": 73381,
+      "words": 10305,
       "display_formulas": 24
     },
     {
@@ -1337,13 +1337,13 @@
       "pages": [
         "Centre-of-mass-momentum.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 705,
+      "math_spans": 729,
       "bytes_html": 0,
-      "bytes_markdown": 71631,
-      "words": 10194,
+      "bytes_markdown": 73015,
+      "words": 10278,
       "display_formulas": 17
     },
     {

@@ -2,35 +2,170 @@
   "slug": "newtons-laws",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F5.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F5.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one flow - identify the frame and forces, then F=ma per body",
       "data": "the Part 0-14 structure",
       "read": "every result is a free-body diagram plus the second law in a chosen frame",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F5.2", "kind": "flowchart", "title": "The three laws: one chain of meaning",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F5.2",
+      "kind": "flowchart",
+      "title": "The three laws: one chain of meaning",
       "why": "the laws are a discipline - frame, then force, then the pair",
       "data": "First law defines inertial frames; second F=dp/dt; third pairs across bodies",
       "read": "frame, then equations, then pair forces across bodies - never on one diagram",
-      "source": "DIAGRAM D5.1 (§3.1)" },
-    { "id": "F5.3", "kind": "flowchart", "title": "The FBD protocol: isolate, draw, resolve, solve",
+      "source": "DIAGRAM D5.1 (§3.1)"
+    },
+    {
+      "id": "F5.3",
+      "kind": "flowchart",
+      "title": "The FBD protocol: isolate, draw, resolve, solve",
       "why": "every mechanics problem is the same five steps",
       "data": "incline block: mg down, N perpendicular, f up; mg sinθ / mg cosθ",
       "read": "isolation kills the reaction confusion; axes along acceleration decouple",
-      "source": "DIAGRAM D5.3 (§3.4)" },
-    { "id": "F5.4", "kind": "flowchart", "title": "Apparent weight: the scale reads the normal force",
+      "source": "DIAGRAM D5.3 (§3.4)"
+    },
+    {
+      "id": "F5.4",
+      "kind": "flowchart",
+      "title": "Apparent weight: the scale reads the normal force",
       "why": "weight in a lift is a normal-force question, not a gravity question",
       "data": "rest N=mg, up N=m(g+a), down N=m(g-a), free fall N=0",
       "read": "the weight never changed; the reading did",
-      "source": "DIAGRAM D5.4 (§3.5)" },
-    { "id": "F5.5", "kind": "xychart-beta", "title": "Friction is a range, then a plateau",
+      "source": "DIAGRAM D5.4 (§3.5)"
+    },
+    {
+      "id": "F5.5",
+      "kind": "xychart-beta",
+      "title": "Friction is a range, then a plateau",
       "why": "static friction grows to a cap, then collapses to the lower kinetic value",
       "data": "below cap f=F; peak μsN; plateau μkN < μsN",
       "read": "before the cap friction mirrors the push; after it, friction is the smaller constant",
-      "source": "DIAGRAM D5.5 (§3.7)" },
-    { "id": "F5.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D5.5 (§3.7)"
+    },
+    {
+      "id": "F5.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the six triage branches of §9.1",
       "read": "incline words resolve the weight, pulley words differentiate the string, circular words sum toward the centre",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D5.1",
+      "kind": "excalidraw",
+      "title": "Inertial and accelerating frames",
+      "show": "left: a ball sitting on a frictionless table in a stationary room — it stays put (inertial frame, first law holds). Right: the same ball in a car that brakes suddenly — the ball appears to slide forward (non-inertial frame, first law appears violated unless a pseudo force is included).",
+      "search": "\"inertial versus non-inertial frame ball sliding car braking\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-1.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.1"
+    },
+    {
+      "id": "D5.2",
+      "kind": "excalidraw",
+      "title": "Newton's third-law pairs",
+      "show": "a block on a table. Force pair 1: Earth pulls block down (weight $mg$), block pulls Earth up ($mg$). Force pair 2: table pushes block up (normal $N$), block pushes table down ($N$). Each pair drawn with equal-length arrows on the two bodies.",
+      "search": "\"Newton third law action reaction pairs block on table diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-2.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.2"
+    },
+    {
+      "id": "D5.3",
+      "kind": "excalidraw",
+      "title": "Incline free-body diagram and components",
+      "show": "left: the physical setup — a block on a ramp inclined at angle $\\theta$. Right: the FBD — the block isolated, with weight $mg$ pointing vertically down, normal $N$ perpendicular to the surface, friction $f$ up the incline. Axes: $x$ along the incline (downhill), $y$ perpendicular to the incline. Components: $mg\\sin\\theta$ along $x$, $mg\\cos\\theta$ along $y$.",
+      "search": "\"free body diagram block inclined plane components axes\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-3.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.3"
+    },
+    {
+      "id": "D5.4",
+      "kind": "excalidraw",
+      "title": "Apparent weight in an elevator",
+      "show": "a person standing on a scale in a lift. Three cases: (a) lift at rest — scale reads $mg$; (b) lift accelerating up at $a$ — scale reads $m(g+a)$; (c) lift in free fall — scale reads 0 (weightlessness). The FBD for each case with the normal force and weight drawn.",
+      "search": "\"apparent weight lift accelerating upward downward free fall scale\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-4.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.4"
+    },
+    {
+      "id": "D5.5",
+      "kind": "excalidraw",
+      "title": "Static and kinetic friction graph",
+      "show": "a graph of friction $f$ vs applied horizontal force $F$ on a block. For $F<F_{\\max}$: $f=F$ (static friction adjusts). At $F=\\mu_s N$: the block slips, friction drops to $\\mu_k N$ (kinetic regime, roughly constant). The peak is at $\\mu_s N$, the plateau at $\\mu_k N$.",
+      "search": "\"friction force versus applied force graph static kinetic peak plateau\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-5.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.5"
+    },
+    {
+      "id": "D5.6",
+      "kind": "excalidraw",
+      "title": "Two blocks and the no-slip limit",
+      "show": "two blocks ($m$ on top of $M$) on a frictionless table, pushed by force $F$ on $M$. The friction between the blocks provides the top block's acceleration. If $F$ is too large, the top block slips backward relative to $M$. The critical force $F_{\\max}=(M+m)\\mu_s g$ annotated.",
+      "search": "\"stacked blocks maximum force before slipping friction diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-6.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.6"
+    },
+    {
+      "id": "D5.10",
+      "kind": "excalidraw",
+      "title": "Wedge and block displacement constraint",
+      "show": "a wedge of angle $\\theta$ sliding rightward on a table; a block sliding down the wedge. The block's displacement relative to the wedge is along the incline (length $s$). The wedge's displacement is horizontal ($x_w$). Take the incline to slope downward to the right; the block slides down-right relative to the wedge by $s$, while the wedge moves right by $x_w$. The block's ground-frame displacement is $(x_w+s\\cos\\theta, -s\\sin\\theta)$, so its horizontal shift is $x_w+s\\cos\\theta$ and its vertical drop is $s\\sin\\theta$. The block remains on the incline.",
+      "search": "\"wedge block constraint displacement triangle geometry diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-10.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.10"
+    },
+    {
+      "id": "D5.11",
+      "kind": "excalidraw",
+      "title": "Forces at four positions in a vertical circle",
+      "show": "a vertical circle with the particle at four positions: bottom (0°), side (90°), top (180°), and an intermediate angle $\\theta$. At each: the tension $T$ (toward centre), weight $mg$ (downward), and the centripetal direction shown. At the top: $T$ and $mg$ both point toward the centre. At the bottom: $T$ points up, $mg$ points down.",
+      "search": "\"vertical circle four positions tension weight centripetal direction\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-11.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.11"
+    },
+    {
+      "id": "D5.12",
+      "kind": "excalidraw",
+      "title": "Two-pulley string constraint",
+      "show": "a fixed pulley at the ceiling and a movable pulley below it, connected by a single string. Mass $m_1$ is attached to the movable pulley and mass $m_2$ hangs from the free end after the string passes over the ceiling-fixed pulley. With downward coordinates $x_1$ for the movable pulley and $x_2$ for the free end, $l=2x_1+x_2+\\mathrm{const}$. Thus $a_2=-2a_1$ when both downward directions are positive; the free end has twice the acceleration magnitude.",
+      "search": "\"two pulley single string system constraint acceleration diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-12.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.12"
+    },
+    {
+      "id": "D5.7",
+      "kind": "excalidraw",
+      "title": "Movable-pulley constraint",
+      "show": "one end of a light inextensible string is fixed overhead; the string passes down around a movable pulley carrying mass $m_2$, then up over a fixed pulley and down to a free end carrying mass $m_1$. Choose downward coordinates $x_1$ for the free end and $x_2$ for the movable pulley. The variable string length is $x_1+2x_2$, so $x_1+2x_2=\\text{constant}$ and hence $a_1=-2a_2$ (signed); the free end's acceleration magnitude is twice the movable pulley's.",
+      "search": "\"movable pulley string constraint acceleration relation diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-7.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.7"
+    },
+    {
+      "id": "D5.8",
+      "kind": "excalidraw",
+      "title": "Friction on a banked road",
+      "show": "a car on a banked curve of angle $\\theta$. Left (maximum speed): friction $f$ acts inward (down the incline). The FBD shows $N$, $mg$, $f$ and the centripetal direction. Right (minimum speed): friction acts outward (up the incline). The two speed limits annotated: $v_{\\max}$ and $v_{\\min}$.",
+      "search": "\"banked road friction maximum minimum speed both limits diagram\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-8.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.8"
+    },
+    {
+      "id": "D5.9",
+      "kind": "excalidraw",
+      "title": "Vertical-circle tension and speed",
+      "show": "left: a graph of tension $T$ vs angle $\\theta$ (0 at bottom, minimum near the top, maximum at the bottom). Right: a graph of speed $v$ vs $\\theta$ (maximum at the bottom, minimum at the top). The minimum speed at the top $\\sqrt{gR}$ annotated. The string-slack angle $\\theta_0$ marked.",
+      "search": "\"vertical circle tension versus angle speed versus angle graph\"",
+      "file": "_obsidian/excalidraw/newtons-laws-D5-9.excalidraw.md",
+      "source": "newtons-laws/Newtons-laws.md · D5.9"
+    }
   ]
 }

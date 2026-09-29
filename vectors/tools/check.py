@@ -60,10 +60,69 @@ need(not [p for p, _ in diags if int(p) != CFG["part"]],
 need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a *Show:* line")
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a *Search:* line")
 
+# Excalidraw embeds are allowed only when each DIAGRAM brief points to a real,
+# parseable native scene in the configured vault folder.
+excalidraw_pattern = r"!\[\[([^\]\n]+\.excalidraw)(?:\|[^\]\n]*)?\]\]"
+excalidraw_embeds = re.findall(excalidraw_pattern, SRC)
+expected_ids = {f"D{p}.{n}" for p, n in diags}
+embed_ids = set()
+for target in excalidraw_embeds:
+    match = re.search(r"D(\d+)-(\d+)\.excalidraw$", target)
+    if not match:
+        need(False, f"Excalidraw embed has an unexpected filename: {target}")
+        continue
+    diagram_id = f"D{match.group(1)}.{int(match.group(2))}"
+    embed_ids.add(diagram_id)
+    scene_path = (ROOT / (target + ".md")).resolve()
+    need(scene_path.is_file(), f"Excalidraw scene is missing: {target}.md")
+    if not scene_path.is_file():
+        continue
+    scene = scene_path.read_text(encoding="utf-8")
+    need(f"diagram-id: {diagram_id}" in scene, f"{target}: diagram-id metadata mismatch")
+    block = re.search(r"(?ms)^# Drawing\s*\n```json\s*\n(.*?)\n```\s*\n%%", scene)
+    need(block is not None, f"{target}: missing Excalidraw JSON scene block")
+    if block:
+        try:
+            data = json.loads(block.group(1))
+            need(data.get("type") == "excalidraw" and data.get("version") == 2,
+                 f"{target}: invalid Excalidraw document header")
+            elements = data.get("elements")
+            need(isinstance(elements, list) and bool(elements), f"{target}: scene has no elements")
+            if isinstance(elements, list):
+                ids = [e.get("id") for e in elements]
+                need(len(ids) == len(set(ids)), f"{target}: duplicate element ids")
+        except (json.JSONDecodeError, AttributeError) as exc:
+            need(False, f"{target}: invalid scene JSON ({exc})")
+need(len(excalidraw_embeds) == len(diags),
+     f"each DIAGRAM brief needs one Excalidraw embed ({len(excalidraw_embeds)} embeds / {len(diags)} briefs)")
+need(embed_ids == expected_ids,
+     f"Excalidraw embeds do not match the DIAGRAM brief ids (missing {sorted(expected_ids-embed_ids)}, extra {sorted(embed_ids-expected_ids)})")
+manifest_path = ROOT / "figures.json"
+need(manifest_path.is_file(), "figures.json provenance is required for Excalidraw drawings")
+if manifest_path.is_file():
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        drawing_records = manifest.get("drawings", [])
+        manifest_ids = {d.get("id") for d in drawing_records}
+        need(len(drawing_records) == len(diags),
+             f"figures.json needs one drawing record per DIAGRAM brief ({len(drawing_records)} / {len(diags)})")
+        need(manifest_ids == expected_ids,
+             f"figures.json drawing ids mismatch (missing {sorted(expected_ids-manifest_ids)}, extra {sorted(manifest_ids-expected_ids)})")
+        for drawing in drawing_records:
+            need(drawing.get("kind") == "excalidraw", f"{drawing.get('id')}: drawing kind must be excalidraw")
+            need(bool(drawing.get("show")) and bool(drawing.get("search")),
+                 f"{drawing.get('id')}: figures.json is missing the original drawing/search brief")
+            scene = (ROOT.parent / drawing.get("file", "")).resolve()
+            need(scene.is_file(), f"figures.json scene is missing: {drawing.get('file')}")
+    except (json.JSONDecodeError, AttributeError, TypeError) as exc:
+        need(False, f"invalid figures.json drawing provenance ({exc})")
+
+
 fence = chr(96) * 3
+media_text = re.sub(excalidraw_pattern, "", SRC)
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
 # ── FIGURE system (plan.md §1.2 media policy v2 / docs/obsidian-plugin-workflow.md §2) ──
 figs = re.findall(r"^> \[!tip\] FIGURE F(\d+)\.(\d+) · ", SRC, re.M)

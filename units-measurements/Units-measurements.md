@@ -122,6 +122,8 @@ A physical quantity is a number attached to a unit. The number is meaningless wi
 > *Show:* a table-like layout with the seven SI base quantities (length, mass, time, electric current, temperature, amount of substance, luminous intensity) each with its unit name (metre, kilogram, second, ampere, kelvin, mole, candela) and symbol; the modern definition of each stated in one line (e.g. metre = distance light travels in 1/299792458 s; kilogram = fixed by the Planck constant $h$).
 > *Search:* "SI base units seven modern definitions table"
 
+![[../_obsidian/excalidraw/units-measurements-D1-1.excalidraw|900]]
+
 ### 3.2 The SI system and its seven base units
 
 The Système International (SI) fixes seven base quantities and defines their units:
@@ -190,6 +192,8 @@ Arguments of trigonometric, exponential and logarithmic functions must be dimens
 > *Show:* an equation like $s = ut + \frac{1}{2}at^2$ written large; under each term, its dimensional formula shown as a label; all three labels reading $[L]$ (balanced); then a false equation $s = ut + at$ with the third term reading $[LT^{-1}]$ (unbalanced, marked with an X).
 > *Search:* "dimensional homogeneity equation check balanced terms"
 
+![[../_obsidian/excalidraw/units-measurements-D1-2.excalidraw|900]]
+
 > [!tip] FIGURE F1.2 · Homogeneity: every term must match
 > *Why:* it is the cheapest error detector in the subject — check the dimensions before you waste minutes on the algebra.
 > *Data:* in $s=ut+\tfrac12 at^2$ every term has dimension $[L]$; in $s=ut+at$ the last term is $[LT^{-1}]$ (wrong).
@@ -237,12 +241,16 @@ The dimensionless constant $k=2\pi$ cannot be found this way. The result says: t
 > *Show:* a table with columns: variable, exponent $p$, fractional error $\Delta A/A$, contribution $p\times\Delta A/A$, squared contribution. For $Z=A^2B/C$: row $A$ (exponent 2), row $B$ (exponent 1), row $C$ (exponent $-1$). The quadrature sum $\sqrt{\sum(p\Delta A/A)^2}$ shown at the bottom.
 > *Search:* "error propagation fractional error table product rule method"
 
+![[../_obsidian/excalidraw/units-measurements-D1-3.excalidraw|900]]
+
 > [!success] Check
 > At $L=1$ m, $g=9.8$ m/s$^2$: $T\approx\sqrt{1/9.8}=0.32$ s. The real value is $2\pi\times0.32=2.0$ s. The dimensional method gets the physics right but misses the $2\pi$.
 
 > [!abstract] DIAGRAM D1.4 · Dimensional derivation of the pendulum period
 > *Show:* a simple pendulum of length $L$ and bob mass $m$; the three parameters $m$, $L$, $g$ written below with their dimensions; the exponents $a=0$, $b=1/2$, $c=-1/2$ solved in a step-by-step equation matching; the final result $T\propto\sqrt{L/g}$ boxed.
 > *Search:* "dimensional analysis pendulum period derivation example"
+
+![[../_obsidian/excalidraw/units-measurements-D1-4.excalidraw|900]]
 
 > [!tip] FIGURE F1.3 · Dimensional analysis as an exponent hunt
 > *Why:* the whole method is one loop — guess $T=k\,m^a L^b g^c$, match exponents, solve; the figure makes that loop explicit.
@@ -279,6 +287,8 @@ Exact counts and defined conversion factors do not limit the significant figures
 > *Show:* a horizontal line with numbers placed at their precision level: $0.00123$ (3 sig figs), $1.23$ (3), $1.230$ (4), $1.2300$ (5), $1230$ (ambiguous — question mark); each with the significant digits highlighted and the placeholder zeros dimmed.
 > *Search:* "significant figures rules leading trailing zeros examples"
 
+![[../_obsidian/excalidraw/units-measurements-D1-5.excalidraw|900]]
+
 ### 3.8 Errors I: classification
 
 **Systematic errors** are reproducible biases, such as a calibration offset or a scale with an incorrect length. They shift readings in a consistent way; calibration or a model-based correction may reduce them, but an unknown systematic error is not removed by averaging.
@@ -291,13 +301,19 @@ Exact counts and defined conversion factors do not limit the significant figures
 > *Show:* two numbers $A=1.234$ and $B=1.231$ (both with 4 significant figures). Their difference $A-B=0.003$ has only 1 significant figure. The precision is lost because the leading digits cancel. A table showing how the relative error explodes as the difference shrinks.
 > *Search:* "catastrophic cancellation subtraction significant figures precision loss"
 
+![[../_obsidian/excalidraw/units-measurements-D1-6.excalidraw|900]]
+
 > [!abstract] DIAGRAM D1.7 · The standard error of the mean vs number of measurements
 > *Show:* a plot of $\sigma_{\bar{x}}=\sigma/\sqrt{n}$ vs $n$: the uncertainty halves when $n$ grows from 1 to 4, and falls by only a factor $\sqrt{10}$ when $n$ grows from 100 to 1000. Annotate the diminishing returns: a 10-fold improvement needs 100 times as many independent measurements.
 > *Search:* "standard error mean versus number measurements sqrt N diminishing returns"
 
+![[../_obsidian/excalidraw/units-measurements-D1-7.excalidraw|900]]
+
 > [!abstract] DIAGRAM D1.8 · The three error types on a target
 > *Show:* three circular targets (bullseye diagrams). Left (systematic): all hits clustered tightly but off-centre — precise but inaccurate. Centre (random): hits scattered symmetrically around the centre — accurate on average but imprecise. Right (gross): most hits centred but one outlier far from the cluster.
 > *Search:* "systematic random gross error accuracy precision target diagram"
+
+![[../_obsidian/excalidraw/units-measurements-D1-8.excalidraw|900]]
 
 > [!tip] FIGURE F1.4 · The three errors: precision is not accuracy
 > *Why:* wrong-kind-of-error is the classic trap; naming the error before fixing it is half the answer.
@@ -352,6 +368,8 @@ $$
 > *Show:* a quantity $Z=A^2B/C$ with each variable's error bar shown; the worst-case fractional uncertainty $\Delta Z/|Z|$ computed as $2(\Delta A/|A|)+(\Delta B/|B|)+(\Delta C/|C|)$; an arrow from the input errors to the output error; the quadrature version shown alongside for comparison.
 > *Search:* "error propagation product rule fractional errors diagram"
 
+![[../_obsidian/excalidraw/units-measurements-D1-9.excalidraw|900]]
+
 ### 3.10 Instruments: the vernier caliper
 
 The main scale has divisions of 1 mm. The vernier scale has $n$ divisions that span $(n-1)$ main-scale divisions, giving a least count of:
@@ -367,6 +385,8 @@ For a standard vernier with $n=10$: LC $=0.1$ mm. For $n=20$ (a "double vernier"
 > [!abstract] DIAGRAM D1.10 · The vernier caliper reading
 > *Show:* the main scale with millimetre marks; the vernier scale sliding alongside with 10 divisions spanning 9 mm; the zero of the vernier between 2.3 and 2.4 cm on the main scale; the 7th vernier division coinciding with a main-scale mark; the reading $2.3+7\times0.01=2.37$ cm annotated.
 > *Search:* "vernier caliper reading diagram main scale vernier coincidence"
+
+![[../_obsidian/excalidraw/units-measurements-D1-10.excalidraw|900]]
 
 ### 3.11 Instruments: the screw gauge
 
@@ -386,6 +406,8 @@ For pitch 0.5 mm and 50 divisions: LC $=0.01$ mm. For pitch 1 mm and 100 divisio
 > *Show:* the sleeve (main scale) and thimble (circular scale) of a screw gauge; the jaws closed; the circular-scale zero displaced from the reference line; the zero error labelled as positive (+3 divisions = +0.03 mm); below, a reading with the zero error subtracted.
 > *Search:* "screw gauge zero error positive negative diagram reading"
 
+![[../_obsidian/excalidraw/units-measurements-D1-11.excalidraw|900]]
+
 ### 3.12 Graphs and data: linearisation
 
 **The goal.** Many common models can be transformed to a straight-line plot. If your positive data follow $y=ax^n$, take logarithms: $\ln y=n\ln x+\ln a$. Plot $\ln y$ vs $\ln x$; the slope is $n$ and the intercept is $\ln a$.
@@ -397,6 +419,8 @@ If positive data follow $y=ae^{bx}$, take the natural log: $\ln y=bx+\ln a$. Plo
 > [!abstract] DIAGRAM D1.12 · Linearisation of $T^2$ vs $L$ for a pendulum
 > *Show:* left panel: $T$ vs $L$ data points following a square-root curve; right panel: $T^2$ vs $L$ the same data points falling on a straight line; the slope $4\pi^2/g$ and the intercept (zero) annotated; error bars on each point.
 > *Search:* "pendulum T squared versus L linearisation graph data straight line"
+
+![[../_obsidian/excalidraw/units-measurements-D1-12.excalidraw|900]]
 
 > [!tip] FIGURE F1.5 · Linearise, then read the slope
 > *Why:* many common physical models become easier to test and quantify after a suitable transformation to a straight-line plot.

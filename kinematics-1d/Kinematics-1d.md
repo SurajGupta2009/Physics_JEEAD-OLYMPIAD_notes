@@ -142,6 +142,8 @@ The position $x(t)$ is a scalar function of time. For a particle on the $x$-axis
 > *Show:* a number line ($x$-axis) with a particle starting at $x=2$, moving to $x=5$, then back to $x=3$. The displacement from start to finish is $+1$ (from 2 to 3). The total distance is $3+2=5$ (2→5 is 3, 5→3 is 2). Labels: "displacement = 1 m", "distance = 5 m".
 > *Search:* "displacement vs distance one dimension number line diagram"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-1.excalidraw|900]]
+
 ### 3.2 Average velocity
 
 $$
@@ -167,6 +169,8 @@ Instantaneous velocity is the slope of the tangent to the $x$–$t$ graph at tim
 > *Show:* an $x$–$t$ graph with a curve; at time $t_0$, a tangent line drawn to the curve; the slope of the tangent labelled as $v(t_0)=dx/dt$; the chord between $t_0$ and $t_0+\Delta t$ shown for comparison, with its slope labelled as $\bar{v}$.
 > *Search:* "instantaneous velocity tangent slope x-t graph diagram"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-2.excalidraw|900]]
+
 ### 3.4 Average and instantaneous acceleration
 
 $$
@@ -180,6 +184,8 @@ Acceleration is the rate of change of velocity. It can be positive (velocity inc
 > [!abstract] DIAGRAM D3.3 · Acceleration and the three graphs
 > *Show:* three stacked graphs sharing the same time axis. Top: $x$–$t$ (a parabola for constant positive $a$). Middle: $v$–$t$ (a straight line with positive slope). Bottom: $a$–$t$ (a horizontal line above the axis). Annotations: "slope of $x$–$t$ = $v$", "slope of $v$–$t$ = $a$", "area under $v$–$t$ = $\Delta x$".
 > *Search:* "x-t v-t a-t graphs constant acceleration stacked diagram"
+
+![[../_obsidian/excalidraw/kinematics-1d-D3-3.excalidraw|900]]
 
 ### 3.5 The graph trio
 
@@ -254,6 +260,8 @@ Eq. (3.8) gives the signed displacement during the $n$th one-second interval, fo
 > *Show:* a $v$–$t$ graph with a straight line from $(0,u)$ to $(t,v)$ with slope $a$. The area under the line (a trapezoid) is labelled $s=\frac{(u+v)}{2}t$. The height of the line at $t$ is $v=u+at$. The area of the triangle on top of the rectangle is $\frac{1}{2}at^2$.
 > *Search:* "constant acceleration v-t graph area trapezoid derivation diagram"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-5.excalidraw|900]]
+
 ### 3.7 Free fall
 
 Near Earth's surface, all objects (neglecting air resistance) have the same downward acceleration: $g\approx9.8$ m/s$^2$.
@@ -299,6 +307,8 @@ When $a$ is not constant, the constant-acceleration equations do not apply. You 
 > *Show:* the chain rule $a=dv/dt=(dv/dx)(dx/dt)=v\,dv/dx$ written step-by-step; then the integral $\int v\,dv=\int a(x)\,dx$ shown; the result $v^2/2=\int a(x)\,dx+C$ boxed.
 > *Search:* "v dv/dx method variable acceleration chain rule diagram"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-7.excalidraw|900]]
+
 ### 3.9 Relative motion in 1-D
 
 If particle $A$ has velocity $v_A$ and particle $B$ has velocity $v_B$ (both measured in the same frame), then the velocity of $A$ relative to $B$ is:
@@ -313,13 +323,19 @@ Define the signed separation as $r_{AB}=x_A-x_B$. Then $v_{AB}=dr_{AB}/dt=v_A-v_
 > *Show:* two particles $A$ and $B$ on a number line, $A$ at $x_A$ and $B$ at $x_B$ with $x_A>x_B$. $v_A=5$ m/s (rightward), $v_B=3$ m/s (rightward). $v_{AB}=5-3=2$ m/s — $A$ is pulling away from $B$ at 2 m/s. The separation $x_A-x_B$ is increasing.
 > *Search:* "relative velocity one dimension two particles diagram"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-8.excalidraw|900]]
+
 > [!abstract] DIAGRAM D3.10 · The $n$th-second distance
 > *Show:* a $v$–$t$ graph for constant positive acceleration with velocity remaining non-negative. Shade the area from $t=n-1$ to $t=n$; it is the signed displacement $\Delta x_n=u+\frac{a}{2}(2n-1)$ in that one-second interval, and equals distance here because velocity does not reverse.
 > *Search:* "nth second distance v-t graph constant acceleration shaded area"
 
+![[../_obsidian/excalidraw/kinematics-1d-D3-10.excalidraw|900]]
+
 > [!abstract] DIAGRAM D3.11 · Relative velocity: two particles approaching
-> *Show:* two particles $A$ and $B$ on a number line, $A$ at $x_A$ moving right at $v_A$, $B$ at $x_B$ moving left at $v_B$. The closing velocity $v_{AB}=v_A+v_B$ annotated. The separation $x_A-x_B$ decreasing at rate $v_A+v_B$.
+> *Show:* $A$ is to the left of $B$ ($x_A<x_B$). $A$ moves right at speed $v_A$ and $B$ moves left at speed $v_B$. The positive separation $d=x_B-x_A$ decreases; the relative velocity of $A$ with respect to $B$ is $v_{AB}=v_A-(-v_B)=v_A+v_B$, the closing speed.
 > *Search:* "relative velocity two particles approaching closing speed diagram"
+
+![[../_obsidian/excalidraw/kinematics-1d-D3-11.excalidraw|900]]
 
 > [!tip] FIGURE F3.5 · Phase-space ellipse for $a=-kx$
 > *Why:* the $v$–$x$ loop shows boundedness and turning points at a glance — the fastest way to read a variable-acceleration solution.
@@ -347,6 +363,8 @@ Many real problems have different accelerations in different time intervals (e.g
 > [!abstract] DIAGRAM D3.9 · Piecewise kinematics on a $v$–$t$ graph
 > *Show:* a $v$–$t$ graph with three segments: (1) a straight line with positive slope (acceleration phase); (2) a horizontal line (constant velocity); (3) a straight line with negative slope (braking phase). Each segment labelled with its duration and acceleration. The total displacement is the total area under the graph.
 > *Search:* "piecewise kinematics v-t graph acceleration constant velocity braking diagram"
+
+![[../_obsidian/excalidraw/kinematics-1d-D3-9.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 
