@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local gate for a text-only, Obsidian-first Markdown chapter written under plan.md.
+"""Local gate for an Obsidian-first Markdown chapter with native Excalidraw scenes.
 
 This copy is *stage-aware*: the electrostatics module merges plan.md PARTs 13-15 into one
 chapter and is written in three turns. `notes.json` names the current `stage` (1, 2 or 3) and
@@ -12,8 +12,9 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
+sys.path.insert(0, str(ROOT.parent))  # repository root, for shared validators
 from tools import mermaid_lint
+from tools.excalidraw_checks import EMBED_PATTERN, validate_excalidraw
 
 CFG = json.loads((ROOT / "notes.json").read_text(encoding="utf-8"))
 SRC = (ROOT / CFG["master"]).read_text(encoding="utf-8")
@@ -81,11 +82,14 @@ need(not [p for p, _ in diags if int(p) != CFG["part"]],
      f"DIAGRAM numbers must start with part number ({CFG['part']})")
 need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a *Show:* line")
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a *Search:* line")
+for _issue in validate_excalidraw(ROOT, SRC, diags):
+    need(False, _issue)
 
 fence = chr(96) * 3
+media_text = re.sub(EMBED_PATTERN, "", SRC)
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 # raster ban kept explicit: AI raster art (png/jpg/gif/webp) is never allowed anywhere.
 need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
 
@@ -169,4 +173,5 @@ if errors:
     sys.exit(1)
 print(f"ALL GOOD (stage {STAGE}/3 — {STAGE_CFG['name']}): 15 blocks · C×{n_c} E×{n_e} Q×{n_q} OL×{n_ol} · "
       f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · "
-      f"{len(figs)} FIGURES (mermaid) · {len(callouts)} callouts · {len(SRC.split())} words · no raster images")
+      f"{len(figs)} FIGURES (mermaid) · {len(diags)} editable Excalidraw scenes · "
+      f"{len(callouts)} callouts · {len(SRC.split())} words · no raster images")

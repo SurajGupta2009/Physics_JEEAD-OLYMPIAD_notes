@@ -114,6 +114,9 @@ where $\theta$ is the angle between the force and the displacement.
 **Sign convention:** $W>0$ if $\theta<90°$ (force helps motion), $W<0$ if $\theta>90°$ (force opposes motion), $W=0$ if $\theta=90°$ (force perpendicular to motion).
 
 > [!abstract] DIAGRAM D6.1 · Work sign drill: six cases
+
+![[../_obsidian/excalidraw/work-energy-power-D6-1.excalidraw|900]]
+
 > *Show:* six diagrams: (1) pushing a box rightward (force rightward, displacement rightward: $W>0$); (2) friction opposing rightward motion ($W<0$); (3) gravity on a horizontal surface ($W=0$, force perpendicular to displacement); (4) gravity on a falling body ($W>0$, force and displacement same direction); (5) lifting a box ($W>0$ by the lifter, $W<0$ by gravity); (6) centripetal force ($W=0$, always perpendicular to velocity).
 > *Search:* "work sign positive negative zero six cases force displacement"
 
@@ -126,6 +129,9 @@ $$
 For a force that varies along the path: $W=\int\mathbf{F}\cdot d\mathbf{r}=\int(F_x\,dx+F_y\,dy+F_z\,dz)$.
 
 > [!abstract] DIAGRAM D6.2 · Work as area under the $F$–$x$ curve
+
+![[../_obsidian/excalidraw/work-energy-power-D6-2.excalidraw|900]]
+
 > *Show:* a graph of $F$ vs $x$ with a curve. The area between the curve and the $x$-axis is shaded. Positive areas (above the axis) and negative areas (below the axis) are shaded differently. The net work is the algebraic sum of the signed areas.
 > *Search:* "work area under force versus displacement curve signed"
 
@@ -179,30 +185,51 @@ The net work done on a particle equals its change in kinetic energy.
 > Eq. (3.4) applies to a single particle. For a system of particles: $W_{\text{net}}=W_{\text{ext}}+W_{\text{int}}=\Delta K_{\text{total}}$. Internal forces can do work (e.g., a spring between two blocks), and this work must be included.
 
 > [!abstract] DIAGRAM D6.6 · The $F$–$x$ curve of a real spring
-> *Show:* a graph of force vs displacement for a real spring: linear ($F=-kx$) near the origin, then deviating (softening or stiffening) at large $x$. The elastic limit marked with a dashed line. The area under the curve (the work) shaded.
+
+![[../_obsidian/excalidraw/work-energy-power-D6-6.excalidraw|900]]
+
+> *Show:* a graph of force vs displacement for a real spring: linear ($F=-kx$) near the origin, then deviating (softening or stiffening) at large $x$. The elastic limit marked with a dashed line. Shade the signed area for work done by the spring; for extension from $x=0$, $F_{\rm spring}=-kx$ and the work is negative.
 > *Search:* "real spring force versus displacement nonlinear elastic limit"
 
 > [!abstract] DIAGRAM D6.7 · The vertical circle's energy split at four angles
+
+![[../_obsidian/excalidraw/work-energy-power-D6-7.excalidraw|900]]
+
 > *Show:* a vertical circle with the particle at four positions (bottom, side, top, opposite side). At each: a bar chart showing $K$ (kinetic, red) and $U$ (potential, blue). At the bottom: $K$ maximum, $U$ minimum. At the top: $K$ minimum, $U$ maximum. The total $E=K+U$ constant (same total height).
 > *Search:* "vertical circle kinetic potential energy split four positions bar chart"
 
 > [!abstract] DIAGRAM D6.8 · The gravitational escape energy curve
-> *Show:* a plot of $U(r)=-GMm/r$ (a hyperbola approaching zero from below) and the total energy line $E=0$ (escape). For a bound orbit: $E<0$, the particle oscillates between two turning points. For escape: $E\ge0$, the particle reaches infinity with $K\ge0$. The escape velocity $v_{\text{esc}}=\sqrt{2GM/R}$ annotated at $r=R$.
+
+![[../_obsidian/excalidraw/work-energy-power-D6-8.excalidraw|900]]
+
+> *Show:* two linked $U$–$r$ plots. Left: $U(r)=-GMm/r$ approaches zero from below; mark $E=0$ as the marginal escape threshold and $v_{\rm esc}=\sqrt{2GM/R}$ at $r=R$. Right: for nonzero angular momentum, plot $U_{\rm eff}(r)=L^2/(2mr^2)-GMm/r$; a bound $E<0$ line above the minimum meets it at two radial turning points, while $E\ge0$ reaches infinity with $K_\infty\ge0$.
 > *Search:* "gravitational potential energy escape velocity curve bound unbound orbit"
 
 > [!abstract] DIAGRAM D6.9 · The block-and-wedge with normal force doing work
-> *Show:* a block sliding down a wedge that slides on a frictionless table. The normal force $N$ on the block is perpendicular to the incline. The block's displacement in the ground frame is not along the incline (because the wedge moves). The angle between $N$ and the block's displacement shown — it is not 90°, so the normal force does work on the block.
+
+![[../_obsidian/excalidraw/work-energy-power-D6-9.excalidraw|900]]
+
+> *Show:* a block sliding down-right on an incline that slopes down to the right, while the wedge slides right on a frictionless table. The normal force $N$ on the block is perpendicular to the incline. The block's displacement in the ground frame is not along the incline (because the wedge moves). The angle between $N$ and the block's displacement shown — it is not 90°, so the normal force does work on the block.
 > *Search:* "block wedge normal force work ground frame displacement not perpendicular"
 
 > [!abstract] DIAGRAM D6.10 · The accelerating-wedge geometry with displacements
-> *Show:* a wedge of angle $\theta$ sliding rightward by distance $x_w$; a block sliding down the incline by distance $s$ relative to the wedge. The block's ground-frame displacement shown as the vector sum of $s$ (along the incline) and $x_w$ (horizontal). The work of the normal force on the block: $W_N=N\sin\theta\times x_w$ (the horizontal component of $N$ times the wedge displacement).
+
+![[../_obsidian/excalidraw/work-energy-power-D6-10.excalidraw|900]]
+
+> *Show:* a wedge whose surface slopes down-right at angle $\theta$, sliding rightward by distance $x_w$; a block sliding down the incline by distance $s$ relative to the wedge. The block's ground-frame displacement shown as the vector sum of $s$ (along the incline) and $x_w$ (horizontal). The work of the normal force on the block: $W_N=N\sin\theta\times x_w$ (the horizontal component of $N$ times the wedge displacement).
 > *Search:* "wedge block displacement ground frame vector sum normal work"
 
 > [!abstract] DIAGRAM D6.11 · The chain-lifting variable-weight problem
-> *Show:* a chain coiled on the ground being pulled upward at constant speed $v$. At time $t$: a length $x=vt$ has been lifted. The weight of the lifted part ($\lambda xg$) and the momentum-flux force ($\lambda v^2$) shown as arrows. The total force $F=\lambda xg+\lambda v^2$ annotated.
+
+![[../_obsidian/excalidraw/work-energy-power-D6-11.excalidraw|900]]
+
+> *Show:* a chain coiled on the ground being pulled vertically upward at constant speed $v$. At time $t$, the lifted length is $x=vt$; the incoming links start at rest and are accelerated upward to speed $v$. Show the lifted weight $\lambda xg$ and the upward momentum-flux force $\lambda v^2$, giving the required pull $F=\lambda xg+\lambda v^2$.
 > *Search:* "chain lifted constant speed variable weight momentum flux force diagram"
 
 > [!abstract] DIAGRAM D6.12 · The energy ledger bar chart with thermal term
+
+![[../_obsidian/excalidraw/work-energy-power-D6-12.excalidraw|900]]
+
 > *Show:* a bar chart with four categories: initial KE, initial PE, final KE, final PE, and a fifth bar for "thermal energy" (from friction). The total energy is the same in the initial and final states (energy conservation including the thermal term). The thermal bar is the difference $f_k d$.
 > *Search:* "energy bar chart thermal term friction dissipation conservation"
 
@@ -217,6 +244,9 @@ Average power: $\bar{P}=W/\Delta t$. Instantaneous power: $P=Fv\cos\theta$ where
 **The power-limited top speed of a vehicle:** At constant speed on a flat road: $P=Fv=fv$. If the resistive force is $f$: $v_{\max}=P/f$.
 
 > [!abstract] DIAGRAM D6.3 · The power-limited top speed
+
+![[../_obsidian/excalidraw/work-energy-power-D6-3.excalidraw|900]]
+
 > *Show:* a car on a flat road with engine force $F$ forward and resistive force $f$ backward. At top speed: $F=f$, $a=0$. $P=Fv_{\max}=fv_{\max}$. A graph of $v$ vs $t$: the car accelerates and asymptotically approaches $v_{\max}=P/f$.
 > *Search:* "car power limited top speed engine force resistance asymptotic"
 
@@ -282,7 +312,10 @@ $$
 **Precise condition:** between two states, $\Delta(K+U)=W_{\text{nc}}$. Mechanical energy is unchanged when the net work of all non-conservative forces over that interval is zero; it is conserved for arbitrary allowed motion when all forces doing work are conservative. If constant-magnitude kinetic friction acts through sliding distance $d$, $W_{\text{fric}}=-f_kd$, so the mechanical energy change is $-f_kd$ (other non-conservative work, if present, must also be included).
 
 > [!abstract] DIAGRAM D6.4 · The energy ledger bar chart
-> *Show:* three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\Delta K$ and $\Delta U$ with the non-conservative work $W_{\text{nc}}$ shown as a separate bar. The total height is the same in all three (energy conservation with the thermal term).
+
+![[../_obsidian/excalidraw/work-energy-power-D6-4.excalidraw|900]]
+
+> *Show:* three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\Delta K$ and $\Delta U$ with the non-conservative work $W_{\text{nc}}$ shown as a separate bar. Show the signed balance $\Delta K+\Delta U=W_{\rm nc}$; for friction, $W_{\rm nc}=-f_kd$ and the thermal gain is $Q=-W_{\rm nc}=f_kd$, so $K_i+U_i=K_f+U_f+Q$. Do not imply that the three chart totals are numerically identical.
 > *Search:* "energy bar chart initial final non-conservative work ledger"
 
 > [!tip] FIGURE F6.4 · The energy ledger: account for every non-conservative term
@@ -308,6 +341,9 @@ The $U(x)$ graph is a powerful tool:
 - **Equilibrium:** where $dU/dx=0$. In one dimension, a strict local minimum is stable and a strict local maximum is unstable. If $U''\ne0$, then $U''>0$ identifies a stable minimum and $U''<0$ an unstable maximum; when $U''=0$, inspect higher-order terms or the full local shape.
 
 > [!abstract] DIAGRAM D6.5 · The $U(x)$ energy landscape
+
+![[../_obsidian/excalidraw/work-energy-power-D6-5.excalidraw|900]]
+
 > *Show:* a $U(x)$ curve with a well (stable minimum), a hill (unstable maximum), and two turning points at a given energy $E$. The kinetic energy $K=E-U$ shown as the vertical gap between the $E$ line and the $U$ curve. The bound region (where $E>U$) shaded.
 > *Search:* "potential energy landscape stable unstable turning points bound motion"
 

@@ -1,6 +1,6 @@
 # Simple Harmonic Motion & Oscillations — first principles to Olympiad
 
-> [!note] Part 10 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 10 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** The SHM defining test ($F=-kx$); the kinematic triple ($x$, $v$, $a$); the phasor/circular-motion picture; energy in SHM; springs (horizontal, vertical, series, parallel, cutting); the simple pendulum (small and large angles); the physical pendulum ($T=2\pi\sqrt{I/mgd}$, minimum-period condition); other oscillators (torsion, U-tube, floating body, ball in a bowl); the "show it is SHM" toolkit; damped oscillations (three regimes); forced oscillations and resonance; coupled oscillators and beats.
 

@@ -1,6 +1,6 @@
 # Units, Dimensions & Measurement Errors — first principles to Olympiad
 
-> [!note] Part 1 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 1 of [plan.md](../plan.md) · text-first Markdown chapter with Excalidraw illustrations · written for Obsidian reading mode
 
 **Scope.** SI base units and their history, dimensional formulae for 25+ quantities, the principle of homogeneity, dimensional derivation and analysis, dimensionless groups (Reynolds, Mach, Froude previewed), significant figures and rounding, error classification (systematic, random, gross), error propagation (sums, products, powers, quadrature), instruments (vernier caliper, screw gauge with zero-error handling), graph reading and linearisation, and the Fermi estimation method.
 
@@ -18,6 +18,6 @@
 
 **Hand-off.** Every subsequent chapter assumes the dimensional-formula table and the error-propagation rules from this chapter.
 
-**Media and Obsidian support.** Six Mermaid `FIGURE` callouts render directly in Obsidian. Twelve `DIAGRAM` briefs remain as drawing specifications rather than rendered illustrations; prioritize apparatus, graphs, and instrument-reading visuals when expanding this chapter. The note is tagged `flashcards` and includes question–answer cards for the configured Spaced Repetition plugin (the plugin must be installed/enabled for review scheduling). No terminal-style ASCII diagrams are used.
+**Media and Obsidian support.** Six Mermaid `FIGURE` callouts render directly in Obsidian. All twelve `DIAGRAM` briefs now have editable Excalidraw scenes embedded at their reading locations; the source drawings live in `../_obsidian/excalidraw/` and use the vault's pinned Excalidraw plugin with SVG auto-export enabled. The note is tagged `flashcards` and includes question–answer cards for the configured Spaced Repetition plugin (the plugin must be installed/enabled for review scheduling). No terminal-style ASCII diagrams are used.
 
-**Gate.** `python3 tools/check.py` → ALL GOOD.
+**Gate.** `python3 tools/check.py` → ALL GOOD; every one of the 12 D1 briefs resolves to an editable, JSON-validated Excalidraw scene and provenance record.

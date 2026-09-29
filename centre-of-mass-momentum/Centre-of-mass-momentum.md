@@ -126,6 +126,9 @@ For a continuous body: $\mathbf{R}=\frac{1}{M}\int\mathbf{r}\,dm$.
 | Uniform arc (angle $\theta$) | $R\sin(\theta/2)/(\theta/2)$ from the centre |
 
 > [!abstract] DIAGRAM D7.1 · COM of standard bodies on one plate
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-1.excalidraw|900]]
+
 > *Show:* a rod, a triangle, a semicircular ring, a semicircular disc, and a solid cone, each with their COM marked by a dot and the distance from the reference surface labelled.
 > *Search:* "centre of mass standard bodies rod triangle semicircle cone COM position"
 
@@ -156,7 +159,10 @@ where $M_1$ is the mass of the full body and $M_2$ is the mass of the hole.
 **Symmetry shortcuts:** If a body has an axis of symmetry, the COM lies on that axis. If it has two axes of symmetry, the COM is at their intersection.
 
 > [!abstract] DIAGRAM D7.2 · The positive/negative mass trick
-> *Show:* a disc of radius $R$ with a smaller disc of radius $r$ cut out. The full disc (mass $M_1$) and the cut-out (mass $-M_2$) shown separately. The COM of the composite body marked.
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-2.excalidraw|900]]
+
+> *Show:* a uniform disc of radius $R$ centered at the origin with a circular hole of radius $r$ whose center is offset by $d$ along +x ($d+r<R$). Show the full disc as mass $M_1$, the removed patch as signed mass $-M_2$, and the composite COM shifted left of the origin: $x_{\rm cm}=-M_2d/(M_1-M_2)$.
 > *Search:* "centre of mass positive negative mass trick disc with hole"
 
 ### 3.3 Motion of the COM
@@ -172,6 +178,9 @@ Internal forces cancel in pairs (Newton's third law): $\sum\mathbf{F}_{\text{int
 **Key consequence:** In an isolated system ($\sum\mathbf{F}_{\text{ext}}=\mathbf{0}$), the COM moves at constant velocity. An explosion, a collision, or any internal rearrangement cannot change the COM's velocity.
 
 > [!abstract] DIAGRAM D7.3 · The explosion's COM parabola
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-3.excalidraw|900]]
+
 > *Show:* a shell following a parabolic trajectory. At the peak, it explodes into fragments. The fragments fly in different directions, but their centre of mass continues on the original parabola. The COM trajectory shown as a dashed line.
 > *Search:* "explosion centre of mass parabola fragments trajectory"
 
@@ -190,6 +199,9 @@ Impulse is the area under the $F$–$t$ curve. The impulse–momentum theorem: t
 **Average force:** $\bar{F}=J/\Delta t=\Delta p/\Delta t$. In a collision, the average force can be very large even for a small impulse, because $\Delta t$ is very short.
 
 > [!abstract] DIAGRAM D7.4 · The $F$–$t$ impulse curve
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-4.excalidraw|900]]
+
 > *Show:* a graph of $F$ vs $t$ during a collision (a sharp peak). The area under the curve shaded (the impulse $J$). The average force $\bar{F}=J/\Delta t$ shown as a horizontal line enclosing the same area.
 > *Search:* "impulse force versus time curve area average force collision"
 
@@ -227,7 +239,10 @@ $$
 **The line of impact:** the line along which the impulsive normal force acts (for smooth spheres: the line joining the centres). The coefficient of restitution applies only along this line. The tangential component of velocity is unchanged for smooth spheres (no tangential impulse). The usual table describes passive impacts with $0\le e\le1$; an active or explosive collision can be superelastic ($e>1$), so kinetic energy need not always decrease.
 
 > [!abstract] DIAGRAM D7.5 · Collision classification: before and after
-> *Show:* three cases: (1) elastic — two balls approach, exchange velocities (or bounce); (2) inelastic — they bounce with reduced speeds; (3) perfectly inelastic — they stick together. Velocity arrows shown before and after.
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-5.excalidraw|900]]
+
+> *Show:* three equal-mass 1-D cases with $m_1$ approaching stationary $m_2$ at speed $u$: (1) elastic ($e=1$): $m_1$ stops and $m_2$ leaves at $u$; (2) inelastic ($0<e<1$): both move right at $v_1=(1-e)u/2$ and $v_2=(1+e)u/2$; (3) perfectly inelastic ($e=0$): they stick and move together at $u/2$. Show before/after velocity arrows.
 > *Search:* "collision classification elastic inelastic perfectly inelastic before after"
 
 > [!tip] FIGURE F7.4 · Collisions: momentum always, kinetic energy sometimes
@@ -273,7 +288,10 @@ $$
 where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass. For $e=1$: $K_{\rm loss}=0$ (elastic). For $e=0$: $K_{\rm loss}=\frac{1}{2}\mu v_{\text{rel}}^2$ (maximum loss).
 
 > [!abstract] DIAGRAM D7.6 · The $e$-dependence of final velocities
-> *Show:* a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. At $e=0$: both move together at $v_{\text{cm}}$. At $e=1$: $v_1=0$, $v_2=u_1$ (equal-mass exchange). The curves are linear in $e$.
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-6.excalidraw|900]]
+
+> *Show:* a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. For equal masses, $m_1$ approaches a stationary $m_2$ with speed $u_1$: at $e=0$ both move at $u_1/2=v_{\rm cm}$; at $e=1$, $v_1=0$ and $v_2=u_1$. Plot the two straight-line velocity curves against $e$.
 > *Search:* "final velocities versus coefficient of restitution e graph 1D collision"
 
 > [!tip] FIGURE F7.5 · The energy loss: the (1 - e²) rule
@@ -300,6 +318,9 @@ For a smooth-sphere collision in 2-D:
 **Equal-mass elastic 90° result:** If two equal-mass smooth spheres collide elastically (one initially at rest), the velocities after collision are perpendicular: $\theta_1+\theta_2=90°$.
 
 > [!abstract] DIAGRAM D7.7 · The 2-D oblique collision
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-7.excalidraw|900]]
+
 > *Show:* two spheres colliding. The line of impact and the plane of contact drawn. The velocity components along and perpendicular to the line of impact shown for each sphere. The tangential components unchanged; the normal components determined by momentum conservation and $e$.
 > *Search:* "2D oblique collision line of impact plane of contact velocity components"
 
@@ -330,22 +351,37 @@ $$
 $$
 
 > [!abstract] DIAGRAM D7.8 · The rocket's momentum ledger
-> *Show:* at time $t$: rocket of mass $m$ moving at $v$. At time $t+dt$: rocket of mass $m+dm$ at $v+dv$, and exhaust mass $-dm$ at $v-v_e$. The momentum of each drawn as arrows.
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-8.excalidraw|900]]
+
+> *Show:* at time $t$: rocket of mass $m$ moving at $v$. At time $t+dt$: rocket mass $m+dm$ at $v+dv$ ($dm<0$); expelled mass $-dm>0$ has lab-frame velocity $v-v_e$ to first order, with exhaust speed $v_e$ backward relative to the rocket. The momentum of each drawn as arrows.
 > *Search:* "rocket equation momentum conservation exhaust diagram variable mass"
 
 > [!abstract] DIAGRAM D7.9 · The lab frame vs CM frame side by side
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-9.excalidraw|900]]
+
 > *Show:* left: a collision in the lab frame (one particle approaching a stationary target). Right: the same collision in the CM frame (both particles approach the CM with equal and opposite momenta, then scatter). The CM frame shows the total momentum is zero.
 > *Search:* "lab frame versus centre of mass frame collision comparison diagram"
 
 > [!abstract] DIAGRAM D7.10 · The falling chain on a scale with force components
-> *Show:* a chain falling onto a scale. Two forces on the scale: (1) the weight of the landed part ($\lambda(L-x)g$, downward); (2) the impact force from the arriving chain ($2\lambda gx$, downward — the momentum flux). The total reading $F=\lambda(L+x)g$ annotated. At $x=L$: $F=2mg$.
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-10.excalidraw|900]]
+
+> *Show:* a chain of total length $L$ falls from rest onto a scale. Let $x$ be the length still falling (also its drop distance) and $L-x$ the length already at rest on the scale; the incoming speed is $v=\sqrt{2gx}$. The scale supports landed weight $\lambda(L-x)g$ and receives downward momentum flux $\lambda v^2=2\lambda gx$. Annotate $F=\lambda(L+x)g$ and, at $x=L$, $F=2mg$.
 > *Search:* "falling chain scale reading impact force weight momentum flux"
 
 > [!abstract] DIAGRAM D7.11 · The ballistic pendulum's two stages
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-11.excalidraw|900]]
+
 > *Show:* left: the collision stage — a bullet embeds in a hanging block (momentum conserved, energy not). Right: the swing stage — the block+bullet swings up to height $h$ (energy conserved, momentum not). The two stages clearly separated with labels.
 > *Search:* "ballistic pendulum two stages collision swing momentum energy"
 
 > [!abstract] DIAGRAM D7.12 · A man walking on a boat with the COM's fixed line
+
+![[../_obsidian/excalidraw/centre-of-mass-momentum-D7-12.excalidraw|900]]
+
 > *Show:* a boat on frictionless water with a man standing on it. Left: initial position. Right: the man has walked rightward; the boat has moved leftward. The COM of the man+boat system shown as a fixed vertical dashed line (it does not move). The displacements $d_{\text{man}}$ and $d_{\text{boat}}$ annotated.
 > *Search:* "man walking boat centre of mass fixed line displacement diagram"
 

@@ -1,6 +1,6 @@
 # Kinematics in One Dimension — first principles to Olympiad
 
-> [!note] Part 3 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 3 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Frame of reference, position, distance vs displacement, average and instantaneous velocity and acceleration, the $x$–$t$, $v$–$t$, $a$–$t$ graph trio, constant-acceleration equations derived by integration, free fall, variable acceleration ($a=f(t)$, $a=f(v)$, $a=f(x)$), relative motion in 1-D, and piecewise kinematics.
 
@@ -18,6 +18,6 @@
 
 **Hand-off.** The constant-acceleration equations and graph-reading skills are prerequisites for every subsequent mechanics chapter. The $v\,dv/dx$ method reappears in PART 5 and PART 6.
 
-**Media.** Figures are Obsidian-native and deterministic per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2: `F`-numbered diagrams (mindmap chart, sign quadrants, x–y data graphs, triage flowchart) render from ` ```mermaid ` source. The remaining `DIAGRAM D3.k` briefs stay as searchable drawing seeds. No raster art, no external images.
+**Media.** `F`-numbered charts remain Mermaid source. Each available `DIAGRAM D3.k` brief has an editable native Excalidraw scene embedded immediately below it (`![[../_obsidian/excalidraw/kinematics-1d-D3-k.excalidraw|900]]`). The original `*Show:*` and `*Search:*` briefs are preserved in `figures.json`; the chapter gate checks the brief-to-scene mapping. No raster art or external images.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

@@ -327,11 +327,11 @@ $$</p>
 <p><em>Read:</em> low frequencies bend around the Earth, mid frequencies bounce off the ionosphere, high frequencies must see their target — one ionosphere, three careers.</p>
 </blockquote>
 <h3 id="36-propagation-space-wave">3.6 Propagation: space wave</h3>
-<p>Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon:</p>
+<p>Above about 30 MHz (VHF and higher) the wave penetrates the ionosphere and travels in a straight line — line-of-sight (LOS) propagation. The range is limited by the horizon. For one antenna of height $h$ above a spherical Earth of radius $R$, the geometric horizon distance is</p>
 <p>$$
 d=\sqrt{2Rh} \qquad (3.2)
 $$</p>
-<p>where $R=6400$ km is Earth's radius and $h$ is the antenna height. For a TV tower at 100 m: $d=\sqrt{2\times6400\times0.1}=35.8$ km. Tropospheric scattering extends the range slightly beyond the geometric horizon. FM radio, television, mobile phones, and satellite communication all use space-wave propagation.</p>
+<p>for $h\ll R$. For transmitting and receiving antennas at heights $h_t$ and $h_r$, the ideal geometric line-of-sight range is approximately $d_{\max}=\sqrt{2Rh_t}+\sqrt{2Rh_r}$ (heights and distances in the same units). With $R=6400$ km, a 100 m tower alone sees a horizon about $35.8$ km away. Atmospheric refraction can extend the practical radio horizon beyond the geometric value; terrain and obstacles can shorten it. FM radio, television, mobile phones, and satellite communication use space-wave propagation.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D100.4 · Line-of-sight propagation and horizon distance</p>
 <p><em>Show:</em> the Earth as a circle; a tower of height $h$ on the surface; a tangent line from the tower top to the horizon point; the distance $d$ along the surface; the formula $d=\sqrt{2Rh}$ labelled; a second taller tower with a longer range drawn beside it for comparison.
@@ -455,7 +455,7 @@ $$</p>
 </div>
 
 <h3 id="312-signal-to-noise-and-channel-capacity">3.12 Signal-to-noise and channel capacity</h3>
-<p><strong>Thermal noise.</strong> Any resistor at temperature $T$ produces noise power $P_n=kTB$ over bandwidth $B$. At room temperature ($T=290$ K): $kT=4\times10^{-21}$ W/Hz $=-174$ dBm/Hz. A receiver with bandwidth 10 MHz picks up $P_n=4\times10^{-14}$ W $=-104$ dBm of thermal noise — this is the floor below which no signal can be detected.</p>
+<p><strong>Thermal noise.</strong> Any resistor at temperature $T$ produces noise power $P_n=kTB$ over bandwidth $B$. At room temperature ($T=290$ K): $kT=4\times10^{-21}$ W/Hz $=-174$ dBm/Hz. An ideal matched receiver with bandwidth 10 MHz has available thermal-noise power $P_n=kTB=4\times10^{-14}$ W $=-104$ dBm, before receiver noise figure and other noise sources. This sets a practical sensitivity scale, not an absolute detection threshold: detectability also depends on required SNR, integration time, coding, and interference.</p>
 <p><strong>Shannon's channel capacity theorem.</strong> A channel with bandwidth $B$ and signal-to-noise ratio $S/N$ can transmit at most:</p>
 <p>$$
 C=B\log_2\left(1+\frac{S}{N}\right)\ \text{bits/s}. \qquad (3.11)

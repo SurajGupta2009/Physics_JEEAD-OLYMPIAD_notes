@@ -2,35 +2,170 @@
   "slug": "simple-harmonic-motion",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F10.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F10.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one equation a = -ω²x played out across springs, pendulums, energy and resonance",
       "data": "the Part 0-14 structure",
       "read": "every result is ω=√(k/m), an energy share, or a resonance peak",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F10.2", "kind": "flowchart", "title": "The phase ladder: v leads x, a leads v",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F10.2",
+      "kind": "flowchart",
+      "title": "The phase ladder: v leads x, a leads v",
       "why": "the three sinusoids differ only by quarter-turns",
       "data": "x=A sin ωt; v leads by 90°; a opposite to x",
       "read": "velocity a quarter-cycle ahead of displacement; acceleration points back at equilibrium",
-      "source": "DIAGRAM D10.1 (§3.3)" },
-    { "id": "F10.3", "kind": "flowchart", "title": "Energy exchange: all kinetic in the middle, all potential at the ends",
+      "source": "DIAGRAM D10.1 (§3.3)"
+    },
+    {
+      "id": "F10.3",
+      "kind": "flowchart",
+      "title": "Energy exchange: all kinetic in the middle, all potential at the ends",
       "why": "the two shares trade without changing the total",
       "data": "K=½k(A²-x²), U=½kx², E=½kA² constant",
       "read": "the box holds a fixed total poured between spring and motion",
-      "source": "DIAGRAM D10.3 (§3.4)" },
-    { "id": "F10.4", "kind": "flowchart", "title": "Springs: parallel adds, series reciprocates",
+      "source": "DIAGRAM D10.3 (§3.4)"
+    },
+    {
+      "id": "F10.4",
+      "kind": "flowchart",
+      "title": "Springs: parallel adds, series reciprocates",
       "why": "the only work is finding k_eff before the period formula",
       "data": "parallel k1+k2; series 1/k = 1/k1 + 1/k2",
       "read": "parallel is the recipe for stiffer, series for softer",
-      "source": "DIAGRAM D10.4 (§3.5)" },
-    { "id": "F10.5", "kind": "xychart-beta", "title": "Resonance: small damping, tall sharp peak",
+      "source": "DIAGRAM D10.4 (§3.5)"
+    },
+    {
+      "id": "F10.5",
+      "kind": "xychart-beta",
+      "title": "Resonance: small damping, tall sharp peak",
       "why": "every forced-oscillator question is about the peak's height and width",
       "data": "peak near ω=ω0; Q=ω0/2γ sets height and width",
       "read": "light damping makes a needle-sharp spike; heavy damping flattens it",
-      "source": "DIAGRAM D10.7 (§3.10)" },
-    { "id": "F10.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D10.7 (§3.10)"
+    },
+    {
+      "id": "F10.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the eight triage branches of §9.1",
       "read": "period wants system constants, initial conditions want the phase, speed wants energy",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D10.1",
+      "kind": "excalidraw",
+      "title": "SHM sinusoidal waveform: x, v and a",
+      "show": "three panels. Top: $x(t)=A\\sin\\omega t$. Middle: $v(t)=A\\omega\\cos\\omega t$ (leads $x$ by $90°$). Bottom: $a(t)=-A\\omega^2\\sin\\omega t$ (leads $v$ by $90°$, opposite to $x$). Mark the phase relationships.",
+      "search": "\"SHM displacement velocity acceleration phase relationship graph\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-1.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.1"
+    },
+    {
+      "id": "D10.2",
+      "kind": "excalidraw",
+      "title": "The SHM phasor diagram",
+      "show": "a circle of radius $A$. A phasor (radius) rotates at angular speed $\\omega$. The projection on the vertical axis is $x$. The velocity $v$ is the projection of a phasor of length $A\\omega$ (rotated $90°$ ahead). The acceleration $a$ is the projection of a phasor of length $A\\omega^2$ (rotated $180°$ from $x$, i.e., antiparallel).",
+      "search": "\"SHM phasor diagram circle projection velocity acceleration\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-2.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.2"
+    },
+    {
+      "id": "D10.3",
+      "kind": "excalidraw",
+      "title": "Energy versus displacement in SHM",
+      "show": "$U=\\frac{1}{2}kx^2$ (parabola), $K=\\frac{1}{2}k(A^2-x^2)$ (inverted parabola), $E=$ constant (horizontal line). At $x=\\pm A$: $U=E$, $K=0$. At $x=0$: $U=0$, $K=E$. The energies exchange at every instant.",
+      "search": "\"energy versus displacement simple harmonic motion kinetic potential graph\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-3.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.3"
+    },
+    {
+      "id": "D10.4",
+      "kind": "excalidraw",
+      "title": "Series and parallel spring configurations",
+      "show": "left: two springs in series (one after the other, same force, displacements add). Right: two springs in parallel (side by side, same displacement, forces add). The effective spring constants shown.",
+      "search": "\"springs in series parallel effective spring constant diagram\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-4.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.4"
+    },
+    {
+      "id": "D10.5",
+      "kind": "excalidraw",
+      "title": "Simple pendulum with restoring-force decomposition",
+      "show": "a pendulum at angle $\\theta$ from vertical. The weight $mg$ resolved into: a component along the arc ($-mg\\sin\\theta$) and a component along the string (tension minus $mg\\cos\\theta$). For small $\\theta$: $\\sin\\theta\\approx\\theta$, so the restoring \"force\" along the arc is $-mg\\theta=-mgx/L=-kx$ with $k=mg/L$.",
+      "search": "\"simple pendulum restoring force small angle approximation diagram\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-5.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.5"
+    },
+    {
+      "id": "D10.6",
+      "kind": "excalidraw",
+      "title": "Lissajous figures for common frequency ratios",
+      "show": "a $3\\times3$ grid of Lissajous figures. Rows: $\\omega_y/\\omega_x=1,2,3$. Columns: phase difference $\\delta=0,\\pi/4,\\pi/2$. The figures range from straight lines (1:1, $\\delta=0$) to circles (1:1, $\\delta=\\pi/2$) to figure-eights (2:1, $\\delta=\\pi/4$) to complex curves (3:1).",
+      "search": "\"Lissajous figures frequency ratio phase difference grid\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-6.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.6"
+    },
+    {
+      "id": "D10.7",
+      "kind": "excalidraw",
+      "title": "Resonance curve: amplitude versus driving frequency",
+      "show": "$A(\\omega)$ vs $\\omega/\\omega_0$ for three values of damping $\\gamma$: small (sharp peak), medium, and large (broad, low peak). The peak shifts slightly below $\\omega_0$ for larger $\\gamma$. The $Q$-factor $=\\omega_0/(2\\gamma)$ indicated.",
+      "search": "\"resonance amplitude versus driving frequency damping curves graph\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-7.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.7"
+    },
+    {
+      "id": "D10.8",
+      "kind": "excalidraw",
+      "title": "The two normal modes of coupled pendulums",
+      "show": "left: in-phase mode — both pendulums displaced the same way, spring relaxed. Right: out-of-phase mode — pendulums displaced oppositely, spring stretched/compressed. The frequencies labelled.",
+      "search": "\"coupled pendulums normal modes in-phase out-of-phase diagram\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-8.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.8"
+    },
+    {
+      "id": "D10.9",
+      "kind": "excalidraw",
+      "title": "The SHM velocity–displacement ellipse and its area",
+      "show": "a plot of $v$ vs $x$. The trajectory is an ellipse with semi-axes $A$ (on the $x$-axis) and $A\\omega$ (on the $v$-axis). Each point on the ellipse represents a state of the oscillator. Its area in $x$–$v$ coordinates is $\\pi A(A\\omega)=\\pi A^2\\omega=2\\pi E/(m\\omega)$. In canonical $x$–$p$ phase space, $p=mv$ and the ellipse area is $2\\pi E/\\omega$. Ensure the two areas are not conflated.",
+      "search": "\"SHM phase space ellipse velocity displacement energy conservation\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-9.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.9"
+    },
+    {
+      "id": "D10.10",
+      "kind": "excalidraw",
+      "title": "The ballistic pendulum: collision then swing",
+      "show": "three phases: (1) a bullet of mass $m$ at speed $v$ approaching a block of mass $M$ on a string of length $L$; (2) the bullet embeds — angular momentum conserved about the pivot; (3) the block+bullet system swings up to height $h$ — energy conserved.",
+      "search": "\"ballistic pendulum collision swing angular momentum energy conservation diagram\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-10.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.10"
+    },
+    {
+      "id": "D10.11",
+      "kind": "excalidraw",
+      "title": "The nonlinear pendulum: period versus amplitude",
+      "show": "a graph of $T/T_0$ vs $\\theta_0$ (the release angle). $T/T_0=1$ for small $\\theta_0$, then increases gradually. At $\\theta_0=90°$, $T/T_0\\approx1.18$. At $\\theta_0=170°$, $T/T_0\\approx3$.",
+      "search": "\"pendulum period versus amplitude nonlinear correction graph\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-11.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.11"
+    },
+    {
+      "id": "D10.12",
+      "kind": "excalidraw",
+      "title": "The torsion pendulum",
+      "show": "a wire suspending a disk. The disk is twisted by a small angle. The wire provides a restoring torque proportional to the twist angle. The disk oscillates with a period determined by the torsion constant and the moment of inertia about the wire axis.",
+      "search": "\"torsion pendulum restoring torque oscillation diagram\"",
+      "file": "_obsidian/excalidraw/simple-harmonic-motion-D10-12.excalidraw.md",
+      "source": "simple-harmonic-motion/Simple-harmonic-motion.md · D10.12"
+    }
   ]
 }

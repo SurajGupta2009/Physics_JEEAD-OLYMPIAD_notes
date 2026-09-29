@@ -1,0 +1,134 @@
+{
+  "slug": "elasticity",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D12.1",
+      "kind": "excalidraw",
+      "title": "The stress–strain curve with six landmarks",
+      "show": "stress vertical, strain horizontal; the straight Hooke line to the proportional limit P; elastic limit E just beyond; yield Y with the small plateau; ultimate U at the top; fracture F after the necking drop; a brittle material's steep curve ending at fracture drawn dashed beside it; the elastic area shaded as recoverable energy.",
+      "search": "\"stress strain curve proportional limit yield ultimate fracture ductile brittle\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-1.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.1"
+    },
+    {
+      "id": "D12.2",
+      "kind": "excalidraw",
+      "title": "The three modulus geometries",
+      "show": "three panels: a wire under $F$ with $\\Delta L$ and the lateral necking arrows; a cube under all-face pressure $p$ with the shrunken dashed cube; a block under opposing tangential forces with the skewed dashed outline and angle $\\gamma$; each labelled with its modulus and its strain.",
+      "search": "\"young bulk shear modulus deformation diagrams tension compression shear\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-2.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.2"
+    },
+    {
+      "id": "D12.3",
+      "kind": "excalidraw",
+      "title": "Composite rod in series and stress distribution",
+      "show": "two segments of different thickness joined end to end under $F$; arrows of equal $F$ through both; a side bar chart of stress $\\sigma=F/A$ tall in the thin segment, short in the thick one; extensions labelled $\\Delta L_i=FL_i/A_iY_i$.",
+      "search": "\"composite rod series stress distribution different cross sections\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-3.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.3"
+    },
+    {
+      "id": "D12.4",
+      "kind": "excalidraw",
+      "title": "Thermal stress: free expansion versus forced length",
+      "show": "top: rod with gap $\\alpha L\\Delta T$ shown by dashed outline; bottom: the same rod between hatched walls with the reaction arrows $F$ and the label \"compress back by $\\alpha L\\Delta T$\"; a rail track with expansion gaps as inset.",
+      "search": "\"thermal stress rod between rigid walls expansion gap diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-4.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.4"
+    },
+    {
+      "id": "D12.5",
+      "kind": "excalidraw",
+      "title": "Torsion of a circular shaft and hollow-versus-solid sections",
+      "show": "a shaft with a longitudinal line helixed by $\\theta$; the surface element square skewed by $\\gamma=R\\theta/L$; the $r^3$ weighting drawn as a shaded ring; side-by-side hollow and solid sections of equal area with $J/A$ compared.",
+      "search": "\"torsion of shaft angle of twist shear strain derivation hollow solid\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-5.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.5"
+    },
+    {
+      "id": "D12.6",
+      "kind": "excalidraw",
+      "title": "Falling weight on a wire: force and energy",
+      "show": "the wire's line $F=kx$ and the weight's constant line $mg$ with the energy areas shaded: rectangle $mg(h+\\Delta)$ equals triangle $\\tfrac12k\\Delta^2$; the static point $mg/k$ and the dynamic point $\\Delta$ marked; the factor-2 case $h=0$ inset.",
+      "search": "\"weight falling on wire maximum extension energy method diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-6.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.6"
+    },
+    {
+      "id": "D12.7",
+      "kind": "excalidraw",
+      "title": "Neutral axis and fibre strains in bending",
+      "show": "a bent beam segment with the neutral axis dashed; top fibres compressed (arrows inward), bottom stretched; the linear stress diagram across the depth drawn beside it, crossing zero at the neutral axis; the arc radius $R$ indicated.",
+      "search": "\"bending beam neutral axis stress distribution linear diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-7.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.7"
+    },
+    {
+      "id": "D12.8",
+      "kind": "excalidraw",
+      "title": "Cantilever deflection and I-beam comparison",
+      "show": "left: cantilever with end load $F$, the deflected curve, $\\delta=FL^3/3YI$ labelled, moment diagram triangle beneath; right: square versus I section of equal area with $I$ values compared and the arrow \"same metal, five times stiffer\".",
+      "search": "\"cantilever beam end load deflection I-beam cross section comparison\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-8.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.8"
+    },
+    {
+      "id": "D12.9",
+      "kind": "excalidraw",
+      "title": "Interatomic potential well and linear region",
+      "show": "$U(r)$ with minimum at $r_0$, depth $D$; the parabolic fit over the small-strain region shaded; the asymmetry beyond it highlighted with the arrow \"thermal expansion lives here\"; the slope $U''(r_0)$ labelled as the bond spring.",
+      "search": "\"interatomic potential curve asymmetric thermal expansion young modulus bond\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-9.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.9"
+    },
+    {
+      "id": "D12.10",
+      "kind": "excalidraw",
+      "title": "Material property chart: Young modulus versus density",
+      "show": "log-log plot of $Y$ versus $\\rho$ with metals, ceramics, polymers, foams as labelled blobs; guide lines of slope 1 for $Y/\\rho$ (ties) and slope 2 for $Y^{1/2}/\\rho$ (beams); steel, aluminium, CFRP, rubber marked with dots.",
+      "search": "\"Ashby chart young modulus density materials selection guide lines\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-10.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.10"
+    },
+    {
+      "id": "D12.11",
+      "kind": "excalidraw",
+      "title": "Poisson contraction of a pulled wire",
+      "show": "a wire before and after loading; longitudinal arrows $\\Delta L$; a cross-section inset with the original radius dashed and the contracted radius solid, labelled $\\Delta r=-\\sigma r\\,\\Delta L/L$; a note that the fractional volume change is $(1-2\\sigma)\\Delta L/L$.",
+      "search": "\"poisson ratio lateral contraction wire diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-11.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.11"
+    },
+    {
+      "id": "D12.12",
+      "kind": "excalidraw",
+      "title": "Element of a rod under its own weight",
+      "show": "a hanging rod, origin at the free lower end; an element $dx$ at height $x$ carrying the weight $\\rho A g x$ of everything below it; the local extension $d(\\Delta)=\\rho g x\\,dx/Y$ written beside the element; the triangular load diagram from $0$ to $mg$.",
+      "search": "\"elongation of rod under own weight element diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-12.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.12"
+    },
+    {
+      "id": "D12.13",
+      "kind": "excalidraw",
+      "title": "Density of seawater against depth",
+      "show": "$\\rho(d)/\\rho_0$ from the surface to $10$ km; the straight line $1+\\rho_0 g d/B$ with $B=2.2\\times10^9$ Pa; the $4$ km point marked at $+1.8\\%$; a dashed curve showing where the linear compressibility would itself need a correction.",
+      "search": "\"seawater density increase with depth compressibility graph\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-13.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.13"
+    },
+    {
+      "id": "D12.14",
+      "kind": "excalidraw",
+      "title": "Hoop and longitudinal stresses in a thin cylinder",
+      "show": "a closed thin cylinder, cut along a diameter and one end removed in a second small sketch; on the diametral cut, pressure $p$ acting on the rectangle $2r\\times L$ balanced by two walls of thickness $t$ carrying $\\sigma$; on the end cap, $p\\pi r^2$ balanced by the ring $2\\pi rt$ carrying $\\sigma_L$; the two stresses labelled $\\sigma=pr/t$ and $\\sigma_L=pr/(2t)$, with the lengthwise crack drawn on the generator.",
+      "search": "\"thin cylinder hoop stress longitudinal stress free body diagram\"",
+      "file": "_obsidian/excalidraw/elasticity-D12-14.excalidraw.md",
+      "source": "elasticity/Elasticity.md · D12.14"
+    }
+  ]
+}

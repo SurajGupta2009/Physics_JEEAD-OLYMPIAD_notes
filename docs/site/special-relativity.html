@@ -477,7 +477,7 @@ $$</p>
 
 <h3 id="312-applications-with-a-frame-discipline">3.12 Applications with a frame discipline</h3>
 <p><strong>The twin paradox.</strong> Twin A stays on Earth; twin B travels to a star at $0.8c$, turns around, and returns. A's clock reads $T_A=2d/(0.8c)$; B's clock reads $T_B=T_A/\gamma$ for each leg (the proper time of the traveller). B returns younger. The "paradox" is that B says A's clock runs slow (by symmetry of the Lorentz transformation) — but B accelerates at the turnaround, breaking the symmetry. In A's frame, B's clock runs slow continuously. In B's frame, the turnaround changes the simultaneity convention, and A's clock jumps forward — the two calculations agree on the age difference.</p>
-<p><strong>Pair production.</strong> A photon with energy $E_\gamma$ near a nucleus can create an electron-positron pair ($e^-+e^+$). The minimum photon energy is $2m_ec^2=1.022$ MeV (both particles at rest in the CM frame). A photon in vacuum cannot pair-produce because momentum conservation cannot be satisfied simultaneously with energy conservation — the nucleus absorbs the recoil.</p>
+<p><strong>Pair production.</strong> A photon with energy $E_\gamma$ near a nucleus can create an electron-positron pair ($e^-+e^+$). Neglecting nuclear recoil, the threshold is $2m_ec^2=1.022$ MeV (the pair has zero relative kinetic energy in its centre-of-momentum frame). For a stationary nucleus of mass $M$, exact energy–momentum conservation gives $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$; the correction is tiny for a heavy nucleus but nonzero. A photon in vacuum cannot pair-produce by itself because energy and momentum cannot both be conserved; the nearby nucleus takes the recoil.</p>
 <p><strong>Nuclear binding energy.</strong> The mass of a nucleus is less than the sum of its nucleon masses by the binding energy: $B=\Delta mc^2$, where $\Delta m$ is the mass defect. This is why fission (heavy nuclei splitting) and fusion (light nuclei merging) release energy.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D28.8 · The twin paradox world lines</p>
@@ -493,7 +493,7 @@ $$</p>
 
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D28.10 · Pair production threshold energy bookkeeping</p>
-<p><em>Show:</em> a photon with energy $E_\gamma$ approaching a heavy nucleus; the photon disappearing and an electron-positron pair appearing; the energy ledger: $E_\gamma=2m_ec^2+K_{e^-}+K_{e^+}+K_{\text{nucleus}}$; at threshold all kinetic energies are zero and $E_\gamma=2m_ec^2=1.022$ MeV; the nucleus recoil marked as negligible.
+<p><em>Show:</em> a photon with energy $E_\gamma$ approaching a heavy nucleus; the photon disappearing and an electron-positron pair appearing; the energy ledger includes pair rest energies and nuclear recoil; at exact threshold the products move together in the lab (zero relative kinetic energy in the CM frame), with $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$; annotate $1.022$ MeV as the heavy-nucleus approximation.
 <em>Search:</em> "pair production photon energy threshold electron positron nucleus diagram"</p>
 </div>
 
@@ -748,7 +748,7 @@ $$</p>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> At threshold, the electron and positron are created at rest in the CM frame (any extra energy goes into kinetic energy, so the minimum is when they have none). The photon energy must equal the total rest energy: $E_\gamma=2m_ec^2=2\times0.511=1.022$ MeV. The heavy nucleus absorbs negligible recoil.</p>
+<p><strong>Method.</strong> At threshold, the pair has zero relative kinetic energy in the centre-of-momentum frame, but the nucleus and pair must recoil together in the lab to conserve momentum. For a stationary nucleus of mass $M$, invariant energy gives $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$. For a heavy nucleus the recoil correction is negligible, giving $1.022$ MeV.</p>
 </details>
 <h3 id="e9-the-gps-correction">E9 — The GPS correction</h3>
 <p>Estimate the special-relativistic clock correction for a GPS satellite at $v=3.87$ km/s, per day.</p>
@@ -844,9 +844,9 @@ $$</p>
 <tr>
 <td style="text-align: right;">9</td>
 <td>Pair production threshold</td>
-<td>$E_\gamma\geq2m_ec^2$</td>
+<td>$E_\gamma\gtrsim2m_ec^2$ (heavy-nucleus approximation)</td>
 <td>E8, Q9</td>
-<td>with recoil</td>
+<td>exact threshold includes nuclear recoil</td>
 </tr>
 <tr>
 <td style="text-align: right;">10</td>
@@ -915,7 +915,7 @@ $$</p>
 <h4 id="q9-what-is-the-threshold-photon-energy-for-pair-production-near-a-proton">Q9. What is the threshold photon energy for pair production near a proton?</h4>
 <details>
 <summary>Solution</summary>
-<p>$E_\gamma=2m_ec^2=1.022$ MeV (the nucleus absorbs recoil; its rest mass barely changes).</p>
+<p>$E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/m_p)\approx1.02256$ MeV; $1.022$ MeV is the heavy-nucleus approximation.</p>
 </details>
 <h4 id="q10-events-a-and-b-have-delta-t10-6-s-and-delta-x400-m-is-the-interval-timelike-lightlike-or-spacelike">Q10. Events A and B have $\Delta t=10^{-6}$ s and $\Delta x=400$ m. Is the interval timelike, lightlike, or spacelike?</h4>
 <details>
@@ -1322,11 +1322,11 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <p>(b). $f&lt;f_0$ (the formula $\sqrt{(1-\beta)/(1+\beta)}&lt;1$).</p>
 </details>
 <h3 id="p10-4-marks">P10 · 4 marks</h3>
-<p>Pair production near a nucleus requires a photon of at least:
+<p>Pair production near a heavy nucleus requires a photon of approximately:
 (a) 0.511 MeV  (b) 1.022 MeV  (c) 2.044 MeV  (d) 13.6 eV</p>
 <details>
 <summary>Answer</summary>
-<p>(b). $2m_ec^2=1.022$ MeV.</p>
+<p>(b), to the usual heavy-nucleus approximation. Exact threshold for a stationary nucleus of mass $M$ is $2m_ec^2(1+m_e/M)$.</p>
 </details>
 <h3 id="p11-4-marks">P11 · 4 marks</h3>
 <p>The GPS satellite clock correction is primarily due to:

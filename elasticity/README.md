@@ -1,6 +1,6 @@
 # Elasticity & Properties of Matter — first principles to Olympiad
 
-> [!note] Part 12 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 12 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Stress and strain in the four classical modes; Hooke's law as the small-strain theorem and the stress–strain curve read as design information; Young's, bulk and shear moduli from their experiments; Poisson's ratio with the bounds $-1<\sigma<\tfrac12$ and both interrelations derived; the extension family (end load, the spring constant $k=YA/L$, series and parallel composites, self-weight by integration, a tapered rod); thermal stress by expanding free and restoring the constraint; torsion ($\theta=TL/GJ$) and the torsion pendulum; elastic energy, the sudden-load factor 2, and the falling weight by energy; bending from the neutral axis through $M=YI/R$ to an integrated cantilever; plasticity, fatigue and the atomic spring; material selection by specific strength and specific modulus.
 
@@ -14,7 +14,7 @@
 
 **Olympiad layer.** $Y\sim D/r_0^3$ and the reason solids sit near $10^{11}$ Pa; thermal expansion as the asymmetry of the well, collapsing to $\alpha\sim k_B/(2D)$; the falling weight with the rod's own mass kept in the energy integral; the constant-stress rod $A=A_0 e^{x/\lambda}$ and why $\lambda$ is not the height of a tree; the cantilever integrated from the curvature equation; Euler buckling derived from the sine shape and compared with yield; the I-beam's real gain once depth is held fixed; the cubic correction to Hooke's law, and why yield arrives first; hoop stress by a free-body cut, and a spider-silk specific-strength estimate; thin-rod, P-wave and S-wave speeds as a two-modulus reading of an earthquake.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D12.k`, D12.1–D12.14) with `*Search:*` lines; no image files by design.
+**Media.** Fourteen editable native Excalidraw scenes render the D12.1–D12.14 briefs; each is embedded below its brief and stored in `_obsidian/excalidraw/`. No raster or remote images are used.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD. The chapter is about 15 600 words. plan.md §5.3 calls this part compact (9 000–13 000); the required derivations and the 200-mark paper do not fit under that ceiling without cutting a proof the plan says must be derived, so the overshoot is recorded here and in `PENDING.md` rather than hidden. The gate minimum of 9 000 is met.
 

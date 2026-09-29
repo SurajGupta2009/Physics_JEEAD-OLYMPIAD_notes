@@ -2,35 +2,170 @@
   "slug": "work-energy-power",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F6.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F6.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one question - energy or force? - the map shows where each tool lives",
       "data": "the Part 0-14 structure",
       "read": "every result is an energy ledger, a U(x) reading, or a power limit",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F6.2", "kind": "flowchart", "title": "The work-energy theorem: F = ma, integrated",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F6.2",
+      "kind": "flowchart",
+      "title": "The work-energy theorem: F = ma, integrated",
       "why": "the bridge between the two methods is one multiply-and-integrate",
       "data": "F dx = mv dv, integrate → work = ΔK",
       "read": "left side is work, right side the kinetic-energy change",
-      "source": "DIAGRAM D6.2 (§3.2)" },
-    { "id": "F6.3", "kind": "flowchart", "title": "Power: the top speed is P/f",
+      "source": "DIAGRAM D6.2 (§3.2)"
+    },
+    {
+      "id": "F6.3",
+      "kind": "flowchart",
+      "title": "Power: the top speed is P/f",
       "why": "top-speed questions all collapse to one balance of force",
       "data": "P = Fv; flat road v_max = P/f; slope P = (f + mg sinθ)v",
       "read": "the power sets a ceiling once force drops to the resistance",
-      "source": "DIAGRAM D6.3 (§3.5)" },
-    { "id": "F6.4", "kind": "flowchart", "title": "The energy ledger: account for every non-conservative term",
+      "source": "DIAGRAM D6.3 (§3.5)"
+    },
+    {
+      "id": "F6.4",
+      "kind": "flowchart",
+      "title": "The energy ledger: account for every non-conservative term",
       "why": "friction turns conservation into an accounting problem",
       "data": "K_i+U_i = K_f+U_f - W_nc; friction W_nc = -f_k d",
       "read": "mechanical energy is conserved only while every working force is conservative",
-      "source": "DIAGRAM D6.4 (§3.8)" },
-    { "id": "F6.5", "kind": "flowchart", "title": "The U(x) landscape: read it like a map",
+      "source": "DIAGRAM D6.4 (§3.8)"
+    },
+    {
+      "id": "F6.5",
+      "kind": "flowchart",
+      "title": "The U(x) landscape: read it like a map",
       "why": "the same curve answers reach, turning points, and stability",
       "data": "turning point E=U; equilibrium dU/dx=0; stable if d²U/dx²>0",
       "read": "the particle lives where E≥U, turns where E=U, rests at minima and saddles",
-      "source": "DIAGRAM D6.5 (§3.9)" },
-    { "id": "F6.6", "kind": "flowchart", "title": "Triage - energy or force?",
+      "source": "DIAGRAM D6.5 (§3.9)"
+    },
+    {
+      "id": "F6.6",
+      "kind": "flowchart",
+      "title": "Triage - energy or force?",
       "why": "the keyword names the route before any number is touched",
       "data": "the six triage branches of §9.1",
       "read": "a speed or distance wants energy; a time wants forces",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D6.1",
+      "kind": "excalidraw",
+      "title": "Work sign in six cases",
+      "show": "six diagrams: (1) pushing a box rightward (force rightward, displacement rightward: $W>0$); (2) friction opposing rightward motion ($W<0$); (3) gravity on a horizontal surface ($W=0$, force perpendicular to displacement); (4) gravity on a falling body ($W>0$, force and displacement same direction); (5) lifting a box ($W>0$ by the lifter, $W<0$ by gravity); (6) centripetal force ($W=0$, always perpendicular to velocity).",
+      "search": "\"work sign positive negative zero six cases force displacement\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-1.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.1"
+    },
+    {
+      "id": "D6.2",
+      "kind": "excalidraw",
+      "title": "Work as signed area under a force curve",
+      "show": "a graph of $F$ vs $x$ with a curve. The area between the curve and the $x$-axis is shaded. Positive areas (above the axis) and negative areas (below the axis) are shaded differently. The net work is the algebraic sum of the signed areas.",
+      "search": "\"work area under force versus displacement curve signed\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-2.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.2"
+    },
+    {
+      "id": "D6.6",
+      "kind": "excalidraw",
+      "title": "Nonlinear spring force and signed work",
+      "show": "a graph of force vs displacement for a real spring: linear ($F=-kx$) near the origin, then deviating (softening or stiffening) at large $x$. The elastic limit marked with a dashed line. Shade the signed area for work done by the spring; for extension from $x=0$, $F_{\\rm spring}=-kx$ and the work is negative.",
+      "search": "\"real spring force versus displacement nonlinear elastic limit\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-6.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.6"
+    },
+    {
+      "id": "D6.7",
+      "kind": "excalidraw",
+      "title": "Energy split around a vertical circle",
+      "show": "a vertical circle with the particle at four positions (bottom, side, top, opposite side). At each: a bar chart showing $K$ (kinetic, red) and $U$ (potential, blue). At the bottom: $K$ maximum, $U$ minimum. At the top: $K$ minimum, $U$ maximum. The total $E=K+U$ constant (same total height).",
+      "search": "\"vertical circle kinetic potential energy split four positions bar chart\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-7.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.7"
+    },
+    {
+      "id": "D6.8",
+      "kind": "excalidraw",
+      "title": "Gravitational escape and effective potential",
+      "show": "two linked $U$–$r$ plots. Left: $U(r)=-GMm/r$ approaches zero from below; mark $E=0$ as the marginal escape threshold and $v_{\\rm esc}=\\sqrt{2GM/R}$ at $r=R$. Right: for nonzero angular momentum, plot $U_{\\rm eff}(r)=L^2/(2mr^2)-GMm/r$; a bound $E<0$ line above the minimum meets it at two radial turning points, while $E\\ge0$ reaches infinity with $K_\\infty\\ge0$.",
+      "search": "\"gravitational potential energy escape velocity curve bound unbound orbit\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-8.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.8"
+    },
+    {
+      "id": "D6.9",
+      "kind": "excalidraw",
+      "title": "Normal-force work on a block and wedge",
+      "show": "a block sliding down-right on an incline that slopes down to the right, while the wedge slides right on a frictionless table. The normal force $N$ on the block is perpendicular to the incline. The block's displacement in the ground frame is not along the incline (because the wedge moves). The angle between $N$ and the block's displacement shown — it is not 90°, so the normal force does work on the block.",
+      "search": "\"block wedge normal force work ground frame displacement not perpendicular\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-9.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.9"
+    },
+    {
+      "id": "D6.10",
+      "kind": "excalidraw",
+      "title": "Wedge displacement and normal-force work",
+      "show": "a wedge whose surface slopes down-right at angle $\\theta$, sliding rightward by distance $x_w$; a block sliding down the incline by distance $s$ relative to the wedge. The block's ground-frame displacement shown as the vector sum of $s$ (along the incline) and $x_w$ (horizontal). The work of the normal force on the block: $W_N=N\\sin\\theta\\times x_w$ (the horizontal component of $N$ times the wedge displacement).",
+      "search": "\"wedge block displacement ground frame vector sum normal work\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-10.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.10"
+    },
+    {
+      "id": "D6.11",
+      "kind": "excalidraw",
+      "title": "Lifting a chain at constant speed",
+      "show": "a chain coiled on the ground being pulled vertically upward at constant speed $v$. At time $t$, the lifted length is $x=vt$; the incoming links start at rest and are accelerated upward to speed $v$. Show the lifted weight $\\lambda xg$ and the upward momentum-flux force $\\lambda v^2$, giving the required pull $F=\\lambda xg+\\lambda v^2$.",
+      "search": "\"chain lifted constant speed variable weight momentum flux force diagram\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-11.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.11"
+    },
+    {
+      "id": "D6.12",
+      "kind": "excalidraw",
+      "title": "Thermal energy in a friction ledger",
+      "show": "a bar chart with four categories: initial KE, initial PE, final KE, final PE, and a fifth bar for \"thermal energy\" (from friction). The total energy is the same in the initial and final states (energy conservation including the thermal term). The thermal bar is the difference $f_k d$.",
+      "search": "\"energy bar chart thermal term friction dissipation conservation\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-12.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.12"
+    },
+    {
+      "id": "D6.3",
+      "kind": "excalidraw",
+      "title": "Power-limited top speed",
+      "show": "a car on a flat road with engine force $F$ forward and resistive force $f$ backward. At top speed: $F=f$, $a=0$. $P=Fv_{\\max}=fv_{\\max}$. A graph of $v$ vs $t$: the car accelerates and asymptotically approaches $v_{\\max}=P/f$.",
+      "search": "\"car power limited top speed engine force resistance asymptotic\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-3.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.3"
+    },
+    {
+      "id": "D6.4",
+      "kind": "excalidraw",
+      "title": "Mechanical-energy ledger and non-conservative work",
+      "show": "three bar charts: (1) initial: $K_i$ and $U_i$; (2) final: $K_f$ and $U_f$; (3) the difference: $\\Delta K$ and $\\Delta U$ with the non-conservative work $W_{\\text{nc}}$ shown as a separate bar. Show the signed balance $\\Delta K+\\Delta U=W_{\\rm nc}$; for friction, $W_{\\rm nc}=-f_kd$ and the thermal gain is $Q=-W_{\\rm nc}=f_kd$, so $K_i+U_i=K_f+U_f+Q$. Do not imply that the three chart totals are numerically identical.",
+      "search": "\"energy bar chart initial final non-conservative work ledger\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-4.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.4"
+    },
+    {
+      "id": "D6.5",
+      "kind": "excalidraw",
+      "title": "Potential-energy landscape and turning points",
+      "show": "a $U(x)$ curve with a well (stable minimum), a hill (unstable maximum), and two turning points at a given energy $E$. The kinetic energy $K=E-U$ shown as the vertical gap between the $E$ line and the $U$ curve. The bound region (where $E>U$) shaded.",
+      "search": "\"potential energy landscape stable unstable turning points bound motion\"",
+      "file": "_obsidian/excalidraw/work-energy-power-D6-5.excalidraw.md",
+      "source": "work-energy-power/Work-energy-power.md · D6.5"
+    }
   ]
 }

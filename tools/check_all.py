@@ -69,7 +69,9 @@ def count(topic_dir, entry=None):
         inline_source = re.sub(r'\$\$.*?\$\$', '', source, flags=re.S)
         inline = re.findall(r'(?<![\\$])\$(?!\$)([^\n]*?)(?<!\\)\$(?!\$)', inline_source)
         questions = re.findall(r'^\*\*C\d+ —|^### E\d+ —|^#### Q\d+\.', source, re.M)
-        return dict(pages=[name], figures=len(re.findall(r'!\[[^\]]+\]\(assets/figures/[^)]+\)', source)),
+        embedded_svg = len(re.findall(r'!\[[^\]]+\]\(assets/figures/[^)]+\)', source))
+        embedded_excalidraw = len(re.findall(r'!\[\[[^\]\n]+\.excalidraw(?:\|[^\]\n]*)?\]\]', source))
+        return dict(pages=[name], figures=embedded_svg + embedded_excalidraw,
                     questions=len(questions), solutions=source.count('<details>'),
                     math_spans=len(inline) + len(displays), bytes_html=0,
                     bytes_markdown=os.path.getsize(path), words=len(source.split()),

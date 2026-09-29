@@ -75,6 +75,8 @@ The most valuable skills from this chapter are: (1) recognising SHM in disguise 
 > *Show:* three panels. Top: $x(t)=A\sin\omega t$. Middle: $v(t)=A\omega\cos\omega t$ (leads $x$ by $90°$). Bottom: $a(t)=-A\omega^2\sin\omega t$ (leads $v$ by $90°$, opposite to $x$). Mark the phase relationships.
 > *Search:* "SHM displacement velocity acceleration phase relationship graph"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-1.excalidraw|900]]
+
 > [!tip] FIGURE F10.1 · Chapter map
 > *Why:* the chapter is one equation $a=-\omega^2 x$ played out across springs, pendulums, energy and resonance; the map shows the spine.
 > *Data:* the Part 0–14 structure — the SHM condition, energy, springs, pendulums, damping, resonance, coupled modes, paper, sheet.
@@ -143,6 +145,8 @@ $$
 > *Show:* a circle of radius $A$. A phasor (radius) rotates at angular speed $\omega$. The projection on the vertical axis is $x$. The velocity $v$ is the projection of a phasor of length $A\omega$ (rotated $90°$ ahead). The acceleration $a$ is the projection of a phasor of length $A\omega^2$ (rotated $180°$ from $x$, i.e., antiparallel).
 > *Search:* "SHM phasor diagram circle projection velocity acceleration"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-2.excalidraw|900]]
+
 ### 3.4 Energy in SHM
 
 > [!tip] FIGURE F10.2 · The phase ladder: v leads x, a leads v
@@ -169,6 +173,8 @@ $$
 > [!abstract] DIAGRAM D10.3 · Energy versus displacement in SHM
 > *Show:* $U=\frac{1}{2}kx^2$ (parabola), $K=\frac{1}{2}k(A^2-x^2)$ (inverted parabola), $E=$ constant (horizontal line). At $x=\pm A$: $U=E$, $K=0$. At $x=0$: $U=0$, $K=E$. The energies exchange at every instant.
 > *Search:* "energy versus displacement simple harmonic motion kinetic potential graph"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-3.excalidraw|900]]
 
 > [!tip] FIGURE F10.3 · Energy exchange: all kinetic in the middle, all potential at the ends
 > *Why:* the energy bookkeeping of every oscillation — the two shares trade without ever changing the total.
@@ -198,6 +204,8 @@ $$
 > *Show:* left: two springs in series (one after the other, same force, displacements add). Right: two springs in parallel (side by side, same displacement, forces add). The effective spring constants shown.
 > *Search:* "springs in series parallel effective spring constant diagram"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-4.excalidraw|900]]
+
 > [!tip] FIGURE F10.4 · Springs: parallel adds, series reciprocates
 > *Why:* the period is always $2\pi\sqrt{m/k_{\text{eff}}}$ — the only work is finding $k_{\text{eff}}$; the figure fixes which rule goes with which wiring.
 > *Data:* parallel $k_{\text{eff}}=k_1+k_2$; series $\frac{1}{k_{\text{eff}}}=\frac1{k_1}+\frac1{k_2}$.
@@ -226,6 +234,8 @@ $$
 > *Show:* a pendulum at angle $\theta$ from vertical. The weight $mg$ resolved into: a component along the arc ($-mg\sin\theta$) and a component along the string (tension minus $mg\cos\theta$). For small $\theta$: $\sin\theta\approx\theta$, so the restoring "force" along the arc is $-mg\theta=-mgx/L=-kx$ with $k=mg/L$.
 > *Search:* "simple pendulum restoring force small angle approximation diagram"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-5.excalidraw|900]]
+
 ### 3.7 Physical pendulum
 
 For a rigid body pivoted at a distance $d$ from the COM, with moment of inertia $I$ about the pivot:
@@ -247,6 +257,8 @@ where $h=d$ is the distance from the pivot to the COM.
 > [!abstract] DIAGRAM D10.6 · Lissajous figures for common frequency ratios
 > *Show:* a $3\times3$ grid of Lissajous figures. Rows: $\omega_y/\omega_x=1,2,3$. Columns: phase difference $\delta=0,\pi/4,\pi/2$. The figures range from straight lines (1:1, $\delta=0$) to circles (1:1, $\delta=\pi/2$) to figure-eights (2:1, $\delta=\pi/4$) to complex curves (3:1).
 > *Search:* "Lissajous figures frequency ratio phase difference grid"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-6.excalidraw|900]]
 
 ### 3.9 Damped oscillations
 
@@ -278,6 +290,8 @@ The steady-state amplitude peaks at $\omega_{\rm peak}=\sqrt{\omega_0^2-2\gamma^
 > *Show:* $A(\omega)$ vs $\omega/\omega_0$ for three values of damping $\gamma$: small (sharp peak), medium, and large (broad, low peak). The peak shifts slightly below $\omega_0$ for larger $\gamma$. The $Q$-factor $=\omega_0/(2\gamma)$ indicated.
 > *Search:* "resonance amplitude versus driving frequency damping curves graph"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-7.excalidraw|900]]
+
 > [!tip] FIGURE F10.5 · Resonance: small damping, tall sharp peak
 > *Why:* every forced-oscillator question is about the peak's height and width; the figure keys both to the damping.
 > *Data:* peak near $\omega=\omega_0$ (exactly at $\omega_0$ for $\gamma\to0$); quality factor $Q=\omega_0/(2\gamma)$ sets height and width.
@@ -305,6 +319,8 @@ Any motion is a superposition of these two normal modes. This decomposition into
 > [!abstract] DIAGRAM D10.8 · The two normal modes of coupled pendulums
 > *Show:* left: in-phase mode — both pendulums displaced the same way, spring relaxed. Right: out-of-phase mode — pendulums displaced oppositely, spring stretched/compressed. The frequencies labelled.
 > *Search:* "coupled pendulums normal modes in-phase out-of-phase diagram"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-8.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 
@@ -799,9 +815,11 @@ $x(0)=A\sin\phi=A/2$, so $\sin\phi=1/2$, $\phi=\pi/6$ or $5\pi/6$. $v(0)=A\omega
 
 Instead of solving $d^2x/dt^2=-\omega^2 x$, use energy conservation: $\frac{1}{2}kx^2+\frac{1}{2}m\dot{x}^2=\frac{1}{2}kA^2$. Solve for $\dot{x}$ and integrate. This is especially useful when you need the speed at a particular displacement, or the period for a nonlinear oscillator (by integration).
 
-> [!abstract] DIAGRAM D10.9 · Energy conservation in SHM: the phase-space ellipse
-> *Show:* a plot of $v$ vs $x$. The trajectory is an ellipse with semi-axes $A$ (on the $x$-axis) and $A\omega$ (on the $v$-axis). Each point on the ellipse represents a state of the oscillator. The area of the ellipse is $\pi A\cdot A\omega=2\pi E/\omega$.
+> [!abstract] DIAGRAM D10.9 · Energy conservation in SHM: the velocity–displacement ellipse
+> *Show:* a plot of $v$ vs $x$. The trajectory is an ellipse with semi-axes $A$ (on the $x$-axis) and $A\omega$ (on the $v$-axis). Each point on the ellipse represents a state of the oscillator. Its area in $x$–$v$ coordinates is $\pi A(A\omega)=\pi A^2\omega=2\pi E/(m\omega)$. In canonical $x$–$p$ phase space, $p=mv$ and the ellipse area is $2\pi E/\omega$. Ensure the two areas are not conflated.
 > *Search:* "SHM phase space ellipse velocity displacement energy conservation"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-9.excalidraw|900]]
 
 ### 7.2 The Taylor expansion method
 
@@ -845,6 +863,8 @@ For a vertical spring with mass $m$: the equilibrium extension is $x_0=mg/k$. Th
 > *Show:* three phases: (1) a bullet of mass $m$ at speed $v$ approaching a block of mass $M$ on a string of length $L$; (2) the bullet embeds — angular momentum conserved about the pivot; (3) the block+bullet system swings up to height $h$ — energy conserved.
 > *Search:* "ballistic pendulum collision swing angular momentum energy conservation diagram"
 
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-10.excalidraw|900]]
+
 > [!danger] Trap 9 — Using $T=2\pi\sqrt{m/k}$ for springs in series without adjusting $k$
 > For springs in series: $1/k_{\text{eff}}=1/k_1+1/k_2+\cdots$. The effective spring constant is always less than the smallest individual spring. For springs in parallel: $k_{\text{eff}}=k_1+k_2+\cdots$.
 
@@ -854,6 +874,8 @@ For a vertical spring with mass $m$: the equilibrium extension is $x_0=mg/k$. Th
 > [!abstract] DIAGRAM D10.11 · The nonlinear pendulum: period vs amplitude
 > *Show:* a graph of $T/T_0$ vs $\theta_0$ (the release angle). $T/T_0=1$ for small $\theta_0$, then increases gradually. At $\theta_0=90°$, $T/T_0\approx1.18$. At $\theta_0=170°$, $T/T_0\approx3$.
 > *Search:* "pendulum period versus amplitude nonlinear correction graph"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-11.excalidraw|900]]
 
 ## Part 9 · Playbook
 
@@ -928,6 +950,8 @@ Einstein's equivalence principle states that a uniform gravitational field is lo
 > [!abstract] DIAGRAM D10.12 · The torsion pendulum: restoring torque proportional to angle
 > *Show:* a wire suspending a disk. The disk is twisted by a small angle. The wire provides a restoring torque proportional to the twist angle. The disk oscillates with a period determined by the torsion constant and the moment of inertia about the wire axis.
 > *Search:* "torsion pendulum restoring torque oscillation diagram"
+
+![[../_obsidian/excalidraw/simple-harmonic-motion-D10-12.excalidraw|900]]
 
 ### 9.8 Connecting to other chapters
 

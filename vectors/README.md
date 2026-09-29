@@ -1,6 +1,6 @@
 # Vectors & Vector Algebra — first principles to Olympiad
 
-> [!note] Part 2 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 2 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Scalars and vectors, displacement, addition (triangle and parallelogram laws), components and resolution, unit vectors and direction cosines, the dot product (projection, work), the cross product (area, torque), scalar and vector triple products, vector equations, vector calculus basics (derivative, product rules, the rotating basis), and coordinate-choice strategy.
 
@@ -18,6 +18,6 @@
 
 **Hand-off.** The polar basis ($\hat{r},\hat{\theta}$) and the vector-calculus tools are prerequisites for PART 3, PART 4, and PART 8.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D2.k`) with a `*Search:*` line; no image files by design.
+**Media.** Every `DIAGRAM D2.k` brief has an editable native Excalidraw scene embedded immediately below it (`![[../_obsidian/excalidraw/vectors-D2-k.excalidraw|900]]`). The original `*Show:*` and `*Search:*` briefs are preserved in `figures.json`; the chapter gate checks that each brief maps to one valid scene.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

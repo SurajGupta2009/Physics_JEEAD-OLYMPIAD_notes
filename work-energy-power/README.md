@@ -1,6 +1,6 @@
 # Work, Energy & Power — first principles to Olympiad
 
-> [!note] Part 6 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 6 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw diagrams · written for Obsidian reading mode
 
 **Scope.** Work by constant and variable forces; work of standard forces (gravity, friction, normal, tension, spring); the work–energy theorem (derived from $F=ma$); power; conservative forces and the closed-loop test; potential energy ($mgh$, $\frac{1}{2}kx^2$, $-GMm/r$); mechanical energy conservation (precise conditions); energy diagrams ($U(x)$, turning points, stability via $U''$); the energy/force decision rule; systems with internal work; non-conservative bookkeeping (friction, drag, thermal energy).
 
@@ -16,6 +16,6 @@
 
 **Hand-off.** The work–energy theorem and potential-energy diagrams are prerequisites for PART 7 (collisions), PART 8 (rotational dynamics), PART 9 (gravitational PE and orbits), and PART 10 (oscillations).
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D6.k`) with a `*Search:*` line; no image files by design.
+**Media.** The 12 `DIAGRAM D6.k` briefs each have an editable native Excalidraw scene embedded immediately below the brief. The original `*Show:*` / `*Search:*` text and scene provenance are retained in `figures.json`; scenes use the pinned local Excalidraw plugin. No raster or remote image assets.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

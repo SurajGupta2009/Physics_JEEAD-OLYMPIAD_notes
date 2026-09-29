@@ -133,8 +133,10 @@ $$
 Evaluating gives $g_r=0$ for $s<R$ and $g_r=-GM/s^2$ for $s>R$ (negative is toward the centre), where $M=4\pi R^2\sigma$. Thus the interior cancellation and exterior point-mass result follow from the inverse-square law; they do not follow merely from Gauss's law without spherical symmetry.
 
 > [!abstract] DIAGRAM D9.1 · The shell theorem cone construction
-> *Show:* a spherical shell with a particle $P$ outside. Two small cones from $P$ intersect the shell in two areas $dA_1$ and $dA_2$. The nearer area is smaller but closer (stronger pull); the farther area is larger but farther (weaker pull). The two effects exactly cancel for a $1/r^2$ force.
+> *Show:* a uniform spherical shell and an interior point $P$. Two opposite, equal-solid-angle cones from $P$ intersect near and far shell patches. Include the incidence-angle projection: $dA/r^2=d\Omega/|\cos\alpha|$. For opposite rays the absolute cosines match, so the inverse-square pulls have equal magnitude and opposite directions; each pair cancels.
 > *Search:* "shell theorem cone construction inverse square proof diagram"
+
+![[../_obsidian/excalidraw/gravitation-D9-1.excalidraw|900]]
 
 > [!tip] FIGURE F9.2 · The shell theorem: outside a point, inside nothing
 > *Why:* the single most powerful shortcut in the chapter — a shell acts like a point mass outside, and vanishes inside.
@@ -166,6 +168,8 @@ $$
 > *Show:* left: $g(r)$ vs $r$ for a uniform sphere — linear rise from zero at the centre to $GM/R^2$ at the surface, then $1/r^2$ falloff. Right: a sphere with a cavity, with the superposition method shown (full sphere minus small sphere).
 > *Search:* "gravitational field inside uniform sphere cavity superposition diagram"
 
+![[../_obsidian/excalidraw/gravitation-D9-2.excalidraw|900]]
+
 ### 3.5 $g$ and its variations
 
 **Altitude:** $g'=g(1-2h/R)$ for $h\ll R$.
@@ -179,6 +183,8 @@ $$
 > [!abstract] DIAGRAM D9.3 · The four $g$-variation curves on one plate
 > *Show:* four panels: (1) $g$ vs altitude (decreasing); (2) $g$ vs depth (linear decrease to zero at centre); (3) $g$ vs latitude (slight increase from equator to pole); (4) $g$ vs rotation rate (decreasing as $\omega$ increases).
 > *Search:* "gravitational acceleration variation altitude depth latitude rotation graph"
+
+![[../_obsidian/excalidraw/gravitation-D9-3.excalidraw|900]]
 
 > [!tip] FIGURE F9.3 · Four ways g changes
 > *Why:* the four variations are separate formulas that students blur; the figure keeps their directions and magnitudes distinct.
@@ -217,8 +223,10 @@ $$
 Here $M$ is the central mass and the orbiting body's mass is assumed negligible compared with $M$; for the exact two-body relative orbit replace $M$ by $M+m$. The same assumption applies to the circular-orbit and vis-viva formulas below unless their central parameter is explicitly replaced by $G(M+m)$.
 
 > [!abstract] DIAGRAM D9.4 · A Kepler ellipse with the focus, the two radii and the equal-area sectors
-> *Show:* an ellipse with the central mass at one focus. Two radii drawn from the focus to the ellipse at two nearby times. The area swept (a thin sector) shaded. The equal-area property shown: the sector at perigee (narrow, long) has the same area as the sector at apogee (wide, short).
+> *Show:* an ellipse with the central mass at one focus. Two equal-time sectors are shaded to show equal swept areas. At periapsis the radius is short and the angular sweep is larger; at apoapsis the radius is long and the angular sweep is smaller. The areas, not the angular widths, are equal.
 > *Search:* "Kepler ellipse focus equal area sectors perigee apogee diagram"
+
+![[../_obsidian/excalidraw/gravitation-D9-4.excalidraw|900]]
 
 > [!tip] FIGURE F9.4 · Kepler's laws, from the same focus
 > *Why:* all of orbital motion is three laws; the figure binds the ellipse, the area law, and the $T^2\propto a^3$ rule into one picture.
@@ -256,6 +264,8 @@ At apogee ($r=a(1+e)$): $v_a=\sqrt{\frac{GM}{a}\frac{1-e}{1+e}}$.
 > *Show:* a graph of the effective potential $U_{\text{eff}}=-GMm/r+L^2/(2mr^2)$ vs $r$ for three values of $L$. For each: the total energy $E$ shown as a horizontal line. The turning points (where $E=U_{\text{eff}}$) are the perigee and apogee.
 > *Search:* "effective potential energy versus r circular elliptical orbit turning points"
 
+![[../_obsidian/excalidraw/gravitation-D9-5.excalidraw|900]]
+
 ### 3.10 Geostationary orbit
 
 A satellite in a geostationary orbit orbits above the equator with a period equal to one sidereal day (about 23 h 56 min), so it appears stationary in the sky.
@@ -285,6 +295,8 @@ Across a body of radius $r_s$ at distance $d$ from a planet of mass $M_p$, the n
 > [!abstract] DIAGRAM D9.6 · The tide-raising differential-pull diagram
 > *Show:* the Earth with the Moon on the right. The Moon's pull on the near side (stronger) and the far side (weaker) shown as arrows. The differential (tidal) force creates two bulges: one toward the Moon, one away.
 > *Search:* "tidal force differential pull Moon Earth two bulges diagram"
+
+![[../_obsidian/excalidraw/gravitation-D9-6.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 
@@ -791,6 +803,8 @@ Gauss's law for gravity: $\oint \mathbf{g}\cdot d\mathbf{A}=-4\pi GM_{\text{enc}
 > *Show:* a uniform sphere with a concentric spherical Gaussian surface of radius $r$ inside the sphere. The enclosed mass $M_{\text{enc}}=M(r/R)^3$ shaded. The field $\mathbf{g}$ is radial and uniform on the Gaussian surface. The integral $\oint g\,dA=g\times4\pi r^2$.
 > *Search:* "Gauss's law gravitational field uniform sphere Gaussian surface diagram"
 
+![[../_obsidian/excalidraw/gravitation-D9-7.excalidraw|900]]
+
 ### 7.3 The virial theorem
 
 For a gravitationally bound system in equilibrium: $\langle K\rangle=-\frac{1}{2}\langle U\rangle$, so $\langle E\rangle=\langle K\rangle+\langle U\rangle=-\langle K\rangle=\frac{1}{2}\langle U\rangle$. This is exact for time-averaged quantities and is the foundation of stellar-structure calculations.
@@ -834,6 +848,8 @@ The only combination of $G$, $M$, and $r$ that gives a speed is $\sqrt{GM/r}$. T
 > [!abstract] DIAGRAM D9.8 · The energy ladder diagram for orbital transfers
 > *Show:* three energy levels: surface ($E=-GMm/R$), low orbit ($E=-GMm/(2R)$), escape ($E=0$). The energy increments $\Delta E$ between each level marked. The total energy to launch to orbit is $GMm/(2R)$, half the escape energy.
 > *Search:* "energy diagram orbital transfer surface orbit escape ladder"
+
+![[../_obsidian/excalidraw/gravitation-D9-8.excalidraw|900]]
 
 > [!tip] FIGURE F9.5 · The orbit energy ladder: bind, raise, escape
 > *Why:* every launch and transfer question is a difference between ladder rungs; the figure names the three energies.
@@ -908,6 +924,8 @@ Sections A and B under two minutes each. Section C three minutes. Section D twel
 > [!abstract] DIAGRAM D9.9 · Hohmann transfer: the tangential ellipse
 > *Show:* two concentric circular orbits (inner and outer). An ellipse connecting them, tangent to both at the transfer points. The two velocity vectors at perigee and apogee shown, along with the $\Delta v$ burns.
 > *Search:* "Hohmann transfer orbit ellipse perigee apogee delta v diagram"
+
+![[../_obsidian/excalidraw/gravitation-D9-9.excalidraw|900]]
 
 ### 9.5 Strategy notes for the paper
 
@@ -1071,13 +1089,19 @@ A galaxy cluster has velocity dispersion $\sigma=1000$ km/s and radius $R=1$ Mpc
 > *Show:* $U_{\text{eff}}(r)=-GMm/r+L^2/(2mr^2)$ plotted vs $r$. The minimum at $r_0$ marked. Four horizontal lines: $E=E_{\min}$ (circular), $E_{\min}<E<0$ (elliptical, two turning points), $E=0$ (parabolic), $E>0$ (hyperbolic).
 > *Search:* "effective potential gravitational orbit circular elliptical parabolic hyperbolic diagram"
 
+![[../_obsidian/excalidraw/gravitation-D9-10.excalidraw|900]]
+
 > [!abstract] DIAGRAM D9.11 · The Lagrange points of the Sun–Earth system
 > *Show:* the Sun and Earth with the five Lagrange points (L1–L5) marked. L1 between them, L2 beyond Earth, L3 opposite Earth, L4 and L5 at the equilateral-triangle points ($60°$ ahead and behind).
 > *Search:* "Lagrange points Sun Earth system L1 L2 L3 L4 L5 diagram"
 
+![[../_obsidian/excalidraw/gravitation-D9-11.excalidraw|900]]
+
 > [!abstract] DIAGRAM D9.12 · The gravity-assist slingshot in the Sun's frame
 > *Show:* Jupiter moving in its orbit. A spacecraft approaches from behind, swings around Jupiter, and leaves with higher speed in the Sun's frame. The spacecraft's trajectory curved by Jupiter's gravity. The velocity vectors before and after shown in both Jupiter's frame and the Sun's frame.
 > *Search:* "gravity assist slingshot spacecraft Jupiter velocity change diagram"
+
+![[../_obsidian/excalidraw/gravitation-D9-12.excalidraw|900]]
 
 ### 10.2 Limits and failure of the model
 

@@ -1,6 +1,6 @@
 # Newton's Laws, Friction, Constraints & Circular Dynamics — first principles to Olympiad
 
-> [!note] Part 5 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 5 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw diagrams · written for Obsidian reading mode
 
 **Scope.** Inertia and the first law; the second law as a vector statement ($\mathbf{F}=d\mathbf{p}/dt$); the third law and action–reaction pairs; free-body diagram discipline; standard forces (weight, normal, tension, spring); equilibrium and Lami's theorem; friction (static, kinetic, systems); constraint relations (pulleys, wedges, springs by differentiation); pseudo forces in non-inertial frames; circular dynamics ($\Sigma F_r=mv^2/r$, conical pendulum, banking, vertical circle with string/rod).
 
@@ -16,6 +16,6 @@
 
 **Hand-off.** The force tools and constraint methods from this chapter are prerequisites for every subsequent mechanics chapter.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D5.k`) with a `*Search:*` line; no image files by design.
+**Media.** The 12 `DIAGRAM D5.k` briefs each have an editable native Excalidraw scene embedded immediately below the brief. The original `*Show:*` / `*Search:*` text and scene provenance are retained in `figures.json`; scenes use the pinned local Excalidraw plugin. No raster or remote image assets.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

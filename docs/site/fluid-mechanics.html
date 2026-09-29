@@ -391,7 +391,7 @@
 </div>
 
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
-<p><strong>A fluid is matter that cannot keep a shape.</strong> Push a solid sideways and it pushes back with a <em>shear</em> force that grows with how far you deform it. Push a fluid sideways and it does not push back at all once it is moving steadily: a fluid at rest cannot sustain shear. That single negative statement is the whole of hydrostatics. Every force a static fluid exerts on a surface is perpendicular to that surface, which is exactly what "pressure" means.</p>
+<p><strong>A fluid is matter that cannot keep a shape under sustained shear.</strong> A solid can support a static shear stress and hold a distorted shape. A fluid at rest cannot: in hydrostatic equilibrium its stress is isotropic pressure, normal to every surface. A moving viscous fluid can exert shear stress when adjacent layers have a velocity gradient; for a Newtonian fluid that stress is proportional to the gradient. This distinction—no static shear in hydrostatic equilibrium, but possible viscous shear in flow—is the starting point for both hydrostatics and viscosity.</p>
 <p><strong>Pressure is depth, not volume.</strong> Stand behind a dam and what stresses the concrete is the depth of water, never the size of the reservoir: a thin vertical tube of water ten metres high presses the bottom exactly as hard as the ocean at ten metres. This is the hydrostatic paradox, and it is why the dam in a drawing always gets thicker toward its base — the pressure triangle grows linearly with depth.</p>
 <p><strong>Buoyancy is the fluid's memory of itself.</strong> Remove a parcel of water from a swimming pool and the hole stays where it was: the surrounding water was holding that parcel up with a force equal to its weight. Put anything else into the same hole and the surrounding water, unaware of the substitution, pushes with the <em>same</em> force. That is Archimedes, in one image, before any algebra.</p>
 <p><strong>Flow trades pressure for speed.</strong> Where a stream narrows it speeds up (the same water must get through), and where it speeds up the sideways push on the walls drops. Blowing between two hanging sheets of paper pulls them together; a pitot tube reads the speed of an aircraft by letting the air stagnate and measuring the pressure it recovers. The trade is exact as long as the flow is steady, smooth, incompressible and followed along one streamline — and it fails, spectacularly and instructively, the moment any of those four is broken.</p>
@@ -518,18 +518,7 @@
 
 <h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
 <h3 id="31-why-pressure-is-a-scalar-and-the-hydrostatic-equation">3.1 Why pressure is a scalar, and the hydrostatic equation</h3>
-<p>Take a tiny wedge of fluid at rest: two faces of area $A$ perpendicular to $x$ and to $y$, and a slanted face of area $A/\cos\phi$ at angle $\phi$. Let the pressures on the three faces be $p_x$, $p_y$, $p_\phi$. Force balance on the wedge (mass $m\to0$) in $x$ and $y$:</p>
-<p>$$
-p_x A - p_\phi \frac{A}{\cos\phi}\sin\phi\cdot\frac{\cos\phi}{\sin\phi}\sin\phi = p_x A - p_\phi A \tan\phi \sin\phi/\tan\phi
-$$</p>
-<p>That clumsy route hides the point; do it cleanly. The slanted face's normal makes angle $\phi$ with the $x$-axis, so its force components are $p_\phi (A/\cos\phi)\cos\phi=p_\phi A$ in $x$ and $p_\phi (A/\cos\phi)\sin\phi=p_\phi A\tan\phi$ in $y$. Balance:</p>
-<p>$$
-x:\quad p_x A = p_\phi A \quad\Rightarrow\quad p_x = p_\phi,
-$$</p>
-<p>$$
-y:\quad p_y A\tan\phi = p_\phi A\tan\phi + m g \quad\Rightarrow\quad p_y = p_\phi + m g/(A\tan\phi).
-$$</p>
-<p>Shrink the wedge ($m\propto$ volume $\to 0$ faster than areas): the gravity term dies and $p_x=p_y=p_\phi$ for <em>every</em> $\phi$.</p>
+<p>Take a tiny triangular wedge of fluid at rest, with three face areas chosen so that the slanted face's projected areas equal the areas of the two perpendicular faces. Let the pressures on the faces be $p_x$, $p_y$, and $p_s$. The pressure-force components on the slanted face are therefore $p_s$ times those projected areas. In the limit as the wedge shrinks, its weight is proportional to volume (linear size cubed), while pressure forces scale with face area (linear size squared), so weight is negligible in the force balance. Balancing the two components then gives $p_x=p_s$ and $p_y=p_s$. Since the slanted face can have any orientation, pressure at a point is independent of orientation: it is a scalar.</p>
 <div class="callout info">
 <p class="callout-title">Why</p>
 <p>The weight term is volume-proportional ($\sim \ell^3$) while the pressure forces are area-proportional ($\sim\ell^2$); in the limit $\ell\to0$ weight is negligible of higher order. That is the entire reason pressure at a point has no direction.</p>
@@ -801,8 +790,8 @@ $$</p>
 $$</p>
 <p>Pipe flow turns turbulent around $\text{Re}\sim2000$–$4000$; Stokes' law itself is reliable only for $\text{Re}\lesssim1$, beyond which the quadratic drag $F\approx\tfrac12 C_d\rho A v^2$ takes over (OL4 treats the crossover).</p>
 <div class="callout success">
-<p class="callout-title">Check</p>
-<p>Raindrop sanity: $r=2$ mm, quadratic regime, $v_t\approx\sqrt{8 r\rho_w g/(3 C_d\rho_a)}\approx 8$–$9$ m/s; the Stokes formula would absurdly give $\sim10^2$ m/s — a signal that $\text{Re}\gg1$ there. Small drizzle $r=0.1$ mm sits near the Stokes side: $v_t\approx1.2$ m/s with (3.15) at $\eta_{air}=1.8\times10^{-5}$: $v_t=2(10^{-4})^2(1000)(9.8)/(9\times1.8\times10^{-5})\approx1.2$ m/s ✓ gentle.</p>
+<p class="callout-title">Regime check</p>
+<p>For a water droplet of radius $r=10\,\mu$m in air, Stokes' formula gives $v_t=2r^2(\rho_w-\rho_a)g/(9\eta)\approx1.2\times10^{-2}$ m/s. With diameter $D=20\,\mu$m, this gives $\mathrm{Re}=\rho_a v_tD/\eta\approx0.016\ll1$, consistent with Stokes flow. A $0.1$ mm-radius drop is not in this regime: plugging that radius into Stokes' formula gives about $1.2$ m/s and $\mathrm{Re}\approx16$, so the Stokes result is self-inconsistent and must not be used as its terminal speed. Larger raindrops require an appropriate non-Stokes drag law.</p>
 </div>
 
 <div class="callout abstract">

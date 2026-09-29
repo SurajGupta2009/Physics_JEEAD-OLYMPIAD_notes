@@ -2,35 +2,170 @@
   "slug": "units-measurements",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F1.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F1.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one discipline - say what you measured, in what units, to what precision",
       "data": "the Part 0-14 structure",
       "read": "every result is a dimensional formula, an error sum, or a reading minus zero error",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F1.2", "kind": "flowchart", "title": "Homogeneity: every term must match",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F1.2",
+      "kind": "flowchart",
+      "title": "Homogeneity: every term must match",
       "why": "the cheapest error detector in the subject",
       "data": "s=ut+½at²: every term [L]; s=ut+at: last term [LT⁻¹] (wrong)",
       "read": "add only same-dimension terms; a mismatch is a free rejection",
-      "source": "DIAGRAM D1.2 (§3.4)" },
-    { "id": "F1.3", "kind": "flowchart", "title": "Dimensional analysis as an exponent hunt",
+      "source": "DIAGRAM D1.2 (§3.4)"
+    },
+    {
+      "id": "F1.3",
+      "kind": "flowchart",
+      "title": "Dimensional analysis as an exponent hunt",
       "why": "the whole method is one loop - guess, match exponents, solve",
       "data": "pendulum: a=0, b=½, c=-½ gives T ∝ √(L/g)",
       "read": "matching exponents ships the form but never the 2π",
-      "source": "DIAGRAM D1.3 (§3.4)" },
-    { "id": "F1.4", "kind": "flowchart", "title": "The three errors: precision is not accuracy",
+      "source": "DIAGRAM D1.3 (§3.4)"
+    },
+    {
+      "id": "F1.4",
+      "kind": "flowchart",
+      "title": "The three errors: precision is not accuracy",
       "why": "naming the error before fixing it is half the answer",
       "data": "systematic = off-centre cluster, random = scattered, gross = outlier",
       "read": "clustering fixes the wrong problem when the error is systematic",
-      "source": "DIAGRAM D1.5 (§3.9)" },
-    { "id": "F1.5", "kind": "flowchart", "title": "Linearise, then read the slope",
+      "source": "DIAGRAM D1.5 (§3.9)"
+    },
+    {
+      "id": "F1.5",
+      "kind": "flowchart",
+      "title": "Linearise, then read the slope",
       "why": "a straight line is the only graph a ruler can read",
       "data": "y=axⁿ → ln y = n ln x + ln a; pendulum T²=(4π²/g)L",
       "read": "log a power law, plot T² for the pendulum; the slope is the constant",
-      "source": "DIAGRAM D1.9 (§3.14)" },
-    { "id": "F1.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D1.9 (§3.14)"
+    },
+    {
+      "id": "F1.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the seven triage branches of §9.1",
       "read": "definitions give dimensions, dimensions give errors, a line gives the slope",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D1.1",
+      "kind": "excalidraw",
+      "title": "The seven SI base units and their modern definitions",
+      "show": "a table-like layout with the seven SI base quantities (length, mass, time, electric current, temperature, amount of substance, luminous intensity) each with its unit name (metre, kilogram, second, ampere, kelvin, mole, candela) and symbol; the modern definition of each stated in one line (e.g. metre = distance light travels in 1/299792458 s; kilogram = fixed by the Planck constant $h$).",
+      "search": "\"SI base units seven modern definitions table\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-1.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.1"
+    },
+    {
+      "id": "D1.2",
+      "kind": "excalidraw",
+      "title": "The principle of homogeneity as a balance",
+      "show": "an equation like $s = ut + \\frac{1}{2}at^2$ written large; under each term, its dimensional formula shown as a label; all three labels reading $[L]$ (balanced); then a false equation $s = ut + at$ with the third term reading $[LT^{-1}]$ (unbalanced, marked with an X).",
+      "search": "\"dimensional homogeneity equation check balanced terms\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-2.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.2"
+    },
+    {
+      "id": "D1.3",
+      "kind": "excalidraw",
+      "title": "The fractional-error table method",
+      "show": "a table with columns: variable, exponent $p$, fractional error $\\Delta A/A$, contribution $p\\times\\Delta A/A$, squared contribution. For $Z=A^2B/C$: row $A$ (exponent 2), row $B$ (exponent 1), row $C$ (exponent $-1$). The quadrature sum $\\sqrt{\\sum(p\\Delta A/A)^2}$ shown at the bottom.",
+      "search": "\"error propagation fractional error table product rule method\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-3.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.3"
+    },
+    {
+      "id": "D1.4",
+      "kind": "excalidraw",
+      "title": "Dimensional derivation of the pendulum period",
+      "show": "a simple pendulum of length $L$ and bob mass $m$; the three parameters $m$, $L$, $g$ written below with their dimensions; the exponents $a=0$, $b=1/2$, $c=-1/2$ solved in a step-by-step equation matching; the final result $T\\propto\\sqrt{L/g}$ boxed.",
+      "search": "\"dimensional analysis pendulum period derivation example\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-4.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.4"
+    },
+    {
+      "id": "D1.5",
+      "kind": "excalidraw",
+      "title": "The significant-figure rules visualised",
+      "show": "a horizontal line with numbers placed at their precision level: $0.00123$ (3 sig figs), $1.23$ (3), $1.230$ (4), $1.2300$ (5), $1230$ (ambiguous — question mark); each with the significant digits highlighted and the placeholder zeros dimmed.",
+      "search": "\"significant figures rules leading trailing zeros examples\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-5.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.5"
+    },
+    {
+      "id": "D1.6",
+      "kind": "excalidraw",
+      "title": "Catastrophic cancellation: subtracting nearly equal numbers",
+      "show": "two numbers $A=1.234$ and $B=1.231$ (both with 4 significant figures). Their difference $A-B=0.003$ has only 1 significant figure. The precision is lost because the leading digits cancel. A table showing how the relative error explodes as the difference shrinks.",
+      "search": "\"catastrophic cancellation subtraction significant figures precision loss\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-6.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.6"
+    },
+    {
+      "id": "D1.7",
+      "kind": "excalidraw",
+      "title": "The standard error of the mean vs number of measurements",
+      "show": "a plot of $\\sigma_{\\bar{x}}=\\sigma/\\sqrt{n}$ vs $n$: the uncertainty halves when $n$ grows from 1 to 4, and falls by only a factor $\\sqrt{10}$ when $n$ grows from 100 to 1000. Annotate the diminishing returns: a 10-fold improvement needs 100 times as many independent measurements.",
+      "search": "\"standard error mean versus number measurements sqrt N diminishing returns\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-7.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.7"
+    },
+    {
+      "id": "D1.8",
+      "kind": "excalidraw",
+      "title": "The three error types on a target",
+      "show": "three circular targets (bullseye diagrams). Left (systematic): all hits clustered tightly but off-centre — precise but inaccurate. Centre (random): hits scattered symmetrically around the centre — accurate on average but imprecise. Right (gross): most hits centred but one outlier far from the cluster.",
+      "search": "\"systematic random gross error accuracy precision target diagram\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-8.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.8"
+    },
+    {
+      "id": "D1.9",
+      "kind": "excalidraw",
+      "title": "Error propagation: the product rule",
+      "show": "a quantity $Z=A^2B/C$ with each variable's error bar shown; the worst-case fractional uncertainty $\\Delta Z/|Z|$ computed as $2(\\Delta A/|A|)+(\\Delta B/|B|)+(\\Delta C/|C|)$; an arrow from the input errors to the output error; the quadrature version shown alongside for comparison.",
+      "search": "\"error propagation product rule fractional errors diagram\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-9.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.9"
+    },
+    {
+      "id": "D1.10",
+      "kind": "excalidraw",
+      "title": "The vernier caliper reading",
+      "show": "the main scale with millimetre marks; the vernier scale sliding alongside with 10 divisions spanning 9 mm; the zero of the vernier between 2.3 and 2.4 cm on the main scale; the 7th vernier division coinciding with a main-scale mark; the reading $2.3+7\\times0.01=2.37$ cm annotated.",
+      "search": "\"vernier caliper reading diagram main scale vernier coincidence\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-10.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.10"
+    },
+    {
+      "id": "D1.11",
+      "kind": "excalidraw",
+      "title": "The screw gauge with zero error",
+      "show": "the sleeve (main scale) and thimble (circular scale) of a screw gauge; the jaws closed; the circular-scale zero displaced from the reference line; the zero error labelled as positive (+3 divisions = +0.03 mm); below, a reading with the zero error subtracted.",
+      "search": "\"screw gauge zero error positive negative diagram reading\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-11.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.11"
+    },
+    {
+      "id": "D1.12",
+      "kind": "excalidraw",
+      "title": "Linearisation of $T^2$ vs $L$ for a pendulum",
+      "show": "left panel: $T$ vs $L$ data points following a square-root curve; right panel: $T^2$ vs $L$ the same data points falling on a straight line; the slope $4\\pi^2/g$ and the intercept (zero) annotated; error bars on each point.",
+      "search": "\"pendulum T squared versus L linearisation graph data straight line\"",
+      "file": "_obsidian/excalidraw/units-measurements-D1-12.excalidraw.md",
+      "source": "units-measurements/Units-measurements.md · D1.12"
+    }
   ]
 }

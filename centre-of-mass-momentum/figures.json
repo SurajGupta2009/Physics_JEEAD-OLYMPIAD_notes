@@ -2,35 +2,170 @@
   "slug": "centre-of-mass-momentum",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F7.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F7.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one idea - when external forces vanish the COM coasts and momentum survives",
       "data": "the Part 0-14 structure",
       "read": "every result is a COM position, a momentum balance, or an e-bookkeeping",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F7.2", "kind": "flowchart", "title": "The COM: an isolated system coasts",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F7.2",
+      "kind": "flowchart",
+      "title": "The COM: an isolated system coasts",
       "why": "internal forces cancel in pairs, so nothing inside can steer the system",
       "data": "R = Σ m_i r_i / M; exploding shell keeps its parabola",
       "read": "the COM is the one point you can always trust",
-      "source": "DIAGRAM D7.1 (§3.1)" },
-    { "id": "F7.3", "kind": "flowchart", "title": "Impulse: the area that changes momentum",
+      "source": "DIAGRAM D7.1 (§3.1)"
+    },
+    {
+      "id": "F7.3",
+      "kind": "flowchart",
+      "title": "Impulse: the area that changes momentum",
       "why": "collisions are too brief to track the force; we trade shape for area",
       "data": "J = ∫F dt = Δp; average force = J/Δt",
       "read": "the same momentum change hurts more when it happens fast",
-      "source": "DIAGRAM D7.4 (§3.4)" },
-    { "id": "F7.4", "kind": "flowchart", "title": "Collisions: momentum always, kinetic energy sometimes",
+      "source": "DIAGRAM D7.4 (§3.4)"
+    },
+    {
+      "id": "F7.4",
+      "kind": "flowchart",
+      "title": "Collisions: momentum always, kinetic energy sometimes",
       "why": "the one rule that survives and the one that does not",
       "data": "momentum conserved; e = v_sep/v_app: 1 elastic, 0 stick, between otherwise",
       "read": "momentum is non-negotiable; e decides how much KE survives",
-      "source": "DIAGRAM D7.5 (§3.6)" },
-    { "id": "F7.5", "kind": "flowchart", "title": "The energy loss: the (1 - e²) rule",
+      "source": "DIAGRAM D7.5 (§3.6)"
+    },
+    {
+      "id": "F7.5",
+      "kind": "flowchart",
+      "title": "The energy loss: the (1 - e²) rule",
       "why": "one formula prices every imperfect collision",
       "data": "ΔK = ½μ(u1-u2)²(1-e²); zero at e=1, maximal at e=0",
       "read": "reduced mass and approach speed set the stakes; (1-e²) sets the loss",
-      "source": "DIAGRAM D7.6 (§3.7)" },
-    { "id": "F7.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D7.6 (§3.7)"
+    },
+    {
+      "id": "F7.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the seven triage branches of §9.1",
       "read": "explosions ride the COM, collisions balance momentum against e",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D7.1",
+      "kind": "excalidraw",
+      "title": "Centres of mass of standard bodies",
+      "show": "a rod, a triangle, a semicircular ring, a semicircular disc, and a solid cone, each with their COM marked by a dot and the distance from the reference surface labelled.",
+      "search": "\"centre of mass standard bodies rod triangle semicircle cone COM position\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-1.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.1"
+    },
+    {
+      "id": "D7.2",
+      "kind": "excalidraw",
+      "title": "Negative-mass method for a hole",
+      "show": "a uniform disc of radius $R$ centered at the origin with a circular hole of radius $r$ whose center is offset by $d$ along +x ($d+r<R$). Show the full disc as mass $M_1$, the removed patch as signed mass $-M_2$, and the composite COM shifted left of the origin: $x_{\\rm cm}=-M_2d/(M_1-M_2)$.",
+      "search": "\"centre of mass positive negative mass trick disc with hole\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-2.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.2"
+    },
+    {
+      "id": "D7.3",
+      "kind": "excalidraw",
+      "title": "Centre of mass after an explosion",
+      "show": "a shell following a parabolic trajectory. At the peak, it explodes into fragments. The fragments fly in different directions, but their centre of mass continues on the original parabola. The COM trajectory shown as a dashed line.",
+      "search": "\"explosion centre of mass parabola fragments trajectory\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-3.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.3"
+    },
+    {
+      "id": "D7.4",
+      "kind": "excalidraw",
+      "title": "Impulse as area under a force-time curve",
+      "show": "a graph of $F$ vs $t$ during a collision (a sharp peak). The area under the curve shaded (the impulse $J$). The average force $\\bar{F}=J/\\Delta t$ shown as a horizontal line enclosing the same area.",
+      "search": "\"impulse force versus time curve area average force collision\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-4.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.4"
+    },
+    {
+      "id": "D7.5",
+      "kind": "excalidraw",
+      "title": "Elastic, inelastic and perfectly inelastic collisions",
+      "show": "three equal-mass 1-D cases with $m_1$ approaching stationary $m_2$ at speed $u$: (1) elastic ($e=1$): $m_1$ stops and $m_2$ leaves at $u$; (2) inelastic ($0<e<1$): both move right at $v_1=(1-e)u/2$ and $v_2=(1+e)u/2$; (3) perfectly inelastic ($e=0$): they stick and move together at $u/2$. Show before/after velocity arrows.",
+      "search": "\"collision classification elastic inelastic perfectly inelastic before after\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-5.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.5"
+    },
+    {
+      "id": "D7.6",
+      "kind": "excalidraw",
+      "title": "Final velocities as functions of restitution",
+      "show": "a graph of $v_1$ and $v_2$ vs $e$ for a collision where $m_1$ approaches $m_2$ at rest. For equal masses, $m_1$ approaches a stationary $m_2$ with speed $u_1$: at $e=0$ both move at $u_1/2=v_{\\rm cm}$; at $e=1$, $v_1=0$ and $v_2=u_1$. Plot the two straight-line velocity curves against $e$.",
+      "search": "\"final velocities versus coefficient of restitution e graph 1D collision\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-6.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.6"
+    },
+    {
+      "id": "D7.7",
+      "kind": "excalidraw",
+      "title": "Components in an oblique collision",
+      "show": "two spheres colliding. The line of impact and the plane of contact drawn. The velocity components along and perpendicular to the line of impact shown for each sphere. The tangential components unchanged; the normal components determined by momentum conservation and $e$.",
+      "search": "\"2D oblique collision line of impact plane of contact velocity components\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-7.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.7"
+    },
+    {
+      "id": "D7.8",
+      "kind": "excalidraw",
+      "title": "Rocket momentum ledger",
+      "show": "at time $t$: rocket of mass $m$ moving at $v$. At time $t+dt$: rocket mass $m+dm$ at $v+dv$ ($dm<0$); expelled mass $-dm>0$ has lab-frame velocity $v-v_e$ to first order, with exhaust speed $v_e$ backward relative to the rocket. The momentum of each drawn as arrows.",
+      "search": "\"rocket equation momentum conservation exhaust diagram variable mass\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-8.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.8"
+    },
+    {
+      "id": "D7.9",
+      "kind": "excalidraw",
+      "title": "Lab and centre-of-mass frames",
+      "show": "left: a collision in the lab frame (one particle approaching a stationary target). Right: the same collision in the CM frame (both particles approach the CM with equal and opposite momenta, then scatter). The CM frame shows the total momentum is zero.",
+      "search": "\"lab frame versus centre of mass frame collision comparison diagram\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-9.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.9"
+    },
+    {
+      "id": "D7.10",
+      "kind": "excalidraw",
+      "title": "Falling chain force on a scale",
+      "show": "a chain of total length $L$ falls from rest onto a scale. Let $x$ be the length still falling (also its drop distance) and $L-x$ the length already at rest on the scale; the incoming speed is $v=\\sqrt{2gx}$. The scale supports landed weight $\\lambda(L-x)g$ and receives downward momentum flux $\\lambda v^2=2\\lambda gx$. Annotate $F=\\lambda(L+x)g$ and, at $x=L$, $F=2mg$.",
+      "search": "\"falling chain scale reading impact force weight momentum flux\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-10.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.10"
+    },
+    {
+      "id": "D7.11",
+      "kind": "excalidraw",
+      "title": "Ballistic-pendulum stages",
+      "show": "left: the collision stage — a bullet embeds in a hanging block (momentum conserved, energy not). Right: the swing stage — the block+bullet swings up to height $h$ (energy conserved, momentum not). The two stages clearly separated with labels.",
+      "search": "\"ballistic pendulum two stages collision swing momentum energy\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-11.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.11"
+    },
+    {
+      "id": "D7.12",
+      "kind": "excalidraw",
+      "title": "Man walking on a boat and fixed centre of mass",
+      "show": "a boat on frictionless water with a man standing on it. Left: initial position. Right: the man has walked rightward; the boat has moved leftward. The COM of the man+boat system shown as a fixed vertical dashed line (it does not move). The displacements $d_{\\text{man}}$ and $d_{\\text{boat}}$ annotated.",
+      "search": "\"man walking boat centre of mass fixed line displacement diagram\"",
+      "file": "_obsidian/excalidraw/centre-of-mass-momentum-D7-12.excalidraw.md",
+      "source": "centre-of-mass-momentum/Centre-of-mass-momentum.md · D7.12"
+    }
   ]
 }

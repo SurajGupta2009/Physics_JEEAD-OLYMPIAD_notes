@@ -1,0 +1,343 @@
+{
+  "slug": "electrostatics",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F13.1",
+      "part": 13,
+      "kind": "mindmap",
+      "title": "Module map",
+      "why": "the module is one argument — Coulomb's law summed three ways — and the map shows which block sums it how.",
+      "data": "the structure of Parts 0–14: the force law, the three bookkeepings (field, flux, potential), what each is best at, and where the Olympiad layer attaches.",
+      "read": "The map groups the chapter around one Coulomb law and three equivalent bookkeeping tools: force, field/flux and potential.",
+      "source": "electrostatics/Electrostatics.md · F13.1"
+    },
+    {
+      "id": "F13.2",
+      "part": 13,
+      "kind": "flowchart",
+      "title": "The element-and-symmetry method",
+      "why": "seven derivations in this chapter are the same five moves; seeing them as one flow is what makes the rod, the disc and the arc feel like one problem.",
+      "data": "the five steps of §3.4 and the two exits — a symmetry axis exists (integrate one component) or it does not (integrate two components, or switch to the potential of §3.29).",
+      "read": "Follow the symmetry branch: keep one axis component when symmetry cancels the rest; otherwise integrate vector components or switch to potential.",
+      "source": "electrostatics/Electrostatics.md · F13.2"
+    },
+    {
+      "id": "F13.3",
+      "part": 13,
+      "kind": "xychart-beta",
+      "title": "Axial field of a charged ring",
+      "why": "the curve is the first non-monotonic field in the chapter, and its maximum at $x=R/\\sqrt2$ is a standard question.",
+      "data": "$E_x/(kQ/R^2)=(x/R)/\\bigl(1+(x/R)^2\\bigr)^{3/2}$ on $x/R=0,0.25,\\dots,3$; peak $0.385$ at $x/R=0.707$; the line [0, 0] is the axis.",
+      "read": "The axial field is zero at the centre, peaks at x/R=1/√2, then falls toward the point-charge 1/x² limit.",
+      "source": "electrostatics/Electrostatics.md · F13.3"
+    },
+    {
+      "id": "F13.4",
+      "part": 13,
+      "kind": "flowchart",
+      "title": "The Gaussian-surface protocol",
+      "why": "the law is one line; every mistake is in the choice of surface, and the flow makes the choice mechanical.",
+      "data": "the four steps of §3.17 and the three admissible symmetries with their surfaces; the exit for \"no symmetry\".",
+      "read": "Match a spherical, cylindrical or planar Gaussian surface only when the source symmetry makes E constant on the relevant surface; otherwise the flow exits to direct methods.",
+      "source": "electrostatics/Electrostatics.md · F13.4"
+    },
+    {
+      "id": "F13.5",
+      "part": 13,
+      "kind": "xychart-beta",
+      "title": "Field of a uniformly charged solid sphere",
+      "why": "the linear rise and the $1/r^2$ fall meeting at the surface is the profile the paper asks you to sketch, and the one students most often draw with a jump.",
+      "data": "$E/(kQ/R^2)$ against $r/R$ on $0,0.25,\\dots,3$: $r/R$ inside, $(R/r)^2$ outside; the line [0, 0] is the axis.",
+      "read": "Inside the uniformly charged sphere E rises linearly from zero; outside it falls as 1/r², joining continuously at the surface.",
+      "source": "electrostatics/Electrostatics.md · F13.5"
+    },
+    {
+      "id": "F13.6",
+      "part": 13,
+      "kind": "xychart-beta",
+      "title": "Field profile of a uniformly charged slab",
+      "why": "the linear interior and the flat exterior, joined without a jump, is the planar twin of F13.5 and a standard \"sketch $E(x)$\" item.",
+      "data": "$E/(\\rho d/2\\varepsilon_0)$ against $x/(d/2)$ on $-3,-2.5,\\dots,3$: $x/(d/2)$ inside, $\\pm1$ outside; the line [0, 0] is the axis.",
+      "read": "The slab field rises linearly through the material and becomes constant outside, with no jump at either face.",
+      "source": "electrostatics/Electrostatics.md · F13.6"
+    },
+    {
+      "id": "F13.7",
+      "part": 13,
+      "kind": "xychart-beta",
+      "title": "Potential and field of a charged shell",
+      "why": "the pairing \"V continuous, E jumps\" at $r=R$ is the single most useful picture in the potential half of the chapter.",
+      "data": "on $r/R=0,0.25,\\dots,3$: $V/(kQ/R)=1$ inside, $R/r$ outside; $E/(kQ/R^2)=0$ inside, $(R/r)^2$ outside; the line [0, 0] is the axis.",
+      "read": "The shell has constant potential and zero field inside; outside V falls as 1/r and E as 1/r². Potential is continuous at the surface while the field jumps.",
+      "source": "electrostatics/Electrostatics.md · F13.7"
+    },
+    {
+      "id": "F13.8",
+      "part": 13,
+      "kind": "flowchart",
+      "title": "The correspondence chain of the standard fields",
+      "why": "the ledger has thirty rows but only four independent facts; seeing how each row collapses into the next is the fastest error detector on the paper.",
+      "data": "the limits of Part 3: rod → line ($L\\to\\infty$) → point ($d\\gg L$); disc → sheet ($R\\to\\infty$) and → point ($x\\gg R$); shell → point (outside) and → zero (inside); slab → sheet; dipole → two charges (near) and → $1/r^3$ (far); solid sphere → shell (charge pushed to the surface).",
+      "read": "Each finite-distribution result reduces to its simpler limit: line, sheet, point, shell, slab or dipole as the stated geometry changes.",
+      "source": "electrostatics/Electrostatics.md · F13.8"
+    },
+    {
+      "id": "F13.9",
+      "part": 13,
+      "kind": "flowchart",
+      "title": "Triage for an electrostatics question",
+      "why": "the first thirty seconds decide whether the question takes two minutes or ten; the tree routes each opening line to its cheapest tool.",
+      "data": "the decision points of Part 4.1 and Part 7 T3, with the exits named by the block that owns them.",
+      "read": "Route discrete charges to superposition, symmetric continuous sources to Gauss, and general distributions to integration or potential.",
+      "source": "electrostatics/Electrostatics.md · F13.9"
+    },
+    {
+      "id": "F13.10",
+      "part": 13,
+      "kind": "xychart-beta",
+      "title": "A ring's potential along its axis and across its plane",
+      "why": "the two curves are the saddle of (10.1) made visible — one bends down, the other up, from the same centre value.",
+      "data": "$V/(kQ/R)$ against distance from the centre in units of $R$, $0$ to $0.9$ in steps of $0.1$: along the axis $1/\\sqrt{1+x^2}$; in the plane the exact ring potential $(2/\\pi)K(m)/(1+\\rho)$ with $m=4\\rho/(1+\\rho)^2$ and $K$ the complete elliptic integral of the first kind, evaluated by the arithmetic–geometric mean.",
+      "read": "Near the centre the in-plane potential curves upward while the axial potential curves downward; the opposite curvatures reveal a saddle.",
+      "source": "electrostatics/Electrostatics.md · F13.10"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D13.1",
+      "kind": "excalidraw",
+      "title": "Three charging mechanisms with electron transfer",
+      "show": "three rows. Friction: a rod and a cloth before and after, with a handful of $e^-$ arrows crossing from cloth to rod and the final $+$/$-$ labels. Conduction: a charged sphere touching a neutral one, electrons flowing through the contact, both spheres ending with the same sign. Induction: a negative rod near a neutral sphere with $+$ on the near face and $-$ on the far face, then an earth wire draining the far-side electrons, then the wire removed, then the rod removed and the $+$ charge spreading over the sphere.",
+      "search": "\"charging by friction conduction induction electron transfer diagram grounded sphere\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-1.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.1"
+    },
+    {
+      "id": "D13.2",
+      "kind": "excalidraw",
+      "title": "Coulomb's law on a charge pair with unit vector",
+      "show": "charges $q_1$ at $\\mathbf r_1$ and $q_2$ at $\\mathbf r_2$ with the vector $\\mathbf r_{12}=\\mathbf r_2-\\mathbf r_1$ drawn from 1 to 2 and $\\hat{\\mathbf r}_{12}$ marked; two panels: like charges with $\\mathbf F_{12}$ on 2 pointing away from 1 and $\\mathbf F_{21}$ on 1 pointing away from 2; unlike charges with both forces reversed; both pairs equal in length.",
+      "search": "\"coulomb's law vector form unit vector r12 force on q2 due to q1 diagram\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-2.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.2"
+    },
+    {
+      "id": "D13.3",
+      "kind": "excalidraw",
+      "title": "The Coulomb torsion balance",
+      "show": "a horizontal insulating rod hung from a thin fibre, a charged pith ball at one end and a counterweight at the other; a second fixed charged ball brought near; the rod's deflection angle $\\theta$ marked, with the torsion torque $\\kappa\\theta$ balancing $F\\times(\\text{arm})$; an inset noting that doubling the separation quarters the angle.",
+      "search": "\"coulomb torsion balance experiment diagram pith balls fibre deflection\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-3.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.3"
+    },
+    {
+      "id": "D13.4",
+      "kind": "excalidraw",
+      "title": "Field-line patterns for point charge, dipole, like charges and sheet",
+      "show": "four panels with the same line density convention: (a) a single positive charge, radial lines outward; (b) a dipole $+q$, $-q$, lines leaving $+$ and curving into $-$, densest between them; (c) two equal positive charges, lines repelling each other with a neutral point midway where no line passes; (d) a large uniformly charged sheet, parallel lines perpendicular to it on both sides. Mark the neutral point in (c) with a cross.",
+      "search": "\"electric field lines point charge dipole two like charges parallel plate patterns\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-4.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.4"
+    },
+    {
+      "id": "D13.5",
+      "kind": "excalidraw",
+      "title": "Electric field on the axis of a charged ring",
+      "show": "a ring of radius $R$ seen in perspective, the axis with $P$ at distance $x$, an element $dq$ at the top and its partner at the bottom, both $d\\mathbf E$ vectors drawn at $P$ making angle $\\alpha$ with the axis, their perpendicular components crossed out and the axial components added; $s=\\sqrt{x^2+R^2}$ labelled.",
+      "search": "\"electric field on axis of uniformly charged ring element symmetry cancellation derivation\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-5.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.5"
+    },
+    {
+      "id": "D13.6",
+      "kind": "excalidraw",
+      "title": "Field of a finite line charge with endpoint angles",
+      "show": "a horizontal rod, point $P$ above it at distance $d$, the foot of the perpendicular, an element at angle $\\theta$ with $s$ and $dl$ marked, the end-angles $\\alpha$ and $\\beta$ drawn from the perpendicular to the two ends; the components $E_\\perp$ and $E_\\parallel$ at $P$, with $E_\\parallel$ pointing towards the end with the smaller angle.",
+      "search": "\"electric field finite line charge angles alpha beta perpendicular parallel components derivation\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-6.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.6"
+    },
+    {
+      "id": "D13.7",
+      "kind": "excalidraw",
+      "title": "The uniformly charged disc built from rings",
+      "show": "a disc of radius $R$ face-on with a shaded ring of radius $r$ and width $dr$; a side view with the axis, $P$ at distance $x$, and the ring's $d\\mathbf E$ along the axis; a small graph of $E_x$ against $x$ starting at $\\sigma/2\\varepsilon_0$ and falling to the $kQ/x^2$ tail.",
+      "search": "\"electric field on axis of uniformly charged disc rings integration sigma over two epsilon\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-7.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.7"
+    },
+    {
+      "id": "D13.8",
+      "kind": "excalidraw",
+      "title": "Two charged sheets: field in three regions",
+      "show": "two vertical sheets labelled $+\\sigma$ and $-\\sigma$; in each of the three regions, two rows of arrows (one from each sheet) with their sum written underneath: $0$, $\\sigma/\\varepsilon_0$, $0$; a second panel for $+\\sigma$, $+\\sigma$ giving $\\sigma/\\varepsilon_0$, $0$, $\\sigma/\\varepsilon_0$.",
+      "search": "\"field of two parallel infinite charged sheets superposition three regions\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-8.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.8"
+    },
+    {
+      "id": "D13.9",
+      "kind": "excalidraw",
+      "title": "Field of a charged arc at its centre",
+      "show": "an arc of angle $\\theta_0$ with its bisector, an element at $+\\varphi$ and its partner at $-\\varphi$, both $d\\mathbf E$ vectors at $O$ with the perpendicular components crossed out; the chord drawn dashed with its length $2R\\sin(\\theta_0/2)$; a second panel for the semicircle with the resultant $2k\\lambda/R$.",
+      "search": "\"electric field at centre of uniformly charged arc semicircle derivation cancellation components\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-9.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.9"
+    },
+    {
+      "id": "D13.10",
+      "kind": "excalidraw",
+      "title": "Conductor surface field: patch and rest",
+      "show": "a magnified surface patch of density $\\sigma$; on both sides of the patch a short arrow $\\sigma/2\\varepsilon_0$ pointing away from it; a longer smooth arrow $\\mathbf E_{\\text{rest}}=\\sigma/2\\varepsilon_0$ pointing outward that crosses the patch unchanged; the sums written inside (0) and outside ($\\sigma/\\varepsilon_0$).",
+      "search": "\"field just outside conductor sigma over epsilon0 local patch argument factor two\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-10.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.10"
+    },
+    {
+      "id": "D13.11",
+      "kind": "excalidraw",
+      "title": "Dipole in a uniform electric field",
+      "show": "a dipole at angle $\\theta$ to horizontal field lines, forces $+q\\mathbf E$ and $-q\\mathbf E$ drawn at the two charges, the couple's moment arm $d\\sin\\theta$ marked; beside it the $U(\\theta)=-pE\\cos\\theta$ curve from $0$ to $\\pi$ with the stable minimum at $0$ and the unstable maximum at $\\pi$ labelled.",
+      "search": "\"electric dipole uniform field torque couple potential energy minus p dot E graph\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-11.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.11"
+    },
+    {
+      "id": "D13.12",
+      "kind": "excalidraw",
+      "title": "Dipole in a non-uniform field",
+      "show": "converging field lines (stronger to the right), a dipole aligned with the field, the two forces drawn with the one on $+q$ visibly longer; the net force arrow towards the strong-field side; an inset of a comb and a paper scrap with induced $\\pm$ charges.",
+      "search": "\"dipole in non-uniform electric field net force gradient comb attracts paper induced dipole\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-12.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.12"
+    },
+    {
+      "id": "D13.13",
+      "kind": "excalidraw",
+      "title": "Three-charge equilibrium geometries",
+      "show": "(a) $q_1$ and $q_2$ on a line with the zero-field point marked between them nearer the smaller charge, and the outside zero for opposite signs; (b) the square with $q$ at the corners and $Q$ at the centre, the three forces on one corner charge drawn with the inward pull from $Q$; (c) the triangle with the centroid charge.",
+      "search": "\"equilibrium of three point charges collinear square centre charge value diagram\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-13.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.13"
+    },
+    {
+      "id": "D13.14",
+      "kind": "excalidraw",
+      "title": "Charged pendulum and deflecting plates",
+      "show": "left, a bob on a string in horizontal field lines with $mg$ down, $qE$ sideways and the tension along the string tilted by $\\theta_0$; the effective-gravity direction dashed. Right, two plates with an electron's parabola inside, the straight exit path extrapolated back to the plate centre, the screen at distance $D$ with $Y$ marked.",
+      "search": "\"charged pendulum in horizontal electric field effective gravity; electron deflection parallel plates apparent origin\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-14.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.14"
+    },
+    {
+      "id": "D13.15",
+      "kind": "excalidraw",
+      "title": "Electric flux through a tilted area",
+      "show": "parallel field lines crossing a flat rectangle tilted at angle $\\theta$; the normal $\\hat{\\mathbf n}$ drawn with the angle to $\\mathbf E$ marked; the projected rectangle of area $A\\cos\\theta$ drawn dashed perpendicular to the field with the same number of lines crossing both.",
+      "search": "\"electric flux tilted surface projected area E A cos theta diagram\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-15.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.15"
+    },
+    {
+      "id": "D13.16",
+      "kind": "excalidraw",
+      "title": "The solid-angle cone argument for Gauss's law",
+      "show": "a charge $q$ and a closed, lumpy surface; a narrow cone from $q$ cutting the surface at two patches at different distances and tilts, both with the same solid angle; the outward normals drawn, one making an acute angle with the cone (flux out), one obtuse (flux in). A second panel with $q$ outside the surface and the cone cutting it twice, entering then leaving.",
+      "search": "\"gauss law solid angle proof cone cuts closed surface charge inside outside\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-16.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.16"
+    },
+    {
+      "id": "D13.17",
+      "kind": "excalidraw",
+      "title": "Charge in a cavity: induced conductor charges",
+      "show": "an irregular conductor with an off-centre cavity containing $+q$; $-q$ crowded on the near wall of the cavity, thinner on the far wall, with field lines from $q$ ending on it; $+q$ spread uniformly over the outer surface (drawn spherical) with radial lines outward; a dashed Gaussian surface in the metal between them labelled $\\Phi=0$; a second panel with the outer surface earthed and no outside lines.",
+      "search": "\"point charge inside cavity of conductor induced charge inner surface outer surface gauss earthed shell\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-17.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.17"
+    },
+    {
+      "id": "D13.18",
+      "kind": "excalidraw",
+      "title": "Eight-cube construction and disc solid angle",
+      "show": "a charge at the corner of a cube; the $2\\times2\\times2$ block of eight identical cubes with the charge at its centre; the three faces of the original cube touching the charge shaded \"zero flux\" and the three far faces labelled $q/24\\varepsilon_0$; beside it the disc-and-cone geometry with half-angle $\\theta$ and $\\cos\\theta=x/\\sqrt{x^2+R^2}$.",
+      "search": "\"flux through cube face charge at corner eight cubes symmetry; flux through disc solid angle point charge on axis\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-18.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.18"
+    },
+    {
+      "id": "D13.19",
+      "kind": "excalidraw",
+      "title": "Closed-loop work in a point-charge field",
+      "show": "a charge at the centre, a closed path made of two radial segments and two circular arcs at radii $r_1<r_2$; on the arcs $\\mathbf E\\perp d\\mathbf l$ (no work), on the radial legs the works $kq(1/r_1-1/r_2)$ out and back cancel; a second, wiggly loop with the caption \"same: only $dr$ counts\".",
+      "search": "\"electrostatic field conservative closed loop line integral zero point charge radial arcs\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-19.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.19"
+    },
+    {
+      "id": "D13.20",
+      "kind": "excalidraw",
+      "title": "Equipotential contours and electric-field lines",
+      "show": "three panels with equipotentials as thin closed curves at equal $\\Delta V$ and field lines as arrows crossing them at right angles: (a) a point charge — concentric circles crowding inward; (b) a dipole — the straight zero-potential line midway, lobes around each charge; (c) two like charges — the figure-of-eight contour through the neutral point. Contour spacing visibly tightest where the arrows are densest.",
+      "search": "\"equipotential surfaces field lines perpendicular point charge dipole two positive charges map\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-20.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.20"
+    },
+    {
+      "id": "D13.21",
+      "kind": "excalidraw",
+      "title": "Assembling four charges at square corners",
+      "show": "a square with corners numbered 1–4 and charges arriving from infinity one at a time; under each arrival the work written: $0$, $kq^2/a$, $kq^2/a+kq^2/a\\sqrt2$, $2kq^2/a+kq^2/a\\sqrt2$; the six pair-lines drawn (four sides, two diagonals) and the total $(4+\\sqrt2)kq^2/a$.",
+      "search": "\"potential energy system of point charges assembly work pairs square corners\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-21.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.21"
+    },
+    {
+      "id": "D13.22",
+      "kind": "excalidraw",
+      "title": "Two connected spheres at equal potential",
+      "show": "a large and a small sphere joined by a long thin wire; charges drawn as dots, sparser on the large sphere but more numerous in total; field lines emerging, crowded at the small sphere; the ratios $Q_1/Q_2=R_1/R_2$ and $\\sigma_1/\\sigma_2=R_2/R_1$ written; an inset of a pointed conductor with lines crowding at the tip.",
+      "search": "\"two charged spheres connected by wire same potential charge density inversely proportional radius lightning rod\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-22.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.22"
+    },
+    {
+      "id": "D13.23",
+      "kind": "excalidraw",
+      "title": "Concentric shells: four charge and grounding cases",
+      "show": "two concentric circles; four small panels: (a) $q$ inside, $Q$ outside, isolated, with the potentials $V_a$, $V_b$ written; (b) outer earthed — outer charge becomes $-q$, no field outside; (c) inner earthed — inner charge becomes $-Qa/b$; (d) a wire joining the two shells — all charge moves to the outer shell. Field lines drawn between the shells in (a)–(c), none in (d).",
+      "search": "\"concentric conducting shells potential earthed outer shell inner shell induced charge connected by wire\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-23.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.23"
+    },
+    {
+      "id": "D13.24",
+      "kind": "excalidraw",
+      "title": "Method of images for a grounded plane",
+      "show": "a charge $+q$ at height $h$ above a horizontal earthed plane; below the plane, dashed, the image $-q$ at depth $h$; field lines from $q$ curving down to meet the plane at right angles; the induced density $\\sigma(\\rho)$ sketched as a negative bell curve beneath, peaked under the charge with $\\sigma(0)=-q/2\\pi h^2$; the force arrow on $q$ pointing down with $kq^2/4h^2$.",
+      "search": "\"method of images point charge grounded conducting plane induced surface charge density field lines\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-24.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.24"
+    },
+    {
+      "id": "D13.25",
+      "kind": "excalidraw",
+      "title": "Electrostatic pressure on a charged bubble",
+      "show": "a soap bubble in cross-section with its two surfaces; inward arrows labelled $4\\gamma/R$ (surface tension), outward arrows labelled $\\sigma^2/2\\varepsilon_0$ (electrostatic); a second panel with the pressures balanced and the charge $Q=8\\pi\\sqrt{2\\varepsilon_0\\gamma R^3}$ written; an inset of the field lines leaving the charged bubble radially.",
+      "search": "\"charged soap bubble electrostatic pressure surface tension balance radius\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-25.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.25"
+    },
+    {
+      "id": "D13.26",
+      "kind": "excalidraw",
+      "title": "Uniform overlap field and the off-centre spherical cavity",
+      "show": "left, two circles of equal radius overlapping, one shaded $+\\rho$, one $-\\rho$, their axes $d$ apart, with parallel field arrows filling the lens-shaped overlap and the crescent regions labelled as the only places with net charge; right, a sphere with an off-centre cavity, uniform parallel arrows inside the cavity along the line of centres, and the two \"component\" spheres drawn dashed.",
+      "search": "\"two overlapping charged cylinders uniform field superposition; sphere with off-centre cavity uniform field\"",
+      "file": "_obsidian/excalidraw/electrostatics-D13-26.excalidraw.md",
+      "source": "electrostatics/Electrostatics.md · D13.26"
+    }
+  ]
+}

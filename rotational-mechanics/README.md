@@ -1,6 +1,6 @@
 # Rotational Mechanics — first principles to Olympiad
 
-> [!note] Part 8 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 8 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Rigid-body kinematics ($\mathbf{v}=\boldsymbol{\omega}\times\mathbf{r}$, instantaneous axis); moment of inertia (derived for standard bodies); parallel-axis and perpendicular-axis theorems (proved); torque and $\tau=I\alpha$ (derived); angular momentum ($\mathbf{L}=I\boldsymbol{\omega}$ for fixed axis, general decomposition); conservation of angular momentum; rolling without slipping ($a=g\sin\theta/(1+I/MR^2)$, the rolling race); rolling with slipping (two-phase); rotational collisions and impulses; rigid-body equilibrium and toppling; gyroscopic precession.
 

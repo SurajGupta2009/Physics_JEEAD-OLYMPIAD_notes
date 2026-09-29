@@ -1,6 +1,6 @@
 # 2-D Motion: Projectiles, Relative Velocity & Circular Kinematics — first principles to Olympiad
 
-> [!note] Part 4 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 4 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw diagrams · written for Obsidian reading mode
 
 **Scope.** The independence principle for perpendicular motions, relative velocity in 2-D (vector triangles, rain-and-man, river crossing, aircraft-and-wind), oblique projectile (time of flight, maximum height, range, trajectory equation, complementary angles, projection from a height, motion on an incline, the safety-parabola envelope), and circular-motion kinematics (angular velocity, centripetal acceleration derived twice, non-uniform circular motion, tangential and radial components, radius of curvature).
 
@@ -18,6 +18,6 @@
 
 **Hand-off.** The projectile results and the centripetal-acceleration derivation are prerequisites for PART 5 (Newton's laws, circular dynamics) and PART 9 (gravitation, orbital motion). The relative-velocity language is used in PART 7 and PART 25.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D4.k`) with a `*Search:*` line; no image files by design.
+**Media.** The 12 `DIAGRAM D4.k` briefs each have an editable native Excalidraw scene embedded immediately below the brief. The original `*Show:*` / `*Search:*` text and scene provenance are retained in `figures.json`; scenes use the pinned local Excalidraw plugin. No raster or remote image assets.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

@@ -1,6 +1,6 @@
 # Centre of Mass, Momentum & Collisions — first principles to Olympiad
 
-> [!note] Part 7 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 7 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw diagrams · written for Obsidian reading mode
 
 **Scope.** Centre of mass (definition, COM of standard bodies, composite plates by positive/negative mass); motion of the COM ($M\mathbf{a}_{\text{cm}}=\mathbf{F}_{\text{ext}}$); momentum and impulse; conservation of momentum (conditions, component-wise); collisions (classification, coefficient of restitution $e$, 1-D results, 2-D oblique collisions, the equal-mass 90° result); the centre-of-mass frame (energy decomposition, trivial elastic collisions); variable mass (rocket equation, falling chain, sand on belt); ballistic pendulum and two-stage impulse problems; systems with internal motion (man on boat, block on wedge).
 
@@ -16,6 +16,6 @@
 
 **Hand-off.** Conservation of momentum and the collision tools are prerequisites for PART 8 (angular momentum conservation), PART 9 (orbital mechanics: two-body reduced mass), and PART 11 (fluid momentum flux).
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D7.k`) with a `*Search:*` line; no image files by design.
+**Media.** The 12 `DIAGRAM D7.k` briefs each have an editable native Excalidraw scene embedded immediately below the brief. The original `*Show:*` / `*Search:*` text and scene provenance are retained in `figures.json`; scenes use the pinned local Excalidraw plugin. No raster or remote image assets.
 
 **Gate.** `python3 tools/check.py` → ALL GOOD.

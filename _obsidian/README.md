@@ -34,7 +34,7 @@ slot as `order:` (1–31) and its syllabus `block:`; the Dataview tables sort on
 |---|---|---|
 | [templates/chapter.md](templates/chapter.md) | Templater (folder is pre-configured) | the full 15-block skeleton for a new chapter — *Templater: Insert template* |
 | [latex-suite/snippets.js](latex-suite/snippets.js) · [latex-suite/README.md](latex-suite/README.md) | LaTeX Suite (path is pre-configured) | default snippet set + the vault's physics shorthands and callout skeletons |
-| `excalidraw/` (created on first drawing) | Excalidraw | scratch drawings; export the finished figure as SVG into `<topic>/assets/figures/` |
+| `excalidraw/` | Excalidraw | the scoped D1–D13 batches' editable `.excalidraw.md` scene sources, embedded directly at their D-briefs; Electrostatics D13 consolidates plan Parts 13–15; no raster exports are used |
 
 ## The `.obsidian/` configuration (committed)
 
@@ -61,7 +61,7 @@ Per-device state (`workspace.json`, `workspace-mobile.json`, `cache`) is git-ign
 | **Advanced Tables** | `table-editor-obsidian` · 0.23.2 | 4 | aligned pipe tables, `Tab`/`Enter` cell navigation, sort, CSV export |
 | **Spaced Repetition** | `obsidian-spaced-repetition` · 1.15.4 | 1 | `==cloze==` and `::` cards — **opt-in per note**: add `#flashcards` to a note's tags and its boxed results become a deck (nothing is scanned otherwise) |
 | **Tasks** | `obsidian-tasks-plugin` · 8.4.0 | 4 | the pending queue and Part 14 checkpoints as live task lists; no global filter |
-| **Excalidraw** | `obsidian-excalidraw-plugin` · 2.27.3 | 2 | hand-drawn diagrams (ray diagrams, free-body diagrams, circuits); drawings live in `_obsidian/excalidraw/`, the committed figure is the exported **SVG** |
+| **Excalidraw** | `obsidian-excalidraw-plugin` · 2.27.3 | 2 | the scoped D1–D13 scenes are editable native Markdown drawings in `_obsidian/excalidraw/` and embedded directly in the notes; Electrostatics D13 consolidates plan Parts 13–15, while other Excalidraw work follows the SVG-export default |
 
 Mermaid (the figure system of plan.md §1.2), Canvas, checklists, properties and the PDF viewer are
 **core Obsidian** — nothing to install.
@@ -69,7 +69,10 @@ Mermaid (the figure system of plan.md §1.2), Canvas, checklists, properties and
 ### Finishing the install (one command, once)
 
 Obsidian does not download plugins from a config list; the plugin files are GitHub release
-artefacts. From the repository root, on a machine with internet:
+artefacts. The official Excalidraw v2.27.3 source has been built locally, and its `main.js`,
+`manifest.json` and `styles.css` are vendored in `.obsidian/plugins/obsidian-excalidraw-plugin/`.
+The other seven configured community plugins still need their one-time install. From the repository
+root, on a machine with internet:
 
 ```bash
 python3 tools/obsidian_plugins.py            # fetches main.js / manifest.json / styles.css at the pinned versions

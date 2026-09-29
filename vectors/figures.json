@@ -2,35 +2,170 @@
   "slug": "vectors",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F2.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F2.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one toolbox - add, resolve, project, cross - the map shows which tool answers which question",
       "data": "the Part 0-14 structure",
       "read": "an angle wants the dot, an area the cross, coplanarity the triple",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F2.2", "kind": "flowchart", "title": "Adding vectors is not adding numbers",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F2.2",
+      "kind": "flowchart",
+      "title": "Adding vectors is not adding numbers",
       "why": "the one intuition the chapter keeps returning to",
       "data": "|a+b| = √(a²+b²+2ab cosθ); 3 m + 4 m perpendicular = 5 m",
       "read": "direction matters as much as length; the cosine term is the whole difference",
-      "source": "DIAGRAM D2.2 (§3.2)" },
-    { "id": "F2.3", "kind": "flowchart", "title": "The dot product answers how much along",
+      "source": "DIAGRAM D2.2 (§3.2)"
+    },
+    {
+      "id": "F2.3",
+      "kind": "flowchart",
+      "title": "The dot product answers how much along",
       "why": "work, components, and angle-finding are one machinery",
       "data": "a·b = ab cosθ; projection = (a·b)/b",
       "read": "a scalar for projecting and angle-finding; perpendicular dots to zero",
-      "source": "DIAGRAM D2.4 (§3.6)" },
-    { "id": "F2.4", "kind": "flowchart", "title": "The cross product answers how much around",
+      "source": "DIAGRAM D2.4 (§3.6)"
+    },
+    {
+      "id": "F2.4",
+      "kind": "flowchart",
+      "title": "The cross product answers how much around",
       "why": "torque, angular momentum, magnetic force ask the same question",
       "data": "|a×b| = ab sinθ, right-hand rule, b×a = -a×b",
       "read": "a vector normal to both, magnitude the parallelogram area, sign flips on swap",
-      "source": "DIAGRAM D2.5 (§3.7)" },
-    { "id": "F2.5", "kind": "flowchart", "title": "Scalar triple = signed volume, vector triple = BAC-CAB",
+      "source": "DIAGRAM D2.5 (§3.7)"
+    },
+    {
+      "id": "F2.5",
+      "kind": "flowchart",
+      "title": "Scalar triple = signed volume, vector triple = BAC-CAB",
       "why": "the two triple products are the standard confusables",
       "data": "[a b c] = a·(b×c); a×(b×c) = b(a·c) - c(a·b)",
       "read": "scalar triple tests coplanarity; vector triple is always BAC-CAB",
-      "source": "DIAGRAM D2.6 (§3.8)" },
-    { "id": "F2.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D2.6 (§3.8)"
+    },
+    {
+      "id": "F2.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the six triage branches of §9.1",
       "read": "angle wants the dot, area the cross, coplanarity the triple",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D2.1",
+      "kind": "excalidraw",
+      "title": "The difference between a vector and a scalar",
+      "show": "left: a temperature reading \"37°C\" (a number with a unit, no arrow). Right: a displacement \"3 m east\" (an arrow from a point, with the length representing 3 m and the direction pointing east). Below: two vectors $\\mathbf{a}$ and $\\mathbf{b}$ drawn from the same point, with their sum $\\mathbf{a}+\\mathbf{b}$ shown by the parallelogram diagonal.",
+      "search": "\"vector vs scalar displacement temperature diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-1.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.1"
+    },
+    {
+      "id": "D2.2",
+      "kind": "excalidraw",
+      "title": "The triangle and parallelogram laws",
+      "show": "top: triangle law — vector $\\mathbf{a}$ followed by vector $\\mathbf{b}$, sum $\\mathbf{c}$ closing the triangle. Bottom: parallelogram law — $\\mathbf{a}$ and $\\mathbf{b}$ from the same point, the diagonal showing $\\mathbf{a}+\\mathbf{b}$, the other diagonal showing $\\mathbf{a}-\\mathbf{b}$.",
+      "search": "\"vector addition triangle parallelogram law diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-2.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.2"
+    },
+    {
+      "id": "D2.3",
+      "kind": "excalidraw",
+      "title": "Components of a vector in 2D",
+      "show": "a vector $\\mathbf{a}$ of magnitude $a$ at angle $\\theta$ from the $x$-axis; the $x$-component $a\\cos\\theta$ and $y$-component $a\\sin\\theta$ drawn as perpendicular projections onto the axes; the three sides of the right triangle labelled.",
+      "search": "\"vector components 2D x y cos sin theta diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-3.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.3"
+    },
+    {
+      "id": "D2.4",
+      "kind": "excalidraw",
+      "title": "The dot product as projection",
+      "show": "vectors $\\mathbf{a}$ and $\\mathbf{b}$ with angle $\\theta$ between them; the projection of $\\mathbf{a}$ onto $\\mathbf{b}$ shown as a dashed line from the head of $\\mathbf{a}$ perpendicular to $\\mathbf{b}$; the length of the projection labelled $a\\cos\\theta$; the formula $\\mathbf{a}\\cdot\\mathbf{b}=ab\\cos\\theta$ shown alongside.",
+      "search": "\"dot product projection formula diagram angle between vectors\"",
+      "file": "_obsidian/excalidraw/vectors-D2-4.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.4"
+    },
+    {
+      "id": "D2.5",
+      "kind": "excalidraw",
+      "title": "The cross product and the right-hand rule",
+      "show": "vectors $\\mathbf{a}$ and $\\mathbf{b}$ lying in the $xy$-plane; $\\mathbf{a}\\times\\mathbf{b}$ pointing in the $+z$ direction (right-hand rule); the magnitude $ab\\sin\\theta$ equal to the area of the parallelogram; the parallelogram shaded.",
+      "search": "\"cross product right hand rule area parallelogram diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-5.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.5"
+    },
+    {
+      "id": "D2.6",
+      "kind": "excalidraw",
+      "title": "The scalar triple product as volume",
+      "show": "three vectors $\\mathbf{a}$, $\\mathbf{b}$, $\\mathbf{c}$ from a common origin forming a skewed box (parallelepiped); the base (parallelogram of $\\mathbf{b}$ and $\\mathbf{c}$) shaded; the height (component of $\\mathbf{a}$ perpendicular to the base) shown as a dashed line; volume $=|\\mathbf{b}\\times\\mathbf{c}|\\times|a_{\\perp}|$ annotated.",
+      "search": "\"scalar triple product volume parallelepiped diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-6.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.6"
+    },
+    {
+      "id": "D2.7",
+      "kind": "excalidraw",
+      "title": "Solving $\\mathbf{a}\\times\\mathbf{x}=\\mathbf{b}$",
+      "show": "the vector $\\mathbf{a}$ drawn vertically; $\\mathbf{b}$ drawn perpendicular to $\\mathbf{a}$ (the necessary condition $\\mathbf{a}\\cdot\\mathbf{b}=0$); $\\mathbf{x}$ drawn such that $\\mathbf{a}\\times\\mathbf{x}=\\mathbf{b}$; the family of solutions $\\mathbf{x}=\\mathbf{x}_0+\\lambda\\mathbf{a}$ shown as a dashed line parallel to $\\mathbf{a}$.",
+      "search": "\"vector equation cross product solution family diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-7.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.7"
+    },
+    {
+      "id": "D2.8",
+      "kind": "excalidraw",
+      "title": "The polar basis and its rotation",
+      "show": "the unit vectors $\\hat{r}$ (pointing radially outward) and $\\hat{\\theta}$ (pointing tangentially, in the direction of increasing $\\theta$) at a point on a circle; the angle $\\theta$ from the $x$-axis; the rotation of $\\hat{r}$ by $d\\theta$ showing $d\\hat{r}=\\hat{\\theta}\\,d\\theta$; the relation $\\dot{\\hat{r}}=\\omega\\hat{\\theta}$ annotated.",
+      "search": "\"polar unit vectors r hat theta hat rotation time derivative diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-8.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.8"
+    },
+    {
+      "id": "D2.9",
+      "kind": "excalidraw",
+      "title": "The scalar triple product as a signed volume",
+      "show": "three vectors $\\mathbf{a}$, $\\mathbf{b}$, $\\mathbf{c}$ forming a parallelepiped; the sign of $[\\mathbf{a},\\mathbf{b},\\mathbf{c}]$ indicated by the right-hand rule: positive if $(\\mathbf{a},\\mathbf{b},\\mathbf{c})$ form a right-handed triad, negative if left-handed.",
+      "search": "\"scalar triple product signed volume right hand rule parallelepiped\"",
+      "file": "_obsidian/excalidraw/vectors-D2-9.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.9"
+    },
+    {
+      "id": "D2.10",
+      "kind": "excalidraw",
+      "title": "Vector addition in components",
+      "show": "two vectors $\\mathbf{a}=3\\hat{i}+2\\hat{j}$ and $\\mathbf{b}=1\\hat{i}+4\\hat{j}$ drawn from the origin; their components shown as dashed projections onto the $x$ and $y$ axes; the sum $\\mathbf{c}=4\\hat{i}+6\\hat{j}$ drawn as the diagonal of the parallelogram; each component of $\\mathbf{c}$ shown as the sum of the corresponding components.",
+      "search": "\"vector addition components x y axis sum diagram\"",
+      "file": "_obsidian/excalidraw/vectors-D2-10.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.10"
+    },
+    {
+      "id": "D2.11",
+      "kind": "excalidraw",
+      "title": "The projection of a vector onto another",
+      "show": "vector $\\mathbf{a}$ at angle $\\theta$ to vector $\\mathbf{b}$; the projection of $\\mathbf{a}$ onto $\\mathbf{b}$ shown as a dashed line from the head of $\\mathbf{a}$ perpendicular to $\\mathbf{b}$; the length $a\\cos\\theta$ labelled; the projection vector $a\\cos\\theta\\,\\hat{b}$ drawn along $\\mathbf{b}$.",
+      "search": "\"vector projection onto another vector dot product cos theta\"",
+      "file": "_obsidian/excalidraw/vectors-D2-11.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.11"
+    },
+    {
+      "id": "D2.12",
+      "kind": "excalidraw",
+      "title": "Anti-commutativity of the cross product",
+      "show": "vectors $\\mathbf{a}$ and $\\mathbf{b}$ in the $xy$-plane; $\\mathbf{a}\\times\\mathbf{b}$ pointing in the $+z$ direction (out of page); $\\mathbf{b}\\times\\mathbf{a}$ pointing in the $-z$ direction (into page); the magnitudes equal, the directions opposite; the right-hand rule applied to each.",
+      "search": "\"cross product anti commutativity a times b versus b times a\"",
+      "file": "_obsidian/excalidraw/vectors-D2-12.excalidraw.md",
+      "source": "vectors/Vectors.md · D2.12"
+    }
   ]
 }

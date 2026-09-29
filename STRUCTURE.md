@@ -137,10 +137,12 @@ layout that §4–§5 were written for survives only as the page contract that s
     └── check.py              the local gate (copied from kinematics-1d/, configured by notes.json)
 ```
 
-No `assets/`, no `.html`, no image files: figures render from Mermaid source in Obsidian
-(`docs/obsidian-plugin-workflow.md` §2). Frontmatter is the vault's metadata — `title`, `part`,
-`slug`, `order`, `block`, `status`, `source`, `aliases`, `tags` — and `tools/check_all.py` checks
-`order`/`block` against `topics.json`.
+No topic-local `assets/`, `.html`, or raster image files: standard figures render from Mermaid
+source in Obsidian (`docs/obsidian-plugin-workflow.md` §2). The scoped D1–D13 retrofit uses
+editable Excalidraw Markdown scenes centrally in `_obsidian/excalidraw/`, embedded at the
+corresponding D-briefs (Electrostatics D13 consolidates plan Parts 13–15). Frontmatter is the vault's metadata — `title`, `part`, `slug`, `order`,
+`block`, `status`, `source`, `aliases`, `tags` — and `tools/check_all.py` checks `order`/`block`
+against `topics.json`.
 
 **Self-containment is the point.** A topic folder copied anywhere — a USB stick, a phone, a
 `file://` tab — must still work. That is why there is no shared root `assets/`, no npm manifest, and

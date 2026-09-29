@@ -127,6 +127,8 @@ Floor: *Cengage Mechanics II*, ch 4 Properties of Solids and Fluids, elasticity 
 > *Search:* "stress strain curve proportional limit yield ultimate fracture ductile brittle"
 > *Used in:* §3.2 and Q4.
 
+![[../_obsidian/excalidraw/elasticity-D12-1.excalidraw|900]]
+
 ## Part 3 · Core derivations
 
 ### 3.1 Stress and strain: the four modes
@@ -169,6 +171,8 @@ Stretch a rod: it thins. $\sigma=-\varepsilon_{lat}/\varepsilon_{long}$. The bou
 > *Show:* three panels: a wire under $F$ with $\Delta L$ and the lateral necking arrows; a cube under all-face pressure $p$ with the shrunken dashed cube; a block under opposing tangential forces with the skewed dashed outline and angle $\gamma$; each labelled with its modulus and its strain.
 > *Search:* "young bulk shear modulus deformation diagrams tension compression shear"
 
+![[../_obsidian/excalidraw/elasticity-D12-2.excalidraw|900]]
+
 ### 3.4 Extension problems I: the spring constant of a rod
 
 A rod of length $L$, area $A$, modulus $Y$ under force $F$: $\Delta L=FL/(AY)$. Rewrite as $F=(YA/L)\Delta L$:
@@ -186,6 +190,8 @@ Series rods (same $F$, extensions add): $1/k=\sum1/k_i$; parallel rods (same $\D
 > [!abstract] DIAGRAM D12.3 · Composite rod in series, with the stress distribution
 > *Show:* two segments of different thickness joined end to end under $F$; arrows of equal $F$ through both; a side bar chart of stress $\sigma=F/A$ tall in the thin segment, short in the thick one; extensions labelled $\Delta L_i=FL_i/A_iY_i$.
 > *Search:* "composite rod series stress distribution different cross sections"
+
+![[../_obsidian/excalidraw/elasticity-D12-3.excalidraw|900]]
 
 ### 3.5 Extension problems II: self weight and taper
 
@@ -215,6 +221,8 @@ Notice $L$ cancels: a short rail and a long rail develop the *same stress* for t
 > *Search:* "thermal stress rod between rigid walls expansion gap diagram"
 > *Used in:* §3.6 and Q9.
 
+![[../_obsidian/excalidraw/elasticity-D12-4.excalidraw|900]]
+
 ### 3.7 Bulk modulus, compressibility, and the density at depth
 
 $B=-\Delta p/(\Delta V/V)$. Gases have tiny $B$ (which is why they are excluded from elasticity tables: their "modulus" depends on the process — isothermal $B=p$, adiabatic $B=\gamma p$, a thermodynamics hand-off to [[Thermodynamics#Part 3 · Core derivations|thermodynamics]]). Water: $B=2.2\times10^9$ Pa; at depth $d$, $\Delta p=\rho g d$ and the fractional volume shrink is $\rho g d/B$; density rises by the same fraction:
@@ -239,6 +247,8 @@ The torsion pendulum is this spring: $C=T/\theta=GJ/L$, period $2\pi\sqrt{I/C}$ 
 > *Show:* a shaft with a longitudinal line helixed by $\theta$; the surface element square skewed by $\gamma=R\theta/L$; the $r^3$ weighting drawn as a shaded ring; side-by-side hollow and solid sections of equal area with $J/A$ compared.
 > *Search:* "torsion of shaft angle of twist shear strain derivation hollow solid"
 
+![[../_obsidian/excalidraw/elasticity-D12-5.excalidraw|900]]
+
 ### 3.9 Elastic energy, the factor 2, and the falling weight
 
 Stretch a wire quasi-statically: $dU=F\,d(\Delta)=k x\,dx$, so $U=\tfrac12k\Delta^2=\tfrac12F\Delta$. In densities, $u=\tfrac12\sigma\varepsilon$ (tension), $\tfrac12\tau\gamma$ (shear), $\tfrac12B(\Delta V/V)^2$ (volume):
@@ -258,6 +268,8 @@ $$
 > *Show:* the wire's line $F=kx$ and the weight's constant line $mg$ with the energy areas shaded: rectangle $mg(h+\Delta)$ equals triangle $\tfrac12k\Delta^2$; the static point $mg/k$ and the dynamic point $\Delta$ marked; the factor-2 case $h=0$ inset.
 > *Search:* "weight falling on wire maximum extension energy method diagram"
 > *Used in:* §3.9 and E7.
+
+![[../_obsidian/excalidraw/elasticity-D12-6.excalidraw|900]]
 
 ### 3.10 Bending: neutral axis, curvature, and the cantilever
 
@@ -279,9 +291,13 @@ Simply supported, central load: $\delta=FL^3/(48YI)$. **Why the I-beam:** $I=\in
 > *Show:* a bent beam segment with the neutral axis dashed; top fibres compressed (arrows inward), bottom stretched; the linear stress diagram across the depth drawn beside it, crossing zero at the neutral axis; the arc radius $R$ indicated.
 > *Search:* "bending beam neutral axis stress distribution linear diagram"
 
+![[../_obsidian/excalidraw/elasticity-D12-7.excalidraw|900]]
+
 > [!abstract] DIAGRAM D12.8 · Cantilever deflection curve and the I-beam comparison
 > *Show:* left: cantilever with end load $F$, the deflected curve, $\delta=FL^3/3YI$ labelled, moment diagram triangle beneath; right: square versus I section of equal area with $I$ values compared and the arrow "same metal, five times stiffer".
 > *Search:* "cantilever beam end load deflection I-beam cross section comparison"
+
+![[../_obsidian/excalidraw/elasticity-D12-8.excalidraw|900]]
 
 ### 3.11 Beyond the linear law: plasticity, fatigue, and the atomic spring
 
@@ -307,9 +323,13 @@ Strength (yield stress), stiffness ($Y$), toughness (area under the curve), dens
 > *Show:* $U(r)$ with minimum at $r_0$, depth $D$; the parabolic fit over the small-strain region shaded; the asymmetry beyond it highlighted with the arrow "thermal expansion lives here"; the slope $U''(r_0)$ labelled as the bond spring.
 > *Search:* "interatomic potential curve asymmetric thermal expansion young modulus bond"
 
+![[../_obsidian/excalidraw/elasticity-D12-9.excalidraw|900]]
+
 > [!abstract] DIAGRAM D12.10 · Material property chart, Ashby style
 > *Show:* log-log plot of $Y$ versus $\rho$ with metals, ceramics, polymers, foams as labelled blobs; guide lines of slope 1 for $Y/\rho$ (ties) and slope 2 for $Y^{1/2}/\rho$ (beams); steel, aluminium, CFRP, rubber marked with dots.
 > *Search:* "Ashby chart young modulus density materials selection guide lines"
+
+![[../_obsidian/excalidraw/elasticity-D12-10.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 
@@ -437,13 +457,19 @@ The short fat one crushes, at a load $\sigma_y A$ set by strength, independent o
 > *Show:* a wire before and after loading; longitudinal arrows $\Delta L$; a cross-section inset with the original radius dashed and the contracted radius solid, labelled $\Delta r=-\sigma r\,\Delta L/L$; a note that the fractional volume change is $(1-2\sigma)\Delta L/L$.
 > *Search:* "poisson ratio lateral contraction wire diagram"
 
+![[../_obsidian/excalidraw/elasticity-D12-11.excalidraw|900]]
+
 > [!abstract] DIAGRAM D12.12 · Element of a rod under its own weight
 > *Show:* a hanging rod, origin at the free lower end; an element $dx$ at height $x$ carrying the weight $\rho A g x$ of everything below it; the local extension $d(\Delta)=\rho g x\,dx/Y$ written beside the element; the triangular load diagram from $0$ to $mg$.
 > *Search:* "elongation of rod under own weight element diagram"
 
+![[../_obsidian/excalidraw/elasticity-D12-12.excalidraw|900]]
+
 > [!abstract] DIAGRAM D12.13 · Density of seawater against depth
 > *Show:* $\rho(d)/\rho_0$ from the surface to $10$ km; the straight line $1+\rho_0 g d/B$ with $B=2.2\times10^9$ Pa; the $4$ km point marked at $+1.8\%$; a dashed curve showing where the linear compressibility would itself need a correction.
 > *Search:* "seawater density increase with depth compressibility graph"
+
+![[../_obsidian/excalidraw/elasticity-D12-13.excalidraw|900]]
 
 ### E1 — Extension, stress, and the breaking load
 
@@ -1003,6 +1029,8 @@ $F=dU/ds=ks+\tfrac12\gamma s^2$. The fractional correction to the linear law is 
 > [!abstract] DIAGRAM D12.14 · Hoop stress by a diametral cut
 > *Show:* a closed thin cylinder, cut along a diameter and one end removed in a second small sketch; on the diametral cut, pressure $p$ acting on the rectangle $2r\times L$ balanced by two walls of thickness $t$ carrying $\sigma$; on the end cap, $p\pi r^2$ balanced by the ring $2\pi rt$ carrying $\sigma_L$; the two stresses labelled $\sigma=pr/t$ and $\sigma_L=pr/(2t)$, with the lengthwise crack drawn on the generator.
 > *Search:* "thin cylinder hoop stress longitudinal stress free body diagram"
+
+![[../_obsidian/excalidraw/elasticity-D12-14.excalidraw|900]]
 
 ### OL9 — A thin wall and a thin strand
 

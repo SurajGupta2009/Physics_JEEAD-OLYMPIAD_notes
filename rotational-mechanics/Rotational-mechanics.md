@@ -114,6 +114,8 @@ Every point on the body moves in a circle. The speed of a point at distance $r$ 
 > *Show:* a disc rotating about its centre. At three points (centre, rim, and a point at $r/2$): velocity arrows drawn tangent to the circle. The centre has $v=0$. The rim has $v=R\omega$. The intermediate point has $v=(r/2)\omega$. The instantaneous axis through the centre shown as a dot.
 > *Search:* "velocity field spinning disc instantaneous axis diagram"
 
+![[../_obsidian/excalidraw/rotational-mechanics-D8-1.excalidraw|900]]
+
 ### 3.2 Fixed-axis rotation
 
 The rotational analogues of the translational equations (constant $\alpha$):
@@ -149,6 +151,8 @@ $$
 > *Show:* a rod, ring, disc, solid sphere, hollow sphere, and cylinder, each with the axis marked and the $I$ value labelled. The distance from axis to farthest mass element shown.
 > *Search:* "moment of inertia standard bodies rod ring disc sphere cylinder table"
 
+![[../_obsidian/excalidraw/rotational-mechanics-D8-2.excalidraw|900]]
+
 ### 3.4 Axis theorems
 
 **Parallel-axis theorem:**
@@ -170,6 +174,8 @@ where $z$ is perpendicular to the plane and $x$, $y$ are in the plane.
 > [!abstract] DIAGRAM D8.3 · The parallel-axis theorem geometry
 > *Show:* a disc with the COM axis (through the centre) and a parallel axis through the rim. The distance $d=R$ shown. $I_{\text{rim}}=I_{\text{cm}}+MR^2=MR^2/2+MR^2=3MR^2/2$.
 > *Search:* "parallel axis theorem disc rim tangent geometry diagram"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-3.excalidraw|900]]
 
 > [!tip] FIGURE F8.2 · Two axis theorems: shift it or split it
 > *Why:* almost every moment-of-inertia calculation is one of two moves — the figure fixes which move fits which shape.
@@ -202,6 +208,8 @@ Internal torques cancel pairwise only when the forces are central (as in ordinar
 > [!abstract] DIAGRAM D8.4 · Torque about a point with the moment arm
 > *Show:* a force $\mathbf{F}$ applied at point $P$ on a body pivoted at $O$. The moment arm $d=r\sin\theta$ drawn as the perpendicular distance from $O$ to the line of action of $\mathbf{F}$. $\tau=Fd$ annotated.
 > *Search:* "torque moment arm perpendicular distance force pivot diagram"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-4.excalidraw|900]]
 
 > [!tip] FIGURE F8.3 · Torque: force times the lever arm
 > *Why:* the same force turns harder from farther out — the figure reduces torque to its two levers of control.
@@ -239,6 +247,8 @@ Here $\mathbf{I}_{\text{cm}}$ is the inertia tensor. The simpler vector relation
 > *Show:* a wheel rolling to the right at speed $v$. At the contact point: $v_{\text{contact}}=v-\omega R=0$ (no-slip condition). At the top: $v_{\text{top}}=v+\omega R=2v$. At the centre: $v_{\text{cm}}=v$. The velocity field shown as arrows of varying length around the wheel.
 > *Search:* "rolling wheel velocity field contact point rest top 2v diagram"
 
+![[../_obsidian/excalidraw/rotational-mechanics-D8-5.excalidraw|900]]
+
 ### 3.7 Conservation of angular momentum
 
 About a fixed inertial origin $O$, the external torque satisfies
@@ -254,6 +264,8 @@ If this torque is zero, $\mathbf{L}_O$ is constant. The scalar component about a
 > [!abstract] DIAGRAM D8.6 · The spinning skater: angular momentum conservation
 > *Show:* a skater spinning with arms out ($I_1$ large, $\omega_1$ small) and arms in ($I_2$ small, $\omega_2$ large). $L=I_1\omega_1=I_2\omega_2$ annotated. The KE increases: $\frac{1}{2}I_2\omega_2^2>\frac{1}{2}I_1\omega_1^2$ — the extra energy comes from the work the skater does pulling her arms in.
 > *Search:* "spinning skater angular momentum conservation arms in out kinetic energy"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-6.excalidraw|900]]
 
 > [!tip] FIGURE F8.4 · Angular momentum: constant when torque-free — even as KE changes
 > *Why:* the deep surprise — $L$ is frozen while the kinetic energy rises, paid for by internal work; the figure makes the split explicit.
@@ -297,6 +309,8 @@ $$
 > *Show:* an incline with five bodies (solid sphere, solid cylinder, hollow sphere, hollow cylinder, sliding block) at the same time after release. The solid sphere is furthest ahead; the sliding block (no rotation) is even further. The $I/(MR^2)$ values annotated.
 > *Search:* "rolling race incline solid sphere cylinder hollow sphere order diagram"
 
+![[../_obsidian/excalidraw/rotational-mechanics-D8-7.excalidraw|900]]
+
 > [!tip] FIGURE F8.5 · Rolling without slipping: two energies, one race
 > *Why:* the whole rolling toolkit — the constraint, the energy split, and why some bodies win the race — in one figure.
 > *Data:* $v_{\text{cm}}=\omega R$; $K=\tfrac12 Mv^2+\tfrac12 I\omega^2$; acceleration $a=\frac{g\sin\theta}{1+I/MR^2}$, so smaller $I/MR^2$ wins.
@@ -322,6 +336,8 @@ When the no-slip condition is violated ($v_{\text{cm}}\neq\omega R$), kinetic fr
 > *Show:* a graph of $v$ and $\omega R$ vs $t$. Initially $v>v_0$ and $\omega R=0$ (a ball thrown with no spin). $v$ decreases (friction opposes motion), $\omega R$ increases (friction creates torque). They meet at $t^*$ when $v=\omega R$ — rolling begins. After $t^*$: $v=\omega R$ (constant, no friction needed).
 > *Search:* "slipping to rolling phase diagram v and omega R versus time"
 
+![[../_obsidian/excalidraw/rotational-mechanics-D8-8.excalidraw|900]]
+
 ### 3.10 Rotational collisions and impulses
 
 Angular impulse: $J_{\text{rot}}=\int\tau\,dt=\Delta L$.
@@ -331,6 +347,8 @@ Angular impulse: $J_{\text{rot}}=\int\tau\,dt=\Delta L$.
 > [!abstract] DIAGRAM D8.9 · A rod struck by a bullet
 > *Show:* a rod hinged at one end, initially at rest. A bullet approaches at speed $v_0$ and embeds at distance $d$ from the hinge. The angular momentum about the hinge: $L_{\text{before}}=mv_0 d$. After: $L_{\text{after}}=(I_{\text{rod}}+md^2)\omega$.
 > *Search:* "bullet hitting hinged rod angular momentum conservation diagram"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-9.excalidraw|900]]
 
 ### 3.11 Rigid-body equilibrium and toppling
 
@@ -343,6 +361,8 @@ For equilibrium: $\sum\mathbf{F}=\mathbf{0}$ and $\sum\boldsymbol{\tau}=\mathbf{
 > [!abstract] DIAGRAM D8.10 · The ladder problem's force diagram with the incipient-tip normal force
 > *Show:* a ladder leaning against a wall at angle $\theta$. Forces: weight $mg$ at the COM, normal force from the wall $N_w$ (horizontal), normal force from the ground $N_g$ (vertical), friction from the ground $f$ (horizontal). At the tipping point: $N_w$ acts at the top, $N_g$ acts at the bottom edge (not the centre of the base).
 > *Search:* "ladder against wall force diagram tipping point normal force position"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-10.excalidraw|900]]
 
 ### 3.12 Gyroscopic precession
 
@@ -357,6 +377,8 @@ This is the slow-precession approximation; it neglects nutation and assumes the 
 > [!abstract] DIAGRAM D8.11 · A gyroscope with $\mathbf{L}$, $\tau$ and the precession cone
 > *Show:* a spinning top tilted at angle $\theta$ from the vertical. $\mathbf{L}$ along the spin axis. $\boldsymbol{\tau}=\mathbf{r}_{\text{cm}}\times M\mathbf{g}$ perpendicular to $\mathbf{L}$ (horizontal). $d\mathbf{L}=\boldsymbol{\tau}\,dt$ causes $\mathbf{L}$ to precess around the vertical. The precession cone drawn.
 > *Search:* "gyroscope precession angular momentum torque cone diagram"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-11.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 
@@ -907,6 +929,8 @@ Any rigid body oscillating about a pivot has $T=2\pi\sqrt{I/(Mgd)}$. Identify $I
 > [!abstract] DIAGRAM D8.12 · The collision-then-roll transition: bullet embeds in rod
 > *Show:* a uniform rod of length $L$ hanging vertically from a frictionless hinge at the top. A bullet of mass $m$ approaches horizontally at speed $v$ and embeds at distance $d$ from the hinge. Three phases: (1) bullet approaches; (2) bullet embeds — angular momentum conserved about hinge; (3) rod swings up — energy conserved from post-collision KE to PE at maximum angle $\theta_{\max}$.
 > *Search:* "bullet embeds in rod angular momentum conservation hinge rod swing diagram"
+
+![[../_obsidian/excalidraw/rotational-mechanics-D8-12.excalidraw|900]]
 
 > [!danger] Trap 9 — Applying energy conservation during an impulsive collision
 > During a collision (even an inelastic one), angular momentum about the hinge is conserved (no external torque), but kinetic energy is NOT conserved (the bullet embeds — perfectly inelastic). Apply $\Delta L=0$ first, then energy conservation to find the subsequent swing height.

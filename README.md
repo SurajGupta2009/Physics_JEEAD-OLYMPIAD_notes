@@ -39,19 +39,19 @@ Portable Markdown note-sets with local SVG diagrams. Seven topics also keep a co
 | **semiconductors** | [Semiconductors.md](semiconductors/Semiconductors.md) | 6 Mermaid figures + 18 DIAGRAM briefs | 54 | 36-question, 3 h, 200-mark INPhO-standard paper | ✅ complete — plan.md PART 27 |
 | **communication systems** | [Communication-systems.md](communication-systems/Communication-systems.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — PENDING P7 (JEE Main) |
 | **special relativity** | [Special-relativity.md](special-relativity/Special-relativity.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark IPhO-standard paper | ✅ complete — plan.md PART 28 |
-| **units & dimensions** | [Units-measurements.md](units-measurements/Units-measurements.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 1 |
-| **vectors** | [Vectors.md](vectors/Vectors.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 37 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 2 |
-| **kinematics (1-D)** | [Kinematics-1d.md](kinematics-1d/Kinematics-1d.md) | 6 Mermaid figures + 9 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 3 |
-| **2-D motion & projectiles** | [Motion-in-two-dimensions.md](motion-in-two-dimensions/Motion-in-two-dimensions.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 35 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 4 |
-| **Newton's laws & friction** | [Newtons-laws.md](newtons-laws/Newtons-laws.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 5 |
-| **work, energy & power** | [Work-energy-power.md](work-energy-power/Work-energy-power.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 6 |
-| **centre of mass & collisions** | [Centre-of-mass-momentum.md](centre-of-mass-momentum/Centre-of-mass-momentum.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 7 |
-| **rotational mechanics** | [Rotational-mechanics.md](rotational-mechanics/Rotational-mechanics.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 8 |
-| **gravitation** | [Gravitation.md](gravitation/Gravitation.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 9 |
-| **simple harmonic motion** | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) | 6 Mermaid figures + 12 DIAGRAM briefs | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 10 |
-| **fluid mechanics & surface tension** | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) | text-only, 20 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 11 |
-| **elasticity & properties of matter** | [Elasticity.md](elasticity/Elasticity.md) | text-only, 14 DIAGRAM briefs | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 12 |
-| **electrostatics** (field · Gauss · potential) | [Electrostatics.md](electrostatics/Electrostatics.md) · [site](docs/site/electrostatics.html) | 10 Mermaid figures + 26 DIAGRAM briefs | 90 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 13 + 14 + 15 as one chapter |
+| **units & dimensions** | [Units-measurements.md](units-measurements/Units-measurements.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 1 |
+| **vectors** | [Vectors.md](vectors/Vectors.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 37 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 2 |
+| **kinematics (1-D)** | [Kinematics-1d.md](kinematics-1d/Kinematics-1d.md) | 6 Mermaid figures + 9 editable Excalidraw scenes | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 3 |
+| **2-D motion & projectiles** | [Motion-in-two-dimensions.md](motion-in-two-dimensions/Motion-in-two-dimensions.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 35 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 4 |
+| **Newton's laws & friction** | [Newtons-laws.md](newtons-laws/Newtons-laws.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 5 |
+| **work, energy & power** | [Work-energy-power.md](work-energy-power/Work-energy-power.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 38 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 6 |
+| **centre of mass & collisions** | [Centre-of-mass-momentum.md](centre-of-mass-momentum/Centre-of-mass-momentum.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 7 |
+| **rotational mechanics** | [Rotational-mechanics.md](rotational-mechanics/Rotational-mechanics.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 8 |
+| **gravitation** | [Gravitation.md](gravitation/Gravitation.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 9 |
+| **simple harmonic motion** | [Simple-harmonic-motion.md](simple-harmonic-motion/Simple-harmonic-motion.md) | 6 Mermaid figures + 12 editable Excalidraw scenes | 36 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 10 |
+| **fluid mechanics & surface tension** | [Fluid-mechanics.md](fluid-mechanics/Fluid-mechanics.md) | 20 editable Excalidraw scenes | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 11 |
+| **elasticity & properties of matter** | [Elasticity.md](elasticity/Elasticity.md) | 14 editable Excalidraw scenes | 47 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 12 |
+| **electrostatics** (field · Gauss · potential) | [Electrostatics.md](electrostatics/Electrostatics.md) · [site](docs/site/electrostatics.html) | 10 Mermaid figures + 26 editable Excalidraw scenes | 90 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 13 + 14 + 15 as one chapter |
 | **magnetism** (Lorentz force · Biot–Savart · Ampère · matter · Earth) | [Magnetism.md](magnetism/Magnetism.md) · [site](docs/site/magnetism.html) | 10 Mermaid figures + 30 DIAGRAM briefs | 94 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 16 + 17 + 18 + 19 as one chapter |
 | **induction, inductance & AC** (Faraday · RL/LC · phasors · resonance · transformers) | [Emi-ac.md](emi-ac/Emi-ac.md) · [site](docs/site/emi-ac.html) | 10 Mermaid figures + 22 DIAGRAM briefs | 94 | 36-question, 3 h, 200-mark paper | ✅ complete — plan.md PART 20 + 21 + 22 as one chapter |
 
@@ -84,8 +84,10 @@ Three ways, in order of what you get:
    contents plus links to the other topics. The plan.md chapters render with
    their Obsidian callouts tinted by type, their `DIAGRAM` briefs as bordered
    figure slots, their wikilinks as real links, and their frontmatter as a
-   property strip. Regenerate it any time with `python3 tools/md_site.py` (needs
-   `pip install markdown`); it takes each topic's master from the `entry` field
+   property strip. Plugin-native Excalidraw embeds are intentionally omitted here;
+   open the vault in Obsidian with the pinned plugin to view and edit those scenes.
+   Regenerate it any time with `python3 tools/md_site.py` (needs `pip install markdown`);
+   it takes each topic's master from the `entry` field
    of `topics.json`, so a chapter appears on the site as soon as it is
    registered. To read it over HTTP instead, run the server in the **repository
    root** (`python3 -m http.server 8080`, then open `/docs/site/`): the pages
@@ -93,13 +95,14 @@ Three ways, in order of what you get:
    `docs/site` itself renders the text but not the figures.
 2. **GitHub or a Markdown-capable viewer.** The `*.md` files use standard
    `$...$` / `$$...$$` math and relative `assets/figures/*.svg` image links, so
-   they render with diagrams and equations on GitHub and in viewers with a
-   LaTeX engine (Obsidian, VS Code + math extension). In a plain editor or
+   legacy figures and equations render in compatible viewers. Editable Excalidraw
+   embeds render in Obsidian with the pinned plugin; generic Markdown viewers show
+   the scene link/brief rather than the interactive drawing. In a plain editor or
    `less` you see the source: readable text, but raw math and image links.
 3. **The interactive HTML edition** (where present). Theme switching, progress
    ticks, a generated TOC and **Print / save as PDF**. Fully offline.
 
-Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Every diagram is a local `assets/figures/*.svg` file with its own styles, arrowheads, alt text and caption; there are no external image links and no binary files committed to the repo.
+Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the user-directed D1–D13 diagram retrofit, 177 editable Excalidraw scenes are embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`; Electrostatics D13 consolidates plan Parts 13–15. Regenerate the Parts 1–7 scene files with `python3 tools/build_excalidraw_batch.py`; the Parts 8–11 and Parts 12–15 builders (`tools/build_excalidraw_batch_8_11.py` and `tools/build_excalidraw_batch_12_15.py`) also refresh the matching note embeds and manifests. No raster or remote image assets are used.
 
 ## How a note-set is put together
 

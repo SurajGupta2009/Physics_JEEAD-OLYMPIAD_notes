@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local gate for a text-only, Obsidian-first Markdown chapter written under plan.md.
+"""Local gate for an Obsidian-first Markdown chapter with native Excalidraw scenes.
 
 Run it from the topic folder:   python3 tools/check.py
 Everything it enforces comes from plan.md §1 and this topic's notes.json.
@@ -9,6 +9,9 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent))  # repository root: shared validators
+from tools.excalidraw_checks import EMBED_PATTERN, validate_excalidraw
+
 CFG = json.loads((ROOT / "notes.json").read_text(encoding="utf-8"))
 SRC = (ROOT / CFG["master"]).read_text(encoding="utf-8")
 
@@ -70,12 +73,15 @@ need(not [p for p, _ in diags if int(p) != CFG["part"]],
      f"DIAGRAM numbers must start with this part's number ({CFG['part']})")
 need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a '*Show:*' line")
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a '*Search:*' line")
+for _issue in validate_excalidraw(ROOT, SRC, diags):
+    need(False, _issue)
 
 # ---- 5. media policy -----------------------------------------------------------
 fence = chr(96) * 3                          # never write a literal fence in this file
+media_text = re.sub(EMBED_PATTERN, "", SRC)
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link"), (fence + "mermaid", "mermaid block")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 
 # ---- 6. Obsidian reading-mode contract -----------------------------------------
 callouts = re.findall(r"^> \[!([a-z]+)\]", SRC, re.M)
@@ -144,5 +150,5 @@ if errors:
     print("\n".join(f"FAIL: {e}" for e in errors))
     sys.exit(1)
 print(f"ALL GOOD: 15 blocks · C×{n_c} E×{n_e} Q×{n_q} OL×{n_ol} · "
-      f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs · "
-      f"{len(callouts)} callouts · no images")
+      f"paper {len(paper)} Q / {marks} marks · {len(diags)} DIAGRAM briefs and editable scenes · "
+      f"{len(callouts)} callouts · no raster images")

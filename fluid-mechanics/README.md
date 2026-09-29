@@ -1,6 +1,6 @@
 # Fluid Mechanics & Surface Tension — first principles to Olympiad
 
-> [!note] Part 11 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
+> [!note] Part 11 of [plan.md](../plan.md) · Markdown chapter with editable Excalidraw scenes · written for Obsidian reading mode
 
 **Scope.** Hydrostatics from the isotropy proof and $\frac{dp}{dy}=-\rho g$; barometers, manometers and the step method; Pascal and the hydraulic lift with its energy audit; pressure diagrams and forces on plane, inclined and curved surfaces; fluids in linearly accelerated and rotating vessels (tilted surfaces, the balloon, the paraboloid); Archimedes derived twice with the centre of buoyancy and the metacentre; the melting-ice family as one ledger; continuity and Bernoulli from the work–energy theorem with the four validity gates; Venturi, pitot, siphon, Torricelli, efflux range and momentum-flux thrust; Newton's viscosity law, Poiseuille derived by a shell balance, Stokes and terminal velocity with the Reynolds caveat; surface tension as force and energy, the excess-pressure family, Young–Laplace, Jurin's law twice and the short-tube capillary; the shallow-water speed $v=\sqrt{gh}$ as the bridge to the wave notes.
 
@@ -14,9 +14,9 @@
 
 **Olympiad layer.** The drainage integral with its inertial/viscous two-timescale crossover and the finite-versus-infinite emptying contrast; the paraboloid derived three ways; terminal velocity in two drag regimes with the mist/rain crossover radius; Young–Laplace from virtual work and the catenoid existence limit; the drop-weight (Tate–Harkins–Brown) reconstruction of $\gamma$; the water-strider estimate and the $L$-vs-$L^3$ scaling argument; the tree-height limit (suction vs tension, $\sim10$ m vs $\sim110$ m); shallow-water wave speed from the wave-frame momentum balance; the Feynman sprinkler as a dissipation argument; a rotating-frame energy audit closing at the motor; and a Stokes viscometer reconstructed with the Ladenburg wall correction.
 
-**Media.** All figures are described briefs (`> [!abstract] DIAGRAM D11.k`, D11.1–D11.20) with `*Search:*` lines; no image files by design.
+**Media.** Twenty native Excalidraw scenes render the D11.1–D11.20 briefs; each is embedded below its brief and stored in `_obsidian/excalidraw/`. No raster or remote image assets are used.
 
-**Gate.** `python3 tools/check.py` → ALL GOOD: 15 blocks · C×12 E×10 Q×25 OL×10 · paper 36 Q / 200 marks · 20 DIAGRAM briefs · 68 callouts · no images.
+**Gate.** `python3 tools/check.py` → ALL GOOD: 15 blocks · C×12 E×10 Q×25 OL×10 · paper 36 Q / 200 marks · 20 DIAGRAM briefs and editable scenes · 68 callouts · no raster images.
 
 ## Beyond the plan
 
