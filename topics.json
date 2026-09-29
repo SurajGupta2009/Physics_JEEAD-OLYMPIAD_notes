@@ -188,13 +188,13 @@
       "dependency": [
         "centre-of-mass-momentum"
       ],
-      "words": 10010,
+      "words": 10022,
       "display_formulas": 19,
-      "bytes_markdown": 71582,
+      "bytes_markdown": 72437,
       "pages": [
         "Rotational-mechanics.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
       "math_spans": 941,
@@ -1368,16 +1368,16 @@
       "dependency": [
         "rotational-mechanics"
       ],
-      "words": 10034,
+      "words": 10044,
       "display_formulas": 15,
-      "bytes_markdown": 72864,
+      "bytes_markdown": 73681,
       "pages": [
         "Gravitation.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 817,
+      "math_spans": 815,
       "bytes_html": 0
     },
     {
@@ -1402,16 +1402,16 @@
       "dependency": [
         "gravitation"
       ],
-      "words": 9685,
+      "words": 9717,
       "display_formulas": 16,
-      "bytes_markdown": 71172,
+      "bytes_markdown": 72222,
       "pages": [
         "Simple-harmonic-motion.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
-      "math_spans": 954,
+      "math_spans": 960,
       "bytes_html": 0
     },
     {
@@ -1456,13 +1456,13 @@
       "pages": [
         "Fluid-mechanics.md"
       ],
-      "figures": 0,
+      "figures": 20,
       "questions": 47,
       "solutions": 93,
       "math_spans": 1390,
       "bytes_html": 0,
-      "bytes_markdown": 124150,
-      "words": 18101,
+      "bytes_markdown": 125501,
+      "words": 18121,
       "display_formulas": 25
     },
     {

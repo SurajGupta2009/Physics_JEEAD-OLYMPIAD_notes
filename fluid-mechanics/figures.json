@@ -1,0 +1,188 @@
+{
+  "slug": "fluid-mechanics",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D11.1",
+      "kind": "excalidraw",
+      "title": "Pressure-depth graph for a two-layer liquid",
+      "show": "depth $h$ on the vertical axis (downward), pressure $p$ on the horizontal; a straight line of slope $\\rho_1 g$ from $p_0$ at the surface to the interface at $h_1$, then a steeper straight line of slope $\\rho_2 g$ below it; the kink at the interface circled with the label \"slope changes because $\\rho$ changes; $p$ itself is continuous\".",
+      "search": "\"pressure depth graph two liquids interface kink hydrostatic\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-1.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.1"
+    },
+    {
+      "id": "D11.2",
+      "kind": "excalidraw",
+      "title": "Hydrostatic paradox vessels",
+      "show": "three vessels on a common base pipe with a valve: a cylinder, a funnel widening upward, a funnel narrowing upward; equal water levels dashed across all three; arrows on the slanted walls of the widening vessel pointing perpendicular to the wall with their upward vertical components highlighted; caption \"same level, same bottom pressure; the walls carry the weight difference\".",
+      "search": "\"hydrostatic paradox three vessels same height different shapes\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-2.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.2"
+    },
+    {
+      "id": "D11.3",
+      "kind": "excalidraw",
+      "title": "The hydraulic press and displacement trade",
+      "show": "two connected cylinders, small piston $a$ pushed down $d_1$ with $F_1$, large piston $A$ rising $d_2\\ll d_1$ under load $F_2$; shaded equal volumes $a d_1 = A d_2$; labels $F_2=F_1 A/a$ and $W_1=W_2$.",
+      "search": "\"hydraulic press pistons force multiplication displacement trade diagram\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-3.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.3"
+    },
+    {
+      "id": "D11.4",
+      "kind": "excalidraw",
+      "title": "Curved-gate forces by projection",
+      "show": "a quarter-circle gate holding water on its convex side; left panel: horizontal arrows integrated to $F_H$ acting on the vertical projected rectangle; right panel: the shaded water column above the gate whose weight is $F_V$; the vector sum $F$ drawn through the hinge with its angle.",
+      "search": "\"hydrostatic force curved surface horizontal vertical components quarter circle gate\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-4.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.4"
+    },
+    {
+      "id": "D11.5",
+      "kind": "excalidraw",
+      "title": "The rotating fluid paraboloid",
+      "show": "a cylinder of liquid spinning at $\\omega$; the parabolic free surface $z=z_0+\\omega^2 r^2/2g$; a fluid element at radius $r$ with the outward pseudo-force arrow $\\rho\\omega^2 r$ and downward gravity arrow; the tangent to the surface drawn with slope $\\omega^2 r/g$; dashed level lines below.",
+      "search": "\"rotating liquid paraboloid free surface derivation\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-5.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.5"
+    },
+    {
+      "id": "D11.6",
+      "kind": "excalidraw",
+      "title": "Metacentric stability of a floating body",
+      "show": "a hull cross-section heeled by small $\\theta$; weight arrow down at $G$, buoyancy arrow up at shifted $B'$; the buoyancy line extended to meet the axis at $M$ above $G$; the restoring couple arc; a second small sketch of the submerged body case with $B$ fixed and $G$ below required.",
+      "search": "\"metacentre metacentric height ship stability diagram G B M\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-6.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.6"
+    },
+    {
+      "id": "D11.7",
+      "kind": "excalidraw",
+      "title": "Bernoulli streamtube derivation",
+      "show": "a curved streamtube narrowing from $A_1$ (left, low, slow, wide arrows) to $A_2$ (right, high, fast, thin arrows); the two end slugs of length $v_1\\Delta t$, $v_2\\Delta t$ shaded; pressure arrows $p_1$ pushing in, $p_2$ pushing back; heights $y_1,y_2$ from a datum line.",
+      "search": "\"Bernoulli derivation streamtube work energy diagram\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-7.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.7"
+    },
+    {
+      "id": "D11.8",
+      "kind": "excalidraw",
+      "title": "Siphon pressure at the highest point",
+      "show": "a vessel, a bent tube over the rim, outlet below the level; the top point labelled with $p_{\\text{top}}=p_0-\\rho g h-\\tfrac12\\rho v^2$; a gauge sketch showing $p_{\\text{top}}$ approaching zero as $h\\to10.3$ m; flow arrows.",
+      "search": "\"siphon maximum height limit pressure at top diagram\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-8.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.8"
+    },
+    {
+      "id": "D11.9",
+      "kind": "excalidraw",
+      "title": "Two draining-tank holes with equal range",
+      "show": "a tank, level $H$; holes at $h$ and $H-h$ with both jets drawn as parabolas landing at the same point $x=2\\sqrt{h(H-h)}$; the mid-depth jet drawn reaching $x=H$; axis labels.",
+      "search": "\"Torricelli theorem two holes same range tank diagram\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-9.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.9"
+    },
+    {
+      "id": "D11.10",
+      "kind": "excalidraw",
+      "title": "Jet force on flat, inclined and moving plates",
+      "show": "three panels: (a) jet normal to a fixed plate, splash arrows radial, $F=\\rho a v^2$; (b) jet on a plate tilted $\\theta$, the tangential split arrows, normal force $\\rho a v^2\\cos\\theta$ component labelled; (c) jet chasing a plate moving at $u$, relative speed $v-u$ marked, $F=\\rho a (v-u)^2$.",
+      "search": "\"force of water jet on flat inclined moving plate momentum\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-10.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.10"
+    },
+    {
+      "id": "D11.11",
+      "kind": "excalidraw",
+      "title": "Poiseuille profile and viscous shell",
+      "show": "a pipe cross-section with the parabolic velocity profile arrows; the coaxial shell of radius $r$ and thickness $dr$ highlighted with the pressure arrows at its ends and the shear arrows on its curved surface; the no-slip wall labelled $v=0$.",
+      "search": "\"Poiseuille flow parabolic velocity profile pipe derivation\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-11.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.11"
+    },
+    {
+      "id": "D11.12",
+      "kind": "excalidraw",
+      "title": "Terminal velocity and drag regimes",
+      "show": "left: a falling sphere with $mg$ down, $F_b$ and $F_d$ up, $a\\to0$ labelled; right: drag coefficient vs Reynolds log-log sketch with the Stokes line $C_d=24/\\text{Re}$, the plateau $C_d\\approx0.44$, and the drag-crisis dip circled.",
+      "search": "\"drag coefficient versus Reynolds number sphere Stokes regime\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-12.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.12"
+    },
+    {
+      "id": "D11.13",
+      "kind": "excalidraw",
+      "title": "Meniscus shapes and contact angle",
+      "show": "two tubes side by side: water with concave meniscus, $\\theta$ drawn through the liquid below $90^\\circ$, adhesion arrows toward the wall; mercury with convex meniscus, $\\theta\\approx140^\\circ$, cohesion arrows; the tangent lines at the contact point emphasised.",
+      "search": "\"contact angle concave convex meniscus water mercury glass\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-13.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.13"
+    },
+    {
+      "id": "D11.14",
+      "kind": "excalidraw",
+      "title": "Soap-bubble cross-section and excess pressure",
+      "show": "a bubble wall greatly magnified: outer and inner surfaces each carrying $\\gamma$, the ring force $2\\gamma\\cdot2\\pi r$ on a hemisphere, excess-pressure arrows $\\Delta p=4\\gamma/r$ inside; beside it a single-surface drop with $2\\gamma/r$; the factor-2 contrast boxed.",
+      "search": "\"soap bubble excess pressure two surfaces factor two derivation\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-14.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.14"
+    },
+    {
+      "id": "D11.15",
+      "kind": "excalidraw",
+      "title": "Capillary rise in a short tube",
+      "show": "left: a long tube with full Jurin height $h$ and tight meniscus radius $R=r$; right: a short tube with the meniscus flattened to $R'>r$, same liquid, no overflow; labels $hR=h'R'$.",
+      "search": "\"capillary tube insufficient length meniscus radius adjustment\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-15.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.15"
+    },
+    {
+      "id": "D11.16",
+      "kind": "excalidraw",
+      "title": "Decision tree for fluid-pressure tools",
+      "show": "a small flowchart: \"fluid at rest?\" yes → hydrostatics/manometer; no → \"long narrow pipe, flow rate given?\" yes → Poiseuille; no → \"four gates ok?\" yes → Bernoulli; no → momentum flux or full dynamics; each leaf with one worked-problem number (Q2, Q19, Q12, Q16).",
+      "search": "\"fluid mechanics choosing bernoulli poiseuille hydrostatic decision\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-16.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.16"
+    },
+    {
+      "id": "D11.17",
+      "kind": "excalidraw",
+      "title": "Fluid-mechanics toolkit map",
+      "show": "the triage tree of §9 as a compact flowchart with the six toolboxes and their equation numbers at the leaves, and the four Bernoulli gates drawn as a small gate icon on the Bernoulli branch.",
+      "search": "\"fluid mechanics summary flowchart hydrostatics bernoulli surface tension\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-17.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.17"
+    },
+    {
+      "id": "D11.18",
+      "kind": "excalidraw",
+      "title": "Draining tank: variable-height curves",
+      "show": "tank of area $A$, instantaneous level $h(t)$, orifice $a$ with jet speed $\\sqrt{2gh}$; beside it the $h(t)$ curve: a parabola-squared reaching zero at $T$ for the orifice, and the exponential tail for the capillary drain drawn dashed, crossing at $h^*$; the two timescales labelled.",
+      "search": "\"draining tank Torricelli height versus time exponential viscous\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-18.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.18"
+    },
+    {
+      "id": "D11.19",
+      "kind": "excalidraw",
+      "title": "Rotating-bucket derivations",
+      "show": "the paraboloid surface; inset (a) the surface element with $N$, $mg$, $m\\omega^2r$; inset (b) equipotential lines of $\\Phi=gz-\\tfrac12\\omega^2r^2$ drawn as nested parabolas with the surface as the $p_0$ member; inset (c) the centrifugal-head column sketch; the numbers $\\omega=4$, $R=0.3$ m, $\\Delta z=7.35$ cm labelled.",
+      "search": "\"rotating bucket paraboloid equipotential surfaces derivation\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-19.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.19"
+    },
+    {
+      "id": "D11.20",
+      "kind": "excalidraw",
+      "title": "Water strider and pendant-drop force balance",
+      "show": "left: a water strider leg in cross-section denting the surface, the tension vectors $\\gamma$ tangent at both edges of the dent with their vertical components summed; right: the pendant drop at a tube tip with the neck radius smaller than the tube, the fraction left behind shaded, Tate's ring force arrow.",
+      "search": "\"water strider surface tension dent leg force diagram drop weight method\"",
+      "file": "_obsidian/excalidraw/fluid-mechanics-D11-20.excalidraw.md",
+      "source": "fluid-mechanics/Fluid-mechanics.md · D11.20"
+    }
+  ]
+}

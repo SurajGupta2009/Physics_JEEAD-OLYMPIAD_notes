@@ -99,7 +99,7 @@ Three ways, in order of what you get:
 3. **The interactive HTML edition** (where present). Theme switching, progress
    ticks, a generated TOC and **Print / save as PDF**. Fully offline.
 
-Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the mechanics D1–D7 diagram retrofit, 81 editable Excalidraw scenes are also embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`. No raster or remote image assets are used.
+Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the mechanics D1–D11 diagram retrofit, 137 editable Excalidraw scenes are embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`. Regenerate the Parts 1–7 scene files with `python3 tools/build_excalidraw_batch.py`; the Parts 8–11 builder, `python3 tools/build_excalidraw_batch_8_11.py`, also refreshes the matching note embeds and manifests. No raster or remote image assets are used.
 
 ## How a note-set is put together
 

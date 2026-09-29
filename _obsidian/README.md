@@ -34,7 +34,7 @@ slot as `order:` (1–31) and its syllabus `block:`; the Dataview tables sort on
 |---|---|---|
 | [templates/chapter.md](templates/chapter.md) | Templater (folder is pre-configured) | the full 15-block skeleton for a new chapter — *Templater: Insert template* |
 | [latex-suite/snippets.js](latex-suite/snippets.js) · [latex-suite/README.md](latex-suite/README.md) | LaTeX Suite (path is pre-configured) | default snippet set + the vault's physics shorthands and callout skeletons |
-| `excalidraw/` | Excalidraw | the mechanics D1–D7 batch's editable `.excalidraw.md` scene sources, embedded directly at their D-briefs; no raster exports are used |
+| `excalidraw/` | Excalidraw | the mechanics D1–D11 batch's editable `.excalidraw.md` scene sources, embedded directly at their D-briefs; no raster exports are used |
 
 ## The `.obsidian/` configuration (committed)
 
@@ -61,7 +61,7 @@ Per-device state (`workspace.json`, `workspace-mobile.json`, `cache`) is git-ign
 | **Advanced Tables** | `table-editor-obsidian` · 0.23.2 | 4 | aligned pipe tables, `Tab`/`Enter` cell navigation, sort, CSV export |
 | **Spaced Repetition** | `obsidian-spaced-repetition` · 1.15.4 | 1 | `==cloze==` and `::` cards — **opt-in per note**: add `#flashcards` to a note's tags and its boxed results become a deck (nothing is scanned otherwise) |
 | **Tasks** | `obsidian-tasks-plugin` · 8.4.0 | 4 | the pending queue and Part 14 checkpoints as live task lists; no global filter |
-| **Excalidraw** | `obsidian-excalidraw-plugin` · 2.27.3 | 2 | the mechanics D1–D7 scenes are editable native Markdown drawings in `_obsidian/excalidraw/` and embedded directly in the notes; other Excalidraw work follows the SVG-export default |
+| **Excalidraw** | `obsidian-excalidraw-plugin` · 2.27.3 | 2 | the mechanics D1–D11 scenes are editable native Markdown drawings in `_obsidian/excalidraw/` and embedded directly in the notes; other Excalidraw work follows the SVG-export default |
 
 Mermaid (the figure system of plan.md §1.2), Canvas, checklists, properties and the PDF viewer are
 **core Obsidian** — nothing to install.

@@ -2,35 +2,170 @@
   "slug": "gravitation",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F9.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F9.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one 1/r² law read three ways - fields, energies, orbits",
       "data": "the Part 0-14 structure",
       "read": "every result is a shell sum, a GM/r energy, or a Kepler exponent",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F9.2", "kind": "flowchart", "title": "The shell theorem: outside a point, inside nothing",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F9.2",
+      "kind": "flowchart",
+      "title": "The shell theorem: outside a point, inside nothing",
       "why": "the most powerful shortcut in the chapter",
       "data": "outside g=GM/r²; inside shell g=0; inside sphere g=GMr/R³",
       "read": "outside collapse to a point; inside only the mass below you counts",
-      "source": "DIAGRAM D9.1 (§3.3)" },
-    { "id": "F9.3", "kind": "flowchart", "title": "Four ways g changes",
+      "source": "DIAGRAM D9.1 (§3.3)"
+    },
+    {
+      "id": "F9.3",
+      "kind": "flowchart",
+      "title": "Four ways g changes",
       "why": "four separate formulas that students blur; keep directions distinct",
       "data": "height gR²/(R+h)²; depth g(1-d/R); latitude g-ω²Rcos²λ; spin ~0.3%",
       "read": "height dilutes, depth kills linearly, latitude and spin subtract centrifugal",
-      "source": "DIAGRAM D9.3 (§3.5)" },
-    { "id": "F9.4", "kind": "flowchart", "title": "Kepler's laws, from the same focus",
+      "source": "DIAGRAM D9.3 (§3.5)"
+    },
+    {
+      "id": "F9.4",
+      "kind": "flowchart",
+      "title": "Kepler's laws, from the same focus",
       "why": "all of orbital motion is three laws; bind them into one picture",
       "data": "ellipse at focus; dA/dt constant; T² = 4π²a³/GM",
       "read": "the equal-area law is angular-momentum conservation in costume",
-      "source": "DIAGRAM D9.4 (§3.7)" },
-    { "id": "F9.5", "kind": "flowchart", "title": "The orbit energy ladder: bind, raise, escape",
+      "source": "DIAGRAM D9.4 (§3.7)"
+    },
+    {
+      "id": "F9.5",
+      "kind": "flowchart",
+      "title": "The orbit energy ladder: bind, raise, escape",
       "why": "every launch and transfer question is a difference between rungs",
       "data": "surface -GMm/R; orbit -GMm/2r; escape 0",
       "read": "bound means negative total energy; reaching zero is the escape ticket",
-      "source": "DIAGRAM D9.8 (§4.1)" },
-    { "id": "F9.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D9.8 (§4.1)"
+    },
+    {
+      "id": "F9.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the eight triage branches of §9.1",
       "read": "height kills g by the sphere formula, orbits live on GM/r, transfers ride vis-viva",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D9.1",
+      "kind": "excalidraw",
+      "title": "The shell theorem cone construction",
+      "show": "a uniform spherical shell and an interior point $P$. Two opposite, equal-solid-angle cones from $P$ intersect near and far shell patches. Include the incidence-angle projection: $dA/r^2=d\\Omega/|\\cos\\alpha|$. For opposite rays the absolute cosines match, so the inverse-square pulls have equal magnitude and opposite directions; each pair cancels.",
+      "search": "\"shell theorem cone construction inverse square proof diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-1.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.1"
+    },
+    {
+      "id": "D9.2",
+      "kind": "excalidraw",
+      "title": "Field inside a uniform sphere and the cavity",
+      "show": "left: $g(r)$ vs $r$ for a uniform sphere — linear rise from zero at the centre to $GM/R^2$ at the surface, then $1/r^2$ falloff. Right: a sphere with a cavity, with the superposition method shown (full sphere minus small sphere).",
+      "search": "\"gravitational field inside uniform sphere cavity superposition diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-2.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.2"
+    },
+    {
+      "id": "D9.3",
+      "kind": "excalidraw",
+      "title": "The four g-variation curves on one plate",
+      "show": "four panels: (1) $g$ vs altitude (decreasing); (2) $g$ vs depth (linear decrease to zero at centre); (3) $g$ vs latitude (slight increase from equator to pole); (4) $g$ vs rotation rate (decreasing as $\\omega$ increases).",
+      "search": "\"gravitational acceleration variation altitude depth latitude rotation graph\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-3.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.3"
+    },
+    {
+      "id": "D9.4",
+      "kind": "excalidraw",
+      "title": "A Kepler ellipse with focus, radii and equal-area sectors",
+      "show": "an ellipse with the central mass at one focus. Two equal-time sectors are shaded to show equal swept areas. At periapsis the radius is short and the angular sweep is larger; at apoapsis the radius is long and the angular sweep is smaller. The areas, not the angular widths, are equal.",
+      "search": "\"Kepler ellipse focus equal area sectors perigee apogee diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-4.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.4"
+    },
+    {
+      "id": "D9.5",
+      "kind": "excalidraw",
+      "title": "The effective-potential turning points for several angular momenta",
+      "show": "a graph of the effective potential $U_{\\text{eff}}=-GMm/r+L^2/(2mr^2)$ vs $r$ for three values of $L$. For each: the total energy $E$ shown as a horizontal line. The turning points (where $E=U_{\\text{eff}}$) are the perigee and apogee.",
+      "search": "\"effective potential energy versus r circular elliptical orbit turning points\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-5.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.5"
+    },
+    {
+      "id": "D9.6",
+      "kind": "excalidraw",
+      "title": "The tide-raising differential-pull diagram",
+      "show": "the Earth with the Moon on the right. The Moon's pull on the near side (stronger) and the far side (weaker) shown as arrows. The differential (tidal) force creates two bulges: one toward the Moon, one away.",
+      "search": "\"tidal force differential pull Moon Earth two bulges diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-6.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.6"
+    },
+    {
+      "id": "D9.7",
+      "kind": "excalidraw",
+      "title": "Gauss's law Gaussian surface for a uniform sphere",
+      "show": "a uniform sphere with a concentric spherical Gaussian surface of radius $r$ inside the sphere. The enclosed mass $M_{\\text{enc}}=M(r/R)^3$ shaded. The field $\\mathbf{g}$ is radial and uniform on the Gaussian surface. The integral $\\oint g\\,dA=g\\times4\\pi r^2$.",
+      "search": "\"Gauss's law gravitational field uniform sphere Gaussian surface diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-7.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.7"
+    },
+    {
+      "id": "D9.8",
+      "kind": "excalidraw",
+      "title": "Energy ladder for orbital transfers",
+      "show": "three energy levels: surface ($E=-GMm/R$), low orbit ($E=-GMm/(2R)$), escape ($E=0$). The energy increments $\\Delta E$ between each level marked. The total energy to launch to orbit is $GMm/(2R)$, half the escape energy.",
+      "search": "\"energy diagram orbital transfer surface orbit escape ladder\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-8.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.8"
+    },
+    {
+      "id": "D9.9",
+      "kind": "excalidraw",
+      "title": "Hohmann transfer: the tangential ellipse",
+      "show": "two concentric circular orbits (inner and outer). An ellipse connecting them, tangent to both at the transfer points. The two velocity vectors at perigee and apogee shown, along with the $\\Delta v$ burns.",
+      "search": "\"Hohmann transfer orbit ellipse perigee apogee delta v diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-9.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.9"
+    },
+    {
+      "id": "D9.10",
+      "kind": "excalidraw",
+      "title": "The effective-potential curve for gravitational orbits",
+      "show": "$U_{\\text{eff}}(r)=-GMm/r+L^2/(2mr^2)$ plotted vs $r$. The minimum at $r_0$ marked. Four horizontal lines: $E=E_{\\min}$ (circular), $E_{\\min}<E<0$ (elliptical, two turning points), $E=0$ (parabolic), $E>0$ (hyperbolic).",
+      "search": "\"effective potential gravitational orbit circular elliptical parabolic hyperbolic diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-10.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.10"
+    },
+    {
+      "id": "D9.11",
+      "kind": "excalidraw",
+      "title": "The Lagrange points of the Sun-Earth system",
+      "show": "the Sun and Earth with the five Lagrange points (L1–L5) marked. L1 between them, L2 beyond Earth, L3 opposite Earth, L4 and L5 at the equilateral-triangle points ($60°$ ahead and behind).",
+      "search": "\"Lagrange points Sun Earth system L1 L2 L3 L4 L5 diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-11.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.11"
+    },
+    {
+      "id": "D9.12",
+      "kind": "excalidraw",
+      "title": "The gravity-assist slingshot in the Sun's frame",
+      "show": "Jupiter moving in its orbit. A spacecraft approaches from behind, swings around Jupiter, and leaves with higher speed in the Sun's frame. The spacecraft's trajectory curved by Jupiter's gravity. The velocity vectors before and after shown in both Jupiter's frame and the Sun's frame.",
+      "search": "\"gravity assist slingshot spacecraft Jupiter velocity change diagram\"",
+      "file": "_obsidian/excalidraw/gravitation-D9-12.excalidraw.md",
+      "source": "gravitation/Gravitation.md · D9.12"
+    }
   ]
 }

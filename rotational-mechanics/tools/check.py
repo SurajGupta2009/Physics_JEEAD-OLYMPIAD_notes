@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Local gate for a text-only, Obsidian-first Markdown chapter written under plan.md."""
+"""Local gate for an Obsidian-first Markdown chapter with native Excalidraw scenes."""
 from __future__ import annotations
 import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
+sys.path.insert(0, str(ROOT.parent))  # repository root: shared validators
 from tools import mermaid_lint
+from tools.excalidraw_checks import EMBED_PATTERN, validate_excalidraw
 
 CFG = json.loads((ROOT / "notes.json").read_text(encoding="utf-8"))
 SRC = (ROOT / CFG["master"]).read_text(encoding="utf-8")
@@ -60,10 +61,14 @@ need(not [p for p, _ in diags if int(p) != CFG["part"]],
 need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a *Show:* line")
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a *Search:* line")
 
+for _issue in validate_excalidraw(ROOT, SRC, diags):
+    need(False, _issue)
+
 fence = chr(96) * 3
+media_text = re.sub(EMBED_PATTERN, "", SRC)
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
 # ── FIGURE system (plan.md §1.2 media policy v2 / docs/obsidian-plugin-workflow.md §2) ──
 figs = re.findall(r"^> \[!tip\] FIGURE F(\d+)\.(\d+) · ", SRC, re.M)

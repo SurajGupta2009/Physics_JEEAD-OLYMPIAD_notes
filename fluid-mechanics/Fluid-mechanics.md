@@ -168,6 +168,8 @@ The floor is *Cengage Mechanics II*, ch 3 Fluid Mechanics (pp. 3.1–3.69) for h
 > *Search:* "pressure depth graph two liquids interface kink hydrostatic"
 > *Used in:* §3.1 and Q2.
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-1.excalidraw|900]]
+
 ## Part 3 · Core derivations
 
 ### 3.1 Why pressure is a scalar, and the hydrostatic equation
@@ -202,6 +204,8 @@ $$
 > *Search:* "hydrostatic paradox three vessels same height different shapes"
 > *Used in:* §3.1 and C3.
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-2.excalidraw|900]]
+
 ### 3.2 Measuring pressure: barometer, manometer, Pascal
 
 **Barometer.** Invert a mercury-filled tube in a mercury dish. Above the column is (near) vacuum, $p\approx0$; at the dish, $p_0$. Eq. (3.2) across the column: $p_0=\rho_{\text{Hg}} g h$, so $h=1.013\times10^5/(13.6\times10^3\times9.8)=0.760$ m. The same argument with water gives $h=1.013\times10^5/(1000\times9.8)=10.3$ m — the number to remember whenever a siphon or a well pump is proposed.
@@ -216,6 +220,8 @@ $$
 > [!abstract] DIAGRAM D11.3 · The hydraulic press with the piston-displacement trade
 > *Show:* two connected cylinders, small piston $a$ pushed down $d_1$ with $F_1$, large piston $A$ rising $d_2\ll d_1$ under load $F_2$; shaded equal volumes $a d_1 = A d_2$; labels $F_2=F_1 A/a$ and $W_1=W_2$.
 > *Search:* "hydraulic press pistons force multiplication displacement trade diagram"
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-3.excalidraw|900]]
 
 ### 3.3 Pressure diagrams and forces on surfaces
 
@@ -232,6 +238,8 @@ $$
 > *Show:* a quarter-circle gate holding water on its convex side; left panel: horizontal arrows integrated to $F_H$ acting on the vertical projected rectangle; right panel: the shaded water column above the gate whose weight is $F_V$; the vector sum $F$ drawn through the hinge with its angle.
 > *Search:* "hydrostatic force curved surface horizontal vertical components quarter circle gate"
 > *Used in:* §3.3 and E4.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-4.excalidraw|900]]
 
 ### 3.4 Accelerated and rotating fluids: one equation for all of it
 
@@ -260,6 +268,8 @@ The free surface is a paraboloid. (OL3 derives it three independent ways.)
 > *Show:* a cylinder of liquid spinning at $\omega$; the parabolic free surface $z=z_0+\omega^2 r^2/2g$; a fluid element at radius $r$ with the outward pseudo-force arrow $\rho\omega^2 r$ and downward gravity arrow; the tangent to the surface drawn with slope $\omega^2 r/g$; dashed level lines below.
 > *Search:* "rotating liquid paraboloid free surface derivation"
 > *Used in:* §3.4 and OL3.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-5.excalidraw|900]]
 
 ### 3.5 Buoyancy, twice
 
@@ -293,6 +303,8 @@ with $I$ the second moment of the waterline area about the tilt axis and $V$ the
 > *Show:* a hull cross-section heeled by small $\theta$; weight arrow down at $G$, buoyancy arrow up at shifted $B'$; the buoyancy line extended to meet the axis at $M$ above $G$; the restoring couple arc; a second small sketch of the submerged body case with $B$ fixed and $G$ below required.
 > *Search:* "metacentre metacentric height ship stability diagram G B M"
 > *Used in:* §3.5 and Q8.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-6.excalidraw|900]]
 
 ### 3.6 The melting-ice family (with the correct answer for each case)
 
@@ -372,6 +384,8 @@ $$
 > *Show:* a curved streamtube narrowing from $A_1$ (left, low, slow, wide arrows) to $A_2$ (right, high, fast, thin arrows); the two end slugs of length $v_1\Delta t$, $v_2\Delta t$ shaded; pressure arrows $p_1$ pushing in, $p_2$ pushing back; heights $y_1,y_2$ from a datum line.
 > *Search:* "Bernoulli derivation streamtube work energy diagram"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-7.excalidraw|900]]
+
 ### 3.9 Bernoulli's applications, each with its gate checked
 
 **Venturi meter.** A constriction in a horizontal pipe. Continuity $v_2=v_1 A_1/A_2$ into (3.8):
@@ -398,6 +412,8 @@ $$
 > *Show:* a vessel, a bent tube over the rim, outlet below the level; the top point labelled with $p_{\text{top}}=p_0-\rho g h-\tfrac12\rho v^2$; a gauge sketch showing $p_{\text{top}}$ approaching zero as $h\to10.3$ m; flow arrows.
 > *Search:* "siphon maximum height limit pressure at top diagram"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-8.excalidraw|900]]
+
 ### 3.10 Torricelli, range of the escaping liquid, and quasi-steadiness
 
 A hole at depth $h$ in a tank of level $H$ above the floor of the tank. Bernoulli between surface (speed $\approx0$ if $a\ll A$) and hole: $v=\sqrt{2gh}$ — **Torricelli**. The jet then falls as a projectile from height $H-h$:
@@ -415,6 +431,8 @@ Symmetric in $h\leftrightarrow H-h$: holes equally above and below mid-depth lan
 > *Show:* a tank, level $H$; holes at $h$ and $H-h$ with both jets drawn as parabolas landing at the same point $x=2\sqrt{h(H-h)}$; the mid-depth jet drawn reaching $x=H$; axis labels.
 > *Search:* "Torricelli theorem two holes same range tank diagram"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-9.excalidraw|900]]
+
 ### 3.11 Momentum flux: jets, thrust and the reaction of ejection
 
 Fluid of density $\rho$ leaving an orifice of area $a$ at speed $v$ carries momentum per time $\dot p=\rho a v\cdot v=\rho a v^2$. The vessel feels the reaction $F=\rho a v^2$ opposite to the jet — the force that spins a sprinkler arm and pushes a punctured can backwards. The same flux idea gives the force of a jet on a plate: mass rate $\rho a v$ meets the plate; a stationary flat plate normal to the jet destroys the normal momentum, $F=\rho a v^2$; a plate moving away at $u$ sees relative speed $v-u$, so $F=\rho a (v-u)^2$; an inclined or curved vane redirects the momentum and the force is the vector change of $\rho a v\,\mathbf{v}$ per time.
@@ -426,6 +444,8 @@ Fluid of density $\rho$ leaving an orifice of area $a$ at speed $v$ carries mome
 > *Show:* three panels: (a) jet normal to a fixed plate, splash arrows radial, $F=\rho a v^2$; (b) jet on a plate tilted $\theta$, the tangential split arrows, normal force $\rho a v^2\cos\theta$ component labelled; (c) jet chasing a plate moving at $u$, relative speed $v-u$ marked, $F=\rho a (v-u)^2$.
 > *Search:* "force of water jet on flat inclined moving plate momentum"
 > *Used in:* §3.11 and Q16.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-10.excalidraw|900]]
 
 ### 3.12 Viscosity: Newton's law and Poiseuille by shell balance
 
@@ -455,6 +475,8 @@ The $R^4$ is the whole story of plumbing: halve a pipe's radius and you need six
 > *Show:* a pipe cross-section with the parabolic velocity profile arrows; the coaxial shell of radius $r$ and thickness $dr$ highlighted with the pressure arrows at its ends and the shear arrows on its curved surface; the no-slip wall labelled $v=0$.
 > *Search:* "Poiseuille flow parabolic velocity profile pipe derivation"
 > *Used in:* §3.12 and Q19.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-11.excalidraw|900]]
 
 **Series and parallel pipes.** Series: same $Q$, $\Delta p$ adds; parallel: same $\Delta p$, $Q$ adds. A wide pipe short-circuits a narrow one: with $R$ vs $R/2$ in parallel the narrow carries $1/17$ of the flow.
 
@@ -487,6 +509,8 @@ Pipe flow turns turbulent around $\text{Re}\sim2000$–$4000$; Stokes' law itsel
 > *Show:* left: a falling sphere with $mg$ down, $F_b$ and $F_d$ up, $a\to0$ labelled; right: drag coefficient vs Reynolds log-log sketch with the Stokes line $C_d=24/\text{Re}$, the plateau $C_d\approx0.44$, and the drag-crisis dip circled.
 > *Search:* "drag coefficient versus Reynolds number sphere Stokes regime"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-12.excalidraw|900]]
+
 **Compressibility of water, honestly.** $B_{\text{water}}=2.2\times10^9$ Pa; at the ocean floor ($\sim11$ km, $p\approx1.1\times10^8$ Pa) the fractional density rise is $\Delta\rho/\rho=\Delta p/B\approx5\%$ — real, and the reason precise oceanography cares, but small enough that every JEE hydrostatic number may ignore it. The sound-speed link: $v_s=\sqrt{B/\rho}=\sqrt{2.2\times10^9/1000}\approx1480$ m/s, matching measurement; that life of $B$ belongs to [[Sound-waves#Part 2 · Derivations|sound waves]].
 
 ### 3.14 Surface tension: two definitions, one quantity
@@ -501,6 +525,8 @@ Pipe flow turns turbulent around $\text{Re}\sim2000$–$4000$; Stokes' law itsel
 > [!abstract] DIAGRAM D11.13 · Meniscus shapes and the contact angle
 > *Show:* two tubes side by side: water with concave meniscus, $\theta$ drawn through the liquid below $90^\circ$, adhesion arrows toward the wall; mercury with convex meniscus, $\theta\approx140^\circ$, cohesion arrows; the tangent lines at the contact point emphasised.
 > *Search:* "contact angle concave convex meniscus water mercury glass"
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-13.excalidraw|900]]
 
 ### 3.15 Excess pressure across curved surfaces
 
@@ -522,6 +548,8 @@ Plane surface: $r_{1,2}\to\infty$, no excess. Cylindrical film or a saddle: sign
 > *Show:* a bubble wall greatly magnified: outer and inner surfaces each carrying $\gamma$, the ring force $2\gamma\cdot2\pi r$ on a hemisphere, excess-pressure arrows $\Delta p=4\gamma/r$ inside; beside it a single-surface drop with $2\gamma/r$; the factor-2 contrast boxed.
 > *Search:* "soap bubble excess pressure two surfaces factor two derivation"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-14.excalidraw|900]]
+
 ### 3.16 Capillarity: Jurin's law, twice, and the short tube
 
 **Force balance.** In a tube of radius $r$ with contact angle $\theta$, the surface pulls the column up along the wall with vertical component $\gamma\cos\theta$ per length, around circumference $2\pi r$; the column's weight is $\rho g h\,\pi r^2$ (meniscus volume neglected at $r\ll h$):
@@ -541,6 +569,8 @@ $$
 > *Show:* left: a long tube with full Jurin height $h$ and tight meniscus radius $R=r$; right: a short tube with the meniscus flattened to $R'>r$, same liquid, no overflow; labels $hR=h'R'$.
 > *Search:* "capillary tube insufficient length meniscus radius adjustment"
 > *Used in:* §3.16 and Q22.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-15.excalidraw|900]]
 
 ### 3.17 Shallow-water wave speed: the bridge to the wave notes
 
@@ -622,6 +652,8 @@ No, to the extent that both $\rho_f$ and the ball's volume are constant; the pre
 > [!abstract] DIAGRAM D11.16 · The decision tree: which pressure tool?
 > *Show:* a small flowchart: "fluid at rest?" yes → hydrostatics/manometer; no → "long narrow pipe, flow rate given?" yes → Poiseuille; no → "four gates ok?" yes → Bernoulli; no → momentum flux or full dynamics; each leaf with one worked-problem number (Q2, Q19, Q12, Q16).
 > *Search:* "fluid mechanics choosing bernoulli poiseuille hydrostatic decision"
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-16.excalidraw|900]]
 
 ## Part 5 · Worked exemplars
 
@@ -1046,6 +1078,8 @@ $r=R/10$. $\Delta A=1000\times4\pi r^2-4\pi R^2=4\pi R^2(10-1)=36\pi R^2$; $W=\g
 > *Show:* the triage tree of §9 as a compact flowchart with the six toolboxes and their equation numbers at the leaves, and the four Bernoulli gates drawn as a small gate icon on the Bernoulli branch.
 > *Search:* "fluid mechanics summary flowchart hydrostatics bernoulli surface tension"
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-17.excalidraw|900]]
+
 ## Part 10 · Olympiad extension
 
 ### OL1 — The draining tank, two regimes and two timescales
@@ -1082,6 +1116,8 @@ Numbers, using glycerine ($\eta=1.5$ Pa·s) so the laminar assumption is honest:
 > *Search:* "draining tank Torricelli height versus time exponential viscous"
 > *Used in:* OL1.
 
+![[../_obsidian/excalidraw/fluid-mechanics-D11-18.excalidraw|900]]
+
 ### OL2 — The paraboloid, three ways
 
 Derive $z=z_0+\omega^2r^2/2g$ for the free surface of a rotating liquid (a) by force balance on a surface element, (b) by the equipotential argument, (c) by "Bernoulli with a centrifugal head". Then: a bucket of radius $0.30$ m spins at $\omega=4$ rad/s; find the rim-to-centre height difference and the centre's drop relative to the rest level.
@@ -1104,6 +1140,8 @@ Numbers: rim rise over centre $=\omega^2R^2/2g=16\times0.09/19.6=0.0735$ m. Volu
 > [!abstract] DIAGRAM D11.19 · The rotating bucket's three derivations in one figure
 > *Show:* the paraboloid surface; inset (a) the surface element with $N$, $mg$, $m\omega^2r$; inset (b) equipotential lines of $\Phi=gz-\tfrac12\omega^2r^2$ drawn as nested parabolas with the surface as the $p_0$ member; inset (c) the centrifugal-head column sketch; the numbers $\omega=4$, $R=0.3$ m, $\Delta z=7.35$ cm labelled.
 > *Search:* "rotating bucket paraboloid equipotential surfaces derivation"
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-19.excalidraw|900]]
 
 ### OL3 — Terminal velocity in two drag regimes, and the raindrop crossover
 
@@ -1156,6 +1194,8 @@ Numbers: rim rise over centre $=\omega^2R^2/2g=16\times0.09/19.6=0.0735$ m. Volu
 > *Show:* left: a water strider leg in cross-section denting the surface, the tension vectors $\gamma$ tangent at both edges of the dent with their vertical components summed; right: the pendant drop at a tube tip with the neck radius smaller than the tube, the fraction left behind shaded, Tate's ring force arrow.
 > *Search:* "water strider surface tension dent leg force diagram drop weight method"
 > *Used in:* OL5.
+
+![[../_obsidian/excalidraw/fluid-mechanics-D11-20.excalidraw|900]]
 
 ### OL6 — How high can a tree suck water?
 

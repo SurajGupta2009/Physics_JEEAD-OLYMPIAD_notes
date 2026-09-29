@@ -2,35 +2,170 @@
   "slug": "rotational-mechanics",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F8.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F8.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "translational mechanics retold in angular language - mass, force, momentum get rotational twins",
       "data": "the Part 0-14 structure",
       "read": "every result is an analogue pair, a parallel-axis shift, or a no-slip constraint",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F8.2", "kind": "flowchart", "title": "Two axis theorems: shift it or split it",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F8.2",
+      "kind": "flowchart",
+      "title": "Two axis theorems: shift it or split it",
       "why": "almost every inertia calculation is one of two moves",
       "data": "parallel I = I_cm + Md²; perpendicular I_z = I_x + I_y",
       "read": "parallel axis pushes outward by Md²; perpendicular splits flat-body inertia",
-      "source": "DIAGRAM D8.3 (§3.4)" },
-    { "id": "F8.3", "kind": "flowchart", "title": "Torque: force times the lever arm",
+      "source": "DIAGRAM D8.3 (§3.4)"
+    },
+    {
+      "id": "F8.3",
+      "kind": "flowchart",
+      "title": "Torque: force times the lever arm",
       "why": "the same force turns harder from farther out",
       "data": "τ = rF sinθ moment arm; τ = Iα",
       "read": "torque cares about the perpendicular distance to the line of action",
-      "source": "DIAGRAM D8.4 (§3.5)" },
-    { "id": "F8.4", "kind": "flowchart", "title": "Angular momentum: constant when torque-free - even as KE changes",
+      "source": "DIAGRAM D8.4 (§3.5)"
+    },
+    {
+      "id": "F8.4",
+      "kind": "flowchart",
+      "title": "Angular momentum: constant when torque-free - even as KE changes",
       "why": "L is frozen while kinetic energy rises, paid for by internal work",
       "data": "L = Iω constant; I halves → ω doubles, K doubles",
       "read": "conservation protects the product Iω, not the energy",
-      "source": "DIAGRAM D8.6 (§3.7)" },
-    { "id": "F8.5", "kind": "flowchart", "title": "Rolling without slipping: two energies, one race",
+      "source": "DIAGRAM D8.6 (§3.7)"
+    },
+    {
+      "id": "F8.5",
+      "kind": "flowchart",
+      "title": "Rolling without slipping: two energies, one race",
       "why": "the whole rolling toolkit in one figure",
       "data": "v_cm = ωR; K = ½Mv² + ½Iω²; a = g sinθ / (1+I/MR²)",
       "read": "rotation eats a share of energy set by I/MR²; smallest share wins",
-      "source": "DIAGRAM D8.7 (§3.8)" },
-    { "id": "F8.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D8.7 (§3.8)"
+    },
+    {
+      "id": "F8.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the six triage branches of §9.1",
       "read": "inertia wants axis theorems, rolling wants no-slip, torque-free words want conservation",
-      "source": "§9.1 Triage decision tree" }
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawings": [
+    {
+      "id": "D8.1",
+      "kind": "excalidraw",
+      "title": "The velocity field of a spinning disc",
+      "show": "a disc rotating about its centre. At three points (centre, rim, and a point at $r/2$): velocity arrows drawn tangent to the circle. The centre has $v=0$. The rim has $v=R\\omega$. The intermediate point has $v=(r/2)\\omega$. The instantaneous axis through the centre shown as a dot.",
+      "search": "\"velocity field spinning disc instantaneous axis diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-1.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.1"
+    },
+    {
+      "id": "D8.2",
+      "kind": "excalidraw",
+      "title": "Moment of inertia of six standard bodies",
+      "show": "a rod, ring, disc, solid sphere, hollow sphere, and cylinder, each with the axis marked and the $I$ value labelled. The distance from axis to farthest mass element shown.",
+      "search": "\"moment of inertia standard bodies rod ring disc sphere cylinder table\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-2.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.2"
+    },
+    {
+      "id": "D8.3",
+      "kind": "excalidraw",
+      "title": "The parallel-axis theorem geometry",
+      "show": "a disc with the COM axis (through the centre) and a parallel axis through the rim. The distance $d=R$ shown. $I_{\\text{rim}}=I_{\\text{cm}}+MR^2=MR^2/2+MR^2=3MR^2/2$.",
+      "search": "\"parallel axis theorem disc rim tangent geometry diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-3.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.3"
+    },
+    {
+      "id": "D8.4",
+      "kind": "excalidraw",
+      "title": "Torque about a point with the moment arm",
+      "show": "a force $\\mathbf{F}$ applied at point $P$ on a body pivoted at $O$. The moment arm $d=r\\sin\\theta$ drawn as the perpendicular distance from $O$ to the line of action of $\\mathbf{F}$. $\\tau=Fd$ annotated.",
+      "search": "\"torque moment arm perpendicular distance force pivot diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-4.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.4"
+    },
+    {
+      "id": "D8.5",
+      "kind": "excalidraw",
+      "title": "The rolling wheel's velocity field with the contact point at rest",
+      "show": "a wheel rolling to the right at speed $v$. At the contact point: $v_{\\text{contact}}=v-\\omega R=0$ (no-slip condition). At the top: $v_{\\text{top}}=v+\\omega R=2v$. At the centre: $v_{\\text{cm}}=v$. The velocity field shown as arrows of varying length around the wheel.",
+      "search": "\"rolling wheel velocity field contact point rest top 2v diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-5.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.5"
+    },
+    {
+      "id": "D8.6",
+      "kind": "excalidraw",
+      "title": "The spinning skater: angular momentum conservation",
+      "show": "a skater spinning with arms out ($I_1$ large, $\\omega_1$ small) and arms in ($I_2$ small, $\\omega_2$ large). $L=I_1\\omega_1=I_2\\omega_2$ annotated. The KE increases: $\\frac{1}{2}I_2\\omega_2^2>\\frac{1}{2}I_1\\omega_1^2$ — the extra energy comes from the work the skater does pulling her arms in.",
+      "search": "\"spinning skater angular momentum conservation arms in out kinetic energy\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-6.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.6"
+    },
+    {
+      "id": "D8.7",
+      "kind": "excalidraw",
+      "title": "The rolling race: five bodies at the same time",
+      "show": "an incline with five bodies (solid sphere, solid cylinder, hollow sphere, hollow cylinder, sliding block) at the same time after release. The solid sphere is furthest ahead; the sliding block (no rotation) is even further. The $I/(MR^2)$ values annotated.",
+      "search": "\"rolling race incline solid sphere cylinder hollow sphere order diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-7.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.7"
+    },
+    {
+      "id": "D8.8",
+      "kind": "excalidraw",
+      "title": "The slipping-to-rolling phase diagram",
+      "show": "a graph of $v$ and $\\omega R$ vs $t$. Initially $v>v_0$ and $\\omega R=0$ (a ball thrown with no spin). $v$ decreases (friction opposes motion), $\\omega R$ increases (friction creates torque). They meet at $t^*$ when $v=\\omega R$ — rolling begins. After $t^*$: $v=\\omega R$ (constant, no friction needed).",
+      "search": "\"slipping to rolling phase diagram v and omega R versus time\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-8.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.8"
+    },
+    {
+      "id": "D8.9",
+      "kind": "excalidraw",
+      "title": "A rod struck by a bullet",
+      "show": "a rod hinged at one end, initially at rest. A bullet approaches at speed $v_0$ and embeds at distance $d$ from the hinge. The angular momentum about the hinge: $L_{\\text{before}}=mv_0 d$. After: $L_{\\text{after}}=(I_{\\text{rod}}+md^2)\\omega$.",
+      "search": "\"bullet hitting hinged rod angular momentum conservation diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-9.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.9"
+    },
+    {
+      "id": "D8.10",
+      "kind": "excalidraw",
+      "title": "The ladder problem's force diagram with the incipient-tip normal force",
+      "show": "a ladder leaning against a wall at angle $\\theta$. Forces: weight $mg$ at the COM, normal force from the wall $N_w$ (horizontal), normal force from the ground $N_g$ (vertical), friction from the ground $f$ (horizontal). At the tipping point: $N_w$ acts at the top, $N_g$ acts at the bottom edge (not the centre of the base).",
+      "search": "\"ladder against wall force diagram tipping point normal force position\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-10.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.10"
+    },
+    {
+      "id": "D8.11",
+      "kind": "excalidraw",
+      "title": "A gyroscope with L, torque and the precession cone",
+      "show": "a spinning top tilted at angle $\\theta$ from the vertical. $\\mathbf{L}$ along the spin axis. $\\boldsymbol{\\tau}=\\mathbf{r}_{\\text{cm}}\\times M\\mathbf{g}$ perpendicular to $\\mathbf{L}$ (horizontal). $d\\mathbf{L}=\\boldsymbol{\\tau}\\,dt$ causes $\\mathbf{L}$ to precess around the vertical. The precession cone drawn.",
+      "search": "\"gyroscope precession angular momentum torque cone diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-11.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.11"
+    },
+    {
+      "id": "D8.12",
+      "kind": "excalidraw",
+      "title": "The collision-then-roll transition: bullet embeds in rod",
+      "show": "a uniform rod of length $L$ hanging vertically from a frictionless hinge at the top. A bullet of mass $m$ approaches horizontally at speed $v$ and embeds at distance $d$ from the hinge. Three phases: (1) bullet approaches; (2) bullet embeds — angular momentum conserved about hinge; (3) rod swings up — energy conserved from post-collision KE to PE at maximum angle $\\theta_{\\max}$.",
+      "search": "\"bullet embeds in rod angular momentum conservation hinge rod swing diagram\"",
+      "file": "_obsidian/excalidraw/rotational-mechanics-D8-12.excalidraw.md",
+      "source": "rotational-mechanics/Rotational-mechanics.md · D8.12"
+    }
   ]
 }
