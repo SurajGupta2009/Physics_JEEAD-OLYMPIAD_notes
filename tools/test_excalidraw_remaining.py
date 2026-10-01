@@ -12,6 +12,7 @@ import unittest
 from pathlib import Path
 
 from tools.build_excalidraw_remaining import DRAW, ROOT
+from tools.excalidraw_additions import base_ref, insert_only, original_text
 from tools.excalidraw_checks import SCENE_BLOCK_PATTERN
 
 EXPECTED = {'photoelectric-effect': 13, 'atomic-structure': 13, 'x-rays': 13,
@@ -65,10 +66,13 @@ class RemainingScenesTests(unittest.TestCase):
         self.assertEqual(before, after)
 
     def test_original_briefs_and_provenance_preserved(self):
+        ref = base_ref()
         for slug in DRAW:
-            old = subprocess.check_output(['git', 'show', f'HEAD:{slug}/{slug.capitalize()}.md'], cwd=ROOT).decode()
-            self.assertEqual(old, re.sub(COMPANION, '', master(slug).read_text(encoding='utf-8')), slug)
-            original = json.loads(subprocess.check_output(['git', 'show', f'HEAD:{slug}/figures.json'], cwd=ROOT))
+            old = original_text(f'{slug}/{slug.capitalize()}.md', ref) or ''
+            text = master(slug).read_text(encoding='utf-8')
+            self.assertTrue(insert_only(old, text), f'{slug}: original master lines were rewritten')
+            self.assertEqual(len(re.findall(COMPANION, text)), EXPECTED[slug], slug)
+            original = json.loads(original_text(f'{slug}/figures.json', ref) or '{}')
             current = json.loads((ROOT / slug / 'figures.json').read_text(encoding='utf-8'))
             for key, value in original.items():
                 self.assertEqual(current.get(key), value, f'{slug}: {key}')

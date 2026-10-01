@@ -13,7 +13,7 @@
 - every master is a **strict superset of its committed original** — an insert-only line diff shows that no original line was removed or rewritten — and each chapter's Mermaid `figures` records are unchanged;
 - no raster images or `image` elements anywhere.
 
-Regeneration is verified end to end: all eight builders (`tools/build_excalidraw_batch*.py`, `build_excalidraw_waves_thermal.py`, `build_excalidraw_heat_capacitors.py`, `build_excalidraw_current_magnetism_emi.py`, `build_excalidraw_em_optics.py`, `build_excalidraw_remaining.py`) rerun with **zero changed files** over 606 masters/manifests/scenes. `python3 -m unittest discover -s tools -p 'test_*.py'` reports **30 passing tests**, `python3 tools/check_all.py` passes every topic gate, and the offline site rebuilds with plugin embeds stripped.
+Preservation is checked with an insert-only line diff against the branch point with `main` (`tools/excalidraw_additions.py`), so it keeps holding after this branch is merged. Regeneration is verified end to end: all eight builders (`tools/build_excalidraw_batch*.py`, `build_excalidraw_waves_thermal.py`, `build_excalidraw_heat_capacitors.py`, `build_excalidraw_current_magnetism_emi.py`, `build_excalidraw_em_optics.py`, `build_excalidraw_remaining.py`) rerun with **zero changed files** over 606 masters/manifests/scenes. `python3 -m unittest discover -s tools -p 'test_*.py'` reports **30 passing tests** (including `tools/test_verify_all_diagrams.py`, which pins the 31-chapter / 544-scene coverage), `python3 tools/check_all.py` passes every topic gate, and the offline site rebuilds with plugin embeds stripped.
 
 ## Latest batch — Electromagnetic Waves → Geometrical Optics → Wave Optics
 

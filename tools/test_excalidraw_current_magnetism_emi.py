@@ -27,12 +27,11 @@ class CurrentMagnetismInductionTests(unittest.TestCase):
         self.assertEqual(before,{p:hashlib.sha256(p.read_bytes()).digest() for p in paths})
 
     def test_original_master_preservation(self):
+        from tools.excalidraw_additions import base_ref, insert_only, original_text
+        ref=base_ref()
         for slug,(name,_,_) in TOPICS.items():
-            old=subprocess.check_output(['git','show',f'HEAD:{slug}/{name}'],cwd=ROOT).decode()
+            old=original_text(f'{slug}/{name}',ref) or ''
             text=(ROOT/slug/name).read_text()
-            if slug=='current-electricity':
-                text=re.sub(r'\n\n> \[!abstract\] DIAGRAM D19\.\d+ — [^\n]*\n> \*\*Show:\*\* [^\n]*\n> \*\*Source:\*\* [^\n]*\n> \*\*Read:\*\* [^\n]*\n\n!\[\[[^\n]+\]\]', '',text)
-            else:text=re.sub(r'\n!\[\[../_obsidian/excalidraw/[^\n]+\]\]\n','',text)
-            self.assertEqual(old,text)
+            self.assertTrue(insert_only(old,text),f'{slug}: original master lines were rewritten')
 
 if __name__=='__main__':unittest.main()

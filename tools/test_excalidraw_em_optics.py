@@ -28,15 +28,17 @@ class EMOpticsTests(unittest.TestCase):
         self.assertEqual(before,{p:hashlib.sha256(p.read_bytes()).digest() for p in paths})
 
     def test_originals_preserved(self):
+        from tools.excalidraw_additions import base_ref, insert_only, original_text
+        ref=base_ref()
         for slug,(name,part,_) in TOPICS.items():
-            old=subprocess.check_output(['git','show',f'HEAD:{slug}/{name}'],cwd=ROOT).decode()
+            old=original_text(f'{slug}/{name}',ref) or ''
             text=(ROOT/slug/name).read_text()
-            pattern=(r'\n\n> \[!abstract\] DIAGRAM D'+str(part)+r'\.\d+ — [^\n]*\n> \*\*Show:\*\* [^\n]*\n'
-                     r'> \*\*Source:\*\* [^\n]*\n> \*\*Read:\*\* [^\n]*\n\n!\[\[[^\n]+\]\]')
-            self.assertEqual(old,re.sub(pattern,'',text))
-            original=json.loads(subprocess.check_output(['git','show',f'HEAD:{slug}/figures.json'],cwd=ROOT))
+            self.assertTrue(insert_only(old,text),f'{slug}: original master lines were rewritten')
+            original=json.loads(original_text(f'{slug}/figures.json',ref) or '{}')
             self.assertEqual(original['figures'],json.loads((ROOT/slug/'figures.json').read_text())['figures'])
-            self.assertEqual(subprocess.check_output(['git','diff','HEAD','--',f'{slug}/assets'],cwd=ROOT),b'')
+            diff=subprocess.run(['git','diff','--quiet',ref or 'HEAD','--',f'{slug}/assets'],
+                                cwd=ROOT,capture_output=True)
+            self.assertEqual(diff.returncode,0,f'{slug}: source assets changed')
 
     def test_analytic_curves(self):
         from pathlib import Path

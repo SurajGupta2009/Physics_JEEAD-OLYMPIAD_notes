@@ -4,7 +4,7 @@
 Original brief IDs, including gaps and D100, are retained. Regeneration
 replaces manual scene edits. No exporters or remote/raster assets are used.
 """
-import json,math,re,subprocess,sys,random
+import json,math,re,sys,random
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tools.build_excalidraw_current_magnetism_emi import (
@@ -831,11 +831,7 @@ def main():
     for slug,fn in DRAW.items():
         if only and slug not in only:continue
         name=slug.capitalize()+'.md';master=ROOT/slug/name
-        # Rebuild on top of the committed original so regeneration is idempotent and
-        # can never accumulate or lose additive blocks.
-        committed=subprocess.run(['git','show',f'HEAD:{slug}/{name}'],cwd=ROOT,
-                                 capture_output=True,text=True)
-        text=committed.stdout if committed.returncode==0 and committed.stdout else master.read_text()
+        text=master.read_text()
         matches=[m for m in BRIEF.finditer(text) if m.group(4).count('*Show:*')]
         assert matches,f'{slug}: no DIAGRAM briefs found'
         mp=ROOT/slug/'figures.json';manifest=json.loads(mp.read_text());drawings=[]
@@ -848,8 +844,13 @@ def main():
             sr=re.search(r'\*Search:\* ([^\n]*)',m.group(4))
             search=sr[1].strip() if sr else f'{slug} DIAGRAM {ident}'
             embed=f'![[../_obsidian/excalidraw/{stem}|900]]'
-            start=text.index(raw);rest=text[start+len(raw):]
-            text=text[:start]+block+f'> **Companion:** native editable scene `{stem}.excalidraw.md`; this brief has no SVG source.\n\n{embed}\n'+rest
+            if embed in text:
+                # The companion block is already in place; never touch it again, so
+                # regeneration stays byte-identical no matter how often it runs.
+                block=raw
+            else:
+                start=text.index(raw);rest=text[start+len(raw):]
+                text=text[:start]+block+f'> **Companion:** native editable scene `{stem}.excalidraw.md`; this brief has no SVG source.\n\n{embed}\n'+rest
             drawings.append(dict(id=ident,kind='excalidraw',title=title,
                 show='Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.',
                 search=search,file=rel,source=f'{slug}/{name} · {ident} brief'))

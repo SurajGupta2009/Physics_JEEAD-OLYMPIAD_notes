@@ -19,13 +19,15 @@ Run from the repository root:
 """
 from __future__ import annotations
 
-import difflib
 import json
 import math
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tools.excalidraw_additions import base_ref, insert_only, original_text  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 VAULT = ROOT / "_obsidian" / "excalidraw"
@@ -81,17 +83,10 @@ def check_scene(path: Path, diagram_id: str) -> list[str]:
     return problems
 
 
-def git_show(path: str) -> str | None:
-    try:
-        return subprocess.check_output(["git", "show", f"HEAD:{path}"], cwd=ROOT,
-                                       stderr=subprocess.DEVNULL).decode("utf-8")
-    except subprocess.CalledProcessError:
-        return None
-
-
 def verify() -> tuple[list[str], list[tuple[str, int, int]]]:
     problems: list[str] = []
     rows: list[tuple[str, int, int]] = []
+    ref = base_ref()
     topics = json.loads((ROOT / "topics.json").read_text(encoding="utf-8"))["topics"]
     known_scenes: set[str] = set()
 
@@ -124,20 +119,15 @@ def verify() -> tuple[list[str], list[tuple[str, int, int]]]:
             problems.append(f"{slug}: renderer is not pinned to {RENDERER}")
         if RASTER.search(source):
             problems.append(f"{slug}: raster image reference in the master")
-        original_manifest = git_show(f"{slug}/figures.json")
+        original_manifest = original_text(f"{slug}/figures.json", ref)
         if original_manifest is not None:
             committed = json.loads(original_manifest)
             if committed.get("figures") and committed.get("figures") != manifest.get("figures"):
                 problems.append(f"{slug}: Mermaid figure records changed")
 
-        original_master = git_show(f"{slug}/{name}")
-        if original_master is not None:
-            old_lines = original_master.splitlines()
-            new_lines = source.splitlines()
-            changed = [op for op in difflib.SequenceMatcher(None, old_lines, new_lines).get_opcodes()
-                       if op[0] in ("delete", "replace")]
-            if changed:
-                problems.append(f"{slug}: original master lines were removed or rewritten")
+        original_master = original_text(f"{slug}/{name}", ref)
+        if original_master is not None and not insert_only(original_master, source):
+            problems.append(f"{slug}: original master lines were removed or rewritten")
 
         for drawing in drawings:
             ident = drawing["id"]
