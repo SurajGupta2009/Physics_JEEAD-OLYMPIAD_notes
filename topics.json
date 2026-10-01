@@ -406,13 +406,13 @@
       "pages": [
         "String-waves.md"
       ],
-      "figures": 5,
+      "figures": 9,
       "questions": 0,
       "solutions": 0,
       "math_spans": 886,
       "bytes_html": 0,
-      "bytes_markdown": 79604,
-      "words": 12094,
+      "bytes_markdown": 80930,
+      "words": 12234,
       "display_formulas": 176,
       "part": 1,
       "order": 13,
@@ -530,13 +530,13 @@
       "pages": [
         "Magnetism.md"
       ],
-      "figures": 0,
+      "figures": 30,
       "questions": 94,
       "solutions": 130,
       "math_spans": 3948,
       "bytes_html": 0,
-      "bytes_markdown": 269880,
-      "words": 39975,
+      "bytes_markdown": 271731,
+      "words": 40005,
       "display_formulas": 61
     },
     {
@@ -605,13 +605,13 @@
       "pages": [
         "Emi-ac.md"
       ],
-      "figures": 0,
+      "figures": 22,
       "questions": 94,
       "solutions": 130,
       "math_spans": 3902,
       "bytes_html": 0,
-      "bytes_markdown": 251558,
-      "words": 37852,
+      "bytes_markdown": 252847,
+      "words": 37874,
       "display_formulas": 47
     },
     {
@@ -652,13 +652,13 @@
       "pages": [
         "Electromagnetic-waves.md"
       ],
-      "figures": 7,
+      "figures": 14,
       "questions": 52,
       "solutions": 52,
       "math_spans": 790,
       "bytes_html": 0,
-      "bytes_markdown": 80411,
-      "words": 9939,
+      "bytes_markdown": 83924,
+      "words": 10316,
       "display_formulas": 36,
       "part": 3,
       "order": 22,
@@ -698,13 +698,13 @@
       "pages": [
         "Photoelectric-effect.md"
       ],
-      "figures": 0,
+      "figures": 13,
       "questions": 54,
       "solutions": 103,
       "math_spans": 1147,
       "bytes_html": 0,
-      "bytes_markdown": 100508,
-      "words": 14255,
+      "bytes_markdown": 103070,
+      "words": 14424,
       "display_formulas": 18,
       "part": 23,
       "order": 25,
@@ -743,13 +743,13 @@
       "pages": [
         "Atomic-structure.md"
       ],
-      "figures": 0,
+      "figures": 13,
       "questions": 54,
       "solutions": 103,
       "math_spans": 908,
       "bytes_html": 0,
-      "bytes_markdown": 81792,
-      "words": 11676,
+      "bytes_markdown": 84250,
+      "words": 11845,
       "display_formulas": 14,
       "part": 24,
       "order": 26,
@@ -789,13 +789,13 @@
       "pages": [
         "X-rays.md"
       ],
-      "figures": 0,
+      "figures": 13,
       "questions": 54,
       "solutions": 103,
       "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 77849,
-      "words": 11607,
+      "bytes_markdown": 80043,
+      "words": 11776,
       "display_formulas": 13,
       "part": 25,
       "order": 27,
@@ -839,13 +839,13 @@
       "pages": [
         "Nuclear-physics.md"
       ],
-      "figures": 0,
+      "figures": 16,
       "questions": 54,
       "solutions": 103,
       "math_spans": 558,
       "bytes_html": 0,
-      "bytes_markdown": 83397,
-      "words": 12161,
+      "bytes_markdown": 86389,
+      "words": 12369,
       "display_formulas": 15,
       "part": 26,
       "order": 28,
@@ -889,13 +889,13 @@
       "pages": [
         "Semiconductors.md"
       ],
-      "figures": 0,
+      "figures": 18,
       "questions": 54,
       "solutions": 102,
       "math_spans": 498,
       "bytes_html": 0,
-      "bytes_markdown": 82779,
-      "words": 12094,
+      "bytes_markdown": 86109,
+      "words": 12328,
       "display_formulas": 16,
       "part": 27,
       "order": 29,
@@ -935,13 +935,13 @@
       "pages": [
         "Communication-systems.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
       "math_spans": 653,
       "bytes_html": 0,
-      "bytes_markdown": 81477,
-      "words": 11824,
+      "bytes_markdown": 83883,
+      "words": 11980,
       "display_formulas": 16,
       "part": 100,
       "order": 30,
@@ -981,13 +981,13 @@
       "pages": [
         "Special-relativity.md"
       ],
-      "figures": 0,
+      "figures": 12,
       "questions": 47,
       "solutions": 93,
       "math_spans": 950,
       "bytes_html": 0,
-      "bytes_markdown": 86848,
-      "words": 12241,
+      "bytes_markdown": 89158,
+      "words": 12397,
       "display_formulas": 18,
       "part": 28,
       "order": 31,

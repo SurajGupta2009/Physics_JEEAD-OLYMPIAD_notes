@@ -35,6 +35,13 @@
 <h1 id="capacitors-first-principles-to-olympiad">Capacitors — first principles to Olympiad</h1>
 <p>A complete, proof-first treatment of capacitance, energy, dielectrics and capacitor networks. Every formula here is <strong>derived from something you already accept</strong> — Coulomb's law, Gauss's law, conservation of energy — and every place where a JEE or Olympiad examiner can catch you is marked explicitly.</p>
 <p><img alt="Parallel plate capacitor connected to a battery, with uniform field in the gap" src="../../capacitors/assets/figures/fig-001.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.1 — Parallel plate capacitor connected to a battery, with uniform field in the gap</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-001.svg</code>; original retained.
+<strong>Read:</strong> Parallel plate capacitor connected to a battery, with uniform field in the gap.</p>
+</div>
+
 <p><strong>The whole chapter in one picture.</strong> Two conductors, a potential difference, a field in the gap — and a battery that either holds <em>Q</em> fixed or holds <em>V</em> fixed. Almost every capacitor problem in JEE and every Olympiad problem is a question about <em>which of those two is fixed</em>: that single choice decides the energy change, the force between the plates and the force on a dielectric slab.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F7.1 · Chapter map: Q-fixed or V-fixed</p>
@@ -530,6 +537,13 @@ $$</p>
 <p>Both results you should be able to <em>guess</em> before calculating: on the axis of a ring the transverse components cancel by symmetry so only $\cos\theta=x/r$ survives (that extra $x$ is why the field is zero at the centre); for the rod, only the radial component survives and the integral gives $2\lambda/r$. The rod result is the one that makes the coaxial capacitor (§2.5) a one-line derivation.</p>
 </blockquote>
 <p><img alt="Two standard charge elements: a ring and a long rod" src="../../capacitors/assets/figures/fig-002.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.2 — Two standard charge elements: a ring and a long rod</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-002.svg</code>; original retained.
+<strong>Read:</strong> Two standard charge elements: a ring and a long rod.</p>
+</div>
+
 <p><strong>Fig. 1.1 — Two elements, both by symmetry + one integral.</strong> Learn to state the symmetry argument out loud before integrating: it tells you which component to project onto, and it is half the marks in a long-answer question.</p>
 <h3 id="q1-two-identical-conducting-spheres-centres-1-m-apart-radii-03-m-carry-q-and-q-is-f-kq2r2-correct-base-reasoning"><strong>Q1</strong> Two identical conducting spheres, centres 1 m apart, radii 0.3 m, carry +Q and −Q. Is $F = kQ^2/r^2$ correct? <em>(base · reasoning)</em></h3>
 <p>Give the direction of the error (too big / too small / correct) and justify.</p>
@@ -542,6 +556,13 @@ $$</p>
 <h3 id="12-conductors-insulators-and-the-four-theorems">1.2 Conductors, insulators, and the four theorems</h3>
 <p>Microscopically, a metal has $\sim10^{29}$ conduction electrons per m³ that are free to move over macroscopic distances; a good insulator has essentially none (electrons are bound, only displaced by an atom's width). That one difference — <em>mobile</em> versus <em>bound</em> — generates all four results below.</p>
 <p><img alt="A conductor reaching electrostatic equilibrium" src="../../capacitors/assets/figures/fig-003.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.3 — A conductor reaching electrostatic equilibrium</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-003.svg</code>; original retained.
+<strong>Read:</strong> A conductor reaching electrostatic equilibrium.</p>
+</div>
+
 <p><strong>Fig. 1.2 — Equilibrium in two frames.</strong> Mobile charges drift until the field they leave behind cancels the applied field exactly. Relaxation time $\tau=\varepsilon_0/\rho_{\text{res}}$ — for copper that is about $1.5\times10^{-19}$ s, which is why "instantaneously" is not a cheat in electrostatics problems.</p>
 <details>
 <summary>Theorem 1 — $\vec E=0$ inside a conductor in equilibrium (with proof by contradiction)</summary>
@@ -594,6 +615,13 @@ $$</p>
 <p>Now apply Gauss to a pillbox straddling the surface: flux $E\,dA$ out, no flux through the inner face, and $q_{\text{enc}}=\sigma\,dA$ ⇒ the same $E=\sigma/\varepsilon_0$. The two methods agree, and the pillbox version is what you should write in an exam — but <em>know the patch version</em>, because it is the same reasoning that gives the force in §1.5 and the plate force in chapter 3.</p>
 </blockquote>
 <p><img alt="Pillbox at a conductor surface and the patch decomposition" src="../../capacitors/assets/figures/fig-004.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.4 — Pillbox at a conductor surface and the patch decomposition</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-004.svg</code>; original retained.
+<strong>Read:</strong> Pillbox at a conductor surface and the patch decomposition.</p>
+</div>
+
 <p><strong>Fig. 1.3 — Left:</strong> pillbox ⇒ $E=\sigma/\varepsilon_0$. <strong>Right:</strong> the same result by splitting the conductor's charge into the local patch (which cannot push itself) plus the rest. Keep the right-hand picture in mind — the force on a plate in chapter 3 is $\sigma$ times <em>only</em> the "rest" field, i.e. $\sigma/2\varepsilon_0$, and that is where the ½ in $P=\sigma^2/2\varepsilon_0$ comes from.</p>
 <h3 id="q2-a-point-charge-q-sits-at-distance-d-from-a-large-uncharged-conducting-plate-what-is-the-force-why-is-it-never-repulsive-basejee-adv"><strong>Q2</strong> A point charge $q$ sits at distance $d$ from a large uncharged conducting plate. What is the force? Why is it never repulsive? <em>(base→JEE-adv)</em></h3>
 <p>(a) State the direction and use the image idea to give the magnitude. (b) Explain the answer for a <strong>charged</strong> plate at potential $V_0$ instead of grounded — same, different, and why?</p>
@@ -653,6 +681,12 @@ $$</p>
 $$</p>
 <p>The reason a <em>closed</em> surface is special is that flux through it depends on nothing but enclosed charge. For an <strong>open</strong> surface this fails — and one open-surface result is used constantly in capacitor problems with point charges near plates.</p>
 <p><img alt="Charge on the axis of a disc; the flux is proportional to the solid angle" src="../../capacitors/assets/figures/fig-005.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.5 — Charge on the axis of a disc; the flux is proportional to the solid angle</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-005.svg</code>; original retained.
+<strong>Read:</strong> Charge on the axis of a disc; the flux is proportional to the solid angle.</p>
+</div>
 <p><strong>Fig. 1.4 — Flux through a disc on the axis of a charge.</strong> Total flux from $q$ is $q/\varepsilon_0$ spread over $4\pi$ steradians, so any surface subtending solid angle $\Omega$ takes the fraction $\Omega/4\pi$. For the disc, $\cos\theta=x/\sqrt{x^2+R^2}$.</p>
 <p>$$
 \Phi_{\text{disc}}=\frac{q}{2\varepsilon_0}\left(1-\frac{x}{\sqrt{x^2+R^2}}\right) \qquad(x=0\Rightarrow q/2\varepsilon_0;\quad x\gg R\Rightarrow \frac{qR^2}{8\varepsilon_0x^2}) \tag{disc flux}
@@ -665,6 +699,12 @@ $$</p>
 <p>If two potentials $V_1,V_2$ both satisfy $\nabla^2V=0$ in a region with the same boundary values, their difference has zero boundary value, and the integral $\int|\vec\nabla(V_1-V_2)|^2dV$ vanishes (integrate by parts) ⇒ the difference is constant ⇒ $V_1=V_2$. That is the whole licence for using images, and it also explains why field lines cannot cross and why $V$ has no interior maximum.</p>
 </blockquote>
 <p><img alt="Image charge across a grounded plane and the resulting field" src="../../capacitors/assets/figures/fig-006.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.6 — Image charge across a grounded plane and the resulting field</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-006.svg</code>; original retained.
+<strong>Read:</strong> Image charge across a grounded plane and the resulting field.</p>
+</div>
 <p><strong>Fig. 1.5 — A charge and a grounded plane, solved by one mirrored charge.</strong> The pair's mid-plane is automatically $V=0$, so it satisfies the boundary condition; uniqueness says it is the answer. Nothing exists on the far side.</p>
 <p>$$
 V(x,y,z)=\frac{q}{4\pi\varepsilon_0}\left(\frac1{r_+}-\frac1{r_-}\right),\qquad \sigma_{\text{ind}}(r)=-\frac{qd}{2\pi(r^2+d^2)^{3/2}},\qquad Q_{\text{ind}}=-q \tag{plane}
@@ -692,6 +732,12 @@ $$</p>
 </details>
 <h3 id="18-cavities-shielding-and-what-screened-really-means">1.8 Cavities, shielding, and what "screened" really means</h3>
 <p><img alt="Charge inside a cavity, induced charges, and grounding" src="../../capacitors/assets/figures/fig-007.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.7 — Charge inside a cavity, induced charges, and grounding</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-007.svg</code>; original retained.
+<strong>Read:</strong> Charge inside a cavity, induced charges, and grounding.</p>
+</div>
 <p><strong>Fig. 1.6 — Charge inside a cavity.</strong> A Gaussian surface inside the metal encloses the cavity, so the inner wall must carry exactly $-q$. If the conductor is neutral and isolated, $+q$ appears on the <strong>outer</strong> surface and there is a field outside; earthing removes it — and nothing else. The cavity's internal field is unaffected either way.</p>
 <blockquote>
 <p><strong>Electrostatic shielding, stated precisely</strong></p>
@@ -822,6 +868,12 @@ $$</p>
 <h3 id="22-the-parallel-plate-capacitor-derived-in-four-lines">2.2 The parallel-plate capacitor, derived in four lines</h3>
 <p>Two identical conducting plates of area $A$, separated by $d$, with $d\ll\sqrt A$.</p>
 <p><img alt="Parallel plate capacitor: charge on inner faces, Gaussian box, and the field profile" src="../../capacitors/assets/figures/fig-008.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.8 — Parallel plate capacitor: charge on inner faces, Gaussian box, and the field profile</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-008.svg</code>; original retained.
+<strong>Read:</strong> Parallel plate capacitor: charge on inner faces, Gaussian box, and the field profile.</p>
+</div>
 <p><strong>Fig. 2.1 — Left:</strong> the Gaussian box has $E=0$ on both its faces (they sit in metal) and encloses no charge — that is the proof that the facing surfaces carry $\pm\sigma$ and nothing else is needed. <strong>Right:</strong> the field profile. Only here — a truly uniform field — may you write $V=Ed$; it is the area under the graph.</p>
 <p>$$
 \begin{aligned} \text{facing surfaces:}&amp;quad\sigma=\frac{Q}{A}\ \text{superpose two sheets:}&amp;quad E=\frac{\sigma}{2\varepsilon_0}+\frac{\sigma}{2\varepsilon_0}=\frac{\sigma}{\varepsilon_0}\ \text{uniform field:}&amp;quad V=Ed=\frac{Qd}{\varepsilon_0A}\ \text{hence:}&amp;quad C=\boxed{\;\dfrac{\varepsilon_0A}{d}\;} \end{aligned}
@@ -908,6 +960,12 @@ $$</p>
 \begin{aligned} E_r\,(2\pi rL)&amp;=\frac{\lambda L}{\varepsilon_0}\ \Rightarrow\ E_r=\frac{\lambda}{2\pi\varepsilon_0r}\ V&amp;=\int_a^bE_r\,dr=\frac{\lambda}{2\pi\varepsilon_0}\ln\frac ba\ C&amp;=\frac{Q}{V}\ \Rightarrow\ \boxed{\;\frac{C}{L}=\frac{2\pi\varepsilon_0}{\ln(b/a)}\;} \end{aligned}
 $$</p>
 <p><img alt="Coaxial cable cross-section with Gaussian circle and the 1/r field" src="../../capacitors/assets/figures/fig-009.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.9 — Coaxial cable cross-section with Gaussian circle and the 1/r field</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-009.svg</code>; original retained.
+<strong>Read:</strong> Coaxial cable cross-section with Gaussian circle and the 1/r field.</p>
+</div>
 <p><strong>Fig. 2.2 — Cylinder ⇒ $1/r$ ⇒ logarithm; sphere ⇒ $1/r^2$ ⇒ reciprocal.</strong> That single correspondence generates the structure of every curved-geometry capacitance. Learn the pattern, not the formulas.</p>
 <blockquote>
 <p><strong>Four things to notice</strong></p>
@@ -1232,6 +1290,12 @@ U=\frac{Q^2}{2C}=\frac12CV^2=\frac12QV \tag{the three forms}
 $$</p>
 <p><strong>Which face, when.</strong> $\tfrac12Q^2/C$ when $Q$ is known or frozen (no battery). $\tfrac12CV^2$ when $V$ is known or held. $\tfrac12QV$ when <em>neither</em> is fixed but you know both at that instant — it is the only one that never lies, because it needs no assumption about what is held constant.</p>
 <p><img alt="Work of charging as the area under the V against q line" src="../../capacitors/assets/figures/fig-010.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.10 — Work of charging as the area under the V against q line</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-010.svg</code>; original retained.
+<strong>Read:</strong> Work of charging as the area under the V against q line.</p>
+</div>
 <p><strong>Fig. 3.1 — One picture, three facts.</strong> The stored energy is the triangle; a cell at fixed $V_0$ delivers the rectangle; the leftover triangle is dissipated. A bigger capacitor is a <em>flatter</em> line — which is exactly why it stores more at the same $V$.</p>
 <blockquote>
 <p><strong>Two definitions more useful than the textbook one</strong></p>
@@ -1421,6 +1485,12 @@ $$</p>
 \Pi''&gt;0\ \Longleftrightarrow\ k&gt;\frac{2k(\ell_0-x)}{x}\ \Longleftrightarrow\ x&gt;\frac{2\ell_0}{3} \qquad\Longrightarrow\qquad V_{\text{pull-in}}=\sqrt{\frac{8k\ell_0^{3}}{27\,\varepsilon_0A}}
 $$</p>
 <p><img alt="Spring force and electrical force curves showing the pull-in point" src="../../capacitors/assets/figures/fig-011.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.11 — Spring force and electrical force curves showing the pull-in point</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-011.svg</code>; original retained.
+<strong>Read:</strong> Spring force and electrical force curves showing the pull-in point.</p>
+</div>
 <p><strong>Fig. 3.2 — Pull-in.</strong> Two curves, one intersection while the voltage is low; at $V_{\text{pull-in}}$ they become tangent at $x=2\ell_0/3$; above it there is no equilibrium at all. This is the failure mode of every electrostatic MEMS switch, and it is why MEMS mirrors and microphones are <em>bias-charged</em> rather than bias-voltaged.</p>
 <p>Two payoffs. <strong>(i)</strong> At fixed $Q$ the electrical force is $Q^2/2\varepsilon_0A$, independent of $x$, so a straight-line spring always crosses it exactly once: <strong>charge control is unconditionally stable</strong>, the gap can close arbitrarily far, and the force at contact is finite. <strong>(ii)</strong> The $2/3$ result is universal for <em>any</em> inverse-square attraction against a linear spring — the same algebra gives the sag of an electrostatic loudspeaker diaphragm, the stability of a charged droplet (§7.6), and the collapse criterion for a "capacitor microphone". Recognise the shape, not the story.</p>
 <h3 id="37-the-two-capacitor-paradox-and-its-real-resolution">3.7 The two-capacitor paradox, and its real resolution</h3>
@@ -1710,6 +1780,12 @@ $$</p>
 </blockquote>
 <h3 id="44-the-bridge-balanced-and-not">4.4 The bridge: balanced and not</h3>
 <p><img alt="Wheatstone bridge of capacitors with the galvanometer branch replaced by a capacitor" src="../../capacitors/assets/figures/fig-012.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.12 — Wheatstone bridge of capacitors with the galvanometer branch replaced by a capacitor</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-012.svg</code>; original retained.
+<strong>Read:</strong> Wheatstone bridge of capacitors with the galvanometer branch replaced by a capacitor.</p>
+</div>
 <p><strong>Fig. 4.1 — Capacitor bridge.</strong> Balance makes $V_C=V_D$, so the fifth element stores nothing and can be deleted (or shorted). Which of those two operations to use is a judgement call: usually removing it leaves two series strings that reduce instantly.</p>
 <p>$$
 V_C=V_D\iff \frac{q_t}{C_1}=\frac{q_b}{C_3}\ \ \text{and}\ \ \frac{q_t}{C_2}=\frac{q_b}{C_4} \iff \boxed{\;\frac{C_1}{C_2}=\frac{C_3}{C_4}\;} \tag{balance}
@@ -1754,6 +1830,12 @@ $$</p>
 </tbody>
 </table>
 <p><img alt="Cube of twelve equal capacitors with equipotential classes highlighted" src="../../capacitors/assets/figures/fig-013.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.13 — Cube of twelve equal capacitors with equipotential classes highlighted</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-013.svg</code>; original retained.
+<strong>Read:</strong> Cube of twelve equal capacitors with equipotential classes highlighted.</p>
+</div>
 <p><strong>Fig. 4.2 — A cube of twelve identical capacitors, folded by symmetry.</strong> For the body diagonal the six middle nodes fall into two equipotential classes of three, so the network collapses to three groups in series — the calculation is four lines (below).</p>
 <blockquote>
 <p><strong>The cube, all three answers, derived</strong></p>
@@ -1824,6 +1906,12 @@ $$</p>
 </details>
 <h3 id="48-infinite-ladders-self-similarity-and-the-root-you-must-reject">4.8 Infinite ladders: self-similarity, and the root you must reject</h3>
 <p><img alt="Infinite ladder of series C and shunt C capacitors" src="../../capacitors/assets/figures/fig-014.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.14 — Infinite ladder of series C and shunt C capacitors</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-014.svg</code>; original retained.
+<strong>Read:</strong> Infinite ladder of series C and shunt C capacitors.</p>
+</div>
 <p><strong>Fig. 4.3 — The ladder whose tail is identical to itself.</strong> If the whole infinite network has capacitance $x$, then so does the network after the first section — which is the only new fact you need.</p>
 <p>$$
 \begin{aligned} x&amp;=\text{series}\big(C,\ C+x\big)=\frac{C(C+x)}{2C+x}\ x(2C+x)&amp;=C^2+Cx\ \Rightarrow\ x^2+Cx-C^2=0\ \Rightarrow\ x=C\cdot\frac{-1\pm\sqrt5}2 \end{aligned} \qquad\Longrightarrow\qquad \boxed{x=\frac{\sqrt5-1}{2}\,C=0.618\,C}
@@ -1949,6 +2037,12 @@ $$</p>
 <p>Because the induced dipole always points <em>along</em> the field that made it: positive charge shifted with $\vec E$, negative against. Look at the slab in Fig. 5.1 — the layer of positive bound charge sits on the face toward the negative plate, the negative bound charge toward the positive plate. A sheet of charge $+\sigma_b$ at one face and $-\sigma_b$ at the other produces a field pointing from $+$ to $-$, i.e. <em>opposite</em> to the plates' field. Net result $E=E_0-\sigma_b/\varepsilon_0&lt;E_0$. There is no stable configuration in which a passively induced dipole array <em>amplifies</em> the field that induced it: that would be positive feedback, and it would mean the material spontaneously polarizes with no applied voltage — which is exactly what a ferroelectric below its Curie point does, and why ferroelectrics must be handled by the <em>field</em>-versus-<em>displacement</em> hysteresis loop of §5.10, not by a constant κ.</p>
 </blockquote>
 <p><img alt="A slab of dielectric between capacitor plates: dipoles drawn as displaced charge pairs, bound surface charge opposing the free plate charge" src="../../capacitors/assets/figures/fig-015.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.15 — A slab of dielectric between capacitor plates: dipoles drawn as displaced charge pairs, bound surface charge opposing the free plate charge</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-015.svg</code>; original retained.
+<strong>Read:</strong> A slab of dielectric between capacitor plates: dipoles drawn as displaced charge pairs, bound surface charge opposing the free plate charge.</p>
+</div>
 <p><strong>Fig. 5.1</strong> — The whole of dielectric physics in one picture: bound charges appear only where $\vec P$ terminates, i.e. on the surfaces (and wherever $\vec\nabla\cdot\vec P\ne0$), and their field always subtracts from the applied one.</p>
 <h3 id="52-bound-charge-the-bookkeeping-in-one-line">5.2 Bound charge: the bookkeeping in one line</h3>
 <p>Take a small rectangular pillbox of volume $\delta x\,\delta y\,\delta z$ inside a polarized material. Dipoles crossing a face deposit charge $\vec P\cdot d\vec a$ on it. Summing the six faces and dividing by the volume is the divergence, and the charge <em>left inside</em> is the negative of what flowed out:</p>
@@ -1956,6 +2050,12 @@ $$</p>
 \rho_b=-\vec\nabla\cdot\vec P\qquad\text{on a surface:}\qquad \sigma_b=\vec P\cdot\hat n=\begin{cases}+P_n&amp;\text{where }\vec P\text{ points out}\-\,P_n&amp;\text{where }\vec P\text{ points in}\end{cases} \tag{5.2}
 $$</p>
 <p><img alt="Pillbox derivation of rho_b = −div P on the left; a uniformly polarized sphere with bound charge on its two hemispheres on the right" src="../../capacitors/assets/figures/fig-016.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.16 — Pillbox derivation of rho_b = −div P on the left; a uniformly polarized sphere with bound charge on its two hemispheres on the right</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-016.svg</code>; original retained.
+<strong>Read:</strong> Pillbox derivation of rho_b = −div P on the left; a uniformly polarized sphere with bound charge on its two hemispheres on the right.</p>
+</div>
 <p><strong>Fig. 5.2</strong> — Left: the pillbox proof of $\rho_b=-\vec\nabla\cdot\vec P$. Right: a uniformly polarized sphere — the one geometry whose bound-charge field is uniform inside. Its internal field $-\vec P/3\varepsilon_0$ is the number that generates the whole Lorentz local-field story.</p>
 <p>Two consequences to keep ready:</p>
 <ul>
@@ -2021,6 +2121,12 @@ $$</p>
 <h3 id="55-the-catalogue-every-dielectric-geometry-you-will-be-asked-for">5.5 The catalogue: every dielectric geometry you will be asked for</h3>
 <p>One question decides everything: <strong>do the field lines cross the dielectric interfaces, or run along them?</strong> Crossing ⇒ same $D$ (free charge is continuous) ⇒ capacitors in <em>series</em>. Running along ⇒ same $E$ and same $V$ ⇒ in <em>parallel</em>. Section 4.2's logic with a new label.</p>
 <p><img alt="Four partial-fill geometries: slab parallel to faces, vertical split, n layers, and a rotating fan, each labelled series or parallel" src="../../capacitors/assets/figures/fig-017.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.17 — Four partial-fill geometries: slab parallel to faces, vertical split, n layers, and a rotating fan, each labelled series or parallel</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-017.svg</code>; original retained.
+<strong>Read:</strong> Four partial-fill geometries: slab parallel to faces, vertical split, n layers, and a rotating fan, each labelled series or parallel.</p>
+</div>
 <p><strong>Fig. 5.3</strong> — (a) slab of thickness $t&lt;d$ parallel to the plates; (b) material filling part of the <em>area</em>; (c) $n$ layers; (d) the rotary trimmer, where the variable is the overlap. Only in (a) and (c) does the dielectric interface cut the field lines.</p>
 <blockquote>
 <p><strong>The results, each one line, and each one <em>derived</em> not quoted</strong></p>
@@ -2086,6 +2192,12 @@ C(x)=\frac{\varepsilon_0}{d}\Big[w(\ell-x)+\kappa wx\Big],\qquad \frac{dC}{dx}=\
 $$</p>
 <p>Constant in $x$ — the slab is pulled in with a uniform force until it is fully inside. The derivation is chapter 3's master rule: at fixed $Q$, $F=-dU/dx=+\tfrac12V^{2}dC/dx$; at fixed $V$ the source does work $V\,dQ=V^{2}dC$ and $dU=\tfrac12V^{2}dC$, leaving again $+\tfrac12V^{2}dC$ for mechanics. Both routes agree (they must: the force is a property of the state, not of which constraint you used to compute it).</p>
 <p><img alt="Slab entering a parallel plate capacitor; fringing field at the entrance bends towards the slab and the force arrow points inwards" src="../../capacitors/assets/figures/fig-018.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.18 — Slab entering a parallel plate capacitor; fringing field at the entrance bends towards the slab and the force arrow points inwards</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-018.svg</code>; original retained.
+<strong>Read:</strong> Slab entering a parallel plate capacitor; fringing field at the entrance bends towards the slab and the force arrow points inwards.</p>
+</div>
 <p><strong>Fig. 5.4</strong> — The uniform field inside the capacitor cannot push on a dipole array (a uniform field exerts no net force on a dipole). The force lives entirely in the few millimetres where the field is <em>not</em> uniform: the fringe field at the entrance. The energy method never needs to know this, which is why you should use it — but if a question asks you to <em>explain</em> the force, only the fringe field will do.</p>
 <blockquote>
 <p><strong>Why "half" and not "all": the battery again</strong></p>
@@ -2107,6 +2219,12 @@ $$</p>
 <p>The same meniscus rises by surface tension through $h_c=2\gamma\cos\theta/\rho g d=2.9$ cm for water in a 0.5 mm slit. So at 100 V the electrostatic contribution is <em>20 times smaller</em> and the classic textbook problem is, in ordinary conditions, mostly about wetting; the two contributions are equal at $V=\sqrt{4\gamma d/\varepsilon_0(\kappa-1)}=460$ V. Exam problems quietly neglect $\gamma$ — fine at kV and sub-mm gaps, indefensible for a question that also asks a "realistic" number. Knowing which mechanism dominates is worth a mark; being able to say <em>why</em> (both are $1/d$-versus-$1/d^{2}$ scalings competing) is worth another.</p>
 </blockquote>
 <p><img alt="Vertical plates dipping into a dielectric liquid with the meniscus raised by height h, plus the force and weight arrows" src="../../capacitors/assets/figures/fig-019.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.19 — Vertical plates dipping into a dielectric liquid with the meniscus raised by height h, plus the force and weight arrows</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-019.svg</code>; original retained.
+<strong>Read:</strong> Vertical plates dipping into a dielectric liquid with the meniscus raised by height h, plus the force and weight arrows.</p>
+</div>
 <p><strong>Fig. 5.5</strong> — Dielectric liquid rise. The energy of the raised column is $\tfrac12\rho g wd h^{2}$, so $dU_g/dh=\rho g wdh$ — a factor $h/2$ smaller than "weight × height" reasoning would give; use the derivative, not the picture in your head.</p>
 <h3 id="58-breakdown-how-the-material-says-no">5.8 Breakdown: how the material says no</h3>
 <p>A field strong enough to rip electrons out of atoms ends the insulator's career. Two completely different mechanisms, one for gases and one for solids, and a JEE/INPhO favourite is to distinguish them.</p>
@@ -2120,6 +2238,12 @@ pd_{\min}=\frac{e^{1+c}}{A},\qquad V_{\min}=\frac{eB}{A}\ln!\left(1+\frac1\gamma
 $$</p>
 <p>For air these land, memorably, at $V_{\min}\approx330$ V near $pd\approx1$ Pa m ($\approx0.75$ torr cm): <strong>no uniform air gap at any pressure can be broken down with less than about 330 V</strong> — unless the electrodes are far apart enough that other things fail first. Practical anchors: $3$ kV/mm for air at 1 atm in a uniform field, $\sim30$ kV/mm at the 10 µm scale, and the left branch is why vacuum circuit breakers and why $10\ \mu$m MEMS gaps can switch a few hundred volts "cold".</p>
 <p><img alt="Sketch of a Paschen curve: breakdown voltage versus pd on log-log axes, V shaped with the minimum near 330 V, annotated with the air at 1 atm line and the MEMS region" src="../../capacitors/assets/figures/fig-020.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.20 — Sketch of a Paschen curve: breakdown voltage versus pd on log-log axes, V shaped with the minimum near 330 V, annotated with the air at 1 atm line and the MEMS region</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-020.svg</code>; original retained.
+<strong>Read:</strong> Sketch of a Paschen curve: breakdown voltage versus pd on log-log axes, V shaped with the minimum near 330 V, annotated with the air at 1 atm line and the MEMS region.</p>
+</div>
 <p><strong>Fig. 5.6</strong> — Paschen curve for air, sketched. Log-log, so the two branches are nearly straight with slope ≈ 1 on the right. The minimum is the single most useful fact: it makes a low-pressure gap a <em>better</em> insulator, which is why "evacuate to increase the withstand voltage" works only until field emission takes over.</p>
 <p><strong>Solid — intrinsic strength, then defects.</strong> An electron needs the band-gap energy $W_g$ before it can avalanche; the maximum work a field can do between scattering events is $eEa$ with $a$ a lattice spacing, so</p>
 <p>$$
@@ -2142,6 +2266,12 @@ $$</p>
 $$</p>
 <p>Everything in capacitor technology is a consequence of those two formulas: why mica and polystyrene and C0G ceramics are used in tuned circuits ($\tan\delta&lt;10^{-4}$, so a high-Q filter is possible), why X7R ("flexible") ceramics are fine for decoupling but terrible in an oscillator (κ wanders ±15% with temperature because BaTiO₃ is marching towards its Curie point), why an electrolytic gets warm at 100 kHz ripple, and why "low-ESR" is a loss statement, not a size statement.</p>
 <p><img alt="Left: Debye dispersion of kappa prime and kappa double prime versus log frequency. Right: the corresponding semicircle in the complex kappa plane" src="../../capacitors/assets/figures/fig-021.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.21 — Left: Debye dispersion of kappa prime and kappa double prime versus log frequency. Right: the corresponding semicircle in the complex kappa plane</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-021.svg</code>; original retained.
+<strong>Read:</strong> Left: Debye dispersion of kappa prime and kappa double prime versus log frequency. Right: the corresponding semicircle in the complex kappa plane.</p>
+</div>
 <p><strong>Fig. 5.7</strong> — Loss is a <em>transition</em>, not a resonance: $\kappa''$ is largest where $\kappa'$ is falling fastest, i.e. where the field period matches the relaxation time. The loss peaks at both ends of each mechanism's step and vanishes in between — which is precisely why "avoid the absorption line" advice for capacitor dielectrics is really "pick a region where $\omega\tau\ll1$ for every mechanism you have".</p>
 <blockquote>
 <p><strong>The microwave myth, done with numbers</strong></p>
@@ -2150,6 +2280,12 @@ $$</p>
 <h3 id="510-when-p-has-a-memory-ferroelectrics-piezoelectrics-electrets">5.10 When P has a memory: ferroelectrics, piezoelectrics, electrets</h3>
 <p>Everything so far assumed one curve $P(E)$, single-valued. Below a Curie temperature the feedback of §5.4 wins and the material has spontaneous polarization; $P(E)$ becomes a <em>loop</em>:</p>
 <p><img alt="Hysteresis loop of polarisation versus field with remanent polarisation and coercive field marked, and the dielectric constant as the slope of a chord" src="../../capacitors/assets/figures/fig-022.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.22 — Hysteresis loop of polarisation versus field with remanent polarisation and coercive field marked, and the dielectric constant as the slope of a chord</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-022.svg</code>; original retained.
+<strong>Read:</strong> Hysteresis loop of polarisation versus field with remanent polarisation and coercive field marked, and the dielectric constant as the slope of a chord.</p>
+</div>
 <p><strong>Fig. 5.8</strong> — Ferroelectric hysteresis. $P_r$ (remanence) is non-volatile memory; $E_c$ (coercive field) is the write energy; the loop area is the loss per cycle per unit volume, $\oint E\,dP$ — the same object as a $\tan\delta$, in a different dress: $\tan\delta=\dfrac{\oint E\,dP}{\pi E_{\max}P_{\max}}$ for a sinusoid.</p>
 <ul>
 <li><strong>Why κ is huge and lossy at once.</strong> The chord slope of the loop is what a meter reports; near switching,
@@ -2528,6 +2664,12 @@ $$</p>
 <h2 id="6-networks-and-transients-the-capacitor-in-time">6 · Networks and transients: the capacitor in time</h2>
 <p>Everything so far was a photograph. This chapter is the film — and the film is short, because a capacitor in a resistive network obeys <em>one</em> differential equation per independent capacitor, that equation is linear with constant coefficients, and almost everything you will ever be asked follows from its solution. Two ideas carry the chapter: the <strong>node-charge variable</strong> (chapter 4's $Q_i=\sum_jC_{ij}V_j$, now with $I=dQ/dt$) and the <strong>one-port reduction</strong> (whatever resistive network a capacitor sees is just $V_{\text{th}}+R_{\text{th}}$). With them, JEE Advanced problems become arithmetic and the Olympiad ones reduce to the small amount of physics they actually contain — thresholds, compensation, and dissipation.</p>
 <p><img alt="Left: a DC network with capacitors and resistors as drawn. Right: the same network in steady state with the capacitor branch deleted and only the resistor loop carrying current" src="../../capacitors/assets/figures/fig-023.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.23 — Left: a DC network with capacitors and resistors as drawn. Right: the same network in steady state with the capacitor branch deleted and only the resistor loop carrying current</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-023.svg</code>; original retained.
+<strong>Read:</strong> Left: a DC network with capacitors and resistors as drawn. Right: the same network in steady state with the capacitor branch deleted and only the resistor loop carrying current.</p>
+</div>
 <p><strong>Fig. 6.1</strong> — Steady state in one picture: a capacitor branch is an <em>open circuit</em>, so the currents live entirely in the resistor graph; the capacitors then inherit node voltages. R₃ is dead weight here — a favourite JEE trap, and the reason the algorithm below is stated as steps rather than as a formula.</p>
 <h3 id="61-steady-state-the-four-step-algorithm">6.1 Steady state: the four-step algorithm</h3>
 <div class="callout tip">
@@ -2578,6 +2720,12 @@ $$</p>
 $$</p>
 <p>Read the box as a <em>recipe</em>, because that is what it is: the three-number method. Find the initial value, the final value and $\tau$, and the graph is fully determined — and with it $V_R$, $Q$, $I$, the energy in each element and the heat in the resistors, since all of them are proportional to $V_C-V_{\text{th}}$ or to its derivative.</p>
 <p><img alt="Universal RC step response with Vc rising, Vr falling, the tau marker at 63.2 percent, the half-life, and the tangent trick; beside it the three-number recipe" src="../../capacitors/assets/figures/fig-024.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.24 — Universal RC step response with Vc rising, Vr falling, the tau marker at 63.2 percent, the half-life, and the tangent trick; beside it the three-number recipe</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-024.svg</code>; original retained.
+<strong>Read:</strong> Universal RC step response with Vc rising, Vr falling, the tau marker at 63.2 percent, the half-life, and the tangent trick; beside it the three-number recipe.</p>
+</div>
 <p><strong>Fig. 6.2</strong> — The single curve that answers most RC questions. Note what is <em>discontinuous</em> at $t=0$: the current and $V_R$ jump by the full amount while $V_C$ cannot move at all. Note also that "the time constant" is a statement about $V_C-V_{\text{th}}$, not about $V_C$: if the capacitor starts on the other side of $V_{\text{th}}$, it first discharges and then charges, and the graph crosses zero — a shape that surprises anyone who memorised only the rising curve.</p>
 <blockquote>
 <p><strong>Why V_C cannot jump — and the three exceptions</strong></p>
@@ -2636,6 +2784,12 @@ $$</p>
 $$</p>
 <p>With the trimmer capacitor of a 10× probe you are watching this equality directly: under-compensation rounds the edge, over-compensation spikes it, and the flat top you tune for on the calibration square wave <em>is</em> $R_1C_1=R_2C_2$. The same equality appears as the balance condition of §4.4's bridge (there $C_1/C_2=C_3/C_4$) and as the "no transient" condition of an electret's bias network — one condition, three names.</p>
 <p><img alt="Compensated divider circuit on the left, and on the right three output step responses labelled under-compensated, compensated and over-compensated" src="../../capacitors/assets/figures/fig-025.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.25 — Compensated divider circuit on the left, and on the right three output step responses labelled under-compensated, compensated and over-compensated</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-025.svg</code>; original retained.
+<strong>Read:</strong> Compensated divider circuit on the left, and on the right three output step responses labelled under-compensated, compensated and over-compensated.</p>
+</div>
 <p><strong>Fig. 6.3</strong> — The compensated divider and the three possible edge shapes. The "spike then droop" signature is a diagnostic, not an accident: it says the high-frequency division ratio is <em>too small</em>, i.e. $C_1$ is too large (or the cable capacitance too big, which is why probe compensation must be redone when you change cables).</p>
 <h3 id="66-relaxation-charging-to-a-threshold-is-an-oscillator">6.6 Relaxation: charging to a threshold is an oscillator</h3>
 <p>Put a device across the capacitor that <em>shorts</em> it above a threshold and <em>opens</em> it below a lower one (a neon lamp, a Schmitt trigger, a UJT, a flashlamp, a membrane). Between thresholds the capacitor simply follows (6.2) toward $V_\infty$, so the time between any two voltages is obtained by inverting the exponential — the single most useful piece of algebra in this chapter:</p>
@@ -2648,6 +2802,12 @@ $$</p>
 <p><strong>Strike:</strong> charging must be able to reach $V_{\text{hi}}$, i.e. $V&gt;V_{\text{hi}}$. <strong>Extinguish:</strong> while the device conducts, the capacitor sits at the device's own voltage $Vr/(R+r)$, which must fall <em>below</em> $V_{\text{lo}}$, i.e. $r\le V_{\text{lo}}R/(V-V_{\text{lo}})$. Between them these define the oscillating window; outside it the circuit latches. Load-line reasoning is the way to see it without algebra: draw the straight line $V=V_s-IR$ across the device's negative-resistance region — oscillation happens iff the line cuts the device's $V$–$I$ curve three times.</p>
 </blockquote>
 <p><img alt="Neon lamp relaxation oscillator circuit and the sawtooth-like capacitor voltage swinging between the extinguishing and striking levels" src="../../capacitors/assets/figures/fig-026.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.26 — Neon lamp relaxation oscillator circuit and the sawtooth-like capacitor voltage swinging between the extinguishing and striking levels</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-026.svg</code>; original retained.
+<strong>Read:</strong> Neon lamp relaxation oscillator circuit and the sawtooth-like capacitor voltage swinging between the extinguishing and striking levels.</p>
+</div>
 <p><strong>Fig. 6.4</strong> — A relaxation oscillator and its waveform. The top of each charging exponential is <em>clipped</em> at $V_{\text{hi}}$; that clipping is what turns a monotone curve into a clock, and it is why the period <em>diverges</em> at threshold rather than merely growing.</p>
 <h3 id="67-the-leaky-capacitor-and-the-two-supercapacitor">6.7 The leaky capacitor, and the two-τ supercapacitor</h3>
 <p>A real capacitor is $C$ in parallel with $R_{\text{leak}}$, in series with an equivalent series resistance $R_s$. Fed through $R$ from a cell $V$, its final voltage is <em>not</em> $V$ but the divider value $V_\infty=V\,R_{\text{leak}}/(R+R_{\text{leak}})$, and there are two time constants, $R_tC$ and $R_{\text{leak}}C$. Two consequences worth stating in an exam: a series stack needs balancing resistors <em>because</em> the individual leakages differ (§4.2), so $R_{\text{leak}}$ decides which element takes the over-voltage; and an electrostatic voltmeter or electrometer reads low across a charged isolated capacitor unless its input resistance exceeds $R_{\text{leak}}$ by two decades.</p>
@@ -2963,6 +3123,12 @@ $$</p>
 </ul>
 </blockquote>
 <p><img alt="Left: a node and a neighbour conductor drawn three ways with the resulting capacitances. Right: a dashed closed surface cutting one wire, enclosing two capacitor plates" src="../../capacitors/assets/figures/fig-027.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.27 — Left: a node and a neighbour conductor drawn three ways with the resulting capacitances. Right: a dashed closed surface cutting one wire, enclosing two capacitor plates</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-027.svg</code>; original retained.
+<strong>Read:</strong> Left: a node and a neighbour conductor drawn three ways with the resulting capacitances. Right: a dashed closed surface cutting one wire, enclosing two capacitor plates.</p>
+</div>
 <p><strong>Fig. 7.1</strong> — Left: "the capacitance of a conductor" is not defined until the state of every other conductor is, and the Schur complement $c_{ij}-c_{ik}c_{kj}/c_{kk}$ is the whole answer (numbers from Q1, $s=a/d=1/4$). Right: the closed surface used by §6.3's branch rule — draw it so only the branch you are asked about crosses it, and the answer follows from the two end states alone.</p>
 <h3 id="72-greens-reciprocity-and-the-questions-it-alone-can-answer">7.2 Green's reciprocity, and the questions it alone can answer</h3>
 <p><strong>Theorem.</strong> For two charge/configurations in the same geometry (same conductors, same permittivity map):</p>
@@ -2989,6 +3155,12 @@ $$</p>
 <p><strong>(b) Grounding a neighbour beats leaving it floating.</strong> From the Schur complement above, $c_{11}^{\text{(2 grounded)}}=c_{11}&gt;c_{11}-c_{12}^{2}/c_{22}=c_{11}^{\text{(2 floating)}}$. Physically: a grounded plate can draw extra charge from the earth; a floating one cannot, so it only partly shelters. And the "delete" case (no conductor at all) is the third value — which is exactly the <em>fold / short / delete</em> table of §4.5, now proved rather than asserted.</p>
 </blockquote>
 <p><img alt="A point charge between two grounded plates with the induced charges proportional to the distances, and beside it the current pulse of an ionisation chamber" src="../../capacitors/assets/figures/fig-028.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.28 — A point charge between two grounded plates with the induced charges proportional to the distances, and beside it the current pulse of an ionisation chamber</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-028.svg</code>; original retained.
+<strong>Read:</strong> A point charge between two grounded plates with the induced charges proportional to the distances, and beside it the current pulse of an ionisation chamber.</p>
+</div>
 <p><strong>Fig. 7.2</strong> — Green's reciprocity turns an infinite image sum into two lines of algebra (Q₂ is <em>zero</em> in the primed state, which is the whole trick), and the same identity with a time derivative is the Shockley–Ramo theorem every radiation detector is designed with.</p>
 <h3 id="73-images-done-as-a-method-rather-than-a-trick">7.3 Images, done as a method rather than a trick</h3>
 <p>Every image solution is an appeal to <strong>uniqueness</strong>: guess a set of auxiliary charges outside the region of interest that makes the boundary an equipotential; the field inside is then <em>the</em> answer. The four cases worth having in your hands:</p>
@@ -3075,6 +3247,12 @@ $$</p>
 </ol>
 </blockquote>
 <p><img alt="The spheroid family: needle, sphere, disc with their capacitances, and below them a disc-shaped void and a needle-shaped void in a dielectric showing the internal fields" src="../../capacitors/assets/figures/fig-029.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.29 — The spheroid family: needle, sphere, disc with their capacitances, and below them a disc-shaped void and a needle-shaped void in a dielectric showing the internal fields</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-029.svg</code>; original retained.
+<strong>Read:</strong> The spheroid family: needle, sphere, disc with their capacitances, and below them a disc-shaped void and a needle-shaped void in a dielectric showing the internal fields.</p>
+</div>
 <p><strong>Fig. 7.3</strong> — Every "long thin" or "flat wide" conductor is a limit of one spheroid formula, and every shape effect inside a dielectric is one depolarising factor. The left pair of panels is the answer to chapter 2's and chapter 5's void questions at once: a delamination is a disc, and a disc takes $\kappa$ times the field.</p>
 <h3 id="75-conformal-mapping-the-2-d-problems-that-images-cannot-touch">7.5 Conformal mapping: the 2-D problems that images cannot touch</h3>
 <p>In two dimensions (infinite cylinders, no variation along the axis) $\nabla^{2}V=0$ is invariant under any analytic map $w=f(z)$: harmonicity is preserved, angles are preserved, and since capacitance is <em>dimensionless per unit length</em> in 2-D except for a factor $\varepsilon_0$, the whole problem can be solved in whichever $w$-plane is convenient. The rule that makes this mechanical:</p>
@@ -3104,6 +3282,12 @@ $$</p>
 <p>In 2-D the Green function is $\ln r$, so an isolated cylinder's capacitance per unit length diverges as the outer reference goes to infinity: $C'\sim2\pi\varepsilon_0/\ln(R/a)$ → 0 as $R\to\infty$. In 3-D the Green function is $1/r$ and a finite isolated body has a finite $C$ (chapter 2's $4\pi\varepsilon_0a$). Practical corollary: <em>any</em> "capacitance of a long wire" must name its return conductor — the ground, the shield, the neighbouring trace — because the answer is dominated by the distance to it through a logarithm. And it explains the $\ln(d/a)$ in (7.7) and the "$1.386$" of chapter 2's two-sphere pair: the same logarithm in different clothes.</p>
 </blockquote>
 <p><img alt="Two cylinders and the field lines between them on the left; on the right the same region mapped to a straight strip between two parallel lines with uniform field" src="../../capacitors/assets/figures/fig-030.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.30 — Two cylinders and the field lines between them on the left; on the right the same region mapped to a straight strip between two parallel lines with uniform field</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-030.svg</code>; original retained.
+<strong>Read:</strong> Two cylinders and the field lines between them on the left; on the right the same region mapped to a straight strip between two parallel lines with uniform field.</p>
+</div>
 <p><strong>Fig. 7.4</strong> — What a conformal map is <em>for</em>: it moves the boundary conditions, not the physics. Laplace's equation, angles and the per-unit-length capacitance all survive, so a curved two-body problem becomes a parallel-plate one. The same map with a plane of symmetry gives the wire-over-ground formula used for every overhead line and microstrip.</p>
 <h3 id="76-instability-why-every-electrostatic-actuator-snaps">7.6 Instability: why every electrostatic actuator snaps</h3>
 <p>A plate on a spring (stiffness $k$, free gap $\ell_0$) pulled by its own field. For a voltage-controlled device chapter 3's rule says the potential governing the mechanics is $\Pi=U_{\text{spring}}-\tfrac12C(x)V^{2}$ — the source pays half, so only half the field energy is available to pull — hence</p>
@@ -3148,6 +3332,12 @@ $$</p>
 <p>The tempting route is "set the outward electrostatic pressure $\tfrac12\varepsilon_0E^{2}$ equal to the inward Laplace pressure $2\gamma/R$". It gives $Q\propto R^{3/2}$ with the wrong coefficient (a factor $8/\sqrt{3}\ldots$) — and it is conceptually wrong twice over. First, the pressure on the surface of a <em>conducting</em> drop is $\sigma^{2}/2\varepsilon_0$ and $\sigma$ is not uniform once the shape departs from a sphere. Second, and this is the real reason to use energy: at $x_E=1$ the drop is not at a force balance, it is at the <em>loss of a minimum</em> of $U(R)$ — the same fold bifurcation as §7.6, in a completely different physical system. Whenever you can write down an energy as a sum of a positive and a negative power of a single scale, $U=aR^{m}-bR^{-n}$, the critical point is $aR^{m+n}=b\,n/(m)\ldots$ — the $1/3$ of pull-in, the Rayleigh limit and the "a soap bubble of radius $\sqrt{3}\,...$" problems are all the same one-line calculus. Recognising the family is worth more than memorising either member.</p>
 </blockquote>
 <p><img alt="MEMS pull-in: a plate on a spring with the energy curves showing two minima merging into one inflection at one third of the gap; and a charged droplet with its Rayleigh limit plus the Taylor cone at 49.3 degrees" src="../../capacitors/assets/figures/fig-031.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.31 — MEMS pull-in: a plate on a spring with the energy curves showing two minima merging into one inflection at one third of the gap; and a charged droplet with its Rayleigh limit plus the Taylor cone at 49.3 degrees</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-031.svg</code>; original retained.
+<strong>Read:</strong> MEMS pull-in: a plate on a spring with the energy curves showing two minima merging into one inflection at one third of the gap; and a charged droplet with its Rayleigh limit plus the Taylor cone at 49.3 degrees.</p>
+</div>
 <p><strong>Fig. 7.5</strong> — Two systems, one catastrophe. A capacitor plate on a spring and a charged drop both have an energy that is a positive power of the scale minus a negative one, so both lose their minimum at a critical drive — $V_{\text{pi}}$ and $Q_{\text{Rayleigh}}$. Recognising the family is worth more than memorising either member; the Taylor cone is the shape the liquid adopts to <em>spread</em> the singularity.</p>
 <h3 id="78-choosing-a-tool-the-map-this-chapter-was-built-to-give-you">7.8 Choosing a tool: the map this chapter was built to give you</h3>
 <table>
@@ -3399,6 +3589,12 @@ $$</p>
 <p>Chapters 1–7 contain roughly a hundred facts. Almost every question you will be set is solved by twelve moves applied to one of them, and by refusing twenty-five traps. This chapter is deliberately not new physics: it is the same physics arranged in the order a working problem-solver reaches for it. Read it once before the exam, then use the drill at the end as your last revision — it is fifteen questions in fifteen minutes, and each answer is one line.</p>
 <h3 id="81-triage-ninety-seconds-that-decide-the-mark">8.1 Triage: ninety seconds that decide the mark</h3>
 <p><img alt="Flowchart: is the configuration asked for? yes then is the medium homogeneous, if yes use Gauss and if no use the matrix or a map; if not then is the circuit a single capacitor with resistors, if yes use the three numbers, if no use charge conservation on the island" src="../../capacitors/assets/figures/fig-032.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D18.32 — Flowchart: is the configuration asked for? yes then is the medium homogeneous, if yes use Gauss and if no use the matrix or a map; if not then is the circuit a single capacitor with resistors, if yes use the three numbers, if no use charge conservation on the island</p>
+<p><strong>Show:</strong> Editable companion retaining source geometry, with reflowed labels and native primitives.
+<strong>Source:</strong> <code>capacitors/assets/figures/fig-032.svg</code>; original retained.
+<strong>Read:</strong> Flowchart: is the configuration asked for? yes then is the medium homogeneous, if yes use Gauss and if no use the matrix or a map; if not then is the circuit a single capacitor with resistors, if yes use the three numbers, if no use charge conservation on the island.</p>
+</div>
 <p><strong>Fig. 8.1</strong> — The triage. The single most common cause of a lost mark in this chapter of physics is choosing the <em>force/energy</em> route when the geometry is trivial, or the <em>geometry</em> route when the question is only about what is conserved. The diagram is only a way of forcing that first pause.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F7.6 · Triage: configuration or conservation?</p>

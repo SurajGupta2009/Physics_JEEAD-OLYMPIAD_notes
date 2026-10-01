@@ -128,6 +128,9 @@ Three numbers to carry everywhere: $\gamma\approx1.01$ at $v=0.14c$ (the 1%-effe
 > [!abstract] DIAGRAM D28.1 · The Michelson–Morley interferometer
 > *Show:* a horizontal source emitting light toward a half-silvered mirror at 45 degrees; one beam goes right (arm of length $L$) to a mirror and returns; the other goes up (arm of length $L$) to a mirror and returns; the two beams recombine at the half-silvered mirror and enter a detector; the expected fringe shift $\sim v^2L/c^2$ annotated; the null result circled.
 > *Search:* "Michelson Morley interferometer diagram half-silvered mirror two arms fringe shift"
+> **Companion:** native editable scene `special-relativity-D28-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-1.excalidraw|900]]
 
 ### 3.2 The two postulates
 
@@ -162,6 +165,9 @@ flowchart TD
 > [!abstract] DIAGRAM D28.2 · The train-and-lightning thought experiment
 > *Show:* the platform with the observer at the midpoint; lightning strikes at both ends of the train; the light fronts expanding as circles from each strike at two successive times; the passenger (at the train's midpoint, which has moved) receiving the front flash before the rear flash; both observers annotated with their verdicts ("simultaneous" vs "front first").
 > *Search:* "train lightning simultaneity relativity thought experiment moving observer"
+> **Companion:** native editable scene `special-relativity-D28-2.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-2.excalidraw|900]]
 
 ### 3.4 The Lorentz transformation
 
@@ -188,6 +194,9 @@ $$
 > [!abstract] DIAGRAM D28.3 · The light-clock geometry
 > *Show:* a vertical mirror pair separated by $L$ (the light clock at rest in $S'$); a light pulse bouncing vertically between the mirrors; below, the same clock moving horizontally at speed $v$ in frame $S$ — the light pulse follows a diagonal path of length $2D$ while the clock moves a horizontal distance $v\Delta t$; the right triangle with legs $v\Delta t/2$ and $L$ and hypotenuse $c\Delta t/2$ drawn; $\gamma$ derived from the Pythagorean theorem.
 > *Search:* "light clock time dilation diagram right triangle gamma derivation"
+> **Companion:** native editable scene `special-relativity-D28-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-3.excalidraw|900]]
 
 ### 3.5 Time dilation
 
@@ -219,6 +228,9 @@ The moving rod is shortened along the direction of motion. The contraction is on
 > [!abstract] DIAGRAM D28.4 · The muon's two explanations
 > *Show:* two panels. Left (Earth frame): the atmosphere at 15 km height; the muon travelling downward with $\gamma\approx16$; the dilated lifetime $34.8\ \mu$s giving enough distance. Right (muon frame): the atmosphere contracted to 15/16$\approx0.95$ km; the muon at rest; the contracted atmosphere fitting within the $2.2\ \mu$s lifetime. Both arrive at the same physical conclusion.
 > *Search:* "muon time dilation length contraction two frames explanation diagram"
+> **Companion:** native editable scene `special-relativity-D28-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-4.excalidraw|900]]
 
 > [!tip] FIGURE F28.3 · The muon: two frames, one event
 > *Why:* one observable fact — muons reach the ground — is dilation for the Earth observer and contraction for the muon; the figure shows both are the same physics.
@@ -251,6 +263,9 @@ $$
 > [!abstract] DIAGRAM D28.5 · The velocity-addition curve
 > *Show:* a graph with $u'$ on the horizontal axis (from 0 to $c$) and $u$ on the vertical; the Galilean addition line $u=u'+v$ (a straight line reaching beyond $c$) drawn as a dashed line; the relativistic curve $u=(u'+v)/(1+u'v/c^2)$ drawn as a solid curve approaching $c$ asymptotically; the curve crossing the Galilean line at low speeds; the intercept $u=v$ when $u'=0$ and $u=c$ when $u'=c$ marked.
 > *Search:* "relativistic velocity addition curve versus Galilean addition approaching c"
+> **Companion:** native editable scene `special-relativity-D28-5.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-5.excalidraw|900]]
 
 > [!tip] FIGURE F28.4 · Adding velocities never exceeds c
 > *Why:* Galilean addition overshoots $c$; relativity differs only at high speed, but the difference is the whole chapter.
@@ -312,10 +327,16 @@ $$
 > [!abstract] DIAGRAM D28.6 · The energy–momentum triangle
 > *Show:* a right triangle with hypotenuse $E$, one leg $pc$ (horizontal) and the other $mc^2$ (vertical); the relation $E^2=(pc)^2+(mc^2)^2$ written as the Pythagorean theorem; the photon ($m=0$) as a degenerate triangle with $E=pc$; the rest ($p=0$) as $E=mc^2$; $\gamma$ and $v/c$ annotated as angles.
 > *Search:* "energy momentum relation triangle diagram relativistic E pc mc2"
+> **Companion:** native editable scene `special-relativity-D28-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-6.excalidraw|900]]
 
 > [!abstract] DIAGRAM D28.7 · The gamma factor versus velocity
 > *Show:* a graph with $v/c$ on the horizontal axis (0 to 1) and $\gamma$ on the vertical (1 to infinity); the curve rising gently until $0.8c$ then steepening sharply; $\gamma=1.01$ at $v/c\approx0.14$, $\gamma=2$ at $v/c=\sqrt{3}/2\approx0.866$, $\gamma=7.09$ at $v/c=0.99$, $\gamma=10$ at $v/c=0.995$; the asymptote at $v=c$.
 > *Search:* "Lorentz gamma factor versus velocity graph approaching infinity"
+> **Companion:** native editable scene `special-relativity-D28-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-7.excalidraw|900]]
 
 > [!tip] FIGURE F28.5 · The gamma factor: slow to rise, then vertical
 > *Why:* every exam speed must be converted to $\gamma$ first; the figure pins the headmark values to the curve.
@@ -358,22 +379,37 @@ $$
 > [!abstract] DIAGRAM D28.8 · The twin paradox world lines
 > *Show:* a spacetime diagram with time vertical and space horizontal; twin A's world line as a vertical line (staying on Earth); twin B's world line going out to the right (at 0.8c), turning around, and returning; the turnaround event marked; A's age and B's age annotated at the reunion; the simultaneity lines (constant-$t$ slices) in A's frame drawn horizontal, in B's frame drawn tilted (changing slope at the turnaround).
 > *Search:* "twin paradox spacetime diagram world lines simultaneity turnaround"
+> **Companion:** native editable scene `special-relativity-D28-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-8.excalidraw|900]]
 
 > [!abstract] DIAGRAM D28.9 · Relativistic momentum versus Newtonian momentum
 > *Show:* a graph with $v/c$ on the horizontal axis (0 to 1) and $p/(mc)$ on the vertical; the Newtonian line $p=mv$ (a straight line extending beyond $mc$ at $v=c$) drawn as a dashed line; the relativistic curve $p=\gamma mv$ diverging to infinity at $v=c$; the two curves coinciding below $0.3c$ and diverging above $0.8c$; $p=mc$ at $v=0.707c$ ($\gamma=\sqrt{2}$) marked.
 > *Search:* "relativistic momentum versus velocity diverging at speed of light"
+> **Companion:** native editable scene `special-relativity-D28-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-9.excalidraw|900]]
 
 > [!abstract] DIAGRAM D28.10 · Pair production threshold energy bookkeeping
 > *Show:* a photon with energy $E_\gamma$ approaching a heavy nucleus; the photon disappearing and an electron-positron pair appearing; the energy ledger includes pair rest energies and nuclear recoil; at exact threshold the products move together in the lab (zero relative kinetic energy in the CM frame), with $E_{\gamma,\mathrm{th}}=2m_ec^2(1+m_e/M)$; annotate $1.022$ MeV as the heavy-nucleus approximation.
 > *Search:* "pair production photon energy threshold electron positron nucleus diagram"
+> **Companion:** native editable scene `special-relativity-D28-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-10.excalidraw|900]]
 
 > [!abstract] DIAGRAM D28.11 · GPS relativistic correction components
 > *Show:* a satellite orbiting Earth at 20,200 km altitude; two arrows: one pointing down labelled "SR: clock runs slow by 7.2 us/day" (velocity effect) and one pointing up labelled "GR: clock runs fast by 45.9 us/day" (gravity effect); the net correction "+38.7 us/day" circled; a note showing the clock frequency adjusted before launch.
 > *Search:* "GPS satellite relativistic correction special general relativity diagram"
+> **Companion:** native editable scene `special-relativity-D28-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-11.excalidraw|900]]
 
 > [!abstract] DIAGRAM D28.12 · The pole-and-barn paradox in both frames
 > *Show:* two panels. Left (barn frame): the pole (contracted) fits inside the barn; both doors close simultaneously. Right (pole frame): the barn is contracted; the front door opens before the back door closes; the pole does not fit — but the events "front door closes" and "back door opens" are not simultaneous. Both panels annotated with the key simultaneity argument.
 > *Search:* "pole barn paradox relativity length contraction simultaneity two frames"
+> **Companion:** native editable scene `special-relativity-D28-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/special-relativity-D28-12.excalidraw|900]]
 
 ### 3.13 Where relativity shows up in engineering
 

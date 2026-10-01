@@ -29,8 +29,8 @@
 <text x="60" y="270" class="sm">Proof: ΔP = -B ∂s/∂x, max slope at s=0 → pressure extremum. Valid for small amplitudes, rigid walls</text>
 <!-- End correction -->
 <rect x="50" y="300" width="350" height="30" class="tube"/>
-<line x1="400" y1="300" x2="400" y2="330" stroke="#c0392b" stroke-width:1.5" stroke-dasharray="3 2"/>
-<line x1="420" y1="300" x2="420" y2="330" stroke="#c0392b" stroke-width:1"/>
+<line x1="400" y1="300" x2="400" y2="330" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="420" y1="300" x2="420" y2="330" stroke="#c0392b" stroke-width="1"/>
 <text x="405" y="345" class="sm">e≈0.6r</text>
 <text x="50" y="360" class="sm">Effective length L_eff = L+e (closed), L+2e (open). Rayleigh correction. Valid for r≪λ, r≪L</text>
 </svg>

@@ -49,7 +49,7 @@ A previous draft of this policy said *"only emit content that still means someth
 - ❌ **External image URLs** (`![…](https://…)`, `<img src="https://…">`) — the vault is offline-first and the notes must never depend on a remote host.
 - ❌ **ASCII-art figures**, `\begin{tikzpicture}` inside `$…$`, and `![alt](path)` Markdown images.
 - ✅ **Allowed and preferred:** Mermaid diagrams (I–V below), pipe tables, and — for the legacy HTML-heritage topics — their existing committed `assets/figures/*.svg` sets (these were drawn by rules/tools, not by free AI art, and they are already reviewed).
-- ✅ **Scoped user-directed exception:** the D1–D13 retrofit embeds editable native Excalidraw Markdown scenes from `_obsidian/excalidraw/` (Electrostatics D13 consolidates plan Parts 13–15). These are scene sources rendered by the pinned plugin, not raster exports; the exception does not replace Mermaid as the default elsewhere.
+- ✅ **Scoped user-directed exception:** the D1–D28, D100 retrofit embeds editable native Excalidraw Markdown scenes from `_obsidian/excalidraw/` (Electrostatics D13 consolidates plan Parts 13–15; D14–D16 are String Waves, Sound Waves and Thermodynamics, course slots 13–15; D17/D18 are Heat/Capacitors at slots 16/18, with existing Electrostatics at slot 17). These are scene sources rendered by the pinned plugin, not raster exports; the exception does not replace Mermaid as the default elsewhere.
 
 ### 2.2 The figure taxonomy (which Mermaid kind for which job)
 
@@ -104,7 +104,7 @@ These are the workhorse for physics graphs. Contract:
 
 ### 2.5 Legacy chapters and the old `DIAGRAM` briefs
 
-The 17 `plan.md`-era chapters carry `> [!abstract] DIAGRAM D<part>.<n> …` briefs with `*Show:*` / `*Search:*` lines. The briefs remain as the searchable **seed** for any visual upgrade (Retrofit R1, §6.1); most are deferred, while the scoped D1–D13 batches have editable Excalidraw scenes embedded directly below their corresponding briefs.
+The 17 `plan.md`-era chapters carry `> [!abstract] DIAGRAM D<part>.<n> …` briefs with `*Show:*` / `*Search:*` lines. The briefs remain as the searchable **seed** for any visual upgrade (Retrofit R1, §6.1); most are deferred, while the scoped D1–D28, D100 batches have editable Excalidraw scenes embedded directly below their corresponding briefs.
 
 - `*Show:*` → the drawing specification; default upgrades use a Mermaid figure (or table), with the scoped Excalidraw exception above when explicitly requested.
 - `*Search:*` → kept as the human-facing "find the textbook version" line.
@@ -130,7 +130,7 @@ Every chapter that ships `F`-figures also ships `figures.json` — one object pe
 | concept map | Canvas `.canvas` file in `_obsidian/` (optional) | plan overview |
 | progress bars / inputs | Meta Bind (human-configured only; agents only write the frontmatter fields it reads) | optional, human |
 | graphs / mindmaps / flows / quadrants | Mermaid blocks (§2) | in-chapter |
-| editable hand-drawn physics scenes (scoped retrofit) | native Excalidraw `.excalidraw.md` embeds | D1–D13 only (Electrostatics D13 combines plan Parts 13–15), when explicitly requested |
+| editable hand-drawn physics scenes (scoped retrofit) | native Excalidraw `.excalidraw.md` embeds | D1–D28, D100 only (D14–D18 continue the drawing series, not chapter numbering), when explicitly requested |
 
 **HTML allowance (hard limit):** `<details>`, `<summary>`, `<br>` (inside tables only). Nothing else. If a "controllable" need cannot be met by the table above, it is met by a Dataview dashboard in `_obsidian/` or a Canvas, not by HTML.
 
@@ -160,7 +160,7 @@ Tasks, Excalidraw) are configured in the committed `.obsidian/` and pinned in
 | **MathLive** | 2 | hand-proofed LaTeX, OCR is a draft only | never commit unproofed OCR |
 | **Latex Alike / Extended MathJax** | 2 | `_obsidian/preamble.sty` macro layer, expanded before commit | macros are authoring shorthand |
 | **TikZJax** | 2 | optional ` ```tikz ` mirror of an existing SVG | canonical figure is still the SVG |
-| **Diagrams (draw.io) / Excalidraw** | 2 | export **SVG** into `assets/figures/` by default; use native `.excalidraw.md` embeds for the scoped D1–D13 scenes | editable scenes are the explicit user-directed exception to the SVG-only default |
+| **Diagrams (draw.io) / Excalidraw** | 2 | export **SVG** into `assets/figures/` by default; use native `.excalidraw.md` embeds for the scoped D1–D28, D100 scenes | editable scenes are the explicit user-directed exception to the SVG-only default |
 | **MathLinks** | 2 | none (renders existing wikilinks) | — |
 | **Mermaid (core)** | 2 | **the figure system of §2** | primary diagram engine |
 | **Flashcards (Anki)** | 3 | none (in-vault SR is canonical) | human-only bridge |
@@ -200,7 +200,7 @@ Four retrofit passes, run in order, each independently committable.
 For one chapter (never several at once — keep diffs reviewable):
 
 1. Inventory the `DIAGRAM D<part>.<n>` briefs (or the SVG set for HTML-heritage topics).
-2. Convert the **highest-leverage** D-briefs to `F`-figures per §2 — start with: a chapter **mindmap**, the **triage/decision flowchart**, and any **x–y data graph** that a brief describes (x–t/v–t, V–I, U–r, I–θ curves). Use an editable Excalidraw embed only for a scoped, explicitly requested hand-drawn set such as D1–D13. Aim for ≥ 6 Mermaid figures total; 15–25 for large chapters.
+2. Convert the **highest-leverage** D-briefs to `F`-figures per §2 — start with: a chapter **mindmap**, the **triage/decision flowchart**, and any **x–y data graph** that a brief describes (x–t/v–t, V–I, U–r, I–θ curves). Use an editable Excalidraw embed only for a scoped, explicitly requested hand-drawn set such as D1–D28, D100. Aim for ≥ 6 Mermaid figures total; 15–25 for large chapters.
 3. **Keep** the D-briefs that remain as hand-drawing seeds (`*Search:*` line intact). Do not delete reviewed prose.
 4. HTML-heritage topics: embed the existing `assets/figures/*.svg` where they belong (they are already reviewed) and *add* the Mermaid structure/graphs.
 5. Update the chapter's `tools/check.py` (allow + require Mermaid, keep the raster ban), `notes.json` `minimums.figure`, `figures.json`, and the README "Media" line. Run the gates.
@@ -390,3 +390,11 @@ done. What remains:
 
 The Tier-2/3 extras of §4 that are *not* pre-installed (MathLive, TikZJax, Breadcrumbs, Anki
 bridge, Style Settings) remain optional per-human tools; nothing in the notes depends on them.
+
+Course slots 19–21 add 26 Current Electricity (D19), 30 Magnetism (existing D16), and 22 EMI/AC (existing D20) scenes. IDs are chapter-local and filenames are slug-qualified. Rebuild with `python3 tools/build_excalidraw_current_magnetism_emi.py`; see `docs/excalidraw-retrofit-status.md` for validation limits.
+
+Course slots 22–24 add 81 native SVG companions: Electromagnetic Waves D21 (7), Geometrical Optics D22 (46), and Wave Optics D23 (28). Rebuild with `python3 tools/build_excalidraw_em_optics.py`. Originals remain intact; native Obsidian acceptance and a comprehensive physics audit are pending (see `docs/excalidraw-retrofit-status.md`).
+
+All 31 course chapters now carry native diagram companions: the final seven (Photoelectric Effect, Atomic Structure, X-rays, Nuclear Physics, Semiconductors, Communication Systems, Special Relativity) add 97 scenes drawn from their existing DIAGRAM briefs. Rebuild with `python3 tools/build_excalidraw_remaining.py`; see `docs/excalidraw-retrofit-status.md`.
+
+Verify every diagram with `python3 tools/verify_all_diagrams.py` (31 chapters, 544 scenes, 0 problems expected) and regenerate any batch with its `tools/build_excalidraw_*.py` script; both are idempotent and covered by `python3 -m unittest discover -s tools -p 'test_*.py'`.

@@ -248,6 +248,8 @@ with $d\mathbf A$ along the surface's normal and $\theta$ the angle between $\ma
 > *Show:* uniform field lines crossing a flat loop tilted by $\theta$, the chosen normal $\hat{\mathbf n}$ drawn with the right-hand rule's fingers around the loop, the projected area $A\cos\theta$ shaded; three insets: face-on ($\Phi=BA$), edge-on ($0$), reversed ($-BA$).
 > *Search:* "magnetic flux through tilted loop normal vector right hand rule sign"
 
+![[../_obsidian/excalidraw/emi-ac-D20-1.excalidraw|900]]
+
 ### 3.2 The discovery and the law
 
 Faraday (1831) found an induced current whenever the flux through a circuit changed — by moving a magnet, moving the loop, deforming it, rotating it, or switching a neighbouring current on or off — and none while the flux was steady, however large. The law that summarises every case:
@@ -286,6 +288,8 @@ flowchart TD
 > *Show:* four panels with a coil and a galvanometer: a bar magnet moving into the coil (needle deflects one way), out (the other way), a second coil with a switch being closed (a flick), and a loop being rotated in a field; in each the change of flux and the direction of the induced current are marked with the right-hand normal drawn.
 > *Search:* "faraday's experiments magnet coil galvanometer moving loop rotating loop induced current"
 
+![[../_obsidian/excalidraw/emi-ac-D20-2.excalidraw|900]]
+
 ### 3.3 Motional EMF from the Lorentz force — and how it relates to Faraday
 
 Slide a conducting rod of length $l$ at velocity $\mathbf v$ through a uniform field $\mathbf B$, with $\mathbf v\perp\mathbf B$ and the rod perpendicular to both. Every free electron in the rod moves with it and feels $q\mathbf v\times\mathbf B$, directed *along the rod*: charge is driven to one end until the electric field of the separated charge balances the magnetic push, $qE=qvB$, $E=vB$, and the ends differ in potential by
@@ -304,6 +308,8 @@ No flux was mentioned. The rod is a battery of EMF $Blv$ with its positive termi
 > *Show:* a rod moving right at $\mathbf v$ through a field into the page; on a positive carrier the force $q\mathbf v\times\mathbf B$ drawn upward along the rod; charge accumulated at the top ($+$) and bottom ($-$) with the electrostatic field $E=vB$ inside the rod balancing the magnetic push; the rod redrawn as a battery symbol of EMF $Blv$ with the positive terminal at the top; beneath, the rails-and-resistor circuit with the current direction.
 > *Search:* "motional emf rod moving in magnetic field lorentz force charge separation Blv battery"
 
+![[../_obsidian/excalidraw/emi-ac-D20-3.excalidraw|900]]
+
 ### 3.4 Lenz's law as energy conservation
 
 **Statement.** The induced current flows in the direction that opposes the *change* producing it — not the flux, the change of flux. **Algorithm.** Find $\Delta\Phi$ (increasing or decreasing, and in which sense through the loop); the induced current's own field opposes that change (adds flux if flux is being lost, subtracts if gained); the right-hand rule then gives the current's direction; and the *mechanical* consequence — a force on the moving part, a torque on the rotating one — always opposes the motion that causes the change.
@@ -321,6 +327,8 @@ for a $1$ cm$^3$ NdFeB magnet ($\mu\approx1$ A m$^2$, $m=7.5$ g) in a copper pip
 > [!abstract] DIAGRAM D20.4 · The magnet in the copper tube
 > *Show:* a vertical tube in section with a magnet falling down its axis; the rings of the wall above and below the magnet with their induced currents drawn in opposite senses; the induced dipoles above (attracting the magnet upward) and below (repelling it upward); the force balance $mg=Kv$ at terminal speed; a small $v(t)$ inset rising to $v_{\text{t}}$ within $\sim20$ ms.
 > *Search:* "magnet falling through copper tube eddy currents lenz law terminal velocity diagram"
+
+![[../_obsidian/excalidraw/emi-ac-D20-4.excalidraw|900]]
 
 > [!danger] Trap — "opposes the flux"
 > The induced current opposes the *change*. When the flux through a loop is decreasing, the induced current's field points *the same way* as the existing flux, trying to keep it; students who write "opposes the field" get exactly the wrong direction in every decreasing-flux problem. Say "opposes the change" every time.
@@ -374,6 +382,8 @@ The EMF is largest when the flux is *zero* (the coil edge-on, its sides cutting 
 > *Show:* (a) a rod pivoted at one end with the speed profile $v=\omega r$ drawn as a growing arrow along it and $d\mathcal E=B\omega r\,dr$ on an element; (b) a coil rotating in a field with $\Phi(t)$ and $\mathcal E(t)$ plotted beneath, a quarter-cycle apart; (c) a rectangular loop half out of a shaded field region, the inside side marked as the battery $Blv$ with its polarity from $\mathbf v\times\mathbf B$, the outside side marked "no EMF".
 > *Search:* "rotating rod emf half B omega L squared; rotating coil sinusoidal emf flux phase; loop leaving magnetic field induced current"
 
+![[../_obsidian/excalidraw/emi-ac-D20-5.excalidraw|900]]
+
 ### 3.6 Coupled mechanics and circuits: the rod with every attachment
 
 The rod on rails is a mechanical system and a circuit at once; each attachment gives a two-equation problem.
@@ -403,6 +413,8 @@ the rod oscillates back and forth for ever, its kinetic energy exchanging with t
 > [!abstract] DIAGRAM D20.6 · The rod with a hanging mass, and with a capacitor
 > *Show:* left, rails with the rod, the string over a pulley to a hanging mass, free-body diagrams of rod (tension, magnetic drag $B^2l^2v/R$) and mass (weight, tension); right, the rails joined through a capacitor, the rod pushed by $F$, the current $i=CBla$ marked constant and the charge $q(t)$ growing linearly, with "$m_{\text{eff}}=m+CB^2l^2$" written.
 > *Search:* "rod on rails hanging mass terminal velocity; rod on rails capacitor constant acceleration effective mass"
+
+![[../_obsidian/excalidraw/emi-ac-D20-6.excalidraw|900]]
 
 > [!danger] Trap — an instantaneous current
 > With a capacitor in the circuit there is no steady current; with an inductor the current cannot jump. Writing $i=Blv/R$ for a circuit that has no resistor — or assuming that the current appears the instant the rod moves when an inductor is present — misses the whole problem. Name the element, write its law, and only then Newton.
@@ -449,6 +461,8 @@ xychart-beta
 > *Show:* two panels: (a) a solenoid's cross-section with $\mathbf B$ out of the page and growing, circular $\mathbf E$ lines drawn clockwise, arrows lengthening with $r$ inside; (b) the region outside the winding where $\mathbf B=0$ but the circles of $\mathbf E$ continue, arrows shortening as $1/r$; a bead on a ring outside the solenoid with the tangential force $qE$ marked.
 > *Search:* "induced electric field changing magnetic field solenoid inside outside circular field lines"
 
+![[../_obsidian/excalidraw/emi-ac-D20-7.excalidraw|900]]
+
 ### 3.8 The betatron condition
 
 Accelerate electrons on a circle of fixed radius $R$ by *increasing* the magnetic flux through the orbit; the same magnet must also *bend* them round the circle. Two conditions, one field profile. **Guiding:** $p=eB_{\text{orb}}R$, where $B_{\text{orb}}$ is the field *at the orbit*; to keep $R$ fixed as $p$ grows, $dp/dt=eR\,dB_{\text{orb}}/dt$. **Accelerating:** the induced field on the orbit is $E=\dfrac{1}{2\pi R}\dfrac{d\Phi}{dt}=\dfrac{R}{2}\dfrac{d\langle B\rangle}{dt}$, where $\langle B\rangle=\Phi/\pi R^2$ is the field *averaged over the disc* inside the orbit; the force $eE$ increases the momentum at $dp/dt=eE=\dfrac{eR}{2}\dfrac{d\langle B\rangle}{dt}$. Equating the two rates:
@@ -462,6 +476,8 @@ the **2:1 condition** (Wideröe, 1928): the average field inside the orbit must 
 > [!abstract] DIAGRAM D20.8 · The betatron
 > *Show:* a circular orbit of radius $R$ between shaped pole pieces; the field profile $B(r)$ plotted across the diameter, higher inside the orbit than at it; the average field $\langle B\rangle$ marked as a horizontal line at twice $B_{\text{orb}}$; the induced $\mathbf E$ tangent to the orbit with the force on an electron; the orbit's momentum $p=eB_{\text{orb}}R$ written beside it.
 > *Search:* "betatron 2:1 condition average field twice orbit field pole shape induced electric field"
+
+![[../_obsidian/excalidraw/emi-ac-D20-8.excalidraw|900]]
 
 ### 3.9 Eddy currents: braking, heating, laminating
 
@@ -489,6 +505,8 @@ $$
 > *Show:* a conducting plate half inside a shaded field region, moving right; eddy-current loops drawn circulating through the inside part (where $E=vB$) and returning through the outside part; the retarding force on the inside part; beside it a solid core with one large eddy loop and a laminated core with many small loops, labelled "$P\propto d^2$".
 > *Search:* "eddy currents plate entering magnetic field retarding force; laminated core eddy current loss proportional to thickness squared"
 
+![[../_obsidian/excalidraw/emi-ac-D20-9.excalidraw|900]]
+
 > [!danger] Trap — a constant braking force
 > Eddy-current drag is proportional to speed; it cannot bring a body to rest in finite time by itself and never produces a constant deceleration. If a problem's magnetic brake stops something "in $2$ s", either there is friction too, or the field region ends. And the lamination benefit is $d^2$, not $d$: halving the thickness quarters the loss.
 
@@ -508,6 +526,8 @@ At start-up $\omega=0$, $\mathcal E_{\text{back}}=0$ and $i=V/R_{\text{arm}}$ �
 > *Show:* a coil in a field with slip rings and the sinusoidal output beneath; the same coil with a split-ring commutator and the rectified $\lvert\sin\rvert$ output; a motor circuit with the battery $V$, the armature resistance and the back-EMF drawn as an opposing battery, with $i=(V-\mathcal E_{\text{back}})/R$ and a graph of $i$ against $\omega$ falling from $V/R$.
 > *Search:* "ac generator slip rings dc generator commutator; dc motor back emf armature current versus speed"
 
+![[../_obsidian/excalidraw/emi-ac-D20-10.excalidraw|900]]
+
 ### 3.11 The voltmeter paradox
 
 A circular loop of wire consists of two resistors, $R_1=100\ \Omega$ and $R_2=900\ \Omega$, joined at points $A$ and $B$ diametrically opposite. A solenoid through the loop's centre has a flux increasing so that the EMF round the loop is $\mathcal E=1.0$ V. The current is $i=\mathcal E/(R_1+R_2)=1.0$ mA. Now connect a voltmeter between $A$ and $B$ with its leads running *outside* the loop on the $R_1$ side: it reads $iR_1=0.10$ V. Connect an identical voltmeter between the *same* two points with its leads on the $R_2$ side: it reads $iR_2=0.90$ V, and of the *opposite* polarity. Two ideal voltmeters across the same two points disagree by $1.0$ V — the EMF.
@@ -517,6 +537,8 @@ Nothing is wrong with the meters. A voltmeter reads $\int\mathbf E\cdot d\mathbf
 > [!abstract] DIAGRAM D20.11 · Two voltmeters, two readings
 > *Show:* a circular loop with $R_1$ on the left half and $R_2$ on the right, a solenoid ($\otimes$ with "$\dot\Phi$") at the centre, the current $i$ marked; voltmeter 1 with leads bowing out to the left reading $0.10$ V, voltmeter 2 with leads bowing out to the right reading $0.90$ V of the opposite sign; the loop formed by the two sets of leads shaded with "$\oint\mathbf E\cdot d\mathbf l=1.0$ V".
 > *Search:* "two voltmeters same points different readings changing flux romer lewin paradox diagram"
+
+![[../_obsidian/excalidraw/emi-ac-D20-11.excalidraw|900]]
 
 ### 3.12 Induction in everyday life
 
@@ -572,6 +594,8 @@ For $b/a=5$: $0.32\ \mu$H m$^{-1}$. The capacitors note's $C'=2\pi\varepsilon_0/
 > *Show:* an $N$-turn coil with the flux $\Phi$ through *one* turn shaded and the label $\Lambda=N\Phi$; a long solenoid with one turn's area $A$ and $B=\mu_0nI$; a coaxial cable in longitudinal section with the annular gap between $a$ and $b$, a strip of width $dr$ and length $\ell$ shaded, and $B=\mu_0I/2\pi r$ crossing it.
 > *Search:* "self inductance solenoid flux linkage derivation; coaxial cable inductance per unit length flux integral"
 
+![[../_obsidian/excalidraw/emi-ac-D20-12.excalidraw|900]]
+
 ### 3.15 Mutual inductance
 
 A current $I_1$ in coil 1 links flux through coil 2; the linkage per unit current is the mutual inductance,
@@ -595,6 +619,8 @@ With $L_1=\mu_0n_1^2A_1\ell$ and $L_2=\mu_0n_2^2A_1\ell$ (if the outer winding's
 > [!abstract] DIAGRAM D20.13 · Coaxial solenoids and perpendicular coils
 > *Show:* a long solenoid with a shorter outer winding, the inner field $B_1$ threading both, the coupling flux shaded and $M=\mu_0n_1N_2A_1$ written; beside it two coils with perpendicular axes and coincident centres, the field lines of one passing parallel to the other's plane, labelled "$M=0$".
 > *Search:* "mutual inductance coaxial solenoids derivation; mutual inductance zero perpendicular coils"
+
+![[../_obsidian/excalidraw/emi-ac-D20-13.excalidraw|900]]
 
 ### 3.16 The RL circuit
 
@@ -630,6 +656,8 @@ xychart-beta
 > *Show:* the series $V$–$R$–$L$ circuit with the switch; the inductor's polarity marked as opposing the rise (closing) and as driving the current (opening); a second panel with the switch being opened, the arc drawn across its contacts, and $L\,di/dt$ with a very short $dt$ written; a protection diode across the coil in a third small panel with the freewheeling current path.
 > *Search:* "RL circuit transient inductor voltage current; inductive kick spark switch opening flyback diode"
 
+![[../_obsidian/excalidraw/emi-ac-D20-14.excalidraw|900]]
+
 ### 3.17 The inductive kick
 
 Open the switch of a coil carrying $i_0$. The current must fall to zero, and if the contacts separate in $\Delta t$ the induced EMF is of order $Li_0/\Delta t$: $10$ mH carrying $2$ A interrupted in $1\ \mu$s gives $20$ kV — across a gap that a millisecond ago had $10$ V. The air breaks down, an arc carries the current until the energy $\tfrac12Li_0^2=20$ mJ has been dissipated in the arc, and the contacts erode; this is why switches for inductive loads are rated differently and why relay coils get a **flyback diode** — a diode across the coil, reverse-biased in normal operation, that conducts when the switch opens and lets the current decay harmlessly through the coil's own resistance with $\tau=L/R$. The **ignition coil** exploits the same physics on purpose: a primary current is interrupted, the primary EMF is a few hundred volts, and a secondary of $100$ times the turns delivers $20$–$30$ kV to the spark plug — a transformer driven by a transient (§3.34). The energy always goes somewhere: into the arc, into the diode-and-resistor loop as heat, into a capacitor placed across the contacts (the "snubber", which turns the kick into an LC ring), or into the spark. Conversely, the *rise* of current in a large magnet is limited by its supply: a superconducting magnet of $L=10$ H charged from a $10$ V supply rises at $di/dt=V/L=1$ A s$^{-1}$ — $500$ A takes eight minutes, and discharging it faster than that needs somewhere to put megajoules (the "quench").
@@ -664,6 +692,8 @@ The last row is why energy storage in fields means *magnetic* fields: air breaks
 > [!abstract] DIAGRAM D20.15 · Energy in a solenoid's field
 > *Show:* a solenoid in section with its uniform interior field; a slab of field volume $A\,dx$ shaded with "$dU=(B^2/2\mu_0)A\,dx$"; beside it the $\tfrac12LI^2$ triangle under the $\mathcal E_{\text{back}}$–$i$ line (area $=\tfrac12LI^2$); an inset of an MRI magnet's bore with "$1.5$ T $\to0.9$ MJ m$^{-3}$".
 > *Search:* "energy stored in inductor half L I squared magnetic energy density B squared over 2 mu0 solenoid"
+
+![[../_obsidian/excalidraw/emi-ac-D20-15.excalidraw|900]]
 
 ### 3.19 The mechanical–electrical analogy
 
@@ -719,6 +749,8 @@ attractive when $M$ increases as the coils approach with aiding currents (parall
 > *Show:* two coils on a common core with dots marking the aiding ends, the series connection for $L_1+L_2+2M$ and, redrawn, for $L_1+L_2-2M$; beside it two coaxial coils with a gap $x$, $M(x)$ sketched falling with $x$, and the force $I_1I_2\,dM/dx$ drawn attractive for aiding currents.
 > *Search:* "mutual inductance dot convention series aiding opposing; force between two coils I1 I2 dM/dx"
 
+![[../_obsidian/excalidraw/emi-ac-D20-16.excalidraw|900]]
+
 ### 3.22 LC oscillations
 
 A charged capacitor ($q_0$) is connected across an inductor. The loop rule with no resistance: $L\,di/dt+q/C=0$ with $i=dq/dt$:
@@ -749,6 +781,8 @@ xychart-beta
 > [!abstract] DIAGRAM D20.17 · The LC cycle and its mechanical twin
 > *Show:* four snapshots of an LC circuit at $\omega_0t=0,90^\circ,180^\circ,270^\circ$: capacitor fully charged with no current, uncharged with maximum current, charged the other way, maximum current the other way — with the field energy located in $C$ or in $L$ at each; beneath, a mass on a spring at the corresponding four phases; a small ring-down curve for the LCR case.
 > *Search:* "LC oscillation energy exchange capacitor inductor four stages mass spring analogy; damped LCR ring down"
+
+![[../_obsidian/excalidraw/emi-ac-D20-17.excalidraw|900]]
 
 ### 3.23 Transients with flux conservation
 
@@ -833,6 +867,8 @@ The mnemonic "CIVIL" — in C, I before V; V before I in L — is (3.31) and (3.
 > *Show:* three panels of $v(t)$ and $i(t)$ over one cycle: in phase (R); current a quarter-cycle behind (L), with the inertia picture — a mass being pushed; current a quarter-cycle ahead (C), with the spring picture; the reactances $X_L=\omega L$ rising and $X_C=1/\omega C$ falling on a small $\log$–$\log$ inset.
 > *Search:* "ac through resistor inductor capacitor phase relations current lags leads graphs reactance versus frequency"
 
+![[../_obsidian/excalidraw/emi-ac-D20-18.excalidraw|900]]
+
 ### 3.28 Phasors
 
 A quantity $a(t)=A\sin(\omega t+\alpha)$ is the vertical projection of a vector of length $A$ rotating anticlockwise at $\omega$ from the initial angle $\alpha$ — its **phasor**. Two sinusoids of the *same* frequency add to a sinusoid of that frequency whose phasor is the vector sum of theirs (projection is linear), which is the whole legitimacy of the method: amplitudes and phases add as vectors, and the common rotation can be frozen. In a series circuit the current is common, so draw its phasor along the reference axis; then $V_R$ is a phasor of length $I_0R$ *along* it, $V_L$ of length $I_0X_L$ rotated $90^\circ$ *ahead* (anticlockwise), $V_C$ of length $I_0X_C$ rotated $90^\circ$ *behind*. In a parallel circuit the voltage is common and the currents are the phasors: $I_R$ along $V$, $I_C$ ahead by $90^\circ$, $I_L$ behind. **RC in series:** $V_R$ along $I$, $V_C$ behind; their resultant, the source voltage, lags the current by $\arctan(X_C/R)$. **RL:** the source leads by $\arctan(X_L/R)$. **LC:** $V_L$ and $V_C$ are antiparallel; the source voltage is their difference, and vanishes when $X_L=X_C$ — resonance before we have named it.
@@ -840,6 +876,8 @@ A quantity $a(t)=A\sin(\omega t+\alpha)$ is the vertical projection of a vector 
 > [!abstract] DIAGRAM D20.19 · Phasor diagrams
 > *Show:* (a) the rotating vector and its projection as a sine; (b) R, L, C alone — the voltage phasor along, ahead of, behind the current; (c) series RC with $V_R$ and $V_C$ at right angles and the resultant lagging; (d) series RL leading; (e) series LCR with $V_L$ up, $V_C$ down, the difference $V_L-V_C$, and the resultant at angle $\phi$ to $I$.
 > *Search:* "phasor diagram series RC RL LCR circuit voltage phasors resultant phase angle"
+
+![[../_obsidian/excalidraw/emi-ac-D20-19.excalidraw|900]]
 
 ### 3.29 Series LCR
 
@@ -919,6 +957,8 @@ The factor $\cos\phi$ is the **power factor**. For a resistor, $\phi=0$ and $P=V
 > *Show:* $v(t)$, $i(t)$ lagging by $\phi$, and their product $p(t)$ oscillating at $2\omega$ about the average line $\tfrac12V_0I_0\cos\phi$, with the negative lobes (energy returned) shaded; beside it the triangle with $S$ (VA), $P$ (W), $Q_r$ (var) and the angle $\phi$; a capacitor bank drawn across an inductive load with its leading current cancelling the lagging component.
 > *Search:* "ac power instantaneous power waveform average power factor triangle real reactive apparent capacitor correction"
 
+![[../_obsidian/excalidraw/emi-ac-D20-20.excalidraw|900]]
+
 > [!danger] Trap — "the capacitor uses up power"
 > A capacitor (or inductor) *stores and returns* energy; averaged over a cycle it dissipates nothing. Its current is real and heats the *wires* and the *source*, which is exactly why utilities dislike it — but the element itself is cold. $P=VI$ without $\cos\phi$ is the apparent power, and for a motor at $\cos\phi=0.6$ it is $67\%$ too high.
 
@@ -975,6 +1015,8 @@ the principle of impedance matching — an $8\ \Omega$ loudspeaker on a $1{:}20$
 > *Show:* a closed laminated core with the primary ($N_p$) and secondary ($N_s$) windings and the common flux $\Phi(t)$; the load across the secondary and the reflected impedance $(N_p/N_s)^2Z_s$ drawn as an equivalent across the primary; beneath, a power station → step-up → line ($5\ \Omega$) → step-down → load chain with the two loss figures "$41\%$ at $11$ kV, $0.1\%$ at $220$ kV".
 > *Search:* "ideal transformer flux linkage turns ratio impedance reflection; power transmission loss high voltage comparison"
 
+![[../_obsidian/excalidraw/emi-ac-D20-21.excalidraw|900]]
+
 ### 3.35 Rectification and filters
 
 A diode (the [[Semiconductors|semiconductors]] note) conducts in one direction and blocks the other, with a forward drop of about $0.7$ V for silicon. **Half-wave rectifier:** a diode in series with the load passes only the positive half-cycles — average output $V_0/\pi$, RMS $V_0/2$ (§3.26), and half the time nothing. **Full-wave rectifier** (a bridge of four diodes, or a centre-tapped secondary with two): both half-cycles arrive with the same polarity, $\lvert V_0\sin\omega t\rvert$ minus the diode drops — average $2V_0/\pi$, RMS $V_0/\sqrt2$, ripple at $2f$. **Smoothing.** A capacitor $C$ across the load charges to the peak on each hump and then discharges through the load between humps, holding the voltage up. If the load draws a roughly constant current $I$, the capacitor loses charge $I\,\Delta t$ in the interval between peaks, $\Delta t\approx1/2f$ for full-wave, so the voltage sags by
@@ -988,6 +1030,8 @@ For a $0.5$ A supply at $50$ Hz with $1$ V of ripple allowed: $C=0.5/(100\times1
 > [!abstract] DIAGRAM D20.22 · Rectifiers and the ripple
 > *Show:* a half-wave rectifier (one diode) with its output humps and gaps; a bridge rectifier with the full-wave output; the smoothing capacitor across the load and the sawtooth ripple riding on the DC level, with $\Delta V\approx I/2fC$ marked between a peak and the next recharge; the diode's I–V curve with the $0.7$ V knee as an inset.
 > *Search:* "half wave full wave bridge rectifier smoothing capacitor ripple voltage waveform"
+
+![[../_obsidian/excalidraw/emi-ac-D20-22.excalidraw|900]]
 
 ### 3.36 LC oscillations and the road ahead
 

@@ -36,6 +36,13 @@
 <h1 id="string-waves-first-principles-to-olympiad">String Waves — First Principles to Olympiad</h1>
 <p>A complete, proof-first treatment of transverse mechanical waves, string dynamics, boundary reflections, impedance matching, standing waves, harmonics, and energy transport. Every formula is <strong>derived from foundational principles</strong> — Newton's second law on a continuum element, conservation of linear momentum, and energy continuity — every boxed result carries its explicit condition of validity, and every subtle trap where JEE or Olympiad examiners catch students is systematically exposed.</p>
 <p><img alt="Curved string element under tension" src="../../string-waves/assets/figures/fig-001.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D14.1 — Curved string element under tension</p>
+<p><strong>Show:</strong> Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+<strong>Source:</strong> <code>string-waves/assets/figures/fig-001.svg</code>; original retained.
+<strong>Read:</strong> Curved string element under tension.</p>
+</div>
+
 <p><strong>The core dynamical engine in one picture.</strong> A pulse does not transport mass along the string; it transports transverse momentum and elastic potential energy. As curvature $\frac{\partial^2 y}{\partial x^2}$ develops, the tension vectors at the two ends no longer cancel, creating a net transverse restoring force that accelerates the mass element $dm = \mu \, dx$. That exact balance between inertial mass $\mu$ and restoring elasticity $T$ dictates the invariant propagation velocity $v = \sqrt{T/\mu}$.</p>
 <hr />
 <h3 id="how-these-notes-are-organised">How these notes are organised</h3>
@@ -298,6 +305,13 @@ $$\langle P \rangle = \frac{1}{2} \frac{T}{v} \omega^2 A^2 = \frac{1}{2} \sqrt{\
 <h2 id="part-5-boundary-reflections-impedance-matching">Part 5: Boundary Reflections &amp; Impedance Matching</h2>
 <p>When a traveling wave pulse encounters a discontinuity or termination, boundary constraints dictate how much energy reflects back and how much transmits forward.</p>
 <p><img alt="Reflection at fixed and free boundaries" src="../../string-waves/assets/figures/fig-002.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D14.2 — Reflection at fixed and free boundaries</p>
+<p><strong>Show:</strong> Editable geometry and labels for the local figure above.
+<strong>Source:</strong> <code>string-waves/assets/figures/fig-002.svg</code>; original retained.
+<strong>Read:</strong> Reflection at fixed and free boundaries.</p>
+</div>
+
 <h3 id="51-reflection-at-a-fixed-end-rigid-termination">5.1 Reflection at a Fixed End (Rigid Termination)</h3>
 <p>At a fixed boundary (e.g. string clamped rigidly to a massive wall at $x = 0$):
 $$\left. y(x,t) \right|_{x=0} = 0 \quad \text{for all } t$$</p>
@@ -408,6 +422,13 @@ $$y_2(x,t) = A \sin(kx + \omega t)$$</p>
 <hr />
 <h3 id="62-normal-modes-of-a-string-fixed-at-both-ends">6.2 Normal Modes of a String Fixed at Both Ends</h3>
 <p><img alt="Standing wave normal modes" src="../../string-waves/assets/figures/fig-003.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D14.3 — Standing wave normal modes</p>
+<p><strong>Show:</strong> Editable geometry and labels for the local figure above.
+<strong>Source:</strong> <code>string-waves/assets/figures/fig-003.svg</code>; original retained.
+<strong>Read:</strong> Standing wave normal modes.</p>
+</div>
+
 <p>Let a string of length $L$ be clamped rigidly at $x = 0$ and $x = L$.
 - Boundary Condition 1: $y(0,t) = 0 \implies$ satisfies $y = [2A \sin(kx)] \cos(\omega t)$.
 - Boundary Condition 2: $y(L,t) = 0$:
@@ -490,6 +511,13 @@ $$\nu_{\text{fork}} = 2 \times \left(\frac{p}{2L}\sqrt{\frac{T}{\mu}}\right) = \
 <h2 id="part-7-advanced-olympiad-machinery">Part 7: Advanced &amp; Olympiad Machinery</h2>
 <h3 id="71-wave-propagation-in-a-heavy-hanging-rope-under-gravity">7.1 Wave Propagation in a Heavy Hanging Rope under Gravity</h3>
 <p><img alt="Hanging rope dynamics under gravity" src="../../string-waves/assets/figures/fig-004.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D14.4 — Hanging rope dynamics under gravity</p>
+<p><strong>Show:</strong> Editable geometry and labels for the local figure above.
+<strong>Source:</strong> <code>string-waves/assets/figures/fig-004.svg</code>; original retained.
+<strong>Read:</strong> Hanging rope dynamics under gravity.</p>
+</div>
+
 <p>Consider a uniform rope of total mass $M$, length $L$, and linear mass density $\mu = M/L$ suspended vertically from a rigid ceiling under the influence of gravity $g$.</p>
 <p>Let $y$ be the vertical coordinate measured <strong>from the bottom free end upward</strong> ($0 \le y \le L$).<br />
 At height $y$, the tension in the rope is caused purely by the weight of the rope segment hanging below it:

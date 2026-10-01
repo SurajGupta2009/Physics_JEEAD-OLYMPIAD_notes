@@ -179,6 +179,9 @@ The strong force's five properties explain the whole chapter: it is attractive a
 > *Show:* a sphere of packed nucleons; short sticky bonds drawn between nearest neighbours only; long red repulsion arrows connecting every proton pair; a caption "saturated attraction versus unsaturating repulsion".
 > *Search:* "nuclear force saturation Coulomb repulsion nucleus diagram"
 > *Used in:* §3.1, §3.4.
+> **Companion:** native editable scene `nuclear-physics-D26-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-1.excalidraw|900]]
 
 ### 3.2 Size and density
 
@@ -200,6 +203,9 @@ independent of $A$. A teaspoon ($5$ cm$^3$) of it weighs $\sim1.2\times10^{12}$ 
 > *Show:* radius in fm on the vertical axis, A to the one-third on the horizontal; a straight line through the origin of slope 1.2 fm; data points for carbon, iron, gold, uranium marked; the linearity captioned "constant density".
 > *Search:* "nuclear radius A to the one third straight line electron scattering"
 > *Used in:* §3.2.
+> **Companion:** native editable scene `nuclear-physics-D26-2.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-2.excalidraw|900]]
 
 ### 3.3 Mass defect and the binding-energy curve
 
@@ -226,6 +232,9 @@ Plot $B/A$ against $A$ and the curve becomes the chapter's decision-maker: any p
 > *Show:* a balance beam; left pan holding separate protons and neutrons labelled with their summed mass; right pan holding the assembled nucleus, lighter, the gap labelled delta-m times c-squared equals B; an arrow "repay B to dismantle".
 > *Search:* "mass defect binding energy balance scale diagram"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `nuclear-physics-D26-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-4.excalidraw|900]]
 
 > [!tip] FIGURE F26.3 · The mass defect is the binding energy
 > *Why:* half of nuclear problems are mass-defect arithmetic in disguise; the flow shows exactly what to subtract from what.
@@ -255,6 +264,9 @@ Volume $a_vA$: saturated binding, every nucleon shares equally. Surface $-a_sA^{
 > *Show:* for one nucleus (say A = 238): a tall positive volume bar, then negative bars for surface, Coulomb, asymmetry, a small pairing bar; the net binding arrow summing them; a second panel for A = 56 showing the Coulomb bar shrunk.
 > *Search:* "semi empirical mass formula terms bar chart liquid drop"
 > *Used in:* §3.4.
+> **Companion:** native editable scene `nuclear-physics-D26-5.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-5.excalidraw|900]]
 
 For fixed $A$, maximising $B$ over $Z$ gives the valley floor:
 
@@ -268,6 +280,9 @@ Light nuclei want $N\approx Z$; at $A=100$ the formula gives $Z_0=42.9$ (molybde
 > *Show:* the N-Z plane with the band of stable nuclides curving above N = Z; arrows from the neutron-rich side pointing down-left (beta-minus) and from the proton-rich side up-left (beta-plus/EC); the actinide end labelled alpha territory.
 > *Search:* "valley of stability chart of nuclides beta decay directions"
 > *Used in:* §3.4, §3.6.
+> **Companion:** native editable scene `nuclear-physics-D26-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-6.excalidraw|900]]
 
 The same two-term competition sets the table's end: Coulomb grows as $Z^2$, surface as $A^{2/3}$; beyond bismuth no configuration is fully stable, and alpha emission becomes the leak — which is why there is no stable nucleus beyond bismuth (OL12 quantifies the limit).
 
@@ -291,11 +306,17 @@ For U-238: $K_\alpha=\frac{234}{238}\times4.27=4.20$ MeV. Derivation: $p_\alpha=
 > *Show:* parent level at top, daughter levels below with two alpha branches (ground-state and excited-state alphas of different energies), a gamma arrow de-exciting the daughter; an inset of the two back-to-back momentum arrows sized inversely to the masses.
 > *Search:* "alpha decay energy level diagram fine structure gamma"
 > *Used in:* §3.6.
+> **Companion:** native editable scene `nuclear-physics-D26-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-7.excalidraw|900]]
 
 > [!abstract] DIAGRAM D26.8 · The three decays in matter and in a field
 > *Show:* three beams entering a slab: alpha stopping in paper with a short fat track, beta penetrating foil with a thin crooked track, gamma passing lead partially; the same three in a magnetic field: alpha curving gently one way, beta sharply the other, gamma straight.
 > *Search:* "alpha beta gamma penetration magnetic deflection comparison"
 > *Used in:* §3.6-3.8.
+> **Companion:** native editable scene `nuclear-physics-D26-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-8.excalidraw|900]]
 
 ### 3.7 Beta decay and the neutrino
 
@@ -305,6 +326,9 @@ Beta decay changes a nucleon's flavour: $n\to p+e^-+\bar\nu_e$ inside neutron-ri
 > *Show:* number of electrons against energy: a smooth hump from 0 to the endpoint E0; the average energy marked near 0.3 E0; the shaded complement labelled "the neutrino's share"; a vertical line at E0 = Q.
 > *Search:* "beta decay continuous spectrum endpoint energy neutrino"
 > *Used in:* §3.7.
+> **Companion:** native editable scene `nuclear-physics-D26-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-9.excalidraw|900]]
 
 Free neutron decay has $Q=(m_n-m_H)\times931.5=0.782$ MeV and a mean life of about 880 s. A *bound* neutron may or may not decay: the comparison is between whole nuclear masses, not nucleon masses — in stable nuclei the daughter's mass would be higher, $Q<0$, and the neutron is forbidden to die. Binding decides life and death.
 
@@ -359,11 +383,17 @@ If the parent is shorter-lived, no equilibrium: the daughter peaks then decays a
 > *Show:* two panels: secular, parent flat and daughter rising to meet it, activities equal thereafter; transient, parent falling slowly, daughter humping then falling parallel beneath it with the constant ratio annotated; time axes in parent half-lives.
 > *Search:* "radioactive equilibrium secular transient daughter activity curve"
 > *Used in:* §3.10.
+> **Companion:** native editable scene `nuclear-physics-D26-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-11.excalidraw|900]]
 
 > [!abstract] DIAGRAM D26.12 · A decay chain on the nuclide chart
 > *Show:* a zigzag path on the N-Z plane: alpha steps diagonally down-left by two and two, beta steps up-left by one; the uranium series sketched to lead-206; step lengths captioned with delta A and delta Z.
 > *Search:* "uranium decay series chart of nuclides zigzag alpha beta"
 > *Used in:* §3.10.
+> **Companion:** native editable scene `nuclear-physics-D26-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-12.excalidraw|900]]
 
 ### 3.11 Dating and tracing
 
@@ -379,6 +409,9 @@ A sample at $10$ disintegrations per minute per gram against the living $15$: $t
 > *Show:* activity ratio against age, the exponential fall; horizontal bands at ratio 1 (modern) and about 0.003 (the 50 ka counting limit); a calibration wiggles inset for the last 10 ka captioned "tree rings correct the clock".
 > *Search:* "carbon dating decay curve range limit calibration"
 > *Used in:* §3.11.
+> **Companion:** native editable scene `nuclear-physics-D26-13.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-13.excalidraw|900]]
 
 > [!tip] FIGURE F26.5 · The carbon-dating clock and its limits
 > *Why:* the same half-life that makes carbon dating work also puts a hard counting limit on its range.
@@ -404,11 +437,17 @@ The released neutrons make a chain possible. The multiplication factor $k$ count
 > *Show:* three panels of fission trees: k greater than 1 with branches multiplying, k equal 1 with a steady stream, k less than 1 thinning to extinction; generation numbers on the axes.
 > *Search:* "chain reaction multiplication factor k diagrams"
 > *Used in:* §3.12.
+> **Companion:** native editable scene `nuclear-physics-D26-14.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-14.excalidraw|900]]
 
 > [!abstract] DIAGRAM D26.15 · The reactor component stack
 > *Show:* core with fuel rods and control rods, moderator filling, coolant loop to a steam generator, turbine, containment shell, shielding layer; each labelled with its one-line job.
 > *Search:* "nuclear reactor diagram components moderator control rods coolant"
 > *Used in:* §3.12.
+> **Companion:** native editable scene `nuclear-physics-D26-15.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-15.excalidraw|900]]
 
 ### 3.13 Fusion
 
@@ -422,11 +461,17 @@ The Sun's budget: luminosity $L=3.83\times10^{26}$ W implies mass loss $\frac{L}
 > *Show:* potential energy against separation: the Coulomb hill bending down to a deep nuclear well at 2 fm; a few-MeV alpha or proton energy line far below the summit; the tunnelling region shaded; a right panel with the Maxwell distribution, the tunnelling probability, and their product peak labelled Gamow window.
 > *Search:* "Coulomb barrier tunneling Gamow peak fusion diagram"
 > *Used in:* §3.13, OL2.
+> **Companion:** native editable scene `nuclear-physics-D26-16.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-16.excalidraw|900]]
 
 > [!abstract] DIAGRAM D26.17 · The p-p chain ladder
 > *Show:* four protons at top; the weak first step to deuterium with positron and neutrino; the radiative step to He-3; the branch merging two He-3 to He-4 plus two protons; the net 26.7 MeV bracketed.
 > *Search:* "proton proton chain reactions diagram solar fusion"
 > *Used in:* §3.13.
+> **Companion:** native editable scene `nuclear-physics-D26-17.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-17.excalidraw|900]]
 
 ### 3.14 Detectors and counting statistics
 
@@ -1019,6 +1064,9 @@ Quadruple.
 > *Show:* a cloud chamber photograph in words: short thick straight alpha tracks from a source dot; long thin kinked beta tracks; sparse delta-ray wisps for gammas; a magnetic field curving betas visibly, alphas barely.
 > *Search:* "cloud chamber alpha beta tracks photograph"
 > *Used in:* §3.14.
+> **Companion:** native editable scene `nuclear-physics-D26-18.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/nuclear-physics-D26-18.excalidraw|900]]
 
 ## Part 7 · Alternate methods and the JEE-Advanced advantage toolkit
 

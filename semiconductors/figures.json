@@ -2,35 +2,225 @@
   "slug": "semiconductors",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F27.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F27.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "the chapter is one ladder of gaps - bands, junction, diode, transistor - climbed toward logic",
       "data": "the Part 0-14 structure",
       "read": "every device result is the gap, the mass-action law, the diode exponential, or a truth table",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F27.2", "kind": "flowchart", "title": "The band gap is the whole device",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F27.2",
+      "kind": "flowchart",
+      "title": "The band gap is the whole device",
       "why": "every device property is a gap value; conduction, the diode, LED colours all follow",
       "data": "diamond 5.5 eV, Si 1.12, Ge 0.66, GaAs 1.42; kT ≈ 0.026 eV at 300 K",
       "read": "a small gap means carriers jump at room temperature; a huge gap means none",
-      "source": "DIAGRAM D27.3 (§3.2)" },
-    { "id": "F27.3", "kind": "flowchart", "title": "The p-n junction: diffusion, drift, and the potential hill",
+      "source": "DIAGRAM D27.3 (§3.2)"
+    },
+    {
+      "id": "F27.3",
+      "kind": "flowchart",
+      "title": "The p-n junction: diffusion, drift, and the potential hill",
       "why": "the whole diode is one sentence - diffusion meets the drift it creates, at hill V0",
       "data": "donors on n, acceptors on p, field n→p, V0 ≈ 0.7 V for Si",
       "read": "no perpetual current flows; the hill is the diode's off state",
-      "source": "DIAGRAM D27.8 (§3.6)" },
-    { "id": "F27.4", "kind": "flowchart", "title": "The diode equation: 60 mV per decade",
+      "source": "DIAGRAM D27.8 (§3.6)"
+    },
+    {
+      "id": "F27.4",
+      "kind": "flowchart",
+      "title": "The diode equation: 60 mV per decade",
       "why": "the knee and the decade rule are the same exponential read at two zooms",
       "data": "I = I0(e^(V/VT) - 1), VT = 25.9 mV, a decade = 59.5 mV",
       "read": "forward current multiplies by ten each extra 60 mV; the 0.7 V drop is where it meets resistance",
-      "source": "DIAGRAM D27.10 (§3.7)" },
-    { "id": "F27.5", "kind": "xychart-beta", "title": "Intrinsic carriers: the half-gap is the temperature switch",
+      "source": "DIAGRAM D27.10 (§3.7)"
+    },
+    {
+      "id": "F27.5",
+      "kind": "xychart-beta",
+      "title": "Intrinsic carriers: the half-gap is the temperature switch",
       "why": "the exponent is half the gap, not the whole - why silicon conducts so much better when hot",
       "data": "n_i ∝ T^(3/2) e^(-Eg/2kT); doubling T multiplies the exponential by ~5e4",
       "read": "the steep curve is the half-gap exponential; the T^(3/2) prefactor is a rounding error",
-      "source": "§3.3 Intrinsic carriers" },
-    { "id": "F27.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "§3.3 Intrinsic carriers"
+    },
+    {
+      "id": "F27.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the seven triage branches of §9.1",
       "read": "junction words to the hill, diode words to the decade ladder, gates to a truth table",
-      "source": "§9.1 Triage decision tree" }
-  ]
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D27.1",
+      "kind": "excalidraw",
+      "title": "The thirty-order resistivity axis",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"resistivity ranges conductors semiconductors insulators log scale\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-1.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.1 brief"
+    },
+    {
+      "id": "D27.2",
+      "kind": "excalidraw",
+      "title": "Resistance against temperature, three curves",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"resistance temperature metal semiconductor thermistor curves\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-2.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.2 brief"
+    },
+    {
+      "id": "D27.3",
+      "kind": "excalidraw",
+      "title": "Three band diagrams",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"band diagram metal insulator semiconductor comparison\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-3.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.3 brief"
+    },
+    {
+      "id": "D27.4",
+      "kind": "excalidraw",
+      "title": "Generation and recombination",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"electron hole pair generation recombination band diagram\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-4.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.4 brief"
+    },
+    {
+      "id": "D27.5",
+      "kind": "excalidraw",
+      "title": "A hole moves by bond-swapping",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"hole conduction bond model semiconductor animation frames\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-5.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.5 brief"
+    },
+    {
+      "id": "D27.6",
+      "kind": "excalidraw",
+      "title": "The doped lattice",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"n-type p-type doping silicon lattice diagram phosphorus boron\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-6.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.6 brief"
+    },
+    {
+      "id": "D27.7",
+      "kind": "excalidraw",
+      "title": "The giant donor orbit",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"donor electron hydrogenic orbit effective mass semiconductor\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-7.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.7 brief"
+    },
+    {
+      "id": "D27.8",
+      "kind": "excalidraw",
+      "title": "The depletion region",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"p-n junction depletion region fixed ions field potential diagram\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-8.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.8 brief"
+    },
+    {
+      "id": "D27.9",
+      "kind": "excalidraw",
+      "title": "Charge, field and potential aligned",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"pn junction charge field potential profiles aligned graphs\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-9.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.9 brief"
+    },
+    {
+      "id": "D27.10",
+      "kind": "excalidraw",
+      "title": "The diode I-V in full",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"diode IV curve knee breakdown zener annotated\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-10.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.10 brief"
+    },
+    {
+      "id": "D27.11",
+      "kind": "excalidraw",
+      "title": "Half-wave rectification with ripple",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"half wave rectifier capacitor ripple waveform\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-11.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.11 brief"
+    },
+    {
+      "id": "D27.12",
+      "kind": "excalidraw",
+      "title": "The full-wave bridge",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"bridge rectifier full wave diagram current paths\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-12.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.12 brief"
+    },
+    {
+      "id": "D27.13",
+      "kind": "excalidraw",
+      "title": "The Zener shunt regulator",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"zener voltage regulator circuit series resistor load\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-13.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.13 brief"
+    },
+    {
+      "id": "D27.14",
+      "kind": "excalidraw",
+      "title": "Colour versus gap",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"LED color bandgap wavelength materials chart\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-14.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.14 brief"
+    },
+    {
+      "id": "D27.15",
+      "kind": "excalidraw",
+      "title": "The junction as photodiode and solar cell",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photodiode solar cell pn junction operation comparison\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-15.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.15 brief"
+    },
+    {
+      "id": "D27.16",
+      "kind": "excalidraw",
+      "title": "The npn transistor and its currents",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"npn transistor structure emitter base collector currents diagram\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-16.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.16 brief"
+    },
+    {
+      "id": "D27.17",
+      "kind": "excalidraw",
+      "title": "Load line and switch",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"common emitter load line transistor switch diagram\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-17.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.17 brief"
+    },
+    {
+      "id": "D27.18",
+      "kind": "excalidraw",
+      "title": "Gates and the half adder",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"logic gates symbols truth tables half adder circuit\"",
+      "file": "_obsidian/excalidraw/semiconductors-D27-18.excalidraw.md",
+      "source": "semiconductors/Semiconductors.md · D27.18 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D27 series); scenes drawn from briefs, not converted from SVG."
 }

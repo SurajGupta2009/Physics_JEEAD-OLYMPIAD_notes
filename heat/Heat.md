@@ -50,6 +50,13 @@ mindmap
 
 ![Mind map of the course: root node with 8 chapter branches, each clickable to open its chapter](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D17.1 — Mind map of the course: root node with 8 chapter branches, each clickable to open its chapter
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-001.svg`; original retained.
+> **Read:** Mind map of the course: root node with 8 chapter branches, each clickable to open its chapter.
+
+![[../_obsidian/excalidraw/heat-D17-1.excalidraw|900]]
+
 Any branch opens its chapter right here — the full theory, figures and solved questions. Expand all with the top bar; printing opens everything automatically.
 
 <a id="ch-01"></a>
@@ -64,6 +71,13 @@ _Chapter 1 of 8 · JEE Main · base · ≈ 40 min read · 5 questions_
 Every formula in this topic is a sentence about one of three quantities that everyday language keeps collapsing into the single word “heat.” Before we can count joules, we must say which of the three each word in a problem refers to: the pointer reading ($T$), the money in transit ($Q$), or the balance in the bank ($U$). This chapter fixes the vocabulary once; nothing later has to apologize for it.
 
 ![The money diagram: a body stores internal energy, not heat; heat and work are the two doors it enters through, and temperature is the pointer every thermometer reads.](assets/figures/fig-002.svg)
+
+> [!abstract] DIAGRAM D17.2 — The money diagram: a body stores internal energy, not heat; heat and work are the two doors it enters through, and temperature is the pointer every thermometer reads.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-002.svg`; original retained.
+> **Read:** The money diagram: a body stores internal energy, not heat; heat and work are the two doors it enters through, and temperature is the pointer every thermometer reads.
+
+![[../_obsidian/excalidraw/heat-D17-2.excalidraw|900]]
 
 **Fig. 1.1 — heat, work, and what a body actually stores.** The three words people mix up. A 1 kg block at 60 °C does not “contain heat” — it stores $U$; *heat* is the joules still crossing its surface. Two bodies at the same temperature can hold wildly different $U$: per kilogram, water over iron by a factor of about 4.5.
 
@@ -101,6 +115,13 @@ Why does the distinction earn a whole first section, not a footnote? Because alm
 > It doesn’t. Heat is a verb disguised as a noun: it exists only while crossing the boundary. Once the joules are inside they are internal energy, indistinguishable from joules that arrived by work. If an option says “a body at 100 °C contains more heat than one at 50 °C,” read it as false on sight, whatever the numbers around it. What a body “contains” is $U$; what it can still *deliver* depends on $c$, on $m$, and on how far down the temperature can fall.
 
 ![Equal average kinetic energy at equal temperature: helium darts fly faster than nitrogen at 300 K, but the mean translational energy per molecule is the same number, 3kT/2.](assets/figures/fig-003.svg)
+
+> [!abstract] DIAGRAM D17.3 — Equal average kinetic energy at equal temperature: helium darts fly faster than nitrogen at 300 K, but the mean translational energy per molecule is the same number, 3kT/2.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-003.svg`; original retained.
+> **Read:** Equal average kinetic energy at equal temperature: helium darts fly faster than nitrogen at 300 K, but the mean translational energy per molecule is the same number, 3kT/2.
+
+![[../_obsidian/excalidraw/heat-D17-3.excalidraw|900]]
 
 **Fig. 1.2 — equal T means equal mean KE, not equal speed.** Temperature *is*, for an ideal gas up to the factor 3/2, the mean translational kinetic energy per molecule: 6.2×10⁻²¹ J at 300 K for every gas in the room. The molecular mass shows up in *speed*, not in energy.
 
@@ -270,6 +291,13 @@ Why $\alpha$ is tiny in good solids and large in bad ones: the interatomic poten
 
 ![Holes and slots get bigger on heating: the missing metal would have expanded outward too, so the empty space inherits the enlargement like everything else.](assets/figures/fig-004.svg)
 
+> [!abstract] DIAGRAM D17.4 — Holes and slots get bigger on heating: the missing metal would have expanded outward too, so the empty space inherits the enlargement like everything else.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-004.svg`; original retained.
+> **Read:** Holes and slots get bigger on heating: the missing metal would have expanded outward too, so the empty space inherits the enlargement like everything else.
+
+![[../_obsidian/excalidraw/heat-D17-4.excalidraw|900]]
+
 **Fig. 2.1 — holes grow with the metal.** The figure that kills the “hole shrinks” mistake. Heat a ring: its circumference line scales up by 1+αΔT, so the *bore* grows by exactly that factor — same law as solid metal, no exception.
 
 > **“The metal expands into the hole”**
@@ -279,6 +307,13 @@ Why $\alpha$ is tiny in good solids and large in bad ones: the interatomic poten
 ### 2.3 When growth is blocked: thermal stress
 
 ![A clamped rod cannot grow, so its expansion turns into force: stress = YαΔT — for steel and a 30 K swing, 72 MPa, a third of mild steel's yield point.](assets/figures/fig-005.svg)
+
+> [!abstract] DIAGRAM D17.5 — A clamped rod cannot grow, so its expansion turns into force: stress = YαΔT — for steel and a 30 K swing, 72 MPa, a third of mild steel's yield point.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-005.svg`; original retained.
+> **Read:** A clamped rod cannot grow, so its expansion turns into force: stress = YαΔT — for steel and a 30 K swing, 72 MPa, a third of mild steel's yield point.
+
+![[../_obsidian/excalidraw/heat-D17-5.excalidraw|900]]
 
 **Fig. 2.2 — blocked expansion becomes stress.** Never compute this as “the rod pushes”. Two steps, always: free growth ΔL = LαΔT, then squeeze-back ΔL = FL/(YA); equate the two.
 
@@ -295,6 +330,13 @@ Why $\alpha$ is tiny in good solids and large in bad ones: the interatomic poten
 ### 2.4 Two metals bonded: the bimetal strip
 
 ![Bond two metals and heat the pair: the longer side must lie on the outside of the curve, so the strip bends — and because the curvature is linear in ΔT, a bimetal gauge reads temperature directly.](assets/figures/fig-006.svg)
+
+> [!abstract] DIAGRAM D17.6 — Bond two metals and heat the pair: the longer side must lie on the outside of the curve, so the strip bends — and because the curvature is linear in ΔT, a bimetal gauge reads temperature directly.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-006.svg`; original retained.
+> **Read:** Bond two metals and heat the pair: the longer side must lie on the outside of the curve, so the strip bends — and because the curvature is linear in ΔT, a bimetal gauge reads temperature directly.
+
+![[../_obsidian/excalidraw/heat-D17-6.excalidraw|900]]
 
 **Fig. 2.3 — the bimetal curl.** Equal-thickness bimetal, layer t: over 50 mm a brass/steel pair at +100 K stores a 0.35 mm length dispute; geometry resolves it as a curve of radius R = 2t/(3ΔαΔT).
 
@@ -321,6 +363,13 @@ Numbers: mercury in Pyrex, 182 − 3×3.3 = 172 ×10⁻⁶; mercury in soda glas
 Between 0 and 4 °C water *contracts on heating*, because the open, low-density hydrogen-bonded arrangement that freezing builds (ice: $917$ kg/m³, a 9% expansion) is partly re-melting as warmth returns and lets molecules pack closer ($1000$ kg/m³ at 4 °C). The density maximum at 4 °C is not a curiosity; it is a boundary condition on the whole planet’s freshwater biology.
 
 ![Why a deep lake skins over instead of freezing solid: water is densest at 4 °C, so everything colder is lighter and stays up top; the ice thickens downward, insulated by its own slowness.](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D17.7 — Why a deep lake skins over instead of freezing solid: water is densest at 4 °C, so everything colder is lighter and stays up top; the ice thickens downward, insulated by its own slowness.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-007.svg`; original retained.
+> **Read:** Why a deep lake skins over instead of freezing solid: water is densest at 4 °C, so everything colder is lighter and stays up top; the ice thickens downward, insulated by its own slowness.
+
+![[../_obsidian/excalidraw/heat-D17-7.excalidraw|900]]
 
 **Fig. 2.4 — why lakes freeze from the top.** The anomaly that overwinters fish, bursts household pipes, and gives ice its place on any drink: between 0 and 4 °C, cooling *expands* water.
 
@@ -463,6 +512,13 @@ Calorimetry is bookkeeping: an isolated box trades energy between its contents u
 
 ![A 1 kg ice-warm-to-steam run at constant heater power: two flat plateaus are pure reorganisation energy — and their widths, not the slopes, measure L.](assets/figures/fig-008.svg)
 
+> [!abstract] DIAGRAM D17.8 — A 1 kg ice-warm-to-steam run at constant heater power: two flat plateaus are pure reorganisation energy — and their widths, not the slopes, measure L.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-008.svg`; original retained.
+> **Read:** A 1 kg ice-warm-to-steam run at constant heater power: two flat plateaus are pure reorganisation energy — and their widths, not the slopes, measure L.
+
+![[../_obsidian/excalidraw/heat-D17-8.excalidraw|900]]
+
 **Fig. 3.1 — the plateau graph: where latent heat is read off.** Every segment is Q = mcΔT except the two plateaus, which are Q = mL. Read the plateaus in joules (power × time) and latent heat falls out of a stopwatch.
 
 ### 3.2 Plateaus and how to measure them
@@ -500,6 +556,13 @@ flowchart TD
 
 ![The steam-into-ice problem done as an energy audit: check who exhausts first, then let the surviving phase fix the temperature (0 °C, by definition of its own coexistence).](assets/figures/fig-009.svg)
 
+> [!abstract] DIAGRAM D17.9 — The steam-into-ice problem done as an energy audit: check who exhausts first, then let the surviving phase fix the temperature (0 °C, by definition of its own coexistence).
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-009.svg`; original retained.
+> **Read:** The steam-into-ice problem done as an energy audit: check who exhausts first, then let the surviving phase fix the temperature (0 °C, by definition of its own coexistence).
+
+![[../_obsidian/excalidraw/heat-D17-9.excalidraw|900]]
+
 **Fig. 3.2 — steam into ice, done as an audit.** The exam algorithm in one picture: (i) budget each side's energy to the nearest plateau; (ii) compare; (iii) whichever plateau is still occupied sets T_final and the answer is how much mass sits on it.
 
 Worked in full for the figure: 0.10 kg of steam at 100 °C into 1.0 kg of ice at 0 °C. Supply: condensing $225.6$ kJ plus condensed-water cooling to 0 $41.9$ kJ, so $267.5$ kJ. Demand to lift the ice out of its plateau: melting $334$ plus 0→100 heating $418.6$, so $752.6$ kJ. Supply < demand: the mixture ends on the ice plateau — 0 °C, with melted ice $267.5/334 = 0.80$ kg and a final charge of 1.0 kg water + 0.20 kg ice. Note what this answer is *insensitive* to: any steam-mass change below the demand threshold moves the ice fraction but never the temperature. Questions of the “how much steam must you inject to raise the bucket to 60 °C” type are the same three steps with step 3 non-empty.
@@ -515,6 +578,13 @@ Worked in full for the figure: 0.10 kg of steam at 100 °C into 1.0 kg of ice at
 ### 3.5 How hard the plateau is to leave: Clausius–Clapeyron
 
 ![Straight-line logic behind every “altitude changes boiling” question: plot the vapour pressure and the slope is the latent heat.](assets/figures/fig-010.svg)
+
+> [!abstract] DIAGRAM D17.10 — Straight-line logic behind every “altitude changes boiling” question: plot the vapour pressure and the slope is the latent heat.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-010.svg`; original retained.
+> **Read:** Straight-line logic behind every “altitude changes boiling” question: plot the vapour pressure and the slope is the latent heat.
+
+![[../_obsidian/excalidraw/heat-D17-10.excalidraw|900]]
 
 **Fig. 3.3 — the vapour line and its slope.** Two points on the line, no calculus needed: L = R ln(P₂/P₁) ÷ (1/T₁ − 1/T₂). From 373 K/1 atm to 353 K/0.47 atm, that gives 2.3 MJ/kg — within 4% of the steam-table value.
 
@@ -674,6 +744,13 @@ Conduction is Ohm's law for heat: a “conductivity” times an area times a slo
 
 ![Series slabs carry one current, so each pays its share of ΔT in inverse proportion to k: k drops 500× from copper to air and the slope does the same.](assets/figures/fig-011.svg)
 
+> [!abstract] DIAGRAM D17.11 — Series slabs carry one current, so each pays its share of ΔT in inverse proportion to k: k drops 500× from copper to air and the slope does the same.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-011.svg`; original retained.
+> **Read:** Series slabs carry one current, so each pays its share of ΔT in inverse proportion to k: k drops 500× from copper to air and the slope does the same.
+
+![[../_obsidian/excalidraw/heat-D17-11.excalidraw|900]]
+
 **Fig. 4.1 — one current, three slopes.** Steady state means dT/dt = 0 everywhere, not dT/dx = 0: the profile stands still precisely because the same current enters and leaves every slice.
 
 > **“Steady” does not mean “equilibrium”**
@@ -707,6 +784,13 @@ $\Rightarrow \dot Q = 30/1.764 = 17.0$ W/m². The lesson is in the column: **50 
 
 ![Cylinders earn their logarithm: the same watts spread over circumference 2πrL, so T falls linearly in ln r, not in r.](assets/figures/fig-012.svg)
 
+> [!abstract] DIAGRAM D17.12 — Cylinders earn their logarithm: the same watts spread over circumference 2πrL, so T falls linearly in ln r, not in r.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-012.svg`; original retained.
+> **Read:** Cylinders earn their logarithm: the same watts spread over circumference 2πrL, so T falls linearly in ln r, not in r.
+
+![[../_obsidian/excalidraw/heat-D17-12.excalidraw|900]]
+
 **Fig. 4.2 — the log law of pipes.** R_th for a tube = ln(r₂/r₁)/(2πkL) — memorise it once and steam-pipe, thermometer-well and cable problems all become resistor arithmetic.
 
 > **Radial conduction (steady, no generation)**
@@ -723,6 +807,13 @@ $\Rightarrow \dot Q = 30/1.764 = 17.0$ W/m². The lesson is in the column: **50 
 
 ![Uniform generation + conducting walls = parabola: each half-thickness of material must pass its own heat out through the same area, and the integral of that is quadratic.](assets/figures/fig-013.svg)
 
+> [!abstract] DIAGRAM D17.13 — Uniform generation + conducting walls = parabola: each half-thickness of material must pass its own heat out through the same area, and the integral of that is quadratic.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-013.svg`; original retained.
+> **Read:** Uniform generation + conducting walls = parabola: each half-thickness of material must pass its own heat out through the same area, and the integral of that is quadratic.
+
+![[../_obsidian/excalidraw/heat-D17-13.excalidraw|900]]
+
 **Fig. 4.3 — generation makes a parabola.** Cylinders soften it to q̇R²/4k. Whenever the answer looks “too hot in the middle”, check whether someone assumed plane walls where the geometry is round.
 
 When the material is the heater — a current-carrying cable, a fuel pellet, Earth's mantle with its radioactivity, your body tissue with its metabolism — steady state balances generation against escape: $k\,\nabla^2 T + \dot q = 0$. The two shapes you must be able to write down instantly:
@@ -736,6 +827,13 @@ The factor-2 difference is geometry, not convention: in a cylinder half the gene
 ### 4.5 Stefan's ice: the √t law
 
 ![Stefan's ice problem: the freezing front slows down as it deepens, and the √t law follows; a foot of ice is a month of cold, not a week.](assets/figures/fig-014.svg)
+
+> [!abstract] DIAGRAM D17.14 — Stefan's ice problem: the freezing front slows down as it deepens, and the √t law follows; a foot of ice is a month of cold, not a week.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-014.svg`; original retained.
+> **Read:** Stefan's ice problem: the freezing front slows down as it deepens, and the √t law follows; a foot of ice is a month of cold, not a week.
+
+![[../_obsidian/excalidraw/heat-D17-14.excalidraw|900]]
 
 **Fig. 4.4 — ice grows as √t.** Same square-root signature as every diffusion-limited front (and as the skin depth in ch 7). Look for √t whenever the growing layer itself resists the flow.
 
@@ -873,6 +971,13 @@ A moving fluid is a conduction problem in disguise: right at the wall the no-sli
 
 ![Newton's cooling law is Fourier's law with the awkward part packaged: h is a wall-conductance for an invisible film of thickness δ = k/h.](assets/figures/fig-015.svg)
 
+> [!abstract] DIAGRAM D17.15 — Newton's cooling law is Fourier's law with the awkward part packaged: h is a wall-conductance for an invisible film of thickness δ = k/h.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-015.svg`; original retained.
+> **Read:** Newton's cooling law is Fourier's law with the awkward part packaged: h is a wall-conductance for an invisible film of thickness δ = k/h.
+
+![[../_obsidian/excalidraw/heat-D17-15.excalidraw|900]]
+
 **Fig. 5.1 — the stagnant film behind h.** The coefficient table (natural air ~5, forced air ~50, water ~2000, boiling ~25 000 W/m²K) is just the film δ shrinking by 5000×. h is not a property of the solid — it is of the whole situation.
 
 > **Newton's law of cooling (and heating)**
@@ -905,6 +1010,13 @@ Give a small hot body a conductance $hA$ to the room and a capacity $mc$, and th
 
 ![Plot it against the room temperature line, and it is a discharge curve: time constant = thermal resistance × heat capacity, half-life = 0.69τ.](assets/figures/fig-016.svg)
 
+> [!abstract] DIAGRAM D17.16 — Plot it against the room temperature line, and it is a discharge curve: time constant = thermal resistance × heat capacity, half-life = 0.69τ.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-016.svg`; original retained.
+> **Read:** Plot it against the room temperature line, and it is a discharge curve: time constant = thermal resistance × heat capacity, half-life = 0.69τ.
+
+![[../_obsidian/excalidraw/heat-D17-16.excalidraw|900]]
+
 **Fig. 5.2 — cooling as a discharge curve.** Two data points on any cooling curve are enough to read off both the ambient (the asymptote) and hA (from the slope ratio) — a classic practical-skill question.
 
 $$
@@ -920,6 +1032,13 @@ Worked once, for the nose: a 0.25 kg cup of tea plus its 0.05 kg aluminium cup h
 ### 5.3 When lumping is legal: the Biot licence
 
 ![The lumped-capacitation licence: internal conduction (k/L_c) vs surface evacuation (h). Cross Bi = 0.1 and the single-number story ends.](assets/figures/fig-017.svg)
+
+> [!abstract] DIAGRAM D17.17 — The lumped-capacitation licence: internal conduction (k/L_c) vs surface evacuation (h). Cross Bi = 0.1 and the single-number story ends.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-017.svg`; original retained.
+> **Read:** The lumped-capacitation licence: internal conduction (k/L_c) vs surface evacuation (h). Cross Bi = 0.1 and the single-number story ends.
+
+![[../_obsidian/excalidraw/heat-D17-17.excalidraw|900]]
 
 **Fig. 5.3 — the Biot licence.** A hot, wet, big object (food) cools in a surface-limited way — exponential law survives only in the Bi-small world; that is why “it feels done, the middle is raw”.
 
@@ -1043,6 +1162,13 @@ The only heat-transfer channel that works across the vacuum between stars, and t
 
 ![Three spectra, one law: λ_maxT = 2898 µm·K, and the total is σT⁴ — which is why the Sun is bright and we are invisible to our own eyes.](assets/figures/fig-018.svg)
 
+> [!abstract] DIAGRAM D17.18 — Three spectra, one law: λ_maxT = 2898 µm·K, and the total is σT⁴ — which is why the Sun is bright and we are invisible to our own eyes.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-018.svg`; original retained.
+> **Read:** Three spectra, one law: λ_maxT = 2898 µm·K, and the total is σT⁴ — which is why the Sun is bright and we are invisible to our own eyes.
+
+![[../_obsidian/excalidraw/heat-D17-18.excalidraw|900]]
+
 **Fig. 6.1 — three spectra, one displacement law.** The visible window (0.4–0.7 µm) sits at the Sun's peak but on our spectrum's far tail: daylight illumination is borrowed peak radiation; a person radiates like a dull, enormous 10 µm lamp.
 
 > **Stefan–Boltzmann and Wien**
@@ -1063,6 +1189,13 @@ At equilibrium a body must emit what it absorbs, or the room would spontaneously
 
 ![The paint trick that fools exam-takers: white paint is nearly invisible to sunlight but near-black in the thermal infrared it emits.](assets/figures/fig-019.svg)
 
+> [!abstract] DIAGRAM D17.19 — The paint trick that fools exam-takers: white paint is nearly invisible to sunlight but near-black in the thermal infrared it emits.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-019.svg`; original retained.
+> **Read:** The paint trick that fools exam-takers: white paint is nearly invisible to sunlight but near-black in the thermal infrared it emits.
+
+![[../_obsidian/excalidraw/heat-D17-19.excalidraw|900]]
+
 **Fig. 6.4 — white at noon, black at midnight.** That is why the tea cozy is wool (ε ≈ 0.9) not foil on the outside, and why radiators heat mostly by convection — changing ε barely budges a convection-dominated number.
 
 ### 6.3 The exchange between two bodies, and the shield trick
@@ -1076,6 +1209,13 @@ $$
 Numbers that make the point: $\varepsilon = 0.9$ on both sides: denominator 1.22 — nearly the blackbody ideal, surfaces barely matter. Both silvered to 0.05: denominator 39 — a 32× cut for the price of a vapour-thin metal film: that is the thermos lining and the 20-layer multiblank insulation of a cryogenic dewar (factor 21) in one line. The shields work because each floating film settles at a *staircase* temperature, re-radiating half what it intercepts back where it came from. (Small body in a big room: the reciprocal form collapses to $\varepsilon_1$ alone — that's the net law of §6.1.)
 
 ![A radiation-and-transport audit of the best thermos you own: each wall feature amputates exactly one of the three heat-transfer channels.](assets/figures/fig-020.svg)
+
+> [!abstract] DIAGRAM D17.20 — A radiation-and-transport audit of the best thermos you own: each wall feature amputates exactly one of the three heat-transfer channels.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-020.svg`; original retained.
+> **Read:** A radiation-and-transport audit of the best thermos you own: each wall feature amputates exactly one of the three heat-transfer channels.
+
+![[../_obsidian/excalidraw/heat-D17-20.excalidraw|900]]
 
 **Fig. 6.2 — a thermos audited layer by layer.** Conduction through the stopper and leakage at the mouth are the only doors left: why a good flask loses a few °C/hour even in a freezer-quiet cupboard.
 
@@ -1092,6 +1232,13 @@ $$
 ### 6.5 The planetary number
 
 ![One number explains climate: the /4 (disc receives, sphere radiates). Feed it to Stefan-Boltzmann and the bare-rock Earth is −18 °C.](assets/figures/fig-021.svg)
+
+> [!abstract] DIAGRAM D17.21 — One number explains climate: the /4 (disc receives, sphere radiates). Feed it to Stefan-Boltzmann and the bare-rock Earth is −18 °C.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-021.svg`; original retained.
+> **Read:** One number explains climate: the /4 (disc receives, sphere radiates). Feed it to Stefan-Boltzmann and the bare-rock Earth is −18 °C.
+
+![[../_obsidian/excalidraw/heat-D17-21.excalidraw|900]]
 
 **Fig. 6.3 — the planetary /4.** The geometric factor everyone forgets: sunlight intercepts πR² but the planet sheds over 4πR², and every point's flux is diluted 4× before T⁴ is inverted.
 
@@ -1237,6 +1384,13 @@ Chapters 4–6 were steady states and lumped bodies. Olympiad problems live one 
 
 ![Cool soil at depth is not insulation, it is a low-pass filter: the annual wave dies in metres, and at 5–7 m the phase has flipped — warm in January.](assets/figures/fig-022.svg)
 
+> [!abstract] DIAGRAM D17.22 — Cool soil at depth is not insulation, it is a low-pass filter: the annual wave dies in metres, and at 5–7 m the phase has flipped — warm in January.
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `heat/assets/figures/fig-022.svg`; original retained.
+> **Read:** Cool soil at depth is not insulation, it is a low-pass filter: the annual wave dies in metres, and at 5–7 m the phase has flipped — warm in January.
+
+![[../_obsidian/excalidraw/heat-D17-22.excalidraw|900]]
+
 **Fig. 7.1 — the thermal wave and its skin depth.** Same math as skin effect in a conductor (see the current-electricity notes): diffusion waves always trade amplitude for depth as e^(−x/δ), and lag by exactly the e-folding distance.
 
 Drive a half-space surface sinusoidally, $T(0,t) = T_0\cos\omega t$, and the heat equation’s answer is a damped, lagging wave (insert $e^{ikx-i\omega t}$ and read off k):
@@ -1250,6 +1404,13 @@ Amplitude and phase are welded together: one $e$-fold of dying per one radian of
 ### 7.3 The contact rule: effusivity and the interface temperature
 
 ![The ‘cold floor’ problem solved: contact temperature is an effusivity-weighted average, and a body with 40× the drain holds your surface at 13 K below skin no matter that both are 15 °C.](assets/figures/fig-023.svg)
+
+> [!abstract] DIAGRAM D17.23 — The ‘cold floor’ problem solved: contact temperature is an effusivity-weighted average, and a body with 40× the drain holds your surface at 13 K below skin no matter that both are 15 °C.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-023.svg`; original retained.
+> **Read:** The ‘cold floor’ problem solved: contact temperature is an effusivity-weighted average, and a body with 40× the drain holds your surface at 13 K below skin no matter that both are 15 °C.
+
+![[../_obsidian/excalidraw/heat-D17-23.excalidraw|900]]
 
 **Fig. 7.4 — why steel is colder than wood at the same temperature.** e answers ‘how many watts does the semi-infinite block drink per m² when you slap it with a ΔT’ — k alone cannot, because the block also has to carry the heat away, store it, and keep the surface from rebounding.
 
@@ -1267,6 +1428,13 @@ Press two semi-infinite bodies at $T_1$ and $T_2$ together; what temperature doe
 
 ![Fins only pay while the tip stays hot; the exponential-ish decay says: keep them shorter than ~2.5/m and spend metal on perimeter, not on length.](assets/figures/fig-024.svg)
 
+> [!abstract] DIAGRAM D17.24 — Fins only pay while the tip stays hot; the exponential-ish decay says: keep them shorter than ~2.5/m and spend metal on perimeter, not on length.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-024.svg`; original retained.
+> **Read:** Fins only pay while the tip stays hot; the exponential-ish decay says: keep them shorter than ~2.5/m and spend metal on perimeter, not on length.
+
+![[../_obsidian/excalidraw/heat-D17-24.excalidraw|900]]
+
 **Fig. 7.2 — how far a fin is worth building.** Corrugations, motorcycle fins, radiator flats: same optimisation — the fin doubles area but halves its own usefulness at the tip.
 
 A fin is a 1-D compromise — conduction along the solid, convection off the perimeter. Slice balance:
@@ -1280,6 +1448,13 @@ Long fins die exponentially ($\theta \sim e^{-mx}$): the decay length $1/m$ *is*
 ### 7.5 The critical radius of insulation
 
 ![On a wire, r₂ = k/h may be a millimetre — the ‘insulation’ you add before that radius grows the outer area so much that cooling improves.](assets/figures/fig-025.svg)
+
+> [!abstract] DIAGRAM D17.25 — On a wire, r₂ = k/h may be a millimetre — the ‘insulation’ you add before that radius grows the outer area so much that cooling improves.
+> **Show:** Editable companion retaining source geometry, with reflowed labels and native primitives.
+> **Source:** `heat/assets/figures/fig-025.svg`; original retained.
+> **Read:** On a wire, r₂ = k/h may be a millimetre — the ‘insulation’ you add before that radius grows the outer area so much that cooling improves.
+
+![[../_obsidian/excalidraw/heat-D17-25.excalidraw|900]]
 
 **Fig. 7.3 — the critical radius of insulation.** Pipes are the other side of the coin: lag 20 mm past r_c and you save; electrical cables are deliberately sheathed past theirs so they can shed their I²R. Slabs, by the way, never have a critical thickness.
 

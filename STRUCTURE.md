@@ -138,7 +138,7 @@ layout that §4–§5 were written for survives only as the page contract that s
 ```
 
 No topic-local `assets/`, `.html`, or raster image files: standard figures render from Mermaid
-source in Obsidian (`docs/obsidian-plugin-workflow.md` §2). The scoped D1–D13 retrofit uses
+source in Obsidian (`docs/obsidian-plugin-workflow.md` §2). The scoped D1–D28, D100 retrofit uses
 editable Excalidraw Markdown scenes centrally in `_obsidian/excalidraw/`, embedded at the
 corresponding D-briefs (Electrostatics D13 consolidates plan Parts 13–15). Frontmatter is the vault's metadata — `title`, `part`, `slug`, `order`,
 `block`, `status`, `source`, `aliases`, `tags` — and `tools/check_all.py` checks `order`/`block`
@@ -332,3 +332,11 @@ locally (or paste the folder into a gist with a raw viewer) — do not commit th
 ignored on purpose (the five Cengage source volumes are the one named exception, see §2). The
 Obsidian vault is the other way to read it rendered: `docs/site/` is the same Markdown as a static
 site, and Obsidian's *Export to PDF* prints a chapter with the `physics-notes` CSS snippet applied.
+
+Course slots 19–21 add 26 Current Electricity (D19), 30 Magnetism (existing D16), and 22 EMI/AC (existing D20) scenes. IDs are chapter-local and filenames are slug-qualified. Rebuild with `python3 tools/build_excalidraw_current_magnetism_emi.py`; see `docs/excalidraw-retrofit-status.md` for validation limits.
+
+Course slots 22–24 add 81 native SVG companions: Electromagnetic Waves D21 (7), Geometrical Optics D22 (46), and Wave Optics D23 (28). Rebuild with `python3 tools/build_excalidraw_em_optics.py`. Originals remain intact; native Obsidian acceptance and a comprehensive physics audit are pending (see `docs/excalidraw-retrofit-status.md`).
+
+All 31 course chapters now carry native diagram companions: the final seven (Photoelectric Effect, Atomic Structure, X-rays, Nuclear Physics, Semiconductors, Communication Systems, Special Relativity) add 97 scenes drawn from their existing DIAGRAM briefs. Rebuild with `python3 tools/build_excalidraw_remaining.py`; see `docs/excalidraw-retrofit-status.md`.
+
+Verify every diagram with `python3 tools/verify_all_diagrams.py` (31 chapters, 544 scenes, 0 problems expected) and regenerate any batch with its `tools/build_excalidraw_*.py` script; both are idempotent and covered by `python3 -m unittest discover -s tools -p 'test_*.py'`.

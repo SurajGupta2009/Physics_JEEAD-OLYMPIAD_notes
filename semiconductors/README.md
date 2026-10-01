@@ -1,5 +1,7 @@
 # Semiconductors & Electronic Devices — first principles to Olympiad
 
+> **Native diagram companions:** 18 editable Excalidraw scenes accompany the DIAGRAM briefs in `Semiconductors.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py semiconductors`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] Part 27 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** Bands and doping as the two ideas behind all of electronics: the thirty-order

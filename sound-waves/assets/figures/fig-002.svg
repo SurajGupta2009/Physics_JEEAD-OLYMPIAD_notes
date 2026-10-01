@@ -22,9 +22,9 @@
 <text x="120" y="115" class="sm">F = P A</text>
 <text x="525" y="115" class="sm">F+ dF</text>
 <!-- displacement -->
-<line x1="200" y1="220" x2="260" y2="220" stroke="#1f5fa8" stroke-width:1.5" marker-end="url(#ah)"/>
+<line x1="200" y1="220" x2="260" y2="220" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#ah)"/>
 <text x="210" y="240" class="sm">s(x,t)</text>
-<line x1="500" y1="220" x2="560" y2="220" stroke="#1f5fa8" stroke-width:1.5" marker-end="url(#ah)"/>
+<line x1="500" y1="220" x2="560" y2="220" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#ah)"/>
 <text x="510" y="240" class="sm">s+ (∂s/∂x)dx</text>
 <text x="60" y="280" class="lbl">Net force = -A ∂(ΔP)/∂x dx = A B ∂²s/∂x² dx</text>
 <text x="60" y="300" class="lbl">Newton: ρ A dx ∂²s/∂t² = A B ∂²s/∂x² dx → v = √(B/ρ)</text>

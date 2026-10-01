@@ -7,7 +7,7 @@
 <text x="10" y="18" class="lbl">Kundt's tube: standing waves in gas column, measurement of v_gas / v_rod</text>
 <rect x="100" y="80" width="500" height="60" class="tube"/>
 <text x="100" y="70" class="sm">glass tube with cork dust, closed at both ends</text>
-<line x1="100" y1="110" x2="600" y2="110" stroke="#1f5fa8" stroke-width:1" stroke-dasharray="3 2"/>
+<line x1="100" y1="110" x2="600" y2="110" stroke="#1f5fa8" stroke-width="1" stroke-dasharray="3 2"/>
 <circle cx="200" cy="110" r="3" fill="#222"/>
 <circle cx="300" cy="110" r="3" fill="#222"/>
 <circle cx="400" cy="110" r="3" fill="#222"/>

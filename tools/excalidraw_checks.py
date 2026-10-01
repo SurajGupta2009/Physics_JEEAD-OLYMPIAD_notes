@@ -140,3 +140,44 @@ def validate_excalidraw(root: Path, source: str,
                 check(scene == embed_scene,
                       f"{diagram_id}: figures.json scene path does not match its Markdown embed")
     return errors
+
+
+def validate_svg_companions(root: Path) -> list[str]:
+    """Fixed coverage/provenance for the additive legacy-SVG companion batches."""
+    specs = {"string-waves": ("String-waves.md", 14, 4),
+             "sound-waves": ("Sound-waves.md", 15, 15),
+             "thermodynamics": ("Thermodynamics.md", 16, 35),
+             "heat": ("Heat.md", 17, 25), "capacitors": ("Capacitors.md", 18, 32),
+             "current-electricity": ("Current-electricity.md", 19, 26),
+             "electromagnetic-waves": ("Electromagnetic-waves.md", 21, 7),
+             "geometrical-optics": ("Geometrical-optics.md", 22, 46),
+             "wave-optics": ("Wave-optics.md", 23, 28)}
+    name, part, count = specs[root.name]
+    source = (root / name).read_text(encoding="utf-8")
+    pairs = re.findall(r"> \[!abstract\] DIAGRAM D(\d+)\.(\d+) —", source)
+    errors = validate_excalidraw(root, source, pairs)
+    if sorted(pairs, key=lambda p: int(p[1])) != [(str(part), str(n)) for n in range(1, count + 1)]:
+        errors.append(f"expected unique D{part}.1–D{part}.{count} briefs")
+    import xml.etree.ElementTree as ET
+    manifest = json.loads((root / 'figures.json').read_text(encoding='utf-8'))
+    for n, drawing in enumerate(manifest.get('drawings', []), 1):
+        svg = f"assets/figures/fig-{n:03d}.svg"
+        if svg not in source or drawing.get('source') != f"{root.name}/{name} · {svg}":
+            errors.append(f"missing source SVG/provenance for {svg}")
+        try:
+            ET.parse(root / svg)
+        except (ET.ParseError, OSError) as exc:
+            errors.append(f"invalid source SVG {svg}: {exc}")
+        path = root.parent / drawing['file']
+        if path.is_file():
+            block = re.search(SCENE_BLOCK_PATTERN, path.read_text(encoding='utf-8'))
+            if block:
+                data = json.loads(block[1])
+                if data.get('files') or any(e['type'] == 'image' for e in data['elements']):
+                    errors.append(f"{path.name}: must contain editable primitives, not images")
+    return errors
+
+
+def validate_waves_thermal(root: Path) -> list[str]:
+    """Backward-compatible entry point for the previous batch."""
+    return validate_svg_companions(root)

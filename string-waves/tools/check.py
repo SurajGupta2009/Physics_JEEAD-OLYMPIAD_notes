@@ -76,6 +76,9 @@ def main() -> int:
     for _msg in mermaid_lint.lint(src):
         require(False, f"mermaid: {_msg}")
 
+    from tools.excalidraw_checks import validate_waves_thermal
+    errors.extend(validate_waves_thermal(ROOT))
+
     if errors:
         print('\n'.join(errors))
         return 1

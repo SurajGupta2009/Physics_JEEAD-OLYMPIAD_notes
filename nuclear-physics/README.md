@@ -1,5 +1,7 @@
 # Nuclear Structure, Radioactivity, Fission & Fusion — first principles to Olympiad
 
+> **Native diagram companions:** 16 editable Excalidraw scenes accompany the DIAGRAM briefs in `Nuclear-physics.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py nuclear-physics`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] Part 26 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** The nucleus as a saturated quantum liquid: sizes from $R\propto A^{1/3}$ and the

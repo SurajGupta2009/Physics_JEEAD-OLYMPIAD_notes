@@ -1,6 +1,8 @@
 # Thermodynamics — from basics to Olympiad
 
-> **Media note (kept at top).** `Thermodynamics.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 5 of the reading spine, `F5.1`–`F5.6`, numbered per `plan.md` Appendix A), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Thermodynamics.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 34 reviewed local SVGs and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
+> **Editable diagrams (2026-09-29):** 35 native Excalidraw companions (D16.1–D16.35) are embedded in the master Markdown beside the existing SVG figures. IDs continue the drawing series, not chapter numbering. Run `python3 tools/build_excalidraw_waves_thermal.py` from the repository root to regenerate; see [retrofit status](../docs/excalidraw-retrofit-status.md) for analytic corrections, validation and the pending live Obsidian check. Existing SVGs and Mermaid figures are retained.
+
+> **Media note (kept at top).** `Thermodynamics.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 5 of the reading spine, `F5.1`–`F5.6`, numbered per `plan.md` Appendix A), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Thermodynamics.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 35 local SVG assets and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
 
 > **Portable Markdown edition:** [Thermodynamics.md](Thermodynamics.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Thermodynamics.html](Thermodynamics.html) remains available for the interactive offline view and printing.
 
@@ -42,7 +44,7 @@ never prints). Collapsed, the eleven nodes are a revision outline; expanded, the
   checked; no answer is submitted before its check line.
 * **Questions interleaved with the theory**, each with a collapsible solution that explains the distractors,
   not just the right option.
-* **Diagrams over prose wherever geometry does the work** — 34 inline SVG figures: the tiling that proves
+* **Diagrams over prose wherever geometry does the work** — 35 local SVG figures: the tiling that proves
   entropy's exactness, the two skies of the hydrostatic equation, the isotherm loop with its Maxwell tie line.
 * **No external references.** Numbers in the worked examples are computed in-file; the constant shelf (ch 8 §3)
   is the only "look-up" allowed, and it is meant to be memorised.

@@ -35,6 +35,13 @@
 <h1 id="current-electricity-first-principles-to-olympiad">Current Electricity — first principles to Olympiad</h1>
 <p>A complete, proof-first treatment of current, resistance, cells, networks, instruments and the physics of real wires. Every formula here is <strong>derived from something you already accept</strong> — charge conservation, Newton's law plus collisions, energy accounting — and every place where a JEE or Olympiad examiner can catch you is marked explicitly. Two ideas do all the work: charge is a ledger, and every real device is a divider wearing a badge.</p>
 <p><img alt="A cell driving a lamp through two resistors, with the ledger and the divider annotated" src="../../current-electricity/assets/figures/fig-001.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.1 — A cell driving a lamp through two resistors, with the ledger and the divider annotated</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-001.svg</code>; retained.
+<strong>Read:</strong> A cell driving a lamp through two resistors, with the ledger and the divider annotated.</p>
+</div>
+
 <p><strong>The whole course in one picture.</strong> A source that pumps and taxes, resistances that divide, and a load that takes what the divider allows. Chapter 3 owns the pump, chapter 4 the network, chapter 5 the replacement of everything left of the lamp by two numbers — and the audit line at the bottom is the habit that turns solves into marks.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F8.1 · Chapter map: the ledger and the divider</p>
@@ -301,8 +308,22 @@ $$</p>
 <p>A circuit node is a small volume with no capacity to store charge — the metal and the junction are perfect conductors, so any attempt to accumulate charge there would build a field that instantly sweeps it away ($\tau$ of §1.4 is $10^{-14}$ s). So $\partial\rho/\partial t=0$ inside the node, the continuity equation gives $\vec\nabla\cdot\vec j=0$, and integrating over the node's surface leaves $\sum I_{\text{in}}=\sum I_{\text{out}}$: <strong>Kirchhoff's junction law is charge conservation, not a new law of nature</strong> (chapter 4 uses it as step one of every network solve).</p>
 </blockquote>
 <p><img alt="Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state" src="../../current-electricity/assets/figures/fig-002.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.2 — Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-002.svg</code>; retained.
+<strong>Read:</strong> Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state.</p>
+</div>
+
 <p><strong>Fig. 1.1 — Steady state means every cross-section passes the same current.</strong> If $I_2&gt;I_1$ the segment would pile up charge until its field corrected the flow; that correction time is $10^{-14}$ s, which is why series elements carry equal currents without exception.</p>
 <p><img alt="Same current density crossing a flat surface and a tilted surface: flux scales with cos theta" src="../../current-electricity/assets/figures/fig-003.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.3 — Same current density crossing a flat surface and a tilted surface: flux scales with cos theta</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-003.svg</code>; retained.
+<strong>Read:</strong> Same current density crossing a flat surface and a tilted surface: flux scales with cos theta.</p>
+</div>
+
 <p><strong>Fig. 1.2 — Current is the flux of $\vec j$, so tilt costs a factor of $\cos\theta$.</strong> The wires meeting at an angle in a junction do not add like vectors, yet each <em>surface</em> they cross feels $\vec j\cdot\hat n$ — the scalar flux view keeps both facts straight.</p>
 <h3 id="13-drift-what-the-electrons-are-actually-doing">1.3 Drift: what the electrons are actually doing</h3>
 <p>Put a field $\vec E$ along a copper wire. Each conduction electron feels $-e\vec E$, accelerates for a short time, collides with a lattice vibration or defect, loses its directed memory, and starts again. The net result is a slow systematic crawl — the <strong>drift velocity</strong> $\vec v_d$ — superimposed on a huge random thermal motion that transports no charge at all on average.</p>
@@ -311,6 +332,13 @@ $$</p>
 <p>$\vec v_d$ is the <strong>average</strong> velocity of the carriers, averaged over the enormous number inside any small volume. It is the only part of their motion that survives the average; the thermal part, $\sim10^{5}$–$10^{6}$ m s⁻¹, cancels because it points randomly in all directions.</p>
 </blockquote>
 <p><img alt="Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire" src="../../current-electricity/assets/figures/fig-004.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.4 — Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-004.svg</code>; retained.
+<strong>Read:</strong> Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire.</p>
+</div>
+
 <p><strong>Fig. 1.3 — One collision-rich trajectory and its mean.</strong> The instantaneous speed is set by temperature; the <em>displacement per second</em> is set by the field. Signal speed and carrier speed are different quantities — confusing them is the classic error this chapter exists to prevent.</p>
 <blockquote>
 <p><strong>The number that recalibrates your intuition</strong></p>
@@ -355,6 +383,13 @@ $$</p>
 <p>Mains at 50 Hz: the drift velocity itself oscillates with period 20 ms. With $I_0=5$ A in our 1 mm² wire, the drift amplitude is $v_{d,0}/\omega=3.7\times10^{-4}/314\approx1.2\ \mu$m. The electron cloud of your house wiring merely trembles by a micrometre, 50 times a second — while delivering kilowatt-hours through the field. Any exam question of the form "how far does an electron move in one AC cycle" is this two-line calculation.</p>
 </blockquote>
 <p><img alt="When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once" src="../../current-electricity/assets/figures/fig-005.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.5 — When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-005.svg</code>; retained.
+<strong>Read:</strong> When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once.</p>
+</div>
+
 <p><strong>Fig. 1.4 — What crosses the circuit at light speed is the instruction, not the carriers.</strong> All electrons between switch and lamp begin drifting together the moment the field reaches them; no electron needs to travel the route for the lamp to light.</p>
 <h3 id="16-questions">1.6 Questions</h3>
 <h3 id="q1-a-current-of-48-a-flows-in-a-silver-wire-how-many-electrons-cross-a-given-cross-section-each-second-and-does-the-answer-change-if-the-wire-is-thicker-jee-main"><strong>Q1</strong> A current of 4.8 A flows in a silver wire. How many electrons cross a given cross-section each second, and does the answer change if the wire is thicker? <em>(JEE main)</em></h3>
@@ -473,8 +508,21 @@ R=\frac{\rho}{4\pi}\int_a^b\frac{dr}{r^{2}}=\frac{\rho}{4\pi}\left(\frac{1}{a}-\
 $$</p>
 <p><strong>Check:</strong> as $b\to\infty$, $R\to\rho/4\pi a$ — the resistance of one small sphere dumping current into an infinite medium: finite, because the current spreads through ever-larger areas faster than $1/r^{2}$ resistance accumulates. This limit is the earthing-electrode result, and it reappears in Q4.</p>
 <p><img alt="Radial current between concentric spheres, with the slice used in the integral highlighted" src="../../current-electricity/assets/figures/fig-006.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.6 — Radial current between concentric spheres, with the slice used in the integral highlighted</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-006.svg</code>; retained.
+<strong>Read:</strong> Radial current between concentric spheres, with the slice used in the integral highlighted.</p>
+</div>
 <p><strong>Fig. 2.1 — Slicing along the flow lines makes a hard geometry into a one-line integral.</strong> The area multiplying $dr$ is the area of the equipotential surface; naming that surface is the whole method.</p>
 <p><img alt="A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add" src="../../current-electricity/assets/figures/fig-007.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.7 — A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-007.svg</code>; retained.
+<strong>Read:</strong> A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add.</p>
+</div>
+
 <p><strong>Fig. 2.2 — Tapered bar: the answer is the geometric-mean area.</strong> Adding $dR=\rho\,dx/\pi r(x)^{2}$ weights the thin slices most; the closed form $\rho l/\pi ab$ is the exact result of that weighting, and the arithmetic-mean guess is simply wrong.</p>
 <h3 id="23-temperature-two-materials-two-reasons">2.3 Temperature: two materials, two reasons</h3>
 <p>Chapter 1 delivered $\sigma=ne^{2}\tau/m$. Every temperature effect on conductivity is a story about the two factors on the right — and metals and semiconductors tell <strong>opposite stories</strong>:</p>
@@ -491,6 +539,13 @@ $$</p>
 <p>The exam question hiding inside: <strong>same sign of response, opposite signs of cause</strong>. A metal's resistance rises because carriers collide <em>more</em>; a semiconductor's falls because carriers exist <em>more</em>. Quote the mechanism, not the sign, and you cannot be tricked by a "both increase over some range" option — alloys like manganin are engineered to sit near $\alpha\approx0$ ($\sim2\times10^{-5}\ \text{K}^{-1}$: 0.2% per 100 K), which is why standard resistors are wound from them.</p>
 </blockquote>
 <p><img alt="Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled" src="../../current-electricity/assets/figures/fig-008.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.8 — Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-008.svg</code>; retained.
+<strong>Read:</strong> Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled.</p>
+</div>
+
 <p><strong>Fig. 2.3 — The two conductivities part company with increasing temperature.</strong> The metal's line is the failure of memory ($\tau$); the semiconductor's dive is the birth of carriers ($n$). A thermometer uses the left curve, a thermistor the right.</p>
 <h3 id="24-when-ohms-law-fails-the-non-ohmic-three">2.4 When Ohm's law fails: the non-ohmic three</h3>
 <p>Ohm's law is the <strong>claim</strong> that $V/I$ stays constant as $V$ varies. Three devices on every syllabus refute it, each for a distinct reason:</p>
@@ -503,6 +558,13 @@ $$</p>
 <p>Conducts only when forward-biased beyond $\sim0.7$ V (Si); below that, essentially no current; reversed, nanoamps. The $I$–$V$ curve is the steepest nonlinearity in your syllabus, and the reason circuit problems with diodes are solved <strong>piecewise</strong>: decide first which way the diode faces, guess on/off, solve, and <em>check the guess against the resulting current sign</em> (worked example 7.1 does this in full).</p>
 </blockquote>
 <p><img alt="Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode" src="../../current-electricity/assets/figures/fig-009.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.9 — Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-009.svg</code>; retained.
+<strong>Read:</strong> Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode.</p>
+</div>
+
 <p><strong>Fig. 2.4 — One graph, four signatures.</strong> Straight through the origin: linear. Bending below the chord: self-heating resistor. Bending above: thermistor. Flat then vertical: diode. Name the mechanism and the device is identified from the curve shape alone — a recurring JEE question format.</p>
 <h3 id="25-questions">2.5 Questions</h3>
 <h3 id="q1-a-wire-of-resistance-r-is-uniformly-stretched-to-twice-its-length-volume-conserved-find-the-new-resistance-jee-main"><strong>Q1</strong> A wire of resistance $R$ is uniformly stretched to twice its length (volume conserved). Find the new resistance. <em>(JEE main)</em></h3>
@@ -615,12 +677,26 @@ $$</p>
 I=\frac{\mathcal E}{R+r},\qquad V_{\text{term}}=\mathcal E-Ir\quad\text{(discharging)},\qquad V_{\text{term}}=\mathcal E+Ir\quad\text{(charging)} \tag{3.2}
 $$</p>
 <p><img alt="A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R" src="../../current-electricity/assets/figures/fig-010.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.10 — A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-010.svg</code>; retained.
+<strong>Read:</strong> A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R.</p>
+</div>
+
 <p><strong>Fig. 3.1 — The cell is a pump in series with a resistor you cannot remove.</strong> The dashed box is the physical cell: chemistry (the ladder $\mathcal E$) plus electrolyte resistance ($r$). Only the terminals are sold to you.</p>
 <blockquote>
 <p><strong>The trap in this section</strong></p>
 <p>Reading "a 12 V battery" as "the voltmeter will say 12 V". The reply: the voltmeter reads the <strong>terminal voltage</strong> $\mathcal E-Ir$ whenever the battery delivers current. A starter motor drawing 200 A from a 12 V battery with $r=0.01\ \Omega$ sees only $12-200\times0.01=10$ V — the sag you hear in a car's cranking whine. And the sign flips on charge: a battery being charged sits at <strong>more</strong> than its EMF ($\mathcal E+Ir$). Terminal voltage above EMF ⇒ the cell is being charged; below ⇒ discharging; equal ⇒ open circuit.</p>
 </blockquote>
 <p><img alt="Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r" src="../../current-electricity/assets/figures/fig-011.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.11 — Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-011.svg</code>; retained.
+<strong>Read:</strong> Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r.</p>
+</div>
+
 <p><strong>Fig. 3.2 — The load line of a cell carries its entire specification.</strong> Intercept at $I=0$: EMF. Intercept at $V=0$: short-circuit current $\mathcal E/r$. Slope: $-r$. Given any two, the third follows — and reading intercepts off a drawn line is a complete JEE question.</p>
 <h3 id="33-grouping-cells-series-parallel-mixed">3.3 Grouping cells: series, parallel, mixed</h3>
 <p><strong>Series (n cells):</strong> EMFs add, resistances add: $\mathcal E_{\text{eq}}=n\mathcal E$, $r_{\text{eq}}=nr$. Current through a load $R$: $I=n\mathcal E/(R+nr)$.</p>
@@ -694,8 +770,22 @@ $$</p>
 <p><strong>The two conversions examiners use.</strong> (i) A 100 W lamp for 10 h uses $0.1\times10=1$ kWh — at ₹8 a unit that is ₹8, while the same energy as joules is 3.6 MJ. (ii) $P=I^{2}R$ is <em>always</em> the power in a resistor, but $P=V^{2}/R$ is only correct when $V$ is the voltage <strong>across that same resistor</strong>; writing $P=V_{\text{supply}}^{2}/R$ for two resistors in series is the standard error. The companion trap is the <strong>rated-power trap</strong>: a "60 W, 220 V" bulb has $R=V^{2}/P=807\ \Omega$ <em>at its rated temperature</em>. Put it in series with another bulb and it no longer receives 220 V, so it no longer dissipates 60 W — compute the new current first, then $I^{2}R$. (Its cold resistance is several times smaller still, which is why bulbs fail at switch-on.)</p>
 </blockquote>
 <p><img alt="Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends" src="../../current-electricity/assets/figures/fig-012.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.12 — Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-012.svg</code>; retained.
+<strong>Read:</strong> Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends.</p>
+</div>
+
 <p><strong>Fig. 3.3 — The power hill has one summit and two cliffs.</strong> Both $R=0$ (everything burns inside) and $R\to\infty$ (nothing flows) deliver zero useful power; the symmetric peak sits at $R=r$, where the split is exactly even. The curve's symmetry about $R=r$ is exact — check it at $R=2r$ and $R=r/2$.</p>
 <p><img alt="Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat" src="../../current-electricity/assets/figures/fig-013.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.13 — Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-013.svg</code>; retained.
+<strong>Read:</strong> Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat.</p>
+</div>
+
 <p><strong>Fig. 3.4 — The audit is the same width; only the split moves.</strong> At $R=r$ the load takes the largest slice it can ever take, but half the chemistry is burned in the cell. Efficiency and delivered power are different maximisations — quote both, always.</p>
 <h3 id="35-questions">3.5 Questions</h3>
 <h3 id="q1-a-battery-of-emf-12-v-and-internal-resistance-001-omega-is-short-circuited-by-a-thick-copper-bar-of-negligible-resistance-what-is-the-current-and-why-does-the-cable-not-the-battery-usually-melt-first-in-real-jump-start-accidents-jee-main-estimation"><strong>Q1</strong> A battery of EMF 12 V and internal resistance 0.01 $\Omega$ is short-circuited by a thick copper bar of negligible resistance. What is the current, and why does the cable, not the battery, usually melt first in real jump-start accidents? <em>(JEE main · estimation)</em></h3>
@@ -806,6 +896,13 @@ $$</p>
 <p>The laws cannot fail; your bookkeeping can. The convention that never fails: <strong>(1)</strong> assign a direction to every unknown current — any direction, a guess you are allowed to get wrong; <strong>(2)</strong> traverse each loop in one fixed sense; <strong>(3)</strong> write $+IR$ if you cross the resistor along the current's arrow, $-IR$ against it; $+\mathcal E$ if you cross the cell from − to + (the pump lifts you), $-\mathcal E$ otherwise; <strong>(4)</strong> a negative answer means the current flows opposite to your guess — <strong>it is a result, not an error</strong>. Consistency, not clairvoyance, is what KCL/KVL demand. Redraw Fig. 4.1 in your head until assigning signs feels mechanical; every wrong answer in this chapter's problems traces to skipping step 1.</p>
 </blockquote>
 <p><img alt="A two-loop circuit with three branch currents assigned and two loop directions chosen" src="../../current-electricity/assets/figures/fig-014.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.14 — A two-loop circuit with three branch currents assigned and two loop directions chosen</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-014.svg</code>; retained.
+<strong>Read:</strong> A two-loop circuit with three branch currents assigned and two loop directions chosen.</p>
+</div>
+
 <p><strong>Fig. 4.1 — The setup that cannot go wrong.</strong> Three branch currents guessed (one already fixed by KCL), two loop senses chosen: two unknowns, two independent loops, done. The guessed directions are disposable — the solved signs are not.</p>
 <h3 id="worked-example-41-a-full-two-loop-solve-audited">Worked example 4.1 · A full two-loop solve, audited</h3>
 <p>Circuit: a 12 V battery with $R_1=2\ \Omega$ in series with a parallel pair $R_2=6\ \Omega$, $R_3=3\ \Omega$ (both batteries ideal). <strong>Plan:</strong> reduce the parallel pair, but keep the branch currents for the audit. <strong>Do:</strong> $R_{23}=6\times3/9=2\ \Omega$; $I=12/(2+2)=3$ A; $V_{23}=3\times2=6$ V; $I_2=6/6=1$ A, $I_3=6/3=2$ A (KCL: $1+2=3$ ✓). <strong>Check (the power audit):</strong> source $12\times3=36$ W; spent: $3^{2}\times2=18$, $1^{2}\times6=6$, $2^{2}\times3=12$; $18+6+12=36$ ✓. <strong>Never hand in a network answer without the audit line</strong> — it costs ten seconds and catches every sign slip.</p>
@@ -858,6 +955,13 @@ $$</p>
 <p>The same symmetry-planes argument with <strong>edge</strong> endpoints gives $7R/12$, and with <strong>face-diagonal</strong> endpoints gives $3R/4$ (Q3 walks you through the face-diagonal case). Q7 shows the power of the converse: when the endpoints are chosen so two nodes are provably equal in potential, the resistor between them may be <strong>removed with no effect at all</strong>.</p>
 </blockquote>
 <p><img alt="Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked" src="../../current-electricity/assets/figures/fig-015.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.15 — Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-015.svg</code>; retained.
+<strong>Read:</strong> Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked.</p>
+</div>
+
 <p><strong>Fig. 4.2 — Symmetry sorts the twelve edges into three current classes.</strong> Everything flows from naming the equipotential planes perpendicular to the body diagonal; no simultaneous equations are ever written.</p>
 <blockquote>
 <p><strong>Why the balanced bridge carries no galvanometer current</strong></p>
@@ -868,6 +972,13 @@ $$</p>
 <p>The logic runs both ways: if the ratios match, $B$ and $D$ are at equal potential <em>however</em> you feed the bridge, so the detector branch may be deleted (or any resistance inserted there — Q7). This is why the null method is king of precision measurement (chapter 6): at balance the detector's own imperfections are irrelevant, because no current through it exists to be wrong about.</p>
 </blockquote>
 <p><img alt="Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4" src="../../current-electricity/assets/figures/fig-016.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.16 — Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-016.svg</code>; retained.
+<strong>Read:</strong> Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4.</p>
+</div>
+
 <p><strong>Fig. 4.3 — The bridge and its licence.</strong> At balance the detector diagonal is electrically dead: delete it or replace it with a wire, and every other current in the network is unchanged.</p>
 <h3 id="44-the-unbalanced-bridge-the-honest-calculation">4.4 The unbalanced bridge: the honest calculation</h3>
 <p>Off balance, the bridge is just a two-loop network; solve it by nodes (or, faster, by Thevenin — chapter 5 re-derives the same numbers in three lines). The important skill is knowing <strong>which side wins</strong> before computing:</p>
@@ -977,6 +1088,13 @@ $$</p>
 <p><strong>Exactly half of the energy is lost, whatever the resistance.</strong> Make $R$ smaller and the process is faster but not cheaper: the current is larger for a shorter time, and the integral is identical. (The same result appears in the capacitors note-set as the two-capacitor paradox — charging one capacitor from another instead of from a cell loses half the energy too, and the resolution is the same: the integral of $i^{2}R$ does not care how the current is spread in time.) A capacitor charged this way can be called a "half-efficiency" store, which is why charging circuits for pulsed-power systems use switched inductors or resonant transfer rather than a plain resistor.</p>
 </blockquote>
 <p><img alt="Charging curves: capacitor voltage rising and current falling, both with time constant tau marked" src="../../current-electricity/assets/figures/fig-017.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.17 — Charging curves: capacitor voltage rising and current falling, both with time constant tau marked</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-017.svg</code>; retained.
+<strong>Read:</strong> Charging curves: capacitor voltage rising and current falling, both with time constant tau marked.</p>
+</div>
+
 <p><strong>Fig. 4.4 — The two curves of a single time constant.</strong> The capacitor voltage climbs toward the cell's emf and the current decays toward zero; both are drawn for the same $\tau=RC$. The tangent at $t=0$ on the current curve reaches zero at $t=\tau$, which is the geometric definition of a time constant: <em>the time the initial rate of change would need if it never slowed</em>. Marks at 63% and 99.3% are the ones to quote in an answer.</p>
 <h3 id="worked-example-43-a-complete-charging-cycle">Worked example 4.3 · A complete charging cycle</h3>
 <p>A $2\ \text{V}$ cell charges a $1\ \mu\text{F}$ capacitor through a $1\ \text{M}\Omega$ resistor. Find $\tau$, the charge at $t=\tau$ and at $t=5\tau$, the total energy the cell delivers, and how much of it the resistor burns.</p>
@@ -1069,11 +1187,23 @@ $$</p>
 <p>An ideal voltage source holds its terminal difference at $\mathcal E$ <em>whatever</em> the current. Setting $\mathcal E=0$ leaves "whatever the current, no difference" — a conductor. An ideal current source holds its current whatever the voltage; setting it to zero leaves "no current whatever the voltage" — a break. Real sources keep their $r$: that is the whole content of the cell model of ch 3, and it is why the Thevenin resistance of a battery network is computed with $r$ left in place. This one sentence is the most-fumbled instruction in JEE problem solving.</p>
 </blockquote>
 <p><img alt="A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance" src="../../current-electricity/assets/figures/fig-018.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.18 — A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-018.svg</code>; retained.
+<strong>Read:</strong> A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance.</p>
+</div>
 <p><strong>Fig. 5.1 — The Thevenin contract.</strong> Two measurements (open-circuit voltage, killed-source resistance) buy a one-source model of any linear network. The arrow is the only place loads may be attached.</p>
 <h3 id="worked-example-52-the-bridge-redone-in-three-lines">Worked example 5.2 · The bridge, redone in three lines</h3>
 <p>The bridge of worked example 4.2 (arms 10, 20, 30, 40 $\Omega$, 10 V battery, detector across the midpoints). <strong>Do:</strong> remove the 50 $\Omega$ detector. Open-circuit voltage: $V_B=10\times20/30=6.667$, $V_D=10\times40/70=5.714$, so $V_{th}=0.952$ V. Kill the battery (replace by wire): from the detector's seat, $R_{th}=10\parallel20+30\parallel40=6.667+17.143=23.81\ \Omega$. Then $I=0.952/(23.81+50)=12.9$ mA ✓ — the same 12.9 mA as the two-equation nodal slog, in three lines. <strong>Check:</strong> short the detector: $I_{sc}=V_{th}/R_{th}=0.952/23.81=40.0$ mA — larger than 12.9 mA, as any load current must be smaller than its own short-circuit value ✓.</p>
 <h3 id="53-norton-and-source-transformation">5.3 Norton and source transformation</h3>
 <p><img alt="Thevenin and Norton equivalents side by side, with the conversion formulas between them" src="../../current-electricity/assets/figures/fig-019.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.19 — Thevenin and Norton equivalents side by side, with the conversion formulas between them</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-019.svg</code>; retained.
+<strong>Read:</strong> Thevenin and Norton equivalents side by side, with the conversion formulas between them.</p>
+</div>
 <p><strong>Fig. 5.2 — Two black boxes, one behaviour.</strong> Source transformation is just these two equations read backwards: a Thevenin pair becomes a Norton pair with $R$ unchanged. The load cannot tell which it is wired to.</p>
 <blockquote>
 <p><strong>The trap in this section</strong></p>
@@ -1089,6 +1219,12 @@ $$</p>
 <p><strong>Validity:</strong> $V_{th},R_{th}$ fixed, $R_L$ varied. This is ch 3's $R=r$ result — the cell was already a Thevenin source. Two warnings worth marks: (i) at the matched point the source burns as much inside as it delivers — power stations and audio amplifiers driving speakers do <strong>not</strong> match, they maximise $\eta$; matching is for signals, where the watts are microwatts and the information is the cargo. (ii) If the problem fixes $R_L$ and lets the <em>source</em> change, there is no interior maximum at all.</p>
 </blockquote>
 <p><img alt="Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency" src="../../current-electricity/assets/figures/fig-020.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.20 — Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-020.svg</code>; retained.
+<strong>Read:</strong> Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency.</p>
+</div>
 <p><strong>Fig. 5.3 — The power hill again, now for any network.</strong> To the left of the summit the load is current-limited; to the right it is voltage-starved. Every "find $R_L$ for maximum power" question is a Thevenin question in disguise: reduce, then match.</p>
 <h3 id="worked-example-53-maximum-power-from-the-bridge">Worked example 5.3 · Maximum power from the bridge</h3>
 <p>Replace the bridge's detector by a variable $R_L$. Thevenin at the detector terminals: $V_{th}=0.952$ V, $R_{th}=23.81\ \Omega$. Maximum power at $R_L=23.81\ \Omega$: $P_{\max}=0.952^{2}/(4\times23.81)=0.907/95.24=9.52$ mW. <strong>Check:</strong> at $R_L=2R_{th}=47.62\ \Omega$, $P=V_{th}^{2}R_L/(R_L+R_{th})^{2}=0.907\times47.62/71.43^{2}=43.2/5102=8.47$ mW — 8/9 of the maximum, the exact ratio the quadratic predicts ✓.</p>
@@ -1196,6 +1332,12 @@ $$</p>
 <p>The same 1 mA, 100 $\Omega$ movement becomes a 10 V meter with $R_m=9900\ \Omega$ — and its 1000 $\Omega$/V rating is the <strong>only</strong> number a practicing engineer needs: on any range, resistance = rating × full-scale volts.</p>
 </blockquote>
 <p><img alt="Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier" src="../../current-electricity/assets/figures/fig-021.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.21 — Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-021.svg</code>; retained.
+<strong>Read:</strong> Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier.</p>
+</div>
 <p><strong>Fig. 6.1 — One movement, two instruments, opposite strategies.</strong> The ammeter hides inside a tiny resistance; the voltmeter hides behind a huge one. Both conversions are exact applications of "same voltage" / "same current" — chapter 4's two dividers with purpose.</p>
 <h3 id="62-the-loading-error-every-meter-lies-a-little">6.2 The loading error: every meter lies a little</h3>
 <blockquote>
@@ -1220,6 +1362,12 @@ $$</p>
 <p>A bridge answers only if the current actually flows the way you are assuming, so run these four checks in order before reading a number. (i) <strong>Continuity both ways:</strong> touch the jockey at the two ends of the wire and confirm the galvanometer deflects in <em>opposite</em> senses — if it deflects the same way at both ends, one end connection (or the galvanometer's own terminal) is open or crossed. (ii) <strong>A balance point exists inside 0–100 cm:</strong> if the null is only found off the wire, the ratio $R/S$ is outside what the bridge can span — swap the resistors rather than hunting. (iii) <strong>Deflection reverses about the null:</strong> moving the jockey 1 cm either side of balance must send the galvanometer the two ways; if it does not, the galvanometer branch is missing its key or is shorted. (iv) <strong>Check the copper strips:</strong> the thick end strips, not the wire, carry the gap currents — a loose screw in a gap is the commonest cause of a "dead" bridge, and the reason the null moves when you press the plug.</p>
 </blockquote>
 <p><img alt="Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key" src="../../current-electricity/assets/figures/fig-022.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.22 — Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-022.svg</code>; retained.
+<strong>Read:</strong> Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key.</p>
+</div>
 <p><strong>Fig. 6.2 — The meter bridge is a Wheatstone bridge whose two arms are one piece of wire.</strong> Length is the cheapest precision ratio ever manufactured: a good wire gives parts-in-10⁴, which no dial instrument of the era could touch.</p>
 <h3 id="64-the-potentiometer-measurement-without-theft">6.4 The potentiometer: measurement without theft</h3>
 <blockquote>
@@ -1231,10 +1379,16 @@ $$</p>
 <p>the second formula: with resistance $R$ shunting the cell, its terminal voltage (now carrying current) balances at $l&lt;l_0$, and $\mathcal E/(\mathcal E-Ir)=l_0/l$ rearranges to the printed result.</p>
 </blockquote>
 <p><img alt="Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer" src="../../current-electricity/assets/figures/fig-023.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.23 — Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-023.svg</code>; retained.
+<strong>Read:</strong> Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer.</p>
+</div>
 <p><strong>Fig. 6.3 — Two EMFs opposed, one galvanometer, zero stolen current.</strong> The instrument chain — chapter 4's balance, chapter 5's null philosophy — made physical. It measures EMF, not terminal voltage, because it never lets the cell deliver a thing.</p>
 <h3 id="65-questions">6.5 Questions</h3>
 <h3 id="q1-a-galvanometer-of-resistance-100-omega-gives-full-scale-deflection-at-1-ma-convert-it-to-i-a-01-a-ammeter-and-ii-a-010-v-voltmeter-in-each-case-compute-the-added-resistance-and-the-power-it-must-safely-dissipate-at-full-scale-jee-main"><strong>Q1</strong> A galvanometer of resistance 100 $\Omega$ gives full-scale deflection at 1 mA. Convert it to (i) a 0–1 A ammeter and (ii) a 0–10 V voltmeter. In each case compute the added resistance and the power it must safely dissipate at full scale. <em>(JEE main)</em></h3>
-<details markdown=1>
+<details>
 <summary>Solution</summary>
 <p><strong>(i)</strong> $n=1000$: $S=G/(n-1)=100/999=0.1001\ \Omega$. Shunt power at full scale: the shunt carries 0.999 A, so $P_S=0.999^{2}\times0.1001=0.0999\approx0.1$ W (the coil itself takes only $10^{-6}\times100=0.1$ mW — the shunt is the thermal part).</p>
 <p><strong>(ii)</strong> $R_m=V/I_g-G=10/0.001-100=9900\ \Omega$. Multiplier power: $I_g^{2}R_m=9.9$ mW plus coil 0.1 mW.</p>
@@ -1326,6 +1480,12 @@ $$</p>
 <p>Numbers to own: $P=100$ kW over $R_{line}=10\ \Omega$. At 200 V: $I=500$ A and the line burns $2.5$ <strong>MW</strong> — 25 times the delivered power: the scheme is impossible, not merely inefficient. At 20 kV: $I=5$ A, loss 250 W — <strong>0.25%</strong>. Ten thousand-fold reduction for a hundred-fold voltage step; that arithmetic, not corporate conspiracy, is why pylons exist.</p>
 </blockquote>
 <p><img alt="The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale" src="../../current-electricity/assets/figures/fig-024.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.24 — The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-024.svg</code>; retained.
+<strong>Read:</strong> The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale.</p>
+</div>
 <p><strong>Fig. 7.1 — Two transmission plans, drawn honestly.</strong> The 200 V plan cannot even be drawn: its loss bar is 25 times its delivery bar. The 20 kV plan's loss is invisible at this scale — 0.25%.</p>
 <h3 id="73-thermoelectricity-seebeck-with-two-temperatures">7.3 Thermoelectricity: Seebeck, with two temperatures</h3>
 <blockquote>
@@ -1349,6 +1509,12 @@ $$</p>
 <p>A thermistor obeys roughly $R(T)=R_0e^{\beta(1/T-1/T_0)}$ with $\beta\approx3000$–4000 K — ch 2's carrier explosion in one constant. Feed it and it heats <em>itself</em>: electrical power in must equal $\delta(T-T_{amb})$ out (dissipation constant $\delta\sim$ mW/K in still air). The operating point is the intersection of the device's $I(V)$ curve with the thermal load line $P=\delta\Delta T$. Below the intersection the curve is ohmic; above it, warming lowers $R$, raises $I$, warms further — <strong>negative resistance territory</strong>, and the crossing can be unstable (a run-away Q5 examines numerically). This is the same fixed-point thinking as ch 4's infinite ladder, wearing thermal clothes.</p>
 </blockquote>
 <p><img alt="Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak" src="../../current-electricity/assets/figures/fig-025.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.25 — Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-025.svg</code>; retained.
+<strong>Read:</strong> Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak.</p>
+</div>
 <p><strong>Fig. 7.2 — An NTC thermistor's $I$–$V$ curve and the thermal load line.</strong> Left of the peak the device behaves; the descending branch is negative differential resistance sustained by self-heating. Circuit designs live on the rising branch on purpose.</p>
 <h3 id="75-superconductors-the-ledger-with-no-tax">7.5 Superconductors: the ledger with no tax</h3>
 <blockquote>
@@ -1505,13 +1671,18 @@ $$</p>
 </tbody>
 </table>
 <p><img alt="Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method" src="../../current-electricity/assets/figures/fig-026.svg" /></p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D19.26 — Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method</p>
+<p><strong>Show:</strong> Editable companion; analytic curve corrections are described in the retrofit status.
+<strong>Source:</strong> <code>current-electricity/assets/figures/fig-026.svg</code>; retained.
+<strong>Read:</strong> Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method.</p>
+</div>
 <p><strong>Fig. 8.1 — The triage flow.</strong> Classification is the solution's first third; the audit line is its last third. The middle is arithmetic.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F8.6 · Triage: which problem kind, which move</p>
 <p><em>Why:</em> classifying in twenty seconds and reading the right row of the §8.1 table decides the method; the flow is the chapter's fastest route to a start.
 <em>Data:</em> drift → I = n e A v_d; geometry → R = ∫ρ dl/A; cell → V = ℰ ∓ Ir; two loops → KCL+KVL then audit; symmetry → equal potentials; meter → one divider; null → balance length.</p>
 </div>
-
 <pre><code class="language-mermaid">flowchart TD
   A[&quot;twenty seconds: name the problem kind&quot;] --&gt; B[&quot;ledger? geometry? source? network?&quot;]
   B --&gt; C[&quot;pick the row of the §8.1 table&quot;]
@@ -2375,6 +2546,7 @@ $$</p>
 </tbody>
 </table>
 <p>Back to: <a href="#section-index"><strong>the course map</strong></a> · the <a href="#section-09-olympiad-paper"><strong>paper</strong></a></p>
+</details>
     <footer class="pager"><a href="capacitors.html">← Capacitors</a><a href="geometrical-optics.html">Geometrical optics →</a></footer>
     <p class="colophon">Rendered from <code>current-electricity/Current-electricity.md</code> by <code>tools/md_site.py</code>.
     Fully offline: diagrams are local SVGs, maths is vendored KaTeX.

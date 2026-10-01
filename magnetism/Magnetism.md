@@ -266,6 +266,8 @@ There are no magnetic charges. Every attempt to isolate a single magnetic pole �
 > *Show:* a straight wire above a compass, needle aligned north–south with no current; the same with current flowing, the needle swung across the wire; a third panel with the current reversed and the needle swung the other way; concentric circles of $\mathbf B$ drawn around the wire with the grip rule's hand.
 > *Search:* "oersted experiment compass needle deflection current carrying wire diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-1.excalidraw|900]]
+
 > [!abstract] Numbers to keep — how strong is a wire's field
 > A wire carrying $10$ A produces, $1$ cm away, $B=\mu_0I/2\pi r=2\times10^{-7}\times10/0.01=2\times10^{-4}$ T — four times the Earth's field, which is why Oersted's needle swung hard. At $1$ m the same wire gives $2\ \mu$T, a twentieth of the Earth's: household wiring does not disturb a compass unless you hold it against the cable.
 
@@ -291,6 +293,8 @@ Units: $[B]=$ N/(C m s$^{-1}$) $=$ N A$^{-1}$ m$^{-1}$ $=$ tesla. The size of th
 > [!abstract] DIAGRAM D16.2 · The right-hand rule three ways
 > *Show:* (a) the flat hand: fingers along $\mathbf v$, curling towards $\mathbf B$, thumb along $\mathbf v\times\mathbf B$, with the caption "then apply the sign of $q$"; (b) the grip rule for a wire: thumb along $I$, fingers along $\mathbf B$; (c) the cross-product parallelogram with $\mathbf v$, $\mathbf B$ and $\mathbf v\times\mathbf B$ as three mutually perpendicular arrows; each panel with $\odot$/$\otimes$ notation shown beside it.
 > *Search:* "right hand rule lorentz force grip rule cross product three panels"
+
+![[../_obsidian/excalidraw/magnetism-D16-2.excalidraw|900]]
 
 > [!danger] Trap — "the force changes the speed"
 > $F=qvB\sin\theta$ has a $v$ in it, so students let it accelerate the particle along its motion. It cannot: it is always sideways. What the $v$ in the formula does is set the *radius of curvature*; the speed is a constant of the motion. If a question asks for the change in kinetic energy of a charge in a pure magnetic field, the answer is zero before any calculation.
@@ -322,6 +326,8 @@ Which plane does it circle in: always the plane perpendicular to $\mathbf B$, wh
 > *Show:* left, a circular orbit seen along $\mathbf B$ ($\odot$ out of the page) with $\mathbf v$ tangent and $\mathbf F$ towards the centre at four points, a positive charge going clockwise and, dashed, a negative one going anticlockwise; right, a helix about a field line with the pitch $p=v_\parallel T$ marked, $v_\parallel$ and $v_\perp$ resolved at the entry point, and the entry angle $\theta$ to $\mathbf B$.
 > *Search:* "charged particle circular motion magnetic field helix pitch entry angle diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-3.excalidraw|900]]
+
 ### 3.4 Combined fields: parallel, crossed, and the velocity selector
 
 **$\mathbf E\parallel\mathbf B$.** The electric force accelerates the charge along the common direction; the magnetic force acts only on the perpendicular velocity, which it turns in a circle of unchanging radius. The path is a helix whose pitch grows (or shrinks) as $v_\parallel$ changes under $qE$: a screw with a stretching thread. No trickery of directions is needed — the two fields simply do not talk to each other in this configuration.
@@ -337,6 +343,8 @@ A particle with exactly this speed passes undeflected, of either sign and any ma
 > [!abstract] DIAGRAM D16.4 · The velocity selector
 > *Show:* two plates with $\mathbf E$ between them (down), a magnetic field into the page ($\otimes$) filling the same region, a positive charge moving right with $q\mathbf E$ drawn down and $q\mathbf v\times\mathbf B$ drawn up; three paths: the undeflected one at $v=E/B$, a slower one curving towards the electric side, a faster one curving the other way; a slit at the exit.
 > *Search:* "velocity selector crossed electric magnetic fields undeflected path faster slower particles"
+
+![[../_obsidian/excalidraw/magnetism-D16-4.excalidraw|900]]
 
 > [!info] Why the selector does not care about the sign or the mass
 > Both forces are proportional to $q$, so the balance condition has no $q$ in it; neither force involves $m$, so neither does the condition. That is exactly what makes the selector useful in front of a mass spectrometer (§3.6): it hands over particles of one speed, and the spectrometer's radius then measures $m/q$ cleanly.
@@ -355,6 +363,8 @@ Most "particle in a field" problems have the field in a bounded region and the p
 > [!abstract] DIAGRAM D16.5 · The three-region protocol
 > *Show:* a field strip with $\otimes$ marks; entry point, the perpendicular to $\mathbf v$ with the centre at distance $r$; the arc to the exit point on the far boundary with the turned angle $\varphi$ and the tangent (exit direction) drawn; below, the $r<d$ case with the semicircle back out; a third panel with a circular field region entered radially and the exit radial too.
 > *Search:* "charged particle enters magnetic field region arc exit angle time inside geometry"
+
+![[../_obsidian/excalidraw/magnetism-D16-5.excalidraw|900]]
 
 ### 3.6 The mass spectrometer
 
@@ -394,6 +404,8 @@ The energy depends on $B$ and $R$, *not* on $V_0$: a smaller voltage only means 
 > *Show:* two dees seen from above with the gap between them, the field $\odot$ throughout, the ion's spiral of semicircles growing outward and the deflector at the rim; beneath it a timing strip showing the gap voltage alternating and the ion's gap crossings landing on the same phase every half-period.
 > *Search:* "cyclotron dees spiral path gap voltage resonance timing diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-6.excalidraw|900]]
+
 ### 3.8 Helices in a converging field: the magnetic mirror
 
 A charge spiralling along a field line that *converges* (the field grows along the line) is slowed along the line and eventually reflected. The mechanism is in $\nabla\cdot\mathbf B=0$: where $B_z$ increases with $z$ near an axis, the field lines bend inward and there is a small radial component $B_r=-\tfrac r2\,\partial B_z/\partial z$ (integrate $\nabla\cdot\mathbf B=0$ over a thin disc of radius $r$: $2\pi rB_r\,dz+\pi r^2\,dB_z=0$). The azimuthal velocity $v_\perp$ crossed with this $B_r$ gives a force *along* the axis,
@@ -420,6 +432,8 @@ The velocities that escape fill a cone about the field direction — the **loss 
 > *Show:* field lines converging into a throat on the right; a helical path whose radius shrinks and whose pitch closes up as it approaches, reflecting before the throat; the radial component $B_r$ drawn at one point with the force $F_z=-\mu\,\partial B/\partial z$; inset, velocity space with the loss cone of half-angle $\theta_{\text{lc}}$ about the field axis.
 > *Search:* "magnetic mirror converging field lines reflection loss cone velocity space diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-7.excalidraw|900]]
+
 > [!warning] Condition of validity
 > (3.9) is an *adiabatic* invariant: it holds when $B$ changes little over one gyration ($r\,\lvert\nabla B\rvert\ll B$) and over one period. In a sharply varying field — a particle crossing the edge of a magnet's pole — it fails, and the three-region method of §3.5 applies instead.
 
@@ -439,6 +453,8 @@ Three things fall out. **The carrier sign:** for a given current direction, posi
 > [!abstract] DIAGRAM D16.8 · The Hall plate, two panels
 > *Show:* a slab with current along $x$, $\mathbf B$ along $z$, and (a) electrons drifting along $-x$ pushed to the front edge by $q\mathbf v\times\mathbf B$, the front edge marked $-$ and $E_H$ drawn; (b) positive holes drifting along $+x$ pushed to the *same* front edge, now marked $+$, with $E_H$ reversed; a voltmeter across the width in each panel showing opposite polarities.
 > *Search:* "hall effect electrons versus holes same edge opposite polarity diagram"
+
+![[../_obsidian/excalidraw/magnetism-D16-8.excalidraw|900]]
 
 ### 3.10 Drifts: crossed fields in general, the cycloid, and the gradient drift
 
@@ -462,6 +478,8 @@ This is the path of a point on the rim of a wheel of radius $r_c$ rolling along 
 > *Show:* crossed fields ($\mathbf E$ up, $\mathbf B$ out of page); a cycloid with cusps on the $x$-axis and arches of height $2r_c$; beneath it the rolling wheel of radius $r_c$ whose rim point traces the curve, with the drift velocity $E/B$ marked; dashed, a curtate and a prolate variant.
 > *Search:* "charged particle crossed E and B fields cycloid trajectory rolling circle drift"
 
+![[../_obsidian/excalidraw/magnetism-D16-9.excalidraw|900]]
+
 **Gradient drift.** In a field that is stronger on one side of the orbit, the radius of curvature $r=mv_\perp/qB$ is smaller where $B$ is larger: the orbit does not close, and the guiding centre creeps sideways, perpendicular to both $\mathbf B$ and $\nabla B$. Averaging the force $q\mathbf v\times\mathbf B$ over one gyration with $B=B_0+(\nabla B)\cdot\mathbf r$ gives a mean force $-\mu\nabla B$ (the same $\mu=mv_\perp^2/2B$ as (3.8), now with the gradient across the orbit), and a steady force $\mathbf F$ perpendicular to $\mathbf B$ produces a drift $\mathbf v=\mathbf F\times\mathbf B/qB^2$ by the argument of (3.12) with $\mathbf F/q$ in place of $\mathbf E$:
 
 $$
@@ -484,6 +502,8 @@ Neither $q$ nor $m$ is measured — only their ratio, and it came out $1.76\time
 > *Show:* a cathode-ray tube with the deflecting plates, the coils producing $\mathbf B$ into the page over the same length, the screen with the undeflected spot and the electric-only deflected spot; the three vectors $\mathbf v$, $\mathbf E$, $\mathbf B$ mutually perpendicular; the formula $v=E/B$ beside the null condition.
 > *Search:* "J J Thomson e/m experiment cathode ray tube crossed fields deflection diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-10.excalidraw|900]]
+
 ### 3.12 Where it matters, and how to read a track
 
 **The synchrotron.** Since $r=p/qB$, a particle can be kept on a *fixed* circle while it gains energy if $B$ is raised in proportion to $p$ and the accelerating frequency is raised as the speed approaches $c$ — a ring of bending magnets and a few accelerating cavities, unlimited in energy by the cyclotron's resonance problem, limited instead by radiation (electrons) and magnet strength (protons: $p\,[\text{GeV}/c]=0.3\,B\,[\text{T}]\,r\,[\text{m}]$, so $7$ TeV needs $8.3$ T over a bending radius of $2.8$ km — the LHC's ring is $4.3$ km in radius because dipoles fill only two-thirds of it).
@@ -501,6 +521,8 @@ because $eBr\cdot c$ in joules divided by $e$ per MeV is $3\times10^8Br$ eV. A p
 > [!abstract] DIAGRAM D16.11 · Reading a chamber track
 > *Show:* a spiral track in a uniform field ($\otimes$) with the radius visibly decreasing along the motion, an arrow marking the direction of travel deduced from the shrinking radius, and the centre of curvature on the side that reveals the sign; a lead plate across the chamber with the track's curvature tighter after it; the $p=300Br$ rule written beside a measured radius.
 > *Search:* "cloud chamber positron track lead plate curvature energy loss direction anderson"
+
+![[../_obsidian/excalidraw/magnetism-D16-11.excalidraw|900]]
 
 ### 3.13 Biot–Savart: the source law
 
@@ -523,6 +545,8 @@ the second form using $\mu_0=1/\varepsilon_0c^2$ and the charge's own Coulomb fi
 > [!abstract] DIAGRAM D16.12 · The Biot–Savart element
 > *Show:* a wire with an element $I\,d\mathbf l$, the vector $\mathbf r$ to a field point $P$ off to the side, the angle between them, and $d\mathbf B$ at $P$ pointing into the page (perpendicular to both); a second point on the wire's own line with $d\mathbf B=0$ marked; the circles of $\mathbf B$ around the element's axis with the grip-rule hand.
 > *Search:* "biot savart law current element cross product geometry dB direction"
+
+![[../_obsidian/excalidraw/magnetism-D16-12.excalidraw|900]]
 
 > [!info] Why a cross product
 > Because a current has a direction and the field must be built from the only vectors available — the element's direction and the displacement to the point — in a way that reverses when the current reverses. The two candidates are along $d\mathbf l$ (fails: a compass beside a wire points *around* it, not along it) and along $d\mathbf l\times\hat{\mathbf r}$. Experiment picks the second, and Part 10 shows that relativity would have forced it.
@@ -549,6 +573,8 @@ circling the wire, falling as $1/d$ — the $1/r$ law of a line source, exactly 
 > [!abstract] DIAGRAM D16.13 · The finite wire's angles
 > *Show:* a straight segment, the point $P$ at perpendicular distance $d$, the foot of the perpendicular, an element at angle $\theta$ with $r=d\sec\theta$ marked, the two end-angles $\alpha$ and $\beta$; $\mathbf B$ at $P$ drawn into the page with the grip-rule hand; a small inset of the square with the four contributions all pointing the same way.
 > *Search:* "magnetic field finite straight wire angles alpha beta biot savart derivation"
+
+![[../_obsidian/excalidraw/magnetism-D16-13.excalidraw|900]]
 
 > [!danger] Trap — $\mu_0/2\pi$ or $\mu_0/4\pi$
 > $\mu_0I/2\pi d$ is the *infinite* wire; $\mu_0I/4\pi d$ is the semi-infinite wire *at a point level with its end*, and $\mu_0/4\pi$ is the Biot–Savart constant itself. A finite wire at a general point is neither: use (3.19). The paper's favourite: "a long wire is bent at right angles; find the field at a point on the bisector at distance $d$ from the corner" — two semi-infinite wires, each seen at perpendicular distance $d/\sqrt2$ with angles $45^\circ$ and $90^\circ$.
@@ -601,6 +627,8 @@ $\mu_0I/4R$ for a semicircle, $\mu_0I/8R$ for a quadrant — proportional to the
 > *Show:* four shapes with the field point at the centre and each piece labelled with its contribution: (a) semicircle plus diameter-line leads ($\mu_0I/4R+0$); (b) semicircle with perpendicular leads ($\mu_0I/4R+2\times\mu_0I/4\pi R$); (c) concentric semicircles joined by radial legs; (d) a full loop with one straight chord; directions $\odot$/$\otimes$ marked on each piece.
 > *Search:* "magnetic field at centre of combination of arc and straight wire compound loop problems"
 
+![[../_obsidian/excalidraw/magnetism-D16-14.excalidraw|900]]
+
 ### 3.16 Solenoid and toroid by stacking loops
 
 A solenoid — $n$ turns per unit length, current $I$, radius $R$ — is a stack of loops. The slice between $z$ and $z+dz$ (measured along the axis from the field point) carries current $nI\,dz$ and contributes, by (3.22), $dB=\dfrac{\mu_0nI\,dz\,R^2}{2(R^2+z^2)^{3/2}}$ along the axis. Substitute $z=R\cot\theta$ (so $\theta$ is the angle between the axis and the line from the field point to the rim of that slice): $dz=-R\csc^2\theta\,d\theta$, $(R^2+z^2)^{3/2}=R^3\csc^3\theta$, and $dB=\tfrac12\mu_0nI\sin\theta\,d\theta$. Integrating from one end (angle $\theta_1$) to the other ($\theta_2$):
@@ -643,6 +671,8 @@ inside the winding, varying as $1/r$ across the cross-section (stronger near the
 > *Show:* a solenoid in section with its turns as $\odot$ above the axis and $\otimes$ below, the field lines dense and straight inside, spreading at the ends and returning outside as widely spaced curves (drawn small, labelled "$\sim R/L$ of inside"); the angles $\theta_1$, $\theta_2$ from an axial point to the two end rims; beside it a toroid with the circular field lines confined to the winding and none in the hole.
 > *Search:* "solenoid field lines inside outside return flux; toroid magnetic field confined to winding"
 
+![[../_obsidian/excalidraw/magnetism-D16-15.excalidraw|900]]
+
 ### 3.17 The magnetic moment
 
 A plane loop of area $A$ carrying $I$ has magnetic dipole moment
@@ -675,6 +705,8 @@ The last two rows are the honest difference. Far away the two dipoles are indist
 > *Show:* left, an electric dipole with its field lines leaving $+q$ and entering $-q$, the internal line from $+$ to $-$ antiparallel to $\mathbf p$; right, a current loop with identical external lines but the internal lines passing through the loop *along* $\boldsymbol\mu$, closing round the outside; the far-field region shaded on both with "identical here".
 > *Search:* "electric dipole versus magnetic dipole field lines comparison inside the source"
 
+![[../_obsidian/excalidraw/magnetism-D16-16.excalidraw|900]]
+
 ### 3.18 Why a loop law should exist, and Ampère's law
 
 The infinite wire's field (3.20) circles the wire and falls as $1/r$. Walk once round the wire on a circle of radius $r$, adding up $\mathbf B\cdot d\mathbf l$: the field is everywhere along the path, so the sum is $(\mu_0I/2\pi r)(2\pi r)=\mu_0I$ — **independent of $r$**. Now walk round on any closed path whatever: along an element $d\mathbf l$ the component of $d\mathbf l$ along the circling field is $r\,d\varphi$ ($\varphi$ the azimuth about the wire), so $\mathbf B\cdot d\mathbf l=(\mu_0I/2\pi r)\,r\,d\varphi=(\mu_0I/2\pi)\,d\varphi$, and a closed path that goes round the wire once has $\oint d\varphi=2\pi$, one that does not enclose it has $\oint d\varphi=0$. The $1/r$ of the field and the $r$ of the arc cancel exactly — the same cancellation that made Gauss's law out of $1/r^2$ and $r^2$ in the previous chapter. By superposition the circulation of the total field around a closed loop counts the currents that thread it:
@@ -692,6 +724,8 @@ where $I_{\text{enc}}$ is the net current through *any* surface bounded by $C$ �
 > [!abstract] DIAGRAM D16.17 · Loops around a wire, and the sign convention
 > *Show:* a wire ($\odot$) with its circular field lines; a circular loop of radius $r$ and an irregular loop both enclosing it, with $\mathbf B\cdot d\mathbf l=(\mu_0I/2\pi)d\varphi$ marked on an element of the irregular one; a loop that does not enclose the wire with the azimuth going forward and back; a second panel with the three wires, the anticlockwise loop, the thumb out of the page, and "$+5-3=+2$ A".
 > *Search:* "ampere's circuital law loop around wire azimuth argument sign convention right hand rule"
+
+![[../_obsidian/excalidraw/magnetism-D16-17.excalidraw|900]]
 
 ### 3.19 The applications: eight fields in eight lines
 
@@ -755,6 +789,8 @@ $$
 > *Show:* two circles of equal radius overlapping, one $\odot$ ($+J$) and one $\otimes$ ($-J$), axes $d$ apart, with parallel field arrows filling the lens perpendicular to the line of centres; beside it a wire in cross-section with an off-centre circular hole, the same uniform arrows in the hole, and the two component cylinders drawn dashed.
 > *Search:* "magnetic field inside off-centre cylindrical hole in current carrying wire superposition uniform field"
 
+![[../_obsidian/excalidraw/magnetism-D16-18.excalidraw|900]]
+
 ### 3.21 Ampère or Biot–Savart? The decision, and two problems both ways
 
 | the source | use | because |
@@ -815,6 +851,8 @@ How would a monopole announce itself? A magnetic charge $g$ passing through a su
 > *Show:* a bar magnet with its external lines from N to S and its internal lines from S to N, every line closed; the same magnet sawn in two, each half with its own N and S and its own closed lines; a closed Gaussian surface drawn around one pole with equal flux in and out; a dashed "impossible" panel of an isolated N pole with lines only leaving.
 > *Search:* "cut a bar magnet two magnets no monopoles closed magnetic field lines gauss law magnetism"
 
+![[../_obsidian/excalidraw/magnetism-D16-19.excalidraw|900]]
+
 ### 3.23 Force on a current: from the carriers to $I\mathbf L\times\mathbf B$
 
 A wire of cross-section $A$ carries $n$ carriers per unit volume, each of charge $q$ drifting at $\mathbf v_d$. In a field $\mathbf B$ each feels $q\mathbf v_d\times\mathbf B$; a length $\mathbf L$ of wire (vector along the current) holds $nAL$ of them, so the total force is $nALq\,\mathbf v_d\times\mathbf B$. Since $I=nqv_dA$ and $q\mathbf v_d$ points along the current for either sign of carrier,
@@ -830,6 +868,8 @@ The force is transmitted to the wire because the deflected carriers press agains
 > [!abstract] DIAGRAM D16.20 · The chord theorem
 > *Show:* a semicircular wire in a uniform field ($\otimes$) with $d\mathbf F$ arrows on several elements all radial, their vector sum equal to the force on the dashed diameter drawn beneath; a closed loop of arbitrary shape with the forces on opposite elements cancelling; a small inset of a rectangular loop whose side forces form a couple.
 > *Search:* "force on curved current carrying wire equals chord uniform magnetic field semicircle closed loop zero net force"
+
+![[../_obsidian/excalidraw/magnetism-D16-20.excalidraw|900]]
 
 ### 3.24 Torque on a loop, its energy, the galvanometer and the oscillating magnet
 
@@ -867,6 +907,8 @@ a deflection *proportional* to the current — the linear scale that makes the i
 > *Show:* a rectangular loop seen edge-on with $\hat{\mathbf n}$ at angle $\theta$ to horizontal $\mathbf B$, the two side forces $IbB$ up and down separated by $a\sin\theta$, the rotation axis marked; beside it the galvanometer: curved pole pieces and a cylindrical iron core making radial field lines, the coil's sides always crossing the field at right angles, the fibre and pointer above.
 > *Search:* "torque on rectangular current loop couple derivation; moving coil galvanometer radial magnetic field diagram"
 
+![[../_obsidian/excalidraw/magnetism-D16-21.excalidraw|900]]
+
 ### 3.25 Forces between currents, the ampere, and the third law
 
 Wire 1 carries $I_1$; at distance $d$ its field is $\mu_0I_1/2\pi d$, circling it. A parallel wire 2 carrying $I_2$ lies in that field, and by (3.34) a length $L$ of it feels $I_2LB_1$:
@@ -890,6 +932,8 @@ $$
 > *Show:* two long parallel wires with currents in the same direction; wire 1's circular field lines, its field at wire 2 drawn, and the force on wire 2 towards wire 1 with $\mathbf L\times\mathbf B$ indicated; a second panel with opposite currents and repulsion; the formula $\mu_0I_1I_2/2\pi d$ and a note "field of the *other* wire only".
 > *Search:* "force between two parallel current carrying wires attract repel direction definition of ampere"
 
+![[../_obsidian/excalidraw/magnetism-D16-22.excalidraw|900]]
+
 ### 3.26 Magnetic pressure, boundary conditions, and the field's energy
 
 **The force on a current sheet.** A sheet with surface current $K$ separates a region of field $B_1$ from one of field $B_2$ (both parallel to the sheet, perpendicular to $\mathbf K$). The sheet's *own* field is $\pm\mu_0K/2$ on its two sides (3.29), and it cannot push on itself; the field of everything else is the same on both sides, namely the average $(B_1+B_2)/2$. So the force per unit area is $K\times(B_1+B_2)/2$, and since $B_1-B_2=\mu_0K$ (the sheet's own jump), it equals
@@ -909,6 +953,8 @@ directed from the strong-field side to the weak: **a magnetic field pushes on th
 > [!abstract] DIAGRAM D16.23 · Magnetic pressure on a solenoid
 > *Show:* a solenoid in section with $B$ inside and zero outside; on the winding, outward arrows labelled $B^2/2\mu_0$; the sheet's own field $\pm\mu_0K/2$ drawn on both sides and the "field of the rest" $B/2$ crossing it; a second panel with the solenoid cut in two and the halves pulled together with $B^2A/2\mu_0$.
 > *Search:* "magnetic pressure B squared over 2 mu0 solenoid winding outward force hoop stress"
+
+![[../_obsidian/excalidraw/magnetism-D16-23.excalidraw|900]]
 
 ### 3.27 Where the energy comes from: the motor puzzle
 
@@ -954,6 +1000,8 @@ Outside a bar magnet the field is that of a solenoid of the same shape: lines le
 > *Show:* a bar magnet and a solenoid of the same shape with identical external field lines; inside the solenoid the lines run along the axis from the "S" end to the "N" end, and the same is drawn inside the magnet; the pole picture's wrong internal arrow shown dashed and crossed out with the label "that is $\mathbf H$, not $\mathbf B$".
 > *Search:* "bar magnet versus solenoid field lines equivalence inside field direction south to north"
 
+![[../_obsidian/excalidraw/magnetism-D16-24.excalidraw|900]]
+
 ### 3.30 Magnetisation and bound currents
 
 Matter magnetises when its atomic moments (orbital and spin) acquire a net alignment. The **magnetisation** $\mathbf M$ is the dipole moment per unit volume (A m$^{-1}$). Its field is the field of the atomic current loops, and for uniform $\mathbf M$ those loops add up to a **surface current** only.
@@ -975,6 +1023,8 @@ $$
 > [!abstract] DIAGRAM D16.25 · Bound currents on a magnetised slab
 > *Show:* a slab in section with rows of small atomic current loops all circulating the same way; adjacent loops' shared sides with currents cancelling (drawn as opposing arrows that strike out); the uncancelled current around the rim, labelled $K_b=M$; the same slab redrawn as a single loop of current $I_b=Mt$; beside it a magnetised cylinder drawn as a solenoid.
 > *Search:* "magnetisation bound surface current atomic current loops cancel interior slab derivation"
+
+![[../_obsidian/excalidraw/magnetism-D16-25.excalidraw|900]]
 
 ### 3.31 The field inside matter: $\mathbf B$, $\mathbf H$, $\mathbf M$
 
@@ -1016,6 +1066,8 @@ negative, small, and independent of temperature (the orbits, not their thermal p
 > [!abstract] DIAGRAM D16.26 · The induced moment
 > *Show:* two electron orbits of opposite sense in the same applied $\mathbf B$ (into the page), one speeding up and one slowing down, with the change in each orbit's moment drawn as a small arrow *opposite* to $\mathbf B$ in both cases; the net induced $\mathbf M$ antiparallel to $\mathbf B$; a caption "Lenz's law for one atom".
 > *Search:* "diamagnetism larmor precession induced magnetic moment opposes applied field orbit diagram"
+
+![[../_obsidian/excalidraw/magnetism-D16-26.excalidraw|900]]
 
 ### 3.33 Paramagnetism: alignment against disorder
 
@@ -1085,6 +1137,8 @@ xychart-beta
 > *Show:* four stages of a rectangular sample: unmagnetised (four domains closing their flux), wall motion (the favourable domain grown), rotation (moments turning towards $\mathbf H$), saturation (one domain); beneath, the initial magnetisation curve with the three stages marked and the hysteresis loop drawn around it, $B_r$ and $H_c$ labelled, the area shaded; an inset comparing a soft and a hard loop.
 > *Search:* "ferromagnetic domains growth rotation saturation hysteresis loop remanence coercivity soft hard"
 
+![[../_obsidian/excalidraw/magnetism-D16-27.excalidraw|900]]
+
 ### 3.35 Materials in circuits: cores, transformers, shields, electromagnets
 
 **A solenoid with a core.** The winding makes $H=nI$ (§3.31); the core magnetises to $M=\chi H$ and, by (3.44), carries a bound surface current $K_b=M$ running the *same way* as the winding's current sheet $K=nI$. Ampère's law with all currents:
@@ -1119,6 +1173,8 @@ with $A$ the total pole area. At $B=1$ T over two poles of $5$ cm$^2$ each: $F=4
 > *Show:* a bar magnet's converging field near its pole, an iron nail with its induced moment drawn along the local $\mathbf B$ and the net force arrow towards the pole; a small diamagnetic sample with its induced moment reversed and the force away; beside it a U-shaped electromagnet with an iron bar across its poles, the field crossing the two gaps and the pressure $B^2/2\mu_0$ on each pole face.
 > *Search:* "magnet attracts iron nail induced dipole gradient force; electromagnet lifting force B squared A over 2 mu0"
 
+![[../_obsidian/excalidraw/magnetism-D16-28.excalidraw|900]]
+
 ### 3.37 The Earth's field: a tilted dipole, and how to read it
 
 To a first approximation the Earth's field is that of a dipole at its centre, tilted about $11^\circ$ from the rotation axis, of moment $8\times10^{22}$ A m$^2$ (§3.38). Its lines *enter* the Earth in the northern hemisphere: the magnetic pole near the geographic north is a **south** pole of the dipole — which is why it attracts the north-seeking end of a compass. Three angles and two components describe the field at any place:
@@ -1135,6 +1191,8 @@ To a first approximation the Earth's field is that of a dipole at its centre, ti
 > [!abstract] DIAGRAM D16.29 · The Earth's dipole and the field elements
 > *Show:* the Earth with its rotation axis and the dipole axis tilted $11^\circ$, field lines entering in the north (the dipole's "S" near geographic north labelled); a tangent plane at a mid-latitude point with true north, magnetic north (declination $\delta$ between them), the total $\mathbf B$ dipping by $\theta_{\text{dip}}$ below the horizontal, and the components $B_H$, $B_V$, $B_H\cos\delta$, $B_H\sin\delta$.
 > *Search:* "earth's magnetic field tilted dipole declination inclination dip horizontal vertical components diagram"
+
+![[../_obsidian/excalidraw/magnetism-D16-29.excalidraw|900]]
 
 > [!danger] Trap — north is south
 > The Earth's magnetic pole in the Arctic is the *south* pole of the Earth's dipole; "the north magnetic pole" names the place, not the polarity. And dip is not declination: one is a tilt below the horizontal, the other a swing from true north.
@@ -2272,6 +2330,8 @@ exactly the Lorentz force, constant and all. There is no separate magnetic inter
 > [!abstract] DIAGRAM D16.30 · The wire in two frames
 > *Show:* the laboratory frame with ions ($+$) at spacing $a$ and electrons ($-$) at the same spacing moving left, a test charge moving right at $v$, and the magnetic force towards the wire; the charge's rest frame beneath, with the ion spacing contracted to $a/\gamma_v$ and the electron spacing *expanded* relative to it, a net negative wire, and the electric force towards the wire; the caption "$\lambda'=-\gamma_vIv/c^2$".
 > *Search:* "magnetism as relativistic effect current carrying wire length contraction charge density test charge frame purcell"
+
+![[../_obsidian/excalidraw/magnetism-D16-30.excalidraw|900]]
 
 ### 10.2 The Helmholtz pair
 

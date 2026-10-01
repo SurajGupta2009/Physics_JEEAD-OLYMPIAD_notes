@@ -122,6 +122,9 @@ Every communication system has three parts: the **transmitter** (converts the me
 > [!abstract] DIAGRAM D100.1 · The communication system block diagram
 > *Show:* a horizontal chain: message source (microphone icon) arrow to modulator arrow to transmitter (antenna icon) arrow through a box labelled "channel + noise" to receiver (antenna icon) arrow to demodulator arrow to destination (speaker icon). Noise added as a lightning-bolt arrow into the channel box.
 > *Search:* "communication system block diagram transmitter channel receiver noise"
+> **Companion:** native editable scene `communication-systems-D100-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-1.excalidraw|900]]
 
 > [!tip] FIGURE F100.2 · The three-part system: modulate, send, demodulate
 > *Why:* every communication question walks the same chain; the figure fixes the stages and where noise enters.
@@ -147,6 +150,9 @@ A pure sinusoidal signal $A\sin(2\pi f t)$ has zero bandwidth — it occupies a 
 > [!abstract] DIAGRAM D100.2 · Frequency spectrum of a voice signal
 > *Show:* a horizontal frequency axis from 0 to 5 kHz; a filled spectral envelope peaking around 500–2000 Hz and tapering to zero at 300 Hz and 3400 Hz; the 3.1 kHz bandwidth marked with a double-headed arrow.
 > *Search:* "voice signal frequency spectrum bandwidth 300 3400 Hz"
+> **Companion:** native editable scene `communication-systems-D100-2.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-2.excalidraw|900]]
 
 ### 3.3 Bandwidth of transmission media
 
@@ -172,6 +178,9 @@ Above the MUF the wave escapes into space. The skip distance is the minimum grou
 > [!abstract] DIAGRAM D100.3 · Sky-wave propagation with skip distance
 > *Show:* the Earth's surface as a curved line at the bottom; the ionosphere as a horizontal band 100–300 km above; a transmitter antenna on the left sending an oblique ray up to the ionosphere, reflecting back down to a distant receiver; the skip distance (ground range) labelled; a second ray at steeper angle reflecting closer; the skip zone shaded between ground-wave range and first sky-wave landing.
 > *Search:* "sky wave ionospheric reflection skip distance skip zone diagram"
+> **Companion:** native editable scene `communication-systems-D100-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-3.excalidraw|900]]
 
 > [!tip] FIGURE F100.3 · Propagation: three modes, three frequency bands
 > *Why:* the propagation question is decided by frequency alone — the figure routes each band to its mode.
@@ -200,6 +209,9 @@ for $h\ll R$. For transmitting and receiving antennas at heights $h_t$ and $h_r$
 > [!abstract] DIAGRAM D100.4 · Line-of-sight propagation and horizon distance
 > *Show:* the Earth as a circle; a tower of height $h$ on the surface; a tangent line from the tower top to the horizon point; the distance $d$ along the surface; the formula $d=\sqrt{2Rh}$ labelled; a second taller tower with a longer range drawn beside it for comparison.
 > *Search:* "line of sight propagation horizon distance antenna height diagram"
+> **Companion:** native editable scene `communication-systems-D100-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-4.excalidraw|900]]
 
 ### 3.7 Why modulation is necessary
 
@@ -214,6 +226,9 @@ Three reasons, all derived from physics rather than asserted:
 > [!abstract] DIAGRAM D100.5 · Frequency-division multiplexing
 > *Show:* a horizontal frequency axis; three message signals each 4 kHz wide centred at different carrier frequencies (600 kHz, 800 kHz, 1000 kHz); the combined spectrum showing non-overlapping bands; the demultiplexer splitting them at the receiver.
 > *Search:* "frequency division multiplexing FDM carrier channels diagram"
+> **Companion:** native editable scene `communication-systems-D100-5.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-5.excalidraw|900]]
 
 ### 3.8 Amplitude modulation (AM)
 
@@ -253,6 +268,9 @@ At $\mu=1$ (100% modulation): the sidebands carry $P_c/2$, so the total is $1.5P
 > [!abstract] DIAGRAM D100.6 · AM waveform with modulation index annotation
 > *Show:* the carrier as a high-frequency sine; the message as a low-frequency sine below; the AM signal with the envelope traced as a dashed line matching the message; $\mu$ annotated as (envelope peak minus carrier) divided by carrier; three cases: $\mu=0.5$, $\mu=1$, $\mu>1$ (over-modulated with envelope crossing zero).
 > *Search:* "amplitude modulation waveform modulation index 50 percent 100 percent overmodulated"
+> **Companion:** native editable scene `communication-systems-D100-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-6.excalidraw|900]]
 
 > [!tip] FIGURE F100.4 · AM: the envelope carries the message — until it inverts
 > *Why:* amplitude modulation is read entirely from the envelope, and the modulation index is its single dial — the figure binds them.
@@ -298,6 +316,9 @@ For FM broadcast: $B=2(75+15)=180$ kHz — about 26 times the AM bandwidth for t
 > [!abstract] DIAGRAM D100.7 · FM waveform and frequency deviation
 > *Show:* the message signal as a low-frequency sine below; the FM signal above with the frequency increasing when the message is positive and decreasing when negative; the instantaneous frequency $f_i$ oscillating between $f_c-\Delta f$ and $f_c+\Delta f$; the constant amplitude of the FM wave noted (amplitude does not change).
 > *Search:* "frequency modulation waveform instantaneous frequency deviation diagram"
+> **Companion:** native editable scene `communication-systems-D100-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-7.excalidraw|900]]
 
 ### 3.10 Demodulation (detection)
 
@@ -314,6 +335,9 @@ Too small: the capacitor follows the carrier, not the envelope (ripple). Too lar
 > [!abstract] DIAGRAM D100.8 · The envelope detector circuit
 > *Show:* an AM signal input to a diode (anode left, cathode right); the diode output feeds a parallel RC combination (capacitor C, resistor R to ground); the output across R is the recovered message; the time constant $RC$ annotated with the double inequality; a sketch of the input AM waveform, the diode output (half-wave rectified), and the smooth output (envelope).
 > *Search:* "AM envelope detector diode RC filter circuit waveform"
+> **Companion:** native editable scene `communication-systems-D100-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-8.excalidraw|900]]
 
 ### 3.11 Block diagrams
 
@@ -328,14 +352,23 @@ Too small: the capacitor follows the carrier, not the envelope (ripple). Too lar
 > [!abstract] DIAGRAM D100.11 · FM transmitter and receiver block diagrams
 > *Show:* two parallel horizontal chains. Top (transmitter): microphone arrow to pre-emphasis arrow to VCO (modulator, with carrier oscillator input from below) arrow to frequency multiplier arrow to power amplifier arrow to antenna. Bottom (receiver): antenna arrow to RF amplifier arrow to limiter arrow to discriminator arrow to de-emphasis arrow to audio amplifier arrow to speaker. Labels at each stage.
 > *Search:* "FM transmitter receiver block diagram VCO discriminator limiter"
+> **Companion:** native editable scene `communication-systems-D100-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-11.excalidraw|900]]
 
 > [!abstract] DIAGRAM D100.12 · AM spectrum showing carrier and sidebands
 > *Show:* a horizontal frequency axis; a tall vertical line at $f_c$ (carrier); two shorter lines at $f_c-f_m$ and $f_c+f_m$ (sidebands); the bandwidth $2f_m$ marked with a double-headed arrow; the sideband heights proportional to $\mu A_c/2$; the carrier height proportional to $A_c$.
 > *Search:* "AM spectrum carrier upper lower sideband frequency bandwidth diagram"
+> **Companion:** native editable scene `communication-systems-D100-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-12.excalidraw|900]]
 
 > [!abstract] DIAGRAM D100.9 · AM superheterodyne receiver block diagram
 > *Show:* antenna arrow to RF amplifier arrow to mixer (with local oscillator arrow entering from above) arrow to IF amplifier (455 kHz label) arrow to detector arrow to audio amplifier arrow to speaker; the signal frequency at each stage labelled ($f_{\text{RF}}$, $f_{\text{LO}}$, $f_{\text{IF}}=f_{\text{LO}}-f_{\text{RF}}$).
 > *Search:* "superheterodyne receiver block diagram local oscillator IF amplifier"
+> **Companion:** native editable scene `communication-systems-D100-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-9.excalidraw|900]]
 
 ### 3.12 Signal-to-noise and channel capacity
 
@@ -355,6 +388,9 @@ For a telephone channel ($B=3.4$ kHz, $S/N=30$ dB $=1000$): $C=3400\log_2(1001)=
 > [!abstract] DIAGRAM D100.10 · Signal-to-noise ratio and channel capacity
 > *Show:* a graph with $S/N$ (in dB) on the horizontal axis and $C/B$ (bits/s/Hz, the spectral efficiency) on the vertical; the curve $C/B=\log_2(1+S/N)$ rising steeply at first then saturating; a few labelled points: $S/N=0$ dB gives $C/B=1$, $S/N=20$ dB gives $C/B\approx6.7$, $S/N=30$ dB gives $C/B\approx10$.
 > *Search:* "Shannon channel capacity spectral efficiency signal to noise ratio curve"
+> **Companion:** native editable scene `communication-systems-D100-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/communication-systems-D100-10.excalidraw|900]]
 
 > [!tip] FIGURE F100.5 · Shannon's ceiling: bandwidth × signal-to-noise
 > *Why:* the chapter's end-of-the-line result — no scheme can beat the capacity formula, so every design is measured against it.

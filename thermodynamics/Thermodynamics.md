@@ -36,6 +36,13 @@ mindmap
 
 ![The whole course on one picture: a cycle on a PV plane exchanging heat between two reservoirs, with the three governing lines annotated](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D16.1 — The whole course on one picture: a cycle on a PV plane exchanging heat between two reservoirs, with the three governing lines annotated
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-001.svg`; original retained.
+> **Read:** The whole course on one picture: a cycle on a PV plane exchanging heat between two reservoirs, with the three governing lines annotated.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-1.excalidraw|900]]
+
 **The whole course in one picture.** A cycle on the PV plane (left) is where work is computed; the engine between two baths (right) is where the second law is enforced. Chapters 1–4 own the left drawing and the energy line; chapters 5–6 own the inequality on the right; chapter 7 extends both to statistics, real gases and radiation. Write the ledger line and the inequality at the top of every answer — both carry marks even when the algebra slips.
 
 ### How these notes are organised
@@ -53,6 +60,13 @@ Start with [**Chapter 1 →**](#ch-01).
 ### The map
 
 ![Mind map of the course: root node with 11 chapter branches, each clickable to open its chapter](assets/figures/fig-002.svg)
+
+> [!abstract] DIAGRAM D16.2 — Mind map of the course: root node with 11 chapter branches, each clickable to open its chapter
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-002.svg`; original retained.
+> **Read:** Mind map of the course: root node with 11 chapter branches, each clickable to open its chapter.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-2.excalidraw|900]]
 
 Any branch opens its chapter right here — the full theory, figures and solved questions. Expand all with the top bar; printing opens everything automatically.
 
@@ -80,6 +94,13 @@ Touch a metal bench and a wooden one at the same room temperature. The metal fee
 > We need one fact: **if A is in thermal equilibrium with B, and B with C, then A is in thermal equilibrium with C.** That transitivity is an empirical observation — no logic guarantees it. ("Is able to lift" is transitive sometimes and not always; relations fail to be transitive all the time.) Because transitivity holds, it partitions all systems into equivalence classes, and we are free to label each class by a number: that number is **temperature** The label must be a function of the state only — never of the material, size or shape — and thermometry is the business of finding a measurable property with that property. This is why the law earns an ordinal number: it is the licence for the word "temperature" to exist at all.
 
 ![Three systems touching through diathermal walls: once A matches B and B matches C, putting A against C changes nothing](assets/figures/fig-003.svg)
+
+> [!abstract] DIAGRAM D16.3 — Three systems touching through diathermal walls: once A matches B and B matches C, putting A against C changes nothing
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-003.svg`; original retained.
+> **Read:** Three systems touching through diathermal walls: once A matches B and B matches C, putting A against C changes nothing.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-3.excalidraw|900]]
 
 **Fig. 1.1 — The zeroth law is a statement about touching.** B is just a witness: if A and C both rest against the same B, then A and C in direct contact change nothing. Only after this is checked can the witness's reading be called a property of A and C themselves.
 
@@ -146,6 +167,13 @@ with $\alpha$ the linear coefficient (steel $1.2\times 10^{-5}$ K⁻¹, brass $1
 > The picture that fails: "the material expands *into* the hole, so it shrinks." Test it with the picture it contradicts. Cut the plate along a circle *around* the hole and remove the ring — that removed ring expanded as if it were still in place (its atoms feel the same neighbours either way), and its inner circumference grew with the rest of it. The hole is a drawn circle in the material: it has no atoms of its own, so it is carried by the material around it and scales by $1+\alpha\Delta T$ — exactly like everything else. Cast-iron intuition says "holes get tighter when the casting cools": same law run backwards ✓.
 
 ![A plate with a circular hole drawn at two temperatures; every labelled length, including the hole's diameter, is scaled by the same factor](assets/figures/fig-004.svg)
+
+> [!abstract] DIAGRAM D16.4 — A plate with a circular hole drawn at two temperatures; every labelled length, including the hole's diameter, is scaled by the same factor
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-004.svg`; original retained.
+> **Read:** A plate with a circular hole drawn at two temperatures; every labelled length, including the hole's diameter, is scaled by the same factor.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-4.excalidraw|900]]
 
 **Fig. 1.2 — A heated plate is a photographic enlargement, holes included.** If the hole's diameter scaled differently from the edge length, two concentric circles of atoms would have to gain different numbers of neighbours — impossible in a solid that stays connected.
 
@@ -221,6 +249,13 @@ $$
 
 ![A filled flask with a narrow neck at two temperatures: liquid level rises by the difference between liquid and container expansion](assets/figures/fig-005.svg)
 
+> [!abstract] DIAGRAM D16.5 — A filled flask with a narrow neck at two temperatures: liquid level rises by the difference between liquid and container expansion
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-005.svg`; original retained.
+> **Read:** A filled flask with a narrow neck at two temperatures: liquid level rises by the difference between liquid and container expansion.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-5.excalidraw|900]]
+
 **Fig. 1.3 — What overflows is a difference, not a total.** The bulb's own capacity grows with the glass, so the neck sees only the liquid's expansion minus the container's; that is the only number any experiment can measure without a second experiment.
 
 ### **Q6** A 250 mL glass flask is completely filled with mercury at 20 °C and heated to 75 °C. How much mercury overflows? Glass $\alpha = 9\times10^{-6}$ K⁻¹, mercury $\gamma = 1.8\times10^{-4}$ K⁻¹. _(JEE Main)_
@@ -252,6 +287,13 @@ $$
 </details>
 
 ![Three vertical scale columns for kelvin, celsius and Fahrenheit linked at water freezing, triple point and boiling, with the ratio 1.8 marked on an increment arrow](assets/figures/fig-006.svg)
+
+> [!abstract] DIAGRAM D16.6 — Three vertical scale columns for kelvin, celsius and Fahrenheit linked at water freezing, triple point and boiling, with the ratio 1.8 marked on an increment arrow
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-006.svg`; original retained.
+> **Read:** Three vertical scale columns for kelvin, celsius and Fahrenheit linked at water freezing, triple point and boiling, with the ratio 1.8 marked on an increment arrow.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-6.excalidraw|900]]
 
 **Fig. 1.4 — Two rulers are one ruler with a shifted origin; the third has a different tick length as well.** The dotted lines run through the two definitions: freezing (273.15 K = 0 °C = 32 °F) and the steam point; the accent dash is the triple point at 273.16 K — one hundredth of a kelvin above freezing, and *that* was the kelvin’s definition until 2019. Every conversion formula in this chapter is two of these three lines; every exam slip (ΔT in °F, Q1’s cousin) is forgetting which line the question asks you to read.
 
@@ -303,6 +345,13 @@ P = \frac{N m\overline{v_{x}^{2}}}{V} \tag{2.1}
 $$
 
 ![A single molecule bouncing between two walls; the wall sees 2mv per hit and f hits per second, the two factors multiplying into mv²/L](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D16.7 — A single molecule bouncing between two walls; the wall sees 2mv per hit and f hits per second, the two factors multiplying into mv²/L
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-007.svg`; original retained.
+> **Read:** A single molecule bouncing between two walls; the wall sees 2mv per hit and f hits per second, the two factors multiplying into mv²/L.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-7.excalidraw|900]]
 
 **Fig. 2.1 — The pressure of one molecule.** Two factors, each easy to forget: the size of each payment ($2mv_{x}$) and the rate of payment ($v_{x}/2L$ — the round trip). Their product is proportional to $v_{x}^{2}$, which is why temperature, an average of squares, never cares about the sign of a velocity.
 
@@ -368,6 +417,13 @@ $$
 
 ![Maxwell speed distributions for nitrogen and helium at the same temperature: the lighter gas is shifted right and flattened, and the three characteristic speeds of nitrogen are marked on its curve](assets/figures/fig-008.svg)
 
+> [!abstract] DIAGRAM D16.8 — Maxwell speed distributions for nitrogen and helium at the same temperature: the lighter gas is shifted right and flattened, and the three characteristic speeds of nitrogen are marked on its curve
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-008.svg`; original retained.
+> **Read:** Maxwell speed distributions for nitrogen and helium at the same temperature: the lighter gas is shifted right and flattened, and the three characteristic speeds of nitrogen are marked on its curve.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-8.excalidraw|900]]
+
 **Fig. 2.2 — Same temperature, different curves; the $1/\sqrt{M}$ shift is exact.** Note the ordering $v_{p} < \bar v < v_{\text{rms}}$: squaring before averaging weights the tail, and the tail is where the physics happens. The areas under both curves are equal — both are $n$.
 
 ### Worked example 2.1 · The speeds of air, once and for all
@@ -383,6 +439,13 @@ $$
 $$
 
 ![The swept collision cylinder of a moving molecule through a gas of targets, annotated with the double diameter and the root-two correction](assets/figures/fig-009.svg)
+
+> [!abstract] DIAGRAM D16.9 — The swept collision cylinder of a moving molecule through a gas of targets, annotated with the double diameter and the root-two correction
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-009.svg`; original retained.
+> **Read:** The swept collision cylinder of a moving molecule through a gas of targets, annotated with the double diameter and the root-two correction.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-9.excalidraw|900]]
 
 **Fig. 2.3 — Where the √2 comes from, and why the cross-section is πd².** A collision needs only the *centres* to come within $d$ (one radius each); forgetting the other molecule's size halves the cylinder, and forgetting its motion removes the √2 — two chances to be wrong before the exam's one.
 
@@ -476,6 +539,13 @@ Open a tiny hole (diameter $\ll\lambda$) and only the *arrivals* leak: the effus
 
 ![Two bell-like curves versus speed: the density distribution peaking lower-left and the flux distribution, multiplied by v, peaking higher-right with a mean energy of 2kT](assets/figures/fig-010.svg)
 
+> [!abstract] DIAGRAM D16.10 — Two bell-like curves versus speed: the density distribution peaking lower-left and the flux distribution, multiplied by v, peaking higher-right with a mean energy of 2kT
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-010.svg`; original retained.
+> **Read:** Two bell-like curves versus speed: the density distribution peaking lower-left and the flux distribution, multiplied by v, peaking higher-right with a mean energy of 2kT.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-10.excalidraw|900]]
+
 **Fig. 2.4 — The leak’s distribution is the box’s times v.** Every quantity on the right is the one the exam quietly swaps in: beam speeds, Knudsen effusion, and the reasonthe box cools as it leaks (ch 7 §7.2 collects the reward). Area stays 1; the peak moves by √(3/2) because theweighting is linear, not because anything sped up.
 
 ### 2.6 Chapter summary — the results to own
@@ -548,6 +618,13 @@ W = \int_{1}^{2}P\,dV \quad\text{(quasistatic; } P \text{ = gas pressure)}\qquad
 $$
 
 ![Piston cylinder with load and atmosphere; the pressure inside pays the atmosphere, the load and friction, and the work integral charges the gas for all three](assets/figures/fig-011.svg)
+
+> [!abstract] DIAGRAM D16.11 — Piston cylinder with load and atmosphere; the pressure inside pays the atmosphere, the load and friction, and the work integral charges the gas for all three
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-011.svg`; original retained.
+> **Read:** Piston cylinder with load and atmosphere; the pressure inside pays the atmosphere, the load and friction, and the work integral charges the gas for all three.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-11.excalidraw|900]]
 
 **Fig. 3.1 — Where $P\,dV$ comes from.** Nobody defined work as "pressure times volume change"; it is force times distance, with the force found from a free-body diagram. Do the free-body diagram and the $P_{\text{ext}}$-vs-$P_{\text{gas}}$ question answers itself: the gas is charged for the load it actually moved.
 
@@ -634,6 +711,13 @@ Mixing problems are first-law problems with $W=0$ in an insulated vessel: $\sum 
 
 ![Heating 100 g of ice at −10 °C to steam at 110 °C: a five-step staircase of temperature against heat supplied, each step labelled with its energy in kilojoules](assets/figures/fig-012.svg)
 
+> [!abstract] DIAGRAM D16.12 — Heating 100 g of ice at −10 °C to steam at 110 °C: a five-step staircase of temperature against heat supplied, each step labelled with its energy in kilojoules
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-012.svg`; original retained.
+> **Read:** Heating 100 g of ice at −10 °C to steam at 110 °C: a five-step staircase of temperature against heat supplied, each step labelled with its energy in kilojoules.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-12.excalidraw|900]]
+
 **Fig. 3.2 — The 100 g ice→steam staircase.** Slopes are $1/(mc)$, plateaus are $mL$: heating ice 2.1, melting 33.4, heating water 41.9, boiling 226.0, heating steam 2.0 kJ — total 305 kJ, about five minutes at a 1 kW kettle. A "find the heat" question is this picture plus the question of where on it you start and stop.
 
 ### **Q4** 2 kg of ice at 0 °C is mixed with 10 kg of water at 50 °C in a thermally insulated vessel. The final temperature is closest to _(JEE Advanced)_
@@ -702,9 +786,23 @@ A gas runs A→B→C→A. Given: $Q_{AB} = +600$ J, $W_{AB} = +200$ J; $W_{BC} =
 
 ![Two bulbs joined by a valve, left with gas dots, right empty labelled vacuum, with the ledger Q=0 W=0 delta U=0 written across the bottom](assets/figures/fig-013.svg)
 
+> [!abstract] DIAGRAM D16.13 — Two bulbs joined by a valve, left with gas dots, right empty labelled vacuum, with the ledger Q=0 W=0 delta U=0 written across the bottom
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-013.svg`; original retained.
+> **Read:** Two bulbs joined by a valve, left with gas dots, right empty labelled vacuum, with the ledger Q=0 W=0 delta U=0 written across the bottom.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-13.excalidraw|900]]
+
 **Fig. 3.3 — The only process where the ledger is all zeros and the event still has a direction.** Two-law handshake: the first law says anything goes at ΔU = 0; the second (ch 5’ audit, ch 6’s entropy) says the gas fills bothbulbs and never un-fills them. A real gas even finds a temperature change here — the zero of ΔU belongs to the ideal model’sindifference to distance between molecules (ch 7 bills it honestly at a/V²).
 
 ![A three-leg cycle drawn small with two ledger columns for Q and W whose sums both equal the enclosed area](assets/figures/fig-014.svg)
+
+> [!abstract] DIAGRAM D16.14 — A three-leg cycle drawn small with two ledger columns for Q and W whose sums both equal the enclosed area
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `thermodynamics/assets/figures/fig-014.svg`; original retained.
+> **Read:** A three-leg cycle drawn small with two ledger columns for Q and W whose sums both equal the enclosed area.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-14.excalidraw|900]]
 
 **Fig. 3.4 — A cycle is proved by its column sums, not its final answer.** Work on the legs, ΔU on the legs (ideal gas: a function of PV alone), Q assembled from the two — then the Σ row eithercloses on the area or the script is wrong. Graders read the Σ row first; write it last, in pen.
 
@@ -807,6 +905,13 @@ The isothermal work line deserves its five seconds of derivation — plug $P = n
 
 ![Three small PV panels: an isobar with area shaded as work, an isochore with no area, and an isotherm curve, each tagged with its Q formula](assets/figures/fig-015.svg)
 
+> [!abstract] DIAGRAM D16.15 — Three small PV panels: an isobar with area shaded as work, an isochore with no area, and an isotherm curve, each tagged with its Q formula
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-015.svg`; original retained.
+> **Read:** Three small PV panels: an isobar with area shaded as work, an isochore with no area, and an isotherm curve, each tagged with its Q formula.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-15.excalidraw|900]]
+
 **Fig. 4.2 — Three constraints, three ledgers, one template: Q = ΔU + W.** Nothing about the panels is mnemonic — each right-hand formula is the template with one term zeroed or doubled (isobar: the RΔT work rides on top of ΔU; isochore: no ride; isotherm: ΔU itself is zero). If a student can redraw thesethree boxes from memory in a minute, §4.4’s polytrope fan is already half-understood.
 
 ### 4.3 Adiabats: three laws from one integral
@@ -843,6 +948,13 @@ $$
 
 ![Four curves through one state A on the PV plane: isochore, isobar, isotherm and adiabat, annotated with their slopes; on the right, the same picture with the two expansion areas shaded](assets/figures/fig-016.svg)
 
+> [!abstract] DIAGRAM D16.16 — Four curves through one state A on the PV plane: isochore, isobar, isotherm and adiabat, annotated with their slopes; on the right, the same picture with the two expansion areas shaded
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `thermodynamics/assets/figures/fig-016.svg`; original retained.
+> **Read:** Four curves through one state A on the PV plane: isochore, isobar, isotherm and adiabat, annotated with their slopes; on the right, the same picture with the two expansion areas shaded.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-16.excalidraw|900]]
+
 **Fig. 4.1 — Left: one point, four behaviours. Right: the two bank accounts of the same doubling.** The adiabat is steeper by exactly γ (differentiate both laws at A) — so from any state it dives below the isotherm, and on expansion delivers less work, the difference (here 345 J per mol at 300 K doubling) reappearing as the temperature drop.
 
 ### Worked example 4.1 · The pump that gets hot
@@ -862,6 +974,13 @@ $$
 Read off the family: $n=0$ isobaric ($C_{P}$ ✓), $n=1$ isothermal ($C\to\infty$ — the unlimited-heat-at-fixed-T of a phase change; consistent!), $n=\gamma$ adiabatic ($C=0$ ✓), $n=\infty$ isochoric ($C_{V}$ ✓). Between 1 and γ the term $R/(1-n)$ outruns $C_{V}$ and the capacity turns **negative**: a monatomic gas following $PV^{1.5}=\text{const}$ has $C = \tfrac32R - 2R = -\tfrac12R = -4.16$ J mol⁻¹ K⁻¹ — heat it and it cools (it must also expand, paying out more work than the heat supplied). This is the answer to the question "can $Q>0$ with $\Delta T<0$?" — yes, and it is an exam favourite precisely because the formula, not intuition, is what tells you.
 
 ![A fan of polytropic curves through a common state with n labelled from 0 to infinity, and the negative heat-capacity window shaded](assets/figures/fig-017.svg)
+
+> [!abstract] DIAGRAM D16.17 — A fan of polytropic curves through a common state with n labelled from 0 to infinity, and the negative heat-capacity window shaded
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-017.svg`; original retained.
+> **Read:** A fan of polytropic curves through a common state with n labelled from 0 to infinity, and the negative heat-capacity window shaded.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-17.excalidraw|900]]
 
 **Fig. 4.3 — The fan of polytropes.** Every straight-line-of-thought process lives on this fan; the shaded wedge ($1<n<\gamma$) is where heat and temperature move in *opposite* directions — "heating without warming" is not mysticism, it is the geometry between the isotherm and the adiabat.
 
@@ -962,6 +1081,13 @@ $TV^{n-1} = \text{const}$ with $n = 3/2$ gives $T_{2} = 300\times 8^{-1/2} = 106
 
 ![A long tube with alternating compression and rarefaction bands travelling right from a vibrating piston, labelled as adiabatic slabs with the Laplace speed formula](assets/figures/fig-018.svg)
 
+> [!abstract] DIAGRAM D16.18 — A long tube with alternating compression and rarefaction bands travelling right from a vibrating piston, labelled as adiabatic slabs with the Laplace speed formula
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-018.svg`; original retained.
+> **Read:** A long tube with alternating compression and rarefaction bands travelling right from a vibrating piston, labelled as adiabatic slabs with the Laplace speed formula.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-18.excalidraw|900]]
+
 **Fig. 4.4 — Sound is a string of microscopic Carnot-free adiabats.** The speed ratio √γ = 1.18 is Laplace’s whole correction — and the exam’s whole question: humidity (M down), temperature (v ∝ √T), and mixture γ (paper Q19) are the three knobs on this one formula.
 
 ### 4.6 Chapter summary — the results to own
@@ -1015,6 +1141,13 @@ The first law says you can't win (energy is conserved); this chapter says why yo
 
 ![Two diagrams side by side: an engine with fat inflow, thin work arrow and medium exhaust; and the engine-refrigerator couple that would exist if an over-Carnot engine were real](assets/figures/fig-019.svg)
 
+> [!abstract] DIAGRAM D16.19 — Two diagrams side by side: an engine with fat inflow, thin work arrow and medium exhaust; and the engine-refrigerator couple that would exist if an over-Carnot engine were real
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-019.svg`; original retained.
+> **Read:** Two diagrams side by side: an engine with fat inflow, thin work arrow and medium exhaust; and the engine-refrigerator couple that would exist if an over-Carnot engine were real.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-19.excalidraw|900]]
+
 **Fig. 5.1 — An engine, and the machine that would exist if it overperformed.** Arrow width is watts. The right half is the impossibility argument as a picture: an over-Carnot engine driving a Carnot refrigerator pays for its own exhaust heat *and* profits — a perpetual pump. Since that is nonsense, the over-Carnot engine is nonsense: **Carnot is the ceiling because exceeding it self-contradicts**
 
 ### 5.2 Engines: the efficiency and its one honest computation
@@ -1053,6 +1186,13 @@ $$
 
 ![The Carnot cycle drawn on the PV plane and on the TS plane: a four-leg closed curve with labelled legs on the left, a rectangle whose top and bottom edges are the two isotherms on the right](assets/figures/fig-020.svg)
 
+> [!abstract] DIAGRAM D16.20 — The Carnot cycle drawn on the PV plane and on the TS plane: a four-leg closed curve with labelled legs on the left, a rectangle whose top and bottom edges are the two isotherms on the right
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-020.svg`; original retained.
+> **Read:** The Carnot cycle drawn on the PV plane and on the TS plane: a four-leg closed curve with labelled legs on the left, a rectangle whose top and bottom edges are the two isotherms on the right.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-20.excalidraw|900]]
+
 **Fig. 5.2 — The same cycle, and why one of these drawings is a rectangle.** On PV the legs are curves whose areas you must integrate; on temperature–entropy they are two horizontals and two verticals, and the reading is trivial: the intake is $T_{1}\Delta S$, the exhaust $T_{2}\Delta S$ — one ΔS, shared, because the verticals carry no entropy. The ratio $Q_{2}/Q_{1} = T_{2}/T_{1}$ is then *visible*. Carnot's theorem ("all reversible engines between the same baths are equal") is the claim that this rectangle describes every such cycle; the engine-couple of Fig. 5.1 is its proof.
 
 > **Why both isotherms get the same volume ratio (the miracle in eq. 5.2)**
@@ -1076,6 +1216,13 @@ $$
 Both exceed 1 for mild temperature differences — a freezer lifting 30 K (270 K to 300 K) has ideal $\mathrm{COP}_{r} = 9$: 1 J of work *moves* 9 J of heat; at 150 W of input it removes 1350 W from the ice compartment and dumps 1500 W into your kitchen (check the first law: 1350 + 150 ✓ — kitchen heat comes from inside the fridge *plus* the motor; leaving the door open heats the room). The heat pump's COP ≈ 10 is the whole "electric heating beats a resistance heater by 10×" argument: the resistance heater converts 1 J of work to 1 J of heat; the pump *retrieves* 9 J from the winter ground/air and delivers 10 — the second law only forbids creating the tenth, not borrowing it from outside. A room-temperature difference doubles both; warming from 250 K costs ten times what warming from 270 K costs — why heat-pump economics are location mathematics.
 
 ![Heat pump coefficient of performance versus temperature lift: a steeply falling hyperbola with the 30 kelvin lift point read at 9 and 10 for refrigerator and pump](assets/figures/fig-021.svg)
+
+> [!abstract] DIAGRAM D16.21 — Heat pump coefficient of performance versus temperature lift: a steeply falling hyperbola with the 30 kelvin lift point read at 9 and 10 for refrigerator and pump
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-021.svg`; original retained.
+> **Read:** Heat pump coefficient of performance versus temperature lift: a steeply falling hyperbola with the 30 kelvin lift point read at 9 and 10 for refrigerator and pump.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-21.excalidraw|900]]
 
 **Fig. 5.3 — The two COPs as one hyperbola pair: ΔT, not effort, sets the rate.** A cold snap (lift 30→60 K) halves the machine before a single part wears — which is why heat pumps are rated per climate and why"COP 5" in a brochure quietly assumes a mild 20 K. Read the curve, not the badge.
 
@@ -1184,6 +1331,13 @@ On the T–S rectangle (Fig. 5.2): $Q_{1} = T_{1}\Delta S = 1.6\,T_{2}\times20$;
 
 ![Otto cycle on PV: two steep adiabats and two vertical isochores forming a slanted lens, with the four corner temperatures annotated and the combustion heat as the left gap](assets/figures/fig-022.svg)
 
+> [!abstract] DIAGRAM D16.22 — Otto cycle on PV: two steep adiabats and two vertical isochores forming a slanted lens, with the four corner temperatures annotated and the combustion heat as the left gap
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-022.svg`; original retained.
+> **Read:** Otto cycle on PV: two steep adiabats and two vertical isochores forming a slanted lens, with the four corner temperatures annotated and the combustion heat as the left gap.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-22.excalidraw|900]]
+
 **Fig. 5.4 — Otto: the efficiency that derives itself.** Both heat bills are isochoric, so C_v appears twice and cancels; the remaining ratio is pure adiabatic geometry, r^(γ−1). Compression-ratio arguments that end in "more r, more η" have read the picture — the knock limit is the engine’srefusal of ΔT = +689 K twice over (paper Q29 finishes the temperatures).
 
 ### 5.6 Chapter summary — the results to own
@@ -1246,6 +1400,13 @@ $$
 $$
 
 ![Two routes from A to B on a PV diagram: the reversible curve above and the dashed irreversible straight line below, with the integrals of delta Q over T annotated on each](assets/figures/fig-023.svg)
+
+> [!abstract] DIAGRAM D16.23 — Two routes from A to B on a PV diagram: the reversible curve above and the dashed irreversible straight line below, with the integrals of delta Q over T annotated on each
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-023.svg`; original retained.
+> **Read:** Two routes from A to B on a PV diagram: the reversible curve above and the dashed irreversible straight line below, with the integrals of delta Q over T annotated on each.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-23.excalidraw|900]]
 
 **Fig. 6.1 — Same endpoints, two routes, one ΔS.** The reversible curve is *computed*, the irreversible one is *lived*; only the first carries the integral of δQ/T to its true value. The panel on the right is the entire criterion: judge the universe, never the system alone — a system's entropy can drop all it likes (freezers exist) provided the bill is paid outside.
 
@@ -1344,6 +1505,13 @@ Conduction is the minimal entropy factory. 1200 J walking from a 400 K bath to a
 
 ![Three signed bars: water plus thirteen hundred six, plate minus eleven hundred twenty two, universe plus one hundred eighty four joules per kelvin, summing visibly to zero between the first two](assets/figures/fig-024.svg)
 
+> [!abstract] DIAGRAM D16.24 — Three signed bars: water plus thirteen hundred six, plate minus eleven hundred twenty two, universe plus one hundred eighty four joules per kelvin, summing visibly to zero between the first two
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-024.svg`; original retained.
+> **Read:** Three signed bars: water plus thirteen hundred six, plate minus eleven hundred twenty two, universe plus one hundred eighty four joules per kelvin, summing visibly to zero between the first two.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-24.excalidraw|900]]
+
 **Fig. 6.3 — ex. 6.1 as three bars, and the third is the only non-bookkeeper in the room.** Same shape for every transfer through finite ΔT: the receiver’s log-term outruns the giver’s flat 1/T division by exactly the entropy creation (paper Q7 is the two-reservoir limit of this figure with the bars shrunk to arithmetic).
 
 ### 6.4 Counting: S = k ln W and why the numbers agree
@@ -1357,6 +1525,13 @@ Conduction is the minimal entropy factory. 1200 J walking from a 400 K bath to a
 >  The bridge between "number of ways" and "joules per kelvin" — logarithm because W multiplies over independent parts while S adds; k because a mole's ln W already carries Avogadro's factor. It is not an alternative definition to eq. 6.2; the demand that they agree is what *fixes* the constant k and the whole gas scale of chapter 1.
 
 ![A box split in two with particles distributed left versus right; below it the binomial width of the macrostate count peaked at equal halves, annotated that a full mole sitting in one half is two to the Avogadro times less likely](assets/figures/fig-025.svg)
+
+> [!abstract] DIAGRAM D16.25 — A box split in two with particles distributed left versus right; below it the binomial width of the macrostate count peaked at equal halves, annotated that a full mole sitting in one half is two to the Avogadro times less likely
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-025.svg`; original retained.
+> **Read:** A box split in two with particles distributed left versus right; below it the binomial width of the macrostate count peaked at equal halves, annotated that a full mole sitting in one half is two to the Avogadro times less likely.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-25.excalidraw|900]]
 
 **Fig. 6.2 — The free expansion, counted.** Doubling the volume doubles each molecule's W, so $\Delta S = Nk\ln 2 = nR\ln 2$ — eq. 6.4 and eq. 6.5 agreeing exactly for the same event. The un-run probability is not "small", it is $e^{-10^{23}}$: the second law is statistics with the decimal point of a mole behind it — which is *why* it never fails, and *why* it is the only law of physics that is true "almost surely" rather than surely.
 
@@ -1393,6 +1568,13 @@ Conduction is the minimal entropy factory. 1200 J walking from a 400 K bath to a
 </details>
 
 ![The mixing entropy hump versus mole fraction, zero at both ends and peaking at nR ln 2 at the halfway point, annotated as the toll booth for distinguishability](assets/figures/fig-026.svg)
+
+> [!abstract] DIAGRAM D16.26 — The mixing entropy hump versus mole fraction, zero at both ends and peaking at nR ln 2 at the halfway point, annotated as the toll booth for distinguishability
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-026.svg`; original retained.
+> **Read:** The mixing entropy hump versus mole fraction, zero at both ends and peaking at nR ln 2 at the halfway point, annotated as the toll booth for distinguishability.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-26.excalidraw|900]]
 
 **Fig. 6.4 — Mixing entropy is a toll, and the toll is charged only at the booth of distinguishability.** Real (paper Q7’s He+Ar): n R·0.693 = 11.5 J K⁻¹ per mole-pair, refundable only as the same 3.5 k J of osmotic work at 300 K. The same curve with a label swap is the entropy of a binary alloy, the information of a biased coin, and the free energy of a concentration cell — one function, four subjects (paper Q7’s unmixing bill).
 
@@ -1451,6 +1633,13 @@ Chapters 1–6 are the JEE engine; this chapter is what NSEP/INPhO add on top �
 
 ![Heat capacity of hydrogen versus temperature on a log axis: a staircase from 3R/2 through 5R/2 to 7R/2 with the rotation and vibration onset temperatures marked](assets/figures/fig-027.svg)
 
+> [!abstract] DIAGRAM D16.27 — Heat capacity of hydrogen versus temperature on a log axis: a staircase from 3R/2 through 5R/2 to 7R/2 with the rotation and vibration onset temperatures marked
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-027.svg`; original retained.
+> **Read:** Heat capacity of hydrogen versus temperature on a log axis: a staircase from 3R/2 through 5R/2 to 7R/2 with the rotation and vibration onset temperatures marked.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-27.excalidraw|900]]
+
 **Fig. 7.1 — Staircase of heat capacity for H₂.** Each tread is equipartition counting f active terms; each riser is a quantum gap losing the race with $kT$. The exam-use version: quote γ only after deciding which modes are awake (CO₂ at 300 K has rotation up, vibration nearly off ⇒ γ≈1.3; at 3000 K it softens toward 1.2).
 
 ### 7.2 The distribution, and the faster-than-fast leak
@@ -1503,6 +1692,13 @@ Isothermal air: $H = 8.314\times288/(0.029\times9.8) = 8.4$ km — the scale hei
 
 ![Left: pressure versus height curves for isothermal and adiabatic atmospheres, both starting at P0; right: the temperature profile falling linearly at the dry adiabatic lapse rate, with the real troposphere marked cooler than straight extrapolation at altitude](assets/figures/fig-028.svg)
 
+> [!abstract] DIAGRAM D16.28 — Left: pressure versus height curves for isothermal and adiabatic atmospheres, both starting at P0; right: the temperature profile falling linearly at the dry adiabatic lapse rate, with the real troposphere marked cooler than straight extrapolation at altitude
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-028.svg`; original retained.
+> **Read:** Left: pressure versus height curves for isothermal and adiabatic atmospheres, both starting at P0; right: the temperature profile falling linearly at the dry adiabatic lapse rate, with the real troposphere marked cooler than straight extrapolation at altitude.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-28.excalidraw|900]]
+
 **Fig. 7.2 — Same hydrostatics, two thermodynamics, two skies.** The profiles are a *choice of process* for the vertical gas column: the exam asks which assumption fits ("a tall isothermal lab column" vs "a weather balloon"), and the answers differ in sign for $dT/dh$ — 0 vs −9.8 K/km — and in the fate of the adiabatic model, which truncates the atmosphere at 30.6 km because a linear T must cross zero.
 
 ### 7.4 Real gases: van der Waals, criticality, and the throttle
@@ -1518,6 +1714,13 @@ $$
 > Above $T_{c}$ every isotherm is strictly decreasing; below, a van der Waals isotherm develops a liquid–vapour loop where $\partial P/\partial V > 0$ is thermodynamically forbidden (unstable), and the real fluid cuts it off at equal areas (Maxwell construction: the two lobes balance because the two phases coexist at one P, one T). The critical isotherm is the borderline case: it *just* touches — both $\partial P/\partial V = 0$ and $\partial^{2}P/\partial V^{2} = 0$ at one point. Enforce those two conditions on eq. 7.4 and solve: $V_{c} = 3b$, $T_{c} = 8a/27Rb$, $P_{c} = a/27b^{2}$ — and their ratio $Z_{c} = P_{c}V_{c}/RT_{c} = 3/8$ for *every* van der Waals gas. Real fluids cluster near 0.2–0.3 (water 0.23), which is the honest quote: the model gets CO₂'s $T_{c} = 304$ K and $P_{c} = 73.9$ bar dead right because a,b were fitted near there, and its critical compressibility is the one number that never matches perfectly.
 
 ![PV diagram of van der Waals isotherms: supercritical curve, a loop below Tc with the Maxwell tie line and equal lobes shaded, the critical isotherm flat-inflecting at the marked critical point, and the coexistence dome](assets/figures/fig-029.svg)
+
+> [!abstract] DIAGRAM D16.29 — PV diagram of van der Waals isotherms: supercritical curve, a loop below Tc with the Maxwell tie line and equal lobes shaded, the critical isotherm flat-inflecting at the marked critical point, and the coexistence dome
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-029.svg`; original retained.
+> **Read:** PV diagram of van der Waals isotherms: supercritical curve, a loop below Tc with the Maxwell tie line and equal lobes shaded, the critical isotherm flat-inflecting at the marked critical point, and the coexistence dome.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-29.excalidraw|900]]
 
 **Fig. 7.3 — One isotherm loop, one flat inflection.** The dome (dotted) is the locus of the tie-line ends; the critical isotherm's zero-slope-zero-curvature touch is *the* derivation of the three critical constants above. Liquefaction routes you can now name: cool below T_c, or compress along a sub-critical isotherm until you hit the tie line — and He, with T_c ≈ 5 K, cannot be "compressed into liquid at room temperature" at any pressure, because it never crosses its own dome.
 
@@ -1552,6 +1755,13 @@ $$
 </details>
 
 ![Joule-Thomson inversion plot: a parabolic banana in temperature-pressure space, with nitrogen inside the cooling region and hydrogen outside in the warming region](assets/figures/fig-030.svg)
+
+> [!abstract] DIAGRAM D16.30 — Joule-Thomson inversion plot: a parabolic banana in temperature-pressure space, with nitrogen inside the cooling region and hydrogen outside in the warming region
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-030.svg`; original retained.
+> **Read:** Joule-Thomson inversion plot: a parabolic banana in temperature-pressure space, with nitrogen inside the cooling region and hydrogen outside in the warming region.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-30.excalidraw|900]]
 
 **Fig. 7.4 — The inversion curve is the map; throttling is the vehicle.** Below the curve’s maximum temperature *and inside its P-wings*, an isenthalpic step goes down in T. The vdW estimate $T_{i} = 2a/Rb$ gets N₂ a touch high (850 vs 620) and H₂ nearly right (221 vs 202) — and one number’s error is another’s refrigerator: whatever is inside the wings at ambient can be Linde-liquefied by its own loop; H₂ and He need a jacket (the question the exam asks in one line).
 
@@ -1653,6 +1863,13 @@ Chapters 1–7 are physics; this one is exam physics — the layer that decides 
 Thermodynamics questions are few models wearing many costumes. Read the first sentence and sort it:
 
 ![Triage map: a question stem branches into cycle, state-change, transfer, or estimate models, each with its first written line and its check step](assets/figures/fig-031.svg)
+
+> [!abstract] DIAGRAM D16.31 — Triage map: a question stem branches into cycle, state-change, transfer, or estimate models, each with its first written line and its check step
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-031.svg`; original retained.
+> **Read:** Triage map: a question stem branches into cycle, state-change, transfer, or estimate models, each with its first written line and its check step.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-31.excalidraw|900]]
 
 **Fig. 8.1 — The first ninety seconds.** Classify before you compute; the class dictates the *first written line*, and the first written line dictates the check. In JEE MCQs, mis-triage (running a cycle as one long state change) is worth more wrong answers than any algebra slip.
 
@@ -1811,9 +2028,23 @@ The mark scheme's rhythm for a long answer: *model → table → formula → ari
 
 ![Two panels: left, a PV diagram with a triangle-like cycle whose interior is shaded and labelled net work; right, the same cycle on a TS diagram with its interior shaded and labelled net heat, both closed loops traced in accent colour](assets/figures/fig-032.svg)
 
+> [!abstract] DIAGRAM D16.32 — Two panels: left, a PV diagram with a triangle-like cycle whose interior is shaded and labelled net work; right, the same cycle on a TS diagram with its interior shaded and labelled net heat, both closed loops traced in accent colour
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-032.svg`; original retained.
+> **Read:** Two panels: left, a PV diagram with a triangle-like cycle whose interior is shaded and labelled net work; right, the same cycle on a TS diagram with its interior shaded and labelled net heat, both closed loops traced in accent colour.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-32.excalidraw|900]]
+
 **Fig. 8.2 — One cycle, two account books.** The PV interior is work; the TS interior is net heat — and they must match (ΔU over a cycle is zero), so drawing both *is* the check. Note how the entropy-axis order of the legs (steeper 3.5R vs shallower 4.5R log curves) is Trap 6 visible in geometry: on a TS diagram, isobars are always gentler than isochores because $C_{P} > C_{V}$.
 
 ![A room rectangle containing an open fridge with equal opposing internal arrows, and one crossing arrow through the wall from the power cord which is the only bookable energy flow](assets/figures/fig-033.svg)
+
+> [!abstract] DIAGRAM D16.33 — A room rectangle containing an open fridge with equal opposing internal arrows, and one crossing arrow through the wall from the power cord which is the only bookable energy flow
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-033.svg`; original retained.
+> **Read:** A room rectangle containing an open fridge with equal opposing internal arrows, and one crossing arrow through the wall from the power cord which is the only bookable energy flow.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-33.excalidraw|900]]
 
 **Fig. 8.4 — Ex. 8.1’s one-line method, drawn once so it never needs re-learning.** Crossings beat contents. The brand of machine inside an insulated boundary is a rounding error on the boundary’s ledger — the same theorem the calorimeter cup teaches at gram scale, here with a compressor.
 
@@ -1840,6 +2071,13 @@ The mark scheme's rhythm for a long answer: *model → table → formula → ari
  **Check.** Carnot between the extremes (600/300) caps η at 50% — 7% is legal, and its meagreness is informative: 12 885 J of the 13 849 absorbed leaves again on the isobar, so this engine trades almost only on its isothermal leg. Clausius audit: every leg here is reversible, so $\oint dQ/T = 0$ — which is exactly the ΔS column closing (20.19+5.76−25.95 = 0); a cycle whose ΔS column doesn't sum to zero has an arithmetic error or an irreversible leg, and neither answer is submittable. Final mark-scheme line: "loop area on TS (fig. 8.2 right) = 964 J = PV area ✓ — two diagrams, one engine."
 
 ![Efficiency honesty ladder: bars for the three-leg engine, Otto, Carnot and the temperature-extremes ceiling, each compared to the next by hand-written ratios](assets/figures/fig-034.svg)
+
+> [!abstract] DIAGRAM D16.34 — Efficiency honesty ladder: bars for the three-leg engine, Otto, Carnot and the temperature-extremes ceiling, each compared to the next by hand-written ratios
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `thermodynamics/assets/figures/fig-034.svg`; original retained.
+> **Read:** Efficiency honesty ladder: bars for the three-leg engine, Otto, Carnot and the temperature-extremes ceiling, each compared to the next by hand-written ratios.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-34.excalidraw|900]]
 
 **Fig. 8.3 — The honesty ladder.** Every η you compute must sit on or below its own T₂/T₁ bar; if it doesn't, the error is arithmetic (Trap 4/5), not new physics. Ex. 8.2's 7% vs Otto's 56% at identical temperature extremes is why the exam loves "which cycle and why."
 
@@ -1959,6 +2197,13 @@ Thirty-six questions, four sections, three hours. Every section of chapters 1–
 ### **Q9** [3] The cycle of Fig. 9.1 (P in kPa, V in L) is traversed A→B→C→A. The net work done by the gas, and the circulation sense, are
 
 ![PV triangle with vertices A at V 6 L and P 150 kPa, B at 6 L and 300 kPa, C at 12 L and 300 kPa](assets/figures/fig-035.svg)
+
+> [!abstract] DIAGRAM D16.35 — PV triangle with vertices A at V 6 L and P 150 kPa, B at 6 L and 300 kPa, C at 12 L and 300 kPa
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `thermodynamics/assets/figures/fig-035.svg`; original retained.
+> **Read:** PV triangle with vertices A at V 6 L and P 150 kPa, B at 6 L and 300 kPa, C at 12 L and 300 kPa.
+
+![[../_obsidian/excalidraw/thermodynamics-D16-35.excalidraw|900]]
 
 **Fig. 9.1 — The Q9 cycle.** A(6 L, 150 kPa) → B(6 L, 300) → C(12 L, 300) → back to A in a straight line.
 

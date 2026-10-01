@@ -1,5 +1,7 @@
 # Photons, Photoelectric Effect & Matter Waves — first principles to Olympiad
 
+> **Native diagram companions:** 13 editable Excalidraw scenes accompany the DIAGRAM briefs in `Photoelectric-effect.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py photoelectric-effect`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] Part 23 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** The quantum of light and the wave of matter: the blackbody crisis, the five photoelectric

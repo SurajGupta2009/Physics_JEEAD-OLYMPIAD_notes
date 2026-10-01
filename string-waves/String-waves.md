@@ -21,6 +21,13 @@ A complete, proof-first treatment of transverse mechanical waves, string dynamic
 
 ![Curved string element under tension](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D14.1 — Curved string element under tension
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `string-waves/assets/figures/fig-001.svg`; original retained.
+> **Read:** Curved string element under tension.
+
+![[../_obsidian/excalidraw/string-waves-D14-1.excalidraw|900]]
+
 **The core dynamical engine in one picture.** A pulse does not transport mass along the string; it transports transverse momentum and elastic potential energy. As curvature $\frac{\partial^2 y}{\partial x^2}$ develops, the tension vectors at the two ends no longer cancel, creating a net transverse restoring force that accelerates the mass element $dm = \mu \, dx$. That exact balance between inertial mass $\mu$ and restoring elasticity $T$ dictates the invariant propagation velocity $v = \sqrt{T/\mu}$.
 
 ---
@@ -347,6 +354,13 @@ When a traveling wave pulse encounters a discontinuity or termination, boundary 
 
 ![Reflection at fixed and free boundaries](assets/figures/fig-002.svg)
 
+> [!abstract] DIAGRAM D14.2 — Reflection at fixed and free boundaries
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `string-waves/assets/figures/fig-002.svg`; original retained.
+> **Read:** Reflection at fixed and free boundaries.
+
+![[../_obsidian/excalidraw/string-waves-D14-2.excalidraw|900]]
+
 ### 5.1 Reflection at a Fixed End (Rigid Termination)
 At a fixed boundary (e.g. string clamped rigidly to a massive wall at $x = 0$):
 $$\left. y(x,t) \right|_{x=0} = 0 \quad \text{for all } t$$
@@ -474,6 +488,13 @@ This is the standard equation of a **Stationary / Standing Wave**.
 
 ![Standing wave normal modes](assets/figures/fig-003.svg)
 
+> [!abstract] DIAGRAM D14.3 — Standing wave normal modes
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `string-waves/assets/figures/fig-003.svg`; original retained.
+> **Read:** Standing wave normal modes.
+
+![[../_obsidian/excalidraw/string-waves-D14-3.excalidraw|900]]
+
 Let a string of length $L$ be clamped rigidly at $x = 0$ and $x = L$.
 - Boundary Condition 1: $y(0,t) = 0 \implies$ satisfies $y = [2A \sin(kx)] \cos(\omega t)$.
 - Boundary Condition 2: $y(L,t) = 0$:
@@ -568,6 +589,13 @@ $$\nu_{\text{fork}} = 2 \times \left(\frac{p}{2L}\sqrt{\frac{T}{\mu}}\right) = \
 ### 7.1 Wave Propagation in a Heavy Hanging Rope under Gravity
 
 ![Hanging rope dynamics under gravity](assets/figures/fig-004.svg)
+
+> [!abstract] DIAGRAM D14.4 — Hanging rope dynamics under gravity
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `string-waves/assets/figures/fig-004.svg`; original retained.
+> **Read:** Hanging rope dynamics under gravity.
+
+![[../_obsidian/excalidraw/string-waves-D14-4.excalidraw|900]]
 
 Consider a uniform rope of total mass $M$, length $L$, and linear mass density $\mu = M/L$ suspended vertically from a rigid ceiling under the influence of gravity $g$.
 

@@ -1,5 +1,7 @@
 # X-rays, Moseley's Law, Bragg Diffraction & the Compton Effect — first principles to Olympiad
 
+> **Native diagram companions:** 13 editable Excalidraw scenes accompany the DIAGRAM briefs in `X-rays.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py x-rays`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] Part 25 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** Photon physics at keV energies: the Coolidge tube and its one-percent efficiency; the

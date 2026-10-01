@@ -125,11 +125,17 @@ In a metal the carrier count is fixed, so rising temperature only raises the col
 > *Show:* a horizontal log axis from 10 to the minus 8 to 10 to the 22 ohm-metre; three labelled bands (conductors, semiconductors, insulators); real materials pinned at their values (copper, silicon intrinsic, germanium, glass, quartz).
 > *Search:* "resistivity ranges conductors semiconductors insulators log scale"
 > *Used in:* §3.1.
+> **Companion:** native editable scene `semiconductors-D27-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-1.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.2 · Resistance against temperature, three curves
 > *Show:* R against T for a metal (rising line), an intrinsic semiconductor (falling exponential), and an NTC thermistor (steeper fall); each annotated with its mechanism.
 > *Search:* "resistance temperature metal semiconductor thermistor curves"
 > *Used in:* §3.1.
+> **Companion:** native editable scene `semiconductors-D27-2.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-2.excalidraw|900]]
 
 ### 3.2 Bands, and why a filled band cannot conduct
 
@@ -141,6 +147,9 @@ Gap sizes decide everything: diamond 5.5 eV (nothing jumps at 300 K — $kT=0.02
 > *Show:* metal: overlapping or half-filled band; insulator: full valence band, 5 eV gap, empty conduction band; semiconductor: same but a 1 eV gap with a few electrons promoted and holes marked below; gaps labelled in eV.
 > *Search:* "band diagram metal insulator semiconductor comparison"
 > *Used in:* §3.2.
+> **Companion:** native editable scene `semiconductors-D27-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-3.excalidraw|900]]
 
 > [!tip] FIGURE F27.2 · The band gap is the whole device
 > *Why:* every device property — conduction, the exponential diode, colours of LEDs — is a gap value; the figure makes the gap the protagonist.
@@ -191,11 +200,17 @@ Pure silicon is a poor conductor by everyday standards — about $10^{22}$ worse
 > *Show:* a band gap with an electron promoted up (arrow up, photon or phonon label) leaving a hole, and an electron falling back (arrow down) with recombination; equilibrium captioned as equal rates.
 > *Search:* "electron hole pair generation recombination band diagram"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `semiconductors-D27-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-4.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.5 · A hole moves by bond-swapping
 > *Show:* a silicon lattice row; a hole (empty bond) at one site; a neighbouring valence electron stepping into it; the hole apparently stepping the other way; three frames of the swap making the vacancy travel right while electrons travel left.
 > *Search:* "hole conduction bond model semiconductor animation frames"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `semiconductors-D27-5.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-5.excalidraw|900]]
 
 ### 3.4 Doping, neutrality and the mass-action law
 
@@ -221,11 +236,17 @@ which survives doping because generation-recombination equilibrium still holds: 
 > *Show:* two panels of the silicon lattice: one site swapped to a pentavalent phosphorus with its fifth electron marked loosely bound and a free-electron arrow; another swapped to trivalent boron with an empty bond marked as a hole.
 > *Search:* "n-type p-type doping silicon lattice diagram phosphorus boron"
 > *Used in:* §3.4.
+> **Companion:** native editable scene `semiconductors-D27-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-6.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.7 · The giant donor orbit
 > *Show:* the donor ion at the centre with the electron's Bohr-like orbit of radius 2.4 nm drawn over the 0.54 nm lattice cell, spanning many cells; an energy inset comparing E-d = 26 meV below the conduction band against the 1.1 eV gap.
 > *Search:* "donor electron hydrogenic orbit effective mass semiconductor"
 > *Used in:* §3.4, OL1.
+> **Companion:** native editable scene `semiconductors-D27-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-7.excalidraw|900]]
 
 ### 3.5 Transport: drift, mobility and conductivity
 
@@ -245,6 +266,9 @@ Join n-type to p-type. Majority carriers near the interface diffuse across — e
 > *Show:* the junction vertical; left side n-type with fixed positive donor ions, right p-type with fixed negative acceptor ions; field arrows pointing right-to-left across the depleted strip; the potential hill rising from p to n labelled about 0.7 V; mobile carriers absent inside.
 > *Search:* "p-n junction depletion region fixed ions field potential diagram"
 > *Used in:* §3.6.
+> **Companion:** native editable scene `semiconductors-D27-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-8.excalidraw|900]]
 
 > [!tip] FIGURE F27.3 · The p-n junction: diffusion, drift, and the potential hill
 > *Why:* the whole diode is one sentence — diffusion current meets the drift current it creates, at the hill $V_0$.
@@ -266,6 +290,9 @@ flowchart LR
 > *Show:* three graphs stacked with a common x-axis across the junction: fixed charge density as two rectangles of opposite sign; electric field as a triangle peaking at the junction; potential as a smooth S-shaped hill; widths and peaks aligned between the three.
 > *Search:* "pn junction charge field potential profiles aligned graphs"
 > *Used in:* §3.6, OL3.
+> **Companion:** native editable scene `semiconductors-D27-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-9.excalidraw|900]]
 
 Bias the junction: forward (p positive) lowers the hill to $V_0-V$ and diffusion floods through — current grows exponentially. Reverse raises the hill to $V_0+V$; only thermally generated minority carriers can be swept across, giving the tiny saturation current $I_0$. The depletion width grows with reverse voltage as $W\propto\sqrt{V_0+V}$ (OL3), and the junction acts as a capacitor whose value falls as $V^{-1/2}$.
 
@@ -283,6 +310,9 @@ Two consequences define diode practice. First, the knee: at $V\approx0.6$ V the 
 > *Show:* I against V: forward exponential rising at 0.6-0.7 V with a decade-per-60 mV annotation; reverse saturation current near zero; breakdown knee at negative V labelled Zener/avalanche; knee and V-T marked.
 > *Search:* "diode IV curve knee breakdown zener annotated"
 > *Used in:* §3.7.
+> **Companion:** native editable scene `semiconductors-D27-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-10.excalidraw|900]]
 
 > [!tip] FIGURE F27.4 · The diode equation: 60 mV per decade
 > *Why:* the knee and the decade rule are the same exponential, read at two zooms — the figure names both.
@@ -312,11 +342,17 @@ At $I=100$ mA, $f=50$ Hz, $C=1000\ \mu$F: $\Delta V=1.0$ V — the arithmetic of
 > *Show:* sine input; the half-wave output with gaps; a capacitor-smoothed trace with sawtooth ripple labelled delta-V; the discharge slope annotated I over C.
 > *Search:* "half wave rectifier capacitor ripple waveform"
 > *Used in:* §3.8.
+> **Companion:** native editable scene `semiconductors-D27-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-11.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.12 · The full-wave bridge
 > *Show:* four diodes in the bridge diamond with the AC source and load; below, input sine and full-wave output (all humps positive); the current path drawn for each half-cycle in two small panels.
 > *Search:* "bridge rectifier full wave diagram current paths"
 > *Used in:* §3.8.
+> **Companion:** native editable scene `semiconductors-D27-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-12.excalidraw|900]]
 
 ### 3.9 Regulation, light and detection
 
@@ -334,16 +370,25 @@ The LED is a forward-biased junction whose recombinations emit photons: $\lambda
 > *Show:* input source, series resistor, node splitting to the load resistor and the reverse Zener to ground; currents labelled I-R, I-L, I-Z; the output clamped at V-Z; a note showing the worst-case choices.
 > *Search:* "zener voltage regulator circuit series resistor load"
 > *Used in:* §3.9.
+> **Companion:** native editable scene `semiconductors-D27-13.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-13.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.14 · Colour versus gap
 > *Show:* a horizontal wavelength strip from red to violet with LED materials pinned at their gaps: GaAsP at 1.9 eV red, GaP at 2.26 eV green, InGaN at 2.6 eV blue, GaN at 3.4 eV ultraviolet; the 1240 over E-g relation captioned.
 > *Search:* "LED color bandgap wavelength materials chart"
 > *Used in:* §3.9.
+> **Companion:** native editable scene `semiconductors-D27-14.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-14.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.15 · The junction as photodiode and solar cell
 > *Show:* two panels of the same reverse-looking junction: photodiode, photons creating pairs swept by the field into a meter current; solar cell, the same pairs driving a load with no battery, the I-V curve shifted into the power quadrant.
 > *Search:* "photodiode solar cell pn junction operation comparison"
 > *Used in:* §3.9.
+> **Companion:** native editable scene `semiconductors-D27-15.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-15.excalidraw|900]]
 
 ### 3.10 The bipolar transistor
 
@@ -363,11 +408,17 @@ Common-emitter amplifier: a load resistor in the collector and the load line $V_
 > *Show:* the three regions with doping labels and widths (base drawn thin); I-E arrow in, I-C arrow out through the reverse-biased collector junction, the thin I-B recombination arrow; biasing batteries shown with polarities.
 > *Search:* "npn transistor structure emitter base collector currents diagram"
 > *Used in:* §3.10.
+> **Companion:** native editable scene `semiconductors-D27-16.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-16.excalidraw|900]]
 
 > [!abstract] DIAGRAM D27.17 · Load line and switch
 > *Show:* left panel: output characteristics with the load line from V-CC to V-CC over R-C, Q-point marked, an input swing producing an inverted output swing; right panel: the switch circuit with a lamp load, base resistor, saturation point labelled V-CE about 0.2 V.
 > *Search:* "common emitter load line transistor switch diagram"
 > *Used in:* §3.11.
+> **Companion:** native editable scene `semiconductors-D27-17.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-17.excalidraw|900]]
 
 ### 3.12 Logic gates
 
@@ -383,6 +434,9 @@ NAND (and NOR) are universal: any logic follows from NANDs alone. The half adder
 > *Show:* the six gate symbols with two-line truth tables each; then the half adder: XOR and AND gates sharing inputs A and B, outputs S and C, with the four-row table verifying the sums.
 > *Search:* "logic gates symbols truth tables half adder circuit"
 > *Used in:* §3.12.
+> **Companion:** native editable scene `semiconductors-D27-18.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/semiconductors-D27-18.excalidraw|900]]
 
 ### 3.13 Integration and its wall
 

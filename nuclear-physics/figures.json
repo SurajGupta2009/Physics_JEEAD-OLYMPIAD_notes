@@ -2,35 +2,207 @@
   "slug": "nuclear-physics",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F26.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F26.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "the chapter is one negotiation: the drop term versus the Coulomb tax",
       "data": "the Part 0-14 structure",
       "read": "every result is a difference of binding energies, an exponential, or a momentum share",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F26.2", "kind": "flowchart", "title": "The binding-energy curve: everything climbs toward iron",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F26.2",
+      "kind": "flowchart",
+      "title": "The binding-energy curve: everything climbs toward iron",
       "why": "the curve is the chapter's decision-maker: moving nucleons up it releases energy",
       "data": "B/A vs A: H-2 1.1, He-4 7.1, Fe-56 8.8, U-238 7.6 MeV/nucleon",
       "read": "fusion climbs the left slope and fission the right, both toward iron",
-      "source": "DIAGRAM D26.3 (§3.3-3.4)" },
-    { "id": "F26.3", "kind": "flowchart", "title": "The mass defect is the binding energy",
+      "source": "DIAGRAM D26.3 (§3.3-3.4)"
+    },
+    {
+      "id": "F26.3",
+      "kind": "flowchart",
+      "title": "The mass defect is the binding energy",
       "why": "half of nuclear problems are mass-defect arithmetic in disguise",
       "data": "B = (Z mp + N mn - m_nucleus) c²",
       "read": "the nucleus is lighter than its parts; the missing mass is the dismantling energy",
-      "source": "DIAGRAM D26.4 (§3.3)" },
-    { "id": "F26.4", "kind": "flowchart", "title": "Exponential decay and its log-linear twin",
+      "source": "DIAGRAM D26.4 (§3.3)"
+    },
+    {
+      "id": "F26.4",
+      "kind": "flowchart",
+      "title": "Exponential decay and its log-linear twin",
       "why": "the same law is a halving staircase in N and a straight line in ln N",
       "data": "N = N0 e^(-λt): after 1/2/3/4 half-lives the fraction is 1/2, 1/4, 1/8, 1/16",
       "read": "each half-life halves what remains; the log-linear slope is -λ",
-      "source": "DIAGRAM D26.10 (§3.9)" },
-    { "id": "F26.5", "kind": "flowchart", "title": "The carbon-dating clock and its limits",
+      "source": "DIAGRAM D26.10 (§3.9)"
+    },
+    {
+      "id": "F26.5",
+      "kind": "flowchart",
+      "title": "The carbon-dating clock and its limits",
       "why": "the same half-life that makes dating work also caps its range",
       "data": "t = (T½/ln2) ln(A0/A), T½ = 5730 y, range a few hundred to ~50 ka",
       "read": "the clock runs from the moment exchange stops; tree rings correct the ratio",
-      "source": "DIAGRAM D26.13 (§3.11)" },
-    { "id": "F26.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D26.13 (§3.11)"
+    },
+    {
+      "id": "F26.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the seven triage branches of §9.1",
       "read": "masses to Q-values, time to half-life, chains name their equilibrium first",
-      "source": "§9.1 Triage decision tree" }
-  ]
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D26.1",
+      "kind": "excalidraw",
+      "title": "The nucleus as a force balance",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"nuclear force saturation Coulomb repulsion nucleus diagram\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-1.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.1 brief"
+    },
+    {
+      "id": "D26.2",
+      "kind": "excalidraw",
+      "title": "R against A to the one-third",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"nuclear radius A to the one third straight line electron scattering\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-2.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.2 brief"
+    },
+    {
+      "id": "D26.4",
+      "kind": "excalidraw",
+      "title": "The mass defect on a balance",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"mass defect binding energy balance scale diagram\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-4.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.4 brief"
+    },
+    {
+      "id": "D26.5",
+      "kind": "excalidraw",
+      "title": "The five terms as a bar chart",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"semi empirical mass formula terms bar chart liquid drop\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-5.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.5 brief"
+    },
+    {
+      "id": "D26.6",
+      "kind": "excalidraw",
+      "title": "The valley of stability",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"valley of stability chart of nuclides beta decay directions\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-6.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.6 brief"
+    },
+    {
+      "id": "D26.7",
+      "kind": "excalidraw",
+      "title": "Alpha decay's level diagram and momentum split",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"alpha decay energy level diagram fine structure gamma\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-7.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.7 brief"
+    },
+    {
+      "id": "D26.8",
+      "kind": "excalidraw",
+      "title": "The three decays in matter and in a field",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"alpha beta gamma penetration magnetic deflection comparison\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-8.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.8 brief"
+    },
+    {
+      "id": "D26.9",
+      "kind": "excalidraw",
+      "title": "The beta spectrum",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"beta decay continuous spectrum endpoint energy neutrino\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-9.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.9 brief"
+    },
+    {
+      "id": "D26.11",
+      "kind": "excalidraw",
+      "title": "Two-step chain activities in the two regimes",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"radioactive equilibrium secular transient daughter activity curve\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-11.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.11 brief"
+    },
+    {
+      "id": "D26.12",
+      "kind": "excalidraw",
+      "title": "A decay chain on the nuclide chart",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"uranium decay series chart of nuclides zigzag alpha beta\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-12.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.12 brief"
+    },
+    {
+      "id": "D26.13",
+      "kind": "excalidraw",
+      "title": "The carbon-dating curve with its limits",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"carbon dating decay curve range limit calibration\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-13.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.13 brief"
+    },
+    {
+      "id": "D26.14",
+      "kind": "excalidraw",
+      "title": "Three generations at three values of k",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"chain reaction multiplication factor k diagrams\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-14.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.14 brief"
+    },
+    {
+      "id": "D26.15",
+      "kind": "excalidraw",
+      "title": "The reactor component stack",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"nuclear reactor diagram components moderator control rods coolant\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-15.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.15 brief"
+    },
+    {
+      "id": "D26.16",
+      "kind": "excalidraw",
+      "title": "The Coulomb barrier with the Gamow window",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Coulomb barrier tunneling Gamow peak fusion diagram\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-16.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.16 brief"
+    },
+    {
+      "id": "D26.17",
+      "kind": "excalidraw",
+      "title": "The p-p chain ladder",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"proton proton chain reactions diagram solar fusion\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-17.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.17 brief"
+    },
+    {
+      "id": "D26.18",
+      "kind": "excalidraw",
+      "title": "Cloud chamber tracks of the three radiations",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"cloud chamber alpha beta tracks photograph\"",
+      "file": "_obsidian/excalidraw/nuclear-physics-D26-18.excalidraw.md",
+      "source": "nuclear-physics/Nuclear-physics.md · D26.18 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D26 series); scenes drawn from briefs, not converted from SVG."
 }

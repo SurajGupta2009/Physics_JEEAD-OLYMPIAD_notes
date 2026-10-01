@@ -1,0 +1,268 @@
+{
+  "slug": "emi-ac",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F20.1",
+      "kind": "mermaid",
+      "title": "The module in one picture",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.2",
+      "kind": "mermaid",
+      "title": "The sign protocol for an induced EMF",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.3",
+      "kind": "mermaid",
+      "title": "The rod on rails: coasting and driven",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.4",
+      "kind": "mermaid",
+      "title": "The induced electric field of a changing solenoid",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.5",
+      "kind": "mermaid",
+      "title": "The RL transient",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.6",
+      "kind": "mermaid",
+      "title": "The energy exchange in an LC circuit",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.7",
+      "kind": "mermaid",
+      "title": "A sinusoid and its square",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.8",
+      "kind": "mermaid",
+      "title": "Resonance curves for three values of $Q$",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.9",
+      "kind": "mermaid",
+      "title": "How the chapter's systems map onto one another",
+      "source": "emi-ac/Emi-ac.md"
+    },
+    {
+      "id": "F20.10",
+      "kind": "mermaid",
+      "title": "Triage for an induction, inductance or AC question",
+      "source": "emi-ac/Emi-ac.md"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D20.1",
+      "kind": "excalidraw",
+      "title": "Flux through a tilted loop",
+      "show": "uniform field lines crossing a flat loop tilted by $\\theta$, the chosen normal $\\hat{\\mathbf n}$ drawn with the right-hand rule's fingers around the loop, the projected area $A\\cos\\theta$ shaded; three insets: face-on ($\\Phi=BA$), edge-on ($0$), reversed ($-BA$).",
+      "search": "\"magnetic flux through tilted loop normal vector right hand rule sign\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-1.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.1"
+    },
+    {
+      "id": "D20.2",
+      "kind": "excalidraw",
+      "title": "The four experiments",
+      "show": "four panels with a coil and a galvanometer: a bar magnet moving into the coil (needle deflects one way), out (the other way), a second coil with a switch being closed (a flick), and a loop being rotated in a field; in each the change of flux and the direction of the induced current are marked with the right-hand normal drawn.",
+      "search": "\"faraday's experiments magnet coil galvanometer moving loop rotating loop induced current\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-2.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.2"
+    },
+    {
+      "id": "D20.3",
+      "kind": "excalidraw",
+      "title": "The rod as a battery",
+      "show": "a rod moving right at $\\mathbf v$ through a field into the page; on a positive carrier the force $q\\mathbf v\\times\\mathbf B$ drawn upward along the rod; charge accumulated at the top ($+$) and bottom ($-$) with the electrostatic field $E=vB$ inside the rod balancing the magnetic push; the rod redrawn as a battery symbol of EMF $Blv$ with the positive terminal at the top; beneath, the rails-and-resistor circuit with the current direction.",
+      "search": "\"motional emf rod moving in magnetic field lorentz force charge separation Blv battery\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-3.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.3"
+    },
+    {
+      "id": "D20.4",
+      "kind": "excalidraw",
+      "title": "The magnet in the copper tube",
+      "show": "a vertical tube in section with a magnet falling down its axis; the rings of the wall above and below the magnet with their induced currents drawn in opposite senses; the induced dipoles above (attracting the magnet upward) and below (repelling it upward); the force balance $mg=Kv$ at terminal speed; a small $v(t)$ inset rising to $v_{\\text{t}}$ within $\\sim20$ ms.",
+      "search": "\"magnet falling through copper tube eddy currents lenz law terminal velocity diagram\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-4.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.4"
+    },
+    {
+      "id": "D20.5",
+      "kind": "excalidraw",
+      "title": "Rotating rod, rotating coil, loop leaving a field",
+      "show": "(a) a rod pivoted at one end with the speed profile $v=\\omega r$ drawn as a growing arrow along it and $d\\mathcal E=B\\omega r\\,dr$ on an element; (b) a coil rotating in a field with $\\Phi(t)$ and $\\mathcal E(t)$ plotted beneath, a quarter-cycle apart; (c) a rectangular loop half out of a shaded field region, the inside side marked as the battery $Blv$ with its polarity from $\\mathbf v\\times\\mathbf B$, the outside side marked \"no EMF\".",
+      "search": "\"rotating rod emf half B omega L squared; rotating coil sinusoidal emf flux phase; loop leaving magnetic field induced current\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-5.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.5"
+    },
+    {
+      "id": "D20.6",
+      "kind": "excalidraw",
+      "title": "The rod with a hanging mass, and with a capacitor",
+      "show": "left, rails with the rod, the string over a pulley to a hanging mass, free-body diagrams of rod (tension, magnetic drag $B^2l^2v/R$) and mass (weight, tension); right, the rails joined through a capacitor, the rod pushed by $F$, the current $i=CBla$ marked constant and the charge $q(t)$ growing linearly, with \"$m_{\\text{eff}}=m+CB^2l^2$\" written.",
+      "search": "\"rod on rails hanging mass terminal velocity; rod on rails capacitor constant acceleration effective mass\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-6.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.6"
+    },
+    {
+      "id": "D20.7",
+      "kind": "excalidraw",
+      "title": "The induced field, inside and outside",
+      "show": "two panels: (a) a solenoid's cross-section with $\\mathbf B$ out of the page and growing, circular $\\mathbf E$ lines drawn clockwise, arrows lengthening with $r$ inside; (b) the region outside the winding where $\\mathbf B=0$ but the circles of $\\mathbf E$ continue, arrows shortening as $1/r$; a bead on a ring outside the solenoid with the tangential force $qE$ marked.",
+      "search": "\"induced electric field changing magnetic field solenoid inside outside circular field lines\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-7.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.7"
+    },
+    {
+      "id": "D20.8",
+      "kind": "excalidraw",
+      "title": "The betatron",
+      "show": "a circular orbit of radius $R$ between shaped pole pieces; the field profile $B(r)$ plotted across the diameter, higher inside the orbit than at it; the average field $\\langle B\\rangle$ marked as a horizontal line at twice $B_{\\text{orb}}$; the induced $\\mathbf E$ tangent to the orbit with the force on an electron; the orbit's momentum $p=eB_{\\text{orb}}R$ written beside it.",
+      "search": "\"betatron 2:1 condition average field twice orbit field pole shape induced electric field\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-8.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.8"
+    },
+    {
+      "id": "D20.9",
+      "kind": "excalidraw",
+      "title": "Eddy currents: a plate entering a field, and a laminated core",
+      "show": "a conducting plate half inside a shaded field region, moving right; eddy-current loops drawn circulating through the inside part (where $E=vB$) and returning through the outside part; the retarding force on the inside part; beside it a solid core with one large eddy loop and a laminated core with many small loops, labelled \"$P\\propto d^2$\".",
+      "search": "\"eddy currents plate entering magnetic field retarding force; laminated core eddy current loss proportional to thickness squared\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-9.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.9"
+    },
+    {
+      "id": "D20.10",
+      "kind": "excalidraw",
+      "title": "Generator and motor",
+      "show": "a coil in a field with slip rings and the sinusoidal output beneath; the same coil with a split-ring commutator and the rectified $\\lvert\\sin\\rvert$ output; a motor circuit with the battery $V$, the armature resistance and the back-EMF drawn as an opposing battery, with $i=(V-\\mathcal E_{\\text{back}})/R$ and a graph of $i$ against $\\omega$ falling from $V/R$.",
+      "search": "\"ac generator slip rings dc generator commutator; dc motor back emf armature current versus speed\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-10.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.10"
+    },
+    {
+      "id": "D20.11",
+      "kind": "excalidraw",
+      "title": "Two voltmeters, two readings",
+      "show": "a circular loop with $R_1$ on the left half and $R_2$ on the right, a solenoid ($\\otimes$ with \"$\\dot\\Phi$\") at the centre, the current $i$ marked; voltmeter 1 with leads bowing out to the left reading $0.10$ V, voltmeter 2 with leads bowing out to the right reading $0.90$ V of the opposite sign; the loop formed by the two sets of leads shaded with \"$\\oint\\mathbf E\\cdot d\\mathbf l=1.0$ V\".",
+      "search": "\"two voltmeters same points different readings changing flux romer lewin paradox diagram\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-11.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.11"
+    },
+    {
+      "id": "D20.12",
+      "kind": "excalidraw",
+      "title": "Flux linkage, and the coaxial cable's flux strip",
+      "show": "an $N$-turn coil with the flux $\\Phi$ through *one* turn shaded and the label $\\Lambda=N\\Phi$; a long solenoid with one turn's area $A$ and $B=\\mu_0nI$; a coaxial cable in longitudinal section with the annular gap between $a$ and $b$, a strip of width $dr$ and length $\\ell$ shaded, and $B=\\mu_0I/2\\pi r$ crossing it.",
+      "search": "\"self inductance solenoid flux linkage derivation; coaxial cable inductance per unit length flux integral\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-12.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.12"
+    },
+    {
+      "id": "D20.13",
+      "kind": "excalidraw",
+      "title": "Coaxial solenoids and perpendicular coils",
+      "show": "a long solenoid with a shorter outer winding, the inner field $B_1$ threading both, the coupling flux shaded and $M=\\mu_0n_1N_2A_1$ written; beside it two coils with perpendicular axes and coincident centres, the field lines of one passing parallel to the other's plane, labelled \"$M=0$\".",
+      "search": "\"mutual inductance coaxial solenoids derivation; mutual inductance zero perpendicular coils\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-13.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.13"
+    },
+    {
+      "id": "D20.14",
+      "kind": "excalidraw",
+      "title": "The RL circuit and the inductive kick",
+      "show": "the series $V$–$R$–$L$ circuit with the switch; the inductor's polarity marked as opposing the rise (closing) and as driving the current (opening); a second panel with the switch being opened, the arc drawn across its contacts, and $L\\,di/dt$ with a very short $dt$ written; a protection diode across the coil in a third small panel with the freewheeling current path.",
+      "search": "\"RL circuit transient inductor voltage current; inductive kick spark switch opening flyback diode\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-14.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.14"
+    },
+    {
+      "id": "D20.15",
+      "kind": "excalidraw",
+      "title": "Energy in a solenoid's field",
+      "show": "a solenoid in section with its uniform interior field; a slab of field volume $A\\,dx$ shaded with \"$dU=(B^2/2\\mu_0)A\\,dx$\"; beside it the $\\tfrac12LI^2$ triangle under the $\\mathcal E_{\\text{back}}$–$i$ line (area $=\\tfrac12LI^2$); an inset of an MRI magnet's bore with \"$1.5$ T $\\to0.9$ MJ m$^{-3}$\".",
+      "search": "\"energy stored in inductor half L I squared magnetic energy density B squared over 2 mu0 solenoid\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-15.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.15"
+    },
+    {
+      "id": "D20.16",
+      "kind": "excalidraw",
+      "title": "Coupled coils: dots, and the force",
+      "show": "two coils on a common core with dots marking the aiding ends, the series connection for $L_1+L_2+2M$ and, redrawn, for $L_1+L_2-2M$; beside it two coaxial coils with a gap $x$, $M(x)$ sketched falling with $x$, and the force $I_1I_2\\,dM/dx$ drawn attractive for aiding currents.",
+      "search": "\"mutual inductance dot convention series aiding opposing; force between two coils I1 I2 dM/dx\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-16.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.16"
+    },
+    {
+      "id": "D20.17",
+      "kind": "excalidraw",
+      "title": "The LC cycle and its mechanical twin",
+      "show": "four snapshots of an LC circuit at $\\omega_0t=0,90^\\circ,180^\\circ,270^\\circ$: capacitor fully charged with no current, uncharged with maximum current, charged the other way, maximum current the other way — with the field energy located in $C$ or in $L$ at each; beneath, a mass on a spring at the corresponding four phases; a small ring-down curve for the LCR case.",
+      "search": "\"LC oscillation energy exchange capacitor inductor four stages mass spring analogy; damped LCR ring down\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-17.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.17"
+    },
+    {
+      "id": "D20.18",
+      "kind": "excalidraw",
+      "title": "Voltage and current for R, L and C",
+      "show": "three panels of $v(t)$ and $i(t)$ over one cycle: in phase (R); current a quarter-cycle behind (L), with the inertia picture — a mass being pushed; current a quarter-cycle ahead (C), with the spring picture; the reactances $X_L=\\omega L$ rising and $X_C=1/\\omega C$ falling on a small $\\log$–$\\log$ inset.",
+      "search": "\"ac through resistor inductor capacitor phase relations current lags leads graphs reactance versus frequency\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-18.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.18"
+    },
+    {
+      "id": "D20.19",
+      "kind": "excalidraw",
+      "title": "Phasor diagrams",
+      "show": "(a) the rotating vector and its projection as a sine; (b) R, L, C alone — the voltage phasor along, ahead of, behind the current; (c) series RC with $V_R$ and $V_C$ at right angles and the resultant lagging; (d) series RL leading; (e) series LCR with $V_L$ up, $V_C$ down, the difference $V_L-V_C$, and the resultant at angle $\\phi$ to $I$.",
+      "search": "\"phasor diagram series RC RL LCR circuit voltage phasors resultant phase angle\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-19.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.19"
+    },
+    {
+      "id": "D20.20",
+      "kind": "excalidraw",
+      "title": "Instantaneous power and the power triangle",
+      "show": "$v(t)$, $i(t)$ lagging by $\\phi$, and their product $p(t)$ oscillating at $2\\omega$ about the average line $\\tfrac12V_0I_0\\cos\\phi$, with the negative lobes (energy returned) shaded; beside it the triangle with $S$ (VA), $P$ (W), $Q_r$ (var) and the angle $\\phi$; a capacitor bank drawn across an inductive load with its leading current cancelling the lagging component.",
+      "search": "\"ac power instantaneous power waveform average power factor triangle real reactive apparent capacitor correction\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-20.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.20"
+    },
+    {
+      "id": "D20.21",
+      "kind": "excalidraw",
+      "title": "The transformer and the transmission line",
+      "show": "a closed laminated core with the primary ($N_p$) and secondary ($N_s$) windings and the common flux $\\Phi(t)$; the load across the secondary and the reflected impedance $(N_p/N_s)^2Z_s$ drawn as an equivalent across the primary; beneath, a power station → step-up → line ($5\\ \\Omega$) → step-down → load chain with the two loss figures \"$41\\%$ at $11$ kV, $0.1\\%$ at $220$ kV\".",
+      "search": "\"ideal transformer flux linkage turns ratio impedance reflection; power transmission loss high voltage comparison\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-21.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.21"
+    },
+    {
+      "id": "D20.22",
+      "kind": "excalidraw",
+      "title": "Rectifiers and the ripple",
+      "show": "a half-wave rectifier (one diode) with its output humps and gaps; a bridge rectifier with the full-wave output; the smoothing capacitor across the load and the sawtooth ripple riding on the DC level, with $\\Delta V\\approx I/2fC$ marked between a peak and the next recharge; the diode's I–V curve with the $0.7$ V knee as an inset.",
+      "search": "\"half wave full wave bridge rectifier smoothing capacitor ripple voltage waveform\"",
+      "file": "_obsidian/excalidraw/emi-ac-D20-22.excalidraw.md",
+      "source": "emi-ac/Emi-ac.md · D20.22"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Chapter-local IDs: Current Electricity D19; existing Magnetism D16 and EMI/AC D20 briefs retained. Always qualify by topic slug."
+}

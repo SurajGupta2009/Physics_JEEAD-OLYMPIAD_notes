@@ -204,6 +204,9 @@ where $r_h=\frac{2kZe^2}{mv^2}$ is the head-on closest approach derived next. Sm
 > *Show:* the nucleus at the focus of a hyperbola; the incoming asymptote with miss distance $b$ labelled; the outgoing asymptote making angle $\theta$; the symmetry axis dashed; the distance of closest approach $r_{\min}$ marked at the vertex.
 > *Search:* "Rutherford scattering impact parameter hyperbola scattering angle diagram"
 > *Used in:* §3.2, OL1.
+> **Companion:** native editable scene `atomic-structure-D24-2.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-2.excalidraw|900]]
 
 ### 3.3 Distance of closest approach, and the classical collapse
 
@@ -222,6 +225,9 @@ For a $5$ MeV alpha on gold ($Z=79$): $r_{\min}=\frac{2\times79\times1.44\ \text
 > *Show:* a square array of 8000 dots representing alphas, 7999 grey and straight, one red track bent back; a caption with the gold-foil numbers (thickness about 400 nm, angle above 90 degrees).
 > *Search:* "Rutherford gold foil experiment one in 8000 alpha back scattering"
 > *Used in:* §3.2-3.3.
+> **Companion:** native editable scene `atomic-structure-D24-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-3.excalidraw|900]]
 
 **The classical collapse.** An orbiting electron radiates at the Larmor rate $P=\frac{e^2a^2}{6\pi\varepsilon_0c^3}$. With $a=\frac{v^2}{r}=\frac{ke^2}{m_er^2}$ and orbital energy $E=-\frac{ke^2}{2r}$, energy balance $\frac{dE}{dt}=-P$ becomes $\frac{ke^2}{2r^2}\frac{dr}{dt}=-\frac{C}{r^4}$ with $C=\frac{e^2}{6\pi\varepsilon_0c^3}\left(\frac{ke^2}{m_e}\right)^2$, i.e. $r^2\frac{dr}{dt}=-\frac{2C}{ke^2}$: the radius shrinks at a rate whose integral is
 
@@ -235,6 +241,9 @@ Putting $r_0=a_0=0.529$ Å gives $\tau=1.6\times10^{-11}$ s. A classical atom li
 > *Show:* an inward spiral of an electron around a nucleus with the orbit tightening; beside it, a continuous rainbow band labelled "classical emission: all frequencies", contrasted with three sharp lines labelled "observed".
 > *Search:* "classical atom collapse spiral radiation continuous spectrum versus lines"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `atomic-structure-D24-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-4.excalidraw|900]]
 
 ### 3.4 Bohr's postulates, and where they came from
 
@@ -311,6 +320,9 @@ From level $n$, the number of distinct lines as the atom cascades down is $\frac
 > *Show:* horizontal levels n = 1 to 6 converging toward 0 eV; Lyman arrows dropping to n = 1 drawn on the left, Balmer to n = 2 in the middle, Paschen to n = 3 on the right; the ionisation limit dashed; energies in eV beside each level.
 > *Search:* "hydrogen energy level diagram Lyman Balmer Paschen series arrows"
 > *Used in:* §3.6, Q5.
+> **Companion:** native editable scene `atomic-structure-D24-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-6.excalidraw|900]]
 
 > [!tip] FIGURE F24.6 · The Balmer series: lines crowd toward a limit
 > *Why:* the tightening spacing is the $1/n^2$ ladder in wavelength space — the single most tested feature of $n=2$ spectra.
@@ -334,6 +346,9 @@ A photon is all-or-nothing: to excite $n\to m$ it must carry *exactly* $E_m-E_n$
 > *Show:* current against accelerating voltage with periodic dips every 4.9 V for mercury; the first dip labelled; a caption naming the 253 nm glow.
 > *Search:* "Franck Hertz experiment current voltage dips mercury 4.9 eV"
 > *Used in:* §3.7.
+> **Companion:** native editable scene `atomic-structure-D24-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-8.excalidraw|900]]
 
 > [!tip] FIGURE F24.3 · Photon vs electron: who may pay
 > *Why:* the all-or-nothing photon versus the part-paying electron is the single sharpest conceptual test in quantum chapters.
@@ -362,6 +377,9 @@ Deuterium: $\frac{\mu_D-\mu_H}{\mu_H}\approx\frac{m_e}{2}\left(\frac{1}{m_H}-\fr
 > *Show:* three ladders side by side with ground levels at -13.6, -54.4, -122.4 eV; the first transition of each drawn and labelled 121.6 nm, 30.4 nm, 13.5 nm; a caption "Z-squared scaling".
 > *Search:* "hydrogen like ions energy levels Z squared scaling He+ Li2+"
 > *Used in:* §3.8, E6.
+> **Companion:** native editable scene `atomic-structure-D24-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-9.excalidraw|900]]
 
 Two exotic atoms to fix the scaling instinct. **Muonic hydrogen**: $m_\mu=207m_e$ gives $a=256$ fm and $E_1=-2.81$ keV — the "atom" is nuclear-sized, which is why muonic atoms probe nuclear radii. **Positronium**: $m_1=m_2=m_e$ gives $\mu=\frac{m_e}{2}$, so $a=1.06$ Å and $E_1=-6.8$ eV, a hydrogen twice as big and half as bound.
 
@@ -382,6 +400,9 @@ This is Moseley's law as a corollary: $\sqrt f$ is linear in $Z$. For copper it 
 > *Show:* sqrt(f) on the vertical axis against Z on the horizontal; a straight line through the plotted points of several elements; the intercept at Z = 1 marked; copper highlighted.
 > *Search:* "Moseley law sqrt frequency atomic number straight line"
 > *Used in:* §3.9.
+> **Companion:** native editable scene `atomic-structure-D24-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-10.excalidraw|900]]
 
 ### 3.10 Fine structure, Zeeman splitting, and the quantum numbers
 
@@ -391,6 +412,9 @@ An orbiting electron is a current loop with magnetic moment $\mu=\frac{evr}{2}=\
 > *Show:* one level at B = 0 splitting into three (m_l = -1, 0, +1) as B increases, drawn as a fan; the splitting labelled mu-B times B; the three allowed transitions between two such fans giving the triplet lines.
 > *Search:* "Zeeman effect energy level splitting magnetic field triplet"
 > *Used in:* §3.10.
+> **Companion:** native editable scene `atomic-structure-D24-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-11.excalidraw|900]]
 
 The **correspondence principle** closes the model's self-consistency: for large $n$, the frequency of the photon emitted in $n\to n-1$ must equal the classical orbital frequency, because a large orbit is a classical antenna. At $n=100$: $f_{\text{orb}}=\frac{v}{2\pi r}=6.58\times10^9$ Hz while $\frac{\Delta E}{h}=6.68\times10^9$ Hz — equal to $1.5\%$, and the gap closes as $n^{-1}$: quantum arithmetic melts into classical radiation exactly where it must (OL4).
 
@@ -398,6 +422,9 @@ The **correspondence principle** closes the model's self-consistency: for large 
 > *Show:* the fractional difference between transition frequency and orbital frequency plotted against n, falling like 1/n; the classical regime shaded at large n; a caption "quantum melts into classical".
 > *Search:* "correspondence principle Bohr large n classical limit frequency"
 > *Used in:* §3.10, OL4.
+> **Companion:** native editable scene `atomic-structure-D24-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-12.excalidraw|900]]
 
 ### 3.11 Where the model is used today
 
@@ -407,6 +434,9 @@ Spectroscopic identification: every element's line set is a fingerprint; helium 
 > *Show:* a continuous rainbow band; below it the same band with dark lines at exactly the positions where the emission panel above shows bright lines; caption "absorption sees the same gaps emission fills".
 > *Search:* "emission absorption spectrum comparison hydrogen lines"
 > *Used in:* §3.11.
+> **Companion:** native editable scene `atomic-structure-D24-13.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-13.excalidraw|900]]
 
 ### 3.12 Reading the numbers
 
@@ -1785,16 +1815,25 @@ PART 25 (X-rays) takes the Bohr arithmetic into the inner shells: Moseley's law 
 > *Show:* r_min on a log vertical axis against K on a log horizontal axis, a straight falling line of slope minus one; the horizontal band of nuclear radii (a few fm) shaded; the intersection marked near 30 MeV for gold, captioned "where Rutherford must fail".
 > *Search:* "distance of closest approach alpha energy nuclear radius limit"
 > *Used in:* §3.3 and OL12.
+> **Companion:** native editable scene `atomic-structure-D24-14.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-14.excalidraw|900]]
 
 > [!abstract] DIAGRAM D24.15 · The hydrogen-deuterium H-alpha doublet
 > *Show:* the 656 nm line drawn as two close peaks separated by 0.18 nm on an exaggerated axis; the taller labelled H, the shorter D; a grating resolution marker far smaller than the gap.
 > *Search:* "hydrogen deuterium isotope shift H alpha doublet 0.18 nm"
 > *Used in:* §3.8 and P36.
+> **Companion:** native editable scene `atomic-structure-D24-15.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-15.excalidraw|900]]
 
 > [!abstract] DIAGRAM D24.16 · The Rydberg prediction against the measured series
 > *Show:* a two-column table drawn as a figure: measured Balmer wavelengths 656.1, 486.1, 434.0, 410.1 nm beside the Bohr-model predictions, differences under 0.1 nm bracketed; a caption "four-decimal agreement".
 > *Search:* "Balmer series measured predicted Bohr model agreement table"
 > *Used in:* §3.6 and OL7.
+> **Companion:** native editable scene `atomic-structure-D24-16.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/atomic-structure-D24-16.excalidraw|900]]
 
 ### 14.3 Open questions you can now attack
 

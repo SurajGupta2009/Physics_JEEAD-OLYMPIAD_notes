@@ -56,5 +56,72 @@
       "read": "each branch hands the problem to one law; mixing peak with RMS is the classic misroute",
       "source": "§6.1 Triage decision tree"
     }
-  ]
+  ],
+  "drawings": [
+    {
+      "id": "D21.1",
+      "kind": "excalidraw",
+      "title": "Two spanning surfaces of one loop intercept conduction current or changing electric flux.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-001.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-1.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-001.svg"
+    },
+    {
+      "id": "D21.2",
+      "kind": "excalidraw",
+      "title": "The gap magnetic field rises linearly inside the displacement-current disk and falls inversely outside.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-002.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-2.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-002.svg"
+    },
+    {
+      "id": "D21.3",
+      "kind": "excalidraw",
+      "title": "Transverse electric and magnetic oscillations propagate along positive z.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-003.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-3.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-003.svg"
+    },
+    {
+      "id": "D21.4",
+      "kind": "excalidraw",
+      "title": "Incident and reflected rays retain tangential momentum but reverse normal momentum.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-004.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-4.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-004.svg"
+    },
+    {
+      "id": "D21.5",
+      "kind": "excalidraw",
+      "title": "The illuminated sphere annulus introduces a further projection of normal force onto the beam axis.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-005.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-5.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-005.svg"
+    },
+    {
+      "id": "D21.6",
+      "kind": "excalidraw",
+      "title": "Frequency and photon energy increase from radio to gamma while wavelength decreases.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-006.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-6.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-006.svg"
+    },
+    {
+      "id": "D21.7",
+      "kind": "excalidraw",
+      "title": "Electric nodes coincide with magnetic antinodes in a standing wave at a conductor.",
+      "show": "Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.",
+      "search": "Local source: electromagnetic-waves/assets/figures/fig-007.svg",
+      "file": "_obsidian/excalidraw/electromagnetic-waves-D21-7.excalidraw.md",
+      "source": "electromagnetic-waves/Electromagnetic-waves.md · assets/figures/fig-007.svg"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "D21 EM Waves, D22 Geometrical Optics, D23 Wave Optics continue the drawing series; course slots 22–24."
 }

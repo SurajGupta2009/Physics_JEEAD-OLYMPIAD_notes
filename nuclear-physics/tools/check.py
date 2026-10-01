@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT.parent))  # repo root, for tools/mermaid_lint.py
 from tools import mermaid_lint
+from tools.excalidraw_checks import EMBED_PATTERN, validate_excalidraw
 
 CFG = json.loads((ROOT / "notes.json").read_text(encoding="utf-8"))
 SRC = (ROOT / CFG["master"]).read_text(encoding="utf-8")
@@ -76,9 +77,10 @@ need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a '*Search
 
 # ---- 5. media policy -----------------------------------------------------------
 fence = chr(96) * 3                          # never write a literal fence in this file
+media_text = re.sub(EMBED_PATTERN, "", SRC)   # native Excalidraw embeds are permitted media
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
 # ── FIGURE system (plan.md §1.2 media policy v2 / docs/obsidian-plugin-workflow.md §2) ──
 figs = re.findall(r"^> \[!tip\] FIGURE F(\d+)\.(\d+) · ", SRC, re.M)
@@ -159,6 +161,10 @@ for tex in displays + inline:
         if depth < 0:
             break
     need(depth == 0, f"unbalanced TeX braces in: {tex[:60]!r}")
+
+# ---- 7. native Excalidraw companions -------------------------------------------
+for _issue in validate_excalidraw(ROOT, SRC, diags):
+    need(False, _issue)
 
 # ---- report --------------------------------------------------------------------
 if errors:

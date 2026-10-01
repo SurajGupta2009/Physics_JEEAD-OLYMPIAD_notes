@@ -1,5 +1,7 @@
 # Communication Systems — first principles to Olympiad
 
+> **Native diagram companions:** 12 editable Excalidraw scenes accompany the DIAGRAM briefs in `Communication-systems.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py communication-systems`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] P7 of PENDING.md · text-only Markdown chapter · written for Obsidian reading mode
 > **Note:** This topic was marked as "dropped (JEE-Main-only)" in PENDING.md and plan.md Appendix B.
 > It is being written as a standalone supplement at the user's request. It has no plan.md PART number.

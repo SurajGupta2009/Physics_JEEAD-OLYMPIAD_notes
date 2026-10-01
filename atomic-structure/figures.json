@@ -56,5 +56,126 @@
       "read": "the first line is longest and most separated; higher lines bunch toward the limit",
       "source": "DIAGRAM D24.7 (§3.6)"
     }
-  ]
+  ],
+  "drawings": [
+    {
+      "id": "D24.2",
+      "kind": "excalidraw",
+      "title": "Scattering geometry",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Rutherford scattering impact parameter hyperbola scattering angle diagram\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-2.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.2 brief"
+    },
+    {
+      "id": "D24.3",
+      "kind": "excalidraw",
+      "title": "The one in eight thousand",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Rutherford gold foil experiment one in 8000 alpha back scattering\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-3.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.3 brief"
+    },
+    {
+      "id": "D24.4",
+      "kind": "excalidraw",
+      "title": "The classical spiral and its continuum",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"classical atom collapse spiral radiation continuous spectrum versus lines\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-4.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.4 brief"
+    },
+    {
+      "id": "D24.6",
+      "kind": "excalidraw",
+      "title": "The hydrogen level ladder with its series",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"hydrogen energy level diagram Lyman Balmer Paschen series arrows\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-6.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.6 brief"
+    },
+    {
+      "id": "D24.8",
+      "kind": "excalidraw",
+      "title": "The Franck-Hertz curve",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Franck Hertz experiment current voltage dips mercury 4.9 eV\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-8.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.8 brief"
+    },
+    {
+      "id": "D24.9",
+      "kind": "excalidraw",
+      "title": "Scaled level diagrams for H, He+, Li2+",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"hydrogen like ions energy levels Z squared scaling He+ Li2+\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-9.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.9 brief"
+    },
+    {
+      "id": "D24.10",
+      "kind": "excalidraw",
+      "title": "Moseley's straight line",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Moseley law sqrt frequency atomic number straight line\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-10.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.10 brief"
+    },
+    {
+      "id": "D24.11",
+      "kind": "excalidraw",
+      "title": "Zeeman splitting of a level",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Zeeman effect energy level splitting magnetic field triplet\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-11.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.11 brief"
+    },
+    {
+      "id": "D24.12",
+      "kind": "excalidraw",
+      "title": "The correspondence limit",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"correspondence principle Bohr large n classical limit frequency\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-12.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.12 brief"
+    },
+    {
+      "id": "D24.13",
+      "kind": "excalidraw",
+      "title": "Emission versus absorption spectra",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"emission absorption spectrum comparison hydrogen lines\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-13.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.13 brief"
+    },
+    {
+      "id": "D24.14",
+      "kind": "excalidraw",
+      "title": "Closest approach versus alpha energy",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"distance of closest approach alpha energy nuclear radius limit\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-14.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.14 brief"
+    },
+    {
+      "id": "D24.15",
+      "kind": "excalidraw",
+      "title": "The hydrogen-deuterium H-alpha doublet",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"hydrogen deuterium isotope shift H alpha doublet 0.18 nm\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-15.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.15 brief"
+    },
+    {
+      "id": "D24.16",
+      "kind": "excalidraw",
+      "title": "The Rydberg prediction against the measured series",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Balmer series measured predicted Bohr model agreement table\"",
+      "file": "_obsidian/excalidraw/atomic-structure-D24-16.excalidraw.md",
+      "source": "atomic-structure/Atomic-structure.md · D24.16 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D24 series); scenes drawn from briefs, not converted from SVG."
 }

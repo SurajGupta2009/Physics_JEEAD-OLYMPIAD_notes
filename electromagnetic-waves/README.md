@@ -1,5 +1,7 @@
 # Electromagnetic Waves — Part 3
 
+> **Native diagram companions:** course-slot 22–24 retrofit adds editable Excalidraw embeds beside the retained SVGs in `Electromagnetic-waves.md`. Rebuild from the repository root with `python3 tools/build_excalidraw_em_optics.py`. See `../docs/excalidraw-retrofit-status.md` for targeted corrections and pending native Obsidian acceptance. Do not regenerate the master from HTML.
+
 **Status:** complete against the six Part 3 coverage groups in `plan.md`; original Markdown-first course by `arena-agent`. The map in §1.3 states the scope precisely: this is not a page-by-page audit of every exercise in the supplied scanned textbook.
 
 Start with **[Electromagnetic-waves.md](Electromagnetic-waves.md)**. It is the authoritative source, not an export from an HTML edition. It uses standard `$...$` / `$$...$$` math, collapsible solutions, YAML frontmatter, and seven standalone local SVGs. Six rendered Mermaid figures (chapter map, Ampère paradox, E–B–k triad, inverse-square graph, radiation-pressure cosines, triage) follow the template in [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2. No external images, fonts or network resources are needed; a Markdown viewer with MathJax/KaTeX support typesets equations.
