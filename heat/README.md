@@ -1,6 +1,8 @@
 # Heat — from basics to Olympiad
 
-> **Media note (kept at top).** `Heat.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 6 of the reading spine, `F6.1`–`F6.6`, numbered per `plan.md` Appendix A), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Heat.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 24 reviewed local SVGs and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
+> **Editable diagrams (2026-09-29):** 25 native Excalidraw companions (D17.1–D17.25) are embedded in `Heat.md` beside the source SVGs. Run `python3 tools/build_excalidraw_heat_capacitors.py` from the repository root to regenerate (overwrites manual scene edits). The chapter gate validates the Markdown scene wiring as well as HTML. See [retrofit status](../docs/excalidraw-retrofit-status.md) for physics corrections and the pending live Obsidian check. Existing prose, SVGs and six Mermaid figures are preserved.
+
+> **Media note (kept at top).** `Heat.md` carries YAML frontmatter and six rendered Mermaid `F`-figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2 (part 6 of the reading spine, `F6.1`–`F6.6`, numbered per `plan.md` Appendix A), added on top of the HTML-derived Markdown. This topic is **HTML-first**: `tools/html_to_markdown.py` regenerates the `.md` from `Heat.html`, so **do not run the exporter on this topic** — it would silently drop the frontmatter and figures (see `figures.json`). The `.html`, its 25 local SVG assets and its gate remain the validated source; the Mermaid figures illustrate and never replace them.
 
 > **Portable Markdown edition:** [Heat.md](Heat.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Heat.html](Heat.html) remains available for the interactive offline view and printing.
 
@@ -43,7 +45,7 @@ outline; expanded, they are the whole course. Deep-linking works (`#ch-04` opens
 * **Every number is checkable.** All worked values (steam-into-ice's 267.5 kJ, the 0.111 m first day of lake
   ice, 255 K for the bare-rock Earth, 16.7 °C touch-temperature of steel) are computed in-file; the constant
   shelf in the last chapter is the only look-up, meant to be memorised.
-* **Diagrams over prose** — 24 inline SVG figures: hole-enlargement, the bimetal curl, the plateau graph, the
+* **Diagrams over prose** — 25 local SVG figures: hole-enlargement, the bimetal curl, the plateau graph, the
   √t ice curve, the film behind *h*, the planetary /4, the critical-radius hump, the effusivity contact.
 * **Cross-references by text, not links.** First-law and kinetic-theory machinery is *named* from the
   thermodynamics set, never hyperlinked: one file must stand alone.

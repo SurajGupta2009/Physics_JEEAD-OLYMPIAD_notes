@@ -1,5 +1,7 @@
 # String Waves — First Principles to Olympiad
 
+> **Editable diagrams (2026-09-29):** 4 native Excalidraw companions (D14.1–D14.4) are embedded in the master Markdown beside the existing SVG figures. IDs continue the drawing series, not chapter numbering. Run `python3 tools/build_excalidraw_waves_thermal.py` from the repository root to regenerate; see [retrofit status](../docs/excalidraw-retrofit-status.md) for analytic corrections, validation and the pending live Obsidian check. Existing SVGs and Mermaid figures are retained.
+
 > **Media.** YAML frontmatter plus rendered figures per [docs/obsidian-plugin-workflow.md](../docs/obsidian-plugin-workflow.md) §2: six `F`-numbered Mermaid diagrams (chapter map, sign-rule flowchart, energy-density `xychart-beta`, superposition and triage flowcharts) wrap the local SVG figures in `assets/figures/`. `String-waves.md` stays the GitHub-friendly reading copy with standard MathJax/KaTeX math and collapsible solutions.
 
 A complete, self-contained course on **transverse mechanical waves, string dynamics, boundary reflections, standing waves, harmonics, and energy transport**, engineered for **JEE Advanced** and the **physics olympiad track (NSEP → INPhO → IPhO, plus IOPT)**.

@@ -2,35 +2,180 @@
   "slug": "x-rays",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F25.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F25.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "the chapter is three instruments (tube, crystal, photon) and one particle",
       "data": "the Part 0-14 structure",
       "read": "every result is production, the element fingerprint, geometry, or the photon's momentum hook",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F25.2", "kind": "flowchart", "title": "One tube voltage, one cutoff",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F25.2",
+      "kind": "flowchart",
+      "title": "One tube voltage, one cutoff",
       "why": "the voltage gene lambda_min separates production intuition from absorption intuition",
       "data": "lambda_min = hc/(eV): 30 kV -> 41.3, 50 kV -> 24.8, 100 kV -> 12.4 pm",
       "read": "the short-wavelength edge depends only on voltage, never on target or current",
-      "source": "DIAGRAM D25.2 (§3.2)" },
-    { "id": "F25.3", "kind": "flowchart", "title": "Compton kinematics in one line",
+      "source": "DIAGRAM D25.2 (§3.2)"
+    },
+    {
+      "id": "F25.3",
+      "kind": "flowchart",
+      "title": "Compton kinematics in one line",
       "why": "the shift formula is pure relativistic billiards; energy and momentum books run in parallel",
       "data": "photon p=h/lambda strikes electron at rest; scattered photon at theta, electron at phi",
       "read": "energy and momentum close the triangle; the shift depends only on angle",
-      "source": "DIAGRAM D25.11 (§3.10)" },
-    { "id": "F25.4", "kind": "xychart-beta", "title": "The Compton shift versus angle",
+      "source": "DIAGRAM D25.11 (§3.10)"
+    },
+    {
+      "id": "F25.4",
+      "kind": "xychart-beta",
+      "title": "The Compton shift versus angle",
       "why": "the same shift is invisible for visible light and huge for hard X-rays",
       "data": "dL = 2.43(1-cos theta) pm: 0, 0.71, 2.43, 4.15, 4.86 pm at 0/45/90/135/180 deg",
       "read": "the shift runs 0 to 4.86 pm and is the same for every target",
-      "source": "DIAGRAM D25.12 (§3.10-3.11)" },
-    { "id": "F25.5", "kind": "flowchart", "title": "Triage - match the keyword to the law",
+      "source": "DIAGRAM D25.12 (§3.10-3.11)"
+    },
+    {
+      "id": "F25.5",
+      "kind": "flowchart",
+      "title": "Triage - match the keyword to the law",
       "why": "the keyword names the equation before any number is touched",
       "data": "the six triage branches of §9.1",
       "read": "voltage to cutoff, angle to Bragg, scattered wavelength to Compton",
-      "source": "§9.1 Triage decision tree" },
-    { "id": "F25.6", "kind": "flowchart", "title": "Moseley: the element fingerprint is a straight line",
+      "source": "§9.1 Triage decision tree"
+    },
+    {
+      "id": "F25.6",
+      "kind": "flowchart",
+      "title": "Moseley: the element fingerprint is a straight line",
       "why": "the same screened-nucleus formula places every element; sqrt(f) vs Z is how Moseley counted them",
       "data": "sqrt(f) ∝ (Z - b) with b ≈ 1",
       "read": "each element's K line is a booked position on one straight line",
-      "source": "§3.3 The characteristic spectrum (after D25.4)" }
-  ]
+      "source": "§3.3 The characteristic spectrum (after D25.4)"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D25.1",
+      "kind": "excalidraw",
+      "title": "The Coolidge tube in section",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Coolidge tube X-ray production diagram filament anode rotating\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-1.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.1 brief"
+    },
+    {
+      "id": "D25.3",
+      "kind": "excalidraw",
+      "title": "Characteristic lines on the continuous spectrum",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"X-ray spectrum continuous characteristic K alpha K beta lines\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-3.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.3 brief"
+    },
+    {
+      "id": "D25.4",
+      "kind": "excalidraw",
+      "title": "The K-shell vacancy cascade",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"characteristic X-ray emission K alpha L shell vacancy cascade diagram\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-4.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.4 brief"
+    },
+    {
+      "id": "D25.5",
+      "kind": "excalidraw",
+      "title": "Moseley's line",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Moseley law plot sqrt frequency Z straight line missing elements\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-5.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.5 brief"
+    },
+    {
+      "id": "D25.6",
+      "kind": "excalidraw",
+      "title": "The attenuation curve with half-value thickness",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"X-ray attenuation exponential half value thickness bone tissue contrast\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-6.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.6 brief"
+    },
+    {
+      "id": "D25.7",
+      "kind": "excalidraw",
+      "title": "The Bragg geometry",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Bragg diffraction geometry glancing angle path difference 2d sin theta\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-7.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.7 brief"
+    },
+    {
+      "id": "D25.8",
+      "kind": "excalidraw",
+      "title": "Powder rings",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"powder X-ray diffraction Debye Scherrer rings pattern\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-8.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.8 brief"
+    },
+    {
+      "id": "D25.9",
+      "kind": "excalidraw",
+      "title": "The NaCl cell and the spacing d",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"sodium chloride crystal structure unit cell spacing Avogadro\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-9.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.9 brief"
+    },
+    {
+      "id": "D25.10",
+      "kind": "excalidraw",
+      "title": "The measured Compton spectrum",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Compton effect scattered X-ray spectrum two peaks wavelength shift angle\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-10.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.10 brief"
+    },
+    {
+      "id": "D25.13",
+      "kind": "excalidraw",
+      "title": "The photon evidence table as a spectrum map",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photon experiments energy scale photoelectric Compton pair production\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-13.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.13 brief"
+    },
+    {
+      "id": "D25.14",
+      "kind": "excalidraw",
+      "title": "Pair production at the threshold",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"pair production electron positron photon nucleus diagram\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-14.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.14 brief"
+    },
+    {
+      "id": "D25.15",
+      "kind": "excalidraw",
+      "title": "The X-ray tube spectrum with every label",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"X-ray tube spectrum labelled cutoff K alpha K beta threshold voltage\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-15.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.15 brief"
+    },
+    {
+      "id": "D25.16",
+      "kind": "excalidraw",
+      "title": "The photon's three proofs and the two limits",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photon interactions energy regimes photoelectric Compton pair production chart\"",
+      "file": "_obsidian/excalidraw/x-rays-D25-16.excalidraw.md",
+      "source": "x-rays/X-rays.md · D25.16 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D25 series); scenes drawn from briefs, not converted from SVG."
 }

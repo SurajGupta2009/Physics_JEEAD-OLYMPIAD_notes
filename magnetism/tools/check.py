@@ -82,10 +82,12 @@ need(not [p for p, _ in diags if int(p) != CFG["part"]],
 need(SRC.count("*Show:*") >= len(diags), "every DIAGRAM brief needs a *Show:* line")
 need(SRC.count("*Search:*") >= len(diags), "every DIAGRAM brief needs a *Search:* line")
 
+from tools.excalidraw_checks import EMBED_PATTERN
+media_text = re.sub(EMBED_PATTERN, "", SRC)
 fence = chr(96) * 3
 for pattern, why in ((r"!\[", "Markdown image"), (r"<img", "HTML image"),
                      (r"\]\(https?://", "external link")):
-    need(not re.search(pattern, SRC), f"media policy: no {why} allowed")
+    need(not re.search(pattern, media_text), f"media policy: no {why} allowed")
 # raster ban kept explicit: AI raster art (png/jpg/gif/webp) is never allowed anywhere.
 need(not re.search(r"\.(png|jpe?g|gif|webp)\b", SRC, re.I), "media policy: no raster images")
 
@@ -163,6 +165,9 @@ for tex in displays + inline:
         depth += 1 if tok == "{" else -1
         if depth < 0: break
     need(depth == 0, f"unbalanced braces in: {tex[:60]!r}")
+
+from tools.excalidraw_checks import validate_excalidraw
+errors.extend(validate_excalidraw(ROOT, SRC, diags))
 
 if errors:
     print("\n".join(f"FAIL: {e}" for e in errors))

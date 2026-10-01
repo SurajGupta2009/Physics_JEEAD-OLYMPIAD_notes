@@ -181,6 +181,9 @@ Wien's law follows from a scaling argument: if the spectrum has the form $u(\lam
 > *Show:* intensity against wavelength for three temperatures $T_1<T_2<T_3$; each curve rising from zero, peaking, and falling; the peaks joined by a dashed hyperbola $\lambda_{\max}T=b$; a dotted curve labelled "classical $\lambda^{-4}$" diverging at short wavelength; the visible band shaded.
 > *Search:* "blackbody radiation curves Wien displacement ultraviolet catastrophe classical divergence"
 > *Used in:* §3.1 and Q1.
+> **Companion:** native editable scene `photoelectric-effect-D23-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-1.excalidraw|900]]
 
 ### 3.2 The experimental facts and the classical predictions they destroy
 
@@ -243,6 +246,9 @@ At an even dimmer $I=10^{-8}$ W/m$^2$ the wait is $\sim3\times10^{9}$ s, of orde
 > *Show:* current on the vertical axis, collector voltage on the horizontal from negative to positive; two curves at the same frequency, intensities $I$ and $2I$: both start at zero current at the same negative voltage $-V_s$, rise, and flatten at different saturation plateaux; a third dashed curve at a frequency below threshold lying flat on the zero axis.
 > *Search:* "photoelectric effect current voltage graph stopping potential saturation two intensities"
 > *Used in:* §3.5, §3.6, Q8.
+> **Companion:** native editable scene `photoelectric-effect-D23-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-3.excalidraw|900]]
 
 ### 3.4 The photon and its bookkeeping
 
@@ -279,6 +285,9 @@ When the beam stops on a surface, each photon hands over momentum $\frac{h}{\lam
 > *Show:* a metal surface drawn as a row of atoms with electrons; one wavy arrow labelled $hf$ arriving at one electron; the electron leaving with an arrow labelled $K_{\max}=hf-\phi$; a second panel showing two photons of $hf<\phi$ arriving and nothing leaving, with a cross over a pooled-arrow.
 > *Search:* "photoelectric effect one photon one electron work function diagram"
 > *Used in:* §3.4, §3.5.
+> **Companion:** native editable scene `photoelectric-effect-D23-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-4.excalidraw|900]]
 
 ### 3.5 Einstein's equation and the stopping potential
 
@@ -370,6 +379,9 @@ But $pr$ *is* the angular momentum $L$ of a circular orbit. Therefore $L=n\hbar$
 > *Show:* a circle with a sinusoidal wave drawn along it, exactly three wavelengths fitting the circumference; a second circle where a non-integer number of wavelengths fails to meet in phase, marked with a cross; radii labelled.
 > *Search:* "Bohr orbit standing wave de Broglie three wavelengths constructive interference"
 > *Used in:* §3.8, Q15.
+> **Companion:** native editable scene `photoelectric-effect-D23-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-7.excalidraw|900]]
 
 ### 3.9 Wave packets and the uncertainty principle
 
@@ -383,6 +395,9 @@ $$
 > *Show:* top panel: a localised envelope of oscillation with width $\Delta x$ marked; bottom panel: the amplitude in $k$-space, a bump of width $\Delta k\sim\frac{1}{\Delta x}$; a double arrow between the panels labelled "narrow in one, wide in the other".
 > *Search:* "wave packet position momentum uncertainty Fourier spread"
 > *Used in:* §3.9, OL3.
+> **Companion:** native editable scene `photoelectric-effect-D23-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-8.excalidraw|900]]
 
 The principle is not a statement about clumsy measurement; it is a statement about waves. Three payoffs, each used later in the vault:
 
@@ -402,6 +417,9 @@ The kinetic term climbs as $r$ shrinks; minimising, $\frac{dE}{dr}=0$ gives $r=\
 > *Show:* energy against radius $r$; a positive curve $\frac{\hbar^2}{2m_er^2}$ falling steeply, a negative curve $-\frac{ke^2}{r}$ rising toward zero, and their sum with a clear minimum at $a_0$ marked by a dot at $-13.6$ eV.
 > *Search:* "hydrogen atom ground state uncertainty principle energy minimum Bohr radius"
 > *Used in:* §3.9, OL3.
+> **Companion:** native editable scene `photoelectric-effect-D23-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-9.excalidraw|900]]
 
 ### 3.10 Davisson-Germer and electron diffraction
 
@@ -411,11 +429,17 @@ If electrons are waves of $\lambda=\frac{h}{p}$, a crystal — a three-dimension
 > *Show:* an electron gun aimed at a nickel crystal; parallel atomic planes drawn inside the crystal with spacing $d$; the incident beam and the detector arm at $65^\circ$; the extra path $2d\sin\theta$ highlighted between two reflected rays; a polar plot of intensity against angle with the $65^\circ$ lobe.
 > *Search:* "Davisson Germer experiment nickel crystal diffraction 65 degrees diagram"
 > *Used in:* §3.10, Q18.
+> **Companion:** native editable scene `photoelectric-effect-D23-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-10.excalidraw|900]]
 
 > [!abstract] DIAGRAM D23.11 · Double slit with electrons, one dot at a time
 > *Show:* three panels of the same screen after 100, 3000 and 100000 electrons: scattered dots, emerging bands, sharp fringes; the slit plane drawn to the left; a note that each dot is one whole electron.
 > *Search:* "electron double slit experiment single electron buildup interference fringes"
 > *Used in:* §3.10.
+> **Companion:** native editable scene `photoelectric-effect-D23-11.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-11.excalidraw|900]]
 
 > [!question] Exam note
 > What happens if you measure which slit each electron used? The fringes disappear. The *physics of why* is interpretation-level quantum mechanics and is outside this syllabus; the examinable fact is complementarity: path information and interference are mutually exclusive.
@@ -447,26 +471,41 @@ The symmetry statement to memorise: $E=hf$ and $p=\frac{h}{\lambda}$ connect the
 > *Show:* a photon striking the first photocathode, one electron arcing to dynode 1, three electrons to dynode 2, nine to dynode 3, the cascade widening to an anode pulse; each stage labelled with its gain.
 > *Search:* "photomultiplier tube dynode cascade single photon detection diagram"
 > *Used in:* §3.12.
+> **Companion:** native editable scene `photoelectric-effect-D23-12.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-12.excalidraw|900]]
 
 > [!abstract] DIAGRAM D23.13 · Photon energy-wavelength conversion chart
 > *Show:* a horizontal band of the electromagnetic spectrum from radio to gamma with a dual scale: wavelength in m on top, photon energy in eV below; the visible band shaded with 1.8-3.1 eV labelled; markers at 1240 nm = 1 eV and 0.124 nm = 10 keV.
 > *Search:* "photon energy wavelength chart electromagnetic spectrum electron volt"
 > *Used in:* §3.4 and Part 13.
+> **Companion:** native editable scene `photoelectric-effect-D23-13.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-13.excalidraw|900]]
 
 > [!abstract] DIAGRAM D23.14 · The electron microscope's wavelength advantage
 > *Show:* two panels: a light microscope column with a 550 nm wave drawn coarse, and an electron column at 100 kV with a 3.7 pm wave drawn fine; the same specimen feature of 0.1 nm shown unresolved in the first panel and sharp in the second; magnetic lens coils sketched.
 > *Search:* "electron microscope resolution wavelength comparison light microscope diagram"
 > *Used in:* §3.12 and OL12.
+> **Companion:** native editable scene `photoelectric-effect-D23-14.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-14.excalidraw|900]]
 
 > [!abstract] DIAGRAM D23.15 · A LEED pattern
 > *Show:* a fluorescent screen with a symmetric array of bright spots on a dark background; the spot spacing annotated as inversely proportional to the surface lattice spacing; a low-energy electron gun at the centre.
 > *Search:* "LEED low energy electron diffraction pattern spots surface"
 > *Used in:* §3.12.
+> **Companion:** native editable scene `photoelectric-effect-D23-15.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-15.excalidraw|900]]
 
 > [!abstract] DIAGRAM D23.16 · Three-level laser pumping scheme
 > *Show:* three horizontal levels E1, E2, E3; an upward pump arrow E1 to E3, a fast non-radiative drop E3 to E2, the long-lived E2 holding population, and a stimulated arrow E2 to E1 drawn as two identical photons leaving; the inversion between E2 and E1 bracketed.
 > *Search:* "three level laser pumping scheme population inversion diagram"
 > *Used in:* §3.12 and OL6.
+> **Companion:** native editable scene `photoelectric-effect-D23-16.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/photoelectric-effect-D23-16.excalidraw|900]]
 
 ## Part 4 · Results, limits and the validity ledger
 

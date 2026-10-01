@@ -56,5 +56,126 @@
       "read": "wave behaviour shows only when λ is comparable to the geometry it meets",
       "source": "DIAGRAM D23.6 (§3.7 de Broglie's hypothesis)"
     }
-  ]
+  ],
+  "drawings": [
+    {
+      "id": "D23.1",
+      "kind": "excalidraw",
+      "title": "The blackbody family of curves",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"blackbody radiation curves Wien displacement ultraviolet catastrophe classical divergence\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-1.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.1 brief"
+    },
+    {
+      "id": "D23.3",
+      "kind": "excalidraw",
+      "title": "Photocurrent versus collector voltage",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photoelectric effect current voltage graph stopping potential saturation two intensities\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-3.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.3 brief"
+    },
+    {
+      "id": "D23.4",
+      "kind": "excalidraw",
+      "title": "One photon, one electron",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photoelectric effect one photon one electron work function diagram\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-4.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.4 brief"
+    },
+    {
+      "id": "D23.7",
+      "kind": "excalidraw",
+      "title": "The standing wave on the n = 3 orbit",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Bohr orbit standing wave de Broglie three wavelengths constructive interference\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-7.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.7 brief"
+    },
+    {
+      "id": "D23.8",
+      "kind": "excalidraw",
+      "title": "A wave packet and its two spreads",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"wave packet position momentum uncertainty Fourier spread\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-8.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.8 brief"
+    },
+    {
+      "id": "D23.9",
+      "kind": "excalidraw",
+      "title": "The hydrogen atom as a balance of two curves",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"hydrogen atom ground state uncertainty principle energy minimum Bohr radius\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-9.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.9 brief"
+    },
+    {
+      "id": "D23.10",
+      "kind": "excalidraw",
+      "title": "Davisson-Germer geometry",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Davisson Germer experiment nickel crystal diffraction 65 degrees diagram\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-10.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.10 brief"
+    },
+    {
+      "id": "D23.11",
+      "kind": "excalidraw",
+      "title": "Double slit with electrons, one dot at a time",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"electron double slit experiment single electron buildup interference fringes\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-11.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.11 brief"
+    },
+    {
+      "id": "D23.12",
+      "kind": "excalidraw",
+      "title": "The photomultiplier dynode chain",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photomultiplier tube dynode cascade single photon detection diagram\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-12.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.12 brief"
+    },
+    {
+      "id": "D23.13",
+      "kind": "excalidraw",
+      "title": "Photon energy-wavelength conversion chart",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"photon energy wavelength chart electromagnetic spectrum electron volt\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-13.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.13 brief"
+    },
+    {
+      "id": "D23.14",
+      "kind": "excalidraw",
+      "title": "The electron microscope's wavelength advantage",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"electron microscope resolution wavelength comparison light microscope diagram\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-14.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.14 brief"
+    },
+    {
+      "id": "D23.15",
+      "kind": "excalidraw",
+      "title": "A LEED pattern",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"LEED low energy electron diffraction pattern spots surface\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-15.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.15 brief"
+    },
+    {
+      "id": "D23.16",
+      "kind": "excalidraw",
+      "title": "Three-level laser pumping scheme",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"three level laser pumping scheme population inversion diagram\"",
+      "file": "_obsidian/excalidraw/photoelectric-effect-D23-16.excalidraw.md",
+      "source": "photoelectric-effect/Photoelectric-effect.md · D23.16 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D23 series); scenes drawn from briefs, not converted from SVG."
 }

@@ -92,6 +92,13 @@ Take a circular loop around the lead feeding a parallel-plate capacitor. One spa
 
 ![Two spanning surfaces of one loop intercept conduction current or changing electric flux.](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D21.1 — Two spanning surfaces of one loop intercept conduction current or changing electric flux.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-001.svg`; original retained.
+> **Read:** Two spanning surfaces of one loop intercept conduction current or changing electric flux.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-1.excalidraw|900]]
+
 > [!tip] FIGURE F3.2 · The charging-capacitor paradox resolved
 > *Why:* one loop, two spanning surfaces, one circulation — the paradox is the single reason displacement current exists.
 > *Data:* surface through the wire gives I_c; surface through the gap gives I_d = ε₀ dΦ_E/dt; they must be equal.
@@ -161,6 +168,13 @@ $$
 **Validity:** model Q, axial symmetry, approximately uniform displacement-current disk. The outside expression neglects changing fringe flux and nearby return leads; it is not the global exact field of an arbitrary circuit. $B\to0$ on the axis, both branches agree at $a$, and $B$ falls as $1/r$ outside within this approximation. Units: $(\mathrm{T\,m/A})(\mathrm A)/\mathrm m=\mathrm T$.
 
 ![The gap magnetic field rises linearly inside the displacement-current disk and falls inversely outside.](assets/figures/fig-002.svg)
+
+> [!abstract] DIAGRAM D21.2 — The gap magnetic field rises linearly inside the displacement-current disk and falls inversely outside.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-002.svg`; original retained.
+> **Read:** The gap magnetic field rises linearly inside the displacement-current disk and falls inversely outside.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-2.excalidraw|900]]
 
 *Figure 2. The loop radius, not the plate separation, selects the fraction of enclosed flux.*
 
@@ -282,6 +296,13 @@ $$
 Direct check: $(\nabla\times\mathbf E)_y=\partial_zE_x=kE_0\cos\phi$ and $-\partial_tB_y=\omega B_0\cos\phi$, fixing both sign and ratio $kE_0=\omega B_0$.
 
 ![Transverse electric and magnetic oscillations propagate along positive z.](assets/figures/fig-003.svg)
+
+> [!abstract] DIAGRAM D21.3 — Transverse electric and magnetic oscillations propagate along positive z.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-003.svg`; original retained.
+> **Read:** Transverse electric and magnetic oscillations propagate along positive z.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-3.excalidraw|900]]
 
 > [!tip] FIGURE F3.3 · E, B and k form a right-handed triad
 > *Why:* the handedness decides whether a guessed B is correct or reversed — the most common sign error in the topic.
@@ -438,6 +459,13 @@ $$
 
 ![Incident and reflected rays retain tangential momentum but reverse normal momentum.](assets/figures/fig-004.svg)
 
+> [!abstract] DIAGRAM D21.4 — Incident and reflected rays retain tangential momentum but reverse normal momentum.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-004.svg`; original retained.
+> **Read:** Incident and reflected rays retain tangential momentum but reverse normal momentum.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-4.excalidraw|900]]
+
 > [!tip] FIGURE F3.5 · Radiation pressure: the two cosines
 > *Why:* pressure has two projection factors and each has its own trap — the figured flow separates them.
 > *Data:* intercepted energy dU = I A cos θ dt; transferred normal momentum = (approach + departure)/c, giving P_abs = (I/c)cos²θ, P_spec = (2I/c)cos²θ.
@@ -494,6 +522,13 @@ $$
 
 ![The illuminated sphere annulus introduces a further projection of normal force onto the beam axis.](assets/figures/fig-005.svg)
 
+> [!abstract] DIAGRAM D21.5 — The illuminated sphere annulus introduces a further projection of normal force onto the beam axis.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-005.svg`; original retained.
+> **Read:** The illuminated sphere annulus introduces a further projection of normal force onto the beam axis.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-5.excalidraw|900]]
+
 *Figure 5. A specular sphere sends rays in different directions rather than reversing the entire beam.*
 
 Integrating shells gives $m=\int_0^a4\pi r^2\rho_m\,dr=4\pi a^3\rho_m/3$. Its acceleration is therefore $3I/(4\rho_m ac)$. Area grows as $a^2$, mass as $a^3$: smaller spheres accelerate more, while the ray approximation remains valid.
@@ -515,6 +550,13 @@ There are no universal exact physical cutoffs between all bands. The following *
 | Gamma (wavelength convention) | $0<\lambda_0<0.01\,\mathrm{nm}$ | $f>3.00\times10^{19}$ | Nuclear transitions, annihilation, high-energy processes | Nuclear spectroscopy, sterilisation, radiotherapy |
 
 ![Frequency and photon energy increase from radio to gamma while wavelength decreases.](assets/figures/fig-006.svg)
+
+> [!abstract] DIAGRAM D21.6 — Frequency and photon energy increase from radio to gamma while wavelength decreases.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-006.svg`; original retained.
+> **Read:** Frequency and photon energy increase from radio to gamma while wavelength decreases.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-6.excalidraw|900]]
 
 *Figure 6. Dividing lines are adopted labels, not changes in Maxwell's laws.*
 
@@ -670,6 +712,13 @@ $$
 Averaging gives $\langle u\rangle=\varepsilon_0E_0^2$, independent of position and twice the mean density of one constituent. Electric and magnetic energies are not generally equal locally. Integrating over an integer number of half-wavelengths gives constant total energy while local energy flows between regions.
 
 ![Electric nodes coincide with magnetic antinodes in a standing wave at a conductor.](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D21.7 — Electric nodes coincide with magnetic antinodes in a standing wave at a conductor.
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `electromagnetic-waves/assets/figures/fig-007.svg`; original retained.
+> **Read:** Electric nodes coincide with magnetic antinodes in a standing wave at a conductor.
+
+![[../_obsidian/excalidraw/electromagnetic-waves-D21-7.excalidraw|900]]
 
 *Figure 7. Zero mean energy flow does not imply zero stored energy or zero mirror pressure.*
 

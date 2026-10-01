@@ -21,6 +21,13 @@ Sound is the textbook example of a longitudinal mechanical wave that you can hea
 
 ![Longitudinal wave: displacement and pressure are π/2 out of phase](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D15.1 — Longitudinal wave: displacement and pressure are π/2 out of phase
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `sound-waves/assets/figures/fig-001.svg`; original retained.
+> **Read:** Longitudinal wave: displacement and pressure are π/2 out of phase.
+
+![[../_obsidian/excalidraw/sound-waves-D15-1.excalidraw|900]]
+
 **Fig. 0.1** — The core fact of sound: where particles crowd (displacement zero, slope maximal) the pressure is maximal; where they spread, pressure is minimal. Displacement $s$ and excess pressure $\Delta P$ are $\pi/2$ out of phase. All of resonance, beats, and Doppler follow from this.
 
 ### How these notes are organised
@@ -172,6 +179,13 @@ where $s_0$ is displacement amplitude, $k=2\pi/\lambda$ wave number, $\omega=2\p
 
 ![Speed derivation](assets/figures/fig-002.svg)
 
+> [!abstract] DIAGRAM D15.2 — Speed derivation
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-002.svg`; original retained.
+> **Read:** Speed derivation.
+
+![[../_obsidian/excalidraw/sound-waves-D15-2.excalidraw|900]]
+
 **Fig. 1.1** — Gas slab $A\,dx$ with pressure difference driving $\rho A\,dx\,\partial^2s/\partial t^2$. Net force gives wave equation and $v=\sqrt{B/\rho}$.
 
 ### 1.2 Strain, pressure, density variations
@@ -286,6 +300,13 @@ For extended solid, $v_{\text{long}}=\sqrt{(K+4G/3)/\rho}$, $v_{\text{trans}}=\s
 
 ![Newton vs Laplace](assets/figures/fig-003.svg)
 
+> [!abstract] DIAGRAM D15.3 — Newton vs Laplace
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-003.svg`; original retained.
+> **Read:** Newton vs Laplace.
+
+![[../_obsidian/excalidraw/sound-waves-D15-3.excalidraw|900]]
+
 **Fig. 2.1** — Newton predicted $v=\sqrt{P/\rho}=280$ m/s (isothermal), Laplace corrected to $\sqrt{\gamma P/\rho}=331$ m/s (adiabatic). Difference is $\sqrt{\gamma}=\sqrt{1.4}=1.183$.
 
 ### 2.2 Newton's isothermal assumption and its failure
@@ -379,6 +400,13 @@ $$
 
 ![Intensity](assets/figures/fig-004.svg)
 
+> [!abstract] DIAGRAM D15.4 — Intensity
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-004.svg`; original retained.
+> **Read:** Intensity.
+
+![[../_obsidian/excalidraw/sound-waves-D15-4.excalidraw|900]]
+
 **Fig. 2.2** — Point source: $I=P/(4\pi r^2)$, $\Delta P_0\propto1/r$. Line source: $I=P/(2\pi r L)$, $\Delta P_0\propto1/\sqrt r$.
 
 Decibel:
@@ -412,6 +440,13 @@ Boundary rules:
 - **Open end (atmosphere):** $\Delta P=0$ (pressure node), $s$ antinode.
 
 ![Organ pipes](assets/figures/fig-005.svg)
+
+> [!abstract] DIAGRAM D15.5 — Organ pipes
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `sound-waves/assets/figures/fig-005.svg`; original retained.
+> **Read:** Organ pipes.
+
+![[../_obsidian/excalidraw/sound-waves-D15-5.excalidraw|900]]
 
 **Fig. 2.3** — Closed pipe only odd harmonics; open pipe all harmonics. End-correction $e≈0.6r$ shifts effective length.
 
@@ -455,6 +490,13 @@ $$
 
 ![Resonance tube](assets/figures/fig-006.svg)
 
+> [!abstract] DIAGRAM D15.6 — Resonance tube
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-006.svg`; original retained.
+> **Read:** Resonance tube.
+
+![[../_obsidian/excalidraw/sound-waves-D15-6.excalidraw|900]]
+
 **Fig. 2.4** — Two resonances give both $v$ and $e$ without knowing $e$ a priori.
 
 Kundt's tube: rod of length $L_{\text{rod}}$ clamped at middle, longitudinal vibration $f=v_{\text{rod}}/2L_{\text{rod}}$. Gas column shows dust heaps at displacement nodes spaced $\lambda_{\text{gas}}/2$. Then
@@ -467,6 +509,13 @@ If rod $Y$, $\rho$ known, $v_{\text{rod}}=\sqrt{Y/\rho}$ → $v_{\text{gas}}$ me
 
 ![Kundt](assets/figures/fig-014.svg)
 
+> [!abstract] DIAGRAM D15.14 — Kundt
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-014.svg`; original retained.
+> **Read:** Kundt.
+
+![[../_obsidian/excalidraw/sound-waves-D15-14.excalidraw|900]]
+
 **Fig. 2.5** — Kundt's tube measures $v_{\text{gas}}/v_{\text{rod}}$ via node spacing.
 
 ### 2.8 Interference & beats
@@ -476,6 +525,13 @@ Path difference $\Delta x$, phase difference $\Delta\phi=2\pi\Delta x/\lambda$.
 Quincke's tube: acoustic interferometer, two paths differ by $\Delta=2\Delta L$ (U-tube extra). Destructive when $\Delta=(2n+1)\lambda/2$.
 
 ![Quincke](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D15.7 — Quincke
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-007.svg`; original retained.
+> **Read:** Quincke.
+
+![[../_obsidian/excalidraw/sound-waves-D15-7.excalidraw|900]]
 
 **Fig. 2.6** — Quincke's tube: sliding U changes path by $2\Delta L$, minima at half-integer wavelengths.
 
@@ -502,6 +558,13 @@ flowchart LR
 
 ![Beats](assets/figures/fig-008.svg)
 
+> [!abstract] DIAGRAM D15.8 — Beats
+> **Show:** Analytic redraw correcting the legacy sketch; use this scene for geometry and signs.
+> **Source:** `sound-waves/assets/figures/fig-008.svg`; original retained.
+> **Read:** Beats.
+
+![[../_obsidian/excalidraw/sound-waves-D15-8.excalidraw|900]]
+
 **Fig. 2.7** — Beats: fast oscillation at average frequency, slow envelope at difference frequency.
 
 Tuning fork: loading with wax increases effective mass → $f$ decreases; filing prongs reduces mass / increases stiffness → $f$ increases.
@@ -525,7 +588,21 @@ $$
 + for observer moving toward source.
 
 ![Moving source](assets/figures/fig-009.svg)
+
+> [!abstract] DIAGRAM D15.9 — Moving source
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-009.svg`; original retained.
+> **Read:** Moving source.
+
+![[../_obsidian/excalidraw/sound-waves-D15-9.excalidraw|900]]
 ![Moving observer](assets/figures/fig-010.svg)
+
+> [!abstract] DIAGRAM D15.10 — Moving observer
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-010.svg`; original retained.
+> **Read:** Moving observer.
+
+![[../_obsidian/excalidraw/sound-waves-D15-10.excalidraw|900]]
 
 **Fig. 2.8–2.9** — Source motion compresses wavefronts; observer motion changes intercept rate.
 
@@ -562,6 +639,13 @@ $$
 This assumes a uniform medium and wind, a well-defined ray, and non-relativistic speeds. With no wind, set $c_g=v$. For collinear motion, one may instead take $w$ positive S$\to$O, $v_s$ positive toward O, and $v_o$ positive toward S; then $f'=f(v+w+v_o)/(v+w-v_s)$. The signed vector form avoids ambiguous $\pm$ choices.
 
 ![Oblique](assets/figures/fig-011.svg)
+
+> [!abstract] DIAGRAM D15.11 — Oblique
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-011.svg`; original retained.
+> **Read:** Oblique.
+
+![[../_obsidian/excalidraw/sound-waves-D15-11.excalidraw|900]]
 
 **Fig. 2.10** — Only line-of-sight components $v_s\cos\theta_s$, $v_o\cos\theta_o$ enter. $f'=f(v - v_o\cos\theta_o)/(v - v_s\cos\theta_s)$.
 
@@ -604,6 +688,13 @@ $$
 
 ![Double Doppler](assets/figures/fig-012.svg)
 
+> [!abstract] DIAGRAM D15.12 — Double Doppler
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-012.svg`; original retained.
+> **Read:** Double Doppler.
+
+![[../_obsidian/excalidraw/sound-waves-D15-12.excalidraw|900]]
+
 **Fig. 2.11** — Echo is double shift: incident wall=observer, reflected wall=source.
 
 General vehicle radar: $f_{\text{received}} = f(v+v_o)/(v-v_s) \times (v+v_{\text{target}})/(v-v_{\text{target}})$ etc.
@@ -619,6 +710,13 @@ $$
 $M$ Mach number. For $M<1$ no cone; $M=1$ plane wave $\alpha=90°$; $M>1$ shock front.
 
 ![Mach cone](assets/figures/fig-013.svg)
+
+> [!abstract] DIAGRAM D15.13 — Mach cone
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-013.svg`; original retained.
+> **Read:** Mach cone.
+
+![[../_obsidian/excalidraw/sound-waves-D15-13.excalidraw|900]]
 
 **Fig. 2.12** — Supersonic source: wavefronts pile up on Mach cone. Pressure discontinuity → sonic boom.
 
@@ -947,6 +1045,13 @@ flowchart TD
 > *Read:* the first question names the law; mixing the wavelength change (source) with the intercept change (observer) is the classic trap.
 
 ![Decision tree](assets/figures/fig-015.svg)
+
+> [!abstract] DIAGRAM D15.15 — Decision tree
+> **Show:** Editable geometry and labels for the local figure above.
+> **Source:** `sound-waves/assets/figures/fig-015.svg`; original retained.
+> **Read:** Decision tree.
+
+![[../_obsidian/excalidraw/sound-waves-D15-15.excalidraw|900]]
 
 ```
 Is it about speed?

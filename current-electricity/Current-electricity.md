@@ -22,6 +22,13 @@ A complete, proof-first treatment of current, resistance, cells, networks, instr
 
 ![A cell driving a lamp through two resistors, with the ledger and the divider annotated](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D19.1 — A cell driving a lamp through two resistors, with the ledger and the divider annotated
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-001.svg`; retained.
+> **Read:** A cell driving a lamp through two resistors, with the ledger and the divider annotated.
+
+![[../_obsidian/excalidraw/current-electricity-D19-1.excalidraw|900]]
+
 **The whole course in one picture.** A source that pumps and taxes, resistances that divide, and a load that takes what the divider allows. Chapter 3 owns the pump, chapter 4 the network, chapter 5 the replacement of everything left of the lamp by two numbers — and the audit line at the bottom is the habit that turns solves into marks.
 
 > [!tip] FIGURE F8.1 · Chapter map: the ledger and the divider
@@ -187,9 +194,23 @@ $$
 
 ![Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state](assets/figures/fig-002.svg)
 
+> [!abstract] DIAGRAM D19.2 — Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-002.svg`; retained.
+> **Read:** Current as charge flux through two cross-sections of a wire, with the segment between them storing none in steady state.
+
+![[../_obsidian/excalidraw/current-electricity-D19-2.excalidraw|900]]
+
 **Fig. 1.1 — Steady state means every cross-section passes the same current.** If $I_2>I_1$ the segment would pile up charge until its field corrected the flow; that correction time is $10^{-14}$ s, which is why series elements carry equal currents without exception.
 
 ![Same current density crossing a flat surface and a tilted surface: flux scales with cos theta](assets/figures/fig-003.svg)
+
+> [!abstract] DIAGRAM D19.3 — Same current density crossing a flat surface and a tilted surface: flux scales with cos theta
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-003.svg`; retained.
+> **Read:** Same current density crossing a flat surface and a tilted surface: flux scales with cos theta.
+
+![[../_obsidian/excalidraw/current-electricity-D19-3.excalidraw|900]]
 
 **Fig. 1.2 — Current is the flux of $\vec j$, so tilt costs a factor of $\cos\theta$.** The wires meeting at an angle in a junction do not add like vectors, yet each *surface* they cross feels $\vec j\cdot\hat n$ — the scalar flux view keeps both facts straight.
 
@@ -202,6 +223,13 @@ Put a field $\vec E$ along a copper wire. Each conduction electron feels $-e\vec
 > $\vec v_d$ is the **average** velocity of the carriers, averaged over the enormous number inside any small volume. It is the only part of their motion that survives the average; the thermal part, $\sim10^{5}$–$10^{6}$ m s⁻¹, cancels because it points randomly in all directions.
 
 ![Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire](assets/figures/fig-004.svg)
+
+> [!abstract] DIAGRAM D19.4 — Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-004.svg`; retained.
+> **Read:** Zig-zag electron path: random thermal motion with a slow drift to the left along the field of the wire.
+
+![[../_obsidian/excalidraw/current-electricity-D19-4.excalidraw|900]]
 
 **Fig. 1.3 — One collision-rich trajectory and its mean.** The instantaneous speed is set by temperature; the *displacement per second* is set by the field. Signal speed and carrier speed are different quantities — confusing them is the classic error this chapter exists to prevent.
 
@@ -266,6 +294,13 @@ Copper: $n=8.5\times10^{28}\ \text{m}^{-3}$, $\rho=1.7\times10^{-8}\ \Omega$m. A
 > Mains at 50 Hz: the drift velocity itself oscillates with period 20 ms. With $I_0=5$ A in our 1 mm² wire, the drift amplitude is $v_{d,0}/\omega=3.7\times10^{-4}/314\approx1.2\ \mu$m. The electron cloud of your house wiring merely trembles by a micrometre, 50 times a second — while delivering kilowatt-hours through the field. Any exam question of the form "how far does an electron move in one AC cycle" is this two-line calculation.
 
 ![When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once](assets/figures/fig-005.svg)
+
+> [!abstract] DIAGRAM D19.5 — When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-005.svg`; retained.
+> **Read:** When the switch closes the field is established everywhere within L over c, so every electron starts drifting at once.
+
+![[../_obsidian/excalidraw/current-electricity-D19-5.excalidraw|900]]
 
 **Fig. 1.4 — What crosses the circuit at light speed is the instruction, not the carriers.** All electrons between switch and lamp begin drifting together the moment the field reaches them; no electron needs to travel the route for the lamp to light.
 
@@ -451,9 +486,23 @@ $$
 
 ![Radial current between concentric spheres, with the slice used in the integral highlighted](assets/figures/fig-006.svg)
 
+> [!abstract] DIAGRAM D19.6 — Radial current between concentric spheres, with the slice used in the integral highlighted
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-006.svg`; retained.
+> **Read:** Radial current between concentric spheres, with the slice used in the integral highlighted.
+
+![[../_obsidian/excalidraw/current-electricity-D19-6.excalidraw|900]]
+
 **Fig. 2.1 — Slicing along the flow lines makes a hard geometry into a one-line integral.** The area multiplying $dr$ is the area of the equipotential surface; naming that surface is the whole method.
 
 ![A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D19.7 — A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-007.svg`; retained.
+> **Read:** A tapered conductor sliced perpendicular to the axis: each slice has its own area, and reciprocals add.
+
+![[../_obsidian/excalidraw/current-electricity-D19-7.excalidraw|900]]
 
 **Fig. 2.2 — Tapered bar: the answer is the geometric-mean area.** Adding $dR=\rho\,dx/\pi r(x)^{2}$ weights the thin slices most; the closed form $\rho l/\pi ab$ is the exact result of that weighting, and the arithmetic-mean guess is simply wrong.
 
@@ -481,6 +530,13 @@ Chapter 1 delivered $\sigma=ne^{2}\tau/m$. Every temperature effect on conductiv
 
 ![Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled](assets/figures/fig-008.svg)
 
+> [!abstract] DIAGRAM D19.8 — Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-008.svg`; retained.
+> **Read:** Resistivity versus temperature for a metal and an intrinsic semiconductor, with the mechanisms labelled.
+
+![[../_obsidian/excalidraw/current-electricity-D19-8.excalidraw|900]]
+
 **Fig. 2.3 — The two conductivities part company with increasing temperature.** The metal's line is the failure of memory ($\tau$); the semiconductor's dive is the birth of carriers ($n$). A thermometer uses the left curve, a thermistor the right.
 
 ### 2.4 When Ohm's law fails: the non-ohmic three
@@ -500,6 +556,13 @@ Ohm's law is the **claim** that $V/I$ stays constant as $V$ varies. Three device
 > Conducts only when forward-biased beyond $\sim0.7$ V (Si); below that, essentially no current; reversed, nanoamps. The $I$–$V$ curve is the steepest nonlinearity in your syllabus, and the reason circuit problems with diodes are solved **piecewise**: decide first which way the diode faces, guess on/off, solve, and *check the guess against the resulting current sign* (worked example 7.1 does this in full).
 
 ![Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode](assets/figures/fig-009.svg)
+
+> [!abstract] DIAGRAM D19.9 — Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-009.svg`; retained.
+> **Read:** Current-voltage characteristics of an ohmic resistor, a filament lamp, an NTC thermistor and a diode.
+
+![[../_obsidian/excalidraw/current-electricity-D19-9.excalidraw|900]]
 
 **Fig. 2.4 — One graph, four signatures.** Straight through the origin: linear. Bending below the chord: self-heating resistor. Bending above: thermistor. Flat then vertical: diode. Name the mechanism and the device is identified from the curve shape alone — a recurring JEE question format.
 
@@ -675,6 +738,13 @@ $$
 
 ![A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R](assets/figures/fig-010.svg)
 
+> [!abstract] DIAGRAM D19.10 — A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-010.svg`; retained.
+> **Read:** A cell modelled as an ideal EMF in series with internal resistance r, driving external resistance R.
+
+![[../_obsidian/excalidraw/current-electricity-D19-10.excalidraw|900]]
+
 **Fig. 3.1 — The cell is a pump in series with a resistor you cannot remove.** The dashed box is the physical cell: chemistry (the ladder $\mathcal E$) plus electrolyte resistance ($r$). Only the terminals are sold to you.
 
 > **The trap in this section**
@@ -682,6 +752,13 @@ $$
 > Reading "a 12 V battery" as "the voltmeter will say 12 V". The reply: the voltmeter reads the **terminal voltage** $\mathcal E-Ir$ whenever the battery delivers current. A starter motor drawing 200 A from a 12 V battery with $r=0.01\ \Omega$ sees only $12-200\times0.01=10$ V — the sag you hear in a car's cranking whine. And the sign flips on charge: a battery being charged sits at **more** than its EMF ($\mathcal E+Ir$). Terminal voltage above EMF ⇒ the cell is being charged; below ⇒ discharging; equal ⇒ open circuit.
 
 ![Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r](assets/figures/fig-011.svg)
+
+> [!abstract] DIAGRAM D19.11 — Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-011.svg`; retained.
+> **Read:** Terminal voltage versus current for a real cell: a straight line from E at zero current to zero at short-circuit current E/r.
+
+![[../_obsidian/excalidraw/current-electricity-D19-11.excalidraw|900]]
 
 **Fig. 3.2 — The load line of a cell carries its entire specification.** Intercept at $I=0$: EMF. Intercept at $V=0$: short-circuit current $\mathcal E/r$. Slope: $-r$. Given any two, the third follows — and reading intercepts off a drawn line is a complete JEE question.
 
@@ -749,9 +826,23 @@ The chemical power $\mathcal EI$ splits into the useful $I^{2}R$ and the interna
 
 ![Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends](assets/figures/fig-012.svg)
 
+> [!abstract] DIAGRAM D19.12 — Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-012.svg`; retained.
+> **Read:** Power delivered to the load versus load resistance: peak at R = r with half efficiency, falling to zero at both ends.
+
+![[../_obsidian/excalidraw/current-electricity-D19-12.excalidraw|900]]
+
 **Fig. 3.3 — The power hill has one summit and two cliffs.** Both $R=0$ (everything burns inside) and $R\to\infty$ (nothing flows) deliver zero useful power; the symmetric peak sits at $R=r$, where the split is exactly even. The curve's symmetry about $R=r$ is exact — check it at $R=2r$ and $R=r/2$.
 
 ![Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat](assets/figures/fig-013.svg)
+
+> [!abstract] DIAGRAM D19.13 — Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-013.svg`; retained.
+> **Read:** Energy ledger bars for R equal to r, three r and r over three: chemical power split between load and internal heat.
+
+![[../_obsidian/excalidraw/current-electricity-D19-13.excalidraw|900]]
 
 **Fig. 3.4 — The audit is the same width; only the split moves.** At $R=r$ the load takes the largest slice it can ever take, but half the chemistry is burned in the cell. Efficiency and delivered power are different maximisations — quote both, always.
 
@@ -927,6 +1018,13 @@ flowchart TD
 
 ![A two-loop circuit with three branch currents assigned and two loop directions chosen](assets/figures/fig-014.svg)
 
+> [!abstract] DIAGRAM D19.14 — A two-loop circuit with three branch currents assigned and two loop directions chosen
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-014.svg`; retained.
+> **Read:** A two-loop circuit with three branch currents assigned and two loop directions chosen.
+
+![[../_obsidian/excalidraw/current-electricity-D19-14.excalidraw|900]]
+
 **Fig. 4.1 — The setup that cannot go wrong.** Three branch currents guessed (one already fixed by KCL), two loop senses chosen: two unknowns, two independent loops, done. The guessed directions are disposable — the solved signs are not.
 
 ### Worked example 4.1 · A full two-loop solve, audited
@@ -1009,6 +1107,13 @@ The fastest solving tool is not a formula but a question: **which nodes are at t
 
 ![Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked](assets/figures/fig-015.svg)
 
+> [!abstract] DIAGRAM D19.15 — Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-015.svg`; retained.
+> **Read:** Cube of resistors between opposite corners, with the three symmetry classes of edges and the equipotential planes marked.
+
+![[../_obsidian/excalidraw/current-electricity-D19-15.excalidraw|900]]
+
 **Fig. 4.2 — Symmetry sorts the twelve edges into three current classes.** Everything flows from naming the equipotential planes perpendicular to the body diagonal; no simultaneous equations are ever written.
 
 > **Why the balanced bridge carries no galvanometer current**
@@ -1022,6 +1127,13 @@ The fastest solving tool is not a formula but a question: **which nodes are at t
 >  The logic runs both ways: if the ratios match, $B$ and $D$ are at equal potential *however* you feed the bridge, so the detector branch may be deleted (or any resistance inserted there — Q7). This is why the null method is king of precision measurement (chapter 6): at balance the detector's own imperfections are irrelevant, because no current through it exists to be wrong about.
 
 ![Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4](assets/figures/fig-016.svg)
+
+> [!abstract] DIAGRAM D19.16 — Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-016.svg`; retained.
+> **Read:** Wheatstone bridge: battery across one diagonal, galvanometer across the other, arms labelled R1 to R4.
+
+![[../_obsidian/excalidraw/current-electricity-D19-16.excalidraw|900]]
 
 **Fig. 4.3 — The bridge and its licence.** At balance the detector diagonal is electrically dead: delete it or replace it with a wire, and every other current in the network is unchanged.
 
@@ -1201,6 +1313,13 @@ Cengage puts the capacitor's transient behaviour in the current chapter, and rig
 
 ![Charging curves: capacitor voltage rising and current falling, both with time constant tau marked](assets/figures/fig-017.svg)
 
+> [!abstract] DIAGRAM D19.17 — Charging curves: capacitor voltage rising and current falling, both with time constant tau marked
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-017.svg`; retained.
+> **Read:** Charging curves: capacitor voltage rising and current falling, both with time constant tau marked.
+
+![[../_obsidian/excalidraw/current-electricity-D19-17.excalidraw|900]]
+
 **Fig. 4.4 — The two curves of a single time constant.** The capacitor voltage climbs toward the cell's emf and the current decays toward zero; both are drawn for the same $\tau=RC$. The tangent at $t=0$ on the current curve reaches zero at $t=\tau$, which is the geometric definition of a time constant: *the time the initial rate of change would need if it never slowed*. Marks at 63% and 99.3% are the ones to quote in an answer.
 
 ### Worked example 4.3 · A complete charging cycle
@@ -1327,6 +1446,13 @@ flowchart LR
 
 ![A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance](assets/figures/fig-018.svg)
 
+> [!abstract] DIAGRAM D19.18 — A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-018.svg`; retained.
+> **Read:** A complicated two-terminal network replaced by its Thevenin equivalent: one source and one resistance.
+
+![[../_obsidian/excalidraw/current-electricity-D19-18.excalidraw|900]]
+
 **Fig. 5.1 — The Thevenin contract.** Two measurements (open-circuit voltage, killed-source resistance) buy a one-source model of any linear network. The arrow is the only place loads may be attached.
 
 ### Worked example 5.2 · The bridge, redone in three lines
@@ -1336,6 +1462,13 @@ The bridge of worked example 4.2 (arms 10, 20, 30, 40 $\Omega$, 10 V battery, de
 ### 5.3 Norton and source transformation
 
 ![Thevenin and Norton equivalents side by side, with the conversion formulas between them](assets/figures/fig-019.svg)
+
+> [!abstract] DIAGRAM D19.19 — Thevenin and Norton equivalents side by side, with the conversion formulas between them
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-019.svg`; retained.
+> **Read:** Thevenin and Norton equivalents side by side, with the conversion formulas between them.
+
+![[../_obsidian/excalidraw/current-electricity-D19-19.excalidraw|900]]
 
 **Fig. 5.2 — Two black boxes, one behaviour.** Source transformation is just these two equations read backwards: a Thevenin pair becomes a Norton pair with $R$ unchanged. The load cannot tell which it is wired to.
 
@@ -1356,6 +1489,13 @@ The bridge of worked example 4.2 (arms 10, 20, 30, 40 $\Omega$, 10 V battery, de
 >  **Validity:** $V_{th},R_{th}$ fixed, $R_L$ varied. This is ch 3's $R=r$ result — the cell was already a Thevenin source. Two warnings worth marks: (i) at the matched point the source burns as much inside as it delivers — power stations and audio amplifiers driving speakers do **not** match, they maximise $\eta$; matching is for signals, where the watts are microwatts and the information is the cargo. (ii) If the problem fixes $R_L$ and lets the *source* change, there is no interior maximum at all.
 
 ![Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency](assets/figures/fig-020.svg)
+
+> [!abstract] DIAGRAM D19.20 — Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-020.svg`; retained.
+> **Read:** Load power versus load resistance: peak at R_L = R_th delivering V squared over four R, at half efficiency.
+
+![[../_obsidian/excalidraw/current-electricity-D19-20.excalidraw|900]]
 
 **Fig. 5.3 — The power hill again, now for any network.** To the left of the summit the load is current-limited; to the right it is voltage-starved. Every "find $R_L$ for maximum power" question is a Thevenin question in disguise: reduce, then match.
 
@@ -1530,6 +1670,13 @@ Every instrument is a theorem from chapter 5 wearing a case. After this chapter 
 
 ![Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier](assets/figures/fig-021.svg)
 
+> [!abstract] DIAGRAM D19.21 — Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-021.svg`; retained.
+> **Read:** Galvanometer converted to an ammeter by a small shunt and to a voltmeter by a large series multiplier.
+
+![[../_obsidian/excalidraw/current-electricity-D19-21.excalidraw|900]]
+
 **Fig. 6.1 — One movement, two instruments, opposite strategies.** The ammeter hides inside a tiny resistance; the voltmeter hides behind a huge one. Both conversions are exact applications of "same voltage" / "same current" — chapter 4's two dividers with purpose.
 
 ### 6.2 The loading error: every meter lies a little
@@ -1566,6 +1713,13 @@ $$
 
 ![Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key](assets/figures/fig-022.svg)
 
+> [!abstract] DIAGRAM D19.22 — Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-022.svg`; retained.
+> **Read:** Meter bridge: one-metre wire with jockey, known and unknown resistors, galvanometer with key.
+
+![[../_obsidian/excalidraw/current-electricity-D19-22.excalidraw|900]]
+
 **Fig. 6.2 — The meter bridge is a Wheatstone bridge whose two arms are one piece of wire.** Length is the cheapest precision ratio ever manufactured: a good wire gives parts-in-10⁴, which no dial instrument of the era could touch.
 
 ### 6.4 The potentiometer: measurement without theft
@@ -1581,6 +1735,13 @@ $$
 >  the second formula: with resistance $R$ shunting the cell, its terminal voltage (now carrying current) balances at $l<l_0$, and $\mathcal E/(\mathcal E-Ir)=l_0/l$ rearranges to the printed result.
 
 ![Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer](assets/figures/fig-023.svg)
+
+> [!abstract] DIAGRAM D19.23 — Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-023.svg`; retained.
+> **Read:** Potentiometer: driver cell across a long wire, unknown cell opposed to the wire drop through a galvanometer.
+
+![[../_obsidian/excalidraw/current-electricity-D19-23.excalidraw|900]]
 
 **Fig. 6.3 — Two EMFs opposed, one galvanometer, zero stolen current.** The instrument chain — chapter 4's balance, chapter 5's null philosophy — made physical. It measures EMF, not terminal voltage, because it never lets the cell deliver a thing.
 
@@ -1734,6 +1895,13 @@ Five topics that Olympiad papers love and textbooks compress: why a fuse blows (
 
 ![The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale](assets/figures/fig-024.svg)
 
+> [!abstract] DIAGRAM D19.24 — The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-024.svg`; retained.
+> **Read:** The same 100 kW delivered at 200 volts and at 20 kilovolts, with the line losses drawn to scale.
+
+![[../_obsidian/excalidraw/current-electricity-D19-24.excalidraw|900]]
+
 **Fig. 7.1 — Two transmission plans, drawn honestly.** The 200 V plan cannot even be drawn: its loss bar is 25 times its delivery bar. The 20 kV plan's loss is invisible at this scale — 0.25%.
 
 ### 7.3 Thermoelectricity: Seebeck, with two temperatures
@@ -1767,6 +1935,13 @@ Five topics that Olympiad papers love and textbooks compress: why a fuse blows (
 > A thermistor obeys roughly $R(T)=R_0e^{\beta(1/T-1/T_0)}$ with $\beta\approx3000$–4000 K — ch 2's carrier explosion in one constant. Feed it and it heats *itself*: electrical power in must equal $\delta(T-T_{amb})$ out (dissipation constant $\delta\sim$ mW/K in still air). The operating point is the intersection of the device's $I(V)$ curve with the thermal load line $P=\delta\Delta T$. Below the intersection the curve is ohmic; above it, warming lowers $R$, raises $I$, warms further — **negative resistance territory**, and the crossing can be unstable (a run-away Q5 examines numerically). This is the same fixed-point thinking as ch 4's infinite ladder, wearing thermal clothes.
 
 ![Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak](assets/figures/fig-025.svg)
+
+> [!abstract] DIAGRAM D19.25 — Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-025.svg`; retained.
+> **Read:** Thermistor I-V curve with a thermal load line: stable operating point at the first intersection, unstable runaway beyond the peak.
+
+![[../_obsidian/excalidraw/current-electricity-D19-25.excalidraw|900]]
 
 **Fig. 7.2 — An NTC thermistor's $I$–$V$ curve and the thermal load line.** Left of the peak the device behaves; the descending branch is negative differential resistance sustained by self-heating. Circuit designs live on the rising branch on purpose.
 
@@ -1927,6 +2102,13 @@ Everything from chapters 1–7, compressed into the form you can carry into a ti
 | "fuse", "transmission line", "thermocouple", "persistence of current" | ch 7 scaling | name the two flows (heating/cooling, electrical/thermal), equate, scale |
 
 ![Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method](assets/figures/fig-026.svg)
+
+> [!abstract] DIAGRAM D19.26 — Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method
+> **Show:** Editable companion; analytic curve corrections are described in the retrofit status.
+> **Source:** `current-electricity/assets/figures/fig-026.svg`; retained.
+> **Read:** Triage flow: nonlinear element, sources varied, geometry, meters, leading to the matching method.
+
+![[../_obsidian/excalidraw/current-electricity-D19-26.excalidraw|900]]
 
 **Fig. 8.1 — The triage flow.** Classification is the solution's first third; the audit line is its last third. The middle is arithmetic.
 

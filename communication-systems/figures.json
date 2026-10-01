@@ -2,35 +2,171 @@
   "slug": "communication-systems",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F100.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F100.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one journey - modulate, propagate, receive, and count the noise",
       "data": "the Part 0-14 structure",
       "read": "every result is a bandwidth, a modulation index, a range formula, or Shannon's ceiling",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F100.2", "kind": "flowchart", "title": "The three-part system: modulate, send, demodulate",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F100.2",
+      "kind": "flowchart",
+      "title": "The three-part system: modulate, send, demodulate",
       "why": "every communication question walks the same chain; fix the stages",
       "data": "source → modulator → transmitter → channel(+noise) → receiver → demodulator → destination",
       "read": "the modulator stamps the message on a carrier, the channel adds noise, the demodulator unstamps it",
-      "source": "DIAGRAM D100.1 (§3.1)" },
-    { "id": "F100.3", "kind": "flowchart", "title": "Propagation: three modes, three frequency bands",
+      "source": "DIAGRAM D100.1 (§3.1)"
+    },
+    {
+      "id": "F100.3",
+      "kind": "flowchart",
+      "title": "Propagation: three modes, three frequency bands",
       "why": "the propagation question is decided by frequency alone",
       "data": "ground < 2 MHz; sky 2-30 MHz; space > 30 MHz with range √(2Rh)",
       "read": "low frequencies hug the Earth, mid bounce off the ionosphere, high must see their target",
-      "source": "DIAGRAM D100.3 (§3.5)" },
-    { "id": "F100.4", "kind": "flowchart", "title": "AM: the envelope carries the message - until it inverts",
+      "source": "DIAGRAM D100.3 (§3.5)"
+    },
+    {
+      "id": "F100.4",
+      "kind": "flowchart",
+      "title": "AM: the envelope carries the message - until it inverts",
       "why": "amplitude modulation is read from the envelope; the index is its dial",
       "data": "μ = (Amax-Amin)/(Amax+Amin); μ≤1 required; power efficiency μ²/(2+μ²)",
       "read": "keep the index at or under one, or the envelope folds and the message is lost",
-      "source": "DIAGRAM D100.6 (§3.8)" },
-    { "id": "F100.5", "kind": "flowchart", "title": "Shannon's ceiling: bandwidth × signal-to-noise",
+      "source": "DIAGRAM D100.6 (§3.8)"
+    },
+    {
+      "id": "F100.5",
+      "kind": "flowchart",
+      "title": "Shannon's ceiling: bandwidth × signal-to-noise",
       "why": "no scheme can beat the capacity formula; every design is measured against it",
       "data": "C = B log2(1+S/N); P_n = kTB; 30 dB → 10 bits/s/Hz",
       "read": "more bandwidth or signal buys capacity, but logarithmically",
-      "source": "DIAGRAM D100.10 (§3.13)" },
-    { "id": "F100.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D100.10 (§3.13)"
+    },
+    {
+      "id": "F100.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the nine triage branches of §9.1",
       "read": "frequency picks the propagation mode, a waveform picks the index, capacity stops at Shannon",
-      "source": "§9.1 Triage decision tree" }
-  ]
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D100.1",
+      "kind": "excalidraw",
+      "title": "The communication system block diagram",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"communication system block diagram transmitter channel receiver noise\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-1.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.1 brief"
+    },
+    {
+      "id": "D100.2",
+      "kind": "excalidraw",
+      "title": "Frequency spectrum of a voice signal",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"voice signal frequency spectrum bandwidth 300 3400 Hz\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-2.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.2 brief"
+    },
+    {
+      "id": "D100.3",
+      "kind": "excalidraw",
+      "title": "Sky-wave propagation with skip distance",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"sky wave ionospheric reflection skip distance skip zone diagram\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-3.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.3 brief"
+    },
+    {
+      "id": "D100.4",
+      "kind": "excalidraw",
+      "title": "Line-of-sight propagation and horizon distance",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"line of sight propagation horizon distance antenna height diagram\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-4.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.4 brief"
+    },
+    {
+      "id": "D100.5",
+      "kind": "excalidraw",
+      "title": "Frequency-division multiplexing",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"frequency division multiplexing FDM carrier channels diagram\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-5.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.5 brief"
+    },
+    {
+      "id": "D100.6",
+      "kind": "excalidraw",
+      "title": "AM waveform with modulation index annotation",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"amplitude modulation waveform modulation index 50 percent 100 percent overmodulated\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-6.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.6 brief"
+    },
+    {
+      "id": "D100.7",
+      "kind": "excalidraw",
+      "title": "FM waveform and frequency deviation",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"frequency modulation waveform instantaneous frequency deviation diagram\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-7.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.7 brief"
+    },
+    {
+      "id": "D100.8",
+      "kind": "excalidraw",
+      "title": "The envelope detector circuit",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"AM envelope detector diode RC filter circuit waveform\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-8.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.8 brief"
+    },
+    {
+      "id": "D100.11",
+      "kind": "excalidraw",
+      "title": "FM transmitter and receiver block diagrams",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"FM transmitter receiver block diagram VCO discriminator limiter\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-11.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.11 brief"
+    },
+    {
+      "id": "D100.12",
+      "kind": "excalidraw",
+      "title": "AM spectrum showing carrier and sidebands",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"AM spectrum carrier upper lower sideband frequency bandwidth diagram\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-12.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.12 brief"
+    },
+    {
+      "id": "D100.9",
+      "kind": "excalidraw",
+      "title": "AM superheterodyne receiver block diagram",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"superheterodyne receiver block diagram local oscillator IF amplifier\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-9.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.9 brief"
+    },
+    {
+      "id": "D100.10",
+      "kind": "excalidraw",
+      "title": "Signal-to-noise ratio and channel capacity",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Shannon channel capacity spectral efficiency signal to noise ratio curve\"",
+      "file": "_obsidian/excalidraw/communication-systems-D100-10.excalidraw.md",
+      "source": "communication-systems/Communication-systems.md · D100.10 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D100 series); scenes drawn from briefs, not converted from SVG."
 }

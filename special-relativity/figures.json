@@ -2,35 +2,171 @@
   "slug": "special-relativity",
   "policy": "docs/obsidian-plugin-workflow.md §2",
   "figures": [
-    { "id": "F28.1", "kind": "mindmap", "title": "Chapter map",
+    {
+      "id": "F28.1",
+      "kind": "mindmap",
+      "title": "Chapter map",
       "why": "one cascade - two postulates force new kinematics, which forces new dynamics",
       "data": "the Part 0-14 structure",
       "read": "every result is the Lorentz factor, an invariant, or an energy-momentum relation",
-      "source": "Part 0 · Orientation (coverage map)" },
-    { "id": "F28.2", "kind": "flowchart", "title": "The two postulates and what they force",
+      "source": "Part 0 · Orientation (coverage map)"
+    },
+    {
+      "id": "F28.2",
+      "kind": "flowchart",
+      "title": "The two postulates and what they force",
       "why": "the whole chapter is guessed from two premises; chain premise to conclusion",
       "data": "Postulates 1 and 2; Michelson-Morley null result",
       "read": "relativity of simultaneity comes before dilation and contraction",
-      "source": "§3.2 The two postulates" },
-    { "id": "F28.3", "kind": "flowchart", "title": "The muon: two frames, one event",
+      "source": "§3.2 The two postulates"
+    },
+    {
+      "id": "F28.3",
+      "kind": "flowchart",
+      "title": "The muon: two frames, one event",
       "why": "one observable fact is dilation for Earth and contraction for the muon",
       "data": "15 km altitude, lifetime 2.2 µs, v = 0.998c, gamma ≈ 15.8",
       "read": "dilation and contraction are one story read from two frames",
-      "source": "DIAGRAM D28.4 (§3.5)" },
-    { "id": "F28.4", "kind": "flowchart", "title": "Adding velocities never exceeds c",
+      "source": "DIAGRAM D28.4 (§3.5)"
+    },
+    {
+      "id": "F28.4",
+      "kind": "flowchart",
+      "title": "Adding velocities never exceeds c",
       "why": "Galilean addition overshoots c; the denominator is the whole chapter",
       "data": "u = (u'+v)/(1+u'v/c²); 0.8c + 0.8c = 0.976c",
       "read": "at high speed the denominator bends every sum back under c",
-      "source": "DIAGRAM D28.5 (§3.7)" },
-    { "id": "F28.5", "kind": "xychart-beta", "title": "The gamma factor: slow to rise, then vertical",
+      "source": "DIAGRAM D28.5 (§3.7)"
+    },
+    {
+      "id": "F28.5",
+      "kind": "xychart-beta",
+      "title": "The gamma factor: slow to rise, then vertical",
       "why": "every exam speed must be converted to gamma first",
       "data": "gamma = 2 at beta = 0.866, ~7 at 0.99, 10 at 0.995",
       "read": "the last percent of light speed multiplies the factor sixfold",
-      "source": "DIAGRAM D28.7 (§3.10)" },
-    { "id": "F28.6", "kind": "flowchart", "title": "Triage - route by the keyword",
+      "source": "DIAGRAM D28.7 (§3.10)"
+    },
+    {
+      "id": "F28.6",
+      "kind": "flowchart",
+      "title": "Triage - route by the keyword",
       "why": "the keyword names the route before any number is touched",
       "data": "the nine triage branches of §9.1",
       "read": "velocity to gamma, events to a proper-time clock, speeds to addition",
-      "source": "§9.1 Triage decision tree" }
-  ]
+      "source": "§9.1 Triage decision tree"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D28.1",
+      "kind": "excalidraw",
+      "title": "The Michelson–Morley interferometer",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Michelson Morley interferometer diagram half-silvered mirror two arms fringe shift\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-1.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.1 brief"
+    },
+    {
+      "id": "D28.2",
+      "kind": "excalidraw",
+      "title": "The train-and-lightning thought experiment",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"train lightning simultaneity relativity thought experiment moving observer\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-2.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.2 brief"
+    },
+    {
+      "id": "D28.3",
+      "kind": "excalidraw",
+      "title": "The light-clock geometry",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"light clock time dilation diagram right triangle gamma derivation\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-3.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.3 brief"
+    },
+    {
+      "id": "D28.4",
+      "kind": "excalidraw",
+      "title": "The muon's two explanations",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"muon time dilation length contraction two frames explanation diagram\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-4.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.4 brief"
+    },
+    {
+      "id": "D28.5",
+      "kind": "excalidraw",
+      "title": "The velocity-addition curve",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"relativistic velocity addition curve versus Galilean addition approaching c\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-5.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.5 brief"
+    },
+    {
+      "id": "D28.6",
+      "kind": "excalidraw",
+      "title": "The energy–momentum triangle",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"energy momentum relation triangle diagram relativistic E pc mc2\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-6.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.6 brief"
+    },
+    {
+      "id": "D28.7",
+      "kind": "excalidraw",
+      "title": "The gamma factor versus velocity",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"Lorentz gamma factor versus velocity graph approaching infinity\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-7.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.7 brief"
+    },
+    {
+      "id": "D28.8",
+      "kind": "excalidraw",
+      "title": "The twin paradox world lines",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"twin paradox spacetime diagram world lines simultaneity turnaround\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-8.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.8 brief"
+    },
+    {
+      "id": "D28.9",
+      "kind": "excalidraw",
+      "title": "Relativistic momentum versus Newtonian momentum",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"relativistic momentum versus velocity diverging at speed of light\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-9.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.9 brief"
+    },
+    {
+      "id": "D28.10",
+      "kind": "excalidraw",
+      "title": "Pair production threshold energy bookkeeping",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"pair production photon energy threshold electron positron nucleus diagram\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-10.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.10 brief"
+    },
+    {
+      "id": "D28.11",
+      "kind": "excalidraw",
+      "title": "GPS relativistic correction components",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"GPS satellite relativistic correction special general relativity diagram\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-11.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.11 brief"
+    },
+    {
+      "id": "D28.12",
+      "kind": "excalidraw",
+      "title": "The pole-and-barn paradox in both frames",
+      "show": "Native scene drawn from the original DIAGRAM brief; editable primitives, no raster or SVG source.",
+      "search": "\"pole barn paradox relativity length contraction simultaneity two frames\"",
+      "file": "_obsidian/excalidraw/special-relativity-D28-12.excalidraw.md",
+      "source": "special-relativity/Special-relativity.md · D28.12 brief"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Original DIAGRAM ids preserved with gaps (D28 series); scenes drawn from briefs, not converted from SVG."
 }

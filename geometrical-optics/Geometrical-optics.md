@@ -22,6 +22,13 @@ A complete, proof-first treatment of rays, mirrors, refraction, prisms, lenses a
 
 ![Three-ray construction for a converging lens: object between F and 2F, real inverted magnified image](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D22.1 — Three-ray construction for a converging lens: object between F and 2F, real inverted magnified image
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-001.svg`; original retained.
+> **Read:** Three-ray construction for a converging lens: object between F and 2F, real inverted magnified image.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-1.excalidraw|900]]
+
 **The whole subject in one picture.** Three rays are always enough, because each one is a *rule* (parallel ray through the focus, central ray straight, focal ray parallel) rather than a calculation. Every question in these notes is one of two things: locating that crossing point, or explaining why a real instrument fails to put all the rays there.
 
 > [!tip] FIGURE F9.1 · Chapter map: 12 parts, one sign convention
@@ -75,6 +82,13 @@ Read 1 → 8 in order the first time; after that use part 9 as the index you act
 ### The sign convention, once and for all
 
 ![Cartesian sign convention: distances positive along the incident light, heights positive upward](assets/figures/fig-002.svg)
+
+> [!abstract] DIAGRAM D22.2 — Cartesian sign convention: distances positive along the incident light, heights positive upward
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-002.svg`; original retained.
+> **Read:** Cartesian sign convention: distances positive along the incident light, heights positive upward.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-2.excalidraw|900]]
 
 **Fig. 0.1** — One convention, applied always: from the pole, positive along the incident light for distances, positive upwards for heights. An object is almost always at $0 > u$; a *virtual object* (created by a lens that has not yet focused) is the case $u > 0$, and it is the case students mishandle.
 
@@ -217,6 +231,13 @@ Everything in geometrical optics is decided by three sentences: light travels in
 
 ![Parallel, convergent and divergent beams, and a wavefront perpendicular to the rays](assets/figures/fig-003.svg)
 
+> [!abstract] DIAGRAM D22.3 — Parallel, convergent and divergent beams, and a wavefront perpendicular to the rays
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-003.svg`; original retained.
+> **Read:** Parallel, convergent and divergent beams, and a wavefront perpendicular to the rays.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-3.excalidraw|900]]
+
 **Fig. 1.1** — The three beam shapes and the one relation worth remembering: the ray is the normal to the wavefront. A plane wavefront gives a parallel beam; a spherical wavefront gives a beam that diverges from (or converges to) one point, which is exactly why a point object and a point image are the two things every later part of this course computes.
 
 ### 1.2 Object and image: the two definitions that decide every answer
@@ -252,6 +273,13 @@ $$
 
 ![Fermat's construction: the reflected path equals a straight line to the mirror image of the observer](assets/figures/fig-004.svg)
 
+> [!abstract] DIAGRAM D22.4 — Fermat's construction: the reflected path equals a straight line to the mirror image of the observer
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-004.svg`; original retained.
+> **Read:** Fermat's construction: the reflected path equals a straight line to the mirror image of the observer.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-4.excalidraw|900]]
+
 **Fig. 1.2** — The equal-angle law *is* the shortest path. Numbers for this figure: the equal-angle path measures $AP + PB = 268.3 + 201.2 = 469.5$ units, while the competing path through $P'$ measures $156.2 + 332.4 = 488.6$ — the mirror picks the shorter one, and it is shortest precisely because $A, P, B'$ are collinear.
 
 > **The same trick in disguise: the "shortest path with a constraint" family**
@@ -267,6 +295,13 @@ Place a point object $O$ a perpendicular distance $d$ in front of a plane mirror
 > Let $P$ be any point of the mirror on a ray from $O$, and let the perpendicular from $O$ meet the mirror at $N$ with $ON \perp$ mirror. In the right triangles $ONP$ and $INP$ we have $NP$ common, $\angle ONP = \angle INP = 90^\circ$, and $\angle i = \angle r$ at $P$ (law of reflection), which forces $\angle OPN = \angle IPN$; hence the triangles are congruent and $IN = ON = d$. Congruence for *every* choice of $P$ is exactly the statement that all the backward-produced reflected rays pass through the one point $I$ — a virtual image, because the rays themselves never go there.
 
 ![Image of a point in a plane mirror: reflected rays produced backwards meet behind the mirror](assets/figures/fig-005.svg)
+
+> [!abstract] DIAGRAM D22.5 — Image of a point in a plane mirror: reflected rays produced backwards meet behind the mirror
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-005.svg`; original retained.
+> **Read:** Image of a point in a plane mirror: reflected rays produced backwards meet behind the mirror.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-5.excalidraw|900]]
 
 **Fig. 1.3** — Rays from $O$ reflect and enter the eye; produced backwards they meet at $I$, which is the mirror reflection of $O$. The two dashed segments are not light paths at all. Note the consequence that surprises people: the two rays reaching the pupil are *diverging* when they arrive, exactly as if they had come from a real object at $I$ — that is all "virtual image" means.
 
@@ -350,6 +385,13 @@ $$
 
 ![Minimum mirror height is half the person's height, independent of the distance](assets/figures/fig-006.svg)
 
+> [!abstract] DIAGRAM D22.6 — Minimum mirror height is half the person's height, independent of the distance
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-006.svg`; original retained.
+> **Read:** Minimum mirror height is half the person's height, independent of the distance.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-6.excalidraw|900]]
+
 **Fig. 1.4** — The head is seen by the ray that reflects at the mirror's top edge, the feet by the ray that reflects at its bottom edge, and both rays must reach the eye. Congruent triangles give the two reflection points at half the height of the object and half the height of the eye above the ground, so the required length is $h/2$ whatever the distance.
 
 > **Mirror size for a full-length view (person of height $h$, eye at height $e$)**
@@ -380,6 +422,13 @@ So a mirror 90 cm long whose lower edge is 85 cm above the floor and upper edge 
 ### 1.7 Turning the mirror: the 2θ rule
 
 ![A mirror rotated by theta turns the reflected ray by 2 theta](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D22.7 — A mirror rotated by theta turns the reflected ray by 2 theta
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-007.svg`; original retained.
+> **Read:** A mirror rotated by theta turns the reflected ray by 2 theta.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-7.excalidraw|900]]
 
 **Fig. 1.5** — Rotate the mirror by $\theta$ and its normal rotates by $\theta$; the reflected ray is the incident ray mirrored in the normal, so it rotates by $2\theta$. The angle of incidence itself changes only by $\theta$: the doubling is in the *output* direction, and that is the whole principle of a light-beam galvanometer.
 
@@ -454,6 +503,13 @@ $$
 Two mirrors meeting at an angle $\theta$ give a finite set of images, and the count is a rule students memorise without justification. It has a clean justification: **unfold the wedge**. Reflect the wedge across one mirror, then reflect the copy across the next mirror line, and keep going; each copy of the wedge contains one copy of the object, and each copy you can reach by such a chain of reflections is one image.
 
 ![Two mirrors at 90 degrees with an object and its three images located by successive reflection](assets/figures/fig-008.svg)
+
+> [!abstract] DIAGRAM D22.8 — Two mirrors at 90 degrees with an object and its three images located by successive reflection
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-008.svg`; original retained.
+> **Read:** Two mirrors at 90 degrees with an object and its three images located by successive reflection.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-8.excalidraw|900]]
 
 **Fig. 1.6** — Locating images by successive reflection. $I_1$ and $I_2$ are the two single-reflection images; $I_3$ is the reflection of $I_1$ in mirror 2 (equivalently of $I_2$ in mirror 1). At $90^\circ$ both routes land on the same point, which is why the count drops to three: the "fourth" image would need a reflection in a mirror's back face, and there is no light path for it.
 
@@ -598,6 +654,13 @@ At the point where a ray meets a curved mirror, the law of reflection uses the *
 
 ![Geometry of a concave mirror: pole, centre of curvature, principal focus, radius and focal length](assets/figures/fig-009.svg)
 
+> [!abstract] DIAGRAM D22.9 — Geometry of a concave mirror: pole, centre of curvature, principal focus, radius and focal length
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-009.svg`; original retained.
+> **Read:** Geometry of a concave mirror: pole, centre of curvature, principal focus, radius and focal length.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-9.excalidraw|900]]
+
 **Fig. 2.1** — The four named points of a concave mirror. The pole $P$ is the centre of the mirror's surface, $C$ the centre of the sphere, $F$ the point where a paraxial ray parallel to the axis crosses it, and the focal length is $f = R/2$. The figure shows the reason for the "paraxial" condition: the rule $f = R/2$ is exact only for rays close to the axis (§2.12 measures the error).
 
 > **Definition · the terms, with the one that matters**
@@ -614,6 +677,13 @@ At the point where a ray meets a curved mirror, the law of reflection uses the *
 ### 2.2 Why $f = R/2$, and where the factor of two comes from
 
 ![Derivation that the focal length is half the radius: the reflected ray makes twice the angle the normal does](assets/figures/fig-010.svg)
+
+> [!abstract] DIAGRAM D22.10 — Derivation that the focal length is half the radius: the reflected ray makes twice the angle the normal does
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-010.svg`; original retained.
+> **Read:** Derivation that the focal length is half the radius: the reflected ray makes twice the angle the normal does.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-10.excalidraw|900]]
 
 **Fig. 2.2** — The whole derivation of $f = R/2$. The normal $CD$ makes an angle $\phi$ with the axis, where $\sin\phi = h/R$. The incident ray is parallel to the axis, so its angle of incidence is $\phi$, and the reflected ray leaves at $2\phi$ to the axis and crosses it a distance $h/\tan 2\phi$ from $P$. For small $\phi$ that is $h/2\phi = R/2$. The figure deliberately uses a large $h$: the actual crossing here is 113 px from the pole instead of the paraxial 130 px, which is spherical aberration, measured in §2.12.
 
@@ -697,6 +767,13 @@ Any two of these four rays locate the image of the tip of an object; use the two
 
 ![Three-ray construction for a concave mirror with the object beyond the centre of curvature](assets/figures/fig-011.svg)
 
+> [!abstract] DIAGRAM D22.11 — Three-ray construction for a concave mirror with the object beyond the centre of curvature
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-011.svg`; original retained.
+> **Read:** Three-ray construction for a concave mirror with the object beyond the centre of curvature.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-11.excalidraw|900]]
+
 **Fig. 2.3** — Object beyond $C$, image between $C$ and $F$: real, inverted, diminished. All three constructions land on the same point, which is the check that your diagram is right rather than merely plausible. Numbers: $u = -450$, $f = -150$ (in the figure's units) give $v = -225$, $m = -0.5$.
 
 > **The four ray rules**
@@ -722,6 +799,13 @@ With $0 > f$, $1/v = 1/f - 1/u$. The table below is the complete answer for a re
 | between $F$ and $P$ | behind the mirror, virtual, erect, magnified | $>0$ | $>1$ | dentist's mirror, magnifier |
 
 ![Two panels: a concave mirror with the object inside the focus giving a virtual magnified image, and a convex mirror giving a virtual diminished image](assets/figures/fig-012.svg)
+
+> [!abstract] DIAGRAM D22.12 — Two panels: a concave mirror with the object inside the focus giving a virtual magnified image, and a convex mirror giving a virtual diminished image
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-012.svg`; original retained.
+> **Read:** Two panels: a concave mirror with the object inside the focus giving a virtual magnified image, and a convex mirror giving a virtual diminished image.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-12.excalidraw|900]]
 
 **Fig. 2.4** — The two "surprising" cases. In (a) the object is inside the focus of a concave mirror and the image jumps *behind* the mirror — which is why a dentist's mirror magnifies. In (b) a convex mirror has its focus behind it, so the reflected rays always diverge and the image is always virtual, erect and diminished, however far away the object is. The dashed rays are not light paths.
 
@@ -908,6 +992,13 @@ $v > 0$: the image is 60 cm *behind* the mirror — virtual (no light goes there
 
 ![The 1/v against 1/u plot for a spherical mirror is a straight line of slope minus one](assets/figures/fig-013.svg)
 
+> [!abstract] DIAGRAM D22.13 — The 1/v against 1/u plot for a spherical mirror is a straight line of slope minus one
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-013.svg`; original retained.
+> **Read:** The 1/v against 1/u plot for a spherical mirror is a straight line of slope minus one.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-13.excalidraw|900]]
+
 **Fig. 2.5** — The standard experiment. Plot $1/v$ against $1/u$ from the mirror formula and you get a straight line of slope $-1$ cutting both axes at $1/f$. The slope being *fixed* is the reason a single pair $(u,v)$ already gives $f$ — the experiment's job is to average out the errors, not to find the slope.
 
 > **Four ways to get $f$, and the trap in each**
@@ -954,6 +1045,13 @@ Check with the mirror formula: $1/v + 1/u = -1/60 - 1/30 = -1/20$ ✓.
 ### 2.12 Where the formula fails: spherical aberration and the caustic
 
 ![Marginal rays of a concave mirror cross the axis closer to the mirror than the paraxial focus](assets/figures/fig-014.svg)
+
+> [!abstract] DIAGRAM D22.14 — Marginal rays of a concave mirror cross the axis closer to the mirror than the paraxial focus
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-014.svg`; original retained.
+> **Read:** Marginal rays of a concave mirror cross the axis closer to the mirror than the paraxial focus.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-14.excalidraw|900]]
 
 **Fig. 2.6** — Spherical aberration, measured. Three pairs of parallel rays at heights $h = \pm30, \pm120, \pm180$ px hit the same mirror and cross the axis at 550, 564 and 588 px from the paraxial focus's position: the crossings drift toward the mirror as $h^{2}$. The light is not concentrated at a point but along a curve, the **caustic**; a mirror cannot form a sharp image of an extended object, only a sharp image of its paraxial neighbourhood.
 
@@ -1053,6 +1151,13 @@ When light crosses from one transparent medium into another, its speed changes. 
 
 ![Refraction at a plane surface with wavefronts showing the wavelength shrinking in the denser medium](assets/figures/fig-015.svg)
 
+> [!abstract] DIAGRAM D22.15 — Refraction at a plane surface with wavefronts showing the wavelength shrinking in the denser medium
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-015.svg`; original retained.
+> **Read:** Refraction at a plane surface with wavefronts showing the wavelength shrinking in the denser medium.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-15.excalidraw|900]]
+
 **Fig. 3.1** — Why the ray bends, and why the bending is toward the normal. The wavefronts are drawn perpendicular to the rays; in the denser medium they are closer together (shorter wavelength) and travel more slowly, so the part of the front that has already entered falls behind and the front pivots toward the normal. $i > r$ here because $\mu_2 > \mu_1$. At normal incidence ($i = 0$) the whole front enters at once and there is no bending at all, even though the light slows down.
 
 ### 3.2 The laws of refraction
@@ -1089,6 +1194,13 @@ flowchart LR
 >   "which way does light bend" question is answered by reading it backwards.
 
 ![The deviation of a refracted ray grows monotonically with the angle of incidence and saturates at 90 degrees minus the critical angle](assets/figures/fig-016.svg)
+
+> [!abstract] DIAGRAM D22.16 — The deviation of a refracted ray grows monotonically with the angle of incidence and saturates at 90 degrees minus the critical angle
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-016.svg`; original retained.
+> **Read:** The deviation of a refracted ray grows monotonically with the angle of incidence and saturates at 90 degrees minus the critical angle.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-16.excalidraw|900]]
 
 **Fig. 3.2** — Deviation against angle of incidence for a ray entering a denser medium. The curve *rises monotonically* from $\delta = 0$ at normal incidence (where the slope is $1 - 1/\mu$) to a finite ceiling $\delta_{\max} = 90^\circ - C$ at grazing incidence. Part 4 adds the second branch of this curve, where the light is totally reflected and the deviation starts behaving completely differently.
 
@@ -1136,6 +1248,13 @@ $$
 
 ### 3.3 Snell's law from Fermat's principle (and why the lifeguard swims at an angle)![Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio](assets/figures/fig-017.svg)
 
+> [!abstract] DIAGRAM D22.17 — Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-017.svg`; original retained.
+> **Read:** Fermat's principle: the fastest route from beach to swimmer is exactly the Snell refraction with speed ratio.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-17.excalidraw|900]]
+
 **Fig. 3.3** — Fermat's principle is not a statement about light's preferences; it is the geometry of "least time through two media". The lifeguard who runs 5 m/s on sand and swims 2 m/s should enter the water at the point where $\sin i/\sin r = v_1/v_2 = 5/2$ — Snell's law with $1/\mu$ playing the role of the speed ratio. Numbers for the drawing (sand 4.5 m deep, water 5.0 m deep, 26 m of shore between them): the best entry is 23.8 m along the shore, giving $23.8/5 + 5.45/2 = 4.77+2.73 = 7.50$ s — better than swimming the whole 27.7 m straight line at 2 m/s ($13.8$ s) and better than running all the way and then swimming straight out ($5.2+2.5 = 7.70$ s). The optimum sits strictly between the two extremes, and it is *stationary*, not extremal in any obvious sense — that is why physicists say least *time*, not shortest path.
 
 > **Derivation of Snell's law (one derivative, no optics)**
@@ -1179,6 +1298,13 @@ $$
 ### 3.5 Apparent depth: why a pool looks shallower than it is
 
 ![Apparent depth of an object under a plane refracting surface is the real depth divided by the refractive index](assets/figures/fig-018.svg)
+
+> [!abstract] DIAGRAM D22.18 — Apparent depth of an object under a plane refracting surface is the real depth divided by the refractive index
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-018.svg`; original retained.
+> **Read:** Apparent depth of an object under a plane refracting surface is the real depth divided by the refractive index.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-18.excalidraw|900]]
 
 **Fig. 3.4** — The classic apparent-depth construction. Two rays leave the object $O$, refract at the surface, and diverge on emerging; produced backwards they meet at $I$, shallower than $O$ by the factor $\mu$. The result is exact only in the *paraxial* sense — for rays leaving nearly parallel to the normal. §3.8 quantifies what "nearly" costs.
 
@@ -1237,6 +1363,13 @@ For the bird, the fish is the object in water seen from air: $1.0\times(1/(4/3))
 ### 3.6 The parallel slab: no deviation, but a shift
 
 ![A ray through a parallel glass slab emerges parallel to itself with a lateral displacement](assets/figures/fig-019.svg)
+
+> [!abstract] DIAGRAM D22.19 — A ray through a parallel glass slab emerges parallel to itself with a lateral displacement
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-019.svg`; original retained.
+> **Read:** A ray through a parallel glass slab emerges parallel to itself with a lateral displacement.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-19.excalidraw|900]]
 
 **Fig. 3.5** — A parallel slab. The two refractions are *mirror images* of each other, so the emergent ray is parallel to the incident ray: a slab never deviates a ray, it only displaces it. The displacement grows with thickness and with the angle of incidence, and vanishes at normal incidence — a fact worth remembering as "the slab is invisible to a ray that goes straight through".
 
@@ -1390,6 +1523,13 @@ compared with the paraxial estimate $d/\mu = 1.50$ m.
 ### 3.9 Rays in a medium whose refractive index varies
 
 ![A ray in a stratified medium bends toward the region of higher refractive index and turns at the height where n equals the invariant](assets/figures/fig-020.svg)
+
+> [!abstract] DIAGRAM D22.20 — A ray in a stratified medium bends toward the region of higher refractive index and turns at the height where n equals the invariant
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-020.svg`; original retained.
+> **Read:** A ray in a stratified medium bends toward the region of higher refractive index and turns at the height where n equals the invariant.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-20.excalidraw|900]]
 
 **Fig. 3.6** — A mirage is not an illusion about where the road is; it is light from the sky that never reached the road. In a stratified medium the quantity $n\sin\theta$ — $\theta$ measured from the direction of variation — is constant along the ray, so a ray travelling into a region of lower $n$ tilts further from the normal and turns around where $n$ has fallen to the invariant $n_0\sin\theta_0$. The same conservation law runs fibre optics and atmospheric refraction.
 
@@ -1583,6 +1723,13 @@ Take light inside a medium of index $\mu_1$ meeting a boundary with a rarer medi
 
 ![Rays leaving glass into air: refracting below the critical angle, grazing at the critical angle, and totally reflecting beyond it](assets/figures/fig-021.svg)
 
+> [!abstract] DIAGRAM D22.21 — Rays leaving glass into air: refracting below the critical angle, grazing at the critical angle, and totally reflecting beyond it
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-021.svg`; original retained.
+> **Read:** Rays leaving glass into air: refracting below the critical angle, grazing at the critical angle, and totally reflecting beyond it.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-21.excalidraw|900]]
+
 **Fig. 4.1** — The three regimes, drawn for glass to air. Only the first two obey Snell's law in the familiar sense; the third is what Snell's law does when it is asked for the impossible. Notice that the reflected ray is always there, even below $C$ — a fraction of the light reflects at every interface. What changes at $C$ is that the reflected ray becomes *all* of the light, which is what the word "total" records. The angles here are drawn to scale for $\mu = 1.5$: $C = 41.8^\circ$.
 
 > **Critical angles worth knowing cold**
@@ -1601,6 +1748,13 @@ Take light inside a medium of index $\mu_1$ meeting a boundary with a rarer medi
 Cengage draws the $\delta$–$i$ graph for a denser-to-rarer interface, and it is one of the few graphs in optics that carries real information: it makes visible the *discontinuity* at the critical angle.
 
 ![Delta versus i for glass to air: refraction branch rising to the critical angle, a jump, then the reflected branch falling back to zero](assets/figures/fig-022.svg)
+
+> [!abstract] DIAGRAM D22.22 — Delta versus i for glass to air: refraction branch rising to the critical angle, a jump, then the reflected branch falling back to zero
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-022.svg`; original retained.
+> **Read:** Delta versus i for glass to air: refraction branch rising to the critical angle, a jump, then the reflected branch falling back to zero.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-22.excalidraw|900]]
 
 **Fig. 4.2** — Deviation against angle of incidence for light inside glass meeting a glass–air surface. Below $C$ the deviation rises from 0 to $90^\circ - C$ along the refraction branch; at $C$ the refracted ray disappears and the plotting point leaps to the reflection branch $\delta = 180^\circ - 2i$, which falls back to 0 at grazing incidence. The jump is genuine physics, not a drawing artefact — measure the deviation, and you can locate the critical angle to a fraction of a degree. That is how a spectrometer measures a refractive index.
 
@@ -1707,6 +1861,13 @@ Ordinary glass (1.5) and crown glass (1.52) clear this bar comfortably; water (1
 
 ![A 45-45-90 prism deviating a beam by 90 degrees, and a second prism deviating a beam by 180 degrees with two total internal reflections](assets/figures/fig-023.svg)
 
+> [!abstract] DIAGRAM D22.23 — A 45-45-90 prism deviating a beam by 90 degrees, and a second prism deviating a beam by 180 degrees with two total internal reflections
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-023.svg`; original retained.
+> **Read:** A 45-45-90 prism deviating a beam by 90 degrees, and a second prism deviating a beam by 180 degrees with two total internal reflections.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-23.excalidraw|900]]
+
 **Fig. 4.3** — Two workhorses made of the same right-angle prism. (a) A beam enters normally through a leg and is turned 90° by one total internal reflection at $45^\circ$ (which beats $C = 41.8^\circ$). (b) A beam enters *perpendicular to the hypotenuse*, is reflected twice at the legs, and leaves reversed — the 180° Porro prism, the heart of prism binoculars and the corner reflector on every bicycle. In both cases the reflecting surfaces are bare glass: no silvering, no losses beyond a clean Fresnel-free interface.
 
 > **Why a prism beats a mirror**
@@ -1718,6 +1879,13 @@ Ordinary glass (1.5) and crown glass (1.52) clear this bar comfortably; water (1
 An optical fibre is a long glass thread with a **core** of slightly higher index surrounded by a **cladding** of lower index. Light entering the end face inside a narrow cone rattles down the fibre by TIR and arrives at the far end — millions of reflections later, through kilometres of glass, with a loss of a fraction of a decibel per kilometre. Nothing in this needs a mirror; it needs only that the angle at the wall exceed $C$.
 
 ![Light entering an optical fibre inside the acceptance cone and zigzagging down the core by total internal reflection](assets/figures/fig-024.svg)
+
+> [!abstract] DIAGRAM D22.24 — Light entering an optical fibre inside the acceptance cone and zigzagging down the core by total internal reflection
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-024.svg`; original retained.
+> **Read:** Light entering an optical fibre inside the acceptance cone and zigzagging down the core by total internal reflection.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-24.excalidraw|900]]
 
 **Fig. 4.4** — A step-index fibre. The entry cone (half-angle 14.1° in air) is fixed by the condition that the *steepest entering ray* meets the wall at exactly the critical angle; any steeper ray leaks into the cladding after its first bounce. The quantity $\sin\theta_{\max} = \sqrt{n_1^{2}-n_2^{2}}$ is the fibre's **numerical aperture**, and the whole design problem of a fibre is to make it large (easy coupling) while keeping the ray angles small (low dispersion).
 
@@ -1770,6 +1938,13 @@ $$
 ### 4.5 Snell's window: the whole sky in a cone
 
 ![A fish under water sees the entire sky compressed into a bright cone of half-angle 48.6 degrees, and total internal reflection beyond it](assets/figures/fig-025.svg)
+
+> [!abstract] DIAGRAM D22.25 — A fish under water sees the entire sky compressed into a bright cone of half-angle 48.6 degrees, and total internal reflection beyond it
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-025.svg`; original retained.
+> **Read:** A fish under water sees the entire sky compressed into a bright cone of half-angle 48.6 degrees, and total internal reflection beyond it.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-25.excalidraw|900]]
 
 **Fig. 4.5** — Snell's window. For a fish at depth $d$, all the light that can reach it from above must have been inside the critical cone, so the entire hemisphere of sky above the water appears compressed into a circular window of radius $d\tan C$ — about $1.13d$ in water — with the horizon crowded into the very rim. Outside that circle the surface acts as a perfect mirror, which is why a fish looking up at a shallow angle sees reflections of the weed and the bottom rather than the sky.
 
@@ -1983,11 +2158,25 @@ Two plane refracting faces meet at the **refracting edge**; the angle between th
 
 ![A ray through a prism with every angle labelled, and the deviation between the incident direction extended and the emergent ray](assets/figures/fig-026.svg)
 
+> [!abstract] DIAGRAM D22.26 — A ray through a prism with every angle labelled, and the deviation between the incident direction extended and the emergent ray
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-026.svg`; original retained.
+> **Read:** A ray through a prism with every angle labelled, and the deviation between the incident direction extended and the emergent ray.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-26.excalidraw|900]]
+
 **Fig. 5.1** — The standard prism diagram, drawn to scale for $A = 60^\circ$, $\mu = 1.5$, $i = 45^\circ$. Notice how little the ray is *bent at each face* — $i - r_1 = 16.9^\circ$ and $e - r_2 = 20.5^\circ$ — and how the *total* deviation, $37.4^\circ$, is much larger than either. That is the point of a prism: the two bendings add in the same direction because the faces are inclined. For parallel faces they cancel exactly (part 3, §3.6).
 
 ### 5.2 Minimum deviation
 
 ![A prism in the position of minimum deviation, where the ray inside is parallel to the base and the angles of incidence and emergence are equal](assets/figures/fig-027.svg)
+
+> [!abstract] DIAGRAM D22.27 — A prism in the position of minimum deviation, where the ray inside is parallel to the base and the angles of incidence and emergence are equal
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-027.svg`; original retained.
+> **Read:** A prism in the position of minimum deviation, where the ray inside is parallel to the base and the angles of incidence and emergence are equal.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-27.excalidraw|900]]
 
 **Fig. 5.2** — The symmetric configuration, in which the deviation is least. Both refractions are equal, the internal ray is parallel to the base, and the ray path is mirror-symmetric about the bisector of the prism's angle. This symmetry is not decorative: it is why the condition $r_1 = r_2 = A/2$ is the one you substitute into Snell's law to measure a refractive index (eq. 5.2).
 
@@ -2048,6 +2237,13 @@ and by symmetry $e = i = 48.6^\circ$. The curve (Fig. 5.3) falls steeply from it
 ### 5.3 When no light gets through
 
 ![Deviation against angle of incidence for a prism of angle 60 degrees and index 1.5, with a minimum at the symmetric ray and a forbidden region at small incidence](assets/figures/fig-028.svg)
+
+> [!abstract] DIAGRAM D22.28 — Deviation against angle of incidence for a prism of angle 60 degrees and index 1.5, with a minimum at the symmetric ray and a forbidden region at small incidence
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-028.svg`; original retained.
+> **Read:** Deviation against angle of incidence for a prism of angle 60 degrees and index 1.5, with a minimum at the symmetric ray and a forbidden region at small incidence.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-28.excalidraw|900]]
 
 **Fig. 5.3** — Deviation against angle of incidence for a prism with $A = 60^\circ$, $\mu = 1.5$. Three features matter. (i) There is a **forbidden region** on the left: for $i < 27.9^\circ$ the ray is totally internally reflected at the second face and nothing emerges. (ii) The two ends of the allowed window have the *same* deviation 57.9° — one at grazing entry, one at grazing exit — which is reversibility made visible. (iii) Near the minimum the curve is flat, which is why a prism at minimum deviation is the standard instrument for measuring refractive index: small errors in orientation cost almost nothing in $\delta$.
 
@@ -2152,6 +2348,13 @@ $$
 
 ![White light entering a prism and leaving as a fan of colours, with violet deviated most](assets/figures/fig-029.svg)
 
+> [!abstract] DIAGRAM D22.29 — White light entering a prism and leaving as a fan of colours, with violet deviated most
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-029.svg`; original retained.
+> **Read:** White light entering a prism and leaving as a fan of colours, with violet deviated most.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-29.excalidraw|900]]
+
 **Fig. 5.4** — Dispersion by a prism. The three rays differ only because $\mu$ differs with colour: they enter along the same line and leave along three different ones. Violet, with the largest index, is deviated most; red least. The indices here (1.48 to 1.58) are exaggerated so the fan is visible — in real glass the spread is less than 1% of the index and the fan is about $1^\circ$ wide for a 60° prism, which is why spectrometers use many prisms in series.
 
 > **Dispersion and its measures**
@@ -2212,6 +2415,13 @@ $$
 ### 5.6 The two engineering tricks
 
 ![Left: two prisms in opposition giving deviation without dispersion. Right: a direct-vision prism giving dispersion without deviation](assets/figures/fig-030.svg)
+
+> [!abstract] DIAGRAM D22.30 — Left: two prisms in opposition giving deviation without dispersion. Right: a direct-vision prism giving dispersion without deviation
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-030.svg`; original retained.
+> **Read:** Left: two prisms in opposition giving deviation without dispersion. Right: a direct-vision prism giving dispersion without deviation.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-30.excalidraw|900]]
 
 **Fig. 5.5** — The two tricks, drawn schematically (angles exaggerated). **(a)** A crown prism and a flint prism with their refracting edges pointing *opposite* ways: the flint's larger dispersive power cancels the crown's colour spread while its smaller mean deviation only partly cancels the crown's, so the beam is deviated but not coloured. **(b)** A combination in which the mean deviations cancel exactly (so the yellow ray continues along the incident direction) but the dispersive powers do not, so the colours fan out about the undeviated central ray — the Amici or "direct-vision" prism of a hand-held spectroscope.
 
@@ -2416,6 +2626,13 @@ A spherical surface of radius $R$ separates a medium of index $\mu_1$ (on the si
 
 ![Refraction at a single spherical surface: object, image and centre of curvature](assets/figures/fig-031.svg)
 
+> [!abstract] DIAGRAM D22.31 — Refraction at a single spherical surface: object, image and centre of curvature
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-031.svg`; original retained.
+> **Read:** Refraction at a single spherical surface: object, image and centre of curvature.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-31.excalidraw|900]]
+
 **Fig. 6.1** — The single refracting surface. Only the paraxial rays (small $h$) meet at one point; the exact spherical-surface treatment would give a caustic, which is the aberration business of part 8. All of this part is paraxial optics, and the figure is drawn for a ray that is *not* very paraxial on purpose, to remind you that the formula below is an approximation whose quality improves as you close the aperture.
 
 > **The single-surface formula**
@@ -2542,6 +2759,13 @@ The bubble appears 3.6 cm from the surface, erect and magnified by 1.2 — it lo
 
 ![Thin lens construction with the three principal rays and the lensmaker radii](assets/figures/fig-032.svg)
 
+> [!abstract] DIAGRAM D22.32 — Thin lens construction with the three principal rays and the lensmaker radii
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-032.svg`; original retained.
+> **Read:** Thin lens construction with the three principal rays and the lensmaker radii.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-32.excalidraw|900]]
+
 **Fig. 6.2** — Thin-lens construction. The three principal rays: (1) through the first focal point goes out parallel; (2) parallel to the axis comes out through the second focal point; (3) through the optical centre goes straight on. The construction is not a different theory — it is the thin-lens equation drawn, and the two ray-slopes you choose must be consistent with $1/v - 1/u = 1/f$. The object here is beyond $2F$, so the image is real, inverted and diminished: all three signature features of that case.
 
 > [!tip] FIGURE F9.5 · Lens and mirror: the same formula, one index flipped
@@ -2589,6 +2813,13 @@ flowchart TD
 >  The correction term is negligible when $d \ll f_1, f_2$ — which is why "lenses in contact" is not just a convenient idealisation but a description of any two lenses mounted in a single barrel with a small gap. Setting $1/F = 0$ in (6.6), i.e. $d = f_1+f_2$, gives an afocal (telescopic) combination: parallel light in, parallel light out — the arrangement of part 7's telescope, arriving here as a special case of a formula.
 
 ![Left: the v versus u hyperbola for a lens. Right: the straight line of 1/v against 1/u whose intercepts give the focal length](assets/figures/fig-033.svg)
+
+> [!abstract] DIAGRAM D22.33 — Left: the v versus u hyperbola for a lens. Right: the straight line of 1/v against 1/u whose intercepts give the focal length
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-033.svg`; original retained.
+> **Read:** Left: the v versus u hyperbola for a lens. Right: the straight line of 1/v against 1/u whose intercepts give the focal length.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-33.excalidraw|900]]
 
 **Fig. 6.3** — The two graphs of the laboratory method, drawn for $f = 24$ cm. The $v$–$|u|$ plot (panel a) is a hyperbola with asymptotes $|u| = f$ and $v = f$, whose intersection with the line $v = |u|$ locates $2f$. The $1/v$–$1/u$ plot (panel b) is a straight line of slope exactly 1, and *both* intercepts give $f$ — which is why this is the plot a physicist prefers: it is linear, so a least-squares fit works, and the two intercepts cross-check each other.
 
@@ -2718,6 +2949,13 @@ $$
 ### 6.5 Silvered lenses and lens–mirror combinations
 
 ![A lens whose one surface is silvered acts as an equivalent mirror; and a lens with a plane mirror behind it folds the light back](assets/figures/fig-034.svg)
+
+> [!abstract] DIAGRAM D22.34 — A lens whose one surface is silvered acts as an equivalent mirror; and a lens with a plane mirror behind it folds the light back
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-034.svg`; original retained.
+> **Read:** A lens whose one surface is silvered acts as an equivalent mirror; and a lens with a plane mirror behind it folds the light back.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-34.excalidraw|900]]
 
 **Fig. 6.5** — Two ways to combine a lens with a mirror. **(a)** If one surface of the lens is silvered, light crosses the lens once, reflects, and crosses it again: the whole assembly behaves exactly like a mirror whose power is $P_{\text{eq}} = 2P_1 + P_m$: the power of the surface crossed twice counts twice, plus the power of the silvered surface as a mirror. **(b)** If the mirror is separate, at a distance $d$ behind the lens, the light still passes the lens twice, but now the propagation between the two passes matters — for a mirror exactly at $d = 2f$ the returning beam is left collimated, for instance. The clean rule $P_{\text{eq}} = 2P_1+P_m$ is exact when the mirror sits on the lens's own surface (or in contact with it); treat a separated mirror as a two-step problem instead.
 
@@ -2935,6 +3173,13 @@ The eye is a fixed-length camera: a cornea and a lens throw a real, inverted ima
 
 ![The eye focusing on a distant object with a relaxed lens and on a near object with a thickened lens, both images landing on the retina](assets/figures/fig-035.svg)
 
+> [!abstract] DIAGRAM D22.35 — The eye focusing on a distant object with a relaxed lens and on a near object with a thickened lens, both images landing on the retina
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-035.svg`; original retained.
+> **Read:** The eye focusing on a distant object with a relaxed lens and on a near object with a thickened lens, both images landing on the retina.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-35.excalidraw|900]]
+
 **Fig. 7.1** — Accommodation. Two different object distances, one image distance: the eye changes its power, not its geometry. For an object at infinity the eye needs about 59 D (focal length 1.7 cm); for an object at the near point, 25 cm, it needs about 63 D — an increase of just 4 D. A child's lens can manage 10 D or more (focusing to 10 cm), and that range shrinks with age until a 60-year-old has to hold a book at arm's length: presbyopia.
 
 > **The numbers that define normal vision**
@@ -2952,6 +3197,13 @@ The eye is a fixed-length camera: a cornea and a lens throw a real, inverted ima
 ### 7.2 Defects of vision and their correction
 
 ![Myopia corrected by a concave lens and hypermetropia corrected by a convex lens](assets/figures/fig-036.svg)
+
+> [!abstract] DIAGRAM D22.36 — Myopia corrected by a concave lens and hypermetropia corrected by a convex lens
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-036.svg`; original retained.
+> **Read:** Myopia corrected by a concave lens and hypermetropia corrected by a convex lens.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-36.excalidraw|900]]
 
 **Fig. 7.2** — The two common refractive errors, drawn as vergence problems. Correction is not "making the image bigger"; it is arranging that the light reaching the eye's lens has the right convergence, so that the fixed retina receives the focus.
 
@@ -3037,6 +3289,13 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 
 ![A simple magnifier: the object inside the focal length produces a virtual image at the near point, subtending a larger angle](assets/figures/fig-037.svg)
 
+> [!abstract] DIAGRAM D22.37 — A simple magnifier: the object inside the focal length produces a virtual image at the near point, subtending a larger angle
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-037.svg`; original retained.
+> **Read:** A simple magnifier: the object inside the focal length produces a virtual image at the near point, subtending a larger angle.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-37.excalidraw|900]]
+
 **Fig. 7.3** — The simple magnifier. The object sits inside the focal length, so the image is virtual, erect and enlarged, and the eye sees it at a comfortable distance (the near point, or infinity). The relevant gain is the ratio of the *angles* $\beta/\alpha$, not the linear size of the virtual image — an instrument that made a huge image very far away would magnify nothing.
 
 > **Angular magnification of a magnifier (a single lens)**
@@ -3065,6 +3324,13 @@ So a +3 D convex lens. The image of the page is *virtual*, 1.0 m from the lens o
 ### 7.5 The compound microscope
 
 ![A compound microscope: the objective forms a real magnified intermediate image, and the eyepiece acts as a magnifier on it](assets/figures/fig-038.svg)
+
+> [!abstract] DIAGRAM D22.38 — A compound microscope: the objective forms a real magnified intermediate image, and the eyepiece acts as a magnifier on it
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-038.svg`; original retained.
+> **Read:** A compound microscope: the objective forms a real magnified intermediate image, and the eyepiece acts as a magnifier on it.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-38.excalidraw|900]]
 
 **Fig. 7.4** — The compound microscope, two stages. The objective makes a real, inverted, magnified image of the (very close) object; the eyepiece then acts as a simple magnifier on *that* image. The two magnifications multiply, which is why a microscope can reach 1000× while a single lens cannot reach 26× comfortably.
 
@@ -3130,6 +3396,13 @@ At 400 nm: $d_{\min} = 0.61(400)/0.9 = 271$ nm, an improvement by the ratio of w
 
 ![An astronomical telescope: parallel rays from a distant object are focused by the objective and re-collimated by the eyepiece, with the angles alpha and beta shown](assets/figures/fig-039.svg)
 
+> [!abstract] DIAGRAM D22.39 — An astronomical telescope: parallel rays from a distant object are focused by the objective and re-collimated by the eyepiece, with the angles alpha and beta shown
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-039.svg`; original retained.
+> **Read:** An astronomical telescope: parallel rays from a distant object are focused by the objective and re-collimated by the eyepiece, with the angles alpha and beta shown.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-39.excalidraw|900]]
+
 **Fig. 7.5** — The refracting astronomical telescope. Parallel light from a distant object is brought to a real image at the objective's focus, which is also the eyepiece's focus; the eyepiece then re-collimates the light into a parallel beam for a relaxed eye. Both the object and the final image are at infinity, so no linear magnification is defined — only the *ratio of the angles*, which is $f_o/f_e$. Note the image is inverted, which is fine for astronomy and unacceptable for birdwatching, which is why terrestrial telescopes add an erecting prism — part 4's totally reflecting prism, doing its most familiar job.
 
 > **Astronomical telescope**
@@ -3191,6 +3464,13 @@ $$
 ### 7.10 Reflecting telescopes and the Cassegrain
 
 ![Left: Galileo's telescope with a diverging eyepiece. Right: a Cassegrain reflector with a convex secondary mirror and a hole in the primary](assets/figures/fig-040.svg)
+
+> [!abstract] DIAGRAM D22.40 — Left: Galileo's telescope with a diverging eyepiece. Right: a Cassegrain reflector with a convex secondary mirror and a hole in the primary
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-040.svg`; original retained.
+> **Read:** Left: Galileo's telescope with a diverging eyepiece. Right: a Cassegrain reflector with a convex secondary mirror and a hole in the primary.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-40.excalidraw|900]]
 
 **Fig. 7.6** — Two compact designs. Galileo's telescope shortens the tube by putting a diverging eyepiece *inside* the objective's focal length. A Cassegrain reflector shortens the tube by intercepting the primary's converging beam with a small convex mirror and sending the light back through a hole in the primary — a trick that buys a very long effective focal length in a very short tube. In both cases the magnification formula is the same one: a ratio of focal lengths.
 
@@ -3332,6 +3612,13 @@ Parts 1 to 7 gave the standard machinery at the level of JEE Advanced: paraxial 
 
 ![Left: the least-time path across an interface with the straight path for comparison. Right: the graph of travel time against crossing position, showing a smooth minimum where Snell's law holds](assets/figures/fig-041.svg)
 
+> [!abstract] DIAGRAM D22.41 — Left: the least-time path across an interface with the straight path for comparison. Right: the graph of travel time against crossing position, showing a smooth minimum where Snell's law holds
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-041.svg`; original retained.
+> **Read:** Left: the least-time path across an interface with the straight path for comparison. Right: the graph of travel time against crossing position, showing a smooth minimum where Snell's law holds.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-41.excalidraw|900]]
+
 **Fig. 8.1** — Fermat's principle as an ordinary minimisation. The interface separates a fast medium from a slow one; the light chooses where to cross. Plotted against the crossing position the total time is a smooth curve with a shallow minimum, and the condition that the slope vanish is exactly Snell's law. This is *the* reason a ray bends at all: not because of any force at the surface, but because the whole path re-arranges itself to extremise the optical path.
 
 > **Snell's law from Fermat, in four lines**
@@ -3427,6 +3714,13 @@ In the paraxial approximation a ray is described by two numbers — its height $
 
 ![A thick lens with its principal planes H1 and H2 marked inside the glass, and the focal length measured from the principal planes to the focal points](assets/figures/fig-042.svg)
 
+> [!abstract] DIAGRAM D22.42 — A thick lens with its principal planes H1 and H2 marked inside the glass, and the focal length measured from the principal planes to the focal points
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-042.svg`; original retained.
+> **Read:** A thick lens with its principal planes H1 and H2 marked inside the glass, and the focal length measured from the principal planes to the focal points.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-42.excalidraw|900]]
+
 **Fig. 8.2** — The thick lens, drawn honestly. Focal length is measured from the principal planes H₁, H₂, not from the glass surfaces, and for a thick lens those planes sit inside the glass, close together. All of the thin-lens formulas in part 6 survive if you measure $u$ and $v$ from the principal planes — which is precisely why they worked so well for thin lenses, where the planes coincide at the lens's centre.
 
 ### 8.4 When the paraxial approximation fails: exact rays and caustics
@@ -3456,6 +3750,13 @@ Throw away the small-angle approximation and a spherical mirror stops having a f
 >  The envelope of the misfocused rays is a **caustic** — for parallel light on a spherical mirror a nephroid, with a cusp at the paraxial focus and the crossings marching in toward the mirror as $h$ grows (the table's last column of $D$ values *is* the caustic meeting the axis). You never see individual stray rays in a real image: you see the caustic, which is why a misused mirror gives a bright cusp-edged blob rather than a diffuse glow.
 
 ![Three parallel rays striking a concave spherical mirror at different heights and crossing the axis at three different points, showing spherical aberration](assets/figures/fig-043.svg)
+
+> [!abstract] DIAGRAM D22.43 — Three parallel rays striking a concave spherical mirror at different heights and crossing the axis at three different points, showing spherical aberration
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `geometrical-optics/assets/figures/fig-043.svg`; original retained.
+> **Read:** Three parallel rays striking a concave spherical mirror at different heights and crossing the axis at three different points, showing spherical aberration.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-43.excalidraw|900]]
 
 **Fig. 8.3** — Spherical aberration, drawn to scale. Three parallel rays strike a concave spherical mirror at different heights and do not meet at one point: the higher the ray, the closer to the mirror it crosses the axis. The distance by which a marginal ray misses the paraxial focus is the longitudinal spherical aberration, of order $h^{2}/4R$; the sideways miss at the paraxial plane is the transverse aberration, larger by the factor $\tan 2\theta$. A spherical mirror is a good mirror only near its axis — which is exactly the region the paraxial formulas of part 2 describe.
 
@@ -3503,6 +3804,13 @@ Spherical aberration is the first of five *monochromatic* aberrations (the Seide
 ### 8.6 The rainbow: Fermat, extreme deviations and the 42° cone
 
 ![Ray paths through two water drops: one internal reflection giving the primary bow, two giving the secondary bow, with the emergent directions marked](assets/figures/fig-044.svg)
+
+> [!abstract] DIAGRAM D22.44 — Ray paths through two water drops: one internal reflection giving the primary bow, two giving the secondary bow, with the emergent directions marked
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `geometrical-optics/assets/figures/fig-044.svg`; original retained.
+> **Read:** Ray paths through two water drops: one internal reflection giving the primary bow, two giving the secondary bow, with the emergent directions marked.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-44.excalidraw|900]]
 
 **Fig. 8.4** — Why a rainbow has angles. Sunlight enters a drop, is refracted, reflects internally once (primary) or twice (secondary), and is refracted out. For each bounce number the deviation has a minimum, so a whole neighbourhood of incoming rays leaves in the same direction — a caustic in angle, which is why you see a bright arc at 42° rather than a uniform glow in all directions. The secondary bow is wider, fainter, and colour-reversed, and the region between the two bows is darker than either: Alexander's dark band.
 
@@ -3570,6 +3878,13 @@ The last piece of olympiad machinery is a conservation law — the one that says
 
 ![A lens forming an image of the sun, showing that the image diameter is the focal length times the sun's angular size, which sets the concentration limit](assets/figures/fig-045.svg)
 
+> [!abstract] DIAGRAM D22.45 — A lens forming an image of the sun, showing that the image diameter is the focal length times the sun's angular size, which sets the concentration limit
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `geometrical-optics/assets/figures/fig-045.svg`; original retained.
+> **Read:** A lens forming an image of the sun, showing that the image diameter is the focal length times the sun's angular size, which sets the concentration limit.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-45.excalidraw|900]]
+
 **Fig. 8.5** — The concentration limit seen as ordinary geometry. Because the Sun has a finite angular size, its image has diameter $f\theta_s$ — never a point — and the ratio of collecting area to image area is therefore fixed by the f-number. Improving the lens cannot beat the Sun's own radiance; it can only approach it. This is the single most useful sanity check in all of optical design.
 
 ### 8.8 Summary — the olympiad toolkit
@@ -3626,6 +3941,13 @@ Parts 1 to 8 are the physics. This part is the craft: how to read an optics ques
 ### 9.1 Triage: classify in fifteen seconds
 
 ![A decision tree for classifying an optics question into mirror, refraction, prism, lens, system or instrument branches](assets/figures/fig-046.svg)
+
+> [!abstract] DIAGRAM D22.46 — A decision tree for classifying an optics question into mirror, refraction, prism, lens, system or instrument branches
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `geometrical-optics/assets/figures/fig-046.svg`; original retained.
+> **Read:** A decision tree for classifying an optics question into mirror, refraction, prism, lens, system or instrument branches.
+
+![[../_obsidian/excalidraw/geometrical-optics-D22-46.excalidraw|900]]
 
 **Fig. 9.1** — The triage sheet. Six branches, each with the two or three formulas that actually get used in that branch, and the two questions that decide the rest. Any optics question in JEE Advanced, NSEP or INPhO lands on one of these six branches within fifteen seconds, and the second box — real or virtual object for the *next* element — is where the majority of the marks are lost.
 

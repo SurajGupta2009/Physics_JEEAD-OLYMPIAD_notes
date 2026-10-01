@@ -11,8 +11,8 @@
 <text x="480" y="190" class="sm">source v_s > v</text>
 <!-- Mach cone -->
 <path d="M500,200 L100,80 L100,320 Z" class="cone" opacity="0.5"/>
-<line x1="500" y1="200" x2="100" y2="80" stroke="#c0392b" stroke-width:1.5"/>
-<line x1="500" y1="200" x2="100" y2="320" stroke="#c0392b" stroke-width:1.5"/>
+<line x1="500" y1="200" x2="100" y2="80" stroke="#c0392b" stroke-width="1.5"/>
+<line x1="500" y1="200" x2="100" y2="320" stroke="#c0392b" stroke-width="1.5"/>
 <text x="120" y="100" class="sm">Mach cone: envelope of wavefronts</text>
 <text x="120" y="300" class="sm">Outside cone: no sound heard before arrival</text>
 <text x="350" y="260" class="lbl">sin α = v / v_s = 1 / M,  M = v_s / v = Mach number</text>

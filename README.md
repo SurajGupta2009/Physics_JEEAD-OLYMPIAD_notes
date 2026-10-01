@@ -102,7 +102,7 @@ Three ways, in order of what you get:
 3. **The interactive HTML edition** (where present). Theme switching, progress
    ticks, a generated TOC and **Print / save as PDF**. Fully offline.
 
-Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the user-directed D1–D13 diagram retrofit, 177 editable Excalidraw scenes are embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`; Electrostatics D13 consolidates plan Parts 13–15. Regenerate the Parts 1–7 scene files with `python3 tools/build_excalidraw_batch.py`; the Parts 8–11 and Parts 12–15 builders (`tools/build_excalidraw_batch_8_11.py` and `tools/build_excalidraw_batch_12_15.py`) also refresh the matching note embeds and manifests. No raster or remote image assets are used.
+Every Markdown file keeps the original reading order: orientation → prerequisites → syllabus map → theory → worked questions → playbook → paper/gauntlet → solutions → formula sheet. `<details>` blocks keep solutions collapsible on GitHub and in many Markdown viewers. Legacy chapters use local `assets/figures/*.svg` files; Obsidian-first chapters use rendered Mermaid figures. For the user-directed D1–D28, D100 diagram retrofit, 447 editable Excalidraw scenes are embedded at their briefs and stored as native `.excalidraw.md` files in `_obsidian/excalidraw/`; Electrostatics D13 consolidates plan Parts 13–15; D14–D16 cover String Waves, Sound Waves and Thermodynamics (course slots 13–15). Regenerate the Parts 1–7 scene files with `python3 tools/build_excalidraw_batch.py`; the Parts 8–11 and Parts 12–15 builders (`tools/build_excalidraw_batch_8_11.py` and `tools/build_excalidraw_batch_12_15.py`) also refresh the matching note embeds and manifests. Regenerate the 54 course-slot 13–15 companion scenes with `python3 tools/build_excalidraw_waves_thermal.py`; source SVGs remain alongside them. `python3 tools/build_excalidraw_heat_capacitors.py` rebuilds the 57 Heat (D17) and Capacitors (D18) companions and validates the existing Electrostatics scenes (course slots 16–18). No raster or remote image assets are used.
 
 ## How a note-set is put together
 
@@ -160,3 +160,11 @@ No chapter is pending: all 28 plan.md parts are written. **[PENDING.md](PENDING.
 ## Licence
 
 These are personal study notes; the repository carries no `LICENSE` file, so copyright stays with the repo owner. If you want to open it up, add a `LICENSE` (CC-BY-4.0 suits notes, MIT suits the JS/PY tooling) — that is the owner's call, not a contributor's.
+
+Course slots 19–21 add 26 Current Electricity (D19), 30 Magnetism (existing D16), and 22 EMI/AC (existing D20) scenes. IDs are chapter-local and filenames are slug-qualified. Rebuild with `python3 tools/build_excalidraw_current_magnetism_emi.py`; see `docs/excalidraw-retrofit-status.md` for validation limits.
+
+Course slots 22–24 add 81 native SVG companions: Electromagnetic Waves D21 (7), Geometrical Optics D22 (46), and Wave Optics D23 (28). Rebuild with `python3 tools/build_excalidraw_em_optics.py`. Originals remain intact; native Obsidian acceptance and a comprehensive physics audit are pending (see `docs/excalidraw-retrofit-status.md`).
+
+All 31 course chapters now carry native diagram companions: the final seven (Photoelectric Effect, Atomic Structure, X-rays, Nuclear Physics, Semiconductors, Communication Systems, Special Relativity) add 97 scenes drawn from their existing DIAGRAM briefs. Rebuild with `python3 tools/build_excalidraw_remaining.py`; see `docs/excalidraw-retrofit-status.md`.
+
+Verify every diagram with `python3 tools/verify_all_diagrams.py` (31 chapters, 544 scenes, 0 problems expected) and regenerate any batch with its `tools/build_excalidraw_*.py` script; both are idempotent and covered by `python3 -m unittest discover -s tools -p 'test_*.py'`.

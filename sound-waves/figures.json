@@ -57,5 +57,144 @@
       "read": "the first question names the law; the source/observer distinction is the classic trap",
       "source": "§6.1 Triage decision-tree"
     }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "D14–D16 continue the scene series; course slots are 13–15.",
+  "drawings": [
+    {
+      "id": "D15.1",
+      "kind": "excalidraw",
+      "title": "Longitudinal wave: displacement and pressure are π/2 out of phase",
+      "show": "Analytic redraw of assets/figures/fig-001.svg; corrects legacy geometry/signs. See builder and retrofit status.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-001.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-1.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-001.svg"
+    },
+    {
+      "id": "D15.2",
+      "kind": "excalidraw",
+      "title": "Speed derivation",
+      "show": "Editable reconstruction of assets/figures/fig-002.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-002.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-2.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-002.svg"
+    },
+    {
+      "id": "D15.3",
+      "kind": "excalidraw",
+      "title": "Newton vs Laplace",
+      "show": "Editable reconstruction of assets/figures/fig-003.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-003.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-3.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-003.svg"
+    },
+    {
+      "id": "D15.4",
+      "kind": "excalidraw",
+      "title": "Intensity",
+      "show": "Editable reconstruction of assets/figures/fig-004.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-004.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-4.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-004.svg"
+    },
+    {
+      "id": "D15.5",
+      "kind": "excalidraw",
+      "title": "Organ pipes",
+      "show": "Analytic redraw of assets/figures/fig-005.svg; corrects legacy geometry/signs. See builder and retrofit status.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-005.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-5.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-005.svg"
+    },
+    {
+      "id": "D15.6",
+      "kind": "excalidraw",
+      "title": "Resonance tube",
+      "show": "Editable reconstruction of assets/figures/fig-006.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-006.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-6.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-006.svg"
+    },
+    {
+      "id": "D15.7",
+      "kind": "excalidraw",
+      "title": "Quincke",
+      "show": "Editable reconstruction of assets/figures/fig-007.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-007.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-7.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-007.svg"
+    },
+    {
+      "id": "D15.8",
+      "kind": "excalidraw",
+      "title": "Beats",
+      "show": "Analytic redraw of assets/figures/fig-008.svg; corrects legacy geometry/signs. See builder and retrofit status.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-008.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-8.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-008.svg"
+    },
+    {
+      "id": "D15.9",
+      "kind": "excalidraw",
+      "title": "Moving source",
+      "show": "Editable reconstruction of assets/figures/fig-009.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-009.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-9.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-009.svg"
+    },
+    {
+      "id": "D15.10",
+      "kind": "excalidraw",
+      "title": "Moving observer",
+      "show": "Editable reconstruction of assets/figures/fig-010.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-010.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-10.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-010.svg"
+    },
+    {
+      "id": "D15.11",
+      "kind": "excalidraw",
+      "title": "Oblique",
+      "show": "Editable reconstruction of assets/figures/fig-011.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-011.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-11.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-011.svg"
+    },
+    {
+      "id": "D15.12",
+      "kind": "excalidraw",
+      "title": "Double Doppler",
+      "show": "Editable reconstruction of assets/figures/fig-012.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-012.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-12.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-012.svg"
+    },
+    {
+      "id": "D15.13",
+      "kind": "excalidraw",
+      "title": "Mach cone",
+      "show": "Editable reconstruction of assets/figures/fig-013.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-013.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-13.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-013.svg"
+    },
+    {
+      "id": "D15.14",
+      "kind": "excalidraw",
+      "title": "Kundt",
+      "show": "Editable reconstruction of assets/figures/fig-014.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-014.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-14.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-014.svg"
+    },
+    {
+      "id": "D15.15",
+      "kind": "excalidraw",
+      "title": "Decision tree",
+      "show": "Editable reconstruction of assets/figures/fig-015.svg with reflowed annotations.",
+      "search": "Existing reviewed sound-waves/assets/figures/fig-015.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/sound-waves-D15-15.excalidraw.md",
+      "source": "sound-waves/Sound-waves.md · assets/figures/fig-015.svg"
+    }
   ]
 }

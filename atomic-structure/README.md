@@ -1,5 +1,7 @@
 # Rutherford, the Bohr Model & Atomic Spectra — first principles to Olympiad
 
+> **Native diagram companions:** 13 editable Excalidraw scenes accompany the DIAGRAM briefs in `Atomic-structure.md` (no SVG sources exist for this chapter). Rebuild from the repository root with `python3 tools/build_excalidraw_remaining.py atomic-structure`. See `../docs/excalidraw-retrofit-status.md` for notes and pending native Obsidian acceptance.
+
 > [!note] Part 24 of [plan.md](../plan.md) · text-only Markdown chapter · written for Obsidian reading mode
 
 **Scope.** The atom as a hypothesis test: Thomson's prediction versus the back-scattered alpha;

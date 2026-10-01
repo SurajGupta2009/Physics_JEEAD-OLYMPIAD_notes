@@ -56,5 +56,46 @@
       "read": "the argument form names the species first; direction, velocity, and energy follow from the right branch",
       "source": "§8.1 The 8-Move Wave Triage Tree"
     }
-  ]
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "D14–D16 continue the scene series; course slots are 13–15.",
+  "drawings": [
+    {
+      "id": "D14.1",
+      "kind": "excalidraw",
+      "title": "Curved string element under tension",
+      "show": "Analytic redraw of assets/figures/fig-001.svg; corrects legacy geometry/signs. See builder and retrofit status.",
+      "search": "Existing reviewed string-waves/assets/figures/fig-001.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/string-waves-D14-1.excalidraw.md",
+      "source": "string-waves/String-waves.md · assets/figures/fig-001.svg"
+    },
+    {
+      "id": "D14.2",
+      "kind": "excalidraw",
+      "title": "Reflection at fixed and free boundaries",
+      "show": "Editable reconstruction of assets/figures/fig-002.svg with reflowed annotations.",
+      "search": "Existing reviewed string-waves/assets/figures/fig-002.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/string-waves-D14-2.excalidraw.md",
+      "source": "string-waves/String-waves.md · assets/figures/fig-002.svg"
+    },
+    {
+      "id": "D14.3",
+      "kind": "excalidraw",
+      "title": "Standing wave normal modes",
+      "show": "Editable reconstruction of assets/figures/fig-003.svg with reflowed annotations.",
+      "search": "Existing reviewed string-waves/assets/figures/fig-003.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/string-waves-D14-3.excalidraw.md",
+      "source": "string-waves/String-waves.md · assets/figures/fig-003.svg"
+    },
+    {
+      "id": "D14.4",
+      "kind": "excalidraw",
+      "title": "Hanging rope dynamics under gravity",
+      "show": "Editable reconstruction of assets/figures/fig-004.svg with reflowed annotations.",
+      "search": "Existing reviewed string-waves/assets/figures/fig-004.svg (also preserved beside this embed).",
+      "file": "_obsidian/excalidraw/string-waves-D14-4.excalidraw.md",
+      "source": "string-waves/String-waves.md · assets/figures/fig-004.svg"
+    }
+  ],
+  "note": ""
 }

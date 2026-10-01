@@ -40,6 +40,13 @@ mindmap
 
 ![Two coherent sources and their hyperbolic fringes](assets/figures/fig-001.svg)
 
+> [!abstract] DIAGRAM D23.1 — Two coherent sources and their hyperbolic fringes
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-001.svg`; original retained.
+> **Read:** Two coherent sources and their hyperbolic fringes.
+
+![[../_obsidian/excalidraw/wave-optics-D23-1.excalidraw|900]]
+
 **Fig. 0.1** — The whole of interference in one picture. Two slits 0.50 mm apart, 1.00 m from a screen, lit by light of wavelength 600 nm: the places on the screen where the two waves arrive in step form a ladder of bright bands (fringes) 1.2 mm apart, and halfway between them the waves arrive in antiphase and cancel. Notice that the pattern is a fixed set of *positions*, not a spreading fog: every question in parts 1–4 is a question about the path difference at one point of the screen.
 
 ### How these notes are organised
@@ -268,6 +275,13 @@ A **wavefront** is a surface on which the phase is constant — in a snapshot, a
 
 ![Plane, spherical and cylindrical wavefronts with their rays](assets/figures/fig-002.svg)
 
+> [!abstract] DIAGRAM D23.2 — Plane, spherical and cylindrical wavefronts with their rays
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-002.svg`; original retained.
+> **Read:** Plane, spherical and cylindrical wavefronts with their rays.
+
+![[../_obsidian/excalidraw/wave-optics-D23-2.excalidraw|900]]
+
 **Fig. 1.1** — The three wavefront shapes met in practice. A point source gives spherical fronts and radial rays; a distant source gives plane fronts and parallel rays; a slit or a line source gives cylindrical fronts, straight in one direction and circular in the other. The separation of the crests is the wavelength, and it is measured *perpendicular to the front* — not along a ray that crosses the fronts at an angle.
 
 > **"The ray crosses the wavefronts, so the spacing along the ray is the wavelength"**
@@ -297,6 +311,13 @@ Send a plane wave at an angle $i$ onto a mirror and watch two points of the wave
 
 ![Huygens construction for reflection at a mirror](assets/figures/fig-003.svg)
 
+> [!abstract] DIAGRAM D23.3 — Huygens construction for reflection at a mirror
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-003.svg`; original retained.
+> **Read:** Huygens construction for reflection at a mirror.
+
+![[../_obsidian/excalidraw/wave-optics-D23-3.excalidraw|900]]
+
 **Fig. 1.2** — Reflection built from Huygens. The incident front reaches A first and C last; the wavelet from A grows to radius $AD = BC$ because the speed is the same on both sides of the mirror. The two right-angled triangles ABC and ADC then have equal hypotenuses and equal heights, so the angles at the mirror are equal: $i = r$. Nothing else is needed — the equal-angle law is a statement about congruent triangles, not a separate law of nature.
 
 Written out: in triangles $ABC$ and $ADC$, the hypotenuse $AC$ is common, $AD = BC$, and both are right-angled, so the triangles are congruent and $\angle BAC = \angle DCA$. Those angles are the angles between the front and the mirror, which are the complements of the angles between the ray and the normal. Hence $i = r$, and the reflected ray stays in the plane of incidence because all the construction is carried out in that plane.
@@ -310,6 +331,13 @@ Written out: in triangles $ABC$ and $ADC$, the hypotenuse $AC$ is common, $AD = 
 Now let the wave cross into a medium where it is slower. The construction is the same, but the wavelet that travels in the second medium is smaller, so the new front is tilted closer to the normal. This one change produces Snell's law and the whole of geometrical optics.
 
 ![Huygens construction for refraction at an air-glass interface](assets/figures/fig-004.svg)
+
+> [!abstract] DIAGRAM D23.4 — Huygens construction for refraction at an air-glass interface
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-004.svg`; original retained.
+> **Read:** Huygens construction for refraction at an air-glass interface.
+
+![[../_obsidian/excalidraw/wave-optics-D23-4.excalidraw|900]]
 
 **Fig. 1.3** — Refraction built from Huygens, drawn to scale for $i = 45^\circ$ into glass of $\mu = 1.5$. While the front travels from B to C in air (141 units of length), the wavelet born at A travels only 94 units in the glass, because the wave is slower there. The refracted front is the tangent from C to that wavelet, and it makes $r = 28.1^\circ$ with the normal. Note where the 1.5 enters: it is the *ratio of speeds*, so the denser medium is the one in which light is slower and the wave shorter.
 
@@ -335,6 +363,13 @@ When two waves arrive at the same point, the resultant disturbance is the sum of
 
 ![Phasor addition of two waves at three phase differences](assets/figures/fig-005.svg)
 
+> [!abstract] DIAGRAM D23.5 — Phasor addition of two waves at three phase differences
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-005.svg`; original retained.
+> **Read:** Phasor addition of two waves at three phase differences.
+
+![[../_obsidian/excalidraw/wave-optics-D23-5.excalidraw|900]]
+
 **Fig. 1.4** — Adding two waves with a phasor triangle. The resultant length is the amplitude of the combined disturbance; it swings from $a_1+a_2$ (in step) through $\sqrt{a_1^{2}+a_2^{2}}$ (quarter-cycle apart, the incoherent answer) to $|a_1-a_2|$ (in antiphase). The intensity, being the square of this length, swings from $(a_1+a_2)^{2}$ to $(a_1-a_2)^{2}$ — never through "the sum of the intensities" unless the phases are random.
 
 $$
@@ -350,6 +385,13 @@ $$
 For equal amplitudes $a_1 = a_2 = a$ this collapses to the formula you should carry without thinking: $I = 4a^{2}\cos^{2}(\Delta\varphi/2)$, so the intensity runs from $4I_0$ down to $0$, and the average over a full cycle is $2I_0$ — exactly the incoherent sum. Interference does not create or destroy energy; it moves it from the dark places to the bright ones.
 
 ![Intensity versus phase difference for equal and unequal amplitudes](assets/figures/fig-006.svg)
+
+> [!abstract] DIAGRAM D23.6 — Intensity versus phase difference for equal and unequal amplitudes
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-006.svg`; original retained.
+> **Read:** Intensity versus phase difference for equal and unequal amplitudes.
+
+![[../_obsidian/excalidraw/wave-optics-D23-6.excalidraw|900]]
 
 **Fig. 1.5** — Two-source intensity against phase difference. The solid curve is the equal-amplitude case; the dashed curve is amplitude ratio 2 : 1, where the minimum is $(2-1)^{2}/(2+1)^{2} = 1/9$ of the maximum instead of zero. Notice the *duty cycle*: the pattern spends most of its length near the extremes, which is why fringes look like bands rather than a smooth wash.
 
@@ -374,6 +416,13 @@ For equal amplitudes $a_1 = a_2 = a$ this collapses to the formula you should ca
 Two waves produce a stationary pattern of bright and dark only if their phase difference at each point is *constant in time*. Sources that satisfy this are **coherent**. A lamp is not coherent with another lamp: each radiates a train of waves about $10^{-8}$ s long, emitted by an atom undergoing a transition at an arbitrary moment, so the phase difference between the two beams at a given point jumps at random roughly $10^{8}$ times a second. What the eye then averages is $I_1+I_2$ — no fringes.
 
 ![Two finite wavetrains overlapping only near equal path length](assets/figures/fig-007.svg)
+
+> [!abstract] DIAGRAM D23.7 — Two finite wavetrains overlapping only near equal path length
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-007.svg`; original retained.
+> **Read:** Two finite wavetrains overlapping only near equal path length.
+
+![[../_obsidian/excalidraw/wave-optics-D23-7.excalidraw|900]]
 
 **Fig. 1.6** — Why coherence is a *length*. The source emits trains of duration $\tau_c$; the two arms of an interferometer deliver the same train along paths that differ by $\Delta x$. If $\Delta x > c\tau_c$ the arriving pieces come from different trains, with unrelated phases, and the pattern washes out. For a 1 nm-wide line at 600 nm, $c\tau_c = \lambda^{2}/\Delta\lambda \approx 0.36$ mm — tiny, and the reason fringe counting needs a narrow line.
 
@@ -607,6 +656,13 @@ Light from a source S falls on two narrow slits $S_1$ and $S_2$ a distance $d$ a
 
 ![Geometry of Young's double slit experiment](assets/figures/fig-008.svg)
 
+> [!abstract] DIAGRAM D23.8 — Geometry of Young's double slit experiment
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-008.svg`; original retained.
+> **Read:** Geometry of Young's double slit experiment.
+
+![[../_obsidian/excalidraw/wave-optics-D23-8.excalidraw|900]]
+
 **Fig. 2.1** — The geometry, drawn with the numbers used throughout this part: slits 0.50 mm apart, screen 1.00 m away, light of 600 nm. The angle $\theta$ is measured from the axis at the *slits*, and it is the same angle at the screen because the two rays are very nearly parallel when $D \gg d$ — the one approximation this experiment needs.
 
 Let P be a point on the screen at a distance $y$ from the central line, and let $\theta$ be the angle $S_1P$ makes with the axis. Drop a perpendicular from $S_1$ onto $S_2P$: the extra distance travelled by the wave from $S_2$ is the leg of a right triangle with hypotenuse $d$ and angle $\theta$, so
@@ -723,6 +779,13 @@ With white light every wavelength builds its own pattern, all of them coincident
 
 ![Fringe pattern and its intensity distribution](assets/figures/fig-009.svg)
 
+> [!abstract] DIAGRAM D23.9 — Fringe pattern and its intensity distribution
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `wave-optics/assets/figures/fig-009.svg`; original retained.
+> **Read:** Fringe pattern and its intensity distribution.
+
+![[../_obsidian/excalidraw/wave-optics-D23-9.excalidraw|900]]
+
 **Fig. 2.2** — The pattern (top) and its intensity (bottom). The bands are equally spaced at $\beta = \lambda D/d$, and the intensity follows $4I_0\cos^{2}(\pi d\sin\theta/\lambda)$, which is the same curve as Fig. 1.5 with the phase difference written in terms of the geometry. Notice that the minima are *zero* only because the two slits were assumed equally wide; let one slit be narrower and the zeros lift off the axis (Fig. 2.4).
 
 > **"White light will give me white fringes of every order"**
@@ -754,6 +817,13 @@ $$
 Numbers: $t = 5.0\ \mu$m, $\mu = 1.5$, $\lambda = 600$ nm give $\Delta y = (0.5)(5\times10^{-6})(1000/0.5) = 5.0$ mm, i.e. $N = 4.17$ fringes. The fractional part is meaningful: 4 fringes pass a given point and the pattern comes to rest one-sixth of a fringe past it.
 
 ![Shift of the interference pattern when a slab covers one slit](assets/figures/fig-010.svg)
+
+> [!abstract] DIAGRAM D23.10 — Shift of the interference pattern when a slab covers one slit
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-010.svg`; original retained.
+> **Read:** Shift of the interference pattern when a slab covers one slit.
+
+![[../_obsidian/excalidraw/wave-optics-D23-10.excalidraw|900]]
 
 **Fig. 2.3** — A slab in one arm shifts the pattern without changing its spacing. The shift is $(\mu-1)tD/d$, and the count of fringes crossed is $(\mu-1)t/\lambda$ — independent of $D$ and $d$, which is why the slab method measures the refractive index rather than the geometry.
 
@@ -851,6 +921,13 @@ flowchart TD
 > *Read:* equal coherent waves quadruple the intensity at a bright fringe, but the energy is moved sideways from the dark fringes, never destroyed.
 
 ![Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis](assets/figures/fig-011.svg)
+
+> [!abstract] DIAGRAM D23.11 — Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `wave-optics/assets/figures/fig-011.svg`; original retained.
+> **Read:** Double-slit intensity for equal slits and for one slit twice as wide, showing that the minima of the unequal case lift off the axis.
+
+![[../_obsidian/excalidraw/wave-optics-D23-11.excalidraw|900]]
 
 **Fig. 2.4** — Equal slits and unequal ones, drawn from the two lines above: the dashed curve is $4I_0\cos^{2}(\delta/2)$, the solid curve is $I_0(a_1^{2}+a_2^{2}+2a_1a_2\cos\delta)$ with $a_1 = 2a_2$, both normalised to the same peak. The solid curve never reaches the axis: its minima sit at $I_0(a_1-a_2)^{2} = I_0$, one ninth of the peak, so $I_{\max}/I_{\min} = 9$ and the visibility is $V = 4/5$ — the numbers part 2's Q5 asks for. This is what “washed out” means: a width mismatch never destroys the pattern, it only lifts its floor, which is why the exact zeros of §2.2 are an approximation about equally *illuminated* slits, not about equally *wide* ones.
 
@@ -1105,6 +1182,13 @@ Light falls on a film of thickness $t$ and refractive index $\mu$, in air on bot
 
 ![Interference in a thin film with rays reflected from both surfaces](assets/figures/fig-012.svg)
 
+> [!abstract] DIAGRAM D23.12 — Interference in a thin film with rays reflected from both surfaces
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-012.svg`; original retained.
+> **Read:** Interference in a thin film with rays reflected from both surfaces.
+
+![[../_obsidian/excalidraw/wave-optics-D23-12.excalidraw|900]]
+
 **Fig. 3.1** — The two beams reflected by a film. The lower beam travels an extra distance $AB+BC = 2t/\cos r$ *inside* the film, while the upper beam has already travelled $2t\tan r\cdot\sin i$ less in air before that point. Converting the in-film length to optical path ($\times\mu$) and simplifying with Snell's law gives the famous difference $2\mu t\cos r$. The $\lambda/2$ is not geometry: it is the reflection phase, taken up in the next section.
 
 The geometry, in three lines. The second beam covers $AB+BC = 2t/\cos r$ inside the film, which is an optical path of $2\mu t/\cos r$. Meanwhile the first beam has already travelled a further $2t\tan r\sin i$ in air. In *optical* terms (air has index 1) the difference is
@@ -1181,6 +1265,13 @@ Let two glass plates touch along one edge and be separated by a spacer (a foil, 
 
 ![Wedge film between two glass plates producing fringes of equal thickness](assets/figures/fig-013.svg)
 
+> [!abstract] DIAGRAM D23.13 — Wedge film between two glass plates producing fringes of equal thickness
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-013.svg`; original retained.
+> **Read:** Wedge film between two glass plates producing fringes of equal thickness.
+
+![[../_obsidian/excalidraw/wave-optics-D23-13.excalidraw|900]]
+
 **Fig. 3.2** — The wedge. Because the film thickness depends only on the distance from the contact edge, each fringe is a line of constant thickness and the pattern is a set of equally spaced straight lines. One fringe is crossed for every $\lambda/2\mu$ of extra thickness, so counting fringes counts thickness — a measurement good to 0.3 $\mu$m with the naked eye.
 
 Why equally spaced? A fringe appears whenever $2\mu t = (2n-1)\lambda/2$, so the fringe-to-fringe change in thickness is $\Delta t = \lambda/2\mu$. Since $t = x\tan\theta \approx x\theta$ for a thin wedge, the fringe spacing is
@@ -1215,6 +1306,13 @@ $$
 
 ![Newton's rings geometry, ring radii and the fringe pattern](assets/figures/fig-014.svg)
 
+> [!abstract] DIAGRAM D23.14 — Newton's rings geometry, ring radii and the fringe pattern
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-014.svg`; original retained.
+> **Read:** Newton's rings geometry, ring radii and the fringe pattern.
+
+![[../_obsidian/excalidraw/wave-optics-D23-14.excalidraw|900]]
+
 **Fig. 3.3** — Newton's rings. Left: the geometry that gives $t = r^{2}/2R$. Right: the pattern as it appears in reflected light — a dark centre with rings whose radii grow as the square roots of the natural numbers, so the rings become crowded as you go out (the *spacing* falls as $1/\sqrt n$). Filling the space with water shrinks every diameter by $\sqrt\mu$.
 
 Two consequences are examined every year:
@@ -1241,6 +1339,13 @@ A film a few hundred nanometres thick reflects some wavelengths strongly and oth
 An uncoated glass surface reflects about 4% at normal incidence — enough to spoil a photograph and to make a lens look ghostly. Coating it with a film of index $\mu_c$ and thickness $t = \lambda/4\mu_c$ makes the two reflected waves (top surface, and film–glass surface) differ by $\lambda/2$ in the film plus $\lambda/2$ from the phase rule, i.e. by $\lambda$: they cancel.
 
 ![Antireflection coating: phase cancellation and reflectance versus wavelength](assets/figures/fig-015.svg)
+
+> [!abstract] DIAGRAM D23.15 — Antireflection coating: phase cancellation and reflectance versus wavelength
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `wave-optics/assets/figures/fig-015.svg`; original retained.
+> **Read:** Antireflection coating: phase cancellation and reflectance versus wavelength.
+
+![[../_obsidian/excalidraw/wave-optics-D23-15.excalidraw|900]]
 
 **Fig. 3.4** — A quarter-wave coating. Left: the two reflected waves are made to arrive in antiphase. Right: the reflectance dips below the 4% of bare glass at the design wavelength and rises again on either side, which is why a coated lens has a purple or green tint — the colour you see is what the coating does *not* cancel. (The drawn curve is the shape of a single-layer coating with $\mu_c = 1.38$ on glass; $R_{\min} \approx [(\mu_c^{2}-\mu_g)/(\mu_c^{2}+\mu_g)]^{2} \approx 1.3\%$.)
 
@@ -1485,6 +1590,13 @@ A biprism is two thin prisms joined base to base with a very obtuse angle betwee
 
 ![Fresnel biprism producing two virtual sources from one slit](assets/figures/fig-016.svg)
 
+> [!abstract] DIAGRAM D23.16 — Fresnel biprism producing two virtual sources from one slit
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-016.svg`; original retained.
+> **Read:** Fresnel biprism producing two virtual sources from one slit.
+
+![[../_obsidian/excalidraw/wave-optics-D23-16.excalidraw|900]]
+
 **Fig. 4.1** — Fresnel's biprism. The slit S is real; the two sources $S_1$, $S_2$ are virtual images formed by the two halves of the prism, separated by $d = 2a(\mu-1)A$ where $a$ is the slit-to-prism distance and $A$ the prism angle. The pattern on the screen is a Young's pattern with $D = a+b$. The whole apparatus is one bench, which is why the biprism replaced Young's slits in the laboratory: the separation $d$ is set by a micrometer screw that moves the prism, not by slits you cannot see.
 
 Each half of the biprism deviates the light by the thin-prism angle $\delta = (\mu-1)A$. It is a virtual image, so it appears displaced *sideways* by an amount that grows with the distance from the prism: the two image positions are separated by $d = 2a(\mu-1)A$ on the plane where the images come to rest (the plane of the slit for a thin prism). Hence
@@ -1508,6 +1620,13 @@ Numbers: $a = 10$ cm, $b = 90$ cm, $\mu = 1.5$, $A = 1^\circ = 0.01745$ rad, $\l
 Hold a long thin mirror nearly flat on the bench, put a slit just above its far end, and look at the light that reaches a screen beyond: half the light comes directly, half after reflection. The reflected light behaves as if it came from the source's mirror image, so the two "sources" are separated by $d = 2h$, where $h$ is the height of the slit above the mirror plane.
 
 ![Lloyd's mirror arrangement with a source and its image](assets/figures/fig-017.svg)
+
+> [!abstract] DIAGRAM D23.17 — Lloyd's mirror arrangement with a source and its image
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-017.svg`; original retained.
+> **Read:** Lloyd's mirror arrangement with a source and its image.
+
+![[../_obsidian/excalidraw/wave-optics-D23-17.excalidraw|900]]
 
 **Fig. 4.2** — Lloyd's mirror. The source is only half a millimetre above the mirror, so the reflection is at grazing incidence. Two features follow, and both are examined: the effective separation is $d = 2h$ with $h$ small, so the fringes are wide; and the reflected wave suffers a $\pi$ phase change that the direct wave does not, which makes the fringe at the mirror edge *dark*.
 
@@ -1534,6 +1653,13 @@ With $h = 0.5$ mm and the screen 1.0 m beyond, $\beta = \lambda D/2h = 600\times
 A beam splitter divides the light into two beams travelling along perpendicular arms; each beam returns from a mirror and the two recombine. Moving one mirror by $\Delta L$ changes the round-trip path in that arm by $2\Delta L$, which passes the pattern through one fringe every $\lambda/2$ of movement.
 
 ![Michelson interferometer schematic](assets/figures/fig-018.svg)
+
+> [!abstract] DIAGRAM D23.18 — Michelson interferometer schematic
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-018.svg`; original retained.
+> **Read:** Michelson interferometer schematic.
+
+![[../_obsidian/excalidraw/wave-optics-D23-18.excalidraw|900]]
 
 **Fig. 4.3** — The Michelson interferometer. The two arms are folded into a compact box, which is what makes the instrument stable enough to count fringes while *slowly* moving a mirror: a change of $\lambda/2 = 0.3\ \mu$m is one fringe, and a turn of the micrometer screw passes hundreds of them past the observer. The compensator plate is inserted so that both beams cross the same thickness of glass.
 
@@ -1909,6 +2035,13 @@ Between the minima are secondary maxima, at the angles $a\sin\theta \approx (m+\
 
 ![Single-slit diffraction: geometry and the sinc-squared intensity curve](assets/figures/fig-019.svg)
 
+> [!abstract] DIAGRAM D23.19 — Single-slit diffraction: geometry and the sinc-squared intensity curve
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-019.svg`; original retained.
+> **Read:** Single-slit diffraction: geometry and the sinc-squared intensity curve.
+
+![[../_obsidian/excalidraw/wave-optics-D23-19.excalidraw|900]]
+
 **Fig. 5.1** — The single-slit pattern: intensity against angle, drawn from $I = I_0\left(\frac{\sin\beta}{\beta}\right)^{2}$ with $\beta = \pi a\sin\theta/\lambda$. The central maximum holds about 90% of the transmitted light and is twice as wide as each secondary maximum; its half-width is $\lambda/a$ in angle (in a radian measure of $\sin\theta$). Narrow the slit and the pattern broadens — the first hint of the uncertainty principle, and the reason a pinhole camera is fuzzy.
 
 $$
@@ -1964,6 +2097,13 @@ $$
 $$
 
 ![Diffraction grating geometry and orders](assets/figures/fig-020.svg)
+
+> [!abstract] DIAGRAM D23.20 — Diffraction grating geometry and orders
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-020.svg`; original retained.
+> **Read:** Diffraction grating geometry and orders.
+
+![[../_obsidian/excalidraw/wave-optics-D23-20.excalidraw|900]]
 
 **Fig. 5.2** — A grating and its orders, drawn to scale for 2.0 $\mu$m spacing (5000 lines per cm) with 600 nm light: the first order at 17.5°, the second at 36.9°, and the third at 64° — with a fourth order that cannot exist because $4\lambda = 2.4\ \mu\text{m} > d$. Every order is a spectrum, the violet end nearer the undeviated beam because $\sin\theta\propto\lambda$.
 
@@ -2261,6 +2401,13 @@ The electric field of a plane wave travelling along $z$ lies in the $xy$ plane. 
 
 ![Unpolarised, linearly polarised and circularly polarised light](assets/figures/fig-021.svg)
 
+> [!abstract] DIAGRAM D23.21 — Unpolarised, linearly polarised and circularly polarised light
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-021.svg`; original retained.
+> **Read:** Unpolarised, linearly polarised and circularly polarised light.
+
+![[../_obsidian/excalidraw/wave-optics-D23-21.excalidraw|900]]
+
 **Fig. 6.1** — The three states drawn as the trace of the electric vector along the direction of propagation. Unpolarised light has no preferred direction; linearly polarised light keeps one; circularly polarised light keeps a constant magnitude while its direction rotates uniformly. Elliptical polarisation is the general case, with linear and circular as the two extremes.
 
 > **How the states are made and recognised**
@@ -2304,6 +2451,13 @@ $$
 
 ![Malus law and the three-polariser puzzle](assets/figures/fig-022.svg)
 
+> [!abstract] DIAGRAM D23.22 — Malus law and the three-polariser puzzle
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-022.svg`; original retained.
+> **Read:** Malus law and the three-polariser puzzle.
+
+![[../_obsidian/excalidraw/wave-optics-D23-22.excalidraw|900]]
+
 **Fig. 6.2** — Malus's law. For unpolarised input the average is the dashed line at $I_0/2$; for polarised input the curve is the $\cos^{2}$ drawn. The two 90° zeros are the crossed-polariser condition, and they are exact: no light at all, which is why the "three polarisers" case is so surprising.
 
 > **Why cos² and not cos — the single most mis-remembered fact in optics**
@@ -2311,6 +2465,13 @@ $$
 > Because a polariser acts on the *field*, and intensity is the square of the field. If a polariser "absorbed half the light" for every orientation not aligned with it, the third-polariser puzzle would not happen. The projection rule is the content: after the middle polariser the light is genuinely polarised along the middle axis, with full amplitude $a\cos45^\circ$, and it has "forgotten" the original direction. Retrofitting the intensity rule with a cos instead of $\cos^{2}$ breaks the arithmetic of every stack question and contradicts the measured $I_0/8$.
 
 ![Three polarisers at 0, 45 and 90 degrees, with the intensity after each](assets/figures/fig-023.svg)
+
+> [!abstract] DIAGRAM D23.23 — Three polarisers at 0, 45 and 90 degrees, with the intensity after each
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-023.svg`; original retained.
+> **Read:** Three polarisers at 0, 45 and 90 degrees, with the intensity after each.
+
+![[../_obsidian/excalidraw/wave-optics-D23-23.excalidraw|900]]
 
 **Fig. 6.3** — The polariser stack that surprises everyone: with 0° and 90° alone the light is extinguished, but a 45° filter *between* them passes a quarter of the beam, and half of that again through the analyser, so $I_0/8$ emerges. The middle filter does not create light; it re-orients the field it passes, and with the field now at 45° to the analyser there is a component for the analyser to transmit. Stage-by-stage intensity bookkeeping is the reliable way to handle any stack.
 
@@ -2341,6 +2502,13 @@ A single surface reflects only a few per cent, so the reflected beam is dim but 
 
 ![Brewster angle geometry: reflected and refracted rays perpendicular](assets/figures/fig-024.svg)
 
+> [!abstract] DIAGRAM D23.24 — Brewster angle geometry: reflected and refracted rays perpendicular
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-024.svg`; original retained.
+> **Read:** Brewster angle geometry: reflected and refracted rays perpendicular.
+
+![[../_obsidian/excalidraw/wave-optics-D23-24.excalidraw|900]]
+
 **Fig. 6.4** — Brewster's angle for air → glass. The dots on the reflected ray mark a field vibrating perpendicular to the plane of the page: the reflected beam is completely *s*-polarised, because the $p$-component (the one in the plane of the page) would have to be radiated along the axis of the oscillating dipoles it has just driven, and a dipole radiates nothing along its own axis. Note the result is imperfect in one practical way: the beam is perfectly polarised but weak, only about 15% of the incident intensity for glass.
 
 ### 6.4 Polarisation by scattering
@@ -2358,6 +2526,13 @@ Molecules driven by incident light re-radiate, and (as in §6.3) they radiate le
 In a calcite crystal an incident ray splits into two rays: the **ordinary** ray (o), which obeys Snell's law, and the **extraordinary** ray (e), which does not. The two are polarised in perpendicular directions.
 
 ![Double refraction in calcite: ordinary and extraordinary rays](assets/figures/fig-025.svg)
+
+> [!abstract] DIAGRAM D23.25 — Double refraction in calcite: ordinary and extraordinary rays
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-025.svg`; original retained.
+> **Read:** Double refraction in calcite: ordinary and extraordinary rays.
+
+![[../_obsidian/excalidraw/wave-optics-D23-25.excalidraw|900]]
 
 **Fig. 6.5** — Double refraction in calcite cut so that the optic axis lies in the plane of the page. The ordinary ray follows Snell's law and is polarised perpendicular to the page; the extraordinary ray is bent differently (here less, because $n_e < n_o$) and is polarised in the plane of the page. Rotating the crystal rotates the extraordinary image while the ordinary image stays fixed — the classical demonstration.
 
@@ -2667,6 +2842,13 @@ Two limits of the same quantity are worth separating because they are produced b
 | stabilised laser | $10^{-6}$ nm | 400 m | gravitational-wave detectors |
 
 ![Visibility as a function of path difference, and the fringe pattern it produces](assets/figures/fig-026.svg)
+
+> [!abstract] DIAGRAM D23.26 — Visibility as a function of path difference, and the fringe pattern it produces
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `wave-optics/assets/figures/fig-026.svg`; original retained.
+> **Read:** Visibility as a function of path difference, and the fringe pattern it produces.
+
+![[../_obsidian/excalidraw/wave-optics-D23-26.excalidraw|900]]
 
 **Fig. 7.1** — Coherence measured, not described: the visibility of the fringes as a function of path imbalance. For a line of width $\Delta\lambda$ the contrast is the Fourier transform of the line shape, so it falls to zero at $l_c = \lambda^{2}/\Delta\lambda$, returns faintly near $2l_c$ and dies away within a few such lengths. This is the experiment behind every statement about coherence: nothing is assumed about the source, the visibility curve is measured and the coherence length is read off it.
 
@@ -3059,6 +3241,13 @@ Two numbers to keep as scale references:
 
 ![Michelson interferometer with an evacuated gas cell in one arm](assets/figures/fig-027.svg)
 
+> [!abstract] DIAGRAM D23.27 — Michelson interferometer with an evacuated gas cell in one arm
+> **Show:** Editable SVG companion; selected label corrections documented in retrofit status; full physics audit pending.
+> **Source:** `wave-optics/assets/figures/fig-027.svg`; original retained.
+> **Read:** Michelson interferometer with an evacuated gas cell in one arm.
+
+![[../_obsidian/excalidraw/wave-optics-D23-27.excalidraw|900]]
+
 **Fig. 8.1** — The Michelson as a refractometer: the cell is traversed *twice*, so pumping it out removes $2(\mu-1)L$ of optical path and the pattern walks through $N = 2(\mu-1)L/\lambda$ fringes — about 61 for 4 cm of air. Two cautions: the count is a *double* pass, and the cell must be in one arm only; a cell in each arm measures the difference of the two gases.
 
 ### 8.3 Instruments built on these principles
@@ -3421,6 +3610,13 @@ flowchart TD
 > *Read:* name the kind first, then any thickness/index/wavelength is a path difference to convert into waves and count.
 
 ![Decision tree for classifying a wave optics problem](assets/figures/fig-028.svg)
+
+> [!abstract] DIAGRAM D23.28 — Decision tree for classifying a wave optics problem
+> **Show:** Analytic redraw correcting the legacy sketch; original retained.
+> **Source:** `wave-optics/assets/figures/fig-028.svg`; original retained.
+> **Read:** Decision tree for classifying a wave optics problem.
+
+![[../_obsidian/excalidraw/wave-optics-D23-28.excalidraw|900]]
 
 **Fig. 9.1** — The triage tree. The six boxes are the six equations of the subject; the captions beneath each are the first thing to check once you have chosen the box. The box at the bottom is the single habit that prevents most arithmetic errors: *convert path differences into wavelengths* before substituting numbers.
 

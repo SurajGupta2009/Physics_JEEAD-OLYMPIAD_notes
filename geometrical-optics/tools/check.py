@@ -111,6 +111,13 @@ def main():
         for href, a in re.findall(r'href="([^"#]+)#([^"]+)"', src):
             if href in allids and a not in allids[href]:
                 print(f'   ✗ {name}: link to {href}#{a} — no such id yet (auto-generated headings are ok if the heading text exists)')
+    from pathlib import Path
+    sys.path.insert(0, str(Path(ROOT).parent))
+    from tools.excalidraw_checks import validate_svg_companions
+    scene_errors = validate_svg_companions(Path(ROOT))
+    for error in scene_errors:
+        print('   ✗ ' + error)
+    problems += len(scene_errors)
     print('\n' + ('ALL GOOD' if not problems else f'{problems} problem(s)'))
     return 1 if problems else 0
 

@@ -101,6 +101,8 @@ def validate(source, root=ROOT):
 def main():
     source = MASTER.read_text(encoding='utf-8')
     errors = validate(source)
+    from tools.excalidraw_checks import validate_svg_companions
+    errors.extend(validate_svg_companions(ROOT))
     for name, content in exports(source).items():
         path = ROOT / name
         if not path.is_file() or path.read_text(encoding='utf-8') != content:

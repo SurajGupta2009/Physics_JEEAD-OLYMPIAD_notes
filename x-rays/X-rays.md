@@ -167,6 +167,9 @@ with $V$ in volts: tungsten at $100$ kV gives $\eta\approx7\times10^{-3}$, the q
 > *Show:* a glass envelope under vacuum; a heated filament cathode with its focusing cup; the angled tungsten anode with a rotating stem and cooling fins; the electron beam converging on the focal spot; the X-ray fan leaving through a window; the high-voltage supply labelled.
 > *Search:* "Coolidge tube X-ray production diagram filament anode rotating"
 > *Used in:* §3.1.
+> **Companion:** native editable scene `x-rays-D25-1.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-1.excalidraw|900]]
 
 How many X-ray photons per second? A $700$ W tube at one percent efficiency radiates $7$ W; taking a mean photon energy of $30$ keV $=4.8\times10^{-15}$ J, that is $\sim1.5\times10^{15}$ photons per second.
 
@@ -208,11 +211,17 @@ The threshold logic examiners love: a line appears only when the tube voltage ca
 > *Show:* one curve of intensity against wavelength: the bremsstrahlung hump with its cutoff, and two sharp spikes labelled K-alpha and K-beta (K-beta at shorter wavelength, smaller); a second dashed curve at lower voltage showing the hump without the spikes, captioned "below the K threshold".
 > *Search:* "X-ray spectrum continuous characteristic K alpha K beta lines"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `x-rays-D25-3.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-3.excalidraw|900]]
 
 > [!abstract] DIAGRAM D25.4 · The K-shell vacancy cascade
 > *Show:* three levels K, L, M; an outgoing arrow from K labelled "ejected electron"; a downward arrow M to K labelled K-beta, L to K labelled K-alpha, M to L labelled L-alpha; energies in keV for copper beside the arrows.
 > *Search:* "characteristic X-ray emission K alpha L shell vacancy cascade diagram"
 > *Used in:* §3.3.
+> **Companion:** native editable scene `x-rays-D25-4.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-4.excalidraw|900]]
 
 > [!tip] FIGURE F25.6 · Moseley: the element fingerprint is a straight line
 > *Why:* the same screened-nucleus formula gives every element a line — plotting $\sqrt f$ against $Z$ is how Moseley counted the elements.
@@ -244,6 +253,9 @@ Moseley's 1913 plot of $\sqrt f$ against $Z$ is a straight line with intercept $
 > *Show:* sqrt(f) vertical against Z horizontal; a straight line through measured points; the intercept at Z = 1 marked; gaps at Z = 43 and 61 shown as empty slots on the axis; copper highlighted.
 > *Search:* "Moseley law plot sqrt frequency Z straight line missing elements"
 > *Used in:* §3.4.
+> **Companion:** native editable scene `x-rays-D25-5.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-5.excalidraw|900]]
 
 ### 3.5 Absorption and imaging
 
@@ -259,6 +271,9 @@ $\mu$ falls with photon energy (roughly $\lambda^3$ away from edges) and rises s
 > *Show:* I over I0 against thickness, an exponential fall; the half and quarter levels marked with dashed lines at x-half and 2 x-half; a second steeper curve for bone against a shallower one for tissue, the contrast region shaded.
 > *Search:* "X-ray attenuation exponential half value thickness bone tissue contrast"
 > *Used in:* §3.5.
+> **Companion:** native editable scene `x-rays-D25-6.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-6.excalidraw|900]]
 
 ### 3.6 X-ray diffraction: why crystals
 
@@ -278,11 +293,17 @@ Orders $n=1,2,3$ are the same geometry with $n$ wavelengths of path; the highest
 > *Show:* two parallel atomic planes separated by d; two incoming rays at glancing angle theta measured from the plane, highlighted with an arc; the extra path 2 d sin theta drawn as two dashed perpendiculars; the reflected rays in phase; a note "theta is from the plane, not the normal".
 > *Search:* "Bragg diffraction geometry glancing angle path difference 2d sin theta"
 > *Used in:* §3.7, E7.
+> **Companion:** native editable scene `x-rays-D25-7.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-7.excalidraw|900]]
 
 > [!abstract] DIAGRAM D25.8 · Powder rings
 > *Show:* a Debye-Scherrer camera: incident beam, powder sample at centre, concentric arcs on the film; two cones drawn from the sample to the arcs; caption "each ring is one order and one family of planes".
 > *Search:* "powder X-ray diffraction Debye Scherrer rings pattern"
 > *Used in:* §3.7.
+> **Companion:** native editable scene `x-rays-D25-8.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-8.excalidraw|900]]
 
 ### 3.8 Diffraction in practice: lattice constants and Avogadro
 
@@ -300,6 +321,9 @@ With $M=58.44$ g/mol, $\rho=2165$ kg/m$^3$, $d=0.282$ nm: $N_A=\frac{0.05844}{2\
 > *Show:* a cube with alternating Na and Cl spheres; the edge a and the half-edge d labelled; one plane family shaded; the volume-per-pair argument annotated.
 > *Search:* "sodium chloride crystal structure unit cell spacing Avogadro"
 > *Used in:* §3.8, OL6.
+> **Companion:** native editable scene `x-rays-D25-9.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-9.excalidraw|900]]
 
 ### 3.9 The Compton effect: the experiment
 
@@ -309,6 +333,9 @@ Compton sent monochromatic X-rays ($\sim100$ pm, molybdenum K) onto graphite and
 > *Show:* intensity against wavelength at three angles (0, 90, 135 degrees): at 0 one peak; at 90 two peaks separated by 2.43 pm; at 135 the shifted peak taller and 4 pm away; the unshifted peak fixed in position.
 > *Search:* "Compton effect scattered X-ray spectrum two peaks wavelength shift angle"
 > *Used in:* §3.9.
+> **Companion:** native editable scene `x-rays-D25-10.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-10.excalidraw|900]]
 
 ### 3.10 Compton's derivation
 
@@ -363,11 +390,17 @@ Scale check: for $550$ nm light the maximum shift is $\frac{4.86\ \text{pm}}{550
 > *Show:* a horizontal energy axis from 1 eV to 10 MeV; three bands highlighted: photoelectric dominant at a few eV, diffraction at keV with crystals, Compton at tens to hundreds of keV, pair production beyond 1.02 MeV marked with a vertical line; each band labelled with what it proves (energy quantum, wave, momentum quantum).
 > *Search:* "photon experiments energy scale photoelectric Compton pair production"
 > *Used in:* §3.11-3.12.
+> **Companion:** native editable scene `x-rays-D25-13.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-13.excalidraw|900]]
 
 > [!abstract] DIAGRAM D25.14 · Pair production at the threshold
 > *Show:* a photon line ending at a nucleus with an electron and positron curving away in opposite senses in a magnetic field; the caption "needs 1.022 MeV and a nucleus to take momentum".
 > *Search:* "pair production electron positron photon nucleus diagram"
 > *Used in:* §3.11.
+> **Companion:** native editable scene `x-rays-D25-14.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-14.excalidraw|900]]
 
 ### 3.12 Cross-topic synthesis
 
@@ -1745,11 +1778,17 @@ PART 26 inherits the pair-production threshold, the eV-keV bookkeeping and the n
 > *Show:* one spectrum combining the hump, the cutoff labelled lambda-min equals hc over eV, K-alpha and K-beta spikes, the threshold voltage annotation, and a second lower-voltage curve without spikes; all six labels of the chapter's core in one figure.
 > *Search:* "X-ray tube spectrum labelled cutoff K alpha K beta threshold voltage"
 > *Used in:* Part 13 review.
+> **Companion:** native editable scene `x-rays-D25-15.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-15.excalidraw|900]]
 
 > [!abstract] DIAGRAM D25.16 · The photon's three proofs and the two limits
 > *Show:* a vertical energy axis; at eV scale the photoelectric block, at keV the Bragg and Compton blocks, at MeV the pair block; arrows to "energy quantum", "wave", "momentum quantum"; at the bottom the Rayleigh low-energy limit and the Klein-Nishina high-energy limit bracketing the Compton block.
 > *Search:* "photon interactions energy regimes photoelectric Compton pair production chart"
 > *Used in:* 3.12 and Part 13.
+> **Companion:** native editable scene `x-rays-D25-16.excalidraw.excalidraw.md`; this brief has no SVG source.
+
+![[../_obsidian/excalidraw/x-rays-D25-16.excalidraw|900]]
 
 ### 14.3 Open questions you can now attack
 

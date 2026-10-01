@@ -1,0 +1,340 @@
+{
+  "slug": "magnetism",
+  "policy": "docs/obsidian-plugin-workflow.md §2",
+  "figures": [
+    {
+      "id": "F16.1",
+      "kind": "mermaid",
+      "title": "The module in one picture",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.2",
+      "kind": "mermaid",
+      "title": "Axial field of a current loop",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.3",
+      "kind": "mermaid",
+      "title": "Axial field of a finite solenoid",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.4",
+      "kind": "mermaid",
+      "title": "Field of a thick wire",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.5",
+      "kind": "mermaid",
+      "title": "Which source law",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.6",
+      "kind": "mermaid",
+      "title": "Alignment of a two-level moment",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.7",
+      "kind": "mermaid",
+      "title": "A hysteresis loop",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.8",
+      "kind": "mermaid",
+      "title": "How the standard fields reduce to one another",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.9",
+      "kind": "mermaid",
+      "title": "Triage for a magnetism question",
+      "source": "magnetism/Magnetism.md"
+    },
+    {
+      "id": "F16.10",
+      "kind": "mermaid",
+      "title": "Axial field of two coils at three spacings",
+      "source": "magnetism/Magnetism.md"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "D16.1",
+      "kind": "excalidraw",
+      "title": "Oersted's experiment",
+      "show": "a straight wire above a compass, needle aligned north–south with no current; the same with current flowing, the needle swung across the wire; a third panel with the current reversed and the needle swung the other way; concentric circles of $\\mathbf B$ drawn around the wire with the grip rule's hand.",
+      "search": "\"oersted experiment compass needle deflection current carrying wire diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-1.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.1"
+    },
+    {
+      "id": "D16.2",
+      "kind": "excalidraw",
+      "title": "The right-hand rule three ways",
+      "show": "(a) the flat hand: fingers along $\\mathbf v$, curling towards $\\mathbf B$, thumb along $\\mathbf v\\times\\mathbf B$, with the caption \"then apply the sign of $q$\"; (b) the grip rule for a wire: thumb along $I$, fingers along $\\mathbf B$; (c) the cross-product parallelogram with $\\mathbf v$, $\\mathbf B$ and $\\mathbf v\\times\\mathbf B$ as three mutually perpendicular arrows; each panel with $\\odot$/$\\otimes$ notation shown beside it.",
+      "search": "\"right hand rule lorentz force grip rule cross product three panels\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-2.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.2"
+    },
+    {
+      "id": "D16.3",
+      "kind": "excalidraw",
+      "title": "The circle and the helix",
+      "show": "left, a circular orbit seen along $\\mathbf B$ ($\\odot$ out of the page) with $\\mathbf v$ tangent and $\\mathbf F$ towards the centre at four points, a positive charge going clockwise and, dashed, a negative one going anticlockwise; right, a helix about a field line with the pitch $p=v_\\parallel T$ marked, $v_\\parallel$ and $v_\\perp$ resolved at the entry point, and the entry angle $\\theta$ to $\\mathbf B$.",
+      "search": "\"charged particle circular motion magnetic field helix pitch entry angle diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-3.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.3"
+    },
+    {
+      "id": "D16.4",
+      "kind": "excalidraw",
+      "title": "The velocity selector",
+      "show": "two plates with $\\mathbf E$ between them (down), a magnetic field into the page ($\\otimes$) filling the same region, a positive charge moving right with $q\\mathbf E$ drawn down and $q\\mathbf v\\times\\mathbf B$ drawn up; three paths: the undeflected one at $v=E/B$, a slower one curving towards the electric side, a faster one curving the other way; a slit at the exit.",
+      "search": "\"velocity selector crossed electric magnetic fields undeflected path faster slower particles\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-4.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.4"
+    },
+    {
+      "id": "D16.5",
+      "kind": "excalidraw",
+      "title": "The three-region protocol",
+      "show": "a field strip with $\\otimes$ marks; entry point, the perpendicular to $\\mathbf v$ with the centre at distance $r$; the arc to the exit point on the far boundary with the turned angle $\\varphi$ and the tangent (exit direction) drawn; below, the $r<d$ case with the semicircle back out; a third panel with a circular field region entered radially and the exit radial too.",
+      "search": "\"charged particle enters magnetic field region arc exit angle time inside geometry\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-5.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.5"
+    },
+    {
+      "id": "D16.6",
+      "kind": "excalidraw",
+      "title": "The cyclotron",
+      "show": "two dees seen from above with the gap between them, the field $\\odot$ throughout, the ion's spiral of semicircles growing outward and the deflector at the rim; beneath it a timing strip showing the gap voltage alternating and the ion's gap crossings landing on the same phase every half-period.",
+      "search": "\"cyclotron dees spiral path gap voltage resonance timing diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-6.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.6"
+    },
+    {
+      "id": "D16.7",
+      "kind": "excalidraw",
+      "title": "The magnetic mirror",
+      "show": "field lines converging into a throat on the right; a helical path whose radius shrinks and whose pitch closes up as it approaches, reflecting before the throat; the radial component $B_r$ drawn at one point with the force $F_z=-\\mu\\,\\partial B/\\partial z$; inset, velocity space with the loss cone of half-angle $\\theta_{\\text{lc}}$ about the field axis.",
+      "search": "\"magnetic mirror converging field lines reflection loss cone velocity space diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-7.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.7"
+    },
+    {
+      "id": "D16.8",
+      "kind": "excalidraw",
+      "title": "The Hall plate, two panels",
+      "show": "a slab with current along $x$, $\\mathbf B$ along $z$, and (a) electrons drifting along $-x$ pushed to the front edge by $q\\mathbf v\\times\\mathbf B$, the front edge marked $-$ and $E_H$ drawn; (b) positive holes drifting along $+x$ pushed to the *same* front edge, now marked $+$, with $E_H$ reversed; a voltmeter across the width in each panel showing opposite polarities.",
+      "search": "\"hall effect electrons versus holes same edge opposite polarity diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-8.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.8"
+    },
+    {
+      "id": "D16.9",
+      "kind": "excalidraw",
+      "title": "The cycloid and the rolling wheel",
+      "show": "crossed fields ($\\mathbf E$ up, $\\mathbf B$ out of page); a cycloid with cusps on the $x$-axis and arches of height $2r_c$; beneath it the rolling wheel of radius $r_c$ whose rim point traces the curve, with the drift velocity $E/B$ marked; dashed, a curtate and a prolate variant.",
+      "search": "\"charged particle crossed E and B fields cycloid trajectory rolling circle drift\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-9.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.9"
+    },
+    {
+      "id": "D16.10",
+      "kind": "excalidraw",
+      "title": "Thomson's tube",
+      "show": "a cathode-ray tube with the deflecting plates, the coils producing $\\mathbf B$ into the page over the same length, the screen with the undeflected spot and the electric-only deflected spot; the three vectors $\\mathbf v$, $\\mathbf E$, $\\mathbf B$ mutually perpendicular; the formula $v=E/B$ beside the null condition.",
+      "search": "\"J J Thomson e/m experiment cathode ray tube crossed fields deflection diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-10.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.10"
+    },
+    {
+      "id": "D16.11",
+      "kind": "excalidraw",
+      "title": "Reading a chamber track",
+      "show": "a spiral track in a uniform field ($\\otimes$) with the radius visibly decreasing along the motion, an arrow marking the direction of travel deduced from the shrinking radius, and the centre of curvature on the side that reveals the sign; a lead plate across the chamber with the track's curvature tighter after it; the $p=300Br$ rule written beside a measured radius.",
+      "search": "\"cloud chamber positron track lead plate curvature energy loss direction anderson\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-11.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.11"
+    },
+    {
+      "id": "D16.12",
+      "kind": "excalidraw",
+      "title": "The Biot–Savart element",
+      "show": "a wire with an element $I\\,d\\mathbf l$, the vector $\\mathbf r$ to a field point $P$ off to the side, the angle between them, and $d\\mathbf B$ at $P$ pointing into the page (perpendicular to both); a second point on the wire's own line with $d\\mathbf B=0$ marked; the circles of $\\mathbf B$ around the element's axis with the grip-rule hand.",
+      "search": "\"biot savart law current element cross product geometry dB direction\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-12.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.12"
+    },
+    {
+      "id": "D16.13",
+      "kind": "excalidraw",
+      "title": "The finite wire's angles",
+      "show": "a straight segment, the point $P$ at perpendicular distance $d$, the foot of the perpendicular, an element at angle $\\theta$ with $r=d\\sec\\theta$ marked, the two end-angles $\\alpha$ and $\\beta$; $\\mathbf B$ at $P$ drawn into the page with the grip-rule hand; a small inset of the square with the four contributions all pointing the same way.",
+      "search": "\"magnetic field finite straight wire angles alpha beta biot savart derivation\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-13.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.13"
+    },
+    {
+      "id": "D16.14",
+      "kind": "excalidraw",
+      "title": "Compound loops at their centres",
+      "show": "four shapes with the field point at the centre and each piece labelled with its contribution: (a) semicircle plus diameter-line leads ($\\mu_0I/4R+0$); (b) semicircle with perpendicular leads ($\\mu_0I/4R+2\\times\\mu_0I/4\\pi R$); (c) concentric semicircles joined by radial legs; (d) a full loop with one straight chord; directions $\\odot$/$\\otimes$ marked on each piece.",
+      "search": "\"magnetic field at centre of combination of arc and straight wire compound loop problems\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-14.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.14"
+    },
+    {
+      "id": "D16.15",
+      "kind": "excalidraw",
+      "title": "Stacked loops and the field lines of a solenoid and a toroid",
+      "show": "a solenoid in section with its turns as $\\odot$ above the axis and $\\otimes$ below, the field lines dense and straight inside, spreading at the ends and returning outside as widely spaced curves (drawn small, labelled \"$\\sim R/L$ of inside\"); the angles $\\theta_1$, $\\theta_2$ from an axial point to the two end rims; beside it a toroid with the circular field lines confined to the winding and none in the hole.",
+      "search": "\"solenoid field lines inside outside return flux; toroid magnetic field confined to winding\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-15.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.15"
+    },
+    {
+      "id": "D16.16",
+      "kind": "excalidraw",
+      "title": "Two dipoles, side by side",
+      "show": "left, an electric dipole with its field lines leaving $+q$ and entering $-q$, the internal line from $+$ to $-$ antiparallel to $\\mathbf p$; right, a current loop with identical external lines but the internal lines passing through the loop *along* $\\boldsymbol\\mu$, closing round the outside; the far-field region shaded on both with \"identical here\".",
+      "search": "\"electric dipole versus magnetic dipole field lines comparison inside the source\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-16.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.16"
+    },
+    {
+      "id": "D16.17",
+      "kind": "excalidraw",
+      "title": "Loops around a wire, and the sign convention",
+      "show": "a wire ($\\odot$) with its circular field lines; a circular loop of radius $r$ and an irregular loop both enclosing it, with $\\mathbf B\\cdot d\\mathbf l=(\\mu_0I/2\\pi)d\\varphi$ marked on an element of the irregular one; a loop that does not enclose the wire with the azimuth going forward and back; a second panel with the three wires, the anticlockwise loop, the thumb out of the page, and \"$+5-3=+2$ A\".",
+      "search": "\"ampere's circuital law loop around wire azimuth argument sign convention right hand rule\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-17.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.17"
+    },
+    {
+      "id": "D16.18",
+      "kind": "excalidraw",
+      "title": "Overlapping cylinders and the off-centre hole",
+      "show": "two circles of equal radius overlapping, one $\\odot$ ($+J$) and one $\\otimes$ ($-J$), axes $d$ apart, with parallel field arrows filling the lens perpendicular to the line of centres; beside it a wire in cross-section with an off-centre circular hole, the same uniform arrows in the hole, and the two component cylinders drawn dashed.",
+      "search": "\"magnetic field inside off-centre cylindrical hole in current carrying wire superposition uniform field\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-18.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.18"
+    },
+    {
+      "id": "D16.19",
+      "kind": "excalidraw",
+      "title": "The cut magnet and the closed lines",
+      "show": "a bar magnet with its external lines from N to S and its internal lines from S to N, every line closed; the same magnet sawn in two, each half with its own N and S and its own closed lines; a closed Gaussian surface drawn around one pole with equal flux in and out; a dashed \"impossible\" panel of an isolated N pole with lines only leaving.",
+      "search": "\"cut a bar magnet two magnets no monopoles closed magnetic field lines gauss law magnetism\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-19.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.19"
+    },
+    {
+      "id": "D16.20",
+      "kind": "excalidraw",
+      "title": "The chord theorem",
+      "show": "a semicircular wire in a uniform field ($\\otimes$) with $d\\mathbf F$ arrows on several elements all radial, their vector sum equal to the force on the dashed diameter drawn beneath; a closed loop of arbitrary shape with the forces on opposite elements cancelling; a small inset of a rectangular loop whose side forces form a couple.",
+      "search": "\"force on curved current carrying wire equals chord uniform magnetic field semicircle closed loop zero net force\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-20.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.20"
+    },
+    {
+      "id": "D16.21",
+      "kind": "excalidraw",
+      "title": "Torque on a loop, and the galvanometer's radial field",
+      "show": "a rectangular loop seen edge-on with $\\hat{\\mathbf n}$ at angle $\\theta$ to horizontal $\\mathbf B$, the two side forces $IbB$ up and down separated by $a\\sin\\theta$, the rotation axis marked; beside it the galvanometer: curved pole pieces and a cylindrical iron core making radial field lines, the coil's sides always crossing the field at right angles, the fibre and pointer above.",
+      "search": "\"torque on rectangular current loop couple derivation; moving coil galvanometer radial magnetic field diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-21.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.21"
+    },
+    {
+      "id": "D16.22",
+      "kind": "excalidraw",
+      "title": "Parallel wires",
+      "show": "two long parallel wires with currents in the same direction; wire 1's circular field lines, its field at wire 2 drawn, and the force on wire 2 towards wire 1 with $\\mathbf L\\times\\mathbf B$ indicated; a second panel with opposite currents and repulsion; the formula $\\mu_0I_1I_2/2\\pi d$ and a note \"field of the *other* wire only\".",
+      "search": "\"force between two parallel current carrying wires attract repel direction definition of ampere\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-22.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.22"
+    },
+    {
+      "id": "D16.23",
+      "kind": "excalidraw",
+      "title": "Magnetic pressure on a solenoid",
+      "show": "a solenoid in section with $B$ inside and zero outside; on the winding, outward arrows labelled $B^2/2\\mu_0$; the sheet's own field $\\pm\\mu_0K/2$ drawn on both sides and the \"field of the rest\" $B/2$ crossing it; a second panel with the solenoid cut in two and the halves pulled together with $B^2A/2\\mu_0$.",
+      "search": "\"magnetic pressure B squared over 2 mu0 solenoid winding outward force hoop stress\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-23.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.23"
+    },
+    {
+      "id": "D16.24",
+      "kind": "excalidraw",
+      "title": "Bar magnet and solenoid, side by side",
+      "show": "a bar magnet and a solenoid of the same shape with identical external field lines; inside the solenoid the lines run along the axis from the \"S\" end to the \"N\" end, and the same is drawn inside the magnet; the pole picture's wrong internal arrow shown dashed and crossed out with the label \"that is $\\mathbf H$, not $\\mathbf B$\".",
+      "search": "\"bar magnet versus solenoid field lines equivalence inside field direction south to north\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-24.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.24"
+    },
+    {
+      "id": "D16.25",
+      "kind": "excalidraw",
+      "title": "Bound currents on a magnetised slab",
+      "show": "a slab in section with rows of small atomic current loops all circulating the same way; adjacent loops' shared sides with currents cancelling (drawn as opposing arrows that strike out); the uncancelled current around the rim, labelled $K_b=M$; the same slab redrawn as a single loop of current $I_b=Mt$; beside it a magnetised cylinder drawn as a solenoid.",
+      "search": "\"magnetisation bound surface current atomic current loops cancel interior slab derivation\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-25.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.25"
+    },
+    {
+      "id": "D16.26",
+      "kind": "excalidraw",
+      "title": "The induced moment",
+      "show": "two electron orbits of opposite sense in the same applied $\\mathbf B$ (into the page), one speeding up and one slowing down, with the change in each orbit's moment drawn as a small arrow *opposite* to $\\mathbf B$ in both cases; the net induced $\\mathbf M$ antiparallel to $\\mathbf B$; a caption \"Lenz's law for one atom\".",
+      "search": "\"diamagnetism larmor precession induced magnetic moment opposes applied field orbit diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-26.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.26"
+    },
+    {
+      "id": "D16.27",
+      "kind": "excalidraw",
+      "title": "Domains and the magnetising curve",
+      "show": "four stages of a rectangular sample: unmagnetised (four domains closing their flux), wall motion (the favourable domain grown), rotation (moments turning towards $\\mathbf H$), saturation (one domain); beneath, the initial magnetisation curve with the three stages marked and the hysteresis loop drawn around it, $B_r$ and $H_c$ labelled, the area shaded; an inset comparing a soft and a hard loop.",
+      "search": "\"ferromagnetic domains growth rotation saturation hysteresis loop remanence coercivity soft hard\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-27.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.27"
+    },
+    {
+      "id": "D16.28",
+      "kind": "excalidraw",
+      "title": "A magnet and a nail; the lifting electromagnet",
+      "show": "a bar magnet's converging field near its pole, an iron nail with its induced moment drawn along the local $\\mathbf B$ and the net force arrow towards the pole; a small diamagnetic sample with its induced moment reversed and the force away; beside it a U-shaped electromagnet with an iron bar across its poles, the field crossing the two gaps and the pressure $B^2/2\\mu_0$ on each pole face.",
+      "search": "\"magnet attracts iron nail induced dipole gradient force; electromagnet lifting force B squared A over 2 mu0\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-28.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.28"
+    },
+    {
+      "id": "D16.29",
+      "kind": "excalidraw",
+      "title": "The Earth's dipole and the field elements",
+      "show": "the Earth with its rotation axis and the dipole axis tilted $11^\\circ$, field lines entering in the north (the dipole's \"S\" near geographic north labelled); a tangent plane at a mid-latitude point with true north, magnetic north (declination $\\delta$ between them), the total $\\mathbf B$ dipping by $\\theta_{\\text{dip}}$ below the horizontal, and the components $B_H$, $B_V$, $B_H\\cos\\delta$, $B_H\\sin\\delta$.",
+      "search": "\"earth's magnetic field tilted dipole declination inclination dip horizontal vertical components diagram\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-29.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.29"
+    },
+    {
+      "id": "D16.30",
+      "kind": "excalidraw",
+      "title": "The wire in two frames",
+      "show": "the laboratory frame with ions ($+$) at spacing $a$ and electrons ($-$) at the same spacing moving left, a test charge moving right at $v$, and the magnetic force towards the wire; the charge's rest frame beneath, with the ion spacing contracted to $a/\\gamma_v$ and the electron spacing *expanded* relative to it, a net negative wire, and the electric force towards the wire; the caption \"$\\lambda'=-\\gamma_vIv/c^2$\".",
+      "search": "\"magnetism as relativistic effect current carrying wire length contraction charge density test charge frame purcell\"",
+      "file": "_obsidian/excalidraw/magnetism-D16-30.excalidraw.md",
+      "source": "magnetism/Magnetism.md · D16.30"
+    }
+  ],
+  "renderer": "obsidian-excalidraw-plugin@2.27.3",
+  "drawing_numbering": "Chapter-local IDs: Current Electricity D19; existing Magnetism D16 and EMI/AC D20 briefs retained. Always qualify by topic slug."
+}
