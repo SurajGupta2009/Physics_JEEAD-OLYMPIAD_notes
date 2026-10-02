@@ -9,8 +9,12 @@ Checks, for all chapters registered in ``topics.json``:
 * the chapter's ``figures.json`` records exactly those ids, in order, with the
   pinned renderer and no orphan scene files;
 * the master is a strict superset of its committed original (only additive
-  insertions; no original line removed or rewritten);
-* the manifest's Mermaid ``figures`` records are unchanged from the commit.
+  insertions; no original line removed or rewritten) and the manifest's Mermaid
+  ``figures`` records are unchanged from the commit -- unless the topic declares
+  a ``content_revision`` in ``topics.json``.  A content revision is a deliberate,
+  recorded editorial rewrite (not a diagram retrofit): the insert-only and
+  figure-record-preservation checks are then skipped for that topic, while every
+  diagram check above still applies.
 
 Run from the repository root:
 
@@ -119,14 +123,16 @@ def verify() -> tuple[list[str], list[tuple[str, int, int]]]:
             problems.append(f"{slug}: renderer is not pinned to {RENDERER}")
         if RASTER.search(source):
             problems.append(f"{slug}: raster image reference in the master")
+        revision = topic.get("content_revision")
+        allow_rewrite = isinstance(revision, dict) and bool(revision.get("allow_rewrite"))
         original_manifest = original_text(f"{slug}/figures.json", ref)
-        if original_manifest is not None:
+        if original_manifest is not None and not allow_rewrite:
             committed = json.loads(original_manifest)
             if committed.get("figures") and committed.get("figures") != manifest.get("figures"):
                 problems.append(f"{slug}: Mermaid figure records changed")
 
         original_master = original_text(f"{slug}/{name}", ref)
-        if original_master is not None and not insert_only(original_master, source):
+        if original_master is not None and not allow_rewrite and not insert_only(original_master, source):
             problems.append(f"{slug}: original master lines were removed or rewritten")
 
         for drawing in drawings:

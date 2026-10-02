@@ -55,6 +55,24 @@
       "data": "the eight triage branches of §9.1",
       "read": "height kills g by the sphere formula, orbits live on GM/r, transfers ride vis-viva",
       "source": "§9.1 Triage decision tree"
+    },
+    {
+      "id": "F9.7",
+      "kind": "flowchart",
+      "title": "One dial: speed decides the orbit",
+      "why": "every 'what happens if the speed is...' question is read off one ladder",
+      "data": "v<v_c falls; v=v_c circle; v_c<v<v_e ellipse; v=v_e parabola; v>v_e hyperbola with v_inf = sqrt(v^2 - v_e^2)",
+      "read": "the speed dial sets the orbit; v_c and v_e are the only two marks you need",
+      "source": "DIAGRAM D9.8 and §3.9"
+    },
+    {
+      "id": "F9.8",
+      "kind": "flowchart",
+      "title": "Why the tunnel is a simple-harmonic ride",
+      "why": "the gravity train is the linear field inside a uniform sphere read as a spring",
+      "data": "g(r) = 4πGρr/3; ω² = 4πGρ/3; T = sqrt(3π/Gρ) = 84.3 min for Earth",
+      "read": "the tunnel period is fixed by density alone",
+      "source": "§3.14 (deep tunnel) and Eq. (3.48)"
     }
   ],
   "renderer": "obsidian-excalidraw-plugin@2.27.3",
