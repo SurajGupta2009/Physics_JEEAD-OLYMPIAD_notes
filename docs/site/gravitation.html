@@ -21,7 +21,7 @@
 <li><a href="#part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</a></li>
 <li><a href="#part-5-worked-exemplars">Part 5 · Worked exemplars</a></li>
 <li><a href="#part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</a></li>
-<li><a href="#part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</a></li>
+<li><a href="#part-7-core-toolkit-and-alternative-methods">Part 7 · Core toolkit and alternative methods</a></li>
 <li><a href="#part-8-examiner-traps">Part 8 · Examiner traps</a></li>
 <li><a href="#part-9-playbook">Part 9 · Playbook</a></li>
 <li><a href="#part-10-olympiad-extension">Part 10 · Olympiad extension</a></li>
@@ -36,26 +36,26 @@
 <h1 id="gravitation-orbital-motion-first-principles-to-olympiad">Gravitation &amp; Orbital Motion — first principles to Olympiad</h1>
 <div class="callout abstract">
 <p class="callout-title">How to use this chapter</p>
-<p>Three passes. Pass 1: Parts 0–4 — the inverse-square law, the shell theorem, $g$ variations, gravitational PE, and Kepler's laws. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer (tidal forces, the Roche limit, Hohmann transfers, gravity assist, the virial theorem, the Schwarzschild radius, binary-star masses), the paper, the sheet, the checkpoint. Every number recomputed; every boxed result carries its validity condition.</p>
+<p>Three passes. Pass 1: Parts 0–4 — the law and its evidence, field and potential, the shell theorem (proved), spheres and cavities, the four $g$ variations, potential energy and self-energy, Kepler's laws (derived), circular and elliptical orbits, escape and capture, satellites, transfers, two-body systems, tides and the tunnel. Pass 2: Parts 5–9 for exam craft. Pass 3: Parts 10–14 — the Olympiad layer, the paper, the formula sheet, the checkpoint. Every boxed result carries its validity condition, and every result in Part 4 is derived in Part 3.</p>
 </div>
 
 <h2 id="part-0-orientation">Part 0 · Orientation</h2>
 <h3 id="01-what-you-will-be-able-to-do">0.1 What you will be able to do</h3>
-<p>After this chapter you can: state and apply the inverse-square law; prove the shell theorem; compute the gravitational field and potential inside and outside spheres, shells and cavities; derive all four $g$ variations; use $U=-GMm/r$ for orbital problems; derive Kepler's three laws; solve circular and elliptical orbit problems; compute geostationary-orbit parameters; analyse Hohmann transfers and gravity-assist manoeuvres.</p>
+<p>After this chapter you can: state the inverse-square law and explain the evidence for it; define and compute gravitational field and potential; prove the shell theorem and use it for spheres, shells and cavities; derive all four $g$ variations; derive and use $U=-GMm/r$ and the self-energy of a sphere; derive Kepler's three laws; solve circular, elliptical, parabolic and hyperbolic orbit problems with the energy–angular-momentum ledger; derive escape speed, the atmosphere-retention criterion and launch energies; compute geostationary, polar and low-Earth orbit parameters; analyse Hohmann transfers, plane changes, the Oberth effect and rendezvous timing; handle binary stars, the two-body reduction and gravity assists; and estimate tides, the Roche limit, the deep-tunnel period and the free-fall collapse time.</p>
 <h3 id="02-the-one-idea">0.2 The one idea</h3>
 <p>Gravity is a central inverse-square field, and every orbit is energy and angular momentum trading places.</p>
 <h3 id="03-prerequisite-self-check">0.3 Prerequisite self-check</h3>
-<p>You need PART 8 (rotational mechanics, angular momentum) and PART 6 (energy, potential energy). If you can integrate a polynomial and apply energy conservation, you are ready.</p>
+<p>You need PART 8 (rotational mechanics, angular momentum) and PART 6 (work, energy, potential energy). In this chapter you will differentiate and integrate polynomials, use $F=ma$ in the radial direction, and conserve energy and angular momentum. If you can write down the kinetic energy of a body in a circular path and the work done by a force along a path, you are ready.</p>
 <h3 id="04-exam-orientation">0.4 Exam orientation</h3>
-<p>JEE Advanced treats gravitation as a "standard" topic — 2–3 questions per year, usually on orbital mechanics, escape velocity, or $g$ variations. INPhO and IPhO reward the ability to derive the shell theorem, handle elliptical orbits, and analyse gravity-assist and tidal problems. The trap density is moderate: using $g=GM/R^2$ at a height without adjusting $R$, treating PE as $mgh$ at orbital distances, and forgetting the negative sign of $U$.</p>
+<p>JEE Advanced treats gravitation as a standard topic — usually 2–3 questions per year, most often on orbital mechanics, $g$ variations, escape speed, energy of orbits, or the satellite-drag paradox. INPhO and IPhO reward the ability to <em>derive</em> the shell theorem, handle elliptical orbits from first principles, and estimate with real data (tides, Roche limit, launch budgets, collapse times). The trap density is moderate, but the classic errors are predictable: using $g=GM/R^2$ at a height without adjusting $R$, treating $U$ as $mgh$ at orbital distances, dropping the minus sign in $U$, mixing up escape and circular speeds, and quoting a 24-hour period for a geostationary satellite.</p>
 <h3 id="05-what-this-chapter-is-not">0.5 What this chapter is not</h3>
-<p>Not an electrostatics chapter: the $1/r^2$ force in electrostatics (PART 13) has the same mathematical form but different physics (can be repulsive). Not a general-relativity chapter: the Newtonian theory is exact for weak fields and low speeds.</p>
+<p>Not an electrostatics chapter: the $1/r^2$ force of electrostatics (PART 13) has the same mathematical form and a crucial physical difference — it can repel, so there is no shell theorem for a charged shell generically and no universal attraction. Not a general-relativity chapter: Newtonian gravity is exact for weak fields and slow motion, and we say where it fails (black holes, GPS timing, Mercury's perihelion).</p>
 <h3 id="06-syllabus-coverage-map">0.6 Syllabus coverage map</h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: right;">#</th>
-<th>Cengage section</th>
+<th>Source topic</th>
 <th>What it establishes</th>
 <th>Where it lives here</th>
 <th>Status</th>
@@ -64,29 +64,29 @@
 <tbody>
 <tr>
 <td style="text-align: right;">1</td>
-<td>The inverse-square law</td>
-<td>$F=GMm/r^2$</td>
+<td>Newton's law and its evidence</td>
+<td>$F=GMm/r^2$, the Moon test, $G$</td>
 <td>§3.1</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
 <td>Field and potential</td>
-<td>$\mathbf{g}$, $V=-GM/r$</td>
+<td>$\mathbf g$, $V=-GM/r$, equipotentials</td>
 <td>§3.2</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">3</td>
 <td>Shell theorem</td>
-<td>Field inside/outside shells</td>
+<td>Outside a point, inside nothing</td>
 <td>§3.3</td>
-<td>full</td>
+<td>full, proved</td>
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
 <td>Sphere, shell, cavity</td>
-<td>Field and potential by superposition</td>
+<td>$g=GMr/R^3$, $V$ inside, uniform cavity field</td>
 <td>§3.4</td>
 <td>full</td>
 </tr>
@@ -99,71 +99,79 @@
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
-<td>Gravitational PE</td>
-<td>$U=-GMm/r$</td>
+<td>Potential energy</td>
+<td>$U=-GMm/r$, self-energy of a sphere</td>
 <td>§3.6</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">7</td>
 <td>Kepler's laws</td>
-<td>Derived from angular momentum and energy</td>
+<td>All three derived; areal velocity</td>
 <td>§3.7</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
 <td>Circular orbits</td>
-<td>$v=\sqrt{GM/r}$, $E=-GMm/(2r)$</td>
+<td>$v_c$, $T$, $E$, $L$, the density rule</td>
 <td>§3.8</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
-<td>Elliptical orbits</td>
-<td>Vis-viva, perigee/apogee</td>
+<td>Escape and capture</td>
+<td>Escape speed, orbit classification, atmospheres, launch ladder</td>
 <td>§3.9</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">10</td>
-<td>Satellites</td>
-<td>Geostationary, polar</td>
+<td>Elliptical orbits</td>
+<td>Vis-viva, apsidal speeds, ellipse geometry</td>
 <td>§3.10</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">11</td>
-<td>Transfers</td>
-<td>Hohmann, plane changes</td>
+<td>Satellites in practice</td>
+<td>Geostationary, polar, ISS, drag decay</td>
 <td>§3.11</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">12</td>
-<td>Binary stars</td>
-<td>Reduced mass, two-body Kepler</td>
+<td>Transfers and manoeuvres</td>
+<td>Hohmann budget, plane change, Oberth, phasing</td>
 <td>§3.12</td>
 <td>full</td>
 </tr>
 <tr>
 <td style="text-align: right;">13</td>
-<td>Tides and Roche limit</td>
-<td>Differential pull</td>
+<td>Systems of bodies</td>
+<td>Two-body reduction, binary stars, gravity assist</td>
 <td>§3.13</td>
+<td>full</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Gravity's reach</td>
+<td>Tides, Roche limit, tunnel, collapse time</td>
+<td>§3.14</td>
 <td>full</td>
 </tr>
 </tbody>
 </table>
 <h2 id="part-1-intuition-first">Part 1 · Intuition first</h2>
-<p><strong>Gravity is always attractive and always central.</strong> The gravitational force between two masses acts along the line joining them and is proportional to each mass and inversely proportional to the square of the distance: $F=GMm/r^2$. The universal constant $G=6.674\times10^{-11}$ N m$^2$/kg$^2$ is tiny — gravity is the weakest of the four fundamental forces.</p>
-<p><strong>A uniform shell exerts no net force on a particle inside it.</strong> This is the shell theorem — the most powerful result in gravitational theory. It means that inside a uniform sphere, only the mass closer to the centre than the particle contributes to the gravitational force. The field inside a uniform sphere is proportional to $r$: $g(r)=GM r/R^3$.</p>
-<p><strong>Orbits are conic sections.</strong> A particle in a $1/r^2$ force follows a circle, ellipse, parabola, or hyperbola, depending on its energy. Bound orbits (circles and ellipses) have $E&lt;0$; unbound orbits (parabolas and hyperbolas) have $E\ge0$.</p>
-<p><strong>The orbital speed decreases with altitude.</strong> $v=\sqrt{GM/r}$ — the higher the orbit, the slower the satellite. This is counter-intuitive: "higher = slower." The reason: a higher orbit has more PE and less KE, and the total energy is more negative.</p>
+<p><strong>The apple and the Moon.</strong> The apple falls with acceleration $g$. The Moon does not fly off in a straight line either; it accelerates toward the Earth every second, by $v^2/r$. Are these two the same phenomenon? The numbers settle it: the Moon's centripetal acceleration is $2.72\times10^{-3}$ m/s$^2$, which is $g/3600$, and the Moon is 60.3 Earth-radii away. Since $60.3^2\approx3600$, the same force diluted by $1/r^2$ accounts for both. That coincidence — one law for the heavens and the Earth — is the birth of physics.</p>
+<p><strong>Gravity is always attractive and always central.</strong> No one has ever found a negative gravitational mass, so gravitational forces never cancel at large distances; they only add. The force acts along the line joining the two masses (central), which means it exerts no torque about the centre and therefore conserves angular momentum — the fact that makes Kepler's second law work for <em>any</em> central force. Gravity is also absurdly weak: the electrical repulsion between two protons exceeds their gravitational attraction by a factor $1.2\times10^{36}$. It dominates the universe only because it never cancels and never saturates.</p>
+<p><strong>The inverse square is geometry.</strong> Field lines from a point source thread a sphere of area $4\pi r^2$, so their density falls as $1/r^2$ — the same reason a lamp dims with distance. This argument gives the magnitude of the field only when the distribution has enough symmetry; turning it into a proof for a spherical shell is the shell theorem, §3.3. The reward is large: $1/r^2$ is the only power law for which the interior of a uniform shell is exactly force-free, and the only one that produces closed Kepler orbits.</p>
+<p><strong>Newton's cannonball.</strong> Fire a ball horizontally from a tall mountain. At low speed it falls to the ground close by; faster, it lands farther; at about 7.9 km/s it falls <em>around</em> the Earth and never lands; at 11.2 km/s it does not come back at all. The whole classification of orbits is one dial — the launch speed — and §3.9 makes the dial quantitative.</p>
+<p><strong>The two dials of an orbit.</strong> Energy decides whether the orbit is bound and how big it is: $E=-GMm/(2a)$, with $E&lt;0$ for ellipses, $E=0$ for the parabola, $E&gt;0$ for hyperbolas. Angular momentum decides how eccentric it is and keeps a bound orbit from falling into the centre: a particle with $L=0$ plunges radially no matter how much energy it has. Every orbit problem in this chapter is some combination of these two conservation laws, and that is the one idea to carry through the derivations.</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F9.1 · Chapter map</p>
 <p><em>Why:</em> the chapter is one $1/r^2$ law read three ways — fields, energies, orbits — and the map shows the spine.
-<em>Data:</em> the Part 0–14 structure — the law, shells, field, potential, Kepler, orbits, tides, paper, sheet.</p>
+<em>Data:</em> the Part 0–14 structure — the law, shells, field, potential, Kepler, orbits, escape, transfers, tides, paper, sheet.</p>
 </div>
 
 <pre><code class="language-mermaid">mindmap
@@ -179,6 +187,7 @@
 <p><em>Read:</em> every result is a shell sum, a $GM/r$ energy, or a Kepler exponent.</p>
 </blockquote>
 <h2 id="part-2-definitions-and-bookkeeping">Part 2 · Definitions and bookkeeping</h2>
+<h3 id="21-symbols">2.1 Symbols</h3>
 <table>
 <thead>
 <tr>
@@ -205,33 +214,68 @@
 </tr>
 <tr>
 <td>$r$</td>
-<td>distance from the centre</td>
+<td>distance from the centre (not the surface)</td>
 <td>m</td>
 </tr>
 <tr>
-<td>$\mathbf{g}$</td>
-<td>gravitational field (acceleration)</td>
+<td>$R$</td>
+<td>radius of the body</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$h$</td>
+<td>height above the surface</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>depth below the surface</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\lambda$</td>
+<td>latitude</td>
+<td>rad</td>
+</tr>
+<tr>
+<td>$\omega$</td>
+<td>angular speed of rotation</td>
+<td>rad/s</td>
+</tr>
+<tr>
+<td>$\mathbf g$</td>
+<td>gravitational field (force per unit mass)</td>
 <td>m/s$^2$</td>
 </tr>
 <tr>
 <td>$V$</td>
-<td>gravitational potential</td>
+<td>gravitational potential (energy per unit mass)</td>
 <td>J/kg</td>
 </tr>
 <tr>
 <td>$U$</td>
-<td>gravitational potential energy</td>
+<td>gravitational potential energy of a pair or system</td>
 <td>J</td>
 </tr>
 <tr>
 <td>$E$</td>
-<td>total orbital energy</td>
+<td>total mechanical energy</td>
+<td>J</td>
+</tr>
+<tr>
+<td>$K$</td>
+<td>kinetic energy</td>
 <td>J</td>
 </tr>
 <tr>
 <td>$L$</td>
-<td>orbital angular momentum</td>
+<td>angular momentum about the centre</td>
 <td>kg m$^2$/s</td>
+</tr>
+<tr>
+<td>$h=L/m$</td>
+<td>specific angular momentum</td>
+<td>m$^2$/s</td>
 </tr>
 <tr>
 <td>$T$</td>
@@ -240,39 +284,227 @@
 </tr>
 <tr>
 <td>$a$</td>
-<td>semi-major axis of an ellipse</td>
+<td>semi-major axis</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$b$</td>
+<td>semi-minor axis</td>
 <td>m</td>
 </tr>
 <tr>
 <td>$e$</td>
-<td>eccentricity of an orbit</td>
+<td>eccentricity</td>
 <td>dimensionless</td>
+</tr>
+<tr>
+<td>$p=a(1-e^2)$</td>
+<td>semi-latus rectum</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$r_p,\ r_a$</td>
+<td>periapsis and apoapsis distances</td>
+<td>m</td>
+</tr>
+<tr>
+<td>$\rho$</td>
+<td>density</td>
+<td>kg/m$^3$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>reduced mass $m_1m_2/(m_1+m_2)$</td>
+<td>kg</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-per-unit-mass-bookkeeping">2.2 Per-unit-mass bookkeeping</h3>
+<p>Two quantities appear constantly, and keeping them per unit mass removes one symbol from every equation:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Definition</th>
+<th>For a point mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>field</td>
+<td>$\mathbf g=\mathbf F/m$</td>
+<td>$-GM\hat{\mathbf r}/r^2$</td>
+</tr>
+<tr>
+<td>potential</td>
+<td>$V=U/m$</td>
+<td>$-GM/r$</td>
+</tr>
+<tr>
+<td>specific energy</td>
+<td>$\varepsilon=E/m$</td>
+<td>$v^2/2-GM/r$</td>
+</tr>
+<tr>
+<td>specific angular momentum</td>
+<td>$h=L/m$</td>
+<td>$r^2\dot\theta$</td>
+</tr>
+</tbody>
+</table>
+<p>A useful discipline: work in specific quantities until the last line, then multiply by $m$ if the question asks for an energy or a force.</p>
+<h3 id="23-sign-conventions">2.3 Sign conventions</h3>
+<ul>
+<li>$U$ and $V$ are negative, with the zero at infinite separation. A bound state is below zero; the number $-GMm/r$ is not a mistake.</li>
+<li>Work done <em>by</em> gravity as two masses approach is positive, so $\Delta U&lt;0$.</li>
+<li>The field is a vector pointing toward the source; its magnitude $GM/r^2$ is never negative. Write $\mathbf g=-\frac{GM}{r^2}\hat{\mathbf r}$ with $\hat{\mathbf r}$ pointing away from the source.</li>
+<li>A "minus" in an energy answer means bound, not unphysical. If you get $E&gt;0$ for a satellite you believed was in a circular orbit, you have made an algebra sign error or the satellite is not bound.</li>
+</ul>
+<h3 id="24-orbit-vocabulary">2.4 Orbit vocabulary</h3>
+<p>For an ellipse with semi-major axis $a$ and eccentricity $e$: the closest point is periapsis (perigee near the Earth, perihelion near the Sun), at distance $r_p=a(1-e)$; the farthest is apoapsis, at $r_a=a(1+e)$; the semi-minor axis is $b=a\sqrt{1-e^2}$; the semi-latus rectum is $p=a(1-e^2)=b^2/a$; and the polar equation of the orbit is</p>
+<p>$$
+r(\theta)=\frac{p}{1+e\cos\theta}, \qquad (2.1)
+$$</p>
+<p>with $\theta=0$ at periapsis. The areal velocity is $dA/dt=L/(2m)$; it is constant for every central force.</p>
+<div class="callout info">
+<p class="callout-title">Bookkeeping rules</p>
+<p>$U=-GMm/r$ with the reference at infinity, where $U=V=0$. Total energy $E=K+U$ is negative for every bound orbit and equals $-GMm/(2a)$ for every ellipse. Escape from radius $r$ needs $v_{\text{esc}}=\sqrt{2GM/r}$; the circular speed at the same radius is $v_c=\sqrt{GM/r}$. Distances are measured from the centre, always.</p>
+</div>
+
+<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
+<p>Everything in this chapter is one of four calculations: a field from a mass distribution, a potential from a field, an energy from a potential, or an orbit from an energy and an angular momentum. This part does them in that order. Nothing in Part 4 is quoted that is not derived here.</p>
+<h3 id="31-the-law-and-how-we-know-it">3.1 The law, and how we know it</h3>
+<p><strong>The law.</strong> Two point masses attract along the line joining them with</p>
+<p>$$
+\mathbf F_{1\to2}=-\frac{Gm_1m_2}{r^2}\,\hat{\mathbf r}, \qquad (3.1)
+$$</p>
+<p>where $\hat{\mathbf r}$ points from mass 1 to mass 2, so the minus sign makes the force attractive; $G=6.674\times10^{-11}$ N m$^2$/kg$^2$; and the force is <em>central</em> (along the joining line) and <em>universal</em> (the same $G$ for every pair of masses ever tested). Superposition holds: the force on a mass from many others is the vector sum of the pairwise forces.</p>
+<p><strong>Why an inverse square?</strong> Newton's argument has two halves, and both are examinable.</p>
+<p><em>Half one — a circular orbit fixes the force law once the period law is known.</em> For a mass $m$ in a circular orbit of radius $r$ and period $T$, the acceleration is centripetal:</p>
+<p>$$
+a=\frac{v^2}{r}=\frac{4\pi^2r}{T^2}. \qquad (3.2)
+$$</p>
+<p>Kepler had extracted $T^2\propto r^3$ from the planets. Writing $T^2=Kr^3$ and substituting,</p>
+<p>$$
+a=\frac{4\pi^2}{Kr^2}\ \propto\ \frac{1}{r^2},\qquad\text{so}\qquad F=ma\propto\frac{m}{r^2}. \qquad (3.3)
+$$</p>
+<p>Since the same force acts on the planet and (by Newton's third law) on the Sun in proportion to the other mass, $F\propto Mm/r^2$. The constant is fixed by requiring the circular orbit to be a solution: $F=GMm/r^2$ reproduces $T^2=4\pi^2r^3/(GM)$, so the same $GM$ appears in the force law and in the period law.</p>
+<p><em>Half two — the Moon falls the way an apple falls.</em> The Moon's centripetal acceleration from Eq. (3.2) is</p>
+<p>$$
+a_{\text{Moon}}=\frac{4\pi^2(3.844\times10^8\ \text{m})}{(27.32\times86400\ \text{s})^2}=2.72\times10^{-3}\ \text{m/s}^2.
+$$</p>
+<p>Surface gravity is $g=9.81$ m/s$^2$, and</p>
+<p>$$
+\frac{g}{a_{\text{Moon}}}=3.6\times10^3\approx60^2=\left(\frac{r_{\text{Moon}}}{R_E}\right)^2,\qquad \frac{r_{\text{Moon}}}{R_E}=\frac{3.844\times10^8}{6.371\times10^6}=60.3.
+$$</p>
+<p>So the force that holds the Moon has the same origin as the apple's weight, diluted by exactly $1/r^2$ over sixty Earth radii. That numerical coincidence is the historical evidence for universal gravitation.</p>
+<p><strong>The constant, and how big it is.</strong> Measuring $g$ at the surface gives the product, not $G$ or $M$ separately:</p>
+<p>$$
+GM_E=gR_E^2=3.986\times10^{14}\ \text{m}^3/\text{s}^2,\qquad M_E=\frac{GM_E}{G}=5.97\times10^{24}\ \text{kg}. \qquad (3.4)
+$$</p>
+<div class="callout info">
+<p class="callout-title">History — Cavendish weighs the Earth</p>
+<p>Cavendish (1798) measured the tiny torque between lead spheres with a torsion balance, obtaining $G$ to about 1%. Once $G$ was known, Eq. (3.4) turned the already-measured $gR^2$ into the mass of the Earth. Gravity is weaker than the electrostatic force between two protons by a factor $ke^2/(Gm_p^2)\approx1.2\times10^{36}$ — and yet gravity runs the universe, because it is always attractive and never cancels.</p>
+</div>
+
+<p><strong>Validity.</strong> Equation (3.1) is exact for point masses or spherically symmetric bodies (the shell theorem, proved in §3.3), provided $v\ll c$ and the fields are weak. Beyond that, general relativity takes over; the last section of Part 10 says where.</p>
+<h3 id="32-field-and-potential-of-a-point-mass">3.2 Field and potential of a point mass</h3>
+<p>Two bookkeeping devices turn gravitational problems from vector problems into scalar ones.</p>
+<p><strong>Field.</strong> Define the gravitational field as force per unit mass:</p>
+<p>$$
+\mathbf g(\mathbf r)=\frac{\mathbf F_{\text{on }m}}{m},\qquad \mathbf g=-\frac{GM}{r^2}\hat{\mathbf r},\qquad |\mathbf g|=\frac{GM}{r^2}. \qquad (3.5)
+$$</p>
+<p>The field is a property of the source distribution alone. Fields add as vectors: $\mathbf g=\sum_i\mathbf g_i$. The field lines of a point mass are radial, pointing inward; the equipotentials are concentric spheres.</p>
+<p><strong>Potential.</strong> Define the potential as potential energy per unit mass, $V=U/m$. To compute it, bring a unit mass in from infinity along any path (gravity is conservative, so the path does not matter) and use $\Delta U=-W_{\text{cons}}$:</p>
+<p>$$
+V(r)-V(\infty)=-\int_{\infty}^{r}\mathbf g\cdot d\mathbf r'=-\int_{\infty}^{r}\left(-\frac{GM}{r'^2}\right)dr'=-\frac{GM}{r}. \qquad (3.6)
+$$</p>
+<p>Choosing the reference $V(\infty)=0$,</p>
+<p>$$
+\boxed{V(r)=-\frac{GM}{r}}\qquad\text{and}\qquad g_r=-\frac{dV}{dr}. \qquad (3.7)
+$$</p>
+<p>The potential is negative everywhere, zero only at infinity, and approaches $-\infty$ as $r\to0$ — a useful reminder that a point mass is an idealisation.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Force</th>
+<th>Field</th>
+<th>Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>depends on</td>
+<td>$m$ as well as $M$</td>
+<td>$M$ only</td>
+<td>$M$ only</td>
+</tr>
+<tr>
+<td>type</td>
+<td>vector</td>
+<td>vector</td>
+<td>scalar</td>
+</tr>
+<tr>
+<td>adds as</td>
+<td>vectors</td>
+<td>vectors</td>
+<td>numbers</td>
+</tr>
+<tr>
+<td>relation</td>
+<td>$\mathbf F=m\mathbf g$</td>
+<td>$\mathbf g=-\nabla V$</td>
+<td>$V=U/m$</td>
 </tr>
 </tbody>
 </table>
 <div class="callout info">
-<p class="callout-title">Bookkeeping rules</p>
-<p>$U=-GMm/r$ with the reference at infinity (where $U=0$). The total energy $E=K+U$ for a bound orbit is always negative. The escape speed is $v_{\text{esc}}=\sqrt{2GM/R}$ — the speed needed to reach infinity with zero KE.</p>
+<p class="callout-title">Why potentials earn their keep</p>
+<p>A vector sum of many fields needs components; a scalar sum of many potentials is one ordinary addition. Every result in Part 3 is first obtained for a point mass as a potential, then assembled by superposition. The price is that $V$ alone does not give the direction of the force — one differentiation per direction, Eq. (3.7), does.</p>
 </div>
 
-<h2 id="part-3-core-derivations">Part 3 · Core derivations</h2>
-<h3 id="31-the-inverse-square-law">3.1 The inverse-square law</h3>
-<p>$$
-\mathbf{F}=-\frac{GMm}{r^2}\hat{r}. \qquad (3.1)
-$$</p>
-<p>The force is attractive (toward the central mass), central (along $\hat{r}$), and proportional to $1/r^2$.</p>
-<h3 id="32-field-and-potential">3.2 Field and potential</h3>
-<p>$$
-\mathbf{g}=-\frac{GM}{r^2}\hat{r},\qquad V=-\frac{GM}{r}. \qquad (3.2)
-$$</p>
-<p>$\mathbf{g}$ is the force per unit mass. $V$ is the potential energy per unit mass. The equipotentials are spheres; the field lines are radial.</p>
+<div class="callout warning">
+<p class="callout-title">Potential, potential energy and $mgh$</p>
+<p>$V$ is per unit mass (J/kg); $U$ is per pair of masses (J); $mgh$ is the small-height approximation $\Delta U\approx mg\Delta h$, valid only for $h\ll R$. At planetary distances only $\Delta U=-GMm(1/r_1-1/r_2)$ is safe.</p>
+</div>
+
 <h3 id="33-the-shell-theorem">3.3 The shell theorem</h3>
-<p><strong>Statement:</strong> (1) A uniform spherical shell attracts a particle outside as if all the shell's mass were concentrated at the centre. (2) A uniform spherical shell exerts no net gravitational force on a particle inside it.</p>
-<p><strong>Proof (ring integration):</strong> Put the test point a distance $s$ from the centre and let $\theta$ be the polar angle of a shell element measured from that radial direction. For a uniform shell of radius $R$ and surface density $\sigma$, the signed radial field is</p>
+<p><strong>Statement.</strong> For a uniform spherical shell of mass $M$ and radius $R$:</p>
+<ol>
+<li>outside the shell ($r&gt;R$), the field is the same as if all the mass were at the centre, $g=GM/r^2$;</li>
+<li>inside the shell ($r&lt;R$), the net field is exactly zero;</li>
+<li>the potential is continuous: $V=-GM/r$ outside, and $V=-GM/R$ (constant) inside.</li>
+</ol>
+<p>The third statement is the one students forget: <em>zero field does not mean zero potential</em>. Inside the shell a particle needs energy to get out even though no force acts on it in there.</p>
+<p><strong>Proof by cones (the elementary one).</strong> Take any point $P$ and draw a narrow double cone of solid angle $d\Omega$ through it, hitting the shell at two opposite patches (figure D9.1). Because the patches are on a sphere, a line through $P$ meets it at two points whose radii make equal angles with the line; hence the two patches present equal projected areas. Their areas are</p>
 <p>$$
-g_r=2\pi G\sigma R^2\int_0^\pi \frac{(R\cos\theta-s)\sin\theta}{(s^2+R^2-2sR\cos\theta)^{3/2}}\,d\theta.
+dA_1=\frac{r_1^2\,d\Omega}{|\cos\alpha|},\qquad dA_2=\frac{r_2^2\,d\Omega}{|\cos\alpha|},
 $$</p>
-<p>Evaluating gives $g_r=0$ for $s<R$ and $g_r=-GM/s^2$ for $s>R$ (negative is toward the centre), where $M=4\pi R^2\sigma$. Thus the interior cancellation and exterior point-mass result follow from the inverse-square law; they do not follow merely from Gauss's law without spherical symmetry.</p>
+<p>and with surface density $\sigma$ their masses are $dM_i=\sigma dA_i$. The two pulls are both along the same line and have magnitudes</p>
+<p>$$
+dg_i=\frac{G\,dM_i}{r_i^2}=\frac{G\sigma\,d\Omega}{|\cos\alpha|},
+$$</p>
+<p>which are <em>equal</em>. They point in opposite directions, so each pair of patches cancels exactly, and the integral over all directions is zero. This proves part 2; it is a genuine inverse-square argument, not a symmetry claim.</p>
+<p><strong>Proof by ring integration (the analytic one).</strong> For a point at distance $s$ from the centre, split the shell into rings about the axis $OP$. A ring at polar angle $\theta$ has mass $2\pi\sigma R^2\sin\theta\,d\theta$, every part of it is at distance $\ell=\sqrt{s^2+R^2-2sR\cos\theta}$ from $P$, and by symmetry only the component along $OP$ survives:</p>
+<p>$$
+g_r(s)=2\pi G\sigma R^2\int_0^{\pi}\frac{(R\cos\theta-s)\sin\theta}{(s^2+R^2-2sR\cos\theta)^{3/2}}\,d\theta. \qquad (3.8)
+$$</p>
+<p>The substitution $u=\cos\theta$ makes this elementary. The antiderivative is $\dfrac{R-su}{s^2\sqrt{s^2+R^2-2sRu}}$, and evaluating from $u=-1$ to $u=1$ gives</p>
+<p>$$
+\int_{-1}^{1}\frac{(Ru-s)\,du}{(s^2+R^2-2sRu)^{3/2}}=
+\begin{cases}
+0, &amp; s<R,\\
+-\dfrac{2}{s^2}, & s>R.
+\end{cases}
+$$</p>
+<p>Therefore $g_r=0$ for $s<R$ and $g_r=-4\pi G\sigma R^2/s^2=-GM/s^2$ for $s>R$, with $M=4\pi R^2\sigma$. The same integral gives the potential by integrating $V=-\int g\,ds$; the result is part 3 above.</p>
+<div class="callout tip">
+<p class="callout-title">Gauss's law needs the symmetry the cones do not</p>
+<p>Gauss's law for gravity, $\oint\mathbf g\cdot d\mathbf A=-4\pi GM_{\text{enc}}$, gives zero flux through any surface drawn inside the shell, but zero flux does not by itself force the field to be zero pointwise. Only the cone argument (or the ring integral) proves part 2. What Gauss's law buys is speed: once symmetry <em>is</em> known, it turns these integrals into one-line results (Part 7.2 and OL1).</p>
+</div>
+
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.1 · The shell theorem cone construction</p>
 <p><em>Show:</em> a uniform spherical shell and an interior point $P$. Two opposite, equal-solid-angle cones from $P$ intersect near and far shell patches. Include the incidence-angle projection: $dA/r^2=d\Omega/|\cos\alpha|$. For opposite rays the absolute cosines match, so the inverse-square pulls have equal magnitude and opposite directions; each pair cancels.
@@ -282,7 +514,7 @@ $$</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F9.2 · The shell theorem: outside a point, inside nothing</p>
 <p><em>Why:</em> the single most powerful shortcut in the chapter — a shell acts like a point mass outside, and vanishes inside.
-<em>Data:</em> outside $g=GM/r^2$; inside a shell $g=0$; inside a uniform sphere only the inner mass $M(r)=M(r/R)^3$ counts, so $g=GMr/R^3$.</p>
+<em>Data:</em> outside $g=GM/r^2$; inside a shell $g=0$ but $V=-GM/R$; inside a uniform sphere only the inner mass $M(r)=M(r/R)^3$ counts, so $g=GMr/R^3$.</p>
 </div>
 
 <pre><code class="language-mermaid">flowchart TD
@@ -295,22 +527,113 @@ $$</p>
 <p><em>Read:</em> outside, collapse the shell to a point; inside, the pull of the whole shell cancels, and only what lies below you counts.</p>
 </blockquote>
 <h3 id="34-sphere-shell-and-cavity">3.4 Sphere, shell and cavity</h3>
-<p><strong>Outside a uniform sphere</strong> ($r\ge R$): $g=GM/r^2$, $V=-GM/r$ (same as a point mass).</p>
-<p><strong>Inside a uniform sphere</strong> ($r&lt;R$): only the mass within $r$ contributes. $M(r)=M(r/R)^3$.</p>
+<p><strong>Outside a uniform sphere</strong> ($r\ge R$): assembling the sphere from shells and using part 1 of the shell theorem gives</p>
 <p>$$
-g(r)=\frac{GM(r)}{r^2}=\frac{GMr}{R^3},\qquad V(r)=-\frac{GM}{2R^3}(3R^2-r^2). \qquad (3.3)
+g=\frac{GM}{r^2},\qquad V=-\frac{GM}{r}\qquad(r\ge R). \qquad (3.9)
 $$</p>
-<p><strong>Spherical cavity</strong> (by superposition): for a uniform-density sphere, represent the cavity as a negative-mass sphere of the same density. At cavity point $\mathbf r$, let $\mathbf c$ be the displacement from the full sphere's centre to the cavity's centre. The field is $\mathbf g_{\rm full}-\mathbf g_{\rm removed}=-(4\pi G\rho/3)\mathbf r+(4\pi G\rho/3)(\mathbf r-\mathbf c)=-(4\pi G\rho/3)\mathbf c$, a uniform field throughout the cavity (with vectors measured from the full sphere's centre).</p>
+<p><strong>Inside a uniform sphere</strong> ($r&lt;R$): only the mass inside radius $r$ pulls, and with uniform density that mass is $M(r)=M(r/R)^3$:</p>
+<p>$$
+g(r)=\frac{GM(r)}{r^2}=\frac{GMr}{R^3}. \qquad (3.10)
+$$</p>
+<p>The field rises linearly from zero at the centre to $GM/R^2$ at the surface. Integrating inward from the surface for the potential,</p>
+<p>$$
+V(r)=V(R)-\int_{R}^{r}g\,dr'=-\frac{GM}{R}-\int_{R}^{r}\frac{GMr'}{R^3}\,dr'=-\frac{GM}{2R^3}\left(3R^2-r^2\right). \qquad (3.11)
+$$</p>
+<p>At the surface this is $-GM/R$, matching Eq. (3.9); at the centre it is $-3GM/(2R)$, the "three-halves" result. The depth of the potential well at the centre is finite, and that is where the tunnel problem of §3.14 lives.</p>
+<p><strong>A thin shell</strong> has $g=0$ and $V=-GM/R$ everywhere inside; a particle released anywhere inside a shell floats, and a particle outside is pulled as if by a point mass.</p>
+<p><strong>Spherical cavity by superposition.</strong> Take a uniform sphere of density $\rho$ with a spherical cavity; represent the cavity as the <em>negative</em> of a smaller uniform sphere of the same density, with the same centre as the hole. The field of a full uniform sphere at a point inside it is, by Eq. (3.10) written in vector form,</p>
+<p>$$
+\mathbf g_{\text{sphere}}(\mathbf r)=-\frac{4\pi G\rho}{3}\mathbf r,
+$$</p>
+<p>where $\mathbf r$ is measured from the sphere's centre. Adding the negative sphere centred at $\mathbf c$ gives, for a point inside the cavity,</p>
+<p>$$
+\mathbf g_{\text{cavity}}=\mathbf g_{\text{full}}-\mathbf g_{\text{removed}}
+=-\frac{4\pi G\rho}{3}\mathbf r+\frac{4\pi G\rho}{3}(\mathbf r-\mathbf c)
+=-\frac{4\pi G\rho}{3}\,\mathbf c. \qquad (3.12)
+$$</p>
+<p>The position vector has cancelled: the field inside a spherical cavity is <strong>uniform</strong> — same magnitude, same direction everywhere — even though the geometry is not spherically symmetric. This is the standard JEE Advanced cavity problem, solved in one line once superposition is set up.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.2 · Field inside a uniform sphere and the cavity</p>
 <p><em>Show:</em> left: $g(r)$ vs $r$ for a uniform sphere — linear rise from zero at the centre to $GM/R^2$ at the surface, then $1/r^2$ falloff. Right: a sphere with a cavity, with the superposition method shown (full sphere minus small sphere).
 <em>Search:</em> "gravitational field inside uniform sphere cavity superposition diagram"</p>
 </div>
-<h3 id="35-g-and-its-variations">3.5 $g$ and its variations</h3>
-<p><strong>Altitude:</strong> $g'=g(1-2h/R)$ for $h\ll R$.</p>
-<p><strong>Depth:</strong> $g'=g(1-d/R)$ (inside a uniform sphere, $g$ decreases linearly).</p>
-<p><strong>Latitude (spherical, non-deforming Earth approximation):</strong> at latitude $\lambda$, the centrifugal acceleration has magnitude $\omega^2R\cos\lambda$. Its component opposing local gravity is approximately $\omega^2R\cos^2\lambda$, giving $g_{\rm eff}\approx g-\omega^2R\cos^2\lambda$. This is a scalar approximation to the apparent vertical gravity; the centrifugal acceleration also has a horizontal component except at the equator and poles. Earth's oblateness and local geology are neglected.</p>
-<p><strong>Rotation:</strong> in this approximation, $g_{\rm eff}$ at the equator is $g-\omega^2R\approx9.78$ m/s$^2$ (about 0.3% less than the non-rotating value, not a universal local pole-to-equator difference).</p>
+<h3 id="35-the-four-variations-of-g">3.5 The four variations of $g$</h3>
+<p><strong>Altitude.</strong> At height $h$ above the surface,</p>
+<p>$$
+g(h)=\frac{GM}{(R+h)^2}=\frac{gR^2}{(R+h)^2}=g\left(1-\frac{2h}{R}+\frac{3h^2}{R^2}-\cdots\right)\approx g\left(1-\frac{2h}{R}\right)\ \ (h\ll R). \qquad (3.13)
+$$</p>
+<p>The linear form is an approximation, not a law; the exact form is the first expression.</p>
+<p><strong>Depth.</strong> At depth $d$ inside a uniform sphere, $r=R-d$ and Eq. (3.10) gives</p>
+<p>$$
+g(d)=\frac{GM(R-d)}{R^3}=g\left(1-\frac{d}{R}\right), \qquad (3.14)
+$$</p>
+<p>a linear decrease to zero at the centre. Real planets are denser at the core, so the real decrease is slower than linear; Eq. (3.14) is a uniform-density model result.</p>
+<p><strong>Latitude (rotation).</strong> In the rotating frame, a mass at rest on the surface feels gravity inward and a centrifugal term outward from the rotation axis. At latitude $\lambda$ the centrifugal acceleration is $\omega^2R\cos\lambda$, directed away from the axis. Resolving it along the local vertical gives a correction of $\omega^2R\cos^2\lambda$, so</p>
+<p>$$
+g_{\text{eff}}(\lambda)\approx g-\omega^2R\cos^2\lambda. \qquad (3.15)
+$$</p>
+<p>There is also a small horizontal component that tilts the local vertical; Eq. (3.15) is the scalar (radial) approximation on a spherical, non-deforming Earth. The rotation term is largest at the equator ($\omega^2R=0.0339$ m/s$^2$, about 0.35% of $g$) and zero at the poles.</p>
+<p><strong>Numbers.</strong> Using $R_E=6371$ km, $g=9.81$ m/s$^2$, $\omega=2\pi/(86164\ \text{s})$:</p>
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>Formula</th>
+<th>Value at the stated point</th>
+<th>$\Delta g/g$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>altitude $h=100$ km</td>
+<td>$gR^2/(R+h)^2$</td>
+<td>9.52 m/s$^2$</td>
+<td>$-3.1\%$</td>
+</tr>
+<tr>
+<td>altitude $h=400$ km</td>
+<td>$gR^2/(R+h)^2$</td>
+<td>8.69 m/s$^2$</td>
+<td>$-11.5\%$</td>
+</tr>
+<tr>
+<td>geostationary altitude</td>
+<td>$gR^2/(R+h)^2$</td>
+<td>0.224 m/s$^2$</td>
+<td>$-97.7\%$</td>
+</tr>
+<tr>
+<td>depth $d=R/2$</td>
+<td>$g(1-d/R)$</td>
+<td>4.91 m/s$^2$</td>
+<td>$-50\%$</td>
+</tr>
+<tr>
+<td>latitude $45^\circ$</td>
+<td>$g-\omega^2R\cos^2\lambda$</td>
+<td>9.79 m/s$^2$</td>
+<td>$-0.17\%$</td>
+</tr>
+<tr>
+<td>equator</td>
+<td>$g-\omega^2R$</td>
+<td>9.79 m/s$^2$</td>
+<td>$-0.35\%$</td>
+</tr>
+</tbody>
+</table>
+<p>The observed pole-to-equator difference is about $0.053$ m/s$^2$, of which rotation explains $0.034$; the rest comes from the Earth's oblateness (the poles are nearer the centre). Use the measured values when a problem asks for the measured difference, and Eq. (3.15) when it asks for the rotation effect.</p>
+<p><strong>Apparent weight versus free fall.</strong> A weighing scale reads the normal force it exerts, which is <em>not</em> always $mg$. The clean statements:</p>
+<ul>
+<li>in a lift with acceleration $a$ upward, the reading is $m(g+a)$; downward, $m(g-a)$; in free fall, zero;</li>
+<li>in a circular orbit the astronaut's <em>apparent</em> weight is zero because astronaut and spacecraft share the same acceleration, while $g$ there is only slightly less than at the surface;</li>
+<li>a satellite in orbit is in continuous free fall, not in a region of no gravity.</li>
+</ul>
+<div class="callout warning">
+<p class="callout-title">"There is no gravity in orbit"</p>
+<p>At the ISS altitude $g=8.7$ m/s$^2$, 89% of its surface value. Weightlessness is free fall, and the correct phrase is <em>apparent</em> weightlessness.</p>
+</div>
+
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.3 · The four $g$-variation curves on one plate</p>
 <p><em>Show:</em> four panels: (1) $g$ vs altitude (decreasing); (2) $g$ vs depth (linear decrease to zero at centre); (3) $g$ vs latitude (slight increase from equator to pole); (4) $g$ vs rotation rate (decreasing as $\omega$ increases).
@@ -320,31 +643,84 @@ $$</p>
 <div class="callout tip">
 <p class="callout-title">FIGURE F9.3 · Four ways g changes</p>
 <p><em>Why:</em> the four variations are separate formulas that students blur; the figure keeps their directions and magnitudes distinct.
-<em>Data:</em> altitude $g'=g\,R^2/(R+h)^2$; depth $g'=g(1-d/R)$; latitude $g'=g-\omega^2R\cos^2\lambda$; rotation lowers $g$ at the equator by ~0.3%.</p>
+<em>Data:</em> altitude $g'=g\,R^2/(R+h)^2$; depth $g'=g(1-d/R)$; latitude $g'=g-\omega^2R\cos^2\lambda$; rotation lowers $g$ at the equator by ~0.35%.</p>
 </div>
 
 <pre><code class="language-mermaid">flowchart TD
   A{&quot;where does g change?&quot;} --&gt;|&quot;height h&quot;| B[&quot;g' = g R²/(R+h)²&quot;]
   A --&gt;|&quot;depth d&quot;| C[&quot;g' = g(1 - d/R), zero at centre&quot;]
   A --&gt;|&quot;latitude&quot;| D[&quot;g' = g - ω²R cos²λ&quot;]
-  A --&gt;|&quot;spin&quot;| E[&quot;equator ~0.3% less than pole&quot;]
+  A --&gt;|&quot;spin&quot;| E[&quot;equator ~0.35% less than non-rotating value&quot;]
 </code></pre>
 <blockquote>
-<p><em>Read:</em> height dilutes $g$ quadratically-ish, depth kills it linearly to zero, latitude and spin subtract the centrifugal term.</p>
+<p><em>Read:</em> height dilutes $g$ quadratically, depth kills it linearly to zero, latitude and spin subtract the centrifugal term.</p>
 </blockquote>
 <h3 id="36-gravitational-potential-energy">3.6 Gravitational potential energy</h3>
+<p><strong>The pair.</strong> For two masses separated by $r$, taking $U=0$ at infinity,</p>
 <p>$$
-U=-\frac{GMm}{r}. \qquad (3.4)
+U(r)=-\frac{GMm}{r}. \qquad (3.16)
 $$</p>
-<p>The reference is at infinity ($U=0$). The PE is always negative for a bound system. The "energy to escape": $E_{\text{escape}}=0-E_{\text{orbit}}=GMm/(2r)$ for a circular orbit.</p>
-<h3 id="37-keplers-laws">3.7 Kepler's laws</h3>
-<p><strong>First law:</strong> orbits are ellipses with the central mass at one focus.</p>
-<p><strong>Second law:</strong> equal areas in equal times (angular momentum conservation: $dA/dt=L/(2m)$).</p>
-<p><strong>Third law:</strong></p>
+<p>The energy needed to separate them completely is $+GMm/r$, the binding energy of the pair. The potential energy belongs to the <em>pair</em>, not to either mass alone.</p>
+<p><strong>A system of several bodies.</strong> Superpose over unordered pairs:</p>
 <p>$$
-T^2=\frac{4\pi^2}{GM}a^3. \qquad (3.5)
+U=-G\left(\frac{m_1m_2}{r_{12}}+\frac{m_1m_3}{r_{13}}+\frac{m_2m_3}{r_{23}}\right). \qquad (3.17)
 $$</p>
-<p>Here $M$ is the central mass and the orbiting body's mass is assumed negligible compared with $M$; for the exact two-body relative orbit replace $M$ by $M+m$. The same assumption applies to the circular-orbit and vis-viva formulas below unless their central parameter is explicitly replaced by $G(M+m)$.</p>
+<div class="callout warning">
+<p class="callout-title">The three-body caution</p>
+<p>Equation (3.17) counts each pair once. Do not write $\sum_i m_iV_i$ with each body's potential including its own contribution, and do not double-count a pair: for three equal masses in a line the potential energy is $-Gm^2(1/d+1/d+1/2d)$, not three times the first two terms.</p>
+</div>
+
+<p><strong>Self-energy of a uniform sphere.</strong> Assemble the sphere shell by shell, bringing each shell from infinity. When the growing sphere has radius $r$, its enclosed mass is $M(r)=\frac{4}{3}\pi r^3\rho$, and the next shell has mass $dm=4\pi r^2\rho\,dr$. The work to bring it in is $dU=-GM(r)\,dm/r$:</p>
+<p>$$
+dU=-G\frac{\frac{4}{3}\pi r^3\rho\cdot4\pi r^2\rho\,dr}{r}=-\frac{16\pi^2G\rho^2}{3}r^4\,dr. \qquad (3.18)
+$$</p>
+<p>Integrating from $0$ to $R$ and eliminating $\rho$ in favour of $M=\frac{4}{3}\pi R^3\rho$,</p>
+<p>$$
+U_{\text{self}}=-\frac{16\pi^2G\rho^2R^5}{15}=-\frac{3}{5}\frac{GM^2}{R}. \qquad (3.19)
+$$</p>
+<div class="callout note">
+<p class="callout-title">How much energy is that?</p>
+<p>For the Earth, Eq. (3.19) gives $U_{\text{self}}=-2.24\times10^{32}$ J. The Sun radiates that in about 7 days, and it is roughly $4\times10^{11}$ times humanity's present annual energy consumption. "Spread the Earth to infinity" is not a small request.</p>
+</div>
+
+<div class="callout tip">
+<p class="callout-title">Link to electrostatics</p>
+<p>The self-energy of a uniformly charged sphere has the identical form, $U=\frac{3}{5}kQ^2/R$, with the opposite sign. Assembling like charges costs energy; assembling mass releases it. That sign is the whole reason a cloud can collapse under gravity but a charged cloud flies apart (PART 13).</p>
+</div>
+
+<h3 id="37-keplers-laws-derived">3.7 Kepler's laws, derived</h3>
+<p><strong>First law.</strong> Each planet moves on an ellipse with the Sun at one focus. This is a consequence of the inverse-square law, and it can be shown in four lines with angular momentum. Write $r=1/u$ and let $h=L/m$ be the specific angular momentum. Then</p>
+<p>$$
+\dot\theta=\frac{h}{r^2}=hu^2,\qquad \dot r=-h\frac{du}{d\theta},\qquad \ddot r=-h^2u^2\frac{d^2u}{d\theta^2}. \qquad (3.20)
+$$</p>
+<p>The radial equation of motion, $m\ddot r-mr\dot\theta^2=-GMm/r^2$, becomes</p>
+<p>$$
+-h^2u^2\frac{d^2u}{d\theta^2}-h^2u^3=-GMu^2\ \Longrightarrow\ \frac{d^2u}{d\theta^2}+u=\frac{GM}{h^2}. \qquad (3.21)
+$$</p>
+<p>This is the harmonic equation. Its general solution, and the corresponding orbit, are</p>
+<p>$$
+u=A\cos(\theta-\theta_0)+\frac{GM}{h^2}\ \Longrightarrow\ r(\theta)=\frac{p}{1+e\cos(\theta-\theta_0)},\qquad p=\frac{h^2}{GM}. \qquad (3.22)
+$$</p>
+<p>Equation (3.22) is the polar equation of a conic with focus at the origin; $e$ is the eccentricity. $E&lt;0$ gives $e&lt;1$ (ellipse), $E=0$ gives $e=1$ (parabola), $E&gt;0$ gives $e&gt;1$ (hyperbola). Choosing $\theta_0=0$ so the closest point is at $\theta=0$,</p>
+<p>$$
+r_p=\frac{p}{1+e}=a(1-e),\qquad r_a=\frac{p}{1-e}=a(1+e),\qquad p=a(1-e^2)=\frac{b^2}{a}, \qquad (3.23)
+$$</p>
+<p>with $a$ the semi-major axis and $b$ the semi-minor axis. These three relations convert between the dynamical data $(h,e)$ and the geometrical data $(a,b)$.</p>
+<p><strong>Second law.</strong> Equal areas in equal times. In a time $dt$ the radius vector sweeps a triangle of area $dA=\frac12r^2d\theta$, so</p>
+<p>$$
+\frac{dA}{dt}=\frac{1}{2}r^2\frac{d\theta}{dt}=\frac{L}{2m}=\text{constant}. \qquad (3.24)
+$$</p>
+<p>This one holds for <em>any</em> central force, because it is angular momentum conservation, not a special property of $1/r^2$. That distinction is a favourite exam question.</p>
+<p><strong>Third law.</strong> The orbit's area is $\pi ab$, and the areal velocity is constant, so $T=\pi ab/(h/2)=2\pi ab/h$. Using $b^2=ap$ and $h^2=GMp$ from Eq. (3.22),</p>
+<p>$$
+T^2=\frac{4\pi^2a^2b^2}{h^2}=\frac{4\pi^2a^2\cdot ap}{GMp}=\frac{4\pi^2a^3}{GM}. \qquad (3.25)
+$$</p>
+<p>For the exact two-body problem replace $M$ by $M+m$; for a planet around the Sun the correction is smaller than one part in $10^5$, which is why Kepler never saw it.</p>
+<div class="callout info">
+<p class="callout-title">The exponent is a fingerprint</p>
+<p>For a general central force $F\propto r^{n}$, a circular orbit has $T^2\propto a^{1-n}$. Only $n=-2$ gives Kepler's $T^2\propto a^3$. So Kepler's third law is not just a description of the solar system; it is a measurement that the force falls as $1/r^2$. Part 10 turns this into a test.</p>
+</div>
+
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.4 · A Kepler ellipse with the focus, the two radii and the equal-area sectors</p>
 <p><em>Show:</em> an ellipse with the central mass at one focus. Two equal-time sectors are shaded to show equal swept areas. At periapsis the radius is short and the angular sweep is larger; at apoapsis the radius is long and the angular sweep is smaller. The areas, not the angular widths, are equal.
@@ -366,38 +742,395 @@ $$</p>
 <blockquote>
 <p><em>Read:</em> the equal-area law is angular-momentum conservation in costume, and the period law makes the orbit mass-blind — a feather and a cannonball share a period.</p>
 </blockquote>
-<h3 id="38-circular-orbits">3.8 Circular orbits</h3>
+<h3 id="38-circular-orbits-and-the-energy-ledger">3.8 Circular orbits and the energy ledger</h3>
+<p><strong>Speed.</strong> For a circular orbit of radius $r$, gravity supplies exactly the centripetal force:</p>
 <p>$$
-v=\sqrt{\frac{GM}{r}},\qquad E=-\frac{GMm}{2r},\qquad L=m\sqrt{GMr}. \qquad (3.6)
+\frac{mv^2}{r}=\frac{GMm}{r^2}\ \Longrightarrow\ \boxed{v_c=\sqrt{\frac{GM}{r}}},\qquad T=\frac{2\pi r}{v_c}=2\pi\sqrt{\frac{r^3}{GM}}. \qquad (3.26)
 $$</p>
-<p>The total energy is negative (bound). The KE is half the magnitude of the PE: $K=-E$, $U=2E$.</p>
-<h3 id="39-elliptical-orbits-and-the-vis-viva-equation">3.9 Elliptical orbits and the vis-viva equation</h3>
+<p><strong>Energy.</strong> Substitute the speed back into the energy:</p>
 <p>$$
-v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right). \qquad (3.7)
+K=\frac{1}{2}mv_c^2=\frac{GMm}{2r},\qquad U=-\frac{GMm}{r},\qquad E=K+U=-\frac{GMm}{2r}. \qquad (3.27)
 $$</p>
-<p>At perigee ($r=a(1-e)$): $v_p=\sqrt{\frac{GM}{a}\frac{1+e}{1-e}}$.</p>
-<p>At apogee ($r=a(1+e)$): $v_a=\sqrt{\frac{GM}{a}\frac{1-e}{1+e}}$.</p>
+<p><strong>Angular momentum.</strong> $L=mv_cr=m\sqrt{GMr}$.</p>
+<div class="callout info">
+<p class="callout-title">Where the factor $\tfrac12$ comes from</p>
+<p>It is not an accident of the circular case. Gravity's work supplies half the kinetic energy and stores the other half as potential: $K=+\frac{GMm}{2r}$, $U=-2K$, so $E=K+U=-K=\frac{U}{2}$. For any $1/r$ force in a circular orbit, $2K=-U$ — the relation the virial theorem generalises (§7.3 and OL10).</p>
+</div>
+
+<p><strong>The period knows the density.</strong> For an orbit that grazes the surface, $r\approx R$ and $M=\frac43\pi R^3\rho$, so</p>
+<p>$$
+T^2=\frac{4\pi^2R^3}{GM}=\frac{3\pi}{G\rho}\ \Longrightarrow\ T=\sqrt{\frac{3\pi}{G\rho}}. \qquad (3.28)
+$$</p>
+<p>A low orbit is a density measurement: $\rho=5513$ kg/m$^3$ for the Earth gives $T=84.3$ min. (The ISS flies higher, at 400 km, and takes 92.4 min.) Equation (3.28) will reappear as the deep-tunnel period: near the surface, an orbit and a tunnel ride are the same oscillation.</p>
+<p><strong>The paradox of the higher orbit.</strong> A higher orbit is <em>slower</em> ($v_c\propto r^{-1/2}$) yet <em>more energetic</em> ($E=-GMm/2r$ is less negative). Both statements are true because raising a satellite costs energy from the engines while gravity does negative work overall; the spacecraft ends with less kinetic energy but a much larger (less negative) potential energy. To move a satellite from $r_1$ to $r_2&gt;r_1$ in circular orbits,</p>
+<p>$$
+\Delta E=E_2-E_1=\frac{GMm}{2}\left(\frac{1}{r_1}-\frac{1}{r_2}\right)=\frac{GMm\,(r_2-r_1)}{2r_1r_2}&gt;0. \qquad (3.29)
+$$</p>
+<div class="callout warning">
+<p class="callout-title">"More energy" means "less negative"</p>
+<p>In orbital mechanics, energy is negative or zero. Say "more energetic" only when you mean the algebraic value increases toward zero, and say "more tightly bound" when you mean $|E|$ increases. Two satellites cross-checked against each other: the lower one is faster, more tightly bound, and has the shorter period.</p>
+</div>
+
+<h3 id="39-escape-and-capture">3.9 Escape and capture</h3>
+<p><strong>Escape speed.</strong> A projectile escapes if it can reach infinity with zero kinetic energy left. Energy conservation from the surface:</p>
+<p>$$
+\frac{1}{2}mv_{\text{esc}}^2-\frac{GMm}{R}=0\ \Longrightarrow\ \boxed{v_{\text{esc}}=\sqrt{\frac{2GM}{R}}=\sqrt{2gR}}. \qquad (3.30)
+$$</p>
+<p>For the Earth, $v_{\text{esc}}=11.2$ km/s. Three facts make this formula more useful than it looks:</p>
+<ul>
+<li>the direction of launch does not matter (the energy condition is scalar), only the speed;</li>
+<li>from height $h$, replace $R$ by $R+h$: $v_{\text{esc}}(h)=\sqrt{2GM/(R+h)}$, which is smaller; escape gets cheaper with altitude;</li>
+<li>compared with the circular speed at the <em>same</em> radius, $v_{\text{esc}}=\sqrt2\,v_c$. The $\sqrt2$ is <em>not</em> universal for arbitrary orbits — it compares escape from a given radius with a circular orbit at that same radius.</li>
+</ul>
+<p><strong>Classifying a projectile by its energy and speed.</strong> Let $v_c=\sqrt{GM/r}$ and $v_e=\sqrt2\,v_c$ at the launch radius:</p>
+<table>
+<thead>
+<tr>
+<th>Launch speed at radius $r$</th>
+<th>Energy</th>
+<th>Orbit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v=0$</td>
+<td>$E&lt;0$</td>
+<td>falls radially inward</td>
+</tr>
+<tr>
+<td>$0&lt;v&lt;v_c$</td>
+<td>$E&lt;0$</td>
+<td>ellipse with the launch point at apoapsis</td>
+</tr>
+<tr>
+<td>$v=v_c$</td>
+<td>$E&lt;0$</td>
+<td>circle</td>
+</tr>
+<tr>
+<td>$v_c&lt;v&lt;v_e$</td>
+<td>$E&lt;0$</td>
+<td>ellipse with the launch point at periapsis</td>
+</tr>
+<tr>
+<td>$v=v_e$</td>
+<td>$E=0$</td>
+<td>parabola — marginal escape</td>
+</tr>
+<tr>
+<td>$v&gt;v_e$</td>
+<td>$E&gt;0$</td>
+<td>hyperbola — escapes with speed at infinity $v_\infty=\sqrt{v^2-v_e^2}$</td>
+</tr>
+</tbody>
+</table>
+<p>This is Newton's cannonball, made quantitative: the same mountain, six different firing speeds, six different outcomes. The atmosphere is why real launches must also fight drag; the energy condition itself is exact.</p>
+<p><strong>The launch-energy ladder.</strong> For a mass $m$ launched from the surface:</p>
+<p>$$
+E_{\text{surface}}=-\frac{GMm}{R},\qquad E_{\text{orbit}}=-\frac{GMm}{2r},\qquad E_{\text{escape}}=0. \qquad (3.31)
+$$</p>
+<p>For a low circular orbit ($r\approx R$) the energy to climb from rest on the surface is $\frac{GMm}{2R}$, exactly half the energy needed to escape from the surface, $GMm/R$. Check: for $m=1000$ kg, $GMm/R=6.26\times10^{10}$ J $=62.6$ GJ, and the orbit insertion is 31.3 GJ. The remaining half of the escape budget is spent when leaving orbit, not when reaching it.</p>
+<p><strong>Which gases can a planet hold?</strong> Molecules in an atmosphere have a spread of speeds with root-mean-square value</p>
+<p>$$
+v_{\text{rms}}=\sqrt{\frac{3\mathcal R T}{M_{\text{mol}}}}, \qquad (3.32)
+$$</p>
+<p>where $M_{\text{mol}}$ is the molar mass and $\mathcal R=8.314$ J mol$^{-1}$K$^{-1}$. A crude retention criterion is $v_{\text{esc}}\gtrsim6\,v_{\text{rms}}$: the fast tail of the distribution is what escapes, and the factor 6 keeps that tail negligible over billions of years. At $T=300$ K:</p>
+<table>
+<thead>
+<tr>
+<th>Gas</th>
+<th>$M_{\text{mol}}$ (kg/mol)</th>
+<th>$v_{\text{rms}}$ (m/s)</th>
+<th>Earth ($v_{\text{esc}}=11.2$ km/s)</th>
+<th>Mars ($5.0$ km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H$_2$</td>
+<td>0.002</td>
+<td>1934</td>
+<td>escapes</td>
+<td>escapes</td>
+</tr>
+<tr>
+<td>He</td>
+<td>0.004</td>
+<td>1368</td>
+<td>escapes (exosphere is hotter still)</td>
+<td>escapes</td>
+</tr>
+<tr>
+<td>H$_2$O</td>
+<td>0.018</td>
+<td>645</td>
+<td>retained (cold-trapped)</td>
+<td>partially escapes</td>
+</tr>
+<tr>
+<td>N$_2$</td>
+<td>0.028</td>
+<td>517</td>
+<td>retained</td>
+<td>marginal</td>
+</tr>
+<tr>
+<td>O$_2$</td>
+<td>0.032</td>
+<td>484</td>
+<td>retained</td>
+<td>escapes</td>
+</tr>
+<tr>
+<td>CO$_2$</td>
+<td>0.044</td>
+<td>412</td>
+<td>retained</td>
+<td>retained (thin atmosphere)</td>
+</tr>
+</tbody>
+</table>
+<p>The criterion explains the broad pattern — Earth keeps nitrogen and oxygen, loses hydrogen and helium; Mars, with $v_{\text{esc}}=5.0$ km/s, has lost most of its light gases — but it is a thermal-escape estimate only. Non-thermal loss (solar wind, photodissociation, impacts) matters, which is why the real histories of Mars and Venus need more than one inequality.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.7 · One dial: speed decides the orbit</p>
+<p><em>Why:</em> every "what happens if the speed is…" question is read off one ladder, not memorised as six cases.
+<em>Data:</em> at one radius, $v_c=\sqrt{GM/r}$ and $v_e=\sqrt2\,v_c$; $v&lt;v_c$ hits the ground, $v_c&lt;v<v_e$ is an ellipse, $v_e$ is the parabola, and $v>v_e$ gives a hyperbola with $v_\infty=\sqrt{v^2-v_e^2}$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;speed v at radius r&quot;] --&gt; B{&quot;compare with v_c and v_e&quot;}
+  B --&gt;|&quot;v = 0&quot;| C[&quot;radial fall&quot;]
+  B --&gt;|&quot;v &lt; v_c&quot;| D[&quot;ellipse, launch point at apoapsis&quot;]
+  B --&gt;|&quot;v = v_c&quot;| E[&quot;circle&quot;]
+  B --&gt;|&quot;v_c &lt; v &lt; v_e&quot;| F[&quot;ellipse, launch point at periapsis&quot;]
+  B --&gt;|&quot;v = v_e&quot;| G[&quot;parabola: E = 0&quot;]
+  B --&gt;|&quot;v &gt; v_e&quot;| H[&quot;hyperbola: E &gt; 0, v_∞ = √(v² - v_e²)&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the speed dial sets the orbit; $v_c$ and $v_e$ are the only two marks you need on it.</p>
+</blockquote>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D9.8 · The energy ladder diagram for orbital transfers</p>
+<p><em>Show:</em> three energy levels: surface ($E=-GMm/R$), low orbit ($E=-GMm/(2R)$), escape ($E=0$). The energy increments $\Delta E$ between each level marked. The total energy to launch to orbit is $GMm/(2R)$, half the escape energy.
+<em>Search:</em> "energy diagram orbital transfer surface orbit escape ladder"</p>
+</div>
+
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.5 · The orbit energy ladder: bind, raise, escape</p>
+<p><em>Why:</em> every launch and transfer question is a difference between ladder rungs; the figure names the three energies.
+<em>Data:</em> surface $E=-GMm/R$; circular orbit $E=-GMm/2r$ (KE $=+GMm/2r$); escape $E=0$.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;surface: -GMm/R&quot;] --&gt;|&quot;launch&quot;| B[&quot;orbit: -GMm/2r&quot;]
+  B --&gt;|&quot;raise r&quot;| C[&quot;higher orbit: less negative&quot;]
+  C --&gt;|&quot;escape&quot;| D[&quot;E = 0&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> bound means negative total energy; the circular energy is half the potential, and reaching zero is the escape ticket.</p>
+</blockquote>
+<h3 id="310-elliptical-orbits-and-the-vis-viva-equation">3.10 Elliptical orbits and the vis-viva equation</h3>
+<p><strong>The vis-viva equation.</strong> For an ellipse, we can get the total energy without solving the shape problem again. At periapsis and apoapsis the velocity is perpendicular to the radius, so angular momentum conservation gives $v_pr_p=v_ar_a$, and energy conservation gives $\frac12v_p^2-GM/r_p=\frac12v_a^2-GM/r_a$. Solving the two equations with $r_p=a(1-e)$, $r_a=a(1+e)$ yields</p>
+<p>$$
+v_p=\sqrt{\frac{GM}{a}\frac{1+e}{1-e}},\qquad v_a=\sqrt{\frac{GM}{a}\frac{1-e}{1+e}},\qquad E=-\frac{GMm}{2a}. \qquad (3.33)
+$$</p>
+<p>Since the total energy is a constant of the motion and depends only on $a$, it can be evaluated at any point. Writing $E=\frac12mv^2-GMm/r$ and equating to $-GMm/(2a)$ gives the <strong>vis-viva equation</strong>:</p>
+<p>$$
+\boxed{v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right)}. \qquad (3.34)
+$$</p>
+<p>Some immediate readings:</p>
+<ul>
+<li>at $r=a$ (the ends of the minor axis), $v=\sqrt{GM/a}$, the same as the circular speed at that radius;</li>
+<li>at periapsis, $v$ is largest; at apoapsis, smallest; the product $v_pr_p=v_ar_a$ is the same at both (equal areas in equal times);</li>
+<li>for a circle, $a=r$ and Eq. (3.34) collapses to $v^2=GM/r$;</li>
+<li>for $a\to\infty$ with $E\to0$, the parabola has $v_e=\sqrt{2GM/r}$.</li>
+</ul>
+<p><strong>The flight-path angle.</strong> If the velocity makes an angle $\phi$ with the local horizontal, then $L=mvr\cos\phi$, so $\cos\phi=\dfrac{h}{vr}=\dfrac{\sqrt{GMp}}{vr}$. At the apsides $\phi=0$; in between the path tilts, which is why a satellite's velocity is not exactly horizontal except at those two points.</p>
+<p><strong>Which orbit is more energetic?</strong> Compare $E=-GMm/(2a)$: larger $a$ means more energy (less negative), larger period, and slower average motion. Two orbits with the same $a$ but different $e$ have <em>identical</em> energy and period — the eccentricity only redistributes speed along the path. This is a favourite JEE Advanced discriminator.</p>
+<div class="callout info">
+<p class="callout-title">Turning points, at a glance</p>
+<p>Plot the effective potential $U_{\text{eff}}(r)=-GMm/r+L^2/(2mr^2)$; its minimum is the circular orbit at $r_0=L^2/(GMm^2)$. A horizontal line at the total energy $E$ crosses the curve where the radial motion stops — the periapsis and apoapsis. $E=U_{\text{eff,min}}$ touches at one point (circle), $U_{\text{eff,min}}&lt;E&lt;0$ cuts twice (ellipse), $E=0$ has one turning point and escape to infinity (parabola), and $E&gt;0$ never comes back (hyperbola). The whole orbit-classification table of §3.9 is one graph.</p>
+</div>
+
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.5 · The vis-viva graph of $E$ vs $r$ for several $L$</p>
 <p><em>Show:</em> a graph of the effective potential $U_{\text{eff}}=-GMm/r+L^2/(2mr^2)$ vs $r$ for three values of $L$. For each: the total energy $E$ shown as a horizontal line. The turning points (where $E=U_{\text{eff}}$) are the perigee and apogee.
 <em>Search:</em> "effective potential energy versus r circular elliptical orbit turning points"</p>
 </div>
 
-<h3 id="310-geostationary-orbit">3.10 Geostationary orbit</h3>
-<p>A satellite in a geostationary orbit orbits above the equator with a period equal to one sidereal day (about 23 h 56 min), so it appears stationary in the sky.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D9.10 · The effective potential curve for gravitational orbits</p>
+<p><em>Show:</em> $U_{\text{eff}}(r)=-GMm/r+L^2/(2mr^2)$ plotted vs $r$. The minimum at $r_0$ marked. Four horizontal lines: $E=E_{\min}$ (circular), $E_{\min}&lt;E&lt;0$ (elliptical, two turning points), $E=0$ (parabolic), $E&gt;0$ (hyperbolic).
+<em>Search:</em> "effective potential gravitational orbit circular elliptical parabolic hyperbolic diagram"</p>
+</div>
+
+<h3 id="311-satellites-in-practice">3.11 Satellites in practice</h3>
+<p><strong>Geostationary orbit.</strong> A satellite appears fixed in the sky if it is in the equatorial plane, moving eastward, with a period equal to the Earth's sidereal rotation period, $T=86164$ s (23 h 56 min 4 s, not the 24-hour mean solar day). Kepler's third law then fixes the radius:</p>
 <p>$$
-r_{\text{geo}}=\left(\frac{GMT^2}{4\pi^2}\right)^{1/3}\approx42{,}164\text{ km}. \qquad (3.8)
+r_{\text{geo}}=\left(\frac{GMT^2}{4\pi^2}\right)^{1/3}=42\,164\ \text{km},\qquad h_{\text{geo}}=r_{\text{geo}}-R_E=35\,786\ \text{km}. \qquad (3.35)
 $$</p>
-<p>Altitude above Earth's surface: $\approx35{,}786$ km.</p>
-<h3 id="311-hohmann-transfer">3.11 Hohmann transfer</h3>
-<p>The most energy-efficient transfer between two circular orbits uses an ellipse tangent to both. Two burns: one at perigee to enter the transfer ellipse, one at apogee to circularise.</p>
-<h3 id="312-binary-stars">3.12 Binary stars</h3>
-<p>Two stars orbit their common COM. The reduced mass $\mu=m_1m_2/(m_1+m_2)$. Kepler's third law becomes:</p>
+<p>Three conditions, three sentences: the orbit must be equatorial (or it would oscillate north–south), circular (or it would drift east–west), and at one particular radius (the period condition). A satellite over a fixed longitude needs all three.</p>
+<p><strong>Polar and Sun-synchronous orbits.</strong> A polar orbit passes over the poles while the Earth turns beneath it, so it can scan the whole surface; a Sun-synchronous orbit is a near-polar orbit whose plane precesses once per year with the Sun, so the local solar time at each pass is constant. The precession comes from the Earth's equatorial bulge acting on the orbit plane, an effect outside the point-mass model but worth naming.</p>
+<p><strong>The ISS numbers.</strong> At $h=400$ km, $r=6771$ km, $v_c=7.67$ km/s and $T=92.4$ min; the local $g$ is $8.69$ m/s$^2$. The astronauts float not because gravity is absent but because they and the station fall together.</p>
+<p><strong>Orbital decay and drag.</strong> Drag removes mechanical energy, and since $E=-GMm/(2r)$, removing energy <em>lowers</em> the orbit; the satellite then moves faster, because a lower circular orbit has a higher speed. Working out the radial drop per revolution: drag does work $-F_d(2\pi r)$ per orbit, and $dE=(GMm/2r^2)\,dr$, so</p>
 <p>$$
-T^2=\frac{4\pi^2}{G(m_1+m_2)}a^3. \qquad (3.9)
+\Delta r_{\text{per orbit}}\approx-\frac{4\pi r^3F_d}{GMm}. \qquad (3.36)
 $$</p>
-<h3 id="313-tides-and-the-roche-limit">3.13 Tides and the Roche limit</h3>
-<p>Across a body of radius $r_s$ at distance $d$ from a planet of mass $M_p$, the near-to-far differential pull is approximately $F_{\text{tidal}}\approx2GM_pm r_s/d^3$. The classical fluid Roche limit is $d_{\text{Roche}}\approx2.44R_p(\rho_p/\rho_s)^{1/3}$; this coefficient comes from a rotating-fluid equilibrium model, not from the simple order-unity rigid-body force balance alone.</p>
+<p>For the ISS, $F_d$ is of order $0.03$–$0.06$ N depending on solar activity; that gives roughly $0.5$–$1.5$ m per revolution, a few hundred metres per month, which is why the station is reboosted periodically. Equation (3.36) is also the seed of the Olympiad drag-spiral problem (OL11).</p>
+<div class="callout tip">
+<p class="callout-title">Why a decay paradox is not a paradox</p>
+<p>Atmospheric drag slows the satellite <em>and</em> heats the atmosphere; the braking torque lowers the orbit; the lower orbit has a larger speed. The energy bookkeeping is unambiguous (drag removes energy; $E$ becomes more negative; $r$ falls), and the increase in $K$ is paid for by a larger decrease in $U$.</p>
+</div>
+
+<h3 id="312-transfers-and-manoeuvres">3.12 Transfers and manoeuvres</h3>
+<p><strong>Hohmann transfer.</strong> The cheapest two-burn transfer between coplanar circular orbits of radii $r_1&lt;r_2$ uses an ellipse with periapsis $r_1$, apoapsis $r_2$, so $a=(r_1+r_2)/2$. Vis-viva at each end gives the two burns:</p>
+<p>$$
+\Delta v_1=v_1\left(\sqrt{\frac{2r_2}{r_1+r_2}}-1\right),\qquad
+\Delta v_2=v_2\left(1-\sqrt{\frac{2r_1}{r_1+r_2}}\right), \qquad (3.37)
+$$</p>
+<p>where $v_i=\sqrt{GM/r_i}$ is the circular speed at the starting or ending orbit, and the transfer time is half the transfer-ellipse period:</p>
+<p>$$
+t_{\text{Hohmann}}=\pi\sqrt{\frac{a^3}{GM}}. \qquad (3.38)
+$$</p>
+<p>The Δv budget is best remembered as a table of a single ratio $k=r_2/r_1$ (starting from a low Earth orbit at $r_1=6771$ km):</p>
+<table>
+<thead>
+<tr>
+<th>$k=r_2/r_1$</th>
+<th>$\Delta v_1/v_1$</th>
+<th>$\Delta v_2/v_1$</th>
+<th>$\Delta v_{\text{total}}/v_1$</th>
+<th>$\Delta v_{\text{total}}$ (km/s)</th>
+<th>transfer time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.5</td>
+<td>0.095</td>
+<td>0.086</td>
+<td>0.182</td>
+<td>1.39</td>
+<td>1.1 h</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.155</td>
+<td>0.130</td>
+<td>0.285</td>
+<td>2.18</td>
+<td>1.4 h</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.265</td>
+<td>0.184</td>
+<td>0.449</td>
+<td>3.44</td>
+<td>3.0 h</td>
+</tr>
+<tr>
+<td>6.6 (LEO to GEO)</td>
+<td>0.318</td>
+<td>0.190</td>
+<td>0.507</td>
+<td>3.89</td>
+<td>5.7 h</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.348</td>
+<td>0.181</td>
+<td>0.530</td>
+<td>4.07</td>
+<td>9.9 h</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that in units of $v_1$ the total stays flat between about $0.18$ and $0.54$ across this whole range, even though the absolute cost keeps rising with the destination orbit. For the heliocentric Earth-to-Mars transfer ($r_1=1$ AU, $r_2=1.524$ AU) the same formulas give $\Delta v_1=2.95$ km/s, $\Delta v_2=2.65$ km/s, total $5.60$ km/s, transfer time 259 days — plus the Earth-escape burn and any plane change. This "launch window" is why Mars missions leave every 26 months: the geometry must be right at departure and arrival.</p>
+<p><strong>Plane changes.</strong> To tilt a circular orbit by angle $\Delta i$ without changing its size, the velocity vector must be rotated, so</p>
+<p>$$
+\Delta v_{\text{plane}}=2v\sin\frac{\Delta i}{2}. \qquad (3.39)
+$$</p>
+<p>Plane changes are cheap where the spacecraft is slow — at apoapsis of a high ellipse — which is why geostationary transfer orbits combine a plane change with the circularisation burn at the top.</p>
+<p><strong>The Oberth effect.</strong> A rocket burn of $\Delta v$ along the velocity changes the energy by</p>
+<p>$$
+\Delta E=mv\,\Delta v+\tfrac12m(\Delta v)^2. \qquad (3.40)
+$$</p>
+<p>The first term grows with the current speed $v$, so the same burn buys more energy when it is made deep in a gravity well, where the spacecraft is fastest. This is why interplanetary departures use a burn at perigee of an escape hyperbola rather than a slow spiral.</p>
+<p><strong>Rendezvous phasing.</strong> Two satellites at the same altitude cannot be caught by speeding up — that raises the orbit and slows the chaser. Phasing means dropping to a lower, faster orbit for a calculated number of revolutions and then returning. A Hohmann transfer always arrives after a fixed half-ellipse time; catching the target at that moment is a timing problem in the target's angular position, not a Δv problem.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D9.9 · Hohmann transfer: the tangential ellipse</p>
+<p><em>Show:</em> two concentric circular orbits (inner and outer). An ellipse connecting them, tangent to both at the transfer points. The two velocity vectors at perigee and apogee shown, along with the $\Delta v$ burns.
+<em>Search:</em> "Hohmann transfer orbit ellipse perigee apogee delta v diagram"</p>
+</div>
+<h3 id="313-systems-of-bodies">3.13 Systems of bodies</h3>
+<p><strong>Two bodies, one relative orbit.</strong> For masses $m_1$ and $m_2$ attracting each other, write the centre of mass $\mathbf R$ and the separation $\mathbf r=\mathbf r_2-\mathbf r_1$. The centre of mass moves uniformly (no external force), and subtracting the two equations of motion gives</p>
+<p>$$
+\mu\ddot{\mathbf r}=-\frac{Gm_1m_2}{r^2}\hat{\mathbf r},\qquad \mu=\frac{m_1m_2}{m_1+m_2}, \qquad (3.41)
+$$</p>
+<p>which is the same as one body of mass $\mu$ orbiting a fixed mass $m_1+m_2$. Every single-body result therefore carries over with two replacements: $m\to\mu$ and $M\to m_1+m_2$. Kepler's third law becomes</p>
+<p>$$
+T^2=\frac{4\pi^2a^3}{G(m_1+m_2)}, \qquad (3.42)
+$$</p>
+<p>where $a$ is the semi-major axis of the <em>relative</em> orbit. Individually the two stars orbit the centre of mass with</p>
+<p>$$
+a_1=a\frac{m_2}{m_1+m_2},\qquad a_2=a\frac{m_1}{m_1+m_2},\qquad a_1+a_2=a. \qquad (3.43)
+$$</p>
+<p>The heavier star moves on the smaller orbit — the Earth–Sun system is a two-body problem too, with the Sun 330 000 times closer to the centre of mass than the Earth.</p>
+<p><strong>Mass of the Sun.</strong> With $a=1$ AU and $T=1$ year for the Earth, Eq. (3.42) gives $M_\odot+a\approx M_\odot=4\pi^2a^3/(GT^2)=1.99\times10^{30}$ kg.</p>
+<p><strong>Binary-star radial velocity.</strong> A star's line-of-sight speed varies as $v_i(t)=v_i\sin i\,\sin(2\pi t/T)$ with amplitude $v_i=2\pi a_i\sin i/T$, where $i$ is the inclination of the orbit plane to the line of sight. Inverting Eq. (3.42) and (3.43) to get the masses from $v_1$, $v_2$ and $T$ is how stellar masses (and exoplanet masses, with the planet's amplitude) are actually measured.</p>
+<p><strong>Gravity assist.</strong> In the planet's frame the encounter is elastic: the spacecraft comes in with relative velocity $\mathbf u$ and leaves with a relative velocity of the same magnitude, rotated by the deflection angle $\delta$. In the Sun's frame the two velocities add to the planet's orbital velocity $\mathbf v_J$:</p>
+<p>$$
+\mathbf v_{\text{out}}=\mathbf v_J+\mathbf u_{\text{out}},\qquad |\mathbf u_{\text{out}}|=|\mathbf u_{\text{in}}|. \qquad (3.44)
+$$</p>
+<p>For a head-on approach with a reversal of the relative velocity, $|\mathbf v_{\text{out}}|=v_s+2v_J$: the spacecraft gains twice the planet's speed, at the planet's expense (the planet's orbit changes by an unmeasurably tiny amount because of its enormous mass). For a general geometry the gain is smaller; the deflection angle decreases as the flyby altitude increases, and the maximum possible gain in any single encounter is $2v_J$. Voyager's tour of the outer planets is the textbook case.</p>
+<div class="callout abstract">
+<p class="callout-title">DIAGRAM D9.12 · The gravity-assist slingshot in the Sun's frame</p>
+<p><em>Show:</em> Jupiter moving in its orbit. A spacecraft approaches from behind, swings around Jupiter, and leaves with higher speed in the Sun's frame. The spacecraft's trajectory curved by Jupiter's gravity. The velocity vectors before and after shown in both Jupiter's frame and the Sun's frame.
+<em>Search:</em> "gravity assist slingshot spacecraft Jupiter velocity change diagram"</p>
+</div>
+
+<h3 id="314-gravitys-reach">3.14 Gravity's reach</h3>
+<p><strong>Tides.</strong> The tidal effect is the difference between the pull at the centre of a body and the pull at a point on its surface. For a small body of radius $r_s$ at distance $d$ from a mass $M$, differentiating $F=GMm/r^2$ gives $dF/dr=-2GMm/r^3$, so to leading order the near side is pulled more strongly and the far side less strongly than the centre by</p>
+<p>$$
+\Delta F_{\text{tidal}}\approx\frac{2GMm\,r_s}{d^3}, \qquad (3.45)
+$$</p>
+<p>directed along the line of centres, stretching the body. Because the differential pull is outward on <em>both</em> the near and far sides (relative to the body's centre), there are two bulges, not one; the Sun's tidal pull is about 2.2 times weaker than the Moon's because the $1/d^3$ beats the Sun's larger mass. When Sun and Moon line up, the bulges add (spring tides); at right angles they partly cancel (neap tides).</p>
+<p><strong>The Roche limit.</strong> A satellite of radius $r_s$ and density $\rho_s$ orbiting a planet of radius $R_p$ and density $\rho_p$ is torn apart when the tidal stretch across it exceeds its own self-gravity. Balancing Eq. (3.45) at the satellite's surface against the order of magnitude of self-gravity gives the rigid-body estimate</p>
+<p>$$
+d\sim R_p\left(\frac{2\rho_p}{\rho_s}\right)^{1/3}, \qquad (3.46)
+$$</p>
+<p>while the classical fluid-equilibrium result — a different calculation, not a different constant inserted into the same balance — is</p>
+<p>$$
+d_{\text{Roche}}\approx2.44\,R_p\left(\frac{\rho_p}{\rho_s}\right)^{1/3}. \qquad (3.47)
+$$</p>
+<p>Saturn's rings sit inside the latter number; a small moon just outside it survives. Use Eq. (3.45) when a problem says "order of magnitude" and Eq. (3.47) when it says "Roche limit".</p>
+<p><strong>The deep tunnel.</strong> Drill a straight chord through a uniform Earth of density $\rho$. At distance $r$ from the centre, only the mass inside $r$ pulls, and by Eq. (3.10) the force per unit mass is $g(r)=\frac{4}{3}\pi G\rho\, r$ directed inward. Along the tunnel the component of that force is proportional to the displacement from the midpoint, so the motion is simple harmonic:</p>
+<p>$$
+\ddot s=-\frac{4\pi G\rho}{3}s,\qquad \omega^2=\frac{4\pi G\rho}{3},\qquad T=2\pi\sqrt{\frac{3}{4\pi G\rho}}=\sqrt{\frac{3\pi}{G\rho}}. \qquad (3.48)
+$$</p>
+<p>With $\rho=5513$ kg/m$^3$, $T=84.3$ min — the same as the grazing-orbit period of Eq. (3.28). A particle dropped into the tunnel reaches the far end and returns; the uniform-density model is an idealisation, but the real Earth's period is within about 10% of it and the oscillation remains harmonic to good approximation.</p>
+<div class="callout tip">
+<p class="callout-title">FIGURE F9.8 · Why the tunnel is a simple-harmonic ride</p>
+<p><em>Why:</em> the famous "gravity train" is not a special result — it is the linear field inside a uniform sphere read as a spring.
+<em>Data:</em> $g(r)=GMr/R^3=(4\pi G\rho/3)r$ inside a uniform sphere; hence $\omega^2=4\pi G\rho/3$ and $T=\sqrt{3\pi/G\rho}=84.3$ min for Earth's mean density.</p>
+</div>
+
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;mass m at distance r from centre&quot;] --&gt; B[&quot;only enclosed mass M(r) pulls&quot;]
+  B --&gt; C[&quot;g(r) = 4πGρr/3&quot;]
+  C --&gt; D[&quot;along a chord: F = -k s, k/m = 4πGρ/3&quot;]
+  D --&gt; E[&quot;SHM: T = √(3π/Gρ) = 84.3 min&quot;]
+</code></pre>
+<blockquote>
+<p><em>Read:</em> the linear force law inside a uniform sphere is a spring, so the tunnel period is fixed by density alone — drill it anywhere, and the trip takes the same time.</p>
+</blockquote>
+<p><strong>Free-fall collapse of a cloud.</strong> A pressureless uniform cloud collapses because each shell falls toward the mass inside it. Following a shell that starts at rest at radius $r_0$, its equation is $\ddot r=-GM(r_0)/r^2$, the same as a body dropped down a tunnel; the time to reach the centre is half the oscillation period of Eq. (3.48) written for the enclosed density:</p>
+<p>$$
+t_{\text{ff}}=\pi\sqrt{\frac{r_0^3}{8GM(r_0)}}=\sqrt{\frac{3\pi}{32G\rho}}. \qquad (3.49)
+$$</p>
+<p>For a molecular cloud with $n=10^4$ molecules/cm$^3$ and $\rho\approx3.8\times10^{-17}$ kg/m$^3$, $t_{\text{ff}}\approx0.35$ Myr; for the Sun's mean density ($1400$ kg/m$^3$) it is about 30 minutes; for a galaxy cluster ($\rho\sim10^{-26}$ kg/m$^3$) it is of order $10^{10}$ years, comparable to the age of the universe. No pressure, no rotation, no magnetic field is assumed — Eq. (3.49) is the time gravity would take if nothing resisted.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.6 · The tide-raising differential-pull diagram</p>
 <p><em>Show:</em> the Earth with the Moon on the right. The Moon's pull on the near side (stronger) and the far side (weaker) shown as arrows. The differential (tidal) force creates two bulges: one toward the Moon, one away.
@@ -405,74 +1138,119 @@ $$</p>
 </div>
 
 <h2 id="part-4-results-limits-and-the-validity-ledger">Part 4 · Results, limits and the validity ledger</h2>
-<h3 id="41-boxed-results">4.1 Boxed results</h3>
+<h3 id="41-the-results-ledger">4.1 The results ledger</h3>
+<p>Every result here was derived in Part 3; this is the revision page.</p>
+<p><strong>Field and potential.</strong></p>
 <p>$$
-\boxed{g(r)=\frac{GMr}{R^3}\text{ (inside uniform sphere)},\quad g(r)=\frac{GM}{r^2}\text{ (outside)}} \qquad (4.1)
+\boxed{\ \mathbf g=-\frac{GM}{r^2}\hat{\mathbf r},\qquad V=-\frac{GM}{r}\ }\qquad\text{(point mass or outside any sphere)} \qquad (4.1)
 $$</p>
 <p>$$
-\boxed{U=-\frac{GMm}{r},\quad E=-\frac{GMm}{2r}\text{ (circular orbit)}} \qquad (4.2)
+\boxed{\ g=\frac{GMr}{R^3},\qquad V=-\frac{GM}{2R^3}\left(3R^2-r^2\right)\ }\qquad\text{(inside a uniform sphere)} \qquad (4.2)
+$$</p>
+<p>A thin shell: $g=0$ and $V=-GM/R$ inside; outside, point-mass results.</p>
+<p><strong>Energy and self-energy.</strong></p>
+<p>$$
+\boxed{\ U=-\frac{GMm}{r}\ }\qquad\qquad \boxed{\ U_{\text{self}}=-\frac{3}{5}\frac{GM^2}{R}\ }\qquad\text{(uniform sphere)} \qquad (4.3)
+$$</p>
+<p><strong>Circular orbits and the budget.</strong></p>
+<p>$$
+\boxed{\ v_c=\sqrt{\frac{GM}{r}},\qquad E=-\frac{GMm}{2r},\qquad L=m\sqrt{GMr}\ }\qquad \boxed{\ \frac{E}{K}=-1,\quad\frac{U}{K}=-2\ } \qquad (4.4)
+$$</p>
+<p><strong>Escape and orbit classification.</strong> With $v_e=\sqrt{2GM/r}$ at the point of launch: $v&lt;v_c$ falls, $v_c&lt;v<v_e$ is an ellipse, $v=v_e$ is a parabola, $v>v_e$ is a hyperbola with speed at infinity $v_\infty=\sqrt{v^2-v_e^2}$.</p>
+<p>$$
+\boxed{\ v_{\text{esc}}=\sqrt{\frac{2GM}{R}}=\sqrt{2gR}\ }\qquad \boxed{\ E_{\text{surface}}=-\frac{GMm}{R},\quad E_{\text{orbit}}=-\frac{GMm}{2R},\quad E_{\text{escape}}=0\ } \qquad (4.5)
+$$</p>
+<p><strong>Kepler and the vis-viva equation.</strong></p>
+<p>$$
+\boxed{\ \frac{dA}{dt}=\frac{L}{2m}\ }\qquad \boxed{\ T^2=\frac{4\pi^2a^3}{GM}\ }\qquad \boxed{\ v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right)\ } \qquad (4.6)
 $$</p>
 <p>$$
-\boxed{v_{\text{esc}}=\sqrt{\frac{2GM}{R}}=\sqrt{2}\,v_{\text{orb}}} \qquad (4.3)
+v_pr_p=v_ar_a,\qquad r_p=a(1-e),\qquad r_a=a(1+e),\qquad E=-\frac{GMm}{2a} \qquad (4.7)
+$$</p>
+<p><strong>Systems, transfers and reach.</strong></p>
+<p>$$
+\boxed{\ T^2=\frac{4\pi^2a^3}{G(m_1+m_2)}\ }\qquad \boxed{\ \Delta v_1=v_1!\left(\sqrt{\frac{2r_2}{r_1+r_2}}-1\right),\quad \Delta v_2=v_2!\left(1-\sqrt{\frac{2r_1}{r_1+r_2}}\right)\ } \qquad (4.8)
 $$</p>
 <p>$$
-\boxed{v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right)\text{ (vis-viva)}} \qquad (4.4)
+\boxed{\ T_{\text{tunnel}}=\sqrt{\frac{3\pi}{G\rho}}\ }\qquad \boxed{\ t_{\text{ff}}=\sqrt{\frac{3\pi}{32G\rho}}\ }\qquad \boxed{\ d_{\text{Roche}}\approx2.44R_p\left(\frac{\rho_p}{\rho_s}\right)^{1/3}\ } \qquad (4.9)
 $$</p>
-<p>$$
-\boxed{T^2=\frac{4\pi^2}{GM}a^3\text{ (Kepler's third law)}} \qquad (4.5)
-$$</p>
-<h3 id="42-limit-checks">4.2 Limit checks</h3>
+<h3 id="42-limit-and-consistency-checks">4.2 Limit and consistency checks</h3>
+<p>Any formula you write must survive these. Reading a result in a limit is the cheapest error detector in the chapter.</p>
 <ul>
-<li>$r\to\infty$: $U\to0$, $g\to0$ — no gravity at infinity. ✓</li>
-<li>$r=R$ (surface): $g=GM/R^2$ — the familiar surface gravity. ✓</li>
-<li>$r=0$ (centre): $g=0$ — symmetric cancellation. ✓</li>
-<li>$a\to\infty$: $T\to\infty$ — infinite orbit has infinite period. ✓</li>
-<li>$e=0$: ellipse becomes a circle. ✓</li>
+<li>$r\to\infty$: $g\to0$, $V\to0$, $U\to0$ — infinity is the reference where nothing happens.</li>
+<li>$r\to R$ from below and from above: $g\to GM/R^2$ from both sides; $V\to-GM/R$ from both sides. Both are continuous (the field is, too, for a sphere).</li>
+<li>$r\to0$: $g\to0$; $V\to-3GM/(2R)$, finite. No singularity inside a hollow sphere, unlike at the centre of a point mass.</li>
+<li>$e\to0$: the ellipse closes to a circle and $v_p=v_a=v_c$. $e\to1$: $r_a\to\infty$, $T\to\infty$, the orbit opens to a parabola.</li>
+<li>$L\to0$: the ellipse degenerates to a radial plunge; $r_p\to0$. Angular momentum, not energy, is what keeps a satellite from hitting the centre.</li>
+<li>$m_1\to0$ or $m_2\to0$: Eq. (4.8) reduces to the single-body Kepler law.</li>
+<li>Uniform-sphere checks: $g\propto r$, $g(0)=0$, $V(0)=-1.5\,GM/R$, $V(R)=-GM/R$.</li>
+<li>Circular-orbit checks: $U=-2K$, $E=-K=U/2$, $v_{\text{esc}}=\sqrt2\,v_c$.</li>
+<li>Dimensions: $[GM/r]=$ m$^2$/s$^2$ (a potential); $[GM/r^3]=$ s$^{-2}$ (an $\omega^2$ or a density times $G$); $[GM/r^2]=$ m/s$^2$ (an acceleration).</li>
 </ul>
 <h3 id="43-which-formula-when">4.3 Which formula when</h3>
 <table>
 <thead>
 <tr>
-<th>Given</th>
-<th>Need</th>
-<th>Use</th>
+<th>The problem says</th>
+<th>Go to</th>
+<th>Formula</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>$r$ outside a sphere</td>
-<td>$g$ or $V$</td>
-<td>$g=GM/r^2$, $V=-GM/r$</td>
-</tr>
-<tr>
-<td>$r$ inside a uniform sphere</td>
-<td>$g$</td>
-<td>$g=GMr/R^3$</td>
-</tr>
-<tr>
-<td>Circular orbit</td>
-<td>$v$, $E$, $T$</td>
-<td>Eqs. (4.2), (4.5)</td>
-</tr>
-<tr>
-<td>Elliptical orbit</td>
-<td>speed at any $r$</td>
-<td>Eq. (4.4)</td>
-</tr>
-<tr>
-<td>Surface gravity</td>
-<td>$g$ with altitude/depth/latitude</td>
+<td>field at height, depth, latitude</td>
 <td>§3.5</td>
+<td>$gR^2/(R+h)^2$, $g(1-d/R)$, $g-\omega^2R\cos^2\lambda$</td>
 </tr>
 <tr>
-<td>Escape from a planet</td>
-<td>$v_{\text{esc}}$</td>
-<td>Eq. (4.3)</td>
+<td>field inside a sphere or cavity</td>
+<td>§3.4</td>
+<td>$g=GMr/R^3$; cavity field $=(4\pi G\rho/3)c$</td>
 </tr>
 <tr>
-<td>Binary stars</td>
-<td>period</td>
-<td>Eq. (3.9)</td>
+<td>circular orbit speed, period, energy</td>
+<td>§3.8</td>
+<td>$v_c=\sqrt{GM/r}$, $T=2\pi\sqrt{r^3/GM}$, $E=-GMm/2r$</td>
+</tr>
+<tr>
+<td>speed at a point of an ellipse</td>
+<td>§3.10</td>
+<td>vis-viva, Eq. (4.6)</td>
+</tr>
+<tr>
+<td>apsidal speeds or $L$</td>
+<td>§3.10</td>
+<td>$v_pr_p=v_ar_a$, $L=m\sqrt{GMp}$</td>
+</tr>
+<tr>
+<td>escape from a surface or from orbit</td>
+<td>§3.9</td>
+<td>$v_{\text{esc}}=\sqrt{2GM/r}$, $\sqrt2 v_c$ at the same $r$</td>
+</tr>
+<tr>
+<td>energy to launch, raise or escape</td>
+<td>§3.9</td>
+<td>the ladder, Eq. (4.5)</td>
+</tr>
+<tr>
+<td>geostationary</td>
+<td>§3.11</td>
+<td>$r=(GMT^2/4\pi^2)^{1/3}$, sidereal $T$</td>
+</tr>
+<tr>
+<td>transfer between orbits</td>
+<td>§3.12</td>
+<td>Hohmann burn formulas, Eq. (4.8)</td>
+</tr>
+<tr>
+<td>binary or exoplanet data</td>
+<td>§3.13</td>
+<td>$T^2=4\pi^2a^3/G(m_1+m_2)$</td>
+</tr>
+<tr>
+<td>tidal, Roche, tunnel, collapse</td>
+<td>§3.14</td>
+<td>Eqs. (3.45)–(3.49)</td>
 </tr>
 </tbody>
 </table>
@@ -480,85 +1258,127 @@ $$</p>
 <p><strong>C1 — concept check.</strong> Why does the Moon not fall to Earth?</p>
 <details>
 <summary>Answer</summary>
-<p>It is falling — constantly. But its tangential velocity is large enough that the "fall" curves it into an orbit. The Moon is in free fall around the Earth.</p>
+<p>It is falling. Its tangential velocity is large enough that the fall curves it into an orbit: in the time it falls a small distance toward the Earth, it moves far enough sideways that the Earth's surface curves away by the same amount. Remove the tangential velocity and it falls straight in.</p>
 </details>
 <p><strong>C2 — concept check.</strong> Is there gravity in orbit?</p>
 <details>
 <summary>Answer</summary>
-<p>Yes — at the ISS altitude (400 km), $g\approx8.7$ m/s$^2$ (90% of surface gravity). The astronauts feel weightless because they are in free fall, not because there is no gravity.</p>
+<p>Yes. At the ISS altitude $g=8.7$ m/s$^2$, about 89% of the surface value. Astronauts float because they are in free fall, not because gravity has vanished; their apparent weight is zero, their true weight is not.</p>
 </details>
-<p><strong>C3 — concept check.</strong> Why is $U$ negative for a bound orbit?</p>
+<p><strong>C3 — concept check.</strong> Why is $U$ negative for a bound system?</p>
 <details>
 <summary>Answer</summary>
-<p>$U=0$ at infinity (the reference). A bound orbit has $E&lt;0$, meaning the particle cannot escape to infinity without adding energy. The negative $U$ represents the "binding energy."</p>
+<p>The reference $U=0$ is at infinite separation, and gravity does positive work as the masses come together, so the energy of the assembled bound state is below zero. The magnitude $|U|$ is the energy needed to pull the pair apart again — the binding energy.</p>
 </details>
-<p><strong>C4 — concept check.</strong> Does a satellite in a higher orbit have more or less energy?</p>
+<p><strong>C4 — concept check.</strong> Does a satellite in a higher circular orbit have more or less total energy?</p>
 <details>
 <summary>Answer</summary>
-<p>More negative energy (less total energy). $E=-GMm/(2r)$: as $r$ increases, $|E|$ decreases (less negative), meaning the satellite is less tightly bound. This is counter-intuitive: a "higher" orbit is actually "less bound." The reason is that the total energy is negative, and it approaches zero as $r\to\infty$. To move a satellite to a higher orbit, you must add energy (fire rockets), which makes $E$ less negative. The confusion arises because "more energy" can mean "more positive" or "more negative" depending on context. In orbital mechanics, always specify whether you mean "more positive total energy" (= less bound) or "more negative total energy" (= more bound).</p>
+<p>Less negative: $E=-GMm/(2r)$ increases toward zero as $r$ grows, so the higher orbit has more total energy and is less tightly bound. It is also slower, $v_c=\sqrt{GM/r}$. The two facts are consistent because the engine did positive work to raise the orbit while gravity did more negative work overall; the total is an increase toward zero.</p>
 </details>
-<p><strong>C5 — concept check.</strong> Why does a geostationary orbit have to be above the equator?</p>
+<p><strong>C5 — concept check.</strong> Why must a geostationary orbit be equatorial and circular?</p>
 <details>
 <summary>Answer</summary>
-<p>A satellite orbits in a plane through the centre of the Earth. For the satellite to appear stationary, this plane must be the equatorial plane. An inclined orbit would appear to wander north and south.</p>
+<p>An orbit plane passes through the Earth's centre. For the satellite to stay above one point, the plane must be the equatorial plane (otherwise the ground track wanders north and south) and the orbit must be circular (otherwise the satellite drifts east and west within the day). The period must equal the sidereal rotation period, 23 h 56 min, which fixes one radius, 42 164 km.</p>
 </details>
-<p><strong>C6 — concept check.</strong> What is the vis-viva equation used for?</p>
+<p><strong>C6 — concept check.</strong> What is the vis-viva equation for?</p>
 <details>
 <summary>Answer</summary>
-<p>Finding the speed at any point in an elliptical orbit, given $r$ and $a$. It combines energy and the orbit geometry.</p>
+<p>It gives the speed at any point of an orbit from its size $a$ and the local distance $r$, without working out the ellipse's angles. It is energy conservation with the energy expressed through $a$.</p>
 </details>
-<p><strong>C7 — concept check.</strong> Does the shell theorem apply to non-uniform shells?</p>
+<p><strong>C7 — concept check.</strong> Does the shell theorem apply to a non-uniform shell?</p>
 <details>
 <summary>Answer</summary>
-<p>No — the proof relies on the shell being uniform. A non-uniform shell does exert a net force on an interior particle.</p>
+<p>No. The cone proof uses equal surface density at the two opposite patches, and the ring integral assumes $\sigma$ constant. A non-uniform shell can exert a net force on an interior particle — for example, if one side is denser.</p>
 </details>
-<p><strong>C8 — concept check.</strong> Why do we have two tidal bulges (one toward the Moon, one away)?</p>
+<p><strong>C8 — concept check.</strong> Why are there two tidal bulges rather than one?</p>
 <details>
 <summary>Answer</summary>
-<p>The Moon's pull on the near side is stronger than on the far side. The differential force stretches the Earth along the Earth–Moon line, creating bulges on both sides.</p>
+<p>The tide is the <em>difference</em> between the pull at a point and the pull at the body's centre. The near side is pulled more than the centre (net outward along the line), the far side is pulled less than the centre (net outward in the opposite direction). Both deviations point away from the centre, so the body stretches along the line of centres in both directions.</p>
 </details>
 <p><strong>C9 — concept check.</strong> Can a satellite orbit at any altitude?</p>
 <details>
 <summary>Answer</summary>
-<p>In principle yes, but below about 160 km, air drag is significant and the satellite decays quickly. The ISS orbits at about 400 km to minimise drag.</p>
+<p>In principle any altitude above the surface is possible for a short time, but below about 160 km the atmosphere is dense enough that drag removes energy and the orbit decays within days. The ISS is at 400 km precisely to keep drag small; even there it needs periodic reboosts.</p>
 </details>
-<p><strong>C10 — concept check.</strong> What happens to a satellite that loses energy (e.g., due to drag)?</p>
+<p><strong>C10 — concept check.</strong> A satellite loses energy to drag. Does it speed up or slow down?</p>
 <details>
 <summary>Answer</summary>
-<p>It spirals inward, moving <em>faster</em> (lower orbit, higher speed). This is counter-intuitive: losing energy makes the satellite speed up! The reason: the PE decrease is larger than the KE increase.</p>
+<p>It speeds up. Removing energy lowers $r$ in $E=-GMm/(2r)$; a lower circular orbit has a larger speed. The gain in kinetic energy is paid for by a larger loss of potential energy.</p>
 </details>
-<p><strong>C11 — concept check.</strong> The Schwarzschild radius $r_s=2GM/c^2$. What does it represent?</p>
+<p><strong>C11 — concept check.</strong> What does the Schwarzschild radius $r_s=2GM/c^2$ represent?</p>
 <details>
 <summary>Answer</summary>
-<p>The radius at which the escape speed equals the speed of light. For a black hole, $r_s$ is the event horizon. For the Sun: $r_s\approx3$ km.</p>
+<p>It is the radius at which the Newtonian escape speed would equal the speed of light. For a black hole it coincides with the event horizon, but the derivation is a Newtonian coincidence, not a relativistic proof; the real derivation needs general relativity. For the Sun, $r_s\approx3$ km.</p>
 </details>
-<p><strong>C12 — concept check.</strong> Why does the $\sqrt{2}$ ratio appear in $v_{\text{esc}}=\sqrt{2}\,v_{\text{orb}}$?</p>
+<p><strong>C12 — concept check.</strong> Where does the $\sqrt2$ in $v_{\text{esc}}=\sqrt2\,v_c$ come from, and when does it not apply?</p>
 <details>
 <summary>Answer</summary>
-<p>The orbital KE is $GMm/(2r)$. The escape KE is $GMm/r$ (twice as much). So $v_{\text{esc}}^2=2v_{\text{orb}}^2$.</p>
+<p>At one radius $r$, the circular orbit has $K=\frac12mv_c^2=GMm/(2r)$ and the escape condition needs $K=GMm/r$, twice as much; so $v_e^2=2v_c^2$. It compares escape from a radius with the circular orbit at that same radius. If a problem compares escape from the surface with an orbit at a different radius, the ratio is not $\sqrt2$.</p>
+</details>
+<p><strong>C13 — concept check.</strong> What is the difference between $g$ and $G$?</p>
+<details>
+<summary>Answer</summary>
+<p>$G$ is a universal constant of nature, the same everywhere. $g$ is a local field, a property of the particular body and the location: $g=GM/r^2$ outside it, $g=GMr/R^3$ inside a uniform one, and modified by rotation at the surface. Confusing a constant with a field is the most common source of unit errors in this chapter.</p>
+</details>
+<p><strong>C14 — concept check.</strong> Why does the field fall as $1/r^2$ while the potential falls as $1/r$?</p>
+<details>
+<summary>Answer</summary>
+<p>The potential is the integral of the field over distance, $V=-\int g\,dr$. Integrating $1/r^2$ gives $-1/r$. Dimensionally, $V$ is energy per unit mass and $g$ is force per unit mass, so the extra power of length is expected.</p>
+</details>
+<p><strong>C15 — concept check.</strong> Why is the field inside a uniform sphere proportional to $r$?</p>
+<details>
+<summary>Answer</summary>
+<p>The shell theorem says only the mass inside radius $r$ pulls. That mass grows as $r^3$, while the inverse-square weakening at the test point grows as $r^{-2}$; the product is linear in $r$: $g=GMr/R^3$.</p>
+</details>
+<p><strong>C16 — concept check.</strong> Why does a satellite grazing the surface have a period fixed by the planet's density alone?</p>
+<details>
+<summary>Answer</summary>
+<p>Because $T^2=4\pi^2R^3/(GM)$ and $M=\frac43\pi R^3\rho$, so $R$ cancels and $T=\sqrt{3\pi/(G\rho)}$. A grazing orbit is a density measurement; for the Earth it is 84.3 min.</p>
+</details>
+<p><strong>C17 — concept check.</strong> Why is a Hohmann transfer ellipse tangent to both circular orbits?</p>
+<details>
+<summary>Answer</summary>
+<p>At the tangency points the transfer velocity is perpendicular to the radius, exactly as in a circular orbit. An ellipse that crosses a circular orbit at an angle would need an extra radial velocity component, which costs additional Δv; the tangent ellipse is the minimum-energy two-burn transfer between coplanar circles.</p>
+</details>
+<p><strong>C18 — concept check.</strong> Why does the same rocket burn buy more energy deep in a gravity well?</p>
+<details>
+<summary>Answer</summary>
+<p>A burn of $\Delta v$ along the velocity changes energy by $mv\,\Delta v+\frac12m(\Delta v)^2$, and the first term grows with the current speed $v$. At perigee, where the spacecraft moves fastest, the same engine burn adds more mechanical energy — the Oberth effect.</p>
+</details>
+<p><strong>C19 — concept check.</strong> Does the escape speed depend on the direction of launch?</p>
+<details>
+<summary>Answer</summary>
+<p>No, only on the launch radius, because the escape condition is an energy statement: $\frac12mv^2-GMm/r=0$. Direction changes the shape of the path and the time taken, not the speed needed. Launching horizontally from a tower is the same energy problem as launching vertically.</p>
+</details>
+<p><strong>C20 — concept check.</strong> The Sun is 27 million times more massive than the Moon; why is the Moon's tidal effect stronger?</p>
+<details>
+<summary>Answer</summary>
+<p>Tidal stretch goes as $M/d^3$, not $M/d^2$. The Moon is about 390 times closer than the Sun, and $390^3\approx5.9\times10^7$ overwhelms the mass ratio, leaving the Moon's tide about 2.2 times the Sun's.</p>
 </details>
 <h2 id="part-5-worked-exemplars">Part 5 · Worked exemplars</h2>
 <h3 id="e1-orbital-speed-and-period">E1 — Orbital speed and period</h3>
 <p>Find the orbital speed and period of a satellite at altitude 400 km. ($M_E=5.97\times10^{24}$ kg, $R_E=6370$ km.)</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$r=6770$ km. $v=\sqrt{GM/r}=\sqrt{6.674\times10^{-11}\times5.97\times10^{24}/6.77\times10^6}=7.67$ km/s. $T=2\pi r/v=5540$ s $\approx92$ min.</p>
+<p>$r=6770$ km, $v=\sqrt{GM/r}=7.67$ km/s, $T=2\pi r/v=5540$ s $\approx92.4$ min.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $v=\sqrt{GM/r}=7670$ m/s. $T=2\pi r/v=2\pi\times6.77\times10^6/7670=5540$ s.</p>
+<p><strong>Method.</strong> $r=R_E+h=6.770\times10^6$ m and $GM=3.986\times10^{14}$ m$^3$/s$^2$. Then $v_c=\sqrt{GM/r}=\sqrt{3.986\times10^{14}/6.770\times10^6}=7.67\times10^3$ m/s, and $T=2\pi r/v_c=2\pi\times6.770\times10^6/7.67\times10^3=5.54\times10^3$ s $=92.4$ min.</p>
+<p><strong>Check.</strong> The ISS really does circle the Earth in about 92 minutes, roughly 16 sunrises a day. ✓</p>
 </details>
 <h3 id="e2-geostationary-orbit">E2 — Geostationary orbit</h3>
-<p>Find the radius and altitude of a geostationary orbit. ($G=6.674\times10^{-11}$, $M_E=5.97\times10^{24}$ kg.)</p>
+<p>Find the radius and altitude of a geostationary orbit. Use the sidereal day $T=86164$ s. ($GM=3.986\times10^{14}$ m$^3$/s$^2$, $R_E=6371$ km.)</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$r=(GMT^2/(4\pi^2))^{1/3}=(6.674\times10^{-11}\times5.97\times10^{24}\times86400^2/(4\pi^2))^{1/3}=42,164$ km. Altitude $=35,786$ km.</p>
+<p>$r=(GMT^2/4\pi^2)^{1/3}=42\,164$ km; altitude $=35\,786$ km.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $T=86400$ s. $r^3=GMT^2/(4\pi^2)=3.986\times10^{14}\times7.465\times10^9/39.48=7.54\times10^{22}$. $r=4.216\times10^7$ m $=42,164$ km.</p>
+<p><strong>Method.</strong> $r^3=\dfrac{GMT^2}{4\pi^2}=\dfrac{3.986\times10^{14}\times(86164)^2}{39.478}=7.50\times10^{22}$ m$^3$, so $r=4.216\times10^7$ m $=42\,164$ km. The altitude is $r-R_E=42\,164-6371=35\,793$ km, conventionally quoted as $35\,786$ km using the equatorial radius $6378$ km.</p>
+<p><strong>Check.</strong> The sidereal day, not the 24-hour solar day, is the correct period: using $86400$ s would give 42 235 km and a satellite that drifts westward. ✓</p>
 </details>
 <h3 id="e3-escape-velocity">E3 — Escape velocity</h3>
 <p>Find the escape velocity from Earth's surface. ($g=9.8$ m/s$^2$, $R_E=6370$ km.)</p>
@@ -569,31 +1389,39 @@ $$</p>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $v=\sqrt{2GM/R}=\sqrt{2gR}=\sqrt{2\times9.8\times6.37\times10^6}=11186$ m/s $=11.2$ km/s.</p>
+<p><strong>Method.</strong> $v_{\text{esc}}=\sqrt{2GM/R}=\sqrt{2gR}$. Numerically, $2\times9.8\times6.37\times10^6=1.249\times10^8$, whose square root is $1.118\times10^4$ m/s $=11.2$ km/s.</p>
+<p><strong>Check.</strong> Kinetic energy per unit mass is $v^2/2=6.25\times10^7$ J/kg, equal to $GM/R$ ✓.</p>
 </details>
 <h3 id="e4-energy-to-move-a-satellite">E4 — Energy to move a satellite</h3>
-<p>Find the energy to move a 1000 kg satellite from a 200 km orbit to a 400 km orbit.</p>
+<p>Find the energy needed to move a 1000 kg satellite from a 200 km circular orbit to a 400 km circular orbit.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$\Delta E=GMm/(2r_1)-GMm/(2r_2)=GMm(r_2-r_1)/(2r_1r_2)$. $=3.986\times10^{14}\times1000\times200\times10^3/(2\times6.57\times10^6\times6.77\times10^6)=9.5\times10^8$ J.</p>
+<p>$\Delta E=\dfrac{GMm}{2}\left(\dfrac{1}{r_1}-\dfrac{1}{r_2}\right)=9.0\times10^8$ J $\approx0.90$ GJ.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $E_1=-GMm/(2r_1)$, $E_2=-GMm/(2r_2)$. $\Delta E=E_2-E_1=GMm/(2r_1)-GMm/(2r_2)=GMm(r_2-r_1)/(2r_1r_2)=9.5\times10^8$ J $\approx0.95$ GJ.</p>
+<p><strong>Method.</strong> $r_1=6370+200=6570$ km, $r_2=6370+400=6770$ km. Then</p>
+<p>$$
+\Delta E=\frac{GMm}{2}\left(\frac1{r_1}-\frac1{r_2}\right)
+=\frac{3.986\times10^{14}\times1000}{2}\left(\frac{1}{6.570\times10^6}-\frac{1}{6.770\times10^6}\right)
+=8.96\times10^8\ \text{J}.
+$$</p>
+<p><strong>Check.</strong> Alternatively $\Delta E=\dfrac{GMm(r_2-r_1)}{2r_1r_2}=\dfrac{3.986\times10^{14}\times1000\times2\times10^5}{2\times6.570\times10^6\times6.770\times10^6}=8.96\times10^8$ J ✓. This is the ideal two-impulse energy; a real orbital raise also pays for the Hohmann phasing and any plane change.</p>
 </details>
 <h3 id="e5-g-at-the-centre-of-a-planet">E5 — $g$ at the centre of a planet</h3>
 <p>What is $g$ at the centre of a uniform sphere of radius $R$ and surface gravity $g_0$?</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$g=GMr/R^3$ at $r=0$: $g=0$. ✓</p>
+<p>$g=GMr/R^3$ at $r=0$ gives $g=0$. ✓</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $g(r)=GMr/R^3$. At $r=0$: $g=0$. At $r=R$: $g=GM/R^2=g_0$. The field is linear from 0 to $g_0$.</p>
+<p><strong>Method.</strong> $g(r)=GMr/R^3$ from Eq. (3.10). At $r=0$, $g=0$; at $r=R$, $g=GM/R^2=g_0$. The field increases linearly with distance from the centre.</p>
+<p><strong>Check.</strong> By symmetry there is no preferred direction at the centre, so the field must vanish there ✓.</p>
 </details>
-<h3 id="e6-keplers-third-law-mars-orbit">E6 — Kepler's third law: Mars orbit</h3>
+<h3 id="e6-keplers-third-law-the-mars-orbit">E6 — Kepler's third law: the Mars orbit</h3>
 <p>Mars orbits the Sun at $a=1.524$ AU. Find its orbital period in Earth years.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
@@ -602,53 +1430,120 @@ $$</p>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $T^2\propto a^3$. $T=T_E\times(a/a_E)^{3/2}=1\times1.524^{3/2}=1.881$ years.</p>
+<p><strong>Method.</strong> For orbits about the same central mass, $T^2\propto a^3$, so $T=T_E(a/a_E)^{3/2}=1\times1.524^{3/2}=1.881$ years. (The exact two-body law uses $M_\odot+m$, a correction of $3\times10^{-7}$ here.)</p>
 </details>
-<h3 id="e7-speed-at-apogee">E7 — Speed at apogee</h3>
+<h3 id="e7-speed-at-apoapsis">E7 — Speed at apoapsis</h3>
 <p>A satellite in an elliptical orbit has perigee $r_p=7000$ km and apogee $r_a=42000$ km. Find the speed at apogee. ($GM=3.986\times10^{14}$ m$^3$/s$^2$.)</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$a=(r_p+r_a)/2=24500$ km. $v_a=\sqrt{GM(2/r_a-1/a)}=\sqrt{3.986\times10^{14}(2/4.2\times10^7-1/2.45\times10^7)}=\sqrt{3.986\times10^{14}\times6.8\times10^{-9}}=1646$ m/s.</p>
+<p>$a=24\,500$ km, $v_a=\sqrt{GM(2/r_a-1/a)}=1.65$ km/s.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $v_a^2=GM(2/r_a-1/a)=3.986\times10^{14}\times(4.76\times10^{-8}-4.08\times10^{-8})=3.986\times10^{14}\times6.8\times10^{-9}$. $v_a=1646$ m/s $=1.65$ km/s.</p>
+<p><strong>Method.</strong> $a=(r_p+r_a)/2=2.45\times10^7$ m. Vis-viva at apoapsis:</p>
+<p>$$
+v_a^2=GM\left(\frac{2}{r_a}-\frac{1}{a}\right)=3.986\times10^{14}\left(\frac{2}{4.2\times10^7}-\frac{1}{2.45\times10^7}\right)=2.71\times10^6\ \text{m}^2/\text{s}^2,
+$$</p>
+<p>so $v_a=1.65$ km/s. The perigee speed follows from $v_pr_p=v_ar_a$: $v_p=1.65\times(42000/7000)=9.89$ km/s.</p>
+<p><strong>Check.</strong> The same numbers come from the apsidal formula, Eq. (3.33), with $e=(r_a-r_p)/(r_a+r_p)=0.714$ ✓.</p>
 </details>
 <h3 id="e8-binary-star-masses">E8 — Binary star masses</h3>
 <p>A binary star has $a=10$ AU and $T=25$ years. Find the total mass.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$M=a^3/T^2=1000/625=1.6$ solar masses.</p>
+<p>$M/M_\odot=a^3/T^2=1000/625=1.6$ solar masses.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> From Kepler's third law (with solar units): $M/M_\odot=a^3/T^2=10^3/25^2=1.6$.</p>
+<p><strong>Method.</strong> In solar-system units Eq. (3.42) reads $M_{\text{total}}/M_\odot=(a/\text{AU})^3/(T/\text{yr})^2=10^3/25^2=1.6$. The individual masses need one more datum, such as the position of the centre of mass or the ratio of the two radial-velocity amplitudes.</p>
 </details>
-<h3 id="e9-tidal-force-estimate">E9 — Tidal force estimate</h3>
-<p>Estimate the ratio of the Moon's tidal force to the Sun's tidal force on Earth.</p>
+<h3 id="e9-tidal-force-moon-versus-sun">E9 — Tidal force: Moon versus Sun</h3>
+<p>Estimate the ratio of the Moon's tidal force on Earth to the Sun's.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$F_{\text{tidal}}\propto M/d^3$. Moon: $M/d^3=7.35\times10^{22}/(3.84\times10^8)^3=1.3\times10^{-6}$. Sun: $M/d^3=2\times10^{30}/(1.5\times10^{11})^3=5.9\times10^{-4}$. Ratio: Moon/Sun $=1.3\times10^{-6}/5.9\times10^{-4}=0.0022$. Wait — the Moon's tidal effect is about 2.2 times the Sun's. Let me recompute. Moon: $M/d^3=7.35\times10^{22}/5.66\times10^{25}=1.3\times10^{-3}$. Sun: $2\times10^{30}/3.375\times10^{33}=5.9\times10^{-4}$. Ratio $=1.3\times10^{-3}/5.9\times10^{-4}=2.2$. The Moon's tidal force is about 2.2 times the Sun's.</p>
+<p>$F_{\text{tidal}}\propto M/d^3$: Moon $7.35\times10^{22}/(3.84\times10^8)^3=1.30\times10^{-3}$; Sun $2.0\times10^{30}/(1.5\times10^{11})^3=5.92\times10^{-4}$; ratio $2.2$.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $F_{\text{tidal}}\propto M/d^3$. Moon: $7.35\times10^{22}/(3.84\times10^8)^3=1.3\times10^{-3}$. Sun: $2\times10^{30}/(1.5\times10^{11})^3=5.9\times10^{-4}$. Ratio $=2.2$. The Moon's tidal force is about twice the Sun's — this is why solar and lunar tides are comparable (spring tides when they align).</p>
+<p><strong>Method.</strong> From Eq. (3.45), the tidal stretch per unit mass is proportional to $M/d^3$. For the Moon,</p>
+<p>$$
+\frac{M}{d^3}=\frac{7.35\times10^{22}}{(3.84\times10^8)^3}=\frac{7.35\times10^{22}}{5.66\times10^{25}}=1.30\times10^{-3}\ \text{kg/m}^3,
+$$</p>
+<p>and for the Sun, $2.0\times10^{30}/(1.5\times10^{11})^3=5.92\times10^{-4}$ kg/m$^3$. The ratio is $2.2$: the Moon raises the larger tide because closeness enters as a cube.</p>
+<p><strong>Check.</strong> The actual solar tide is about 46% of the lunar tide, and spring tides (Sun and Moon aligned) are larger than neap tides (at right angles) ✓.</p>
 </details>
 <h3 id="e10-the-roche-limit">E10 — The Roche limit</h3>
 <p>Estimate the Roche limit for a satellite of density $\rho_s=2000$ kg/m$^3$ orbiting a planet of density $\rho_p=5000$ kg/m$^3$ and radius $R_p=6\times10^7$ m.</p>
 <div class="callout success">
 <p class="callout-title">Check</p>
-<p>$d=2.44\times6\times10^7\times(5000/2000)^{1/3}=1.464\times10^8\times1.357=1.99\times10^8$ m $\approx199,000$ km.</p>
+<p>$d=2.44\,R_p(\rho_p/\rho_s)^{1/3}=1.99\times10^8$ m $\approx2.0\times10^5$ km.</p>
 </div>
 
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> $d=2.44R_p(\rho_p/\rho_s)^{1/3}=2.44\times6\times10^7\times(2.5)^{1/3}=1.464\times10^8\times1.357=1.99\times10^8$ m.</p>
+<p><strong>Method.</strong> $(\rho_p/\rho_s)^{1/3}=(2.5)^{1/3}=1.357$, so</p>
+<p>$$
+d_{\text{Roche}}=2.44\times6\times10^7\times1.357=1.99\times10^8\ \text{m}.
+$$</p>
+<p><strong>Check.</strong> The rigid-body estimate, Eq. (3.46), would give $6\times10^7\times(2\times2.5)^{1/3}=6\times10^7\times1.71=1.03\times10^8$ m — the same order, showing the model dependence that §3.14 warns about. Use the fluid value when the problem says "Roche limit".</p>
+</details>
+<h3 id="e11-self-energy-of-a-planet-and-spreading-the-earth">E11 — Self-energy of a planet and "spreading the Earth"</h3>
+<p>(a) Find the gravitational self-energy of the Earth. (b) If all of it could be released, for how long would it power the Sun? Humanity's annual energy consumption is about $6\times10^{20}$ J.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>(a) $U=-\frac35GM^2/R=-2.24\times10^{32}$ J. (b) The Sun radiates this in about 7 days; humanity would take about $4\times10^{11}$ years.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> (a) From Eq. (3.19),</p>
+<p>$$
+|U|=\frac{3}{5}\frac{GM^2}{R}=\frac{3}{5}\times\frac{6.674\times10^{-11}\times(5.97\times10^{24})^2}{6.371\times10^6}=2.24\times10^{32}\ \text{J}.
+$$</p>
+<p>(b) The Sun's luminosity is $3.83\times10^{26}$ W, so $t=2.24\times10^{32}/3.83\times10^{26}=5.9\times10^5$ s $\approx6.8$ days. For humanity, $2.24\times10^{32}/6\times10^{20}=3.7\times10^{11}$ years.</p>
+<p><strong>Check.</strong> The escaping gas from the early Earth and the energy released in planetary formation are of this order, which is why the number appears in formation models ✓.</p>
+</details>
+<h3 id="e12-the-deep-tunnel-period-and-speed">E12 — The deep-tunnel period and speed</h3>
+<p>A straight tunnel is drilled through a uniform Earth of density $5513$ kg/m$^3$. Find (a) the period of a particle dropped in, (b) its speed as it passes the centre. ($R_E=6.371\times10^6$ m, $G=6.674\times10^{-11}$.)</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>(a) $T=\sqrt{3\pi/G\rho}=84.3$ min. (b) $v_{\max}=\sqrt{gR}=7.91$ km/s, the grazing-orbit speed.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> (a) From Eq. (3.48), $T=2\pi\sqrt{3/(4\pi G\rho)}=\sqrt{3\pi/(G\rho)}$. With $\rho=5513$ kg/m$^3$,</p>
+<p>$$
+T=\sqrt{\frac{3\pi}{6.674\times10^{-11}\times5513}}=\sqrt{\frac{9.425}{3.679\times10^{-7}}}=5.06\times10^3\ \text{s}=84.3\ \text{min}.
+$$</p>
+<p>(b) The motion is harmonic with $\omega=2\pi/T=1.241\times10^{-3}$ rad/s, so $v_{\max}=\omega R=1.241\times10^{-3}\times6.371\times10^6=7.91\times10^3$ m/s. Equivalently $v_{\max}=\sqrt{gR}$ with $g=GM/R^2$.</p>
+<p><strong>Check.</strong> A grazing satellite has the same period, and its speed is $\sqrt{GM/R}=\sqrt{gR}$ — exactly the tunnel speed at the centre ✓.</p>
+</details>
+<h3 id="e13-hohmann-transfer-from-low-earth-orbit-to-geostationary-orbit">E13 — Hohmann transfer from low Earth orbit to geostationary orbit</h3>
+<p>Find the two burns and the transfer time for a transfer from $r_1=6671$ km (a 300 km orbit) to the geostationary radius $r_2=42\,164$ km.</p>
+<div class="callout success">
+<p class="callout-title">Check</p>
+<p>$k=r_2/r_1=6.32$; $\Delta v_1\approx2.44$ km/s; $\Delta v_2\approx1.47$ km/s; total $\approx3.9$ km/s; transfer time 5.3 h.</p>
+</div>
+
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> $v_1=\sqrt{GM/r_1}=7.73$ km/s and $v_2=\sqrt{GM/r_2}=3.07$ km/s; $a=(r_1+r_2)/2=24\,418$ km. Vis-viva at perigee and apogee of the transfer ellipse:</p>
+<p>$$
+v_p=\sqrt{GM\left(\frac{2}{r_1}-\frac{1}{a}\right)}=10.17\ \text{km/s},\qquad
+v_a=\sqrt{GM\left(\frac{2}{r_2}-\frac{1}{a}\right)}=1.60\ \text{km/s}.
+$$</p>
+<p>Hence $\Delta v_1=v_p-v_1=2.44$ km/s and $\Delta v_2=v_2-v_a=1.47$ km/s, total $3.91$ km/s. The transfer time is half the ellipse's period:</p>
+<p>$$
+t=\pi\sqrt{\frac{a^3}{GM}}=\pi\sqrt{\frac{(2.4418\times10^7)^3}{3.986\times10^{14}}}=1.92\times10^4\ \text{s}=5.3\ \text{h}.
+$$</p>
+<p><strong>Check.</strong> A real LEO-to-GEO mission spends about 1.5 km/s more on the plane change and gravity losses; the ideal in-plane budget near 3.9 km/s is the textbook benchmark ✓.</p>
 </details>
 <h2 id="part-6-problem-archetypes-and-practice">Part 6 · Problem archetypes and practice</h2>
+<h3 id="61-the-archetype-table">6.1 The archetype table</h3>
 <table>
 <thead>
 <tr>
@@ -663,72 +1558,128 @@ $$</p>
 <tr>
 <td style="text-align: right;">1</td>
 <td>Orbital speed/period</td>
-<td>$v=\sqrt{GM/r}$, $T=2\pi r/v$</td>
+<td>$v=\sqrt{GM/r}$, $T=2\pi\sqrt{r^3/GM}$</td>
 <td>E1</td>
 <td>different planets</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
 <td>Geostationary orbit</td>
-<td>$r_{\text{geo}}$</td>
+<td>$r=(GMT^2/4\pi^2)^{1/3}$, sidereal $T$</td>
 <td>E2</td>
-<td>other planets</td>
+<td>other rotating bodies</td>
 </tr>
 <tr>
 <td style="text-align: right;">3</td>
 <td>Escape velocity</td>
-<td>$v=\sqrt{2GM/R}$</td>
+<td>$v_e=\sqrt{2GM/R}$</td>
 <td>E3</td>
-<td>from orbit</td>
+<td>from a height, with $v_\infty$</td>
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>Orbit transfer energy</td>
-<td>$\Delta E$</td>
+<td>Energy to change orbit</td>
+<td>$\Delta E=\frac{GMm}{2}(1/r_1-1/r_2)$</td>
 <td>E4</td>
-<td>Hohmann</td>
+<td>Hohmann budget</td>
 </tr>
 <tr>
 <td style="text-align: right;">5</td>
-<td>$g$ inside a sphere</td>
-<td>$g=GMr/R^3$</td>
+<td>$g$ inside a sphere or cavity</td>
+<td>$g=GMr/R^3$; uniform cavity field</td>
 <td>E5</td>
-<td>cavity</td>
+<td>shell, cavity at offset</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
 <td>Kepler's third law</td>
-<td>$T^2\propto a^3$</td>
+<td>$T^2=4\pi^2a^3/GM$</td>
 <td>E6</td>
 <td>binary stars</td>
 </tr>
 <tr>
 <td style="text-align: right;">7</td>
-<td>Vis-viva</td>
+<td>Vis-viva at an arbitrary point</td>
 <td>$v^2=GM(2/r-1/a)$</td>
 <td>E7</td>
-<td>any point in orbit</td>
+<td>apsidal speeds</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
-<td>Binary star mass</td>
-<td>$M=a^3/T^2$</td>
+<td>Binary-star mass</td>
+<td>$M_{\text{tot}}=a^3/T^2$ in solar units</td>
 <td>E8</td>
-<td>radial velocity</td>
+<td>radial-velocity amplitudes</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
-<td>Tidal force</td>
+<td>Tidal force ratio</td>
 <td>$\propto M/d^3$</td>
 <td>E9</td>
-<td>Roche limit</td>
+<td>spring/neap comparison</td>
 </tr>
 <tr>
 <td style="text-align: right;">10</td>
 <td>Roche limit</td>
 <td>$d=2.44R_p(\rho_p/\rho_s)^{1/3}$</td>
 <td>E10</td>
-<td>different bodies</td>
+<td>rigid versus fluid</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Self-energy of a sphere</td>
+<td>$U=-\frac35GM^2/R$</td>
+<td>E11</td>
+<td>spread a planet, formation energy</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>Gravity train (tunnel)</td>
+<td>$T=\sqrt{3\pi/G\rho}$, $v_{\max}=\sqrt{gR}$</td>
+<td>E12</td>
+<td>chord geometry</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Hohmann transfer budget</td>
+<td>$\Delta v_1$, $\Delta v_2$ of Eq. (3.37)</td>
+<td>E13</td>
+<td>LEO to GEO, Earth to Mars</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Atmosphere retention</td>
+<td>$v_{\text{rms}}=\sqrt{3\mathcal RT/M}$ against $v_e$</td>
+<td>§3.9</td>
+<td>other planets, other gases</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>Planet mass from a satellite's period</td>
+<td>$M=4\pi^2r^3/(GT^2)$</td>
+<td>Q35</td>
+<td>exoplanet data</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>Rendezvous phasing</td>
+<td>catch-up $=2\pi(1-T_{\text{phase}}/T_{\text{circ}})$ per loop</td>
+<td>§3.12, Q36</td>
+<td>timing problems</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>Escape from a small body</td>
+<td>$v_e=\sqrt{8\pi G\rho/3}\,R$</td>
+<td>Q33</td>
+<td>asteroid, comet, jump-off</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Apparent weight and rotation</td>
+<td>$g_{\text{eff}}=g-\omega^2R\cos^2\lambda$</td>
+<td>§3.5, Q37</td>
+<td>equator versus pole</td>
 </tr>
 </tbody>
 </table>
@@ -776,7 +1727,7 @@ $$</p>
 <h4 id="q9-the-iss-orbits-at-400-km-find-its-period">Q9. The ISS orbits at 400 km. Find its period.</h4>
 <details>
 <summary>Solution</summary>
-<p>$T=2\pi r^{3/2}/\sqrt{GM}=2\pi\times(6.77\times10^6)^{3/2}/\sqrt{3.986\times10^{14}}=2\pi\times5.57\times10^9/1.996\times10^7=1755$ s $\approx29.3$ min... wait. $T=2\pi\sqrt{r^3/(GM)}=2\pi\times(6.77\times10^6)^{3/2}/(3.986\times10^{14})^{1/2}$. $(6.77\times10^6)^{3/2}=5.57\times10^9$. $\sqrt{3.986\times10^{14}}=1.996\times10^7$. $T=2\pi\times5.57\times10^9/1.996\times10^7=1755$ s $\approx87.7$ min. ✓</p>
+<p>$r=6.77\times10^6$ m. $T=2\pi\sqrt{r^3/GM}=2\pi\times(6.77\times10^6)^{3/2}/\sqrt{3.986\times10^{14}}=2\pi\times5.57\times10^9/2.00\times10^7=5540$ s $\approx92.4$ min — about 16 orbits a day.</p>
 </details>
 <h4 id="q10-earth-orbits-the-sun-at-1-au-mars-at-1524-au-find-marss-period">Q10. Earth orbits the Sun at 1 AU. Mars at 1.524 AU. Find Mars's period.</h4>
 <details>
@@ -858,120 +1809,314 @@ $$</p>
 <summary>Solution</summary>
 <p>$E/m=v^2/2-GM/r$. At $r=2R_E$: $v=\sqrt{GM/(2R_E)}$. $E/m=GM/(4R_E)-GM/(2R_E)=-GM/(4R_E)=-gR_E/4=-1.57\times10^7$ J/kg.</p>
 </details>
-<h2 id="part-7-alternate-methods-and-the-jee-advanced-advantage-toolkit">Part 7 · Alternate methods and the JEE-Advanced advantage toolkit</h2>
-<h3 id="71-energy-methods-for-orbital-problems">7.1 Energy methods for orbital problems</h3>
-<p>Instead of solving Newton's law ($F=ma$) component by component, use energy conservation. For a satellite in a circular orbit: $\frac{1}{2}mv^2-\frac{GMm}{r}=E$. This is simpler and less error-prone than resolving forces.</p>
-<h3 id="72-the-gausss-law-analogy-for-gravity">7.2 The Gauss's law analogy for gravity</h3>
-<p>Gauss's law for gravity: $\oint \mathbf{g}\cdot d\mathbf{A}=-4\pi GM_{\text{enc}}$. Use this to find $g$ for symmetric mass distributions (spheres, cylinders, slabs). It is the most elegant way to prove the shell theorem and derive $g(r)$ inside and outside a sphere.</p>
+<h4 id="q26-a-tunnel-is-drilled-through-a-planet-of-twice-earths-mean-density-find-the-period-of-a-particle-dropped-in">Q26. A tunnel is drilled through a planet of twice Earth's mean density. Find the period of a particle dropped in.</h4>
+<details>
+<summary>Solution</summary>
+<p>$T=\sqrt{3\pi/(G\rho)}$. Doubling $\rho$ divides the period by $\sqrt2$: $84.3/\sqrt2=59.6$ min.</p>
+</details>
+<h4 id="q27-find-the-rms-speed-of-hydrogen-molecules-at-300-k-and-compare-it-with-earths-escape-speed-what-does-the-comparison-predict">Q27. Find the rms speed of hydrogen molecules at 300 K and compare it with Earth's escape speed. What does the comparison predict?</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_{\text{rms}}=\sqrt{3\mathcal RT/M}=\sqrt{3\times8.314\times300/0.002}=1.93$ km/s. The ratio to $v_{\text{esc}}=11.2$ km/s is $0.17$, far below the retention threshold of about $1/6$; hydrogen escapes, as the table in §3.9 says.</p>
+</details>
+<h4 id="q28-find-the-self-energy-of-a-uniform-sphere-with-the-suns-mass-20times1030-kg-and-radius-70times108-m">Q28. Find the self-energy of a uniform sphere with the Sun's mass ($2.0\times10^{30}$ kg) and radius ($7.0\times10^8$ m).</h4>
+<details>
+<summary>Solution</summary>
+<p>$|U|=\frac35GM^2/R=\frac35\times6.674\times10^{-11}\times(2.0\times10^{30})^2/7.0\times10^8=2.3\times10^{41}$ J. Its sign is negative: the sphere is bound.</p>
+</details>
+<h4 id="q29-a-satellite-in-a-circular-orbit-of-radius-r-is-transferred-to-a-circular-orbit-of-radius-4r-find-both-burns-in-units-of-the-initial-circular-speed">Q29. A satellite in a circular orbit of radius $r$ is transferred to a circular orbit of radius $4r$. Find both burns in units of the initial circular speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>With $k=4$: $\Delta v_1/v_1=\sqrt{2k/(1+k)}-1=\sqrt{1.6}-1=0.265$ and $\Delta v_2/v_1=(1/\sqrt{k})\left(1-\sqrt{2/(1+k)}\right)=0.5\left(1-\sqrt{0.4}\right)=0.184$. The total is $0.449\,v_1$.</p>
+</details>
+<h4 id="q30-two-satellites-are-in-circular-orbits-of-radii-r-and-4r-about-the-same-planet-find-the-ratios-of-their-speeds-and-periods">Q30. Two satellites are in circular orbits of radii $r$ and $4r$ about the same planet. Find the ratios of their speeds and periods.</h4>
+<details>
+<summary>Solution</summary>
+<p>$v\propto r^{-1/2}$, so $v_1/v_2=2$. $T\propto r^{3/2}$, so $T_1/T_2=(1/4)^{3/2}=1/8$: the inner satellite completes eight orbits in the time the outer one completes one.</p>
+</details>
+<h4 id="q31-a-probe-leaves-earths-surface-with-just-enough-speed-to-escape-with-2-kms-at-infinity-find-the-launch-speed">Q31. A probe leaves Earth's surface with just enough speed to escape with 2 km/s at infinity. Find the launch speed.</h4>
+<details>
+<summary>Solution</summary>
+<p>Energy conservation gives $v^2=v_{\text{esc}}^2+v_\infty^2=11.19^2+2.0^2=129.2$, so $v=11.37$ km/s — only 1.6% more than the escape speed, because the residual kinetic energy at infinity is a small part of the escape energy.</p>
+</details>
+<h4 id="q32-a-planet-has-a-grazing-satellite-period-of-20-h-find-its-mean-density">Q32. A planet has a grazing-satellite period of 2.0 h. Find its mean density.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\rho=3\pi/(GT^2)=3\pi/(6.674\times10^{-11}\times(7200)^2)=2725$ kg/m$^3$ — about half the Earth's density, so a rocky but small body.</p>
+</details>
+<h4 id="q33-a-spherical-asteroid-has-radius-20-km-and-density-3000-kgm3-find-the-escape-speed-from-its-surface-could-an-astronaut-jump-speed-about-3-ms-jump-off-it">Q33. A spherical asteroid has radius 20 km and density 3000 kg/m$^3$. Find the escape speed from its surface. Could an astronaut (jump speed about 3 m/s) jump off it?</h4>
+<details>
+<summary>Solution</summary>
+<p>$v_e=\sqrt{2GM/R}$ with $M=\frac43\pi R^3\rho=\frac43\pi(2\times10^4)^3(3000)=1.0\times10^{17}$ kg, so $v_e=\sqrt{2\times6.674\times10^{-11}\times1.0\times10^{17}/2\times10^4}=26$ m/s. No: a 3 m/s jump reaches only $h=v^2/2g\approx270$ m, far short of escape.</p>
+</details>
+<h4 id="q34-a-thin-uniform-spherical-shell-of-mass-m-and-radius-r-has-a-point-mass-m-at-its-centre-find-the-interaction-energy-of-the-particle-with-the-shell-and-state-the-shells-own-self-energy-separately">Q34. A thin uniform spherical shell of mass $M$ and radius $R$ has a point mass $m$ at its centre. Find the interaction energy of the particle with the shell, and state the shell's own self-energy separately.</h4>
+<details>
+<summary>Solution</summary>
+<p>Inside a uniform shell the field is zero, so the potential is the constant $-GM/R$; the interaction energy is therefore $-GMm/R$. The shell's own self-energy is $-GM^2/2R$ (assembling a shell from rings), so the total gravitational energy of the configuration is $-GMm/R-GM^2/2R$ if that term is included.</p>
+</details>
+<h4 id="q35-a-moon-orbits-a-planet-in-a-circular-orbit-of-radius-1883times109-m-with-period-167-days-find-the-planets-mass">Q35. A moon orbits a planet in a circular orbit of radius $1.883\times10^9$ m with period 16.7 days. Find the planet's mass.</h4>
+<details>
+<summary>Solution</summary>
+<p>$M=\dfrac{4\pi^2r^3}{GT^2}$ with $T=16.7\times86400=1.44\times10^6$ s: $M=\dfrac{39.48\times(1.883\times10^9)^3}{6.674\times10^{-11}\times(1.44\times10^6)^2}=1.9\times10^{27}$ kg — Jupiter's mass, to one significant figure.</p>
+</details>
+<h4 id="q36-two-satellites-share-a-circular-orbit-of-radius-7000-km-a-trails-b-by-20-a-drops-into-a-phasing-ellipse-with-perigee-6800-km-and-apogee-7000-km-completing-whole-loops-before-returning-to-the-circular-radius-find-the-period-of-the-phasing-orbit-the-catch-up-angle-per-loop-and-the-number-of-loops-needed">Q36. Two satellites share a circular orbit of radius 7000 km. A trails B by 20°. A drops into a phasing ellipse with perigee 6800 km and apogee 7000 km, completing whole loops before returning to the circular radius. Find the period of the phasing orbit, the catch-up angle per loop, and the number of loops needed.</h4>
+<details>
+<summary>Solution</summary>
+<p>For the ellipse $a=(6800+7000)/2=6900$ km, so $T_{\text{phase}}=2\pi\sqrt{a^3/GM}=5700$ s $=95.0$ min, while the circular period at the same apogee radius is $T_{\text{circ}}=97.1$ min. During one phasing loop B advances by $2\pi T_{\text{phase}}/T_{\text{circ}}$, so A gains</p>
+<p>$$
+2\pi\left(1-\frac{T_{\text{phase}}}{T_{\text{circ}}}\right)=2\pi\left(1-\frac{95.0}{97.1}\right)=0.138\ \text{rad}=7.9^\circ
+$$</p>
+<p>per loop. A 20° gap therefore needs three loops ($3\times7.9^\circ=23.7^\circ$, with a final trim burn), taking $3\times95.0=285$ min $\approx4.8$ h.</p>
+</details>
+<h4 id="q37-a-70-kg-person-stands-at-the-equator-of-a-spherical-earth-r6378-km-sidereal-day-86164-s-find-the-reduction-in-apparent-weight-due-to-rotation-and-compare-it-with-the-pole">Q37. A 70 kg person stands at the equator of a spherical Earth ($R=6378$ km, sidereal day 86164 s). Find the reduction in apparent weight due to rotation, and compare it with the pole.</h4>
+<details>
+<summary>Solution</summary>
+<p>$\omega=2\pi/86164=7.29\times10^{-5}$ rad/s, so $\omega^2R=0.0339$ m/s$^2$ and the reduction is $m\omega^2R=70\times0.0339=2.4$ N, about 0.35% of the 686 N weight. At the pole there is no rotational reduction; the measured pole-to-equator difference is larger still (about 0.53 m/s$^2$) because the Earth is also oblate.</p>
+</details>
+<h2 id="part-7-core-toolkit-and-alternative-methods">Part 7 · Core toolkit and alternative methods</h2>
+<h3 id="71-the-energyangular-momentum-ledger">7.1 The energy–angular-momentum ledger</h3>
+<p>Two conserved numbers carry every orbit problem: the specific energy $\varepsilon=v^2/2-GM/r$ and the specific angular momentum $h=rv_\perp$. The ledger:</p>
+<table>
+<thead>
+<tr>
+<th>Ask</th>
+<th>Get it from</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>what kind of orbit?</td>
+<td>$\varepsilon$</td>
+<td>$\varepsilon&lt;0$ ellipse, $=0$ parabola, $&gt;0$ hyperbola</td>
+</tr>
+<tr>
+<td>how big?</td>
+<td>$\varepsilon$</td>
+<td>$a=-GM/(2\varepsilon)$ (ellipses and hyperbolas alike)</td>
+</tr>
+<tr>
+<td>how eccentric?</td>
+<td>$\varepsilon$ and $h$</td>
+<td>$e=\sqrt{1+2\varepsilon h^2/(GM)^2}$</td>
+</tr>
+<tr>
+<td>where are the turning points?</td>
+<td>$h$ and $\varepsilon$</td>
+<td>$r_{p,a}=\dfrac{h^2}{GM}\dfrac{1}{1\mp e}$</td>
+</tr>
+<tr>
+<td>how fast at a given $r$?</td>
+<td>vis-viva</td>
+<td>$v^2=GM(2/r-1/a)$</td>
+</tr>
+<tr>
+<td>how long?</td>
+<td>$a$</td>
+<td>$T=2\pi\sqrt{a^3/GM}$</td>
+</tr>
+</tbody>
+</table>
+<p>The recipe that never fails: pick a point where the velocity is perpendicular to the radius (an apsis) or where the velocity is purely radial; write energy and angular momentum there; solve for the two unknowns.</p>
+<h3 id="72-gausss-law-for-gravity">7.2 Gauss's law for gravity</h3>
+<p>Because the field of a point mass falls as $1/r^2$, the flux of $\mathbf g$ through a closed surface depends only on the mass inside:</p>
+<p>$$
+\oint \mathbf g\cdot d\mathbf A=-4\pi GM_{\text{enc}}, \qquad (7.1)
+$$</p>
+<p>the gravitational analogue of Gauss's law. It is a one-line route to results you already have: a spherical Gaussian surface at radius $r$ gives $g(4\pi r^2)=4\pi GM_{\text{enc}}$, so $g=GM_{\text{enc}}/r^2$ outside a sphere and $g=GMr/R^3$ inside a uniform one. Its limitation is symmetry: it gives the field's magnitude only when the field is constant over the Gaussian surface. For the interior of a shell it gives zero flux but not zero field; that step needs the cone argument of §3.3.</p>
+<p>The deeper point, worth stating in words: an inverse-square law is exactly the statement that a source's influence spreads over the area $4\pi r^2$ of a sphere. Change the exponent and no surface integral can count sources without knowing the surface's size — and there would be no shell theorem and no closed Kepler orbits.</p>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.7 · The Gauss's law Gaussian surface for a uniform sphere</p>
-<p><em>Show:</em> a uniform sphere with a concentric spherical Gaussian surface of radius $r$ inside the sphere. The enclosed mass $M_{\text{enc}}=M(r/R)^3$ shaded. The field $\mathbf{g}$ is radial and uniform on the Gaussian surface. The integral $\oint g\,dA=g\times4\pi r^2$.
+<p><em>Show:</em> a uniform sphere with a concentric spherical Gaussian surface of radius $r$ inside the sphere. The enclosed mass $M_{\text{enc}}=M(r/R)^3$ shaded. The field $\mathbf g$ is radial and uniform on the Gaussian surface. The integral $\oint g\,dA=g\times4\pi r^2$.
 <em>Search:</em> "Gauss's law gravitational field uniform sphere Gaussian surface diagram"</p>
 </div>
 
 <h3 id="73-the-virial-theorem">7.3 The virial theorem</h3>
-<p>For a gravitationally bound system in equilibrium: $\langle K\rangle=-\frac{1}{2}\langle U\rangle$, so $\langle E\rangle=\langle K\rangle+\langle U\rangle=-\langle K\rangle=\frac{1}{2}\langle U\rangle$. This is exact for time-averaged quantities and is the foundation of stellar-structure calculations.</p>
-<h3 id="74-dimensional-analysis-for-orbital-quantities">7.4 Dimensional analysis for orbital quantities</h3>
-<p>The only combination of $G$, $M$, and $r$ that gives a speed is $\sqrt{GM/r}$. The only combination that gives a time is $\sqrt{r^3/(GM)}$. Use this to check formulas or to derive them from scratch.</p>
+<p>For any bound system held together by an inverse-square force, time averages obey</p>
+<p>$$
+2\langle K\rangle=-\langle U\rangle,\qquad \langle E\rangle=-\langle K\rangle=\frac{\langle U\rangle}{2}. \qquad (7.2)
+$$</p>
+<p>For a circular orbit this is exact at every instant (Eq. 3.27). For a general bound orbit, average the identity $\frac{d}{dt}(\mathbf r\cdot\mathbf p)=2K+U$ over one period; the left side returns to its starting value, so the time average of the right side must vanish. The theorem converts a velocity measurement into a mass: measure the stars' speeds in a galaxy cluster, and Eq. (7.2) gives the mass holding them in (OL10). Every time an astronomer says "dark matter", the arithmetic starts here.</p>
+<h3 id="74-dimensional-analysis-and-scaling">7.4 Dimensional analysis and scaling</h3>
+<p>The only speed built from $G$, $M$ and $r$ is $\sqrt{GM/r}$; the only time is $\sqrt{r^3/(GM)}$; the only density is $M/r^3$. That is why $v_c$ and $v_{\text{esc}}$ have the shapes they do, and why a grazing period can only be $\propto1/\sqrt{G\rho}$. Scaling laws worth remembering:</p>
+<table>
+<thead>
+<tr>
+<th>If you scale</th>
+<th>Then</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radius at fixed density</td>
+<td>$g\propto R$, $v_{\text{esc}}\propto R$, $T_{\text{grazing}}$ unchanged</td>
+</tr>
+<tr>
+<td>density at fixed radius</td>
+<td>$g\propto\rho$, $v_{\text{esc}}\propto\sqrt\rho$, $T_{\text{grazing}}\propto1/\sqrt\rho$</td>
+</tr>
+<tr>
+<td>orbital radius</td>
+<td>$v_c\propto r^{-1/2}$, $T\propto r^{3/2}$</td>
+</tr>
+<tr>
+<td>mass at fixed radius</td>
+<td>$g\propto M$, $v_{\text{esc}}\propto\sqrt M$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="75-the-two-body-reduction-in-one-box">7.5 The two-body reduction in one box</h3>
+<p>For two masses, replace the pair by one reduced mass $\mu=m_1m_2/(m_1+m_2)$ orbiting a fixed mass $m_1+m_2$; then $a$ means the <em>relative</em> orbit's semi-major axis and $T^2=4\pi^2a^3/G(m_1+m_2)$. The individual orbits about the centre of mass have $a_1=am_2/(m_1+m_2)$ and $a_2=am_1/(m_1+m_2)$. This is the only correction that matters for binary stars and exoplanets; for a satellite around the Earth it is a $10^{-20}$ correction.</p>
+<h3 id="76-the-conservation-ledger">7.6 The conservation ledger</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Conserved when</th>
+<th>Gives you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total energy $E$</td>
+<td>gravity is the only force doing work</td>
+<td>orbit type, $a$, speeds</td>
+</tr>
+<tr>
+<td>angular momentum $L$</td>
+<td>force is central (always, for a point mass)</td>
+<td>areal velocity, $e$, apsidal speed ratio</td>
+</tr>
+<tr>
+<td>linear momentum</td>
+<td>the system is isolated</td>
+<td>the two-body relative equation</td>
+</tr>
+<tr>
+<td>areal velocity $L/2m$</td>
+<td>any central force</td>
+<td>Kepler's second law</td>
+</tr>
+</tbody>
+</table>
+<h3 id="77-the-four-step-recipe-for-orbit-problems">7.7 The four-step recipe for orbit problems</h3>
+<ol>
+<li><strong>Draw and mark $r$ from the centre.</strong> Half of all mistakes are a surface radius used as $r$.</li>
+<li><strong>Write $E$ and $L$ at one convenient point.</strong> Use an apsis if the problem gives one.</li>
+<li><strong>Read the ledger.</strong> Orbit type from the sign of $E$, size from $E$, eccentricity from $E$ and $L$, speed from vis-viva.</li>
+<li><strong>Check one limit and the units.</strong> A result that fails $r\to R$ or $r\to\infty$, or that is not in metres per second, is wrong.</li>
+</ol>
 <h2 id="part-8-examiner-traps">Part 8 · Examiner traps</h2>
 <div class="callout danger">
 <p class="callout-title">Trap 1 — Using $g=GM/R^2$ at a height</p>
-<p>$g=GM/R^2$ is valid only at the surface. At height $h$: $g'=GM/(R+h)^2$. The linear approximation $g'=g(1-2h/R)$ is valid only for $h\ll R$.</p>
+<p>$g=GM/R^2$ is the surface value only. At height $h$, $g=GM/(R+h)^2$, and the linear form $g(1-2h/R)$ is valid only for $h\ll R$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 2 — Forgetting the minus sign in $U=-GMm/r$</p>
-<p>The potential energy is always negative for a bound system. The energy to escape is $+GMm/r$, not $-GMm/r$.</p>
+<p class="callout-title">Trap 2 — Losing the minus sign in $U=-GMm/r$</p>
+<p>The energy of a bound pair is negative. The energy needed to separate the pair is $+GMm/r$; an answer of $-GMm/r$ for "energy required to escape" has the sign backwards.</p>
 </div>
 
 <div class="callout danger">
 <p class="callout-title">Trap 3 — Using $mgh$ at orbital distances</p>
-<p>$mgh$ is the small-height approximation of $\Delta U$. At orbital distances, $h$ is not small, and you must use $U=-GMm/r$.</p>
+<p>$mgh$ is the small-height expansion of $\Delta U$. Above a few kilometres, use $\Delta U=-GMm(1/r_1-1/r_2)$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 4 — Confusing $v_{\text{esc}}$ and $v_{\text{orb}}$</p>
-<p>$v_{\text{orb}}=\sqrt{GM/r}$ for a circular orbit. $v_{\text{esc}}=\sqrt{2GM/r}=\sqrt{2}\,v_{\text{orb}}$. The factor of $\sqrt{2}$ is easy to forget.</p>
+<p class="callout-title">Trap 4 — Confusing $v_{\text{esc}}$ with $v_c$</p>
+<p>$v_{\text{esc}}=\sqrt{2GM/r}$ while $v_c=\sqrt{GM/r}$, so $v_{\text{esc}}=\sqrt2\,v_c$ <em>at the same radius</em>. Comparing escape from the surface with an orbit at some other radius, the ratio is not $\sqrt2$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 5 — Using $T^2=4\pi^2 a^3/(GM)$ for binary stars</p>
-<p>For binary stars, $M$ is replaced by $m_1+m_2$: $T^2=4\pi^2 a^3/(G(m_1+m_2))$.</p>
+<p class="callout-title">Trap 5 — Using $T^2=4\pi^2a^3/GM$ for a binary</p>
+<p>For two comparable masses, the central parameter is the total mass: $T^2=4\pi^2a^3/G(m_1+m_2)$, and $a$ is the separation of the two stars, not the distance of one from the centre of mass.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 6 — Applying the shell theorem to non-uniform shells</p>
-<p>The shell theorem applies only to uniform spherical shells. A non-uniform shell exerts a net force on interior particles.</p>
+<p class="callout-title">Trap 6 — Applying the shell theorem to a non-uniform shell</p>
+<p>The theorem needs uniform surface density. A non-uniform shell can pull on an interior particle.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 7 — Treating $g$ as constant for orbital calculations</p>
-<p>$g$ varies with altitude. For satellites in low orbit, the variation is small but not negligible for precision calculations.</p>
+<p class="callout-title">Trap 7 — Assuming $V=0$ inside a shell because $g=0$</p>
+<p>Inside a uniform shell the field is zero but the potential is the constant $-GM/R$. Escaping from inside the shell still costs energy per unit mass $GM/R$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 8 — Confusing the semi-major axis with the average radius</p>
-<p>$a=(r_p+r_a)/2$ is the semi-major axis of the ellipse, not the average radius. The time-averaged distance is different from $a$ for an elliptical orbit.</p>
+<p class="callout-title">Trap 8 — Treating the semi-major axis as an average radius</p>
+<p>$a=(r_p+r_a)/2$ is a geometric property of the ellipse, not the time-averaged distance. The time average of $r$ over an eccentric orbit is larger than $a$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 9 — Using $E=-GMm/(2r)$ for non-circular orbits</p>
-<p>For elliptical orbits, $E=-GMm/(2a)$, not $-GMm/(2r)$. Only for circular orbits does $a=r$.</p>
+<p class="callout-title">Trap 9 — Using $E=-GMm/(2r)$ for an ellipse</p>
+<p>For any ellipse $E=-GMm/(2a)$; the form with $r$ is valid only for circles, where $a=r$.</p>
 </div>
 
 <div class="callout danger">
-<p class="callout-title">Trap 10 — Forgetting that the orbit period depends on the central mass, not the satellite mass</p>
-<p>$T^2=4\pi^2 a^3/(GM)$. The satellite mass $m$ cancels — a feather and a cannonball orbit at the same period.</p>
+<p class="callout-title">Trap 10 — Thinking the period depends on the satellite's mass</p>
+<p>$m$ cancels in $T^2=4\pi^2a^3/GM$. A feather and a cannonball in the same orbit share a period.</p>
 </div>
 
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D9.8 · The energy ladder diagram for orbital transfers</p>
-<p><em>Show:</em> three energy levels: surface ($E=-GMm/R$), low orbit ($E=-GMm/(2R)$), escape ($E=0$). The energy increments $\Delta E$ between each level marked. The total energy to launch to orbit is $GMm/(2R)$, half the escape energy.
-<em>Search:</em> "energy diagram orbital transfer surface orbit escape ladder"</p>
+<div class="callout danger">
+<p class="callout-title">Trap 11 — Measuring $r$ from the surface</p>
+<p>Every formula in this chapter uses the distance from the centre. Convert altitude to radius before substituting, and convert back only at the end if the question asks for altitude.</p>
 </div>
 
-<div class="callout tip">
-<p class="callout-title">FIGURE F9.5 · The orbit energy ladder: bind, raise, escape</p>
-<p><em>Why:</em> every launch and transfer question is a difference between ladder rungs; the figure names the three energies.
-<em>Data:</em> surface $E=-GMm/R$; circular orbit $E=-GMm/2r$ (KE $= +GMm/2r$); escape $E=0$.</p>
+<div class="callout danger">
+<p class="callout-title">Trap 12 — A 24-hour geostationary satellite</p>
+<p>The period must equal the <em>sidereal</em> rotation period, 23 h 56 min 4 s, and the orbit must be equatorial and circular. Using 24 h gives a satellite that drifts westward by about $1^\circ$ per day.</p>
 </div>
 
-<pre><code class="language-mermaid">flowchart LR
-  A[&quot;surface: -GMm/R&quot;] --&gt;|&quot;launch&quot;| B[&quot;orbit: -GMm/2r&quot;]
-  B --&gt;|&quot;raise r&quot;| C[&quot;higher orbit: less negative&quot;]
-  C --&gt;|&quot;escape&quot;| D[&quot;E = 0&quot;]
-</code></pre>
-<blockquote>
-<p><em>Read:</em> bound means negative total energy; the circular energy is half the potential, and reaching zero is the escape ticket.</p>
-</blockquote>
+<div class="callout danger">
+<p class="callout-title">Trap 13 — "Escape from orbit needs the same speed as escape from the surface"</p>
+<p>It does not. Escape from radius $r$ needs $\sqrt{2GM/r}$; from a low orbit that is about 11 km/s minus the launch-to-orbit cost, and from the surface it is 11.2 km/s. Escape from a higher orbit is cheaper still.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 14 — Saying a drag-decaying satellite slows down</p>
+<p>Drag removes energy, the orbit drops, and the speed rises. The kinetic-energy increase is paid for by the larger decrease in potential energy; see Eq. (3.36) and C10.</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 15 — Forgetting the planet's own radius in surface gravity</p>
+<p>$g=GM/R^2$ needs $M$ <em>and</em> $R$. Two planets of equal mass but different radius have different surface gravity, and the smaller one holds its atmosphere better (higher $v_{\text{esc}}$).</p>
+</div>
+
+<div class="callout danger">
+<p class="callout-title">Trap 16 — Using the wrong point for Kepler's second law</p>
+<p>Equal areas are swept about the <em>central mass</em> (the focus), not about the centre of the ellipse and not about the satellite.</p>
+</div>
+
 <h2 id="part-9-playbook">Part 9 · Playbook</h2>
 <h3 id="91-triage-decision-tree">9.1 Triage decision tree</h3>
 <div class="callout tip">
 <p class="callout-title">FIGURE F9.6 · Triage — route by the keyword</p>
 <p><em>Why:</em> the keyword names the route before any number is touched.
-<em>Data:</em> the eight triage branches of §9.1.</p>
+<em>Data:</em> the eight triage branches of §9.1 — height/depth/latitude, orbital speed or period, escape or capture, geostationary, transfer, binary, tides, energy of a bound pair.</p>
 </div>
 
 <pre><code class="language-mermaid">flowchart TD
   A{&quot;What is asked?&quot;} --&gt;|&quot;g at height/depth/latitude&quot;| B[&quot;four variation formulas&quot;]
-  A --&gt;|&quot;orbital speed/period&quot;| C[&quot;v = √(GM/r), T = 2πr/v&quot;]
-  A --&gt;|&quot;escape velocity&quot;| D[&quot;v = √(2GM/R)&quot;]
-  A --&gt;|&quot;geostationary&quot;| E[&quot;r = (GMT²/4π²)^(1/3)&quot;]
+  A --&gt;|&quot;orbital speed/period&quot;| C[&quot;v = √(GM/r), T = 2π√(r³/GM)&quot;]
+  A --&gt;|&quot;escape or capture&quot;| D[&quot;energy sign; v_e = √(2GM/r)&quot;]
+  A --&gt;|&quot;geostationary&quot;| E[&quot;r = (GMT²/4π²)^(1/3), sidereal T&quot;]
   A --&gt;|&quot;orbit transfer&quot;| F[&quot;vis-viva at perigee and apogee&quot;]
-  A --&gt;|&quot;tidal force&quot;| G[&quot;ΔF ∝ M/d³&quot;]
+  A --&gt;|&quot;binary or exoplanet&quot;| G[&quot;T² = 4π²a³/G(m₁+m₂)&quot;]
+  A --&gt;|&quot;tidal or Roche&quot;| H[&quot;ΔF ∝ M/d³&quot;]
+  A --&gt;|&quot;energy or self-energy&quot;| I[&quot;E = −GMm/2a; U = −3GM²/5R&quot;]
 </code></pre>
 <blockquote>
-<p><em>Read:</em> height kills $g$ by the sphere formula, orbits live on $GM/r$, transfers ride vis-viva — each keyword has one ladder.</p>
+<p><em>Read:</em> each keyword owns one ladder: height and depth use the sphere formulas, orbits use $GM/r$, transfers use vis-viva, and tidal questions use $M/d^3$.</p>
 </blockquote>
 <ul>
-<li>"Find $g$ at height/depth/latitude": use the four variation formulas.</li>
-<li>"Orbital speed/period": $v=\sqrt{GM/r}$, $T=2\pi r/v$.</li>
-<li>"Escape velocity": $v=\sqrt{2GM/R}$.</li>
-<li>"Geostationary orbit": $r=(GMT^2/(4\pi^2))^{1/3}$.</li>
-<li>"Orbit transfer": vis-viva equation at perigee and apogee.</li>
-<li>"Binary star mass": $M=a^3/T^2$ (in solar units).</li>
-<li>"Tidal force": $\Delta F\propto M/d^3$.</li>
-<li>"Energy inside/outside a sphere": superposition or integration.</li>
+<li>"Find $g$ at height, depth or latitude": §3.5; check which of the four effects is being asked about.</li>
+<li>"Orbital speed or period": $v_c=\sqrt{GM/r}$, $T=2\pi\sqrt{r^3/GM}$.</li>
+<li>"Escape, capture, or which orbit": find the sign of the total energy, then use §3.9's ladder.</li>
+<li>"Geostationary": sidereal period, equatorial, one radius.</li>
+<li>"Transfer": the two burns of Eq. (3.37), plus the half-ellipse time.</li>
+<li>"Binary or two masses": total mass in Kepler's third law, individual orbits about the centre of mass.</li>
+<li>"Tides or Roche": differentiate $1/r^2$; use $M/d^3$.</li>
+<li>"Energy": write $E=K+U$, substitute the orbital relation, and read off.</li>
 </ul>
 <h3 id="92-formula-map-with-validity">9.2 Formula map with validity</h3>
 <table>
@@ -985,83 +2130,157 @@ $$</p>
 <tbody>
 <tr>
 <td>$g=GM/r^2$</td>
-<td>outside a sphere</td>
-<td>inside ($r&lt;R$)</td>
+<td>outside a spherically symmetric body</td>
+<td>inside the body</td>
 </tr>
 <tr>
 <td>$g=GMr/R^3$</td>
 <td>inside a uniform sphere</td>
-<td>non-uniform sphere</td>
+<td>non-uniform density</td>
 </tr>
 <tr>
-<td>$U=-GMm/r$</td>
-<td>reference at infinity</td>
-<td>finite-reference problems</td>
+<td>$V=-GM/r$</td>
+<td>outside a sphere, reference at infinity</td>
+<td>inside a shell (constant, not zero)</td>
 </tr>
 <tr>
-<td>$v=\sqrt{GM/r}$</td>
-<td>circular orbit</td>
-<td>elliptical orbit</td>
+<td>$v_c=\sqrt{GM/r}$</td>
+<td>circular orbit only</td>
+<td>any non-circular orbit</td>
 </tr>
 <tr>
-<td>$T^2=4\pi^2 a^3/(GM)$</td>
-<td>single central mass</td>
-<td>binary stars ($M\to m_1+m_2$)</td>
+<td>$v^2=GM(2/r-1/a)$</td>
+<td>any conic orbit with a fixed central mass</td>
+<td>two comparable masses (use $G(m_1+m_2)$)</td>
 </tr>
 <tr>
-<td>$v_{\text{esc}}=\sqrt{2GM/R}$</td>
-<td>from the surface</td>
-<td>from orbit</td>
+<td>$T^2=4\pi^2a^3/GM$</td>
+<td>one dominant central mass</td>
+<td>binary stars</td>
+</tr>
+<tr>
+<td>$v_e=\sqrt{2GM/r}$</td>
+<td>escape from radius $r$</td>
+<td>comparing with an orbit at a different radius</td>
+</tr>
+<tr>
+<td>$\Delta v$ of Eq. (3.37)</td>
+<td>coplanar circular orbits, two impulses</td>
+<td>inclined or non-circular orbits</td>
+</tr>
+<tr>
+<td>$d_{\text{Roche}}=2.44R_p(\rho_p/\rho_s)^{1/3}$</td>
+<td>fluid satellite, synchronous rotation ignored</td>
+<td>rigid body or fast rotation (use the order-of-magnitude balance)</td>
+</tr>
+<tr>
+<td>$T_{\text{tunnel}}=\sqrt{3\pi/G\rho}$</td>
+<td>uniform-density planet</td>
+<td>real radially varying density needs an integral</td>
 </tr>
 </tbody>
 </table>
-<h3 id="93-timing-plan">9.3 Timing plan</h3>
-<p>Sections A and B under two minutes each. Section C three minutes. Section D twelve minutes. Most gravity problems reduce to finding the right $r$ and applying the formula. The vis-viva equation is the single most useful tool.</p>
-<h3 id="94-pre-submission-audit-ten-points">9.4 Pre-submission audit, ten points</h3>
+<h3 id="93-timing-plan-for-the-paper">9.3 Timing plan for the paper</h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Questions</th>
+<th>Suggested time</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A — single correct</td>
+<td>12</td>
+<td>12 min</td>
+<td>one minute each; skip rather than guess ($-1$ for wrong)</td>
+</tr>
+<tr>
+<td>B — one or more correct</td>
+<td>8</td>
+<td>14 min</td>
+<td>check each option independently</td>
+</tr>
+<tr>
+<td>C — numerical</td>
+<td>6</td>
+<td>18 min</td>
+<td>units first, arithmetic second</td>
+</tr>
+<tr>
+<td>D — long form</td>
+<td>10</td>
+<td>110–120 min</td>
+<td>11–12 min each; write the energy equation before numbers</td>
+</tr>
+<tr>
+<td>review</td>
+<td>—</td>
+<td>16–24 min</td>
+<td>re-check units, signs, and every sub-part</td>
+</tr>
+</tbody>
+</table>
+<p>Total: 180 minutes. The section order need not be the solving order; many candidates do D first while fresh and A last.</p>
+<h3 id="94-pre-submission-audit-twelve-points">9.4 Pre-submission audit, twelve points</h3>
 <ol>
 <li>$r$: measured from the centre, not the surface.</li>
-<li>$U$: the negative sign is correct.</li>
-<li>$v_{\text{esc}}$: the factor of $\sqrt{2}$ is correct.</li>
-<li>Kepler's third law: $M$ is the central mass (or $m_1+m_2$ for binary stars).</li>
-<li>Geostationary orbit: period is one sidereal day, about 23 h 56 min (not a 24-hour mean solar day).</li>
-<li>$g$ inside a sphere: $g$ is proportional to $r$.</li>
-<li>$g$ at a depth: $g'=g(1-d/R)$, not $g(1-d/R)^2$.</li>
-<li>Energy: $E=-GMm/(2a)$ for elliptical orbits.</li>
-<li>Units consistent throughout.</li>
-<li>Every sub-part answered.</li>
+<li>$U$ and $E$: the negative signs are correct; "energy to escape" is positive.</li>
+<li>$v_{\text{esc}}$ versus $v_c$: the ratio $\sqrt2$ is applied at the same radius.</li>
+<li>Kepler's third law: $M$ means the central mass, or $m_1+m_2$ for a binary.</li>
+<li>Geostationary: sidereal day (23 h 56 min), equatorial, circular.</li>
+<li>$g$ inside a sphere: proportional to $r$; at the centre, zero.</li>
+<li>Depth: $g'=g(1-d/R)$, not $g(1-d/R)^2$.</li>
+<li>Energy of an ellipse: $E=-GMm/(2a)$, not $-GMm/(2r)$.</li>
+<li>Apsidal speeds: $v_pr_p=v_ar_a$; direction is perpendicular to the radius there.</li>
+<li>Tides: the answer varies as $1/d^3$; two bulges, not one.</li>
+<li>Units: $GM$ in m$^3$/s$^2$, radii in metres, angles in radians.</li>
+<li>Every sub-part answered, and the requested quantity (altitude or radius?) is the one given.</li>
 </ol>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D9.9 · Hohmann transfer: the tangential ellipse</p>
-<p><em>Show:</em> two concentric circular orbits (inner and outer). An ellipse connecting them, tangent to both at the transfer points. The two velocity vectors at perigee and apogee shown, along with the $\Delta v$ burns.
-<em>Search:</em> "Hohmann transfer orbit ellipse perigee apogee delta v diagram"</p>
-</div>
 <h3 id="95-strategy-notes-for-the-paper">9.5 Strategy notes for the paper</h3>
-<p>For Section A and B, the most common mistakes are: forgetting the negative sign in $U$, using $g=GM/R^2$ at altitude (instead of $g'=GM/(R+h)^2$), and confusing $v_{\text{orb}}$ with $v_{\text{esc}}$. For Section D, write the solution in logical order: identify the orbit geometry, write the energy equation, solve for the unknown, and check limits.</p>
+<p>Sections A and B punish the negative sign in $U$, the surface-only form of $g$, and the escape/circular mix-up. Section C is arithmetic: convert every distance to metres and every time to seconds before substituting, and check the magnitude against a known value (7.9 km/s for a low orbit, 11.2 km/s to escape, 42 164 km for geostationary, 84 min for a grazing orbit). Section D wants structure: identify the orbit, write energy and angular momentum at a convenient point, solve algebraically, then substitute numbers. Long-form Hohmann and binary-star questions are marked for the <em>derivation</em> as much as the number.</p>
 <h3 id="96-the-hohmann-transfer-in-detail">9.6 The Hohmann transfer in detail</h3>
-<p>The Hohmann transfer is the most energy-efficient transfer between two coplanar circular orbits. It uses an ellipse tangent to both: the perigee is at the inner orbit, the apogee is at the outer orbit. Two engine burns are needed: one at perigee to enter the transfer ellipse, one at apogee to circularise at the outer orbit.</p>
-<p>The transfer time is half the period of the transfer ellipse: $T_{\text{transfer}}=\pi\sqrt{a^3/(GM)}$ where $a=(r_1+r_2)/2$. For Earth-to-Mars: $a=1.262$ AU, $T_{\text{transfer}}=258$ days.</p>
-<p>The total $\Delta v$ depends on the orbit ratio. For $r_2/r_1=2$: $\Delta v_{\text{total}}=0.536v_1$ (about 53.6% of the inner circular speed). For $r_2/r_1=10$: $\Delta v_{\text{total}}=1.22v_1$ (more than the inner circular speed — this is why transfers to very distant orbits are expensive).</p>
+<p>The Hohmann transfer is the minimum-Δv two-impulse transfer between coplanar circular orbits. Its ellipse is tangent to both circles, with $a=(r_1+r_2)/2$, and the two burns are given by Eq. (3.37). The table in §3.12 lists $k=r_2/r_1$ from 1.5 to 10; two benchmarks to remember: a LEO-to-GEO transfer costs about 3.9 km/s of in-plane Δv and takes 5.3 h, and the heliocentric Earth-to-Mars leg costs 5.60 km/s and takes 259 days. Real missions add the Earth-escape burn, the plane change, and gravity losses, which is why a Mars launch vehicle is sized well above the ideal Δv.</p>
+<p>A plane change of angle $\Delta i$ costs $2v\sin(\Delta i/2)$ at speed $v$; doing it at the slow apoapsis of a transfer ellipse rather than in low orbit can cut the cost several-fold, which is why geostationary transfer orbits are elliptical.</p>
 <h3 id="97-common-numerical-pitfalls">9.7 Common numerical pitfalls</h3>
-<p>When computing orbital quantities, the most common numerical errors are: (1) confusing km with m — $GM$ for Earth is $3.986\times10^{14}$ m$^3$/s$^2$, not km$^3$/s$^2$; (2) forgetting that the period in Kepler's third law is in seconds, not years (unless using solar units); (3) using $g=9.8$ m/s$^2$ at the ISS altitude — the actual $g$ is about $8.7$ m/s$^2$; (4) confusing the semi-major axis with the radius — $a=(r_p+r_a)/2$, not $r_p$ or $r_a$.</p>
-<h3 id="98-the-virial-theorem-applied-to-circular-orbits">9.8 The virial theorem applied to circular orbits</h3>
-<p>For a circular orbit: $K=GMm/(2r)$, $U=-GMm/r$. The virial theorem states $2K=-U$, so $E=K+U=-K=U/2$. This is a powerful shortcut: if you know $K$, you immediately know $U$ and $E$. It applies to any $1/r^2$ force, including electrostatics (where $2K=-U$ for bound states like hydrogen).</p>
-<h3 id="99-strategy-notes-for-the-paper">9.9 Strategy notes for the paper</h3>
-<p>For Section A and B, the most common mistakes are: forgetting the negative sign in $U$, using $g=GM/R^2$ at altitude instead of $g'=GM/(R+h)^2$, and confusing $v_{\text{orb}}$ with $v_{\text{esc}}$. For Section C numerical problems, always check units and significant figures — the answer must be a single number, and rounding errors can cost marks. For Section D long-form problems, write the solution in logical order: identify the orbit geometry, write the energy equation, solve for the unknown, and check limits. The most common long-form problem is the binary-star mass measurement or the Hohmann transfer $\Delta v$ calculation.</p>
-<h3 id="910-the-free-fall-time-and-its-applications">9.10 The free-fall time and its applications</h3>
-<p>The free-fall time for a self-gravitating sphere of density $\rho$ is $t_{\text{ff}}=\sqrt{3\pi/(32G\rho)}$. This is the time it takes for a uniform cloud to collapse from rest under its own gravity. For the Sun's mean density ($1400$ kg/m$^3$): $t_{\text{ff}}\approx1700$ s $\approx28$ minutes. For a galaxy cluster ($\rho\sim10^{-26}$ kg/m$^3$): $t_{\text{ff}}\sim10^{10}$ years — comparable to the age of the universe. The free-fall time is important in star formation, supernova collapse, and the dynamics of galaxy clusters.</p>
-<h3 id="911-escape-from-a-binary-system">9.11 Escape from a binary system</h3>
-<p>A spacecraft in orbit around one star of a binary system can escape to infinity if its total energy (relative to the two-star system) is positive. The escape speed from a circular orbit of radius $r$ around one star is $v_{\text{esc}}=\sqrt{2GM/r}$ — the same as for a single star. However, if the spacecraft is at a Lagrange point, the escape speed is lower because the gravitational pulls of both stars partially cancel. The L1 point between two equal-mass stars is a saddle point of the effective potential — a small perturbation can send the spacecraft toward either star.</p>
-<div class="callout info">
-<p class="callout-title">History note — Cavendish and the measurement of $G$</p>
-<p>Henry Cavendish (1798) measured $G$ using a torsion balance with two lead spheres. His result was accurate to about 1%. The modern value is $G=6.674\times10^{-11}$ N m$^2$/kg$^2$, known to about 0.01%. $G$ is the least precisely known of the fundamental constants — because gravity is so weak, the experiment is extremely sensitive to environmental noise. Cavendish's experiment was originally designed to measure Earth's density, not $G$ — the constant was not identified as fundamental until later. The torsion balance uses two small lead spheres on a wire; the gravitational attraction between them and two larger spheres twists the wire, and the twist angle gives the force.</p>
-</div>
-
-<h3 id="912-connecting-to-other-chapters">9.12 Connecting to other chapters</h3>
-<p>The gravitational potential $V=-GM/r$ has exactly the same form as the electric potential $V=kq/r$ for a point charge (PART 24). Every result in this chapter has an exact electrostatic analogue. The key difference: gravity is always attractive, while electrostatics can be repulsive. For like charges, there are no bound orbits; for opposite charges, the orbital physics is identical to gravity. The virial theorem $2K=-U$ applies to both gravitational and electrostatic bound systems.</p>
-<h3 id="913-the-gravitational-lensing-analogy">9.13 The gravitational lensing analogy</h3>
-<p>In general relativity, light bends around massive objects, an effect called gravitational lensing. The deflection angle for a light ray passing at distance $b$ from a mass $M$ is $4GM/(bc^2)$. This is twice the Newtonian prediction because of spatial curvature in general relativity. For the Sun the deflection is about 1.75 arcseconds, first measured by Eddington in 1919 during a solar eclipse. Gravitational lensing is used today to detect dark matter and to measure the masses of galaxy clusters. The phenomenon also produces Einstein rings and arcs when a distant galaxy is aligned behind a massive foreground cluster.</p>
-<h3 id="914-connecting-to-electrodynamics">9.14 Connecting to electrodynamics</h3>
-<p>The gravitational potential $V=-GM/r$ has exactly the same form as the electric potential $V=kq/r$ for a point charge, which is covered in PART 24. Every result in this chapter has an exact electrostatic analogue. The key difference is that gravity is always attractive while electrostatics can be repulsive. For like charges there are no bound orbits, but for opposite charges the orbital physics is identical to gravity. The virial theorem $2K=-U$ applies to both gravitational and electrostatic bound systems. This mathematical parallel means that mastering gravitation now will give a head start on electrostatics later in the course.</p>
+<ul>
+<li>Kilometres versus metres: $GM_\oplus=3.986\times10^{14}$ m$^3$/s$^2$, and $1$ km$^3$/s$^2=10^9$ m$^3$/s$^2$.</li>
+<li>Solar units: $T^2=a^3/M$ only when $T$ is in years, $a$ in AU and $M$ in solar masses.</li>
+<li>The period in Kepler's third law is in seconds unless solar units are declared.</li>
+<li>$g$ at 400 km is 8.7 m/s$^2$, not 9.8.</li>
+<li>$a=(r_p+r_a)/2$, never $r_p$ or $r_a$ alone.</li>
+<li>Geostationary radius is measured from the centre; the altitude is 35 786 km and the radius 42 164 km.</li>
+</ul>
+<h3 id="98-the-virial-theorem-in-practice">9.8 The virial theorem in practice</h3>
+<p>For any gravitationally bound steady system, $2\langle K\rangle=-\langle U\rangle$. For a cluster of $N$ equal masses in a region of size $R$, $\langle K\rangle\approx\frac12M\sigma^2$ and $\langle U\rangle\approx-GM^2/R$, giving $M\approx R\sigma^2/G$ — the mass rises linearly with the measured velocity dispersion. When the mass obtained this way exceeds the visible mass by a factor of several, the gap is attributed to dark matter (OL10). The same theorem fixes the relation between a star's thermal energy and its gravitational energy, and it is the reason a contracting cloud heats up.</p>
+<h3 id="99-the-free-fall-time-and-its-applications">9.9 The free-fall time and its applications</h3>
+<p>A pressureless uniform cloud collapses in</p>
+<p>$$
+t_{\text{ff}}=\sqrt{\frac{3\pi}{32G\rho}}, \qquad (9.1)
+$$</p>
+<p>the same expression as Eq. (3.49), which is half the tunnel period. The scaling $t_{\text{ff}}\propto1/\sqrt{G\rho}$ is what matters: denser regions collapse first, which is the seed of structure formation. For a molecular cloud with $n=10^4$ cm$^{-3}$, $t_{\text{ff}}\approx0.35$ Myr; for the Sun's mean density, about 30 minutes; for a galaxy cluster's mean density, of order $10^{10}$ years. The estimate ignores pressure, rotation, magnetic fields and dark matter, so it is a lower bound on real collapse times, not a prediction of them.</p>
+<h3 id="910-escape-from-a-binary-system">9.10 Escape from a binary system</h3>
+<p>Escape from a point in a two-star system is governed by the <em>total</em> potential at that point, not by one star alone. For a spacecraft at distance $r$ from a star of mass $M$ and distance $D$ from its companion of mass $M'$, the escape speed follows from</p>
+<p>$$
+\frac12v_{\text{esc}}^2=\frac{GM}{r}+\frac{GM'}{D} \qquad (9.2)
+$$</p>
+<p>(measuring both terms from the same zero at infinity), so the companion helps you escape. Near the L1 Lagrange point the two pulls partly cancel and the escape speed is a local minimum along the line of centres; that saddle is why L1 is a good place to park a spacecraft that needs little fuel to leave, and a bad place to park one that must stay.</p>
+<h3 id="911-gravitation-and-electrostatics-the-same-mathematics-one-sign">9.11 Gravitation and electrostatics: the same mathematics, one sign</h3>
+<p>The potential $V=-GM/r$ has exactly the same form as the electric potential of a point charge, $V=kq/r$ (PART 13). Every result in this chapter has an electrostatic analogue — shells, Gauss's law, the self-energy, the $1/r$ potential — with two physical differences: electric forces can attract or repel, and like charges have no bound orbits at all. For opposite charges the orbital mathematics is identical to gravity, which is why the Bohr model and binary stars use the same Kepler formulas. The virial relation $2K=-U$ also carries over to bound electrostatic systems such as the hydrogen atom.</p>
+<h3 id="912-the-exponent-test-is-the-force-really-1r2">9.12 The exponent test: is the force really $1/r^2$?</h3>
+<p>For a general central force $F=-kr^n$, a circular orbit of radius $r$ has $mv^2/r=kr^n$, so $v\propto r^{(n+1)/2}$ and</p>
+<p>$$
+T=\frac{2\pi r}{v}\propto r^{(1-n)/2}\ \Longrightarrow\ T^2\propto r^{1-n}. \qquad (9.3)
+$$</p>
+<p>Kepler's $T^2\propto a^3$ therefore <em>measures</em> $n=-2$. If the exponent were $-3$, the period law would be $T\propto r^2$; if it were $-1$, orbits would not close at all. The same logic applied to the precession of Mercury's perihelion is one of the classical tests of general relativity, where the effective exponent acquires a tiny correction near a massive body. Beyond the syllabus, but it is the honest answer to "why is the law $1/r^2$ and not something else?" — because experiment says the exponent is $-2$ to extraordinary precision.</p>
+<h3 id="913-gravitational-lensing-enrichment">9.13 Gravitational lensing (enrichment)</h3>
+<p>In general relativity, light passing a mass $M$ at closest approach $b$ is deflected by</p>
+<p>$$
+\Delta\theta=\frac{4GM}{bc^2}, \qquad (9.4)
+$$</p>
+<p>twice the value a Newtonian corpuscle would give. For the Sun the deflection is 1.75 arcseconds, measured by Eddington in 1919. Galaxy clusters lens background galaxies into arcs and Einstein rings, and the effect is one of the standard tools for mapping dark matter. This is beyond the JEE and INPhO syllabi and is included so the word "lensing" has a defined meaning when you meet it.</p>
 <h2 id="part-10-olympiad-extension">Part 10 · Olympiad extension</h2>
 <h3 id="ol1-shell-theorem-by-gausss-law-for-gravity">OL1 — Shell theorem by Gauss's law for gravity</h3>
 <p>Explain why Gauss's law for gravity alone does not prove that the field inside a uniform spherical shell is zero, then establish the interior result using spherical-shell integration (see §3.3).</p>
@@ -1084,11 +2303,15 @@ $$</p>
 <p><strong>Method.</strong> Transfer ellipse: $a=(r_1+r_2)/2=1.262$ AU. At perigee: $v_p=\sqrt{GM(2/r_1-1/a)}$. At apogee: $v_a=\sqrt{GM(2/r_2-1/a)}$. Circular orbit speeds: $v_1=\sqrt{GM/r_1}$, $v_2=\sqrt{GM/r_2}$. $\Delta v_1=v_p-v_1$, $\Delta v_2=v_2-v_a$. Using $v_1\approx29.8$ km/s and $v_2\approx24.1$ km/s: $\Delta v_1=29.8[\sqrt{2-1/1.262}-1]\approx2.95$ km/s; $\Delta v_2=24.1-29.8\sqrt{2/1.524-1/1.262}\approx2.65$ km/s. Total: approximately $5.60$ km/s.</p>
 </details>
 <h3 id="ol4-gravity-assist-slingshot-mechanism">OL4 — Gravity assist (slingshot) mechanism</h3>
-<p>A spacecraft approaches Jupiter in a head-on collision geometry (from Jupiter's perspective). Show how the spacecraft gains speed by stealing Jupiter's orbital momentum.</p>
+<p>A spacecraft approaches Jupiter head-on (in Jupiter's frame) and is deflected through a large angle. Show how it can gain speed in the Sun's frame, and find the maximum gain.</p>
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> In Jupiter's rest frame, the spacecraft's speed is unchanged (elastic scattering in Jupiter's gravity). But Jupiter is moving in the Sun's frame at $v_J=13.1$ km/s. If the spacecraft approaches head-on: in Jupiter's frame, the spacecraft speed is $v_s+v_J$. After the encounter, it leaves at speed $v_s+v_J$ in the opposite direction. In the Sun's frame: $v_{\text{after}}=2v_J+v_s$. The spacecraft gains $2v_J$ — a huge boost. This is how Voyager missions reached the outer solar system.</p>
-<p><strong>Significance.</strong> Gravity assist transfers momentum from the planet to the spacecraft. The planet's orbit changes negligibly because $M_{\text{planet}}\gg m_{\text{spacecraft}}$.</p>
+<p><strong>Method.</strong> Work in Jupiter's rest frame, where the encounter is elastic: the relative speed is unchanged, $|\mathbf u_{\text{out}}|=|\mathbf u_{\text{in}}|=u$. The spacecraft's speed in the Sun's frame is the vector sum $\mathbf v_J+\mathbf u$, and both terms are unchanged in magnitude; only the <em>direction</em> of $\mathbf u$ changes. When the deflection reverses $\mathbf u$ (a head-on approach with a near-180° turn), the vectors $2\mathbf v_J$ and $\mathbf u$ align, giving</p>
+<p>$$
+|\mathbf v_{\text{out}}|=v_J+u=v_J+(v_s+v_J)=v_s+2v_J.
+$$</p>
+<p>The gain is at most $2v_J$, and it requires the incoming relative velocity to be nearly antiparallel to $\mathbf v_J$ (the spacecraft must overtake the planet from behind in the planet's frame of reference). For Jupiter, $2v_J=26$ km/s — enough to throw a probe from the inner solar system to Neptune.</p>
+<p><strong>Significance.</strong> The planet supplies momentum and a tiny amount of orbital energy; its own orbit shifts by an unmeasurably small amount because $M_{\text{planet}}\gg m_{\text{spacecraft}}$. Gravity assists can also <em>remove</em> speed: the same triangle run in reverse is an aerobrake-free way to drop into an inner orbit.</p>
 </details>
 <h3 id="ol5-the-roche-limit-and-tidal-disruption">OL5 — The Roche limit and tidal disruption</h3>
 <p>Derive the Roche limit: the distance at which a satellite is torn apart by tidal forces.</p>
@@ -1127,25 +2350,44 @@ $$</p>
 <summary>Solution</summary>
 <p><strong>Method.</strong> By the virial theorem: $2\langle K\rangle=-\langle U\rangle$. $\langle K\rangle=\frac{1}{2}M\sigma^2$, $\langle U\rangle=-GM^2/R$. So $M\sigma^2=GM^2/R$, $M=R\sigma^2/G$. $M=3.086\times10^{22}\times(10^6)^2/6.674\times10^{-11}=4.6\times10^{44}$ kg $\approx2\times10^{14}M_\odot$. This is typical for galaxy clusters — and it is much larger than the visible mass, providing evidence for dark matter.</p>
 </details>
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D9.10 · The effective potential curve for gravitational orbits</p>
-<p><em>Show:</em> $U_{\text{eff}}(r)=-GMm/r+L^2/(2mr^2)$ plotted vs $r$. The minimum at $r_0$ marked. Four horizontal lines: $E=E_{\min}$ (circular), $E_{\min}&lt;E&lt;0$ (elliptical, two turning points), $E=0$ (parabolic), $E&gt;0$ (hyperbolic).
-<em>Search:</em> "effective potential gravitational orbit circular elliptical parabolic hyperbolic diagram"</p>
-</div>
-
+<h3 id="ol11-satellite-drag-the-spiral-in-rate">OL11 — Satellite drag: the spiral-in rate</h3>
+<p>A satellite of mass $m$ in a near-circular orbit of radius $r$ feels a drag force $F_d$ opposing its motion. (a) Find the decrease in orbital radius per revolution. (b) Find the time to spiral inward a small distance $\Delta r$. (c) Estimate (a) for the ISS with $F_d\approx0.06$ N, $m=4.2\times10^5$ kg, $r=6771$ km.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method (a).</strong> Drag does work $-F_d(2\pi r)$ per revolution, and for a circular orbit $E=-GMm/(2r)$, so $dE=(GMm/2r^2)\,dr$. Equating,</p>
+<p>$$
+\Delta r_{\text{per rev}}=-\frac{2r^2}{GMm}F_d(2\pi r)=-\frac{4\pi r^3F_d}{GMm}. \qquad (10.1)
+$$</p>
+<p><strong>Method (b).</strong> Divide by the orbital period $T=2\pi\sqrt{r^3/GM}$ to get the average rate:</p>
+<p>$$
+\frac{dr}{dt}=\frac{\Delta r_{\text{per rev}}}{T}=-\frac{2F_d\,r^{3/2}}{m\sqrt{GM}}. \qquad (10.2)
+$$</p>
+<p>With drag roughly constant, $t=\Delta r/\lvert dr/dt\rvert$; because the atmosphere thickens as $r$ falls, the real spiral accelerates.</p>
+<p><strong>Method (c).</strong> Substituting the ISS numbers,</p>
+<p>$$
+\lvert\Delta r_{\text{per rev}}\rvert=\frac{4\pi(6.771\times10^6)^3(0.06)}{(3.986\times10^{14})(4.2\times10^5)}=1.4\ \text{m},
+$$</p>
+<p>about 0.7 km per month. That is why the ISS is reboosted several times a year.</p>
+<p><strong>Significance.</strong> The energy argument settles the "speeds up or slows down" paradox without any force diagram: drag removes energy, the orbit drops, and the speed rises.</p>
+</details>
+<h3 id="ol12-the-oberth-effect">OL12 — The Oberth effect</h3>
+<p>A spacecraft at perigee of an eccentric orbit has speed $v_p$; at apogee its speed is $v_a\ll v_p$. It fires the same engine burn $\Delta v$ (parallel to the velocity) at each point in turn. Compare the changes in orbital energy, and explain why interplanetary departures burn at perigee.</p>
+<details>
+<summary>Solution</summary>
+<p><strong>Method.</strong> Specific orbital energy is $\varepsilon=\frac12v^2-GM/r$, so a burn $\Delta v$ along the velocity changes it by</p>
+<p>$$
+\Delta\varepsilon=v\,\Delta v+\tfrac12(\Delta v)^2. \qquad (10.3)
+$$</p>
+<p>At perigee the change is $v_p\Delta v$; at apogee it is only $v_a\Delta v$. If $v_p=10$ km/s and $v_a=1$ km/s, the same burn buys ten times more energy deep in the well. The effect is largest where the spacecraft moves fastest — hence the standard mission design: drop into an ellipse, then make the big departure burn at perigee.</p>
+<p><strong>Check.</strong> For $\Delta v\ll v$ the quadratic term is negligible; for $\Delta v=v$ the expression gives $\frac32v^2$, correctly doubling the kinetic energy from $\frac12v^2$ to $2v^2$. ✓</p>
+</details>
 <div class="callout abstract">
 <p class="callout-title">DIAGRAM D9.11 · The Lagrange points of the Sun–Earth system</p>
 <p><em>Show:</em> the Sun and Earth with the five Lagrange points (L1–L5) marked. L1 between them, L2 beyond Earth, L3 opposite Earth, L4 and L5 at the equilateral-triangle points ($60°$ ahead and behind).
 <em>Search:</em> "Lagrange points Sun Earth system L1 L2 L3 L4 L5 diagram"</p>
 </div>
 
-<div class="callout abstract">
-<p class="callout-title">DIAGRAM D9.12 · The gravity-assist slingshot in the Sun's frame</p>
-<p><em>Show:</em> Jupiter moving in its orbit. A spacecraft approaches from behind, swings around Jupiter, and leaves with higher speed in the Sun's frame. The spacecraft's trajectory curved by Jupiter's gravity. The velocity vectors before and after shown in both Jupiter's frame and the Sun's frame.
-<em>Search:</em> "gravity assist slingshot spacecraft Jupiter velocity change diagram"</p>
-</div>
-
-<h3 id="102-limits-and-failure-of-the-model">10.2 Limits and failure of the model</h3>
+<h3 id="1013-limits-and-failure-of-the-newtonian-model">10.13 Limits and failure of the Newtonian model</h3>
 <p>Newtonian gravity is exact for weak fields and low speeds ($v\ll c$). In strong fields (near black holes), general relativity is needed. In quantum mechanics, gravity is thought to be mediated by gravitons — but a complete quantum theory of gravity does not yet exist. For JEE and INPhO, Newtonian gravity is sufficient for all problems. IPhO may occasionally probe relativistic corrections (e.g., GPS satellite timing), but these are rare.</p>
 <h2 id="part-11-olympiad-grade-paper">Part 11 · Olympiad-grade paper</h2>
 <p><strong>Time: 180 minutes · Maximum marks: 200 · 36 questions.</strong>
@@ -1242,11 +2484,11 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <p>(b). Equal areas in equal times is equivalent to $dA/dt=L/(2m)=$ const, which is angular momentum conservation.</p>
 </details>
 <h3 id="p7-4-marks">P7 · 4 marks</h3>
-<p>The period of a geostationary satellite is:
+<p>The period of a geostationary satellite is closest to:
 (a) 12 hours (b) 24 hours (c) 365 days (d) 1 year</p>
 <details>
 <summary>Answer</summary>
-<p>(b). One sidereal day (about 23 h 56 min) — the satellite must match Earth's rotation relative to the stars.</p>
+<p>(b). More precisely it is one sidereal day, about 23 h 56 min — the satellite must match the Earth's rotation relative to the stars, not the mean Sun.</p>
 </details>
 <h3 id="p8-4-marks">P8 · 4 marks</h3>
 <p>The energy of a satellite in a circular orbit of radius $r$ is:
@@ -1307,10 +2549,10 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 </details>
 <h3 id="p16-4-marks">P16 · 4 marks</h3>
 <p>Which of the following are required for a satellite to be geostationary?
-(a) Orbit in the equatorial plane (b) Period of 24 hours (c) Circular orbit (d) Altitude of 35,786 km</p>
+(a) Orbit in the equatorial plane (b) Period equal to the sidereal rotation period (c) Circular orbit (d) Altitude of 35,786 km</p>
 <details>
 <summary>Answer</summary>
-<p>(a), (b), (c), (d). All four are necessary.</p>
+<p>(a), (b), (c), (d). The period condition (b) is one sidereal day, 23 h 56 min, not 24 h; the altitude (d) follows from it, and all four conditions are necessary.</p>
 </details>
 <h3 id="p17-4-marks">P17 · 4 marks</h3>
 <p>The Schwarzschild radius $r_s=2GM/c^2$. For which of the following is $r_s$ well-defined?
@@ -1360,10 +2602,10 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <p>$E\propto-1/r$. $E_3/E_1=R_E/(3R_E)=1/3$.</p>
 </details>
 <h3 id="p24-5-marks">P24 · 5 marks</h3>
-<p>Find the geostationary orbit altitude above Earth. ($M_E=5.97\times10^{24}$ kg, $R_E=6370$ km.) Give your answer in km.</p>
+<p>Find the geostationary orbit altitude above Earth. Use the sidereal day $T=86164$ s and the equatorial radius $R_E=6378$ km. ($M_E=5.97\times10^{24}$ kg.) Give your answer in km.</p>
 <details>
 <summary>Answer</summary>
-<p>$r=(GMT^2/(4\pi^2))^{1/3}=42164$ km. Altitude $=42164-6370=35794$ km.</p>
+<p>$r=(GMT^2/(4\pi^2))^{1/3}=42\,164$ km. Altitude $=42\,164-6378=35\,786$ km.</p>
 </details>
 <h3 id="p25-5-marks">P25 · 5 marks</h3>
 <p>Find the period of a binary star with $a=3$ AU and $M_{\text{total}}=2M_\odot$. Give your answer in years.</p>
@@ -1433,10 +2675,15 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 <p><strong>Method.</strong> $F_{\text{tidal}}=2GM_{\text{Moon}}m r_E/d^3$. With $d=3.84\times10^8$ m, $r_E=6.37\times10^6$ m: $F_{\text{tidal}}/m=2\times6.674\times10^{-11}\times7.35\times10^{22}\times6.37\times10^6/(3.84\times10^8)^3=1.1\times10^{-6}$ m/s$^2$. If $d$ is halved: $F_{\text{tidal}}\propto1/d^3$, so the tidal force increases by $2^3=8$ times. This would cause catastrophic tides.</p>
 </details>
 <h3 id="p36-9-marks">P36 · 9 marks</h3>
-<p>A satellite of mass $m$ is in a circular orbit of radius $r$. It fires its engines radially inward, reducing its speed by a small amount $\Delta v$. Describe the resulting orbit and find the new perigee.</p>
+<p>A satellite of mass $m$ is in a circular orbit of radius $r$. It fires its engine tangentially, opposite to its motion (a small retroburn $\Delta v\ll\sqrt{GM/r}$). Describe the resulting orbit and find the new perigee.</p>
 <details>
 <summary>Solution</summary>
-<p><strong>Method.</strong> After the impulse: $v'=v-\Delta v$ where $v=\sqrt{GM/r}$. The new orbit is an ellipse with the current position as the apogee (the speed is now less than circular). Using angular momentum: $L'=m(v-\Delta v)r$. The new semi-major axis: $1/a'=2/r-v'^2/(GM)$. The new perigee: $r_p=2a'-r$. For small $\Delta v$: $r_p\approx r(1-4\Delta v/v)$ — the perigee is significantly lower.</p>
+<p><strong>Method.</strong> After the tangential impulse the speed is $v'=v-\Delta v$ with $v=\sqrt{GM/r}$, which is less than the circular speed at $r$; so $r$ becomes the apoapsis of a new ellipse. Angular momentum is $L'=m(v-\Delta v)r$, and the new semi-major axis satisfies</p>
+<p>$$
+\frac{1}{a'}=\frac{2}{r}-\frac{v'^2}{GM}=\frac{1}{r}\left(1+\frac{2\Delta v}{v}\right)+O(\Delta v^2).
+$$</p>
+<p>Hence $a'\approx r(1-2\Delta v/v)$ and the perigee is $r_p=2a'-r\approx r\left(1-\dfrac{4\Delta v}{v}\right)$: even a small retroburn lowers the perigee by four times the fractional speed change. If $4\Delta v/v$ makes $r_p$ smaller than the planet's radius, the satellite re-enters.</p>
+<p><strong>Check.</strong> For $\Delta v/v=0.005$ (a 38 m/s retroburn in LEO), the perigee drops by 2%, about 135 km — which is why small deorbit burns work. ✓</p>
 </details>
 <h2 id="part-12-marking-scheme-and-post-paper-audit">Part 12 · Marking scheme and post-paper audit</h2>
 <table>
@@ -1483,76 +2730,222 @@ Sections: A — 12 single-correct (4 marks each, −1 for a wrong answer); B —
 </table>
 <p><strong>Post-paper audit:</strong> After completing the paper, check: (1) Did I answer every question? (2) For Section A, did I guess or skip? ($-1$ for wrong, so skip if unsure.) (3) For Section C, are my numerical answers in the correct units? (4) For Section D, did I show all steps? (partial credit is available.)</p>
 <h2 id="part-13-formula-sheet">Part 13 · Formula sheet</h2>
+<p>Three A4 pages when printed; every entry carries its condition of use. If you cannot state the condition, you do not yet own the formula.</p>
+<p><strong>The law, field and potential.</strong></p>
 <table>
 <thead>
 <tr>
 <th>Formula</th>
-<th>Validity</th>
+<th>Valid when</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>$F=GMm/r^2$</td>
-<td>inverse-square law</td>
+<td>point masses or spherically symmetric bodies, $r\gg$ sizes, $v\ll c$</td>
 </tr>
 <tr>
-<td>$g=GMr/R^3$ (inside), $g=GM/r^2$ (outside)</td>
-<td>uniform sphere</td>
+<td>$\mathbf g=-GM\hat{\mathbf r}/r^2$, $V=-GM/r$</td>
+<td>point mass, or outside any sphere; $V(\infty)=0$</td>
 </tr>
 <tr>
-<td>$V=-GM/r$</td>
-<td>gravitational potential</td>
+<td>$V=-\frac{GM}{2R^3}(3R^2-r^2)$, $g=GMr/R^3$</td>
+<td>inside a uniform sphere</td>
+</tr>
+<tr>
+<td>$g=0$, $V=-GM/R$</td>
+<td>inside a uniform thin shell</td>
+</tr>
+<tr>
+<td>cavity field $=\frac{4\pi G\rho}{3}c$</td>
+<td>spherical cavity in a uniform sphere; $c$ from centre to cavity centre</td>
+</tr>
+<tr>
+<td>$g(h)=gR^2/(R+h)^2$</td>
+<td>above the surface; linear form only for $h\ll R$</td>
+</tr>
+<tr>
+<td>$g(d)=g(1-d/R)$</td>
+<td>depth in a uniform-density body</td>
+</tr>
+<tr>
+<td>$g_{\text{eff}}=g-\omega^2R\cos^2\lambda$</td>
+<td>rotating spherical body, radial component only</td>
 </tr>
 <tr>
 <td>$U=-GMm/r$</td>
-<td>reference at infinity</td>
+<td>pair, reference at infinity</td>
 </tr>
 <tr>
-<td>$v_{\text{esc}}=\sqrt{2GM/R}$</td>
-<td>from surface</td>
+<td>$U_{\text{self}}=-\frac35GM^2/R$</td>
+<td>uniform sphere of mass $M$, radius $R$</td>
 </tr>
+</tbody>
+</table>
+<p><strong>Orbits and energy.</strong></p>
+<table>
+<thead>
 <tr>
-<td>$v=\sqrt{GM/r}$</td>
+<th>Formula</th>
+<th>Valid when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v_c=\sqrt{GM/r}$, $T=2\pi\sqrt{r^3/GM}$</td>
 <td>circular orbit</td>
 </tr>
 <tr>
-<td>$E=-GMm/(2r)$</td>
-<td>circular orbit</td>
+<td>$E=-\frac{GMm}{2r}$, $L=m\sqrt{GMr}$</td>
+<td>circular orbit only</td>
+</tr>
+<tr>
+<td>$E=-\frac{GMm}{2a}$</td>
+<td>any ellipse (and hyperbola with $a&lt;0$)</td>
 </tr>
 <tr>
 <td>$v^2=GM(2/r-1/a)$</td>
-<td>vis-viva</td>
+<td>vis-viva; any conic, one dominant central mass</td>
 </tr>
 <tr>
-<td>$T^2=4\pi^2 a^3/(GM)$</td>
-<td>Kepler's third law</td>
+<td>$v_pr_p=v_ar_a$</td>
+<td>any orbit, at the two apsides</td>
 </tr>
 <tr>
-<td>$r_{\text{geo}}=(GMT^2/(4\pi^2))^{1/3}$</td>
-<td>geostationary</td>
+<td>$v_p=\sqrt{\frac{GM}{a}\frac{1+e}{1-e}}$, $v_a=\sqrt{\frac{GM}{a}\frac{1-e}{1+e}}$</td>
+<td>apsidal speeds</td>
+</tr>
+<tr>
+<td>$r_p=a(1-e)$, $r_a=a(1+e)$, $p=a(1-e^2)=b^2/a$</td>
+<td>ellipse geometry</td>
+</tr>
+<tr>
+<td>$e=\sqrt{1+2\varepsilon h^2/(GM)^2}$</td>
+<td>any conic, from specific energy and angular momentum</td>
+</tr>
+<tr>
+<td>$v_{\text{esc}}=\sqrt{2GM/r}=\sqrt2\,v_c$</td>
+<td>escape from radius $r$; the $\sqrt2$ compares with $v_c$ at the same $r$</td>
+</tr>
+<tr>
+<td>$v_\infty=\sqrt{v^2-v_{\text{esc}}^2}$</td>
+<td>hyperbolic excess speed</td>
+</tr>
+<tr>
+<td>$E_{\text{surface}}=-\frac{GMm}{R}$, $E_{\text{orbit}}=-\frac{GMm}{2R}$, $E_{\text{escape}}=0$</td>
+<td>launch ladder, low circular orbit</td>
+</tr>
+<tr>
+<td>$v_{\text{rms}}=\sqrt{3\mathcal RT/M_{\text{mol}}}\lesssim v_{\text{esc}}/6$</td>
+<td>atmosphere retention, order-of-magnitude</td>
+</tr>
+<tr>
+<td>$T=\sqrt{3\pi/G\rho}$</td>
+<td>grazing orbit or deep tunnel, uniform density</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kepler and systems.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\frac{dA}{dt}=\frac{L}{2m}$</td>
+<td>any central force</td>
+</tr>
+<tr>
+<td>$T^2=\frac{4\pi^2a^3}{GM}$</td>
+<td>one dominant central mass</td>
+</tr>
+<tr>
+<td>$T^2=\frac{4\pi^2a^3}{G(m_1+m_2)}$</td>
+<td>two-body relative orbit; $a$ is the separation</td>
+</tr>
+<tr>
+<td>$a_1=am_2/(m_1+m_2)$, $a_2=am_1/(m_1+m_2)$</td>
+<td>binary, about the centre of mass</td>
+</tr>
+<tr>
+<td>$v_i=2\pi a_i\sin i/T$</td>
+<td>radial-velocity amplitude of each star</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Manoeuvres and gravity's reach.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Valid when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\Delta v_1=v_1!\left(\sqrt{\frac{2r_2}{r_1+r_2}}-1\right)$, $\Delta v_2=v_2!\left(1-\sqrt{\frac{2r_1}{r_1+r_2}}\right)$</td>
+<td>coplanar Hohmann transfer, circular ends</td>
+</tr>
+<tr>
+<td>$t_{\text{Hohmann}}=\pi\sqrt{a^3/GM}$, $a=(r_1+r_2)/2$</td>
+<td>half the transfer ellipse</td>
+</tr>
+<tr>
+<td>$\Delta v_{\text{plane}}=2v\sin(\Delta i/2)$</td>
+<td>rotation of the velocity vector only</td>
+</tr>
+<tr>
+<td>$\Delta\varepsilon=v\Delta v+\frac12(\Delta v)^2$</td>
+<td>Oberth: burn along the velocity</td>
+</tr>
+<tr>
+<td>$\Delta F_{\text{tidal}}=2GMmr_s/d^3$</td>
+<td>$r_s\ll d$</td>
 </tr>
 <tr>
 <td>$d_{\text{Roche}}=2.44R_p(\rho_p/\rho_s)^{1/3}$</td>
-<td>Roche limit</td>
+<td>fluid satellite; rigid estimate is $R_p(2\rho_p/\rho_s)^{1/3}$</td>
+</tr>
+<tr>
+<td>$t_{\text{ff}}=\sqrt{3\pi/(32G\rho)}$</td>
+<td>pressureless uniform cloud</td>
+</tr>
+<tr>
+<td>$r_s=2GM/c^2$</td>
+<td>Newtonian coincidence for the Schwarzschild radius; use with care</td>
 </tr>
 </tbody>
 </table>
 <h2 id="part-14-checkpoint-and-hand-off">Part 14 · Checkpoint and hand-off</h2>
 <h3 id="141-mastery-checklist">14.1 Mastery checklist</h3>
+<p>Tick only what you can do <em>without</em> looking back.</p>
 <ul>
-<li>[ ] I can prove the shell theorem (by integration and by Gauss's law).</li>
-<li>[ ] I can compute $g$ inside/outside spheres, shells and cavities.</li>
-<li>[ ] I can derive all four $g$ variations (altitude, depth, latitude, rotation).</li>
-<li>[ ] I can use $U=-GMm/r$ and the vis-viva equation.</li>
-<li>[ ] I can derive Kepler's three laws.</li>
-<li>[ ] I can solve geostationary-orbit and Hohmann-transfer problems.</li>
-<li>[ ] I can analyse binary stars and gravity-assist manoeuvres.</li>
-<li>[ ] I understand tidal forces and the Roche limit.</li>
-<li>[ ] I can apply the virial theorem to bound systems.</li>
-<li>[ ] I can derive the Schwarzschild radius and the Lagrange points.</li>
+<li>[ ] I can state the inverse-square law and reproduce the Moon-test numerical argument.</li>
+<li>[ ] I can define field and potential, derive $V=-GM/r$ by integration, and explain why $V=0$ only at infinity.</li>
+<li>[ ] I can prove the shell theorem with the cone argument and with the ring integral.</li>
+<li>[ ] I can derive $g$ and $V$ inside and outside a uniform sphere, the centre value $-3GM/2R$, and the uniform field inside a spherical cavity.</li>
+<li>[ ] I can derive all four $g$ variations and quote their numbers.</li>
+<li>[ ] I can derive $U=-GMm/r$ and the self-energy $-3GM^2/5R$.</li>
+<li>[ ] I can derive all three Kepler laws from angular momentum and energy.</li>
+<li>[ ] I can derive $v_c$, $E=-GMm/2r$, and explain the factor $\tfrac12$.</li>
+<li>[ ] I can derive the escape speed, classify an orbit from its energy and speed, and apply the atmosphere-retention criterion.</li>
+<li>[ ] I can derive the vis-viva equation and the apsidal speeds from the two conservation laws.</li>
+<li>[ ] I can derive the geostationary radius with the sidereal day.</li>
+<li>[ ] I can compute both Hohmann burns, the plane-change cost, and explain the Oberth effect.</li>
+<li>[ ] I can reduce a two-body problem, use $m_1+m_2$ in Kepler's third law, and analyse a gravity assist.</li>
+<li>[ ] I can estimate tidal forces, the Roche limit, the tunnel period and the free-fall collapse time.</li>
+<li>[ ] I can state the validity condition for every boxed result in Part 4.</li>
 </ul>
-<h3 id="142-what-comes-next">14.2 What comes next</h3>
-<p>PART 10 (Simple Harmonic Motion) uses the energy methods from this chapter (specifically, $U(x)$ and $F=-dU/dx$) to study oscillations about equilibrium. The concept of stable equilibrium ($U''&gt;0$) is the foundation of SHM. The orbital mechanics from this chapter also connects to PART 24 (Electrostatics), where the $1/r^2$ force gives the same orbital physics but with opposite sign for like charges.</p>
+<h3 id="142-where-to-go-next">14.2 Where to go next</h3>
+<ul>
+<li><strong>If you missed the energy ledger</strong>, re-read §3.8–§3.10 and redo E4, E7 and Q29 before touching the paper.</li>
+<li><strong>If the shell theorem proof felt slippery</strong>, redraw the cone construction yourself and redo the algebra of Eq. (3.9) from memory.</li>
+<li><strong>If transfers confuse you</strong>, memorise the <em>shape</em> of the Hohmann answer (first burn faster, second burn faster still) and rebuild the formulas from the vis-viva equation rather than recalling them.</li>
+</ul>
+<p><strong>Hand-off.</strong> PART 10 (Simple Harmonic Motion) uses the same energy method on $U(x)$: the deep-tunnel oscillation of §3.14 is the worked example of SHM about a stable equilibrium. PART 7 (centre of mass and momentum) supplies the two-body reduction used in §3.13. <a href="electrostatics.html">The electrostatics module</a> reuses the shell theorem, Gauss's law, the $1/r$ potential and the self-energy with the sign of the interaction flipped, and the fluid mechanics of PART 11 uses gravitational pressure and buoyancy throughout.</p>
     <footer class="pager"><a href="rotational-mechanics.html">← Rotational mechanics</a><a href="simple-harmonic-motion.html">Simple harmonic motion →</a></footer>
     <p class="colophon">Rendered from <code>gravitation/Gravitation.md</code> by <code>tools/md_site.py</code>.
     Fully offline: diagrams are local SVGs, maths is vendored KaTeX.

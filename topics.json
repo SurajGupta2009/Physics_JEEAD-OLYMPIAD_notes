@@ -1367,16 +1367,16 @@
       "dependency": [
         "rotational-mechanics"
       ],
-      "words": 10044,
-      "display_formulas": 15,
-      "bytes_markdown": 73681,
+      "words": 20772,
+      "display_formulas": 86,
+      "bytes_markdown": 145550,
       "pages": [
         "Gravitation.md"
       ],
       "figures": 12,
-      "questions": 47,
-      "solutions": 93,
-      "math_spans": 815,
+      "questions": 70,
+      "solutions": 118,
+      "math_spans": 1610,
       "bytes_html": 0,
       "content_revision": {
         "date": "2026-10-02",
