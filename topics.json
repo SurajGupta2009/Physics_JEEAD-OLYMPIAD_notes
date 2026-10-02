@@ -1377,7 +1377,13 @@
       "questions": 47,
       "solutions": 93,
       "math_spans": 815,
-      "bytes_html": 0
+      "bytes_html": 0,
+      "content_revision": {
+        "date": "2026-10-02",
+        "base_commit": "41e2c4ec27143b9f12da5fcebc522fd3b46ec51c",
+        "allow_rewrite": true,
+        "note": "Editorial revision: theory restructured into plan.md PART 9 teaching order with derivations for the shell theorem, the g variations, the self-energy, Kepler's laws, escape and capture, transfers, the two-body reduction and the tunnel/collapse estimates; worked-example, practice and paper repairs. Diagram scene files and figures.json 'drawings' records are unchanged; the Mermaid figure list gained F9.7-F9.8."
+      }
     },
     {
       "part": 10,
