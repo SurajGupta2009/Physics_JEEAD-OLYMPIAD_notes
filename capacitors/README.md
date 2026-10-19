@@ -20,6 +20,21 @@ or, to browse with the interactive features (theme switch, progress ticks, solve
 cd capacitors && python3 -m http.server 8000
 ```
 
+## Handwritten-style visual revision
+
+The A4, 300 DPI short notes are now ordered by **relevance rather than difficulty**:
+
+1. **Part I — JEE Mains + Advanced: 11 sheets.** Core capacitor concepts, explanatory one-liners, useful harder applications, networks, dielectrics and ordinary RC problems.
+2. **Part II — Olympiad / extensions: 6 sheets.** Specialised material response, AC applications, coupled dynamics, matrix/image/conformal methods and instability theory. Former mixed pages 12 and 14 are in this part.
+
+- [JEE PNG ZIP](../short%20notes/capacitors-jee-pngs.zip) · [JEE A4 PDF](../short%20notes/capacitors-jee.pdf)
+- [Olympiad PNG ZIP](../short%20notes/capacitors-olympiad-pngs.zip) · [Olympiad A4 PDF](../short%20notes/capacitors-olympiad.pdf)
+- [Grouped offline gallery](../short%20notes/index.html)
+- [Combined 17-sheet ZIP](../short%20notes/capacitors-a4-pngs.zip) · [Combined A4 PDF](../short%20notes/capacitors-short-notes.pdf)
+- [Scope decisions and previous-page mapping](../short%20notes/SCOPE.md)
+
+The PNGs live in root-level `short notes/JEE/` and `short notes/Olympiad/`. All combined exports place JEE first. This is a chapter-focused study grouping, not an assertion that basic AC is absent from the overall JEE syllabus. Retain the full chapter for proofs and worked solutions.
+
 ## What is in the folder
 
 `Capacitors.html` is the only HTML file in this folder. It contains the overview, all theory sections,
