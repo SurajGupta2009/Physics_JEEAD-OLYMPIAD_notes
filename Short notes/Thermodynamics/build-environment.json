@@ -1,0 +1,11 @@
+{
+  "python": "3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]",
+  "platform": "Linux-6.1.158+-x86_64-with-glibc2.36",
+  "packages": {
+    "Pillow": "12.3.0",
+    "matplotlib": "3.11.2",
+    "numpy": "2.4.6",
+    "reportlab": "4.5.1",
+    "pypdf": "6.21.1"
+  }
+}
