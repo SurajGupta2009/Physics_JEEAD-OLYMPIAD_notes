@@ -1,0 +1,3186 @@
+[
+  {
+    "section": "JEE",
+    "part_page": 1,
+    "slug": "JEE-01-kinematics",
+    "title": "Rigid motion: geometry first",
+    "subtitle": "Use the laboratory ground frame unless stated. In planar motion, +z points out of the sheet.",
+    "source": "§§2, 3.1–3.2; D8.1",
+    "diagrams": [
+      "velocity",
+      "acceleration"
+    ],
+    "takeaway": "A point can have zero instantaneous velocity without having zero acceleration.",
+    "cards": [
+      {
+        "title": "One body, one angular speed",
+        "items": [
+          [
+            "p",
+            "Rigidity means all pairwise distances stay fixed. Translation carries the centre of mass C; rotation describes motion relative to C."
+          ],
+          [
+            "m",
+            "\\vec v_P=\\vec v_C+\\vec\\omega\\times\\vec r_{P/C}"
+          ],
+          [
+            "why",
+            "The relative velocity is perpendicular to the line joining two body points: no change in their separation."
+          ],
+          [
+            "trap",
+            "Equal angular speed does not mean equal linear speed. Distance is measured perpendicular to the rotation axis."
+          ],
+          [
+            "m",
+            "\\vec v_B-\\vec v_A=\\vec\\omega\\times\\vec r_{B/A}"
+          ],
+          [
+            "p",
+            "For any two points A and B on the body, their relative velocity has no component along AB."
+          ]
+        ]
+      },
+      {
+        "title": "Fixed-axis kinematics",
+        "items": [
+          [
+            "m",
+            "\\omega=\\dot\\theta,\\quad\\alpha=\\dot\\omega"
+          ],
+          [
+            "m",
+            "\\omega=\\omega_0+\\alpha t"
+          ],
+          [
+            "m",
+            "\\Delta\\theta=\\omega_0t+\\frac12\\alpha t^2"
+          ],
+          [
+            "m",
+            "\\omega^2=\\omega_0^2+2\\alpha\\Delta\\theta"
+          ],
+          [
+            "why",
+            "The last three equations require constant alpha about a fixed axis. Use signed angles in radians."
+          ],
+          [
+            "p",
+            "SI: omega in rad/s; alpha in rad/s². Convert rpm using omega = 2 pi n / 60."
+          ],
+          [
+            "m",
+            "\\alpha=\\omega\\,d\\omega/d\\theta"
+          ],
+          [
+            "p",
+            "For variable alpha, integrate d(omega)=alpha dt or omega d(omega)=alpha d(theta); do not use constant-alpha shortcuts."
+          ]
+        ]
+      },
+      {
+        "title": "Acceleration is not tangent only",
+        "items": [
+          [
+            "m",
+            "\\vec a_P=\\vec a_C+\\vec\\alpha\\times\\vec r"
+          ],
+          [
+            "m",
+            "\\qquad+\\vec\\omega\\times(\\vec\\omega\\times\\vec r)"
+          ],
+          [
+            "p",
+            "Here r = r(P/C). For a fixed axis: tangential acceleration = alpha r; inward normal acceleration = omega² r."
+          ],
+          [
+            "why",
+            "Even constant angular velocity changes the direction of each off-axis point’s velocity."
+          ],
+          [
+            "trap",
+            "Do not replace total acceleration by alpha r; the inward term remains."
+          ],
+          [
+            "m",
+            "a=\\sqrt{(\\alpha r)^2+(\\omega^2r)^2}"
+          ],
+          [
+            "p",
+            "The two components are perpendicular for fixed-axis circular motion. At the axis both are zero."
+          ]
+        ]
+      },
+      {
+        "title": "Instantaneous centre",
+        "items": [
+          [
+            "p",
+            "For nonzero omega in planar motion, locate the instantaneous centre by intersecting lines normal to two known velocities."
+          ],
+          [
+            "m",
+            "v_P=|\\omega|\\,CP_{\\rm inst}"
+          ],
+          [
+            "why",
+            "It is a velocity construction, not a permanent hinge. Pure translation has its centre at infinity."
+          ],
+          [
+            "trap",
+            "Do not automatically use fixed-pivot acceleration or torque equations about this moving centre."
+          ],
+          [
+            "m",
+            "\\omega=\\frac{v_B-v_A}{AB}"
+          ],
+          [
+            "p",
+            "This signed shortcut needs parallel velocities perpendicular to AB and a consistent direction. Otherwise use the vector relation."
+          ]
+        ]
+      }
+    ],
+    "key": "kinematics"
+  },
+  {
+    "section": "JEE",
+    "key": "moi-rods-plates",
+    "title": "MOI I: rods, plates & axes",
+    "subtitle": "Learn the standard results with their axes; the integral explains each coefficient. Uniform bodies unless stated.",
+    "source": "§§3.3–3.4; D8.2; added JEE MOI derivations",
+    "diagrams": [
+      "rod_axes",
+      "plate_axes"
+    ],
+    "takeaway": "A moment of inertia without an axis is an incomplete result. Read each formula together with its geometry.",
+    "cards": [
+      {
+        "title": "Definition: weighted distance²",
+        "items": [
+          [
+            "m",
+            "I_A=\\int r_\\perp^2dm,\\quad I_A=Mk_A^2"
+          ],
+          [
+            "m",
+            "K=\\frac12I_A\\omega^2"
+          ],
+          [
+            "p",
+            "k is the radius of gyration about A. For fixed-axis rotation each mass has speed omega r(perp), so summing dm v²/2 proves the energy result."
+          ],
+          [
+            "why",
+            "Distant mass matters quadratically, not linearly. I depends on shape and axis, not angular speed."
+          ],
+          [
+            "m",
+            "0\\leq I_A\\leq MR_{\\max}^2"
+          ],
+          [
+            "p",
+            "The bound assumes every element is within distance R(max) from A. Units: kg m²."
+          ]
+        ]
+      },
+      {
+        "title": "Thin rod: centre, end, offset",
+        "items": [
+          [
+            "p",
+            "Length l, mass M; x along the rod measured from its midpoint. All axes here are perpendicular to the rod."
+          ],
+          [
+            "m",
+            "dm=(M/l)dx"
+          ],
+          [
+            "m",
+            "I_C=\\frac Ml\\int_{-l/2}^{l/2}x^2dx=\\frac{Ml^2}{12}"
+          ],
+          [
+            "m",
+            "I_A=M(l^2/12+d^2)"
+          ],
+          [
+            "m",
+            "I_{\\rm end}=Ml^2/3"
+          ],
+          [
+            "why",
+            "Shift from the centre by d. An end axis has d=l/2, so 1/12+1/4=1/3."
+          ],
+          [
+            "trap",
+            "A zero-thickness rod about its own length has I=0; a real thick rod does not."
+          ]
+        ]
+      },
+      {
+        "title": "Rectangular and square plates",
+        "items": [
+          [
+            "p",
+            "Rectangle a along x, b along y; origin C. x,y lie in the plate, z is normal."
+          ],
+          [
+            "m",
+            "I_x=Mb^2/12,\\quad I_y=Ma^2/12"
+          ],
+          [
+            "m",
+            "I_z=M(a^2+b^2)/12"
+          ],
+          [
+            "p",
+            "Derive Ix by strips parallel to x: dm=(M/b)dy; integrate y² dm. Use the perpendicular-axis theorem for Iz."
+          ],
+          [
+            "m",
+            "I_{\\rm edge\\parallel x}=Mb^2/3"
+          ],
+          [
+            "m",
+            "a=b=s:\\ I_z=Ms^2/6"
+          ],
+          [
+            "why",
+            "For a square any central in-plane axis, including a diagonal, has I=Ms²/12. Symmetry removes the cross term."
+          ]
+        ]
+      },
+      {
+        "title": "Inclined axis through the rod",
+        "items": [
+          [
+            "p",
+            "Axis through C makes angle phi with a thin rod. A point at signed coordinate x has perpendicular distance |x sin(phi)|."
+          ],
+          [
+            "m",
+            "I_C(\\phi)=\\frac{Ml^2}{12}\\sin^2\\phi"
+          ],
+          [
+            "m",
+            "I_{\\rm end}(\\phi)=\\frac{Ml^2}{3}\\sin^2\\phi"
+          ],
+          [
+            "why",
+            "Insert r(perp)=|x sin(phi)| into the integral, not x itself. Parallel-axis shifts must stay perpendicular to the chosen axis."
+          ],
+          [
+            "p",
+            "Checks: phi=0 gives zero for a line rod; phi=90° gives the usual transverse result."
+          ],
+          [
+            "trap",
+            "Do not use a simple sin² rule for a finite-width plate without accounting for its other dimension."
+          ]
+        ]
+      }
+    ],
+    "part_page": 2,
+    "slug": "JEE-02-moi-rods-plates"
+  },
+  {
+    "section": "JEE",
+    "key": "moi-circular",
+    "title": "MOI II: rings, discs & annuli",
+    "subtitle": "Here z is the central normal to the lamina. A diameter is an in-plane axis through the circle centre O.",
+    "source": "§3.3; E1; Q1; added circular-lamina derivations",
+    "diagrams": [
+      "circular_axes",
+      "semicircle"
+    ],
+    "takeaway": "Normal-axis and diameter-axis results differ by a factor of two for a complete circular lamina or thin ring.",
+    "cards": [
+      {
+        "title": "Thin ring: learn three axes",
+        "items": [
+          [
+            "m",
+            "I_z=MR^2"
+          ],
+          [
+            "p",
+            "Every element is the same distance R from the normal axis, so the integral immediately equals R² times M."
+          ],
+          [
+            "m",
+            "I_{\\rm diameter}=MR^2/2"
+          ],
+          [
+            "why",
+            "Two perpendicular diameters are equivalent by symmetry and their inertias add to Iz."
+          ],
+          [
+            "m",
+            "I_{\\rm tangent,in-plane}=3MR^2/2"
+          ],
+          [
+            "m",
+            "I_{\\rm rim\\ normal}=2MR^2"
+          ],
+          [
+            "trap",
+            "“Tangent” alone does not specify whether the axis is in the plane or normal to it."
+          ]
+        ]
+      },
+      {
+        "title": "Disc: concentric-ring derivation",
+        "items": [
+          [
+            "m",
+            "\\sigma=M/(\\pi R^2),\\quad dm=2\\pi\\sigma r\\,dr"
+          ],
+          [
+            "m",
+            "I_z=2\\pi\\sigma\\int_0^Rr^3dr=MR^2/2"
+          ],
+          [
+            "m",
+            "I_{\\rm diameter}=MR^2/4"
+          ],
+          [
+            "m",
+            "I_{\\rm rim\\ normal}=3MR^2/2"
+          ],
+          [
+            "m",
+            "I_{\\rm tangent,in-plane}=5MR^2/4"
+          ],
+          [
+            "why",
+            "A disc includes rings of every radius: it has less axial inertia than a ring of the same M and R."
+          ],
+          [
+            "p",
+            "Radius of gyration: k(z)=R/sqrt(2), k(diameter)=R/2."
+          ]
+        ]
+      },
+      {
+        "title": "Annulus: subtract or integrate",
+        "items": [
+          [
+            "p",
+            "Inner radius a, outer radius b, mass M. Uniform areal density sigma=M/[pi(b²-a²)]."
+          ],
+          [
+            "m",
+            "I_z=2\\pi\\sigma\\int_a^b r^3dr"
+          ],
+          [
+            "m",
+            "I_z=\\frac12M(a^2+b^2)"
+          ],
+          [
+            "m",
+            "I_{\\rm diameter}=\\frac14M(a^2+b^2)"
+          ],
+          [
+            "why",
+            "Use b⁴-a⁴=(b²-a²)(b²+a²). Alternatively subtract two discs with their original common density."
+          ],
+          [
+            "p",
+            "Checks: a=0 gives a disc. As a→b at fixed mass the annulus approaches a thin ring."
+          ],
+          [
+            "trap",
+            "M is the remaining annulus mass, not the mass of the uncut outer disc."
+          ]
+        ]
+      },
+      {
+        "title": "Half-circle: O is not its COM",
+        "items": [
+          [
+            "p",
+            "For a semicircular disc: O is the original circle centre; C lies on its symmetry line above the diameter."
+          ],
+          [
+            "m",
+            "OC=4R/(3\\pi),\\quad I_{O,z}=MR^2/2"
+          ],
+          [
+            "m",
+            "I_{C,z}=MR^2/2-M(4R/(3\\pi))^2"
+          ],
+          [
+            "p",
+            "For a semicircular wire instead: OC=2R/pi and I(O,z)=MR²; subtract M(OC)² to get I(C,z)."
+          ],
+          [
+            "why",
+            "Cutting a uniform circle in half leaves the average r² about O unchanged; the new COM is displaced."
+          ],
+          [
+            "trap",
+            "These are derivable applications, not a reason to memorise every cut shape. Always distinguish O from C."
+          ]
+        ]
+      }
+    ],
+    "part_page": 3,
+    "slug": "JEE-03-moi-circular"
+  },
+  {
+    "section": "JEE",
+    "key": "moi-solids",
+    "title": "MOI III: cylinders & spheres",
+    "subtitle": "Axial = cylinder symmetry axis; transverse = perpendicular through C; a sphere diameter passes through C.",
+    "source": "§3.3; D8.2; added standard 3-D MOI derivations",
+    "diagrams": [
+      "cylinder_axes",
+      "sphere_slice"
+    ],
+    "takeaway": "Do not apply the perpendicular-axis theorem to a 3-D body. Slice it into thin laminae and integrate instead.",
+    "cards": [
+      {
+        "title": "Solid cylinder: both directions",
+        "items": [
+          [
+            "p",
+            "Uniform cylinder radius R, length l. For its symmetry axis each thin disc contributes half dm R²."
+          ],
+          [
+            "m",
+            "I_{\\rm axial}=MR^2/2"
+          ],
+          [
+            "m",
+            "I_{\\rm transverse}=M(3R^2+l^2)/12"
+          ],
+          [
+            "m",
+            "dI_{\\rm transverse}=(R^2/4+z^2)dm"
+          ],
+          [
+            "why",
+            "Each slice contributes its own diameter inertia plus its parallel-axis shift. Integrate z from -l/2 to l/2 with dm=(M/l)dz."
+          ],
+          [
+            "p",
+            "l→0 gives a disc diameter; R→0 gives a thin rod transverse to its length."
+          ]
+        ]
+      },
+      {
+        "title": "Hollow cylinder: inner radius a",
+        "items": [
+          [
+            "p",
+            "Outer radius b, length l, total remaining mass M. Uniform material, common central axis."
+          ],
+          [
+            "m",
+            "I_{\\rm axial}=M(a^2+b^2)/2"
+          ],
+          [
+            "m",
+            "I_{\\rm transverse}=M[3(a^2+b^2)+l^2]/12"
+          ],
+          [
+            "why",
+            "Derive by subtracting solid coaxial cylinders at the same density, or replace each slice by an annular lamina."
+          ],
+          [
+            "m",
+            "\\mathrm{thin\\ wall}:\\ I_{\\rm axial}=MR^2"
+          ],
+          [
+            "m",
+            "I_{\\rm transverse}=M(6R^2+l^2)/12"
+          ],
+          [
+            "trap",
+            "A thin cylindrical wall has no end caps in this model. Its transverse inertia is not that of a thin ring unless l→0."
+          ]
+        ]
+      },
+      {
+        "title": "Solid sphere: derive by discs",
+        "items": [
+          [
+            "p",
+            "Let x run along the diameter axis; slice radius s satisfies s²=R²-x². Density rho=3M/(4 pi R³)."
+          ],
+          [
+            "m",
+            "dm=\\rho\\pi(R^2-x^2)dx"
+          ],
+          [
+            "m",
+            "I=\\frac{\\rho\\pi}{2}\\int_{-R}^R(R^2-x^2)^2dx"
+          ],
+          [
+            "m",
+            "I_C=2MR^2/5,\\quad I_{\\rm tangent}=7MR^2/5"
+          ],
+          [
+            "why",
+            "A disc slice rotates about its own normal: dI=dm s²/2, not dm s²."
+          ],
+          [
+            "p",
+            "Spherical symmetry makes every central diameter equivalent. k(C)=sqrt(2/5) R."
+          ]
+        ]
+      },
+      {
+        "title": "Spherical shells: thin and thick",
+        "items": [
+          [
+            "p",
+            "Thin uniform shell: a latitude strip at polar angle theta has dm=(M/2)sin(theta)d(theta) and r(perp)=R sin(theta)."
+          ],
+          [
+            "m",
+            "I=\\frac{MR^2}{2}\\int_0^\\pi\\sin^3\\theta\\,d\\theta"
+          ],
+          [
+            "m",
+            "I_{\\rm thin}=2MR^2/3"
+          ],
+          [
+            "m",
+            "I_{\\rm thick}=\\frac{2M}{5}\\frac{b^5-a^5}{b^3-a^3}"
+          ],
+          [
+            "why",
+            "The thick-shell formula subtracts two same-density solid spheres, inner a and outer b. a→0 gives solid; a→b gives thin shell."
+          ],
+          [
+            "trap",
+            "A sphere has no special normal axis like a disc; specify a diameter or a displaced parallel line."
+          ]
+        ]
+      }
+    ],
+    "part_page": 4,
+    "slug": "JEE-04-moi-solids"
+  },
+  {
+    "section": "JEE",
+    "key": "moi-composites",
+    "title": "MOI IV: composites & integrations",
+    "subtitle": "Memorise the standard families; derive unfamiliar density profiles and cut shapes from a few reliable moves.",
+    "source": "§§3.3–3.4; Q18; added JEE integral/composite applications",
+    "diagrams": [
+      "disc_hole",
+      "density_graph"
+    ],
+    "takeaway": "For a cut-out use the removed piece’s original density and its own COM; shift all contributions to the requested axis.",
+    "cards": [
+      {
+        "title": "An off-centre circular hole",
+        "items": [
+          [
+            "p",
+            "Full disc mass M0, radius R; hole radius a, centre offset d. Hole fits inside the disc. Both densities are unchanged."
+          ],
+          [
+            "m",
+            "m_h=M_0a^2/R^2,\\quad M=M_0-m_h"
+          ],
+          [
+            "m",
+            "I_{O,z}=M_0R^2/2-m_h(a^2/2+d^2)"
+          ],
+          [
+            "m",
+            "x_C=-m_hd/M"
+          ],
+          [
+            "m",
+            "I_{C,z}=I_{O,z}-Mx_C^2"
+          ],
+          [
+            "why",
+            "Take +x toward the hole. Removing mass shifts C away from it. Subtract hole inertia about O, then shift from O to the new C."
+          ],
+          [
+            "trap",
+            "Never assign the hole a mass M a²/R² using the remaining mass M."
+          ]
+        ]
+      },
+      {
+        "title": "Nonuniform rod: normalise first",
+        "items": [
+          [
+            "p",
+            "Rod from x=0 to l; linear density lambda=cx. Need its mass, COM and transverse inertia."
+          ],
+          [
+            "m",
+            "M=cl^2/2,\\quad c=2M/l^2"
+          ],
+          [
+            "m",
+            "x_C=\\frac1M\\int_0^l x(cx)dx=2l/3"
+          ],
+          [
+            "m",
+            "I_{0}=\\int_0^l x^2(cx)dx=Ml^2/2"
+          ],
+          [
+            "m",
+            "I_C=I_0-Mx_C^2=Ml^2/18"
+          ],
+          [
+            "why",
+            "The uniform-rod formulas do not apply. Fix the density constant from the total mass before integrating."
+          ],
+          [
+            "p",
+            "Check: C moves toward the denser end; I0 still has dimensions mass times length squared."
+          ]
+        ]
+      },
+      {
+        "title": "Radially varying disc density",
+        "items": [
+          [
+            "p",
+            "A circular lamina has sigma(r)=c r^n, 0<r<R, n>-2. Here c is determined by mass, not arbitrary."
+          ],
+          [
+            "m",
+            "dm=2\\pi c r^{n+1}dr"
+          ],
+          [
+            "m",
+            "M=\\frac{2\\pi cR^{n+2}}{n+2}"
+          ],
+          [
+            "m",
+            "I_z=MR^2\\frac{n+2}{n+4}"
+          ],
+          [
+            "m",
+            "I_{\\rm diameter}=I_z/2"
+          ],
+          [
+            "why",
+            "Divide the inertia integral by the mass integral; circular symmetry still equates central diameters."
+          ],
+          [
+            "p",
+            "n=0 gives a disc; n→infinity concentrates mass near the rim and approaches MR²."
+          ]
+        ]
+      },
+      {
+        "title": "Cone & the right learning habit",
+        "items": [
+          [
+            "p",
+            "A uniform solid cone of height h, base radius R has radius s=Rz/h at distance z from its vertex."
+          ],
+          [
+            "m",
+            "dm=\\rho\\pi(Rz/h)^2dz"
+          ],
+          [
+            "m",
+            "I_{\\rm axis}=\\int_0^h\\frac12(Rz/h)^2dm"
+          ],
+          [
+            "m",
+            "I_{\\rm axis}=3MR^2/10"
+          ],
+          [
+            "why",
+            "Divide by M=rho pi R²h/3. This is the same disc-slicing idea as a sphere, not specialised rotational theory."
+          ],
+          [
+            "p",
+            "Prioritise rods, rings, discs, cylinders, spheres and axis shifts. For unfamiliar shapes know how to derive the needed result rather than memorising an unbounded catalogue."
+          ]
+        ]
+      }
+    ],
+    "part_page": 5,
+    "slug": "JEE-05-moi-composites"
+  },
+  {
+    "section": "JEE",
+    "part_page": 6,
+    "slug": "JEE-06-axis-theorems",
+    "title": "Shift axes, do not guess",
+    "subtitle": "Parallel-axis shifts and perpendicular-axis splitting are different operations.",
+    "source": "§3.4; E1; Q1, Q16; D8.3",
+    "diagrams": [
+      "axes",
+      "lamina"
+    ],
+    "takeaway": "Parallel-axis addition starts from a COM axis; perpendicular-axis splitting needs a planar lamina.",
+    "cards": [
+      {
+        "title": "Parallel-axis theorem",
+        "items": [
+          [
+            "m",
+            "I_A=I_C+Md^2"
+          ],
+          [
+            "p",
+            "A and C are parallel axes; C passes through the centre of mass. d is their perpendicular separation."
+          ],
+          [
+            "why",
+            "Expand (x+d)²+y² in the inertia integral. The cross term vanishes because integral x dm = 0 at C."
+          ],
+          [
+            "trap",
+            "For two arbitrary parallel axes A and B, subtract their separate COM shifts; do not just add M(AB)²."
+          ],
+          [
+            "m",
+            "I_A=I_C+Md^2+2d\\int x\\,dm"
+          ],
+          [
+            "m",
+            "\\int x\\,dm=0\\quad\\mathrm{at\\ C}"
+          ],
+          [
+            "p",
+            "For fixed orientation, the parallel COM axis minimises I. Equality occurs only at d=0."
+          ]
+        ]
+      },
+      {
+        "title": "Which tangent axis?",
+        "items": [
+          [
+            "p",
+            "For a disc, an axis through a rim point and parallel to the central normal gives:"
+          ],
+          [
+            "m",
+            "I_A=\\frac12MR^2+MR^2=\\frac32MR^2"
+          ],
+          [
+            "p",
+            "An axis tangent in the plane of the disc instead gives:"
+          ],
+          [
+            "m",
+            "I_B=\\frac14MR^2+MR^2=\\frac54MR^2"
+          ],
+          [
+            "why",
+            "Both are called “tangent” informally, but their directions differ. Draw the axis before substituting."
+          ],
+          [
+            "m",
+            "I_{\\rm ring,tangent\\ in\\ plane}=\\frac32MR^2"
+          ],
+          [
+            "m",
+            "I_{\\rm ring,rim\\ normal}=2MR^2"
+          ],
+          [
+            "p",
+            "A thin ring diameter has I=MR²/2. Add MR² to the appropriate central-axis result."
+          ]
+        ]
+      },
+      {
+        "title": "Perpendicular-axis theorem",
+        "items": [
+          [
+            "m",
+            "I_z=I_x+I_y\\quad (z=0\\ \\mathrm{lamina})"
+          ],
+          [
+            "p",
+            "All three axes are mutually perpendicular and pass through the same point; x and y lie in the sheet."
+          ],
+          [
+            "why",
+            "For each element: distance² to z = x²+y², which is the sum of the other two squared distances."
+          ],
+          [
+            "m",
+            "I_{\\rm disc,diameter}=MR^2/4"
+          ],
+          [
+            "trap",
+            "Never use it for a solid sphere; mass away from the xy plane breaks the identity."
+          ],
+          [
+            "m",
+            "I_x=\\int y^2dm,\\quad I_y=\\int x^2dm"
+          ],
+          [
+            "m",
+            "I_z=\\int(x^2+y^2)dm"
+          ],
+          [
+            "p",
+            "The three axes must share a single origin, though that point need not be C."
+          ]
+        ]
+      },
+      {
+        "title": "A robust calculation route",
+        "items": [
+          [
+            "p",
+            "1. Sketch the required axis. 2. Split into known pieces. 3. Shift each piece from its OWN COM. 4. Add signed inertias."
+          ],
+          [
+            "m",
+            "I_{\\rm rectangle,normal}=\\frac{M(a^2+b^2)}{12}"
+          ],
+          [
+            "why",
+            "For a uniform rectangle, integrate x²+y² separately; this also checks the rod limit as b tends to zero."
+          ],
+          [
+            "p",
+            "Check: l=2 m, M=3 kg rod; pivot 0.5 m from one end gives I = 1.75 kg m²."
+          ],
+          [
+            "m",
+            "I_A-I_B=M(d_A^2-d_B^2)"
+          ],
+          [
+            "p",
+            "Here d(A) and d(B) are distances from the same parallel COM axis, not from each other."
+          ]
+        ]
+      }
+    ],
+    "key": "axis-theorems"
+  },
+  {
+    "section": "JEE",
+    "part_page": 7,
+    "slug": "JEE-07-torque-energy",
+    "title": "Torque, work & massive pulleys",
+    "subtitle": "For planar equations take anticlockwise as positive; write force components in the lab frame.",
+    "source": "§3.5; Part 8 traps 10, 12; Q5, Q13",
+    "diagrams": [
+      "torque",
+      "pulley"
+    ],
+    "takeaway": "Use force balance for C and torque about C; a massive pulley usually has unequal string tensions.",
+    "cards": [
+      {
+        "title": "Turning effect of a force",
+        "items": [
+          [
+            "m",
+            "\\vec\\tau_O=\\vec r_{P/O}\\times\\vec F"
+          ],
+          [
+            "m",
+            "|\\tau_O|=F d_\\perp"
+          ],
+          [
+            "p",
+            "d is the shortest distance from O to the line of action. A couple has zero net force but nonzero, origin-independent torque."
+          ],
+          [
+            "why",
+            "Only the force component perpendicular to r turns the body about O."
+          ],
+          [
+            "trap",
+            "Torque is N m, not a scalar energy in joules; its sign follows the chosen axis."
+          ],
+          [
+            "m",
+            "\\vec\\tau_B=\\vec\\tau_A-\\vec r_{B/A}\\times\\vec F_{\\rm net}"
+          ],
+          [
+            "p",
+            "If net force is zero, net torque is origin-independent. A couple has magnitude F times the separation of its force lines."
+          ]
+        ]
+      },
+      {
+        "title": "Equations of motion",
+        "items": [
+          [
+            "m",
+            "\\sum\\vec F=M\\vec a_C"
+          ],
+          [
+            "m",
+            "\\sum\\tau_{C,z}=I_C\\alpha"
+          ],
+          [
+            "p",
+            "The second equation is for planar motion. For a fixed spatial axis A, use its torque component and I about A."
+          ],
+          [
+            "why",
+            "Internal central forces cancel in the whole-body balance. Supports can exert force and torque."
+          ],
+          [
+            "trap",
+            "A general 3-D vector equation tau = I alpha is not valid. The fixed-axis scalar equation remains valid."
+          ],
+          [
+            "m",
+            "\\sum F_x=Ma_{C,x},\\quad\\sum F_y=Ma_{C,y}"
+          ],
+          [
+            "p",
+            "Write the translation and rotation equations before inserting a no-slip or string constraint. Forces through C can still move C."
+          ]
+        ]
+      },
+      {
+        "title": "Energy and power",
+        "items": [
+          [
+            "m",
+            "W=\\int\\tau_A\\,d\\theta=\\Delta K"
+          ],
+          [
+            "m",
+            "P=\\tau_A\\omega"
+          ],
+          [
+            "p",
+            "For fixed-axis rotation with constant I: K = I omega² / 2. For free planar motion add M v(C)² / 2 to the spin energy."
+          ],
+          [
+            "why",
+            "Each tangential displacement is r dtheta, so summing F ds gives torque times angular displacement."
+          ],
+          [
+            "p",
+            "Check: I=10 kg m² at 1000 rpm stores 54.83 kJ."
+          ],
+          [
+            "m",
+            "P=\\vec F\\cdot\\vec v_C+\\tau_{C,z}\\omega"
+          ],
+          [
+            "p",
+            "For one applied force in planar motion, this equals its force dotted with the velocity of its actual point of application."
+          ]
+        ]
+      },
+      {
+        "title": "Atwood: include the pulley",
+        "items": [
+          [
+            "p",
+            "Masses m2 > m1; pulley radius R, axial inertia I; light inextensible string does not slip; axle friction is negligible."
+          ],
+          [
+            "m",
+            "a=\\frac{(m_2-m_1)g}{m_1+m_2+I/R^2}"
+          ],
+          [
+            "m",
+            "(T_2-T_1)R=I\\frac aR"
+          ],
+          [
+            "why",
+            "The pulley consumes part of the released potential energy. Tensions are equal only in the zero-inertia limit."
+          ],
+          [
+            "trap",
+            "No slip at a moving pulley rim does not mean tension does zero work on that pulley."
+          ],
+          [
+            "m",
+            "T_1=m_1(g+a),\\quad T_2=m_2(g-a)"
+          ],
+          [
+            "p",
+            "Add the mass equations to (T2-T1)=Ia/R²; the effective inertial mass is m1+m2+I/R²."
+          ]
+        ]
+      }
+    ],
+    "key": "torque-energy"
+  },
+  {
+    "section": "JEE",
+    "part_page": 8,
+    "slug": "JEE-08-angular-momentum",
+    "title": "Angular momentum: choose O",
+    "subtitle": "Specify system and origin before declaring conservation. Signed z components suffice for planar motion.",
+    "source": "§§3.6–3.7; E5, E10; Q11; D8.6",
+    "diagrams": [
+      "momentum",
+      "disc_couple"
+    ],
+    "takeaway": "Zero external torque conserves angular momentum about that origin, not necessarily kinetic energy.",
+    "cards": [
+      {
+        "title": "Spin plus orbital motion",
+        "items": [
+          [
+            "m",
+            "\\vec L_O=\\vec r_C\\times M\\vec v_C+\\vec L_C"
+          ],
+          [
+            "m",
+            "L_{C,z}=I_C\\omega\\quad\\mathrm{(planar)}"
+          ],
+          [
+            "p",
+            "A translating body can have nonzero L about O even with no spin. For a particle, L = r cross p."
+          ],
+          [
+            "why",
+            "Write each position as r(C)+rho and each velocity as v(C)+v(relative). COM cross terms sum to zero."
+          ],
+          [
+            "trap",
+            "L has units kg m²/s and changes when the origin changes."
+          ],
+          [
+            "m",
+            "L_z=mvb\\quad\\mathrm{(particle)}"
+          ],
+          [
+            "p",
+            "b is the signed perpendicular distance from O to the velocity line; a line through O gives L=0 even at large speed."
+          ]
+        ]
+      },
+      {
+        "title": "The conservation test",
+        "items": [
+          [
+            "m",
+            "\\vec\\tau_{\\rm ext,O}=\\frac{d\\vec L_O}{dt}"
+          ],
+          [
+            "p",
+            "This form uses absolute particle velocities and a fixed inertial origin O. Zero z torque conserves Lz, even if other components change."
+          ],
+          [
+            "why",
+            "For a central interaction, equal and opposite internal forces have no net torque."
+          ],
+          [
+            "trap",
+            "The CM is also a valid torque-rate origin. An arbitrary moving origin needs care; an instantaneous rest point is not enough."
+          ],
+          [
+            "m",
+            "\\Delta L_z=\\int\\tau_{{\\rm ext},z}\\,dt"
+          ],
+          [
+            "p",
+            "Zero net force alone does not imply zero torque: a pure couple changes L without changing COM momentum."
+          ]
+        ]
+      },
+      {
+        "title": "Changing I at fixed L",
+        "items": [
+          [
+            "m",
+            "I_1\\omega_1=I_2\\omega_2"
+          ],
+          [
+            "m",
+            "K=\\frac{L_z^2}{2I}"
+          ],
+          [
+            "p",
+            "Skater: I falls from 5 to 2 kg m²; omega rises from 2 to 5 rad/s; K rises from 10 to 25 J."
+          ],
+          [
+            "why",
+            "The extra 15 J comes from internal work, not external torque. This is a shape-changing system, not one permanently rigid body."
+          ],
+          [
+            "trap",
+            "Angular-momentum conservation is not energy conservation."
+          ],
+          [
+            "m",
+            "\\Delta K=\\frac{L_z^2}{2}(I_2^{-1}-I_1^{-1})"
+          ],
+          [
+            "p",
+            "Conversely, spreading mass outward at fixed L decreases rotational KE; mechanical work must account for that change."
+          ]
+        ]
+      },
+      {
+        "title": "Two coaxial discs couple",
+        "items": [
+          [
+            "m",
+            "\\omega_f=\\frac{I_1\\omega_1+I_2\\omega_2}{I_1+I_2}"
+          ],
+          [
+            "m",
+            "Q=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}"
+          ],
+          [
+            "p",
+            "Use signed initial angular velocities; include both discs in the system and neglect external axial torque."
+          ],
+          [
+            "why",
+            "Friction is internal: it equalises spin while dissipating mechanical energy."
+          ],
+          [
+            "p",
+            "Check: I1=2, I2=3; omega1=10, omega2=-5 gives omega(f)=1 rad/s."
+          ],
+          [
+            "p",
+            "Derivation: conserve the sum I1 omega1+I2 omega2; insert the common final omega into Kf=(I1+I2) omega(f)²/2. Subtract Kf from Ki to obtain Q."
+          ]
+        ]
+      }
+    ],
+    "key": "angular-momentum"
+  },
+  {
+    "section": "JEE",
+    "part_page": 9,
+    "slug": "JEE-09-rolling-geometry",
+    "title": "Rolling is a velocity constraint",
+    "subtitle": "Stationary rigid ground; wheel radius R. Here v is rightward and omega is clockwise-positive.",
+    "source": "§3.8; C5; §§7.1–7.3; D8.5",
+    "diagrams": [
+      "rolling",
+      "contact_acc"
+    ],
+    "takeaway": "The material point at contact is instantaneously at rest; it is not a permanent fixed pivot.",
+    "cards": [
+      {
+        "title": "Match contact velocities",
+        "items": [
+          [
+            "m",
+            "u=v-R\\omega,\\quad u=0\\ \\mathrm{(no\\ slip)}"
+          ],
+          [
+            "m",
+            "v=R\\omega,\\quad a=R\\alpha"
+          ],
+          [
+            "p",
+            "For constant R on a fixed straight surface, differentiate the signed constraint to get the acceleration relation."
+          ],
+          [
+            "why",
+            "Translation right and clockwise rotation give opposite velocities at the bottom."
+          ],
+          [
+            "trap",
+            "On a moving belt, match the contact velocity to the belt, not to zero."
+          ],
+          [
+            "m",
+            "v-R\\omega=V_{\\rm belt}"
+          ],
+          [
+            "p",
+            "For a moving horizontal belt use its signed lab speed V(belt). On a straight belt a-R alpha equals its acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "The velocity field",
+        "items": [
+          [
+            "m",
+            "v_{\\rm top}=2v,\\quad v_{\\rm bottom}=0"
+          ],
+          [
+            "p",
+            "The centre moves at v. At each side point the velocity has equal horizontal and vertical components, so speed = square root of 2 times v."
+          ],
+          [
+            "why",
+            "Add translation to rotation as vectors, not as magnitudes."
+          ],
+          [
+            "trap",
+            "At the contact material point, acceleration is upward with magnitude omega² R in straight pure rolling. Zero velocity does not mean zero acceleration."
+          ],
+          [
+            "m",
+            "\\vec a_P=\\vec a_C+\\vec\\alpha\\times\\vec r_{P/C}"
+          ],
+          [
+            "m",
+            "\\qquad-\\omega^2\\vec r_{P/C}"
+          ],
+          [
+            "p",
+            "At the bottom, the tangential terms cancel in pure rolling; the remaining term points upward."
+          ]
+        ]
+      },
+      {
+        "title": "Energy and contact-point I",
+        "items": [
+          [
+            "m",
+            "K=\\frac12Mv^2+\\frac12I_C\\omega^2"
+          ],
+          [
+            "m",
+            "K=\\frac12(I_C+MR^2)\\omega^2"
+          ],
+          [
+            "p",
+            "The second expression uses pure rolling and the instantaneous contact axis normal to the plane."
+          ],
+          [
+            "why",
+            "It is a correct instantaneous energy identity, obtained by substitution; no extra motion has been added."
+          ],
+          [
+            "trap",
+            "Do not add translational energy again when using the contact-axis form."
+          ],
+          [
+            "m",
+            "K=\\frac12M(1+\\beta)v^2,\\quad\\beta=I_C/(MR^2)"
+          ],
+          [
+            "p",
+            "Disc: K=3Mv²/4. Hoop: K=Mv². Solid sphere: K=7Mv²/10. All use v of C."
+          ]
+        ]
+      },
+      {
+        "title": "When the torque shortcut works",
+        "items": [
+          [
+            "m",
+            "\\tau_{P,z}=(I_C+MR^2)\\alpha_z"
+          ],
+          [
+            "p",
+            "For circular rolling on a fixed straight plane: choose the ground contact location P at that instant, and use a(C) tangent to the plane."
+          ],
+          [
+            "why",
+            "Torque about P = I(C) alpha + r(C/P) cross M a(C); the no-slip relation supplies the MR² term."
+          ],
+          [
+            "trap",
+            "This special geometry justifies the shortcut, not merely v(P)=0. On curved paths, derive the equation again."
+          ],
+          [
+            "m",
+            "I_P=I_C+MR^2"
+          ],
+          [
+            "p",
+            "In the scalar shortcut keep one signed rotation convention. Friction, weight-normal reaction and any force through P have zero moment about P."
+          ]
+        ]
+      }
+    ],
+    "key": "rolling-geometry"
+  },
+  {
+    "section": "JEE",
+    "part_page": 10,
+    "slug": "JEE-10-incline",
+    "title": "Inclines: friction sets the regime",
+    "subtitle": "A symmetric body rolls freely from rest: I(C) = beta M R². Ignore rolling resistance and air drag.",
+    "source": "§3.8; E2; Q2, Q4, Q17, Q25; P27",
+    "diagrams": [
+      "incline",
+      "race"
+    ],
+    "takeaway": "First solve for the static friction required; only then check whether the surface can supply it.",
+    "cards": [
+      {
+        "title": "Force plus torque",
+        "items": [
+          [
+            "m",
+            "Mg\\sin\\theta-f=Ma"
+          ],
+          [
+            "m",
+            "fR=I_C\\alpha,\\quad a=R\\alpha"
+          ],
+          [
+            "m",
+            "a=\\frac{g\\sin\\theta}{1+\\beta}"
+          ],
+          [
+            "why",
+            "Gravity accelerates C while uphill static friction provides the torque needed to spin the body."
+          ],
+          [
+            "trap",
+            "These formulas assume no driving torque and no other tangential force. Do not reuse them for a pulled spool."
+          ],
+          [
+            "m",
+            "\\beta=I_C/(MR^2),\\quad f=\\beta Ma"
+          ],
+          [
+            "p",
+            "Eliminate f from the two balances. For uphill motion the acceleration still points downhill; friction is still uphill in this force-free case."
+          ]
+        ]
+      },
+      {
+        "title": "Static is an inequality",
+        "items": [
+          [
+            "m",
+            "f=\\frac{\\beta}{1+\\beta}Mg\\sin\\theta"
+          ],
+          [
+            "m",
+            "N=Mg\\cos\\theta"
+          ],
+          [
+            "m",
+            "\\mu_s\\geq\\frac{\\beta}{1+\\beta}\\tan\\theta"
+          ],
+          [
+            "why",
+            "Static friction takes the required value, not automatically mu(s) N. Equality is the threshold of slipping."
+          ],
+          [
+            "p",
+            "Sphere at 30°, g=10: a=25/7 m/s²; minimum mu(s)=0.165."
+          ],
+          [
+            "m",
+            "\\tan\\theta\\leq\\mu_s(1+\\beta)/\\beta"
+          ],
+          [
+            "p",
+            "If this fails from release, use kinetic friction and separate a from R alpha; no-slip energy formulas cannot be imposed."
+          ]
+        ]
+      },
+      {
+        "title": "Energy tells speed and height",
+        "items": [
+          [
+            "m",
+            "v^2=\\frac{2gh}{1+\\beta}"
+          ],
+          [
+            "m",
+            "K_{\\rm rot}/K=\\frac{\\beta}{1+\\beta}"
+          ],
+          [
+            "p",
+            "Starting from rest through vertical drop h, gravity supplies both types of kinetic energy. Static friction has zero total power on fixed ground."
+          ],
+          [
+            "why",
+            "Friction’s translational and rotational powers cancel; it can redistribute the two energies."
+          ],
+          [
+            "p",
+            "A rolling hoop climbing at 5 m/s on 30°, g=10, rises 2.5 m: path length 5 m."
+          ],
+          [
+            "m",
+            "h_{\\rm stop}=\\frac{(1+\\beta)v_0^2}{2g}"
+          ],
+          [
+            "p",
+            "For pure rolling up a straight incline, path distance is h(stop)/sin(theta). Stop and reverse if the constraint remains valid."
+          ]
+        ]
+      },
+      {
+        "title": "Race and smooth-plane limits",
+        "items": [
+          [
+            "p",
+            "Fast to slow: solid sphere, solid cylinder, thin spherical shell, hoop. The ratio beta, not mass alone, decides."
+          ],
+          [
+            "m",
+            "\\beta:\\quad 2/5,\\ 1/2,\\ 2/3,\\ 1"
+          ],
+          [
+            "why",
+            "Smaller beta needs a smaller rotational share for a given translational speed."
+          ],
+          [
+            "trap",
+            "A frictionless block is faster than these rollers. On a perfectly smooth plane, an initially nonspinning symmetric ball slides without spinning up."
+          ],
+          [
+            "m",
+            "v_{\\rm disc}/v_{\\rm hoop}=\\sqrt{4/3}"
+          ],
+          [
+            "p",
+            "At the same vertical drop, a smooth block has v=sqrt(2gh). A rough sliding block is not necessarily fastest."
+          ]
+        ]
+      }
+    ],
+    "key": "incline"
+  },
+  {
+    "section": "JEE",
+    "part_page": 11,
+    "slug": "JEE-11-slip-to-roll",
+    "title": "Slipping: follow the contact speed",
+    "subtitle": "Horizontal fixed ground; constant kinetic coefficient mu(k); +x right, clockwise omega positive.",
+    "source": "§3.9; E4; Q8, Q19; OL1; P29; D8.8",
+    "diagrams": [
+      "slip_graph",
+      "slip_loss"
+    ],
+    "takeaway": "Kinetic friction opposes u = v - R omega, which need not have the same sign as the centre velocity.",
+    "cards": [
+      {
+        "title": "Separate translation and spin",
+        "items": [
+          [
+            "m",
+            "u=v-R\\omega,\\quad s=\\mathrm{sgn}(u_0)"
+          ],
+          [
+            "m",
+            "\\dot v=-s\\mu_k g"
+          ],
+          [
+            "m",
+            "R\\dot\\omega=s\\mu_k g/\\beta"
+          ],
+          [
+            "p",
+            "beta = I(C)/(M R²) > 0. These equations apply until u reaches zero, with constant normal force Mg."
+          ],
+          [
+            "why",
+            "The same friction slows contact slip through translation and rotation simultaneously."
+          ],
+          [
+            "trap",
+            "Do not impose v = R omega during this phase."
+          ],
+          [
+            "m",
+            "\\dot u=-s\\mu_k g(1+1/\\beta)"
+          ],
+          [
+            "p",
+            "Friction direction stays fixed until u first vanishes. If v crosses zero earlier, that alone is not a reason to reverse friction."
+          ]
+        ]
+      },
+      {
+        "title": "Transition and final speed",
+        "items": [
+          [
+            "m",
+            "t_* =\\frac{|v_0-R\\omega_0|}{\\mu_k g(1+1/\\beta)}"
+          ],
+          [
+            "m",
+            "v_* =\\frac{v_0+\\beta R\\omega_0}{1+\\beta}"
+          ],
+          [
+            "p",
+            "At t*, R omega* = v*. With no further horizontal forces or torques, friction becomes zero and pure rolling persists."
+          ],
+          [
+            "why",
+            "The combination v + beta R omega is constant during slip."
+          ],
+          [
+            "trap",
+            "If u0=0 there is no slipping stage. If mu(k)=0 and u0 is nonzero, no finite transition occurs."
+          ],
+          [
+            "m",
+            "v+\\beta R\\omega=v_0+\\beta R\\omega_0"
+          ],
+          [
+            "p",
+            "Derivation: add the two acceleration equations with the second multiplied by beta. Set the final slip to zero."
+          ]
+        ]
+      },
+      {
+        "title": "Where the energy went",
+        "items": [
+          [
+            "m",
+            "\\dot K=-\\mu_k Mg|u|"
+          ],
+          [
+            "m",
+            "Q=\\frac{M\\beta}{2(1+\\beta)}u_0^2"
+          ],
+          [
+            "p",
+            "Q is the loss of mechanical energy over the complete sliding stage. Total energy including heat is conserved."
+          ],
+          [
+            "why",
+            "Power at the slipping contact uses its velocity u, not merely the velocity of C."
+          ],
+          [
+            "trap",
+            "Sufficient backspin can stop or reverse the ball: v* can be positive, zero or negative."
+          ],
+          [
+            "m",
+            "Q=\\mu_k Mg\\frac{|u_0|t_*}{2}"
+          ],
+          [
+            "p",
+            "The slip-speed graph is a triangle. Its area is relative sliding distance, not COM displacement."
+          ]
+        ]
+      },
+      {
+        "title": "Corrected bowling-ball check",
+        "items": [
+          [
+            "p",
+            "Solid sphere: beta=2/5, R=0.1 m, v0=10 m/s, omega0=0, mu(k)=0.3, g=10 m/s²."
+          ],
+          [
+            "m",
+            "\\alpha=75\\ \\mathrm{rad/s^2},\\quad t_*=20/21\\ \\mathrm{s}"
+          ],
+          [
+            "m",
+            "v_*=50/7\\ \\mathrm{m/s},\\quad Q=Mv_0^2/7"
+          ],
+          [
+            "why",
+            "The source E4 misses a factor of ten in alpha; P29 and OL1 give the consistent transition."
+          ],
+          [
+            "p",
+            "For v0=10 and R omega0=-5 with mu(k)=0.2: t*=15/7 s; v*=40/7 m/s."
+          ],
+          [
+            "m",
+            "x_*=v_0t_*-\\frac12s\\mu_k gt_*^2"
+          ],
+          [
+            "p",
+            "For the no-spin numerical case x*=400/49 m. This is a COM displacement measured from first contact."
+          ]
+        ]
+      }
+    ],
+    "key": "slip-to-roll"
+  },
+  {
+    "section": "JEE",
+    "part_page": 12,
+    "slug": "JEE-12-driven-rolling",
+    "title": "Driven rollers & spool reversal",
+    "subtitle": "Horizontal ground; +x right, angular quantities clockwise-positive. Assume no slip, then verify it.",
+    "source": "E9; Q24; OL4; P35 (corrected)",
+    "diagrams": [
+      "driven",
+      "spool"
+    ],
+    "takeaway": "A static friction direction must be solved, not guessed from the direction of translation.",
+    "cards": [
+      {
+        "title": "One useful master equation",
+        "items": [
+          [
+            "p",
+            "Apply horizontal force F to the right along a line height h above C. Let friction f be positive rightward."
+          ],
+          [
+            "m",
+            "F+f=Ma,\\quad Fh-fR=I_C\\alpha"
+          ],
+          [
+            "m",
+            "a=\\frac{F(1+h/R)}{M(1+\\beta)}"
+          ],
+          [
+            "m",
+            "f=\\frac{F(h/R-\\beta)}{1+\\beta}"
+          ],
+          [
+            "why",
+            "Eliminating friction with a = R alpha exposes the line-of-action lever arm. h is signed."
+          ],
+          [
+            "m",
+            "|f|\\leq\\mu_s Mg"
+          ],
+          [
+            "p",
+            "At h=beta R no friction is needed: the applied force supplies translation and spin in exactly the rolling ratio."
+          ]
+        ]
+      },
+      {
+        "title": "Centre pull versus top pull",
+        "items": [
+          [
+            "p",
+            "At h=0: a=F/[M(1+beta)], with friction backward. At h=R for a disc (beta=1/2):"
+          ],
+          [
+            "m",
+            "a=4F/(3M),\\quad f=+F/3"
+          ],
+          [
+            "why",
+            "A top pull supplies more spin torque than needed without friction. Forward friction adds translation and reduces net clockwise torque."
+          ],
+          [
+            "trap",
+            "Source E9’s acceleration is right, but its claimed backward friction is wrong."
+          ],
+          [
+            "p",
+            "In both cases require |f| <= mu(s) Mg."
+          ],
+          [
+            "m",
+            "f_{h=0}=-\\frac{\\beta F}{1+\\beta}"
+          ],
+          [
+            "p",
+            "Disc centre-pull: a=2F/(3M), f=-F/3. Contrasting it with a top pull is a quick sign check."
+          ]
+        ]
+      },
+      {
+        "title": "Spool: state the winding",
+        "items": [
+          [
+            "p",
+            "String leaves the INNER hub on the lower-right tangent and is pulled up-right at angle phi. Outer radius R, hub radius r, axial inertia I."
+          ],
+          [
+            "m",
+            "Ma=F\\cos\\phi+f"
+          ],
+          [
+            "m",
+            "I_C\\alpha=-Fr-fR"
+          ],
+          [
+            "m",
+            "a=\\frac{F(\\cos\\phi-r/R)}{M(1+\\beta)}"
+          ],
+          [
+            "why",
+            "About contact, the string’s clockwise lever arm is R cos(phi) - r. Reversing the winding reverses the hub torque."
+          ],
+          [
+            "m",
+            "a_{\\rm upper}=\\frac{F(\\cos\\phi+r/R)}{M(1+\\beta)}"
+          ],
+          [
+            "p",
+            "For an upper-hub tangent the string torque is clockwise, so the reversal criterion differs. Draw the tangent explicitly."
+          ]
+        ]
+      },
+      {
+        "title": "Direction is geometric",
+        "items": [
+          [
+            "m",
+            "\\cos\\phi_c=r/R"
+          ],
+          [
+            "p",
+            "Below phi(c), a is toward the puller; above phi(c), it is away. This is acceleration from rest, not an instant velocity reversal."
+          ],
+          [
+            "m",
+            "N=Mg-F\\sin\\phi,\\quad f=Ma-F\\cos\\phi"
+          ],
+          [
+            "why",
+            "mu(s) decides if the assumed rolling solution is possible; it does not set the critical angle."
+          ],
+          [
+            "trap",
+            "Need N>0 and |f| <= mu(s) N. Source P35 lacks F and I, so its rolling feasibility cannot be decided numerically."
+          ],
+          [
+            "m",
+            "\\phi_c=\\cos^{-1}(r/R)"
+          ],
+          [
+            "p",
+            "For r/R=1/4, phi(c)=75.52°. At the critical angle a=0 and f=-F cos(phi), provided static contact can support it."
+          ]
+        ]
+      }
+    ],
+    "key": "driven-rolling"
+  },
+  {
+    "section": "JEE",
+    "part_page": 13,
+    "slug": "JEE-13-yoyo",
+    "title": "Unwinding strings & energy",
+    "subtitle": "A fixed upper string end; vertical descent; string taut, light and inextensible; no slip at hub.",
+    "source": "OL2; P31 (corrected); Part 8 trap 12",
+    "diagrams": [
+      "yoyo",
+      "yoyo_graph"
+    ],
+    "takeaway": "The unwinding radius is the hub radius r, not necessarily the outer body radius R.",
+    "cards": [
+      {
+        "title": "A yo-yo is a core application",
+        "items": [
+          [
+            "p",
+            "Let a be downward acceleration, T upward tension, I the axial inertia about C. Choose positive spin in the unwinding direction."
+          ],
+          [
+            "m",
+            "Mg-T=Ma,\\quad Tr=I\\alpha"
+          ],
+          [
+            "m",
+            "a=r\\alpha"
+          ],
+          [
+            "why",
+            "The string contact has zero velocity in the lab when the top end is fixed. That is the geometrical constraint."
+          ],
+          [
+            "trap",
+            "If the top end moves, the constraint and tension power change."
+          ],
+          [
+            "m",
+            "v=r\\omega"
+          ],
+          [
+            "p",
+            "The fixed string cancels the velocity of the hub contact; it does not make the body’s centre stationary."
+          ]
+        ]
+      },
+      {
+        "title": "Solve before substituting I",
+        "items": [
+          [
+            "m",
+            "a=\\frac{Mgr^2}{Mr^2+I}"
+          ],
+          [
+            "m",
+            "T=\\frac{MgI}{Mr^2+I}"
+          ],
+          [
+            "m",
+            "v^2=\\frac{2Mgh}{M+I/r^2}"
+          ],
+          [
+            "why",
+            "Tension partly cancels gravity while providing angular acceleration. In the fixed-string idealisation it does no total work."
+          ],
+          [
+            "p",
+            "For release from rest through height h, either use v²=2ah or conservation of mechanical energy."
+          ],
+          [
+            "m",
+            "Mgr=(Mr^2+I)\\alpha"
+          ],
+          [
+            "p",
+            "This is the combined equation with a=r alpha. It also checks the acceleration dimensions without assuming a solid disc."
+          ]
+        ]
+      },
+      {
+        "title": "Solid-disc model",
+        "items": [
+          [
+            "m",
+            "I=\\frac12MR^2"
+          ],
+          [
+            "m",
+            "a=\\frac{2gr^2}{2r^2+R^2}"
+          ],
+          [
+            "m",
+            "T=\\frac{MgR^2}{2r^2+R^2}"
+          ],
+          [
+            "why",
+            "For r=R: a=2g/3 and T=Mg/3, so a+T/M=g as required."
+          ],
+          [
+            "trap",
+            "Source P31 has an extra factor 1/2 in T. Small r means a small, but tension tends to Mg, not to zero."
+          ],
+          [
+            "m",
+            "r\\ll R:\\quad a\\simeq2g(r/R)^2"
+          ],
+          [
+            "p",
+            "As I tends to zero at fixed r, a tends to g and T tends to zero. As I grows large, a tends to zero and T tends to Mg."
+          ]
+        ]
+      },
+      {
+        "title": "An energy-accounting habit",
+        "items": [
+          [
+            "p",
+            "Choose the whole body as system. Use translational plus rotational KE and include gravity through potential energy."
+          ],
+          [
+            "m",
+            "Mgh=\\frac12Mv^2+\\frac12I(v/r)^2"
+          ],
+          [
+            "why",
+            "Writing the constraint inside the energy formula makes the effective inertia M+I/r² visible."
+          ],
+          [
+            "trap",
+            "A real yo-yo has finite string length, layer-dependent hub radius, bearing losses and possible rebound. This sheet models only ideal unwinding."
+          ],
+          [
+            "m",
+            "Tr\\omega-Tv=0"
+          ],
+          [
+            "p",
+            "Tension removes translational power and supplies the same rotational power. Gravity supplies the net increase in total KE."
+          ]
+        ]
+      }
+    ],
+    "key": "yoyo"
+  },
+  {
+    "section": "JEE",
+    "part_page": 14,
+    "slug": "JEE-14-collisions",
+    "title": "Impact first, swing second",
+    "subtitle": "A short embedding impact, a fixed frictionless hinge O, and negligible gravitational angular impulse.",
+    "source": "§3.10; E3; §§8–9.6; P28; D8.9, D8.12",
+    "diagrams": [
+      "impact",
+      "impact_loss"
+    ],
+    "takeaway": "Across impact use angular impulse; after impact use energy if the hinge is ideal and no dissipation acts.",
+    "cards": [
+      {
+        "title": "The right system and origin",
+        "items": [
+          [
+            "p",
+            "Include bullet m and rod M, length l. The rod is initially at rest. Bullet speed v is perpendicular to the rod and hits distance d from O."
+          ],
+          [
+            "m",
+            "I_f=Ml^2/3+md^2"
+          ],
+          [
+            "m",
+            "mvd=I_f\\omega_+"
+          ],
+          [
+            "why",
+            "The hinge impulse can be large, but its torque about O is zero. Gravity’s angular impulse is negligible over the short impact."
+          ],
+          [
+            "trap",
+            "Total linear momentum is generally not conserved: the hinge supplies external impulse."
+          ],
+          [
+            "m",
+            "\\omega_+=\\frac{mvd}{Ml^2/3+md^2}"
+          ],
+          [
+            "p",
+            "If the bullet velocity makes angle gamma with the rod, replace vd by vd sin(gamma); use the signed moment arm."
+          ]
+        ]
+      },
+      {
+        "title": "Energy lost in embedding",
+        "items": [
+          [
+            "m",
+            "K_+=\\frac{m^2v^2d^2}{2(I_0+md^2)}"
+          ],
+          [
+            "m",
+            "Q=\\frac12mv^2\\frac{I_0}{I_0+md^2}"
+          ],
+          [
+            "p",
+            "Here I0 = M l² / 3. Q decreases as d increases for fixed bullet speed and rod."
+          ],
+          [
+            "why",
+            "A hit farther out transfers a larger fraction of the initial energy into rotation."
+          ],
+          [
+            "trap",
+            "P28(c) reverses this: maximum loss is at d=0 (or the smallest allowed d), not at the far end."
+          ],
+          [
+            "p",
+            "At d→0, final spin and final KE vanish; Q tends to the whole incident bullet KE. Do not maximise omega to maximise the loss."
+          ]
+        ]
+      },
+      {
+        "title": "Subsequent upward swing",
+        "items": [
+          [
+            "m",
+            "\\frac12I_f\\omega_+^2=(Mg l/2+mgd)(1-\\cos\\theta)"
+          ],
+          [
+            "p",
+            "The rod began vertically downward; theta is its angular displacement from that position. Each mass has its own height change."
+          ],
+          [
+            "why",
+            "The impact has ended. Now gravity is conservative, and a stationary ideal hinge does no work."
+          ],
+          [
+            "trap",
+            "A turning angle exists only if the energy is at most 2(Mg l/2+mgd). Above the barrier, the ideal hinged system can pass over the top."
+          ],
+          [
+            "m",
+            "\\cos\\theta_{\\max}=1-\\frac{I_f\\omega_+^2}{2g(Ml/2+md)}"
+          ],
+          [
+            "p",
+            "This gives a turning point only when the right-hand side lies between -1 and 1."
+          ]
+        ]
+      },
+      {
+        "title": "Numbers and reusable impulse",
+        "items": [
+          [
+            "p",
+            "m=0.01 kg, v=400 m/s, M=1 kg, l=1 m, d=0.5 m:"
+          ],
+          [
+            "m",
+            "I_f=0.335833\\ \\mathrm{kg\\,m^2}"
+          ],
+          [
+            "m",
+            "\\omega_+=5.9553\\ \\mathrm{rad/s}"
+          ],
+          [
+            "m",
+            "\\Delta L_O=\\int\\tau_{\\rm ext,O}\\,dt"
+          ],
+          [
+            "why",
+            "If the impact force is not perpendicular, replace mvd by mv times the perpendicular impact parameter."
+          ],
+          [
+            "trap",
+            "A frictional hinge, off-axis impact or finite collision time may invalidate the zero-angular-impulse approximation."
+          ],
+          [
+            "p",
+            "After impact the bullet and rod are one composite body. Its new inertia includes the embedded point mass; using the bare rod inertia misses angular momentum."
+          ]
+        ]
+      }
+    ],
+    "key": "collisions"
+  },
+  {
+    "section": "JEE",
+    "key": "free-impacts",
+    "title": "Impulses: free bodies & hinges",
+    "subtitle": "During a short impact ignore gravity impulse; smooth supports give no horizontal impulse. Keep all spin signs consistent.",
+    "source": "§3.10; Parts 7–9; added core impulse/restitution derivations",
+    "diagrams": [
+      "eccentric_impulse",
+      "percussion"
+    ],
+    "takeaway": "A free body translates and spins after an eccentric impulse. A hinge changes which momentum equation is useful.",
+    "cards": [
+      {
+        "title": "Impulse on an initially resting body",
+        "items": [
+          [
+            "p",
+            "Impulse magnitude J acts horizontally with perpendicular lever arm b from the target COM. Mass M, planar COM inertia I."
+          ],
+          [
+            "m",
+            "V_C=J/M,\\quad |\\omega|=Jb/I"
+          ],
+          [
+            "m",
+            "K=\\frac{J^2}{2}(1/M+b^2/I)"
+          ],
+          [
+            "why",
+            "Integrate F=Ma for translation and torque=I alpha about C for spin. Add their kinetic energies."
+          ],
+          [
+            "p",
+            "The contact-point speed component along J is J(1/M+b²/I); define an effective mass by the reciprocal of this bracket."
+          ],
+          [
+            "trap",
+            "A force line through C (b=0) gives pure translation, not spin."
+          ]
+        ]
+      },
+      {
+        "title": "A particle hits the free target",
+        "items": [
+          [
+            "p",
+            "Incoming particle mass m and speed v. The target initially rests. The impact impulse is along the incident line; e is normal restitution."
+          ],
+          [
+            "m",
+            "D=1/m+1/M+b^2/I"
+          ],
+          [
+            "m",
+            "J=(1+e)v/D"
+          ],
+          [
+            "m",
+            "v_{m,+}=v-J/m"
+          ],
+          [
+            "why",
+            "The target’s contact speed is J(1/M+b²/I). Restitution sets target-contact speed minus outgoing particle speed equal to e v."
+          ],
+          [
+            "m",
+            "Q=(1-e^2)v^2/(2D)"
+          ],
+          [
+            "trap",
+            "e=0 means zero relative separation speed in the impact direction; it does not by itself enforce permanent sticking."
+          ]
+        ]
+      },
+      {
+        "title": "Hinged rod: support impulse",
+        "items": [
+          [
+            "p",
+            "A resting rod is hinged at O. Its COM is distance d from O; a perpendicular impulse J strikes distance b from O. I(O) is the hinge inertia."
+          ],
+          [
+            "m",
+            "\\omega_+=Jb/I_O,\\quad V_C=d\\omega_+"
+          ],
+          [
+            "m",
+            "J_H=MV_C-J"
+          ],
+          [
+            "m",
+            "J_H=J(Mdb/I_O-1)"
+          ],
+          [
+            "why",
+            "Angular impulse about the hinge eliminates its unknown impulse; linear impulse then determines the hinge reaction."
+          ],
+          [
+            "p",
+            "J(H) is signed along the incoming impulse. It can oppose it, vanish, or act in the same direction."
+          ]
+        ]
+      },
+      {
+        "title": "Centre of percussion",
+        "items": [
+          [
+            "m",
+            "b_{\\rm cp}=I_O/(Md)"
+          ],
+          [
+            "p",
+            "At this strike distance, J(H)=0: no transverse shock is transmitted to the ideal hinge."
+          ],
+          [
+            "m",
+            "\\mathrm{uniform\\ rod}:\\quad b_{\\rm cp}=2l/3"
+          ],
+          [
+            "why",
+            "Insert I(O)=Ml²/3 and d=l/2. This is the same length I(O)/(Md) that appears in the physical pendulum."
+          ],
+          [
+            "p",
+            "Conditions: initially stationary rigid body, fixed hinge, short transverse impulse, no other transverse impulses."
+          ],
+          [
+            "trap",
+            "A free rod and a hinged rod are different systems. Do not conserve their linear momentum in the same way."
+          ]
+        ]
+      }
+    ],
+    "part_page": 15,
+    "slug": "JEE-15-free-impacts"
+  },
+  {
+    "section": "JEE",
+    "part_page": 16,
+    "slug": "JEE-16-equilibrium",
+    "title": "Equilibrium, slipping & tipping",
+    "subtitle": "For static balance require BOTH zero net force and zero net torque; contact reactions are constrained.",
+    "source": "§3.11; E8; Q9; C12; D8.10",
+    "diagrams": [
+      "ladder",
+      "tipping"
+    ],
+    "takeaway": "A body can lose contact, start sliding or start toppling; check which inequality fails first.",
+    "cards": [
+      {
+        "title": "Ladder: draw every force",
+        "items": [
+          [
+            "p",
+            "Uniform ladder length l at angle theta to horizontal. Wall smooth, floor rough. Weight Mg acts at its midpoint."
+          ],
+          [
+            "m",
+            "N_g=Mg,\\quad f=N_w"
+          ],
+          [
+            "m",
+            "N_w l\\sin\\theta=Mg(l/2)\\cos\\theta"
+          ],
+          [
+            "m",
+            "\\mu_s\\geq\\frac12\\cot\\theta"
+          ],
+          [
+            "why",
+            "Take torques about the base to eliminate both ground reactions."
+          ],
+          [
+            "trap",
+            "Equality holds only at impending slip. This ideal ladder has point contacts, not a finite block base."
+          ],
+          [
+            "m",
+            "f\\leq\\mu_sN_g,\\quad N_w,N_g\\geq0"
+          ],
+          [
+            "p",
+            "An extra person or load adds its own moment about the base. Recompute rather than reuse the uniform-ladder threshold."
+          ]
+        ]
+      },
+      {
+        "title": "Block on an incline",
+        "items": [
+          [
+            "p",
+            "Half-width b along the plane; COM height h measured normal to it. With no other force, the weight projection must remain inside the base."
+          ],
+          [
+            "m",
+            "\\tan\\theta_{\\rm tip}=b/h"
+          ],
+          [
+            "m",
+            "\\tan\\theta_{\\rm slide}=\\mu_s"
+          ],
+          [
+            "why",
+            "At tipping, the ground normal resultant reaches the downhill edge and the weight has zero moment about that edge."
+          ],
+          [
+            "trap",
+            "Whichever critical angle is smaller occurs first. The tipping result presumes sliding has not already begun."
+          ],
+          [
+            "m",
+            "F_{\\rm tip}=Mgb/y,\\quad F_{\\rm slide}=\\mu_s Mg"
+          ],
+          [
+            "p",
+            "For a level-floor block pushed horizontally at height y, compare these thresholds; b is half-width of the base."
+          ]
+        ]
+      },
+      {
+        "title": "Accelerating supports",
+        "items": [
+          [
+            "p",
+            "In the frame of a support accelerating horizontally right with A, include pseudo-force M A leftward at C."
+          ],
+          [
+            "m",
+            "\\vec g_{\\rm eff}=\\vec g-\\vec A"
+          ],
+          [
+            "p",
+            "The effective-weight line through C must intersect the support footprint for quasistatic balance."
+          ],
+          [
+            "why",
+            "This is simply torque balance written in a translating non-inertial frame."
+          ],
+          [
+            "trap",
+            "Use this static construction only when the body remains at rest relative to that frame."
+          ],
+          [
+            "m",
+            "A_{\\rm tip}=gb/h"
+          ],
+          [
+            "p",
+            "For the same block carried by a horizontal support, the effective-weight line reaches the rear edge at this acceleration, if it has not slipped first."
+          ]
+        ]
+      },
+      {
+        "title": "Overhang: COM recursion",
+        "items": [
+          [
+            "m",
+            "\\delta_n=\\frac{l}{2n}"
+          ],
+          [
+            "m",
+            "D_N=\\frac l2\\sum_{n=1}^{N}\\frac1n"
+          ],
+          [
+            "p",
+            "Identical horizontal blocks, ideal rigid contacts; delta(n) is the offset between block n and the support below the top n blocks."
+          ],
+          [
+            "why",
+            "Place each upper stack’s COM exactly above the next support edge. Harmonic growth is logarithmic, not linear."
+          ],
+          [
+            "p",
+            "Checks: D4=25l/24; D10=1.46448l; D(10^6)=7.19636l. Exact balance is marginal."
+          ],
+          [
+            "p",
+            "For the top n blocks their combined COM must lie above the next support. Adding one block shifts that COM; balancing this shift gives l/(2n)."
+          ]
+        ]
+      }
+    ],
+    "key": "equilibrium"
+  },
+  {
+    "section": "JEE",
+    "key": "energy-contact",
+    "title": "Energy, reactions & curved rolling",
+    "subtitle": "Harder JEE applications still use the same core laws. Energy gives speed; force balance tests contact.",
+    "source": "Q10; §§3.8, 3.10; added support/loop applications",
+    "diagrams": [
+      "falling_rod",
+      "rolling_loop"
+    ],
+    "takeaway": "Energy conservation alone cannot establish continued contact, pure rolling, or an admissible support force.",
+    "cards": [
+      {
+        "title": "A rod falls about a fixed hinge",
+        "items": [
+          [
+            "p",
+            "Uniform rod length l, mass M, released horizontally from rest. theta is its downward angle from the initial horizontal."
+          ],
+          [
+            "m",
+            "Mg(l/2)\\sin\\theta=\\frac12(Ml^2/3)\\omega^2"
+          ],
+          [
+            "m",
+            "\\omega^2=(3g/l)\\sin\\theta"
+          ],
+          [
+            "m",
+            "\\alpha=(3g/2l)\\cos\\theta"
+          ],
+          [
+            "why",
+            "Take gravitational torque about the hinge. Energy supplies omega; torque supplies alpha."
+          ],
+          [
+            "p",
+            "At the lowest point omega=sqrt(3g/l), alpha=0, but the COM still has inward centripetal acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Hinge reaction is not Mg",
+        "items": [
+          [
+            "p",
+            "At release the rod is horizontal; C accelerates downward with magnitude alpha l/2=3g/4."
+          ],
+          [
+            "m",
+            "H_y-Mg=-3Mg/4\\ \\Rightarrow\\ H_y=Mg/4"
+          ],
+          [
+            "p",
+            "At the lowest point C accelerates upward at omega²l/2=3g/2."
+          ],
+          [
+            "m",
+            "H_y-Mg=3Mg/2\\ \\Rightarrow\\ H_y=5Mg/2"
+          ],
+          [
+            "why",
+            "The fixed hinge does no work, but it does supply force and impulse. “No work” does not mean “no force”."
+          ],
+          [
+            "trap",
+            "Between these positions use BOTH tangential and radial COM acceleration before resolving the hinge reaction."
+          ]
+        ]
+      },
+      {
+        "title": "Rolling inside a vertical loop",
+        "items": [
+          [
+            "p",
+            "Track inner radius R; body radius r; q=R-r is the COM path radius. beta=I(C)/(M r²). theta is measured from the bottom."
+          ],
+          [
+            "m",
+            "v^2=2g[h-q(1-\\cos\\theta)]/(1+\\beta)"
+          ],
+          [
+            "m",
+            "N=M(v^2/q+g\\cos\\theta)"
+          ],
+          [
+            "why",
+            "Energy uses the COM height. Radially inward: N-Mg cos(theta)=Mv²/q. At the top this becomes N+Mg=Mv²/q."
+          ],
+          [
+            "p",
+            "h is the initial COM height above its lowest path point. Require N>=0 along the motion."
+          ],
+          [
+            "trap",
+            "Do not use the track radius R in the COM centripetal term."
+          ]
+        ]
+      },
+      {
+        "title": "Minimum height: a conditional result",
+        "items": [
+          [
+            "m",
+            "v_{\\rm top}^2\\geq gq"
+          ],
+          [
+            "m",
+            "h\\geq\\frac{5+\\beta}{2}q"
+          ],
+          [
+            "p",
+            "Derive by imposing N(top)>=0 in the energy equation. beta=0 recovers the particle loop result 5q/2."
+          ],
+          [
+            "why",
+            "This is the ideal-constraint energy/contact lower bound, not a guarantee for a real rough roller."
+          ],
+          [
+            "m",
+            "|f|=\\frac{\\beta}{1+\\beta}Mg|\\sin\\theta|"
+          ],
+          [
+            "trap",
+            "Check |f|<=mu(s)N everywhere. Near marginal top contact, finite friction may be insufficient even if the top-speed condition holds. A higher release height can be needed."
+          ]
+        ]
+      }
+    ],
+    "part_page": 17,
+    "slug": "JEE-17-energy-contact"
+  },
+  {
+    "section": "JEE",
+    "part_page": 18,
+    "slug": "JEE-18-oscillations",
+    "title": "Rigid-body oscillations: SHM link",
+    "subtitle": "This is an application of rotational mechanics to the JEE oscillations chapter, not specialised top theory.",
+    "source": "E7; Q7, Q20; OL6; P30, P32",
+    "diagrams": [
+      "pendulum",
+      "bowl"
+    ],
+    "takeaway": "First identify the coordinate and inertia, then linearise the restoring torque for small oscillations.",
+    "cards": [
+      {
+        "title": "Physical pendulum",
+        "items": [
+          [
+            "p",
+            "A fixed horizontal pivot axis is d above C in stable equilibrium. I(O) is about that pivot."
+          ],
+          [
+            "m",
+            "I_O\\ddot\\theta=-Mgd\\sin\\theta"
+          ],
+          [
+            "m",
+            "T=2\\pi\\sqrt{I_O/(Mgd)}"
+          ],
+          [
+            "why",
+            "For |theta| much smaller than 1 rad, sin(theta) is approximately theta; the torque then has the SHM form."
+          ],
+          [
+            "trap",
+            "The period formula is small-amplitude only. At d=0 there is no gravitational restoring torque."
+          ],
+          [
+            "m",
+            "I_O=I_C+Md^2"
+          ],
+          [
+            "p",
+            "Use the pivot axis, not the COM axis, in the period. The restoring sign is negative about downward equilibrium."
+          ]
+        ]
+      },
+      {
+        "title": "Equivalent length and optimum",
+        "items": [
+          [
+            "m",
+            "l_{\\rm eq}=\\frac{I_O}{Md}=d+\\frac{k_C^2}{d}"
+          ],
+          [
+            "m",
+            "d_{\\rm opt}=k_C,\\quad l_{\\rm eq,min}=2k_C"
+          ],
+          [
+            "p",
+            "Use I(O)=M(k(C)²+d²). The optimum is valid only if that pivot position is physically allowed."
+          ],
+          [
+            "why",
+            "Differentiate d+k²/d: the two terms balance at d=k."
+          ],
+          [
+            "p",
+            "Disc: d=R/sqrt(2); end-pivot rod: T=2 pi sqrt(2l/3g)."
+          ],
+          [
+            "m",
+            "T_{\\rm rod,end}=2\\pi\\sqrt{2l/(3g)}"
+          ],
+          [
+            "m",
+            "T_{\\rm disc,rim}=2\\pi\\sqrt{3R/(2g)}"
+          ],
+          [
+            "p",
+            "Memorise the standard results, but know which d and I produce each one."
+          ]
+        ]
+      },
+      {
+        "title": "Cylinder in a circular bowl",
+        "items": [
+          [
+            "p",
+            "Track radius R, roller radius r<R, beta=I(C)/(M r²). Let q=R-r; theta measures C’s displacement from the bottom."
+          ],
+          [
+            "m",
+            "v_C=q\\dot\\theta,\\quad |\\omega|=v_C/r"
+          ],
+          [
+            "m",
+            "K=\\frac12M(1+\\beta)q^2\\dot\\theta^2"
+          ],
+          [
+            "why",
+            "No slip on a fixed track gives rolling spin from arc travel of C. This is not spin equal to theta-dot."
+          ],
+          [
+            "trap",
+            "The relevant COM path radius is R-r, not R."
+          ],
+          [
+            "m",
+            "U=Mgq(1-\\cos\\theta)"
+          ],
+          [
+            "p",
+            "Energy is K+U constant. Differentiate it to get the exact equation, then linearise; there is no small-angle step in the kinetic energy."
+          ]
+        ]
+      },
+      {
+        "title": "Small bowl oscillations",
+        "items": [
+          [
+            "m",
+            "\\ddot\\theta=-\\frac{g\\sin\\theta}{q(1+\\beta)}"
+          ],
+          [
+            "m",
+            "T=2\\pi\\sqrt{q(1+\\beta)/g}"
+          ],
+          [
+            "p",
+            "For a solid cylinder beta=1/2, T is sqrt(3/2) times the simple-pendulum period for length q."
+          ],
+          [
+            "why",
+            "The exact restoring term is sine; only small oscillations are SHM. Rotation increases the effective inertia."
+          ],
+          [
+            "trap",
+            "Require contact and enough static friction throughout. The q→0 limit is geometrically singular, not a real zero-period oscillator."
+          ],
+          [
+            "m",
+            "\\frac{T}{T_{\\rm simple}}=\\sqrt{1+\\beta}"
+          ],
+          [
+            "p",
+            "As beta→0 recover a point mass on a circular path. The effective inertia, not extra mass, lengthens the period."
+          ]
+        ]
+      }
+    ],
+    "key": "oscillations"
+  },
+  {
+    "section": "JEE",
+    "part_page": 19,
+    "slug": "JEE-19-sliding-rod",
+    "title": "Sliding rod & final JEE checks",
+    "subtitle": "A harder core application stays in JEE: use constraints, energy and a contact-force test.",
+    "source": "OL3; P33 (corrected); Parts 7–9, 13–14",
+    "diagrams": [
+      "rod",
+      "rod_graph"
+    ],
+    "takeaway": "Keep the two-contact solution only until the wall normal first reaches zero; then change the constraints.",
+    "cards": [
+      {
+        "title": "Geometry before equations",
+        "items": [
+          [
+            "p",
+            "Uniform rod length l on a smooth floor and wall. Theta is its angle ABOVE THE FLOOR, released from rest at 0<theta0<90°."
+          ],
+          [
+            "m",
+            "x_C=\\frac l2\\cos\\theta,\\quad y_C=\\frac l2\\sin\\theta"
+          ],
+          [
+            "m",
+            "K=\\frac{Ml^2}{6}\\dot\\theta^2"
+          ],
+          [
+            "why",
+            "C moves on a circle of radius l/2 while both contacts persist. Add spin inertia Ml²/12 to the translational term."
+          ],
+          [
+            "trap",
+            "A smooth floor does not pin the bottom. Never assume rotation about a fixed bottom end."
+          ],
+          [
+            "m",
+            "v_C^2=(l^2/4)\\dot\\theta^2"
+          ],
+          [
+            "p",
+            "While both contacts persist, the instantaneous centre is the intersection of their velocity normals; it is not the bottom endpoint."
+          ]
+        ]
+      },
+      {
+        "title": "Energy and angular acceleration",
+        "items": [
+          [
+            "m",
+            "\\dot\\theta^2=\\frac{3g}{l}(\\sin\\theta_0-\\sin\\theta)"
+          ],
+          [
+            "m",
+            "\\ddot\\theta=-\\frac{3g}{2l}\\cos\\theta"
+          ],
+          [
+            "why",
+            "The potential drop is Mg l (sin(theta0)-sin(theta))/2. Differentiating energy gives the equation away from the initial rest instant; it extends continuously there."
+          ],
+          [
+            "p",
+            "The rod falls with theta decreasing; theta-dot is negative, while its squared value above stays positive."
+          ],
+          [
+            "m",
+            "\\frac{Ml^2}{6}\\dot\\theta^2=\\frac{Mgl}{2}(\\sin\\theta_0-\\sin\\theta)"
+          ],
+          [
+            "p",
+            "The effective rotational inertia in this one-coordinate energy is Ml²/3, but the body is not rotating about a fixed floor point."
+          ]
+        ]
+      },
+      {
+        "title": "Contact loss: correct angle",
+        "items": [
+          [
+            "m",
+            "N_w=M\\ddot x_C"
+          ],
+          [
+            "m",
+            "N_w=\\frac{3Mg}{4}\\cos\\theta(3\\sin\\theta-2\\sin\\theta_0)"
+          ],
+          [
+            "m",
+            "\\sin\\theta_*=\\frac23\\sin\\theta_0"
+          ],
+          [
+            "m",
+            "v_{C,*}=\\frac12\\sqrt{gl\\sin\\theta_0}"
+          ],
+          [
+            "why",
+            "A wall can push but cannot pull: set Nw=0 before the formula would predict a negative normal."
+          ],
+          [
+            "trap",
+            "Source OL3/P33 use cosine with a floor-angle energy convention; that is inconsistent."
+          ],
+          [
+            "m",
+            "N_{g,*}=Mg/4"
+          ],
+          [
+            "p",
+            "The floor still pushes at detachment. Afterwards the wall force is zero and the two-contact circular-COM constraint must be dropped."
+          ]
+        ]
+      },
+      {
+        "title": "Before submitting a solution",
+        "items": [
+          [
+            "p",
+            "Name the system, axis and positive direction. Match every I to its axis. Check no slip, contact, tension and friction limits."
+          ],
+          [
+            "p",
+            "Separate impact, sliding, rolling and free-flight phases. Identify when energy, linear momentum or angular momentum is actually conserved."
+          ],
+          [
+            "why",
+            "Most “rotation traps” are an unspoken constraint or origin choice, not difficult algebra."
+          ],
+          [
+            "trap",
+            "Exactly vertical release at perfect rest is a degenerate ideal solution. Use a small perturbation to discuss falling; do not substitute it blindly into a claimed motion."
+          ],
+          [
+            "p",
+            "Fast checks: dimensions of I; moment arm perpendicular to force; torque sign; beta consistent with the body; mu(s) inequality; normal and tension nonnegative; physically allowed limiting case."
+          ]
+        ]
+      }
+    ],
+    "key": "sliding-rod"
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 1,
+    "slug": "Olympiad-01-tensor",
+    "title": "Beyond scalar inertia",
+    "subtitle": "Specialised extension: general 3-D rotation. The JEE sequence needs only planar and fixed-axis components.",
+    "source": "§3.6; OL8 (corrected); §10.2",
+    "diagrams": [
+      "tensor",
+      "moving_origin"
+    ],
+    "takeaway": "The scalar I about an axis remains useful even when the full angular-momentum vector is not parallel to omega.",
+    "cards": [
+      {
+        "title": "Tensor definition",
+        "items": [
+          [
+            "m",
+            "I_{ij}=\\int(r^2\\delta_{ij}-x_ix_j)\\,dm"
+          ],
+          [
+            "m",
+            "\\vec L_C=\\mathbf I_C\\vec\\omega"
+          ],
+          [
+            "m",
+            "K_{\\rm spin}=\\frac12\\vec\\omega\\cdot\\mathbf I_C\\vec\\omega"
+          ],
+          [
+            "p",
+            "Coordinates are relative to C; delta(ij) is 1 for equal indices, 0 otherwise. I is symmetric and has orthogonal principal axes."
+          ],
+          [
+            "why",
+            "Each mass contributes r cross (omega cross r). Collecting coefficients gives this linear map."
+          ]
+        ]
+      },
+      {
+        "title": "Dumbbell: a clean counterexample",
+        "items": [
+          [
+            "p",
+            "Two point masses m at ±a n, where n is a unit vector along a massless rod."
+          ],
+          [
+            "m",
+            "\\mathbf I=2ma^2(\\mathbf{1}-\\vec n\\vec n^{\\,T})"
+          ],
+          [
+            "m",
+            "\\vec L=2ma^2[\\vec\\omega-(\\vec\\omega\\cdot\\vec n)\\vec n]"
+          ],
+          [
+            "why",
+            "A rotation component along the zero-thickness rod contributes no angular momentum. L is perpendicular to n."
+          ],
+          [
+            "trap",
+            "OL8’s component expression uses a non-orthogonal direction incorrectly. For generic oblique spin, L is not parallel to omega."
+          ]
+        ]
+      },
+      {
+        "title": "Body frame versus lab frame",
+        "items": [
+          [
+            "m",
+            "\\vec\\tau_C=\\left(\\frac{d\\vec L_C}{dt}\\right)_{\\rm body}+\\vec\\omega\\times\\vec L_C"
+          ],
+          [
+            "p",
+            "In principal axes the body-frame inertia matrix is diagonal. The extra cross term accounts for rotation of the basis itself."
+          ],
+          [
+            "why",
+            "A vector fixed in the body can still change direction in the laboratory."
+          ],
+          [
+            "trap",
+            "Do not differentiate body-frame components as if their basis vectors were fixed in space."
+          ]
+        ]
+      },
+      {
+        "title": "An arbitrary moving origin",
+        "items": [
+          [
+            "m",
+            "\\vec L_A=\\sum_i(\\vec r_i-\\vec r_A)\\times m_i\\vec v_i"
+          ],
+          [
+            "m",
+            "\\frac{d\\vec L_A}{dt}=\\vec\\tau_A-\\vec v_A\\times M\\vec v_C"
+          ],
+          [
+            "p",
+            "These velocities are absolute inertial velocities. For A=C the cross term vanishes. For relative velocities, the corresponding rate formula instead involves a(A)."
+          ],
+          [
+            "why",
+            "Differentiating r(i)-r(A) generates the transport term."
+          ],
+          [
+            "trap",
+            "A moving axis is not automatically a conserved-L origin just because its external torque vanishes."
+          ]
+        ]
+      }
+    ],
+    "key": "tensor"
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 2,
+    "slug": "Olympiad-02-gyroscopes",
+    "title": "Gyroscopes: torque turns L",
+    "subtitle": "Specialised symmetric-top dynamics; separate spin, precession and nutation.",
+    "source": "§3.12; E6; OL7; P36; §§4.2, 9.2 (corrected)",
+    "diagrams": [
+      "gyro",
+      "gyro_graph"
+    ],
+    "takeaway": "Slow precession is a fast-spin approximation, not a small-tilt law; omega→0 is outside that approximation.",
+    "cards": [
+      {
+        "title": "Geometry removes sin(theta)",
+        "items": [
+          [
+            "p",
+            "Fixed pivot O; C at distance d along symmetry axis n. L is approximately I3 omega3 n for dominant spin."
+          ],
+          [
+            "m",
+            "|\\tau|=Mgd\\sin\\theta"
+          ],
+          [
+            "m",
+            "|\\dot{\\vec L}|=\\Omega L\\sin\\theta"
+          ],
+          [
+            "m",
+            "\\Omega\\simeq\\frac{Mgd}{I_3\\omega_3}"
+          ],
+          [
+            "why",
+            "Both torque and the precession-circle radius contain sin(theta). They cancel at nonzero tilt."
+          ],
+          [
+            "trap",
+            "Use tau/(L sin(theta)), not tau/L for the precession rate around vertical."
+          ]
+        ]
+      },
+      {
+        "title": "When slow precession is safe",
+        "items": [
+          [
+            "p",
+            "A nearly symmetric top, spin angular momentum dominant, slow steady precession and small nutation amplitude. Finite tilt is allowed."
+          ],
+          [
+            "m",
+            "I_\\perp\\Omega\\ll |I_3\\omega_3|"
+          ],
+          [
+            "p",
+            "I(perp) is the transverse inertia about the pivot, not the COM. Initial conditions can excite nutation even at modest tilt."
+          ],
+          [
+            "why",
+            "Rapid spin gives a large L, so a given torque turns it slowly."
+          ],
+          [
+            "trap",
+            "As spin tends to zero the approximation fails; the predicted divergence does not mean an instantaneous fall."
+          ]
+        ]
+      },
+      {
+        "title": "Steady-precession branches",
+        "items": [
+          [
+            "m",
+            "I_\\perp\\Omega^2\\cos\\theta-I_3\\omega_3\\Omega+Mgd=0"
+          ],
+          [
+            "p",
+            "For a heavy symmetric top in regular precession, theta is constant; omega3 is the actual angular velocity component along n."
+          ],
+          [
+            "why",
+            "The quadratic retains transverse angular momentum. The small root reduces to slow precession when spin dominates."
+          ],
+          [
+            "trap",
+            "Reality of roots and initial conditions matter. This is not the same as stability of an upright sleeping top."
+          ]
+        ]
+      },
+      {
+        "title": "Upright “sleeping” top",
+        "items": [
+          [
+            "p",
+            "Ideal heavy symmetric top, fixed point, C above O, upright rotation; small tilt perturbations."
+          ],
+          [
+            "m",
+            "(I_3\\omega_3)^2>4Mgd\\,I_\\perp"
+          ],
+          [
+            "why",
+            "Linearised tilt equations give bounded oscillatory perturbations above this threshold; equality is marginal."
+          ],
+          [
+            "trap",
+            "No universal extra R/r factor exists. Real tip friction, damping and geometry require their own model."
+          ],
+          [
+            "p",
+            "Check E6: Omega≈0.25 rad/s; precession period≈25.13 s. Fast spin alone does not specify initial nutation."
+          ]
+        ]
+      }
+    ],
+    "key": "gyroscopes"
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 3,
+    "slug": "Olympiad-03-flywheel",
+    "title": "Flywheel limits: add a material law",
+    "subtitle": "Kinetic-energy storage is JEE core; elastic stress and failure models are specialised extensions.",
+    "source": "Q13 (core on JEE 04); OL10; P34",
+    "diagrams": [
+      "stress",
+      "flywheel_graph"
+    ],
+    "takeaway": "A perfectly rigid model cannot itself predict breaking speed: a constitutive and failure model must be supplied.",
+    "cards": [
+      {
+        "title": "Core energy, new restriction",
+        "items": [
+          [
+            "m",
+            "K=\\frac12I\\omega^2"
+          ],
+          [
+            "m",
+            "\\frac KM=\\frac14(\\omega R)^2\\quad\\mathrm{(solid\\ disc)}"
+          ],
+          [
+            "p",
+            "For a prescribed spin rate this needs only rigid-body mechanics. A maximum allowable speed needs stress information."
+          ],
+          [
+            "why",
+            "Scaling to energy per mass removes size, but does not eliminate the need for a material strength limit."
+          ],
+          [
+            "trap",
+            "Do not call all flywheel energy questions “outside JEE”; it is the material theory that is additional."
+          ]
+        ]
+      },
+      {
+        "title": "Uniform elastic thin disc",
+        "items": [
+          [
+            "p",
+            "Ideal isotropic constant-thickness disc, free outer edge, no centre hole, plane-stress linear elasticity."
+          ],
+          [
+            "m",
+            "\\sigma_{\\max}=\\frac{3+\\nu}{8}\\rho\\omega^2R^2"
+          ],
+          [
+            "m",
+            "\\left(\\frac KM\\right)_{\\max}=\\frac{2\\sigma_{\\rm allow}}{\\rho(3+\\nu)}"
+          ],
+          [
+            "p",
+            "rho is density; nu is Poisson’s ratio. Maximum stress is at the centre for ordinary positive nu."
+          ],
+          [
+            "why",
+            "Insert the stress-limited rim speed into K/M. Dimensions: stress/density = m²/s²."
+          ]
+        ]
+      },
+      {
+        "title": "Numerical scale",
+        "items": [
+          [
+            "p",
+            "rho=7800 kg/m³, nu=0.30, sigma(allow)=500 MPa; use the source’s ideal strength as the allowable value."
+          ],
+          [
+            "m",
+            "(\\omega R)_{\\max}=394.2\\ \\mathrm{m/s}"
+          ],
+          [
+            "m",
+            "K/M=38.85\\ \\mathrm{kJ/kg}"
+          ],
+          [
+            "why",
+            "This independently recomputes the source’s approximately 39 kJ/kg estimate."
+          ],
+          [
+            "trap",
+            "An engineering allowable stress usually includes safety factors, fatigue and manufacturing defects. This is not a safe design recommendation."
+          ]
+        ]
+      },
+      {
+        "title": "Changing shape changes stress",
+        "items": [
+          [
+            "p",
+            "For an ideal thin rotating ring the hoop stress is rho omega² R², while K/M = omega² R² / 2."
+          ],
+          [
+            "m",
+            "(K/M)_{\\max,ring}=\\sigma_{\\rm allow}/(2\\rho)"
+          ],
+          [
+            "why",
+            "The ring stores more at fixed rim speed but reaches its own stress limit sooner; compare under the same failure condition."
+          ],
+          [
+            "trap",
+            "A bored disc, composite rotor, anisotropy, bearing mass or enclosure mass changes the estimate. A battery comparison is not a universal performance ranking."
+          ]
+        ]
+      }
+    ],
+    "key": "flywheel"
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 4,
+    "slug": "Olympiad-04-model-boundaries",
+    "title": "Open systems & missing constraints",
+    "subtitle": "Specialised model audit: not every printed question is sufficiently specified to have a unique answer.",
+    "source": "OL5; OL9; §10.2; Part 14",
+    "diagrams": [
+      "carpet",
+      "peg"
+    ],
+    "takeaway": "If the model lacks a deposition law, contact geometry or impact rule, state that rather than inventing a final formula.",
+    "cards": [
+      {
+        "title": "Unrolling carpet: variable mass",
+        "items": [
+          [
+            "p",
+            "A real roll has finite thickness t; a thin-layer continuum may approximate its cross-section. Negligible thickness literally cannot create a finite-radius roll."
+          ],
+          [
+            "m",
+            "m(R)\\simeq M R^2/R_0^2"
+          ],
+          [
+            "m",
+            "I_C(R)\\simeq\\frac12m(R)R^2"
+          ],
+          [
+            "why",
+            "With a negligible core and uniform packing, remaining mass scales with cross-sectional area."
+          ],
+          [
+            "trap",
+            "The rolled part is an open subsystem: momentum and energy flow out when layers are deposited."
+          ]
+        ]
+      },
+      {
+        "title": "What a complete model needs",
+        "items": [
+          [
+            "p",
+            "Specify initial packing, core radius, thickness, release mechanism, no-slip contacts, and whether deposited material is stopped inelastically."
+          ],
+          [
+            "m",
+            "K_{\\rm roll}=\\frac34m(R)v_C^2"
+          ],
+          [
+            "p",
+            "This expression assumes a uniform cylindrical roll and omega=v(C)/R. It is only an instantaneous kinetic energy, not an energy balance."
+          ],
+          [
+            "why",
+            "The whole-carpet energy must include changing potential, kinetic energy of every part, and any deposition loss."
+          ],
+          [
+            "trap",
+            "OL5 does not specify these laws. No unique speed-versus-radius result is asserted here."
+          ]
+        ]
+      },
+      {
+        "title": "Rod and peg: clarify the stages",
+        "items": [
+          [
+            "p",
+            "A smooth floor supplies only vertical force; it cannot generally pin the rod’s bottom. A peg contact is not automatically a permanent hinge."
+          ],
+          [
+            "m",
+            "\\vec L_P^-\\simeq\\vec L_P^+"
+          ],
+          [
+            "p",
+            "Across a short single-point peg impact this holds if other external angular impulses about fixed P are negligible."
+          ],
+          [
+            "why",
+            "Impulse at P has zero moment about P, but another simultaneous support impulse need not."
+          ],
+          [
+            "trap",
+            "OL9 lacks peg location/contact geometry, capture and restitution rules. Its assumed fixed-bottom fall contradicts a smooth floor."
+          ]
+        ]
+      },
+      {
+        "title": "After repairing the model",
+        "items": [
+          [
+            "p",
+            "If a fixed pin captures the body at P, calculate pre-impact v(C) and omega, then L(P), then post-impact KE with the new inertia."
+          ],
+          [
+            "m",
+            "K_+=\\frac{L_P^2}{2I_P}"
+          ],
+          [
+            "p",
+            "Only afterwards compare with the gravitational barrier. For unilateral contact, also test whether the peg reaction remains admissible."
+          ],
+          [
+            "why",
+            "This is the same phase logic used for the hinged bullet problem, but with new constraints explicitly supplied."
+          ],
+          [
+            "trap",
+            "No numerical swing-over condition can be certified from the source OL9 statement alone."
+          ]
+        ]
+      }
+    ],
+    "key": "model-boundaries"
+  }
+]
