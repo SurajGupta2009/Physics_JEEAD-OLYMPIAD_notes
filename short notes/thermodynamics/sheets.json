@@ -1,0 +1,3318 @@
+[
+  {
+    "section": "JEE",
+    "part_page": 1,
+    "slug": "JEE/01-temperature",
+    "title": "Temperature & equilibrium",
+    "subtitle": "Choose the system boundary. Absolute T belongs in gas laws, ratios, radiation and entropy.",
+    "source": "Source §§1.1-1.3, 3.1; formula sheet",
+    "diagrams": [
+      "equilibrium",
+      "thermometer"
+    ],
+    "takeaway": "Equal temperature means thermal equilibrium, not equal internal energy or equal molecular speed.",
+    "cards": [
+      {
+        "title": "Zeroth law makes T measurable",
+        "items": [
+          [
+            "m",
+            "T_A=T_C,\\ T_B=T_C\\ \\Rightarrow\\ T_A=T_B"
+          ],
+          [
+            "p",
+            "If A and B separately reach thermal equilibrium with C, they are in thermal equilibrium with each other. C can act as a thermometer. The law establishes a consistent way to compare temperatures."
+          ],
+          [
+            "why",
+            "Equilibrium means zero NET heat transfer. Microscopic energy exchanges can continue in both directions at equal rates."
+          ],
+          [
+            "trap",
+            "A diathermal wall transfers energy, not necessarily molecules. A material barrier and a thermal barrier are distinct constraints."
+          ]
+        ]
+      },
+      {
+        "title": "System, state & constraints",
+        "items": [
+          [
+            "p",
+            "Closed: fixed matter, energy may cross. Isolated: neither matter nor energy crosses. Open: matter carries energy across the boundary. Equilibrium states have well-defined macroscopic variables; a process connects such states."
+          ],
+          [
+            "why",
+            "Thermal, mechanical and chemical equilibrium are separate. A loaded piston can maintain unequal pressures while it is in mechanical equilibrium."
+          ],
+          [
+            "trap",
+            "Adiabatic means no heat transfer, not no work, no temperature change or no entropy generation. Quasistatic alone is not reversible."
+          ]
+        ]
+      },
+      {
+        "title": "Scales and calibration",
+        "items": [
+          [
+            "m",
+            "T(\\mathrm K)=t(^{\\circ}\\mathrm C)+273.15"
+          ],
+          [
+            "m",
+            "t_F=\\frac95t_C+32,\\quad\\Delta t_F=\\frac95\\Delta t_C"
+          ],
+          [
+            "m",
+            "\\frac{t-t_1}{t_2-t_1}=\\frac{X-X_1}{X_2-X_1}"
+          ],
+          [
+            "p",
+            "The last relation calibrates a thermometric property X that varies linearly with temperature over the stated range. Use two fixed points to find offset and slope."
+          ],
+          [
+            "why",
+            "A temperature increment has the same numerical value in K and Celsius; temperature values themselves do not."
+          ],
+          [
+            "trap",
+            "Do not use Celsius in temperature ratios or a linear calibration outside its validity range."
+          ]
+        ]
+      },
+      {
+        "title": "Gas thermometer & symbols",
+        "items": [
+          [
+            "m",
+            "PV=nRT=Nk_BT,\\quad N=nN_A"
+          ],
+          [
+            "m",
+            "R=N_Ak_B=8.314\\ \\mathrm{J\\,mol^{-1}K^{-1}}"
+          ],
+          [
+            "p",
+            "At fixed volume, ideal-gas pressure is proportional to absolute temperature. Low-density extrapolation gives gas-independent thermometry. n=moles, N=molecules, nu=N/V number density, M=molar mass in kg/mol, rho=mass density."
+          ],
+          [
+            "why",
+            "kB T is energy per particle; RT is energy per mole. This distinction keeps microscopic and macroscopic formulas consistent."
+          ],
+          [
+            "trap",
+            "Use s for the polytropic exponent, not n. Never combine molecular mass with R or molar mass with kB."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 2,
+    "slug": "JEE/02-expansion",
+    "title": "Expansion: geometry & constraint",
+    "subtitle": "Uniform heating, isotropic material, small temperature changes unless a different model is stated.",
+    "source": "Source §§1.3-1.7; clock, tyre and bimetal examples",
+    "diagrams": [
+      "hole",
+      "bimetal"
+    ],
+    "takeaway": "A hole expands with its plate. Thermal stress appears when free thermal expansion is restricted.",
+    "cards": [
+      {
+        "title": "One scale factor, three measures",
+        "items": [
+          [
+            "m",
+            "\\Delta L=\\alpha L_0\\Delta T"
+          ],
+          [
+            "m",
+            "\\beta_A\\simeq2\\alpha,\\quad\\beta_V\\simeq3\\alpha"
+          ],
+          [
+            "m",
+            "\\Delta V=\\beta_VV_0\\Delta T"
+          ],
+          [
+            "p",
+            "Alpha, beta(A) and beta(V) are linear, area and volume coefficients, all in 1/K. These are first-order approximations for uniform isotropic expansion."
+          ],
+          [
+            "why",
+            "All lengths scale by 1+alpha delta T. Square or cube that factor and retain first-order terms to obtain the other coefficients."
+          ],
+          [
+            "trap",
+            "If alpha varies significantly, integrate dL/L=alpha(T)dT. Large changes need not obey a constant-coefficient linear model."
+          ]
+        ]
+      },
+      {
+        "title": "Hole, liquid & density",
+        "items": [
+          [
+            "m",
+            "\\beta_{\\rm app}=\\beta_\\ell-\\beta_{\\rm vessel}"
+          ],
+          [
+            "m",
+            "V_{\\rm spill}\\simeq V_0\\beta_{\\rm app}\\Delta T"
+          ],
+          [
+            "m",
+            "\\rho(T)\\simeq\\rho_0(1-\\beta_V\\Delta T)"
+          ],
+          [
+            "p",
+            "Imagine filling a hole with the same material: its dimensions expand exactly as the surrounding plate does. For a liquid in a vessel, subtract container expansion to find the apparent increase."
+          ],
+          [
+            "why",
+            "Buoyancy depends on fluid density AND displaced volume. Heating can change both, so follow the complete geometry and mass balance."
+          ],
+          [
+            "trap",
+            "A negative apparent coefficient can make the level fall even while the liquid expands. Do not treat the vessel as automatically rigid."
+          ]
+        ]
+      },
+      {
+        "title": "Blocked expansion creates stress",
+        "items": [
+          [
+            "m",
+            "|\\sigma|=Y\\alpha|\\Delta T|,\\quad F=A|\\sigma|"
+          ],
+          [
+            "p",
+            "A fully clamped rod has its free thermal strain cancelled by the supports. Heating creates compression; cooling creates tension. A free rod expands without thermal stress. Steel with Y=200 GPa and alpha=12 micro/K develops 24 MPa for a blocked 10 K rise."
+          ],
+          [
+            "why",
+            "Elastic strain compensates thermal strain; the stress result follows from Hooke's law and the zero-total-strain constraint."
+          ],
+          [
+            "trap",
+            "Assume small strain and linear elasticity. Yielding, buckling, loose supports or moving supports require a different balance."
+          ]
+        ]
+      },
+      {
+        "title": "Clock, fit & bimetal",
+        "items": [
+          [
+            "m",
+            "\\frac{\\Delta\\tau}{\\tau}\\simeq\\frac12\\alpha\\Delta T"
+          ],
+          [
+            "p",
+            "Heating a simple pendulum increases its period, so the clock loses about alpha delta T/2 seconds per elapsed second. On heating a bimetal the higher-alpha layer becomes the longer OUTER arc. Tyre ID 0.998 m reaching 0.999 m at alpha=12 micro/K needs a RISE about 83.5 K."
+          ],
+          [
+            "why",
+            "Period scales as square root of length. Bonded layers cannot expand independently, so unequal natural strains produce curvature."
+          ],
+          [
+            "trap",
+            "Cooling reverses bimetal curvature. A temperature rise is not the final temperature; add the initial temperature separately."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 3,
+    "slug": "JEE/03-calorimetry",
+    "title": "Calorimetry & phase changes",
+    "subtitle": "Draw an energy ledger and decide the final phase before solving for a temperature.",
+    "source": "Source §3.3; heating curve and §8 toolkit",
+    "diagrams": [
+      "heating",
+      "mixing"
+    ],
+    "takeaway": "During a phase plateau, energy changes phase, not temperature. Include every stage and the vessel.",
+    "cards": [
+      {
+        "title": "Heat capacities and sensible heat",
+        "items": [
+          [
+            "m",
+            "Q=mc\\Delta T=C\\Delta T"
+          ],
+          [
+            "m",
+            "Q=m\\int_{T_1}^{T_2}c(T)\\,dT"
+          ],
+          [
+            "p",
+            "c is specific heat in J/(kg K), C is total capacity in J/K. A molar capacity must be multiplied by moles, not mass. Constant c is an approximation over a range with little capacity variation and no phase transition."
+          ],
+          [
+            "why",
+            "Capacity describes energy required per temperature change under specified constraints. It is not the amount of heat stored inside a body."
+          ],
+          [
+            "trap",
+            "For gases the path matters: fixed-pressure and fixed-volume heating use different capacities. Identify the process before substituting."
+          ]
+        ]
+      },
+      {
+        "title": "Latent heat and heating plateaus",
+        "items": [
+          [
+            "m",
+            "Q=mL\\quad\\mathrm{(phase\\ change)}"
+          ],
+          [
+            "p",
+            "At specified pressure a pure substance can melt or boil at constant T. For ice below 0 C: warm ice, melt it, warm water, boil it, then warm steam if energy remains. Water near 1 atm: c=4.18 kJ/(kg K), Lf=334 kJ/kg, Lv=2256 kJ/kg."
+          ],
+          [
+            "why",
+            "Flat temperature on a heating curve does not mean zero energy transfer; energy changes the phase fraction instead."
+          ],
+          [
+            "trap",
+            "Transition temperatures and latent heats depend on pressure. Do not silently apply one-atmosphere values under every constraint."
+          ]
+        ]
+      },
+      {
+        "title": "Insulated mixing: include vessel",
+        "items": [
+          [
+            "m",
+            "\\sum_iQ_i+Q_{\\rm vessel}=0"
+          ],
+          [
+            "m",
+            "T_f=\\frac{\\sum_iC_iT_i}{\\sum_iC_i}"
+          ],
+          [
+            "p",
+            "The weighted average requires constant positive capacities, no phase change or reaction, negligible external work and an insulated composite. Include the calorimeter at its own initial temperature; each body ends at the same final equilibrium T."
+          ],
+          [
+            "why",
+            "Energy lost by all initially hot components equals that gained by colder components and the container. Internal heat exchanges cancel in the composite."
+          ],
+          [
+            "trap",
+            "An unweighted average works only for equal total capacities. Heat loss to the room breaks the isolated energy balance."
+          ]
+        ]
+      },
+      {
+        "title": "Ice and steam decision tree",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm melt}=m_iL_f"
+          ],
+          [
+            "p",
+            "Compare heat available on cooling warm contents to 0 C with heat required to warm and melt the ice. Insufficient heat leaves residual ice at 0 C; excess heat warms the combined liquid. 0.10 kg ice at 0 C plus 0.20 kg water at 40 C gives nearly the melting threshold."
+          ],
+          [
+            "why",
+            "The final phase selects the correct energy equation. First test the boundary state, then distribute the remaining energy."
+          ],
+          [
+            "trap",
+            "Steam releases condensation latent heat before its condensed water cools. Count both; do not use one specific-heat equation through a phase change."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 4,
+    "slug": "JEE/04-kinetic-pressure",
+    "title": "Ideal gas: pressure from impacts",
+    "subtitle": "Dilute equilibrium gas; molecular interactions neglected except for short elastic collisions.",
+    "source": "Source §§2.1-2.3; kinetic derivation and example 2.1",
+    "diagrams": [
+      "collision",
+      "pressure-density"
+    ],
+    "takeaway": "At equal T, species have equal mean translational energy per particle, not equal speed.",
+    "cards": [
+      {
+        "title": "Momentum arriving at a wall",
+        "items": [
+          [
+            "m",
+            "P=\\frac{Nm\\langle v_x^2\\rangle}{V}"
+          ],
+          [
+            "m",
+            "P=\\frac13\\frac{Nm}{V}\\langle v^2\\rangle"
+          ],
+          [
+            "p",
+            "In a cube of side L, a molecule transfers 2m|vx| per elastic hit on an x wall. It returns to that wall after 2L/|vx|. Sum its average force over molecules and divide by the wall area."
+          ],
+          [
+            "why",
+            "Isotropy gives equal mean squared velocity components, each one-third of the total. This is the source of the factor 1/3."
+          ],
+          [
+            "trap",
+            "The average velocity is zero in a resting gas but the mean squared velocity is positive. m here is ONE molecule's mass."
+          ]
+        ]
+      },
+      {
+        "title": "Energy-temperature bridge",
+        "items": [
+          [
+            "m",
+            "P=\\frac13\\rho v_{\\rm rms}^2"
+          ],
+          [
+            "m",
+            "\\frac12m\\langle v^2\\rangle=\\frac32k_BT"
+          ],
+          [
+            "m",
+            "K_{\\rm trans}=\\frac32nRT"
+          ],
+          [
+            "p",
+            "Combine the momentum-pressure derivation with PV=NkB T. Translational mean kinetic energy depends only on T for any ideal species."
+          ],
+          [
+            "why",
+            "At the same T a heavier molecule moves more slowly. Increased momentum per impact compensates reduced wall arrival frequency."
+          ],
+          [
+            "trap",
+            "Rotation and vibration can add internal energy without changing this translational pressure expression. Do not equate total U to translational energy for every gas."
+          ]
+        ]
+      },
+      {
+        "title": "Density and partial pressure",
+        "items": [
+          [
+            "m",
+            "\\rho=\\frac{PM}{RT},\\quad\\nu=\\frac{P}{k_BT}"
+          ],
+          [
+            "m",
+            "P=\\sum_iP_i,\\quad P_i=\\frac{n_iRT}{V}"
+          ],
+          [
+            "p",
+            "Dalton's law applies to a nonreacting ideal mixture at common T and V. Each species contributes its own wall momentum flux. Equal partial pressures at equal T mean equal number densities, not equal masses."
+          ],
+          [
+            "why",
+            "The pressure contributions add because the wall receives independent momentum transfers from all species."
+          ],
+          [
+            "trap",
+            "Thermal equilibrium fixes T, not species concentrations. Helium need not have higher wall-arrival flux than argon if helium is sufficiently dilute."
+          ]
+        ]
+      },
+      {
+        "title": "Useful scales and SI checks",
+        "items": [
+          [
+            "m",
+            "v_{\\rm rms}=\\sqrt{\\frac{3RT}{M}}"
+          ],
+          [
+            "m",
+            "1\\ \\mathrm{kPa\\,L}=1\\ \\mathrm J"
+          ],
+          [
+            "p",
+            "For N2 at 300 K, M=0.028 kg/mol gives rms speed about 517 m/s. kB T per particle is about 4.14 times 10^(-21) J, or 0.0259 eV. At fixed density P scales with T; at fixed T it scales with density."
+          ],
+          [
+            "why",
+            "Temperature links microscopic motion to a directly measurable macroscopic pressure. Unit conversion is part of the physical check."
+          ],
+          [
+            "trap",
+            "Large random molecular speed does not imply a large bulk wind. With Pa in PV=nRT, volume must be in cubic metres."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 5,
+    "slug": "JEE/05-speeds-collisions",
+    "title": "Speeds, collisions & effusion",
+    "subtitle": "Maxwell equilibrium gas; hard-sphere diameter d treated as constant.",
+    "source": "Source §§2.3-2.6; Q8, Q12, Q20, Q26; flux factor repaired",
+    "diagrams": [
+      "maxwell",
+      "mfp"
+    ],
+    "takeaway": "State what is fixed before scaling lambda. Wall arrivals weight faster molecules more heavily.",
+    "cards": [
+      {
+        "title": "Mode, mean and rms",
+        "items": [
+          [
+            "m",
+            "v_p=\\sqrt{2RT/M}"
+          ],
+          [
+            "m",
+            "\\bar v=\\sqrt{8RT/(\\pi M)}"
+          ],
+          [
+            "m",
+            "v_{\\rm rms}=\\sqrt{3RT/M}"
+          ],
+          [
+            "p",
+            "Mode < mean < rms. All scale as square root of T/M. Higher T shifts and broadens the speed distribution; its probability area stays one. For N2 at 300 K the values are about 422, 476 and 517 m/s."
+          ],
+          [
+            "why",
+            "Squaring before averaging emphasises the fast tail. The mean of v squared differs from the square of the mean speed."
+          ],
+          [
+            "trap",
+            "The most probable speed is not a component's most probable velocity. A resting gas has zero mean vector velocity."
+          ]
+        ]
+      },
+      {
+        "title": "Mean free path",
+        "items": [
+          [
+            "m",
+            "\\lambda=\\frac{1}{\\sqrt2\\pi d^2\\nu}"
+          ],
+          [
+            "m",
+            "\\lambda=\\frac{k_BT}{\\sqrt2\\pi d^2P}"
+          ],
+          [
+            "p",
+            "Collision cross-section is pi d squared, not pi(d/2) squared. The square-root-two factor accounts for relative motion of identical Maxwellian targets. At fixed P, lambda grows with T; at fixed number density it does not depend on T in this model."
+          ],
+          [
+            "why",
+            "A hotter fixed-pressure gas is less dense, so the typical distance between collisions increases even though individual molecules move faster."
+          ],
+          [
+            "trap",
+            "The relative-speed factor is an averaged result, not a literal right angle between every pair. Temperature-dependent collision cross-sections require a refined model."
+          ]
+        ]
+      },
+      {
+        "title": "Collision rate and vacuum scale",
+        "items": [
+          [
+            "m",
+            "z=\\bar v/\\lambda,\\quad\\tau_c=\\lambda/\\bar v"
+          ],
+          [
+            "p",
+            "For fixed amount and volume, quadrupling T doubles speed and collision frequency but leaves lambda unchanged. With d=3.7 angstrom at 273 K and 1 atm, lambda is about 61 nm and z about 7.4 billion/s. At 10 Pa, lambda is about 0.62 mm, not metres."
+          ],
+          [
+            "why",
+            "Continuum transport requires lambda much smaller than apparatus size. A sufficiently tiny opening enters an effusive rather than hydrodynamic regime."
+          ],
+          [
+            "trap",
+            "Molecular collision frequency and acoustic frequency describe different processes. Do not infer one directly from the other."
+          ]
+        ]
+      },
+      {
+        "title": "Wall flux and Graham ratio",
+        "items": [
+          [
+            "m",
+            "\\Gamma=\\frac14\\nu\\bar v"
+          ],
+          [
+            "m",
+            "\\frac1{4\\pi}\\int_{\\rm hemi}\\cos\\theta\\,d\\Omega=\\frac14"
+          ],
+          [
+            "m",
+            "r_1/r_2=\\sqrt{M_2/M_1}"
+          ],
+          [
+            "p",
+            "Gamma counts arrivals per unit area per second. For an effusive hole, the initial escape rate is A Gamma. Graham's ratio needs equal upstream T and pressure, equal hole geometry and negligible return flux."
+          ],
+          [
+            "why",
+            "The angular projection over the incoming hemisphere supplies the quarter factor, not an arbitrary average of cosine."
+          ],
+          [
+            "trap",
+            "For unequal species number densities multiply by the density ratio. A large hole or substantial downstream gas invalidates simple effusion."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 6,
+    "slug": "JEE/06-heat-capacities",
+    "title": "Degrees of freedom & mixtures",
+    "subtitle": "CV and CP are molar unless labelled total or specific. Identify the active-mode regime.",
+    "source": "Source §§4.1-4.2, 7.1; molecular classifications corrected",
+    "diagrams": [
+      "dof",
+      "mixture-capacity"
+    ],
+    "takeaway": "Add extensive capacities first; never average gamma directly.",
+    "cards": [
+      {
+        "title": "Equipartition and Mayer relation",
+        "items": [
+          [
+            "m",
+            "U=n\\frac f2RT,\\quad C_V=\\frac f2R"
+          ],
+          [
+            "m",
+            "C_P-C_V=R,\\quad\\gamma=1+2/f"
+          ],
+          [
+            "p",
+            "Each active quadratic energy term contributes kB T/2 per particle. A classical vibrational mode has TWO terms, kinetic and potential. At fixed pressure heat must supply both increased U and expansion work."
+          ],
+          [
+            "why",
+            "Per mole the extra isobaric work is R delta T, giving CP=CV+R for an ideal gas."
+          ],
+          [
+            "trap",
+            "Constant f requires a suitable temperature range. U may have an arbitrary consistent zero; its change is what enters the first law."
+          ]
+        ]
+      },
+      {
+        "title": "Molecule shape is not mode count",
+        "items": [
+          [
+            "m",
+            "C_{V,\\rm vib\\ active\\ diatomic}=7R/2"
+          ],
+          [
+            "p",
+            "Monatomic: f=3, gamma=5/3. Rigid linear molecule: three translations plus two rotations, f=5, gamma=7/5. Rigid nonlinear: three translations plus three rotations, f=6, gamma=4/3. CO2 is LINEAR; CH4 is nonlinear and pentatomic."
+          ],
+          [
+            "why",
+            "Vibration adds two quadratic terms per active mode. It is often frozen in a room-temperature rigid-diatomic approximation."
+          ],
+          [
+            "trap",
+            "Diatomic does not mean gamma=7/5 at every T. Nonlinear and triatomic are not synonyms; specify shape and active modes."
+          ]
+        ]
+      },
+      {
+        "title": "Mixture: add before taking ratios",
+        "items": [
+          [
+            "m",
+            "C_{V,\\rm tot}=\\sum_i n_iC_{V,i}"
+          ],
+          [
+            "m",
+            "\\gamma_{\\rm mix}=1+\\frac{n_{\\rm tot}R}{\\sum_i n_iC_{V,i}}"
+          ],
+          [
+            "m",
+            "M_{\\rm mix}=\\frac{\\sum_i n_iM_i}{n_{\\rm tot}}"
+          ],
+          [
+            "p",
+            "One mole Ar plus one mole rigid O2 gives total CV=4R, total CP=6R and gamma=1.50. Component energies add at their common T."
+          ],
+          [
+            "why",
+            "A ratio such as gamma must be formed after adding extensive heat capacities, not averaged independently."
+          ],
+          [
+            "trap",
+            "Mole fractions and mass fractions are different weights. Convert consistently when a composition is specified by mass."
+          ]
+        ]
+      },
+      {
+        "title": "When capacities depend on T",
+        "items": [
+          [
+            "m",
+            "\\Delta U=n\\int_{T_1}^{T_2}C_V(T)\\,dT"
+          ],
+          [
+            "m",
+            "\\Delta H=n\\int_{T_1}^{T_2}C_P(T)\\,dT"
+          ],
+          [
+            "p",
+            "Use the supplied capacity functions if modes activate over the temperature interval. For ideal gas H=U+PV; with constant capacities delta H=nCP delta T. Enthalpy is a state quantity, whereas heat depends on the path."
+          ],
+          [
+            "why",
+            "Capacity measures how stored energy changes per kelvin. Temperature dependence changes both energy integrals and adiabatic relations."
+          ],
+          [
+            "trap",
+            "Constant-gamma power laws can fail across activation regimes. CP-CV=R is not a universal real-gas identity, and delta H is not always heat."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 7,
+    "slug": "JEE/07-first-law",
+    "title": "First law: boundary before algebra",
+    "subtitle": "Q enters the system; W is work BY the system. Keep this convention throughout.",
+    "source": "Source §§3.1-3.5; piston and electrical-room examples",
+    "diagrams": [
+      "piston",
+      "boundary"
+    ],
+    "takeaway": "Use the actual resisting load for boundary work. Electrical input is work, even if it eventually becomes thermal energy.",
+    "cards": [
+      {
+        "title": "One sign convention",
+        "items": [
+          [
+            "m",
+            "\\Delta U=Q-W_{\\rm by}"
+          ],
+          [
+            "m",
+            "Q>0:\\ \\mathrm{in},\\quad W_{\\rm by}>0:\\ \\mathrm{out}"
+          ],
+          [
+            "p",
+            "This form is for a stationary closed system with negligible changes of bulk kinetic and gravitational energy. Include those changes when the system accelerates or rises. Energy entering increases stored energy; energy leaving decreases it."
+          ],
+          [
+            "why",
+            "U is a state function. Heat and work describe boundary transfers and are path-dependent, not stored properties."
+          ],
+          [
+            "trap",
+            "A negative Q means heat leaves. If another convention uses work ON the gas, change signs explicitly before combining equations."
+          ]
+        ]
+      },
+      {
+        "title": "Boundary work follows resistance",
+        "items": [
+          [
+            "m",
+            "\\delta W_{\\rm by}=P_{\\rm ext}\\,dV"
+          ],
+          [
+            "m",
+            "W_{\\rm by}=\\int_{V_1}^{V_2}P_{\\rm ext}\\,dV"
+          ],
+          [
+            "p",
+            "For a quasistatic frictionless piston in the reversible limit, gas pressure matches external resisting pressure and can replace it in the work integral. Expansion gives positive work; compression gives negative work."
+          ],
+          [
+            "why",
+            "Force times piston displacement is Pext A dx=Pext dV. Pressure alone without displacement does no boundary work."
+          ],
+          [
+            "trap",
+            "During a sudden jump, intermediate uniform gas pressures may not exist. Do not integrate a fictional equilibrium gas curve."
+          ]
+        ]
+      },
+      {
+        "title": "State energy from endpoints",
+        "items": [
+          [
+            "m",
+            "\\Delta U_{\\rm ideal}=nC_V(T_2-T_1)"
+          ],
+          [
+            "m",
+            "\\Delta U=\\frac{C_V}{R}(P_2V_2-P_1V_1)"
+          ],
+          [
+            "p",
+            "For fixed amount and constant CV, ideal-gas energy change depends only on final and initial temperature or PV values. These endpoint expressions do not require reversibility. Every cycle returns U to its initial value."
+          ],
+          [
+            "why",
+            "Two paths with the same endpoints have the same delta U but can transfer different Q and W."
+          ],
+          [
+            "trap",
+            "Ideal-gas isothermal means delta U=0; a real interacting substance may have an isothermal energy change. Do not generalise the ideal result blindly."
+          ]
+        ]
+      },
+      {
+        "title": "Open fridge in a sealed room",
+        "items": [
+          [
+            "m",
+            "\\Delta U=W_{\\rm electrical,in}=\\mathcal P t"
+          ],
+          [
+            "p",
+            "Take the whole rigid insulated room including the refrigerator. Cooling and rejected heat are internal transfers; the cord brings electrical work in. 150 W for 2400 s adds 360 kJ. Air in 60 cubic metres at 1 atm, 300 K has about 2437 mol; rigid diatomic CV gives a rise about 7.1 K."
+          ],
+          [
+            "why",
+            "The motor's input ultimately warms the composite. Opening the door cannot cool the isolated room."
+          ],
+          [
+            "trap",
+            "The room volume is 60, not 0.06 cubic metres. External Q remains zero; electrical work is not relabelled as incoming heat."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 8,
+    "slug": "JEE/08-basic-processes",
+    "title": "Isochores, isobars & path capacity",
+    "subtitle": "Fixed amount of ideal gas, constant capacities, boundary work only unless stated otherwise.",
+    "source": "Source §§3.2, 4.1-4.2; process summary",
+    "diagrams": [
+      "processes",
+      "heat-capacity"
+    ],
+    "takeaway": "Find delta U from endpoints, W from the constraint, then Q from the first law.",
+    "cards": [
+      {
+        "title": "Isochore: volume fixed",
+        "items": [
+          [
+            "m",
+            "W=0,\\quad Q=\\Delta U=nC_V\\Delta T"
+          ],
+          [
+            "m",
+            "P_2/P_1=T_2/T_1"
+          ],
+          [
+            "p",
+            "A rigid vessel prevents displacement work. Heating increases temperature, internal energy and pressure; the vertical P-V path has zero area contribution. Constant-volume heat per kelvin is the total capacity nCV."
+          ],
+          [
+            "why",
+            "No boundary displacement means no boundary work, however large the pressure becomes."
+          ],
+          [
+            "trap",
+            "A rigid vessel can still receive electrical or stirring work. With such inputs Q alone need not equal delta U; use the full boundary ledger."
+          ]
+        ]
+      },
+      {
+        "title": "Isobar: pressure fixed",
+        "items": [
+          [
+            "m",
+            "W=P\\Delta V=nR\\Delta T"
+          ],
+          [
+            "m",
+            "Q=nC_P\\Delta T"
+          ],
+          [
+            "m",
+            "\\Delta U=nC_V\\Delta T"
+          ],
+          [
+            "p",
+            "At fixed pressure, temperature increase expands the gas. Heat both raises U and supplies displacement work. For a fixed amount, V/T is constant."
+          ],
+          [
+            "why",
+            "Adding energy stored to work delivered gives Q=n(CV+R)delta T, deriving Mayer's ideal-gas relation."
+          ],
+          [
+            "trap",
+            "The pressure used for work must be the equilibrium resisting pressure. Heating by itself does not specify an isobaric process."
+          ]
+        ]
+      },
+      {
+        "title": "Capacity along an imposed path",
+        "items": [
+          [
+            "m",
+            "C_{\\rm path}=\\frac{\\delta Q}{n\\,dT}"
+          ],
+          [
+            "m",
+            "C_{\\rm path}=C_V+\\frac{P}{n}\\frac{dV}{dT}"
+          ],
+          [
+            "p",
+            "From delta Q=dU+P dV for a quasistatic ideal gas. Path capacity is not another intrinsic material constant. It can be negative if expansion consumes more work than incoming heat supplies."
+          ],
+          [
+            "why",
+            "The gas may absorb heat and cool simultaneously because its internal energy pays the balance of the work."
+          ],
+          [
+            "trap",
+            "At an isotherm dT=0, so finite nonzero heat cannot define finite C(path). A singular path ratio is not a phase transition."
+          ]
+        ]
+      },
+      {
+        "title": "Same temperature rise, two bills",
+        "items": [
+          [
+            "m",
+            "Q_V=2079\\ \\mathrm J,\\quad W_V=0"
+          ],
+          [
+            "m",
+            "Q_P=2910\\ \\mathrm J,\\quad W_P=831\\ \\mathrm J"
+          ],
+          [
+            "p",
+            "One mole rigid diatomic gas warms from 300 to 400 K. Both routes give delta U=2.5R times 100, about 2079 J. Their volumes or pressures need not end at the same values."
+          ],
+          [
+            "why",
+            "Subtract Q-W in either row: energy stored is the same. The extra fixed-pressure heat leaves as displacement work."
+          ],
+          [
+            "trap",
+            "Do not use nCP delta T for arbitrary heating. The subscript encodes a constraint, not just a choice of numerical constant."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 9,
+    "slug": "JEE/09-isotherm-adiabat",
+    "title": "Isotherms & reversible adiabats",
+    "subtitle": "Isothermal fixes T; adiabatic fixes Q=0. Neither word alone guarantees reversibility.",
+    "source": "Source §§3.2, 4.3; example 4.1 and Q27",
+    "diagrams": [
+      "iso-adiabat",
+      "adiabat-laws"
+    ],
+    "takeaway": "PV^gamma needs a reversible ideal-gas adiabat with constant gamma, not merely an insulated wall.",
+    "cards": [
+      {
+        "title": "Reversible ideal-gas isotherm",
+        "items": [
+          [
+            "m",
+            "\\Delta U=0,\\quad Q=W"
+          ],
+          [
+            "m",
+            "W=nRT\\ln(V_2/V_1)"
+          ],
+          [
+            "p",
+            "Integrate P=nRT/V along a quasistatic frictionless isotherm. A reservoir supplies heat during expansion, preventing cooling; compression rejects an equal amount of heat to keep T fixed."
+          ],
+          [
+            "why",
+            "Work is the area under a decreasing hyperbola, not a fixed-pressure rectangle. The logarithm gives the correct volume-ratio dependence."
+          ],
+          [
+            "trap",
+            "An irreversible ideal-gas isotherm still has Q=W but not necessarily logarithmic work. Use the actual external load."
+          ]
+        ]
+      },
+      {
+        "title": "Derive the adiabatic powers",
+        "items": [
+          [
+            "m",
+            "nC_VdT=-P\\,dV"
+          ],
+          [
+            "m",
+            "\\frac{dT}{T}=-\\frac{R}{C_V}\\frac{dV}{V}"
+          ],
+          [
+            "m",
+            "TV^{\\gamma-1}=\\mathrm{constant}"
+          ],
+          [
+            "m",
+            "PV^\\gamma=\\mathrm{constant}"
+          ],
+          [
+            "p",
+            "No heat enters; expansion work comes entirely from internal energy. Separate variables and integrate using the ideal equation and constant CV."
+          ],
+          [
+            "why",
+            "Expansion cools and compression warms because U supplies or receives the boundary work."
+          ],
+          [
+            "trap",
+            "Slow or smooth alone does not prove reversibility. Friction and other dissipative mechanisms must also be absent."
+          ]
+        ]
+      },
+      {
+        "title": "Pressure form and work",
+        "items": [
+          [
+            "m",
+            "T^\\gamma P^{1-\\gamma}=\\mathrm{constant}"
+          ],
+          [
+            "m",
+            "T_2/T_1=(P_2/P_1)^{(\\gamma-1)/\\gamma}"
+          ],
+          [
+            "m",
+            "W=\\frac{P_1V_1-P_2V_2}{\\gamma-1}"
+          ],
+          [
+            "m",
+            "W=nC_V(T_1-T_2)"
+          ],
+          [
+            "p",
+            "Expansion gives positive W and falling T; compression gives negative W and rising T. The two work expressions agree through PV=nRT."
+          ],
+          [
+            "why",
+            "The pressure-ratio exponent includes division by gamma because pressure and volume both change on the adiabat."
+          ],
+          [
+            "trap",
+            "Use (gamma-1)/gamma for a pressure ratio; gamma-1 belongs with an inverse volume ratio."
+          ]
+        ]
+      },
+      {
+        "title": "Compare from the same start",
+        "items": [
+          [
+            "m",
+            "|dP/dV|_S=\\gamma P/V,\\quad|dP/dV|_T=P/V"
+          ],
+          [
+            "p",
+            "The expanding adiabat lies below the isotherm from their common initial state. One mole monatomic gas at 300 K doubling V gives adiabatic T2 about 189 K and W about 1384 J; isothermal W is about 1729 J."
+          ],
+          [
+            "why",
+            "The 345 J difference compares two work outputs. The actual adiabatic internal-energy loss is 1384 J, not 345 J."
+          ],
+          [
+            "trap",
+            "Equal final volume is not equal final state: the two endpoints have different pressures and temperatures."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 10,
+    "slug": "JEE/10-polytropes",
+    "title": "Polytropes: derive once, use often",
+    "subtitle": "PV^s=constant. s is a path exponent; n remains amount in moles.",
+    "source": "Source §4.4; Q10, Q23; formula-sheet limits corrected",
+    "diagrams": [
+      "polytropes",
+      "poly-signs"
+    ],
+    "takeaway": "Expansion with 1<s<gamma absorbs heat while cooling: work consumes more than incoming heat supplies.",
+    "cards": [
+      {
+        "title": "Endpoint relation and work",
+        "items": [
+          [
+            "m",
+            "TV^{s-1}=\\mathrm{constant}"
+          ],
+          [
+            "m",
+            "T_2/T_1=(V_1/V_2)^{s-1}"
+          ],
+          [
+            "m",
+            "W=\\frac{P_2V_2-P_1V_1}{1-s}\\quad(s\\ne1)"
+          ],
+          [
+            "m",
+            "W=\\frac{nR(T_2-T_1)}{1-s}"
+          ],
+          [
+            "p",
+            "Integrate K V^(-s) dV on the quasistatic path. The relation between T and V follows by substituting PV=nRT into PV^s=K."
+          ],
+          [
+            "why",
+            "One integration covers many familiar paths and keeps the signs tied to the actual direction of volume change."
+          ],
+          [
+            "trap",
+            "For s=1 use logarithmic isothermal work. A polytropic exponent is not automatically gamma."
+          ]
+        ]
+      },
+      {
+        "title": "Heat capacity on the polytrope",
+        "items": [
+          [
+            "m",
+            "Q=nC_s\\Delta T"
+          ],
+          [
+            "m",
+            "C_s=C_V+\\frac{R}{1-s}"
+          ],
+          [
+            "m",
+            "C_s=C_V\\frac{s-\\gamma}{s-1}"
+          ],
+          [
+            "p",
+            "First-law heat equals stored energy plus work. The volume-change contribution may make the path capacity negative. The integrated forms require constant s and effectively constant capacities."
+          ],
+          [
+            "why",
+            "This is a property of the chosen route, not negative intrinsic CV. The same gas can follow different paths with different heat bills."
+          ],
+          [
+            "trap",
+            "At s=1, finite heat divided by zero temperature change is undefined; the formal divergence does not describe a phase change."
+          ]
+        ]
+      },
+      {
+        "title": "Expansion sign map",
+        "items": [
+          [
+            "m",
+            "1<s<\\gamma\\ \\Rightarrow\\ C_s<0"
+          ],
+          [
+            "p",
+            "For expansion: s<1 warms with Q in; s=1 has fixed T and Q in; 1<s<gamma cools with Q in; s=gamma has Q=0; s>gamma cools with Q out."
+          ],
+          [
+            "why",
+            "In the negative-capacity window, expansion work exceeds the heat received; the difference comes from internal energy."
+          ],
+          [
+            "trap",
+            "Reversing the same path reverses Q, W and delta T. Judge heat with both the capacity sign and traversal direction, not from slope alone."
+          ]
+        ]
+      },
+      {
+        "title": "Limits and checked compression",
+        "items": [
+          [
+            "m",
+            "T_2=300\\sqrt2=424.3\\ \\mathrm K"
+          ],
+          [
+            "m",
+            "C_s=-R/2,\\quad Q\\simeq-517\\ \\mathrm J"
+          ],
+          [
+            "p",
+            "s=0 isobar; s=1 isotherm; s=gamma reversible adiabat; limiting vertical absolute s to infinity is ISOCHORE. Example: one mole monatomic gas at 300 K, s=1.5, compressed to half-volume gives the values above."
+          ],
+          [
+            "why",
+            "The gas warms while rejecting heat: compression work exceeds the internal-energy increase. Check with Q=delta U+W."
+          ],
+          [
+            "trap",
+            "The infinite-exponent limit is not an isobar. Avoid the source's overloaded use of n for both exponent and moles."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 11,
+    "slug": "JEE/11-arbitrary-paths",
+    "title": "P-V paths: integrate, then account",
+    "subtitle": "Frictionless quasistatic boundary work equals the signed area under P(V).",
+    "source": "Source §§3.5, 8.2; supporting spring and local-heat derivations",
+    "diagrams": [
+      "linear-path",
+      "spring"
+    ],
+    "takeaway": "Solve the constraints, integrate W, find endpoint delta U, then recover Q. Heat direction need not follow slope.",
+    "cards": [
+      {
+        "title": "Universal route for a known curve",
+        "items": [
+          [
+            "m",
+            "W=\\int_{V_1}^{V_2}P(V)\\,dV"
+          ],
+          [
+            "m",
+            "Q=\\frac{C_V}{R}\\Delta(PV)+W"
+          ],
+          [
+            "p",
+            "Fixed amount of ideal gas with constant CV. Even if n is unknown, endpoint PV gives the internal-energy difference. The gas equation translates a mechanical plot into temperature information."
+          ],
+          [
+            "why",
+            "The first law supplies heat without memorising a separate formula for each named or unusual path."
+          ],
+          [
+            "trap",
+            "A positive-pressure curve gives negative W when traversed right to left. An irreversible jump may not define a uniform gas-pressure curve."
+          ]
+        ]
+      },
+      {
+        "title": "Straight segment and maximum T",
+        "items": [
+          [
+            "m",
+            "W=\\frac{P_1+P_2}{2}(V_2-V_1)"
+          ],
+          [
+            "m",
+            "P=aV+b\\ \\Rightarrow\\ T=(aV^2+bV)/(nR)"
+          ],
+          [
+            "m",
+            "\\frac{dT}{dV}=\\frac{2aV+b}{nR}"
+          ],
+          [
+            "p",
+            "The signed trapezium area is exact for a straight P-V segment. A temperature extremum occurs at 2aV+b=0 only if the point lies inside the allowed segment."
+          ],
+          [
+            "why",
+            "T depends on the product PV, not P alone. Maximum pressure and maximum temperature can occur at different states."
+          ],
+          [
+            "trap",
+            "A stationary point outside the process interval is inaccessible; compare the permitted endpoints instead."
+          ]
+        ]
+      },
+      {
+        "title": "Heat can change sign within a leg",
+        "items": [
+          [
+            "m",
+            "\\frac{\\delta Q}{dV}=\\frac{C_V}{R}\\left(P+V\\frac{dP}{dV}\\right)+P"
+          ],
+          [
+            "p",
+            "Substitute the curve and find zeros of this local heat rate. For P=aV+b the bracket is 2aV+b. Split the heat ledger at internal sign reversals before computing engine intake."
+          ],
+          [
+            "why",
+            "A leg's net heat can hide intake on one portion and rejection on another. Efficiency counts ALL positive intake, not just positive net leg totals."
+          ],
+          [
+            "trap",
+            "The derivative is per increasing V. During compression dV reverses its sign, so inspect traversal direction."
+          ]
+        ]
+      },
+      {
+        "title": "Linear spring-loaded piston",
+        "items": [
+          [
+            "m",
+            "P=P_0+Mg/A+kx/A"
+          ],
+          [
+            "m",
+            "V=V_0+Ax"
+          ],
+          [
+            "m",
+            "W=(P_0A+Mg)x+\\frac12kx^2"
+          ],
+          [
+            "p",
+            "Vertical frictionless piston with constant load and a spring unstrained at x=0. A preload changes the pressure intercept; spring loading gives the linear slope."
+          ],
+          [
+            "why",
+            "Gas work pays atmospheric displacement, lifting the load and spring energy. Including the piston/spring in a larger system changes the boundary ledger."
+          ],
+          [
+            "trap",
+            "At a hard stop volume becomes fixed. Do not continue the spring line past its mechanical range."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 12,
+    "slug": "JEE/12-irreversible",
+    "title": "Insulated is not isentropic",
+    "subtitle": "Sudden processes need the actual load and an explicit relaxation/energy-deposition model.",
+    "source": "Source §§3.4, 4.3; Q13 and repaired Q27",
+    "diagrams": [
+      "free-expansion",
+      "compression"
+    ],
+    "takeaway": "Q=0 alone does not determine W. Do not paste reversible power laws onto a sudden process.",
+    "cards": [
+      {
+        "title": "Insulated free expansion",
+        "items": [
+          [
+            "m",
+            "P_{\\rm ext}=0\\ \\Rightarrow\\ W=0"
+          ],
+          [
+            "m",
+            "Q=0\\ \\Rightarrow\\Delta U=0"
+          ],
+          [
+            "m",
+            "\\Delta T=0\\quad\\mathrm{(ideal\\ gas)}"
+          ],
+          [
+            "p",
+            "Remove a partition between gas and vacuum inside a rigid insulated enclosure. Intermediate gas states need not have uniform pressure or temperature; only initial and final equilibrium states are used."
+          ],
+          [
+            "why",
+            "No resisting load means no delivered boundary work. Ideal U depends only on T, so final temperature is unchanged."
+          ],
+          [
+            "trap",
+            "This is not a reversible isotherm and produces no logarithmic work. Entropy rises despite Q=0."
+          ]
+        ]
+      },
+      {
+        "title": "Constant external pressure",
+        "items": [
+          [
+            "m",
+            "W=P_{\\rm ext}(V_2-V_1)"
+          ],
+          [
+            "m",
+            "nC_V(T_2-T_1)=Q-P_{\\rm ext}(V_2-V_1)"
+          ],
+          [
+            "p",
+            "Apply final mechanical balance separately. A settled piston matches the total resisting load if no additional uncounted frictional force acts. The initial gas pressure can differ from the imposed external pressure."
+          ],
+          [
+            "why",
+            "Endpoint equilibrium does not make the preceding route reversible. Work follows the surroundings' actual force through the displacement."
+          ],
+          [
+            "trap",
+            "Kinetic energy, stop impacts and friction can send energy outside a gas-only boundary. Specify where transient mechanical energy ends."
+          ]
+        ]
+      },
+      {
+        "title": "Sudden insulated compression",
+        "items": [
+          [
+            "m",
+            "C_V(T_2-T_1)=RT_2(r-1)"
+          ],
+          [
+            "m",
+            "\\frac{T_2}{T_1}=\\frac{1}{1-(\\gamma-1)(r-1)}"
+          ],
+          [
+            "p",
+            "Compress to V2=V1/r using a constant load equal to final P2. Assume all transient mechanical energy thermalises in the gas. Work input is P2(V1-V2); substitute P2V2=nRT2."
+          ],
+          [
+            "why",
+            "The result comes from energy and final force balance, not a reversible adiabatic curve. It defines a particular endpoint model."
+          ],
+          [
+            "trap",
+            "The denominator must remain positive. A perfectly undamped frictionless piston does not simply settle: a relaxation mechanism must be specified."
+          ]
+        ]
+      },
+      {
+        "title": "Same ratio, different final states",
+        "items": [
+          [
+            "m",
+            "\\Delta S_{\\rm sudden}=nC_V\\ln(500/300)-nR\\ln2>0"
+          ],
+          [
+            "p",
+            "Two moles rigid diatomic gas at 300 K compressed to half-volume: reversible isothermal gives T2=300 K, input 3.458 kJ; reversible adiabatic gives 395.9 K and 3.985 kJ; sudden insulated model gives 500 K and 8.314 kJ."
+          ],
+          [
+            "why",
+            "More compression work is stored as internal energy in the sudden case. The processes do not share the same final T or P."
+          ],
+          [
+            "trap",
+            "The two-mole sudden work is not 4.16 kJ; that loses a factor of two. Check nCV delta T independently."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 13,
+    "slug": "JEE/13-cycle-ledgers",
+    "title": "Cycles: count heat, not just area",
+    "subtitle": "Every true cycle returns system U and S to their initial values, even if irreversible.",
+    "source": "Source §§3.5, 6.1, 8.2-8.4; Q9 and repaired three-leg cycle",
+    "diagrams": [
+      "triangle",
+      "cycle-ledger"
+    ],
+    "takeaway": "Efficiency divides net work by total heat absorbed, never by net heat. Split heat-sign reversals.",
+    "cards": [
+      {
+        "title": "Close all state-function columns",
+        "items": [
+          [
+            "m",
+            "\\sum\\Delta U_i=0,\\quad W_{\\rm net}=Q_{\\rm net}"
+          ],
+          [
+            "m",
+            "\\eta=\\frac{W_{\\rm net}}{Q_{\\rm in}}=1-\\frac{Q_{\\rm out}}{Q_{\\rm in}}"
+          ],
+          [
+            "p",
+            "Qin and Qout are positive magnitudes. Add every positive heat contribution to Qin and every rejected magnitude to Qout. Net heat alone is not the engine's heat intake."
+          ],
+          [
+            "why",
+            "A clockwise equilibrium P-V boundary-work loop has positive enclosed work; reverse traversal gives negative work."
+          ],
+          [
+            "trap",
+            "For irreversible jumps the gas-pressure path may be undefined. Do not interpret every schematic loop as actual work."
+          ]
+        ]
+      },
+      {
+        "title": "A dependable cycle procedure",
+        "items": [
+          [
+            "m",
+            "W_{\\rm triangle}=\\frac12\\Delta P\\Delta V"
+          ],
+          [
+            "p",
+            "Label states, directions, units and constraints. Find temperatures using PV=nRT; calculate W and delta U per leg; use Q=delta U+W. Split local heat reversals, sum the columns, then form efficiency or COP. A clockwise 150 kPa by 6 L triangle gives 450 J."
+          ],
+          [
+            "why",
+            "Column closure and a separate geometric area check expose both sign errors and missed heat contributions."
+          ],
+          [
+            "trap",
+            "A triangular loop is half a rectangle. Convert units consistently: 1 kPa litre equals 1 joule."
+          ]
+        ]
+      },
+      {
+        "title": "A fully specified three-leg cycle",
+        "items": [
+          [
+            "m",
+            "W_{\\rm net}=P_0V_0(2\\ln2-1)"
+          ],
+          [
+            "m",
+            "Q_{\\rm in}=P_0V_0(C_V/R+2\\ln2)"
+          ],
+          [
+            "p",
+            "A=(P0,V0,T0), B=(2P0,V0,2T0), C=(P0,2V0,2T0). A to B isochoric; B to C reversible isothermal; C to A isobaric. With rigid diatomic CV=5R/2, efficiency is about 9.94%. One mole at T0=300 K gives W about 964 J."
+          ],
+          [
+            "why",
+            "Intake occurs on BOTH the isochore and the isotherm. Count both before forming eta."
+          ],
+          [
+            "trap",
+            "Use consistent capacities and baseline states. One atmosphere times 24.9 litres per mole is about 303.5 K, not exactly 300 K."
+          ]
+        ]
+      },
+      {
+        "title": "P-V area versus T-S area",
+        "items": [
+          [
+            "m",
+            "\\delta Q_{\\rm rev}=T\\,dS"
+          ],
+          [
+            "m",
+            "Q_{\\rm rev,net}=\\oint T\\,dS"
+          ],
+          [
+            "p",
+            "For a reversible cycle, the enclosed T-S area equals net heat and hence net work. Reversible isotherms are horizontal, reversible adiabats vertical. Isochoric heat-transfer legs are curved, not flat."
+          ],
+          [
+            "why",
+            "The Carnot rectangle has area (Th-Tc)delta S; its interpretation follows directly from reversible heat transfer."
+          ],
+          [
+            "trap",
+            "For an irreversible cycle, system T-S area is not generally actual heat. Quasistatic alone is insufficient; system delta S still sums to zero."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 14,
+    "slug": "JEE/14-second-law",
+    "title": "Second law & the Carnot ceiling",
+    "subtitle": "Fixed reservoirs Th>Tc. Qh and Qc denote positive heat magnitudes; use kelvins.",
+    "source": "Source §§5.1-5.3; equivalence proof and Carnot construction",
+    "diagrams": [
+      "engine",
+      "carnot-ts"
+    ],
+    "takeaway": "The first law balances energy; the second law limits direction and the fraction convertible into useful work.",
+    "cards": [
+      {
+        "title": "Two equivalent prohibitions",
+        "items": [
+          [
+            "p",
+            "Kelvin-Planck: no cyclic device has as its sole effect extracting heat from one reservoir and turning it all into work. Clausius: no cyclic device has as its sole effect transferring heat from cold to hot without work."
+          ],
+          [
+            "why",
+            "A hypothetical work-free fridge returning an engine's rejected Qc to the hot bath makes the composite turn Qh-Qc from one reservoir entirely into work."
+          ],
+          [
+            "trap",
+            "SOLE EFFECT and cyclic operation matter. A single reversible isothermal expansion can convert all its absorbed heat into work without violating the statement."
+          ]
+        ]
+      },
+      {
+        "title": "Carnot: four reversible legs",
+        "items": [
+          [
+            "m",
+            "Q_h=nRT_h\\ln(V_2/V_1)"
+          ],
+          [
+            "m",
+            "Q_c=nRT_c\\ln(V_3/V_4)"
+          ],
+          [
+            "m",
+            "V_2/V_1=V_3/V_4"
+          ],
+          [
+            "p",
+            "Expand isothermally at Th; expand adiabatically to Tc; compress isothermally at Tc; compress adiabatically to Th. Both adiabats give the same volume scaling between the two temperatures."
+          ],
+          [
+            "why",
+            "The equal volume ratios cancel the logarithms in Qc/Qh, leaving a temperature-only ratio."
+          ],
+          [
+            "trap",
+            "This explicit PV derivation uses an ideal gas. The reversible efficiency theorem itself is independent of working substance."
+          ]
+        ]
+      },
+      {
+        "title": "Entropy gives the bound",
+        "items": [
+          [
+            "m",
+            "\\eta\\le1-T_c/T_h"
+          ],
+          [
+            "m",
+            "Q_c/T_c-Q_h/T_h=S_{\\rm gen}\\ge0"
+          ],
+          [
+            "p",
+            "The entropy account includes the cyclic engine and both reservoirs. Equality requires no total entropy generation. Friction, mixing, turbulence and finite-temperature heat transfer reduce work for a specified heat intake."
+          ],
+          [
+            "why",
+            "Energy remains conserved while entropy generation lowers the energy's availability for work. The efficiency gap is governed by the second law."
+          ],
+          [
+            "trap",
+            "Do not describe real-engine losses as energy destruction or claim that none of the efficiency gap involves the second law."
+          ]
+        ]
+      },
+      {
+        "title": "Meaningful comparisons and limits",
+        "items": [
+          [
+            "m",
+            "T_h=T_c\\ \\Rightarrow\\eta_C=0"
+          ],
+          [
+            "p",
+            "A reversible 600 K to 300 K engine has 50% efficiency. An 800 K to 400 K engine claiming 50% is at the ceiling, not above it. Unit efficiency requires Tc/Th approaching zero; the reversible model alone does not guarantee finite power."
+          ],
+          [
+            "why",
+            "Heat received across a temperature range gives a lower useful fraction than receiving all heat at the maximum T."
+          ],
+          [
+            "trap",
+            "Maximum and minimum gas T provide only a loose bound for a non-Carnot cycle; compare actual reservoir/heat-transfer models."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 15,
+    "slug": "JEE/15-refrigerators",
+    "title": "Refrigerators, pumps & cascades",
+    "subtitle": "The cold-side extraction is useful for a fridge; hot-side delivery is useful for a heat pump.",
+    "source": "Source §5.4; Q11, Q33; three-reservoir ledger",
+    "diagrams": [
+      "fridge",
+      "cascade"
+    ],
+    "takeaway": "COP can exceed one because the device moves heat; work is not the only source of delivered heat.",
+    "cards": [
+      {
+        "title": "One balance, two objectives",
+        "items": [
+          [
+            "m",
+            "Q_h=Q_c+W_{\\rm in}"
+          ],
+          [
+            "m",
+            "\\mathrm{COP}_R=Q_c/W_{\\rm in}"
+          ],
+          [
+            "m",
+            "\\mathrm{COP}_H=Q_h/W_{\\rm in}"
+          ],
+          [
+            "m",
+            "\\mathrm{COP}_H=\\mathrm{COP}_R+1"
+          ],
+          [
+            "p",
+            "The hot side receives extracted cold-side heat plus input work. The two COPs refer to the SAME machine under the same operating conditions."
+          ],
+          [
+            "why",
+            "The extra one in heat-pump COP is precisely the work input ultimately delivered at the hot side."
+          ],
+          [
+            "trap",
+            "Engine efficiency divides work OUT by source heat IN. Do not simply invert a formula without tracing all flows."
+          ]
+        ]
+      },
+      {
+        "title": "Reversible temperature ceilings",
+        "items": [
+          [
+            "m",
+            "\\mathrm{COP}_R\\le T_c/(T_h-T_c)"
+          ],
+          [
+            "m",
+            "\\mathrm{COP}_H\\le T_h/(T_h-T_c)"
+          ],
+          [
+            "p",
+            "Equality requires a reversible machine between two reservoirs. Increasing the temperature lift lowers both ideal COPs. Combine Qh/Th=Qc/Tc with the first-law balance to derive the reversible expressions."
+          ],
+          [
+            "why",
+            "A small temperature lift lets the machine move large heat per unit work, consistent with energy conservation."
+          ],
+          [
+            "trap",
+            "Real heat exchangers require finite temperature differences. The working-fluid lift may be larger than the quoted room-temperature lift; actual COP is lower."
+          ]
+        ]
+      },
+      {
+        "title": "Use rates or energies consistently",
+        "items": [
+          [
+            "m",
+            "\\mathrm{COP}_R=270/30=9"
+          ],
+          [
+            "m",
+            "\\dot Q_c=1350\\ \\mathrm W,\\quad\\dot Q_h=1500\\ \\mathrm W"
+          ],
+          [
+            "m",
+            "1500/300=1350/270"
+          ],
+          [
+            "p",
+            "A reversible fridge holds 270 K while the room is 300 K and motor input is 150 W. Multiply all rates by the same operating time for energies."
+          ],
+          [
+            "why",
+            "The last line checks matching entropy rates in the reversible machine. Heat rejection must exceed extracted heat by motor input."
+          ],
+          [
+            "trap",
+            "A watt is joules per second, not joules. Cooling capacity is different from electrical input power."
+          ]
+        ]
+      },
+      {
+        "title": "Engine drives a heat pump",
+        "items": [
+          [
+            "m",
+            "\\Delta S=-\\frac{1000}{600}+\\frac{500-3000}{300}+\\frac{3500}{350}=0"
+          ],
+          [
+            "p",
+            "Per 1000 J from a 600 K source, a reversible engine rejecting to 300 K makes 500 J work. Drive a reversible pump from 300 to 350 K: COP(H)=7, delivery 3500 J, extraction 3000 J."
+          ],
+          [
+            "why",
+            "There are THREE physical reservoirs. The outside 300 K account combines engine rejection and pump extraction, giving net 2500 J removed."
+          ],
+          [
+            "trap",
+            "Heat delivery exceeds source heat because more heat came from outside, not because the cascade creates energy."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 16,
+    "slug": "JEE/16-standard-cycles",
+    "title": "Otto, Diesel & regeneration",
+    "subtitle": "Ideal-gas cycle applications: derive from the legs and state heat-storage assumptions.",
+    "source": "Source §4.6, Q29; supporting regenerative-cycle comparison",
+    "diagrams": [
+      "otto",
+      "stirling"
+    ],
+    "takeaway": "Otto has two adiabats and two isochores, with no horizontal isothermal heat-transfer leg on T-S.",
+    "cards": [
+      {
+        "title": "Otto efficiency in a few steps",
+        "items": [
+          [
+            "m",
+            "T_2/T_1=T_3/T_4=r^{\\gamma-1}"
+          ],
+          [
+            "m",
+            "\\eta=1-\\frac{T_4-T_1}{T_3-T_2}"
+          ],
+          [
+            "m",
+            "\\eta_O=1-r^{1-\\gamma}"
+          ],
+          [
+            "p",
+            "Compression and expansion are reversible adiabatic. Heat addition and rejection are at fixed volume. Define compression ratio r=V1/V2>1 and assume constant capacities."
+          ],
+          [
+            "why",
+            "Both heats use nCV, which cancels. Adiabatic ratios eliminate the four endpoint temperatures."
+          ],
+          [
+            "trap",
+            "The air-standard model is idealised heat addition, not a combustion-chemistry calculation. Real engine restrictions are additional."
+          ]
+        ]
+      },
+      {
+        "title": "Otto numerical temperature map",
+        "items": [
+          [
+            "m",
+            "T_2\\simeq689\\ \\mathrm K,\\quad T_3\\simeq1378\\ \\mathrm K"
+          ],
+          [
+            "m",
+            "T_4=600\\ \\mathrm K,\\quad\\eta\\simeq56.5\\%"
+          ],
+          [
+            "p",
+            "Rigid diatomic gas, gamma=1.4, r=8, T1=300 K; constant-volume intake doubles T2. Carnot using 1378 K and 300 K gives about 78.2%, a ceiling rather than Otto efficiency."
+          ],
+          [
+            "why",
+            "Intake occurs across 689 to 1378 K, not wholly at the highest T. The curved T-S intake gives less area than its bounding rectangle."
+          ],
+          [
+            "trap",
+            "Raising ideal r also raises temperatures. Material strength, combustion and temperature-dependent capacities limit extrapolation."
+          ]
+        ]
+      },
+      {
+        "title": "Diesel: fixed-pressure intake",
+        "items": [
+          [
+            "m",
+            "\\eta_D=1-\\frac{q^\\gamma-1}{\\gamma(q-1)r^{\\gamma-1}}"
+          ],
+          [
+            "p",
+            "Replace Otto's isochoric intake by isobaric heating. Define r=V1/V2 and cutoff q=V3/V2 with 1<q<r. Use Qin=nCP(T3-T2), Qout=nCV(T4-T1), then the adiabatic relations."
+          ],
+          [
+            "why",
+            "The extra factor accounts for the finite intake stroke. As q approaches one, the formula approaches the Otto limit."
+          ],
+          [
+            "trap",
+            "Choose CP or CV from the actual heat-transfer leg. Equal-r ideal formulas alone do not rank real petrol and diesel engine technologies."
+          ]
+        ]
+      },
+      {
+        "title": "Stirling and perfect regeneration",
+        "items": [
+          [
+            "m",
+            "W=nR(T_h-T_c)\\ln r"
+          ],
+          [
+            "m",
+            "Q_{h,\\rm ext}=nRT_h\\ln r"
+          ],
+          [
+            "m",
+            "\\eta=1-T_c/T_h\\quad\\mathrm{(perfect\\ regeneration)}"
+          ],
+          [
+            "p",
+            "Two isotherms at Th and Tc are joined by two isochores. A perfect regenerator stores isochoric cooling heat and returns it during isochoric heating."
+          ],
+          [
+            "why",
+            "Without regeneration, external source intake additionally includes nCV(Th-Tc), reducing efficiency. The Ericsson analogue uses isobars with ideal regeneration."
+          ],
+          [
+            "trap",
+            "Separate externally supplied heat from internally recovered heat. The regenerative assumption is essential to Carnot equality."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 17,
+    "slug": "JEE/17-entropy",
+    "title": "Entropy: state change & generation",
+    "subtitle": "Absolute temperature throughout. Specify the system and temperature at each heat-exchange boundary.",
+    "source": "Source §§6.1-6.3; Q13-Q18, Q25; irreversible-area caveat",
+    "diagrams": [
+      "entropy-path",
+      "entropy-free"
+    ],
+    "takeaway": "Use a reversible comparison route to compute delta S even when the actual process is irreversible.",
+    "cards": [
+      {
+        "title": "Definition and entropy balance",
+        "items": [
+          [
+            "m",
+            "dS=\\delta Q_{\\rm rev}/T"
+          ],
+          [
+            "m",
+            "\\Delta S_{\\rm sys}=\\int\\frac{\\delta Q}{T_b}+S_{\\rm gen}"
+          ],
+          [
+            "m",
+            "S_{\\rm gen}\\ge0"
+          ],
+          [
+            "p",
+            "Tb is the temperature where heat crosses the system boundary. Sum transfers over multiple regions or reservoirs as needed. Entropy can be transferred with heat and generated by irreversibility."
+          ],
+          [
+            "why",
+            "A closed system's entropy may decrease if enough entropy leaves. The isolated composite's entropy cannot decrease."
+          ],
+          [
+            "trap",
+            "Adiabatic reversible means isentropic; adiabatic irreversible generally produces entropy. Do not replace actual heat by reversible heat without stating the comparison route."
+          ]
+        ]
+      },
+      {
+        "title": "Ideal-gas endpoint formulas",
+        "items": [
+          [
+            "m",
+            "\\Delta S=nC_V\\ln(T_2/T_1)+nR\\ln(V_2/V_1)"
+          ],
+          [
+            "m",
+            "\\Delta S=nC_P\\ln(T_2/T_1)-nR\\ln(P_2/P_1)"
+          ],
+          [
+            "p",
+            "Fixed amount and constant capacities. Derive with a reversible isochore followed by an isotherm, or use T dS=dU+P dV with the ideal equation of state."
+          ],
+          [
+            "why",
+            "Entropy difference depends only on endpoints. The real route need not match the reversible route used to evaluate it."
+          ],
+          [
+            "trap",
+            "For capacity varying with T, replace C ln(T2/T1) by the integral of C(T)/T. All logarithm arguments must be dimensionless ratios."
+          ]
+        ]
+      },
+      {
+        "title": "Reservoir, finite body and phase",
+        "items": [
+          [
+            "m",
+            "\\Delta S_{\\rm bath}=-Q_{\\rm into\\ system}/T_{\\rm bath}"
+          ],
+          [
+            "m",
+            "\\Delta S_{\\rm body}=C\\ln(T_2/T_1)"
+          ],
+          [
+            "m",
+            "\\Delta S_{\\rm phase}=mL/T_{\\rm transition}"
+          ],
+          [
+            "p",
+            "A reservoir stays at fixed T; a finite body changes T and needs integration. The phase expression uses reversible latent heat at equilibrium transition temperature."
+          ],
+          [
+            "why",
+            "Cooling decreases a body's entropy but can increase total entropy once the receiving environment is included."
+          ],
+          [
+            "trap",
+            "Do not use an arbitrary mean T for a changing body, or assign the gas's T to a different reservoir's entropy account."
+          ]
+        ]
+      },
+      {
+        "title": "Free expansion and closed cycles",
+        "items": [
+          [
+            "m",
+            "\\Delta S_{\\rm free}=nR\\ln(V_2/V_1)>0"
+          ],
+          [
+            "m",
+            "\\Delta S_{\\rm system,cycle}=0"
+          ],
+          [
+            "m",
+            "\\oint\\delta Q/T_b\\le0"
+          ],
+          [
+            "p",
+            "Ideal insulated free expansion has Q=W=0 but positive delta S. A hypothetical reversible isotherm calculates that same endpoint difference. Every true cycle, reversible or not, returns system S to its original value."
+          ],
+          [
+            "why",
+            "For an irreversible cycle, positive generation must be exported to the surroundings to close system entropy."
+          ],
+          [
+            "trap",
+            "A nonzero sum of system entropy changes around a claimed cycle indicates a state or ledger error, not merely irreversibility."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 18,
+    "slug": "JEE/18-entropy-applications",
+    "title": "Finite sources: energy plus entropy",
+    "subtitle": "Useful Advanced applications stay with the core laws; specialised availability follows in Part II.",
+    "source": "Source §§6.3, 8.4; Q7, Q30; small-gap factor repaired",
+    "diagrams": [
+      "reservoirs",
+      "finite-engine"
+    ],
+    "takeaway": "Direct contact and reversible work extraction reach different final states: arithmetic versus geometric means.",
+    "cards": [
+      {
+        "title": "Heat down a temperature gradient",
+        "items": [
+          [
+            "m",
+            "\\Delta S_{\\rm total}=Q(1/T_c-1/T_h)>0"
+          ],
+          [
+            "p",
+            "Transfer 1200 J directly from a 400 K reservoir to a 300 K reservoir: hot entropy change -3 J/K, cold +4 J/K, total +1 J/K. Energy balances but entropy is produced."
+          ],
+          [
+            "why",
+            "The same heat carries a larger entropy increment at the colder destination. Thermal energy becomes less available for work."
+          ],
+          [
+            "trap",
+            "A fixed reservoir formula needs a genuinely fixed temperature. Finite bodies must be integrated as their temperatures change."
+          ]
+        ]
+      },
+      {
+        "title": "Mixing finite bodies",
+        "items": [
+          [
+            "m",
+            "T_f=\\frac{C_1T_1+C_2T_2}{C_1+C_2}"
+          ],
+          [
+            "m",
+            "S_{\\rm gen}=C_1\\ln(T_f/T_1)+C_2\\ln(T_f/T_2)"
+          ],
+          [
+            "m",
+            "S_{\\rm gen}\\simeq C\\delta^2/(4\\bar T^2)"
+          ],
+          [
+            "p",
+            "Insulated direct contact, constant capacities and no external work. Last line: equal capacity C for EACH body, initial temperatures Tbar plus/minus delta/2. Two one-kg water samples at 80 and 20 C generate about 36 J/K for the pair."
+          ],
+          [
+            "why",
+            "The first-order entropy terms cancel, leaving a second-order small-gap result."
+          ],
+          [
+            "trap",
+            "Delta is the FULL temperature gap; C is not the combined capacity. Define both before comparing coefficients."
+          ]
+        ]
+      },
+      {
+        "title": "Reversible engine between bodies",
+        "items": [
+          [
+            "m",
+            "C_1\\ln(T_f/T_h)+C_2\\ln(T_f/T_c)=0"
+          ],
+          [
+            "m",
+            "T_f=(T_h^{C_1}T_c^{C_2})^{1/(C_1+C_2)}"
+          ],
+          [
+            "m",
+            "W_{\\max}=C_1(T_h-T_f)+C_2(T_c-T_f)"
+          ],
+          [
+            "p",
+            "Operate infinitesimal reversible engine stages until the bodies meet at Tf. The composite is adiabatic and has no entropy generation. For equal capacities Tf is the geometric mean."
+          ],
+          [
+            "why",
+            "It is below the arithmetic mean because some stored energy leaves as work instead of remaining in the bodies."
+          ],
+          [
+            "trap",
+            "This is not the final state of direct contact. Compare work only after specifying the same process objective and boundaries."
+          ]
+        ]
+      },
+      {
+        "title": "Finite hot source, infinite sink",
+        "items": [
+          [
+            "m",
+            "dW=(1-T_0/T)(-C\\,dT)"
+          ],
+          [
+            "m",
+            "W_{\\max}=C[(T_h-T_0)-T_0\\ln(T_h/T_0)]"
+          ],
+          [
+            "p",
+            "Cool a body reversibly to fixed ambient T0. Integrate the changing Carnot efficiency rather than using its initial value for all heat. Equal one-kg water bodies at 373.15 and 293.15 K yield about 20.2 kJ together; the hot body against a fixed 293.15 K bath yields about 38.8 kJ."
+          ],
+          [
+            "why",
+            "The useful fraction falls as the source cools, reaching zero at T0. A finite sink warms, changing the result."
+          ],
+          [
+            "trap",
+            "An infinite sink and a finite cold body are different resources; their maximum-work values need not agree."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 19,
+    "slug": "JEE/19-heat-transfer",
+    "title": "Heat transfer: rates & resistance",
+    "subtitle": "Companion thermal physics: combine rate laws with steady or transient energy balances.",
+    "source": "Source §§7.5-7.6, §8 toolkit; supporting Fourier networks",
+    "diagrams": [
+      "conduction",
+      "radiation"
+    ],
+    "takeaway": "Steady state equates rates in and out. Their difference during a transient changes stored energy.",
+    "cards": [
+      {
+        "title": "Fourier conduction",
+        "items": [
+          [
+            "m",
+            "\\dot Q=-kA\\,dT/dx"
+          ],
+          [
+            "m",
+            "\\dot Q=kA(T_h-T_c)/L"
+          ],
+          [
+            "m",
+            "R_{\\rm th}=L/(kA),\\quad\\dot Q=\\Delta T/R_{\\rm th}"
+          ],
+          [
+            "p",
+            "The second expression assumes a uniform rod, constant conductivity, steady one-dimensional flow and no side loss. Thermal conductivity k has units W/(m K), distinct from kB."
+          ],
+          [
+            "why",
+            "Every steady slice transmits the same heat per second. Constant k and area then produce a linear temperature profile."
+          ],
+          [
+            "trap",
+            "Varying area, k(T), contact resistance and side loss require extra terms or integration; one L/(kA) may be insufficient."
+          ]
+        ]
+      },
+      {
+        "title": "Series, parallel and junction T",
+        "items": [
+          [
+            "m",
+            "R_{\\rm series}=\\sum_iR_i"
+          ],
+          [
+            "m",
+            "1/R_{\\rm parallel}=\\sum_i1/R_i"
+          ],
+          [
+            "m",
+            "T_j=T_h-\\dot Q R_{h\\to j}"
+          ],
+          [
+            "p",
+            "Series layers carry the same heat rate; temperature drops divide in proportion to resistance. Parallel paths share end temperatures; their heat rates add. Find unknown junction T from the common heat rate."
+          ],
+          [
+            "why",
+            "Energy continuity, not an unweighted temperature average, determines an interface temperature. Contact resistance adds its own drop."
+          ],
+          [
+            "trap",
+            "Side leakage invalidates a simple constant-rate series chain. Check each resistance's geometry and area before adding it."
+          ]
+        ]
+      },
+      {
+        "title": "Radiation and spectral peak",
+        "items": [
+          [
+            "m",
+            "\\mathcal P_{\\rm net}=\\epsilon\\sigma A(T^4-T_0^4)"
+          ],
+          [
+            "m",
+            "\\lambda_{\\max}T=b_W"
+          ],
+          [
+            "p",
+            "Grey body in a large uniform enclosure; epsilon=1 for a black body. sigma about 5.67 times 10^(-8) W/(m² K^4); Wien bW about 2.898 times 10^(-3) m K."
+          ],
+          [
+            "why",
+            "Net radiation vanishes at equal T and reverses for a colder body. Kirchhoff's emission/absorption relation needs the proper equilibrium spectral comparison."
+          ],
+          [
+            "trap",
+            "Use kelvins in fourth powers. Wien's peak is per wavelength interval, not a spectral-line relation or the frequency-density peak."
+          ]
+        ]
+      },
+      {
+        "title": "Multiple mechanisms and equilibrium",
+        "items": [
+          [
+            "m",
+            "C\\,dT/dt=\\mathcal P_{\\rm in}-\\mathcal P_{\\rm out}"
+          ],
+          [
+            "m",
+            "T_{\\rm eq}=\\left[\\frac{S_\\odot(1-\\mathcal A)}{4\\epsilon\\sigma}\\right]^{1/4}"
+          ],
+          [
+            "p",
+            "Add conduction, convection and radiation as the model requires. Steady state sets net power to zero. A uniformly warm planet intercepts sunlight on pi R² but emits over four pi R²; calligraphic A denotes albedo."
+          ],
+          [
+            "why",
+            "The factor four is an area ratio, not an engine efficiency or loss factor."
+          ],
+          [
+            "trap",
+            "Greenhouse effects and nonuniform temperature require a richer model. Effective radiating T is not automatically surface T."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 20,
+    "slug": "JEE/20-cooling",
+    "title": "Cooling laws & time scales",
+    "subtitle": "Lumped body with approximately uniform internal temperature; ambient T0 held fixed.",
+    "source": "Source §7.6; Q5 instantaneous versus average-rate correction",
+    "diagrams": [
+      "cooling",
+      "cooling-log"
+    ],
+    "takeaway": "Equal time intervals remove equal fractions of temperature excess, not equal temperature drops.",
+    "cards": [
+      {
+        "title": "Newton cooling from energy balance",
+        "items": [
+          [
+            "m",
+            "C\\,dT/dt=-hA(T-T_0)"
+          ],
+          [
+            "m",
+            "T-T_0=(T_i-T_0)e^{-t/\\tau}"
+          ],
+          [
+            "m",
+            "\\tau=C/(hA)"
+          ],
+          [
+            "p",
+            "h is an effective surface heat-transfer coefficient. A constant exponential needs nearly constant h, capacity, area and ambient T. The body cools fastest initially, then slows as temperature excess decreases."
+          ],
+          [
+            "why",
+            "Separating d(T-T0)/(T-T0)=-dt/tau gives the exponential directly, not a constant kelvins-per-minute law."
+          ],
+          [
+            "trap",
+            "A body with strong internal gradients needs a conduction model instead of a single lumped T. Changing airflow can change h."
+          ]
+        ]
+      },
+      {
+        "title": "Subtract ambient before logarithms",
+        "items": [
+          [
+            "m",
+            "\\frac{T(t+\\Delta t)-T_0}{T(t)-T_0}=e^{-\\Delta t/\\tau}"
+          ],
+          [
+            "m",
+            "t_{1\\to2}=\\tau\\ln\\frac{T_1-T_0}{T_2-T_0}"
+          ],
+          [
+            "p",
+            "In a 20 C room, cooling 80 to 60 C takes tau ln(3/2); cooling 60 to 40 C takes tau ln2. Equal absolute drops therefore take unequal times."
+          ],
+          [
+            "why",
+            "Equal times reduce remaining excess by a fixed factor. The log-excess plot is linear under the constant-coefficient model."
+          ],
+          [
+            "trap",
+            "Temperature differences may use K or Celsius, but bath T must be subtracted before taking their ratio."
+          ]
+        ]
+      },
+      {
+        "title": "Radiation close to equilibrium",
+        "items": [
+          [
+            "m",
+            "T^4-T_0^4\\simeq4T_0^3(T-T_0)"
+          ],
+          [
+            "m",
+            "h_{\\rm rad}=4\\epsilon\\sigma T_0^3"
+          ],
+          [
+            "m",
+            "\\tau\\simeq\\frac{C}{A(h+4\\epsilon\\sigma T_0^3)}"
+          ],
+          [
+            "p",
+            "For excess much smaller than absolute T0, linearise radiation. Convection and linearised radiation act as parallel heat-loss mechanisms; their coefficients add."
+          ],
+          [
+            "why",
+            "Far from ambient the fourth-power law is strongly nonlinear and one fixed exponential can become inaccurate."
+          ],
+          [
+            "trap",
+            "Use absolute T0 in the coefficient even if excess is written in Celsius. Do not extrapolate this near-equilibrium approximation to a glowing hot body."
+          ]
+        ]
+      },
+      {
+        "title": "A derivative is not an average",
+        "items": [
+          [
+            "m",
+            "|\\dot T|_T=(T-T_0)/\\tau"
+          ],
+          [
+            "m",
+            "|\\dot T|_{60}/|\\dot T|_{80}=(60-20)/(80-20)=2/3"
+          ],
+          [
+            "p",
+            "The ratio compares instantaneous rates at 60 and 80 C in a 20 C room. The first-minute average is [Ti-T(60 seconds)]/60 seconds, not exactly the initial derivative."
+          ],
+          [
+            "why",
+            "A short interval relative to tau can justify approximating an average by an instantaneous rate, but the approximation must be stated."
+          ],
+          [
+            "trap",
+            "Do not combine an exact exponential model with an unstated constant-rate shortcut. Keep time units consistent when extracting tau."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 21,
+    "slug": "JEE/21-thermal-mechanics",
+    "title": "Thermal mechanics: close the constraints",
+    "subtitle": "Piston loads, gas oscillations, sound and buoyancy require both mechanical and thermal models.",
+    "source": "Source §§3.2, 4.5, 7.3; gas-spring and balloon corrections",
+    "diagrams": [
+      "gas-spring",
+      "balloon"
+    ],
+    "takeaway": "A force constraint and an energy constraint are both needed. Neither replaces the other.",
+    "cards": [
+      {
+        "title": "Piston loading and friction",
+        "items": [
+          [
+            "m",
+            "P_{\\rm gas}A=P_0A+Mg+kx"
+          ],
+          [
+            "p",
+            "For quasistatic frictionless motion balance atmosphere, weight, spring and any other forces. Dry friction adds resistance for upward motion and reverses direction for downward motion. Static friction can permit an interval of resting pressures."
+          ],
+          [
+            "why",
+            "Mechanical equilibrium need not mean equal pressures across a loaded piston. Thermal equilibrium does not remove external forces."
+          ],
+          [
+            "trap",
+            "At a hard stop V is fixed even if heating continues. During acceleration include piston inertia and any kinetic-energy storage."
+          ]
+        ]
+      },
+      {
+        "title": "Small gas-spring stiffness",
+        "items": [
+          [
+            "m",
+            "\\delta P=-\\kappa(P/V)\\delta V"
+          ],
+          [
+            "m",
+            "k_g=\\kappa PA^2/V"
+          ],
+          [
+            "m",
+            "\\omega=\\sqrt{(k+k_g)/M_{\\rm eff}}"
+          ],
+          [
+            "p",
+            "A single chamber drives a piston with delta V=A delta x. Kappa=1 for an isothermal response, gamma for reversible adiabatic response. Two chambers contribute additive restoring stiffnesses."
+          ],
+          [
+            "why",
+            "Compression increases pressure and generates a restoring force. The relation of mechanical and thermal time scales selects the appropriate model."
+          ],
+          [
+            "trap",
+            "For air, isothermal stiffness is 1/1.4 of adiabatic, about 29% lower, not 8%. Equilibrium pressure must include the load."
+          ]
+        ]
+      },
+      {
+        "title": "Sound: an adiabatic bulk modulus",
+        "items": [
+          [
+            "m",
+            "B_S=-V(\\partial P/\\partial V)_S=\\gamma P"
+          ],
+          [
+            "m",
+            "c_s=\\sqrt{\\gamma P/\\rho}=\\sqrt{\\gamma RT/M}"
+          ],
+          [
+            "p",
+            "Small nearly reversible compressions and rarefactions exchange little heat over one acoustic period in the usual regime. A pressure wave travels without transporting the whole gas at that speed."
+          ],
+          [
+            "why",
+            "An isothermal model predicts sqrt(P/rho), too small by sqrt(gamma). Molecular thermal motion sets the speed scale."
+          ],
+          [
+            "trap",
+            "Composition, heat-capacity relaxation and the thermal regime matter. Do not impose one fixed gamma for every medium or frequency."
+          ]
+        ]
+      },
+      {
+        "title": "Open hot-air balloon",
+        "items": [
+          [
+            "m",
+            "\\rho=PM/(RT)"
+          ],
+          [
+            "m",
+            "m_{\\rm payload}=V(\\rho_{\\rm out}-\\rho_{\\rm in})-m_{\\rm shell}"
+          ],
+          [
+            "p",
+            "The open bottom approximately equalises inside/outside pressure. Heating reduces inside density. Displaced outside air supplies buoyancy; subtract enclosed air and fixed structure/basket masses. At altitude recompute pressure and both temperatures."
+          ],
+          [
+            "why",
+            "The useful lift is a density DIFFERENCE, not just displaced-air weight. Different gas compositions require their own molar masses."
+          ],
+          [
+            "trap",
+            "Open means matter can leave. Heating at fixed P and V cannot also preserve the same amount of ideal gas."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 1,
+    "slug": "Olympiad/01-statistics",
+    "title": "Microstates & quantum mode activation",
+    "subtitle": "Specialised counting and temperature-dependent storage beyond fixed-f ideal-gas models.",
+    "source": "Source §§6.4, 7.1; supporting partition-function tool",
+    "diagrams": [
+      "counting",
+      "mode-capacity"
+    ],
+    "takeaway": "Equipartition is an active-mode classical limit. Counting and distinguishability are part of the model.",
+    "cards": [
+      {
+        "title": "Entropy counts compatible states",
+        "items": [
+          [
+            "m",
+            "S=k_B\\ln\\Omega"
+          ],
+          [
+            "m",
+            "\\Omega_2/\\Omega_1=e^{\\Delta S/k_B}"
+          ],
+          [
+            "p",
+            "Omega counts microstates compatible with a specified macrostate and statistical model. N independent left/right choices have two-to-the-N assignments. All-left has one assignment; near-half macrostates have enormous multiplicity."
+          ],
+          [
+            "why",
+            "Large entropy changes represent exponentially large multiplicity ratios, explaining overwhelming macroscopic directionality without imposing a microscopic one-way trajectory."
+          ],
+          [
+            "trap",
+            "Macrostate probability includes multiplicity. Do not confuse one microstate with an entire macrostate or assert a universal recurrence timescale from counting alone."
+          ]
+        ]
+      },
+      {
+        "title": "Mixing distinct ideal gases",
+        "items": [
+          [
+            "m",
+            "\\Delta S_{\\rm mix}=-R\\sum_i n_i\\ln x_i"
+          ],
+          [
+            "m",
+            "x_i=n_i/n_{\\rm tot}"
+          ],
+          [
+            "p",
+            "Initially separated distinct ideal gases at equal T and P mix into their combined volume. Calculate each species' accessible-volume increase. At fixed total moles, binary mixing entropy is greatest at equal mole fractions."
+          ],
+          [
+            "why",
+            "Every distinct species gains accessible volume; adding its ideal expansion entropy produces the composition formula."
+          ],
+          [
+            "trap",
+            "Identical samples at equal T and P gain no thermodynamic mixing entropy when the partition is removed. Do not silently change distinguishability or hide other state changes."
+          ]
+        ]
+      },
+      {
+        "title": "Quantum freezing of modes",
+        "items": [
+          [
+            "m",
+            "k_BT\\ll\\Delta E:\\ \\mathrm{excitation\\ suppressed}"
+          ],
+          [
+            "m",
+            "C_{V,\\rm vib}=R\\frac{x^2e^x}{(e^x-1)^2},\\quad x=\\Theta_v/T"
+          ],
+          [
+            "p",
+            "One harmonic vibrational mode contributes CV approaching zero at low T and R at high T, counting both kinetic and potential energy terms. Rotations often activate before vibrations because their energy gaps are smaller."
+          ],
+          [
+            "why",
+            "Discrete levels suppress excitation when thermal energy is too small. Smooth population changes create capacity steps rather than a universal fixed integer f."
+          ],
+          [
+            "trap",
+            "Anharmonicity, dissociation and nuclear-spin effects require more detailed models. Classical equipartition cannot be applied to frozen modes."
+          ]
+        ]
+      },
+      {
+        "title": "Partition function as a tool",
+        "items": [
+          [
+            "m",
+            "Z_1=\\sum_jg_je^{-\\beta E_j},\\quad\\beta=1/(k_BT)"
+          ],
+          [
+            "m",
+            "\\langle E\\rangle=-\\partial\\ln Z_1/\\partial\\beta"
+          ],
+          [
+            "m",
+            "C_V=(\\partial U/\\partial T)_V"
+          ],
+          [
+            "p",
+            "gj is level degeneracy. Independent factorised degrees of freedom give additive mean energies. Differentiate the mean energy with respect to T to calculate capacity rather than guessing mode counts."
+          ],
+          [
+            "why",
+            "The partition sum weights excitation populations and links a microscopic spectrum to observable energy storage."
+          ],
+          [
+            "trap",
+            "Particle indistinguishability and quantum statistics require additional counting factors. A one-particle expression is not by itself a universal many-body partition function."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 2,
+    "slug": "Olympiad/02-effusive-beams",
+    "title": "Effusive beams & thermal escape",
+    "subtitle": "The wall samples flux-weighted speeds, not an unweighted random molecule from the vessel.",
+    "source": "Source §§2.6, 7.2; Q28 and corrected Q34 escape exponent",
+    "diagrams": [
+      "beam",
+      "escape-tail"
+    ],
+    "takeaway": "An effusive beam is enriched in fast molecules. Retention needs a model and timescale, not rms speed alone.",
+    "cards": [
+      {
+        "title": "Equilibrium speed density",
+        "items": [
+          [
+            "m",
+            "f(v)=4\\pi\\left(\\frac{m}{2\\pi k_BT}\\right)^{3/2}v^2e^{-mv^2/(2k_BT)}"
+          ],
+          [
+            "m",
+            "\\int_0^\\infty f(v)\\,dv=1"
+          ],
+          [
+            "p",
+            "The Maxwell distribution is a probability density per unit SPEED in a dilute classical equilibrium gas. A Cartesian velocity component has a different distribution."
+          ],
+          [
+            "why",
+            "The v-squared shell factor competes with the falling Boltzmann exponential to give a nonzero speed peak."
+          ],
+          [
+            "trap",
+            "Most probable component velocity is zero even though most probable speed is not. State the normalisation and variable before taking moments."
+          ]
+        ]
+      },
+      {
+        "title": "Flux selects faster particles",
+        "items": [
+          [
+            "m",
+            "f_{\\rm beam}(v)\\propto vf(v)\\propto v^3e^{-av^2}"
+          ],
+          [
+            "m",
+            "a=m/(2k_BT)"
+          ],
+          [
+            "m",
+            "v_{p,\\rm beam}=\\sqrt{3k_BT/m}"
+          ],
+          [
+            "m",
+            "\\langle E\\rangle_{\\rm beam}=2k_BT"
+          ],
+          [
+            "p",
+            "A faster particle reaches the aperture more often. Differentiate the weighted distribution to obtain its peak, and integrate its energy to obtain the mean."
+          ],
+          [
+            "why",
+            "Bulk mean translational energy is 3kB T/2; speed weighting raises the beam mean to 2kB T."
+          ],
+          [
+            "trap",
+            "Hole size must be much smaller than lambda and return flux negligible. A hydrodynamic jet is not an effusive beam."
+          ]
+        ]
+      },
+      {
+        "title": "Insulated effusive vessel cools",
+        "items": [
+          [
+            "m",
+            "U=\\frac32Nk_BT,\\quad dU=2k_BT\\,dN"
+          ],
+          [
+            "m",
+            "dT/T=\\frac13dN/N"
+          ],
+          [
+            "m",
+            "T/T_i=(N/N_i)^{1/3}"
+          ],
+          [
+            "p",
+            "Rigid insulated monatomic vessel, leaking slowly enough to maintain internal Maxwell equilibrium. Both dN and dT are negative. Escaping particles remove their flux-weighted mean energy."
+          ],
+          [
+            "why",
+            "Each escaping molecule carries more energy than the mean molecule remaining in the vessel, so the remainder cools."
+          ],
+          [
+            "trap",
+            "This is an OPEN mass-losing system. It is not closed insulated free expansion, where ideal gas has no temperature change."
+          ]
+        ]
+      },
+      {
+        "title": "Jeans escape: qualify the tail",
+        "items": [
+          [
+            "m",
+            "\\Lambda=\\frac{mv_{\\rm esc}^2}{2k_BT}=\\frac{3v_{\\rm esc}^2}{2v_{\\rm rms}^2}"
+          ],
+          [
+            "m",
+            "\\Gamma_J=\\frac{\\nu\\bar v}{4}(1+\\Lambda)e^{-\\Lambda}"
+          ],
+          [
+            "p",
+            "Maxwellian exobase, collisionless outward escape above the binding energy. Exobase T is not automatically surface T. For escape/rms ratio six, Lambda is 54, not 36."
+          ],
+          [
+            "why",
+            "Escape is exponentially sensitive to species mass and temperature; an rms comparison alone misses the rare energetic tail."
+          ],
+          [
+            "trap",
+            "Nonthermal loss, replenishment and geological timescale matter. Six-rms retention is a heuristic, not a guarantee; the Moon has an exosphere."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 3,
+    "slug": "Olympiad/03-atmospheres",
+    "title": "Atmospheres: hydrostatics plus a model",
+    "subtitle": "Hydrostatics and gas density are core tools; vertical profiles and parcel stability add assumptions.",
+    "source": "Source §7.3; Q21, Q32, Q34; dry/moist and exponent corrections",
+    "diagrams": [
+      "atmosphere",
+      "lapse"
+    ],
+    "takeaway": "An isothermal atmosphere and an adiabatically rising parcel are different thermodynamic models.",
+    "cards": [
+      {
+        "title": "Isothermal scale height",
+        "items": [
+          [
+            "m",
+            "dP/dz=-\\rho g=-PMg/(RT)"
+          ],
+          [
+            "m",
+            "P=P_0e^{-z/H},\\quad H=RT/(Mg)"
+          ],
+          [
+            "m",
+            "\\rho=\\rho_0e^{-z/H}"
+          ],
+          [
+            "p",
+            "Constant T, g and composition; z increases upward. At about 288 K with M=0.029 kg/mol, H is about 8.4 km. Every scale height divides P by e."
+          ],
+          [
+            "why",
+            "Substituting ideal-gas density into hydrostatic balance produces the exponential rather than a linear pressure fall."
+          ],
+          [
+            "trap",
+            "A single constant H cannot accurately describe a whole real atmosphere with changing temperature, gravity or composition. This model has no finite-height zero pressure."
+          ]
+        ]
+      },
+      {
+        "title": "Dry adiabatic parcel",
+        "items": [
+          [
+            "m",
+            "TP^{(1-\\gamma)/\\gamma}=\\mathrm{constant}"
+          ],
+          [
+            "m",
+            "dT/dz=-Mg/C_P=-g/c_P"
+          ],
+          [
+            "m",
+            "\\Gamma_d\\simeq9.8\\ \\mathrm{K/km}"
+          ],
+          [
+            "p",
+            "A dry rising parcel approximately matches ambient pressure and expands adiabatically. CP is molar; cP is per mass. Hydrostatics, the gas equation and the adiabatic derivative give the lapse rate."
+          ],
+          [
+            "why",
+            "Expansion work lowers the parcel's internal energy as it rises into lower pressure. Gravity supplies the pressure gradient setting the rate."
+          ],
+          [
+            "trap",
+            "The exponent in T times a power of P is NEGATIVE. Do not mix molar capacity with a per-mass formula."
+          ]
+        ]
+      },
+      {
+        "title": "Dry profile and moist correction",
+        "items": [
+          [
+            "m",
+            "T=T_0-\\Gamma_dz"
+          ],
+          [
+            "m",
+            "P=P_0(T/T_0)^{\\gamma/(\\gamma-1)}"
+          ],
+          [
+            "m",
+            "\\rho=\\rho_0(T/T_0)^{1/(\\gamma-1)}"
+          ],
+          [
+            "p",
+            "The formal zero-temperature height is an extrapolation outside the model, not a physical atmosphere edge. A saturated moist parcel normally cools more gently because condensation releases latent heat."
+          ],
+          [
+            "why",
+            "From the same base temperature, moist ascent usually stays warmer aloft than the dry prediction."
+          ],
+          [
+            "trap",
+            "Actual lapse rates vary. One illustrative moist slope is not a universal law; phase change and changing composition require extra equations."
+          ]
+        ]
+      },
+      {
+        "title": "Stability and balloon modelling",
+        "items": [
+          [
+            "m",
+            "\\Gamma_{\\rm env}>\\Gamma_d:\\ \\mathrm{dry\\ instability}"
+          ],
+          [
+            "p",
+            "If the environment cools faster than a rising dry parcel, the parcel stays warmer and less dense than its new surroundings and tends to keep rising. At altitude, balloon lift requires recomputing inside/outside densities at local P and T."
+          ],
+          [
+            "why",
+            "Stability compares the parcel response with the ENVIRONMENTAL profile, not merely whether ambient T falls upward."
+          ],
+          [
+            "trap",
+            "Moisture and composition gradients modify the dry criterion. Do not combine an isothermal pressure profile with a contradictory ambient temperature profile without a stated approximation."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 4,
+    "slug": "Olympiad/04-real-gases",
+    "title": "Real gases: interactions & criticality",
+    "subtitle": "Use molar v=V/n. Van der Waals constants a and b describe a particular model.",
+    "source": "Source §7.4; Q31; nonideal free-expansion qualification",
+    "diagrams": [
+      "vdw",
+      "critical"
+    ],
+    "takeaway": "The equation of state predicts pressure; a caloric relation is also needed to predict temperature change.",
+    "cards": [
+      {
+        "title": "Van der Waals equation",
+        "items": [
+          [
+            "m",
+            "(P+a/v^2)(v-b)=RT"
+          ],
+          [
+            "m",
+            "P=RT/(v-b)-a/v^2"
+          ],
+          [
+            "p",
+            "b models excluded molar volume and a attractive interactions. Units: b in m³/mol, a in Pa m^6/mol². Excluded volume raises the repulsive term; attraction lowers the pressure. Their net correction can have either sign."
+          ],
+          [
+            "why",
+            "Finite particle size and intermolecular potential energy are different departures from the ideal-gas model."
+          ],
+          [
+            "trap",
+            "The subcritical oscillating loop is not stable coexistence. Do not follow it as a physical equilibrium phase-change trajectory."
+          ]
+        ]
+      },
+      {
+        "title": "Critical point from derivatives",
+        "items": [
+          [
+            "m",
+            "(\\partial P/\\partial v)_T=0,\\quad(\\partial^2P/\\partial v^2)_T=0"
+          ],
+          [
+            "m",
+            "RT/(v-b)^2=2a/v^3"
+          ],
+          [
+            "m",
+            "2RT/(v-b)^3=6a/v^4"
+          ],
+          [
+            "m",
+            "v_c=3b,\\quad P_c=a/(27b^2)"
+          ],
+          [
+            "m",
+            "T_c=8a/(27Rb),\\quad Z_c=3/8"
+          ],
+          [
+            "p",
+            "Eliminate RT from the two derivative conditions: 2v=3(v-b), hence vc=3b. Substitute to obtain Pc and Tc."
+          ],
+          [
+            "why",
+            "The critical isotherm has a horizontal inflection where the liquid-vapour distinction ends in this model."
+          ],
+          [
+            "trap",
+            "Zc=3/8 is a model prediction, not an exact universal experimental constant."
+          ]
+        ]
+      },
+      {
+        "title": "Coexistence and measured data",
+        "items": [
+          [
+            "m",
+            "\\int_{v_\\ell}^{v_g}(P-P_{\\rm sat})\\,dv=0"
+          ],
+          [
+            "m",
+            "b=RT_c/(8P_c),\\quad a=27P_cb^2"
+          ],
+          [
+            "p",
+            "Maxwell's equal-area construction ensures equal chemical potentials in the two phases. CO2 with Tc about 304 K and Pc about 7.39 MPa gives b about 4.28 times 10^(-5) m³/mol and a about 0.365 Pa m^6/mol²."
+          ],
+          [
+            "why",
+            "The coexistence tie line replaces the unstable part; equal-area and equal-pressure endpoints select the saturation pressure together."
+          ],
+          [
+            "trap",
+            "A guessed horizontal line need not satisfy coexistence. The plotted line here is solved numerically, not chosen by eye."
+          ]
+        ]
+      },
+      {
+        "title": "Caloric equation and free expansion",
+        "items": [
+          [
+            "m",
+            "du=C_VdT+[T(\\partial P/\\partial T)_v-P]dv"
+          ],
+          [
+            "m",
+            "\\Delta u=C_V\\Delta T+a(1/v_1-1/v_2)"
+          ],
+          [
+            "m",
+            "\\Delta T=(a/C_V)(1/v_2-1/v_1)"
+          ],
+          [
+            "p",
+            "Last line: insulated free expansion with constant molar CV in the vdW model. No heat or work crosses the closed outer boundary, so U stays constant."
+          ],
+          [
+            "why",
+            "Separation increases attractive potential energy, paid from thermal energy, giving cooling. Ideal a=0 recovers unchanged T."
+          ],
+          [
+            "trap",
+            "Do not call this simultaneously insulated free expansion and isothermal expansion unless a=0 or another energy transfer is specified."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 5,
+    "slug": "Olympiad/05-throttling",
+    "title": "Throttling is not free expansion",
+    "subtitle": "Steady-flow energy includes flow work. Keep molar and specific quantities consistent.",
+    "source": "Source §§3.4, 7.4; Joule-Thomson and dilute inversion limit",
+    "diagrams": [
+      "throttle",
+      "inversion"
+    ],
+    "takeaway": "A throttle conserves enthalpy under stated conditions; closed insulated free expansion conserves internal energy.",
+    "cards": [
+      {
+        "title": "Why enthalpy appears in flow",
+        "items": [
+          [
+            "m",
+            "h_1+u_1^2/2+gz_1=h_2+u_2^2/2+gz_2"
+          ],
+          [
+            "m",
+            "h=u_{\\rm int}+Pv"
+          ],
+          [
+            "p",
+            "Steady adiabatic flow, no shaft work; first line uses h per mass and bulk speed u. If speed and height changes are negligible, h1=h2. Material must be pushed into and out of the control volume."
+          ],
+          [
+            "why",
+            "Flow work P v combines with internal energy into enthalpy. This contribution is absent from a closed fixed-mass vacuum-expansion ledger."
+          ],
+          [
+            "trap",
+            "A turbine has shaft work and a nozzle can convert h into bulk kinetic energy; neither is generally an isenthalpic throttle."
+          ]
+        ]
+      },
+      {
+        "title": "Joule-Thomson sign",
+        "items": [
+          [
+            "m",
+            "\\mu_{JT}=(\\partial T/\\partial P)_h"
+          ],
+          [
+            "m",
+            "\\mu_{JT}=\\frac{T(\\partial v/\\partial T)_P-v}{C_P}"
+          ],
+          [
+            "p",
+            "For a pressure drop dP<0, positive muJT produces cooling and negative muJT produces warming. An ideal gas has muJT=0 because its enthalpy depends only on temperature."
+          ],
+          [
+            "why",
+            "A pressure reduction alone does not specify temperature change: the conserved quantity and interaction model must be known."
+          ],
+          [
+            "trap",
+            "Use molar v with molar CP, or specific v with specific cP. Do not mix units or reverse the sign for a pressure drop."
+          ]
+        ]
+      },
+      {
+        "title": "Dilute van der Waals limit",
+        "items": [
+          [
+            "m",
+            "v\\simeq RT/P+b-a/(RT)"
+          ],
+          [
+            "m",
+            "\\mu_{JT}\\simeq[2a/(RT)-b]/C_P"
+          ],
+          [
+            "m",
+            "T_{i,\\rm upper}\\simeq2a/(Rb)"
+          ],
+          [
+            "p",
+            "The last expression is the low-pressure UPPER inversion limit, not a complete pressure-dependent inversion curve. Hydrogen and helium can warm on throttling at room temperature and may need pre-cooling for liquefaction."
+          ],
+          [
+            "why",
+            "Attractive interactions favour cooling while excluded-volume effects can favour warming. Their competition determines the sign."
+          ],
+          [
+            "trap",
+            "Do not equate every expansion with cooling or treat the dilute limit as exact at high pressure."
+          ]
+        ]
+      },
+      {
+        "title": "Keep three energy ledgers apart",
+        "items": [
+          [
+            "m",
+            "\\Delta s_{\\rm ideal,throttle}=-R\\ln(P_2/P_1)>0"
+          ],
+          [
+            "p",
+            "Closed ideal insulated free expansion: U and T unchanged, entropy rises. Steady ideal throttle: h and T unchanged, entropy rises. Reversible adiabatic turbine: entropy unchanged, h falls and shaft work is produced."
+          ],
+          [
+            "why",
+            "The same pressure ratio can correspond to very different work outputs and different temperature changes depending on the process constraints."
+          ],
+          [
+            "trap",
+            "Ideal-gas formulas, low-density inversion limits and reversible power laws have separate validity clauses; they are not interchangeable expansion laws."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 6,
+    "slug": "Olympiad/06-radiation-gas",
+    "title": "Photon gas & radiative applications",
+    "subtitle": "Ordinary radiation laws are in Part I; photon-gas entropy and adiabats add specialised thermodynamics.",
+    "source": "Source §7.5; Q22, Q35; spectral and albedo corrections",
+    "diagrams": [
+      "photon",
+      "albedo"
+    ],
+    "takeaway": "Photon number is not conserved in equilibrium. The radiation 4/3 adiabat is not a naive fixed-mole CP/CV result.",
+    "cards": [
+      {
+        "title": "Equilibrium radiation as a fluid",
+        "items": [
+          [
+            "m",
+            "U=a_{\\rm rad}T^4V,\\quad P=a_{\\rm rad}T^4/3"
+          ],
+          [
+            "m",
+            "a_{\\rm rad}=4\\sigma/c"
+          ],
+          [
+            "m",
+            "S=\\frac43a_{\\rm rad}T^3V"
+          ],
+          [
+            "p",
+            "Equilibrium black-body photons have zero chemical potential and no conserved particle number. Isotropic photon momentum flux gives pressure one-third of energy density."
+          ],
+          [
+            "why",
+            "With zero chemical potential, TS=U+PV gives the entropy. This differs from a fixed-mole material gas."
+          ],
+          [
+            "trap",
+            "The radiation coefficient a(rad) is not the van der Waals attraction constant a. Do not mix their dimensions or interpretations."
+          ]
+        ]
+      },
+      {
+        "title": "Derive the radiation adiabat",
+        "items": [
+          [
+            "m",
+            "dU=-P\\,dV"
+          ],
+          [
+            "m",
+            "4a_{\\rm rad}T^3V\\,dT=-\\frac43a_{\\rm rad}T^4dV"
+          ],
+          [
+            "m",
+            "TV^{1/3}=\\mathrm{constant}"
+          ],
+          [
+            "m",
+            "PV^{4/3}=\\mathrm{constant}"
+          ],
+          [
+            "p",
+            "For reversible adiabatic expansion, differentiating U and substituting photon pressure gives the temperature-volume relation. If all lengths double, V becomes eightfold and T halves."
+          ],
+          [
+            "why",
+            "Radiation entropy is proportional to T cubed times V, so this expansion keeps S constant."
+          ],
+          [
+            "trap",
+            "The formal exponent 4/3 does not justify an ordinary fixed-N heat-capacity-ratio argument for photons."
+          ]
+        ]
+      },
+      {
+        "title": "Thermal wavelengths follow scale",
+        "items": [
+          [
+            "m",
+            "\\lambda_{\\max}T=b_W"
+          ],
+          [
+            "m",
+            "T_f=T_i/\\mathcal L,\\quad\\lambda_f=\\mathcal L\\lambda_i"
+          ],
+          [
+            "p",
+            "A 3000 K thermal field redshifted by scale factor 1101 reaches about 2.725 K. Its per-wavelength peak moves from about 966 nm to about 1.06 mm."
+          ],
+          [
+            "why",
+            "Both the adiabatic temperature scaling and Wien's law predict the same wavelength scaling, providing a consistency check."
+          ],
+          [
+            "trap",
+            "966 nm is infrared, not visible. Peaks of frequency and wavelength spectral densities do not convert by simply substituting nu=c/lambda."
+          ]
+        ]
+      },
+      {
+        "title": "Albedo: brighter means cooler",
+        "items": [
+          [
+            "m",
+            "T=[S_\\odot(1-\\mathcal A)/(4\\sigma)]^{1/4}"
+          ],
+          [
+            "m",
+            "dT/T=-d\\mathcal A/[4(1-\\mathcal A)]"
+          ],
+          [
+            "p",
+            "At sunlight flux 1361 W/m², albedo 0.30 and black-body emission, effective T is about 254.6 K. Increasing albedo to 0.33 gives about 251.8 K, a reduction about 2.8 K."
+          ],
+          [
+            "why",
+            "Higher albedo means more reflection, so less absorbed sunlight. It is brightening, not darkening."
+          ],
+          [
+            "trap",
+            "This uniform radiating-temperature estimate excludes a greenhouse model and is not automatically the surface temperature."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 7,
+    "slug": "Olympiad/07-availability-tanks",
+    "title": "Useful work & compressed-tank limits",
+    "subtitle": "Specify ambient T0, P0, mass boundary, heat exchange and reference endpoint.",
+    "source": "Source Q30, Q36; corrected useful-work and blowdown models",
+    "diagrams": [
+      "availability",
+      "blowdown"
+    ],
+    "takeaway": "A rigid tank losing gas is not a fixed-mass piston. Useful work excludes atmospheric displacement.",
+    "cards": [
+      {
+        "title": "Availability is not total work",
+        "items": [
+          [
+            "m",
+            "W_{\\rm useful}=W_{\\rm total}-P_0\\Delta V"
+          ],
+          [
+            "m",
+            "W_{\\rm lost}=T_0S_{\\rm gen}"
+          ],
+          [
+            "p",
+            "Lost work compares processes with appropriate matching endpoints and the same environment. Some expansion work merely makes room against atmospheric pressure and is not available as useful shaft output."
+          ],
+          [
+            "why",
+            "Entropy generation destroys availability, not energy. Naming the environment is essential to quantify the lost useful-work opportunity."
+          ],
+          [
+            "trap",
+            "Do not compare arbitrary different final states with one T0 delta S. Availability is a thermodynamic bound, not guaranteed valve or turbine output."
+          ]
+        ]
+      },
+      {
+        "title": "Isothermal pressure availability",
+        "items": [
+          [
+            "m",
+            "B=P_iV_i\\ln(P_i/P_0)-(P_i-P_0)V_i"
+          ],
+          [
+            "p",
+            "Ideal gas initially at ambient T0, pressure Pi, volume Vi; reversible equilibration to P0,T0 with heat exchange. For 200 atm, 0.050 cubic metres and ambient 1 atm, total closed-gas work is about 5.369 MJ; useful availability about 4.361 MJ or 1.21 kWh."
+          ],
+          [
+            "why",
+            "Subtract atmospheric displacement from logarithmic work. Ideal reversible isothermal tank discharge yields the same availability."
+          ],
+          [
+            "trap",
+            "An ordinary throttle recovers no shaft work. Isothermal recovery requires heat supply, not a simultaneous insulated-tank assumption."
+          ]
+        ]
+      },
+      {
+        "title": "Insulated well-mixed tank discharge",
+        "items": [
+          [
+            "m",
+            "d(nC_VT)=C_PT\\,dn"
+          ],
+          [
+            "m",
+            "T/T_i=(n/n_i)^{\\gamma-1}"
+          ],
+          [
+            "m",
+            "P/P_i=(n/n_i)^\\gamma"
+          ],
+          [
+            "m",
+            "T/T_i=(P/P_i)^{(\\gamma-1)/\\gamma}"
+          ],
+          [
+            "p",
+            "Rigid insulated ideal-gas tank, negligible wall thermal capacity, inflow and bulk kinetic energy. Outflow carries enthalpy at the tank temperature; n decreases."
+          ],
+          [
+            "why",
+            "The outgoing mass-energy flux controls cooling. This is an OPEN-system balance, not closed-mass reversible boundary work."
+          ],
+          [
+            "trap",
+            "Constant capacities and single-phase gas assumptions may fail at sufficiently low T; the exponent is not gamma-1 for a pressure ratio."
+          ]
+        ]
+      },
+      {
+        "title": "Do not overclaim phase or safety",
+        "items": [
+          [
+            "p",
+            "At gamma=1.4, ideal blowdown from 200 to 1 atm gives about 66 K, not 36 K. The model reaches 77 K near 1.72 atm, but 77 K is nitrogen's ONE-atm boiling point, not an air dew-point calculation. Sealed heating 300 to 320 K gives 200 to 213.3 atm."
+          ],
+          [
+            "why",
+            "Real-air condensation needs composition and a pressure-dependent phase envelope. Safety additionally needs wall temperature, material strength, ratings and relief-system data."
+          ],
+          [
+            "trap",
+            "Neither a precise condensation-onset pressure nor fire safety can be certified from these ideal-gas numbers alone."
+          ]
+        ]
+      }
+    ]
+  }
+]
