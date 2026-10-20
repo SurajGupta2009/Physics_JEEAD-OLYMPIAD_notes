@@ -1,0 +1,19 @@
+CAPACITORS: JEE FIRST, OLYMPIAD SECOND
+
+Part I: JEE-*.png (11 sheets). Read these first for the capacitor chapter.
+Part II: Olympiad-*.png (6 sheets). Optional specialised extensions after the JEE core.
+The distinction is relevance to this chapter's JEE preparation, not difficulty.
+Each part has its own page numbers, PNG ZIP and exact-A4 PDF.
+The combined exports contain JEE first, then Olympiad.
+
+Every PNG is 2480 x 3508 pixels with 300 DPI metadata.
+Print A4 portrait, one image per page. Select Fit to page, not Fill/Crop.
+Keep photo cropping and automatic landscape rotation off.
+Artwork includes approximately 10 mm safe margins.
+For predictable pagination use the PDF. Colour is recommended.
+Teal WHY lines explain physical meaning; red WATCH lines mark conditions/traps.
+
+Scope nuance: basic AC and impedance are JEE topics elsewhere in the syllabus.
+Specialised filters, probe compensation and oscillators are placed in this
+extension set rather than interrupting the capacitor-chapter reading sequence.
+This is a study grouping, not a guarantee about what can never appear in an exam.

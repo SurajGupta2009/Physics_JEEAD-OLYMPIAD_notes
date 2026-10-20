@@ -18,13 +18,13 @@
 
 ## Print-ready short notes
 
-[**Rigid body dynamics — 19 JEE sheets + 4 specialised extension sheets**](../short%20notes/rigid-body-dynamics/README.md)
+[**Rigid body dynamics — 19 JEE sheets + 4 specialised extension sheets**](../Short%20notes/Rigid_Body_Dynamics/README.md)
 
-- [Offline gallery and individual PNG downloads](../short%20notes/rigid-body-dynamics/index.html)
-- [All PNGs — JEE first](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-all-pngs.zip)
-- [JEE PNGs](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-jee-pngs.zip) · [Extension PNGs](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-olympiad-pngs.zip)
-- [Combined A4 PDF](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-short-notes.pdf) · [JEE PDF](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-jee.pdf) · [Extension PDF](../short%20notes/rigid-body-dynamics/rigid-body-dynamics-olympiad.pdf)
-- [Source corrections and unresolved models](../short%20notes/rigid-body-dynamics/SOURCE-AUDIT.md) · [Coverage/classification](../short%20notes/rigid-body-dynamics/SCOPE.md)
+- [Offline gallery and individual PNG downloads](../Short%20notes/Rigid_Body_Dynamics/index.html)
+- [All PNGs — JEE first](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-all-pngs.zip)
+- [JEE PNGs](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-jee-pngs.zip) · [Extension PNGs](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-olympiad-pngs.zip)
+- [Combined A4 PDF](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-short-notes.pdf) · [JEE PDF](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-jee.pdf) · [Extension PDF](../Short%20notes/Rigid_Body_Dynamics/rigid-body-dynamics-olympiad.pdf)
+- [Source corrections and unresolved models](../Short%20notes/Rigid_Body_Dynamics/SOURCE-AUDIT.md) · [Coverage/classification](../Short%20notes/Rigid_Body_Dynamics/SCOPE.md)
 
 These short notes use a relevance-based split, not an easy/hard split. They correct several source results without editing the detailed chapter; consult the audit before relying on the original examples. Print A4 portrait, one sheet per page, **Fit to page—not Fill/Crop**.
 
