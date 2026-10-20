@@ -293,7 +293,7 @@
           ],
           [
             "p",
-            "The weighted average requires constant positive capacities, no phase change or reaction, negligible external work and an insulated composite. Include the calorimeter at its own initial temperature; each body ends at the same final equilibrium T."
+            "For insulated mixing with constant capacities, no reaction or phase change and negligible work. Include the vessel at its own initial T. All components share final Tf."
           ],
           [
             "why",

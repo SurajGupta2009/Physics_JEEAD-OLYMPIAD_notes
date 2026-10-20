@@ -1,0 +1,257 @@
+{
+  "assertions": 1016,
+  "physics_model_checks": 49,
+  "pages": 28,
+  "JEE": 21,
+  "Olympiad": 7,
+  "cards": 112,
+  "diagrams": 56,
+  "math_blocks": 248,
+  "numerical_models": [
+    {
+      "name": "blocked steel stress MPa",
+      "value": 24.0,
+      "expected": 24.0
+    },
+    {
+      "name": "tyre fitting rise K",
+      "value": 83.50033400134072,
+      "expected": 83.5
+    },
+    {
+      "name": "nitrogen most-probable speed",
+      "value": 422.086653256346,
+      "expected": 422.0
+    },
+    {
+      "name": "nitrogen mean speed",
+      "value": 476.2737862435281,
+      "expected": 476.0
+    },
+    {
+      "name": "nitrogen rms speed",
+      "value": 516.9484638585498,
+      "expected": 517.0
+    },
+    {
+      "name": "lambda 1 atm micrometre",
+      "value": 0.06115908772190245,
+      "expected": 0.061
+    },
+    {
+      "name": "lambda 10 Pa millimetre",
+      "value": 0.6196944563421765,
+      "expected": 0.62
+    },
+    {
+      "name": "one mol Ar + O2 gamma",
+      "value": 1.5,
+      "expected": 1.5
+    },
+    {
+      "name": "open-fridge room mol",
+      "value": 2437.454895357229,
+      "expected": 2437.0
+    },
+    {
+      "name": "open-fridge room kelvin rise",
+      "value": 7.105847520355292,
+      "expected": 7.1
+    },
+    {
+      "name": "diatomic isochore heat J",
+      "value": 2078.5,
+      "expected": 2079.0
+    },
+    {
+      "name": "diatomic isobar heat J",
+      "value": 2909.9,
+      "expected": 2910.0
+    },
+    {
+      "name": "monatomic double-volume T",
+      "value": 188.98815748423098,
+      "expected": 189.0
+    },
+    {
+      "name": "monatomic adiabatic work J",
+      "value": 1384.4286880141553,
+      "expected": 1384.0
+    },
+    {
+      "name": "monatomic isothermal work J",
+      "value": 1728.8476977526154,
+      "expected": 1729.0
+    },
+    {
+      "name": "difference is not internal-energy loss",
+      "value": 344.4190097384601,
+      "expected": 345.0
+    },
+    {
+      "name": "polytrope half-volume T s=1.5",
+      "value": 424.26406871192853,
+      "expected": 424.3
+    },
+    {
+      "name": "polytrope path capacity in units R",
+      "value": 0.5,
+      "expected": 0.5
+    },
+    {
+      "name": "polytrope heat J",
+      "value": 516.5657336354869,
+      "expected": 517.0
+    },
+    {
+      "name": "negative path capacity s=1.2",
+      "value": -2.500000000000001,
+      "expected": -2.5
+    },
+    {
+      "name": "sudden half-volume T",
+      "value": 500.0,
+      "expected": 500.0
+    },
+    {
+      "name": "two mol sudden input J",
+      "value": 8314.0,
+      "expected": 8314.0
+    },
+    {
+      "name": "sudden compression entropy J/K",
+      "value": 9.709369861601465,
+      "expected": 9.714
+    },
+    {
+      "name": "three-leg cycle efficiency",
+      "value": 0.09939915128008327,
+      "expected": 0.0994
+    },
+    {
+      "name": "triangle loop joules",
+      "value": 450.0,
+      "expected": 450.0
+    },
+    {
+      "name": "Carnot 600/300",
+      "value": 0.5,
+      "expected": 0.5
+    },
+    {
+      "name": "fridge COP",
+      "value": 9.0,
+      "expected": 9.0
+    },
+    {
+      "name": "cascade hot delivery J",
+      "value": 3500.0,
+      "expected": 3500.0
+    },
+    {
+      "name": "Otto compression T",
+      "value": 689.219012998221,
+      "expected": 689.0
+    },
+    {
+      "name": "Otto efficiency",
+      "value": 0.5647247183519379,
+      "expected": 0.565
+    },
+    {
+      "name": "conduction entropy J/K",
+      "value": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "two kg direct water mixing entropy J/K",
+      "value": 36.181679358091685,
+      "expected": 36.0
+    },
+    {
+      "name": "finite pair reversible maximum J",
+      "value": 20147.91722200532,
+      "expected": 20200.0
+    },
+    {
+      "name": "finite hot body fixed bath maximum J",
+      "value": 38723.77064113258,
+      "expected": 38800.0
+    },
+    {
+      "name": "air isothermal stiffness fraction",
+      "value": 0.7142857142857143,
+      "expected": 0.7143
+    },
+    {
+      "name": "nitrogen sound m/s",
+      "value": 353.14303051313357,
+      "expected": 353.0
+    },
+    {
+      "name": "dry lapse K/km",
+      "value": 9.776624626275817,
+      "expected": 9.78
+    },
+    {
+      "name": "isothermal scale height km",
+      "value": 8.416577032584625,
+      "expected": 8.42
+    },
+    {
+      "name": "Jeans parameter at six rms",
+      "value": 54.0,
+      "expected": 54.0
+    },
+    {
+      "name": "vdW b CO2",
+      "value": 4.275128552097429e-05,
+      "expected": 4.28e-05
+    },
+    {
+      "name": "vdW a CO2",
+      "value": 0.3646754767047362,
+      "expected": 0.365
+    },
+    {
+      "name": "albedo effective cooling K",
+      "value": -2.7726347826543645,
+      "expected": -2.8
+    },
+    {
+      "name": "tank total reversible work MJ",
+      "value": 5.368520071654798,
+      "expected": 5.369
+    },
+    {
+      "name": "tank useful availability MJ",
+      "value": 4.360336321654797,
+      "expected": 4.361
+    },
+    {
+      "name": "ideal tank final kelvin",
+      "value": 66.02130630842964,
+      "expected": 66.0
+    },
+    {
+      "name": "77 K marker pressure atm",
+      "value": 1.7132594747363137,
+      "expected": 1.72
+    },
+    {
+      "name": "sealed heated tank atm",
+      "value": 213.33333333333334,
+      "expected": 213.3
+    },
+    {
+      "name": "vdW coexistence pressure endpoint",
+      "value": 0.5873634664801184,
+      "expected": 0.5873634664801153
+    },
+    {
+      "name": "vdW Maxwell equal area",
+      "value": 6.661338147750939e-16,
+      "expected": 0.0
+    }
+  ]
+}

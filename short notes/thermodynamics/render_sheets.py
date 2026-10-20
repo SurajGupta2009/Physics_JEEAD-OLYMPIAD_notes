@@ -164,17 +164,17 @@ def render():
         d.text((125,125),'THERMODYNAMICS  /  '+label,font=font(30),fill=TEAL)
         d.text((2160,125),f"{p['part_page']:02}/{part_counts[p['section']]:02}",font=font(42),fill=TEAL)
         fs=88
-        while d.textlength(p['title'],font=font(fs))>W-250:fs-=1
+        while d.textlength(p['title'],font=font(fs))>W-258:fs-=1
         assert fs>=68
-        d.text((125,165),p['title'],font=font(fs),fill=INK)
+        d.text((129,165),p['title'],font=font(fs),fill=INK)
         d.line((125,270,W-125,270),fill=TEAL,width=5)
-        paragraph(im,p['subtitle'],125,290,W-250,size=45,leading=54)
+        paragraph(im,p['subtitle'],129,290,W-258,size=45,leading=54)
         for c,(xx,yy) in zip(p['cards'],[(125,405),(1265,405),(125,1465),(1265,1465)]):card(im,c,xx,yy)
         for key,xx in zip(p['diagrams'],[125,1265]):diagram(im,key,xx,2540)
         d=ImageDraw.Draw(im);d.rounded_rectangle((125,3200,W-125,3345),radius=20,fill=PALE)
         paragraph(im,'REMEMBER / '+p['takeaway'],150,3221,W-300,size=46,leading=56)
-        d.text((125,3348),p['source'],font=font(28),fill=GRAY)
-        d.text((1740,3348),'A4 portrait  /  300 DPI',font=font(28),fill=GRAY)
+        d.text((125,3340),p['source'],font=font(28),fill=GRAY)
+        d.text((1740,3340),'A4 portrait  /  300 DPI',font=font(28),fill=GRAY)
         out=ROOT/(p['slug']+'.png');out.parent.mkdir(parents=True,exist_ok=True);im.quantize(colors=96,dither=Image.Dither.NONE).save(out,dpi=(DPI,DPI),optimize=True)
         print(f"{i:02}/{len(DATA)}  {p['slug']}.png",flush=True)
     expected={p['slug']+'.png' for p in DATA}

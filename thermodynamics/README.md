@@ -6,6 +6,10 @@
 
 > **Portable Markdown edition:** [Thermodynamics.md](Thermodynamics.md) is the GitHub-friendly reading copy with standard Markdown math, collapsible solutions and local SVG diagrams in `assets/figures/`. The original [Thermodynamics.html](Thermodynamics.html) remains available for the interactive offline view and printing.
 
+## Printable conceptual revision
+
+[28 handwritten A4 sheets: 21 JEE + 7 extensions](../short%20notes/thermodynamics/README.md) · [gallery](../short%20notes/thermodynamics/index.html) · [all PNGs](../short%20notes/thermodynamics/thermodynamics-all-pngs.zip) · [A4 PDF](../short%20notes/thermodynamics/thermodynamics-short-notes.pdf). Source corrections and model assumptions are documented in that folder without changing this detailed chapter.
+
 A self-contained course on **heat, work, and the accounts between**: kinetic theory, the two laws,
 engines, entropy, real gases and radiation — written for **JEE (Main & Advanced)** and the **physics olympiad
 track (NSEP → INPhO → IPhO)**. It works offline from `file://`: no CDN, no MathJax, no fonts, no build step.

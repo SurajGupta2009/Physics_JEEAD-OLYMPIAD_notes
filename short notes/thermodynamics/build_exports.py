@@ -1,7 +1,8 @@
 """Offline exports. One lossless source PNG per exact A4 PDF page."""
 from pathlib import Path
 from html import escape
-import json,zipfile,zlib
+import json,zipfile,zlib,hashlib,sys,platform
+from importlib.metadata import version
 from PIL import Image
 from pypdf import PdfWriter
 from pypdf.generic import NameObject,NumberObject,ArrayObject,ByteStringObject
@@ -52,5 +53,10 @@ def build():
   h+='</section>'
  h+='</main><footer>Primary source: <a href="../../thermodynamics/Thermodynamics.html">Thermodynamics.html</a>. Original chapter unchanged. Patrick Hand, SIL OFL.</footer></body></html>'
  (ROOT/'index.html').write_text(h)
+ assets={p['slug']+'.png' for p in data}|set(PDFS.values())|set(ZIPS.values())
+ manifest={name:{'bytes':(ROOT/name).stat().st_size,'sha256':hashlib.sha256((ROOT/name).read_bytes()).hexdigest()} for name in sorted(assets)}
+ (ROOT/'asset-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+ environment={'python':sys.version,'platform':platform.platform(),'packages':{name:version(name) for name in ['Pillow','matplotlib','numpy','reportlab','pypdf']}}
+ (ROOT/'build-environment.json').write_text(json.dumps(environment,indent=2)+'\n')
  print('Built three PDFs with ordered bookmarks, three PNG-only ZIPs, and an offline gallery.')
 if __name__=='__main__':build()

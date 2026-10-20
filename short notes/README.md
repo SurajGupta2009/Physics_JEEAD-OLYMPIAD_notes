@@ -3,6 +3,10 @@
 **17 A4 portrait PNGs: 11 JEE sheets followed by 6 Olympiad/extension sheets.**
 Handwritten-style prose, teacher explanations, accurate equations, colours, labelled diagrams and graphs are preserved.
 
+## Other completed chapters
+
+- [Thermodynamics — 21 JEE + 7 extensions](thermodynamics/README.md): [gallery](thermodynamics/index.html), [all PNGs](thermodynamics/thermodynamics-all-pngs.zip), [A4 PDF](thermodynamics/thermodynamics-short-notes.pdf).
+
 ## Downloads
 
 | Part | PNG bundle | A4 PDF |
