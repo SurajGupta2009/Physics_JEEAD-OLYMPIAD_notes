@@ -21,7 +21,7 @@ Portable Markdown note-sets with local SVG diagrams. Seven topics also keep a co
 
 ## Printable short notes
 
-[Thermodynamics: 21 JEE + 7 extension sheets](short%20notes/thermodynamics/README.md) · [gallery](short%20notes/thermodynamics/index.html) · [all PNGs](short%20notes/thermodynamics/thermodynamics-all-pngs.zip) · [A4 PDF](short%20notes/thermodynamics/thermodynamics-short-notes.pdf)
+[Thermodynamics: 21 JEE + 7 extension sheets](Short%20notes/Thermodynamics/README.md) · [gallery](Short%20notes/Thermodynamics/index.html) · [all PNGs](Short%20notes/Thermodynamics/thermodynamics-all-pngs.zip) · [A4 PDF](Short%20notes/Thermodynamics/thermodynamics-short-notes.pdf)
 
 ## Note-sets
 
