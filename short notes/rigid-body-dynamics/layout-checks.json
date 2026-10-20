@@ -1,0 +1,654 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "One body, one angular speed",
+      "used_px": 855,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fixed-axis kinematics",
+      "used_px": 913,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration is not tangent only",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Instantaneous centre",
+      "used_px": 848,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Definition: weighted distance\u00b2",
+      "used_px": 825,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thin rod: centre, end, offset",
+      "used_px": 869,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rectangular and square plates",
+      "used_px": 798,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Inclined axis through the rod",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thin ring: learn three axes",
+      "used_px": 782,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Disc: concentric-ring derivation",
+      "used_px": 778,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Annulus: subtract or integrate",
+      "used_px": 912,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Half-circle: O is not its COM",
+      "used_px": 750,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solid cylinder: both directions",
+      "used_px": 765,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hollow cylinder: inner radius a",
+      "used_px": 784,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solid sphere: derive by discs",
+      "used_px": 792,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherical shells: thin and thick",
+      "used_px": 842,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "An off-centre circular hole",
+      "used_px": 839,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Nonuniform rod: normalise first",
+      "used_px": 954,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Radially varying disc density",
+      "used_px": 789,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cone & the right learning habit",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Parallel-axis theorem",
+      "used_px": 932,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Which tangent axis?",
+      "used_px": 871,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Perpendicular-axis theorem",
+      "used_px": 1014,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A robust calculation route",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Turning effect of a force",
+      "used_px": 956,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equations of motion",
+      "used_px": 923,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy and power",
+      "used_px": 881,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Atwood: include the pulley",
+      "used_px": 898,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spin plus orbital motion",
+      "used_px": 871,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The conservation test",
+      "used_px": 925,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Changing I at fixed L",
+      "used_px": 955,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two coaxial discs couple",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Match contact velocities",
+      "used_px": 848,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The velocity field",
+      "used_px": 932,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy and contact-point I",
+      "used_px": 837,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When the torque shortcut works",
+      "used_px": 856,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Force plus torque",
+      "used_px": 835,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Static is an inequality",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy tells speed and height",
+      "used_px": 1001,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Race and smooth-plane limits",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Separate translation and spin",
+      "used_px": 878,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transition and final speed",
+      "used_px": 854,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the energy went",
+      "used_px": 859,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Corrected bowling-ball check",
+      "used_px": 840,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "One useful master equation",
+      "used_px": 816,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Centre pull versus top pull",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spool: state the winding",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Direction is geometric",
+      "used_px": 863,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A yo-yo is a core application",
+      "used_px": 801,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solve before substituting I",
+      "used_px": 911,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solid-disc model",
+      "used_px": 839,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "An energy-accounting habit",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The right system and origin",
+      "used_px": 947,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy lost in embedding",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Subsequent upward swing",
+      "used_px": 887,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and reusable impulse",
+      "used_px": 929,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impulse on an initially resting body",
+      "used_px": 801,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A particle hits the free target",
+      "used_px": 936,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hinged rod: support impulse",
+      "used_px": 790,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Centre of percussion",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ladder: draw every force",
+      "used_px": 943,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Block on an incline",
+      "used_px": 914,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerating supports",
+      "used_px": 925,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Overhang: COM recursion",
+      "used_px": 943,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A rod falls about a fixed hinge",
+      "used_px": 763,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hinge reaction is not Mg",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rolling inside a vertical loop",
+      "used_px": 802,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Minimum height: a conditional result",
+      "used_px": 841,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Physical pendulum",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equivalent length and optimum",
+      "used_px": 844,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cylinder in a circular bowl",
+      "used_px": 842,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Small bowl oscillations",
+      "used_px": 933,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Geometry before equations",
+      "used_px": 973,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy and angular acceleration",
+      "used_px": 862,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Contact loss: correct angle",
+      "used_px": 922,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Before submitting a solution",
+      "used_px": 981,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Tensor definition",
+      "used_px": 700,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dumbbell: a clean counterexample",
+      "used_px": 687,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Body frame versus lab frame",
+      "used_px": 623,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "An arbitrary moving origin",
+      "used_px": 743,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Geometry removes sin(theta)",
+      "used_px": 726,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When slow precession is safe",
+      "used_px": 768,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Steady-precession branches",
+      "used_px": 649,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Upright \u201csleeping\u201d top",
+      "used_px": 664,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Core energy, new restriction",
+      "used_px": 687,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform elastic thin disc",
+      "used_px": 650,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numerical scale",
+      "used_px": 661,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Changing shape changes stress",
+      "used_px": 642,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Unrolling carpet: variable mass",
+      "used_px": 686,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What a complete model needs",
+      "used_px": 833,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rod and peg: clarify the stages",
+      "used_px": 785,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "After repairing the model",
+      "used_px": 800,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

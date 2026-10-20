@@ -1,0 +1,20 @@
+RIGID BODY DYNAMICS — JEE FIRST, EXTENSIONS SECOND
+
+19 JEE Main + Advanced sheets, then 4 Olympiad / specialised extension sheets.
+Each part has independent numbering and separate PNG ZIP and PDF downloads.
+Combined exports put all JEE sheets first. ZIP archives contain only PNGs.
+
+PNG: 2480 x 3508 pixels, 300 DPI metadata, A4 portrait proportions.
+PDF: exact A4 210 x 297 mm, one PNG per page, ordered bookmarks.
+Artwork stays inside 125 px safe margins (approximately 10.6 mm).
+Body text: 11.52 pt equivalent; explanation/warning prose: 11.04 pt.
+Equations nominally 12 pt; width fitting is bounded to at least 10 pt.
+
+Print A4, portrait, ONE sheet per page.
+Select FIT TO PAGE / printable area, NOT Fill/Crop.
+Disable photo cropping and automatic landscape rotation.
+For reliable pagination use the PDF. Colour recommended.
+Navy: notes; teal: explanations/headings; yellow: results; red: warnings.
+Reading order within a page: top-left, top-right, bottom-left, bottom-right,
+then the diagrams and the REMEMBER strip. Parts are based on relevance,
+not easy-versus-hard. Read SCOPE.md and SOURCE-AUDIT.md for conditions.
