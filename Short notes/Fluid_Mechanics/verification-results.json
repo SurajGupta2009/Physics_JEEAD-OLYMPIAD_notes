@@ -1,0 +1,122 @@
+{
+  "checks": 426,
+  "model_checks": 23,
+  "models": [
+    {
+      "name": "p at 10 m, gauge",
+      "value": 98000.0,
+      "expected": 98000.0
+    },
+    {
+      "name": "barometer mercury 0.76 m",
+      "value": 101292.8,
+      "expected": 101293.0
+    },
+    {
+      "name": "barometer water height",
+      "value": 10.339285714285714,
+      "expected": 10.34
+    },
+    {
+      "name": "gate force 3x2 m, top at surface",
+      "value": 58800.0,
+      "expected": 58800.0
+    },
+    {
+      "name": "centre of pressure 2H/3",
+      "value": 1.3333333333333333,
+      "expected": 1.3333
+    },
+    {
+      "name": "surface tilt tan(theta)=a/g",
+      "value": 11.534620653644714,
+      "expected": 11.54
+    },
+    {
+      "name": "paraboloid rise w=4,R=.3",
+      "value": 0.07346938775510203,
+      "expected": 0.0735
+    },
+    {
+      "name": "float fraction 900/1000",
+      "value": 0.9,
+      "expected": 0.9
+    },
+    {
+      "name": "ice+stone level drop",
+      "value": 0.002999999999999997,
+      "expected": 0.003
+    },
+    {
+      "name": "Torricelli v, h=0.8 m",
+      "value": 3.9597979746446663,
+      "expected": 3.96
+    },
+    {
+      "name": "range x=2 sqrt(h(H-h))",
+      "value": 1.2000000000000002,
+      "expected": 1.2
+    },
+    {
+      "name": "drain time A/a=100, H=1.25",
+      "value": 50.50762722761054,
+      "expected": 50.5
+    },
+    {
+      "name": "Venturi Q",
+      "value": 1.7708754896942924,
+      "expected": 1.77
+    },
+    {
+      "name": "jet force, a=1e-4, v=10",
+      "value": 10.0,
+      "expected": 10.0
+    },
+    {
+      "name": "Poiseuille Q, r=2 mm",
+      "value": 6.283185307179587,
+      "expected": 6.28
+    },
+    {
+      "name": "Reynolds of that pipe",
+      "value": 2000.0000000000005,
+      "expected": 2000.0
+    },
+    {
+      "name": "Stokes v_t, 0.1 mm in water",
+      "value": 0.021777777777777778,
+      "expected": 0.0218
+    },
+    {
+      "name": "drop excess pressure 2 gamma/r",
+      "value": 145.6,
+      "expected": 145.6
+    },
+    {
+      "name": "bubble excess pressure 4 gamma/r",
+      "value": 291.2,
+      "expected": 291.2
+    },
+    {
+      "name": "Jurin h, r=0.5 mm",
+      "value": 0.029714285714285714,
+      "expected": 0.0297
+    },
+    {
+      "name": "short tube, h=12 cm cut to 9 cm",
+      "value": 1.3333333333333333,
+      "expected": 1.3333333333333333
+    },
+    {
+      "name": "shallow water c, h=1.5 m",
+      "value": 3.8340579025361627,
+      "expected": 3.83
+    },
+    {
+      "name": "hydraulic lift force ratio A/a=5",
+      "value": 1960.0,
+      "expected": 1960.0
+    }
+  ],
+  "note": "Representative recomputation of printed formulas, not exhaustive."
+}

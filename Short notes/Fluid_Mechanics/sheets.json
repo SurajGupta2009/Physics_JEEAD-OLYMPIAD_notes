@@ -1,0 +1,824 @@
+{
+  "edition": "fluid-mechanics",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sections": {
+    "JEE": 19,
+    "Olympiad": 11
+  },
+  "sheets": [
+    {
+      "slug": "JEE-01-pressure",
+      "section": "JEE",
+      "page": 1,
+      "title": "Why does depth, not shape, set the pressure?",
+      "question": "Pressure is called a scalar, yet it pushes on every surface. Where does the direction come from?",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "pressure_wedge"
+      ],
+      "file": "JEE-01-pressure.png",
+      "layout": [
+        {
+          "sheet": "JEE-01-pressure",
+          "main_px": 2035,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-01-pressure",
+          "margin_px": 879,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-02-manometer",
+      "section": "JEE",
+      "page": 2,
+      "title": "How do you walk a U-tube without writing force balances?",
+      "question": "Multi-fluid columns look like bookkeeping. There is one rule, and it survives acceleration.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "manometer_walk"
+      ],
+      "file": "JEE-02-manometer.png",
+      "layout": [
+        {
+          "sheet": "JEE-02-manometer",
+          "main_px": 1962,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-02-manometer",
+          "margin_px": 1029,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-03-plane-force",
+      "section": "JEE",
+      "page": 3,
+      "title": "Where does the push on a gate act?",
+      "question": "A dam knows the total force and the point where a single resultant would act. Both come from the same integral.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "plane_force"
+      ],
+      "file": "JEE-03-plane-force.png",
+      "layout": [
+        {
+          "sheet": "JEE-03-plane-force",
+          "main_px": 1832,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-03-plane-force",
+          "margin_px": 997,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-04-curved-force",
+      "section": "JEE",
+      "page": 4,
+      "title": "How much force does a curved face feel?",
+      "question": "A quadrant gate looks like a calculus problem. Projection turns it into two statics lookups.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "curved_gate"
+      ],
+      "file": "JEE-04-curved-force.png",
+      "layout": [
+        {
+          "sheet": "JEE-04-curved-force",
+          "main_px": 2043,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-04-curved-force",
+          "margin_px": 842,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-05-accelerated",
+      "section": "JEE",
+      "page": 5,
+      "title": "What changes when the tank moves?",
+      "question": "Accelerate a cup and the surface tilts. The physics is still hydrostatics, with a different gravity.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "accel_tank"
+      ],
+      "file": "JEE-05-accelerated.png",
+      "layout": [
+        {
+          "sheet": "JEE-05-accelerated",
+          "main_px": 1961,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-05-accelerated",
+          "margin_px": 875,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-06-rotating",
+      "section": "JEE",
+      "page": 6,
+      "title": "Why does the coffee climb the wall?",
+      "question": "Spin a bucket and the surface becomes a paraboloid. The shape follows from one force balance and one volume count.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "rotating_paraboloid"
+      ],
+      "file": "JEE-06-rotating.png",
+      "layout": [
+        {
+          "sheet": "JEE-06-rotating",
+          "main_px": 1871,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-06-rotating",
+          "margin_px": 963,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-07-buoyancy",
+      "section": "JEE",
+      "page": 7,
+      "title": "What does a floating body actually displace?",
+      "question": "Archimedes is a pressure integral in disguise, and the volume that matters is the one the fluid lost.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "buoyancy"
+      ],
+      "file": "JEE-07-buoyancy.png",
+      "layout": [
+        {
+          "sheet": "JEE-07-buoyancy",
+          "main_px": 1928,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-07-buoyancy",
+          "margin_px": 943,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-08-stability",
+      "section": "JEE",
+      "page": 8,
+      "title": "When does a floating body tip over?",
+      "question": "A ship is stable although its centre of mass is above the waterline. The metacentre explains why.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "stability"
+      ],
+      "file": "JEE-08-stability.png",
+      "layout": [
+        {
+          "sheet": "JEE-08-stability",
+          "main_px": 1839,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-08-stability",
+          "margin_px": 921,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-09-ice",
+      "section": "JEE",
+      "page": 9,
+      "title": "Does the level rise when the ice melts?",
+      "question": "Four versions of one question. One ledger answers all four without a single integral.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "ice_cases"
+      ],
+      "file": "JEE-09-ice.png",
+      "layout": [
+        {
+          "sheet": "JEE-09-ice",
+          "main_px": 1829,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-09-ice",
+          "margin_px": 1005,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-10-bernoulli",
+      "section": "JEE",
+      "page": 10,
+      "title": "When may you use Bernoulli?",
+      "question": "The equation is short and the conditions are strict. Most lost marks are gate violations, not algebra.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "bernoulli_streamtube"
+      ],
+      "file": "JEE-10-bernoulli.png",
+      "layout": [
+        {
+          "sheet": "JEE-10-bernoulli",
+          "main_px": 1858,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-10-bernoulli",
+          "margin_px": 887,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-11-devices",
+      "section": "JEE",
+      "page": 11,
+      "title": "How do Venturi, pitot and siphon read a pressure difference?",
+      "question": "Three instruments, one balance. Each converts a speed into a height you can see.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "venturi_pitot"
+      ],
+      "file": "JEE-11-devices.png",
+      "layout": [
+        {
+          "sheet": "JEE-11-devices",
+          "main_px": 2030,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-11-devices",
+          "margin_px": 842,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-12-torricelli",
+      "section": "JEE",
+      "page": 12,
+      "title": "How fast does water leave a hole, and where does it land?",
+      "question": "Depth sets the speed, the fall sets the time, and their product sets the range.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "torricelli"
+      ],
+      "file": "JEE-12-torricelli.png",
+      "layout": [
+        {
+          "sheet": "JEE-12-torricelli",
+          "main_px": 1916,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-12-torricelli",
+          "margin_px": 948,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-13-momentum",
+      "section": "JEE",
+      "page": 13,
+      "title": "Why does a hose push back?",
+      "question": "Pressure is not the force on a plate. Momentum flux is.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "jet_thrust"
+      ],
+      "file": "JEE-13-momentum.png",
+      "layout": [
+        {
+          "sheet": "JEE-13-momentum",
+          "main_px": 1973,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-13-momentum",
+          "margin_px": 953,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-14-poiseuille",
+      "section": "JEE",
+      "page": 14,
+      "title": "Why does a narrow pipe strangle the flow?",
+      "question": "Viscosity turns a pressure difference into a flow rate, and the fourth power of the radius decides who wins.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "poiseuille_profile"
+      ],
+      "file": "JEE-14-poiseuille.png",
+      "layout": [
+        {
+          "sheet": "JEE-14-poiseuille",
+          "main_px": 2003,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-14-poiseuille",
+          "margin_px": 910,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-15-networks",
+      "section": "JEE",
+      "page": 15,
+      "title": "How do pipes combine like resistors?",
+      "question": "Once the flow is linear in \u0394p, a pipe network is a circuit with pressure for voltage.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "hydraulic_network"
+      ],
+      "file": "JEE-15-networks.png",
+      "layout": [
+        {
+          "sheet": "JEE-15-networks",
+          "main_px": 1769,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-15-networks",
+          "margin_px": 882,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-16-stokes",
+      "section": "JEE",
+      "page": 16,
+      "title": "How fast does a small sphere sink?",
+      "question": "Stokes drag is a low-Reynolds result. The number that validates it is the one most answers omit.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "stokes_regime"
+      ],
+      "file": "JEE-16-stokes.png",
+      "layout": [
+        {
+          "sheet": "JEE-16-stokes",
+          "main_px": 1889,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-16-stokes",
+          "margin_px": 955,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-17-surface-energy",
+      "section": "JEE",
+      "page": 17,
+      "title": "Why is a soap film a stretched sheet?",
+      "question": "Surface tension can be read as a force per length or an energy per area. The film makes the factor of two visible.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "surface_energy"
+      ],
+      "file": "JEE-17-surface-energy.png",
+      "layout": [
+        {
+          "sheet": "JEE-17-surface-energy",
+          "main_px": 1924,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-17-surface-energy",
+          "margin_px": 940,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-18-excess-pressure",
+      "section": "JEE",
+      "page": 18,
+      "title": "Why is the pressure inside a bubble higher?",
+      "question": "Curvature costs surface energy, so a curved interface must carry a pressure step.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "excess_pressure"
+      ],
+      "file": "JEE-18-excess-pressure.png",
+      "layout": [
+        {
+          "sheet": "JEE-18-excess-pressure",
+          "main_px": 1876,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-18-excess-pressure",
+          "margin_px": 970,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "JEE-19-jurin",
+      "section": "JEE",
+      "page": 19,
+      "title": "How high does water climb a narrow tube?",
+      "question": "Capillary rise is a force balance and an energy minimum, and the two disagree by a factor of two unless you audit the dissipation.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "jurin"
+      ],
+      "file": "JEE-19-jurin.png",
+      "layout": [
+        {
+          "sheet": "JEE-19-jurin",
+          "main_px": 1958,
+          "main_available": 2112
+        },
+        {
+          "sheet": "JEE-19-jurin",
+          "margin_px": 953,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-01-drain",
+      "section": "Olympiad",
+      "page": 1,
+      "title": "Why does a tank empty in finite time but a capillary never does?",
+      "question": "Two drain laws with the same geometry. The exponent on h decides whether the clock ever stops.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "drain_two_regimes"
+      ],
+      "file": "Olympiad-01-drain.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-01-drain",
+          "main_px": 2107,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-01-drain",
+          "margin_px": 922,
+          "margin_available": 2112,
+          "figure_y": 2525,
+          "figure_h": 671
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-02-paraboloid",
+      "section": "Olympiad",
+      "page": 2,
+      "title": "Three ways to derive the rotating surface",
+      "question": "Newton, energy and Bernoulli give the same paraboloid. Agreement is the point, not the algebra.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "paraboloid_three_ways"
+      ],
+      "file": "Olympiad-02-paraboloid.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-02-paraboloid",
+          "main_px": 1999,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-02-paraboloid",
+          "margin_px": 950,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-03-raindrop",
+      "section": "Olympiad",
+      "page": 3,
+      "title": "Where does Stokes drag hand over to quadratic drag?",
+      "question": "One crossover radius decides whether a droplet drifts or a raindrop hits.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "raindrop"
+      ],
+      "file": "Olympiad-03-raindrop.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-03-raindrop",
+          "main_px": 1919,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-03-raindrop",
+          "margin_px": 871,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-04-young-laplace",
+      "section": "Olympiad",
+      "page": 4,
+      "title": "Young-Laplace from virtual work, and the film that refuses to exist",
+      "question": "A soap film between two rings has zero pressure difference, so it must have zero mean curvature. That is harder than it sounds.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "young_laplace_patch"
+      ],
+      "file": "Olympiad-04-young-laplace.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-04-young-laplace",
+          "main_px": 1962,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-04-young-laplace",
+          "margin_px": 881,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-05-drop-strider",
+      "section": "Olympiad",
+      "page": 5,
+      "title": "Measuring gamma with a tap, and why no elephant walks on water",
+      "question": "Two kitchen-table experiments that expose the length-versus-volume scaling of surface forces.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "drop_strider"
+      ],
+      "file": "Olympiad-05-drop-strider.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-05-drop-strider",
+          "main_px": 1822,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-05-drop-strider",
+          "margin_px": 946,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-06-tree",
+      "section": "Olympiad",
+      "page": 6,
+      "title": "How high can a tree suck water?",
+      "question": "Capillarity gives 6 m, suction gives 10 m, and redwoods are 100 m. The resolution is a different state of the liquid.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "tree_suction"
+      ],
+      "file": "Olympiad-06-tree.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-06-tree",
+          "main_px": 1896,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-06-tree",
+          "margin_px": 850,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-07-shallow-wave",
+      "section": "Olympiad",
+      "page": 7,
+      "title": "Why does a shallow-water wave travel at sqrt(gh)?",
+      "question": "Go to the frame of the bump: the flow becomes steady and the whole derivation is continuity plus momentum.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "shallow_wave"
+      ],
+      "file": "Olympiad-07-shallow-wave.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-07-shallow-wave",
+          "main_px": 1953,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-07-shallow-wave",
+          "margin_px": 918,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-08-sprinkler",
+      "section": "Olympiad",
+      "page": 8,
+      "title": "Which way does a reverse sprinkler turn?",
+      "question": "The answer is decided by an idealisation, not by a formula: reversibility says no torque, dissipation says a small one.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "sprinkler"
+      ],
+      "file": "Olympiad-08-sprinkler.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-08-sprinkler",
+          "main_px": 1808,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-08-sprinkler",
+          "margin_px": 940,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-09-rotating-energy",
+      "section": "Olympiad",
+      "page": 9,
+      "title": "Where does the energy come from in a rotating frame?",
+      "question": "A centrifugal head looks like a free pump. The motor pays for it, and the two ledgers must agree.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "rotating_energy"
+      ],
+      "file": "Olympiad-09-rotating-energy.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-09-rotating-energy",
+          "main_px": 1827,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-09-rotating-energy",
+          "margin_px": 953,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-10-viscometer",
+      "section": "Olympiad",
+      "page": 10,
+      "title": "Reconstruct a real measurement: glycerine's viscosity by Stokes",
+      "question": "An experiment is a prediction plus the checks that say the prediction is allowed. This one closes to 6.5 s.",
+      "moves": 5,
+      "chips": 3,
+      "figures": [
+        "viscometer"
+      ],
+      "file": "Olympiad-10-viscometer.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-10-viscometer",
+          "main_px": 1870,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-10-viscometer",
+          "margin_px": 1004,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-11-regime-map",
+      "section": "Olympiad",
+      "page": 11,
+      "title": "Where does this chapter stop being true?",
+      "question": "Six tools cover the syllabus. Five failure modes bound them, and each has a name and a hand-off.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "regime_map"
+      ],
+      "file": "Olympiad-11-regime-map.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-11-regime-map",
+          "main_px": 1725,
+          "main_available": 2112
+        },
+        {
+          "sheet": "Olympiad-11-regime-map",
+          "margin_px": 1298,
+          "margin_available": 2112,
+          "figure_y": 2488,
+          "figure_h": 708
+        }
+      ]
+    }
+  ]
+}
