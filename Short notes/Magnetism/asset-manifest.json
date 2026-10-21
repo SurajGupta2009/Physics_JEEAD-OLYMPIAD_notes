@@ -1,0 +1,174 @@
+{
+  "JEE-01-lorentz.png": {
+    "bytes": 301125,
+    "sha256": "659bc6a2419be33ced21ca89fdc491b6a2524ae0654700b6b7adbb113be778c6"
+  },
+  "JEE-02-circle.png": {
+    "bytes": 306281,
+    "sha256": "dc0a5e6573ffe56956e374ec59d0621e05eb153b8ecce768161b39317c1b9d76"
+  },
+  "JEE-03-selector.png": {
+    "bytes": 278912,
+    "sha256": "5a2ed6522d3ecd5dc3fccb14e49f6b60292faae88b31095fe645842694c39db0"
+  },
+  "JEE-04-regions.png": {
+    "bytes": 276391,
+    "sha256": "71211ee2e2790036b355ddc8c3242e45f49ae89628e8ff4236594955cefdcea9"
+  },
+  "JEE-05-spectrometer.png": {
+    "bytes": 268709,
+    "sha256": "7b9e7355ae7f139fcb871512cffc839f7821fc085e2adae21198602c8ec93b59"
+  },
+  "JEE-06-cyclotron.png": {
+    "bytes": 295316,
+    "sha256": "ab0fb837520892dc80b3e79c8e7c52bb5bf10d6d75978ac5a018eb52b362af0b"
+  },
+  "JEE-07-mirror.png": {
+    "bytes": 295337,
+    "sha256": "7ce9cdabcdfae8c4ef3df82512d94a9409b41ada5345f698e0a559e283ec93b3"
+  },
+  "JEE-08-hall.png": {
+    "bytes": 270469,
+    "sha256": "0d908018c4b517a0a1547301cebd89e0c33bf1a2318951548e369c3d4cf17d7d"
+  },
+  "JEE-09-drifts.png": {
+    "bytes": 263212,
+    "sha256": "9ef87941effb870b40311dcb8f0d0fe07f2a61bf16bef650c6030e580a59779c"
+  },
+  "JEE-10-tracks.png": {
+    "bytes": 272094,
+    "sha256": "74996e9ca8e0ff616fe5925a3fff847dc54c73a9c07f718e879c7a39418d671e"
+  },
+  "JEE-11-biot.png": {
+    "bytes": 286264,
+    "sha256": "d5a45f4e76974f90b507ababd6ae045cd2a2727b8c4f1b9c474c39bafe84c208"
+  },
+  "JEE-12-wire.png": {
+    "bytes": 284265,
+    "sha256": "490db170dbcb534623eedbd26f701618e9a55d3cda01474eefa8d44479e9e9a6"
+  },
+  "JEE-13-loop.png": {
+    "bytes": 262723,
+    "sha256": "ecd60addb1f8bec97313a8b9da53a84d1894fb25fb01e813aaf3ee5b0ea43d3b"
+  },
+  "JEE-14-solenoid.png": {
+    "bytes": 266299,
+    "sha256": "dbdc2224719c0bec9c95a97917161966509739bf9f2d54182e2fd08baffa9753"
+  },
+  "JEE-15-moment.png": {
+    "bytes": 263693,
+    "sha256": "8693e5d53329940a052385f42ec2686eab40a2097b510dafb3b0a5e0ec04e7e6"
+  },
+  "JEE-16-ampere.png": {
+    "bytes": 266318,
+    "sha256": "731ac56ce817994575812187544e5d3447bb075b9d2e250de5b58e2757f2df7e"
+  },
+  "JEE-17-ampere-apps.png": {
+    "bytes": 263483,
+    "sha256": "f1de77d2785a25d94645fd65250b358662b4778a16b1f3767c30ce7662ca69a2"
+  },
+  "JEE-18-overlap.png": {
+    "bytes": 268300,
+    "sha256": "010c77657f0e83685c1d1ddf28f73b135f1fbd9bbcb274725ddfff8e62aa37dc"
+  },
+  "JEE-19-force-current.png": {
+    "bytes": 263359,
+    "sha256": "e11311ee8920fcd6a7c171ce1046dbac8f9eacef4ed1e3a5767e076a62f817ed"
+  },
+  "JEE-20-torque-loop.png": {
+    "bytes": 281701,
+    "sha256": "3b3a26e57fe9b8b02423805e6f642b2d92b25fec8712da7c4286ad68205b1f6a"
+  },
+  "JEE-21-wires-force.png": {
+    "bytes": 255874,
+    "sha256": "edc516d25d16803ed0b6af490f404f9ef1a976b3834bff1867e1d30784cc45cd"
+  },
+  "JEE-22-pressure.png": {
+    "bytes": 302123,
+    "sha256": "7ca8b824192638b8cb5ac60d89ccb80ed87ef799bb438992dfadff04e245a22a"
+  },
+  "JEE-23-gyromagnetic.png": {
+    "bytes": 273263,
+    "sha256": "9339588cab58076521819f87d88ba89253735f4dbb8c34808add04c03821cac6"
+  },
+  "JEE-24-magnet-matter.png": {
+    "bytes": 276321,
+    "sha256": "1314856fdad2aaa7d1e9e4ea9135f05ff36853496c3480db42607e5b0ed5da54"
+  },
+  "JEE-25-BHM.png": {
+    "bytes": 264134,
+    "sha256": "2f7306f4ad0be66fe2247f6e3a26d82082d22026d8ddaca37d56454214aa3d90"
+  },
+  "JEE-26-dia-para.png": {
+    "bytes": 266608,
+    "sha256": "b4f6df2cbced8766decc9ca14c3fbdbe7c140a376a88b8309915a005cf75b15e"
+  },
+  "JEE-27-ferro.png": {
+    "bytes": 287826,
+    "sha256": "2b3daa9fd809683aea049595837fffdc8d6974731a74a19586fce40b2508d1d0"
+  },
+  "JEE-28-circuits.png": {
+    "bytes": 277593,
+    "sha256": "f594ae78840b2e0de356fb2d474e1ed3badb2da346835b47df1ff16fee635c2a"
+  },
+  "JEE-29-earth.png": {
+    "bytes": 256250,
+    "sha256": "20994d77f145e253a508fd54e34c31a4b74fd8c1bd35a30affeabb585b5b8cc9"
+  },
+  "Olympiad-01-relativity.png": {
+    "bytes": 295361,
+    "sha256": "76b65591ba00b7ea74f66da9974a532f89447aed9948a88ac1714b5e7d4a6fb2"
+  },
+  "Olympiad-02-helmholtz.png": {
+    "bytes": 291344,
+    "sha256": "9e8743e70c6e3ba299e10185a6c02cd4d77a5efc627339c4635cff698eb65b35"
+  },
+  "Olympiad-03-sphere.png": {
+    "bytes": 291965,
+    "sha256": "4a1437b60cb7202b3c2ec03c419e24d39a85ef7dc487e9cb5c1046462911a0f1"
+  },
+  "Olympiad-04-pressure-apps.png": {
+    "bytes": 279466,
+    "sha256": "37ab8daacba797656f3870d0c8554665cbbe7c366940089d2cf9de27c1053b9d"
+  },
+  "Olympiad-05-cycloid-fermi.png": {
+    "bytes": 292790,
+    "sha256": "6d6c95922342ffd933485cb9b73421fe18ada57ab47f80b69249fedfe3b33e80"
+  },
+  "Olympiad-06-clocks.png": {
+    "bytes": 282352,
+    "sha256": "f2da8fe1a8c9943163b7b5848f269c83e3cb3737d126e658d4d6bbbb680a25fe"
+  },
+  "Olympiad-07-hall-levitation.png": {
+    "bytes": 289280,
+    "sha256": "553f1e84189a9c2def564836437b97634cf118bc3b25aed60795be63859f1387"
+  },
+  "Olympiad-08-estimates.png": {
+    "bytes": 294892,
+    "sha256": "6622a44ccc8b94a0901936d1728aaf296aab370165e8c46b176dbb04e22790f9"
+  },
+  "magnetism-all-pngs.zip": {
+    "bytes": 9658843,
+    "sha256": "6b602864f424a35962f3fe6349f64732e5ed0c5d425a436014ac69d18c401766"
+  },
+  "magnetism-jee-pngs.zip": {
+    "bytes": 7477336,
+    "sha256": "4a41d128ed02e22d8bdde8a3ea700e4c90cad61753ecab92dc61a9c94b785daa"
+  },
+  "magnetism-jee.pdf": {
+    "bytes": 7916859,
+    "sha256": "7d91717c22bd6ee9331b39685e5afb53f9365cf5dc32eae8a7b0cd38d2b50f67"
+  },
+  "magnetism-olympiad-pngs.zip": {
+    "bytes": 2181529,
+    "sha256": "869f7acaeb3b60758fa4cf64583efc9dfa2524f2b768eea816b223ee69f077ca"
+  },
+  "magnetism-olympiad.pdf": {
+    "bytes": 2295238,
+    "sha256": "f974b70a9768ecaa99db768f5a8db86402885236336f0e012da23cc93f3460ec"
+  },
+  "magnetism-short-notes.pdf": {
+    "bytes": 10211229,
+    "sha256": "20f4740b51fdcb04e230b91c717c09d34ae64ad9fdb18fb03bf1cbffab6f9b68"
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "suite": "independent pre-publication revalidation",
+  "checks": 89,
+  "passed": 89,
+  "results": [
+    {
+      "name": "finite wire alpha=beta=60deg equals angle formula",
+      "value": 1.7320508075688746e-05,
+      "expected": 1.7320508075688774e-05,
+      "rel": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "finite wire 90+90 tends to infinite wire",
+      "value": 1.9999999999999927e-05,
+      "expected": 2e-05,
+      "rel": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "semi-infinite end-on is half the infinite field",
+      "value": 1.0000000009999992e-05,
+      "expected": 1e-05,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "signed angles: foot outside subtracts",
+      "value": 4.9999999999999996e-06,
+      "expected": 5e-06,
+      "rel": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "loop centre mu0 I / 2R",
+      "value": 1.5707963267948964e-05,
+      "expected": 1.5707963267948964e-05,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "loop axis at x=R matches closed form",
+      "value": 5.553603672697955e-06,
+      "expected": 5.553603672697957e-06,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "loop far field is dipolar (x=20R)",
+      "value": 1.9561552435001625e-09,
+      "expected": 1.956155243500163e-09,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "quarter arc is one quarter of loop",
+      "value": 3.926990816987242e-06,
+      "expected": 3.926990816987241e-06,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "square centre 2 sqrt2 mu0 I / pi a",
+      "value": 1.1313708498984761e-05,
+      "expected": 1.1313708498984761e-05,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "hexagon centre sqrt3 mu0 I / pi a",
+      "value": 6.9282032302755086e-06,
+      "expected": 6.9282032302755086e-06,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "solenoid midplane equals mu0 n I (L=50R)",
+      "value": 0.00025127088246200315,
+      "expected": 0.0002513274122871835,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "solenoid midplane cosine form",
+      "value": 0.00025127716187934603,
+      "expected": 0.00025127716187934603,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "solenoid end field tends to half",
+      "value": 0.0001256574234294842,
+      "expected": 0.0001256574234294842,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "stacked loops match cosine formula off-centre",
+      "value": 0.0002512523960561,
+      "expected": 0.0002512586729855479,
+      "rel": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "ampere circulation 2A enclosed",
+      "value": 2.5132741228718346e-06,
+      "expected": 2.513274e-06,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "thick wire internal continuity at r=a",
+      "value": 2.0000000000000003e-06,
+      "expected": 2.0000000000000003e-06,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "thick wire B(a/2)=B(a)/2",
+      "value": 1.0000000000000002e-06,
+      "expected": 1.0000000000000002e-06,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "two sheets gap field mu0 K",
+      "value": 0.0003769911184307752,
+      "expected": 0.0003769911184307752,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "hole field half mu0 J d",
+      "value": 0.012566370614359173,
+      "expected": 0.012566370614359173,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "toroid mid-gap field",
+      "value": 0.0013333333333333333,
+      "expected": 0.0013333333333333333,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "Boris push closes the orbit after one period",
+      "value": 1.17526829571463e-11,
+      "expected": 0.0,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "orbit radius equals mv/eB",
+      "value": 0.00022742520881887388,
+      "expected": 0.0002274252041426289,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "orbit speed conserved",
+      "value": 2000000.0000000156,
+      "expected": 2000000.0,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "period independent of speed (same T at 2x v)",
+      "value": 7.14477350575642e-10,
+      "expected": 7.14477350575642e-10,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "cycloid x end equals drift times period",
+      "value": 0.021864825001157075,
+      "expected": 0.02186482495619657,
+      "rel": 0.002,
+      "pass": true
+    },
+    {
+      "name": "cycloid arch height 2 m E / q B^2",
+      "value": 0.006959789943238927,
+      "expected": 0.006959789943235437,
+      "rel": 0.002,
+      "pass": true
+    },
+    {
+      "name": "copper Hall voltage microvolts",
+      "value": 0.734295185230678,
+      "expected": 0.734295,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "Hall force balance residual",
+      "value": 1.1647058823529413e-23,
+      "expected": 0.0,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "semiconductor Hall voltage",
+      "value": 0.31207545372303813,
+      "expected": 0.312075,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "Ge room-temperature R_H positive",
+      "value": 0.002486320332668815,
+      "expected": 0.00249,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "Ge intrinsic R_H matches source -7.2e-3",
+      "value": -0.007174148361449153,
+      "expected": -0.00717,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "mixed-carrier R_H vanishes at n/p=(mu_p/mu_n)^2",
+      "value": -3.2019576185549245e-19,
+      "expected": 0.0,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "dipole axial field (mu0/4pi) 2mu/r3",
+      "value": 1.4137166941154072e-08,
+      "expected": 1.413716694115407e-08,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "axial is twice equatorial",
+      "value": 2.0,
+      "expected": 2.0,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "loop far field converges to dipole",
+      "value": 5.216413982667098e-10,
+      "expected": 5.23598775598299e-10,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "generalised torque is minus dU/dtheta",
+      "value": -0.1457186078607231,
+      "expected": -0.1457186078547747,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "couple magnitude mu B sin theta",
+      "value": 0.1457186078607231,
+      "expected": 0.1457186078547747,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "couple from side forces equals mu x B",
+      "value": 0.018000000000000002,
+      "expected": 0.018000000000000002,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "closed loop net force zero",
+      "value": 0.0,
+      "expected": 0.0,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "parallel wire force per metre",
+      "value": 0.02,
+      "expected": 0.02,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "1 T magnetic pressure in Pa",
+      "value": 397887.35772973835,
+      "expected": 397887.0,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "1 T solenoid 10 cm2 end force",
+      "value": 397.88735772973837,
+      "expected": 397.887,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "3 T hoop stress MPa",
+      "value": 3.5809862195676447,
+      "expected": 3.581,
+      "rel": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "chord force on semicircle 2 I R B",
+      "value": 0.18000000000000002,
+      "expected": 0.18,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "ring gyromagnetic ratio Q/2m",
+      "value": 4.9999999999999996e-05,
+      "expected": 4.9999999999999996e-05,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "Bohr magneton",
+      "value": 9.274010072679799e-24,
+      "expected": 9.2740100783e-24,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "rotating disc centre field",
+      "value": 2.5132741228718345e-11,
+      "expected": 2.5132741228718345e-11,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "magnetised sphere centre equals 2/3 mu0 M",
+      "value": 0.8377580409572782,
+      "expected": 0.8377580409572782,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "sphere moment M times volume",
+      "value": 4.188790204786391,
+      "expected": 4.1887902,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "pole exterior continuity 2/3 mu0 M",
+      "value": 0.8377580409572782,
+      "expected": 0.8377580409572782,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "dipole field at 5R with corrected moment",
+      "value": 0.006702064327658226,
+      "expected": 0.006702,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "long cylinder interior mu0 M vs sphere",
+      "value": 0.418879020478639,
+      "expected": 0.4188790204786391,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "water Larmor susceptibility",
+      "value": -9.543340630774917e-06,
+      "expected": -9.5e-06,
+      "rel": 0.05,
+      "pass": true
+    },
+    {
+      "name": "paramagnetic x at 1K 1T",
+      "value": 0.6717138156258398,
+      "expected": 0.6717,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "tanh saturation limit",
+      "value": 1.0,
+      "expected": 1.0,
+      "rel": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "dipole coupling temperature 0.25nm",
+      "value": 0.03986867645342326,
+      "expected": 0.0399,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "exchange Tc mean field z=8",
+      "value": 1547.2690828733441,
+      "expected": 1548.0,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "hysteresis power loss 20 kg core",
+      "value": 19.607843137254903,
+      "expected": 19.6,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "filled core B = mu_r mu0 nI",
+      "value": 1.2566370614359172,
+      "expected": 1.2566,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "gapped circuit B = mu0 NI/(g+ell/mu_r)",
+      "value": 0.12200359819766186,
+      "expected": 0.122,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "earth B_H component",
+      "value": 24.000000000000007,
+      "expected": 24.0,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "earth B_V component",
+      "value": 41.569219381653056,
+      "expected": 41.569,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "components reconstruct total",
+      "value": 48.00000000000001,
+      "expected": 48.0,
+      "rel": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "dip-latitude identity",
+      "value": 40.8933946491309,
+      "expected": 40.893,
+      "rel": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "dipole strength factor at lambda 40.9 deg",
+      "value": 1.5118578920369086,
+      "expected": 1.51186,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "source rounds 1.51 to about 1.5",
+      "value": 1.0,
+      "expected": 1.0,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "earth dipole moment",
+      "value": 7.754245590000002,
+      "expected": 7.75,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "Gauss method mu",
+      "value": 0.5847162777500242,
+      "expected": 0.585,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "Gauss method B_H microtesla",
+      "value": 25.31895752688993,
+      "expected": 25.3,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "core current for earth moment",
+      "value": 2.014900433627805,
+      "expected": 2.0,
+      "rel": 0.03,
+      "pass": true
+    },
+    {
+      "name": "Helmholtz midpoint field",
+      "value": 0.0004495881427866065,
+      "expected": 0.00044958704146992807,
+      "rel": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "Helmholtz flatness coefficient 144/125",
+      "value": 1.1488484854020968,
+      "expected": 1.152,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "second derivative vanishes at d=R",
+      "value": 0.0,
+      "expected": 0.0,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "nonzero curvature at d=1.6R",
+      "value": 1.0,
+      "expected": 1.0,
+      "rel": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "cancellation current for earth field",
+      "value": 0.10009160766804052,
+      "expected": 0.0997,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "F_m/F_e at 1e6 m/s",
+      "value": 1.1126500560536185e-05,
+      "expected": 1.11265e-05,
+      "rel": 1e-05,
+      "pass": true
+    },
+    {
+      "name": "moving charge B equals vE/c2",
+      "value": 1.6021766339999996e-16,
+      "expected": 1.6021766348791772e-16,
+      "rel": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "synchrotron radius 1 GeV in 1 T",
+      "value": 3.335640951981521,
+      "expected": 3.3356,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "synchrotron frequency MHz",
+      "value": 14.304132932540439,
+      "expected": 14.3,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "cyclotron formula wrong by gamma",
+      "value": 27999.4,
+      "expected": 27980.0,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "proton gyration period at L=2 ms",
+      "value": 16.92760641770057,
+      "expected": 17.2,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "Fermi reflections to double K",
+      "value": 6208.905100038325,
+      "expected": 6213.0,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "Fermi fractional gain 4V/v at V=1e4",
+      "value": 0.00013342563807926082,
+      "expected": 0.00013343,
+      "rel": 0.0001,
+      "pass": true
+    },
+    {
+      "name": "levitation height cm",
+      "value": 2.6719310647236623,
+      "expected": 2.668,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "image force balances weight",
+      "value": 1.0,
+      "expected": 1.0,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "lightning channel surface field",
+      "value": 1.2,
+      "expected": 1.2,
+      "rel": 0.001,
+      "pass": true
+    },
+    {
+      "name": "pinch pressure Pa",
+      "value": 572957.7951308232,
+      "expected": 573000.0,
+      "rel": 0.01,
+      "pass": true
+    },
+    {
+      "name": "slab support field T",
+      "value": 0.35110695767367456,
+      "expected": 0.35,
+      "rel": 0.02,
+      "pass": true
+    },
+    {
+      "name": "quadrature stable against itself",
+      "value": 1.7320508075688746e-05,
+      "expected": 1.7320508075688774e-05,
+      "rel": 1e-09,
+      "pass": true
+    }
+  ]
+}
