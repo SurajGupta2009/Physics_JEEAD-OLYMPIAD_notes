@@ -1,0 +1,146 @@
+{
+  "JEE-01-pressure.png": {
+    "bytes": 257092,
+    "sha256": "32d4d3069c27fc613a8d5a61142736501092e0bb66431c81c814f708e921fbce"
+  },
+  "JEE-02-manometer.png": {
+    "bytes": 245910,
+    "sha256": "d954e47b6dce227139f326a1db64d228a813a272463c3bdf36c7c01490edd9b5"
+  },
+  "JEE-03-plane-force.png": {
+    "bytes": 237099,
+    "sha256": "783994b8b6ce2ca73fd2e251d627d35f45f8941157bedbda90837830f80231fb"
+  },
+  "JEE-04-curved-force.png": {
+    "bytes": 257219,
+    "sha256": "1dbbbb031a0326866a00e705605260391569ecfe6b4716cb317698f9dc9f57a7"
+  },
+  "JEE-05-accelerated.png": {
+    "bytes": 239457,
+    "sha256": "4926789c2c5d61af5da6d1f431994ae54efca04be5fb95d754174f87dd2d0eca"
+  },
+  "JEE-06-rotating.png": {
+    "bytes": 237558,
+    "sha256": "ec0a23122d0c7161b5ec40e8abca519c15dd6039c84cb18f07fa294a571f3e94"
+  },
+  "JEE-07-buoyancy.png": {
+    "bytes": 250297,
+    "sha256": "72f725bf5a071f71f091db8d98318ddc1733a4f9287008bf7ddc4140b91167e0"
+  },
+  "JEE-08-stability.png": {
+    "bytes": 225766,
+    "sha256": "7034b950d3d5f6bb98076d9444c73baf9febb86457af2f9594c2a105b1ca25d5"
+  },
+  "JEE-09-ice.png": {
+    "bytes": 220588,
+    "sha256": "332291171435428ec35f178e25dd7eed4efe7742ea6426706c932f2e2a356504"
+  },
+  "JEE-10-bernoulli.png": {
+    "bytes": 234061,
+    "sha256": "4c2ab8b7eff7dea56301e099c2dafb61478d8247713998212747ca9ac58e0063"
+  },
+  "JEE-11-devices.png": {
+    "bytes": 246953,
+    "sha256": "9948b4eb9dff0c6aa0123085c20077d25748f63937f20f2aaa8ae812b85641ff"
+  },
+  "JEE-12-torricelli.png": {
+    "bytes": 241713,
+    "sha256": "d36b9fbcd080679d07a7e5d660ecc1ff537381cffc604c14ee0f279f98687326"
+  },
+  "JEE-13-momentum.png": {
+    "bytes": 223233,
+    "sha256": "783e7b8e94729968fb3fec3955e382391388ba4eccaa82f4e0e14cf99d751176"
+  },
+  "JEE-14-poiseuille.png": {
+    "bytes": 237036,
+    "sha256": "36d0c67ed6d662276407c76546aa3925702dc1ff2b5d74f2d713bfe4c10a07d6"
+  },
+  "JEE-15-networks.png": {
+    "bytes": 218115,
+    "sha256": "f1cc8e40a7a52bc09b5c445a9c364b47d6380dd98d06175ad7aef4d7deb47cdb"
+  },
+  "JEE-16-stokes.png": {
+    "bytes": 244960,
+    "sha256": "00e3770f44c264ffaf724f55af922ff438ef55309106c5637a78e27f58187ed5"
+  },
+  "JEE-17-surface-energy.png": {
+    "bytes": 238614,
+    "sha256": "2e55ed24dc22ad6d4f7b679f7fb329ea8f553626ef0d176b7d957ee31a039a8f"
+  },
+  "JEE-18-excess-pressure.png": {
+    "bytes": 228450,
+    "sha256": "5522ad5cd21e70d6a9450ed292a87e7973c09dc23b84fb0eac9cf9fc6ce922d4"
+  },
+  "JEE-19-jurin.png": {
+    "bytes": 246955,
+    "sha256": "53bc75ab0cd3d70e1fa1cd6fd67b5bb5b8cbc4a36455d1b72f31724e5e85d8a8"
+  },
+  "Olympiad-01-drain.png": {
+    "bytes": 264470,
+    "sha256": "52a15e1ffb20534487c49e53648a7520dff5862a336bbc7fc739184474d5e9a3"
+  },
+  "Olympiad-02-paraboloid.png": {
+    "bytes": 248534,
+    "sha256": "6e95253ae0035126e2374a42f30f58a6a1673407710dfc4d3b9805d458316fe6"
+  },
+  "Olympiad-03-raindrop.png": {
+    "bytes": 260486,
+    "sha256": "a92fb8c5e47f557f12df75a4c80de33f3be3073fb81a1766bf2cfbd49c5f6aa0"
+  },
+  "Olympiad-04-young-laplace.png": {
+    "bytes": 252337,
+    "sha256": "9525055fbca00f730afc846079d4d0b2bd4545322d86653ceac2c7fbf8d19585"
+  },
+  "Olympiad-05-drop-strider.png": {
+    "bytes": 245840,
+    "sha256": "f8191bc17f8d7cfe6e32378fc2f8d3cfb2a173e831cd2a0d6cb9d6bcfe72eb42"
+  },
+  "Olympiad-06-tree.png": {
+    "bytes": 246277,
+    "sha256": "0e37cb935372c611affad16af7c6cd0db3be7b6d4650d63b16d227ee9af26c02"
+  },
+  "Olympiad-07-shallow-wave.png": {
+    "bytes": 247704,
+    "sha256": "7732505832dd5aff9d62ce99e449e1532cefb9a6102f2774c34ec904adb44538"
+  },
+  "Olympiad-08-sprinkler.png": {
+    "bytes": 241507,
+    "sha256": "809d06624168425e821f23b3ee87da22b149d8c016865579450c40fa00fad1b0"
+  },
+  "Olympiad-09-rotating-energy.png": {
+    "bytes": 236318,
+    "sha256": "ff2d94cb1f77676ecefa99673639b655a3261e919f7f9f385c2482d5663e8b67"
+  },
+  "Olympiad-10-viscometer.png": {
+    "bytes": 250368,
+    "sha256": "f028a88412dac6d9a316e15e6682aed8bf4006e6cac01065e6e40a33592af334"
+  },
+  "Olympiad-11-regime-map.png": {
+    "bytes": 281014,
+    "sha256": "fe0865c5e19940a47f61edeb1ec5899964531d2f47e8960f7795ded1453ccaab"
+  },
+  "fluid-mechanics-all-pngs.zip": {
+    "bytes": 6821433,
+    "sha256": "d99f6ffa568d2a69d30a5d0504c55dd3173d0d165ac39f27c85e6ce6148eb16e"
+  },
+  "fluid-mechanics-jee-pngs.zip": {
+    "bytes": 4226691,
+    "sha256": "0b24e56dd9e002047c9eb95fff79754054651e00d2ab15339059ec3221be1759"
+  },
+  "fluid-mechanics-jee.pdf": {
+    "bytes": 4520692,
+    "sha256": "4cfdab959de24bdc8a36082c7177123e0dd4d81653f1d1b0714a9a08d628e02d"
+  },
+  "fluid-mechanics-olympiad-pngs.zip": {
+    "bytes": 2594764,
+    "sha256": "8f6e8e78febaa2e13b973f67ca8af44bb9b19ae57dd9f93211de36d37fe92d97"
+  },
+  "fluid-mechanics-olympiad.pdf": {
+    "bytes": 2768537,
+    "sha256": "3317014ac827267a67e3af216c9caede9776fe5348c5ac13fdb051b3315ab52b"
+  },
+  "fluid-mechanics-short-notes.pdf": {
+    "bytes": 7288288,
+    "sha256": "9d79899ba2c6200493363c2c884014323b34faf384cec36c22016f3f6a4a2aff"
+  }
+}

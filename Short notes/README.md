@@ -34,5 +34,6 @@ Short notes/
 | Magnetism | [Browse](Magnetism/index.html) | [Index](Magnetism/README.md) | [ZIP](Magnetism/magnetism-all-pngs.zip) | [PDF](Magnetism/magnetism-short-notes.pdf) |
 | Electrostatics | [Browse](Electrostatics/index.html) | [Index](Electrostatics/README.md) | [ZIP](Electrostatics/electrostatics-all-pngs.zip) | [PDF](Electrostatics/electrostatics-short-notes.pdf) |
 | Elasticity | [Browse](Elasticity/index.html) | [Index](Elasticity/README.md) | [ZIP](Elasticity/elasticity-all-pngs.zip) | [PDF](Elasticity/elasticity-short-notes.pdf) |
+| Fluid mechanics | [Browse](Fluid_Mechanics/index.html) | [Index](Fluid_Mechanics/README.md) | [ZIP](Fluid_Mechanics/fluid-mechanics-all-pngs.zip) | [PDF](Fluid_Mechanics/fluid-mechanics-short-notes.pdf) |
 
 All images are A4 portrait at 300 DPI. Print one sheet per page with **Fit to page**, not photo-style Fill/Crop. Separate JEE and extension bundles are available within each chapter.

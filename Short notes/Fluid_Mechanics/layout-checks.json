@@ -1,0 +1,250 @@
+{
+  "edition": "fluid-mechanics",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sheets": [
+    {
+      "slug": "JEE-01-pressure",
+      "main_px": 2035,
+      "main_available": 2112,
+      "rail_px": 879,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-02-manometer",
+      "main_px": 1962,
+      "main_available": 2112,
+      "rail_px": 1029,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-03-plane-force",
+      "main_px": 1832,
+      "main_available": 2112,
+      "rail_px": 997,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-04-curved-force",
+      "main_px": 2043,
+      "main_available": 2112,
+      "rail_px": 842,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-05-accelerated",
+      "main_px": 1961,
+      "main_available": 2112,
+      "rail_px": 875,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-06-rotating",
+      "main_px": 1871,
+      "main_available": 2112,
+      "rail_px": 963,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-07-buoyancy",
+      "main_px": 1928,
+      "main_available": 2112,
+      "rail_px": 943,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-08-stability",
+      "main_px": 1839,
+      "main_available": 2112,
+      "rail_px": 921,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-09-ice",
+      "main_px": 1829,
+      "main_available": 2112,
+      "rail_px": 1005,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-10-bernoulli",
+      "main_px": 1858,
+      "main_available": 2112,
+      "rail_px": 887,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-11-devices",
+      "main_px": 2030,
+      "main_available": 2112,
+      "rail_px": 842,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-12-torricelli",
+      "main_px": 1916,
+      "main_available": 2112,
+      "rail_px": 948,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-13-momentum",
+      "main_px": 1973,
+      "main_available": 2112,
+      "rail_px": 953,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-14-poiseuille",
+      "main_px": 2003,
+      "main_available": 2112,
+      "rail_px": 910,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-15-networks",
+      "main_px": 1769,
+      "main_available": 2112,
+      "rail_px": 882,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-16-stokes",
+      "main_px": 1889,
+      "main_available": 2112,
+      "rail_px": 955,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-17-surface-energy",
+      "main_px": 1924,
+      "main_available": 2112,
+      "rail_px": 940,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-18-excess-pressure",
+      "main_px": 1876,
+      "main_available": 2112,
+      "rail_px": 970,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "JEE-19-jurin",
+      "main_px": 1958,
+      "main_available": 2112,
+      "rail_px": 953,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-01-drain",
+      "main_px": 2107,
+      "main_available": 2112,
+      "rail_px": 922,
+      "figure_y": 2525,
+      "figure_h": 671
+    },
+    {
+      "slug": "Olympiad-02-paraboloid",
+      "main_px": 1999,
+      "main_available": 2112,
+      "rail_px": 950,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-03-raindrop",
+      "main_px": 1919,
+      "main_available": 2112,
+      "rail_px": 871,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-04-young-laplace",
+      "main_px": 1962,
+      "main_available": 2112,
+      "rail_px": 881,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-05-drop-strider",
+      "main_px": 1822,
+      "main_available": 2112,
+      "rail_px": 946,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-06-tree",
+      "main_px": 1896,
+      "main_available": 2112,
+      "rail_px": 850,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-07-shallow-wave",
+      "main_px": 1953,
+      "main_available": 2112,
+      "rail_px": 918,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-08-sprinkler",
+      "main_px": 1808,
+      "main_available": 2112,
+      "rail_px": 940,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-09-rotating-energy",
+      "main_px": 1827,
+      "main_available": 2112,
+      "rail_px": 953,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-10-viscometer",
+      "main_px": 1870,
+      "main_available": 2112,
+      "rail_px": 1004,
+      "figure_y": 2488,
+      "figure_h": 708
+    },
+    {
+      "slug": "Olympiad-11-regime-map",
+      "main_px": 1725,
+      "main_available": 2112,
+      "rail_px": 1298,
+      "figure_y": 2488,
+      "figure_h": 708
+    }
+  ]
+}
