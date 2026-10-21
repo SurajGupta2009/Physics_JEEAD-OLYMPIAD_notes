@@ -1,0 +1,202 @@
+{
+  "checks": 476,
+  "model_checks": 39,
+  "models": [
+    {
+      "name": "r_min alpha 5 MeV on gold (fm)",
+      "value": 45.5028797120217,
+      "expected": 45.5
+    },
+    {
+      "name": "b at 90 deg, same beam (fm)",
+      "value": 22.75143985601085,
+      "expected": 22.8
+    },
+    {
+      "name": "Coulomb barrier gold R=7 fm (MeV)",
+      "value": 32.50205693715836,
+      "expected": 32.5
+    },
+    {
+      "name": "Bohr radius (pm)",
+      "value": 52.91772109909366,
+      "expected": 52.9
+    },
+    {
+      "name": "H n=3 radius (A)",
+      "value": 4.762594898918429,
+      "expected": 4.76
+    },
+    {
+      "name": "H n=3 speed (m/s)",
+      "value": 729230.4212153093,
+      "expected": 729000.0
+    },
+    {
+      "name": "H n=3 de Broglie (A)",
+      "value": 9.974755430977572,
+      "expected": 9.97
+    },
+    {
+      "name": "ionisation of H (eV)",
+      "value": 13.605693120763007,
+      "expected": 13.6
+    },
+    {
+      "name": "Balmer edge (nm)",
+      "value": 364.6594071564714,
+      "expected": 364.6
+    },
+    {
+      "name": "Lyman alpha (nm)",
+      "value": 121.55313571882381,
+      "expected": 121.6
+    },
+    {
+      "name": "H-alpha (nm)",
+      "value": 656.4696267003703,
+      "expected": 656.3
+    },
+    {
+      "name": "He+ ground (eV)",
+      "value": -54.4,
+      "expected": -54.4
+    },
+    {
+      "name": "Li2+ ground (eV)",
+      "value": -122.39999999999999,
+      "expected": -122.4
+    },
+    {
+      "name": "positronium ground (eV)",
+      "value": -6.8,
+      "expected": -6.8
+    },
+    {
+      "name": "positronium radius (A)",
+      "value": 1.0583544219818732,
+      "expected": 1.06
+    },
+    {
+      "name": "550 nm photon (eV)",
+      "value": 2.254258153330914,
+      "expected": 2.25
+    },
+    {
+      "name": "Na threshold (nm)",
+      "value": 543.7903440052644,
+      "expected": 544.0
+    },
+    {
+      "name": "K_max, 400 nm on Na (eV)",
+      "value": 0.8196049608300071,
+      "expected": 0.82
+    },
+    {
+      "name": "1.226/sqrt(V) at 100 V (A)",
+      "value": 0.1226,
+      "expected": 0.1226
+    },
+    {
+      "name": "electron wavelength at 100 kV, non-rel (pm)",
+      "value": 3.8769524113664326,
+      "expected": 3.88
+    },
+    {
+      "name": "Davisson-Germer 54 V (nm)",
+      "value": 0.166837468036232,
+      "expected": 0.1668
+    },
+    {
+      "name": "d-spacing NaCl 282 pm gives 154 pm at n=1 (deg)",
+      "value": 15.845819420965265,
+      "expected": 15.8
+    },
+    {
+      "name": "photon flux, 100 W at 2 m (W/m2)",
+      "value": 1.9894367886486917,
+      "expected": 1.99
+    },
+    {
+      "name": "Duane-Hunt at 100 kV (pm)",
+      "value": 12.4,
+      "expected": 12.4
+    },
+    {
+      "name": "Cu K-alpha energy (keV)",
+      "value": 7.9967999999999995,
+      "expected": 8.0
+    },
+    {
+      "name": "Cu K-alpha wavelength (pm)",
+      "value": 155.04226494747937,
+      "expected": 155.0
+    },
+    {
+      "name": "Cu K threshold (kV)",
+      "value": 7.9967999999999995,
+      "expected": 8.0
+    },
+    {
+      "name": "Mo K-alpha (pm)",
+      "value": 71.82391433670435,
+      "expected": 71.8
+    },
+    {
+      "name": "Ag K-alpha (pm)",
+      "value": 57.0586011342155,
+      "expected": 57.1
+    },
+    {
+      "name": "Pb half-value 0.123 mm, six to 1 % (mm)",
+      "value": 0.817194311342291,
+      "expected": 0.82
+    },
+    {
+      "name": "Avogadro from NaCl",
+      "value": 6.018315982207049e+23,
+      "expected": 6.02e+23
+    },
+    {
+      "name": "Compton wavelength (pm)",
+      "value": 2.4263102390826217,
+      "expected": 2.426
+    },
+    {
+      "name": "shift at 90 deg (pm)",
+      "value": 2.4263102390826217,
+      "expected": 2.426
+    },
+    {
+      "name": "shift at 180 deg (pm)",
+      "value": 4.852620478165243,
+      "expected": 4.85
+    },
+    {
+      "name": "electron KE at 90 deg, 100 keV (keV)",
+      "value": 16.366612111292962,
+      "expected": 16.4
+    },
+    {
+      "name": "electron KE at 180 deg, 100 keV (keV)",
+      "value": 28.12939521800281,
+      "expected": 28.2
+    },
+    {
+      "name": "pair threshold (MeV)",
+      "value": 1.0219979,
+      "expected": 1.022
+    },
+    {
+      "name": "2 MeV photon pair KE (MeV)",
+      "value": 0.978,
+      "expected": 0.98
+    },
+    {
+      "name": "inverse Compton boost, gamma=1e3",
+      "value": 2400.0,
+      "expected": 2400.0
+    }
+  ],
+  "note": "Representative recomputation of printed formulas, not exhaustive."
+}

@@ -1,0 +1,146 @@
+{
+  "JEE-01-rutherford.png": {
+    "bytes": 257709,
+    "sha256": "7509b598c72197be2b70ced5ba229f75ee2b3322d08ee9ff4a95a0132d988873"
+  },
+  "JEE-02-closest-approach.png": {
+    "bytes": 245712,
+    "sha256": "d16daf712907bc32b1a7b401183c65fec6c10c5f33071ede3a143dc88166299c"
+  },
+  "JEE-03-standing-wave.png": {
+    "bytes": 223545,
+    "sha256": "c0567413246d1cf8ee395593b08979b6695f7ca14aae2e035ff944bb0ae5123f"
+  },
+  "JEE-04-bohr-ladder.png": {
+    "bytes": 238011,
+    "sha256": "e629bda99791da37a28e4a3f0e3590afdb78204aa07c734161e70744879f31ee"
+  },
+  "JEE-05-series.png": {
+    "bytes": 214811,
+    "sha256": "36e326e897c6a1e96ce1db4dc18744f8ce28cc96bd04e8122af603ea58e3d07c"
+  },
+  "JEE-06-excitation.png": {
+    "bytes": 234906,
+    "sha256": "fc43aa91a0c2cb186f778077fdfb5826437eee1e09d1c7c57ff5262caba70dd9"
+  },
+  "JEE-07-hydrogenic.png": {
+    "bytes": 244293,
+    "sha256": "3c1edb693513cc4fbc94df6412f35666588789fd199d2a095993c58259ac1981"
+  },
+  "JEE-08-quantum-numbers.png": {
+    "bytes": 215267,
+    "sha256": "f591c7eeeb74a74b228350eec539a93591801c3139dc2d7ffb781289a2c2a322"
+  },
+  "JEE-09-photon.png": {
+    "bytes": 248001,
+    "sha256": "6b4e3ae325fc01cbd398903f2f3e838e5b5a2e265c28681ed8bc9d24133c71cb"
+  },
+  "JEE-10-photoelectric.png": {
+    "bytes": 251015,
+    "sha256": "a4c6129529dabbd48333fa66c2b9dd989a1bfe5487154ef58dd99689b8991e84"
+  },
+  "JEE-11-stopping.png": {
+    "bytes": 244850,
+    "sha256": "9a3d00a7778dd781252037342dbb342eaff0cb09fc51dd02b0f0ab0a39e42281"
+  },
+  "JEE-12-photocell.png": {
+    "bytes": 224723,
+    "sha256": "5273eddd428e857ca25c4321850de092233f074f3ca743c5c6fecda821c3d098"
+  },
+  "JEE-13-debroglie.png": {
+    "bytes": 231904,
+    "sha256": "2d6a16641ea554ffb7553e181558aace41f8afb3739bc91eb6c529f980a7dbdd"
+  },
+  "JEE-14-davisson-germer.png": {
+    "bytes": 250076,
+    "sha256": "67c97ac5090af95d97ea64d9e37b07cdcec64bfe9d36d3fc40a58d231eab1471"
+  },
+  "JEE-15-uncertainty.png": {
+    "bytes": 250944,
+    "sha256": "2a79c2c6a3439c026cf488eba38eb6b00b668077135b79d9f30dca1e5eb92ee4"
+  },
+  "Olympiad-01-xray-continuous.png": {
+    "bytes": 262397,
+    "sha256": "5cb033500eb83c51268a2f634539ce16fa8240761ca7773b98658a9b462d9d19"
+  },
+  "Olympiad-02-xray-characteristic.png": {
+    "bytes": 258233,
+    "sha256": "c57a401790fd81042e0d368db1535f7eefd669129e25652cdbc3c6fdce7c848d"
+  },
+  "Olympiad-03-absorption.png": {
+    "bytes": 243250,
+    "sha256": "1221cd4bf8bf4c02be6f9073a85c1458f51c41163332b35b7e2a85adc2b0b1ae"
+  },
+  "Olympiad-04-bragg.png": {
+    "bytes": 247176,
+    "sha256": "466805db3f8f1d381d0f71d5ada91d075a7db42cbfca82540f99345e2bb3168a"
+  },
+  "Olympiad-05-compton.png": {
+    "bytes": 244777,
+    "sha256": "5aa448eb92397085c759ad9b6e0a57c4f7387d66ffa72774c220dd49bcc83786"
+  },
+  "Olympiad-06-compton-invariant.png": {
+    "bytes": 235670,
+    "sha256": "d0d54c5fe6c4f8f1ece2098342db4dd23485afecf0d0909498cce01f98b018fd"
+  },
+  "Olympiad-07-inverse-compton.png": {
+    "bytes": 244731,
+    "sha256": "7caecc311dc41f3542f726816e449349944dc89a616c355be79e950e2c824c61"
+  },
+  "Olympiad-08-pair-production.png": {
+    "bytes": 236151,
+    "sha256": "f78b53862369c70755943e377d4f0901732f99bef31d7f8d945269777ddcc8f8"
+  },
+  "Olympiad-09-moseley.png": {
+    "bytes": 231247,
+    "sha256": "e33c3a933c48a1e25aa547e0cf688bf6e964f2e3652366b57e8e2b68d81d6ebd"
+  },
+  "Olympiad-10-collapse.png": {
+    "bytes": 233311,
+    "sha256": "2146ef9dafd565c314d460f644d3b056bd7923f391de9ad9977f9163045c181f"
+  },
+  "Olympiad-11-correspondence.png": {
+    "bytes": 225576,
+    "sha256": "138a34df3ed0c59a47d49f6f96dbd0ab2da03769d15b00f934f1fe5b93aa4810"
+  },
+  "Olympiad-12-exotic-atoms.png": {
+    "bytes": 234764,
+    "sha256": "cb04d31dad63cf2aa3063add4ac0f8a706e7a24579860ae6a3f95fb71f52e4a7"
+  },
+  "Olympiad-13-franck-hertz.png": {
+    "bytes": 264748,
+    "sha256": "f1282c0eb0a273f6e6eab97ae5fdfd03d71e6894ea86850296ddb90e9f6640b1"
+  },
+  "Olympiad-14-waiting-time.png": {
+    "bytes": 255911,
+    "sha256": "f3c35a8cfa755318aeec24f3ddcc6222be9b0f6e681c33c8c6ba50197e6d4ef0"
+  },
+  "Olympiad-15-matter-wave-speeds.png": {
+    "bytes": 220944,
+    "sha256": "69d1f2b9f9e6d0f3f8ad0fd288c1ecd5c115bb03cab2be1ba55b9786d939358b"
+  },
+  "modern-physics-all-pngs.zip": {
+    "bytes": 6723309,
+    "sha256": "60c39ff3d21ba0df89602b1458fd8aa04723cbde35d433aecfbee0259a34fc91"
+  },
+  "modern-physics-jee-pngs.zip": {
+    "bytes": 3336594,
+    "sha256": "2ee164620f43c59c3ba705287a82b387a28dc07d014b3ae678a8ea609b3d7502"
+  },
+  "modern-physics-jee.pdf": {
+    "bytes": 3561959,
+    "sha256": "8aaf9a2560333a6efc2e09810459466d1ae9f50db416a7f80ef571030363d968"
+  },
+  "modern-physics-olympiad-pngs.zip": {
+    "bytes": 3386737,
+    "sha256": "4ade10ad1805baf378265c745cb8d4ee52663ce9fe740e56bfb0b503f8171184"
+  },
+  "modern-physics-olympiad.pdf": {
+    "bytes": 3627158,
+    "sha256": "890e094d07059ae4c23c7ef62648e7c657e312623873b56acf4a4974dbc90b3c"
+  },
+  "modern-physics-short-notes.pdf": {
+    "bytes": 7188222,
+    "sha256": "98b5af9a03b6dd138fc6167d767d93b393f0ad9dfd113c8abaa0885a3300aaad"
+  }
+}
