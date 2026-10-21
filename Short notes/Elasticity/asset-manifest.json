@@ -1,0 +1,94 @@
+{
+  "JEE-01-material-response.png": {
+    "bytes": 344072,
+    "sha256": "459106629ef3f67118a8eac12c264e207f967533108638c4e089f83f0fbc4d10"
+  },
+  "JEE-02-moduli-bulk-shear.png": {
+    "bytes": 343967,
+    "sha256": "846f550a7e3a86a7aab17b57ef5a68c4b70d6fa47c5d6ed61e79617a9957e372"
+  },
+  "JEE-03-extension-family.png": {
+    "bytes": 320144,
+    "sha256": "69e58351d823b2cf90d91fea10e68daa4507522f42f599defde135cbdcff0b56"
+  },
+  "JEE-04-composite-thermal.png": {
+    "bytes": 372634,
+    "sha256": "d219d9e0c5be6cdb362c8b7e75e98ed696b7b0058a0b3bc82d237ebc8d61992e"
+  },
+  "JEE-05-energy-impact.png": {
+    "bytes": 317705,
+    "sha256": "04de180f91a674c71ee8e64a0cf9e3a06efc6d210e8eb00d451419994817de11"
+  },
+  "JEE-06-torsion-bending.png": {
+    "bytes": 332905,
+    "sha256": "8536cfb0ad12081042e7819fdcfdb17ffd60c156f7dd866da2c5d25eda06219e"
+  },
+  "JEE-07-plasticity-materials.png": {
+    "bytes": 356259,
+    "sha256": "eae693e4dd2e6c5539995e7f270d5f6a0a3169ecadca0bce1a40becba389bff4"
+  },
+  "JEE-08-exam-toolkit.png": {
+    "bytes": 335768,
+    "sha256": "25c7a880240b54a92f5dcc3f0fcb2e1c7409065fa6d13f898170eed404806254"
+  },
+  "Olympiad-01-atomic-spring.png": {
+    "bytes": 389415,
+    "sha256": "cac413585b467bde2ea24d578c43a08e77f9ede2c1e83a69f55749897e932cac"
+  },
+  "Olympiad-02-thermal-expansion-well.png": {
+    "bytes": 358782,
+    "sha256": "3d974bddc5d95ad76eb5f54b70485c92a4ea584c65cb1bf0189c350d4fcb591d"
+  },
+  "Olympiad-03-falling-weight-rod-mass.png": {
+    "bytes": 350406,
+    "sha256": "6e8fe9f3a430abdc14d6ae127d00261570ff36d1d541fd849a30735f3f4d33c1"
+  },
+  "Olympiad-04-constant-stress-rod.png": {
+    "bytes": 358154,
+    "sha256": "da8c9cbc4a8f9b94fa55a9d39de89c1b5935631517fb21bc39c2445f368418ba"
+  },
+  "Olympiad-05-cantilever-beam-theory.png": {
+    "bytes": 369275,
+    "sha256": "143810d05181183e3c893dccefead591964a676156ef392bdba6b49bac534b7c"
+  },
+  "Olympiad-06-buckling-columns.png": {
+    "bytes": 366583,
+    "sha256": "7a971a9e43cbb02eeeb4ce69d7ad99bedddc115aa6ffade8b69e0042b98ce63e"
+  },
+  "Olympiad-07-ibeam-hoop.png": {
+    "bytes": 365626,
+    "sha256": "60808464724e1080912a1e01acf2c21b2b3d59a0b73fec7684a09c13b17f7905"
+  },
+  "Olympiad-08-seismic-waves.png": {
+    "bytes": 344390,
+    "sha256": "f6c3a4a3dd309ed937b5e01f06c0fe0aa19163cbd900a7c40336dd2b96125cee"
+  },
+  "Olympiad-09-multiaxial.png": {
+    "bytes": 338266,
+    "sha256": "ec841bfbedbc406290dd0df32396f387184b74c9bdd6bddf47b979d8151d0e4c"
+  },
+  "elasticity-all-pngs.zip": {
+    "bytes": 5645317,
+    "sha256": "cd94f43fb32ab0b98d3489859d962b75ca421d031692ad395de4ca53f694209b"
+  },
+  "elasticity-jee-pngs.zip": {
+    "bytes": 2576233,
+    "sha256": "ca910884e933fb1bc2f15d828f0d5b69caab834cfdfd36dbf1e3f34f316e7860"
+  },
+  "elasticity-jee.pdf": {
+    "bytes": 2695123,
+    "sha256": "66293b7120fee34b5e530b873af323c32a28a0775d2119cc4dd5e61fc1d424cb"
+  },
+  "elasticity-olympiad-pngs.zip": {
+    "bytes": 3069106,
+    "sha256": "71f1bcac096a8ffee2c0434ebabce2c2f3c5f7ec9b4c57383be02846d714c1bf"
+  },
+  "elasticity-olympiad.pdf": {
+    "bytes": 3206191,
+    "sha256": "d038130a0540e511db94bed66043992153b96da5807540548aa42c8ca8582790"
+  },
+  "elasticity-short-notes.pdf": {
+    "bytes": 5900320,
+    "sha256": "aeaefed7dd29cf3d1f07667d25d4e28a5821ca34ed0cc847e9bfaacc85823fc4"
+  }
+}

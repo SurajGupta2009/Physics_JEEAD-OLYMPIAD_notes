@@ -1,0 +1,486 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "What elasticity is",
+      "used_px": 1012,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The four bookkeeping pairs",
+      "used_px": 970,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reading a stress-strain curve",
+      "used_px": 975,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The elastic region is tiny",
+      "used_px": 853,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Poisson ratio defined",
+      "used_px": 956,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive Y = 3B(1 - 2nu)",
+      "used_px": 957,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive Y = 2G(1 + nu)",
+      "used_px": 939,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why -1 < nu < 0.5",
+      "used_px": 851,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rod as a spring",
+      "used_px": 901,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Series: common force",
+      "used_px": 987,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Parallel: common extension",
+      "used_px": 932,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Self-weight: integrate, do not average",
+      "used_px": 932,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thermal strain and stress",
+      "used_px": 926,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gaps, partial constraint and the rail",
+      "used_px": 947,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two-material composite bar",
+      "used_px": 1030,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shrink fits and a quarter turn",
+      "used_px": 998,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Stored energy",
+      "used_px": 856,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sudden application: the factor 2",
+      "used_px": 949,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Drop from height h",
+      "used_px": 980,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rivets, bolts and double shear",
+      "used_px": 813,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Torsion of a circular shaft",
+      "used_px": 1011,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Which section is stiffer per kilogram",
+      "used_px": 949,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bending: neutral axis and curvature",
+      "used_px": 959,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cantilever and the I-beam",
+      "used_px": 927,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beyond the linear law",
+      "used_px": 996,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Specific strength and specific modulus",
+      "used_px": 955,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Buckling versus crushing",
+      "used_px": 957,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fracture, fatigue and safety factors",
+      "used_px": 954,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Five-step triage",
+      "used_px": 688,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The four different twos",
+      "used_px": 977,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and units worth carrying",
+      "used_px": 915,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Scaling laws worth memorising",
+      "used_px": 913,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A chain of bonds under load",
+      "used_px": 1034,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why the answer is 10^11 Pa",
+      "used_px": 966,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The interatomic force constant",
+      "used_px": 955,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Compressibility from the same picture",
+      "used_px": 975,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The classical average",
+      "used_px": 1021,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Collapse to alpha about k_B / 2D",
+      "used_px": 1002,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Constrained expansion and stress",
+      "used_px": 943,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the model stops",
+      "used_px": 934,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy with a distributed mass",
+      "used_px": 1035,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solve the quadratic",
+      "used_px": 927,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The wave-transit caveat",
+      "used_px": 999,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the oscillating solution adds",
+      "used_px": 903,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive the profile",
+      "used_px": 1029,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and the real ceilings",
+      "used_px": 836,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What actually limits a tree",
+      "used_px": 851,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "How much flare, and for which material",
+      "used_px": 966,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Curvature to deflection",
+      "used_px": 1033,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform load and the comparison",
+      "used_px": 829,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Simply supported and fixed-fixed",
+      "used_px": 1023,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shear, and when bending theory is enough",
+      "used_px": 915,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dimension argument and sine shape",
+      "used_px": 1025,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Euler load and the comparison with yield",
+      "used_px": 957,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hollow sections and the same mass",
+      "used_px": 900,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Effective length and real columns",
+      "used_px": 986,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The fair I-beam comparison",
+      "used_px": 902,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hoop stress by a diametral cut",
+      "used_px": 1003,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherical vessels and the join",
+      "used_px": 883,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spider silk and the scale of a strand",
+      "used_px": 957,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rod, bulk P and S speeds",
+      "used_px": 907,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reading an earthquake",
+      "used_px": 899,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The liquid outer core",
+      "used_px": 925,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wave speed as a materials tool",
+      "used_px": 901,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The stress element",
+      "used_px": 990,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Principal stresses",
+      "used_px": 945,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mohr circle",
+      "used_px": 923,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Three dimensions, briefly",
+      "used_px": 887,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

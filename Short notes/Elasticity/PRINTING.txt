@@ -1,0 +1,16 @@
+ELASTICITY — PRINTING
+
+Prefer elasticity-short-notes.pdf: exact A4 portrait pages, JEE first (8),
+then the nine specialised extensions.
+Select A4 portrait, ONE sheet per page, Fit to page / Fit printable area.
+Do NOT use Fill, Crop, poster tiling, multiple-up or borderless expansion.
+For PNG printing: 2480 x 3508 px, embedded 300 DPI; the same settings apply.
+White safe inset is at least 125 px (about 10.6 mm) on every edge.
+Main prose 11.52 pt; explanations 11.04 pt; equations are typeset separately.
+The PDFs contain the source pixels without re-encoding; bookmarks follow the
+reading order (JEE 01-08, then Olympiad 01-09).
+Test one page before a full run. Colour is preferable; grayscale stays
+readable, but check the yellow result panels against your printer settings.
+Read Part I (8 JEE sheets) before Part II (9 extensions). Independent
+numbering is intentional; the JEE-/Olympiad- filename prefixes carry the split.
+The combined ZIP is PNGs only, with the JEE sheets inserted first.

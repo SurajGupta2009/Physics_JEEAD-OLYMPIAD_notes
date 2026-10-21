@@ -1,0 +1,212 @@
+{
+  "assertions": 594,
+  "physics_model_checks": 40,
+  "pages": 17,
+  "JEE": 8,
+  "Olympiad": 9,
+  "cards": 68,
+  "diagrams": 34,
+  "math_blocks": 136,
+  "numerical_models": [
+    {
+      "name": "Poisson relation Y from B and nu",
+      "value": 201600000000.00003,
+      "expected": 200000000000.0
+    },
+    {
+      "name": "Poisson relation Y from G and nu",
+      "value": 206400000000.0,
+      "expected": 200000000000.0
+    },
+    {
+      "name": "admissible nu upper bound",
+      "value": 0.5,
+      "expected": 0.5
+    },
+    {
+      "name": "torsion J over I",
+      "value": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "cantilever tip deflection mm",
+      "value": 3.1249999999999996,
+      "expected": 3.1
+    },
+    {
+      "name": "cantilever over simply supported centre",
+      "value": 16.0,
+      "expected": 16.0
+    },
+    {
+      "name": "simply supported over fixed-fixed centre",
+      "value": 4.0,
+      "expected": 4.0
+    },
+    {
+      "name": "torsion core fraction of J",
+      "value": 0.24009999999999995,
+      "expected": 0.24
+    },
+    {
+      "name": "torsion core fraction of A",
+      "value": 0.48999999999999994,
+      "expected": 0.49
+    },
+    {
+      "name": "uniform load over end load, same total",
+      "value": 0.375,
+      "expected": 0.375
+    },
+    {
+      "name": "Euler load solid rod N",
+      "value": 3875.784585037477,
+      "expected": 3876.0
+    },
+    {
+      "name": "yield load solid rod N",
+      "value": 78539.81633974484,
+      "expected": 78540.0
+    },
+    {
+      "name": "buckling over yield",
+      "value": 0.04934802200544678,
+      "expected": 0.049
+    },
+    {
+      "name": "hollow over solid I, equal mass",
+      "value": 3.4999999999999996,
+      "expected": 3.5
+    },
+    {
+      "name": "hoop over longitudinal stress",
+      "value": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "thin cylinder hoop stress MPa",
+      "value": 400.0,
+      "expected": 400.0
+    },
+    {
+      "name": "thin sphere stress MPa",
+      "value": 200.0,
+      "expected": 200.0
+    },
+    {
+      "name": "rod wave speed km/s",
+      "value": 5.063696835418333,
+      "expected": 5.06
+    },
+    {
+      "name": "shear wave speed km/s",
+      "value": 3.2025630761017427,
+      "expected": 3.2
+    },
+    {
+      "name": "bulk P speed km/s",
+      "value": 5.847053462046862,
+      "expected": 5.85
+    },
+    {
+      "name": "crustal bulk modulus GPa",
+      "value": 53.1,
+      "expected": 53.1
+    },
+    {
+      "name": "crustal Poisson ratio",
+      "value": 0.24210526315789474,
+      "expected": 0.242
+    },
+    {
+      "name": "thermal stress MPa per K",
+      "value": 2.4,
+      "expected": 2.4
+    },
+    {
+      "name": "rail breathing length m",
+      "value": 0.48,
+      "expected": 0.48
+    },
+    {
+      "name": "rail blocked stress MPa",
+      "value": 96.0,
+      "expected": 96.0
+    },
+    {
+      "name": "sudden load factor",
+      "value": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "atomic modulus GPa",
+      "value": 60.0,
+      "expected": 60.0
+    },
+    {
+      "name": "interatomic spring N/m",
+      "value": 40.0,
+      "expected": 40.0
+    },
+    {
+      "name": "thermal expansion per K",
+      "value": 1.4381760416666666e-05,
+      "expected": 1.44e-05
+    },
+    {
+      "name": "rod-mass drop extension mm",
+      "value": 6.196316937891643,
+      "expected": 6.2
+    },
+    {
+      "name": "massless drop extension mm",
+      "value": 2.6889177862027185,
+      "expected": 2.7
+    },
+    {
+      "name": "constant-stress decay length m",
+      "value": 3270.538984824699,
+      "expected": 3270.0
+    },
+    {
+      "name": "Mohr radius MPa",
+      "value": 42.42640687119285,
+      "expected": 42.4
+    },
+    {
+      "name": "Mohr sigma 1 MPa",
+      "value": 92.42640687119285,
+      "expected": 92.4
+    },
+    {
+      "name": "Mohr sigma 2 MPa",
+      "value": 7.573593128807147,
+      "expected": 7.6
+    },
+    {
+      "name": "principal stress trace invariant",
+      "value": 100.0,
+      "expected": 100.0
+    },
+    {
+      "name": "specific strength steel m2/s2",
+      "value": 32051.28205128205,
+      "expected": 32000.0
+    },
+    {
+      "name": "specific modulus steel m2/s2",
+      "value": 25641025.64102564,
+      "expected": 26000000.0
+    },
+    {
+      "name": "silk over steel specific strength",
+      "value": 24.0625,
+      "expected": 24.0
+    },
+    {
+      "name": "steel over silk specific modulus",
+      "value": 3.3766233766233764,
+      "expected": 3.4
+    }
+  ]
+}
