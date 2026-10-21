@@ -1,174 +1,334 @@
 {
   "JEE-01-lorentz.png": {
-    "bytes": 301125,
-    "sha256": "659bc6a2419be33ced21ca89fdc491b6a2524ae0654700b6b7adbb113be778c6"
+    "bytes": 310422,
+    "sha256": "80daedfa94b554efa82a4216695467d4c42c1c24afa8e48817d14a7f1d57f68e"
   },
   "JEE-02-circle.png": {
-    "bytes": 306281,
-    "sha256": "dc0a5e6573ffe56956e374ec59d0621e05eb153b8ecce768161b39317c1b9d76"
+    "bytes": 319392,
+    "sha256": "a1f8a93c3eb0d415f673667964ff4bf0628d1bb1004c35836997696e30a9a884"
   },
   "JEE-03-selector.png": {
-    "bytes": 278912,
-    "sha256": "5a2ed6522d3ecd5dc3fccb14e49f6b60292faae88b31095fe645842694c39db0"
+    "bytes": 303537,
+    "sha256": "6b347cebdf7f49f40c52427df78960166c3f8c938bfd2fc8f1d9b7747328970e"
   },
   "JEE-04-regions.png": {
-    "bytes": 276391,
-    "sha256": "71211ee2e2790036b355ddc8c3242e45f49ae89628e8ff4236594955cefdcea9"
+    "bytes": 313586,
+    "sha256": "9672187893e0cd22ff89d4e11b92b8a6ad6a6e445ff2780757a4890ab9b72c3b"
   },
   "JEE-05-spectrometer.png": {
-    "bytes": 268709,
-    "sha256": "7b9e7355ae7f139fcb871512cffc839f7821fc085e2adae21198602c8ec93b59"
+    "bytes": 305092,
+    "sha256": "0551428e3c1871b065570103d3265b28d846a4fe3a2fab0a88c48973ac570b47"
   },
   "JEE-06-cyclotron.png": {
-    "bytes": 295316,
-    "sha256": "ab0fb837520892dc80b3e79c8e7c52bb5bf10d6d75978ac5a018eb52b362af0b"
+    "bytes": 331367,
+    "sha256": "6b7a45de2694baa347909dd4da6de7b84714960ff38d0e6b53e97d7e5367e9bb"
   },
   "JEE-07-mirror.png": {
-    "bytes": 295337,
-    "sha256": "7ce9cdabcdfae8c4ef3df82512d94a9409b41ada5345f698e0a559e283ec93b3"
+    "bytes": 329838,
+    "sha256": "db6b07a1286191ceea0d003451de1cacd47136cc8bbeb41927b9211caaf0bc35"
   },
   "JEE-08-hall.png": {
-    "bytes": 270469,
-    "sha256": "0d908018c4b517a0a1547301cebd89e0c33bf1a2318951548e369c3d4cf17d7d"
+    "bytes": 286429,
+    "sha256": "0b131e808283a9202860a72c16143f1536d7a9034fbf69a1b2f678e541331b22"
   },
   "JEE-09-drifts.png": {
-    "bytes": 263212,
-    "sha256": "9ef87941effb870b40311dcb8f0d0fe07f2a61bf16bef650c6030e580a59779c"
+    "bytes": 306049,
+    "sha256": "a28e11aee4d95a3d253cd71ad961088b8e5045cfb6c162b9ee82b3497145914f"
   },
   "JEE-10-tracks.png": {
-    "bytes": 272094,
-    "sha256": "74996e9ca8e0ff616fe5925a3fff847dc54c73a9c07f718e879c7a39418d671e"
+    "bytes": 306442,
+    "sha256": "64eefaad43b2642bc9359ccae1c4e4f574357a53b177683012f511fb3bc7d9e7"
   },
   "JEE-11-biot.png": {
-    "bytes": 286264,
-    "sha256": "d5a45f4e76974f90b507ababd6ae045cd2a2727b8c4f1b9c474c39bafe84c208"
+    "bytes": 301511,
+    "sha256": "0ccc15e8c2ad730d571b6dee8f5a75de9a46b6628676bfa17fdba81a7653ce9b"
   },
   "JEE-12-wire.png": {
-    "bytes": 284265,
-    "sha256": "490db170dbcb534623eedbd26f701618e9a55d3cda01474eefa8d44479e9e9a6"
+    "bytes": 310971,
+    "sha256": "d994fcc596d29738d50ab04541f4907cd2060e5d33112b8637103cf431da0566"
   },
   "JEE-13-loop.png": {
-    "bytes": 262723,
-    "sha256": "ecd60addb1f8bec97313a8b9da53a84d1894fb25fb01e813aaf3ee5b0ea43d3b"
+    "bytes": 282916,
+    "sha256": "b8c0a037f04ed79a726add58927de47891b4377f462fdee799f7510c54865120"
   },
   "JEE-14-solenoid.png": {
-    "bytes": 266299,
-    "sha256": "dbdc2224719c0bec9c95a97917161966509739bf9f2d54182e2fd08baffa9753"
+    "bytes": 328286,
+    "sha256": "b9cf18a8ba6994c167a694842ff017fec64cb452641fbfa28ec6d7bde6c951bb"
   },
   "JEE-15-moment.png": {
-    "bytes": 263693,
-    "sha256": "8693e5d53329940a052385f42ec2686eab40a2097b510dafb3b0a5e0ec04e7e6"
+    "bytes": 315531,
+    "sha256": "3616e55bc891808621991eddd92bb88d4efe6dd3075e9972687d7fdde87c5c8b"
   },
   "JEE-16-ampere.png": {
-    "bytes": 266318,
-    "sha256": "731ac56ce817994575812187544e5d3447bb075b9d2e250de5b58e2757f2df7e"
+    "bytes": 302933,
+    "sha256": "c8029bef1bd192f41b110b91ede53d44df3ce195f6675fa0d81f8ef5bd699b6b"
   },
   "JEE-17-ampere-apps.png": {
-    "bytes": 263483,
-    "sha256": "f1de77d2785a25d94645fd65250b358662b4778a16b1f3767c30ce7662ca69a2"
+    "bytes": 288584,
+    "sha256": "2627f997d0a81bdefd683b327b4afb55d5cdbebd6c1b22020b78bfc105cddc46"
   },
   "JEE-18-overlap.png": {
-    "bytes": 268300,
-    "sha256": "010c77657f0e83685c1d1ddf28f73b135f1fbd9bbcb274725ddfff8e62aa37dc"
+    "bytes": 294366,
+    "sha256": "b7ac441a917247f562ff009e80adc87a67ef91a328f536bfb0eafd1198eb302d"
   },
   "JEE-19-force-current.png": {
-    "bytes": 263359,
-    "sha256": "e11311ee8920fcd6a7c171ce1046dbac8f9eacef4ed1e3a5767e076a62f817ed"
+    "bytes": 291960,
+    "sha256": "b53e2ea54ed15fde7aece6c2900e4debb068e8f63423cfd6496e2783cc1e4e45"
   },
   "JEE-20-torque-loop.png": {
-    "bytes": 281701,
-    "sha256": "3b3a26e57fe9b8b02423805e6f642b2d92b25fec8712da7c4286ad68205b1f6a"
+    "bytes": 297448,
+    "sha256": "f85870d4bb85b802310749b17ef2eb2cb2211e21617a073b0adbb5aaa4f7d820"
   },
   "JEE-21-wires-force.png": {
-    "bytes": 255874,
-    "sha256": "edc516d25d16803ed0b6af490f404f9ef1a976b3834bff1867e1d30784cc45cd"
+    "bytes": 300041,
+    "sha256": "350a50b19a4704e6dae79d4e8235918d4ddd84f6d783a58e39dcb3ee5c2b84ba"
   },
   "JEE-22-pressure.png": {
-    "bytes": 302123,
-    "sha256": "7ca8b824192638b8cb5ac60d89ccb80ed87ef799bb438992dfadff04e245a22a"
+    "bytes": 327241,
+    "sha256": "04e71338ef29e9f5ae28eef0bd93eca8ad31119bc83bf2ac9c44cc917b5de0a2"
   },
   "JEE-23-gyromagnetic.png": {
-    "bytes": 273263,
-    "sha256": "9339588cab58076521819f87d88ba89253735f4dbb8c34808add04c03821cac6"
+    "bytes": 317121,
+    "sha256": "fb7d5a8fd4f4dbf3a3880a281555a579ec3b26a2b95c3100e5c67ad2f7312494"
   },
   "JEE-24-magnet-matter.png": {
-    "bytes": 276321,
-    "sha256": "1314856fdad2aaa7d1e9e4ea9135f05ff36853496c3480db42607e5b0ed5da54"
+    "bytes": 310405,
+    "sha256": "4e231c24e3d0fe2c484f1511b0c42abbb96835e5ff56459832bf5ead06b06bb4"
   },
   "JEE-25-BHM.png": {
-    "bytes": 264134,
-    "sha256": "2f7306f4ad0be66fe2247f6e3a26d82082d22026d8ddaca37d56454214aa3d90"
+    "bytes": 294221,
+    "sha256": "52a9721b129e6104a2c0475b970a53ddffa2bd163634d92a9120c9bdc2e33b96"
   },
   "JEE-26-dia-para.png": {
-    "bytes": 266608,
-    "sha256": "b4f6df2cbced8766decc9ca14c3fbdbe7c140a376a88b8309915a005cf75b15e"
+    "bytes": 307574,
+    "sha256": "ab7fb8cd276531957e542094b538c633a6d49d76c0f0dd103e78d731ec9fd274"
   },
   "JEE-27-ferro.png": {
-    "bytes": 287826,
-    "sha256": "2b3daa9fd809683aea049595837fffdc8d6974731a74a19586fce40b2508d1d0"
+    "bytes": 311012,
+    "sha256": "c44289490393d105087f6147d6a51a0d12a84f222a55e2a10cd73047972aef82"
   },
   "JEE-28-circuits.png": {
-    "bytes": 277593,
-    "sha256": "f594ae78840b2e0de356fb2d474e1ed3badb2da346835b47df1ff16fee635c2a"
+    "bytes": 310356,
+    "sha256": "45be3915bd09ea64a9c707475af2c41a4ba12b485237efc87b6de8e62480b6cd"
   },
   "JEE-29-earth.png": {
-    "bytes": 256250,
-    "sha256": "20994d77f145e253a508fd54e34c31a4b74fd8c1bd35a30affeabb585b5b8cc9"
+    "bytes": 281182,
+    "sha256": "a2f638a82cb35cefa6e358a0074583bb6c7193deb4bcf50f30afbf4ee84cdb7b"
+  },
+  "JEE-30-flux.png": {
+    "bytes": 302462,
+    "sha256": "8ba5307971c6bd67d4213681e276bd91007410e0475c4838ed1ef0980a31d8e7"
+  },
+  "JEE-31-faraday.png": {
+    "bytes": 296500,
+    "sha256": "b12190a5acdd544cc9cdfac52748408151d65856b798a8a0e9c4c5fbc52c364f"
+  },
+  "JEE-32-motional.png": {
+    "bytes": 313916,
+    "sha256": "f4f0e9305863a1280223580ddbc0a4dec691a4d506a2f9529f4a4e1ff2184d60"
+  },
+  "JEE-33-lenz.png": {
+    "bytes": 309469,
+    "sha256": "6acb3e0ac2c7ee0e2fd4ae68e36943273b3082ff75a22af23542c4706066fe65"
+  },
+  "JEE-34-rails.png": {
+    "bytes": 287615,
+    "sha256": "ab501cdf6289174ce9a584d4977a21265964024e5013ad41513e01691603224e"
+  },
+  "JEE-35-machines.png": {
+    "bytes": 316785,
+    "sha256": "fdf5104bc63651229b7a3f3d14534487ef53c159f8e89c079e29cc052e9bb9a9"
+  },
+  "JEE-36-attachments.png": {
+    "bytes": 319957,
+    "sha256": "c2540e40854ec2e3be8d62c71b4886f9c771b78bd7d79454de6d74b2948f61f8"
+  },
+  "JEE-37-induced-E.png": {
+    "bytes": 318157,
+    "sha256": "cdc3a4b75646c2a86690de87eead2b9137be5c15e2bd57a5e208f2b21b696eb0"
+  },
+  "JEE-38-betatron.png": {
+    "bytes": 315294,
+    "sha256": "c37210d20d051aefeb3c01e157622b1da27466eff1d3a564c8b768470ba258d5"
+  },
+  "JEE-39-eddy.png": {
+    "bytes": 341302,
+    "sha256": "5cd7241cafba2406c3164bfa2f8ff3f3dc2cb6d6f99f062fb8e4f0e24df70130"
+  },
+  "JEE-40-motors.png": {
+    "bytes": 313746,
+    "sha256": "99135e74d9b3b518e6fa644bb7ebe100cfc54de578e716a630723e86f116053f"
+  },
+  "JEE-41-voltmeter.png": {
+    "bytes": 300213,
+    "sha256": "a7bd8af52935b955c7a42bf49ba8870995d85a4827e2e796dfe101e9e381098c"
+  },
+  "JEE-42-inductance.png": {
+    "bytes": 292287,
+    "sha256": "67e0d032528cace4cededf916d0c711558484fc4c7132cd7409a19ae4aa313fc"
+  },
+  "JEE-43-compute-L.png": {
+    "bytes": 333100,
+    "sha256": "313e0f1a3e296a903f56c0e501850f1dc92b8ba3625c0cc2f3fd0c195063be1d"
+  },
+  "JEE-44-mutual.png": {
+    "bytes": 316121,
+    "sha256": "62a22d6cc05114a546b30f934f759c4be8abf0b1cd4121528433ef2422ff9d45"
+  },
+  "JEE-45-RL.png": {
+    "bytes": 307136,
+    "sha256": "63c65e192435c5cbaf93398f0a24cf5db8aff2ca527aaa4f2331040a7319354e"
+  },
+  "JEE-46-energy-mag.png": {
+    "bytes": 322396,
+    "sha256": "8aa0e96675ce22f85f0214c9c02b832bcf8845ddce2cb0b6c4f17e854fb51b1e"
+  },
+  "JEE-47-analogy.png": {
+    "bytes": 308390,
+    "sha256": "be74eab5b3385363be9393e0dd46990af044b2864ea827d9d7573b1b6ab8c534"
+  },
+  "JEE-48-LC.png": {
+    "bytes": 305431,
+    "sha256": "3367d65f1413e946b7d42015211344bcf9bad64be465439d3f4ba06b7dfe510d"
+  },
+  "JEE-49-ac-rms.png": {
+    "bytes": 325842,
+    "sha256": "29a7983109b02998cd12915702aebd1a6516abe56be135074e6771ef364dd01d"
+  },
+  "JEE-50-reactance.png": {
+    "bytes": 290465,
+    "sha256": "62c09614cc597c802ef430416cbcd03b6ef19154f8dff766485843d701d14cf2"
+  },
+  "JEE-51-phasors.png": {
+    "bytes": 308617,
+    "sha256": "de747150c3c9f9b9f0322e0d5317d9ed4d73709906093e052312cc6a300ed78a"
+  },
+  "JEE-52-LCR.png": {
+    "bytes": 317684,
+    "sha256": "0e051f3c4e88001bf827987e028d9587f4f43c86b83b939e3e7539a78e11fda8"
+  },
+  "JEE-53-resonance.png": {
+    "bytes": 317115,
+    "sha256": "ebf97f93c52367d7ad5affeac188f6b0d0ad0692fbf690728f3ac7deccbb919e"
+  },
+  "JEE-54-power.png": {
+    "bytes": 328180,
+    "sha256": "425e0817bbcd847f32ffa700910c3315ff12f5cb2d5868782f71edfcacecd014"
+  },
+  "JEE-55-parallel.png": {
+    "bytes": 330601,
+    "sha256": "220a7032bd6efb95c761f3992d3d8c69619b76d9a31058bb33a35a8e63fa0a63"
+  },
+  "JEE-56-complex.png": {
+    "bytes": 317649,
+    "sha256": "e3b5ad1c521509e8564d80378f3cf30859bb6753972e6255c3b481eb65e8a65a"
+  },
+  "JEE-57-transformer.png": {
+    "bytes": 278102,
+    "sha256": "df4d68581269e7644afc963c064140e7c4008213bca4bfaf01dae2da9b29e2ad"
+  },
+  "JEE-58-rectifiers.png": {
+    "bytes": 333006,
+    "sha256": "e7a16a183359ca03457f3ed45d838c629e3d69533d5a37786d02cdc196a9836a"
   },
   "Olympiad-01-relativity.png": {
-    "bytes": 295361,
-    "sha256": "76b65591ba00b7ea74f66da9974a532f89447aed9948a88ac1714b5e7d4a6fb2"
+    "bytes": 327752,
+    "sha256": "5d6232636f8a11f09a9c4f43efbcba23f036b3d2a207606abf6799f03bed430d"
   },
   "Olympiad-02-helmholtz.png": {
-    "bytes": 291344,
-    "sha256": "9e8743e70c6e3ba299e10185a6c02cd4d77a5efc627339c4635cff698eb65b35"
+    "bytes": 327344,
+    "sha256": "73602b7b12b2b8100a410fc6f134cf5efe26973edb672b56ac973ee836cd53c0"
   },
   "Olympiad-03-sphere.png": {
-    "bytes": 291965,
-    "sha256": "4a1437b60cb7202b3c2ec03c419e24d39a85ef7dc487e9cb5c1046462911a0f1"
+    "bytes": 313679,
+    "sha256": "62b3e9e1d01e8dfa8cb0fca3d9289075fef3f07b26d7906ed01f5065a1e637da"
   },
   "Olympiad-04-pressure-apps.png": {
-    "bytes": 279466,
-    "sha256": "37ab8daacba797656f3870d0c8554665cbbe7c366940089d2cf9de27c1053b9d"
+    "bytes": 296854,
+    "sha256": "4c94a612016596f3c2e492a40dbd9965f862a24d3f6d77768f7a333d8169068a"
   },
   "Olympiad-05-cycloid-fermi.png": {
-    "bytes": 292790,
-    "sha256": "6d6c95922342ffd933485cb9b73421fe18ada57ab47f80b69249fedfe3b33e80"
+    "bytes": 318677,
+    "sha256": "61feeefb1ac629a98cfe76c896a0f2541062515d4e6530c30cf324838fc06ab3"
   },
   "Olympiad-06-clocks.png": {
-    "bytes": 282352,
-    "sha256": "f2da8fe1a8c9943163b7b5848f269c83e3cb3737d126e658d4d6bbbb680a25fe"
+    "bytes": 310665,
+    "sha256": "211049a465a48d691f5b1dec933151ca0ad2cec4ff85c6cc5c6e8a1bfe4bc5e1"
   },
   "Olympiad-07-hall-levitation.png": {
-    "bytes": 289280,
-    "sha256": "553f1e84189a9c2def564836437b97634cf118bc3b25aed60795be63859f1387"
+    "bytes": 299849,
+    "sha256": "4c34c0e81941ab6bcbc72bc3e867c7afff6ee05941553cfb15b07ee70934cb31"
   },
   "Olympiad-08-estimates.png": {
-    "bytes": 294892,
-    "sha256": "6622a44ccc8b94a0901936d1728aaf296aab370165e8c46b176dbb04e22790f9"
+    "bytes": 336562,
+    "sha256": "c903fd7ed9f8d2c1d532d4285987318e35a6353d760aedf0849f4393dfa92ffc"
+  },
+  "Olympiad-09-faraday-disc.png": {
+    "bytes": 315567,
+    "sha256": "775c8991d9b4fe1c6f1c39851043d6f1d5a1a61d5bcaf2c5d96a5f4ff4c18932"
+  },
+  "Olympiad-10-betatron-2.png": {
+    "bytes": 322110,
+    "sha256": "f50a39ce3bd5e94a44debeb42ba22f92da6a2923a9712b350079607091256300"
+  },
+  "Olympiad-11-tube-braking.png": {
+    "bytes": 332734,
+    "sha256": "fcbc728d56a4e1b6b6e5b9321c1f2963e5a3612b76beb292588a308c810b040d"
+  },
+  "Olympiad-12-sc-flux.png": {
+    "bytes": 310164,
+    "sha256": "bf008c9169577c2a78be55f823f039241947bb46beb8a0c3a65047c3cb2edbae"
+  },
+  "Olympiad-13-tether-launcher.png": {
+    "bytes": 325863,
+    "sha256": "27e1c45c00d2f4767757546bffaa85d5c7581d9783ec3ca8aa81da2a843481a4"
+  },
+  "Olympiad-14-switch-drag.png": {
+    "bytes": 318825,
+    "sha256": "9cff06c85220e1ea1a369cf6020d34197548bff4bbc9900dfdf81a75b14a912e"
+  },
+  "Olympiad-15-cable.png": {
+    "bytes": 324037,
+    "sha256": "c9caa8fe2b74dff3513e30d542c53e6f3b84fefff648c6cf082517f76b64837b"
+  },
+  "Olympiad-16-driven-lcr.png": {
+    "bytes": 295102,
+    "sha256": "49a48aae2493acd0e337ddf89bd296e210ec219ba7043a8f73455c77a0ca8024"
+  },
+  "Olympiad-17-maxpower.png": {
+    "bytes": 312549,
+    "sha256": "982ad16387deca84a0c46b1e6bdb315edb9c890fcf738ca0b6666167548e4bfb"
+  },
+  "Olympiad-18-radio-wien.png": {
+    "bytes": 309942,
+    "sha256": "06e523717ddbef5336bfba6bce9d70b9edb2b6d390fc3cf74961a2c93531d2ad"
+  },
+  "Olympiad-19-emi-estimates.png": {
+    "bytes": 337841,
+    "sha256": "e82bb6a7221ce00ad4fa41e18ae6f73032c3454520e4e526f695557c7b62e93e"
   },
   "magnetism-all-pngs.zip": {
-    "bytes": 9658843,
-    "sha256": "6b602864f424a35962f3fe6349f64732e5ed0c5d425a436014ac69d18c401766"
+    "bytes": 22674941,
+    "sha256": "0ed77bbb8149e6d64d1a280405511a1d8c7049c0dce85257702555fbf2457008"
   },
   "magnetism-jee-pngs.zip": {
-    "bytes": 7477336,
-    "sha256": "4a41d128ed02e22d8bdde8a3ea700e4c90cad61753ecab92dc61a9c94b785daa"
+    "bytes": 16958217,
+    "sha256": "b2ec38b7c9d0912f2cb289a2baa0cf1de7b14f0bd30f9245e827ced172c8d0ca"
   },
   "magnetism-jee.pdf": {
-    "bytes": 7916859,
-    "sha256": "7d91717c22bd6ee9331b39685e5afb53f9365cf5dc32eae8a7b0cd38d2b50f67"
+    "bytes": 17793932,
+    "sha256": "eb53d61b0982ada5fe8904186a15047cd1d40f532d3c9996be1e9e072422c694"
   },
   "magnetism-olympiad-pngs.zip": {
-    "bytes": 2181529,
-    "sha256": "869f7acaeb3b60758fa4cf64583efc9dfa2524f2b768eea816b223ee69f077ca"
+    "bytes": 5716746,
+    "sha256": "cdba48a34dba0870fd875f691e90cdb87ea46e6e42385eb0123eae27a957f3ce"
   },
   "magnetism-olympiad.pdf": {
-    "bytes": 2295238,
-    "sha256": "f974b70a9768ecaa99db768f5a8db86402885236336f0e012da23cc93f3460ec"
+    "bytes": 5987016,
+    "sha256": "95d6294006de6cd0eebb1c386fce9a86a050f09c0e86f75216841909df73586f"
   },
   "magnetism-short-notes.pdf": {
-    "bytes": 10211229,
-    "sha256": "20f4740b51fdcb04e230b91c717c09d34ae64ad9fdb18fb03bf1cbffab6f9b68"
+    "bytes": 23780163,
+    "sha256": "3db5ab8118dd37c5d9f27e4f18aafaada5a870a411ce4ebeb3c57e9c1496ac6a"
   }
 }

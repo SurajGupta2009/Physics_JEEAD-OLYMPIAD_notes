@@ -1,4 +1,4 @@
-"""Render teacher-edited source into exact A4 PNGs (2480x3508, 300 dpi).
+"""Render teacher-edited magnetism + EMI + AC source into exact A4 PNGs (2480x3508, 300 dpi).
 Dependencies: Pillow, matplotlib, numpy. No network or image model is needed.
 """
 from pathlib import Path
@@ -72,9 +72,9 @@ def card(im,c,x,y,width=1090,height=1040):
     d.rounded_rectangle((x,y,x+width,y+94),radius=24,fill=PALE)
     d.rectangle((x,y+55,x+width,y+94),fill=PALE)
     titlefont=font(56)
-    assert d.textlength(c['title'],font=titlefont)<width-60,c['title']
-    d.text((x+28,y+12),c['title'],font=titlefont,fill=TEAL)
-    yy=y+106;bodyw=width-64
+    assert d.textlength(c['title'],font=titlefont)<width-50,c['title']
+    d.text((x+24,y+12),c['title'],font=titlefont,fill=TEAL)
+    yy=y+104;bodyw=width-58
     for kind,s in c['items']:
         if kind=='m':
             a=math_image(s)
@@ -83,14 +83,14 @@ def card(im,c,x,y,width=1090,height=1040):
                 ratio=bodyw/a.width
                 assert ratio>=.82, f'Equation too wide: {c["title"]}: {s}'
                 a=a.resize((bodyw,round(a.height*ratio)),Image.Resampling.LANCZOS)
-            d.rounded_rectangle((x+26,yy-5,x+width-26,yy+a.height+15),radius=9,fill=YELLOW)
-            im.paste(a,(x+38,yy+3),a);yy+=a.height+24
+            d.rounded_rectangle((x+24,yy-5,x+width-24,yy+a.height+10),radius=9,fill=YELLOW)
+            im.paste(a,(x+36,yy+2),a);yy+=a.height+18
         else:
-            fs=46 if kind in ('why','trap') else 48
-            lead=53 if kind in ('why','trap') else 56
-            label='WHY / ' if kind=='why' else 'WATCH / ' if kind=='trap' else ''
-            color=TEAL if kind=='why' else RED if kind=='trap' else INK
-            yy=paragraph(im,label+s,x+32,yy,bodyw,size=fs,color=color,leading=lead)+10
+            fs=46 if kind in ('why','trap','check') else 48
+            lead=53 if kind in ('why','trap','check') else 56
+            label='WHY / ' if kind=='why' else 'WATCH / ' if kind=='trap' else 'CHECK / ' if kind=='check' else ''
+            color=TEAL if kind in ('why','check') else RED if kind=='trap' else INK
+            yy=paragraph(im,label+s,x+30,yy,bodyw,size=fs,color=color,leading=lead)+8
     used=yy-y
     assert used<height-12, f'CARD OVERFLOW ({used}px): {c["title"]}'
     REPORT.append({'card':c['title'],'used_px':round(used),'available_px':height,'body_pt':11.52,'explanation_pt':11.04})
@@ -161,7 +161,7 @@ def render():
     for i,p in enumerate(DATA,1):
         im=Image.new('RGB',(W,H),'white');d=ImageDraw.Draw(im)
         label='PART I: JEE MAIN + ADVANCED' if p['section']=='JEE' else 'PART II: OLYMPIAD / EXTENSIONS'
-        d.text((125,125),'MAGNETISM  /  '+label,font=font(30),fill=TEAL)
+        d.text((125,125),'MAGNETISM + EMI + AC  /  '+label,font=font(30),fill=TEAL)
         d.text((2160,125),f"{p['part_page']:02}/{part_counts[p['section']]:02}",font=font(42),fill=TEAL)
         fs=88
         while d.textlength(p['title'],font=font(fs))>W-258:fs-=1
