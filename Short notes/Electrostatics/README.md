@@ -86,4 +86,3 @@ Publication was explicitly authorised after a fresh verification pass. The compl
 6. [Multipoles and induced neutral bodies](Olympiad-06-multipoles.png)
 7. [Off-axis rings, cube scaling and numerical checks](Olympiad-07-offaxis.png)
 8. [Inverse-square tests and model boundaries](Olympiad-08-measurements.png)
-
