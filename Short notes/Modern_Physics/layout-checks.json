@@ -1,0 +1,250 @@
+{
+  "edition": "modern-physics",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sheets": [
+    {
+      "slug": "JEE-01-rutherford",
+      "main_px": 1844,
+      "main_available": 2062,
+      "rail_px": 969,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-02-closest-approach",
+      "main_px": 1821,
+      "main_available": 2062,
+      "rail_px": 825,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-03-standing-wave",
+      "main_px": 1834,
+      "main_available": 2062,
+      "rail_px": 786,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-04-bohr-ladder",
+      "main_px": 1778,
+      "main_available": 2062,
+      "rail_px": 931,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-05-series",
+      "main_px": 1621,
+      "main_available": 2062,
+      "rail_px": 819,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-06-excitation",
+      "main_px": 1680,
+      "main_available": 2062,
+      "rail_px": 972,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-07-hydrogenic",
+      "main_px": 1739,
+      "main_available": 2062,
+      "rail_px": 947,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-08-quantum-numbers",
+      "main_px": 1696,
+      "main_available": 2062,
+      "rail_px": 816,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-09-photon",
+      "main_px": 1819,
+      "main_available": 2062,
+      "rail_px": 898,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-10-photoelectric",
+      "main_px": 1832,
+      "main_available": 2062,
+      "rail_px": 821,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-11-stopping",
+      "main_px": 1676,
+      "main_available": 2062,
+      "rail_px": 780,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-12-photocell",
+      "main_px": 1643,
+      "main_available": 2062,
+      "rail_px": 777,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-13-debroglie",
+      "main_px": 1755,
+      "main_available": 2062,
+      "rail_px": 889,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-14-davisson-germer",
+      "main_px": 1820,
+      "main_available": 2062,
+      "rail_px": 855,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-15-uncertainty",
+      "main_px": 1852,
+      "main_available": 2062,
+      "rail_px": 866,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-01-xray-continuous",
+      "main_px": 1811,
+      "main_available": 2062,
+      "rail_px": 937,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-02-xray-characteristic",
+      "main_px": 1840,
+      "main_available": 2062,
+      "rail_px": 942,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-03-absorption",
+      "main_px": 1796,
+      "main_available": 2062,
+      "rail_px": 877,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-04-bragg",
+      "main_px": 1833,
+      "main_available": 2062,
+      "rail_px": 896,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-05-compton",
+      "main_px": 1669,
+      "main_available": 2062,
+      "rail_px": 933,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-06-compton-invariant",
+      "main_px": 1779,
+      "main_available": 2062,
+      "rail_px": 924,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-07-inverse-compton",
+      "main_px": 1739,
+      "main_available": 2062,
+      "rail_px": 878,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-08-pair-production",
+      "main_px": 1747,
+      "main_available": 2062,
+      "rail_px": 863,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-09-moseley",
+      "main_px": 1656,
+      "main_available": 2062,
+      "rail_px": 809,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-10-collapse",
+      "main_px": 1815,
+      "main_available": 2062,
+      "rail_px": 829,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-11-correspondence",
+      "main_px": 1728,
+      "main_available": 2062,
+      "rail_px": 744,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-12-exotic-atoms",
+      "main_px": 1777,
+      "main_available": 2062,
+      "rail_px": 858,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-13-franck-hertz",
+      "main_px": 1760,
+      "main_available": 2062,
+      "rail_px": 891,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-14-waiting-time",
+      "main_px": 1759,
+      "main_available": 2062,
+      "rail_px": 891,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-15-matter-wave-speeds",
+      "main_px": 1635,
+      "main_available": 2062,
+      "rail_px": 897,
+      "figure_y": 2310,
+      "figure_h": 886
+    }
+  ]
+}

@@ -1,0 +1,884 @@
+{
+  "edition": "modern-physics",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sections": {
+    "JEE": 15,
+    "Olympiad": 15
+  },
+  "sheets": [
+    {
+      "slug": "JEE-01-rutherford",
+      "section": "JEE",
+      "page": 1,
+      "title": "Why did one alpha in eight thousand come back?",
+      "question": "A pudding atom should never turn a fast alpha around. What did the bounces actually prove?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "thomson_vs_rutherford"
+      ],
+      "takeaway": "the rare back-scatter is the measurement: charge sits in a nucleus, not a cloud",
+      "file": "JEE-01-rutherford.png",
+      "layout": [
+        {
+          "sheet": "JEE-01-rutherford",
+          "scale_eV": 5000000.0,
+          "main_px": 1844,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-01-rutherford",
+          "margin_px": 969,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-02-closest-approach",
+      "section": "JEE",
+      "page": 2,
+      "title": "How close can an alpha get before the law breaks?",
+      "question": "Rutherford\u2019s formula held at every angle measured. Where must it stop, and what stops it?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "closest_approach"
+      ],
+      "takeaway": "r_min shrinks as 1/K until it reaches the nuclear surface \u2014 that is where new physics starts",
+      "file": "JEE-02-closest-approach.png",
+      "layout": [
+        {
+          "sheet": "JEE-02-closest-approach",
+          "scale_eV": 5000000.0,
+          "main_px": 1821,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-02-closest-approach",
+          "margin_px": 825,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-03-standing-wave",
+      "section": "JEE",
+      "page": 3,
+      "title": "Why is angular momentum n times h-bar?",
+      "question": "Bohr postulated it. de Broglie\u2019s wave makes it a closure condition on a circle.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "standing_wave"
+      ],
+      "takeaway": "an orbit is allowed when the electron\u2019s wave closes on itself in phase",
+      "file": "JEE-03-standing-wave.png",
+      "layout": [
+        {
+          "sheet": "JEE-03-standing-wave",
+          "scale_eV": 13.6,
+          "main_px": 1834,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-03-standing-wave",
+          "margin_px": 786,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-04-bohr-ladder",
+      "section": "JEE",
+      "page": 4,
+      "title": "What does the hydrogen ladder actually look like?",
+      "question": "Thirty years of spectroscopy in one diagram. Read it as a table, not a picture.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bohr_ledger"
+      ],
+      "takeaway": "radius as n\u00b2, binding as 1/n\u00b2, and 13.6(1/n_f\u00b2 \u2212 1/n_i\u00b2) eV per arrow",
+      "file": "JEE-04-bohr-ladder.png",
+      "layout": [
+        {
+          "sheet": "JEE-04-bohr-ladder",
+          "scale_eV": 13.6,
+          "main_px": 1778,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-04-bohr-ladder",
+          "margin_px": 931,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-05-series",
+      "section": "JEE",
+      "page": 5,
+      "title": "Which series is which, and why five names?",
+      "question": "Lyman, Balmer, Paschen, Brackett, Pfund: one formula, five finishing rungs.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "spectrum_series"
+      ],
+      "takeaway": "the series is named by its lower level: n_f = 1, 2, 3, 4, 5",
+      "file": "JEE-05-series.png",
+      "layout": [
+        {
+          "sheet": "JEE-05-series",
+          "scale_eV": 1.89,
+          "main_px": 1621,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-05-series",
+          "margin_px": 819,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-06-excitation",
+      "section": "JEE",
+      "page": 6,
+      "title": "What can a 12.5 eV electron do that a 12.5 eV photon cannot?",
+      "question": "Same energy, different menu. The rule about who may pay in part is worth marks every year.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "excitation_ladder"
+      ],
+      "takeaway": "electrons may hand over part of their energy; photons must be absorbed whole",
+      "file": "JEE-06-excitation.png",
+      "layout": [
+        {
+          "sheet": "JEE-06-excitation",
+          "scale_eV": 11.5,
+          "main_px": 1680,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-06-excitation",
+          "margin_px": 972,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-07-hydrogenic",
+      "section": "JEE",
+      "page": 7,
+      "title": "How far does Z\u00b2 scaling carry you?",
+      "question": "He\u207a, Li\u00b2\u207a, muonic hydrogen and positronium are the same atom with two numbers changed.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "hydrogenic_scaling"
+      ],
+      "takeaway": "charge scales everything by Z\u00b2, mass by the reduced mass \u2014 nothing else changes",
+      "file": "JEE-07-hydrogenic.png",
+      "layout": [
+        {
+          "sheet": "JEE-07-hydrogenic",
+          "scale_eV": 13.6,
+          "main_px": 1739,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-07-hydrogenic",
+          "margin_px": 947,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-08-quantum-numbers",
+      "section": "JEE",
+      "page": 8,
+      "title": "What are the other three numbers for?",
+      "question": "Bohr gave one integer. Spectroscopy needs four, and each one explains a different splitting.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "quantum_numbers"
+      ],
+      "takeaway": "n sets the energy; l, m_l, m_s decide which transitions are allowed and how they split",
+      "file": "JEE-08-quantum-numbers.png",
+      "layout": [
+        {
+          "sheet": "JEE-08-quantum-numbers",
+          "scale_eV": 1.89,
+          "main_px": 1696,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-08-quantum-numbers",
+          "margin_px": 816,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-09-photon",
+      "section": "JEE",
+      "page": 9,
+      "title": "What exactly is in a beam of light?",
+      "question": "Counting coins: energy per photon, photons per second, and the push they give.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "photon_packet"
+      ],
+      "takeaway": "a beam is n photons per second, each carrying hf and momentum h/\u03bb",
+      "file": "JEE-09-photon.png",
+      "layout": [
+        {
+          "sheet": "JEE-09-photon",
+          "scale_eV": 2.1,
+          "main_px": 1819,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-09-photon",
+          "margin_px": 898,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-10-photoelectric",
+      "section": "JEE",
+      "page": 10,
+      "title": "Why does brighter light not give faster electrons?",
+      "question": "Five experimental facts, and the two that no wave theory can survive.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "photoelectric_curve"
+      ],
+      "takeaway": "intensity sets the number of electrons; frequency sets their maximum energy",
+      "file": "JEE-10-photoelectric.png",
+      "layout": [
+        {
+          "sheet": "JEE-10-photoelectric",
+          "scale_eV": 1.8,
+          "main_px": 1832,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-10-photoelectric",
+          "margin_px": 821,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-11-stopping",
+      "section": "JEE",
+      "page": 11,
+      "title": "How do you read a photocurrent graph?",
+      "question": "Two plateaux, one cutoff. Learn which knob moves which feature.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "stopping_graph"
+      ],
+      "takeaway": "the cutoff marks the fastest electron; the plateau marks how many there are",
+      "file": "JEE-11-stopping.png",
+      "layout": [
+        {
+          "sheet": "JEE-11-stopping",
+          "scale_eV": 2.0,
+          "main_px": 1676,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-11-stopping",
+          "margin_px": 780,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-12-photocell",
+      "section": "JEE",
+      "page": 12,
+      "title": "What does a photocell measure, and what does it not?",
+      "question": "A battery and an ammeter separate two quantities that classical physics could not.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "photocell_iv"
+      ],
+      "takeaway": "the battery measures energy per electron; the ammeter measures electrons per second",
+      "file": "JEE-12-photocell.png",
+      "layout": [
+        {
+          "sheet": "JEE-12-photocell",
+          "scale_eV": 2.3,
+          "main_px": 1643,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-12-photocell",
+          "margin_px": 777,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-13-debroglie",
+      "section": "JEE",
+      "page": 13,
+      "title": "Do electrons have a wavelength?",
+      "question": "If light can be a particle, matter can be a wave. The only question is how big.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "debroglie_scale"
+      ],
+      "takeaway": "\u03bb = h/p: large for electrons at a few volts, absurdly small for anything you can hold",
+      "file": "JEE-13-debroglie.png",
+      "layout": [
+        {
+          "sheet": "JEE-13-debroglie",
+          "scale_eV": 100,
+          "main_px": 1755,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-13-debroglie",
+          "margin_px": 889,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-14-davisson-germer",
+      "section": "JEE",
+      "page": 14,
+      "title": "Was the electron wave ever actually seen?",
+      "question": "Two experiments in 1927 turned a hypothesis into a measurement: a crystal and a detector.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "davisson_germer"
+      ],
+      "takeaway": "the diffraction angle follows 2d sin\u03b8 = n\u03bb, and \u03bb is exactly h/p",
+      "file": "JEE-14-davisson-germer.png",
+      "layout": [
+        {
+          "sheet": "JEE-14-davisson-germer",
+          "scale_eV": 54,
+          "main_px": 1820,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-14-davisson-germer",
+          "margin_px": 855,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-15-uncertainty",
+      "section": "JEE",
+      "page": 15,
+      "title": "Why does the electron not fall into the nucleus?",
+      "question": "A classical orbiting charge radiates and dies in picoseconds. Something holds the atom up.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "uncertainty_well"
+      ],
+      "takeaway": "confinement costs momentum; the ground state is where that cost stops paying",
+      "file": "JEE-15-uncertainty.png",
+      "layout": [
+        {
+          "sheet": "JEE-15-uncertainty",
+          "scale_eV": 13.6,
+          "main_px": 1852,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-15-uncertainty",
+          "margin_px": 866,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-01-xray-continuous",
+      "section": "Olympiad",
+      "page": 1,
+      "title": "How does a tube voltage become a shortest wavelength?",
+      "question": "One electron, one photon, and a sharp edge that measures h/e.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "xray_continuous"
+      ],
+      "takeaway": "\u03bb_min = hc/eV: the edge depends on voltage alone, never on the target",
+      "file": "Olympiad-01-xray-continuous.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-01-xray-continuous",
+          "scale_eV": 50000.0,
+          "main_px": 1811,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-01-xray-continuous",
+          "margin_px": 937,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-02-xray-characteristic",
+      "section": "Olympiad",
+      "page": 2,
+      "title": "When do the sharp lines appear?",
+      "question": "A spectrum has two parts with two different masters: voltage and the atom.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "xray_characteristic"
+      ],
+      "takeaway": "the hump is bremsstrahlung; the spikes need a vacancy, so they need a threshold voltage",
+      "file": "Olympiad-02-xray-characteristic.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-02-xray-characteristic",
+          "scale_eV": 8000.0,
+          "main_px": 1840,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-02-xray-characteristic",
+          "margin_px": 942,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-03-absorption",
+      "section": "Olympiad",
+      "page": 3,
+      "title": "Why does a radiograph show bone and not skin?",
+      "question": "Attenuation is exponential, and the exponent is roughly Z cubed.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "absorption_curve"
+      ],
+      "takeaway": "I = I\u2080e^{\u2212\u03bcx}: contrast comes from \u03bc, and \u03bc is a steep function of Z and E",
+      "file": "Olympiad-03-absorption.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-03-absorption",
+          "scale_eV": 100000.0,
+          "main_px": 1796,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-03-absorption",
+          "margin_px": 877,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-04-bragg",
+      "section": "Olympiad",
+      "page": 4,
+      "title": "How do you measure an atom with a wavelength?",
+      "question": "Bragg\u2019s law turns angles into spacings \u2014 and spacings into Avogadro\u2019s number.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bragg_geometry"
+      ],
+      "takeaway": "2d sin\u03b8 = n\u03bb with \u03b8 from the plane: an angle, a wavelength, and a lattice constant",
+      "file": "Olympiad-04-bragg.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-04-bragg",
+          "scale_eV": 8000.0,
+          "main_px": 1833,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-04-bragg",
+          "margin_px": 896,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-05-compton",
+      "section": "Olympiad",
+      "page": 5,
+      "title": "What happens when a photon hits an electron?",
+      "question": "Billiards with light: the shift is absolute, angle-only, and independent of everything else.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "compton_kinematics"
+      ],
+      "takeaway": "\u0394\u03bb = 2.426(1 \u2212 cos\u03b8) pm: an absolute shift, never a percentage",
+      "file": "Olympiad-05-compton.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-05-compton",
+          "scale_eV": 100000.0,
+          "main_px": 1669,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-05-compton",
+          "margin_px": 933,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-06-compton-invariant",
+      "section": "Olympiad",
+      "page": 6,
+      "title": "Can the Compton shift be derived without trigonometry?",
+      "question": "Yes \u2014 square the four-momentum of the electron and the algebra collapses.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "compton_invariant"
+      ],
+      "takeaway": "one invariant replaces three conservation equations and two eliminands",
+      "file": "Olympiad-06-compton-invariant.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-06-compton-invariant",
+          "scale_eV": 100000.0,
+          "main_px": 1779,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-06-compton-invariant",
+          "margin_px": 924,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-07-inverse-compton",
+      "section": "Olympiad",
+      "page": 7,
+      "title": "How does a fast electron brighten a dull photon?",
+      "question": "The Compton event run backwards, and the reason radio galaxies shine in X-rays.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "inverse_compton"
+      ],
+      "takeaway": "a photon bouncing off a relativistic electron gains of order \u03b3\u00b2 in energy",
+      "file": "Olympiad-07-inverse-compton.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-07-inverse-compton",
+          "scale_eV": 1000.0,
+          "main_px": 1739,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-07-inverse-compton",
+          "margin_px": 878,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-08-pair-production",
+      "section": "Olympiad",
+      "page": 8,
+      "title": "When does a photon stop being a photon?",
+      "question": "Above 1.022 MeV it can become matter \u2014 but never in empty space.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "pair_threshold"
+      ],
+      "takeaway": "E > 2m_ec\u00b2 and a third body: energy alone is not enough, momentum must balance",
+      "file": "Olympiad-08-pair-production.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-08-pair-production",
+          "scale_eV": 1022000.0,
+          "main_px": 1747,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-08-pair-production",
+          "margin_px": 863,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-09-moseley",
+      "section": "Olympiad",
+      "page": 9,
+      "title": "How did a straight line predict missing elements?",
+      "question": "Moseley plotted \u221af against Z in 1913 and the periodic table became a measurement.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "moseley_line"
+      ],
+      "takeaway": "\u221af \u221d (Z \u2212 b): every element is a point on one line, and gaps mean missing elements",
+      "file": "Olympiad-09-moseley.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-09-moseley",
+          "scale_eV": 8000.0,
+          "main_px": 1656,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-09-moseley",
+          "margin_px": 809,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-10-collapse",
+      "section": "Olympiad",
+      "page": 10,
+      "title": "How long would a classical atom live?",
+      "question": "Sixteen picoseconds, and a continuous spectrum while it dies. That is the crisis.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "collapse_spiral"
+      ],
+      "takeaway": "\u03c4 \u221d r\u00b3: the collapse is a slow spiral, not a plunge, and it radiates every frequency",
+      "file": "Olympiad-10-collapse.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-10-collapse",
+          "scale_eV": 13.6,
+          "main_px": 1815,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-10-collapse",
+          "margin_px": 829,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-11-correspondence",
+      "section": "Olympiad",
+      "page": 11,
+      "title": "Why does quantum mechanics become classical for large n?",
+      "question": "Expand the level spacing and the photon frequency turns into the orbital frequency.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "correspondence_plot"
+      ],
+      "takeaway": "for large n the gap closes as 1/n, and the photon frequency equals the orbit frequency to 1.5 %",
+      "file": "Olympiad-11-correspondence.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-11-correspondence",
+          "scale_eV": 13.6,
+          "main_px": 1728,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-11-correspondence",
+          "margin_px": 744,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-12-exotic-atoms",
+      "section": "Olympiad",
+      "page": 12,
+      "title": "What if the electron weighed 207 times more?",
+      "question": "Muonic hydrogen is a nuclear ruler; positronium is a hydrogen twice as big.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "exotic_atoms"
+      ],
+      "takeaway": "every mass-dependent result takes \u03bc: 207 times heavier, 207 times smaller",
+      "file": "Olympiad-12-exotic-atoms.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-12-exotic-atoms",
+          "scale_eV": 2800.0,
+          "main_px": 1777,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-12-exotic-atoms",
+          "margin_px": 858,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-13-franck-hertz",
+      "section": "Olympiad",
+      "page": 13,
+      "title": "Can you see energy levels without looking at light?",
+      "question": "Yes: fire electrons at atoms and watch the current develop teeth.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "franck_hertz"
+      ],
+      "takeaway": "a dip every 4.9 V in mercury is a level diagram measured with an ammeter",
+      "file": "Olympiad-13-franck-hertz.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-13-franck-hertz",
+          "scale_eV": 4.9,
+          "main_px": 1760,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-13-franck-hertz",
+          "margin_px": 891,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-14-waiting-time",
+      "section": "Olympiad",
+      "page": 14,
+      "title": "How long should a wave take to eject an electron?",
+      "question": "Give classical physics its best case, then compare with the clock.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "waiting_time"
+      ],
+      "takeaway": "hours at moonlight intensity versus nanoseconds observed: thirteen orders of magnitude",
+      "file": "Olympiad-14-waiting-time.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-14-waiting-time",
+          "scale_eV": 2.0,
+          "main_px": 1759,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-14-waiting-time",
+          "margin_px": 891,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-15-matter-wave-speeds",
+      "section": "Olympiad",
+      "page": 15,
+      "title": "Which speed does a matter wave travel at?",
+      "question": "Two speeds, one particle, and a product that is always c\u00b2.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "matter_wave_speeds"
+      ],
+      "takeaway": "phase speed c\u00b2/v exceeds c harmlessly; group speed v carries everything",
+      "file": "Olympiad-15-matter-wave-speeds.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-15-matter-wave-speeds",
+          "scale_eV": 511000.0,
+          "main_px": 1635,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-15-matter-wave-speeds",
+          "margin_px": 897,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    }
+  ]
+}
