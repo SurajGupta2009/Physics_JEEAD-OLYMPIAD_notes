@@ -1,0 +1,437 @@
+{
+  "assertions": 1366,
+  "physics_model_checks": 85,
+  "pages": 37,
+  "JEE": 29,
+  "Olympiad": 8,
+  "cards": 148,
+  "diagrams": 74,
+  "math_blocks": 244,
+  "numerical_models": [
+    {
+      "name": "electron gyroradius 1e6 m/s in 1 mT (mm)",
+      "value": 5.685630103565724,
+      "expected": 5.686
+    },
+    {
+      "name": "electron period in 1 mT (ns)",
+      "value": 35.72386752878211,
+      "expected": 35.75
+    },
+    {
+      "name": "electron cyclotron GHz per T",
+      "value": 27.99248987233304,
+      "expected": 27.99
+    },
+    {
+      "name": "proton cyclotron MHz per T",
+      "value": 15.245186458209696,
+      "expected": 15.23
+    },
+    {
+      "name": "selector speed m/s for E=1e5 B=0.1",
+      "value": 1000000.0,
+      "expected": 1000000.0
+    },
+    {
+      "name": "strip deflection sin(phi)=d/r",
+      "value": 0.7185972980741592,
+      "expected": 0.7186
+    },
+    {
+      "name": "strip crossing time ns",
+      "value": 27.90121230701357,
+      "expected": 27.9
+    },
+    {
+      "name": "strip half-period return ns",
+      "value": 109.32412478098284,
+      "expected": 109.4
+    },
+    {
+      "name": "spectrometer r for U-238 (m)",
+      "value": 0.4442248239203172,
+      "expected": 0.4445
+    },
+    {
+      "name": "isotope fractional radius half rule",
+      "value": 0.006322508062503563,
+      "expected": 0.0063025210084033615
+    },
+    {
+      "name": "cyclotron proton f at 1.5 T (MHz)",
+      "value": 22.867779687314545,
+      "expected": 22.86
+    },
+    {
+      "name": "cyclotron Kmax 27 MeV J",
+      "value": 4.3163388740917605e-12,
+      "expected": 4.31e-12
+    },
+    {
+      "name": "cyclotron turns at 50 kV",
+      "value": 269.0,
+      "expected": 269.0
+    },
+    {
+      "name": "loss cone degrees for mirror ratio 10",
+      "value": 18.43494882292201,
+      "expected": 18.43
+    },
+    {
+      "name": "mirror invariant reflection B/B0",
+      "value": 4.000000000000001,
+      "expected": 4.0
+    },
+    {
+      "name": "Hall copper microvolts",
+      "value": 0.734295185230678,
+      "expected": 0.7343
+    },
+    {
+      "name": "Hall semiconductor volts",
+      "value": 0.31207545372303813,
+      "expected": 0.3121
+    },
+    {
+      "name": "drift speed E/B",
+      "value": 100000.0,
+      "expected": 100000.0
+    },
+    {
+      "name": "electron cycloid radius micrometre",
+      "value": 5.685630103565722,
+      "expected": 5.686
+    },
+    {
+      "name": "cycloid arch height micrometre",
+      "value": 11.371260207131444,
+      "expected": 11.37
+    },
+    {
+      "name": "cycloid top speed",
+      "value": 200000.0,
+      "expected": 200000.0
+    },
+    {
+      "name": "Thomson q/m for y=2cm B=0.1 L=0.5",
+      "value": 159999.99999999997,
+      "expected": 160000.0
+    },
+    {
+      "name": "300 Br rule momentum 45 MeV/c",
+      "value": 45.0,
+      "expected": 45.0
+    },
+    {
+      "name": "moving charge B equals vE/c2 (T)",
+      "value": 1.6021766339999996e-16,
+      "expected": 1.6021766348791772e-16
+    },
+    {
+      "name": "finite wire 60-60 field (uT)",
+      "value": 17.32050807568877,
+      "expected": 17.32
+    },
+    {
+      "name": "infinite wire 10 A 10 cm (uT)",
+      "value": 20.0,
+      "expected": 20.0
+    },
+    {
+      "name": "semi-infinite end half rule",
+      "value": 10.0,
+      "expected": 10.0
+    },
+    {
+      "name": "square centre coefficient",
+      "value": 5.65685424949238,
+      "expected": 5.656854249492381
+    },
+    {
+      "name": "hexagon centre coefficient",
+      "value": 0.5513288954217921,
+      "expected": 0.5513288954217921
+    },
+    {
+      "name": "loop centre B 5 A 20 cm (uT)",
+      "value": 15.707963267948964,
+      "expected": 15.71
+    },
+    {
+      "name": "quarter arc is quarter loop",
+      "value": 0.25000000000000006,
+      "expected": 0.25
+    },
+    {
+      "name": "loop axis at x=R coefficient",
+      "value": 0.35355339059327373,
+      "expected": 0.35355339059327373
+    },
+    {
+      "name": "loop axial exact at x=20R",
+      "value": 1.956155243500163e-09,
+      "expected": 1.956e-09
+    },
+    {
+      "name": "solenoid interior n=1000 1A mT",
+      "value": 1.2566370614359172,
+      "expected": 1.257
+    },
+    {
+      "name": "solenoid end half-rule factor",
+      "value": 0.5000749868777181,
+      "expected": 0.4999
+    },
+    {
+      "name": "toroid mid-gap field 500 turns 2 A 15 cm (uT)",
+      "value": 1333.3333333333333,
+      "expected": 1333.3
+    },
+    {
+      "name": "ampere circulation 2 A enclosed (uT m)",
+      "value": 2.5132741228718345,
+      "expected": 2.513
+    },
+    {
+      "name": "thick wire B at half radius",
+      "value": 1.0000000000000002,
+      "expected": 1.0
+    },
+    {
+      "name": "sheet field mu0 K/2 for K=300 (mT)",
+      "value": 0.1884955592153876,
+      "expected": 0.1885
+    },
+    {
+      "name": "hole field 0.5 mu0 J d",
+      "value": 0.012566370614359173,
+      "expected": 0.012566
+    },
+    {
+      "name": "chord force semicircle 2IRB",
+      "value": 0.18000000000000002,
+      "expected": 0.18
+    },
+    {
+      "name": "couple equals mu B sin theta",
+      "value": 0.01514647772654214,
+      "expected": 0.015146477726542136
+    },
+    {
+      "name": "U-gradient torque identity",
+      "value": -0.015146477725692942,
+      "expected": -0.015146477726542136
+    },
+    {
+      "name": "parallel wire force per metre 100 A 10 cm (mN/m)",
+      "value": 20.0,
+      "expected": 20.0
+    },
+    {
+      "name": "1 T pressure in atmospheres",
+      "value": 3.926842908756362,
+      "expected": 3.927
+    },
+    {
+      "name": "1 T solenoid 10 cm2 end force (N)",
+      "value": 397.88735772973837,
+      "expected": 397.9
+    },
+    {
+      "name": "3 T hoop stress (MPa)",
+      "value": 3.5809862195676447,
+      "expected": 3.581
+    },
+    {
+      "name": "ring gyromagnetic ratio Q/2m",
+      "value": 5e-05,
+      "expected": 4.9999999999999996e-05
+    },
+    {
+      "name": "Bohr magneton",
+      "value": 9.274010072679799e-24,
+      "expected": 9.274e-24
+    },
+    {
+      "name": "rotating disc centre field B=mu0 sigma omega R/2",
+      "value": 2.5132741228718345e-11,
+      "expected": 2.513e-11
+    },
+    {
+      "name": "magnetised sphere interior (T)",
+      "value": 0.8377580409572782,
+      "expected": 0.8378
+    },
+    {
+      "name": "sphere moment M V (A m2)",
+      "value": 4.188790204786391,
+      "expected": 4.1888
+    },
+    {
+      "name": "sphere pole exterior continuity",
+      "value": 0.8377580409572782,
+      "expected": 0.8377580409572782
+    },
+    {
+      "name": "sphere versus cylinder interior ratio",
+      "value": 0.6666666666666666,
+      "expected": 0.6666666666666666
+    },
+    {
+      "name": "water Larmor susceptibility",
+      "value": -9.543340630774917e-06,
+      "expected": -9.47e-06
+    },
+    {
+      "name": "paramagnetic x at 1 K 1 T",
+      "value": 0.6717130856575422,
+      "expected": 0.6717
+    },
+    {
+      "name": "Curie chi scales as 1/T ratio",
+      "value": 0.33333333333333337,
+      "expected": 0.3333333333333333
+    },
+    {
+      "name": "dipole coupling kelvin 0.25 nm",
+      "value": 0.039868589800883494,
+      "expected": 0.0399
+    },
+    {
+      "name": "exchange Tc zJ/3",
+      "value": 1547.2690828733444,
+      "expected": 1548.0
+    },
+    {
+      "name": "hysteresis loss 20 kg 50 Hz (W)",
+      "value": 19.607843137254903,
+      "expected": 19.6
+    },
+    {
+      "name": "filled core B = mu_r mu0 nI (T)",
+      "value": 1.2566370614359172,
+      "expected": 1.257
+    },
+    {
+      "name": "earth BH at dip 60 (uT)",
+      "value": 24.000000000000007,
+      "expected": 24.0
+    },
+    {
+      "name": "earth BV at dip 60 (uT)",
+      "value": 41.569219381653056,
+      "expected": 41.57
+    },
+    {
+      "name": "dip-latitude lambda for dip 60 (deg)",
+      "value": 40.8933946491309,
+      "expected": 40.89
+    },
+    {
+      "name": "earth dipole moment (1e22 A m2)",
+      "value": 7.754245590000002,
+      "expected": 7.75
+    },
+    {
+      "name": "Gauss method mu (A m2)",
+      "value": 0.5847162777500242,
+      "expected": 0.5847
+    },
+    {
+      "name": "Gauss method BH (uT)",
+      "value": 25.31895752688993,
+      "expected": 25.33
+    },
+    {
+      "name": "core current estimate (GA)",
+      "value": 2.014900433627805,
+      "expected": 2.03
+    },
+    {
+      "name": "Helmholtz B factor 8/(5 sqrt5)",
+      "value": 0.7155417527999327,
+      "expected": 0.71554
+    },
+    {
+      "name": "Helmholtz field 100 turns 20 cm 1 A (mT)",
+      "value": 0.44958814278660647,
+      "expected": 0.45
+    },
+    {
+      "name": "Helmholtz uniform length for 0.1 per cent (cm)",
+      "value": 6.800000000000001,
+      "expected": 6.8
+    },
+    {
+      "name": "synchrotron radius 1 GeV 1 T (m)",
+      "value": 3.3356409519815204,
+      "expected": 3.336
+    },
+    {
+      "name": "synchrotron revolution MHz",
+      "value": 14.302593402988435,
+      "expected": 14.29
+    },
+    {
+      "name": "cyclotron wrong by gamma factor",
+      "value": 27979.82,
+      "expected": 27980.0
+    },
+    {
+      "name": "belt gyration period at L=2 (ms)",
+      "value": 16.92760641770057,
+      "expected": 17.2
+    },
+    {
+      "name": "Fermi reflections to double K",
+      "value": 6208.905100038325,
+      "expected": 6213.0
+    },
+    {
+      "name": "two-carrier Ge RH room (e-3 m3/C)",
+      "value": 0.002486320332668815,
+      "expected": 0.00249
+    },
+    {
+      "name": "two-carrier Ge intrinsic (e-3 m3/C)",
+      "value": -0.007174148361449153,
+      "expected": -0.00717
+    },
+    {
+      "name": "levitation height (cm)",
+      "value": 2.6719310647236623,
+      "expected": 2.668
+    },
+    {
+      "name": "levitation force balance",
+      "value": 0.073575,
+      "expected": 0.073575
+    },
+    {
+      "name": "lightning channel B (T)",
+      "value": 1.2,
+      "expected": 1.2
+    },
+    {
+      "name": "pinch pressure (Pa)",
+      "value": 572957.7951308232,
+      "expected": 573000.0
+    },
+    {
+      "name": "slab support field (T)",
+      "value": 0.35110695767367456,
+      "expected": 0.347
+    },
+    {
+      "name": "F_m/F_e at 1e6 m/s",
+      "value": 1.1126500560536185e-05,
+      "expected": 1.113e-05
+    },
+    {
+      "name": "quadrature wire convergence",
+      "value": 1.732050807568877e-05,
+      "expected": 1.732050807568877e-05
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+PRINTING — MAGNETISM SHORT NOTES
+================================
+
+Paper and page setup
+- A4 portrait (210 x 297 mm), one sheet per page.
+- Use "Fit" / "Fit to printable area" — NOT "Fill", "Shrink to fit" or any crop mode.
+- Margins: the artwork already keeps about a 10 mm safe inset; ordinary printer margins are fine.
+- Colour recommended: navy body, teal headings, yellow result bands and red warnings all carry meaning.
+
+Which file to print
+- magnetism-short-notes.pdf — all 37 sheets in reading order (JEE first, then extensions).
+- magnetism-jee.pdf — the 29 JEE Main + Advanced sheets only.
+- magnetism-olympiad.pdf — the 8 specialised-extension sheets only.
+- The PDFs embed each sheet as one lossless 2480 x 3508 px image at 300 DPI: what prints is exactly the
+  delivered PNG, with no resampling or font substitution.
+
+PNGs
+- 2480 x 3508 px portrait, 300 DPI metadata (about 21 x 29.7 cm at print).
+- Individual sheets are named JEE-01-lorentz.png ... Olympiad-08-estimates.png.
+
+Reading order
+- Part I (JEE) is complete in itself. Part II extends it; the boundary is syllabus relevance and
+  usefulness, not difficulty. Complete Part I before Part II.

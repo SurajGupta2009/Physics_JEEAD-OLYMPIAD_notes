@@ -1,0 +1,1046 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "The force law in words and symbols",
+      "used_px": 938,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Three properties worth memorising",
+      "used_px": 962,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Work, energy and a signed charge",
+      "used_px": 931,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A feel for the tesla",
+      "used_px": 877,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The circle from the force",
+      "used_px": 895,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sense of rotation and the charge sign",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The helix",
+      "used_px": 911,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers to anchor",
+      "used_px": 942,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The balance condition",
+      "used_px": 871,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why sign and mass drop out",
+      "used_px": 834,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Field along the motion",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 710,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The protocol",
+      "used_px": 935,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A strip of field",
+      "used_px": 994,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A circular region",
+      "used_px": 755,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked numbers",
+      "used_px": 710,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "From acceleration to radius",
+      "used_px": 842,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Isotope separation",
+      "used_px": 862,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "With a velocity selector",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and validity",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance condition",
+      "used_px": 974,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Turns and timing",
+      "used_px": 667,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Focusing and size",
+      "used_px": 897,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers check",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why the force points to weaker field",
+      "used_px": 890,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The adiabatic invariant",
+      "used_px": 937,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bottles and the loss cone",
+      "used_px": 924,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 717,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The balance that makes the voltage",
+      "used_px": 820,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Carrier sign: one edge, two stories",
+      "used_px": 893,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the magnitude measures",
+      "used_px": 894,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Geometry and numbers",
+      "used_px": 852,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Drift by force balance",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The cycloid from rest",
+      "used_px": 830,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gradient and curvature drifts",
+      "used_px": 880,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 818,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thomson crossed fields",
+      "used_px": 834,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Momentum from curvature",
+      "used_px": 764,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bending magnets and spectrometers",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Scales of detectors",
+      "used_px": 780,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The law",
+      "used_px": 1017,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "From moving charge to wire",
+      "used_px": 887,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Units and bookkeeping",
+      "used_px": 777,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the constant is not",
+      "used_px": 795,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Finite wire by end angles",
+      "used_px": 827,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Limits",
+      "used_px": 808,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Compound wires add as vectors",
+      "used_px": 934,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Centre field and arcs",
+      "used_px": 806,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The axial field",
+      "used_px": 743,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The peak of the on-axis field",
+      "used_px": 789,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Turns, n-gons and compound loops",
+      "used_px": 856,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Finite solenoid on axis",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The toroid",
+      "used_px": 823,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ideal limits and reality",
+      "used_px": 702,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Field energy preview",
+      "used_px": 806,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Defining the moment",
+      "used_px": 753,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The far field",
+      "used_px": 812,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Magnets are current loops",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 728,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The law and its proof sketch",
+      "used_px": 819,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign convention with a worked instance",
+      "used_px": 887,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Honest usefulness",
+      "used_px": 758,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two methods agree",
+      "used_px": 641,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wire family",
+      "used_px": 867,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sheets and solenoids",
+      "used_px": 806,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coax and hollow cylinders",
+      "used_px": 867,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The toroid and the decision",
+      "used_px": 893,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform fields from cylinders",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The gap in a loop",
+      "used_px": 702,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "No magnetic monopoles",
+      "used_px": 880,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Field lines close",
+      "used_px": 887,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "From carriers to the wire",
+      "used_px": 852,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The chord theorem",
+      "used_px": 953,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 640,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Non-uniform fields: the net force",
+      "used_px": 938,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Couple and energy",
+      "used_px": 859,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The oscillating magnet",
+      "used_px": 906,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The galvanometer",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fixed current versus fixed flux",
+      "used_px": 938,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The force law",
+      "used_px": 768,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The ampere, defined",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newton third law",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Scaling",
+      "used_px": 824,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Force on a current sheet",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solenoid end force and energy density",
+      "used_px": 830,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boundary conditions",
+      "used_px": 818,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and the motor puzzle",
+      "used_px": 941,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ring to body",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The Bohr magneton",
+      "used_px": 662,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rotating disc and shell",
+      "used_px": 907,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 810,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bound currents from M",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The magnetised sphere",
+      "used_px": 900,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cutting and poles",
+      "used_px": 763,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The slab moment ledger",
+      "used_px": 829,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The auxiliary field",
+      "used_px": 817,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Linear media",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Units and magnitudes",
+      "used_px": 835,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The gapped circuit",
+      "used_px": 782,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Larmor diamagnetism",
+      "used_px": 770,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Curie paramagnetism",
+      "used_px": 837,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 788,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Adiabatic demagnetisation",
+      "used_px": 726,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exchange, not dipole coupling",
+      "used_px": 870,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Domains and hysteresis",
+      "used_px": 942,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers",
+      "used_px": 838,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Soft versus hard",
+      "used_px": 764,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cores and shielding",
+      "used_px": 820,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Forces on materials",
+      "used_px": 794,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The gapped electromagnet",
+      "used_px": 726,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Saturation caps every circuit",
+      "used_px": 934,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The three angles",
+      "used_px": 853,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dipole geometry",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Measuring B_H",
+      "used_px": 789,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Earth and core numbers",
+      "used_px": 787,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two charges in motion",
+      "used_px": 973,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charge density changes with frame",
+      "used_px": 816,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The worked comparison",
+      "used_px": 851,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Limits of the classical picture",
+      "used_px": 837,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The flatness condition",
+      "used_px": 926,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked design",
+      "used_px": 699,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The second method",
+      "used_px": 941,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers and checks",
+      "used_px": 776,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rings versus demagnetising factor",
+      "used_px": 1008,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked numbers",
+      "used_px": 844,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Matching the rotating shell",
+      "used_px": 878,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sensitivity to shape",
+      "used_px": 782,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solenoid and pinch",
+      "used_px": 922,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Levitated slab and numbers",
+      "used_px": 833,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cosine-theta coil",
+      "used_px": 896,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Stress checks in numbers",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Classify by drifting frame",
+      "used_px": 933,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy across one loop",
+      "used_px": 825,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fermi acceleration",
+      "used_px": 1004,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cycloid numbers worked",
+      "used_px": 844,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gyration, bounce, drift",
+      "used_px": 855,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Drift period scaling",
+      "used_px": 777,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The synchrotron",
+      "used_px": 933,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Detector-scale numbers",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two-carrier Hall",
+      "used_px": 909,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Levitation by images",
+      "used_px": 956,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Iron versus water numbers",
+      "used_px": 944,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Perfect versus Larmor diamagnet",
+      "used_px": 890,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gauss absolute measurement",
+      "used_px": 782,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Estimates that teach",
+      "used_px": 937,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the model breaks",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Consistency identities",
+      "used_px": 858,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

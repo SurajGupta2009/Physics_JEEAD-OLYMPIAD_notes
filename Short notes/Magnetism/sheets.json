@@ -1,0 +1,4049 @@
+[
+ {
+  "section": "JEE",
+  "part_page": 1,
+  "slug": "JEE-01-lorentz",
+  "title": "The Lorentz force: what a field does to a moving charge",
+  "subtitle": "Steady fields; a point charge of either sign moving at nonrelativistic speed unless stated.",
+  "source": "Source \u00a7\u00a73.1-3.2; C1-C2; E1",
+  "diagrams": [
+   "lorentz-a",
+   "lorentz-b"
+  ],
+  "takeaway": "Magnetic force is q v cross B: perpendicular to both v and B, so it turns motion and never changes speed or kinetic energy.",
+  "cards": [
+   {
+    "title": "The force law in words and symbols",
+    "items": [
+     [
+      "m",
+      "\\mathbf F=q(\\mathbf E+\\mathbf v\\times\\mathbf B)"
+     ],
+     [
+      "m",
+      "F_B=|q|vB\\sin\\theta"
+     ],
+     [
+      "p",
+      "The electric part pushes along E and does work; the magnetic part pushes perpendicular to the velocity and does none. Theta is the angle between v and B, so a charge moving parallel to B feels no magnetic force at all. The cross product fixes the direction: right hand along v, curl towards B, thumb gives v cross B, then apply the sign of q."
+     ],
+     [
+      "why",
+      "Split the motion into parts parallel and perpendicular to B before doing anything else; only the perpendicular part is turned."
+     ],
+     [
+      "trap",
+      "Never use the left hand for negative charges. Compute v cross B first and apply the sign of q afterwards; otherwise the next positive ion gets the wrong arrow."
+     ]
+    ]
+   },
+   {
+    "title": "Three properties worth memorising",
+    "items": [
+     [
+      "m",
+      "\\mathbf F\\perp\\mathbf v\\ \\Rightarrow\\ K=\\text{const}"
+     ],
+     [
+      "m",
+      "\\mathbf F\\perp\\mathbf B\\ \\Rightarrow\\ \\dot{\\mathbf v}\\perp\\mathbf B"
+     ],
+     [
+      "p",
+      "Because the force is perpendicular to the velocity, a magnetic field changes the direction of motion but never the speed. Because the force is also perpendicular to B, a charge cannot be pushed along the field; motion along B is unaffected. A static B field can therefore do no work and cannot by itself speed a particle up."
+     ],
+     [
+      "why",
+      "These two perpendicularities are the whole chapter compressed: circles, helices, selectors and mirrors all follow from them."
+     ],
+     [
+      "trap",
+      "Questions asking for the change in kinetic energy of a charge moving only in a magnetic field have answer zero. Electric fields do change energy; keep the two contributions separate."
+     ]
+    ]
+   },
+   {
+    "title": "Work, energy and a signed charge",
+    "items": [
+     [
+      "m",
+      "W_B=0"
+     ],
+     [
+      "m",
+      "\\Delta K=q(V_a-V_b)\\ \\text{(electric part only)}"
+     ],
+     [
+      "p",
+      "The magnetic force does no work at any instant, so the kinetic energy change of a charge in combined fields equals the electric work alone. For an electron moving against the electric field, the electric force is forward and it speeds up; the potential-energy bookkeeping carries the sign of q."
+     ],
+     [
+      "why",
+      "Work-energy answers must separate the two field contributions; otherwise a zero magnetic work term gets lost in an incorrect potential formula."
+     ],
+     [
+      "trap",
+      "The magnetic force is not always zero when a particle is deflected; it is the work that is zero. Deflection and energy change are different questions."
+     ]
+    ]
+   },
+   {
+    "title": "A feel for the tesla",
+    "items": [
+     [
+      "m",
+      "1\\ \\mathrm T=1\\ \\mathrm{N\\,s\\,C^{-1}m^{-1}}"
+     ],
+     [
+      "m",
+      "B_\\oplus\\simeq50\\ \\mu\\mathrm T"
+     ],
+     [
+      "p",
+      "One tesla exerts one newton on one coulomb moving at one metre per second. The Earth field is about 50 microtesla (half a gauss), a strong bar magnet about 1 T at its face, an MRI 1.5 to 3 T. Because the coulomb is enormous, the tesla is too; everyday laboratory fields are microtesla to tesla."
+     ],
+     [
+      "why",
+      "Large unit scales explain why magnetic forces on single static charges are hard to see yet forces on wire currents are ordinary."
+     ],
+     [
+      "trap",
+      "Gauss and tesla mix-ups are common: 1 G = 1e-4 T. Convert before comparing with the Earth field."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 2,
+  "slug": "JEE-02-circle",
+  "title": "Circles and helices: the clock that ignores the speed",
+  "subtitle": "Uniform B; v not parallel to B; nonrelativistic mass m.",
+  "source": "Source \u00a73.3; C3; E2-E3",
+  "diagrams": [
+   "circle-a",
+   "circle-b"
+  ],
+  "takeaway": "A charge perpendicular to uniform B circles with radius mv/qB and a period set only by q/m and B; speed changes the radius, never the time.",
+  "cards": [
+   {
+    "title": "The circle from the force",
+    "items": [
+     [
+      "m",
+      "r=\\frac{mv_\\perp}{|q|B},\\qquad \\omega_c=\\frac{|q|B}{m},\\qquad T=\\frac{2\\pi m}{|q|B}"
+     ],
+     [
+      "p",
+      "The magnetic force supplies exactly the centripetal force: |q|vB = mv\u00b2/r gives the radius. The period equals circumference over speed, so the speed cancels: a faster particle runs a proportionally larger circle in the same time. The cyclotron frequency omega_c depends only on the charge-to-mass ratio and the field."
+     ],
+     [
+      "why",
+      "This speed-independent period is the single most useful fact of the chapter: cyclotrons, mass spectrometers and magnetic resonance all rest on it."
+     ],
+     [
+      "trap",
+      "Use the perpendicular component of velocity in r. Putting the full speed of a helix into the radius is the commonest error in trajectory problems."
+     ]
+    ]
+   },
+   {
+    "title": "Sense of rotation and the charge sign",
+    "items": [
+     [
+      "m",
+      "\\boldsymbol{\\omega_c}\\ \\text{from}\\ q\\,\\mathbf v\\times\\mathbf B"
+     ],
+     [
+      "p",
+      "With B out of the page a positive charge moving right is pushed down and circles clockwise; a negative charge under the same motion circles anticlockwise. Either way the circulating charge is a tiny current loop whose own field at its centre opposes B: free-charge gyration is diamagnetic."
+     ],
+     [
+      "why",
+      "Get the direction from the cross product with a fixed convention; the sign of q flips the sense after the cross product is drawn."
+     ],
+     [
+      "trap",
+      "Curl sense for electrons is not a separate left-hand rule; it is the same cross product with a minus sign applied last."
+     ]
+    ]
+   },
+   {
+    "title": "The helix",
+    "items": [
+     [
+      "m",
+      "v_\\parallel=v\\cos\\theta,\\quad v_\\perp=v\\sin\\theta"
+     ],
+     [
+      "m",
+      "p_{\\rm helix}=\\frac{2\\pi m v_\\parallel}{|q|B}"
+     ],
+     [
+      "p",
+      "An oblique entry separates into uniform motion along B and circular motion across it: a helix of radius r from v_perp and pitch = v_parallel times T. The circle lies in the plane perpendicular to B whatever the entry direction; the axis is along B. Theta is measured from B."
+     ],
+     [
+      "why",
+      "The two components never mix because each force component involves only the perpendicular velocity. Solving them separately avoids messy coupled equations."
+     ],
+     [
+      "trap",
+      "Pitch uses v_parallel and T together; do not use the full speed in either factor. A charge moving exactly along B travels in a straight line."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers to anchor",
+    "items": [
+     [
+      "m",
+      "e/m_e=1.76\\times10^{11}\\ \\mathrm{C/kg}"
+     ],
+     [
+      "m",
+      "f_e\\simeq28.0\\ \\mathrm{GHz/T}"
+     ],
+     [
+      "p",
+      "An electron at 10^6 m/s in 1 mT has r = 5.7 mm and T = 36 ns, f = 28 MHz. A 10 MeV proton in 1 T: v about 4.4e7 m/s, r = 0.46 m, f = 15.2 MHz. Proton cyclotron frequency is 15.2 MHz per tesla, the number built into every cyclotron and MRI scanner."
+     ],
+     [
+      "why",
+      "Order-of-magnitude anchors catch unit slips: a computed electron gyroradius of metres in a modest field is wrong."
+     ],
+     [
+      "trap",
+      "The proton spin precession frequency, 42.6 MHz per tesla, is a different constant from the orbital cyclotron frequency; resonance questions must say which one they mean."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 3,
+  "slug": "JEE-03-selector",
+  "title": "Parallel and crossed fields: the velocity selector",
+  "subtitle": "Uniform static E and B; crossed means perpendicular; v not relativistic.",
+  "source": "Source \u00a73.4; C4; E4",
+  "diagrams": [
+   "selector-a",
+   "selector-b"
+  ],
+  "takeaway": "In crossed fields only particles with speed v = E/B pass undeflected, of either sign and any mass.",
+  "cards": [
+   {
+    "title": "The balance condition",
+    "items": [
+     [
+      "m",
+      "qE=qvB\\ \\Rightarrow\\ v=\\frac{E}{B}"
+     ],
+     [
+      "p",
+      "With E along +y and B along +z, a charge moving along +x feels the electric force qE along y and the magnetic force -qvB along y: the two are antiparallel whatever the sign of q because both flip together. They cancel at v = E/B. Slower particles bend towards the electric force side, faster ones the other way."
+     ],
+     [
+      "why",
+      "The condition loses both q and m, so the selector hands downstream apparatus a single speed without caring what it filters."
+     ],
+     [
+      "trap",
+      "The selector is for crossed fields only. If E has a component along B, the condition does not apply to that component."
+     ]
+    ]
+   },
+   {
+    "title": "Why sign and mass drop out",
+    "items": [
+     [
+      "m",
+      "\\frac{F_E}{F_B}=\\frac{E}{vB}"
+     ],
+     [
+      "m",
+      "\\text{no }q,\\ \\text{no }m"
+     ],
+     [
+      "p",
+      "Both forces are proportional to q, so equality never depends on the sign or size of the charge. Neither force contains m, so heavy and light particles are selected identically. This is exactly why the selector pairs with a mass spectrometer: the spectrometer then measures m/q from the radius of one known speed."
+     ],
+     [
+      "why",
+      "A clean experimental chain separates speed selection from mass analysis; combining them corrupts the inference."
+     ],
+     [
+      "trap",
+      "For a beam of mixed species the selector transmits all with v = E/B; it does not purify charge or mass."
+     ]
+    ]
+   },
+   {
+    "title": "Field along the motion",
+    "items": [
+     [
+      "m",
+      "\\mathbf E\\parallel\\mathbf B:\\ \\text{helix of stretching pitch}"
+     ],
+     [
+      "p",
+      "With E parallel to B the electric force accelerates along the field and the magnetic force only turns the perpendicular velocity. The result is a helix whose pitch grows or shrinks as v_parallel changes: a screw with a stretching thread. Radius is set by the (constant) perpendicular speed."
+     ],
+     [
+      "why",
+      "Parallel and crossed configurations must be recognised before computing; they ask different decompositions."
+     ],
+     [
+      "trap",
+      "Do not apply v = E/B to a parallel configuration; there the charge simply accelerates and the speed is not constant."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "E=10^5\\ \\mathrm{V/m},\\ B=0.10\\ \\mathrm T\\ \\Rightarrow\\ v=10^6\\ \\mathrm{m/s}"
+     ],
+     [
+      "p",
+      "One hundred thousand volts per metre crossed with a tenth of a tesla selects one million metres per second. The region is usually a few centimetres long, so the transit time is tens of nanoseconds and stray fields at the entrance matter."
+     ],
+     [
+      "why",
+      "Checking the selected speed against the intended beam energy catches wiring or unit errors before the run."
+     ],
+     [
+      "trap",
+      "Real selectors have fringing fields at their ends; the ideal balance applies deep inside the crossed region."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 4,
+  "slug": "JEE-04-regions",
+  "title": "The three-region method",
+  "subtitle": "Field piecewise uniform in bounded regions; particle enters from outside.",
+  "source": "Source \u00a73.5; T2; E5; Q39-Q40",
+  "diagrams": [
+   "regions-a",
+   "regions-b"
+  ],
+  "takeaway": "Mark the regions, draw an arc of radius r in each, and take the time from the angle turned, not from the full period.",
+  "cards": [
+   {
+    "title": "The protocol",
+    "items": [
+     [
+      "m",
+      "r=\\frac{mv_\\perp}{|q|B},\\qquad t=\\frac{\\varphi m}{|q|B}"
+     ],
+     [
+      "p",
+      "In each uniform-field region the path is a circular arc centred on the perpendicular to v at the entry point, a distance r to the side the force points. Where the arc meets the boundary fixes the exit point; the tangent there is the exit direction; the angle varphi turned gives the time inside. Only a full circle takes one period."
+     ],
+     [
+      "why",
+      "Most exam trajectories are exactly this: geometry plus one radius formula. The perpendicular-at-entry construction fixes the centre without solving differential equations."
+     ],
+     [
+      "trap",
+      "Fringing at a magnet edge breaks uniformity; if the field varies strongly over the orbit use the mirror picture instead."
+     ]
+    ]
+   },
+   {
+    "title": "A strip of field",
+    "items": [
+     [
+      "m",
+      "r>d:\\ \\sin\\varphi=d/r"
+     ],
+     [
+      "m",
+      "r\\le d:\\ t=\\pi m/|q|B,\\ \\text{exit }2r\\ \\text{away}"
+     ],
+     [
+      "p",
+      "A particle entering perpendicular to a strip of width d crosses if r exceeds d, turning through arcsin(d/r) and leaving displaced sideways by r(1-cos varphi). If r is smaller it never reaches the far edge: it turns through 180 degrees and comes back out the entry face after exactly half a period, displaced by 2r. The borderline r = d is the minimum-speed question v_min = qBd/m."
+     ],
+     [
+      "why",
+      "The crossing condition and the return condition cover both exam families; check which regime the numbers give before computing angles."
+     ],
+     [
+      "trap",
+      "The time in the strip is never the full period unless the particle closes a whole circle. For a half turn the time is exactly pi m/qB."
+     ]
+    ]
+   },
+   {
+    "title": "A circular region",
+    "items": [
+     [
+      "m",
+      "\\tan(\\varphi/2)=R/r\\ \\text{for radial entry}"
+     ],
+     [
+      "p",
+      "Entering a circular field region radially, symmetry makes the exit radial too: the arc centre, the entry point and the region centre form a right-angled figure with tan(varphi/2) = R/r. For r = R the deflection is a right angle. The result is geometry, not a new force law."
+     ],
+     [
+      "why",
+      "Radial entry is the special case that makes the deflection clean; off-radial entry needs the full three-step construction."
+     ],
+     [
+      "trap",
+      "Radial exit is guaranteed only for radial entry. Do not impose the symmetry when the beam enters off-axis."
+     ]
+    ]
+   },
+   {
+    "title": "Worked numbers",
+    "items": [
+     [
+      "m",
+      "p\\ \\text{at}\\ 2\\times10^6\\ \\mathrm{m/s}\\ \\text{in}\\ 0.30\\ \\mathrm T:\\ r=6.96\\ \\mathrm{cm}"
+     ],
+     [
+      "p",
+      "Protons crossing a 5.0 cm strip: r exceeds d so they cross, turning 46 degrees in 28 ns (against a 219 ns full period) and displaced 2.1 cm sideways. Halve the speed and r halves to 3.48 cm: they turn back and exit 7.0 cm along the entry face after 109 ns, exactly half a period."
+     ],
+     [
+      "why",
+      "Same field, same particle, two regimes from one speed change: always compare r with d first."
+     ],
+     [
+      "trap",
+      "A 46 degree deflection is not 46 degrees of a full circle in time: use t = varphi m/qB with varphi in radians."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 5,
+  "slug": "JEE-05-spectrometer",
+  "title": "The mass spectrometer",
+  "subtitle": "Ions accelerated through known V; uniform B; semicircular entry perpendicular to B.",
+  "source": "Source \u00a73.6; E6; Q20",
+  "diagrams": [
+   "spectrometer-a",
+   "spectrometer-b"
+  ],
+  "takeaway": "Heavier ions land farther out: radius measures the square root of mass for fixed q, V and B.",
+  "cards": [
+   {
+    "title": "From acceleration to radius",
+    "items": [
+     [
+      "m",
+      "\\tfrac12mv^2=qV,\\quad r=\\frac{mv}{qB}=\\frac1B\\sqrt{\\frac{2mV}{q}}"
+     ],
+     [
+      "p",
+      "Ions accelerated from rest through voltage V reach v = sqrt(2qV/m); the field then bends them into a circle whose radius carries both m and q. The detector sees the diameter 2r, so mass differences become distance differences: r is proportional to sqrt(m) at fixed q."
+     ],
+     [
+      "why",
+      "Eliminating the speed between the energy and radius equations leaves a purely measurable relation among V, B, r and m/q."
+     ],
+     [
+      "trap",
+      "This r uses the speed from the accelerating voltage only if the ion started from rest and V is the total drop. Double acceleration needs the summed voltage."
+     ]
+    ]
+   },
+   {
+    "title": "Isotope separation",
+    "items": [
+     [
+      "m",
+      "\\frac{\\Delta r}{r}=\\frac12\\frac{\\Delta m}{m}"
+     ],
+     [
+      "m",
+      "\\frac{r_1}{r_2}=\\sqrt{\\frac{m_1}{m_2}}"
+     ],
+     [
+      "p",
+      "Small mass differences halve in fractional radius, so resolution is limited by how narrowly the beam is defined, not by the formula. Singly charged uranium-235 and -238 at 10 kV in 0.50 T: radii 0.441 and 0.444 m, arriving 5.6 mm apart after their semicircles."
+     ],
+     [
+      "why",
+      "Half-relative-mass scaling is the working rule for estimating whether two isotopes resolve."
+     ],
+     [
+      "trap",
+      "The separation at the detector is twice the radius difference, because each beam completes a half circle. Do not quote Delta r as the spot spacing."
+     ]
+    ]
+   },
+   {
+    "title": "With a velocity selector",
+    "items": [
+     [
+      "m",
+      "v=E/B_1,\\qquad r=\\frac{mE}{qB_1B_2}"
+     ],
+     [
+      "p",
+      "Bainbridge put a selector before the magnet: the ions then all have speed E/B1 regardless of how they were produced, and r is linear in m rather than its square root. The two instruments measure different things; combining them cleanly separates the variables."
+     ],
+     [
+      "why",
+      "Linearity in m simplifies calibration; the square-root form is for the pure acceleration design."
+     ],
+     [
+      "trap",
+      "A selector narrows speed but transmits every mass at that speed; the second field is still needed to separate them."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers and validity",
+    "items": [
+     [
+      "m",
+      "m=235u:\\ r=0.441\\ \\mathrm m"
+     ],
+     [
+      "m",
+      "\\Delta(2r)=5.6\\ \\mathrm{mm}"
+     ],
+     [
+      "p",
+      "Atomic mass unit 1.66e-27 kg; charge one elementary charge. The ions travel metres in modest vacuum; collisions with residual gas scatter the beam and set the practical resolution. Relativistic mass increase is negligible at 10 keV per nucleon."
+     ],
+     [
+      "why",
+      "Checking that Delta m/m is small validates the half-relative approximation before using it."
+     ],
+     [
+      "trap",
+      "For molecular ions with different charge states, q must come from the ion source settings; equal m does not mean equal r."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 6,
+  "slug": "JEE-06-cyclotron",
+  "title": "The cyclotron: a resonance machine",
+  "subtitle": "Uniform B between two hollow dees; alternating gap voltage; nonrelativistic ions.",
+  "source": "Source \u00a73.7; E7; P24, P28",
+  "diagrams": [
+   "cyclotron-a",
+   "cyclotron-b"
+  ],
+  "takeaway": "Because the period ignores speed, a fixed-frequency gap voltage accelerates every turn until the ion leaves at the dee radius.",
+  "cards": [
+   {
+    "title": "Resonance condition",
+    "items": [
+     [
+      "m",
+      "f=\\frac{qB}{2\\pi m}"
+     ],
+     [
+      "m",
+      "K_{\\max}=\\frac{q^2B^2R^2}{2m}"
+     ],
+     [
+      "p",
+      "The ion coasts on semicircles inside the dees where the field acts and is kicked by qV0 each gap crossing. If the voltage has reversed in exactly one half period, every crossing adds energy. The spiral grows in radius, not in period. Final energy is set by B and dee radius R; a smaller V0 only means more turns."
+     ],
+     [
+      "why",
+      "Fixed frequency works only because T is speed-independent; that is the whole machine in one sentence."
+     ],
+     [
+      "trap",
+      "Relativity breaks the fixed period by the factor gamma, which is why classical cyclotrons stop at tens of MeV for protons and never worked for electrons."
+     ]
+    ]
+   },
+   {
+    "title": "Turns and timing",
+    "items": [
+     [
+      "m",
+      "N_{\\rm turns}=\\frac{K_{\\max}}{2qV_0},\\qquad t=N/f"
+     ],
+     [
+      "p",
+      "Each full revolution gains 2qV0. Protons in 1.5 T with R = 0.50 m reach 27 MeV: resonance 22.9 MHz, about 270 turns at 50 kV gap amplitude, 12 microseconds total flight, a path of roughly 250 m."
+     ],
+     [
+      "why",
+      "Turn count and total time are separate outputs; a high-voltage machine is compact in time but not in energy."
+     ],
+     [
+      "trap",
+      "Energy per turn is 2qV0, not qV0: two gap crossings per revolution."
+     ]
+    ]
+   },
+   {
+    "title": "Focusing and size",
+    "items": [
+     [
+      "m",
+      "K_{\\max}\\propto B^2R^2"
+     ],
+     [
+      "m",
+      "\\gamma=1+K/mc^2"
+     ],
+     [
+      "p",
+      "A perfectly uniform field lets ions drift out of the mid-plane; a field decreasing slightly with radius bends field lines and pushes strays back, the same physics as magnetic mirroring. Doubling the maximum energy needs four times the pole area at the same B. At 27 MeV the proton mass has already grown 3 per cent."
+     ],
+     [
+      "why",
+      "Scaling laws decide machine design before any detailed orbit calculation; pole area is the expensive part."
+     ],
+     [
+      "trap",
+      "The size scaling is in B\u00b2R\u00b2, so doubling B at fixed R quadruples the energy; quoting only V0 misses the physics entirely."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers check",
+    "items": [
+     [
+      "m",
+      "f_p=15.2\\ \\mathrm{MHz/T}"
+     ],
+     [
+      "m",
+      "K=27\\ \\mathrm{MeV}\\ \\text{at}\\ 1.5\\ \\mathrm T,\\ R=0.5\\ \\mathrm m"
+     ],
+     [
+      "p",
+      "Proton cyclotron frequency 15.2 MHz per tesla; electron 28.0 GHz per tesla. The maximum kinetic energy 27 MeV equals (eBR)\u00b2/2m with eBR = 1.2e-19 in SI. Comparing with m_p c\u00b2 = 938 MeV gives the relativistic correction 2.9 per cent at that energy."
+     ],
+     [
+      "why",
+      "Anchoring the frequency per tesla and the energy formula catches most cyclotron exam slips."
+     ],
+     [
+      "trap",
+      "Electrons are ultrarelativistic in any cyclotron-sized orbit; their machines are synchrotrons or linacs, not classical cyclotrons."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 7,
+  "slug": "JEE-07-mirror",
+  "title": "Magnetic mirrors, bottles and adiabatic invariance",
+  "subtitle": "Field varying slowly over one gyration; converging field lines; single particle.",
+  "source": "Source \u00a73.8; C12; Q47",
+  "diagrams": [
+   "mirror-a",
+   "mirror-b"
+  ],
+  "takeaway": "In a slowly converging field the quantity mv_perp\u00b2/2B is conserved, so a particle reflects where the field is strong enough.",
+  "cards": [
+   {
+    "title": "Why the force points to weaker field",
+    "items": [
+     [
+      "m",
+      "F_z=-\\mu\\frac{\\partial B}{\\partial z},\\qquad \\mu=\\frac{mv_\\perp^2}{2B}"
+     ],
+     [
+      "p",
+      "Where field lines converge, divergence-free B gives a small radial component B_r = -(r/2) dB/dz. The azimuthal velocity crossed with B_r pushes along the axis towards weaker field, for either sign of charge because sense of gyration and sign flip together. The particle behaves as a dipole of moment mu in a gradient."
+     ],
+     [
+      "why",
+      "The gradient force is the magnetic analogue of the electric dipole gradient force; the same number mu is the circulating charge of the gyromagnetic section."
+     ],
+     [
+      "trap",
+      "The push is towards weaker field for every charge sign. Reversing q reverses the gyration sense as well, not the net drift direction."
+     ]
+    ]
+   },
+   {
+    "title": "The adiabatic invariant",
+    "items": [
+     [
+      "m",
+      "\\mu=\\frac{mv_\\perp^2}{2B}=\\text{const}"
+     ],
+     [
+      "m",
+      "B_{\\rm mirror}=\\frac{B_0}{\\sin^2\\theta_0}"
+     ],
+     [
+      "p",
+      "Magnetic force does no work so total kinetic energy is fixed; as v_perp grows with B the parallel energy shrinks. Writing the perpendicular energy as mu B and tracking the exchange shows mu itself is constant when B changes little per orbit. Reflection happens where all energy is perpendicular: at B = B0/sin\u00b2(theta0)."
+     ],
+     [
+      "why",
+      "An invariant replaces solving the orbit: it converts a trajectory problem into two energy statements."
+     ],
+     [
+      "trap",
+      "Adiabatic invariance fails in sharply varying fields such as a pole edge; use the three-region construction there instead."
+     ]
+    ]
+   },
+   {
+    "title": "Bottles and the loss cone",
+    "items": [
+     [
+      "m",
+      "\\sin^2\\theta_0>\\frac{B_0}{B_{\\max}}\\ \\text{trapped}"
+     ],
+     [
+      "m",
+      "\\theta_{\\rm lc}=\\arcsin\\sqrt{B_0/B_{\\max}}"
+     ],
+     [
+      "p",
+      "Between two mirrors a particle is trapped when its pitch angle is large enough that reflection comes before the throat. Particles inside the loss cone of half-angle theta_lc escape; for mirror ratio 10 the cone is 18 degrees. The Earth field is such a bottle: trapped particles bounce pole to pole, and those in the loss cone make the aurora."
+     ],
+     [
+      "why",
+      "Loss-cone physics is the same for fusion mirror machines and the Van Allen belts: different machines, one geometry."
+     ],
+     [
+      "trap",
+      "Collisions scatter particles into the loss cone over time; a static bottle is never perfectly confining."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "B_{\\max}/B_0=10:\\ \\theta_{\\rm lc}=18^\\circ"
+     ],
+     [
+      "m",
+      "\\mu\\ \\text{of a }1\\ \\mathrm{MeV}\\ p"
+     ],
+     [
+      "p",
+      "A 1 MeV proton mirroring in 31 microtesla has mu = K_perp/B of order 1e-13 A m\u00b2 when perpendicular; the guiding-centre radius 37 km is tiny against planetary scales, which validates the averaging."
+     ],
+     [
+      "why",
+      "Separation of scales is what makes the invariant useful; check r_grad much less than B before applying it."
+     ],
+     [
+      "trap",
+      "The invariant is of the motion averaged over one gyration, not of the instantaneous gyro-phase orbit."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 8,
+  "slug": "JEE-08-hall",
+  "title": "The Hall effect",
+  "subtitle": "Flat conductor; steady current; uniform transverse B; carrier density n of one sign.",
+  "source": "Source \u00a73.9; E8; P25, P33",
+  "diagrams": [
+   "hall-a",
+   "hall-b"
+  ],
+  "takeaway": "The polarity of the Hall voltage reveals the sign of the carriers; the size counts them.",
+  "cards": [
+   {
+    "title": "The balance that makes the voltage",
+    "items": [
+     [
+      "m",
+      "qE_H=qv_dB,\\qquad V_H=\\frac{IB}{nqt}"
+     ],
+     [
+      "p",
+      "Carriers drifting along the current are pushed sideways by q v_d cross B and pile up on one edge until their transverse electric field balances the magnetic push. The steady Hall field is v_d B, and across the width w the voltage is IB/(nqt) with t the thickness along B."
+     ],
+     [
+      "why",
+      "Hall voltage is a transverse equilibrium, not an extra resistance; the field builds until the net transverse force vanishes."
+     ],
+     [
+      "trap",
+      "Thickness is along B, width is across the voltage. Swapping them inserts the wrong dimension and can give voltages a factor of ten large."
+     ]
+    ]
+   },
+   {
+    "title": "Carrier sign: one edge, two stories",
+    "items": [
+     [
+      "m",
+      "V_H\\ \\text{polarity}=\\text{carrier sign}"
+     ],
+     [
+      "m",
+      "R_H=\\frac{1}{nq}"
+     ],
+     [
+      "p",
+      "Positive carriers drifting with the current and negative carriers drifting against it are both pushed to the same edge, because q v_d is the same vector either way. But positive carriers make that edge positive and electrons make it negative: the voltmeter polarity reads the sign. Zinc, cadmium and p-type semiconductors conduct by holes \u2014 this is how it was learned."
+     ],
+     [
+      "why",
+      "One geometric fact (same edge) plus one bookkeeping fact (edge sign) covers every Hall question."
+     ],
+     [
+      "trap",
+      "Do not say electrons and holes go to opposite edges. Same edge, opposite voltage sign."
+     ]
+    ]
+   },
+   {
+    "title": "What the magnitude measures",
+    "items": [
+     [
+      "m",
+      "V_H=\\frac{IB}{nqt}"
+     ],
+     [
+      "m",
+      "\\mu_m=\\frac{\\sigma}{ne}=\\sigma R_H"
+     ],
+     [
+      "p",
+      "Combining Hall voltage with conductivity gives the mobility. Copper at 10 A in 1.0 T with n = 8.5e28 gives only 0.73 microvolts, while an n-type wafer with n = 1e21 at 10 mA in 0.50 T gives 0.31 V. The ratio is the carrier-density ratio: Hall sensors are semiconductors for exactly this reason."
+     ],
+     [
+      "why",
+      "Hall probes dominate magnetic sensing because low carrier density multiplies the signal."
+     ],
+     [
+      "trap",
+      "Hall coefficient sign is 1/nq with q signed; a positive R_H means dominant positive carriers, not a positive charge density in metals."
+     ]
+    ]
+   },
+   {
+    "title": "Geometry and numbers",
+    "items": [
+     [
+      "m",
+      "V_H=\\frac{IB}{nqt}"
+     ],
+     [
+      "m",
+      "n=8.5\\times10^{28}\\ \\mathrm{m^{-3}\\ (Cu)}"
+     ],
+     [
+      "p",
+      "Microvolt copper signals need lock-in amplification; volt-level semiconductor signals do not. Multi-band metals can show odd behaviour because both carrier types contribute; the simple formula assumes one type. Ordinary laboratory fields and currents give Hall voltages from microvolts to volts."
+     ],
+     [
+      "why",
+      "Keeping one carrier model explicit states the assumption; two-carrier Hall is the extension."
+     ],
+     [
+      "trap",
+      "A reading of zero Hall voltage does not mean zero field: it can mean equal mixed carriers."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 9,
+  "slug": "JEE-09-drifts",
+  "title": "Drifts and the cycloid",
+  "subtitle": "Crossed uniform E and B; or weak gradients with r grad B much less than B.",
+  "source": "Source \u00a73.10; C14; Q47-Q48",
+  "diagrams": [
+   "drifts-a",
+   "drifts-b"
+  ],
+  "takeaway": "In crossed fields the guiding centre drifts at E cross B over B squared, the same velocity for every charge and mass.",
+  "cards": [
+   {
+    "title": "Drift by force balance",
+    "items": [
+     [
+      "m",
+      "\\mathbf v_d=\\frac{\\mathbf E\\times\\mathbf B}{B^2},\\qquad v_d=\\frac{E}{B}"
+     ],
+     [
+      "p",
+      "A velocity perpendicular to both fields makes the net force vanish: q(E + v_d cross B) = 0 solves to v_d = E/B. No q and no m appear, so electrons and ions drift together, which is why the drift carries no current in a neutral plasma."
+     ],
+     [
+      "why",
+      "The E cross B drift is a motion of the whole guiding centre, not a charge-selective force."
+     ],
+     [
+      "trap",
+      "Never call the drift a force. It is a velocity, and it is identical for opposite charges moving in opposite gyration senses."
+     ]
+    ]
+   },
+   {
+    "title": "The cycloid from rest",
+    "items": [
+     [
+      "m",
+      "x=\\frac EB\\left(t-\\frac{\\sin\\omega_ct}{\\omega_c}\\right),\\quad y=\\frac{E}{B\\omega_c}(1-\\cos\\omega_ct)"
+     ],
+     [
+      "p",
+      "In the drifting frame the particle simply circles at speed E/B; back in the lab that circle is carried along: a rolling-wheel cycloid with cusps if the particle started from rest. The arch height is 2r_c = 2mE/qB\u00b2, the peak speed 2E/B, and the energy budget qE times height matches the peak kinetic energy exactly."
+     ],
+     [
+      "why",
+      "The drifting frame solves crossed-field orbits in one line; integrating the lab equations of motion reproduces the same curve."
+     ],
+     [
+      "trap",
+      "The full speed at the arch top is 2E/B, twice the drift; energy checks must use the true speed, not v_d."
+     ]
+    ]
+   },
+   {
+    "title": "Gradient and curvature drifts",
+    "items": [
+     [
+      "m",
+      "\\mathbf v_{\\nabla B}=\\pm\\frac{v_\\perp r_c}{2}\\frac{\\mathbf B\\times\\nabla B}{B^2}"
+     ],
+     [
+      "p",
+      "Where B is stronger on one side, the orbit radius shrinks there and the guiding centre creeps sideways, perpendicular to both B and the gradient. The sign depends on the charge, so this drift separates charges and drives ring currents; the averaged force is -mu grad B, the same mirror force."
+     ],
+     [
+      "why",
+      "Gradient drift is charge-selective unlike E cross B drift; planetary ring currents and plasmas separate charge because of it."
+     ],
+     [
+      "trap",
+      "Only the perpendicular velocity drifts; particles with parallel motion can also pick up curvature drift, a second comparable term."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "E=10^4\\ \\mathrm{V/m},\\ B=0.1\\ \\mathrm T:\\ v_d=10^5\\ \\mathrm{m/s}"
+     ],
+     [
+      "p",
+      "An electron released from rest has r_c = 5.7 micrometres and rises 11 micrometres per arch; a proton on the same fields drifts at the same 10^5 m/s with a 1.0 cm gyroradius, 1836 times larger. Drift speeds are comparable to common plasma flows; gyroradii span micrometres to kilometres."
+     ],
+     [
+      "why",
+      "Comparing electron and ion scales separates the fast gyration from the slow common drift."
+     ],
+     [
+      "trap",
+      "Proton and electron arch heights differ by the mass ratio even though the drift matches; do not transfer one orbit size to the other."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 10,
+  "slug": "JEE-10-tracks",
+  "title": "Reading tracks: Thomson, momentum and detectors",
+  "subtitle": "Nonrelativistic where stated; known E and B; deflections small unless solved exactly.",
+  "source": "Source \u00a7\u00a73.11-3.12; T6; E10",
+  "diagrams": [
+   "tracks-a",
+   "tracks-b"
+  ],
+  "takeaway": "Trajectories measure q/m or momentum: the 300 Br rule converts curvature to momentum at any speed.",
+  "cards": [
+   {
+    "title": "Thomson crossed fields",
+    "items": [
+     [
+      "m",
+      "\\frac{q}{m}=\\frac{2yE}{B^2L^2}"
+     ],
+     [
+      "p",
+      "An electron beam first deflected by E alone then balanced by crossed B gives the classic e/m measurement: the electric deflection y over plates of length L at speed v = E/B eliminates v and leaves q/m = 2yE/(B\u00b2L\u00b2). Thomson measured it for cathode rays in 1897 and identified the electron."
+     ],
+     [
+      "why",
+      "This is the velocity selector used twice: once to know the speed, once to balance the deflection."
+     ],
+     [
+      "trap",
+      "The formula assumes small deflection and the selector speed throughout; large angles need circular-orbit geometry."
+     ]
+    ]
+   },
+   {
+    "title": "Momentum from curvature",
+    "items": [
+     [
+      "m",
+      "\\frac{p}{q}=Br,\\qquad p[\\mathrm{MeV}/c]=300\\,B[\\mathrm T]\\,r[\\mathrm m]"
+     ],
+     [
+      "p",
+      "A charged particle of momentum p in field B curves with radius r = p/qB. This holds at any speed when p is the relativistic momentum: chambers measure momentum, not energy. The 300 Br rule with r in metres and B in tesla gives MeV/c directly."
+     ],
+     [
+      "why",
+      "Detector physics is momentum physics; energy must be inferred with a mass hypothesis or a calorimeter."
+     ],
+     [
+      "trap",
+      "Converting p to kinetic energy needs the right regime: p\u00b2/2m nonrelativistic, pc approximately ultrarelativistic, and something in between otherwise."
+     ]
+    ]
+   },
+   {
+    "title": "Bending magnets and spectrometers",
+    "items": [
+     [
+      "m",
+      "\\Delta x\\simeq\\frac{qB^2L^2}{2m v^2}\\ \\text{(slab)}"
+     ],
+     [
+      "m",
+      "t=\\varphi m/qB"
+     ],
+     [
+      "p",
+      "In a bounded field region use the three-region method; in a thin lens approximation the impulse qBL over transit time gives the angular kick. Read a track by matching its curvature radius inside the field and the straight tangents outside."
+     ],
+     [
+      "why",
+      "Track reconstruction is the experimental form of the same circle geometry that exam strips ask for."
+     ],
+     [
+      "trap",
+      "Multiple scattering and field inhomogeneity set real resolution; ideal radius formulas overstate precision."
+     ]
+    ]
+   },
+   {
+    "title": "Scales of detectors",
+    "items": [
+     [
+      "m",
+      "e/m_e=1.76\\times10^{11}\\ \\mathrm{C/kg}"
+     ],
+     [
+      "m",
+      "B\\sim1\\ \\mathrm T,\\ r\\sim\\mathrm{m}\\Rightarrow p\\sim300\\ \\mathrm{MeV}/c"
+     ],
+     [
+      "p",
+      "A 1 GeV/c track in a 1 T field has radius 3.3 m \u2014 the scale of modern detector bores. Electron and positron tracks bend oppositely, allowing pair identification; neutral particles leave no track at all."
+     ],
+     [
+      "why",
+      "Knowing detector scales turns abstract formulas into estimates an examiner recognises as physically literate."
+     ],
+     [
+      "trap",
+      "Curvature fits near the end of a low-momentum track can fail as the particle loses energy; use the momentum at the point of measurement."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 11,
+  "slug": "JEE-11-biot",
+  "title": "Biot-Savart: the source law",
+  "subtitle": "Steady currents; vacuum; thin wires unless a density is specified.",
+  "source": "Source \u00a73.13; C6; T3",
+  "diagrams": [
+   "biot-a",
+   "biot-b"
+  ],
+  "takeaway": "Every magnetic field of steady currents comes from the Biot-Savart integral; symmetry may replace the integration but never the physics.",
+  "cards": [
+   {
+    "title": "The law",
+    "items": [
+     [
+      "m",
+      "d\\mathbf B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\mathbf l\\times\\hat{\\mathbf r}}{r^2}"
+     ],
+     [
+      "m",
+      "\\mathbf B=\\frac{\\mu_0}{4\\pi}\\int\\frac{I\\,d\\mathbf l\\times\\hat{\\mathbf r}}{r^2}"
+     ],
+     [
+      "p",
+      "Each current element contributes a field perpendicular to both the element and the line to the field point, falling as 1/r\u00b2. The constant mu0/4pi belongs to Biot-Savart; a 2pi in a final answer comes from the geometry, not the constant. Direction from the cross product; magnitude with the sine of the angle between element and r."
+     ],
+     [
+      "why",
+      "Superposition of vector elements is the universal method: any geometry can be cut into elements even when no symmetry shortcut exists."
+     ],
+     [
+      "trap",
+      "A straight segment whose line passes through the field point contributes nothing there \u2014 the cross product vanishes. This is not the same as a nearby semi-infinite wire."
+     ]
+    ]
+   },
+   {
+    "title": "From moving charge to wire",
+    "items": [
+     [
+      "m",
+      "\\mathbf B=\\frac{\\mu_0}{4\\pi}\\frac{q\\,\\mathbf v\\times\\hat{\\mathbf r}}{r^2}=\\frac{1}{c^2}\\,\\mathbf v\\times\\mathbf E"
+     ],
+     [
+      "p",
+      "A point charge q moving at v makes a field proportional to v cross r-hat: the magnetic field of a moving charge is its electric field crossed with v over c\u00b2. A wire is a parade of such charges; the current element I dl replaces q v. The identity B = v cross E over c\u00b2 previews the relativistic origin of magnetism."
+     ],
+     [
+      "why",
+      "The factor 1/c\u00b2 is why magnetic forces between ordinary charges are tiny compared with electric ones; wires are neutral so the electric part cancels and magnetism survives."
+     ],
+     [
+      "trap",
+      "The moving-charge form assumes v much less than c; it is a quasi-static field, not radiation."
+     ]
+    ]
+   },
+   {
+    "title": "Units and bookkeeping",
+    "items": [
+     [
+      "m",
+      "\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{T\\,m\\,A^{-1}}"
+     ],
+     [
+      "m",
+      "I\\,d\\mathbf l\\leftrightarrow q\\mathbf v"
+     ],
+     [
+      "p",
+      "Current elements I dl, surface currents K dA and volume currents J dV all enter the same integral. A rotating charged ring of charge Q at angular speed omega is a loop with I = Q omega / 2pi. Choose the substitution matching the dimensionality of the source."
+     ],
+     [
+      "why",
+      "One integral form covers wires, sheets and clouds; the measure is the only thing that changes."
+     ],
+     [
+      "trap",
+      "Density factors are not optional corrections: a line current has no area density to multiply in later."
+     ]
+    ]
+   },
+   {
+    "title": "What the constant is not",
+    "items": [
+     [
+      "m",
+      "\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{T\\,m\\,A^{-1}}"
+     ],
+     [
+      "m",
+      "\\mu_0\\varepsilon_0=1/c^2"
+     ],
+     [
+      "p",
+      "mu0 over 4pi is the Biot-Savart constant; mu0 over 2pi is the infinite-wire answer; mu0 over 4pi times 2 is the semi-infinite end field. The magnetic and electric constants are tied by mu0 eps0 = 1/c\u00b2: magnetism is relativity applied to moving charge."
+     ],
+     [
+      "why",
+      "Separating the three familiar factors prevents the commonest constant mix-up in wire problems."
+     ],
+     [
+      "trap",
+      "A formula quoting mu0/2pi is a finished wire result, never the starting constant."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 12,
+  "slug": "JEE-12-wire",
+  "title": "Straight wires: finite by angles",
+  "subtitle": "Thin straight conductor; field point perpendicular distance d from its line.",
+  "source": "Source \u00a73.14; C7; E11-E12",
+  "diagrams": [
+   "wire-a",
+   "wire-b"
+  ],
+  "takeaway": "A finite straight wire is integrated once by angles; the infinite answer is a limit of the same formula.",
+  "cards": [
+   {
+    "title": "Finite wire by end angles",
+    "items": [
+     [
+      "m",
+      "B=\\frac{\\mu_0I}{4\\pi d}(\\sin\\alpha+\\sin\\beta)"
+     ],
+     [
+      "p",
+      "For a wire segment, the perpendicular distance d to the field point and the end angles alpha, beta measured at the point between the perpendicular and the ends give the field magnitude mu0 I (sin alpha + sin beta)/4 pi d. Both sines are positive when the point is beside the segment and the perpendicular foot lies inside it."
+     ],
+     [
+      "why",
+      "The angle method collapses the Biot-Savart integral in one step; extending angles beyond the foot uses signed sines."
+     ],
+     [
+      "trap",
+      "If the perpendicular foot falls outside the segment one sine enters with a minus sign. Blindly adding two positive sines doubles a contribution that should subtract."
+     ]
+    ]
+   },
+   {
+    "title": "Limits",
+    "items": [
+     [
+      "m",
+      "\\alpha=\\beta\\to90^\\circ:\\ B=\\frac{\\mu_0I}{2\\pi d}"
+     ],
+     [
+      "m",
+      "\\text{semi-infinite end}:\\ \\frac{\\mu_0I}{4\\pi d}"
+     ],
+     [
+      "p",
+      "Both angles 90 degrees give the infinite wire, the classic mu0 I / 2 pi d. A semi-infinite wire with the field point level with its end has one angle 90 and one zero: half the infinite field. At the end of a wire the perpendicular foot is exactly at the end, the marginal case."
+     ],
+     [
+      "why",
+      "The three formulas differ by factors of two that come from geometry; recognising which applies is the exam skill."
+     ],
+     [
+      "trap",
+      "mu0 I / 4 pi d is not the finite-wire formula evaluated carelessly; it is the specific end-on limit."
+     ]
+    ]
+   },
+   {
+    "title": "Compound wires add as vectors",
+    "items": [
+     [
+      "m",
+      "\\mathbf B_{\\rm total}=\\sum_i\\mathbf B_i"
+     ],
+     [
+      "m",
+      "\\text{straight through P: }B_i=0"
+     ],
+     [
+      "p",
+      "A bent wire is a set of straight pieces; each piece contributes by its own angles and direction, and the fields add as vectors. Any straight piece whose line passes through P contributes exactly zero there. A square loop at its centre is four such pieces; the leads of a circular coil often vanish."
+     ],
+     [
+      "why",
+      "Superposition with the zero-contribution rule removes most of the algebra from compound figures."
+     ],
+     [
+      "trap",
+      "A gap in a wire is not the same as the full wire minus nothing: model it as full plus a negative piece or as the two remaining segments."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "I=10\\ \\mathrm A,\\ d=10\\ \\mathrm{cm}:\\ B=20\\ \\mu\\mathrm T"
+     ],
+     [
+      "m",
+      "\\text{Earth}\\simeq50\\ \\mu\\mathrm T"
+     ],
+     [
+      "p",
+      "Ten amps ten centimetres away makes a field comparable to the Earth: the reason lab wiring deflects compasses. A square of side a carries B = 2 sqrt(2) mu0 I / pi a at its centre; a regular n-gon approaches the loop answer mu0 I / 2R from below as n grows."
+     ],
+     [
+      "why",
+      "Comparing with the Earth field immediately tells whether a geometry is a serious magnetic disturbance."
+     ],
+     [
+      "trap",
+      "Currents near compass measurements need magnetic hygiene: the wire field falls only as 1/d."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 13,
+  "slug": "JEE-13-loop",
+  "title": "Loops and arcs",
+  "subtitle": "Thin circular wire of radius R; field point at centre or on axis.",
+  "source": "Source \u00a73.15; E13; Q11-Q12",
+  "diagrams": [
+   "loop-a",
+   "loop-b"
+  ],
+  "takeaway": "A full loop gives mu0 I / 2R at its centre; an arc scales with its angle; the axis is one clean integral.",
+  "cards": [
+   {
+    "title": "Centre field and arcs",
+    "items": [
+     [
+      "m",
+      "B_{\\rm centre}=\\frac{\\mu_0I}{2R}"
+     ],
+     [
+      "m",
+      "B_{\\rm arc}=\\frac{\\mu_0I\\theta_0}{4\\pi R}"
+     ],
+     [
+      "p",
+      "At the centre every element is perpendicular to its radius, so the integral is just the circumference: mu0 I / 2R. An arc of angle theta0 (radians) is that fraction of a loop: mu0 I theta0 / 4 pi R. Straight pieces whose lines pass through the centre contribute nothing."
+     ],
+     [
+      "why",
+      "Arc results follow from the loop by proportion; recompute nothing."
+     ],
+     [
+      "trap",
+      "Theta0 must be in radians. A semicircle is pi, giving mu0 I / 4R, not 180 times anything."
+     ]
+    ]
+   },
+   {
+    "title": "The axial field",
+    "items": [
+     [
+      "m",
+      "B_x=\\frac{\\mu_0IR^2}{2(R^2+x^2)^{3/2}}"
+     ],
+     [
+      "p",
+      "Each element on the ring is at distance s = sqrt(R\u00b2+x\u00b2) from the point on the axis; the perpendicular components cancel by symmetry and the axial projections add with factor R/s. At x = 0 this is mu0 I / 2R; far away it falls as 1/x\u00b3, the dipole law of the next section."
+     ],
+     [
+      "why",
+      "The axial formula is exact on the axis and the bridge to dipole fields; off axis there is no elementary closed form."
+     ],
+     [
+      "trap",
+      "Quoting mu0 I / 2R off the centre is wrong; the axis formula reduces to it only at x = 0."
+     ]
+    ]
+   },
+   {
+    "title": "The peak of the on-axis field",
+    "items": [
+     [
+      "m",
+      "\\frac{d}{dx}\\left[\\frac{R^2}{(R^2+x^2)^{3/2}}\\right]=0\\ \\text{at}\\ x=0\\ \\text{(centre)}"
+     ],
+     [
+      "p",
+      "For a single loop the axial field is maximum at the centre and decreases both ways. Two coaxial loops can make a flat region where the second derivative vanishes \u2014 the Helmholtz construction of the extension section. Multiple turns multiply the field by N without changing the shape."
+     ],
+     [
+      "why",
+      "Field shape questions are calculus questions: study the derivatives of the axial formula, not just its value."
+     ],
+     [
+      "trap",
+      "A maximum of B on axis is not automatically a point of zero gradient of the vector field; stability questions need the full components."
+     ]
+    ]
+   },
+   {
+    "title": "Turns, n-gons and compound loops",
+    "items": [
+     [
+      "m",
+      "B_N=N\\frac{\\mu_0I}{2R}"
+     ],
+     [
+      "m",
+      "B_{n\\text{-gon}}\\to\\frac{\\mu_0I}{2R}"
+     ],
+     [
+      "p",
+      "Multiple turns multiply every loop result by N: centre, axis and arc alike. A regular n-gon approaches the loop field as n grows; a square gives 2 sqrt(2) mu0 I / pi a and a hexagon sqrt(3) mu0 I / pi a at their centres."
+     ],
+     [
+      "why",
+      "The polygon family is a calibration ladder: each member checks the wire and loop formulas against each other."
+     ],
+     [
+      "trap",
+      "Circumscribed polygon radius and side length differ; write R in terms of a before comparing with the loop limit."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 14,
+  "slug": "JEE-14-solenoid",
+  "title": "Solenoid and toroid",
+  "subtitle": "Long solenoid n turns per length; toroid with N total turns; steady current I.",
+  "source": "Source \u00a73.16; E14; P29",
+  "diagrams": [
+   "solenoid-a",
+   "solenoid-b"
+  ],
+  "takeaway": "A long solenoid has uniform mu0 nI inside and zero outside; a toroid confines the field completely.",
+  "cards": [
+   {
+    "title": "Finite solenoid on axis",
+    "items": [
+     [
+      "m",
+      "B=\\frac{\\mu_0nI}{2}(\\cos\\theta_1+\\cos\\theta_2)"
+     ],
+     [
+      "p",
+      "Stacking loop fields along the axis gives a simple result: the angles are subtended at the ends between the axis and the line to the point, both taken positive for an interior point, so the bracket is 2 deep in the middle of a long coil and 1 at an end. Interior of an infinite solenoid: mu0 nI; at an end exactly half; outside far away it leaks of order R/L."
+     ],
+     [
+      "why",
+      "The end factor one-half is a good exam trap and a useful check: the end sees only half the turns ahead of it."
+     ],
+     [
+      "trap",
+      "The cosine convention must be stated: other texts measure both angles from one direction and subtract. Follow one convention through the whole problem."
+     ]
+    ]
+   },
+   {
+    "title": "The toroid",
+    "items": [
+     [
+      "m",
+      "B(r)=\\frac{\\mu_0NI}{2\\pi r}\\ \\ (a<r<b)"
+     ],
+     [
+      "p",
+      "The Amperian circle inside the winding encloses all N turns: B = mu0 N I / 2 pi r, falling as 1/r across the core. Outside the winding the enclosed current is zero and the field vanishes exactly. A toroid is the ideal closed magnetic circuit."
+     ],
+     [
+      "why",
+      "No leakage outside makes the toroid the clean demonstration of the loop law and the model for transformer cores."
+     ],
+     [
+      "trap",
+      "Use total turns N for the toroid and turns per metre n for the solenoid; mixing them is a classic factor error."
+     ]
+    ]
+   },
+   {
+    "title": "Ideal limits and reality",
+    "items": [
+     [
+      "m",
+      "B_{\\rm in}=\\mu_0nI,\\quad B_{\\rm out}\\approx0\\ \\ (L\\gg R)"
+     ],
+     [
+      "p",
+      "An infinite solenoid has perfectly uniform interior field and zero exterior field. A real one leaks at the ends and slightly outside the windings; the error is of order R/L. A solenoid of 1000 turns per metre at 1 A gives 1.26 mT, forty times the Earth field inside."
+     ],
+     [
+      "why",
+      "Knowing the size of leakage separates ideal formulas from apparatus statements."
+     ],
+     [
+      "trap",
+      "For a short coil the infinite formula misleads badly; use the finite cosine form with the actual geometry."
+     ]
+    ]
+   },
+   {
+    "title": "Field energy preview",
+    "items": [
+     [
+      "m",
+      "U_B=\\frac{B^2}{2\\mu_0}\\mathcal V"
+     ],
+     [
+      "m",
+      "L=\\mu_0n^2\\ell\\ \\text{(long solenoid)}"
+     ],
+     [
+      "p",
+      "A long solenoid of volume V stores (B squared over 2 mu0) times V, consistent with half L I squared with L = mu0 n squared times length. The preview is the working check for the induction module and gives the end force when two halves are pulled apart."
+     ],
+     [
+      "why",
+      "Energy density times volume is the fastest sanity check on any solenoid formula in a derived result."
+     ],
+     [
+      "trap",
+      "Inductance per length assumes the infinite solenoid; a real coil has end corrections and stray field energy outside."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 15,
+  "slug": "JEE-15-moment",
+  "title": "Magnetic moment and the dipole field",
+  "subtitle": "Loop small compared with distance r; moment mu = NI A; uniform magnetisation cases noted.",
+  "source": "Source \u00a73.17; C8; Q13-Q16",
+  "diagrams": [
+   "moment-a",
+   "moment-b"
+  ],
+  "takeaway": "A current loop is a magnetic dipole: axial field twice equatorial, and the whole far field follows from mu = NI A.",
+  "cards": [
+   {
+    "title": "Defining the moment",
+    "items": [
+     [
+      "m",
+      "\\boldsymbol{\\mu}=NI\\mathbf A,\\qquad \\mu=NIA"
+     ],
+     [
+      "p",
+      "The area vector follows the right-hand rule: fingers along the current, thumb along mu, which is also the direction of the loop field through its centre. For N turns multiply. A rotating charged ring of charge Q and angular speed omega has I = Q omega / 2pi and mu = Q omega R\u00b2 / 2."
+     ],
+     [
+      "why",
+      "One vector fixes orientation, energy and torque; define it once and the dipole machinery runs."
+     ],
+     [
+      "trap",
+      "Area is a vector by convention tied to the current sense; a clockwise loop viewed from the chosen side has mu the other way."
+     ]
+    ]
+   },
+   {
+    "title": "The far field",
+    "items": [
+     [
+      "m",
+      "B_{\\rm axis}=\\frac{\\mu_0}{4\\pi}\\frac{2\\mu}{r^3}"
+     ],
+     [
+      "m",
+      "B_{\\rm eq}=\\frac{\\mu_0}{4\\pi}\\frac{\\mu}{r^3}"
+     ],
+     [
+      "p",
+      "Far from a small loop the field is the electric dipole field pattern with p replaced by mu over eps0 c\u00b2 bookkeeping: axial component twice the equatorial one at the same r, both falling as 1/r\u00b3. The full vector formula in components follows from the same expansion."
+     ],
+     [
+      "why",
+      "The factor two between axis and equator is the fingerprint of a dipole; every bar magnet far away obeys it."
+     ],
+     [
+      "trap",
+      "Dipole formulas need r much larger than the loop size; at the loop centre use mu0 I / 2R instead."
+     ]
+    ]
+   },
+   {
+    "title": "Magnets are current loops",
+    "items": [
+     [
+      "m",
+      "U=-\\boldsymbol{\\mu}\\cdot\\mathbf B"
+     ],
+     [
+      "m",
+      "\\boldsymbol{\\tau}=\\boldsymbol{\\mu}\\times\\mathbf B"
+     ],
+     [
+      "p",
+      "A bar magnet, a solenoid end and a current loop are the same object at long range. Superposing two coaxial antiparallel loops of opposite circulation cancels their interior field and leaves only exterior dipole fields: the picture of a physical dipole with poles."
+     ],
+     [
+      "why",
+      "Identifying every magnet with a moment lets dipole formulas apply to atoms, coils and planets alike."
+     ],
+     [
+      "trap",
+      "The pole model is a bookkeeping device; fields near the ends of real magnets are not inverse-square pole fields."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "\\mu_{\\rm loop}=NIA"
+     ],
+     [
+      "m",
+      "\\mu_\\oplus\\simeq8\\times10^{22}\\ \\mathrm{A\\,m^2}"
+     ],
+     [
+      "p",
+      "A 100-turn coil of radius 5 cm at 1 A has mu = 0.79 A m\u00b2. The Earth dipole is 8e22 A m\u00b2. The Bohr magneton is 9.27e-24 A m\u00b2 \u2014 atomic moments are twenty orders below laboratory coils, yet they are all that matter in materials."
+     ],
+     [
+      "why",
+      "Spending a minute on moment scales shows why magnetism is atomic physics plus relativity."
+     ],
+     [
+      "trap",
+      "Moment of a magnet is independent of orientation but its torque is not; keep the vector and the scalar distinct."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 16,
+  "slug": "JEE-16-ampere",
+  "title": "Ampere's law: when it works",
+  "subtitle": "Steady currents; closed loop C; any surface bounded by C.",
+  "source": "Source \u00a7\u00a73.18-3.21; C9; E15",
+  "diagrams": [
+   "ampere-a",
+   "ampere-b"
+  ],
+  "takeaway": "The circulation of B equals mu0 times the enclosed current: always true, useful only where symmetry reduces the integral to B times length.",
+  "cards": [
+   {
+    "title": "The law and its proof sketch",
+    "items": [
+     [
+      "m",
+      "\\oint_C\\mathbf B\\cdot d\\mathbf l=\\mu_0 I_{\\rm enc}"
+     ],
+     [
+      "p",
+      "Walking once around the infinite wire at radius r adds B times 2 pi r = mu0 I, independent of r: the 1/r of the field cancels the r of the path. Any loop that threads the wire once gives the same circulation; superposition makes the total circulation count enclosed currents."
+     ],
+     [
+      "why",
+      "The same cancellation built Gauss law with 1/r\u00b2 and r\u00b2; here it is 1/r and r."
+     ],
+     [
+      "trap",
+      "Zero circulation of a loop enclosing no current says nothing about the field along the loop: B can be large and tangential everywhere."
+     ]
+    ]
+   },
+   {
+    "title": "Sign convention with a worked instance",
+    "items": [
+     [
+      "m",
+      "I_{\\rm enc}=I_\\odot-I_\\otimes"
+     ],
+     [
+      "m",
+      "\\oint\\mathbf B\\cdot d\\mathbf l=2\\ \\mathrm A\\to2.5\\ \\mu\\mathrm{T\\,m}"
+     ],
+     [
+      "p",
+      "Choose a loop direction; curl the right-hand fingers that way; the thumb is positive for threading currents. Wires of 5 A out and 3 A in threaded by an anticlockwise loop give enclosed 2 A and circulation 2.5 microtesla metres. The same loop reversed flips both signs."
+     ],
+     [
+      "why",
+      "A wrong direction choice flips both sides and preserves the physics; a wrong sign in copying does not."
+     ],
+     [
+      "trap",
+      "The enclosed current is the net through any surface bounded by the loop, counting sign; two opposite currents can cancel."
+     ]
+    ]
+   },
+   {
+    "title": "Honest usefulness",
+    "items": [
+     [
+      "m",
+      "\\text{useful iff }\\mathbf B\\parallel d\\mathbf l\\ \\text{and }|B|\\ \\text{constant on segments}"
+     ],
+     [
+      "p",
+      "The law is a constraint on an integral. It gives B only when symmetry guarantees the field is parallel to the path and constant along it, or perpendicular to some sides, or zero on them: infinite wire, long solenoid, toroid, thick cylinder, sheet. Finite solenoids and loops have no such symmetry; the law is true and silent."
+     ],
+     [
+      "why",
+      "Choosing between the loop law and Biot-Savart is choosing the method that the symmetry supports."
+     ],
+     [
+      "trap",
+      "A symmetric-looking but finite source defeats the shortcut; integrate element by element instead."
+     ]
+    ]
+   },
+   {
+    "title": "Two methods agree",
+    "items": [
+     [
+      "m",
+      "\\text{solenoid: }B=\\mu_0nI\\ \\text{both ways}"
+     ],
+     [
+      "p",
+      "The long solenoid can be stacked from loop fields or obtained from one rectangle of Amp\u00e8re loop; the answers match exactly. Agreement of independent methods is the exam check that a derived formula is right."
+     ],
+     [
+      "why",
+      "Whenever possible solve a symmetric case both ways once; it calibrates every later shortcut."
+     ],
+     [
+      "trap",
+      "Matching answers does not validate the method for the next geometry if its symmetry differs."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 17,
+  "slug": "JEE-17-ampere-apps",
+  "title": "Ampere applications: the eight fields",
+  "subtitle": "High symmetry: wire, thick wire, cylinder, sheet, solenoid, toroid, coax, plate.",
+  "source": "Source \u00a73.19; T3; E16",
+  "diagrams": [
+   "ampere-apps-a",
+   "ampere-apps-b"
+  ],
+  "takeaway": "Eight standard geometries cover most exam fields; learn the enclosed-current ledger for each.",
+  "cards": [
+   {
+    "title": "Wire family",
+    "items": [
+     [
+      "m",
+      "B=\\frac{\\mu_0I}{2\\pi r}"
+     ],
+     [
+      "m",
+      "B_{\\rm thick}=\\frac{\\mu_0Ir}{2\\pi a^2}\\ (r<a)"
+     ],
+     [
+      "p",
+      "Outside a long straight wire the answer is mu0 I / 2 pi r. Inside a thick wire of radius a with uniform current density, only the enclosed fraction counts: B grows linearly to mu0 I / 2 pi a at the surface. Two parallel wires with opposite currents between them add fields in the gap."
+     ],
+     [
+      "why",
+      "The enclosed fraction is the entire method: write I_enc(r) and divide by the path length."
+     ],
+     [
+      "trap",
+      "Inside the wire the current is a fraction of I; multiplying the exterior formula by r/a twice gives the wrong power."
+     ]
+    ]
+   },
+   {
+    "title": "Sheets and solenoids",
+    "items": [
+     [
+      "m",
+      "B_{\\rm sheet}=\\frac{\\mu_0K}{2}"
+     ],
+     [
+      "m",
+      "B_{\\rm solenoid}=\\mu_0nI,\\ B_{\\rm end}=\\frac{\\mu_0nI}{2}"
+     ],
+     [
+      "p",
+      "An infinite sheet of surface current K has uniform field mu0 K / 2 on each side, opposite in direction, independent of distance. A solenoid wall is such a sheet wrapped up: interior mu0 nI, exterior zero. Two sheets of opposite K give mu0 K in the gap."
+     ],
+     [
+      "why",
+      "Sheet fields are the building blocks of the boundary-condition section and of overlap tricks."
+     ],
+     [
+      "trap",
+      "The sheet formula has no distance because the sheet is infinite; a finite plate has edge fringing."
+     ]
+    ]
+   },
+   {
+    "title": "Coax and hollow cylinders",
+    "items": [
+     [
+      "m",
+      "J\\ \\text{inner},\\ I_{\\rm enc}=I\\frac{r^2-b^2}{c^2-b^2}"
+     ],
+     [
+      "m",
+      "B_{\\rm gap}=\\frac{\\mu_0I}{2\\pi r}"
+     ],
+     [
+      "p",
+      "For current distributed between radii b and c the enclosed current is the area fraction. A neutral coaxial cable with return current in the outer shell confines its field to the gap: inside the inner conductor and outside the cable the fields cancel exactly."
+     ],
+     [
+      "why",
+      "Coax is the exam case where the return current matters; write both contributions before canceling."
+     ],
+     [
+      "trap",
+      "Ideal thin shells and uniform current densities are assumptions; surface currents change the face values but not the enclosed ledger."
+     ]
+    ]
+   },
+   {
+    "title": "The toroid and the decision",
+    "items": [
+     [
+      "m",
+      "B_{\\rm toroid}=\\frac{\\mu_0NI}{2\\pi r}"
+     ],
+     [
+      "m",
+      "\\text{no symmetry: Biot-Savart}"
+     ],
+     [
+      "p",
+      "Use the loop law for infinite wires, long solenoids, toroids, thick cylinders and sheets. Use Biot-Savart for loops, arcs, finite wires, off-axis points and bent conductors. The decision table in the source chapter maps each geometry to one method."
+     ],
+     [
+      "why",
+      "A method decision made before algebra saves the exam; mixing methods mid-problem is where sign errors breed."
+     ],
+     [
+      "trap",
+      "Compounding two symmetries (moving from wire to sheet) requires the new enclosed current, not a renamed old one."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 18,
+  "slug": "JEE-18-overlap",
+  "title": "Superposition tricks and no monopoles",
+  "subtitle": "Linear media and vacuum; uniform current densities; steady fields.",
+  "source": "Source \u00a7\u00a73.20-3.22; T4; E15",
+  "diagrams": [
+   "overlap-a",
+   "overlap-b"
+  ],
+  "takeaway": "A hole is a full body plus a negative body; a gap is a full loop minus an arc; and no closed surface ever nets magnetic flux.",
+  "cards": [
+   {
+    "title": "Uniform fields from cylinders",
+    "items": [
+     [
+      "m",
+      "\\mathbf B=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf r_\\perp"
+     ],
+     [
+      "m",
+      "\\mathbf B_{\\rm gap}=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf d"
+     ],
+     [
+      "p",
+      "A long cylinder of uniform current density J produces at internal offset r a field mu0 J cross r / 2. Two overlapping cylinders of opposite J leave a hole whose field is the difference: uniform, mu0 J cross d / 2, where d points from the removed centre to the full-body centre."
+     ],
+     [
+      "why",
+      "The overlap trick turns a hard geometry into two symmetric ones; the same method covers offset holes and missing arcs."
+     ],
+     [
+      "trap",
+      "The uniform result is only in the overlap region where both bodies exist; outside it fields vary again."
+     ]
+    ]
+   },
+   {
+    "title": "The gap in a loop",
+    "items": [
+     [
+      "m",
+      "\\mathbf B_{\\rm gap}=\\mathbf B_{\\rm full}-\\mathbf B_{\\rm missing\\ arc}"
+     ],
+     [
+      "p",
+      "A circular loop missing an arc equals the complete loop minus that arc taken with opposite current. The full loop gives mu0 I / 2R at the centre; the missing arc by proportion. Compound and subtract with vector signs, never scalar magnitudes."
+     ],
+     [
+      "why",
+      "Negative-current bookkeeping is the magnetic twin of missing-charge superposition in electrostatics."
+     ],
+     [
+      "trap",
+      "Field lines of pieces are not field lines of the sum; draw each contribution before combining."
+     ]
+    ]
+   },
+   {
+    "title": "No magnetic monopoles",
+    "items": [
+     [
+      "m",
+      "\\oint_S\\mathbf B\\cdot d\\mathbf A=0\\ \\ \\forall S"
+     ],
+     [
+      "m",
+      "\\nabla\\cdot\\mathbf B=0"
+     ],
+     [
+      "p",
+      "Magnetic flux through any closed surface is zero: field lines that enter also leave. This is why there is no magnetic charge, no inverse-square magnetic Coulomb law, and why field lines close through magnets. It is exact, not an approximation of the current chapter."
+     ],
+     [
+      "why",
+      "Divergence-free B is the structural counterpart of Gauss law and the reason magnetic circuits are loops."
+     ],
+     [
+      "trap",
+      "A point where B = 0 does not imply a magnetic charge absence test; only the closed-surface integral is identically zero."
+     ]
+    ]
+   },
+   {
+    "title": "Field lines close",
+    "items": [
+     [
+      "m",
+      "\\text{outside N to S, inside S to N}"
+     ],
+     [
+      "m",
+      "\\oint\\mathbf B\\cdot d\\mathbf A\\equiv0"
+     ],
+     [
+      "p",
+      "Bar magnet field lines run through the magnet itself, forming closed loops; cutting a magnet makes two smaller closed systems, never an isolated pole. Superconducting flux conservation and the absence of monopoles are the same statement in different language."
+     ],
+     [
+      "why",
+      "Closed field lines are why magnetic circuits are analogised to electric circuits with reluctance but no magnetic voltage source inside the gap."
+     ],
+     [
+      "trap",
+      "Field-line maps drawn only outside a magnet invite pole thinking; draw the interior loop at least once."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 19,
+  "slug": "JEE-19-force-current",
+  "title": "Force on a current",
+  "subtitle": "Uniform B on a straight segment, or local B along a curved path; steady I.",
+  "source": "Source \u00a73.23; C10; E17",
+  "diagrams": [
+   "force-current-a",
+   "force-current-b"
+  ],
+  "takeaway": "The force on a wire is I L cross B; a curved wire in uniform field feels the force of its chord.",
+  "cards": [
+   {
+    "title": "From carriers to the wire",
+    "items": [
+     [
+      "m",
+      "\\mathbf F=I\\mathbf L\\times\\mathbf B"
+     ],
+     [
+      "m",
+      "d\\mathbf F=I\\,d\\mathbf l\\times\\mathbf B"
+     ],
+     [
+      "p",
+      "Each carrier feels q v_d cross B; a length L holds nAL carriers, so the total is nAL q v_d cross B = I L cross B since I = n q v_d A. The sign of the carriers is already inside the current direction: no extra sign remains to apply."
+     ],
+     [
+      "why",
+      "Deriving the wire force once from the carrier force shows where the Hall field enters and why the lattice feels the push."
+     ],
+     [
+      "trap",
+      "For a negative carrier drifting opposite to conventional I the force is the same; do not flip the cross product."
+     ]
+    ]
+   },
+   {
+    "title": "The chord theorem",
+    "items": [
+     [
+      "m",
+      "\\mathbf F=I\\left(\\int d\\mathbf l\\right)\\times\\mathbf B"
+     ],
+     [
+      "m",
+      "\\oint d\\mathbf l=0"
+     ],
+     [
+      "p",
+      "In a uniform field the integral of dl along any path is the straight vector from start to end: a curved wire feels the force of its chord. A semicircle of radius R perpendicular to B feels 2IRB; a closed loop feels no net force at all in uniform B."
+     ],
+     [
+      "why",
+      "Chord reduction replaces path integration with two points; closed loops always cancel in uniform fields."
+     ],
+     [
+      "trap",
+      "A closed loop can still turn; zero net force does not mean zero effect. Torque comes from non-collinear side forces."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "I=10\\ \\mathrm A,\\ L=0.5\\ \\mathrm m,\\ B=0.2\\ \\mathrm T:\\ F=1\\ \\mathrm N"
+     ],
+     [
+      "p",
+      "One newton is the weight of 100 grams: motors stack many such lengths in strong fields. Force per metre of a 1 kA conductor in 1 T is 1 kN, which is why busbars are braced."
+     ],
+     [
+      "why",
+      "Newton-per-metre anchors keep design estimates honest in both directions of scale."
+     ],
+     [
+      "trap",
+      "Sin theta in ILB sin theta is the angle between wire and field, not to the field normal; parallel wire to B feels nothing."
+     ]
+    ]
+   },
+   {
+    "title": "Non-uniform fields: the net force",
+    "items": [
+     [
+      "m",
+      "\\mathbf F=\\nabla(\\boldsymbol{\\mu}\\cdot\\mathbf B)"
+     ],
+     [
+      "m",
+      "F\\simeq\\mu\\,dB/dx\\ \\text{(aligned)}"
+     ],
+     [
+      "p",
+      "A closed loop in a gradient feels a net force because the two sides see different fields. For an aligned moment the force pulls toward stronger field with magnitude mu times the gradient; anti-aligned reverses it. This is the electromagnet lifting a nail and the trap behind equal-and-opposite thinking."
+     ],
+     [
+      "why",
+      "The gradient force is the working principle of magnetic lifting and of mirror confinement; uniform-field results silently drop it."
+     ],
+     [
+      "trap",
+      "Only the gradient along the moment orientation gives the simple mu dB/dx; transverse gradients produce sideways forces and torques."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 20,
+  "slug": "JEE-20-torque-loop",
+  "title": "Torque on a loop: energy and the galvanometer",
+  "subtitle": "Small planar loop of moment mu in uniform B; torsion constant kappa for instruments.",
+  "source": "Source \u00a73.24; C11; P31",
+  "diagrams": [
+   "torque-loop-a",
+   "torque-loop-b"
+  ],
+  "takeaway": "A loop in uniform B feels no net force but a torque mu cross B; its energy is -mu dot B and its small oscillations are the magnetometer.",
+  "cards": [
+   {
+    "title": "Couple and energy",
+    "items": [
+     [
+      "m",
+      "\\boldsymbol{\\tau}=\\boldsymbol{\\mu}\\times\\mathbf B,\\qquad U=-\\boldsymbol{\\mu}\\cdot\\mathbf B"
+     ],
+     [
+      "p",
+      "Forces on opposite sides of a loop in uniform field are equal, opposite and displaced: a pure couple of magnitude mu B sin theta. The potential energy is lowest when mu aligns with B and highest anti-aligned; the force on the moment in a gradient is toward stronger field when aligned."
+     ],
+     [
+      "why",
+      "Torque and energy answer different questions: torque is the tendency to turn at fixed position; energy compares orientations and gives forces via gradients."
+     ],
+     [
+      "trap",
+      "A loop at anti-alignment is in unstable equilibrium; torque vanishes there too, so zero torque does not imply the minimum."
+     ]
+    ]
+   },
+   {
+    "title": "The oscillating magnet",
+    "items": [
+     [
+      "m",
+      "T=2\\pi\\sqrt{\\frac{I_m}{\\mu B}},\\qquad \\mu B=\\frac{4\\pi^2 I_m}{T^2}"
+     ],
+     [
+      "p",
+      "A magnet swinging in the horizontal component B_H of the Earth field is a torsional pendulum for small angles: period set by moment of inertia I_m and the product mu B_H. Oscillation measures the product; deflection of a compass by the same magnet measures the ratio. Two measurements, two unknowns \u2014 the basis of absolute magnetic measurement."
+     ],
+     [
+      "why",
+      "Gauss method separates mu and B_H without any external calibration; this is why the old unit of B bore his name."
+     ],
+     [
+      "trap",
+      "The period uses the horizontal component only; a magnet swinging near the dip poles has nothing to restore it."
+     ]
+    ]
+   },
+   {
+    "title": "The galvanometer",
+    "items": [
+     [
+      "m",
+      "\\varphi=\\frac{NAB}{\\kappa}I"
+     ],
+     [
+      "m",
+      "\\text{current balance}"
+     ],
+     [
+      "p",
+      "A coil of N turns, area A in field B carrying current I twists a suspension of torsion constant kappa by angle proportional to I: the moving-coil galvanometer. Calibrated once, it reads current; paired with a known resistor it reads voltage."
+     ],
+     [
+      "why",
+      "The instrument is the torque law in hardware; its sensitivity is NAB/kappa."
+     ],
+     [
+      "trap",
+      "Angle scales are linear only within the spring law; stop pins exist for a reason."
+     ]
+    ]
+   },
+   {
+    "title": "Fixed current versus fixed flux",
+    "items": [
+     [
+      "m",
+      "F=+\\partial U_B/\\partial x\\ (I\\ \\text{fixed})"
+     ],
+     [
+      "m",
+      "F=-\\partial U/\\partial x\\ (\\Phi\\ \\text{fixed})"
+     ],
+     [
+      "p",
+      "Virtual work on magnetic systems depends on the constraint. A current-driven circuit feeds energy from the source and the mechanical force follows the positive gradient of field energy; an isolated superconducting loop conserves flux and the sign flips. State the constraint before differentiating."
+     ],
+     [
+      "why",
+      "The two conventions are the commonest source of sign errors in force questions; the physics is identical, the bookkeeping is not."
+     ],
+     [
+      "trap",
+      "Never mix the two rules in one problem; a battery-held coil and a persistent superconducting loop are different thermodynamic systems."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 21,
+  "slug": "JEE-21-wires-force",
+  "title": "Forces between currents",
+  "subtitle": "Long straight parallel wires; steady currents; vacuum between.",
+  "source": "Source \u00a73.25; C13; Q23-Q25",
+  "diagrams": [
+   "wires-force-a",
+   "wires-force-b"
+  ],
+  "takeaway": "Parallel currents attract and antiparallel repel: mu0 I1 I2 / 2 pi d per unit length, and the ampere is defined from it.",
+  "cards": [
+   {
+    "title": "The force law",
+    "items": [
+     [
+      "m",
+      "\\frac FL=\\frac{\\mu_0I_1I_2}{2\\pi d}"
+     ],
+     [
+      "p",
+      "Wire 2 sits in wire 1 field mu0 I1 / 2 pi d and feels I2 L cross B, giving the force per length. Same-direction currents attract; opposite directions repel. Each wire feels the other field only: a wire never pushes on itself."
+     ],
+     [
+      "why",
+      "Mutual force depends on the product of currents and falls as 1/d; the geometry is the same inverse-distance law as the field."
+     ],
+     [
+      "trap",
+      "Adding the two fields at the midpoint before computing the force double-counts; each wire responds to the other field alone."
+     ]
+    ]
+   },
+   {
+    "title": "The ampere, defined",
+    "items": [
+     [
+      "m",
+      "1\\ \\mathrm A:\\ \\frac FL=2\\times10^{-7}\\ \\mathrm{N/m}\\ \\text{at }d=1\\ \\mathrm m"
+     ],
+     [
+      "p",
+      "The classical definition: one ampere is the current in each of two long parallel wires one metre apart giving two tenths of a micronewton per metre. Since 2019 the ampere is fixed by the elementary charge, but the force formula is unchanged."
+     ],
+     [
+      "why",
+      "The tiny force shows again that wire magnetism is weak per amp, yet measurable because currents can be large."
+     ],
+     [
+      "trap",
+      "Post-2019 definitions change the unit bookkeeping, not Maxwell equations; never rewrite mu0 in the force formula."
+     ]
+    ]
+   },
+   {
+    "title": "Newton third law",
+    "items": [
+     [
+      "m",
+      "\\mathbf F_{1\\to2}=-\\mathbf F_{2\\to1}"
+     ],
+     [
+      "m",
+      "\\text{momentum to fields}"
+     ],
+     [
+      "p",
+      "The pair forces are equal and opposite even though each wire feels only the other field. When currents change, the mechanical forces still balance but field momentum changes; the missing momentum is stored in B, not lost."
+     ],
+     [
+      "why",
+      "Third law holds for steady circuits as a statement about wires; the field carries momentum in time-dependent cases."
+     ],
+     [
+      "trap",
+      "Do not add self-force: an element of wire is not pushed by its own field; the divergence of the wire model is an exam classic."
+     ]
+    ]
+   },
+   {
+    "title": "Scaling",
+    "items": [
+     [
+      "m",
+      "F\\propto I_1I_2/d"
+     ],
+     [
+      "m",
+      "\\text{parallel attract, anti repel}"
+     ],
+     [
+      "p",
+      "Doubling one current doubles the force; halving the distance doubles it. Two 1 kA busbars 10 cm apart press at 2 N per metre \u2014 structural bracing is standard. Pulse magnets see forces proportional to I\u00b2 and can burst their windings."
+     ],
+     [
+      "why",
+      "I\u00b2 scaling underlies both motor design and the pinch effect; one mental square catches many factor-of-two slips."
+     ],
+     [
+      "trap",
+      "Currents induced during switching can repel or attract contrary to the steady-state expectation; watch the direction of each current at the instant considered."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 22,
+  "slug": "JEE-22-pressure",
+  "title": "Magnetic pressure and field energy",
+  "subtitle": "Surface currents and field discontinuities; ideal sheets; uniform fields on each side.",
+  "source": "Source \u00a7\u00a73.26-3.27; T7; P30",
+  "diagrams": [
+   "pressure-a",
+   "pressure-b"
+  ],
+  "takeaway": "A field pushes on the currents that confine it with pressure B squared over 2 mu0; a solenoid wears its own field like a pressure vessel.",
+  "cards": [
+   {
+    "title": "Force on a current sheet",
+    "items": [
+     [
+      "m",
+      "\\frac FA=\\frac{B_1^2-B_2^2}{2\\mu_0}"
+     ],
+     [
+      "m",
+      "\\text{from strong side to weak}"
+     ],
+     [
+      "p",
+      "A sheet with surface current K separates fields B1 and B2. The sheet feels only the field of the rest, the average of the two sides; with B1 - B2 = mu0 K the force becomes the difference of squares over 2 mu0. At 1 T this is four atmospheres on the windings."
+     ],
+     [
+      "why",
+      "The factor one-half is the conductor-stress factor again: a current sheet cannot push on its own field."
+     ],
+     [
+      "trap",
+      "The direction is from strong field to weak regardless of current direction; the squares erase the sign."
+     ]
+    ]
+   },
+   {
+    "title": "Solenoid end force and energy density",
+    "items": [
+     [
+      "m",
+      "u_B=\\frac{B^2}{2\\mu_0},\\qquad F_{\\rm halves}=\\frac{B^2A}{2\\mu_0}"
+     ],
+     [
+      "p",
+      "Cut a long solenoid and the halves attract with pressure times area: field lines behave as if under tension along themselves and pressure across. A 1 T solenoid of 10 cm\u00b2 bore pulls together with 400 N. The same B\u00b2/2 mu0 is the energy density: 0.4 MJ per cubic metre at 1 T."
+     ],
+     [
+      "why",
+      "Energy methods give the end force without integration: separating halves by dx creates field volume A dx at energy density B\u00b2/2 mu0."
+     ],
+     [
+      "trap",
+      "The energy argument assumes constant current maintained by a source; at fixed flux the sign of the virtual-work rule flips."
+     ]
+    ]
+   },
+   {
+    "title": "Boundary conditions",
+    "items": [
+     [
+      "m",
+      "B_{1t}-B_{2t}=\\mu_0K"
+     ],
+     [
+      "m",
+      "B_{1n}=B_{2n}"
+     ],
+     [
+      "p",
+      "Across any surface current the tangential B jumps by mu0 K and the normal component is continuous. The solenoid field steps from mu0 nI to zero exactly at the winding sheet K = nI. A perfect diamagnet with B = 0 inside feels the full B\u00b2/2 mu0 from outside."
+     ],
+     [
+      "why",
+      "Boundary conditions are the local form of the loop and pillbox arguments; use them to fix field values at surfaces."
+     ],
+     [
+      "trap",
+      "Outside an ideal long solenoid the field is zero, so the hoop stress is inside-to-out; a finite solenoid leaks and reduces the ideal stress a little."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers and the motor puzzle",
+    "items": [
+     [
+      "m",
+      "1\\ \\mathrm T\\to3.98\\times10^{5}\\ \\mathrm{Pa}\\approx4\\ \\mathrm{atm}"
+     ],
+     [
+      "m",
+      "u_B=0.4\\ \\mathrm{MJ/m^3}"
+     ],
+     [
+      "p",
+      "At 10 T the pressure is 400 atmospheres: high-field magnets are built like pressure vessels. A running motor still has back-EMF accounting; the magnetic forces transmit mechanical power while B itself does no work on charges \u2014 the energy comes from the source through the electric field the source maintains."
+     ],
+     [
+      "why",
+      "Pressure scales as B\u00b2, so doubling field quadruples stress: the practical limit of pulsed and superconducting magnets."
+     ],
+     [
+      "trap",
+      "A quenching MRI magnet dumps megajoules of field energy into heating; B\u00b2/2 mu0 is real stored energy, not a fiction of the formula."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 23,
+  "slug": "JEE-23-gyromagnetic",
+  "title": "Rotating charges: the gyromagnetic ratio",
+  "subtitle": "Rigid bodies whose charge is distributed like their mass; nonrelativistic rotation.",
+  "source": "Source \u00a73.28; C12; Q32",
+  "diagrams": [
+   "gyromagnetic-a",
+   "gyromagnetic-b"
+  ],
+  "takeaway": "Any such rotating charged body has mu/L = Q/2m: the same ratio for ring, disc or sphere.",
+  "cards": [
+   {
+    "title": "Ring to body",
+    "items": [
+     [
+      "m",
+      "\\frac{\\mu}{L}=\\frac{Q}{2m},\\qquad I=\\frac{Q\\omega}{2\\pi}"
+     ],
+     [
+      "p",
+      "A spinning charged ring is a current Q omega / 2pi with moment mu = Q omega R squared over 2 and angular momentum L = m R squared omega; the radius cancels in the ratio. A stack of rings with the same charge-to-mass ratio keeps the same mu/L. The gyromagnetic ratio is a property of Q/m alone."
+     ],
+     [
+      "why",
+      "Universality of Q/2m lets one check any rotating-charge geometry against one ratio."
+     ],
+     [
+      "trap",
+      "The ratio is classical; electron spin has g = 2 and is not a spinning ball. Quote the anomaly, do not hide it."
+     ]
+    ]
+   },
+   {
+    "title": "The Bohr magneton",
+    "items": [
+     [
+      "m",
+      "\\mu_B=\\frac{e\\hbar}{2m_e}=9.27\\times10^{-24}\\ \\mathrm{A\\,m^2}"
+     ],
+     [
+      "p",
+      "For an electron on an orbit of angular momentum hbar the moment is one Bohr magneton, the natural unit of atomic moments. Paramagnetic salts are measured in mu_B per atom; the Curie law uses the same unit."
+     ],
+     [
+      "why",
+      "Atomic magnetism is measured in moments that are tiny per atom but enormous per mole."
+     ],
+     [
+      "trap",
+      "Spin moment is close to mu_B while spin angular momentum is hbar/2: the factor two is the famous g = 2."
+     ]
+    ]
+   },
+   {
+    "title": "Rotating disc and shell",
+    "items": [
+     [
+      "m",
+      "B_{\\rm disc}=\\frac{\\mu_0\\sigma\\omega R}{2}"
+     ],
+     [
+      "m",
+      "B_{\\rm shell}=\\frac23\\mu_0\\sigma\\omega R"
+     ],
+     [
+      "p",
+      "A rotating charged disc is stacked rings: each ring of width dr contributes mu0 dI / 2r = mu0 sigma omega dr / 2 at the centre, the same for every ring, giving mu0 sigma omega R / 2. A rotating uniformly charged shell gives a uniform interior field two-thirds mu0 sigma omega R, the same surface current as the magnetised sphere."
+     ],
+     [
+      "why",
+      "Ring stacking is the first real use of the solenoid logic; the shell case previews magnetisation in matter."
+     ],
+     [
+      "trap",
+      "The disc centre field grows with R at fixed sigma and omega; that is not an approximation error but more current at larger radii."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "\\mu=3.1\\times10^{-6}\\ \\mathrm{A\\,m^2}\\ \\text{for }1\\ \\mu\\mathrm C,\\ R=10\\ \\mathrm{cm},\\ 100\\ \\mathrm{rev/s}"
+     ],
+     [
+      "p",
+      "A macroscopic spinning charge is a feeble magnet: its centre field 0.6 nT is a hundred-thousandth of the Earth. At atomic scales the same physics with hbar-sized angular momentum gives mu_B, perfectly measurable in a lab balance of moments."
+     ],
+     [
+      "why",
+      "Contrasting human and atomic scales explains why magnetism is an atomic phenomenon despite being discovered in lodestones."
+     ],
+     [
+      "trap",
+      "Charged macroscopic rotors radiate and lose energy; the static formulas assume steady maintained currents."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 24,
+  "slug": "JEE-24-magnet-matter",
+  "title": "The magnet as a current distribution",
+  "subtitle": "Uniform magnetisation M; linear response only where stated; ellipsoids for demagnetising factors.",
+  "source": "Source \u00a7\u00a73.29-3.30; C15; Q50-Q52",
+  "diagrams": [
+   "magnet-matter-a",
+   "magnet-matter-b"
+  ],
+  "takeaway": "Uniform M makes only surface bound current K_b = M cross n; a magnetised cylinder is literally a solenoid with nI = M.",
+  "cards": [
+   {
+    "title": "Bound currents from M",
+    "items": [
+     [
+      "m",
+      "\\mathbf K_b=\\mathbf M\\times\\hat{\\mathbf n},\\qquad \\mathbf J_b=\\nabla\\times\\mathbf M"
+     ],
+     [
+      "p",
+      "A slab magnetised along its normal is a stack of current loops: interiors cancel, the rim does not. Matching the slab moment MAt to a rim loop gives current M per unit height, K_b = M cross n. Where M varies, a volume current curl M remains."
+     ],
+     [
+      "why",
+      "Every magnetostatics problem in matter becomes a free-current problem once bound currents replace the material."
+     ],
+     [
+      "trap",
+      "Bound surface current direction follows the right-hand rule with M and the outward normal; flipping the normal flips K."
+     ]
+    ]
+   },
+   {
+    "title": "The magnetised sphere",
+    "items": [
+     [
+      "m",
+      "B_{\\rm inside}=\\tfrac23\\mu_0M"
+     ],
+     [
+      "m",
+      "\\mu=\\tfrac43\\pi R^3M"
+     ],
+     [
+      "p",
+      "A uniformly magnetised sphere has K_b = M sin theta, the same as a rotating charged shell: uniform interior field two-thirds mu0 M and a pure dipole outside with moment M times volume. A long cylinder instead has B = mu0 M inside - larger because its demagnetising field is smaller."
+     ],
+     [
+      "why",
+      "Demagnetising factors depend on shape: sphere one third, long cylinder zero, thin plate one. Shape decides the internal field for the same M."
+     ],
+     [
+      "trap",
+      "The interior sphere field is uniform despite the varying surface current; do not expect a solenoid-like axial falloff inside a sphere."
+     ]
+    ]
+   },
+   {
+    "title": "Cutting and poles",
+    "items": [
+     [
+      "m",
+      "\\text{cut a magnet: two smaller dipoles}"
+     ],
+     [
+      "m",
+      "\\text{no monopoles}"
+     ],
+     [
+      "p",
+      "Cutting a bar magnet creates two complete magnets, each with its own current distribution and closed field lines. The pole picture is bookkeeping: north and south are never separated because field lines close through the material."
+     ],
+     [
+      "why",
+      "Bound-current language never invites monopoles; pole language always does. Prefer currents for derivations."
+     ],
+     [
+      "trap",
+      "Demagnetising fields of short bar magnets are strong: a short fat magnet magnetises itself less than a long thin one of the same M."
+     ]
+    ]
+   },
+   {
+    "title": "The slab moment ledger",
+    "items": [
+     [
+      "m",
+      "M=\\mu/\\mathcal V"
+     ],
+     [
+      "m",
+      "I_b=Mt\\ \\text{(slab rim current)}"
+     ],
+     [
+      "p",
+      "A slab of thickness t magnetised along its normal has total moment M A t equal to a single rim loop of current I_b around the edge: I_b = M t, a current M per unit height. Two half-thick slabs stacked give the same total rim current as one full slab."
+     ],
+     [
+      "why",
+      "The ledger is the cleanest derivation of bound surface current and rehearses the solenoid identity n I = M."
+     ],
+     [
+      "trap",
+      "The rim current is bound current: no free charge moves and no wires are attached. Confusing it with conduction current breaks the H definition."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 25,
+  "slug": "JEE-25-BHM",
+  "title": "B, H and M inside matter",
+  "subtitle": "Linear media M = chi H where stated; ferromagnets use loops, not constants.",
+  "source": "Source \u00a73.31; C15; Q53-Q56",
+  "diagrams": [
+   "BHM-a",
+   "BHM-b"
+  ],
+  "takeaway": "H counts free currents only; B is the real field. In a long solenoid H = nI and B = mu_r mu0 nI.",
+  "cards": [
+   {
+    "title": "The auxiliary field",
+    "items": [
+     [
+      "m",
+      "\\mathbf H=\\frac{\\mathbf B}{\\mu_0}-\\mathbf M,\\qquad \\oint\\mathbf H\\cdot d\\mathbf l=I_{\\rm free}"
+     ],
+     [
+      "p",
+      "Amp\u00e8res law with all currents is awkward because bound currents depend on the material response. Solving for the free-current circulation defines H: its loop integral counts free current only. B remains the force-giving field; H is a bookkeeping convenience."
+     ],
+     [
+      "why",
+      "Using H makes magnetic circuits and solenoid problems independent of the material magnetisation details."
+     ],
+     [
+      "trap",
+      "H is measured in A/m and B in tesla. Numerically similar-looking values in gauss and oersteds come from mixed unit systems; keep SI."
+     ]
+    ]
+   },
+   {
+    "title": "Linear media",
+    "items": [
+     [
+      "m",
+      "\\mathbf M=\\chi\\mathbf H,\\qquad \\mathbf B=\\mu_r\\mu_0\\mathbf H,\\qquad \\mu_r=1+\\chi"
+     ],
+     [
+      "p",
+      "For linear isotropic media M follows H with susceptibility chi, and B = (1+chi) mu0 H = mu_r mu0 H. In a long solenoid filled with such material H = nI stays fixed and B multiplies by mu_r. Diamagnets have tiny negative chi, paramagnets tiny positive; iron is neither linear nor constant."
+     ],
+     [
+      "why",
+      "The pair (H fixed by free current, B amplified by material) is the whole of linear magnetic circuits."
+     ],
+     [
+      "trap",
+      "mu_r is not a constant for iron: it is a slope on the hysteresis loop and collapses at saturation. Quoting one mu_r for iron is an approximation at a stated operating point."
+     ]
+    ]
+   },
+   {
+    "title": "Units and magnitudes",
+    "items": [
+     [
+      "m",
+      "H=nI\\ [\\mathrm{A/m}]"
+     ],
+     [
+      "m",
+      "\\chi_{\\rm water}\\approx-9\\times10^{-6}"
+     ],
+     [
+      "p",
+      "A 1000 turns per metre solenoid at 1 A has H = 1000 A/m and B = 1.26 mT in vacuum. Water chi about -9e-6, aluminium about 2e-5, iron can reach mu_r of thousands below saturation. Beware oersted-era confusion: 1 A/m corresponds to 4 pi times 1e-7 T in vacuum."
+     ],
+     [
+      "why",
+      "Practical susceptibility values span ten orders; knowing which side of unity a material sits on prevents order-of-magnitude disasters."
+     ],
+     [
+      "trap",
+      "Do not insert mu_r into mu0 itself; write B = mu_r mu0 H as a product at the end."
+     ]
+    ]
+   },
+   {
+    "title": "The gapped circuit",
+    "items": [
+     [
+      "m",
+      "B\\approx\\frac{\\mu_0NI}{g+\\ell/\\mu_r}"
+     ],
+     [
+      "p",
+      "A magnetic circuit of iron length ell with gap g under N ampere-turns has flux set by total reluctance: gap g dominates when mu_r is large. This is how transformer cores and electromagnets are designed: reluctance adds like resistance and the gap controls B."
+     ],
+     [
+      "why",
+      "Reluctance thinking turns field design into a circuit problem; mu0 NI plays the role of EMF."
+     ],
+     [
+      "trap",
+      "If the gap is wide the flux fringes out of the pole area and the simple formula overestimates B; if iron saturates the formula fails differently."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 26,
+  "slug": "JEE-26-dia-para",
+  "title": "Dia- and paramagnetism",
+  "subtitle": "Closed shells for diamagnetism; independent moments for paramagnetism; weak fields where linearised.",
+  "source": "Source \u00a7\u00a73.32-3.33; C16; Q51-Q53",
+  "diagrams": [
+   "dia-para-a",
+   "dia-para-b"
+  ],
+  "takeaway": "Diamagnetism opposes any applied field and is temperature-independent; paramagnetism aligns existing moments and follows Curie law.",
+  "cards": [
+   {
+    "title": "Larmor diamagnetism",
+    "items": [
+     [
+      "m",
+      "\\omega=\\omega_0\\pm\\frac{eB}{2m},\\qquad \\Delta\\mu=-\\frac{e^2r^2}{4m}B"
+     ],
+     [
+      "p",
+      "An applied field changes orbital speeds so as to oppose itself: one sense of orbit slows, the other speeds up, both reducing the net moment along B. Averaging over orientations gives chi = -mu0 n Z e squared <r squared> / 6 m_e, tiny and negative, independent of temperature."
+     ],
+     [
+      "why",
+      "Diamagnetism is universal: every material has it; it is visible only where permanent moments are absent."
+     ],
+     [
+      "trap",
+      "The classical electron orbit model gives the right magnitude but quantum mechanics is the real story; the sign and scaling are what the exam needs."
+     ]
+    ]
+   },
+   {
+    "title": "Curie paramagnetism",
+    "items": [
+     [
+      "m",
+      "M=n\\mu\\tanh\\frac{\\mu B}{k_BT},\\qquad \\chi=\\frac{\\mu_0n\\mu^2}{k_BT}"
+     ],
+     [
+      "p",
+      "Independent atomic moments of size mu align against thermal agitation: magnetisation is the Brillouin-tanh of x = mu B / kT, and for weak fields linear: Curie law chi = C/T. At room temperature a Bohr magneton in 1 T gives x of order 1/300 - weak alignment."
+     ],
+     [
+      "why",
+      "Curie law is a thermometer as much as a magnetisation law: measuring chi versus T extracts the moment per atom."
+     ],
+     [
+      "trap",
+      "Curie law holds for independent moments only. Interacting moments make Curie-Weiss, and locked moments make ferromagnets."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "\\chi_{\\rm dia}\\sim-10^{-5}"
+     ],
+     [
+      "m",
+      "\\chi_{\\rm para}=\\mu_0n\\mu^2/k_BT"
+     ],
+     [
+      "p",
+      "Water -9e-6, copper -1e-5, bismuth -1.7e-4, pyrolytic graphite up to -4e-4 across planes. A paramagnetic salt at 1 K in 1 T can reach substantial M because x = mu B / kT grows as T falls."
+     ],
+     [
+      "why",
+      "Order-of-magnitude tables are the fastest exam check on a computed susceptibility."
+     ],
+     [
+      "trap",
+      "Superconductors are the exception with chi = -1, a perfect diamagnet; their levitation is not explicable by the Larmor formula."
+     ]
+    ]
+   },
+   {
+    "title": "Adiabatic demagnetisation",
+    "items": [
+     [
+      "m",
+      "T_f=T_i\\frac{B_f}{B_i}\\ \\ (\\text{fixed }M)"
+     ],
+     [
+      "p",
+      "Since M depends on B/T only, an isentropic field reduction from Bi to Bf scales the temperature the same way: a salt at 1 K in 1 T demagnetised to 0.01 T reaches 10 mK. The same magnetocaloric effect drives magnetic refrigerators near gadolinium Curie point."
+     ],
+     [
+      "why",
+      "The one-line scaling is an exam favourite: ideal paramagnet plus adiabatic gives direct temperature ratio."
+     ],
+     [
+      "trap",
+      "Internal field and interactions set a floor; the ideal ratio fails at millikelvin and near ordering transitions."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 27,
+  "slug": "JEE-27-ferro",
+  "title": "Ferromagnetism and hysteresis",
+  "subtitle": "Exchange-coupled moments; domain structure; loop area is loss, not theory noise.",
+  "source": "Source \u00a73.34; C17; P19, P34-P35",
+  "diagrams": [
+   "ferro-a",
+   "ferro-b"
+  ],
+  "takeaway": "Iron locks moments with exchange, not dipole coupling; its hysteresis loop is both memory and energy loss.",
+  "cards": [
+   {
+    "title": "Exchange, not dipole coupling",
+    "items": [
+     [
+      "m",
+      "k_BT_c\\approx\\frac{zJ}{3}"
+     ],
+     [
+      "m",
+      "U_{dd}=\\frac{\\mu_0\\mu_B^2}{4\\pi a^3}"
+     ],
+     [
+      "p",
+      "Two Bohr magnetons a quarter nanometre apart interact magnetically with only 5.5e-25 J, equivalent to 0.04 K: dipole forces cannot order iron at room temperature. Exchange energy J from Coulomb plus Pauli exclusion with z neighbours gives Tc of the right thousand-kelvin order."
+     ],
+     [
+      "why",
+      "The estimate that rules out the wrong mechanism is worth more than a memorised Curie temperature."
+     ],
+     [
+      "trap",
+      "Exchange is quantum mechanical and has no classical dipole derivation; quote it as the mechanism and estimate its size."
+     ]
+    ]
+   },
+   {
+    "title": "Domains and hysteresis",
+    "items": [
+     [
+      "m",
+      "w_{\\rm cycle}=\\oint H\\,dB"
+     ],
+     [
+      "m",
+      "\\text{area}=\\text{loss per volume per cycle}"
+     ],
+     [
+      "p",
+      "Domains are regions of aligned moments; walls move and moments rotate under H. Trained material follows a loop: B lags H, remanence is what stays when H returns to zero, coercivity is what must be reversed to erase it. The loop area in the (H,B) plane equals energy lost per unit volume per cycle."
+     ],
+     [
+      "why",
+      "Hysteresis is thermodynamics with a picture: source work minus stored energy is heat in the walls."
+     ],
+     [
+      "trap",
+      "Soft and hard materials are not weak and strong magnets; they are narrow and wide loops - transformers use soft, memory uses hard."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers",
+    "items": [
+     [
+      "m",
+      "B_s(\\mathrm{Fe})=2.1\\ \\mathrm T,\\quad T_c=1043\\ \\mathrm K"
+     ],
+     [
+      "m",
+      "\\text{loss}=\\oint H\\,dB"
+     ],
+     [
+      "p",
+      "Silicon steel loses about 1 J per kilogram per cycle; a 20 kg core at 50 Hz with 150 J/m\u00b3 loop area dissipates 20 W. Iron saturates near 2.1 T: no circuit formula can deliver more. Curie-Weiss chi = C/(T-Tc) describes the approach from the paramagnetic side."
+     ],
+     [
+      "why",
+      "Loop area times frequency times volume is the engineering loss formula every transformer question uses."
+     ],
+     [
+      "trap",
+      "Above Tc the domains vanish; applying Curie law below Tc inverts the actual physics."
+     ]
+    ]
+   },
+   {
+    "title": "Soft versus hard",
+    "items": [
+     [
+      "m",
+      "\\text{soft: narrow loop, low }H_c"
+     ],
+     [
+      "m",
+      "\\text{hard: wide loop, high }H_c"
+     ],
+     [
+      "p",
+      "Transformer cores want narrow loops and laminations to cut eddy losses; permanent magnets want wide loops so demagnetising fields do not erase them. A hard material in a core wastes its loop area as heat every cycle."
+     ],
+     [
+      "why",
+      "Choosing a magnetic material is choosing a loop shape for a duty, not choosing a bigger mu_r."
+     ],
+     [
+      "trap",
+      "Laminations interrupt eddy currents whose loss scales as thickness squared; solid cores run hot at power frequency."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 28,
+  "slug": "JEE-28-circuits",
+  "title": "Materials in circuits: cores, shields and forces",
+  "subtitle": "Linear approximations below saturation; gap-dominated reluctance; soft iron for channelling.",
+  "source": "Source \u00a7\u00a73.35-3.36; T8; E20",
+  "diagrams": [
+   "circuits-a",
+   "circuits-b"
+  ],
+  "takeaway": "Iron channels flux like a wire channels current; the gap sets B; and field gradients pull iron towards stronger field.",
+  "cards": [
+   {
+    "title": "Cores and shielding",
+    "items": [
+     [
+      "m",
+      "B=\\mu_r\\mu_0nI"
+     ],
+     [
+      "m",
+      "\\text{shield: }\\mu_r\\gg1\\ \\text{around region}"
+     ],
+     [
+      "p",
+      "An iron core multiplies the solenoid field at the same free current; a closed iron shell shields its interior by guiding flux around it. The same construction builds electromagnets, transformer cores and magnetic screens. Saturation at 2.1 T caps the multiplication."
+     ],
+     [
+      "why",
+      "Magnetic circuits obey a reluctance version of Ohm law: ampere-turns drive flux through total reluctance."
+     ],
+     [
+      "trap",
+      "Shielding works only for the field components the flux path intercepts; uniform static fields are hard to cancel with partial shells."
+     ]
+    ]
+   },
+   {
+    "title": "Forces on materials",
+    "items": [
+     [
+      "m",
+      "F=\\frac{B^2A}{2\\mu_0}"
+     ],
+     [
+      "m",
+      "\\text{toward stronger field when aligned}"
+     ],
+     [
+      "p",
+      "A magnetisable body in a gradient is pulled toward stronger field, roughly with stress B\u00b2/2 mu0 over the pole area: the paperclip jump. A superconducting plate supports the same stress in repulsion; a 2 kg magnet over 4 cm\u00b2 needs 0.35 T at the plate."
+     ],
+     [
+      "why",
+      "Force from energy density in the gap is one line and agrees with virtual work at fixed current."
+     ],
+     [
+      "trap",
+      "Saturation caps iron force: once M cannot grow, B in the gap stops scaling and levitation saturates."
+     ]
+    ]
+   },
+   {
+    "title": "The gapped electromagnet",
+    "items": [
+     [
+      "m",
+      "B\\approx\\frac{\\mu_0NI}{g+\\ell/\\mu_r},\\qquad \\text{reluctance}=\\frac{\\ell}{\\mu A}"
+     ],
+     [
+      "p",
+      "The gap dominates when mu_r is large: B is set almost entirely by ampere-turns over gap width. Fringing adds effective gap; saturation subtracts effective mu_r. Design means deciding which limit the magnet sits in."
+     ],
+     [
+      "why",
+      "Reluctance in series is the design equation of motors, speakers and MRI yokes."
+     ],
+     [
+      "trap",
+      "Never leave the gap out of a magnetic circuit calculation; iron reluctance is usually negligible, gap reluctance is not."
+     ]
+    ]
+   },
+   {
+    "title": "Saturation caps every circuit",
+    "items": [
+     [
+      "m",
+      "B_s(\\mathrm{Fe})\\approx2.1\\ \\mathrm T"
+     ],
+     [
+      "m",
+      "\\mu_r\\to1\\ \\text{as}\\ B\\to B_s"
+     ],
+     [
+      "p",
+      "Once iron saturates, mu_r collapses toward unity and extra ampere-turns buy almost no flux: the gapped formula fails upward. Electromagnet lifting force stops growing with current and transformer cores distort waveforms. Design means staying below the knee of the B(H) curve with margin."
+     ],
+     [
+      "why",
+      "Saturation is the engineering limit behind every magnetic circuit number; the linear formulas are local, not global."
+     ],
+     [
+      "trap",
+      "Heating raises losses and shifts the knee; pulsed magnets may exploit deep saturation briefly but cannot hold it."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "JEE",
+  "part_page": 29,
+  "slug": "JEE-29-earth",
+  "title": "The Earth as a dipole",
+  "subtitle": "Central tilted dipole plus stated local anomalies; slow secular variation.",
+  "source": "Source \u00a7\u00a73.37-3.38; C18; P20, P26, P36",
+  "diagrams": [
+   "earth-a",
+   "earth-b"
+  ],
+  "takeaway": "Declination, dip and the two components describe a station; tan(dip) = 2 tan(latitude) is the dipole identity.",
+  "cards": [
+   {
+    "title": "The three angles",
+    "items": [
+     [
+      "m",
+      "B_H=B\\cos\\theta_{\\rm dip},\\quad B_V=B\\sin\\theta_{\\rm dip}"
+     ],
+     [
+      "m",
+      "\\tan\\theta_{\\rm dip}=\\frac{B_V}{B_H}"
+     ],
+     [
+      "p",
+      "Declination is compass deviation from true north, east or west; dip is the tilt of a freely pivoted needle below the horizontal. The horizontal component is what compasses and tangent galvanometers use; total field across India runs 25 to 65 microtesla. The magnetic pole near geographic north is a south pole of the dipole."
+     ],
+     [
+      "why",
+      "Angles and components answer different instruments; read the instrument, then take the matching component."
+     ],
+     [
+      "trap",
+      "Dip is not declination, and the magnetic pole near the Arctic is not a north pole of the dipole."
+     ]
+    ]
+   },
+   {
+    "title": "Dipole geometry",
+    "items": [
+     [
+      "m",
+      "\\tan\\theta_{\\rm dip}=2\\tan\\lambda"
+     ],
+     [
+      "m",
+      "B=B_{\\rm eq}\\sqrt{1+3\\sin^2\\lambda}"
+     ],
+     [
+      "p",
+      "At magnetic latitude lambda the radial component is 2 cos-like and the tangential one sine-like in the dipole field, so the dip angle satisfies tan(dip) = 2 tan(lambda). Field strength grows from equator to pole as sqrt(1+3 sin\u00b2lambda) times the equatorial value."
+     ],
+     [
+      "why",
+      "One identity links a station dip to its latitude and checks internal consistency of field tables."
+     ],
+     [
+      "trap",
+      "Local crustal anomalies shift both angles; the dipole relation is a model, and departures are real data."
+     ]
+    ]
+   },
+   {
+    "title": "Measuring B_H",
+    "items": [
+     [
+      "m",
+      "B_{\\rm coil}=B_H\\tan\\theta"
+     ],
+     [
+      "m",
+      "T=2\\pi\\sqrt{I_m/\\mu B_H}"
+     ],
+     [
+      "p",
+      "A tangent galvanometer in the magnetic meridian deflects a compass by theta with B_coil = B_H tan theta. A swinging magnet gives the product mu B_H; a deflected compass gives the ratio mu / B_H. Together they give both unknowns - Gauss absolute method."
+     ],
+     [
+      "why",
+      "Absolute magnetic measurement needs no external magnet reference: geometry, mass and time suffice."
+     ],
+     [
+      "trap",
+      "Coil must lie in the magnetic meridian; misalignment measures a component and biases theta."
+     ]
+    ]
+   },
+   {
+    "title": "Earth and core numbers",
+    "items": [
+     [
+      "m",
+      "\\mu_\\oplus\\simeq8\\times10^{22}\\ \\mathrm{A\\,m^2}"
+     ],
+     [
+      "m",
+      "I_{\\rm core}\\sim2\\times10^{9}\\ \\mathrm A"
+     ],
+     [
+      "p",
+      "Equatorial surface field about 30 microtesla gives the dipole moment from mu = B_eq R cubed over 1e-7 in SI. A core-sized loop of radius 3.5e6 m would need two billion amperes: liquid-iron convection in a dynamo, decaying in a few 10^4 years if not maintained."
+     ],
+     [
+      "why",
+      "A one-line estimate shows why the field needs a dynamo and has persisted for aeons."
+     ],
+     [
+      "trap",
+      "The dipole tilts about 11 degrees from the rotation axis and wanders; the geomagnetic poles are not fixed points."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 1,
+  "slug": "Olympiad-01-relativity",
+  "title": "Magnetism: electrostatics plus relativity",
+  "subtitle": "Nonrelativistic test charges around steady currents; c = 1/sqrt(mu0 eps0).",
+  "source": "Source \u00a710.1, OL1; P32",
+  "diagrams": [
+   "relativity-a",
+   "relativity-b"
+  ],
+  "takeaway": "The magnetic force between parallel moving charges is the electric force times v1 v2 / c\u00b2: magnetism is relativity with the constant coming out right.",
+  "cards": [
+   {
+    "title": "Two charges in motion",
+    "items": [
+     [
+      "m",
+      "F_m=\\frac{\\mu_0}{4\\pi}\\frac{q_1q_2v_1v_2}{r^2}"
+     ],
+     [
+      "m",
+      "\\frac{F_m}{F_e}=\\frac{v_1v_2}{c^2}"
+     ],
+     [
+      "p",
+      "Neutral wires hide the electric force but not the magnetic one. Between two free charges moving parallel, the Biot-Savart field of one crossed with the velocity of the other gives F_m = (mu0/4pi) q1 q2 v1 v2 / r\u00b2, while the Coulomb force is (1/4pi eps0) q1 q2 / r\u00b2. Using mu0 eps0 = 1/c\u00b2 the ratio is v1 v2 / c\u00b2."
+     ],
+     [
+      "why",
+      "The tiny ratio is the reason magnetism looks like a separate force at laboratory speeds; it is the first relativistic correction to electrostatics."
+     ],
+     [
+      "trap",
+      "Only for v much less than c and parallel motion does this one-line ratio hold; perpendicular components involve gamma factors."
+     ]
+    ]
+   },
+   {
+    "title": "Charge density changes with frame",
+    "items": [
+     [
+      "m",
+      "\\lambda'=-\\gamma Iv/c^2,\\qquad F=qvB"
+     ],
+     [
+      "p",
+      "In the wire frame the positive and negative line densities cancel. A test charge moving at v sees length-contraction differences and a net force that, expanded to first order in v/c, equals q v B with B = mu0 I / 2 pi r. The constant mu0 = 1/(eps0 c\u00b2) emerges, not postulates."
+     ],
+     [
+      "why",
+      "Deriving magnetism from one boosted frame explains why the magnetic constant is tied to c: it is not an independent phenomenon."
+     ],
+     [
+      "trap",
+      "The full Lorentz transformation of fields is the proper language; the force-balance sketch is the exam-level derivation, not a replacement for Maxwell theory."
+     ]
+    ]
+   },
+   {
+    "title": "The worked comparison",
+    "items": [
+     [
+      "m",
+      "F_e=ke^2/r^2\\gg F_m\\ \\text{at lab speeds}"
+     ],
+     [
+      "m",
+      "B=\\frac{1}{c^2}v\\times E"
+     ],
+     [
+      "p",
+      "Two electrons at 10^6 m/s one centimetre apart: F_e about 2.3e-24 N and F_m smaller by 1e-11. In wires the electric force cancels to neutrality and the magnetic residue is what remains measurable. A moving charge field is B = v cross E over c\u00b2 exactly in the nonrelativistic limit."
+     ],
+     [
+      "why",
+      "The estimator F_m/F_e = v1 v2/c\u00b2 is a one-line validity check on any claimed magnetic dominance."
+     ],
+     [
+      "trap",
+      "For charges near light speed the magnetic force is comparable to the electric one; relativity is then not a correction but the description."
+     ]
+    ]
+   },
+   {
+    "title": "Limits of the classical picture",
+    "items": [
+     [
+      "m",
+      "g=2\\ \\text{(no classical account)}"
+     ],
+     [
+      "m",
+      "\\mu_0\\varepsilon_0=1/c^2"
+     ],
+     [
+      "p",
+      "Spin, the g factor, exchange coupling and superconductivity have no classical derivation; the relativistic picture covers orbital moments and forces between currents. Radiation from accelerating charges lies in the electromagnetic-waves module."
+     ],
+     [
+      "why",
+      "Stating the boundary of the classical model is part of the physics; the constant 1/c\u00b2 is the bridge, not the whole road."
+     ],
+     [
+      "trap",
+      "Do not present v cross E / c\u00b2 as valid at relativistic speed; transform the fields properly there."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 2,
+  "slug": "Olympiad-02-helmholtz",
+  "title": "The Helmholtz pair: engineering flatness",
+  "subtitle": "Two identical coaxial circular coils, equal currents, axial field.",
+  "source": "Source \u00a710.2, OL2; P29",
+  "diagrams": [
+   "helmholtz-a",
+   "helmholtz-b"
+  ],
+  "takeaway": "Spacing the coils one radius apart cancels the second derivative at the midpoint; uniformity is then fourth order.",
+  "cards": [
+   {
+    "title": "The flatness condition",
+    "items": [
+     [
+      "m",
+      "d=R:\\ B(0)=\\frac{8}{5\\sqrt5}\\frac{\\mu_0NI}{R}"
+     ],
+     [
+      "m",
+      "B(z)=B_0\\left[1-\\frac{144}{125}\\left(\\frac zR\\right)^4+\\dots\\right]"
+     ],
+     [
+      "p",
+      "Each coil contributes mu0 N I R\u00b2 / 2(R\u00b2+z\u00b2)^{3/2} on axis at offset z from its centre. Expanding about the midpoint, odd terms cancel between coils and even ones add; the second derivative vanishes when the half-separation is R/2, i.e. spacing d = R. Then B(0) = 0.716 mu0 N I / R and the leading error is the fourth power of z/R."
+     ],
+     [
+      "why",
+      "The design rule d = R is a calculus result on the axial formula, not an empirical recipe."
+     ],
+     [
+      "trap",
+      "The field is flat on axis at the centre only to the stated order; radial uniformity and ends need their own analysis."
+     ]
+    ]
+   },
+   {
+    "title": "Worked design",
+    "items": [
+     [
+      "m",
+      "N=100,\\ R=20\\ \\mathrm{cm},\\ I=1\\ \\mathrm A:\\ B=0.45\\ \\mathrm{mT}"
+     ],
+     [
+      "p",
+      "Flat to 0.1 per cent within |z| < 0.17 R = 3.4 cm: a 7 cm uniform region. To cancel the Earth 45 microtesla inside the pair, drive 0.10 A with the axis along the local field. Coils in opposition can null the field entirely at the cost of the flat region."
+     ],
+     [
+      "why",
+      "Working one design end-to-end shows the trade between field size, uniformity and current."
+     ],
+     [
+      "trap",
+      "Uniform to 0.1 per cent is a specification; asking uniform without a tolerance invites wrong answers."
+     ]
+    ]
+   },
+   {
+    "title": "The second method",
+    "items": [
+     [
+      "m",
+      "B''(0)=0\\ \\text{at}\\ s=R/2"
+     ],
+     [
+      "m",
+      "\\text{inflection of one loop field}"
+     ],
+     [
+      "p",
+      "Expand each coil field separately: the sum of two identical coils at symmetric positions has no odd terms; the quadratic term carries B double-prime of one loop evaluated at half-separation. A single loop axial field has its inflection at s = R/2, exactly where the partner must sit. Coils in anti-Helmholtz (opposite currents) give a linear gradient instead."
+     ],
+     [
+      "why",
+      "Anti-Helmholtz is the trap question: opposite currents make a quadrupole used in atom trapping, not a flat field."
+     ],
+     [
+      "trap",
+      "Collapsing the coils to d = 0 gives one 200-turn loop: B = mu0 N I / R = 0.63 mT - a clean limit check of the 0.716 factor."
+     ]
+    ]
+   },
+   {
+    "title": "Numbers and checks",
+    "items": [
+     [
+      "m",
+      "0.716\\to1\\ (d\\to0)"
+     ],
+     [
+      "m",
+      "\\mu_0NI/R\\ \\text{is tesla}"
+     ],
+     [
+      "p",
+      "Dimensions of mu0 N I / R are tesla; d to zero returns the single-loop limit; large d splits into two independent loop fields. At the midpoint the field is uniform in the axial direction to fourth order - the entire point of the construction."
+     ],
+     [
+      "why",
+      "Limit checks verify the constant 8/(5 sqrt 5) = 0.7155 before trusting uniformity claims."
+     ],
+     [
+      "trap",
+      "Helmholtz uniformity is not spherical uniformity; a large sample sees radial falloff even at the magnetic centre."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 3,
+  "slug": "Olympiad-03-sphere",
+  "title": "The magnetised sphere two ways",
+  "subtitle": "Uniform M in a sphere; demagnetising factors; external dipole field.",
+  "source": "Source \u00a710.3, OL3; Q52",
+  "diagrams": [
+   "sphere-a",
+   "sphere-b"
+  ],
+  "takeaway": "Interior field two-thirds mu0 M; outside a pure dipole; the demagnetising factor of a sphere is one third.",
+  "cards": [
+   {
+    "title": "Rings versus demagnetising factor",
+    "items": [
+     [
+      "m",
+      "B_{\\rm in}=\\tfrac23\\mu_0M"
+     ],
+     [
+      "m",
+      "\\mathbf H=-N_d\\mathbf M,\\ N_d=\\tfrac13"
+     ],
+     [
+      "p",
+      "Method 1 stacks the bound surface current K = M sin theta as rings and integrates the axial field at the centre. Method 2 uses the general result that inside a uniformly magnetised ellipsoid the demagnetising field is -N_d M with N_x + N_y + N_z = 1; a sphere shares equally, N = 1/3, giving B = mu0(M - M/3). The second method proves the interior is uniform, not just the centre."
+     ],
+     [
+      "why",
+      "Two methods answer different weaknesses: the ring integral gives one point, the demagnetising argument gives the whole interior."
+     ],
+     [
+      "trap",
+      "N_d = 1/3 is a sphere result; a long cylinder has N = 0 and a thin plate N = 1. Do not reuse one third for other shapes."
+     ]
+    ]
+   },
+   {
+    "title": "Worked numbers",
+    "items": [
+     [
+      "m",
+      "M=10^6\\ \\mathrm{A/m},\\ R=1\\ \\mathrm{cm}"
+     ],
+     [
+      "m",
+      "\\mu=4.19\\ \\mathrm{A\\,m^2}"
+     ],
+     [
+      "p",
+      "Interior B = 2/3 mu0 M = 0.84 T. Moment is M times volume: 4 pi R cubed over 3 times M = 4.19 A m\u00b2. At r = 5R on the axis the dipole field is 6.7e-3 T. A long cylinder of the same M would have 1.26 T inside - larger because its demagnetising field vanishes."
+     ],
+     [
+      "why",
+      "Comparing shapes at fixed M isolates geometry as the variable; the moment scales with volume in every case."
+     ],
+     [
+      "trap",
+      "The far-field formula needs r much larger than R; at r = 5R the dipole approximation is already per cent level at the pole."
+     ]
+    ]
+   },
+   {
+    "title": "Matching the rotating shell",
+    "items": [
+     [
+      "m",
+      "K=M\\sin\\theta"
+     ],
+     [
+      "m",
+      "B_{\\rm pole}=\\tfrac23\\mu_0M\\ \\text{continuous}"
+     ],
+     [
+      "p",
+      "The surface current of a uniformly magnetised sphere equals that of a rotating charged shell with sigma omega R = M. Just outside the pole the dipole field is also 2/3 mu0 M, continuous with the inside as the normal component must be; at the equator outside it is -1/3 mu0 M, a tangential jump mu0 K as required."
+     ],
+     [
+      "why",
+      "Continuity checks on B_normal and the K jump on tangential H are the field-matching exam skill."
+     ],
+     [
+      "trap",
+      "Inside the sphere the field is uniform yet the surface current varies with theta; do not expect a solenoid profile."
+     ]
+    ]
+   },
+   {
+    "title": "Sensitivity to shape",
+    "items": [
+     [
+      "m",
+      "N_x+N_y+N_z=1"
+     ],
+     [
+      "m",
+      "N_{\\rm sphere}=\\tfrac13"
+     ],
+     [
+      "p",
+      "Ellipsoids are the only shapes with uniform interior field; anything else has non-uniform M response. Laboratory magnetisation measurements therefore quote the sample shape with chi; a powder and a single crystal of the same material can differ."
+     ],
+     [
+      "why",
+      "Demagnetising corrections are the first systematic error in any susceptibility measurement."
+     ],
+     [
+      "trap",
+      "Reported chi without shape is ambiguous; ask for the demagnetising factor before believing the number."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 4,
+  "slug": "Olympiad-04-pressure-apps",
+  "title": "Magnetic pressure at work",
+  "subtitle": "Surface currents confining field; plasma channels; levitated slabs; cosine-theta windings.",
+  "source": "Source \u00a710.4, OL4; P30",
+  "diagrams": [
+   "pressure-apps-a",
+   "pressure-apps-b"
+  ],
+  "takeaway": "B\u00b2/2 mu0 is engineering: hoop stress, pinch, levitation and accelerator dipoles all obey it.",
+  "cards": [
+   {
+    "title": "Solenoid and pinch",
+    "items": [
+     [
+      "m",
+      "P=\\frac{B^2}{2\\mu_0}"
+     ],
+     [
+      "m",
+      "B_{\\rm surface}=\\frac{\\mu_0I}{2\\pi a}"
+     ],
+     [
+      "p",
+      "A 3 T solenoid of 10 cm\u00b2 bore: 3.6 MPa hoop stress (36 atm) and 3.6 kN pulling the halves together. A 30 kA lightning stroke in a 5 mm channel makes 1.2 T at its surface and pinches itself with 0.57 MPa of inward magnetic pressure, balanced by plasma thermal pressure (the Bennett relation)."
+     ],
+     [
+      "why",
+      "The same formula is outward on a solenoid winding and inward on a plasma column: pressure acts on whatever confines the field."
+     ],
+     [
+      "trap",
+      "The pinch is unstable (sausage and kink modes); quoting the equilibrium pressure is not a stability proof."
+     ]
+    ]
+   },
+   {
+    "title": "Levitated slab and numbers",
+    "items": [
+     [
+      "m",
+      "B=\\sqrt{2\\mu_0mg/A}"
+     ],
+     [
+      "m",
+      "\\text{1 T}\\to4\\ \\mathrm{atm}"
+     ],
+     [
+      "p",
+      "A type-I superconductor excludes B entirely and feels the full pressure from outside: supporting 2.0 kg over 4.0 cm\u00b2 needs 0.35 T at the plate. The Meissner effect makes levitation a stress problem; type-II pinning adds hysteresis and lateral stability."
+     ],
+     [
+      "why",
+      "Pressure methods give one-line levitation estimates that match image-dipole calculations to a factor of two."
+     ],
+     [
+      "trap",
+      "A field of 1 T supports a steel slab 5 m thick in principle; practical limits are the superconductor, not the stress."
+     ]
+    ]
+   },
+   {
+    "title": "Cosine-theta coil",
+    "items": [
+     [
+      "m",
+      "K=K_0\\cos\\varphi"
+     ],
+     [
+      "m",
+      "B_{\\rm inside}=\\frac{\\mu_0K_0}{2}"
+     ],
+     [
+      "p",
+      "Let two overlapping current cylinders of the overlap trick approach: their net surface current is K0 cos phi around the cylinder and the interior field stays uniform and transverse. Every accelerator dipole magnet is this construction in superconducting cable, held by steel collars against 27 MPa at 8.3 T."
+     ],
+     [
+      "why",
+      "The overlap trick taken to its limit designs the LHC dipole: same field theory, engineering scale."
+     ],
+     [
+      "trap",
+      "Uniform interior requires the full cosine distribution; approximating it with discrete coils leaks multipole errors that steer beams."
+     ]
+    ]
+   },
+   {
+    "title": "Stress checks in numbers",
+    "items": [
+     [
+      "m",
+      "P=\\frac{B^2}{2\\mu_0}"
+     ],
+     [
+      "m",
+      "1\\ \\mathrm T\\to3.98\\times10^{5}\\ \\mathrm{Pa}"
+     ],
+     [
+      "p",
+      "At 3 T the hoop stress is 36 atmospheres; at 8.3 T it is 27 MPa, the LHC collar design point. Remember 1 atm = 1e5 Pa so B squared over 2 mu0 at 1 T is about 4 atmospheres: a two-line sanity check on any magnet mechanical question."
+     ],
+     [
+      "why",
+      "A pressure-of-field table converts stress answers instantly and catches unit slips in Pa versus atm."
+     ],
+     [
+      "trap",
+      "Stress acts on the current distribution, not on the vacuum; quoting B squared over 2 mu0 as a pressure in empty space needs the confining current named."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 5,
+  "slug": "Olympiad-05-cycloid-fermi",
+  "title": "The cycloid family and Fermi acceleration",
+  "subtitle": "Crossed uniform fields; then slowly moving magnetic mirrors.",
+  "source": "Source OL5, OL7; \u00a73.10",
+  "diagrams": [
+   "cycloid-fermi-a",
+   "cycloid-fermi-b"
+  ],
+  "takeaway": "Every crossed-field orbit is a rolling wheel; every reflection off an approaching mirror gains energy.",
+  "cards": [
+   {
+    "title": "Classify by drifting frame",
+    "items": [
+     [
+      "m",
+      "v_d=E/B,\\quad r=\\frac{m|\\mathbf v_0-\\mathbf v_d|}{qB}"
+     ],
+     [
+      "m",
+      "\\text{wheel radius }r_c=\\frac{mE}{qB^2}"
+     ],
+     [
+      "p",
+      "In the drifting frame the particle circles at speed |v0 - vd|; the lab path is that circle carried along at vd. v0 = vd is a straight selector line; |v0 - vd| = vd is a cusped cycloid; larger gives loops (prolate), smaller curtate arches. Protons in E = 2e3 V/m, B = 0.020 T: vd = 1e5 m/s, r_c = 5.2 cm."
+     ],
+     [
+      "why",
+      "The drifting-frame construction classifies every initial condition in one picture; solving lab equations of motion reproduces it."
+     ],
+     [
+      "trap",
+      "Cusped, curtate and prolate refer to the gyration radius relative to the wheel, not to different forces."
+     ]
+    ]
+   },
+   {
+    "title": "Energy across one loop",
+    "items": [
+     [
+      "m",
+      "v_{\\rm top}=3v_d\\ \\text{in a loop}"
+     ],
+     [
+      "m",
+      "\\Delta K=qE\\cdot2r"
+     ],
+     [
+      "p",
+      "Energy conservation over one arch gives the top speed from qE times height 2r; in a prolate loop the bottom speed exceeds 3vd and the top falls to vd, checked by half m v\u00b2 differences. The drift is the same for an electron; only the circle size changes by the mass ratio."
+     ],
+     [
+      "why",
+      "Energy accounting verifies trajectory classification without integrating equations of motion."
+     ],
+     [
+      "trap",
+      "The proton and electron arch heights differ by 1836 even in identical fields; never transfer one orbit dimension to the other."
+     ]
+    ]
+   },
+   {
+    "title": "Fermi acceleration",
+    "items": [
+     [
+      "m",
+      "\\frac{\\Delta K}{K}\\approx\\frac{4V}{v}"
+     ],
+     [
+      "m",
+      "N\\approx0.21\\frac vV\\ \\text{to double}"
+     ],
+     [
+      "p",
+      "A particle reflecting from an approaching mirror gains 2V per head-on bounce in speed, hence about 4V/v in energy. Doubling energy takes about 0.21 v/V reflections: for cosmic rays on 10 km/s clouds that is 6000 bounces over 6000 years per light-year, and receding mirrors cancel half the gain at second order - shock acceleration is the modern resolution."
+     ],
+     [
+      "why",
+      "First-order (head-on shocks) and second-order (random clouds) Fermi acceleration differ in efficiency, not in principle."
+     ],
+     [
+      "trap",
+      "The adiabatic invariant p_parallel times path length gives the same gain law for slow compression; do not mix adiabatic and impulsive regimes in one estimate."
+     ]
+    ]
+   },
+   {
+    "title": "Cycloid numbers worked",
+    "items": [
+     [
+      "m",
+      "E=2.0\\times10^3\\ \\mathrm{V/m},\\ B=0.020\\ \\mathrm T"
+     ],
+     [
+      "m",
+      "v_d=1.0\\times10^5\\ \\mathrm{m/s}"
+     ],
+     [
+      "p",
+      "Protons: wheel radius r_c = m v_d / eB = 5.2 cm and gyro period 3.3 microseconds. Launch along +x at vd gives a straight line; at 2 vd a cusped cycloid; from rest the classic arch of height 10.4 cm; at minus vd prolate loops with instantaneous reverse motion."
+     ],
+     [
+      "why",
+      "Four initial conditions, one construction: classify with |v0 - vd| before integrating anything."
+     ],
+     [
+      "trap",
+      "In a prolate loop the instantaneous velocity reverses at the bottom of each loop; do not assume monotone forward motion."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 6,
+  "slug": "Olympiad-06-clocks",
+  "title": "Three clocks and a synchrotron",
+  "subtitle": "Trapped particles in dipole fields; ultrarelativistic electrons in ramps.",
+  "source": "Source OL6, OL8; \u00a73.12",
+  "diagrams": [
+   "clocks-a",
+   "clocks-b"
+  ],
+  "takeaway": "Radiation-belt particles keep three well-separated clocks; a synchrotron abandons the fixed cyclotron frequency.",
+  "cards": [
+   {
+    "title": "Gyration, bounce, drift",
+    "items": [
+     [
+      "m",
+      "T_c=\\frac{2\\pi m}{eB}"
+     ],
+     [
+      "m",
+      "T_d\\approx\\frac{2\\pi eBr^2}{3K}"
+     ],
+     [
+      "p",
+      "A 1 MeV proton at L = 2 in the Earth field (3.9 microtesla): gyration 17 ms with a 37 km radius, bounce between mirrors about 2 s, gradient drift around the Earth about 1300 s westward. The three timescales separate by two orders each, making each motion an adiabatic invariant of the next."
+     ],
+     [
+      "why",
+      "Hierarchy of clocks is what makes guiding-centre theory work; check the separation before applying invariants."
+     ],
+     [
+      "trap",
+      "Curvature drift adds to gradient drift for particles with parallel motion; quote which drift the period includes."
+     ]
+    ]
+   },
+   {
+    "title": "Drift period scaling",
+    "items": [
+     [
+      "m",
+      "T_d\\propto\\frac1K"
+     ],
+     [
+      "m",
+      "\\text{ring current of MA}"
+     ],
+     [
+      "p",
+      "Higher-energy particles drift faster and circle sooner: a 10 MeV proton takes 2 minutes, a 10 keV one 1.5 days. The trapped population carries a westward ring current of a few mega-amperes, the geomagnetic storm signature."
+     ],
+     [
+      "why",
+      "Energy-dependent drift times explain why injections of energetic particles disturb compasses within minutes."
+     ],
+     [
+      "trap",
+      "Dipole field model and local time effects give order-of-magnitude periods; exact drift shells need full field models."
+     ]
+    ]
+   },
+   {
+    "title": "The synchrotron",
+    "items": [
+     [
+      "m",
+      "f=\\frac{eB}{2\\pi\\gamma m}"
+     ],
+     [
+      "m",
+      "\\Delta E_{\\rm turn}=88.5\\ \\mathrm{keV}\\frac{E^4[\\mathrm{GeV}]}{r[\\mathrm m]}"
+     ],
+     [
+      "p",
+      "A 1 GeV electron in 1 T has orbit radius 3.3 m and revolution 14.3 MHz; the cyclotron formula would say 28 GHz - wrong by gamma = 1958. The synchrotron holds r fixed by ramping B with momentum and tunes the cavity towards c/2 pi r. Electrons radiate 27 keV per turn at that energy and must be replenished."
+     ],
+     [
+      "why",
+      "Synchrotron radiation sets the energy ceiling of electron machines and is itself a light source."
+     ],
+     [
+      "trap",
+      "Radiation loss scales as the fourth power of energy: small energy increases, large losses. Classical cyclotron answers for electrons are always wrong."
+     ]
+    ]
+   },
+   {
+    "title": "Detector-scale numbers",
+    "items": [
+     [
+      "m",
+      "p[\\mathrm{GeV}/c]=0.3\\,B[\\mathrm T]\\,r[\\mathrm m]"
+     ],
+     [
+      "m",
+      "E_e\\ \\text{radiates,}\\ E_p\\ \\text{less}"
+     ],
+     [
+      "p",
+      "The 300 Br rule in GeV units is the workhorse of collider design. Proton machines radiate far less at the same energy because the loss scales as 1/m\u2074 at fixed energy; this is why the LHC collides protons while light sources exploit electron radiation."
+     ],
+     [
+      "why",
+      "Knowing which particle radiates decides accelerator architecture and detector backgrounds."
+     ],
+     [
+      "trap",
+      "At fixed radius and B, momentum is fixed but energy depends on mass; always state which quantity the machine holds fixed."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 7,
+  "slug": "Olympiad-07-hall-levitation",
+  "title": "Two carriers, levitation and why iron beats water",
+  "subtitle": "Mixed carriers in semiconductors; image dipoles over perfect diamagnets; susceptibility estimates.",
+  "source": "Source OL9, OL11; \u00a73.32",
+  "diagrams": [
+   "hall-levitation-a",
+   "hall-levitation-b"
+  ],
+  "takeaway": "Mixed carriers can invert the Hall sign; levitation heights follow from image forces; iron orders by exchange.",
+  "cards": [
+   {
+    "title": "Two-carrier Hall",
+    "items": [
+     [
+      "m",
+      "R_H=\\frac{p\\mu_p^2-n\\mu_n^2}{e(p\\mu_p+n\\mu_n)^2}"
+     ],
+     [
+      "p",
+      "With electrons and holes both mobile, the transverse current balance weights each by the square of its mobility: R_H vanishes when n mu_n\u00b2 = p mu_p\u00b2 and flips sign beyond. Germanium at room temperature is p-type by count yet Hall-positive; heated to n = p it becomes Hall-negative, R_H = -7.2e-3 m\u00b3/C."
+     ],
+     [
+      "why",
+      "Mobility weighting, not carrier counting, decides the Hall sign: fast electrons dominate slow holes of equal number."
+     ],
+     [
+      "trap",
+      "The vanishing line n/p = (mu_p/mu_n)\u00b2 is where R_H passes through zero; near it the simple one-carrier formula is doubly wrong."
+     ]
+    ]
+   },
+   {
+    "title": "Levitation by images",
+    "items": [
+     [
+      "m",
+      "h=\\left(\\frac{3\\mu_0\\mu^2}{32\\pi mg}\\right)^{1/4}"
+     ],
+     [
+      "m",
+      "F=\\frac{3\\mu_0\\mu^2}{2\\pi s^4}"
+     ],
+     [
+      "p",
+      "A perfect diamagnet reflects a dipole into an antiparallel image at the mirror depth; coaxial antiparallel dipoles at separation 2h repel as 3 mu0 mu\u00b2 / 32 pi h\u2074. A 1 cm\u00b3 NdFeB cube of moment 1 A m\u00b2 floats 2.7 cm above a superconductor; doubling its weight only lowers h to 2.3 cm."
+     ],
+     [
+      "why",
+      "The quarter-power makes levitation forgiving: masses and moments change heights slowly."
+     ],
+     [
+      "trap",
+      "Type-II pinning adds lateral stability that the ideal image calculation cannot give; ideal Meissner levitation is laterally unstable."
+     ]
+    ]
+   },
+   {
+    "title": "Iron versus water numbers",
+    "items": [
+     [
+      "m",
+      "\\chi_{\\rm water}\\approx-9\\times10^{-6}"
+     ],
+     [
+      "m",
+      "k_BT_c\\approx zJ/3"
+     ],
+     [
+      "p",
+      "Dipole coupling between atomic moments is 0.04 K worth of energy - nothing at room temperature. Exchange J about 0.05 eV with z = 8 neighbours gives Tc near 1500 K, the right order for iron 1043 K. Water diamagnetism from the Larmor formula with Z = 10 and <r\u00b2> = (0.07 nm)\u00b2 gives -9.5e-6 against the measured -9.0e-6."
+     ],
+     [
+      "why",
+      "Three order-of-magnitude estimates in one problem: rule out the wrong mechanism, estimate the right one, verify the weak universal effect."
+     ],
+     [
+      "trap",
+      "Classical Larmor diamagnetism gets the right scale only with a sensible <r\u00b2>; the agreement for water is partly fortunate in that choice."
+     ]
+    ]
+   },
+   {
+    "title": "Perfect versus Larmor diamagnet",
+    "items": [
+     [
+      "m",
+      "\\chi=-1\\ \\text{(Meissner)}"
+     ],
+     [
+      "m",
+      "\\chi_{\\rm Larmor}\\sim-10^{-5}"
+     ],
+     [
+      "p",
+      "A superconductor screens B completely with surface currents and floats magnets centimetres high; ordinary diamagnets reduce the field by parts per million and levitate nothing visible. Both are negative susceptibilities; only one reaches the Meissner limit. Levitation estimates use image dipoles or B squared over 2 mu0 stress."
+     ],
+     [
+      "why",
+      "Separating the two mechanisms prevents the classic error of using chi = -1e-5 in a levitation estimate."
+     ],
+     [
+      "trap",
+      "Type-II superconductors trap flux and pin vortices: ideal Meissner image formulas describe type-I or reversible type-II only."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "section": "Olympiad",
+  "part_page": 8,
+  "slug": "Olympiad-08-estimates",
+  "title": "Estimates, Gauss method and model limits",
+  "subtitle": "Order-unity geometry factors; dipole model of the Earth; classical magnetostatics assumptions.",
+  "source": "Source \u00a7\u00a710.5-10.7, OL12; P36",
+  "diagrams": [
+   "estimates-a",
+   "estimates-b"
+  ],
+  "takeaway": "Estimates are arguments: each one shows what the model can and cannot do.",
+  "cards": [
+   {
+    "title": "Gauss absolute measurement",
+    "items": [
+     [
+      "m",
+      "\\mu B_H=\\frac{4\\pi^2 I_m}{T^2},\\qquad \\frac{\\mu}{B_H}=\\frac{\\tan\\theta\\,d^3}{2\\times10^{-7}}"
+     ],
+     [
+      "p",
+      "Oscillating a magnet of moment of inertia I_m gives the product mu B_H; deflecting a compass from distance d gives the ratio mu / B_H. I_m = 6e-6 kg m\u00b2, T = 4.0 s, d = 20 cm, theta = 30 degrees give mu = 0.58 A m\u00b2 and B_H = 25 microtesla: a field in mechanical units at last."
+     ],
+     [
+      "why",
+      "Two measurements, two unknowns: the structure of the method is the physics, not the arithmetic."
+     ],
+     [
+      "trap",
+      "The deflection formula needs the magnet far enough for its dipole field and the compass in its meridian; both are standard idealisations."
+     ]
+    ]
+   },
+   {
+    "title": "Estimates that teach",
+    "items": [
+     [
+      "m",
+      "I_{\\rm core}\\sim2\\times10^9\\ \\mathrm A"
+     ],
+     [
+      "m",
+      "B_{\\rm heart}\\sim100\\ \\mathrm{pT}"
+     ],
+     [
+      "p",
+      "A core-sized current loop needs two billion amperes, hence a dynamo. A compass within 10 cm of a 0.25 A wire errs a degree; a car battery lead must sit a metre away. The heart current dipole of 1e-5 A m produces 100 pT at 10 cm, measurable only with SQUIDs near the flux-quantum noise floor."
+     ],
+     [
+      "why",
+      "Each estimate answers a question a curious examiner can ask; the physics is the scaling, the number is the check."
+     ],
+     [
+      "trap",
+      "Bioelectric current dipoles are ampere-metres with 1/r\u00b2 fields; orbital magnetic dipoles are ampere-metre-squared with 1/r\u00b3 fields. Mixing the two powers is the classic slip."
+     ]
+    ]
+   },
+   {
+    "title": "Where the model breaks",
+    "items": [
+     [
+      "m",
+      "\\gamma=qB\\ \\text{failures: }f=\\frac{eB}{2\\pi\\gamma m}"
+     ],
+     [
+      "m",
+      "\\chi=-1\\ \\text{(superconductor)}"
+     ],
+     [
+      "p",
+      "Relativity moves the cyclotron frequency by 1/gamma; circling charges radiate; Landau quantisation and g = 2 are quantum; iron saturates at 2.1 T and its mu_r is a loop slope; changing flux induces electric fields - the next module; plasmas add collective effects and instabilities."
+     ],
+     [
+      "why",
+      "Listing failure modes is the mature end of a physics chapter: knowing when not to trust the formulas."
+     ],
+     [
+      "trap",
+      "Superconductivity and exchange are quantum from the ground up; classical analogies there are metaphors, not derivations."
+     ]
+    ]
+   },
+   {
+    "title": "Consistency identities",
+    "items": [
+     [
+      "m",
+      "\\tan\\theta_{\\rm dip}=2\\tan\\lambda"
+     ],
+     [
+      "m",
+      "B=B_{\\rm eq}\\sqrt{1+3\\sin^2\\lambda}"
+     ],
+     [
+      "p",
+      "A station with dip 60 degrees sits at magnetic latitude 41 degrees in the dipole model; its total field is 1.5 B_eq. Checking both identities on any station table separates model agreement from local anomaly data. The dipole moment from B_eq = 30 microtesla gives 7.8e22 A m\u00b2."
+     ],
+     [
+      "why",
+      "The dip-latitude identity is a free consistency check in every Earth-field question."
+     ],
+     [
+      "trap",
+      "Dipole geometry assumes a centred, aligned dipole; the 11 degree tilt and secular drift spoil precision but not the estimates."
+     ]
+    ]
+   }
+  ]
+ }
+]
