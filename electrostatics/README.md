@@ -1,5 +1,7 @@
 # Electrostatics — first principles to Olympiad
 
+[Printable short notes: 29 JEE + 8 extensions](../Short%20notes/Electrostatics/README.md) · [gallery](../Short%20notes/Electrostatics/index.html) · [all PNGs](../Short%20notes/Electrostatics/electrostatics-all-pngs.zip) · [A4 PDF](../Short%20notes/Electrostatics/electrostatics-short-notes.pdf). Source corrections are documented separately; the detailed chapter is unchanged.
+
 **Module folder for plan.md PARTs 13, 14 and 15**, merged into one chapter at the owner's direction (2026-09-27): charge and Coulomb's law → the electric field and the element-and-symmetry method → conductors and dipoles → charges in fields → flux and Gauss's law → the potential, energy and conductors again from the scalar side → the Olympiad layer and a 200-mark paper. Cengage floor: *Electrostatics and Current Electricity* chapters 1–3 (the PDF is in the repository root; the contents pages were read from it and every section heading appears in the coverage map of block 0). The shipped [capacitors](../capacitors/) and [current-electricity](../current-electricity/) notes are the two chapters that follow it in the course order (slots 18 and 19).
 
 | file | what it is |

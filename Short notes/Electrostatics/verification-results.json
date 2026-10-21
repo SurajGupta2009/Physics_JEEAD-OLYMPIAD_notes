@@ -1,0 +1,292 @@
+{
+  "assertions": 1382,
+  "physics_model_checks": 56,
+  "pages": 37,
+  "JEE": 29,
+  "Olympiad": 8,
+  "cards": 148,
+  "diagrams": 74,
+  "math_blocks": 257,
+  "numerical_models": [
+    {
+      "name": "electrons per microcoulomb",
+      "value": 6241509074460.763,
+      "expected": 6241509000000.0
+    },
+    {
+      "name": "ke2 in eV nm",
+      "value": 1.439964547848788,
+      "expected": 1.439965
+    },
+    {
+      "name": "triangle equal signs force N",
+      "value": 6.226758535968129,
+      "expected": 6.226
+    },
+    {
+      "name": "mixed triangle angle degrees",
+      "value": 120.00000000000001,
+      "expected": 120.0
+    },
+    {
+      "name": "square central equilibrium ratio",
+      "value": -0.9571067811865476,
+      "expected": -0.95710678
+    },
+    {
+      "name": "like-charge null distance fraction",
+      "value": 0.3333333333333333,
+      "expected": 0.3333333333333333
+    },
+    {
+      "name": "third equilibrium charge q1=1 q2=4",
+      "value": -0.4444444444444444,
+      "expected": -0.4444444444444444
+    },
+    {
+      "name": "ring maximum axial coordinate",
+      "value": 0.7071067811865475,
+      "expected": 0.70710678
+    },
+    {
+      "name": "ring maximum field coefficient",
+      "value": 0.3849001794597505,
+      "expected": 0.3849001794597505
+    },
+    {
+      "name": "ring particle period seconds",
+      "value": 0.3749161550482144,
+      "expected": 0.3749
+    },
+    {
+      "name": "finite rod E N/C",
+      "value": 513.7841387581565,
+      "expected": 514.0
+    },
+    {
+      "name": "end-on rod E N/C",
+      "value": 230.45004595641024,
+      "expected": 230.0
+    },
+    {
+      "name": "infinite line overestimate fraction",
+      "value": 0.00498756211208895,
+      "expected": 0.00498756
+    },
+    {
+      "name": "semicircle field coefficient",
+      "value": 0.6366197723675814,
+      "expected": 0.63661977
+    },
+    {
+      "name": "full ring field coefficient",
+      "value": 2.4492935982947064e-16,
+      "expected": 0.0
+    },
+    {
+      "name": "disc far-field limit",
+      "value": 0.9999992500731025,
+      "expected": 1.0
+    },
+    {
+      "name": "axial dipole far-field correction",
+      "value": 0.020304050607080848,
+      "expected": 0.02030405
+    },
+    {
+      "name": "equatorial exact midpoint coefficient",
+      "value": 8.0,
+      "expected": 8.0
+    },
+    {
+      "name": "dipole rotation aligned-to-opposite",
+      "value": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "beam exit deflection metres",
+      "value": 0.0031250000000000006,
+      "expected": 0.003125
+    },
+    {
+      "name": "beam screen deflection metres",
+      "value": 0.037500000000000006,
+      "expected": 0.0375
+    },
+    {
+      "name": "electron 1 keV speed m/s",
+      "value": 18755372.6225942,
+      "expected": 18755400.0
+    },
+    {
+      "name": "cube mid-edge side-face fraction",
+      "value": 0.05120819117478336,
+      "expected": 0.05120819117
+    },
+    {
+      "name": "cube mid-edge end-face fraction",
+      "value": 0.07379180882521663,
+      "expected": 0.07379180883
+    },
+    {
+      "name": "cube mid-edge total solid-angle fraction",
+      "value": 0.25,
+      "expected": 0.25
+    },
+    {
+      "name": "cube corner far-face fraction",
+      "value": 0.041666666666666664,
+      "expected": 0.04166666667
+    },
+    {
+      "name": "edge opposite-face direct flux",
+      "value": 0.05120819117478339,
+      "expected": 0.05120819117478336
+    },
+    {
+      "name": "edge end-face direct flux",
+      "value": 0.07379180882521663,
+      "expected": 0.07379180882521663
+    },
+    {
+      "name": "sphere volume field from enclosed charge",
+      "value": 0.4,
+      "expected": 0.4
+    },
+    {
+      "name": "uniform sphere central potential ratio",
+      "value": 1.5,
+      "expected": 1.5
+    },
+    {
+      "name": "sphere half-field external radius",
+      "value": 1.4142135623730951,
+      "expected": 1.41421356
+    },
+    {
+      "name": "linear radial density enclosed fraction",
+      "value": 0.1296,
+      "expected": 0.1296
+    },
+    {
+      "name": "slab interior potential continuity",
+      "value": -0.5,
+      "expected": -0.5
+    },
+    {
+      "name": "slab interior field derivative",
+      "value": 0.3000000000003,
+      "expected": 0.3
+    },
+    {
+      "name": "three-charge triangle pair energy coefficient",
+      "value": 3.0,
+      "expected": 3.0
+    },
+    {
+      "name": "square pair energy coefficient",
+      "value": 5.414213562373095,
+      "expected": 5.414213562373095
+    },
+    {
+      "name": "joined-sphere final voltage",
+      "value": 750.0,
+      "expected": 750.0
+    },
+    {
+      "name": "joined-sphere retained energy fraction",
+      "value": 0.25,
+      "expected": 0.25
+    },
+    {
+      "name": "uniform solid self-energy shell assembly",
+      "value": 0.5999999999999989,
+      "expected": 0.6
+    },
+    {
+      "name": "uniform solid inside field energy",
+      "value": 0.09999999999999981,
+      "expected": 0.1
+    },
+    {
+      "name": "alpha gold closest approach fm",
+      "value": 45.5028797120217,
+      "expected": 45.5029
+    },
+    {
+      "name": "image electron energy eV at 1nm",
+      "value": 0.3599911369621969,
+      "expected": 0.359991
+    },
+    {
+      "name": "image electron force N at 1nm",
+      "value": 5.7676938808792554e-11,
+      "expected": 5.76769e-11
+    },
+    {
+      "name": "ground-plane integrated induced charge ratio",
+      "value": -1.0000000000000004,
+      "expected": -1.0
+    },
+    {
+      "name": "sphere-image energy derivative equals force",
+      "value": -0.22222222224865804,
+      "expected": -0.2222222222222222
+    },
+    {
+      "name": "soap bubble zero-overpressure charge nC",
+      "value": 47.298157191645124,
+      "expected": 47.3
+    },
+    {
+      "name": "water Rayleigh 1mm nC",
+      "value": 0.6345713681459342,
+      "expected": 0.6346
+    },
+    {
+      "name": "drop endpoint threshold ratio",
+      "value": 0.4190508274420048,
+      "expected": 0.41905082744
+    },
+    {
+      "name": "dielectric sphere alpha epsilon factor",
+      "value": 0.4,
+      "expected": 0.4
+    },
+    {
+      "name": "quadrupole asymptotic potential coefficient",
+      "value": 2.000001999950818,
+      "expected": 2.0
+    },
+    {
+      "name": "ring in-plane E_s/s is NEGATIVE one-half",
+      "value": -0.5000005625005541,
+      "expected": -0.5
+    },
+    {
+      "name": "ring Hessian trace",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "cube corner potential coefficient",
+      "value": 1.1900386819897768,
+      "expected": 1.19003868199
+    },
+    {
+      "name": "cube centre potential coefficient",
+      "value": 2.3800773639795536,
+      "expected": 2.38007736398
+    },
+    {
+      "name": "one-metre dome charge mC",
+      "value": 0.33379501663291905,
+      "expected": 0.333795
+    },
+    {
+      "name": "one-metre dome field energy J",
+      "value": 500.69252494937865,
+      "expected": 500.693
+    }
+  ]
+}
