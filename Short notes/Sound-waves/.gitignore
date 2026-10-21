@@ -1,0 +1,6 @@
+# Requested chapter deliverables remain trackable despite global PDF rules.
+!sound-short-notes.pdf
+!sound-jee.pdf
+!sound-olympiad.pdf
+# Authoring fragments and one-shot patches; author_content.py is canonical.
+_build/

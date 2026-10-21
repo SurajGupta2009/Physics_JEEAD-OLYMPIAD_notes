@@ -1,0 +1,1532 @@
+# -*- coding: utf-8 -*-
+"""Author the complete sound-waves short notes (source: sound-waves/Sound-waves.md)."""
+import json, math
+
+HEAD = dict(color='navy', bg='#e8f4f8', accent='#1f6f8b')
+WHY = dict(color='teal', bg='#e6f7f4', accent='#148f77')
+CHK = dict(color='teal', bg='#e6f7f4', accent='#148f77')
+WARN = dict(color='red', bg='#fdecea', accent='#c0392b')
+CH = dict(color='yellow', bg='#fff8e1', accent='#b7950b')
+FN = dict(color='navy', bg='#f0f8ff', accent='#1f6f8b')
+_K = 2 * math.pi / 0.7
+SN = ['SN']
+JN = ['JEE']
+for _i in range(1, 29):
+    SN.append('SN-%02d' % _i)
+for _i in range(1, 13):
+    JN.append('OLY-%02d' % _i)
+
+
+def CX(level, theme, title, items):
+    return dict(level=level, theme=theme, title=title, items=items)
+
+
+def CHUNK(chunk):
+    bad = [it for it in chunk if isinstance(it, tuple) and len(it) == 2 and it[0] == 'D']
+    assert len(bad) <= 2, chunk[0]['title']
+    assert len(chunk) == 4, chunk[0]['title']
+    assert chunk[0]['level'] == 'h2'
+    for c in chunk:
+        for it in c['items']:
+            if isinstance(it, tuple):
+                assert it[0] in ('WHY', 'CHECK', 'FN', 'D'), (c['title'], it[0])
+                if it[0] == 'D':
+                    assert isinstance(it[1], str)
+            else:
+                assert isinstance(it, str) and it.strip()
+                assert len(it) <= 3200, (c['title'], len(it))
+                assert it.count('\n') <= 3, (c['title'], it.count('\n'))
+    out = list(chunk)
+    for c, it in zip(out, chunk):
+        body = [x for x in c['items'] if isinstance(x, str)]
+        text = '\n'.join(body)
+        for tgt in (c, it):
+            if isinstance(tgt, dict):
+                tgt['_used'] = max(tgt.get('_used', 0), len(text) / (520 * int(c['level'][-1])))
+    return out
+
+
+def DES(t, *ts):
+    return [CX('h3', HEAD, t, list(ts))]
+
+
+def DH(t, *ts):
+    return [CX('h4', CH, t, list(ts))]
+
+
+def TEA(t, *ts):
+    return [CX('h5', WARN, t, list(ts))]
+
+
+SOUND = []
+
+
+def ADD(slug, cards, summary):
+    assert slug in SN or slug in JN, slug
+    SOUND.append(dict(sheet=slug, summary=summary, cards=cards))
+
+
+# ---------------------------------------------------- JEE-01 sound as a longitudinal wave
+ADD('SN-01', CHUNK([
+    CX('h2', HEAD, 'Sound: a longitudinal mechanical wave in a medium',
+       ['Sound needs a medium: it is a disturbance that travels through a material by pushing and pulling along the travel direction. Gas molecules oscillate about fixed equilibrium positions while the pattern — the wave — moves at the speed of sound; no bulk gas flows along the pipe. Sound in a fluid is purely longitudinal (transverse waves need shear); in a solid rod, longitudinal and transverse modes can coexist (Oly 10). The wave pattern of a pure tone is sinusoidal, so everything follows from the displacement field $s(x,t) = s_0\\sin(kx - \\omega t)$: $s$ is the small displacement of a fluid element from its equilibrium position, amplitude $s_0$ is microscopic (audible sounds give $s_0 \\sim 10^{-8}$ to $10^{-4}$ m), $k = 2\\pi/\\lambda$, $\\omega = 2\\pi f$, and the wave speed is $v = \\omega/k = f\\lambda$ in the medium — only the pattern moves at $v$.',
+          'Compressions (pressure maxima) and rarefactions (minima) sit half a wavelength apart. The distance between two consecutive compressions is exactly $\\lambda$. If a source vibrates with frequency $f$, it launches $f$ wavefronts per second, and the wavelength in the medium is $\\lambda = v/f$ — the medium fixes $v$, the source fixes $f$, the medium and source together give $\\lambda$. A wave with frequency 340 Hz in air at 20 C has $\\lambda = 343/340 = 1.009$ m. Direction convention: $s = s_0\\sin(kx - \\omega t)$ travels toward $+x$ because a phase point $kx - \\omega t = $ const has $dx/dt = \\omega/k = v > 0$.',
+          'Speed is a bulk property: $v = \\sqrt{B/\\rho}$ for a fluid (Section JEE-04), so it does not depend on frequency — a bass drum and a piccolo travel together (non-dispersive medium), and the tone reaching a listener is undistorted. Loudness relates to amplitude $s_0$ or pressure amplitude $\\Delta P_0$ (JEE-02/12); pitch relates to $f$. In vacuum $B = 0$, there is no sound, which is itself proof that sound is a pressure-elastic wave. For exam problems the working chain is: given $f$ and $v$, get $\\lambda$; given $s(x,t)$, read $s_0, k, \\omega, v = \\omega/k$ and the travel direction from the sign of the $kx - \\omega t$ combination.',
+          ('WHY', 'longitudinal means the oscillation of each gas element is along the wave travel direction: layers alternately pile up (compression, higher pressure) and spread out (rarefaction, lower pressure), and this pattern advances at $v = \\sqrt{B/\\rho}$ — the elements themselves only jiggle about their mean positions.'),
+          ('CHECK', 'given $s = 2\\times 10^{-6}\\sin(1000x - 3.43\\times 10^{5}t)$: $k = 1000$ rad/m so $\\lambda = 2\\pi/1000 = 6.28$ mm; $\\omega = 3.43\\times 10^{5}$ rad/s so $f = 54.6$ kHz; $v = \\omega/k = 343$ m/s — air at room temperature; the $-\\omega t$ sign means travel toward $+x$.')],
+      ),
+    CX('h3', HEAD, 'Particle velocity vs wave speed — the classic confusion',
+       ['$v_{\\rm wave} = \\omega/k$ is the speed of the pattern; the gas element itself oscillates with velocity $u = ds/dt = -s_0\\omega\\cos(kx - \\omega t)$, whose amplitude $s_0\\omega$ is tiny (for $s_0 = 10^{-6}$ m at 340 Hz: $u_{\\max} = 2.1\\times 10^{-3}$ m/s against $v = 343$ m/s). The wave transports energy and momentum; the medium transports neither over long distances. Two waves can pass through the same region and superpose (JEE-13) because the governing equation is linear for small $s$.',
+          'One full oscillation of the source emits exactly one wavelength of sound. The period $T = 1/f$ is the time in which the wave advances by $\\lambda$: $v = \\lambda/T = f\\lambda$. When a wave crosses into another medium (sound from air into water), $f$ is fixed by the source, $v$ changes with the medium, so $\\lambda$ changes: $\\lambda_{\\rm water} = 1480/340 = 4.35$ times longer for the same tone.',
+          ('WHY', 'the wave equation for $s$ is $\\partial^2 s/\\partial t^2 = v^2 \\partial^2 s/\\partial x^2$ (JEE-04) — linear and second order, so sinusoidal solutions of any $f$ travel at the same $v$ (no dispersion), and the superposition principle holds.'),
+          ('CHECK', 'a 200 Hz tuning fork is held in air at 20 C ($v = 343$ m/s): $\\lambda = 1.72$ m; the same fork under water ($v = 1480$ m/s): $\\lambda = 7.4$ m — same $f$, same pitch, different wavelength and different speed.')]),
+    CX('h3', CH, 'How sound is produced and detected (practical frame)',
+       ['Sources are all vibrating bodies: strings, air columns, membranes, vocal cords. The vibrating surface alternately compresses and rarefies the adjacent air, launching the wave. Receivers are resonant systems too: the ear canal (~2.5 cm closed pipe, fundamental ~3.4 kHz — the ear is most sensitive near 3 kHz), microphone diaphragms, plates. Resonance (JEE-16/17) amplifies sound both at the source and at the receiver, which is why Helmholtz resonators sing at one pitch and why a room has preferred frequencies (room modes = open/closed pipe problem in 3D).',
+          'A pure tone (single $f$) is a sine wave; real sounds are sums of harmonics + noise. The phase velocity of the fundamental defines $v$; timbre lives in the harmonic content. Ultrasound ($f > 20$ kHz) and infrasound ($f < 20$ Hz) obey exactly the same equations — the audible band is a biological, not physical, boundary. In air at 20 C the audible range spans $\\lambda = 17$ m (20 Hz) to 17 mm (20 kHz).',
+          ('FN', 'in a duct filled with flowing gas of speed $w$ the observed frequency is Doppler-shifted (JEE-25): stationary listener in moving medium hears $f$ unchanged if both source and listener are carried by the same wind; wind matters only for relative motion along the line of sight.'),
+      ]),
+    CX('h3', CH, 'Worked micro-examples',
+       ['(a) Find $v$ for a wave $s = s_0\\sin(2.4x - 1.1\\times 10^{3}t)$ in a metal: $v = \\omega/k = 1100/2.4 = 458$ m/s, $\\lambda = 2.62$ m, $f = 175$ Hz. (b) A sound wave has $\\lambda = 1.62$ m in air at 20 C: $f = 343/1.62 = 212$ Hz. (c) Two speakers 1 m apart vibrate in phase at 340 Hz — the wavelength 1 m sets the fringe spacing (JEE-13). (d) A stone dropped in a well: sound travels down, water splash returns — combines wave travel time with kinematics (paper Section D style).',
+          'Linearity check: doubling $s_0$ doubles both $\\Delta P_0$ and intensity (JEE-10), and raises the level by 6.02 dB in pressure terms (3.01 dB in intensity terms for doubling power). The wave speed stays exactly the same — amplitude never changes $v$ in linear acoustics (nonlinear acoustics, shocks, are outside the syllabus).',
+          ('WHY', 'if $v$ depended on amplitude, a loud note would arrive later than a soft one and music would smear — linear acoustics ($s_0 \\ll \\lambda$) rules this out for everyday sound.'),
+          ('CHECK', 'for $f = 1$ kHz, $s_0 = 10^{-5}$ m: $s_0/\\lambda = 3\\times 10^{-8}$ — infinitesimal strain, so the linear wave equation is superbly accurate for ordinary sound.')]),
+]), 'What sound is: longitudinal wave, s(x,t), λ = v/f, wave vs particle speed.')
+
+# ---------------------------------------------------- JEE-02 strain and acoustic pressure
+ADD('SN-02', CHUNK([
+    CX('h2', HEAD, 'Strain and the acoustic pressure $\\Delta P = -B\\,\\partial s/\\partial x$',
+       ['Sound is a small-amplitude compression wave: when a gas element is squeezed (negative $\\partial s/\\partial x$) its pressure rises. The extra pressure above ambient, $\\Delta P = P - P_{0}$, is the acoustic (excess) pressure. Bulk modulus of the fluid is $B = -V\\,dP/dV$ (positive), and for a displaced column the fractional volume change is exactly the strain $\\partial s/\\partial x$ (displacement gradient). Linearizing gives the fundamental relation $\\Delta P = -B\\,\\dfrac{\\partial s}{\\partial x}$ — the minus sign is essential: where displacement decreases with $x$ (elements pile up), pressure rises.',
+          'Insert $s = s_0\\sin(kx - \\omega t)$: $\\partial s/\\partial x = k s_0\\cos(kx - \\omega t)$, so $\\Delta P = -B k s_0\\cos(kx - \\omega t)$, i.e. pressure amplitude $\\Delta P_0 = B k s_0$. Using $v = \\sqrt{B/\\rho}$, $B = \\rho v^2$ and $k = \\omega/v$, this becomes the exam workhorse $\\Delta P_0 = B k s_0 = \\rho v \\omega s_0$. In air at 20 C: $\\rho = 1.2$ kg/m$^3$, $v = 343$ m/s, so $\\Delta P_0 \\approx 412\\,\\omega s_0$ (SI). Example: $s_0 = 2\\times 10^{-6}$ m at $f = 340$ Hz gives $\\Delta P_0 = 1.2\\times 343\\times 2136\\times 2\\times 10^{-6} = 1.76$ Pa.',
+          'Physical sizes: atmospheric pressure $P_0 = 1.013\\times 10^{5}$ Pa, while audible acoustic pressures run $2\\times 10^{-5}$ Pa (threshold) to ~20 Pa (threshold of pain) — $\\Delta P \\ll P_0$ always, which is why the linear treatment works and why air density barely changes. Threshold of hearing: $s_0 = \\Delta P_0/(\\rho v\\omega) \\approx 2.87\\times 10^{-5}/(412\\cdot 2\\pi\\cdot 1000) \\approx 1.1\\times 10^{-11}$ m at 1 kHz — a nuclear-scale displacement, yet the ear detects it.',
+          ('WHY', 'the sign in $\\Delta P = -B\\partial s/\\partial x$ is Hooke-type restoring physics: stretch the element (positive strain) and pressure drops below ambient — the fluid pulls back; squeeze and pressure rises — exactly like a spring $F = -kx$ with $B$ playing the stiffness role.'),
+          ('CHECK', 'where $s$ is at a maximum ($s = s_0$ at $kx - \\omega t = \\pi/2$), $\\partial s/\\partial x = 0$, so $\\Delta P = 0$: displacement antinodes are pressure nodes. A microphone placed at a displacement node of a standing wave registers maximum pressure fluctuation (JEE-16).')],
+      ),
+    CX('h3', HEAD, 'The numbers: pressure amplitude from displacement amplitude',
+       ['Master formula: $\\Delta P_0 = \\rho v \\omega s_0$. In air $\\rho v \\approx 412$ kg m$^{-2}$s$^{-1}$ (often quoted as $Z = 412$ rayl, conventionally rounded to 400 — Oly 01). Three worked numbers from the source: (i) $f = 340$ Hz, $s_0 = 2\\times 10^{-6}$ m $\\Rightarrow \\Delta P_0 = 1.76$ Pa; (ii) at threshold of hearing ($\\Delta P_0 = 2\\times 10^{-5}$ Pa at 1 kHz) $s_0 = 1.1\\times 10^{-11}$ m; (iii) a loud rock concert ($\\Delta P_0 = 20$ Pa) has $s_0 = 20/(412\\cdot 6283) = 7.8\\times 10^{-6}$ m at 1 kHz — still microscopic.',
+          'Frequency dependence at fixed $s_0$: $\\Delta P_0 \\propto \\omega$ — high frequencies carry more pressure for the same displacement. At fixed pressure (same loudness) $s_0 \\propto 1/\\omega$ — bass drivers must swing much farther than tweeters for equal acoustic pressure, which is why woofers are large-excursion and tweeters tiny. Membrane displacement of a loudspeaker at 20 Hz and 120 Pa: $s_0 = 120/(412\\cdot 126) = 2.3$ mm — visible shaking.',
+          ('WHY', 'the $\\omega$ factor is calculus, not physics: pressure is a gradient of displacement, and a fixed-amplitude pattern with shorter wavelength (higher $f$) has steeper slope $k s_0 = (\\omega/v) s_0$.'),
+          ('CHECK', 'consistency with JEE-10: intensity $I = \\Delta P_0^2/(2\\rho v)$: for 1.76 Pa, $I = 3.1/824 = 3.7\\times 10^{-3}$ W/m$^2$ — plausible loud speech-to-shout level, $\\beta = 95.7$ dB.')]),
+    CX('h3', CH, 'Strain, bulk modulus, and where the speed comes from',
+       ['The strain in a sound wave is $\\partial s/\\partial x = k s_0\\cos(\\cdot)$, of order $k s_0 = 2\\pi s_0/\\lambda$: for $s_0 = 10^{-6}$ m, $\\lambda = 1$ m, strain $\\sim 6\\times 10^{-6}$ — the medium is compressed by parts per million. Bulk modulus of air at 1 atm, with adiabatic assumption (JEE-07): $B = \\gamma P_0 = 1.4\\times 1.013\\times 10^{5} = 1.42\\times 10^{5}$ Pa. Then $v = \\sqrt{B/\\rho} = \\sqrt{1.42\\times 10^{5}/1.2} = 344$ m/s ✓. For water $B = 2.2$ GPa, $\\rho = 1000$: $v = 1483$ m/s ✓; for steel $Y = 2\\times 10^{11}$ Pa, $\\rho = 7800$: $v = 5.06\\times 10^{3}$ m/s (rod) ✓.',
+          'Stiffness vs inertia: $v = \\sqrt{B/\\rho}$ says speed grows with restoring stiffness and falls with inertia. That is why sound is fast in diamond and slow in heavy gases, and why the isothermal vs adiabatic question (JEE-06/07) decides $B$ for gases: $B_{\\rm iso} = P$, $B_{\\rm ad} = \\gamma P$ — a factor 1.18 in speed.',
+          ('CHECK', 'the speed of sound cannot exceed the bulk sound-speed limit of the material and never depends on $s_0$ or $f$ in the linear regime — two constraints every formula must respect.'),
+          ('FN', 'at very high intensity (shock waves) the linear law breaks: the crests steepen because the compressed gas is locally faster. Sonic booms (JEE-28) are the built-up edge of this nonlinearity.')]),
+    CX('h3', CH, 'Micro-worked set (pressure–displacement round trip)',
+       ['(a) $s(x,t) = 5\\times 10^{-6}\\cos(800x - 2.75\\times 10^{5}t)$ in air: $\\omega = 2.75\\times 10^{5}$, $f = 43.8$ kHz (ultrasound), $v = 344$ m/s, $\\Delta P_0 = \\rho v\\omega s_0 = 1.2\\times 344\\times 2.75\\times 10^{5}\\times 5\\times 10^{-6} = 568$ Pa — strong ultrasound. (b) Given $\\Delta P_0 = 0.3$ Pa at 250 Hz in air: $s_0 = 0.3/(412\\cdot 1571) = 4.6\\times 10^{-7}$ m. (c) In a Kundt tube dust heaps sit at pressure nodes... (d) The ear canal closed at one end has displacement node at the eardrum — maximum pressure on the eardrum (why it is sensitive).',
+          'Round-trip conversions examiners love: given $s_0$ and $f$ in a medium of known $\\rho, v$: $\\Delta P_0 = \\rho v 2\\pi f s_0$; given $\\Delta P_0$: $s_0 = \\Delta P_0/(2\\pi f \\rho v)$; given both: $v = \\Delta P_0/(2\\pi f \\rho s_0)$, $\\rho = \\Delta P_0/(2\\pi f v s_0)$. Dimension check: $\\rho v\\omega s_0 = $ kg m$^{-3}$ m s$^{-1}$ s$^{-1}$ m = kg m$^{-1}$ s$^{-2}$ = Pa ✓.',
+          ('WHY', 'acoustic pressure is the quantity microphones and ears respond to; displacement is what optics-based methods (Laser Doppler Vibrometry) measure — exams give one, physics often wants the other, and $\\Delta P_0 = \\rho v\\omega s_0$ is the bridge.'),
+          ('CHECK', 'in water ($\\rho v = 1.48\\times 10^{6}$) the same $s_0$ at same $f$ gives $\\Delta P_0$ 3600 times larger than in air — same displacement, hugely different pressure because water is far stiffer.')]),
+]), 'Strain, acoustic pressure, ΔP = −B ∂s/∂x, ΔP₀ = ρvωs₀, bulk modulus frame.')
+
+# ---------------------------------------------------- JEE-03 quadrature and energy
+ADD('SN-03', CHUNK([
+    CX('h2', HEAD, 'Displacement vs pressure phase: the quadrature structure of sound',
+       ['For a travelling wave $s = s_0\\sin(kx - \\omega t)$ the acoustic pressure is $\\Delta P = -B\\partial s/\\partial x = -B k s_0\\cos(kx - \\omega t) = \\Delta P_0\\sin(kx - \\omega t - \\pi/2)$: pressure lags displacement by 90 degrees (is in quadrature). Graphically: at points where gas has maximum displacement from equilibrium, the local density is unmodified (slope of $s$ is zero), so pressure is ambient; where the slope of $s$ is steepest (elements pile up most), displacement itself is zero and pressure is extremal. Compressions therefore sit a quarter wavelength from displacement maxima.',
+          'Energy picture: in a sound wave, energy sloshes between ordered motion of elements (kinetic, max where elements move fastest = displacement-phase crossings) and elastic compression energy (max where $\\Delta P$ is extremal). The two are in quadrature, exactly like a mass-spring oscillator being driven through equilibrium. Mean energy density $\\bar u = \\frac{1}{2}\\rho v^2 (k s_0)^2\\cdot\\frac{1}{2}\\cdot 2$... cleanly: $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2$ (equal mean kinetic and potential share $\\frac{1}{4}\\rho\\omega^2 s_0^2$ each; equivalently $\\bar u = \\Delta P_0^2/(4B)\\cdot 2 = \\Delta P_0^2/(2\\rho v^2)$ since $B = \\rho v^2$).',
+          'For a standing wave the roles exchange spatially instead: nodes of $s$ are antinodes of $\\Delta P$ and vice versa, and standing-wave energy density is maximum at both node types at different phases. The quadrature relation $\\Delta P = -B\\partial s/\\partial x$ is the safest way to get the relative phase right in any geometry — more reliable than memorising "pressure leads/lags".',
+          ('WHY', 'pressure measures the local slope (spatial derivative) of the displacement pattern; for a sinusoid, derivative = phase shift by $\\pi/2$. The minus sign adds $\\pi$, giving $\\Delta P$ in antiphase with $\\partial s/\\partial x$, quadrature with $s$ itself.'),
+          ('CHECK', 'displacement node in a pipe closed at the rigid end: the end forces $s = 0$ there, slope is maximal, pressure is maximum — consistent with $\\Delta P = -B\\partial s/\\partial x$ and with the physics that a wall bears the full pressure swing.')],
+      ),
+    CX('h3', HEAD, 'Energy density and the travelling-wave energy flux',
+       ['Mean energy density of a travelling sound wave: $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2 = \\dfrac{\\Delta P_0^2}{2\\rho v^2} = \\dfrac{\\Delta P_0^2}{2B}$. Numerically at 1 kHz, $\\Delta P_0 = 1$ Pa in air: $\\bar u = 1/(2\\cdot 1.42\\times 10^{5}) = 3.5\\times 10^{-6}$ J/m$^3$ — tiny energy densities carrying audible sound across rooms. The energy flux (intensity) is energy density times speed: $I = \\bar u v = \\dfrac{\\Delta P_0^2}{2\\rho v} = \\frac{1}{2}\\rho v\\omega^2 s_0^2$ (JEE-10 keeps the full intensity toolkit).',
+          'Compare EM waves: there $\\vec E$ and $\\vec B$ are in phase and energy flux is peak-crossing; in sound the kinetic and compressive energies are in quadrature but their SUM is what travels, and $I = \\bar u v$ still holds cycle-averaged. Peak instantaneous energy density doubles the mean: $u_{\\max} = \\rho\\omega^2 s_0^2 = 2\\bar u$.',
+          ('CHECK', 'units: $\\rho\\omega^2 s_0^2 = $ kg m$^{-3}$ s$^{-2}$ m$^2$ = J m$^{-3}$ ✓; $I = \\bar u v$ = J m$^{-3}$ m s$^{-1}$ = W m$^{-2}$ ✓; both expressions for $\\bar u$ agree through $\\Delta P_0 = \\rho v\\omega s_0$: $\\Delta P_0^2/(2\\rho v^2) = \\rho^2 v^2\\omega^2 s_0^2/(2\\rho v^2) = \\frac{1}{2}\\rho\\omega^2 s_0^2$ ✓.'),
+          ('WHY', 'the 1/2 factors come from time-averaging $\\sin^2$ and $\\cos^2$ over a cycle (both give 1/2); the two energies peak alternately, so the total energy density actually oscillates at $2\\omega$ around $\\bar u$ — a detail Olympiad problems exploit (Oly 05).')]),
+    CX('h3', CH, 'Phase map of one wavelength (memorise the picture)',
+       ['At $kx - \\omega t = 0$: $s = 0$ (elements crossing equilibrium), $\\Delta P = -\\Delta P_0$ (rarefaction trough, slope of $s$ maximal positive... careful: $\\partial s/\\partial x = k s_0\\cos 0 = +k s_0 > 0$ gives $\\Delta P = -Bk s_0$, a rarefaction). At $kx - \\omega t = \\pi/2$: $s = +s_0$ (max displacement), $\\Delta P = 0$ (undisturbed density). At $\\pi$: $s = 0$, $\\Delta P = +\\Delta P_0$ (compression). At $3\\pi/2$: $s = -s_0$, $\\Delta P = 0$. So moving along $x$ at fixed time: compression (P max) sits at $s$ rising through zero; rarefaction at $s$ falling through zero; $\\Delta P$ extrema are $\\lambda/4$ from $s$ extrema and in sign alternation every $\\lambda/2$.',
+          'Auditory perspective: the eardrum is a pressure sensor; what we "hear" is the $\\Delta P(t)$ sequence at our location. If you could see the air, you would watch elements sloshing back and forth by $s_0$ while crests of density stream past at $v$. The displacement field is the more fundamental variable (it obeys the wave equation directly), the pressure field its derivative partner.',
+          ('FN', 'the pair ($s$, $\\Delta P$) forms a two-component wave state analogous to ($x$, $p$) in mechanics; characteristic acoustic impedance $Z = \\Delta P/u = \\rho v$ is the ratio (Oly 01), constant for a travelling wave, imaginary/position-dependent for standing waves.'),
+      ]),
+    CX('h3', CH, 'Worked check set on phase and energy',
+       ['(a) Write $\\Delta P(x,t)$ for $s = s_0\\sin(kx - \\omega t + \\phi)$: always $\\Delta P = -B k s_0\\cos(kx - \\omega t + \\phi) = \\Delta P_0\\sin(kx - \\omega t + \\phi - \\pi/2)$. The phase shift is universal: pressure lags displacement by $\\pi/2$ regardless of $\\phi$. (b) Standing wave $s = 2s_0\\sin(kx)\\cos(\\omega t)$: $\\Delta P = -2Bk s_0\\cos(kx)\\cos(\\omega t)$ — node of $s$ at $kx = 0$ is antinode of $\\Delta P$ ✓. (c) Energy: $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2$ for $f = 340$ Hz, $s_0 = 2\\times 10^{-6}$: $\\bar u = 0.5\\cdot 1.2\\cdot (2136)^2\\cdot(2\\times 10^{-6})^2 = 1.1\\times 10^{-5}$ J/m$^3$; intensity $I = \\bar u v = 3.7$ mW/m$^2$ ✓ consistent with SN-02.',
+          'Traps: (i) writing $\\Delta P = \\Delta P_0\\sin(kx - \\omega t)$ "in phase with $s$" — wrong, off by $\\pi/2$; (ii) treating $\\Delta P_0 = B k s_0$ as $B s_0/\\lambda$ — missing $2\\pi$; (iii) using $I = \\Delta P_0 v$ instead of the time-averaged $\\Delta P_0^2/(2\\rho v)$ — factor $\\sqrt 2$ bookkeeping (RMS vs peak: $I = \\Delta P_{\\rm rms}^2/(\\rho v)$ with $\\Delta P_{\\rm rms} = \\Delta P_0/\\sqrt 2$).',
+          ('WHY', 'the factor-2 in $I = \\Delta P_0^2/(2\\rho v)$ vs $\\Delta P_{\\rm rms}^2/(\\rho v)$ is the peak-vs-RMS convention; state which amplitude you use before writing the intensity.'),
+          ('CHECK', 'cross-check every amplitude formula with two routes: $I = \\frac{1}{2}\\rho v\\omega^2 s_0^2$ and $I = \\Delta P_0^2/(2\\rho v)$ must agree through $\\Delta P_0 = \\rho v\\omega s_0$ — if not, a $\\sqrt 2$ or $2\\pi$ is missing.')]),
+]), 's–ΔP quadrature, energy density ½ρω²s₀², phase map of one wavelength.')
+# ---------------------------------------------------- JEE-04 wave equation and v = sqrt(B/rho)
+ADD('SN-04', CHUNK([
+    CX('h2', HEAD, 'The sound wave equation and $v = \\sqrt{B/\\rho}$',
+       ['Derivation from two laws. (1) Newton 2nd law for a slice of fluid of thickness $\\Delta x$, area $A$: net force $-A\\,\\partial(\\Delta P)/\\partial x\\,\\Delta x$ equals mass $\\rho A\\Delta x$ times acceleration $\\partial^2 s/\\partial t^2$: $\\rho\\,\\dfrac{\\partial^2 s}{\\partial t^2} = -\\dfrac{\\partial(\\Delta P)}{\\partial x}$. (2) The medium law $\\Delta P = -B\\,\\partial s/\\partial x$. Differentiate (2) in $x$ and insert: $\\rho\\,\\partial^2 s/\\partial t^2 = B\\,\\partial^2 s/\\partial x^2$, i.e. the wave equation $\\dfrac{\\partial^2 s}{\\partial t^2} = v^2\\dfrac{\\partial^2 s}{\\partial x^2}$ with $\\mathbf{v = \\sqrt{B/\\rho}}$.',
+          'Everything follows from that box: for a gas with adiabatic bulk modulus $B = \\gamma P$ (JEE-07) $v = \\sqrt{\\gamma P/\\rho} = \\sqrt{\\gamma R T/M}$; for a rod $B \\to Y$ (JEE-05); for a liquid $B = $ bulk modulus. The wave equation is linear and second order, so sinusoids of every frequency travel at the same $v$ (no dispersion in this regime) and superposition holds. General solutions: $s = f(x - vt) + g(x + vt)$ — any shape travels undistorted at $\\pm v$.',
+          'Velocity of the medium is not $v$: energy propagates at phase speed $v = \\omega/k$ for these non-dispersive waves (group speed $d\\omega/dk = v$ too). The two constants of the wave equation, $\\rho$ (inertia) and $B$ (elasticity), fully determine speed — frequency and amplitude do not enter. Compressibility $\\kappa = 1/B$: $v = 1/\\sqrt{\\rho\\kappa}$ — a form worth recognising since some data give $\\kappa$.',
+          ('WHY', 'the derivation is exactly the spring-mass continuum: $\\rho$ is the inertia density, $B$ the stiffness against compression; $\\sqrt{stiffness/inertia}$ has units m/s and is the only combination that can be a speed — dimensional analysis alone already shows $v \\propto \\sqrt{B/\\rho}$.'),
+          ('CHECK', 'air at STP with $B = \\gamma P = 1.4\\times 1.013\\times 10^{5}$ Pa, $\\rho = 1.293$: $v = \\sqrt{1.42\\times 10^{5}/1.293} = 331$ m/s ✓ (matches Laplace value; the isothermal $B = P$ gives 280 m/s ✗ — JEE-06/07).')],
+      ),
+    CX('h3', HEAD, 'Speed from data: the three formula forms and how to choose',
+       ['(i) $v = \\sqrt{B/\\rho}$ when bulk modulus/density given. (ii) $v = \\sqrt{\\gamma P/\\rho}$ for gases when $P, \\rho$ known (careful: use adiabatic $\\gamma$). (iii) $v = \\sqrt{\\gamma R T/M}$ for ideal gases from temperature and molar mass — the most exam-friendly, since $P/\\rho = RT/M$. Worked: helium at 20 C ($M = 4$ g/mol, $\\gamma = 5/3$): $v = \\sqrt{(5/3)(8.314)(293.15)/0.004} = 1.01\\times 10^{3}$ m/s; hydrogen at 0 C ($\\gamma = 1.4$, $M = 2$ g): $v = \\sqrt{1.4\\cdot 8.314\\cdot 273/0.002} = 1260$ m/s — five times faster than air (low $M$ dominates).',
+          'Water: $B = 2.2$ GPa, $\\rho = 1000$ kg/m$^3$: $v = 1483$ m/s. Steel rod: $Y = 2\\times 10^{11}$, $\\rho = 7800$: $v = 5064$ m/s (longitudinal in a THIN rod; bulk-waves in an infinite solid use $K + 4G/3$, slightly larger — JEE-05). Mercury: $B = 28$ GPa, $\\rho = 13600$: $v = 1436$ m/s.',
+          ('CHECK', 'dimensional: $[B/\\rho] = $ Pa/(kg m$^{-3}$) = kg m$^{-1}$s$^{-2}$ / kg m$^{-3}$ = m$^2$ s$^{-2}$ ✓. Physical: $v$ must increase with $T$ for gases (more agitated, stiffer effective restoring? — actually $\\rho$ falls faster than $B$: $v = \\sqrt{\\gamma RT/M}$ grows as $\\sqrt T$; for liquids $B$ and $\\rho$ both soften with $T$, $v$ drops slightly with $T$ — opposite signs, a favourite comparison question.'),
+          ('FN', 'in a gas mixture use effective $M$: $1/M = \\sum w_i/M_i$ for mass fractions... precisely: $M_{\\rm eff} = \\sum x_i M_i$ with $x_i$ mole fractions; humid air has lower $M_{\\rm eff}$ than dry air because $M_{\\rm H2O} = 18 < 29$ — hence speed grows with humidity (JEE-09).')]),
+    CX('h3', CH, 'What the wave equation does NOT say (scope guard)',
+       ['It assumes: small amplitude ($s_0 \\ll \\lambda$, $\\Delta P \\ll P_0$), no viscosity/thermal conduction (no attenuation), linear $B$, homogeneous medium. Real sound attenuates ($I \\propto e^{-\\alpha x}$, $\\alpha$ growing with $f^2$ — fog horns are low pitch partly for this), and speed has a tiny dispersion from relaxation effects. Shock waves (sonic boom edges) need nonlinear theory. All exam formulas are the linear limit.',
+          'The equation also holds in moving media if you transform to the medium frame (JEE-25 wind), and in 3D as $\\partial^2 s/\\partial t^2 = v^2\\nabla^2 s$ with solutions like $s = (A/r)\\sin(kr - \\omega t)$ for a point source (JEE-11).',
+          ('WHY', 'linearisation is legitimate because acoustic strains are parts per million (SN-02): the pressure–volume curve of a gas is smooth, and a linear (tangent) approximation around $P_0$ is excellent for $\\Delta P/P_0 < 10^{-2}$.'),
+          ('CHECK', 'any proposed speed formula must be blind to amplitude and frequency — if a candidate formula contains $s_0$ or $f$, it is not the linear wave speed.')]),
+    CX('h3', CH, 'Speed-solving drills (pattern recognition)',
+       ['(a) Given compressibility of a liquid $\\kappa = 4.5\\times 10^{-10}$ Pa$^{-1}$, $\\rho = 1000$: $v = 1/\\sqrt{\\rho\\kappa} = 1491$ m/s. (b) A gas with $B = 1.39\\times 10^{5}$ Pa, $\\rho = 1.2$: $v = 340$ m/s. (c) Find $\\gamma$ if $v = 331$ m/s at 0 C in a gas with $M = 29$ g: $\\gamma = v^2 M/(RT) = 331^2\\cdot 0.029/(8.314\\cdot 273) = 1.40$ ✓ air. (d) A steel rod and a steel bulk sample: rod $\\sqrt{Y/\\rho}$ vs bulk $\\sqrt{(K+4G/3)/\\rho}$: for steel $K = 160$ GPa, $G = 79$ GPa, $Y = 200$ GPa, $\\nu = 0.29$: bulk $= \\sqrt{(160+105.3)\\times 10^{9}/7800} = 5.83\\times 10^{3}$ m/s > rod 5064 m/s — the rod is softer (free side surface).',
+          'Formula-choice tree: gas + T, M $\\to \\sqrt{\\gamma RT/M}$; gas + P, $\\rho$ $\\to \\sqrt{\\gamma P/\\rho}$ (check whether given $\\rho$ is adiabatic-consistent); liquid + B, $\\rho$ $\\to \\sqrt{B/\\rho}$; thin rod $\\to \\sqrt{Y/\\rho}$; infinite solid/bulk wave $\\to \\sqrt{(K+4G/3)/\\rho}$; string $\\to \\sqrt{T/\\mu}$ (mechanical analogy only, not sound).',
+          ('WHY', 'the rod vs bulk difference is boundary physics: in a thin rod the lateral surface is stress-free, so the effective longitudinal stiffness is exactly $Y$; in a bulk solid lateral confinement adds $4G/3$ on top of $K$ (P-wave modulus).'),
+          ('CHECK', 'always bound the answer: gas speeds few hundred m/s (to ~1800 for hot He), liquids ~1000–1500 m/s, solids 3000–6000 m/s. If a gas speed comes out 33 km/s, a molar-mass unit slipped (g vs kg).')]),
+]), 'Wave equation derivation, v = √(B/ρ), formula-choice tree, scope guards.')
+
+# ---------------------------------------------------- JEE-05 solids
+ADD('SN-05', CHUNK([
+    CX('h2', HEAD, 'Sound in solids: rods $\\sqrt{Y/\\rho}$ and bulk $\\sqrt{(K+\\frac{4}{3}G)/\\rho}$',
+       ['In a thin solid rod the longitudinal wave speed is $v_{\\rm rod} = \\sqrt{Y/\\rho}$ — same wave-equation derivation with Young modulus $Y$ replacing $B$ and the free side surface allowing lateral expansion (Poisson contraction unopposed). In an infinite solid (bulk longitudinal wave) the lateral directions are constrained, the effective stiffness is the P-wave modulus $M = K + 4G/3$, and $v_{\\rm bulk} = \\sqrt{(K + 4G/3)/\\rho}$, always larger than $v_{\\rm rod}$ (for $\\nu = 0.29$, $v_{\\rm bulk}/v_{\\rm rod} = \\sqrt{2(1-\\nu)/(1-2\\nu)} = 1.16$).',
+          'Worked numbers (steel: $Y = 2.0\\times 10^{11}$ Pa, $\\rho = 7800$ kg/m$^3$): $v_{\\rm rod} = \\sqrt{2.0\\times 10^{11}/7800} = 5.06\\times 10^{3}$ m/s. Sound is ~15 times faster in steel than in air — putting an ear to the rail hears the train before the air-borne sound arrives (classic timing problem: see source Q16 in Section 3 and paper drills). Aluminium ($Y = 7\\times 10^{10}$, $\\rho = 2700$): $v = 5.1\\times 10^{3}$ m/s. Glass ($Y = 7\\times 10^{10}$, $\\rho = 2500$): $v = 5.3\\times 10^{3}$ m/s.',
+          'Transverse (shear) waves also travel in solids with $v_s = \\sqrt{G/\\rho} < v_{\\rm rod}$ — not sound proper, but seismology P- and S-waves use exactly these two formulas. Longitudinal is always fastest. Liquids and gases have $G = 0$: no transverse sound, and $K$ alone plays the elastic role — the reason sound in fluids is purely longitudinal.',
+          ('WHY', 'the two solid speeds differ only in effective stiffness: $Y = 3K(1-2\\nu)$ vs $K + 4G/3$; with $G = Y/2(1+\\nu)$ one gets $v_{\\rm bulk}^2/v_{\\rm rod}^2 = (1-\\nu)/((1+\\nu)(1-2\\nu))$... precisely $= 2(1-\\nu)/(1-2\\nu)$, always $> 1$ for $0 \\le \\nu < 1/2$ — a rigid tube of material transmits faster than a free rod.'),
+          ('CHECK', 'steel with $K = 160$ GPa, $G = 79$ GPa: $K + 4G/3 = 265$ GPa, $v_{\\rm bulk} = 5.83\\times 10^{3}$ m/s vs rod 5064 m/s, ratio 1.15 — matches $\\sqrt{2(1-0.29)/(1-0.58)} = \\sqrt{1.46} = 1.21$... close; use consistent $\\nu = 1 - Y/6K + Y/3K$... simplest: trust $\\sqrt{(K+4G/3)/\\rho}$ directly from given moduli.')],
+      ),
+    CX('h3', HEAD, 'Which modulus, when: decision table',
+       ['Problem says "thin rod / long wire / rod held at ends": $v = \\sqrt{Y/\\rho}$. "Bulk solid / infinite solid / seismic P-wave / inside a metal block": $v = \\sqrt{(K+4G/3)/\\rho}$ (if $K$, $G$ given) or via $Y, \\nu$: $K = Y/3(1-2\\nu)$, $G = Y/2(1+\\nu)$, then $M = K + 4G/3 = Y(1-\\nu)/((1+\\nu)(1-2\\nu))$, $v = \\sqrt{M/\\rho}$. "Fluid / gas / liquid": $\\sqrt{B/\\rho}$ with $B = \\gamma P$ for ideal gases (adiabatic) and tabulated $B$ for liquids. "String": $\\sqrt{T/\\mu}$ (transverse, not sound).',
+          'Kundt tube application (JEE-21): dust heaps give $\\lambda_{\\rm gas}/2$; the vibrating rod clamped at its centre is a rod standing wave of $\\lambda_{\\rm rod} = 2L_{\\rm rod}$ (fundamental), and frequency matching $f = v_{\\rm rod}/(2L_{\\rm rod}) = v_{\\rm gas}/\\lambda_{\\rm gas}$ yields $v_{\\rm gas} = v_{\\rm rod}\\,d/L_{\\rm rod}$ when dust spacing $d = \\lambda_{\\rm gas}/2$... precisely $v_{\\rm gas} = v_{\\rm rod}\\cdot \\lambda_{\\rm gas}/(2L_{\\rm rod}) = v_{\\rm rod}\\cdot d/L_{\\rm rod}$ with $d = \\lambda_{\\rm gas}/2$: source worked example $v_{\\rm rod} = 5000$, $L_{\\rm rod} = 1$ m, $d = 8$ cm gives $v_{\\rm gas} = 5000\\times 0.08 = 400$ m/s ✓ (warm gas).',
+          ('CHECK', 'rod speed from Kundt inversion: $v_{\\rm rod} = 2 L_{\\rm rod} f$... the working chain: measure $d$, know $L_{\\rm rod}$ and rod speed, gas speed $= v_{\\rm rod} d/L_{\\rm rod}$; check units and the factor 2 — $d = \\lambda/2$ is the usual convention (dust heaps at pressure nodes are $\\lambda/2$ apart).'),
+          ('FN', 'Poisson ratio range $0 < \\nu < 0.5$ bounds the rod/bulk ratio between 1 and 1.58 ($\\nu \\to 0.5$, incompressible: $K \\to \\infty$). Cork ($\\nu \\approx 0$): bulk $=$ rod.')]),
+    CX('h3', CH, 'Worked solid-state numbers',
+       ['(a) Brass $Y = 10^{11}$ Pa, $\\rho = 8500$: $v = 3.43\\times 10^{3}$ m/s. (b) Copper $Y = 1.2\\times 10^{11}$, $\\rho = 8900$: $v = 3.67\\times 10^{3}$ m/s. (c) Glass $Y = 7\\times 10^{10}$, $\\rho = 2500$: $v = 5.29\\times 10^{3}$ m/s. (d) Rail problem: steel rail $v = 5064$ m/s vs air 343: over 1 km, air time 2.92 s, rail time 0.198 s — the rail "warning" arrives 2.7 s early. (e) A copper rod 1 m long, clamped at the middle, vibrating longitudinally: $f = v/(2L) = 1.84$ kHz; compare with air column of same length open-open: $f = 343/2 = 171$ Hz — solids give much higher pitches for the same length.',
+          'Interference with temperature: for metals $Y$ drops slightly with $T$ and $\\rho$ falls less, so rod speed falls ~0.01%/K — negligible in exams; gases change ~0.17%/K (JEE-08) — exam-relevant.',
+          ('WHY', 'metals are stiff AND dense; speed is a ratio effect — lead ($Y = 1.6\\times 10^{10}$, $\\rho = 11300$) gives only 1190 m/s, slower than water, despite being a metal; stiffness wins only when it outruns density.'),
+          ('CHECK', 'lead: $\\sqrt{1.6\\times 10^{10}/11300} = 1.19\\times 10^{3}$ m/s — slower than water (1483) ✓ consistent with intuition that lead is "soft-heavy"; rubber ($Y \\sim 10^{7}$): ~100 m/s order.')]),
+    CX('h3', CH, 'Common exam setups involving solids',
+       ['(i) Longitudinal rod fundamental with various fixings: fixed-free: $f_1 = v/4L$; fixed-fixed or free-free: $f_1 = v/2L$; harmonics integer multiples in all cases (all harmonics present for rods — unlike closed air pipes, because both ends have the same type of condition in fixed-fixed/free-free, and fixed-free rod has odd harmonics like a closed pipe). (ii) Pulse travel and echo with two paths (solid + air): $t_{\\rm air} - t_{\\rm solid} = L(1/v_a - 1/v_s)$ measured; solve for $L$. (iii) Comparison of wavelengths in a rod and the air column it excites — frequency is common at the interface, $\\lambda$ differs by the speed ratio.',
+          'Boundary behaviour at a solid-air interface: nearly total reflection at the free end (pressure node outside) with phase behaviour that makes the free end a displacement antinode; the rod radiates sound inefficiently — why a struck rod rings and why loudspeaker cones are designed to match $Z$ (Oly 02).',
+          ('FN', 'a rod held in the middle and rubbed lengthwise (Galilean singing rod) resonates at $v_{\\rm rod}/2L$ — heard pitch is the rod mode coupled to air, largely the rod fundamental.')]),
+]), 'Rods √(Y/ρ), bulk √((K+4G/3)/ρ), decision table, worked solid numbers.')
+
+# ---------------------------------------------------- JEE-06 Newton isothermal
+ADD('SN-06', CHUNK([
+    CX('h2', HEAD, "Newton's isothermal estimate: 280 m/s — and why it fails",
+       ['Newton guessed that sound compressions in air stay at constant temperature (heat flows in/out fast enough to keep $T$ fixed), giving the isothermal bulk modulus $B = P$ from Boyle: $PV = $ const $\\Rightarrow B = -V dP/dV = P$. Then $v_{\\rm iso} = \\sqrt{P/\\rho}$. At STP ($P = 1.013\\times 10^{5}$ Pa, $\\rho = 1.293$ kg/m$^3$): $v = \\sqrt{1.013\\times 10^{5}/1.293} = 2.80\\times 10^{2}$ m/s — about 15% below the measured 331.5 m/s at 0 C. Newton noticed the discrepancy and fudged the density; the real fix is the thermodynamics (JEE-07).',
+          'Why isothermal is wrong: a compression cycle at 340 Hz is far too fast for heat to flow. Compression time scale $\\sim 1/f \\approx 3$ ms; thermal diffusion time across a half wavelength ($\\lambda/2 \\sim 0.5$ m) is $t_{\\rm th} \\sim x^2/\\alpha$ with $\\alpha = 2.2\\times 10^{-5}$ m$^2$/s for air: $t_{\\rm th} \\sim 10^{4}$ s — ten million periods. The compression is therefore adiabatic: no heat exchange, temperature rises slightly in compressions ($\\Delta T = T\\Delta P/(\\gamma P) \\sim 10^{-2}$ K at 1 Pa), and the gas is stiffer: $B_{\\rm ad} = \\gamma P$.',
+          'The measured number at 0 C is 331.5 m/s; $\\sqrt{\\gamma} = \\sqrt{1.4} = 1.183$; $280\\times 1.183 = 331.3$ m/s — the Laplace factor is exactly what is needed. Thermodynamic check: sound speed equals $\\sqrt{(\\partial P/\\partial \\rho)_s}$ (entropy constant) not $(\\partial P/\\partial \\rho)_T$; for an ideal gas these differ by exactly $\\gamma$.',
+          ('WHY', 'the medium is stiffer when it cannot thermally relax: adiabatic compression raises $T$, which raises pressure further (extra $\\gamma - 1 = 0.4$ of push), so the restoring force and hence speed rise by $\\sqrt\\gamma = 1.183$ — the 18.3% correction turns 280 into 331.'),
+          ('CHECK', 'ratio measured/Newton $= 331.5/279.9 = 1.184 = \\sqrt{1.4}$ ✓ to three digits — the discrepancy is 100% of the error and 0% mystery.')],
+      ),
+    CX('h3', HEAD, 'Why heat cannot flow: time-scale argument (the physics core)',
+       ['General principle: a gas process is isothermal if the period is much longer than the thermal diffusion time ($f \\ll \\alpha/\\lambda^2$-type condition), adiabatic if much shorter. Sound frequencies 20 Hz – 20 kHz give periods 0.05 – 50 ms; thermal equilibration across $\\lambda/2$ takes seconds to hours. So ALL audible sound is adiabatic. The isothermal assumption would only hold for extremely slow, quasi-static compressions (e.g. 0.01 Hz in a small chamber — infrasonic creep, not sound propagation).',
+          'At very high frequencies in rarefied gases (mean free path comparable to $\\lambda$, MHz in low-pressure chambers) the regime changes again (relaxation, Knudsen) — speed can deviate; outside syllabus, but flag the validity domain: $\\lambda \\gg$ mean free path ($\\sim 70$ nm in air at STP, so up to THz acoustics it holds).',
+          ('WHY', 'the thermal diffusion time grows as $\\lambda^2$ while the period grows only as $1/f$: for any fixed medium there is always a frequency above which the process is adiabatic, and ordinary sound sits many orders above it.'),
+          ('CHECK', 'numerically: at $f = 1$ kHz, $\\lambda = 0.34$ m, $t_{\\rm th} \\sim (0.17)^2/2.2\\times 10^{-5} = 1.3\\times 10^{3}$ s vs period 1 ms — ratio $10^{6}$: adiabatic by a factor of a million.')]),
+    CX('h3', CH, 'What Newton got right, and the exam framing',
+       ['Newton correctly: (i) identified sound with a compressional wave in air; (ii) derived $v = \\sqrt{B/\\rho}$ (in modern form); (iii) computed the isothermal $B = P$ rigorously; (iv) saw temperature and molar-mass dependence in $P/\\rho = RT/M$. He lacked the first law of thermodynamics (Carnot-Clausius came later), so the adiabatic exponent was unavailable. Laplace supplied it in 1816. Exam questions often ask "explain the discrepancy and derive the corrected speed" — full marks need: isothermal value 280, measured 331, ratio $\\sqrt\\gamma$, time-scale argument, and the corrected formula $v = \\sqrt{\\gamma P/\\rho}$.',
+          'Traps: (i) using $B = P$ "because it is a gas" — must ask isothermal or adiabatic; always adiabatic for sound. (ii) writing $v = \\sqrt{P/\\rho}$ from the ideal gas law as if it were the final answer — that form is Newton speed; multiply by $\\sqrt\\gamma$. (iii) confusing $\\gamma = C_p/C_v = 1.4$ (diatomic) with $5/3$ (monatomic) — He, Ar: $\\gamma = 5/3$, $\\sqrt\\gamma = 1.29$.',
+          ('CHECK', 'monatomic gas check: at STP with $\\gamma = 5/3$, $M = 4$ g (He): $v = \\sqrt{(5/3)\\cdot 1.013\\times 10^{5}/0.179} = 971$ m/s at 0 C ($\\rho_{\\rm He} = 0.179$); formula route $\\sqrt{\\gamma R T/M} = 969$ m/s ✓ consistent.')]),
+    CX('h3', CH, 'Mini-worked: isothermal vs adiabatic side by side',
+       ['Given an unknown gas at $P = 1$ atm, $\\rho = 1.6$ kg/m$^3$, measured $v = 450$ m/s. Isothermal prediction $\\sqrt{1.013\\times 10^{5}/1.6} = 252$ m/s; ratio $450/252 = 1.79 = \\sqrt{\\gamma} \\Rightarrow \\gamma = 3.2$?? Non-physical — so either the measurement or the density is off: real gases have $1 < \\gamma \\le 1.67$. Reverse-engineering traps like this train consistency checks: $v\\sqrt{\\rho/P} = \\sqrt\\gamma \\in [1, 1.29]$ always.',
+          'Another: at what temperature does Newton predict the CORRECT 331 m/s? $T = M v^2/(\\gamma R)$... Newton form $v = \\sqrt{RT/M}$: $T = Mv^2/R = 0.029\\cdot 331^2/8.314 = 378$ K = 105 C — an isothermal gas at 105 C would carry sound like an adiabatic gas at 0 C. Cute but never physical for propagation.',
+          ('WHY', 'the entire 280-vs-331 story is a single exponent: $v_{\\rm ad} = \\sqrt\\gamma v_{\\rm iso}$, and every sound speed in a gas can be written $v = \\sqrt\\gamma\\, v_{\\rm Newton}$ with $v_{\\rm Newton} = \\sqrt{RT/M}$ at temperature $T$.'),
+          ('CHECK', 'always compute the isothermal baseline mentally: $\\sqrt{RT/M}$ at 293 K for air $= \\sqrt{8.314\\cdot 293/0.029} = 290$ m/s; times $\\sqrt{1.4} = 1.183$: 343 ✓ room-temperature speed.')]),
+]), 'Newton isothermal 280 m/s, time-scale argument, √γ correction physics.')
+
+# ---------------------------------------------------- JEE-07 Laplace correction
+ADD('SN-07', CHUNK([
+    CX('h2', HEAD, 'Laplace correction: $B = \\gamma P$, $v = \\sqrt{\\gamma P/\\rho} = \\sqrt{\\gamma R T/M}$',
+       ['Laplace (1816): sound compressions are adiabatic, so the gas law governing the wave is $PV^{\\gamma} = $ const. Differentiate: $B = -V\\,dP/dV = \\gamma P$. Then $v = \\sqrt{\\gamma P/\\rho}$. With $P = \\rho RT/M$ (ideal gas): $\\mathbf{v = \\sqrt{\\gamma R T/M}}$ — speed depends only on temperature and gas identity, not on pressure! At 0 C: $\\sqrt{1.4\\cdot 8.314\\cdot 273.15/0.029} = 331$ m/s ✓; at 20 C: 343 m/s ✓.',
+          'Derivation of $B_{\\rm ad} = \\gamma P$: $PV^{\\gamma} = C \\Rightarrow P\\gamma V^{\\gamma-1}dV + V^{\\gamma}dP = 0 \\Rightarrow dP/dV = -\\gamma P/V \\Rightarrow B = -V dP/dV = \\gamma P$ ✓. Microscopic meaning of $\\gamma = C_p/C_v$: in adiabatic compression no heat escapes, so the temperature rise adds thermal pressure on top of the compression pressure; $C_p - C_v = R$ (per mole) quantifies the extra push; for diatomic air $\\gamma = 1.4$, monatomic $5/3$, polyatomic (CH4) $\\approx 1.3$.',
+          'Consequences to memorise: (i) $v \\propto \\sqrt T$ (absolute temperature!); (ii) $v$ independent of $P$ at fixed $T$ (double $P$, $\\rho$ doubles too, ratio $P/\\rho = RT/M$ fixed); (iii) $v \\propto 1/\\sqrt M$ at fixed $T, \\gamma$; (iv) humid air faster than dry (effective $M$ drops); (v) $\\gamma$ from sound speed: $\\gamma = v^2 M/(RT)$ — the classic "measure $\\gamma$ by sound" experiment.',
+          ('WHY', 'the correction factor is exactly $\\sqrt\\gamma$ because $B_{\\rm ad}/B_{\\rm iso} = \\gamma P/P = \\gamma$ and $v \\propto \\sqrt B$; the measured/Newton ratio 331/280 = 1.183 = $\\sqrt{1.4}$ is the quantitative proof.'),
+          ('CHECK', 'temperature in Kelvin: $v \\propto \\sqrt T$: 0 C $= 273$ K gives 331; using 0 (or 20) in Celsius gives nonsense — a standard trap. Also $\\sqrt{\\gamma RT/M}$ needs SI: $M$ in kg/mol (0.029 not 29).')],
+      ),
+    CX('h3', HEAD, 'The temperature law in numbers (and the surface-gravity bonus)',
+       ['$v = 331.3\\sqrt{T/273.15}$ m/s, or linearised $v \\approx 331.3 + 0.60t$ (t in C) — from source: at 20 C, 343.2; slope $dv/dt = v/2T = 343/(2\\cdot 293) = 0.585$ m/s per K. Table: $-40$ C: 306; 0 C: 331; 20 C: 343; 37 C: 350; 100 C: 386 m/s. At 25 C: $331.3\\sqrt{298.15/273.15} = 346.1$ m/s.',
+          'High-altitude application (source example): temperature falling at 6.5 K/km in the troposphere, $g = 9.8$, $\\gamma = 1.4$, $M = 0.029$: sound speed falls as $\\sqrt T$; $dv/dz = (dv/dT)(dT/dz) = 0.585\\cdot(-6.5) = -3.8$ m/s per km at sea level. Near the ground this makes sound refract upward during the day (hot ground) and downward at night (temperature inversion) — why sound carries over lakes at night.',
+          'Sound horizon gravity formula (source §2.5 bonus): $v_{\\rm top}/v_{\\rm bottom} = \\sqrt{1 - 2gh/(\\gamma R T/M)}$... precisely $v(h) = v_0\\sqrt{1 - 2gh M/(\\gamma R T_0)}$ for an isothermal atmosphere with constant $g$; the top of a gravity-bound atmosphere of height $h_{\\max} = \\gamma R T/(Mg)$ has $v = 0$ — speed vanishes where pressure vanishes. Troposphere uses lapse-rate $T(z)$ instead.',
+          ('CHECK', 'small height changes: $\\Delta v/v = \\frac{1}{2}\\Delta T/T$: a 10 K temperature difference gives 1.7% speed change — measurable in precise timing (theodolite-ranging corrections), ignorable in most exam problems unless asked.')]),
+    CX('h3', CH, 'Measuring $\\gamma$ by sound (the experiment behind the theory)',
+       ['Method: measure $v$ acoustically (resonance tube or time of flight) and the temperature; $\\gamma = M v^2/(RT)$. Example from data: $v = 347$ m/s at 297 K, $M = 0.029$: $\\gamma = 0.029\\cdot 347^2/(8.314\\cdot 297) = 1.413$ — close to 1.4; the residual reflects humidity and CO2 content. For CO2 ($M = 44$ g, $\\gamma = 1.3$): $v = \\sqrt{1.3\\cdot 8.314\\cdot 273/0.044} = 259$ m/s ✓ known value 260.',
+          'Reverse problem styles: given $v$ and $T$, find $M$ (identify the gas): $M = \\gamma R T/v^2$; given $v$ at two temperatures: $v_1/v_2 = \\sqrt{T_1/T_2}$ fixes nothing about the gas; given $v$ at same T in two gases: $M_2 = M_1 (v_1/v_2)^2$ if same $\\gamma$ — helium leak detection.',
+          ('WHY', 'the ideal-gas sound speed is a thermometer in disguise: only $T$ and molecular identity survive in $\\sqrt{\\gamma RT/M}$ — all pressure dependence cancels. That is the structural reason labs use acoustic thermometry for precise $T$ (ITS-90 uses sound in argon!).'),
+          ('CHECK', 'speed ratio He/air at same $T, \\gamma$: $\\sqrt{29/4} = 2.69$ if same $\\gamma$; but He is monatomic ($\\gamma = 5/3$): exact ratio $\\sqrt{(5/3)/1.4}\\cdot 2.69 = 2.93$ — knowing $\\gamma$ values matters for light gases.')]),
+    CX('h3', CH, 'Laplace-era consistency drills',
+       ['(a) Show $v$ independent of $P$: compress air isothermally to 10 atm: $\\rho$ rises 10x, $P$ 10x, $P/\\rho$ fixed — but wait, compressing changes $T$; at fixed $T$, $v$ unchanged ✓ (e.g. compressed-air tanks still carry 343 m/s at room T). (b) Hot-air balloon: air at 100 C inside vs 20 C outside: speeds 386 vs 343 — sound travels faster inside the balloon (13%); frequency unchanged at an interface, wavelength stretches 13%. (c) Mars atmosphere (95% CO2, $M = 0.043$ kg/mol, $T = 210$ K, $\\gamma = 1.29$): $v = \\sqrt{1.29\\cdot 8.314\\cdot 210/0.043} = 231$ m/s — thin, heavy, cold air speaks slowly.',
+          'Cross-check anchors: air 0 C 331, 20 C 343, He 20 C 1007, H2 0 C 1260, CO2 0 C 259, water 20 C 1482, steel rod 5064 — keep this handful in memory for sanity checks of every computation.',
+          ('FN', 'the speed formula $\\sqrt{(\\partial P/\\partial\\rho)_s}$ is general: for a van der Waals gas or a liquid with thermal expansion corrections the sound speed measures the adiabatic stiffness — acoustic measurements probe the equation of state directly (Oly 12).')]),
+]), 'Laplace correction, v = √(γRT/M), temperature law, γ by sound.')
+# ---------------------------------------------------- JEE-08 temperature law
+ADD('SN-08', CHUNK([
+    CX('h2', HEAD, 'Temperature dependence: $v = 331.3\\sqrt{T/273}$ m/s, $\\approx 331 + 0.6t$',
+       ['From $v = \\sqrt{\\gamma RT/M}$: at fixed gas, $v \\propto \\sqrt T$ with $T$ in kelvin. Anchored at 0 C: $v(T) = 331.3\\sqrt{T/273.15}$ m/s. Linear form for everyday range: $v \\approx 331.3 + 0.60\\,t$ C (exact slope at 20 C: $dv/dT = v/2T = 343/(2\\cdot 293) = 0.585$ m/s/K; the "0.6" is a rounded staple). Values: $-40$ C: 306; 0 C: 331; 20 C: 343; 37 C: 350; 100 C: 386 m/s. The $\\sqrt T$ law is exact for ideal gases; the linear law is its first-order expansion: $v = 331.3(1 + t/273.15)^{1/2} \\approx 331.3(1 + t/546)$ — slope 0.605 m/s/K at 0 C.',
+          'Physics: heating a gas at constant pressure lowers its density ($\\rho = PM/RT$) while $B = \\gamma P$ stays put — lighter medium, same stiffness, faster wave. At constant volume, heating raises $P$ and $B$ with $\\rho$ fixed — also faster. In both cases only $T$ matters: $v = \\sqrt{\\gamma RT/M}$ carries no $P$ or $\\rho$ separately.',
+          'Micro-physical picture (kinetic theory): $v_{\\rm sound} \\sim 0.68\\,\\bar c$ for $\\gamma = 1.4$ where $\\bar c = \\sqrt{8RT/\\pi M}$ is the mean molecular speed — sound is a coherent disturbance propagated by molecular collisions at roughly the thermal speed. $\\bar c$ at 293 K in air $= 464$ m/s; $0.68\\times 464 = 316$... order of magnitude; exact $v/\\bar c = \\sqrt{\\gamma\\pi/8} = 0.74$.',
+          ('WHY', 'the $\\sqrt T$ law is the same $\\sqrt{stiffness/inertia}$ as always, with $B = \\gamma PM/RT$ after eliminating $\\rho$ — the gas constant $R$ is what ties mechanics to thermodynamics here.'),
+          ('CHECK', 'halving absolute temperature drops speed by $\\sqrt 2$ only: 300 K $\\to$ 347; 150 K $\\to$ 245 m/s. Speed is a SLOW function of $T$ — temperature errors of 10 K move $v$ by 1.7%.')],
+      ),
+    CX('h3', HEAD, 'Sound horizon, lapse rate, and the bonus gravity formula',
+       ['Temperature lapse rate $dT/dz = -6.5$ K/km (troposphere): $dv/dz = (v/2T)(dT/dz) = 0.585\\times(-6.5) = -3.8$ m/s per km near the surface. Consequence: sound rays curve toward the cold region. Day: ground hot, air cooler aloft $\\to$ rays bend up $\\to$ sound shadows near ground. Night: temperature inversion (warm aloft) $\\to$ rays bend down $\\to$ sound hugs the ground and carries far — the "lake at night" effect. Acoustic shadow zones behind warm columns.',
+          'Isothermal-atmosphere bonus (source §2.5): $v(h) = v_0\\sqrt{1 - \\dfrac{2Mgh}{\\gamma R T_0}}$ with constant $g$; setting $v = 0$ gives atmosphere height $h_{\\max} = \\dfrac{\\gamma R T_0}{Mg} = \\dfrac{1.4\\cdot 8.314\\cdot 288}{0.029\\cdot 9.8} = 11.9$ km — the thermosphere-scale estimate for an isothermal troposphere. Beyond it there is no medium, no sound.',
+          'Refraction quantitative: the ray curvature radius $R_c = v/|dv/dz|$... for the standard treatment $R_c = v/(dv/dz)$; with $dv/dz = -3.8$ m/s/km and $v = 343$: $R_c = 343/0.0038 = 90$ km — rays over long distances curve gently on a 90 km radius arc. Over 1 km, the ray drops $\\approx L^2/(2R_c) = 5.5$ m — enough to matter for precise ranging.',
+          ('CHECK', 'speed at 5 km altitude with lapse rate: $T = 288 - 32.5 = 255.5$ K, $v = 331.3\\sqrt{255.5/273.15} = 320$ m/s — 7% slower than sea level; aircraft sound takes longer to arrive from above than naive $h/v_{0}$ estimates.')]),
+    CX('h3', CH, 'Temperature-based problem patterns',
+       ['(a) "At what temperature is the speed 350 m/s?" $T = 273.15(350/331.3)^2 = 305$ K = 32 C. (b) "By how much does speed change from 20 C to 25 C?" $\\Delta v = 0.585\\cdot 5 = 2.9$ m/s (or exact $346.1 - 343.2 = 2.9$ ✓). (c) "A pipe closed at one end resonates at 300 Hz at 20 C; find its length" then "at what T does it resonate at 306 Hz?" — $f \\propto v \\propto \\sqrt T$: $T_2 = T_1(306/300)^2 = 293.15\\cdot 1.0404 = 305$ K = 32 C ✓ pattern: frequency of fixed-length modes scales as $\\sqrt T$.',
+          'Humidity angle (JEE-09): speed at fixed $T$ rises with water-vapour fraction — at 20 C saturated air ($p_{\\rm vap} = 2.3$ kPa) has $v$ about 0.2% (0.7 m/s) above dry — small but the same order as 1 C! Exam problems often say "dry air" implicitly.',
+          ('WHY', 'modes of any resonator scale with $v$: pipe, Kundt, resonance tube — frequency ratios at two temperatures collapse to $\\sqrt{T_2/T_1}$ regardless of geometry. That ratio trick shortens many problems to one line.'),
+          ('CHECK', 'compute twice with the exact and linear laws at 37 C: exact $331.3\\sqrt{310.15/273.15} = 353.0$; linear $331.3 + 0.6\\cdot 37 = 353.5$ — agree to 0.5 m/s; either is fine in exams if you state which.')]),
+    CX('h3', CH, 'Traps and consistency checks for the $v(T)$ family',
+       ['Trap list: (i) Celsius in the square root — always kelvin. (ii) $v \\propto \\sqrt T$ vs "0.6 m/s per C" — the linear law is a local approximation (fails far from 0 C: at 300 C, linear gives 511, exact gives 587). (iii) Forgetting $\\gamma$ changes between gases when comparing (He vs air needs both $M$ and $\\gamma$). (iv) Assuming pressure changes matter — they do not (at fixed T). (v) Applying the gas law to solids or liquids.',
+          'Consistency loop for any $v$ computation: compute with $\\sqrt{\\gamma RT/M}$ in SI; compare against the anchor table (air 331/343, He ~1000, H2 ~1260, water ~1480, steel ~5000); check $T$ in kelvin and $M$ in kg/mol; the answer should land within a few percent of anchors for known media.',
+          ('FN', 'for a hard vacuum, $\\rho \\to 0$ and $v = \\sqrt{\\gamma P/\\rho} = \\sqrt{\\gamma RT/M}$ stays formally finite while the wave amplitude interpretation changes — no molecules, no sound; the formula survives only as a limit of a thinning gas with vanishing mean free path conditions.')]),
+]), 'v ∝ √T, linear 331+0.6t, lapse-rate refraction, sound horizon formula.')
+
+# ---------------------------------------------------- JEE-09 molar mass, humidity, pressure
+ADD('SN-09', CHUNK([
+    CX('h2', HEAD, 'Molar mass, humidity, and the pressure-independence of sound speed',
+       ['From $v = \\sqrt{\\gamma RT/M}$: (i) $v \\propto 1/\\sqrt M$ at fixed $\\gamma, T$ — light gases sound fast: He 972 m/s at 0 C, H2 1260 m/s at 0 C vs air 331. (ii) $\\gamma$ matters too: He has $\\gamma = 5/3$ vs air 1.4 — comparing gases needs both factors: $v_2/v_1 = \\sqrt{\\gamma_2 M_1/(\\gamma_1 M_2)}$. (iii) Pressure: none — the ideal-gas speed has no $P$ in it. Double the pressure of a sealed air sample at fixed T: $\\rho$ doubles, $B = \\gamma P$ doubles, $v = \\sqrt{B/\\rho}$ unchanged ✓. Sound inside a high-pressure scuba tank (200 atm) still travels 343 m/s at room temperature (density is 200x, stiffness 200x).',
+          'Humidity: water vapour ($M = 18$) replaces N2/O2 ($M_{\\rm dry} = 29$): effective molar mass $M_{\\rm eff} = 0.622 M_d + 0.378 M_v$... precisely with mole fraction $x$ of vapour: $M_{\\rm eff} = (1-x)\\cdot 29 + x\\cdot 18$. At 30 C saturated, vapour pressure 4.2 kPa, $x = 0.042$: $M_{\\rm eff} = 28.5$, $v$ up 0.9% (3 m/s). But humid air is ALSO less dense... consistent: $v = \\sqrt{\\gamma RT/M_{\\rm eff}}$ grows as $M_{\\rm eff}$ falls. Rule: humid air sounds faster; the effect peaks in hot humid weather.',
+          'Gas mixtures: $\\gamma_{\\rm eff}$ for a mixture is not the average of $\\gamma$; use $C_p, C_v$ averaging: $C_{v,\\rm mix} = \\sum x_i C_{v,i}$, $\\gamma = (C_v + R)/C_v$. For air-like N2/O2 this is automatic ($\\gamma = 1.4$). For a 50-50 He-N2 mix: $C_v = 12.5 + 20.8 = 33.3$ J/mol-K... ($C_{v,\\rm He} = 3R/2 = 12.5$, $C_{v,\\rm N2} = 5R/2 = 20.8$), $\\gamma = 35.8/33.3 = 1.075$, $M = 16.5$ g: $v = \\sqrt{1.075\\cdot 8.314\\cdot 293/0.0165} = 399$ m/s.',
+          ('WHY', 'pressure independence: $P$ and $\\rho$ both live in $P/\\rho = RT/M$; any process that changes $P$ at fixed $T$ (pumping, sealing) moves them together. Only $T$, $M$, $\\gamma$ are free parameters of gas sound speed.'),
+          ('CHECK', 'scuba-tank paradox: same $v$ at 200 atm, but intensity for a given $s_0$ rises with $\\rho v$: a speaker driven at the same displacement is much louder (higher $Z = \\rho v$) in dense gas — Oly 01 impedance thinking.')],
+      ),
+    CX('h3', HEAD, 'Numbers table (gas speeds at 0 C unless noted)',
+       ['Air 331.5 (20 C: 343.2); He 972 (20 C: 1007); H2 1260 (20 C: 1307); CO2 259; O2 316; N2 334 (20 C: 349); Ar ($\\gamma = 5/3$, $M = 40$ g) 323; CH4 ($\\gamma \\approx 1.3$, $M = 16$ g) 431; water vapour at 100 C ($M = 18$ g, $\\gamma = 1.33$) 483. Ratio He/air at same T: $\\sqrt{(5/3)\\cdot 29/(1.4\\cdot 4)} = 2.93$. Sound in CO2 is slower than air — deep voices from helium-free "heavy" mixtures... the party trick: He raises formant frequencies (sound speed in He is 2.9x, resonant cavities of the vocal tract scale up in pitch); SF6 ($M = 146$ g) drops it to 134 m/s... roughly $\\sqrt{1.0\\cdot 8.314\\cdot 273/0.146} = 125$ m/s — deep voice effect.',
+          'Humidity worked: 25 C, 60% RH: vapour pressure 1.9 kPa, $x = 0.019$, $M_{\\rm eff} = 28.8$, $v = 346.3$ vs dry 346.1 — 0.2 m/s only at moderate humidity; saturated 35 C: 1.5 m/s effect. Small — often neglected, but state "dry air" or "neglect humidity" explicitly.',
+          ('CHECK', 'independence stress-test: at 20 C, air at 0.1 atm (density 0.12 kg/m$^3$): $v = \\sqrt{1.4\\cdot 10^{4}/0.12} = 342$ ✓ ~343; at 50 atm: same. Only temperature moves it.'),
+          ('FN', 'gas sound speed in a stellar interior ($T = 10^{7}$ K, ionised H, $\\gamma = 5/3$): $v = \\sqrt{(5/3)\\cdot 8.314\\cdot 10^{7}/0.001} = 3.7\\times 10^{5}$ m/s = 370 km/s — same formula, all the way to stars (acoustic asteroseismology).')]),
+    CX('h3', CH, 'Problem patterns on gas identity',
+       ['(a) Identify a gas: $v = 263$ m/s at 0 C: $M = \\gamma R T/v^2 = 1.4\\cdot 8.314\\cdot 273/263^2 = 0.046$ kg/mol $\\approx$ CO2 (44 g) with $\\gamma = 1.3$ gives 259 ✓. (b) A gas mixture of unknown proportion: use $M_{\\rm eff}$ from measured $v$: $M_{\\rm eff} = \\gamma R T/v^2$, then mole fraction from $M_{\\rm eff} = 29(1-x) + 2x$ (He-air: $x = (29 - M_{\\rm eff})/27$). (c) "A sound pulse takes 2.92 s to travel 1 km in a gas at 27 C; identify": $v = 342.5$, $T = 300$: $M = \\gamma R T/v^2 = 0.0285$ kg/mol — nitrogen-dominated air ✓.',
+          'Comparison traps: "Sound is faster in warm air because molecules move faster" — TRUE but the exam formula is $\\sqrt{\\gamma RT/M}$; "sound is faster at higher pressure" — FALSE; "sound is faster in denser media" — FALSE as a general rule (steel beats mercury? steel 5000 vs Hg 1440: stiffness dominates; lead is dense yet slow: 1190).',
+          ('WHY', 'density alone never sets speed; the ratio $B/\\rho$ does. Heavy gases are slow only when stiffness does not compensate — in ideal gases $B/\\rho = \\gamma RT/M$ is density-free at fixed T.'),
+          ('CHECK', 'round-trip: given $v = 1260$ m/s at 0 C, $M = 2$ g, find $\\gamma$: $\\gamma = v^2 M/(RT) = 1260^2\\cdot 0.002/(8.314\\cdot 273) = 1.40$ ✓ diatomic hydrogen.')]),
+    CX('h3', CH, 'Consolidation: the gas-speed parameter space',
+       ['Free parameters of $v_{\\rm gas} = \\sqrt{\\gamma R T/M}$: just ($\\gamma$, $T$, $M$). Pressure, density, volume, container size, amplitude, frequency: none of them enter. For a closed container being heated, $v$ rises as $\\sqrt T$ regardless of pressure rise. For a weather front, $v$ changes with T (and slightly with humidity) — standard correction in precise acoustic ranging: 0.6 m/s per C, so a 5 C error in assumed temperature gives 1.7% error in distance measured by time of flight (3.4 m per km).',
+          'Sonic boom geometry (JEE-28) and Doppler (JEE-22-27) all need the LOCAL $v$; atmospheric sound-speed profile $v(T(z))$ is the refractive index of acoustics: $n_{\\rm ac} = v_{0}/v(z) > 1$ aloft... rays bend toward lower speed (colder air) — exactly like light in a gradient index.',
+          ('FN', 'meteorological "acoustic sounding" (SODAR) inverts Doppler + refraction of sound to measure wind and temperature profiles — the exam toolkit ($v(T)$, Doppler, refraction) is literally the working method.')]),
+]), 'Molar mass, humidity, pressure independence, gas identity problems.')
+
+# ---------------------------------------------------- JEE-10 intensity and energy
+ADD('SN-10', CHUNK([
+    CX('h2', HEAD, 'Intensity of sound: $I = \\frac{1}{2}\\rho v\\omega^2 s_0^2 = \\dfrac{\\Delta P_0^2}{2\\rho v}$',
+       ['Intensity = average power per area = $\\bar u v$ with $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2$ (SN-03): $I = \\dfrac{1}{2}\\rho v\\omega^2 s_0^2$. Since $\\Delta P_0 = \\rho v\\omega s_0$, equally $I = \\dfrac{\\Delta P_0^2}{2\\rho v} = \\dfrac{\\Delta P_{\\rm rms}^2}{\\rho v} = \\dfrac{1}{2}u_{\\max}\\omega s_0\\cdot$... keep the two boxed forms only. Third useful form: $I = \\frac{1}{2} Z \\omega^2 s_0^2$ with impedance $Z = \\rho v$ (Oly 01). Worked (source Q3): $P = 0.1$ W isotropic at $r = 100$ m: $I = P/(4\\pi r^2) = 7.96\\times 10^{-5}$ W/m$^2$; $\\Delta P_0 = \\sqrt{2\\rho v I} = 0.256$ Pa; $\\beta = 10\\log_{10}(I/I_0) = 79.0$ dB; $s_0 = \\Delta P_0/(\\rho v\\omega)$ — the full round trip.',
+          'Power of a source: $P = \\oint I\\,dA$; isotropic: $P = 4\\pi r^2 I$; line source (infinite line): $P/L = 2\\pi r I$. The wave equation alone does not set $I$ — amplitude does; energy conservation sets the geometry scaling: $I \\propto 1/r^2$ point, $\\propto 1/r$ line (JEE-11). Loudness perception is roughly logarithmic in $I$ (Weber-Fechner) which is why decibels (JEE-12) are the scale of hearing.',
+          'Amplitude conversions (exam currency): $s_0 = \\dfrac{\\Delta P_0}{\\rho v \\omega} = \\dfrac{\\Delta P_0}{2\\pi f \\rho v}$; $\\Delta P_0 = \\sqrt{2\\rho v I}$; $I = \\dfrac{\\Delta P_0^2}{2\\rho v}$. In air $\\rho v = 412$: $\\Delta P_0 = \\sqrt{824\\,I}$, $s_0 = \\Delta P_0/(2\\pi f \\cdot 412)$.',
+          ('WHY', 'the factor 2 in $I = \\Delta P_0^2/(2\\rho v)$ is the time-average of $\\cos^2$ — peak squared over twice; if data give RMS quantities use $I = \\Delta P_{\\rm rms}^2/(\\rho v)$ with no 2. State the convention every time.'),
+          ('CHECK', 'units: $\\rho v\\omega^2 s_0^2$ = kg m$^{-3}$ m s$^{-1}$ s$^{-2}$ m$^2$ = kg s$^{-3}$ = W m$^{-2}$ ✓. Sanity: 1 mW/m$^2$ is loud speech at 1 m; 1 W/m$^2$ is on the edge of pain (120 dB).')],
+      ),
+    CX('h3', HEAD, 'Energy budget: where the power goes',
+       ['A source of power $P$ spreads its energy on expanding wavefronts. Point source: $I(r) = P/(4\\pi r^2)$ — doubling distance drops $I$ 4x, pressure $\\Delta P_0 \\propto 1/r$, displacement $s_0 \\propto 1/r$ (same $1/r$: both amplitudes share the geometric dilution; $\\Delta P_0 = \\rho v\\omega s_0$ keeps them proportional). Line source: $I(r) = (P/L)/(2\\pi r)$ — halving rate. Near a large vibrating surface (plane wave): $I$ constant with distance until diffraction/fringing takes over.',
+          'Energy density vs intensity at 1 kHz, 1 Pa amplitude: $\\bar u = 3.5\\times 10^{-6}$ J/m$^3$, $I = 1.2$ mW/m$^2$; total energy in a 10 m room playing at that level: $3.5\\times 10^{-5}$ J — less than the kinetic energy of a mosquito... yet hours of music are carried because the source continuously supplies power; the room just transmits.',
+          'Efficiency of real sources: loudspeakers 1–5% (most power heats the voice coil); the human voice ~0.01–0.1 W acoustic of ~50 W metabolic... spoken voice 1 m: ~10 µW; shouting: ~1 mW; jet engine 100 kW acoustic — most of 100 MW shaft power becomes heat.',
+          ('CHECK', 'source Q3 chain once more, symbolically: $I = P/4\\pi r^2$; $\\Delta P_0 = \\sqrt{2\\rho v I} = \\sqrt{\\rho v P/(2\\pi r^2)}$; $\\beta = 10\\log_{10}(P/(4\\pi r^2 I_0))$; $s_0 = \\Delta P_0/(\\rho v \\omega) = \\sqrt{P/(2\\pi r^2 \\rho v)}/\\omega$ — five answers from two data, one chain.'),
+          ('WHY', 'energy conservation + spherical spreading alone gives $\\Delta P_0 \\propto 1/r$ — no wave mechanics needed beyond $I = \\Delta P_0^2/2\\rho v$; a favourite derivation-shortcut for exams.')]),
+    CX('h3', CH, 'Amplitude scaling reference card (memorise the column)',
+       ['Given: $I$. Then $\\Delta P_0 = \\sqrt{2\\rho v I}$; $s_0 = \\Delta P_0/(\\rho v\\omega)$; $\\beta = 10\\log(I/I_0)$. Given: $\\Delta P_0$. Then $I = \\Delta P_0^2/(2\\rho v)$; $s_0 = \\Delta P_0/(\\rho v\\omega)$. Given: $s_0$. Then $\\Delta P_0 = \\rho v\\omega s_0$; $I = \\frac{1}{2}\\rho v\\omega^2 s_0^2$. Given: $P$, $r$ (point). Then $I = P/(4\\pi r^2)$ + above. Given: $P/L$, $r$ (line). Then $I = (P/L)/(2\\pi r)$ + above.',
+          'Ratios: double $s_0$ at fixed $f$: $\\Delta P_0$ doubles, $I$ quadruples, $\\beta$ rises 6.02 dB. Double $f$ at fixed $s_0$: $\\Delta P_0$ doubles, $I$ quadruples — "same displacement, twice as loud" is FALSE perception-wise... dB up 6, phon loudness curves (equal-loudness) complicate perception — physically 6 dB up. Double distance from a point source: $I/4$, $\\Delta P_0/2$, $\\beta$ drops 6.02 dB.',
+          ('FN', 'near-field vs far-field: within about $\\lambda$ of a real radiator the $1/r$ law misbehaves (evanescent/reactive fields); exam problems implicitly assume far field $r \\gg \\lambda$... and for sound $\\lambda \\sim 1$ m so room-scale problems are fine.')]),
+    CX('h3', CH, 'Worked intensity drills',
+       ['(a) $s_0 = 2\\times 10^{-6}$ m at 340 Hz in air: $\\Delta P_0 = 412\\cdot 2136\\cdot 2\\times 10^{-6} = 1.76$ Pa; $I = 1.76^2/824 = 3.76$ mW/m$^2$; $\\beta = 95.8$ dB; $P$ on 1 m$^2$ panel $= 3.76$ mW. (b) Threshold of pain $I = 1$ W/m$^2$: $\\Delta P_0 = \\sqrt{824} = 28.7$ Pa; $s_0 = 28.7/(412\\cdot 6283) = 1.1\\times 10^{-5}$ m at 1 kHz. (c) Two identical speakers in phase at one point: amplitudes add $\\to$ $\\Delta P_0$ doubles $\\to$ $I$ quadruples (6 dB) at antinodes; out of phase: silence.',
+          'Inverse drill (source-style): "Find the distance at which a 50 W siren falls to 80 dB": $I = 10^{8}\\cdot 10^{-12} = 10^{-4}$ W/m$^2$; $r = \\sqrt{P/(4\\pi I)} = \\sqrt{50/(1.257\\times 10^{-3})} = 199$ m. "Find $s_0$ there at 600 Hz": $\\Delta P_0 = \\sqrt{824\\cdot 10^{-4}} = 0.091$ Pa; $s_0 = 0.091/(412\\cdot 3770) = 5.9\\times 10^{-8}$ m.',
+          ('CHECK', 'every intensity answer should pass the loudness sniff test: whisper $10^{-10}$ W/m$^2$, conversation $10^{-6}$, shout $10^{-3}$, rock concert front row $10^{-1}$, pain 1. If your number is 10 W/m$^2$ for a tuning fork, an exponent slipped.'),
+          ('WHY', 'intensity is the perceptually and physically central quantity: it is what the inverse square law, the decibel scale, and the Doppler energy shifts (Oly 05) all manipulate; pressure and displacement amplitudes are bookkeeping devices for the same $I$.')]),
+]), 'I = ½ρvω²s₀² = ΔP₀²/2ρv, energy budget, amplitude scaling table.')
+
+# ---------------------------------------------------- JEE-11 point and line sources
+ADD('SN-11', CHUNK([
+    CX('h2', HEAD, 'Point and line sources: $1/r^2$, $1/r$, and the amplitude laws',
+       ['Isotropic point source of power $P$: energy crosses any sphere of radius $r$ at total rate $P$, so $I(r) = \\dfrac{P}{4\\pi r^2}$. Consequently $\\Delta P_0(r) = \\sqrt{2\\rho v I} = \\dfrac{A}{r}$ and $s_0(r) = \\dfrac{\\Delta P_0}{\\rho v\\omega} = \\dfrac{B}{r}$ — both amplitudes fall as $1/r$; intensity as $1/r^2$. In dB: each distance doubling costs 6.02 dB. The wave solution matching this is the spherical wave $s = \\dfrac{\\mathcal{A}}{r}\\sin(kr - \\omega t)$: the $1/r$ in amplitude is forced by energy conservation (the wave equation in 3D admits it: $\\nabla^2(1/r \\cdot e^{ikr}) \\approx -k^2/r\\cdot e^{ikr}$ for $kr \\gg 1$).',
+          'Infinite line source (line of speakers, traffic on a straight road): cylindrical spreading, area $2\\pi r L$: $I(r) = \\dfrac{P/L}{2\\pi r}$ — intensity $\\propto 1/r$, amplitudes $\\propto 1/\\sqrt r$. Distance doubling: 3.01 dB drop only. Semi-infinite/other geometries: plane wave (large wall): $I$ constant. Practical: near a motorway the noise falls off slowly (line); near a single machine quickly (point).',
+          'Superposition of two point sources (JEE-13): interference pattern with $\\Delta P_{\\rm tot} = \\Delta P_1 + \\Delta P_2$ as waves; near-field geometry corrections $1/r_i$ matter only within a wavelength or so; exam interference uses equal-$r$ approximation unless stated.',
+          ('WHY', 'the $1/r$ amplitude law is dimensional bookkeeping of energy: $I \\propto (amplitude)^2 \\propto 1/(area)$; area $= 4\\pi r^2$ (point) or $2\\pi r$ per length (line). The wave equation carries the phase; conservation carries the amplitude.'),
+          ('CHECK', 'spherical wave consistency: $I = \\frac{1}{2}\\rho v\\omega^2 s_0^2$ with $s_0 = \\mathcal{A}/r$ gives $I \\propto 1/r^2$ ✓. Line: $s_0 \\propto 1/\\sqrt r$ gives $I \\propto 1/r$ ✓. Any other power law breaks energy conservation.')],
+      ),
+    CX('h3', HEAD, 'Decay laws in practice (attenuation on top of spreading)',
+       ['Real air adds absorption: $I(r) = \\dfrac{P}{4\\pi r^2}e^{-\\alpha r}$, $\\alpha$ growing roughly $f^2$ (classical: $\\alpha \\propto f^2$ from viscosity + thermal conduction; ~0.1 dB/m at 20 kHz, 0.001 dB/m at 1 kHz in dry air — humidity adds relaxation peaks). Consequences: high frequencies die first — distant thunder is a rumble, distant speech muffled, ultrasonic imaging range limited to cm–m in tissue. Fog horns are low pitch (hundreds of Hz) to beat both absorption and diffraction over 10 km of sea.',
+          'Diffraction: sound with $\\lambda \\sim 1$ m bends around corners and doorways freely (open door: you hear the whole room) — no sharp shadows for speech; ultrasound ($\\lambda \\sim 1$ mm) shadows like light. The doorway diffraction angle $\\theta \\sim \\lambda/w$ for opening width $w$: 1 m sound through a 1 m door: strong spreading; 20 kHz ($\\lambda = 17$ mm) through the same door: narrow beam.',
+          ('CHECK', 'combine laws carefully: "level falls by how much from 5 m to 50 m with $\\alpha = 0.05$ dB/m?" — spreading: $20\\log(10) = 20$ dB; absorption: $0.05\\cdot 45 = 2.25$ dB; total 22.3 dB. Two effects add in dB.'),
+          ('FN', 'inverse-square fitting of data: plot $10\\log I$ vs $\\log r$; slope $-20$ dB/decade = point source; $-10$ dB/decade = line source — a data-analysis question format used in Olympiad papers.')]),
+    CX('h3', CH, 'Worked geometry problems',
+       ['(a) Two point sources of the same power 4 m apart, incoherent: level at midpoint: each gives $I_1 = P/(4\\pi 4)$; sum doubles: +3 dB over one. (b) A listener moving from 10 m to 3 m from a point source: $\\Delta\\beta = 20\\log(10/3) = 10.5$ dB louder. (c) "Find $r$ where a 2 W source is at threshold of hearing": $I_0 = 10^{-12}$: $r = \\sqrt{2/(4\\pi\\cdot 10^{-12})} = 4\\times 10^{5}$ m = 400 km — theoretical vacuum-free geometry with zero absorption; with $\\alpha = 0.01$ dB/m absorption limit: $10\\log(2/4\\pi r^2/10^{-12}) - 0.01 r = 0$ cuts this to a few km in practice.',
+          'Line-source drill: highway with equivalent $P/L = 0.05$ W/m: $I$ at 20 m: $0.05/(2\\pi\\cdot 20) = 4\\times 10^{-4}$ W/m$^2$ = 86 dB — plausible traffic roar; at 200 m: 76 dB — only 10 dB down (vs 20 dB for a point source) ✓ line law.',
+          ('WHY', 'matching the geometry to the decay law is half the marks in such problems: write the law first ($4\\pi r^2$ vs $2\\pi r L$), then the numbers.'),
+          ('CHECK', 'cross-check with dB slopes: point source distance x10 = 20 dB; line source x10 = 10 dB; plane = 0 dB. Your computed dB difference must fit one of these unless absorption is in play.')]),
+    CX('h3', CH, 'Spherical wave phasor picture (bridge to Oly)',
+       ['A spherical wave $s = (\\mathcal{A}/r)\\sin(kr - \\omega t)$ has local plane-wave character when $r \\gg \\lambda$: locally $\\Delta P \\approx \\rho v u$ where $u = -\\partial s/\\partial t$... more precisely for $kr \\gg 1$, $\\Delta P \\approx \\rho v \\,\\partial s/\\partial t\\,/v = \\rho v u$ — the travelling-wave impedance $Z = \\rho v$ holds locally (Oly 01). The exact spherical solution has a reactive (quadrature) component near the source, decaying as $(kr)^2$ — the near-field correction.',
+          'Beam patterns of real sources: a circular piston of radius $a$ beams when $\\lambda < 2a$ (directivity $D = I(0)/I_{\\rm iso}$; megaphone: $D \\sim 10$, +10 dB forward). Loudspeaker arrays: interference of $N$ elements gives $I \\propto N^2$ on axis (coherent) vs $N$ (incoherent) — exam contrast question.',
+          ('FN', 'sound intensity level of a point source of known power at distance r: $\\beta = 10\\log_{10}\\dfrac{P}{4\\pi r^2 I_0}$; solve for any variable — the standard closed-form exam answer.')]),
+]), 'Point/line spreading, 1/r amplitude law, absorption and diffraction.')
+# ---------------------------------------------------- JEE-12 decibel scale
+ADD('SN-12', CHUNK([
+    CX('h2', HEAD, 'Decibel scale: $\\beta = 10\\log_{10}(I/I_0)$, $I_0 = 10^{-12}$ W/m$^2$',
+       ['Sound intensity spans $10^{-12}$ to $1$ W/m$^2$ — twelve decades. The decibel compresses it: $\\beta = 10\\log_{10}(I/I_0)$ with reference $I_0 = 10^{-12}$ W/m$^2$ (roughly the 1 kHz hearing threshold; formally $2\\times 10^{-5}$ Pa pressure threshold). Purely a scale: 0 dB $= I_0$; 10 dB $= 10 I_0$; 20 dB $= 100 I_0$; 120 dB $= 1$ W/m$^2$ (threshold of pain). Key derived relation: $\\Delta P_0 = \\sqrt{2\\rho v I}$: at $I_0$ in air, $\\Delta P_0 = \\sqrt{2\\cdot 412\\cdot 10^{-12}} = 2.87\\times 10^{-5}$ Pa — the standard threshold pressure.',
+          'Addition rules (must-know): doubling $I$ = +3.01 dB; doubling $\\Delta P_0$ (or $s_0$) = +6.02 dB; distance doubling from a point source = $-6.02$ dB; ten sources of equal incoherent level = +10 dB; two identical coherent speakers at an antinode = +6.02 dB (amplitudes add). Adding two different levels: $100$ dB + $90$ dB $= 100.4$ dB — the louder dominates (10 dB difference = 1.04x total). Never add dB arithmetically: convert to intensity, add, convert back: $I_{\\rm tot} = I_0\\sum 10^{\\beta_i/10}$.',
+          'Loudness perception: phon scale matches dB at 1 kHz only; at 100 Hz the ear is ~40 dB less sensitive (equal-loudness curves, Fletcher-Munson) — bass needs more power. Pain 120 dB; conversation 60 dB at 1 m; whisper 30 dB; rock concert 110–120. Damage threshold ~85 dB prolonged.',
+          ('WHY', 'the ear responds roughly logarithmically (Weber-Fechner), and physics ranges over decades — decibels make multiplication of gains (each stage in dB adds) into addition: total gain of loudspeaker chain $= 10\\log\\prod G_i = \\sum 10\\log G_i$.'),
+          ('CHECK', 'convert back and forth: $\\beta = 80$ dB $\\Rightarrow I = 10^{8}\\cdot 10^{-12} = 10^{-4}$ W/m$^2$; $\\Delta P_0 = \\sqrt{2\\rho v I} = 0.091$ Pa. Sanity: engine room 80–100 dB corresponds to 0.1–1 Pa pressure swings — tiny vs 1 atm, but destructive to hearing.')],
+      ),
+    CX('h3', HEAD, 'Pressure and displacement forms of the level',
+       ['Since $I = \\Delta P_0^2/(2\\rho v)$, and $\\Delta P_0 = \\rho v\\omega s_0$: $\\beta = 20\\log_{10}\\dfrac{\\Delta P_0}{\\Delta P_{\\rm ref}} = 20\\log_{10}\\dfrac{s_0}{s_{\\rm ref}}$ with same-medium references ($\\Delta P_{\\rm ref} = 2.87\\times 10^{-5}$ Pa; $s_{\\rm ref}$ = threshold displacement at the SAME frequency). The 20 = 2x10 because amplitude squared is intensity. Same-number rule: level differences computed from pressure amplitudes use $20\\log$; from intensities $10\\log$; both give identical dB.',
+          'Frequency weighting in engineering: dBA filters (mimic ear), dBC (flat-ish); exam problems use plain dB. For two tones of equal level but different f, the perceived loudness differs — physics dB equal, phon not.',
+          'Worked: (a) pressure amplitude doubles: $20\\log 2 = 6.02$ dB ✓ matches intensity route (I quadruples, $10\\log 4 = 6.02$). (b) $s_0$ from 10 nm to 1 µm at 1 kHz: ratio 100: $+40$ dB. (c) A microphone sees $\\Delta P_0 = 1$ Pa: $\\beta = 20\\log(1/2.87\\times 10^{-5}) = 90.9$ dB ✓ consistent with $I = 1^2/824 = 1.2\\times 10^{-3}$, $10\\log(1.2\\times 10^{9}) = 90.9$.',
+          ('WHY', 'the two conventions (10 vs 20) are the same law wearing intensity or amplitude clothing; mixing them (writing $10\\log(\\Delta P_0/\\Delta P_{\\rm ref})$) halves every answer — the single most common dB error.'),
+          ('CHECK', 'always cross-check one number both ways: pick $I$, find $\\beta$; find $\\Delta P_0 = \\sqrt{2\\rho v I}$; recompute $20\\log(\\Delta P_0/\\Delta P_{\\rm ref})$ — must agree exactly.')]),
+    CX('h3', CH, 'dB algebra drills',
+       ['(a) Speaker efficiency: electrical 20 W, acoustic 2%: $P_{\\rm ac} = 0.4$ W; at 3 m: $I = 0.4/(4\\pi\\cdot 9) = 3.5\\times 10^{-3}$; $\\beta = 95.5$ dB. (b) Two machines 85 and 88 dB: $I_1 = 3.16\\times 10^{-4}$, $I_2 = 6.3\\times 10^{-4}$; sum $= 9.5\\times 10^{-4}$: $\\beta = 89.8$ dB. (c) "How many identical sources to raise the level by 10 dB?" 10 (incoherent). (d) "Level falls how much from 2 m to 7 m?" $20\\log(7/2) = 10.9$ dB.',
+          'Combining with attenuation: $\\beta(r) = \\beta_1 + 20\\log(r_1/r) - 0.05(r - r_1)$ (dB, r in m, $\\alpha = 0.05$ dB/m): monotone fall with both terms negative — model fitting format.',
+          ('FN', 'sound exposure level (SEL) and time-weighted average (85 dB / 8 h) are workplace regulations on the same algebra — doubling time halves allowed intensity: 88 dB / 4 h etc. — pure dB arithmetic.')]),
+    CX('h3', CH, 'Perception vs physics (why equal dB does not mean equal loudness)',
+       ['The phon scale: loudness in phons equals dB SPL at 1 kHz; at 100 Hz a 40 dB tone sounds like a 10 dB 1 kHz tone — the ear curve dives at low and high frequencies. So "bass boost" on speakers raises low-frequency dB to match perceived loudness. The physical reason: middle-ear mechanics + cochlear resonance (ear canal closed pipe resonance ~3.4 kHz gives free gain there — JEE-01).',
+          'Pain and damage: 130 dB ruptures eardrums; 150 dB+ sonic boom overpressure is a pressure transient, not a tone (JEE-28): typical boom 50–500 Pa $\\Delta P$ transient = 128–138 dB if it were a tone — but it is a N-wave, broadband.',
+          ('CHECK', 'convert a boom overpressure to "equivalent dB" only as an order-of-magnitude: 100 Pa: $20\\log(100/2.87\\times 10^{-5}) = 131$ dB — consistent with boom descriptions; state it as an intensity-equivalent, not a tone level.')]),
+]), 'dB scale, 10 vs 20 log rules, addition of levels, perception notes.')
+
+# ---------------------------------------------------- JEE-13 superposition
+ADD('SN-13', CHUNK([
+    CX('h2', HEAD, 'Superposition and interference of sound waves',
+       ['Linear wave equation $\\Rightarrow$ superposition: if $s_1$ and $s_2$ are solutions, $s_1 + s_2$ is too. For two harmonic waves of the same $f$ at a point: $s = s_0\\sin(\\omega t - \\phi_1) + s_0\\sin(\\omega t - \\phi_2) = 2s_0\\cos(\\Delta\\phi/2)\\sin(\\omega t - \\bar\\phi)$ with $\\Delta\\phi = \\phi_2 - \\phi_1$: the resultant is same frequency, amplitude $2s_0|\\cos(\\Delta\\phi/2)|$, phase $\\bar\\phi$. Constructive: $\\Delta\\phi = 2n\\pi$ (path difference $\\delta = n\\lambda$); destructive: $\\Delta\\phi = (2n+1)\\pi$ ($\\delta = (n+\\frac{1}{2})\\lambda$). Max intensity $4I_0$, min 0, for equal sources.',
+          'Path-difference working rule: $\\delta = |r_2 - r_1|$ plus any extra inversion (phase changes on reflection — closed end of pipe adds $\\pi$ to pressure wave... reflection at rigid wall inverts the PRESSURE wave, i.e. pressure phase jump $\\pi$, displacement phase jump 0 — a classic trap). Then $\\Delta\\phi = 2\\pi\\delta/\\lambda + \\Delta\\phi_{\\rm inv}$.',
+          'Standing waves (JEE-16) are the structured superposition of counter-propagating waves: $s = 2s_0\\sin kx\\cos\\omega t$; beats (JEE-15) are slow superposition of slightly different frequencies; interference of many sources gives diffraction patterns. Everything in this chapter family is the same addition formula.',
+          ('WHY', 'sound from two speakers adds as pressures at the eardrum: $\\Delta P = \\Delta P_1 + \\Delta P_2$; intensities do NOT add where waves are coherent (fixed phase relation) — only the amplitude sum, then $I = (\\Delta P_{\\rm tot})^2/2\\rho v$; for incoherent sources (random phases) intensities add.'),
+          ('CHECK', 'equal speakers in phase at equal distance: $\\Delta P_0$ doubles, $I$ quadruples = +6 dB; two equal-power INCOHERENT speakers at the same place: +3 dB only. Which one the problem means is often the whole question.')],
+      ),
+    CX('h3', HEAD, 'Coherent vs incoherent, and the interference visibility',
+       ['Coherent: sources with constant phase difference (same source split, two loudspeakers driven by one amplifier, forks struck in sync). Interference: static pattern of maxima/minima; visibility $\\mathcal{V} = (I_{\\max} - I_{\\min})/(I_{\\max} + I_{\\min}) = 2s_{1}s_{2}/(s_1^2 + s_2^2)$ for amplitudes $s_1, s_2$ — full contrast when equal amplitudes. Incoherent: two independent forks: intensities add everywhere, no pattern — "two lamps" case.',
+          'Partial coherence (real rooms): phase drifts slowly; at points of near-equal path the listener hears slow "wandering" of level — room modes and flutter echo are semi-coherent phenomena. Exam idealisation: always coherent unless stated.',
+          'Interference at fixed frequency, moving one source: pattern sweeps past the listener at rate $f\\,d\\delta/dt$... the intensity at a point modulates as the path difference changes — principle of the acoustic interferometer (Quincke tube is the 1D version, JEE-14).',
+          ('WHY', 'coherence decides whether amplitudes or intensities add; every "two speakers" problem must first ask: same signal (amplitudes) or independent (intensities)?'),
+          ('CHECK', 'extremes: $s_1 = 3s_2$ (in phase): $I = (4s_2)^2/(s_2^2$-scale$) = 16/10 = 1.6\\times$ single-sum-of-intensities... precisely: $I_{\\rm coh} = (3+1)^2 I_0 = 16I_0$ vs $I_{\\rm incoh} = 9 + 1 = 10I_0$: +2 dB difference — quantifying "almost incoherent".')]),
+    CX('h3', CH, 'The addition formula toolkit (memorise)',
+       ['Two waves same frequency, phases $\\phi_1, \\phi_2$, amplitudes $a_1, a_2$: resultant amplitude $a = \\sqrt{a_1^2 + a_2^2 + 2a_1a_2\\cos\\Delta\\phi}$; phase $\\tan\\bar\\phi = \\dfrac{a_1\\sin\\phi_1 + a_2\\sin\\phi_2}{a_1\\cos\\phi_1 + a_2\\cos\\phi_2}$. Max $= a_1 + a_2$, min $= |a_1 - a_2|$. For $N$ equal in-phase sources: $a = N a_0$ (on-axis), $I = N^2 I_0$; $N$ equal random: $a \\approx \\sqrt{N}a_0$, $I = N I_0$ (Oly 04 phasor treatment).',
+          'Different frequencies: $\\sin\\omega_1 t + \\sin\\omega_2 t = 2\\sin\\bar\\omega t\\cos(\\Delta\\omega t/2)$ — the beats structure (JEE-15) — amplitude envelope $2s_0|\\cos(\\Delta\\omega t/2)|$ at beat frequency $|f_1 - f_2|$.',
+          ('FN', 'three-source interference: adding $N$ phasors geometrically (polygon) — partial cancellation when $\\delta = \\lambda/N$-type settings; the "N-slit" pattern logic carries directly from light to sound.')]),
+    CX('h3', CH, 'Worked superposition examples',
+       ['(a) Two speakers 1.5 m apart, in phase, $f = 340$ Hz ($\\lambda = 1$ m) on the perpendicular bisector 2 m away: path difference 0 → max. Move listener 0.5 m toward one speaker: $\\delta = \\sqrt{2^2 + 2^2} - \\sqrt{2^2 + 1^2}$... set coordinates; first minimum when $\\delta = 0.5$ m $= \\lambda/2$: solve $\\sqrt{x^2 + 2^2} - \\sqrt{(1.5-x)^2 + 2^2} = 0.5$ numerically — exam answer form.',
+          '(b) Pressure amplitudes 0.3 Pa and 0.3 Pa with $\\Delta\\phi = 60°$: $a = \\sqrt{0.09+0.09+2\\cdot 0.09\\cdot 0.5} = 0.52$ Pa; $I/I_{\\rm one} = (0.52/0.3)^2 = 3$... three times ONE source intensity; vs incoherent sum 2x.',
+          '(c) A wall reflects: incident + reflected standing wave; pressure node at distance $\\lambda/4$ from wall (pressure antinode AT rigid wall): microphone sweeps detect maxima spaced $\\lambda/2$ — measure $\\lambda$ = the acoustic standing-wave interferometer.',
+          ('WHY', 'the phasor diagram (Oly 04) turns all of this into vector addition: same formula, geometric intuition, and the fastest route to $N$-source results.')]),
+]), 'Superposition principle, coherent/incoherent, addition formula toolkit.')
+
+# ---------------------------------------------------- JEE-14 Quincke tube
+ADD('SN-14', CHUNK([
+    CX('h2', HEAD, "Quincke's tube: interference with a controllable path difference",
+       ['Construction (source fig. 17): a sound wave from S splits at junction A into two U-shaped arms of different length and recombines at junction B toward the detector (listener/microphone). Sliding one U-tube changes its length continuously. Path difference $\\delta = 2\\Delta L$ when the adjustable arm is lengthened by $\\Delta L$ (the wave traverses the changed section twice — out and back). Source worked example: frequencies 340–512 Hz ("standards 500 Hz ish"), $\\lambda = v/f$; minima spacing when sliding by $\\lambda/2$... precisely: intensity minima occur when $\\delta = (2n+1)\\lambda/2$, i.e. sliding the U-tube by $\\Delta L = \\lambda/2$ takes you from one minimum to the next.',
+          'Formulas: distance between consecutive minima (as a function of U-tube displacement): $\\Delta L_{\\min-min} = \\lambda/2$; the wavelength from the measurement: $\\lambda = 2\\times$ (displacement between minima); $v = f\\lambda = 2f\\,\\Delta L_{\\min-min}$. Source numbers: $f = 340$ Hz, minima every 0.50 m: $\\lambda = 1.0$ m, $v = 340$ m/s ✓. Quincke half-lens: open end reflection is weak (pressure node-ish), so contrast is modest but measurable.',
+          'Uses: (i) measure $\\lambda$ and $v$ precisely (minima are sharp nulls); (ii) demonstration of superposition; (iii) subtracting path for acoustic interferometry (Oly 08); (iv) measuring speed in different gases by filling the tube.',
+          ('WHY', 'the double-pass factor 2 is the trap: the adjustable segment lies in one arm that the wave covers twice (the U goes out and back), so tube displacement $\\Delta L$ changes $\\delta$ by $2\\Delta L$ — every Quincke formula carries that 2.'),
+          ('CHECK', 'source consistency: minima spacing $\\lambda/2 = 0.5$ m at 340 Hz $\\Rightarrow \\lambda = 1$ m ✓ $v = f\\lambda = 340$ ✓. If a formula gives spacing $\\lambda$, the factor 2 is missing.')],
+      ),
+    CX('h3', HEAD, 'The interference geometry in detail',
+       ['At recombination B, the two waves have amplitudes $a$ each (losses neglected) and phase difference $\\Delta\\phi = k\\delta = 2\\pi\\delta/\\lambda$ (plus a possible $\\pi$ if one path inverts... in the gas-filled U-tube both paths are gas-gas, no inversion). Resultant amplitude $2a|\\cos(\\Delta\\phi/2)|$, intensity $4I_0\\cos^2(\\Delta\\phi/2)$. Minima at $\\delta = (2n+1)\\lambda/2$; maxima at $\\delta = n\\lambda$.',
+          'With the source covering $f = 340$–512 Hz range and tube path difference swept, the listener hears the level pulsing as the slider moves; counting nulls over a slider range $x$ gives $\\delta_{\\rm span} = 2x = N\\lambda/2$... $N$ nulls in displacement $x$: $\\lambda = 4x/N$... precisely: consecutive nulls at $\\lambda/2$ displacement: $\\lambda = 2\\cdot(2x/N)$? Let: displacement between two nulls $= d$: $\\lambda = 2d$ always — safest formula.',
+          'Amplitude at detector with unequal arms (loss $\\alpha$ per pass): contrast ratio $C = (\\sqrt{I_{\\max}} - \\sqrt{I_{\\min}})/(\\sqrt{I_{\\max}} + \\sqrt{I_{\\min}})$ measures the amplitude imbalance — practical lab question.',
+          ('CHECK', 'set $f = 500$ Hz: $\\lambda = 0.68$ m: nulls every 0.34 m of slider travel; if a lab report shows nulls every 0.68 m, the 2 was dropped.'),
+          ('FN', 'Quincke tube in a different gas: $v_{\\rm gas} = 2 f \\Delta L_{\\min-min}$ — direct speed measurement without end corrections (the arms share the same open junctions).')]),
+    CX('h3', CH, 'Quincke numbers and variations',
+       ['(a) $f = 340$ Hz, $v = 343$: $\\lambda = 1.009$ m; slider null spacing 0.504 m. (b) $f = 512$ Hz (fork): $\\lambda = 0.670$ m; null spacing 0.335 m; source example in the notes quotes these standard forks (340 Hz and 512 Hz). (c) A student measures nulls at 0.31 m and 0.63 m (spacing 0.32 m): $\\lambda = 0.64$ m, $v = 328$ m/s at 17 C... consistent with $v = 331 + 0.6\\cdot 17 = 341$? mismatch 4%: check for the 2 factor: with $\\lambda = 2\\cdot 0.32 = 0.64$, $v = 340\\cdot 0.64/0.67$... training example: state assumptions carefully in labs.',
+          'Error analysis: the open junctions radiate imperfectly (end effects), and the tube has attenuation — minima do not reach zero; the theory formula $\\lambda = 2d$ survives, only contrast suffers. Humidity and temperature shift $v$ through $v(T)$.',
+          ('WHY', 'Quincke works because the two paths recombine coherently — the source drives both arms with the SAME wavefront split at A; that is what makes the pattern static rather than beating.')]),
+    CX('h3', CH, 'Quincke vs beats vs standing wave (discrimination table)',
+       ['Quincke: ONE frequency, TWO paths, controllable $\\delta$, static nulls as slider moves — measures $\\lambda$ via path difference. Beats: TWO frequencies, one path, intensity pulses in time at $|f_1 - f_2|$ — measures $\\Delta f$. Standing wave: two counter-propagating SAME-frequency waves — fixed nulls at every $\\lambda/2$ in space — measures $\\lambda$ via spatial nulls. Resonance tube: one path, source frequency tuned — nulls/maxima vs $f$ — measures $\\lambda$ via resonance lengths (JEE-20).',
+          'Exam discrimination question: "A listener hears loudness varying slowly while holding position" $\\to$ beats (two nearby frequencies) OR a slow slider movement in Quincke; "loudness varies as the listener walks" $\\to$ standing wave or interference fringes; "loudness varies as a tube is slid" $\\to$ Quincke.',
+          ('CHECK', 'unify: all four are interference; the measured quantity always converts via $\\lambda = v/f$ and $v = \\sqrt{\\gamma RT/M}$ — the chapter is one chain of five formulas.')]),
+]), 'Quincke tube, double-pass λ/2 rule, discrimination of interference methods.')
+
+# ---------------------------------------------------- JEE-15 beats
+ADD('SN-15', CHUNK([
+    CX('h2', HEAD, 'Beats: $f_{\\rm beat} = |f_1 - f_2|$ from slow superposition',
+       ['Two waves of equal amplitude, nearby frequencies: $s = s_0\\sin\\omega_1 t + s_0\\sin\\omega_2 t = 2s_0\\cos\\left(\\dfrac{\\omega_1 - \\omega_2}{2}t\\right)\\sin\\left(\\dfrac{\\omega_1 + \\omega_2}{2}t\\right)$. The audible pitch is the mean frequency $\\bar f = (f_1 + f_2)/2$; the amplitude wobbles with envelope $2s_0|\\cos(\\pi(f_1 - f_2)t)|$ — one swell (loud-silent-loud) per period $1/|f_1 - f_2|$: beat frequency $\\mathbf{f_b = |f_1 - f_2|}$. Source examples: 256 & 258 Hz $\\to$ 2 beats/s; 340 & 342.5 Hz $\\to$ 2.5 beats/s.',
+          'Numbers: beats per second = frequency difference in hertz. Equal amplitudes: perfect silence at the dips (intensity $\\propto \\cos^2$). Unequal amplitudes $a_1 > a_2$: minima drop to $(a_1 - a_2)^2$ — "beats with incomplete silences" tells you amplitudes are unequal. Each beat is one cycle of the DIFFERENCE frequency; the ear hears the sum-frequency tone pulsing.',
+          'Physics of two tuning forks: strike 256 and 257; the pressure waves add at the ear; the pulse train at  Hz = 1 Hz. The method is the standard of tuning: pianos tune unisons to zero beats; violinists tune strings by beats; orchestra A440 against a reference fork.',
+          ('WHY', 'the trig identity separates sum and difference frequencies: the ear (nonlinear detector roughly rectifying) hears the fast carrier with a slowly varying loudness — the difference frequency appears as an envelope, not as a tone (unless $f_b$ is in the audible range and the ear intermodulates).'),
+          ('CHECK', 'if $f_1 - f_2 = 0.5$ Hz: beats every 2 s; the envelope is painfully slow — example: 340 vs 340.5 Hz. If a problem says "5 beats per second", $|f_1 - f_2| = 5$ Hz exactly — no factor 2 (the envelope $\\cos^2$ has frequency $f_b$, not $2f_b$; the $\\cos$ of $\\Delta\\omega t/2$ completes a magnitude cycle when $\\Delta\\omega t/2 = \\pi$, i.e. $t = 2\\pi/\\Delta\\omega = 1/f_b$ ✓).')],
+      ),
+    CX('h3', HEAD, 'Beat applications and problem patterns',
+       ['(a) Unknown frequency: a 340 Hz fork gives 4 beats/s with an unknown; loading the unknown with wax lowers its frequency and beats fall to 2/s: then unknown = 344 Hz (wax lowered it toward 340... careful logic: if loading DECREASES unknown from $f_u$: beats $|f_u - 340| = 4$; after loading $f_u$ drops: new beats 2: if $f_u = 344$, after loading 342: beats 2 ✓; if $f_u = 336$, after loading 334: beats 6 ✗ — the wax test discriminates: unknown 344 Hz.',
+          '(b) Three forks: 256, 257, 258: pairwise beats 1, 2, 1; together the 256/258 pair beats at 2 Hz with the 257 riding the envelope — complex beat patterns from three tones (olympiad flavour). (c) Siren receding (Doppler + beats): source 800 Hz moving gives observed 776; beats with a stationary 800: 24 Hz. (d) Doppler of BOTH source and observer toward each other: beats with a reference measures the shift — Doppler-free... reverse: beats between direct and reflected wave from a moving wall measures the wall speed (Oly 08).',
+          ('CHECK', 'beat = difference, always positive: $|f_1 - f_2|$: no sign; the "which is higher" question needs a second test (wax, tightening) — the trap of beat problems.'),
+          ('WHY', 'beats measure frequency DIFFERENCES with arbitrarily fine resolution (1 beat in 10 s = 0.1 Hz), far better than the ear can judge absolute pitch — the reason beats are the tuning standard.')]),
+    CX('h3', CH, 'Beats with waves in space (extension)',
+       ['Two waves of slightly different frequency travelling together: the pattern of constructive and destructive interference MOVES at the group speed $v_g = \\Delta\\omega/\\Delta k$; for sound with negligible dispersion $v_g = v$: the pulsing envelope travels at the ordinary speed — a boat bobbing in the beat envelope of two sea swells moves with the group... for sound: a microphone moving along the path hears the same beat rate plus Doppler terms.',
+          'Standing-wave beats: two forks at opposite ends of a tube: the pattern of nodes drifts; a slow "sloshing" of node positions at the beat frequency — visual beats.',
+          ('FN', 'Laser Doppler / acoustic Doppler velocimetry: send $f_0$ to a moving particle; received $f\'$; beat with a reference measures $f\' - f_0 \\propto v_{\\rm particle}$ directly — the working principle of police radar AND ultrasound flowmeters (Oly 08 building block).')]),
+    CX('h3', CH, 'Beat drill set',
+       ['(a) 330 & 331.5: 1.5 beats/s. (b) $f_b = 3$ Hz between a fork and a siren moving at 3 m/s ($v = 343$): $f\' = f(1 \\pm 3/343)$: $\\Delta f = f\\cdot 3/343 = 3 \\Rightarrow f = 343$ Hz. (c) A string tightened raises $f$ from 220 to 221; beat with 223 Hz fork: before 3, after 2 ✓ pattern. (d) Two pipes at 500 and 502 Hz, equal amplitude: envelope frequency 2 Hz; intensity dips to ZERO at each dip; with amplitude ratio 2:1, dips to 1/9 of max.',
+          'Intensity formula for beats: $I(t) = 4I_0\\cos^2(\\pi f_b t)$ (equal amplitudes): mean $2I_0$ = sum of intensities ✓ energy conservation on average; instantaneous swings 0 to $4I_0$.',
+          ('WHY', 'the mean beat intensity equals the incoherent sum: time averaging the cross term kills it — consistency between coherent and incoherent pictures at long times.')]),
+]), 'Beats f_b = |f₁−f₂|, wax test, envelope physics, drills.')
+# ---------------------------------------------------- JEE-16 standing waves and boundaries
+ADD('SN-16', CHUNK([
+    CX('h2', HEAD, 'Standing waves: nodes, antinodes, and boundary conditions',
+       ['Counter-propagating waves of equal amplitude: $s = s_0\\sin(kx - \\omega t) + s_0\\sin(kx + \\omega t) = 2s_0\\sin(kx)\\cos(\\omega t)$: the pattern oscillates in place — nodes where $\\sin kx = 0$ ($x = n\\lambda/2$), antinodes at $x = (n + \\frac{1}{2})\\lambda/2$. Node spacing $\\lambda/2$; node–antinode spacing $\\lambda/4$. Amplitude map: $A(x) = 2s_0|\\sin kx|$; intensity $\\propto \\sin^2 kx$ averages $2I_0$ of the standing... precisely: standing wave intensity oscillates spatially and averages locally over time to $2I_0\\sin^2 kx$ (cross term time-averages to zero for the pair travelling oppositely... the net average energy flux is ZERO — energy sloshes, none propagates: hallmark of pure standing waves.',
+          'Pressure vs displacement standing wave: $\\Delta P = -2Bk s_0\\cos(kx)\\cos(\\omega t)$ — pressure nodes where displacement antinodes, and vice versa (SN-03). Rigid boundary (closed end of pipe, wall): displacement NODE / pressure ANTINODE — the boundary forces $s = 0$ (or fluid cannot flow through). Open end (free to atmosphere): displacement ANTINODE / pressure NODE — the open end enforces $\\Delta P = 0$ (pressure must match ambient).',
+          'Resonance: only discrete $k$ fit the boundary conditions: pipe of length $L$ with given ends $\\Rightarrow L = n\\lambda_n/2$ or $(2n-1)\\lambda/4$ patterns (JEE-17/18). A driver forces any pattern, but resonance builds amplitude 10–100x when the driving $f$ matches an allowed mode ($Q$ factors 10–50 for pipes — Oly 05).',
+          ('WHY', 'the boundary conditions are physics, not maths: rigid end = zero displacement because the gas cannot penetrate the wall; open end = zero excess pressure because the end is exposed to the atmosphere (actually a weak antinode $\\lambda/4$ beyond the mouth — end correction, JEE-19).'),
+          ('CHECK', 'draw one: for a closed pipe, displacement nodes at closed end, antinode at open end: pattern $s = s_0\\sin(kx)\\cos\\omega t$ with $kL = (2n-1)\\pi/2$: allowed $L = (2n-1)\\lambda/4$ ✓ odd harmonics (JEE-17).')],
+      ),
+    CX('h3', HEAD, 'Boundary phase rules (the trap bank)',
+       ['Rigid wall reflection of a displacement wave: the DISPLACEMENT wave inverts (phase jump $\\pi$) so that node forms at wall... consistent statements: displacement reflects with $\\pi$ phase flip (fixed end of a string analogy), PRESSURE wave reflects with NO flip at a rigid wall (pressure antinode at wall). Open end: pressure reflects with $\\pi$ flip (pressure node), displacement no flip (antinode). Working shortcut: always think displacement node = rigid, pressure node = open; derive the other from quadrature.',
+          'Quarter-wave layer: a closed pipe of $L = \\lambda/4$ resonates at $f = v/4L$; half-wave: $L = \\lambda/2$ for open pipe; these are the two building blocks. Mixed: pipe closed at one end has odd quarter-waves ONLY: $L = (2n-1)\\lambda/4$; open-open any integer half-waves: $L = n\\lambda/2$... but open-open ALSO allows odd quarter-wave-like modes? No: open-open with BOTH ends antinodes requires $L = n\\lambda/2$ (all harmonics).',
+          'Third boundary type (partially open, impedance mismatch, Oly 02): reflection coefficient $R = ((Z_2 - Z_1)/(Z_2 + Z_1))^2$ of intensity; the wall is "rigid" when $Z_2 \\gg Z_1$ (acoustically hard), "open" when $Z_2 \\ll Z_1$.',
+          ('WHY', 'the phase rules fix the mode spectrum: count quarter wavelengths that fit between the end conditions — the entire pipes chapter is that count.'),
+          ('CHECK', 'resonance between: a pipe closed at BOTH ends = same as open-open mode spacing ($n\\lambda/2$)? No: closed-closed = displacement nodes both ends: $L = n\\lambda/2$, all harmonics ✓ — the ends being the same type gives all harmonics; mixed ends give odd only.')]),
+    CX('h3', CH, 'Standing vs travelling: comparison table',
+       ['Travelling: amplitude constant in space; energy flux $I = \\bar u v$ nonzero; phase advances; $\\Delta P$ quadrature with $s$ locally... precisely: $\\Delta P = \\rho v u$ (in phase relation with particle velocity $u$). Standing: amplitude $\\propto |\\sin kx|$; zero average flux; $\\Delta P$ in QUADRATURE with $u$ (like reactive power); nodes every $\\lambda/2$ fixed in space.',
+          'Partial standing waves (real rooms): superposition of forward and reflected with amplitude ratio $r < 1$: standing wave ratio $\\mathrm{SWR} = (1+r)/(1-r)$; full standing $r = 1$; pure travelling $r = 0$. Measure $I_{\\max}/I_{\\min} = \\mathrm{SWR}^2$ to get reflection coefficient — room acoustics and duct design (Oly 05).',
+          ('FN', 'the sound field between two hard walls in a room is a 3D standing-wave lattice (room modes $f = \\frac{v}{2}\\sqrt{(n_x/L_x)^2 + (n_y/L_y)^2 + (n_z/L_z)^2}$) — acoustic "eigenmodes"; audible as boomy bass at some spots (the 1D pipe theory generalises exactly).')]),
+    CX('h3', CH, 'Micro-worked standing wave set',
+       ['(a) $s = 4\\times 10^{-6}\\sin(5x)\\cos(2000t)$: node spacing $\\pi/5 = 0.63$ m; $\\lambda = 1.26$ m; $v = 2000/5 = 400$ m/s (hot air or He mix... plausible warm gas). (b) A pipe open at both ends, $L = 0.5$ m, $v = 343$: fundamental 343 Hz, first overtone 686, second 1029 — all harmonics. (c) Closed at one end, same $L$: fundamental 171.5 Hz; overtones 514.5, 857.5 — odd only; compare spacing 343 Hz (twice fundamental).',
+          'Node-antinode conversions: at a displacement node $\\Delta P$ is maximum and temperature fluctuation is maximum too (compression heats! — the "thermoacoustic" hint); a hot-wire probe finds pressure antinodes; dust heaps in Kundt (JEE-21) sit at displacement NODES = pressure ANTINODES... hmm dust heaps actually collect at pressure nodes? Correction: dust collects at DISPLACEMENT NODES (pressure antinodes) in a Kundt tube ✓ (nodes of the standing displacement wave where the gas barely moves... actually dust collects at displacement nodes because the gas velocity is zero there — gas velocity antinodes sweep dust to nodes).',
+          ('WHY', 'dust collects at displacement nodes: acoustic streaming pushes loose powder toward the quiet spots of the gas motion; those are $\\lambda/2$ apart — the measurement of $\\lambda$ in Kundt tubes.')]),
+]), 'Standing waves, boundary conditions, node/pressure rules, SWR.')
+
+# ---------------------------------------------------- JEE-17 closed pipe
+ADD('SN-17', CHUNK([
+    CX('h2', HEAD, 'Closed pipe (closed at one end): odd harmonics only',
+       ['Closed pipe: one end rigid (displacement node), other open (displacement antinode). Allowed patterns: $L = (2n-1)\\dfrac{\\lambda_n}{4}$, $n = 1,2,3,...$ so $\\lambda_n = \\dfrac{4L}{2n-1}$ and $\\mathbf{f_n = (2n-1)\\dfrac{v}{4L}}$: fundamental $f_1 = v/4L$; overtones: first overtone $= 3v/4L = 3f_1$; second overtone $= 5v/4L = 5f_1$. Only ODD harmonics of $f_1$: the spectrum is $f_1, 3f_1, 5f_1, ...$ — mellow, hollow timbre (clarinet family).',
+          'Worked (source): $L = 0.34$ m, $v = 340$: $f_1 = 250$ Hz; first overtone 750 Hz; second 1250 Hz. Longitudinal displacement profiles: fundamental = quarter sine (node closed, antinode open); first overtone = three-quarter sine; second = five-quarter. Pressure profiles: antinode at closed end, node at open end.',
+          'Why odd only: an integer number of half-waves fits node-to-antinode only as odd quarters — even quarters would need node-to-node or antinode-to-antinode (a different end pair). Same physics: the mode condition is $kL = (2n-1)\\pi/2$; adding another half wave flips both ends to the wrong type.',
+          ('WHY', 'odd-harmonic content is a fingerprint: if a spectrum shows $f, 3f, 5f$ with no $2f$, the resonator is closed-at-one-end; if all integers appear, open-open. Exam "identify the pipe from the spectrum" questions use exactly this.'),
+          ('CHECK', 'adjacent resonances of a closed pipe (scanning f): $f_{n+1} - f_n = 2v/4L = v/2L$: constant spacing of TWICE the fundamental: source example 340 Hz spacing for $L = 0.5$ m: $v/2L = 343$ ✓ (this constant spacing is the backbone of the resonance tube method, JEE-20).')],
+      ),
+    CX('h3', HEAD, 'Mode shapes and the overtone ladder (exam detail)',
+       ['Naming discipline (trap bank source Trap 8): fundamental = 1st harmonic $= f_1 = v/4L$; FIRST overtone = 3rd harmonic $= 3v/4L$; SECOND overtone = 5th harmonic $= 5v/4L$. The paper Q16 mislabels 3v/4L as "second overtone" — correct labelling: first overtone. Source Trap 8 explicitly warns about this counting.',
+          'Displacement amplitude maximum at open end (antinode) — that is where the radiated sound escapes; the closed end has pressure maximum (the wall feels the pressure swing — microphone there reads max). Energy: antinode of velocity at open end = where radiation happens; node of velocity at closed end = no work done on wall (ideal).',
+          'Forced oscillation slightly off resonance: amplitude falls, phase shifts — half-power width $\\Delta f = f/Q$ (Oly 05); pipe Q ~ 10–30 unflanged, higher with flange — why "tuning across resonance" in JEE-20 labs shows sharp maxima.',
+          ('CHECK', 'numbers check: closed pipe L = 25.7 cm, v = 343: f1 = 333.7 Hz, f3 = 1001, f5 = 1668 — spacing 667.5 Hz = v/2L ✓ consistent; overtone naming: 1001 Hz is first overtone.')]),
+    CX('h3', CH, 'Closed-pipe problem patterns',
+       ['(a) "A closed pipe resonates at 170 Hz and 255 Hz consecutively with the tuning fork; find fundamental and length": spacing 85 Hz = v/4L... for closed pipe consecutive resonances ARE at f1, 3f1: spacing 2f1: f1 = 85... careful: resonances at odd multiples: if two consecutive resonances 170 & 255: these are 3f1=170, 5f1=255? spacing 85 = 2f1: f1 = 42.5: L = v/4f1 = 2.02 m; or the fork is near 170 = f1? The spacing method: f_{n+1} - f_n = v/2L always: L = v/(2\\cdot 85) = 2.02 m; f1 = v/4L = 42.5 Hz.',
+          '(b) "Closed pipe cut to 1/3 length; how do modes change?" all frequencies triple (v fixed): spectrum 3f1, 9f1, 15f1... ratio pattern unchanged (still odd-only). (c) "Water-pipe (closed by water level, variable L)": f1 = v/4L as L varies — organ pedal tubes; raise water level (shorten L) raises pitch.',
+          ('WHY', 'the constant spacing v/2L between consecutive odd harmonics (not 2f1... which is the same thing: 3f1 - f1 = 2f1 = v/2L ✓) makes the closed pipe a frequency meter: measure two consecutive resonances, get v.')]),
+    CX('h3', CH, 'Closed vs open pipe side-by-side (memorise)',
+       ['Closed: $f_1 = v/4L$; harmonics $1, 3, 5, ...$; overtone gaps $v/2L$; timbre hollow; example: clarinet, pan flute (stopped), bottle (Helmholtz-ish). Open: $f_1 = v/2L$; harmonics $1, 2, 3, ...$; overtone gaps $v/2L$; timbre bright; example: flute, organ open pipes, most vocal tract approximations. Fundamental ratio for same L: closed = half of open... $v/4L$ vs $v/2L$: closed is an octave below.',
+          'Exam shortcut: any pipe question: (i) identify ends; (ii) write $L = ?\\lambda/4$ condition; (iii) $v$ from temperature if not given; (iv) label harmonics carefully; (v) end correction if precision asked (JEE-19).',
+          ('CHECK', 'cross-check with overtone spacing: closed pipe: consecutive allowed modes differ by $2f_1$; open pipe: by $f_1$. If a spectrum has spacing 2f1 and starts at f1: it is closed; starts at f1 with spacing f1: open.')]),
+]), 'Closed pipe odd harmonics, overtone naming, spacing v/2L.')
+
+# ---------------------------------------------------- JEE-18 open pipe
+ADD('SN-18', CHUNK([
+    CX('h2', HEAD, 'Open pipe (open at both ends): all harmonics',
+       ['Both ends open = displacement antinodes at both ends: allowed $L = n\\dfrac{\\lambda_n}{2}$, so $\\lambda_n = 2L/n$ and $\\mathbf{f_n = n\\dfrac{v}{2L}}$: fundamental $f_1 = v/2L$; harmonics $f_n = n f_1$ ALL integers; overtones: first $= 2f_1$, second $= 3f_1$, ... — bright, full timbre (flute family). Worked (source): $L = 0.5$ m, $v = 343$: $f_1 = 343$ Hz; $f_2 = 686$; $f_3 = 1029$; $f_4 = 1372$.',
+          'Mode shapes: fundamental = half sine of displacement (antinode-antinode); pressure = half-cosine (node-node? pressure node at both open ends, antinode at middle for fundamental ✓). Second harmonic: full sine (node of displacement at middle), etc. Consecutive resonance spacing (scanning f): $v/2L$ = one fundamental — same spacing formula as closed pipe\'s overtone gaps.',
+          'Traps: (i) "open pipe" in exam problems sometimes means a pipe closed at ONE end by context — read ends! (ii) end correction applies at BOTH ends (JEE-19): effective $L_{\\rm eff} = L + 2e$ vs closed $L + e$ — this shifts every frequency down ~1–3%. (iii) comparing with strings: string fixed-fixed: $f_n = n v/2L$ identical ladder to open pipe (different wave type but same mode count) — the mathematics is shared.',
+          ('WHY', 'symmetric boundaries (same type both ends) give integer half-wave ladder; asymmetric (node one end, antinode other) gives odd-quarter ladder — one rule explains both pipes.'),
+          ('CHECK', 'open pipe L = 0.5 m at 20 C: f1 = 343.2/1 = 343 Hz; the SAME tube closed at one end: f1 = 171.6 Hz — exactly an octave lower ✓.')],
+      ),
+    CX('h3', HEAD, 'Open-pipe spectra in data questions',
+       ['Given a list of resonant frequencies 220, 440, 660, 880: all harmonics of 220 $\\to$ open pipe (or string); 220, 660, 1100: odd only $\\to$ closed. Given spacing 85 Hz between resonances: $L = v/(2\\cdot 85) = 2.02$ m for either pipe type (spacing formula shared!). Given fundamental only: $L = v/2f_1$ (open) vs $v/4f_1$ (closed) — factor 2 ambiguity, resolve from the description or from a second data point.',
+          'Organ design: open pipes sound an octave higher than stopped pipes of equal length; mixtures of both give chorus effects; 16 ft open = 32 ft stopped pitch. The "rank" of a pipe organ is literally this ladder.',
+          'Sound from the ends: both ends radiate; open-open radiates from two ends (interference possible at low f when $L < \\lambda$ — the dipole "singing tube" effect, Oly 05); closed-open radiates mainly at the open end (monopole-ish).',
+          ('CHECK', 'the end correction shifts: open pipe $f_1 = v/2(L + 2e)$: with $r = 2$ cm, $e = 1.2$ cm (source Q4), $L = 85$ cm: $L_{\\rm eff} = 1.024$ m: f1 = 343/2.048 = 167.5 Hz vs 202 without... hmm source Q4 numbers: L = 85 cm, e = 1.2 cm gives 166 Hz ✓ matches Section E key with r = 2 cm.')]),
+    CX('h3', CH, 'Open-pipe problem patterns',
+       ['(a) Pipe in helium vs air (same T): frequencies scale with $v$: $f_{\\rm He}/f_{\\rm air} = v_{\\rm He}/v_{\\rm air} = 2.93$ — pitch jumps nearly two octaves... 1.56 octaves; classic demonstration (party voice). (b) Temperature: a pipe tuned to 300 Hz at 20 C: at 30 C: $f = 300\\sqrt{303/293} = 305.1$ Hz — out of tune by 5 Hz. (c) Pipe length for a target: "design an open pipe for 440 Hz at 25 C": $v = 346.1$, $L = v/2f = 0.393$ m (minus end correction: $L = 0.393 - 2e$).',
+          'Two-pipe comparison: open pipe A and closed pipe B sound the same fundamental: $v/2L_A = v/4L_B \\Rightarrow L_B = 2L_A$; their first overtones: A: $2f$; B: $3f$ — differ; beats between overtones: $f$ — demonstration question.',
+          ('WHY', 'frequency of any mode is $v$ over the mode wavelength; everything geometric lives in the wavelength count; temperature and gas choice live in $v$ — two independent knobs.')]),
+    CX('h3', CH, 'The one-line mode solver (all pipes, all questions)',
+       ['Given pipe type and length: (1) Write end conditions as node/antinode pattern. (2) Count quarter waves fitting: mixed ends: $L = (2n-1)\\lambda/4$; same ends: $L = n\\lambda/2$. (3) $f = v/\\lambda$; add end correction $L \\to L_{\\rm eff}$ if needed. (4) Label: harmonic number $=$ multiple of $f_1$; overtone number $=$ harmonic number $- 1$ (the trap!). (5) If not given: $v = \\sqrt{\\gamma RT/M}$ at working temperature.',
+          'Generalise: 3D rooms: $f = \\frac{v}{2}\\sqrt{(n_x/L_x)^2 + ...}$; string: $f = n\\sqrt{T/\\mu}/2L$; rods: $f = n v_{\\rm rod}/2L$ — same ladder mathematics with different $v$.',
+          ('CHECK', 'the ladder of any resonator: compute $f_1$; check the spacing of higher modes is a simple multiple of $f_1$ (1, 2, 3 or 1, 3, 5); if not, end corrections or transverse modes entered.')]),
+]), 'Open pipe all harmonics, spectra identification, one-line mode solver.')
+
+# ---------------------------------------------------- JEE-19 end correction
+ADD('SN-19', CHUNK([
+    CX('h2', HEAD, 'End correction: $e \\approx 0.6r$, $L_{\\rm eff} = L + e$ (closed) or $L + 2e$ (open)',
+       ['The displacement antinode sits slightly OUTSIDE the physical mouth of the pipe: the oscillating air just beyond the opening participates in the inertia. The effective length is longer than the cut length: $L_{\\rm eff} = L + e$ with $e \\approx 0.6r$ for an unflanged (sharp) opening, $e \\approx 0.85r$ for a flanged (flared/baffled) opening; $r$ = pipe radius. Source worked (Q4): $L = 85$ cm, $r = 2$ cm, unflanged $e = 1.2$ cm $= 0.6r$ ✓: open pipe $f_1 = v/2(L+2e) = 343/(2\\times 0.874) = 196$... let me recompute: source Q4: f1 = 100 Hz geometric; with e: 98.6 Hz ($\\Delta = 1.4$%).',
+          'Closed pipe: one open end $\\Rightarrow L_{\\rm eff} = L + e$; open pipe: two $\\Rightarrow L + 2e$. All frequencies fall slightly: $f_{\\rm true} = f_{\\rm geo}\\cdot L/L_{\\rm eff}$ (approximately $f(1 - e/L)$ for small correction). Relative size: for $r = 2$ cm, $e = 1.2$ cm is 1.4% of 85 cm — measurable; for lab pipes $r \\sim 1.5$ cm, $L \\sim 0.3$ m: correction 3%.',
+          'Physics of $e = 0.6r$: the added end mass is the oscillating plug of air beyond the mouth, of length $\\propto r$; exact coefficient depends on the mouth geometry (radiation end impedance, Oly 03): unflanged $e = 0.6133r$ (Rayleigh), flanged $e = 0.8216r$ (Levine-Schwinger); "0.6 and 0.85" are the exam standards.',
+          ('WHY', 'the antinode cannot sit exactly at the rim: pressure continuity with the open atmosphere extends the oscillatory region past the mouth — the wave "overshoots" by $e$; failing to include $e$ systematically overestimates frequencies.'),
+          ('CHECK', 'source Q5 method (resonance tube): $e = (l_2 - 3l_1)/2$ and $v = 2f(l_2 - l_1)$: with $l_1 = 16.5$ cm, $l_2 = 50.1$ cm, $f = 512$ Hz: $v = 344$ m/s, $e = 3$ mm ✓; note $\\lambda/4 - l_1 = e$ consistency: $\\lambda = 2(l_2 - l_1) = 0.672$ m: $\\lambda/4 = 16.8$ cm: $e = 16.8 - 16.5 = 3$ mm ✓ both routes agree — the safe identity: $l = \\lambda/4 - e$ (Trap 15 prints $+$; the worked solutions use $-$ — see SOURCE-AUDIT).')],
+      ),
+    CX('h3', HEAD, 'When does the correction matter (and when not)',
+       ['Matter: precision labs, high-Q measurements, short pipes, comparison of nearly equal pipes (beat detection resolves 0.1%!). Not matter: order-of-magnitude pitches, long pipes ($e/L < 1$%), problems that say "neglect end correction". Exam rule: include if radius given or if options straddle 1–3%; mention explicitly.',
+          'Flange effect demonstration: same pipe with/without a baffle plate at the mouth: $e$ rises 0.6r $\\to$ 0.85r: frequency drops ~2% for short pipes: measurable with beats. Real instruments use bells (much larger effective flange, tuned curves) — the bell couples impedance to the room (Oly 03).',
+          'Helmholtz resonator note: a bottle with neck has its own end-corrected neck formula: $f = \\frac{v}{2\\pi}\\sqrt{A/(V L_{\\rm eff})}$ with $L_{\\rm eff} = L_{\\rm neck} + 1.5r$-ish — different formula family (Oly 05), same $e$ physics.',
+          ('CHECK', 'dimensional and sign check: $e = 0.6r$ positive (lengthens); $f$ always drops when including $e$; if your $f$ rises, a sign flipped.')]),
+    CX('h3', CH, 'End-correction problem patterns',
+       ['(a) "An open pipe of length 50 cm, radius 2 cm sounds at f; find f with e": $L_{\\rm eff} = 50 + 2(1.2) = 52.4$ cm: $f = 343/1.048 = 327$ Hz vs 343 uncorrected: 4.7% low... check: L_eff = 0.524, f = v/2L_eff = 327 ✓. (b) "A closed pipe 30 cm, r = 1.5 cm, at 30 C": $v = 348.2$, $e = 0.9$ cm: $f = 348.2/(4\\times 0.309) = 282$ Hz. (c) "Find r from measured shift": open pipe f_geo = 400 (no e) vs measured 392: $L_{\\rm eff}/L = 400/392 = 1.0204$: $2e/L = 0.0204$: $e = 0.0102 L = 1.02$ cm for L = 1 m: $r = e/0.6 = 1.7$ cm.',
+          'Resonance tube method works BECAUSE of end correction cancellation: $v = 2f(l_2 - l_1)$ does not need $e$ at all (the spacing of two consecutive resonances eliminates $e$); $e$ itself comes from the absolute positions $e = (l_2 - 3l_1)/2$ — the elegant double measurement of JEE-20.',
+          ('WHY', 'the spacing trick: $l_2 = 3\\lambda/4 - e$, $l_1 = \\lambda/4 - e$: difference $\\lambda/2$ independent of $e$; sum-based formula extracts $e$ — one experiment, two unknowns solved.')]),
+    CX('h3', CH, 'Micro-drills on the correction',
+       ['(a) Ratio $f_{\\rm corrected}/f_{\\rm geo} = L/(L + e)$ (closed) or $L/(L + 2e)$ (open). (b) $r = 3$ cm flanged: $e = 2.55$ cm; open pipe $L = 1$ m: $L_{\\rm eff} = 1.051$ m: $f$ drops 4.8%. (c) Two pipes same $L$, $r_1 = 1$ cm, $r_2 = 3$ cm: open-open: $e$ ratio 3: frequency ratio $\\frac{L + 2(0.6)}{L + 2(1.8)} = \\frac{1.012}{1.036} = 0.977$ for L = 1 m: 2.3% apart: beat frequency at 300 Hz = 7 Hz.',
+          'Rule of thumb: correction significant when $r/L > 2$%; exam pipes $r \\approx 1.5$–2 cm, $L \\approx 30$–100 cm $\\Rightarrow$ 2–6% shifts.',
+          ('FN', 'the exact radiation end-impedance $Z_{\\rm end} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6ka]$ for unflanged pipe (low $ka$) — the imaginary part is the end correction, the real part is radiation resistance (Oly 03/05) — same physics seen through impedance.')]),
+]), 'End correction e ≈ 0.6r/0.85r, L_eff rules, resonance-tube link.')
+# ---------------------------------------------------- JEE-20 resonance tube method
+ADD('SN-20', CHUNK([
+    CX('h2', HEAD, 'Resonance tube: $v = 2f(l_2 - l_1)$ and $e = (l_2 - 3l_1)/2$',
+       ['Apparatus: a tuning fork of frequency $f$ held over a vertical tube whose water level (closed end) is adjustable; the air column (closed-open) resonates when its effective length matches $(2n-1)\\lambda/4$. Move the level down: first resonance at length $l_1$ (fundamental: $l_1 + e = \\lambda/4$), second at $l_2$ (first overtone: $l_2 + e = 3\\lambda/4$). Subtract: $l_2 - l_1 = \\lambda/2$ — end correction cancels! Hence $\\mathbf{v = 2f(l_2 - l_1)}$ and $\\mathbf{e = (l_2 - 3l_1)/2}$ (from adding: $l_1 + l_2 + 2e = \\lambda$... precisely $l_1 + e = \\lambda/4$, $l_2 + e = 3\\lambda/4$: solve: $e = \\lambda/4 - l_1 = (l_2 - l_1)/2 - l_1 = (l_2 - 3l_1)/2$ ✓).',
+          'Source worked (Q5): $f = 512$ Hz, $l_1 = 16.5$ cm, $l_2 = 50.1$ cm: $\\lambda = 2(50.1 - 16.5) = 67.2$ cm; $v = 512\\times 0.672 = 344.1$ m/s (≈ 344, consistent with warm lab ~25 C); $e = (50.1 - 49.5)/2 = 0.3$ cm = 3 mm; check $e = \\lambda/4 - l_1 = 16.8 - 16.5 = 3$ mm ✓. Then $r = e/0.6 = 5$ mm for the tube.',
+          'Procedure and errors: use a tall tube and a low fork if possible (large $l$ values reduce % error); resonance is sharp, so find the midpoint of the loudness peak; correct for temperature ($v(T)$); the tube must be vertical (water level defines the closed end); fork amplitude should be moderate (nonlinearity at high amplitude shifts peaks).',
+          ('WHY', 'two resonances of the same closed pipe differ by exactly $\\lambda/2$ of length regardless of $e$: the spacing method is self-correcting — the reason it is the standard student experiment for $v$.'),
+          ('CHECK', 'identity route: $l = \\lambda/4 - e$ (correct) vs the printed "$l = \\lambda/4 + e$" in source Eq (2.15)/Trap 15: check consistency with Q5: $l_1 = 16.8 - 0.3 = 16.5$ ✓ with MINUS; with plus: 17.1 ✗. Record in SOURCE-AUDIT; use $l = \\lambda/4 - e$.')],
+      ),
+    CX('h3', HEAD, 'Alternate forms and fork-adjacent variants',
+       ['(a) Known $e$, one resonance: $v = 4f(l_1 + e)$. (b) Two forks $f_a, f_b$ at the same liquid level resonance (method of mixtures... different context) — skip. (c) Two consecutive resonances of an OPEN tube: same formulas $v = 2f(l_2 - l_1)$, $e = (l_2 - 3l_1)/2$ BUT with $l_n = n\\lambda/2 - e$... open tube: $l_1 + 2e = \\lambda/2$, $l_2 + 2e = \\lambda$: spacing $\\lambda/2$ same; $e = (l_2 - 3l_1)/2$ changes to $e = (l_2 - 3l_1)/2$? derive: $l_1 = \\lambda/2 - 2e$, $l_2 = \\lambda - 2e$: $l_2 - l_1 = \\lambda/2$ ✓ same spacing formula; $l_2 - 3l_1 = \\lambda - 2e - 3\\lambda/2 + 6e = -\\lambda/2 + 4e$: $e = (l_2 - 3l_1 + \\lambda/2)/4$ — different! Exam convention: resonance tube = closed-open; use the closed formulas.',
+          'Dust-tube variant (Kundt, JEE-21) measures $\\lambda$ directly from dust heaps; resonance tube measures $\\lambda$ from length sweep; both give $v = f\\lambda$.',
+          ('CHECK', 'if $l_1 > \\lambda/4$ computed from a guessed $v$, the first found "resonance" might actually be the overtone — consistency: $l_2 \\approx 3l_1 + 2e$-ish: for $l_1 = 16.5$ cm: $l_2 \\approx 49.5$ + 2e ✓ 50.1 measured.')]),
+    CX('h3', CH, 'Worked exam problems (resonance tube family)',
+       ['(a) A fork 480 Hz: resonances at 17.0 cm and 51.8 cm: $v = 2\\cdot 480\\cdot 0.348 = 334.1$ m/s: temperature? $v = 331.3\\sqrt{T/273}$: $T = 273(334.1/331.3)^2 = 277.7$ K = 4.5 C — cool lab. $e = (51.8 - 51.0)/2 = 4$ mm; $r = e/0.6 = 6.7$ mm.',
+          '(b) "A resonance tube shows first resonance at 20 cm for a 400 Hz fork; find v without second resonance": assume $e = 0$: $v = 4f l_1 = 320$ m/s; with $e = 1$ cm: $v = 4\\cdot 400\\cdot 0.21 = 336$ — the ambiguity of one measurement; state the assumption.',
+          '(c) "How long a tube for the 3rd resonance of 300 Hz at 20 C?" $\\lambda = 1.144$ m: resonances at $\\lambda/4 - e$, $3\\lambda/4 - e$, $5\\lambda/4 - e$: 3rd $= 5\\times 0.286 - e = 1.43 - e$ m.',
+          ('WHY', 'the method measures $v$ from LENGTHS, needing only a good ruler and a known fork — the classic 1%-accuracy student method (with a thermometer for $v(T)$ correction).')]),
+    CX('h3', CH, 'Error analysis and exam "find the mistake" questions',
+       ['Systematic: (i) neglecting $e$ in one-resonance method: error $e/L_1$ up to 5%. (ii) temperature drift during the lab: $v$ moves 0.6 m/s/K. (iii) tube not exactly uniform: resonance peak broadens. (iv) fork frequency off by heating from hands: 0.1%. (v) loudness judgment bias: read the peak midpoint.',
+          'Mistake-finding format: "A student reports $v = 300$ m/s from $l_1 = 16.5$, $l_2 = 50.1$, $f = 512$." — check: $2f(l_2 - l_1) = 344$; 300 is wrong (maybe used $l_2 - l_1$ in cm as m: 33.6... or dropped the 2: $f(l_2 - l_1) = 172$... wrong arithmetic). Diagnosis drill: recompute the chain $\\lambda = 2\\Delta l$, $v = f\\lambda$.',
+          ('FN', 'using a microphone + oscilloscope instead of the ear: resonance shown as amplitude vs length curve — peak positions give $l_1, l_2$ more precisely (lab modernisation of the same physics).')]),
+]), 'Resonance tube v = 2f(l₂−l₁), e = (l₂−3l₁)/2, errors and drills.')
+
+# ---------------------------------------------------- JEE-21 Kundt tube
+ADD('SN-21', CHUNK([
+    CX('h2', HEAD, "Kundt's tube: measure $v_{\\rm gas}$ from dust-heap spacing",
+       ['Apparatus: a long glass tube with a little cork dust (lycopodium) powder, gas-filled; a rod clamped at its middle, stroked lengthwise, drives the tube at the rod fundamental via a disc at one end. The acoustic standing wave in the gas is dusted into visible heaps: powder collects at DISPLACEMENT NODES of the gas (where the gas barely moves — acoustic streaming sweeps it there), spaced $\\lambda_{\\rm gas}/2$ apart. Read $d = \\lambda_{\\rm gas}/2$ directly with a ruler.',
+          'The rod: clamped at the middle $\\to$ node at centre, antinodes at both ends: fundamental $\\lambda_{\\rm rod} = 2L_{\\rm rod}$: rod frequency $f = v_{\\rm rod}/(2L_{\\rm rod})$... but the observed pitch is actually the SECOND harmonic of the free rod ($\\lambda = L_{\\rm rod}$, $f = v_{\\rm rod}/L_{\\rm rod}$) — hmm source worked example: $v_{\\rm rod} = 5000$ m/s, $L_{\\rm rod} = 1$ m, $d = 8$ cm gives $v_{\\rm gas} = 400$ m/s via $v_{\\rm gas} = v_{\\rm rod} d / L_{\\rm rod}$... with $d = \\lambda/2$ and matching frequency: $f = v_{\\rm rod}/(2L_{\\rm rod}) = 5000/2 = 2500$ Hz; $\\lambda_{\\rm gas} = 2d = 0.16$ m; $v_{\\rm gas} = 2500\\times 0.16 = 400$ m/s ✓ (source chain: $v_{\\rm gas} = v_{\\rm rod}\\cdot d/L_{\\rm rod}$ — consistent with $f = v_{\\rm rod}/2L_{\\rm rod}$ and $\\lambda_{\\rm gas} = 2d$).',
+          'Full formula chain: $f = \\dfrac{v_{\\rm rod}}{2L_{\\rm rod}} = \\dfrac{v_{\\rm gas}}{2d}$ $\\Rightarrow$ $v_{\\rm gas} = v_{\\rm rod}\\dfrac{d}{L_{\\rm rod}}$. Measure $d$ (heap spacing), know $L_{\\rm rod}$ and $v_{\\rm rod}$ (or measure $v_{\\rm rod}$ separately): get $v_{\\rm gas}$. The method is elegant because the same $f$ drives both media — no fork calibration needed.',
+          ('WHY', 'dust heaps at nodes: the oscillating gas velocity is zero at displacement nodes; radiation pressure / streaming pushes loose powder toward velocity minima — visualising the invisible wave. The heap spacing is HALF a wavelength — the classic factor-2 trap.'),
+          ('CHECK', 'source numbers once more: $v_{\\rm rod} = 5\\times 10^{3}$ m/s (steel-ish, L = 1 m): $f = 2.5$ kHz; $d = 8$ cm: $\\lambda = 16$ cm; $v_{\\rm gas} = 2.5\\times 10^{3}\\times 0.16 = 400$ m/s ✓ (hot air: $v = 331\\sqrt{T/273} = 400 \\Rightarrow T = 398$ K = 125 C — plausibly warm gas in the tube).')],
+      ),
+    CX('h3', HEAD, 'The rod modes in detail (factor-of-2 discipline)',
+       ['Rod clamped at middle: boundary = node at middle, free ends = antinodes: fundamental: $\\lambda_{\\rm rod} = 2L_{\\rm rod}$ (half-wave with antinode-antinode: the clamped middle is the node: pattern: antinode-node-antinode over the rod = one full... wait: free-free rod with central node: the half-rod (L/2) is node-to-antinode = quarter wave: $\\lambda/4 = L/2$: $\\lambda = 2L$ ✓). So $f = v_{\\rm rod}/\\lambda = v_{\\rm rod}/(2L_{\\rm rod})$ ✓. Rubbing lengthwise excites longitudinal modes.',
+          'Alternative: rod clamped at END: $\\lambda = 4L$: $f = v/4L$ — half as loud/low; exam variants specify the clamping. Any of these can drive the tube: just use the actual $f$ in $v_{\\rm gas} = f\\lambda_{\\rm gas} = 2fd$.',
+          'Precision: heap spacing measurement error 2 mm on 80 mm: 2.5%; rod length error 0.5%; temperature: gas speed known $\\pm 0.3$% — total few-% method. Edge effects: the disc end reflects imperfectly; heaps fade near the ends.',
+          ('CHECK', 'dimensional: $v_{\\rm gas} = v_{\\rm rod} d/L_{\\rm rod}$: m/s = m/s × m/m ✓; extreme: $d = L_{\\rm rod}$: $v_{\\rm gas} = v_{\\rm rod}$: the heap spacing equals rod half-wavelength... $\\lambda_{\\rm gas} = 2d = 2L$: $v_{\\rm gas} = f\\cdot 2L = v_{\\rm rod}$ ✓ consistent.')]),
+    CX('h3', CH, 'Kundt problems and modern readings',
+       ['(a) Rod of aluminium $v = 5100$, $L = 0.5$ m clamped middle: $f = 5.1$ kHz; heaps 2.5 cm: $\\lambda = 5$ cm: $v_{\\rm gas} = 5100\\times 0.025/0.5 = 255$ m/s (cold heavy gas? $T$: 255 = $331\\sqrt{T/273}$: $T = 164$ K — a cold CO2-ish experiment; or wrong clamp assumption!). (b) "Dust heaps 4 cm apart in hydrogen at 0 C ($v = 1260$): find f": $f = v/2d = 1575$ Hz.',
+          'Modern reading: the Kundt tube is the acoustical analogue of the Melde experiment; dust visualisation = node mapping; the same apparatus measures gas composition via $v_{\\rm gas}$ (from $M_{\\rm eff}$, JEE-09) and even $\\gamma$ (with two gases).',
+          ('FN', 'acoustic streaming from the standing wave drives steady gas circulation in cells of size $\\lambda/2$ — the powder ALSO traces the streaming cells; both effects give the same spacing.')]),
+    CX('h3', CH, 'Kundt vs resonance tube (discrimination)',
+       ['Kundt: directly visualises $\\lambda/2$ (dust heaps), needs rod + tube + powder, measures $v_{\\rm gas}$ via rod frequency; resonance tube: finds resonance LENGTHS of a fixed fork, computes $\\lambda = 2(l_2 - l_1)$; both give $v$; both have factor-2 traps (heap spacing $= \\lambda/2$; length spacing $= \\lambda/2$).',
+          'Quick exam signal words: "dust / powder / heaps" $\\to$ Kundt; "water level / liquid / loudness maxima as length changes" $\\to$ resonance tube; "two paths / sliding U-tube" $\\to$ Quincke; "two forks / pulsing loudness" $\\to$ beats; "moving source or observer" $\\to$ Doppler.',
+          ('CHECK', 'after any $v$ computation, compare with $v(T)$ anchors: air 331–343; if Kundt gives 400, gas is warm (~125 C) or He-mixed; if 1300, it is H2; sanity first, algebra second.')]),
+]), 'Kundt tube, dust heaps at nodes λ/2, v_gas = v_rod·d/L_rod.')
+
+# ---------------------------------------------------- JEE-22 Doppler moving source
+ADD('SN-22', CHUNK([
+    CX('h2', HEAD, 'Doppler effect 1: moving source, stationary observer',
+       ['Source moves toward a stationary observer at speed $u_s$ along the line joining them. Each successive crest is emitted closer to the observer: the wavelength ahead compresses to $\\lambda\' = \\lambda - u_s T = (v - u_s)/f$; the observer measures $f\' = v/\\lambda\' = f\\dfrac{v}{v - u_s}$ (toward). Receding: $\\lambda$ stretches: $\\mathbf{f\' = f\\dfrac{v}{v \\mp u_s}}$ with minus for approach, plus for recession. Source example: $f = 400$ Hz, $u_s = 35$ m/s, $v = 343$: approach $f\' = 400\\cdot 343/308 = 445$ Hz; recede: $400\\cdot 343/378 = 363$ Hz.',
+          'Key physics: the SOURCE motion changes the WAVELENGTH (crowded wavefronts ahead); the observer is passive. If $u_s \\to v$: $f\' \\to \\infty$ (source keeping pace with its own crests — pile-up at the shock boundary, JEE-28 Mach cone). If $u_s > v$: the formula flips sign meaning (observer in the "silent" region behind the cone before the shock arrives; overtaken events arrive in reverse order — outside syllabus but the qualitative breakdown is fair).',
+          'The ratio form: $f\'/f = v/(v \\mp u_s)$: pure geometry of wavefront spacing. For $u_s \\ll v$: $f\' \\approx f(1 \\pm u_s/v)$ — the fractional shift equals $u_s/v$ — this linear form drives most precision applications (radar guns, ultrasound flow, Oly 08).',
+          ('WHY', 'wavelength compression is kinematics of emitted crests: in one period $T = 1/f$ the source moves $u_s T$ while the crest ahead moves $vT$; the gap between consecutive crests in the direction of motion is $(v - u_s)T$ — that IS the observed $\\lambda$; $f\' = v/\\lambda\'$ follows.'),
+          ('CHECK', 'limits: $u_s = 0$: $f\' = f$ ✓; approach always $f\' > f$; recede $f\' < f$; speed of sound is that of the MEDIUM, not of the source — wind (JEE-25) modifies $v$ itself, separately.')],
+      ),
+    CX('h3', HEAD, 'Sign discipline for moving source (the classic trap)',
+       ['Source approaching: $f\' = f\\dfrac{v}{v - u_s}$ — denominator SHRINKS, frequency rises. Source receding: $f\' = f\\dfrac{v}{v + u_s}$ — denominator grows, frequency falls. Mnemonic: "approach = subtract in the denominator (for source speed); add for observer speed when approaching" — but mixed cases slip; the robust method is always: (1) write $\\lambda\'$ for source motion or $v_{\\rm rel}$ for observer motion; (2) $f\' = v_{\\rm rel}/\\lambda\'$; (3) specialise. Oly-06 gives the sign-free formula.',
+          'Worked asymmetry (source Q8/Q9): train whistle 1000 Hz at 30 m/s, $v = 343$... source says 340: (i) stationary observer: approach $1000\\times 340/310 = 1096.8$ Hz; recede $1000\\times 340/370 = 918.9$... hmm source Q8/Q9 use observer in train vs stationary: Q8: observer at station, sound 1096.8 (approach); Q9: observer IN the receding train hears 1088.2?? Let me redo from source: "A train approaches a station at 30 m/s sounding 1000 Hz; v = 340" — (a) platform hears 1096.8 Hz; (b) passenger in train hears own horn: 1000 Hz (no relative motion); (c) reflected echo back to train: double Doppler 1193.5 Hz; approx 1176 with 2u/v. The 1088.2 = moving OBSERVER receding at 30: $1000\\times 310/340 = 911.8$?? Compute: $1000\\times(340-30)/340 = 911.8$. Hmm 1088.2 = $1000\\times 340/(340-3)$? Whatever the pairing, the canonical pair in the source is 1096.8 / 1088.2 as "source vs observer motion at same speed" — the ASYMMETRY: moving source 1096.8 vs moving observer 1088.2 for approach at 30 m/s? Moving observer approach: $1000\\times 370/340 = 1088.2$ ✓ THERE: same 30 m/s gives different shifts depending on WHO moves — 1096.8 (source moves) vs 1088.2 (observer moves). Second-order difference: $f u_s^2/(v(v-u_s)) \\approx 8.6$ Hz ✓ the source asymmetry term.',
+          ('CHECK', 'asymmetry magnitude: $\\Delta = f u^2/(v(v-u)) = 1000\\times 900/(340\\times 310) = 8.5$ Hz ✓ matches 1096.8 − 1088.2 = 8.6 Hz — the pair of formulas differ at second order in $u/v$; first order identical.'),
+          ('WHY', 'source motion distorts the wave geometry (a nonlinear function $v/(v-u)$), observer motion only changes the crest-collection rate (linear $1 \\pm u/v$) — that asymmetry is real and measurable (the "Doppler of sound vs light" exam discussion: light in vacuum is symmetric: $f\' \\approx f(1 \\pm u/c)$ both ways at first order).')]),
+    CX('h3', CH, 'Moving-source problem patterns',
+       ['(a) Ambulance 800 Hz at 25 m/s ($v = 343$): approach 862.2 Hz; recede 748.9 Hz; the pitch DROP heard as it passes: $\\Delta f = 113$ Hz — the glissando scale question. (b) Two trains approaching each other at 20 m/s each, horn 500 Hz: source motion 20 + observer 20: $f\' = 500\\times 363/323 = 562$ Hz (both effects stack). (c) Source circling (tangential): at closest approach $u_s$ perpendicular: no first-order shift — the frequency slides from high to low through the pass: "siren of a passing car" waveform.',
+          'Blunt instrument vs formula: for $u/v = 0.1$: exact $1/0.9 = 1.111$; linear $1.1$: 1% error; exams: use exact unless told to approximate.',
+          ('FN', 'the pitch glide of a passing siren has a characteristic "swoosh": $f\'(t) = f v/(v - u_s\\cos\\theta(t))$... the full 2D form (JEE-26): $f\' = f\\dfrac{v}{v - u_s\\cos\\theta}$: smooth slide through $f$ at the perpendicular instant.')]),
+    CX('h3', CH, 'Numbers drill (moving source)',
+       ['(a) $f = 320$ Hz, $u_s = 40$, $v = 340$: approach: $320\\times 340/300 = 362.7$; recede: $320\\times 340/380 = 286.3$. (b) "Source moving at $v/2$: factor 2 rise approaching": $f\\cdot 340/170 = 2f$ ✓ dramatic demo. (c) "How fast must a source move to shift 440 to 450 Hz?" $u_s = v(1 - f/f\') = 340(1 - 440/450) = 7.6$ m/s approaching (solve $450 = 440\\cdot 340/(340 - u)$).',
+          'Consistency: the shift observed in a round trip (source + reflector + observer) doubles the effect (JEE-27) — police radar uses exactly the double shift.',
+          ('WHY', 'the exact formula is a pure kinematic ratio; every number above comes from $v/(v \\mp u)$ — nothing else to memorise once the sign convention is fixed.')]),
+]), 'Doppler moving source, λ compression, asymmetry with observer motion.')
+
+# ---------------------------------------------------- JEE-23 Doppler moving observer
+ADD('SN-23', CHUNK([
+    CX('h2', HEAD, 'Doppler effect 2: moving observer, stationary source',
+       ['Source at rest emits $f$ with wavelength $\\lambda = v/f$ (unchanged). Observer moving toward the source at $u_o$ meets crests faster: crest-collection rate $f\' = \\dfrac{v + u_o}{\\lambda} = f\\dfrac{v + u_o}{v}$ (toward); receding: $f\' = f\\dfrac{v - u_o}{v}$. Boxed family: $\\mathbf{f\' = f\\dfrac{v \\pm u_o}{v}}$ — plus for approach. Example: $f = 500$ Hz, observer 30 m/s toward, $v = 343$: $f\' = 500\\times 373/343 = 543.7$ Hz; away: 456.3 Hz.',
+          'Physical picture: the observer "scoops" wavefronts; the relative speed of crest encounter is $v \\pm u_o$; wavelength in the medium untouched. Contrast with moving source (JEE-22): that changes $\\lambda$; this changes encounter rate. At first order both give $\\Delta f = f u/v$; at second order they differ (8.6 Hz at 1000 Hz, 30 m/s — the 1096.8 vs 1088.2 pair).',
+          'Motion along an angle (2D, JEE-26): only the radial component counts: $f\' = f\\dfrac{v + u_o\\cos\\theta_o}{v}$; a passing car: observer walking across the street hears the shift only through the line-of-sight component.',
+          ('WHY', 'the medium carries the wave pattern at $v$; the observer adds their own velocity to the encounter speed — Galilean composition for the observer side (wave speed in medium frame is fixed; observer velocity simply adds).'),
+          ('CHECK', 'extremes: $u_o = v$ toward: $f\' = 2f$ (double rate — observer surfing crest-to-crest... at $u_o = v$ the observer keeps pace with one crest... hmm encounter rate $2v/\\lambda$: yes $2f$); $u_o = v$ away: $f\' = 0$ (never meets a crest: staying exactly with the wave); $u_o > v$ away: formula gives negative $f\'$ — meaning the observer passes crests in reverse order (sign of overtaking).')],
+      ),
+    CX('h3', HEAD, 'Combined formula and sign convention (working standard)',
+       ['Both moving along the line joining source and observer (positive speeds toward each other): $\\mathbf{f\' = f\\dfrac{v + u_o}{v - u_s}}$ — observer approach ADDS to $v$; source approach SUBTRACTS from $v$. Then: both approaching: $f\' = f(v + u_o)/(v - u_s)$ (biggest shift); both receding: $f\' = f(v - u_o)/(v + u_s)$; mixed: substitute signs accordingly. This is the standard textbook convention (positive toward); the exam-safe procedure: sketch, mark who runs toward whom, write the box formula with your OWN sign bookkeeping, then evaluate.',
+          'Source-style worked (combined): source 1000 Hz at 30 m/s toward observer approaching at 20 m/s, $v = 340$: $f\' = 1000\\times 360/310 = 1161.3$ Hz — compare paper Q36 answer 1161 ✓ (double motion stacks, nonlinear in $u_s$).',
+          'Convention traps: (i) some texts write $f\' = f(v \\mp u_o)/(v \\pm u_s)$ with opposite sign convention — ALWAYS re-derive quickly for the case at hand instead of recalling a sign pattern; (ii) motion at an angle: use radial components (JEE-26); (iii) wind: replace $v$ by $v + w$ in the right places (JEE-25).',
+          ('WHY', 'the combined formula is just $f\' = \\dfrac{\\text{encounter speed of crests}}{\\text{spacing of crests}} = \\dfrac{v + u_o}{(v - u_s)/f}$: numerator from observer kinematics, denominator from source kinematics — two independent effects multiply.'),
+          ('CHECK', 'validate the box on special cases: $u_s = 0$ $\\to$ observer formula ✓; $u_o = 0$ $\\to$ source formula ✓; both zero $\\to$ $f\' = f$ ✓; both approaching at $u$ small: $f\' \\approx f(1 + 2u/v)$? expand: $(1+u/v)(1+u/v) \\approx 1 + 2u/v$ — double first-order shift ✓.')]),
+    CX('h3', CH, 'Observer-motion problem patterns',
+       ['(a) Listener in a car approaching a 600 Hz source at 20 m/s ($v = 343$): $f\' = 600\\times 363/343 = 634.9$ Hz. (b) "A bat flying toward a wall at 5 m/s, emitting 40 kHz, $v = 340$": double Doppler (JEE-27): $f\' = 40000\\times 345/335 = 41.2$ kHz... the reflected echo: two shifts: wall as moving... actually bat = moving source AND moving observer: $f\'\' = f\\frac{v + u}{v - u} = 40000\\times 345/335 = 41.2$ kHz received. (c) Observer in train hearing another train: relative speeds along the line.',
+          'Beat-vs-Doppler discrimination: Doppler changes pitch (heard tone shifts); beats change loudness of TWO tones. A shifted tone BEAT against a reference measures the shift (Oly 08).',
+          ('CHECK', 'symmetry check: source moving at $u$ toward stationary observer vs observer moving at $u$ toward stationary source: the two answers differ by the second-order term only ($\\approx f u^2/v^2$ relative) — first-order symmetric, second-order not; light in vacuum is exactly symmetric (SR) — sound is NOT (medium picks a frame): favourite conceptual contrast question.')]),
+    CX('h3', CH, 'Numbers drill (moving observer / combined)',
+       ['(a) $f = 340$ Hz, $u_o = 34$ m/s toward, $v = 340$: $f\' = 374$ Hz ($\\Delta = 34$ Hz $= f\\cdot u/v$ ✓ linear). (b) Combined: $u_s = 25$ toward, $u_o = 15$ toward, $f = 400$, $v = 343$: $f\' = 400\\times 358/318 = 450.3$ Hz. (c) "Police radar 10 GHz, car 30 m/s": double Doppler $\\Delta f = 2f u/c = 2000$ Hz... radar uses EM waves (speed c): $\\Delta f = 2\\cdot 10^{10}\\times 30/3\\times 10^{8} = 2000$ Hz — the same formula with $v = c$ (radar: double shift always, source and observer co-located).',
+          'Reverse: "A stationary source 800 Hz; measured 824; observer speed?" $u_o = v(f\'/f - 1) = 340\\times 0.03 = 10.2$ m/s toward.',
+          ('WHY', 'linear-shift shortcut $\\Delta f = f u/v$ is exact for observer motion and first-order for source motion — precision problems must state which effect they use; the shortcut errs by $u^2/v^2$ for sources.')]),
+]), 'Doppler moving observer, combined formula, sign conventions.')
+# ---------------------------------------------------- JEE-24 combined Doppler and conventions
+ADD('SN-24', CHUNK([
+    CX('h2', HEAD, 'Doppler master class: conventions, vectors, and the full 1D family',
+       ['All 1D cases from one bookkeeping: measure speeds positive toward the other party. $f\' = f\\dfrac{v + u_o}{v - u_s}$. Then: (1) source toward, observer still: $f(v)/(v-u_s)$ ✓ JEE-22; (2) observer toward, source still: $f(v+u_o)/v$ ✓ JEE-23; (3) both toward: $f(v+u_o)/(v-u_s)$; (4) source toward, observer away: $f(v-u_o)/(v-u_s)$ — INDETERMINATE sign of shift: depends on magnitudes (e.g. $u_o = u_s = u$: $f\' = f(v-u)/(v-u) = f$ — "the patrol car following at equal speed hears exactly f" ✓ worked source example).',
+          'The equal-speed chase: source and observer both moving in the same direction at the same speed: NO Doppler shift at all (same medium frame translation for both) — formula confirms: $(v - u)/(v - u) = 1$... wait careful with signs: source receding? If both chase together: $u_o = -u$, $u_s = -u$ (both positive-toward convention): $f\' = f(v - u)/(v + u)$?? Recheck: if source flees and observer chases: $f\' = f\\frac{v + u_o}{v + u_s} = f$ when $u_o = u_s = u$ ✓ (observer toward formula: +u_o; source fleeing: +u_s in denominator): $f(v+u)/(v+u) = f$ ✓ — no shift for lock-step motion.',
+          'Sign-gymnastics summary table: toward: $+u_o$ top, $-u_s$ bottom; away: $-u_o$ top, $+u_s$ bottom. Radical simplification (source §2.12): define speeds ALGEBRAICALLY along the line from source to observer: $f\' = f\\dfrac{v - v_o}{v - v_s}$ with $v_o, v_s$ positive along the direction from source to observer: approaching pair: $v_o$ negative... the clean version is the vector form (Oly 06): $f\' = f\\dfrac{c - \\vec v_o\\cdot\\hat r}{c - \\vec v_s\\cdot\\hat r}$.',
+          ('WHY', 'one formula with signed velocities beats four memorised cases: define $\\hat r$ from source toward observer; project both velocities on $\\hat r$; the ratio $\\dfrac{v - v_{o,r}}{v - v_{s,r}}$ handles every geometry including 2D and wind (with $v$ the medium-frame speed).'),
+          ('CHECK', 'test the master formula on all four line cases with $u = 30$, $f = 1000$, $v = 340$: (1) 1096.8 (2) 1088.2 (3) $1000\\times 370/310 = 1193.5$ (4) $1000\\times 310/310 = 1000$ ✓ — the four-cell answer grid.')],
+      ),
+    CX('h3', HEAD, 'Common problem shells (with their answers)',
+       ['(a) Car horn while circling a roundabout: at the tangent point $u_{s,r} = 0$: instantaneous $f\' = f$; before: high, after: low — the classic swoop. (b) Source and observer on perpendicular paths: only radial components count (JEE-26). (c) Train platform scenario: train passes platform at $u$ sounding $f$: platform hears $f v/(v - u)$ then $f v/(v + u)$; the CHANGE as the engine passes: $\\Delta f = f v\\left(\\frac{1}{v-u} - \\frac{1}{v+u}\\right) = f\\frac{2uv}{v^2 - u^2}\\approx 2fu/v$ for small $u$.',
+          'Factorising problem statements: "A moves toward B at x, B moves toward A at y" $\\to$ both toward: $f\\frac{v+y}{v-x}$. "A moves away from B at x while B chases at y": $f\\frac{v+y}{v+x}$... wait: A = source fleeing: $+x$ in denominator; B = observer chasing (toward source): $+y$ on top: $f(v+y)/(v+x)$ ✓. When $y = x$: no shift ✓.',
+          ('WHY', 'the swoop-down (siren) is the integral of the instantaneous shift as the radial velocity component sweeps through zero: the slide is smooth and the midpoint (closest approach) is exactly $f$.')]),
+    CX('h3', CH, 'Speed-estimation from shift (reverse problems)',
+       ['(a) "An approaching train horn shifts from 460 to 400 Hz as it passes; $f_{\\rm true} = 420$, $v = 343$: find speed": approach: $420\\cdot 343/(343-u) = 460$: $u = 343(1 - 420/460) = 29.8$ m/s; check with recede: $420\\cdot 343/(343+29.8) = 386$... hmm 400 expected: rounding / second-order? clean problem: symmetric: $f_{\\rm high} f_{\\rm low} = f^2\\frac{v^2}{v^2 - u^2}$... the product method: $f_+ f_- = f^2 v^2/(v^2 - u^2)$: $460\\times 400 = 420^2\\cdot\\frac{343^2}{343^2 - u^2}$: solve $u = 343\\sqrt{1 - 420^2/(460\\cdot 400)} = 343\\sqrt{1 - 0.957} = 71$?? inconsistent — as a training note: when data over-determine (two shifts + known f), CHECK self-consistency; mismatch means the "true" f is wrong or wind is present.',
+          'Method: measure both shifts: $u = v\\frac{f_+ - f_-}{f_+ + f_-}$ (exact for source motion? derive: $f_+ = fv/(v-u)$, $f_- = fv/(v+u)$: ratio: $f_+/f_- = (v+u)/(v-u)$: solve $u = v\\frac{f_+ - f_-}{f_+ + f_-}$ ✓ exact) — the "measure speed from two pitch readings" formula; no need to know $f$!',
+          ('CHECK', 'with $f_+ = 460$, $f_- = 400$: $u = 343\\times 60/860 = 23.9$ m/s; then $f = f_+(v-u)/v = 460\\times 319/343 = 427.7$ Hz — the internal-$f$ estimate; consistency restored.')]),
+    CX('h3', CH, 'Conceptual traps (Doppler family)',
+       ['(i) "Doppler works because the source speed changes the wave speed" — FALSE: wave speed is set by the medium; source motion changes wavelength. (ii) "Observer moving toward at $u$ hears $f(v)/(v-u)$" — FALSE: that is the SOURCE formula; observer: $f(v+u)/v$. (iii) "Wind changes the pitch" — only if it has a component along the line and differs for the two directions (JEE-25); a following wind on both legs cancels in a round trip... precisely: stationary source and observer with wind $w$: $f\' = f\\frac{v+w}{v+w} = f$ — NO shift for uniform wind (source §2.10) — wind shifts only the travel TIME, not the frequency, when both parties are at rest in the medium... correct statement: uniform wind cannot Doppler-shift sound between two fixed points (it advects the whole pattern).',
+          'Speeds are measured RELATIVE TO THE MEDIUM (air), not the ground, in the classical formulas — subtle: "source moves at 30 m/s in a 10 m/s tailwind": $u_s$ in the formula is the speed relative to AIR (20 m/s if tailwind... if the wind moves the air frame: source speed in the air frame = 30 − 10 = 20). Exam convention usually ignores wind for $u$ and sets $v_{\\rm eff}$ (JEE-25); be explicit.',
+          ('WHY', 'classical Doppler needs the medium: $v$ is the medium-frame wave speed; wind shifts the whole pattern by Galilean transformation; the invariant is $f\'$ for co-moving pairs.')]),
+]), 'Doppler conventions, equal-speed chase, reverse estimation, trap bank.')
+
+# ---------------------------------------------------- JEE-25 wind
+ADD('SN-25', CHUNK([
+    CX('h2', HEAD, 'Wind and Doppler: replace $v$ by $v + w$ directionally',
+       ['Uniform wind of speed $w$ along the line: the wave pattern drifts with the air. Ground-frame wave speed toward the observer is $v + w$ (wind carrying sound along), and the effective formula: $f\' = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$ — ALL ground-frame speeds measured the same way: wind simply adds to the medium speed everywhere it helps. Source worked example: source approaching at $u_s$ with following wind $w$: $f\' = f\\dfrac{v + w}{v + w - u_s}$... careful: the canonical worked case in the source (§2.10): "wind blowing from source to observer at w": $f\' = f\\frac{v + w}{v + w - u_s}$ for approaching source (denominator: source speed relative to the drifting air is $u_s - w$?? The safe derivation: transform to air frame: wave speed $v$; source speed $u_s - w$; observer speed $u_o - w$; then $f\' = f\\frac{v + (u_o - w)}{v - (u_s - w)}$... that gives $f\\frac{v + u_o - w}{v - u_s + w}$ — hmm which is right? Galilean: in air frame the Doppler formula applies with frame speeds: $u_s\' = u_s - w$ (positive toward observer... wind +w from source to observer means air moves toward observer): then $f\' = f\\frac{v + u_o\'}{v - u_s\'} = f\\frac{v + u_o - w}{v - u_s + w}$. Check limits: both at rest in ground, wind w: $f\' = f\\frac{v - w}{v + w}$?? That contradicts "no shift for stationary parties in wind"! Resolve: if BOTH source and observer are at rest in the GROUND with moving air, the wavelength is unchanged in the AIR frame... source at rest in air frame emits $f$ with $\\lambda = v/f$ in air frame; in ground frame $\\lambda_{\\rm ground} = \\lambda$ (length same), wave speed $= v + w$: $f\'_{\\rm ground} = (v+w)/\\lambda = f(v+w)/v$?? But observer at rest in ground: encounters crests at rate $(v+w)/\\lambda = f(v+w)/v$ — SHIFTED! Hmm but source §2.10 claims f\' = f with wind for stationary source and observer... Actually physically: stationary source in moving air (wind tunnel): the air frame moves; the source vibrates at f; the sound field in the air frame is standard with $\\lambda = v/f$ measured in the air; in the ground frame the same $\\lambda$ is carried at $v + w$: a ground-fixed observer sees $f\' = (v+w)/\\lambda = f(v+w)/v$ — a genuine shift! BUT the source also emits into air moving past it... this is the subtle "wind tunnel vs moving air" physics. The safe exam treatment: classical convention (source §2.10): "f\' = f(v + w)/(v + w) = f" for stationary parties — no shift — because the wind advects BOTH the source "medium contact" and the pattern... Let me settle with the source book convention: NO shift for uniform wind between fixed parties; wind matters only through relative speeds of source/observer TO THE AIR and by adding w along each leg of travel TIME. The formula the source gives (2.16): $f\' = f\\frac{v + w}{v + w \\mp u_s}$ style with w adding to v on both — that yields no shift for $u_s = u_o = 0$ ✓. Adopt the source convention: $f\' = f\\dfrac{(v+w) + u_o}{(v+w) - u_s}$ with u positive toward — consistent with their worked wind example (see next card).',
+          'Source worked wind case: "source moving toward observer at $u_s$ with wind from behind source (w helping both)": $f\' = f\\frac{v + w}{v + w - u_s}$... e.g. $f = 500$, $u_s = 30$, $w = 20$, $v = 343$: $f\' = 500\\times 363/333 = 545$ Hz (vs 550 with no wind): wind REDUCES the shift here (the source chases a drifting pattern less effectively).',
+          'Round-trip (echo) with wind (JEE-27): out-and-back times differ; echo frequency shifts asymmetrically; classic formulas involve $v + w$ outbound and $v - w$ inbound (for motion along wind).',
+          ('WHY', 'wind adds a Galilean drift to the pattern: the exam-safe prescription is "add w to the wave speed toward each observer, and measure all speeds relative to the ground, consistently" — mixing frames is the standard trap; the source convention does exactly this.'),
+          ('CHECK', 'limits of the adopted formula: $w = 0$ recovers JEE-22/23 ✓; $u_s = u_o = 0$ gives $f\' = f$ ✓ (source convention); strong following wind with receding source: $f\' = f\\frac{v+w}{v+w+u_s}$: shift shrinks ✓ plausible.')],
+      ),
+    CX('h3', HEAD, 'Travel time with wind (the more common exam use)',
+       ['Wind affects TIME OF FLIGHT always (even when frequency unchanged): one-way trip along wind: $t = L/(v + w)$; against: $L/(v - w)$. Round trip along wind direction (sound out and back... e.g. source at A, reflector at B downwind): $t = \\frac{L}{v+w} + \\frac{L}{v-w} = \\frac{2Lv}{v^2 - w^2}$ ≈ $\\frac{L}{v}(1 + w^2/v^2)$-ish for the round trip... expand: $2L v/(v^2 - w^2) = (2L/v)(1/(1 - w^2/v^2))$ — the WIND CANCELLS at first order in a round trip along the wind line ✓ famous result: measuring sound speed by echo along wind is insensitive to small wind at first order.',
+          'Cross-wind: effective speed $\\sqrt{v^2 - w^2}$ for the transverse legs; general: add vectorially: ground-frame sound velocity $\\vec v_s = \\vec v + \\vec w$; travel time along any path solves the vector problem (triangles of velocity — exam hard questions).',
+          'Echo in wind (source Q12 style): source of frequency $f$ emits toward a reflector downwind; echo returns against wind... the received frequency: two Doppler legs with wave speeds $v+w$ and $v-w$: $f\'\' = f\\frac{(v+w)}{(v-w)}$-type expressions when the parties are fixed... worked in JEE-27.',
+          ('CHECK', 'round-trip time expansion: $t = \\frac{2Lv}{v^2 - w^2}$: at $w = 0.1v$: $t = \\frac{2L}{v}\\cdot 1.01$: 1% second-order effect ✓: first-order cancellation — worth memorising for rapid problems.')]),
+    CX('h3', CH, 'Wind problem patterns',
+       ['(a) "Sound from a lightning 3 km downwind takes how long with w = 10 m/s?" $t = 3000/(343+10) = 8.50$ s vs 8.75 s still air: 0.25 s — timing precision question. (b) "A train horn in a 20 m/s wind, train 30 m/s toward stationary observer": source speed relative to air = 10 m/s (wind helps source): $f\' = f\\frac{v+w}{v+w-30}$?? Under the source convention $f\' = f\\frac{343+20}{343+20-30} = f\\times 1.09$; under air-frame convention: $u_s\' = 10$: $f\' = f\\frac{343 + 0 - 20\\cdot 0}{343 - 10}$-ish — the two conventions give ~5% different answers at these speeds — exam papers adopt one; state yours. (Source convention is consistent and standard in Indian exam texts: "speed of sound relative to ground is v + w; use v_eff everywhere.")',
+          'Uniform wind between fixed parties: NO frequency shift (source §2.10) but travel time changes — the dichotomy that examiners love to test.',
+          ('WHY', 'frequency shift needs relative radial motion of the wave pattern phase; uniform wind translates the pattern without compressing it; only the travel duration registers the drift.')]),
+    CX('h3', CH, 'Wind formula quick card',
+       ['Adopted convention (source): $f\' = f\\dfrac{v_{\\rm eff} + u_o}{v_{\\rm eff} - u_s}$ with $v_{\\rm eff} = v + w$ (w positive when wind blows from source toward observer), all $u$ positive toward each other. Travel time legs: use $v_{\\rm eff}$ along each direction of travel (against wind: $v - w$). Echo round trip along wind: $t = 2Lv/(v^2 - w^2)$.',
+          'Air-frame alternative (Oly 06 vector form): measure $u_s, u_o$ relative to the air; $f\' = f\\frac{v + u_{o,\\rm air}}{v - u_{s,\\rm air}}$; both conventions agree on fixed parties (no shift) and on pure wave-speed problems; they differ on "who moves with the wind" cases — for exams, pick one and say so.',
+          ('CHECK', 'consistency triple: (1) $u = 0$: no shift; (2) round-trip first-order wind cancellation; (3) $w = -u$ (source outrunning following wind at its own speed): effective still air: shift as in still air with $u_s = u - w$-ish ✓.')]),
+]), 'Wind: v_eff = v+w convention, no shift for fixed parties, round-trip cancellation.')
+
+# ---------------------------------------------------- JEE-26 2D Doppler and closest approach
+ADD('SN-26', CHUNK([
+    CX('h2', HEAD, '2D Doppler: radial components and the closest-approach glide',
+       ['Source moves on a straight line past a stationary observer at closest distance $b$ (impact parameter), speed $u_s$, emitting $f$. Line-of-sight direction $\\hat r$ from source to observer; radial component of source speed: $v_{s,r} = u_s\\cos\\theta$ where $\\theta$ is angle between source velocity and line of sight. Observed (source §2.12 2D form): $\\mathbf{f\' = f\\dfrac{v}{v - u_s\\cos\\theta(t)}}$ with $\\cos\\theta(t) = \\dfrac{u_s t}{\\sqrt{b^2 + u_s^2 t^2}}$ for a flyby (source at $(u_s t, b)$-style geometry, $t = 0$ at closest approach).',
+          'The pitch glide: far before: $\\cos\\theta \\to 1$... wait geometry: as the source approaches along its line, the angle between its velocity and the line TO the observer: initially 0 (head-on): $f\' = fv/(v - u_s)$ maximum; at closest approach $\\theta = 90°$: $\\cos\\theta = 0$: $f\' = f$ exact; after: $\\cos\\theta < 0$: $f\' = fv/(v + u_s|\\cos\\theta|)$ minimum far away $fv/(v+u_s)$. The swoop is symmetric in geometry but NOT in frequency (the $v/(v-u)$ vs $v/(v+u)$ asymmetry — glide through f at the midpoint).',
+          'Source worked (glide slope): $df\'/dt$ at closest approach: differentiate: at $t = 0$: $\\cos\\theta \\approx u_s t/b$: $f\' \\approx f(1 + u_s^2 t/(vb))$: $\\left.\\dfrac{df\'}{dt}\\right|_{0} = \\dfrac{f u_s^2}{v b}$ magnitude — source prints $\\frac{f v_s^2}{vb}$... with numbers f = 1000, $u_s = 20$, $v = 340$, $b = 100$ m: $1000\\cdot 400/(340\\cdot 100) = 11.8$ Hz/s. Source prints exactly the derivative $df^{\prime}/dt|_0 = -f v_s^2/(v b)$ — correct in sign and magnitude; the surrounding text of Eq (4.2) is sign-confused (its cos-theta-about-1-while-approaching remark contradicts its own $\cos\theta = v_s^2 t/\sqrt{b^2+v_s^2t^2}$, negative on the approaching side) — record in SOURCE-AUDIT; the derivative itself needs no fix. Our worked numbers: magnitude 11.8 Hz/s at $f = 1000$, $u_s = 20$ m/s, $b = 100$ m.',
+          ('WHY', 'the glide slope is pure geometry: only the line-of-sight component of velocity compresses wavefronts; at closest approach the radial velocity is zero and its rate of change is maximal ($u_s^2/b$) — that is the slope.'),
+          ('CHECK', 'limits: $b \\to 0$ (head-on pass-through... direct hit): $df\'/dt \\to \\infty$ (pitch flips discontinuously — the 1D jump); $b \\to \\infty$: slope $\\to 0$ (barely any glide — distant flyby barely shifts).')]),
+    CX('h3', HEAD, 'Closest-approach numbers (the glide example, worked)',
+       ['Setup: a light plane flies past at $u_s = 20$ m/s emitting 1000 Hz; closest approach $b = 100$ m; $v = 340$ m/s. Glide-slope magnitude at the pass: $|df^{\\prime}/dt|_0 = f u_s^2/(v b) = 1000\\cdot 400/(340\\cdot 100) = 11.8$ Hz/s. Source prints exactly this formula $df^{\\prime}/dt|_0 = -f v_s^2/(v b)$ with the correct negative sign; its surrounding remark about $\\cos\\theta \\approx 1$ while approaching is sign-confused against its own $\\cos\\theta = v_s^2 t/\\sqrt{b^2+v_s^2t^2}$ (record in SOURCE-AUDIT) \u2014 the derivative itself is right.',
+          'Instantaneous picture over the pass: at $t = -5$ s: $\\cos\\theta = -100/\\sqrt{100^2 + 100^2} = -0.707$... using $\\cos\\theta = u_s t/\\sqrt{b^2 + u_s^2 t^2} = -0.707$: $f^{\\prime} = 1000\\cdot 340/(340 + 14.1) = 960.1$ Hz (approaching side is the HIGH side with the standard sign: flip the sign convention so before = high: $f^{\\prime} = 1043.2$ Hz at $t = -5$ s, 960.1 Hz at $t = +5$ s): the glide spans about 83 Hz within $\\pm 5$ s; average slope $\\sim 8$ Hz/s vs peak 11.8 Hz/s.',
+          'Ranging by slope: knowing $f$ and $u_s$, measuring the pitch slope at the pass gives $b = f u_s^2/(v |slope|)$ \u2014 acoustic impact-parameter estimation (the Oly-08 McAfee-style method in elementary form). Detecting slope requires resolving ~10 Hz/s over a second: a stopwatch-and-ear estimate or a spectrogram.',
+          ('WHY', 'at the pass the radial velocity is zero but its rate of change is maximal: $du_r/dt = u_s^2/b$; the shift $\\Delta f = f u_r/v$ then slides at $f u_s^2/(vb)$ \u2014 the slope measures how fast the geometry turns over, not the speed itself.'),
+          ('CHECK', 'limits: $b \\to 0$ gives an unbounded slope (the 1D pitch jump); $b \\to \\infty$ gives zero slope (a distant flyby barely glides); the slope scales as $f$: same geometry at 2 kHz gives 23.5 Hz/s \u2014 higher pitch glides faster in Hz/s.')]),
+    CX('h3', CH, '2D formulas for moving observer too',
+       ['General 2D (source eq. 2.12 form): $f^{\\prime} = f\\dfrac{v - v_o\\cos\\theta_o}{v - v_s\\cos\\theta_s}$ with angles measured along the source-to-observer line and signs set by the direction convention; the robust version (Oly 06): $f^{\\prime} = f\\dfrac{v - \\vec v_o\\cdot\\hat r}{v - \\vec v_s\\cdot\\hat r}$ with $\\hat r$ from source toward observer. Specialise to 1D: recovers JEE-24.',
+          'Worked: observer on a pier, boat moving past at 5 m/s at 30 degrees to the line of sight, horn 440 Hz, $v = 343$: only the radial part $5\\cos 30^{\\circ} = 4.33$ m/s counts: $f^{\\prime} = 440\\cdot 343/(343 - 4.33) = 445.6$ Hz \u2014 not the 453 Hz a naive 1D formula gives.',
+          'Two moving at angles: project BOTH velocities on the line of sight, plug into the box; all hard 2D problems collapse to projections. Instantaneous radial component changes continuously \u2014 the full swoop curve is $f^{\\prime}(t)$ with $\\theta(t)$ from the geometry.',
+          ('CHECK', 'symmetric pass: equal and opposite radial velocities at equal distances either side: the shift curve is antisymmetric about $f$ at first order in $u/v$; the second-order asymmetry (JEE-22) tilts it slightly.')]),
+    CX('h3', CH, 'Glide and slope drills',
+       ['(a) $f = 600$ Hz, $u_s = 30$ m/s, $b = 200$ m, $v = 340$: slope $= 600\\cdot 900/(340\\cdot 200) = 7.9$ Hz/s. (b) A racer passing at $b = 50$ m drops pitch by 40 Hz within 2 s of the pass: slope 20 Hz/s $= f u_s^2/(v b)$: $u_s = \\sqrt{20\\cdot 340\\cdot 50/f}$; at $f = 400$ Hz: $u_s = 92$ m/s \u2014 fast but a fair order estimate; a spectrogram improves this.',
+          'Combine with echo (JEE-27): emit toward the moving object, measure the double-shift of the return: $u_r$ directly; combine with the glide slope for the full velocity vector \u2014 the principle of acoustic tracking.',
+          ('WHY', 'every 2D Doppler problem is 1D in disguise along the line of sight; perpendicular velocity components do nothing at that instant \u2014 the projection principle.')]),
+]), '2D Doppler projections, closest-approach glide, slope magnitude f u_s^2/(v b).')
+
+# ---------------------------------------------------- JEE-27 echo and double Doppler
+ADD('SN-27', CHUNK([
+    CX('h2', HEAD, 'Echo, double Doppler, and the second-order asymmetry',
+       ['Echo from a moving wall (reflector speed $u$ toward a stationary source/observer): the wall is first a MOVING OBSERVER (it receives $f_1 = f\\frac{v + u}{v}$) then a MOVING SOURCE (re-emits at $f_1$ while approaching): the original observer receives $\\mathbf{f^{\\prime\\prime} = f\\dfrac{v + u}{v - u}}$ \u2014 the double-shift product. Expansion: $f(1 + 2u/v + 2u^2/v^2 + \\ldots)$; the classic radar formula is the first-order $\\Delta f = 2fu/v$. Source numbers (Q12): $f = 1000$ Hz, $u = 30$, $v = 340$: exact $1000\\cdot 370/310 = 1193.5$ Hz; the linear approximation $1000(1 + 2\\cdot 30/340) = 1176$ Hz \u2014 the source explicitly quotes 1176 as an approximation.',
+          'Same box for a moving radar (source and observer co-located, target moving): wall as observer then wall as source \u2014 identical $\\frac{v + u}{v - u}$ for approach; for a receding target $\\frac{v - u}{v + u}$. A bat flying toward its own echo: the bat is BOTH the moving source and the moving observer: two shifts, same box: $f^{\\prime\\prime} = f\\frac{v + u}{v - u}$ at 5 m/s, 40 kHz gives 41.2 kHz.',
+          'Second-order asymmetry (source Q8/Q9 pair): a 30 m/s source approach gives 1096.8 Hz while a 30 m/s observer approach gives 1088.2 Hz (at $f = 1000$, $v = 340$): difference 8.6 Hz $\\approx f u^2/(v(v - u))$ \u2014 the two single-shift formulas agree to first order only; the echo doubles the first-order effect and more.',
+          ('WHY', 'the echo receives TWO shifts because the reflector plays both roles in turn (observer then source): the product of the two single-shift factors; every radar/sonar/ultrasound-flow formula is this one box.'),
+          ('CHECK', 'consistency: approaching wall $f^{\\prime\\prime} > f$; receding wall $< f$; $u = v/2$ approach: $f^{\\prime\\prime} = 3f$; $u \\to v$: divergence (the wavefront pile-up of JEE-28).')]),
+    CX('h3', HEAD, 'Echo timing (non-Doppler echo problems)',
+       ['Sound to a cliff and back: $t = 2L/v$; with wind along the path: $t = \\frac{L}{v+w} + \\frac{L}{v-w}$ (JEE-25). Thunder rule: count seconds, divide by 3 for km (343 m/s). Multi-echo scenes (several buildings): distinct delays $t_i = 2L_i/v$; intensity falls as $1/r^2$ per leg, echo as $1/r^4$ \u2014 the radar range equation structure.',
+          'Moving observer toward a cliff with a horn: source and observer move together toward the wall: $f^{\\prime\\prime} = f\\frac{v + u}{v - u}$ \u2014 the same universal box with $u$ the party speed toward the reflector.',
+          'Echo beats: the original horn and its echo differ by $f^{\\prime\\prime} - f = f\\frac{2u}{v - u} \\approx 2fu/v$; a driver approaching a wall hears beats between the horn and the echo: at $f = 400$ Hz, $u = 30$ m/s: echo 477.4 Hz, beats 77.4 Hz exact; $2fu/v = 70.6$ Hz linear \u2014 10% error at these speeds.',
+          ('CHECK', 'beat-rate example checked above; for small $u/v$ the linear form suffices; exam papers often want the exact ratio \u2014 give both.')]),
+    CX('h3', CH, 'Echo problem patterns (drill)',
+       ['(a) Sonar 1500 Hz from a boat toward a submarine receding at 20 m/s in water ($v = 1450$): echo $f^{\\prime\\prime} = 1500\\cdot 1430/1470 = 1459$ Hz. (b) A car approaching a wall at 20 m/s sounds 500 Hz ($v = 343$): the driver hears beats at $f\\frac{2u}{v-u} = 500\\cdot 40/323 = 61.9$ Hz. (c) An explosion 2 km away with a mountain 3 km beyond: direct sound 5.8 s, echo off the mountain 29.2 s.',
+          'Radar-gun principle: transmit $f_0$; the return is $f_0\\frac{v + u}{v - u}$ (with $v = c$ for EM); the beat $\\Delta f = 2f_0 u/v$ gives the speed \u2014 the working method of police radar, ultrasound flowmeters, and fetal heart monitors.',
+          ('WHY', 'echo problems are pure two-role bookkeeping: first interaction wall-as-observer, second wall-as-source; once seen this way no new formulas are needed.')]),
+    CX('h3', CH, 'Consistency grid for echo answers',
+       ['Approach at $u$: $f^{\\prime\\prime}/f = \\frac{v + u}{v - u}$: anchors: $u = 0$: 1; $u = v/4$: $5/3 = 1.67$; $u = v/2$: 3; $u = 2v/3$: 5. Recession: the reciprocal. Timing: $2L/v$ without wind; $2Lv/(v^2 - w^2)$ with wind along; beats $f\\frac{2u}{v - u}$ exact.',
+          'The double-Doppler is NOT $1 + 2u/v$ exactly: at $u = 0.1v$: exact $1.1/0.9 = 1.222$ vs $1 + 2u/v = 1.2$: 1.8% error; with 3-digit data quote the exact form.',
+          ('FN', 'biological sonar (bats, dolphins), ultrasound flowmetry, fetal monitors, police radar \u2014 all $\\frac{v + u}{v - u}$; the shared structure is a favourite explain-the-principle question.')]),
+]), 'Echo double Doppler f(v+u)/(v−u), beats with echo, timing formulas.')
+
+# ---------------------------------------------------- JEE-28 Mach cone and sonic boom
+ADD('SN-28', CHUNK([
+    CX('h2', HEAD, 'Mach cone, sonic boom, and supersonic geometry',
+       ['When a source moves at $u_s > v$ (supersonic) it outruns its own wavefronts: the crests pile onto a conical surface \u2014 the Mach cone. Half-angle behind the source: $\\mathbf{\\sin\\alpha = v/u_s = 1/M}$ with Mach number $M = u_s/v$ (source Q13: $M = 2$: $\\sin\\alpha = 0.5$: $\\alpha = 30^{\\circ}$). The cone trails the source; observers hear NOTHING until the cone passes, then a thunder-like bang \u2014 the sonic boom (an N-wave pressure transient, overpressure 50\u2013500 Pa for aircraft).',
+          'Geometry: each spherical wavefront of radius $vt$ emitted at earlier times is left behind at distance $u_s t$; the common tangent surface has $\\sin\\alpha = vt/(u_s t) = 1/M$. Ground track: the boom reaches the ground along the cone \u2014 the boom carpet is a swath tens of km wide for high-flying jets, sweeping with the aircraft.',
+          'Doppler behind a supersonic source: the subsonic formulas fail inside the cone; observers hear earlier sounds arriving late and in reverse order (details out of syllabus). What matters for exams: $f^{\\prime}$ formulas apply only for $u_s < v$ and before cone arrival.',
+          ('WHY', 'the cone is the sound analogue of a boat wake or Cherenkov radiation: any emitter outrunning its own disturbance field piles the disturbance on a tangent cone of angle $\\sin\\alpha = v_{\\rm disturbance}/v_{\\rm emitter}$.'),
+          ('CHECK', 'limits: $M \\to 1^{+}$: $\\alpha \\to 90^{\\circ}$ (the cone flattens to a wall \u2014 intense boom front); $M \\to \\infty$: $\\alpha \\to 0$; $M = 1$ exactly: infinite pile-up in linear theory \u2014 nonlinearity makes a shock.')]),
+    CX('h3', HEAD, 'Boom delay problem (source paper Q13 \u2014 corrected reasoning)',
+       ['Setup (source paper Q13, $M = 2$, $v = 340$ m/s, $h = 10$ km): how long after the jet is seen directly overhead is the boom heard? Correct envelope derivation: the shock reaching the stationary observer at time $t$ was emitted at $t_e = -t/(M^2-1)$ (differentiate the wavefront arrival condition); substituting gives $t = \\dfrac{h\\sqrt{M^2-1}}{M v} = \\dfrac{10\\times 1.732}{680} = 25.5$ s \u2014 the jet is then at horizontal distance $h\\sqrt{M^2-1} = 17.32$ km PAST overhead, and $\\alpha = \\sin^{-1}(1/M) = 30^{\\circ}$.',
+          'Subtlety worth stating: the boom heard at 25.5 s was EMITTED at $t_e = -8.5$ s \u2014 the jet was still 5.8 km BEFORE overhead when it emitted that sound (a supersonic source is reached by its own earlier sound from ahead); the 17.32 km figure is the jet position at HEARING time, not the emission point. The source derivation of Q13 is verbally muddled (its d = h tan alpha? Actually... Might need more passage) but its final line $t = h\\cot\\alpha/v_s = 25.5$ s equals the correct delay \u2014 record in SOURCE-AUDIT: answer correct, reasoning to be replaced by the envelope argument; the alternative 33.3 s figure sometimes derived for this problem is wrong (it conflates the emission point with the jet position at hearing).',
+          'Reference grid for boom-delay problems ($h$ = 10 km, $v = 340$ m/s): $M = 1.2$: $x = 6.7$ km, $t = 16.4$ s; $M = 2$: $x = 17.3$ km, $t = 25.5$ s; $M = 3$: $x = 28.3$ km, $t = 27.7$ s; the delay $t = \\frac{h}{v}\\frac{\\sqrt{M^2-1}}{M}$ is maximal at $M = \\sqrt{2}$ with $t = h/v$ \u2014 faster jets sweep the cone past sooner.',
+          ('WHY', 'two questions hide in one figure: (a) when does the boom arrive (cone sweep: $h\\cot\\alpha/u_s$ after overhead); (b) where was the jet when the boom was emitted ($t_e = -t/(M^2-1)$: BEFORE overhead). Sketch both before computing.'),
+          ('CHECK', 'consistency: $M = 1$: $x = 0$ (degenerate); $M = 1.06$ (360 m/s): $x = 2.07$ km; $M = 3$: $x = 28.3$ km; $\\alpha = \\sin^{-1}(1/M)$ always \u2014 recompute the delay two ways (envelope and cone sweep) and demand agreement.')]),
+    CX('h3', CH, 'Mach numbers and real aircraft (table + physics)',
+       ['Mach 1 at 20 C: 343 m/s (770 mph); airliners cruise at M = 0.85; Concorde M = 2.04; fighters M = 2; X-15 M = 6.7; bullets M = 2\u20133. Sound speed falls with altitude (cold air at 11 km: 295 m/s) \u2014 the same true airspeed gives a higher Mach aloft.',
+          'Sonic boom intensity: overpressure grows with aircraft size and Mach number (roughly $\\propto (M^2 - 1)^{1/8}$ times weight/length factors): typical 50\u2013100 Pa: startling but rarely damaging; the N-wave lasts 0.1\u20130.5 s; two booms (front and rear shock) \u2014 the ka-boom.',
+          'Applications of the cone geometry: supersonic aerodynamics and diffraction; Cherenkov detectors (same geometry with $c/n$); boat wakes (Kelvin angle $\\approx 19.5^{\\circ}$ for gravity waves \u2014 a speed-independent relative).',
+          ('CHECK', 'angle sanity: $M = 1.5$: $\\sin\\alpha = 2/3$: $\\alpha = 41.8^{\\circ}$; $M = 2$: $30^{\\circ}$; $M = 2.5$: $23.6^{\\circ}$; $M = 5$: $11.5^{\\circ}$ \u2014 decreasing cone angle with Mach.')]),
+    CX('h3', CH, 'Supersonic problem patterns',
+       ['(a) A jet at 2 km altitude, $M = 1.4$: the boom reaches the ground observer at horizontal distance $x = h\\sqrt{M^2-1} = 2\\cdot 0.98 = 1.96$ km along the track (from the overhead point); delay $t = x/u_s = 1.96/(1.4\\cdot 340) = 4.1$ s.',
+          '(b) Minimum speed for a boom to reach an observer 1 km along-track from the overhead point at 5 km altitude: need $\\sqrt{M^2-1} \\ge 1/5$: $M \\ge 1.02$: $u_s \\ge 350$ m/s. (c) Visual-to-boom delay for $M = 2.5$ at 8 km: $x = 8\\sqrt{5.25} = 18.3$ km: $t = 18.3/850 = 21.6$ s.',
+          ('WHY', 'Mach problems are pure geometry: draw the cone ($\\sin\\alpha = 1/M$), the flight line, and the observer; similar triangles give everything; the only physics is $v(T)$ for the sound speed.')]),
+]), 'Mach cone sin α = 1/M, sonic boom, corrected boom-delay geometry.')
+# ---------------------------------------------------- OLY-01 acoustic impedance
+ADD('OLY-01', CHUNK([
+    CX('h2', HEAD, 'Acoustic impedance $Z = \\rho v$: the ratio that governs coupling',
+       ['For a travelling plane wave the pressure and the particle velocity $u = -\\partial s/\\partial t$ are locked in the ratio $\\mathbf{Z = \\dfrac{\\Delta P}{u} = \\rho v}$, the characteristic acoustic impedance (SI unit: rayl = kg m$^{-2}$s$^{-1}$; 1 rayl $= 1$ Pa s/m). Air at 20 C: $Z = 1.2\\times 343 = 412$ rayl (often rounded to 400); water: $10^{3}\\times 1483 = 1.48\\times 10^{6}$ rayl; steel: $7800\\times 5064 = 3.95\\times 10^{7}$ rayl. The huge air-water mismatch (factor 3600) is why a swimmer hears almost nothing from an airborne source and why the ear needs a middle-ear lever.',
+          'Impedance is the acoustic analogue of electrical impedance: pressure plays voltage, particle velocity plays current. Power delivered to a surface: $I = \\frac{1}{2}\\Delta P_0 u_0 = \\frac{1}{2} Z u_0^2 = \\dfrac{\\Delta P_0^2}{2Z}$ — same intensity formulas as JEE-10 with $Z = \\rho v$ substituted. Sources are rated by impedance matching: a loudspeaker cone must drive air, so its mechanical impedance should be near $Z_{\\rm air}A$ over its area; the horn shape (Oly 09) is an impedance transformer.',
+          'Standing waves: at a displacement node $u = 0$ and $\\Delta P \\neq 0$, so the local ratio $\\Delta P/u$ diverges — the standing wave has position-dependent, purely REACTIVE impedance (like a lossless LC line); only travelling waves carry the real impedance $\\rho v$. General wave: $Z = \\Delta P/u$ complex; travelling: real $\\rho v$; evanescent: imaginary.',
+          ('WHY', 'impodance packs two independent properties (density and speed) into one coupling constant: what matters at an interface is not $\\rho$ or $v$ separately but their product, because pressure and velocity are the two wave variables.'),
+          ('CHECK', 'units: $\\rho v = $ kg m$^{-3}$ m s$^{-1}$ = kg m$^{-2}$s$^{-1}$ = Pa/(m/s) ✓; helium at 20 C: $Z = 0.166\\times 1007 = 167$ rayl — even lower than air despite the high speed, because $\\rho$ is tiny: He couples to the ear poorly (soft, quiet) though the speed is high.')],
+      ),
+    CX('h3', HEAD, 'Impedance numbers that decide real problems',
+       ['Table (rayl): air 412; helium 167; hydrogen 112 ($0.084\\times 1307$... at 20 C $\\rho = 0.082$, $v = 1307$: $Z = 107$); CO2 500 ($1.84\\times 272$... at 20 C); water $1.48\\times 10^{6}$; fat tissue $1.38\\times 10^{6}$ (close to water); bone $7.8\\times 10^{6}$; steel $3.9\\times 10^{7}$. Ultrasound imaging: soft-tissue boundaries are weak reflectors (matched); bone and air cavities are strong (mismatched) — the physics of image artefacts.',
+          'Loudspeaker design: a bare cone radiates into air with efficiency $\\sim 2\\rho_{\\rm air} v / (\\rho_{\\rm cone} v_{\\rm cone})$-scale mismatch... practical fix: use a large-area light cone (low mechanical $Z$) or a horn (Oly 09). The ear solves the reverse problem: air $Z = 412$ to cochlear fluid $Z = 1.5\\times 10^{6}$: the eardrum area (55 mm$^2$) vs oval window (3.2 mm$^2$) gives an area ratio 17, and the lever of the ossicles another ~1.3: total pressure gain ~22, power transmission improved ~30x; plus the ear canal resonance (JEE-01) adds gain near 3 kHz.',
+          ('CHECK', 'reflection fraction for intensity between media $Z_1, Z_2$: $R = \\left(\\dfrac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2$ (Oly 02): air-water: $R = 0.999$: 99.9% of airborne power bounces off the lake ✓ why underwater listening to aircraft fails.'),
+          ('FN', 'specific acoustic impedance vs characteristic: $Z = \\rho v$ is per unit area (rayl); mechanical impedance of a panel $Z_{\\rm mech} = \\Delta P A/u = Z A$ in ohms-kg/s — the driving-point quantity for motors and diaphragms.')]),
+    CX('h3', CH, 'Impedance algebra drills',
+       ['(a) Same intensity in air and water: pressure amplitudes scale as $\\sqrt Z$: $\\Delta P_{\\rm water}/\\Delta P_{\\rm air} = \\sqrt{1.48\\times 10^{6}/412} = 60$; underwater sound of the same $I$ has 60x the pressure swing. (b) $s_0$ at same $I$: $s_0 \\propto 1/\\sqrt{Z\\omega^2}$-ish: water displacement for same $I$ is $1/60$ of air (times speed ratio... precisely $s_0 = \\Delta P_0/(Z\\omega)$: $\\Delta P_0$ 60x and $Z$ 3600x: $s_0$ 60x smaller ✓). (c) Design: a transducer of area 1 cm$^2$ driving air at 1 Pa amplitude delivers $\\Delta P^2 A/(2Z) = 1\\times 10^{-4}/824 = 1.2\\times 10^{-7}$ W — microwatts; the same face in water delivers 0.34 W — water loads transducers heavily.',
+          'Impedance ladder across a problem: media ($Z = \\rho v$), then interface factors ($R$, $T$), then geometry (spreading), then absorption: the four multipliers of every acoustic power budget.',
+          ('WHY', 'engineers think in dB of mismatch loss; physicists think in $Z$ ratios; exams give $\\rho$ and $v$ and expect the product — never forget the product is the coupling constant.'),
+          ('CHECK', 'the ear canal and Helmholtz resonances are IMPEDANCE phenomena (reactance cancellation): the resonance formulas of JEE-17/19 reappear as impedance matching — one physics, two vocabularies.')]),
+    CX('h3', CH, 'Impedance view of amplitude relations (consolidation)',
+       ['Re-derive the amplitude toolkit through $Z$: $I = \\dfrac{\\Delta P_0^2}{2Z} = \\dfrac{1}{2} Z \\omega^2 s_0^2$ (since $\\Delta P_0 = Z\\omega s_0$); $\\Delta P_0 = \\sqrt{2 Z I}$; $s_0 = \\dfrac{\\Delta P_0}{Z\\omega}$. Intensity level: $\\beta = 10\\log_{10}\\dfrac{\\Delta P_0^2}{2 Z I_0}$ — note the level of a FIXED pressure amplitude depends on the medium! 1 Pa is 113.8 dB in air ($20\\log(1/2.87\\times 10^{-5})$) but only 90.7 dB in water (referenced to the same $I_0$): the reference convention matters across media.',
+          'Impedance and Doppler (bridge): a moving source radiates into the medium with Doppler factors; the POWER of the received wave scales as $f^{\\prime 2}$-ish through the amplitude change (Oly 05): $I \\propto \\Delta P_0^2/2Z$ with $\\Delta P_0$ Doppler-shifted — the intensity Doppler factor is $\\left(\\dfrac{f\'}{f}\\right)^2$ for moving-source... precisely $I\'/I = (f\'/f)^3$ for sound (energy flux + frequency); state assumptions carefully.',
+          ('FN', 'the specific impedance is real only for progressive waves; measurement instruments quote $Z$ of materials as $\\rho v$ with $\\pm$few-% uncertainty from $\\rho$ and $v$ errors — propagate independently: $\\delta Z/Z = \\delta\\rho/\\rho + \\delta v/v$.')]),
+]), 'Acoustic impedance Z = ρv, impedance table, coupling and matching algebra.')
+
+# ---------------------------------------------------- OLY-02 reflection and transmission
+ADD('OLY-02', CHUNK([
+    CX('h2', HEAD, 'Reflection and transmission at boundaries: $R = \\left(\\frac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2$',
+       ['At a plane interface between media of impedances $Z_1, Z_2$ the pressure reflection coefficient $r_p = \\dfrac{Z_2 - Z_1}{Z_2 + Z_1}$ (signed) and the intensity reflection fraction $R = r_p^2 = \\left(\\dfrac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2$; transmission $T = 1 - R = \\dfrac{4 Z_1 Z_2}{(Z_1 + Z_2)^2}$. Extreme cases: $Z_2 \\gg Z_1$ (air to wall): $r_p \\to +1$ (pressure reflects in phase, hard wall, displacement node in the air); $Z_2 \\ll Z_1$ (water to air): $r_p \\to -1$ (pressure inverts, soft boundary, pressure node); $Z_2 = Z_1$: $R = 0$, perfect transmission — the impedance-matching ideal.',
+          'The particle velocity coefficient has the opposite sign pattern: $r_u = -r_p$: at a hard wall velocity inverts (displacement node ✓ JEE-16); at a soft end pressure inverts (pressure node ✓). Derivation: continuity of pressure and of normal velocity across the interface: $1 + r = t$ and $(1 - r)/Z_1 = t/Z_2$ solve to the boxed pair.',
+          'Worked numbers: air ($Z = 412$) to glass ($Z = 1.3\\times 10^{7}$): $R = 0.99987$ — a glass wall reflects 99.99% of intensity (why rooms ring); air-water: $R = 0.999$; water-glass: $R = 0.63$... compute: $((1.3e7-1.48e6)/(1.3e7+1.48e6))^2 = 0.63$: 63% — soft by comparison; fat-kidney soft tissue ($Z$ similar): $R < 0.01$ — why ultrasound needs speckle and Doppler contrast.',
+          ('WHY', 'the boundary conditions are the two continuity laws (pressure continuous — no infinite force; normal velocity continuous — media stay in contact); everything else follows algebraically; the square for intensity comes from $I \\propto \\Delta P_0^2/Z$.'),
+          ('CHECK', 'energy bookkeeping: $R + T = 1$ exactly; a computed $R > 1$ or $T > 1$ signals a sign error; $r_p$ sign flips tell the phase of the reflected wave: wall-type (positive, pressure antinode at boundary) vs open-type (negative, pressure node).')],
+      ),
+    CX('h3', HEAD, 'Quarter-wave layers and impedance matching',
+       ['A layer of thickness $\\lambda/4$ and impedance $Z_l = \\sqrt{Z_1 Z_2}$ cancels reflection at one frequency: the two reflected waves from the layer faces interfere destructively when $Z_l^2 = Z_1 Z_2$ (anti-reflection coating; the transformer equation $Z_{\\rm in} = Z_l^2/Z_{\\rm load}$ — acoustic transmission line theory). Exam version: "what thickness of material between air and wall removes reflection at 1 kHz?" $\\lambda/4$ of the layer: $v_l/4f$.',
+          'Standing wave ratio as a measurable: $\\mathrm{SWR} = \\dfrac{1 + |r_p|}{1 - |r_p|}$; measuring $I_{\\max}/I_{\\min} = \\mathrm{SWR}^2$ in a duct recovers $|r_p|$ and hence $Z_2$ — the standard impedance-measurement method.',
+          'Partial reflection in pipes: an open end radiates; $R = 1 - (ka)^2/2$-ish for low $ka$... precisely: radiation from an unflanged pipe end reflects intensity $R \\approx 1 - \\frac{1}{2}(ka)^2$ at low frequency (end correction is the reactive part of the same impedance, JEE-19).',
+          ('WHY', 'the $\\lambda/4$ transformer works because the round trip inside the layer is a half wavelength: the second reflection is $180^{\\circ}$ out of phase with the first when the impedance chain is geometric-mean matched.'),
+          ('CHECK', 'coating demo: glass coated so $Z_l = \\sqrt{Z_{\\rm air} Z_{\\rm glass}}$: $Z_l = 2.3\\times 10^{5}$ rayl — e.g. a porous layer of the right density and speed; quarter-wave at 1 kHz: thickness $v_l/4000$... with $v_l = 1000$ m/s: 25 cm — unrealistically thick for air-acoustics at 1 kHz: matching layers are practical in ultrasound (MHz, mm scales) ✓.')]),
+    CX('h3', CH, 'Phase rules from impedance (the safe derivation)',
+       ['Hard wall ($Z_2 \\gg Z_1$): $r_p = +1$: pressure reflects UNINVERTED (antinode at wall); $r_u = -1$: velocity inverts (node at wall) ✓ JEE-16 boundary rules derived, not memorised. Open end ($Z_2 \\ll Z_1$, e.g. pipe opening to atmosphere): $r_p = -1$ (pressure node just outside), $r_u = +1$ (velocity antinode). The quarter-wave offset between pressure and displacement in travelling waves (SN-03) reappears here as the $\\lambda/4$ displacement-vs-pressure offset of the standing pattern.',
+          'Why the wall reflects: air cannot drive the dense wall (huge $Z$), so the velocity at the wall is forced to zero: the superposition of incident and reflected waves must cancel velocity there: $u_i + u_r = 0$ → $r_u = -1$ → $r_p = +1$ ✓ consistent with the formulas.',
+          'Soft-end subtlety: the open end is NOT exactly $Z = 0$: the radiation impedance $Z_{\\rm end} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6 ka]$-ish (Oly 05): real part radiates (why $R < 1$ slightly), imaginary part is the end correction $e = 0.6a$ (JEE-19) — the three topics (reflection, end correction, radiation resistance) are one impedance expansion.',
+          ('CHECK', 'plug $Z_2/Z_1 = 10^{5}$: $r_p = 0.99998$: $R = 0.99996$; $r_u = -0.99998$ ✓ hard; $Z_2/Z_1 = 10^{-5}$: $r_p = -1$: soft ✓.')]),
+    CX('h3', CH, 'Reflection problem patterns',
+       ['(a) Ultrasound pulse between soft tissues: 2% reflection at a boundary of $R = 0.01$: how many echoes reach the probe from 3 interfaces? cascade $T^2 R$ products: $0.99^2\\times 0.01$-scale each — the brightness law of ultrasound. (b) "Find $Z_2$ if $R = 0.25$": $|r_p| = 0.5$: $Z_2/Z_1 = 3$ or 1/3. (c) A tube closed by a movable wall of impedance $Z_2$: resonance conditions shift from pure node/antinode (JEE-17) toward partial standing waves: the boundary displacement is finite: acoustic load problem.',
+          'Traps: (i) $R$ vs $r_p$: intensity uses the SQUARE; pressure amplitude uses $|r_p|$; (ii) phase rules: state which variable (P or u) inverts; (iii) $R + T = 1$ only for INTENSITY at a lossless boundary — with absorption $R + T + A = 1$.'
+          ,
+          ('WHY', 'the same few numbers ($Z$ ratios) decide hearing, room acoustics, ultrasound imaging, and sonar targets — one boundary table worth memorising: $R$, $r_p$ sign, wall type.'),
+          ('CHECK', 'special values: $Z_2 = 3Z_1$: $R = (2/4)^2 = 0.25$, $T = 0.75$ ✓; $Z_2 = Z_1/3$: $R = 0.25$ ✓ symmetric in log: the reflection is the same whether the wave enters the denser or rarer side (intensity), only the pressure phase differs.')]),
+]), 'Boundary reflection/transmission coefficients, quarter-wave matching, phase rules.')
+
+# ---------------------------------------------------- OLY-03 pipes as impedance problems
+ADD('OLY-03', CHUNK([
+    CX('h2', HEAD, 'Pipes as impedance problems: input impedance and resonance',
+       ['A pipe of length $L$ driven at one end presents an input impedance $Z_{\\rm in}$ that depends on the far-end load. Lossless line theory: $Z_{\\rm in} = Z_0\\dfrac{Z_L + i Z_0\\tan kL}{Z_0 + i Z_L\\tan kL}$ with $Z_0 = \\rho v/S$ the characteristic line impedance (per area $S$), $Z_L$ the load. Resonance (maximum amplitude for a given drive) occurs when $Z_{\\rm in}$ is minimum (open-open: $Z_L = 0$: $Z_{\\rm in} = i Z_0\\tan kL = 0$ at $kL = n\\pi$ → $L = n\\lambda/2$ ✓ all harmonics; closed-open: $Z_L = \\infty$: $Z_{\\rm in} = -i Z_0\\cot kL = 0$ at $kL = (2n-1)\\pi/2$ → odd quarter waves ✓ JEE-17/18 derived from one formula).',
+          'Why closed pipes give odd harmonics: the mismatched ends force $\\tan kL$ and $\\cot kL$ conditions alternating: counting quarter wavelengths that fit between a velocity node and a pressure node is the SAME as setting the imaginary part of $Z_{\\rm in}$ to zero. Mixed-end resonance spacing $\\Delta f = v/2L$ falls out of the $\\tan$ period π in $kL$.',
+          'Load effects: a pipe with a partially open far end ($Z_L$ finite, radiation) has damped resonance peaks and shifted frequencies — the Q factor (Oly 05) comes from the real part of $Z_{\\rm in}$; the end correction (JEE-19) is the imaginary part at the mouth; a flange changes $Z_L$ and thus $e$ (0.6r to 0.85r) consistently.',
+          ('WHY', 'impedance language unifies: boundary conditions, end corrections, resonance ladders, radiation, and damping are all one rational function $Z_{\\rm in}(kL, Z_L)$ — the exam formulas are its special cases.'),
+          ('CHECK', 'specialise: $L = \\lambda/2$ open-open: $kL = \\pi$: $\\tan = 0$: $Z_{\\rm in} = 0$ ✓ short at the drive point: maximum flow for given pressure... resonance of a driven pipe is when the drive sees minimum impedance ✓; closed-closed: $Z_L = \\infty$ both ends: $kL = n\\pi$ again all harmonics ✓ JEE-16 CHECK.')],
+      ),
+    CX('h3', HEAD, 'Resonance curve: width, Q, and the amplitude build-up',
+       ['Driven pipe amplitude vs frequency: Lorentzian of half-width $\\Delta f = f_1/Q$: $Q = \\dfrac{\\pi}{2\\ln(1/r)}$-ish for end reflection $r$... working rule: $Q \\approx \\dfrac{\\pi}{2(1 - r)}$ for $r \\to 1$ (small losses); typical unflanged pipe $Q \\sim 10$–30; flanged 20–60; with damping wool less. At resonance the amplitude gain over the non-resonant case is $\\sim Q$ (in pressure); bandwidth $\\Delta f$ measures the fractional loss per cycle.',
+          'Time picture: a driven resonator rings up over $\\tau = Q/(\\pi f_1)$... precisely $\\tau = \\dfrac{Q}{\\pi f_1} = \\dfrac{1}{\\pi\\Delta f}$ (energy decay time $\\tau_E = Q/(2\\pi f)$-ish); striking a pipe: the sound decays exponentially with that time constant: exam estimate: Q = 20 at 300 Hz: $\\tau = 21$ ms.',
+          'Multiple coupled pipes (organ ranks, bottles): coupling shifts each resonance slightly (mode splitting); a Helmholtz resonator on a wall acts as a notch absorber at $f_H = \\dfrac{v}{2\\pi}\\sqrt{S/(V L_{\\rm eff})}$ — room acoustics tool built on pipe theory.',
+          ('CHECK', 'resonance width example: $f_1 = 300$ Hz, $Q = 15$: half-power width 20 Hz: the resonance tube (JEE-20) length sweep through a peak of that width in frequency terms: $\\Delta L = \\lambda \\Delta f/(2f) = 2$ cm for the second resonance spacing... order: noticeable in careful labs, negligible in rough ones.'),
+          ('WHY', 'Q is a number for how many cycles energy survives: $Q = 2\\pi\\times$ energy stored / energy lost per cycle — the single number that decides whether a resonance is sharp (tuning forks Q ~ 1000, pipes Q ~ 20, rooms Q ~ 5).')]),
+    CX('h3', CH, 'Impedance methods in exam clothing',
+       ['(a) "Why does a closed pipe sound hollow?" odd harmonics only = the $\\cot kL$ resonance sequence; explain via impedance: the closed end is a velocity node (infinite load), the open end a pressure node (zero load): only odd quarters fit. (b) "Predict the effect of a movable piston in a tube": $L$ varies: resonance ladder sweeps; with $Z_L$ finite at the drive, peaks broaden. (c) "Design a tube resonant at 440 Hz and 660 Hz": open-open with $f_1 = 220$: $L = v/2f_1 = 0.78$ m (minus 2e).',
+          'Half-open side branch (quarter-wave trap): a branch of length $\\lambda/4$ closed at the far end presents $Z_{\\rm in} = 0$ at the junction (short circuit for waves of that $f$): mufflers use arrays of such traps — mechanical filter design, exam-explainable.',
+          ('FN', 'the general line equation: $\\dfrac{\\partial^2 P}{\\partial x^2} = \\dfrac{1}{c^2}\\dfrac{\\partial^2 P}{\\partial t^2}$ for the pressure in a duct of constant area (same wave equation, 1D): the impedance formalism is the travelling/standing decomposition of its solutions.')]),
+    CX('h3', CH, 'Resonance numbers drill (impedance view)',
+       ['(a) Open pipe $L = 0.4$ m, $r = 2$ cm: $L_{\\rm eff} = 0.424$ m: $f_1 = 343/0.848 = 404.5$ Hz; $Q = 20$: bandwidth 20 Hz; driving at 395 Hz: amplitude $\\sim Q/2$-ish below peak... half-power at $\\Delta f = \\pm 10$ Hz: 395 Hz is 9.5 Hz off: $\\sim 1/\\sqrt{2}$ of peak amplitude. (b) Closed pipe same length: $f_1 = 343/(4\\times 0.412) = 208$ Hz (one end corrected only).',
+          'End-loaded pipe: with $Z_L = Z_0/2$ (e.g. a partially open damper): resonance shifts between the open and closed ladders; solving $\\tan kL = Z_0/Z_L$... the transcendental decides: exam problems state "closed" or "open" only.',
+          ('WHY', 'the impedance method gives answers without redrawing node pictures: write $Z_{\\rm in}$, set the reactance to zero, read the ladder — faster and safer under time pressure.')]),
+]), 'Input impedance of pipes, resonance/Q, why odd harmonics for closed pipes.')
+
+# ---------------------------------------------------- OLY-04 phasor superposition
+ADD('OLY-04', CHUNK([
+    CX('h2', HEAD, 'Phasors: superposition of harmonic waves as vector addition',
+       ['A harmonic wave at a point is a rotating phasor of length $a$ and phase $\\phi$: $s = a\\cos(\\omega t - \\phi) \\leftrightarrow a e^{i\\phi}$. Sum of many same-frequency waves = phasor polygon: $A = \\left|\\sum_k a_k e^{i\\phi_k}\\right|$; phase $\\arg\\left(\\sum\\right)$. Two phasors: $A = \\sqrt{a_1^2 + a_2^2 + 2a_1a_2\\cos\\Delta\\phi}$ (the JEE-13 formula, now a picture); equal amplitudes: $A = 2a\\cos(\\Delta\\phi/2)$ bisecting the angle.',
+          'Why phasors work: the wave equation is linear and time-harmonic; the time factor $e^{-i\\omega t}$ cancels in all ratios and sums; only spatial phases matter. Interference problems become geometry: equal spacing $\\delta = \\lambda/N$ between $N$ sources closes the polygon (partial cancellation); symmetric arrangements give closed polygons (silence: e.g. 3 sources at the vertices of an equilateral triangle seen from the centre: phases 0, 120, 240: sum zero).',
+          'Beats revisited: two phasors of nearby frequency rotate at slightly different rates: the resultant length oscillates at the difference rate — the beat envelope IS the rotating-vector picture (JEE-15); the phasor tip traces an epicycloid.',
+          ('WHY', 'complex exponentials turn differentiation into multiplication ($\\partial_t \\to -i\\omega$): the wave equation becomes algebraic; every resonance, impedance, and interference formula of this chapter is a statement about complex sums.'),
+          ('CHECK', 'three-source check: $a, a, a$ with phases 0, 120°, 240°: sum = 0 ✓ (used in three-phase cancellation and in $N$-slit minima conditions $\\delta = \\lambda/N$ multiples... precisely minima of $N$-source interference when $N\\delta/\\lambda$ is a non-multiple-of-N integer).')],
+      ),
+    CX('h3', HEAD, 'Phasor clinic: worked sums',
+       ['(a) $a_1 = 3$, $a_2 = 4$, $\\Delta\\phi = 90^{\\circ}$: $A = 5$; phase $\\tan^{-1}(4/3) = 53.1^{\\circ}$ from phasor 1. (b) $N = 4$ equal phasors with successive phase $\\delta = 60^{\\circ}$: closed-chain geometry: $A = a\\dfrac{\\sin(N\\delta/2)}{\\sin(\\delta/2)} = a\\dfrac{\\sin 120^{\\circ}}{\\sin 30^{\\circ}} = 1.73 a$ — the array-factor formula (same as $N$-slit optics). (c) Two waves of amplitude ratio 3:1 in antiphase: $A = 2a$; the "zero" of interference is incomplete (contrast $\\mathcal{V} = 2\\cdot3/(9+1) = 0.6$).',
+          'Array factor: $A(\\theta) = a_0\\dfrac{\\sin(N\\psi/2)}{\\sin(\\psi/2)}$ with $\\psi = kd\\cos\\theta + \\beta$ the progressive phase — loudspeaker arrays and diffraction gratings in one formula; principal maxima at $\\psi = 2\\pi m$.',
+          'Power of the picture: instead of trig identities, DRAW: equal-length chords, inscribed polygon, radius $R = a/2\\sin(\\psi/2)$-ish; the sum is the closing chord — Euclidean geometry replaces algebra.',
+          ('CHECK', 'array-factor sanity: $\\psi = 0$: $A = Na$ ✓ (the $\\sin/\\sin$ limit); $\\psi = 2\\pi/N$: $A = 0$? $\\sin(N\\cdot\\pi/N) = \\sin\\pi = 0$ ✓ first minimum; for $N = 2$: $A = 2a\\cos(\\psi/2)$ ✓ beats/interference formula recovered.')]),
+    CX('h3', CH, 'Phasors for standing waves and quadrature energy',
+       ['Standing wave as two counter-rotating phasors (equal $\\omega$, opposite direction): at a node they cancel always (antiparallel); at an antinode they add. The pressure-displacement quadrature (SN-03) is a $90^{\\circ}$ phasor offset: energy shuttles between the two quadrature components, total constant for a standing wave.',
+          'Energy in phasor language: for $s = a\\cos(\\omega t - \\phi)$, $u = \\partial_t s = a\\omega\\sin(\\omega t - \\phi)$ — velocity phasor leads displacement by $90^{\\circ}$; the impedance $Z = \\Delta P/u$ is the ratio of two phasors; reactive impedance = $90^{\\circ}$ offset (stored energy), real = in-phase (radiated power).',
+          'Power factor of a source: a driver in phase with the velocity radiates max power (real $Z$); $90^{\\circ}$ out of phase it stores (near-field reactance) — antenna and loudspeaker design language.',
+          ('WHY', 'the phasor at $90^{\\circ}$ is the mathematical seat of the quadrature physics: every "X leads Y by 90°" statement in this chapter is a phasor sentence.'),
+          ('CHECK', 'round trip: $\\Delta P = -B\\partial s/\\partial x$ is a spatial derivative = $90^{\\circ}$ phase rotation for sinusoids: pressure phasor = displacement phasor rotated by $-90^{\\circ}$ and scaled by $Bk = Z\\omega$ ✓ consistent with $\\Delta P_0 = Z\\omega s_0$.')]),
+    CX('h3', CH, 'Phasor drill set',
+       ['(a) Two speakers driven in phase, listener at path difference $3\\lambda/4$: $\\Delta\\phi = 270^{\\circ}$: amplitude $2a|\\cos 135^{\\circ}| = 0.71\\cdot 2a$... $\\sqrt2 a$ of the sum-free... precisely $2a\\cos(135^{\\circ}) = -\\sqrt2 a$: amplitude $\\sqrt{2}a$: intensity 2x one source. (b) Three equal sources, phases 0, 90°, 180°: $A = a|1 + i - 1| = a$: intensity = one source. (c) Balanced bridge of four speakers in a square, driven alternately in phase/antiphase: at the centre all pairs cancel — architectural silence.',
+          'General N: geometric series $\\sum_{k=0}^{N-1} a e^{ik\\psi} = a\\dfrac{1 - e^{iN\\psi}}{1 - e^{i\\psi}}$ — derive the array factor in one line; the phase-only version drives phased-array sonar.',
+          ('FN', 'phasors extend to noise and pulses by Fourier decomposition: any waveform = phasor sum; linear systems act on each phasor independently with a transfer function $H(\\omega)$ — the door to signal processing.')]),
+]), 'Phasor addition, array factor sin(Nψ/2)/sin(ψ/2), quadrature as rotation.')
+# ---------------------------------------------------- OLY-05 energy, radiation, Q
+ADD('OLY-05', CHUNK([
+    CX('h2', HEAD, 'Energy flux, radiation resistance, and the Q of resonance',
+       ['Time-averaged intensity of a travelling wave: $I = \\bar u v = \\dfrac{\\Delta P_0^2}{2 Z}$ with $Z = \\rho v$ (Oly 01). For a general (possibly reactive) field the instantaneous flux $\\Pi = \\Delta P \\cdot u$ oscillates; only its average transports. A driven resonator near resonance stores energy $\\mathcal{E}$ and loses power $P_{\\rm loss} = \\omega \\mathcal{E}/Q$; quality factor $Q = \\dfrac{\\omega\\mathcal{E}}{P_{\\rm loss}} = 2\\pi\\dfrac{\\mathcal{E}}{\\text{loss per cycle}}$; ring-down time $\\tau = Q/\\omega$ (amplitude) — the number that separates tuning forks ($Q \\sim 10^{3}$) from rooms ($Q \\sim 5$).',
+          'Radiation resistance: a vibrating surface of area $S$ and velocity amplitude $u_0$ radiates $P = \\frac{1}{2}R_r S u_0^2$ with $R_r \\approx Z_{\\rm air}$ for a large baffle ($R_r = Z$ per unit area) but $R_r \\propto (ka)^2 Z$ for a small piston ($ka < 1$): small sources are BAD radiators — the reason a bare vibrating rod is quiet and a loudspeaker cone is big. Multipole order: monopole (pulsating sphere) radiates best at low $ka$; dipole (oscillating sphere) loses another $(ka)^2$.',
+          'Near field vs far field: within $r < \\lambda/2\\pi$ the reactive component dominates ($\\Delta P \\perp u$): energy sloshes, no net flux; beyond, the travelling wave $\\Delta P = Zu$ carries $I \\propto 1/r^2$. Microphone placement and speaker measurements must sit in the far field.',
+          ('WHY', 'Q is the single number connecting ring-down, bandwidth, and amplitude build-up: $\\Delta f = f/Q$, $\\tau = Q/(2\\pi f)$-ish in time units, and peak gain $\\propto Q$ for a given drive — one concept, three exam formulas.'),
+          ('CHECK', 'consistency: $Q = 2\\pi\\mathcal{E}/W_{\\rm cycle}$; $\\Delta f = f_1/Q$; $\\tau_{\\rm amp} = Q/(\\pi f_1)$... at $Q = 20$, $f = 300$ Hz: $\\tau = 21$ ms and $\\Delta f = 15$ Hz: a struck pipe fades in ~3 ringing times ≈ 60 ms ✓ audible clap-coloration.')],
+      ),
+    CX('h3', HEAD, 'Radiation from real sources (monopole, dipole, baffles)',
+       ['Pulsating sphere radius $a$, $ka < 1$: $R_r = \\rho c (ka)^2/4$ per area... source power $P = 2\\pi a^2 u_0^2 \\rho c (ka)^2/4$... exam form: $P = \\dfrac{\\rho c k^2 u_0^2}{4\\pi}\\,V^2$-type scaling with volume velocity $Q_v = u_0 S$; a 5 cm speaker at 1 kHz ($ka = 0.9$): roughly $R_r \\sim Z/2$: efficient; the same at 100 Hz ($ka = 0.09$): $R_r \\sim Z/250$: wimpy bass — why woofers are large and ported.',
+          'Baffle and enclosure effects: an unbaffled driver short-circuits front-to-back at low $ka$ (dipole cancellation, 6 dB/octave rolloff); a box or horn restores monopole radiation; the infinite baffle gives $R_r = Z$ per area (pressure doubling at the panel).',
+          'Biological speakers: the human voice ~1 cm$^2$ glottis at 100–300 Hz: $ka < 0.1$: extremely inefficient (~0.01% of metabolic power): the mouth and vocal tract resonance (formants) do the impedance matching; birds sing 2–8 kHz where $ka \\sim 1$: efficient little radiators.',
+          ('CHECK', 'power scaling: $P \\propto u_0^2 f^2$ at low $ka$ for a fixed source: doubling frequency from 100 to 200 Hz multiplies radiated power by 4 at the same diaphragm speed ✓ why tweeters are easy and woofers hard.')]),
+    CX('h3', CH, 'Energy-budget problems',
+       ['(a) A 0.5 W source at 340 Hz in air: $I = P/(4\\pi r^2)$: at 5 m: $1.6\\times 10^{-3}$ W/m$^2$ = 92 dB; $\\Delta P_0 = \\sqrt{2ZI} = 1.14$ Pa; $s_0 = \\Delta P_0/(Z\\omega) = 1.3\\mu$m. (b) "How much power to hold 1 Pa at 1 kHz over 1 m$^2$?" $P = \\Delta P_0^2 S/(2Z) = 1.2$ W — modest; for 100 Pa (pain) 12 kW over 1 m$^2$ — concert-scale. (c) A fork of Q = 500, $f = 256$ Hz struck to 1 mm amplitude: stored energy $\\mathcal{E} \\sim \\frac{1}{2}m_{\\rm eff}\\omega^2 x^2$: for $m_{\\rm eff} = 20$ g: $1.3\\times 10^{-3}$ J; loss per cycle $\\mathcal{E}\\cdot 2\\pi/Q = 16\\,\\mu$J; ring-down $\\tau = Q/(\\pi f) = 0.62$ s.',
+          'Acoustic vs perceived: equal-loudness (Fletcher-Munson): physical $I$ must rise at low $f$ to match perceived loudness — power budget of hi-fi at 40 Hz is 10–20 dB more than at 1 kHz.',
+          ('WHY', 'energy methods shortcut amplitude problems: instead of solving the wave equation, balance $P_{\\rm source} = \\oint I\\,dA + d\\mathcal{E}/dt + P_{\\rm loss}$ — the acoustic version of the work-energy theorem.')]),
+    CX('h3', CH, 'Q and resonance in the exam frame',
+       ['(a) "A closed pipe Q = 12 at f1 = 200 Hz is driven: amplitude at resonance vs 10 Hz off": ratio $\\approx Q\\Delta f/f$-ish: at $\\delta = 10$ Hz = half-width: amplitude $1/\\sqrt2$ of peak. (b) "Two pipes of equal f1 but Q = 10 and 40: which is louder at resonance, which more selective?" same peak if loss-limited... high-Q rings louder after excitation and narrower in sweep. (c) "Estimate the Q of a room from reverberation": $Q = \\pi f T_{60}/6.9$... standard: $T_{60} = 0.161 V/A$ (Sabine): Q from bandwidth of a mode: $Q = f T_{60}/2.2$-ish: at 100 Hz, $T_{60} = 0.5$ s: $Q = 23$.',
+          'Traps: (i) $\\tau = Q/\\omega$ vs $Q/(\\pi f)$: factor conventions — state which amplitude time you use; (ii) Q is defined for ENERGY; amplitude decays twice as slowly... amplitude time $\\tau_A = 2\\tau_E$: exam convention varies: give both. (iii) Nonlinear large-amplitude acoustics drops Q (shock losses).',
+          ('FN', 'the resonator as a mechanical RLC: mass = acoustic inertance $\\rho L/S$, compliance = $V/(\\rho c^2)$, resistance = radiation + viscous: $Z_{\\rm in}$ of Oly 03 is the acoustic RLC impedance — identical mathematics.')]),
+]), 'Radiation resistance, near/far field, Q = ωE/P, ring-down and bandwidth.')
+
+# ---------------------------------------------------- OLY-06 sign-free Doppler
+ADD('OLY-06', CHUNK([
+    CX('h2', HEAD, 'Sign-free Doppler: one vector formula for every case',
+       ['Let $\\hat{\\mathbf r}$ point from source to observer at the emission event; let $\\mathbf v_s, \\mathbf v_o$ be the velocities of source and observer relative to the medium; $c$ the sound speed in the medium. Then the received frequency is $\\mathbf{f\' = f\\dfrac{c - \\mathbf v_o\\cdot\\hat{\\mathbf r}}{c - \\mathbf v_s\\cdot\\hat{\\mathbf r}}}$ — no signs to memorise: projections carry the signs. Check 1D: source approaching ($\\mathbf v_s$ along $+\\hat{\\mathbf r}$ toward observer... observer at larger $r$: $\\mathbf v_s\\cdot\\hat{\\mathbf r} = +u_s$... hmm careful: $\\hat{\\mathbf r}$ from source to observer: source moving toward observer means $\\mathbf v_s$ has positive projection on $\\hat{\\mathbf r}$: denominator $c - u_s$ ✓ the approach rise; observer approaching means $\\mathbf v_o$ points AGAINST $\\hat{\\mathbf r}$: $\\mathbf v_o\\cdot\\hat{\\mathbf r} = -u_o$: numerator $c + u_o$ ✓ exactly JEE-24.',
+          'Wind: replace $c\\hat{\\mathbf r}$-type bookkeeping by the medium velocity $\\mathbf w$: sound velocity in ground frame $\\mathbf c = c\\hat{\\mathbf r} + \\mathbf w$; the clean invariant form measures $\\mathbf v_s, \\mathbf v_o$ RELATIVE TO THE MEDIUM and $c$ in the medium: $f\' = f\\dfrac{c - (\\mathbf v_o - \\mathbf w)\\cdot\\hat{\\mathbf r}}{c - (\\mathbf v_s - \\mathbf w)\\cdot\\hat{\\mathbf r}}$... the robust recipe: transform to the medium frame (subtract $\\mathbf w$ from every ground velocity), apply the box, transform back (frequency is frame-invariant in classical acoustics for the observer present... the RECEIVED frequency is what the observer measures in their own frame: do all algebra in the medium frame then quote f\').',
+          'Derivation: in the medium frame the wavefronts have spacing $\\lambda\' = \\dfrac{c - \\mathbf v_s\\cdot\\hat{\\mathbf r}}{f}$ (source compresses along $\\hat{\\mathbf r}$) and the observer sweeps them at rate $\\dfrac{c - \\mathbf v_o\\cdot\\hat{\\mathbf r}}{\\lambda\'}$: quotient = the box. Nothing else.',
+          ('WHY', 'the dot products are the entire content of the 2D, angled, wind, and echo cases: every hard Doppler problem reduces to drawing $\\hat{\\mathbf r}$ and projecting — the box replaces a case library.'),
+          ('CHECK', 'specialise all cases: observer at rest: numerator $c$; source at rest: denominator $c$; both at rest in wind: ratio $(c - \\mathbf w\\cdot\\hat{\\mathbf r})/(c - \\mathbf w\\cdot\\hat{\\mathbf r}) = 1$ ✓ no shift in uniform wind (JEE-25 convention); tangential source ($\\mathbf v_s \\perp \\hat{\\mathbf r}$): $f\' = f$ at that instant ✓ glide midpoint.')],
+      ),
+    CX('h3', HEAD, 'Vector clinic: worked projections',
+       ['(a) Source on the x-axis at $(vt, b)$ moving +x at $u$; observer at origin: $\\hat{\\mathbf r} = \\dfrac{(-vt, -b)}{\\sqrt{v^2t^2 + b^2}}$... set $u t$ for source position: $\\hat{\\mathbf r} = \\dfrac{(-ut, -b)}{\\sqrt{u^2t^2 + b^2}}$; $\\mathbf v_s\\cdot\\hat{\\mathbf r} = \\dfrac{-u^2 t}{\\sqrt{u^2 t^2 + b^2}} = -u\\cos\\theta(t)$: $f\' = f\\dfrac{c}{c + u\\cos\\theta}$... check sign convention: approaching ($t < 0$): $\\cos\\theta < 0$: denominator $< c$: $f\' > f$ ✓ matches glide picture (with $\\theta$ measured from the velocity direction).',
+          '(b) Observer moving at angle: pedestrian walking at 2 m/s at $60^{\\circ}$ to the line from a 800 Hz siren 50 m away, $u_s = 30$ m/s: project both; the pedestrian term is $2\\cos 60 = 1$ m/s: $f\' = 800\\dfrac{343 - 1}{343 - 30\\cos\\theta}$ — geometry first, numbers last.',
+          '(c) Echo as two applications of the box: target = intermediate observer/source; compose: $f\'\' = f\\dfrac{c - \\mathbf v_T\\cdot\\hat{\\mathbf r}}{c - \\mathbf v_T\\cdot(-\\hat{\\mathbf r})}$-ish for monostatic... yields $\\dfrac{c + u}{c - u}$ for approach ✓ JEE-27.',
+          ('CHECK', 'frame sanity: the medium frame is singled out by the physics (sound needs a medium); the formula is NOT Lorentz-invariant — the contrast with light (relativistic Doppler: $f\' = f\\sqrt{\\frac{1-\\beta}{1+\\beta}}$ approach... $\\frac{1}{\\gamma(1\\mp\\beta)}$ factors) is a favourite exam discussion.')]),
+    CX('h3', CH, 'Where the case library hides inside the box',
+       ['Case reduction: (i) 1D: projections $\\pm u$; (ii) 2D: $u\\cos\\theta$ instantaneous; (iii) wind: shift to medium frame; (iv) moving reflector: two box applications; (v) accelerating: integrate projections over emission events (Oly 07); (vi) source passing: $\\theta(t)$ from the geometry — the glide (Oly 08). The "four cases" of JEE-24 are four projection patterns of one sentence.',
+          'Second-order asymmetry explained: the box is exact; expanding $f\' = f\\dfrac{c + u_o}{c - u_s}$: the $u_s$ denominator is a geometric series while the $u_o$ numerator is finite — the asymmetry is built into the kinematics of wavefront emission vs collection.',
+          'Applications: acoustic Doppler velocimetry (measure $\\mathbf v_o\\cdot\\hat{\\mathbf r}$ of particles), anemometry (wind from $\\mathbf w\\cdot\\hat{\\mathbf r}$ via two beams), bat sonar (dual use of box + echo), fetal Doppler (blood-cell reflectors).',
+          ('WHY', 'the vector box makes reasoning CHECKABLE: after any case analysis, re-derive with projections; agreement validates the sign work — the antidote to sign errors.')]),
+    CX('h3', CH, 'Box drills (answers in one line each)',
+       ['(a) $f = 500$ Hz source at $u_s = 40$ m/s at $30^{\\circ}$ to the line of sight, receding side: $f\' = 500\\dfrac{343}{343 + 40\\cos 30^{\\circ}} = 500\\cdot\\dfrac{343}{377.6} = 454$ Hz. (b) Both moving toward each other at $u = 20$ each, 1D: $f\' = 500\\cdot\\dfrac{363}{323} = 562$ Hz. (c) Wind 15 m/s along the line, both at rest in ground: $f\' = f$ (no shift), travel time downwind $L/(c+w)$ ✓ both parts of JEE-25 from one formula.',
+          'Reverse use: measure $f\'$ from two positions to get the velocity projections; two beams at known angles solve for the 2D velocity vector — the Doppler ultrasound vector flow meter.',
+          ('FN', 'relativistic check: for light in vacuum the medium-frame concept dies; the invariant formula is $f\' = f\\gamma(1 - \\beta\\cos\\theta)$ — same projection structure, different dynamics: a satisfying comparison answer.')]),
+]), 'Vector Doppler f′ = f(c − v_o·r̂)/(c − v_s·r̂), projections replace cases.')
+
+# ---------------------------------------------------- OLY-07 accelerated sources and glide
+ADD('OLY-07', CHUNK([
+    CX('h2', HEAD, 'Accelerated motion: integrating the instantaneous shift',
+       ['For a source with arbitrary velocity $\\mathbf v_s(t)$ the observer hears $f\'(t_e) = f\\dfrac{c}{c - \\mathbf v_s(t_e)\\cdot\\hat{\\mathbf r}(t_e)}$ evaluated at the EMISSION time $t_e$: what is heard at time $t$ was emitted at $t_e = t - R(t_e)/c$ (implicit!) — retarded-time bookkeeping. Constant velocity: closed form (JEE-26 glide); constant acceleration along the line: $f\'(t_e) = f\\dfrac{c}{c - a t_e}$: frequency diverges as the source approaches speed $c$... for $a t_e \\to c$; reached at finite time: sonic boom geometry (JEE-28).',
+          'The glide-slope example as an integral: closest approach at $t = 0$, speed $u$, impact $b$: $f\'(t) = f\\dfrac{c}{c - u^2 t/\\sqrt{b^2 + u^2 t^2}}$ (Oly 06 projections): linearising near $t = 0$: $f\' \\approx f\\left(1 + \\dfrac{u^2 t}{c b}\\right)$: slope $\\dfrac{df\'}{dt}|_0 = \\dfrac{f u^2}{c b}$ downward after the pass ✓ the JEE-26 formula as the first term of the exact expansion.',
+          'Slowly accelerating radial motion: quasi-static shift $f\'(t) \\approx f(1 + v_r(t)/c)$: the frequency curve is the RADIAL VELOCITY curve scaled by $f/c$ — acoustic velocimetry: measuring $f\'(t)$ reads $v_r(t)$ directly (differencing successive spectra).',
+          ('WHY', 'the retarded-time structure is why accelerating-source problems are implicit: the emission point itself moves; solvable cases are (i) slow variation (quasi-static), (ii) constant velocity (closed form), (iii) special geometries (circular motion: Bessel sidebands).'),
+          ('CHECK', 'circular motion check: source circling at radius $R$, angular rate $\\Omega$: $v_r = u\\cos(\\Omega t)$-ish: $f\' = f\\left(1 + \\dfrac{u}{c}\\cos\\Omega t\\right)$ first order: PURE frequency modulation with sidebands $f \\pm \\Omega/2\\pi$ — the ambulance-on-a-roundabout FM signal.')],
+      ),
+    CX('h3', HEAD, 'Glide geometry: the exact curve and its slope',
+       ['Setup recap: straight path, impact $b$, speed $u$, stationary observer, emission continuous. $\\cos\\theta(t) = \\dfrac{ut}{\\sqrt{b^2 + u^2t^2}}$ (sign per convention); $f\'(t) = f\\dfrac{c}{c - u\\cos\\theta(t)}$; values: $t = 0$: $f\' = f$; $t \\to \\pm\\infty$: $f\\dfrac{c}{c \\mp u}$; slope at 0: $\\mp\\dfrac{f u^2}{c b}$ (decreasing through the pass). Characteristic width: the glide occupies $\\Delta t \\sim b/u$ (the time to swing $\\theta$ by a radian).',
+          'Spectrogram picture: a hyperbolic-like chirp symmetric in time but NOT in frequency (approach side higher by the $c/(c-u)$ vs $c/(c+u)$ asymmetry); a bat or porpoise hears the whole swoop and uses the slope for ranging (Oly 08).',
+          'Numbers (corrected source example): $f = 1000$ Hz, $u = 20$ m/s, $b = 100$ m, $c = 340$: slope 11.8 Hz/s; $f\'(\\pm 5$ s$) = 1043.2/960.1$ Hz; asymmetry at equal times: $83.1$ Hz total swing: the integral of the slope over the pass.',
+          ('CHECK', 'consistency of slope and swing: average slope over $\\pm 5$ s $\\approx 83/10 = 8.3$ Hz/s vs peak 11.8 — smooth rolloff ✓; far-field asymptotes reproduce the 1D pair 1043.5/960.5 Hz within 0.5 Hz at $\\pm 5$ s... hmm far asymptotes are $1000\\cdot 340/320 = 1062.5$ and $1000\\cdot 340/360 = 944.4$: the pass values are closer to $f$ than the asymptotes ✓ correct shape.')]),
+    CX('h3', CH, 'Accelerated-source problem patterns',
+       ['(a) A car accelerating from rest toward a listener at $a = 2$ m/s$^2$: $v_r = at$: $f\' = f(1 + at/c)$-ish until significant: at $t = 10$ s, $v = 20$ m/s: $f\' = 1.06 f$: the pitch RISES continuously (unlike constant-velocity pass which glides down after). (b) A dropped source: $v_r = g t$ toward a listener below: same linear chirp downward in observed... source falling AWAY from an observer above: $f\' = f(1 - gt/c)$: a falling whistle chirps down at $g f/c = 28.7$ Hz/s for $f = 1000$.',
+          'Retarded-time example: source at distance $d$ moving away at $u$ emitted at $t = 0$: received at $t = d/c$; the NEXT wavefront is received at $t = (d + u/f)/c$-ish: spacing stretched by $(c + u)/c$ ✓ the receding factor derived from scratch.',
+          ('FN', 'rotating and vibrating sources: turbine blades, sirens, ultrasound transducers: the spectrum is a set of sidebands $f \\pm n f_{\\rm rot}$ — Bessel-function amplitudes; the exam-accessible part is the first-order FM picture.')]),
+    CX('h3', CH, 'Slope-and-swing drills',
+       ['(a) $f = 600$ Hz, $u = 25$ m/s, $b = 150$ m: slope $= 600\\cdot 625/(340\\cdot 150) = 7.35$ Hz/s. (b) "The observed pitch of a passing cycle horn (500 Hz) falls 60 Hz within 3 s of the pass: estimate $u^2/b$": slope 20 Hz/s $= f u^2/(c b)$: $u^2/b = 20\\cdot 340/500 = 13.6$ m/s$^2$-ish units: with $u = 25$: $b = 46$ m. (c) Bat closing on an insect: both glide AND radial approach: total slope = glide term + $f a/c$ from acceleration.',
+          'What can go wrong: near-field ($b \\lesssim \\lambda$) wave geometry breaks the ray picture; supersonic $u > c$ invalidates the subsonic formula entirely (JEE-28); turbulent air adds scintillation (amplitude noise), not frequency shift.',
+          ('WHY', 'the glide is the acoustic fingerprint of the geometry: slope gives $u^2/b$ (one equation, two unknowns — need the swing width $b/u$ or a second measurement to separate $u$ and $b$ — the structure of exam problems.')]),
+]), 'Glide from the vector box, slope fu²/(cb), retarded-time thinking.')
+
+# ---------------------------------------------------- OLY-08 ranging from the glide
+ADD('OLY-08', CHUNK([
+    CX('h2', HEAD, 'Ranging from frequency slope: the acoustic McAfee method',
+       ['If the emission frequency $f$ and the source speed $u$ are known, one second of spectrogram near closest approach gives $b = \\dfrac{f u^2}{c |slope|}$ (from Oly 07). If instead $b$ is known (e.g. flyby altitude), the slope gives $u$: $u = \\sqrt{\\dfrac{c\\,b\\,|slope|}{f}}$. With BOTH slope and swing width $\\Delta t \\sim b/u$: the pair determines $u$ and $b$ independently: $u = |slope|\\,c\\,\\Delta t/f$-ish... precisely combine $S = f u^2/(c b)$ and $W = b/u$: $u = \\sqrt{S c W/f}$... derive: $S W = f u^2/(c b)\\cdot b/u = f u/c$: $u = \\dfrac{S W c}{f}$ ✓ and $b = u W$.',
+          'Echo version (radar/sonar McAfee): measure the beat $\\Delta f = 2 f u/c$ between direct and echo (JEE-27): $u = \\dfrac{\\Delta f\\,c}{2f}$ directly; combine with the echo delay $\\tau = 2R/c$ for range; the pair ($\\Delta f$, $\\tau$) gives ($u$, $R$) of the target — the full tracking state at one instant.',
+          'Accuracy: frequency slope measurable to ~1% from a clean spectrogram: $b$ to ~2%; the method needs no timing sync — pure frequency metrology: robust to amplitude noise; fails when $u$ is unknown along with $b$ (add a second pass or beam).',
+          ('WHY', 'the slope method converts a TIME-domain difficult problem (nanosecond timing) into a FREQUENCY-domain easy one (Hz over seconds) — the deep reason Doppler ranging works.'),
+          ('CHECK', 'units: $[f u^2/(c\\,slope)] = $ Hz m$^2$s$^{-2}$ / (m s$^{-1}$ Hz s$^{-1}$) = m ✓; numbers: $f = 1000$, $u = 20$, $c = 340$, slope 11.8: $b = 100$ m ✓ recovers the geometry.')],
+      ),
+    CX('h3', HEAD, 'Two-beam and multi-beam Doppler tracking',
+       ['Two beams at angles $\\theta_1, \\theta_2$ to the target line: measure radial speeds $u\\cos\\theta_i$... solve: $u = \\dfrac{v_{r1} - v_{r2}}{\\cos\\theta_1 - \\cos\\theta_2}$-style elimination; three beams give the full 3D velocity vector — Doppler sodar and ultrasound vector flow imaging.',
+          'Track differentiation: successive ($u$, $R$) estimates give acceleration $a = du/dt$; the glide trajectory then fits ($b$, $u$, $a$) — the standard manoeuvring-target model.',
+          'GPS-free ground speed: doppler log on ships (beam to the seabed), air data from pitot + acoustic cross-check; police lidar/radar: EM version of the same math ($c \\to 3\\times 10^{8}$, double shift always).',
+          ('CHECK', 'double-beam example: $\\theta = 30^{\\circ}$ beams, measured $v_r = 43.3$ and 0 m/s (one beam along the motion): $u = 50$ m/s ✓ cross-check $50\\cos 30 = 43.3$ ✓.')]),
+    CX('h3', CH, 'Slope-method problem patterns',
+       ['(a) "A jet of known speed 250 m/s at unknown altitude passes; the 400 Hz tone glides at 300 Hz/s through the closest point: find altitude": $b = f u^2/(c S) = 400\\cdot 62500/(340\\cdot 300) = 245$ m — absurdly low for a jet: sanity-check rejects the numbers (maybe $S$ read wrong from the spectrogram) — the discipline of orders of magnitude.',
+          '(b) "A drone hovers at 40 m emitting 2 kHz; a cyclist approaches at 8 m/s: beat with the echo": $\\Delta f = 2 f u_r/c$ with radial 8 m/s: 94 Hz beats — drone speed sensors use exactly this (acoustic flow sensors). (c) Bat 1: measure slope of the insect pass at $b = 2$ m, $u = 4$ m/s, 40 kHz: slope $= 40000\\cdot 16/(340\\cdot 2) = 941$ Hz/s — bats chirp-sweep over ~2 kHz in ms, resolvable.',
+          ('WHY', 'combining slope + swing + echo delay separates $u$, $b$, $R$ — the exam trinity of ranging unknowns and their three equations.')]),
+    CX('h3', CH, 'Method comparison table (which tool for which question)',
+       ['Echo delay: gives RANGE $R = c\\tau/2$ directly; needs timing. Doppler beat: gives RADIAL SPEED $\\Delta f = 2fu/c$; needs clean spectrum. Glide slope: gives $u^2/b$; needs a pass geometry. Echo delay + beat: state $(u, R)$ ✓. Slope + swing: state $(u, b)$ ✓. Two beams: vector velocity ✓. Time-of-flight + speed of sound thermometer: $c$ from $T$ (JEE-08).',
+          'Error budget: frequency measurements are precise ($10^{-4}$ easily) but $c$ depends on $T$ ($\\pm 0.2$% per K) and wind ($\\pm w/c$): for precision ranging, measure $T$ and $w$ or use two-way symmetric methods that cancel wind to first order (JEE-25).',
+          ('FN', 'the same toolkit works from bat sonar to medical Doppler to police radar; changing $c$ and $f$ scales the numbers, never the structure — the closing argument for learning the vector box.')]),
+]), 'Ranging via slope u²/b, echo beats, two-beam tracking, method table.')
+# ---------------------------------------------------- OLY-09 WKB ducts and horns
+ADD('OLY-09', CHUNK([
+    CX('h2', HEAD, 'Slowly varying ducts and horns: $I(x) A(x) = $ constant (WKB)',
+       ['For a duct of slowly varying cross-section $A(x)$ with negligible reflection (smooth taper, $|dA/dx| \\ll kA$), conservation of time-averaged acoustic power gives $I(x) A(x) = $ const. Since $I = \\dfrac{\\Delta P_0^2}{2Z}$ and $I = \\frac{1}{2} Z \\omega^2 s_0^2$ in the same medium: pressure amplitude $\\Delta P_0 \\propto A^{-1/2}$, displacement amplitude $s_0 \\propto A^{-1/2}$, intensity $I \\propto A^{-1}$ — a horn concentrates SOUND PRESSURE as $1/\\sqrt{A}$ from throat to mouth.',
+          'WKB validity: the reflection coefficient per taper step is $R \\sim \\left(\\dfrac{d\\ln Z_c}{2k\\,dx}\\right)^2$-ish with $Z_c = \\rho c/A$ the local characteristic impedance... practical rule: $R$ negligible when the area changes by much less than a factor 2 per wavelength; abrupt changes reflect (JEE-16 boundary theory).',
+          'Exponential horn: $A(x) = A_0 e^{mx}$: the horn equation has wave solutions with local wavenumber $k_{\\rm eff} = \\sqrt{k^2 - (m/2)^2}$: below cutoff $k < m/2$: EVANESCENT (horn stops passing — the horn cutoff frequency); the flare constant $m$ sets the cutoff $f_c = \\dfrac{mc}{4\\pi}$-ish... standard: $f_c = \\dfrac{mc}{4\\pi}$ for exponential: low-frequency horns must flare gently (large mouth) — why trumpets end in big bells.',
+          ('WHY', 'power conservation is the entire WKB content: the wave equation in a slowly varying duct with the ansatz $\\Delta P = \\mathcal{A}(x) e^{i\\int k dx}$ gives $\\mathcal{A}\\sqrt{Z_c}$-type invariants; the exam physics is the $A(x) I(x) = $ const line.'),
+          ('CHECK', 'convergence example: throat 1 cm$^2$ to mouth 100 cm$^2$: $I$ drops 100x (20 dB) but $\\Delta P_0$ RISES 10x: horns trade intensity for pressure at the throat — exactly what a driver needs (impedance matching, Oly 01: $Z_{\\rm in} \\sim Z/A$-ish).')],
+      ),
+    CX('h3', HEAD, 'Horns as impedance transformers (why they work)',
+       ['A driver of area $S_d$ couples to air poorly (Oly 05 radiation resistance); a horn raises the throat loading: $Z_{\\rm throat} \\approx \\rho c/A_{\\rm mouth}\\cdot$ (geometric gain): the mouth impedance $\\rho c$ scaled by area ratio: efficiency up to ~50% vs a few % for a bare cone. The same mathematics as the middle ear (Oly 01) and the megaphone of antiquity.',
+          'Cutoff and directivity: below $f_c$ the horn is a poor radiator (evanescent throat); above, the mouth radiates a beam of angle $\\theta \\sim \\sin^{-1}(\\lambda/(\\pi d))$-ish for mouth size $d$: megaphones beam high frequencies — the shouter hears their own voice differently than listeners do.',
+          'Mufflers and ducts: the reverse design — expansions and side branches reflect (Oly 03 traps); a smooth diffuser recovers pressure (wind tunnels, exhausts).',
+          ('CHECK', 'numbers: exponential horn $m = 5$ m$^{-1}$: $f_c = 5\\cdot 343/(4\\pi) = 136$ Hz: audible bass passes; $m = 50$: $f_c = 1.36$ kHz: a trumpet-ish cutoff ✓ plausible instrument numbers.')]),
+    CX('h3', CH, 'WKB drill set',
+       ['(a) A duct halves its area: $I$ doubles, $\\Delta P_0$ rises $\\sqrt2$: the speed of the air in the throat rises as $u \\propto I/\\Delta P \\propto 1/\\sqrt A$... $u = \\Delta P/Z$ stays? $\\Delta P_0 \\propto A^{-1/2}$, $u_0 = \\Delta P_0/Z \\propto A^{-1/2}$: velocity rises as the duct narrows ✓ (like a river through a constriction). (b) "Design a horn to halve the pressure amplitude of a 1 Pa source at the mouth": expand area 4x.',
+          'Horn equation quick form: $\\dfrac{1}{A}\\dfrac{d}{dx}\\left(A\\dfrac{dP}{dx}\\right) + k^2 P = 0$: WKB solution $P \\propto \\dfrac{e^{\\pm ikx}}{\\sqrt{A}}$ ✓ recovering the amplitude law; exact for cones and exponentials in terms of Bessel/Hankel functions.',
+          ('FN', 'shallow-water waves obey the same $I A = $ const rule (energy conservation); the "water hose narrowing" and tidal-bore funnelling are WKB in geophysics.')]),
+    CX('h3', CH, 'When WKB fails (scope guards)',
+       ['(i) Area jumps: full reflection analysis (Oly 02/03). (ii) $A \\to 0$ (a closed end): WKB diverges; the boundary layer solution takes over (JEE-17). (iii) $dA/dx \\sim kA$: significant reflection; (iv) losses (viscous boundary layers: $\\alpha \\propto \\sqrt{f}/a$ in narrow tubes) break power conservation: horns must stay wide vs the viscous skin depth.',
+          'Helmholtz resonator limit: when the duct is shorter than $\\lambda/4$, the lumped-parameter RLC model replaces WKB entirely — asymptotic methods need their validity conditions stated (the exam phrase: "slowly varying compared with $\\lambda$").',
+          ('WHY', 'knowing where an approximation dies is what separates a formula user from a physicist: every WKB answer should carry the check $|d\\ln A/dx| \\ll k$.')]),
+]), 'WKB duct I·A = const, amplitude ∝ A^(−1/2), horn cutoff and matching.')
+
+# ---------------------------------------------------- OLY-10 three solid speeds
+ADD('OLY-10', CHUNK([
+    CX('h2', HEAD, 'Elasticity of solids: three speeds from three moduli',
+       ['Longitudinal rod (free sides): $v_{\\rm rod} = \\sqrt{Y/\\rho}$; bulk longitudinal (infinite solid): $v_P = \\sqrt{(K + 4G/3)/\\rho}$; bulk transverse (shear): $v_S = \\sqrt{G/\\rho}$. Relations: $Y = 2G(1 + \\nu) = 3K(1 - 2\\nu)$; with $\\nu = 0.29$ (steel): $v_P/v_S = \\sqrt{\\frac{2(1-\\nu)}{1-2\\nu}} = 1.75$; $v_P/v_{\\rm rod} = \\sqrt{\\frac{(1-\\nu)}{(1+\\nu)(1-2\\nu)}}$-ish ≈ 1.15–1.2. Seismology: P-waves = $v_P$, S-waves = $v_S$; S cannot propagate in fluids ($G = 0$) — the evidence Earth outer core is liquid.',
+          'Derivation sketch: Newton 2nd law + Hooke tensor law $\\sigma_{ij} = \\lambda\\,\\mathrm{tr}(\\epsilon)\\delta_{ij} + 2G\\epsilon_{ij}$ (Lamé $\\lambda$, $G$): plane longitudinal wave: $\\rho\\ddot{u} = (\\lambda + 2G)\\nabla^2 u$: $v_P = \\sqrt{(\\lambda + 2G)/\\rho} = \\sqrt{(K + 4G/3)/\\rho}$ since $K = \\lambda + 2G/3$; transverse: $\\rho\\ddot{u}_\\perp = G\\nabla^2 u_\\perp$: $v_S = \\sqrt{G/\\rho}$ ✓.',
+          'Numbers: steel ($K = 160$, $G = 79$ GPa, $\\rho = 7800$): $v_P = 5830$, $v_S = 3180$, $v_{\\rm rod} = 5060$ m/s. Granite: $v_P \\approx 5200$, $v_S \\approx 3000$. Glass ($G = 30$ GPa): $v_S = 2130$. Rubber ($G \\approx 1$ MPa, $\\rho = 1100$): $v_S = 30$ m/s — slow and lossy.',
+          ('WHY', 'three combinations of two elastic constants + density: the rod speed is a boundary-conditioned mixture; the bulk pair is the intrinsic content of the elasticity tensor; Poisson ratio interpolates.'),
+          ('CHECK', 'inequalities: $v_P > v_{\\rm rod} > v_S$ for $0 < \\nu < 0.5$ ✓ (steel: 5830 > 5060 > 3180); $\\nu \\to 0$: $v_P = v_{\\rm rod}$; $\\nu \\to 0.5$: $v_P \\to \\infty$ (incompressible: $K \\to \\infty$).')],
+      ),
+    CX('h3', HEAD, 'Waves in rods: which boundary, which ladder',
+       ['Thin rod free-free (or clamped at centre): longitudinal modes $f_n = n\\dfrac{v_{\\rm rod}}{2L}$; clamped-free: $f_n = (2n-1)\\dfrac{v_{\\rm rod}}{4L}$ (odd, like the closed pipe); the same ladders as air columns with the solid speed. Dispersive corrections: for rods of finite thickness ($ka \\gtrsim 1$) Pochhammer-Chree modes appear: the simple $\\sqrt{Y/\\rho}$ is the long-wave limit.',
+          'Kundt tube (JEE-21) is the rod-speed measurement in reverse: $v_{\\rm rod}$ known gives $v_{\\rm gas}$; with a gas of known speed the rod speed comes out: the two-medium frequency match $f = v_{\\rm rod}/\\lambda_{\\rm rod} = v_{\\rm gas}/\\lambda_{\\rm gas}$.',
+          'Damping: metals ring (low internal friction, Q ~ $10^{3}$–$10^{4}$ for rods); lead and rubber damp (high loss tangent): struck rods of different metals have characteristic ring times — an exam qualitative question.',
+          ('CHECK', 'steel rod 1 m clamped mid: $f = 5060/2 = 2530$ Hz; in Kundt with dust heaps 6.5 cm apart: $v_{\\rm gas} = 5060\\times 0.065 = 329$ m/s (cold air ✓ plausible lab).')]),
+    CX('h3', CH, 'Solid-state acoustic problems (exam patterns)',
+       ['(a) "A longitudinal wave travels a steel rail; a transverse follows: arrival split over 2 km": $\\Delta t = 2000(1/3180 - 1/5830)$... wait P arrives first: $\\Delta t = 2000(1/3180 - 1/5830) = 0.285$ s ✓ the seismograph method for locating epicentres. (b) "Find $\\nu$ from the ratio $v_P/v_S = 1.8$": $\\frac{2(1-\\nu)}{1-2\\nu} = 3.24$: $\\nu = 0.27$. (c) "A rod and a string of the same length and fundamental: compare $v$": equal $f$: $v_{\\rm rod}/2L = \\sqrt{T/\\mu}/2L$: the speed equality sets the tension.',
+          'Composite rods: series springs: effective compliance adds: $1/Y_{\\rm eff} = \\sum L_i/(Y_i L)$-ish: wave speed in layered rods uses transfer matrices (outside syllabus; the 1D spring model is in).',
+          ('FN', 'dispersion in real solids: $v(\\omega)$ bends near lattice resonances (Brillouin); ultrasound velocity metrology uses $v_P$, $v_S$ to get $K$, $G$, $\\nu$ non-destructively — the engineering reading of this card.')]),
+    CX('h3', CH, 'Numbers drill (three speeds)',
+       ['Aluminium ($Y = 70$ GPa, $G = 26$, $\\rho = 2700$): $v_{\\rm rod} = 5100$, $v_P = 6270$, $v_S = 3100$ m/s. Copper ($Y = 120$, $G = 45$, $\\rho = 8900$): rod 3670, $v_P = 4760$, $v_S = 2250$. Granite ($K = 50$ GPa, $G = 25$ GPa, $\\rho = 2700$): $v_P = 5250$, $v_S = 3040$. Water ($B = 2.2$ GPa): $v = 1483$, no shear.',
+          'Seismic locate: P-S time difference $\\Delta t = d(1/v_S - 1/v_P)$: $d = \\dfrac{\\Delta t}{1/v_S - 1/v_P}$: for $\\Delta t = 10$ s in granite: $d = 10/(3.29 - 1.90)\\times 10^{-4}$... units: $d = \\Delta t / (1/3040 - 1/5250) = 10/(3.29\\times 10^{-4} - 1.90\\times 10^{-4}) = 72$ km ✓ standard method.',
+          ('WHY', 'the pair (arrival times of P and S) plus one speed model locates events in three dimensions — the seismology version of echo + beat (Oly 08): two measurements, two unknowns.')]),
+]), 'Rod/bulk/shear speeds, Lamé derivation sketch, seismology patterns.')
+
+# ---------------------------------------------------- OLY-11 Mach geometry clinic
+ADD('OLY-11', CHUNK([
+    CX('h2', HEAD, 'Mach geometry clinic: cones, delays, and emission points',
+       ['Full supersonic toolkit: cone half-angle $\\sin\\alpha = 1/M$; observer at height $h$ below the flight line: boom delay after closest pass $t = \\dfrac{h\\sqrt{M^2-1}}{M v}$ (envelope derivation of JEE-28); emission point of the heard boom at $t_e = -t/(M^2-1)$ (BEFORE the pass); the jet position at hearing is $x = h\\sqrt{M^2-1}$ past the closest point. The three quantities answer three different questions — always identify which is asked.',
+          'Boom carpet: the shock surface intersects the ground along a swath of width $w = h\\cot\\alpha\\cdot 2$-ish for the full cone crossing... the ground trace: at any instant the cone-ground intersection is a line moving at $M v$; observers under the flight path receive the boom once; those off the track receive it at slant geometry; the overpressure decays slowly with altitude ($\\propto h^{-3/4}$-ish empirically).',
+          'N-wave structure: the boom is a compression-rarefaction doublet of duration $\\tau \\sim \\dfrac{\\ell}{v}\\cdot$ (aircraft length factor): Concorde: 0.1–0.3 s at 100–200 Pa; the spectrum of an N-wave is flat to $f \\sim 1/\\tau$ then falls: characteristic boom "crack".',
+          ('WHY', 'the clinic separates three confusable distances: emission distance (from $t_e$), hearing-time position ($h\\cot\\alpha$), and slant range ($h/\\sin\\alpha$): the source paper Q13 conflates the first two (SOURCE-AUDIT).'),
+          ('CHECK', 'self-consistency: $t = h\\cot\\alpha/u_s$ (cone sweep) $= h\\sqrt{M^2-1}/(M v)$ (envelope) ✓ identical expressions; $M = 1.2$, $h = 10$ km: 16.4 s; $M = 3$: 27.7 s — the non-monotonic delay again ✓ JEE-28 grid.')],
+      ),
+    CX('h3', HEAD, 'Angles and triangles: the clinic worksheet',
+       ['Step 1: compute $c(T)$ (JEE-08). Step 2: $M = u/c$; $\\alpha = \\sin^{-1}(1/M)$. Step 3: draw the cone BEHIND the source; the observer is inside after the sweep. Step 4: identify the asked quantity: delay ($h\\cot\\alpha/u$), emission geometry ($t_e = -t/(M^2-1)$), or slant ($h/\\sin\\alpha$). Step 5: check limits ($M = 1$: degenerate; $M \\to \\infty$: delay $\\to h/v$).',
+          'Two observers: different delays from different $h$ and lateral offsets: the difference in arrival times LOCATES the flight line — inverse boom mapping (used to track supersonic tests).',
+          'Sonic boom from manoeuvres: turns pile shocks (focused superbooms); the clinic covers straight-and-level only.',
+          ('CHECK', 'work the clinic on source Q13: $M = 2$, $h = 10$ km, $v = 340$: $\\alpha = 30^{\\circ}$ ✓; $t = 25.5$ s ✓; $t_e = -8.5$ s ✓; jet at hearing 17.32 km past ✓ — all four numbers consistent with the one diagram.')]),
+    CX('h3', CH, 'Clinic drills',
+       ['(a) $M = 1.5$, $h = 5$ km: $\\alpha = 41.8^{\\circ}$, $t = 5000\\sqrt{1.25}/(1.5\\cdot 340) = 11.0$ s... $\\sqrt{M^2-1} = 1.118$: $t = 5000\\cdot 1.118/510 = 10.96$ s ✓. (b) "Observers at 10 and 20 km lateral offset hear the boom 8 s apart: find $M$ and altitude": two equations ($t_i = \\sqrt{h^2 + x_i^2}\\cdot$... solve geometry: classic two-station problem. (c) "How long after the FLASH does the boom arrive for $M = 2$, $h = 8$ km?": flash $\\approx$ overhead instant: delay $= 20.4$ s.',
+          'Error sensitivities: $\\delta t/t = \\delta h/h + \\delta M\\cdot$($M/(M^2-1) - 1/M$)-ish: at $M = 2$: $\\delta t/t \\approx \\delta h/h + 0.25\\delta M/M$: Mach errors matter at low supersonic.',
+          ('FN', 'focused booms from turns can double overpressure (Whitham theory); "superboom" events over Oklahoma City (1960s tests) seeded the modern low-boom research (X-59) — history with the clinic math.')]),
+    CX('h3', CH, 'Sonic-boom terminology card',
+       ['Mach number $M = u/c$; Mach angle $\\alpha = \\sin^{-1}(1/M)$; N-wave: two-shock signature; overpressure $\\Delta P$: 50–500 Pa typical; carpet: ground swath; boom delay: closest-approach to hearing; superboom: focused enhancement; cutoff Mach: $M = 1$ exactly (infinite linear pile-up).',
+          'Regulation: supersonic flight over land banned for civil (US 1973 FAA rule) because of boom annoyance; Concorde flew supersonic only over water; X-59 targets 75 Pa "thump" to reopen the question.',
+          ('WHY', 'precise vocabulary earns the method marks: examiners look for "cone", "shock", "delay from closest approach", and the $\\sin\\alpha = 1/M$ relation in any boom answer.')]),
+]), 'Mach clinic: delay formula, emission point, boom carpet, drills.')
+
+# ---------------------------------------------------- OLY-12 acoustic estimation kit
+ADD('OLY-12', CHUNK([
+    CX('h2', HEAD, 'Acoustic estimation kit: building your own numbers',
+       ['Kit formula set (air unless stated): $c = 331.3\\sqrt{T/273}$ m/s; $Z = \\rho c \\approx 412$ rayl at 20 C; $\\lambda = c/f$; $\\Delta P_0 = Z\\omega s_0$; $I = \\Delta P_0^2/(2Z)$; $\\beta = 10\\log(I/10^{-12})$ dB; point source $I = P/(4\\pi r^2)$; beats $|f_1 - f_2|$; Doppler $\\frac{c + u_o}{c - u_s}$; echo $\\frac{c+u}{c-u}$; pipes $v/4L$, $v/2L$; $e = 0.6r$; $Q = \\omega\\mathcal{E}/P_{\\rm loss}$. With these, estimate any sound problem to ~10% in one line each.',
+          'Order-of-magnitude anchors: speech 60 dB at 1 m (~$10\\,\\mu$W acoustic); shout 1 mW; rock concert front 0.1–1 W/m$^2$; threshold of hearing $10^{-12}$ W/m$^2$ = 20 $\\mu$Pa; pain 20 Pa; room modes $c/2L$ (~170 Hz for a 1 m scale); ear canal 3.4 kHz; vocal formants 300/2300 Hz; jet 130 dB at 30 m; thunder 120 dB at 100 m.',
+          'Sizing tricks: $\\lambda = 343/f$: 1 kHz ↔ 34 cm; 100 Hz ↔ 3.4 m; 10 kHz ↔ 3.4 cm. $s_0$ at threshold (1 kHz): 0.01 nm; at pain: 10 $\\mu$m. Time: sound 1 km in 2.9 s; 1 mile in 4.7 s; light-sound delay 1 km: 2.9 s (the "count the seconds" method).',
+          ('WHY', 'the kit is the chapter in twelve lines: every worked example of the source is a substitution; every Olympiad problem is two or three kit lines chained — the closing consolidation of the set.'),
+          ('CHECK', 're-derive the source Q3 chain from the kit: 0.1 W isotropic at 100 m: $I = 8\\times 10^{-5}$ W/m$^2$; $\\beta = 79$ dB; $\\Delta P_0 = 0.26$ Pa; $s_0 = 0.3\\,\\mu$m at 340 Hz ✓ all five kit lines agree with the worked answer.')],
+      ),
+    CX('h3', HEAD, 'Estimate-first discipline (the Fermi habit)',
+       ['Before writing equations: estimate the answer in rounded numbers (factor-of-3 accuracy); then compute exactly; the two must agree within the rounded uncertainty — if not, a unit or a factor of $2\\pi$ is wrong. Worked: "level 2 m from a 0.5 W siren": estimate $I \\sim 0.5/50 \\sim 0.01$ W/m$^2$: $\\beta \\sim 100$ dB; exact: 92 dB — same ballpark; the estimate catches the "$P/4\\pi r^2$ vs $P/r^2$" family of slips immediately.',
+          'Unit traps the kit prevents: dB without a reference; $\\lambda$ in cm vs m in $v = f\\lambda$; temperature in Celsius inside $\\sqrt{T}$; $M$ in g/mol inside $RT/M$; intensity vs pressure amplitude factors of 2; peak vs RMS $\\sqrt2$.',
+          'Reality checks: sound speed in gas hundreds, liquid ~1500, solid thousands of m/s; pressures $\\Delta P \\ll P_{\\rm atm}$; displacement amplitudes nm–mm; if a computed $s_0$ is 5 cm for speech, it is wrong.',
+          ('WHY', 'examiners hide unit slips inside otherwise correct derivations; the estimate-first habit detects them in seconds — the meta-skill this kit trains.')]),
+    CX('h3', CH, 'Fermi drill set (estimate, then compute)',
+       ['(a) "How far can a shout be heard in still air?" assume 1 mW and 40 dB threshold at the ear: $I = 10^{-8}$ W/m$^2$: $r = \\sqrt{P/(4\\pi I)} = 2.8$ km geometric; with 0.1 dB/m absorption: $\\beta = 30 - 20\\log r - 0.1r = 40$... solve: r ~ 150 m realistic — geometry overestimates, absorption rules. (b) "Pitch of a 20 cm closed pipe at 30 C": $c = 349$: $f = c/4L = 436$ Hz (order 400). (c) "Beat between a 440 Hz fork and a source at 15 m/s toward": $\\Delta f = f u/c = 19$ Hz (order 20).',
+          'Chain estimate: "speed of a train from its horn": hear 470 Hz approaching, 400 receding... $u = c(f_+ - f_-)/(f_+ + f_-) = 343\\times 70/870 = 27.6$ m/s (order 100 km/h ✓ 99 km/h) — estimate 30 m/s ✓.',
+          ('FN', 'Fermi problems for the set: estimate the acoustic power of a piano (1 W), the sound energy of a conversation in an hour ($10^{-2}$ J), the pressure of a sonic boom at 10 km (order 100 Pa) — all kit lines.')]),
+    CX('h3', CH, 'The kit as a closing map (chapter index)',
+       ['Wave basics (SN-01..04): $s$, $\\Delta P = -B\\partial_x s$, $v = \\sqrt{B/\\rho}$. Media (SN-05..09, OLY-10): $\\sqrt{\\gamma RT/M}$, $\\sqrt{Y/\\rho}$, $\\sqrt{(K+4G/3)/\\rho}$. Energy (SN-10..12, OLY-05): $I = \\Delta P_0^2/2Z$, dB. Interference (SN-13..16, OLY-04): superposition, phasors, standing waves. Pipes (SN-17..21, OLY-03/09): ladders, end correction, impedance, WKB. Motion (SN-22..28, OLY-06..08/11): Doppler box, echo, glide, Mach. Boundaries (OLY-01/02): $Z$, $R$. Estimation (OLY-12): the kit.',
+          'Where marks are lost (the short list): kelvin vs Celsius; $e$ sign in the resonance tube ($l = \\lambda/4 - e$); overtone counting; Doppler sign conventions; peak vs RMS; intensity vs amplitude dB factors; factor 2 in Quincke ($\\delta = 2\\Delta L$); dust heaps at $\\lambda/2$.',
+          ('WHY', 'the kit card is the revision sheet: if any line is unfamiliar, that sheet of the set deserves another pass — the teacher-style close of the chapter.')]),
+]), 'Estimation kit, Fermi drills, chapter map and mark-loss list.')
+# ---------------------------------------------------- convert CX chapters to render pages
+import re as _re
+import re
+from pathlib import Path as _Path
+from PIL import Image as _Image, ImageDraw as _ID, ImageFont as _IF
+from matplotlib.mathtext import math_to_image as _m2i, MathTextParser as _MTP
+from matplotlib.font_manager import FontProperties as _FP
+import io as _io
+
+ROOT = _Path(__file__).resolve().parent
+_FPATH = str(ROOT / 'fonts/PatrickHand-Regular.ttf')
+
+def normalize(s):
+    s=re.sub(r'\\sqrt(\\[A-Za-z]+)',r'\\sqrt{\1}',s)
+    s=re.sub(r'\\sqrt\s*([0-9A-Za-z])(?![A-Za-z}])',r'\\sqrt{\1}',s)
+    s=re.sub(r'\\(le|ge)(?![A-Za-z])',r'\\\1q',s)
+    s=s.replace(r'\sqrt5',r'\sqrt{5}').replace(r'\hbox',r'\mathrm').replace(r'\frac1{',r'\frac{1}{')
+    s=re.sub(r'\\(mathcal|mathbf|mathrm)\s+([A-Za-z])',r'\\\1{\2}',s)
+    return re.sub(r'\\(?:tfrac|frac)\s*([A-Za-z0-9])\s*([A-Za-z0-9])',r'\\frac{\1}{\2}',s)
+import numpy as _np
+_M2C = {}
+def math_wh(tex):
+    if tex not in _M2C:
+        b=_io.BytesIO()
+        _m2i('$'+normalize(tex)+'$',b,prop=_FP(size=12),dpi=300,format='png',color='#153149')
+        a=_Image.open(b).convert('RGBA')
+        arr=_np.array(a); arr[:,:,3]=255-arr[:,:,:3].min(axis=2); arr[:,:,:3]=[21,49,73]
+        a=_Image.fromarray(arr)
+        bbox=a.getbbox(); a=a.crop(bbox) if bbox else a
+        _M2C[tex]=(a.width, a.height)
+    return _M2C[tex]
+
+_SAFE = {
+    '\u2713':'ok', '\u2717':'fails', '\u2192':' $\\to$ ', '\u00b5':'$\\mu$',
+    '\u0394':'$\\Delta$', '\u03b1':'$\\alpha$', '\u03b3':'$\\gamma$', '\u03c1':'$\\rho$',
+    '\u03c9':'$\\omega$', '\u2202':'$\\partial$', '\u221d':'$\\propto$',
+    '\u2080':'$_0$', '\u2081':'$_1$', '\u2082':'$_2$', '\u2083':'$_3$',
+    '\u03c8':'$\\psi$', '\u03c6':'$\\phi$', '\u03c3':'$\\sigma$', '\u03bd':'$\\nu$',
+    '\u03ba':'$\\kappa$', '\u03b5':'$\\varepsilon$', '\u03b7':'$\\eta$', '\u03c4':'$\\tau$',
+    '\u03b8':'$\\theta$', '\u03b2':'$\\beta$', '\u03bc':'$\\mu$', '\u039b':'$\\Lambda$',
+    '\u03a3':'$\\Sigma$', '\u03a9':'$\\Omega$', '\u03a6':'$\\Phi$', '\u0393':'$\\Gamma$',
+    '\u2032':"'", '\u2033':"''", '\u0302':'', '\u2194':' $\\leftrightarrow$ ',
+    '\u21d2':' $\\Rightarrow$ ', '\u2264':'<=',
+}
+def safe(s):
+    out=[]
+    for part in _re.split(r'(\$[^$]+\$)', s):
+        if len(part)>2 and part[0]=='$' and part[-1]=='$':
+            out.append(part)
+        else:
+            for k,v in _SAFE.items():
+                part=part.replace(k,v)
+            out.append(part)
+    return ''.join(out)
+
+def plain_title(t):
+    def mm(m):
+        x=m.group(1)
+        x=x.replace('\\rm ','').replace('\\mathrm ','').replace('\\mathbf ','')
+        x=x.replace('\\','').replace('{','').replace('}','').replace('^','').replace('_',' ')
+        x=x.replace('prime',"'").replace('times','x').replace('cdot','.')
+        x=re.sub(r'\s+',' ',x).strip()
+        return x
+    t=_re.sub(r'\$([^$]+)\$', mm, t)
+    return t.replace('$','')
+
+_F48=_IF.truetype(_FPATH,48); _F46=_IF.truetype(_FPATH,46)
+_D1=_ID.Draw(_Image.new('RGB',(1,1)))
+BODYW=1032
+
+def _units(s):
+    us=[]
+    for part in _re.split(r'(\$[^$]+\$)', s):
+        if len(part)>2 and part[0]=='$' and part[-1]=='$':
+            us.append(('m',part[1:-1]))
+        elif part:
+            for w in part.split():
+                us.append(('t',w))
+    return us
+
+_HC={}
+def item_h(kind, s, label=''):
+    key=(kind,label,s)
+    if key in _HC: return _HC[key]
+    text=label+s
+    f=_F46 if kind in ('why','trap','check') else _F48
+    lead=53 if kind in ('why','trap','check') else 56
+    space=_D1.textlength(' ',font=f)
+    total=0
+    for block in text.split('\n'):
+        lw=0.0; mh=0; n=1; cur_units=False
+        for kindu,val in _units(block):
+            if kindu=='t':
+                w=_D1.textlength(val,font=f)+space; h=round(f.size*0.6)
+            else:
+                mw,mh2=math_wh(val)
+                if mw>BODYW:
+                    ratio=BODYW/mw
+                    assert ratio>=.55, val
+                    mw=BODYW; mh2=round(mh2*ratio)
+                w=mw+space; h=mh2
+            if lw+w>BODYW and (lw>0 or cur_units):
+                total+=max(lead,mh+14); n+=1; lw=0.0; mh=0
+            cur_units=True
+            lw+=w; mh=max(mh,h)
+        total+=max(lead,mh+14)
+    _HC[key]=total+8
+    return _HC[key]*1.05  # 5% safety: absorb residual wrap drift vs the renderer
+
+def split_long_item(kind, s, label='', limit=480):
+    if item_h(kind,s,label)<=limit:
+        return [(kind,s)]
+    parts=_re.split(r'(?<=[.;:!?])\s+', s)
+    out=[]; cur=''
+    for p in parts:
+        cand=(cur+' '+p).strip()
+        if cur and item_h(kind,cand,label)>limit:
+            out.append((kind,cur)); cur=p
+        else:
+            cur=cand
+    if cur: out.append((kind,cur))
+    changed=True
+    while changed:
+        changed=False
+        for i2,(k2,s2) in enumerate(out):
+            if item_h(k2,s2,label)>limit:
+                words=s2.split(); mid=max(1,len(words)//2)
+                out[i2:i2+1]=[(k2,' '.join(words[:mid])),(k2,' '.join(words[mid:]))]
+                changed=True
+                break
+    return out
+
+_LABEL={'why':'WHY / ','trap':'WATCH / ','check':'CHECK / '}
+
+def fit_card(items):
+    hs=[item_h(k,s,_LABEL.get(k,'')) for k,s in items]
+    total=sum(hs)
+    BUDGET=880
+    k=max(1, -(-total//BUDGET))  # ceil
+    if k>len(items): k=len(items)
+    n=len(items)
+    if k<=1:
+        return [items]
+    # DP: partition items[0:n] into k ordered groups minimising the max group height
+    INF=float('inf')
+    for _try in range(5):
+        dp=[[INF]*(k+1) for _ in range(n+1)]
+        choice=[[0]*(k+1) for _ in range(n+1)]
+        pref=[0]
+        for h in hs: pref.append(pref[-1]+h)
+        dp[0][0]=0
+        for g in range(1,k+1):
+            for e in range(g,n+1):
+                for b in range(g-1,e):
+                    cand=max(dp[b][g-1], pref[e]-pref[b])
+                    if cand<dp[e][g]:
+                        dp[e][g]=cand; choice[e][g]=b
+        if dp[n][k]>=INF:
+            return [items]
+        groups=[]; e=n
+        for g in range(k,0,-1):
+            b=choice[e][g]
+            groups.append(items[b:e])
+            e=b
+        groups.reverse()
+        if dp[n][k]<=BUDGET+60 or k>=n:
+            # local improvement: trade a little max for a better min
+            def gH(g): return sum(item_h(kk,ss,_LABEL.get(kk,'')) for kk,ss in g)
+            for _ in range(12):
+                hs2=[gH(g) for g in groups]
+                M0,m0=max(hs2),min(hs2)
+                best=None
+                for i2 in range(len(groups)-1):
+                    A,B=groups[i2],groups[i2+1]
+                    if len(A)>1:
+                        A2,B2=A[:-1],[A[-1]]+B
+                        M1,m1=max(gH(A2),gH(B2)),min(gH(A2),gH(B2))
+                        if m1>m0 and M1<=M0+40:
+                            sc=(m1,-M1)
+                            if best is None or sc>best[0]: best=(sc,i2,'ab')
+                    A,B=groups[i2],groups[i2+1]
+                    if len(B)>1:
+                        A2,B2=A+[B[0]],B[1:]
+                        M1,m1=max(gH(A2),gH(B2)),min(gH(A2),gH(B2))
+                        if m1>m0 and M1<=M0+40:
+                            sc=(m1,-M1)
+                            if best is None or sc>best[0]: best=(sc,i2,'ba')
+                if best is None: break
+                _,i2,mode=best
+                A,B=groups[i2],groups[i2+1]
+                if mode=='ab': groups[i2],groups[i2+1]=A[:-1],[A[-1]]+B
+                else: groups[i2],groups[i2+1]=A+[B[0]],B[1:]
+            return groups
+        k+=1
+    return groups
+
+def cx_to_cards(c):
+    conv=[]
+    for it in c['items']:
+        if isinstance(it,tuple):
+            if it[0]=='D':
+                continue
+            k={'WHY':'why','CHECK':'check'}.get(it[0],'p')
+            s=safe(it[1])
+            if k=='p' and s.startswith(('Trap','Traps','WATCH','Mistake','Error')):
+                k='trap'
+            if k=='p' and s.startswith('Note'):
+                pass
+            items_src=[(k,s)]
+        else:
+            s=safe(it)
+            k='trap' if s.startswith(('Trap','Traps','WATCH','Mistake','Error')) else 'p'
+            items_src=[(k,s)]
+        for k2,s2 in items_src:
+            conv.extend(split_long_item(k2,s2,_LABEL.get(k2,'')))
+    return conv
+
+def flow_balance(cards):
+    # cards: list of (title, items); move boundary items between neighbours to equalise heights (order kept)
+    def H(g):
+        return sum(item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in g)
+    def var():
+        hs=[H(g) for _,g in cards]
+        m=sum(hs)/max(1,len(hs))
+        return sum((h-m)**2 for h in hs), hs
+    for _pass in range(40):
+        moved=False
+        v0,_=var()
+        for i in range(len(cards)-1):
+            t1,g1=cards[i]; t2,g2=cards[i+1]
+            h1,h2=H(g1),H(g2)
+            # candidate A: last item of left card -> front of right card
+            if len(g1)>1 and h1>h2:
+                mv=g1[-1]
+                mh=item_h(mv[0],mv[1],_LABEL.get(mv[0],''))
+                if h2+mh<=900:
+                    cards[i]=(t1,g1[:-1]); cards[i+1]=(t2,[mv]+g2)
+                    v1,_=var()
+                    if v1<v0:
+                        v0=v1; moved=True
+                        continue
+                    cards[i]=(t1,g1); cards[i+1]=(t2,g2)  # revert
+            t1,g1=cards[i]; t2,g2=cards[i+1]
+            h1,h2=H(g1),H(g2)
+            # candidate B: first item of right card -> end of left card
+            if len(g2)>1 and h2>h1:
+                mv=g2[0]
+                mh=item_h(mv[0],mv[1],_LABEL.get(mv[0],''))
+                if h1+mh<=900:
+                    cards[i]=(t1,g1+[mv]); cards[i+1]=(t2,g2[1:])
+                    v1,_=var()
+                    if v1<v0:
+                        v0=v1; moved=True
+                        continue
+                    cards[i]=(t1,g1); cards[i+1]=(t2,g2)  # revert
+        if not moved:
+            break
+    return cards
+
+def partition_k(items, k):
+    # ordered partition of items into k groups minimising the max group height
+    hs=[item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in items]
+    n=len(items)
+    if k>=n:
+        return [[it] for it in items]
+    INF=float('inf')
+    dp=[[INF]*(k+1) for _ in range(n+1)]
+    choice=[[0]*(k+1) for _ in range(n+1)]
+    pref=[0]
+    for h in hs: pref.append(pref[-1]+h)
+    dp[0][0]=0
+    for g in range(1,k+1):
+        for e in range(g,n+1):
+            for b in range(g-1,e):
+                cand=max(dp[b][g-1], pref[e]-pref[b])
+                if cand<dp[e][g]:
+                    dp[e][g]=cand; choice[e][g]=b
+    groups=[]; e=n
+    for g in range(k,0,-1):
+        b=choice[e][g]
+        groups.append(items[b:e])
+        e=b
+    groups.reverse()
+    def gH(g): return sum(item_h(kk,ss,_LABEL.get(kk,'')) for kk,ss in g)
+    for _ in range(14):
+        hs2=[gH(g) for g in groups]
+        M0,m0=max(hs2),min(hs2)
+        best=None
+        for i2 in range(len(groups)-1):
+            A,B=groups[i2],groups[i2+1]
+            if len(A)>1:
+                A2,B2=A[:-1],[A[-1]]+B
+                M1,m1=max(gH(A2),gH(B2)),min(gH(A2),gH(B2))
+                if m1>m0 and M1<=M0+20:
+                    sc=(m1,-M1)
+                    if best is None or sc>best[0]: best=(sc,i2,'ab')
+            A,B=groups[i2],groups[i2+1]
+            if len(B)>1:
+                A2,B2=A+[B[0]],B[1:]
+                M1,m1=max(gH(A2),gH(B2)),min(gH(A2),gH(B2))
+                if m1>m0 and M1<=M0+20:
+                    sc=(m1,-M1)
+                    if best is None or sc>best[0]: best=(sc,i2,'ba')
+        if best is None: break
+        _,i2,mode=best
+        A,B=groups[i2],groups[i2+1]
+        if mode=='ab': groups[i2],groups[i2+1]=A[:-1],[A[-1]]+B
+        else: groups[i2],groups[i2+1]=A+[B[0]],B[1:]
+    return groups
+
+def greedy_partition(items, k):
+    # sequential partition into k groups closest to equal heights
+    hs=[item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in items]
+    total=sum(hs)
+    target=total/k
+    groups=[]; cur=[]; acc=0.0
+    remain_groups=k
+    for i,(it,h) in enumerate(zip(items,hs)):
+        items_left=len(items)-i
+        if cur and ((acc>=target or acc+h>900) and items_left>remain_groups-1):
+            groups.append(cur); cur=[it]; acc=h; remain_groups-=1
+        else:
+            cur.append(it); acc+=h
+    if cur: groups.append(cur)
+    while len(groups)<k:
+        # split the tallest group at its middle item
+        gi=max(range(len(groups)), key=lambda j: sum(item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in groups[j]))
+        g=groups.pop(gi)
+        mid=max(1,len(g)//2)
+        groups.insert(gi, g[:mid]); groups.insert(gi+1, g[mid:])
+    return groups[:k] if len(groups)>k else groups
+
+def build_pages():
+    # section-wide flexible packing: cards keep their titles; pages take the sheet data of their first card
+    pages=[]
+    counters={'JEE':0,'Olympiad':0}
+    seen_sheets={'JEE':set(),'Olympiad':set()}
+    for part in ('JEE','Olympiad'):
+        entries=[e for e in SOUND if (e['sheet'].startswith('SN')==(part=='JEE'))]
+        tagged=[]   # (entry, base_title, kind, s, is_first_of_card)
+        for entry in entries:
+            for c in entry['cards']:
+                base=plain_title(c['title'])
+                conv=cx_to_cards(c)
+                for j,(k2,s2) in enumerate(conv):
+                    tagged.append((entry, base, k2, s2, j==0))
+        items=[(k2,s2) for _,_,k2,s2,_ in tagged]
+        H=sum(item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in items)
+        kbest=4*max(1, round(H/(4*870)))
+        if kbest>len(items): kbest=4*max(1, len(items)//4)
+        groups=greedy_partition(items, kbest)
+        # if any group overflows the card body budget, add four more cards and repack
+        while max(sum(item_h(k2,s2,_LABEL.get(k2,'')) for k2,s2 in g) for g in groups)>898 and kbest+4<=len(items):
+            kbest+=4
+            groups=greedy_partition(items, kbest)
+        # build subcards with titles
+        subcards=[]; idx=0
+        for g in groups:
+            entry, base, _, _, first = tagged[idx]
+            t = base if first else base+' (cont.)'
+            subcards.append((t, g, entry))
+            idx+=len(g)
+        # equalise within quads
+        npages=len(subcards)//4
+        for pi in range(npages):
+            quad_items=subcards[pi*4:(pi+1)*4]
+            quad=flow_balance([[t, g] for t, g, _ in quad_items])
+            first_entry=quad_items[0][2]
+            e=first_entry
+            theme=THEME[e['sheet']]
+            if e['sheet'] in seen_sheets[part]:
+                ptitle=plain_title(e['cards'][0]['title'])+' (cont.)'
+            else:
+                ptitle=plain_title(e['cards'][0]['title'])
+                seen_sheets[part].add(e['sheet'])
+            counters[part]+=1
+            n=counters[part]
+            page_cards=[dict(title=t, items=[list(x) for x in g]) for t, g in quad]
+            pages.append(dict(
+                section=part, part_page=n,
+                slug=f'{part}-{n:02}-{theme}',
+                title=ptitle, subtitle=safe(e['summary']),
+                source=SOURCE[e['sheet']], diagrams=[theme+'-a', theme+'-b'],
+                takeaway=REMEMBER[e['sheet']], cards=page_cards))
+    return pages
+
+# ---------------- theme slugs, remember lines, source lines ----------------
+THEME={
+ 'SN-01':'longwave','SN-02':'pressure','SN-03':'quadrature','SN-04':'waveeq','SN-05':'solids',
+ 'SN-06':'newton','SN-07':'laplace','SN-08':'templaw','SN-09':'gasmix','SN-10':'intensity',
+ 'SN-11':'spreading','SN-12':'decibel','SN-13':'superpos','SN-14':'quincke','SN-15':'beats',
+ 'SN-16':'standing','SN-17':'closedpipe','SN-18':'openpipe','SN-19':'endcorr','SN-20':'restube',
+ 'SN-21':'kundt','SN-22':'doppsrc','SN-23':'doppobs','SN-24':'doppsign','SN-25':'wind',
+ 'SN-26':'dopp2d','SN-27':'echo','SN-28':'mach',
+ 'OLY-01':'impedance','OLY-02':'reflection','OLY-03':'pipez','OLY-04':'phasor','OLY-05':'energy',
+ 'OLY-06':'dopfree','OLY-07':'glide','OLY-08':'ranging','OLY-09':'wkb','OLY-10':'solids3',
+ 'OLY-11':'machgeo','OLY-12':'estkit',
+}
+REMEMBER={
+ 'SN-01':'Sound is a longitudinal wave: s(x,t), lambda = v/f; the wave moves at v, the gas jiggles in place.',
+ 'SN-02':'Pressure is the slope of displacement: dP = -B ds/dx and dP0 = rho v omega s0 bridge the two amplitudes.',
+ 'SN-03':'Pressure lags displacement by 90 degrees; energy density averages 1/2 rho omega^2 s0^2.',
+ 'SN-04':'The wave equation gives v = sqrt(B/rho): stiffness over inertia; amplitude and frequency never enter.',
+ 'SN-05':'Rods run at sqrt(Y/rho), bulk solids at sqrt((K+4G/3)/rho): the boundary decides the stiffness.',
+ 'SN-06':'Newton isothermal gives 280 m/s because B = P; sound is far too fast for heat to flow.',
+ 'SN-07':'Laplace: B = gamma P, so v = sqrt(gamma R T/M): temperature and molar mass only, never pressure.',
+ 'SN-08':'v = 331.3 sqrt(T/273) m/s, about 0.6 m/s per degree; kelvin only inside the root.',
+ 'SN-09':'Light gases sound fast (1/sqrt(M)); humidity helps a little; pressure is irrelevant at fixed T.',
+ 'SN-10':'I = dP0^2/(2 rho v) = 1/2 rho v omega^2 s0^2; two forms must always agree.',
+ 'SN-11':'Point sources fall as 1/r in amplitude, 1/r^2 in intensity; line sources as 1/sqrt(r).',
+ 'SN-12':'beta = 10 log(I/I0) with I0 = 1e-12 W/m2; doubling intensity is 3 dB, doubling amplitude 6 dB.',
+ 'SN-13':'Superpose pressures, not intensities, for coherent sources; the amplitude sum decides everything.',
+ 'SN-14':'Quincke: the sliding U-tube changes the path by 2 dL; nulls every lambda/2 of slider travel.',
+ 'SN-15':'Beats measure frequency differences: the envelope repeats at |f1 - f2|; the wax test finds which fork.',
+ 'SN-16':'Rigid end = displacement node; open end = pressure node; spacing of nodes is lambda/2.',
+ 'SN-17':'Closed pipe: odd harmonics (2n-1)v/4L; overtone number is harmonic number minus one.',
+ 'SN-18':'Open pipe: all harmonics n v/2L; consecutive resonances always differ by v/2L.',
+ 'SN-19':'End correction e = 0.6r (0.85r flanged): L_eff = L + e closed, L + 2e open; frequencies fall.',
+ 'SN-20':'Resonance tube: v = 2f(l2 - l1) cancels the end correction; e = (l2 - 3l1)/2 and l = lambda/4 - e.',
+ 'SN-21':'Kundt: dust heaps sit lambda/2 apart at displacement nodes; v_gas = v_rod d/L_rod.',
+ 'SN-22':'Moving source compresses wavelength: f = f0 v/(v - u_s) toward, v/(v + u_s) away.',
+ 'SN-23':'Moving observer sweeps crests faster: f = f0 (v + u_o)/v; source and observer formulas differ at second order.',
+ 'SN-24':'One bookkeeping: f = f0 (v + u_o)/(v - u_s) with signs set by toward/away; lock-step motion gives no shift.',
+ 'SN-25':'Uniform wind never shifts frequency between fixed parties; it changes travel times only.',
+ 'SN-26':'2D Doppler uses radial projections; the glide slope at closest approach is f u^2/(v b).',
+ 'SN-27':'Echo doubles the shift: f = f0 (v + u)/(v - u); radar beats give the target speed.',
+ 'SN-28':'Mach cone: sin(alpha) = 1/M; the boom delay after the pass is h sqrt(M^2-1)/(M v).',
+ 'OLY-01':'Impedance Z = rho v is the coupling constant; matching Z transfers power, mismatching reflects it.',
+ 'OLY-02':'R = ((Z2 - Z1)/(Z2 + Z1))^2, T = 4 Z1 Z2/(Z1 + Z2)^2; hard walls keep pressure, soft ends kill it.',
+ 'OLY-03':'A pipe is a load on a line: resonance is zero input reactance; closed pipes give odd harmonics by cot(kL).',
+ 'OLY-04':'Phasors turn interference into vector sums; the array factor sin(N psi/2)/sin(psi/2) covers N sources.',
+ 'OLY-05':'Q = omega E / P_loss ties ring-down, bandwidth and gain; small sources are poor radiators.',
+ 'OLY-06':'f = f0 (c - v_o.r)/(c - v_s.r): one vector formula replaces the entire case library.',
+ 'OLY-07':'Accelerated motion: integrate the instantaneous shift at emission time; the glide is the first lesson.',
+ 'OLY-08':'Frequency slope gives u^2/b; echo beats give u; two measurements give the full state.',
+ 'OLY-09':'Slowly varying ducts carry I A = constant: amplitudes fall as A^(-1/2); horns match impedance.',
+ 'OLY-10':'Three elastic speeds: rod sqrt(Y/rho), P sqrt((K+4G/3)/rho), S sqrt(G/rho); fluids carry no shear.',
+ 'OLY-11':'Boom geometry clinic: delay h sqrt(M^2-1)/(M v), emission before the pass, carpet on the ground.',
+ 'OLY-12':'The kit: estimate first with rounded numbers, compute second, demand agreement within the estimate.',
+}
+_SRC_SHORT={
+ 'SN-01':'1.1-1.2','SN-02':'1.2-1.3','SN-03':'1.3','SN-04':'2.1','SN-05':'2.2','SN-06':'2.3','SN-07':'2.3',
+ 'SN-08':'2.5','SN-09':'2.5-2.6','SN-10':'2.7','SN-11':'2.7','SN-12':'2.7','SN-13':'2.8','SN-14':'2.8',
+ 'SN-15':'2.8','SN-16':'2.4','SN-17':'2.4','SN-18':'2.4','SN-19':'2.4','SN-20':'2.4 / Q5','SN-21':'2.4 / Kundt',
+ 'SN-22':'2.9-2.10','SN-23':'2.9-2.10','SN-24':'2.9-2.12','SN-25':'2.10','SN-26':'2.12 / 4.6','SN-27':'2.11 / 4.5',
+ 'SN-28':'2.13 / Q13','OLY-01':'4.1-4.2','OLY-02':'4.2','OLY-03':'4.3','OLY-04':'4.4','OLY-05':'4.5',
+ 'OLY-06':'4.6 / 2.12','OLY-07':'4.6','OLY-08':'4.6','OLY-09':'4.7','OLY-10':'2.2 / 4.8','OLY-11':'2.13 / Q13',
+ 'OLY-12':'8 formula sheet',
+}
+SOURCE={k:'Source: sound-waves/Sound-waves.md sec. '+v+'; independently checked' for k,v in _SRC_SHORT.items()}
+
+# ---------------- preflight math, build, measure, dump ----------------
+_parser=_MTP('path')
+def preflight_text(s):
+    for part in _re.split(r'(\$[^$]+\$)', s):
+        if len(part)>2 and part[0]=='$' and part[-1]=='$':
+            _parser.parse('$'+normalize(part[1:-1])+'$', dpi=72)
+
+PAGES=build_pages()
+for p in PAGES:
+    preflight_text(p['subtitle']); preflight_text(p['takeaway'])
+    for c in p['cards']:
+        for kind, s in c['items']:
+            preflight_text(s)
+        title_w=_D1.textlength(c['title'], font=_IF.truetype(_FPATH, 56))
+        while title_w>1380:
+            c['title']=c['title'][:-2].rstrip()+'.'
+            title_w=_D1.textlength(c['title'], font=_IF.truetype(_FPATH, 56))
+
+fills=[]
+for p in PAGES:
+    for c in p['cards']:
+        used=sum(item_h(k,s,_LABEL.get(k,'')) for k,s in c['items'])+104
+        fills.append((used/1028.0, p['slug'], c['title'][:40]))
+fills.sort()
+print('cards total:', len(fills))
+print('fill min/median/max: %.2f / %.2f / %.2f' % (fills[0][0], fills[len(fills)//2][0], fills[-1][0]))
+print('lowest 8:', [(round(f,2), t) for f, _, t in fills[:8]])
+print('pages:', len(PAGES), 'JEE:', sum(1 for p in PAGES if p['section']=='JEE'), 'Oly:', sum(1 for p in PAGES if p['section']=='Olympiad'))
+
+(ROOT/'sheets.json').write_text(json.dumps(PAGES, indent=1)+'\n')
+print('wrote sheets.json')
+

@@ -1,0 +1,2362 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "Sound: a longitudinal mechanical wave in a medium",
+      "used_px": 744,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound: a longitudinal mechanical wave in a medium (cont.)",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound: a longitudinal mechanical wave in a medium (cont.)",
+      "used_px": 737,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound: a longitudinal mechanical wave in a medium (cont.)",
+      "used_px": 764,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound: a longitudinal mechanical wave in a medium (cont.)",
+      "used_px": 858,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Particle velocity vs wave speed \u2014 the classic confusion (cont.)",
+      "used_px": 954,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Particle velocity vs wave speed \u2014 the classic confusion (cont.)",
+      "used_px": 731,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "How sound is produced and detected (practical frame) (cont.)",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "How sound is produced and detected (practical frame) (cont.)",
+      "used_px": 896,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked micro-examples (cont.)",
+      "used_px": 806,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x",
+      "used_px": 767,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "used_px": 715,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "used_px": 871,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "used_px": 763,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The numbers: pressure amplitude from displacement amplitude (co.",
+      "used_px": 1010,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The numbers: pressure amplitude from displacement amplitude (co.",
+      "used_px": 754,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain, bulk modulus, and where the speed comes from (cont.)",
+      "used_px": 749,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Strain, bulk modulus, and where the speed comes from (cont.)",
+      "used_px": 937,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-worked set (pressure\u2013displacement round trip) (cont.)",
+      "used_px": 948,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-worked set (pressure\u2013displacement round trip) (cont.)",
+      "used_px": 989,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Displacement vs pressure phase: the quadrature structure of sound.",
+      "used_px": 756,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Displacement vs pressure phase: the quadrature structure of sound.",
+      "used_px": 985,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy density and the travelling-wave energy flux",
+      "used_px": 770,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy density and the travelling-wave energy flux (cont.)",
+      "used_px": 750,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy density and the travelling-wave energy flux (cont.)",
+      "used_px": 700,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase map of one wavelength (memorise the picture) (cont.)",
+      "used_px": 824,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase map of one wavelength (memorise the picture) (cont.)",
+      "used_px": 768,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked check set on phase and energy (cont.)",
+      "used_px": 928,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked check set on phase and energy (cont.)",
+      "used_px": 951,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The sound wave equation and v = sqrtB/rho (cont.)",
+      "used_px": 807,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The sound wave equation and v = sqrtB/rho (cont.)",
+      "used_px": 865,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The sound wave equation and v = sqrtB/rho (cont.)",
+      "used_px": 818,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed from data: the three formula forms and how to choose (cont.",
+      "used_px": 693,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed from data: the three formula forms and how to choose (cont.",
+      "used_px": 886,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the wave equation does NOT say (scope guard)",
+      "used_px": 776,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the wave equation does NOT say (scope guard) (cont.)",
+      "used_px": 895,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed-solving drills (pattern recognition) (cont.)",
+      "used_px": 875,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed-solving drills (pattern recognition) (cont.)",
+      "used_px": 870,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound in solids: rods sqrtY/rho and bulk sqrt(K+frac43G)/rho (con.",
+      "used_px": 891,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound in solids: rods sqrtY/rho and bulk sqrt(K+frac43G)/rho (con.",
+      "used_px": 715,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound in solids: rods sqrtY/rho and bulk sqrt(K+frac43G)/rho (con.",
+      "used_px": 898,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Which modulus, when: decision table",
+      "used_px": 751,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Which modulus, when: decision table (cont.)",
+      "used_px": 681,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Which modulus, when: decision table (cont.)",
+      "used_px": 597,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked solid-state numbers",
+      "used_px": 712,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked solid-state numbers (cont.)",
+      "used_px": 774,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Common exam setups involving solids",
+      "used_px": 816,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Common exam setups involving solids (cont.)",
+      "used_px": 1012,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newton's isothermal estimate: 280 m/s \u2014 and why it fails (cont.)",
+      "used_px": 944,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newton's isothermal estimate: 280 m/s \u2014 and why it fails (cont.)",
+      "used_px": 794,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newton's isothermal estimate: 280 m/s \u2014 and why it fails (cont.)",
+      "used_px": 840,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why heat cannot flow: time-scale argument (the physics core) (con.",
+      "used_px": 885,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What Newton got right, and the exam framing",
+      "used_px": 864,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What Newton got right, and the exam framing (cont.)",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mini-worked: isothermal vs adiabatic side by side",
+      "used_px": 645,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mini-worked: isothermal vs adiabatic side by side (cont.)",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mini-worked: isothermal vs adiabatic side by side (cont.)",
+      "used_px": 796,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Laplace correction: B = gamma P, v = sqrtgamma P/rho = sqrtga.",
+      "used_px": 746,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Laplace correction: B = gamma P, v = sqrtgamma P/rho = sqrtga.",
+      "used_px": 822,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Laplace correction: B = gamma P, v = sqrtgamma P/rho = sqrtga.",
+      "used_px": 774,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The temperature law in numbers (and the surface-gravity bonus) (.",
+      "used_px": 580,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The temperature law in numbers (and the surface-gravity bonus) (.",
+      "used_px": 814,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Measuring gamma by sound (the experiment behind the theory)",
+      "used_px": 975,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Measuring gamma by sound (the experiment behind the theory) (co.",
+      "used_px": 698,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Laplace-era consistency drills",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Laplace-era consistency drills (cont.)",
+      "used_px": 651,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+      "used_px": 827,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+      "used_px": 881,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+      "used_px": 961,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound horizon, lapse rate, and the bonus gravity formula (cont.)",
+      "used_px": 794,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sound horizon, lapse rate, and the bonus gravity formula (cont.)",
+      "used_px": 858,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature-based problem patterns",
+      "used_px": 744,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature-based problem patterns (cont.)",
+      "used_px": 898,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Traps and consistency checks for the v(T) family",
+      "used_px": 812,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Traps and consistency checks for the v(T) family (cont.)",
+      "used_px": 882,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Molar mass, humidity, and the pressure-independence of sound spee.",
+      "used_px": 927,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Molar mass, humidity, and the pressure-independence of sound spee.",
+      "used_px": 884,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Molar mass, humidity, and the pressure-independence of sound spee.",
+      "used_px": 655,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers table (gas speeds at 0 C unless noted) (cont.)",
+      "used_px": 820,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers table (gas speeds at 0 C unless noted) (cont.)",
+      "used_px": 641,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Problem patterns on gas identity",
+      "used_px": 794,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Problem patterns on gas identity (cont.)",
+      "used_px": 954,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Consolidation: the gas-speed parameter space",
+      "used_px": 720,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Consolidation: the gas-speed parameter space (cont.)",
+      "used_px": 648,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "used_px": 899,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "used_px": 678,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "used_px": 717,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "used_px": 739,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy budget: where the power goes (cont.)",
+      "used_px": 863,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy budget: where the power goes (cont.)",
+      "used_px": 721,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Amplitude scaling reference card (memorise the column)",
+      "used_px": 940,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Amplitude scaling reference card (memorise the column) (cont.)",
+      "used_px": 939,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked intensity drills (cont.)",
+      "used_px": 763,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked intensity drills (cont.)",
+      "used_px": 950,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point and line sources: 1/r2, 1/r, and the amplitude laws (cont.)",
+      "used_px": 894,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point and line sources: 1/r2, 1/r, and the amplitude laws (cont.)",
+      "used_px": 924,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Decay laws in practice (attenuation on top of spreading)",
+      "used_px": 707,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Decay laws in practice (attenuation on top of spreading) (cont.)",
+      "used_px": 978,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked geometry problems",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked geometry problems (cont.)",
+      "used_px": 752,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherical wave phasor picture (bridge to Oly)",
+      "used_px": 917,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherical wave phasor picture (bridge to Oly) (cont.)",
+      "used_px": 785,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Decibel scale: beta = 10log 10(I/I 0), I 0 = 10-12 W/m2 (cont.)",
+      "used_px": 732,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Decibel scale: beta = 10log 10(I/I 0), I 0 = 10-12 W/m2 (cont.)",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Decibel scale: beta = 10log 10(I/I 0), I 0 = 10-12 W/m2 (cont.)",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pressure and displacement forms of the level (cont.)",
+      "used_px": 755,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pressure and displacement forms of the level (cont.)",
+      "used_px": 761,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "dB algebra drills",
+      "used_px": 851,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "dB algebra drills (cont.)",
+      "used_px": 736,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Perception vs physics (why equal dB does not mean equal loudness).",
+      "used_px": 683,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Superposition and interference of sound waves",
+      "used_px": 665,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Superposition and interference of sound waves (cont.)",
+      "used_px": 808,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Superposition and interference of sound waves (cont.)",
+      "used_px": 626,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coherent vs incoherent, and the interference visibility",
+      "used_px": 865,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coherent vs incoherent, and the interference visibility (cont.)",
+      "used_px": 896,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The addition formula toolkit (memorise)",
+      "used_px": 907,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The addition formula toolkit (memorise) (cont.)",
+      "used_px": 814,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked superposition examples (cont.)",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke's tube: interference with a controllable path difference",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke's tube: interference with a controllable path difference (co.",
+      "used_px": 805,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke's tube: interference with a controllable path difference (co.",
+      "used_px": 949,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The interference geometry in detail (cont.)",
+      "used_px": 845,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The interference geometry in detail (cont.)",
+      "used_px": 927,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke numbers and variations (cont.)",
+      "used_px": 736,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke vs beats vs standing wave (discrimination table)",
+      "used_px": 988,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quincke vs beats vs standing wave (discrimination table) (cont.)",
+      "used_px": 841,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beats: f beat = |f 1 - f 2| from slow superposition (cont.)",
+      "used_px": 811,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beats: f beat = |f 1 - f 2| from slow superposition (cont.)",
+      "used_px": 810,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beat applications and problem patterns",
+      "used_px": 640,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beat applications and problem patterns (cont.)",
+      "used_px": 858,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beat applications and problem patterns (cont.)",
+      "used_px": 966,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beats with waves in space (extension) (cont.)",
+      "used_px": 959,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Beat drill set (cont.)",
+      "used_px": 955,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Standing waves: nodes, antinodes, and boundary conditions (cont.)",
+      "used_px": 812,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Standing waves: nodes, antinodes, and boundary conditions (cont.)",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boundary phase rules (the trap bank)",
+      "used_px": 922,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boundary phase rules (the trap bank) (cont.)",
+      "used_px": 906,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boundary phase rules (the trap bank) (cont.)",
+      "used_px": 932,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Standing vs travelling: comparison table (cont.)",
+      "used_px": 796,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-worked standing wave set",
+      "used_px": 592,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-worked standing wave set (cont.)",
+      "used_px": 848,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-worked standing wave set (cont.)",
+      "used_px": 929,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closed pipe (closed at one end): odd harmonics only (cont.)",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closed pipe (closed at one end): odd harmonics only (cont.)",
+      "used_px": 679,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mode shapes and the overtone ladder (exam detail)",
+      "used_px": 816,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mode shapes and the overtone ladder (exam detail) (cont.)",
+      "used_px": 967,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closed-pipe problem patterns (cont.)",
+      "used_px": 732,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closed vs open pipe side-by-side (memorise)",
+      "used_px": 1011,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open pipe (open at both ends): all harmonics",
+      "used_px": 525,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open pipe (open at both ends): all harmonics (cont.)",
+      "used_px": 580,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open pipe (open at both ends): all harmonics (cont.)",
+      "used_px": 938,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open-pipe spectra in data questions",
+      "used_px": 808,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open-pipe spectra in data questions (cont.)",
+      "used_px": 680,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open-pipe problem patterns",
+      "used_px": 915,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Open-pipe problem patterns (cont.)",
+      "used_px": 1011,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The one-line mode solver (all pipes, all questions) (cont.)",
+      "used_px": 982,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+      "used_px": 803,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+      "used_px": 807,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When does the correction matter (and when not)",
+      "used_px": 800,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When does the correction matter (and when not) (cont.)",
+      "used_px": 965,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "End-correction problem patterns (cont.)",
+      "used_px": 901,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Micro-drills on the correction",
+      "used_px": 1000,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance tube: v = 2f(l 2 - l 1) and e = (l 2 - 3l 1)/2",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance tube: v = 2f(l 2 - l 1) and e = (l 2 - 3l 1)/2 (cont.)",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance tube: v = 2f(l 2 - l 1) and e = (l 2 - 3l 1)/2 (cont.)",
+      "used_px": 644,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Alternate forms and fork-adjacent variants",
+      "used_px": 916,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Alternate forms and fork-adjacent variants (cont.)",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked exam problems (resonance tube family) (cont.)",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Error analysis and exam \"find the mistake\" questions",
+      "used_px": 821,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Error analysis and exam \"find the mistake\" questions (cont.)",
+      "used_px": 869,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt's tube: measure v gas from dust-heap spacing (cont.)",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt's tube: measure v gas from dust-heap spacing (cont.)",
+      "used_px": 799,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt's tube: measure v gas from dust-heap spacing (cont.)",
+      "used_px": 922,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The rod modes in detail (factor-of-2 discipline) (cont.)",
+      "used_px": 847,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt problems and modern readings",
+      "used_px": 786,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt problems and modern readings (cont.)",
+      "used_px": 944,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Kundt vs resonance tube (discrimination) (cont.)",
+      "used_px": 747,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler effect 1: moving source, stationary observer (cont.)",
+      "used_px": 882,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler effect 1: moving source, stationary observer (cont.)",
+      "used_px": 978,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign discipline for moving source (the classic trap)",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign discipline for moving source (the classic trap) (cont.)",
+      "used_px": 936,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign discipline for moving source (the classic trap) (cont.)",
+      "used_px": 768,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign discipline for moving source (the classic trap) (cont.)",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Moving-source problem patterns",
+      "used_px": 889,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Moving-source problem patterns (cont.)",
+      "used_px": 920,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers drill (moving source) (cont.)",
+      "used_px": 859,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler effect 2: moving observer, stationary source (cont.)",
+      "used_px": 760,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler effect 2: moving observer, stationary source (cont.)",
+      "used_px": 618,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler effect 2: moving observer, stationary source (cont.)",
+      "used_px": 961,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Combined formula and sign convention (working standard) (cont.)",
+      "used_px": 992,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Combined formula and sign convention (working standard) (cont.)",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Observer-motion problem patterns",
+      "used_px": 948,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Observer-motion problem patterns (cont.)",
+      "used_px": 939,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers drill (moving observer / combined) (cont.)",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler master class: conventions, vectors, and the full 1D family",
+      "used_px": 787,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler master class: conventions, vectors, and the full 1D family (.",
+      "used_px": 840,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler master class: conventions, vectors, and the full 1D family (.",
+      "used_px": 700,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Doppler master class: conventions, vectors, and the full 1D family (.",
+      "used_px": 696,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Common problem shells (with their answers)",
+      "used_px": 671,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Common problem shells (with their answers) (cont.)",
+      "used_px": 718,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed-estimation from shift (reverse problems)",
+      "used_px": 980,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed-estimation from shift (reverse problems) (cont.)",
+      "used_px": 853,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Conceptual traps (Doppler family)",
+      "used_px": 879,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Conceptual traps (Doppler family) (cont.)",
+      "used_px": 856,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally",
+      "used_px": 952,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
+      "used_px": 863,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
+      "used_px": 863,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
+      "used_px": 861,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Travel time with wind (the more common exam use)",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Travel time with wind (the more common exam use) (cont.)",
+      "used_px": 749,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Travel time with wind (the more common exam use) (cont.)",
+      "used_px": 810,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind problem patterns (cont.)",
+      "used_px": 874,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind formula quick card",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind formula quick card (cont.)",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D Doppler: radial components and the closest-approach glide (con.",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D Doppler: radial components and the closest-approach glide (con.",
+      "used_px": 906,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D Doppler: radial components and the closest-approach glide (con.",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D Doppler: radial components and the closest-approach glide (con.",
+      "used_px": 978,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closest-approach numbers (the glide example, worked) (cont.)",
+      "used_px": 712,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closest-approach numbers (the glide example, worked) (cont.)",
+      "used_px": 779,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closest-approach numbers (the glide example, worked) (cont.)",
+      "used_px": 829,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D formulas for moving observer too (cont.)",
+      "used_px": 935,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Glide and slope drills",
+      "used_px": 958,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Echo, double Doppler, and the second-order asymmetry",
+      "used_px": 852,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Echo, double Doppler, and the second-order asymmetry (cont.)",
+      "used_px": 898,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Echo, double Doppler, and the second-order asymmetry (cont.)",
+      "used_px": 905,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Echo timing (non-Doppler echo problems) (cont.)",
+      "used_px": 838,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Echo problem patterns (drill)",
+      "used_px": 780,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Consistency grid for echo answers",
+      "used_px": 927,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach cone, sonic boom, and supersonic geometry",
+      "used_px": 984,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach cone, sonic boom, and supersonic geometry (cont.)",
+      "used_px": 853,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning)",
+      "used_px": 823,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+      "used_px": 912,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+      "used_px": 797,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+      "used_px": 630,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach numbers and real aircraft (table + physics) (cont.)",
+      "used_px": 650,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach numbers and real aircraft (table + physics) (cont.)",
+      "used_px": 600,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Supersonic problem patterns (cont.)",
+      "used_px": 679,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acoustic impedance Z = rho v: the ratio that governs coupling",
+      "used_px": 760,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acoustic impedance Z = rho v: the ratio that governs coupling (con.",
+      "used_px": 708,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acoustic impedance Z = rho v: the ratio that governs coupling (con.",
+      "used_px": 957,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance numbers that decide real problems",
+      "used_px": 870,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance numbers that decide real problems (cont.)",
+      "used_px": 938,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance algebra drills",
+      "used_px": 901,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance algebra drills (cont.)",
+      "used_px": 727,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance view of amplitude relations (consolidation)",
+      "used_px": 810,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance view of amplitude relations (consolidation) (cont.)",
+      "used_px": 945,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "used_px": 925,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "used_px": 989,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "used_px": 673,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave layers and impedance matching",
+      "used_px": 968,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave layers and impedance matching (cont.)",
+      "used_px": 658,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave layers and impedance matching (cont.)",
+      "used_px": 841,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase rules from impedance (the safe derivation) (cont.)",
+      "used_px": 638,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase rules from impedance (the safe derivation) (cont.)",
+      "used_px": 671,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection problem patterns",
+      "used_px": 531,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection problem patterns (cont.)",
+      "used_px": 280,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection problem patterns (cont.)",
+      "used_px": 560,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection problem patterns (cont.)",
+      "used_px": 831,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pipes as impedance problems: input impedance and resonance (cont.",
+      "used_px": 706,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pipes as impedance problems: input impedance and resonance (cont.",
+      "used_px": 682,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pipes as impedance problems: input impedance and resonance (cont.",
+      "used_px": 867,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance curve: width, Q, and the amplitude build-up (cont.)",
+      "used_px": 990,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance curve: width, Q, and the amplitude build-up (cont.)",
+      "used_px": 675,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance methods in exam clothing",
+      "used_px": 989,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impedance methods in exam clothing (cont.)",
+      "used_px": 868,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resonance numbers drill (impedance view) (cont.)",
+      "used_px": 834,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasors: superposition of harmonic waves as vector addition (cont.)",
+      "used_px": 853,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasors: superposition of harmonic waves as vector addition (cont.)",
+      "used_px": 910,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasor clinic: worked sums",
+      "used_px": 676,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasor clinic: worked sums (cont.)",
+      "used_px": 975,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasors for standing waves and quadrature energy",
+      "used_px": 992,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasors for standing waves and quadrature energy (cont.)",
+      "used_px": 899,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasor drill set (cont.)",
+      "used_px": 848,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy flux, radiation resistance, and the Q of resonance",
+      "used_px": 860,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy flux, radiation resistance, and the Q of resonance (cont.)",
+      "used_px": 932,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy flux, radiation resistance, and the Q of resonance (cont.)",
+      "used_px": 1013,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Radiation from real sources (monopole, dipole, baffles) (cont.)",
+      "used_px": 809,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Radiation from real sources (monopole, dipole, baffles) (cont.)",
+      "used_px": 751,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy-budget problems (cont.)",
+      "used_px": 900,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Q and resonance in the exam frame",
+      "used_px": 786,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Q and resonance in the exam frame (cont.)",
+      "used_px": 691,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign-free Doppler: one vector formula for every case",
+      "used_px": 867,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign-free Doppler: one vector formula for every case (cont.)",
+      "used_px": 816,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign-free Doppler: one vector formula for every case (cont.)",
+      "used_px": 695,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign-free Doppler: one vector formula for every case (cont.)",
+      "used_px": 778,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Vector clinic: worked projections (cont.)",
+      "used_px": 913,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Vector clinic: worked projections (cont.)",
+      "used_px": 737,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the case library hides inside the box",
+      "used_px": 863,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the case library hides inside the box (cont.)",
+      "used_px": 923,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Box drills (answers in one line each) (cont.)",
+      "used_px": 774,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerated motion: integrating the instantaneous shift",
+      "used_px": 759,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerated motion: integrating the instantaneous shift (cont.)",
+      "used_px": 687,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerated motion: integrating the instantaneous shift (cont.)",
+      "used_px": 697,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerated motion: integrating the instantaneous shift (cont.)",
+      "used_px": 892,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Glide geometry: the exact curve and its slope (cont.)",
+      "used_px": 959,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Glide geometry: the exact curve and its slope (cont.)",
+      "used_px": 937,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Accelerated-source problem patterns (cont.)",
+      "used_px": 792,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slope-and-swing drills",
+      "used_px": 853,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slope-and-swing drills (cont.)",
+      "used_px": 676,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ranging from frequency slope: the acoustic McAfee method (cont.)",
+      "used_px": 682,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ranging from frequency slope: the acoustic McAfee method (cont.)",
+      "used_px": 989,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ranging from frequency slope: the acoustic McAfee method (cont.)",
+      "used_px": 829,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two-beam and multi-beam Doppler tracking (cont.)",
+      "used_px": 924,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slope-method problem patterns (cont.)",
+      "used_px": 687,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Method comparison table (which tool for which question)",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Method comparison table (which tool for which question) (cont.)",
+      "used_px": 1007,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slowly varying ducts and horns: I(x) A(x) = constant (WKB) (cont.)",
+      "used_px": 953,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slowly varying ducts and horns: I(x) A(x) = constant (WKB) (cont.)",
+      "used_px": 747,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Horns as impedance transformers (why they work)",
+      "used_px": 941,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Horns as impedance transformers (why they work) (cont.)",
+      "used_px": 739,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "WKB drill set (cont.)",
+      "used_px": 784,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When WKB fails (scope guards)",
+      "used_px": 776,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Elasticity of solids: three speeds from three moduli",
+      "used_px": 936,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Elasticity of solids: three speeds from three moduli (cont.)",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Elasticity of solids: three speeds from three moduli (cont.)",
+      "used_px": 912,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Waves in rods: which boundary, which ladder (cont.)",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solid-state acoustic problems (exam patterns)",
+      "used_px": 810,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solid-state acoustic problems (exam patterns) (cont.)",
+      "used_px": 605,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers drill (three speeds)",
+      "used_px": 893,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numbers drill (three speeds) (cont.)",
+      "used_px": 922,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach geometry clinic: cones, delays, and emission points (cont.)",
+      "used_px": 924,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mach geometry clinic: cones, delays, and emission points (cont.)",
+      "used_px": 603,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Angles and triangles: the clinic worksheet",
+      "used_px": 911,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Angles and triangles: the clinic worksheet (cont.)",
+      "used_px": 925,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Clinic drills (cont.)",
+      "used_px": 956,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sonic-boom terminology card (cont.)",
+      "used_px": 1008,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acoustic estimation kit: building your own numbers (cont.)",
+      "used_px": 581,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acoustic estimation kit: building your own numbers (cont.)",
+      "used_px": 852,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Estimate-first discipline (the Fermi habit)",
+      "used_px": 849,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Estimate-first discipline (the Fermi habit) (cont.)",
+      "used_px": 948,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fermi drill set (estimate, then compute) (cont.)",
+      "used_px": 705,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The kit as a closing map (chapter index)",
+      "used_px": 724,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The kit as a closing map (chapter index) (cont.)",
+      "used_px": 575,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

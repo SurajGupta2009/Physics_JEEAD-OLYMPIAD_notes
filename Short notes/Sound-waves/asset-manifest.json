@@ -1,0 +1,362 @@
+{
+  "JEE-01-longwave.png": {
+    "bytes": 306074,
+    "sha256": "a2dd1d3c44c1fd316488cb22393ecc5f324dabc9a53a5bb979f30a0303cab516"
+  },
+  "JEE-02-longwave.png": {
+    "bytes": 337939,
+    "sha256": "9ae1645e361d01e57cdeeaddf2af096d1b008cb5cddabaccd80f569ee2855da4"
+  },
+  "JEE-03-longwave.png": {
+    "bytes": 324765,
+    "sha256": "156267a99883864a33552be19ac7bcd3da70976a3728a8a6814d41ba81dce440"
+  },
+  "JEE-04-pressure.png": {
+    "bytes": 338479,
+    "sha256": "0f3fd304cec580fdb6f73f75bde8c2a4eac9126133cd74fd73b79205a40c516d"
+  },
+  "JEE-05-pressure.png": {
+    "bytes": 347030,
+    "sha256": "01b7bc592561bf14bf63869dc6366f7e591edd0418f1483cf13762b6583f0061"
+  },
+  "JEE-06-quadrature.png": {
+    "bytes": 305233,
+    "sha256": "deae38cc78c4745332fe205e52588c144a13e7dc03bc69addd2b0f49b6a500b2"
+  },
+  "JEE-07-quadrature.png": {
+    "bytes": 333380,
+    "sha256": "e2334e63cd0a03c3473a48db9794f36ae2dd4524d334880841e0094853c95d26"
+  },
+  "JEE-08-quadrature.png": {
+    "bytes": 332998,
+    "sha256": "7db94fbf86934864598365f475d8418cddb75ec16d89aa91cfb460beea10938d"
+  },
+  "JEE-09-waveeq.png": {
+    "bytes": 344871,
+    "sha256": "f18597f23d9983ac5d784fbcddb1e899495e7ffc407a2747abdd267f5364be71"
+  },
+  "JEE-10-waveeq.png": {
+    "bytes": 317324,
+    "sha256": "8b4b68ef5a093ced926782f7bf6f254aa5c18d558697c4215732e999a1cb6dd3"
+  },
+  "JEE-11-solids.png": {
+    "bytes": 305314,
+    "sha256": "d9215bec562e54e3be094b74b76a6d662ae05f9fd70c0de200f8b72f87f112b9"
+  },
+  "JEE-12-solids.png": {
+    "bytes": 326158,
+    "sha256": "dc232453b243eaf3dc180fba56a7784ae1a5c14158adcb81bf06c03d59f6a65d"
+  },
+  "JEE-13-newton.png": {
+    "bytes": 347966,
+    "sha256": "b1d083afe306c858c38edfac40ea004f68973a53f6a6e67318e50af22ee563ea"
+  },
+  "JEE-14-newton.png": {
+    "bytes": 305334,
+    "sha256": "75f3187c8d1c3c0a5358ba57a45b0651c15297af019f5a8c3ee265690f9fa2a2"
+  },
+  "JEE-15-newton.png": {
+    "bytes": 305089,
+    "sha256": "420ff5823bcf69924c1b825d9c4227e79f55b59b6d75c3261f7f8f3f2346edc2"
+  },
+  "JEE-16-laplace.png": {
+    "bytes": 311182,
+    "sha256": "d929fc643ba69560e80abb923226e0c8f43df017cfe384c5e76e40a8421fef92"
+  },
+  "JEE-17-laplace.png": {
+    "bytes": 312892,
+    "sha256": "69603f6cd0c820d3cdd93f18686330d98e2288a7e6a99582f43a9a01e6e1691b"
+  },
+  "JEE-18-templaw.png": {
+    "bytes": 325259,
+    "sha256": "4e599060e579f0482f0bba57f3efd990328afa55b0c34b94675eb62d925b2eea"
+  },
+  "JEE-19-templaw.png": {
+    "bytes": 357959,
+    "sha256": "328ca3e511e9674ee4c2e5e02d6ed5e8e416b565f32bb6297470467a133df7fc"
+  },
+  "JEE-20-gasmix.png": {
+    "bytes": 307387,
+    "sha256": "35ff3c4b9a01e8102ccef101783aea5392b5a9f3a9c23c37b16f76c7890bcceb"
+  },
+  "JEE-21-gasmix.png": {
+    "bytes": 316976,
+    "sha256": "7f63c0cd863dbc769ed02ba88a00e1a6f9b7951bbe3cfa93b67171aa1b999d9b"
+  },
+  "JEE-22-intensity.png": {
+    "bytes": 286243,
+    "sha256": "4cfe38bbf3822d172021f320a9f26f22291b60526c0d910dabb2b192a3ae01c1"
+  },
+  "JEE-23-intensity.png": {
+    "bytes": 340321,
+    "sha256": "559aa2920dfee9287a90af3440aa6b0899389773bdc787150b56f54a06141220"
+  },
+  "JEE-24-intensity.png": {
+    "bytes": 330597,
+    "sha256": "a8f592a93299ba277bf3f8d5a509e698cc72201b9cef76022ca87d68539bd2fd"
+  },
+  "JEE-25-spreading.png": {
+    "bytes": 331433,
+    "sha256": "32c51aad2319ca74ad8507ea3f59d2473518447047fc14a974824f12f884c497"
+  },
+  "JEE-26-spreading.png": {
+    "bytes": 330774,
+    "sha256": "0645f67cd792f208cbcd7ec8c3ebd7bb4c347407fa914b47c666766f98fe2e73"
+  },
+  "JEE-27-decibel.png": {
+    "bytes": 327419,
+    "sha256": "bd6cf8598c1d1ca86c583f9c5f27831584611817a6a603831cab3f10814dbd7f"
+  },
+  "JEE-28-decibel.png": {
+    "bytes": 307101,
+    "sha256": "894304ea0f47a45b52243cffbbe8c270a43fa780c666370a9d17a0aa9cc242b3"
+  },
+  "JEE-29-superpos.png": {
+    "bytes": 336040,
+    "sha256": "f2d0b45a5129559f87673d3f257733b1284725f9659df1bdb2c8dd665a276f31"
+  },
+  "JEE-30-superpos.png": {
+    "bytes": 336610,
+    "sha256": "39d030993f4dddf2788b1f727a393ec21737c94753af130e88f894c6b4caaf97"
+  },
+  "JEE-31-quincke.png": {
+    "bytes": 355898,
+    "sha256": "1b674c503f3c1fef29b52068ab7cc7ec7cae937e51b0ce7388ac0b21b62757c9"
+  },
+  "JEE-32-quincke.png": {
+    "bytes": 360354,
+    "sha256": "939af3c88eed1334b246e1d2cfd4a98485ddbefcea5d1e977151ffc03643d378"
+  },
+  "JEE-33-beats.png": {
+    "bytes": 340853,
+    "sha256": "0fdd956ef76ba945525b7011a3f58e38fe2ec0e0a213cd746db196b957ba0d21"
+  },
+  "JEE-34-beats.png": {
+    "bytes": 366693,
+    "sha256": "17af772c98e48ec22bbad300faa1b2f0bbe121d63a2580e3c3e4d2031766eb4d"
+  },
+  "JEE-35-standing.png": {
+    "bytes": 327826,
+    "sha256": "db6b1445974900e1756f1c455ac4d52d96f203fb3cc96817a2c9f28f730eaea7"
+  },
+  "JEE-36-standing.png": {
+    "bytes": 316014,
+    "sha256": "0ee83a3e2304b05ccf34e92b827a798467a7925ebd81bf055536a246f60ab80f"
+  },
+  "JEE-37-closedpipe.png": {
+    "bytes": 361947,
+    "sha256": "7003131006e09efe10fca7065e06246a7b95adb7e6a5369f0348d331334300f3"
+  },
+  "JEE-38-openpipe.png": {
+    "bytes": 282665,
+    "sha256": "329c8469be3e268def168454097a595347ba60f5bc64a1f5d637d7d9458ee603"
+  },
+  "JEE-39-openpipe.png": {
+    "bytes": 337395,
+    "sha256": "29799e1b38649119446cee89f951a440bacdc44942b85abee27f1b7441d399c2"
+  },
+  "JEE-40-endcorr.png": {
+    "bytes": 356736,
+    "sha256": "e26bcb11ded36c3d5fb09f14a2e169ad8ae14f19a2afc4adad2f2d0b437a079e"
+  },
+  "JEE-41-endcorr.png": {
+    "bytes": 347246,
+    "sha256": "193c7adc445bafa3bd90f13099cc68165c33d9f84cf23a8097254b78edb08985"
+  },
+  "JEE-42-restube.png": {
+    "bytes": 323076,
+    "sha256": "597aa1679e08a450e2aef41a7548b2c92f9a51e3f2552bdcfcf40f2573cdb718"
+  },
+  "JEE-43-restube.png": {
+    "bytes": 327202,
+    "sha256": "b6a8a6b221dc8bbca90f31c08e6f07098e329d64f96625ee9c26cd32c1ee583d"
+  },
+  "JEE-44-kundt.png": {
+    "bytes": 346190,
+    "sha256": "c8358f134b510336fcdf000f8ed27619455324f4fde686c8cde9eaf7c06374a9"
+  },
+  "JEE-45-kundt.png": {
+    "bytes": 327824,
+    "sha256": "d6c478ba818b187c91a6a25edc553edf413ce1e42c6648fca006657b63f38aa2"
+  },
+  "JEE-46-doppsrc.png": {
+    "bytes": 347056,
+    "sha256": "e84b3e4106b5b9d2e50337e4494c145ac08e609fab681ecdc3101ac8dd03dba2"
+  },
+  "JEE-47-doppsrc.png": {
+    "bytes": 310386,
+    "sha256": "6ab64b29c53b5bae48313203ebb823cf671b8975d68945c786971063709af695"
+  },
+  "JEE-48-doppobs.png": {
+    "bytes": 364221,
+    "sha256": "9bd5499e67327cc490f5fda191dcdb99d85b07764ae6699fc8d5e9d77d8a4751"
+  },
+  "JEE-49-doppobs.png": {
+    "bytes": 324244,
+    "sha256": "4fc1892af4e885c8e40f41a6381465aa5d847f680ddfb98f1bafd8854bb1722e"
+  },
+  "JEE-50-doppsign.png": {
+    "bytes": 287631,
+    "sha256": "1508c8958dcbfde3fdf526c35a7702cad1db4d439dda9112df5fa74da3314831"
+  },
+  "JEE-51-doppsign.png": {
+    "bytes": 344680,
+    "sha256": "2d888a9576f0ec9ebed2bf8c0196274504e39974fd7375fb8a24cdff76fceba6"
+  },
+  "JEE-52-wind.png": {
+    "bytes": 338740,
+    "sha256": "523d7c18b0d7201e3d5c16b4e1e93f7280baed473e266341771b00bdca504edc"
+  },
+  "JEE-53-wind.png": {
+    "bytes": 316650,
+    "sha256": "015d9506d728caeba3eac11ed820c32b55c0a5169882ce54695a309324bfdb70"
+  },
+  "JEE-54-wind.png": {
+    "bytes": 314433,
+    "sha256": "d5d6df7cfd0c494eccf3210c8ceca010040de53d1e8cedee6f3583ee324d4a65"
+  },
+  "JEE-55-dopp2d.png": {
+    "bytes": 336632,
+    "sha256": "fe84d13b9a41480dec9aa508ebef2f2f8d8cfc8e4f01f5112ecd459a04c496b7"
+  },
+  "JEE-56-dopp2d.png": {
+    "bytes": 319692,
+    "sha256": "1047678bfc2d37f767ae415eb3431288588218f21628e9cdc2f6b1bd4b59bc56"
+  },
+  "JEE-57-dopp2d.png": {
+    "bytes": 354773,
+    "sha256": "7977ea1509bd348bc968dc2d681ff485c526d6599539aeabec75eb9fd150830f"
+  },
+  "JEE-58-echo.png": {
+    "bytes": 345569,
+    "sha256": "48ece9e8bfceafd04f534d1426d7b8c562c5650e7860f3e44a4582cb914083aa"
+  },
+  "JEE-59-mach.png": {
+    "bytes": 318274,
+    "sha256": "36f4981814e981974d4a91deac97ba8134402069b67998ca9a3db895b2097b57"
+  },
+  "JEE-60-mach.png": {
+    "bytes": 281913,
+    "sha256": "f0cd03c718a9af170fa90f4f76653c32f06150b65294833df26f9c3089bdac25"
+  },
+  "Olympiad-01-impedance.png": {
+    "bytes": 324944,
+    "sha256": "4d18fba49d7b0a730547798384305a0677a95fe8b4d188e478441e9f4bf3bcc6"
+  },
+  "Olympiad-02-impedance.png": {
+    "bytes": 323194,
+    "sha256": "8d97b7e913abd8d4cb4aaccb8d41d075ec6d489ce74c1e58e52e3ba48e41f471"
+  },
+  "Olympiad-03-impedance.png": {
+    "bytes": 325792,
+    "sha256": "7783cd8ad95c08964a070d5f1149ff473fba0c4eccd46a7f94a32052459fb855"
+  },
+  "Olympiad-04-reflection.png": {
+    "bytes": 307898,
+    "sha256": "1328a3976a41c824ed4050c13d0cf4623baeb5ce52fba5211e470818c58f36a5"
+  },
+  "Olympiad-05-reflection.png": {
+    "bytes": 226990,
+    "sha256": "3cc61ff15b17a2e1f6e1962d0137d9d73d174c05826508fee7eafc9e9d677633"
+  },
+  "Olympiad-06-reflection.png": {
+    "bytes": 307641,
+    "sha256": "1ccdbc7d684666e68ed3afb1423f46075612d191fa62f81c1d50a5165277ef3b"
+  },
+  "Olympiad-07-pipez.png": {
+    "bytes": 327186,
+    "sha256": "ecf3a30b653fb7073db95196149d96fee0ff472f734495de35af7fe116bd068d"
+  },
+  "Olympiad-08-pipez.png": {
+    "bytes": 326644,
+    "sha256": "038515cfc7676dd5ad440fe4dfe0b55f41a84944f4532d362e6c901f018f3917"
+  },
+  "Olympiad-09-phasor.png": {
+    "bytes": 361499,
+    "sha256": "520c85c8a4687d79ee10c82c6286fe3f6c23a7df92aa9f3815af0abf810017c8"
+  },
+  "Olympiad-10-energy.png": {
+    "bytes": 370876,
+    "sha256": "9eb1fc54a0946ddcdcf64693801f508a1cf74453c38ee4b1fad3045d503582ba"
+  },
+  "Olympiad-11-energy.png": {
+    "bytes": 329407,
+    "sha256": "f837596322a2e35e5daa12ffa7ae76d2afa1bf32b52de3aba234fd3175a93fef"
+  },
+  "Olympiad-12-dopfree.png": {
+    "bytes": 285435,
+    "sha256": "45b0cb5a1cf9d440bb09a1152b9f9bd79bb6ac2f6ee46d9a9a9c4cd1573134e9"
+  },
+  "Olympiad-13-dopfree.png": {
+    "bytes": 309060,
+    "sha256": "bdd381e76a70a9f02583df19546549f51ee94ac72b8420da517157104e6886c8"
+  },
+  "Olympiad-14-dopfree.png": {
+    "bytes": 285837,
+    "sha256": "abc7c2781e2bbbbe1decf21b850358ae58ec4154a7668c8537d5e4ef781bee23"
+  },
+  "Olympiad-15-glide.png": {
+    "bytes": 343667,
+    "sha256": "91e8be3d2fd3d6c7ff5fbea82a2681821b13ed5dbd57de9844a7be5bfe852c52"
+  },
+  "Olympiad-16-glide.png": {
+    "bytes": 308154,
+    "sha256": "6c2eb1d9743b2449520377c4199ccf6deb492dd59bb24251af8ac9a8d166b06a"
+  },
+  "Olympiad-17-ranging.png": {
+    "bytes": 336365,
+    "sha256": "2ecf2f9cbbeafb8f59df6ce881e455a3fade13c422c6560ee2988ec836f5c027"
+  },
+  "Olympiad-18-ranging.png": {
+    "bytes": 347410,
+    "sha256": "bf9745a5dc49522efa5f37c05d59d9ba6a50675a12493eaf781f6bcf21dcd294"
+  },
+  "Olympiad-19-wkb.png": {
+    "bytes": 323884,
+    "sha256": "b2afb92c2cf57e68a6d666fe4cfba05751663a041a4d5f7ef938fcc9e1c27405"
+  },
+  "Olympiad-20-solids3.png": {
+    "bytes": 314627,
+    "sha256": "06fa48e0b1fdc9de97ba2edeb7a98c9925e776256d682746ed9da73211a29da3"
+  },
+  "Olympiad-21-solids3.png": {
+    "bytes": 311879,
+    "sha256": "477e389aa8acae0a6f276afef7accceb9dc42991a0723c5f4a00f74ecdbf6f11"
+  },
+  "Olympiad-22-machgeo.png": {
+    "bytes": 339469,
+    "sha256": "f3eb7055898e39781476518bb4a3a4f3e96c89904cbfb045745df0577de29dae"
+  },
+  "Olympiad-23-machgeo.png": {
+    "bytes": 331001,
+    "sha256": "e37de5bbcd449eee54100176f0e026789c9c5237645d48fbe7bbda98222bb49a"
+  },
+  "Olympiad-24-estkit.png": {
+    "bytes": 310632,
+    "sha256": "583d07b4fa03e1990fb525cd094f3b808093133fe8dbe59ee65e5a82e156f77e"
+  },
+  "sound-all-pngs.zip": {
+    "bytes": 26050593,
+    "sha256": "e837873c0777c0dbe91429999f6e6d5369b3c0c49afcc332ddc250ca2b2d5237"
+  },
+  "sound-jee-pngs.zip": {
+    "bytes": 18769670,
+    "sha256": "1fab06c611d1afa4a56e5845a89cccece26fd37b69f7d2cc96e2b32c8ec6f808"
+  },
+  "sound-jee.pdf": {
+    "bytes": 19662951,
+    "sha256": "362ab7214bafffa1858da04c0567d7527a5a0099a32d4fc698f5c79fdfde0c83"
+  },
+  "sound-olympiad-pngs.zip": {
+    "bytes": 7280945,
+    "sha256": "48569dce1921b1301cf0e0a2326a47fcf13cc51d470b629c743f34fb6553dbe4"
+  },
+  "sound-olympiad.pdf": {
+    "bytes": 7660081,
+    "sha256": "08e12601a96fa4efcf2a0d5a684c7726d5e2fe01335439cf24df5d4b2c8c9832"
+  },
+  "sound-short-notes.pdf": {
+    "bytes": 27322300,
+    "sha256": "812dbb73b021d4f57afb586849f507b0031eb7cf9b4cd16168fdaabaafb01614"
+  }
+}
