@@ -1,0 +1,1046 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "What a charge counts",
+      "used_px": 888,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Touching is not equal sharing",
+      "used_px": 817,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Induction: sequence matters",
+      "used_px": 695,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Models and units",
+      "used_px": 898,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The displacement chooses direction",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Symmetry before arithmetic",
+      "used_px": 808,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equilateral triangle: one sign flip",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Electric versus gravitational scales",
+      "used_px": 779,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two like charges: null between",
+      "used_px": 755,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Unlike charges: search outside",
+      "used_px": 736,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "All three free charges must balance",
+      "used_px": 786,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Square and triangle centre charges",
+      "used_px": 814,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Test charge and superposition",
+      "used_px": 795,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Choose the measure",
+      "used_px": 717,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Radial density is not total charge",
+      "used_px": 858,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lines, symmetry and missing pieces",
+      "used_px": 752,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive the axial result",
+      "used_px": 785,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Peak and limiting behaviour",
+      "used_px": 789,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Scalar route and small motion",
+      "used_px": 836,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Example and energy amplitude",
+      "used_px": 765,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "An unambiguous component formula",
+      "used_px": 779,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Perpendicular bisector and line limit",
+      "used_px": 752,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point beyond an end",
+      "used_px": 753,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Potential of a symmetric rod",
+      "used_px": 783,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform arc at its centre",
+      "used_px": 778,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Special cases and a sign split",
+      "used_px": 865,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A small gap is subtraction",
+      "used_px": 790,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Angular modulation and hemisphere",
+      "used_px": 720,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Disc field from a radial integral",
+      "used_px": 683,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Potential valid on both sides",
+      "used_px": 680,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Annulus as two discs",
+      "used_px": 729,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Infinite-sheet limit and its cost",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact axial and equatorial fields",
+      "used_px": 890,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Far-field vector and magnitude",
+      "used_px": 821,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Potential and spherical components",
+      "used_px": 786,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Control approximation error",
+      "used_px": 651,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Torque is a couple",
+      "used_px": 710,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Slow rotation and energy exchange",
+      "used_px": 714,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Small angular oscillations",
+      "used_px": 801,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A permanent dipole in a gradient",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration and work-energy",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transverse deflection in plates",
+      "used_px": 845,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration voltage and screen",
+      "used_px": 852,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "An example and speed validity",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charged pendulum in horizontal E",
+      "used_px": 745,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Oscillations about the tilted line",
+      "used_px": 806,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two charged bobs on strings",
+      "used_px": 767,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Oil drops: a measured elementary step",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Area vectors and projection",
+      "used_px": 715,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point-source solid angle",
+      "used_px": 780,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gauss is always true, not always enough",
+      "used_px": 761,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A circular disc viewed from a charge",
+      "used_px": 765,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Central and corner charge",
+      "used_px": 833,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mid-edge charge: two distinct faces",
+      "used_px": 872,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rectangle solid-angle tool",
+      "used_px": 733,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "External charge and broken symmetry",
+      "used_px": 751,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The three-step protocol",
+      "used_px": 761,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherical symmetry",
+      "used_px": 789,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Long cylinder and infinite line",
+      "used_px": 699,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sheet pillbox and gravity analogy",
+      "used_px": 891,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thin shell: field and potential",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform insulating solid sphere",
+      "used_px": 749,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reading the graphs",
+      "used_px": 766,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Superpose concentric shells",
+      "used_px": 753,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Power-law radial density",
+      "used_px": 817,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform field in an offset spherical hole",
+      "used_px": 837,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cylinder analogue",
+      "used_px": 699,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Full versus partial cavity region",
+      "used_px": 745,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform solid insulating cylinder",
+      "used_px": 728,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hollow cylindrical conductor",
+      "used_px": 760,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coaxial conductors and voltage",
+      "used_px": 786,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Voltage limits and infinite references",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "One insulating sheet",
+      "used_px": 699,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two sheets of arbitrary signed density",
+      "used_px": 722,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two isolated conducting plates",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Conductor factor of two",
+      "used_px": 717,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Inside and outside",
+      "used_px": 664,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Potential referred to the centre",
+      "used_px": 736,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Particle motion inside a slab",
+      "used_px": 801,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A removed layer and signed sums",
+      "used_px": 701,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The equilibrium chain",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boundary conditions",
+      "used_px": 828,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Surface force without self-force",
+      "used_px": 761,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sharp points and physical limits",
+      "used_px": 748,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "One charge inside an isolated shell",
+      "used_px": 656,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "What the exterior can know",
+      "used_px": 694,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Grounding the conductor",
+      "used_px": 694,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Empty cavity and external sources",
+      "used_px": 753,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Conservative field and voltage",
+      "used_px": 974,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Work signs and a fixed source",
+      "used_px": 775,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Zeros: three different statements",
+      "used_px": 650,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point sources and gauges",
+      "used_px": 768,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "One general scalar integral",
+      "used_px": 761,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ring and disc summary with checks",
+      "used_px": 782,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sphere, shell and finite annulus",
+      "used_px": 807,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equipotentials and local field",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cartesian and radial derivatives",
+      "used_px": 783,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Poisson and Laplace equations",
+      "used_px": 788,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Constrained one-dimensional equilibrium",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Turning points and accessible regions",
+      "used_px": 699,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Build the system charge by charge",
+      "used_px": 948,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Triangle and square standard results",
+      "used_px": 748,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Disassembly and released energy",
+      "used_px": 743,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Force by differentiating energy",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Final charges and fields",
+      "used_px": 720,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Initial voltages and capacitance weights",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Where the lost energy goes",
+      "used_px": 734,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A worked size contrast",
+      "used_px": 820,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The two potential equations",
+      "used_px": 664,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ground the outer shell",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ground the inner sphere",
+      "used_px": 773,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charge in a cavity: potential constants",
+      "used_px": 757,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charge a conducting sphere slowly",
+      "used_px": 866,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Assemble a uniform solid sphere",
+      "used_px": 817,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy density and sign",
+      "used_px": 902,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Atomic and nuclear energy checks",
+      "used_px": 777,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The precise no-trapping statement",
+      "used_px": 814,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hessian trace and signs",
+      "used_px": 825,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ring centre expansion",
+      "used_px": 752,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Time scales and legitimate exceptions",
+      "used_px": 904,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Construction plus uniqueness",
+      "used_px": 664,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Force and the moving-image factor",
+      "used_px": 792,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Surface charge distribution",
+      "used_px": 883,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy and scale estimate",
+      "used_px": 764,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Grounded sphere image",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Grounded attraction and energy",
+      "used_px": 796,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Isolated neutral sphere",
+      "used_px": 769,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Isolated sphere of specified charge",
+      "used_px": 826,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pressure from two independent routes",
+      "used_px": 791,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Separating the hemispheres",
+      "used_px": 785,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Soap bubble: pressure ledger",
+      "used_px": 763,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Zero overpressure: a scale, not a verdict",
+      "used_px": 722,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rayleigh limit and its assumptions",
+      "used_px": 857,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Size scales at the limit",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two equal drops merge: endpoint energy",
+      "used_px": 804,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energetic threshold is not a trajectory",
+      "used_px": 745,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "First terms of a far-field expansion",
+      "used_px": 843,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A simple quadrupole along its axis",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Induced dipole: why energy has a half",
+      "used_px": 776,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Small dielectric sphere and lifting estimate",
+      "used_px": 796,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ring potential away from its axis",
+      "used_px": 840,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Elliptic representation and checks",
+      "used_px": 813,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniform cube: a no-integral ratio",
+      "used_px": 780,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numerical integrals: independent checks",
+      "used_px": 787,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A perturbed exponent needs a length scale",
+      "used_px": 913,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why a shell gives a null test",
+      "used_px": 760,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "High-voltage dome: useful scaling",
+      "used_px": 846,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Atomic and nuclear applicability",
+      "used_px": 911,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

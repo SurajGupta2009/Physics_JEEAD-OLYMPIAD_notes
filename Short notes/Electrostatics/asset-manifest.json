@@ -1,0 +1,174 @@
+{
+  "JEE-01-charge.png": {
+    "bytes": 286027,
+    "sha256": "00a4544c04a50a4e1b381ea84fb004e00ff45127bdd698846c73806ba6b3da77"
+  },
+  "JEE-02-coulomb.png": {
+    "bytes": 256014,
+    "sha256": "620cd706b093f40ff474b3109f2c6ac04865f4893dab3bdbd1750342b17784cd"
+  },
+  "JEE-03-equilibrium.png": {
+    "bytes": 257286,
+    "sha256": "38fc67e9dea99688241156456cb9678c69ddb213fcb3fac7b66908f8b62c62b9"
+  },
+  "JEE-04-field-density.png": {
+    "bytes": 280840,
+    "sha256": "fe7d1b8add3ebb06f8c2161dbaa1b745a2e1b39ee3e0ce6220a63acdd246c7b2"
+  },
+  "JEE-05-ring.png": {
+    "bytes": 258631,
+    "sha256": "ce2e363c3ab896ba928be87f3ecc8e995646e63db124bb05299aa0ad514c1352"
+  },
+  "JEE-06-rod.png": {
+    "bytes": 256571,
+    "sha256": "0f652183375e3855f0c1bd34f6be74b1bd51608d0e84266f6fb2fbef07096da7"
+  },
+  "JEE-07-arc.png": {
+    "bytes": 268884,
+    "sha256": "6d8b2914c738765a02b8ae2e11069a469463d20623259f4514f0a0ae14ab21da"
+  },
+  "JEE-08-disc.png": {
+    "bytes": 252921,
+    "sha256": "e067abb194ef250cff46f8d2bcb1d27772bb36dab5d882a5b73bb662fe6dceb7"
+  },
+  "JEE-09-dipole-field.png": {
+    "bytes": 264172,
+    "sha256": "59d2ba53c724f42d050cac217547ca66c5638893f6f5269878f1308b8cd1a702"
+  },
+  "JEE-10-dipole-action.png": {
+    "bytes": 243003,
+    "sha256": "61a3d6f01830d530d7c2918e4e942edeaa63287cbce2a400ea703b5fcdcf4d20"
+  },
+  "JEE-11-motion.png": {
+    "bytes": 273263,
+    "sha256": "84e4c6d509ce4a12a3c37bd9db7234af45c1d934c2599e425db3cf7166eaa618"
+  },
+  "JEE-12-mechanics.png": {
+    "bytes": 247358,
+    "sha256": "43bcb144e7fa91de23178258959920227087ffccda963e73236d25bd0ae63113"
+  },
+  "JEE-13-flux.png": {
+    "bytes": 234678,
+    "sha256": "627477a07e05edfd200f9cc7e823c4b0448035408de804cc7d39e2bc3398eead"
+  },
+  "JEE-14-flux-cube.png": {
+    "bytes": 275497,
+    "sha256": "e2e3eeb536a917bd14c56bf55ef5ed51d2ae2b79ac5ccf9284ac81c79a548266"
+  },
+  "JEE-15-gauss.png": {
+    "bytes": 265980,
+    "sha256": "f93bf3d14bc792716461baeed1b626a88eda69a6bf4001c167c6c085c5c9b21f"
+  },
+  "JEE-16-spheres.png": {
+    "bytes": 260372,
+    "sha256": "1187619f8d8a8b1d1de8851753536655aebe6878ae30d1643ca1b7ea36cc5803"
+  },
+  "JEE-17-cavity-superposition.png": {
+    "bytes": 266681,
+    "sha256": "9d1c05cf88dfce908eca6d36b40e11831559e634593f1e588bc986aa2519a707"
+  },
+  "JEE-18-cylinders.png": {
+    "bytes": 255123,
+    "sha256": "3dfefc6513de1b8837acf4e17d1eba498aca3c84e6d9631c3e107e992b446f9e"
+  },
+  "JEE-19-sheets.png": {
+    "bytes": 261587,
+    "sha256": "3033f56e8dd003b2e50d3fb6cb7350aaeaf4aabd9821ad61d937b699f32c09b3"
+  },
+  "JEE-20-slab.png": {
+    "bytes": 255577,
+    "sha256": "4d882218aab02327916285ce657629e54d91515f5844fa7348f51b826d08c576"
+  },
+  "JEE-21-conductor.png": {
+    "bytes": 272302,
+    "sha256": "9344302cf55d0b617c55afa6e3b472429e68d600101e47d3cfbdf49858930ed3"
+  },
+  "JEE-22-conducting-cavity.png": {
+    "bytes": 258336,
+    "sha256": "3b0b1ad1afd11eb573a7ac2f15767e447ac1bc1712e18020335eb80c3e30ece8"
+  },
+  "JEE-23-potential.png": {
+    "bytes": 266630,
+    "sha256": "115f83e8afd7e70a912862e0022c3ee3a2a100946ee57425049f0682f06db2e3"
+  },
+  "JEE-24-potential-distributions.png": {
+    "bytes": 272038,
+    "sha256": "0d9032d24e88c80d84fb8adc07fe7d97147ff925f87c42221f4251b966bbc8bb"
+  },
+  "JEE-25-gradient.png": {
+    "bytes": 269009,
+    "sha256": "84bb27717ffc4c29618754579c925173c05bb61d44e6f10ee4433efb20f88774"
+  },
+  "JEE-26-mutual-energy.png": {
+    "bytes": 280344,
+    "sha256": "a648572a66444f21689fec5aff755a67a6174f385895547faea76bba1164b686"
+  },
+  "JEE-27-sharing.png": {
+    "bytes": 267689,
+    "sha256": "def745f7a5318832ab428c57876f0843b86c72a606e91abe18306bd1cd5b3691"
+  },
+  "JEE-28-concentric.png": {
+    "bytes": 253674,
+    "sha256": "4d7ae075a0033b8b8a27487dda2608eeb544df71aee75c43da4412dd2db8964e"
+  },
+  "JEE-29-self-energy.png": {
+    "bytes": 274435,
+    "sha256": "2a4a8adf39d3139f3b11618e47c4511d3976fd3851b2b2613c89fb8894e9e59f"
+  },
+  "Olympiad-01-laplace.png": {
+    "bytes": 269053,
+    "sha256": "f27c584b5bdf655e3e03a8e86806ad1f8c3eb6fad6157f587e5ee1489351860f"
+  },
+  "Olympiad-02-image-plane.png": {
+    "bytes": 265524,
+    "sha256": "01837ad6775a5c812e6e76af97d63e74db60f50689b41930cd262e828c0340b6"
+  },
+  "Olympiad-03-image-sphere.png": {
+    "bytes": 257317,
+    "sha256": "60b8749474c0ba4248e23532432a251783dfc9054e8f34e96e4c5333564b3b1d"
+  },
+  "Olympiad-04-pressure-bubble.png": {
+    "bytes": 259768,
+    "sha256": "a2e23f0ced1f9a3bc2580e884ddb062971122e1c58c1c95e9d53c68b6a3aad0e"
+  },
+  "Olympiad-05-drops.png": {
+    "bytes": 266254,
+    "sha256": "e38d172d37bd2bc796e3d23690bdf8bae0e2ac7f7b6be1afe6ab24f25bb0d618"
+  },
+  "Olympiad-06-multipoles.png": {
+    "bytes": 270522,
+    "sha256": "336496c7baf139daa0db3a88af59c88212ab57e036abef4d811edee8bbe51b3b"
+  },
+  "Olympiad-07-offaxis.png": {
+    "bytes": 265479,
+    "sha256": "f24a42d78e25e1f3af3e124a2f2968f792c92213579d51f46854d15bebd2bcd1"
+  },
+  "Olympiad-08-measurements.png": {
+    "bytes": 289969,
+    "sha256": "af1872eb10fd18318048686c8ef112a9b8004339fb10079bde237ba15477ec41"
+  },
+  "electrostatics-all-pngs.zip": {
+    "bytes": 9117449,
+    "sha256": "c660c89b16dd037ffc6ff1d9d8a0f4a7eea22cb3c48d7828b57e9094e769e2b5"
+  },
+  "electrostatics-jee-pngs.zip": {
+    "bytes": 7121168,
+    "sha256": "916a8e8a81c73af3a0df19df5ffd664243e863976c374e37ef71fba6be848cfd"
+  },
+  "electrostatics-jee.pdf": {
+    "bytes": 7561852,
+    "sha256": "9cbce43f81e939cf001d91f23a339fb593cb2ca08dfaee7caa67e2adb2f151c6"
+  },
+  "electrostatics-olympiad-pngs.zip": {
+    "bytes": 1996303,
+    "sha256": "7aeca9c314b4ef5f5c79379acc48d3c97a3c24425ff535932e39198fe3a378d0"
+  },
+  "electrostatics-olympiad.pdf": {
+    "bytes": 2126702,
+    "sha256": "85583cbbd76c67a56e1d387742229bfe6bacb6d880b13fb249bd1e8eb4fa66b0"
+  },
+  "electrostatics-short-notes.pdf": {
+    "bytes": 9687680,
+    "sha256": "a17d4c864bfd74e5da41485ce648642db45a5b47ac6d34a0954a3fbf2a44d6e2"
+  }
+}

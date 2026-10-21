@@ -1,0 +1,477 @@
+{
+  "status": "PASS",
+  "independent_checks": 94,
+  "method": "direct Gaussian quadrature, Cartesian sums, finite differences and boundary residuals",
+  "checks": [
+    {
+      "name": "ring -dV/dx at 0.15",
+      "value": 0.1450762375732051,
+      "expected": 0.14507623758459132
+    },
+    {
+      "name": "disc ring-element field integral at 0.15",
+      "value": 5.351134752867878,
+      "expected": 5.3511347528679085
+    },
+    {
+      "name": "disc -dV/dx at 0.15",
+      "value": 0.8516595470686726,
+      "expected": 0.8516595470697554
+    },
+    {
+      "name": "annulus -dV/dx at 0.15",
+      "value": 0.2125579372513897,
+      "expected": 0.21255793732471115
+    },
+    {
+      "name": "finite rod bisector integral at 0.15",
+      "value": 13.18581803824388,
+      "expected": 13.185818038243967
+    },
+    {
+      "name": "finite rod -dV/dd at 0.15",
+      "value": 13.18581805800356,
+      "expected": 13.185818038243967
+    },
+    {
+      "name": "end-on rod integral at 0.15",
+      "value": 5.79710144927547,
+      "expected": 5.797101449275363
+    },
+    {
+      "name": "ring -dV/dx at 0.7",
+      "value": 0.38487405660259094,
+      "expected": 0.38487405661968344
+    },
+    {
+      "name": "disc ring-element field integral at 0.7",
+      "value": 2.6800151308551525,
+      "expected": 2.6800151308551614
+    },
+    {
+      "name": "disc -dV/dx at 0.7",
+      "value": 0.4265376556400468,
+      "expected": 0.4265376556366717
+    },
+    {
+      "name": "annulus -dV/dx at 0.7",
+      "value": 0.48338304647899116,
+      "expected": 0.4833830464786289
+    },
+    {
+      "name": "finite rod bisector integral at 0.7",
+      "value": 2.340662630054392,
+      "expected": 2.3406626300544016
+    },
+    {
+      "name": "finite rod -dV/dd at 0.7",
+      "value": 2.3406626302513445,
+      "expected": 2.3406626300544016
+    },
+    {
+      "name": "end-on rod integral at 0.7",
+      "value": 0.840336134453784,
+      "expected": 0.8403361344537815
+    },
+    {
+      "name": "ring -dV/dx at 2.4",
+      "value": 0.13654984069577658,
+      "expected": 0.13654984069185253
+    },
+    {
+      "name": "disc ring-element field integral at 2.4",
+      "value": 0.4833219467061217,
+      "expected": 0.4833219467061224
+    },
+    {
+      "name": "disc -dV/dx at 2.4",
+      "value": 0.07692307690820854,
+      "expected": 0.07692307692307698
+    },
+    {
+      "name": "annulus -dV/dx at 2.4",
+      "value": 0.21075914016233097,
+      "expected": 0.21075914014022926
+    },
+    {
+      "name": "finite rod bisector integral at 2.4",
+      "value": 0.32051282051282026,
+      "expected": 0.3205128205128205
+    },
+    {
+      "name": "finite rod -dV/dd at 2.4",
+      "value": 0.3205128205174823,
+      "expected": 0.3205128205128205
+    },
+    {
+      "name": "end-on rod integral at 2.4",
+      "value": 0.1225490196078432,
+      "expected": 0.12254901960784313
+    },
+    {
+      "name": "rod parallel a=0.7",
+      "value": -0.32054719543755134,
+      "expected": -0.32054719543755494
+    },
+    {
+      "name": "rod perpendicular a=0.7",
+      "value": 1.908434687491215,
+      "expected": 1.9084346874912217
+    },
+    {
+      "name": "rod parallel a=2",
+      "value": 1.011798842389272,
+      "expected": 1.011798842389284
+    },
+    {
+      "name": "rod perpendicular a=2",
+      "value": 2.3417331345351826,
+      "expected": 2.341733134535182
+    },
+    {
+      "name": "arc bisector integral angle=0.4",
+      "value": 0.39733866159012243,
+      "expected": 0.39733866159012243
+    },
+    {
+      "name": "arc bisector integral angle=1.5707963267948966",
+      "value": 1.4142135623730931,
+      "expected": 1.414213562373095
+    },
+    {
+      "name": "arc bisector integral angle=3.141592653589793",
+      "value": 1.9999999999999871,
+      "expected": 2.0
+    },
+    {
+      "name": "arc bisector integral angle=6.283185307179586",
+      "value": -4.0082557530142553e-14,
+      "expected": 2.4492935982947064e-16
+    },
+    {
+      "name": "dipole exact axial pair sum r=1.2",
+      "value": 1.694795565284938,
+      "expected": 1.6947955652849376
+    },
+    {
+      "name": "dipole exact equator r=1.2",
+      "value": -0.4551661356395084,
+      "expected": -0.4551661356395084
+    },
+    {
+      "name": "dipole exact axial pair sum r=2.5",
+      "value": 0.1388888888888889,
+      "expected": 0.1388888888888889
+    },
+    {
+      "name": "dipole exact equator r=2.5",
+      "value": -0.06034342619636432,
+      "expected": -0.06034342619636432
+    },
+    {
+      "name": "dipole exact axial pair sum r=6",
+      "value": 0.009389212186414985,
+      "expected": 0.009389212186414983
+    },
+    {
+      "name": "dipole exact equator r=6",
+      "value": -0.004581819578137377,
+      "expected": -0.004581819578137377
+    },
+    {
+      "name": "dipole angular gradient theta=0.3",
+      "value": 0.036940025832654655,
+      "expected": 0.03694002583266744
+    },
+    {
+      "name": "dipole torque from energy theta=0.3",
+      "value": -0.29552020666123724,
+      "expected": -0.29552020666133955
+    },
+    {
+      "name": "dipole angular gradient theta=1.1",
+      "value": 0.11140092000677669,
+      "expected": 0.11140092000767943
+    },
+    {
+      "name": "dipole torque from energy theta=1.1",
+      "value": -0.8912073600542135,
+      "expected": -0.8912073600614354
+    },
+    {
+      "name": "dipole angular gradient theta=1.5707963267948966",
+      "value": 0.12499999999873557,
+      "expected": 0.125
+    },
+    {
+      "name": "dipole torque from energy theta=1.5707963267948966",
+      "value": -0.9999999999898845,
+      "expected": -1.0
+    },
+    {
+      "name": "radial density Q n=0 r=0.2",
+      "value": 0.03351032163829124,
+      "expected": 0.03351032163829113
+    },
+    {
+      "name": "radial density Q n=0 r=0.8",
+      "value": 2.1446605848506395,
+      "expected": 2.1446605848506324
+    },
+    {
+      "name": "radial density Q n=1 r=0.2",
+      "value": 0.005026548245743702,
+      "expected": 0.00502654824574367
+    },
+    {
+      "name": "radial density Q n=1 r=0.8",
+      "value": 1.2867963509103877,
+      "expected": 1.2867963509103795
+    },
+    {
+      "name": "radial density Q n=2 r=0.2",
+      "value": 0.000804247719318995,
+      "expected": 0.0008042477193189873
+    },
+    {
+      "name": "radial density Q n=2 r=0.8",
+      "value": 0.8235496645826509,
+      "expected": 0.823549664582643
+    },
+    {
+      "name": "uniform sphere -dV/dr at 0.2",
+      "value": 0.2000000000057511,
+      "expected": 0.2
+    },
+    {
+      "name": "uniform sphere -dV/dr at 0.7",
+      "value": 0.6999999999979244,
+      "expected": 0.7
+    },
+    {
+      "name": "uniform sphere -dV/dr at 1.4",
+      "value": 0.5102040816606923,
+      "expected": 0.5102040816326532
+    },
+    {
+      "name": "uniform sphere -dV/dr at 3",
+      "value": 0.11111111111461457,
+      "expected": 0.1111111111111111
+    },
+    {
+      "name": "slab signed -dV/dx at -2",
+      "value": -1.0000000000065512,
+      "expected": -1.0
+    },
+    {
+      "name": "slab signed -dV/dx at -0.5",
+      "value": -0.4999999999991122,
+      "expected": -0.5
+    },
+    {
+      "name": "slab signed -dV/dx at 0.5",
+      "value": 0.4999999999991122,
+      "expected": 0.5
+    },
+    {
+      "name": "slab signed -dV/dx at 2",
+      "value": 1.0000000000065512,
+      "expected": 1.0
+    },
+    {
+      "name": "insulating spherical cavity component 0",
+      "value": 0.8377580409572783,
+      "expected": 0.8377580409572781
+    },
+    {
+      "name": "insulating spherical cavity component 1",
+      "value": -0.41887902047863923,
+      "expected": -0.41887902047863906
+    },
+    {
+      "name": "insulating spherical cavity component 2",
+      "value": 1.2566370614359172,
+      "expected": 1.2566370614359172
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=0.0",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=0.0",
+      "value": 0.4347826086956522,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=0.39269908169872414",
+      "value": -1.1102230246251565e-16,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=0.39269908169872414",
+      "value": 0.4347826086956521,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=0.7853981633974483",
+      "value": -1.1102230246251565e-16,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=0.7853981633974483",
+      "value": 0.4347826086956521,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=1.1780972450961724",
+      "value": 5.551115123125783e-17,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=1.1780972450961724",
+      "value": 0.4347826086956523,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=1.5707963267948966",
+      "value": -5.551115123125783e-17,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=1.5707963267948966",
+      "value": 0.43478260869565216,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=1.9634954084936207",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=1.9634954084936207",
+      "value": 0.4347826086956522,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=2.356194490192345",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=2.356194490192345",
+      "value": 0.4347826086956522,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=2.748893571891069",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=2.748893571891069",
+      "value": 0.4347826086956522,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "grounded sphere V(boundary) theta=3.141592653589793",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "neutral sphere V(boundary) theta=3.141592653589793",
+      "value": 0.4347826086956522,
+      "expected": 0.4347826086956522
+    },
+    {
+      "name": "plane image energy gradient h=0.3",
+      "value": -2.777777780865742,
+      "expected": -2.7777777777777777
+    },
+    {
+      "name": "plane image energy gradient h=1",
+      "value": -0.25000000002523004,
+      "expected": -0.25
+    },
+    {
+      "name": "plane image energy gradient h=3",
+      "value": -0.02777777777865364,
+      "expected": -0.027777777777777776
+    },
+    {
+      "name": "sphere image force energy d=1.3",
+      "value": -2.7305188016801814,
+      "expected": -2.7305187985717274
+    },
+    {
+      "name": "neutral sphere two-image force d=1.3",
+      "value": -2.2753526629322187,
+      "expected": -2.275352662932219
+    },
+    {
+      "name": "sphere image force energy d=2",
+      "value": -0.22222222224865804,
+      "expected": -0.2222222222222222
+    },
+    {
+      "name": "neutral sphere two-image force d=2",
+      "value": -0.09722222222222221,
+      "expected": -0.09722222222222221
+    },
+    {
+      "name": "sphere image force energy d=4",
+      "value": -0.0177777777776722,
+      "expected": -0.017777777777777778
+    },
+    {
+      "name": "neutral sphere two-image force d=4",
+      "value": -0.0021527777777777778,
+      "expected": -0.0021527777777777778
+    },
+    {
+      "name": "plane density integrates to minus source charge",
+      "value": -0.9999999999999987,
+      "expected": -1.0
+    },
+    {
+      "name": "hemisphere projected area integral",
+      "value": 3.141592653589773,
+      "expected": 3.141592653589793
+    },
+    {
+      "name": "pressure from shell energy R=0.6",
+      "value": 0.3070118501843314,
+      "expected": 0.3070118501001068
+    },
+    {
+      "name": "pressure from shell energy R=1.7",
+      "value": 0.004763919945167569,
+      "expected": 0.00476391994504063
+    },
+    {
+      "name": "ring transverse potential curvature",
+      "value": 0.5000002811783588,
+      "expected": 0.5
+    },
+    {
+      "name": "ring axial potential curvature",
+      "value": -0.9999992500731025,
+      "expected": -1.0
+    },
+    {
+      "name": "ring numerical Hessian trace",
+      "value": 1.312283615106935e-06,
+      "expected": 0.0
+    },
+    {
+      "name": "cube 24/96 point quadrature convergence",
+      "value": 1.1900386819897766,
+      "expected": 1.1900386819897768
+    },
+    {
+      "name": "cube 48/96 point quadrature convergence",
+      "value": 1.1900386819897766,
+      "expected": 1.1900386819897768
+    }
+  ]
+}

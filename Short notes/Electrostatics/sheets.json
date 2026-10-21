@@ -1,0 +1,4101 @@
+[
+  {
+    "section": "JEE",
+    "part_page": 1,
+    "slug": "JEE-01-charge",
+    "title": "Charge: conservation before calculation",
+    "subtitle": "SI units; electrostatic equilibrium means charge redistribution has finished.",
+    "source": "Source §§2.1-2.4, 3.1; C1; charging traps",
+    "diagrams": [
+      "charge-a",
+      "charge-b"
+    ],
+    "takeaway": "Isolated total charge is conserved. Grounding conserves charge only after including Earth.",
+    "cards": [
+      {
+        "title": "What a charge counts",
+        "items": [
+          [
+            "m",
+            "q=ne,\\quad e=1.602\\times10^{-19}\\ \\mathrm C"
+          ],
+          [
+            "m",
+            "N_e=|q|/e"
+          ],
+          [
+            "p",
+            "Positive charge is an electron deficit; negative charge is an excess in the ordinary metal model. Charge is a signed scalar, additive and conserved in an isolated system. One microcoulomb represents about 6.24 trillion elementary charges."
+          ],
+          [
+            "why",
+            "Quantisation matters for microscopic transfers; macroscopic charges can be treated as continuous because the elementary step is tiny."
+          ],
+          [
+            "trap",
+            "Electrons dominate metal charging, but ions and charged fragments can transfer too. Electron-only language is not a universal law."
+          ]
+        ]
+      },
+      {
+        "title": "Touching is not equal sharing",
+        "items": [
+          [
+            "m",
+            "V_1=V_2\\quad\\mathrm{at\\ equilibrium}"
+          ],
+          [
+            "m",
+            "Q_1+Q_2=Q_{\\rm total}"
+          ],
+          [
+            "p",
+            "Contact allows mobile charge to move until connected conductors share potential. Equal final charges require matching geometry and surroundings; equal radii alone do not suffice if external influences break symmetry."
+          ],
+          [
+            "why",
+            "Charge moves in response to field and electrochemical conditions, not to a rule demanding equal numbers of electrons on arbitrary objects."
+          ],
+          [
+            "trap",
+            "Far-separated identical spheres are the usual equal-sharing approximation. Close spheres can polarise strongly."
+          ]
+        ]
+      },
+      {
+        "title": "Induction: sequence matters",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm neutral}=0\\quad\\mathrm{before\\ grounding}"
+          ],
+          [
+            "p",
+            "A negative rod repels electrons in a nearby neutral metal sphere. Ground the sphere while the rod remains: electrons leave. Disconnect Earth FIRST, then remove the rod; a net positive charge remains and redistributes."
+          ],
+          [
+            "why",
+            "The rod polarises the sphere but need not give away charge. Earth supplies or removes the charge that remains."
+          ],
+          [
+            "trap",
+            "Remove the rod while Earth is still connected and charge can flow back. A polarised neutral conductor has separated charge, not newly created net charge."
+          ]
+        ]
+      },
+      {
+        "title": "Models and units",
+        "items": [
+          [
+            "m",
+            "k=(4\\pi\\varepsilon_0)^{-1}\\simeq8.99\\times10^9"
+          ],
+          [
+            "m",
+            "\\varepsilon_0=8.85\\times10^{-12}\\ \\mathrm{F/m}"
+          ],
+          [
+            "p",
+            "Use metres, coulombs and newtons before substituting. Point charges idealise sizes much smaller than relevant separations. Conductors redistribute free charge; insulating distributions generally retain prescribed charge locations."
+          ],
+          [
+            "why",
+            "A model determines which quantities are allowed to change. Fixed source charges and freely redistributing metal are different problems."
+          ],
+          [
+            "trap",
+            "A homogeneous dielectric replacement k/K is not a universal rule for interfaces or conductors; dielectric polarisation belongs mainly to the capacitor companion."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 2,
+    "slug": "JEE-02-coulomb",
+    "title": "Coulomb forces: signed vectors",
+    "subtitle": "Positions are measured from one chosen origin; force on i is due to all j other than i.",
+    "source": "Source §§3.2-3.3; E1; Q1-Q2",
+    "diagrams": [
+      "coulomb-a",
+      "coulomb-b"
+    ],
+    "takeaway": "Resolve every pair separately, then add components. A sign flip can change both size and direction.",
+    "cards": [
+      {
+        "title": "The displacement chooses direction",
+        "items": [
+          [
+            "m",
+            "\\mathbf F_i=\\sum_{j\\ne i}kq_iq_j\\frac{\\mathbf r_i-\\mathbf r_j}{|\\mathbf r_i-\\mathbf r_j|^3}"
+          ],
+          [
+            "p",
+            "The vector points from source j to receiver i. With like signs its coefficient is positive, so the force is repulsive. With unlike signs it reverses and is attractive. Each pair has equal and opposite forces."
+          ],
+          [
+            "why",
+            "The signed formula carries both the inverse-square magnitude and the geometric direction, without a second sign decision."
+          ],
+          [
+            "trap",
+            "Do not use a signed q and then reverse the force again by an attraction rule. That counts the negative sign twice."
+          ]
+        ]
+      },
+      {
+        "title": "Symmetry before arithmetic",
+        "items": [
+          [
+            "m",
+            "F_{\\rm res}=\\sqrt{F_x^2+F_y^2}"
+          ],
+          [
+            "m",
+            "\\tan\\phi=F_y/F_x"
+          ],
+          [
+            "p",
+            "Mirror-related source pairs can cancel one component. At the centre of a regular polygon with identical corner charges the field is zero. Removing one corner charge leaves the negative of that charge's former field."
+          ],
+          [
+            "why",
+            "The complete symmetric configuration is a useful zero from which to subtract a missing contribution."
+          ],
+          [
+            "trap",
+            "Use a quadrant-aware angle, not just a positive arctangent. Zero field at one point does not mean zero potential there."
+          ]
+        ]
+      },
+      {
+        "title": "Equilateral triangle: one sign flip",
+        "items": [
+          [
+            "m",
+            "F_0=kq^2/a^2"
+          ],
+          [
+            "m",
+            "F_{+++}=\\sqrt3F_0,\\quad F_{++-}=F_0"
+          ],
+          [
+            "p",
+            "Let positive charges sit at (0,0) and (a,0), apex at (a/2,sqrt(3)a/2). On the left charge, flipping the apex to negative gives components (-F0/2,+sqrt(3)F0/2): direction 120 degrees from +x."
+          ],
+          [
+            "why",
+            "The two contributing forces change from a 60-degree to a 120-degree included angle, so the resultant magnitude changes."
+          ],
+          [
+            "trap",
+            "The source example gives the wrong below-base direction after the sign flip. Reconstruct coordinates; do not memorise that arrow."
+          ]
+        ]
+      },
+      {
+        "title": "Electric versus gravitational scales",
+        "items": [
+          [
+            "m",
+            "F_e/F_g=ke^2/(Gm_em_p)\\simeq2.3\\times10^{39}"
+          ],
+          [
+            "m",
+            "ke^2\\simeq1.44\\ \\mathrm{eV\\,nm}"
+          ],
+          [
+            "p",
+            "The enormous electron-proton force ratio explains why electrostatic interactions control atomic scales. Opposite electrical signs attract; gravity between ordinary masses does not have the same cancellation freedom."
+          ],
+          [
+            "why",
+            "Coulomb and gravitational forces have the same inverse-square geometry but different coupling constants and signs."
+          ],
+          [
+            "trap",
+            "A coulomb is a huge laboratory static charge. Convert micro- and nanocoulombs before squaring them."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 3,
+    "slug": "JEE-03-equilibrium",
+    "title": "Equilibrium is not stability",
+    "subtitle": "Source charges held fixed unless the question explicitly asks all charges to balance.",
+    "source": "Source §3.11; E8; Q13-Q16",
+    "diagrams": [
+      "equilibrium-a",
+      "equilibrium-b"
+    ],
+    "takeaway": "Balance the field first; then test allowed displacements and the motion of the sources.",
+    "cards": [
+      {
+        "title": "Two like charges: null between",
+        "items": [
+          [
+            "m",
+            "x=\\frac{L\\sqrt{|q_1|}}{\\sqrt{|q_1|}+\\sqrt{|q_2|}}"
+          ],
+          [
+            "p",
+            "Place like charges at x=0 and L. Between them fields oppose; equality of their inverse-square magnitudes gives the stated distance from q1. The zero lies closer to the smaller magnitude."
+          ],
+          [
+            "why",
+            "A smaller charge needs the advantage of a shorter distance to match the stronger source."
+          ],
+          [
+            "trap",
+            "Outside the segment their fields point the same way. Squared equations can generate a root in that invalid region."
+          ]
+        ]
+      },
+      {
+        "title": "Unlike charges: search outside",
+        "items": [
+          [
+            "m",
+            "\\frac{|q_1|}{r_1^2}=\\frac{|q_2|}{r_2^2}"
+          ],
+          [
+            "p",
+            "For opposite signs, fields add between charges. A finite zero lies outside, beyond the smaller magnitude. Equal and opposite charges have no finite axial field zero. For +q at 0 and -4q at L, the zero is x=-L."
+          ],
+          [
+            "why",
+            "Write directions in each interval before equating magnitudes; the stronger source must be farther away at cancellation."
+          ],
+          [
+            "trap",
+            "A charge placed at a field zero balances regardless of its own value only when source positions stay fixed."
+          ]
+        ]
+      },
+      {
+        "title": "All three free charges must balance",
+        "items": [
+          [
+            "m",
+            "q_3=-\\frac{q_1q_2}{(\\sqrt{q_1}+\\sqrt{q_2})^2}"
+          ],
+          [
+            "m",
+            "q_1,q_2>0"
+          ],
+          [
+            "p",
+            "For outer positive charges q1,q2, place the negative middle charge at their field null. Its magnitude follows from balancing one OUTER charge as well. Balancing only the middle charge cannot determine q3."
+          ],
+          [
+            "why",
+            "Once two charges balance, the third follows from the zero sum of internal pair forces."
+          ],
+          [
+            "trap",
+            "This is a static balance, not unconstrained stable levitation. Reversing every sign produces the corresponding equivalent arrangement."
+          ]
+        ]
+      },
+      {
+        "title": "Square and triangle centre charges",
+        "items": [
+          [
+            "m",
+            "Q_{\\mathrm{square}}=-\\frac{1+2\\sqrt2}{4}q"
+          ],
+          [
+            "m",
+            "Q_{\\triangle}=-q/\\sqrt3"
+          ],
+          [
+            "p",
+            "Equal positive corner charges have an outward resultant along a vertex bisector. A negative central charge can cancel it. The centre itself balances automatically by symmetry; the vertex equation fixes its magnitude."
+          ],
+          [
+            "why",
+            "For the square, nearest neighbours give sqrt(2)kq²/a² and the diagonal corner gives kq²/(2a²)."
+          ],
+          [
+            "trap",
+            "These results assume only Coulomb forces and the stated regular geometry. A displaced free charge exposes unstable directions."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 4,
+    "slug": "JEE-04-field-density",
+    "title": "From charge density to a field",
+    "subtitle": "Separate geometry, the charge element, vector direction and integration bounds.",
+    "source": "Source §§2.4, 3.3, 3.12; T1-T3",
+    "diagrams": [
+      "field-density-a",
+      "field-density-b"
+    ],
+    "takeaway": "Write dq before writing dE. Field is a vector; potential is a signed scalar.",
+    "cards": [
+      {
+        "title": "Test charge and superposition",
+        "items": [
+          [
+            "m",
+            "\\mathbf E=\\lim_{q_0\\to0}\\mathbf F/q_0"
+          ],
+          [
+            "m",
+            "\\mathbf F=q\\mathbf E"
+          ],
+          [
+            "p",
+            "The limiting test charge avoids rearranging the sources, especially on metal. E is a property of the sources and position, not of the selected receiver. A negative receiver accelerates against E."
+          ],
+          [
+            "why",
+            "Superposition sums individual source fields as vectors; the receiver charge enters only after that sum."
+          ],
+          [
+            "trap",
+            "A large test charge measures a disturbed configuration. Field lines indicate force direction on a positive charge, not the path of an arbitrary moving particle."
+          ]
+        ]
+      },
+      {
+        "title": "Choose the measure",
+        "items": [
+          [
+            "m",
+            "dq=\\lambda\\,dl=\\sigma\\,dA=\\rho\\,d\\mathcal V"
+          ],
+          [
+            "m",
+            "dq_{\\rm ring}=2\\pi s\\sigma\\,ds"
+          ],
+          [
+            "p",
+            "Lambda, sigma and rho have units C/m, C/m² and C/m³. Select the element fitting the symmetry: a thin ring for an axial disc calculation, a spherical shell for radial density, or a line element for a rod."
+          ],
+          [
+            "why",
+            "The length or area factor is geometry, not an optional correction to the density."
+          ],
+          [
+            "trap",
+            "A charge per unit length on a cylindrical surface becomes sigma=lambda/(2 pi R); it is not a volume density."
+          ]
+        ]
+      },
+      {
+        "title": "Radial density is not total charge",
+        "items": [
+          [
+            "m",
+            "Q(r)=4\\pi\\int_0^r\\rho(s)s^2\\,ds"
+          ],
+          [
+            "m",
+            "\\rho=\\rho_0r/R:\\quad Q=\\pi\\rho_0R^3"
+          ],
+          [
+            "p",
+            "Keep the integration coordinate s distinct from the observation radius r. A density increasing linearly with radius puts more charge near the outer surface; integrate with the spherical volume measure."
+          ],
+          [
+            "why",
+            "A shell has volume 4 pi s² ds, so even a constant density requires an s² weight."
+          ],
+          [
+            "trap",
+            "Integrating rho alone gives the wrong dimensions. Gaussian charge is enclosed charge, not the distribution's full Q at every radius."
+          ]
+        ]
+      },
+      {
+        "title": "Lines, symmetry and missing pieces",
+        "items": [
+          [
+            "m",
+            "\\nabla\\cdot\\mathbf E=\\rho/\\varepsilon_0"
+          ],
+          [
+            "p",
+            "Lines begin on positive charge and end on negative charge or infinity, never cross where the field is defined, and cannot form electrostatic closed loops. A missing piece is the full distribution plus an equal negative piece."
+          ],
+          [
+            "why",
+            "An inversion-symmetric distribution has zero field at its centre; mirror symmetry cancels only the component reversed by the mirror."
+          ],
+          [
+            "trap",
+            "Do not infer full spherical symmetry from one symmetry axis. A finite ring or disc cannot have its field found by pulling E out of a spherical Gauss integral."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 5,
+    "slug": "JEE-05-ring",
+    "title": "Charged ring: one integral, many checks",
+    "subtitle": "Uniform thin ring of radius R in the yz-plane; observation point on its x-axis.",
+    "source": "Source §3.4, E2, Q3, Q15, Q23-Q24",
+    "diagrams": [
+      "ring-a",
+      "ring-b"
+    ],
+    "takeaway": "On-axis symmetry cancels transverse components, not the whole field except at the centre.",
+    "cards": [
+      {
+        "title": "Derive the axial result",
+        "items": [
+          [
+            "m",
+            "dE_x=\\frac{kx\\,dq}{(R^2+x^2)^{3/2}}"
+          ],
+          [
+            "m",
+            "E_x=\\frac{kQx}{(R^2+x^2)^{3/2}}"
+          ],
+          [
+            "p",
+            "Every element has the same distance sqrt(R²+x²) to the field point. Its transverse partner cancels the transverse component. The remaining projection supplies the factor x/distance before summing dq to Q."
+          ],
+          [
+            "why",
+            "Projection is essential: kQ/(R²+x²) is the sum of magnitudes, not the net axial field."
+          ],
+          [
+            "trap",
+            "The signed x gives opposite fields on the two sides. This formula gives no off-axis field."
+          ]
+        ]
+      },
+      {
+        "title": "Peak and limiting behaviour",
+        "items": [
+          [
+            "m",
+            "\\frac{dE_x}{dx}=\\frac{kQ(R^2-2x^2)}{(R^2+x^2)^{5/2}}"
+          ],
+          [
+            "m",
+            "x_{\\max}=R/\\sqrt2,\\quad E_{\\max}=\\frac{2kQ}{3\\sqrt3R^2}"
+          ],
+          [
+            "p",
+            "For positive Q, E grows linearly near the centre, reaches a positive maximum, then falls as an inverse square. The negative-side minimum has equal magnitude."
+          ],
+          [
+            "why",
+            "Differentiate with R and Q fixed. At large distance the source's detailed geometry becomes negligible."
+          ],
+          [
+            "trap",
+            "Maximum field and maximum potential need not occur at the same place. The axial potential is largest at x=0."
+          ]
+        ]
+      },
+      {
+        "title": "Scalar route and small motion",
+        "items": [
+          [
+            "m",
+            "V=\\frac{kQ}{\\sqrt{R^2+x^2}}"
+          ],
+          [
+            "m",
+            "E_x\\simeq kQx/R^3,\\quad \\omega_x^2=\\frac{k|qQ|}{mR^3}"
+          ],
+          [
+            "p",
+            "The potential follows immediately because all dq have equal distance. Its negative derivative reproduces E. A charge with qQ<0 has a restoring axial force for |x| much less than R."
+          ],
+          [
+            "why",
+            "A linear force F=-m omega² x identifies SHM without solving the full nonlinear equation."
+          ],
+          [
+            "trap",
+            "Axial SHM assumes a constraint or absence of transverse perturbations. It is not three-dimensional stability."
+          ]
+        ]
+      },
+      {
+        "title": "Example and energy amplitude",
+        "items": [
+          [
+            "m",
+            "Q=40\\ \\mathrm{nC},\\ R=0.08\\ \\mathrm m"
+          ],
+          [
+            "m",
+            "q=-2\\ \\mathrm{nC},\\ m=5\\ \\mathrm{mg}"
+          ],
+          [
+            "p",
+            "These data give omega about 16.8 rad/s and small axial period about 0.375 s. At the centre the force is zero but V=kQ/R is nonzero. For larger axial motion use K+qV=constant."
+          ],
+          [
+            "why",
+            "Mass is 5 times 10^(-6) kg, not 0.005 kg. The frequency depends on that conversion."
+          ],
+          [
+            "trap",
+            "The harmonic period applies only to small amplitudes and the prescribed fixed ring. Finite-amplitude motion needs the full potential."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 6,
+    "slug": "JEE-06-rod",
+    "title": "Finite rods: components before limits",
+    "subtitle": "Uniform rod along x from -a to b; point P=(0,d), d>0, lambda>0.",
+    "source": "Source §3.5, E3, Q29; finite-length checks",
+    "diagrams": [
+      "rod-a",
+      "rod-b"
+    ],
+    "takeaway": "Define end angles from the perpendicular; end-on and side-on are different integrals.",
+    "cards": [
+      {
+        "title": "An unambiguous component formula",
+        "items": [
+          [
+            "m",
+            "E_y=\\frac{k\\lambda}{d}\\left(\\frac{a}{\\sqrt{a^2+d^2}}+\\frac{b}{\\sqrt{b^2+d^2}}\\right)"
+          ],
+          [
+            "m",
+            "E_x=k\\lambda\\left(\\frac1{\\sqrt{b^2+d^2}}-\\frac1{\\sqrt{a^2+d^2}}\\right)"
+          ],
+          [
+            "p",
+            "Use displacement (-x,d) from each source element to P and integrate k lambda (-x,d) dx/(x²+d²)^(3/2). The unequal-end expression includes both components."
+          ],
+          [
+            "why",
+            "The component parallel to the rod points away from the longer side of positive charge."
+          ],
+          [
+            "trap",
+            "Angles without labelled positive directions can reverse the parallel component. Coordinates remove the ambiguity."
+          ]
+        ]
+      },
+      {
+        "title": "Perpendicular bisector and line limit",
+        "items": [
+          [
+            "m",
+            "E=\\frac{2k\\lambda L}{d\\sqrt{L^2+d^2}}"
+          ],
+          [
+            "m",
+            "L\\to\\infty:\\ E=2k\\lambda/d"
+          ],
+          [
+            "p",
+            "For a rod from -L to L, E_x cancels exactly. At d much larger than L the rod acts like a point charge Q=2L lambda. At L much larger than d it approaches an infinite line."
+          ],
+          [
+            "why",
+            "The same finite result bridges near-line and far-point behaviour; do not use both approximations at once."
+          ],
+          [
+            "trap",
+            "At L=10d the fractional line approximation error is about 0.5%. Always say which symbol denotes half-length."
+          ]
+        ]
+      },
+      {
+        "title": "Point beyond an end",
+        "items": [
+          [
+            "m",
+            "E=\\frac{kQ}{s(s+\\ell)}"
+          ],
+          [
+            "m",
+            "V=k\\lambda\\ln\\frac{s+\\ell}{s}"
+          ],
+          [
+            "p",
+            "For rod length ell and a point a positive distance s beyond its near end, all field elements are collinear. Integrate inverse-square distances from s to s+ell; the potential uses inverse distances instead."
+          ],
+          [
+            "why",
+            "The denominator s(s+ell) involves distances to BOTH ends, not distance to the rod centre."
+          ],
+          [
+            "trap",
+            "Near an ideal thin endpoint the field diverges; real wire radius and rounded ends limit this idealisation."
+          ]
+        ]
+      },
+      {
+        "title": "Potential of a symmetric rod",
+        "items": [
+          [
+            "m",
+            "V(d)=2k\\lambda\\ln\\frac{L+\\sqrt{L^2+d^2}}{d}"
+          ],
+          [
+            "p",
+            "With V(infinity)=0, integrate k lambda dx/sqrt(x²+d²) from -L to L. Negative differentiation with respect to d gives the perpendicular field. For d much less than L the potential is logarithmic."
+          ],
+          [
+            "why",
+            "Integrating a scalar can be easier than projecting a vector, provided symmetry tells us which field component survives."
+          ],
+          [
+            "trap",
+            "A finite rod admits infinity as zero; an infinite line does not. An axial or bisector V gives only the derivative along that locus."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 7,
+    "slug": "JEE-07-arc",
+    "title": "Arcs, gaps and angular density",
+    "subtitle": "Angles in radians; a positive upper semicircle lies above the origin.",
+    "source": "Source §§3.7, 3.12; Q5-Q6; T1-T2",
+    "diagrams": [
+      "arc-a",
+      "arc-b"
+    ],
+    "takeaway": "Pair equal elements before integrating. For positive charge the centre field points away from the arc.",
+    "cards": [
+      {
+        "title": "Uniform arc at its centre",
+        "items": [
+          [
+            "m",
+            "dq=\\lambda R\\,d\\theta"
+          ],
+          [
+            "m",
+            "E=\\frac{2k\\lambda}{R}\\sin(\\Theta/2)"
+          ],
+          [
+            "p",
+            "An arc spans total angle Theta symmetrically about its bisector. Opposite angular elements cancel the sideways components. Integrate the remaining cosine over -Theta/2 to +Theta/2."
+          ],
+          [
+            "why",
+            "All distances equal R, so the integral is angular rather than radial. Direction is from arc midpoint through the centre."
+          ],
+          [
+            "trap",
+            "At fixed Q use lambda=Q/(R Theta). Comparing arcs at fixed lambda and at fixed Q gives different trends."
+          ]
+        ]
+      },
+      {
+        "title": "Special cases and a sign split",
+        "items": [
+          [
+            "m",
+            "E_{\\rm semi}=\\frac{2kQ}{\\pi R^2}"
+          ],
+          [
+            "m",
+            "E_{\\rm quarter}=\\sqrt2\\,k\\lambda/R"
+          ],
+          [
+            "p",
+            "A full uniform ring has zero centre field. For a ring with positive upper and negative lower semicircles of equal |lambda|, both centre fields point downward and add to 4k|lambda|/R."
+          ],
+          [
+            "why",
+            "Changing source sign reverses its contribution. Cancellation of total charge does not imply cancellation of field."
+          ],
+          [
+            "trap",
+            "The split-ring field is PERPENDICULAR to the separating diameter, from the positive half toward the negative half, not along that diameter."
+          ]
+        ]
+      },
+      {
+        "title": "A small gap is subtraction",
+        "items": [
+          [
+            "m",
+            "E_{\\rm gap}=\\frac{2k\\lambda}{R}\\sin(\\Delta\\theta/2)"
+          ],
+          [
+            "m",
+            "\\ell\\ll R:\\ E\\simeq k\\lambda\\ell/R^2"
+          ],
+          [
+            "p",
+            "Subtract the missing positive arc from a complete ring. The remaining positive ring has a centre field pointing TOWARDS the gap. The exact arc formula remains valid when the gap is not infinitesimal."
+          ],
+          [
+            "why",
+            "The removed piece would repel a test positive charge away from the gap; removing it reverses that former contribution."
+          ],
+          [
+            "trap",
+            "The point-piece approximation needs gap length small compared with R; the finite-angle result is safer."
+          ]
+        ]
+      },
+      {
+        "title": "Angular modulation and hemisphere",
+        "items": [
+          [
+            "m",
+            "\\lambda(\\theta)=\\lambda_0\\cos\\theta:\\quad E_x=-\\pi k\\lambda_0/R"
+          ],
+          [
+            "m",
+            "E_{\\rm hemi}=\\sigma/(4\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "For the modulated full ring, integrate source components weighted by cos theta: net Q is zero but E is not. For a uniform upper hemispherical surface, ring elements give centre field downward and potential sigma R/(2 epsilon0)."
+          ],
+          [
+            "why",
+            "The hemisphere integral contains sin theta cos theta; its value is one-half over 0 to pi/2."
+          ],
+          [
+            "trap",
+            "A hemispherical SHELL is not a flat disc or a solid hemisphere. Their charge elements and centre fields differ."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 8,
+    "slug": "JEE-08-disc",
+    "title": "Disc and annulus: build with rings",
+    "subtitle": "Uniform surface density sigma; signed axial coordinate x, disc radius R.",
+    "source": "Source §§3.6, 3.27; Q4, Q44",
+    "diagrams": [
+      "disc-a",
+      "disc-b"
+    ],
+    "takeaway": "Finite distributions admit V(infinity)=0; infinite sheets require a finite reference.",
+    "cards": [
+      {
+        "title": "Disc field from a radial integral",
+        "items": [
+          [
+            "m",
+            "dq=2\\pi s\\sigma\\,ds"
+          ],
+          [
+            "m",
+            "E_x=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{x}{\\sqrt{x^2+R^2}}\\right),\\quad x>0"
+          ],
+          [
+            "p",
+            "Use the ring field for each concentric element, then integrate s from 0 to R. Close to the positive face the field tends to sigma/(2 epsilon0); far away it tends to kQ/x²."
+          ],
+          [
+            "why",
+            "A field near a large smooth charged patch resembles a sheet because nearby charge dominates the local jump."
+          ],
+          [
+            "trap",
+            "The displayed formula is for x>0. For x<0 use odd symmetry, not the same unsigned expression."
+          ]
+        ]
+      },
+      {
+        "title": "Potential valid on both sides",
+        "items": [
+          [
+            "m",
+            "V(x)=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{x^2+R^2}-|x|\\right)"
+          ],
+          [
+            "p",
+            "Every ring contributes k dq/sqrt(x²+s²). Potential is even in x and continuous at the surface. Its cusp gives an odd field with a finite jump; its value at the centre is sigma R/(2 epsilon0)."
+          ],
+          [
+            "why",
+            "Differentiating |x| produces the correct sign reversal between the two faces."
+          ],
+          [
+            "trap",
+            "At an ideal charged surface quote one-sided fields. A unique classical E right on the sheet needs a convention."
+          ]
+        ]
+      },
+      {
+        "title": "Annulus as two discs",
+        "items": [
+          [
+            "m",
+            "E_x=\\frac{\\sigma x}{2\\varepsilon_0}\\left(\\frac1{\\sqrt{x^2+a^2}}-\\frac1{\\sqrt{x^2+b^2}}\\right)"
+          ],
+          [
+            "p",
+            "For annulus inner radius a and outer b, subtract the disc of radius a from the disc of radius b. The constant sheet contributions cancel. At x=0 the annulus centre field vanishes because the point lies in a genuine hole."
+          ],
+          [
+            "why",
+            "Subtraction preserves the full geometry and avoids a new vector integration."
+          ],
+          [
+            "trap",
+            "The hole limit a to zero and the observation limit x to zero need care: the charged disc and its empty centre hole have different local boundary behaviour."
+          ]
+        ]
+      },
+      {
+        "title": "Infinite-sheet limit and its cost",
+        "items": [
+          [
+            "m",
+            "E_x=\\frac{\\sigma}{2\\varepsilon_0}\\,\\mathrm{sgn}(x)"
+          ],
+          [
+            "m",
+            "V(x)-V(0)=-\\frac{\\sigma|x|}{2\\varepsilon_0}"
+          ],
+          [
+            "p",
+            "Let R grow without bound at fixed sigma. E stays finite, but the zero-at-infinity disc potential diverges. Only potential differences remain finite after choosing a finite reference plane."
+          ],
+          [
+            "why",
+            "An infinite source has infinite total charge; retaining a finite Q while increasing R would describe a different limit."
+          ],
+          [
+            "trap",
+            "Do not use V(infinity)=0 for an infinite sheet or line. The field can remain perfectly meaningful even when that reference cannot be used."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 9,
+    "slug": "JEE-09-dipole-field",
+    "title": "Dipole: exact first, far field second",
+    "subtitle": "Charges -q at z=-a and +q at z=+a; p=2aq along +z.",
+    "source": "Source §§3.9, 3.31; Q9-Q12, Q56",
+    "diagrams": [
+      "dipole-field-a",
+      "dipole-field-b"
+    ],
+    "takeaway": "The dipole moment points from negative to positive. Short-dipole results need r much greater than 2a.",
+    "cards": [
+      {
+        "title": "Exact axial and equatorial fields",
+        "items": [
+          [
+            "m",
+            "E_{\\rm axis}=\\frac{2kpr}{(r^2-a^2)^2},\\quad r>a"
+          ],
+          [
+            "m",
+            "\\mathbf E_{\\rm eq}=-\\frac{k\\mathbf p}{(r^2+a^2)^{3/2}}"
+          ],
+          [
+            "p",
+            "Outside the pair on its axis, subtract unequal inverse-square fields. On the equator equal radial contributions cancel while components opposite p add. At the midpoint E=-2kq/a² along z."
+          ],
+          [
+            "why",
+            "The exact expressions keep the two-source geometry; taking a/r small only afterwards prevents misuse close to the pair."
+          ],
+          [
+            "trap",
+            "At the midpoint r=0 the far-field formula is invalid, not infinite physical field. The ideal point-charge singularities occur at the charges."
+          ]
+        ]
+      },
+      {
+        "title": "Far-field vector and magnitude",
+        "items": [
+          [
+            "m",
+            "\\mathbf E=\\frac{k}{r^3}[3(\\mathbf p\\cdot\\hat{\\mathbf r})\\hat{\\mathbf r}-\\mathbf p]"
+          ],
+          [
+            "m",
+            "|E|=\\frac{kp}{r^3}\\sqrt{1+3\\cos^2\\theta}"
+          ],
+          [
+            "p",
+            "A neutral pair has no monopole inverse-square term; its first surviving field falls as r^(-3). The axial magnitude is twice the equatorial magnitude at the same large radius."
+          ],
+          [
+            "why",
+            "Potential contributions almost cancel; their first difference is proportional to separation, which supplies an extra inverse power of r."
+          ],
+          [
+            "trap",
+            "The field direction is not generally radial or parallel to p. Keep the vector formula or use spherical components."
+          ]
+        ]
+      },
+      {
+        "title": "Potential and spherical components",
+        "items": [
+          [
+            "m",
+            "V=kp\\cos\\theta/r^2"
+          ],
+          [
+            "m",
+            "E_r=2kp\\cos\\theta/r^3,\\quad E_\\theta=kp\\sin\\theta/r^3"
+          ],
+          [
+            "p",
+            "Differentiate V radially and angularly, including the angular metric factor 1/r. At theta=90 degrees, theta-hat points toward -z, so positive E_theta is antiparallel to p."
+          ],
+          [
+            "why",
+            "The equatorial plane has V=0 but a nonzero normal field: zero potential on a surface does not imply a zero gradient."
+          ],
+          [
+            "trap",
+            "The source prose gives a wrong minus sign on theta-hat in one check; the component equation and the physical direction above are consistent."
+          ]
+        ]
+      },
+      {
+        "title": "Control approximation error",
+        "items": [
+          [
+            "m",
+            "E_{\\rm ax}/(2kp/r^3)=(1-a^2/r^2)^{-2}"
+          ],
+          [
+            "p",
+            "The axial short-dipole relative error is about 2a²/r², or d²/(2r²) for separation d=2a. At r=5d it is about 2%; on the equator the leading magnitude correction is 3d²/(8r²)."
+          ],
+          [
+            "why",
+            "An approximation is a series with a small parameter, not a new exact law for every distance."
+          ],
+          [
+            "trap",
+            "If the observation point is only one separation away, compute the two charge fields explicitly. Do not hide a large error behind a familiar formula."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 10,
+    "slug": "JEE-10-dipole-action",
+    "title": "Dipole in a field: force, torque, energy",
+    "subtitle": "Permanent p is fixed in magnitude; external field prescribed independently of the dipole.",
+    "source": "Source §3.10; E6-E7; Q10-Q12",
+    "diagrams": [
+      "dipole-action-a",
+      "dipole-action-b"
+    ],
+    "takeaway": "Uniform fields turn a dipole without pulling its centre; gradients can pull it.",
+    "cards": [
+      {
+        "title": "Torque is a couple",
+        "items": [
+          [
+            "m",
+            "\\boldsymbol{\\tau}=\\mathbf p\\times\\mathbf E"
+          ],
+          [
+            "m",
+            "U=-\\mathbf p\\cdot\\mathbf E"
+          ],
+          [
+            "p",
+            "Equal and opposite forces on the two charges cancel in a uniform field but have separated lines of action. Alignment minimises U for a freely rotating permanent dipole; anti-alignment is rotationally unstable."
+          ],
+          [
+            "why",
+            "Torque has magnitude pE sin theta. Its origin is irrelevant when the total force is zero."
+          ],
+          [
+            "trap",
+            "Zero torque does not mean stable orientation: both theta=0 and pi give zero torque."
+          ]
+        ]
+      },
+      {
+        "title": "Slow rotation and energy exchange",
+        "items": [
+          [
+            "m",
+            "W_{\\rm ext}=pE(\\cos\\theta_1-\\cos\\theta_2)"
+          ],
+          [
+            "m",
+            "\\Delta K=W_{\\rm field}=-\\Delta U"
+          ],
+          [
+            "p",
+            "Quasistatic rotation uses an external torque opposing the electrical torque, so external work equals the energy rise. Freely released rotation converts potential energy into rotational kinetic energy instead."
+          ],
+          [
+            "why",
+            "From alignment to anti-alignment the energy rises by 2pE; from alignment to 90 degrees it rises by pE."
+          ],
+          [
+            "trap",
+            "A signed external work expression is not always positive. Rotating towards alignment can release energy."
+          ]
+        ]
+      },
+      {
+        "title": "Small angular oscillations",
+        "items": [
+          [
+            "m",
+            "I\\ddot\\theta\\simeq-pE\\theta"
+          ],
+          [
+            "m",
+            "\\omega=\\sqrt{pE/I}"
+          ],
+          [
+            "p",
+            "Near alignment, sin theta is approximately theta in radians. I is about the actual permitted rotation axis. For two equal endpoint masses m separated by d on a light rod, I=md²/2."
+          ],
+          [
+            "why",
+            "The torque is linear and restoring at small angle, giving the standard harmonic equation."
+          ],
+          [
+            "trap",
+            "I is not the translational mass. A different constraint or pivot changes both torque geometry and inertia."
+          ]
+        ]
+      },
+      {
+        "title": "A permanent dipole in a gradient",
+        "items": [
+          [
+            "m",
+            "\\mathbf F=(\\mathbf p\\cdot\\nabla)\\mathbf E"
+          ],
+          [
+            "m",
+            "F_x=p\\,dE/dx\\quad\\mathrm{for\\ aligned\\ 1D}"
+          ],
+          [
+            "p",
+            "Taylor-expand the fields at the positive and negative ends; the constant term cancels and the gradient survives. For collinear aligned dipoles, U=-2kp1p2/r³ and the attraction magnitude is 6kp1p2/r⁴."
+          ],
+          [
+            "why",
+            "In electrostatics, a spatially fixed permanent p also gives F=gradient(p dot E)."
+          ],
+          [
+            "trap",
+            "Uniform field gives zero net force even at nonzero torque. Induced dipole energy has a different one-half factor; see Part II."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 11,
+    "slug": "JEE-11-motion",
+    "title": "Charges moving in uniform fields",
+    "subtitle": "Nonrelativistic test particle; static prescribed uniform E; negligible radiation and collisions.",
+    "source": "Source §3.13; E9; Q19-Q20, Q54",
+    "diagrams": [
+      "motion-a",
+      "motion-b"
+    ],
+    "takeaway": "Use the sign of qE for acceleration and the sign of potential change for energy.",
+    "cards": [
+      {
+        "title": "Acceleration and work-energy",
+        "items": [
+          [
+            "m",
+            "\\mathbf a=q\\mathbf E/m"
+          ],
+          [
+            "m",
+            "K_b-K_a=q(V_a-V_b)"
+          ],
+          [
+            "p",
+            "A positive charge speeds up when moving toward lower potential; a negative charge speeds up toward higher potential. If acceleration is collinear and constant, ordinary one-dimensional kinematics applies."
+          ],
+          [
+            "why",
+            "The field force does work q times the potential drop. Mechanical energy K+qV is conserved without non-electrical work."
+          ],
+          [
+            "trap",
+            "An electric field pointing opposite an electron's motion accelerates it forward, not backward. The source Q19 wording confuses field with force."
+          ]
+        ]
+      },
+      {
+        "title": "Transverse deflection in plates",
+        "items": [
+          [
+            "m",
+            "t=L/v_0,\\quad y_L=\\frac{qEL^2}{2mv_0^2}"
+          ],
+          [
+            "m",
+            "\\tan\\theta=\\frac{qEL}{mv_0^2}"
+          ],
+          [
+            "p",
+            "Choose x along the initial velocity and y along E. Horizontal speed stays constant; vertical motion accelerates. Signed deflection reverses with q. Check y remains inside the plate clearance throughout transit."
+          ],
+          [
+            "why",
+            "The trajectory is parabolic although field lines are straight: force determines acceleration, not velocity."
+          ],
+          [
+            "trap",
+            "A very large computed deflection usually means collision with a plate before the nominal exit, not a valid emerging beam."
+          ]
+        ]
+      },
+      {
+        "title": "Acceleration voltage and screen",
+        "items": [
+          [
+            "m",
+            "mv_0^2=2|q|V_a"
+          ],
+          [
+            "m",
+            "|Y|=\\frac{EL}{2V_a}(D+L/2)"
+          ],
+          [
+            "p",
+            "For a beam accelerated from rest by a positive voltage magnitude Va, the deflection magnitude loses the q/m factor. D is the field-free drift distance after plates of length L. The straight exit tangent extrapolates to the midpoint."
+          ],
+          [
+            "why",
+            "Motion inside contributes half the slope-times-length of the later straight drift."
+          ],
+          [
+            "trap",
+            "Opposite signs have equal magnitude but opposite direction at matching |q|Va. Equal voltages do not give equal velocities to different masses."
+          ]
+        ]
+      },
+      {
+        "title": "An example and speed validity",
+        "items": [
+          [
+            "m",
+            "E=5000\\ \\mathrm{V/m},\\ L=0.05\\ \\mathrm m"
+          ],
+          [
+            "m",
+            "V_a=1000\\ \\mathrm V:\\ |y_L|=3.125\\ \\mathrm{mm}"
+          ],
+          [
+            "p",
+            "For D=0.275 m the exit slope magnitude is 0.125 and the screen deflection is 3.75 cm. A 1 keV electron has speed about 1.88 times 10^7 m/s, sufficiently small compared with c for this estimate."
+          ],
+          [
+            "why",
+            "An independent calculation with qE/m and transit time should agree with the voltage formula."
+          ],
+          [
+            "trap",
+            "There is no universal 50 kV nonrelativistic threshold; specify an error tolerance. Relativistic corrections already matter at tens of keV."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 12,
+    "slug": "JEE-12-mechanics",
+    "title": "Electrical forces in mechanical constraints",
+    "subtitle": "Draw gravity, tension, normal reaction and electrical forces separately.",
+    "source": "Source §3.13; E10; Q17-Q18; Millikan example",
+    "diagrams": [
+      "mechanics-a",
+      "mechanics-b"
+    ],
+    "takeaway": "A constrained equilibrium can be stable even though free electrostatic trapping is not.",
+    "cards": [
+      {
+        "title": "Charged pendulum in horizontal E",
+        "items": [
+          [
+            "m",
+            "\\tan\\theta_0=qE/(mg)"
+          ],
+          [
+            "m",
+            "T=\\sqrt{(mg)^2+(qE)^2}"
+          ],
+          [
+            "p",
+            "A positive bob tilts with E and a negative bob against it. The horizontal tension component balances qE; its vertical component balances mg. Theta0 is signed relative to the downward vertical."
+          ],
+          [
+            "why",
+            "Vector addition gives effective gravity g_eff=|g vector+qE vector/m| and the equilibrium string direction."
+          ],
+          [
+            "trap",
+            "T denotes tension here, not oscillation period. State the symbol meaning before reusing familiar letters."
+          ]
+        ]
+      },
+      {
+        "title": "Oscillations about the tilted line",
+        "items": [
+          [
+            "m",
+            "\\omega^2=g_{\\rm eff}/\\ell"
+          ],
+          [
+            "m",
+            "g_{\\rm eff}=\\sqrt{g^2+(qE/m)^2}"
+          ],
+          [
+            "p",
+            "For a uniform constant field the force is a fixed vector, so a pendulum oscillates about the effective vertical like an ordinary pendulum. In a vertical field combine signed accelerations before taking the magnitude."
+          ],
+          [
+            "why",
+            "Only the tangential component of effective weight restores a small angular displacement."
+          ],
+          [
+            "trap",
+            "If effective gravity is zero, the usual hanging equilibrium and pendulum period formula cease to describe a restoring force."
+          ]
+        ]
+      },
+      {
+        "title": "Two charged bobs on strings",
+        "items": [
+          [
+            "m",
+            "r=2\\ell\\sin\\theta"
+          ],
+          [
+            "m",
+            "kq^2/r^2=mg\\tan\\theta"
+          ],
+          [
+            "p",
+            "Equal bobs carrying equal-sign charges settle symmetrically. Geometry fixes their separation, then force balance fixes q. At small theta, r³ is approximately 2kq²ell/(mg)."
+          ],
+          [
+            "why",
+            "The Coulomb force is horizontal only because symmetry puts both bobs at the same height."
+          ],
+          [
+            "trap",
+            "Do not replace r by ell or by ell theta; the separation contains a factor two. Unequal masses/charges need separate free-body diagrams."
+          ]
+        ]
+      },
+      {
+        "title": "Oil drops: a measured elementary step",
+        "items": [
+          [
+            "m",
+            "qE=(\\rho_d-\\rho_a)\\frac{4\\pi r^3}{3}g"
+          ],
+          [
+            "m",
+            "v_t=\\frac{2r^2(\\rho_d-\\rho_a)g}{9\\eta}"
+          ],
+          [
+            "p",
+            "At balance electric force offsets weight minus buoyancy. A terminal fall measurement with the field off infers radius from Stokes drag; then the holding field infers charge. Repeated charges show integer elementary steps."
+          ],
+          [
+            "why",
+            "The experiment separates mass estimation from electrical force rather than assuming the drop mass is directly weighed."
+          ],
+          [
+            "trap",
+            "Terminal speed, spherical drop and low Reynolds number are assumptions. Small-drop slip corrections can be relevant in precise measurements."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 13,
+    "slug": "JEE-13-flux",
+    "title": "Flux: a signed geometric count",
+    "subtitle": "Outward normal for closed surfaces; chosen normal for open surfaces.",
+    "source": "Source §§3.14-3.16, 3.22; E11; Q31-Q32",
+    "diagrams": [
+      "flux-a",
+      "flux-b"
+    ],
+    "takeaway": "Flux is not field strength, flow rate, or a statement that charge is spread on the Gaussian surface.",
+    "cards": [
+      {
+        "title": "Area vectors and projection",
+        "items": [
+          [
+            "m",
+            "\\Phi=\\int_S\\mathbf E\\cdot d\\mathbf A"
+          ],
+          [
+            "m",
+            "\\Phi=EA\\cos\\theta\\quad\\mathrm{for\\ uniform\\ E}"
+          ],
+          [
+            "p",
+            "Theta is between field and the area normal, not the plane. A closed surface sums outward crossings positively and inward crossings negatively. Flux units are N m²/C or V m."
+          ],
+          [
+            "why",
+            "A tilted patch presents only its projected area to a uniform field; this is the dot product."
+          ],
+          [
+            "trap",
+            "EA cos theta is not valid with one representative E when the field varies strongly over the surface."
+          ]
+        ]
+      },
+      {
+        "title": "Point-source solid angle",
+        "items": [
+          [
+            "m",
+            "d\\Phi=kq\\,d\\Omega"
+          ],
+          [
+            "m",
+            "d\\Omega=\\cos\\alpha\\,dA/r^2"
+          ],
+          [
+            "p",
+            "A small surface patch seen from the charge subtends a signed solid angle. Its inverse-square field exactly cancels the r² in projected area. A surrounding closed surface subtends 4 pi; a surface missing the charge has zero signed net solid angle."
+          ],
+          [
+            "why",
+            "This establishes the point-charge Gauss result; adding sources gives the law for an arbitrary distribution."
+          ],
+          [
+            "trap",
+            "Use the position of the source, not the centre of the chosen surface, as the solid-angle viewpoint."
+          ]
+        ]
+      },
+      {
+        "title": "Gauss is always true, not always enough",
+        "items": [
+          [
+            "m",
+            "\\oint\\mathbf E\\cdot d\\mathbf A=Q_{\\rm enc}/\\varepsilon_0"
+          ],
+          [
+            "p",
+            "Charges outside contribute to E at surface points, but their net closed flux is zero. Qenc=0 does not imply E=0. A uniform external field is a simple counterexample: equal entering and leaving flux."
+          ],
+          [
+            "why",
+            "Gauss constrains an integral. Symmetry is the extra information needed to extract a field value."
+          ],
+          [
+            "trap",
+            "Do not say external charges have no effect on the field. They have no effect on the NET flux through a closed surface avoiding them."
+          ]
+        ]
+      },
+      {
+        "title": "A circular disc viewed from a charge",
+        "items": [
+          [
+            "m",
+            "\\Omega=2\\pi\\left(1-\\frac{x}{\\sqrt{x^2+R^2}}\\right)"
+          ],
+          [
+            "m",
+            "|\\Phi|=\\frac{|q|\\Omega}{4\\pi\\varepsilon_0}"
+          ],
+          [
+            "p",
+            "For a point charge on the axis, distance x>0 from a disc of radius R, the rim makes a cone. Integrate solid angle over that cone. The normal orientation sets the sign of the flux."
+          ],
+          [
+            "why",
+            "At x much smaller than R the disc covers nearly a hemisphere; far away it subtends area divided by distance squared."
+          ],
+          [
+            "trap",
+            "This is flux of a POINT source through a disc, not the electric field produced by a charged disc."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 14,
+    "slug": "JEE-14-flux-cube",
+    "title": "Flux through cubes: symmetry has limits",
+    "subtitle": "Cube side a; a charge exactly on a boundary requires a limiting/solid-angle convention.",
+    "source": "Source §3.22; E11; Q32; formula-sheet correction",
+    "diagrams": [
+      "flux-cube-a",
+      "flux-cube-b"
+    ],
+    "takeaway": "At a cube edge, the four nonzero face fluxes are NOT equal. Boundary sources need explicit treatment.",
+    "cards": [
+      {
+        "title": "Central and corner charge",
+        "items": [
+          [
+            "m",
+            "\\Phi_{\\rm centre,face}=q/(6\\varepsilon_0)"
+          ],
+          [
+            "m",
+            "\\Phi_{\\rm corner,far\\ face}=q/(24\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "At the centre six faces are equivalent. At a corner, assemble eight identical cubes to put the charge at a larger cube centre; each small cube occupies one octant. The three faces not containing the charge share that octant flux equally."
+          ],
+          [
+            "why",
+            "The point-source solid angle within the small cube is pi/2, one-eighth of 4 pi."
+          ],
+          [
+            "trap",
+            "Faces through the ideal charge are singular at that point. Their assigned zero flux is a limiting convention, not direct substitution into an ordinary smooth Gauss theorem."
+          ]
+        ]
+      },
+      {
+        "title": "Mid-edge charge: two distinct faces",
+        "items": [
+          [
+            "m",
+            "f_{\\rm opposite\\ side}=\\frac{\\tan^{-1}(1/3)}{2\\pi}"
+          ],
+          [
+            "m",
+            "f_{\\rm end}=\\frac{\\tan^{-1}(4/3)}{4\\pi}"
+          ],
+          [
+            "p",
+            "Place the source at (0,0,a/2) in the cube [0,a]^3. Faces x=a and y=a each carry 0.051208 q/epsilon0. Faces z=0 and z=a each carry 0.073792 q/epsilon0, with outward positive flux for q>0."
+          ],
+          [
+            "why",
+            "The source lies halfway along an edge, not at a position treating all four nonzero faces equivalently. Their geometrical shapes as seen from it differ."
+          ],
+          [
+            "trap",
+            "The source formula-sheet value 1/16 for every nonzero face is incorrect. The two pairs sum to total q/(4 epsilon0), not a full enclosed q/epsilon0."
+          ]
+        ]
+      },
+      {
+        "title": "Rectangle solid-angle tool",
+        "items": [
+          [
+            "m",
+            "\\Omega_{\\rm corner}=\\tan^{-1}\\frac{uv}{h\\sqrt{h^2+u^2+v^2}}"
+          ],
+          [
+            "p",
+            "For a rectangle with side lengths u,v and charge directly above a corner at normal height h>0, this is its positive solid angle. Split general rectangles into four signed corner pieces relative to the source projection."
+          ],
+          [
+            "why",
+            "The edge-charge pair formulas follow by adding two corner rectangles or taking one corner rectangle of the appropriate height."
+          ],
+          [
+            "trap",
+            "This is not the full formula for a rectangle viewed above its centre: that requires four quarter-rectangles."
+          ]
+        ]
+      },
+      {
+        "title": "External charge and broken symmetry",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm enc}=0\\ \\Rightarrow\\ \\Phi_{\\rm total}=0"
+          ],
+          [
+            "p",
+            "A point source outside the cube can give substantial nonzero flux through individual faces; only their signed sum vanishes. Moving a central interior source changes the face shares continuously while preserving total enclosed flux."
+          ],
+          [
+            "why",
+            "Local changes of viewing angle redistribute flux without changing the total solid angle of an enclosing surface."
+          ],
+          [
+            "trap",
+            "Never divide total flux by six unless the source configuration and surface make all six faces equivalent."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 15,
+    "slug": "JEE-15-gauss",
+    "title": "Use Gauss: choose a surface, justify E",
+    "subtitle": "Three standard symmetries: spherical, infinite cylindrical, infinite planar.",
+    "source": "Source §§3.17-3.20; validity ledger",
+    "diagrams": [
+      "gauss-a",
+      "gauss-b"
+    ],
+    "takeaway": "Prove direction and constancy before taking E outside a surface integral.",
+    "cards": [
+      {
+        "title": "The three-step protocol",
+        "items": [
+          [
+            "m",
+            "\\oint\\mathbf E\\cdot d\\mathbf A\\ \\longrightarrow\\ E\\,A_{\\rm active}"
+          ],
+          [
+            "p",
+            "First infer field direction from the source symmetry. Then choose a surface where E is constant on contributing parts. Finally calculate Qenc and equate flux. On other parts show E is tangential or zero."
+          ],
+          [
+            "why",
+            "The Gaussian surface is a mathematical choice; charge need not lie on it and it need not be a physical boundary."
+          ],
+          [
+            "trap",
+            "A source can be symmetric without having one of the symmetries strong enough for an elementary Gauss field calculation."
+          ]
+        ]
+      },
+      {
+        "title": "Spherical symmetry",
+        "items": [
+          [
+            "m",
+            "E_r4\\pi r^2=Q(r)/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "E_r=kQ(r)/r^2"
+          ],
+          [
+            "p",
+            "Any rotation about the centre leaves the source unchanged, so E is radial with equal magnitude at fixed r. A spherical Gaussian surface then has E normal everywhere. Signed enclosed charge chooses inward or outward."
+          ],
+          [
+            "why",
+            "Concentric spherical shells outside r contribute zero field at r; only inner charge determines the radial field."
+          ],
+          [
+            "trap",
+            "An off-centre cavity, external point charge or nonuniform angular density breaks this radial field argument."
+          ]
+        ]
+      },
+      {
+        "title": "Long cylinder and infinite line",
+        "items": [
+          [
+            "m",
+            "E_r2\\pi rL=\\lambda_{\\rm enc}L/\\varepsilon_0"
+          ],
+          [
+            "p",
+            "Translation along the infinite axis and rotation about it give a radial field depending only on distance from the axis. Flux crosses the curved wall; the end-cap normals are perpendicular to E."
+          ],
+          [
+            "why",
+            "The arbitrary Gaussian length L cancels because both enclosed charge and active area grow proportionally to it."
+          ],
+          [
+            "trap",
+            "A finite rod has end effects and an axial component near its ends. The infinite approximation requires relevant distances small compared with distances to the ends."
+          ]
+        ]
+      },
+      {
+        "title": "Sheet pillbox and gravity analogy",
+        "items": [
+          [
+            "m",
+            "2EA=\\sigma A/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "\\oint\\mathbf g\\cdot d\\mathbf A=-4\\pi GM_{\\rm enc}"
+          ],
+          [
+            "p",
+            "For an isolated uniform infinite sheet, reflection across the sheet gives equal and opposite normal fields. Both pillbox caps contribute. Gravity has the same geometric theorem with an attractive sign and mass replacing charge."
+          ],
+          [
+            "why",
+            "Planar reflection, not merely Gauss, splits the sheet jump into equal halves."
+          ],
+          [
+            "trap",
+            "A conductor next to arbitrary sources has zero interior field, not reflection symmetry; use its boundary condition instead of an automatic two-cap factor."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 16,
+    "slug": "JEE-16-spheres",
+    "title": "Spherical shells and solid spheres",
+    "subtitle": "Fixed uniform spherical charge; no external symmetry-breaking field.",
+    "source": "Source §§3.7, 3.18, 3.27; Q25-Q28",
+    "diagrams": [
+      "spheres-a",
+      "spheres-b"
+    ],
+    "takeaway": "A shell is field-free inside but not necessarily at zero potential.",
+    "cards": [
+      {
+        "title": "Thin shell: field and potential",
+        "items": [
+          [
+            "m",
+            "r<R:\\ E=0,\\quad V=kQ/R"
+          ],
+          [
+            "m",
+            "r>R:\\ E=kQ/r^2,\\quad V=kQ/r"
+          ],
+          [
+            "p",
+            "Gauss gives zero enclosed charge inside and full Q outside. Integrating E from infinity gives a continuous potential, constant inside. The one-sided surface field jumps from zero to kQ/R²."
+          ],
+          [
+            "why",
+            "Constant V follows from zero gradient throughout a connected interior region, not from V being zero."
+          ],
+          [
+            "trap",
+            "The shell result needs spherical surface charge, not just a spherical geometric boundary placed near other charges."
+          ]
+        ]
+      },
+      {
+        "title": "Uniform insulating solid sphere",
+        "items": [
+          [
+            "m",
+            "E_{\\rm in}=kQr/R^3"
+          ],
+          [
+            "m",
+            "V_{\\rm in}=\\frac{kQ}{2R}\\left(3-\\frac{r^2}{R^2}\\right)"
+          ],
+          [
+            "p",
+            "Enclosed charge is Q(r/R)³, so E rises linearly from zero to the surface value. Integrate inward from the known surface V=kQ/R; centre potential is 3kQ/(2R)."
+          ],
+          [
+            "why",
+            "The potential curve joins the exterior curve with matching first derivative because a finite volume density has no surface delta layer."
+          ],
+          [
+            "trap",
+            "A conducting solid sphere instead has charge on its surface and zero field throughout the metal."
+          ]
+        ]
+      },
+      {
+        "title": "Reading the graphs",
+        "items": [
+          [
+            "m",
+            "E(r)=E(R)/2:\\quad r=R/2\\ \\mathrm{or}\\ \\sqrt2R"
+          ],
+          [
+            "p",
+            "For the uniform solid sphere, the rising inner line and falling outer inverse-square branch each meet half the maximum. V is parabolic inside and inverse-linear outside, decreasing outward for positive Q."
+          ],
+          [
+            "why",
+            "Many graph questions are solved by matching values, slopes, continuity and limiting powers rather than recalculating an integral."
+          ],
+          [
+            "trap",
+            "At r=R, use one-sided E for a charged shell. Potential is continuous for an ordinary surface charge, even when E jumps."
+          ]
+        ]
+      },
+      {
+        "title": "Superpose concentric shells",
+        "items": [
+          [
+            "m",
+            "V(r)=\\sum_i\\frac{kQ_i}{\\max(r,R_i)}"
+          ],
+          [
+            "p",
+            "Each spherical shell contributes constant potential inside and kQi/r outside. Add these scalar contributions with signs; fields from shells outside r vanish. Negative shells shift interior potential without changing interior field."
+          ],
+          [
+            "why",
+            "Potential remembers charges at all radii; radial field depends only on net enclosed charge."
+          ],
+          [
+            "trap",
+            "Do not conclude a region with E=0 has V=0. A constant external-shell contribution remains unless the chosen reference cancels it."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 17,
+    "slug": "JEE-17-cavity-superposition",
+    "title": "Nonuniform spheres and empty cavities",
+    "subtitle": "Cavities here are cut from FIXED insulating density, not conducting cavities.",
+    "source": "Source §§3.12, 3.18; E12; OL6",
+    "diagrams": [
+      "cavity-superposition-a",
+      "cavity-superposition-b"
+    ],
+    "takeaway": "A missing charged body is the original body plus an overlapping negative-density body.",
+    "cards": [
+      {
+        "title": "Power-law radial density",
+        "items": [
+          [
+            "m",
+            "\\rho(r)=Ar^n:\\quad Q(r)=\\frac{4\\pi A r^{n+3}}{n+3}"
+          ],
+          [
+            "m",
+            "E_r=\\frac{Ar^{n+1}}{(n+3)\\varepsilon_0}"
+          ],
+          [
+            "p",
+            "Integrate the radial volume measure for n>-3 so total charge at the centre is finite. With rho proportional to r, E inside is proportional to r². Normalise A using the stated total charge if needed."
+          ],
+          [
+            "why",
+            "The density power acquires three powers in Q(r), then loses two in the inverse-square Gauss result."
+          ],
+          [
+            "trap",
+            "Finite total charge does not guarantee a finite centre field or potential for every negative n; inspect those limits separately."
+          ]
+        ]
+      },
+      {
+        "title": "Uniform field in an offset spherical hole",
+        "items": [
+          [
+            "m",
+            "\\mathbf E=\\frac{\\rho}{3\\varepsilon_0}(\\mathbf r-\\mathbf r\\prime)"
+          ],
+          [
+            "m",
+            "\\mathbf E_{\\rm hole}=\\rho\\mathbf a/(3\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "Let a point from the large centre have vector r; from the cavity centre it has r-prime, with r-r-prime=a pointing from large centre to hole centre. Add the negative sphere's field inside the removed volume."
+          ],
+          [
+            "why",
+            "Both inside-sphere fields are linear in displacement, so position dependence cancels and only the centre offset survives."
+          ],
+          [
+            "trap",
+            "The result requires the hole entirely inside a uniformly charged fixed solid. It is not a statement about arbitrary cavities or metal."
+          ]
+        ]
+      },
+      {
+        "title": "Cylinder analogue",
+        "items": [
+          [
+            "m",
+            "\\mathbf E_{\\rm hole}=\\rho\\mathbf a/(2\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "For infinitely long uniformly charged cylinders with parallel axes, subtract a displaced negative cylinder. Their interior radial fields have coefficient rho/(2 epsilon0), so the hole again has a uniform transverse field."
+          ],
+          [
+            "why",
+            "Geometry changes the linear field coefficient from one-third for spheres to one-half for cylinders."
+          ],
+          [
+            "trap",
+            "Short cylinders, tilted axes or a nonuniform density can remove this uniformity; then use the actual superposed fields."
+          ]
+        ]
+      },
+      {
+        "title": "Full versus partial cavity region",
+        "items": [
+          [
+            "m",
+            "\\mathbf E_{\\rm net}=\\mathbf E_{\\rm full}-\\mathbf E_{\\rm removed}"
+          ],
+          [
+            "p",
+            "Outside the spherical hole, its negative distribution may need its exterior point-charge field while the full solid still uses its interior linear field. Select the correct branch for EACH term at the observation point."
+          ],
+          [
+            "why",
+            "Superposition remains valid everywhere, but the compact uniform-hole simplification is valid only inside both parent spheres."
+          ],
+          [
+            "trap",
+            "Do not extend the constant cavity field to the entire original sphere. Mark all centres, radii and observation domains before substituting."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 18,
+    "slug": "JEE-18-cylinders",
+    "title": "Cylinders, lines and coaxial regions",
+    "subtitle": "Infinite coaxial geometry; lambda is charge per unit AXIAL length.",
+    "source": "Source §§3.19, 3.27; E13; Q29-Q30, Q37-Q38",
+    "diagrams": [
+      "cylinders-a",
+      "cylinders-b"
+    ],
+    "takeaway": "A cylindrical Gauss surface sees enclosed line charge, not the total charge of an infinite object.",
+    "cards": [
+      {
+        "title": "Uniform solid insulating cylinder",
+        "items": [
+          [
+            "m",
+            "E_{\\rm in}=\\rho r/(2\\varepsilon_0)"
+          ],
+          [
+            "m",
+            "E_{\\rm out}=\\rho R^2/(2\\varepsilon_0r)"
+          ],
+          [
+            "p",
+            "Inside radius r, charge is rho pi r²L; the active curved area is 2 pi rL. Outside R, all charge per unit length lambda=rho pi R² is enclosed. E is continuous at the volume-charge boundary."
+          ],
+          [
+            "why",
+            "Compare with the sphere: volume within r grows as r² rather than r³ because the Gaussian length is fixed."
+          ],
+          [
+            "trap",
+            "A metal cylinder is field-free in its material with excess charge on its surface, unlike this fixed-density solid."
+          ]
+        ]
+      },
+      {
+        "title": "Hollow cylindrical conductor",
+        "items": [
+          [
+            "m",
+            "r<R:\\ E=0"
+          ],
+          [
+            "m",
+            "r>R:\\ E=\\lambda/(2\\pi\\varepsilon_0r)"
+          ],
+          [
+            "p",
+            "A uniform infinite cylindrical shell produces no field in its empty bore. In the exterior its field is the same as an axial line charge. The ideal surface has a normal field jump sigma/epsilon0."
+          ],
+          [
+            "why",
+            "The curved Gaussian surface inside contains no charge; cylindrical symmetry makes the vanishing flux imply a vanishing E."
+          ],
+          [
+            "trap",
+            "Do not generalise to a finite open tube near its ends: the bore may admit external electric fields."
+          ]
+        ]
+      },
+      {
+        "title": "Coaxial conductors and voltage",
+        "items": [
+          [
+            "m",
+            "a<r<b:\\ E=\\lambda/(2\\pi\\varepsilon_0r)"
+          ],
+          [
+            "m",
+            "V_a-V_b=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln(b/a)"
+          ],
+          [
+            "p",
+            "With +lambda on the inner conductor and -lambda on the outer, fields vanish inside the inner metal, outside the complete neutral cable, and within outer metal. The gap field follows enclosed +lambda."
+          ],
+          [
+            "why",
+            "Integrating 1/r produces a logarithmic voltage. The outer radius sets a natural finite reference."
+          ],
+          [
+            "trap",
+            "If the complete cable has nonzero net line charge, its outside field need not vanish. Label the conductor's inner and outer surfaces separately."
+          ]
+        ]
+      },
+      {
+        "title": "Voltage limits and infinite references",
+        "items": [
+          [
+            "m",
+            "V(r)-V(r_0)=-2k\\lambda\\ln(r/r_0)"
+          ],
+          [
+            "m",
+            "E(a)=2k\\lambda/a"
+          ],
+          [
+            "p",
+            "A line field has finite differences but no finite zero at infinity. For coaxial conductors the largest gap field is at the smallest radius a; imposing a model breakdown value Eb gives lambda_max=2 pi epsilon0 a Eb."
+          ],
+          [
+            "why",
+            "A small inner radius intensifies the field even when the voltage is only moderate."
+          ],
+          [
+            "trap",
+            "Air breakdown is geometry-, pressure- and gap-dependent. A single Eb about 3 MV/m is only a representative estimate, not an engineering rating."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 19,
+    "slug": "JEE-19-sheets",
+    "title": "Sheets and conducting plates: three regions",
+    "subtitle": "Large plane sheets; ignore edge fields; choose +x from the left sheet to the right.",
+    "source": "Source §§3.6, 3.8, 3.20; E4; Q21-Q22",
+    "diagrams": [
+      "sheets-a",
+      "sheets-b"
+    ],
+    "takeaway": "Sheet density means total sheet charge per area; conductor-face density means that face only.",
+    "cards": [
+      {
+        "title": "One insulating sheet",
+        "items": [
+          [
+            "m",
+            "E_x=\\sigma\\,\\mathrm{sgn}(x)/(2\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "A uniformly charged infinite sheet produces equal field magnitudes on both sides, outward for positive sigma. The two pillbox caps each contribute EA. Moving farther away does not reduce the ideal field."
+          ],
+          [
+            "why",
+            "An infinite sheet does not spread a fixed bundle over larger spherical area; its translational symmetry forbids distance variation."
+          ],
+          [
+            "trap",
+            "Do not replace its field by sigma/epsilon0 unless an additional field and a conductor boundary condition justify it."
+          ]
+        ]
+      },
+      {
+        "title": "Two sheets of arbitrary signed density",
+        "items": [
+          [
+            "m",
+            "E_{\\rm left}=-(\\sigma_1+\\sigma_2)/(2\\varepsilon_0)"
+          ],
+          [
+            "m",
+            "E_{\\rm gap}=(\\sigma_1-\\sigma_2)/(2\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "To the right of both sheets, E=(sigma1+sigma2)/(2 epsilon0). Add signed sheet contributions in each region. Equal opposite densities cancel outside and add in the gap; equal like densities do the reverse."
+          ],
+          [
+            "why",
+            "Region-wise superposition is safer than remembering only the special capacitor case."
+          ],
+          [
+            "trap",
+            "An outside field of zero requires equal and opposite total densities, not simply two plates being present."
+          ]
+        ]
+      },
+      {
+        "title": "Two isolated conducting plates",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm outer\\ face}=(Q_1+Q_2)/2"
+          ],
+          [
+            "m",
+            "Q_{\\rm facing\\ faces}=\\pm(Q_1-Q_2)/2"
+          ],
+          [
+            "p",
+            "For two equal-area large plates with no imposed external field, use four face charges. Each plate's interior must have E=0; the facing charges become equal and opposite. Each outward face receives half the system's total charge."
+          ],
+          [
+            "why",
+            "The field-free metal conditions determine redistribution; the original total charges Q1,Q2 remain fixed if isolated."
+          ],
+          [
+            "trap",
+            "These total-face formulas assume matching large areas and negligible edges. Grounding changes the conserved quantities and must be imposed separately."
+          ]
+        ]
+      },
+      {
+        "title": "Conductor factor of two",
+        "items": [
+          [
+            "m",
+            "E_{\\rm outside}=\\sigma_{\\rm face}/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "E_{\\rm rest}=\\sigma_{\\rm face}/(2\\varepsilon_0)"
+          ],
+          [
+            "p",
+            "A local surface patch gives half its jump on either side. All other charges provide the additional field needed to cancel the patch field inside the metal; outside the two halves add."
+          ],
+          [
+            "why",
+            "This reconciles the insulating sheet and metal-surface formulas without contradicting Gauss's law."
+          ],
+          [
+            "trap",
+            "A surface patch feels the field of OTHER charges, not its own singular self-field. This distinction also controls electrostatic pressure."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 20,
+    "slug": "JEE-20-slab",
+    "title": "Charged slabs: field, potential, subtraction",
+    "subtitle": "Infinite insulating slab of uniform rho occupies -a<x<a; thickness 2a.",
+    "source": "Source §3.20; Q35-Q36; companion field/potential methods",
+    "diagrams": [
+      "slab-a",
+      "slab-b"
+    ],
+    "takeaway": "E is odd, V is even about the centre when the potential reference respects symmetry.",
+    "cards": [
+      {
+        "title": "Inside and outside",
+        "items": [
+          [
+            "m",
+            "|x|<a:\\ E_x=\\rho x/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "|x|>a:\\ E_x=\\rho a\\,\\mathrm{sgn}(x)/\\varepsilon_0"
+          ],
+          [
+            "p",
+            "A pillbox extending from -x to +x encloses charge 2rho xA. For x beyond a, all slab charge is enclosed and the field saturates. Positive rho points away from the mid-plane."
+          ],
+          [
+            "why",
+            "Gauss gives the linear inside field; the outside constant is fixed by the total charge per area 2a rho."
+          ],
+          [
+            "trap",
+            "A finite slab has edge effects. The constant exterior field belongs to the infinite-plane approximation."
+          ]
+        ]
+      },
+      {
+        "title": "Potential referred to the centre",
+        "items": [
+          [
+            "m",
+            "V(x)-V(0)=-\\rho x^2/(2\\varepsilon_0),\\quad |x|\\le a"
+          ],
+          [
+            "m",
+            "V(x)-V(0)=-\\frac{\\rho a}{\\varepsilon_0}(|x|-a/2),\\quad |x|>a"
+          ],
+          [
+            "p",
+            "Integrate minus E piecewise. Match V continuously at both boundaries. Its slope is continuous because there is no isolated surface sheet; its second derivative changes where volume charge ends."
+          ],
+          [
+            "why",
+            "The outer straight potential branches have slopes equal to minus the saturated fields."
+          ],
+          [
+            "trap",
+            "There is no finite V(infinity)=0 for a charged infinite slab; a chosen finite reference is essential."
+          ]
+        ]
+      },
+      {
+        "title": "Particle motion inside a slab",
+        "items": [
+          [
+            "m",
+            "\\ddot x=\\frac{q\\rho}{m\\varepsilon_0}x"
+          ],
+          [
+            "m",
+            "q\\rho<0:\\ \\omega^2=\\frac{|q\\rho|}{m\\varepsilon_0}"
+          ],
+          [
+            "p",
+            "Inside the slab, opposite-sign q feels a restoring force toward the mid-plane. Small constrained x-motion is harmonic; motion parallel to the slab has no electrical restoring force. The sign of q rho reverses stability."
+          ],
+          [
+            "why",
+            "Linear E directly gives linear force; use the coefficient to read off the oscillation frequency."
+          ],
+          [
+            "trap",
+            "An amplitude crossing a slab boundary samples a different force law and is no longer a single harmonic motion."
+          ]
+        ]
+      },
+      {
+        "title": "A removed layer and signed sums",
+        "items": [
+          [
+            "m",
+            "E_{\\rm remaining}(x)=E_{\\rm full}(x)-E_{\\rm cut}(x)"
+          ],
+          [
+            "p",
+            "For a gap cut out of fixed charge, superpose a negative slab over the removed region. Use the relative coordinate from each slab centre. A constant field can appear within an off-centre plane gap because linear terms cancel."
+          ],
+          [
+            "why",
+            "The same subtraction principle unifies slab gaps, cylindrical holes and spherical cavities."
+          ],
+          [
+            "trap",
+            "A cavity in metal is governed by induced surface charge and equipotential conditions; do not replace it with this fixed-density construction."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 21,
+    "slug": "JEE-21-conductor",
+    "title": "Conductors: field-free does not mean chargeless",
+    "subtitle": "Electrostatic equilibrium in connected metal; distinguish metal, cavity and exterior.",
+    "source": "Source §§3.8, 3.21, 3.33; E5; Q7-Q8",
+    "diagrams": [
+      "conductor-a",
+      "conductor-b"
+    ],
+    "takeaway": "The metal is equipotential. An empty cavity may be field-free at a nonzero potential.",
+    "cards": [
+      {
+        "title": "The equilibrium chain",
+        "items": [
+          [
+            "m",
+            "\\mathbf E_{\\rm metal}=0"
+          ],
+          [
+            "m",
+            "\\Delta V_{\\rm connected\\ metal}=0"
+          ],
+          [
+            "p",
+            "Any residual field in an ideal conductor drives free charges until equilibrium is reached. With zero field, a path through connected metal has zero potential difference. Excess bulk charge vanishes; excess charge resides on boundaries."
+          ],
+          [
+            "why",
+            "Gauss on a small closed surface wholly in metal gives zero enclosed net charge. Tangential field at a surface would drive surface motion."
+          ],
+          [
+            "trap",
+            "Zero excess bulk charge is not zero positive and negative microscopic charge density individually. Metals contain enormous compensating charges."
+          ]
+        ]
+      },
+      {
+        "title": "Boundary conditions",
+        "items": [
+          [
+            "m",
+            "E_{n,\\rm out}-E_{n,\\rm in}=\\sigma/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "\\mathbf E_{t,\\rm out}=\\mathbf E_{t,\\rm in}=0"
+          ],
+          [
+            "p",
+            "A thin pillbox gives the normal jump, and a shrinking electrostatic rectangular loop gives tangential continuity. With zero interior field, exterior field is normal and has signed value sigma/epsilon0."
+          ],
+          [
+            "why",
+            "Two different integral laws supply the two boundary conditions: Gauss for normal, conservative field for tangential."
+          ],
+          [
+            "trap",
+            "Sigma is local and can have either sign on different parts of the same conductor when influenced by external sources."
+          ]
+        ]
+      },
+      {
+        "title": "Surface force without self-force",
+        "items": [
+          [
+            "m",
+            "P=\\sigma^2/(2\\varepsilon_0)=\\varepsilon_0E_{\\rm out}^2/2"
+          ],
+          [
+            "p",
+            "A small patch feels the average of the limiting fields, equal to Eout/2 when the metal side has zero field. Multiplying by sigma gives outward force per area regardless of the sign of charge."
+          ],
+          [
+            "why",
+            "Using the full outside field as the force-producing field would include the patch's own contribution and double the answer."
+          ],
+          [
+            "trap",
+            "Pressure is local. Net force on a shaped piece requires integrating vector normals, not multiplying pressure by its curved surface area blindly."
+          ]
+        ]
+      },
+      {
+        "title": "Sharp points and physical limits",
+        "items": [
+          [
+            "m",
+            "\\sigma=\\varepsilon_0E_n"
+          ],
+          [
+            "p",
+            "A small local curvature radius often accompanies a stronger exterior field in typical connected-conductor geometries; sharp tips can initiate corona. Only a lone isolated sphere has a globally uniform sigma by spherical symmetry."
+          ],
+          [
+            "why",
+            "For well-separated connected spheres, equal V implies E=V/R, explaining the stronger small-sphere field."
+          ],
+          [
+            "trap",
+            "Sigma inversely proportional to local radius of curvature is not a universal theorem for arbitrary shapes and environments."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 22,
+    "slug": "JEE-22-conducting-cavity",
+    "title": "Conducting cavities: induced charge ledgers",
+    "subtitle": "A closed connected conductor; sources can be in the cavity or outside it.",
+    "source": "Source §§3.21, 3.34; E14; Q33-Q34, Q49-Q50",
+    "diagrams": [
+      "conducting-cavity-a",
+      "conducting-cavity-b"
+    ],
+    "takeaway": "Track total charge on the conductor, the inner wall and outer wall separately.",
+    "cards": [
+      {
+        "title": "One charge inside an isolated shell",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm inner}=-q"
+          ],
+          [
+            "m",
+            "Q_{\\rm outer}=Q_c+q"
+          ],
+          [
+            "p",
+            "A Gaussian surface in the metal surrounding the cavity has zero flux, so it encloses q plus -q. If the conductor's total charge is Qc, its remaining outer charge must be Qc+q."
+          ],
+          [
+            "why",
+            "Gauss fixes surface TOTALS even for an off-centre charge or an irregular cavity."
+          ],
+          [
+            "trap",
+            "It does not give the inner density pattern. That pattern is generally nonuniform for an off-centre q."
+          ]
+        ]
+      },
+      {
+        "title": "What the exterior can know",
+        "items": [
+          [
+            "m",
+            "\\mathbf E_{\\rm metal}=0,\\quad V_{\\rm metal}=V_c"
+          ],
+          [
+            "p",
+            "For a spherical outer surface with no external sources, its uniform outer charge gives exterior field k(Qc+q)/r². Moving the cavity charge around at fixed q does not alter that exterior solution."
+          ],
+          [
+            "why",
+            "The exterior boundary sees one equipotential outer shape and its net charge, not the hidden source location."
+          ],
+          [
+            "trap",
+            "The shell generally changes the outside field through its outer charge; shielding hides position, not the charge total of an isolated system."
+          ]
+        ]
+      },
+      {
+        "title": "Grounding the conductor",
+        "items": [
+          [
+            "m",
+            "V_c=0\\quad\\mathrm{as\\ a\\ boundary\\ condition}"
+          ],
+          [
+            "p",
+            "Grounding lets charge flow to Earth; Qc is no longer separately conserved. With no external sources and a grounded closed shell containing q, outer field vanishes, outer charge is zero and the conductor acquires total -q."
+          ],
+          [
+            "why",
+            "Uniqueness fixes the source-free exterior with zero boundary and zero far reference."
+          ],
+          [
+            "trap",
+            "Ground does not impose Qc=0 or require every cavity field to vanish. The internal q still creates field in the cavity."
+          ]
+        ]
+      },
+      {
+        "title": "Empty cavity and external sources",
+        "items": [
+          [
+            "m",
+            "Q_{\\rm cavity}=0\\quad\\Rightarrow\\quad\\mathbf E_{\\rm cavity}=0"
+          ],
+          [
+            "p",
+            "An empty closed cavity bounded by an equipotential conductor has constant V throughout, even when external sources polarise the outer surface. Electrostatic shielding is not shielding of all time-varying electromagnetic fields."
+          ],
+          [
+            "why",
+            "The boundary value and absence of internal source uniquely determine a constant harmonic potential in the empty cavity."
+          ],
+          [
+            "trap",
+            "Holes, disconnected walls or a charge placed inside alter the boundary problem. A cavity is not the same thing as the conducting material around it."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 23,
+    "slug": "JEE-23-potential",
+    "title": "Potential and work: fix the reference",
+    "subtitle": "Static prescribed sources; external work equals delta U only for quasistatic transfer with no other energy storage.",
+    "source": "Source §§3.25-3.26, 3.30; E19; Q39-Q40, Q47-Q48",
+    "diagrams": [
+      "potential-a",
+      "potential-b"
+    ],
+    "takeaway": "V is signed scalar energy per unit positive charge. E depends on its gradient, not its zero.",
+    "cards": [
+      {
+        "title": "Conservative field and voltage",
+        "items": [
+          [
+            "m",
+            "V_b-V_a=-\\int_a^b\\mathbf E\\cdot d\\mathbf l"
+          ],
+          [
+            "m",
+            "\\oint\\mathbf E\\cdot d\\mathbf l=0"
+          ],
+          [
+            "p",
+            "For static Coulomb sources, path integrals depend only on endpoints. A closed loop has zero work per charge. One reference value sets all potential values; adding a constant changes no E."
+          ],
+          [
+            "why",
+            "Superposition preserves conservativeness, so the point-source result extends to fixed continuous distributions."
+          ],
+          [
+            "trap",
+            "Changing magnetic flux would invalidate the global electrostatic scalar-potential-only description. This chapter assumes that situation absent."
+          ]
+        ]
+      },
+      {
+        "title": "Work signs and a fixed source",
+        "items": [
+          [
+            "m",
+            "W_{\\rm field}=q(V_a-V_b)"
+          ],
+          [
+            "m",
+            "W_{\\rm ext,slow}=q(V_b-V_a)"
+          ],
+          [
+            "p",
+            "For a positive receiver moved toward a positive fixed source, V and U rise: a slow external agent must supply positive work. Along an equipotential, both electrical work and quasistatic external work are zero."
+          ],
+          [
+            "why",
+            "No sign needs guessing if you calculate delta U=q delta V with the receiver's signed charge."
+          ],
+          [
+            "trap",
+            "Do not attach a one-half factor to q times an independently fixed external potential. Source-induced changes require a different energy ledger."
+          ]
+        ]
+      },
+      {
+        "title": "Zeros: three different statements",
+        "items": [
+          [
+            "m",
+            "V=0\\ \\not\\Rightarrow\\ \\mathbf E=0"
+          ],
+          [
+            "m",
+            "\\mathbf E=0\\ \\not\\Rightarrow\\ V=0"
+          ],
+          [
+            "p",
+            "At a dipole equatorial point V is zero but E need not vanish. At a charged ring centre E is zero but V=kQ/R. A region where V is constant has zero E within that region."
+          ],
+          [
+            "why",
+            "A function value is not a derivative. Only constancy over an open region forces the full gradient to vanish there."
+          ],
+          [
+            "trap",
+            "A single zero or a zero-valued SURFACE does not make V constant in the normal direction."
+          ]
+        ]
+      },
+      {
+        "title": "Point sources and gauges",
+        "items": [
+          [
+            "m",
+            "V=\\sum_i kq_i/r_i"
+          ],
+          [
+            "m",
+            "V_{\\rm uniform}=-\\mathbf E\\cdot\\mathbf r+C"
+          ],
+          [
+            "p",
+            "For finite sources, zero at infinity is often convenient. For a uniform field, infinite line or infinite sheet, choose a finite reference instead. Potential contributions add with signed charges and no vector projections."
+          ],
+          [
+            "why",
+            "Changing C shifts all qV values for a fixed test charge by the same constant, leaving work differences unchanged."
+          ],
+          [
+            "trap",
+            "Do not mix two independent zero conventions within one calculation or interpret a positive V as a field direction."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 24,
+    "slug": "JEE-24-potential-distributions",
+    "title": "Potentials of distributions: integrate once",
+    "subtitle": "Use V(infinity)=0 only when the source admits it; coordinates label the observation point.",
+    "source": "Source §§3.27-3.29; E18; Q41-Q44",
+    "diagrams": [
+      "potential-distributions-a",
+      "potential-distributions-b"
+    ],
+    "takeaway": "An axial potential determines the axial derivative, not an entire off-axis field.",
+    "cards": [
+      {
+        "title": "One general scalar integral",
+        "items": [
+          [
+            "m",
+            "V(\\mathbf r)=k\\int\\frac{dq}{|\\mathbf r-\\mathbf r\\prime|}"
+          ],
+          [
+            "p",
+            "No projection factor occurs in the potential integral. The source coordinate r-prime is integrated out; r labels the observation point. Charge signs remain in dq. Once full V is known, take its negative gradient."
+          ],
+          [
+            "why",
+            "A scalar integral avoids component cancellations, while a later derivative supplies field direction."
+          ],
+          [
+            "trap",
+            "The integration variable is not necessarily the distance from source to receiver. Express that distance in the actual geometry first."
+          ]
+        ]
+      },
+      {
+        "title": "Ring and disc summary with checks",
+        "items": [
+          [
+            "m",
+            "V_{\\rm ring}=kQ/\\sqrt{R^2+x^2}"
+          ],
+          [
+            "m",
+            "V_{\\rm disc}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{R^2+x^2}-|x|)"
+          ],
+          [
+            "p",
+            "Both are even in x and approach kQ/|x| far away. At x=0 their values are kQ/R and sigma R/(2 epsilon0). A ring has a smooth maximum along its axis; the disc potential has a cusp at its charged surface."
+          ],
+          [
+            "why",
+            "The cusp is the mathematical signature of a field jump across a surface sheet of charge."
+          ],
+          [
+            "trap",
+            "Equal-looking symmetry axes do not make ring and disc boundary behaviour interchangeable."
+          ]
+        ]
+      },
+      {
+        "title": "Sphere, shell and finite annulus",
+        "items": [
+          [
+            "m",
+            "V_{\\rm shell}=kQ/\\max(r,R)"
+          ],
+          [
+            "m",
+            "V_{\\rm annulus}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{x^2+b^2}-\\sqrt{x^2+a^2})"
+          ],
+          [
+            "p",
+            "The shell is constant inside, whereas a uniformly charged solid sphere has a parabolic inner V. An annulus follows by subtracting disc potentials, canceling the absolute-x terms."
+          ],
+          [
+            "why",
+            "Superposition works for potential whether or not Gauss is useful for the resulting field."
+          ],
+          [
+            "trap",
+            "For non-spherical fixed distributions, do not replace all charge by a central point except in a controlled far-field limit."
+          ]
+        ]
+      },
+      {
+        "title": "Equipotentials and local field",
+        "items": [
+          [
+            "m",
+            "\\mathbf E=-\\nabla V"
+          ],
+          [
+            "m",
+            "|E_n|\\simeq |\\Delta V|/\\Delta n"
+          ],
+          [
+            "p",
+            "Field is normal to an equipotential surface wherever its gradient is nonzero. Equal voltage steps packed closer together indicate stronger field. Use spacing measured along the local normal for the local derivative estimate."
+          ],
+          [
+            "why",
+            "Tangential motion along an equipotential changes no potential; the directional derivative along that tangent is zero."
+          ],
+          [
+            "trap",
+            "Equipotential curves in a drawing are sections of surfaces. Their visual spacing must use the drawing scale; isolated contour values do not determine a global solution."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 25,
+    "slug": "JEE-25-gradient",
+    "title": "Read E, charge and stability from V",
+    "subtitle": "Partial derivatives hold the other coordinates fixed. Potentials are specified in volts with SI coordinates.",
+    "source": "Source §§3.28-3.31; E18; Q41-Q42, Q53",
+    "diagrams": [
+      "gradient-a",
+      "gradient-b"
+    ],
+    "takeaway": "A graph slope gives minus a field component; graph curvature reveals charge or constrained stability.",
+    "cards": [
+      {
+        "title": "Cartesian and radial derivatives",
+        "items": [
+          [
+            "m",
+            "\\mathbf E=-(\\partial_xV,\\partial_yV,\\partial_zV)"
+          ],
+          [
+            "m",
+            "V=3x^2-2y:\\quad\\mathbf E=(-6x,2,0)"
+          ],
+          [
+            "p",
+            "A positive x-gradient gives a negative x-field. For a truly spherical V(r), use E_r=-dV/dr. If V is known only on one axis, that derivative yields only the field component along that axis."
+          ],
+          [
+            "why",
+            "The gradient combines three directional rates of change; a one-variable graph usually lacks transverse information."
+          ],
+          [
+            "trap",
+            "Do not silently promote an axial function V(x) into a spherically symmetric function V(r)."
+          ]
+        ]
+      },
+      {
+        "title": "Poisson and Laplace equations",
+        "items": [
+          [
+            "m",
+            "\\nabla^2V=-\\rho/\\varepsilon_0"
+          ],
+          [
+            "m",
+            "\\rho=0:\\quad\\nabla^2V=0"
+          ],
+          [
+            "p",
+            "Combine divergence E=rho/epsilon0 with E=-gradient V. This is a useful consistency test for a proposed full potential: compute its Laplacian and see which charge distribution it requires."
+          ],
+          [
+            "why",
+            "For V=3x²-2y the Laplacian is 6, so the required uniform charge density is -6 epsilon0."
+          ],
+          [
+            "trap",
+            "A potential varying quadratically in one coordinate is not source-free unless other coordinate curvatures compensate it."
+          ]
+        ]
+      },
+      {
+        "title": "Constrained one-dimensional equilibrium",
+        "items": [
+          [
+            "m",
+            "V\\prime(x_0)=0"
+          ],
+          [
+            "m",
+            "qV\\prime\\prime(x_0)>0\\quad\\mathrm{for\\ stable\\ 1D\\ motion}"
+          ],
+          [
+            "p",
+            "An extremum of U=qV is stable along the allowed x motion if U has positive curvature. A negative charge is stable at a constrained maximum of V, not a minimum. Curvature gives m omega²=q V-double-prime."
+          ],
+          [
+            "why",
+            "The sign of the test charge decides whether increasing potential raises or lowers its energy."
+          ],
+          [
+            "trap",
+            "A minimum along one axis can be a saddle in three dimensions. Constraint forces can supply the missing stabilisation."
+          ]
+        ]
+      },
+      {
+        "title": "Turning points and accessible regions",
+        "items": [
+          [
+            "m",
+            "K(x)=\\mathcal E-qV(x)\\ge0"
+          ],
+          [
+            "p",
+            "Use a constant total mechanical energy E-calligraphic to find allowed positions, turning points K=0 and maximum speed. Compare the ENERGY curve qV with the conserved level, not V alone when q is negative."
+          ],
+          [
+            "why",
+            "Electrical motion is a standard potential-energy problem once the source field is static and other work is absent."
+          ],
+          [
+            "trap",
+            "A zero force point is not necessarily a turning point; a particle may pass through it at nonzero speed."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 26,
+    "slug": "JEE-26-mutual-energy",
+    "title": "Energy of charge systems: count pairs once",
+    "subtitle": "Sources assembled quasistatically from far separation; omit divergent point self-energies.",
+    "source": "Source §3.32; E17, E19; Q45-Q48",
+    "diagrams": [
+      "mutual-energy-a",
+      "mutual-energy-b"
+    ],
+    "takeaway": "Use pair energies for a mutually assembled system; use qV for a receiver in a prescribed external field.",
+    "cards": [
+      {
+        "title": "Build the system charge by charge",
+        "items": [
+          [
+            "m",
+            "U=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}"
+          ],
+          [
+            "m",
+            "U=\\frac12\\sum_i q_iV_i,\\quad V_i=\\sum_{j\\ne i}kq_j/r_{ij}"
+          ],
+          [
+            "p",
+            "The first charge requires no mutual assembly work. Each later charge sees the potential of those already placed. Summing over unordered pairs counts each interaction once; the full i,j sum counts it twice."
+          ],
+          [
+            "why",
+            "The one-half factor is bookkeeping for double counting, not a universal ingredient in every electrostatic energy formula."
+          ],
+          [
+            "trap",
+            "V_i excludes charge i's own potential. A point self-potential is divergent and does not belong in this finite mutual-energy formula."
+          ]
+        ]
+      },
+      {
+        "title": "Triangle and square standard results",
+        "items": [
+          [
+            "m",
+            "U_{\\triangle}=3kq^2/a"
+          ],
+          [
+            "m",
+            "U_{\\mathrm{square}}=(4+\\sqrt2)kq^2/a"
+          ],
+          [
+            "p",
+            "Three equal charges at triangle vertices make three equal pairs. Four equal square corner charges make four side pairs and two diagonal pairs. List the pairs before using symmetry to group them."
+          ],
+          [
+            "why",
+            "Every separation enters once: diagonal distances differ from side distances, even when the charges match."
+          ],
+          [
+            "trap",
+            "Changing one sign changes every pair involving that charge. It is not achieved by flipping the final total's sign."
+          ]
+        ]
+      },
+      {
+        "title": "Disassembly and released energy",
+        "items": [
+          [
+            "m",
+            "\\Delta K=-\\Delta U\\quad\\mathrm{for\\ free\\ isolated\\ motion}"
+          ],
+          [
+            "p",
+            "A negative U relative to separated charges means external energy is needed for complete separation from that configuration. A positive U can be converted into kinetic energy on release if constraints and competing interactions permit."
+          ],
+          [
+            "why",
+            "Energy conservation gives total kinetic energy without following every force over a complicated trajectory."
+          ],
+          [
+            "trap",
+            "Energy alone rarely assigns how kinetic energy is shared among unequal particles. Momentum and symmetry supply extra information."
+          ]
+        ]
+      },
+      {
+        "title": "Force by differentiating energy",
+        "items": [
+          [
+            "m",
+            "F_x=-\\left(\\frac{\\partial U}{\\partial x}\\right)_{\\rm fixed\\ charges}"
+          ],
+          [
+            "p",
+            "For a specified mechanical coordinate x at fixed source charges, differentiate the actual interaction energy. This gives a generalised force along that coordinate. A permanent dipole uses -p dot E; an induced response needs its own assembly work."
+          ],
+          [
+            "why",
+            "A derivative can sum many pair-force components automatically while keeping the work sign transparent."
+          ],
+          [
+            "trap",
+            "If a voltage source supplies charge, field energy alone is not the complete mechanical energy ledger. Include source work, as in the capacitor companion."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 27,
+    "slug": "JEE-27-sharing",
+    "title": "Connected spheres and charge sharing",
+    "subtitle": "Spherical conductors far apart, thin connecting wire with negligible stored charge and capacitance.",
+    "source": "Source §§3.33-3.34; E16; Q51-Q52",
+    "diagrams": [
+      "sharing-a",
+      "sharing-b"
+    ],
+    "takeaway": "Equal potential does not mean equal charge or equal surface field.",
+    "cards": [
+      {
+        "title": "Final charges and fields",
+        "items": [
+          [
+            "m",
+            "Q_1/R_1=Q_2/R_2"
+          ],
+          [
+            "m",
+            "Q_1/Q_2=R_1/R_2,\\quad E_1/E_2=R_2/R_1"
+          ],
+          [
+            "p",
+            "At large separation, each sphere's potential is approximately kQi/Ri. Connecting sets them equal and total isolated charge is conserved. Smaller spheres then have stronger field and larger surface charge density."
+          ],
+          [
+            "why",
+            "Sigma scales as Q/R² while equal-V sharing makes Q proportional to R, leaving sigma proportional to 1/R."
+          ],
+          [
+            "trap",
+            "The approximation fails when mutual influence is not negligible or a nearby object polarises the spheres."
+          ]
+        ]
+      },
+      {
+        "title": "Initial voltages and capacitance weights",
+        "items": [
+          [
+            "m",
+            "C_i=4\\pi\\varepsilon_0R_i"
+          ],
+          [
+            "m",
+            "V_f=\\frac{C_1V_1+C_2V_2}{C_1+C_2}"
+          ],
+          [
+            "p",
+            "Rewrite each initial charge as CiVi. Isolated sharing preserves their sum, giving a capacitance-weighted final potential. Equal radii reduce it to an ordinary average only in the same far-separated approximation."
+          ],
+          [
+            "why",
+            "Capacitance weights reflect how much charge a sphere holds per unit potential in its actual surroundings."
+          ],
+          [
+            "trap",
+            "A grounded final system is not isolated: Earth changes the charge budget and fixes a potential instead."
+          ]
+        ]
+      },
+      {
+        "title": "Where the lost energy goes",
+        "items": [
+          [
+            "m",
+            "U_i-U_f=\\frac{C_1C_2(V_1-V_2)^2}{2(C_1+C_2)}"
+          ],
+          [
+            "p",
+            "The final field stores less energy whenever the initial potentials differ. The missing energy can appear as resistive heating, radiation and transient circuit energy; its exact partition depends on the real connection."
+          ],
+          [
+            "why",
+            "The final energy follows endpoint electrostatics while the route of dissipation requires dynamic information."
+          ],
+          [
+            "trap",
+            "An ideal zero-resistance, zero-radiation model does not simply settle by magic. State the relaxation mechanism rather than saying energy vanished."
+          ]
+        ]
+      },
+      {
+        "title": "A worked size contrast",
+        "items": [
+          [
+            "m",
+            "R_1=0.02\\ \\mathrm m,\\ R_2=0.06\\ \\mathrm m"
+          ],
+          [
+            "m",
+            "V_1=3000\\ \\mathrm V,\\ V_2=0:\\ V_f=750\\ \\mathrm V"
+          ],
+          [
+            "p",
+            "The initial small sphere has charge C1 times 3000 V. After sharing, charges are in ratio 1:3. The energy remaining is one quarter of the initial energy, so three quarters leaves the electrostatic store."
+          ],
+          [
+            "why",
+            "Only the small sphere initially carries charge; the larger total capacitance stores the same total charge at a lower voltage."
+          ],
+          [
+            "trap",
+            "Use metres in capacitance. A sphere with a neutral net charge may still have an induced nonuniform distribution when close to other sources."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 28,
+    "slug": "JEE-28-concentric",
+    "title": "Concentric conductors and earthing",
+    "subtitle": "Inner sphere radius a with q; thin outer spherical shell radius b with net Q; a<b.",
+    "source": "Source §3.34; E14-E15; Q49-Q50",
+    "diagrams": [
+      "concentric-a",
+      "concentric-b"
+    ],
+    "takeaway": "Potential equations and the correct charge constraints solve earthing problems without guessing signs.",
+    "cards": [
+      {
+        "title": "The two potential equations",
+        "items": [
+          [
+            "m",
+            "V_a=kq/a+kQ/b"
+          ],
+          [
+            "m",
+            "V_b=k(q+Q)/b"
+          ],
+          [
+            "p",
+            "The inner sphere contributes kq/r outside itself. The outer thin shell contributes kQ/b everywhere inside. Hence the gap voltage depends only on q: Va-Vb=kq(1/a-1/b)."
+          ],
+          [
+            "why",
+            "An outer shell can shift all inner potentials by a constant without changing the gap field."
+          ],
+          [
+            "trap",
+            "Q means the shell's NET charge. Its inner and outer face charges are -q and Q+q, not generally -q and +q."
+          ]
+        ]
+      },
+      {
+        "title": "Ground the outer shell",
+        "items": [
+          [
+            "m",
+            "V_b=0:\\quad Q=-q"
+          ],
+          [
+            "m",
+            "V_a=kq(1/a-1/b)"
+          ],
+          [
+            "p",
+            "Keep q fixed when the inner sphere is isolated, but let Q change through the ground wire. The outside field vanishes and the gap field remains kq/r². Earth changes the reference boundary, not the Coulomb law."
+          ],
+          [
+            "why",
+            "The grounded exterior has no sources and zero potential on its boundary and at large distance, fixing the zero exterior solution."
+          ],
+          [
+            "trap",
+            "If external sources are present, grounding does not imply zero outer surface charge everywhere."
+          ]
+        ]
+      },
+      {
+        "title": "Ground the inner sphere",
+        "items": [
+          [
+            "m",
+            "V_a=0:\\quad q=-Qa/b"
+          ],
+          [
+            "m",
+            "V_b=kQ(1-a/b)/b"
+          ],
+          [
+            "p",
+            "Here the outer shell remains isolated with fixed Q. The ground wire lets the inner charge become negative for positive Q until its self-potential cancels the outer-shell potential."
+          ],
+          [
+            "why",
+            "Choose which conductor conserves charge before imposing the grounded potential equation."
+          ],
+          [
+            "trap",
+            "Grounding the inner and grounding the outer are different experiments. Do not interchange their fixed-charge assumptions."
+          ]
+        ]
+      },
+      {
+        "title": "Charge in a cavity: potential constants",
+        "items": [
+          [
+            "m",
+            "V_{\\rm cavity}(r)=kq/r-kq/a+V_c"
+          ],
+          [
+            "p",
+            "For a central point charge inside a spherical cavity of radius a, the inner wall carries -q uniformly. The conductor's potential Vc adds an overall constant to the cavity potential. At r=a the expression correctly equals Vc."
+          ],
+          [
+            "why",
+            "The cavity field depends on radial derivatives and is kq/r² even though grounding or outer charge changes Vc."
+          ],
+          [
+            "trap",
+            "This simple formula assumes the charge is central and the cavity spherical. Off-centre density and field need an actual boundary-value solution."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 29,
+    "slug": "JEE-29-self-energy",
+    "title": "Field energy, self-energy and physical scales",
+    "subtitle": "Vacuum electrostatics; smooth continuous charge models; material structure is not inferred from these classical models.",
+    "source": "Source §§3.36-3.37; E20; Q54-Q55; OL5",
+    "diagrams": [
+      "self-energy-a",
+      "self-energy-b"
+    ],
+    "takeaway": "Point mutual energy and extended-body self-energy are different quantities.",
+    "cards": [
+      {
+        "title": "Charge a conducting sphere slowly",
+        "items": [
+          [
+            "m",
+            "U_{\\rm shell}=\\int_0^Q\\frac{kq}{R}\\,dq=\\frac{kQ^2}{2R}"
+          ],
+          [
+            "m",
+            "U=\\frac12QV"
+          ],
+          [
+            "p",
+            "As charge q accumulates, the sphere potential grows from zero to kQ/R. Integrating V dq gives one-half the final charge times final potential. The radius is held fixed during this charging operation."
+          ],
+          [
+            "why",
+            "Using final V for every increment would wrongly charge all increments against the already-completed field."
+          ],
+          [
+            "trap",
+            "A point charge is the singular R to zero limit, with divergent classical self-energy; it is not a finite-energy charged ball of zero radius."
+          ]
+        ]
+      },
+      {
+        "title": "Assemble a uniform solid sphere",
+        "items": [
+          [
+            "m",
+            "U_{\\rm solid}=\\frac{3kQ^2}{5R}"
+          ],
+          [
+            "m",
+            "U_{\\rm inside}=\\frac{kQ^2}{10R}"
+          ],
+          [
+            "p",
+            "Build concentric shells: previously assembled q(r)=Q(r/R)³ contributes kq(r)dq/r when the next thin shell is added. The solid sphere has an interior field energy absent from a conducting shell."
+          ],
+          [
+            "why",
+            "Both objects have the same exterior energy kQ²/(2R); adding the solid's interior contribution gives 3kQ²/(5R)."
+          ],
+          [
+            "trap",
+            "Charge is fixed uniformly in this insulating model. If allowed to redistribute freely as metal, it migrates to the surface instead."
+          ]
+        ]
+      },
+      {
+        "title": "Energy density and sign",
+        "items": [
+          [
+            "m",
+            "u=\\frac12\\varepsilon_0E^2"
+          ],
+          [
+            "m",
+            "U=\\frac12\\int\\rho V\\,d\\mathcal V"
+          ],
+          [
+            "p",
+            "For appropriate finite sources and vanishing far boundary terms, the field-energy integral equals the assembly energy including extended self-energies. The positive square does not contradict negative mutual pair energy after self-terms are subtracted."
+          ],
+          [
+            "why",
+            "Cross terms in the total E² supply interaction energy; individual source field energies supply self-energy."
+          ],
+          [
+            "trap",
+            "For point sources the field integral diverges at each source. Do not claim the finite signed pair sum equals that unregularised integral."
+          ]
+        ]
+      },
+      {
+        "title": "Atomic and nuclear energy checks",
+        "items": [
+          [
+            "m",
+            "ke^2=1.44\\ \\mathrm{MeV\\,fm}"
+          ],
+          [
+            "m",
+            "r_{\\min}=kZ_1Z_2e^2/K"
+          ],
+          [
+            "p",
+            "For head-on approach to a heavy fixed target, incident kinetic energy becomes repulsive Coulomb potential energy at closest approach. An alpha of 5 MeV approaching gold Z=79 turns near 45.5 fm in this model."
+          ],
+          [
+            "why",
+            "The length-energy product ke² makes quick eV-nm and MeV-fm conversions possible without repeated SI arithmetic."
+          ],
+          [
+            "trap",
+            "Non-head-on approach retains angular kinetic energy at its turning point. Nuclear force, recoil and relativity can limit the fixed-target Coulomb model."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 1,
+    "slug": "Olympiad-01-laplace",
+    "title": "Earnshaw and the ring saddle",
+    "subtitle": "Specialised local-field tools; empty region, static electrostatics, no active feedback.",
+    "source": "Source §10.1; OL1; core stability revisited",
+    "diagrams": [
+      "laplace-a",
+      "laplace-b"
+    ],
+    "takeaway": "Axial stability alone is not trapping. Harmonic potentials cannot have a strict interior extremum.",
+    "cards": [
+      {
+        "title": "The precise no-trapping statement",
+        "items": [
+          [
+            "m",
+            "\\nabla^2V=0\\quad\\mathrm{in\\ a\\ source\\! -\\! free\\ region}"
+          ],
+          [
+            "p",
+            "A nonconstant harmonic potential has no local maximum or minimum in an open source-free region. A free positive charge would need a minimum of V; a free negative charge would need a maximum. Neither is available for strict static trapping."
+          ],
+          [
+            "why",
+            "The maximum principle is stronger than a second-derivative test and also handles points with vanishing Hessian."
+          ],
+          [
+            "trap",
+            "Not every equilibrium is a nondegenerate quadratic saddle: a constant-field-free region can be neutral, and higher-order stationary points exist."
+          ]
+        ]
+      },
+      {
+        "title": "Hessian trace and signs",
+        "items": [
+          [
+            "m",
+            "V\\simeq V_0+\\frac12\\sum_i\\kappa_i x_i^2"
+          ],
+          [
+            "m",
+            "\\kappa_x+\\kappa_y+\\kappa_z=0"
+          ],
+          [
+            "p",
+            "At a stationary point, diagonalise the symmetric Hessian. If a nonzero eigenvalue bends up, at least one other must compensate by bending down. The energy curvatures are q times these eigenvalues."
+          ],
+          [
+            "why",
+            "The Laplacian is the trace in any orthonormal axes; its zero value constrains all directional curvatures together."
+          ],
+          [
+            "trap",
+            "All second derivatives need not be strictly positive at a general strict minimum. Use the maximum principle when the quadratic test is inconclusive."
+          ]
+        ]
+      },
+      {
+        "title": "Ring centre expansion",
+        "items": [
+          [
+            "m",
+            "V\\simeq\\frac{kQ}{R}\\left(1-\\frac{z^2}{2R^2}+\\frac{s^2}{4R^2}\\right)"
+          ],
+          [
+            "m",
+            "E_s\\simeq-kQs/(2R^3)"
+          ],
+          [
+            "p",
+            "For a positive ring in the xy-plane, axial curvature is -kQ/R³. Rotational symmetry gives equal x and y curvatures, each +kQ/(2R³). Thus a negative charge is axially stable but transversely unstable."
+          ],
+          [
+            "why",
+            "Two equal transverse curvatures must cancel the single axial curvature in the trace."
+          ],
+          [
+            "trap",
+            "s²=x²+y² is distance squared from the axis, not a spherical radius squared. This is a near-centre expansion."
+          ]
+        ]
+      },
+      {
+        "title": "Time scales and legitimate exceptions",
+        "items": [
+          [
+            "m",
+            "\\omega_z^2=k|qQ|/(mR^3)"
+          ],
+          [
+            "m",
+            "\\tau_\\perp=\\sqrt2/\\omega_z"
+          ],
+          [
+            "p",
+            "For opposite-sign charge, the transverse instability grows exponentially at small displacement with this time scale. Mechanical guides, time-dependent trapping fields and feedback change the problem; magnetic/material forces are outside the theorem."
+          ],
+          [
+            "why",
+            "A restoring axial direction coexists with unstable transverse directions rather than violating the no-trapping condition."
+          ],
+          [
+            "trap",
+            "The theorem concerns static electrostatic forces on a freely moving test charge in a source-free region, not every possible levitation mechanism."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 2,
+    "slug": "Olympiad-02-image-plane",
+    "title": "Images I: a grounded conducting plane",
+    "subtitle": "Charge q at (0,0,h), h>0; actual physical domain z>0; plane is at V=0.",
+    "source": "Source §10.2; OL2",
+    "diagrams": [
+      "image-plane-a",
+      "image-plane-b"
+    ],
+    "takeaway": "Images are mathematical sources outside the physical solution region, not real charges in the metal.",
+    "cards": [
+      {
+        "title": "Construction plus uniqueness",
+        "items": [
+          [
+            "m",
+            "V=kq\\left(\\frac1{|\\mathbf r-h\\hat{\\mathbf z}|}-\\frac1{|\\mathbf r+h\\hat{\\mathbf z}|}\\right)"
+          ],
+          [
+            "p",
+            "Replace the plane, only for the upper-half-space calculation, by an image -q at z=-h. Distances match on z=0, making V zero there. The source singularity and far boundary condition also match."
+          ],
+          [
+            "why",
+            "Uniqueness says this candidate is the physical exterior potential once sources and boundary values agree."
+          ],
+          [
+            "trap",
+            "Do not continue the image field into the conductor. The true electrostatic field in the metal is zero."
+          ]
+        ]
+      },
+      {
+        "title": "Force and the moving-image factor",
+        "items": [
+          [
+            "m",
+            "F_z=-kq^2/(4h^2)"
+          ],
+          [
+            "m",
+            "U(h)=-kq^2/(4h)"
+          ],
+          [
+            "p",
+            "The physical charge feels attraction to its image a distance 2h away. Integrating the actual force gives the energy relative to infinity. The energy is half the naive two-real-charge interaction because induced charge readjusts."
+          ],
+          [
+            "why",
+            "Differentiate U with respect to h to recover Fz. This is a safe check on the one-half factor."
+          ],
+          [
+            "trap",
+            "Using -kq²/(2h) as physical energy would double the force when h changes and the image moves with it."
+          ]
+        ]
+      },
+      {
+        "title": "Surface charge distribution",
+        "items": [
+          [
+            "m",
+            "\\sigma(s)=-\\frac{qh}{2\\pi(s^2+h^2)^{3/2}}"
+          ],
+          [
+            "m",
+            "\\int_0^\\infty\\sigma(s)2\\pi s\\,ds=-q"
+          ],
+          [
+            "p",
+            "Normal differentiation of the exterior potential gives the induced density. It is concentrated under the charge but extends across the whole infinite plane. Its total is exactly -q, supplied by ground."
+          ],
+          [
+            "why",
+            "The integral is finite despite the infinite plane; density falls as inverse cube at large lateral distance."
+          ],
+          [
+            "trap",
+            "A finite isolated plate generally induces a different total and far field. Grounded and isolated boundary conditions are not interchangeable."
+          ]
+        ]
+      },
+      {
+        "title": "Energy and scale estimate",
+        "items": [
+          [
+            "m",
+            "|U_e|=ke^2/(4h)\\simeq\\frac{0.360\\ \\mathrm{eV\\,nm}}{h}"
+          ],
+          [
+            "p",
+            "For an electron at h=1 nm, the ideal image attraction energy is about 0.36 eV and force about 5.77 times 10^(-11) N. The continuum metal model is a macroscopic boundary approximation."
+          ],
+          [
+            "why",
+            "A positive or negative external charge is attracted because the induced response reverses sign with it, leaving force proportional to q²."
+          ],
+          [
+            "trap",
+            "At atomic separations, electronic structure and quantum effects prevent extrapolating an ideal image singularity as an exact material prediction."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 3,
+    "slug": "Olympiad-03-image-sphere",
+    "title": "Images II: spherical conductor boundaries",
+    "subtitle": "External q lies at z=d>R outside a spherical conductor of radius R.",
+    "source": "Source §10.2 sphere pointer; supporting boundary-value derivation",
+    "diagrams": [
+      "image-sphere-a",
+      "image-sphere-b"
+    ],
+    "takeaway": "Check the boundary potential first, then impose grounded versus isolated charge conditions.",
+    "cards": [
+      {
+        "title": "Grounded sphere image",
+        "items": [
+          [
+            "m",
+            "q\\prime=-qR/d,\\quad b=R^2/d"
+          ],
+          [
+            "m",
+            "V=kq/|\\mathbf r-d\\hat{\\mathbf z}|+kq\\prime/|\\mathbf r-b\\hat{\\mathbf z}|"
+          ],
+          [
+            "p",
+            "An internal image at z=b has the right distance ratio to make V zero on every point of r=R. It lies outside the physical exterior region. At infinity the potential also vanishes."
+          ],
+          [
+            "why",
+            "The sphere boundary sets an algebraic distance identity, and uniqueness selects the corresponding exterior solution."
+          ],
+          [
+            "trap",
+            "Only the exterior field is represented. Inside the real metal E is zero, not the image-pair field."
+          ]
+        ]
+      },
+      {
+        "title": "Grounded attraction and energy",
+        "items": [
+          [
+            "m",
+            "F_z=-\\frac{kq^2Rd}{(d^2-R^2)^2}"
+          ],
+          [
+            "m",
+            "U=-\\frac{kq^2R}{2(d^2-R^2)}"
+          ],
+          [
+            "p",
+            "The source-image separation is d-R²/d. Coulomb force on q gives the stated attractive force. Half q times induced potential gives the physical energy with the grounded sphere allowed to readjust."
+          ],
+          [
+            "why",
+            "At d=R+h with h much smaller than R, U tends to -kq²/(4h), recovering the local plane result."
+          ],
+          [
+            "trap",
+            "Do not differentiate a two-real-charge energy while incorrectly holding the image charge or position fixed."
+          ]
+        ]
+      },
+      {
+        "title": "Isolated neutral sphere",
+        "items": [
+          [
+            "m",
+            "q_0=+qR/d\\quad\\mathrm{at\\ the\\ centre}"
+          ],
+          [
+            "m",
+            "Q_{\\rm induced}=q\\prime+q_0=0"
+          ],
+          [
+            "p",
+            "Add a central image to make total sphere charge zero while preserving a constant boundary potential. The central term makes that potential nonzero. The actual density polarises with zero net charge."
+          ],
+          [
+            "why",
+            "A central image shifts V equally over a spherical boundary without changing its equipotential character."
+          ],
+          [
+            "trap",
+            "The force is the sum of both image forces. The grounded-sphere result alone is wrong for an isolated neutral sphere."
+          ]
+        ]
+      },
+      {
+        "title": "Isolated sphere of specified charge",
+        "items": [
+          [
+            "m",
+            "q_0=Q_c+qR/d"
+          ],
+          [
+            "m",
+            "V_c=kq_0/R"
+          ],
+          [
+            "p",
+            "The off-centre image q-prime still enforces the spatial cancellation on the sphere, and the central image sets its specified net charge Qc. Evaluate force at the actual q using both images."
+          ],
+          [
+            "why",
+            "Boundary equipotential and net conductor charge are independent constraints; one image condition need not impose both."
+          ],
+          [
+            "trap",
+            "Do not label q-prime as the entire physical induced charge on an isolated sphere. Total charge equals the sum of all required interior images."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 4,
+    "slug": "Olympiad-04-pressure-bubble",
+    "title": "Pressure, hemispheres and charged bubbles",
+    "subtitle": "Vacuum exterior; conducting spherical interfaces; gamma is surface tension per liquid-air surface.",
+    "source": "Source §10.3; OL3-OL4; P27",
+    "diagrams": [
+      "pressure-bubble-a",
+      "pressure-bubble-b"
+    ],
+    "takeaway": "Pressure is local; the net force uses projected area. Soap bubbles have TWO interfaces.",
+    "cards": [
+      {
+        "title": "Pressure from two independent routes",
+        "items": [
+          [
+            "m",
+            "P=\\sigma^2/(2\\varepsilon_0)"
+          ],
+          [
+            "m",
+            "P\\,4\\pi R^2=-\\left(\\partial U/\\partial R\\right)_Q"
+          ],
+          [
+            "p",
+            "The patch-force route uses the field of the rest of the conductor, sigma/(2 epsilon0). The energy route differentiates U=kQ²/(2R) at fixed Q. Both give outward pressure regardless of charge sign."
+          ],
+          [
+            "why",
+            "Agreement checks both the field averaging and the mechanical work sign."
+          ],
+          [
+            "trap",
+            "At fixed potential a source exchanges energy and charge. Differentiating stored energy alone with the fixed-Q rule is inappropriate."
+          ]
+        ]
+      },
+      {
+        "title": "Separating the hemispheres",
+        "items": [
+          [
+            "m",
+            "F_{\\rm hemi}=P\\pi R^2"
+          ],
+          [
+            "m",
+            "F_{\\rm hemi}=kQ^2/(8R^2)"
+          ],
+          [
+            "p",
+            "For a uniformly charged complete spherical conducting shell, integrate the axial component P cos theta over one hemisphere. The projected area is a disc, not the hemisphere's full curved area."
+          ],
+          [
+            "why",
+            "Transverse force components cancel by rotational symmetry; only the cut-normal component remains."
+          ],
+          [
+            "trap",
+            "This is the force across the cut of the original complete shell. Widely separated hemispheres redistribute charge and do not retain this same pressure pattern."
+          ]
+        ]
+      },
+      {
+        "title": "Soap bubble: pressure ledger",
+        "items": [
+          [
+            "m",
+            "p_{\\rm in}-p_{\\rm out}=4\\gamma/R-Q^2/(32\\pi^2\\varepsilon_0R^4)"
+          ],
+          [
+            "p",
+            "Surface tension from the two interfaces pulls inward; electrostatic stress pulls outward. The gas pressure difference supplies whatever residual balance is needed for a spherical static shape. For fixed gas content include its equation of state."
+          ],
+          [
+            "why",
+            "A charged bubble can have less gas overpressure than an uncharged bubble at the same radius."
+          ],
+          [
+            "trap",
+            "Zero overpressure does not imply that a punctured bubble is dynamically stable or survives. Film drainage and shape modes are separate issues."
+          ]
+        ]
+      },
+      {
+        "title": "Zero overpressure: a scale, not a verdict",
+        "items": [
+          [
+            "m",
+            "Q_0=8\\pi\\sqrt{2\\varepsilon_0\\gamma R^3}"
+          ],
+          [
+            "p",
+            "For R=2 cm and gamma=0.025 N/m, the spherical zero-overpressure charge is about 47.3 nC and potential about 21.3 kV. Compare electrostatic pressure and capillary pressure with consistent units."
+          ],
+          [
+            "why",
+            "Both scale laws arise from equating a R^(-4) electrical pressure at fixed Q to a R^(-1) capillary pressure."
+          ],
+          [
+            "trap",
+            "This condition is not the liquid-drop Rayleigh instability threshold; the soap-bubble film has two surfaces and different material constraints."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 5,
+    "slug": "Olympiad-05-drops",
+    "title": "Drops: shape instability and coalescence",
+    "subtitle": "Conducting liquid drop in a surrounding medium approximated as vacuum; fixed volume and charge.",
+    "source": "Source OL9; supporting stability qualifications",
+    "diagrams": [
+      "drops-a",
+      "drops-b"
+    ],
+    "takeaway": "Radial pressure balance alone is not a proof of shape stability or a coalescence prediction.",
+    "cards": [
+      {
+        "title": "Rayleigh limit and its assumptions",
+        "items": [
+          [
+            "m",
+            "Q_R=8\\pi\\sqrt{\\varepsilon_0\\gamma R^3}"
+          ],
+          [
+            "m",
+            "X=Q^2/(64\\pi^2\\varepsilon_0\\gamma R^3)"
+          ],
+          [
+            "p",
+            "For an ideal isolated incompressible conducting liquid drop, the first quadrupole shape mode loses stability at fissility X=1. For water with gamma=0.072 N/m and R=1 mm, QR is about 0.635 nC."
+          ],
+          [
+            "why",
+            "The coefficient is a result of a volume-preserving shape perturbation. A pressure-scale comparison is suggestive but not a stability derivation."
+          ],
+          [
+            "trap",
+            "Gas pressure can balance a spherical drop while shape modes are unstable. Do not replace a mode analysis by an unqualified pressure equality."
+          ]
+        ]
+      },
+      {
+        "title": "Size scales at the limit",
+        "items": [
+          [
+            "m",
+            "V_R=kQ_R/R\\propto R^{1/2}"
+          ],
+          [
+            "m",
+            "E_R=kQ_R/R^2\\propto R^{-1/2}"
+          ],
+          [
+            "p",
+            "Smaller drops require less total charge to reach the Rayleigh limit but have stronger local limiting field. At R=10 micrometres, the water-drop QR is about 0.635 pC and V about 571 V."
+          ],
+          [
+            "why",
+            "Surface tension and electrostatic energy have different size powers, creating a nontrivial radius dependence."
+          ],
+          [
+            "trap",
+            "A universal 3 MV/m air cutoff is not reliable for microdroplets. Real breakdown, evaporation and ion emission depend on the environment."
+          ]
+        ]
+      },
+      {
+        "title": "Two equal drops merge: endpoint energy",
+        "items": [
+          [
+            "m",
+            "R_f=2^{1/3}r,\\quad Q_f=2q"
+          ],
+          [
+            "m",
+            "\\Delta U=4\\pi\\gamma r^2(2^{2/3}-2)+\\frac{kq^2}{r}(2^{2/3}-1)"
+          ],
+          [
+            "p",
+            "Compare two initially FAR-SEPARATED drops with one final sphere, conserving volume and charge. Surface energy falls but electrostatic self-energy rises. Neglect initial mutual interaction only at sufficiently large separation."
+          ],
+          [
+            "why",
+            "The new sphere has less total area, but holding doubled charge on its larger radius still costs electrical self-energy."
+          ],
+          [
+            "trap",
+            "Drops initially touching have mutual interaction and deformed shapes; this far-separated endpoint formula does not establish the barrier or dynamics at contact."
+          ]
+        ]
+      },
+      {
+        "title": "Energetic threshold is not a trajectory",
+        "items": [
+          [
+            "m",
+            "\\frac{q_{\\rm threshold}}{Q_R(r)}=\\frac12\\sqrt{\\frac{2-2^{2/3}}{2^{2/3}-1}}\\simeq0.419"
+          ],
+          [
+            "p",
+            "Below this threshold the final single sphere has lower energy than two far-separated equal drops in the stated model. At r=10 micrometres for water the threshold is about 0.266 pC."
+          ],
+          [
+            "why",
+            "Dimensionless ratios cancel radius and material constants when both energy terms use consistent scaling."
+          ],
+          [
+            "trap",
+            "Lower final energy does not guarantee coalescence, nor does a higher endpoint energy prove touching drops must bounce. Barriers and dissipation matter."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 6,
+    "slug": "Olympiad-06-multipoles",
+    "title": "Multipoles and induced neutral bodies",
+    "subtitle": "Localised fixed charge distributions; observation distance large relative to source size.",
+    "source": "Source §§3.9-3.10, 10.6; OL10; supporting multipole/induction derivations",
+    "diagrams": [
+      "multipoles-a",
+      "multipoles-b"
+    ],
+    "takeaway": "Net neutrality removes the monopole, not all fields. An induced dipole has an assembly cost.",
+    "cards": [
+      {
+        "title": "First terms of a far-field expansion",
+        "items": [
+          [
+            "m",
+            "V\\simeq kQ/r+k\\mathbf p\\cdot\\hat{\\mathbf r}/r^2"
+          ],
+          [
+            "m",
+            "Q=\\int dq,\\quad\\mathbf p=\\int\\mathbf r\\prime\\,dq"
+          ],
+          [
+            "p",
+            "Expand inverse source-receiver distance in source size divided by r. Q gives the monopole. If Q=0, the dipole often leads. If both vanish, quadrupole or higher terms control the field."
+          ],
+          [
+            "why",
+            "Each cancellation removes the lowest distance power and exposes finer structure of the distribution."
+          ],
+          [
+            "trap",
+            "The dipole moment is origin-independent for a neutral distribution, but changes under origin shifts when Q is nonzero."
+          ]
+        ]
+      },
+      {
+        "title": "A simple quadrupole along its axis",
+        "items": [
+          [
+            "m",
+            "(+q,-2q,+q)\\ \\mathrm{at}\\ (-a,0,a)"
+          ],
+          [
+            "m",
+            "V_{\\rm axis}\\simeq2kqa^2/r^3"
+          ],
+          [
+            "p",
+            "The net charge and dipole moment both vanish. On the positive axis r much greater than a, expand the three point potentials through second order. The resulting field component falls as 6kqa²/r⁴."
+          ],
+          [
+            "why",
+            "Symmetry cancels odd powers, while the zero total charge cancels the leading monopole."
+          ],
+          [
+            "trap",
+            "The axial coefficient does not describe every angular direction. Quadrupole potential has an angular pattern, not spherical symmetry."
+          ]
+        ]
+      },
+      {
+        "title": "Induced dipole: why energy has a half",
+        "items": [
+          [
+            "m",
+            "\\mathbf p=\\alpha\\mathbf E"
+          ],
+          [
+            "m",
+            "U=-\\frac12\\alpha E^2,\\quad\\mathbf F=\\frac12\\alpha\\nabla E^2"
+          ],
+          [
+            "p",
+            "Creating a dipole costs internal polarisation energy p²/(2alpha). Add its interaction -p dot E and minimise over p to obtain p=alpha E and the effective -alpha E²/2."
+          ],
+          [
+            "why",
+            "The factor half arises because the induced moment grows as the field is established rather than already existing unchanged."
+          ],
+          [
+            "trap",
+            "Use the permanent-dipole energy -p dot E only when p is independently fixed. Do not insert p=alpha E after differentiating an inconsistent energy."
+          ]
+        ]
+      },
+      {
+        "title": "Small dielectric sphere and lifting estimate",
+        "items": [
+          [
+            "m",
+            "\\alpha=4\\pi\\varepsilon_0a^3\\frac{K-1}{K+2}"
+          ],
+          [
+            "m",
+            "|F|=2\\alpha k^2Q^2/d^5"
+          ],
+          [
+            "p",
+            "The first result is for a small linear isotropic dielectric sphere in vacuum, field approximately uniform over it. In a point-source field use the local E and its gradient; attraction follows for positive alpha."
+          ],
+          [
+            "why",
+            "The steep d^(-5) force explains why neutral scraps respond strongly only near a charged object."
+          ],
+          [
+            "trap",
+            "Paper is not a perfect isotropic sphere. Geometry, humidity, contact forces and nonuniform material response make numerical lift predictions approximate."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 7,
+    "slug": "Olympiad-07-offaxis",
+    "title": "Off-axis rings, cube scaling and numerical checks",
+    "subtitle": "Use full geometry when axis-only formulas or Gauss do not determine the desired field.",
+    "source": "Source §§10.5-10.6; OL7; added direct quadrature",
+    "diagrams": [
+      "offaxis-a",
+      "offaxis-b"
+    ],
+    "takeaway": "Analytic limits and convergence tests turn numerical integration into a controlled calculation.",
+    "cards": [
+      {
+        "title": "Ring potential away from its axis",
+        "items": [
+          [
+            "m",
+            "V(s,z)=\\frac{kQ}{2\\pi}\\int_0^{2\\pi}\\frac{d\\phi}{\\sqrt{R^2+s^2+z^2-2Rs\\cos\\phi}}"
+          ],
+          [
+            "p",
+            "An off-axis point has a source distance depending on phi, so equal-distance simplification is lost. Integrate the full scalar kernel. At s=0 recover kQ/sqrt(R²+z²); far away recover kQ/r."
+          ],
+          [
+            "why",
+            "Rotational symmetry reduces the spatial variables to cylindrical s,z but does not remove the angular source integral."
+          ],
+          [
+            "trap",
+            "Near the ideal wire, kernels become sharply peaked and eventually singular. A coarse angular grid can appear converged while being inaccurate."
+          ]
+        ]
+      },
+      {
+        "title": "Elliptic representation and checks",
+        "items": [
+          [
+            "m",
+            "V=\\frac{2kQ}{\\pi D}K(m)"
+          ],
+          [
+            "m",
+            "D=\\sqrt{(R+s)^2+z^2},\\quad m=4Rs/D^2"
+          ],
+          [
+            "p",
+            "Here K(m) is the complete elliptic integral with PARAMETER m. Some conventions instead label the function by modulus sqrt(m). At s=0, K(0)=pi/2 gives the known axial potential."
+          ],
+          [
+            "why",
+            "The elliptic function is a compact name for the same source integral, not additional electrostatic physics."
+          ],
+          [
+            "trap",
+            "Distinguish parameter and modulus conventions. At the ideal wire m approaches one and potential diverges logarithmically."
+          ]
+        ]
+      },
+      {
+        "title": "Uniform cube: a no-integral ratio",
+        "items": [
+          [
+            "m",
+            "V_{\\rm centre}(L)=2V_{\\rm corner}(L)"
+          ],
+          [
+            "m",
+            "V\\propto k\\rho L^2"
+          ],
+          [
+            "p",
+            "Tile a cube of side 2L with eight cubes of side L. At the large centre each small cube contributes its corner potential. Scaling fixed density gives Vcorner(2L)=4Vcorner(L), hence the ratio two."
+          ],
+          [
+            "why",
+            "The exact ratio uses superposition and geometric similarity even though Gauss cannot directly give the cube field."
+          ],
+          [
+            "trap",
+            "Density is held fixed in the scaling argument. Holding total charge fixed would change the size power."
+          ]
+        ]
+      },
+      {
+        "title": "Numerical integrals: independent checks",
+        "items": [
+          [
+            "m",
+            "V_{\\rm corner}\\simeq1.19004\\,k\\rho L^2"
+          ],
+          [
+            "m",
+            "V_{\\rm centre}\\simeq2.38008\\,k\\rho L^2"
+          ],
+          [
+            "p",
+            "For a unit cube, integrate 1/distance with a converged quadrature or a singularity-aware transformation. The centre field is exactly zero by inversion symmetry even while its potential is nonzero."
+          ],
+          [
+            "why",
+            "Check scaling, the centre/corner ratio and mesh refinement together; matching a single decimal is weak validation."
+          ],
+          [
+            "trap",
+            "The vertex field is not zero: cubic symmetry at the centre is stronger than the limited symmetry at a corner."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 8,
+    "slug": "Olympiad-08-measurements",
+    "title": "Inverse-square tests and model boundaries",
+    "subtitle": "Separate an idealised theoretical signal from a complete experimental inference.",
+    "source": "Source §§10.4, 10.7-10.8; OL8, OL11-OL12",
+    "diagrams": [
+      "measurements-a",
+      "measurements-b"
+    ],
+    "takeaway": "Null fields, power-law models and breakdown estimates have assumptions; precision claims need calibration.",
+    "cards": [
+      {
+        "title": "A perturbed exponent needs a length scale",
+        "items": [
+          [
+            "m",
+            "F\\propto r^{-2}(r_0/r)^\\delta"
+          ],
+          [
+            "m",
+            "\\varphi(r)=\\frac{kq}{(1+\\delta)r}(r_0/r)^\\delta"
+          ],
+          [
+            "p",
+            "The displayed potential differentiates to a force with the specified fixed normalisation. r0 makes logarithms dimensionless. For small delta, expand powers as 1+delta ln(r0/r) while retaining the matching coefficient."
+          ],
+          [
+            "why",
+            "Changing an exponent without specifying a reference length changes dimensions and hides which coupling constant is kept fixed."
+          ],
+          [
+            "trap",
+            "The source writes a perturbed potential without the 1/(1+delta) convention factor; its radial first-order shell signal can still be checked, but normalisations must be stated."
+          ]
+        ]
+      },
+      {
+        "title": "Why a shell gives a null test",
+        "items": [
+          [
+            "m",
+            "E_{\\rm inside}\\simeq-\\delta\\,kQr/(3R^3),\\quad r\\ll R"
+          ],
+          [
+            "p",
+            "For a uniformly charged thin spherical shell and small exponent deviation, direct angular integration gives this leading near-centre field, using coupling normalised at the shell scale. Exact inverse square makes it vanish."
+          ],
+          [
+            "why",
+            "A cancellation null can be more sensitive to a small law change than direct force comparisons of large signals."
+          ],
+          [
+            "trap",
+            "A real conducting shell under a changed law can redistribute charge. A complete experimental bound needs apparatus geometry and response, not just the fixed-uniform-shell estimate."
+          ]
+        ]
+      },
+      {
+        "title": "High-voltage dome: useful scaling",
+        "items": [
+          [
+            "m",
+            "Q_{\\max}\\sim E_bR^2/k"
+          ],
+          [
+            "m",
+            "V_{\\max}\\sim E_bR,\\quad U\\sim E_b^2R^3/(2k)"
+          ],
+          [
+            "p",
+            "An ideal isolated spherical dome reaches the adopted field scale Eb first at its surface. R=1 m and Eb=3 MV/m give Q about 0.334 mC, V about 3 MV and field energy about 501 J."
+          ],
+          [
+            "why",
+            "The interior of a closed equipotential conductor offers shielding; a belt can transport charge to the dome while its motor supplies work."
+          ],
+          [
+            "trap",
+            "Real limits depend on supports, curvature, pressure, humidity and leakage. Belt-current factors depend on which charged belt faces and return paths are included."
+          ]
+        ]
+      },
+      {
+        "title": "Atomic and nuclear applicability",
+        "items": [
+          [
+            "m",
+            "U_{\\rm nucleus}\\simeq\\frac{3k(Ze)^2}{5R}"
+          ],
+          [
+            "m",
+            "K_{\\rm contact}\\sim kZ_1Z_2e^2/(R_1+R_2)"
+          ],
+          [
+            "p",
+            "Uniform-sphere Coulomb energy estimates one repulsive part of nuclear energetics, not the full binding energy. Comparing turning distances with nuclear radii diagnoses when pure Coulomb scattering is no longer adequate."
+          ],
+          [
+            "why",
+            "A successful electrostatic scale estimate can identify where new interactions must enter without modelling those interactions."
+          ],
+          [
+            "trap",
+            "Quantum charge distribution, nuclear force, screening, recoil and dynamical radiation limit classical point-source extrapolation. No safety or exact material-breakdown claim follows from these estimates."
+          ]
+        ]
+      }
+    ]
+  }
+]

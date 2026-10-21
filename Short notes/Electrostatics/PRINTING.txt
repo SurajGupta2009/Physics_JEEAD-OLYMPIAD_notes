@@ -1,0 +1,14 @@
+ELECTROSTATICS — A4 PRINTING
+
+Prefer electrostatics-short-notes.pdf: 29 JEE pages, then 8 extensions.
+Choose A4 PORTRAIT, ONE sheet per page, Fit to page / Fit printable area.
+Do NOT choose Fill, Crop, borderless expansion, poster or multiple-up.
+PNG originals are 2480 x 3508 pixels with 300 DPI metadata.
+White safe inset is about 10.6 mm (125 px coordinates).
+Body prose: 11.52 pt. Explanations/warnings: 11.04 pt. No body shrinking.
+PDFs embed complete original indexed pixels and palettes losslessly.
+Keep JEE- and Olympiad- filename prefixes when extracting PNG ZIPs.
+Test a page first; colour preserves teal explanations, yellow results and
+red traps. Check contrast if printing in grayscale.
+The ZIPs contain PNGs ONLY. Clone/download the chapter folder for its
+licensed font, gallery, editable content, build tools and source audit.
