@@ -1,12 +1,12 @@
 {
-  "assertions": 1366,
-  "physics_model_checks": 85,
-  "pages": 37,
-  "JEE": 29,
-  "Olympiad": 8,
-  "cards": 148,
-  "diagrams": 74,
-  "math_blocks": 244,
+  "assertions": 2718,
+  "physics_model_checks": 111,
+  "pages": 77,
+  "JEE": 58,
+  "Olympiad": 19,
+  "cards": 308,
+  "diagrams": 154,
+  "math_blocks": 514,
   "numerical_models": [
     {
       "name": "electron gyroradius 1e6 m/s in 1 mT (mm)",
@@ -432,6 +432,136 @@
       "name": "quadrature wire convergence",
       "value": 1.732050807568877e-05,
       "expected": 1.732050807568877e-05
+    },
+    {
+      "name": "LCR XL 50 mH 50 Hz (ohm)",
+      "value": 15.707963267948967,
+      "expected": 15.71
+    },
+    {
+      "name": "LCR XC 10 uF 50 Hz (ohm)",
+      "value": 318.30988618379064,
+      "expected": 318.3
+    },
+    {
+      "name": "LCR Z (ohm)",
+      "value": 303.2621370240027,
+      "expected": 302.6
+    },
+    {
+      "name": "LCR I for 230 V (A)",
+      "value": 0.7584197693027398,
+      "expected": 0.76
+    },
+    {
+      "name": "LCR resonance Hz",
+      "value": 225.0790790392765,
+      "expected": 225.1
+    },
+    {
+      "name": "radio C for 1 MHz 200 uH (pF)",
+      "value": 126.65147955292221,
+      "expected": 126.7
+    },
+    {
+      "name": "radio Q 200 uH 5 ohm 1 MHz",
+      "value": 251.32741228718345,
+      "expected": 251.3
+    },
+    {
+      "name": "RL kick 10 mH 2 A in 1 us (kV)",
+      "value": 20.0,
+      "expected": 20.0
+    },
+    {
+      "name": "LC omega0 1 mH 1 uF (krad/s)",
+      "value": 31.622776601683793,
+      "expected": 31.62
+    },
+    {
+      "name": "LC I0 10 V 1 mH 1 uF (A)",
+      "value": 0.3162277660168379,
+      "expected": 0.3162
+    },
+    {
+      "name": "rectified sine mean 2/pi",
+      "value": 0.6366197723675814,
+      "expected": 0.6366
+    },
+    {
+      "name": "sine rms 1/root2",
+      "value": 0.7071067811865475,
+      "expected": 0.7071
+    },
+    {
+      "name": "transformer 230/12 ratio",
+      "value": 19.166666666666668,
+      "expected": 19.17
+    },
+    {
+      "name": "reflected 6 ohm at n=19.2 (kohm)",
+      "value": 2204.166666666667,
+      "expected": 2204.0
+    },
+    {
+      "name": "transmission loss ratio 11 vs 220 kV",
+      "value": 400.0,
+      "expected": 400.0
+    },
+    {
+      "name": "rails coasting tau 100 g 0.1 ohm (s)",
+      "value": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "rails terminal speed hanging 50 g (m/s)",
+      "value": 4.905,
+      "expected": 4.905
+    },
+    {
+      "name": "rails coasting heat 100 g at 2 m/s (J)",
+      "value": 0.2,
+      "expected": 0.2
+    },
+    {
+      "name": "disc EMF 0.5 T 300 rad/s 10 cm (V)",
+      "value": 0.7500000000000001,
+      "expected": 0.75
+    },
+    {
+      "name": "betatron orbit field half average",
+      "value": 0.5,
+      "expected": 0.5
+    },
+    {
+      "name": "betatron 36 MeV orbit in 0.5 T (m)",
+      "value": 0.2401661485426695,
+      "expected": 0.2402
+    },
+    {
+      "name": "coax speed 1/sqrt(LC) with L C = 1/c2 (m/s)",
+      "value": 298807152.3335984,
+      "expected": 298800000.0
+    },
+    {
+      "name": "coax Z0 96 ohm b/a",
+      "value": 75.16577810972208,
+      "expected": 75.2
+    },
+    {
+      "name": "Wien beta at omega RC = 1",
+      "value": 0.3333333333333333,
+      "expected": 0.3333333333333333
+    },
+    {
+      "name": "max power ratio at RL = Rs",
+      "value": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "LCR phi tan at 50 Hz",
+      "value": -86.21862493371285,
+      "expected": -86.17
     }
   ]
 }

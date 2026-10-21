@@ -1,10 +1,10 @@
-# SOURCE-AUDIT — Magnetism
+# SOURCE-AUDIT — Magnetism + EMI + AC
 
-Primary source: [`../../magnetism/Magnetism.md`](../../magnetism/Magnetism.md) (3,016 lines; SHA-256 `86d3deb0ac086e68b20644eaf24626a87c18510aad8843b1575d62d7a00f9bba`). The detailed chapter is **unchanged**; corrections below are recorded here and applied only in the short-note sheets.
+Primary sources: [`../../magnetism/Magnetism.md`](../../magnetism/Magnetism.md) (3,016 lines; SHA-256 `86d3deb0ac086e68b20644eaf24626a87c18510aad8843b1575d62d7a00f9bba`) and [`../../emi-ac/Emi-ac.md`](../../emi-ac/Emi-ac.md) (2,826 lines; SHA-256 `7699e1bef3a7926819c5b60a7ba0703f960fcb5a29dcced4dcebd38a06ce998e`). Both detailed chapters are **unchanged**; corrections below are recorded here and applied only in the short-note sheets.
 
 ## Method
 
-The chapter's theory (§§3.1–3.38), toolkits, traps, extension sections (§§10.1–10.7) and the OL worked problems were read before writing. Every identity used in the sheets was checked independently: closed forms were re-derived or re-evaluated numerically, and `revalidate.py` re-checks the core results by direct quadrature, numerical differentiation and ODE integration (see `verification-recheck.json`). Checks are representative, not an exhaustive certification of every sentence of the source.
+The magnetism chapter's theory (§§3.1–3.38), toolkits, traps, extension sections (§§10.1–10.7) and the OL worked problems, and the EMI+AC module's induction theory (§§3.1–3.36), parts on transients, AC and machines, extension sections and its OL worked problems (OL1–OL12), were read before writing. Every identity used in the sheets was checked independently: closed forms were re-derived or re-evaluated numerically, and `revalidate.py` re-checks the core results by direct quadrature, numerical differentiation and ODE integration (see `verification-recheck.json`). Checks are representative, not an exhaustive certification of every sentence of the sources.
 
 ## Correction applied in the sheets
 
@@ -13,6 +13,20 @@ The chapter's theory (§§3.1–3.38), toolkits, traps, extension sections (§§
 ## Checked and confirmed against the source as printed (no correction needed)
 
 2. **OL9 two-carrier Hall values.** Both quoted numbers re-substitute correctly in the source's own formula: germanium at room temperature R_H = +2.5 × 10⁻³ m³ C⁻¹, and intrinsic (n = p = 3 × 10²⁰ m⁻³) R_H = −7.2 × 10⁻³ m³ C⁻¹ (numerator −3.48 × 10¹⁹, denominator 4.85 × 10²¹). A preliminary scratch division in the check pipeline initially disputed the second value by two powers of ten; independent recomputation confirmed the source. The sheets print the source values.
+
+## EMI + AC source: checked and confirmed as printed (no corrections found)
+
+A sample of independent checks on `Emi-ac.md` — all matched the source as printed:
+
+- Worked LCR example: 230 V, 50 Hz, R = 20 Ω, L = 50 mH, C = 10 µF → X_L = 15.7 Ω, X_C = 318 Ω, Z = 303 Ω, I = 0.76 A, phase −86°, phasor voltage sum (15, 12, 242 V) closes at 230 V; f₀ = 225 Hz.
+- Radio tank: 200 µH, 5 Ω at 1 MHz → C = 127 pF, Q = 251, bandwidth 4 kHz.
+- RL interruption kick: 10 mH, 2 A in 1 µs → 20 kV (air breaks down; the warning is physical).
+- LC oscillation: 10 mH, 100 µF at 10 V → ω₀ = 3.16 × 10⁴ rad/s, I₀ = 0.316 A.
+- Rectified-sine mean 2/π = 0.637 and sine RMS 1/√2 = 0.707; ripple ΔV = I/2fC.
+- Transformer: 230/12 = 19.2 turns ratio; 6 Ω secondary reflects 2.2 kΩ; transmission-loss ratio (220/11)² = 400 matches the 40 % versus 0.1 % example.
+- Eddy braking τ = ρ_m/(σB²) (copper at 0.5 T → milliseconds) and lamination P/V = σω²B₀²d²/24 for 0.35 mm Si-steel.
+- Betatron: 36 MeV orbit at 0.5 T has r = 0.24 m; B_orb = ½⟨B⟩ re-derived from canonical momentum.
+- OL5, OL7 (launcher: M = 20 µH, I₂ = −4.9 kA, F = 98 N, v ≈ 5 m/s, ≈1.5 % efficient), OL9 (Z₀ = (60/√κ)ln(b/a), L′C′ = 1/c²), OL10 (γ = 200 s⁻¹, settling ≈ 25 ms), OL12 (Wien β = 1/3 at ωRC = 1): all re-computed from the source's own formulas.
 
 ## Clarifications stated explicitly in the sheets (not errors)
 

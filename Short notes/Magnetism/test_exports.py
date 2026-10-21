@@ -17,17 +17,17 @@ def near(name,value,target,rel=.02,absolute=1e-8):
  check(abs(value-target)<=max(absolute,rel*abs(target)),f'{name}: {value} vs {target}')
  models.append({'name':name,'value':float(value),'expected':float(target)})
 def main():
- data=json.loads((ROOT/'sheets.json').read_text());check(len(data)==37,'page count')
- check([p['section'] for p in data]==['JEE']*29+['Olympiad']*8,'reading order')
- check(len({p['slug'] for p in data})==37,'unique filenames')
- check(sum(len(p['cards']) for p in data)==148,'card count')
- check(sum(len(p['diagrams']) for p in data)==74,'diagram count')
- check(sum(k=='m' for p in data for c in p['cards'] for k,s in c['items'])==244,'math block count')
+ data=json.loads((ROOT/'sheets.json').read_text());check(len(data)==77,'page count')
+ check([p['section'] for p in data]==['JEE']*58+['Olympiad']*19,'reading order')
+ check(len({p['slug'] for p in data})==77,'unique filenames')
+ check(sum(len(p['cards']) for p in data)==308,'card count')
+ check(sum(len(p['diagrams']) for p in data)==154,'diagram count')
+ check(sum(k=='m' for p in data for c in p['cards'] for k,s in c['items'])==514,'math block count')
  cmap=FT2Font(str(ROOT/'fonts/PatrickHand-Regular.ttf')).get_charmap()
  for p in data:
   prose=[p['title'],p['subtitle'],p['source'],p['takeaway']]+[c['title'] for c in p['cards']]+[s for c in p['cards'] for k,s in c['items'] if k!='m']
   check(all(ord(ch) in cmap or ch=='\n' for text in prose for ch in text),'font coverage '+p['slug'])
- for section,count in [('JEE',29),('Olympiad',8)]:
+ for section,count in [('JEE',58),('Olympiad',19)]:
   rows=[p for p in data if p['section']==section]
   check([p['part_page'] for p in rows]==list(range(1,count+1)),'numbering '+section)
   check({str(p.relative_to(ROOT)) for p in ROOT.glob(section+'-*.png')}=={p['slug']+'.png' for p in rows},'stale/missing pages')
@@ -37,11 +37,11 @@ def main():
   check(im.mode=='P','indexed PNG')
   rgb=im.convert('RGB');white=Image.new('RGB',rgb.size,'white');bounds=ImageChops.difference(rgb,white).getbbox()
   check(bounds and bounds[0]>=125 and bounds[1]>=125 and bounds[2]<=2356 and bounds[3]<=3383,'safe margin '+p['slug'])
- layout=json.loads((ROOT/'layout-checks.json').read_text());check(len(layout['cards'])==148,'layout manifest')
+ layout=json.loads((ROOT/'layout-checks.json').read_text());check(len(layout['cards'])==308,'layout manifest')
  for c in layout['cards']:
   check(c['used_px']<c['available_px']-12,'card overflow '+c['card'])
   check(c['body_pt']==11.52 and c['explanation_pt']==11.04,'body text never shrunk')
- for label,rows in [('All',data),('JEE',data[:29]),('Olympiad',data[29:])]:
+ for label,rows in [('All',data),('JEE',data[:58]),('Olympiad',data[58:])]:
   with zipfile.ZipFile(ROOT/ZIPS[label]) as z:
    check(z.testzip() is None,'zip CRC')
    check(z.namelist()==[p['slug']+'.png' for p in rows],'zip reading order')
@@ -58,7 +58,7 @@ def main():
    check(obj['/Width']==2480 and obj['/Height']==3508,'PDF resolution')
    check(obj.get_data()==im.tobytes(),'PDF lossless source indices')
    check(obj['/ColorSpace'][3].original_bytes==bytes(im.getpalette()),'PDF lossless source palette')
- html=(ROOT/'index.html').read_text();check(html.count('<article ')==37,'gallery count')
+ html=(ROOT/'index.html').read_text();check(html.count('<article ')==77,'gallery count')
  for url in re.findall(r'(?:href|src)=[\"\']([^\"\']+)',html):
   path=urlsplit(url)
   if path.scheme or not path.path:continue
@@ -150,8 +150,37 @@ def main():
  near('slab support field (T)',math.sqrt(2*mu0*2*9.81/4e-4),.347,rel=2e-2)
  near('F_m/F_e at 1e6 m/s',(1e6/c)**2,1.113e-5,rel=1e-3)
  near('quadrature wire convergence',1e-7*10/.1*math.sqrt(3)*2/2,1e-7*10/.1*math.sqrt(3),rel=1e-9)
+ omega=2*math.pi*50;L=50e-3;C=10e-6;R=20
+ near('LCR XL 50 mH 50 Hz (ohm)',omega*L,15.71,rel=1e-2)
+ near('LCR XC 10 uF 50 Hz (ohm)',1/(omega*C),318.3,rel=1e-2)
+ near('LCR Z (ohm)',math.sqrt(R*R+(omega*L-1/(omega*C))**2),302.6,rel=2e-2)
+ near('LCR I for 230 V (A)',230/math.sqrt(R*R+(omega*L-1/(omega*C))**2),0.760,rel=2e-2)
+ near('LCR resonance Hz',1/(2*math.pi*math.sqrt(L*C)),225.1,rel=1e-2)
+ near('radio C for 1 MHz 200 uH (pF)',1/((2*math.pi*1e6)**2*200e-6)*1e12,126.7,rel=1e-2)
+ near('radio Q 200 uH 5 ohm 1 MHz',2*math.pi*1e6*200e-6/5,251.3,rel=1e-2)
+ near('RL kick 10 mH 2 A in 1 us (kV)',10e-3*2/1e-6/1e3,20.0,rel=1e-9)
+ near('LC omega0 1 mH 1 uF (krad/s)',1/math.sqrt(1e-3*1e-6)/1e3,31.62,rel=1e-2)
+ near('LC I0 10 V 1 mH 1 uF (A)',10*math.sqrt(1e-6/1e-3),0.3162,rel=1e-2)
+ near('rectified sine mean 2/pi',2/math.pi,0.6366,rel=1e-4)
+ near('sine rms 1/root2',1/math.sqrt(2),0.7071,rel=1e-4)
+ near('transformer 230/12 ratio',230/12,19.17,rel=1e-2)
+ near('reflected 6 ohm at n=19.2 (kohm)',(230/12)**2*6,2204,rel=1e-2)
+ near('transmission loss ratio 11 vs 220 kV',(220/11)**2,400,rel=1e-9)
+ near('rails coasting tau 100 g 0.1 ohm (s)',.1*.1/(.5**2*.2**2),1.0,rel=1e-9)
+ near('rails terminal speed hanging 50 g (m/s)',.05*9.81*.1/(.5**2*.2**2),4.905,rel=1e-2)
+ near('rails coasting heat 100 g at 2 m/s (J)',.5*.1*2**2,.20,rel=1e-9)
+ near('disc EMF 0.5 T 300 rad/s 10 cm (V)',.5*300*.1**2/2,.75,rel=1e-9)
+ near('betatron orbit field half average',.5,.5,rel=1e-12)
+ near('betatron 36 MeV orbit in 0.5 T (m)',(36e6*1.602176634e-19/2.99792458e8)/(1.602176634e-19*.5),0.2402,rel=1e-2)
+ near('coax speed 1/sqrt(LC) with L C = 1/c2 (m/s)',1/math.sqrt(3.2e-7*35e-12*1e0),2.988e8,rel=5e-2)
+ near('coax Z0 96 ohm b/a',60*math.log(3.5),75.2,rel=1e-2)
+ near('Wien beta at omega RC = 1',1/3,1/3,rel=1e-9)
+ near('max power ratio at RL = Rs',4*1/(1+1)**2,1.0,rel=1e-9)
+ near('LCR phi tan at 50 Hz',math.degrees(math.atan((omega*L-1/(omega*C))/R)),-86.17,rel=1e-2)
  source=ROOT.parents[1]/'magnetism/Magnetism.md'
- check(hashlib.sha256(source.read_bytes()).hexdigest()=='86d3deb0ac086e68b20644eaf24626a87c18510aad8843b1575d62d7a00f9bba','detailed source unchanged')
+ check(hashlib.sha256(source.read_bytes()).hexdigest()=='86d3deb0ac086e68b20644eaf24626a87c18510aad8843b1575d62d7a00f9bba','magnetism source unchanged')
+ source2=ROOT.parents[1]/'emi-ac/Emi-ac.md'
+ check(hashlib.sha256(source2.read_bytes()).hexdigest()=='7699e1bef3a7926819c5b60a7ba0703f960fcb5a29dcced4dcebd38a06ce998e','emi-ac source unchanged')
  for file in ROOT.glob('*.md'):
   for url in re.findall(r'\]\(([^)\n]+)\)',file.read_text()):
    path=urlsplit(url)
@@ -162,8 +191,8 @@ def main():
  assets=json.loads((ROOT/'asset-manifest.json').read_text())
  for name,details in assets.items():
   content=(ROOT/name).read_bytes();check(len(content)==details['bytes'] and hashlib.sha256(content).hexdigest()==details['sha256'],'asset manifest '+name)
- check(len({d for p in data for d in p['diagrams']})==74,'unique diagram identifiers')
- report={'assertions':checks,'physics_model_checks':len(models),'pages':37,'JEE':29,'Olympiad':8,'cards':148,'diagrams':74,'math_blocks':244,'numerical_models':models}
+ check(len({d for p in data for d in p['diagrams']})==154,'unique diagram identifiers')
+ report={'assertions':checks,'physics_model_checks':len(models),'pages':77,'JEE':58,'Olympiad':19,'cards':308,'diagrams':154,'math_blocks':514,'numerical_models':models}
  (ROOT/'verification-results.json').write_text(json.dumps(report,indent=2)+'\n')
- print(f'PASS: {checks} assertions; {len(models)} representative physics/model checks; 37 PNGs; 3 ZIPs; 3 PDFs. Not exhaustive certification.')
+ print(f'PASS: {checks} assertions; {len(models)} representative physics/model checks; 77 PNGs; 3 ZIPs; 3 PDFs. Not exhaustive certification.')
 if __name__=='__main__':main()
