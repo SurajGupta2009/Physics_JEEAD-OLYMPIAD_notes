@@ -1,0 +1,1974 @@
+[
+  {
+    "section": "JEE",
+    "slug": "JEE-01-material-response",
+    "title": "Elasticity: the material answers back",
+    "subtitle": "Moduli are material properties; stiffness is geometry. Everything else is bookkeeping.",
+    "diagrams": [
+      "stress_modes",
+      "stress_strain"
+    ],
+    "takeaway": "Stress is force democratised: failure is set by force per area, not by force.",
+    "cards": [
+      {
+        "title": "What elasticity is",
+        "items": [
+          [
+            "m",
+            "\\sigma=\\frac{F_\\perp}{A},\\qquad \\varepsilon=\\frac{\\Delta L}{L}"
+          ],
+          [
+            "m",
+            "\\gamma=\\text{shear angle in radians},\\qquad \\frac{\\Delta V}{V}"
+          ],
+          [
+            "p",
+            "A solid resists a change of shape and returns when the load is removed. Stress is internal force per unit area on a named cut plane; strain is the dimensionless geometric response. Four modes: tension, compression, volume change and shear."
+          ],
+          [
+            "why",
+            "Every atom in the cross-section shares the load, so the same force on half the area is twice the stress. A bond breaks at a stress, never at a force, which is why allowable loads scale with area."
+          ],
+          [
+            "trap",
+            "Changing the length changes the extension but not the stress in a uniform wire under an end load. If your answer needs L to decide closeness to breaking, you have used the wrong variable."
+          ]
+        ]
+      },
+      {
+        "title": "The four bookkeeping pairs",
+        "items": [
+          [
+            "m",
+            "Y=\\frac{\\sigma_n}{\\varepsilon},\\quad B=-\\frac{\\Delta p}{\\Delta V/V},\\quad G=\\frac{\\tau}{\\gamma}"
+          ],
+          [
+            "m",
+            "[Y]=[B]=[G]=\\mathrm{Pa}=\\mathrm{N\\,m^{-2}}"
+          ],
+          [
+            "p",
+            "Tensile/compressive tests give Y. A cube squeezed on all faces gives B. A block sheared by opposing face forces gives G. The minus sign in B keeps it positive: pressure up means volume down. Strain is dimensionless, so every modulus is a pressure."
+          ],
+          [
+            "why",
+            "The three moduli are not three materials: they are three questions asked of one material. For an isotropic solid two numbers fix the rest, which is what the Poisson relations do."
+          ],
+          [
+            "trap",
+            "Modulus is independent of size and shape only inside the linear range and at fixed temperature. Stiffness k = YA/L is not a material property; it carries the geometry."
+          ]
+        ]
+      },
+      {
+        "title": "Reading a stress-strain curve",
+        "items": [
+          [
+            "m",
+            "\\sigma_{\\rm working}=\\frac{\\sigma_{\\rm yield}}{n},\\quad n\\approx1.5\\text{ to }3"
+          ],
+          [
+            "p",
+            "In order: proportional limit (Hooke dies), elastic limit (recovery dies), yield (strain runs at nearly constant stress), ultimate strength (necking starts), fracture. Ductile metals draw the whole story; brittle solids such as glass snap just past the elastic limit with no warning."
+          ],
+          [
+            "why",
+            "The curve is design information. Working stress is a fraction of yield, never of the ultimate, because the ultimate is reached only after the member has already deformed permanently."
+          ],
+          [
+            "trap",
+            "The area under the elastic part is recoverable energy per volume; the total area out to fracture is toughness. Do not read the strain axis as a strain rate, and do not compare Y of two materials from the slopes of F against extension."
+          ]
+        ]
+      },
+      {
+        "title": "The elastic region is tiny",
+        "items": [
+          [
+            "m",
+            "\\varepsilon_{\\rm elastic}\\lesssim10^{-3}\\ \\text{for metals}"
+          ],
+          [
+            "m",
+            "\\sigma=Y\\varepsilon\\ \\Rightarrow\\ \\varepsilon=\\frac{2.5\\times10^{8}}{2.0\\times10^{11}}=1.25\\times10^{-3}"
+          ],
+          [
+            "p",
+            "Mild steel yields at about 250 MPa with Y = 200 GPa, so the straight part of its curve ends near a strain of 0.1 %. The whole elastic story happens before the material has changed length by one part in a thousand."
+          ],
+          [
+            "why",
+            "Small strain is why the original geometry may be used in every formula: A and L do not change enough to matter before the law stops applying."
+          ],
+          [
+            "trap",
+            "Beyond yield the same symbols mean different physics. An answer that uses Y at a strain of 0.05 is arithmetically fine and physically meaningless."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §§0-3.2, Part 4 ledger",
+    "part_page": 1,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-02-moduli-bulk-shear",
+    "title": "Y, B, G and what Poisson ties together",
+    "subtitle": "Two constants describe an isotropic linear solid; the other two follow.",
+    "diagrams": [
+      "poisson_wire",
+      "poisson_bounds"
+    ],
+    "takeaway": "Any two of Y, B, G and nu fix all four; the bounds are energy demands, not conventions.",
+    "cards": [
+      {
+        "title": "Poisson ratio defined",
+        "items": [
+          [
+            "m",
+            "\\nu=-\\frac{\\varepsilon_{\\rm lat}}{\\varepsilon_{\\rm long}}"
+          ],
+          [
+            "m",
+            "\\frac{\\Delta V}{V}=\\varepsilon(1-2\\nu)"
+          ],
+          [
+            "p",
+            "A wire stretched by strain e thins laterally by -nu e. The definition carries a minus so ordinary materials give nu > 0. Volume change under uniaxial tension is (1-2nu)e: at nu = 0.5 the volume is unchanged, and at nu = 0 the wire keeps its cross-section."
+          ],
+          [
+            "why",
+            "The lateral contraction is a real strain that must be compatible with everything attached to the wire. It is why a constrained specimen carries a different effective stiffness from a free one."
+          ],
+          [
+            "trap",
+            "nu corrects the lateral strain only. The length change of a uniaxial test is dL = FL/AY, with no Poisson factor. Do not smuggle (1+nu) into dL."
+          ]
+        ]
+      },
+      {
+        "title": "Derive Y = 3B(1 - 2nu)",
+        "items": [
+          [
+            "m",
+            "\\varepsilon_1=-\\frac{p}{Y}+\\frac{\\nu p}{Y}+\\frac{\\nu p}{Y}=-\\frac{p}{Y}(1-2\\nu)"
+          ],
+          [
+            "m",
+            "\\frac{\\Delta V}{V}=3\\varepsilon_1=-\\frac{3p(1-2\\nu)}{Y}=-\\frac{p}{B}"
+          ],
+          [
+            "p",
+            "Apply hydrostatic pressure p. Each of the three principal strains gets -p/Y from its own axis and +nu p/Y from each of the other two. Add the three strains for the volume strain and equate to the definition of B."
+          ],
+          [
+            "why",
+            "Only two elastic constants are independent. B measures resistance to volume change, G resistance to shape change at fixed volume, and this derivation is the exact split between them."
+          ],
+          [
+            "trap",
+            "Using deviatoric stress with a bulk modulus is the classic error. B responds only to the mean stress p; a pure shear stress has zero mean and produces no volume change in a linear isotropic solid."
+          ]
+        ]
+      },
+      {
+        "title": "Derive Y = 2G(1 + nu)",
+        "items": [
+          [
+            "m",
+            "\\tau\\ \\text{shear}=\\tau\\ \\text{tension}/-\\tau\\ \\text{compression}"
+          ],
+          [
+            "m",
+            "\\frac{\\tau}{2G}=\\frac{\\tau}{Y}(1+\\nu)\\ \\Rightarrow\\ Y=2G(1+\\nu)"
+          ],
+          [
+            "p",
+            "Pure shear rotated by 45 degrees is tension on one diagonal and equal compression on the other. The diagonal strain from those normal stresses is (tau/Y)(1+nu); the geometry of a sheared square gives the same quantity as gamma/2, and gamma = tau/G. Equate."
+          ],
+          [
+            "why",
+            "This is why a torsion test can measure a tensile modulus. The two loadings are the same physical state seen in different coordinates, and superposition of principal strains is the whole proof."
+          ],
+          [
+            "trap",
+            "The rotation is 45 degrees for every isotropic material, but the equality of the two principal stresses holds only for pure shear, not for a general stress state."
+          ]
+        ]
+      },
+      {
+        "title": "Why -1 < nu < 0.5",
+        "items": [
+          [
+            "m",
+            "B=\\frac{Y}{3(1-2\\nu)}>0,\\qquad G=\\frac{Y}{2(1+\\nu)}>0"
+          ],
+          [
+            "m",
+            "\\nu\\to\\tfrac12:\\ B\\to\\infty;\\qquad \\nu\\to-1:\\ G\\to\\infty"
+          ],
+          [
+            "p",
+            "Invert the two relations. A stable solid needs B > 0 and G > 0, which forces nu < 0.5 and nu > -1. Rubber sits near 0.5 (nearly incompressible); cork near 0 (it compresses without bulging); auxetic foams have nu < 0."
+          ],
+          [
+            "why",
+            "The bounds are thermodynamic: a negative modulus would let the solid lower its energy without limit by deforming, so the state is unstable, not merely unusual."
+          ],
+          [
+            "trap",
+            "nu = 0.5 is a limit, not a value: it needs an infinite bulk modulus. Real rubber is 0.499, which still gives B about a thousand times G."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §3.3, Part 4 ledger",
+    "part_page": 2,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-03-extension-family",
+    "title": "The extension family: rods as springs",
+    "subtitle": "Compute k = YA/L once, then series and parallel decide everything else.",
+    "diagrams": [
+      "series_composite",
+      "parallel_wires"
+    ],
+    "takeaway": "Series shares force and adds extensions; parallel shares extension and splits force as stiffness.",
+    "cards": [
+      {
+        "title": "Rod as a spring",
+        "items": [
+          [
+            "m",
+            "\\Delta L=\\frac{FL}{AY}\\ \\Longleftrightarrow\\ F=\\frac{YA}{L}\\Delta L=k\\Delta L"
+          ],
+          [
+            "m",
+            "k=\\frac{YA}{L}"
+          ],
+          [
+            "p",
+            "Y is the material, A/L is the geometry, and their product is the spring constant. Doubling the length halves k (two springs in series); doubling the area doubles k (two springs side by side). Cutting a wire into n pieces multiplies the stiffness of each by n."
+          ],
+          [
+            "why",
+            "This one line converts every elasticity problem into a spring problem already solved in SHM: same k, same 1/2 k x^2 energy, same omega = sqrt(k/m)."
+          ],
+          [
+            "trap",
+            "A = pi d^2/4. Using pi d^2, or treating a diameter as a radius, is a factor of four and the commonest arithmetic error in the chapter."
+          ]
+        ]
+      },
+      {
+        "title": "Series: common force",
+        "items": [
+          [
+            "m",
+            "\\frac{1}{k_{\\rm tot}}=\\sum_i\\frac{1}{k_i}"
+          ],
+          [
+            "m",
+            "\\Delta L=F\\sum_i\\frac{L_i}{A_iY_i}"
+          ],
+          [
+            "p",
+            "Two rods welded end to end feel the same F; each extends by F L_i/(A_i Y_i) and the extensions add. The stress steps at the joint whenever the area changes: sigma_i = F/A_i, larger in the thinner segment."
+          ],
+          [
+            "why",
+            "The total extension depends on the sum of compliances. Engineers write it as a sum of L/AY because that is what a spreadsheet can accumulate along a real member."
+          ],
+          [
+            "trap",
+            "Do not assume equal stress in series. Equal force with unequal area is unequal stress, and the thin side is the one that fails first."
+          ]
+        ]
+      },
+      {
+        "title": "Parallel: common extension",
+        "items": [
+          [
+            "m",
+            "k_{\\rm tot}=\\sum_i k_i,\\qquad \\frac{F_1}{F_2}=\\frac{k_1}{k_2}"
+          ],
+          [
+            "m",
+            "k_s=2.0\\times10^7:\\ F_s=952\\ \\mathrm{N};\\ k_c=2.2\\times10^7:\\ F_c=1048\\ \\mathrm{N}"
+          ],
+          [
+            "p",
+            "Two wires hanging from one rigid bar extend together. The load divides in proportion to stiffness. In the worked pair (steel 1 cm^2, copper 2 cm^2, 2000 N) the copper carries the larger share although its modulus is lower, because its area more than compensates."
+          ],
+          [
+            "why",
+            "Compatibility writes the equation, not the force balance alone: the bar is rigid, so the two extensions are equal. That single geometric statement is the whole method."
+          ],
+          [
+            "trap",
+            "A rigid bar is an idealisation. If the bar can tilt, the extensions need not be equal and the problem acquires a moment balance as well."
+          ]
+        ]
+      },
+      {
+        "title": "Self-weight: integrate, do not average",
+        "items": [
+          [
+            "m",
+            "F(x)=\\rho A g x,\\qquad \\Delta L=\\int_0^L\\frac{F(x)\\,dx}{AY}=\\frac{\\rho gL^2}{2Y}"
+          ],
+          [
+            "m",
+            "=\\frac{(mg/2)L}{AY}"
+          ],
+          [
+            "p",
+            "A hanging rod carries, at height x above its free end, only the weight below it. The load ramps from zero to mg, so the extension equals that of half the weight hung at the tip. A tapered rod uses the same integral with A(x) inside."
+          ],
+          [
+            "why",
+            "The half is the integral of x, not a convention: the same triangular-load result as the centroid of a triangle."
+          ],
+          [
+            "trap",
+            "Using the full weight gives exactly twice the true extension. If your answer to a self-weight question equals the end-load formula with mg, you averaged where you should have integrated."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §§3.4-3.5, C4-C5, E2-E3",
+    "part_page": 3,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-04-composite-thermal",
+    "title": "Composite bars and thermal stress",
+    "subtitle": "Two-step thermal work: expand freely, then restore the constraint.",
+    "diagrams": [
+      "hanger_angle",
+      "thermal_stress"
+    ],
+    "takeaway": "Thermal stress is created by the constraint, not by the temperature.",
+    "cards": [
+      {
+        "title": "Thermal strain and stress",
+        "items": [
+          [
+            "m",
+            "\\Delta L_{\\rm free}=\\alpha L\\Delta T"
+          ],
+          [
+            "m",
+            "\\sigma_{\\rm th}=Y\\alpha\\Delta T,\\qquad F=Y\\alpha\\Delta T\\,A"
+          ],
+          [
+            "p",
+            "Heat a rod between rigid walls. Left free it would grow alpha L dT; the walls push it back by FL/AY. Net length change is zero, so FL/AY = alpha L dT. Notice L cancels: a short bolt and a kilometre of rail develop the same stress for the same temperature change."
+          ],
+          [
+            "why",
+            "The wall provides whatever force is needed to restore the constraint, so the stress is a reaction, not a material response to heat. Geometry enters only through the area that carries that reaction."
+          ],
+          [
+            "trap",
+            "The sign comes from the constraint. Heating a fully constrained rod compresses it, cooling tensions it. Writing sigma = +Y alpha dT for cooling is the standard sign error."
+          ]
+        ]
+      },
+      {
+        "title": "Gaps, partial constraint and the rail",
+        "items": [
+          [
+            "m",
+            "\\text{gap } g:\\ \\text{no stress until } \\alpha L\\Delta T>g"
+          ],
+          [
+            "m",
+            "\\sigma=Y\\frac{\\alpha L\\Delta T-g}{L}=Y\\left(\\alpha\\Delta T-\\frac{g}{L}\\right)"
+          ],
+          [
+            "p",
+            "A rail with expansion gaps is free until the gap closes and constrained afterwards. A 1 km steel rail with alpha = 1.2e-5 sees 0.48 m of breathing over a 40 K swing, and 96 MPa of compression if welded and held. That is about 40 % of the yield of mild steel."
+          ],
+          [
+            "why",
+            "Real track is installed and stressed at a chosen neutral temperature so that the summer compression and winter tension are both acceptable. The design question is a constraint question."
+          ],
+          [
+            "trap",
+            "In a free rail a year of daily cycles does not accumulate: expansion is not a ratchet. Ask for the swing over the peak range, once."
+          ]
+        ]
+      },
+      {
+        "title": "Two-material composite bar",
+        "items": [
+          [
+            "m",
+            "\\Delta L_1=\\Delta L_2\\ \\text{(bonded)}"
+          ],
+          [
+            "m",
+            "F=\\frac{(\\alpha_2-\\alpha_1)\\Delta T}{\\dfrac{1}{A_1Y_1}+\\dfrac{1}{A_2Y_2}}"
+          ],
+          [
+            "p",
+            "Bond brass to steel and heat the pair. Both must reach the same final length, so the more expansive metal is held in compression and the other is pulled in tension. The common force follows from the compatibility condition, exactly as two springs in series under an imposed displacement."
+          ],
+          [
+            "why",
+            "The two-step method generalises: write the free expansion of each part, then the elastic correction that makes the final lengths agree. The stress is whatever mechanics needs."
+          ],
+          [
+            "trap",
+            "If the joint yields or the bond fails, compatibility no longer holds and the force is capped by the joint strength. The elastic formula then overestimates the stress."
+          ]
+        ]
+      },
+      {
+        "title": "Shrink fits and a quarter turn",
+        "items": [
+          [
+            "m",
+            "\\varepsilon=\\frac{\\Delta L}{L}=\\frac{p\\,n}{L},\\qquad \\sigma=Y\\varepsilon"
+          ],
+          [
+            "m",
+            "\\text{quarter turn, }p=1\\ \\mathrm{mm},\\ L=200\\ \\mathrm{mm}:\\ \\varepsilon=1.25\\times10^{-3}"
+          ],
+          [
+            "p",
+            "A brass ring is heated, slipped over a steel plug and cooled; the plug prevents the shrinkage and the ring ends in tension. A nut advanced by one quarter turn stretches the gripped length by a quarter of the pitch: a tiny angle produces a large strain because the pitch is short compared with the grip."
+          ],
+          [
+            "why",
+            "Torque wrenches exist because the conversion from rotation to strain is lever-like: a small advance over a short length is a large strain, and the bolt can yield before it feels tight."
+          ],
+          [
+            "trap",
+            "The strain is pitch times turns divided by the gripped length, not by the bolt length. Heating a tightened bolt adds Y alpha dT if the clamped plates expand less."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §§3.6, E4, Q5, Q18",
+    "part_page": 4,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-05-energy-impact",
+    "title": "Elastic energy, sudden loads and drops",
+    "subtitle": "At the lowest point the kinetic energy is zero, so energy closes the problem.",
+    "diagrams": [
+      "energy_area",
+      "sudden_load"
+    ],
+    "takeaway": "Energy at the turning point, never force balance at the extreme.",
+    "cards": [
+      {
+        "title": "Stored energy",
+        "items": [
+          [
+            "m",
+            "U=\\tfrac12F\\Delta L=\\tfrac12k\\Delta L^2"
+          ],
+          [
+            "m",
+            "u=\\tfrac12\\sigma\\varepsilon=\\frac{\\sigma^2}{2Y}=\\frac{Y\\varepsilon^2}{2}"
+          ],
+          [
+            "p",
+            "Stretching quasi-statically means the force grows from zero with the extension, so the work is the area of a triangle, not a rectangle. Per unit volume the same statement reads u = half stress times strain. In shear and in volume change the pattern repeats with G and B."
+          ],
+          [
+            "why",
+            "The energy is quadratic in the load, so doubling the load quadruples the stored energy. This is why a small overload does disproportionate damage in a spring."
+          ],
+          [
+            "trap",
+            "The half is not optional. U = F dL is the work of a constant force, which is not how a spring loads."
+          ]
+        ]
+      },
+      {
+        "title": "Sudden application: the factor 2",
+        "items": [
+          [
+            "m",
+            "mg\\Delta=\\tfrac12k\\Delta^2\\ \\Rightarrow\\ \\Delta=\\frac{2mg}{k}=2\\Delta_{\\rm st}"
+          ],
+          [
+            "m",
+            "\\sigma_{\\rm peak}=2\\sigma_{\\rm st}"
+          ],
+          [
+            "p",
+            "Release a weight from the slack position instead of lowering it gently. It falls, overshoots the static extension and stops where the stored elastic energy equals the potential energy lost. That occurs at twice the static extension, hence twice the static stress."
+          ],
+          [
+            "why",
+            "The factor two is an energy result, not a dynamic correction factor to be memorised. It is also the h = 0 limit of the drop formula, which is the check that the two results agree."
+          ],
+          [
+            "trap",
+            "At the lowest point the free-body diagram does not balance: the mass is accelerating upward. Demanding F = mg there is the standard wrong method."
+          ]
+        ]
+      },
+      {
+        "title": "Drop from height h",
+        "items": [
+          [
+            "m",
+            "mg(h+\\Delta)=\\tfrac12k\\Delta^2"
+          ],
+          [
+            "m",
+            "\\Delta=\\Delta_{\\rm st}\\left(1+\\sqrt{1+\\frac{2h}{\\Delta_{\\rm st}}}\\right),\\qquad F_{\\max}\\approx\\sqrt{2hmgk}"
+          ],
+          [
+            "p",
+            "The mass descends h + delta, not h, because it keeps falling while the wire stretches. Solving the quadratic gives the peak extension; for h much greater than the static extension the peak force grows as the square root of stiffness, so a stiffer wire shocks harder."
+          ],
+          [
+            "why",
+            "For h much greater than the static extension the answer collapses to sqrt(2hmgk). The counter-intuitive design lesson: the peak stress, not the peak force, is what must stay under yield, and the area is in k."
+          ],
+          [
+            "trap",
+            "Writing mgh = half k delta^2 drops the delta in the descent and undercounts the energy by roughly h/delta_st. Name the approximation if you use it."
+          ]
+        ]
+      },
+      {
+        "title": "Rivets, bolts and double shear",
+        "items": [
+          [
+            "m",
+            "\\tau=\\frac{F}{nA},\\qquad n=\\text{number of shear planes}"
+          ],
+          [
+            "m",
+            "\\tau=\\frac{10^{4}}{2\\pi(4.0\\times10^{-3})^2}=9.95\\times10^{7}\\ \\mathrm{Pa}"
+          ],
+          [
+            "p",
+            "A rivet in a lap joint is cut across one plane (single shear); a rivet between three plates is cut across two (double shear). The stress is the load divided by the total sheared area, so the plane count is the whole problem."
+          ],
+          [
+            "why",
+            "Shear failure is a cutting failure, not a stretching failure. Counting the planes is the analogue of counting the wires in a parallel bundle."
+          ],
+          [
+            "trap",
+            "Single shear written as double halves the stress and doubles the apparent safety. Draw the joint and count."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §3.9, E7-E8, Q9-Q10",
+    "part_page": 5,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-06-torsion-bending",
+    "title": "Torsion, bending and section properties",
+    "subtitle": "Put material far from the axis and the same mass resists far more.",
+    "diagrams": [
+      "torsion_shaft",
+      "bending_axis"
+    ],
+    "takeaway": "Section properties are geometry: compute I and J before inserting any material.",
+    "cards": [
+      {
+        "title": "Torsion of a circular shaft",
+        "items": [
+          [
+            "m",
+            "\\gamma=\\frac{r\\theta}{L},\\qquad \\tau=G\\gamma=\\frac{Gr\\theta}{L}"
+          ],
+          [
+            "m",
+            "T=\\frac{G\\theta}{L}\\int_0^R 2\\pi r^3dr=\\frac{G\\theta}{L}\\frac{\\pi R^4}{2}"
+          ],
+          [
+            "m",
+            "\\theta=\\frac{TL}{GJ},\\qquad J=\\frac{\\pi R^4}{2}"
+          ],
+          [
+            "p",
+            "Twisting by theta over L shears a surface element by gamma = r theta/L, so the stress grows with radius and its torque carries an extra r: the integral is of r^3. J collects the geometry."
+          ],
+          [
+            "why",
+            "A torsion pendulum is this spring: C = GJ/L, and T = 2 pi sqrt(I/C) with I the inertia of the hanging body."
+          ],
+          [
+            "trap",
+            "J = pi R^4/2 for a solid circle, but the bending second moment is I = pi R^4/4. Swapping them is a factor-of-two error with correct dimensions, so units will not catch it."
+          ]
+        ]
+      },
+      {
+        "title": "Which section is stiffer per kilogram",
+        "items": [
+          [
+            "m",
+            "J=\\int r^2dA,\\qquad \\text{core }r<0.7R:\\ 24\\%\\text{ of }J,\\ 49\\%\\text{ of }A"
+          ],
+          [
+            "m",
+            "\\text{solid: }J=\\frac{\\pi R^4}{2};\\quad \\text{thin tube: }J\\approx2\\pi R^3t"
+          ],
+          [
+            "p",
+            "J weights area by r^2, so material near the axis contributes almost nothing to stiffness while still costing mass. Removing the core of a shaft therefore removes much area and little J, and the hollow shaft twists less for the same mass and torque."
+          ],
+          [
+            "why",
+            "At equal outer radius the solid shaft is stiffer; at equal mass the hollow one is. The comparison must state which quantity is held fixed, or the answer flips."
+          ],
+          [
+            "trap",
+            "Hollow shafts also fail locally: a thin wall buckles in shear. The stiffness gain is real, and the wall thickness has a lower limit set by a different failure mode."
+          ]
+        ]
+      },
+      {
+        "title": "Bending: neutral axis and curvature",
+        "items": [
+          [
+            "m",
+            "\\varepsilon=\\frac{y}{R},\\qquad \\sigma=\\frac{Yy}{R}"
+          ],
+          [
+            "m",
+            "M=\\int\\frac{Yy^2}{R}dA=\\frac{YI}{R}\\ \\Rightarrow\\ \\frac{M}{I}=\\frac{Y}{R}"
+          ],
+          [
+            "p",
+            "Fibres at distance y from the unstrained neutral layer change length by y/R, so the strain and the stress grow linearly across the depth, tension on the convex side and compression on the other. The internal moment is the integral of stress times y, which defines I."
+          ],
+          [
+            "why",
+            "The neutral axis passes through the centroid only for a homogeneous section, because zero net axial force requires the first moment of area to vanish."
+          ],
+          [
+            "trap",
+            "For a composite section the axis sits at the stiffness-weighted centroid. Assuming the geometric centre mis-assigns stress to both materials."
+          ]
+        ]
+      },
+      {
+        "title": "Cantilever and the I-beam",
+        "items": [
+          [
+            "m",
+            "\\frac{d^2y}{dx^2}=\\frac{M(x)}{YI},\\quad M=F(L-x)"
+          ],
+          [
+            "m",
+            "\\delta_{\\rm tip}=\\frac{FL^3}{3YI},\\qquad I_{\\rm rect}=\\frac{bh^3}{12}"
+          ],
+          [
+            "p",
+            "Integrating the curvature twice with zero slope and deflection at the wall gives FL^3/3YI. Depth enters I as h^3 and width as b, so turning a rectangle through 90 degrees costs a factor of four. An I-profile wins about two at equal depth and area."
+          ],
+          [
+            "why",
+            "Deflection scales as L^3, stress as L: a long beam fails by being too floppy, a short one by being too weak. Different checks."
+          ],
+          [
+            "trap",
+            "The factor of five often quoted compares a deep I-section with a shallow rectangle and silently credits the depth."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §§3.8, 3.10, T6, Q13, E9",
+    "part_page": 6,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-07-plasticity-materials",
+    "title": "Yield, fatigue and choosing a material",
+    "subtitle": "Strength, stiffness, toughness and density are independent axes.",
+    "diagrams": [
+      "hysteresis",
+      "ashby"
+    ],
+    "takeaway": "Stiffness is not strength, and neither one is toughness.",
+    "cards": [
+      {
+        "title": "Beyond the linear law",
+        "items": [
+          [
+            "m",
+            "U_{\\rm rec}=\\tfrac12\\sigma\\varepsilon,\\qquad U_{\\rm lost}=\\oint\\sigma\\,d\\varepsilon"
+          ],
+          [
+            "m",
+            "\\text{fatigue: cracks grow below yield}"
+          ],
+          [
+            "p",
+            "Past yield, dislocations move and deformation is permanent. Unloading follows a line parallel to the elastic slope, so only the elastic triangle returns; the rest is heat and permanent set. A hysteresis loop encloses the loss per cycle, which is how rubber damps and why a tuning fork rings."
+          ],
+          [
+            "why",
+            "Elastic aftereffect is slow partial recovery; elastic fatigue is weakening under repeated load. Each bend of a paperclip multiplies dislocations, raising the yield stress and shortening the life."
+          ],
+          [
+            "trap",
+            "After yield u = sigma^2/2Y no longer describes the material: the same load now leaves a permanent set."
+          ]
+        ]
+      },
+      {
+        "title": "Specific strength and specific modulus",
+        "items": [
+          [
+            "m",
+            "\\text{tie: }\\frac{\\sigma_y}{\\rho}\\ \\text{or}\\ \\frac{Y}{\\rho};\\qquad \\text{beam at fixed mass: }\\frac{Y^{1/2}}{\\rho}"
+          ],
+          [
+            "m",
+            "\\text{steel }3.2\\times10^4,\\ \\text{Al }7.4\\times10^4,\\ \\text{CFRP }9.4\\times10^5\\ \\mathrm{m^2s^{-2}}"
+          ],
+          [
+            "p",
+            "A cable of fixed breaking load weighs rho F/sigma_y, so the ranking is specific strength. A beam of fixed mass has I proportional to 1/rho^2 and deflection proportional to 1/YI, so the ranking is sqrt(Y)/rho. Different applications, different indices, possibly different winners."
+          ],
+          [
+            "why",
+            "Material selection is multi-objective. A composite wins both the cable and the bicycle frame here, but for two different reasons, and neither reason is simply the highest modulus."
+          ],
+          [
+            "trap",
+            "Comparing moduli alone always favours steel; comparing masses answers the engineering question. State the constraint before quoting a winner."
+          ]
+        ]
+      },
+      {
+        "title": "Buckling versus crushing",
+        "items": [
+          [
+            "m",
+            "P_{cr}=\\frac{\\pi^2YI}{L^2},\\qquad P_y=\\sigma_yA"
+          ],
+          [
+            "m",
+            "P_{\\rm fail}=\\min(P_{cr},P_y)"
+          ],
+          [
+            "p",
+            "A short fat column crushes at a load set by strength. A long thin one bows sideways and fails at a load set by stiffness, proportional to I and to 1/L^2, with strength absent. A real column fails at whichever load is smaller."
+          ],
+          [
+            "why",
+            "Buckling is a geometric instability, not a material limit: the amplitude grows without any new stress, so the failure load does not depend on how strong the material is, only on how stiff and how slender."
+          ],
+          [
+            "trap",
+            "Comparing the two and keeping the larger is the trap. Slender columns buckle far below yield, and then the failure is sudden, with no warning from the stress-strain curve."
+          ]
+        ]
+      },
+      {
+        "title": "Fracture, fatigue and safety factors",
+        "items": [
+          [
+            "m",
+            "n=\\frac{\\sigma_{\\rm yield}}{\\sigma_{\\rm working}}\\ \\text{or}\\ \\frac{P_{\\rm fail}}{P_{\\rm working}}"
+          ],
+          [
+            "m",
+            "\\text{brittle: no yield plateau, so no warning}"
+          ],
+          [
+            "p",
+            "Toughness is the area under the stress-strain curve to fracture. Glass is stiffer than mild steel and far less tough: it snaps without warning. Fatigue cracks grow a little on each load cycle, so a member designed on a single static load can still fail in service."
+          ],
+          [
+            "why",
+            "Safety factors cover three separate unknowns: scatter in material properties, uncertainty in the load, and the difference between a test specimen and a real joint with holes and welds."
+          ],
+          [
+            "trap",
+            "A safety factor does not repair a wrong model. If the mode is wrong, a larger factor only delays the failure it was never designed to prevent."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §§3.11-3.12, Part 8 traps, E10, P32",
+    "part_page": 7,
+    "part_total": 8
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-08-exam-toolkit",
+    "title": "JEE toolkit: triage, traps and limit checks",
+    "subtitle": "Name the mode, then the section, then the load history, then the formula.",
+    "diagrams": [
+      "decision_map",
+      "section_props"
+    ],
+    "takeaway": "Most lost marks are category errors, not algebra errors.",
+    "cards": [
+      {
+        "title": "Five-step triage",
+        "items": [
+          [
+            "m",
+            "\\text{mode}\\to\\text{section}\\to\\text{load history}\\to\\text{formula}\\to\\text{limit check}"
+          ],
+          [
+            "p",
+            "Is the body stretched, squeezed, sheared, twisted, bent or heated? Is it a wire, composite, shaft, beam or vessel? Is the load static, sudden or dropped? Only then choose among the ledger formulas, and finish with a limiting case."
+          ],
+          [
+            "why",
+            "The order exists because each step can be checked cheaply. A category error discovered at step one costs one line; discovered after the algebra, it costs the question."
+          ],
+          [
+            "trap",
+            "If two formulas both seem to apply, one is usually a limit of the other. Say which, and the ambiguity disappears."
+          ]
+        ]
+      },
+      {
+        "title": "The four different twos",
+        "items": [
+          [
+            "m",
+            "\\text{self-weight: }\\tfrac12mgL/AY"
+          ],
+          [
+            "m",
+            "\\text{sudden load: }2\\Delta_{\\rm st}"
+          ],
+          [
+            "m",
+            "\\text{hoop vs longitudinal: }2:1"
+          ],
+          [
+            "m",
+            "J=\\pi R^4/2\\ \\text{against}\\ I=\\pi R^4/4"
+          ],
+          [
+            "p",
+            "Four unrelated factors of two appear in this chapter. Each has a one-line origin: a triangular integral, an energy root, a free-body cut of a cylinder, and a definition of the polar second moment."
+          ],
+          [
+            "why",
+            "Memorising \"there is a factor of two somewhere\" is not a method. If you can name the origin you can regenerate the number under exam pressure."
+          ],
+          [
+            "trap",
+            "The factor of two for a sudden load is a peak; the factor of two in the self-weight is an average. They are not interchangeable, and a problem can contain both."
+          ]
+        ]
+      },
+      {
+        "title": "Numbers and units worth carrying",
+        "items": [
+          [
+            "m",
+            "Y_{\\rm steel}=2.0\\times10^{11}\\ \\mathrm{Pa},\\quad G_{\\rm steel}=8.0\\times10^{10}\\ \\mathrm{Pa}"
+          ],
+          [
+            "m",
+            "\\sigma_y\\approx2.5\\times10^{8}\\ \\mathrm{Pa},\\quad \\alpha=1.2\\times10^{-5}\\ \\mathrm{K^{-1}},\\quad \\nu=0.29"
+          ],
+          [
+            "m",
+            "B_{\\rm water}=2.2\\times10^{9}\\ \\mathrm{Pa},\\quad \\rho_{\\rm steel}=7800\\ \\mathrm{kg\\,m^{-3}}"
+          ],
+          [
+            "p",
+            "These are the values used throughout the worked examples, rounded to two significant figures so the arithmetic stays checkable by hand."
+          ],
+          [
+            "why",
+            "A dimension check catches most slips: stress should land in 10^7-10^9 Pa, strain in 10^-4-10^-3, modulus in 10^10-10^11 Pa. An answer outside those ranges is a units or area error."
+          ],
+          [
+            "trap",
+            "Do not mix GPa and Pa inside one line. A stress written as 2 in GPa added to a strain will not announce itself; the final number is simply wrong by 10^9."
+          ]
+        ]
+      },
+      {
+        "title": "Scaling laws worth memorising",
+        "items": [
+          [
+            "m",
+            "k\\propto\\frac{A}{L}:\\ L\\to2L\\Rightarrow\\frac{k}{2};\\quad d\\to2d\\Rightarrow4k"
+          ],
+          [
+            "m",
+            "\\theta\\propto\\frac{TL}{GR^4};\\qquad \\delta\\propto\\frac{FL^3}{YI}"
+          ],
+          [
+            "p",
+            "Stiffness falls with length and rises with area; twist falls as the fourth power of radius; deflection rises as the cube of length. Write each as a proportionality before substituting numbers, and the answer often needs no arithmetic."
+          ],
+          [
+            "why",
+            "Scaling also ranks the variables. In torsion the radius enters as R^4 while the length enters to the first power, and in a beam the depth enters cubed while the width enters once."
+          ],
+          [
+            "trap",
+            "Scaling arguments assume the mode does not change. Make a shaft thin enough and it fails by wall buckling, not by twist, and the R^-4 law stops applying."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md Parts 6-9, Part 13 formula sheet",
+    "part_page": 8,
+    "part_total": 8
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-01-atomic-spring",
+    "title": "Why Y is 10^11 Pa: the interatomic spring",
+    "subtitle": "One bond energy over one atomic volume sets the stiffness of every ordinary solid.",
+    "diagrams": [
+      "atomic_well",
+      "modulus_bar"
+    ],
+    "takeaway": "Moduli are bond energies per atomic volume; no other scale is available.",
+    "cards": [
+      {
+        "title": "A chain of bonds under load",
+        "items": [
+          [
+            "m",
+            "F=U^{\\prime\\prime}(r_0)\\,s,\\qquad \\sigma\\approx\\frac{F}{r_0^2},\\qquad \\varepsilon=\\frac{s}{r_0}"
+          ],
+          [
+            "m",
+            "Y=\\frac{\\sigma}{\\varepsilon}=\\frac{U^{\\prime\\prime}(r_0)}{r_0}"
+          ],
+          [
+            "p",
+            "Model neighbours by a pair potential U(r) with its minimum at r0. Stretch one bond by s: the restoring force is the curvature times s. One chain of bonds occupies an area of order r0^2 and the strain is s/r0, so the macroscopic modulus is the bond curvature divided by the bond length."
+          ],
+          [
+            "why",
+            "This is the microscopic content of Hooke law: the linear term in the potential becomes the linear relation between stress and strain. Curvature, not depth, is the spring constant."
+          ],
+          [
+            "trap",
+            "The estimate assumes a simple pair potential and a cubic lattice. Directional covalent bonds and long-range ionic forces make the real modulus anisotropic, so this is an order-of-magnitude argument, not a prediction."
+          ]
+        ]
+      },
+      {
+        "title": "Why the answer is 10^11 Pa",
+        "items": [
+          [
+            "m",
+            "U^{\\prime\\prime}(r_0)\\sim\\frac{D}{r_0^2}\\ \\Rightarrow\\ Y\\sim\\frac{D}{r_0^3}"
+          ],
+          [
+            "m",
+            "D=3\\ \\mathrm{eV}=4.8\\times10^{-19}\\ \\mathrm{J},\\ r_0=2\\ \\text{\\AA}:\\ Y\\sim6\\times10^{10}\\ \\mathrm{Pa}"
+          ],
+          [
+            "p",
+            "A well of depth D and width r0 has curvature of order D/r0^2, so the modulus is D/r0^3: an energy per volume. Bond energies are a few electronvolts and bond lengths a couple of angstroms, and there is no other combination available, which is why every ordinary solid sits between 10^10 and 10^11 Pa."
+          ],
+          [
+            "why",
+            "The same estimate gives the interatomic spring constant ka = Y r0, about 40 N/m for steel: a laboratory-scale spring constant hidden inside a bond."
+          ],
+          [
+            "trap",
+            "Rubber at 10^6 Pa is not a failure of the arithmetic. Its restoring force is entropy of coiled chains, not the curvature of a well, and the estimate simply does not apply."
+          ]
+        ]
+      },
+      {
+        "title": "The interatomic force constant",
+        "items": [
+          [
+            "m",
+            "k_a=U^{\\prime\\prime}(r_0)=Yr_0"
+          ],
+          [
+            "m",
+            "\\omega_{\\rm vib}=\\sqrt{k_a/m}\\sim10^{13}\\ \\mathrm{s^{-1}}"
+          ],
+          [
+            "p",
+            "The curvature that gives Y also gives one bond spring constant: about 40 N/m for steel with r0 near 2 angstrom. Dividing by an atomic mass gives a vibration frequency near 10^13 per second, the Debye scale."
+          ],
+          [
+            "why",
+            "This is the numerical bridge between a modulus and a microscopic spring. It also explains why sqrt(Y/rho), the elastic wave speed, is of the order of the speed of sound in the solid."
+          ],
+          [
+            "trap",
+            "Do not insert this bond stiffness into a macroscopic formula without converting: a rod of length L has of order L/r0 bonds in series, which is why the macroscopic stiffness carries A/L."
+          ]
+        ]
+      },
+      {
+        "title": "Compressibility from the same picture",
+        "items": [
+          [
+            "m",
+            "B=-V\\frac{dp}{dV}\\sim\\frac{D}{r_0^3}\\ \\text{for a close-packed solid}"
+          ],
+          [
+            "m",
+            "B_{\\rm steel}\\approx1.6\\times10^{11}\\ \\mathrm{Pa}\\ \\ (Y=200\\ \\mathrm{GPa},\\ \\nu=0.29)"
+          ],
+          [
+            "p",
+            "Squeezing a solid changes every bond length at once, so the bulk modulus is again an energy per volume. For steel, B is close to Y but slightly smaller; for rubber, B is three orders of magnitude larger than Y, which is the defining feature of a nearly incompressible material."
+          ],
+          [
+            "why",
+            "Order-of-magnitude estimates for B and Y agree because both come from the same bond; the ratio between them is set by Poisson ratio, not by chemistry."
+          ],
+          [
+            "trap",
+            "Do not apply the solid estimate to a liquid. Water has B = 2.2 GPa because its hydrogen-bond network is already partly broken; its shear modulus is zero because molecules slide."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §3.11, OL1, P27",
+    "part_page": 1,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-02-thermal-expansion-well",
+    "title": "Thermal expansion as the asymmetry of a well",
+    "subtitle": "A symmetric well cannot expand; the cubic term is the whole phenomenon.",
+    "diagrams": [
+      "potential_cubic",
+      "alpha_scale"
+    ],
+    "takeaway": "Expansion is the drift of the mean separation, not a change in the vibration amplitude alone.",
+    "cards": [
+      {
+        "title": "The classical average",
+        "items": [
+          [
+            "m",
+            "U=\\tfrac12ks^2+\\tfrac16\\gamma s^3,\\qquad \\gamma=U^{\\prime\\prime\\prime}(r_0)<0"
+          ],
+          [
+            "m",
+            "\\langle s\\rangle=-\\frac{\\gamma k_BT}{2k^2}"
+          ],
+          [
+            "p",
+            "Write the well as a parabola plus a cubic term, with gamma negative for a well that is softer outward. Average s over the Boltzmann distribution. The correction to the mean comes from the even part of the cubic-weighted integrand, and it is linear in T."
+          ],
+          [
+            "why",
+            "Harmonic vibrations alone give zero expansion: the mean position stays at r0 at every amplitude. Only the asymmetry of the well converts vibration into a drift, so expansion is a direct measurement of the cubic term."
+          ],
+          [
+            "trap",
+            "The sign of gamma matters. A well that is steeper outward would contract on heating, and a few real materials do over restricted ranges. The estimate below assumes the usual softer-outward shape."
+          ]
+        ]
+      },
+      {
+        "title": "Collapse to alpha about k_B / 2D",
+        "items": [
+          [
+            "m",
+            "\\alpha=\\frac{1}{r_0}\\frac{d\\langle s\\rangle}{dT}=-\\frac{\\gamma k_B}{2r_0k^2}"
+          ],
+          [
+            "m",
+            "|\\gamma|\\sim\\frac{k}{r_0},\\ k\\sim\\frac{D}{r_0^2}\\ \\Rightarrow\\ \\alpha\\sim\\frac{k_B}{2D}"
+          ],
+          [
+            "p",
+            "Estimate the cubic coefficient as k/r0 and the curvature as D/r0^2. Everything cancels except Boltzmann constant over bond depth, so alpha is about 1.4e-5 per kelvin for a 3 eV bond, which is the measured order for metals."
+          ],
+          [
+            "why",
+            "The same relation explains the correlation between high modulus and low expansion: a deep, stiff well expands less. Diamond is stiff and expands very little; rubber is soft and expands a lot."
+          ],
+          [
+            "trap",
+            "The estimate is a lower-order classical result. Quantum zero-point motion and the full phonon spectrum change the coefficient by factors of order unity, not orders of magnitude."
+          ]
+        ]
+      },
+      {
+        "title": "Constrained expansion and stress",
+        "items": [
+          [
+            "m",
+            "\\sigma_{\\rm th}=Y\\alpha\\Delta T,\\qquad \\Delta L_{\\rm free}=\\alpha L\\Delta T"
+          ],
+          [
+            "m",
+            "\\alpha B\\approx\\frac{k_B}{\\text{atomic volume}}"
+          ],
+          [
+            "p",
+            "A solid that cannot expand converts the prevented strain into stress, and Y alpha is fixed by the same bond parameters: about 2.4 MPa per kelvin for steel, so a 100 K constraint is already dangerous."
+          ],
+          [
+            "why",
+            "The relation alpha B approximately constant per atomic volume ties thermal and elastic response to one anharmonicity: two measurements of a single microscopic quantity."
+          ],
+          [
+            "trap",
+            "Expansion is not a force and does not accumulate over cycles. A rail that breathes freely for a year develops no stress at all; only the constrained part of the swing produces stress."
+          ]
+        ]
+      },
+      {
+        "title": "Where the model stops",
+        "items": [
+          [
+            "m",
+            "\\text{Invar: }\\alpha\\approx10^{-6}\\ \\mathrm{K^{-1}}\\ \\text{by magnetic compensation}"
+          ],
+          [
+            "m",
+            "\\text{anisotropic crystals: }\\alpha\\ \\text{is a tensor}"
+          ],
+          [
+            "p",
+            "Real solids can have alpha near zero (Invar) because a magnetic contribution cancels the phonon one, and anisotropic crystals expand differently along different axes. The scalar, monotone alpha of this model is a first approximation."
+          ],
+          [
+            "why",
+            "The existence of Invar is a warning: a material property that seems fundamental can be engineered by adding a second mechanism of the opposite sign."
+          ],
+          [
+            "trap",
+            "No simple pair-potential argument predicts Invar. Quoting alpha = k_B/2D there would be wrong by an order of magnitude, so state the assumption when you use the estimate."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL2, P28, §3.11",
+    "part_page": 2,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-03-falling-weight-rod-mass",
+    "title": "The falling weight with the rod own mass",
+    "subtitle": "Keep the rod mass in the energy ledger and the answer more than doubles.",
+    "diagrams": [
+      "rod_mass_impact",
+      "wave_transit"
+    ],
+    "takeaway": "The rod enters at half the end displacement, and the whole method needs slow loading.",
+    "cards": [
+      {
+        "title": "Energy with a distributed mass",
+        "items": [
+          [
+            "m",
+            "\\int_0^L\\tfrac12YA\\left(\\frac{du}{dx}\\right)^2dx=\\tfrac12k\\delta^2\\ \\ (u=\\delta x/L)"
+          ],
+          [
+            "m",
+            "\\tfrac12k\\delta^2=Mg(h+\\delta)+\\tfrac12mg\\delta"
+          ],
+          [
+            "p",
+            "Assume the rod deforms in its static shape u(x) = delta x/L, which is also the shape that minimises the elastic energy at a given end displacement. The rod centre of mass descends delta/2, so its own weight contributes half of mg delta. Every velocity in this self-similar mode is zero at maximum extension."
+          ],
+          [
+            "why",
+            "The static shape is a variational choice, not an extra assumption about dynamics: it gives an upper bound on the true kinetic energy and becomes exact for slow loading."
+          ],
+          [
+            "trap",
+            "The rod weight is not simply added to M. It enters at half the end displacement because its centre of mass moves half as far. Adding m to M overestimates the effect."
+          ]
+        ]
+      },
+      {
+        "title": "Solve the quadratic",
+        "items": [
+          [
+            "m",
+            "k\\delta^2-2\\left(M+\\frac m2\\right)g\\delta-2Mgh=0"
+          ],
+          [
+            "m",
+            "\\delta=\\frac{(M+m/2)g+\\sqrt{[(M+m/2)g]^2+2kMgh}}{k}"
+          ],
+          [
+            "p",
+            "The positive root is the physical one; the negative root corresponds to a state above the release point. With M = 10 kg, m = 40 kg, k = 1e5 N/m and h = 1 mm, the answer is 6.2 mm against 2.7 mm when the rod mass is ignored."
+          ],
+          [
+            "why",
+            "A heavy rod more than doubles the extension in this example, so the massless-rod formula is not a small correction when the rod outweighs the falling mass."
+          ],
+          [
+            "trap",
+            "The quadratic assumes the rod remains elastic throughout. If the peak stress exceeds yield the stored energy is no longer half k delta^2 for the same peak force, and the elastic equation underestimates the extension."
+          ]
+        ]
+      },
+      {
+        "title": "The wave-transit caveat",
+        "items": [
+          [
+            "m",
+            "c=\\sqrt{Y/\\rho},\\qquad t_{\\rm transit}\\sim\\frac{L}{c}"
+          ],
+          [
+            "m",
+            "2\\ \\mathrm{m}\\ \\text{steel rod}:\\ t_{\\rm transit}\\approx0.4\\ \\mathrm{ms}"
+          ],
+          [
+            "p",
+            "The static-shape assumption requires the loading time to be long compared with the time a stress wave takes to cross the rod. If a mass strikes the end faster than about 0.4 ms, the far end does not know the impact has happened and the rod does not deform in its static shape."
+          ],
+          [
+            "why",
+            "A stress wave of amplitude rho c v arrives at the support before the rod has agreed on a shape, and the energy is then partitioned by wave mechanics, not by the static mode."
+          ],
+          [
+            "trap",
+            "This is a validity condition, not a correction factor. The quasi-static formula can be wrong by a large factor under impact, and no amount of algebra inside the formula will reveal it."
+          ]
+        ]
+      },
+      {
+        "title": "What the oscillating solution adds",
+        "items": [
+          [
+            "m",
+            "\\omega=\\sqrt{k/(M+m/3)},\\qquad \\delta(t)=\\delta_{\\rm eq}\\left(1-\\cos\\omega t\\right)"
+          ],
+          [
+            "m",
+            "\\text{effective mass }m/3\\ \\text{for the static mode}"
+          ],
+          [
+            "p",
+            "If the rod mass is treated as a lumped correction to the equation of motion rather than through energy, the effective mass is m/3, not m/2. The two results differ because they answer different questions: energy at the turning point versus frequency of oscillation."
+          ],
+          [
+            "why",
+            "The discrepancy is a useful reminder that lumping a distributed system is a modelling choice. Quote which quantity the effective mass is meant to reproduce."
+          ],
+          [
+            "trap",
+            "Do not mix the two factors in one solution. Pick the energy method or the dynamic method and stay inside its assumptions."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL3, P29",
+    "part_page": 3,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-04-constant-stress-rod",
+    "title": "The constant-stress rod and the limits of height",
+    "subtitle": "Uniform stress needs an exponential flare; a prismatic column has a maximum height.",
+    "diagrams": [
+      "constant_stress",
+      "taper_profile"
+    ],
+    "takeaway": "lambda = sigma0/(rho g) is a materials length, not the height of a tree.",
+    "cards": [
+      {
+        "title": "Derive the profile",
+        "items": [
+          [
+            "m",
+            "\\sigma_0A(x)=W+\\int_0^x\\rho gA(x^{\\prime})dx^{\\prime}"
+          ],
+          [
+            "m",
+            "A^{\\prime}=\\frac{\\rho g}{\\sigma_0}A\\ \\Rightarrow\\ A=A_0e^{x/\\lambda},\\quad \\lambda=\\frac{\\sigma_0}{\\rho g}"
+          ],
+          [
+            "p",
+            "At depth x the section carries W plus the weight of rod above it. Differentiating the balance shows the area grows in proportion to itself, so the profile is exponential with decay length lambda = sigma0/(rho g); the area under the load is W/sigma0."
+          ],
+          [
+            "why",
+            "A prismatic column of any width crushes under its own weight once its height exceeds lambda, because widening it adds strength and weight in the same proportion. The flare removes that particular ceiling by making stress constant."
+          ],
+          [
+            "trap",
+            "This is a strength limit, not a stiffness limit. A real tall structure fails by buckling or by the hydraulic limit of a tree long before it reaches lambda."
+          ]
+        ]
+      },
+      {
+        "title": "Numbers and the real ceilings",
+        "items": [
+          [
+            "m",
+            "\\lambda_{\\rm steel}=\\frac{2.5\\times10^{8}}{7800\\times9.8}\\approx3.3\\ \\mathrm{km}"
+          ],
+          [
+            "m",
+            "\\lambda_{\\rm wood}\\approx7\\ \\mathrm{km},\\quad \\lambda_{\\rm bone}\\approx10\\ \\mathrm{km}"
+          ],
+          [
+            "p",
+            "For structural steel the crushing length is 3.3 km; for wood and bone it is larger because the strength-to-weight ratio is better. No building, tree or bone comes close to its crushing length, so something else is setting the height."
+          ],
+          [
+            "why",
+            "The crushing length is the answer to a question nobody asked. It bounds a mode of failure that real slender structures avoid by failing earlier in another mode."
+          ],
+          [
+            "trap",
+            "Substituting yield stress for the working stress in lambda gives an unconservative height. Design uses a safety factor, so the usable lambda is smaller."
+          ]
+        ]
+      },
+      {
+        "title": "What actually limits a tree",
+        "items": [
+          [
+            "m",
+            "P_{cr}=\\frac{\\pi^2YI}{L^2}\\ \\ (\\text{buckling})"
+          ],
+          [
+            "m",
+            "h_{\\rm hydraulic}\\sim100\\ \\mathrm{m}\\ \\ (\\text{cavitation and embolism})"
+          ],
+          [
+            "p",
+            "A tree is limited by water transport: suction in the xylem becomes large enough to nucleate bubbles, and the column of water breaks. This happens near 100 m, seventy times closer than the crushing length of wood."
+          ],
+          [
+            "why",
+            "The pattern is general: the binding constraint is usually not the one the formula was derived for. Finding the real limit is the engineering skill."
+          ],
+          [
+            "trap",
+            "The buckling load of a tree depends on its taper and root anchorage, both beyond this model. Quoting the Euler load for a real tree is an order-of-magnitude estimate only."
+          ]
+        ]
+      },
+      {
+        "title": "How much flare, and for which material",
+        "items": [
+          [
+            "m",
+            "\\text{ground to load}: \\frac{A(L)}{A_0}=e^{L/\\lambda}"
+          ],
+          [
+            "m",
+            "L=30\\ \\mathrm{m},\\ \\lambda=3.3\\ \\mathrm{km}:\\ e^{0.009}\\approx1.01"
+          ],
+          [
+            "p",
+            "The base is wider than the section under the load by the factor exp(L/lambda), so the flare is visible only when the height approaches lambda. A 30 m steel column flares by about one per cent: a cylinder at building scale, a trumpet only near the crushing length."
+          ],
+          [
+            "why",
+            "The exponential is the signature of a balance in which the material carries its own weight: extra area adds strength and load together, and only an exponential keeps their ratio fixed. The exponent is the dimensionless height L/lambda."
+          ],
+          [
+            "trap",
+            "Do not read exp(L/lambda) as huge at ordinary heights, or attribute a tree taper to this formula: wind, branching and buckling set the shape first."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL4, P30",
+    "part_page": 4,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-05-cantilever-beam-theory",
+    "title": "Bending integrated: slope, deflection and supports",
+    "subtitle": "Two integrations, two boundary conditions, one formula per support case.",
+    "diagrams": [
+      "cantilever_integrated",
+      "beam_cases"
+    ],
+    "takeaway": "Deflection scales as L^3 and stress as L; they are separate checks.",
+    "cards": [
+      {
+        "title": "Curvature to deflection",
+        "items": [
+          [
+            "m",
+            "\\frac{d^2y}{dx^2}=\\frac{M(x)}{YI},\\qquad M=F(L-x)"
+          ],
+          [
+            "m",
+            "y'=\\frac{F}{YI}\\left(Lx-\\frac{x^2}{2}\\right),\\quad y=\\frac{F}{YI}\\left(\\frac{Lx^2}{2}-\\frac{x^3}{6}\\right)"
+          ],
+          [
+            "p",
+            "Take x from the built-in end, y positive downward. Integrate the moment once for the slope and use zero slope at the wall; integrate again for the deflection and use zero deflection at the wall. At x = L the tip deflection is FL^3/3YI."
+          ],
+          [
+            "why",
+            "The boundary conditions carry the support type. A pinned end has zero deflection but nonzero slope; a built-in end has both zero, which is why the cantilever is the stiffest of the three cases."
+          ],
+          [
+            "trap",
+            "The small-slope step y double prime approximately equals 1/R is the validity condition. A deflection comparable with L needs the exact curvature, and the cubic formula then underestimates the real deflection."
+          ]
+        ]
+      },
+      {
+        "title": "Uniform load and the comparison",
+        "items": [
+          [
+            "m",
+            "M=\\frac{w(L-x)^2}{2}\\ \\Rightarrow\\ \\delta=\\frac{wL^4}{8YI}=\\frac{WL^3}{8YI}"
+          ],
+          [
+            "p",
+            "A uniformly spread load gives a quartic deflection with the same total load W. Comparing FL^3/3YI with WL^3/8YI: the same total load concentrated at the tip deflects 8/3 times as much as when spread along the beam."
+          ],
+          [
+            "why",
+            "The exponent of L differs because the moment distribution differs. Both results come from the same two integrations; only M(x) changed."
+          ],
+          [
+            "trap",
+            "A uniform load is not the same as a point load at the centre. For a simply supported beam the centre point load gives FL^3/48YI, and the uniform load gives 5wL^4/384YI, a different coefficient again."
+          ]
+        ]
+      },
+      {
+        "title": "Simply supported and fixed-fixed",
+        "items": [
+          [
+            "m",
+            "\\text{pinned, centre load: }\\delta=\\frac{FL^3}{48YI}"
+          ],
+          [
+            "m",
+            "\\text{fixed-fixed, centre load: }\\delta=\\frac{FL^3}{192YI}"
+          ],
+          [
+            "p",
+            "A simply supported beam bends four times as much as a fixed-fixed one under the same centre load. Clamping pushes the points of contraflexure inward, so the beam behaves like a shorter effective span, and its cube supplies most of the factor of four. The cantilever with an end load is the floppiest of the three."
+          ],
+          [
+            "why",
+            "The support conditions are worth more than a factor of four in deflection while changing nothing about the material or the section. Geometry and constraints dominate."
+          ],
+          [
+            "trap",
+            "Real joints are neither perfectly pinned nor perfectly fixed. Design codes use effective-length factors between the two ideals, precisely because the boundary condition is uncertain."
+          ]
+        ]
+      },
+      {
+        "title": "Shear, and when bending theory is enough",
+        "items": [
+          [
+            "m",
+            "\\tau_{\\max}=\\frac{3}{2}\\frac{V}{A}\\ \\text{(rectangle)},\\qquad \\delta_{\\rm shear}\\sim\\frac{VL}{GA}"
+          ],
+          [
+            "m",
+            "\\text{slender beam: }\\frac{\\delta_{\\rm shear}}{\\delta_{\\rm bend}}\\sim\\left(\\frac{h}{L}\\right)^2"
+          ],
+          [
+            "p",
+            "Bending normal stresses dominate in slender beams, but a short deep beam also deflects by shear. The ratio of shear to bending deflection scales as (h/L)^2, so a beam ten times longer than it is deep is safely a bending problem."
+          ],
+          [
+            "why",
+            "The same (h/L)^2 ratio decides when the Euler-Bernoulli beam equation is adequate and when Timoshenko corrections are needed. It is a slenderness criterion, not a material one."
+          ],
+          [
+            "trap",
+            "For a very short stub, bending theory can underpredict the deflection badly. The formula is not wrong; it is being used outside its slenderness range."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §3.10, OL5, P31, Q13",
+    "part_page": 5,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-06-buckling-columns",
+    "title": "Euler buckling: an eigenvalue, not a deflection",
+    "subtitle": "The amplitude cancels; only the load at which a bent shape is possible survives.",
+    "diagrams": [
+      "buckling",
+      "euler_modes"
+    ],
+    "takeaway": "A column fails at the smaller of buckling and yield, and slender columns buckle first.",
+    "cards": [
+      {
+        "title": "Dimension argument and sine shape",
+        "items": [
+          [
+            "m",
+            "P\\sim\\frac{YI}{L^2}\\ \\text{is the only force built from }YI\\text{ and }L"
+          ],
+          [
+            "m",
+            "y=\\delta\\sin\\frac{\\pi x}{L},\\qquad y^{\\prime\\prime}=-\\delta\\frac{\\pi^2}{L^2}\\sin\\frac{\\pi x}{L}"
+          ],
+          [
+            "p",
+            "A buckling load must be built from the bending stiffness YI and the length; the only combination with the dimensions of force is YI/L^2. For a pinned column the buckled shape is a sine, whose peak curvature is delta pi^2/L^2, and the midspan moment is P delta."
+          ],
+          [
+            "why",
+            "The amplitude delta cancels from the equation, which is what makes buckling an eigenvalue problem: the column does not choose an amplitude, it chooses the load at which any amplitude is possible."
+          ],
+          [
+            "trap",
+            "The sine shape assumes pinned ends and a uniform section. Other end conditions change the effective length and therefore the load by the factors 1, 0.25 and 4 shown in the figure."
+          ]
+        ]
+      },
+      {
+        "title": "Euler load and the comparison with yield",
+        "items": [
+          [
+            "m",
+            "P\\delta=YI\\cdot\\delta\\frac{\\pi^2}{L^2}\\ \\Rightarrow\\ P_{cr}=\\frac{\\pi^2YI}{L^2}"
+          ],
+          [
+            "m",
+            "P_y=\\sigma_yA,\\qquad P_{\\rm fail}=\\min(P_{cr},P_y)"
+          ],
+          [
+            "p",
+            "Equating the moment from the axial load to the moment the curvature can carry gives the Euler load. For a 1 cm radius, 2 m steel rod the Euler load is 3.9 kN against a yield load of 79 kN: buckling wins by a factor of twenty."
+          ],
+          [
+            "why",
+            "Thickening helps as R^4 while shortening helps as 1/L^2, so a column is far more sensitive to its length than to its diameter. That asymmetry is why slender members are dangerous."
+          ],
+          [
+            "trap",
+            "Euler formula applies only while the material is still elastic. A column that has already yielded buckles at a lower load given by a different, inelastic formula that this chapter does not derive."
+          ]
+        ]
+      },
+      {
+        "title": "Hollow sections and the same mass",
+        "items": [
+          [
+            "m",
+            "I=\\frac{\\pi(R^4-r^4)}{4},\\qquad R^2-r^2=\\text{const}"
+          ],
+          [
+            "m",
+            "\\text{hollow }P_{cr}\\approx3.5\\times\\text{solid, same mass}"
+          ],
+          [
+            "p",
+            "At equal mass, moving material away from the axis raises I sharply. A hollow tube of outer radius 1.5 cm and the same area as the 1 cm solid rod has I three and a half times larger and therefore buckles at three and a half times the load."
+          ],
+          [
+            "why",
+            "This is the same principle as the I-beam and the hollow shaft: the second moment rewards distance from the axis, and the mass only counts area."
+          ],
+          [
+            "trap",
+            "A thin-walled tube can fail locally by wall buckling before the global Euler load is reached. The wall thickness has a lower bound set by a different instability."
+          ]
+        ]
+      },
+      {
+        "title": "Effective length and real columns",
+        "items": [
+          [
+            "m",
+            "P_{cr}=\\frac{\\pi^2YI}{(\\kappa L)^2},\\qquad \\kappa=1,\\ 2,\\ 0.5,\\ 0.7"
+          ],
+          [
+            "m",
+            "P\\propto\\frac{1}{(\\kappa L)^2}:\\ \\text{halve }\\kappa L\\text{ and carry }4P"
+          ],
+          [
+            "p",
+            "End conditions enter only through the effective length. A fixed-free column behaves as a pinned column of twice the length and carries a quarter of the load; a fixed-fixed column as half the length and carries four times as much."
+          ],
+          [
+            "why",
+            "The effective-length factor is a compact way of saying that rotational restraint is worth as much as shortening the column. Real design codes tabulate kappa for practical joint details."
+          ],
+          [
+            "trap",
+            "The factors assume ideal end conditions and no sidesway. A frame that can sway has a larger effective length than its members suggest, which is how buildings collapse in a way that looks like a materials failure."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL6, P32, Q21",
+    "part_page": 6,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-07-ibeam-hoop",
+    "title": "What an I-beam buys, and the thin-walled vessel",
+    "subtitle": "Hold the depth fixed before crediting the profile; cut the vessel to get the stress.",
+    "diagrams": [
+      "ibeam",
+      "hoop_stress"
+    ],
+    "takeaway": "Hoop stress is twice longitudinal, so a pressurised cylinder splits lengthwise.",
+    "cards": [
+      {
+        "title": "The fair I-beam comparison",
+        "items": [
+          [
+            "m",
+            "I=\\sum\\left(\\frac{bh^3}{12}+Ad^2\\right)"
+          ],
+          [
+            "m",
+            "\\text{rectangle }20\\times40:\\ I=1.07\\times10^5\\ \\mathrm{mm^4},\\ I/A=133\\ \\mathrm{mm^2}"
+          ],
+          [
+            "p",
+            "For the I-section, flanges contribute mainly through Ad^2 because their own bh^3/12 is negligible at that thickness. A 20x40 rectangle has I/A = 133 mm^2; an 80 mm deep I-section with 680 mm^2 of area reaches about 1000 mm^2, seven times more, but it is also twice as deep."
+          ],
+          [
+            "why",
+            "Depth alone, entering I as h^2 at fixed area, already accounts for a factor of four. The genuine gain from moving area to the flanges is the remaining factor near two."
+          ],
+          [
+            "trap",
+            "Quoting five or seven times without holding the depth fixed is the standard exaggeration. Ask what was held constant before believing a factor."
+          ]
+        ]
+      },
+      {
+        "title": "Hoop stress by a diametral cut",
+        "items": [
+          [
+            "m",
+            "p\\cdot2rL=2\\sigma tL\\ \\Rightarrow\\ \\sigma=\\frac{pr}{t}"
+          ],
+          [
+            "m",
+            "p\\pi r^2=\\sigma_L\\cdot2\\pi rt\\ \\Rightarrow\\ \\sigma_L=\\frac{pr}{2t}"
+          ],
+          [
+            "p",
+            "Cut the cylinder along a diameter: the pressure on the projected rectangle 2rL is balanced by two walls of thickness t, giving the hoop stress. Cut across an end cap: the pressure on the circular area is balanced by the ring of wall, giving the longitudinal stress, exactly half as large."
+          ],
+          [
+            "why",
+            "The hoop stress is twice the longitudinal one, so a thin cylinder always cracks along a generator first. That is why a sausage splits lengthwise and a balloon bursts with a long tear."
+          ],
+          [
+            "trap",
+            "The thin-wall step assumes the stress is uniform through the thickness. A gun barrel with t comparable to r has a stress gradient through the wall and needs the Lame solution, which this chapter does not develop."
+          ]
+        ]
+      },
+      {
+        "title": "Spherical vessels and the join",
+        "items": [
+          [
+            "m",
+            "\\text{sphere: }\\sigma=\\frac{pr}{2t}\\ \\text{in every direction}"
+          ],
+          [
+            "m",
+            "\\text{cylinder: }2:1\\ \\text{ratio between hoop and axial}"
+          ],
+          [
+            "p",
+            "A thin sphere carries the same stress in every direction at half the hoop value of a cylinder of the same r and t, which is why gas storage uses spheres or domed ends. A cylinder-sphere junction has a mismatch in radial growth and therefore a local bending stress."
+          ],
+          [
+            "why",
+            "Uniform biaxial stress in a sphere means no preferred crack direction and a higher pressure capacity for the same wall. The price is manufacturing difficulty."
+          ],
+          [
+            "trap",
+            "The junction stress is a discontinuity problem. The membrane formulas describe the fields away from the joint, not the joint itself."
+          ]
+        ]
+      },
+      {
+        "title": "Spider silk and the scale of a strand",
+        "items": [
+          [
+            "m",
+            "F=\\sigma_fA,\\qquad \\left.\\frac{\\sigma_f}{\\rho}\\right|_{\\rm silk}=7.7\\times10^{5}\\ \\mathrm{m^2s^{-2}}"
+          ],
+          [
+            "m",
+            "\\text{steel }3.2\\times10^{4}:\\ \\text{silk wins by about }24"
+          ],
+          [
+            "p",
+            "A 3 micrometre dragline of silk breaks at about 7 mN and can lift less than a gram, while a 70 micrometre strand of the same material lifts hundreds of grams. Specific strength beats steel by a factor of twenty-four, and specific modulus loses to steel by about three."
+          ],
+          [
+            "why",
+            "The strand is an excellent rope and a poor ruler: strength and stiffness are independent axes even at the scale of a protein. Evolution optimised for toughness in tension, not for dimensional stability."
+          ],
+          [
+            "trap",
+            "Extrapolating one strand to a thick cable ignores statistical defects, which scale with volume. The strength of a long cable is always below the strength of a short fibre."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL7, OL9, P33-P35",
+    "part_page": 7,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-08-seismic-waves",
+    "title": "Two wave speeds and what an earthquake transmits",
+    "subtitle": "Each wave speed carries a different modulus under its square root.",
+    "diagrams": [
+      "wave_speeds",
+      "s_shadow"
+    ],
+    "takeaway": "The absence of S-waves beyond a depth is evidence for a liquid core.",
+    "cards": [
+      {
+        "title": "Rod, bulk P and S speeds",
+        "items": [
+          [
+            "m",
+            "v_{\\rm rod}=\\sqrt{\\frac{Y}{\\rho}},\\qquad v_S=\\sqrt{\\frac{G}{\\rho}},\\qquad v_P=\\sqrt{\\frac{B+\\frac43G}{\\rho}}"
+          ],
+          [
+            "p",
+            "A thin rod with free sides carries a longitudinal wave at sqrt(Y/rho). In the bulk the sides cannot contract, so the effective modulus is B + 4G/3 and the wave is faster. A shear wave needs G, so a liquid with G = 0 cannot carry one at all."
+          ],
+          [
+            "why",
+            "The three speeds are not three materials. They are three different constraints on the same material, and choosing the wrong one is a category error of exactly the kind triage is meant to prevent."
+          ],
+          [
+            "trap",
+            "Using the rod formula on a seismic arrival underestimates the speed by about 13 % in steel and by more in softer rock. The sides are not free underground."
+          ]
+        ]
+      },
+      {
+        "title": "Reading an earthquake",
+        "items": [
+          [
+            "m",
+            "G=\\rho v_S^2,\\qquad B+\\tfrac43G=\\rho v_P^2"
+          ],
+          [
+            "m",
+            "v_P=6.0,\\ v_S=3.5\\ \\mathrm{km/s}:\\ B=5.3\\times10^{10}\\ \\mathrm{Pa}"
+          ],
+          [
+            "p",
+            "Two measured speeds give two combinations of the moduli, hence G and B and then Poisson ratio. For typical crustal rock the numbers give nu about 0.24, close to steel, because silicate frameworks are elastically similar."
+          ],
+          [
+            "why",
+            "The inversion from arrival times to moduli is the whole of exploration seismology at its simplest: measure two speeds, infer two moduli, and map the interior."
+          ],
+          [
+            "trap",
+            "The formulas assume isotropic, homogeneous, linear elasticity. Layering, anisotropy and attenuation all change the inversion, and the numbers quoted are representative averages."
+          ]
+        ]
+      },
+      {
+        "title": "The liquid outer core",
+        "items": [
+          [
+            "m",
+            "v_S=0\\ \\Longleftrightarrow\\ G=0"
+          ],
+          [
+            "m",
+            "\\text{no direct S arrivals beyond }103^{\\circ}"
+          ],
+          [
+            "p",
+            "S-waves do not pass through the outer core: beyond a certain angular distance from the source there are no direct shear arrivals, and a shadow zone appears. Since a wave with zero speed requires zero shear modulus, the core must be fluid."
+          ],
+          [
+            "why",
+            "One absence, two moduli and a wave equation produce a statement about the interior of the Earth that no one has ever sampled directly. This is the strongest inference in the chapter."
+          ],
+          [
+            "trap",
+            "A fluid core still carries P-waves, so the P shadow is different from the S shadow. Confusing the two shadow zones is the standard error in seismology questions."
+          ]
+        ]
+      },
+      {
+        "title": "Wave speed as a materials tool",
+        "items": [
+          [
+            "m",
+            "v_{\\rm rod}=\\sqrt{Y/\\rho}\\ \\text{is also the sound speed in a bar}"
+          ],
+          [
+            "m",
+            "L/c\\ \\text{sets the time for a rod to agree on a shape}"
+          ],
+          [
+            "p",
+            "The same speed that decides an earthquake arrival also decides whether a falling-weight problem may be treated quasi-statically. A 2 m steel rod takes about 0.4 ms to transmit a stress pulse, so impacts faster than that are wave problems, not statics problems."
+          ],
+          [
+            "why",
+            "One number, sqrt(Y/rho), appears in acoustics, seismology and impact mechanics. Recognising it across chapters is more valuable than memorising it three times."
+          ],
+          [
+            "trap",
+            "The rod speed needs a thin rod with free sides. A bulk sample, a plate and a rod all have different wave speeds for the same material."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md OL10, P36, Q25",
+    "part_page": 8,
+    "part_total": 9
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-09-multiaxial",
+    "title": "Plane stress, principal axes and Mohr circle",
+    "subtitle": "A general in-plane state is three numbers, and two of them can always be made to vanish.",
+    "diagrams": [
+      "stress_element",
+      "mohr"
+    ],
+    "takeaway": "Rotate the axes and the shear can be removed; the principal stresses cannot.",
+    "cards": [
+      {
+        "title": "The stress element",
+        "items": [
+          [
+            "m",
+            "\\sigma_x,\\ \\sigma_y,\\ \\tau_{xy}\\ \\text{on a fixed element}"
+          ],
+          [
+            "m",
+            "\\text{tension positive; }\\tau_{xy}\\text{ on the +x face along +y}"
+          ],
+          [
+            "p",
+            "A plane stress state is fixed by three numbers. Normal stresses are positive in tension; the shear sign convention must be fixed once and then used consistently. A general plane has both a normal and a shear component, and rotating the element mixes them."
+          ],
+          [
+            "why",
+            "Stress is a tensor, not a vector: the traction on a plane depends on the plane. That is why a state described by three numbers transforms under rotation in a way a vector does not."
+          ],
+          [
+            "trap",
+            "Confusing the component tau_xy with the magnitude of shear on an arbitrary plane is the standard error. The maximum shear is not tau_xy except when the normal stresses are equal."
+          ]
+        ]
+      },
+      {
+        "title": "Principal stresses",
+        "items": [
+          [
+            "m",
+            "\\sigma_{1,2}=\\frac{\\sigma_x+\\sigma_y}{2}\\pm\\sqrt{\\left(\\frac{\\sigma_x-\\sigma_y}{2}\\right)^2+\\tau_{xy}^2}"
+          ],
+          [
+            "m",
+            "\\tan2\\theta_p=\\frac{2\\tau_{xy}}{\\sigma_x-\\sigma_y}"
+          ],
+          [
+            "p",
+            "The principal stresses are the extreme normal stresses; on those planes the shear vanishes. Their sum is invariant under rotation, and the difference sets the maximum shear. The axis angle follows from the transformation."
+          ],
+          [
+            "why",
+            "Invariance of the trace is the plane-stress version of B depending only on the mean stress: rotation cannot change the part that changes volume."
+          ],
+          [
+            "trap",
+            "The formula uses the doubled angle because a stress element has 180 degree symmetry, not 360. Forgetting the factor of two puts the principal axes 45 degrees out."
+          ]
+        ]
+      },
+      {
+        "title": "Mohr circle",
+        "items": [
+          [
+            "m",
+            "R=\\sqrt{\\left(\\frac{\\sigma_x-\\sigma_y}{2}\\right)^2+\\tau_{xy}^2},\\quad C=\\frac{\\sigma_x+\\sigma_y}{2}"
+          ],
+          [
+            "m",
+            "\\tau_{\\max}=R,\\qquad \\sigma(\\theta)=C+R\\cos2\\theta"
+          ],
+          [
+            "p",
+            "Plot normal stress horizontally and shear vertically. Every plane of the element maps to a point on a circle of radius R centred on the mean stress. The principal stresses are where the circle crosses the axis; the maximum shear is the top of the circle."
+          ],
+          [
+            "why",
+            "The circle turns the transformation into geometry: a rotation of the physical element by theta moves the point by 2theta around the circle. Nothing is calculated twice."
+          ],
+          [
+            "trap",
+            "A point inside the circle is not a plane of the element. And the circle is for plane stress only; a three-dimensional state has three circles."
+          ]
+        ]
+      },
+      {
+        "title": "Three dimensions, briefly",
+        "items": [
+          [
+            "m",
+            "\\sigma_m=\\frac{\\sigma_1+\\sigma_2+\\sigma_3}{3},\\qquad \\frac{\\Delta V}{V}=\\frac{\\sigma_m}{B}"
+          ],
+          [
+            "m",
+            "\\text{deviatoric: shape; mean: volume}"
+          ],
+          [
+            "p",
+            "In three dimensions a stress state splits into a mean (hydrostatic) part that changes volume and a deviatoric part that changes shape. The bulk modulus responds only to the mean; the shear modulus only to the deviatoric part. This is the exact statement behind the two interrelations."
+          ],
+          [
+            "why",
+            "The split is why a deep ocean pressure does not shear a fish, and why a pure shear stress does not compress a solid. Each modulus owns one part of the stress."
+          ],
+          [
+            "trap",
+            "A state with all three principal stresses equal is hydrostatic and has zero shear on every plane. This is the only state in which no plane feels shear."
+          ]
+        ]
+      }
+    ],
+    "source": "Elasticity.md §3.3 (superposition), Part 4; standard plane-stress transformation, added as extension",
+    "part_page": 9,
+    "part_total": 9
+  }
+]

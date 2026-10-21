@@ -1,0 +1,6 @@
+# Exact versions are recorded in build-environment.json after each export.
+Pillow
+matplotlib
+numpy
+reportlab
+pypdf

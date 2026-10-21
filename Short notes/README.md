@@ -33,5 +33,6 @@ Short notes/
 | Thermodynamics | [Browse](Thermodynamics/index.html) | [Index](Thermodynamics/README.md) | [ZIP](Thermodynamics/thermodynamics-all-pngs.zip) | [PDF](Thermodynamics/thermodynamics-short-notes.pdf) |
 | Magnetism | [Browse](Magnetism/index.html) | [Index](Magnetism/README.md) | [ZIP](Magnetism/magnetism-all-pngs.zip) | [PDF](Magnetism/magnetism-short-notes.pdf) |
 | Electrostatics | [Browse](Electrostatics/index.html) | [Index](Electrostatics/README.md) | [ZIP](Electrostatics/electrostatics-all-pngs.zip) | [PDF](Electrostatics/electrostatics-short-notes.pdf) |
+| Elasticity | [Browse](Elasticity/index.html) | [Index](Elasticity/README.md) | [ZIP](Elasticity/elasticity-all-pngs.zip) | [PDF](Elasticity/elasticity-short-notes.pdf) |
 
 All images are A4 portrait at 300 DPI. Print one sheet per page with **Fit to page**, not photo-style Fill/Crop. Separate JEE and extension bundles are available within each chapter.
