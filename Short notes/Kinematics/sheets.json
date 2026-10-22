@@ -1,0 +1,3030 @@
+[
+  {
+    "section": "JEE",
+    "slug": "JEE-01-position",
+    "title": "Position, path and the reference frame",
+    "subtitle": "Kinematics begins by saying where, when, and relative to what.",
+    "takeaway": "Choose origin, axis, and clock first; displacement is final minus initial position, while distance counts the whole path.",
+    "diagrams": [
+      "position-a",
+      "position-b"
+    ],
+    "cards": [
+      {
+        "title": "A coordinate is not the motion",
+        "items": [
+          [
+            "p",
+            "A 1-D frame is an origin, a positive direction, and a clock. Position $x(t)$ is measured from that origin. Changing origin changes coordinates, not the physical path."
+          ],
+          [
+            "m",
+            "x(t)\\;[\\mathrm{m}],\\qquad t\\;[\\mathrm{s}]"
+          ],
+          [
+            "why",
+            "Write the sign convention before equations. “Left” is not automatically negative; it is negative only if left is chosen as the negative axis."
+          ]
+        ]
+      },
+      {
+        "title": "Displacement is an endpoint difference",
+        "items": [
+          [
+            "p",
+            "From $x_i$ to $x_f$, displacement is signed. A round trip has zero displacement even though motion occurred. Displacement depends only on endpoints, not the route."
+          ],
+          [
+            "m",
+            "\\Delta x=x_f-x_i"
+          ],
+          [
+            "check",
+            "Move from 2 m to 7 m, then to 4 m: net displacement is +2 m."
+          ]
+        ]
+      },
+      {
+        "title": "Distance is accumulated path length",
+        "items": [
+          [
+            "p",
+            "Distance never decreases and never carries a direction. It adds every segment, including retracing. For a differentiable path, add the magnitude of each small displacement."
+          ],
+          [
+            "m",
+            "d=\\int_{t_i}^{t_f}|v(t)|\\,dt\\geq |\\Delta x|"
+          ],
+          [
+            "trap",
+            "Do not replace distance by $|x_f-x_i|$ after a reversal; that misses the path already travelled."
+          ]
+        ]
+      },
+      {
+        "title": "A quick counterexample",
+        "items": [
+          [
+            "p",
+            "A walker goes east 5 m and west 3 m. The final point is 2 m east of the start, but the route length is 8 m. The ratio $|\\Delta x|/d$ lies from 0 to 1."
+          ],
+          [
+            "m",
+            "\\Delta x=+2\\ \\mathrm{m},\\qquad d=8\\ \\mathrm{m}"
+          ],
+          [
+            "check",
+            "Equality $d=|\\Delta x|$ holds only when direction never reverses."
+          ]
+        ]
+      }
+    ],
+    "part_page": 1,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-02-velocity",
+    "title": "Average and instantaneous velocity",
+    "subtitle": "Velocity is the signed rate of position change; speed is its magnitude.",
+    "takeaway": "A secant slope gives average velocity; a tangent slope gives instantaneous velocity.",
+    "diagrams": [
+      "velocity-a",
+      "velocity-b"
+    ],
+    "cards": [
+      {
+        "title": "Average velocity uses net change",
+        "items": [
+          [
+            "p",
+            "Over a time interval, average velocity is displacement divided by elapsed time. It can be positive, negative, or zero; it is not average speed."
+          ],
+          [
+            "m",
+            "\\bar v=\\frac{x(t_2)-x(t_1)}{t_2-t_1}=\\frac{\\Delta x}{\\Delta t}"
+          ],
+          [
+            "why",
+            "A round trip has zero average velocity because its net displacement is zero, even though its average speed is positive."
+          ]
+        ]
+      },
+      {
+        "title": "Instantaneous velocity is a limit",
+        "items": [
+          [
+            "p",
+            "Shrink the interval around the instant. The limiting secant slope becomes the tangent slope of $x$ versus $t$. A positive or negative sign identifies direction on the chosen axis."
+          ],
+          [
+            "m",
+            "v(t)=\\lim_{\\Delta t\\to0}\\frac{\\Delta x}{\\Delta t}=\\frac{dx}{dt}"
+          ],
+          [
+            "check",
+            "If $x=3t^2-2t$, then $v=6t-2$; at $t=1$ s, $v=4$ m/s."
+          ]
+        ]
+      },
+      {
+        "title": "Speed forgets direction",
+        "items": [
+          [
+            "p",
+            "Speed is the non-negative magnitude of velocity. Average speed uses total distance, so it is at least the magnitude of average velocity."
+          ],
+          [
+            "m",
+            "\\text{speed}=|v|,\\qquad \\bar s=\\frac{d}{\\Delta t}\\geq |\\bar v|"
+          ],
+          [
+            "trap",
+            "Do not average signed velocities and call the result average speed."
+          ]
+        ]
+      },
+      {
+        "title": "Relative position changes the frame",
+        "items": [
+          [
+            "p",
+            "For two objects measured in the same frame, define $x_{AB}=x_A-x_B$. Its derivative is the velocity of A as seen from B. This definition fixes the subtraction order."
+          ],
+          [
+            "m",
+            "x_{AB}=x_A-x_B,\\qquad v_{AB}=v_A-v_B"
+          ],
+          [
+            "check",
+            "If A moves at 8 m/s right and B at 3 m/s right, A gains on B at 5 m/s."
+          ]
+        ]
+      }
+    ],
+    "part_page": 2,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-03-acceleration",
+    "title": "Acceleration and the meaning of signs",
+    "subtitle": "Acceleration measures velocity change, not “slowing down.”",
+    "takeaway": "Same signs of v and a increase speed; opposite signs decrease speed.",
+    "diagrams": [
+      "accel-a",
+      "accel-b"
+    ],
+    "cards": [
+      {
+        "title": "Average and instantaneous acceleration",
+        "items": [
+          [
+            "p",
+            "Acceleration is the rate of velocity change. It may be positive, negative, or zero; the sign describes direction of velocity change, not whether the object is speeding up."
+          ],
+          [
+            "m",
+            "\\bar a=\\frac{v_f-v_i}{\\Delta t},\\qquad a=\\frac{dv}{dt}=\\frac{d^2x}{dt^2}"
+          ],
+          [
+            "why",
+            "A car can move right while acceleration points left: it is moving right but losing speed."
+          ]
+        ]
+      },
+      {
+        "title": "Use the sign product",
+        "items": [
+          [
+            "p",
+            "For one-dimensional motion at nonzero speed, the rate of change of speed has the sign of $v a$. Thus speed increases when $va>0$ and decreases when $va<0$."
+          ],
+          [
+            "m",
+            "\\frac{d|v|}{dt}=\\operatorname{sgn}(v)\\,a\\quad(v\\ne0)"
+          ],
+          [
+            "check",
+            "At a turning point $v=0$, inspect the motion on each side; the sign test is not defined at that instant."
+          ]
+        ]
+      },
+      {
+        "title": "Four sign combinations",
+        "items": [
+          [
+            "p",
+            "Rightward motion with rightward acceleration speeds up; rightward with leftward acceleration slows. Leftward with leftward acceleration speeds up left; leftward with rightward acceleration slows."
+          ],
+          [
+            "m",
+            "(v>0,a>0)\\ \\text{or}\\ (v<0,a<0):\\ \\text{speed rises}"
+          ],
+          [
+            "trap",
+            "“Negative acceleration” is not a synonym for deceleration. The axis orientation may be reversed."
+          ]
+        ]
+      },
+      {
+        "title": "Dimensions expose mistakes",
+        "items": [
+          [
+            "p",
+            "Velocity has dimensions length/time; acceleration has length/time squared. A slope on an x-t graph has velocity units; a slope on a v-t graph has acceleration units."
+          ],
+          [
+            "m",
+            "[v]=LT^{-1},\\qquad [a]=LT^{-2}"
+          ],
+          [
+            "check",
+            "A claimed acceleration in m/s is missing one factor of time in the denominator."
+          ]
+        ]
+      }
+    ],
+    "part_page": 3,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-04-graphs",
+    "title": "Position, velocity and acceleration graphs",
+    "subtitle": "A graph is a calculator: slopes differentiate and signed areas integrate.",
+    "takeaway": "x-t slope is v; v-t slope is a and signed area is displacement; a-t area is change in v.",
+    "diagrams": [
+      "graphs-a",
+      "graphs-b"
+    ],
+    "cards": [
+      {
+        "title": "Read x versus t",
+        "items": [
+          [
+            "p",
+            "The slope of a chord is average velocity; the tangent slope is instantaneous velocity. A horizontal tangent means $v=0$ at that instant, not necessarily that the particle stays at rest."
+          ],
+          [
+            "m",
+            "\\text{slope of }x(t)=\\frac{dx}{dt}=v"
+          ],
+          [
+            "trap",
+            "A curved x-t graph still describes one-dimensional motion; the curve is not the path through space."
+          ]
+        ]
+      },
+      {
+        "title": "Read v versus t",
+        "items": [
+          [
+            "p",
+            "Slope gives acceleration. Signed area from $t_1$ to $t_2$ gives displacement. To get distance, split at every zero of v and add the absolute areas."
+          ],
+          [
+            "m",
+            "\\text{slope}=a,\\qquad \\int_{t_1}^{t_2}v\\,dt=\\Delta x"
+          ],
+          [
+            "check",
+            "If v changes sign, net displacement can be small while total distance is large."
+          ]
+        ]
+      },
+      {
+        "title": "Read a versus t",
+        "items": [
+          [
+            "p",
+            "The signed area under acceleration gives change in velocity. Add the initial velocity to recover $v(t)$. Acceleration alone does not give position until you integrate again and supply initial data."
+          ],
+          [
+            "m",
+            "v(t_2)-v(t_1)=\\int_{t_1}^{t_2}a\\,dt"
+          ],
+          [
+            "why",
+            "The integration constants are physical initial conditions, not optional algebra."
+          ]
+        ]
+      },
+      {
+        "title": "Cross-check slopes and areas",
+        "items": [
+          [
+            "p",
+            "If a is constant, v-t is a straight line and x-t is a parabola. If v is constant, x-t is a straight line and a-t is zero. Use these shape relations to catch sign errors."
+          ],
+          [
+            "m",
+            "a=\\text{constant}\\Rightarrow v(t)\\text{ linear},\\quad x(t)\\text{ quadratic}"
+          ],
+          [
+            "check",
+            "A positive triangular area below the t-axis is negative displacement, not negative distance."
+          ]
+        ]
+      }
+    ],
+    "part_page": 4,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-05-constant-a",
+    "title": "Constant-acceleration equations",
+    "subtitle": "Derive the familiar equations from integration; use them only when a is constant.",
+    "takeaway": "Every constant-a formula comes from the straight-line v-t graph; time-free form follows by elimination.",
+    "diagrams": [
+      "constant-a",
+      "constant-b"
+    ],
+    "cards": [
+      {
+        "title": "Velocity after time t",
+        "items": [
+          [
+            "p",
+            "For constant acceleration, integrate $dv/dt=a$ and apply $v(0)=u$. The result is linear in time. The sign of a is retained. If v and a share a sign, speed grows; if their signs oppose, speed falls until a turning point."
+          ],
+          [
+            "m",
+            "v=u+at"
+          ],
+          [
+            "check",
+            "At $a=0$, velocity remains u."
+          ]
+        ]
+      },
+      {
+        "title": "Displacement from the v-t area",
+        "items": [
+          [
+            "p",
+            "The signed trapezoid under a straight v-t line has area average endpoint velocity times time. This gives displacement, including cases where one endpoint velocity is negative; if a reversal lies inside, signed area still works."
+          ],
+          [
+            "m",
+            "\\Delta x=ut+\\frac12at^2=\\frac{u+v}{2}t"
+          ],
+          [
+            "why",
+            "The trapezoid form uses endpoint velocities; the polynomial form uses initial velocity and acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Eliminate time",
+        "items": [
+          [
+            "p",
+            "From $v-u=at$, substitute into displacement or use $a=v\\,dv/dx$ with constant a. The resulting relation does not require time, but still assumes constant acceleration."
+          ],
+          [
+            "m",
+            "v^2=u^2+2a\\Delta x"
+          ],
+          [
+            "trap",
+            "A position-dependent or speed-dependent acceleration invalidates this equation unless a is constant over the interval."
+          ]
+        ]
+      },
+      {
+        "title": "Choose the equation by the missing variable",
+        "items": [
+          [
+            "p",
+            "Known $u,a,t$: find v or displacement. Known $u,v,t$: use the trapezoid. Known $u,v,a$: eliminate t. Set a clear signed coordinate before substitution."
+          ],
+          [
+            "m",
+            "\\{v=u+at,\\quad \\Delta x=ut+\\tfrac12at^2,\\quad v^2=u^2+2a\\Delta x\\}"
+          ],
+          [
+            "check",
+            "Every term in an equation for displacement must have units of length."
+          ]
+        ]
+      }
+    ],
+    "part_page": 5,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-06-freefall",
+    "title": "Free fall and vertical throws",
+    "subtitle": "Near Earth, gravity is approximately constant and points downward.",
+    "takeaway": "Choose up positive: a = -g at every point, including the apex.",
+    "diagrams": [
+      "freefall-a",
+      "freefall-b"
+    ],
+    "cards": [
+      {
+        "title": "Choose the axis once",
+        "items": [
+          [
+            "p",
+            "With upward positive and negligible air resistance, acceleration is $-g$. Use the same convention for initial velocity, displacement, and final velocity; do not switch signs mid-solution."
+          ],
+          [
+            "m",
+            "a=-g,\\qquad g\\approx9.8\\ \\mathrm{m/s^2}"
+          ],
+          [
+            "why",
+            "At the top, v is momentarily zero but gravity still accelerates the ball downward."
+          ]
+        ]
+      },
+      {
+        "title": "Rise from launch level",
+        "items": [
+          [
+            "p",
+            "For initial upward speed $u>0$, the apex occurs when $v=0$. The rise and ascent time follow from constant-a kinematics."
+          ],
+          [
+            "m",
+            "t_{\\rm up}=\\frac{u}{g},\\qquad H=\\frac{u^2}{2g}"
+          ],
+          [
+            "check",
+            "If u doubles, the maximum rise becomes four times as large."
+          ]
+        ]
+      },
+      {
+        "title": "Return to the launch elevation",
+        "items": [
+          [
+            "p",
+            "In vacuum, motion is symmetric about the apex for equal start/end elevations. The total time is twice the ascent time; the return velocity has the same magnitude and opposite sign."
+          ],
+          [
+            "m",
+            "T=\\frac{2u}{g},\\qquad v(T)=-u"
+          ],
+          [
+            "trap",
+            "This symmetry fails with drag or when comparing unequal elevations."
+          ]
+        ]
+      },
+      {
+        "title": "General vertical position equation",
+        "items": [
+          [
+            "p",
+            "For launch position $y_0$ and signed initial velocity $u$, solve $y-y_0=ut-gt^2/2$. A height can be crossed twice; retain non-negative roots and interpret direction from v."
+          ],
+          [
+            "m",
+            "y(t)=y_0+ut-\\frac12gt^2,\\qquad v(t)=u-gt"
+          ],
+          [
+            "check",
+            "For a drop from rest through height h: $t=\\sqrt{2h/g}$ and impact speed $\\sqrt{2gh}$."
+          ]
+        ]
+      }
+    ],
+    "part_page": 6,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-07-intervals",
+    "title": "Displacement during the nth second",
+    "subtitle": "An interval formula gives signed displacement, not automatically distance.",
+    "takeaway": "Subtract x(n) - x(n-1); if velocity reverses within the interval, split and take absolute areas.",
+    "diagrams": [
+      "nth-a",
+      "nth-b"
+    ],
+    "cards": [
+      {
+        "title": "Derive by subtraction",
+        "items": [
+          [
+            "p",
+            "For constant a, write $x(t)-x(0)=ut+at^2/2$. Subtract the displacement at $n-1$ seconds from that at n seconds."
+          ],
+          [
+            "m",
+            "\\Delta x_n=x(n)-x(n-1)=u+\\frac a2(2n-1)"
+          ],
+          [
+            "why",
+            "Here n counts one-second intervals. For intervals of duration delta, subtract x(ndelta)-x((n-1)delta) instead."
+          ]
+        ]
+      },
+      {
+        "title": "Signed interval result",
+        "items": [
+          [
+            "p",
+            "The expression can be negative if the particle moves left overall during that second. It is the area under v-t between n-1 and n seconds."
+          ],
+          [
+            "m",
+            "\\Delta x_n=\\int_{n-1}^{n}v(t)\\,dt"
+          ],
+          [
+            "check",
+            "With u=0, a=4 m/s², the third-second displacement is 10 m."
+          ]
+        ]
+      },
+      {
+        "title": "When is it a distance?",
+        "items": [
+          [
+            "p",
+            "If v keeps one sign throughout the interval, distance is $|\\Delta x_n|$. If v crosses zero, split at $t_*=-u/a$ and add the magnitudes of the two signed pieces."
+          ],
+          [
+            "m",
+            "d_n=\\int_{n-1}^{n}|u+at|\\,dt"
+          ],
+          [
+            "trap",
+            "Do not call a negative nth-second displacement a negative distance."
+          ]
+        ]
+      },
+      {
+        "title": "A reversal example",
+        "items": [
+          [
+            "p",
+            "Let $u=2$ m/s and $a=-4$ m/s². The turn occurs at 0.5 s. During the first second the signed displacement is zero, but the particle travels 0.5 m out and 0.5 m back."
+          ],
+          [
+            "m",
+            "\\Delta x_1=2-2=0,\\qquad d_1=1\\ \\mathrm{m}"
+          ],
+          [
+            "check",
+            "This is why distance must be found by absolute velocity area."
+          ]
+        ]
+      }
+    ],
+    "part_page": 7,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-08-variable-a",
+    "title": "Variable acceleration: integrate with initial data",
+    "subtitle": "If a changes, return to definitions instead of using constant-a formulas.",
+    "takeaway": "Given a(t), integrate twice; use initial velocity and position to determine both constants.",
+    "diagrams": [
+      "variable-a",
+      "variable-b"
+    ],
+    "cards": [
+      {
+        "title": "Acceleration given as a(t)",
+        "items": [
+          [
+            "p",
+            "Integrate acceleration to obtain velocity, then integrate velocity to obtain position. At each stage insert the corresponding initial condition."
+          ],
+          [
+            "m",
+            "v(t)=v_0+\\int_0^t a(\\tau)\\,d\\tau,\\quad x(t)=x_0+\\int_0^t v(\\tau)\\,d\\tau"
+          ],
+          [
+            "check",
+            "For $a=6t$, v(0)=2, x(0)=0: $v=3t^2+2$, $x=t^3+2t$."
+          ]
+        ]
+      },
+      {
+        "title": "Acceleration given as a(v)",
+        "items": [
+          [
+            "p",
+            "Use $dv/dt=a(v)$ to separate variables and find elapsed time as a function of velocity. The integral must respect the initial and final velocities and any singular points."
+          ],
+          [
+            "m",
+            "t-t_0=\\int_{v_0}^{v}\\frac{dw}{a(w)}"
+          ],
+          [
+            "why",
+            "This route can reveal terminal speed as an equilibrium where a(v)=0."
+          ]
+        ]
+      },
+      {
+        "title": "Acceleration given as a(x)",
+        "items": [
+          [
+            "p",
+            "Chain rule gives $dv/dt=(dv/dx)(dx/dt)=v\\,dv/dx$. It converts acceleration-versus-position into an integral for v squared."
+          ],
+          [
+            "m",
+            "v\\,dv=a(x)\\,dx,\\qquad \\frac12(v^2-v_0^2)=\\int_{x_0}^{x}a(X)\\,dX"
+          ],
+          [
+            "trap",
+            "The result fixes v²; choose the velocity sign on each branch and split at a turning point."
+          ]
+        ]
+      },
+      {
+        "title": "The method must match the given variable",
+        "items": [
+          [
+            "p",
+            "Use t when a is specified in time, v when it is specified in speed, x when position dependence is explicit. If acceleration depends on multiple variables, solve the actual differential equation or use a justified substitution."
+          ],
+          [
+            "m",
+            "\\text{constant }a:\\text{ algebra};\\quad a(t):\\text{ integrate};\\quad a(x):v\\,dv/dx"
+          ],
+          [
+            "check",
+            "Initial conditions are required to recover the physical trajectory."
+          ]
+        ]
+      }
+    ],
+    "part_page": 8,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-09-vdv",
+    "title": "The v dv/dx method and turning points",
+    "subtitle": "The chain rule converts a second-order time law into an energy-like position relation.",
+    "takeaway": "Integrate v dv = a(x) dx, keep the integration constant, then check where v² can remain non-negative.",
+    "diagrams": [
+      "vdv-a",
+      "vdv-b"
+    ],
+    "cards": [
+      {
+        "title": "Derive the identity",
+        "items": [
+          [
+            "p",
+            "For a differentiable trajectory, apply the chain rule to v as a function of x along the motion. This does not require constant acceleration."
+          ],
+          [
+            "m",
+            "a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}"
+          ],
+          [
+            "why",
+            "This is especially useful when acceleration depends on position but time is absent."
+          ]
+        ]
+      },
+      {
+        "title": "Example: restoring acceleration",
+        "items": [
+          [
+            "p",
+            "Suppose $a=-kx$ with k positive and initial state x=0, v=v0. Integrate from 0 to x. The accessible positions satisfy v squared non-negative."
+          ],
+          [
+            "m",
+            "v^2=v_0^2-kx^2"
+          ],
+          [
+            "check",
+            "Turning points occur at $x=\\pm v_0/\\sqrt{k}$. The result describes bounded motion."
+          ]
+        ]
+      },
+      {
+        "title": "Sign branches matter",
+        "items": [
+          [
+            "p",
+            "The equation gives $v=\\pm\\sqrt{v_0^2-kx^2}$. Choose the sign from the direction of travel; after a turning point the sign changes while the same v² relation can still hold."
+          ],
+          [
+            "m",
+            "v^2\\geq0\\quad\\Longrightarrow\\quad |x|\\leq v_0/\\sqrt{k}"
+          ],
+          [
+            "trap",
+            "Do not take the positive square root for both the outward and return branches."
+          ]
+        ]
+      },
+      {
+        "title": "Check the dimensions and limit",
+        "items": [
+          [
+            "p",
+            "For $a=-kx$, k has units s^-2. Then $v_0^2/k$ has units m². As k tends to zero, the turning point recedes without bound, consistent with vanishing restoring acceleration."
+          ],
+          [
+            "m",
+            "[k]=T^{-2},\\qquad [v_0^2/k]=L^2"
+          ],
+          [
+            "check",
+            "At x=0, the formula returns the initial speed magnitude $v_0$."
+          ]
+        ]
+      }
+    ],
+    "part_page": 9,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-10-relative-1d",
+    "title": "Relative motion on a line",
+    "subtitle": "Subtract velocities in one shared frame; use signed separation to decide approach.",
+    "takeaway": "v_AB = v_A - v_B. The sign of relative velocity alone is not the closing direction; check separation too.",
+    "diagrams": [
+      "relative1d-a",
+      "relative1d-b"
+    ],
+    "cards": [
+      {
+        "title": "Define relative position first",
+        "items": [
+          [
+            "p",
+            "Set $r=x_A-x_B$. Then $dr/dt=v_A-v_B$. If r is positive, A is to the right; the gap shrinks when r and dr/dt have opposite signs."
+          ],
+          [
+            "m",
+            "r_{AB}=x_A-x_B,\\qquad v_{AB}=v_A-v_B"
+          ],
+          [
+            "check",
+            "A at x=10 moving left at 2, B at x=0 moving right at 1: r>0 and v_AB=-3, so they approach."
+          ]
+        ]
+      },
+      {
+        "title": "Closing speed is a magnitude",
+        "items": [
+          [
+            "p",
+            "Closing speed is $-|dr/dt|$ only when the pair is approaching; its positive magnitude is $|v_A-v_B|$. Equal direction speeds subtract; opposite directions add."
+          ],
+          [
+            "m",
+            "\\text{approach if }r\\,v_{AB}<0;\\qquad \\text{closing speed}=|v_{AB}|"
+          ],
+          [
+            "trap",
+            "Relative velocity is signed. “Closing speed” is non-negative and only meaningful while the gap decreases."
+          ]
+        ]
+      },
+      {
+        "title": "Constant relative acceleration",
+        "items": [
+          [
+            "p",
+            "When both accelerations are constant, relative position obeys the same kinematic equations with $a_{AB}=a_A-a_B$. This can reduce two trajectories to one gap equation."
+          ],
+          [
+            "m",
+            "a_{AB}=a_A-a_B,\\quad r(t)=r_0+v_{AB,0}t+\\tfrac12a_{AB}t^2"
+          ],
+          [
+            "why",
+            "A catch or meeting is a root of r(t)=0; check the root is in the physical time interval."
+          ]
+        ]
+      },
+      {
+        "title": "Worked catch-up check",
+        "items": [
+          [
+            "p",
+            "A leads by 100 m. A moves at 10 m/s, B follows at 15 m/s. The gap closes at 5 m/s, so catch-up takes 20 s; both positions then agree."
+          ],
+          [
+            "m",
+            "t=\\frac{100}{15-10}=20\\ \\mathrm{s}"
+          ],
+          [
+            "check",
+            "For two trains approaching at 80 and 60 km/h, closing speed is 140 km/h, not 20 km/h."
+          ]
+        ]
+      }
+    ],
+    "part_page": 10,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-11-piecewise",
+    "title": "Piecewise motion and stopping distance",
+    "subtitle": "Break a motion at every change in acceleration or constraint; match state between phases.",
+    "takeaway": "Position and velocity carry across a smooth phase boundary; braking distance scales as speed squared.",
+    "diagrams": [
+      "piecewise-a",
+      "piecewise-b"
+    ],
+    "cards": [
+      {
+        "title": "Build a state ledger",
+        "items": [
+          [
+            "p",
+            "For each phase record start time, duration, initial x and v, acceleration, final x and v. A phase ends with the next phase’s initial state unless an impact or impulse changes velocity."
+          ],
+          [
+            "m",
+            "(x_i,v_i)\\overset{a_i,\\Delta t_i}{\\to}(x_f,v_f)"
+          ],
+          [
+            "why",
+            "The ledger prevents accidental resets of position or velocity when a changes."
+          ]
+        ]
+      },
+      {
+        "title": "Brake under constant deceleration",
+        "items": [
+          [
+            "p",
+            "For initial speed u and deceleration magnitude b, set signed acceleration opposite the motion. Solve $0=u^2-2b d$ for stopping distance, or $0=u-bt$ for stopping time."
+          ],
+          [
+            "m",
+            "t_{\\rm stop}=\\frac{u}{b},\\qquad d_{\\rm brake}=\\frac{u^2}{2b}"
+          ],
+          [
+            "check",
+            "Doubling u doubles stopping time but quadruples braking distance if b is unchanged."
+          ]
+        ]
+      },
+      {
+        "title": "Reaction distance is separate",
+        "items": [
+          [
+            "p",
+            "During a reaction delay $t_r$, the driver has not yet braked; at unchanged speed the extra distance is $u t_r$. Total stopping distance is reaction distance plus braking distance."
+          ],
+          [
+            "m",
+            "d_{\\rm stop}=u t_r+\\frac{u^2}{2b}"
+          ],
+          [
+            "trap",
+            "Do not call the braking distance the total stopping distance when reaction time is supplied."
+          ]
+        ]
+      },
+      {
+        "title": "Piecewise graph audit",
+        "items": [
+          [
+            "p",
+            "On a v-t graph, each phase is a segment. Add signed areas for total displacement; add absolute areas after splitting at every zero of v for distance."
+          ],
+          [
+            "m",
+            "\\Delta x=\\sum_i\\int_i v\\,dt,\\qquad d=\\sum_i\\int_i|v|\\,dt"
+          ],
+          [
+            "check",
+            "If a phase starts with negative velocity, positive acceleration may first reduce speed before reversing direction."
+          ]
+        ]
+      }
+    ],
+    "part_page": 11,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-12-projectile-split",
+    "title": "Projectile motion starts with components",
+    "subtitle": "Resolve launch velocity; gravity changes only the vertical component in the vacuum model.",
+    "takeaway": "Horizontal and vertical equations share time t; their only coupling is the common clock.",
+    "diagrams": [
+      "projectile-a",
+      "projectile-b"
+    ],
+    "cards": [
+      {
+        "title": "Choose axes and initial components",
+        "items": [
+          [
+            "p",
+            "Take x horizontal and y upward. A launch speed v0 at angle theta above horizontal has components found by projection onto the axes."
+          ],
+          [
+            "m",
+            "v_{0x}=v_0\\cos\\theta,\\qquad v_{0y}=v_0\\sin\\theta"
+          ],
+          [
+            "check",
+            "At theta=0 the launch is horizontal; at theta=90 degrees it is vertical."
+          ]
+        ]
+      },
+      {
+        "title": "Independent accelerations",
+        "items": [
+          [
+            "p",
+            "Neglecting drag, the only acceleration is gravity. Horizontal velocity is constant; vertical velocity decreases linearly."
+          ],
+          [
+            "m",
+            "a_x=0,\\quad a_y=-g;\\qquad v_x=v_0\\cos\\theta,\\quad v_y=v_0\\sin\\theta-gt"
+          ],
+          [
+            "why",
+            "A horizontal launch and a vertical drop from the same height have identical vertical motion."
+          ]
+        ]
+      },
+      {
+        "title": "Parametric trajectory",
+        "items": [
+          [
+            "p",
+            "With launch point at the origin, integrate each component. The equations hold until the projectile hits a surface or the assumptions fail."
+          ],
+          [
+            "m",
+            "x=v_0\\cos\\theta\\,t,\\quad y=v_0\\sin\\theta\\,t-\\tfrac12gt^2"
+          ],
+          [
+            "trap",
+            "The path in space is not the x-t graph. x(t) and y(t) are coordinates at the same time."
+          ]
+        ]
+      },
+      {
+        "title": "Independence test",
+        "items": [
+          [
+            "p",
+            "At any fixed time, vertical drop is $gt^2/2$, independent of horizontal launch speed. In the same ideal conditions, horizontal and dropped balls hit together."
+          ],
+          [
+            "m",
+            "\\Delta y_{\\rm fall}=\\tfrac12gt^2"
+          ],
+          [
+            "check",
+            "Changing horizontal speed changes where the ball lands, not when it reaches a given vertical level."
+          ]
+        ]
+      }
+    ],
+    "part_page": 12,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-13-horizontal-launch",
+    "title": "Horizontal launch from a height",
+    "subtitle": "The vertical fall determines flight time; horizontal speed sets range.",
+    "takeaway": "For a level ground h below launch: t = sqrt(2h/g), R = v0 sqrt(2h/g).",
+    "diagrams": [
+      "horizontal-a",
+      "horizontal-b"
+    ],
+    "cards": [
+      {
+        "title": "Solve time from vertical motion",
+        "items": [
+          [
+            "p",
+            "A horizontal launch has initial vertical velocity zero. With the ground h below the launch point, solve the vertical displacement equation for the positive flight time."
+          ],
+          [
+            "m",
+            "-h=-\\tfrac12gt^2\\Rightarrow t=\\sqrt{\\frac{2h}{g}}"
+          ],
+          [
+            "check",
+            "Time is independent of horizontal speed in the no-drag model."
+          ]
+        ]
+      },
+      {
+        "title": "Find horizontal range",
+        "items": [
+          [
+            "p",
+            "Horizontal acceleration is zero, so the range from the cliff edge is constant horizontal speed times flight time. A vertical launch has zero range but still takes finite time to fall from a nonzero height."
+          ],
+          [
+            "m",
+            "R=v_0t=v_0\\sqrt{\\frac{2h}{g}}"
+          ],
+          [
+            "why",
+            "The equation assumes a level landing surface at height h below launch."
+          ]
+        ]
+      },
+      {
+        "title": "Impact velocity and speed",
+        "items": [
+          [
+            "p",
+            "At impact, horizontal velocity remains v0 and vertical velocity is downward with magnitude gt. Use vector components for direction and Pythagoras for speed."
+          ],
+          [
+            "m",
+            "v_x=v_0,\\quad v_y=-\\sqrt{2gh},\\quad |\\mathbf v|=\\sqrt{v_0^2+2gh}"
+          ],
+          [
+            "trap",
+            "Impact speed is not the horizontal speed; gravity has added vertical kinetic motion."
+          ]
+        ]
+      },
+      {
+        "title": "Worked scale check",
+        "items": [
+          [
+            "p",
+            "For v0=15 m/s, h=20 m, g=10 m/s², flight time is 2 s and range is 30 m. The vertical impact speed is 20 m/s."
+          ],
+          [
+            "m",
+            "t=2\\ \\mathrm{s},\\quad R=30\\ \\mathrm{m},\\quad v_{\\rm impact}=25\\ \\mathrm{m/s}"
+          ],
+          [
+            "check",
+            "The 25 m/s impact speed follows from sqrt(15²+20²), a useful independent check. The 30 m range is horizontal displacement only; the actual curved path is longer."
+          ]
+        ]
+      }
+    ],
+    "part_page": 13,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-14-projectile-general",
+    "title": "Oblique launch: time, height and range",
+    "subtitle": "For launch and landing at equal elevations, solve y(T)=0 for the nonzero root.",
+    "takeaway": "T = 2v0 sintheta/g, H = v0² sin²theta/(2g), R = v0² sin2theta/g under equal-height vacuum conditions.",
+    "diagrams": [
+      "projectile-general-a",
+      "projectile-general-b"
+    ],
+    "cards": [
+      {
+        "title": "Time to return to launch elevation",
+        "items": [
+          [
+            "p",
+            "Set vertical displacement to zero. The root t=0 is launch; the second root is the return time. It is positive for an upward launch; a horizontal launch from the same level has no later return."
+          ],
+          [
+            "m",
+            "0=v_0\\sin\\theta\\,T-\\tfrac12gT^2\\Rightarrow T=\\frac{2v_0\\sin\\theta}{g}"
+          ],
+          [
+            "trap",
+            "This is not the flight time to a cliff floor or a higher platform."
+          ]
+        ]
+      },
+      {
+        "title": "Maximum height",
+        "items": [
+          [
+            "p",
+            "At the apex the vertical component vanishes. Apply the vertical constant-a equation to obtain height above launch point. At fixed launch speed, a larger vertical component raises the apex but leaves less speed for horizontal motion."
+          ],
+          [
+            "m",
+            "H=\\frac{v_0^2\\sin^2\\theta}{2g}"
+          ],
+          [
+            "check",
+            "Only vertical launch speed contributes to the height."
+          ]
+        ]
+      },
+      {
+        "title": "Horizontal range",
+        "items": [
+          [
+            "p",
+            "The horizontal component is constant. Multiply it by flight time and use the double-angle identity. The result is a signed x displacement; if the chosen launch direction points backward, keep the negative sign."
+          ],
+          [
+            "m",
+            "R=v_0\\cos\\theta\\,T=\\frac{v_0^2\\sin2\\theta}{g}"
+          ],
+          [
+            "why",
+            "Range is maximized at 45 degrees only when launch and landing elevations match and speed is fixed."
+          ]
+        ]
+      },
+      {
+        "title": "Useful elimination",
+        "items": [
+          [
+            "p",
+            "For the equal-height case, combine range and height to relate trajectory shape without v0 or g. At 30 degrees, R/H is 4 times sqrt(3); the ratio compares horizontal reach with peak rise."
+          ],
+          [
+            "m",
+            "\\frac{R}{H}=4\\cot\\theta"
+          ],
+          [
+            "check",
+            "At a vertical launch, R=0; at 45 degrees, R is maximum."
+          ]
+        ]
+      }
+    ],
+    "part_page": 14,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-15-trajectory",
+    "title": "Trajectory, velocity and speed at a height",
+    "subtitle": "Eliminate time for the path; retain components for velocity and angle.",
+    "takeaway": "The vacuum trajectory is a downward-opening parabola; at a given height the speed is launch speed adjusted by vertical rise.",
+    "diagrams": [
+      "trajectory-a",
+      "trajectory-b"
+    ],
+    "cards": [
+      {
+        "title": "Eliminate time to get y(x)",
+        "items": [
+          [
+            "p",
+            "From x=v0 costheta t, solve for t and substitute into y(t). This assumes costheta is nonzero; vertical launch is a separate straight-line limit."
+          ],
+          [
+            "m",
+            "y=x\\tan\\theta-\\frac{gx^2}{2v_0^2\\cos^2\\theta}"
+          ],
+          [
+            "check",
+            "The quadratic coefficient is negative for g>0, so the path curves downward."
+          ]
+        ]
+      },
+      {
+        "title": "Velocity direction along the path",
+        "items": [
+          [
+            "p",
+            "Horizontal velocity stays fixed; vertical velocity changes with time. The flight-path angle phi satisfies tanphi=vy/vx whenever vx is nonzero."
+          ],
+          [
+            "m",
+            "\\tan\\phi=\\frac{v_0\\sin\\theta-gt}{v_0\\cos\\theta}"
+          ],
+          [
+            "why",
+            "At the apex phi=0; the velocity is horizontal, not zero unless the launch was vertical."
+          ]
+        ]
+      },
+      {
+        "title": "Speed at vertical rise y",
+        "items": [
+          [
+            "p",
+            "With gravity only, $v_x^2+v_y^2=v_0^2-2gy$ for launch from y=0. It is an energy-like kinematic identity; it does not determine direction by itself."
+          ],
+          [
+            "m",
+            "v^2=v_0^2-2gy"
+          ],
+          [
+            "trap",
+            "If y exceeds v0²/(2g), the right side is negative: that height is unreachable."
+          ]
+        ]
+      },
+      {
+        "title": "Same height, same speed",
+        "items": [
+          [
+            "p",
+            "For a vacuum projectile, at any later point at the launch elevation the speed magnitude returns to v0. At a different height, vertical speed magnitude is fixed by the equation above."
+          ],
+          [
+            "m",
+            "v(y=0)=v_0"
+          ],
+          [
+            "check",
+            "For ground-to-ground flight, the landing angle is -theta and the landing speed equals launch speed."
+          ]
+        ]
+      }
+    ],
+    "part_page": 15,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-16-range-angles",
+    "title": "Range twins and the maximum range",
+    "subtitle": "The sine of twice the angle creates complementary-angle symmetry.",
+    "takeaway": "Angles theta and 90°-theta give the same range, but not the same height or flight time.",
+    "diagrams": [
+      "range-a",
+      "range-b"
+    ],
+    "cards": [
+      {
+        "title": "Complementary angles are range twins",
+        "items": [
+          [
+            "p",
+            "For equal launch and landing elevations, R depends on sin 2theta. Replacing theta by 90°-theta leaves this sine unchanged."
+          ],
+          [
+            "m",
+            "R(\\theta)=R(90^\\circ-\\theta)"
+          ],
+          [
+            "check",
+            "A 30-degree shot and a 60-degree shot have equal range at the same speed."
+          ]
+        ]
+      },
+      {
+        "title": "But their arcs differ",
+        "items": [
+          [
+            "p",
+            "The steeper shot has larger vertical component, so it reaches greater height and stays in flight longer, while the horizontal component is smaller."
+          ],
+          [
+            "m",
+            "T\\propto\\sin\\theta,\\qquad H\\propto\\sin^2\\theta"
+          ],
+          [
+            "why",
+            "Equal range does not imply equal trajectory, impact time, or impact velocity vector."
+          ]
+        ]
+      },
+      {
+        "title": "Maximum range condition",
+        "items": [
+          [
+            "p",
+            "At fixed v0 and g, maximize sin 2theta over 0 to 90 degrees. The maximum is one at theta=45 degrees; the two angle solutions for any shorter equal-height range merge here."
+          ],
+          [
+            "m",
+            "R_{\\max}=\\frac{v_0^2}{g}\\quad(\\theta=45^\\circ)"
+          ],
+          [
+            "trap",
+            "A different target height, wind, drag law, or launch constraint changes the optimum."
+          ]
+        ]
+      },
+      {
+        "title": "Two angles for a target",
+        "items": [
+          [
+            "p",
+            "For horizontal ground at distance R below the maximum, solve sin 2theta = Rg/v0². If 0<R<Rmax, there are generally two launch angles; at Rmax they merge."
+          ],
+          [
+            "m",
+            "\\sin2\\theta=\\frac{Rg}{v_0^2}"
+          ],
+          [
+            "check",
+            "No equal-height launch angle reaches a target beyond Rmax in the no-drag model."
+          ]
+        ]
+      }
+    ],
+    "part_page": 16,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-17-elevated",
+    "title": "Launch and landing elevations differ",
+    "subtitle": "Use the full vertical quadratic; the range formula no longer applies.",
+    "takeaway": "Pick the positive landing-time root, then multiply by horizontal velocity.",
+    "diagrams": [
+      "elevated-a",
+      "elevated-b"
+    ],
+    "cards": [
+      {
+        "title": "Set the vertical target condition",
+        "items": [
+          [
+            "p",
+            "Let launch height be y0 and target height be yf. Solve $yf-y0=v0 sintheta t - gt²/2$. Keep the positive root that corresponds to the physical landing event."
+          ],
+          [
+            "m",
+            "\\tfrac12gt^2-v_0\\sin\\theta\\,t+(y_f-y_0)=0"
+          ],
+          [
+            "trap",
+            "A negative or pre-launch root is not a flight time. A higher platform may have two crossings."
+          ]
+        ]
+      },
+      {
+        "title": "Range to the target level",
+        "items": [
+          [
+            "p",
+            "Once T is known, horizontal range from launch is $v0 costheta T$. If the projectile is launched from a height h above a level floor, use yf-y0=-h."
+          ],
+          [
+            "m",
+            "R=v_0\\cos\\theta\\,T"
+          ],
+          [
+            "check",
+            "For theta=0 and h>0, this reduces to the horizontal-launch result."
+          ]
+        ]
+      },
+      {
+        "title": "Height crossing can happen twice",
+        "items": [
+          [
+            "p",
+            "A target elevation below the apex can be reached once on ascent and once on descent. The two roots have vertical velocities of opposite sign."
+          ],
+          [
+            "m",
+            "v_y(T)=v_0\\sin\\theta-gT"
+          ],
+          [
+            "why",
+            "Root signs tell which branch intersects the specified height."
+          ]
+        ]
+      },
+      {
+        "title": "Impact speed and angle",
+        "items": [
+          [
+            "p",
+            "At impact, compute vx and vy separately, then speed and direction. For a lower landing level, impact speed exceeds launch speed in vacuum."
+          ],
+          [
+            "m",
+            "v=\\sqrt{(v_0\\cos\\theta)^2+(v_0\\sin\\theta-gT)^2}"
+          ],
+          [
+            "check",
+            "The squared-speed change is $-2g(y_f-y_0)$; it is independent of launch angle."
+          ]
+        ]
+      }
+    ],
+    "part_page": 17,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-18-incline",
+    "title": "Projectiles on an inclined plane",
+    "subtitle": "Resolve gravity along and normal to the slope; define launch angle from the slope.",
+    "takeaway": "For an uphill slope alpha and launch angle beta above it, T = 2v0 sinbeta/(g cosalpha).",
+    "diagrams": [
+      "incline-a",
+      "incline-b"
+    ],
+    "cards": [
+      {
+        "title": "Use slope-aligned coordinates",
+        "items": [
+          [
+            "p",
+            "Let the plane rise at angle alpha. Choose s along the plane uphill and n perpendicular outward. Gravity components are downhill along s and into the plane along n."
+          ],
+          [
+            "m",
+            "a_s=-g\\sin\\alpha,\\qquad a_n=-g\\cos\\alpha"
+          ],
+          [
+            "why",
+            "The launch angle beta is measured above the incline; the horizontal angle is alpha+beta."
+          ]
+        ]
+      },
+      {
+        "title": "Return to the same plane",
+        "items": [
+          [
+            "p",
+            "Initial normal speed is v0 sinbeta. The normal coordinate returns to zero after a nonzero flight time. This time is finite for alpha below 90 degrees."
+          ],
+          [
+            "m",
+            "T=\\frac{2v_0\\sin\\beta}{g\\cos\\alpha}"
+          ],
+          [
+            "check",
+            "When alpha=0, recover ordinary ground-to-ground flight time for launch angle beta."
+          ]
+        ]
+      },
+      {
+        "title": "Range along the incline",
+        "items": [
+          [
+            "p",
+            "Along-plane displacement combines initial along-slope speed v0 cosbeta with downhill acceleration. Substitute T from the normal motion."
+          ],
+          [
+            "m",
+            "R_s=\\frac{2v_0^2\\sin\\beta\\cos(\\alpha+\\beta)}{g\\cos^2\\alpha}"
+          ],
+          [
+            "trap",
+            "This formula describes a return to the same uphill plane and a valid forward landing."
+          ]
+        ]
+      },
+      {
+        "title": "Optimize the slope range",
+        "items": [
+          [
+            "p",
+            "At fixed launch speed and slope, maximize the product sinbeta cos(alpha+beta). The optimum measured from the horizontal is 45 degrees plus half the slope angle."
+          ],
+          [
+            "m",
+            "\\beta_{\\max}=45^\\circ-\\frac{\\alpha}{2},\\quad \\theta_{\\rm horiz}=45^\\circ+\\frac{\\alpha}{2}"
+          ],
+          [
+            "check",
+            "At alpha=0, the best launch is 45 degrees above horizontal."
+          ]
+        ]
+      }
+    ],
+    "part_page": 18,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-19-envelope",
+    "title": "Reachability and the safety envelope",
+    "subtitle": "The envelope gives the highest point attainable at each horizontal coordinate for fixed speed.",
+    "takeaway": "For launch from the origin in vacuum, the envelope is y = v0²/(2g) - gx²/(2v0²).",
+    "diagrams": [
+      "envelope-a",
+      "envelope-b"
+    ],
+    "cards": [
+      {
+        "title": "Family of trajectories",
+        "items": [
+          [
+            "p",
+            "At fixed speed v0, each launch angle gives a different parabola. For a fixed x, maximize y over launch angle; the boundary is the envelope of the family."
+          ],
+          [
+            "m",
+            "y(x,\\theta)=x\\tan\\theta-\\frac{gx^2}{2v_0^2\\cos^2\\theta}"
+          ],
+          [
+            "why",
+            "An envelope is not one projectile path; it is the boundary traced by the best angle at each x."
+          ]
+        ]
+      },
+      {
+        "title": "Find the maximum y at fixed x",
+        "items": [
+          [
+            "p",
+            "Set the derivative with respect to launch angle to zero. The maximizing slope obeys tantheta=v0²/(gx), for forward x>0."
+          ],
+          [
+            "m",
+            "\\tan\\theta_* = \\frac{v_0^2}{gx}"
+          ],
+          [
+            "check",
+            "As x approaches zero, the optimum approaches a vertical launch."
+          ]
+        ]
+      },
+      {
+        "title": "Envelope equation and domain",
+        "items": [
+          [
+            "p",
+            "Substitution gives the downward-opening safety parabola. For forward targets at or above launch level, a point below this boundary can be reached by some suitable angle before the projectile lands."
+          ],
+          [
+            "m",
+            "y_{\\rm env}=\\frac{v_0^2}{2g}-\\frac{gx^2}{2v_0^2}"
+          ],
+          [
+            "trap",
+            "State the physical domain. The envelope does not make post-impact or underground portions of ideal parabolas physical."
+          ]
+        ]
+      },
+      {
+        "title": "Read its intercepts",
+        "items": [
+          [
+            "p",
+            "At x=0 the envelope height is the vertical-launch maximum. It meets y=0 at the maximum equal-height range. Dimensional and limit checks confirm the shape."
+          ],
+          [
+            "m",
+            "y_{\\rm env}(0)=\\frac{v_0^2}{2g},\\qquad x_{\\rm ground}=\\frac{v_0^2}{g}"
+          ],
+          [
+            "check",
+            "Increasing v0 raises and widens the envelope; increasing g lowers and narrows it."
+          ]
+        ]
+      }
+    ],
+    "part_page": 19,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-20-relative-vectors",
+    "title": "Relative velocity in two dimensions",
+    "subtitle": "Write the frame relation as a vector equation before resolving components.",
+    "takeaway": "v_A/B = v_A - v_B; the relative vector points along how A moves as seen by B.",
+    "diagrams": [
+      "relative2d-a",
+      "relative2d-b"
+    ],
+    "cards": [
+      {
+        "title": "Subtract vectors, not speeds",
+        "items": [
+          [
+            "p",
+            "All velocities must be measured in a compatible frame. The velocity of A relative to B is the vector difference; the magnitude is found only after subtraction."
+          ],
+          [
+            "m",
+            "\\mathbf v_{A/B}=\\mathbf v_A-\\mathbf v_B"
+          ],
+          [
+            "trap",
+            "Subtracting speed magnitudes loses direction and fails for non-collinear motion."
+          ]
+        ]
+      },
+      {
+        "title": "Use a velocity triangle",
+        "items": [
+          [
+            "p",
+            "Draw v_B and v_A from a common origin; their difference is the vector from the tip of v_B to the tip of v_A. Label the reference frames on each velocity."
+          ],
+          [
+            "m",
+            "\\mathbf v_{A/G}=\\mathbf v_{A/B}+\\mathbf v_{B/G}"
+          ],
+          [
+            "why",
+            "Frame chaining is additive; reverse a relation by reversing the vector."
+          ]
+        ]
+      },
+      {
+        "title": "Rain and a moving observer",
+        "items": [
+          [
+            "p",
+            "If rain falls vertically at speed vr and a person walks east at vm, rain relative to the person has a westward horizontal component. The apparent source lies forward of vertical."
+          ],
+          [
+            "m",
+            "\\mathbf v_{r/m}=(-v_m,-v_r),\\quad \\tan\\alpha=\\frac{v_m}{v_r}"
+          ],
+          [
+            "check",
+            "If vm=3 and vr=4 m/s, the apparent direction is 36.9 degrees from vertical."
+          ]
+        ]
+      },
+      {
+        "title": "Rate of separation in a plane",
+        "items": [
+          [
+            "p",
+            "For relative position vector r and relative velocity vrel, the instantaneous rate of change of separation is the radial projection of vrel, not generally its full magnitude."
+          ],
+          [
+            "m",
+            "\\frac{d|\\mathbf r|}{dt}=\\hat{\\mathbf r}\\cdot\\mathbf v_{rel}\\quad(|\\mathbf r|>0)"
+          ],
+          [
+            "trap",
+            "At zero initial separation, use the right-hand growth rate, which is |vrel|; the radial unit vector is undefined exactly at coincidence."
+          ]
+        ]
+      }
+    ],
+    "part_page": 20,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-21-river",
+    "title": "River crossing: time, drift and aim",
+    "subtitle": "Separate across-river and along-river components of the boat relative to ground.",
+    "takeaway": "Crossing time depends on the across component; drift depends on the downstream component.",
+    "diagrams": [
+      "river-a",
+      "river-b"
+    ],
+    "cards": [
+      {
+        "title": "Define current and boat velocity",
+        "items": [
+          [
+            "p",
+            "Let +x point straight across, +y downstream. Boat velocity relative water plus water velocity relative ground gives the ground velocity."
+          ],
+          [
+            "m",
+            "\\mathbf v_{b/g}=\\mathbf v_{b/w}+\\mathbf v_{w/g}"
+          ],
+          [
+            "check",
+            "If the boat points straight across, its across speed is vb and it drifts at current speed vr."
+          ]
+        ]
+      },
+      {
+        "title": "Point straight across",
+        "items": [
+          [
+            "p",
+            "For river width d and boat speed vb relative water, straight-across heading gives crossing time d/vb and drift vr times that duration."
+          ],
+          [
+            "m",
+            "t=\\frac{d}{v_b},\\qquad \\Delta y=v_r\\frac{d}{v_b}"
+          ],
+          [
+            "why",
+            "This minimizes crossing time when the boat speed through water is fixed and the current is parallel to the bank."
+          ]
+        ]
+      },
+      {
+        "title": "Land directly opposite",
+        "items": [
+          [
+            "p",
+            "Aim upstream so the upstream component cancels the current. This is possible only if boat speed is at least the current speed."
+          ],
+          [
+            "m",
+            "v_b\\sin\\alpha=v_r,\\quad t=\\frac{d}{v_b\\cos\\alpha}=\\frac{d}{\\sqrt{v_b^2-v_r^2}}"
+          ],
+          [
+            "trap",
+            "The no-drift heading takes longer than pointing directly across. At vb=vr, crossing time diverges."
+          ]
+        ]
+      },
+      {
+        "title": "Aim at a specified landing point",
+        "items": [
+          [
+            "p",
+            "For any chosen heading, compute ground components first. Time is width divided by across component; drift is downstream component times that time."
+          ],
+          [
+            "m",
+            "t=\\frac{d}{v_{x,g}},\\qquad \\Delta y=v_{y,g}t"
+          ],
+          [
+            "check",
+            "Keep direction signs explicit: an upstream component is negative if downstream is positive."
+          ]
+        ]
+      }
+    ],
+    "part_page": 21,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-22-wind",
+    "title": "Aircraft and wind",
+    "subtitle": "The ground track is the vector sum of airspeed and wind velocity.",
+    "takeaway": "Cancel crosswind with an opposite air-velocity component; compute ground speed from the along-track component.",
+    "diagrams": [
+      "aircraft-a",
+      "aircraft-b"
+    ],
+    "cards": [
+      {
+        "title": "Start with the vector law",
+        "items": [
+          [
+            "p",
+            "Airspeed is velocity relative to air; wind is air relative to ground. Their vector sum is the aircraft velocity over ground."
+          ],
+          [
+            "m",
+            "\\mathbf v_{p/g}=\\mathbf v_{p/a}+\\mathbf v_{a/g}"
+          ],
+          [
+            "trap",
+            "“Wind from west” means velocity toward east. Convert wind wording into a vector before choosing heading."
+          ]
+        ]
+      },
+      {
+        "title": "Crosswind correction",
+        "items": [
+          [
+            "p",
+            "For a desired due-north ground track and an eastward wind wx, the plane must point west of north so its west component cancels wx. The north component then sets ground speed."
+          ],
+          [
+            "m",
+            "v_{p/a,x}=-w_x,\\qquad v_{g,y}=\\sqrt{v_a^2-w_x^2}+w_y"
+          ],
+          [
+            "check",
+            "A feasible heading requires |wx| no greater than the available airspeed."
+          ]
+        ]
+      },
+      {
+        "title": "Wind with along-track component",
+        "items": [
+          [
+            "p",
+            "Resolve wind into along-track and cross-track parts. Cancel the cross-track component; add the along-track wind to the remaining aircraft component."
+          ],
+          [
+            "m",
+            "v_g=\\sqrt{v_a^2-w_\\perp^2}+w_\\parallel"
+          ],
+          [
+            "why",
+            "A tailwind increases groundspeed; a headwind decreases it, while crosswind changes heading."
+          ]
+        ]
+      },
+      {
+        "title": "Sign-audited example",
+        "items": [
+          [
+            "p",
+            "A plane needs 200 km/h north over ground. Wind from west blows east at 40 km/h. The air velocity needs a 40 km/h west component and 200 km/h north component."
+          ],
+          [
+            "m",
+            "v_a=\\sqrt{200^2+40^2}=203.96\\ \\mathrm{km/h}"
+          ],
+          [
+            "m",
+            "\\alpha=\\tan^{-1}(40/200)=11.31^\\circ"
+          ],
+          [
+            "check",
+            "The heading is 11.31 degrees west of north, not east."
+          ]
+        ]
+      }
+    ],
+    "part_page": 22,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-23-circular",
+    "title": "Angular motion and tangential speed",
+    "subtitle": "Radians make arc length proportional to angle; angular rate converts to linear speed.",
+    "takeaway": "For fixed radius, v = Romega; one full turn is 2π radians.",
+    "diagrams": [
+      "circle-a",
+      "circle-b"
+    ],
+    "cards": [
+      {
+        "title": "Angular position and rate",
+        "items": [
+          [
+            "p",
+            "Measure angle in radians. Angular velocity is the rate of change of angular position; its sign states rotation sense under the chosen convention. After a reversal, total angular path accumulates |dtheta|, not signed endpoint change."
+          ],
+          [
+            "m",
+            "\\omega=\\frac{d\\theta}{dt}\\quad[\\mathrm{rad/s}]"
+          ],
+          [
+            "check",
+            "One revolution is $2\\pi$ rad, not 360 radians."
+          ]
+        ]
+      },
+      {
+        "title": "Arc-length relation",
+        "items": [
+          [
+            "p",
+            "For a circle of radius R, arc length is R times angle in radians. Differentiate to link tangential speed to angular speed."
+          ],
+          [
+            "m",
+            "s=R\\theta,\\qquad v_t=R\\omega"
+          ],
+          [
+            "why",
+            "Radians are dimensionless in SI, but retaining “rad” helps distinguish angular rate from ordinary frequency."
+          ]
+        ]
+      },
+      {
+        "title": "Period and frequency",
+        "items": [
+          [
+            "p",
+            "Period is time per revolution; frequency is revolutions per second. For steady rotation, angular speed magnitude equals 2πf; for nonuniform rotation, 2π/T is the cycle-averaged angular speed."
+          ],
+          [
+            "m",
+            "|\\omega|=\\frac{2\\pi}{T}=2\\pi f"
+          ],
+          [
+            "trap",
+            "Do not use rpm directly in v=Romega; convert rpm to rad/s first."
+          ]
+        ]
+      },
+      {
+        "title": "Quick conversion",
+        "items": [
+          [
+            "p",
+            "For 120 rpm, divide by 60 to get 2 revolutions per second, then multiply by 2π. A rim of radius 0.5 m has tangential speed Romega and period 0.5 s. Its circumference is $2\\pi r=\\pi\\ \\mathrm{m}$, so two turns per second cover $2\\pi\\ \\mathrm{m}$ each second."
+          ],
+          [
+            "m",
+            "120\\ \\mathrm{rpm}=4\\pi\\ \\mathrm{rad/s},\\quad v=2\\pi\\ \\mathrm{m/s}"
+          ],
+          [
+            "check",
+            "Check units: m times s^-1 gives m/s."
+          ]
+        ]
+      }
+    ],
+    "part_page": 23,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-24-circular-accel",
+    "title": "Centripetal and tangential acceleration",
+    "subtitle": "Velocity turns even when speed is constant; changing speed adds a tangential component.",
+    "takeaway": "a = -Romega² rhat + Ralpha thetahat; inward magnitude is v²/R.",
+    "diagrams": [
+      "circ-accel-a",
+      "circ-accel-b"
+    ],
+    "cards": [
+      {
+        "title": "Differentiate the rotating unit vectors",
+        "items": [
+          [
+            "p",
+            "On a circle, position is R rhat. The radial unit vector rotates at angular speed omega, and the tangential unit vector rotates toward -rhat."
+          ],
+          [
+            "m",
+            "\\dot{\\hat r}=\\omega\\hat\\theta,\\qquad\\dot{\\hat\\theta}=-\\omega\\hat r"
+          ],
+          [
+            "why",
+            "Acceleration contains a radial term because the direction of the velocity basis changes."
+          ]
+        ]
+      },
+      {
+        "title": "Full circular acceleration",
+        "items": [
+          [
+            "p",
+            "Differentiate the velocity vector: radius times angular speed in the tangential direction. The radial term points inward; the tangential term changes speed. Its sign follows angular acceleration under the chosen positive rotation sense."
+          ],
+          [
+            "m",
+            "\\mathbf a=-R\\omega^2\\hat r+R\\dot\\omega\\hat\\theta"
+          ],
+          [
+            "check",
+            "At constant omega, only the inward component remains."
+          ]
+        ]
+      },
+      {
+        "title": "Magnitudes and meanings",
+        "items": [
+          [
+            "p",
+            "Tangential acceleration is the time rate of speed change; centripetal acceleration changes direction. They are perpendicular, so the total magnitude is their root-sum-square."
+          ],
+          [
+            "m",
+            "a_t=\\frac{dv}{dt}=R\\dot\\omega,\\quad a_c=\\frac{v^2}{R},\\quad a=\\sqrt{a_t^2+a_c^2}"
+          ],
+          [
+            "trap",
+            "Centripetal acceleration is not a separate force; “centripetal force” is the net inward force in dynamics."
+          ]
+        ]
+      },
+      {
+        "title": "Quick computation",
+        "items": [
+          [
+            "p",
+            "At R=2 m and omega=3 rad/s, inward acceleration is 18 m/s². If angular acceleration is 4 rad/s², tangential acceleration is 8 m/s²."
+          ],
+          [
+            "m",
+            "a=\\sqrt{18^2+8^2}=\\sqrt{388}\\approx19.7\\ \\mathrm{m/s^2}"
+          ],
+          [
+            "check",
+            "The acceleration vector points inward and along the tangent; it is not generally radial."
+          ]
+        ]
+      }
+    ],
+    "part_page": 24,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-25-curvature",
+    "title": "Curvature and the normal acceleration",
+    "subtitle": "A curved path has an instantaneous osculating circle; normal acceleration sets its radius.",
+    "takeaway": "rho = v² / |a_perp|. Tangential acceleration changes speed; normal acceleration changes direction.",
+    "diagrams": [
+      "curvature-a",
+      "curvature-b"
+    ],
+    "cards": [
+      {
+        "title": "Resolve acceleration along velocity",
+        "items": [
+          [
+            "p",
+            "At nonzero speed, decompose acceleration into a tangential component parallel to velocity and a normal component perpendicular to it."
+          ],
+          [
+            "m",
+            "a_t=\\frac{dv}{dt},\\qquad a_\\perp=|\\mathbf a-(\\mathbf a\\cdot\\hat v)\\hat v|"
+          ],
+          [
+            "why",
+            "Only the perpendicular component bends the velocity direction."
+          ]
+        ]
+      },
+      {
+        "title": "Radius of curvature",
+        "items": [
+          [
+            "p",
+            "Over a short time, velocity direction turns by dphi while arc distance is ds=v dt. Curvature is dphi/ds; the normal acceleration is v² times curvature."
+          ],
+          [
+            "m",
+            "\\kappa=\\frac{1}{\\rho},\\qquad |a_\\perp|=\\frac{v^2}{\\rho}"
+          ],
+          [
+            "check",
+            "For a circle, rho is its ordinary radius and this becomes centripetal acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Projectile at launch and apex",
+        "items": [
+          [
+            "p",
+            "For gravity downward, at launch angle theta the normal component magnitude is g|costheta|. At the apex, velocity is horizontal so all g is normal."
+          ],
+          [
+            "m",
+            "\\rho_{\\rm launch}=\\frac{v_0^2}{g|\\cos\\theta|},\\quad \\rho_{\\rm apex}=\\frac{v_0^2\\cos^2\\theta}{g}"
+          ],
+          [
+            "trap",
+            "For a vertical launch, the path is straight and rho is infinite; handle costheta=0 as a limit."
+          ]
+        ]
+      },
+      {
+        "title": "Limits and interpretation",
+        "items": [
+          [
+            "p",
+            "If normal acceleration vanishes at nonzero speed, the instantaneous path is straight and curvature is zero. At a zero-speed cusp, the usual velocity-based decomposition may fail."
+          ],
+          [
+            "m",
+            "a_\\perp\\to0\\Rightarrow\\rho\\to\\infty"
+          ],
+          [
+            "check",
+            "A smaller rho means tighter turning for the same speed."
+          ]
+        ]
+      }
+    ],
+    "part_page": 25,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "JEE",
+    "slug": "JEE-26-triage",
+    "title": "Kinematics method map and final checks",
+    "subtitle": "Start from what is given, choose a model, then test signs and limiting cases.",
+    "takeaway": "Name the frame, axis, interval, acceleration law and requested quantity before calculating.",
+    "diagrams": [
+      "model-a",
+      "model-b"
+    ],
+    "cards": [
+      {
+        "title": "Route by the acceleration law",
+        "items": [
+          [
+            "p",
+            "Constant a: use signed kinematic equations. Given a(t): integrate. Given a(v): separate dv/a(v). Given a(x): use v dv/dx. A graph may provide slopes or areas directly."
+          ],
+          [
+            "m",
+            "a=\\mathrm{constant}\\to\\text{SUVAT};\\quad a(x)\\to v\\,dv/dx"
+          ],
+          [
+            "why",
+            "Use the simplest relation that matches the information; do not force every problem into one formula."
+          ]
+        ]
+      },
+      {
+        "title": "Route projectile questions",
+        "items": [
+          [
+            "p",
+            "Split x and y and share time. Equal elevations: use T, H and R formulas. Unequal elevations: solve the vertical quadratic. Incline: resolve along and normal to the plane."
+          ],
+          [
+            "m",
+            "\\text{projectile: }x(t),y(t);\\quad \\text{same }t"
+          ],
+          [
+            "trap",
+            "Check the launch and landing levels before quoting the standard range."
+          ]
+        ]
+      },
+      {
+        "title": "Route relative and circular questions",
+        "items": [
+          [
+            "p",
+            "Relative motion: write frame-chaining vectors and define separation. Circular motion: keep tangential and normal acceleration separate. General path: use local curvature."
+          ],
+          [
+            "m",
+            "\\mathbf v_{A/B}=\\mathbf v_A-\\mathbf v_B;\\quad a_c=v^2/R"
+          ],
+          [
+            "check",
+            "Relative velocity is a vector; a_c is acceleration, not force."
+          ]
+        ]
+      },
+      {
+        "title": "Ten-second audit",
+        "items": [
+          [
+            "p",
+            "Check units; sign convention; initial conditions; root time; distance versus displacement; model validity; and whether the path reaches the stated target before hitting another surface."
+          ],
+          [
+            "m",
+            "\\text{limit checks: }a\\to0,\\ g\\to0,\\ v_r\\to0,\\ \\theta\\to0^\\circ"
+          ],
+          [
+            "check",
+            "If an answer changes under relabelling the positive axis, a sign error is likely."
+          ]
+        ]
+      }
+    ],
+    "part_page": 26,
+    "part_total": 26,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-01-variable-laws",
+    "title": "Variable laws: choose the independent variable",
+    "subtitle": "The best integration variable is the one already present in the acceleration law.",
+    "takeaway": "a(t), a(v), and a(x) lead to different first-order integrals; preserve branches and initial data.",
+    "diagrams": [
+      "variable-a-a",
+      "variable-a-b"
+    ],
+    "cards": [
+      {
+        "title": "When acceleration is a function of time",
+        "items": [
+          [
+            "p",
+            "Integrate the known function of time once for velocity and again for position. Each integration constant is fixed by a measured initial state."
+          ],
+          [
+            "m",
+            "v=v_0+\\int_{t_0}^t a(\\tau)d\\tau"
+          ],
+          [
+            "check",
+            "Polynomial acceleration produces polynomial v and x; dimensions of every coefficient must match."
+          ]
+        ]
+      },
+      {
+        "title": "When acceleration is a function of velocity",
+        "items": [
+          [
+            "p",
+            "Separate the differential equation. Equilibria where a(v)=0 are approached asymptotically in many dissipative models; do not divide through an equilibrium without checking it."
+          ],
+          [
+            "m",
+            "t-t_0=\\int_{v_0}^{v}\\frac{dw}{a(w)}"
+          ],
+          [
+            "why",
+            "A divergent time integral to an equilibrium signals asymptotic approach, not finite-time arrival."
+          ]
+        ]
+      },
+      {
+        "title": "When acceleration is a function of position",
+        "items": [
+          [
+            "p",
+            "Apply the chain rule and integrate between measured endpoints. The result is a speed-energy relation even when no energy model has been introduced."
+          ],
+          [
+            "m",
+            "v^2(x)=v_0^2+2\\int_{x_0}^x a(X)dX"
+          ],
+          [
+            "trap",
+            "Choose the sign of v from direction; v² alone cannot tell whether motion is forward or returning."
+          ]
+        ]
+      },
+      {
+        "title": "Turning points and forbidden regions",
+        "items": [
+          [
+            "p",
+            "A candidate trajectory can occupy only positions where the computed v² is non-negative. A zero of v may be a turn, a stopping point, or an asymptote depending on acceleration and time integral."
+          ],
+          [
+            "m",
+            "v^2(x)\\geq0\\quad\\text{on the physical path}"
+          ],
+          [
+            "check",
+            "Check both the sign branch and the time to reach each endpoint."
+          ]
+        ]
+      }
+    ],
+    "part_page": 1,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-02-linear-drag",
+    "title": "Linear drag and terminal velocity",
+    "subtitle": "A linear drag law is proportional to velocity relative to the surrounding medium.",
+    "takeaway": "For downward-positive fall: v(t)=vT(1-e^(-t/tau)) from rest, with tau=m/b and vT=gtau.",
+    "diagrams": [
+      "drag1d-a",
+      "drag1d-b"
+    ],
+    "cards": [
+      {
+        "title": "Set the sign convention",
+        "items": [
+          [
+            "p",
+            "For a body moving vertically in still air, choose downward positive. Weight is +mg and linear drag is -bv. The equation is first-order and dissipative."
+          ],
+          [
+            "m",
+            "m\\frac{dv}{dt}=mg-bv,\\qquad \\tau=\\frac{m}{b}"
+          ],
+          [
+            "trap",
+            "Drag opposes velocity relative to air; if the body rises, drag points downward too."
+          ]
+        ]
+      },
+      {
+        "title": "Solve from rest",
+        "items": [
+          [
+            "p",
+            "The equilibrium speed is the terminal speed. Subtract it from v to obtain an exponential decay equation for the speed difference. For times much shorter than the time constant, expansion gives velocity near gt and fall distance near half gt squared."
+          ],
+          [
+            "m",
+            "v_T=\\frac{mg}{b}=g\\tau,\\quad v(t)=v_T(1-e^{-t/\\tau})"
+          ],
+          [
+            "check",
+            "At t=0, v=0; as t grows, v approaches vT from below."
+          ]
+        ]
+      },
+      {
+        "title": "Position and early-time limit",
+        "items": [
+          [
+            "p",
+            "Integrating velocity gives the fall distance from rest. At short times the exponential expands to recover near-free-fall motion."
+          ],
+          [
+            "m",
+            "y-y_0=v_T[t-\\tau(1-e^{-t/\\tau})]"
+          ],
+          [
+            "why",
+            "For t much smaller than tau, v is approximately gt; at long times position becomes nearly linear in time."
+          ]
+        ]
+      },
+      {
+        "title": "Terminal speed is an equilibrium",
+        "items": [
+          [
+            "p",
+            "At terminal speed, net acceleration is zero: drag balances weight. The velocity does not become exactly terminal at finite time in this model."
+          ],
+          [
+            "m",
+            "\\lim_{t\\to\\infty}a=0,\\quad\\lim_{t\\to\\infty}v=v_T"
+          ],
+          [
+            "check",
+            "As b tends to zero, tau and vT grow and the finite-time solution tends to free fall."
+          ]
+        ]
+      }
+    ],
+    "part_page": 2,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-03-quadratic-drag",
+    "title": "Quadratic drag and terminal fall",
+    "subtitle": "At larger Reynolds number, drag magnitude is often modelled proportional to speed squared.",
+    "takeaway": "For downward-positive fall from rest: v=vT tanh(gt/vT), vT=sqrt(mg/k).",
+    "diagrams": [
+      "drag2d-a",
+      "drag2d-b"
+    ],
+    "cards": [
+      {
+        "title": "State the quadratic law",
+        "items": [
+          [
+            "p",
+            "For downward velocity v>=0, write drag magnitude kv² upward. The signed equation balances weight against drag; at v=0, drag vanishes and the initial acceleration is g."
+          ],
+          [
+            "m",
+            "m\\frac{dv}{dt}=mg-kv^2"
+          ],
+          [
+            "trap",
+            "For motion in either direction, the vector law is proportional to -v|v|, not always -v²."
+          ]
+        ]
+      },
+      {
+        "title": "Terminal speed",
+        "items": [
+          [
+            "p",
+            "At equilibrium, mg=kvT². Dividing the differential equation by mg exposes a separable logistic-like form. Starting from rest, the terminal speed is approached asymptotically, not reached at finite time."
+          ],
+          [
+            "m",
+            "v_T=\\sqrt{\\frac{mg}{k}},\\qquad \\frac{dv}{dt}=g(1-v^2/v_T^2)"
+          ],
+          [
+            "check",
+            "The terminal speed increases with mass and decreases with the square root of drag coefficient."
+          ]
+        ]
+      },
+      {
+        "title": "Integrate from rest",
+        "items": [
+          [
+            "p",
+            "Separate variables and integrate. The hyperbolic tangent satisfies the initial condition and approaches one at large argument."
+          ],
+          [
+            "m",
+            "v(t)=v_T\\tanh\\!\\left(\\frac{gt}{v_T}\\right)"
+          ],
+          [
+            "why",
+            "At early time tanh zaboutz, giving vaboutgt; at late time v approaches vT."
+          ]
+        ]
+      },
+      {
+        "title": "Do not confuse drag regimes",
+        "items": [
+          [
+            "p",
+            "Linear and quadratic drag are idealisations whose use depends on Reynolds number, shape and flow. The coefficient k is not universal across objects or speeds."
+          ],
+          [
+            "m",
+            "Re=\\frac{\\rho_{air}vL}{\\eta}"
+          ],
+          [
+            "check",
+            "A measured terminal speed can determine a drag parameter only after the force law and projected area are specified."
+          ]
+        ]
+      }
+    ],
+    "part_page": 3,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-04-stopping-models",
+    "title": "Stopping, reaction time and scaling",
+    "subtitle": "A human response delay and a braking force are distinct stages.",
+    "takeaway": "Reaction distance scales as v; constant-deceleration braking distance scales as v².",
+    "diagrams": [
+      "piecewise-a",
+      "model-b"
+    ],
+    "cards": [
+      {
+        "title": "Reaction phase",
+        "items": [
+          [
+            "p",
+            "During a fixed reaction interval tr, speed is approximately unchanged. The vehicle travels forward before braking starts; this distance is already covered before the assumed braking acceleration acts."
+          ],
+          [
+            "m",
+            "d_{\\rm reaction}=v_0t_r"
+          ],
+          [
+            "check",
+            "At 20 m/s and 0.5 s, the reaction distance is 10 m."
+          ]
+        ]
+      },
+      {
+        "title": "Braking phase",
+        "items": [
+          [
+            "p",
+            "For constant deceleration magnitude b, use the no-time equation from initial speed v0 to rest. This is braking distance only."
+          ],
+          [
+            "m",
+            "d_{\\rm brake}=\\frac{v_0^2}{2b},\\qquad t_b=\\frac{v_0}{b}"
+          ],
+          [
+            "trap",
+            "The assumed b is constant and independent of speed; real tire-road limits may change the model."
+          ]
+        ]
+      },
+      {
+        "title": "Combine and compare",
+        "items": [
+          [
+            "p",
+            "Total distance is the sum of phases. Doubling speed doubles reaction distance but quadruples braking distance when the reaction time and b are fixed."
+          ],
+          [
+            "m",
+            "d_{\\rm total}=v_0t_r+\\frac{v_0^2}{2b}"
+          ],
+          [
+            "why",
+            "At high speed, braking distance dominates; at low speed, reaction distance can be a substantial fraction."
+          ]
+        ]
+      },
+      {
+        "title": "Check a full example",
+        "items": [
+          [
+            "p",
+            "For v0=20 m/s, tr=0.5 s and b=5 m/s², reaction distance is 10 m and braking distance 40 m; the total is 50 m. Substitution in $v^2=u^2-2bd=0$ checks the final speed at the end of braking."
+          ],
+          [
+            "m",
+            "d_{\\rm total}=10+40=50\\ \\mathrm{m}"
+          ],
+          [
+            "check",
+            "Changing the assumed reaction time changes only the first term."
+          ]
+        ]
+      }
+    ],
+    "part_page": 4,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-05-linear-drag-projectile",
+    "title": "Projectile with linear drag",
+    "subtitle": "For isotropic linear drag, horizontal and vertical ODEs decouple, but the landing event still matters.",
+    "takeaway": "Solve x(t), y(t); find the positive ground-contact time from y(T)=0, then evaluate x(T).",
+    "diagrams": [
+      "dragprojectile-a",
+      "dragprojectile-b"
+    ],
+    "cards": [
+      {
+        "title": "Equations in still air",
+        "items": [
+          [
+            "p",
+            "With up positive, drag force is -b v as a vector. Let tau=m/b. Horizontal velocity decays exponentially; vertical velocity also has a terminal offset."
+          ],
+          [
+            "m",
+            "\\dot v_x=-v_x/\\tau,\\quad\\dot v_y=-g-v_y/\\tau"
+          ],
+          [
+            "trap",
+            "This model is isotropic and linear in velocity; it is not the standard quadratic high-speed drag law."
+          ]
+        ]
+      },
+      {
+        "title": "Integrate the components",
+        "items": [
+          [
+            "p",
+            "For launch components v0x and v0y from the origin, integrate each velocity with x(0)=y(0)=0. Horizontal position approaches tauv0x as tto∞ even though landing generally occurs earlier."
+          ],
+          [
+            "m",
+            "x(t)=\\tau v_{0x}(1-e^{-t/\\tau})"
+          ],
+          [
+            "m",
+            "y(t)=\\tau(v_{0y}+g\\tau)(1-e^{-t/\\tau})-g\\tau t"
+          ]
+        ]
+      },
+      {
+        "title": "Find the actual landing time",
+        "items": [
+          [
+            "p",
+            "Landing at the launch elevation requires the positive nonzero root of y(T)=0. In general this transcendental equation is solved numerically; use the root consistent with the descending branch."
+          ],
+          [
+            "m",
+            "y(T)=0,\\quad v_y(T)<0"
+          ],
+          [
+            "trap",
+            "The integral of vx to infinite time is not the projectile range; the projectile has already landed."
+          ]
+        ]
+      },
+      {
+        "title": "Then evaluate range and limits",
+        "items": [
+          [
+            "p",
+            "The horizontal range is x(T). As b tends to zero, the equations tend to the vacuum trajectory and the landing time tends to 2v0y/g."
+          ],
+          [
+            "m",
+            "R=x(T),\\qquad b\\to0\\Rightarrow R\\to\\frac{v_0^2\\sin2\\theta}{g}"
+          ],
+          [
+            "check",
+            "A correct range calculation must use one common finite T for both coordinates."
+          ]
+        ]
+      }
+    ],
+    "part_page": 5,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-06-headwind",
+    "title": "Constant horizontal deceleration",
+    "subtitle": "A deliberately simple headwind model adds a constant horizontal acceleration.",
+    "takeaway": "Vertical motion fixes T; horizontal displacement includes the acceleration term.",
+    "diagrams": [
+      "headwind-a",
+      "headwind-b"
+    ],
+    "cards": [
+      {
+        "title": "Separate the components",
+        "items": [
+          [
+            "p",
+            "Assume a constant horizontal acceleration -aw throughout flight and no vertical drag. Then vertical motion is unchanged, so equal-height flight time is still set by v0y and g."
+          ],
+          [
+            "m",
+            "x=v_{0x}t-\\tfrac12a_wt^2,\\quad y=v_{0y}t-\\tfrac12gt^2"
+          ],
+          [
+            "trap",
+            "A real aerodynamic headwind generally gives a speed-dependent force, not a constant deceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Range correction",
+        "items": [
+          [
+            "p",
+            "At the equal-height landing time T=2v0y/g, evaluate x(T). The change from vacuum range is half aw T squared; aw is a positive deceleration magnitude opposing the initial horizontal motion."
+          ],
+          [
+            "m",
+            "R=v_{0x}T-\\tfrac12a_wT^2=R_0-\\tfrac12a_wT^2"
+          ],
+          [
+            "check",
+            "As aw tends to zero, recover the vacuum range."
+          ]
+        ]
+      },
+      {
+        "title": "Forward landing condition",
+        "items": [
+          [
+            "p",
+            "A positive horizontal acceleration is not implied; if deceleration is strong enough, horizontal velocity can reverse before landing and x(T) may be zero or negative."
+          ],
+          [
+            "m",
+            "v_x(T)=v_{0x}-a_wT"
+          ],
+          [
+            "why",
+            "Distinguish signed horizontal displacement from path length when the projectile reverses horizontally."
+          ]
+        ]
+      },
+      {
+        "title": "Angle dependence",
+        "items": [
+          [
+            "p",
+            "For fixed launch speed, a steeper angle increases flight time and therefore increases the correction aw T²/2 in this model. The optimum launch angle is no longer generally 45 degrees."
+          ],
+          [
+            "m",
+            "\\Delta R=-\\frac{2a_wv_0^2\\sin^2\\theta}{g^2}"
+          ],
+          [
+            "check",
+            "This expression has dimensions of length and vanishes at zero flight time."
+          ]
+        ]
+      }
+    ],
+    "part_page": 6,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-07-moving-target",
+    "title": "Interception with gravity: solve at a common time",
+    "subtitle": "A moving target and projectile must occupy the same position at one shared time.",
+    "takeaway": "For fixed launch speed, impose the target position equation on the projectile trajectory and solve for positive t.",
+    "diagrams": [
+      "intercept-a",
+      "intercept-b"
+    ],
+    "cards": [
+      {
+        "title": "Write both position laws",
+        "items": [
+          [
+            "p",
+            "Let the target begin at r0 and move at constant velocity vt. The projectile starts at the origin with unknown launch vector v0 and acceleration gvec."
+          ],
+          [
+            "m",
+            "\\mathbf r_p=\\mathbf v_0t+\\tfrac12\\mathbf g t^2,\\quad\\mathbf r_T=\\mathbf r_0+\\mathbf v_Tt"
+          ],
+          [
+            "trap",
+            "Do not treat the target as stationary in the projectile frame unless the frame transformation is applied to both velocity and acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Impose interception",
+        "items": [
+          [
+            "p",
+            "Set positions equal and solve for the required launch vector as a function of candidate time. Fixed launch speed imposes one scalar equation."
+          ],
+          [
+            "m",
+            "\\mathbf v_0(t)=\\frac{\\mathbf r_0}{t}+\\mathbf v_T-\\tfrac12\\mathbf g t"
+          ],
+          [
+            "why",
+            "Each positive solution time gives a candidate launch direction; reject candidates that hit the ground or an obstacle first."
+          ]
+        ]
+      },
+      {
+        "title": "Fixed-speed condition",
+        "items": [
+          [
+            "p",
+            "For prescribed v0 magnitude, solve the squared magnitude equation. Gravity makes this generally a quartic in t; there may be zero, one, or several physical solutions."
+          ],
+          [
+            "m",
+            "|\\mathbf v_0(t)|^2=v_0^2"
+          ],
+          [
+            "check",
+            "A no-gravity interception reduces to a quadratic condition in 1/t after choosing the frame."
+          ]
+        ]
+      },
+      {
+        "title": "Physical root audit",
+        "items": [
+          [
+            "p",
+            "Check t>0, the initial and target positions, velocity direction, and whether the target is actually reachable under the model. Root counting is part of the solution."
+          ],
+          [
+            "m",
+            "\\mathbf r_p(T)=\\mathbf r_T(T),\\qquad T>0"
+          ],
+          [
+            "trap",
+            "“Aim directly at the target’s current position” is generally wrong when the target moves or gravity acts."
+          ]
+        ]
+      }
+    ],
+    "part_page": 7,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-08-coriolis",
+    "title": "Coriolis deflection: first-order estimate",
+    "subtitle": "In a rotating Earth frame, horizontal motion acquires a small sideways acceleration.",
+    "takeaway": "For northward speed v at latitude lambda, eastward Coriolis acceleration is about 2Omegav sinlambda in the Northern Hemisphere.",
+    "diagrams": [
+      "coriolis-a",
+      "coriolis-b"
+    ],
+    "cards": [
+      {
+        "title": "Rotating-frame acceleration",
+        "items": [
+          [
+            "p",
+            "In a frame rotating with angular velocity Omega, the Coriolis term is -2 Omega cross v. It is perpendicular to velocity and changes direction, not speed, to first order."
+          ],
+          [
+            "m",
+            "\\mathbf a_C=-2\\boldsymbol{\\Omega}\\times\\mathbf v"
+          ],
+          [
+            "trap",
+            "This is an apparent acceleration in the rotating frame, not a new interaction force in an inertial frame."
+          ]
+        ]
+      },
+      {
+        "title": "Local northward motion",
+        "items": [
+          [
+            "p",
+            "Resolve Earth rotation into local north and vertical components. For horizontal northward motion at latitude lambda, the horizontal Coriolis acceleration points east in the Northern Hemisphere."
+          ],
+          [
+            "m",
+            "a_E\\approx2\\Omega v_N\\sin\\lambda"
+          ],
+          [
+            "check",
+            "At the equator, this horizontal component vanishes for purely northward motion."
+          ]
+        ]
+      },
+      {
+        "title": "Estimate sideways displacement",
+        "items": [
+          [
+            "p",
+            "If the northward speed and flight time T are nearly constant, treat the small eastward acceleration as constant over the interval."
+          ],
+          [
+            "m",
+            "\\delta_E\\approx\\tfrac12a_ET^2=\\Omega v_NT^2\\sin\\lambda"
+          ],
+          [
+            "why",
+            "This first-order estimate neglects feedback of the sideways velocity into Coriolis acceleration."
+          ]
+        ]
+      },
+      {
+        "title": "Numerical scale",
+        "items": [
+          [
+            "p",
+            "At latitude 45 degrees, with vN=500 m/s and T=20 s, the estimate is about 10.3 m east. Use actual flight time from vertical motion, not range divided by speed unless the geometry warrants it."
+          ],
+          [
+            "m",
+            "\\Omega\\approx7.29\\times10^{-5}\\ \\mathrm{s^{-1}},\\quad\\delta_E\\approx10.3\\ \\mathrm{m}"
+          ],
+          [
+            "check",
+            "The deflection scales linearly with Omega, vN, and sinlambda, and quadratically with time."
+          ]
+        ]
+      }
+    ],
+    "part_page": 8,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-09-pursuit-ode",
+    "title": "Planar pursuit: specify geometry before solving",
+    "subtitle": "A pursuit problem is a coupled ODE, not a universal power-law curve.",
+    "takeaway": "With target at (vt t,0) and pursuer initially at (0,d), derive the line-of-sight ODE before seeking a path.",
+    "diagrams": [
+      "pursuit-a",
+      "pursuit-b"
+    ],
+    "cards": [
+      {
+        "title": "State the setup explicitly",
+        "items": [
+          [
+            "p",
+            "Let the target start at the origin and move along +x at constant speed vt. A pursuer starts at (0,d), has constant speed vp, and always aims at the target’s current position."
+          ],
+          [
+            "m",
+            "\\mathbf r_T=(v_Tt,0),\\qquad\\mathbf r_P(0)=(0,d)"
+          ],
+          [
+            "trap",
+            "Changing the initial geometry changes the path; no single pursuit curve applies to every setup."
+          ]
+        ]
+      },
+      {
+        "title": "Write the pursuit equations",
+        "items": [
+          [
+            "p",
+            "Let dx and dy be the pursuer coordinates, and D the instantaneous distance to target. Its velocity is vp times the unit vector toward the target."
+          ],
+          [
+            "m",
+            "D=\\sqrt{(v_Tt-x)^2+y^2}"
+          ],
+          [
+            "m",
+            "\\dot x=v_P\\frac{v_Tt-x}{D},\\quad\\dot y=-v_P\\frac{y}{D}"
+          ]
+        ]
+      },
+      {
+        "title": "Use relative range for capture",
+        "items": [
+          [
+            "p",
+            "For target-minus-pursuer separation vector r, its radial rate is at most vt-vp. If vp>vt, the separation decreases at a rate bounded away from zero, so capture occurs in finite time."
+          ],
+          [
+            "m",
+            "\\dot D_{\\rm sep}\\leq v_T-v_P<0"
+          ],
+          [
+            "check",
+            "The bound gives capture time no greater than initial separation divided by vp-vt."
+          ]
+        ]
+      },
+      {
+        "title": "Solve the path with the stated data",
+        "items": [
+          [
+            "p",
+            "The ODE generally requires numerical integration for the trajectory and capture time. At each step update target position and point the pursuer along the current line of sight."
+          ],
+          [
+            "m",
+            "\\frac{d\\mathbf r_P}{dt}=v_P\\frac{\\mathbf r_T-\\mathbf r_P}{|\\mathbf r_T-\\mathbf r_P|}"
+          ],
+          [
+            "why",
+            "A claimed closed form must satisfy the ODE and the initial conditions; checking only dimensions is not enough."
+          ]
+        ]
+      }
+    ],
+    "part_page": 9,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  },
+  {
+    "section": "Olympiad",
+    "slug": "Olympiad-10-model-limits",
+    "title": "Model limits: Newtonian, vacuum and smooth paths",
+    "subtitle": "A correct formula includes the regime in which it is meaningful.",
+    "takeaway": "Use Newtonian kinematics for v much less than c; distinguish model assumptions from algebraic identities.",
+    "diagrams": [
+      "model-a",
+      "model-b"
+    ],
+    "cards": [
+      {
+        "title": "Newtonian speed boundary",
+        "items": [
+          [
+            "p",
+            "At high speed, relativistic momentum is gammamv rather than mv. The fractional correction is approximately v²/(2c²) when v is small compared with c."
+          ],
+          [
+            "m",
+            "\\gamma=\\frac{1}{\\sqrt{1-v^2/c^2}}\\approx1+\\frac{v^2}{2c^2}"
+          ],
+          [
+            "check",
+            "A 1 percent momentum correction begins near vabout0.14c."
+          ]
+        ]
+      },
+      {
+        "title": "Separate identity from model",
+        "items": [
+          [
+            "p",
+            "The chain rule identity a=v dv/dx is kinematic. Constant acceleration, uniform gravity, vacuum projectile motion, and a chosen drag law are additional model assumptions."
+          ],
+          [
+            "m",
+            "\\text{identity}\\ne\\text{model assumption}"
+          ],
+          [
+            "why",
+            "A derivation can be algebraically correct and still use the wrong physical model."
+          ]
+        ]
+      },
+      {
+        "title": "Check low and high limits",
+        "items": [
+          [
+            "p",
+            "Remove a small effect by taking its parameter to zero: drag coefficient to zero, wind speed to zero, or Earth rotation Omega to zero. The result should reduce to the simpler model."
+          ],
+          [
+            "m",
+            "b\\to0:\\text{ vacuum};\\quad\\Omega\\to0:\\text{ no Coriolis term}"
+          ],
+          [
+            "trap",
+            "Do not extrapolate a low-speed drag law or constant-acceleration approximation beyond its regime."
+          ]
+        ]
+      },
+      {
+        "title": "State domain and event",
+        "items": [
+          [
+            "p",
+            "A trajectory formula describes motion only until the first physical constraint or contact event. Roots need positive time, and a path after impact is not part of the same free-flight phase."
+          ],
+          [
+            "m",
+            "t\\geq0,\\qquad\\text{stop the model at first contact}"
+          ],
+          [
+            "check",
+            "Before reporting a range, identify which surface is hit and at what time."
+          ]
+        ]
+      }
+    ],
+    "part_page": 10,
+    "part_total": 10,
+    "source": "Reference: kinematics-1d/Kinematics-1d.md and motion-in-two-dimensions/Motion-in-two-dimensions.md; equations independently checked"
+  }
+]
