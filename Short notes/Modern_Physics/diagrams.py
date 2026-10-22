@@ -8,6 +8,7 @@ spectra, kinematics triangles, log scales. No decorative imagery.
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Circle, Ellipse, Arc, Polygon, Wedge
+from matplotlib.ticker import NullFormatter
 
 I = '#153149'
 T = '#087d7d'
@@ -536,7 +537,7 @@ def _debroglie_scale(fig):
                arrowprops=dict(arrowstyle='<->', color=T, lw=.9))
     a.axvline(1.4e-10, color=T, lw=1.2, ls=(0, (4, 3)))
     a.text(3e-11, 1.05,
-           'atom spacing, 100 V electron, thermal neutron —\nall near 10⁻¹⁰ m',
+           'atom spacing, 100 V electron, thermal neutron —\nall near 0.1 nm',
            fontsize=7.6, color=T, va='center', ha='right', linespacing=1.4)
     a.text(1.5e-34, .30, 'classical: no interface this fine', fontsize=7.4, color=G)
     a.text(1e-21, 3.9, '24 decades of nothing', fontsize=7.4, color='#8fa3ad',
@@ -1027,6 +1028,555 @@ def _pair_threshold(fig):
     return 'Pair production needs 1.022 MeV and a nucleus to carry the momentum'
 
 
+# ===================================================== nuclear: size and curve
+def _nuclear_size(fig):
+    a = panel(fig, [.02, .06, .40, .86], xlim=(0, 10), ylim=(0, 5.4), equal=True)
+    a.add_patch(Circle((4.4, 2.6), 2.0, fc='#eef6f4', ec=T, lw=1.4))
+    pts = [(3.3, 3.2), (4.4, 3.6), (5.5, 3.2), (3.0, 2.4), (4.2, 2.7),
+           (5.4, 2.3), (3.4, 1.8), (4.6, 1.8), (5.6, 1.6)]
+    for i, (x, y) in enumerate(pts):
+        for j in range(i + 1, len(pts)):
+            x2, y2 = pts[j]
+            if np.hypot(x - x2, y - y2) < 1.25:
+                a.plot([x, x2], [y, y2], color=T, lw=.8, alpha=.75)
+    for x, y in pts:
+        a.add_patch(Circle((x, y), .19, fc='#f6dedb', ec=R, lw=1.0))
+    txt(a, .55, 5.02, 'saturated attraction binds neighbours only', fontsize=7.6, color=T)
+    txt(a, .30, .22, 'Coulomb repulsion: every proton pair, no saturation', fontsize=7.6, color=R)
+
+    b = panel(fig, [.50, .20, .46, .68])
+    axes2(b, r'$A^{1/3}$', r'$R$  (fm)')
+    x = np.array([2.29, 3.76, 5.82, 6.20])
+    y = 1.2 * x
+    b.plot([0, 6.4], [0, 7.68], color=T, lw=1.5)
+    b.plot(x, y, 'o', ms=5, color=R, zorder=5)
+    for xi, yi, lab, dx, dy in ((2.29, 2.75, 'C', .24, -.44),
+                                (3.76, 4.51, 'Fe', .24, -.44),
+                                (5.82, 6.98, 'Au', .24, -.44),
+                                (6.20, 7.44, 'U', .26, .10)):
+        b.text(xi + dx, yi + dy, lab, fontsize=7.8, color=R)
+    b.text(3.1, 6.6, 'slope = 1.2 fm', fontsize=8.0, color=T)
+    b.set_xlim(0, 6.6); b.set_ylim(0, 8.4)
+    head(b, 'radius grows as the cube root of A')
+    return 'Saturated binding gives every nucleon the same volume: R = 1.2 A^(1/3) fm, density fixed'
+
+
+def _binding_curve(fig):
+    a = panel(fig, [.10, .18, .84, .70])
+    axes2(a, r'mass number $A$', r'$B/A$  (MeV)')
+    A = np.array([2, 4, 12, 16, 56, 89, 120, 160, 208, 238])
+    B = np.array([1.11, 7.07, 7.68, 7.98, 8.79, 8.6, 8.4, 8.2, 7.87, 7.57])
+    xs = np.linspace(2, 238, 400)
+    ys = np.interp(xs, A, B)
+    a.plot(xs, ys, color=T, lw=2.0)
+    for x, y, lab in ((4, 7.07, 'He-4'), (56, 8.79, 'Fe-56 summit'), (238, 7.57, 'U-238')):
+        a.plot([x], [y], 'o', ms=5, color=R, zorder=5)
+        a.text(x + 4, y + .28 if x < 200 else y - .50, lab, fontsize=7.8, color=R)
+    a.annotate('', xy=(42, 8.45), xytext=(16, 6.6),
+               arrowprops=dict(arrowstyle='->', color=G, lw=1.2))
+    a.text(14, 6.35, 'fusion climbs', fontsize=7.8, color=G)
+    a.annotate('', xy=(150, 8.25), xytext=(232, 7.75),
+               arrowprops=dict(arrowstyle='->', color=G, lw=1.2))
+    a.text(176, 7.55, 'fission climbs', fontsize=7.8, color=G)
+    a.set_xlim(0, 250); a.set_ylim(.5, 9.6)
+    return 'Any process that moves nucleons up the B/A curve releases the difference; iron is the summit'
+
+
+def _stability_valley(fig):
+    a = panel(fig, [.09, .18, .44, .72])
+    axes2(a, r'neutron number $N$', r'proton number $Z$')
+    Z = np.linspace(1, 100, 300)
+    N = Z * (1 + .015 * Z ** (2 / 3))
+    a.plot(N, Z, color=T, lw=2.0)
+    a.plot([0, 100], [0, 100], color=G, lw=.9, ls=(0, (4, 3)))
+    a.text(66, 58, 'N = Z', fontsize=7.8, color=G, rotation=38)
+    a.annotate('', xy=(38, 34), xytext=(52, 30),
+               arrowprops=dict(arrowstyle='->', color=R, lw=1.1))
+    a.text(41, 26.5, 'β⁻', fontsize=8.0, color=R)
+    a.annotate('', xy=(27, 36), xytext=(20, 44),
+               arrowprops=dict(arrowstyle='->', color=G, lw=1.1))
+    a.text(17.5, 45.5, 'β⁺', fontsize=8.0, color=G)
+    a.set_xlim(0, 165); a.set_ylim(0, 105)
+    head(a, 'the valley bends away from N = Z')
+
+    b = panel(fig, [.56, .12, .40, .80], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((.8, 1.5), 8.4, .9, fc='#eef6f4', ec=T, lw=1.2))
+    b.text(1.0, 1.78, 'stable: beta decay cannot improve the mass', fontsize=7.8, color=T)
+    b.annotate('', xy=(6.6, 3.35), xytext=(8.6, 3.35),
+               arrowprops=dict(arrowstyle='->', color=R, lw=1.4))
+    b.text(4.4, 3.55, 'neutron-rich: β⁻ converts n to p', fontsize=7.8, color=R)
+    b.annotate('', xy=(3.0, .75), xytext=(1.2, .75),
+               arrowprops=dict(arrowstyle='->', color=G, lw=1.4))
+    b.text(1.1, .38, 'proton-rich: β⁺ or electron capture', fontsize=7.8, color=G)
+    return 'Coulomb grows as Z², surface as A^(2/3), so heavy nuclei need extra neutrons'
+
+
+def _alpha_split(fig):
+    a = panel(fig, [.02, .08, .40, .84], xlim=(0, 10), ylim=(0, 4.6))
+    a.plot([.8, 6.2], [3.55, 3.55], color=T, lw=2.6)
+    a.text(.8, 3.78, 'parent  U-238', fontsize=8.0, color=T)
+    a.plot([.8, 6.2], [1.55, 1.55], color=I, lw=2.6)
+    a.text(.8, 1.78, 'daughter  Th-234', fontsize=8.0, color=I)
+    a.plot([.8, 6.2], [.75, .75], color=I, lw=1.6, ls=(0, (5, 3)))
+    a.text(.8, .95, 'excited Th-234', fontsize=7.6, color=G)
+    a.annotate('', xy=(4.8, 1.60), xytext=(4.8, 3.50),
+               arrowprops=dict(arrowstyle='->', color=R, lw=1.6))
+    a.text(4.95, 2.35, 'α  4.20 MeV', fontsize=8.0, color=R)
+    a.annotate('', xy=(3.3, .80), xytext=(3.3, 3.50),
+               arrowprops=dict(arrowstyle='->', color=GOLD, lw=1.2, ls=(0, (4, 3))))
+    a.text(.95, 2.15, 'α  4.05 MeV', fontsize=7.8, color=GOLD)
+    a.annotate('', xy=(6.0, 1.55), xytext=(6.0, .78),
+               arrowprops=dict(arrowstyle='->', color=T, lw=1.1))
+    a.text(6.15, 1.02, r'$\gamma$', fontsize=9.0, color=T)
+
+    b = panel(fig, [.52, .22, .44, .60], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((.6, 2.6), 8.6, .75, fc=R, ec='none'))
+    b.add_patch(Rectangle((.6, 1.2), .28, .75, fc=G, ec='none'))
+    b.text(.6, 3.55, 'Q = 4.27 MeV, shared by momentum', fontsize=8.0, color=T)
+    b.text(.75, 2.78, 'alpha  4.20 MeV  (98.3 %)', fontsize=7.8, color='white')
+    b.text(1.05, 1.38, r'Th-234  0.07 MeV', fontsize=7.8, color=G)
+    b.text(.6, .55, 'equal momenta: the light product takes the larger share',
+           fontsize=7.6, color=G)
+    head(b, 'the split, to scale')
+    return 'Q from masses; momentum splits it as (A-4)/A to the alpha and 4/A to the daughter'
+
+
+def _beta_spectrum(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, 'electron kinetic energy  (MeV)', 'counts per unit energy')
+    E = np.linspace(0, 1.20, 400)
+    shape = np.sqrt(np.clip(E, 0, None)) * (1.20 - E) ** 2
+    a.plot(E, shape / shape.max(), color=T, lw=2.0)
+    a.fill_between(E, 0, shape / shape.max(), color='#e7f4f1', alpha=.7)
+    a.axvline(1.20, color=R, lw=1.0, ls=(0, (4, 3)))
+    a.text(.86, .92, r'$E_0=Q$', fontsize=8.4, color=R)
+    a.set_yticks([])
+    a.set_xlim(0, 1.35); a.set_ylim(0, 1.1)
+    head(a, 'N-13: every electron energy is allowed')
+
+    b = panel(fig, [.64, .14, .33, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((1.0, 1.4), 7.6, 1.5, fc='#f9fbfb', ec=I, lw=1.1))
+    b.add_patch(Circle((2.0, 2.15), .16, fc=R, ec='none'))
+    b.text(2.35, 2.02, 'e⁻', fontsize=8.4, color=R)
+    b.add_patch(Circle((4.0, 2.15), .16, fc=G, ec='none'))
+    b.text(4.35, 2.02, 'ν̄', fontsize=8.4, color=G)
+    b.text(1.0, 3.25, 'two particles share Q', fontsize=8.0, color=T)
+    b.text(1.0, .85, 'the gap between them is the missing energy', fontsize=7.6, color=G)
+    return 'A third particle carries the rest; the endpoint is where it carries nothing'
+
+
+def _decay_curve(fig):
+    a = panel(fig, [.09, .18, .44, .72])
+    axes2(a, r'time  (half-lives)', r'$N/N_0$')
+    t = np.linspace(0, 4, 300)
+    a.plot(t, 2.0 ** (-t), color=T, lw=2.0)
+    for k in range(1, 5):
+        a.plot([k, k], [0, 2.0 ** (-k)], color=G, lw=.7, ls=(0, (3, 3)))
+        a.plot([k], [2.0 ** (-k)], 'o', ms=4, color=R)
+    a.text(1.15, .61, '1/2', fontsize=7.8, color=R)
+    a.text(2.15, .33, '1/4', fontsize=7.8, color=R)
+    a.text(3.15, .17, '1/8', fontsize=7.8, color=R)
+    a.set_ylim(0, 1.05); a.set_xlim(0, 4.2)
+    head(a, 'each half-life halves the remainder')
+
+    b = panel(fig, [.56, .18, .40, .72])
+    logaxis(b, r'time  (half-lives)', r'$\ln(N/N_0)$', logx=False)
+    b.semilogy(t, 2.0 ** (-t), color=T, lw=2.0)
+    b.set_xlim(0, 4.2); b.set_ylim(1e-2, 1.3)
+    b.text(2.35, 1.8e-1, 'straight line: slope −λ', fontsize=7.8, color=G)
+    head(b, 'the log plot is the working tool')
+    return 'N = N0 e^(-λt); the halving ladder for whole half-lives, the log line for the rest'
+
+
+def _dating_curve(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, 'age  (thousand years)', r'$A/A_0$')
+    t = np.linspace(0, 60, 300)
+    a.plot(t, 2.0 ** (-t / 5.73), color=T, lw=2.0)
+    a.axhspan(0, .003, color='#f6dedb', alpha=.55)
+    a.text(6, .010, 'below this, counting statistics dominate', fontsize=7.6, color=R)
+    a.axvline(50, color=G, lw=.9, ls=(0, (4, 3)))
+    a.text(50.8, .62, 'usable range', fontsize=7.6, color=G)
+    a.plot([3.35], [0.667], 'o', ms=5, color=GOLD, zorder=5)
+    a.text(5.0, .70, '3350 y: 10 against 15 dpm/g', fontsize=7.6, color=GOLD)
+    a.set_xlim(0, 62); a.set_ylim(0, 1.05)
+    head(a, 'C-14: 5730-year half-life, 50 000-year reach')
+
+    b = panel(fig, [.66, .12, .31, .80], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((1.0, 1.2), 7.6, .9, fc='#eef6f4', ec=T, lw=1.2))
+    b.text(1.2, 1.48, 'living: exchange keeps A = A0', fontsize=7.6, color=T)
+    b.annotate('', xy=(5.0, 2.65), xytext=(5.0, 2.15),
+               arrowprops=dict(arrowstyle='->', color=R, lw=1.4))
+    b.text(2.2, 2.85, 'death: intake stops, clock starts', fontsize=7.6, color=R)
+    b.text(1.0, .55, 'calibration curves correct the raw ratio', fontsize=7.6, color=G)
+    return 'The clock runs from the moment exchange stops; the range ends where the counts do'
+
+
+def _equilibrium(fig):
+    a = panel(fig, [.09, .18, .44, .72])
+    axes2(a, r'time  (daughter half-lives)', 'activity')
+    t = np.linspace(0, 8, 400)
+    a.plot(t, np.ones_like(t), color=G, lw=1.6, ls=(0, (5, 3)))
+    a.plot(t, 1 - np.exp(-t * np.log(2)), color=T, lw=2.0)
+    a.text(.3, 1.06, 'parent A₁', fontsize=7.8, color=G)
+    a.text(3.2, .55, 'daughter A₂', fontsize=7.8, color=T)
+    a.set_ylim(0, 1.25); a.set_xlim(0, 8)
+    head(a, 'secular: the daughter catches up and stays')
+
+    b = panel(fig, [.56, .18, .40, .72])
+    axes2(b, r'time  (parent half-lives)', r'$A_2/A_1$')
+    t = np.linspace(0, 6, 400)
+    lam1, lam2 = np.log(2), 3 * np.log(2)
+    ratio = lam2 / (lam2 - lam1) * (1 - np.exp(-(lam2 - lam1) * t))
+    b.plot(t, ratio, color=T, lw=2.0)
+    b.axhline(1.5, color=R, lw=.9, ls=(0, (4, 3)), xmax=.72)
+    b.text(1.6, 1.56, r'$\lambda_2/(\lambda_2-\lambda_1)=1.5$', fontsize=7.4, color=R)
+    b.set_ylim(0, 1.85); b.set_xlim(0, 6)
+    b.set_yticks([0, .5, 1.0, 1.5])
+    head(b, 'transient: the ratio settles above one')
+    return 'Secular equilibrium gives A₂ = A₁; transient gives A₂/A₁ = λ₂/(λ₂−λ₁)'
+
+
+def _fission_energy(fig):
+    """One stacked bar plus a legend: the 5 MeV sliver is too thin to label in place."""
+    a = panel(fig, [.06, .34, .88, .44])
+    labels = ['fragments', 'neutrons', 'betas + gammas', 'neutrinos (lost)']
+    vals = [165, 5, 20, 10]          # sums to 200; the beta/gamma share arrives late
+    cols = [T, GOLD, G, R]
+    left = 0
+    for lab, v, c in zip(labels, vals, cols):
+        a.barh([0], [v], left=left, height=.85, color=c, edgecolor='white', lw=1.4)
+        left += v
+    a.text(165 / 2, 0, '165 MeV', ha='center', va='center', fontsize=8.6, color='white')
+    a.set_xlim(0, 205); a.set_ylim(-1.6, 1.15)
+    a.set_yticks([])
+    a.axis('on')
+    a.set_xticks([0, 50, 100, 150, 200])
+    a.tick_params(labelsize=7.0, length=0, pad=16)
+    a.spines[['top', 'right', 'left']].set_visible(False)
+    a.annotate('energy per fission  (MeV)', xy=(.5, 0), xycoords='axes fraction',
+               xytext=(0, -30), textcoords='offset points', ha='center',
+               va='top', fontsize=7.6, color=I)
+    # legend row, one entry per slice, spread evenly under the axis
+    xs = (2, 56, 116, 168)
+    for x, lab, v, c in zip(xs, labels, vals, cols):
+        a.add_patch(Rectangle((x - 9, -.95), 4.5, .30, fc=c, ec='none'))
+        a.text(x - 2.5, -.80, f'{lab}', fontsize=7.6, color=c, va='center')
+        a.text(x - 2.5, -1.24, f'{v} MeV', fontsize=7.6, color=c, va='center')
+    a.text(0, 1.02, r'200 MeV in total: one gram of U-235 gives $8.2\times10^{10}$ J',
+           fontsize=8.0, color=T)
+    a.text(205, 1.02, 'all of it recoverable except the neutrinos', fontsize=7.4,
+           color=G, ha='right')
+    return 'Fragments carry most of it; the neutrinos leave with 10 MeV and are never recovered'
+
+
+def _fusion_barrier(fig):
+    a = panel(fig, [.09, .18, .44, .72])
+    axes2(a, 'separation  (fm)', 'potential energy  (MeV)')
+    r = np.linspace(1.4, 12, 500)
+    V = 1.44 / r
+    V = np.where(r < 2.0, -8 + 40 * (r - 2.0) ** 2, V)
+    a.plot(r, V, color=T, lw=2.0)
+    a.axhline(0, color=G, lw=.7)
+    a.axhline(.72, color=R, lw=.9, ls=(0, (4, 3)), xmax=.42)
+    a.text(4.6, .95, 'barrier 0.72 MeV', fontsize=7.8, color=R)
+    a.fill_between(r[(r > 2) & (r < 5.2)], 0, 1.44 / r[(r > 2) & (r < 5.2)],
+                   color='#fdf0bd', alpha=.5)
+    a.text(2.4, .18, 'tunnelling window', fontsize=7.6, color=GOLD)
+    a.set_xlim(1.3, 12); a.set_ylim(-9, 2.2)
+    head(a, 'the Coulomb hill, and the well behind it')
+
+    b = panel(fig, [.58, .18, .38, .72])
+    axes2(b, r'centre-of-mass energy  (keV)', 'rate  (arbitrary)')
+    E = np.linspace(1, 30, 400)
+    maxwell = np.exp(-E / 1.3)
+    tunnel = np.exp(-np.sqrt(490 / E))
+    prod = maxwell * tunnel
+    b.plot(E, maxwell / maxwell.max(), color=G, lw=1.3, ls=(0, (4, 3)))
+    b.plot(E, tunnel / tunnel.max(), color=R, lw=1.3, ls=(0, (4, 3)))
+    b.plot(E, prod / prod.max(), color=T, lw=2.0)
+    b.annotate('Gamow peak ≈ 6 keV', xy=(6, 1.0), xytext=(11, .74), fontsize=7.8,
+               color=T, arrowprops=dict(arrowstyle='->', color=T, lw=.9))
+    b.set_ylim(0, 1.15); b.set_xlim(0, 30)
+    head(b, 'tail × tunnel = the working window')
+    return 'Classically the Sun needs 8×10⁹ K; tunnelling and the Maxwell tail make 1.5×10⁷ K enough'
+
+
+# ================================================== nuclear: Olympiad figures
+def _geiger_nuttall(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, r'$1/\sqrt{E}$  (MeV$^{-1/2}$)', r'$\log_{10}T_{1/2}$  (y)')
+    x = np.linspace(.30, .52, 100)
+    a.plot(x, 60 * x - 34, color=T, lw=2.0)
+    a.plot([.484], [60 * .484 - 34], 'o', ms=6, color=R, zorder=5)
+    a.plot([.334], [60 * .334 - 34], 'o', ms=6, color=GOLD, zorder=5)
+    a.text(.492, 60 * .484 - 35.6, 'U-238  4.5×10⁹ y', fontsize=7.6, color=R)
+    a.text(.340, 60 * .334 - 32.4, 'Po-212  0.3 µs', fontsize=7.6, color=GOLD)
+    a.set_xlim(.28, .55); a.set_ylim(-16, 4)
+    head(a, 'one element, one straight line')
+
+    b = panel(fig, [.66, .14, .32, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((1.2, .9), 7.4, .8, fc='#eef6f4', ec=T, lw=1.2))
+    b.text(1.4, 1.18, 'nuclear well', fontsize=7.8, color=T)
+    xs = np.linspace(1.0, 8.8, 200)
+    b.plot(xs, 2.6 + 6.2 / (xs + .3), color=R, lw=1.8)
+    b.axhline(2.35, color=I, lw=1.0, ls=(0, (4, 3)))
+    b.text(4.6, 2.05, 'alpha energy', fontsize=7.6, color=I)
+    b.annotate('', xy=(3.9, 2.38), xytext=(3.9, 3.6),
+               arrowprops=dict(arrowstyle='<->', color=G, lw=1.0))
+    b.text(4.05, 3.0, 'tunnelling', fontsize=7.6, color=G)
+    return 'log T is linear in 1/√E: a 30 % change in the argument moves the lifetime by 24 decades'
+
+
+def _fission_barrier(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, 'deformation', 'energy  (MeV)')
+    d = np.linspace(0, 1.05, 400)
+    y = 6.0 * np.sin(np.pi * d / .98) - 20 * np.clip(d - .60, 0, None) ** 2
+    a.plot(d, y, color=I, lw=2.0)
+    a.axhline(0, color=G, lw=.9, ls=(0, (3, 3)))
+    for e, lab, c in ((4.8, 'U-239: 4.8 MeV', G), (6.5, 'U-236: 6.5 MeV', R)):
+        a.plot([0, .82], [e, e], color=c, lw=1.4, ls=(0, (5, 2)))
+        a.plot([0], [e], 'o', ms=4.5, color=c, zorder=5)
+        a.text(.04, e + .18, lab, fontsize=7.6, color=c, va='bottom')
+    a.annotate('barrier peak 6.0', xy=(.50, 6.0), xytext=(.53, 7.1),
+               fontsize=7.6, color=I,
+               arrowprops=dict(arrowstyle='->', color=I, lw=.9))
+    a.annotate('ground state', xy=(.02, 0), xytext=(.10, -1.35), fontsize=7.4,
+               color=G, arrowprops=dict(arrowstyle='->', color=G, lw=.8))
+    a.annotate('scission: the drop splits', xy=(.90, -2.6), xytext=(.42, -5.4),
+               fontsize=7.4, color=G,
+               arrowprops=dict(arrowstyle='->', color=G, lw=.9))
+    a.set_xlim(0, 1.05); a.set_ylim(-8, 8)
+    a.set_xticks([0, .25, .5, .75, 1.0])
+    head(a, 'one barrier; the excitation decides who clears it')
+
+    b = panel(fig, [.64, .10, .34, .84], xlim=(0, 10), ylim=(0, 4.6), equal=True)
+    b.add_patch(Circle((1.5, 2.4), .72, fc='#f9fbfb', ec=I, lw=1.2))
+    b.add_patch(Ellipse((4.8, 2.4), 1.9, 1.05, fc='#f9fbfb', ec=I, lw=1.2))
+    b.add_patch(Circle((7.7, 2.05), .52, fc='#f6dedb', ec=R, lw=1.2))
+    b.add_patch(Circle((8.95, 2.85), .36, fc='#f6dedb', ec=R, lw=1.2))
+    b.plot([8.0, 8.62], [2.48, 2.62], color=R, lw=1.0, ls=(0, (2, 2)))
+    b.text(1.5, .95, 'spherical', fontsize=7.6, color=I, ha='center')
+    b.text(4.8, .95, 'deformed', fontsize=7.6, color=I, ha='center')
+    b.text(8.3, .95, 'scission', fontsize=7.6, color=R, ha='center')
+    for x0, x1 in ((2.35, 3.70), (5.85, 7.08)):
+        b.annotate('', xy=(x1, 2.4), xytext=(x0, 2.4),
+                   arrowprops=dict(arrowstyle='->', color=G, lw=1.0))
+    b.text(5.0, 4.05, 'surface cost, then Coulomb gain', fontsize=7.6, color=G, ha='center')
+    return 'Deformation costs surface and saves Coulomb; pairing decides which nucleus gets over the hump'
+
+
+def _valley_floor(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, r'mass number $A$', r'$Z_0$')
+    A = np.linspace(10, 250, 400)
+    a.plot(A, A / (2 + 0.0154 * A ** (2 / 3)), color=T, lw=2.0)
+    a.plot([100], [42.9], 'o', ms=6, color=R, zorder=5)
+    a.plot([238], [92.0], 'o', ms=6, color=GOLD, zorder=5)
+    a.text(104, 38.5, 'A=100: 42.9', fontsize=7.8, color=R)
+    a.text(186, 88.5, 'A=238: 92.0', fontsize=7.8, color=GOLD)
+    a.set_xlim(0, 260); a.set_ylim(0, 105)
+    head(a, 'the floor, from one derivative')
+
+    b = panel(fig, [.66, .14, .32, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.text(1.0, 3.85, 'B(A,Z) at fixed A', fontsize=8.0, color=T)
+    Z = np.linspace(0, 10, 200)
+    y = 4.0 - .07 * (Z - 4.2) ** 2
+    b.plot(Z, y, color=T, lw=2.0)
+    b.plot([4.2], [4.0], 'o', ms=5, color=R)
+    b.annotate('', xy=(4.2, 4.05), xytext=(4.2, 4.55),
+               arrowprops=dict(arrowstyle='->', color=R, lw=1.0))
+    b.text(4.35, 4.55, r'$Z_0$', fontsize=9.0, color=R)
+    b.text(1.0, .55, 'Coulomb steepens, asymmetry flattens', fontsize=7.6, color=G)
+    return 'Differentiate B over Z at fixed A: the valley floor follows, and shells dent it'
+
+
+def _transient_peak(fig):
+    a = panel(fig, [.10, .18, .50, .70])
+    axes2(a, 'time  (h)', 'activity  (arbitrary)')
+    t = np.linspace(0, 60, 500)
+    l1, l2 = .0385, .1155
+    A1 = np.exp(-l1 * t)
+    A2 = l2 / (l2 - l1) * (np.exp(-l1 * t) - np.exp(-l2 * t))
+    a.plot(t, A1, color=G, lw=1.6, ls=(0, (5, 3)))
+    a.plot(t, A2, color=T, lw=2.0)
+    a.plot([14.3], [l2 / (l2 - l1) * (np.exp(-l1 * 14.3) - np.exp(-l2 * 14.3))], 'o',
+           ms=5, color=R, zorder=5)
+    a.annotate('peak 14.3 h', xy=(14.3, .62), xytext=(20, .78), fontsize=7.8,
+               color=R, arrowprops=dict(arrowstyle='->', color=R, lw=.9))
+    a.text(30, .34, 'daughter', fontsize=7.8, color=T)
+    a.text(30, .17, 'parent', fontsize=7.8, color=G)
+    a.set_xlim(0, 60); a.set_ylim(0, .95)
+    head(a, 'rise, peak, then follow the parent')
+
+    b = panel(fig, [.66, .14, .32, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.text(.8, 3.9, 'equilibrium ratio', fontsize=8.0, color=T)
+    b.plot([1.2, 8.6], [2.6, 2.6], color=T, lw=2.0)
+    b.text(1.2, 2.85, 'transient: 1.5', fontsize=7.8, color=T)
+    b.plot([1.2, 8.6], [1.1, 1.1], color=G, lw=2.0, ls=(0, (4, 3)))
+    b.text(1.2, 1.32, 'secular: 1.0', fontsize=7.8, color=G)
+    b.text(.8, .35, 'the longer-lived parent sets the tempo', fontsize=7.6, color=G)
+    return 'A₂/A₁ settles at λ₂/(λ₂−λ₁); the peak is where production and decay balance'
+
+
+def _neutrino_flux(fig):
+    a = panel(fig, [.02, .64, .96, .28], xlim=(0, 10), ylim=(0, 2.0), equal=True)
+    a.add_patch(Circle((1.0, 1.00), .40, fc='#fdf0bd', ec=GOLD, lw=1.4))
+    a.text(.60, .34, 'Sun', fontsize=8.0, color=GOLD)
+    a.add_patch(Circle((8.7, 1.00), .17, fc='#e7f4f1', ec=T, lw=1.2))
+    a.text(8.12, .34, 'Earth   1 AU', fontsize=8.0, color=T)
+    for dy in (-.16, 0, .16):
+        a.annotate('', xy=(8.42, 1.00 + dy), xytext=(1.5, 1.00 + dy),
+                   arrowprops=dict(arrowstyle='->', color=T, lw=1.0, alpha=.75))
+    a.text(3.2, 1.60, '2 neutrinos per ⁴He nucleus', fontsize=8.0, color=T)
+
+    b = panel(fig, [.16, .17, .72, .36])
+    axes2(b, r'distance from the Sun  (m)', r'neutrinos  (m$^{-2}$ s$^{-1}$)')
+    r = np.logspace(10, 11.85, 300)
+    flux = 1.78e38 / (4 * np.pi * r ** 2)
+    b.set_xscale('log'); b.set_yscale('log')
+    b.plot(r, flux, color=T, lw=2.0)
+    b.plot([1.496e11], [6.3e14], 'o', ms=5.5, color=R, zorder=5)
+    b.annotate(r'Earth, 1 AU: $6.4\times10^{14}$', xy=(1.496e11, 6.3e14),
+               xytext=(2.6e11, 4.5e15), fontsize=7.6, color=R,
+               arrowprops=dict(arrowstyle='->', color=R, lw=.9))
+    b.text(2.2e10, 3.6e12, r'a 1 cm² thumbnail: $6.4\times10^{10}$ per second',
+           fontsize=7.6, color=G)
+    b.text(3.0e10, 3.2e13, r'flux $\propto 1/r^{2}$', fontsize=8.0, color=I)
+    b.set_xlim(1.2e10, 7.0e11); b.set_ylim(1.5e12, 5e16)
+    b.set_xticks([3e10, 1e11, 3e11])
+    b.set_xticklabels([r'$3\times10^{10}$', r'$10^{11}$', r'$3\times10^{11}$'])
+    b.set_yticks([1e13, 1e14, 1e15, 1e16])
+    b.set_yticklabels([r'$10^{13}$', r'$10^{14}$', r'$10^{15}$', r'$10^{16}$'])
+    b.tick_params(axis='both', labelsize=7.0)
+    b.xaxis.set_minor_formatter(NullFormatter())
+    b.yaxis.set_minor_formatter(NullFormatter())
+    head(b, 'the same luminosity, spread over a sphere')
+    return 'Luminosity counts helium nuclei; helium counts neutrinos; geometry turns that into a flux'
+
+
+def _reactor_day(fig):
+    a = panel(fig, [.09, .18, .44, .72])
+    axes2(a, 'half-lives stored', 'activity remaining')
+    n = np.linspace(0, 10, 300)
+    a.semilogy(n, 2.0 ** (-n), color=T, lw=2.0)
+    a.axhline(1e-3, color=R, lw=.9, ls=(0, (4, 3)))
+    a.text(1.0, 1.6e-3, '0.1 % at ten half-lives', fontsize=7.6, color=R)
+    a.set_xlim(0, 10); a.set_ylim(5e-4, 1.4)
+    head(a, 'the storage rule of thumb')
+
+    b = panel(fig, [.60, .14, .36, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.add_patch(Rectangle((1.0, 1.6), 2.2, 1.5, fc='#e7f4f1', ec=T, lw=1.2))
+    b.text(1.15, 3.25, '1.05 kg fissioned', fontsize=7.8, color=T)
+    b.add_patch(Rectangle((4.6, .85), 4.2, 2.9, fc='#fdf0bd', ec=GOLD, lw=1.2))
+    b.text(4.8, 2.35, '≈26 kg of 4 % fuel fed', fontsize=7.8, color=GOLD)
+    b.text(1.0, .45, 'a gigawatt-day fits in a briefcase', fontsize=7.6, color=G)
+    return '1.05 kg fissioned per GW·day; the fuel fed is tens of times more because the enrichment is small'
+
+
+def _counting_stats(fig):
+    a = panel(fig, [.10, .18, .48, .70])
+    logaxis(a, r'counts $N$', r'fractional error', logx=True, logy=True)
+    N = np.logspace(1, 6, 300)
+    a.loglog(N, 1 / np.sqrt(N), color=T, lw=2.0)
+    a.axhline(.01, color=R, lw=.9, ls=(0, (4, 3)))
+    a.axvline(1e4, color=R, lw=.9, ls=(0, (4, 3)))
+    a.plot([1e4], [1e-2], 'o', ms=6, color=GOLD, zorder=5)
+    a.text(1.2e4, 2.2e-2, '1 % needs 10⁴ counts', fontsize=7.6, color=GOLD)
+    a.set_xlim(5, 1e6); a.set_ylim(1e-3, .5)
+    head(a, 'the square-root tax')
+
+    b = panel(fig, [.63, .14, .35, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.text(.9, 3.95, 'rate 100 min⁻¹', fontsize=8.0, color=T)
+    b.text(.9, 3.25, '1 % → 100 min', fontsize=8.0, color=I)
+    b.text(.9, 2.55, '0.5 % → 400 min', fontsize=8.0, color=I)
+    b.text(.9, 1.85, '0.1 % → 10⁴ min', fontsize=8.0, color=R)
+    b.text(.9, .75, 'four times the time halves the error', fontsize=7.6, color=G)
+    return 'σ = √N; to halve the fractional error you need four times the counts and four times the time'
+
+
+def _isochron(fig):
+    a = panel(fig, [.10, .18, .48, .70])
+    axes2(a, r'$^{87}$Rb/$^{86}$Sr', r'$^{87}$Sr/$^{86}$Sr')
+    x = np.linspace(0, 4, 100)
+    a.plot(x, .70 + .05 * x, color=T, lw=2.0)
+    a.plot(x, .70 + .20 * x, color=G, lw=2.0, ls=(0, (5, 3)))
+    a.plot([0], [.70], 'o', ms=5, color=R, zorder=5)
+    a.text(2.55, .78, 'young rock: slope 0.05', fontsize=7.6, color=T)
+    a.text(2.55, 1.28, 'old rock: slope 0.20', fontsize=7.6, color=G)
+    a.text(.12, .58, 'initial ratio', fontsize=7.6, color=R)
+    a.set_xlim(0, 4); a.set_ylim(.4, 1.7)
+    head(a, 'one rock, one line, one intercept')
+
+    b = panel(fig, [.63, .14, .35, .78], xlim=(0, 10), ylim=(0, 4.6))
+    b.text(1.0, 3.85, r'slope $=e^{\lambda t}-1$', fontsize=9.0, color=T)
+    b.text(1.0, 2.95, 'slope 0.05 → 3.4 Gyr', fontsize=8.0, color=I)
+    b.text(1.0, 2.25, 'intercept = initial ratio', fontsize=8.0, color=I)
+    b.text(1.0, 1.05, 'scatter off the line = disturbed rock', fontsize=7.6, color=R)
+    return 'Plot daughter/reference against parent/reference: slope gives the age, intercept the start'
+
+
+def _neutron_waves(fig):
+    a = panel(fig, [.08, .20, .54, .66], xlim=(0, 10), ylim=(0, 4.6))
+    for k in range(9):
+        a.add_patch(Circle((1.0 + .52 * k, 3.55), .17, fc='#f6dedb', ec=R, lw=.9))
+    a.text(.8, 4.05, 'nucleus: spacing 1.8 fm', fontsize=7.8, color=R)
+    for k in range(7):
+        a.add_patch(Circle((1.0 + .75 * k, 1.45), .17, fc='#e7f4f1', ec=T, lw=.9))
+    a.text(.8, 1.95, 'crystal: spacing 1.8 Å', fontsize=7.8, color=T)
+    xs = np.linspace(.8, 4.8, 200)
+    a.plot(xs, .72 + .22 * np.sin(2 * np.pi * (xs - .8) / .55), color=GOLD, lw=1.5)
+    a.text(.8, .12, 'λ = 1.8 Å sees the lattice, not the nucleus', fontsize=7.6, color=GOLD)
+
+    b = panel(fig, [.66, .16, .32, .74], xlim=(0, 10), ylim=(0, 4.6))
+    b.text(1.0, 3.75, '25 meV → 1.8 Å', fontsize=8.2, color=T)
+    b.text(1.0, 3.00, '616 MeV → 1 fm', fontsize=8.2, color=R)
+    b.text(1.0, 2.55, r'non-relativistic: 818 MeV (wrong)', fontsize=7.4, color=R)
+    b.text(1.0, 1.95, r'$2.5\times10^{10}$ in energy', fontsize=7.8, color=G)
+    b.text(1.0, 1.10, 'same λ = h/p, different probe', fontsize=7.6, color=I)
+    return 'Match the wavelength to the spacing: thermal neutrons see crystals, high-energy probes see nuclei'
+
+
+def _solar_budget(fig):
+    """One chain of multiplications, then the lifetime bar with 'now' on it."""
+    a = panel(fig, [.04, .30, .92, .62], xlim=(0, 10), ylim=(.95, 4.30))
+    boxes = [(.25, 3.05, 2.70, 4.05, 'the Sun', r'$1.99\times10^{30}$ kg', G),
+             (3.65, 3.05, 6.10, 4.05, 'its hydrogen', r'$1.4\times10^{30}$ kg', T),
+             (7.05, 3.05, 9.75, 4.05, 'core budget, 10 %', r'$1.4\times10^{29}$ kg', GOLD)]
+    for x0, y0, x1, y1, lab, val, c in boxes:
+        a.add_patch(Rectangle((x0, y0), x1 - x0, y1 - y0, fc='white', ec=c, lw=1.3))
+        a.text((x0 + x1) / 2, y1 - .32, lab, fontsize=8.0, color=c, ha='center')
+        a.text((x0 + x1) / 2, y0 + .30, val, fontsize=8.4, color=c, ha='center')
+    for x0, x1, fac in ((2.95, 3.65, r'$\times0.70$'), (6.10, 7.05, r'$\times0.10$')):
+        a.annotate('', xy=(x1, 3.55), xytext=(x0, 3.55),
+                   arrowprops=dict(arrowstyle='->', color=I, lw=1.2))
+        a.text((x0 + x1) / 2, 3.78, fac, fontsize=7.6, color=I, ha='center')
+    a.add_patch(Rectangle((1.55, .98), 6.90, 1.52, fc='#fdf7dc', ec=GOLD, lw=1.2))
+    a.text(5.0, 2.22, r'$\times0.007\times c^{2}$:  $E=4.9\times10^{-4}M_\odot c^{2}=8.8\times10^{43}$ J',
+           fontsize=8.4, color=GOLD, ha='center')
+    a.text(5.0, 1.72, r'divide by $L$:  $t=7.3\times10^{9}$ y',
+           fontsize=8.6, color=R, ha='center')
+    a.text(5.0, 1.20, 'the 10 % is conservative — about 14 % of the hydrogen fuses, giving ≈10 Gyr',
+           fontsize=7.2, color=I, ha='center')
+    a.annotate('', xy=(8.32, 2.05), xytext=(8.40, 3.02),
+               arrowprops=dict(arrowstyle='->', color=GOLD, lw=1.3))
+    a.axis('off')
+
+    c = panel(fig, [.06, .06, .90, .18], xlim=(0, 10), ylim=(0, 1.0))
+    c.add_patch(Rectangle((0, .46), 4.6, .26, fc='#e7f4f1', ec=T, lw=.9))
+    c.add_patch(Rectangle((4.6, .46), 5.4, .26, fc='#fdf0bd', ec=GOLD, lw=.9))
+    c.plot([4.6, 4.6], [.36, .86], color=R, lw=1.2)
+    c.text(4.6, .92, 'today, 4.6 Gyr', fontsize=7.4, color=R, ha='center')
+    c.text(0, .16, '4.6 Gyr spent so far', fontsize=7.6, color=T)
+    c.text(5.8, .16, '≈5 Gyr left, then the core runs out', fontsize=7.6, color=GOLD)
+    c.text(10, .16, '10 Gyr', fontsize=7.6, color=I, ha='right')
+    for sp in c.spines.values():
+        sp.set_visible(False)
+    c.set_xticks([]); c.set_yticks([])
+    return '0.1 × 0.7 × 0.007 × M☉c² divided by L gives about 7 billion years'
+
+
 def figure(ax, key):
     fig = ax.figure
     ax.axis('off')
@@ -1061,6 +1611,26 @@ def figure(ax, key):
         'inverse_compton': _inverse_compton,
         'moseley_line': _moseley_line,
         'pair_threshold': _pair_threshold,
+        'nuclear_size': _nuclear_size,
+        'binding_curve': _binding_curve,
+        'stability_valley': _stability_valley,
+        'alpha_split': _alpha_split,
+        'beta_spectrum': _beta_spectrum,
+        'decay_curve': _decay_curve,
+        'dating_curve': _dating_curve,
+        'equilibrium': _equilibrium,
+        'fission_energy': _fission_energy,
+        'fusion_barrier': _fusion_barrier,
+        'geiger_nuttall': _geiger_nuttall,
+        'fission_barrier': _fission_barrier,
+        'valley_floor': _valley_floor,
+        'transient_peak': _transient_peak,
+        'neutrino_flux': _neutrino_flux,
+        'reactor_day': _reactor_day,
+        'counting_stats': _counting_stats,
+        'isochron': _isochron,
+        'neutron_waves': _neutron_waves,
+        'solar_budget': _solar_budget,
     }
     if key not in build:
         raise ValueError(key)

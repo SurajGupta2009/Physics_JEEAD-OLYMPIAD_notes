@@ -9,15 +9,15 @@ _examples.py; layout rules in layout.py; figures in diagrams.py.
 import json, sys
 from pathlib import Path
 import layout
-import _content_jee, _content_oly, _examples
+import _content_jee, _content_oly, _content_nuclear, _examples
 
 ROOT = Path(__file__).resolve().parent
-N_JEE, N_OLY = 15, 15
+N_JEE, N_OLY = 25, 25
 
 
 def build():
-    jee = _content_jee.build(N_JEE)
-    oly = _content_oly.build(N_OLY)
+    jee = _content_jee.build(N_JEE - 10) + _content_nuclear.build_jee(16, N_JEE)
+    oly = _content_oly.build(N_OLY - 10) + _content_nuclear.build_oly(16, N_OLY)
     assert len(jee) == N_JEE, f'expected {N_JEE} JEE sheets, got {len(jee)}'
     assert len(oly) == N_OLY, f'expected {N_OLY} Olympiad sheets, got {len(oly)}'
     for sh in oly:

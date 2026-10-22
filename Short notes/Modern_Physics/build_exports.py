@@ -109,7 +109,7 @@ def build():
          '</style></head><body><header>'
          f'<p>{len(groups["JEE"])} JEE + {len(groups["Olympiad"])} specialised extension sheets '
          '· A4 · 300 DPI</p><h1>Modern physics</h1>'
-         '<p>Part A: atomic structure, the photon, and X-rays. '
+         '<p>Atomic structure, the photon, X-rays, and nuclei. '
          'Complete Part I before Part II. The boundary is relevance, not difficulty.</p>')
     for label in ('All', 'JEE', 'Olympiad'):
         h += (f'<a class="button" download href="{ZIPS[label]}">{label} PNG ZIP</a>'
@@ -138,7 +138,8 @@ def build():
     h += ('</main><footer>Primary sources: '
           '<a href="../../atomic-structure/Atomic-structure.md">atomic-structure</a>, '
           '<a href="../../photoelectric-effect/Photoelectric-effect.md">photoelectric-effect</a>, '
-          '<a href="../../x-rays/X-rays.md">x-rays</a>. '
+          '<a href="../../x-rays/X-rays.md">x-rays</a>, '
+          '<a href="../../nuclear-physics/Nuclear-physics.md">nuclear-physics</a>. '
           'Originals unchanged. Patrick Hand, SIL OFL.</footer></body></html>')
     (ROOT / 'index.html').write_text(h)
 

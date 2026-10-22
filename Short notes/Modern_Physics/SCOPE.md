@@ -1,42 +1,47 @@
-# Modern physics, part A — coverage and classification
+# Modern physics — coverage and classification
 
 Primary sources, all unedited in this repository:
 
 - `../../atomic-structure/Atomic-structure.md` (Part 24)
 - `../../photoelectric-effect/Photoelectric-effect.md` (Part 23)
 - `../../x-rays/X-rays.md` (Part 25)
+- `../../nuclear-physics/Nuclear-physics.md` (Part 26)
 
-`nuclear-physics/Nuclear-physics.md` (Part 26) is the fourth source of this edition
-and is **not** covered here yet; it is the second delivery of the same folder and
-will extend the page map below rather than replace it. The Cengage chapters these
-files cite are the book floor behind them; the printed books are not in this
-repository, so nothing is claimed about material that exists only on paper.
+The Cengage chapters these files cite are the book floor behind them; the printed
+books are not in this repository, so nothing is claimed about material that exists
+only on paper.
 
 ## The rule used to split the pages
 
-Part I is everything a JEE Main + Advanced candidate is expected to own: the
-Rutherford evidence and its failure point, the Bohr ladder and its de Broglie
-justification, the series names, electron-impact excitation, Z² and reduced-mass
+Part I is everything a JEE Main + Advanced candidate is expected to own:
+Rutherford's evidence and its failure point, the Bohr ladder and its de Broglie
+justification, series names, electron-impact excitation, Z² and reduced-mass
 scaling, the four quantum numbers, the photon budget, the five photoelectric facts
-and their graphs, the photocell, de Broglie waves, Davisson–Germer, and the
-minimum-energy estimate behind the size of atoms.
+and their graphs, the photocell, de Broglie waves, Davisson–Germer, the
+uncertainty estimate behind the size of atoms, then nuclear size and density,
+the binding curve, the valley of stability, Q-values and alpha recoil, beta decay
+and the electron rule, the decay law, dating, chains, fission power and the
+fusion barrier.
 
-Part II is the same physics pushed further: the continuous and characteristic
-X-ray spectrum with thresholds, attenuation and contrast, Bragg reflection, Compton
-scattering and its invariant derivation, the inverse-Compton boost, pair production,
-Moseley's law as an ordering tool, the classical collapse time, the correspondence
-principle, exotic atoms as scaling tests, the Franck–Hertz curve, the waiting-time
-paradox, and the two speeds of a matter wave.
+Part II is the same physics pushed further: continuous and characteristic X-rays
+with thresholds, attenuation and contrast, Bragg reflection, Compton scattering and
+its invariant derivation, the inverse-Compton boost, pair production, Moseley's law
+as an ordering tool, the classical collapse time, the correspondence principle,
+exotic atoms as scaling tests, the Franck–Hertz curve, the waiting-time paradox, the
+two speeds of a matter wave, then Geiger–Nuttall systematics, pairing and the
+fission barrier, the valley-floor derivation, the transient-equilibrium solution,
+solar neutrinos, reactor fuel arithmetic, counting statistics, the isochron, neutron
+diffraction, and the Sun's lifetime.
 
 The boundary is **relevance and prerequisite**, not difficulty. Nothing in Part II
 is claimed to be impossible in a JEE Advanced paper — Compton scattering, Bragg
-reflection, Moseley's law and the X-ray cutoff all appear in JEE material. Conversely
-no Part I sheet claims to be sufficient for every JEE question: this is a short-note
-set, not a question bank.
+reflection, Moseley's law, the X-ray cutoff, half-life arithmetic and fission energy
+all appear in JEE material. Conversely no Part I sheet claims to be sufficient for
+every JEE question: this is a short-note set, not a question bank.
 
 ## Page map
 
-### Part I — JEE Main + Advanced (15 sheets)
+### Part I — JEE Main + Advanced (25 sheets)
 
 | # | Question on the sheet | Core result |
 |---|---|---|
@@ -54,9 +59,19 @@ set, not a question bank.
 | 12 | What does a photocell measure, and what does it not? | battery reads energy per electron, ammeter reads electrons per second |
 | 13 | Do electrons have a wavelength? | `λ = h/p`, `λ = 1.226/√V nm`, 100 kV → 3.88 pm non-relativistic |
 | 14 | Was the electron wave ever actually seen? | `2d sinθ = nλ`, 54 V → 1.67 Å, NaCl 154/282 pm at 15.8° |
-| 15 | Why does the electron not fall into the nucleus? | `E(r) ≈ ħ²/2m_er² − ke²/r`, minimum at `a₀`; `ΔxΔp ≳ ħ/2` |
+| 15 | Why does the electron not fall into the nucleus? | `E(r) ≈ ħ²/2m_er² − ke²/r` minimised at `a₀`; `ΔxΔp ≳ ħ/2` |
+| 16 | Why does every nucleus have the same density? | `R = 1.2A^{1/3}` fm, `ρ = 2.3×10¹⁷ kg/m³`, 10⁻¹² of the atom's volume |
+| 17 | Where does the missing mass go? | `B = Δm c²`, `1 u = 931.5 MeV`, B/A 1.11 → 7.07 → 8.79 → 7.57 |
+| 18 | Why does the valley of stability bend? | five liquid-drop terms, `Z₀ = A/(2 + 0.0154A^{2/3})`, beta traffic |
+| 19 | Why does the alpha carry almost all the energy? | `Q` from masses, `K_α = (A−4)Q/A`, discrete alpha lines |
+| 20 | How can a beta spectrum be continuous? | three bodies, electron rule `β⁺` keeps `2m_e`, gamma and conversion |
+| 21 | What does a half-life actually measure? | `N = N₀e^{−λt}`, `T½ = ln2/λ`, `τ = 1.443T½`, branching |
+| 22 | How do you date a bone? | `t = (T½/ln2)ln(A₀/A)`, the three assumptions, the isochron alternative |
+| 23 | Why does a decay chain settle into a fixed ratio? | secular `A₂ = A₁`, transient `λ₂/(λ₂−λ₁)`, peak time, branching |
+| 24 | Where does a gigawatt come from? | 200 MeV per fission, 8.2×10¹⁰ J/g, 3.1×10¹⁹ fissions per GW·s, k |
+| 25 | Why is the Sun not ten billion kelvin? | barrier 0.72 MeV, Gamow peak ~6 keV, 26.7 MeV per helium, `L/c²` |
 
-### Part II — Olympiad / specialised extensions (15 sheets)
+### Part II — Olympiad / specialised extensions (25 sheets)
 
 | # | Question on the sheet | Core result |
 |---|---|---|
@@ -75,13 +90,25 @@ set, not a question bank.
 | 13 | Can you see energy levels without looking at light? | Franck–Hertz dips every 4.9 V; the collector current is a level diagram |
 | 14 | How long should a wave take to eject an electron? | `3×10⁴ s` predicted at 1 mW/m² against ≤ 10⁻⁹ s observed |
 | 15 | Which speed does a matter wave travel at? | `v_phase = c²/v` (harmless), `v_group = v` (the particle), `v_p v_g = c²` |
+| 16 | Why does a factor of two in energy swing a half-life by 10²⁴? | `log λ = a − bZ/√E`; 0.484 vs 0.334 MeV^(−1/2) gives 24 decades |
+| 17 | Why does U-235 fission with slow neutrons and U-238 not? | barrier ≈ 6 MeV both; pairing gives U-236 6.5 MeV against U-239's 4.8 |
+| 18 | Can you derive the valley rather than remember it? | differentiate `B(A,Z)`; `a_c/2a_a = 0.0153`, `Z₀(100) = 42.9` |
+| 19 | How long does a daughter take to peak? | `N₂ ∝ e^{−λ₁t} − e^{−λ₂t}`, `t_max = ln(λ₂/λ₁)/(λ₂−λ₁)` |
+| 20 | How many solar neutrinos cross your thumbnail each second? | `L/26.7 MeV` → 1.8×10³⁸ ν/s, `6.4×10¹⁴ m⁻²s⁻¹` at Earth |
+| 21 | How much fuel does a reactor eat in a day? | 1.05 kg fissioned per GW·day, ≈26 kg of 4 % fuel fed, `2⁻¹⁰ ≈ 0.1 %` |
+| 22 | How long must you count to know the rate to 1 %? | `σ/N = 1/√N`: 10⁴ counts, dead time and background corrections |
+| 23 | How do you date a rock without knowing what it started with? | isochron: slope `e^{λt} − 1`, intercept the initial ratio |
+| 24 | Why do slow neutrons diffract from crystals? | 25 meV → 1.8 Å; 82 MeV → 1 fm; same `λ = h/p`, different ruler |
+| 25 | How long can the Sun keep shining? | `0.1 × 0.7 × 0.007 M☉c² / L ≈ 7×10⁹ y`; `Z²/A ≈ 50` ends the table |
 
 ## What is deliberately absent
 
-- Nuclear physics: binding energy, radioactivity, fission and fusion are Part B of
-  this edition and are not on these 30 pages.
 - Relativistic quantum mechanics, the Dirac equation, and fine structure beyond the
   one-line `α²` correction mentioned on JEE-08.
+- Shell model and magic numbers as a theory: they are named where they matter (the
+  valley floor, the superheavies) and not derived.
+- Reactor kinetics: delayed-neutron fractions, feedback coefficients and accident
+  analysis are engineering inputs, named but not modelled.
 - Experimental apparatus detail beyond what changes a number on a sheet.
-- A question bank. Each sheet is a short note with one worked number, not a
-  problem set; the source files carry the exercises and their answers.
+- A question bank. Each sheet is a short note with one worked number, not a problem
+  set; the source files carry the exercises and their answers.

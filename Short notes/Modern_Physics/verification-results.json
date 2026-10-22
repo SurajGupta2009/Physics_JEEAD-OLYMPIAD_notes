@@ -1,6 +1,6 @@
 {
-  "checks": 476,
-  "model_checks": 39,
+  "checks": 767,
+  "model_checks": 69,
   "models": [
     {
       "name": "r_min alpha 5 MeV on gold (fm)",
@@ -196,6 +196,156 @@
       "name": "inverse Compton boost, gamma=1e3",
       "value": 2400.0,
       "expected": 2400.0
+    },
+    {
+      "name": "nuclear radius U-238 (fm)",
+      "value": 7.436585321689351,
+      "expected": 7.44
+    },
+    {
+      "name": "nuclear density (kg/m3)",
+      "value": 2.314101820129555e+17,
+      "expected": 2.3e+17
+    },
+    {
+      "name": "He-4 binding (MeV)",
+      "value": 28.295993238000506,
+      "expected": 28.3
+    },
+    {
+      "name": "deuteron binding per nucleon",
+      "value": 1.1122038360001298,
+      "expected": 1.11
+    },
+    {
+      "name": "valley Z0 at A=100",
+      "value": 42.88563836171984,
+      "expected": 42.9
+    },
+    {
+      "name": "valley Z0 at A=238",
+      "value": 91.84108726208753,
+      "expected": 92.0
+    },
+    {
+      "name": "alpha KE, U-238 Q=4.27 (MeV)",
+      "value": 4.198235294117647,
+      "expected": 4.2
+    },
+    {
+      "name": "alpha KE, Po-210 Q=5.40 (MeV)",
+      "value": 5.297142857142857,
+      "expected": 5.3
+    },
+    {
+      "name": "C-14 beta Q (MeV)",
+      "value": 0.15649099200036334,
+      "expected": 0.156
+    },
+    {
+      "name": "N-13 beta-plus Q (MeV)",
+      "value": 1.1979012839993253,
+      "expected": 1.2
+    },
+    {
+      "name": "Tc-99m lambda (per h)",
+      "value": 0.11552453009332421,
+      "expected": 0.1155
+    },
+    {
+      "name": "Tc-99m after 12 h (MBq)",
+      "value": 200.0,
+      "expected": 200.0
+    },
+    {
+      "name": "C-14 age for A/A0=2/3 (y)",
+      "value": 3351.835129132225,
+      "expected": 3350.0
+    },
+    {
+      "name": "transient ratio, lambda2=3 lambda1",
+      "value": 1.5,
+      "expected": 1.5
+    },
+    {
+      "name": "fissions per GW-day (1e24)",
+      "value": 2.696629213483146,
+      "expected": 2.7
+    },
+    {
+      "name": "U-235 mass per GW-day (kg)",
+      "value": 1.053658536585366,
+      "expected": 1.05
+    },
+    {
+      "name": "Coulomb barrier pp at 2 fm (MeV)",
+      "value": 0.72,
+      "expected": 0.72
+    },
+    {
+      "name": "classical fusion temperature (K)",
+      "value": 8355240000.0,
+      "expected": 8360000000.0
+    },
+    {
+      "name": "Gamow peak, E_G=490 keV, kT=1.3 keV (keV)",
+      "value": 5.9157198334999235,
+      "expected": 5.9
+    },
+    {
+      "name": "solar helium rate (1e37 per s)",
+      "value": 8.954163101366738,
+      "expected": 8.95
+    },
+    {
+      "name": "solar neutrino flux (1e14 per m2 s)",
+      "value": 6.367690484936534,
+      "expected": 6.4
+    },
+    {
+      "name": "counts for 0.5 %",
+      "value": 40000.0,
+      "expected": 40000.0
+    },
+    {
+      "name": "isochron age, slope 0.05 (Gyr)",
+      "value": 3.4359270541853557,
+      "expected": 3.44
+    },
+    {
+      "name": "thermal neutron wavelength at 25 meV (A)",
+      "value": 1.8089135995127343,
+      "expected": 1.81
+    },
+    {
+      "name": "neutron energy for 1 fm, relativistic (MeV)",
+      "value": 616.2355193097732,
+      "expected": 616.0
+    },
+    {
+      "name": "solar lifetime (Gyr)",
+      "value": 7.256673847650627,
+      "expected": 7.2
+    },
+    {
+      "name": "Geiger-Nuttall log10 ratio (decades)",
+      "value": 23.675228253593065,
+      "expected": 23.7
+    },
+    {
+      "name": "pairing term at A=236 (MeV)",
+      "value": 0.7811334658849433,
+      "expected": 0.781
+    },
+    {
+      "name": "valley coefficient a_c/2a_a",
+      "value": 0.015301724137931034,
+      "expected": 0.0153
+    },
+    {
+      "name": "transient peak time, 18 h / 6 h (h)",
+      "value": 14.26466250649041,
+      "expected": 14.3
     }
   ],
   "note": "Representative recomputation of printed formulas, not exhaustive."

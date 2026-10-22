@@ -10,7 +10,11 @@ height = CARRY_Y - 24 - FIG_MIN_Y
 bad = 0
 for key in sorted(k for k in diagrams.figure.__code__.co_consts if isinstance(k, str) and '_' in k and k not in ('__main__',)):
     pass
-KEYS = ['thomson_vs_rutherford','closest_approach','standing_wave','bohr_ledger','spectrum_series','excitation_ladder','hydrogenic_scaling','quantum_numbers','photon_packet','photoelectric_curve','stopping_graph','photocell_iv','debroglie_scale','davisson_germer','uncertainty_well','xray_continuous','xray_characteristic','absorption_curve','bragg_geometry','compton_kinematics','correspondence_plot','exotic_atoms','collapse_spiral','franck_hertz','waiting_time','matter_wave_speeds','compton_invariant','inverse_compton','moseley_line','pair_threshold']
+KEYS = ['thomson_vs_rutherford','closest_approach','standing_wave','bohr_ledger','spectrum_series','excitation_ladder','hydrogenic_scaling','quantum_numbers','photon_packet','photoelectric_curve','stopping_graph','photocell_iv','debroglie_scale','davisson_germer','uncertainty_well','xray_continuous','xray_characteristic','absorption_curve','bragg_geometry','compton_kinematics','correspondence_plot','exotic_atoms','collapse_spiral','franck_hertz','waiting_time','matter_wave_speeds','compton_invariant','inverse_compton','moseley_line','pair_threshold',
+ 'nuclear_size','binding_curve','stability_valley','alpha_split','beta_spectrum',
+ 'decay_curve','dating_curve','equilibrium','fission_energy','fusion_barrier',
+ 'geiger_nuttall','fission_barrier','valley_floor','transient_peak','neutrino_flux',
+ 'reactor_day','counting_stats','isochron','neutron_waves','solar_budget']
 for key in KEYS:
     fig = plt.figure(figsize=(width / DPI, (height - 78) / DPI), dpi=DPI, facecolor='white')
     ax = fig.add_axes([.03, .05, .94, .84])
