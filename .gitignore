@@ -49,3 +49,4 @@ dist/
 .obsidian/plugins/obsidian-git/.git-credentials
 .trash/
 _obsidian/excalidraw/*.excalidraw.md.bak
+!Short notes/*/*.pdf

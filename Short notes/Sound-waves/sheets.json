@@ -185,7 +185,7 @@
     ]
    },
    {
-    "title": "Strain and the acoustic pressure Delta P = -B,partial s/partial x",
+    "title": "Strain and acoustic pressure: dP = -B ds/dx",
     "items": [
      [
       "p",
@@ -198,7 +198,7 @@
     ]
    },
    {
-    "title": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+    "title": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
     "items": [
      [
       "p",
@@ -226,7 +226,7 @@
   "takeaway": "Pressure is the slope of displacement: dP = -B ds/dx and dP0 = rho v omega s0 bridge the two amplitudes.",
   "cards": [
    {
-    "title": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+    "title": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
     "items": [
      [
       "p",
@@ -243,7 +243,7 @@
     ]
    },
    {
-    "title": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+    "title": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
     "items": [
      [
       "check",
@@ -256,7 +256,7 @@
     ]
    },
    {
-    "title": "The numbers: pressure amplitude from displacement amplitude (co.",
+    "title": "Pressure amplitude from displacement amplitude (cont.)",
     "items": [
      [
       "p",
@@ -273,7 +273,7 @@
     ]
    },
    {
-    "title": "The numbers: pressure amplitude from displacement amplitude (co.",
+    "title": "Pressure amplitude from displacement amplitude (cont.)",
     "items": [
      [
       "check",
@@ -735,7 +735,7 @@
   "takeaway": "Rods run at sqrt(Y/rho), bulk solids at sqrt((K+4G/3)/rho): the boundary decides the stiffness.",
   "cards": [
    {
-    "title": "Sound in solids: rods sqrtY/rho and bulk sqrt(K+frac43G)/rho (con.",
+    "title": "Sound in solids: rod vs bulk wave speed (cont.)",
     "items": [
      [
       "why",
@@ -1187,7 +1187,7 @@
     ]
    },
    {
-    "title": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+    "title": "Temperature law: v = 331.3 sqrt(T/273) m/s",
     "items": [
      [
       "p",
@@ -1200,7 +1200,7 @@
     ]
    },
    {
-    "title": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+    "title": "Temperature law: v = 331.3 sqrt(T/273) m/s",
     "items": [
      [
       "p",
@@ -1520,7 +1520,7 @@
   "takeaway": "I = dP0^2/(2 rho v) = 1/2 rho v omega^2 s0^2; two forms must always agree.",
   "cards": [
    {
-    "title": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+    "title": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
     "items": [
      [
       "p",
@@ -1533,7 +1533,7 @@
     ]
    },
    {
-    "title": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+    "title": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
     "items": [
      [
       "p",
@@ -1546,7 +1546,7 @@
     ]
    },
    {
-    "title": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+    "title": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
     "items": [
      [
       "p",
@@ -1559,7 +1559,7 @@
     ]
    },
    {
-    "title": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+    "title": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
     "items": [
      [
       "check",
@@ -2729,7 +2729,7 @@
      ],
      [
       "p",
-      "Mode shapes: fundamental = half sine of displacement (antinode-antinode); pressure = half-cosine (node-node? pressure node at both open ends, antinode at middle for fundamental ok). Second harmonic: full sine (node of displacement at middle), etc. Consecutive resonance spacing (scanning f): $v/2L$ = one fundamental \u2014 same spacing formula as closed pipe's overtone gaps."
+      "Mode shapes: fundamental = half-sine of displacement (antinode at both ends, node at midpoint) and half-sine of pressure (pressure nodes at both open ends, antinode at midpoint). Second harmonic: full wave with two displacement nodes. Consecutive resonance spacing: $v/2L$ = one fundamental \u2014 identical spacing to a closed pipe's overtone gaps."
      ]
     ]
    },
@@ -2783,11 +2783,11 @@
     "items": [
      [
       "p",
-      "Sound from the ends: both ends radiate; open-open radiates from two ends (interference possible at low f when $L < \\lambda$ \u2014 the dipole \"singing tube\" effect, Oly 05); closed-open radiates mainly at the open end (monopole-ish)."
+      "Sound from the ends: both ends radiate; open-open radiates from two ends (interference possible at low f when $L < \\lambda$ \u2014 the dipole \"singing tube\" effect, Oly 05); closed-open radiates mainly at the open end (monopole)."
      ],
      [
       "check",
-      "the end correction shifts: open pipe $f_1 = v/2(L + 2e)$: with $r = 2$ cm, $e = 1.2$ cm (source Q4), $L = 85$ cm: $L_{\\rm eff} = 1.024$ m: f1 = 343/2.048 = 167.5 Hz vs 202 without... hmm source Q4 numbers: L = 85 cm, e = 1.2 cm gives 166 Hz ok matches Section E key with r = 2 cm."
+      "End correction shift: open pipe $f_1 = v/[2(L + 2e)]$; with $r = 2$ cm, $e = 1.2$ cm, $L = 85$ cm: $L_{\\rm eff} = 0.874$ m gives $f_1 = 343/1.748 = 196.2$ Hz vs $201.8$ Hz uncorrected ($-2.75\\%$)."
      ]
     ]
    },
@@ -2838,7 +2838,7 @@
      ],
      [
       "p",
-      "$L = 85$ cm, $r = 2$ cm, unflanged $e = 1.2$ cm $= 0.6r$ ok: open pipe $f_1 = v/2(L+2e) = 343/(2\\times 0.874) = 196$... let me recompute: source Q4: f1 = 100 Hz geometric; with e: 98.6 Hz ($\\Delta = 1.4$%)."
+      "Worked comparison (Q4, $L = 85$ cm, $r = 2$ cm, $e = 1.2$ cm): open pipe gives $196.2$ Hz ($v=343$); closed pipe at $v = 340$ m/s shifts from $100.0$ Hz to $340/[4(0.862)] = 98.6$ Hz ($-1.4\\%$)."
      ]
     ]
    }
@@ -2858,7 +2858,7 @@
   "takeaway": "End correction e = 0.6r (0.85r flanged): L_eff = L + e closed, L + 2e open; frequencies fall.",
   "cards": [
    {
-    "title": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+    "title": "End correction: L_eff = L + e (closed) or L + 2e (open)",
     "items": [
      [
       "p",
@@ -2871,7 +2871,7 @@
     ]
    },
    {
-    "title": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+    "title": "End correction: L_eff = L + e (closed) or L + 2e (open)",
     "items": [
      [
       "why",
@@ -2901,7 +2901,7 @@
     "items": [
      [
       "p",
-      "Helmholtz resonator note: a bottle with neck has its own end-corrected neck formula: $f = \\frac{v}{2\\pi}\\sqrt{A/(V L_{\\rm eff})}$ with $L_{\\rm eff} = L_{\\rm neck} + 1.5r$-ish \u2014 different formula family (Oly 05), same $e$ physics."
+      "Helmholtz resonator note: a bottle with neck has its own end-corrected neck formula: $f = \\frac{v}{2\\pi}\\sqrt{A/(V L_{\\rm eff})}$ with $L_{\\rm eff} = L_{\\rm neck} + 1.5r$ \u2014 different formula family (Oly 05), same $e$ physics."
      ],
      [
       "check",
@@ -3113,7 +3113,7 @@
     "items": [
      [
       "p",
-      "The rod: clamped at the middle $\\to$ node at centre, antinodes at both ends: fundamental $\\lambda_{\\rm rod} = 2L_{\\rm rod}$: rod frequency $f = v_{\\rm rod}/(2L_{\\rm rod})$... but the observed pitch is actually the SECOND harmonic of the free rod ($\\lambda = L_{\\rm rod}$, $f = v_{\\rm rod}/L_{\\rm rod}$) \u2014 hmm source worked example: $v_{\\rm rod} = 5000$ m/s, $L_{\\rm rod} = 1$ m, $d = 8$ cm gives $v_{\\rm gas} = 400$ m/s via $v_{\\rm gas} = v_{\\rm rod} d / L_{\\rm rod}$..."
+      "Clamped-centre Kundt rod: node at midpoint, antinodes at free ends $\\Rightarrow \\lambda_{\\rm rod} = 2L_{\\rm rod}$, $f = v_{\\rm rod}/(2L_{\\rm rod})$. Matching gas heap spacing $d = \\lambda_{\\rm gas}/2$ gives $v_{\\rm gas} = v_{\\rm rod}\\,d/L_{\\rm rod}$ (e.g. $5000 \\times 0.08 / 1.0 = 400$ m/s)."
      ],
      [
       "p",
@@ -3300,7 +3300,7 @@
     "items": [
      [
       "p",
-      "Worked asymmetry (source Q8/Q9): train whistle 1000 Hz at 30 m/s, $v = 343$... source says 340: (i) stationary observer: approach $1000\\times 340/310 = 1096.8$ Hz; recede $1000\\times 340/370 = 918.9$... hmm source Q8/Q9 use observer in train vs stationary: Q8: observer at station, sound 1096.8 (approach); Q9: observer IN the receding train hears 1088.2?? Let me redo from source:"
+      "Worked source-vs-observer asymmetry ($f = 1000$ Hz, speed $u = 30$ m/s, $v = 340$ m/s): (i) source approaching stationary observer: $f' = 1000\\times 340/(340 - 30) = 1096.8$ Hz (receding: $918.9$ Hz)."
      ],
      [
       "p",
@@ -3313,7 +3313,7 @@
     "items": [
      [
       "p",
-      "Hmm 1088.2 = $1000\\times 340/(340-3)$? Whatever the pairing, the canonical pair in the source is 1096.8 / 1088.2 as \"source vs observer motion at same speed\" \u2014 the ASYMMETRY: moving source 1096.8 vs moving observer 1088.2 for approach at 30 m/s? Moving observer approach: $1000\\times 370/340 = 1088.2$ ok THERE:"
+      "(ii) Observer approaching stationary source at $30$ m/s: $f' = 1000\\times(340 + 30)/340 = 1088.2$ Hz (receding: $911.8$ Hz). Moving source shifts $8.6$ Hz higher at $u/v = 0.088$ because $(1 - u/v)^{-1} > 1 + u/v$."
      ],
      [
       "p",
@@ -3560,11 +3560,11 @@
     ]
    },
    {
-    "title": "Doppler master class: conventions, vectors, and the full 1D family (.",
+    "title": "Doppler master class: 1D sign conventions (cont.)",
     "items": [
      [
       "p",
-      "The equal-speed chase: source and observer both moving in the same direction at the same speed: NO Doppler shift at all (same medium frame translation for both) \u2014 formula confirms: $(v - u)/(v - u) = 1$... wait careful with signs: source receding? If both chase together: $u_o = -u$, $u_s = -u$ (both positive-toward convention): $f' = f(v - u)/(v + u)$?? Recheck:"
+      "Equal-speed chase: source leading away at $u$ while observer chases behind at $u$: $f' = f\\dfrac{v + u}{v + u} = f$ \u2014 zero Doppler shift because separation stays constant."
      ],
      [
       "p",
@@ -3659,7 +3659,7 @@
     "items": [
      [
       "p",
-      "(a) \"An approaching train horn shifts from 460 to 400 Hz as it passes; $f_{\\rm true} = 420$, $v = 343$: find speed\": approach: $420\\cdot 343/(343-u) = 460$: $u = 343(1 - 420/460) = 29.8$ m/s; check with recede: $420\\cdot 343/(343+29.8) = 386$... hmm 400 expected: rounding / second-order? clean problem: symmetric: $f_{\\rm high} f_{\\rm low} = f^2\\frac{v^2}{v^2 - u^2}$... the product method:"
+      "Pass-by speed formula: if a horn drops from $f_+ = 460$ Hz (approach) to $f_- = 386$ Hz (recede) at $v = 343$ m/s, $u = v\\dfrac{f_+ - f_-}{f_+ + f_-} = 343\\times\\dfrac{74}{846} = 30.0$ m/s and $f_{\\rm true} = \\dfrac{2 f_+ f_-}{f_+ + f_-} = 419.8$ Hz."
      ],
      [
       "p",
@@ -3693,7 +3693,7 @@
      ],
      [
       "p",
-      "a following wind on both legs cancels in a round trip... precisely: stationary source and observer with wind $w$: $f' = f\\frac{v+w}{v+w} = f$ \u2014 NO shift for uniform wind (source \u00a72.10) \u2014 wind shifts only the travel TIME, not the frequency, when both parties are at rest in the medium... correct statement:"
+      "a following wind on both legs cancels in a round trip; stationary source and observer with wind $w$: $f' = f\\frac{v+w}{v+w} = f$ \u2014 NO shift for uniform wind (source \u00a72.10) \u2014 wind shifts only the travel TIME, not the frequency, when both parties are at rest in the medium... correct statement:"
      ]
     ]
    },
@@ -3734,50 +3734,50 @@
     "items": [
      [
       "p",
-      "Uniform wind of speed $w$ along the line: the wave pattern drifts with the air. Ground-frame wave speed toward the observer is $v + w$ (wind carrying sound along), and the effective formula: $f' = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$ \u2014 ALL ground-frame speeds measured the same way: wind simply adds to the medium speed everywhere it helps."
+      "Uniform wind of ground speed $+w$ blowing from source S toward observer O advects the medium: sound travels at ground speed $v + w$ downwind (S $\\to$ O) and $v - w$ upwind (O $\\to$ S)."
      ],
      [
       "p",
-      "Source worked example: source approaching at $u_s$ with following wind $w$: $f' = f\\dfrac{v + w}{v + w - u_s}$... careful: the canonical worked case in the source (\u00a72.10): \"wind blowing from source to observer at w\": $f' = f\\frac{v + w}{v + w - u_s}$ for approaching source (denominator: source speed relative to the drifting air is $u_s - w$?? The safe derivation:"
+      "With ground speeds $u_s$ (S moving toward O) and $u_o$ (O moving toward S), the exact ground-frame Doppler law is $f' = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$."
      ]
     ]
    },
    {
-    "title": "Wind and Doppler: replace v by v + w directionally (cont.)",
+    "title": "Galilean air-frame equivalence proof",
     "items": [
      [
       "p",
-      "transform to air frame: wave speed $v$; source speed $u_s - w$; observer speed $u_o - w$; then $f' = f\\frac{v + (u_o - w)}{v - (u_s - w)}$... that gives $f\\frac{v + u_o - w}{v - u_s + w}$ \u2014 hmm which is right? Galilean: in air frame the Doppler formula applies with frame speeds: $u_s' = u_s - w$ (positive toward observer... wind +w from source to observer means air moves toward observer):"
+      "In the moving air rest frame, S moves toward O at $u_{s,\\rm air} = u_s - w$, while O moves INTO the oncoming wind (toward S) at $u_{o,\\rm air} = u_o + w$."
      ],
      [
       "p",
-      "then $f' = f\\frac{v + u_o'}{v - u_s'} = f\\frac{v + u_o - w}{v - u_s + w}$. Check limits: both at rest in ground, wind w: $f' = f\\frac{v - w}{v + w}$?? That contradicts \"no shift for stationary parties in wind\"! Resolve: if BOTH source and observer are at rest in the GROUND with moving air, the wavelength is unchanged in the AIR frame..."
+      "Substituting $(u_{s,\\rm air}, u_{o,\\rm air})$ into the still-air formula gives $f' = f\\dfrac{v + (u_o + w)}{v - (u_s - w)} = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$: both frames agree identically."
      ]
     ]
    },
    {
-    "title": "Wind and Doppler: replace v by v + w directionally (cont.)",
+    "title": "Why steady wind never shifts fixed parties",
     "items": [
      [
       "p",
-      "source at rest in air frame emits $f$ with $\\lambda = v/f$ in air frame; in ground frame $\\lambda_{\\rm ground} = \\lambda$ (length same), wave speed $= v + w$: $f'_{\\rm ground} = (v+w)/\\lambda = f(v+w)/v$?? But observer at rest in ground: encounters crests at rate $(v+w)/\\lambda = f(v+w)/v$ \u2014 SHIFTED!"
+      "When both S and O are fixed on the ground ($u_s = u_o = 0$), S emits crests every $T = 1/f$ while each crest drifts at $v + w$, stretching wavelength to $\\lambda = (v + w)/f$."
      ],
      [
       "p",
-      "Hmm but source \u00a72.10 claims f' = f with wind for stationary source and observer... Actually physically: stationary source in moving air (wind tunnel): the air frame moves; the source vibrates at f; the sound field in the air frame is standard with $\\lambda = v/f$ measured in the air; in the ground frame the same $\\lambda$ is carried at $v + w$:"
+      "Crests arrive at O with speed $v + w$ and spacing $\\lambda$, so $f' = \\dfrac{v + w}{(v + w)/f} = f$: uniform wind changes travel time only, never pitch."
      ]
     ]
    },
    {
-    "title": "Wind and Doppler: replace v by v + w directionally (cont.)",
+    "title": "Sign trap & upwind rule",
     "items": [
      [
-      "p",
-      "a ground-fixed observer sees $f' = (v+w)/\\lambda = f(v+w)/v$ \u2014 a genuine shift! BUT the source also emits into air moving past it... this is the subtle \"wind tunnel vs moving air\" physics. The safe exam treatment: classical convention (source \u00a72.10):"
+      "trap",
+      "Classic sign error: writing $u_{o,\\rm air} = u_o - w$ forgets that a stationary observer faces a headwind of $+w$ toward the upstream source."
      ],
      [
       "p",
-      "\"f' = f(v + w)/(v + w) = f\" for stationary parties \u2014 no shift \u2014 because the wind advects BOTH the source \"medium contact\" and the pattern... Let me settle with the source book convention: NO shift for uniform wind between fixed parties; wind matters only through relative speeds of source/observer TO THE AIR and by adding w along each leg of travel TIME. The formula the source gives (2.16):"
+      "If wind $w$ blows FROM observer O TOWARD source S (against sound propagation), reverse $w \\to -w$: $f' = f\\dfrac{(v - w) + u_o}{(v - w) - u_s}$."
      ]
     ]
    }
@@ -3805,7 +3805,7 @@
      ],
      [
       "p",
-      "Source worked wind case: \"source moving toward observer at $u_s$ with wind from behind source (w helping both)\": $f' = f\\frac{v + w}{v + w - u_s}$... e.g. $f = 500$, $u_s = 30$, $w = 20$, $v = 343$: $f' = 500\\times 363/333 = 545$ Hz (vs 550 with no wind): wind REDUCES the shift here (the source chases a drifting pattern less effectively)."
+      "Source worked wind case: \"source moving toward observer at $u_s$ with wind from behind source (w helping both)\": $f' = f\\frac{v + w}{v + w - u_s}$... e.g. $f = 500$, $u_s = 30$, $w = 20$, $v = 343$: $f' = 500\\times 363/333 = 545.0$ Hz (vs $500\\times 343/313 = 547.9$ Hz with no wind): wind REDUCES the shift here (the source chases a drifting pattern less effectively)."
      ]
     ]
    },
@@ -3831,7 +3831,7 @@
     "items": [
      [
       "p",
-      "Wind affects TIME OF FLIGHT always (even when frequency unchanged): one-way trip along wind: $t = L/(v + w)$; against: $L/(v - w)$. Round trip along wind direction (sound out and back... e.g. source at A, reflector at B downwind): $t = \\frac{L}{v+w} + \\frac{L}{v-w} = \\frac{2Lv}{v^2 - w^2}$ \u2248 $\\frac{L}{v}(1 + w^2/v^2)$-ish for the round trip... expand:"
+      "Wind affects TIME OF FLIGHT always (even when frequency unchanged): one-way trip along wind: $t = L/(v + w)$; against: $L/(v - w)$. Round trip along wind direction (sound out and back... e.g. source at A, reflector at B downwind): $t = \\frac{L}{v+w} + \\frac{L}{v-w} = \\frac{2Lv}{v^2 - w^2}$ \u2248 $\\frac{L}{v}(1 + w^2/v^2)$ for the round trip... expand:"
      ],
      [
       "p",
@@ -3848,7 +3848,7 @@
      ],
      [
       "p",
-      "Echo in wind (source Q12 style): source of frequency $f$ emits toward a reflector downwind; echo returns against wind... the received frequency: two Doppler legs with wave speeds $v+w$ and $v-w$: $f'' = f\\frac{(v+w)}{(v-w)}$-type expressions when the parties are fixed... worked in JEE-27."
+      "Echo in wind (Q12): out leg runs downwind at $v+w$, return leg upwind at $v-w$. For fixed source & fixed wall, $f'' = f$ (zero shift on both legs); for a wall approaching at $u_w$, $f'' = f\\dfrac{v+w+u_w}{v+w}\\cdot\\dfrac{v-w}{v-w-u_w}$."
      ]
     ]
    }
@@ -4277,11 +4277,11 @@
     ]
    },
    {
-    "title": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+    "title": "Sonic-boom delay geometry (Q13) (cont.)",
     "items": [
      [
       "p",
-      "Subtlety worth stating: the boom heard at 25.5 s was EMITTED at $t_e = -8.5$ s \u2014 the jet was still 5.8 km BEFORE overhead when it emitted that sound (a supersonic source is reached by its own earlier sound from ahead); the 17.32 km figure is the jet position at HEARING time, not the emission point. The source derivation of Q13 is verbally muddled (its d = h tan alpha? Actually..."
+      "Key physical point: the boom heard at $t = 25.5$ s was emitted earlier along the flight track when the normal ray at angle $\\pi/2 - \\alpha$ left the aircraft; at hearing instant the jet stands $h\\cot\\alpha = h\\sqrt{M^2 - 1}$ ahead of overhead."
      ],
      [
       "p",
@@ -4290,7 +4290,7 @@
     ]
    },
    {
-    "title": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+    "title": "Sonic-boom delay geometry (Q13) (cont.)",
     "items": [
      [
       "p",
@@ -4535,11 +4535,11 @@
     "items": [
      [
       "p",
-      "Impedance and Doppler (bridge): a moving source radiates into the medium with Doppler factors; the POWER of the received wave scales as $f^{\\prime 2}$-ish through the amplitude change (Oly 05):"
+      "Impedance and Doppler (bridge): a moving source radiates into the medium with Doppler factors; the POWER of the received wave scales as $f^{\\prime 2}$ through the amplitude change (Oly 05):"
      ],
      [
       "p",
-      "$I \\propto \\Delta P_0^2/2Z$ with $\\Delta P_0$ Doppler-shifted \u2014 the intensity Doppler factor is $\\left(\\dfrac{f'}{f}\\right)^2$ for moving-source... precisely $I'/I = (f'/f)^3$ for sound (energy flux + frequency); state assumptions carefully."
+      "$I \\propto \\Delta P_0^2/2Z$ with $\\Delta P_0$ Doppler-shifted \u2014 the intensity Doppler factor is $\\left(\\dfrac{f'}{f}\\right)^2$ for moving-source; state assumptions carefully."
      ],
      [
       "p",
@@ -4548,7 +4548,7 @@
     ]
    },
    {
-    "title": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+    "title": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
     "items": [
      [
       "p",
@@ -4561,7 +4561,7 @@
     ]
    },
    {
-    "title": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+    "title": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
     "items": [
      [
       "p",
@@ -4574,7 +4574,7 @@
     ]
    },
    {
-    "title": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+    "title": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
     "items": [
      [
       "why",

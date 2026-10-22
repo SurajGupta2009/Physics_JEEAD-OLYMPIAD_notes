@@ -175,7 +175,7 @@ def figure(a,key):
   raise KeyError(key)
  # First panel: labelled physical geometry.
  if slug=='lorentz':
-  dot(a,0,0);arr(a,(0,0),(1.2,0),R);txt(a,1.3,0,'v',ha='center');into_page(a,0,1.1);arr(a,(0,0),(0,-1.15),T);txt(a,.25,-1,'F = q v x B',ha='center');txt(a,0,-1.35,'q > 0: thumb first, sign second',ha='center');return 'Right hand along v, curl to B, thumb gives force; flip for negative q'
+  dot(a,0,0);arr(a,(0,0),(1.2,0),R);txt(a,1.3,0,'v',ha='center');into_page(a,0,1.1);arr(a,(0,0),(0,-1.15),T);txt(a,1.05,-0.92,'F = q v x B',ha='left');txt(a,0,-1.52,'q > 0: thumb first, sign second',ha='center');return 'Right hand along v, curl to B, thumb gives force; flip for negative q'
  if slug=='circle':
   circ(a,0,0,1);dot(a,1,0);arr(a,(1,0),(1.35,.75),R);txt(a,1.55,.85,'v',ha='center');arr(a,(1,0),(0,0),T);txt(a,.42,-.12,'r = mv/qB');into_page(a,0,1.45);return 'Uniform B into page: force keeps turning v without changing speed'
  if slug=='selector':
@@ -201,7 +201,7 @@ def figure(a,key):
  if slug=='wire':
   line(a,(-1.8,-1.2),(-1.8,1.2),color=R,lw=3);dot(a,0,.6,I);txt(a,.15,.72,'P');line(a,(-1.8,.6),(0,.6),ls='--');txt(a,-.9,.72,'d');line(a,(-1.8,-1.2),(0,.6),ls='--');line(a,(-1.8,1.2),(0,.6),ls='--');txt(a,-1.35,-.15,r'$\beta$',ha='center');txt(a,-1.35,1.05,r'$\alpha$',ha='center');return 'Finite wire: field from the two end angles alpha and beta at P'
  if slug=='loop':
-  a.add_patch(Arc((0,0),1.6,1.6,theta1=0,theta2=360,ec=T,lw=2));line(a,(-2.3,0),(2.6,0));txt(a,1.05,.85,'R');dot(a,2.1,0,I);txt(a,2.15,.2,'P(x)');arr(a,(.8,.8),(1.05,1.05),R);txt(a,1.25,1.15,'dB',ha='center');txt(a,0,-1.5,'transverse parts cancel; net field is axial',ha='center');return 'Loop axis: every element is at distance sqrt(R^2 + x^2) from P'
+  a.add_patch(Arc((0,0),1.6,1.6,theta1=0,theta2=360,ec=T,lw=2));line(a,(-2.3,0),(2.6,0));txt(a,.52,.45,'R');dot(a,2.1,0,I);txt(a,2.15,.22,'P(x)');arr(a,(.8,.8),(1.05,1.05),R);txt(a,1.32,1.2,'dB',ha='center');txt(a,0,-1.5,'transverse parts cancel; net field is axial',ha='center');return 'Loop axis: every element is at distance sqrt(R^2 + x^2) from P'
  if slug=='solenoid':
   for z in np.linspace(-1.8,1.8,9):
    circ(a,z,0,.28);arr(a,(z,.28),(z,.75),T)
@@ -211,7 +211,7 @@ def figure(a,key):
  if slug=='ampere':
   line(a,(-2.2,0),(2.2,0),lw=3);txt(a,2.3,0,'I out');circ(a,0,0,1.05,ls='--');arr(a,(1.05,0),(.75,.35),T);txt(a,.35,.55,'path C');txt(a,0,-1.5,'loop direction sets the sign of enclosed current',ha='center');return 'Amperian loop around a wire: circulation counts threaded current'
  if slug=='ampere-apps':
-  circ(a,0,0,1.15,ec=T);circ(a,0,0,.55,ec=R);txt(a,0,0,'J',ha='center');arr(a,(.55,0),(.9,0),T);txt(a,1.35,.15,'r inside');arr(a,(1.15,0),(1.8,0),T);txt(a,2.1,.15,'r outside');return 'Thick wire: enclosed fraction grows as r squared inside, full current outside'
+  circ(a,0,0,1.15,ec=T);circ(a,0,0,.55,ec=R);txt(a,0,0,'J',ha='center');arr(a,(0,0),(.52,.18),R);txt(a,-.95,.75,'r inside');arr(a,(0,-.15),(1.75,-.15),T);txt(a,1.85,-.45,'r outside');return 'Thick wire: enclosed fraction grows as r squared inside, full current outside'
  if slug=='overlap':
   circ(a,-.35,0,1.15,ec=T);circ(a,.35,0,1.15,ec=R);txt(a,-1.8,.9,'+J cylinder');txt(a,1.15,.9,'-J cylinder');txt(a,0,0,'gap d',ha='center');arr(a,(-.35,0),(.35,0),T);return 'Overlap trick: two opposite uniform cylinders leave a uniform-field gap'
  if slug=='force-current':
@@ -309,7 +309,7 @@ def figure(a,key):
  if slug=='LCR':
   line(a,(-2.5,-.9),(2.5,-.9),lw=2);line(a,(-2.5,-.9),(-2.5,.9),lw=2);line(a,(2.5,-.9),(2.5,.9),lw=2);line(a,(-2.5,.9),(2.5,.9),lw=2);a.add_patch(Rectangle((-1.55,-1.05),1.1,.3,fill=1,fc=R,ec=I));a.text(-1.0,-1.42,'R',color=R,fontsize=11,ha='center');[a.add_patch(Arc((x,1.25),.9,.7,angle=0,theta1=0,theta2=180,ec=T,lw=2)) for x in (0.0,.45)];a.text(.55,1.5,'L',color=T,fontsize=10,ha='center');line(a,(1.45,1.05),(1.45,.75),lw=2);line(a,(1.95,1.05),(1.95,.75),lw=2);a.text(1.95,1.5,'C',color=I,fontsize=10,ha='center');a.text(-2.6,0,'V',color=I,fontsize=11,ha='center');return 'Series LCR: one current, three voltages, one phase angle'
  if slug=='resonance':
-  line(a,(-2.5,-.85),(2.5,-.85),lw=2);line(a,(-2.5,-.85),(-2.5,.85),lw=2);line(a,(2.5,-.85),(2.5,.85),lw=2);line(a,(-2.5,.85),(2.5,.85),lw=2);a.add_patch(Rectangle((-1.7,-1.0),1.05,.3,fill=1,fc=R,ec=I));a.text(-1.15,-1.38,'R',color=R,fontsize=10,ha='center');[a.add_patch(Arc((x,1.2),.9,.7,angle=0,theta1=0,theta2=180,ec=T,lw=2)) for x in (-.15,.35)];a.text(.95,1.5,'L',color=T,fontsize=10,ha='center');line(a,(1.45,1.05),(1.45,.72),lw=2);line(a,(1.95,1.05),(1.95,.72),lw=2);a.text(2.15,1.5,'C',color=I,fontsize=10,ha='center');a.text(0,-1.72,r'$\omega_0 = 1/\sqrt{LC}$, $Q = \omega_0L/R$',color=T,fontsize=11,ha='center');return 'At resonance the source sees pure R; Q decides the sharpness'
+  line(a,(-2.5,-.85),(2.5,-.85),lw=2);line(a,(-2.5,-.85),(-2.5,.85),lw=2);line(a,(2.5,-.85),(2.5,.85),lw=2);line(a,(-2.5,.85),(2.5,.85),lw=2);a.add_patch(Rectangle((-1.7,-1.0),1.05,.3,fill=1,fc=R,ec=I));a.text(-1.85,-1.30,'R',color=R,fontsize=10,ha='center');[a.add_patch(Arc((x,1.2),.9,.7,angle=0,theta1=0,theta2=180,ec=T,lw=2)) for x in (-.15,.35)];a.text(.95,1.5,'L',color=T,fontsize=10,ha='center');line(a,(1.45,1.05),(1.45,.72),lw=2);line(a,(1.95,1.05),(1.95,.72),lw=2);a.text(2.15,1.5,'C',color=I,fontsize=10,ha='center');a.text(0,-1.72,r'$\omega_0 = 1/\sqrt{LC}$, $Q = \omega_0L/R$',color=T,fontsize=11,ha='center');return 'At resonance the source sees pure R; Q decides the sharpness'
  if slug=='power':
   arr(a,(0,0),(2.3,0),I);a.text(1.0,-.38,r'$P = VI\cos\phi$',color=I,fontsize=10,ha='center');arr(a,(0,0),(0,1.5),R);a.text(.25,1.15,r'$Q = VI\sin\phi$',color=R,fontsize=10);arr(a,(0,0),(1.7,1.15),T);a.text(1.75,1.35,'S = VI',color=T,fontsize=10);a.text(-2.5,-1.45,'power triangle: watts out, vars sloshing',color=I,fontsize=9);return 'Real power does work; reactive power just sloshes between source and field'
  if slug=='parallel':
@@ -335,7 +335,7 @@ def figure(a,key):
  if slug=='cable':
   a.add_patch(Rectangle((-2.6,-1.15),4.2,2.3,fill=0,ec=I,lw=2));a.add_patch(Rectangle((-2.6,-.45),4.2,.9,fill=1,fc='0.85',ec=I,lw=1.6));line(a,(-2.6,-1.15),(-3.0,-1.15),lw=2);line(a,(-2.6,1.15),(-3.0,1.15),lw=2);a.text(-2.95,0,'V0',color=I,fontsize=10);[a.text(x,0,r'$\otimes$',ha='center',fontsize=10) for x in (-1.6,-.6,.4,1.4)];a.text(1.7,-1.5,r"$v = 1/\sqrt{L'C'}$",color=T,fontsize=10);a.text(1.7,1.55,'dielectric',color=I,fontsize=9);return 'Coax cable: fields travel as a step at v = c/root(kappa)'
  if slug=='driven-lcr':
-  line(a,(-2.4,-.9),(-2.4,.9),lw=2);line(a,(-2.4,0),(-2.75,0),lw=1.6);a.text(-3.0,0,'~',color=I,fontsize=11,ha='center');line(a,(-2.4,.9),(1.9,.9),lw=2);line(a,(-2.4,-.9),(1.9,-.9),lw=2);a.add_patch(Rectangle((-1.7,-1.05),1.1,.3,fill=1,fc=R,ec=I));a.text(-1.15,-1.42,'R',color=R,fontsize=10,ha='center');[a.add_patch(Arc((x,1.25),.9,.7,angle=0,theta1=0,theta2=180,ec=T,lw=2)) for x in (-.1,.4)];a.text(1.0,1.5,'L',color=T,fontsize=10,ha='center');line(a,(1.35,1.05),(1.35,.72),lw=2);line(a,(1.8,1.05),(1.8,.72),lw=2);a.text(2.15,1.5,'C',color=I,fontsize=10,ha='center');a.text(0,-1.72,r'$i = I_0\sin(\omega t + \phi)$ steady state',color=T,fontsize=10,ha='center');return 'Driven LCR: transient dies, steady state stays; watch near resonance'
+  line(a,(-2.4,-.9),(-2.4,.9),lw=2);line(a,(-2.4,0),(-2.75,0),lw=1.6);a.text(-3.0,0,'~',color=I,fontsize=11,ha='center');line(a,(-2.4,.9),(1.9,.9),lw=2);line(a,(-2.4,-.9),(1.9,-.9),lw=2);a.add_patch(Rectangle((-1.7,-1.05),1.1,.3,fill=1,fc=R,ec=I));a.text(-1.85,-1.32,'R',color=R,fontsize=10,ha='center');[a.add_patch(Arc((x,1.25),.9,.7,angle=0,theta1=0,theta2=180,ec=T,lw=2)) for x in (-.1,.4)];a.text(1.0,1.5,'L',color=T,fontsize=10,ha='center');line(a,(1.35,1.05),(1.35,.72),lw=2);line(a,(1.8,1.05),(1.8,.72),lw=2);a.text(2.15,1.5,'C',color=I,fontsize=10,ha='center');a.text(0,-1.72,r'$i = I_0\sin(\omega t + \phi)$ steady state',color=T,fontsize=10,ha='center');return 'Driven LCR: transient dies, steady state stays; watch near resonance'
  if slug=='maxpower':
   line(a,(-2.3,-.8),(-2.3,.8),lw=2);line(a,(-1.85,-.8),(-1.85,.8),lw=2);a.text(-2.85,0,'V',color=I,fontsize=11,ha='center');line(a,(-1.85,.8),(-.2,.8),lw=2);line(a,(-2.3,-.8),(-.2,-.8),lw=2);a.add_patch(Rectangle((-.2,-1.05),1.0,.3,fill=1,fc=R,ec=I));a.text(.3,-1.42,'Rs',color=R,fontsize=10,ha='center');line(a,(.8,.8),(2.2,.8),lw=2);line(a,(.8,-.8),(2.2,-.8),lw=2);a.add_patch(Rectangle((2.2,-.35),.55,.7,fill=0,ec=T,lw=2));a.text(2.48,-.75,'RL',color=T,fontsize=10,ha='center');line(a,(2.75,.35),(2.75,.8),lw=2);line(a,(2.75,-.35),(2.75,-.8),lw=2);a.text(0,1.55,r'$P_L$ peaks at $R_L = R_s$',color=T,fontsize=11,ha='center');return 'Matched load: half the power is lost inside the source, by design'
  if slug=='radio-wien':

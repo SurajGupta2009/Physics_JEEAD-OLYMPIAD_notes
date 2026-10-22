@@ -117,8 +117,8 @@ def figure(ax,key):
         dimy(ax,2.10,1.00,4.45,'L'); dimy(ax,2.30,1.00,1.25,'dL')
         disc(ax,4.00,3.25,.68)
         ax.add_patch(Ellipse((4.00,3.25),1.52,1.52*1.34,fc='none',ec=G,lw=1.0,ls='--'))
-        arrow(ax,(4.00,3.25),(4.62,3.25),I,1.0); txt(ax,4.32,3.38,'r',color=I,fontsize=8.2)
-        arrow(ax,(4.00,3.25),(4.00,3.89),G,1.0); txt(ax,4.06,3.68,'r-dr',color=G,fontsize=7.4)
+        arrow(ax,(4.00,3.25),(4.62,3.25),I,1.0); txt(ax,4.52,3.02,'r',color=I,fontsize=8.2)
+        arrow(ax,(4.00,3.25),(4.00,3.89),G,1.0); txt(ax,4.08,4.02,'r-dr',color=G,fontsize=7.4)
         note(ax,2.55,1.62,'dashed = unloaded',fontsize=7.4)
         txt(ax,5.55,4.28,r'$\nu=-\varepsilon_{\rm lat}/\varepsilon_{\rm long}$',fontsize=9.0)
         txt(ax,5.55,3.55,r'$\Delta r=-\nu r\,\Delta L/L$',fontsize=9.0)
@@ -155,8 +155,8 @@ def figure(ax,key):
         ax.add_patch(Rectangle((4.0,.95),1.7,.48,fc='#f6e2a8',ec=GOLD,lw=1.1))
         txt(ax,2.35,2.05,r'$\sigma_1=F/A_1$',ha='center',fontsize=8.4,color=T)
         txt(ax,4.85,1.56,r'$\sigma_2=F/A_2$',ha='center',fontsize=8.4,color=GOLD)
-        note(ax,6.30,1.60,'thin side:',color=R,fontsize=7.8)
-        note(ax,6.30,1.34,'higher stress',color=R,fontsize=7.8)
+        note(ax,6.30,1.74,'thin side:',color=R,fontsize=7.6)
+        note(ax,6.30,1.22,'higher stress',color=R,fontsize=7.6)
         return 'Series composite: common force, extensions add, stress steps with 1/A'
     if key=='parallel_wires':
         plain(ax)
@@ -228,9 +228,9 @@ def figure(ax,key):
         arrow(ax,(.42,1.48),(.73,1.48),R); arrow(ax,(5.08,1.48),(4.77,1.48),R)
         txt(ax,2.70,.66,r'$\sigma_{\rm th}=Y\alpha\Delta T$',ha='center',fontsize=9.6)
         note(ax,2.90,.26,'L cancels: bolt and rail agree',ha='center',fontsize=7.6)
-        txt(ax,6.45,3.55,'heating',fontsize=8.4); txt(ax,6.45,3.20,'compression',fontsize=8.4,color=R)
-        txt(ax,6.45,2.40,'cooling',fontsize=8.4); txt(ax,6.45,2.05,'tension',fontsize=8.4,color=R)
-        note(ax,6.45,1.35,'reaction, not dT,',fontsize=7.6); note(ax,6.45,1.08,'sets the sign',fontsize=7.6)
+        txt(ax,6.45,3.74,'heating:',fontsize=8.2); txt(ax,6.45,3.20,'compression',fontsize=8.2,color=R)
+        txt(ax,6.45,2.48,'cooling:',fontsize=8.2); txt(ax,6.45,1.94,'tension',fontsize=8.2,color=R)
+        note(ax,6.45,1.30,'reaction, not dT,',fontsize=7.4); note(ax,6.45,0.82,'sets the sign',fontsize=7.4)
         return 'Thermal stress: expand freely, then compress back to the constraint'
     if key=='bulk_water':
         graph(ax); d=np.linspace(0,10,200)
@@ -425,8 +425,8 @@ def figure(ax,key):
         ax.text(1.02,-1.22,r'$r_0$',fontsize=8.2,color=R)
         arrow(ax,(1.62,0),(1.62,1.0),I,1.0,'<->',7); ax.text(1.66,.48,'D',fontsize=8.4,color=I)
         ax.text(1.08,1.76,'harmonic near the base',fontsize=6.8,color=T)
-        ax.text(1.80,1.00,'asymmetric tail:',fontsize=6.8,color=R)
-        ax.text(1.80,.80,'thermal expansion',fontsize=6.8,color=R)
+        ax.text(1.72,1.22,'asymmetric tail:',fontsize=6.8,color=R)
+        ax.text(1.72,.78,'thermal expansion',fontsize=6.8,color=R)
         ax.set_xlabel(r'separation  r  ($r_0$ units)',fontsize=8.6)
         ax.set_ylabel(r'potential $U$',fontsize=8.6)
         ax.set_xlim(.8,2.4); ax.set_ylim(-1.35,2.05)
@@ -533,8 +533,8 @@ def figure(ax,key):
             wall(ax,x0-.35,x0+.35,y0,n=5)
             ax.plot(x0+(yy-y0),ys,color=T,lw=1.5)
             ax.plot([x0,x0],[y0,y0+L],color=G,lw=.7,ls=':')
-            txt(ax,x0,L+1.55,lab,ha='center',fontsize=7.6,color=T)
-            txt(ax,x0,L+1.25,mult,ha='center',fontsize=7.6,color=I)
+            txt(ax,x0,L+1.64,lab,ha='center',fontsize=7.5,color=T)
+            txt(ax,x0,L+1.14,mult,ha='center',fontsize=7.5,color=I)
         txt(ax,5.0,4.75,'Euler load multiplier',ha='center',fontsize=8.0,color=G)
         return 'End conditions change the Euler load by the factor shown'
     if key=='ibeam':
@@ -580,8 +580,8 @@ def figure(ax,key):
         txt(ax,6.05,1.10,'S shadow',ha='left',fontsize=7.4,color=T)
         txt(ax,cx,cy-.05,'liquid core',ha='center',fontsize=7.2,color=GOLD)
         txt(ax,cx,cy-.45,'G = 0',ha='center',fontsize=7.2,color=GOLD)
-        txt(ax,6.05,3.62,'grazing rays',fontsize=7.2,color=I)
-        txt(ax,6.05,3.32,'mark the edge',fontsize=7.2,color=I)
+        txt(ax,6.05,3.74,'grazing rays',fontsize=7.2,color=I)
+        txt(ax,6.05,3.22,'mark the edge',fontsize=7.2,color=I)
         arrow(ax,(5.96,3.55),(5.06,2.80),G,.9,'->',7)
         txt(ax,6.05,2.36,'core radius 0.55 R',fontsize=7.2,color=G)
         return 'The S shadow: rays that would cross the liquid core never arrive'
@@ -621,8 +621,8 @@ def figure(ax,key):
         txt(ax,2.70,1.10,'p acts on the cut face 2rL',ha='center',fontsize=7.2,color=T)
         txt(ax,5.35,3.42,r'$\sigma_{\rm hoop}=pr/t$',fontsize=8.8)
         txt(ax,5.35,2.72,r'$\sigma_{\rm long}=pr/(2t)$',fontsize=8.8)
-        note(ax,5.35,2.14,'hoop wins: the crack',fontsize=7.2)
-        note(ax,5.35,1.88,'runs lengthwise',fontsize=7.2)
+        note(ax,5.35,2.20,'hoop wins: the crack',fontsize=7.2)
+        note(ax,5.35,1.70,'runs lengthwise',fontsize=7.2)
         txt(ax,2.70,.55,'two walls carry it',ha='center',fontsize=7.2,color=G)
         return 'Hoop stress by a diametral cut: pr/t, twice the longitudinal stress'
     if key=='vessel_crack':
@@ -644,14 +644,13 @@ def figure(ax,key):
         vals=[5.1,5.8,3.2]
         ax.bar(names,vals,color=[T,I,G],width=.5)
         for i,v in enumerate(vals): ax.text(i,v+.18,f'{v:.1f}',ha='center',fontsize=8.2,color=I)
-        ax.set_ylim(0,7.6)
-        for i in range(3): ax.text(i,7.0,'',ha='center')
-        ax.text(0,-1.15,'Y/rho',ha='center',fontsize=6.8,color=T)
-        ax.text(1,-1.15,'(B+4G/3)/rho',ha='center',fontsize=6.2,color=T)
-        ax.text(2,-1.15,'G/rho',ha='center',fontsize=6.8,color=T)
+        ax.set_ylim(0,8.2)
+        ax.text(0,0.45,'Y/rho',ha='center',fontsize=6.6,color='white')
+        ax.text(1,0.45,'(B+4G/3)/rho',ha='center',fontsize=6.0,color='white')
+        ax.text(2,0.45,'G/rho',ha='center',fontsize=6.6,color='white')
         ax.set_ylabel('speed  (km/s)',fontsize=8.4)
         ax.set_xticks([0,1,2]); ax.set_xticklabels(['rod','bulk P','steel S'],fontsize=8.0)
-        ax.tick_params(axis='x',length=0,pad=16)
+        ax.tick_params(axis='x',length=2,pad=4)
         return 'Rod, bulk-P and S speeds use different moduli: 5.1, 5.8, 3.2 km/s'
     if key=='ashby':
         graph(ax); ax.set_xscale('log'); ax.set_yscale('log')

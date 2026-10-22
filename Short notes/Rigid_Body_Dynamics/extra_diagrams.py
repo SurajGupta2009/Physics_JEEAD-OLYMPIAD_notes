@@ -20,7 +20,7 @@ def figure(ax,key):
  if key=='cylinder_axes':
   line(ax,(2,1.5),(7,1.5));line(ax,(2,3.5),(7,3.5));
   for x in [2,7]:ax.add_patch(Ellipse((x,2.5),.8,2,fill=False,ec=INK))
-  ax.plot([.6,8.5],[2.5,2.5],c=TEAL,ls='--');ax.plot([4.5,4.5],[.5,4.5],c=RED,ls='--');text(ax,5.2,4.2,'transverse');text(ax,7.6,2.8,'axial');text(ax,3.3,.6,'length l');text(ax,.6,3.5,'R');return 'Cylinder: distinguish central longitudinal and transverse axes'
+  ax.plot([.6,8.5],[2.5,2.5],c=TEAL,ls='--');ax.plot([4.5,4.5],[.5,4.5],c=RED,ls='--');text(ax,5.2,4.2,'transverse');text(ax,7.6,2.8,'axial');text(ax,2.2,.55,'length l');text(ax,.6,3.5,'R');return 'Cylinder: distinguish central longitudinal and transverse axes'
  if key=='sphere_slice':
   ax.add_patch(Circle((3,2.5),1.9,fill=False,ec=INK));x=.7;h=np.sqrt(1.9**2-x*x);ax.add_patch(Rectangle((3+x-.08,2.5-h),.16,2*h,fc='#b6ded6',ec=TEAL));arrow(ax,(.5,2.5),(6,2.5));text(ax,5.5,2.7,'x');text(ax,6.3,3.8,'s²=R²-x²');text(ax,6.3,1.9,'slice is a disc');text(ax,3.95,4.4,'s');return 'Sphere sliced normal to a diameter: dI = dm s² / 2'
  if key=='disc_hole':
@@ -29,11 +29,11 @@ def figure(ax,key):
  if key=='density_graph':
   ax.clear();n=np.linspace(-1.9,12,300);graph(ax,n,(n+2)/(n+4),'density exponent n','I(z) / (MR²)');ax.axhline(1,c=RED,ls=':');ax.scatter([0],[.5],c=INK);ax.set(xlim=(-2,12),ylim=(0,1.07));ax.text(1,.35,'uniform disc: n=0',fontsize=11);return 'Radial density r^n: more rim weighting increases axial MOI'
  if key=='eccentric_impulse':
-  line(ax,(5,.7),(5,4.3),lw=4);ax.plot(5,2.5,'o',c=TEAL);text(ax,5.3,2.5,'C');arrow(ax,(1,3.8),(4.7,3.8),'J');ax.plot([6.5,6.5],[2.5,3.8],c=RED);text(ax,6.8,3,'b');arrow(ax,(5,2.5),(8,2.5),'V(C)');text(ax,1.3,.4,'smooth support: no horizontal impulse');return 'Impulse above C: translation right and clockwise spin'
+  line(ax,(5,.7),(5,4.3),lw=4);ax.plot(5,2.5,'o',c=TEAL);text(ax,5.3,2.5,'C');arrow(ax,(1,3.8),(4.7,3.8),'J');ax.plot([6.5,6.5],[2.5,3.8],c=RED);text(ax,6.9,3.35,'b');arrow(ax,(5,2.5),(8,2.5),'V(C)');text(ax,1.3,.4,'smooth support: no horizontal impulse');return 'Impulse above C: translation right and clockwise spin'
  if key=='percussion':
   line(ax,(4,4.4),(4,.6),lw=4);ax.plot(4,4.4,'o',c=RED);text(ax,4.4,4.4,'O hinge');ax.plot(4,2.5,'o',c=TEAL);text(ax,4.4,2.5,'C: d=l/2');y=4.4-3.8*2/3;arrow(ax,(.8,y),(3.7,y),'J');text(ax,5.3,1,'b=2l/3\nfor zero hinge impulse');return 'Uniform end-hinged rod: centre of percussion at 2l/3'
  if key=='falling_rod':
   o=np.array([2.,4.2]);end=o+np.array([6.,-3.]);line(ax,o,end,lw=4);ax.plot(*o,'o',c=RED);ax.plot([2,8],[4.2,4.2],c=INK,ls='--');c=(o+end)/2;arrow(ax,c,c+[0,-1.8],color=RED);text(ax,c[0]+.2,.7,'Mg');text(ax,2.1,4.6,'fixed O');text(ax,3.3,3.9,'theta');text(ax,7,2.8,'length l');return 'Hinged rod falls through theta below its initial horizontal'
  if key=='rolling_loop':
-  o=np.array([4.,2.5]);R=2.;r=.4;q=R-r;ax.add_patch(Circle(o,R,fill=False,ec=INK));c=o+[0,q];ax.add_patch(Circle(c,r,fc='#eff8f5',ec=TEAL));ax.plot(*o,'o',c=INK);line(ax,o,c,ls='--');text(ax,4.2,3,'q=R-r');arrow(ax,c,c+[0,-1.5],color=RED);text(ax,6.7,4.3,'N, Mg: inward');text(ax,6.7,3,'at top:\nv² >= gq');text(ax,6.7,1.5,'check friction\nelsewhere too');return 'Inside loop: the COM follows radius R-r, not R'
+  o=np.array([4.,2.5]);R=2.;r=.4;q=R-r;ax.add_patch(Circle(o,R,fill=False,ec=INK));c=o+[0,q];ax.add_patch(Circle(c,r,fc='#eff8f5',ec=TEAL));ax.plot(*o,'o',c=INK);line(ax,o,c,ls='--');text(ax,4.2,3,'q=R-r');arrow(ax,c,c+[0,-1.5],color=RED);text(ax,6.5,4.45,'N, Mg: inward');text(ax,6.5,2.95,'at top: v² >= g(R-r)');text(ax,6.7,1.5,'check friction\nelsewhere too');return 'Inside loop: the COM follows radius R-r, not R'
  raise ValueError(key)

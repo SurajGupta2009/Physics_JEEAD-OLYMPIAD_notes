@@ -5,7 +5,7 @@ import json,zipfile,zlib,hashlib,sys,platform
 from importlib.metadata import version
 from PIL import Image
 from pypdf import PdfWriter
-from pypdf.generic import NameObject,NumberObject,ArrayObject,ByteStringObject
+from pypdf.generic import NameObject,NumberObject,ArrayObject,ByteStringObject,DecodedStreamObject
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 ROOT=Path(__file__).resolve().parent
@@ -28,12 +28,13 @@ def build():
    im=Image.open(ROOT/(row['slug']+'.png'));assert im.mode=='P'
    palette=bytes(im.getpalette());objs=page['/Resources']['/XObject'].get_object()
    images=[v.get_object() for v in objs.values() if v.get_object().get('/Subtype')=='/Image'];assert len(images)==1
-   obj=images[0];obj._data=zlib.compress(im.tobytes(),9)
-   obj[NameObject('/Filter')]=NameObject('/FlateDecode')
-   obj[NameObject('/ColorSpace')]=ArrayObject([NameObject('/Indexed'),NameObject('/DeviceRGB'),NumberObject(len(palette)//3-1),ByteStringObject(palette)])
-   obj[NameObject('/BitsPerComponent')]=NumberObject(8)
-   for key in ['/DecodeParms','/Decode']:
-    if key in obj:del obj[key]
+   new_im=DecodedStreamObject();new_im._data=zlib.compress(im.tobytes(),9)
+   new_im[NameObject('/Type')]=NameObject('/XObject');new_im[NameObject('/Subtype')]=NameObject('/Image')
+   new_im[NameObject('/Width')]=NumberObject(im.width);new_im[NameObject('/Height')]=NumberObject(im.height)
+   new_im[NameObject('/Filter')]=NameObject('/FlateDecode')
+   new_im[NameObject('/ColorSpace')]=ArrayObject([NameObject('/Indexed'),NameObject('/DeviceRGB'),NumberObject(len(palette)//3-1),ByteStringObject(palette)])
+   new_im[NameObject('/BitsPerComponent')]=NumberObject(8)
+   k0=next(iter(objs.keys()));objs[k0]=writer._add_object(new_im)
   tmp=path.with_suffix('.tmp.pdf');writer.write(tmp);tmp.replace(path)
   with zipfile.ZipFile(ROOT/ZIPS[label],'w',zipfile.ZIP_DEFLATED) as z:
    # PNGs only; archive insertion order is the reading order, including in All.

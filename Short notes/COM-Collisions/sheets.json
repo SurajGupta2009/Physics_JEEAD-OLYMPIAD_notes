@@ -89,7 +89,7 @@
     ]
    },
    {
-    "title": "Standard shapes table (memorise; each is a two-line integral to re-.",
+    "title": "Standard shapes table (memorise; two-line integrals)",
     "items": [
      [
       "p",
@@ -102,7 +102,7 @@
     ]
    },
    {
-    "title": "Standard shapes table (memorise; each is a two-line integral to re-.",
+    "title": "Standard shapes table (memorise; two-line integrals)",
     "items": [
      [
       "p",
@@ -160,7 +160,7 @@
     ]
    },
    {
-    "title": "The negative-mass trick: cutting a hole is adding a negative piece (.",
+    "title": "The negative-mass trick: cutting a hole (cont.)",
     "items": [
      [
       "p",
@@ -173,7 +173,7 @@
     ]
    },
    {
-    "title": "The negative-mass trick: cutting a hole is adding a negative piece (.",
+    "title": "The negative-mass trick: cutting a hole (cont.)",
     "items": [
      [
       "p",
@@ -186,7 +186,7 @@
     ]
    },
    {
-    "title": "The negative-mass trick: cutting a hole is adding a negative piece (.",
+    "title": "The negative-mass trick: cutting a hole (cont.)",
     "items": [
      [
       "check",
@@ -194,7 +194,7 @@
      ],
      [
       "p",
-      "E1-style worked numbers (source E1): a plate made of two pieces: piece A mass 2 kg with COM at (1, 2) cm, piece B mass 3 kg with COM at (3, 1) cm: $X = (2(1) + 3(3))/5 = 2.2$ cm... precisely $11/5 = 2.2$; $Y = (2(2) + 3(1))/5 = 7/5 = 1.4$ cm. Source E1 prints 2.21 and 1.07 for its own geometry - the method is identical: weighted average of piece COMs."
+      "E1-style worked numbers (source E1): a plate made of two pieces: piece A mass 2 kg with COM at (1, 2) cm, piece B mass 3 kg with COM at (3, 1) cm: $X = (2(1) + 3(3))/5 = 11/5 = 2.2$ cm; $Y = (2(2) + 3(1))/5 = 7/5 = 1.4$ cm. Source E1 prints 2.21 and 1.07 for its own geometry - the method is identical: weighted average of piece COMs."
      ]
     ]
    }
@@ -302,7 +302,7 @@
      ],
      [
       "p",
-      "Explosions and recoil (source E2, Q2): a shell of mass $M$ bursts into fragments; the COM continues along the pre-burst trajectory. If a 4 kg mass moving east at 6 m/s explodes into 2 kg moving west at 3 m/s... momentum: $24 = 2(-3) + 2v$: $v = 15$ m/s east for the other 2 kg piece. Source Q2 answer:"
+      "Explosions and recoil (source E2, Q2): a shell of mass $M$ bursts into fragments; the COM continues along the pre-burst trajectory. If a 4 kg mass moving east at 6 m/s explodes into 2 kg moving west at 3 m/s, momentum gives $24 = 2(-3) + 2v \\Rightarrow v = 15$ m/s east for the other 2 kg piece."
      ],
      [
       "p",
@@ -427,7 +427,7 @@
     "items": [
      [
       "trap",
-      "Trap: forgetting a mass in $M$ (the classic half-included hanging chain - count only what moves... for chains use the flux ledger CM-18 instead). Trap: treating $v_{cm}$ as the velocity of every part after an explosion - only the MEAN is that."
+      "Trap: forgetting a mass in $M$ (the classic half-included hanging chain - count only the moving subsystem; for variable-mass chains use the flux ledger (CM-18)). Trap: treating $v_{cm}$ as the velocity of every part after an explosion - only the MEAN is that."
      ],
      [
       "check",
@@ -440,7 +440,7 @@
     ]
    },
    {
-    "title": "The standard conservation scenarios (source Q2, Q17, Q22, P22, P.",
+    "title": "Standard conservation scenarios (Q2, Q17, Q22, P22)",
     "items": [
      [
       "p",
@@ -453,7 +453,7 @@
     ]
    },
    {
-    "title": "The standard conservation scenarios (source Q2, Q17, Q22, P22, P.",
+    "title": "Standard conservation scenarios (Q2, Q17, Q22, P22)",
     "items": [
      [
       "p",
@@ -465,7 +465,7 @@
      ],
      [
       "check",
-      "Q2 audit: before $= 24$ kg m/s; after: piece 1 west at 3 m/s carries $-6$; the 2 kg piece must carry $+30$: $v = 15$ m/s east; COM speed before and after is the same $6$ m/s for a4 kg system... $24/4 = 6$ ok unchanged ok."
+      "Q2 audit: before $= 24$ kg m/s; after: piece 1 west at 3 m/s carries $-6$; the 2 kg piece must carry $+30$: $v = 15$ m/s east; COM speed before and after is the same $24/4 = 6$ m/s for the 4 kg system."
      ]
     ]
    },
@@ -532,7 +532,7 @@
     "items": [
      [
       "p",
-      "(a) 5 kg cart at 4 m/s picks up 5 kg dropped from rest: $v = 20/10 = 2$ m/s. (b) 3 kg at 6 east collides and sticks to 2 kg at 4 west: $18 - 8 = 10 = 5v$: $v = 2$ m/s east. (c) 0.5 kg ball at 10 hits 1.5 kg at rest, $e = 0.5$: $v_2 = (1.5)(0.5)(10)/2 = 3.75$... precisely $v_2 = (1+e)m_1u_1/(m_1+m_2) = 1.5(0.5)(10)/2 = 3.75$ m/s; $v_1 = (0.5-0.75)10/2 = -1.25$ m/s (rebounds)."
+      "(a) 5 kg cart at 4 m/s picks up 5 kg dropped from rest: $v = 20/10 = 2$ m/s. (b) 3 kg at 6 east collides and sticks to 2 kg at 4 west: $18 - 8 = 10 = 5v$: $v = 2$ m/s east. (c) 0.5 kg ball at 10 hits 1.5 kg at rest, $e = 0.5$: $v_2 = (1+e)m_1u_1/(m_1+m_2) = 1.5(0.5)(10)/2 = 3.75$ m/s; $v_1 = (0.5-0.75)10/2 = -1.25$ m/s (rebounds)."
      ],
      [
       "p",
@@ -545,7 +545,7 @@
     "items": [
      [
       "check",
-      "drill (c) energy: $K_i = 25$; $K_f = 0.5(0.5)(1.56) + 0.5(1.5)(14.06) = 0.39 + 10.55 = 10.94$ J; loss $= 14.06 = \\frac{1}{2}(0.375)(25)(1-0.25)$... $\\mu = 0.375$, $u_{rel} = 10$: $\\frac{1}{2}(0.375)(100)(0.75) = 14.06$ ok."
+      "drill (c) energy: $K_i = 25$; $K_f = 0.5(0.5)(1.56) + 0.5(1.5)(14.06) = 0.39 + 10.55 = 10.94$ J; with $\\mu = 0.375$, $u_{rel} = 10$, loss $= \\frac{1}{2}\\mu u_{rel}^2(1-e^2) = \\frac{1}{2}(0.375)(100)(0.75) = 14.06$ J."
      ],
      [
       "p",
@@ -569,7 +569,7 @@
   "takeaway": "Elastic means e = 1; sticking means e = 0; e measures separation speed over approach speed along the line of impact.",
   "cards": [
    {
-    "title": "Elastic, inelastic, sticking: one number e prices every collision (con.",
+    "title": "Elastic, inelastic, sticking: restitution e (cont.)",
     "items": [
      [
       "p",
@@ -582,7 +582,7 @@
     ]
    },
    {
-    "title": "Elastic, inelastic, sticking: one number e prices every collision (con.",
+    "title": "Elastic, inelastic, sticking: restitution e (cont.)",
     "items": [
      [
       "p",
@@ -644,7 +644,7 @@
   "takeaway": "Elastic means e = 1; sticking means e = 0; e measures separation speed over approach speed along the line of impact.",
   "cards": [
    {
-    "title": "Impulse of deformation and impulse of reformation (Cengage 1.22.",
+    "title": "Impulse of deformation & reformation (Cengage 1.22)",
     "items": [
      [
       "p",
@@ -653,7 +653,7 @@
     ]
    },
    {
-    "title": "Impulse of deformation and impulse of reformation (Cengage 1.22.",
+    "title": "Impulse of deformation & reformation (Cengage 1.22)",
     "items": [
      [
       "p",
@@ -687,7 +687,7 @@
      ],
      [
       "p",
-      "Momentum: $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$. Restitution: $v_2 - v_1 = -e(u_1 - u_2)$. Solve the pair for the master formulas: $v_1 = \\dfrac{(m_1 - e m_2)u_1 + (1+e)m_2 u_2}{m_1 + m_2}$ and $v_2 = \\dfrac{(1+e)m_1 u_1 + (m_2 - e m_1)u_2}{m_1 + m_2}$."
+      "Momentum: $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$. Restitution: $v_2 - v_1 = e(u_1 - u_2)$. Solve the pair for the master formulas: $v_1 = \\dfrac{(m_1 - e m_2)u_1 + (1+e)m_2 u_2}{m_1 + m_2}$ and $v_2 = \\dfrac{(1+e)m_1 u_1 + (m_2 - e m_1)u_2}{m_1 + m_2}$."
      ],
      [
       "p",
@@ -876,7 +876,7 @@
     "items": [
      [
       "p",
-      "Ball A of mass $m$ at speed $u$ strikes ball B (mass $m$) at rest; after, A moves at $u/3$ at some angle... source Q11's configuration: use the master formulas + the 90-degree theorem (CM-12) to pin the outcome: for equal masses elastic 2-D, $\\theta_1 + \\theta_2 = 90$ and $v_1 = u\\cos\\theta_1$, $v_2 = u\\sin\\theta_1$; given one post speed or angle, the rest follows from the momentum triangle."
+      "Ball A of mass $m$ at speed $u$ strikes ball B (mass $m$) at rest; after, A moves at $u/3$ at angle $\\theta_1$ (Q11): use the master formulas + the 90-degree theorem (CM-12) to pin the outcome: for equal masses elastic 2-D, $\\theta_1 + \\theta_2 = 90$ and $v_1 = u\\cos\\theta_1$, $v_2 = u\\sin\\theta_1$; given one post speed or angle, the rest follows from the momentum triangle."
      ],
      [
       "p",
@@ -908,7 +908,7 @@
      ],
      [
       "p",
-      "2 kg at 6 vs 2 kg rest. $e = 1$: $v_1 = 0$, $v_2 = 6$ (exchange). $e = 0.5$: $v_1 = 1.5$, $v_2 = 4.5$; loss $= 27 - (2.25 + 20.25) = 4.5$ J... $K_i = 36$; $K_f = 2.25 + 20.25 = 22.5$; loss 13.5 J $= \\frac{1}{2}(1)(36)(0.75) = 13.5$ ok. $e = 0$: both at 3 m/s; loss $= 18 = K_{rel}$ ok."
+      "2 kg at 6 vs 2 kg rest. $e = 1$: $v_1 = 0$, $v_2 = 6$ (exchange). $e = 0.5$: $v_1 = 1.5$, $v_2 = 4.5$; $K_i = 36$ J, $K_f = 2.25 + 20.25 = 22.5$ J, so loss $= 13.5$ J $= \\frac{1}{2}(1)(36)(1-0.25)$. $e = 0$: both at 3 m/s; loss $= 18 = K_{rel}$ ok."
      ],
      [
       "p",
@@ -1071,7 +1071,7 @@
     ]
    },
    {
-    "title": "Two impulses inside every collision: deformation and reformation (.",
+    "title": "Deformation and reformation impulses (cont.)",
     "items": [
      [
       "p",
@@ -1084,7 +1084,7 @@
     ]
    },
    {
-    "title": "Two impulses inside every collision: deformation and reformation (.",
+    "title": "Deformation and reformation impulses (cont.)",
     "items": [
      [
       "p",
@@ -1101,7 +1101,7 @@
     ]
    },
    {
-    "title": "Two impulses inside every collision: deformation and reformation (.",
+    "title": "Deformation and reformation impulses (cont.)",
     "items": [
      [
       "why",
@@ -3405,7 +3405,7 @@
     ]
    },
    {
-    "title": "The falling chain: the scale reads THREE times the landed weight (c.",
+    "title": "Falling chain: scale reads THREE times landed weight (cont.)",
     "items": [
      [
       "p",
@@ -3418,7 +3418,7 @@
     ]
    },
    {
-    "title": "The falling chain: the scale reads THREE times the landed weight (c.",
+    "title": "Falling chain: scale reads THREE times landed weight (cont.)",
     "items": [
      [
       "p",
@@ -3431,7 +3431,7 @@
     ]
    },
    {
-    "title": "The falling chain: the scale reads THREE times the landed weight (c.",
+    "title": "Falling chain: scale reads THREE times landed weight (cont.)",
     "items": [
      [
       "why",
@@ -3820,7 +3820,7 @@
      ],
      [
       "p",
-      "When the force history is unknown, bound it: $J = \\Delta p$ is exact; if the stop distance $d$ is known, the average force satisfies $\\bar F = \\frac{mv^2}{2d}$ (work-energy) - often more useful than the time-average. Example: 0.15 kg ball at 25 m/s stopped in 0.5 m: $\\bar F = \\frac{0.15(625)}{1} = 93.8$ N... precisely $\\frac{mv^2}{2d} = 93.75$ N."
+      "When the force history is unknown, bound it: $J = \\Delta p$ is exact; if the stop distance $d$ is known, the average force satisfies $\\bar F = \\frac{mv^2}{2d}$ (work-energy) - often more useful than the time-average. Example: 0.15 kg ball at 25 m/s stopped in 0.5 m: $\\bar F = \\frac{mv^2}{2d} = \\frac{0.15 \\times 625}{2 \\times 0.5} = 93.75$ N."
      ]
     ]
    },
@@ -4381,7 +4381,7 @@
   "takeaway": "Jet on a plate: F = rho A v^2 normal component; on a moving plate the relative speed (v - u) does the work.",
   "cards": [
    {
-    "title": "Jet on a plate: F = rho A v^2, and the moving-plate power game (co.",
+    "title": "Jet on a plate: F = rho A v^2 & power game (cont.)",
     "items": [
      [
       "p",
@@ -4398,7 +4398,7 @@
     ]
    },
    {
-    "title": "Jet on a plate: F = rho A v^2, and the moving-plate power game (co.",
+    "title": "Jet on a plate: F = rho A v^2 & power game (cont.)",
     "items": [
      [
       "p",
@@ -4411,7 +4411,7 @@
     ]
    },
    {
-    "title": "Jet on a plate: F = rho A v^2, and the moving-plate power game (co.",
+    "title": "Jet on a plate: F = rho A v^2 & power game (cont.)",
     "items": [
      [
       "check",

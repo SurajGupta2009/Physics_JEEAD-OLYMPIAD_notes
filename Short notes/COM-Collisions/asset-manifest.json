@@ -4,40 +4,40 @@
     "sha256": "4f6d5236e52df0e6d51bdb56acfaac2f9e67cbc8537658a027969aad7cb68181"
   },
   "JEE-02-bodies.png": {
-    "bytes": 341056,
-    "sha256": "2f294a6b260c3e0551a1eef300d599eb7ca82683c481192b6d2b814b729332c8"
+    "bytes": 229721,
+    "sha256": "8a5bc97940f13ecbd250cf9aefb19461737565b05b8ce1a5bd072fa25146c30d"
   },
   "JEE-03-bodies.png": {
-    "bytes": 323221,
-    "sha256": "4482cd6361f86ab4ea519bbe14b50be66c15d503739498c3569bf91cb2391720"
+    "bytes": 211887,
+    "sha256": "0ff5d6c873eb02b7b06d19beb97852202bdef03afcd589447ce2639fabc6e6d7"
   },
   "JEE-04-hole.png": {
     "bytes": 302844,
     "sha256": "79daca2f90faee4f05c3d641670f9371a236828d936e5232dc0ea98111fe702e"
   },
   "JEE-05-hole.png": {
-    "bytes": 316287,
-    "sha256": "e575066a6cb7efe71b0fbe579ed91d93e8c01da1340cde704de326a56d14ae6e"
+    "bytes": 210514,
+    "sha256": "1be909ead6914154942288d49eb74e336907f14facab0dcfbc284d9c2c9d9e1e"
   },
   "JEE-06-explosion.png": {
     "bytes": 259353,
     "sha256": "c16e88db1b8bda78352639c258b370f056b315bb321e76032d77200e32f80781"
   },
   "JEE-07-explosion.png": {
-    "bytes": 338589,
-    "sha256": "02ddbd7072e9132575d131f890300b493ea5edd5fd1faf0d777fe7e5622183c5"
+    "bytes": 231547,
+    "sha256": "dca9108bb0a37757eb027c87da5d2e61d01cde44fd57be29312efd8a46ceadbf"
   },
   "JEE-08-recoil.png": {
-    "bytes": 308286,
-    "sha256": "7cd6b9710a6ee0d39ea7e66643dbc9c0e296bad6330ae2ddda92f02ece79a854"
+    "bytes": 199003,
+    "sha256": "952379cb66c6608026ed33afd1947b765ff1e2f3486b8c7e72d2e39bc89fd276"
   },
   "JEE-09-classify.png": {
-    "bytes": 324637,
-    "sha256": "eb9ec3d27d12b66b3700e994ad0d1b055ac89a87a810d476150e9c131bca79cd"
+    "bytes": 222545,
+    "sha256": "5bd809b739baa1d065ebdcd5643b2c8625e69fa7086b0c2b4d4cf523de70964b"
   },
   "JEE-10-classify.png": {
-    "bytes": 253548,
-    "sha256": "360515e9b79d330cb02a3dd7155dcd41bee9af99bbfe25c6d3bb07fcce5fd88d"
+    "bytes": 177874,
+    "sha256": "64e8c336e86c716eb70073e626284b4327aa3a3a614e4c59b1d35d9fcdb38deb"
   },
   "JEE-11-coll1d.png": {
     "bytes": 249063,
@@ -48,20 +48,20 @@
     "sha256": "a1f318940263b7b017c32d7227e4afdba172c3168b92960a411d1b16aa4768c4"
   },
   "JEE-13-coll1d.png": {
-    "bytes": 301981,
-    "sha256": "14c4ad6e43474dabafb0e6c76a8e71e8346b83641e897160b2eb39ba86ceb33c"
+    "bytes": 205602,
+    "sha256": "831058a1d4e93f3066c6f4e1b4c9688ff3adfad59c7fae6ae8aaf67754fd51de"
   },
   "JEE-14-collcases.png": {
-    "bytes": 317445,
-    "sha256": "92d8dc40590f978d44731dc0dac05458413e9bd8ef73736a6d46c897daefb92f"
+    "bytes": 215847,
+    "sha256": "b66370042f4f92e916dd065eb4631e702b752cd64b1cbb7dad4fac90d0df0ac0"
   },
   "JEE-15-eloss.png": {
     "bytes": 326265,
     "sha256": "d6cf7420d9dcdb8ae5b44ac2e8eae4c85b46b14d5e59d1e5835dba0747227c38"
   },
   "JEE-16-eloss.png": {
-    "bytes": 311856,
-    "sha256": "2697213fb89a44cb746cbc7b254d0f8e745c7eae13173030f35febd1dfbfde7d"
+    "bytes": 201053,
+    "sha256": "a293ec0915c6f9f8d1a7a0f3956ac759dafda96966e91aa1d3a93c7450a89793"
   },
   "JEE-17-defo.png": {
     "bytes": 285476,
@@ -196,8 +196,8 @@
     "sha256": "f62bcab5d3e04914c9025d3d04b3cecd8f8c167c0a45ba85d771d02f58d90ea0"
   },
   "Olympiad-01-chain3.png": {
-    "bytes": 294502,
-    "sha256": "e80e26490a4861d00f55cfb6fddb9539f0c4ed7a9e3988ae065744e07ec77886"
+    "bytes": 202759,
+    "sha256": "17907f1287825966a356525481a41b54219c5437dca1306178390b5607cb45d9"
   },
   "Olympiad-02-chain3.png": {
     "bytes": 315577,
@@ -220,8 +220,8 @@
     "sha256": "ceab67b8ac6736883a8c62adecec2096f54e9a9c08f3fa9a7e45b6d0095fe4ca"
   },
   "Olympiad-07-impapprox.png": {
-    "bytes": 288458,
-    "sha256": "e3fe72f636a1b72a354b786bec336b7f3c7fcbadd08a52fa2f135148b47f47c6"
+    "bytes": 196912,
+    "sha256": "d65303dbf4478190b71167f923e041bbedaffce2d37bb3e194eb0353ac8e8bb6"
   },
   "Olympiad-08-platform.png": {
     "bytes": 260434,
@@ -256,8 +256,8 @@
     "sha256": "5aac4d7ac05c34494ecae9606ba82e6ed420a1e62d6410cc922bf1cac29cf235"
   },
   "Olympiad-16-jet.png": {
-    "bytes": 304910,
-    "sha256": "e8c4da03d7a33533ad91df7bda3a22d1565fc13d0f9280b54b65b9956b9b586a"
+    "bytes": 206401,
+    "sha256": "462533ece50c2a972c23743348eed461b85d5f61d85ebc4ee9b39438a7ae80bc"
   },
   "Olympiad-17-jet.png": {
     "bytes": 270280,
@@ -300,27 +300,27 @@
     "sha256": "e02f66cf4f62470c436e5ecaa2be9339dec68c17a47ac5f5144f3970ce26da33"
   },
   "com-collisions-all-pngs.zip": {
-    "bytes": 20450268,
-    "sha256": "a30bf5f2a9ac582d486fa8f986bc343478a4ecf2dcc4e398a83f2d16264b02a7"
+    "bytes": 23162566,
+    "sha256": "8685e334ee55a00bdf5eab4372f7460c4c7ee66377353bea3fc7bfd769613dbf"
   },
   "com-collisions-jee-pngs.zip": {
-    "bytes": 13565931,
-    "sha256": "d58c77f0031b41c385ba39da55346f029212ac1d199c2055f54c9c76338df7c9"
+    "bytes": 15672001,
+    "sha256": "4d6a3c6c488c9d560fa396dd6e0eeb2ff9acd09f738aaccb06bf0f184c2e79c2"
   },
   "com-collisions-jee.pdf": {
-    "bytes": 14336001,
-    "sha256": "a6bb04ff19dba7f337e5b7fa7e2fb0352e0403afa466c114edd54d7ff9e1a97c"
+    "bytes": 16424188,
+    "sha256": "4c0132fc5879e058b5001e47c21e0243dd88498c4d0ae8f90669fbf1675b71d0"
   },
   "com-collisions-olympiad-pngs.zip": {
-    "bytes": 6884359,
-    "sha256": "977cd4ec8adeaef724462d3a3c7b8ffb6ce722ac856ae374d4e103780300ea0a"
+    "bytes": 7490587,
+    "sha256": "5099786a8be4e1fd8c3f1816af60f8feaa7c2465fb18512ee182cd28d426d9bd"
   },
   "com-collisions-olympiad.pdf": {
-    "bytes": 7304650,
-    "sha256": "151a984cd29d6f13133b481a5d7ad3987b5e5c9a6cc4ed9efa34db5ead9e419b"
+    "bytes": 7904402,
+    "sha256": "d26483f36f424aeff933e911ce83136c009b346fcc8d6c47bc2b1e5a6549170d"
   },
   "com-collisions-short-notes.pdf": {
-    "bytes": 21639911,
-    "sha256": "6a4e861c2938103dcbcec4667f5ef9d986bd69aa7ac44a4b46af0230dfb8d9b9"
+    "bytes": 24327787,
+    "sha256": "7b8b2537cc9367b9b3a9c25a80d0d98c2dfdb2cbc591f8e8f78032d7af29660b"
   }
 }
