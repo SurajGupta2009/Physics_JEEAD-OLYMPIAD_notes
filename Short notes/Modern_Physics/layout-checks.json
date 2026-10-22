@@ -127,6 +127,86 @@
       "figure_h": 886
     },
     {
+      "slug": "JEE-16-nuclear-size",
+      "main_px": 1802,
+      "main_available": 2062,
+      "rail_px": 873,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-17-binding-curve",
+      "main_px": 1765,
+      "main_available": 2062,
+      "rail_px": 844,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-18-valley",
+      "main_px": 1801,
+      "main_available": 2062,
+      "rail_px": 811,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-19-q-value",
+      "main_px": 1667,
+      "main_available": 2062,
+      "rail_px": 932,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-20-beta",
+      "main_px": 1857,
+      "main_available": 2062,
+      "rail_px": 890,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-21-decay-law",
+      "main_px": 1819,
+      "main_available": 2062,
+      "rail_px": 977,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-22-dating",
+      "main_px": 1835,
+      "main_available": 2062,
+      "rail_px": 862,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-23-chains",
+      "main_px": 1772,
+      "main_available": 2062,
+      "rail_px": 728,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-24-fission",
+      "main_px": 1783,
+      "main_available": 2062,
+      "rail_px": 834,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-25-fusion",
+      "main_px": 1824,
+      "main_available": 2062,
+      "rail_px": 834,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
       "slug": "Olympiad-01-xray-continuous",
       "main_px": 1811,
       "main_available": 2062,
@@ -243,6 +323,86 @@
       "main_px": 1635,
       "main_available": 2062,
       "rail_px": 897,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-16-geiger-nuttall",
+      "main_px": 1790,
+      "main_available": 2062,
+      "rail_px": 816,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-17-fission-barrier",
+      "main_px": 1837,
+      "main_available": 2062,
+      "rail_px": 826,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-18-valley-floor",
+      "main_px": 1738,
+      "main_available": 2062,
+      "rail_px": 811,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-19-transient",
+      "main_px": 1771,
+      "main_available": 2062,
+      "rail_px": 899,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-20-solar-neutrinos",
+      "main_px": 1864,
+      "main_available": 2062,
+      "rail_px": 720,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-21-reactor-day",
+      "main_px": 1834,
+      "main_available": 2062,
+      "rail_px": 777,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-22-counting",
+      "main_px": 1792,
+      "main_available": 2062,
+      "rail_px": 808,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-23-isochron",
+      "main_px": 1797,
+      "main_available": 2062,
+      "rail_px": 777,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-24-neutron-waves",
+      "main_px": 1847,
+      "main_available": 2062,
+      "rail_px": 826,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-25-solar-lifetime",
+      "main_px": 1806,
+      "main_available": 2062,
+      "rail_px": 826,
       "figure_y": 2310,
       "figure_h": 886
     }

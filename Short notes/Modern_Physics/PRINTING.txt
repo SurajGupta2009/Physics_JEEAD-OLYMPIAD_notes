@@ -6,11 +6,12 @@ Scaling:     Fit / Fit to page  (NOT Fill, NOT Crop, NOT 100 % on a Letter print
 Margins:     none / minimum — the sheet already carries a 9–10 mm safe margin
 Colour:      required (navy prose, teal headings, yellow results, red warnings)
 Paper:       plain 80–100 gsm is enough; 120 gsm if you write on them
-Duplex:      long edge if you print both parts as one booklet
+Duplex:      long edge if you print both parts as one booklet;
+             Parts I and II are numbered independently (01/25 … 25/25 each)
 
-PDF:         modern-physics-short-notes.pdf  (30 pages, bookmarked)
-             modern-physics-jee.pdf           (15 pages, Part I)
-             modern-physics-olympiad.pdf      (15 pages, Part II)
+PDF:         modern-physics-short-notes.pdf  (50 pages, bookmarked)
+             modern-physics-jee.pdf           (25 pages, Part I)
+             modern-physics-olympiad.pdf      (25 pages, Part II)
 Bookmarks:   one per sheet, "JEE 07: <question>" style, use them in the sidebar.
 
 PNG:         print at 300 DPI, "actual size", no resampling. 2480 x 3508 px is

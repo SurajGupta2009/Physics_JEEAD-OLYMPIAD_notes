@@ -35,7 +35,7 @@ Short notes/
 | Electrostatics | [Browse](Electrostatics/index.html) | [Index](Electrostatics/README.md) | [ZIP](Electrostatics/electrostatics-all-pngs.zip) | [PDF](Electrostatics/electrostatics-short-notes.pdf) |
 | Elasticity | [Browse](Elasticity/index.html) | [Index](Elasticity/README.md) | [ZIP](Elasticity/elasticity-all-pngs.zip) | [PDF](Elasticity/elasticity-short-notes.pdf) |
 | Fluid mechanics | [Browse](Fluid_Mechanics/index.html) | [Index](Fluid_Mechanics/README.md) | [ZIP](Fluid_Mechanics/fluid-mechanics-all-pngs.zip) | [PDF](Fluid_Mechanics/fluid-mechanics-short-notes.pdf) |
-| Modern physics (part A: atomic, photon, X-rays) | [Browse](Modern_Physics/index.html) | [Index](Modern_Physics/README.md) | [ZIP](Modern_Physics/modern-physics-all-pngs.zip) | [PDF](Modern_Physics/modern-physics-short-notes.pdf) |
+| Modern physics (atomic, photon, X-rays, nuclear) | [Browse](Modern_Physics/index.html) | [Index](Modern_Physics/README.md) | [ZIP](Modern_Physics/modern-physics-all-pngs.zip) | [PDF](Modern_Physics/modern-physics-short-notes.pdf) |
 | Sound waves | [Browse](Sound-waves/index.html) | [Index](Sound-waves/README.md) | [ZIP](Sound-waves/sound-all-pngs.zip) | [PDF](Sound-waves/sound-short-notes.pdf) |
 | COM & collisions | [Browse](COM-Collisions/index.html) | [Index](COM-Collisions/README.md) | [ZIP](COM-Collisions/com-collisions-all-pngs.zip) | [PDF](COM-Collisions/com-collisions-short-notes.pdf) |
 
