@@ -1,0 +1,617 @@
+{
+  "checks": 822,
+  "model_checks": 122,
+  "models": [
+    {
+      "name": "rope work, 120 N at 35 over 6 m (J)",
+      "value": 589.7894718880741,
+      "expected": 590.0
+    },
+    {
+      "name": "net work on the crate (J)",
+      "value": 289.7894718880741,
+      "expected": 290.0
+    },
+    {
+      "name": "F = 6x area to 2 m (J)",
+      "value": 12.0,
+      "expected": 12.0
+    },
+    {
+      "name": "triangle area 12 N over 2 m (J)",
+      "value": 12.0,
+      "expected": 12.0
+    },
+    {
+      "name": "incline gravity work, 5 kg 4 m 30 (J)",
+      "value": 98.0,
+      "expected": 98.0
+    },
+    {
+      "name": "incline friction work (J)",
+      "value": 42.4352447854375,
+      "expected": 42.4
+    },
+    {
+      "name": "incline exit speed (m/s)",
+      "value": 4.715930449020639,
+      "expected": 4.72
+    },
+    {
+      "name": "braking work, 1200 kg from 20 (kJ)",
+      "value": 240.0,
+      "expected": 240.0
+    },
+    {
+      "name": "braking force over 55 m (kN)",
+      "value": 4.363636363636364,
+      "expected": 4.36
+    },
+    {
+      "name": "train-frame KE of the 2 kg ball (J)",
+      "value": 4.0,
+      "expected": 4.0
+    },
+    {
+      "name": "ground-frame KE of the 2 kg ball (J)",
+      "value": 25.0,
+      "expected": 25.0
+    },
+    {
+      "name": "sliding distance, mu .35 from 8 m/s (m)",
+      "value": 9.32944606413994,
+      "expected": 9.33
+    },
+    {
+      "name": "friction heat over that slide (J)",
+      "value": 95.99999999999999,
+      "expected": 96.0
+    },
+    {
+      "name": "steel slider warming, half the heat (K)",
+      "value": 0.26666666666666666,
+      "expected": 0.267
+    },
+    {
+      "name": "crane average power (kW)",
+      "value": 5.880000000000001,
+      "expected": 5.88
+    },
+    {
+      "name": "crane instantaneous power (kW)",
+      "value": 5.880000000000001,
+      "expected": 5.88
+    },
+    {
+      "name": "constant power 800 W, v at 5 s (m/s)",
+      "value": 2.8284271247461903,
+      "expected": 2.83
+    },
+    {
+      "name": "constant power, v at 20 s (m/s)",
+      "value": 5.656854249492381,
+      "expected": 5.66
+    },
+    {
+      "name": "constant power, time to 20 m/s (s)",
+      "value": 250.0,
+      "expected": 250.0
+    },
+    {
+      "name": "climb power, 1200 kg 6 deg 25 m/s (kW)",
+      "value": 45.73136820069012,
+      "expected": 45.7
+    },
+    {
+      "name": "slope share of that power (kW)",
+      "value": 30.73136820069012,
+      "expected": 30.7
+    },
+    {
+      "name": "unit-square loop work of (3y, 0) (J)",
+      "value": 3.0,
+      "expected": 3.0
+    },
+    {
+      "name": "book potential above the table (J)",
+      "value": 29.400000000000002,
+      "expected": 29.4
+    },
+    {
+      "name": "book potential above the floor (J)",
+      "value": 47.04,
+      "expected": 47.0
+    },
+    {
+      "name": "spring energy, k 320 x .12 (J)",
+      "value": 2.304,
+      "expected": 2.3
+    },
+    {
+      "name": "ball launched by that spring (m/s)",
+      "value": 4.2932505167995965,
+      "expected": 4.29
+    },
+    {
+      "name": "hiker work against gravity (kJ)",
+      "value": 548.8,
+      "expected": 549.0
+    },
+    {
+      "name": "ramp exit speed, 2.2 m drop (m/s)",
+      "value": 6.566582063752802,
+      "expected": 6.57
+    },
+    {
+      "name": "projectile drop time, 1.4 m (s)",
+      "value": 0.5345224838248488,
+      "expected": 0.535
+    },
+    {
+      "name": "range after that drop (m)",
+      "value": 3.509985754956849,
+      "expected": 3.51
+    },
+    {
+      "name": "U(6) for 2x^2 - 8x (J)",
+      "value": 24.0,
+      "expected": 24.0
+    },
+    {
+      "name": "other turning point of that well (m)",
+      "value": -2.0,
+      "expected": -2.0
+    },
+    {
+      "name": "speed at the well bottom (m/s)",
+      "value": 11.313708498984761,
+      "expected": 11.3
+    },
+    {
+      "name": "U_xx of x^3 - 3x at 1 (J/m2)",
+      "value": 6.0,
+      "expected": 6.0
+    },
+    {
+      "name": "bead loop speed at the top (m/s)",
+      "value": 3.1304951684997055,
+      "expected": 3.13
+    },
+    {
+      "name": "bead loop normal at the top (N)",
+      "value": 2.94,
+      "expected": 2.94
+    },
+    {
+      "name": "spring pair energy, .2 m stretch (J)",
+      "value": 4.0,
+      "expected": 4.0
+    },
+    {
+      "name": "spring pair energy, .1 m stretch (J)",
+      "value": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "pump useful power, .05 m3/s 12 m (kW)",
+      "value": 5.880000000000001,
+      "expected": 5.88
+    },
+    {
+      "name": "pump efficiency",
+      "value": 0.6533333333333333,
+      "expected": 0.653
+    },
+    {
+      "name": "chain pull, lambda 2 x 2 v .8 (N)",
+      "value": 40.480000000000004,
+      "expected": 40.5
+    },
+    {
+      "name": "chain power at that instant (W)",
+      "value": 32.38400000000001,
+      "expected": 32.4
+    },
+    {
+      "name": "chain momentum loss rate (W)",
+      "value": 1.0240000000000002,
+      "expected": 1.02
+    },
+    {
+      "name": "spring launch energy, k 400 x .15 (J)",
+      "value": 4.5,
+      "expected": 4.5
+    },
+    {
+      "name": "spring launch slide, mu .25 (m)",
+      "value": 1.530612244897959,
+      "expected": 1.53
+    },
+    {
+      "name": "incline plus spring, available energy (J)",
+      "value": 40.155110694338276,
+      "expected": 40.1
+    },
+    {
+      "name": "spring compression at the foot (m)",
+      "value": 0.3166228039797513,
+      "expected": 0.317
+    },
+    {
+      "name": "300 rpm in rad/s",
+      "value": 31.41592653589793,
+      "expected": 31.4
+    },
+    {
+      "name": "rim speed of a .35 m wheel (m/s)",
+      "value": 10.995574287564276,
+      "expected": 11.0
+    },
+    {
+      "name": "angle turned in 3 s at 300 rpm (rad)",
+      "value": 94.24777960769379,
+      "expected": 94.2
+    },
+    {
+      "name": "spin-up alpha, 4 to 20 in 8 s (rad/s2)",
+      "value": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "spin-up angle, no-time equation (rad)",
+      "value": 96.0,
+      "expected": 96.0
+    },
+    {
+      "name": "v = omega r_perp, 12 rad/s at .5 m (m/s)",
+      "value": 6.0,
+      "expected": 6.0
+    },
+    {
+      "name": "roundabout acceleration, 12.5 m/s on 60 m (m/s2)",
+      "value": 2.6041666666666665,
+      "expected": 2.6
+    },
+    {
+      "name": "roundabout mu",
+      "value": 0.2657312925170068,
+      "expected": 0.266
+    },
+    {
+      "name": "CM speed of the sticking pair (m/s)",
+      "value": 3.0,
+      "expected": 3.0
+    },
+    {
+      "name": "CM kinetic energy of that pair (J)",
+      "value": 18.0,
+      "expected": 18.0
+    },
+    {
+      "name": "energy lost in the sticking collision (J)",
+      "value": 6.0,
+      "expected": 6.0
+    },
+    {
+      "name": "reduced mass of 2 kg and 1 kg",
+      "value": 0.6666666666666666,
+      "expected": 0.667
+    },
+    {
+      "name": "relative KE in the CM frame (J)",
+      "value": 3.0,
+      "expected": 3.0
+    },
+    {
+      "name": "effective potential, Earth at 7000 km (1e7 J/kg)",
+      "value": -5.694285714285714,
+      "expected": -5.69
+    },
+    {
+      "name": "orbital KE term, same radius (1e7 J/kg)",
+      "value": 2.847142857142857,
+      "expected": 2.85
+    },
+    {
+      "name": "restitution from 1.15 over 1.8 m",
+      "value": 0.7993052538854533,
+      "expected": 0.8
+    },
+    {
+      "name": "bounce total distance, h 1.8 e .8 (m)",
+      "value": 8.200000000000001,
+      "expected": 8.2
+    },
+    {
+      "name": "bounce total time, h 1.8 e .8 (s)",
+      "value": 5.454823740581937,
+      "expected": 5.45
+    },
+    {
+      "name": "bounce total distance, h 10 e .5 (m)",
+      "value": 16.666666666666668,
+      "expected": 16.7
+    },
+    {
+      "name": "bounce total time, h 10 e .5 (s)",
+      "value": 4.285714285714286,
+      "expected": 4.29
+    },
+    {
+      "name": "sphere down 2 m (m/s)",
+      "value": 5.291502622129181,
+      "expected": 5.29
+    },
+    {
+      "name": "disc down 2 m (m/s)",
+      "value": 5.112077203381551,
+      "expected": 5.11
+    },
+    {
+      "name": "ring down 2 m (m/s)",
+      "value": 4.427188724235731,
+      "expected": 4.43
+    },
+    {
+      "name": "block on a 4 kg wedge, u squared (m2/s2)",
+      "value": 11.529411764705882,
+      "expected": 11.53
+    },
+    {
+      "name": "block relative speed on the wedge (m/s)",
+      "value": 3.395498750508662,
+      "expected": 3.39
+    },
+    {
+      "name": "wedge recoil speed (m/s)",
+      "value": 0.5871652237658495,
+      "expected": 0.587
+    },
+    {
+      "name": "block ground speed on the wedge (m/s)",
+      "value": 2.8964172696626433,
+      "expected": 2.9
+    },
+    {
+      "name": "surface energy of 1 kg (1e7 J/kg)",
+      "value": -6.2564746507612625,
+      "expected": -6.26
+    },
+    {
+      "name": "400 km orbit energy term (1e7 J/kg)",
+      "value": -2.943435238517206,
+      "expected": -2.94
+    },
+    {
+      "name": "launch energy to 400 km (MJ/kg)",
+      "value": 33.13039412244056,
+      "expected": 33.1
+    },
+    {
+      "name": "ratio to escape",
+      "value": 0.5295377344557672,
+      "expected": 0.529
+    },
+    {
+      "name": "chain pull, lambda 2 x 1.2 v 1.5 (N)",
+      "value": 28.02,
+      "expected": 28.0
+    },
+    {
+      "name": "chain loss rate at 1.5 m/s (W)",
+      "value": 3.375,
+      "expected": 3.375
+    },
+    {
+      "name": "hoop critical omega, R .4 (rad/s)",
+      "value": 4.949747468305833,
+      "expected": 4.95
+    },
+    {
+      "name": "bead seat angle at 5 rad/s",
+      "value": 11.478340954533547,
+      "expected": 11.4
+    },
+    {
+      "name": "restitution from 1.08 over 3 m",
+      "value": 0.6000000000000001,
+      "expected": 0.6
+    },
+    {
+      "name": "energy kept after that bounce",
+      "value": 0.36000000000000004,
+      "expected": 0.36
+    },
+    {
+      "name": "flywheel omega at 6 s, I 8 P 300 (rad/s)",
+      "value": 21.213203435596427,
+      "expected": 21.2
+    },
+    {
+      "name": "flywheel time to 40 rad/s (s)",
+      "value": 21.333333333333332,
+      "expected": 21.3
+    },
+    {
+      "name": "pseudo work, .2 kg 4 m/s2 over .25 m (J)",
+      "value": 0.2,
+      "expected": 0.2
+    },
+    {
+      "name": "ball speed in the cart frame (m/s)",
+      "value": 1.4142135623730951,
+      "expected": 1.41
+    },
+    {
+      "name": "curl of (2xy, x^2) at any point",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "potential of that field at (2, 3) (J)",
+      "value": -12.0,
+      "expected": -12.0
+    },
+    {
+      "name": "top speed at 250 W, b .32 (m/s)",
+      "value": 9.210078746600965,
+      "expected": 9.2
+    },
+    {
+      "name": "top speed at 500 W (m/s)",
+      "value": 11.603972084031946,
+      "expected": 11.6
+    },
+    {
+      "name": "gain in speed for double power (%)",
+      "value": 25.99210498948732,
+      "expected": 26.0
+    },
+    {
+      "name": "gamma at 2e8 m/s",
+      "value": 1.3416407864998738,
+      "expected": 1.342
+    },
+    {
+      "name": "relativistic KE at that speed (keV)",
+      "value": 174.57844190143553,
+      "expected": 175.0
+    },
+    {
+      "name": "classical KE at that speed (keV)",
+      "value": 113.55555555555554,
+      "expected": 114.0
+    },
+    {
+      "name": "classical shortfall (%)",
+      "value": 34.95442259722573,
+      "expected": 35.0
+    },
+    {
+      "name": "normal acceleration, 18 m/s on 40 m (m/s2)",
+      "value": 8.1,
+      "expected": 8.1
+    },
+    {
+      "name": "total acceleration with 3 m/s2 braking (m/s2)",
+      "value": 8.637708029332781,
+      "expected": 8.64
+    },
+    {
+      "name": "tilt of the total acceleration (deg)",
+      "value": 20.323136829662943,
+      "expected": 20.3
+    },
+    {
+      "name": "spin decay, omega at 2 s (rad/s)",
+      "value": 5.047412949866384,
+      "expected": 5.05
+    },
+    {
+      "name": "total angle before stopping (rad)",
+      "value": 31.25,
+      "expected": 31.3
+    },
+    {
+      "name": "same-direction meet on a 200 m track (s)",
+      "value": 133.33333333333331,
+      "expected": 133.0
+    },
+    {
+      "name": "opposite-direction meet on the same track (s)",
+      "value": 19.047619047619047,
+      "expected": 19.0
+    },
+    {
+      "name": "tangential acceleration at 60 deg (m/s2)",
+      "value": 8.487048957087499,
+      "expected": 8.49
+    },
+    {
+      "name": "tension at 60 deg, 4 m/s on .6 m (N)",
+      "value": 15.783333333333335,
+      "expected": 15.78
+    },
+    {
+      "name": "bead released 1.5 m on a .5 m loop (m/s)",
+      "value": 3.1304951684997055,
+      "expected": 3.13
+    },
+    {
+      "name": "loop threshold v squared at the top (m2/s2)",
+      "value": 4.9,
+      "expected": 4.9
+    },
+    {
+      "name": "string loop launch, R .9 (m/s)",
+      "value": 6.640783086353597,
+      "expected": 6.64
+    },
+    {
+      "name": "string bottom tension at the limit (N)",
+      "value": 11.760000000000003,
+      "expected": 11.76
+    },
+    {
+      "name": "rod loop launch, R .9 (m/s)",
+      "value": 5.939696961966999,
+      "expected": 5.94
+    },
+    {
+      "name": "conical tension, .3 kg at 30 (N)",
+      "value": 3.3948195828349994,
+      "expected": 3.4
+    },
+    {
+      "name": "conical speed, L 1.2 at 30 (m/s)",
+      "value": 1.8425036181334893,
+      "expected": 1.84
+    },
+    {
+      "name": "conical period, L 1.2 at 30 (s)",
+      "value": 2.046080749695777,
+      "expected": 2.05
+    },
+    {
+      "name": "bank top speed, R 120 mu .45 (m/s)",
+      "value": 30.985009981287817,
+      "expected": 31.0
+    },
+    {
+      "name": "bank bottom speed vanishes when mu > tan theta",
+      "value": 0.18205080756887732,
+      "expected": 0.182
+    },
+    {
+      "name": "rotor minimum speed, R 5 mu .6 (m/s)",
+      "value": 9.03696114115064,
+      "expected": 9.04
+    },
+    {
+      "name": "rotor normal at that speed (kN)",
+      "value": 1.1433333333333335,
+      "expected": 1.14
+    },
+    {
+      "name": "apex radius of curvature, 25 m/s at 40 (m)",
+      "value": 37.42500566539957,
+      "expected": 37.4
+    },
+    {
+      "name": "launch radius of curvature, same shot (m)",
+      "value": 83.25301590129328,
+      "expected": 83.2
+    },
+    {
+      "name": "curvature of a 20 m/s projectile at 45, apex (m)",
+      "value": 20.408163265306126,
+      "expected": 20.4
+    },
+    {
+      "name": "curvature of a 20 m/s projectile at 45, launch (m)",
+      "value": 57.72300254584061,
+      "expected": 57.7
+    }
+  ],
+  "note": "Representative recomputation of printed formulas, not exhaustive."
+}

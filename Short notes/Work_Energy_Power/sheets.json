@@ -1,0 +1,1464 @@
+{
+  "edition": "work-energy-power",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sections": {
+    "JEE": 26,
+    "Olympiad": 24
+  },
+  "sheets": [
+    {
+      "slug": "JEE-01-work-sign",
+      "section": "JEE",
+      "page": 1,
+      "title": "What does it mean to do work?",
+      "question": "A porter carries a suitcase along a level platform all day and is exhausted. How much work did he do on the suitcase?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "work_signs"
+      ],
+      "takeaway": "work is the component of force along the displacement, with a sign",
+      "file": "JEE-01-work-sign.png",
+      "layout": [
+        {
+          "sheet": "JEE-01-work-sign",
+          "stage": "one",
+          "main_px": 1679,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-01-work-sign",
+          "margin_px": 846,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-02-fx-area",
+      "section": "JEE",
+      "page": 2,
+      "title": "When the force changes, what replaces F d?",
+      "question": "A spring stiffens as you pull it, and a gas pushes less hard as it expands. What is the work when the force is a curve?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "fx_area"
+      ],
+      "takeaway": "integrate the force along the path: the answer is a signed area",
+      "file": "JEE-02-fx-area.png",
+      "layout": [
+        {
+          "sheet": "JEE-02-fx-area",
+          "stage": "one",
+          "main_px": 1829,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-02-fx-area",
+          "margin_px": 855,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-03-force-audit",
+      "section": "JEE",
+      "page": 3,
+      "title": "Which forces actually change the energy?",
+      "question": "A block slides down a rough incline. Four forces act. Which of them can put energy in, which can only take it out, and which is powerless?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "force_audit"
+      ],
+      "takeaway": "audit each force separately; the normal force is almost always a zero",
+      "file": "JEE-03-force-audit.png",
+      "layout": [
+        {
+          "sheet": "JEE-03-force-audit",
+          "stage": "one",
+          "main_px": 1807,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-03-force-audit",
+          "margin_px": 820,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-04-we-theorem",
+      "section": "JEE",
+      "page": 4,
+      "title": "Why is Newton enough to get the work-energy theorem?",
+      "question": "The theorem is usually quoted as a separate principle. Can you derive it from F = ma in one line?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "we_derivation"
+      ],
+      "takeaway": "multiply Newton by a displacement: the theorem is Newton integrated once over space",
+      "file": "JEE-04-we-theorem.png",
+      "layout": [
+        {
+          "sheet": "JEE-04-we-theorem",
+          "stage": "one",
+          "main_px": 1808,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-04-we-theorem",
+          "margin_px": 844,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-05-ke-frames",
+      "section": "JEE",
+      "page": 5,
+      "title": "Whose kinetic energy is it?",
+      "question": "A 1 kg block moves at 4 m/s in the ground frame and 3 m/s in a train. Two observers, two kinetic energies. Is the law broken?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "ke_frames"
+      ],
+      "takeaway": "kinetic energy is frame-dependent, so a work statement must name its frame",
+      "file": "JEE-05-ke-frames.png",
+      "layout": [
+        {
+          "sheet": "JEE-05-ke-frames",
+          "stage": "frame",
+          "main_px": 1803,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-05-ke-frames",
+          "margin_px": 859,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-06-friction-heat",
+      "section": "JEE",
+      "page": 6,
+      "title": "Where does the energy go when friction stops a block?",
+      "question": "A block slides to rest. The work-energy theorem says the kinetic energy vanished. Energy is conserved, so where is it?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "friction_ledger"
+      ],
+      "takeaway": "friction turns mechanical energy into heat at f_k times the sliding distance",
+      "file": "JEE-06-friction-heat.png",
+      "layout": [
+        {
+          "sheet": "JEE-06-friction-heat",
+          "stage": "one",
+          "main_px": 1831,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-06-friction-heat",
+          "margin_px": 809,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-07-power-definition",
+      "section": "JEE",
+      "page": 7,
+      "title": "What is power, and why is it a dot product?",
+      "question": "Two motors lift the same load through the same height; one takes twice as long. The work is identical. What differs?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "power_curve"
+      ],
+      "takeaway": "power is work per unit time, and at a given speed it is force times velocity",
+      "file": "JEE-07-power-definition.png",
+      "layout": [
+        {
+          "sheet": "JEE-07-power-definition",
+          "stage": "one",
+          "main_px": 1557,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-07-power-definition",
+          "margin_px": 788,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-08-constant-power",
+      "section": "JEE",
+      "page": 8,
+      "title": "What happens when the power is held constant?",
+      "question": "A car with a 100 kW engine at full throttle does not accelerate at a constant rate. What does its speed do?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "constant_power"
+      ],
+      "takeaway": "at constant power the acceleration must fall as the speed rises",
+      "file": "JEE-08-constant-power.png",
+      "layout": [
+        {
+          "sheet": "JEE-08-constant-power",
+          "stage": "one",
+          "main_px": 1612,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-08-constant-power",
+          "margin_px": 776,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-09-slope-power",
+      "section": "JEE",
+      "page": 9,
+      "title": "Why does a hill cost so much more than a straight road?",
+      "question": "A car cruising at 20 m/s needs 10 kW on the flat. On a 5\u00b0 climb it needs much more. Where does the extra power go?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "slope_power"
+      ],
+      "takeaway": "climbing at speed v costs mgv sin theta just to gain height",
+      "file": "JEE-09-slope-power.png",
+      "layout": [
+        {
+          "sheet": "JEE-09-slope-power",
+          "stage": "one",
+          "main_px": 1582,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-09-slope-power",
+          "margin_px": 856,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-10-conservative",
+      "section": "JEE",
+      "page": 10,
+      "title": "What makes a force conservative?",
+      "question": "Gravity and the spring let you keep a potential. Friction does not. What single test separates them?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "loop_test"
+      ],
+      "takeaway": "conservative means the work depends only on the endpoints, so a potential exists",
+      "file": "JEE-10-conservative.png",
+      "layout": [
+        {
+          "sheet": "JEE-10-conservative",
+          "stage": "one",
+          "main_px": 1785,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-10-conservative",
+          "margin_px": 763,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-11-potential-energy",
+      "section": "JEE",
+      "page": 11,
+      "title": "Why can the zero of potential energy be anywhere?",
+      "question": "A book on a shelf has 20 J of potential energy, or 5 J, or \u2212100 J, depending on where you put the zero. Which is right?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "pe_definition"
+      ],
+      "takeaway": "only differences of potential energy are physical, so the zero is yours to choose",
+      "file": "JEE-11-potential-energy.png",
+      "layout": [
+        {
+          "sheet": "JEE-11-potential-energy",
+          "stage": "one",
+          "main_px": 1682,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-11-potential-energy",
+          "margin_px": 863,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-12-spring-energy",
+      "section": "JEE",
+      "page": 12,
+      "title": "Why is the spring energy half k x squared?",
+      "question": "Pull a spring to extension x and the force has grown from zero to kx. Why is the stored energy not kx times x?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "spring_work"
+      ],
+      "takeaway": "the force is not constant, so the work uses its average, which is half the final value",
+      "file": "JEE-12-spring-energy.png",
+      "layout": [
+        {
+          "sheet": "JEE-12-spring-energy",
+          "stage": "one",
+          "main_px": 1716,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-12-spring-energy",
+          "margin_px": 769,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-13-gravity-paths",
+      "section": "JEE",
+      "page": 13,
+      "title": "Does the route up a hill change the energy?",
+      "question": "Climb a hill by the gentle path or the steep one. The height gained is the same. Is the work by gravity the same?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "gravity_paths"
+      ],
+      "takeaway": "gravity charges by height gained, never by distance travelled",
+      "file": "JEE-13-gravity-paths.png",
+      "layout": [
+        {
+          "sheet": "JEE-13-gravity-paths",
+          "stage": "one",
+          "main_px": 1659,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-13-gravity-paths",
+          "margin_px": 801,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-14-energy-conservation",
+      "section": "JEE",
+      "page": 14,
+      "title": "When may you write K + U = constant?",
+      "question": "Energy conservation is quoted as a law. Under exactly what conditions is the mechanical version true?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "energy_ledger"
+      ],
+      "takeaway": "mechanical energy is constant exactly when no non-conservative force does net work",
+      "file": "JEE-14-energy-conservation.png",
+      "layout": [
+        {
+          "sheet": "JEE-14-energy-conservation",
+          "stage": "one",
+          "main_px": 1764,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-14-energy-conservation",
+          "margin_px": 857,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-15-u-graph",
+      "section": "JEE",
+      "page": 15,
+      "title": "What can a potential-energy graph tell you at a glance?",
+      "question": "Given U(x) and one number E, how much of the motion do you already know without solving anything?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "u_landscape"
+      ],
+      "takeaway": "the graph is a map: where E crosses U is where the motion turns round",
+      "file": "JEE-15-u-graph.png",
+      "layout": [
+        {
+          "sheet": "JEE-15-u-graph",
+          "stage": "one",
+          "main_px": 1707,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-15-u-graph",
+          "margin_px": 771,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-16-force-gradient",
+      "section": "JEE",
+      "page": 16,
+      "title": "How do you get the force back from the energy?",
+      "question": "You are given U(x) as a curve. Where is the force large, which way does it point, and where is it zero?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "force_gradient"
+      ],
+      "takeaway": "force is minus the slope of the potential, so it points downhill",
+      "file": "JEE-16-force-gradient.png",
+      "layout": [
+        {
+          "sheet": "JEE-16-force-gradient",
+          "stage": "one",
+          "main_px": 1719,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-16-force-gradient",
+          "margin_px": 807,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-17-energy-or-force",
+      "section": "JEE",
+      "page": 17,
+      "title": "Energy or Newton: which method does the question want?",
+      "question": "Two questions about the same loop: what is the speed at the top, and what is the normal force there? One is energy, one is not.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "decision_map"
+      ],
+      "takeaway": "energy answers speed and distance; forces answer time, acceleration and contact force",
+      "file": "JEE-17-energy-or-force.png",
+      "layout": [
+        {
+          "sheet": "JEE-17-energy-or-force",
+          "stage": "one",
+          "main_px": 1855,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-17-energy-or-force",
+          "margin_px": 763,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-18-system-energy",
+      "section": "JEE",
+      "page": 18,
+      "title": "What changes when the system has two bodies?",
+      "question": "Two blocks joined by a spring are pulled apart. The external work is 20 J, but the kinetic energy rises by only 12 J. Where are the other 8 J?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "system_energy"
+      ],
+      "takeaway": "internal work does not vanish: it moves energy into the spring, not out of the system",
+      "file": "JEE-18-system-energy.png",
+      "layout": [
+        {
+          "sheet": "JEE-18-system-energy",
+          "stage": "one",
+          "main_px": 1678,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-18-system-energy",
+          "margin_px": 803,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-19-efficiency",
+      "section": "JEE",
+      "page": 19,
+      "title": "Why does a pump need more power than the water gains?",
+      "question": "A pump lifts 100 kg of water per second through 20 m. The water gains 19.6 kW. The motor is rated 25 kW. Where did the rest go?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "efficiency"
+      ],
+      "takeaway": "efficiency is output over input, and every loss is a term you can name",
+      "file": "JEE-19-efficiency.png",
+      "layout": [
+        {
+          "sheet": "JEE-19-efficiency",
+          "stage": "one",
+          "main_px": 1606,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-19-efficiency",
+          "margin_px": 720,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-20-chain-work",
+      "section": "JEE",
+      "page": 20,
+      "title": "Why does lifting a hanging chain cost more than its weight?",
+      "question": "A chain is pulled up from a heap at constant speed. At height x the hanging weight is lambda x g, yet the pull must exceed it. Why?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "chain_energy"
+      ],
+      "takeaway": "new links are accelerated from rest, so the pull carries a momentum-flux term",
+      "file": "JEE-20-chain-work.png",
+      "layout": [
+        {
+          "sheet": "JEE-20-chain-work",
+          "stage": "one",
+          "main_px": 1678,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-20-chain-work",
+          "margin_px": 813,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-21-spring-and-friction",
+      "section": "JEE",
+      "page": 21,
+      "title": "A spring launches a block onto a rough floor. How far does it go?",
+      "question": "Compress a spring, release it, and let friction stop the block. Two energy stores and one loss. Which equation do you write?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "spring_friction"
+      ],
+      "takeaway": "stored spring energy equals the friction work, and the loss is the bridge between them",
+      "file": "JEE-21-spring-and-friction.png",
+      "layout": [
+        {
+          "sheet": "JEE-21-spring-and-friction",
+          "stage": "one",
+          "main_px": 1729,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-21-spring-and-friction",
+          "margin_px": 818,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-22-wpe-map",
+      "section": "JEE",
+      "page": 22,
+      "title": "What is the whole chapter in one picture?",
+      "question": "Six ideas, a page of formulas and thirty-six questions. Which ideas actually carry the load?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wpe_map"
+      ],
+      "takeaway": "work is the unit of account, and every result is a ledger with a named loss",
+      "file": "JEE-22-wpe-map.png",
+      "layout": [
+        {
+          "sheet": "JEE-22-wpe-map",
+          "stage": "one",
+          "main_px": 1633,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-22-wpe-map",
+          "margin_px": 714,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-23-omega-alpha",
+      "section": "JEE",
+      "page": 23,
+      "title": "Why describe rotation with an angle at all?",
+      "question": "Two points on a wheel, one near the rim and one near the hub, travel different distances in the same time. What do they share?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "omega_alpha"
+      ],
+      "takeaway": "every point shares the angle; only the radius converts it into a distance",
+      "file": "JEE-23-omega-alpha.png",
+      "layout": [
+        {
+          "sheet": "JEE-23-omega-alpha",
+          "stage": "spin",
+          "main_px": 1797,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-23-omega-alpha",
+          "margin_px": 765,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-24-alpha-kinematics",
+      "section": "JEE",
+      "page": 24,
+      "title": "What are the rotation equations for constant angular acceleration?",
+      "question": "A flywheel spins up from rest at a constant 3 rad/s\u00b2. How many turns does it make in 4 s?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "alpha_kinematics"
+      ],
+      "takeaway": "the linear equations with x, v, a replaced by theta, omega, alpha",
+      "file": "JEE-24-alpha-kinematics.png",
+      "layout": [
+        {
+          "sheet": "JEE-24-alpha-kinematics",
+          "stage": "spin",
+          "main_px": 1592,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-24-alpha-kinematics",
+          "margin_px": 789,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-25-omega-vector",
+      "section": "JEE",
+      "page": 25,
+      "title": "Why is angular velocity a vector?",
+      "question": "A wheel can spin about a vertical axis or a horizontal one, and the two are physically different. How does a single number capture that?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "omega_vector"
+      ],
+      "takeaway": "omega points along the axis, and v = omega cross r gives the tangential speed",
+      "file": "JEE-25-omega-vector.png",
+      "layout": [
+        {
+          "sheet": "JEE-25-omega-vector",
+          "stage": "spin",
+          "main_px": 1629,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-25-omega-vector",
+          "margin_px": 747,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-26-centripetal",
+      "section": "JEE",
+      "page": 26,
+      "title": "Why is circular motion at constant speed still accelerated?",
+      "question": "The speedometer reads a constant 60 km/h on a roundabout. Is the car accelerating, and if so, in which direction?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "centripetal_two_ways"
+      ],
+      "takeaway": "the speed is constant but the direction turns, so the velocity changes toward the centre",
+      "file": "JEE-26-centripetal.png",
+      "layout": [
+        {
+          "sheet": "JEE-26-centripetal",
+          "stage": "spin",
+          "main_px": 1628,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-26-centripetal",
+          "margin_px": 823,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-01-cm-split",
+      "section": "Olympiad",
+      "page": 1,
+      "title": "How much of the energy is actually available?",
+      "question": "Two blocks collide. The total kinetic energy is 100 J, but only part of it can become heat or deformation. Which part?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "cm_decomposition"
+      ],
+      "takeaway": "split the kinetic energy into drift of the centre of mass plus internal motion",
+      "file": "Olympiad-01-cm-split.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-01-cm-split",
+          "stage": "linked",
+          "main_px": 1826,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-01-cm-split",
+          "margin_px": 762,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-02-effective-potential",
+      "section": "Olympiad",
+      "page": 2,
+      "title": "Why does angular momentum keep a planet out of the Sun?",
+      "question": "Gravity pulls inward with nothing to oppose it. Why does a planet not simply fall in?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "effective_potential"
+      ],
+      "takeaway": "the angular term is a repulsive barrier made of kinetic energy, not a force",
+      "file": "Olympiad-02-effective-potential.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-02-effective-potential",
+          "stage": "one",
+          "main_px": 1655,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-02-effective-potential",
+          "margin_px": 828,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-03-bouncing-ball",
+      "section": "Olympiad",
+      "page": 3,
+      "title": "How far does a bouncing ball travel before it stops?",
+      "question": "A ball is dropped from h and returns to e\u00b2h after each bounce. The bounces are infinite; is the total distance infinite too?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bounce_energy"
+      ],
+      "takeaway": "two geometric series, one for distance and one for time, both with finite sums",
+      "file": "Olympiad-03-bouncing-ball.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-03-bouncing-ball",
+          "stage": "one",
+          "main_px": 1783,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-03-bouncing-ball",
+          "margin_px": 732,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-04-rolling-energy",
+      "section": "Olympiad",
+      "page": 4,
+      "title": "Why does a rolling ball beat a sliding block downhill?",
+      "question": "A ball and a block are released from the same height on the same slope. The block has no friction, the ball rolls. Which arrives first?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rolling_energy"
+      ],
+      "takeaway": "a rolling body spends part of its energy on rotation, so it descends more slowly",
+      "file": "Olympiad-04-rolling-energy.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-04-rolling-energy",
+          "stage": "one",
+          "main_px": 1785,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-04-rolling-energy",
+          "margin_px": 768,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-05-block-on-wedge",
+      "section": "Olympiad",
+      "page": 5,
+      "title": "Why is the block on a moving wedge slower than sqrt(2gh)?",
+      "question": "A block slides down a smooth wedge that is free to slide on a smooth table. The textbook answer sqrt(2gh) must be wrong. Why?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wedge_energy"
+      ],
+      "takeaway": "the wedge takes a share of the energy, so the block cannot have all of it",
+      "file": "Olympiad-05-block-on-wedge.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-05-block-on-wedge",
+          "stage": "linked",
+          "main_px": 1771,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-05-block-on-wedge",
+          "margin_px": 819,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-06-satellite-launch",
+      "section": "Olympiad",
+      "page": 6,
+      "title": "How much energy does it take to reach orbit?",
+      "question": "Escape needs the full well depth. Orbit needs less, but not as little as you might hope. What fraction?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "launch_energy"
+      ],
+      "takeaway": "low orbit costs half the escape energy, and the other half is the speed you keep",
+      "file": "Olympiad-06-satellite-launch.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-06-satellite-launch",
+          "stage": "one",
+          "main_px": 1643,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-06-satellite-launch",
+          "margin_px": 707,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-07-chain-unroll",
+      "section": "Olympiad",
+      "page": 7,
+      "title": "Where does the missing half of the work go?",
+      "question": "A chain is pulled off a table at constant speed v. The power delivered is F v, but the energy in the chain grows more slowly. Where is the difference?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "chain_unroll"
+      ],
+      "takeaway": "links are jerked into motion inelastically, and the lost half is heat",
+      "file": "Olympiad-07-chain-unroll.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-07-chain-unroll",
+          "stage": "one",
+          "main_px": 1581,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-07-chain-unroll",
+          "margin_px": 713,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-08-bead-on-hoop",
+      "section": "Olympiad",
+      "page": 8,
+      "title": "Why does a spinning hoop make the bead climb?",
+      "question": "A bead slides freely on a smooth hoop spinning about its vertical diameter. At high enough speed it leaves the bottom. Where does the energy come from?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bead_energy"
+      ],
+      "takeaway": "the hoop does work on the bead, and in the rotating frame that is one effective potential",
+      "file": "Olympiad-08-bead-on-hoop.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-08-bead-on-hoop",
+          "stage": "spin",
+          "main_px": 1668,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-08-bead-on-hoop",
+          "margin_px": 768,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-09-restitution",
+      "section": "Olympiad",
+      "page": 9,
+      "title": "What does the coefficient of restitution actually measure?",
+      "question": "Two balls drop from the same height onto the same floor and bounce to different heights. What single number separates them?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "restitution_energy"
+      ],
+      "takeaway": "e is the ratio of relative speeds, so energy is multiplied by e squared per impact",
+      "file": "Olympiad-09-restitution.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-09-restitution",
+          "stage": "one",
+          "main_px": 1669,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-09-restitution",
+          "margin_px": 761,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-10-flywheel",
+      "section": "Olympiad",
+      "page": 10,
+      "title": "Who pays for the kinetic energy of a flywheel?",
+      "question": "A motor of constant power spins up a flywheel. The angular speed grows, but not linearly. Why, and who supplies the difference?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "flywheel"
+      ],
+      "takeaway": "at constant power the torque falls as one over omega, so the spin-up slows as root t",
+      "file": "Olympiad-10-flywheel.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-10-flywheel",
+          "stage": "spin",
+          "main_px": 1621,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-10-flywheel",
+          "margin_px": 776,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-11-pseudo-work",
+      "section": "Olympiad",
+      "page": 11,
+      "title": "Can a force that is not there do work?",
+      "question": "A ball hangs in an accelerating cart. In the cart frame it swings backward and gains speed. Which force did the work?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "pseudo_work"
+      ],
+      "takeaway": "in an accelerating frame the pseudo force does work, and the frame energy book stays closed",
+      "file": "Olympiad-11-pseudo-work.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-11-pseudo-work",
+          "stage": "frame",
+          "main_px": 1850,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-11-pseudo-work",
+          "margin_px": 849,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-12-path-integral",
+      "section": "Olympiad",
+      "page": 12,
+      "title": "Is one closed loop enough to prove a force is conservative?",
+      "question": "You are handed a force field and one closed loop. If the loop integral vanishes, may you conclude that a potential exists?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "path_integral"
+      ],
+      "takeaway": "one loop proves nothing; every loop must vanish, which is what the curl tests",
+      "file": "Olympiad-12-path-integral.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-12-path-integral",
+          "stage": "one",
+          "main_px": 1543,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-12-path-integral",
+          "margin_px": 722,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-13-drag-power",
+      "section": "Olympiad",
+      "page": 13,
+      "title": "Why does doubling speed need eight times the power?",
+      "question": "A cyclist at 20 km/h is comfortable. At 40 km/h the same rider is exhausted. Why is the cost not twice?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "drag_power"
+      ],
+      "takeaway": "air resistance grows as the square of speed, and power as its cube",
+      "file": "Olympiad-13-drag-power.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-13-drag-power",
+          "stage": "one",
+          "main_px": 1727,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-13-drag-power",
+          "margin_px": 756,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-14-energy-limits",
+      "section": "Olympiad",
+      "page": 14,
+      "title": "Where does the energy bookkeeping stop working?",
+      "question": "The chapter treats mechanical energy as exact. At what speed, and at what scale, does the ledger need new terms?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "energy_limits"
+      ],
+      "takeaway": "the classical ledger is a low-speed approximation, and the rest mass joins it at high speed",
+      "file": "Olympiad-14-energy-limits.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-14-energy-limits",
+          "stage": "one",
+          "main_px": 1685,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-14-energy-limits",
+          "margin_px": 763,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-15-tangential-normal",
+      "section": "Olympiad",
+      "page": 15,
+      "title": "What if the speed changes as well as the direction?",
+      "question": "A car on a curve brakes while turning. What is the total acceleration, and at what angle does it point?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "at_an"
+      ],
+      "takeaway": "two perpendicular components: one changes the speed, one changes the direction",
+      "file": "Olympiad-15-tangential-normal.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-15-tangential-normal",
+          "stage": "spin",
+          "main_px": 1719,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-15-tangential-normal",
+          "margin_px": 709,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-16-variable-alpha",
+      "section": "Olympiad",
+      "page": 16,
+      "title": "What if the angular acceleration is not constant?",
+      "question": "A wheel slows under a torque that falls with time. The three rotation equations fail. What replaces them?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "alpha_integral"
+      ],
+      "takeaway": "integrate: omega is the area under alpha, theta the area under omega",
+      "file": "Olympiad-16-variable-alpha.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-16-variable-alpha",
+          "stage": "spin",
+          "main_px": 1788,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-16-variable-alpha",
+          "margin_px": 798,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-17-relative-angular",
+      "section": "Olympiad",
+      "page": 17,
+      "title": "How fast do two points on a wheel separate?",
+      "question": "Two particles move on the same circle at different angular rates. How often do they meet, and what is their relative speed?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "relative_angular"
+      ],
+      "takeaway": "relative angular rate is the difference, and relative speed is that times the radius",
+      "file": "Olympiad-17-relative-angular.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-17-relative-angular",
+          "stage": "spin",
+          "main_px": 1621,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-17-relative-angular",
+          "margin_px": 701,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-18-work-radial",
+      "section": "Olympiad",
+      "page": 18,
+      "title": "If the centripetal force is always inward, how does anything speed up?",
+      "question": "On a vertical circle gravity has a tangential component; the tension never does. Which force changes the speed, and which only bends the path?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "work_radial"
+      ],
+      "takeaway": "a radial force does no work, so only the tangential component can change the speed",
+      "file": "Olympiad-18-work-radial.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-18-work-radial",
+          "stage": "spin",
+          "main_px": 1741,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-18-work-radial",
+          "margin_px": 861,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-19-vertical-circle-energy",
+      "section": "Olympiad",
+      "page": 19,
+      "title": "What speed does a bead have at the top of a loop?",
+      "question": "A bead is released from rest at height h above the bottom of a smooth vertical loop. How fast is it at the top, and when does it leave the track?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "vertical_energy"
+      ],
+      "takeaway": "energy gives the speed at every angle; the track condition decides whether it stays on",
+      "file": "Olympiad-19-vertical-circle-energy.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-19-vertical-circle-energy",
+          "stage": "spin",
+          "main_px": 1732,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-19-vertical-circle-energy",
+          "margin_px": 813,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-20-string-vs-rod",
+      "section": "Olympiad",
+      "page": 20,
+      "title": "Why must a string be launched faster than a rod?",
+      "question": "The same mass, radius and release height. On a string it must be launched at sqrt(5gR); on a rod, sqrt(4gR) is enough. Where does the difference come from?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "string_vs_rod"
+      ],
+      "takeaway": "a string can only pull, so its tension must stay positive; a rod can push",
+      "file": "Olympiad-20-string-vs-rod.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-20-string-vs-rod",
+          "stage": "spin",
+          "main_px": 1648,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-20-string-vs-rod",
+          "margin_px": 812,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-21-conical-pendulum",
+      "section": "Olympiad",
+      "page": 21,
+      "title": "Why does a conical pendulum ignore the mass?",
+      "question": "A bob whirls in a horizontal circle on a string of length L at angle theta. The tension depends on the mass, yet the period does not. Why?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "conical_energy"
+      ],
+      "takeaway": "the two force equations both carry m, so it cancels out of the geometry and the period",
+      "file": "Olympiad-21-conical-pendulum.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-21-conical-pendulum",
+          "stage": "spin",
+          "main_px": 1842,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-21-conical-pendulum",
+          "margin_px": 715,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-22-banked-limits",
+      "section": "Olympiad",
+      "page": 22,
+      "title": "What is the slowest safe speed on a banked corner?",
+      "question": "Banking is designed for one speed. Too fast and the car slides up; too slow and it slides down. What sets both limits?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bank_limits"
+      ],
+      "takeaway": "friction can only widen the band around the design speed; it cannot create one",
+      "file": "Olympiad-22-banked-limits.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-22-banked-limits",
+          "stage": "spin",
+          "main_px": 1821,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-22-banked-limits",
+          "margin_px": 830,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-23-rotor-wall",
+      "section": "Olympiad",
+      "page": 23,
+      "title": "How does a wall of death hold a rider up?",
+      "question": "A rider circles the inside of a vertical cylinder. The wall is vertical and there is no floor under the tyres. What holds the weight?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rotor_wall"
+      ],
+      "takeaway": "the normal provides the centripetal force, and static friction on the vertical wall carries the weight",
+      "file": "Olympiad-23-rotor-wall.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-23-rotor-wall",
+          "stage": "spin",
+          "main_px": 1621,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-23-rotor-wall",
+          "margin_px": 776,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-24-curvature",
+      "section": "Olympiad",
+      "page": 24,
+      "title": "How tight is a curve that is not a circle?",
+      "question": "A projectile path, a roller-coaster dip, a road bend: none is a circle. What is the radius at a point?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "curvature_fit"
+      ],
+      "takeaway": "the radius of curvature is the circle that matches the path locally, and v squared over it is the normal acceleration",
+      "file": "Olympiad-24-curvature.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-24-curvature",
+          "stage": "spin",
+          "main_px": 1781,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-24-curvature",
+          "margin_px": 766,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    }
+  ]
+}
