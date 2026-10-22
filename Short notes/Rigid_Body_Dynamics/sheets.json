@@ -5,7 +5,7 @@
     "slug": "JEE-01-kinematics",
     "title": "Rigid motion: geometry first",
     "subtitle": "Use the laboratory ground frame unless stated. In planar motion, +z points out of the sheet.",
-    "source": "§§2, 3.1–3.2; D8.1",
+    "source": "\u00a7\u00a72, 3.1\u20133.2; D8.1",
     "diagrams": [
       "velocity",
       "acceleration"
@@ -66,7 +66,7 @@
           ],
           [
             "p",
-            "SI: omega in rad/s; alpha in rad/s². Convert rpm using omega = 2 pi n / 60."
+            "SI: omega in rad/s; alpha in rad/s\u00b2. Convert rpm using omega = 2 pi n / 60."
           ],
           [
             "m",
@@ -91,11 +91,11 @@
           ],
           [
             "p",
-            "Here r = r(P/C). For a fixed axis: tangential acceleration = alpha r; inward normal acceleration = omega² r."
+            "Here r = r(P/C). For a fixed axis: tangential acceleration = alpha r; inward normal acceleration = omega\u00b2 r."
           ],
           [
             "why",
-            "Even constant angular velocity changes the direction of each off-axis point’s velocity."
+            "Even constant angular velocity changes the direction of each off-axis point\u2019s velocity."
           ],
           [
             "trap",
@@ -148,7 +148,7 @@
     "key": "moi-rods-plates",
     "title": "MOI I: rods, plates & axes",
     "subtitle": "Learn the standard results with their axes; the integral explains each coefficient. Uniform bodies unless stated.",
-    "source": "§§3.3–3.4; D8.2; added JEE MOI derivations",
+    "source": "\u00a7\u00a73.3\u20133.4; D8.2; added JEE MOI derivations",
     "diagrams": [
       "rod_axes",
       "plate_axes"
@@ -156,7 +156,7 @@
     "takeaway": "A moment of inertia without an axis is an incomplete result. Read each formula together with its geometry.",
     "cards": [
       {
-        "title": "Definition: weighted distance²",
+        "title": "Definition: weighted distance\u00b2",
         "items": [
           [
             "m",
@@ -168,7 +168,7 @@
           ],
           [
             "p",
-            "k is the radius of gyration about A. For fixed-axis rotation each mass has speed omega r(perp), so summing dm v²/2 proves the energy result."
+            "k is the radius of gyration about A. For fixed-axis rotation each mass has speed omega r(perp), so summing dm v\u00b2/2 proves the energy result."
           ],
           [
             "why",
@@ -180,7 +180,7 @@
           ],
           [
             "p",
-            "The bound assumes every element is within distance R(max) from A. Units: kg m²."
+            "The bound assumes every element is within distance R(max) from A. Units: kg m\u00b2."
           ]
         ]
       },
@@ -234,7 +234,7 @@
           ],
           [
             "p",
-            "Derive Ix by strips parallel to x: dm=(M/b)dy; integrate y² dm. Use the perpendicular-axis theorem for Iz."
+            "Derive Ix by strips parallel to x: dm=(M/b)dy; integrate y\u00b2 dm. Use the perpendicular-axis theorem for Iz."
           ],
           [
             "m",
@@ -246,7 +246,7 @@
           ],
           [
             "why",
-            "For a square any central in-plane axis, including a diagonal, has I=Ms²/12. Symmetry removes the cross term."
+            "For a square any central in-plane axis, including a diagonal, has I=Ms\u00b2/12. Symmetry removes the cross term."
           ]
         ]
       },
@@ -271,11 +271,11 @@
           ],
           [
             "p",
-            "Checks: phi=0 gives zero for a line rod; phi=90° gives the usual transverse result."
+            "Checks: phi=0 gives zero for a line rod; phi=90\u00b0 gives the usual transverse result."
           ],
           [
             "trap",
-            "Do not use a simple sin² rule for a finite-width plate without accounting for its other dimension."
+            "Do not use a simple sin\u00b2 rule for a finite-width plate without accounting for its other dimension."
           ]
         ]
       }
@@ -288,7 +288,7 @@
     "key": "moi-circular",
     "title": "MOI II: rings, discs & annuli",
     "subtitle": "Here z is the central normal to the lamina. A diameter is an in-plane axis through the circle centre O.",
-    "source": "§3.3; E1; Q1; added circular-lamina derivations",
+    "source": "\u00a73.3; E1; Q1; added circular-lamina derivations",
     "diagrams": [
       "circular_axes",
       "semicircle"
@@ -304,7 +304,7 @@
           ],
           [
             "p",
-            "Every element is the same distance R from the normal axis, so the integral immediately equals R² times M."
+            "Every element is the same distance R from the normal axis, so the integral immediately equals R\u00b2 times M."
           ],
           [
             "m",
@@ -324,7 +324,7 @@
           ],
           [
             "trap",
-            "“Tangent” alone does not specify whether the axis is in the plane or normal to it."
+            "\u201cTangent\u201d alone does not specify whether the axis is in the plane or normal to it."
           ]
         ]
       },
@@ -366,7 +366,7 @@
         "items": [
           [
             "p",
-            "Inner radius a, outer radius b, mass M. Uniform areal density sigma=M/[pi(b²-a²)]."
+            "Inner radius a, outer radius b, mass M. Uniform areal density sigma=M/[pi(b\u00b2-a\u00b2)]."
           ],
           [
             "m",
@@ -382,11 +382,11 @@
           ],
           [
             "why",
-            "Use b⁴-a⁴=(b²-a²)(b²+a²). Alternatively subtract two discs with their original common density."
+            "Use b\u2074-a\u2074=(b\u00b2-a\u00b2)(b\u00b2+a\u00b2). Alternatively subtract two discs with their original common density."
           ],
           [
             "p",
-            "Checks: a=0 gives a disc. As a→b at fixed mass the annulus approaches a thin ring."
+            "Checks: a=0 gives a disc. As a->b at fixed mass the annulus approaches a thin ring."
           ],
           [
             "trap",
@@ -411,11 +411,11 @@
           ],
           [
             "p",
-            "For a semicircular wire instead: OC=2R/pi and I(O,z)=MR²; subtract M(OC)² to get I(C,z)."
+            "For a semicircular wire instead: OC=2R/pi and I(O,z)=MR\u00b2; subtract M(OC)\u00b2 to get I(C,z)."
           ],
           [
             "why",
-            "Cutting a uniform circle in half leaves the average r² about O unchanged; the new COM is displaced."
+            "Cutting a uniform circle in half leaves the average r\u00b2 about O unchanged; the new COM is displaced."
           ],
           [
             "trap",
@@ -432,7 +432,7 @@
     "key": "moi-solids",
     "title": "MOI III: cylinders & spheres",
     "subtitle": "Axial = cylinder symmetry axis; transverse = perpendicular through C; a sphere diameter passes through C.",
-    "source": "§3.3; D8.2; added standard 3-D MOI derivations",
+    "source": "\u00a73.3; D8.2; added standard 3-D MOI derivations",
     "diagrams": [
       "cylinder_axes",
       "sphere_slice"
@@ -444,7 +444,7 @@
         "items": [
           [
             "p",
-            "Uniform cylinder radius R, length l. For its symmetry axis each thin disc contributes half dm R²."
+            "Uniform cylinder radius R, length l. For its symmetry axis each thin disc contributes half dm R\u00b2."
           ],
           [
             "m",
@@ -464,7 +464,7 @@
           ],
           [
             "p",
-            "l→0 gives a disc diameter; R→0 gives a thin rod transverse to its length."
+            "l->0 gives a disc diameter; R->0 gives a thin rod transverse to its length."
           ]
         ]
       },
@@ -497,7 +497,7 @@
           ],
           [
             "trap",
-            "A thin cylindrical wall has no end caps in this model. Its transverse inertia is not that of a thin ring unless l→0."
+            "A thin cylindrical wall has no end caps in this model. Its transverse inertia is not that of a thin ring unless l->0."
           ]
         ]
       },
@@ -506,7 +506,7 @@
         "items": [
           [
             "p",
-            "Let x run along the diameter axis; slice radius s satisfies s²=R²-x². Density rho=3M/(4 pi R³)."
+            "Let x run along the diameter axis; slice radius s satisfies s\u00b2=R\u00b2-x\u00b2. Density rho=3M/(4 pi R\u00b3)."
           ],
           [
             "m",
@@ -522,7 +522,7 @@
           ],
           [
             "why",
-            "A disc slice rotates about its own normal: dI=dm s²/2, not dm s²."
+            "A disc slice rotates about its own normal: dI=dm s\u00b2/2, not dm s\u00b2."
           ],
           [
             "p",
@@ -551,7 +551,7 @@
           ],
           [
             "why",
-            "The thick-shell formula subtracts two same-density solid spheres, inner a and outer b. a→0 gives solid; a→b gives thin shell."
+            "The thick-shell formula subtracts two same-density solid spheres, inner a and outer b. a->0 gives solid; a->b gives thin shell."
           ],
           [
             "trap",
@@ -568,12 +568,12 @@
     "key": "moi-composites",
     "title": "MOI IV: composites & integrations",
     "subtitle": "Memorise the standard families; derive unfamiliar density profiles and cut shapes from a few reliable moves.",
-    "source": "§§3.3–3.4; Q18; added JEE integral/composite applications",
+    "source": "\u00a7\u00a73.3\u20133.4; Q18; added JEE integral/composite applications",
     "diagrams": [
       "disc_hole",
       "density_graph"
     ],
-    "takeaway": "For a cut-out use the removed piece’s original density and its own COM; shift all contributions to the requested axis.",
+    "takeaway": "For a cut-out use the removed piece\u2019s original density and its own COM; shift all contributions to the requested axis.",
     "cards": [
       {
         "title": "An off-centre circular hole",
@@ -604,7 +604,7 @@
           ],
           [
             "trap",
-            "Never assign the hole a mass M a²/R² using the remaining mass M."
+            "Never assign the hole a mass M a\u00b2/R\u00b2 using the remaining mass M."
           ]
         ]
       },
@@ -670,7 +670,7 @@
           ],
           [
             "p",
-            "n=0 gives a disc; n→infinity concentrates mass near the rim and approaches MR²."
+            "n=0 gives a disc; n->infinity concentrates mass near the rim and approaches MR\u00b2."
           ]
         ]
       },
@@ -695,7 +695,7 @@
           ],
           [
             "why",
-            "Divide by M=rho pi R²h/3. This is the same disc-slicing idea as a sphere, not specialised rotational theory."
+            "Divide by M=rho pi R\u00b2h/3. This is the same disc-slicing idea as a sphere, not specialised rotational theory."
           ],
           [
             "p",
@@ -713,7 +713,7 @@
     "slug": "JEE-06-axis-theorems",
     "title": "Shift axes, do not guess",
     "subtitle": "Parallel-axis shifts and perpendicular-axis splitting are different operations.",
-    "source": "§3.4; E1; Q1, Q16; D8.3",
+    "source": "\u00a73.4; E1; Q1, Q16; D8.3",
     "diagrams": [
       "axes",
       "lamina"
@@ -733,11 +733,11 @@
           ],
           [
             "why",
-            "Expand (x+d)²+y² in the inertia integral. The cross term vanishes because integral x dm = 0 at C."
+            "Expand (x+d)\u00b2+y\u00b2 in the inertia integral. The cross term vanishes because integral x dm = 0 at C."
           ],
           [
             "trap",
-            "For two arbitrary parallel axes A and B, subtract their separate COM shifts; do not just add M(AB)²."
+            "For two arbitrary parallel axes A and B, subtract their separate COM shifts; do not just add M(AB)\u00b2."
           ],
           [
             "m",
@@ -774,7 +774,7 @@
           ],
           [
             "why",
-            "Both are called “tangent” informally, but their directions differ. Draw the axis before substituting."
+            "Both are called \u201ctangent\u201d informally, but their directions differ. Draw the axis before substituting."
           ],
           [
             "m",
@@ -786,7 +786,7 @@
           ],
           [
             "p",
-            "A thin ring diameter has I=MR²/2. Add MR² to the appropriate central-axis result."
+            "A thin ring diameter has I=MR\u00b2/2. Add MR\u00b2 to the appropriate central-axis result."
           ]
         ]
       },
@@ -803,7 +803,7 @@
           ],
           [
             "why",
-            "For each element: distance² to z = x²+y², which is the sum of the other two squared distances."
+            "For each element: distance\u00b2 to z = x\u00b2+y\u00b2, which is the sum of the other two squared distances."
           ],
           [
             "m",
@@ -840,11 +840,11 @@
           ],
           [
             "why",
-            "For a uniform rectangle, integrate x²+y² separately; this also checks the rod limit as b tends to zero."
+            "For a uniform rectangle, integrate x\u00b2+y\u00b2 separately; this also checks the rod limit as b tends to zero."
           ],
           [
             "p",
-            "Check: l=2 m, M=3 kg rod; pivot 0.5 m from one end gives I = 1.75 kg m²."
+            "Check: l=2 m, M=3 kg rod; pivot 0.5 m from one end gives I = 1.75 kg m\u00b2."
           ],
           [
             "m",
@@ -865,7 +865,7 @@
     "slug": "JEE-07-torque-energy",
     "title": "Torque, work & massive pulleys",
     "subtitle": "For planar equations take anticlockwise as positive; write force components in the lab frame.",
-    "source": "§3.5; Part 8 traps 10, 12; Q5, Q13",
+    "source": "\u00a73.5; Part 8 traps 10, 12; Q5, Q13",
     "diagrams": [
       "torque",
       "pulley"
@@ -951,7 +951,7 @@
           ],
           [
             "p",
-            "For fixed-axis rotation with constant I: K = I omega² / 2. For free planar motion add M v(C)² / 2 to the spin energy."
+            "For fixed-axis rotation with constant I: K = I omega\u00b2 / 2. For free planar motion add M v(C)\u00b2 / 2 to the spin energy."
           ],
           [
             "why",
@@ -959,7 +959,7 @@
           ],
           [
             "p",
-            "Check: I=10 kg m² at 1000 rpm stores 54.83 kJ."
+            "Check: I=10 kg m\u00b2 at 1000 rpm stores 54.83 kJ."
           ],
           [
             "m",
@@ -1000,7 +1000,7 @@
           ],
           [
             "p",
-            "Add the mass equations to (T2-T1)=Ia/R²; the effective inertial mass is m1+m2+I/R²."
+            "Add the mass equations to (T2-T1)=Ia/R\u00b2; the effective inertial mass is m1+m2+I/R\u00b2."
           ]
         ]
       }
@@ -1013,7 +1013,7 @@
     "slug": "JEE-08-angular-momentum",
     "title": "Angular momentum: choose O",
     "subtitle": "Specify system and origin before declaring conservation. Signed z components suffice for planar motion.",
-    "source": "§§3.6–3.7; E5, E10; Q11; D8.6",
+    "source": "\u00a7\u00a73.6\u20133.7; E5, E10; Q11; D8.6",
     "diagrams": [
       "momentum",
       "disc_couple"
@@ -1041,7 +1041,7 @@
           ],
           [
             "trap",
-            "L has units kg m²/s and changes when the origin changes."
+            "L has units kg m\u00b2/s and changes when the origin changes."
           ],
           [
             "m",
@@ -1095,7 +1095,7 @@
           ],
           [
             "p",
-            "Skater: I falls from 5 to 2 kg m²; omega rises from 2 to 5 rad/s; K rises from 10 to 25 J."
+            "Skater: I falls from 5 to 2 kg m\u00b2; omega rises from 2 to 5 rad/s; K rises from 10 to 25 J."
           ],
           [
             "why",
@@ -1140,7 +1140,7 @@
           ],
           [
             "p",
-            "Derivation: conserve the sum I1 omega1+I2 omega2; insert the common final omega into Kf=(I1+I2) omega(f)²/2. Subtract Kf from Ki to obtain Q."
+            "Derivation: conserve the sum I1 omega1+I2 omega2; insert the common final omega into Kf=(I1+I2) omega(f)\u00b2/2. Subtract Kf from Ki to obtain Q."
           ]
         ]
       }
@@ -1153,7 +1153,7 @@
     "slug": "JEE-09-rolling-geometry",
     "title": "Rolling is a velocity constraint",
     "subtitle": "Stationary rigid ground; wheel radius R. Here v is rightward and omega is clockwise-positive.",
-    "source": "§3.8; C5; §§7.1–7.3; D8.5",
+    "source": "\u00a73.8; C5; \u00a7\u00a77.1\u20137.3; D8.5",
     "diagrams": [
       "rolling",
       "contact_acc"
@@ -1210,7 +1210,7 @@
           ],
           [
             "trap",
-            "At the contact material point, acceleration is upward with magnitude omega² R in straight pure rolling. Zero velocity does not mean zero acceleration."
+            "At the contact material point, acceleration is upward with magnitude omega\u00b2 R in straight pure rolling. Zero velocity does not mean zero acceleration."
           ],
           [
             "m",
@@ -1255,7 +1255,7 @@
           ],
           [
             "p",
-            "Disc: K=3Mv²/4. Hoop: K=Mv². Solid sphere: K=7Mv²/10. All use v of C."
+            "Disc: K=3Mv\u00b2/4. Hoop: K=Mv\u00b2. Solid sphere: K=7Mv\u00b2/10. All use v of C."
           ]
         ]
       },
@@ -1272,7 +1272,7 @@
           ],
           [
             "why",
-            "Torque about P = I(C) alpha + r(C/P) cross M a(C); the no-slip relation supplies the MR² term."
+            "Torque about P = I(C) alpha + r(C/P) cross M a(C); the no-slip relation supplies the MR\u00b2 term."
           ],
           [
             "trap",
@@ -1296,8 +1296,8 @@
     "part_page": 10,
     "slug": "JEE-10-incline",
     "title": "Inclines: friction sets the regime",
-    "subtitle": "A symmetric body rolls freely from rest: I(C) = beta M R². Ignore rolling resistance and air drag.",
-    "source": "§3.8; E2; Q2, Q4, Q17, Q25; P27",
+    "subtitle": "A symmetric body rolls freely from rest: I(C) = beta M R\u00b2. Ignore rolling resistance and air drag.",
+    "source": "\u00a73.8; E2; Q2, Q4, Q17, Q25; P27",
     "diagrams": [
       "incline",
       "race"
@@ -1358,7 +1358,7 @@
           ],
           [
             "p",
-            "Sphere at 30°, g=10: a=25/7 m/s²; minimum mu(s)=0.165."
+            "Sphere at 30\u00b0, g=10: a=25/7 m/s\u00b2; minimum mu(s)=0.165."
           ],
           [
             "m",
@@ -1387,11 +1387,11 @@
           ],
           [
             "why",
-            "Friction’s translational and rotational powers cancel; it can redistribute the two energies."
+            "Friction\u2019s translational and rotational powers cancel; it can redistribute the two energies."
           ],
           [
             "p",
-            "A rolling hoop climbing at 5 m/s on 30°, g=10, rises 2.5 m: path length 5 m."
+            "A rolling hoop climbing at 5 m/s on 30\u00b0, g=10, rises 2.5 m: path length 5 m."
           ],
           [
             "m",
@@ -1441,7 +1441,7 @@
     "slug": "JEE-11-slip-to-roll",
     "title": "Slipping: follow the contact speed",
     "subtitle": "Horizontal fixed ground; constant kinetic coefficient mu(k); +x right, clockwise omega positive.",
-    "source": "§3.9; E4; Q8, Q19; OL1; P29; D8.8",
+    "source": "\u00a73.9; E4; Q8, Q19; OL1; P29; D8.8",
     "diagrams": [
       "slip_graph",
       "slip_loss"
@@ -1465,7 +1465,7 @@
           ],
           [
             "p",
-            "beta = I(C)/(M R²) > 0. These equations apply until u reaches zero, with constant normal force Mg."
+            "beta = I(C)/(M R\u00b2) > 0. These equations apply until u reaches zero, with constant normal force Mg."
           ],
           [
             "why",
@@ -1556,7 +1556,7 @@
         "items": [
           [
             "p",
-            "Solid sphere: beta=2/5, R=0.1 m, v0=10 m/s, omega0=0, mu(k)=0.3, g=10 m/s²."
+            "Solid sphere: beta=2/5, R=0.1 m, v0=10 m/s, omega0=0, mu(k)=0.3, g=10 m/s\u00b2."
           ],
           [
             "m",
@@ -1650,7 +1650,7 @@
           ],
           [
             "trap",
-            "Source E9’s acceleration is right, but its claimed backward friction is wrong."
+            "Source E9\u2019s acceleration is right, but its claimed backward friction is wrong."
           ],
           [
             "p",
@@ -1687,7 +1687,7 @@
           ],
           [
             "why",
-            "About contact, the string’s clockwise lever arm is R cos(phi) - r. Reversing the winding reverses the hub torque."
+            "About contact, the string\u2019s clockwise lever arm is R cos(phi) - r. Reversing the winding reverses the hub torque."
           ],
           [
             "m",
@@ -1728,7 +1728,7 @@
           ],
           [
             "p",
-            "For r/R=1/4, phi(c)=75.52°. At the critical angle a=0 and f=-F cos(phi), provided static contact can support it."
+            "For r/R=1/4, phi(c)=75.52\u00b0. At the critical angle a=0 and f=-F cos(phi), provided static contact can support it."
           ]
         ]
       }
@@ -1777,7 +1777,7 @@
           ],
           [
             "p",
-            "The fixed string cancels the velocity of the hub contact; it does not make the body’s centre stationary."
+            "The fixed string cancels the velocity of the hub contact; it does not make the body\u2019s centre stationary."
           ]
         ]
       },
@@ -1802,7 +1802,7 @@
           ],
           [
             "p",
-            "For release from rest through height h, either use v²=2ah or conservation of mechanical energy."
+            "For release from rest through height h, either use v\u00b2=2ah or conservation of mechanical energy."
           ],
           [
             "m",
@@ -1860,7 +1860,7 @@
           ],
           [
             "why",
-            "Writing the constraint inside the energy formula makes the effective inertia M+I/r² visible."
+            "Writing the constraint inside the energy formula makes the effective inertia M+I/r\u00b2 visible."
           ],
           [
             "trap",
@@ -1885,7 +1885,7 @@
     "slug": "JEE-14-collisions",
     "title": "Impact first, swing second",
     "subtitle": "A short embedding impact, a fixed frictionless hinge O, and negligible gravitational angular impulse.",
-    "source": "§3.10; E3; §§8–9.6; P28; D8.9, D8.12",
+    "source": "\u00a73.10; E3; \u00a7\u00a78\u20139.6; P28; D8.9, D8.12",
     "diagrams": [
       "impact",
       "impact_loss"
@@ -1909,7 +1909,7 @@
           ],
           [
             "why",
-            "The hinge impulse can be large, but its torque about O is zero. Gravity’s angular impulse is negligible over the short impact."
+            "The hinge impulse can be large, but its torque about O is zero. Gravity\u2019s angular impulse is negligible over the short impact."
           ],
           [
             "trap",
@@ -1938,7 +1938,7 @@
           ],
           [
             "p",
-            "Here I0 = M l² / 3. Q decreases as d increases for fixed bullet speed and rod."
+            "Here I0 = M l\u00b2 / 3. Q decreases as d increases for fixed bullet speed and rod."
           ],
           [
             "why",
@@ -1950,7 +1950,7 @@
           ],
           [
             "p",
-            "At d→0, final spin and final KE vanish; Q tends to the whole incident bullet KE. Do not maximise omega to maximise the loss."
+            "At d->0, final spin and final KE vanish; Q tends to the whole incident bullet KE. Do not maximise omega to maximise the loss."
           ]
         ]
       },
@@ -2024,7 +2024,7 @@
     "key": "free-impacts",
     "title": "Impulses: free bodies & hinges",
     "subtitle": "During a short impact ignore gravity impulse; smooth supports give no horizontal impulse. Keep all spin signs consistent.",
-    "source": "§3.10; Parts 7–9; added core impulse/restitution derivations",
+    "source": "\u00a73.10; Parts 7\u20139; added core impulse/restitution derivations",
     "diagrams": [
       "eccentric_impulse",
       "percussion"
@@ -2052,7 +2052,7 @@
           ],
           [
             "p",
-            "The contact-point speed component along J is J(1/M+b²/I); define an effective mass by the reciprocal of this bracket."
+            "The contact-point speed component along J is J(1/M+b\u00b2/I); define an effective mass by the reciprocal of this bracket."
           ],
           [
             "trap",
@@ -2081,7 +2081,7 @@
           ],
           [
             "why",
-            "The target’s contact speed is J(1/M+b²/I). Restitution sets target-contact speed minus outgoing particle speed equal to e v."
+            "The target\u2019s contact speed is J(1/M+b\u00b2/I). Restitution sets target-contact speed minus outgoing particle speed equal to e v."
           ],
           [
             "m",
@@ -2139,7 +2139,7 @@
           ],
           [
             "why",
-            "Insert I(O)=Ml²/3 and d=l/2. This is the same length I(O)/(Md) that appears in the physical pendulum."
+            "Insert I(O)=Ml\u00b2/3 and d=l/2. This is the same length I(O)/(Md) that appears in the physical pendulum."
           ],
           [
             "p",
@@ -2161,7 +2161,7 @@
     "slug": "JEE-16-equilibrium",
     "title": "Equilibrium, slipping & tipping",
     "subtitle": "For static balance require BOTH zero net force and zero net torque; contact reactions are constrained.",
-    "source": "§3.11; E8; Q9; C12; D8.10",
+    "source": "\u00a73.11; E8; Q9; C12; D8.10",
     "diagrams": [
       "ladder",
       "tipping"
@@ -2288,7 +2288,7 @@
           ],
           [
             "why",
-            "Place each upper stack’s COM exactly above the next support edge. Harmonic growth is logarithmic, not linear."
+            "Place each upper stack\u2019s COM exactly above the next support edge. Harmonic growth is logarithmic, not linear."
           ],
           [
             "p",
@@ -2308,7 +2308,7 @@
     "key": "energy-contact",
     "title": "Energy, reactions & curved rolling",
     "subtitle": "Harder JEE applications still use the same core laws. Energy gives speed; force balance tests contact.",
-    "source": "Q10; §§3.8, 3.10; added support/loop applications",
+    "source": "Q10; \u00a7\u00a73.8, 3.10; added support/loop applications",
     "diagrams": [
       "falling_rod",
       "rolling_loop"
@@ -2357,7 +2357,7 @@
           ],
           [
             "p",
-            "At the lowest point C accelerates upward at omega²l/2=3g/2."
+            "At the lowest point C accelerates upward at omega\u00b2l/2=3g/2."
           ],
           [
             "m",
@@ -2365,7 +2365,7 @@
           ],
           [
             "why",
-            "The fixed hinge does no work, but it does supply force and impulse. “No work” does not mean “no force”."
+            "The fixed hinge does no work, but it does supply force and impulse. \u201cNo work\u201d does not mean \u201cno force\u201d."
           ],
           [
             "trap",
@@ -2378,7 +2378,7 @@
         "items": [
           [
             "p",
-            "Track inner radius R; body radius r; q=R-r is the COM path radius. beta=I(C)/(M r²). theta is measured from the bottom."
+            "Track inner radius R; body radius r; q=R-r is the COM path radius. beta=I(C)/(M r\u00b2). theta is measured from the bottom."
           ],
           [
             "m",
@@ -2390,7 +2390,7 @@
           ],
           [
             "why",
-            "Energy uses the COM height. Radially inward: N-Mg cos(theta)=Mv²/q. At the top this becomes N+Mg=Mv²/q."
+            "Energy uses the COM height. Radially inward: N-Mg cos(theta)=Mv\u00b2/q. At the top this becomes N+Mg=Mv\u00b2/q."
           ],
           [
             "p",
@@ -2494,11 +2494,11 @@
           ],
           [
             "p",
-            "Use I(O)=M(k(C)²+d²). The optimum is valid only if that pivot position is physically allowed."
+            "Use I(O)=M(k(C)\u00b2+d\u00b2). The optimum is valid only if that pivot position is physically allowed."
           ],
           [
             "why",
-            "Differentiate d+k²/d: the two terms balance at d=k."
+            "Differentiate d+k\u00b2/d: the two terms balance at d=k."
           ],
           [
             "p",
@@ -2523,7 +2523,7 @@
         "items": [
           [
             "p",
-            "Track radius R, roller radius r<R, beta=I(C)/(M r²). Let q=R-r; theta measures C’s displacement from the bottom."
+            "Track radius R, roller radius r<R, beta=I(C)/(M r\u00b2). Let q=R-r; theta measures C\u2019s displacement from the bottom."
           ],
           [
             "m",
@@ -2572,7 +2572,7 @@
           ],
           [
             "trap",
-            "Require contact and enough static friction throughout. The q→0 limit is geometrically singular, not a real zero-period oscillator."
+            "Require contact and enough static friction throughout. The q->0 limit is geometrically singular, not a real zero-period oscillator."
           ],
           [
             "m",
@@ -2580,7 +2580,7 @@
           ],
           [
             "p",
-            "As beta→0 recover a point mass on a circular path. The effective inertia, not extra mass, lengthens the period."
+            "As beta->0 recover a point mass on a circular path. The effective inertia, not extra mass, lengthens the period."
           ]
         ]
       }
@@ -2593,7 +2593,7 @@
     "slug": "JEE-19-sliding-rod",
     "title": "Sliding rod & final JEE checks",
     "subtitle": "A harder core application stays in JEE: use constraints, energy and a contact-force test.",
-    "source": "OL3; P33 (corrected); Parts 7–9, 13–14",
+    "source": "OL3; P33 (corrected); Parts 7\u20139, 13\u201314",
     "diagrams": [
       "rod",
       "rod_graph"
@@ -2605,7 +2605,7 @@
         "items": [
           [
             "p",
-            "Uniform rod length l on a smooth floor and wall. Theta is its angle ABOVE THE FLOOR, released from rest at 0<theta0<90°."
+            "Uniform rod length l on a smooth floor and wall. Theta is its angle ABOVE THE FLOOR, released from rest at 0<theta0<90\u00b0."
           ],
           [
             "m",
@@ -2617,7 +2617,7 @@
           ],
           [
             "why",
-            "C moves on a circle of radius l/2 while both contacts persist. Add spin inertia Ml²/12 to the translational term."
+            "C moves on a circle of radius l/2 while both contacts persist. Add spin inertia Ml\u00b2/12 to the translational term."
           ],
           [
             "trap",
@@ -2658,7 +2658,7 @@
           ],
           [
             "p",
-            "The effective rotational inertia in this one-coordinate energy is Ml²/3, but the body is not rotating about a fixed floor point."
+            "The effective rotational inertia in this one-coordinate energy is Ml\u00b2/3, but the body is not rotating about a fixed floor point."
           ]
         ]
       },
@@ -2712,7 +2712,7 @@
           ],
           [
             "why",
-            "Most “rotation traps” are an unspoken constraint or origin choice, not difficult algebra."
+            "Most \u201crotation traps\u201d are an unspoken constraint or origin choice, not difficult algebra."
           ],
           [
             "trap",
@@ -2733,7 +2733,7 @@
     "slug": "Olympiad-01-tensor",
     "title": "Beyond scalar inertia",
     "subtitle": "Specialised extension: general 3-D rotation. The JEE sequence needs only planar and fixed-axis components.",
-    "source": "§3.6; OL8 (corrected); §10.2",
+    "source": "\u00a73.6; OL8 (corrected); \u00a710.2",
     "diagrams": [
       "tensor",
       "moving_origin"
@@ -2770,7 +2770,7 @@
         "items": [
           [
             "p",
-            "Two point masses m at ±a n, where n is a unit vector along a massless rod."
+            "Two point masses m at \u00b1a n, where n is a unit vector along a massless rod."
           ],
           [
             "m",
@@ -2786,7 +2786,7 @@
           ],
           [
             "trap",
-            "OL8’s component expression uses a non-orthogonal direction incorrectly. For generic oblique spin, L is not parallel to omega."
+            "OL8\u2019s component expression uses a non-orthogonal direction incorrectly. For generic oblique spin, L is not parallel to omega."
           ]
         ]
       },
@@ -2845,12 +2845,12 @@
     "slug": "Olympiad-02-gyroscopes",
     "title": "Gyroscopes: torque turns L",
     "subtitle": "Specialised symmetric-top dynamics; separate spin, precession and nutation.",
-    "source": "§3.12; E6; OL7; P36; §§4.2, 9.2 (corrected)",
+    "source": "\u00a73.12; E6; OL7; P36; \u00a7\u00a74.2, 9.2 (corrected)",
     "diagrams": [
       "gyro",
       "gyro_graph"
     ],
-    "takeaway": "Slow precession is a fast-spin approximation, not a small-tilt law; omega→0 is outside that approximation.",
+    "takeaway": "Slow precession is a fast-spin approximation, not a small-tilt law; omega->0 is outside that approximation.",
     "cards": [
       {
         "title": "Geometry removes sin(theta)",
@@ -2928,7 +2928,7 @@
         ]
       },
       {
-        "title": "Upright “sleeping” top",
+        "title": "Upright \u201csleeping\u201d top",
         "items": [
           [
             "p",
@@ -2948,7 +2948,7 @@
           ],
           [
             "p",
-            "Check E6: Omega≈0.25 rad/s; precession period≈25.13 s. Fast spin alone does not specify initial nutation."
+            "Check E6: Omega\u22480.25 rad/s; precession period\u224825.13 s. Fast spin alone does not specify initial nutation."
           ]
         ]
       }
@@ -2989,7 +2989,7 @@
           ],
           [
             "trap",
-            "Do not call all flywheel energy questions “outside JEE”; it is the material theory that is additional."
+            "Do not call all flywheel energy questions \u201coutside JEE\u201d; it is the material theory that is additional."
           ]
         ]
       },
@@ -3010,11 +3010,11 @@
           ],
           [
             "p",
-            "rho is density; nu is Poisson’s ratio. Maximum stress is at the centre for ordinary positive nu."
+            "rho is density; nu is Poisson\u2019s ratio. Maximum stress is at the centre for ordinary positive nu."
           ],
           [
             "why",
-            "Insert the stress-limited rim speed into K/M. Dimensions: stress/density = m²/s²."
+            "Insert the stress-limited rim speed into K/M. Dimensions: stress/density = m\u00b2/s\u00b2."
           ]
         ]
       },
@@ -3023,7 +3023,7 @@
         "items": [
           [
             "p",
-            "rho=7800 kg/m³, nu=0.30, sigma(allow)=500 MPa; use the source’s ideal strength as the allowable value."
+            "rho=7800 kg/m\u00b3, nu=0.30, sigma(allow)=500 MPa; use the source\u2019s ideal strength as the allowable value."
           ],
           [
             "m",
@@ -3035,7 +3035,7 @@
           ],
           [
             "why",
-            "This independently recomputes the source’s approximately 39 kJ/kg estimate."
+            "This independently recomputes the source\u2019s approximately 39 kJ/kg estimate."
           ],
           [
             "trap",
@@ -3048,7 +3048,7 @@
         "items": [
           [
             "p",
-            "For an ideal thin rotating ring the hoop stress is rho omega² R², while K/M = omega² R² / 2."
+            "For an ideal thin rotating ring the hoop stress is rho omega\u00b2 R\u00b2, while K/M = omega\u00b2 R\u00b2 / 2."
           ],
           [
             "m",
@@ -3073,7 +3073,7 @@
     "slug": "Olympiad-04-model-boundaries",
     "title": "Open systems & missing constraints",
     "subtitle": "Specialised model audit: not every printed question is sufficiently specified to have a unique answer.",
-    "source": "OL5; OL9; §10.2; Part 14",
+    "source": "OL5; OL9; \u00a710.2; Part 14",
     "diagrams": [
       "carpet",
       "peg"
@@ -3135,7 +3135,7 @@
         "items": [
           [
             "p",
-            "A smooth floor supplies only vertical force; it cannot generally pin the rod’s bottom. A peg contact is not automatically a permanent hinge."
+            "A smooth floor supplies only vertical force; it cannot generally pin the rod\u2019s bottom. A peg contact is not automatically a permanent hinge."
           ],
           [
             "m",

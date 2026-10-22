@@ -4,16 +4,16 @@
     "sha256": "459106629ef3f67118a8eac12c264e207f967533108638c4e089f83f0fbc4d10"
   },
   "JEE-02-moduli-bulk-shear.png": {
-    "bytes": 343967,
-    "sha256": "846f550a7e3a86a7aab17b57ef5a68c4b70d6fa47c5d6ed61e79617a9957e372"
+    "bytes": 210679,
+    "sha256": "bbda660644d3994f551dd2291dfafe81637b324577b3380a31aacf38643233fc"
   },
   "JEE-03-extension-family.png": {
-    "bytes": 320144,
-    "sha256": "69e58351d823b2cf90d91fea10e68daa4507522f42f599defde135cbdcff0b56"
+    "bytes": 197254,
+    "sha256": "e0c97ec53d8aca608fe7b0f5387ac4b8198a527546a8a6936808beccd23ad960"
   },
   "JEE-04-composite-thermal.png": {
-    "bytes": 372634,
-    "sha256": "d219d9e0c5be6cdb362c8b7e75e98ed696b7b0058a0b3bc82d237ebc8d61992e"
+    "bytes": 222052,
+    "sha256": "b9a74edfd6ec9c87e11c3382bc351117a3dd2691f671b3fa106023f973e0a9a2"
   },
   "JEE-05-energy-impact.png": {
     "bytes": 317705,
@@ -32,8 +32,8 @@
     "sha256": "25c7a880240b54a92f5dcc3f0fcb2e1c7409065fa6d13f898170eed404806254"
   },
   "Olympiad-01-atomic-spring.png": {
-    "bytes": 389415,
-    "sha256": "cac413585b467bde2ea24d578c43a08e77f9ede2c1e83a69f55749897e932cac"
+    "bytes": 226362,
+    "sha256": "6a4b767b5d81d3ecee768dff9c061617e610db31e171c5015d80492b21031700"
   },
   "Olympiad-02-thermal-expansion-well.png": {
     "bytes": 358782,
@@ -52,43 +52,43 @@
     "sha256": "143810d05181183e3c893dccefead591964a676156ef392bdba6b49bac534b7c"
   },
   "Olympiad-06-buckling-columns.png": {
-    "bytes": 366583,
-    "sha256": "7a971a9e43cbb02eeeb4ce69d7ad99bedddc115aa6ffade8b69e0042b98ce63e"
+    "bytes": 216682,
+    "sha256": "c7b22004333c5dbb34df2bdacc3f647cbb9fec7d3db50b6c02aee88d39b8b7f9"
   },
   "Olympiad-07-ibeam-hoop.png": {
-    "bytes": 365626,
-    "sha256": "60808464724e1080912a1e01acf2c21b2b3d59a0b73fec7684a09c13b17f7905"
+    "bytes": 224698,
+    "sha256": "1e4d9356df2098445c6af117a958adf8170e4b246f4a1fa85985431c44773b96"
   },
   "Olympiad-08-seismic-waves.png": {
-    "bytes": 344390,
-    "sha256": "f6c3a4a3dd309ed937b5e01f06c0fe0aa19163cbd900a7c40336dd2b96125cee"
+    "bytes": 213588,
+    "sha256": "06209a14e7f59d610268c807527d351d1e48871d3650b6c256a49407800f7fb0"
   },
   "Olympiad-09-multiaxial.png": {
     "bytes": 338266,
     "sha256": "ec841bfbedbc406290dd0df32396f387184b74c9bdd6bddf47b979d8151d0e4c"
   },
   "elasticity-all-pngs.zip": {
-    "bytes": 5645317,
-    "sha256": "cd94f43fb32ab0b98d3489859d962b75ca421d031692ad395de4ca53f694209b"
+    "bytes": 7157041,
+    "sha256": "fea714a50396f912c8cf6aeca055fe67234287f44b57a0b808e80d551d2e2f21"
   },
   "elasticity-jee-pngs.zip": {
-    "bytes": 2576233,
-    "sha256": "ca910884e933fb1bc2f15d828f0d5b69caab834cfdfd36dbf1e3f34f316e7860"
+    "bytes": 3206391,
+    "sha256": "b13ece8a565e7f51531a501e7df03877913da9402198676acabae8e78a545d0f"
   },
   "elasticity-jee.pdf": {
-    "bytes": 2695123,
-    "sha256": "66293b7120fee34b5e530b873af323c32a28a0775d2119cc4dd5e61fc1d424cb"
+    "bytes": 2294487,
+    "sha256": "12623353b9ad6a208fff0c4147973bc6c436eade1cb6a3c7a4ceee2330415d81"
   },
   "elasticity-olympiad-pngs.zip": {
-    "bytes": 3069106,
-    "sha256": "71f1bcac096a8ffee2c0434ebabce2c2f3c5f7ec9b4c57383be02846d714c1bf"
+    "bytes": 3950672,
+    "sha256": "a3556f53f69e60ee5acf653c58795684ae1249f926d6e041ea3950b21de46b0d"
   },
   "elasticity-olympiad.pdf": {
-    "bytes": 3206191,
-    "sha256": "d038130a0540e511db94bed66043992153b96da5807540548aa42c8ca8582790"
+    "bytes": 2634355,
+    "sha256": "dc15ba3474e984888daf9b3c670df0a627c0965bda12307d8ef66c8152541d4f"
   },
   "elasticity-short-notes.pdf": {
-    "bytes": 5900320,
-    "sha256": "aeaefed7dd29cf3d1f07667d25d4e28a5821ca34ed0cc847e9bfaacc85823fc4"
+    "bytes": 4927848,
+    "sha256": "bc1c25d2e8d85a866e9a6cc083155d325291616a13c83a551dfc8c492a03540d"
   }
 }

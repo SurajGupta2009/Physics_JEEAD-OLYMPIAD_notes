@@ -106,37 +106,56 @@ def runs(s, size):
     return [(t, font(size, fb)) for t, fb in out]
 
 
-def line_len(s, size):
-    return sum(_MEASURE.textlength(t, font=f) for t, f in runs(s, size))
-
-
 _SUBS = set('₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎')
+_SUPS = set('⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾')
+_SUB_TR = str.maketrans('₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎', '0123456789+-=()')
+_SUP_TR = str.maketrans('⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾', '0123456789+-=()')
 
 
-def _sub_runs(t):
+def _script_runs(s):
     out = []
-    for ch in t:
-        k = ch in _SUBS
-        if out and out[-1][1] == k:
+    for ch in s:
+        kind = 'sub' if ch in _SUBS else ('sup' if ch in _SUPS else 'norm')
+        if out and out[-1][1] == kind:
             out[-1][0] += ch
         else:
-            out.append([ch, k])
-    return [(a, b) for a, b in out]
+            out.append([ch, kind])
+    return out
+
+
+def line_len(s, size):
+    total = 0.0
+    for seg, kind in _script_runs(s):
+        if kind == 'sub':
+            f2 = font(max(1, round(size * .64)), fallback=False)
+            total += _MEASURE.textlength(seg.translate(_SUB_TR), font=f2)
+        elif kind == 'sup':
+            f2 = font(max(1, round(size * .64)), fallback=False)
+            total += _MEASURE.textlength(seg.translate(_SUP_TR), font=f2)
+        else:
+            total += sum(_MEASURE.textlength(t, font=f) for t, f in runs(seg, size))
+    return total
 
 
 def draw_line(im, s, x, y, size, color=INK):
-    """Fallback glyphs come from DejaVu; its subscripts are drawn on the
-    baseline, so lower and shrink them here instead of trusting the metrics."""
+    """Set subscripts/superscripts cleanly in Patrick Hand; Greek/math symbols in DejaVu."""
     d = ImageDraw.Draw(im)
-    for t, f in runs(s, size):
-        for seg, sub in _sub_runs(t):
-            adv = d.textlength(seg, font=f)
-            if sub:
-                f2 = font(max(1, round(size * .58)), fallback=True)
-                d.text((x, y + size * .38), seg, font=f2, fill=color)
-            else:
-                d.text((x, y), seg, font=f, fill=color)
-            x += adv
+    for seg, kind in _script_runs(s):
+        if kind == 'sub':
+            txt = seg.translate(_SUB_TR)
+            f2 = font(max(1, round(size * .64)), fallback=False)
+            d.text((x, y + size * .36), txt, font=f2, fill=color)
+            x += d.textlength(txt, font=f2)
+        elif kind == 'sup':
+            txt = seg.translate(_SUP_TR)
+            f2 = font(max(1, round(size * .64)), fallback=False)
+            d.text((x, y - size * .06), txt, font=f2, fill=color)
+            x += d.textlength(txt, font=f2)
+        else:
+            for t, f in runs(seg, size):
+                adv = d.textlength(t, font=f)
+                d.text((x, y), t, font=f, fill=color)
+                x += adv
 
 
 def _rm(m):

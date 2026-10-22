@@ -77,42 +77,42 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x",
+      "card": "Strain and acoustic pressure: dP = -B ds/dx",
       "used_px": 767,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "card": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
       "used_px": 715,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "card": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
       "used_px": 871,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Strain and the acoustic pressure Delta P = -B,partial s/partial x (c.",
+      "card": "Strain and acoustic pressure: dP = -B ds/dx (cont.)",
       "used_px": 763,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "The numbers: pressure amplitude from displacement amplitude (co.",
+      "card": "Pressure amplitude from displacement amplitude (cont.)",
       "used_px": 1010,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "The numbers: pressure amplitude from displacement amplitude (co.",
+      "card": "Pressure amplitude from displacement amplitude (cont.)",
       "used_px": 754,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -287,7 +287,7 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Sound in solids: rods sqrtY/rho and bulk sqrt(K+frac43G)/rho (con.",
+      "card": "Sound in solids: rod vs bulk wave speed (cont.)",
       "used_px": 898,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -469,14 +469,14 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+      "card": "Temperature law: v = 331.3 sqrt(T/273) m/s",
       "used_px": 827,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Temperature dependence: v = 331.3sqrtT/273 m/s, approx 331 + 0..",
+      "card": "Temperature law: v = 331.3 sqrt(T/273) m/s",
       "used_px": 881,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -595,28 +595,28 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "card": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
       "used_px": 899,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "card": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
       "used_px": 678,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "card": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
       "used_px": 717,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Intensity of sound: I = frac12rho vomega2 s 02 = dfracDelta P 022.",
+      "card": "Sound intensity: I = (1/2) rho v omega^2 s_0^2",
       "used_px": 739,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -1072,7 +1072,7 @@
     },
     {
       "card": "Open-pipe spectra in data questions (cont.)",
-      "used_px": 680,
+      "used_px": 636,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1093,20 +1093,20 @@
     },
     {
       "card": "The one-line mode solver (all pipes, all questions) (cont.)",
-      "used_px": 982,
+      "used_px": 926,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+      "card": "End correction: L_eff = L + e (closed) or L + 2e (open)",
       "used_px": 803,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "End correction: e approx 0.6r, L eff = L + e (closed) or L + 2e (open.",
+      "card": "End correction: L_eff = L + e (closed) or L + 2e (open)",
       "used_px": 807,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -1198,7 +1198,7 @@
     },
     {
       "card": "Kundt's tube: measure v gas from dust-heap spacing (cont.)",
-      "used_px": 860,
+      "used_px": 749,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1268,14 +1268,14 @@
     },
     {
       "card": "Sign discipline for moving source (the classic trap) (cont.)",
-      "used_px": 936,
+      "used_px": 824,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sign discipline for moving source (the classic trap) (cont.)",
-      "used_px": 768,
+      "used_px": 667,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1372,8 +1372,8 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Doppler master class: conventions, vectors, and the full 1D family (.",
-      "used_px": 840,
+      "card": "Doppler master class: 1D sign conventions (cont.)",
+      "used_px": 656,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1408,7 +1408,7 @@
     },
     {
       "card": "Speed-estimation from shift (reverse problems)",
-      "used_px": 980,
+      "used_px": 906,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1436,35 +1436,35 @@
     },
     {
       "card": "Wind and Doppler: replace v by v + w directionally",
-      "used_px": 952,
+      "used_px": 592,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Galilean air-frame equivalence proof",
+      "used_px": 546,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why steady wind never shifts fixed parties",
+      "used_px": 542,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign trap & upwind rule",
+      "used_px": 527,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
-      "used_px": 863,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
-      "used_px": 781,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
-      "used_px": 804,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Wind and Doppler: replace v by v + w directionally (cont.)",
-      "used_px": 863,
+      "used_px": 927,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1485,7 +1485,7 @@
     },
     {
       "card": "Travel time with wind (the more common exam use) (cont.)",
-      "used_px": 749,
+      "used_px": 722,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1645,14 +1645,14 @@
       "explanation_pt": 11.04
     },
     {
-      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
-      "used_px": 912,
+      "card": "Sonic-boom delay geometry (Q13) (cont.)",
+      "used_px": 773,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Boom delay problem (source paper Q13 \u2014 corrected reasoning) (co.",
+      "card": "Sonic-boom delay geometry (Q13) (cont.)",
       "used_px": 797,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -1744,27 +1744,27 @@
     },
     {
       "card": "Impedance view of amplitude relations (consolidation) (cont.)",
-      "used_px": 945,
+      "used_px": 873,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "card": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
       "used_px": 925,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "card": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
       "used_px": 989,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Reflection and transmission at boundaries: R = left(fracZ 2 - Z 1Z.",
+      "card": "Boundary reflection & transmission: R = ((Z2-Z1)/(Z2+Z1))^2",
       "used_px": 673,
       "available_px": 1040,
       "body_pt": 11.52,

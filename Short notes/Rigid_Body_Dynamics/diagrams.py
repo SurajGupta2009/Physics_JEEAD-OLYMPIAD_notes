@@ -87,9 +87,9 @@ def figure(ax,key):
  if key=='tensor':
   n=np.array([.6,.8]);c=np.array([4,2.5]);line(ax,c-2*n,c+2*n,lw=3);ax.plot([c[0]-2*n[0],c[0]+2*n[0]],[c[1]-2*n[1],c[1]+2*n[1]],'o',c=INK);arrow(ax,c,c+[0,2],'omega');v=np.array([0,1])-n*.8;arrow(ax,c,c+4*v,'L',RED);text(ax,6,1,'L dot n = 0');return 'Oblique dumbbell: subtract the component along the rod'
  if key=='moving_origin':
-  ax.plot(2,1,'o',c=INK);ax.plot(7,3,'o',c=TEAL);text(ax,1.5,.5,'A');text(ax,7,3.4,'C');arrow(ax,(2,1),(4,1),'v(A)');arrow(ax,(7,3),(7,4.6),'v(C)');line(ax,(2,1),(7,3),ls='--');return 'Moving origins require the angular-momentum transport term'
+  ax.plot(2,1,'o',c=INK);ax.plot(7,3,'o',c=TEAL);text(ax,1.5,.5,'A');text(ax,7.35,2.75,'C');arrow(ax,(2,1),(4,1),'v(A)');arrow(ax,(7,3),(7,4.6),'v(C)');line(ax,(2,1),(7,3),ls='--');return 'Moving origins require the angular-momentum transport term'
  if key=='gyro':
-  o=np.array([3.,.7]);n=np.array([.6,.8]);line(ax,o,o+4*n,lw=2);arrow(ax,o,o+4*n);text(ax,6.4,3.5,'L ≈ I3 omega3');c=o+2.3*n;arrow(ax,c,c+[0,-1.5],color=RED);text(ax,4.7,.45,'Mg',color=RED);ax.plot([3,3],[.7,4.8],c=INK,ls=':');text(ax,3.1,2,'theta');text(ax,6,4,'Vertical axis');text(ax,6,2,'tau: into sheet\nOmega: upward');return 'Gravity turns spin angular momentum around vertical'
+  o=np.array([3.,.7]);n=np.array([.6,.8]);line(ax,o,o+4*n,lw=2);arrow(ax,o,o+4*n);text(ax,5.9,3.65,'L ≈ I3 omega3');c=o+2.3*n;arrow(ax,c,c+[0,-1.5],color=RED);text(ax,4.7,.45,'Mg',color=RED);ax.plot([3,3],[.7,4.8],c=INK,ls=':');text(ax,3.1,2,'theta');text(ax,3.25,4.35,'Vertical axis');text(ax,6.0,1.55,'tau: into sheet\nOmega: upward');return 'Gravity turns spin angular momentum around vertical'
  if key=='gyro_graph':
   ax.clear();w=np.linspace(2,10,200);graph(ax,w,1/w,'normalised spin rate','precession / reference');ax.set(ylim=(0,.6));ax.text(3,.45,'Fast-spin domain only',fontsize=11);return 'Inverse-spin trend: do not extrapolate to zero spin'
  if key=='stress':

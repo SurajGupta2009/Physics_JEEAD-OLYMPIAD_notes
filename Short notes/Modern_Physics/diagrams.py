@@ -1180,10 +1180,10 @@ def _decay_curve(fig):
     head(a, 'each half-life halves the remainder')
 
     b = panel(fig, [.56, .18, .40, .72])
-    logaxis(b, r'time  (half-lives)', r'$\ln(N/N_0)$', logx=False)
+    logaxis(b, r'time  (half-lives)', r'$N/N_0$  (log scale)', logx=False)
     b.semilogy(t, 2.0 ** (-t), color=T, lw=2.0)
     b.set_xlim(0, 4.2); b.set_ylim(1e-2, 1.3)
-    b.text(2.35, 1.8e-1, 'straight line: slope −λ', fontsize=7.8, color=G)
+    b.text(2.15, 3.8e-1, 'straight line: slope −λ', fontsize=7.8, color=G)
     head(b, 'the log plot is the working tool')
     return 'N = N0 e^(-λt); the halving ladder for whole half-lives, the log line for the rest'
 
