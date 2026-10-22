@@ -1,0 +1,792 @@
+{
+  "checks": 852,
+  "model_checks": 157,
+  "models": [
+    {
+      "name": "impulse on the cricket ball (N s)",
+      "value": 10.149999999999999,
+      "expected": 10.15
+    },
+    {
+      "name": "mean force, 1.2 ms (kN)",
+      "value": 8.458333333333332,
+      "expected": 8.46
+    },
+    {
+      "name": "weight as a fraction of that (%)",
+      "value": 0.016800000000000002,
+      "expected": 0.0168
+    },
+    {
+      "name": "incline normal, 5 kg at 30 (N)",
+      "value": 42.4352447854375,
+      "expected": 42.4
+    },
+    {
+      "name": "incline friction, mu 0.2 (N)",
+      "value": 8.4870489570875,
+      "expected": 8.49
+    },
+    {
+      "name": "incline acceleration (m/s2)",
+      "value": 3.2025902085825,
+      "expected": 3.2
+    },
+    {
+      "name": "lift reading, a up 2 (N)",
+      "value": 708.0,
+      "expected": 708.0
+    },
+    {
+      "name": "lift reading, a down 2 (N)",
+      "value": 468.00000000000006,
+      "expected": 468.0
+    },
+    {
+      "name": "Lami T1, 100 N lamp (N)",
+      "value": 86.60254037844388,
+      "expected": 86.6
+    },
+    {
+      "name": "Lami T2, 100 N lamp (N)",
+      "value": 49.99999999999999,
+      "expected": 50.0
+    },
+    {
+      "name": "static ceiling, 4 kg mu .5 (N)",
+      "value": 19.6,
+      "expected": 19.6
+    },
+    {
+      "name": "sliding acceleration, mu .3 (m/s2)",
+      "value": 2.94,
+      "expected": 2.94
+    },
+    {
+      "name": "time to grip the belt (s)",
+      "value": 1.3605442176870748,
+      "expected": 1.361
+    },
+    {
+      "name": "package distance on the belt (m)",
+      "value": 2.7210884353741496,
+      "expected": 2.72
+    },
+    {
+      "name": "horizontal pull, 20 kg mu .4 (N)",
+      "value": 78.4,
+      "expected": 78.4
+    },
+    {
+      "name": "minimum pull (N)",
+      "value": 72.79257256540434,
+      "expected": 72.8
+    },
+    {
+      "name": "optimum angle (deg)",
+      "value": 21.80140948635181,
+      "expected": 21.8
+    },
+    {
+      "name": "max push on the stack (N)",
+      "value": 19.6,
+      "expected": 19.6
+    },
+    {
+      "name": "contact force, 2 kg + 4 kg (N)",
+      "value": 20.0,
+      "expected": 20.0
+    },
+    {
+      "name": "Atwood 3-2 on 30 deg ramp (m/s2)",
+      "value": 0.9800000000000001,
+      "expected": 0.98
+    },
+    {
+      "name": "Atwood tension (N)",
+      "value": 17.64,
+      "expected": 17.6
+    },
+    {
+      "name": "movable pulley a1 (m/s2)",
+      "value": 5.157894736842105,
+      "expected": 5.16
+    },
+    {
+      "name": "movable pulley a2 (m/s2)",
+      "value": -2.5789473684210527,
+      "expected": -2.58
+    },
+    {
+      "name": "movable pulley tension (N)",
+      "value": 18.56842105263158,
+      "expected": 18.6
+    },
+    {
+      "name": "pendulum in a car (deg)",
+      "value": 26.56505117707799,
+      "expected": 26.6
+    },
+    {
+      "name": "effective g in the car (m/s2)",
+      "value": 10.95673308974897,
+      "expected": 10.96
+    },
+    {
+      "name": "crest normal fraction",
+      "value": 0.42602040816326536,
+      "expected": 0.426
+    },
+    {
+      "name": "crest lift-off speed (m/s)",
+      "value": 19.79898987322333,
+      "expected": 19.8
+    },
+    {
+      "name": "bank angle, R 80 v 20 (deg)",
+      "value": 27.030860259842985,
+      "expected": 27.0
+    },
+    {
+      "name": "bank normal, 1200 kg (kN)",
+      "value": 13.202181637896064,
+      "expected": 13.2
+    },
+    {
+      "name": "bank band vmax (m/s)",
+      "value": 28.653249303563705,
+      "expected": 28.6
+    },
+    {
+      "name": "bank band vmin (m/s)",
+      "value": 10.32325999719551,
+      "expected": 10.3
+    },
+    {
+      "name": "conical tension, 0.2 kg at 40 (N)",
+      "value": 2.5585982870912662,
+      "expected": 2.56
+    },
+    {
+      "name": "conical speed (m/s)",
+      "value": 1.625693066493541,
+      "expected": 1.63
+    },
+    {
+      "name": "conical period (s)",
+      "value": 1.2421636494798929,
+      "expected": 1.24
+    },
+    {
+      "name": "string loop launch (m/s)",
+      "value": 6.260990336999411,
+      "expected": 6.26
+    },
+    {
+      "name": "string loop T at the bottom (N)",
+      "value": 23.520000000000007,
+      "expected": 23.5
+    },
+    {
+      "name": "rod loop launch (m/s)",
+      "value": 4.849742261192857,
+      "expected": 4.85
+    },
+    {
+      "name": "rod loop N at 90 deg (N)",
+      "value": 1.9600000000000002,
+      "expected": 1.96
+    },
+    {
+      "name": "turntable string demand (N)",
+      "value": 7.2,
+      "expected": 7.2
+    },
+    {
+      "name": "turntable friction ceiling (N)",
+      "value": 1.47,
+      "expected": 1.47
+    },
+    {
+      "name": "coin slide omega (rad/s)",
+      "value": 5.715476066494083,
+      "expected": 5.72
+    },
+    {
+      "name": "rough table acceleration (m/s2)",
+      "value": 2.52,
+      "expected": 2.52
+    },
+    {
+      "name": "rough table tension (N)",
+      "value": 21.840000000000003,
+      "expected": 21.8
+    },
+    {
+      "name": "carry acceleration, 35 deg (m/s2)",
+      "value": 6.862033874455156,
+      "expected": 6.86
+    },
+    {
+      "name": "carry normal, 35 deg (N)",
+      "value": 23.92718193972454,
+      "expected": 23.9
+    },
+    {
+      "name": "mu from 12 m/s over 18 m",
+      "value": 0.40816326530612246,
+      "expected": 0.408
+    },
+    {
+      "name": "chain hanging 0.4 of 1.5 (m/s2)",
+      "value": 2.6133333333333337,
+      "expected": 2.61
+    },
+    {
+      "name": "chain leaves the table (m/s)",
+      "value": 3.695222140368109,
+      "expected": 3.7
+    },
+    {
+      "name": "carry push on a 5 kg wedge (N)",
+      "value": 57.56223469876141,
+      "expected": 57.6
+    },
+    {
+      "name": "energy shortcut v at the top (m/s)",
+      "value": 4.979959839195493,
+      "expected": 4.98
+    },
+    {
+      "name": "energy shortcut T at the top (N)",
+      "value": 7.499999999999998,
+      "expected": 7.5
+    },
+    {
+      "name": "wedge recoil, 4 kg at 30 (m/s2)",
+      "value": -0.9984763478926472,
+      "expected": -1.0
+    },
+    {
+      "name": "wedge relative slide (m/s2)",
+      "value": 5.764705882352941,
+      "expected": 5.76
+    },
+    {
+      "name": "liftoff threshold, 45 deg (m/s2)",
+      "value": 9.8,
+      "expected": 9.8
+    },
+    {
+      "name": "liftoff normal at 0.5 g (x mg)",
+      "value": 0.35355339059327384,
+      "expected": 0.354
+    },
+    {
+      "name": "virtual work rise (cm)",
+      "value": 1.1547005383792515,
+      "expected": 1.155
+    },
+    {
+      "name": "rope over edge, hanging fraction",
+      "value": 0.23076923076923075,
+      "expected": 0.231
+    },
+    {
+      "name": "wedge momentum recoil (m/s2)",
+      "value": -2.52227615954954,
+      "expected": -2.52
+    },
+    {
+      "name": "wedge momentum pair check (N)",
+      "value": 7.566828478648618,
+      "expected": 7.56
+    },
+    {
+      "name": "falling chain reading (N)",
+      "value": 58.800000000000004,
+      "expected": 58.8
+    },
+    {
+      "name": "rocket mass ratio",
+      "value": 16.444646771097048,
+      "expected": 16.4
+    },
+    {
+      "name": "rocket payload fraction (%)",
+      "value": 6.0810062625217975,
+      "expected": 6.1
+    },
+    {
+      "name": "sand belt force (N)",
+      "value": 18.0,
+      "expected": 18.0
+    },
+    {
+      "name": "sand belt power (W)",
+      "value": 27.0,
+      "expected": 27.0
+    },
+    {
+      "name": "sand heat rate (W)",
+      "value": 13.5,
+      "expected": 13.5
+    },
+    {
+      "name": "chain lift force (N)",
+      "value": 20.752000000000002,
+      "expected": 20.8
+    },
+    {
+      "name": "chain lift loss (W)",
+      "value": 0.6911999999999999,
+      "expected": 0.691
+    },
+    {
+      "name": "capstan, 2 turns mu .25 (kN)",
+      "value": 4.628138526555854,
+      "expected": 4.63
+    },
+    {
+      "name": "capstan, 3 turns (kN)",
+      "value": 22.263555697971242,
+      "expected": 22.3
+    },
+    {
+      "name": "capstan, 4 turns (kN)",
+      "value": 107.09833110495293,
+      "expected": 107.0
+    },
+    {
+      "name": "hitch turns, wet",
+      "value": 2.64880888620022,
+      "expected": 2.65
+    },
+    {
+      "name": "hitch turns, dry",
+      "value": 1.5892853317201323,
+      "expected": 1.59
+    },
+    {
+      "name": "staging, stage 2 dry 40 (km/s)",
+      "value": 2.699853433898032,
+      "expected": 2.7
+    },
+    {
+      "name": "impulse window ratio (%)",
+      "value": 0.196,
+      "expected": 0.196
+    },
+    {
+      "name": "hoop critical omega (rad/s)",
+      "value": 4.427188724235731,
+      "expected": 4.43
+    },
+    {
+      "name": "hoop seat angle (deg)",
+      "value": 57.01329291752108,
+      "expected": 57.0
+    },
+    {
+      "name": "slack angle cos",
+      "value": 0.09863945578231292,
+      "expected": 0.0986
+    },
+    {
+      "name": "bounce total distance, h 2, e .8 (m)",
+      "value": 9.111111111111112,
+      "expected": 9.11
+    },
+    {
+      "name": "bounce total time (s)",
+      "value": 5.74988908499946,
+      "expected": 5.75
+    },
+    {
+      "name": "staging, equal split (km/s)",
+      "value": 3.620217215792503,
+      "expected": 3.62
+    },
+    {
+      "name": "staging, 160 kg first (km/s)",
+      "value": 3.6715020770191784,
+      "expected": 3.67
+    },
+    {
+      "name": "staging, all fuel first (km/s)",
+      "value": 3.2188758248682006,
+      "expected": 3.22
+    },
+    {
+      "name": "single stage, same structure (km/s)",
+      "value": 3.2188758248682006,
+      "expected": 3.22
+    },
+    {
+      "name": "Lorentz factor at 0.1 c",
+      "value": 1.005037815259212,
+      "expected": 1.005
+    },
+    {
+      "name": "car grip used (%)",
+      "value": 43.731778425655975,
+      "expected": 43.7
+    },
+    {
+      "name": "monkey tension, equal masses at rest (N)",
+      "value": 58.800000000000004,
+      "expected": 58.8
+    },
+    {
+      "name": "cylinder crest normal fraction",
+      "value": 0.42602040816326536,
+      "expected": 0.426
+    },
+    {
+      "name": "r_min alpha 5 MeV on gold (fm)",
+      "value": 45.5028797120217,
+      "expected": 45.5
+    },
+    {
+      "name": "b at 90 deg, same beam (fm)",
+      "value": 22.75143985601085,
+      "expected": 22.8
+    },
+    {
+      "name": "Coulomb barrier gold R=7 fm (MeV)",
+      "value": 32.50205693715836,
+      "expected": 32.5
+    },
+    {
+      "name": "Bohr radius (pm)",
+      "value": 52.91772109909366,
+      "expected": 52.9
+    },
+    {
+      "name": "H n=3 radius (A)",
+      "value": 4.762594898918429,
+      "expected": 4.76
+    },
+    {
+      "name": "H n=3 speed (m/s)",
+      "value": 729230.4212153093,
+      "expected": 729000.0
+    },
+    {
+      "name": "H n=3 de Broglie (A)",
+      "value": 9.974755430977572,
+      "expected": 9.97
+    },
+    {
+      "name": "ionisation of H (eV)",
+      "value": 13.605693120763007,
+      "expected": 13.6
+    },
+    {
+      "name": "Balmer edge (nm)",
+      "value": 364.6594071564714,
+      "expected": 364.6
+    },
+    {
+      "name": "Lyman alpha (nm)",
+      "value": 121.55313571882381,
+      "expected": 121.6
+    },
+    {
+      "name": "H-alpha (nm)",
+      "value": 656.4696267003703,
+      "expected": 656.3
+    },
+    {
+      "name": "He+ ground (eV)",
+      "value": -54.4,
+      "expected": -54.4
+    },
+    {
+      "name": "Li2+ ground (eV)",
+      "value": -122.39999999999999,
+      "expected": -122.4
+    },
+    {
+      "name": "positronium ground (eV)",
+      "value": -6.8,
+      "expected": -6.8
+    },
+    {
+      "name": "positronium radius (A)",
+      "value": 1.0583544219818732,
+      "expected": 1.06
+    },
+    {
+      "name": "550 nm photon (eV)",
+      "value": 2.254258153330914,
+      "expected": 2.25
+    },
+    {
+      "name": "Na threshold (nm)",
+      "value": 543.7903440052644,
+      "expected": 544.0
+    },
+    {
+      "name": "K_max, 400 nm on Na (eV)",
+      "value": 0.8196049608300071,
+      "expected": 0.82
+    },
+    {
+      "name": "1.226/sqrt(V) at 100 V (A)",
+      "value": 0.1226,
+      "expected": 0.1226
+    },
+    {
+      "name": "electron wavelength at 100 kV, non-rel (pm)",
+      "value": 3.8769524113664326,
+      "expected": 3.88
+    },
+    {
+      "name": "Davisson-Germer 54 V (nm)",
+      "value": 0.166837468036232,
+      "expected": 0.1668
+    },
+    {
+      "name": "d-spacing NaCl 282 pm gives 154 pm at n=1 (deg)",
+      "value": 15.845819420965265,
+      "expected": 15.8
+    },
+    {
+      "name": "photon flux, 100 W at 2 m (W/m2)",
+      "value": 1.9894367886486917,
+      "expected": 1.99
+    },
+    {
+      "name": "Duane-Hunt at 100 kV (pm)",
+      "value": 12.4,
+      "expected": 12.4
+    },
+    {
+      "name": "Cu K-alpha energy (keV)",
+      "value": 7.9967999999999995,
+      "expected": 8.0
+    },
+    {
+      "name": "Cu K-alpha wavelength (pm)",
+      "value": 155.04226494747937,
+      "expected": 155.0
+    },
+    {
+      "name": "Cu K threshold (kV)",
+      "value": 7.9967999999999995,
+      "expected": 8.0
+    },
+    {
+      "name": "Mo K-alpha (pm)",
+      "value": 71.82391433670435,
+      "expected": 71.8
+    },
+    {
+      "name": "Ag K-alpha (pm)",
+      "value": 57.0586011342155,
+      "expected": 57.1
+    },
+    {
+      "name": "Pb half-value 0.123 mm, six to 1 % (mm)",
+      "value": 0.817194311342291,
+      "expected": 0.82
+    },
+    {
+      "name": "Avogadro from NaCl",
+      "value": 6.018315982207049e+23,
+      "expected": 6.02e+23
+    },
+    {
+      "name": "Compton wavelength (pm)",
+      "value": 2.4263102390826217,
+      "expected": 2.426
+    },
+    {
+      "name": "shift at 90 deg (pm)",
+      "value": 2.4263102390826217,
+      "expected": 2.426
+    },
+    {
+      "name": "shift at 180 deg (pm)",
+      "value": 4.852620478165243,
+      "expected": 4.85
+    },
+    {
+      "name": "electron KE at 90 deg, 100 keV (keV)",
+      "value": 16.366612111292962,
+      "expected": 16.4
+    },
+    {
+      "name": "electron KE at 180 deg, 100 keV (keV)",
+      "value": 28.12939521800281,
+      "expected": 28.2
+    },
+    {
+      "name": "pair threshold (MeV)",
+      "value": 1.0219979,
+      "expected": 1.022
+    },
+    {
+      "name": "2 MeV photon pair KE (MeV)",
+      "value": 0.978,
+      "expected": 0.98
+    },
+    {
+      "name": "inverse Compton boost, gamma=1e3",
+      "value": 2400.0,
+      "expected": 2400.0
+    },
+    {
+      "name": "nuclear radius U-238 (fm)",
+      "value": 7.436585321689351,
+      "expected": 7.44
+    },
+    {
+      "name": "nuclear density (kg/m3)",
+      "value": 2.314101820129555e+17,
+      "expected": 2.3e+17
+    },
+    {
+      "name": "He-4 binding (MeV)",
+      "value": 28.295993238000506,
+      "expected": 28.3
+    },
+    {
+      "name": "deuteron binding per nucleon",
+      "value": 1.1122038360001298,
+      "expected": 1.11
+    },
+    {
+      "name": "valley Z0 at A=100",
+      "value": 42.88563836171984,
+      "expected": 42.9
+    },
+    {
+      "name": "valley Z0 at A=238",
+      "value": 91.84108726208753,
+      "expected": 92.0
+    },
+    {
+      "name": "alpha KE, U-238 Q=4.27 (MeV)",
+      "value": 4.198235294117647,
+      "expected": 4.2
+    },
+    {
+      "name": "alpha KE, Po-210 Q=5.40 (MeV)",
+      "value": 5.297142857142857,
+      "expected": 5.3
+    },
+    {
+      "name": "C-14 beta Q (MeV)",
+      "value": 0.15649099200036334,
+      "expected": 0.156
+    },
+    {
+      "name": "N-13 beta-plus Q (MeV)",
+      "value": 1.1979012839993253,
+      "expected": 1.2
+    },
+    {
+      "name": "Tc-99m lambda (per h)",
+      "value": 0.11552453009332421,
+      "expected": 0.1155
+    },
+    {
+      "name": "Tc-99m after 12 h (MBq)",
+      "value": 200.0,
+      "expected": 200.0
+    },
+    {
+      "name": "C-14 age for A/A0=2/3 (y)",
+      "value": 3351.835129132225,
+      "expected": 3350.0
+    },
+    {
+      "name": "transient ratio, lambda2=3 lambda1",
+      "value": 1.5,
+      "expected": 1.5
+    },
+    {
+      "name": "fissions per GW-day (1e24)",
+      "value": 2.696629213483146,
+      "expected": 2.7
+    },
+    {
+      "name": "U-235 mass per GW-day (kg)",
+      "value": 1.053658536585366,
+      "expected": 1.05
+    },
+    {
+      "name": "Coulomb barrier pp at 2 fm (MeV)",
+      "value": 0.72,
+      "expected": 0.72
+    },
+    {
+      "name": "classical fusion temperature (K)",
+      "value": 8355240000.0,
+      "expected": 8360000000.0
+    },
+    {
+      "name": "Gamow peak, E_G=490 keV, kT=1.3 keV (keV)",
+      "value": 5.9157198334999235,
+      "expected": 5.9
+    },
+    {
+      "name": "solar helium rate (1e37 per s)",
+      "value": 8.954163101366738,
+      "expected": 8.95
+    },
+    {
+      "name": "solar neutrino flux (1e14 per m2 s)",
+      "value": 6.367690484936534,
+      "expected": 6.4
+    },
+    {
+      "name": "counts for 0.5 %",
+      "value": 40000.0,
+      "expected": 40000.0
+    },
+    {
+      "name": "isochron age, slope 0.05 (Gyr)",
+      "value": 3.4359270541853557,
+      "expected": 3.44
+    },
+    {
+      "name": "thermal neutron wavelength at 25 meV (A)",
+      "value": 1.8089135995127343,
+      "expected": 1.81
+    },
+    {
+      "name": "neutron energy for 1 fm, relativistic (MeV)",
+      "value": 616.2355193097732,
+      "expected": 616.0
+    },
+    {
+      "name": "solar lifetime (Gyr)",
+      "value": 7.256673847650627,
+      "expected": 7.2
+    },
+    {
+      "name": "Geiger-Nuttall log10 ratio (decades)",
+      "value": 23.675228253593065,
+      "expected": 23.7
+    },
+    {
+      "name": "pairing term at A=236 (MeV)",
+      "value": 0.7811334658849433,
+      "expected": 0.781
+    },
+    {
+      "name": "valley coefficient a_c/2a_a",
+      "value": 0.015301724137931034,
+      "expected": 0.0153
+    },
+    {
+      "name": "transient peak time, 18 h / 6 h (h)",
+      "value": 14.26466250649041,
+      "expected": 14.3
+    }
+  ],
+  "note": "Representative recomputation of printed formulas, not exhaustive."
+}

@@ -1,0 +1,226 @@
+{
+  "JEE-01-inertial-frames.png": {
+    "bytes": 261781,
+    "sha256": "af4ee55a6585ba3c869485adbe8551583d5417c77c7be98b7fcff4725797fc72"
+  },
+  "JEE-02-second-law.png": {
+    "bytes": 247565,
+    "sha256": "b476ceda3341793a28fbc51f5a75e5984128df28f802c12f7eab630b8db425b1"
+  },
+  "JEE-03-third-law.png": {
+    "bytes": 225444,
+    "sha256": "d626a27b801c9b720860501ec312c7f2e8a5d45ba8f6e3bfa7764e569f41088c"
+  },
+  "JEE-04-free-body.png": {
+    "bytes": 232400,
+    "sha256": "099874663316e9618854167429941ffab5ff89411747e5036559e2b8ebdf1c78"
+  },
+  "JEE-05-apparent-weight.png": {
+    "bytes": 241040,
+    "sha256": "147e2ade7d1b581805b240026c4ee4773dca76a1021441b83c3849833353a051"
+  },
+  "JEE-06-lami.png": {
+    "bytes": 200917,
+    "sha256": "7bf874ebb460a5accd916c104a290cea50fdca9aceb384f7b10852b13f47742a"
+  },
+  "JEE-07-static-friction.png": {
+    "bytes": 233173,
+    "sha256": "7bdead873dab6d5389201ca84ce1e5bc118588bcfd559dd7719774d49d84b48e"
+  },
+  "JEE-08-friction-direction.png": {
+    "bytes": 220311,
+    "sha256": "d9972d3fa87e810e82c04b4295b9370c6676fdab262bf24b3a1a9f0fd757c55a"
+  },
+  "JEE-09-min-pull.png": {
+    "bytes": 229884,
+    "sha256": "a36212d3b22ffe46a340c58c4423e2d28650a84e3f5f589db157936935e0f29b"
+  },
+  "JEE-10-stacked-blocks.png": {
+    "bytes": 227691,
+    "sha256": "35e639de0abcfd1a65e19727472c4b2d108ca469f6fd0b92bc0871fc84237698"
+  },
+  "JEE-11-system-vs-parts.png": {
+    "bytes": 207156,
+    "sha256": "d3eb3dce4745075622a4301c937d269c187926366c19a1f4cc41331f7291b046"
+  },
+  "JEE-12-atwood-ramp.png": {
+    "bytes": 221368,
+    "sha256": "b204279c5e0cbb75553e821d1e98fe139f1fd824b77e3ad5835cf2d4e0c084a2"
+  },
+  "JEE-13-movable-pulley.png": {
+    "bytes": 221443,
+    "sha256": "abbc33fed5198c19d28bb655810ce8e805a0f01ba5e4cca8381cd5c60640699a"
+  },
+  "JEE-14-pseudo-force.png": {
+    "bytes": 215587,
+    "sha256": "88df7f2092d8a66358d78123d72d291d2b07128619d4c586a32991bd111b5fbd"
+  },
+  "JEE-15-centripetal-source.png": {
+    "bytes": 228952,
+    "sha256": "ba8f5ee8ec85fd76033d912b29a3522395777a6383f7e162e2a75f7db9314944"
+  },
+  "JEE-16-banked-design.png": {
+    "bytes": 220689,
+    "sha256": "631d57b6ad3630215d36016d6c9e776385f698888e2a0a90f5d474c0506d2df6"
+  },
+  "JEE-17-banked-band.png": {
+    "bytes": 234555,
+    "sha256": "bdff9dbce6cb7ca3e4b645aad45b425235e459cf98effe62c13d144528f0a152"
+  },
+  "JEE-18-conical-pendulum.png": {
+    "bytes": 234506,
+    "sha256": "61dc3d03bfa0a1a5392095fc73945976b33303c393c2b78f3bdb87bf0ce663bc"
+  },
+  "JEE-19-vertical-circle-string.png": {
+    "bytes": 238458,
+    "sha256": "6072322fa576a6bcc1b1feb908f4ae4cd535112922eea29f8878edc123b9f5d3"
+  },
+  "JEE-20-vertical-circle-rod.png": {
+    "bytes": 234602,
+    "sha256": "10309fced8730ad7da98c1778e31b144a93035c34ef5a78a22c9c789833c2726"
+  },
+  "JEE-21-energy-shortcut.png": {
+    "bytes": 251349,
+    "sha256": "a5df63545dddff6b44dff3488a39cdd714fc9817e72c45f9e1cbafae8f6a6761"
+  },
+  "JEE-22-rough-table-pulley.png": {
+    "bytes": 218547,
+    "sha256": "ce6b245c9ff0341e7b60089ee2f4243cdea0cf5c340d3fc526c61881735a12eb"
+  },
+  "JEE-23-accelerating-incline.png": {
+    "bytes": 234806,
+    "sha256": "0209a867365685c148e3767644b23385e81b9b83020abf9469f2c6855dc5a33f"
+  },
+  "JEE-24-measuring-mu.png": {
+    "bytes": 214338,
+    "sha256": "bac33a1c724f721abeaceccefbbf80ec383a4d66a31593b6f52b81afbf547ca2"
+  },
+  "JEE-25-chain-over-edge.png": {
+    "bytes": 214384,
+    "sha256": "1bdca19d17f090ec00ec62f67d4aabf01e1f341fb8d0db9b9969ca8ff3ef4c6e"
+  },
+  "JEE-26-wedge-carry.png": {
+    "bytes": 229045,
+    "sha256": "afbc5e2b83a9922adc900b9748b59536bd7aae64466574c0c7c51468c16cba6b"
+  },
+  "Olympiad-01-turntable-string.png": {
+    "bytes": 238707,
+    "sha256": "cdfbc2ef3685956bc5b4b3d61e5edca47141de912c83a61844add4b7892e170a"
+  },
+  "Olympiad-02-turntable-limit.png": {
+    "bytes": 226295,
+    "sha256": "8ca01e77cee227e34a8c2b00602ca36e1a7c41cb39a9c894d9cde352eceee8c4"
+  },
+  "Olympiad-03-wedge-constraint.png": {
+    "bytes": 223925,
+    "sha256": "5d2b3c818bc86339b1f7babd1e096ec1a080b4790a24c3f0a3ea8a6aa30c00c3"
+  },
+  "Olympiad-04-effective-gravity.png": {
+    "bytes": 211297,
+    "sha256": "e33bb66de2eeeb20b19a18e7470a06072e6fc3427a579a1610e9ba1852ca9c14"
+  },
+  "Olympiad-05-wedge-liftoff.png": {
+    "bytes": 230949,
+    "sha256": "645e314243cb26bbc2178a7aeb49ce1677980f9c87df9679e6ca700b5d1121ec"
+  },
+  "Olympiad-06-virtual-work.png": {
+    "bytes": 225427,
+    "sha256": "5e70de1eb708416f5e78c736613799cc9dcb5673458b62d0dd7634ce0b55a948"
+  },
+  "Olympiad-07-rope-over-edge.png": {
+    "bytes": 216076,
+    "sha256": "d59fcdd2ba1e0686c0ca4d4f046b1a7b0573d273ea39bf16afe1ab3d4638a9f3"
+  },
+  "Olympiad-08-falling-chain.png": {
+    "bytes": 238384,
+    "sha256": "229e0b67b2ddd14a064bf43651539c983c496ca7923a25bca4076052b1a8d6be"
+  },
+  "Olympiad-09-rocket-equation.png": {
+    "bytes": 215856,
+    "sha256": "724a24ad9f8a09df48ed19d5a85f93b05b117172feaf08bd5630f1b3ace78a05"
+  },
+  "Olympiad-10-sand-conveyor.png": {
+    "bytes": 208677,
+    "sha256": "835ca8d3cf72b127a4a7a8b26f84dd17439b7c15c63a4b4a41505b3e2e2952b5"
+  },
+  "Olympiad-11-chain-lift.png": {
+    "bytes": 215579,
+    "sha256": "09d2f6553fc2d2ffe70337d0325ed4c36ee832a9416af2cfea88dd7b7a175c38"
+  },
+  "Olympiad-12-capstan.png": {
+    "bytes": 216175,
+    "sha256": "5b4226249fff2ed3a7550f191f552b553215fe16318c5a59b39d7f0542a627d8"
+  },
+  "Olympiad-13-friction-hitch.png": {
+    "bytes": 213426,
+    "sha256": "444fb9d60e23c34cd075b3d0a65ed653a290ca811b3e80371ed7711a2ae4c7e3"
+  },
+  "Olympiad-14-staging.png": {
+    "bytes": 221211,
+    "sha256": "dd31ad5067fc54dadcf4c8ec4dd8f5db05707e83a562d56354d0a845fe885a97"
+  },
+  "Olympiad-15-impulse-window.png": {
+    "bytes": 226842,
+    "sha256": "3c3187982cfa3aeefb7ad9e9b402a05b2766b4d53652e8a5b6d83ca2743f72f1"
+  },
+  "Olympiad-16-bead-on-hoop.png": {
+    "bytes": 232317,
+    "sha256": "2866791c73b4fd30036a708e2809c8f9cf4226f0e745fdefbd5ff9a6926fc7a0"
+  },
+  "Olympiad-17-slack-angle.png": {
+    "bytes": 236478,
+    "sha256": "0ad50db8294d205e026d1d8bd7ab6c1143aeadd7ae6ead310af3a26cfc17a57c"
+  },
+  "Olympiad-18-bounce-series.png": {
+    "bytes": 232923,
+    "sha256": "6661534760528667ba9272c9e254227ad7a80b18c620c22a27986bf3201cde03"
+  },
+  "Olympiad-19-wedge-momentum.png": {
+    "bytes": 233917,
+    "sha256": "717f91a4326845f4e51f2079b5ee5461b8a5dfc20bd11e0f181715fdd73aa093"
+  },
+  "Olympiad-20-stage-split.png": {
+    "bytes": 270228,
+    "sha256": "c08b93f2dfde6eec56a5df77c0524317f9e50aec9e6b50598abb671af4420ed4"
+  },
+  "Olympiad-21-model-limits.png": {
+    "bytes": 232946,
+    "sha256": "702d5e925e5fd10211f01f61734f6acf652554757a8c237ea34dce7dd04a9acd"
+  },
+  "Olympiad-22-rolling-contact.png": {
+    "bytes": 238062,
+    "sha256": "3de1071d8b281156aa771ad4cdc531d178f91027b63f9d3f55c13534fadfe24e"
+  },
+  "Olympiad-23-four-shortcuts.png": {
+    "bytes": 241242,
+    "sha256": "6a7892ca841e31255e3398d443164431b8f2c9c9024c66256d7681c2f4cc9ff0"
+  },
+  "Olympiad-24-monkey-rope.png": {
+    "bytes": 252747,
+    "sha256": "4be630fcafe215c28577896ae64962c36f3e2d05e3b2282ffcd2c1bc05da0c0a"
+  },
+  "newtons-laws-all-pngs.zip": {
+    "bytes": 10645543,
+    "sha256": "37247740fcd0a178709f8f5863ef8acb4cf69cb577663eb7a659a0cefb4b74ee"
+  },
+  "newtons-laws-jee-pngs.zip": {
+    "bytes": 5526607,
+    "sha256": "d91c9265245f6df96bfde6054043c8d2d2e3f81697ddc44f3ec4e98b9f55dcb5"
+  },
+  "newtons-laws-jee.pdf": {
+    "bytes": 5926848,
+    "sha256": "4185656b44ee987b5c25c73153d275516bc906eceb7b843e9af78e59702ade1a"
+  },
+  "newtons-laws-olympiad-pngs.zip": {
+    "bytes": 5118958,
+    "sha256": "6e9dd6bf95d23fc3d42a7b8f7f174d1ef64fbec791b660ecb4e3ce851c3adffa"
+  },
+  "newtons-laws-olympiad.pdf": {
+    "bytes": 5488681,
+    "sha256": "faa9160e8335cbc6c820305f92d225042d10f403545b44a8bdf85758a58b2559"
+  },
+  "newtons-laws-short-notes.pdf": {
+    "bytes": 11414736,
+    "sha256": "1f943695e1746d5bf8d492b765dbeb4948dfdfcd1ee54b07a6d8d7a3567ce3cb"
+  }
+}

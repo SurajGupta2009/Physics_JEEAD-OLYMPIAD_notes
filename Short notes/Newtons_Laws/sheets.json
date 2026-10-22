@@ -1,0 +1,1464 @@
+{
+  "edition": "newtons-laws",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sections": {
+    "JEE": 26,
+    "Olympiad": 24
+  },
+  "sheets": [
+    {
+      "slug": "JEE-01-inertial-frames",
+      "section": "JEE",
+      "page": 1,
+      "title": "What is a force, really?",
+      "question": "The first law is recited as \"a body keeps moving unless pushed\". Why is it a definition of the frame rather than a law about forces?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "inertial_frames"
+      ],
+      "takeaway": "pick the frame first: a force is what an inertial frame says it is",
+      "file": "JEE-01-inertial-frames.png",
+      "layout": [
+        {
+          "sheet": "JEE-01-inertial-frames",
+          "stage": "frame",
+          "main_px": 1758,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-01-inertial-frames",
+          "margin_px": 812,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-02-second-law",
+      "section": "JEE",
+      "page": 2,
+      "title": "Is F = ma the law, or a special case?",
+      "question": "Rockets, falling chains and conveyor belts all have mass entering or leaving. Which form of Newton's second law survives all three?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "second_law"
+      ],
+      "takeaway": "F = dp/dt is the law; F = ma is the fixed-mass shorthand",
+      "file": "JEE-02-second-law.png",
+      "layout": [
+        {
+          "sheet": "JEE-02-second-law",
+          "stage": "one",
+          "main_px": 1708,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-02-second-law",
+          "margin_px": 1114,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-03-third-law",
+      "section": "JEE",
+      "page": 3,
+      "title": "Why is the normal force not the reaction to weight?",
+      "question": "Equal and opposite sounds like a pair. What extra conditions turn two forces into a third-law pair?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "third_law"
+      ],
+      "takeaway": "a pair needs two bodies and one interaction; N and mg are neither",
+      "file": "JEE-03-third-law.png",
+      "layout": [
+        {
+          "sheet": "JEE-03-third-law",
+          "stage": "one",
+          "main_px": 1664,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-03-third-law",
+          "margin_px": 763,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-04-free-body",
+      "section": "JEE",
+      "page": 4,
+      "title": "How do you draw a diagram that never lies?",
+      "question": "Six forces, one acceleration. What procedure makes the equations fall out in one pass?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "fbd_incline"
+      ],
+      "takeaway": "isolate one body, name every agent, put the axes along the acceleration",
+      "file": "JEE-04-free-body.png",
+      "layout": [
+        {
+          "sheet": "JEE-04-free-body",
+          "stage": "one",
+          "main_px": 1653,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-04-free-body",
+          "margin_px": 820,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-05-apparent-weight",
+      "section": "JEE",
+      "page": 5,
+      "title": "What does a weighing scale actually measure?",
+      "question": "In a lift the scale reads more, less, or nothing at all. Which force is it reporting?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "apparent_weight"
+      ],
+      "takeaway": "weight never changes; the reading is the normal force",
+      "file": "JEE-05-apparent-weight.png",
+      "layout": [
+        {
+          "sheet": "JEE-05-apparent-weight",
+          "stage": "contact",
+          "main_px": 1600,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-05-apparent-weight",
+          "margin_px": 815,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-06-lami",
+      "section": "JEE",
+      "page": 6,
+      "title": "Three forces, no acceleration: why does the triangle close?",
+      "question": "A lamp hangs on two wires. When is the sine rule faster than resolving components?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "lami"
+      ],
+      "takeaway": "three forces in equilibrium close a triangle, and the sine rule reads it",
+      "file": "JEE-06-lami.png",
+      "layout": [
+        {
+          "sheet": "JEE-06-lami",
+          "stage": "contact",
+          "main_px": 1458,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-06-lami",
+          "margin_px": 864,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-07-static-friction",
+      "section": "JEE",
+      "page": 7,
+      "title": "Is friction equal to mu N?",
+      "question": "A 20 N block sits on a rough floor while you push with 3 N and it does not move. What is the friction force?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "friction_static"
+      ],
+      "takeaway": "static friction is an inequality with a ceiling, not a number",
+      "file": "JEE-07-static-friction.png",
+      "layout": [
+        {
+          "sheet": "JEE-07-static-friction",
+          "stage": "contact",
+          "main_px": 1559,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-07-static-friction",
+          "margin_px": 1026,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-08-friction-direction",
+      "section": "JEE",
+      "page": 8,
+      "title": "Which way does friction point?",
+      "question": "A block is dropped on a moving belt and another slides up a ramp. Both are moving, yet friction points in opposite senses. Why?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "friction_direction"
+      ],
+      "takeaway": "friction opposes relative slip at the contact, not motion in the room",
+      "file": "JEE-08-friction-direction.png",
+      "layout": [
+        {
+          "sheet": "JEE-08-friction-direction",
+          "stage": "contact",
+          "main_px": 1470,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-08-friction-direction",
+          "margin_px": 861,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-09-min-pull",
+      "section": "JEE",
+      "page": 9,
+      "title": "Why is the easiest pull not horizontal?",
+      "question": "Dragging a crate is easier with the rope tilted up. Why, and exactly how much less force is needed?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "min_pull"
+      ],
+      "takeaway": "tilting up trades normal force for drive, and the best tilt is arctan mu",
+      "file": "JEE-09-min-pull.png",
+      "layout": [
+        {
+          "sheet": "JEE-09-min-pull",
+          "stage": "contact",
+          "main_px": 1731,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-09-min-pull",
+          "margin_px": 971,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-10-stacked-blocks",
+      "section": "JEE",
+      "page": 10,
+      "title": "When do two stacked blocks stop moving together?",
+      "question": "You push the lower block of a stack. What limits how hard you can push before the top one slips?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "stacked_blocks"
+      ],
+      "takeaway": "the top block is driven by friction alone, so it caps the whole system",
+      "file": "JEE-10-stacked-blocks.png",
+      "layout": [
+        {
+          "sheet": "JEE-10-stacked-blocks",
+          "stage": "linked",
+          "main_px": 1526,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-10-stacked-blocks",
+          "margin_px": 969,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-11-system-vs-parts",
+      "section": "JEE",
+      "page": 11,
+      "title": "System or single body: which do you solve?",
+      "question": "Two blocks are pushed together. How do you get both the common acceleration and the force between them, without solving twice?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "system_parts"
+      ],
+      "takeaway": "use the system for the acceleration, then isolate one body for the internal force",
+      "file": "JEE-11-system-vs-parts.png",
+      "layout": [
+        {
+          "sheet": "JEE-11-system-vs-parts",
+          "stage": "linked",
+          "main_px": 1513,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-11-system-vs-parts",
+          "margin_px": 814,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-12-atwood-ramp",
+      "section": "JEE",
+      "page": 12,
+      "title": "Atwood on a ramp: where does the motion change hands?",
+      "question": "One mass hangs, one sits on a rough 30\u00b0 ramp. Over what range of mass ratio does nothing move at all?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "atwood_incline"
+      ],
+      "takeaway": "friction turns one crossing point into a band of mass ratios",
+      "file": "JEE-12-atwood-ramp.png",
+      "layout": [
+        {
+          "sheet": "JEE-12-atwood-ramp",
+          "stage": "linked",
+          "main_px": 1522,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-12-atwood-ramp",
+          "margin_px": 956,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-13-movable-pulley",
+      "section": "JEE",
+      "page": 13,
+      "title": "Why does the free end move twice as far?",
+      "question": "A rope runs over a fixed pulley, round a movable one, and is anchored. What links the accelerations, and what links the tensions?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "movable_pulley"
+      ],
+      "takeaway": "the length constraint gives the accelerations; one string gives the tension",
+      "file": "JEE-13-movable-pulley.png",
+      "layout": [
+        {
+          "sheet": "JEE-13-movable-pulley",
+          "stage": "linked",
+          "main_px": 1608,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-13-movable-pulley",
+          "margin_px": 884,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-14-pseudo-force",
+      "section": "JEE",
+      "page": 14,
+      "title": "Should you ever add a force that is not there?",
+      "question": "In a braking bus a hanging pendulum swings forward. Add a pseudo force, or stay in the ground frame?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "pseudo_frame"
+      ],
+      "takeaway": "a pseudo force is frame bookkeeping, not an interaction",
+      "file": "JEE-14-pseudo-force.png",
+      "layout": [
+        {
+          "sheet": "JEE-14-pseudo-force",
+          "stage": "pseudo",
+          "main_px": 1644,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-14-pseudo-force",
+          "margin_px": 878,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-15-centripetal-source",
+      "section": "JEE",
+      "page": 15,
+      "title": "Is centripetal force a new force?",
+      "question": "A ball on a string, a car on a bank, a car over a crest. Which real force points inward in each case?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "centripetal_source"
+      ],
+      "takeaway": "centripetal force is the inward resultant, never an extra arrow",
+      "file": "JEE-15-centripetal-source.png",
+      "layout": [
+        {
+          "sheet": "JEE-15-centripetal-source",
+          "stage": "spin",
+          "main_px": 1606,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-15-centripetal-source",
+          "margin_px": 861,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-16-banked-design",
+      "section": "JEE",
+      "page": 16,
+      "title": "Why are racetrack corners banked?",
+      "question": "With no friction at all, is there still a speed at which a car can take a banked curve?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "banked_design"
+      ],
+      "takeaway": "a bank turns normal force into centripetal force without any friction",
+      "file": "JEE-16-banked-design.png",
+      "layout": [
+        {
+          "sheet": "JEE-16-banked-design",
+          "stage": "spin",
+          "main_px": 1632,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-16-banked-design",
+          "margin_px": 880,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-17-banked-band",
+      "section": "JEE",
+      "page": 17,
+      "title": "How much slower or faster can you take the bank?",
+      "question": "Friction turns one design speed into a range. What are the two limits, and what sets them?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "banked_band"
+      ],
+      "takeaway": "friction widens a single design speed into a band of allowed speeds",
+      "file": "JEE-17-banked-band.png",
+      "layout": [
+        {
+          "sheet": "JEE-17-banked-band",
+          "stage": "spin",
+          "main_px": 1570,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-17-banked-band",
+          "margin_px": 877,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-18-conical-pendulum",
+      "section": "JEE",
+      "page": 18,
+      "title": "Why does a conical pendulum ignore the mass?",
+      "question": "A bob whirled on a string traces a horizontal circle. What actually sets the period?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "conical"
+      ],
+      "takeaway": "the vertical component carries the weight, so only L cos theta enters the period",
+      "file": "JEE-18-conical-pendulum.png",
+      "layout": [
+        {
+          "sheet": "JEE-18-conical-pendulum",
+          "stage": "spin",
+          "main_px": 1539,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-18-conical-pendulum",
+          "margin_px": 877,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-19-vertical-circle-string",
+      "section": "JEE",
+      "page": 19,
+      "title": "What is the slowest a ball can go round a vertical loop?",
+      "question": "A ball on a string is whirled in a vertical circle. Why must it be fast at the bottom, and what happens at the top?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "circle_string"
+      ],
+      "takeaway": "the string can only pull, so at the top it must still be taut",
+      "file": "JEE-19-vertical-circle-string.png",
+      "layout": [
+        {
+          "sheet": "JEE-19-vertical-circle-string",
+          "stage": "spin",
+          "main_px": 1683,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-19-vertical-circle-string",
+          "margin_px": 950,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-20-vertical-circle-rod",
+      "section": "JEE",
+      "page": 20,
+      "title": "Why can a bead on a rod stop at the top?",
+      "question": "A bead threaded on a light rod is given just enough speed to reach the highest point. What is different from the string?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "circle_rod"
+      ],
+      "takeaway": "a rod pushes as well as pulls, so it needs no minimum speed at the top",
+      "file": "JEE-20-vertical-circle-rod.png",
+      "layout": [
+        {
+          "sheet": "JEE-20-vertical-circle-rod",
+          "stage": "spin",
+          "main_px": 1506,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-20-vertical-circle-rod",
+          "margin_px": 937,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-21-energy-shortcut",
+      "section": "JEE",
+      "page": 21,
+      "title": "Why is energy faster than forces in a vertical circle?",
+      "question": "The tangential equation has a sin theta in it and the radial equation has a v squared. How do you avoid integrating at all?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "energy_shortcut"
+      ],
+      "takeaway": "energy gives the speed at every angle; the radial equation gives the tension",
+      "file": "JEE-21-energy-shortcut.png",
+      "layout": [
+        {
+          "sheet": "JEE-21-energy-shortcut",
+          "stage": "spin",
+          "main_px": 1725,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-21-energy-shortcut",
+          "margin_px": 911,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-22-rough-table-pulley",
+      "section": "JEE",
+      "page": 22,
+      "title": "What changes when the table is rough?",
+      "question": "A block on a rough table is tied over a pulley to a hanging mass. Everything is the same as the smooth case except one term. Which one?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rough_table_pulley"
+      ],
+      "takeaway": "on the table friction is the brake; on the string it is the drive",
+      "file": "JEE-22-rough-table-pulley.png",
+      "layout": [
+        {
+          "sheet": "JEE-22-rough-table-pulley",
+          "stage": "linked",
+          "main_px": 1549,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-22-rough-table-pulley",
+          "margin_px": 932,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-23-accelerating-incline",
+      "section": "JEE",
+      "page": 23,
+      "title": "Can an accelerating ramp hold a block still?",
+      "question": "A block sits on a frictionless ramp that is itself accelerating horizontally. Is there a ramp acceleration at which the block does not slide at all?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "accelerating_incline"
+      ],
+      "takeaway": "accelerate the ramp at g tan theta and the pseudo force replaces gravity along the face",
+      "file": "JEE-23-accelerating-incline.png",
+      "layout": [
+        {
+          "sheet": "JEE-23-accelerating-incline",
+          "stage": "pseudo",
+          "main_px": 1574,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-23-accelerating-incline",
+          "margin_px": 833,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-24-measuring-mu",
+      "section": "JEE",
+      "page": 24,
+      "title": "How do you measure friction without a force meter?",
+      "question": "Friction coefficients are quoted to two digits. Which three independent experiments produce them, and what does each one assume?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "measure_mu"
+      ],
+      "takeaway": "three routes to one number: tilt, brake, and drag at constant speed",
+      "file": "JEE-24-measuring-mu.png",
+      "layout": [
+        {
+          "sheet": "JEE-24-measuring-mu",
+          "stage": "contact",
+          "main_px": 1736,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-24-measuring-mu",
+          "margin_px": 984,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-25-chain-over-edge",
+      "section": "JEE",
+      "page": 25,
+      "title": "Why does a chain accelerate faster as it falls?",
+      "question": "A chain hangs over a table edge with length l already off. The driving weight grows as more falls, but the mass being accelerated does not. What motion results?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "chain_table"
+      ],
+      "takeaway": "the hanging weight grows while the sliding mass stays the same, so a grows with x",
+      "file": "JEE-25-chain-over-edge.png",
+      "layout": [
+        {
+          "sheet": "JEE-25-chain-over-edge",
+          "stage": "linked",
+          "main_px": 1614,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-25-chain-over-edge",
+          "margin_px": 847,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-26-wedge-carry",
+      "section": "JEE",
+      "page": 26,
+      "title": "How hard must you push a wedge to carry its block?",
+      "question": "A block rests on a smooth wedge. Accelerate the wedge horizontally and the block can stay put. What is the required acceleration, and what keeps it there?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wedge_carry"
+      ],
+      "takeaway": "at a0 = g tan theta the pseudo force exactly replaces the downhill pull",
+      "file": "JEE-26-wedge-carry.png",
+      "layout": [
+        {
+          "sheet": "JEE-26-wedge-carry",
+          "stage": "pseudo",
+          "main_px": 1531,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-26-wedge-carry",
+          "margin_px": 918,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-01-turntable-string",
+      "section": "Olympiad",
+      "page": 1,
+      "title": "Is there friction on a block tied to the axis?",
+      "question": "A block on a turntable is tied by a string to the centre and the table spins fast. Is the friction zero, or maximum?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "turntable"
+      ],
+      "takeaway": "the string and friction share one job, so each takes only what it must",
+      "file": "Olympiad-01-turntable-string.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-01-turntable-string",
+          "stage": "spin",
+          "main_px": 1535,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-01-turntable-string",
+          "margin_px": 910,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-02-turntable-limit",
+      "section": "Olympiad",
+      "page": 2,
+      "title": "Why does a coin and a brick slip at the same speed?",
+      "question": "Two objects of very different mass sit at the same radius on a spinning turntable. Which one slides off first?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "turntable_limit"
+      ],
+      "takeaway": "the friction limit is proportional to mass, so mass cancels out of the slip condition",
+      "file": "Olympiad-02-turntable-limit.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-02-turntable-limit",
+          "stage": "spin",
+          "main_px": 1579,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-02-turntable-limit",
+          "margin_px": 918,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-03-wedge-constraint",
+      "section": "Olympiad",
+      "page": 3,
+      "title": "Why is the block's acceleration not along the face?",
+      "question": "A wedge slides on a table and a block slides down its face. You know both motions are linked, but how?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wedge_constraint"
+      ],
+      "takeaway": "a contact is a coordinate constraint first and a force second",
+      "file": "Olympiad-03-wedge-constraint.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-03-wedge-constraint",
+          "stage": "linked",
+          "main_px": 1740,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-03-wedge-constraint",
+          "margin_px": 874,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-04-effective-gravity",
+      "section": "Olympiad",
+      "page": 4,
+      "title": "What is g inside a lift, a car, a centrifuge?",
+      "question": "A pendulum in an accelerating vehicle keeps time differently. How much, and in which direction does it hang?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "effective_g"
+      ],
+      "takeaway": "g_eff is the vector sum of gravity and the frame acceleration, taken with a minus sign",
+      "file": "Olympiad-04-effective-gravity.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-04-effective-gravity",
+          "stage": "pseudo",
+          "main_px": 1572,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-04-effective-gravity",
+          "margin_px": 859,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-05-wedge-liftoff",
+      "section": "Olympiad",
+      "page": 5,
+      "title": "When does a block leave a wedge that is pulled away?",
+      "question": "The wedge is yanked horizontally out from under a block resting on its face. At what acceleration does contact break?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wedge_liftoff"
+      ],
+      "takeaway": "contact survives only while the normal force remains positive",
+      "file": "Olympiad-05-wedge-liftoff.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-05-wedge-liftoff",
+          "stage": "pseudo",
+          "main_px": 1532,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-05-wedge-liftoff",
+          "margin_px": 872,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-06-virtual-work",
+      "section": "Olympiad",
+      "page": 6,
+      "title": "Why can you ignore the normal force in a work calculation?",
+      "question": "A constraint force can be large, yet contributes nothing to the energy bookkeeping. Why exactly?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "virtual_work"
+      ],
+      "takeaway": "a constraint force perpendicular to the allowed displacement does no work",
+      "file": "Olympiad-06-virtual-work.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-06-virtual-work",
+          "stage": "linked",
+          "main_px": 1492,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-06-virtual-work",
+          "margin_px": 910,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-07-rope-over-edge",
+      "section": "Olympiad",
+      "page": 7,
+      "title": "At what length does a rope over an edge start to slide?",
+      "question": "A rope lies on a rough table with length x hanging over the edge. How much must hang before it moves?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rope_table"
+      ],
+      "takeaway": "the hanging fraction must beat friction on the part still on the table",
+      "file": "Olympiad-07-rope-over-edge.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-07-rope-over-edge",
+          "stage": "linked",
+          "main_px": 1608,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-07-rope-over-edge",
+          "margin_px": 807,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-08-falling-chain",
+      "section": "Olympiad",
+      "page": 8,
+      "title": "Does a falling chain weigh three times as much?",
+      "question": "A chain is dropped so that it lands in a heap on a scale. At the instant the last link lands, what does the scale read?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "falling_chain"
+      ],
+      "takeaway": "a landing chain must be stopped as well as held: three times the landed weight",
+      "file": "Olympiad-08-falling-chain.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-08-falling-chain",
+          "stage": "one",
+          "main_px": 1472,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-08-falling-chain",
+          "margin_px": 888,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-09-rocket-equation",
+      "section": "Olympiad",
+      "page": 9,
+      "title": "Why is the cost of speed logarithmic?",
+      "question": "A rocket reaches 9 km/s with an exhaust speed of 3 km/s. Why must it be mostly fuel, and how much?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rocket_ratio"
+      ],
+      "takeaway": "each unit of speed costs a fixed ratio of mass, so speed grows as a logarithm",
+      "file": "Olympiad-09-rocket-equation.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-09-rocket-equation",
+          "stage": "one",
+          "main_px": 1741,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-09-rocket-equation",
+          "margin_px": 859,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-10-sand-conveyor",
+      "section": "Olympiad",
+      "page": 10,
+      "title": "Why does a conveyor belt need twice the power?",
+      "question": "Sand falls vertically onto a belt moving at constant speed. The belt's motor supplies power. Where does it go?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "sand_belt"
+      ],
+      "takeaway": "half the power becomes kinetic energy, half is lost to friction while the sand slips",
+      "file": "Olympiad-10-sand-conveyor.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-10-sand-conveyor",
+          "stage": "one",
+          "main_px": 1503,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-10-sand-conveyor",
+          "margin_px": 1007,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-11-chain-lift",
+      "section": "Olympiad",
+      "page": 11,
+      "title": "Why does lifting a chain cost more than its weight?",
+      "question": "A chain is pulled up from a heap at constant speed. The force is larger than the weight of the hanging part. By how much?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "chain_lift"
+      ],
+      "takeaway": "lifting at constant speed still costs a momentum-flux force, lambda v squared",
+      "file": "Olympiad-11-chain-lift.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-11-chain-lift",
+          "stage": "one",
+          "main_px": 1510,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-11-chain-lift",
+          "margin_px": 756,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-12-capstan",
+      "section": "Olympiad",
+      "page": 12,
+      "title": "Why can one hand hold a ship?",
+      "question": "A rope takes two turns round a bollard and a small force holds a huge one. What is the law, and where does the ratio come from?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "capstan"
+      ],
+      "takeaway": "every radian of wrap multiplies the grip by e to the mu theta",
+      "file": "Olympiad-12-capstan.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-12-capstan",
+          "stage": "contact",
+          "main_px": 1494,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-12-capstan",
+          "margin_px": 885,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-13-friction-hitch",
+      "section": "Olympiad",
+      "page": 13,
+      "title": "How does a friction hitch hold a falling climber?",
+      "question": "A rope wrapped round a carabiner holds with a small hand force. How many turns does it take to turn 1 into 10, and into 300?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "hitch_turns"
+      ],
+      "takeaway": "the hitch holds because tension decays exponentially along the wrap",
+      "file": "Olympiad-13-friction-hitch.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-13-friction-hitch",
+          "stage": "contact",
+          "main_px": 1541,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-13-friction-hitch",
+          "margin_px": 831,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-14-staging",
+      "section": "Olympiad",
+      "page": 14,
+      "title": "Why does staging beat one big tank?",
+      "question": "Two rockets carry the same fuel and the same structure, but one drops an empty stage. How much speed does that buy?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "staging"
+      ],
+      "takeaway": "staging wins by throwing away dead structure before the next burn",
+      "file": "Olympiad-14-staging.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-14-staging",
+          "stage": "one",
+          "main_px": 1618,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-14-staging",
+          "margin_px": 854,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-15-impulse-window",
+      "section": "Olympiad",
+      "page": 15,
+      "title": "When is it safe to ignore gravity during a hit?",
+      "question": "A bat hits a ball for about a millisecond. Gravity never switches off \u2014 so why does every solution drop it?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "impulse_window"
+      ],
+      "takeaway": "a force that is huge for a millisecond makes gravity irrelevant",
+      "file": "Olympiad-15-impulse-window.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-15-impulse-window",
+          "stage": "one",
+          "main_px": 1544,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-15-impulse-window",
+          "margin_px": 828,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-16-bead-on-hoop",
+      "section": "Olympiad",
+      "page": 16,
+      "title": "Why does a spinning hoop push its bead up the wire?",
+      "question": "A bead slides on a hoop spinning about its vertical diameter. Below a critical spin it sits at the bottom. What happens above it?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bead_hoop"
+      ],
+      "takeaway": "above the critical spin the bottom becomes unstable and two new seats appear",
+      "file": "Olympiad-16-bead-on-hoop.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-16-bead-on-hoop",
+          "stage": "spin",
+          "main_px": 1660,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-16-bead-on-hoop",
+          "margin_px": 861,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-17-slack-angle",
+      "section": "Olympiad",
+      "page": 17,
+      "title": "At what angle does a slackening string let go?",
+      "question": "Launch a ball round a vertical circle too slowly and the string goes limp before the top. Is the release angle predictable?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "slack_angle"
+      ],
+      "takeaway": "the slack angle is where the tension reaches zero while the radial equation still holds",
+      "file": "Olympiad-17-slack-angle.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-17-slack-angle",
+          "stage": "spin",
+          "main_px": 1617,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-17-slack-angle",
+          "margin_px": 838,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-18-bounce-series",
+      "section": "Olympiad",
+      "page": 18,
+      "title": "How far does a bouncing ball travel before it stops?",
+      "question": "A ball is dropped from height h and returns to e squared times that height after each bounce. The bounces are infinite \u2014 is the total distance?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "bounce_series"
+      ],
+      "takeaway": "an infinite number of bounces still sums to a finite distance and a finite time",
+      "file": "Olympiad-18-bounce-series.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-18-bounce-series",
+          "stage": "one",
+          "main_px": 1602,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-18-bounce-series",
+          "margin_px": 943,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-19-wedge-momentum",
+      "section": "Olympiad",
+      "page": 19,
+      "title": "Is horizontal momentum really conserved on a wedge?",
+      "question": "A block slides down a smooth wedge that is free to move on a smooth table. Which quantity is conserved, and how do you check it in one line?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "wedge_momentum"
+      ],
+      "takeaway": "no external horizontal force means the recoil is the block horizontal momentum, reversed",
+      "file": "Olympiad-19-wedge-momentum.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-19-wedge-momentum",
+          "stage": "linked",
+          "main_px": 1791,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-19-wedge-momentum",
+          "margin_px": 864,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-20-stage-split",
+      "section": "Olympiad",
+      "page": 20,
+      "title": "Where should the fuel go between two stages?",
+      "question": "Two stages, 800 kg of fuel, 50 kg of dry structure each. Put 400 kg in each, or 160 in the first and 640 in the second?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "stage_split"
+      ],
+      "takeaway": "with fixed dry masses the split has no interior optimum: fuel early is never worth it",
+      "file": "Olympiad-20-stage-split.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-20-stage-split",
+          "stage": "one",
+          "main_px": 1795,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-20-stage-split",
+          "margin_px": 960,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-21-model-limits",
+      "section": "Olympiad",
+      "page": 21,
+      "title": "Where exactly do Newton\u2019s laws stop being true?",
+      "question": "Newtonian mechanics is taught as if it were exact. Under what conditions does it fail, and what replaces it?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "limits_model"
+      ],
+      "takeaway": "Newton is exact inside a fence, and knowing the fence is what makes the model honest",
+      "file": "Olympiad-21-model-limits.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-21-model-limits",
+          "stage": "one",
+          "main_px": 1576,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-21-model-limits",
+          "margin_px": 812,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-22-rolling-contact",
+      "section": "Olympiad",
+      "page": 22,
+      "title": "If a rolling wheel is not sliding, what is friction doing?",
+      "question": "A driven wheel has friction at the contact, yet the contact point does not move. How can a force act at a point at rest?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "rolling_contact"
+      ],
+      "takeaway": "a rolling wheel uses static friction; the contact point is instantaneously at rest",
+      "file": "Olympiad-22-rolling-contact.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-22-rolling-contact",
+          "stage": "contact",
+          "main_px": 1520,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-22-rolling-contact",
+          "margin_px": 812,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-23-four-shortcuts",
+      "section": "Olympiad",
+      "page": 23,
+      "title": "What are the four moves that solve almost every problem here?",
+      "question": "The chapter has fourteen sections and one page of results. Which four procedures actually carry the load?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "four_shortcuts"
+      ],
+      "takeaway": "four shortcuts, one theme: replace a hard dynamics question with a smaller one",
+      "file": "Olympiad-23-four-shortcuts.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-23-four-shortcuts",
+          "stage": "one",
+          "main_px": 1574,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-23-four-shortcuts",
+          "margin_px": 861,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-24-monkey-rope",
+      "section": "Olympiad",
+      "page": 24,
+      "title": "Can a monkey climb away from its own counterweight?",
+      "question": "A monkey and an equal counterweight hang from one rope over a pulley. The monkey climbs. Does the counterweight stay, rise, or fall?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "monkey_rope"
+      ],
+      "takeaway": "equal masses on one rope share one acceleration: the climb rate drops out entirely",
+      "file": "Olympiad-24-monkey-rope.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-24-monkey-rope",
+          "stage": "linked",
+          "main_px": 1680,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-24-monkey-rope",
+          "margin_px": 1008,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    }
+  ]
+}

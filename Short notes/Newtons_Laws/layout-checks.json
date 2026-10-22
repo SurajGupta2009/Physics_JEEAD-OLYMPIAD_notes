@@ -1,0 +1,410 @@
+{
+  "edition": "newtons-laws",
+  "page": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "sheets": [
+    {
+      "slug": "JEE-01-inertial-frames",
+      "main_px": 1758,
+      "main_available": 2062,
+      "rail_px": 812,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-02-second-law",
+      "main_px": 1708,
+      "main_available": 2062,
+      "rail_px": 1114,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-03-third-law",
+      "main_px": 1664,
+      "main_available": 2062,
+      "rail_px": 763,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-04-free-body",
+      "main_px": 1653,
+      "main_available": 2062,
+      "rail_px": 820,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-05-apparent-weight",
+      "main_px": 1600,
+      "main_available": 2062,
+      "rail_px": 815,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-06-lami",
+      "main_px": 1458,
+      "main_available": 2062,
+      "rail_px": 864,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-07-static-friction",
+      "main_px": 1559,
+      "main_available": 2062,
+      "rail_px": 1026,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-08-friction-direction",
+      "main_px": 1470,
+      "main_available": 2062,
+      "rail_px": 861,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-09-min-pull",
+      "main_px": 1731,
+      "main_available": 2062,
+      "rail_px": 971,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-10-stacked-blocks",
+      "main_px": 1526,
+      "main_available": 2062,
+      "rail_px": 969,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-11-system-vs-parts",
+      "main_px": 1513,
+      "main_available": 2062,
+      "rail_px": 814,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-12-atwood-ramp",
+      "main_px": 1522,
+      "main_available": 2062,
+      "rail_px": 956,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-13-movable-pulley",
+      "main_px": 1608,
+      "main_available": 2062,
+      "rail_px": 884,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-14-pseudo-force",
+      "main_px": 1644,
+      "main_available": 2062,
+      "rail_px": 878,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-15-centripetal-source",
+      "main_px": 1606,
+      "main_available": 2062,
+      "rail_px": 861,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-16-banked-design",
+      "main_px": 1632,
+      "main_available": 2062,
+      "rail_px": 880,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-17-banked-band",
+      "main_px": 1570,
+      "main_available": 2062,
+      "rail_px": 877,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-18-conical-pendulum",
+      "main_px": 1539,
+      "main_available": 2062,
+      "rail_px": 877,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-19-vertical-circle-string",
+      "main_px": 1683,
+      "main_available": 2062,
+      "rail_px": 950,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-20-vertical-circle-rod",
+      "main_px": 1506,
+      "main_available": 2062,
+      "rail_px": 937,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-21-energy-shortcut",
+      "main_px": 1725,
+      "main_available": 2062,
+      "rail_px": 911,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-22-rough-table-pulley",
+      "main_px": 1549,
+      "main_available": 2062,
+      "rail_px": 932,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-23-accelerating-incline",
+      "main_px": 1574,
+      "main_available": 2062,
+      "rail_px": 833,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-24-measuring-mu",
+      "main_px": 1736,
+      "main_available": 2062,
+      "rail_px": 984,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-25-chain-over-edge",
+      "main_px": 1614,
+      "main_available": 2062,
+      "rail_px": 847,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "JEE-26-wedge-carry",
+      "main_px": 1531,
+      "main_available": 2062,
+      "rail_px": 918,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-01-turntable-string",
+      "main_px": 1535,
+      "main_available": 2062,
+      "rail_px": 910,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-02-turntable-limit",
+      "main_px": 1579,
+      "main_available": 2062,
+      "rail_px": 918,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-03-wedge-constraint",
+      "main_px": 1740,
+      "main_available": 2062,
+      "rail_px": 874,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-04-effective-gravity",
+      "main_px": 1572,
+      "main_available": 2062,
+      "rail_px": 859,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-05-wedge-liftoff",
+      "main_px": 1532,
+      "main_available": 2062,
+      "rail_px": 872,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-06-virtual-work",
+      "main_px": 1492,
+      "main_available": 2062,
+      "rail_px": 910,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-07-rope-over-edge",
+      "main_px": 1608,
+      "main_available": 2062,
+      "rail_px": 807,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-08-falling-chain",
+      "main_px": 1472,
+      "main_available": 2062,
+      "rail_px": 888,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-09-rocket-equation",
+      "main_px": 1741,
+      "main_available": 2062,
+      "rail_px": 859,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-10-sand-conveyor",
+      "main_px": 1503,
+      "main_available": 2062,
+      "rail_px": 1007,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-11-chain-lift",
+      "main_px": 1510,
+      "main_available": 2062,
+      "rail_px": 756,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-12-capstan",
+      "main_px": 1494,
+      "main_available": 2062,
+      "rail_px": 885,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-13-friction-hitch",
+      "main_px": 1541,
+      "main_available": 2062,
+      "rail_px": 831,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-14-staging",
+      "main_px": 1618,
+      "main_available": 2062,
+      "rail_px": 854,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-15-impulse-window",
+      "main_px": 1544,
+      "main_available": 2062,
+      "rail_px": 828,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-16-bead-on-hoop",
+      "main_px": 1660,
+      "main_available": 2062,
+      "rail_px": 861,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-17-slack-angle",
+      "main_px": 1617,
+      "main_available": 2062,
+      "rail_px": 838,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-18-bounce-series",
+      "main_px": 1602,
+      "main_available": 2062,
+      "rail_px": 943,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-19-wedge-momentum",
+      "main_px": 1791,
+      "main_available": 2062,
+      "rail_px": 864,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-20-stage-split",
+      "main_px": 1795,
+      "main_available": 2062,
+      "rail_px": 960,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-21-model-limits",
+      "main_px": 1576,
+      "main_available": 2062,
+      "rail_px": 812,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-22-rolling-contact",
+      "main_px": 1520,
+      "main_available": 2062,
+      "rail_px": 812,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-23-four-shortcuts",
+      "main_px": 1574,
+      "main_available": 2062,
+      "rail_px": 861,
+      "figure_y": 2310,
+      "figure_h": 886
+    },
+    {
+      "slug": "Olympiad-24-monkey-rope",
+      "main_px": 1680,
+      "main_available": 2062,
+      "rail_px": 1008,
+      "figure_y": 2310,
+      "figure_h": 886
+    }
+  ]
+}
