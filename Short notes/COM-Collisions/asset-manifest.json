@@ -1,0 +1,326 @@
+{
+  "JEE-01-bodies.png": {
+    "bytes": 274979,
+    "sha256": "4f6d5236e52df0e6d51bdb56acfaac2f9e67cbc8537658a027969aad7cb68181"
+  },
+  "JEE-02-bodies.png": {
+    "bytes": 341056,
+    "sha256": "2f294a6b260c3e0551a1eef300d599eb7ca82683c481192b6d2b814b729332c8"
+  },
+  "JEE-03-bodies.png": {
+    "bytes": 323221,
+    "sha256": "4482cd6361f86ab4ea519bbe14b50be66c15d503739498c3569bf91cb2391720"
+  },
+  "JEE-04-hole.png": {
+    "bytes": 302844,
+    "sha256": "79daca2f90faee4f05c3d641670f9371a236828d936e5232dc0ea98111fe702e"
+  },
+  "JEE-05-hole.png": {
+    "bytes": 316287,
+    "sha256": "e575066a6cb7efe71b0fbe579ed91d93e8c01da1340cde704de326a56d14ae6e"
+  },
+  "JEE-06-explosion.png": {
+    "bytes": 259353,
+    "sha256": "c16e88db1b8bda78352639c258b370f056b315bb321e76032d77200e32f80781"
+  },
+  "JEE-07-explosion.png": {
+    "bytes": 338589,
+    "sha256": "02ddbd7072e9132575d131f890300b493ea5edd5fd1faf0d777fe7e5622183c5"
+  },
+  "JEE-08-recoil.png": {
+    "bytes": 308286,
+    "sha256": "7cd6b9710a6ee0d39ea7e66643dbc9c0e296bad6330ae2ddda92f02ece79a854"
+  },
+  "JEE-09-classify.png": {
+    "bytes": 324637,
+    "sha256": "eb9ec3d27d12b66b3700e994ad0d1b055ac89a87a810d476150e9c131bca79cd"
+  },
+  "JEE-10-classify.png": {
+    "bytes": 253548,
+    "sha256": "360515e9b79d330cb02a3dd7155dcd41bee9af99bbfe25c6d3bb07fcce5fd88d"
+  },
+  "JEE-11-coll1d.png": {
+    "bytes": 249063,
+    "sha256": "36f1c51614434676f4fa5ef967eafba61c5285e489b44642acb0a77ca393401e"
+  },
+  "JEE-12-coll1d.png": {
+    "bytes": 270081,
+    "sha256": "a1f318940263b7b017c32d7227e4afdba172c3168b92960a411d1b16aa4768c4"
+  },
+  "JEE-13-coll1d.png": {
+    "bytes": 301981,
+    "sha256": "14c4ad6e43474dabafb0e6c76a8e71e8346b83641e897160b2eb39ba86ceb33c"
+  },
+  "JEE-14-collcases.png": {
+    "bytes": 317445,
+    "sha256": "92d8dc40590f978d44731dc0dac05458413e9bd8ef73736a6d46c897daefb92f"
+  },
+  "JEE-15-eloss.png": {
+    "bytes": 326265,
+    "sha256": "d6cf7420d9dcdb8ae5b44ac2e8eae4c85b46b14d5e59d1e5835dba0747227c38"
+  },
+  "JEE-16-eloss.png": {
+    "bytes": 311856,
+    "sha256": "2697213fb89a44cb746cbc7b254d0f8e745c7eae13173030f35febd1dfbfde7d"
+  },
+  "JEE-17-defo.png": {
+    "bytes": 285476,
+    "sha256": "eeed56be476aa3f4f93474f7ffd3e51ab15449930cc6f820b533d2c52febf45e"
+  },
+  "JEE-18-defo.png": {
+    "bytes": 290247,
+    "sha256": "2b14bdec3e1c096c3427a0b609998ac446e4bed7b5947449947f188d0235d155"
+  },
+  "JEE-19-oblique.png": {
+    "bytes": 258510,
+    "sha256": "2abfb0cf821420f4252ae7f3a5bf28c0fb555b5a8633bf58a6c8ecc2953a1feb"
+  },
+  "JEE-20-oblique.png": {
+    "bytes": 331290,
+    "sha256": "7762c51d69085efb24fa87fcaa521e6212e1dee14760cfb636473a08d640a5a4"
+  },
+  "JEE-21-ninety.png": {
+    "bytes": 306267,
+    "sha256": "60f7b158ac0b6de10aefbbbbcc7ea4a2e97a22f4cb380a03c25b61326ce3d4c5"
+  },
+  "JEE-22-ninety.png": {
+    "bytes": 329935,
+    "sha256": "751bfa54035d27c5c5e628d7f3bea97e9f5be075f6e47508aaf2ba94075d9018"
+  },
+  "JEE-23-ninety.png": {
+    "bytes": 270385,
+    "sha256": "55bd417da537ad919c2862486e46c746af37eeed0b3e57cda7c1ee0922d0ed48"
+  },
+  "JEE-24-pendulum.png": {
+    "bytes": 304119,
+    "sha256": "4e8575c3f11aeeb043485a537caf12ea6990c1b084b9241f198f89d4ade3b1d5"
+  },
+  "JEE-25-pendulum.png": {
+    "bytes": 268847,
+    "sha256": "42f919ca021f2cadfd2298e1aa3f28fa9d04dbc129fe70f07599493c760155ce"
+  },
+  "JEE-26-spring.png": {
+    "bytes": 256717,
+    "sha256": "1394b047ca981487753d4c2cd37b05bfdd90340947478b9e4e2f37c2b04e96ee"
+  },
+  "JEE-27-spring.png": {
+    "bytes": 273871,
+    "sha256": "6980c39ad3943576ec5e76c29a35d4874525b070ce89e87efabf6e2d87f271af"
+  },
+  "JEE-28-spring.png": {
+    "bytes": 266174,
+    "sha256": "5c844ca908be49bc2d0e6abfa7a7249fe3dfea26ce8608c6097fc8c73d8fcefd"
+  },
+  "JEE-29-cmframe.png": {
+    "bytes": 252307,
+    "sha256": "daaae171eeb57ee24adc43f89b83fb40ab1959c0da0566fd78ceb5987982b6d6"
+  },
+  "JEE-30-cmframe.png": {
+    "bytes": 292030,
+    "sha256": "a437a09b84ff458cce51f0aff0b90acc6cc8712bb5462bbc33bcfe7a2e304aa8"
+  },
+  "JEE-31-cmframe.png": {
+    "bytes": 243490,
+    "sha256": "69b11bd0390b1cf7c234360b5afb9e731268c36cad65e307a9cbd5293b95cb29"
+  },
+  "JEE-32-belt.png": {
+    "bytes": 308065,
+    "sha256": "e44b5f99bd49ed1f9248d5cb196740d948b465cc530729472e2a8901910d0f2b"
+  },
+  "JEE-33-belt.png": {
+    "bytes": 308587,
+    "sha256": "570fca268c7a429ca2cb12938295ff99ed4e9a6fcf6644456ed709bc6dde0b6c"
+  },
+  "JEE-34-rocket.png": {
+    "bytes": 343187,
+    "sha256": "d0e5cf672c625ab3b005ce30f7f698cdce9488b166ed64e1be83767c3bdcaaac"
+  },
+  "JEE-35-rocket.png": {
+    "bytes": 291974,
+    "sha256": "c196a268917b9c7193165ac1ff8c90f8b53a21074cf9896865b1bdb1183bc647"
+  },
+  "JEE-36-flux.png": {
+    "bytes": 265232,
+    "sha256": "01417e425ee8a5fb1ed4ae2e298170ea5a03182ac09cd56d0615a6c34255f78a"
+  },
+  "JEE-37-flux.png": {
+    "bytes": 255429,
+    "sha256": "0887a3ea01305507dbce23997b1466bbdcc55c44a37ba4e5464bf141cb460348"
+  },
+  "JEE-38-boat.png": {
+    "bytes": 301127,
+    "sha256": "760cbf9b3d2a4249e3f4fd0c8c9ae3b44c55d29ce50f8520e5464eef75847d77"
+  },
+  "JEE-39-boat.png": {
+    "bytes": 289077,
+    "sha256": "611a1b77ec33b35220249b4fc95687f6c9a7466a5d7ed1389770ff9eca59dc79"
+  },
+  "JEE-40-boat.png": {
+    "bytes": 299999,
+    "sha256": "728adbe430b077d8db550b829878c2d31fb9a183f572ae816c1ba05297bbedb2"
+  },
+  "JEE-41-bounces.png": {
+    "bytes": 263668,
+    "sha256": "1a52da783491f8a1a9c32d360d522435651c231a6d1238987c1c4f24b9251699"
+  },
+  "JEE-42-bounces.png": {
+    "bytes": 323428,
+    "sha256": "c9d6a562811e252cd0d066d4c556e706043c3e3095e8a7304b9e391e3df433f7"
+  },
+  "JEE-43-wall.png": {
+    "bytes": 331564,
+    "sha256": "b81d6aac79c8f22e569dc036d4a59fe81dca053b0716d65ab41a2519c7daf9f0"
+  },
+  "JEE-44-wall.png": {
+    "bytes": 325722,
+    "sha256": "b2f810d8b9c1826cafcee10d6d2878cd4f2876fcb27e6cd7e7ef3a5b53a41663"
+  },
+  "JEE-45-traps.png": {
+    "bytes": 299085,
+    "sha256": "e3b53d563698bc615a87569e36602c6e75ff989ec92e2d0d1834f81f13348469"
+  },
+  "JEE-46-traps.png": {
+    "bytes": 285723,
+    "sha256": "b9dd7e148c23895ca5b86bb65af67476c0cde7420a5a332612bf7e9b85b79e9d"
+  },
+  "JEE-47-route.png": {
+    "bytes": 280703,
+    "sha256": "4bc46717eaf6f1ad5e473068a71cbc4be4b4dd0f1c2842944f918c42eec15089"
+  },
+  "JEE-48-route.png": {
+    "bytes": 305932,
+    "sha256": "33b81fc044c3aa66b19d0aaad5af691f243ac1a5ae412aab1c3b119f23ef1d23"
+  },
+  "JEE-49-ledger.png": {
+    "bytes": 275971,
+    "sha256": "f62bcab5d3e04914c9025d3d04b3cecd8f8c167c0a45ba85d771d02f58d90ea0"
+  },
+  "Olympiad-01-chain3.png": {
+    "bytes": 294502,
+    "sha256": "e80e26490a4861d00f55cfb6fddb9539f0c4ed7a9e3988ae065744e07ec77886"
+  },
+  "Olympiad-02-chain3.png": {
+    "bytes": 315577,
+    "sha256": "d51ae40e0d330f3f72c4e4cb568a1d10d1d710001a72fdc0ba66ae9946ccdfb0"
+  },
+  "Olympiad-03-chain3.png": {
+    "bytes": 316623,
+    "sha256": "10657bd46dbaffabb9f3f32665ea0a386c031942e04489950e178b9b283103b5"
+  },
+  "Olympiad-04-scatter.png": {
+    "bytes": 280899,
+    "sha256": "07091d11412cfced4be6c3768d49dcfea3a416e205c45ecb1abfdf22ac3aeec9"
+  },
+  "Olympiad-05-scatter.png": {
+    "bytes": 233643,
+    "sha256": "0782acc2c34cced50c26ca71e016691468cb2d981b1baab420046bdd3f8ca750"
+  },
+  "Olympiad-06-scatter.png": {
+    "bytes": 328795,
+    "sha256": "ceab67b8ac6736883a8c62adecec2096f54e9a9c08f3fa9a7e45b6d0095fe4ca"
+  },
+  "Olympiad-07-impapprox.png": {
+    "bytes": 288458,
+    "sha256": "e3fe72f636a1b72a354b786bec336b7f3c7fcbadd08a52fa2f135148b47f47c6"
+  },
+  "Olympiad-08-platform.png": {
+    "bytes": 260434,
+    "sha256": "e9cc39a924d874f3d946642365392b318ffff9c651bec643538321ea04f68ae9"
+  },
+  "Olympiad-09-platform.png": {
+    "bytes": 330657,
+    "sha256": "446e69923c2c7cccb7c3101e5d5cf926082b71131033bd1dae82135d93396862"
+  },
+  "Olympiad-10-platform.png": {
+    "bytes": 304378,
+    "sha256": "d24c3e6a1692e39739703cd3475350a0f7adc79f22f0b0af046ffac401a4c428"
+  },
+  "Olympiad-11-peg.png": {
+    "bytes": 261881,
+    "sha256": "e3af6ac4fdadf5a33063383312da7dfd9bc4aea15f921384f0b15bfd211f1468"
+  },
+  "Olympiad-12-peg.png": {
+    "bytes": 241434,
+    "sha256": "c1b9f66698a72d46448df090cfaafa5c21715e2dc0cafba42a2814b882f2ffe9"
+  },
+  "Olympiad-13-peg.png": {
+    "bytes": 297574,
+    "sha256": "a44a1e0dcf56362802620b741bcb4cc6bde4c53e7a4c31d30cf0247045b47e2d"
+  },
+  "Olympiad-14-staging.png": {
+    "bytes": 248680,
+    "sha256": "ad8662d988823a57bd544f9306136bc3e4122470e87d5a88ff665ed42a462475"
+  },
+  "Olympiad-15-staging.png": {
+    "bytes": 300762,
+    "sha256": "5aac4d7ac05c34494ecae9606ba82e6ed420a1e62d6410cc922bf1cac29cf235"
+  },
+  "Olympiad-16-jet.png": {
+    "bytes": 304910,
+    "sha256": "e8c4da03d7a33533ad91df7bda3a22d1565fc13d0f9280b54b65b9956b9b586a"
+  },
+  "Olympiad-17-jet.png": {
+    "bytes": 270280,
+    "sha256": "c364fb744da7146d14722ed7c84d081a648edf56dff1aa8eba8beb43742c0326"
+  },
+  "Olympiad-18-fold.png": {
+    "bytes": 290466,
+    "sha256": "750bddb24a8eaeb60f4411732cec627bbad3ac31df216287ff2d58210709a3f1"
+  },
+  "Olympiad-19-fold.png": {
+    "bytes": 296515,
+    "sha256": "d6ba818af6e5af038443990bf3e20751ba3e2160d9b6ac64691ce8cc5d4812ae"
+  },
+  "Olympiad-20-relativ.png": {
+    "bytes": 281714,
+    "sha256": "cac60c46b2ccd841fe4238cb23e7c64c8e2f3f1e9e57d6c2c99c0366209bdd6e"
+  },
+  "Olympiad-21-relativ.png": {
+    "bytes": 282138,
+    "sha256": "43fa94fb5c3a1cb26f41b9815459c6b4252b86da1f8ffecf960db19e7ab461ae"
+  },
+  "Olympiad-22-relativ.png": {
+    "bytes": 268139,
+    "sha256": "c9972adf7dfeabe8a49e519eeab37dd146a36c408883b259cde93d9e2aaea940"
+  },
+  "Olympiad-23-hopper.png": {
+    "bytes": 238534,
+    "sha256": "758706ab5f7570295e90f02de7211e6760687467f368ab8aa2ab891298f35ac5"
+  },
+  "Olympiad-24-hopper.png": {
+    "bytes": 264201,
+    "sha256": "0c8b089e2f8ce3c22b22055fb946854b0ee71d206eaa76fc341e94cebda8b0b4"
+  },
+  "Olympiad-25-integrate.png": {
+    "bytes": 277525,
+    "sha256": "8c66f3045ee4843f9d11a1de693321de1938e4233a03c1f9d9a1c0a42a23a5ba"
+  },
+  "Olympiad-26-integrate.png": {
+    "bytes": 255483,
+    "sha256": "e02f66cf4f62470c436e5ecaa2be9339dec68c17a47ac5f5144f3970ce26da33"
+  },
+  "com-collisions-all-pngs.zip": {
+    "bytes": 20450268,
+    "sha256": "a30bf5f2a9ac582d486fa8f986bc343478a4ecf2dcc4e398a83f2d16264b02a7"
+  },
+  "com-collisions-jee-pngs.zip": {
+    "bytes": 13565931,
+    "sha256": "d58c77f0031b41c385ba39da55346f029212ac1d199c2055f54c9c76338df7c9"
+  },
+  "com-collisions-jee.pdf": {
+    "bytes": 14336001,
+    "sha256": "a6bb04ff19dba7f337e5b7fa7e2fb0352e0403afa466c114edd54d7ff9e1a97c"
+  },
+  "com-collisions-olympiad-pngs.zip": {
+    "bytes": 6884359,
+    "sha256": "977cd4ec8adeaef724462d3a3c7b8ffb6ce722ac856ae374d4e103780300ea0a"
+  },
+  "com-collisions-olympiad.pdf": {
+    "bytes": 7304650,
+    "sha256": "151a984cd29d6f13133b481a5d7ad3987b5e5c9a6cc4ed9efa34db5ead9e419b"
+  },
+  "com-collisions-short-notes.pdf": {
+    "bytes": 21639911,
+    "sha256": "6a4e861c2938103dcbcec4667f5ef9d986bd69aa7ac44a4b46af0230dfb8d9b9"
+  }
+}

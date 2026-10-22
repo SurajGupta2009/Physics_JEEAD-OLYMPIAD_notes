@@ -1,0 +1,6 @@
+# Keep the requested PDF deliverables trackable despite global ignore rules.
+!com-collisions-short-notes.pdf
+!com-collisions-jee.pdf
+!com-collisions-olympiad.pdf
+# Authoring fragments are reproducible from author_content.py.
+_build/
