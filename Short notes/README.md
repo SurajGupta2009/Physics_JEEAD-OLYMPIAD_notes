@@ -38,5 +38,6 @@ Short notes/
 | Modern physics (atomic, photon, X-rays, nuclear) | [Browse](Modern_Physics/index.html) | [Index](Modern_Physics/README.md) | [ZIP](Modern_Physics/modern-physics-all-pngs.zip) | [PDF](Modern_Physics/modern-physics-short-notes.pdf) |
 | Sound waves | [Browse](Sound-waves/index.html) | [Index](Sound-waves/README.md) | [ZIP](Sound-waves/sound-all-pngs.zip) | [PDF](Sound-waves/sound-short-notes.pdf) |
 | COM & collisions | [Browse](COM-Collisions/index.html) | [Index](COM-Collisions/README.md) | [ZIP](COM-Collisions/com-collisions-all-pngs.zip) | [PDF](COM-Collisions/com-collisions-short-notes.pdf) |
+| Kinematics | [Browse](Kinematics/index.html) | [Index](Kinematics/README.md) | [ZIP](Kinematics/kinematics-all-pngs.zip) | [PDF](Kinematics/kinematics-short-notes.pdf) |
 
 All images are A4 portrait at 300 DPI. Print one sheet per page with **Fit to page**, not photo-style Fill/Crop. Separate JEE and extension bundles are available within each chapter.

@@ -1,0 +1,170 @@
+{
+  "JEE-01-position.png": {
+    "bytes": 202397,
+    "sha256": "a5b7c6dd19d40ae14bdd00c0efcde4dc32d06ac78898636decae06e396f60223"
+  },
+  "JEE-02-velocity.png": {
+    "bytes": 191299,
+    "sha256": "c1a764e63dd26e2e7ea940b4a1174da63789052261dee7c95654749823b9013d"
+  },
+  "JEE-03-acceleration.png": {
+    "bytes": 197325,
+    "sha256": "e09c9919a00e4cde3a258f09788bf8d77f1175e7ebc3e32a7b143384e3c73a10"
+  },
+  "JEE-04-graphs.png": {
+    "bytes": 198771,
+    "sha256": "a4694ad7be04b9c3a033d50b8631ad35595007339e7e450a0d0eea89748390b5"
+  },
+  "JEE-05-constant-a.png": {
+    "bytes": 199707,
+    "sha256": "641a6056f6941a57dffbb5da66c32e5faf7f07681995dcff325ad25dc94e4001"
+  },
+  "JEE-06-freefall.png": {
+    "bytes": 194708,
+    "sha256": "f02c74fe694de1fed1cefefe4ad3e6596a138e8b6b23bef20ceaf6f93b1b73be"
+  },
+  "JEE-07-intervals.png": {
+    "bytes": 194620,
+    "sha256": "0496b459f93d3e4095c2d6864c2e365ee5655c876628ac953a2c1fe642ddda7d"
+  },
+  "JEE-08-variable-a.png": {
+    "bytes": 200554,
+    "sha256": "5b0597a149d52cacc8bc2e0bf7844293a0c30eb8f63ced3e439f2a8a94fb8037"
+  },
+  "JEE-09-vdv.png": {
+    "bytes": 206942,
+    "sha256": "11b88424a36bb5002b7367bc44dae1a3c44455ea71b68c116627799610a0a598"
+  },
+  "JEE-10-relative-1d.png": {
+    "bytes": 202743,
+    "sha256": "74e6352187b34643c3b916958f9dcf0df46f2c7b63c6f58f5e57b2b7f5354c87"
+  },
+  "JEE-11-piecewise.png": {
+    "bytes": 209251,
+    "sha256": "dd7f0fdda5a57ee338a96a0de85ad4a6cb43c3d2477ac3f494ba185a212392b8"
+  },
+  "JEE-12-projectile-split.png": {
+    "bytes": 203213,
+    "sha256": "d9449efd07e70c83e3c24966f5dc5792d7a159d186f91abbd0b0a7d3a61967bd"
+  },
+  "JEE-13-horizontal-launch.png": {
+    "bytes": 205284,
+    "sha256": "8149b2444f7e25907e9c45a4c530096f7931184b7f28e2d4d2ac79d0fb67bccd"
+  },
+  "JEE-14-projectile-general.png": {
+    "bytes": 206835,
+    "sha256": "46da7f788c94fce95c3e8d49e02afb7f49de63fcf2d570ff8fab30279ad48ef0"
+  },
+  "JEE-15-trajectory.png": {
+    "bytes": 206339,
+    "sha256": "39db214712c31c8bdd94e143f7bdfc9fa0274d477e276d5fd6f55e2596c36100"
+  },
+  "JEE-16-range-angles.png": {
+    "bytes": 191449,
+    "sha256": "1d584b6fb37c33bfa73de0b23f198dab28a1fad7895d8ab0c2e6617b97c6c05e"
+  },
+  "JEE-17-elevated.png": {
+    "bytes": 197244,
+    "sha256": "ef464ebc9e5332d40dbbb14edcb12a2d2386e5ed49c6e19a7e70baedf3c7646a"
+  },
+  "JEE-18-incline.png": {
+    "bytes": 198597,
+    "sha256": "4d848d7e97ceedc41cb09eae268ed4235bb48b7a0d4d234e0a822387c0e281ef"
+  },
+  "JEE-19-envelope.png": {
+    "bytes": 213791,
+    "sha256": "bd5829c43d4930c49a1939f9926053e2a31fdef356792c36f861a1ce6df83728"
+  },
+  "JEE-20-relative-vectors.png": {
+    "bytes": 196267,
+    "sha256": "dab763b08f69c47387ac043446172abf6302f09fc777aab4f36d786080eb8e11"
+  },
+  "JEE-21-river.png": {
+    "bytes": 192674,
+    "sha256": "107d9e7608df1412b9aa11f2fdb528cc425d6c00cee7df251cacad2551961ee6"
+  },
+  "JEE-22-wind.png": {
+    "bytes": 199024,
+    "sha256": "31e83d29783bb4a6836f01d3a220bf1482662fced1379f0639dbff625c8d658d"
+  },
+  "JEE-23-circular.png": {
+    "bytes": 200074,
+    "sha256": "7f6b1eeca4960ac0a0371118192e6d64364b19fc7c020415bb4607f7183ca380"
+  },
+  "JEE-24-circular-accel.png": {
+    "bytes": 199592,
+    "sha256": "f79894769afbddf837eee40b9bde5903a254c3a16692a84b3b12386a7dfecfba"
+  },
+  "JEE-25-curvature.png": {
+    "bytes": 185811,
+    "sha256": "b12251a3ea06732c4db239a922c2cf8188c82df2597897b8e52df5bef54c19e0"
+  },
+  "JEE-26-triage.png": {
+    "bytes": 199083,
+    "sha256": "739f15328e3752092ea0cb56de4b9c7f36ea8479aa4c6c56867ecddf520d4b0a"
+  },
+  "Olympiad-01-variable-laws.png": {
+    "bytes": 207247,
+    "sha256": "d9870b85a931f1a21ebe77bf1f176dd717d48a061f6be2dc24c1f5c81fc592de"
+  },
+  "Olympiad-02-linear-drag.png": {
+    "bytes": 204794,
+    "sha256": "fa868a3d50faaa2d7828bbdccc53e59991dcd81e44ce992e619018b1e3845972"
+  },
+  "Olympiad-03-quadratic-drag.png": {
+    "bytes": 206537,
+    "sha256": "6bfb731a6507aa4edaced163541b82a12ddafba24c49d998d88a0a241f148886"
+  },
+  "Olympiad-04-stopping-models.png": {
+    "bytes": 191206,
+    "sha256": "5c34aeb3da3fd207664faa819d27df5cb04fff0743ae1c1bb7a5775ed1045195"
+  },
+  "Olympiad-05-linear-drag-projectile.png": {
+    "bytes": 210575,
+    "sha256": "dcf17a9b55776e54b934c920530e547395463fd21609f96fb174ae1bfcfdb677"
+  },
+  "Olympiad-06-headwind.png": {
+    "bytes": 204437,
+    "sha256": "c3c70ceeabdff56f96e623791fc8e9f094aaf0505d63afc900363658a6bfd4b2"
+  },
+  "Olympiad-07-moving-target.png": {
+    "bytes": 208503,
+    "sha256": "7d74b44e12035b065a08a8e8ad26f02da3610988d131ac75ab55dd1f8e9d4ef1"
+  },
+  "Olympiad-08-coriolis.png": {
+    "bytes": 214928,
+    "sha256": "d53a6617834c3ce400aff300eeeff17870264fa7c003ec194dffa2aea814ba7b"
+  },
+  "Olympiad-09-pursuit-ode.png": {
+    "bytes": 204466,
+    "sha256": "e80b6fcbe0518bbe2936fb1a5b9380fd09e64dd8241939c8a330dc84018f23b8"
+  },
+  "Olympiad-10-model-limits.png": {
+    "bytes": 204041,
+    "sha256": "2c2a58c776ce4f251464f718e4c59e56a8873418b8cd4e965f07cab3717344e4"
+  },
+  "kinematics-all-pngs.zip": {
+    "bytes": 6576281,
+    "sha256": "50509a63ec9010140fb57e47f4a88f52f0e60a302b80f85c5137055bc507f326"
+  },
+  "kinematics-jee-pngs.zip": {
+    "bytes": 4710440,
+    "sha256": "e7adb0db534bee75576758392ace6349c4765debf0503cbc989a6e6e3cdd87de"
+  },
+  "kinematics-jee.pdf": {
+    "bytes": 5168360,
+    "sha256": "ef81074aaea3cf23615af311169eb7801daa98001cb26c5b75d43a8aa1732902"
+  },
+  "kinematics-olympiad-pngs.zip": {
+    "bytes": 1865863,
+    "sha256": "b985cd7d0636932d02e439cc07fe91261002c066e94cf8aa38b1ea03f2ac852b"
+  },
+  "kinematics-olympiad.pdf": {
+    "bytes": 2046893,
+    "sha256": "a78758dbf9e37d34dc4822d853190fb3b0af020ddd3faf9925b6b6aae65ff8f3"
+  },
+  "kinematics-short-notes.pdf": {
+    "bytes": 7214346,
+    "sha256": "066d23407c6542091cc5aa4668453b0dc163d1f6e792ba691eb3bf34a47d9664"
+  }
+}

@@ -1,0 +1,1018 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "A coordinate is not the motion",
+      "used_px": 535,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Displacement is an endpoint difference",
+      "used_px": 481,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Distance is accumulated path length",
+      "used_px": 631,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A quick counterexample",
+      "used_px": 493,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Average velocity uses net change",
+      "used_px": 549,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Instantaneous velocity is a limit",
+      "used_px": 568,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed forgets direction",
+      "used_px": 484,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Relative position changes the frame",
+      "used_px": 463,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Average and instantaneous acceleration",
+      "used_px": 497,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Use the sign product",
+      "used_px": 499,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four sign combinations",
+      "used_px": 530,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dimensions expose mistakes",
+      "used_px": 488,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Read x versus t",
+      "used_px": 539,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Read v versus t",
+      "used_px": 568,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Read a versus t",
+      "used_px": 626,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cross-check slopes and areas",
+      "used_px": 480,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Velocity after time t",
+      "used_px": 483,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Displacement from the v-t area",
+      "used_px": 597,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Eliminate time",
+      "used_px": 534,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Choose the equation by the missing variable",
+      "used_px": 491,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Choose the axis once",
+      "used_px": 538,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rise from launch level",
+      "used_px": 502,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Return to the launch elevation",
+      "used_px": 541,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "General vertical position equation",
+      "used_px": 555,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive by subtraction",
+      "used_px": 493,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Signed interval result",
+      "used_px": 557,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When is it a distance?",
+      "used_px": 559,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "A reversal example",
+      "used_px": 477,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration given as a(t)",
+      "used_px": 577,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration given as a(v)",
+      "used_px": 564,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Acceleration given as a(x)",
+      "used_px": 564,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The method must match the given variable",
+      "used_px": 529,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Derive the identity",
+      "used_px": 483,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Example: restoring acceleration",
+      "used_px": 515,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign branches matter",
+      "used_px": 526,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Check the dimensions and limit",
+      "used_px": 510,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Define relative position first",
+      "used_px": 471,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Closing speed is a magnitude",
+      "used_px": 490,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Constant relative acceleration",
+      "used_px": 541,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked catch-up check",
+      "used_px": 487,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Build a state ledger",
+      "used_px": 562,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Brake under constant deceleration",
+      "used_px": 555,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reaction distance is separate",
+      "used_px": 545,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Piecewise graph audit",
+      "used_px": 610,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Choose axes and initial components",
+      "used_px": 481,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Independent accelerations",
+      "used_px": 469,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Parametric trajectory",
+      "used_px": 485,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Independence test",
+      "used_px": 507,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solve time from vertical motion",
+      "used_px": 510,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Find horizontal range",
+      "used_px": 560,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impact velocity and speed",
+      "used_px": 502,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked scale check",
+      "used_px": 482,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Time to return to launch elevation",
+      "used_px": 547,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Maximum height",
+      "used_px": 569,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Horizontal range",
+      "used_px": 560,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Useful elimination",
+      "used_px": 489,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Eliminate time to get y(x)",
+      "used_px": 521,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Velocity direction along the path",
+      "used_px": 496,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Speed at vertical rise y",
+      "used_px": 508,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Same height, same speed",
+      "used_px": 536,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Complementary angles are range twins",
+      "used_px": 480,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "But their arcs differ",
+      "used_px": 480,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Maximum range condition",
+      "used_px": 560,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two angles for a target",
+      "used_px": 513,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Set the vertical target condition",
+      "used_px": 493,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Range to the target level",
+      "used_px": 474,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Height crossing can happen twice",
+      "used_px": 476,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impact speed and angle",
+      "used_px": 515,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Use slope-aligned coordinates",
+      "used_px": 469,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Return to the same plane",
+      "used_px": 498,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Range along the incline",
+      "used_px": 514,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Optimize the slope range",
+      "used_px": 482,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Family of trajectories",
+      "used_px": 515,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Find the maximum y at fixed x",
+      "used_px": 510,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Envelope equation and domain",
+      "used_px": 628,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Read its intercepts",
+      "used_px": 513,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Subtract vectors, not speeds",
+      "used_px": 465,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Use a velocity triangle",
+      "used_px": 471,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rain and a moving observer",
+      "used_px": 543,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rate of separation in a plane",
+      "used_px": 546,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Define current and boat velocity",
+      "used_px": 477,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point straight across",
+      "used_px": 537,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Land directly opposite",
+      "used_px": 514,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Aim at a specified landing point",
+      "used_px": 495,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Start with the vector law",
+      "used_px": 471,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Crosswind correction",
+      "used_px": 567,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind with along-track component",
+      "used_px": 501,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sign-audited example",
+      "used_px": 530,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Angular position and rate",
+      "used_px": 545,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Arc-length relation",
+      "used_px": 470,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Period and frequency",
+      "used_px": 538,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quick conversion",
+      "used_px": 536,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Differentiate the rotating unit vectors",
+      "used_px": 496,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Full circular acceleration",
+      "used_px": 540,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Magnitudes and meanings",
+      "used_px": 560,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quick computation",
+      "used_px": 505,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Resolve acceleration along velocity",
+      "used_px": 483,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Radius of curvature",
+      "used_px": 499,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Projectile at launch and apex",
+      "used_px": 512,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Limits and interpretation",
+      "used_px": 473,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Route by the acceleration law",
+      "used_px": 474,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Route projectile questions",
+      "used_px": 474,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Route relative and circular questions",
+      "used_px": 493,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ten-second audit",
+      "used_px": 532,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When acceleration is a function of time",
+      "used_px": 568,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When acceleration is a function of velocity",
+      "used_px": 612,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When acceleration is a function of position",
+      "used_px": 556,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Turning points and forbidden regions",
+      "used_px": 544,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Set the sign convention",
+      "used_px": 483,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solve from rest",
+      "used_px": 550,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Position and early-time limit",
+      "used_px": 484,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Terminal speed is an equilibrium",
+      "used_px": 496,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "State the quadratic law",
+      "used_px": 486,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Terminal speed",
+      "used_px": 562,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Integrate from rest",
+      "used_px": 488,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Do not confuse drag regimes",
+      "used_px": 555,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reaction phase",
+      "used_px": 472,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Braking phase",
+      "used_px": 501,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Combine and compare",
+      "used_px": 501,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Check a full example",
+      "used_px": 532,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equations in still air",
+      "used_px": 476,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Integrate the components",
+      "used_px": 510,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Find the actual landing time",
+      "used_px": 532,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Then evaluate range and limits",
+      "used_px": 510,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Separate the components",
+      "used_px": 541,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Range correction",
+      "used_px": 491,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Forward landing condition",
+      "used_px": 474,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Angle dependence",
+      "used_px": 576,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Write both position laws",
+      "used_px": 538,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Impose interception",
+      "used_px": 534,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fixed-speed condition",
+      "used_px": 491,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Physical root audit",
+      "used_px": 476,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rotating-frame acceleration",
+      "used_px": 468,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Local northward motion",
+      "used_px": 530,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Estimate sideways displacement",
+      "used_px": 485,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Numerical scale",
+      "used_px": 541,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "State the setup explicitly",
+      "used_px": 474,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Write the pursuit equations",
+      "used_px": 468,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Use relative range for capture",
+      "used_px": 548,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solve the path with the stated data",
+      "used_px": 554,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newtonian speed boundary",
+      "used_px": 524,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Separate identity from model",
+      "used_px": 469,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Check low and high limits",
+      "used_px": 526,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "State domain and event",
+      "used_px": 532,
+      "available_px": 660,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

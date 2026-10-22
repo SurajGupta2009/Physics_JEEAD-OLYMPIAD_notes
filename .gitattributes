@@ -1,0 +1,2 @@
+# Keep rendered PDF exports binary in Git, including files with a text-only prefix.
+*.pdf binary
