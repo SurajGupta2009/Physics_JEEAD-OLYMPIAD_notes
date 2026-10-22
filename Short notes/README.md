@@ -35,6 +35,6 @@ Short notes/
 | Electrostatics | [Browse](Electrostatics/index.html) | [Index](Electrostatics/README.md) | [ZIP](Electrostatics/electrostatics-all-pngs.zip) | [PDF](Electrostatics/electrostatics-short-notes.pdf) |
 | Elasticity | [Browse](Elasticity/index.html) | [Index](Elasticity/README.md) | [ZIP](Elasticity/elasticity-all-pngs.zip) | [PDF](Elasticity/elasticity-short-notes.pdf) |
 | Fluid mechanics | [Browse](Fluid_Mechanics/index.html) | [Index](Fluid_Mechanics/README.md) | [ZIP](Fluid_Mechanics/fluid-mechanics-all-pngs.zip) | [PDF](Fluid_Mechanics/fluid-mechanics-short-notes.pdf) |
-| Modern physics (part A: atomic, photon, X-rays) | [Browse](Modern_Physics/index.html) | [Index](Modern_Physics/README.md) | [ZIP](Modern_Physics/modern-physics-all-pngs.zip) | [PDF](Modern_Physics/modern-physics-short-notes.pdf) |
+| Modern physics (atomic, photon, X-rays, nuclear) | [Browse](Modern_Physics/index.html) | [Index](Modern_Physics/README.md) | [ZIP](Modern_Physics/modern-physics-all-pngs.zip) | [PDF](Modern_Physics/modern-physics-short-notes.pdf) |
 
 All images are A4 portrait at 300 DPI. Print one sheet per page with **Fit to page**, not photo-style Fill/Crop. Separate JEE and extension bundles are available within each chapter.

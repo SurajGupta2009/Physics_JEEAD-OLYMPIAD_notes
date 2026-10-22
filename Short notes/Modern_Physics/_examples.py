@@ -290,11 +290,11 @@ EX['JEE-25-fusion'] = ('A worked barrier', [
 ])
 
 # ----------------------------------------------------------- nuclear, Olympiad
-EX['Olympiad-16-geiger-nuttall'] = ('A worked lifetime swing', [
-    ('p', 'U-238 (4.27 MeV, 4.5×10⁹ y) against Po-212 (8.95 MeV, 3×10⁻⁷ s).'),
-    ('m', r'\frac{1}{\sqrt{4.27}}=0.484,\qquad \frac{1}{\sqrt{8.95}}=0.334'),
-    ('m', r'\log_{10}T_{1/2}\ \mathrm{changes\ by}\ \sim24\ \mathrm{decades}'),
-    ('n', 'the prefactor is unknown to a factor of 10; the exponential is not'),
+EX['Olympiad-16-geiger-nuttall'] = ('A worked decay constant', [
+    ('p', 'Turn the two half-lives into rate constants, then take the ratio.'),
+    ('m', r'\lambda_{238}=\frac{\ln2}{4.5\times10^{9}(3.156\times10^{7})}=4.9\times10^{-18}\ \mathrm{s^{-1}}'),
+    ('m', r'\lambda_{212}=\frac{\ln2}{3\times10^{-7}}=2.3\times10^{6}\ \mathrm{s^{-1}}'),
+    ('n', 'a ratio of 4.7×10²³ in rate for a factor 2.1 in alpha energy'),
 ])
 
 EX['Olympiad-17-fission-barrier'] = ('A worked pairing bonus', [
@@ -339,18 +339,18 @@ EX['Olympiad-22-counting'] = ('A worked counting plan', [
     ('n', 'four times the time for half the error; the tax is unavoidable'),
 ])
 
-EX['Olympiad-23-isochron'] = ('A worked isochron age', [
-    ('p', 'Rb–Sr slope 0.05, λ = 1.42×10⁻¹¹ y⁻¹.'),
-    ('m', r'e^{\lambda t}=1.05\ \Rightarrow\ \lambda t=0.04879'),
-    ('m', r't=\frac{0.04879}{1.42\times10^{-11}}=3.4\times10^{9}\ \mathrm{y}'),
-    ('n', 'the intercept was never used: that is the whole point of the method'),
+EX['Olympiad-23-isochron'] = ('Two minerals, one slope', [
+    ('p', 'Rb–Sr, λ = 1.42×10⁻¹¹ y⁻¹. Mineral A: 2.0 and 0.720. Mineral B: 5.0 and 0.750.'),
+    ('m', r'\mathrm{slope}=\frac{0.750-0.720}{5.0-2.0}=0.0100'),
+    ('m', r't=\frac{\ln 1.010}{1.42\times10^{-11}}=7.0\times10^{8}\ \mathrm{y}'),
+    ('n', 'check the intercept: 0.720 − 0.0100(2.0) = 0.700, the same for B — one age, one initial ratio'),
 ])
 
 EX['Olympiad-24-neutron-waves'] = ('A worked wavelength', [
     ('p', 'A 25 meV neutron, and the energy needed to reach 1 fm.'),
     ('m', r'\lambda=\frac{h}{\sqrt{2m_nE}}=1.81\ \mathrm{\AA}\ \ \mathrm{at}\ 25\ \mathrm{meV}'),
-    ('m', r'E=\frac{h^2}{2m_n\lambda^2}=82\ \mathrm{MeV}\ \ \mathrm{for}\ \lambda=1\ \mathrm{fm}'),
-    ('n', 'hence electron scattering at hundreds of MeV, and neutron diffraction at millielectronvolts'),
+    ('m', r'E_k=\sqrt{(pc)^2+(m_nc^2)^2}-m_nc^2=616\ \mathrm{MeV}\ \ \mathrm{for}\ \lambda=1\ \mathrm{fm}'),
+    ('n', 'at that momentum the non-relativistic h²/2mλ² would say 818 MeV — the relativistic form is the one to use'),
 ])
 
 EX['Olympiad-25-solar-lifetime'] = ('A worked solar budget', [

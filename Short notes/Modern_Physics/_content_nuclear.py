@@ -181,8 +181,8 @@ def build_jee(start, total):
     ])
     s.chip('key', 'the three', [('m', r'N=N_0e^{-\lambda t}'), ('m', r'A_{\mathrm{ct}}=\lambda N'),
                                 ('m', r'\tau=1/\lambda=1.443T_{1/2}')])
-    s.chip('insight', 'why λ is stable', [('p', 'Nuclear decay is a tunnelling or weak process at MeV scale; room temperature is 25 meV. The ratio is 10¹⁰, so nothing ordinary can move it.')])
-    s.chip('trap', 'the missing ln 2', [('p', 'Writing e^{−t/T½} instead of e^{−λt}. Halving the sample halves A but leaves λ untouched.')])
+    s.chip('insight', 'why λ is stable', [('p', 'Nuclear decay is a tunnelling or weak process at the MeV scale; room temperature is 25 meV. The ratio is 4×10⁷, so nothing ordinary can move it. Halving the sample halves A but leaves λ untouched.')])
+    s.chip('trap', 'the missing ln 2', [('p', 'Writing e^{−t/T½} for e^{−λt}: at one half-life that gives 37 %, not 50 %. The exponent must carry ln 2.')])
     s.figure('decay_curve')
     S.append(s); n += 1
 
@@ -251,7 +251,7 @@ def build_jee(start, total):
     s.move('The energy budget of one split', [
         ('p', 'A thermal neutron leaves U-236 excited above its fission barrier; the drop necks and Coulomb wins. The fragments fly apart with most of the energy; the rest arrives later as neutrons, betas and gammas.'),
         ('m', r'^{235}\mathrm{U}+n\to{}^{236}\mathrm{U}^*\to X+Y+2n+200\ \mathrm{MeV}'),
-        ('n', '≈165 MeV fragments, 5 MeV neutrons, 25 MeV betas and gammas, 10 MeV neutrinos lost'),
+        ('n', '≈165 MeV fragments, 5 MeV neutrons, 20 MeV betas and gammas (delayed), 10 MeV neutrinos lost'),
     ])
     s.move('Convert to engineering units', [
         ('p', 'Divide 200 MeV into a gram of U-235: 8.2×10¹⁰ J, about 3.4 tonnes of coal. A gigawatt thermal plant therefore burns about a kilogram a day.'),

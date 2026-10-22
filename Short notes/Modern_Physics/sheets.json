@@ -6,8 +6,8 @@
   ],
   "dpi": 300,
   "sections": {
-    "JEE": 15,
-    "Olympiad": 15
+    "JEE": 25,
+    "Olympiad": 25
   },
   "sheets": [
     {
@@ -446,6 +446,296 @@
       ]
     },
     {
+      "slug": "JEE-16-nuclear-size",
+      "section": "JEE",
+      "page": 16,
+      "title": "Why does every nucleus have the same density?",
+      "question": "Add nucleons and the ball grows, but the stuff inside never gets denser. What fixes the size?",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "nuclear_size"
+      ],
+      "takeaway": "R = 1.2 A^1/3 fm is the statement that nuclear matter is incompressible",
+      "file": "JEE-16-nuclear-size.png",
+      "layout": [
+        {
+          "sheet": "JEE-16-nuclear-size",
+          "scale_eV": 1000000.0,
+          "main_px": 1802,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-16-nuclear-size",
+          "margin_px": 873,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-17-binding-curve",
+      "section": "JEE",
+      "page": 17,
+      "title": "Where does the missing mass go?",
+      "question": "Weigh a nucleus and its parts: the whole is lighter. The difference is what holds it together.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "binding_curve"
+      ],
+      "takeaway": "B = \u0394m c\u00b2, 1 u = 931.5 MeV, and B/A peaks at iron near 8.8 MeV",
+      "file": "JEE-17-binding-curve.png",
+      "layout": [
+        {
+          "sheet": "JEE-17-binding-curve",
+          "scale_eV": 100000000.0,
+          "main_px": 1765,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-17-binding-curve",
+          "margin_px": 844,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-18-valley",
+      "section": "JEE",
+      "page": 18,
+      "title": "Why does the valley of stability bend?",
+      "question": "Light nuclei want equal protons and neutrons. Heavy ones want extra neutrons. The liquid drop says why.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "stability_valley"
+      ],
+      "takeaway": "Coulomb grows as Z\u00b2, surface as A^2/3, so Z0 = A/(2 + 0.0154 A^2/3)",
+      "file": "JEE-18-valley.png",
+      "layout": [
+        {
+          "sheet": "JEE-18-valley",
+          "scale_eV": 100000000.0,
+          "main_px": 1801,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-18-valley",
+          "margin_px": 811,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-19-q-value",
+      "section": "JEE",
+      "page": 19,
+      "title": "Why does the alpha carry almost all the energy?",
+      "question": "Two bodies leave a decay at rest. Momentum must cancel, so the light one takes the lion\u2019s share.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "alpha_split"
+      ],
+      "takeaway": "Q from masses, then K_alpha = (A-4)Q/A \u2014 momentum fixes the split",
+      "file": "JEE-19-q-value.png",
+      "layout": [
+        {
+          "sheet": "JEE-19-q-value",
+          "scale_eV": 1000000.0,
+          "main_px": 1667,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-19-q-value",
+          "margin_px": 932,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-20-beta",
+      "section": "JEE",
+      "page": 20,
+      "title": "How can a beta spectrum be continuous?",
+      "question": "Alpha lines are sharp. Beta electrons arrive with every energy from zero to an endpoint. Something is missing.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "beta_spectrum"
+      ],
+      "takeaway": "a third particle carries the rest; the endpoint is where it carries nothing",
+      "file": "JEE-20-beta.png",
+      "layout": [
+        {
+          "sheet": "JEE-20-beta",
+          "scale_eV": 1000000.0,
+          "main_px": 1857,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-20-beta",
+          "margin_px": 890,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-21-decay-law",
+      "section": "JEE",
+      "page": 21,
+      "title": "What does a half-life actually measure?",
+      "question": "Each nucleus has a fixed chance per second of dying. From that one assumption the whole calculus follows.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "decay_curve"
+      ],
+      "takeaway": "N = N\u2080e^{\u2212\u03bbt}, T\u00bd = ln2/\u03bb, \u03c4 = 1.443 T\u00bd \u2014 and \u03bb is intensive",
+      "file": "JEE-21-decay-law.png",
+      "layout": [
+        {
+          "sheet": "JEE-21-decay-law",
+          "scale_eV": 1000000.0,
+          "main_px": 1819,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-21-decay-law",
+          "margin_px": 977,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-22-dating",
+      "section": "JEE",
+      "page": 22,
+      "title": "How do you date a bone?",
+      "question": "A living thing keeps its radiocarbon topped up. When it dies the clock starts, and the ratio is the hand.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "dating_curve"
+      ],
+      "takeaway": "t = (T\u00bd/ln2) ln(A\u2080/A): three assumptions, one logarithm",
+      "file": "JEE-22-dating.png",
+      "layout": [
+        {
+          "sheet": "JEE-22-dating",
+          "scale_eV": 1000000.0,
+          "main_px": 1835,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-22-dating",
+          "margin_px": 862,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-23-chains",
+      "section": "JEE",
+      "page": 23,
+      "title": "Why does a decay chain settle into a fixed ratio?",
+      "question": "A daughter fed by its parent has two clocks. When one is much slower, the other just follows.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "equilibrium"
+      ],
+      "takeaway": "secular: A\u2082 = A\u2081; transient: A\u2082/A\u2081 = \u03bb\u2082/(\u03bb\u2082\u2212\u03bb\u2081)",
+      "file": "JEE-23-chains.png",
+      "layout": [
+        {
+          "sheet": "JEE-23-chains",
+          "scale_eV": 1000000.0,
+          "main_px": 1772,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-23-chains",
+          "margin_px": 728,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-24-fission",
+      "section": "JEE",
+      "page": 24,
+      "title": "Where does a gigawatt come from?",
+      "question": "One fission releases 200 MeV. Multiply by the fission rate and a gram of uranium outruns a tonne of coal.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "fission_energy"
+      ],
+      "takeaway": "200 MeV per fission: 8.2\u00d710\u00b9\u2070 J per gram, 3.1\u00d710\u00b9\u2079 fissions per second per GW",
+      "file": "JEE-24-fission.png",
+      "layout": [
+        {
+          "sheet": "JEE-24-fission",
+          "scale_eV": 100000000.0,
+          "main_px": 1783,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-24-fission",
+          "margin_px": 834,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "JEE-25-fusion",
+      "section": "JEE",
+      "page": 25,
+      "title": "Why is the Sun not ten billion kelvin?",
+      "question": "Protons repel hard. Classical physics demands an impossible temperature; the Sun runs on the tail of a distribution.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "fusion_barrier"
+      ],
+      "takeaway": "the Coulomb barrier needs 8\u00d710\u2079 K classically; tunnelling plus the Maxwell tail makes 1.5\u00d710\u2077 K enough",
+      "file": "JEE-25-fusion.png",
+      "layout": [
+        {
+          "sheet": "JEE-25-fusion",
+          "scale_eV": 1000000.0,
+          "main_px": 1824,
+          "main_available": 2062
+        },
+        {
+          "sheet": "JEE-25-fusion",
+          "margin_px": 834,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
       "slug": "Olympiad-01-xray-continuous",
       "section": "Olympiad",
       "page": 1,
@@ -874,6 +1164,296 @@
         {
           "sheet": "Olympiad-15-matter-wave-speeds",
           "margin_px": 897,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-16-geiger-nuttall",
+      "section": "Olympiad",
+      "page": 16,
+      "title": "Why does a factor of two in energy swing a half-life by 10\u00b2\u2074?",
+      "question": "Alpha decay spans thirty orders of magnitude in lifetime, yet the energies differ by a factor of two.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "geiger_nuttall"
+      ],
+      "takeaway": "log T is linear in 1/\u221aE: the tunnelling exponent is the amplifier",
+      "file": "Olympiad-16-geiger-nuttall.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-16-geiger-nuttall",
+          "scale_eV": 1000000.0,
+          "main_px": 1790,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-16-geiger-nuttall",
+          "margin_px": 816,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-17-fission-barrier",
+      "section": "Olympiad",
+      "page": 17,
+      "title": "Why does U-235 fission with slow neutrons and U-238 not?",
+      "question": "Same element, one neutron apart, completely different behaviour. The answer is a pairing bonus of 0.8 MeV.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "fission_barrier"
+      ],
+      "takeaway": "the barrier is ~6 MeV for both; pairing decides who clears it",
+      "file": "Olympiad-17-fission-barrier.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-17-fission-barrier",
+          "scale_eV": 100000000.0,
+          "main_px": 1837,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-17-fission-barrier",
+          "margin_px": 826,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-18-valley-floor",
+      "section": "Olympiad",
+      "page": 18,
+      "title": "Can you derive the valley rather than remember it?",
+      "question": "Maximise the liquid-drop binding over charge at fixed mass. One derivative gives the stability line.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "valley_floor"
+      ],
+      "takeaway": "differentiate B(A,Z): Z\u2080 = A/(2 + (a_c/2a_a)A^{2/3})",
+      "file": "Olympiad-18-valley-floor.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-18-valley-floor",
+          "scale_eV": 100000000.0,
+          "main_px": 1738,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-18-valley-floor",
+          "margin_px": 811,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-19-transient",
+      "section": "Olympiad",
+      "page": 19,
+      "title": "How long does a daughter take to peak?",
+      "question": "Solve the two-step chain properly, then read the equilibrium and the peak time off the solution.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "transient_peak"
+      ],
+      "takeaway": "A\u2082 peaks at ln(\u03bb\u2082/\u03bb\u2081)/(\u03bb\u2082\u2212\u03bb\u2081), then follows the parent",
+      "file": "Olympiad-19-transient.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-19-transient",
+          "scale_eV": 1000000.0,
+          "main_px": 1771,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-19-transient",
+          "margin_px": 899,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-20-solar-neutrinos",
+      "section": "Olympiad",
+      "page": 20,
+      "title": "How many solar neutrinos cross your thumbnail each second?",
+      "question": "The Sun\u2019s luminosity fixes its fusion rate, and the fusion rate fixes the neutrino flux at Earth.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "neutrino_flux"
+      ],
+      "takeaway": "L/26.7 MeV gives 1.8\u00d710\u00b3\u2078 neutrinos per second; 6\u00d710\u00b9\u2074 m\u207b\u00b2s\u207b\u00b9 at Earth",
+      "file": "Olympiad-20-solar-neutrinos.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-20-solar-neutrinos",
+          "scale_eV": 1000000.0,
+          "main_px": 1864,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-20-solar-neutrinos",
+          "margin_px": 720,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-21-reactor-day",
+      "section": "Olympiad",
+      "page": 21,
+      "title": "How much fuel does a reactor eat in a day?",
+      "question": "A gigawatt is a mass rate in disguise, and ten half-lives is an engineering unit of forgetfulness.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "reactor_day"
+      ],
+      "takeaway": "1.05 kg per day per GW thermal; ten half-lives leaves 0.1 %",
+      "file": "Olympiad-21-reactor-day.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-21-reactor-day",
+          "scale_eV": 100000000.0,
+          "main_px": 1834,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-21-reactor-day",
+          "margin_px": 777,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-22-counting",
+      "section": "Olympiad",
+      "page": 22,
+      "title": "How long must you count to know the rate to 1 %?",
+      "question": "Radioactive counts arrive like coin flips. The square-root tax sets every measurement time in the lab.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "counting_stats"
+      ],
+      "takeaway": "\u03c3 = \u221aN, so 1 % needs 10\u2074 counts and four times the time halves the error",
+      "file": "Olympiad-22-counting.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-22-counting",
+          "scale_eV": 1000000.0,
+          "main_px": 1792,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-22-counting",
+          "margin_px": 808,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-23-isochron",
+      "section": "Olympiad",
+      "page": 23,
+      "title": "How do you date a rock without knowing what it started with?",
+      "question": "Plot one isotope ratio against another. Every mineral of the same rock falls on one line, and the slope is the age.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "isochron"
+      ],
+      "takeaway": "slope = e^{\u03bbt} \u2212 1; the intercept absorbs the unknown initial daughter",
+      "file": "Olympiad-23-isochron.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-23-isochron",
+          "scale_eV": 1000000.0,
+          "main_px": 1797,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-23-isochron",
+          "margin_px": 777,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-24-neutron-waves",
+      "section": "Olympiad",
+      "page": 24,
+      "title": "Why do slow neutrons diffract from crystals?",
+      "question": "The same wave logic as the electron: compare the wavelength with the spacing. The spacing that matters is the lattice\u2019s.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "neutron_waves"
+      ],
+      "takeaway": "1.8 \u00c5 neutrons match atomic spacings; inside a nucleus the same wave sees a point",
+      "file": "Olympiad-24-neutron-waves.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-24-neutron-waves",
+          "scale_eV": 1000000.0,
+          "main_px": 1847,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-24-neutron-waves",
+          "margin_px": 826,
+          "margin_available": 2062,
+          "figure_y": 2310,
+          "figure_h": 886
+        }
+      ]
+    },
+    {
+      "slug": "Olympiad-25-solar-lifetime",
+      "section": "Olympiad",
+      "page": 25,
+      "title": "How long can the Sun keep shining?",
+      "question": "Ten per cent of its hydrogen, 0.7 per cent of the mass of that fuel, and a luminosity you can measure.",
+      "moves": 4,
+      "chips": 3,
+      "figures": [
+        "solar_budget"
+      ],
+      "takeaway": "0.07 \u00d7 0.1 M\u2609 \u00d7 0.007c\u00b2 / L \u2248 10 Gyr; and the drop says where the table ends",
+      "file": "Olympiad-25-solar-lifetime.png",
+      "layout": [
+        {
+          "sheet": "Olympiad-25-solar-lifetime",
+          "scale_eV": 1000000.0,
+          "main_px": 1806,
+          "main_available": 2062
+        },
+        {
+          "sheet": "Olympiad-25-solar-lifetime",
+          "margin_px": 826,
           "margin_available": 2062,
           "figure_y": 2310,
           "figure_h": 886
