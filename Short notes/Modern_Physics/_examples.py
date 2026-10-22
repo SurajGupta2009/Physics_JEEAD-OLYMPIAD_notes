@@ -218,6 +218,148 @@ EX['Olympiad-15-matter-wave-speeds'] = ('A worked c² product', [
 ])
 
 
+# ---------------------------------------------------------------- nuclear, JEE
+EX['JEE-16-nuclear-size'] = ('A worked uranium radius', [
+    ('p', 'Uranium-238: radius and the mass of a 5 cm³ spoonful.'),
+    ('m', r'R=1.2(238)^{1/3}=7.44\ \mathrm{fm},\qquad V=\frac{4}{3}\pi R^3=1.72\times10^{-42}\ \mathrm{m^3}'),
+    ('m', r'm=\rho V=(2.3\times10^{17})(5\times10^{-6})=1.2\times10^{12}\ \mathrm{kg}'),
+    ('n', 'a billion tonnes in a teaspoon — the number that makes the density believable'),
+])
+
+EX['JEE-17-binding-curve'] = ('A worked mass defect', [
+    ('p', 'Helium-4 from its parts: 2 hydrogen atoms and 2 neutrons.'),
+    ('m', r'\Delta m=2(1.007825)+2(1.008665)-4.002603=0.030377\ \mathrm{u}'),
+    ('m', r'B=0.030377(931.5)=28.30\ \mathrm{MeV},\qquad B/A=7.07\ \mathrm{MeV}'),
+    ('n', 'the deuteron gives 1.11 per nucleon: that factor 6.4 is why fusion past hydrogen pays'),
+])
+
+EX['JEE-18-valley'] = ('A worked valley floor', [
+    ('p', 'Most stable charge for A = 100 and A = 238.'),
+    ('m', r'Z_0(100)=\frac{100}{2+0.0154(100)^{2/3}}=\frac{100}{2.33}=42.9'),
+    ('m', r'Z_0(238)=\frac{238}{2+0.0154(238)^{2/3}}=92.0'),
+    ('n', 'molybdenum–ruthenium for the first, uranium itself for the second'),
+])
+
+EX['JEE-19-q-value'] = ('A worked alpha split', [
+    ('p', 'Polonium-210 decays with Q = 5.40 MeV.'),
+    ('m', r'K_\alpha=\frac{206}{210}(5.40)=5.30\ \mathrm{MeV},\qquad K_d=0.10\ \mathrm{MeV}'),
+    ('m', r'\sqrt{2m_\alpha K_\alpha}=\sqrt{2m_dK_d}'),
+    ('n', 'the daughter recoils with 2 % of the energy and a hundred times less speed'),
+])
+
+EX['JEE-20-beta'] = ('Two worked endpoints', [
+    ('p', 'Carbon-14 and nitrogen-13, with the electron rule applied.'),
+    ('m', r'Q_{\beta^-}=(14.003242-14.003074)(931.5)=0.156\ \mathrm{MeV}'),
+    ('m', r'Q_{\beta^+}=(13.005739-13.003355-0.001098)(931.5)=1.20\ \mathrm{MeV}'),
+    ('n', 'the 2m_e term is 1.022 MeV — larger than most beta Q-values, which is why β⁺ needs a big parent'),
+])
+
+EX['JEE-21-decay-law'] = ('A worked working day', [
+    ('p', 'Tc-99m (T½ = 6 h) prepared at 800 MBq at 08:00; Co-60 mass for 1 Ci.'),
+    ('m', r'A(12\ \mathrm{h})=800\times2^{-2}=200\ \mathrm{MBq}'),
+    ('m', r'N=\frac{3.7\times10^{10}}{4.17\times10^{-9}}=8.9\times10^{18}\ \Rightarrow\ m=0.88\ \mathrm{mg}'),
+    ('n', 'a curie of a years-scale isotope is a speck; a curie of radium is a gram'),
+])
+
+EX['JEE-22-dating'] = ('A worked carbon age', [
+    ('p', 'A bone gives 10 disintegrations per minute per gram; living tissue gives 15.'),
+    ('m', r't=\frac{5730}{\ln2}\ln\frac{15}{10}=8267(0.405)=3350\ \mathrm{y}'),
+    ('m', r'\frac{A}{A_0}=2^{-t/T_{1/2}}=0.667'),
+    ('n', 'between one and two half-lives, which is the range where the method is most reliable'),
+])
+
+EX['JEE-23-chains'] = ('A worked generator', [
+    ('p', 'Parent T½ = 18 h, daughter T½ = 6 h: find the ratio and the peak.'),
+    ('m', r'\lambda_1=0.0385\ \mathrm{h^{-1}},\ \lambda_2=0.1155\ \mathrm{h^{-1}}'),
+    ('m', r'\frac{A_2}{A_1}=\frac{0.1155}{0.0770}=1.50,\qquad t_{\max}=\frac{\ln3}{0.0770}=14.3\ \mathrm{h}'),
+    ('n', 'elute the daughter at 14 h, not at the end of the day'),
+])
+
+EX['JEE-24-fission'] = ('A worked power balance', [
+    ('p', 'A 1 GW electric plant at 33 % efficiency.'),
+    ('m', r'P_{\mathrm{th}}=3.0\ \mathrm{GW}:\ \frac{3\times10^9}{200(1.602\times10^{-13})}=9.4\times10^{19}\ \mathrm{s^{-1}}'),
+    ('m', r'm=\frac{3(1.05)}{1}=3.2\ \mathrm{kg/day\ of\ U\!-\!235}'),
+    ('n', 'three tonnes of coal would do the same job — the factor 10⁶ in one line'),
+])
+
+EX['JEE-25-fusion'] = ('A worked barrier', [
+    ('p', 'Deuterium plus tritium, and the classical temperature of the proton barrier.'),
+    ('m', r'Q=(0.018883\ \mathrm{u})(931.5)=17.6\ \mathrm{MeV}'),
+    ('m', r'T=\frac{0.72\ \mathrm{MeV}}{8.617\times10^{-11}\ \mathrm{MeV/K}}=8.4\times10^{9}\ \mathrm{K}'),
+    ('n', 'the D–T reaction is the easiest one, and it still needs 100 MK in the lab'),
+])
+
+# ----------------------------------------------------------- nuclear, Olympiad
+EX['Olympiad-16-geiger-nuttall'] = ('A worked lifetime swing', [
+    ('p', 'U-238 (4.27 MeV, 4.5×10⁹ y) against Po-212 (8.95 MeV, 3×10⁻⁷ s).'),
+    ('m', r'\frac{1}{\sqrt{4.27}}=0.484,\qquad \frac{1}{\sqrt{8.95}}=0.334'),
+    ('m', r'\log_{10}T_{1/2}\ \mathrm{changes\ by}\ \sim24\ \mathrm{decades}'),
+    ('n', 'the prefactor is unknown to a factor of 10; the exponential is not'),
+])
+
+EX['Olympiad-17-fission-barrier'] = ('A worked pairing bonus', [
+    ('p', 'The excitation of U-236 against its barrier.'),
+    ('m', r'\delta=\frac{12}{\sqrt{236}}=0.78\ \mathrm{MeV}'),
+    ('m', r'E^*_{236}=5.7+0.78=6.5\ \mathrm{MeV}>B_f\approx6\ \mathrm{MeV}'),
+    ('n', 'U-239 gets 4.8 MeV and stays below the barrier: no pairing bonus, no thermal fission'),
+])
+
+EX['Olympiad-18-valley-floor'] = ('A worked coefficient', [
+    ('p', 'Check the 0.0154 in the valley formula.'),
+    ('m', r'\frac{a_c}{2a_a}=\frac{0.71}{2(23.2)}=0.0153'),
+    ('m', r'Z_0(56)=\frac{56}{2+0.0153(56)^{2/3}}=27.0'),
+    ('n', 'iron sits at Z = 26: the liquid drop is one unit high, and the shell closure explains it'),
+])
+
+EX['Olympiad-19-transient'] = ('A worked maximum', [
+    ('p', 'λ₁ = 0.02 h⁻¹, λ₂ = 0.10 h⁻¹: ratio and peak time.'),
+    ('m', r'\frac{A_2}{A_1}=\frac{0.10}{0.08}=1.25'),
+    ('m', r't_{\max}=\frac{\ln5}{0.08}=20.1\ \mathrm{h}'),
+    ('n', 'the daughter peaks at 20 h, then falls with the parent\u2019s 34.7 h half-life'),
+])
+
+EX['Olympiad-20-solar-neutrinos'] = ('A worked flux', [
+    ('p', 'Helium rate, neutrino rate, and the flux at 1 AU.'),
+    ('m', r'\dot N_{\mathrm{He}}=\frac{3.83\times10^{26}}{26.7(1.602\times10^{-13})}=8.9\times10^{37}\ \mathrm{s^{-1}}'),
+    ('m', r'\phi=\frac{2(8.9\times10^{37})}{4\pi(1.496\times10^{11})^2}=6.4\times10^{14}\ \mathrm{m^{-2}s^{-1}}'),
+    ('n', '6×10¹⁰ per second through a square centimetre, day and night'),
+])
+
+EX['Olympiad-21-reactor-day'] = ('A worked fuel bill', [
+    ('p', '1 GW thermal for one day, and the activity after ten half-lives.'),
+    ('m', r'm=\frac{10^9(86400)}{8.2\times10^{10}}=1.05\ \mathrm{kg}'),
+    ('m', r'2^{-10}=9.8\times10^{-4}'),
+    ('n', 'a kilogram a day, and a thousandfold drop per ten half-lives — both are rules of thumb'),
+])
+
+EX['Olympiad-22-counting'] = ('A worked counting plan', [
+    ('p', 'A source gives 100 counts per minute. Time for 1 %?'),
+    ('m', r'N=\frac{1}{(0.01)^2}=10^4\ \Rightarrow\ t=\frac{10^4}{100}=100\ \mathrm{min}'),
+    ('m', r'\mathrm{for}\ 0.5\%:\ N=4\times10^4,\ t=400\ \mathrm{min}'),
+    ('n', 'four times the time for half the error; the tax is unavoidable'),
+])
+
+EX['Olympiad-23-isochron'] = ('A worked isochron age', [
+    ('p', 'Rb–Sr slope 0.05, λ = 1.42×10⁻¹¹ y⁻¹.'),
+    ('m', r'e^{\lambda t}=1.05\ \Rightarrow\ \lambda t=0.04879'),
+    ('m', r't=\frac{0.04879}{1.42\times10^{-11}}=3.4\times10^{9}\ \mathrm{y}'),
+    ('n', 'the intercept was never used: that is the whole point of the method'),
+])
+
+EX['Olympiad-24-neutron-waves'] = ('A worked wavelength', [
+    ('p', 'A 25 meV neutron, and the energy needed to reach 1 fm.'),
+    ('m', r'\lambda=\frac{h}{\sqrt{2m_nE}}=1.81\ \mathrm{\AA}\ \ \mathrm{at}\ 25\ \mathrm{meV}'),
+    ('m', r'E=\frac{h^2}{2m_n\lambda^2}=82\ \mathrm{MeV}\ \ \mathrm{for}\ \lambda=1\ \mathrm{fm}'),
+    ('n', 'hence electron scattering at hundreds of MeV, and neutron diffraction at millielectronvolts'),
+])
+
+EX['Olympiad-25-solar-lifetime'] = ('A worked solar budget', [
+    ('p', 'Ten per cent of the Sun\u2019s hydrogen, 0.7 % mass-to-energy.'),
+    ('m', r'E=0.1(0.7)(1.989\times10^{30})(0.007)(9\times10^{16})=8.8\times10^{43}\ \mathrm{J}'),
+    ('m', r't=\frac{8.8\times10^{43}}{3.83\times10^{26}}=2.3\times10^{17}\ \mathrm{s}=7.3\times10^{9}\ \mathrm{y}'),
+    ('n', 'the Sun has burned about half its hydrogen; it is middle-aged, not ancient'),
+])
+
 def add_all(sheets):
     for sh in sheets:
         if sh.slug not in EX:
@@ -225,4 +367,4 @@ def add_all(sheets):
         heading, blocks = EX[sh.slug]
         sh.move(heading, blocks)
     missing = [s.slug for s in sheets if s.slug not in EX]
-    assert set(missing) <= {'Olympiad-08-pair-production'}, f'no worked block for: {missing}'
+    assert not missing, f'no worked block for: {missing}'
