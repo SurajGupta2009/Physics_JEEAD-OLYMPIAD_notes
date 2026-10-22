@@ -1,0 +1,226 @@
+{
+  "JEE-01-work-sign.png": {
+    "bytes": 236002,
+    "sha256": "e08b4ae0f6e3edee581142e127e84d7c38db114da664913a2a07661f422266ee"
+  },
+  "JEE-02-fx-area.png": {
+    "bytes": 226996,
+    "sha256": "cdde24a348fe28bfc23565dc28eabc279485f750431cbaffaf6e37497761715c"
+  },
+  "JEE-03-force-audit.png": {
+    "bytes": 261340,
+    "sha256": "2dcf128af6c0ea934f626897feeb6f1db068fd6e9dc4f09d186d747d4f9534cc"
+  },
+  "JEE-04-we-theorem.png": {
+    "bytes": 234670,
+    "sha256": "3c04b01a938c7439dbad610ba47338977f2903e41ade6aaaab42acfa0a5ec232"
+  },
+  "JEE-05-ke-frames.png": {
+    "bytes": 235297,
+    "sha256": "d22ad28b8633f78db2d9a0a80e6b6d080a6213e5a6d49946abafd31de65cf9f8"
+  },
+  "JEE-06-friction-heat.png": {
+    "bytes": 240268,
+    "sha256": "530b66951cc6142d26a2f216e65e78e35826b78913d577dbd1fb2218f3ae7355"
+  },
+  "JEE-07-power-definition.png": {
+    "bytes": 232087,
+    "sha256": "f2e9e866e432eec26a812008123800596a814cb4b50124c0a460e7eb1c897de5"
+  },
+  "JEE-08-constant-power.png": {
+    "bytes": 229597,
+    "sha256": "a5f596aba61dea7d3685387ddb497f693a798872b6eeae4be381495ef9f028f4"
+  },
+  "JEE-09-slope-power.png": {
+    "bytes": 228638,
+    "sha256": "4ffdd09139981ad5a766660fdf11b649ddb1cc302585b17ac65d0e8f2cdea6e2"
+  },
+  "JEE-10-conservative.png": {
+    "bytes": 225648,
+    "sha256": "88b3a985e9cec2bc075209ba523b425df50f9a2d3dd220ef5d2bd909eba38999"
+  },
+  "JEE-11-potential-energy.png": {
+    "bytes": 235283,
+    "sha256": "662e40c4cfd7eebc893b99db89021b45be13c89c56e0ad73901cdcd8691b31b7"
+  },
+  "JEE-12-spring-energy.png": {
+    "bytes": 226607,
+    "sha256": "5492962271509ac7c242c0df91b11c9fc8a8e0e0d8770b6c823e180f0a24ac5d"
+  },
+  "JEE-13-gravity-paths.png": {
+    "bytes": 238095,
+    "sha256": "0bdf2a04e1bbb31632e982cef63d5a7c0ca1fdbdacd26b4b9d5919bb43c087a9"
+  },
+  "JEE-14-energy-conservation.png": {
+    "bytes": 230704,
+    "sha256": "e275844d3a717bbc47bc51dbd6fe34bd749ab31a04a7adbc48701219b9496466"
+  },
+  "JEE-15-u-graph.png": {
+    "bytes": 225052,
+    "sha256": "d63c9f21162f7596f8588917a36c94cdb0a84063b8a8b3cfa0f4b8bf2592d81b"
+  },
+  "JEE-16-force-gradient.png": {
+    "bytes": 222979,
+    "sha256": "72838d07108363b596de3c43b1e9a43aa3f4ec1003148531b55cf1c0e2b63511"
+  },
+  "JEE-17-energy-or-force.png": {
+    "bytes": 239307,
+    "sha256": "97102a4cdc288f01a71ba885cf1a6dfaef5b01b7275eb0d3cd41bb6212c1c94b"
+  },
+  "JEE-18-system-energy.png": {
+    "bytes": 243867,
+    "sha256": "31e6ceab3c3e5fe3e0555171fb4623a32383ba9e62809773d5b648c682910e51"
+  },
+  "JEE-19-efficiency.png": {
+    "bytes": 207742,
+    "sha256": "d351c281722c7b63aa7794fbb4ef48c075d3e4863813a2f2c3a057d5bc17ec94"
+  },
+  "JEE-20-chain-work.png": {
+    "bytes": 234692,
+    "sha256": "b4c09505dfc2feb549ce6668d9ec689a980f9a1520f5523d2f28723c9ecb06ab"
+  },
+  "JEE-21-spring-and-friction.png": {
+    "bytes": 233459,
+    "sha256": "8062b2fb62f0e48dac35edbc9735e1587554c1671700a92d1272ade60f58f371"
+  },
+  "JEE-22-wpe-map.png": {
+    "bytes": 233050,
+    "sha256": "c6d6e9b898530b394f75afc6d904a9f26f9cbbd48ec2e6c06e41b74f7475c68e"
+  },
+  "JEE-23-omega-alpha.png": {
+    "bytes": 224422,
+    "sha256": "0f08379489bd6c76bb9ad7d51549b91e1b5d41b7c319f97dcc097e4624c31c7d"
+  },
+  "JEE-24-alpha-kinematics.png": {
+    "bytes": 220095,
+    "sha256": "d4397394557f7c93f4a1b9bad55135cb5879427431a625b59f4cc8a81f8f942c"
+  },
+  "JEE-25-omega-vector.png": {
+    "bytes": 224348,
+    "sha256": "5452e294d824153001e5b25576a6c7554b4fbaf66631ef85ec5cbf1c6ccd1ee6"
+  },
+  "JEE-26-centripetal.png": {
+    "bytes": 236890,
+    "sha256": "ac1b5181089b97b583aaf827990718ae0b26050cdc66592cab2ffd9cff082add"
+  },
+  "Olympiad-01-cm-split.png": {
+    "bytes": 241302,
+    "sha256": "a5c0926418bb98b6b04a1ec8f33488148a805459c09d410e1b4b509b75fe15e2"
+  },
+  "Olympiad-02-effective-potential.png": {
+    "bytes": 240397,
+    "sha256": "edb59e6a762e3675975c6b4cf4926d3029e0ffe7e1f12451b3df3cbb1b808338"
+  },
+  "Olympiad-03-bouncing-ball.png": {
+    "bytes": 229333,
+    "sha256": "5be883c68df545a9580fa70434e1d9bfaf27c010b07045b6c39a6b4076f41b31"
+  },
+  "Olympiad-04-rolling-energy.png": {
+    "bytes": 232151,
+    "sha256": "cd3f1a7e7fe03bf5090ccde6e658d8818cf8ee05feab0488bb77b80410086bec"
+  },
+  "Olympiad-05-block-on-wedge.png": {
+    "bytes": 234226,
+    "sha256": "e744e9eb251f495e1ad9dd4ac5ea5806db78fa58ca9e7dc19bf0f8ecca77ba34"
+  },
+  "Olympiad-06-satellite-launch.png": {
+    "bytes": 233662,
+    "sha256": "1727a7067e0579b494791fb58ae77b9d0bd6ecde43d0de3a80158b3f45d84e04"
+  },
+  "Olympiad-07-chain-unroll.png": {
+    "bytes": 219040,
+    "sha256": "ed52049933f70a6c3ddf1a6312a8687d0c6ca3400e4a72b3d603f0e3024abc4c"
+  },
+  "Olympiad-08-bead-on-hoop.png": {
+    "bytes": 231923,
+    "sha256": "78e5c2c8b583ff4b10bd598e0f7903718db96dcccdd860b20a2594c007d6c183"
+  },
+  "Olympiad-09-restitution.png": {
+    "bytes": 214089,
+    "sha256": "41609d53bc0039214eb61296f7bc4c9acd3966f8b136cf095260243abbae2222"
+  },
+  "Olympiad-10-flywheel.png": {
+    "bytes": 220825,
+    "sha256": "261fe8be99fb37b21dd2e7f74381d50a104667836b9beb1f1ef681037b55a02a"
+  },
+  "Olympiad-11-pseudo-work.png": {
+    "bytes": 224455,
+    "sha256": "fb0072688e755e8e38653906919b602ccf8ab289ea217fbbe639bbccdb48a752"
+  },
+  "Olympiad-12-path-integral.png": {
+    "bytes": 210122,
+    "sha256": "f25a09631e72625f44bea7fb5c6843034ce021c898560a2f25325a51b2629754"
+  },
+  "Olympiad-13-drag-power.png": {
+    "bytes": 223035,
+    "sha256": "8aae2e643361e07f163f6fc3157a65d6d45c66a2a125f63a1ab4eef9e9782049"
+  },
+  "Olympiad-14-energy-limits.png": {
+    "bytes": 237383,
+    "sha256": "80aa629e81f6224dae61c1b49710ec03f3f2a753f2b1a270f55c28f20926d807"
+  },
+  "Olympiad-15-tangential-normal.png": {
+    "bytes": 213565,
+    "sha256": "70d30efa3910acccbafa3e8368c2a0bcc3f432c2afe7d398125b6b8e94d1f19e"
+  },
+  "Olympiad-16-variable-alpha.png": {
+    "bytes": 211876,
+    "sha256": "a14cdb876c37968a3120ff805044cc1c48726f5dd72d4df519d35bf76794dcae"
+  },
+  "Olympiad-17-relative-angular.png": {
+    "bytes": 209172,
+    "sha256": "a56028e4876f7c3ccfbeeaf5a8d907224bf97ad4952a472f5ac5389eed66d259"
+  },
+  "Olympiad-18-work-radial.png": {
+    "bytes": 248456,
+    "sha256": "4984cf468d33450225b2c012891a12c4d7a0a1ca7f2bcaf9f87c6fdda56e1f63"
+  },
+  "Olympiad-19-vertical-circle-energy.png": {
+    "bytes": 233137,
+    "sha256": "7072f78e934711c95b0a6934b35902418f951fb0bc5c3042dc7e1ab038d62ecb"
+  },
+  "Olympiad-20-string-vs-rod.png": {
+    "bytes": 254709,
+    "sha256": "6fe38f7f1215166a70d170b670e4f5ec94687a0edbf7cedcd5767b29213a57e2"
+  },
+  "Olympiad-21-conical-pendulum.png": {
+    "bytes": 223786,
+    "sha256": "04c14779be7277a36c476754c3a1a8b1426548bd0a17288c864801d2c2da8bd5"
+  },
+  "Olympiad-22-banked-limits.png": {
+    "bytes": 225064,
+    "sha256": "090be6b5301f86f37d801fc0a78dc37d401c42038542a39278a0f146bd8beba5"
+  },
+  "Olympiad-23-rotor-wall.png": {
+    "bytes": 207121,
+    "sha256": "9f33340c5485ce20c597bbd3671a6148c5d2ca4a3feb66fa657c1713197f25ee"
+  },
+  "Olympiad-24-curvature.png": {
+    "bytes": 222182,
+    "sha256": "a96ccf335ac4b4c9ea6f7b923bb6b530ac8c799e2606183cd97a4b0f87343454"
+  },
+  "work-energy-power-all-pngs.zip": {
+    "bytes": 10636531,
+    "sha256": "31236bfa33614a0b6e41c16f8aa1f1cbea4939d7f4eacaf8eed0fe0f9bf52ed1"
+  },
+  "work-energy-power-jee-pngs.zip": {
+    "bytes": 5592869,
+    "sha256": "7f1d2876cc8978100f8c056ad9978e51b333bd981d39b6bec092f2e1bdb31f13"
+  },
+  "work-energy-power-jee.pdf": {
+    "bytes": 6011535,
+    "sha256": "e6069e061012e92ec88892db886b75c9f454a1aae1980bc6e5ba5d85bcbfc91f"
+  },
+  "work-energy-power-olympiad-pngs.zip": {
+    "bytes": 5043684,
+    "sha256": "032732d9b60108ce9e7c9ac1f602c436041010ddf99f4267111cbbd6a0c77052"
+  },
+  "work-energy-power-olympiad.pdf": {
+    "bytes": 5431698,
+    "sha256": "136f66da2c163fdb11b7a5bc53e71184f3568308fb27defb69288c5e1cda4ce3"
+  },
+  "work-energy-power-short-notes.pdf": {
+    "bytes": 11442420,
+    "sha256": "bb65b2259186dd3ccef874567acb6edd9504d2847f04b1800acac79b74a2120a"
+  }
+}
