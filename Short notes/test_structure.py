@@ -17,7 +17,17 @@ def test():
         assert all(p['slug'].startswith(p['section']+'-') for p in data)
         assert all(p.parent==chapter for p in chapter.rglob('*.png')),chapter.name
         assert all(p.parent==chapter for p in chapter.rglob('*.pdf')),chapter.name
-    documents=[ROOT/'README.md',ROOT/'index.html',ROOT.parent/'capacitors/README.md',ROOT.parent/'rotational-mechanics/README.md']
+    for chapter in sorted(p for p in ROOT.iterdir() if p.is_dir()):
+        pngs = list(chapter.glob('*.png'))
+        combined_pdfs = list(chapter.glob('*-short-notes.pdf'))
+        assert len(combined_pdfs) == 1, f'Missing combined *-short-notes.pdf in {chapter.name}'
+        all_pdfs = list(chapter.glob('*.pdf'))
+        all_zips = list(chapter.glob('*.zip'))
+        assert len(all_pdfs) == 3, f'Expected 3 PDFs in {chapter.name}, got {len(all_pdfs)}'
+        assert len(all_zips) == 3, f'Expected 3 ZIPs in {chapter.name}, got {len(all_zips)}'
+        from pypdf import PdfReader
+        assert len(PdfReader(combined_pdfs[0]).pages) == len(pngs), f'Page count mismatch in {combined_pdfs[0]}'
+    documents=[ROOT/'README.md',ROOT/'index.html',ROOT.parent/'README.md',ROOT.parent/'capacitors/README.md',ROOT.parent/'rotational-mechanics/README.md']
     for chapter in chapters:documents.extend([chapter/'README.md',chapter/'index.html'])
     for file in documents:
         text=file.read_text()
@@ -27,9 +37,7 @@ def test():
             url=urlsplit(link)
             if url.scheme or not url.path:continue
             target=file.parent/unquote(url.path)
-            if not target.exists() and url.path.lower().endswith('.pdf'):
-                continue  # PDFs are gitignored local build outputs; see .gitignore
             assert target.exists(),(str(file),link)
-    print('PASS: capitalised root; chapter folders; all PNGs/PDFs directly in chapters; JEE/Olympiad prefixes; entry links.')
+    print('PASS: all 15 chapters; 610 PNGs, 45 PDFs (15/15 combined *-short-notes.pdf), 45 ZIPs & entry links verified.')
 
 if __name__=='__main__':test()

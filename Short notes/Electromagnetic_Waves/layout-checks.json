@@ -1,0 +1,514 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "Why static Ampere law breaks during charging",
+      "used_px": 816,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charge conservation & the divergence check",
+      "used_px": 776,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Capacitor identities: Id = dq/dt = C dV/dt",
+      "used_px": 715,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Steady DC, discharge & sign rules",
+      "used_px": 696,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Azimuthal B_phi inside and outside circular plates",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Macroscopic displacement current in a dielectric",
+      "used_px": 719,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fixed-Ic vs fixed-(dV/dt) constraint trap",
+      "used_px": 696,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Leaky resistor-capacitor & validity limits",
+      "used_px": 784,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Microscopic (vacuum) Maxwell equations",
+      "used_px": 616,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Macroscopic laws in matter: separate free sources",
+      "used_px": 725,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Model L constitutive closure & SI constants",
+      "used_px": 719,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Symmetry, causality & moving-loop warning",
+      "used_px": 758,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Deriving both 3D vector wave equations",
+      "used_px": 647,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase speed & refractive index in matter",
+      "used_px": 780,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Refraction: frequency stays fixed, wavelength shrinks",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hidden coupling & inhomogeneous-medium trap",
+      "used_px": 702,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reading propagation vector k & speed from phase",
+      "used_px": 703,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transversality & exact vector link B = (k_hat x E)/v",
+      "used_px": 706,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked vector reconstructions without guesswork",
+      "used_px": 711,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four-step validity test for candidate exam fields",
+      "used_px": 706,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Linear, circular & elliptical polarisation criteria",
+      "used_px": 705,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Unpolarised light & Malus cos^2(theta) law",
+      "used_px": 707,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Crossed polaroids + rotating middle sheet",
+      "used_px": 718,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Circular-wave intensity & near-field warning",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Electric & magnetic energy densities",
+      "used_px": 718,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Poynting vector & exact local conservation law",
+      "used_px": 715,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Instantaneous equipartition in a single plane wave",
+      "used_px": 727,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transport velocity link: S = u v k_hat",
+      "used_px": 716,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "All equivalent intensity formulas in one chain",
+      "used_px": 730,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked peak vs RMS & energy-density drills",
+      "used_px": 767,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point source vs line source vs collimated laser",
+      "used_px": 714,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lamp efficiency & photon-flux bridge",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Field momentum density & pulse impulse",
+      "used_px": 839,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Flat oblique surface: why TWO cosines appear",
+      "used_px": 808,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Tangential shear traction & transparent sheets",
+      "used_px": 770,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Emissive recoil & laser levitation balance",
+      "used_px": 709,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Seven spectral bands & six memorisable cutoffs",
+      "used_px": 685,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Production mechanisms (NCERT + JEE Main/Adv core)",
+      "used_px": 807,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "RADAR echo ranging, greenhouse & microwave heating",
+      "used_px": 779,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Atmospheric windows, ozone & ionospheric reflection",
+      "used_px": 777,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lumped LC tank vs open radiating dipole",
+      "used_px": 837,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why ONLY accelerated charges radiate energy",
+      "used_px": 707,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hertzian oscillating electric dipole pattern",
+      "used_px": 792,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Blue sky & red sunset: the w^4 Rayleigh bridge",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fast mental-arithmetic constants for exams",
+      "used_px": 639,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Top amplitude & wave-equation traps",
+      "used_px": 729,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Top force, cosine & surface traps",
+      "used_px": 835,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Five-step pre-submission check protocol",
+      "used_px": 605,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Charging capacitor: inward radial energy flux (Q29)",
+      "used_px": 657,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cylindrical Ohmic wire: radial inflow feeds Joule heat",
+      "used_px": 717,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coaxial cable: lossless TEM wave power transport",
+      "used_px": 719,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hidden magnetic-energy term & validity fence",
+      "used_px": 773,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why black & specular spheres feel identical axial force",
+      "used_px": 807,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cones, cylinders & retroreflectors compared",
+      "used_px": 768,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Stellar radiation blow-out ratio beta (Q34)",
+      "used_px": 770,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lambertian diffuse reflector: third classic case",
+      "used_px": 768,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Tangential boundary equations & reflected H sign",
+      "used_px": 639,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy conservation & the \"t_E > 1\" paradox (Q16, Q36)",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Equal speed != zero reflection in magnetic matter (Q36c)",
+      "used_px": 753,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave anti-reflection transformer",
+      "used_px": 708,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Standing wave in front of a perfect mirror (z <= 0)",
+      "used_px": 709,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Zero mean Poynting vector vs nonzero mirror pressure",
+      "used_px": 769,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Isotropic cavity radiation: why pressure is u / 3",
+      "used_px": 772,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Adiabatic photon-gas expansion & cavity resonators",
+      "used_px": 614,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wave equation in an Ohmic conductor (sec. 4.4)",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Good-conductor skin depth delta & 45 deg magnetic lag",
+      "used_px": 731,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Collisionless cold plasma dispersion & total reflection",
+      "used_px": 612,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phase speed > c vs group speed < c check",
+      "used_px": 812,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Relativistic optical Doppler & transverse time dilation",
+      "used_px": 733,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reflection & pressure on a moving flat mirror",
+      "used_px": 725,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Poynting-Robertson drag: why dust spirals INTO stars",
+      "used_px": 785,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Parallel-plate metallic waveguide (TE_m modes)",
+      "used_px": 788,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

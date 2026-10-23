@@ -1,0 +1,98 @@
+{
+  "JEE-01-ampere-paradox.png": {
+    "bytes": 205266,
+    "sha256": "943ca9ee22f97fc6ce77ada473d864c1777e9d710299f414006d1dfbcfd1c5ce"
+  },
+  "JEE-02-gap-field.png": {
+    "bytes": 202371,
+    "sha256": "e11cd14110e3b0d617ae7e17e8a5480025c233735cb42ec37abece8ce6bee04a"
+  },
+  "JEE-03-maxwell-laws.png": {
+    "bytes": 184184,
+    "sha256": "ba82896fe9e7f57d17cf94ff5394b0cfecc8708fd6527de8b962703e12b61df8"
+  },
+  "JEE-04-wave-equation.png": {
+    "bytes": 195408,
+    "sha256": "e69d76ace4baeecda20fa39edf4a3911055adbb5294b3094e775016a2b43b6e2"
+  },
+  "JEE-05-plane-wave.png": {
+    "bytes": 192543,
+    "sha256": "d02afce3f0f1511176e77b45581e218a943d0f05dc0e80a7bd7a5cffe5184331"
+  },
+  "JEE-06-polarisation.png": {
+    "bytes": 200908,
+    "sha256": "6f2abf815a7cddfa183aea47f38e0fd033493774a8dc4b3a91ad0b97d221be96"
+  },
+  "JEE-07-poynting.png": {
+    "bytes": 183106,
+    "sha256": "a4e55e860b70d52e98a26c4cc1203b2a35440a6f4132e0b47e3195d22222cd2d"
+  },
+  "JEE-08-intensity.png": {
+    "bytes": 194652,
+    "sha256": "0499687e8311c66368292cc3b4d113246745c7d3e728cdbc3100343a60717bd5"
+  },
+  "JEE-09-momentum-pressure.png": {
+    "bytes": 203937,
+    "sha256": "4d533de903e0b9e810c1e0f31bc5ab88ce31a46fec987ece382e6eeeb0c58305"
+  },
+  "JEE-10-em-spectrum.png": {
+    "bytes": 217337,
+    "sha256": "d66881d37332c9119a36300068e0bea6d8c13e072e4f1f4e74dd54853f4583a6"
+  },
+  "JEE-11-dipole-radiation.png": {
+    "bytes": 198810,
+    "sha256": "b7028e6a96dd4bcfa228ddd634ffbb7c4656e620bd2f9091dc3efb821ff2eb7f"
+  },
+  "JEE-12-master-triage.png": {
+    "bytes": 194133,
+    "sha256": "e9b8f8c5dd70eba1556587b03233fce6b746f6fcc5bf0a4f458c22da532793b7"
+  },
+  "Olympiad-01-capacitor-poynting.png": {
+    "bytes": 199183,
+    "sha256": "aff54d2da07d3a45200420b31c83ffe585993a6eb6ff0acd9fecb8927620f274"
+  },
+  "Olympiad-02-curved-pressure.png": {
+    "bytes": 209877,
+    "sha256": "ac8ab509ceac01353f626a4585528f9162f3ffccf293a624c0cbdbbb98a27dcf"
+  },
+  "Olympiad-03-impedance-fresnel.png": {
+    "bytes": 197063,
+    "sha256": "b2e2adfa825a3f2a168b698cf79d59bb098128d0f8523f3022fedd820db002f7"
+  },
+  "Olympiad-04-standing-cavity.png": {
+    "bytes": 206737,
+    "sha256": "f68b399101866dd9762c1ad16a7aa10c15b4a859c3bfa0e5946dbb98e198ce26"
+  },
+  "Olympiad-05-skin-depth.png": {
+    "bytes": 204096,
+    "sha256": "3058ab41ac5a57328bb3bebe87ddff56a1ba6c45617cd2129ba1de96eaf51495"
+  },
+  "Olympiad-06-poynting-robertson.png": {
+    "bytes": 206715,
+    "sha256": "fa47d8b28a46d6b3703b5b793d1b19b3ee7f0ba3b7735afa89005e27448876dc"
+  },
+  "electromagnetic-waves-all-pngs.zip": {
+    "bytes": 3318964,
+    "sha256": "12faf5d37eb75b4adad786568f149f3b7fa72895097e9df03d8316766199669d"
+  },
+  "electromagnetic-waves-jee-pngs.zip": {
+    "bytes": 2188604,
+    "sha256": "fe24407216745b91797ceab885e5571d42f641be8421e79b631c1f214e5c2558"
+  },
+  "electromagnetic-waves-jee.pdf": {
+    "bytes": 2365794,
+    "sha256": "951258df5ecf21f3c9d5f2c4264eb642dc81e4c11accc7914572863f85091221"
+  },
+  "electromagnetic-waves-olympiad-pngs.zip": {
+    "bytes": 1130382,
+    "sha256": "056978147f65590f06b4a2293b76f0f03dd7a8f84cc0a376f38207185f017667"
+  },
+  "electromagnetic-waves-olympiad.pdf": {
+    "bytes": 1221054,
+    "sha256": "49072ea6c508d57fcb27347de4b6a4563426d47e169b074b36cb17be6d9d420a"
+  },
+  "electromagnetic-waves-short-notes.pdf": {
+    "bytes": 3585840,
+    "sha256": "d421b829164a33a2cba8b5fec3503b527f66ccfa856730b405a414ae98ef5f79"
+  }
+}

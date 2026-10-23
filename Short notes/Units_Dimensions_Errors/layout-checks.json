@@ -1,0 +1,514 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "Measurement invariant n1 u1 = n2 u2",
+      "used_px": 672,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "All seven SI base quantities & modern definitions",
+      "used_px": 755,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Supplementary angles: named unit, NO dimensions!",
+      "used_px": 734,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Six instant CGS / practical unit bridges",
+      "used_px": 607,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Core mechanics, elasticity & fluid dimensions",
+      "used_px": 580,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rotational & quantum action quantities",
+      "used_px": 697,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Thermal & radiation physical constants",
+      "used_px": 601,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Truly dimensionless physical ratios to recognise",
+      "used_px": 645,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four-step ladder from charge q = I t to V, E, R, C",
+      "used_px": 617,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Three-step ladder for B, magnetic flux Phi_B, L & mu0",
+      "used_px": 663,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Golden composite blocks (solve JEE questions in 5s!)",
+      "used_px": 658,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Atomic & quantum combinations popular in JEE Adv",
+      "used_px": 651,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Principle of homogeneity: term-by-term balance",
+      "used_px": 717,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transcendental pure-number gate: exp, ln, trig",
+      "used_px": 728,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dimensions inside derivatives and integrals",
+      "used_px": 711,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Necessary != sufficient: hidden constants & nth-second",
+      "used_px": 707,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Deriving scaling laws by matching exponents",
+      "used_px": 724,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Changing base units to [F, V, T] or [E, P, V] (JEE #1!)",
+      "used_px": 715,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Planck scales from fundamental constants (c, G, h)",
+      "used_px": 684,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four strict failure modes of dimensional analysis",
+      "used_px": 697,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Five ironclad rules for counting significant figures",
+      "used_px": 761,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Arithmetic precision rules: +/- vs x and /",
+      "used_px": 629,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "NCERT / JEE rounding rule when dropped digit is 5",
+      "used_px": 634,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Matching value digits to uncertainty digits (Q20)",
+      "used_px": 694,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Systematic vs random vs gross blunders",
+      "used_px": 754,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "NCERT / JEE Main mean-absolute-error protocol",
+      "used_px": 681,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sample standard deviation sigma vs SEM sigma/sqrt(n)",
+      "used_px": 914,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Consistency check against a reference value (Q13)",
+      "used_px": 729,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sums & differences: ABSOLUTE errors add!",
+      "used_px": 670,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Products, quotients & powers: log-differential rule",
+      "used_px": 784,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "CRITICAL JEE ADV TRAP: parallel resistors & thin lenses!",
+      "used_px": 715,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "General single/multi-variable calculus rule",
+      "used_px": 727,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "General least-count formula (works on ALL verniers!)",
+      "used_px": 648,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Complete reading & zero-error subtraction protocol",
+      "used_px": 657,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked readings & negative zero-error verification",
+      "used_px": 744,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Extended / retro-vernier: when 1 VSD > 1 MSD!",
+      "used_px": 699,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pitch, circular divisions & screw-gauge reading",
+      "used_px": 775,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Screw-gauge zero offset & backlash prevention",
+      "used_px": 701,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spherometer radius of curvature formula",
+      "used_px": 712,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Searle wire, Poiseuille tube & optical bench budgets",
+      "used_px": 642,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four standard linearisations every candidate must own",
+      "used_px": 625,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Graphical slope & worst-case bounding lines",
+      "used_px": 807,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fermi order-of-magnitude estimation protocol",
+      "used_px": 769,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Oleic-acid monolayer thickness & Avogadro check (OL7, P33)",
+      "used_px": 612,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "CRITICAL LAB INSIGHT: 1/N vs 1/sqrt(N) timing law!",
+      "used_px": 581,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Top dimensional & sig-fig exam traps",
+      "used_px": 782,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Top error-propagation & instrument traps",
+      "used_px": 782,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Pre-submission 5-check scorecard",
+      "used_px": 723,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact statement via rank of dimensional matrix D",
+      "used_px": 575,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two-Pi masterclass: capillary-gravity water waves",
+      "used_px": 748,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hydrogen Bohr radius & Rydberg energy (OL8, P34)",
+      "used_px": 609,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Trinity nuclear test & prefactor caution (OL9, P28)",
+      "used_px": 780,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four master dimensionless numbers of continuum physics",
+      "used_px": 733,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wind-tunnel & ship-hull model scaling dilemma",
+      "used_px": 677,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Mechanical & gravitational self-similarity",
+      "used_px": 718,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Jumping animals, cooling rates & heat loss scaling",
+      "used_px": 704,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Normal equations & centroid theorem (OL1, P18)",
+      "used_px": 753,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Standard errors of slope sigma_b & intercept sigma_a (OL2)",
+      "used_px": 597,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked full Olympiad exam drill (Paper P30)",
+      "used_px": 706,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Through-origin slope & unequal error bars (WLS)",
+      "used_px": 682,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Chi-square test statistic & degrees of freedom (OL3)",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Three diagnostic outcomes of reduced chi^2_nu",
+      "used_px": 575,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Optimal combination of independent labs (weighted mean)",
+      "used_px": 699,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Correlated errors & covariance matrix formula",
+      "used_px": 722,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Poisson event counts & the universal sqrt(N) law (OL6)",
+      "used_px": 736,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact background subtraction (audit of Paper P35c!)",
+      "used_px": 653,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Optimal beam-time split for fixed total lab time T",
+      "used_px": 577,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Detector dead time tau (non-paralysable model)",
+      "used_px": 718,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Engineering a 0.10% measurement of g (OL5, P32)",
+      "used_px": 744,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Three hidden physical systematics in real pendulums",
+      "used_px": 654,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Relativistic corrections via symmetry + dimensions (OL10, P36)",
+      "used_px": 603,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Natural units c = hbar = k_B = 1 (theoretical Olympiad tool)",
+      "used_px": 646,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}

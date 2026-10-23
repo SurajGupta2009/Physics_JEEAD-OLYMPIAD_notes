@@ -29,6 +29,10 @@ Portable Markdown note-sets with local SVG diagrams. Seven topics also keep a co
 
 [Elasticity: 8 JEE + 9 extension sheets](Short%20notes/Elasticity/README.md) · [gallery](Short%20notes/Elasticity/index.html) · [all PNGs](Short%20notes/Elasticity/elasticity-all-pngs.zip) · [A4 PDF](Short%20notes/Elasticity/elasticity-short-notes.pdf)
 
+[Electromagnetic waves: 12 JEE + 6 extension sheets](Short%20notes/Electromagnetic_Waves/README.md) · [gallery](Short%20notes/Electromagnetic_Waves/index.html) · [all PNGs](Short%20notes/Electromagnetic_Waves/electromagnetic-waves-all-pngs.zip) · [A4 PDF](Short%20notes/Electromagnetic_Waves/electromagnetic-waves-short-notes.pdf)
+
+[Units, dimensions & errors: 12 JEE + 6 extension sheets](Short%20notes/Units_Dimensions_Errors/README.md) · [gallery](Short%20notes/Units_Dimensions_Errors/index.html) · [all PNGs](Short%20notes/Units_Dimensions_Errors/units-dimensions-errors-all-pngs.zip) · [A4 PDF](Short%20notes/Units_Dimensions_Errors/units-dimensions-errors-short-notes.pdf)
+
 
 ## Note-sets
 

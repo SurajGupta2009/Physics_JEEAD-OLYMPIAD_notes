@@ -1,0 +1,6 @@
+PRINTING SETTINGS — UNITS, DIMENSIONS & MEASUREMENT ERRORS SHORT NOTES
+Paper size : A4 portrait (210 mm x 297 mm)
+Resolution : 2480 x 3508 px at 300 DPI
+Scaling    : Fit to page / Actual size (100%), NEVER Fill or Crop
+Margins    : Built-in >= 125 px (~10.6 mm) safe quiet border on all four sides
+Order      : Read Part I (JEE-01 .. JEE-12) first, then Part II (Olympiad-01 .. Olympiad-06)
