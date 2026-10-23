@@ -1,0 +1,2028 @@
+[
+  {
+    "section": "JEE",
+    "part_page": 1,
+    "slug": "JEE-01-conductors-bands-gaps",
+    "title": "Conduction classes, energy bands & forbidden gaps",
+    "subtitle": "30-order resistivity scale, opposite temperature laws, filled-band theorem, and key gap values.",
+    "diagrams": [
+      "resistivity_axis",
+      "rho_vs_temp"
+    ],
+    "takeaway": "Metals warm UP in resistance (phonon scattering with fixed n); semiconductors cool DOWN in resistance (exponential carrier creation beats mobility loss)!",
+    "source": "Source: semiconductors/Semiconductors.md Part 1, Part 2, sec. 3.1-3.2, E1, Q1-Q4",
+    "cards": [
+      {
+        "title": "30-order resistivity scale & classification",
+        "items": [
+          [
+            "p",
+            "Electrical resistivity spans ~30 orders of magnitude at 300 K: metals sit near 10^(-8) ohm.m, semiconductors span 10^(-5) to 10^4 ohm.m, and insulators reach 10^(18) ohm.m."
+          ],
+          [
+            "m",
+            "\\rho_{\\mathrm{Cu}} \\approx 1.7\\times 10^{-8}\\ \\Omega\\cdot\\text{m},\\quad \\rho_{i,\\mathrm{Si}} \\approx 2300\\ \\Omega\\cdot\\text{m}"
+          ],
+          [
+            "m",
+            "\\rho_{\\mathrm{quartz}} \\sim 10^{17}\\text{ to }10^{19}\\ \\Omega\\cdot\\text{m}"
+          ],
+          [
+            "y",
+            "WHY / Magnitude alone overlaps at boundaries \u2014 what truly separates classes physically is whether carrier count n is FIXED (metal) or THERMALLY ACTIVATED across a gap (semiconductor)!"
+          ],
+          [
+            "w",
+            "WATCH / Mystery sample E1 with rho ~ 10^(-2) ohm.m whose resistance FALLS when heated is an extrinsic/semiconducting sample, NEVER a nichrome alloy!"
+          ]
+        ]
+      },
+      {
+        "title": "Temperature coefficient alpha: metal vs Si vs NTC",
+        "items": [
+          [
+            "p",
+            "Conductivity sigma = n e mu pulls two temperature levers in opposite directions: lattice phonon scattering lowers mu(T), whereas thermal excitation raises n(T)."
+          ],
+          [
+            "m",
+            "\\text{Metal: } n = \\text{const},\\ \\mu \\downarrow \\implies \\frac{d\\rho}{dT} > 0\\ (\\alpha > 0)"
+          ],
+          [
+            "m",
+            "\\text{Semiconductor / NTC: } n_i(T) \\uparrow\\uparrow \\implies \\frac{d\\rho}{dT} < 0\\ (\\alpha < 0)"
+          ],
+          [
+            "y",
+            "WHY / In silicon, mild acoustic scattering mu ~ T^(-3/2) is completely crushed by exponential bond breaking exp(-Eg / 2kT), plunging resistivity steeply on warming!"
+          ],
+          [
+            "w",
+            "WATCH / NTC thermistors exploit steep negative dR/dT for precision temperature sensing and inrush-current limiting; never treat a thermistor as ohmic over wide T!"
+          ]
+        ]
+      },
+      {
+        "title": "Allowed bands & why a filled band CANNOT conduct",
+        "items": [
+          [
+            "p",
+            "Bringing N isolated atoms into a periodic crystal splits discrete atomic orbitals into N closely spaced crystal states forming valence (VB) and conduction (CB) bands."
+          ],
+          [
+            "m",
+            "\\sum_{\\text{full band}} \\mathbf{v}(\\mathbf{k}) = \\mathbf{0}\\ \\ \\bigl(\\text{every } +\\mathbf{k}\\text{ paired with } -\\mathbf{k}\\bigr)"
+          ],
+          [
+            "y",
+            "WHY / Electric force F = -eE must shift electrons into adjacent empty k-states! A 100% full valence band has ZERO empty states \u2014 like a bumper-to-bumper parking lot, net current is identically zero!"
+          ],
+          [
+            "w",
+            "WATCH / Never answer \"electrons are too tightly bound to move\" on JEE conceptual questions \u2014 answer \"no unoccupied quantum states exist inside a filled band\"!"
+          ]
+        ]
+      },
+      {
+        "title": "Forbidden band-gap benchmarks at 300 K",
+        "items": [
+          [
+            "p",
+            "Forbidden energy gap Eg = Ec - Ev decides room-temperature carrier population relative to thermal energy kT = 25.9 meV at 300 K:"
+          ],
+          [
+            "m",
+            "E_g:\\ \\ \\mathrm{Ge} = 0.66\\text{ eV},\\ \\ \\mathrm{Si} = 1.12\\text{ eV},\\ \\ \\mathrm{GaAs} = 1.42\\text{ eV}"
+          ],
+          [
+            "m",
+            "\\mathrm{C\\ (diamond)} = 5.5\\text{ eV}\\ \\ (\\text{insulator: } E_g \\gg k_B T\\text{!})"
+          ],
+          [
+            "y",
+            "WHY / At 300 K, ni(C)/ni(Si) ~ exp[-(5.5 - 1.12)/(2 x 0.0259)] ~ 10^(-37) (essentially zero free electrons in diamond!), while ni(Ge)/ni(Si) ~ exp(+8.8) ~ 7 x 10^3!"
+          ],
+          [
+            "w",
+            "WATCH / Carbon and silicon share Group-14 valence 4 and diamond tetrahedral bonding \u2014 ONLY smaller atomic spacing makes C 5.5 eV insulating vs Si 1.12 eV semiconducting!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 2,
+    "slug": "JEE-02-intrinsic-extrinsic-doping",
+    "title": "Intrinsic carriers, doping, neutrality & mass action",
+    "subtitle": "Half-gap thermal law, bond-swapping holes, Group-15/13 impurities, and np = ni^2 seesaw.",
+    "diagrams": [
+      "band_comparison",
+      "intrinsic_vs_temp"
+    ],
+    "takeaway": "Doped crystals are ELECTRICALLY NEUTRAL overall; n.p = ni^2 holds in thermal equilibrium for BOTH pure and doped semiconductors!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.3-3.4, E2-E3, Q3-Q6 & atomic-density audit",
+    "cards": [
+      {
+        "title": "Intrinsic carrier law & exact half-gap exponent",
+        "items": [
+          [
+            "p",
+            "In pure crystal, thermal vibration breaks covalent bonds in pairs, so electron and hole concentrations are strictly equal: n = p = ni."
+          ],
+          [
+            "m",
+            "n_i(T) = \\sqrt{N_c N_v}\\,e^{-E_g / (2 k_B T)} \\propto T^{3/2} e^{-E_g / (2 k_B T)}"
+          ],
+          [
+            "m",
+            "\\mathrm{Si\\ (300\\ K):}\\ \\ n_i = 1.5\\times 10^{16}\\text{ m}^{-3},\\quad \\frac{E_g}{2 k_B T} = 21.6"
+          ],
+          [
+            "y",
+            "WHY / Notice the factor 2 in exp(-Eg / 2kT)! Doubling T from 300 K to 600 K boosts exp(...) by exp(10.8) = 5.0e4 and T^(3/2) by 2.83 => total 1.43e5x jump!"
+          ],
+          [
+            "w",
+            "WATCH / Audit check (Fig F27.5): for Si from 300 K to 400 K, exact ni(400)/ni(300) = (4/3)^(3/2) exp(5.41) = 346 (NOT 800)! Always keep 2kT in the denominator!"
+          ]
+        ]
+      },
+      {
+        "title": "Holes as positive quasiparticles & Group-15/13 doping",
+        "items": [
+          [
+            "p",
+            "When a broken bond leaves an empty valence state, neighbouring valence electrons hop left under E right \u2014 making the vacancy drift right exactly like charge +e!"
+          ],
+          [
+            "m",
+            "\\text{Group 15 (P, As, Sb)} \\to \\text{n-type } (+e\\text{ ion})"
+          ],
+          [
+            "m",
+            "\\text{Group 13 (B, Al, Ga)} \\to \\text{p-type } (-e\\text{ ion})"
+          ],
+          [
+            "y",
+            "WHY / Audit note: Si diamond lattice has N_Si = 8 / (0.543 nm)^3 = 5.0 x 10^28 atoms/m^3, so Nd = 10^21 m^(-3) is 1 P per 5 x 10^7 Si atoms (1 ppm is 5 x 10^22 m^(-3))!"
+          ],
+          [
+            "w",
+            "WATCH / Ionised donor cores P^+ and acceptor cores B^- are LOCKED in the crystal lattice \u2014 they set space charge rho(x) but carry ZERO conduction current!"
+          ]
+        ]
+      },
+      {
+        "title": "Bulk electrical neutrality & exact quadratic law",
+        "items": [
+          [
+            "p",
+            "Every donated electron came from an initially neutral dopant atom, so an isolated n-type or p-type crystal has ZERO net charge!"
+          ],
+          [
+            "m",
+            "n + N_a^- = p + N_d^+,\\qquad n\\,p = n_i^2"
+          ],
+          [
+            "m",
+            "n = \\frac{(N_d - N_a) + \\sqrt{(N_d - N_a)^2 + 4 n_i^2}}{2}\\ \\ (\\text{exact!})"
+          ],
+          [
+            "y",
+            "WHY / Whenever |Nd - Na| >> ni (standard extrinsic regime at 300 K), square root expands cleanly to majority n ~ Nd - Na while minority collapses to p = ni^2 / n!"
+          ],
+          [
+            "w",
+            "WATCH / Classic JEE Advanced trap: if BOTH donors Nd and acceptors Na are added (\"compensated Si\"), net majority type is set by SIGN of (Nd - Na), and Nd = Na restores n = p = ni!"
+          ]
+        ]
+      },
+      {
+        "title": "Ten-order majority/minority seesaw (E3 & Q5)",
+        "items": [
+          [
+            "p",
+            "Adding donors floods the crystal with electrons, increasing electron-hole recombination until minority holes drop inversely so the product np stays locked at ni^2:"
+          ],
+          [
+            "m",
+            "N_d = 10^{21}\\text{ m}^{-3} \\implies n \\approx 10^{21}\\text{ m}^{-3},\\ \\ p = \\frac{n_i^2}{N_d} = 2.25\\times 10^{11}\\text{ m}^{-3}"
+          ],
+          [
+            "m",
+            "\\frac{n}{p} = \\left(\\frac{N_d}{n_i}\\right)^{\\!2} \\approx 4.4\\times 10^9\\ \\ (\\text{10 orders apart!})"
+          ],
+          [
+            "y",
+            "WHY / Dynamic equilibrium generation rate G(T) depends ONLY on temperature T, whereas recombination R ~ n.p: setting R = G forces n.p = ni(T)^2 even after heavy doping!"
+          ],
+          [
+            "w",
+            "WATCH / Always convert cm^(-3) <-> m^(-3) cleanly BEFORE squaring ni: 1 cm^(-3) = 10^6 m^(-3), so ni(Si) = 1.5 x 10^10 cm^(-3) = 1.5 x 10^16 m^(-3)!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 3,
+    "slug": "JEE-03-drift-diffusion-transport",
+    "title": "Drift, mobility, conductivity & Fick diffusion",
+    "subtitle": "Dual-carrier drift currents, why e- and h+ currents ADD, and Einstein relation D/mu = kT/e.",
+    "diagrams": [
+      "doped_band_levels",
+      "drift_diffusion_currents"
+    ],
+    "takeaway": "Under electric field E, electron and hole drift currents ADD (sigma = e(n mu_e + p mu_h)); under a concentration gradient, their diffusion currents SUBTRACT!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.5, E2-E3, Q7-Q8, P13-P14, P21",
+    "cards": [
+      {
+        "title": "Drift speed, mobility asymmetry & total conductivity",
+        "items": [
+          [
+            "p",
+            "Under weak electric field E, electrons drift opposite E with v_e = mu_e E while positive holes drift along E with v_h = mu_h E \u2014 BOTH conventional currents point ALONG E!"
+          ],
+          [
+            "m",
+            "J_{\\mathrm{drift}} = e(n\\mu_e + p\\mu_h)E \\implies \\sigma = \\frac{1}{\\rho} = e(n\\mu_e + p\\mu_h)"
+          ],
+          [
+            "m",
+            "\\mathrm{Si\\ (300\\ K):}\\ \\ \\mu_e = 0.135,\\ \\mu_h = 0.048\\ \\mathrm{m^2/(V\\cdot s)}\\ \\ \\Bigl(\\frac{\\mu_e}{\\mu_h} = 2.81\\Bigr)"
+          ],
+          [
+            "y",
+            "WHY / Conduction-band electrons have lighter curvature effective mass and looser wavefunctions than valence-band bond-hopping holes, making NPN & NMOS faster than PNP & PMOS!"
+          ],
+          [
+            "w",
+            "WATCH / Never subtract n mu_e - p mu_h in drift conductivity! (-e)(-v_e) + (+e)(+v_h) = +e(n v_e + p v_h) \u2014 opposite charges moving in opposite directions ADD!"
+          ]
+        ]
+      },
+      {
+        "title": "Intrinsic vs doped silicon numbers (E2, E3 & P21)",
+        "items": [
+          [
+            "p",
+            "Pure silicon conducts like wet stone; trace Group-15/13 doping boosts conductivity by 5 orders of magnitude without altering crystal geometry:"
+          ],
+          [
+            "m",
+            "\\sigma_i = 1.6\\times 10^{-19}(1.5\\times 10^{16})(0.183) = 4.39\\times 10^{-4}\\ \\text{S/m}"
+          ],
+          [
+            "m",
+            "\\rho_i = 2280\\ \\Omega\\cdot\\text{m};\\quad N_d = 10^{21}\\implies \\sigma_n \\approx e N_d\\mu_e = 21.6\\ \\text{S/m}"
+          ],
+          [
+            "y",
+            "WHY / Minority hole contribution e p mu_h ~ 1.7e-9 S/m is 10 orders smaller than 21.6 S/m \u2014 drop the minority term instantly whenever doping exceeds 100 ni!"
+          ],
+          [
+            "w",
+            "WATCH / Minimum conductivity of a doped semiconductor does NOT occur at n = p = ni! Minimising n mu_e + (ni^2/n) mu_h gives p-type minimum at p = ni sqrt(mu_e / mu_h)!"
+          ]
+        ]
+      },
+      {
+        "title": "Fick diffusion current & sign rule",
+        "items": [
+          [
+            "p",
+            "Even when E = 0, random thermal motion drives net particle flux from high to low concentration (-D dn/dx), creating diffusion current density:"
+          ],
+          [
+            "m",
+            "J_{n,\\mathrm{diff}} = (-e)\\left(-D_n\\frac{dn}{dx}\\right) = +e D_n\\frac{dn}{dx}"
+          ],
+          [
+            "m",
+            "J_{p,\\mathrm{diff}} = (+e)\\left(-D_p\\frac{dp}{dx}\\right) = -e D_p\\frac{dp}{dx}"
+          ],
+          [
+            "y",
+            "WHY / If BOTH electrons and holes decrease toward +x (dn/dx < 0, dp/dx < 0, e.g. surface illumination), both diffuse right \u2014 so J_p points +x while J_n points -x!"
+          ],
+          [
+            "w",
+            "WATCH / Watch the PLUS sign on J_{n,diff} = +e Dn (dn/dx) vs MINUS sign on J_{p,diff} = -e Dp (dp/dx) \u2014 opposite of drift because same-direction particle fluxes carry opposite charges!"
+          ]
+        ]
+      },
+      {
+        "title": "Total transport equations & Einstein relation",
+        "items": [
+          [
+            "p",
+            "Combining drift and diffusion for each carrier species and enforcing zero net current in thermal equilibrium links diffusion constant D directly to mobility mu:"
+          ],
+          [
+            "m",
+            "J_n = e n\\mu_e E + e D_n\\frac{dn}{dx},\\qquad J_p = e p\\mu_h E - e D_p\\frac{dp}{dx}"
+          ],
+          [
+            "m",
+            "\\frac{D_n}{\\mu_e} = \\frac{D_p}{\\mu_h} = \\frac{k_B T}{e} = V_T = 25.9\\text{ mV}\\ \\ (300\\text{ K})"
+          ],
+          [
+            "y",
+            "WHY / Both scattering relaxation time tau and thermal energy kT govern random walks AND field drift \u2014 their ratio D/mu depends ONLY on temperature T!"
+          ],
+          [
+            "w",
+            "WATCH / In Si at 300 K: Dn = 0.135 x 0.0259 = 3.50 x 10^(-3) m^2/s (35 cm^2/s) and Dp = 1.24 x 10^(-3) m^2/s (12.4 cm^2/s) \u2014 quick sanity numbers for Olympiad checks!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 4,
+    "slug": "JEE-04-pn-junction-equilibrium",
+    "title": "p-n junction equilibrium, barrier hill & space charge",
+    "subtitle": "Uncovered ion dipole, Boltzmann contact potential V0, and aligned rho(x), E(x), V(x) curves.",
+    "diagrams": [
+      "pn_depletion_layout",
+      "pn_charge_field_pot"
+    ],
+    "takeaway": "Built-in E_bi points from n (+Nd ions) to p (-Na ions), so n-side sits HIGHER in electrostatic potential by V0 \u2014 yet a voltmeter across the terminals ALWAYS reads ZERO!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.6, C7-C8, OL2-OL3, P23",
+    "cards": [
+      {
+        "title": "Depletion formation & drift-diffusion cancellation",
+        "items": [
+          [
+            "p",
+            "Joining p and n silicon triggers massive majority diffusion across x = 0, uncovering immobile negative acceptors (-e Na) on p-side and positive donors (+e Nd) on n-side."
+          ],
+          [
+            "m",
+            "J_{n,\\mathrm{drift}} + J_{n,\\mathrm{diff}} = 0,\\qquad J_{p,\\mathrm{drift}} + J_{p,\\mathrm{diff}} = 0"
+          ],
+          [
+            "m",
+            "N_a\\,x_p = N_d\\,x_n\\ \\ (\\text{total space charge } Q_+ + Q_- = 0\\text{!})"
+          ],
+          [
+            "y",
+            "WHY / Overall dipole neutrality Na xp = Nd xn forces the depletion region to penetrate DEEPER into the LIGHTLY doped side (if Na >> Nd, almost all W sits inside n)!"
+          ],
+          [
+            "w",
+            "WATCH / Trap 2: \"The depletion region has net positive/negative charge\" -> FALSE! Equal +Q and -Q layers cancel identically!"
+          ]
+        ]
+      },
+      {
+        "title": "Built-in contact potential V0 from Boltzmann",
+        "items": [
+          [
+            "p",
+            "Integrating e n mu_e (-dV/dx) + e Dn (dn/dx) = 0 from neutral p-bulk to neutral n-bulk yields the exact built-in barrier height V0:"
+          ],
+          [
+            "m",
+            "V_0 = V_T\\ln\\!\\left(\\frac{N_a N_d}{n_i^2}\\right) = \\frac{k_B T}{e}\\ln\\!\\left(\\frac{n_{n0}}{n_{p0}}\\right)"
+          ],
+          [
+            "m",
+            "N_a = N_d = 10^{22}\\text{ m}^{-3} \\implies V_0 = 0.695\\text{ V}"
+          ],
+          [
+            "y",
+            "WHY / Typical built-in barriers sit just below Eg/e: ~0.65-0.75 V in Si, ~0.25-0.35 V in Ge, and ~1.1-1.2 V in GaAs!"
+          ],
+          [
+            "w",
+            "WATCH / Why can you NOT power a bulb with V0 = 0.7 V? Metal wire contacts at both ends create equal and opposite contact potentials summing to ZERO around any closed loop!"
+          ]
+        ]
+      },
+      {
+        "title": "Exact aligned rho(x), E(x) & V(x) profiles",
+        "items": [
+          [
+            "p",
+            "Integrating Poisson dE/dx = rho / eps twice across [-xp, +xn] connects rectangular charge blocks to triangular field and parabolic S-curve potential:"
+          ],
+          [
+            "m",
+            "|E_{\\max}| = \\frac{e N_a x_p}{\\varepsilon} = \\frac{e N_d x_n}{\\varepsilon} = \\frac{2 V_0}{W}"
+          ],
+          [
+            "m",
+            "\\text{Area under } -E(x) = \\frac{1}{2}|E_{\\max}|(x_p + x_n) = V_0"
+          ],
+          [
+            "y",
+            "WHY / Peak electric field |E_max| sits RIGHT AT THE METALLURGICAL JUNCTION x = 0 (~5 x 10^5 V/m across 2.5 um!), and drops linearly to zero at edges -xp and +xn!"
+          ],
+          [
+            "w",
+            "WATCH / Electron potential energy U_e(x) = -e V(x) is UPSIDE DOWN relative to electrostatic V(x): V(x) rises p -> n, so band edges Ec(x), Ev(x) step UP n -> p!"
+          ]
+        ]
+      },
+      {
+        "title": "Depletion width scaling W ~ sqrt(V0 + VR)",
+        "items": [
+          [
+            "p",
+            "Applying external voltage V shifts the potential barrier to (V0 - V) in forward bias or (V0 + VR) under reverse voltage VR:"
+          ],
+          [
+            "m",
+            "W(V_R) = \\sqrt{\\frac{2\\varepsilon(V_0 + V_R)}{e\\,N_{\\mathrm{eff}}}},\\qquad \\frac{1}{N_{\\mathrm{eff}}} = \\frac{1}{N_a} + \\frac{1}{N_d}"
+          ],
+          [
+            "y",
+            "WHY / Forward bias shrinks W and lowers the hill for exponential majority injection; reverse bias widens W and raises the hill to V0 + VR!"
+          ],
+          [
+            "w",
+            "WATCH / Q9 & P23 check: quadrupling VR from 1 V to 4 V doubles W ONLY when VR >> V0! With V0 = 0.7 V, exact ratio is sqrt((0.7+4)/(0.7+1)) = 1.66x!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 5,
+    "slug": "JEE-05-diode-iv-breakdown",
+    "title": "Shockley diode law, 60 mV rule, dynamic rd & breakdown",
+    "subtitle": "Exponential forward conduction, decade ladder, static vs dynamic resistance, Zener vs avalanche.",
+    "diagrams": [
+      "diode_iv_full",
+      "decade_ladder_semilog"
+    ],
+    "takeaway": "Every +60 mV forward bias multiplies ideal diode current by 10x at 300 K; small-signal dynamic resistance is rd = VT / I = 26 mV / I_DC!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.7, E5, Q10-Q11, P7, P15, P27",
+    "cards": [
+      {
+        "title": "Shockley equation & the 60 mV-per-decade ladder",
+        "items": [
+          [
+            "p",
+            "Lowering the junction hill from V0 to V0 - V boosts majority carrier injection over the barrier by exp(eV / kT), yielding Shockley's diode equation:"
+          ],
+          [
+            "m",
+            "I = I_0\\!\\left(e^{V / (\\eta V_T)} - 1\\right),\\qquad V_T = \\frac{k_B T}{e} = 25.9\\text{ mV}\\ (300\\text{ K})"
+          ],
+          [
+            "m",
+            "\\Delta V_{10\\times} = \\eta V_T\\ln 10 = 59.5\\,\\eta\\text{ mV/dec}\\ (\\approx 60\\text{ mV})"
+          ],
+          [
+            "y",
+            "WHY / Example E5 & Q10: 1 mA at 0.60 V -> 10 mA at 0.66 V -> 100 mA at 0.72 V -> 1 A at 0.78 V! The \"0.7 V knee\" is simply where nanoamps cross into milliamps!"
+          ],
+          [
+            "w",
+            "WATCH / Real discrete Si diodes often have recombination factor eta ~ 1.5-2 at low current (90-120 mV/decade), whereas BJT collector current IC(VBE) obeys pure eta = 1!"
+          ]
+        ]
+      },
+      {
+        "title": "Static DC resistance R_DC vs AC dynamic resistance r_d",
+        "items": [
+          [
+            "p",
+            "JEE Main & NEET frequently test small voltage ripples superimposed on a DC forward diode bias \u2014 NEVER divide V / I when they ask for dynamic resistance!"
+          ],
+          [
+            "m",
+            "R_{\\mathrm{DC}} = \\frac{V}{I},\\qquad r_d = \\left(\\frac{dI}{dV}\\right)^{\\!-1} = \\frac{\\eta V_T}{I + I_0} \\approx \\frac{26\\text{ mV}}{I\\ (\\text{mA})}\\ \\Omega"
+          ],
+          [
+            "y",
+            "WHY / At I = 2 mA and V = 0.70 V, static R_DC = 350 ohm, whereas AC slope resistance is rd = 26 mV / 2 mA = 13 ohm \u2014 27 times smaller!"
+          ],
+          [
+            "w",
+            "WATCH / Near V = 0 (|V| << VT), exp(V/VT) - 1 ~ V/VT becomes linear and ohmic with zero-bias slope resistance r0 = VT / I0!"
+          ]
+        ]
+      },
+      {
+        "title": "Reverse saturation I0 & its 10-degree doubling rule",
+        "items": [
+          [
+            "p",
+            "For reverse bias V < -4 VT (~ -0.1 V), exp(V/VT) vanishes and reverse current saturates at -I0 (nA in Si, uA in Ge), independent of reverse voltage before breakdown."
+          ],
+          [
+            "m",
+            "I \\approx -I_0 \\propto n_i^2 \\propto T^3 e^{-E_g / (k_B T)}"
+          ],
+          [
+            "y",
+            "WHY / Notice NO factor of 2 in exp(-Eg / kT) because minority concentration p_{n0} = ni^2 / Nd scales as ni SQUARED! I0 roughly DOUBLES every +7 to +10 K rise!"
+          ],
+          [
+            "w",
+            "WATCH / P27 subtlety: at fixed V = 0.60 V, heating shrinks exp(V/VT) yet TOTAL diode current STILL RISES on heating because I0 ~ exp(-Eg/kT) explodes faster, dropping V_knee by ~2 mV/K!"
+          ]
+        ]
+      },
+      {
+        "title": "Zener tunnelling (<5 V) vs avalanche breakdown (>6 V)",
+        "items": [
+          [
+            "p",
+            "Two distinct physical mechanisms trigger sharp reverse current rise at breakdown voltage V_BR:"
+          ],
+          [
+            "m",
+            "V_Z < 5\\text{ V }(W < 10\\text{ nm}):\\ \\text{Zener quantum tunnelling}"
+          ],
+          [
+            "m",
+            "V_{\\mathrm{BR}} > 6\\text{ V (wider }W\\text{)}:\\ \\text{avalanche impact ionisation}"
+          ],
+          [
+            "y",
+            "WHY / Warming shrinks Eg so Zener tunnelling gets EASIER (dVz/dT < 0), whereas warming shortens mean free path so avalanche needs MORE voltage (dV_BR/dT > 0)!"
+          ],
+          [
+            "w",
+            "WATCH / Around Vz = 5.1-5.6 V both effects cancel to give dVz/dT ~ 0 \u2014 why 5.1 V and 5.6 V Zeners are precision industry favourites (P17)!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 6,
+    "slug": "JEE-06-rectifiers-filters-clippers",
+    "title": "Half/full-wave rectifiers, capacitor ripple & clippers",
+    "subtitle": "Exact DC, RMS, efficiency, form factor, PIV, bridge double drop, filter ripple, and clippers/clampers.",
+    "diagrams": [
+      "rectifier_waveforms",
+      "bridge_rectifier_circuit"
+    ],
+    "takeaway": "Full-wave bridge drops TWO knees (Vp - 1.4 V) with PIV = Vp and ripple f_rip = 2f; smoothing ripple is dV = I / (2fC) full-wave vs I / (fC) half-wave!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.8, E6-E7, Q12-Q14, P8, P16, P24",
+    "cards": [
+      {
+        "title": "Half-wave vs full-wave rectifier benchmark table",
+        "items": [
+          [
+            "p",
+            "For sinusoidal input v(t) = Vp sin(wt) feeding pure load RL (ideal diodes):"
+          ],
+          [
+            "m",
+            "\\text{HW:}\\ \\ V_{\\mathrm{dc}} = \\frac{V_p}{\\pi},\\quad V_{\\mathrm{rms}} = \\frac{V_p}{2},\\quad \\eta = 40.6\\%"
+          ],
+          [
+            "m",
+            "\\text{FW:}\\ \\ V_{\\mathrm{dc}} = \\frac{2 V_p}{\\pi},\\quad V_{\\mathrm{rms}} = \\frac{V_p}{\\sqrt{2}},\\quad \\eta = 81.2\\%"
+          ],
+          [
+            "y",
+            "WHY / AC ripple factor r = sqrt((Vrms/Vdc)^2 - 1) drops from 1.21 (half-wave: more AC than DC!) down to 0.482 (full-wave), and fundamental ripple frequency DOUBLES from f to 2f!"
+          ],
+          [
+            "w",
+            "WATCH / PIV (Peak Inverse Voltage) trap: half-wave = Vp; 4-diode bridge = Vp; 2-diode CENTRE-TAP full-wave = 2 Vp across the blocking diode!"
+          ]
+        ]
+      },
+      {
+        "title": "Real silicon diode drops: 4-diode bridge vs centre-tap",
+        "items": [
+          [
+            "p",
+            "When transformer peak Vp is modest (e.g. 5-12 V), always check whether the question specifies silicon diodes (V_gamma = 0.7 V) or ideal diodes:"
+          ],
+          [
+            "m",
+            "\\mathrm{Bridge\\ (4\\ diodes):}\\ \\ V_{p,\\mathrm{out}} = V_p - 2 V_\\gamma \\approx V_p - 1.4\\text{ V}"
+          ],
+          [
+            "m",
+            "\\mathrm{Centre\\text{-}tap\\ (2\\ diodes):}\\ \\ V_{p,\\mathrm{out}} = V_p - V_\\gamma \\approx V_p - 0.7\\text{ V}"
+          ],
+          [
+            "y",
+            "WHY / Trace the diamond loop: during positive half-cycle D1 -> RL -> D3 conduct IN SERIES; during negative half-cycle D2 -> RL -> D4 conduct IN SERIES!"
+          ],
+          [
+            "w",
+            "WATCH / If ONE diode in a 4-diode bridge burns OPEN, it degrades cleanly into a HALF-WAVE rectifier (f_rip = f, Vdc halves); if one shorts, it shorts the AC transformer!"
+          ]
+        ]
+      },
+      {
+        "title": "Shunt capacitor filter & sawtooth ripple equation",
+        "items": [
+          [
+            "p",
+            "Placing large capacitor C in parallel with RL charges C to peak Vp every cycle, then discharges nearly linearly at rate dV/dt = -I_L / C for time T_dis:"
+          ],
+          [
+            "m",
+            "\\Delta V_{\\mathrm{FW}} \\approx \\frac{I_L}{2 f C} = \\frac{V_p}{2 f R_L C},\\qquad \\Delta V_{\\mathrm{HW}} \\approx \\frac{I_L}{f C}"
+          ],
+          [
+            "m",
+            "V_{\\mathrm{dc,filtered}} \\approx V_p - \\frac{\\Delta V}{2}"
+          ],
+          [
+            "y",
+            "WHY / E7 & P16 check: full-wave 50 Hz, I = 100 mA, C = 1000 uF gives dV = 0.1 / (100 x 10^-3) = 1.0 V; 50 mA with 470 uF gives dV = 1.06 V!"
+          ],
+          [
+            "w",
+            "WATCH / Match 2f vs f CAREFULLY! Full-wave recharges C twice per mains period (T/2 = 10 ms at 50 Hz), half-wave only once (T = 20 ms -> twice the ripple)!"
+          ]
+        ]
+      },
+      {
+        "title": "Clippers (limiters), DC clampers & peak detectors",
+        "items": [
+          [
+            "p",
+            "Diodes reshape AC waveforms either by slicing above/below a threshold (clipper: resistor + diode) or shifting DC baseline without distortion (clamper: capacitor + diode):"
+          ],
+          [
+            "m",
+            "\\mathrm{Biased\\ shunt\\ clipper:}\\ \\ v_{\\mathrm{out}} = \\min(v_{\\mathrm{in}},\\, V_{\\mathrm{ref}} + V_\\gamma)"
+          ],
+          [
+            "m",
+            "\\text{Pos. clamper:}\\ \\ v_{\\mathrm{out}}(t) = v_{\\mathrm{in}}(t) + V_p \\ge 0"
+          ],
+          [
+            "y",
+            "WHY / Always solve ANY clamper in two steps: (1) find the half-cycle that turns the diode ON first to lock capacitor voltage V_C; (2) write KVL v_out = v_in +/- V_C on the OFF half-cycle!"
+          ],
+          [
+            "w",
+            "WATCH / A clamper NEVER alters peak-to-peak swing 2 Vp of the input wave \u2014 it translates the entire waveform vertically from [-Vp, +Vp] to [0, +2 Vp] (or [-2 Vp, 0])!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 7,
+    "slug": "JEE-07-zener-optoelectronic-devices",
+    "title": "Zener regulators, LEDs, photodiodes & solar cells",
+    "subtitle": "Two-sided Zener resistor squeeze, direct vs indirect bandgaps, and 4-quadrant PV physics.",
+    "diagrams": [
+      "zener_regulator",
+      "solar_photodiode_quadrants"
+    ],
+    "takeaway": "Size Rs at (Vin,min & IL,max), then check Zener power PZ,max at (Vin,max & IL = 0 disconnected load!); solar cells operate in Quadrant IV (V > 0, I < 0)!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.9, E8-E9, Q16-Q20, P9, P12, P17-P18",
+    "cards": [
+      {
+        "title": "Zener shunt regulator & worst-case two-sided squeeze",
+        "items": [
+          [
+            "p",
+            "Reverse-biased Zener diode clamps load voltage at V_out = Vz PROVIDED Zener current stays between knee minimum IZ,min and power limit IZ,max = PZ,max / Vz:"
+          ],
+          [
+            "m",
+            "I_R = \\frac{V_{\\mathrm{in}} - V_Z}{R_s} = I_Z + I_L,\\qquad R_{s,\\max} = \\frac{V_{\\mathrm{in,\\min}} - V_Z}{I_{L,\\max} + I_{Z,\\min}}"
+          ],
+          [
+            "m",
+            "I_{Z,\\max} = \\frac{V_{\\mathrm{in,\\max}} - V_Z}{R_s} - I_{L,\\min}\\ \\ \\bigl(\\text{worst case at } I_L = 0\\text{!}\\bigr)"
+          ],
+          [
+            "y",
+            "WHY / E8 & Q16: Vin = 12 V, Vz = 5 V, IL = 0..50 mA, IZ,min = 5 mA => Rs <= 7 / 0.055 = 127 ohm; picking 120 ohm gives no-load IZ = 58.3 mA, PZ = 0.29 W!"
+          ],
+          [
+            "w",
+            "WATCH / Before writing V_out = Vz in ANY JEE problem, ALWAYS check Thevenin open-circuit voltage V_th = Vin RL / (Rs + RL) >= Vz! If V_th < Vz, the Zener is OFF and V_out = V_th!"
+          ]
+        ]
+      },
+      {
+        "title": "Light-Emitting Diodes (LEDs) & why silicon fails",
+        "items": [
+          [
+            "p",
+            "Forward-biasing a heavily doped direct-bandgap junction injects electrons & holes that recombine radiatively across Eg, emitting monochromatic photons:"
+          ],
+          [
+            "m",
+            "\\lambda_{\\mathrm{peak}} = \\frac{hc}{E_g} \\approx \\frac{1240\\ \\mathrm{eV\\cdot nm}}{E_g\\ (\\mathrm{eV})},\\qquad E_g \\ge 1.8\\text{ eV for visible}"
+          ],
+          [
+            "y",
+            "WHY / Visible anchors: Red 620-680 nm (1.8-2.0 eV, GaAsP), Green 550 nm (2.25 eV, GaP), Blue 470 nm (2.64 eV, InGaN); IR remotes use GaAs (1.42 eV -> 873 nm)!"
+          ],
+          [
+            "w",
+            "WATCH / Why NO silicon LEDs (E9 & Q18)? Two fatal reasons: (1) Eg = 1.12 eV -> 1107 nm infrared, AND (2) Si has an INDIRECT gap (momentum mismatch goes into lattice heat phonons)!"
+          ]
+        ]
+      },
+      {
+        "title": "Photodiodes (Quadrant III reverse-bias light meters)",
+        "items": [
+          [
+            "p",
+            "Illuminating a reverse-biased p-n junction with photons hv > Eg generates electron-hole pairs inside/near the depletion region that E_bi sweeps apart instantly:"
+          ],
+          [
+            "m",
+            "I_{\\mathrm{total}} = -\\bigl(I_0 + I_{\\mathrm{photo}}\\bigr),\\qquad I_{\\mathrm{photo}} = \\eta_{\\mathrm{QE}}\\,e\\,\\frac{P_{\\mathrm{opt}}}{h\\nu} = \\mathcal{R}_\\lambda P_{\\mathrm{opt}}"
+          ],
+          [
+            "y",
+            "WHY / Why reverse bias instead of forward? Reverse bias (1) crushes dark current I0 to nanoamps so tiny light shifts stand out, AND (2) widens W -> shrinks Cj for nanosecond speed!"
+          ],
+          [
+            "w",
+            "WATCH / Photons with lambda > 1240 / Eg pass straight through the crystal unabsorbed \u2014 a silicon photodiode is completely blind beyond ~1100 nm!"
+          ]
+        ]
+      },
+      {
+        "title": "Solar photovoltaic cells (Quadrant IV zero-bias power)",
+        "items": [
+          [
+            "p",
+            "With NO external battery, photogenerated carriers swept across the junction pile holes on p and electrons on n, forward-biasing the cell to deliver real electrical power:"
+          ],
+          [
+            "m",
+            "I(V) = I_0\\!\\left(e^{V / V_T} - 1\\right) - I_L,\\qquad V_{\\mathrm{oc}} = V_T\\ln\\!\\left(1 + \\frac{I_L}{I_0}\\right)"
+          ],
+          [
+            "m",
+            "\\eta_{\\mathrm{PV}} = \\frac{P_{\\max}}{P_{\\mathrm{in}}} = \\frac{\\mathrm{FF}\\cdot V_{\\mathrm{oc}}\\,I_{\\mathrm{sc}}}{P_{\\mathrm{in}}}\\ \\ (\\text{Quadrant IV: } V > 0,\\ I < 0)"
+          ],
+          [
+            "y",
+            "WHY / Choose active layer with Eg ~ 1.1-1.5 eV (Si 1.12 eV, GaAs 1.42 eV, CdTe 1.45 eV) and high optical absorption alpha so maximum solar spectrum converts into power!"
+          ],
+          [
+            "w",
+            "WATCH / Q20 favourite JEE question: \"A solar cell operates in Quadrant IV because it generates power (V > 0 while current exits the positive p-terminal)\" \u2014 NEVER draw external bias!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 8,
+    "slug": "JEE-08-bjt-physics-modes",
+    "title": "Bipolar junction transistor (BJT): gains & modes",
+    "subtitle": "Asymmetric doping geometry, alpha-beta identities, saturation test, and mode table.",
+    "diagrams": [
+      "npn_current_flow",
+      "bjt_output_loadline"
+    ],
+    "takeaway": "IC = beta IB holds ONLY in forward-active mode! ALWAYS test beta*IB against (VCC - 0.2 V)/RC FIRST \u2014 whichever is SMALLER wins!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.10, E10, Q21-Q23, P10, P19, P25",
+    "cards": [
+      {
+        "title": "Asymmetric E-B-C design & current law",
+        "items": [
+          [
+            "p",
+            "An NPN transistor is NOT two back-to-back discrete diodes: Emitter is heavily doped (n++), Base is ultra-thin & lightly doped (p), and Collector has the largest area (n):"
+          ],
+          [
+            "m",
+            "I_E = I_C + I_B,\\qquad \\alpha = \\frac{I_C}{I_E}\\ (< 1),\\qquad \\beta = \\frac{I_C}{I_B} = \\frac{\\alpha}{1 - \\alpha}"
+          ],
+          [
+            "m",
+            "\\alpha = \\frac{\\beta}{\\beta + 1},\\qquad I_E = (\\beta + 1)I_B\\ \\ (\\text{active mode ONLY!})"
+          ],
+          [
+            "y",
+            "WHY / Thin lightly doped base lets 98-99.5% of injected emitter electrons diffuse across to the collector before recombining (alpha = 0.99 => beta = 99, E10 & P10)!"
+          ],
+          [
+            "w",
+            "WATCH / Collector has the LARGEST physical area NOT for doping, but to dissipate heat P_C = V_CE I_C (~99% of transistor heating occurs at the reverse-biased B-C junction)!"
+          ]
+        ]
+      },
+      {
+        "title": "Four operating modes set by E-B & C-B junction biases",
+        "items": [
+          [
+            "p",
+            "Every BJT question starts by classifying the bias polarities of Emitter-Base (EBJ) and Collector-Base (CBJ) junctions:"
+          ],
+          [
+            "m",
+            "\\text{Cutoff: } I_C = 0 \\quad\\big|\\quad \\text{Active: } I_C = \\beta I_B"
+          ],
+          [
+            "m",
+            "\\text{Sat: } V_{CE,\\mathrm{sat}} \\approx 0.2\\text{ V},\\ \\ I_C = I_{C,\\mathrm{sat}} < \\beta I_B"
+          ],
+          [
+            "y",
+            "WHY / Reverse-active (EBJ OFF, CBJ ON) swaps emitter and collector roles with terrible gain beta_rev ~ 0.1-2 because the collector was never heavily doped to inject!"
+          ],
+          [
+            "w",
+            "WATCH / Swapping Emitter and Collector pins of an NPN transistor on a breadboard puts it into reverse-active mode \u2014 circuit barely works instead of burning out!"
+          ]
+        ]
+      },
+      {
+        "title": "20-second saturation test (Q23 & P25 killer trap!)",
+        "items": [
+          [
+            "p",
+            "Given VCC, collector resistor RC, base current IB, and gain beta, NEVER write IC = beta IB blindly \u2014 run this 3-step check first:"
+          ],
+          [
+            "m",
+            "1.\\ I_{C,\\mathrm{trial}} = \\beta I_B\\qquad 2.\\ I_{C,\\max} = \\frac{V_{CC} - V_{CE,\\mathrm{sat}}}{R_C}"
+          ],
+          [
+            "m",
+            "3.\\ I_C = \\min(\\beta I_B,\\,I_{C,\\max})\\ \\ (\\beta I_B \\ge I_{C,\\max}\\Rightarrow\\text{SAT!})"
+          ],
+          [
+            "y",
+            "WHY / Q23 proof: VCC = 5 V, RC = 1 k, beta = 100, IB = 100 uA => beta*IB = 10 mA gives impossible VCE = 5 - 10 = -5 V! True saturated IC = (5 - 0.2)/1k = 4.8 mA!"
+          ],
+          [
+            "w",
+            "WATCH / Marking-scheme penalty warning (Part 12): writing IC = beta IB in saturation loses ALL numerical marks even with flawless arithmetic!"
+          ]
+        ]
+      },
+      {
+        "title": "DC load line & Q-point placement",
+        "items": [
+          [
+            "p",
+            "Kirchhoff's voltage loop on the collector side imposes a straight line across the transistor's output characteristic family:"
+          ],
+          [
+            "m",
+            "V_{CE} = V_{CC} - I_C(R_C + R_E) \\implies I_C = -\\frac{V_{CE}}{R_C + R_E} + \\frac{V_{CC}}{R_C + R_E}"
+          ],
+          [
+            "y",
+            "WHY / Placing quiescent operating point Q near the centre (VCE,Q ~ VCC / 2) maximises symmetric peak-to-peak undistorted output swing before hitting cutoff or saturation clipping!"
+          ],
+          [
+            "w",
+            "WATCH / Where does amplified signal power come from (C12 & Trap 8)? 100% from the DC battery VCC \u2014 the base signal merely modulates the valve opening!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 9,
+    "slug": "JEE-09-ce-amplifier-switch",
+    "title": "Common-emitter amplifier, gains & BJT switch design",
+    "subtitle": "Small-signal gm, voltage/power gain, 180-deg phase inversion, and hard-saturated load switches.",
+    "diagrams": [
+      "ce_amplifier_transfer",
+      "bjt_switch_driver"
+    ],
+    "takeaway": "CE amplifier inverts phase by 180 deg with Av = -beta RC / r_in = -gm RC and Ap = beta * |Av|; a digital BJT switch lives ONLY in Cutoff and Saturation!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.11, E11, Q24, P25",
+    "cards": [
+      {
+        "title": "Common-emitter (CE) small-signal gains & transconductance",
+        "items": [
+          [
+            "p",
+            "Around active Q-point (IC, VCE), tiny input wiggle dV_BE produces dI_B = dV_BE / r_in and collector wiggle dI_C = beta dI_B = gm dV_BE:"
+          ],
+          [
+            "m",
+            "g_m = \\frac{\\Delta I_C}{\\Delta V_{BE}} = \\frac{I_C}{V_T},\\qquad r_\\pi = \\frac{\\Delta V_{BE}}{\\Delta I_B} = \\frac{\\beta}{g_m} = \\frac{\\beta V_T}{I_C}"
+          ],
+          [
+            "m",
+            "A_v = \\frac{\\Delta V_{\\mathrm{out}}}{\\Delta V_{\\mathrm{in}}} = -\\beta\\frac{R_C}{R_{\\mathrm{in}}} = -g_m R_C,\\qquad A_p = \\beta\\,|A_v| = \\beta^2\\frac{R_C}{R_{\\mathrm{in}}}"
+          ],
+          [
+            "y",
+            "WHY / MINUS sign in Av = -gm RC means 180-deg phase inversion (Q24): rising Vin drives higher IC, larger I_C R_C drop, and LOWER output voltage VCE = VCC - IC RC!"
+          ],
+          [
+            "w",
+            "WATCH / Notice power gain Ap = A_i |A_v| scales as BETA SQUARED! For beta = 100 and RC = R_in, |Av| = 100 while signal power gain is Ap = 10,000 (+40 dB)!"
+          ]
+        ]
+      },
+      {
+        "title": "CB vs CE vs CC configuration comparison",
+        "items": [
+          [
+            "p",
+            "Only Common-Emitter gives BOTH high current gain (beta) and high voltage gain (gm RC), making CE the universal workhorse stage:"
+          ],
+          [
+            "m",
+            "\\text{CE: } A_i = \\beta,\\ |A_v| \\gg 1,\\ \\Delta\\phi = 180^\\circ\\ (\\text{max } A_p)"
+          ],
+          [
+            "m",
+            "\\text{CB: } A_i = \\alpha,\\ \\Delta\\phi = 0^\\circ \\quad\\big|\\quad \\text{CC: } A_v \\approx +1"
+          ],
+          [
+            "y",
+            "WHY / Emitter follower (CC) has voltage gain +1 (0-deg phase) and high input / low output impedance \u2014 ideal unity-gain buffer driving heavy low-resistance loads!"
+          ],
+          [
+            "w",
+            "WATCH / Adding an unbypassed emitter resistor RE stabilizes Q-point thermally and sets rock-solid voltage gain Av ~ -RC / RE independent of transistor beta spread!"
+          ]
+        ]
+      },
+      {
+        "title": "Transfer curve Vout(Vin) & CMOS/RTL NOT gate origin",
+        "items": [
+          [
+            "p",
+            "Sweeping DC input Vin from 0 V to VCC sweeps Vout = VCE across three sharp zones that define BOTH linear amplification and digital inversion:"
+          ],
+          [
+            "m",
+            "V_{\\mathrm{in}} < 0.6\\text{ V}\\ (\\text{Cutoff}):\\ V_{\\mathrm{out}} = V_{CC}\\ \\ (\\text{Logic } 0 \\to \\text{Logic } 1)"
+          ],
+          [
+            "m",
+            "V_{\\mathrm{in}} > V_{\\mathrm{sat}}\\ (\\text{Saturation}):\\ V_{\\mathrm{out}} = V_{CE,\\mathrm{sat}} \\approx 0.2\\text{ V}\\ \\ (1 \\to 0)"
+          ],
+          [
+            "y",
+            "WHY / Analog amplifiers bias RIGHT IN THE MIDDLE steep linear slope; digital logic gates slam cleanly between the TWO FLAT ENDS (0 V and VCC) where transistor power is tiny!"
+          ],
+          [
+            "w",
+            "WATCH / In active region P_transistor = VCE IC is maximum (hot!); in Cutoff (IC = 0) and hard Saturation (VCE ~ 0.2 V), switch dissipation I_C V_{CE} is nearly ZERO!"
+          ]
+        ]
+      },
+      {
+        "title": "Designing a saturated BJT lamp/relay switch (E11 & P25)",
+        "items": [
+          [
+            "p",
+            "To switch load I_{C,sat} cleanly from logic high V_{in} (e.g. 5.0 V MCU pin), force base current safely above the minimum threshold I_{B,min} = I_{C,sat} / beta:"
+          ],
+          [
+            "m",
+            "I_B = \\frac{V_{\\mathrm{in}} - V_{BE,\\mathrm{on}}}{R_B} \\ge \\mathrm{OD}\\cdot\\frac{I_{C,\\mathrm{sat}}}{\\beta},\\qquad R_B \\le \\frac{V_{\\mathrm{in}} - 0.7\\text{ V}}{\\mathrm{OD}\\cdot(I_{C,\\mathrm{sat}}/\\beta)}"
+          ],
+          [
+            "y",
+            "WHY / E11 check: 5 V supply, 100 mA lamp, beta = 100 needs IB >= 1.0 mA => RB <= (5 - 0.7)/1 mA = 4.3 kOhm (pick 2.2 kOhm for 2x overdrive); lamp gets 5.0 - 0.2 = 4.8 V!"
+          ],
+          [
+            "w",
+            "WATCH / When driving inductive relay/motor coils with a BJT switch, ALWAYS place a flyback diode anti-parallel across the coil so L(dI/dt) turn-off spikes never puncture VCE!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 10,
+    "slug": "JEE-10-diode-transistor-logic-gates",
+    "title": "Diode/transistor logic circuits, truth tables & waveforms",
+    "subtitle": "DL/RTL hardware implementations, all seven gate truth tables, and JEE pulse-timing traces.",
+    "diagrams": [
+      "diode_bjt_gates",
+      "logic_timing_waveforms"
+    ],
+    "takeaway": "Diode anodes at inputs + pull-DOWN resistor = OR gate; diode cathodes at inputs + pull-UP resistor = AND gate; add a CE transistor stage to invert into NOR / NAND!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.12, C14, Q15, Q25",
+    "cards": [
+      {
+        "title": "Hardware Diode Logic (DL) & Transistor Inverter (RTL)",
+        "items": [
+          [
+            "p",
+            "JEE Main regularly draws raw diode-resistor-transistor schematics and asks which Boolean gate they implement \u2014 identify the pull resistor FIRST:"
+          ],
+          [
+            "m",
+            "\\text{Diode OR: anodes } A,B;\\ \\text{cathodes} + R_{\\mathrm{down}}\\to 0"
+          ],
+          [
+            "m",
+            "\\text{Diode AND: cathodes } A,B;\\ \\text{anodes} + R_{\\mathrm{up}}\\to V_{CC}"
+          ],
+          [
+            "y",
+            "WHY / In Diode AND, if EITHER input A = 0 V, its diode conducts and clamps output Y down to 0.7 V (Logic 0); Y stays HIGH (+VCC) ONLY when BOTH A = 1 AND B = 1!"
+          ],
+          [
+            "w",
+            "WATCH / Two NPN transistors in PARALLEL sharing collector pull-up RC form a NOR gate; two NPN transistors in SERIES under pull-up RC form a NAND gate!"
+          ]
+        ]
+      },
+      {
+        "title": "Complete truth tables of all 7 standard gates",
+        "items": [
+          [
+            "p",
+            "For input pairs (A, B) ordered strictly as (0,0), (0,1), (1,0), (1,1), memorise each gate's 4-bit output signature cold:"
+          ],
+          [
+            "m",
+            "\\mathrm{AND}\\ (A\\cdot B):\\ 0,0,0,1 \\qquad \\mathrm{NAND}\\ (\\overline{A\\cdot B}):\\ 1,1,1,0"
+          ],
+          [
+            "m",
+            "\\mathrm{OR}\\ (A + B):\\ 0,1,1,1 \\qquad \\mathrm{NOR}\\ (\\overline{A + B}):\\ 1,0,0,0"
+          ],
+          [
+            "m",
+            "\\mathrm{XOR}\\ (A\\oplus B):\\ 0,1,1,0 \\qquad \\mathrm{XNOR}\\ (A\\odot B):\\ 1,0,0,1"
+          ],
+          [
+            "y",
+            "WHY / Fast verbal shortcuts: AND = \"all 1s\"; OR = \"any 1\"; NAND = \"0 ONLY at 1,1\"; NOR = \"1 ONLY at 0,0\"; XOR = \"inequality / odd-parity detector\"; XNOR = \"equality comparator\"!"
+          ],
+          [
+            "w",
+            "WATCH / Tying one input of XOR to a control line C makes a programmable inverter: A xor 0 = A (buffer), whereas A xor 1 = NOT A (inverter)!"
+          ]
+        ]
+      },
+      {
+        "title": "Why binary logic beats decimal hardware (C14)",
+        "items": [
+          [
+            "p",
+            "Digital circuits encode 0 and 1 as wide voltage bands separated by a forbidden transition zone, rejecting power noise, crosstalk, and device tolerances:"
+          ],
+          [
+            "m",
+            "A \\oplus B = A\\overline{B} + \\overline{A}B,\\qquad A \\odot B = \\overline{A\\oplus B} = AB + \\overline{A}\\,\\overline{B}"
+          ],
+          [
+            "y",
+            "WHY / Every CMOS logic gate regenerates degraded levels right back to clean 0 V or VDD rails \u2014 errors do NOT accumulate across 100 stages!"
+          ],
+          [
+            "w",
+            "WATCH / Associativity superpower: multi-input XOR (A xor B xor C) outputs 1 whenever an ODD number of inputs equal 1 \u2014 instant parity checker!"
+          ]
+        ]
+      },
+      {
+        "title": "Solving JEE digital pulse-train waveform problems",
+        "items": [
+          [
+            "p",
+            "When given square-wave timing graphs A(t), B(t) and 4 candidate output graphs Y(t), NEVER trace intermediate gates sloppily by eye:"
+          ],
+          [
+            "m",
+            "1.\\ \\text{Slice time into clock slots } t_1, t_2, \\dots, t_k"
+          ],
+          [
+            "m",
+            "2.\\ \\text{Evaluate } Y(A_i, B_i)\\text{ slot by slot}"
+          ],
+          [
+            "y",
+            "WHY / Simplifying the gate network algebraically FIRST (e.g. spotting Y = A + B' in 5 seconds!) eliminates 100% of intermediate-node copy errors under exam pressure!"
+          ],
+          [
+            "w",
+            "WATCH / Watch whether HIGH voltage is drawn UP or whether negative logic is stated in the stem \u2014 read vertical axis labels before ticking options!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 11,
+    "slug": "JEE-11-boolean-universal-adders",
+    "title": "Boolean algebra, De Morgan, universal NAND/NOR & adders",
+    "subtitle": "Absorption laws, bubble-pushing De Morgan rules, minimum NAND/NOR counts, and half/full adders.",
+    "diagrams": [
+      "nand_universal_map",
+      "half_adder_circuit"
+    ],
+    "takeaway": "Minimum gate count sequence: NAND builds [NOT, AND, OR, XOR, XNOR] in [1, 2, 3, 4, 5] gates; NOR reverses AND/OR & XOR/XNOR to [1, 3, 2, 5, 4] gates!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.12, E12, Q26-Q28, P11, P26",
+    "cards": [
+      {
+        "title": "Boolean algebra shortcuts that collapse 5 lines to 1",
+        "items": [
+          [
+            "p",
+            "Beyond commutativity and distributivity, three non-ordinary identities do 90% of all JEE Boolean simplifications:"
+          ],
+          [
+            "m",
+            "A + A = A,\\quad A + 1 = 1,\\quad A + \\overline{A} = 1,\\quad A\\overline{A} = 0"
+          ],
+          [
+            "m",
+            "A + \\overline{A}B = A + B,\\quad (A+B)(A+C) = A + BC"
+          ],
+          [
+            "y",
+            "WHY / Test A + A'B = A + B quickly: if A = 1, both equal 1; if A = 0, LHS = B and RHS = B \u2014 identical on EVERY row in 2 seconds!"
+          ],
+          [
+            "w",
+            "WATCH / Never cancel terms like ordinary algebra (A + B = A + C does NOT imply B = C in Boolean algebra)! Always double-check any tricky reduction on the 4 truth rows!"
+          ]
+        ]
+      },
+      {
+        "title": "De Morgan's theorems & graphical bubble-pushing",
+        "items": [
+          [
+            "p",
+            "Break an overbar, flip the operator between AND (.) and OR (+)! Graphically: a NAND gate IS an inverted-input OR gate; a NOR gate IS an inverted-input AND gate:"
+          ],
+          [
+            "m",
+            "\\overline{A \\cdot B} = \\overline{A} + \\overline{B},\\qquad \\overline{A + B} = \\overline{A} \\cdot \\overline{B}"
+          ],
+          [
+            "y",
+            "WHY / Whenever two inversion bubbles meet head-to-head on the same wire, they CANCEL cleanly (double complement A'' = A) \u2014 instant visual reduction of multi-NAND schematics!"
+          ],
+          [
+            "w",
+            "WATCH / Watch bar height carefully! OVERLINE(A + B) != OVERLINE(A) + OVERLINE(B)! Only split an overbar AT THE EXACT MOMENT you flip (+) <-> (.)!"
+          ]
+        ]
+      },
+      {
+        "title": "Universal NAND & NOR minimum-gate counts",
+        "items": [
+          [
+            "p",
+            "Both NAND and NOR are functionally complete (universal). Memorise BOTH construction formulas AND exact minimum 2-input gate counts:"
+          ],
+          [
+            "m",
+            "\\text{NAND: } [1, 2, 3, 4, 5]\\ \\ (\\text{NOT, AND, OR, XOR, XNOR})"
+          ],
+          [
+            "m",
+            "\\text{NOR: } [1, 3, 2, 5, 4]\\ \\ (\\text{NOT, AND, OR, XOR, XNOR})"
+          ],
+          [
+            "y",
+            "WHY / Optimal 4-NAND XOR ingeniously reuses first shared gate G1 = NAND(A, B) to compute NAND(NAND(A, G1), NAND(B, G1)) = A xor B without two extra NOT gates!"
+          ],
+          [
+            "w",
+            "WATCH / Classic JEE trap: naive student builds A'B + AB' with 5 NANDs and ticks \"5\" \u2014 MINIMUM number of 2-input NAND gates for XOR is ALWAYS 4!"
+          ]
+        ]
+      },
+      {
+        "title": "Binary arithmetic: Half Adder & Full Adder (E12, Q28, P26)",
+        "items": [
+          [
+            "p",
+            "Adding two 1-bit binary numbers A + B produces 2-bit output (Carry C, Sum S); adding carry-in C_in from a lower column makes a Full Adder:"
+          ],
+          [
+            "m",
+            "\\text{Half Adder:}\\ \\ S = A\\oplus B,\\quad C = A\\cdot B\\ \\ (5\\text{ NAND})"
+          ],
+          [
+            "m",
+            "\\mathrm{Full\\ Adder:}\\ \\ S = A\\oplus B\\oplus C_{\\mathrm{in}},\\quad C_{\\mathrm{out}} = A B + C_{\\mathrm{in}}(A\\oplus B)"
+          ],
+          [
+            "y",
+            "WHY / Check 1 + 1 in Half Adder: S = 1 xor 1 = 0, C = 1 . 1 = 1 -> binary \"10\" (= decimal 2)! Two Half Adders + one OR gate build a complete 1-bit Full Adder (9 NANDs min)!"
+          ],
+          [
+            "w",
+            "WATCH / Half subtractor calculating A - B has the EXACT SAME Difference bit D = A xor B, changing ONLY Borrow = A' . B!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "JEE",
+    "part_page": 12,
+    "slug": "JEE-12-master-triage-traps",
+    "title": "Master JEE triage, multi-diode networks & 10 exam traps",
+    "subtitle": "Rapid formula selector, multi-diode open-circuit solver, LED lookup, and ten fatal traps.",
+    "diagrams": [
+      "led_bandgap_spectrum",
+      "multi_diode_solver"
+    ],
+    "takeaway": "Mode BEFORE algebra on every diode, Zener, and transistor problem \u2014 one 5-second open-circuit / saturation check saves full marks!",
+    "source": "Source: semiconductors/Semiconductors.md Parts 7-9, Traps 1-10, Part 14 checklist",
+    "cards": [
+      {
+        "title": "Multi-diode circuit solver (Part 7.3 gold standard)",
+        "items": [
+          [
+            "p",
+            "When a network contains two or more diodes sharing a node (e.g. diodes D1 at +1 V and D2 at +3 V feeding one pull-down resistor), DO NOT guess randomly:"
+          ],
+          [
+            "m",
+            "1.\\ \\text{Open diodes} \\to \\text{rank open-circuit } V_A - V_K"
+          ],
+          [
+            "m",
+            "2.\\ \\text{Turn ON largest } (V_A - V_K > V_\\gamma),\\ \\text{re-solve!}"
+          ],
+          [
+            "y",
+            "WHY / Example: anodes at +3 V and +1 V joined to ground via R (ideal diodes) -> +3 V diode turns ON first, clamping cathode node to +3 V so the +1 V diode is REVERSE biased at -2 V (OFF)!"
+          ],
+          [
+            "w",
+            "WATCH / NEVER leave a solved circuit with an \"ON\" diode carrying negative current I < 0 or an \"OFF\" diode sitting at forward V > V_knee!"
+          ]
+        ]
+      },
+      {
+        "title": "Core silicon 300 K anchor constants (memorise cold!)",
+        "items": [
+          [
+            "p",
+            "Carry these eight room-temperature numbers into every JEE Main, JEE Advanced, and NSEP paper for instant 5-second sanity checks:"
+          ],
+          [
+            "m",
+            "V_T = 25.9\\text{ mV},\\quad \\Delta V_{10\\times} = 60\\text{ mV/dec},\\quad hc = 1240\\ \\mathrm{eV\\cdot nm}"
+          ],
+          [
+            "m",
+            "n_i = 1.5\\times 10^{16}\\text{ m}^{-3},\\ \\ \\rho_i \\approx 2300\\ \\Omega\\cdot\\text{m}"
+          ],
+          [
+            "m",
+            "V_\\gamma \\approx 0.7\\text{ V (Si)},\\qquad V_{CE,\\mathrm{sat}} \\approx 0.2\\text{ V}"
+          ],
+          [
+            "y",
+            "WHY / Even when a problem gives slightly rounded data (VT = 25 mV or ni = 10^16 m^-3), knowing exact physical scales catches 10^6 unit slips instantly!"
+          ],
+          [
+            "w",
+            "WATCH / Germanium numbers differ noticeably: Eg = 0.66 eV, V_knee ~ 0.3 V, V_{CE,sat} ~ 0.1 V, and much larger leakage current I0 (uA vs nA)!"
+          ]
+        ]
+      },
+      {
+        "title": "Five conceptual JEE traps examiners repeat every year",
+        "items": [
+          [
+            "p",
+            "1. \"n-type silicon is negatively charged\" -> FALSE! Mobile e- + fixed P^+ sum to ZERO net charge!"
+          ],
+          [
+            "p",
+            "2. \"Depletion region carries net charge\" -> FALSE! Equal +e Nd xn and -e Na xp dipole!"
+          ],
+          [
+            "p",
+            "3. \"Voltmeter across p-n diode reads 0.7 V\" -> FALSE! Contact potentials cancel to 0 V!"
+          ],
+          [
+            "m",
+            "\\text{LED brightness} \\propto I_F\\ \\ (E_g\\text{ sets ONLY } \\lambda\\text{!})"
+          ],
+          [
+            "y",
+            "WHY / Raising forward LED current emits MORE photons/sec of the SAME wavelength 1240/Eg; changing colour requires changing semiconductor alloy composition x!"
+          ],
+          [
+            "w",
+            "WATCH / 5. \"Transistor amplifies energy\" -> FALSE! DC power supply VCC provides the energy; transistor merely valves collector flow!"
+          ]
+        ]
+      },
+      {
+        "title": "Five circuit-algebra JEE traps to check before submitting",
+        "items": [
+          [
+            "p",
+            "Run this 30-second checklist across your numerical working before locking options:"
+          ],
+          [
+            "m",
+            "\\mathrm{Bridge\\ drop} = 2 V_\\gamma\\ \\big|\\ \\ \\Delta V_{\\mathrm{FW}} = \\frac{I}{2 f C}\\ \\text{vs}\\ \\Delta V_{\\mathrm{HW}} = \\frac{I}{f C}"
+          ],
+          [
+            "m",
+            "\\text{Check } V_{\\mathrm{th}} > V_Z,\\ \\ P_{Z,\\max}\\big|_{I_L=0},\\ \\ \\beta I_B\\text{ vs } I_{C,\\mathrm{sat}}"
+          ],
+          [
+            "y",
+            "WHY / Nearly 80% of all lost marks in JEE electronics come NOT from hard physics, but from applying IC = beta IB in saturation or forgetting 2f vs f in ripple!"
+          ],
+          [
+            "w",
+            "WATCH / Always check cm^(-3) vs m^(-3) BEFORE using sigma = n e mu or n p = ni^2 \u2014 missing 10^6 gives answers off by 1,000,000x!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 1,
+    "slug": "Olympiad-01-hydrogenic-donors-fermi",
+    "title": "Scaled Bohr donors, Fermi level & intrinsic crossover",
+    "subtitle": "Hydrogenic impurity derivation, valley-anisotropy honesty factor, Fermi shifts, and 560 K ceiling.",
+    "diagrams": [
+      "bohr_donor_scaling",
+      "carrier_freezeout_intrinsic"
+    ],
+    "takeaway": "Scaled Bohr gives Ed = 13.6 (m*/m) / kappa^2 = 26 meV ~ kT and a* = 2.4 nm in Si (measured 45 meV due to 6-valley anisotropy); Si loses doping above ~560 K!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.4, E4, OL1, OL12, P22, P28",
+    "cards": [
+      {
+        "title": "Hydrogenic impurity model (OL1, E4, P22 & P28)",
+        "items": [
+          [
+            "p",
+            "An extra fifth valence electron of P orbiting a +e core inside crystal permittivity kappa = eps_r moves with band effective mass m*, rescaling Bohr's atom cleanly:"
+          ],
+          [
+            "m",
+            "E_d = 13.6\\text{ eV}\\,\\frac{m^*/m_e}{\\kappa^2},\\qquad a^* = a_0\\,\\frac{\\kappa}{m^*/m_e}\\ \\ (a_0 = 0.0529\\text{ nm})"
+          ],
+          [
+            "m",
+            "\\text{Si }(\\kappa=11.7,\\,0.26\\,m_e):\\ E_d = 26\\text{ meV},\\ a^* = 2.4\\text{ nm}"
+          ],
+          [
+            "m",
+            "\\text{GaAs }(\\kappa=12.9,\\,0.067\\,m_e):\\ E_d = 5.5\\text{ meV},\\ a^* = 10.2\\text{ nm}"
+          ],
+          [
+            "y",
+            "WHY / Because a* = 2.4 nm spans ~4.4 cubic lattice cells (a_Si = 0.543 nm; ~9 bond lengths!), averaging over hundreds of Si atoms makes macroscopic dielectric screening kappa valid!"
+          ],
+          [
+            "w",
+            "WATCH / Olympiad marking-rubric MUST-WRITE honesty line (Part 12): measured Si:P is 45 meV (1.7x higher) because silicon's 6 anisotropic conduction valleys & central-cell potential deviate from isotropic hydrogen!"
+          ]
+        ]
+      },
+      {
+        "title": "Fermi-Dirac distribution & Fermi-level shift with doping",
+        "items": [
+          [
+            "p",
+            "Occupation probability of state E is governed by Fermi-Dirac statistics; when E - EF >> kT, it reduces to Boltzmann factor exp(-(E - EF)/kT):"
+          ],
+          [
+            "m",
+            "f(E) = \\frac{1}{e^{(E - E_F)/(k_B T)} + 1},\\qquad E_{F,i} = \\frac{E_c + E_v}{2} + \\frac{3}{4}k_B T\\ln\\!\\left(\\frac{m_h^*}{m_e^*}\\right)"
+          ],
+          [
+            "m",
+            "n = n_i\\,e^{(E_F - E_i)/(k_B T)},\\qquad p = n_i\\,e^{(E_i - E_F)/(k_B T)}"
+          ],
+          [
+            "y",
+            "WHY / Multiplying n and p cancels EF identically to prove np = ni^2! n-doping shifts EF UP toward Ec by kT ln(Nd/ni); p-doping shifts EF DOWN toward Ev by kT ln(Na/ni)!"
+          ],
+          [
+            "w",
+            "WATCH / At T -> 0 K in pure crystal, intrinsic Fermi level sits EXACTLY midway at (Ec + Ev)/2 regardless of mass asymmetry m_h* != m_e*!"
+          ]
+        ]
+      },
+      {
+        "title": "Freeze-out (<120 K), extrinsic plateau & intrinsic ceiling",
+        "items": [
+          [
+            "p",
+            "Plotting log n vs 1000/T across cryogenic to high temperature reveals three distinct physical regimes in doped silicon:"
+          ],
+          [
+            "m",
+            "1.\\ \\text{Freeze-out }(k_B T \\ll E_d):\\ n \\propto e^{-E_d/(2 k_B T)}"
+          ],
+          [
+            "m",
+            "2.\\ \\text{Extrinsic saturation }(120\\text{ to }500\\text{ K}):\\ n \\approx N_d = \\text{const!}"
+          ],
+          [
+            "m",
+            "3.\\ \\text{Intrinsic }(n_i > N_d):\\ n \\approx n_i \\propto T^{3/2} e^{-E_g/(2 k_B T)}"
+          ],
+          [
+            "y",
+            "WHY / Notice factor 2 in BOTH slopes on an Arrhenius plot: steep high-T slope measures -Eg/(2k), shallow cryogenic slope measures -Ed/(2k)!"
+          ],
+          [
+            "w",
+            "WATCH / In the extrinsic saturation window (near 300 K), n = Nd is constant while mu ~ T^(-3/2) falls \u2014 so lightly doped Si actually shows a SMALL POSITIVE dR/dT until ni wakes up!"
+          ]
+        ]
+      },
+      {
+        "title": "When silicon devices forget their doping (OL12 exact)",
+        "items": [
+          [
+            "p",
+            "Once thermal generation raises ni(T) up to dopant density Nd, p-n junctions lose rectification (V0 -> 0) and transistors fail completely:"
+          ],
+          [
+            "m",
+            "\\left(\\frac{T}{300}\\right)^{\\!3/2}\\exp\\!\\left[\\frac{E_g}{2 k_B}\\!\\left(\\frac{1}{300} - \\frac{1}{T}\\right)\\right] = \\frac{N_d}{n_i(300\\text{ K})} = 6.67\\times 10^4"
+          ],
+          [
+            "m",
+            "\\mathrm{Si}\\ (N_d = 10^{21}\\text{ m}^{-3}):\\ T_{\\max} \\approx 560\\text{ K}\\ (\\approx 287^\\circ\\text{C})"
+          ],
+          [
+            "y",
+            "WHY / Wide-bandgap semiconductors SiC (Eg = 3.26 eV) and GaN (Eg = 3.4 eV) push this thermal ceiling well past 600 deg C \u2014 why EV inverters & jet-engine sensors use SiC/GaN!"
+          ],
+          [
+            "w",
+            "WATCH / Germanium (Eg = 0.66 eV) hits intrinsic washout right around ~90-100 deg C \u2014 why early 1950s Ge transistors failed in hot summer equipment and Si won!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 2,
+    "slug": "Olympiad-02-boltzmann-junction-varactor",
+    "title": "Boltzmann diode derivation, Poisson step junction & varactors",
+    "subtitle": "Minority injection law, 2-sided vs 1-sided depletion audit, and voltage-tuned RF varactors.",
+    "diagrams": [
+      "boltzmann_hill_injection",
+      "varactor_capacitance"
+    ],
+    "takeaway": "Watch 1-sided vs symmetric step junctions: W_1side = sqrt(2 eps V_tot / eN), whereas symmetric Na = Nd = N has W_sym = sqrt(4 eps V_tot / eN) = sqrt(2) W_1side!",
+    "source": "Source: semiconductors/Semiconductors.md OL2-OL3, P23, P27, P29 & step-junction audit",
+    "cards": [
+      {
+        "title": "Shockley equation from Boltzmann boundary law (OL2)",
+        "items": [
+          [
+            "p",
+            "In equilibrium, minority electrons at the p-side depletion edge equal n_{p0} = n_{n0} exp(-eV0/kT). Forward bias V lowers barrier to V0 - V, boosting edge density exponentially:"
+          ],
+          [
+            "m",
+            "n_p(-x_p) = n_{p0}\\,e^{V / V_T} \\implies \\Delta n_p = n_{p0}\\!\\left(e^{V / V_T} - 1\\right)"
+          ],
+          [
+            "m",
+            "I = I_0\\!\\left(e^{V / V_T} - 1\\right),\\qquad I_0 = e A\\!\\left(\\frac{D_p\\,p_{n0}}{L_p} + \\frac{D_n\\,n_{p0}}{L_n}\\right)"
+          ],
+          [
+            "y",
+            "WHY / Using p_{n0} = ni^2 / Nd and n_{p0} = ni^2 / Na immediately proves WHY reverse leakage I0 scales as ni^2 and why heavily doping one side suppresses its reverse injection!"
+          ],
+          [
+            "w",
+            "WATCH / Diffusion length L_n = sqrt(Dn tau_n) is how far injected minority electrons travel before recombining; a diode needs base thicker than L_n, whereas a BJT needs W_B << L_n!"
+          ]
+        ]
+      },
+      {
+        "title": "Exact step-junction Poisson audit: 2-sided vs 1-sided (OL3/P29)",
+        "items": [
+          [
+            "p",
+            "Audit distinction (OL3 & P29): total depletion width W = xp + xn across acceptor Na and donor Nd sides depends on REDUCED doping density N_eff:"
+          ],
+          [
+            "m",
+            "W = \\sqrt{\\frac{2\\varepsilon(V_0 + V_R)}{e\\,N_{\\mathrm{eff}}}},\\qquad N_{\\mathrm{eff}} = \\frac{N_a N_d}{N_a + N_d}"
+          ],
+          [
+            "m",
+            "W_{1\\text{-side}} = \\sqrt{\\frac{2\\varepsilon(V_0 + V_R)}{e N}},\\qquad W_{\\mathrm{sym}} = \\sqrt{2}\\,W_{1\\text{-side}}"
+          ],
+          [
+            "y",
+            "WHY / In P29 (eps = 11.7 eps0, N = 10^21 m^-3, V0 + VR = 5.0 V, A = 1 mm^2): p+n one-sided gives W = 2.55 um, Cj = 40.7 pF; symmetric Na = Nd = N gives W = 3.60 um, Cj = 28.8 pF!"
+          ],
+          [
+            "w",
+            "WATCH / Always state explicitly in Olympiad solutions whether you model a one-sided p^+n junction (N_eff = N) or symmetric junction (N_eff = N/2) \u2014 instant full rigor credit!"
+          ]
+        ]
+      },
+      {
+        "title": "Varactor (variable-reactance) tuning diodes & 1/C^2 law",
+        "items": [
+          [
+            "p",
+            "Small AC signal wiggle dV around reverse bias VR charges/discharges depletion edges separated by W(VR) exactly like a voltage-controlled parallel-plate capacitor:"
+          ],
+          [
+            "m",
+            "C_j(V_R) = \\frac{dQ}{dV_R} = \\frac{\\varepsilon A}{W(V_R)} = \\frac{C_{j0}}{\\sqrt{1 + V_R / V_0}}"
+          ],
+          [
+            "m",
+            "\\frac{1}{C_j^2} = \\frac{2(V_0 + V_R)}{e\\,\\varepsilon\\,A^2 N_{\\mathrm{eff}}}\\ \\ (\\text{STRICT STRAIGHT LINE vs } V_R\\text{!})"
+          ],
+          [
+            "y",
+            "WHY / Plotting 1/Cj^2 against reverse bias VR in the lab measures BOTH built-in potential V0 (horizontal intercept -V0!) AND substrate doping N_eff (from slope)!"
+          ],
+          [
+            "w",
+            "WATCH / Putting a varactor inside an LC tank f0 = 1 / (2 pi sqrt(L Cj)) gives f0 ~ (V0 + VR)^(+1/4) \u2014 how every PLL, FM modulator, and radio tuner tunes frequency electronically!"
+          ]
+        ]
+      },
+      {
+        "title": "Linearly graded junctions & forward diffusion capacitance",
+        "items": [
+          [
+            "p",
+            "Not every junction is a step function! Diffused junctions with rho(x) = e a x obey a cube-root law, while forward-biased diodes add a huge storage capacitance C_diff:"
+          ],
+          [
+            "m",
+            "\\mathrm{Graded}\\ \\rho = e a x:\\ \\ W \\propto (V_0 + V_R)^{1/3} \\implies C_j \\propto (V_0 + V_R)^{-1/3}"
+          ],
+          [
+            "m",
+            "\\mathrm{Forward\\ storage:}\\ \\ Q_{\\mathrm{min}} = \\tau_T I \\implies C_{\\mathrm{diff}} = \\frac{dQ_{\\mathrm{min}}}{dV} = \\frac{\\tau_T I}{V_T}"
+          ],
+          [
+            "y",
+            "WHY / Stored minority charge Q_min = tau_T I takes transit/lifetime time tau_T to clear on sudden turn-off \u2014 why ordinary 1N4007 diodes fail at 100 kHz and Schottky diodes (majority carriers, tau_T ~ 0!) rule SMPS!"
+          ],
+          [
+            "w",
+            "WATCH / Hyperabrupt varactors engineer doping N(x) ~ x^(-3/2) so Cj ~ (V0 + VR)^(-2), making LC resonant frequency f0 ~ 1/sqrt(Cj) STRICTLY LINEAR in control voltage VR!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 3,
+    "slug": "Olympiad-03-hall-thermometry-bandgap",
+    "title": "Hall effect metrology, diode thermometry & 1.22 V reference",
+    "subtitle": "Lorentz carrier-sign determination, two-carrier Hall zero, -2 mV/K sensor, and Brokaw bandgap circuit.",
+    "diagrams": [
+      "hall_slab_geometry",
+      "bandgap_reference_ptat"
+    ],
+    "takeaway": "Lorentz force deflects e- and h+ to the EXACT SAME transverse face \u2014 so Hall voltage polarity unambiguously distinguishes n-type from p-type!",
+    "source": "Source: semiconductors/Semiconductors.md OL5-OL6, P20, P33-P34",
+    "cards": [
+      {
+        "title": "Hall effect derivation, polarity & carrier extraction (OL6)",
+        "items": [
+          [
+            "p",
+            "Pass current I_x along +x through rectangular slab (thickness t along B_z). Magnetic force q v_d x B pushes BOTH drift electrons (v_x < 0, q = -e) and drift holes (v_x > 0, q = +e) toward the SAME face!"
+          ],
+          [
+            "m",
+            "|E_y| = v_d B_z = \\frac{J_x B_z}{n e} \\implies V_H = \\frac{I B}{n e t},\\qquad R_H \\equiv \\frac{E_y}{J_x B_z} = \\mp\\frac{1}{n e}"
+          ],
+          [
+            "y",
+            "WHY / OL6 & P33 check: I = 10 mA, B = 0.5 T, t = 0.5 mm, V_H = 62 mV => n = (0.01 x 0.5)/(1.6e-19 x 0.062 x 5e-4) = 1.01 x 10^21 m^(-3); doubling V_H halves n (P20: 31 mV -> 2.0 x 10^21 m^-3)!"
+          ],
+          [
+            "w",
+            "WATCH / Notice slab WIDTH w cancels out of V_H = I B / (n e t)! Thin epitaxial films (tiny t) generate huge, easily measured millivolt Hall signals!"
+          ]
+        ]
+      },
+      {
+        "title": "Combining Hall + conductivity & two-carrier Hall zero",
+        "items": [
+          [
+            "p",
+            "Conductivity alone gives ONLY the product n mu; pairing a 4-probe resistivity test with a Hall measurement extracts carrier density n AND mobility mu SEPARATELY:"
+          ],
+          [
+            "m",
+            "|R_H| = \\frac{1}{n e},\\qquad \\mu_H = |R_H|\\,\\sigma = \\frac{V_H\\,L}{W\\,B\\,V_{\\mathrm{long}}}"
+          ],
+          [
+            "m",
+            "R_{H,\\mathrm{ambipolar}} = \\frac{p\\,\\mu_h^2 - n\\,\\mu_e^2}{e(p\\,\\mu_h + n\\,\\mu_e)^2}\\ \\ (\\text{vanishes when } p\\,\\mu_h^2 = n\\,\\mu_e^2\\text{!})"
+          ],
+          [
+            "y",
+            "WHY / Look at mu^2 in the numerator of R_H! Because mu_e = 2.81 mu_h in Si, intrinsic Si (n = p = ni) actually shows an N-TYPE negative Hall coefficient!"
+          ],
+          [
+            "w",
+            "WATCH / Classic IPhO trap: in lightly p-doped silicon where p = (mu_e/mu_h)^2 n ~ 7.9 n, Hall voltage passes right through ZERO even though mobile carriers are abundant!"
+          ]
+        ]
+      },
+      {
+        "title": "Diode & BJT thermometer: dV_BE/dT = -2 mV/K (OL5)",
+        "items": [
+          [
+            "p",
+            "Driving a diode-connected BJT with constant current source I_C = const and differentiating V_BE(T) = V_T ln(I_C / I_0(T)) with I_0 ~ T^3 exp(-Eg / kT):"
+          ],
+          [
+            "m",
+            "\\frac{dV_{BE}}{dT} \\approx \\frac{V_{BE} - (E_g/e + 3 V_T)}{T} \\approx \\frac{0.70 - 1.20}{300\\text{ K}} \\approx -1.7\\text{ to }-2.1\\text{ mV/K}"
+          ],
+          [
+            "y",
+            "WHY / Even though V_T = kT/e tries to raise V_BE, saturation current I_0(T) explodes exponentially across Eg, pulling V_BE DOWN linearly across -55 to +150 deg C (CTAT = Complementary To Absolute T)!"
+          ],
+          [
+            "w",
+            "WATCH / Every CPU/GPU die embeds on-chip BJT thermal diodes reading this exact -2 mV/K slope to throttle clock frequency before silicon overheats!"
+          ]
+        ]
+      },
+      {
+        "title": "Bandgap voltage reference: cancelling CTAT + PTAT = 1.22 V",
+        "items": [
+          [
+            "p",
+            "Run two matched BJTs at fixed current-density ratio J1 / J2 = M (e.g. M = 10): their V_BE difference eliminates I_0 completely to create a pure +T signal (PTAT):"
+          ],
+          [
+            "m",
+            "\\Delta V_{BE} = V_{BE1} - V_{BE2} = V_T\\ln M = \\frac{k_B\\ln M}{e}\\,T\\ \\ (\\text{pure PTAT!})"
+          ],
+          [
+            "m",
+            "V_{\\mathrm{ref}} = V_{BE} + K\\Delta V_{BE} \\implies \\frac{dV_{\\mathrm{ref}}}{dT} = 0\\ \\ (1.22\\text{ V})"
+          ],
+          [
+            "y",
+            "WHY / Summing falling V_BE (-2 mV/K, extrapolating to Eg/e at 0 K) + amplified rising K*dV_BE (+2 mV/K) locks V_ref right onto silicon's extrapolated 0 K bandgap ~1.22-1.25 V (P34)!"
+          ],
+          [
+            "w",
+            "WATCH / Every precision IC regulator (LM317's famous 1.25 V reference, ADC refs, phone PMICs) rests directly on this CTAT + PTAT cancellation!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 4,
+    "slug": "Olympiad-04-solar-limits-bypass-leds",
+    "title": "Shockley-Queisser PV bound, shaded strings & tandem cells",
+    "subtitle": "Spectral loss trade-off (~33.7% at 1.34 eV), tandem solar stacks, hotspot physics, and bypass diodes.",
+    "diagrams": [
+      "shockley_queisser_curve",
+      "shaded_panel_bypass"
+    ],
+    "takeaway": "Single-junction PV cells lose sub-gap red photons (unabsorbed) and excess above-gap blue energy (phonons), capping 1-sun efficiency near ~33.7% at Eg ~ 1.34 eV!",
+    "source": "Source: semiconductors/Semiconductors.md OL4, OL10, P30, P35",
+    "cards": [
+      {
+        "title": "Two fundamental spectral losses in single-junction PV (OL4)",
+        "items": [
+          [
+            "p",
+            "Sunlight spans ~0.4 to 4.0 eV (~5800 K blackbody). A single semiconductor bandgap Eg extracts EXACTLY Eg (minus recombination loss) per absorbed photon:"
+          ],
+          [
+            "m",
+            "h\\nu < E_g:\\ \\text{unabsorbed transmission loss (0\\%)}"
+          ],
+          [
+            "m",
+            "h\\nu > E_g:\\ \\text{excess }(h\\nu - E_g)\\text{ lost as phonons}"
+          ],
+          [
+            "y",
+            "WHY / Tiny Eg absorbs everything but delivers tiny V_oc < Eg/e; huge Eg gives large V_oc but wastes nearly all solar photons -> product peaks sharply around Eg ~ 1.34 eV!"
+          ],
+          [
+            "w",
+            "WATCH / In P30 Olympiad answers, you MUST name BOTH spectral losses PLUS radiative recombination (which forces V_oc < Eg/e and FF < 1) to derive the ~33.7% ceiling!"
+          ]
+        ]
+      },
+      {
+        "title": "Why crystalline Si (1.12 eV) dominates & how tandems beat 33%",
+        "items": [
+          [
+            "p",
+            "Silicon's 1.12 eV gap sits right beside the broad SQ plateau (~32% theoretical limit; ~27% lab record), backed by abundant SiO2 sand and wafer purity."
+          ],
+          [
+            "m",
+            "\\text{Tandem:}\\ \\ E_{g,\\mathrm{top}} \\approx 1.7\\text{ eV},\\quad E_{g,\\mathrm{bot}} = 1.12\\text{ eV}"
+          ],
+          [
+            "m",
+            "\\eta_{\\max}:\\ 33.7\\%\\ (1\\text{J}) \\to 45\\%\\ (2\\text{J}) \\to 68\\%\\ (\\infty\\text{J})"
+          ],
+          [
+            "y",
+            "WHY / Top wide-gap subcell harvests blue/green photons at HIGH voltage (~1.2 V) while letting red/IR pass transparently down into bottom Si subcell \u2014 crushing thermalisation loss!"
+          ],
+          [
+            "w",
+            "WATCH / Focusing sunlight with lenses/mirrors (concentrator PV, C suns) boosts I_L -> raises V_oc by V_T ln C, lifting theoretical infinite-junction limit toward 86.8%!"
+          ]
+        ]
+      },
+      {
+        "title": "Shaded series solar cell hotspot crisis (OL10 & P35)",
+        "items": [
+          [
+            "p",
+            "Solar modules wire N cells (e.g. 60 or 72) IN SERIES so voltages add to ~35-40 V. If ONE single leaf shades cell #k, KCL forces identical current through every cell:"
+          ],
+          [
+            "m",
+            "I_{\\mathrm{str}} > I_{L,\\mathrm{sh}} \\implies V_{\\mathrm{shaded}} = V_{\\mathrm{load}} - \\sum_{j\\neq k} V_j < 0"
+          ],
+          [
+            "m",
+            "P_{\\mathrm{hotspot}} = |V_{\\mathrm{shaded}}|\\,I_{\\mathrm{string}}\\ \\ (\\text{tens of watts in ONE cell!})"
+          ],
+          [
+            "y",
+            "WHY / All N - 1 sunlit cells gang up like a 30 V battery ramming 8 A BACKWARD into the one shaded cell \u2014 baking EVA encapsulant and cracking glass!"
+          ],
+          [
+            "w",
+            "WATCH / Without protection, either open-circuit load drops string power to the worst cell OR low load resistance drives destructive reverse avalanche breakdown!"
+          ]
+        ]
+      },
+      {
+        "title": "Antiparallel bypass diodes & stepped multi-peak I-V curves",
+        "items": [
+          [
+            "p",
+            "Wiring a Schottky bypass diode in ANTI-PARALLEL across each sub-string of M cells (typically 20-24 cells per diode, 3 diodes per 60/72-cell panel) saves both power and hardware:"
+          ],
+          [
+            "m",
+            "\\text{Full sun }(V_{\\mathrm{blk}} > 0):\\ \\text{bypass diode OFF}"
+          ],
+          [
+            "m",
+            "\\text{Shaded }(V_{\\mathrm{blk}} \\approx -0.4\\text{ V}):\\ \\text{bypass diode ON!}"
+          ],
+          [
+            "y",
+            "WHY / Full 8 A string current detours cleanly around the shaded sub-string: the module loses ONLY 1/3 of voltage (~65% power saved!) instead of collapsing by 80-90%!"
+          ],
+          [
+            "w",
+            "WATCH / Signature on panel I(V) curve (P35c): K distinct current steps / local power peaks \u2014 which is why solar inverters run global MPPT sweeps!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 5,
+    "slug": "Olympiad-05-shot-noise-photoreceivers",
+    "title": "Shot noise, Johnson noise, NEP & LED load-line stability",
+    "subtitle": "Poisson discrete-charge floor, resistor thermal noise, minimum detectable power, and OL9 design.",
+    "diagrams": [
+      "shot_vs_thermal_noise",
+      "led_loadline_stability"
+    ],
+    "takeaway": "Shot noise i_rms = sqrt(2 e I df) comes from discrete charge quanta e; Johnson noise i_th = sqrt(4 kT df / R) comes from thermal agitation \u2014 add variances i_tot^2 = i_shot^2 + i_th^2!",
+    "source": "Source: semiconductors/Semiconductors.md OL8-OL9, P32",
+    "cards": [
+      {
+        "title": "Quantum shot noise from Poisson arrival statistics (OL8, P32)",
+        "items": [
+          [
+            "p",
+            "Current I consists of discrete independent electrons e crossing a potential barrier at mean rate N / tau = I / e. Over observation window tau = 1 / (2 df), count variance is N:"
+          ],
+          [
+            "m",
+            "\\sigma_I^2 = \\left(\\frac{e}{\\tau}\\right)^{\\!2} N = \\frac{e^2}{\\tau^2}\\!\\left(\\frac{I\\tau}{e}\\right) = 2 e I\\,\\Delta f \\implies i_{\\mathrm{rms}} = \\sqrt{2 e I\\,\\Delta f}"
+          ],
+          [
+            "y",
+            "WHY / OL8 & P32 checks: (1) I = 1 uA, df = 1 MHz => i_rms = 0.566 nA; (2) I = 4 uA, df = 2 MHz => i_rms = 1.60 nA! Narrowing receiver bandwidth df by 4x cuts rms noise in HALF!"
+          ],
+          [
+            "w",
+            "WATCH / Dark current I_d and background light I_bg add uncorrelated shot noise even when signal modulates around zero: total shot variance is 2 e (I_sig + I_dark + I_bg) df!"
+          ]
+        ]
+      },
+      {
+        "title": "Johnson-Nyquist resistor noise & photoreceiver SNR / NEP",
+        "items": [
+          [
+            "p",
+            "Load resistor R_L at temperature T adds thermal Johnson current noise independent of DC current; total receiver noise sums mean-square powers:"
+          ],
+          [
+            "m",
+            "i_{n,\\mathrm{tot}} = \\sqrt{\\bigl(2 e(I_{\\mathrm{photo}} + I_{\\mathrm{dark}}) + \\frac{4 k_B T}{R_L}\\bigr)\\Delta f}"
+          ],
+          [
+            "m",
+            "\\mathrm{SNR} = \\frac{I_{\\mathrm{photo}}^2}{i_{n,\\mathrm{tot}}^2},\\qquad \\mathrm{NEP} = \\frac{i_{n,\\mathrm{tot}}\\big|_{\\Delta f=1\\text{ Hz}}}{\\mathcal{R}_\\lambda}\\ \\ (\\mathrm{W/\\sqrt{Hz}})"
+          ],
+          [
+            "y",
+            "WHY / Shot noise beats thermal noise once I*R_L > 2 k_B T / e = 51.7 mV! Any voltage drop > 52 mV across load resistor R_L puts the receiver in the quantum shot-noise regime!"
+          ],
+          [
+            "w",
+            "WATCH / Never add rms currents linearly (i1 + i2)! Independent Gaussian/Poisson noise sources ALWAYS add IN QUADRATURE: sqrt(i_shot^2 + i_thermal^2)!"
+          ]
+        ]
+      },
+      {
+        "title": "Why LEDs MUST have current-limiting ballast (OL9)",
+        "items": [
+          [
+            "p",
+            "An LED is an exponential diode (I ~ exp(V / VT)), NOT an ohmic bulb! Connecting a 2.0 V LED directly across a stiff voltage rail invites instant thermal runaway:"
+          ],
+          [
+            "m",
+            "R_{\\mathrm{series}} = \\frac{V_{CC} - V_{\\mathrm{LED}}}{I_{\\mathrm{target}}}\\ \\ \\Bigl(\\mathrm{OL9:}\\ \\frac{5.0 - 2.0\\text{ V}}{20\\text{ mA}} = 150\\ \\Omega,\\ P_R = 60\\text{ mW}\\Bigr)"
+          ],
+          [
+            "y",
+            "WHY / Without R_series, a +100 mV supply bump or +50 K junction warm-up (-100 mV knee shift!) boosts LED current by 10^(100/60) ~ 46x \u2014 melting the bond wire in milliseconds!"
+          ],
+          [
+            "w",
+            "WATCH / Never wire two bare LEDs directly IN PARALLEL off one shared resistor! The slightly warmer LED drops V_LED by 2 mV/K, hogs all current, overheats further, and cascades to destruction!"
+          ]
+        ]
+      },
+      {
+        "title": "Small-signal sensitivity: voltage source vs series resistor",
+        "items": [
+          [
+            "p",
+            "Compare fractional current sensitivity dI / I to a diode knee shift dV_LED under stiff voltage drive vs resistor-ballasted drive:"
+          ],
+          [
+            "m",
+            "\\mathrm{Stiff\\ V\\ drive:}\\ \\ \\frac{\\delta I}{I} = -\\frac{\\delta V_{\\mathrm{LED}}}{V_T} \\approx -39\\times\\delta V_{\\mathrm{LED}}\\ (\\text{in volts!})"
+          ],
+          [
+            "m",
+            "\\mathrm{With\\ } R_s:\\ \\ \\frac{\\delta I}{I} = -\\frac{\\delta V_{\\mathrm{LED}}}{I R_s + V_T} \\approx -\\frac{\\delta V_{\\mathrm{LED}}}{V_{CC} - V_{\\mathrm{LED}}}\\ \\ (\\text{115x gentler!})"
+          ],
+          [
+            "y",
+            "WHY / Dropping 3.0 V across R_s makes loop slope resistance I R_s + V_T = 3.026 V instead of 0.026 V \u2014 turning a wild exponential device into a rock-steady 3% current source!"
+          ],
+          [
+            "w",
+            "WATCH / High-power white LED headlamps replace wasteful series resistors with buck switch-mode constant-current drivers (>92% efficiency vs 40% linear resistor)!"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Olympiad",
+    "part_page": 6,
+    "slug": "Olympiad-06-quantum-wall-cmos-scaling",
+    "title": "Moore's quantum wall, oxide tunnelling & chip heat budget",
+    "subtitle": "Heisenberg confinement spread, WKB gate leakage, high-k FinFETs, and 500-800 W CMOS power.",
+    "diagrams": [
+      "quantum_tunnelling_wall",
+      "cmos_power_scaling"
+    ],
+    "takeaway": "Charging capacitor C through resistor to VDD draws CV^2 from battery: 1/2 CV^2 stored, 1/2 CV^2 burned on rise + 1/2 CV^2 burned on discharge = CV^2 per full 0->1->0 cycle!",
+    "source": "Source: semiconductors/Semiconductors.md sec. 3.13, OL7, OL11, P31, P36 & CMOS cycle audit",
+    "cards": [
+      {
+        "title": "Quantum wall #1: Heisenberg confinement energy (OL7, P31)",
+        "items": [
+          [
+            "p",
+            "Squeezing channel/well dimension dx to a few nanometres gives carriers minimum zero-point kinetic energy spread via dx * dp >= hbar:"
+          ],
+          [
+            "m",
+            "\\Delta E \\sim \\frac{\\hbar^2}{2 m_e(\\Delta x)^2}:\\ 1.5\\text{ meV }(5\\text{ nm}),\\ 4.2\\text{ meV }(3\\text{ nm})"
+          ],
+          [
+            "m",
+            "\\text{With } m^* = 0.19\\,m_e:\\ \\Delta E(3\\text{ nm}) \\approx 22\\text{ meV} \\sim k_B T"
+          ],
+          [
+            "y",
+            "WHY / Carrier de Broglie wavelength at 300 K is h / sqrt(3 m* kT) ~ 12 nm \u2014 smaller than a modern transistor pitch, so 2D/1D quantum subbands replace bulk classical drift!"
+          ],
+          [
+            "w",
+            "WATCH / Quote BOTH free-electron mass result (4.2 meV at 3 nm, P31a exact!) AND note that light effective mass m* raises confinement right up to thermal kT = 26 meV!"
+          ]
+        ]
+      },
+      {
+        "title": "Quantum wall #2: WKB gate-oxide tunnelling leakage",
+        "items": [
+          [
+            "p",
+            "Scaling planar MOSFET capacitance C_ox = eps_ox A / d_ox once forced SiO2 thickness down to d_ox ~ 1.2 nm (~5 atomic layers!), where WKB tunnelling explodes:"
+          ],
+          [
+            "m",
+            "T_{\\mathrm{WKB}} \\sim \\exp\\!\\left(-2\\,d_{\\mathrm{ox}}\\frac{\\sqrt{2 m_{\\mathrm{ox}}^*\\,\\Phi_B}}{\\hbar}\\right) \\sim e^{-11.4\\,d_{\\mathrm{ox}}(\\text{nm})}"
+          ],
+          [
+            "y",
+            "WHY / Every 0.2 nm thinning multiplies gate leakage current by ~10x! At 1.2 nm, 10^9 \"OFF\" transistors leak tens of amps straight through the gate insulator!"
+          ],
+          [
+            "w",
+            "WATCH / How did semiconductor physics beat both walls (P31c)? (1) High-k HfO2 (kappa ~ 25 vs 3.9 -> 6x thicker physical wall for same C_ox!) + (2) 3D FinFET / Gate-All-Around nanosheets!"
+          ]
+        ]
+      },
+      {
+        "title": "CMOS capacitor charging energetics & cycle audit (OL11, P36)",
+        "items": [
+          [
+            "p",
+            "Reconciling single-transition vs full-cycle formulas cleanly from exact capacitor physics:"
+          ],
+          [
+            "m",
+            "\\text{Per edge }(0\\to 1\\text{ or }1\\to 0):\\ E_{\\mathrm{diss}} = \\frac{1}{2}\\,C V_{DD}^2"
+          ],
+          [
+            "m",
+            "\\text{Full cycle }(0\\to 1\\to 0):\\ P_{\\mathrm{dyn}} = \\alpha_{\\mathrm{sw}} N C V_{DD}^2 f"
+          ],
+          [
+            "y",
+            "WHY / Audit clarity: if N gates each make 1 transition per clock period (activity alpha_sw = 0.5), P = (1/2) N C V^2 f = 500 W (OL11: N=10^9, f=1 GHz, C=1 fF, V=1 V) & 810 W (P36)!"
+          ],
+          [
+            "w",
+            "WATCH / Making transistor channel R -> 0 does NOT reduce switching energy 1/2 CV^2 \u2014 it only burns the exact same 1/2 CV^2 faster in shorter RC time!"
+          ]
+        ]
+      },
+      {
+        "title": "Why CPU clocks stalled near ~4-5 GHz (Dennard breakdown)",
+        "items": [
+          [
+            "p",
+            "Total chip thermal dissipation combines dynamic switching power plus subthreshold leakage across billions of transistors:"
+          ],
+          [
+            "m",
+            "P_{\\mathrm{total}} = \\alpha_{\\mathrm{sw}} N C V_{DD}^2 f + N\\,V_{DD}\\,I_0\\,e^{-V_{\\mathrm{th}} / (\\eta V_T)}"
+          ],
+          [
+            "y",
+            "WHY / Because P_dyn scales quadratically with V_DD^2, dropping V_DD from 5 V -> 0.8 V cut switching energy by 39x! Below ~0.7 V, lowering threshold V_th makes exponential subthreshold leakage explode (60 mV/dec floor!) \u2014 freezing single-core GHz ~2005 and birthing multi-core CPUs!"
+          ],
+          [
+            "w",
+            "WATCH / Notice how the ENTIRE chapter closes one circle: the 60 mV/decade Boltzmann limit of Sheet 05 IS the subthreshold leakage wall of 2026 2-nm chips!"
+          ]
+        ]
+      }
+    ]
+  }
+]

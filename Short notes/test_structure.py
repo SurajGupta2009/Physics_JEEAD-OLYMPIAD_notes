@@ -32,7 +32,7 @@ def test():
         total_pngs += len(pngs)
         total_pdfs += len(all_pdfs)
         total_zips += len(all_zips)
-    assert len(all_dirs) == 16 and total_pngs == 634 and total_pdfs == 48 and total_zips == 48, (
+    assert len(all_dirs) == 17 and total_pngs == 652 and total_pdfs == 51 and total_zips == 51, (
         len(all_dirs), total_pngs, total_pdfs, total_zips
     )
     documents=[ROOT/'README.md',ROOT/'index.html',ROOT.parent/'README.md',ROOT.parent/'capacitors/README.md',ROOT.parent/'rotational-mechanics/README.md']
