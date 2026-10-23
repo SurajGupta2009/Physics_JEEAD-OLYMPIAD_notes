@@ -33,6 +33,8 @@ Portable Markdown note-sets with local SVG diagrams. Seven topics also keep a co
 
 [Units, dimensions & errors: 12 JEE + 6 extension sheets](Short%20notes/Units_Dimensions_Errors/README.md) · [gallery](Short%20notes/Units_Dimensions_Errors/index.html) · [all PNGs](Short%20notes/Units_Dimensions_Errors/units-dimensions-errors-all-pngs.zip) · [A4 PDF](Short%20notes/Units_Dimensions_Errors/units-dimensions-errors-short-notes.pdf)
 
+[Wave optics: 16 JEE + 8 extension sheets](Short%20notes/Wave_Optics/README.md) · [gallery](Short%20notes/Wave_Optics/index.html) · [all PNGs](Short%20notes/Wave_Optics/wave-optics-all-pngs.zip) · [A4 PDF](Short%20notes/Wave_Optics/wave-optics-short-notes.pdf)
+
 
 ## Note-sets
 

@@ -17,7 +17,9 @@ def test():
         assert all(p['slug'].startswith(p['section']+'-') for p in data)
         assert all(p.parent==chapter for p in chapter.rglob('*.png')),chapter.name
         assert all(p.parent==chapter for p in chapter.rglob('*.pdf')),chapter.name
-    for chapter in sorted(p for p in ROOT.iterdir() if p.is_dir()):
+    all_dirs = sorted(p for p in ROOT.iterdir() if p.is_dir())
+    total_pngs = total_pdfs = total_zips = 0
+    for chapter in all_dirs:
         pngs = list(chapter.glob('*.png'))
         combined_pdfs = list(chapter.glob('*-short-notes.pdf'))
         assert len(combined_pdfs) == 1, f'Missing combined *-short-notes.pdf in {chapter.name}'
@@ -27,6 +29,12 @@ def test():
         assert len(all_zips) == 3, f'Expected 3 ZIPs in {chapter.name}, got {len(all_zips)}'
         from pypdf import PdfReader
         assert len(PdfReader(combined_pdfs[0]).pages) == len(pngs), f'Page count mismatch in {combined_pdfs[0]}'
+        total_pngs += len(pngs)
+        total_pdfs += len(all_pdfs)
+        total_zips += len(all_zips)
+    assert len(all_dirs) == 16 and total_pngs == 634 and total_pdfs == 48 and total_zips == 48, (
+        len(all_dirs), total_pngs, total_pdfs, total_zips
+    )
     documents=[ROOT/'README.md',ROOT/'index.html',ROOT.parent/'README.md',ROOT.parent/'capacitors/README.md',ROOT.parent/'rotational-mechanics/README.md']
     for chapter in chapters:documents.extend([chapter/'README.md',chapter/'index.html'])
     for file in documents:
@@ -38,6 +46,6 @@ def test():
             if url.scheme or not url.path:continue
             target=file.parent/unquote(url.path)
             assert target.exists(),(str(file),link)
-    print('PASS: all 15 chapters; 610 PNGs, 45 PDFs (15/15 combined *-short-notes.pdf), 45 ZIPs & entry links verified.')
+    print(f'PASS: all {len(all_dirs)} chapters; {total_pngs} PNGs, {total_pdfs} PDFs ({len(all_dirs)}/{len(all_dirs)} combined *-short-notes.pdf), {total_zips} ZIPs & entry links verified.')
 
 if __name__=='__main__':test()

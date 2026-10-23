@@ -1,0 +1,1624 @@
+"""Teacher-authored content for Wave Optics short notes (24 A4 sheets: 16 JEE + 8 Olympiad).
+
+Every sheet has 4 dense, self-contained cards (prose + typeset equations + physical WHY + examiner WATCH)
+and 2 distinct analytic diagrams/graphs (48 panels total). Source chapters are read-only inputs and remain
+100% untouched. All six audit findings from ``wave-optics/Wave-optics.md`` are resolved inline and
+documented in ``SOURCE-AUDIT.md``.
+"""
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parent
+
+SHEETS = [{'section': 'JEE',
+  'part_page': 1,
+  'slug': 'JEE-01-wavefronts-huygens',
+  'title': 'Wavefronts, Huygens principle & optical path',
+  'subtitle': 'Constant-phase surfaces, secondary wavelet envelopes, Snell law proof, and optical path '
+              'equivalence.',
+  'takeaway': 'Frequency nu is fixed by the source across any stationary boundary; OPL = sum(n_i x_i) always pairs '
+              'with vacuum lambda0.',
+  'source': 'Source: wave-optics/Wave-optics.md Part 1 sec. 1.1-1.9, Q1-Q12',
+  'diagrams': ['wavefront_types', 'huygens_refraction'],
+  'cards': [{'title': 'Wavefront shapes & ray orthogonality',
+             'items': [['p',
+                        'A wavefront is a locus of points oscillating with equal phase at instant t. In an '
+                        'isotropic medium, energy rays travel everywhere perpendicular to wavefronts, while '
+                        'amplitude decays with area growth.'],
+                       ['m', 'I_{\\mathrm{sph}} \\propto \\frac{1}{r^2}\\ (A \\propto r^{-1})'],
+                       ['m',
+                        'I_{\\mathrm{cyl}} \\propto \\frac{1}{r}\\ (A \\propto r^{-1/2}), \\qquad '
+                        'I_{\\mathrm{plane}} = \\mathrm{const}'],
+                       ['why',
+                        'Total power crossing concentric spheres 4 pi r^2 or cylinders 2 pi r L stays constant in '
+                        'a lossless medium, forcing A ~ r^(-1) and r^(-1/2).'],
+                       ['trap',
+                        'In anisotropic crystals (calcite e-ray), energy walk-off separates Poynting vector S from '
+                        'wavevector k, so the e-ray is NOT perpendicular to its wavefront.']]},
+            {'title': 'Huygens secondary wavelets & Snell law',
+             'items': [['p',
+                        'Every point on primary wavefront AB emits spherical secondary wavelets spreading at local '
+                        'phase speed v; the new wavefront CD after dt is their forward tangent envelope.'],
+                       ['m',
+                        '\\frac{\\sin i}{\\sin r} = \\frac{BC / AC}{AD / AC} = \\frac{v_1 \\Delta t}{v_2 \\Delta '
+                        't} = \\frac{v_1}{v_2} = \\frac{n_2}{n_1} \\implies n_1\\sin i = n_2\\sin r'],
+                       ['why',
+                        'Kirchhoff obliquity factor K(theta) = (1 + cos theta)/2 equals 1 forward (theta = 0) and '
+                        '0 backward (theta = pi), explaining why no backward wave forms.'],
+                       ['trap',
+                        'Entering glass (n2 > n1) slows wavelets down (v2 < v1) and shortens wavelength lam = '
+                        'lam0/n, while frequency nu remains strictly unchanged.']]},
+            {'title': 'Optical path length (OPL) & Fermat rule',
+             'items': [['p',
+                        'Geometric distance x inside refractive index n accumulates phase k x = (2 pi n / lam0) x, '
+                        'identical to travelling vacuum distance n x. Inserting slab (mu, t) into air adds OPL (mu '
+                        '- 1) t.'],
+                       ['m',
+                        '\\Delta_{\\mathrm{opt}} = \\sum_k n_k x_k = \\int n(\\mathbf{r})\\,ds, \\qquad '
+                        '\\Delta\\phi = \\frac{2\\pi}{\\lambda_0}\\,\\Delta_{\\mathrm{opt}} + '
+                        '\\Delta\\phi_{\\mathrm{refl}}'],
+                       ['why',
+                        'By Fermat principle, all rays from object O to aberration-free image I take equal time: '
+                        'an ideal lens converts angle theta to y = f tan(theta) with zero extra phase difference.'],
+                       ['trap',
+                        'Always divide Delta_opt by vacuum wavelength lam0! Dividing Delta_opt by medium '
+                        'wavelength lam0/n double-counts refractive index n.']]},
+            {'title': 'Wavefront tilt & relativistic Doppler shift',
+             'items': [['p',
+                        'A thin prism (A, mu) delays its base ray by (mu - 1) H A relative to its apex ray, '
+                        'tilting an incident plane wavefront by deflection angle delta = (mu - 1) A without '
+                        'altering spacing.'],
+                       ['m',
+                        '\\frac{\\Delta\\nu}{\\nu} = -\\frac{\\Delta\\lambda}{\\lambda} = '
+                        '\\pm\\frac{v_{\\mathrm{rad}}}{c}'],
+                       ['m', '(+\\ \\mathrm{approach\\ blueshift},\\ -\\ \\mathrm{recession\\ redshift})'],
+                       ['p',
+                        'Worked check: H-alpha 656.3 nm measured at 656.96 nm (+0.66 nm shift) gives galaxy '
+                        'recession speed v = c (0.66 / 656.3) = 300 km/s.'],
+                       ['trap',
+                        'Colour sensation depends on photon energy h nu (invariant in water/glass), whereas '
+                        'astronomical redshift changes observed frequency nu itself.']]}]},
+ {'section': 'JEE',
+  'part_page': 2,
+  'slug': 'JEE-02-superposition-coherence',
+  'title': 'Superposition, phasors, visibility & coherence',
+  'subtitle': 'Two-wave harmonic phasor sum, global power conservation, Michelson contrast, and wavefront vs '
+              'amplitude splitting.',
+  'takeaway': 'In I = 4 I0 cos^2(dphi/2), use HALF the phase difference dphi/2; closing one slit drops central '
+              'brightness from I_max to I_max/4.',
+  'source': 'Source: wave-optics/Wave-optics.md Part 1-2 sec. 1.7, 2.1-2.3',
+  'diagrams': ['phasor_addition', 'visibility_contrast'],
+  'cards': [{'title': 'Phasor triangle & resultant irradiance',
+             'items': [['p',
+                        'Two co-polarised harmonic fields of intensities I1, I2 and phase difference dphi add as '
+                        'rotating vectors of lengths sqrt(I1) and sqrt(I2) separated by exterior angle dphi:'],
+                       ['m', 'I(\\Delta\\phi) = I_1 + I_2 + 2\\sqrt{I_1 I_2}\\cos\\Delta\\phi'],
+                       ['m', 'I_{1=2}(\\Delta\\phi) = 4 I_0\\cos^2\\!\\left(\\frac{\\Delta\\phi}{2}\\right)'],
+                       ['why',
+                        'Constructive peaks reach (sqrt I1 + sqrt I2)^2 while destructive troughs drop to (sqrt I1 '
+                        '- sqrt I2)^2; equal beams swing from 0 to 4 I0.'],
+                       ['trap',
+                        'At path difference lam/6 (dphi = pi/3), cos^2(pi/6) = 3/4 gives I = 3 I0! Forgetting the '
+                        'half-angle and taking cos^2(pi/3) gives I0 by mistake.']]},
+            {'title': 'Energy conservation & fringe visibility V',
+             'items': [['p',
+                        'Dark fringes never destroy energy: spatial averaging <cos dphi> = 0 shifts missing energy '
+                        'from minima straight into maxima, keeping average irradiance strictly I1 + I2.'],
+                       ['m',
+                        '\\langle I \\rangle = \\frac{I_{\\max} + I_{\\min}}{2} = I_1 + I_2, \\qquad V = '
+                        '\\frac{I_{\\max} - I_{\\min}}{I_{\\max} + I_{\\min}} = \\frac{2\\sqrt{\\eta}}{\\eta + '
+                        '1}\\ \\ (\\eta = \\frac{I_1}{I_2})'],
+                       ['p',
+                        'Fast ratio anchors: amplitude ratio r_A = 3:1 means intensity ratio eta = 9:1, so I_max : '
+                        'I_min = (3+1)^2 : (3-1)^2 = 4:1 and visibility V = 0.60.'],
+                       ['trap',
+                        'Never confuse amplitude ratio A1:A2 with intensity ratio I1:I2 = A1^2 : A2^2 — misreading '
+                        '"amplitude ratio 2:1" yields 3+2sqrt(2) instead of 9:1!']]},
+            {'title': 'Coherence & orthogonal polarisation law',
+             'items': [['p',
+                        'Two independent lamps scramble phase randomly every ~1 ns; detectors average <cos '
+                        'dphi(t)> = 0 and record flat incoherent sum I1 + I2 with zero fringes (V = 0).'],
+                       ['m',
+                        'I(\\mathbf{r}) = I_1 + I_2 + 2\\sqrt{I_1 '
+                        'I_2}\\,(\\hat{\\mathbf{e}}_1\\cdot\\hat{\\mathbf{e}}_2)\\cos\\Delta\\phi'],
+                       ['why',
+                        'By Fresnel-Arago laws, orthogonal polarisations (e1 . e2 = 0) never form intensity '
+                        'fringes, instead cycling linearly -> circularly -> linearly across space.'],
+                       ['trap',
+                        'Placing a 45-deg linear analyser AFTER perpendicular slit polaroids projects both beams '
+                        'onto one axis and immediately brings sharp fringes back!']]},
+            {'title': 'Wavefront division vs amplitude division',
+             'items': [['p',
+                        'Every interferometer derives coherent twin waves from ONE source by tapping two lateral '
+                        'patches of one wavefront OR partially reflecting one ray at an interface.'],
+                       ['m', '\\mathrm{Wavefront:}\\ \\text{YDSE, Biprism, Lloyd, Billet}'],
+                       ['m', '\\mathrm{Amplitude:}\\ \\text{Films, Wedges, Newton, Michelson}'],
+                       ['why',
+                        'Wavefront splitters require a tiny spatial pinhole/slit (s << lam L1/d), whereas '
+                        'amplitude splitters work outdoors under the broad diffuse sky!'],
+                       ['trap',
+                        'Widening primary slit S in YDSE washes out fringes completely, while widening the sodium '
+                        'lamp above Newton rings makes the rings brighter AND sharper!']]}]},
+ {'section': 'JEE',
+  'part_page': 3,
+  'slug': 'JEE-03-ydse-core',
+  'title': 'Young double-slit experiment (YDSE) core laws',
+  'subtitle': 'Exact path difference vs paraxial approximation, bright/dark indexing, angular width, and '
+              'finite-order counting.',
+  'takeaway': 'Use y_n = n lam D / d ONLY when lam << d; when d is a few wavelengths, solve sin(theta_n) = n lam / '
+              'd first and put y_n = D tan(theta_n).',
+  'source': 'Source: wave-optics/Wave-optics.md Part 2 sec. 2.1-2.5, Q1-Q6',
+  'diagrams': ['ydse_geometry', 'ydse_intensity'],
+  'cards': [{'title': 'Exact geometry vs two-stage paraxial limit',
+             'items': [['p',
+                        'Slits S1, S2 separated by d illuminate a parallel screen at distance D. Keep the two '
+                        'approximations distinct: D >> d gives parallel rays d sin(theta); |y| << D linearises '
+                        'sin(theta) ~ y/D.'],
+                       ['m',
+                        '\\Delta x = \\sqrt{D^2 + (y + \\tfrac{d}{2})^2} - \\sqrt{D^2 + (y - \\tfrac{d}{2})^2} '
+                        '\\;\\approx\\; d\\sin\\theta \\;\\approx\\; \\frac{d\\,y}{D}'],
+                       ['why',
+                        'Even if y is several metres on a distant screen (theta = 45 deg), D >> d STILL holds '
+                        'accurately, so d sin(theta) = n lam stays exact while dy/D fails!'],
+                       ['trap',
+                        'When JEE gives d = 2 lam or d = 3 lam, dy/D puts n = 2 at y = 2D instead of infinity! '
+                        'Compute theta_n = arcsin(n lam / d) and y_n = D tan(theta_n).']]},
+            {'title': 'Bright/dark positions, linear & angular beta',
+             'items': [['p',
+                        'In the small-angle regime, bright and dark fringes alternate with equal linear spacing '
+                        'beta; angular spacing dtheta = beta / D depends ONLY on lam / d, independent of D.'],
+                       ['m', 'y_{\\mathrm{bright}} = \\frac{n\\lambda D}{d}\\ (n=0,\\pm 1,\\dots)'],
+                       ['m',
+                        'y_{\\mathrm{dark}} = \\left(n - \\tfrac{1}{2}\\right)\\frac{\\lambda D}{d}\\ '
+                        '(n=1,2,\\dots), \\qquad \\beta = \\frac{\\lambda D}{d}'],
+                       ['why',
+                        'Moving the screen from D to 2D spreads linear spacing 2 beta in proportion to ray '
+                        'divergence, keeping angular separation lam / d invariant.'],
+                       ['trap',
+                        'Off-by-one classic trap: 5th dark fringe from central bright is ALWAYS (5 - 0.5) beta = '
+                        '4.5 beta, NEVER 5.5 beta (check n = 1 gives 0.5 beta!).']]},
+            {'title': 'Total maxima & minima on an infinite screen',
+             'items': [['p',
+                        'Since |sin theta| <= 1 bounds |d sin theta| <= d, only finitely many interference orders '
+                        'exist. Check carefully whether integer endpoint d/lam lands at 90 deg (y = +/- '
+                        'infinity)!'],
+                       ['m',
+                        'N_{\\mathrm{bright,hemisphere}} = 2\\left\\lfloor \\frac{d}{\\lambda} \\right\\rfloor + '
+                        '1, \\qquad N_{\\mathrm{dark,hemisphere}} = 2\\left\\lfloor \\frac{d}{\\lambda} + '
+                        '\\frac{1}{2} \\right\\rfloor'],
+                       ['p',
+                        'Concrete check: d = 4.3 lam gives 9 bright and 8 dark; d = 4.7 lam gives 9 bright and 10 '
+                        'dark; exact d = 4.0 lam gives 7 finite hits on a flat parallel screen (9 including +/-90 '
+                        'deg).'],
+                       ['trap',
+                        'Always check whether the stem asks for fringes "on a large flat screen parallel to slits" '
+                        '(|theta| < 90 deg strict!) vs "in all directions in front of slits".']]},
+            {'title': 'Irradiance profile & single-slit closure anchor',
+             'items': [['p',
+                        'Within one fringe cycle [0, beta], intensity drops smoothly: y = 0 -> 4 I0; y = beta/6 -> '
+                        '3 I0; y = beta/4 -> 2 I0 (half-maximum); y = beta/3 -> I0; y = beta/2 -> 0.'],
+                       ['m',
+                        'I(y) = 4 I_0\\cos^2\\!\\left(\\frac{\\pi y}{\\beta}\\right), \\qquad I_{\\mathrm{one\\ '
+                        'slit\\ closed}} = I_0 = \\frac{I_{\\mathrm{central}}}{4}'],
+                       ['p',
+                        'Worked check: d = 0.5 mm, D = 1.0 m, lam = 600 nm -> beta = 1.2 mm. At y = 0.2 mm = '
+                        'beta/6, I = (3/4) I_central; blocking S2 drops O to I_central / 4!'],
+                       ['trap',
+                        'When problem defines I_max = I (not I0!), closing one slit drops intensity at O to I / 4 '
+                        '(25%), NEVER I / 2 — read what symbol I represents!']]}]},
+ {'section': 'JEE',
+  'part_page': 4,
+  'slug': 'JEE-04-ydse-3d-shapes',
+  'title': '3D hyperboloids, end-on circular rings & screen tilts',
+  'subtitle': 'Full 3D locus around two point sources, perpendicular circular YDSE, full-circle spot counts, and '
+              'bichromatic beats.',
+  'takeaway': 'Parallel screen slices hyperboloids into straight lines (order 0 at O); end-on screen slices them '
+              'into circles (MAX order d/lam at O!).',
+  'source': 'Source: wave-optics/Wave-optics.md Part 2 sec. 2.6-2.9, Q7-Q14',
+  'diagrams': ['ydse_3d_hyperboloids', 'ydse_circular_end_on'],
+  'cards': [{'title': '3D hyperboloid shells around two point sources',
+             'items': [['p',
+                        'For point sources S1, S2 separated by d, locus |r1 - r2| = n lam (< d) forms a family of '
+                        'two-sheeted hyperboloids of revolution sharing foci S1 and S2; n = 0 is the bisector '
+                        'plane.'],
+                       ['m',
+                        '\\frac{x^2}{(n\\lambda/2)^2} - \\frac{y^2 + z^2}{(d/2)^2 - (n\\lambda/2)^2} = 1 \\qquad '
+                        '(0 < |n|\\lambda < d)'],
+                       ['why',
+                        'Slicing parallel to S1-S2 at z = D gives hyperbolas that look straight near O; replacing '
+                        'pinholes by long parallel slits makes them strictly straight lines.'],
+                       ['trap',
+                        'In JEE multi-correct questions, point pinholes on a flat parallel screen form hyperbolas, '
+                        'NOT circles and NOT strictly straight lines far off axis!']]},
+            {'title': 'End-on screen (S1 S2 _|_ screen) -> circular rings!',
+             'items': [['p',
+                        'Align S2-S1 along the normal to screen at distance D >> d. Rotational symmetry around '
+                        'axis S2-S1-O slices the hyperboloids into concentric circular fringes!'],
+                       ['m',
+                        '\\Delta x(\\theta) = d\\cos\\theta \\approx d\\left(1 - \\frac{r^2}{2 D^2}\\right) = '
+                        'm\\lambda \\implies r_p = D\\sqrt{\\frac{2 p\\lambda}{d}}'],
+                       ['why',
+                        'At centre O (theta = 0), path difference hits MAXIMUM d (order m0 = d/lam), decreasing '
+                        'outward as r grows — exact opposite of parallel YDSE!'],
+                       ['trap',
+                        'If d shrinks slowly in end-on YDSE, central order d/lam drops and circular fringes '
+                        'collapse INWARD into O and vanish one every delta_d = lam!']]},
+            {'title': 'Tilted screen & full 360-deg circle spot counts',
+             'items': [['p',
+                        'Tilting the viewing screen by angle psi stretches linear fringe width along the screen by '
+                        '1 / cos(psi) while angular fringe width dtheta = lam / d stays unchanged.'],
+                       ['m',
+                        '\\beta_{\\mathrm{tilt}} = \\frac{\\beta}{\\cos\\psi}, \\quad N_{360^\\circ} = 4k + 2\\ \\ '
+                        '(d/\\lambda \\notin \\mathbb{Z})'],
+                       ['m',
+                        'N_{360^\\circ} = 4k\\ \\ (\\text{when } d = k\\lambda\\text{ exact: endfire merge!})'],
+                       ['why',
+                        'Around a full circle in a plane containing S1, S2: when d = k lam exact, end-fire spots '
+                        'at 0 deg and 180 deg each merge two symmetric branches into ONE point!'],
+                       ['trap',
+                        'Classic JEE Advanced integer question: d = 3.0 lam around a 360-deg circle gives 4(3) = '
+                        '12 maxima, whereas d = 3.2 lam gives 4(3) + 2 = 14 maxima!']]},
+            {'title': 'Bichromatic YDSE coincidence & washout',
+             'items': [['p',
+                        'Superpose discrete wavelengths lam1 and lam2: bright fringes coincide at y = 0 and repeat '
+                        'periodically wherever integer multiples match n1 lam1 = n2 lam2.'],
+                       ['m',
+                        'y_{\\mathrm{coinc}} = \\mathrm{LCM}(\\beta_1, \\beta_2) = \\frac{q\\,\\lambda_1 D}{d} = '
+                        '\\frac{p\\,\\lambda_2 D}{d}'],
+                       ['m',
+                        '\\left(\\frac{\\lambda_1}{\\lambda_2} = \\frac{p}{q}\\ \\text{in lowest terms}\\right)'],
+                       ['p',
+                        'Check: 600 nm & 480 nm (ratio 5:4) -> 4th bright of 600 nm meets 5th bright of 480 nm '
+                        'every 4 beta_600! Notice odd/even parity: (2k-1)/(2n) = 5/4 has ZERO solution -> never '
+                        'washes to zero!'],
+                       ['trap',
+                        'Shorter wavelength ALWAYS has the LARGER integer order at coincidence (n_blue > n_red); '
+                        'check parity before claiming complete dark-on-bright washout exists!']]}]},
+ {'section': 'JEE',
+  'part_page': 5,
+  'slug': 'JEE-05-ydse-slabs-media',
+  'title': 'YDSE perturbations I: slabs, liquids & slit widths',
+  'subtitle': 'Single/dual dielectric plates, liquid immersion, slab-inside-liquid shifts, unequal slit widths, '
+              'and grey filters.',
+  'takeaway': 'Fringes ALWAYS shift toward the slit with larger optical delay; fringe width beta stays unchanged '
+              'in air and scales as beta/mu_L in liquid.',
+  'source': 'Source: wave-optics/Wave-optics.md Part 2 sec. 2.6-2.9, Q8, Q12, Q15-Q18',
+  'diagrams': ['ydse_slab_shift', 'ydse_liquid_cases'],
+  'cards': [{'title': 'Dielectric plates over one or both slits',
+             'items': [['p',
+                        'Placing plates (mu1, t1) on S1 and (mu2, t2) on S2 adds optical delay (mu1 - 1)t1 - (mu2 '
+                        '- 1)t2, shifting the zero-phase central fringe WITHOUT changing fringe width beta:'],
+                       ['m',
+                        '\\Delta y = \\frac{D}{d}\\bigl[(\\mu_1 - 1)t_1 - (\\mu_2 - 1)t_2\\bigr], \\qquad '
+                        'N_{\\mathrm{shift}} = \\frac{|\\Delta y|}{\\beta} = '
+                        '\\frac{|\\Delta_{\\mathrm{slab}}|}{\\lambda_0}'],
+                       ['why',
+                        'Moving upward toward S1 shortens S1P in air, compensating the extra phase delay inside S1 '
+                        'plate so total optical paths S1P and S2P match again.'],
+                       ['trap',
+                        'Exchanging plates (mu1, t) <-> (mu2, t) moves central bright from +dy to -dy: total '
+                        'screen shift equals TWICE one-way shift = 2 |mu1 - mu2| t D / d!']]},
+            {'title': 'Full liquid immersion & slab inside liquid',
+             'items': [['p',
+                        'Submerging YDSE into liquid mu_L shrinks wavelength to lam0 / mu_L. If slab (mu_S, t) '
+                        'covers S1 inside liquid mu_L, the slab replaces thickness t of liquid (NOT air!):'],
+                       ['m',
+                        '\\beta_L = \\frac{\\beta_{\\mathrm{air}}}{\\mu_L}, \\qquad \\Delta y_{\\mathrm{in\\ '
+                        'liquid}} = \\frac{(\\mu_S - \\mu_L)t\\,D}{\\mu_L\\,d}, \\qquad N_{\\mathrm{shift}} = '
+                        '\\frac{(\\mu_S - \\mu_L)t}{\\lambda_0}'],
+                       ['why',
+                        'If mu_S < mu_L (e.g. hollow air cell mu_S = 1 submerged in water mu_L = 4/3!), phase '
+                        'advances in S1 so fringes shift AWAY from S1 toward S2!'],
+                       ['trap',
+                        'Separate two different setups: slab in air BEFORE slits + liquid between slits & screen '
+                        'gives dy = (mu_S - 1) t D / (mu_L d)! Write OPL = OPL every time!']]},
+            {'title': 'Unequal slit widths & absorbing filters',
+             'items': [['p',
+                        'In standard JEE/NCERT problems, transmitted slit irradiance scales linearly with narrow '
+                        'slit width (I1 : I2 = w1 : w2), unless the stem explicitly specifies amplitude A ~ w!'],
+                       ['m',
+                        '\\frac{I_1}{I_2} = \\frac{w_1}{w_2} \\implies \\frac{I_{\\max}}{I_{\\min}} = '
+                        '\\left(\\frac{\\sqrt{w_1} + \\sqrt{w_2}}{\\sqrt{w_1} - \\sqrt{w_2}}\\right)^{\\!2}'],
+                       ['p',
+                        'Check w1 : w2 = 4 : 1 -> sqrt(I1):sqrt(I2) = 2:1 -> I_max : I_min = 9 : 1 (V = 0.80). If '
+                        'S1 carries a 25% transmission neutral filter, I1 = I0/4 gives I_max = (9/4) I0, I_min = '
+                        'I0/4!'],
+                       ['trap',
+                        'A lossless clear glass slab changes ONLY phase (I_min stays strictly 0!); an absorbing '
+                        'smoked glass plate reduces amplitude AND raises I_min > 0!']]},
+            {'title': 'Intensity at geometric centre O after slab insertion',
+             'items': [['p',
+                        'Inserting plate (mu, t) over S1 leaves phase at old centre O equal to dphi_O = 2 pi (mu - '
+                        '1) t / lam0, cycling O periodically from 4 I0 -> 0 -> 4 I0 as t grows:'],
+                       ['m',
+                        'I(O) = 4 I_0\\cos^2\\!\\left(\\frac{\\pi(\\mu - 1)t}{\\lambda_0}\\right) \\implies '
+                        't_{\\mathrm{min,dark}} = \\frac{\\lambda_0}{2(\\mu - 1)}'],
+                       ['p',
+                        'Quick check: lam0 = 600 nm, mu = 1.5 -> minimum thickness turning O completely dark is t '
+                        '= 600 / (2 x 0.5) = 600 nm; at t = 200 nm, dphi = pi/3 -> cos^2(pi/6) gives I(O) = 3 I0!'],
+                       ['trap',
+                        'Notice infinitely many thicknesses t = (2k - 1) lam0 / [2(mu - 1)] give identical '
+                        'monochrome pattern at O — white light breaks the degeneracy cleanly!']]}]},
+ {'section': 'JEE',
+  'part_page': 6,
+  'slug': 'JEE-06-ydse-oblique-polychromatic',
+  'title': 'YDSE perturbations II: oblique rays, motion & white light',
+  'subtitle': 'Off-axis sources, tilted incident waves, fringe velocities, and spectrometer missing wavelengths in '
+              'white light.',
+  'takeaway': 'Pre-slit path difference ADDS algebraically to post-slit path difference; missing wavelengths at P '
+              'satisfy lam = 2 dx_P / (2k - 1).',
+  'source': 'Source: wave-optics/Wave-optics.md Part 2 sec. 2.7-2.9, Q9-Q11, Q19-Q20',
+  'diagrams': ['ydse_oblique', 'ydse_white_missing'],
+  'cards': [{'title': 'Off-axis source & oblique plane incidence',
+             'items': [['p',
+                        'Shifting primary slit S up by y_s (distance D1 before slits) OR tilting plane wave upward '
+                        'by alpha introduces a pre-slit phase bias that shifts the zero-order bright fringe:'],
+                       ['m', 'y_c = -\\frac{D}{D_1}\\,y_s'],
+                       ['m',
+                        '\\text{or} \\qquad \\Delta_{\\mathrm{tot}} = d\\sin\\theta - d\\sin\\alpha = n\\lambda '
+                        '\\implies \\theta_c = +\\alpha'],
+                       ['why',
+                        'Because |sin theta| < 1 on a parallel screen, allowed orders run unsymmetrically from '
+                        '-d(1 + sin alpha)/lam to +d(1 - sin alpha)/lam!'],
+                       ['trap',
+                        'At alpha = 30 deg with d = 2 lam: -3 < n < +1 leaves ONLY n = -2, -1, 0 (3 fringes on '
+                        'parallel screen)! Never apply symmetric 2 floor(d/lam) + 1 when alpha != 0!']]},
+            {'title': 'Moving source, slits, screen & gas index rates',
+             'items': [['p',
+                        'Differentiate y_n(t) directly with respect to time! Every moving-part YDSE question drops '
+                        'out cleanly without memorising separate formulas:'],
+                       ['m', 'v_{\\mathrm{source\\ shift}} = -\\frac{D}{D_1}v_s'],
+                       ['m',
+                        'v_{\\mathrm{screen}} = \\frac{n\\lambda}{d}\\dot{D} = \\frac{y_n}{D}\\dot{D}, \\qquad '
+                        '\\frac{dN}{dt} = \\frac{L}{\\lambda_0}\\left|\\frac{d\\mu}{dt}\\right|'],
+                       ['why',
+                        'Source or slab motion translates EVERY order rigidly at the same speed, whereas moving '
+                        'the screen keeps n = 0 pinned at O while outer orders fan out!'],
+                       ['trap',
+                        'Check sign of v_fringe: when source S moves UP (+y), central bright fringe moves DOWN '
+                        '(-y) by magnification ratio D / D1!']]},
+            {'title': 'White-light YDSE & missing wavelengths at P',
+             'items': [['p',
+                        'With white light (400-700 nm), y = 0 has dx = 0 for ALL wavelengths -> pure white central '
+                        'fringe, flanked by warm reddish inner edge (violet hits first dark minimum first) and 4-6 '
+                        'rainbow fringes.'],
+                       ['m',
+                        '\\lambda_{\\mathrm{missing}}(k) = \\frac{2\\Delta x_P}{2k - 1}\\ \\ (k = 1, 2, 3, '
+                        '\\dots)'],
+                       ['m', '\\lambda_{\\mathrm{bright}}(n) = \\frac{\\Delta x_P}{n}\\ \\ (n = 1, 2, \\dots)'],
+                       ['why',
+                        'A spectroscope placed at fixed y_P sees a channeled spectrum crossed by jet-black '
+                        'absorption-like dark bands at every wavelength suffering destructive interference at P.'],
+                       ['trap',
+                        'Keep ONLY candidates strictly inside the problem visible window (usually 400 to 700 nm); '
+                        'discard IR (k = 1, 2) and UV lines immediately!']]},
+            {'title': 'Point directly opposite S1 (y_P = d / 2) anchor',
+             'items': [['p',
+                        'Standard JEE favourite: spectrometer slit sits at y_P = d/2 directly opposite slit S1 (so '
+                        'S1P = D and S2P = sqrt(D^2 + d^2)):'],
+                       ['m', '\\Delta x_P = \\sqrt{D^2 + d^2} - D \\;\\approx\\; \\frac{d^2}{2 D}'],
+                       ['m',
+                        '\\implies \\lambda_{\\mathrm{missing}} = \\frac{d^2}{D},\\ \\frac{d^2}{3 D},\\ '
+                        '\\frac{d^2}{5 D},\\ \\dots'],
+                       ['p',
+                        'Check: d = 1.0 mm, D = 1.0 m -> d^2/D = 1000 nm (IR), d^2/(3D) = 333 nm (UV) -> ZERO '
+                        'missing visible lines unless d = 1.2 mm (gives 1440, 480 nm blue)!'],
+                       ['trap',
+                        'If D is NOT huge compared with d (e.g. D = 2d), NEVER use d^2/(2D): compute exact sqrt(5) '
+                        'd - 2 d = 0.2361 d directly!']]}]},
+ {'section': 'JEE',
+  'part_page': 7,
+  'slug': 'JEE-07-thin-films',
+  'title': 'Parallel thin films: phase flips & R + T = 1',
+  'subtitle': 'Exact 2 mu t cos(r) derivation, Stokes reflection pi-jump rules, transmitted complementarity, and '
+              'soap black film.',
+  'takeaway': 'Compare film index mu against BOTH surrounding media n1 and n3 BEFORE writing m lam vs (m - 1/2) '
+              'lam!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 3 & Part 8 sec. 3.1-3.3, 8.5 Q9',
+  'diagrams': ['thin_film_geometry', 'thin_film_cases'],
+  'cards': [{'title': 'Exact geometric OPL = 2 mu t cos(r) proof',
+             'items': [['p',
+                        'Inside film (mu, t) at refracted angle r (n1 sin i = mu sin r), internal ray travels 2 t '
+                        '/ cos(r), while upper-surface reflected ray leads in ambient n1 by AN = 2 t tan(r) '
+                        'sin(i):'],
+                       ['m',
+                        '\\Delta_{\\mathrm{geom}} = \\frac{2\\mu t}{\\cos r} - 2 t\\tan r\\,(\\mu\\sin r) = 2\\mu '
+                        't\\cos r'],
+                       ['m', '\\Delta_{\\mathrm{geom}} = 2 t\\sqrt{\\mu^2 - n_1^2\\sin^2 i}'],
+                       ['why',
+                        'Tilting away from normal (i increases -> r increases -> cos r decreases) REDUCES 2 mu t '
+                        'cos(r), shifting thin-film reflected colours toward shorter blue wavelengths!'],
+                       ['trap',
+                        'Never write 2 mu t / cos(r)! Subtracting the air wavefront advance multiplies by (1 - '
+                        'sin^2 r) = cos^2 r, leaving cos(r) in the NUMERATOR!']]},
+            {'title': 'Four-way phase jump table (zero guesswork)',
+             'items': [['p',
+                        'Reflection from optically denser medium (n_from < n_to) flips phase by pi (lam0/2); '
+                        'reflection from rarer medium (n_from > n_to) flips phase by 0!'],
+                       ['m',
+                        'n_1 < \\mu > n_3:\\ \\ \\text{Bright } (m - \\tfrac{1}{2})\\lambda_0,\\ \\ \\text{Dark } '
+                        'm\\lambda_0'],
+                       ['m',
+                        'n_1 < \\mu < n_3:\\ \\ \\text{Bright } m\\lambda_0,\\ \\ \\text{Dark } (m - '
+                        '\\tfrac{1}{2})\\lambda_0'],
+                       ['trap',
+                        'Kerosene (1.45) on water (1.33) has ONE flip (pi - 0 = pi); MgF2 (1.38) OR water (1.33) '
+                        'on crown glass (1.52) has TWO flips (pi - pi = 0)!']]},
+            {'title': 'Energy conservation R + T = 1 & contrast gap',
+             'items': [['p',
+                        'For every lossless dielectric film, reflected and transmitted patterns are strictly '
+                        'complementary at every wavelength and viewing angle:'],
+                       ['m', 'R(\\lambda) + T(\\lambda) = 1'],
+                       ['m', '\\implies \\text{Refl DARK } (R=0) \\iff \\text{Trans MAX } (T=100\\%)'],
+                       ['why',
+                        'At air-soap (R_surf ~ 2%), the two reflected rays have equal intensities (~2% vs ~1.9%) '
+                        'giving 100% black contrast, whereas transmitted rays are 96% vs 0.04% (tiny 4% ripple)!'],
+                       ['trap',
+                        'If white light reflects green maximally at thickness t, transmitted light looks magenta '
+                        '(green depleted), NOT dark!']]},
+            {'title': 'Draining soap film & ultra-thin black film',
+             'items': [['p',
+                        'In a vertical soap film (mu ~ 1.34) in air, gravity thins the top and thickens the '
+                        'bottom: bottom (> 5 um) looks silvery white; middle shows vivid horizontal colour bands.'],
+                       ['m',
+                        '\\lambda_{\\mathrm{peak,1st}} = 4\\mu t \\;\\to\\; 0\\ \\text{as } t \\to 0 \\implies '
+                        'R(\\lambda_{\\mathrm{vis}}) \\to 0'],
+                       ['why',
+                        'Audit note (Wave-optics.md 8.5 Q9): as an oil/soap film thins below ~100 nm, peak '
+                        'reflected lam = 4 mu t MONOTONICALLY DECREASES (yellow -> violet -> black), never '
+                        'increases!'],
+                       ['trap',
+                        'A soap film looks jet black just before popping NOT because it absorbs light, but because '
+                        't << lam/4 leaves ONLY the pi top-surface flip (T = 100%)!']]}]},
+ {'section': 'JEE',
+  'part_page': 8,
+  'slug': 'JEE-08-wedges-newtons-rings',
+  'title': 'Wedge thin films & Newton circular rings',
+  'subtitle': 'Equal-thickness Fizeau contours, wire metrology, Newton sagitta formula, dust immunity, lens lift, '
+              'and curved bases.',
+  'takeaway': 'Wedge fringes are equally spaced (beta = lam0 / 2 mu theta); Newton rings crowd outward as r_n ~ '
+              'sqrt(n) and shrink by 1/sqrt(mu) in liquid!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 3 sec. 3.4-3.9 & Part 8 Q3',
+  'diagrams': ['wedge_film', 'newtons_rings'],
+  'cards': [{'title': 'Air & liquid wedge films (Fizeau contours)',
+             'items': [['p',
+                        'Two flat glass plates touching at x = 0 with spacer thickness h at distance L enclose '
+                        'small angle theta ~ h/L (thickness t = x theta). Under normal incidence with mu < '
+                        'n_glass:'],
+                       ['m', '2\\mu\\,x_m\\theta = m\\lambda_0\\ \\ (\\text{DARK, } m=0,1,\\dots)'],
+                       ['m',
+                        '\\beta = \\frac{\\lambda_0}{2\\mu\\theta} = \\frac{\\lambda_0 L}{2\\mu h}, \\qquad '
+                        'N_{\\mathrm{tot}} = \\frac{2\\mu h}{\\lambda_0}'],
+                       ['why',
+                        'Each fringe traces a constant-thickness contour t(x, y) = const: optical flats are tested '
+                        'to lam/20 flatness by checking whether wedge fringes are straight!'],
+                       ['trap',
+                        'Pressing gently on the upper glass plate narrows the gap: local thickness drops, so dark '
+                        'fringes shift TOWARD the thicker spacer end!']]},
+            {'title': 'Newton rings & dust-proof difference formula',
+             'items': [['p',
+                        'Plano-convex lens of large curvature radius R >> r on a flat glass plate forms air film '
+                        'sagitta t(r) = r^2 / (2R). In reflection with mu0 < n_glass, central contact spot is '
+                        'DARK:'],
+                       ['m',
+                        'D_{\\mathrm{dark},n} = \\sqrt{\\frac{4 n\\lambda_0 R}{\\mu_0}}, \\qquad \\lambda_0 = '
+                        '\\frac{\\mu_0\\bigl(D_{n+m}^2 - D_n^2\\bigr)}{4 m R}'],
+                       ['why',
+                        'If a dust speck or lens deformation adds unknown offset t0 at r = 0, D_n^2 shifts by -8 R '
+                        't0 for EVERY ring identically and cancels cleanly in D_{n+m}^2 - D_n^2!'],
+                       ['trap',
+                        'Audit trap (Wave-optics.md 8.5 Q3): between 10th and 20th dark ring, m = 20 - 10 = 10 '
+                        '(NOT 20!); miscounting m halves your calculated wavelength!']]},
+            {'title': 'Lens lift, intermediate-index oil & curved base',
+             'items': [['p',
+                        'Three favourite JEE Advanced twists: (1) lifting lens by height h; (2) oil index between '
+                        'crown lens and flint plate (n_L < mu0 < n_P); (3) curved lower plate R2:'],
+                       ['m', 'r_n^2 = R\\!\\left(\\frac{n\\lambda_0}{\\mu_0} - 2 h\\right)'],
+                       ['m',
+                        '\\frac{1}{R_{\\mathrm{eff}}} = \\frac{1}{R_1} \\pm \\frac{1}{R_2}\\ \\ (+\\ '
+                        '\\text{convex/convex},\\ -\\ \\text{convex/concave})'],
+                       ['why',
+                        'As lens lifts (h increases), r_n shrinks: rings COLLAPSE INWARD into centre O and vanish '
+                        'one ring every dh = lam0 / (2 mu0)!'],
+                       ['trap',
+                        'With CS2 (mu0 = 1.63) between crown lens (1.52) and flint base (1.68), BOTH boundaries '
+                        'flip phase by pi -> CENTRAL SPOT TURNS BRIGHT!']]},
+            {'title': 'Worked Newton rings comparison check',
+             'items': [['p',
+                        'Setup: R = 1.0 m, lam0 = 600 nm, crown lens 1.52 on flint flat 1.68. Air gives 10th dark '
+                        'diameter D10 = sqrt(4 x 10 x 6e-7 x 1.0) = 4.90 mm.'],
+                       ['m',
+                        '\\mathrm{Water\\ (4/3):}\\ D_{10}^\\prime = \\frac{4.90}{\\sqrt{4/3}} = 4.24\\text{ mm}'],
+                       ['m',
+                        '\\mathrm{Lift\\ } h = 3.0\\,\\mu\\text{m}:\\ \\Delta N = \\frac{2h}{\\lambda_0} = '
+                        '10\\text{ rings}'],
+                       ['p',
+                        'Notice ring spacing shrinks outward: dr_n = r_{n+1} - r_n ~ lam0 R / (2 mu0 r_n) ~ 1 / '
+                        'sqrt(n) — outer rings crowd tightly together!'],
+                       ['trap',
+                        'In water (mu = 4/3), YDSE beta shrinks to 0.75x, whereas Newton diameter shrinks to '
+                        'sqrt(3)/2 = 0.866x — never apply 1/mu without the square root!']]}]},
+ {'section': 'JEE',
+  'part_page': 9,
+  'slug': 'JEE-09-antireflection-optical-splitters',
+  'title': 'AR coatings, Fresnel biprism, Lloyd & Billet splitters',
+  'subtitle': 'Quarter-wave anti-reflection design, virtual-twin wavefront splitters, lens conjugate d = sqrt(d1 '
+              'd2), and grazing pi proof.',
+  'takeaway': 'Convert biprism/double-mirror angles from degrees to RADIANS first; Lloyd mirror has ONLY ONE '
+              'grazing reflection so edge y = 0 is DARK.',
+  'source': 'Source: wave-optics/Wave-optics.md Part 3 sec. 3.6 & Part 4 sec. 4.1-4.9',
+  'diagrams': ['fresnel_biprism', 'lloyds_mirror'],
+  'cards': [{'title': 'Quarter-wave anti-reflection (AR) coatings',
+             'items': [['p',
+                        'Coat glass n_g in air n1 with dielectric n_c (n1 < n_c < n_g). Both surfaces jump phase '
+                        'by pi (net jump 0), so destructive cancellation requires TWO simultaneous conditions:'],
+                       ['m',
+                        't_{\\min} = \\frac{\\lambda_0}{4 n_c}\\ \\ \\bigl(\\text{odd multiples } '
+                        '(2m+1)\\tfrac{\\lambda_0}{4 n_c}\\bigr)'],
+                       ['m', 'n_c^{\\mathrm{ideal}} = \\sqrt{n_1\\,n_g}'],
+                       ['why',
+                        'Zeroing green 550 nm (t = 99.6 nm in MgF2, n_c = 1.38) leaves slight red (700 nm) + '
+                        'violet (400 nm) reflections, giving camera lenses their magenta sheen!'],
+                       ['trap',
+                        'Half-wave thickness t = lam0 / (2 n_c) is an ABSENTEE layer giving MAXIMUM reflection '
+                        '(same as bare uncoated glass), NEVER anti-reflection!']]},
+            {'title': 'Fresnel biprism & conjugate lens d = sqrt(d1 d2)',
+             'items': [['p',
+                        'Two acute prisms of tiny refracting angle A (in radians!) at distance a from slit S '
+                        'create virtual twins separated by d = 2 a (mu - 1) A, viewed at screen distance D = a + '
+                        'b:'],
+                       ['m',
+                        'd = 2 a(\\mu - 1)A, \\qquad \\beta = \\frac{\\lambda(a + b)}{2 a(\\mu - 1)A}, \\qquad d = '
+                        '\\sqrt{d_1\\,d_2}'],
+                       ['why',
+                        'Sliding a convex lens (f < D/4) between biprism and screen gives two conjugate sharp '
+                        'image spacings d1 = (v/u) d and d2 = (u/v) d whose product eliminates magnification!'],
+                       ['trap',
+                        'Writing A = 0.5 instead of 0.5 x pi/180 = 8.73e-3 rad makes d too large by 57.3x! And '
+                        'only overlap zone W = 2 b (mu - 1) A carries interference fringes!']]},
+            {'title': 'Lloyd single mirror & Fresnel double mirrors',
+             'items': [['p',
+                        'Lloyd mirror places slit S height h above a front-surface mirror (d = 2h). Direct ray and '
+                        'grazing reflected ray overlap ONLY in upper half-screen y >= 0:'],
+                       ['m', 'y_{\\mathrm{dark,Lloyd}} = \\frac{m\\lambda D}{2 h}\\ \\ (m = 0, 1, 2, \\dots)'],
+                       ['m', 'd_{\\mathrm{double\\ mirror}} = 2 r\\sin\\theta \\approx 2 r\\theta'],
+                       ['why',
+                        'At contact edge y = 0 geometric path difference is zero yet intensity is JET BLACK — '
+                        'direct experimental proof of the pi reflection phase flip!'],
+                       ['trap',
+                        'Inserting thin mica (mu, t) in the direct ray of Lloyd mirror delays direct ray and pulls '
+                        'the pure white zero-phase bright fringe UP into view on screen!']]},
+            {'title': 'Billet split lens real & virtual twin spacing',
+             'items': [['p',
+                        'Cut convex lens f in half along a diameter and separate optical centres O1, O2 by gap '
+                        'eps. Point source S at u > f forms TWO real point images S1, S2 at v = u f / (u - f):'],
+                       ['m',
+                        'd_{\\mathrm{real}} = \\frac{u + v}{u}\\,\\epsilon = (1 + |m|)\\,\\epsilon, \\qquad \\beta '
+                        '= \\frac{\\lambda(L - v)}{d_{\\mathrm{real}}}\\ \\ (L > u + v)'],
+                       ['why',
+                        'Chief rays from S through O1 (+eps/2) and O2 (-eps/2) diverge by angle eps/u and land at '
+                        '+/- (u + v)/u * (eps/2) in image plane z = u + v!'],
+                       ['trap',
+                        'Never set d = eps! At symmetric 2f setup (u = v = 2f), real twin separation is d = 2 eps '
+                        '(twice the lens cut gap)!']]}]},
+ {'section': 'JEE',
+  'part_page': 10,
+  'slug': 'JEE-10-single-slit-diffraction',
+  'title': 'Fraunhofer single-slit diffraction & phasor arc',
+  'subtitle': 'Fresnel vs Fraunhofer regimes, destructive strip pairing, sinc^2 irradiance, 2x central lobe, and '
+              'exact tan(beta) = beta peaks.',
+  'takeaway': 'In a single slit, a sin(theta) = m lam gives DARK MINIMA (m != 0), NEVER bright fringes; central '
+              'bright lobe width is TWICE side-lobe width!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5 sec. 5.1-5.4, 5.9 Q6',
+  'diagrams': ['single_slit_pairing', 'single_slit_sinc'],
+  'cards': [{'title': 'Fraunhofer condition & destructive strip pairing',
+             'items': [['p',
+                        'Fraunhofer diffraction holds when rays are parallel (screen L >> a^2 / lam OR at focal '
+                        'plane y = f tan theta of a converging lens). Split slit width a into 2m equal zones:'],
+                       ['m', 'a\\sin\\theta_{\\mathrm{dark}} = m\\lambda'],
+                       ['m', '(m = \\pm 1, \\pm 2, \\pm 3, \\dots\\ ;\\ \\text{NEVER } m = 0\\text{!})'],
+                       ['why',
+                        'Zone k and zone k + m are separated by a/(2m); when (a/2m) sin theta = lam/2, every '
+                        'wavelet across the entire slit cancels its partner identically!'],
+                       ['trap',
+                        'Writing a sin(theta) = m lam for bright maxima by habit from YDSE is the #1 wave-optics '
+                        'exam mistake — m = 0 is the giant CENTRAL BRIGHT MAXIMUM!']]},
+            {'title': 'Phasor-arc sinc^2 law & 2x central bright width',
+             'items': [['p',
+                        'Summing infinitesimal slit strips across [-a/2, +a/2] bends a phasor chain of arc length '
+                        'A0 into circular arc subtending angle 2 beta, giving chord length A0 sin(beta)/beta:'],
+                       ['m',
+                        'I(\\theta) = I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^{\\!2}\\ \\ \\left(\\beta = '
+                        '\\frac{\\pi a\\sin\\theta}{\\lambda}\\right), \\qquad W_{\\mathrm{central}} = '
+                        '\\frac{2\\lambda D}{a} = 2 W_{\\mathrm{side}}'],
+                       ['why',
+                        'Central bright peak spans from m = -1 to m = +1 (width 2 lam D / a), whereas each '
+                        'secondary bright lobe spans from m to m + 1 (width lam D / a)!'],
+                       ['trap',
+                        'Narrowing slit a SPREADS central fringe WIDER (W ~ 1/a)! Once a <= lam, first dark zero '
+                        'disappears beyond 90 deg and light fills the entire hemisphere!']]},
+            {'title': 'Exact secondary peaks (tan beta = beta audit!)',
+             'items': [['p',
+                        'Setting d/dbeta (sin beta / beta)^2 = 0 yields exact condition tan(beta) = beta, pulling '
+                        'secondary maxima slightly INWARD from (m + 1/2) pi and giving I_m / I0 = 1 / (1 + '
+                        'beta_m^2):'],
+                       ['m', '\\beta_1 = 1.4303\\pi \\to \\mathbf{4.72\\%}'],
+                       ['m',
+                        '\\beta_2 = 2.4590\\pi \\to \\mathbf{1.65\\%}, \\qquad \\beta_3 = 3.4709\\pi \\to '
+                        '\\mathbf{0.83\\%}'],
+                       ['why',
+                        'Audit fix (Wave-optics.md 5.9 Q6): |sin(2.4590 pi)| = 0.9917 gives (0.9917 / 7.7253)^2 = '
+                        '1.65% (approx 4/(25 pi^2) = 1.62%), NOT sin(2.46 rad) = 0.66%!'],
+                       ['trap',
+                        'Over 90.3% of total transmitted slit power lands inside the central bright lobe alone — '
+                        'side peaks drop off more than 20x immediately!']]},
+            {'title': 'Oblique incidence & lateral slit-shift immunity',
+             'items': [['p',
+                        'If plane wave hits slit a at angle alpha to normal, path difference across edges becomes '
+                        'a(sin theta - sin alpha), steering central maximum cleanly to theta_0 = +alpha:'],
+                       ['m',
+                        'a(\\sin\\theta_{\\mathrm{dark}} - \\sin\\alpha) = m\\lambda \\implies '
+                        '\\Delta\\theta_{\\mathrm{central}} \\approx \\frac{2\\lambda}{a\\cos\\alpha}'],
+                       ['why',
+                        'Placing a converging lens f after the slit maps angle theta uniquely to focal-plane '
+                        'coordinate y = f tan(theta), independent of lateral slit position!'],
+                       ['trap',
+                        'Sliding the single slit up or down in a parallel laser beam does NOT move the focal-plane '
+                        'diffraction pattern at all; moving the LENS shifts it!']]}]},
+ {'section': 'JEE',
+  'part_page': 11,
+  'slug': 'JEE-11-double-slit-diffraction-grating',
+  'title': 'Double-slit diffraction envelope, missing orders & gratings',
+  'subtitle': 'Product law for finite slits, exact visible-peak count 2 ceil(d/a) - 1, transmission gratings, and '
+              'resolving power nN.',
+  'takeaway': 'For finite double slit, strictly visible bright peaks inside central envelope = 2 ceil(d/a) - 1 (7 '
+              'for d/a = 4, NEVER 9!).',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5 sec. 5.5, 5.7 & Part 11 Q16 audit',
+  'diagrams': ['double_slit_envelope', 'grating_spectra'],
+  'cards': [{'title': 'Finite double-slit product law & missing orders',
+             'items': [['p',
+                        'Two slits of finite width a and centre-to-centre separation d (> a) multiply fast '
+                        'two-slit interference cos^2(alpha) by slow single-slit diffraction envelope '
+                        'sinc^2(beta):'],
+                       ['m',
+                        'I(\\theta) = 4 I_0\\cos^2\\!\\left(\\frac{\\pi '
+                        'd\\sin\\theta}{\\lambda}\\right)\\left(\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi '
+                        'a\\sin\\theta/\\lambda}\\right)^{\\!2}, \\qquad n_{\\mathrm{missing}} = m\\,\\frac{d}{a}'],
+                       ['why',
+                        'Whenever d sin(theta) = n lam coincides with envelope zero a sin(theta) = m lam, the n-th '
+                        'bright fringe has ZERO amplitude and vanishes completely!'],
+                       ['trap',
+                        'Check wording carefully: if slit width = a and opaque barrier = b, centre-to-centre '
+                        'spacing is d = a + b (so a = b means d/a = 2, even orders missing!).']]},
+            {'title': 'Visible maxima inside central envelope (Q16 audit)',
+             'items': [['p',
+                        'Central diffraction envelope runs strictly between -lam/a < sin(theta) < +lam/a, so '
+                        'interference order n has POSITIVE non-zero brightness iff |n| < d/a strictly:'],
+                       ['m',
+                        'N_{\\mathrm{central}} = 2\\lceil d/a \\rceil - 1\\ :\\ \\ \\mathbf{2k - 1}\\ \\ (d/a = k '
+                        '\\in \\mathbb{Z})'],
+                       ['m',
+                        'N_{\\mathrm{central}} = \\mathbf{2\\lfloor d/a \\rfloor + 1}\\ \\ (d/a \\notin '
+                        '\\mathbb{Z}\\text{, non-missing edges})'],
+                       ['why',
+                        'Audit fix (Wave-optics.md Part 11 Q16): for a = 0.10 mm, d = 0.40 mm (d/a = 4), n = +/-4 '
+                        'hit zero envelope nodes -> STRICTLY 7 VISIBLE MAXIMA (-3..+3), NOT 9!'],
+                       ['trap',
+                        'Plug any number into 2 ceil(d/a) - 1: d/a = 4 -> 2(4) - 1 = 7; d/a = 4.2 -> 2(5) - 1 = 9! '
+                        'One universal formula handles integer AND fractional d/a!']]},
+            {'title': 'Plane diffraction grating & angular dispersion',
+             'items': [['p',
+                        'A grating of N rulings across width W has grating pitch d = a + b = W / N = 1 / n_lines. '
+                        'Constructive interference across all N slits sharpens lines to width ~ lam / (N d cos '
+                        'theta):'],
+                       ['m',
+                        'd\\sin\\theta_n = n\\lambda, \\qquad D_\\theta \\equiv \\frac{d\\theta}{d\\lambda} = '
+                        '\\frac{n}{d\\cos\\theta_n}, \\qquad n_{\\max} = \\left\\lfloor \\frac{d}{\\lambda} '
+                        '\\right\\rfloor'],
+                       ['why',
+                        'Peak intensity scales as N^2 I1 while line width shrinks as 1/N, concentrating all '
+                        'transmitted light into razor-sharp spectral lines separated by wide dark gaps!'],
+                       ['trap',
+                        'Convert rulings per cm to SI metres FIRST: "5000 lines/cm" means d = 10^(-2) / 5000 = '
+                        '2.0e-6 m = 2000 nm (so at 600 nm, n_max = floor(2000/600) = 3)!']]},
+            {'title': 'Grating resolving power R = nN & order overlap',
+             'items': [['p',
+                        'By Rayleigh criterion, lam + dlam is resolved in order n when its peak lands on the '
+                        'adjacent first zero of lam (path difference n N dlam = lam):'],
+                       ['m',
+                        '\\mathcal{R} \\equiv \\frac{\\lambda}{\\Delta\\lambda_{\\min}} = '
+                        'n\\,N_{\\mathrm{illuminated}}, \\qquad \\Delta\\lambda_{\\mathrm{free}} = '
+                        '\\frac{\\lambda}{n}'],
+                       ['why',
+                        'Dispersion dtheta/dlam depends ONLY on ruling spacing 1/d, whereas resolving power R = nN '
+                        'depends ONLY on TOTAL ILLUMINATED LINES N!'],
+                       ['trap',
+                        'In white light (400-700 nm), 2 x 700 = 1400 > 3 x 400 = 1200: 1st order is clean, whereas '
+                        '2nd-order red ALWAYS overlaps 3rd-order violet!']]}]},
+ {'section': 'JEE',
+  'part_page': 12,
+  'slug': 'JEE-12-airy-resolution-pinhole',
+  'title': 'Airy disc, Rayleigh resolving power & pinhole optimum',
+  'subtitle': 'Circular Bessel diffraction 1.22 lam/D, telescope & microscope limits, numerical aperture NA, and '
+              'Fresnel distance Z_F.',
+  'takeaway': '1D slit first zero is 1.00 lam/a while 2D circular aperture first dark ring is 1.22 lam/D; higher '
+              'eyepiece M NEVER improves resolution!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5 sec. 5.6, 5.8-5.9, Q1-Q12',
+  'diagrams': ['airy_rayleigh', 'pinhole_tradeoff'],
+  'cards': [{'title': 'Circular aperture Airy disc & factor 1.22',
+             'items': [['p',
+                        'Integrating Huygens wavelets over a circular disk of diameter D gives Bessel amplitude 2 '
+                        'J1(u)/u instead of sinc, placing the first dark ring at u1 = 3.8317 = 1.220 pi:'],
+                       ['m',
+                        '\\sin\\theta_1 = \\frac{1.22\\,\\lambda}{D}, \\qquad r_{\\mathrm{Airy}} = '
+                        '\\frac{1.22\\,\\lambda f}{D} = 1.22\\,\\lambda\\,(f/\\#)'],
+                       ['why',
+                        'Circular chords narrow near top and bottom rims, giving less high-offset weight than a '
+                        'square slit and widening the central bright disc from 1.00 to 1.22 lam/D.'],
+                       ['trap',
+                        'Watch radius R vs diameter D carefully: in terms of lens RADIUS R = D/2, theta_1 = 0.61 '
+                        'lam / R! Always check whether D or R is given!']]},
+            {'title': 'Rayleigh criterion, telescopes & eye resolution',
+             'items': [['p',
+                        'Two equal incoherent point stars are just resolved when peak 2 sits on Airy dark ring 1 '
+                        '(central saddle dips to 0.735 I_max, a 26.5% intensity dip):'],
+                       ['m', '\\theta_{\\min} = \\frac{1.22\\,\\lambda}{D_{\\mathrm{obj}}}'],
+                       ['m',
+                        '\\mathrm{RP}_{\\mathrm{telescope}} = \\frac{1}{\\theta_{\\min}} = '
+                        '\\frac{D_{\\mathrm{obj}}}{1.22\\,\\lambda}, \\qquad s_{\\min} = L\\,\\theta_{\\min}'],
+                       ['p',
+                        'Eye check (pupil D = 3 mm, lam = 550 nm): theta_min = 2.24e-4 rad -> two car headlights s '
+                        '= 1.5 m apart merge into one blur beyond L_max = s / theta_min = 6.7 km!'],
+                       ['trap',
+                        'Increasing eyepiece magnification M = f_o / f_e magnifies the Airy blur equally ("empty '
+                        'magnification") — ONLY larger objective D_obj sharpens resolution!']]},
+            {'title': 'Microscope limit, oil immersion & electron waves',
+             'items': [['p',
+                        'An objective collecting half-cone angle u through immersion medium mu has Numerical '
+                        'Aperture NA = mu sin(u) and resolves minimum specimen spacing d_min:'],
+                       ['m',
+                        'd_{\\min} = \\frac{1.22\\,\\lambda_0}{2\\,\\mu\\sin u} = '
+                        '\\frac{0.61\\,\\lambda_0}{\\mathrm{NA}}, \\qquad \\mathrm{RP}_{\\mathrm{microscope}} = '
+                        '\\frac{1}{d_{\\min}} = \\frac{2\\,\\mu\\sin u}{1.22\\,\\lambda_0}'],
+                       ['why',
+                        'Cedarwood immersion oil (mu = 1.515) raises NA above 1.0 (to ~1.4), suppresses cover-slip '
+                        'TIR losses, and shrinks d_min down to ~200 nm in blue light.'],
+                       ['trap',
+                        'NCERT uses 1.22 lam0 / (2 mu sin beta) = 0.61 lam0/NA (self-luminous Rayleigh), whereas '
+                        'coherent Abbe questions use lam0 / (2 mu sin beta) = 0.50 lam0/NA — check options!']]},
+            {'title': 'Fresnel distance Z_F & optimal pinhole diameter',
+             'items': [['p',
+                        'Ray optics stays valid up to Fresnel distance Z_F = a^2 / lam where diffraction spread '
+                        'equals beam width a. In a pinhole camera of length L, total blur radius R_tot is minimum '
+                        'at:'],
+                       ['m',
+                        'Z_F = \\frac{a^2}{\\lambda}, \\qquad R_{\\mathrm{tot}}(D) = \\frac{D}{2} + '
+                        '\\frac{1.22\\,\\lambda L}{D} \\implies D_{\\mathrm{opt}} = \\sqrt{2.44\\,\\lambda L}'],
+                       ['p',
+                        'Numeric check: a = 2 mm, lam = 500 nm -> Z_F = 8.0 m. For pinhole box L = 20 cm, lam = '
+                        '550 nm -> D_opt = sqrt(2.44 x 5.5e-7 x 0.20) = 0.52 mm!'],
+                       ['trap',
+                        'Shrinking a pinhole smaller than ~0.5 mm makes photos MORE blurry, not sharper, because '
+                        'diffraction spot 1.22 lam L / D explodes as 1 / D!']]}]},
+ {'section': 'JEE',
+  'part_page': 13,
+  'slug': 'JEE-13-polarisation-malus',
+  'title': 'Polarisation of light, Malus law & polaroid stacks',
+  'subtitle': 'Transverse vector nature, unpolarised I0/2 theorem, crossed-polaroid middle sheet, and '
+              'rotating-sheet harmonics.',
+  'takeaway': 'Unpolarised light entering crossed polaroids with middle sheet at theta gives (I0/8) sin^2(2 '
+              'theta); already-polarised input gives (I_pol/4) sin^2(2 theta)!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 6 sec. 6.1-6.3, 12.6 audit',
+  'diagrams': ['polarisation_states', 'malus_polaroids'],
+  'cards': [{'title': 'Transverse waves & unpolarised I0 / 2 law',
+             'items': [['p',
+                        'Polarisation proves light is strictly transverse (E _|_ k); longitudinal sound waves '
+                        'never polarise. Unpolarised light averages <cos^2 theta> = 1/2 across random azimuths:'],
+                       ['m',
+                        'I_{\\mathrm{after\\ P_1}} = \\frac{I_0}{2}\\ \\ (\\forall\\ \\text{azimuth}), \\qquad P = '
+                        '\\frac{I_{\\max} - I_{\\min}}{I_{\\max} + I_{\\min}} = '
+                        '\\frac{I_{\\mathrm{pol}}}{I_{\\mathrm{tot}}}'],
+                       ['why',
+                        'Orthogonal superpositions Ex = Ax cos(wt), Ey = Ay cos(wt + delta) trace lines at delta = '
+                        '0, pi, circles when Ax = Ay and delta = +/-pi/2, and ellipses otherwise.'],
+                       ['trap',
+                        'Rotating ONE polaroid gives flat intensity I/2 for BOTH unpolarised AND circularly '
+                        'polarised light — insert a QWP first to tell them apart!']]},
+            {'title': 'Malus law & 3-polaroid crossed-stack miracle',
+             'items': [['p',
+                        'Linearly polarised light of intensity I1 hitting an ideal analyser tilted by theta passes '
+                        'amplitude A1 cos(theta), giving Malus law I2 = I1 cos^2(theta). With middle sheet '
+                        'P2(theta) between crossed P1(0) & P3(90):'],
+                       ['m',
+                        'I_{\\mathrm{unpol\\ in}} = \\frac{I_0}{2}\\cos^2\\theta\\sin^2\\theta = '
+                        '\\frac{I_0}{8}\\sin^2(2\\theta)'],
+                       ['m', 'I_{\\mathrm{pol\\ in}} = \\frac{I_{\\mathrm{pol}}}{4}\\sin^2(2\\theta)'],
+                       ['why',
+                        'Audit distinction (Wave-optics.md 12.6): peak at theta = 45 deg is I0 / 8 for unpolarised '
+                        'input before P1, and I_pol / 4 ONLY when input before P1 is already polarised along P1!'],
+                       ['trap',
+                        'Never write cos(theta) without squaring! At theta = 60 deg, cos(60) = 1/2 means AMPLITUDE '
+                        'halves while INTENSITY drops to cos^2(60) = 1/4!']]},
+            {'title': 'Rotating polaroids & N-plate Optical Zeno limit',
+             'items': [['p',
+                        'Spinning analyser P2 at angular velocity omega modulates intensity at 2 omega (4 '
+                        'peaks/rev); spinning middle sheet P2(omega t) between crossed sheets modulates at 4 omega '
+                        '(8 peaks/rev, mean I0/16)!'],
+                       ['m',
+                        'I_{N\\text{-steps}} = \\frac{I_0}{2}\\left[\\cos\\!\\left(\\frac{\\pi}{2 '
+                        'N}\\right)\\right]^{\\!2 N} \\;\\to\\; \\frac{I_0}{2}\\ \\ \\text{as } N \\to \\infty'],
+                       ['why',
+                        'Each tiny step pi/(2N) loses O(1/N^2) intensity, so N steps lose N x O(1/N^2) -> 0: a '
+                        'continuous twisted stack rotates polarisation by 90 deg losslessly (LCD display '
+                        'principle)!'],
+                       ['trap',
+                        'For finite N = 2 steps across 90 deg (one 45-deg middle sheet + 90-deg sheet after P1): '
+                        'I_out = (I0/2)(cos 45)^4 = (I0/2)(1/4) = I0 / 8!']]},
+            {'title': 'Partially polarised beam decomposition check',
+             'items': [['p',
+                        'Every partially polarised beam equals an incoherent mixture of unpolarised intensity I_u '
+                        'plus linearly polarised intensity I_p (total intensity I_tot = I_u + I_p = I_max + '
+                        'I_min!):'],
+                       ['m', 'I(\\theta) = \\frac{I_u}{2} + I_p\\cos^2\\theta \\implies I_u = 2 I_{\\min}'],
+                       ['m', 'I_p = I_{\\max} - I_{\\min}, \\qquad I_{\\mathrm{tot}} = I_{\\max} + I_{\\min}'],
+                       ['p',
+                        'Worked check: analyser scan gives I_max : I_min = 5 : 1 -> degree of polarisation P = (5 '
+                        '- 1)/(5 + 1) = 2/3, and I_tot = 6 units (NOT 3)!'],
+                       ['trap',
+                        'Notice I_tot = I_max + I_min (SUM, not average!) because orthogonal polaroid positions '
+                        'pass I(0) + I(90) = I_tot!']]}]},
+ {'section': 'JEE',
+  'part_page': 14,
+  'slug': 'JEE-14-brewster-scattering',
+  'title': 'Brewster reflection law, critical angle & sky scattering',
+  'subtitle': 'Dipole mechanism of tan(theta_B) = n2/n1, internal Brewster identity, pile of plates, and Rayleigh '
+              'lam^(-4) scattering.',
+  'takeaway': 'At Brewster angle ONLY the reflected beam is 100% linearly s-polarised; external Brewster & TIR '
+              'critical angles satisfy sin(theta_c) = cot(theta_B)!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 6 sec. 6.4-6.5, Q1-Q6',
+  'diagrams': ['brewster_dipole', 'rayleigh_sky'],
+  'cards': [{'title': 'Brewster angle & oscillating dipole proof',
+             'items': [['p',
+                        'Unpolarised light strikes dielectric boundary n1 -> n2 at Brewster angle theta_B when '
+                        'reflected and refracted rays are perpendicular (theta_B + theta_r = 90 deg):'],
+                       ['m',
+                        '\\theta_B + \\theta_r = 90^\\circ \\implies n_1\\sin\\theta_B = n_2\\cos\\theta_B '
+                        '\\implies \\tan\\theta_B = \\frac{n_2}{n_1}'],
+                       ['why',
+                        'In-plane p-dipoles inside medium 2 oscillate along the refracted ray perpendicular to E_t '
+                        '— pointing dead along the reflected ray where dipole radiation is IDENTICALLY ZERO!'],
+                       ['trap',
+                        'At theta_B, reflected light is 100% s-polarised (perpendicular to incidence plane), '
+                        'whereas refracted light is ONLY PARTIALLY p-polarised (~85% of s transmits)!']]},
+            {'title': 'Internal Brewster angle & TIR shortcut identity',
+             'items': [['p',
+                        'Going from denser medium n1 to rarer medium n2 ALSO has an internal Brewster angle '
+                        'tan(theta_B,int) = n2/n1 = 90 deg - theta_B,ext, ALWAYS strictly smaller than critical '
+                        'angle theta_c!'],
+                       ['m', '\\theta_{B,\\mathrm{ext}} + \\theta_{B,\\mathrm{int}} = 90^\\circ'],
+                       ['m',
+                        '\\sin\\theta_c = \\frac{n_2}{n_1} = \\cot\\theta_{B,\\mathrm{ext}} = '
+                        '\\tan\\theta_{B,\\mathrm{int}}'],
+                       ['p',
+                        'Standard benchmarks: air-water (4/3) gives theta_B = 53.13 deg (theta_r = 36.87 deg < '
+                        'theta_c = 48.75 deg); air-glass (1.5) gives theta_B = 56.31 deg (theta_r = 33.69 deg < '
+                        '41.81 deg).'],
+                       ['trap',
+                        'Memorise sin(theta_c) = cot(theta_B): if a JEE question states "polarising angle in air '
+                        'is 60 deg", sin(theta_c) = cot(60) = 1/sqrt(3) instantly in 3 seconds!']]},
+            {'title': 'Brewster laser windows, plate piles & road glare',
+             'items': [['p',
+                        'Stacking 10-15 parallel glass plates at theta_B reflects away almost all s-light across '
+                        '20-30 surfaces, leaving transmitted beam ~99% pure p-polarised with zero absorption '
+                        'loss!'],
+                       ['m', '\\text{Horizontal water/asphalt surface}'],
+                       ['m', '\\implies \\text{reflected glare is HORIZONTALLY polarised } (s)'],
+                       ['why',
+                        'Gas laser tubes sealed with end windows tilted at theta_B give 0% reflection loss for '
+                        'p-waves and high reflection loss for s-waves, forcing pure linear laser output!'],
+                       ['trap',
+                        'Polaroid driving/fishing sunglasses ALWAYS align their pass axis VERTICALLY to extinguish '
+                        'horizontal road/lake reflection glare!']]},
+            {'title': 'Rayleigh lam^(-4) sky scattering vs white clouds',
+             'items': [['p',
+                        'Air molecules (size d ~ 0.3 nm << lam) scatter sunlight as driven Rayleigh dipoles with '
+                        'cross-section proportional to omega^4 ~ lam^(-4): blue 450 nm scatters 4.4x more strongly '
+                        'than red 650 nm!'],
+                       ['m',
+                        'I_{\\mathrm{scat}}(\\lambda, \\Theta) \\propto \\frac{1 + \\cos^2\\Theta}{\\lambda^4}'],
+                       ['m',
+                        '\\implies \\text{at } \\Theta = 90^\\circ,\\ \\text{scattered blue light is linearly '
+                        'polarised!}'],
+                       ['why',
+                        'Looking 90 deg from the Sun, observer line-of-sight is perpendicular to solar rays, so '
+                        'ONLY transverse dipole oscillations perpendicular to the Sun-observer plane radiate to '
+                        'the eye!'],
+                       ['trap',
+                        'Cloud droplets (d ~ 10 um >> lam) scatter geometrically (~lam^0 -> white clouds!), while '
+                        'primary rainbows reflect near internal Brewster angle -> strongly polarised!']]}]},
+ {'section': 'JEE',
+  'part_page': 15,
+  'slug': 'JEE-15-birefringence-waveplates',
+  'title': 'Double refraction, wave-plates & optical activity',
+  'subtitle': 'Uniaxial crystals (o & e rays), Nicol prism, QWP & HWP retarders, QWP intensity audit fix, and Biot '
+              'saccharimetry.',
+  'takeaway': 'Unpolarised I0 -> Polariser -> QWP(45 deg) -> Analyser ALWAYS outputs I0 / 4 at every analyser '
+              'angle (NEVER I0 / 2)!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 6 sec. 6.6-6.9, Q7 audit',
+  'diagrams': ['uniaxial_wavefronts', 'waveplate_ellipses'],
+  'cards': [{'title': 'Uniaxial crystals: ordinary o vs extraordinary e',
+             'items': [['p',
+                        'Calcite (CaCO3) and quartz split unpolarised light into two orthogonal linear rays: '
+                        'ordinary o-ray (speed c/n_o everywhere -> spherical wavelet, obeys Snell) and '
+                        'extraordinary e-ray (ellipsoidal wavelet)!'],
+                       ['m', '\\mathrm{Calcite\\ (-):}\\ n_e = 1.486 < n_o = 1.658\\ (v_e \\ge v_o)'],
+                       ['m', '\\mathrm{Quartz\\ (+):}\\ n_e = 1.553 > n_o = 1.544\\ (v_e \\le v_o)'],
+                       ['why',
+                        'Along the optic axis direction ONLY, o and e wavelets touch tangentially (v_e = v_o = '
+                        'c/n_o), producing ZERO double refraction!'],
+                       ['trap',
+                        'Optic axis is a lattice DIRECTION throughout the crystal, NOT a single line! Nicol prism '
+                        'eliminates o-ray via TIR on Canada balsam (n_B = 1.55).']]},
+            {'title': 'Quarter-wave (QWP) & half-wave (HWP) plates',
+             'items': [['p',
+                        'A crystal plate cut with optic axis parallel to its faces accumulates phase retardation '
+                        'delta between orthogonal components E_o and E_e without absorbing any energy:'],
+                       ['m',
+                        '\\delta = \\frac{2\\pi}{\\lambda_0}\\,|n_o - n_e|\\,t \\implies t_{\\mathrm{QWP}} = '
+                        '\\frac{(2m+1)\\lambda_0}{4\\,|n_o - n_e|}, \\qquad t_{\\mathrm{HWP}} = '
+                        '\\frac{(2m+1)\\lambda_0}{2\\,|n_o - n_e|}'],
+                       ['why',
+                        'HWP mirrors linear polarisation across fast axis (rotating azimuth psi by 2 psi -> 90-deg '
+                        'flip at psi = 45 deg with ZERO energy loss!) and flips right <-> left circular!'],
+                       ['trap',
+                        'Linear light hitting a QWP at psi = 0 or 90 deg emerges STILL LINEAR! Circular light '
+                        'forms ONLY when |E_o| = |E_e|, i.e. strictly at psi = +/-45 deg!']]},
+            {'title': 'QWP + analyser audit fix & 2-step mystery test',
+             'items': [['p',
+                        'Audit fix (Wave-optics.md 6.9 Q7): send unpolarised I0 -> Polariser P1(0) -> lossless '
+                        'QWP(fast axis 45 deg) -> Analyser A(alpha):'],
+                       ['m',
+                        'I_0 \\;\\to\\; \\frac{I_0}{2}\\ \\text{(linear)} \\;\\to\\; \\frac{I_0}{2}\\ '
+                        '\\text{(circular)} \\;\\to\\; \\mathbf{\\frac{I_0}{4}}\\ \\ \\forall\\,\\alpha\\text{!}'],
+                       ['why',
+                        'Circular light of total irradiance I0/2 has equal orthogonal components I0/4 + I0/4; ANY '
+                        'linear analyser passes ONE component = I0/4 and rejects the orthogonal I0/4!'],
+                       ['trap',
+                        'Mystery beam giving flat I/2 through rotating A: insert QWP BEFORE A! Circular -> turns '
+                        'linear (zeros at two angles!); Unpolarised -> stays flat I/2!']]},
+            {'title': 'Optical activity (Biot law) vs Faraday rotation',
+             'items': [['p',
+                        'Chiral media (quartz along optic axis, sugar solutions) have n_L != n_R, rotating linear '
+                        'polarisation without loss. In Biot saccharimetry, l is in DECIMETRES (1 dm = 10 cm) and c '
+                        'in g/cm^3:'],
+                       ['m',
+                        '\\theta = [\\alpha]_\\lambda^T\\,l\\,c, \\qquad \\alpha_{\\mathrm{rot}}(\\lambda) '
+                        '\\propto \\lambda^{-2}'],
+                       ['m', '\\mathrm{Sucrose:}\\ [\\alpha]_D = +66.5^\\circ\\,\\mathrm{dm^{-1}\\,g^{-1}\\,cm^3}'],
+                       ['why',
+                        'Reflecting light straight back through chiral sugar CANCELS net rotation (+theta - theta '
+                        '= 0), whereas magnetic Faraday rotation DOUBLES to 2 theta_F!'],
+                       ['trap',
+                        'UNIT TRAP: a 20 cm polarimeter tube has l = 2.0 dm (NOT 20 and NOT 0.2)! Always convert '
+                        'tube length to decimetres first!']]}]},
+ {'section': 'JEE',
+  'part_page': 16,
+  'slug': 'JEE-16-master-triage',
+  'title': 'Wave optics master triage, scaling & exam checklist',
+  'subtitle': 'Cross-topic formula discriminator, liquid/wavelength scaling table, numeric anchors, and top '
+              'multi-correct traps.',
+  'takeaway': 'Before writing = n lam, pause 2 seconds and name the setup: YDSE bright, thin-film dark, OR '
+              'single-slit dark!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 11-12 complete synthesis',
+  'diagrams': ['scaling_radar', 'phase_checklist'],
+  'cards': [{'title': 'Instant 6-setup formula discriminator',
+             'items': [['p',
+                        '1. YDSE parallel: dy/D = n lam (bright), beta = lam D/d.  2. YDSE end-on: d cos(theta) = '
+                        'm lam (circles, max order at O!).  3. Thin film: 2 mu t cos(r) + dense pi flips.'],
+                       ['m', '\\mathrm{Slit\\ DARK:}\\ a\\sin\\theta = m\\lambda\\ (m\\neq 0)'],
+                       ['m', '\\mathrm{Airy\\ DARK:}\\ \\theta_1 = \\frac{1.22\\lambda}{D}'],
+                       ['m', '\\mathrm{Grating\\ BRIGHT:}\\ d\\sin\\theta = n\\lambda'],
+                       ['p',
+                        '4. Wedge dark: 2 mu x theta = m lam0.  5. Newton dark diameter: D_n = sqrt(4 n lam0 R / '
+                        'mu0).  6. Malus: I1 cos^2(theta); Brewster: tan(theta_B) = n2/n1, sin(theta_c) = '
+                        'cot(theta_B).'],
+                       ['trap',
+                        'Never confuse grating pitch d (BRIGHT at d sin theta = n lam) with single-slit width a '
+                        '(DARK at a sin theta = m lam)!']]},
+            {'title': 'Liquid immersion & wavelength scaling test',
+             'items': [['p',
+                        'Eliminate wrong algebraic options instantly by testing medium immersion (air -> liquid '
+                        'mu) and wavelength scaling (lam -> k lam):'],
+                       ['m',
+                        '\\beta_{\\mathrm{YDSE}} \\propto \\frac{\\lambda}{\\mu}, \\qquad W_{\\mathrm{slit}} '
+                        '\\propto \\frac{\\lambda}{\\mu}'],
+                       ['m',
+                        'D_{\\mathrm{Newton}} \\propto \\sqrt{\\frac{\\lambda}{\\mu}}, \\qquad '
+                        'D_{\\mathrm{pinhole,opt}} \\propto \\sqrt{\\lambda L}'],
+                       ['why',
+                        'Newton sagitta is quadratic (t = r^2 / 2R), taking a SQUARE ROOT on lam/mu whereas every '
+                        'linear interference/diffraction angle scales to the FIRST power of lam/mu!'],
+                       ['trap',
+                        'Eye/camera Airy angle in outside air is STILL 1.22 lam0 / D_pupil because internal '
+                        'wavelength shrinkage lam0/n cancels Snell refraction n at the cornea!']]},
+            {'title': 'High-yield numeric anchors worth memorising',
+             'items': [['p',
+                        'Visible band: 400 nm (violet, 3.10 eV) to 700 nm (red, 1.77 eV), peak eye sensitivity 555 '
+                        'nm, hc = 1240 eV nm. Sodium D doublet: 589.0 & 589.6 nm (R_min = 982).'],
+                       ['m', '\\mathrm{Single\\ slit\\ peaks:}\\ 1 : 0.0472 : 0.0165 : 0.0083'],
+                       ['m', '(\\text{at } \\beta/\\pi = 0,\\ 1.430,\\ 2.459,\\ 3.471)'],
+                       ['p',
+                        'Refractive indices: water 4/3 (theta_B = 53.1 deg), MgF2 1.38, crown glass 1.52 (R_normal '
+                        '= 4.3%), Canada balsam 1.55, calcite no = 1.658 / ne = 1.486, diamond 2.42.'],
+                       ['trap',
+                        'Rayleigh saddle intensity between two just-resolved stars is 0.811 I_max for 1D slit and '
+                        '0.735 I_max for 2D circular Airy disc!']]},
+            {'title': 'Top multi-correct exam traps summary',
+             'items': [['p',
+                        '1. Closing one YDSE slit drops central intensity to I_max / 4.  2. Finite double slit '
+                        'with integer d/a = k has STRICTLY 2k - 1 central bright fringes (7 for d/a = 4).'],
+                       ['p',
+                        '3. Unpolarised -> crossed polaroids + 45-deg middle sheet gives I0 / 8; unpolarised -> P '
+                        '-> QWP(45) -> A gives I0 / 4.  4. Biprism angle A MUST be in radians!'],
+                       ['why',
+                        '5. Soap film t -> 0 looks BLACK in reflection and 100% BRIGHT in transmission; MgF2 on '
+                        'glass t -> 0 looks BRIGHT (two same-sign pi flips cancel!).'],
+                       ['trap',
+                        'Follow the 5-step phase checklist on every unfamiliar problem: Split -> OPL -> Dense pi '
+                        'flips -> Vector dot product -> Diffraction envelope!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 1,
+  'slug': 'Olympiad-01-michelson-metrology',
+  'title': 'Michelson interferometer, Haidinger rings & FT spectroscopy',
+  'subtitle': 'Double-pass arm geometry, dispersive compensator plate C, equal-inclination circular fringes, and '
+              'doublet visibility beats.',
+  'takeaway': 'Moving Michelson mirror M1 by dx shifts 2 dx / lam fringes (1 fringe per lam/2); gas cell length L '
+              'enters TWICE as 2(n - 1)L!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 4 sec. 4.4-4.8 & Part 8 Q1-Q8',
+  'diagrams': ['michelson_layout', 'doublet_visibility'],
+  'cards': [{'title': 'Double-pass virtual air gap & compensator C',
+             'items': [['p',
+                        'Beam splitter BS folds fixed mirror M2 onto virtual plane M2-prime separated by d = |L1 - '
+                        'L2| from movable mirror M1. Translating M1 by dx changes path difference by 2 dx:'],
+                       ['m',
+                        '\\Delta_{\\mathrm{opt}}(\\theta) = 2 d\\cos\\theta = m\\lambda \\implies \\Delta N = '
+                        '\\frac{2\\,\\Delta x}{\\lambda}'],
+                       ['why',
+                        'Without unsilvered compensator plate C, one arm crosses dispersive BS glass 3 times and '
+                        'the other once — d(lam) = 0 fails across colours and white-light fringes vanish!'],
+                       ['trap',
+                        'With identical plate C parallel to BS, one reflection is internal in glass (0) and the '
+                        'other external in air (pi): at exact d = 0 the central white-light fringe is DARK!']]},
+            {'title': 'Haidinger circular rings vs Fizeau wedge lines',
+             'items': [['p',
+                        'When M1 || M2-prime strictly, extended light produces circular equal-inclination '
+                        'Haidinger fringes localized at infinity; tilting M1 by alpha produces straight wedge '
+                        'fringes!'],
+                       ['m',
+                        '2 d\\!\\left(1 - \\frac{\\theta_p^2}{2}\\right) = (m_0 - p)\\lambda \\implies \\theta_p = '
+                        '\\sqrt{\\frac{p\\lambda}{d}}, \\qquad \\beta_{\\mathrm{tilted}} = '
+                        '\\frac{\\lambda}{2\\alpha}'],
+                       ['why',
+                        'Exactly as in end-on circular YDSE, MAXIMUM order m0 = 2d/lam sits AT CENTRE theta = 0! '
+                        'Shrinking d makes circular rings collapse inward into O!'],
+                       ['trap',
+                        'At d -> 0 one broad fringe fills the entire field ("infinite width"); slight tilt alpha '
+                        'straightens curved arcs into straight lines ONLY right at d = 0!']]},
+            {'title': 'Gas refractometry & sodium D-doublet beats',
+             'items': [['p',
+                        'Pumping gas into tube length L in one arm traverses the gas TWICE! With a spectral '
+                        'doublet (lam, lam + dlam), incoherent sum of two interferograms beats periodically to '
+                        'zero visibility:'],
+                       ['m', 'n_{\\mathrm{gas}} - 1 = \\frac{N\\lambda_0}{2 L}'],
+                       ['m',
+                        'V(\\Delta x) = \\left|\\cos\\!\\left(\\frac{2\\pi\\,\\Delta\\lambda\\,\\Delta '
+                        'x}{\\lambda^2}\\right)\\right| \\implies \\Delta x_{\\mathrm{beat}} = '
+                        '\\frac{\\lambda^2}{2\\,\\Delta\\lambda}'],
+                       ['p',
+                        'Sodium D anchor (589.0 & 589.6 nm, dlam = 0.6 nm): mirror travel between consecutive '
+                        'visibility washouts is dx_beat = (589.3e-9)^2 / (2 x 0.6e-9) = 0.289 mm!'],
+                       ['trap',
+                        'Watch factor of 2 carefully: mirror travel between washouts is lam^2 / (2 dlam), whereas '
+                        'round-trip optical path difference between washouts is lam^2 / dlam!']]},
+            {'title': 'Michelson-Morley, LIGO & FTIR resolution',
+             'items': [['p',
+                        'In Fourier-Transform (FTIR) spectroscopy, recording I(Delta) across total optical path '
+                        'scan Delta_max = 2 X_max recovers spectrum S(nu_tilde) with wavenumber resolution 1 / '
+                        'Delta_max:'],
+                       ['m',
+                        '\\delta\\tilde{\\nu}_{\\min} = \\frac{1}{\\Delta_{\\max}} = \\frac{1}{2 X_{\\max}} '
+                        '\\implies \\mathcal{R}_{\\mathrm{FTIR}} = \\frac{\\tilde{\\nu}}{\\delta\\tilde{\\nu}} = '
+                        '\\frac{2 X_{\\max}}{\\lambda}'],
+                       ['why',
+                        'Michelson-Morley (1887) predicted 2 L v^2 / (lam c^2) ~ 0.4 fringe shift from Earth '
+                        'orbital motion and observed 0; LIGO uses 4 km arms to sense h ~ 10^(-21) strains!'],
+                       ['trap',
+                        'A compact 5 cm mirror scan (Delta_max = 10 cm) achieves resolving power R = 200,000 at '
+                        '500 nm — matching a 200,000-line diffraction grating!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 2,
+  'slug': 'Olympiad-02-temporal-spatial-coherence',
+  'title': 'Temporal & spatial coherence, group index & stellar baselines',
+  'subtitle': 'Wiener-Khinchin Fourier duality, white-light group index shift, van Cittert-Zernike theorem, and '
+              'Betelgeuse.',
+  'takeaway': 'Dispersive glass shifts the white-light zero fringe by GROUP index (n_g - 1)t, NOT phase index (n - '
+              '1)t! Stellar disc washes out at b theta_* = 1.22 lam.',
+  'source': 'Source: wave-optics/Wave-optics.md Part 7 sec. 7.1-7.3 & Part 8 Q6-Q12',
+  'diagrams': ['temporal_coherence', 'stellar_interferometer'],
+  'cards': [{'title': 'Temporal coherence & Wiener-Khinchin theorem',
+             'items': [['p',
+                        'Equal-intensity fringe visibility V(tau) = |gamma(tau)| is the modulus of the Fourier '
+                        'transform of normalised power spectral density S(nu), fixing coherence time tau_c and '
+                        'length L_c:'],
+                       ['m',
+                        '\\tau_c \\sim \\frac{1}{\\Delta\\nu}, \\qquad L_c = c\\,\\tau_c \\approx '
+                        '\\frac{\\lambda^2}{\\Delta\\lambda}, \\qquad N_{\\mathrm{fringes}} \\sim '
+                        '\\frac{L_c}{\\lambda} = \\frac{\\lambda}{\\Delta\\lambda}'],
+                       ['why',
+                        'Top-hat bandwidth gives |sinc(pi dnu tau)| (first zero at tau = 1/dnu); Lorentzian '
+                        'collision broadening gives exp(-pi dnu |tau|); Gaussian Doppler gives Gaussian decay.'],
+                       ['trap',
+                        'Sunlight has L_c ~ 1 um (~2 fringes!), Na discharge ~0.5 mm, low-pressure Kr-86 ~50 cm, '
+                        'and single-frequency He-Ne/fibre lasers reach L_c > 100 km!']]},
+            {'title': 'Dispersion & white-light group-index zero shift!',
+             'items': [['p',
+                        'Insert dispersive plate (n(lam), t) in one arm under WHITE light! Stationary phase '
+                        'd(dphi)/dk0 = 0 places the brightest white-light fringe at GROUP OPL, NOT phase OPL:'],
+                       ['m',
+                        '\\Delta_{\\mathrm{air}}^{\\mathrm{white\\ peak}} = (n_g - 1)\\,t, \\qquad n_g \\equiv '
+                        '\\frac{c}{v_g} = n(\\lambda) - \\lambda\\,\\frac{dn}{d\\lambda}'],
+                       ['why',
+                        'In normal dispersion (dn/dlam < 0), group index n_g EXCEEDS phase index n! Individual '
+                        'monochrome fringes creep inside the envelope as t varies!'],
+                       ['trap',
+                        'IPhO classic trap: crown glass has n = 1.52 while n_g = 1.545 — reading the shifted '
+                        'achromatic peak directly measures n_g - 1 = 0.545 (5% higher than n - 1)!']]},
+            {'title': 'Spatial coherence width & van Cittert-Zernike',
+             'items': [['p',
+                        'An incoherent source of angular width theta_s = s / D1 washes out two-slit visibility '
+                        'according to the Fourier transform of the source brightness profile:'],
+                       ['m',
+                        'V_{\\mathrm{slit\\ source}}(d) = '
+                        '\\left|\\mathrm{sinc}\\!\\left(\\frac{\\pi\\,d\\,\\theta_s}{\\lambda}\\right)\\right| '
+                        '\\implies d_{\\mathrm{washout}} = \\frac{\\lambda}{\\theta_s}, \\qquad '
+                        'l_{\\mathrm{spatial}} \\sim \\frac{\\lambda}{\\theta_s}'],
+                       ['why',
+                        'Even completely independent atoms across a distant star become spatially coherent across '
+                        'baseline l_s ~ lam / theta_* simply by propagating far enough!'],
+                       ['trap',
+                        'Solar disc subtends theta_sun = 9.3e-3 rad -> transverse spatial coherence width of raw '
+                        'sunlight on Earth is ONLY ~60 um (why YDSE needs a pinhole first)!']]},
+            {'title': 'Michelson 20-ft stellar interferometer (Betelgeuse)',
+             'items': [['p',
+                        'For a uniform circular star disc of angular diameter theta_*, 2D Fourier transform '
+                        'replaces sinc by Airy 2 J1(x)/x, driving fringe visibility to zero at outrigger baseline '
+                        'b:'],
+                       ['m',
+                        'V_{\\mathrm{star}}(b) = \\left|\\frac{2 J_1(\\pi b\\,\\theta_\\star / \\lambda)}{\\pi '
+                        'b\\,\\theta_\\star / \\lambda}\\right| = 0 \\implies \\theta_\\star = '
+                        '\\frac{1.22\\,\\lambda}{b_{\\mathrm{washout}}}'],
+                       ['p',
+                        'Historic 1920 Betelgeuse benchmark: lam = 575 nm, first fringe disappearance at b = 3.065 '
+                        'm -> theta_* = 2.29e-7 rad = 0.047 arcsec (~400 solar diameters at 640 ly)!'],
+                       ['trap',
+                        'Eyepiece fringe SPACING depends on FIXED inner mirror gap d_in (lam f / d_in), whereas '
+                        'fringe CONTRAST depends on outer periscope baseline b!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 3,
+  'slug': 'Olympiad-03-fresnel-equations-coatings',
+  'title': 'Fresnel amplitude equations, Stokes laws & Bragg stacks',
+  'subtitle': 'Exact TE (s) & TM (p) field coefficients, power conservation factor, incoherent thick-plate piles, '
+              'and HR mirrors.',
+  'takeaway': 'Reflectance is R = |r|^2, whereas power transmittance carries impedance-projection factor T = (n2 '
+              'cos r / n1 cos i) |t|^2 = 1 - R!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 7 sec. 7.4-7.5 & Part 3 sec. 3.6-3.7',
+  'diagrams': ['fresnel_reflectance', 'multilayer_coatings'],
+  'cards': [{'title': 'Exact Fresnel amplitude equations (s & p)',
+             'items': [['p',
+                        'Matching tangential E_|| and H_|| across non-magnetic boundary n1 -> n2 (n1 sin i = n2 '
+                        'sin r) gives exact amplitude reflection and transmission ratios:'],
+                       ['m',
+                        'r_s = \\frac{n_1\\cos i - n_2\\cos r}{n_1\\cos i + n_2\\cos r} = -\\frac{\\sin(i - '
+                        'r)}{\\sin(i + r)}'],
+                       ['m',
+                        'r_p = \\frac{n_2\\cos i - n_1\\cos r}{n_2\\cos i + n_1\\cos r} = \\frac{\\tan(i - '
+                        'r)}{\\tan(i + r)}'],
+                       ['m', 't_s = \\frac{2 n_1\\cos i}{n_1\\cos i + n_2\\cos r}'],
+                       ['m',
+                        't_p = \\frac{2 n_1\\cos i}{n_2\\cos i + n_1\\cos r}, \\qquad T_{s,p} = \\frac{n_2\\cos '
+                        'r}{n_1\\cos i}|t_{s,p}|^2'],
+                       ['trap',
+                        'NEVER write T = |t|^2! At air-to-glass normal incidence (n = 1.5), t = 2 / 2.5 = 0.80 -> '
+                        't^2 = 0.64, whereas TRUE transmitted power is 1.5 x 0.64 = 0.96 (96%)!']]},
+            {'title': 'Normal incidence, p-sign flip & Stokes relations',
+             'items': [['p',
+                        'At normal incidence R(0) = ((n1 - n2)/(n1 + n2))^2 (4.0% for glass 1.50; 2.0% for water '
+                        '1.33; 17.2% for diamond 2.42). Reversing rays gives exact Stokes time-reversal laws:'],
+                       ['m', 'r^\\prime = -r\\ \\ (\\text{time-reversal proof of }\\pi\\text{ flip!})'],
+                       ['m', 't\\,t^\\prime + r^2 = 1'],
+                       ['why',
+                        'Watch r_p closely as i sweeps from 0 to 90 deg on air-glass: r_p crosses ZERO at theta_B '
+                        '= 56.31 deg and flips phase by pi for all grazing angles i > theta_B!'],
+                       ['trap',
+                        'As i -> 90 deg (grazing incidence), BOTH R_s -> 100% AND R_p -> 100% with pi phase jump — '
+                        'even rough paper or asphalt acts like a shiny mirror at grazing angle!']]},
+            {'title': 'Incoherent thick-plate & M-plate pile formulas',
+             'items': [['p',
+                        'For a thick window pane (thickness L >> L_c), multiple internal reflections add '
+                        'INCOHERENTLY as intensities (T0^2 + T0^2 R0^2 + T0^2 R0^4 + ...), NOT amplitudes!'],
+                       ['m', 'T_{\\mathrm{1\\ plate}} = \\frac{1 - R}{1 + R}'],
+                       ['m',
+                        'R_{\\mathrm{1\\ plate}} = \\frac{2 R}{1 + R}, \\qquad T_{M\\text{-plates}} = \\frac{1 - '
+                        'R}{1 + (2M - 1)R}'],
+                       ['p',
+                        'Check: single window pane R = 0.04 transmits 0.96 / 1.04 = 92.31% (reflects 7.69%). At '
+                        'theta_B on glass 1.5, R_p = 0 -> T_{M,p} = 100%, while R_s = 25/169 = 14.79%!'],
+                       ['trap',
+                        'Distinguish THIN film (L << L_c, coherent sum, oscillates 0 to 4R) from THICK glass '
+                        'window (L >> L_c, incoherent geometric sum, equals 2R/(1+R) smooth)!']]},
+            {'title': 'Exact quarter-wave AR residual & HR Bragg mirrors',
+             'items': [['p',
+                        'Any quarter-wave dielectric layer (n_c t = lam0 / 4) has exact normal reflectance R_min; '
+                        'alternating N high/low quarter-wave pairs (H/L)^N build 99.99% laser mirrors:'],
+                       ['m',
+                        'R_{\\lambda/4} = \\left(\\frac{n_c^2 - n_1 n_g}{n_c^2 + n_1 n_g}\\right)^{\\!2}, \\qquad '
+                        'R_{\\mathrm{Bragg},N} = \\left[\\frac{1 - (n_g/n_1)(n_H/n_L)^{2N}}{1 + '
+                        '(n_g/n_1)(n_H/n_L)^{2N}}\\right]^{\\!2}'],
+                       ['why',
+                        'Single high-index TiO2 quarter-wave layer (n_c = 2.35 > glass 1.52) boosts R UP to 32.3% '
+                        '(lossless beam splitter!), whereas 10 TiO2/SiO2 pairs reach R = 99.98%!'],
+                       ['trap',
+                        'Dielectric Bragg mirrors suffer ZERO metallic ohmic heating, letting kilowatt industrial '
+                        'and LIGO cavities handle megawatts of circulating optical power!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 4,
+  'slug': 'Olympiad-04-tir-phase-evanescent',
+  'title': 'TIR phase jumps, Fresnel rhomb & evanescent tunnelling',
+  'subtitle': 'Complex cos(r) beyond critical angle, achromatic Fresnel rhomb QWP, skin decay audit, and '
+              'frustrated TIR.',
+  'takeaway': 'Keep amplitude decay length d_E = 1/kappa SEPARATE from intensity length d_I = 1/(2 kappa) so '
+              'factor 2 is NEVER double-counted!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 7 sec. 7.6-7.9, eq. 7.4 & Q5 audit',
+  'diagrams': ['tir_phase_shift', 'evanescent_ftir'],
+  'cards': [{'title': 'TIR unit-modulus reflection & continuous phase',
+             'items': [['p',
+                        'For n1 > n2 (relative n = n2/n1 = sin theta_c < 1) and i > theta_c, cos(r) = i sqrt(sin^2 '
+                        'i / n^2 - 1) makes r_s = exp(-i delta_s) and r_p = exp(-i delta_p) pure phase factors (R '
+                        '= 100%):'],
+                       ['m',
+                        '\\tan\\!\\left(\\frac{\\delta_s}{2}\\right) = \\frac{\\sqrt{\\sin^2 i - n^2}}{\\cos i}'],
+                       ['m',
+                        '\\tan\\!\\left(\\frac{\\delta_p}{2}\\right) = \\frac{\\sqrt{\\sin^2 i - n^2}}{n^2\\cos '
+                        'i}, \\qquad \\tan\\!\\left(\\frac{\\Delta}{2}\\right) = \\frac{\\cos i\\sqrt{\\sin^2 i - '
+                        'n^2}}{\\sin^2 i}'],
+                       ['why',
+                        'At i = theta_c both delta_s = delta_p = 0; at i = 90 deg both reach pi; in between, p '
+                        'leads s by peak retardation tan(Delta_max/2) = (1 - n^2)/(2n)!'],
+                       ['trap',
+                        'Linearly polarised light striking a TIR prism at azimuth != 0, 90 deg emerges '
+                        'ELLIPTICALLY polarised because delta_p != delta_s!']]},
+            {'title': 'Fresnel rhomb — achromatic quarter-wave prism',
+             'items': [['p',
+                        'In crown glass (n1 = 1.51 -> n = 0.662), maximum single-bounce retardation is Delta_max = '
+                        '45.6 deg, hitting exact 45.0 deg at internal angle i = 54.6 deg!'],
+                       ['m', '\\Delta_{\\mathrm{2\\ bounces}} = 2 \\times 45^\\circ = 90^\\circ = \\frac{\\pi}{2}'],
+                       ['m', '\\implies \\text{45-deg linear input } \\;\\to\\; \\text{100\\% circular output!}'],
+                       ['why',
+                        'Unlike crystalline quartz QWP whose phase scales strongly as 1/lam0, Fresnel rhomb '
+                        'depends ONLY on refractive index n(lam), staying ~90 deg across ALL visible colours!'],
+                       ['trap',
+                        'Submerging an un-silvered Fresnel rhomb into water raises n = 1.33/1.51 = 0.88, '
+                        'collapsing Delta_max to 7 deg and destroying circular conversion completely!']]},
+            {'title': 'Evanescent wave & decay-length audit fix (eq. 7.4)',
+             'items': [['p',
+                        'Inside rarer medium 2 (z > 0), field E2 ~ exp(-kappa z) exp(i(k_x x - wt)) skims along x '
+                        'while decaying exponentially along z with ZERO net normal Poynting flux (<S_z> = 0):'],
+                       ['m', '\\kappa = \\frac{2\\pi}{\\lambda_0}\\sqrt{n_1^2\\sin^2 i - n_2^2}'],
+                       ['m',
+                        'd_E = \\frac{1}{\\kappa}\\ (|E| \\propto e^{-z/d_E}), \\qquad d_I = \\frac{1}{2\\kappa}\\ '
+                        '(I \\propto e^{-2\\kappa z} = e^{-z/d_I})'],
+                       ['why',
+                        'Audit fix (Wave-optics.md eq. 7.4 & Q5): kappa uses 2 pi / lam0 (vacuum lam0!), so '
+                        'intensity/transmission decays as exp(-2 kappa g) = exp(-g / d_I) with 4 pi inside d_I!'],
+                       ['trap',
+                        'NEVER put 4 pi inside d AND simultaneously write exp(-2 g / d) — pick ONE notation '
+                        '(exp(-2 kappa g) with kappa = 2 pi/... OR exp(-g / d_I) with d_I = lam0 / 4 pi...)!']]},
+            {'title': 'Frustrated TIR tunnelling & Goos-Hanchen shift',
+             'items': [['p',
+                        'Bringing second glass prism n1 within sub-wavelength gap g (~lam0) couples the evanescent '
+                        'tail back into a propagating wave — exact optical twin of quantum alpha-tunnelling!'],
+                       ['m',
+                        'T_{\\mathrm{FTIR}}(g) = \\frac{1}{1 + C_{s,p}\\sinh^2(\\kappa g)} \\;\\approx\\; '
+                        '\\frac{4}{C_{s,p}}\\,e^{-2\\kappa g}\\ \\ (\\kappa g \\gg 1)'],
+                       ['why',
+                        'Touching skin ridges to a TIR prism frustrates air gap g -> 0 along ridges while valleys '
+                        'keep g >> d_E, imaging fingerprints sharply; TIRF microscopy illuminates only 80 nm of '
+                        'cells!'],
+                       ['trap',
+                        'A narrow laser beam undergoing TIR also steps laterally forward along the boundary by '
+                        'Goos-Hanchen shift dx_GH = -d(delta)/dk_x ~ O(lam0)!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 5,
+  'slug': 'Olympiad-05-n-slit-blazed-gratings',
+  'title': 'Exact N-slit polygon, blazed echelle & acousto-optic gratings',
+  'subtitle': 'Exact (sin N gamma / sin gamma)^2 factor, subsidiary peaks, oblique Littrow gratings, and '
+              'ultrasonic phase gratings.',
+  'takeaway': 'Between any two adjacent principal grating peaks sit STRICTLY N - 1 dark zeros and N - 2 subsidiary '
+              'peaks; maximum oblique order is floor(2d / lam)!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5 sec. 5.7 & Part 9 extensions',
+  'diagrams': ['n_slit_pattern', 'blazed_grating'],
+  'cards': [{'title': 'Exact N-slit phasor sum & subsidiary peaks',
+             'items': [['p',
+                        'Summing N equal slits of width a and spacing d gives geometric series sum_{q=0}^{N-1} '
+                        'exp(i 2 q gamma) = exp(i(N-1)gamma) sin(N gamma)/sin(gamma):'],
+                       ['m',
+                        'I(\\theta) = '
+                        'I_1(0)\\left(\\frac{\\sin(N\\gamma)}{\\sin\\gamma}\\right)^{\\!2}\\left(\\frac{\\sin\\beta}{\\beta}\\right)^{\\!2} '
+                        '\\qquad \\left(\\gamma = \\frac{\\pi d\\sin\\theta}{\\lambda},\\ \\ \\beta = \\frac{\\pi '
+                        'a\\sin\\theta}{\\lambda}\\right)'],
+                       ['why',
+                        'Principal peaks hit N^2 I1 with half-width dgamma = pi/N (~1/N width), conserving total '
+                        'energy N^2 x (1/N) = N; first side lobe sits at ~1/(3 pi / 2)^2 = 4.5% of peak!'],
+                       ['trap',
+                        'Count carefully: between consecutive principal maxima lie N - 1 dark zeros (N gamma = p '
+                        'pi, p not multiple of N) and N - 2 weak subsidiary maxima!']]},
+            {'title': 'Oblique grating equation, minimum deviation & Littrow',
+             'items': [['p',
+                        'With incident ray at angle i and diffracted ray at theta_m on the SAME side of normal '
+                        '(reflection convention), path difference across groove step d is d(sin i + sin theta_m):'],
+                       ['m', 'd(\\sin i + \\sin\\theta_m) = m\\lambda'],
+                       ['m',
+                        'm_{\\max}^{\\mathrm{oblique}} = \\left\\lfloor \\frac{2 d}{\\lambda} \\right\\rfloor, '
+                        '\\qquad 2 d\\sin\\!\\left(\\frac{D_{\\min}}{2}\\right) = m\\lambda'],
+                       ['why',
+                        'In auto-collimating Littrow mount (diffracted ray returns straight back along incident '
+                        'ray, theta_m = i!), 2 d sin(i) = m lam gives R = mN = 2 W sin(i) / lam!'],
+                       ['trap',
+                        'Normal incidence caps orders at floor(d/lam), whereas grazing incidence + grazing '
+                        'diffraction doubles reach to floor(2d/lam)!']]},
+            {'title': 'Free spectral range & sawtooth blazed echelles',
+             'items': [['p',
+                        'Unblazed gratings dump most energy into useless zero order m = 0. Tilting reflective '
+                        'groove facets by blaze angle theta_b steers specular reflection straight onto target '
+                        'order m!'],
+                       ['m',
+                        '\\Delta\\lambda_{\\mathrm{FSR}} = \\frac{\\lambda}{m}, \\qquad '
+                        '\\lambda_{\\mathrm{blaze}}^{\\mathrm{Littrow}} = \\frac{2 d\\sin\\theta_b}{m}'],
+                       ['why',
+                        'Astronomical echelle spectrographs run steep facets (theta_b ~ 63.4 deg) at orders m = '
+                        '50-100 for R > 100,000, using a cross-disperser prism to separate stacked orders!'],
+                       ['trap',
+                        'Higher order m sharpens resolution (R = mN) while squeezing Free Spectral Range (lam / m) '
+                        '— exact same tradeoff as Fabry-Perot etalons!']]},
+            {'title': '2D meshes, optical discs & ultrasonic gratings',
+             'items': [['p',
+                        'Crossed 2D mesh (d_x, d_y) forms reciprocal grid spots (p lam / d_x, q lam / d_y). In '
+                        'water, an ultrasonic wave of speed v_s and frequency f_s creates refractive index '
+                        'ripples:'],
+                       ['m',
+                        'd_{\\mathrm{acoustic}} = \\lambda_{\\mathrm{sound}} = \\frac{v_s}{f_s} \\implies '
+                        '\\lambda_{\\mathrm{sound}}\\sin\\theta_m = m\\lambda_{\\mathrm{light}}'],
+                       ['why',
+                        'Debye-Sears acousto-optic modulators steer laser beams electronically in microseconds '
+                        'simply by tuning RF drive frequency f_s!'],
+                       ['trap',
+                        'Instantaneous refractive-index grating period equals FULL acoustic wavelength lam_sound = '
+                        'v_s / f_s (NOT lam_sound / 2)!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 6,
+  'slug': 'Olympiad-06-fabry-perot-cavities',
+  'title': 'Fabry-Perot etalons, Airy finesse & laser cavities',
+  'subtitle': 'Infinite multiple-beam geometric series, 100% resonant transmission miracle, finesse vs F, and '
+              'Wiener standing wave.',
+  'takeaway': 'Distinguish coefficient F = 4R/(1 - R)^2 from reflective finesse F_cal = pi sqrt(R)/(1 - R); '
+              'resolving power equals R = m * F_cal!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 7 sec. 7.8 & Part 9 cavity metrology',
+  'diagrams': ['fabry_perot_airy', 'standing_light_wave'],
+  'cards': [{'title': 'Exact Airy formula & 100% resonance miracle',
+             'items': [['p',
+                        'Two parallel lossless mirrors of reflectance R = |r|^2 spaced by n L sum geometric series '
+                        'T0 / (1 - R exp(i delta)) with round-trip phase delta = 4 pi n L cos(theta) / lam0:'],
+                       ['m', 'T_{\\mathrm{FP}}(\\delta) = \\frac{1}{1 + F\\sin^2(\\delta/2)}'],
+                       ['m',
+                        'R_{\\mathrm{FP}}(\\delta) = \\frac{F\\sin^2(\\delta/2)}{1 + F\\sin^2(\\delta/2)}, \\qquad '
+                        'F \\equiv \\frac{4 R}{(1 - R)^2}'],
+                       ['why',
+                        'Even with TWO 99% mirrors, on resonance (delta = 2m pi) leakage from giant intracavity '
+                        'power I0/(1 - R) cancels front reflection destructively, giving T_FP = 100%!'],
+                       ['trap',
+                        'Mirror absorption A > 0 (R + T0 + A = 1) spoils cancellation and caps peak transmission '
+                        'at T_max = [T0 / (T0 + A)]^2!']]},
+            {'title': 'Coefficient F vs Finesse F_cal (notation alert!)',
+             'items': [['p',
+                        'Resonances repeat every 2 pi in phase while each Lorentzian-like spike has full width at '
+                        'half maximum ddelta_FWHM = 4 / sqrt(F) = 2(1 - R) / sqrt(R):'],
+                       ['m',
+                        '\\mathcal{F} \\equiv \\frac{2\\pi}{\\delta_{\\mathrm{FWHM}}} = \\frac{\\pi\\sqrt{R}}{1 - '
+                        'R} = \\frac{\\pi\\sqrt{F}}{2}'],
+                       ['m', '\\bigl(R = 0.96 \\implies \\mathcal{F} = 77.0,\\ \\ F = 3840\\bigr)'],
+                       ['why',
+                        'Finesse F_cal counts how many round-trip beams interfere constructively inside the cavity '
+                        '— exact multiple-beam analogue of grating slit count N!'],
+                       ['trap',
+                        'NEVER plug F = 4R/(1 - R)^2 into R = m F_cal! Chromatic resolving power uses FINESSE pi '
+                        'sqrt(R)/(1 - R), which is smaller by ~sqrt(F)!']]},
+            {'title': 'Free spectral range & hyperfine resolving power',
+             'items': [['p',
+                        'Normal resonance m lam = 2 n L separates longitudinal modes by Free Spectral Range c / (2 '
+                        'n L) and achieves ultra-high chromatic resolving power m * F_cal:'],
+                       ['m', '\\Delta\\nu_{\\mathrm{FSR}} = \\frac{c}{2 n L}'],
+                       ['m',
+                        '\\Delta\\lambda_{\\mathrm{FSR}} = \\frac{\\lambda^2}{2 n L}, \\qquad \\mathcal{R} = '
+                        '\\frac{\\lambda}{\\delta\\lambda_{\\min}} = m\\,\\mathcal{F} = \\frac{2 n '
+                        'L}{\\lambda}\\,\\frac{\\pi\\sqrt{R}}{1 - R}'],
+                       ['p',
+                        'Anchor: L = 1 cm air etalon, R = 0.97 (F_cal = 103), lam = 500 nm -> order m = 40,000 -> '
+                        'R = 4.1e6 (resolves 0.12 pm Zeeman/hyperfine splittings)!'],
+                       ['trap',
+                        'He-Ne laser (gain width 1.5 GHz, cavity L = 30 cm -> FSR = 0.50 GHz) oscillates on ~3 '
+                        'simultaneous longitudinal modes spaced by 500 MHz!']]},
+            {'title': 'Wiener 1890 standing light wave experiment',
+             'items': [['p',
+                        'Normal silver-mirror reflection r = -1 forms optical standing wave |E(z)| = 2 E0 '
+                        '|sin(kz)| with E-nodes at m lam/2 and B-antinodes shifted by lam/4 (B maximum AT z = '
+                        '0!):'],
+                       ['m',
+                        'z_{E\\text{-antinode}} = \\left(m + \\tfrac{1}{2}\\right)\\frac{\\lambda}{2}, \\qquad '
+                        'D_{\\mathrm{emulsion\\ bands}} = \\frac{\\lambda}{2\\sin\\alpha}'],
+                       ['why',
+                        'Wiener sliced the standing field with a 20 nm film tilted by alpha ~ 1e-3 rad: zero '
+                        'blackening at mirror z = 0 proved silver grains respond to ELECTRIC vector E, not B!'],
+                       ['trap',
+                        'In fiber-optic Bragg sensors and Lippmann colour plates, standing waves write refractive '
+                        'layers spaced by lam / (2 n), reflecting that exact wavelength back!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 7,
+  'slug': 'Olympiad-07-fresnel-zones-cornu',
+  'title': 'Fresnel half-period zones, zone plates & Cornu spiral',
+  'subtitle': 'Equal-area concentric zones, A1/2 spiral convergence, Arago bright spot, Babinet principle, and '
+              'straight-edge I0/4.',
+  'takeaway': '1 open Fresnel zone gives 4 I0 (2 zones give ZERO!); right on a straight razor shadow edge '
+              'intensity is I0 / 4, NEVER I0 / 2!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5 sec. 5.8-5.9 & Olympiad diffraction',
+  'diagrams': ['fresnel_zones', 'cornu_spiral'],
+  'cards': [{'title': 'Fresnel half-period zones & 4 I0 aperture miracle',
+             'items': [['p',
+                        'Divide plane wavefront at distance b from axial point P into rings whose outer radii r_m '
+                        'add path m lam / 2: EVERY zone has equal area pi lam b and opposite sign!'],
+                       ['m',
+                        'r_m = \\sqrt{m\\lambda b}\\ \\ \\left(\\text{or }\\sqrt{\\frac{m\\lambda a b}{a + '
+                        'b}}\\right)'],
+                       ['m',
+                        'A_{\\mathrm{open}} = A_1 - A_2 + A_3 - \\dots = \\frac{A_1}{2} \\implies I_{\\mathrm{1\\ '
+                        'zone}} = 4 I_0'],
+                       ['why',
+                        'Opening ONLY zone 1 blocks zone 2 destructive cancellation, making axial spot P FOUR '
+                        'TIMES brighter than removing the entire opaque screen!'],
+                       ['trap',
+                        'Widening hole to include 2 zones gives A1 - A2 ~ 0 (DARKNESS on axis!); odd number of '
+                        'zones -> ~4 I0 bright, even number -> ~0 dark!']]},
+            {'title': 'Arago-Poisson bright spot & Babinet principle',
+             'items': [['p',
+                        'A smooth coin/ball blocking the first k zones leaves A_{k+1} - A_{k+2} + ... = A_{k+1} / '
+                        '2 ~ A1 / 2 -> UNOBSTRUCTED brightness I0 right at the dead centre of its shadow!'],
+                       ['m', 'E_{\\mathrm{aperture}}(P) + E_{\\mathrm{obstacle}}(P) = E_{\\mathrm{open}}(P)'],
+                       ['m', '\\implies I_{\\mathrm{wire}}(\\theta \\neq 0) = I_{\\mathrm{slit}}(\\theta \\neq 0)'],
+                       ['why',
+                        'Babinet principle equates diffraction away from theta = 0 for ANY complementary '
+                        'aperture/obstacle pair — how laser micrometers measure human hair thickness w via w '
+                        'sin(theta) = m lam!'],
+                       ['trap',
+                        'Arago spot requires a smooth circular rim and spatially coherent illumination — rough '
+                        'jagged coin edges scramble zone phases and erase the central spot!']]},
+            {'title': 'Fresnel zone plate — flat multi-focus X-ray lens',
+             'items': [['p',
+                        'Blocking all even zones lets all M open odd zones add IN PHASE at primary focal length f1 '
+                        '= r1^2 / lam AND subsidiary odd foci f1/3, f1/5, ... (plus diverging virtual foci '
+                        '-f_k!):'],
+                       ['m', 'f_k = \\frac{r_1^2}{(2k - 1)\\lambda}'],
+                       ['m',
+                        'I_{\\mathrm{focus,amp}} = 4 M^2 I_0, \\qquad I_{\\mathrm{focus,phase\\ plate}} = 16 M^2 '
+                        'I_0'],
+                       ['why',
+                        'Etching even zones to phase depth t = lam0 / [2(n - 1)] flips -A_{2m} to +A_{2m}, '
+                        'doubling amplitude again andboosting focal intensity 4x over black-ring plates!'],
+                       ['trap',
+                        'Zone-plate focal length varies inversely with wavelength (f1 ~ 1/lam: red focuses CLOSER '
+                        'than blue — opposite to refractive glass lenses)!']]},
+            {'title': 'Cornu clothoid spiral & straight-edge shadow law',
+             'items': [['p',
+                        'Fresnel integrals C(v), S(v) coil between eyes (-1/2, -1/2) and (+1/2, +1/2) (open chord '
+                        'squared = 2 -> I0). A semi-infinite razor edge blocks v < 0:'],
+                       ['m',
+                        'I_{\\mathrm{geometric\\ edge}}(v = 0) = '
+                        '\\frac{I_0}{2}\\left[\\left(\\tfrac{1}{2}\\right)^{\\!2} + '
+                        '\\left(\\tfrac{1}{2}\\right)^{\\!2}\\right] = \\mathbf{\\frac{I_0}{4}}'],
+                       ['m', 'I_{\\mathrm{1st\\ bright}} = 1.370\\,I_0'],
+                       ['why',
+                        'Cutting half the wavefront halves ELECTRIC FIELD AMPLITUDE to A0 / 2, so irradiance on '
+                        'the geometric shadow line equals (1/2)^2 I0 = I0 / 4 = 25%!'],
+                       ['trap',
+                        'Inside the shadow of a single straight edge intensity decays monotonically to zero with '
+                        'ZERO dark fringes; dark fringes appear ONLY on the lit side!']]}]},
+ {'section': 'Olympiad',
+  'part_page': 8,
+  'slug': 'Olympiad-08-abbe-bragg-sagnac',
+  'title': 'Abbe Fourier imaging, X-ray Bragg law, Sagnac & HBT',
+  'subtitle': 'Back-focal-plane spatial filtering, Zernike phase contrast, crystal Bragg glancing law, fiber '
+              'gyros, and HBT bunching.',
+  'takeaway': 'Bragg angle theta is ALWAYS measured from the crystal plane (NOT normal!); fiber Sagnac phase shift '
+              'is 100% independent of core index n!',
+  'source': 'Source: wave-optics/Wave-optics.md Part 5, Part 9 & Part 10 synthesis',
+  'diagrams': ['abbe_spatial_filter', 'bragg_sagnac'],
+  'cards': [{'title': 'Abbe spatial filtering & Zernike phase contrast',
+             'items': [['p',
+                        'Objective lens forms spatial Fourier transform of specimen at back focal plane F-prime '
+                        '(spot spacing x_m = m lam f / Lambda). Image periodicity reconstructs iff >= 2 orders '
+                        'pass:'],
+                       ['m',
+                        '\\Lambda_{\\min}^{\\mathrm{axial\\ coherent}} = \\frac{\\lambda_0}{\\mathrm{NA}}, \\qquad '
+                        '\\Lambda_{\\min}^{\\mathrm{oblique\\ cone}} = \\frac{\\lambda_0}{2\\,\\mathrm{NA}}'],
+                       ['why',
+                        'Blocking DC spot m = 0 in F-prime yields Dark-Field imaging; retarding m = 0 by pi/2 '
+                        'converts invisible cell phase shifts phi(x) into direct intensity contrast 1 +/- 2 '
+                        'phi(x)!'],
+                       ['trap',
+                        'Putting a vertical slit mask inside F-prime passes horizontal diffraction orders and '
+                        'erases horizontal lines while leaving vertical specimen lines sharp!']]},
+            {'title': '3D X-ray Bragg crystal reflection & n < 1 shift',
+             'items': [['p',
+                        'Crystal lattice planes spaced by d_{hkl} = a0 / sqrt(h^2 + k^2 + l^2) reflect X-rays at '
+                        'GLANCING angle theta when adjacent-plane path difference 2 d sin(theta) equals n lam:'],
+                       ['m', '2 d_{hkl}\\sin\\theta = n\\lambda\\ \\ (\\lambda \\le 2 d_{hkl})'],
+                       ['m',
+                        'n_{\\mathrm{X\\ ray}} = 1 - \\delta \\implies 2 d\\sin\\theta_n\\!\\left(1 - '
+                        '\\frac{\\delta}{\\sin^2\\theta_n}\\right) = n\\lambda'],
+                       ['why',
+                        'Because X-ray frequencies sit ABOVE atomic electron resonances, refractive index n = 1 - '
+                        'delta < 1 (delta ~ 10^(-5)), causing external grazing TIR below theta_c = sqrt(2 delta)!'],
+                       ['trap',
+                        'NUMBER-ONE X-RAY TRAP: if X-rays hit at 60 deg TO THE SURFACE NORMAL, glancing Bragg '
+                        'angle is theta = 90 - 60 = 30 deg (and beam deflection is 2 theta = 60 deg)!']]},
+            {'title': 'Sagnac rotating ring & Fresnel-drag cancellation',
+             'items': [['p',
+                        'Counter-propagating beams around rotating loop area A (angular speed Omega, N fiber '
+                        'turns) experience opposite beam-splitter motion, accumulating Sagnac phase shift:'],
+                       ['m',
+                        '\\Delta t = \\frac{4 N\\,\\boldsymbol{\\Omega}\\cdot\\mathbf{A}}{c^2}, \\qquad '
+                        '\\Delta\\Phi_{\\mathrm{Sagnac}} = \\frac{8\\pi '
+                        'N\\,\\boldsymbol{\\Omega}\\cdot\\mathbf{A}}{\\lambda_0 c}, \\qquad '
+                        '\\Delta\\nu_{\\mathrm{RLG}} = '
+                        '\\frac{4\\,\\boldsymbol{\\Omega}\\cdot\\mathbf{A}}{\\lambda_0 P}'],
+                       ['why',
+                        'Relativistic Fresnel drag v = c/n +/- R Omega (1 - 1/n^2) inside co-moving silica fiber '
+                        'cancels n^2 identically, leaving Delta_Phi INDEPENDENT of refractive index n!'],
+                       ['trap',
+                        'IPhO/APhO favourite red herring: stem gives n = 1.46 silica fiber and asks for new Sagnac '
+                        'shift vs air loop — answer is UNCHANGED (1 : 1)!']]},
+            {'title': 'Hanbury Brown-Twiss (HBT) & 3D holography',
+             'items': [['p',
+                        'HBT correlates intensity fluctuations <I1(t) I2(t + tau)> electrically between separated '
+                        'telescopes; thermal photon bunching locks g^(2)(tau) directly to |gamma_12|^2:'],
+                       ['m',
+                        'g^{(2)}(\\tau) = \\frac{\\langle I_1(t)\\,I_2(t+\\tau)\\rangle}{\\langle '
+                        'I_1\\rangle\\langle I_2\\rangle} = 1 + |\\gamma_{12}(\\tau)|^2'],
+                       ['m', 'I_{\\mathrm{holo}} = |E_r + E_o|^2 = I_r + I_o + E_r^* E_o + E_r E_o^*'],
+                       ['why',
+                        'Phase turbulence cancels out of |gamma_12|^2 in HBT; in off-axis holography, interference '
+                        'fringes encode BOTH amplitude and phase of E_o onto flat film!'],
+                       ['trap',
+                        'Cutting a hologram into quarters does NOT chop the 3D image into quarters — EVERY piece '
+                        'still reconstructs the ENTIRE 3D object with slightly lower resolution!']]}]}]
+
+
+def main():
+    assert len(SHEETS) == 24
+    jee = [s for s in SHEETS if s['section'] == 'JEE']
+    oly = [s for s in SHEETS if s['section'] == 'Olympiad']
+    assert len(jee) == 16 and len(oly) == 8
+    (ROOT / 'sheets.json').write_text(json.dumps(SHEETS, indent=2) + '\n')
+    print(f'Wrote {len(SHEETS)} sheets ({len(jee)} JEE + {len(oly)} Olympiad, {len(SHEETS)*4} cards) to sheets.json')
+
+
+if __name__ == '__main__':
+    main()

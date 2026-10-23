@@ -1,0 +1,122 @@
+{
+  "JEE-01-wavefronts-huygens.png": {
+    "bytes": 211038,
+    "sha256": "798f9bdd7245bf178e7d6acac2e0268c66c00bd9279493ea4a741a68c66f8862"
+  },
+  "JEE-02-superposition-coherence.png": {
+    "bytes": 196500,
+    "sha256": "301097caf6b2ae5db416a3bb426290d9a5442e2fa691add83ffc3883e34857ee"
+  },
+  "JEE-03-ydse-core.png": {
+    "bytes": 208650,
+    "sha256": "04918bcbf2029ee2b49efd2fced3150117d490cca9acb4cc39ba46a5081b9805"
+  },
+  "JEE-04-ydse-3d-shapes.png": {
+    "bytes": 218941,
+    "sha256": "8dc859f8dd0bdd30ad43b685c54e2d0d23a96c36515eebb48db07c53a23e34df"
+  },
+  "JEE-05-ydse-slabs-media.png": {
+    "bytes": 210513,
+    "sha256": "de543f3eefcfd05f42bca7448252758bfc4acca79d268401ebad96975a7a23b8"
+  },
+  "JEE-06-ydse-oblique-polychromatic.png": {
+    "bytes": 208445,
+    "sha256": "a4d678ac01a2e61ae53f136685bc751cc3ac7618e6429fbc54f03c8db7851888"
+  },
+  "JEE-07-thin-films.png": {
+    "bytes": 206105,
+    "sha256": "83328b74b54ef0a97b14b9df8ee6dd921fa039848ad22c3467a3f52976f3057e"
+  },
+  "JEE-08-wedges-newtons-rings.png": {
+    "bytes": 212964,
+    "sha256": "52ac6de4cf2ffd3aeded8a570a399557fd69418afa4ee270bb37dfb2bc670864"
+  },
+  "JEE-09-antireflection-optical-splitters.png": {
+    "bytes": 199885,
+    "sha256": "27b0d46de7788566bc8e78ed49b40cf812461db806a6e4c086727e122877b76e"
+  },
+  "JEE-10-single-slit-diffraction.png": {
+    "bytes": 196603,
+    "sha256": "61ab91564d5085d97acebec1a86d99dcb59b473f12ea9ddc27e9ddbe392905c7"
+  },
+  "JEE-11-double-slit-diffraction-grating.png": {
+    "bytes": 200015,
+    "sha256": "f4990f8ae9e4ead70dc765e8748277f7dd745902dddc05745694f914d8001430"
+  },
+  "JEE-12-airy-resolution-pinhole.png": {
+    "bytes": 218172,
+    "sha256": "274d04499a81eebcb3ab2d7227ce9dfc142c10ee1d600a76b9dd2d35ad9b28aa"
+  },
+  "JEE-13-polarisation-malus.png": {
+    "bytes": 207443,
+    "sha256": "b3b0093cb48b7303a0a7432c469dc3093d54c624e6b2a0c8c93bf547fd14b2d0"
+  },
+  "JEE-14-brewster-scattering.png": {
+    "bytes": 210136,
+    "sha256": "18b3144df09fcd60c767329b87b9dc053954e8d28036dc8f608e0f3c08547207"
+  },
+  "JEE-15-birefringence-waveplates.png": {
+    "bytes": 209296,
+    "sha256": "2664ff3ea8034e153daf90964ece974d19a2da61d641facdced442cb4f75ae8e"
+  },
+  "JEE-16-master-triage.png": {
+    "bytes": 214172,
+    "sha256": "ef6c708903c951c3a9681695a0699f974ab11e4ab78d5bf53c27dd97f3f30e6d"
+  },
+  "Olympiad-01-michelson-metrology.png": {
+    "bytes": 217664,
+    "sha256": "ea65f7a9784da4cfc08e8b29a1203cb9204b104b4d8d354b1bd4f2e8b9d71980"
+  },
+  "Olympiad-02-temporal-spatial-coherence.png": {
+    "bytes": 215997,
+    "sha256": "e7c9817c9bb51e6c06eb2b888844831112261ee6157185275e950176fd119533"
+  },
+  "Olympiad-03-fresnel-equations-coatings.png": {
+    "bytes": 221486,
+    "sha256": "ab5ec6e5f88753383a63691713cc35f749ebf1209596e48d9c6d27c5e245a41d"
+  },
+  "Olympiad-04-tir-phase-evanescent.png": {
+    "bytes": 222826,
+    "sha256": "7281434394392d90c33340e751ef0ca479739c8edd95e1abec0426c1e3d2faca"
+  },
+  "Olympiad-05-n-slit-blazed-gratings.png": {
+    "bytes": 210712,
+    "sha256": "c56de8ea82ae01f6b1d1437fce8d5aec05404d0b70644fa8e5fbc0a28b8c7f1f"
+  },
+  "Olympiad-06-fabry-perot-cavities.png": {
+    "bytes": 225348,
+    "sha256": "f3050b4e262f2eceb9032df18e6c47d55a2a60f75cce86fd1940bc14e148ee51"
+  },
+  "Olympiad-07-fresnel-zones-cornu.png": {
+    "bytes": 205272,
+    "sha256": "b82d7dd9a31a906daa4a17755f695b78f0ce735b6d56394ea5ee81dec053dd93"
+  },
+  "Olympiad-08-abbe-bragg-sagnac.png": {
+    "bytes": 225343,
+    "sha256": "bde595305a7cd077030ad96db87f1e97b9ddbb099144a5767c2a298ae157520e"
+  },
+  "wave-optics-all-pngs.zip": {
+    "bytes": 4727305,
+    "sha256": "cf5833c3c3c1d8b22469dda2e2f5d5d9d7d489f3f3d016fed076cfeb85af5d98"
+  },
+  "wave-optics-jee-pngs.zip": {
+    "bytes": 3100293,
+    "sha256": "f181334ebc542c68d7ecf15b2ff1851e565eb0633cfa9f2ec85dbff41431cf21"
+  },
+  "wave-optics-jee.pdf": {
+    "bytes": 3322253,
+    "sha256": "46fb3cbbc791c166439e1336f1aa0117a306118d2dbd6ad69e481074f0f04e64"
+  },
+  "wave-optics-olympiad-pngs.zip": {
+    "bytes": 1627034,
+    "sha256": "855aa6b76037fd4c6dff048f59c4b2ac38666d50b1213b4ecdbbba75b28e01bd"
+  },
+  "wave-optics-olympiad.pdf": {
+    "bytes": 1738371,
+    "sha256": "f9926a539633f5280c38c813da75534c3bab8602af9f071ae282aabc7e197fd5"
+  },
+  "wave-optics-short-notes.pdf": {
+    "bytes": 5059642,
+    "sha256": "b8b510b355836a2072e960fea92d894f15ddef678fed773f403d1c047c4183c4"
+  }
+}

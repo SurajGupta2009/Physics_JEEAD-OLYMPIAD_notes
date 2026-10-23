@@ -1,0 +1,682 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "Wavefront shapes & ray orthogonality",
+      "used_px": 855,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Huygens secondary wavelets & Snell law",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Optical path length (OPL) & Fermat rule",
+      "used_px": 869,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wavefront tilt & relativistic Doppler shift",
+      "used_px": 845,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasor triangle & resultant irradiance",
+      "used_px": 800,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy conservation & fringe visibility V",
+      "used_px": 720,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coherence & orthogonal polarisation law",
+      "used_px": 711,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wavefront division vs amplitude division",
+      "used_px": 761,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact geometry vs two-stage paraxial limit",
+      "used_px": 767,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bright/dark positions, linear & angular beta",
+      "used_px": 844,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Total maxima & minima on an infinite screen",
+      "used_px": 762,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Irradiance profile & single-slit closure anchor",
+      "used_px": 727,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "3D hyperboloid shells around two point sources",
+      "used_px": 790,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "End-on screen (S1 S2 _|_ screen) -> circular rings!",
+      "used_px": 733,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Tilted screen & full 360-deg circle spot counts",
+      "used_px": 791,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bichromatic YDSE coincidence & washout",
+      "used_px": 869,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dielectric plates over one or both slits",
+      "used_px": 768,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Full liquid immersion & slab inside liquid",
+      "used_px": 712,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Unequal slit widths & absorbing filters",
+      "used_px": 855,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intensity at geometric centre O after slab insertion",
+      "used_px": 792,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Off-axis source & oblique plane incidence",
+      "used_px": 776,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Moving source, slits, screen & gas index rates",
+      "used_px": 803,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "White-light YDSE & missing wavelengths at P",
+      "used_px": 854,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Point directly opposite S1 (y_P = d / 2) anchor",
+      "used_px": 823,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact geometric OPL = 2 mu t cos(r) proof",
+      "used_px": 810,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four-way phase jump table (zero guesswork)",
+      "used_px": 615,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Energy conservation R + T = 1 & contrast gap",
+      "used_px": 820,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Draining soap film & ultra-thin black film",
+      "used_px": 751,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Air & liquid wedge films (Fizeau contours)",
+      "used_px": 850,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Newton rings & dust-proof difference formula",
+      "used_px": 788,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lens lift, intermediate-index oil & curved base",
+      "used_px": 792,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked Newton rings comparison check",
+      "used_px": 824,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave anti-reflection (AR) coatings",
+      "used_px": 854,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fresnel biprism & conjugate lens d = sqrt(d1 d2)",
+      "used_px": 723,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Lloyd single mirror & Fresnel double mirrors",
+      "used_px": 773,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Billet split lens real & virtual twin spacing",
+      "used_px": 659,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fraunhofer condition & destructive strip pairing",
+      "used_px": 764,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Phasor-arc sinc^2 law & 2x central bright width",
+      "used_px": 774,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact secondary peaks (tan beta = beta audit!)",
+      "used_px": 818,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Oblique incidence & lateral slit-shift immunity",
+      "used_px": 701,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Finite double-slit product law & missing orders",
+      "used_px": 726,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Visible maxima inside central envelope (Q16 audit)",
+      "used_px": 766,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Plane diffraction grating & angular dispersion",
+      "used_px": 765,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Grating resolving power R = nN & order overlap",
+      "used_px": 711,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Circular aperture Airy disc & factor 1.22",
+      "used_px": 711,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rayleigh criterion, telescopes & eye resolution",
+      "used_px": 823,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Microscope limit, oil immersion & electron waves",
+      "used_px": 766,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fresnel distance Z_F & optimal pinhole diameter",
+      "used_px": 773,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transverse waves & unpolarised I0 / 2 law",
+      "used_px": 719,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Malus law & 3-polaroid crossed-stack miracle",
+      "used_px": 856,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rotating polaroids & N-plate Optical Zeno limit",
+      "used_px": 819,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Partially polarised beam decomposition check",
+      "used_px": 847,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Brewster angle & oscillating dipole proof",
+      "used_px": 699,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Internal Brewster angle & TIR shortcut identity",
+      "used_px": 898,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Brewster laser windows, plate piles & road glare",
+      "used_px": 821,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Rayleigh lam^(-4) sky scattering vs white clouds",
+      "used_px": 947,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Uniaxial crystals: ordinary o vs extraordinary e",
+      "used_px": 826,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quarter-wave (QWP) & half-wave (HWP) plates",
+      "used_px": 714,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "QWP + analyser audit fix & 2-step mystery test",
+      "used_px": 762,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Optical activity (Biot law) vs Faraday rotation",
+      "used_px": 846,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Instant 6-setup formula discriminator",
+      "used_px": 914,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Liquid immersion & wavelength scaling test",
+      "used_px": 866,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "High-yield numeric anchors worth memorising",
+      "used_px": 775,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Top multi-correct exam traps summary",
+      "used_px": 800,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Double-pass virtual air gap & compensator C",
+      "used_px": 759,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Haidinger circular rings vs Fizeau wedge lines",
+      "used_px": 780,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Gas refractometry & sodium D-doublet beats",
+      "used_px": 872,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Michelson-Morley, LIGO & FTIR resolution",
+      "used_px": 773,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temporal coherence & Wiener-Khinchin theorem",
+      "used_px": 766,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Dispersion & white-light group-index zero shift!",
+      "used_px": 773,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Spatial coherence width & van Cittert-Zernike",
+      "used_px": 706,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Michelson 20-ft stellar interferometer (Betelgeuse)",
+      "used_px": 792,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact Fresnel amplitude equations (s & p)",
+      "used_px": 843,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Normal incidence, p-sign flip & Stokes relations",
+      "used_px": 829,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Incoherent thick-plate & M-plate pile formulas",
+      "used_px": 810,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact quarter-wave AR residual & HR Bragg mirrors",
+      "used_px": 739,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "TIR unit-modulus reflection & continuous phase",
+      "used_px": 889,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fresnel rhomb \u2014 achromatic quarter-wave prism",
+      "used_px": 821,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Evanescent wave & decay-length audit fix (eq. 7.4)",
+      "used_px": 866,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Frustrated TIR tunnelling & Goos-Hanchen shift",
+      "used_px": 834,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact N-slit phasor sum & subsidiary peaks",
+      "used_px": 722,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Oblique grating equation, minimum deviation & Littrow",
+      "used_px": 786,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Free spectral range & sawtooth blazed echelles",
+      "used_px": 767,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "2D meshes, optical discs & ultrasonic gratings",
+      "used_px": 765,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact Airy formula & 100% resonance miracle",
+      "used_px": 889,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Coefficient F vs Finesse F_cal (notation alert!)",
+      "used_px": 798,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Free spectral range & hyperfine resolving power",
+      "used_px": 810,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Wiener 1890 standing light wave experiment",
+      "used_px": 760,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fresnel half-period zones & 4 I0 aperture miracle",
+      "used_px": 815,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Arago-Poisson bright spot & Babinet principle",
+      "used_px": 881,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fresnel zone plate \u2014 flat multi-focus X-ray lens",
+      "used_px": 873,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Cornu clothoid spiral & straight-edge shadow law",
+      "used_px": 787,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Abbe spatial filtering & Zernike phase contrast",
+      "used_px": 823,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "3D X-ray Bragg crystal reflection & n < 1 shift",
+      "used_px": 901,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Sagnac rotating ring & Fresnel-drag cancellation",
+      "used_px": 702,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hanbury Brown-Twiss (HBT) & 3D holography",
+      "used_px": 823,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}
