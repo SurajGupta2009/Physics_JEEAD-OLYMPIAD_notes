@@ -43,5 +43,6 @@ Short notes/
 | Kinematics | [Browse](Kinematics/index.html) | [Index](Kinematics/README.md) | [ZIP](Kinematics/kinematics-all-pngs.zip) | [PDF](Kinematics/kinematics-short-notes.pdf) |
 | Electromagnetic waves | [Browse](Electromagnetic_Waves/index.html) | [Index](Electromagnetic_Waves/README.md) | [ZIP](Electromagnetic_Waves/electromagnetic-waves-all-pngs.zip) | [PDF](Electromagnetic_Waves/electromagnetic-waves-short-notes.pdf) |
 | Units, dimensions & errors | [Browse](Units_Dimensions_Errors/index.html) | [Index](Units_Dimensions_Errors/README.md) | [ZIP](Units_Dimensions_Errors/units-dimensions-errors-all-pngs.zip) | [PDF](Units_Dimensions_Errors/units-dimensions-errors-short-notes.pdf) |
+| Wave optics | [Browse](Wave_Optics/index.html) | [Index](Wave_Optics/README.md) | [ZIP](Wave_Optics/wave-optics-all-pngs.zip) | [PDF](Wave_Optics/wave-optics-short-notes.pdf) |
 
 All images are A4 portrait at 300 DPI. Print one sheet per page with **Fit to page**, not photo-style Fill/Crop. Separate JEE and extension bundles are available within each chapter.
