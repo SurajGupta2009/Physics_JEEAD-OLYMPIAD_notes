@@ -35,6 +35,8 @@ Portable Markdown note-sets with local SVG diagrams. Seven topics also keep a co
 
 [Wave optics: 16 JEE + 8 extension sheets](Short%20notes/Wave_Optics/README.md) · [gallery](Short%20notes/Wave_Optics/index.html) · [all PNGs](Short%20notes/Wave_Optics/wave-optics-all-pngs.zip) · [A4 PDF](Short%20notes/Wave_Optics/wave-optics-short-notes.pdf)
 
+[Semiconductors & electronic devices: 12 JEE + 6 extension sheets](Short%20notes/Semiconductors/README.md) · [gallery](Short%20notes/Semiconductors/index.html) · [all PNGs](Short%20notes/Semiconductors/semiconductors-all-pngs.zip) · [A4 PDF](Short%20notes/Semiconductors/semiconductors-short-notes.pdf)
+
 
 ## Note-sets
 

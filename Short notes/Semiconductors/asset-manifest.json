@@ -1,0 +1,98 @@
+{
+  "JEE-01-conductors-bands-gaps.png": {
+    "bytes": 231212,
+    "sha256": "a51c34c139f9fc850290ddaf014e750f84a7e5eef7f16c9a94de25b8595937f7"
+  },
+  "JEE-02-intrinsic-extrinsic-doping.png": {
+    "bytes": 224436,
+    "sha256": "6d1f3e002c4956df9a0491df5d5fe0ccf2e03bd00d0aa2da08b4ec396b48ece0"
+  },
+  "JEE-03-drift-diffusion-transport.png": {
+    "bytes": 217473,
+    "sha256": "ea5d1ac80b165a477a4728179dd42f27ab2d295cb2d32056e7af022e44e326b4"
+  },
+  "JEE-04-pn-junction-equilibrium.png": {
+    "bytes": 207913,
+    "sha256": "b8c0e822df77e188d8bd604271ad10cd8bbbceda308b4d385c774e192b52db73"
+  },
+  "JEE-05-diode-iv-breakdown.png": {
+    "bytes": 222724,
+    "sha256": "820fa2a4261bada843af4f5f49cd86978b68f5a5332f353a8b892a3716205397"
+  },
+  "JEE-06-rectifiers-filters-clippers.png": {
+    "bytes": 223226,
+    "sha256": "b0441fa820a6e8ca3cb86f3c45e433a1703a96e8e26e6c0ea5860dbe0b45e591"
+  },
+  "JEE-07-zener-optoelectronic-devices.png": {
+    "bytes": 228532,
+    "sha256": "a971f7f1c98328638457808eb07a40806e75e7e37dee334470692c58c2d07bdb"
+  },
+  "JEE-08-bjt-physics-modes.png": {
+    "bytes": 220980,
+    "sha256": "ed1973fc2a41685a6c5d65e8f622a0f9c1d3c20150df644ea10657fca63c66f4"
+  },
+  "JEE-09-ce-amplifier-switch.png": {
+    "bytes": 233542,
+    "sha256": "61e43258f8a1a9908f8b1c4df5cf6c47b6cebb41aca8afa59e6769adeaf40b48"
+  },
+  "JEE-10-diode-transistor-logic-gates.png": {
+    "bytes": 218707,
+    "sha256": "a514c721fb8add058273c06629171a38332f4dcfa7e4d241a0467f570f0d41f0"
+  },
+  "JEE-11-boolean-universal-adders.png": {
+    "bytes": 218426,
+    "sha256": "1414d4649f22ce7515f981f1f80f81be466106cd1ddc457ea7d0a35e9bec8a44"
+  },
+  "JEE-12-master-triage-traps.png": {
+    "bytes": 232545,
+    "sha256": "8854df00e2a1b41890529cb7228d895d2ad0e6e247b8aeae74059d4304043362"
+  },
+  "Olympiad-01-hydrogenic-donors-fermi.png": {
+    "bytes": 253463,
+    "sha256": "0bf77d6b5a41f89631e428a4accf6030000c75122d03577b3525b73145bd6236"
+  },
+  "Olympiad-02-boltzmann-junction-varactor.png": {
+    "bytes": 250756,
+    "sha256": "e72a53908d7660f430dcd83731db6e3bb30d2d8f08c3db895d7a4e958f07552b"
+  },
+  "Olympiad-03-hall-thermometry-bandgap.png": {
+    "bytes": 231950,
+    "sha256": "ae123a3549336437e1affd7cc13b4ff4d8f2c278d67af00d711375cd5e98e249"
+  },
+  "Olympiad-04-solar-limits-bypass-leds.png": {
+    "bytes": 238923,
+    "sha256": "61fc3567a1e36c1047a848b0bc7c02fdf3110f94cbf0e50ebeb4e767a384bc91"
+  },
+  "Olympiad-05-shot-noise-photoreceivers.png": {
+    "bytes": 232493,
+    "sha256": "8ec79c1df3692dc8c78f1f51d79c3ad5860fad03f6b65d40f27f07cfdaaf968b"
+  },
+  "Olympiad-06-quantum-wall-cmos-scaling.png": {
+    "bytes": 240804,
+    "sha256": "4d823630605d204de2bbdb64f0820f557a8818aea21fdf937b35f946fcffcbda"
+  },
+  "semiconductors-all-pngs.zip": {
+    "bytes": 3857803,
+    "sha256": "f0b421a48d8f08cfed1191b1b36c371c004f8241fe5d4a31d6301a5a802a9958"
+  },
+  "semiconductors-jee-pngs.zip": {
+    "bytes": 2494020,
+    "sha256": "fad0e0e01da769f9ddaf6f1886db60cdb69c696cce078cf1522dcdf3d98421a1"
+  },
+  "semiconductors-jee.pdf": {
+    "bytes": 2670073,
+    "sha256": "70955a6c5b8c48687a76c5784795822698ef6c7b3e9903486d760dcdf8f429e3"
+  },
+  "semiconductors-olympiad-pngs.zip": {
+    "bytes": 1363805,
+    "sha256": "8ce6e6b32ae2f7a26edf12067dfb565467ee755d1fd7aa1fbe5e274155f1fb41"
+  },
+  "semiconductors-olympiad.pdf": {
+    "bytes": 1446180,
+    "sha256": "e94f0b31de9c727b98d4c2b3cd5a8e65005b6daab279aa803ac0c91deb26748b"
+  },
+  "semiconductors-short-notes.pdf": {
+    "bytes": 4115228,
+    "sha256": "ba2c702ac2f3dbd8716d4e53739433368af9d2de193bf4ed5a228b21dce4c58a"
+  }
+}

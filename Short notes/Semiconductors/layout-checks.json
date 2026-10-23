@@ -1,0 +1,514 @@
+{
+  "canvas": [
+    2480,
+    3508
+  ],
+  "dpi": 300,
+  "safe_margin_px": 125,
+  "cards": [
+    {
+      "card": "30-order resistivity scale & classification",
+      "used_px": 976,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Temperature coefficient alpha: metal vs Si vs NTC",
+      "used_px": 813,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Allowed bands & why a filled band CANNOT conduct",
+      "used_px": 825,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Forbidden band-gap benchmarks at 300 K",
+      "used_px": 842,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intrinsic carrier law & exact half-gap exponent",
+      "used_px": 828,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Holes as positive quasiparticles & Group-15/13 doping",
+      "used_px": 788,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bulk electrical neutrality & exact quadratic law",
+      "used_px": 897,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Ten-order majority/minority seesaw (E3 & Q5)",
+      "used_px": 888,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Drift speed, mobility asymmetry & total conductivity",
+      "used_px": 913,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Intrinsic vs doped silicon numbers (E2, E3 & P21)",
+      "used_px": 845,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fick diffusion current & sign rule",
+      "used_px": 869,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Total transport equations & Einstein relation",
+      "used_px": 880,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Depletion formation & drift-diffusion cancellation",
+      "used_px": 785,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Built-in contact potential V0 from Boltzmann",
+      "used_px": 879,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact aligned rho(x), E(x) & V(x) profiles",
+      "used_px": 813,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Depletion width scaling W ~ sqrt(V0 + VR)",
+      "used_px": 756,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shockley equation & the 60 mV-per-decade ladder",
+      "used_px": 793,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Static DC resistance R_DC vs AC dynamic resistance r_d",
+      "used_px": 744,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Reverse saturation I0 & its 10-degree doubling rule",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Zener tunnelling (<5 V) vs avalanche breakdown (>6 V)",
+      "used_px": 724,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Half-wave vs full-wave rectifier benchmark table",
+      "used_px": 836,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Real silicon diode drops: 4-diode bridge vs centre-tap",
+      "used_px": 782,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shunt capacitor filter & sawtooth ripple equation",
+      "used_px": 823,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Clippers (limiters), DC clampers & peak detectors",
+      "used_px": 847,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Zener shunt regulator & worst-case two-sided squeeze",
+      "used_px": 892,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Light-Emitting Diodes (LEDs) & why silicon fails",
+      "used_px": 789,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Photodiodes (Quadrant III reverse-bias light meters)",
+      "used_px": 782,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solar photovoltaic cells (Quadrant IV zero-bias power)",
+      "used_px": 877,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Asymmetric E-B-C design & current law",
+      "used_px": 879,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Four operating modes set by E-B & C-B junction biases",
+      "used_px": 733,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "20-second saturation test (Q23 & P25 killer trap!)",
+      "used_px": 811,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "DC load line & Q-point placement",
+      "used_px": 784,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Common-emitter (CE) small-signal gains & transconductance",
+      "used_px": 824,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "CB vs CE vs CC configuration comparison",
+      "used_px": 790,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Transfer curve Vout(Vin) & CMOS/RTL NOT gate origin",
+      "used_px": 889,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Designing a saturated BJT lamp/relay switch (E11 & P25)",
+      "used_px": 857,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hardware Diode Logic (DL) & Transistor Inverter (RTL)",
+      "used_px": 783,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Complete truth tables of all 7 standard gates",
+      "used_px": 868,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why binary logic beats decimal hardware (C14)",
+      "used_px": 718,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Solving JEE digital pulse-train waveform problems",
+      "used_px": 784,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Boolean algebra shortcuts that collapse 5 lines to 1",
+      "used_px": 809,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "De Morgan's theorems & graphical bubble-pushing",
+      "used_px": 779,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Universal NAND & NOR minimum-gate counts",
+      "used_px": 772,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Binary arithmetic: Half Adder & Full Adder (E12, Q28, P26)",
+      "used_px": 777,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Multi-diode circuit solver (Part 7.3 gold standard)",
+      "used_px": 842,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Core silicon 300 K anchor constants (memorise cold!)",
+      "used_px": 861,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Five conceptual JEE traps examiners repeat every year",
+      "used_px": 960,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Five circuit-algebra JEE traps to check before submitting",
+      "used_px": 747,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hydrogenic impurity model (OL1, E4, P22 & P28)",
+      "used_px": 978,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fermi-Dirac distribution & Fermi-level shift with doping",
+      "used_px": 878,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Freeze-out (<120 K), extrinsic plateau & intrinsic ceiling",
+      "used_px": 930,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "When silicon devices forget their doping (OL12 exact)",
+      "used_px": 883,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shockley equation from Boltzmann boundary law (OL2)",
+      "used_px": 997,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Exact step-junction Poisson audit: 2-sided vs 1-sided (OL3/P29)",
+      "used_px": 979,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Varactor (variable-reactance) tuning diodes & 1/C^2 law",
+      "used_px": 919,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Linearly graded junctions & forward diffusion capacitance",
+      "used_px": 974,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Hall effect derivation, polarity & carrier extraction (OL6)",
+      "used_px": 845,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Combining Hall + conductivity & two-carrier Hall zero",
+      "used_px": 897,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Diode & BJT thermometer: dV_BE/dT = -2 mV/K (OL5)",
+      "used_px": 780,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bandgap voltage reference: cancelling CTAT + PTAT = 1.22 V",
+      "used_px": 859,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Two fundamental spectral losses in single-junction PV (OL4)",
+      "used_px": 792,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why crystalline Si (1.12 eV) dominates & how tandems beat 33%",
+      "used_px": 899,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Shaded series solar cell hotspot crisis (OL10 & P35)",
+      "used_px": 847,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Antiparallel bypass diodes & stepped multi-peak I-V curves",
+      "used_px": 844,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quantum shot noise from Poisson arrival statistics (OL8, P32)",
+      "used_px": 854,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Johnson-Nyquist resistor noise & photoreceiver SNR / NEP",
+      "used_px": 934,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why LEDs MUST have current-limiting ballast (OL9)",
+      "used_px": 837,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Small-signal sensitivity: voltage source vs series resistor",
+      "used_px": 867,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quantum wall #1: Heisenberg confinement energy (OL7, P31)",
+      "used_px": 812,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Quantum wall #2: WKB gate-oxide tunnelling leakage",
+      "used_px": 802,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "CMOS capacitor charging energetics & cycle audit (OL11, P36)",
+      "used_px": 812,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why CPU clocks stalled near ~4-5 GHz (Dennard breakdown)",
+      "used_px": 895,
+      "available_px": 1050,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    }
+  ]
+}
