@@ -1,0 +1,851 @@
+"""Teacher-authored content for Units, Dimensions & Measurement Errors short notes (18 A4 sheets: 12 JEE + 6 Olympiad).
+
+Covers 100% of units-measurements/Units-measurements.md PLUS non-standard JEE Advanced verniers,
+correlated error propagation on parallel/lens formulas, and explicit fixes to source slips E7, E10 & P35(c).
+"""
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parent
+
+SHEETS = [
+    # =========================================================================
+    # PART I — JEE MAIN + ADVANCED (12 SHEETS: JEE-01 .. JEE-12)
+    # =========================================================================
+    {
+        'section': 'JEE', 'part_page': 1, 'slug': 'JEE-01-si-foundations',
+        'title': 'Physical quantities, modern SI & unit conversions',
+        'subtitle': 'Base vs derived quantities, the seven 2019 SI defining constants, dimensionless angles, and CGS conversion powers.',
+        'takeaway': 'Numerical value and unit size vary inversely (n1 u1 = n2 u2); SI mass base is the kilogram (10^3 g), NEVER the gram!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.1-3.2, Q22',
+        'diagrams': ['si_constants_wheel', 'cgs_scaling_bars'],
+        'cards': [
+            {
+                'title': 'Measurement invariant n1 u1 = n2 u2',
+                'items': [
+                    ['p', 'Every physical quantity Q equals a pure number n times a reference unit u: Q = n1 u1 = n2 u2. Smaller units demand proportionally larger numerical values:'],
+                    ['m', r'n_2 = n_1 \left(\frac{M_1}{M_2}\right)^a \left(\frac{L_1}{L_2}\right)^b \left(\frac{T_1}{T_2}\right)^c \quad \mathrm{for}\ [Q]=[M^a L^b T^c]'],
+                    ['why', 'Quick check: 1 J into ergs ([M L^2 T^-2]): n2 = 1 * (10^3 g / 1 g)^1 * (10^2 cm / 1 cm)^2 * (1)^-2 = 10^3 * 10^4 = 10^7 erg!'],
+                    ['trap', 'Common JEE trap (Q22): kilogram (kg), NOT gram (g), is the SI base unit of mass — 1 g is 10^-3 kg!'],
+                ],
+            },
+            {
+                'title': 'All seven SI base quantities & modern definitions',
+                'items': [
+                    ['p', 'Since 2019, all seven SI base units are fixed by locking exact numerical values of universal constants (zero artifact drift!):'],
+                    ['m', r'\mathrm{s}(\Delta\nu),\ \mathrm{m}(c),\ \mathrm{kg}(h),\ \mathrm{A}(e),\ \mathrm{K}(k_B),\ \mathrm{mol}(N_A),\ \mathrm{cd}(K_{\mathrm{cd}})'],
+                    ['p', 'Memorise exact symbols: length [L] (m), mass [M] (kg), time [T] (s), electric current [A] or [I] (A), temperature [Theta] or [K] (K), amount [N] (mol), luminous intensity [J] (cd).'],
+                    ['why', 'Notice: charge C = A s is DERIVED in SI even though elementary charge e fixes the ampere via e = 1.602176634e-19 A s!'],
+                ],
+            },
+            {
+                'title': 'Supplementary angles: named unit, NO dimensions!',
+                'items': [
+                    ['p', 'Plane angle d(theta) = ds / r (unit: radian, rad) and solid angle d(Omega) = dA_perp / r^2 (unit: steradian, sr; full sphere = 4 pi sr) are ratios of lengths/areas:'],
+                    ['m', r'[\theta] = \frac{[L]}{[L]} = [M^0 L^0 T^0], \qquad [\Omega] = \frac{[L^2]}{[L^2]} = [M^0 L^0 T^0]'],
+                    ['trap', 'Exam multi-correct classic: "Does a dimensionless quantity ALWAYS lack a unit?" NO — plane angle (rad) and solid angle (sr) have SI units yet zero dimensions!'],
+                    ['why', 'Conversely, any quantity WITH non-zero dimensions MUST possess a unit — "unitless" ALWAYS implies "dimensionless", never the reverse!'],
+                ],
+            },
+            {
+                'title': 'Six instant CGS / practical unit bridges',
+                'items': [
+                    ['p', 'Keep standard CGS and atomic/practical conversions fluent so multi-unit numericals take 5 seconds instead of full exponent algebra:'],
+                    ['m', r'1\,\mathrm{N}=10^5\,\mathrm{dyn},\quad 1\,\mathrm{J}=10^7\,\mathrm{erg},\quad 1\,\mathrm{Pa}=10\,\mathrm{dyn/cm^2}'],
+                    ['m', r'1\,\mathrm{Pa\,s}=10\,\mathrm{P},\quad 1\,\mathrm{T}=10^4\,\mathrm{G},\quad 1\,\mathrm{eV}=1.60\times 10^{-19}\,\mathrm{J}'],
+                    ['trap', 'Watch viscosity trap: 1 poise = 1 g/(cm s) = 0.1 Pa s (NOT 10 Pa s!). In water at 20 C, eta ~ 1 centipoise = 10^-3 Pa s!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 2, 'slug': 'JEE-02-dimensional-mechanics',
+        'title': 'Dimensional formulae I: mechanics, fluids & heat',
+        'subtitle': 'Reconstructing every formula from its simplest defining law, twin-dimension pairs, and thermal constants.',
+        'takeaway': 'Never memorise long exponents blindly: pick the shortest defining formula (F = G m^2/r^2, F = eta A dv/dy, P = sigma A T^4) and solve in 10 seconds!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.3, C1, E1, Q14, Q25, P1, P10, P17, P21',
+        'diagrams': ['mech_dim_grid', 'twin_pairs_chart'],
+        'cards': [
+            {
+                'title': 'Core mechanics, elasticity & fluid dimensions',
+                'items': [
+                    ['p', 'Anchor everything on [v] = [L T^-1], [a] = [L T^-2], [F] = [M L T^-2], and [E] = [W] = [M L^2 T^-2]:'],
+                    ['m', r'[G] = \frac{[F][r^2]}{[M^2]} = [M^{-1} L^3 T^{-2}], \qquad [\gamma_{\mathrm{surf}}] = \frac{[F]}{[L]} = [M T^{-2}]'],
+                    ['m', r'[\eta]=[M L^{-1} T^{-1}], \qquad [Y]=[B]=[G]=[M L^{-1} T^{-2}]'],
+                    ['why', 'Notice surface tension [M T^-2] matches spring constant k = F/x AND surface energy per unit area J/m^2 = [M L^2 T^-2]/[L^2]!'],
+                ],
+            },
+            {
+                'title': 'Rotational & quantum action quantities',
+                'items': [
+                    ['p', 'Angular coordinate theta is dimensionless, so every rotational variable differs from linear mechanics purely by powers of lever arm [L]:'],
+                    ['m', r'[I]=[M L^2],\quad [\boldsymbol{\tau}]=[M L^2 T^{-2}],\quad [\mathbf{L}]=[h]=[M L^2 T^{-1}]'],
+                    ['why', 'Check Planck constant immediately from E = h f (P1): [h] = [M L^2 T^-2] / [T^-1] = [M L^2 T^-1] — identical to angular momentum L = m v r (Bohr quantisation L = n hbar)!'],
+                    ['trap', 'Work and torque share [M L^2 T^-2] (P17), yet torque is NEVER measured in joules (write N m) because work = r . F while torque = r x F!'],
+                ],
+            },
+            {
+                'title': 'Thermal & radiation physical constants',
+                'items': [
+                    ['p', 'Extract temperature [K] powers directly from P V = n R T, E = k_B T, Fourier conduction dQ/dt = -k_th A dT/dx, and Stefan-Boltzmann P = sigma A T^4:'],
+                    ['m', r'[k_B]=[S]=[M L^2 T^{-2} K^{-1}],\quad [R]=[M L^2 T^{-2} K^{-1}\mathrm{mol}^{-1}]'],
+                    ['m', r'[k_{\mathrm{th}}]=[M L T^{-3}K^{-1}],\quad [\sigma]=[M T^{-3}K^{-4}],\quad [b]=[L K]'],
+                    ['why', 'Specific heat capacity c = Q/(m dT) drops mass cleanly: [c] = [L^2 T^-2 K^-1] (mass does NOT appear in specific heat or latent heat [L^2 T^-2]!).'],
+                ],
+            },
+            {
+                'title': 'Truly dimensionless physical ratios to recognise',
+                'items': [
+                    ['p', 'Examiners love hiding pure numbers inside multi-correct lists — spot these instantly as [M^0 L^0 T^0]:'],
+                    ['m', r'\mathrm{strain}\ \frac{\Delta L}{L},\ \ \text{Poisson}\ \nu,\ \ \mu_{\mathrm{fric}},\ \ e_{\mathrm{restit}},\ \ n_{\mathrm{refr}},\ \ \varepsilon_r,\ \ \mu_r,\ \ \mathrm{Re}'],
+                    ['trap', 'Watch specific vs relative traps: relative density (specific gravity) rho/rho_water IS dimensionless [1], whereas density is [M L^-3] and specific heat is [L^2 T^-2 K^-1]!'],
+                    ['p', 'Also watch "velocity gradient" dv/dx = [T^-1] vs "potential gradient" dV/dx = [-E] NOT dimensionless!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 3, 'slug': 'JEE-03-dimensional-em',
+        'title': 'Dimensional formulae II: electromagnetism & shortcuts',
+        'subtitle': 'Exact [M L T A] powers of electric/magnetic fields and the golden composite blocks that bypass 4-variable algebra in JEE.',
+        'takeaway': 'Never expand eps0 and mu0 in JEE MCQs when composite blocks appear: [RC] = [L/R] = [sqrt(LC)] = [T] and [1/sqrt(mu0 eps0)] = [L T^-1]!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.3 + JEE Advanced E&M dimensional bridges',
+        'diagrams': ['rc_lc_shortcuts', 'em_exponent_bars'],
+        'cards': [
+            {
+                'title': 'Four-step ladder from charge q = I t to V, E, R, C',
+                'items': [
+                    ['p', 'Start from [q] = [A T] and potential V = W / q = [M L^2 T^-2] / [A T] = [M L^2 T^-3 A^-1]; every electric quantity falls out in one division:'],
+                    ['m', r'[E] = \frac{[V]}{[L]} = [M L T^{-3} A^{-1}], \qquad [R] = \frac{[V]}{[I]} = [M L^2 T^{-3} A^{-2}]'],
+                    ['m', r'[C]=[M^{-1}L^{-2}T^4A^2],\qquad [\varepsilon_0]=[C]/[L]=[M^{-1}L^{-3}T^4A^2]'],
+                    ['why', 'Notice how C = eps0 A / d gives [eps0] = [C]/[L] instantly — 5x faster and safer than squaring r inside Coulomb law!'],
+                ],
+            },
+            {
+                'title': 'Three-step ladder for B, magnetic flux Phi_B, L & mu0',
+                'items': [
+                    ['p', 'Start from wire force F = I l B (NOT Biot-Savart!) to get [B], then Phi_B = B A and U = (1/2) L I^2:'],
+                    ['m', r'[B]=[M T^{-2} A^{-1}], \qquad [\Phi_B]=[B][L^2]=[M L^2 T^{-2} A^{-1}]'],
+                    ['m', r'[L]=[M L^2 T^{-2}A^{-2}],\qquad [\mu_0]=[L]/[\ell]=[M L T^{-2}A^{-2}]'],
+                    ['why', 'Again solenoid inductance L = mu0 N^2 A / l gives [mu0] = [L_ind] / [L] in two seconds without touching 2 pi r!'],
+                    ['trap', 'Watch flux quantum Phi_0 = h / (2 e): since [h]/[q] = [M L^2 T^-1]/[A T] = [M L^2 T^-2 A^-1] = [Phi_B], it has exact Weber dimensions!'],
+                ],
+            },
+            {
+                'title': 'Golden composite blocks (solve JEE questions in 5s!)',
+                'items': [
+                    ['p', 'Nearly every JEE Main/Advanced E&M dimensional MCQ embeds known circuit/wave combinations disguised as products:'],
+                    ['m', r'[R C] = \left[\frac{L}{R}\right] = [\sqrt{L C}] = [T], \qquad \left[\frac{E}{B}\right] = \left[\frac{1}{\sqrt{\mu_0\varepsilon_0}}\right] = [L T^{-1}]'],
+                    ['m', r'\left[\sqrt{\frac{L}{C}}\right]=\left[\sqrt{\frac{\mu_0}{\varepsilon_0}}\right]=\left[\frac{h}{e^2}\right]=[R],\quad [\varepsilon_0 E^2]=\left[\frac{B^2}{\mu_0}\right]=[p]'],
+                    ['why', 'Example: "Dimensions of L I^2 / (C V)?" Spot L I^2 = energy, C V = q -> energy / q = potential [V]! Done in 4 seconds with ZERO M,L,T,A algebra!'],
+                ],
+            },
+            {
+                'title': 'Atomic & quantum combinations popular in JEE Adv',
+                'items': [
+                    ['p', 'Three recurring combinations across Modern Physics and E&M papers:'],
+                    ['m', r'\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c}\ (\text{dimensionless}\ [1]!), \qquad [\mu_B] = \left[\frac{e\hbar}{2 m_e}\right] = [A L^2]'],
+                    ['why', 'Fine-structure constant alpha ~ 1/137 has ZERO dimensions; Bohr magneton e hbar / (2 m_e) is a magnetic dipole moment m = I * Area = [A L^2]!'],
+                    ['trap', 'Electric dipole p = q d has [A T L], whereas magnetic dipole m = I A has [A L^2]: their ratio [p / m] is [T / L] = [1 / speed]!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 4, 'slug': 'JEE-04-homogeneity',
+        'title': 'Principle of homogeneity & transcendental functions',
+        'subtitle': 'Matching additive terms, transcendental pure-number gates, and dimensional traps with hidden constants or logs.',
+        'takeaway': 'You can ONLY add, subtract, or equate terms of identical dimensions, and arguments of exp, ln, sin, cos MUST be dimensionless [1].',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.4-3.5, C2, Q1, Q2',
+        'diagrams': ['vanderwaals_balance', 'transcendental_gate'],
+        'cards': [
+            {
+                'title': 'Principle of homogeneity: term-by-term balance',
+                'items': [
+                    ['p', 'In any physically valid equation A + B - C = D + E, every separated additive block MUST carry identical dimensions: [A] = [B] = [C] = [D] = [E].'],
+                    ['m', r'\left(P + \frac{a}{V_{\mathrm{mol}}^2}\right)(V_{\mathrm{mol}} - b) = R T \Rightarrow [a]=[P][V_{\mathrm{mol}}^2],\ [b]=[V_{\mathrm{mol}}]'],
+                    ['why', 'Homogeneity is a fast filter: s = u t + a t fails immediately because [a t] = [L T^-1] != [L] (sec. 3.4); v = u + a t^2 fails because [a t^2] = [L] != [L T^-1] (C2).'],
+                    ['trap', 'Watch moles n! If Van der Waals is written for n moles (P + n^2 a / V^2)(V - n b) = n R T, then [a] includes mol^-2 and [b] is [L^3 mol^-1]!'],
+                ],
+            },
+            {
+                'title': 'Transcendental pure-number gate: exp, ln, trig',
+                'items': [
+                    ['p', 'Because exp(u) = 1 + u + u^2/2! + ... adds u to 1 and u^2 to u, both the input u AND output of exp, ln, sin, cos, tan MUST be dimensionless [1]:'],
+                    ['m', r'P(x,t) = \frac{\alpha}{\beta}\exp\!\left(-\frac{\alpha z}{k_B \theta}\right) \Rightarrow \left[\frac{\alpha z}{k_B \theta}\right] = [1] \Rightarrow [\alpha] = \frac{[k_B\theta]}{[L]} = [F]'],
+                    ['p', 'Then [P] = [alpha / beta] gives [beta] = [alpha] / [P] = [M L T^-2] / [M L^-1 T^-2] = [L^2] in two lines (classic JEE Advanced question!).'],
+                    ['trap', 'Watch integrated log forms in chemistry/thermo: ln P = C - L/(R T) hides constant C = ln P0, meaning ln(P / P0) = -L/(R T)! Standalone ln(5 metros) is meaningless!'],
+                ],
+            },
+            {
+                'title': 'Dimensions inside derivatives and integrals',
+                'items': [
+                    ['p', 'Differentiation divides by the variable of differentiation, whereas integration multiplies by the differential dx:'],
+                    ['m', r'\left[\frac{d^n y}{dx^n}\right] = \frac{[y]}{[x]^n}, \qquad \left[\int y\,dx\right] = [y][x]'],
+                    ['p', 'JEE classic: find m in int dx / sqrt(2 a x - x^2) = a^m sin^-1(x/a - 1). Left side has [L] / sqrt([L^2]) = [L^0] = [1]! Since [sin^-1(...)] = [1], [a^m] = [1] => m = 0!'],
+                    ['trap', 'Many students guess m = 1 or -1 from memorised calculus tables forgetting 2 a x - x^2 has [a] = [x], so dx / sqrt(2ax - x^2) is ALREADY dimensionless!'],
+                ],
+            },
+            {
+                'title': 'Necessary != sufficient: hidden constants & nth-second',
+                'items': [
+                    ['p', 'Homogeneity is NECESSARY, never SUFFICIENT: s = u t + 5 a t^2 is dimensionally consistent yet physically wrong (missing 1/2).'],
+                    ['m', r's_n = u(1\,\mathrm{s}) + \frac{1}{2}a(2n - 1)(1\,\mathrm{s})^2 \implies [s_n] = [L]'],
+                    ['why', 'FAMOUS JEE TRAP: displacement in the nth second s_n IS dimensionally valid because hidden factor (1 second) multiplies u and a (1 s)^2 on the right!'],
+                    ['trap', 'Hidden dimensional constants also lurk in empirical formulas like v = 331 + 0.6 T_C where "331" carries m/s and "0.6" carries m/(s K)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 5, 'slug': 'JEE-05-dimensional-derivation',
+        'title': 'Deriving relations, custom base units & limits',
+        'subtitle': 'Solving exponent systems cleanly, changing base units to [F, V, T] or [c, G, h], and the four hard limits of dimensional analysis.',
+        'takeaway': 'In 3 base dimensions [M, L, T], dimensional analysis solves AT MOST 3 unknown powers and NEVER determines dimensionless prefactors or functions!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.5-3.6, C3, E2, E5, Q15, Q18, Q21',
+        'diagrams': ['exponent_matrix', 'sedov_curve'],
+        'cards': [
+            {
+                'title': 'Deriving scaling laws by matching exponents',
+                'items': [
+                    ['p', 'Write target Y = k X1^a X2^b X3^c, expand both sides in [M, L, T], equate powers of M, L, T, and solve the 3 linear equations:'],
+                    ['m', r'\mathrm{Drag\ (E2):}\ F = k \rho r^2 v^2;\qquad \mathrm{Blast\ (E5):}\ R = k\left(\frac{E t^2}{\rho}\right)^{1/5}'],
+                    ['p', 'Sensitivity check (Q21): in Sedov-Taylor R ~ E^(1/5) t^(2/5) rho^(-1/5), doubling blast energy E only raises radius R by 2^(1/5) = 1.149 (+14.9%)!'],
+                    ['why', 'Similarly for gas sound speed v(P, rho) (Q18): v = k sqrt(P / rho) (Newton k = 1 gives 289 m/s; Laplace k = sqrt(gamma) gives 343 m/s).'],
+                ],
+            },
+            {
+                'title': 'Changing base units to [F, V, T] or [E, P, V] (JEE #1!)',
+                'items': [
+                    ['p', 'When JEE asks for dimensions of mass or density in custom base system {Force F, Velocity V, Time T}, avoid big matrices by algebraic substitution:'],
+                    ['m', r'[M] = \frac{[F]}{[a]} = \frac{[F]}{[V / T]} = [F^1 V^{-1} T^1], \qquad [\rho] = \frac{[M]}{[V T]^3} = [F^1 V^{-4} T^{-2}]'],
+                    ['why', 'Test whether three proposed base quantities {X, Y, Z} are VALID independent bases using the determinant of their exponent matrix in [M, L, T]:'],
+                    ['trap', 'CRITICAL CHECK: {Force F, Mass M, Acceleration a} CANNOT form a valid base system because F = M a makes det = 0 (cannot build [L] or [T] separately)!'],
+                ],
+            },
+            {
+                'title': 'Planck scales from fundamental constants (c, G, h)',
+                'items': [
+                    ['p', 'Combining relativistic c [L T^-1], gravitational G [M^-1 L^3 T^-2], and quantum h [M L^2 T^-1] uniquely defines Planck length, time, and mass:'],
+                    ['m', r'\ell_P = \sqrt{\frac{G h}{c^3}}, \qquad t_P = \frac{\ell_P}{c} = \sqrt{\frac{G h}{c^5}}, \qquad m_P = \sqrt{\frac{h c}{G}}'],
+                    ['why', 'Fast exam check: once you memorize or solve l_P = sqrt(G h / c^3), dividing by c gives t_P instantly without solving a second 3x3 system!'],
+                    ['p', 'Same trick with {e^2/(4 pi eps0), c, G}: solving [L] gives classical/gravitational charge scale in 15 seconds.'],
+                ],
+            },
+            {
+                'title': 'Four strict failure modes of dimensional analysis',
+                'items': [
+                    ['p', 'State explicitly when dimensional derivation CANNOT complete a formula (sec. 3.5, C3, Q11):'],
+                    ['p', '1. Dimensionless constants: cannot find 2 pi in T = 2 pi sqrt(L/g) or 1/2 in (1/2) m v^2.'],
+                    ['p', '2. Dimensionless arguments: misses sin(theta) in torque r F sin(theta) and amplitude correction 1 + theta_0^2 / 16 in a large-angle pendulum.'],
+                    ['trap', '3. More than 3 variables in mechanics (e.g. F depending on r, v, rho AND eta needs Reynolds function f(Re)!), OR sums of terms like s = u t + (1/2) a t^2.'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 6, 'slug': 'JEE-06-sig-figs',
+        'title': 'Significant figures, scientific notation & rounding',
+        'subtitle': 'Exact counting rules, multiplication vs addition precision limits, IEEE round-to-even rule, and guard digits.',
+        'takeaway': 'Add/subtract keeps the FEWEST DECIMAL PLACES; multiply/divide keeps the FEWEST SIGNIFICANT FIGURES — never swap the two!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.7, C4, C5, E6, Q3, Q16, Q20, P3',
+        'diagrams': ['sigfig_anatomy', 'add_vs_mult'],
+        'cards': [
+            {
+                'title': 'Five ironclad rules for counting significant figures',
+                'items': [
+                    ['p', '1. All non-zero digits and all trapped zeros between non-zeros count (1002 -> 4 sf). 2. Leading zeros NEVER count (0.00560 -> 3 sf, C4).'],
+                    ['p', '3. Trailing zeros AFTER a decimal point ALWAYS count (2.300 -> 4 sf; 0.00230e3 -> 3 sf, P3). 4. Unit change NEVER alters sig figs: 2.30 m = 230 cm = 0.00230 km = 2300 mm (write 2.30e3 mm!).'],
+                    ['m', r'N = a \times 10^b \quad (1 \le |a| < 10):\ \ \text{sig figs of } N \equiv \text{digits in } a'],
+                    ['trap', 'Exact integers & definitions (2 in 2 pi r, 4/3 in sphere volume, speed of light c) have INFINITE significant figures and never limit an answer!'],
+                ],
+            },
+            {
+                'title': 'Arithmetic precision rules: +/- vs x and /',
+                'items': [
+                    ['p', 'Addition & subtraction follow DECIMAL PLACES (convert all terms to the SAME power of 10 first!):'],
+                    ['m', r'12.5 + 0.345 = 12.845 \to 12.8\ \ (1\ \mathrm{decimal\ place,\ Q3})'],
+                    ['p', 'Multiplication & division follow TOTAL SIGNIFICANT FIGURES (E6, C5, Q16):'],
+                    ['m', r'\frac{(2.5\times 10^3)(4.00\times 10^{-2})}{1.50\times 10^1} = 6.667 \to 6.7\ \ (\text{limited to 2 sf by } 2.5)'],
+                    ['trap', 'Watch mixed powers in +/-: write 4.2e-3 + 3.15e-4 = (4.2 + 0.315)e-3 = 4.5e-3 (2 sig figs, NOT 3)!'],
+                ],
+            },
+            {
+                'title': 'NCERT / JEE rounding rule when dropped digit is 5',
+                'items': [
+                    ['p', 'Retain 1-2 extra guard digits through intermediate steps and round ONCE at the end:'],
+                    ['m', r'6.751\to 6.8,\quad 6.750\to 6.8\ (\mathrm{odd}),\quad 6.650\to 6.6\ (\mathrm{even})'],
+                    ['why', 'Round-half-to-even eliminates upward bias across thousands of rounded numbers when the dropped tail is an exact 5000... (if ANY non-zero follows 5, ALWAYS round up!).'],
+                    ['trap', 'Watch subtle multi-step JEE questions like area of cube of side 7.203 m (4 sf): 6 * (7.203)^2 = 311.299 -> 311.3 m^2 (factor 6 is an exact face count!).'],
+                ],
+            },
+            {
+                'title': 'Matching value digits to uncertainty digits (Q20)',
+                'items': [
+                    ['p', 'An uncertainty dX must match the decimal place of the last reported digit of X: never leave orphan digits beyond the error bar!'],
+                    ['m', r'\mathrm{OK:}\ 9.81\pm 0.02;\quad \mathrm{Bad:}\ 9.80665\pm 0.02\ \mathrm{or}\ 9.8\pm 0.025'],
+                    ['why', 'Uncertainties themselves are reported to 1 significant figure (or 2 when leading digit is 1, e.g. +-0.15 in Q17: Z = 1.00 +- 0.15).'],
+                    ['p', 'Order of magnitude convention: write N = a * 10^b with 1 <= a < 10; if a <= sqrt(10) ~ 3.16 (or <= 5 in school texts), order is 10^b, else 10^(b+1).'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 7, 'slug': 'JEE-07-error-types',
+        'title': 'Error classification, accuracy vs precision & mean statistics',
+        'subtitle': 'Systematic vs random vs blunders, accuracy vs precision, JEE Main mean absolute error vs sample standard deviation.',
+        'takeaway': 'Averaging n trials cuts random standard error as 1/sqrt(n), NEVER removing systematic bias; distinguish spread sigma from mean uncertainty sigma/sqrt(n)!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.8, 4.1, C6, C8, C12, E8, Q8, P6, P9, P24',
+        'diagrams': ['target_triad', 'sem_sqrt_n'],
+        'cards': [
+            {
+                'title': 'Systematic vs random vs gross blunders',
+                'items': [
+                    ['p', '1. Systematic errors shift every reading reproducibly one way: zero offset (C6), miscalibrated scale, fixed parallax angle (P6), heat loss in calorimetry. Fix by calibration/model!'],
+                    ['p', '2. Random errors fluctuate unpredictably (+ and -) from air draughts, vibration, eye judgement. Reduced by repeating n independent measurements.'],
+                    ['m', r'\mathrm{Accuracy}\leftrightarrow\mathrm{low\ bias};\qquad \mathrm{Precision}\leftrightarrow\mathrm{small\ scatter}'],
+                    ['trap', 'Trap 3 (sec. 8): a digital watch running 5 minutes fast reading 10:04:32.18 is high-PRECISION (0.01 s resolution) yet poor-ACCURACY (5 min bias)!'],
+                ],
+            },
+            {
+                'title': 'NCERT / JEE Main mean-absolute-error protocol',
+                'items': [
+                    ['p', 'In NCERT/JEE Main lab problems with n readings x_1, ..., x_n when standard deviation is NOT requested, compute arithmetic mean x_bar and mean absolute error:'],
+                    ['m', r'\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i, \qquad |\Delta x_i| = |x_i - \bar{x}|, \qquad \overline{\Delta x} = \frac{1}{n}\sum_{i=1}^n |\Delta x_i|'],
+                    ['m', r'\delta x_{\mathrm{rel}} = \frac{\overline{\Delta x}}{\bar{x}}, \qquad \%\ \mathrm{error} = \frac{\overline{\Delta x}}{\bar{x}}\times 100\%'],
+                    ['why', 'Note carefully: residuals (x_i - x_bar) sum to ZERO algebraically, which is why absolute bars |x_i - x_bar| (or squares below) are mandatory!'],
+                ],
+            },
+            {
+                'title': 'Sample standard deviation sigma vs SEM sigma/sqrt(n)',
+                'items': [
+                    ['p', 'Rigorous JEE Advanced / Olympiad statistics uses Bessel (n - 1) sample standard deviation sigma for single-reading spread and sigma / sqrt(n) for the uncertainty of the MEAN (E8, P24):'],
+                    ['m', r'\sigma = \sqrt{\frac{1}{n - 1}\sum_{i=1}^n (x_i - \bar{x})^2}, \qquad \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}'],
+                    ['p', 'Worked exemplar E8: g = {9.78, 9.82, 9.79, 9.81, 9.80} m/s^2 -> x_bar = 9.800, sum(dx^2) = 0.0010, sigma = sqrt(0.0010/4) = 0.0158, SEM = 0.0158/sqrt(5) = 0.0071 -> 9.800 +- 0.007 m/s^2!'],
+                    ['trap', 'Trap 9: do NOT report single-shot scatter sigma (0.016) when asked for the uncertainty of the best estimate x_bar (0.007), nor confuse n - 1 with n!'],
+                ],
+            },
+            {
+                'title': 'Consistency check against a reference value (Q13)',
+                'items': [
+                    ['p', 'Two independent measurements X +- dX and Y +- dY agree within experimental error when their difference sits inside combined uncertainty:'],
+                    ['m', r'|X - Y| \le \Delta_{\mathrm{comb}}, \qquad \Delta_{\mathrm{comb}} = \sqrt{(\Delta X)^2 + (\Delta Y)^2}'],
+                    ['p', 'Quick check (Q13): measuring g = 9.81 +- 0.02 m/s^2 vs local reference 9.806 m/s^2 gives |9.81 - 9.806| = 0.004 <= 0.02 -> 100% consistent!'],
+                    ['trap', 'Never delete an awkward data point ("outlier") merely to shrink sigma unless your lab log confirms a specific physical blunder!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 8, 'slug': 'JEE-08-error-propagation',
+        'title': 'Error propagation: sums, powers & coupled formulas',
+        'subtitle': 'Absolute vs fractional rules, quadrature vs worst-case bounds, catastrophic cancellation, and the parallel-resistor trap.',
+        'takeaway': 'Sums add ABSOLUTE errors; products/powers add FRACTIONAL errors; if a variable appears TWICE (R1*R2/(R1+R2)), simplify FIRST before taking differentials!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.9, E3, E7 (fixed!), Q4, Q5, Q17, P4, P8',
+        'diagrams': ['cancellation_blowup', 'parallel_resistor_trap'],
+        'cards': [
+            {
+                'title': 'Sums & differences: ABSOLUTE errors add!',
+                'items': [
+                    ['p', 'For Z = A + B or Z = A - B, worst-case error adds absolute errors directly; independent random errors combine in quadrature:'],
+                    ['m', r'\Delta_{\max}=\Delta A+\Delta B,\qquad \Delta_{\mathrm{rand}}=\sqrt{(\Delta A)^2+(\Delta B)^2}'],
+                    ['p', 'Example (Q4): A = 10.0 +- 0.2, B = 4.0 +- 0.1 gives A - B = 6.0 +- 0.3 (5% error, UP from 2% and 2.5%!).'],
+                    ['trap', 'Catastrophic cancellation (P8): for A = 1.234 +- 0.001 and B = 1.231 +- 0.001, A - B = 0.003 +- 0.002 -> relative error jumps from 0.08% to 67%!'],
+                ],
+            },
+            {
+                'title': 'Products, quotients & powers: log-differential rule',
+                'items': [
+                    ['p', 'Take ln|Z| = p ln|A| + q ln|B| - r ln|C|, differentiate dZ/Z = p dA/A + q dB/B - r dC/C, then flip MINUS signs to PLUS for maximum uncertainty (P4):'],
+                    ['m', r'\left(\frac{\Delta Z}{|Z|}\right)_{\max} = |p|\frac{\Delta A}{|A|} + |q|\frac{\Delta B}{|B|} + |r|\frac{\Delta C}{|C|}'],
+                    ['p', 'Source E7 audit fix: sphere density rho = m / ((4/3) pi r^3) with m = 100 +- 1 g (1%), r = 2.00 +- 0.02 cm (1%) gives d(rho)/rho = 1% + 3(1%) = 4.0% (NOT 6% printed in E7 check box!).'],
+                    ['why', 'For independent Gaussian random errors, quadrature replaces sum of terms by sqrt( (p dA/A)^2 + (q dB/B)^2 + (r dC/C)^2 ).'],
+                ],
+            },
+            {
+                'title': 'CRITICAL JEE ADV TRAP: parallel resistors & thin lenses!',
+                'items': [
+                    ['p', 'NEVER apply quotient + sum rules separately to R_eq = R1 R2 / (R1 + R2) or f = u v / (u + v), because dR1 in numerator partially cancels dR1 in denominator! Differentiate 1/R_eq = 1/R1 + 1/R2 directly:'],
+                    ['m', r'-\frac{dR_{\mathrm{eq}}}{R_{\mathrm{eq}}^2} = -\frac{dR_1}{R_1^2} - \frac{dR_2}{R_2^2} \implies \Delta R_{\mathrm{eq}} = R_{\mathrm{eq}}^2\!\left(\frac{\Delta R_1}{R_1^2} + \frac{\Delta R_2}{R_2^2}\right)'],
+                    ['m', r'\mathrm{Mirror\ /\ Lens}\ \ \frac{1}{f} = \frac{1}{v} \pm \frac{1}{u} \implies \Delta f = f^2\!\left(\frac{\Delta v}{v^2} + \frac{\Delta u}{u^2}\right)'],
+                    ['why', 'Test R1 = R2 = 100 +- 1 Ohm: R_eq = 50 Ohm, exact dR_eq = 2500 * (2 / 10000) = 0.50 Ohm (1.0%), whereas naive quotient rule gives 3.0% (3x wrong!).'],
+                ],
+            },
+            {
+                'title': 'General single/multi-variable calculus rule',
+                'items': [
+                    ['p', 'For ANY smooth function Z = f(x, y) (including logs, trig, exponentials — where power rules do not apply!), use first-order partial derivatives:'],
+                    ['m', r'\Delta Z_{\max} = \left|\frac{\partial f}{\partial x}\right|\Delta x + \left|\frac{\partial f}{\partial y}\right|\Delta y'],
+                    ['p', 'Handy specials: if Z = ln(x), dZ = dx / x (ABSOLUTE error in ln x equals RELATIVE error in x!). If Z = sin(theta), dZ = |cos(theta)| d(theta_in_RADIANS!).'],
+                    ['trap', 'ALWAYS convert angle uncertainty d(theta) from degrees into RADIANS (multiply by pi / 180) before differentiating sin(theta) or tan(theta)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 9, 'slug': 'JEE-09-vernier-caliper',
+        'title': 'Vernier callipers: standard, general (m/n) & retro-vernier',
+        'subtitle': 'Exact 1 MSD - 1 VSD derivation, zero-error sign discipline, non-standard JEE Advanced verniers, and K-step coincidence.',
+        'takeaway': 'Never memorise LC = 1 mm / n blindly: ALWAYS compute 1 MSD and 1 VSD from the question stem first using LC = 1 MSD - 1 VSD!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.10, E4, Q6, P5, P15, P22 + JEE Adv verniers',
+        'diagrams': ['vernier_scale', 'zero_error_pair'],
+        'cards': [
+            {
+                'title': 'General least-count formula (works on ALL verniers!)',
+                'items': [
+                    ['p', 'Suppose n divisions on the vernier scale span m divisions on the main scale (m < n in standard forward verniers), where 1 main-scale division is 1 MSD:'],
+                    ['m', r'\mathrm{LC} = 1\,\mathrm{MSD} - 1\,\mathrm{VSD} = \left(1 - \frac{m}{n}\right)\mathrm{MSD}'],
+                    ['p', 'Standard case m = n - 1 gives LC = (1/n) MSD (e.g. 10 VSD = 9 mm -> 0.1 mm; 20 VSD = 19 mm -> 0.05 mm, P5).'],
+                    ['trap', 'JEE ADV FAVORITE: if 10 VSD = 8 MSD with 1 MSD = 1 mm, LC = (1 - 8/10) mm = 0.2 mm (NOT 0.1 mm!). Always read m AND n!'],
+                ],
+            },
+            {
+                'title': 'Complete reading & zero-error subtraction protocol',
+                'items': [
+                    ['p', '1. Read MSR just LEFT of vernier zero. 2. Multiply coinciding vernier mark k by LC. 3. Algebraically SUBTRACT signed zero reading e0 (E4, P15, P22):'],
+                    ['m', r'x_{\mathrm{true}} = \mathrm{MSR} + k\cdot\mathrm{LC} - e_0'],
+                    ['p', 'Positive zero error (+e0, vernier 0 right of main 0, mark p coincides): e0 = +p * LC. Negative zero error (-|e0|, vernier 0 left of main 0, mark c coincides in standard n-div scale):'],
+                    ['m', r'e_{0,\mathrm{neg}} = -(n - c)\cdot\mathrm{LC}\quad (c=7,\ n=10 \Rightarrow e_0 = -3\,\mathrm{LC})'],
+                ],
+            },
+            {
+                'title': 'Worked readings & negative zero-error verification',
+                'items': [
+                    ['p', 'Exemplar E4: LC = 0.01 cm, zero error e0 = -0.03 cm, MSR = 2.30 cm, 7th vernier mark aligns: x_true = 2.30 + 7(0.01) - (-0.03) = 2.40 cm!'],
+                    ['p', 'Paper P22: LC = 0.01 cm, e0 = +0.02 cm, MSR = 2.70 cm, 5th mark aligns: x_true = 2.75 - (+0.02) = 2.73 cm.'],
+                    ['why', 'Physical sanity check: always ask "when jaws touch, did the scale ALREADY read positive (+e0, too high -> subtract) or had not reached zero yet (-|e0|, too low -> add)?"'],
+                    ['trap', 'Notice why negative zero coincidence uses -(n - c) * LC: if vernier 0 shifts left by tiny 0.03 cm, the 7th mark (10 - 3 = 7) lines up, NOT the 3rd mark!'],
+                ],
+            },
+            {
+                'title': 'Extended / retro-vernier: when 1 VSD > 1 MSD!',
+                'items': [
+                    ['p', 'In some precision callipers (JEE Advanced 2016/2021 style), n vernier divisions span (n + 1) or (2n - 1) main-scale divisions so 1 VSD EXCEEDS 1 MSD!'],
+                    ['m', r'x_{\mathrm{raw}} = M_{\mathrm{coinc}}\cdot\mathrm{MSD} - k\cdot\mathrm{VSD}'],
+                    ['why', 'Because 1 VSD > 1 MSD, vernier gaps WIDEN to the right so coincidence steps backward (retrograde vernier has LC = 1 VSD - 1 MSD = MSD / n)!'],
+                    ['p', 'Golden habit: writing x = M_coinc * MSD - k * VSD directly from geometry works on EVERY strange custom scale even if numbers look unfamiliar!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 10, 'slug': 'JEE-10-screw-gauge',
+        'title': 'Screw gauge, spherometer & Young modulus apparatus',
+        'subtitle': 'Pitch and circular scale resolution, zero-offset rules, E10 source audit fix, and classic JEE practical error budgets.',
+        'takeaway': 'LC = Pitch / N_circ; in wire/capillary formulas where diameter d enters to high powers (d^2 or d^4), measuring d with a screw gauge controls total error!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.11, E10 (fixed!), Q7, P11 + JEE lab apparatus',
+        'diagrams': ['micrometer_sleeve', 'wire_error_pie'],
+        'cards': [
+            {
+                'title': 'Pitch, circular divisions & screw-gauge reading',
+                'items': [
+                    ['p', 'If advancing the thimble through R full rotations moves the spindle linearly by D along the sleeve scale, pitch P = D / R and least count LC is:'],
+                    ['m', r'\mathrm{Pitch}\ P = \frac{\text{linear advance}}{\text{full rotations}}, \qquad \mathrm{LC} = \frac{P}{N_{\mathrm{circ}}}'],
+                    ['p', 'Source E10 audit fix: pitch 0.5 mm, N = 50 -> LC = 0.01 mm. Sleeve shows 3.00 mm, circular = 22, zero error e0 = +0.04 mm -> x_true = 3.00 + 0.22 - 0.04 = 3.18 mm (NOT 3.40 mm in E10 check box!).'],
+                    ['trap', 'Watch half-millimetre sleeve marks! With pitch = 0.5 mm, sleeve ticks show BOTH whole mm and 0.5 mm (e.g. 3.5 mm visible + 22(0.01) = 3.72 mm)!'],
+                ],
+            },
+            {
+                'title': 'Screw-gauge zero offset & backlash prevention',
+                'items': [
+                    ['p', 'Close anvil & spindle gently using ONLY the ratchet stop: look at circular mark c on reference line with N total circular divisions:'],
+                    ['m', r'\mathrm{Below:}\ e_0 = +c\,\mathrm{LC}; \qquad \mathrm{Above:}\ e_0 = -(N - c)\,\mathrm{LC}'],
+                    ['p', 'Example: 100-div gauge closed reads mark 97 on reference line (zero has not arrived by 3 div!) -> e0 = -(100 - 97) * 0.01 = -0.03 mm (Q7: 5.38 - (-0.03) = 5.41 mm).'],
+                    ['why', 'Backlash error arises from play between worn screw threads when reversing rotation direction: ALWAYS approach final reading rotating in ONE direction!'],
+                ],
+            },
+            {
+                'title': 'Spherometer radius of curvature formula',
+                'items': [
+                    ['p', 'A three-legged spherometer (equilateral leg spacing l, screw pitch P, circular divisions N -> LC = P/N) measures sagitta height h of a spherical cap:'],
+                    ['m', r'R = \frac{\ell^2}{6 h} + \frac{h}{2} \approx \frac{\ell^2}{6 h}\ \ (h \ll \ell), \qquad \frac{\Delta R}{R} \approx \frac{2\Delta\ell}{\ell} + \frac{\Delta h}{h}'],
+                    ['why', 'Geometry proof: leg circumradius is r_c = l / sqrt(3), and chord property r_c^2 = h (2 R - h) gives R = l^2/(6 h) + h/2 immediately!'],
+                    ['trap', 'Always take ZERO reading on an optically flat glass plate first, then on the curved mirror/lens surface: h = |h_curved - h_plane|!'],
+                ],
+            },
+            {
+                'title': 'Searle wire, Poiseuille tube & optical bench budgets',
+                'items': [
+                    ['p', 'Spot which variable carries the largest exponent in JEE lab experiments to know which instrument demands highest precision:'],
+                    ['m', r'Y = \frac{4 M g L}{\pi d^2 \Delta L} \Rightarrow \frac{\Delta Y}{Y} = \frac{\Delta M}{M} + \frac{\Delta L}{L} + \frac{2\Delta d}{d} + \frac{\Delta(\Delta L)}{\Delta L}'],
+                    ['m', r'\eta = \frac{\pi \Delta P r^4}{8 Q L} \Rightarrow \frac{\Delta\eta}{\eta}\ \text{carries}\ \mathbf{4}\frac{\Delta r}{r}\ \text{(1\% error in } r \to 4\%\text{ in }\eta\text{!)}'],
+                    ['trap', 'Watch factor 2 mistake on wire diameter vs radius: d = 2 r -> dd/d = dr/r (identical percentage error — NEVER multiply dd/d by another extra 2)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 11, 'slug': 'JEE-11-graphs-fermi',
+        'title': 'Graph linearisation, slope bounds & Fermi estimation',
+        'subtitle': 'Straightening curved physical laws on log-log, semi-log & reciprocal axes, bounding slopes, and order-of-magnitude modelling.',
+        'takeaway': 'Linearise non-linear laws BEFORE reading constants from data; in Fermi estimates, break unknown scale into 3-4 familiar factors whose logs cancel!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 3.12, 7.4, E9, OL7, Q9, Q10, Q24, P12, P19, P25, P26',
+        'diagrams': ['pendulum_linearise', 'oleic_monolayer'],
+        'cards': [
+            {
+                'title': 'Four standard linearisations every candidate must own',
+                'items': [
+                    ['p', 'Choose plot axes X and Y so your physical model becomes a straight line Y = m X + c whose slope m and intercept c isolate unknown parameters cleanly:'],
+                    ['m', r'y=a x^n \implies \ln y = n\ln x + \ln a\ (\mathrm{slope}\ n,\ \mathrm{int}\ \ln a)'],
+                    ['m', r'\ln y = -b x + \ln a;\quad T^2 = \frac{4\pi^2}{g}L;\quad \frac{1}{v} = -\frac{1}{u} + \frac{1}{f}'],
+                    ['trap', 'Multi-correct trap (P19): on a log-log plot of y = a x^n, y-axis intercept at ln x = 0 is ln(a) (or log10 a), NEVER raw constant a itself!'],
+                ],
+            },
+            {
+                'title': 'Graphical slope & worst-case bounding lines',
+                'items': [
+                    ['p', 'When estimating slope quickly by hand on graph paper: (1) pick two distant points ON THE BEST-FIT LINE (NOT raw data points!); (2) draw steepest m_max and shallowest m_min lines spanning the error bars:'],
+                    ['m', r'm_{\mathrm{best}} \approx \frac{1}{2}(m_{\max} + m_{\min}), \qquad \Delta m \approx \frac{1}{2}(m_{\max} - m_{\min})'],
+                    ['why', 'Non-zero y-intercept on T^2 vs L reveals systematic length offset L_eff = L_measured + r_bob: the SLOPE 4 pi^2 / g STILL gives unbiased g unaffected by constant offset r_bob!'],
+                    ['trap', 'Taking ln(y) changes error bar height from dy to dy / y: tiny y points acquire huge log error bars and must NOT outweigh large-y points!'],
+                ],
+            },
+            {
+                'title': 'Fermi order-of-magnitude estimation protocol',
+                'items': [
+                    ['p', 'Decompose any unfamiliar quantity into a product of 3-5 human-scale factors (random over/underestimates partially cancel in multiplication!):'],
+                    ['m', r'\mathrm{Geometric\ midpoint\ between\ } a\ \mathrm{and}\ b:\ \ x_{\mathrm{est}} = \sqrt{a b}'],
+                    ['p', 'Classic atmospheric mass (P25): M_atm = P0 * (4 pi R_E^2) / g = 1e5 * 4 pi (6.4e6)^2 / 9.8 = 5.3e18 kg! Lifetime breaths (E9): 12/min * 5.26e5 min/yr * 70 yr ~ 4.4e8!'],
+                    ['why', 'Between bounds 10^2 and 10^4, arithmetic average is 5050 (wrong scale!) whereas geometric midpoint sqrt(10^2 * 10^4) = 10^3 hits dead center on log scale!'],
+                ],
+            },
+            {
+                'title': 'Oleic-acid monolayer thickness & Avogadro check (OL7, P33)',
+                'items': [
+                    ['p', 'Dilute 1 cm^3 oleic acid into alcohol (say 1 : 400 concentration), drop volume V_oil onto water dusted with lycopodium powder to form circular film radius R:'],
+                    ['m', r'd = \frac{V_{\mathrm{oil}}}{\pi R^2} = \frac{10^{-9}\,\mathrm{m^3}}{\pi(0.50\,\mathrm{m})^2} = 1.27\,\mathrm{nm}'],
+                    ['why', 'Gives direct tabletop proof that organic molecules have ~1 nm length! Warning (P33): estimating N_A = (M/rho)/(d * sigma) additionally assumes molecular cross-section sigma!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 12, 'slug': 'JEE-12-master-triage',
+        'title': 'Master triage, multi-swing timing & top traps',
+        'subtitle': 'Single-page exam playbook, why timing N swings beats averaging N single swings, and the ten deadliest JEE error traps.',
+        'takeaway': 'Timing N consecutive swings cuts stopwatch reaction error as 1/N (NOT 1/sqrt(N))! Always simplify algebraic duplicates BEFORE differentiating!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 8-9, SOURCE-AUDIT summary',
+        'diagrams': ['error_triage', 'precision_vs_effort'],
+        'cards': [
+            {
+                'title': 'CRITICAL LAB INSIGHT: 1/N vs 1/sqrt(N) timing law!',
+                'items': [
+                    ['p', 'Suppose human start/stop reaction error on a stopwatch is dt_sw = 0.20 s and pendulum period is T = 2.00 s:'],
+                    ['m', r'N\ \mathrm{continuous\ swings:}\ t=N T \implies \Delta T = \frac{\Delta t_{\mathrm{sw}}}{N} \propto \frac{1}{N}'],
+                    ['m', r'\mathrm{Average\ } N\ \mathrm{separate\ 1\text{-}swing\ runs:}\ \Delta \bar{T} = \frac{\Delta t_{\mathrm{sw}}}{\sqrt{N}} \propto \frac{1}{\sqrt{N}}'],
+                    ['why', 'At N = 25 swings, continuous timing gives dT = 0.20/25 = 0.008 s (5x BETTER than 25 separate 1-swing runs giving 0.20/5 = 0.040 s in the exact same time)!'],
+                ],
+            },
+            {
+                'title': 'Top dimensional & sig-fig exam traps',
+                'items': [
+                    ['trap', 'Angle trap: rad and sr HAVE units yet NO dimensions [M^0 L^0 T^0]; never say "unitless <=> dimensionless" works both ways!'],
+                    ['trap', 'Hidden constants: s_n = u + (a/2)(2n - 1) IS dimensionally valid because hidden factor (1 s) sits inside every term!'],
+                    ['trap', 'Linear dependency: before rewriting Y in custom bases {X1, X2, X3}, verify det != 0 (e.g. {Energy, Work, Time} or {F, m, a} is INVALID)!'],
+                    ['trap', 'Decimal vs total digits: 15.4 + 0.082 = 15.5 (1 decimal place, 3 sf), whereas 15.4 * 0.082 = 1.3 (2 total sig figs from 0.082)!'],
+                ],
+            },
+            {
+                'title': 'Top error-propagation & instrument traps',
+                'items': [
+                    ['trap', 'Sum percent trap: NEVER add percentage errors on A + B or A - B! Compute dA + dB FIRST, then divide by |A +- B|!'],
+                    ['trap', 'Repeated variable trap: NEVER expand d(R1 R2 / (R1 + R2)) as dR1/R1 + dR2/R2 + (dR1+dR2)/(R1+R2)! Always write 1/R = 1/R1 + 1/R2 -> dR/R^2 = dR1/R1^2 + dR2/R2^2!'],
+                    ['trap', 'Radian rule: in y = sin(theta), dy = |cos(theta)| d(theta) REQUIRES d(theta) in RADIANS (1 deg = pi/180 rad = 0.01745 rad, NEVER plug "1"!)!'],
+                    ['trap', 'Vernier reading trap: check 1 MSD AND how many MSD equal n VSD before touching LC — custom scales like 10 VSD = 8 mm appear constantly in JEE Advanced!'],
+                ],
+            },
+            {
+                'title': 'Pre-submission 5-check scorecard',
+                'items': [
+                    ['p', '1. Did every exponent come with |p_i| PLUS signs in worst-case propagation (even for denominators C^-r)?'],
+                    ['p', '2. Did you check wire DIAMETER vs RADIUS (dd/d == dr/r, so d^2 contributes 2 dd/d, NOT 4)?'],
+                    ['p', '3. Did you subtract zero error WITH ITS SIGN: True = Raw - (+e0) and True = Raw - (-|e0|)?'],
+                    ['p', '4. Did you distinguish single-trial scatter sigma from standard error of the mean sigma / sqrt(n), and round uncertainty to 1 sig fig?'],
+                    ['m', r'Z = (9.82 \pm 0.07)\ \mathrm{m/s^2}\quad (\mathrm{matched\ decimals\ +\ SI\ unit})'],
+                ],
+            },
+        ],
+    },
+
+    # =========================================================================
+    # PART II — OLYMPIAD / SPECIALISED EXTENSIONS (6 SHEETS: Olympiad-01 .. 06)
+    # =========================================================================
+    {
+        'section': 'Olympiad', 'part_page': 1, 'slug': 'Olympiad-01-buckingham-pi',
+        'title': 'Buckingham Pi theorem & dimensional matrix rank',
+        'subtitle': 'Rigorous linear-algebra proof via nullspace rank, capillary-gravity two-group dispersion, and atomic Bohr scales.',
+        'takeaway': 'Number of independent dimensionless groups is ALWAYS p = n - rank(D), NEVER blind n - k when two base dimensions only enter locked together!',
+        'source': 'Source: units-measurements/Units-measurements.md OL4, OL8, P28, P31, P34',
+        'diagrams': ['dim_matrix_rank', 'capillary_gravity_v'],
+        'cards': [
+            {
+                'title': 'Exact statement via rank of dimensional matrix D',
+                'items': [
+                    ['p', 'List all n physical quantities Q_1, ..., Q_n entering a law f(Q_1, ..., Q_n) = 0, and form the k x n exponent matrix D_ij across k base dimensions:'],
+                    ['m', r'p = \dim\ker(D) = n - \mathrm{rank}(D) \implies F(\Pi_1, \Pi_2, \dots, \Pi_p) = 0'],
+                    ['why', 'Rank trap proof: in static Hookean springs {F, k_spr, x}, symbols M, L, T appear (k = 3!), YET D columns are [1,1,-2], [1,0,-2], [0,1,0] with rank r = 2 -> p = 3 - 2 = 1 group Pi = F / (k_spr x)! Blind n - k = 0 would FAIL!'],
+                ],
+            },
+            {
+                'title': 'Two-Pi masterclass: capillary-gravity water waves',
+                'items': [
+                    ['p', 'Phase speed v on deep water depends on wavenumber k, gravity g, density rho, and surface tension gamma: n = 5 variables across rank r = 3 [M, L, T] -> p = 2 groups!'],
+                    ['m', r'\Pi_1 = \frac{v}{\sqrt{g / k}}, \qquad \Pi_2 = \frac{\gamma k^2}{\rho g}\ (\text{Bond}^{-1}) \implies v = \sqrt{\frac{g}{k}}\,\Phi\!\left(\frac{\gamma k^2}{\rho g}\right)'],
+                    ['p', 'Exact hydrodynamics supplies Phi(u) = sqrt(1 + u), giving v = sqrt(g/k + gamma k / rho) with minimum speed v_min = (4 g gamma / rho)^(1/4) = 23.1 cm/s on water!'],
+                    ['why', 'Without fluid PDEs, Pi theorem ALONE proves minimum speed scales as (g gamma / rho)^(1/4) at wavelength ~ sqrt(gamma / rho g)!'],
+                ],
+            },
+            {
+                'title': 'Hydrogen Bohr radius & Rydberg energy (OL8, P34)',
+                'items': [
+                    ['p', 'Non-relativistic quantum electrostatics has 4 independent parameters {m_e, e, eps0, hbar} spanning all 4 dimensions [M, L, T, A] (rank r = 4):'],
+                    ['m', r'a_0 = \frac{4\pi\varepsilon_0\hbar^2}{m_e e^2} = 0.0529\,\mathrm{nm},\qquad |E_1| = \frac{m_e e^4}{32\pi^2\varepsilon_0^2\hbar^2} = 13.6\,\mathrm{eV}'],
+                    ['why', 'Notice: adding speed of light c introduces n = 5th variable at rank 4 -> p = 1 dimensionless group alpha = e^2/(4 pi eps0 hbar c) ~ 1/137 (fine-structure splitting ~ alpha^2 |E_1|)!'],
+                ],
+            },
+            {
+                'title': 'Trinity nuclear test & prefactor caution (OL9, P28)',
+                'items': [
+                    ['p', 'For Trinity 1945 (E = 84 TJ, t = 0.025 s, R = 100 m), naive inversion rho ~ E t^2 / R^5 (setting k = 1 in R = k (E t^2 / rho)^(1/5)) gives:'],
+                    ['m', r'\frac{E t^2}{R^5} = \frac{(84\times 10^{12})(0.025)^2}{100^5} = 5.25\,\mathrm{kg/m^3}\ (\text{air: }1.25)'],
+                    ['why', 'Why off by 4.2x? Because k enters raised to the FIFTH POWER: G. I. Taylor solved the adiabatic shock ODE for air (gamma = 1.4) to get k = 1.033 (1.033^5 = 1.18; remaining factor is yield calibration)!'],
+                    ['trap', 'Whenever solving backwards for a quantity inside a 1/5 power, a tiny 20% uncertainty in k or R explodes by factor (1.2)^5 = 2.5x!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 2, 'slug': 'Olympiad-02-scaling-similarity',
+        'title': 'Dynamical similarity, scale models & allometry',
+        'subtitle': 'Matching dimensionless groups in wind tunnels & towing tanks, conflict of simultaneous Re + Fr matching, and Galileo scaling.',
+        'takeaway': 'A scale model reproduces full non-linear physics faithfully IF AND ONLY IF every relevant dimensionless Pi group has the exact same numerical value!',
+        'source': 'Source: Olympiad physical similarity & scaling toolkit (INPhO / IPhO standard)',
+        'diagrams': ['drag_crisis_re', 'model_similarity'],
+        'cards': [
+            {
+                'title': 'Four master dimensionless numbers of continuum physics',
+                'items': [
+                    ['p', 'Divide competing force terms in Navier-Stokes / elasticity to extract universal regime numbers without solving the PDE:'],
+                    ['m', r'\mathrm{Re} = \frac{\rho v L}{\eta}\ \left(\frac{\text{inertial}}{\text{viscous}}\right), \qquad \mathrm{Fr} = \frac{v}{\sqrt{g L}}\ \left(\sqrt{\frac{\text{inertial}}{\text{gravity}}}\right)'],
+                    ['m', r'\mathrm{Ma} = \frac{v}{c_s}\ \left(\frac{\text{flow}}{\text{sound}}\right), \qquad \mathrm{We} = \frac{\rho v^2 L}{\gamma}\ \left(\frac{\text{inertial}}{\text{capillary}}\right)'],
+                    ['why', 'Sphere drag F = (1/2) C_D(Re) rho pi r^2 v^2 unifies BOTH regimes: for Re << 1, C_D = 24/Re recovers linear Stokes drag 6 pi eta r v; for Re ~ 10^4, C_D ~ 0.47 gives quadratic drag!'],
+                ],
+            },
+            {
+                'title': 'Wind-tunnel & ship-hull model scaling dilemma',
+                'items': [
+                    ['p', 'Test a 1:25 scale aircraft wing (L_m / L_p = 1/25) or ship hull in the laboratory by keeping Pi_model = Pi_prototype:'],
+                    ['m', r'\mathrm{Re\ match:}\ v_m = 25 v_p\ \ \mathrm{or\ pressurise}\ \ \rho_m = 25\rho_p'],
+                    ['m', r'\mathrm{Ship\ waves\ (Froude\ match):}\ \frac{v_m}{\sqrt{g L_m}} = \frac{v_p}{\sqrt{g L_p}} \implies v_m = \frac{v_p}{5}'],
+                    ['why', 'Classic IPhO trap: in the SAME fluid at fixed g, Re requires v_m ~ L^-1 while Fr requires v_m ~ L^+1/2 -> BOTH can match ONLY in a fluid of kinematic viscosity nu_m = nu_p (L_m/L_p)^(3/2)!'],
+                ],
+            },
+            {
+                'title': 'Mechanical & gravitational self-similarity',
+                'items': [
+                    ['p', 'Scale every linear dimension of a structure or planet uniformly by factor lambda (L -> lambda L) at fixed material density rho and strength sigma_max:'],
+                    ['m', r'M \propto \lambda^3, \qquad F_{\mathrm{area}} \propto \lambda^2, \qquad \sigma_{\mathrm{own\ weight}} = \frac{M g}{A_{\mathrm{bone}}} \propto \frac{\lambda^3}{\lambda^2} = \lambda^1'],
+                    ['why', 'Galileo square-cube law: doubling an animal height without thickening proportions doubles bone stress! Constant safety factor requires bone diameter d ~ L^(3/2)!'],
+                    ['p', 'Self-gravitating homogeneous sphere: surface g = (4/3) pi G rho R ~ R^1, free-fall / orbital period T_orb = sqrt(3 pi / G rho) ~ R^0 (INDEPENDENT of planet size R)!'],
+                ],
+            },
+            {
+                'title': 'Jumping animals, cooling rates & heat loss scaling',
+                'items': [
+                    ['p', 'Compare maximal vertical jump height h of geometrically similar animals (muscle work W_muscle = sigma_muscle * A_muscle * s_stroke ~ L^2 * L = L^3!):'],
+                    ['m', r'm g h \sim W_{\mathrm{muscle}} \implies (\lambda^3) g h \sim \lambda^3 \implies h \propto \lambda^0'],
+                    ['why', 'Heat-loss timescale of a warm body of heat capacity M c ~ L^3 losing heat across skin area A ~ L^2 scales as tau_cool ~ L^1: small shrews must eat continuously!'],
+                    ['trap', 'Always state which material parameters stay constant during scaling (e.g. constant density rho vs constant total mass M changes every exponent)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 3, 'slug': 'Olympiad-03-least-squares',
+        'title': 'Least-squares regression, normal equations & errors',
+        'subtitle': 'Exact derivation of OLS slope/intercept, standard errors sigma_b and sigma_a, x-vs-y asymmetry, and weighted fits.',
+        'takeaway': 'OLS line ALWAYS passes through centroid (x_bar, y_bar) with b = S_xy / S_xx and sigma_b = sigma_y / sqrt(S_xx) — spread x_i wide!',
+        'source': 'Source: units-measurements/Units-measurements.md OL1, OL2, P18, P30',
+        'diagrams': ['ols_residuals', 'leverage_spread'],
+        'cards': [
+            {
+                'title': 'Normal equations & centroid theorem (OL1, P18)',
+                'items': [
+                    ['p', 'For n pairs (x_i, y_i) with exact x_i and independent equal-variance vertical errors sigma_y, minimise S(a, b) = sum_i (y_i - a - b x_i)^2:'],
+                    ['m', r'b = \frac{S_{xy}}{S_{xx}} = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}, \qquad a = \bar{y} - b\bar{x}'],
+                    ['why', 'Setting dS/da = 0 immediately forces y_bar = a + b x_bar: EVERY unconstrained best-fit line passes strictly through centroid (x_bar, y_bar), NOT (0, 0)!'],
+                    ['trap', 'Regressing x on y gives slope b_xy = S_xy / S_yy != 1 / b_yx: their product b_yx * b_xy = r^2 <= 1 equals squared Pearson correlation!'],
+                ],
+            },
+            {
+                'title': 'Standard errors of slope sigma_b & intercept sigma_a (OL2)',
+                'items': [
+                    ['p', 'Notice b = sum_i c_i y_i is linear in y_i with weights c_i = (x_i - x_bar)/S_xx satisfying sum c_i^2 = 1/S_xx. Propagating variance gives:'],
+                    ['m', r'\sigma_y=\sqrt{\frac{\sum r_i^2}{n-2}},\quad \sigma_b=\frac{\sigma_y}{\sqrt{S_{xx}}},\quad \sigma_a=\sigma_y\sqrt{\frac{1}{n}+\frac{\bar{x}^2}{S_{xx}}}'],
+                    ['why', 'Look at n - 2 in residual scatter sigma_y: fitting TWO parameters (a, b) consumes 2 degrees of freedom (with just n = 2 points, line hits both exactly so residuals = 0)!'],
+                ],
+            },
+            {
+                'title': 'Worked full Olympiad exam drill (Paper P30)',
+                'items': [
+                    ['p', 'Data {(1, 2.1), (2, 3.9), (3, 6.2), (4, 7.8)} with known sigma_y = 0.2: here x_bar = 2.5, y_bar = 5.0, dx = {-1.5, -0.5, +0.5, +1.5}:'],
+                    ['m', r'S_{xx}=5.0,\ S_{xy}=9.70 \implies b=1.94,\quad a=0.15'],
+                    ['p', 'Uncertainties: sigma_b = 0.2 / sqrt(5) = 0.089, sigma_a = 0.2 * sqrt(0.25 + 6.25/5.0) = 0.2 * sqrt(1.50) = 0.245 -> y = (0.15 +- 0.25) + (1.94 +- 0.09) x!'],
+                    ['why', 'Design rule: placing half your trials near x_min and half near x_max maximizes S_xx (after verifying linearity with interior points)!'],
+                ],
+            },
+            {
+                'title': 'Through-origin slope & unequal error bars (WLS)',
+                'items': [
+                    ['p', '1. If physics GUARANTEES zero intercept (y = b x with zero offset verified), minimising sum (y_i - b x_i)^2 gives:'],
+                    ['m', r'b_{\mathrm{origin}} = \frac{\sum x_i y_i}{\sum x_i^2}, \qquad \sigma_{b,\mathrm{origin}} = \frac{\sigma_y}{\sqrt{\sum x_i^2}}'],
+                    ['p', '2. When error bars sigma_i vary from point to point (e.g. after taking ln y!), weight every point by inverse variance w_i = 1 / sigma_i^2:'],
+                    ['m', r'w_i = \sigma_i^{-2} \implies b = \frac{\sum w_i(x_i-\bar{x}_w)(y_i-\bar{y}_w)}{\sum w_i(x_i-\bar{x}_w)^2}'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 4, 'slug': 'Olympiad-04-chi-square',
+        'title': 'Chi-square goodness of fit, weighted mean & covariance',
+        'subtitle': 'Testing models quantitatively with chi^2/(n - p), optimal inverse-variance data fusion, and full correlated error propagation.',
+        'takeaway': 'A trustworthy fit of p parameters to n data points satisfies chi^2 ~ (n - p) +- sqrt(2(n - p)); combining measurements weights strictly by 1/sigma_i^2!',
+        'source': 'Source: units-measurements/Units-measurements.md OL3, P30(c) + Olympiad statistical analysis',
+        'diagrams': ['chi2_regimes', 'weighted_mean_demo'],
+        'cards': [
+            {
+                'title': 'Chi-square test statistic & degrees of freedom (OL3)',
+                'items': [
+                    ['p', 'For n independent Gaussian measurements y_i +- sigma_i fitted by a theoretical curve f(x_i; theta_1, ..., theta_p) having p adjustable parameters:'],
+                    ['m', r'\chi^2 = \sum_{i=1}^n \left(\frac{y_i - f(x_i)}{\sigma_i}\right)^2, \qquad \nu = n - p, \qquad \chi^2_\nu \equiv \frac{\chi^2}{\nu}'],
+                    ['why', 'Each standardised residual z_i = r_i / sigma_i ~ N(0, 1) contributes E[z_i^2] = 1, minus p fitted constraints: E[chi^2] = nu and SD(chi^2) = sqrt(2 nu)!'],
+                    ['p', 'Check P30(c): residuals {+0.01, -0.13, +0.23, -0.11} with sigma = 0.2 give chi^2 = 2.05 for nu = 4 - 2 = 2 (chi^2_nu = 1.03 ~ 1 -> textbook fit!).'],
+                ],
+            },
+            {
+                'title': 'Three diagnostic outcomes of reduced chi^2_nu',
+                'items': [
+                    ['p', '1. chi^2_nu ~ 1 (within 1 +- sqrt(2/nu)): model AND stated uncertainties sigma_i are mutually consistent.'],
+                    ['p', '2. chi^2_nu >> 1 (e.g. chi^2 = 45 for nu = 8): EITHER model is missing real physics (curvature / systematic drift) OR error bars sigma_i were underestimated!'],
+                    ['trap', '3. chi^2_nu << 1 (e.g. chi^2 = 0.4 for nu = 10): NOT "miraculously accurate data" — your error bars sigma_i are way too conservative (or data was overfitted/fudged)!'],
+                ],
+            },
+            {
+                'title': 'Optimal combination of independent labs (weighted mean)',
+                'items': [
+                    ['p', 'Two or more independent experiments measure the SAME physical constant with different precisions x_1 +- sigma_1, ..., x_k +- sigma_k. Minimising chi^2(mu) = sum (x_i - mu)^2 / sigma_i^2 gives:'],
+                    ['m', r'w_i = \frac{1}{\sigma_i^2}, \qquad \bar{x}_w = \frac{\sum w_i x_i}{\sum w_i}, \qquad \sigma_{\bar{x}_w} = \frac{1}{\sqrt{\sum w_i}} < \min_i \sigma_i'],
+                    ['why', 'Combined precision ALWAYS beats every individual experiment! If sigma_1 = 0.01 and sigma_2 = 0.10, Run 1 carries weight 100x larger than Run 2 — NEVER take unweighted mean (x1+x2)/2!'],
+                ],
+            },
+            {
+                'title': 'Correlated errors & covariance matrix formula',
+                'items': [
+                    ['p', 'Whenever two fitted quantities (such as OLS intercept a and slope b, with Cov(a, b) = -x_bar sigma_y^2 / S_xx < 0!) derive from the SAME dataset, use covariance C_xy = <dx dy>:'],
+                    ['m', r'\sigma_f^2 = \left(\frac{\partial f}{\partial x}\right)^2\sigma_x^2 + \left(\frac{\partial f}{\partial y}\right)^2\sigma_y^2 + 2\left(\frac{\partial f}{\partial x}\right)\left(\frac{\partial f}{\partial y}\right)\mathrm{Cov}(x, y)'],
+                    ['why', 'Look how nicely this explains extrapolating y_hat(x) = a + b x: plug Cov(a, b) in and cross-term cancels x_bar to give exact confidence fan:'],
+                    ['m', r'\sigma_{\hat{y}(x)} = \sigma_y\sqrt{\frac{1}{n} + \frac{(x - \bar{x})^2}{S_{xx}}}\ \ (\text{tightest right at centroid } x = \bar{x}\text{!})'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 5, 'slug': 'Olympiad-05-poisson-counting',
+        'title': 'Poisson counting statistics, background & dead time',
+        'subtitle': 'Exact sqrt(N) shot noise, rigorous background-subtraction formula (fixing P35c), optimal time splitting, and Geiger dead time.',
+        'takeaway': 'Subtracting background REQUIRES ADDING variances: sigma(R_net) = sqrt(R_tot / t_on + R_b / t_off); NEVER substitute R_net inside the square root!',
+        'source': 'Source: units-measurements/Units-measurements.md sec. 7.3, OL6, P16, P35 (audited & extended)',
+        'diagrams': ['poisson_vs_gauss', 'optimal_split'],
+        'cards': [
+            {
+                'title': 'Poisson event counts & the universal sqrt(N) law (OL6)',
+                'items': [
+                    ['p', 'Independent random point events at mean rate R over time t follow Poisson law P(k) = mu^k exp(-mu) / k! with mean mu = R t and exact standard deviation:'],
+                    ['m', r'\sigma_N = \sqrt{N}, \qquad \frac{\sigma_N}{N} = \frac{1}{\sqrt{N}}, \qquad R = \frac{N}{t} \pm \frac{\sqrt{N}}{t} = R \pm \sqrt{\frac{R}{t}}'],
+                    ['p', 'Worked OL6: N = 10,000 counts in 600 s gives 1% precision (16.67 +- 0.17 s^-1). Reaching 0.1% demands N = 10^6 counts -> 100x longer run (16.7 hours)!'],
+                    ['trap', 'CRITICAL TRAP: apply sqrt(.) ONLY to raw integer COUNTS N, NEVER to rate R! If 100 counts arrive in 10 s, R = 10 +- 1 s^-1 (NOT 10 +- sqrt(10) = 10 +- 3.16)!'],
+                ],
+            },
+            {
+                'title': 'Exact background subtraction (audit of Paper P35c!)',
+                'items': [
+                    ['p', 'Count source+background for t_on (observing N_tot = R_tot t_on) and pure background separately for t_off (observing N_b = R_b t_off):'],
+                    ['m', r'R_{\mathrm{net}} = \frac{N_{\mathrm{tot}}}{t_{\mathrm{on}}} - \frac{N_b}{t_{\mathrm{off}}}, \qquad \sigma(R_{\mathrm{net}}) = \sqrt{\frac{R_{\mathrm{tot}}}{t_{\mathrm{on}}} + \frac{R_b}{t_{\mathrm{off}}}} = \sqrt{\frac{R_s + R_b}{t_{\mathrm{on}}} + \frac{R_b}{t_{\mathrm{off}}}}'],
+                    ['why', 'Audit note on P35(c): with R_tot = 250/s (R_s = 200/s) and R_b = 50/s, if R_b is known with zero error then sigma(R_net) = sqrt(2500)/10 = 5.0/s; ONLY when R_b is ALSO measured for 10 s (N_b = 500) does variance become (2500 + 500)/10^2 -> 5.48/s!'],
+                ],
+            },
+            {
+                'title': 'Optimal beam-time split for fixed total lab time T',
+                'items': [
+                    ['p', 'Given fixed total detector time T = t_on + t_off, minimise variance V = R_tot / t_on + R_b / (T - t_on) with respect to t_on:'],
+                    ['m', r'-\frac{R_{\mathrm{tot}}}{t_{\mathrm{on}}^2} + \frac{R_b}{t_{\mathrm{off}}^2} = 0 \implies \frac{t_{\mathrm{on}}}{t_{\mathrm{off}}} = \sqrt{\frac{R_{\mathrm{tot}}}{R_b}}'],
+                    ['why', 'Clean physical limits: if signal >> background (R_tot >> R_b), spend almost all time on source; if weak signal sits atop huge background (R_tot ~ R_b), split 50% / 50%!'],
+                ],
+            },
+            {
+                'title': 'Detector dead time tau (non-paralysable model)',
+                'items': [
+                    ['p', 'After each registered click, a Geiger/scintillation counter stays blind for dead time tau. In 1 second it registers m clicks and is dead for total fraction m * tau:'],
+                    ['m', r'm = R_{\mathrm{true}}(1 - m\tau) \implies R_{\mathrm{true}} = \frac{m}{1 - m\tau}, \qquad m = \frac{R_{\mathrm{true}}}{1 + R_{\mathrm{true}}\tau}'],
+                    ['why', 'At intense rates R_true >> 1/tau, observed count rate saturates at ceiling 1/tau AND sub-Poisson anti-bunching breaks naive sqrt(N) statistics!'],
+                    ['p', 'Two-source lab calibration: measure m1, m2 separately and m12 together -> m1 + m2 > m12 reveals dead time tau directly without knowing R_true!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 6, 'slug': 'Olympiad-06-experiment-design',
+        'title': 'Olympiad experiment design: 0.1% g-budget & natural units',
+        'subtitle': 'End-to-end error budget engineering (OL5 / P32), systematic corrections on real pendulums, and symmetry scaling laws.',
+        'takeaway': 'In experiment design, list EVERY random AND systematic term in dg/g BEFORE touching equipment, and engineer every term well below ceiling!',
+        'source': 'Source: units-measurements/Units-measurements.md OL5, OL10, P27, P32, P36',
+        'diagrams': ['pendulum_budget_bars', 'amplitude_shift'],
+        'cards': [
+            {
+                'title': 'Engineering a 0.10% measurement of g (OL5, P32)',
+                'items': [
+                    ['p', 'Available gear: ruler (dL = 1 mm), stopwatch (dt = 0.01 s), string up to 2 m, steel bob. Target: dg / g < 0.10% from g = 4 pi^2 L / T^2:'],
+                    ['m', r'\frac{\Delta g}{g} = \frac{\Delta L}{L} + 2\frac{\Delta t_{\mathrm{sw}}}{N T} + 2\left(\frac{\theta_0^2}{16}\right)'],
+                    ['p', 'Design choices: 1. Max out length L = 2.000 m so dL/L = 1/2000 = 0.050%. 2. Now T = 2.84 s; time N = 50 continuous swings (142 s) so 2 dt/(N T) = 0.014%!'],
+                    ['p', '3. Restrict launch angle to theta_0 = 2 deg = 0.0349 rad so 2(theta_0^2/16) = 0.015%! Total budget = 0.050 + 0.014 + 0.015 = 0.079% < 0.10%!'],
+                ],
+            },
+            {
+                'title': 'Three hidden physical systematics in real pendulums',
+                'items': [
+                    ['p', 'To trust 0.1% accuracy (not merely precision!), account for three real-world physics corrections beyond point-mass vacuum theory:'],
+                    ['m', r'I_{\mathrm{pivot}} = m L^2 + \frac{2}{5} m r_{\mathrm{bob}}^2 \implies L_{\mathrm{eff}} = L_{\mathrm{cm}}\!\left(1 + \frac{2 r_{\mathrm{bob}}^2}{5 L_{\mathrm{cm}}^2}\right)'],
+                    ['m', r'g_{\mathrm{eff}} = g\left(1 - \frac{\rho_{\mathrm{air}}}{\rho_{\mathrm{bob}}}\right)\quad (0.015\%\ \mathrm{steel},\ 0.05\%\ \mathrm{glass})'],
+                    ['why', 'Plus time zero-crossings AT EQUILIBRIUM (fastest bob speed -> sharpest visual trigger!), NEVER at extreme turning points where v = 0!'],
+                ],
+            },
+            {
+                'title': 'Relativistic corrections via symmetry + dimensions (OL10, P36)',
+                'items': [
+                    ['p', 'How must momentum p = m v f(v/c) or rod length L = L0 g(v/c) behave at small speeds beta = v/c BEFORE invoking full Lorentz algebra?'],
+                    ['m', r'\mathbf{p} = m\mathbf{v}\,f\!\left(\frac{\mathbf{v}\cdot\mathbf{v}}{c^2}\right) = m\mathbf{v}\left(1 + \alpha_1\frac{v^2}{c^2} + O(\beta^4)\right)'],
+                    ['why', 'Spatial isotropy + smoothness at v = 0 forbids odd linear terms +-v/c in scalar factor f! Special relativity fixes alpha_1 = +1/2 for momentum (1% shift at v = 0.141 c, P36) and -1/2 for Lorentz contraction!'],
+                ],
+            },
+            {
+                'title': 'Natural units c = hbar = k_B = 1 (theoretical Olympiad tool)',
+                'items': [
+                    ['p', 'In particle/astrophysics Olympiad problems using natural units (hbar = c = k_B = 1), EVERY mechanical/thermal quantity collapses onto powers of ENERGY [E]:'],
+                    ['m', r'[M]=[T_{\mathrm{temp}}]=[p]=[E],\quad [L]=[t]=[E^{-1}],\quad [A]=[E^{-2}]'],
+                    ['why', 'To restore hbar and c at the end of any derivation, uniquely match [M, L, T]: e.g. energy density [u] = [E^4] restores to u ~ (k_B T)^4 / (hbar c)^3 (Stefan-Boltzmann T^4 scaling in ONE second)!'],
+                    ['p', 'Handy anchor: hbar c = 197.3 MeV fm = 197.3 eV nm!'],
+                ],
+            },
+        ],
+    },
+]
+
+
+def main():
+    (ROOT / 'sheets.json').write_text(json.dumps(SHEETS, indent=2) + '\n')
+    print(f"Wrote {len(SHEETS)} Units, Dimensions & Errors sheets ({sum(s['section']=='JEE' for s in SHEETS)} JEE + "
+          f"{sum(s['section']=='Olympiad' for s in SHEETS)} Olympiad) to sheets.json")
+
+
+if __name__ == '__main__':
+    main()

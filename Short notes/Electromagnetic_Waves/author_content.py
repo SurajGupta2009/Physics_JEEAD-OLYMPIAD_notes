@@ -1,0 +1,856 @@
+"""Teacher-authored content for Electromagnetic Waves short notes (18 A4 sheets: 12 JEE + 6 Olympiad).
+
+Every sheet has 4 dense, self-contained cards (prose + typeset equations + physical WHY + examiner WATCH)
+and 2 distinct analytic diagrams/graphs. Source chapters are read-only inputs and remain unchanged.
+"""
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parent
+
+SHEETS = [
+    # =========================================================================
+    # PART I — JEE MAIN + ADVANCED (12 SHEETS: JEE-01 .. JEE-12)
+    # =========================================================================
+    {
+        'section': 'JEE', 'part_page': 1, 'slug': 'JEE-01-ampere-paradox',
+        'title': 'Displacement current & the Ampere paradox',
+        'subtitle': 'Why magnetostatics breaks on a charging capacitor, how Gauss law restores continuity, and the single-surface rule.',
+        'takeaway': 'Evaluate Ic and Id across the SAME spanning surface of loop C; adding both from two surfaces double-counts one current.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.1, C1, Q1, Q17',
+        'diagrams': ['ampere_surfaces', 'flux_circuit'],
+        'cards': [
+            {
+                'title': 'Why static Ampere law breaks during charging',
+                'items': [
+                    ['p', 'Draw one circular loop C around the wire feeding a charging parallel-plate capacitor. Flat surface S1 cuts the wire (current Ic), whereas bulging surface S2 passes between the plates and cuts zero conduction current.'],
+                    ['m', r'\oint_C \mathbf{B}\cdot d\boldsymbol{\ell} = \mu_0(I_c + I_d), \qquad I_d = \varepsilon_0 \frac{d\Phi_E}{dt}'],
+                    ['why', 'One closed rim C cannot have two different circulations. Maxwell-Ampere repairs this by adding changing electric flux through whichever single surface spans C.'],
+                    ['trap', 'Never write Ic + Id = 2 Ic on gap surface S2: inside an ideal vacuum gap Ic = 0 and Id = Ic, while on S1 across the wire Id = 0 and Ic = Ic.'],
+                ],
+            },
+            {
+                'title': 'Charge conservation & the divergence check',
+                'items': [
+                    ['p', 'Because div(curl B) is identically zero for every smooth vector field, the magnetostatic law curl B = mu0 J forces div J = 0, contradicting charge accumulation on capacitor plates.'],
+                    ['m', r'\frac{\partial \rho}{\partial t} + \nabla\cdot\mathbf{J} = 0, \qquad \nabla\cdot\left(\mathbf{J} + \varepsilon_0\frac{\partial \mathbf{E}}{\partial t}\right) = 0'],
+                    ['why', 'Substituting Gauss law rho = eps0 div E makes the total effective current J + Jd strictly divergence-free everywhere, so all spanning surfaces give identical flux.'],
+                    ['p', 'Worked check (Q17): if signed electric flux grows at 4.00e8 V m/s across a fixed vacuum surface, Id = (8.85e-12)(4.00e8) = 3.54 mA.'],
+                ],
+            },
+            {
+                'title': 'Capacitor identities: Id = dq/dt = C dV/dt',
+                'items': [
+                    ['p', 'In the quasistatic parallel-plate model (plate separation d << radius a, variation time tau >> a/c), E = q/(eps0 A) is uniform across area A, so Phi_E = E A = q/eps0.'],
+                    ['m', r'I_d = \varepsilon_0 \frac{d(EA)}{dt} = \frac{dq}{dt} = I_c = C\frac{dV}{dt}'],
+                    ['why', 'Displacement current has the SI unit ampere and generates the exact same magnetic field as conduction current, even though no electrons cross the vacuum gap.'],
+                    ['trap', 'For AC drive V(t) = V0 sin(wt), electric flux and voltage peak at wt = pi/2 while Id = w C V0 cos(wt) peaks at wt = 0: Id leads V by 90 deg.'],
+                ],
+            },
+            {
+                'title': 'Steady DC, discharge & sign rules',
+                'items': [
+                    ['p', 'Link loop traversal and surface normal by the right-hand curl rule: if fingers curl along C, thumb sets the positive normal for BOTH conduction and displacement flux.'],
+                    ['m', r'\mathrm{Steady\ DC:}\ \frac{dV}{dt}=0 \Rightarrow I_d=0; \qquad \mathrm{Discharge:}\ I_d = \dot{q} < 0'],
+                    ['why', 'During capacitor discharge through a resistor, E decreases while E still points from + to - plate, so dPhi_E/dt < 0 reverses B alongside reversing wire current.'],
+                    ['trap', 'For moving plates at constant charge q, E = q/(eps0 A) stays fixed so Id = 0, even though plate voltage V = E d(t) is changing!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 2, 'slug': 'JEE-02-gap-field',
+        'title': 'Capacitor gap magnetic field & dielectrics',
+        'subtitle': 'Radial profile of B_phi inside and outside circular plates, rim continuity check, and bound polarisation current in matter.',
+        'takeaway': 'Inside circular plates B_phi rises linearly with r and peaks at rim r = a; in a dielectric, A dD/dt = Ic splits into vacuum + bound parts.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.2, C2, E1, E2, Q2, Q9, Q18',
+        'diagrams': ['gap_b_profile', 'dielectric_split'],
+        'cards': [
+            {
+                'title': 'Azimuthal B_phi inside and outside circular plates',
+                'items': [
+                    ['p', 'For circular plates of radius a carrying charging current Ic, a coaxial circle of radius r < a encloses fraction (pi r^2)/(pi a^2) = r^2/a^2 of the uniform gap flux.'],
+                    ['m', r'B_\phi(r)=\frac{\mu_0 I_c r}{2\pi a^2}\ (r\le a), \qquad B_\phi(r)=\frac{\mu_0 I_c}{2\pi r}\ (r\ge a)'],
+                    ['why', 'Plate spacing d cancels completely! On the symmetry axis r = 0 so B = 0; at rim r = a both formulas match cleanly at B_max = mu0 Ic / (2 pi a).'],
+                    ['p', 'Worked exemplar (E1): a = 0.050 m, Ic = 0.020 A gives B(0.02 m) = 32 nT, rim peak B(0.05 m) = 80 nT, and outside B(0.10 m) = 40 nT.'],
+                ],
+            },
+            {
+                'title': 'Macroscopic displacement current in a dielectric',
+                'items': [
+                    ['p', 'Fill the capacitor uniformly with linear nonmagnetic dielectric eps = kappa eps0. Free plate charge q_f sets D = q_f / A = eps0 E + P_pol across the gap.'],
+                    ['m', r'I_c = A\frac{dD}{dt} = \varepsilon_0 A\dot{E}\,(I_c/\kappa) + A\dot{P}_{\mathrm{pol}}\,\big((1 - 1/\kappa)I_c\big)'],
+                    ['why', 'Bound charges shift locally inside molecules, creating genuine polarisation current A dP_pol/dt without free electrons crossing the insulator.'],
+                    ['p', 'Worked split (E2): kappa = 5 at Ic = 15 mA gives total A dD/dt = 15 mA, split into 3 mA vacuum term + 12 mA polarisation current (sum = 15 mA).'],
+                ],
+            },
+            {
+                'title': 'Fixed-Ic vs fixed-(dV/dt) constraint trap',
+                'items': [
+                    ['p', 'Always check which variable the external circuit holds constant when comparing an empty capacitor to one filled with dielectric constant kappa (C2, Q2):'],
+                    ['m', r'\mathrm{Fixed}\ I_c:\ B_\phi\ \mathrm{unchanged};\quad \mathrm{Fixed}\ \dot{V}:\ I_d = \kappa C_0\dot{V} \Rightarrow B_\phi \propto \kappa'],
+                    ['why', 'At fixed current source Ic, dD/dt = Ic/A does not change so B_phi is untouched (dE/dt drops by kappa). At fixed voltage ramp dV/dt, current scales by kappa.'],
+                    ['trap', 'Never write eps0 A dE/dt = Ic inside a kappa > 1 dielectric: eps0 A dE/dt is only Ic / kappa, missing fraction (1 - 1/kappa) carried by bound charges (Q9).'],
+                ],
+            },
+            {
+                'title': 'Leaky resistor-capacitor & validity limits',
+                'items': [
+                    ['p', 'If an Ohmic medium of conductivity sigma and permittivity eps fills the gap under voltage V(t), free conduction current J_f = sigma E and displacement J_d = eps dE/dt coexist:'],
+                    ['m', r'\frac{|J_d|}{|J_f|} = \frac{\omega \varepsilon}{\sigma} = \omega R C'],
+                    ['why', 'At low frequencies (w << sigma/eps) conduction dominates; above relaxation frequency w_c = sigma/eps, displacement current wins.'],
+                    ['trap', 'Quasistatic formula B_phi = mu0 Ic r/(2 pi a^2) assumes w a << c; at microwave frequencies radial wave variations replace uniform E(t) by Bessel modes.'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 3, 'slug': 'JEE-03-maxwell-laws',
+        'title': 'All four Maxwell equations in vacuum & matter',
+        'subtitle': 'Integral and differential forms side by side, physical meaning of each law, and linear constitutive relations.',
+        'takeaway': 'Maxwell unites two divergence laws (sources) with two coupled curl laws (time-varying fields); no magnetic monopoles exist (div B = 0).',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.3',
+        'diagrams': ['four_laws_geometry', 'constitutive_map'],
+        'cards': [
+            {
+                'title': 'Microscopic (vacuum) Maxwell equations',
+                'items': [
+                    ['p', 'Every classical electromagnetic phenomenon in vacuum is governed by four coupled field laws linking total charge density rho and total current density J:'],
+                    ['m', r'\nabla\cdot\mathbf{E}=\frac{\rho}{\varepsilon_0},\qquad \nabla\cdot\mathbf{B}=0'],
+                    ['m', r'\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t},\qquad \nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}'],
+                    ['why', 'Gauss theorem turns div laws into closed-surface fluxes; Stokes theorem turns curl laws into line integrals around fixed loop boundaries.'],
+                ],
+            },
+            {
+                'title': 'Macroscopic laws in matter: separate free sources',
+                'items': [
+                    ['p', 'Absorbing bound charge into D = eps0 E + P and bound currents into H = B/mu0 - M isolates controllable free charge rho_f and free current J_f:'],
+                    ['m', r'\oint \mathbf{D}\cdot d\mathbf{A} = Q_f,\qquad \oint \mathbf{B}\cdot d\mathbf{A} = 0'],
+                    ['m', r'\oint \mathbf{E}\cdot d\boldsymbol{\ell} = -\frac{d\Phi_B}{dt},\qquad \oint \mathbf{H}\cdot d\boldsymbol{\ell} = I_f + \frac{d\Phi_D}{dt}'],
+                    ['trap', 'Notice asymmetry: magnetic Gauss law keeps B (never H, since div H = -div M != 0 at pole faces), while Faraday keeps E and B unmodified.'],
+                ],
+            },
+            {
+                'title': 'Model L constitutive closure & SI constants',
+                'items': [
+                    ['p', 'A homogeneous, isotropic, linear, lossless, nondispersive medium (Model L) closes Maxwell equations with positive constants eps = eps_r eps0 and mu = mu_r mu0:'],
+                    ['m', r'\mathbf{D}=\varepsilon\mathbf{E},\quad \mathbf{B}=\mu\mathbf{H},\quad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}\approx 3.00\times 10^8\ \mathrm{m/s}'],
+                    ['why', 'Check SI constants: eps0 = 8.85e-12 F/m, mu0 = 4 pi e-7 H/m give Z0 = sqrt(mu0/eps0) = 376.7 Ohm ~ 377 Ohm and 1/sqrt(mu0 eps0) = 2.998e8 m/s.'],
+                    ['trap', 'Do not plug DC dielectric constant kappa_static (e.g. water ~ 80) into optical index n ~ 1.33: heavy dipoles freeze out at optical frequencies!'],
+                ],
+            },
+            {
+                'title': 'Symmetry, causality & moving-loop warning',
+                'items': [
+                    ['p', 'In a travelling wave, "changing E creates B and changing B creates E" is only a verbal mnemonic — not a time lag! Both curls hold simultaneously at each (r, t).'],
+                    ['m', r'\mathcal{E}_{\mathrm{loop}} = \oint (\mathbf{E} + \mathbf{u}\times\mathbf{B})\cdot d\boldsymbol{\ell} = -\frac{d\Phi_B}{dt}'],
+                    ['why', 'In source-free space (rho_f = 0, J_f = 0), E and B become symmetric up to duality E -> v B, B -> -E/v, unlocking self-sustaining wave propagation.'],
+                    ['trap', 'Fixed-loop integral curl E = -dB/dt gives only transformer EMF; if wire segments move at velocity u through B, include u x B motional EMF separately.'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 4, 'slug': 'JEE-04-wave-equation',
+        'title': 'Curl-curl derivations, wave speed & refraction',
+        'subtitle': 'Deriving both vector wave equations, why charge-free homogeneity is essential, and wavelength vs frequency in matter.',
+        'takeaway': 'Wave speed is v = c / sqrt(mu_r eps_r); stationary boundaries keep frequency f strictly constant while scaling lambda = lambda_0 / n.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.4, C3, E3, Q3, Q10, Q19',
+        'diagrams': ['refractive_wavelength', 'speed_vs_index'],
+        'cards': [
+            {
+                'title': 'Deriving both 3D vector wave equations',
+                'items': [
+                    ['p', 'In homogeneous source-free Model L (rho_f = 0, J_f = 0, constant eps and mu), take the curl of Faraday law and substitute curl B = mu eps dE/dt:'],
+                    ['m', r'\nabla\times(\nabla\times\mathbf{E}) = \nabla(\nabla\cdot\mathbf{E}) - \nabla^2\mathbf{E} = -\mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2}'],
+                    ['m', r'\nabla^2\mathbf{E} = \mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2}, \qquad \nabla^2\mathbf{B} = \mu\varepsilon\frac{\partial^2\mathbf{B}}{\partial t^2}'],
+                    ['why', 'Charge-free constant eps forces div E = 0, killing grad(div E); div B = 0 kills grad(div B) identically in the parallel curl-of-Ampere derivation.'],
+                ],
+            },
+            {
+                'title': 'Phase speed & refractive index in matter',
+                'items': [
+                    ['p', 'Substitute any plane waveform F(z - v t): d^2F/dz^2 = F" and d^2F/dt^2 = v^2 F", forcing mu eps v^2 = 1. Compare with vacuum c = 1/sqrt(mu0 eps0):'],
+                    ['m', r'v = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{n}, \qquad n = \sqrt{\mu_r\varepsilon_r}'],
+                    ['p', 'Quick checks: if eps_r = 4 and mu_r = 9 (Q3), n = sqrt(36) = 6 so v = c/6 (never omit mu_r or the square root!). Nonmagnetic matter has mu_r = 1 so n = sqrt(eps_r).'],
+                    ['why', 'Dimensional check: [mu0 eps0] = (N A^-2)(C^2 N^-1 m^-2) = C^2/(A^2 m^2) = s^2/m^2, so [1/sqrt(mu0 eps0)] = m/s automatically!'],
+                ],
+            },
+            {
+                'title': 'Refraction: frequency stays fixed, wavelength shrinks',
+                'items': [
+                    ['p', 'Boundary fields at a stationary interface must match at EVERY instant t, forcing exp(-i w t) to carry identical angular frequency w in both media (E3, Q19):'],
+                    ['m', r'f_{\mathrm{med}} = f_0, \qquad \lambda_{\mathrm{med}} = \frac{v}{f_0} = \frac{\lambda_0}{n}, \qquad k_{\mathrm{med}} = n k_0'],
+                    ['p', 'Worked exemplar (E3): f = 6.00e14 Hz (lambda_0 = 500 nm green) enters nonmagnetic glass eps_r = 2.25 (n = 1.50): v = 2.00e8 m/s, lambda = 333 nm, colour stays 600 THz!'],
+                    ['trap', 'Never classify a wave inside glass with lambda = 333 nm as "ultraviolet": spectral bands and photon energy E = h f depend on f (or vacuum lambda_0), never lambda_med.'],
+                ],
+            },
+            {
+                'title': 'Hidden coupling & inhomogeneous-medium trap',
+                'items': [
+                    ['p', 'Six scalar components (Ex, Ey, Ez, Bx, By, Bz) each satisfy the wave equation, yet you CANNOT pick them independently (Q10):'],
+                    ['m', r'\nabla\cdot(\varepsilon\mathbf{E})=0 \implies \nabla\cdot\mathbf{E} = -\frac{\mathbf{E}\cdot\nabla\varepsilon}{\varepsilon} \neq 0'],
+                    ['why', 'In graded-index fibres (eps = eps(r)), div E != 0 restores the extra grad(div E) term so simple decoupled wave equations fail (C3).'],
+                    ['trap', 'Even in vacuum, Ex = E0 sin(kx - wt) is ILLEGAL because div E = dEx/dx = k E0 cos(kx - wt) != 0 violates Gauss law in charge-free space!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 5, 'slug': 'JEE-05-plane-wave',
+        'title': 'Plane-wave kinematics, phase & right-handed triad',
+        'subtitle': 'Reading k and w with correct signs, reconstructing B from E without sign mistakes, and testing valid Maxwell fields.',
+        'takeaway': 'Read direction k_hat from constant phase first, verify k . E = 0, then compute B = (k_hat x E) / v; never use c when v = c / n.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.5, C4, E4, Q4, Q11, Q20, Q30',
+        'diagrams': ['triad_wave', 'triad_cross'],
+        'cards': [
+            {
+                'title': 'Reading propagation vector k & speed from phase',
+                'items': [
+                    ['p', 'Set phase phi(r, t) = k . r - w t = constant (or w t - k . r = constant): differentiating gives k . dr/dt = w, so crests move along +k_hat at speed v = w/|k|.'],
+                    ['m', r'\phi = k_x x + k_y y + k_z z \mp \omega t \implies \hat{\mathbf{k}} = \pm\frac{(k_x, k_y, k_z)}{\sqrt{k_x^2 + k_y^2 + k_z^2}}'],
+                    ['why', 'Opposite signs on space and time (kz - wt or wt - kz) mean travel in +z; SAME signs (kz + wt) mean travel in -z! Always check sign first.'],
+                    ['p', 'Standard links: k = 2 pi / lambda, w = 2 pi f, T = 1/f, and v = w / k = f lambda = c / sqrt(mu_r eps_r).'],
+                ],
+            },
+            {
+                'title': 'Transversality & exact vector link B = (k_hat x E)/v',
+                'items': [
+                    ['p', 'Apply nabla -> i k to all four source-free Maxwell equations for a single monochromatic plane wave in homogeneous Model L:'],
+                    ['m', r'\mathbf{k}\cdot\mathbf{E}=0,\quad \mathbf{k}\cdot\mathbf{B}=0,\quad \mathbf{B}=\frac{1}{v}(\hat{\mathbf{k}}\times\mathbf{E}),\quad E_0 = v B_0'],
+                    ['why', '(E_hat, B_hat, k_hat) form a right-handed orthonormal triad at every instant: E x B always points along +k_hat because real factor 1/v > 0 keeps E and B in phase!'],
+                    ['trap', 'In a dielectric of index n > 1, E0 = v B0 = (c/n) B0 (Q11, Q30): blindly writing B0 = E0 / c underestimates magnetic amplitude by factor n!'],
+                ],
+            },
+            {
+                'title': 'Worked vector reconstructions without guesswork',
+                'items': [
+                    ['p', 'Exemplar E4: in vacuum E = 60 cos(2z - 6.00e8 t) x_hat (SI). Here k = +2 z_hat, w = 6.00e8 rad/s -> v = w/k = 3.00e8 m/s = c along +z_hat.'],
+                    ['m', r'\mathbf{B} = \frac{\hat{\mathbf{z}}\times\hat{\mathbf{x}}}{c} E = (2.00\times 10^{-7}\ \mathrm{T})\cos(2z - 6.0\times 10^8 t)\,\hat{\mathbf{y}}'],
+                    ['p', 'Cross-product drill (C4, Q4): if wave moves along -x_hat and E points along +z_hat, B_hat = (-x_hat) x (+z_hat) = +y_hat. Verify: E_hat x B_hat = z x y = -x_hat!'],
+                    ['why', 'Half a cycle later both E and B flip sign simultaneously (-E) x (-B) = +(E x B), so energy continues flowing along -x_hat without reversal.'],
+                ],
+            },
+            {
+                'title': 'Four-step validity test for candidate exam fields',
+                'items': [
+                    ['p', 'JEE Advanced frequently offers 4 vector expressions and asks which represents a valid plane EM wave in charge-free space. Test in exact order:'],
+                    ['m', r'(1)\ \mathbf{k}\cdot\mathbf{E}_0 = 0,\quad (2)\ \mathbf{k}\cdot\mathbf{B}_0 = 0,\quad (3)\ \mathbf{B}_0 = \frac{\hat{\mathbf{k}}\times\mathbf{E}_0}{v},\quad (4)\ \frac{\omega}{k} = v'],
+                    ['why', 'Any failure in steps 1-4 disqualifies the candidate immediately. E.g. E = E0 sin(kx - wt) (x_hat + y_hat) has k = k x_hat, so k . E0 = k E0 != 0 -> INVALID!'],
+                    ['trap', 'For tilted wave vector k = 3 x_hat + 4 y_hat, orthogonality means 3 Ex + 4 Ey = 0, so E0 proportional to (4 x_hat - 3 y_hat) IS valid!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 6, 'slug': 'JEE-06-polarisation',
+        'title': 'Polarisation states, unpolarised light & Malus law',
+        'subtitle': 'Superposing orthogonal transverse modes, linear/circular/elliptical criteria, and polaroid analyser chains.',
+        'takeaway': 'Polarisation tracks the transverse E vector; unpolarised light transmits I0/2 through the first ideal polariser and I_prev cos^2(theta) thereafter.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.6 + polaroid bridge to Wave Optics',
+        'diagrams': ['lissajous_states', 'malus_curve'],
+        'cards': [
+            {
+                'title': 'Linear, circular & elliptical polarisation criteria',
+                'items': [
+                    ['p', 'Superpose two orthogonal transverse plane waves propagating along +z with phase difference delta (where phi = kz - wt):'],
+                    ['m', r'\mathbf{E} = E_{0x}\cos\phi\,\hat{\mathbf{x}} + E_{0y}\cos(\phi + \delta)\,\hat{\mathbf{y}}, \qquad E_z = B_z = 0'],
+                    ['p', 'Case 1: delta = m pi -> straight line of slope (-1)^m E_0y/E_0x (linear). Case 2: E_0x = E_0y and delta = +-pi/2 -> circle Ex^2 + Ey^2 = E0^2. All others -> ellipse.'],
+                    ['why', 'Even for circular/elliptical waves, instantaneous B = (z_hat x E)/v still has |B| = |E|/v and stays perpendicular to E at every instant!'],
+                ],
+            },
+            {
+                'title': 'Unpolarised light & Malus cos^2(theta) law',
+                'items': [
+                    ['p', 'Natural thermal/lamp light consists of rapid random jumps in phase delta, sweeping all transverse directions equally: <cos^2(theta)> = 1/2.'],
+                    ['m', r'I_{\mathrm{after\ 1st}} = \frac{1}{2}I_0, \qquad I_{\mathrm{after\ next}} = I_{\mathrm{in}}\cos^2\theta'],
+                    ['why', 'An ideal linear polaroid projects electric amplitude onto pass axis p_hat: E_trans = E_in cos(theta), and squaring field amplitude gives cos^2(theta) in intensity.'],
+                    ['trap', 'Measure theta between consecutive polaroid pass axes (or between incoming E direction and pass axis) — if a problem states angle to the block axis, use sin^2!'],
+                ],
+            },
+            {
+                'title': 'Crossed polaroids + rotating middle sheet',
+                'items': [
+                    ['p', 'Place two crossed polaroids P1 (0 deg) and P3 (90 deg), then insert middle polaroid P2 at angle theta to P1 for incident unpolarised intensity I0:'],
+                    ['m', r'I_{\mathrm{out}} = \frac{I_0}{2}\cos^2\theta \cos^2(90^\circ - \theta) = \frac{I_0}{8}\sin^2(2\theta)'],
+                    ['why', 'At theta = 45 deg, I_out peaks at I0 / 8 (non-zero even though P1 and P3 are orthogonal!) because P2 projects a fresh component along 45 deg.'],
+                    ['p', 'Rotation check: in one full 2 pi revolution of P2, sin^2(2 theta) hits 4 maxima (at 45, 135, 225, 315 deg) and 4 zeros (0, 90, 180, 270 deg).'],
+                ],
+            },
+            {
+                'title': 'Circular-wave intensity & near-field warning',
+                'items': [
+                    ['p', 'Compare a linearly polarised wave E = E0 cos(phi) x_hat against a circularly polarised wave E = E_c (cos(phi) x_hat + sin(phi) y_hat) of constant magnitude E_c:'],
+                    ['m', r'I_{\mathrm{lin}} = \frac{E_0^2}{2 Z}, \qquad I_{\mathrm{circ}} = \frac{E_{0x}^2 + E_{0y}^2}{2 Z} = \frac{E_c^2}{Z}'],
+                    ['trap', 'In circular polarisation |E(t)| = E_c is constant in time (never drops to zero!), so mean energy density is eps E_c^2 without the 1/2 factor!'],
+                    ['trap', 'Longitudinal E components DO exist inside waveguided TM modes, plasma oscillations, and electrostatic near fields — just never in a vacuum plane wave.'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 7, 'slug': 'JEE-07-poynting',
+        'title': 'Field energy density & Poynting theorem',
+        'subtitle': 'Stored electric/magnetic energy densities, exact curl derivation of energy flux S = E x H, and travelling-wave equipartition.',
+        'takeaway': 'In a single travelling plane wave uE = uB at EVERY instant (both peak and vanish together), giving S = (E x B)/mu = u v k_hat.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.7-2.8, Q11',
+        'diagrams': ['poynting_box', 'energy_cycle'],
+        'cards': [
+            {
+                'title': 'Electric & magnetic energy densities',
+                'items': [
+                    ['p', 'From parallel-plate storage U = (1/2) C V^2 / (A d) and solenoid storage U = (1/2) L I^2 / (A l), linear nondispersive media store local field energy density:'],
+                    ['m', r'u_E = \frac{1}{2}\varepsilon E^2, \qquad u_B = \frac{B^2}{2\mu}, \qquad u = u_E + u_B'],
+                    ['why', 'Both terms have SI dimensions J/m^3 = N/m^2 = Pa (identical dimensions to pressure!). Total field energy in volume V is integral of u dV.'],
+                    ['trap', 'Do not apply u = (1/2) eps E^2 blindly inside ferromagnetic hysteresis loops or strongly dispersive media near resonances where d(w eps)/dw enters.'],
+                ],
+            },
+            {
+                'title': 'Poynting vector & exact local conservation law',
+                'items': [
+                    ['p', 'Apply vector identity div(E x H) = H . (curl E) - E . (curl H) and substitute Faraday + Maxwell-Ampere laws for constant real eps, mu:'],
+                    ['m', r'\mathbf{S} = \mathbf{E}\times\mathbf{H} = \frac{\mathbf{E}\times\mathbf{B}}{\mu}, \qquad \frac{\partial u}{\partial t} + \nabla\cdot\mathbf{S} = -\mathbf{J}_f\cdot\mathbf{E}'],
+                    ['why', 'Integrating over fixed volume V says: rate of loss of stored EM energy (-dU/dt) equals outward power flux oint S . dA PLUS mechanical/Ohmic power J_f . E on charges.'],
+                    ['p', 'Units check: [E][H] = (V/m)(A/m) = W/m^2 (power per unit area normal to S). In a DC wire carrying I across voltage V, radial S feeds I^2 R heat from outside!'],
+                ],
+            },
+            {
+                'title': 'Instantaneous equipartition in a single plane wave',
+                'items': [
+                    ['p', 'Substitute B = E / v and v^-2 = mu eps into uB for one travelling plane wave in homogeneous source-free Model L (Q11):'],
+                    ['m', r'u_B = \frac{(E/v)^2}{2\mu} = \frac{\mu\varepsilon E^2}{2\mu} = \frac{1}{2}\varepsilon E^2 = u_E \implies u = \varepsilon E^2 = \frac{B^2}{\mu}'],
+                    ['why', 'Unlike an LC circuit or standing string where kinetic/magnetic peak when potential/electric is zero, a travelling wave carries uE and uB IN PHASE at every (r, t)!'],
+                    ['trap', 'Equipartition uE = uB holds for ONE travelling wave, NOT for static fields, near fields, or standing waves (where E nodes sit at B antinodes!).'],
+                ],
+            },
+            {
+                'title': 'Transport velocity link: S = u v k_hat',
+                'items': [
+                    ['p', 'Combine |S| = E B / mu = E^2 / (mu v) with total density u = eps E^2 and mu eps = 1/v^2 for any single plane wave waveform f(kz - wt):'],
+                    ['m', r'\mathbf{S}(z,t) = u(z,t)\,v\,\hat{\mathbf{k}}'],
+                    ['why', 'In time dt, a cylinder of base area A and length v dt sweeps all energy inside volume A (v dt) across surface A: dU = u A v dt -> flux S = dU/(A dt) = u v.'],
+                    ['p', 'Averaging over one period preserves the exact transport identity: mean intensity I = <S> = v <u> (in vacuum: I = c <u>, so <u> = I / c).'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 8, 'slug': 'JEE-08-intensity',
+        'title': 'Peak vs RMS amplitude, impedance & 1/r^2 scaling',
+        'subtitle': 'All six equivalent intensity expressions, vacuum impedance Z0 = 377 Ohm, and point-source vs collimated beam scaling.',
+        'takeaway': 'I = E0^2/(2Z) = E_rms^2/Z = v <u>; for an isotropic point source I ~ 1/r^2 so E0 and B0 drop as 1/r, whereas a collimated laser keeps I constant.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.8, C5, E5, Q5, Q21, Q22, Q32',
+        'diagrams': ['inverse_square', 'peak_rms_bars'],
+        'cards': [
+            {
+                'title': 'All equivalent intensity formulas in one chain',
+                'items': [
+                    ['p', 'Define wave impedance Z = E/H = mu v = sqrt(mu/eps) = Z0 sqrt(mu_r/eps_r). Since <sin^2(phi)> = 1/2, E_rms = E0/sqrt(2) and B_rms = B0/sqrt(2):'],
+                    ['m', r'I = \langle S\rangle = \frac{1}{2}\varepsilon v E_0^2 = \frac{E_0 B_0}{2\mu} = \frac{v B_0^2}{2\mu} = \frac{E_0^2}{2 Z} = \frac{E_{\mathrm{rms}}^2}{Z} = v\langle u\rangle'],
+                    ['why', 'Notice how Z unifies electricity and optics: I = E_rms^2 / Z mirrors resistor power V_rms^2 / R with Z0 = 377 Ohm in vacuum (Z = Z0 / n if mu_r = 1).'],
+                    ['trap', 'Never average before multiplying (C5, Q12): <E> = 0 and <B> = 0, yet <E x B> = (E0 B0 / 2) k_hat > 0 because E and B reverse together every half-period!'],
+                ],
+            },
+            {
+                'title': 'Worked peak vs RMS & energy-density drills',
+                'items': [
+                    ['p', 'Exemplar E5: vacuum linear wave with peak E0 = 120 V/m has I = 0.5 * (8.85e-12)(3.0e8)(120)^2 = 19.1 W/m^2, <u> = I/c = 63.7 nJ/m^3, <uE> = 31.9 nJ/m^3.'],
+                    ['m', r'\langle u\rangle = \varepsilon E_{\mathrm{rms}}^2 = \frac{1}{2}\varepsilon E_0^2, \qquad \langle u_E\rangle = \langle u_B\rangle = \frac{1}{2}\varepsilon E_{\mathrm{rms}}^2 = \frac{1}{4}\varepsilon E_0^2'],
+                    ['p', 'Paper checks (Q5, Q21, Q22): E_rms = 30.0 V/m in vacuum gives I = 30^2 / 377 = 2.39 W/m^2 (NO extra 1/2!). Beam I = 240 W/m^2 gives <u> = 240 / 3e8 = 0.800 uJ/m^3.'],
+                    ['trap', '#1 exam error: inserting an extra 1/2 into E_rms^2 / Z0 or forgetting 1/2 in eps0 c E0^2 / 2! Always circle whether question data gives PEAK or RMS!'],
+                ],
+            },
+            {
+                'title': 'Point source vs line source vs collimated laser',
+                'items': [
+                    ['p', 'Energy conservation across enclosing surfaces in lossless space fixes how intensity I and peak amplitude E0 scale with distance r:'],
+                    ['m', r'\mathrm{Point:}\ I=\frac{\mathcal{P}}{4\pi r^2}\ (E_0\propto r^{-1});\ \ \mathrm{Line:}\ I=\frac{\mathcal{P}}{2\pi r L}\ (E_0\propto r^{-1/2})'],
+                    ['p', 'Worked beacon (Q32): P = 120 W isotropic at r = 3.00 m gives I = 120/(36 pi) = 1.061 W/m^2, E0 = sqrt(2 I Z0) = 28.3 V/m, B0 = E0/c = 94.2 nT.'],
+                    ['why', 'For an ideal parallel laser beam of cross-section pi w^2, I = P/(pi w^2) and E0 remain independent of distance r (neglecting diffraction).'],
+                ],
+            },
+            {
+                'title': 'Lamp efficiency & photon-flux bridge',
+                'items': [
+                    ['p', 'If a bulb of electrical input P_elec converts fraction eta to monochromatic radiation of wavelength lambda_0 isotropically, photon flux phi_ph (photons / m^2 s) at distance r is:'],
+                    ['m', r'I(r) = \frac{\eta \mathcal{P}_{\mathrm{elec}}}{4\pi r^2}, \qquad \Phi_{\mathrm{photon}} = \frac{I(r)}{h c / \lambda_0} = \frac{\eta \mathcal{P}_{\mathrm{elec}} \lambda_0}{4\pi r^2 h c}'],
+                    ['why', 'Links classical Maxwell wave amplitude E0 = sqrt(2 I Z0) directly to quantum counting rate N_dot = Phi_photon A_det cos(theta) on a detector.'],
+                    ['trap', 'If light reflects off a plane mirror behind the point source, add the image source at image distance r_img (coherent phase if laser, intensities if thermal)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 9, 'slug': 'JEE-09-momentum-pressure',
+        'title': 'Field momentum & flat-surface radiation pressure',
+        'subtitle': 'Maxwell momentum density g = S/c^2, why cos^2(theta) appears for tilted plates, tangential shear force, and partial reflection.',
+        'takeaway': 'Actual flat area A_s at angle theta feels normal pressure P_n = (1+R)(I/c)cos^2(theta) and shear (1-R)(I/c)sin(theta)cos(theta); if P_hit is given, drop ONE cosine!',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.9-2.10, C6, E6, E7, Q6, Q12, Q13, Q23-Q25, Q33',
+        'diagrams': ['oblique_sail', 'pressure_angle'],
+        'cards': [
+            {
+                'title': 'Field momentum density & pulse impulse',
+                'items': [
+                    ['p', 'Combining Lorentz force density rho E + J x B with Maxwell stress tensor T_ij in vacuum identifies electromagnetic momentum density g and collimated pulse momentum p:'],
+                    ['m', r'\mathbf{g} = \varepsilon_0(\mathbf{E}\times\mathbf{B}) = \frac{\mathbf{S}}{c^2}, \qquad \mathbf{p}_{\mathrm{pulse}} = \frac{U}{c}\hat{\mathbf{k}}'],
+                    ['p', 'Pulse impulse (E6, Q23): a collimated 9.00 mJ pulse hitting a flat mirror normally reverses momentum +U/c -> -U/c, delivering J = 2 U/c = 6.00e-11 N s (absorber: 3.00e-11 N s).'],
+                    ['trap', 'Isotropic or counter-propagating equal beams have total energy U > 0 yet net vector momentum p = 0 (Q12): p = U/c holds ONLY for unidirectional vacuum radiation!'],
+                ],
+            },
+            {
+                'title': 'Flat oblique surface: why TWO cosines appear',
+                'items': [
+                    ['p', 'Let uniform vacuum beam of intensity I strike flat area A_s at angle theta to surface normal n_hat. Energy hitting patch in dt is dU = I (A_s cos theta) dt:'],
+                    ['m', r'\mathcal{P}_{\mathrm{hit}} = I A_s \cos\theta, \qquad P_n = (1 + R)\frac{I}{c}\cos^2\theta \quad (T = 0)'],
+                    ['why', 'First cos(theta) shrinks intercepted beam cross-section; second cos(theta) projects normal momentum (1 + R)(dU/c)cos(theta). Dividing by actual area A_s gives cos^2(theta)!'],
+                    ['trap', 'CRITICAL TRAP (C6, Q25): if a question ALREADY gives intercepted power P_hit (e.g. 12 W beam all landing on a 60 deg mirror), area projection is DONE: F_n = 2(P_hit/c)cos(theta) = 40 nN!'],
+                ],
+            },
+            {
+                'title': 'Tangential shear traction & transparent sheets',
+                'items': [
+                    ['p', 'Decompose incident ray unit vector k_hat = cos(theta) n_hat + sin(theta) t_hat (inward normal n_hat, surface tangent t_hat). Specular rays keep tangential momentum unchanged, absorbed rays transfer it all (Q13, Q33):'],
+                    ['m', r'F_n = (1 + R - T)\frac{I A_s}{c}\cos^2\theta, \qquad F_t = \mathcal{A}\frac{I A_s}{c}\sin\theta\cos\theta'],
+                    ['why', 'For a pure absorber (A = 1, R = T = 0), sqrt(F_n^2 + F_t^2) = I A_s cos(theta)/c points straight along incoming beam k_hat, NOT normal to the plate!'],
+                    ['p', 'Worked sail (E7): A_s = 0.020 m^2, R = 0.60, T = 0, I = 900 W/m^2 at 60 deg -> P_n = 1.60 * 900 * 0.25 / 3e8 = 1.20 uPa and F_n = 24.0 nN.'],
+                ],
+            },
+            {
+                'title': 'Emissive recoil & laser levitation balance',
+                'items': [
+                    ['p', 'A horizontal mirror disc of mass m levitates atop a vertical upward laser beam of total power P_beam (all hitting disc, normal incidence R = 1) when:'],
+                    ['m', r'\frac{2\mathcal{P}_{\mathrm{beam}}}{c} = m g \implies \mathcal{P}_{\mathrm{beam}} = \frac{1}{2} m g c'],
+                    ['why', 'Because c = 3e8 m/s is huge, levitating just m = 1 mg requires P = 0.5 * 1e-6 * 9.8 * 3e8 = 1.47 kW of continuous reflected optical power!'],
+                    ['trap', 'If a black plate heats up and re-radiates equally from BOTH faces, thermal emission recoils cancel; if insulated on one back face, isotropic emission adds recoil!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 10, 'slug': 'JEE-10-em-spectrum',
+        'title': 'Electromagnetic spectrum, sources & applications',
+        'subtitle': 'Adopted classroom wavelength cutoffs, physical emission mechanisms, RADAR ranging, and origin-overlap traps.',
+        'takeaway': 'All bands obey c = f lambda_0 in vacuum; X-ray vs gamma-ray naming follows physical origin (electronic vs nuclear), so their energies overlap.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.12, E9, E10, Q7, Q8, Q15, Q27, Q28, Q35',
+        'diagrams': ['spectrum_ladder', 'photon_energy_line'],
+        'cards': [
+            {
+                'title': 'Seven spectral bands & six memorisable cutoffs',
+                'items': [
+                    ['p', 'In decreasing vacuum wavelength lambda_0 (increasing frequency f = c/lambda_0 and photon energy E_gamma = h f = 1240 eV nm / lambda_0):'],
+                    ['m', r'\lambda_0\ \mathrm{cuts:}\ 1\,\mathrm{m},\ 1\,\mathrm{mm},\ 700\,\mathrm{nm},\ 400\,\mathrm{nm},\ 10\,\mathrm{nm},\ 0.01\,\mathrm{nm}'],
+                    ['why', 'Corresponding frequencies are 300 MHz, 300 GHz, 429 THz, 750 THz, 30 PHz, and 30 EHz. Quick microwave rule: f(GHz) * lambda_0(cm) = 30 (2.4 GHz -> 12.5 cm, Q7)!'],
+                    ['trap', 'Band boundaries are human conventions, NOT sudden changes in Maxwell laws; all seven travel at identical speed c = 299,792,458 m/s in vacuum (Q8).'],
+                ],
+            },
+            {
+                'title': 'Production mechanisms (NCERT + JEE Main/Adv core)',
+                'items': [
+                    ['p', 'Match every band to its primary physical generator: Radio = accelerated charges in conducting antennas / LC circuits; Microwave = klystron, magnetron, Gunn diode.'],
+                    ['p', 'Infrared = hot bodies & molecular vibrational-rotational transitions; Visible = outer valence electronic jumps; UV = inner valence jumps, mercury lamps, excimer lasers (193 nm LASIK, Q15).'],
+                    ['m', r'\mathrm{X\text{-}ray:}\ e^-\ \mathrm{decel\ /\ inner\ shells};\quad \gamma\mathrm{\text{-}ray:}\ \mathrm{nuclei\ /\ } e^+e^-'],
+                    ['trap', 'Origin test (E10): a 100 keV photon (lambda_0 = 0.0124 nm) emitted by a decelerating electron is an X-ray; the exact same 100 keV photon from a nucleus is a gamma ray!'],
+                ],
+            },
+            {
+                'title': 'RADAR echo ranging, greenhouse & microwave heating',
+                'items': [
+                    ['p', 'A pulse emitted at t = 0 reflects off a target at range r and returns after echo delay dt: total path traveled by the wave is 2 r, NOT r (E9, Q27, Q35):'],
+                    ['m', r'r_{\mathrm{radar}} = \frac{c\,\Delta t}{2}, \qquad E_\gamma(\mathrm{eV}) = \frac{1240}{\lambda_0(\mathrm{nm})}'],
+                    ['p', 'Worked numbers: dt = 8.00 us gives r = 1200 m (Q27); KrF UV laser at 248 nm has E_gamma = 1240/248 = 5.00 eV (Q28); Cu-target X-ray at 0.100 nm has 12.4 keV (Q35).'],
+                    ['why', 'Microwave ovens drive polar water molecules via oscillating E torques (dielectric loss, NOT simple sharp gas-phase resonance); greenhouse gases absorb/re-emit thermal IR (~10 um).'],
+                ],
+            },
+            {
+                'title': 'Atmospheric windows, ozone & ionospheric reflection',
+                'items': [
+                    ['p', 'Stratospheric ozone O3 absorbs solar UV-B/C (~200-310 nm), protecting life; ordinary glass transmits visible light but blocks most thermal IR and short UV.'],
+                    ['m', r'f_{\mathrm{crit,iono}} \approx 9\sqrt{N_{\max}(\mathrm{m}^{-3})}\ \mathrm{Hz}'],
+                    ['why', 'Shortwave HF skywaves (~3-30 MHz) undergo total internal reflection off ionospheric free electrons, whereas VHF/TV/microwaves (> 40 MHz) pierce straight through to satellites!'],
+                    ['trap', 'Do not claim "thermal bodies emit ONLY infrared": hot filaments and the 5800 K Sun emit thermal radiation peaking in the visible while spanning IR through UV!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 11, 'slug': 'JEE-11-dipole-radiation',
+        'title': 'LC oscillators, accelerating charges & dipole antennas',
+        'subtitle': 'Why acceleration is required for radiation, Hertzian dipole angular pattern sin^2(theta), and w^4 Rayleigh/antenna scaling.',
+        'takeaway': 'Stationary charges give E ~ 1/r^2, steady currents give B ~ 1/r^2; ONLY accelerating charges produce 1/r fields that carry power to infinity.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.8, 2.12 + dipole bridge',
+        'diagrams': ['dipole_lobes', 'omega4_scaling'],
+        'cards': [
+            {
+                'title': 'Lumped LC tank vs open radiating dipole',
+                'items': [
+                    ['p', 'In an ideal closed LC circuit, Kirchhoff loop balance L d^2q/dt^2 + q/C = 0 sets the oscillation frequency of the carrier wave:'],
+                    ['m', r'\omega_0 = \frac{1}{\sqrt{LC}}, \qquad f_0 = \frac{1}{2\pi\sqrt{LC}}, \qquad \lambda_0 = 2\pi c\sqrt{LC}'],
+                    ['why', 'Opening the capacitor plates out into a straight half-wave rod of length L_ant ~ lambda_0 / 2 lets oscillating fields detach into space efficiently instead of staying trapped.'],
+                    ['trap', 'A sub-wavelength loop/rod of size d << lambda_0 is a terrible radiator unless matched: efficient dipole antennas use L_ant = lambda_0 / 2 or quarter-wave monopole lambda_0 / 4!'],
+                ],
+            },
+            {
+                'title': 'Why ONLY accelerated charges radiate energy',
+                'items': [
+                    ['p', 'Integrate Poynting flux over a sphere of huge radius r -> infinity: surface area grows as 4 pi r^2, so nonzero total power P_rad requires S ~ 1/r^2 and hence |E|, |B| ~ 1/r:'],
+                    ['m', r'E_{\mathrm{stat}}\propto r^{-2}\Rightarrow S\propto r^{-4}\to 0;\qquad E_{\mathrm{rad}}\propto \frac{q a_\perp}{r}\Rightarrow P_{\mathrm{rad}}>0'],
+                    ['why', 'A charge moving at constant velocity v carries its convective field along with it without shedding energy (verified immediately by jumping to its rest frame!).'],
+                    ['p', 'Larmor power formula for a single non-relativistic point charge q with acceleration a: P_rad = mu0 q^2 a^2 / (6 pi c).'],
+                ],
+            },
+            {
+                'title': 'Hertzian oscillating electric dipole pattern',
+                'items': [
+                    ['p', 'For a short dipole p(t) = p0 cos(wt) z_hat along the z-axis (size d << lambda << r), far-field intensity depends on polar angle theta from z_hat and frequency w:'],
+                    ['m', r'I(r,\theta) = \frac{\mu_0 p_0^2 \omega^4}{32\pi^2 c}\,\frac{\sin^2\theta}{r^2}, \qquad \mathcal{P}_{\mathrm{tot}} = \frac{\mu_0 p_0^2 \omega^4}{12\pi c}'],
+                    ['why', 'Along the dipole axis (theta = 0 or pi), accelerated charges move purely radially toward the observer, so transverse projection a_perp = a sin(theta) vanishes: ZERO axial radiation!'],
+                    ['p', 'Polarisation check: far-field E lies along polar unit vector theta_hat (in the plane containing z_hat and r_hat), while B wraps azimuthally along phi_hat.'],
+                ],
+            },
+            {
+                'title': 'Blue sky & red sunset: the w^4 Rayleigh bridge',
+                'items': [
+                    ['p', 'Sunlight drives bound electrons in atmospheric molecules as tiny induced dipoles p0 = alpha E_inc. Since P_scat ~ w^4 ~ lambda_0^-4:'],
+                    ['m', r'\frac{I_{\mathrm{violet}\ (400\,\mathrm{nm})}}{I_{\mathrm{red}\ (700\,\mathrm{nm})}} \approx \left(\frac{700}{400}\right)^4 \approx 9.4'],
+                    ['why', 'Short blue/violet wavelengths scatter ~6-9x more strongly sidewards (blue sky), leaving direct long-path sunset beams enriched in unscattered red/orange light.'],
+                    ['trap', 'Notice directional ratio for dipole vs isotropic: since <sin^2(theta)>_sphere = 2/3, peak equatorial intensity I_max(theta = 90 deg) = (3/2) * P_tot / (4 pi r^2)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'JEE', 'part_page': 12, 'slug': 'JEE-12-master-triage',
+        'title': 'EM waves master triage, scales & examiner traps',
+        'subtitle': 'Complete 6-branch problem playbook, mental-math constants, and the ten highest-frequency JEE Advanced traps.',
+        'takeaway': 'Before substituting numbers, write four tags on paper: [medium n, Z], [PEAK vs RMS], [k_hat sign], and [beam-normal A vs tilted A_s].',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 5-6, Q9-Q15',
+        'diagrams': ['triage_map', 'unit_scales'],
+        'cards': [
+            {
+                'title': 'Fast mental-arithmetic constants for exams',
+                'items': [
+                    ['p', 'Keep six pre-combined combinations ready so you never multiply raw powers of 8.85e-12 and 4 pi e-7 under time pressure:'],
+                    ['m', r'Z_0 = \sqrt{\frac{\mu_0}{\varepsilon_0}} \approx 377\ \Omega \approx 120\pi\ \Omega, \qquad \frac{1}{\varepsilon_0 c} = Z_0'],
+                    ['m', r'\frac{1\,\mathrm{W}}{c}=3.33\,\mathrm{nN},\quad \frac{1\,\mathrm{kW/m^2}}{c}=3.33\,\mu\mathrm{Pa},\quad hc\approx 1240\,\mathrm{eV\,nm}'],
+                    ['why', 'Look how instant E5 becomes with Z0 = 120 pi: for E0 = 120 V/m, I = 120^2 / (2 * 120 pi) = 60 / pi = 19.10 W/m^2 in three seconds flat!'],
+                ],
+            },
+            {
+                'title': 'Top amplitude & wave-equation traps',
+                'items': [
+                    ['trap', 'Peak vs RMS factor of 2: I = E0^2 / (2 Z) = E_rms^2 / Z, and <u> = (1/2) eps E0^2 = eps E_rms^2. Confusing the two drops half the marks on numericals.'],
+                    ['trap', 'Medium ratio E0 = v B0: in water/glass of index n, B0 = n E0 / c, NOT E0 / c!'],
+                    ['trap', 'Divergence test: F(kx - wt) solves the 1D wave PDE, yet E = F(kx - wt) x_hat is NOT an EM wave in free space because k . E != 0!'],
+                    ['trap', 'Coherent superposition: add vector fields E_tot = E1 + E2 BEFORE squaring; never add intensities directly when two coherent beams interfere or form a standing wave!'],
+                ],
+            },
+            {
+                'title': 'Top force, cosine & surface traps',
+                'items': [
+                    ['trap', 'Cosine count: given intensity I on tilted area A_s -> F_n = (1+R)(I A_s/c)cos^2(theta). Given total beam power P_hit landing on tilted mirror -> F_n = 2(P_hit/c)cos(theta)!'],
+                    ['trap', 'Absorber direction: a tilted black plate feels force straight along incident beam k_hat (both normal P_n and shear F_t != 0), NOT perpendicular to the plate!'],
+                    ['trap', 'Polished sphere vs flat mirror: both black sphere AND specular sphere feel F = I pi a^2 / c; only a flat normal mirror feels 2 I pi a^2 / c!'],
+                    ['trap', 'Transparent plate: use P_n = (1 + R - T)(I/c)cos^2(theta), NEVER (1 + R)I/c when transmitted fraction T > 0 carries forward momentum away!'],
+                ],
+            },
+            {
+                'title': 'Five-step pre-submission check protocol',
+                'items': [
+                    ['p', '1. Spanning surface check: did you evaluate Ic and Id on ONE surface bounded by C, respecting fixed-I vs fixed-dV/dt constraints?'],
+                    ['p', '2. Triad check: did you test k . E = 0 and verify E_hat x B_hat points along the sign of constant phase (+k_hat)?'],
+                    ['m', r'[I]=\mathrm{W/m^2},\quad [u]=[P_{\mathrm{rad}}]=\mathrm{J/m^3}=\mathrm{Pa},\quad [p]=\mathrm{N\cdot s}'],
+                    ['p', '3. Limiting check: does P_n vanish as theta -> 90 deg, recover I/c at R = 0, and double to 2I/c at R = 1?'],
+                ],
+            },
+        ],
+    },
+
+    # =========================================================================
+    # PART II — OLYMPIAD / SPECIALISED EXTENSIONS (6 SHEETS: Olympiad-01 .. 06)
+    # =========================================================================
+    {
+        'section': 'Olympiad', 'part_page': 1, 'slug': 'Olympiad-01-capacitor-poynting',
+        'title': 'Radial Poynting flux in capacitors, wires & coax',
+        'subtitle': 'How circuits truly transport energy through empty space around wires, exact Q29 gap flux proof, and coaxial TEM guides.',
+        'takeaway': 'Wires guide fields, while energy travels in the surrounding space via S = E x H: inward into capacitors/resistors and axially along coax.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md Q29 + Poynting circuit applications',
+        'diagrams': ['cap_poynting_vectors', 'coax_field_power'],
+        'cards': [
+            {
+                'title': 'Charging capacitor: inward radial energy flux (Q29)',
+                'items': [
+                    ['p', 'Take circular vacuum plates of radius a, spacing d << a, E = E z_hat and azimuthal B_phi(a) = mu0 Ic / (2 pi a) phi_hat at cylindrical rim r = a:'],
+                    ['m', r'\mathbf{S}(a) = \frac{E\,\hat{\mathbf{z}} \times B_\phi(a)\,\hat{\boldsymbol{\phi}}}{\mu_0} = -\frac{E I_c}{2\pi a}\,\hat{\mathbf{r}}'],
+                    ['m', r'\mathcal{P}_{\mathrm{in}} = |\mathbf{S}(a)|\,(2\pi a d) = (E d)\,I_c = V I_c = \frac{d}{dt}\left(\frac{q^2}{2C}\right)'],
+                    ['why', 'Notice z_hat x phi_hat = -r_hat! Electrostatic energy stored in the gap enters sideways from the surrounding field across the rim area 2 pi a d.'],
+                ],
+            },
+            {
+                'title': 'Cylindrical Ohmic wire: radial inflow feeds Joule heat',
+                'items': [
+                    ['p', 'A steady DC current I runs along +z through a cylindrical wire of radius a, length l, resistance R = V/I: inside E = (V/l) z_hat and surface B_phi(a) = mu0 I/(2 pi a):'],
+                    ['m', r'\mathbf{S}(a) = -\frac{V I}{2\pi a \ell}\,\hat{\mathbf{r}} \implies \mathcal{P}_{\mathrm{in}} = |\mathbf{S}(a)|(2\pi a \ell) = V I = I^2 R'],
+                    ['why', 'Battery fields outside the metal funnel energy radially inward through the wire surface at rate I^2 R, where collisions convert it into lattice heat!'],
+                    ['p', 'Inside radius r < a, E(r) = V/l is uniform while B_phi(r) ~ r, so inward power across radius r is V I (r^2/a^2) — proportional to enclosed volume!'],
+                ],
+            },
+            {
+                'title': 'Coaxial cable: lossless TEM wave power transport',
+                'items': [
+                    ['p', 'Inner core radius a (+I along +z, potential +V) and outer shield radius b (-I, potential 0) carry radial E_r and azimuthal B_phi in insulator (eps, mu):'],
+                    ['m', r'E_r = \frac{V}{r\ln(b/a)}, \qquad B_\phi = \frac{\mu I}{2\pi r}, \qquad S_z = \frac{V I}{2\pi r^2\ln(b/a)}'],
+                    ['m', r'\int_a^b S_z\,(2\pi r\,dr) = V I, \qquad Z_{\mathrm{coax}} = \frac{V}{I} = \frac{1}{2\pi}\sqrt{\frac{\mu}{\varepsilon}}\ln\left(\frac{b}{a}\right)'],
+                    ['why', 'Integrating S_z across the annular dielectric gives exact circuit power V I! For vacuum coax, Z_coax = 60 ln(b/a) Ohm (50 Ohm standard at b/a = 2.30).'],
+                ],
+            },
+            {
+                'title': 'Hidden magnetic-energy term & validity fence',
+                'items': [
+                    ['p', 'In Q29 with non-steady current q(t) = alpha t^2 (Ic = 2 alpha t), changing B_phi inside the gap induces a small second-order radial correction to E(r):'],
+                    ['m', r'U_B = \int_0^a \frac{B_\phi^2}{2\mu_0}\,2\pi r d\,dr = \frac{\mu_0 I_c^2 d}{16\pi}, \qquad \frac{U_B}{U_E} \sim \left(\frac{\omega a}{c}\right)^2'],
+                    ['why', 'When variation time tau >> a/c (w a << c), U_B << U_E justifies Model Q. Retention of dU_B/dt gives the next term in the cylindrical cavity expansion!'],
+                    ['trap', 'Never extrapolate quasistatic gap fields to t -> 0 shock steps where dI/dt is impulsive: sharp wavefronts travel radially inward at speed c!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 2, 'slug': 'Olympiad-02-curved-pressure',
+        'title': 'Curved-surface forces, cones & stellar beta blow-out',
+        'subtitle': 'Exact integrals proving F_black = F_specular = I pi a^2/c on a sphere, cone/cylinder drag factors, and astrophysical radiation blow-out.',
+        'takeaway': 'A specular sphere scatters light into all directions with <cos(2 theta)> = 0, feeling the EXACT same force I pi a^2 / c as a black sphere!',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 2.11, E8, Q14, Q26, Q34',
+        'diagrams': ['sphere_annulus', 'stellar_beta'],
+        'cards': [
+            {
+                'title': 'Why black & specular spheres feel identical axial force',
+                'items': [
+                    ['p', 'Divide the sunlit hemisphere of radius a >> lambda into ring zones dA = 2 pi a^2 sin(theta) d(theta) at normal angle theta in [0, pi/2] (sec. 2.11, Q14):'],
+                    ['m', r'F_{\mathrm{abs}} = \frac{I}{c}\int_0^{\pi/2}\cos\theta\,(2\pi a^2\sin\theta\,d\theta) = \frac{I\pi a^2}{c}'],
+                    ['m', r'F_{\mathrm{spec}} = \int_0^{\pi/2}\left(\frac{2I}{c}\cos^2\theta\right)\cos\theta\,(2\pi a^2\sin\theta\,d\theta) = \frac{4\pi a^2 I}{c}\left[\frac{1}{4}\right] = \frac{I\pi a^2}{c}'],
+                    ['why', 'Physical miracle: a ray hitting at theta scatters at angle pi - 2 theta from forward, carrying away axial momentum -(dU/c)cos(2 theta) whose hemisphere average vanishes!'],
+                ],
+            },
+            {
+                'title': 'Cones, cylinders & retroreflectors compared',
+                'items': [
+                    ['p', 'Apply the exact same local vector projection dF_z = dF_n cos(theta) + dF_t sin(theta) across other symmetric bodies of projected cross-section A_proj:'],
+                    ['m', r'F_{z,\mathrm{cone}} = \frac{I\pi a^2}{c}\big(1 + R\cos 2\alpha_0\big) = \frac{I\pi a^2}{c}\big(1 - R + 2R\sin^2\alpha_0\big)'],
+                    ['p', 'Here alpha_0 is the cone semi-vertical angle (normal makes theta = pi/2 - alpha_0 with axis). Check limits: alpha_0 = pi/2 (flat disc) -> (1 + R) I pi a^2 / c; sharp needle alpha_0 -> 0 with R = 1 -> 0!'],
+                    ['why', 'Specular circular cylinder of radius a, length L perpendicular to beam: int_{-pi/2}^{pi/2} 2 cos^3(theta) d(theta) = 8/3 -> F = (4/3)(2 I a L / c) vs black 2 I a L / c!'],
+                ],
+            },
+            {
+                'title': 'Stellar radiation blow-out ratio beta (Q34)',
+                'items': [
+                    ['p', 'Around a star of luminosity L_* and mass M_*, compare outward radiation force I pi a^2/c on a spherical dust grain (density rho_m, radius a) to inward gravity G M_* m / r^2:'],
+                    ['m', r'\beta \equiv \frac{F_{\mathrm{rad}}}{F_{\mathrm{grav}}} = \frac{3 L_\star}{16\pi c G M_\star \rho_m a}, \qquad a_{\mathrm{crit}}(\beta=1) = \frac{3 L_\star}{16\pi c G M_\star \rho_m}'],
+                    ['why', 'Both I = L_*/(4 pi r^2) and gravity fall strictly as 1/r^2, so orbital distance r CANCELS COMPLETELY! For Sun (L_sun = 3.83e26 W, M_sun = 1.99e30 kg) & silicates, a_crit ~ 0.2 um.'],
+                    ['trap', 'Do not let beta -> infinity as a -> 0: once grain radius a ~ lambda (~0.5 um), geometric optics breaks down and Mie/Rayleigh scattering cross-section drops as a^6!'],
+                ],
+            },
+            {
+                'title': 'Lambertian diffuse reflector: third classic case',
+                'items': [
+                    ['p', 'If an opaque flat disc (projected normal incidence) re-scatters all incident energy diffusely with Lambert cosine radiance (~ cos psi into hemisphere), outgoing normal momentum adds 2/3:'],
+                    ['m', r'P_{\mathrm{Lambert,\ normal}} = \left(1 + \frac{2}{3}R_{\mathrm{diff}}\right)\frac{I}{c}'],
+                    ['why', 'Diffuse bounce always sits strictly between total absorption (1 * I/c) and normal specular mirror (2 * I/c) because oblique scattered rays waste sideways momentum.'],
+                    ['p', 'Exemplar check (E8): a = 1.00 mm grain, rho_m = 3000 kg/m^3 at I = 1200 W/m^2 gives F = 12.6 pN and a = 3 I/(4 rho_m a c) = 1.00e-6 m/s^2.'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 3, 'slug': 'Olympiad-03-impedance-fresnel',
+        'title': 'Wave impedance, Fresnel matching & quarter-wave coats',
+        'subtitle': 'Boundary loops for tangential E and H, why t_E > 1 never violates energy conservation, and impedance-matching layers.',
+        'takeaway': 'Reflection is governed by wave impedance Z = sqrt(mu/eps), NOT refractive index n alone; always compute power transmission as T = (Z1/Z2) t_E^2.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 4.1, Q16, Q36',
+        'diagrams': ['interface_jump', 'rt_vs_ratio'],
+        'cards': [
+            {
+                'title': 'Tangential boundary equations & reflected H sign',
+                'items': [
+                    ['p', 'Shrink rectangular Faraday and Ampere loops across a charge/current-free planar interface z = 0 between lossless media Z1 (z < 0) and Z2 (z > 0):'],
+                    ['m', r'E_i + E_r = E_t, \qquad \frac{E_i - E_r}{Z_1} = \frac{E_t}{Z_2}'],
+                    ['why', 'Keeping +x_hat for E_i, E_r, E_t means forward wave has H_i = +E_i/Z1 y_hat, while reflected wave moving along -z_hat has H_r = -E_r/Z1 y_hat!'],
+                    ['m', r'r_E = \frac{Z_2 - Z_1}{Z_2 + Z_1} = \frac{n_1 - n_2}{n_1 + n_2}\ (\mu_1=\mu_2), \qquad t_E = \frac{2 Z_2}{Z_1 + Z_2}'],
+                ],
+            },
+            {
+                'title': 'Energy conservation & the "t_E > 1" paradox (Q16, Q36)',
+                'items': [
+                    ['p', 'Intensity is I = E0^2 / (2 Z), so transmitted intensity carries factor 1/Z2 while incident carries 1/Z1. Dividing I_r and I_t by I_i proves exact flux balance:'],
+                    ['m', r'R = r_E^2 = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1}\right)^2, \qquad T = \frac{Z_1}{Z_2} t_E^2 = \frac{4 Z_1 Z_2}{(Z_1 + Z_2)^2}, \qquad R + T = 1'],
+                    ['p', 'Paper Q36: for Z2 = 2 Z1, r_E = 1/3 and t_E = 4/3 > 1! Yet R = 1/9 and T = (1/2)(16/9) = 8/9 -> R + T = 1! Larger E amplitude inside larger Z carries LESS current H!'],
+                    ['trap', 'Writing T = t_E^2 instead of (Z1/Z2) t_E^2 gives T = 16/9 > 1 — an instant violation of energy conservation whenever Z1 != Z2!'],
+                ],
+            },
+            {
+                'title': 'Equal speed != zero reflection in magnetic matter (Q36c)',
+                'items': [
+                    ['p', 'Can a boundary reflect waves even when BOTH media have the exact same wave speed v1 = v2 (same refractive index n1 = n2)? YES, if permeabilities differ!'],
+                    ['m', r'\mu_2 = 2\mu_1,\ \varepsilon_2 = \varepsilon_1/2 \Rightarrow v_2 = v_1,\ \ Z_2 = 2Z_1 \Rightarrow R = 1/9'],
+                    ['why', 'Conversely, choosing mu2/mu1 = eps2/eps1 makes Z2 = Z1 so R = 0 (invisible Stealth/impedance-matched boundary) EVEN THOUGH wave speed drops across the boundary!'],
+                    ['p', 'Nonmagnetic glass n = 1.5 in air (Z2 = Z0/1.5): r_E = -0.20 (pi phase flip on E!), R = 0.04 (4% reflection per face), T = 0.96.'],
+                ],
+            },
+            {
+                'title': 'Quarter-wave anti-reflection transformer',
+                'items': [
+                    ['p', 'To eliminate reflection completely between media Z1 and Z3 at target vacuum wavelength lambda_0, insert a lossless layer (index n_c, impedance Z_c) of thickness d:'],
+                    ['m', r'd = \frac{\lambda_{\mathrm{coat}}}{4} = \frac{\lambda_0}{4 n_c}, \qquad Z_c = \sqrt{Z_1 Z_3} \quad \left(n_c = \sqrt{n_1 n_3}\ \ \text{if}\ \mu_r=1\right)'],
+                    ['why', 'Equal reflection amplitudes at front and back faces suffer round-trip phase shift 2 k_c d = pi, cancelling destructively in reflection so 100% power transmits!'],
+                    ['trap', 'If n1 < n_c < n3, BOTH front and back reflections carry the SAME pi phase flip, so destructive interference still requires 2 n_c d = lambda_0 / 2 (NOT lambda_0)!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 4, 'slug': 'Olympiad-04-standing-cavity',
+        'title': 'Standing EM waves, mirror stress & cavity pressure u/3',
+        'subtitle': 'Constructing exact node structure in front of a conductor, magnetic Maxwell stress at a mirror, and 3D thermal photon gas.',
+        'takeaway': 'In a standing EM wave E and B oscillate 90 deg out of phase in BOTH space and time: <S> = 0, yet mirror magnetic pressure equals 2 I_inc / c.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 4.2-4.3, Q31',
+        'diagrams': ['standing_nodes', 'isotropic_hemisphere'],
+        'cards': [
+            {
+                'title': 'Standing wave in front of a perfect mirror (z <= 0)',
+                'items': [
+                    ['p', 'Superpose E_i = E0 cos(kz - wt) x_hat (+z) and reflected E_r = -E0 cos(kz + wt) x_hat (-z) so tangential E vanishes on mirror z = 0 (Q31):'],
+                    ['m', r'\mathbf{E} = 2 E_0 \sin(kz)\sin(\omega t)\,\hat{\mathbf{x}}, \qquad \mathbf{B} = \frac{2 E_0}{c}\cos(kz)\cos(\omega t)\,\hat{\mathbf{y}}'],
+                    ['why', 'For E_r moving along -z with -E0 x_hat, (-z_hat) x (-x_hat) = +y_hat: reflected B ADDS at z = 0 instead of cancelling!'],
+                    ['p', 'Node map: E nodes at z = -m lambda/2 (including mirror z = 0); B nodes at z = -(2m + 1) lambda/4 (quarter-wave shifted!).'],
+                ],
+            },
+            {
+                'title': 'Zero mean Poynting vector vs nonzero mirror pressure',
+                'items': [
+                    ['p', 'Multiply E and B: S_z = (2 E0^2 / Z0) sin(2kz) sin(2wt) sloshes energy back and forth every quarter-cycle with <S_z> = 0, while time-averaged density is spatially uniform:'],
+                    ['m', r'\langle u\rangle = \varepsilon_0 E_0^2 = 2\langle u_{\mathrm{inc}}\rangle, \qquad P_{\mathrm{mirror}} = \left\langle\frac{B^2(0,t)}{2\mu_0}\right\rangle = \varepsilon_0 E_0^2 = \frac{2 I_{\mathrm{inc}}}{c}'],
+                    ['why', 'At z = 0, E = 0 so surface currents feel Lorentz force (J_s x B_avg_across_sheet) equal to magnetic Maxwell stress B(0,t)^2 / (2 mu0), matching momentum reversal 2 I_inc / c!'],
+                    ['trap', 'Never write uE = uB in a standing wave: at wt = 0 ALL energy is magnetic; at wt = pi/2 ALL energy is electric!'],
+                ],
+            },
+            {
+                'title': 'Isotropic cavity radiation: why pressure is u / 3',
+                'items': [
+                    ['p', 'Fill an enclosure uniformly with isotropic radiation of total energy density u: solid angle dOmega carries density du = u dOmega/(4 pi) at angle theta to a specular wall:'],
+                    ['m', r'P_{\mathrm{iso}} = \int_{\theta<\pi/2} \frac{2\,du}{1}\cos^2\theta = \frac{2 u}{4\pi}\int_0^{2\pi}d\phi\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta = \frac{u}{3}'],
+                    ['why', 'Only half the rays move toward the wall (factor 1/2), and they strike at all angles with <cos^2(theta)> = 1/3: (1/2) * 2 * (1/3) u = u / 3 (vs u for a collimated beam)!'],
+                    ['trap', 'Careful boundary check (sec. 4.3): a cold black wall absorbing an isotropic field of total density u feels u / 6 until thermal equilibrium emission adds the second u / 6!'],
+                ],
+            },
+            {
+                'title': 'Adiabatic photon-gas expansion & cavity resonators',
+                'items': [
+                    ['p', 'Combining P = u/3 and U = u V inside reversible First Law dU + P dV = T dS = 0 (with u = a T^4) gives the relativistic photon-gas adiabat:'],
+                    ['m', r'P V^{4/3} = \mathrm{const}, \qquad T V^{1/3} = \mathrm{const} \quad (\gamma_{\mathrm{photon}} = \tfrac{4}{3})'],
+                    ['p', 'Resonant frequencies of a lossless rectangular metallic box (sides Lx, Ly, Lz):'],
+                    ['m', r'f_{lmn} = \frac{c}{2}\sqrt{\left(\frac{l}{L_x}\right)^2 + \left(\frac{m}{L_y}\right)^2 + \left(\frac{n}{L_z}\right)^2}'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 5, 'slug': 'Olympiad-05-skin-depth',
+        'title': 'Conducting media, skin depth & collisionless plasmas',
+        'subtitle': 'Damped telegrapher wave equation, 45 deg B-to-E phase lag in metals, shielding attenuation, and ionospheric plasma cutoff.',
+        'takeaway': 'Good conductors (sigma >> w eps) damp fields exponentially in skin depth delta = sqrt(2/(mu sigma w)); collisionless plasmas reflect below w_p with v_p v_g = c^2 above.',
+        'source': 'Source: electromagnetic-waves/Electromagnetic-waves.md sec. 4.4 + Olympiad dispersion extensions',
+        'diagrams': ['skin_decay', 'plasma_dispersion'],
+        'cards': [
+            {
+                'title': 'Wave equation in an Ohmic conductor (sec. 4.4)',
+                'items': [
+                    ['p', 'Insert J_f = sigma E into Maxwell-Ampere inside a homogeneous conductor: curl B = mu sigma E + mu eps dE/dt. Taking curl of Faraday yields:'],
+                    ['m', r'\nabla^2\mathbf{E} = \mu\sigma\frac{\partial\mathbf{E}}{\partial t} + \mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2}, \qquad k^2 = \mu\varepsilon\omega^2 + i\mu\sigma\omega'],
+                    ['why', 'First time derivative breaks time-reversal symmetry (Ohmic dissipation!), making wavenumber k = k_R + i k_I complex so exp(i k z) = exp(i k_R z) exp(-k_I z) attenuates!'],
+                    ['p', 'Poor-conductor limit (sigma << w eps, e.g. dry soil / seawater at high f): k_I ~ (sigma / 2) sqrt(mu/eps) = sigma Z / 2 is independent of frequency!'],
+                ],
+            },
+            {
+                'title': 'Good-conductor skin depth delta & 45 deg magnetic lag',
+                'items': [
+                    ['p', 'When conduction current dominates displacement current (sigma >> w eps), k^2 ~ i mu sigma w. Since sqrt(i) = (1 + i)/sqrt(2), k_R = k_I = 1/delta:'],
+                    ['m', r'\delta = \sqrt{\frac{2}{\mu\sigma\omega}}, \qquad Z_{\mathrm{metal}} = \frac{\omega\mu}{k} = \sqrt{\frac{\omega\mu}{2\sigma}}(1 - i) = \frac{1 - i}{\sigma\delta}'],
+                    ['why', 'Three huge Olympiad consequences: (1) E decays by 1/e every delta and intensity I decays as exp(-2 z/delta); (2) B lags E by pi/4 (45 deg!); (3) magnetic energy uB >> uE inside metal!'],
+                    ['p', 'Scale check in copper (sigma ~ 5.8e7 S/m): delta ~ 8.5 mm at 60 Hz, ~ 66 um at 1 MHz, and ~ 2.1 um at 1 GHz!'],
+                ],
+            },
+            {
+                'title': 'Collisionless cold plasma dispersion & total reflection',
+                'items': [
+                    ['p', 'In a neutralised gas of free electrons (number density n_e, mass m_e), Newton law m_e dv/dt = -e E gives J = -n_e e v = (i n_e e^2 / m_e w) E (purely inductive, ZERO heating!):'],
+                    ['m', r'\varepsilon_{\mathrm{eff}}(\omega) = \varepsilon_0\left(1 - \frac{\omega_p^2}{\omega^2}\right), \qquad \omega_p = \sqrt{\frac{n_e e^2}{m_e\varepsilon_0}}, \qquad \omega^2 = \omega_p^2 + c^2 k^2'],
+                    ['why', 'For w < w_p, eps_eff < 0 so k is purely imaginary: incident radio waves suffer 100% lossless reflection off the ionosphere or metals below UV plasma edge!'],
+                ],
+            },
+            {
+                'title': 'Phase speed > c vs group speed < c check',
+                'items': [
+                    ['p', 'Above plasma frequency (w > w_p), differentiate w^2 = w_p^2 + c^2 k^2 with respect to k to compare crest velocity v_p = w/k with packet/energy velocity v_g = dw/dk:'],
+                    ['m', r'v_p = \frac{c}{\sqrt{1 - \omega_p^2/\omega^2}} > c, \qquad v_g = c\sqrt{1 - \frac{\omega_p^2}{\omega^2}} < c, \qquad v_p v_g = c^2'],
+                    ['why', 'Relativity forbids signals/energy travelling faster than c — and group/signal velocity v_g stays strictly < c everywhere while crests slide faster along the envelope!'],
+                    ['trap', 'In dispersion problems, never plug phase index n = c/v_p < 1 into packet travel delay: radio pulsar dispersion delay uses t_arrival = L / v_g!'],
+                ],
+            },
+        ],
+    },
+    {
+        'section': 'Olympiad', 'part_page': 6, 'slug': 'Olympiad-06-poynting-robertson',
+        'title': 'Relativistic Doppler, moving mirrors & waveguides',
+        'subtitle': 'Exact Lorentz light shift, double boost on moving mirrors, Poynting-Robertson orbital spiral, and parallel-plate TE modes.',
+        'takeaway': 'In vacuum no air frame exists: Doppler depends ONLY on relative beta = u/c, and a moving mirror shifts both frequency and radiation pressure by (1+beta)/(1-beta).',
+        'source': 'Source: Olympiad EM wave extensions (INPhO / IPhO standard)',
+        'diagrams': ['moving_mirror', 'waveguide_modes'],
+        'cards': [
+            {
+                'title': 'Relativistic optical Doppler & transverse time dilation',
+                'items': [
+                    ['p', 'Because light requires no material medium, source-moving and observer-moving shifts are IDENTICAL and include Lorentz gamma = 1/sqrt(1 - beta^2), beta = u/c:'],
+                    ['m', r'f_{\mathrm{approach}} = f_0\sqrt{\frac{1+\beta}{1-\beta}}, \qquad f_{\mathrm{recede}} = f_0\sqrt{\frac{1-\beta}{1+\beta}}, \qquad f_{\perp} = \frac{f_0}{\gamma}'],
+                    ['why', 'Even at closest approach (90 deg in observer frame), clock time dilation slows source oscillations by 1/gamma = sqrt(1 - beta^2) — a pure second-order redshift!'],
+                    ['p', 'Low-speed check (beta << 1): df / f0 = +- beta + O(beta^2); astronomical redshift parameter 1 + z = lambda_obs / lambda_emit = sqrt((1+beta)/(1-beta)).'],
+                ],
+            },
+            {
+                'title': 'Reflection & pressure on a moving flat mirror',
+                'items': [
+                    ['p', 'A flat perfect mirror moves at speed u = beta c TOWARD an incoming normal vacuum beam of frequency f and intensity I (or minus sign if receding):'],
+                    ['m', r"f' = f\,\frac{1+\beta}{1-\beta}, \qquad P_{\mathrm{moving\ mirror}} = \frac{2 I}{c}\,\frac{1+\beta}{1-\beta}"],
+                    ['why', 'Two clean steps: mirror intercepts crests at relative speed c + u -> rate factor (1 + beta); reflected photon energy also jumps by (1 + beta)/(1 - beta), doing mechanical work on the beam!'],
+                    ['p', 'Check beta -> -1 (mirror fleeing at light speed): f_ref -> 0 and P -> 0 because photons can never catch the mirror!'],
+                ],
+            },
+            {
+                'title': 'Poynting-Robertson drag: why dust spirals INTO stars',
+                'items': [
+                    ['p', 'A black dust grain of radius a in circular orbit at speed v around a star absorbs radial photons in the star frame, but re-emits thermally isotropically in its OWN rest frame:'],
+                    ['m', r'\mathbf{F}_{\mathrm{PR}} \approx -\frac{I\pi a^2}{c}\,\frac{\mathbf{v}}{c} = -\frac{L_\star a^2}{4 c^2 r^2}\,\mathbf{v}'],
+                    ['why', 'In the star frame, forward-beamed thermal emission carries tangential momentum m_eff v = (P_abs/c^2) v away! Or equivalently in grain frame: stellar aberration tilts sunlight slightly head-on by angle v/c!'],
+                    ['p', 'Result: angular momentum bleeds steadily so surviving micron grains (beta < 1/2) spiral inward over cosmic timescales.'],
+                ],
+            },
+            {
+                'title': 'Parallel-plate metallic waveguide (TE_m modes)',
+                'items': [
+                    ['p', 'Confine waves between two perfectly conducting plates at y = 0 and y = b: vanishing tangential E_z/E_x on both walls quantises k_y = m pi / b (integer m >= 1 for TE):'],
+                    ['m', r'k_z = \sqrt{\frac{\omega^2}{c^2} - \left(\frac{m\pi}{b}\right)^2}, \qquad \omega_{c,m} = \frac{m\pi c}{b}, \qquad \lambda_{c,m} = \frac{2 b}{m}'],
+                    ['why', 'Picture a plane wave zig-zagging between walls at angle sin(theta_m) = w_c / w: crests slide faster along z (v_p = c / cos theta_m > c) while energy advances at v_g = c cos theta_m < c!'],
+                    ['trap', 'A hollow single-conductor pipe has NO TEM mode (m = 0): if lambda_0 > 2 b for parallel plates, ALL TE modes are cutoff and decay exponentially!'],
+                ],
+            },
+        ],
+    },
+]
+
+
+def main():
+    (ROOT / 'sheets.json').write_text(json.dumps(SHEETS, indent=2) + '\n')
+    print(f"Wrote {len(SHEETS)} Electromagnetic Waves sheets ({sum(s['section']=='JEE' for s in SHEETS)} JEE + "
+          f"{sum(s['section']=='Olympiad' for s in SHEETS)} Olympiad) to sheets.json")
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,98 @@
+{
+  "JEE-01-si-foundations.png": {
+    "bytes": 186917,
+    "sha256": "7eb418b54e662e8671b459738ec26fe3f7def008e607dff1d75c38e836857f6a"
+  },
+  "JEE-02-dimensional-mechanics.png": {
+    "bytes": 169132,
+    "sha256": "11324ead2ffcc9f0e477990000b74cce557b947d503f64fcb56c6a2296d32fc4"
+  },
+  "JEE-03-dimensional-em.png": {
+    "bytes": 178119,
+    "sha256": "2cd2888d6a9d6818791b2ace8e6fdfaafb364fd584c1fbc98bafb05de108ea21"
+  },
+  "JEE-04-homogeneity.png": {
+    "bytes": 188780,
+    "sha256": "5ed0e5eaf56c485880a94f6298ce9ce7f894172f90035fd10f632c8ba52c9fce"
+  },
+  "JEE-05-dimensional-derivation.png": {
+    "bytes": 203706,
+    "sha256": "9519ac8421bda41f01319108a296bbc795bc0dfc0647247dd5ed2c38a02fb5b1"
+  },
+  "JEE-06-sig-figs.png": {
+    "bytes": 186887,
+    "sha256": "f27e271b47161be57dfd354d2bf6d3319fd7c9cf05aabce3a62a79c56e3f50c3"
+  },
+  "JEE-07-error-types.png": {
+    "bytes": 211005,
+    "sha256": "0fb99c992a51fed2ff81fabca4e7c0f5b7ba4ba5b6e0b494c333c17aa7f4d473"
+  },
+  "JEE-08-error-propagation.png": {
+    "bytes": 204462,
+    "sha256": "100a4892a2662f403e87f86206f3d83e78dcb64e5f04e0f0bf7466deb681882d"
+  },
+  "JEE-09-vernier-caliper.png": {
+    "bytes": 185460,
+    "sha256": "c671b87b9c4a3c1a835d725ff2ee62f039ebc2dde809f777c69f270efa171ead"
+  },
+  "JEE-10-screw-gauge.png": {
+    "bytes": 192413,
+    "sha256": "d387f41cbccb3661061d52fe8ffb2bcc080f85e9e2cedfec88c0ac0fd420b16a"
+  },
+  "JEE-11-graphs-fermi.png": {
+    "bytes": 198774,
+    "sha256": "7e0c42e10b4c023ad6c1ea88fd2ca5168123c1db7dbe134c280a81b880b9f256"
+  },
+  "JEE-12-master-triage.png": {
+    "bytes": 208633,
+    "sha256": "e526df3d190e873566043f3fa95499f129c076306798ec8882ced22c873d50d3"
+  },
+  "Olympiad-01-buckingham-pi.png": {
+    "bytes": 199965,
+    "sha256": "593c3d09c8c0df47112f22c14fcf23fa1551b37c84e8821f4373262fc1d6ec67"
+  },
+  "Olympiad-02-scaling-similarity.png": {
+    "bytes": 200379,
+    "sha256": "4eda81442a3f4b11fdd733f7fcfb5061d2371a5f2add6909b589e42cfa6674a1"
+  },
+  "Olympiad-03-least-squares.png": {
+    "bytes": 187131,
+    "sha256": "d7c7d90e9212cc1abdadc5bad4af3daad0d79f389fa5e6d81e7a2e106886d64e"
+  },
+  "Olympiad-04-chi-square.png": {
+    "bytes": 191444,
+    "sha256": "5b2fd2ac7d644201c589a97fb2a1bf6fbb305658b3c1de7fe646f64d5eb309e4"
+  },
+  "Olympiad-05-poisson-counting.png": {
+    "bytes": 198484,
+    "sha256": "e04e6f1b175fbd7841870f4a705d42286af6eacf246d1b6bc44a393c70435d70"
+  },
+  "Olympiad-06-experiment-design.png": {
+    "bytes": 189813,
+    "sha256": "5c71b8ddf3312b24db4dbd3496e3c0654427354a4a693ac1584653397d49f2f7"
+  },
+  "units-dimensions-errors-all-pngs.zip": {
+    "bytes": 3184107,
+    "sha256": "bef7495b87fb20c9602a6a1d20fcf0730e7e2757786b293f981dd16cdb1c9ef6"
+  },
+  "units-dimensions-errors-jee-pngs.zip": {
+    "bytes": 2116183,
+    "sha256": "fbdf92743fd24607dcb97f7b9fa5537783bee9912cc508cc44ddcd64bc1788b9"
+  },
+  "units-dimensions-errors-jee.pdf": {
+    "bytes": 2306032,
+    "sha256": "24c134c0a2ed85b3032b487b5db1c8228e1295bc22a53ceed0d386c909991602"
+  },
+  "units-dimensions-errors-olympiad-pngs.zip": {
+    "bytes": 1067946,
+    "sha256": "96c1c1e2b184b0ffd6ab9f3ea962d3fdf2c161d367ac2a427d4ec025145c2f57"
+  },
+  "units-dimensions-errors-olympiad.pdf": {
+    "bytes": 1164444,
+    "sha256": "c16474e395d057cb4550c1bc22b3dd47f1fe14ea6ca9a2cdaae6811b56bdec18"
+  },
+  "units-dimensions-errors-short-notes.pdf": {
+    "bytes": 3469457,
+    "sha256": "8176cd6e4e0402502bd78ed430944cf401546c683514637c88e3fa189c5c485e"
+  }
+}
