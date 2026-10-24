@@ -17,7 +17,7 @@
         "items": [
           [
             "m",
-            "q=ne,\\quad e=1.602\\times10^{-19}\\ \\mathrm C"
+            "q=ne,\\quad e=1.602\\times10^{-19}\\ \\mathrm{C}"
           ],
           [
             "m",
@@ -46,7 +46,7 @@
           ],
           [
             "m",
-            "Q_1+Q_2=Q_{\\rm total}"
+            "Q_1+Q_2=Q_{\\mathrm{total}}"
           ],
           [
             "p",
@@ -67,7 +67,7 @@
         "items": [
           [
             "m",
-            "Q_{\\rm neutral}=0\\quad\\mathrm{before\\ grounding}"
+            "Q_{\\mathrm{neutral}}=0\\quad\\mathrm{before\\ grounding}"
           ],
           [
             "p",
@@ -149,7 +149,7 @@
         "items": [
           [
             "m",
-            "F_{\\rm res}=\\sqrt{F_x^2+F_y^2}"
+            "F_{\\mathrm{res}}=\\sqrt{F_x^2+F_y^2}"
           ],
           [
             "m",
@@ -306,11 +306,11 @@
         "items": [
           [
             "m",
-            "Q_{\\mathrm{square}}=-\\frac{1+2\\sqrt2}{4}q"
+            "Q_{\\mathrm{square}}=-\\frac{1+2\\sqrt{2}}{4}q"
           ],
           [
             "m",
-            "Q_{\\triangle}=-q/\\sqrt3"
+            "Q_{\\triangle}=-q/\\sqrt{3}"
           ],
           [
             "p",
@@ -375,7 +375,7 @@
           ],
           [
             "m",
-            "dq_{\\rm ring}=2\\pi s\\sigma\\,ds"
+            "dq_{\\mathrm{ring}}=2\\pi s\\sigma\\,ds"
           ],
           [
             "p",
@@ -486,7 +486,7 @@
           ],
           [
             "m",
-            "x_{\\max}=R/\\sqrt2,\\quad E_{\\max}=\\frac{2kQ}{3\\sqrt3R^2}"
+            "x_{\\max}=R/\\sqrt{2},\\quad E_{\\max}=\\frac{2kQ}{3\\sqrt3R^2}"
           ],
           [
             "p",
@@ -532,7 +532,7 @@
         "items": [
           [
             "m",
-            "Q=40\\ \\mathrm{nC},\\ R=0.08\\ \\mathrm m"
+            "Q=40\\ \\mathrm{nC},\\ R=0.08\\ \\mathrm{m}"
           ],
           [
             "m",
@@ -576,7 +576,7 @@
           ],
           [
             "m",
-            "E_x=k\\lambda\\left(\\frac1{\\sqrt{b^2+d^2}}-\\frac1{\\sqrt{a^2+d^2}}\\right)"
+            "E_x=k\\lambda\\left(\\frac{1}{\\sqrt{b^2+d^2}}-\\frac{1}{\\sqrt{a^2+d^2}}\\right)"
           ],
           [
             "p",
@@ -708,11 +708,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm semi}=\\frac{2kQ}{\\pi R^2}"
+            "E_{\\mathrm{semi}}=\\frac{2kQ}{\\pi R^2}"
           ],
           [
             "m",
-            "E_{\\rm quarter}=\\sqrt2\\,k\\lambda/R"
+            "E_{\\mathrm{quarter}}=\\sqrt{2}\\,k\\lambda/R"
           ],
           [
             "p",
@@ -733,7 +733,7 @@
         "items": [
           [
             "m",
-            "E_{\\rm gap}=\\frac{2k\\lambda}{R}\\sin(\\Delta\\theta/2)"
+            "E_{\\mathrm{gap}}=\\frac{2k\\lambda}{R}\\sin(\\Delta\\theta/2)"
           ],
           [
             "m",
@@ -762,7 +762,7 @@
           ],
           [
             "m",
-            "E_{\\rm hemi}=\\sigma/(4\\varepsilon_0)"
+            "E_{\\mathrm{hemi}}=\\sigma/(4\\varepsilon_0)"
           ],
           [
             "p",
@@ -844,7 +844,7 @@
         "items": [
           [
             "m",
-            "E_x=\\frac{\\sigma x}{2\\varepsilon_0}\\left(\\frac1{\\sqrt{x^2+a^2}}-\\frac1{\\sqrt{x^2+b^2}}\\right)"
+            "E_x=\\frac{\\sigma x}{2\\varepsilon_0}\\left(\\frac{1}{\\sqrt{x^2+a^2}}-\\frac{1}{\\sqrt{x^2+b^2}}\\right)"
           ],
           [
             "p",
@@ -905,11 +905,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm axis}=\\frac{2kpr}{(r^2-a^2)^2},\\quad r>a"
+            "E_{\\mathrm{axis}}=\\frac{2kpr}{(r^2-a^2)^2},\\quad r>a"
           ],
           [
             "m",
-            "\\mathbf E_{\\rm eq}=-\\frac{k\\mathbf p}{(r^2+a^2)^{3/2}}"
+            "\\mathbf E_{\\mathrm{eq}}=-\\frac{k\\mathbf p}{(r^2+a^2)^{3/2}}"
           ],
           [
             "p",
@@ -980,7 +980,7 @@
         "items": [
           [
             "m",
-            "E_{\\rm ax}/(2kp/r^3)=(1-a^2/r^2)^{-2}"
+            "E_{\\mathrm{ax}}/(2kp/r^3)=(1-a^2/r^2)^{-2}"
           ],
           [
             "p",
@@ -1041,11 +1041,11 @@
         "items": [
           [
             "m",
-            "W_{\\rm ext}=pE(\\cos\\theta_1-\\cos\\theta_2)"
+            "W_{\\mathrm{ext}}=pE(\\cos\\theta_1-\\cos\\theta_2)"
           ],
           [
             "m",
-            "\\Delta K=W_{\\rm field}=-\\Delta U"
+            "\\Delta K=W_{\\mathrm{field}}=-\\Delta U"
           ],
           [
             "p",
@@ -1206,11 +1206,11 @@
         "items": [
           [
             "m",
-            "E=5000\\ \\mathrm{V/m},\\ L=0.05\\ \\mathrm m"
+            "E=5000\\ \\mathrm{V/m},\\ L=0.05\\ \\mathrm{m}"
           ],
           [
             "m",
-            "V_a=1000\\ \\mathrm V:\\ |y_L|=3.125\\ \\mathrm{mm}"
+            "V_a=1000\\ \\mathrm{V}:\\ |y_L|=3.125\\ \\mathrm{mm}"
           ],
           [
             "p",
@@ -1271,11 +1271,11 @@
         "items": [
           [
             "m",
-            "\\omega^2=g_{\\rm eff}/\\ell"
+            "\\omega^2=g_{\\mathrm{eff}}/\\ell"
           ],
           [
             "m",
-            "g_{\\rm eff}=\\sqrt{g^2+(qE/m)^2}"
+            "g_{\\mathrm{eff}}=\\sqrt{g^2+(qE/m)^2}"
           ],
           [
             "p",
@@ -1411,7 +1411,7 @@
         "items": [
           [
             "m",
-            "\\oint\\mathbf E\\cdot d\\mathbf A=Q_{\\rm enc}/\\varepsilon_0"
+            "\\oint\\mathbf E\\cdot d\\mathbf A=Q_{\\mathrm{enc}}/\\varepsilon_0"
           ],
           [
             "p",
@@ -1472,11 +1472,11 @@
         "items": [
           [
             "m",
-            "\\Phi_{\\rm centre,face}=q/(6\\varepsilon_0)"
+            "\\Phi_{\\mathrm{centre},face}=q/(6\\varepsilon_0)"
           ],
           [
             "m",
-            "\\Phi_{\\rm corner,far\\ face}=q/(24\\varepsilon_0)"
+            "\\Phi_{\\mathrm{corner},far\\ face}=q/(24\\varepsilon_0)"
           ],
           [
             "p",
@@ -1497,11 +1497,11 @@
         "items": [
           [
             "m",
-            "f_{\\rm opposite\\ side}=\\frac{\\tan^{-1}(1/3)}{2\\pi}"
+            "f_{\\mathrm{opposite}\\ side}=\\frac{\\tan^{-1}(1/3)}{2\\pi}"
           ],
           [
             "m",
-            "f_{\\rm end}=\\frac{\\tan^{-1}(4/3)}{4\\pi}"
+            "f_{\\mathrm{end}}=\\frac{\\tan^{-1}(4/3)}{4\\pi}"
           ],
           [
             "p",
@@ -1522,7 +1522,7 @@
         "items": [
           [
             "m",
-            "\\Omega_{\\rm corner}=\\tan^{-1}\\frac{uv}{h\\sqrt{h^2+u^2+v^2}}"
+            "\\Omega_{\\mathrm{corner}}=\\tan^{-1}\\frac{uv}{h\\sqrt{h^2+u^2+v^2}}"
           ],
           [
             "p",
@@ -1543,7 +1543,7 @@
         "items": [
           [
             "m",
-            "Q_{\\rm enc}=0\\ \\Rightarrow\\ \\Phi_{\\rm total}=0"
+            "Q_{\\mathrm{enc}}=0\\ \\Rightarrow\\ \\Phi_{\\mathrm{total}}=0"
           ],
           [
             "p",
@@ -1579,7 +1579,7 @@
         "items": [
           [
             "m",
-            "\\oint\\mathbf E\\cdot d\\mathbf A\\ \\longrightarrow\\ E\\,A_{\\rm active}"
+            "\\oint\\mathbf E\\cdot d\\mathbf A\\ \\longrightarrow\\ E\\,A_{\\mathrm{active}}"
           ],
           [
             "p",
@@ -1625,7 +1625,7 @@
         "items": [
           [
             "m",
-            "E_r2\\pi rL=\\lambda_{\\rm enc}L/\\varepsilon_0"
+            "E_r2\\pi rL=\\lambda_{\\mathrm{enc}}L/\\varepsilon_0"
           ],
           [
             "p",
@@ -1650,7 +1650,7 @@
           ],
           [
             "m",
-            "\\oint\\mathbf g\\cdot d\\mathbf A=-4\\pi GM_{\\rm enc}"
+            "\\oint\\mathbf g\\cdot d\\mathbf A=-4\\pi GM_{\\mathrm{enc}}"
           ],
           [
             "p",
@@ -1711,11 +1711,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm in}=kQr/R^3"
+            "E_{\\mathrm{in}}=kQr/R^3"
           ],
           [
             "m",
-            "V_{\\rm in}=\\frac{kQ}{2R}\\left(3-\\frac{r^2}{R^2}\\right)"
+            "V_{\\mathrm{in}}=\\frac{kQ}{2R}\\left(3-\\frac{r^2}{R^2}\\right)"
           ],
           [
             "p",
@@ -1822,7 +1822,7 @@
           ],
           [
             "m",
-            "\\mathbf E_{\\rm hole}=\\rho\\mathbf a/(3\\varepsilon_0)"
+            "\\mathbf E_{\\mathrm{hole}}=\\rho\\mathbf a/(3\\varepsilon_0)"
           ],
           [
             "p",
@@ -1843,7 +1843,7 @@
         "items": [
           [
             "m",
-            "\\mathbf E_{\\rm hole}=\\rho\\mathbf a/(2\\varepsilon_0)"
+            "\\mathbf E_{\\mathrm{hole}}=\\rho\\mathbf a/(2\\varepsilon_0)"
           ],
           [
             "p",
@@ -1864,7 +1864,7 @@
         "items": [
           [
             "m",
-            "\\mathbf E_{\\rm net}=\\mathbf E_{\\rm full}-\\mathbf E_{\\rm removed}"
+            "\\mathbf E_{\\mathrm{net}}=\\mathbf E_{\\mathrm{full}}-\\mathbf E_{\\mathrm{removed}}"
           ],
           [
             "p",
@@ -1900,11 +1900,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm in}=\\rho r/(2\\varepsilon_0)"
+            "E_{\\mathrm{in}}=\\rho r/(2\\varepsilon_0)"
           ],
           [
             "m",
-            "E_{\\rm out}=\\rho R^2/(2\\varepsilon_0r)"
+            "E_{\\mathrm{out}}=\\rho R^2/(2\\varepsilon_0r)"
           ],
           [
             "p",
@@ -2036,11 +2036,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm left}=-(\\sigma_1+\\sigma_2)/(2\\varepsilon_0)"
+            "E_{\\mathrm{left}}=-(\\sigma_1+\\sigma_2)/(2\\varepsilon_0)"
           ],
           [
             "m",
-            "E_{\\rm gap}=(\\sigma_1-\\sigma_2)/(2\\varepsilon_0)"
+            "E_{\\mathrm{gap}}=(\\sigma_1-\\sigma_2)/(2\\varepsilon_0)"
           ],
           [
             "p",
@@ -2061,11 +2061,11 @@
         "items": [
           [
             "m",
-            "Q_{\\rm outer\\ face}=(Q_1+Q_2)/2"
+            "Q_{\\mathrm{outer}\\ face}=(Q_1+Q_2)/2"
           ],
           [
             "m",
-            "Q_{\\rm facing\\ faces}=\\pm(Q_1-Q_2)/2"
+            "Q_{\\mathrm{facing}\\ faces}=\\pm(Q_1-Q_2)/2"
           ],
           [
             "p",
@@ -2086,11 +2086,11 @@
         "items": [
           [
             "m",
-            "E_{\\rm outside}=\\sigma_{\\rm face}/\\varepsilon_0"
+            "E_{\\mathrm{outside}}=\\sigma_{\\mathrm{face}}/\\varepsilon_0"
           ],
           [
             "m",
-            "E_{\\rm rest}=\\sigma_{\\rm face}/(2\\varepsilon_0)"
+            "E_{\\mathrm{rest}}=\\sigma_{\\mathrm{face}}/(2\\varepsilon_0)"
           ],
           [
             "p",
@@ -2151,7 +2151,7 @@
         "items": [
           [
             "m",
-            "V(x)-V(0)=-\\rho x^2/(2\\varepsilon_0),\\quad |x|\\le a"
+            "V(x)-V(0)=-\\rho x^2/(2\\varepsilon_0),\\quad |x|\\leqslant a"
           ],
           [
             "m",
@@ -2201,7 +2201,7 @@
         "items": [
           [
             "m",
-            "E_{\\rm remaining}(x)=E_{\\rm full}(x)-E_{\\rm cut}(x)"
+            "E_{\\mathrm{remaining}}(x)=E_{\\mathrm{full}}(x)-E_{\\mathrm{cut}}(x)"
           ],
           [
             "p",
@@ -2237,11 +2237,11 @@
         "items": [
           [
             "m",
-            "\\mathbf E_{\\rm metal}=0"
+            "\\mathbf E_{\\mathrm{metal}}=0"
           ],
           [
             "m",
-            "\\Delta V_{\\rm connected\\ metal}=0"
+            "\\Delta V_{\\mathrm{connected}\\ metal}=0"
           ],
           [
             "p",
@@ -2262,11 +2262,11 @@
         "items": [
           [
             "m",
-            "E_{n,\\rm out}-E_{n,\\rm in}=\\sigma/\\varepsilon_0"
+            "E_{n,\\mathrm{out}}-E_{n,\\mathrm{in}}=\\sigma/\\varepsilon_0"
           ],
           [
             "m",
-            "\\mathbf E_{t,\\rm out}=\\mathbf E_{t,\\rm in}=0"
+            "\\mathbf E_{t,\\mathrm{out}}=\\mathbf E_{t,\\mathrm{in}}=0"
           ],
           [
             "p",
@@ -2287,7 +2287,7 @@
         "items": [
           [
             "m",
-            "P=\\sigma^2/(2\\varepsilon_0)=\\varepsilon_0E_{\\rm out}^2/2"
+            "P=\\sigma^2/(2\\varepsilon_0)=\\varepsilon_0E_{\\mathrm{out}}^2/2"
           ],
           [
             "p",
@@ -2344,11 +2344,11 @@
         "items": [
           [
             "m",
-            "Q_{\\rm inner}=-q"
+            "Q_{\\mathrm{inner}}=-q"
           ],
           [
             "m",
-            "Q_{\\rm outer}=Q_c+q"
+            "Q_{\\mathrm{outer}}=Q_c+q"
           ],
           [
             "p",
@@ -2369,7 +2369,7 @@
         "items": [
           [
             "m",
-            "\\mathbf E_{\\rm metal}=0,\\quad V_{\\rm metal}=V_c"
+            "\\mathbf E_{\\mathrm{metal}}=0,\\quad V_{\\mathrm{metal}}=V_c"
           ],
           [
             "p",
@@ -2411,7 +2411,7 @@
         "items": [
           [
             "m",
-            "Q_{\\rm cavity}=0\\quad\\Rightarrow\\quad\\mathbf E_{\\rm cavity}=0"
+            "Q_{\\mathrm{cavity}}=0\\quad\\Rightarrow\\quad\\mathbf E_{\\mathrm{cavity}}=0"
           ],
           [
             "p",
@@ -2472,11 +2472,11 @@
         "items": [
           [
             "m",
-            "W_{\\rm field}=q(V_a-V_b)"
+            "W_{\\mathrm{field}}=q(V_a-V_b)"
           ],
           [
             "m",
-            "W_{\\rm ext,slow}=q(V_b-V_a)"
+            "W_{\\mathrm{ext},slow}=q(V_b-V_a)"
           ],
           [
             "p",
@@ -2526,7 +2526,7 @@
           ],
           [
             "m",
-            "V_{\\rm uniform}=-\\mathbf E\\cdot\\mathbf r+C"
+            "V_{\\mathrm{uniform}}=-\\mathbf E\\cdot\\mathbf r+C"
           ],
           [
             "p",
@@ -2583,11 +2583,11 @@
         "items": [
           [
             "m",
-            "V_{\\rm ring}=kQ/\\sqrt{R^2+x^2}"
+            "V_{\\mathrm{ring}}=kQ/\\sqrt{R^2+x^2}"
           ],
           [
             "m",
-            "V_{\\rm disc}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{R^2+x^2}-|x|)"
+            "V_{\\mathrm{disc}}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{R^2+x^2}-|x|)"
           ],
           [
             "p",
@@ -2608,11 +2608,11 @@
         "items": [
           [
             "m",
-            "V_{\\rm shell}=kQ/\\max(r,R)"
+            "V_{\\mathrm{shell}}=kQ/\\max(r,R)"
           ],
           [
             "m",
-            "V_{\\rm annulus}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{x^2+b^2}-\\sqrt{x^2+a^2})"
+            "V_{\\mathrm{annulus}}=\\frac{\\sigma}{2\\varepsilon_0}(\\sqrt{x^2+b^2}-\\sqrt{x^2+a^2})"
           ],
           [
             "p",
@@ -2788,7 +2788,7 @@
           ],
           [
             "m",
-            "U=\\frac12\\sum_i q_iV_i,\\quad V_i=\\sum_{j\\ne i}kq_j/r_{ij}"
+            "U=\\frac{1}{2}\\sum_i q_iV_i,\\quad V_i=\\sum_{j\\ne i}kq_j/r_{ij}"
           ],
           [
             "p",
@@ -2813,7 +2813,7 @@
           ],
           [
             "m",
-            "U_{\\mathrm{square}}=(4+\\sqrt2)kq^2/a"
+            "U_{\\mathrm{square}}=(4+\\sqrt{2})kq^2/a"
           ],
           [
             "p",
@@ -2855,7 +2855,7 @@
         "items": [
           [
             "m",
-            "F_x=-\\left(\\frac{\\partial U}{\\partial x}\\right)_{\\rm fixed\\ charges}"
+            "F_x=-\\left(\\frac{\\partial U}{\\partial x}\\right)_{\\mathrm{fixed}\\ charges}"
           ],
           [
             "p",
@@ -2962,11 +2962,11 @@
         "items": [
           [
             "m",
-            "R_1=0.02\\ \\mathrm m,\\ R_2=0.06\\ \\mathrm m"
+            "R_1=0.02\\ \\mathrm{m},\\ R_2=0.06\\ \\mathrm{m}"
           ],
           [
             "m",
-            "V_1=3000\\ \\mathrm V,\\ V_2=0:\\ V_f=750\\ \\mathrm V"
+            "V_1=3000\\ \\mathrm{V},\\ V_2=0:\\ V_f=750\\ \\mathrm{V}"
           ],
           [
             "p",
@@ -3077,7 +3077,7 @@
         "items": [
           [
             "m",
-            "V_{\\rm cavity}(r)=kq/r-kq/a+V_c"
+            "V_{\\mathrm{cavity}}(r)=kq/r-kq/a+V_c"
           ],
           [
             "p",
@@ -3113,11 +3113,11 @@
         "items": [
           [
             "m",
-            "U_{\\rm shell}=\\int_0^Q\\frac{kq}{R}\\,dq=\\frac{kQ^2}{2R}"
+            "U_{\\mathrm{shell}}=\\int_0^Q\\frac{kq}{R}\\,dq=\\frac{kQ^2}{2R}"
           ],
           [
             "m",
-            "U=\\frac12QV"
+            "U=\\frac{1}{2}QV"
           ],
           [
             "p",
@@ -3138,11 +3138,11 @@
         "items": [
           [
             "m",
-            "U_{\\rm solid}=\\frac{3kQ^2}{5R}"
+            "U_{\\mathrm{solid}}=\\frac{3kQ^2}{5R}"
           ],
           [
             "m",
-            "U_{\\rm inside}=\\frac{kQ^2}{10R}"
+            "U_{\\mathrm{inside}}=\\frac{kQ^2}{10R}"
           ],
           [
             "p",
@@ -3163,11 +3163,11 @@
         "items": [
           [
             "m",
-            "u=\\frac12\\varepsilon_0E^2"
+            "u=\\frac{1}{2}\\varepsilon_0E^2"
           ],
           [
             "m",
-            "U=\\frac12\\int\\rho V\\,d\\mathcal V"
+            "U=\\frac{1}{2}\\int\\rho V\\,d\\mathcal V"
           ],
           [
             "p",
@@ -3249,7 +3249,7 @@
         "items": [
           [
             "m",
-            "V\\simeq V_0+\\frac12\\sum_i\\kappa_i x_i^2"
+            "V\\simeq V_0+\\frac{1}{2}\\sum_i\\kappa_i x_i^2"
           ],
           [
             "m",
@@ -3303,7 +3303,7 @@
           ],
           [
             "m",
-            "\\tau_\\perp=\\sqrt2/\\omega_z"
+            "\\tau_\\perp=\\sqrt{2}/\\omega_z"
           ],
           [
             "p",
@@ -3339,7 +3339,7 @@
         "items": [
           [
             "m",
-            "V=kq\\left(\\frac1{|\\mathbf r-h\\hat{\\mathbf z}|}-\\frac1{|\\mathbf r+h\\hat{\\mathbf z}|}\\right)"
+            "V=kq\\left(\\frac{1}{|\\mathbf r-h\\hat{\\mathbf z}|}-\\frac{1}{|\\mathbf r+h\\hat{\\mathbf z}|}\\right)"
           ],
           [
             "p",
@@ -3500,7 +3500,7 @@
           ],
           [
             "m",
-            "Q_{\\rm induced}=q\\prime+q_0=0"
+            "Q_{\\mathrm{induced}}=q\\prime+q_0=0"
           ],
           [
             "p",
@@ -3586,11 +3586,11 @@
         "items": [
           [
             "m",
-            "F_{\\rm hemi}=P\\pi R^2"
+            "F_{\\mathrm{hemi}}=P\\pi R^2"
           ],
           [
             "m",
-            "F_{\\rm hemi}=kQ^2/(8R^2)"
+            "F_{\\mathrm{hemi}}=kQ^2/(8R^2)"
           ],
           [
             "p",
@@ -3611,7 +3611,7 @@
         "items": [
           [
             "m",
-            "p_{\\rm in}-p_{\\rm out}=4\\gamma/R-Q^2/(32\\pi^2\\varepsilon_0R^4)"
+            "p_{\\mathrm{in}}-p_{\\mathrm{out}}=4\\gamma/R-Q^2/(32\\pi^2\\varepsilon_0R^4)"
           ],
           [
             "p",
@@ -3743,7 +3743,7 @@
         "items": [
           [
             "m",
-            "\\frac{q_{\\rm threshold}}{Q_R(r)}=\\frac12\\sqrt{\\frac{2-2^{2/3}}{2^{2/3}-1}}\\simeq0.419"
+            "\\frac{q_{\\mathrm{threshold}}}{Q_R(r)}=\\frac{1}{2}\\sqrt{\\frac{2-2^{2/3}}{2^{2/3}-1}}\\simeq0.419"
           ],
           [
             "p",
@@ -3808,7 +3808,7 @@
           ],
           [
             "m",
-            "V_{\\rm axis}\\simeq2kqa^2/r^3"
+            "V_{\\mathrm{axis}}\\simeq2kqa^2/r^3"
           ],
           [
             "p",
@@ -3833,7 +3833,7 @@
           ],
           [
             "m",
-            "U=-\\frac12\\alpha E^2,\\quad\\mathbf F=\\frac12\\alpha\\nabla E^2"
+            "U=-\\frac{1}{2}\\alpha E^2,\\quad\\mathbf F=\\frac{1}{2}\\alpha\\nabla E^2"
           ],
           [
             "p",
@@ -3940,7 +3940,7 @@
         "items": [
           [
             "m",
-            "V_{\\rm centre}(L)=2V_{\\rm corner}(L)"
+            "V_{\\mathrm{centre}}(L)=2V_{\\mathrm{corner}}(L)"
           ],
           [
             "m",
@@ -3965,11 +3965,11 @@
         "items": [
           [
             "m",
-            "V_{\\rm corner}\\simeq1.19004\\,k\\rho L^2"
+            "V_{\\mathrm{corner}}\\simeq1.19004\\,k\\rho L^2"
           ],
           [
             "m",
-            "V_{\\rm centre}\\simeq2.38008\\,k\\rho L^2"
+            "V_{\\mathrm{centre}}\\simeq2.38008\\,k\\rho L^2"
           ],
           [
             "p",
@@ -4030,7 +4030,7 @@
         "items": [
           [
             "m",
-            "E_{\\rm inside}\\simeq-\\delta\\,kQr/(3R^3),\\quad r\\ll R"
+            "E_{\\mathrm{inside}}\\simeq-\\delta\\,kQr/(3R^3),\\quad r\\ll R"
           ],
           [
             "p",
@@ -4076,11 +4076,11 @@
         "items": [
           [
             "m",
-            "U_{\\rm nucleus}\\simeq\\frac{3k(Ze)^2}{5R}"
+            "U_{\\mathrm{nucleus}}\\simeq\\frac{3k(Ze)^2}{5R}"
           ],
           [
             "m",
-            "K_{\\rm contact}\\sim kZ_1Z_2e^2/(R_1+R_2)"
+            "K_{\\mathrm{contact}}\\sim kZ_1Z_2e^2/(R_1+R_2)"
           ],
           [
             "p",

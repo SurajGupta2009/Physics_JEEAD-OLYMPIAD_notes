@@ -36,7 +36,7 @@
         "items": [
           [
             "m",
-            "\\oint\\vec E\\cdot d\\vec A=Q_{\\rm enclosed}/\\varepsilon_0"
+            "\\oint\\vec E\\cdot d\\vec A=Q_{\\mathrm{enclosed}}/\\varepsilon_0"
           ],
           [
             "m",
@@ -65,7 +65,7 @@
           ],
           [
             "m",
-            "E_{\\rm out,n}=\\sigma/\\varepsilon_0"
+            "E_{\\mathrm{out},n}=\\sigma/\\varepsilon_0"
           ],
           [
             "why",
@@ -98,11 +98,11 @@
           ],
           [
             "m",
-            "V_{\\rm sphere}(r<R)=\\frac{Q}{4\\pi\\varepsilon_0R}"
+            "V_{\\mathrm{sphere}}(r<R)=\\frac{Q}{4\\pi\\varepsilon_0R}"
           ],
           [
             "m",
-            "V_{\\rm sphere}(r>R)=\\frac{Q}{4\\pi\\varepsilon_0r}"
+            "V_{\\mathrm{sphere}}(r>R)=\\frac{Q}{4\\pi\\varepsilon_0r}"
           ]
         ]
       }
@@ -128,7 +128,7 @@
         "items": [
           [
             "m",
-            "C=\\frac{Q}{V_+-V_-};\\quad 1\\,{\\rm F}=1\\,{\\rm C/V}"
+            "C=\\frac{Q}{V_+-V_-};\\quad 1\\,{\\mathrm{F}}=1\\,{\\mathrm{C}/V}"
           ],
           [
             "p",
@@ -348,7 +348,7 @@
           ],
           [
             "m",
-            "\\frac1C=\\frac{(1/a-1/b)/K+1/b}{4\\pi\\varepsilon_0}"
+            "\\frac{1}{C}=\\frac{(1/a-1/b)/K+1/b}{4\\pi\\varepsilon_0}"
           ],
           [
             "why",
@@ -386,7 +386,7 @@
           ],
           [
             "m",
-            "U=\\frac{Q^2}{2C}=\\frac12 QV=\\frac12 CV^2"
+            "U=\\frac{Q^2}{2C}=\\frac{1}{2} QV=\\frac{1}{2} CV^2"
           ],
           [
             "why",
@@ -398,7 +398,7 @@
           ],
           [
             "m",
-            "u=\\frac12\\varepsilon E^2;\\quad U=\\int u\\,d\\mathcal V"
+            "u=\\frac{1}{2}\\varepsilon E^2;\\quad U=\\int u\\,d\\mathcal V"
           ],
           [
             "p",
@@ -440,11 +440,11 @@
           ],
           [
             "m",
-            "\\Pi=U-VQ=-\\frac12 C(x)V^2"
+            "\\Pi=U-VQ=-\\frac{1}{2} C(x)V^2"
           ],
           [
             "m",
-            "F_x=-\\left(\\frac{d\\Pi}{dx}\\right)_V=\\frac12 V^2C'(x)"
+            "F_x=-\\left(\\frac{d\\Pi}{dx}\\right)_V=\\frac{1}{2} V^2C'(x)"
           ],
           [
             "why",
@@ -465,15 +465,15 @@
           ],
           [
             "m",
-            "W_{\\rm battery}=V^2\\Delta C"
+            "W_{\\mathrm{battery}}=V^2\\Delta C"
           ],
           [
             "m",
-            "\\Delta U=\\tfrac12 V^2\\Delta C"
+            "\\Delta U=\\frac{1}{2} V^2\\Delta C"
           ],
           [
             "m",
-            "W_{\\rm mech,out}=\\tfrac12 V^2\\Delta C"
+            "W_{\\mathrm{mech},out}=\\frac{1}{2} V^2\\Delta C"
           ],
           [
             "why",
@@ -481,7 +481,7 @@
           ],
           [
             "m",
-            "W_{\\rm sources}=\\Delta U+H+W_{\\rm mech,out}"
+            "W_{\\mathrm{sources}}=\\Delta U+H+W_{\\mathrm{mech},out}"
           ],
           [
             "p",
@@ -511,7 +511,7 @@
         "items": [
           [
             "m",
-            "p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac12\\varepsilon_0 E_{\\rm out}^2"
+            "p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac{1}{2}\\varepsilon_0 E_{\\mathrm{out}}^2"
           ],
           [
             "p",
@@ -548,7 +548,7 @@
           ],
           [
             "m",
-            "F_{\\rm in}=\\frac{\\varepsilon_0(K-1)w}{2d}V^2"
+            "F_{\\mathrm{in}}=\\frac{\\varepsilon_0(K-1)w}{2d}V^2"
           ],
           [
             "why",
@@ -636,7 +636,7 @@
         "items": [
           [
             "m",
-            "\\frac1{C_{\\rm eq}}=\\sum_i\\frac1{C_i}"
+            "\\frac{1}{C_{\\mathrm{eq}}}=\\sum_i\\frac{1}{C_i}"
           ],
           [
             "m",
@@ -661,7 +661,7 @@
         "items": [
           [
             "m",
-            "C_{\\rm eq}=\\sum_i C_i;\\quad Q_i=C_i V"
+            "C_{\\mathrm{eq}}=\\sum_i C_i;\\quad Q_i=C_i V"
           ],
           [
             "why",
@@ -673,11 +673,11 @@
           ],
           [
             "m",
-            "\\left(\\frac{U_i}{U}\\right)_{\\rm series}=\\frac{C_{\\rm eq}}{C_i}"
+            "\\left(\\frac{U_i}{U}\\right)_{\\mathrm{series}}=\\frac{C_{\\mathrm{eq}}}{C_i}"
           ],
           [
             "m",
-            "\\left(\\frac{U_i}{U}\\right)_{\\rm parallel}=\\frac{C_i}{C_{\\rm eq}}"
+            "\\left(\\frac{U_i}{U}\\right)_{\\mathrm{parallel}}=\\frac{C_i}{C_{\\mathrm{eq}}}"
           ],
           [
             "trap",
@@ -694,7 +694,7 @@
           ],
           [
             "m",
-            "q_i^{\\rm initial}=\\sum_j C_{ij}(V_i-V_j)"
+            "q_i^{\\mathrm{initial}}=\\sum_j C_{ij}(V_i-V_j)"
           ],
           [
             "why",
@@ -790,7 +790,7 @@
           ],
           [
             "m",
-            "C_{\\rm opposite}=6C/5"
+            "C_{\\mathrm{opposite}}=6C/5"
           ],
           [
             "p",
@@ -856,7 +856,7 @@
           ],
           [
             "m",
-            "X=\\frac{\\sqrt5-1}{2}C"
+            "X=\\frac{\\sqrt{5}-1}{2}C"
           ],
           [
             "why",
@@ -902,7 +902,7 @@
           ],
           [
             "m",
-            "\\oint\\vec D\\cdot d\\vec A=Q_{\\rm free}"
+            "\\oint\\vec D\\cdot d\\vec A=Q_{\\mathrm{free}}"
           ],
           [
             "why",
@@ -919,7 +919,7 @@
         "items": [
           [
             "m",
-            "D_{2n}-D_{1n}=\\sigma_{\\rm free}"
+            "D_{2n}-D_{1n}=\\sigma_{\\mathrm{free}}"
           ],
           [
             "m",
@@ -948,11 +948,11 @@
         "items": [
           [
             "m",
-            "\\frac1C=\\sum_i\\frac{t_i}{\\varepsilon_i A}"
+            "\\frac{1}{C}=\\sum_i\\frac{t_i}{\\varepsilon_i A}"
           ],
           [
             "m",
-            "D=Q_{\\rm free}/A;\\quad E_i=D/\\varepsilon_i"
+            "D=Q_{\\mathrm{free}}/A;\\quad E_i=D/\\varepsilon_i"
           ],
           [
             "p",
@@ -1027,7 +1027,7 @@
           ],
           [
             "m",
-            "\\tau=R_{\\rm th}C"
+            "\\tau=R_{\\mathrm{th}}C"
           ],
           [
             "p",
@@ -1064,7 +1064,7 @@
           ],
           [
             "m",
-            "R_{\\rm th}=R_1\\parallel R_2"
+            "R_{\\mathrm{th}}=R_1\\parallel R_2"
           ],
           [
             "p",
@@ -1114,7 +1114,7 @@
           ],
           [
             "m",
-            "t_{1/2,V}=RC\\ln2;\\quad t_{1/2,U}=\\tfrac12 RC\\ln2"
+            "t_{1/2,V}=RC\\ln2;\\quad t_{1/2,U}=\\frac{1}{2} RC\\ln2"
           ],
           [
             "why",
@@ -1164,7 +1164,7 @@
           ],
           [
             "m",
-            "H=\\frac12 C_s(V_1-V_2)^2"
+            "H=\\frac{1}{2} C_s(V_1-V_2)^2"
           ],
           [
             "why",
@@ -1206,7 +1206,7 @@
         "items": [
           [
             "m",
-            "W_{\\rm cell}=CE^2;\\quad U_f=H=\\tfrac12 CE^2"
+            "W_{\\mathrm{cell}}=CE^2;\\quad U_f=H=\\frac{1}{2} CE^2"
           ],
           [
             "p",
@@ -1214,11 +1214,11 @@
           ],
           [
             "m",
-            "H=\\frac12 C(V_0-V_{\\rm th})^2"
+            "H=\\frac{1}{2} C(V_0-V_{\\mathrm{th}})^2"
           ],
           [
             "m",
-            "H(t)=\\frac12 CE^2(1-e^{-2t/(RC)})"
+            "H(t)=\\frac{1}{2} CE^2(1-e^{-2t/(RC)})"
           ],
           [
             "p",
@@ -1239,7 +1239,7 @@
           ],
           [
             "m",
-            "Q_{\\rm branch,in}=\\Delta\\!\\left(\\sum_{\\rm inside}q_{\\rm plate}\\right)"
+            "Q_{\\mathrm{branch},in}=\\Delta\\!\\left(\\sum_{\\mathrm{inside}}q_{\\mathrm{plate}}\\right)"
           ],
           [
             "why",
@@ -1306,7 +1306,7 @@
         "items": [
           [
             "m",
-            "V_{\\max}\\simeq E_b d;\\quad u_{\\max}=\\frac12\\varepsilon E_b^2"
+            "V_{\\max}\\simeq E_b d;\\quad u_{\\max}=\\frac{1}{2}\\varepsilon E_b^2"
           ],
           [
             "p",
@@ -1360,11 +1360,11 @@
         "items": [
           [
             "m",
-            "\\varepsilon_0=8.854\\times10^{-12}\\ {\\rm F/m}"
+            "\\varepsilon_0=8.854\\times10^{-12}\\ {\\mathrm{F}/m}"
           ],
           [
             "m",
-            "4\\pi\\varepsilon_0=1.113\\times10^{-10}\\ {\\rm F/m}"
+            "4\\pi\\varepsilon_0=1.113\\times10^{-10}\\ {\\mathrm{F}/m}"
           ],
           [
             "p",
@@ -1406,7 +1406,7 @@
         "items": [
           [
             "m",
-            "p=\\alpha E_{\\rm local};\\quad E_{\\rm local}=E+P/(3\\varepsilon_0)"
+            "p=\\alpha E_{\\mathrm{local}};\\quad E_{\\mathrm{local}}=E+P/(3\\varepsilon_0)"
           ],
           [
             "m",
@@ -1418,7 +1418,7 @@
           ],
           [
             "m",
-            "\\alpha_e=\\frac{e^2}{m\\omega_0^2},\\quad\\alpha_{\\rm orient}=\\frac{p_0^2}{3k_BT}"
+            "\\alpha_e=\\frac{e^2}{m\\omega_0^2},\\quad\\alpha_{\\mathrm{orient}}=\\frac{p_0^2}{3k_BT}"
           ],
           [
             "why",
@@ -1464,11 +1464,11 @@
         "items": [
           [
             "m",
-            "P_{\\rm loss}/\\mathcal V=\\omega\\varepsilon_0K'\\tan\\delta\\,E_{\\rm rms}^2"
+            "P_{\\mathrm{loss}}/\\mathcal V=\\omega\\varepsilon_0K'\\tan\\delta\\,E_{\\mathrm{rms}}^2"
           ],
           [
             "m",
-            "\\tan\\delta\\simeq\\omega C R_s\\simeq\\frac1{\\omega C R_p}"
+            "\\tan\\delta\\simeq\\omega C R_s\\simeq\\frac{1}{\\omega C R_p}"
           ],
           [
             "p",
@@ -1535,7 +1535,7 @@
         "items": [
           [
             "m",
-            "i=C\\frac{dV_C}{dt};\\quad Z_C=\\frac1{i\\omega C}"
+            "i=C\\frac{dV_C}{dt};\\quad Z_C=\\frac{1}{i\\omega C}"
           ],
           [
             "p",
@@ -1543,15 +1543,15 @@
           ],
           [
             "m",
-            "H(\\omega)=\\frac1{1+i\\omega RC}"
+            "H(\\omega)=\\frac{1}{1+i\\omega RC}"
           ],
           [
             "m",
-            "|H|=\\frac1{\\sqrt{1+(\\omega RC)^2}}"
+            "|H|=\\frac{1}{\\sqrt{1+(\\omega RC)^2}}"
           ],
           [
             "m",
-            "f_c=\\frac1{2\\pi RC};\\quad\\phi=-\\arctan(\\omega RC)"
+            "f_c=\\frac{1}{2\\pi RC};\\quad\\phi=-\\arctan(\\omega RC)"
           ],
           [
             "why",
@@ -1597,7 +1597,7 @@
           ],
           [
             "m",
-            "t_c=RC\\ln\\frac{V_s-V_{\\rm lo}}{V_s-V_{\\rm hi}}"
+            "t_c=RC\\ln\\frac{V_s-V_{\\mathrm{lo}}}{V_s-V_{\\mathrm{hi}}}"
           ],
           [
             "p",
@@ -1605,7 +1605,7 @@
           ],
           [
             "m",
-            "t_d=R_dC\\ln(V_{\\rm hi}/V_{\\rm lo})"
+            "t_d=R_dC\\ln(V_{\\mathrm{hi}}/V_{\\mathrm{lo}})"
           ],
           [
             "p",
@@ -1622,7 +1622,7 @@
         "items": [
           [
             "m",
-            "\\Delta V\\simeq I_{\\rm load}\\Delta t/C"
+            "\\Delta V\\simeq I_{\\mathrm{load}}\\Delta t/C"
           ],
           [
             "p",
@@ -1630,7 +1630,7 @@
           ],
           [
             "m",
-            "H_{\\rm ramp}\\simeq RC^2V^2/T\\quad(T\\gg RC)"
+            "H_{\\mathrm{ramp}}\\simeq RC^2V^2/T\\quad(T\\gg RC)"
           ],
           [
             "why",
@@ -1638,7 +1638,7 @@
           ],
           [
             "m",
-            "V_{\\rm rms,noise}=\\sqrt{k_BT/C}"
+            "V_{\\mathrm{rms},noise}=\\sqrt{k_BT/C}"
           ],
           [
             "p",
@@ -1726,7 +1726,7 @@
           ],
           [
             "m",
-            "V_{\\rm read}=V_0\\frac{C_s}{C_s+C_m}"
+            "V_{\\mathrm{read}}=V_0\\frac{C_s}{C_s+C_m}"
           ],
           [
             "why",
@@ -1734,7 +1734,7 @@
           ],
           [
             "m",
-            "V_{\\rm rms,noise}=\\sqrt{k_BT/C}"
+            "V_{\\mathrm{rms},noise}=\\sqrt{k_BT/C}"
           ],
           [
             "p",
@@ -1793,7 +1793,7 @@
           ],
           [
             "m",
-            "U=\\frac12\\sum_i Q_iV_i=\\frac12\\mathbf V^T\\mathbf C\\mathbf V"
+            "U=\\frac{1}{2}\\sum_i Q_iV_i=\\frac{1}{2}\\mathbf V^T\\mathbf C\\mathbf V"
           ],
           [
             "p",
@@ -1822,11 +1822,11 @@
           ],
           [
             "m",
-            "\\Delta Q_{\\rm electrode}=-q\\Delta\\phi_w"
+            "\\Delta Q_{\\mathrm{electrode}}=-q\\Delta\\phi_w"
           ],
           [
             "m",
-            "i_{\\rm electrode}=-q\\vec v\\cdot\\nabla\\phi_w"
+            "i_{\\mathrm{electrode}}=-q\\vec v\\cdot\\nabla\\phi_w"
           ],
           [
             "why",
@@ -1947,7 +1947,7 @@
         "items": [
           [
             "m",
-            "E_{\\rm in}=\\frac{E_0}{1+L(\\varepsilon_i/\\varepsilon_m-1)}"
+            "E_{\\mathrm{in}}=\\frac{E_0}{1+L(\\varepsilon_i/\\varepsilon_m-1)}"
           ],
           [
             "m",
@@ -1984,7 +1984,7 @@
           ],
           [
             "m",
-            "E_{\\rm corner}\\propto r^{\\pi/\\beta-1}"
+            "E_{\\mathrm{corner}}\\propto r^{\\pi/\\beta-1}"
           ],
           [
             "p",
@@ -2005,11 +2005,11 @@
           ],
           [
             "m",
-            "c\\frac{\\partial V}{\\partial t}=\\frac1r\\frac{\\partial^2V}{\\partial x^2}"
+            "c\\frac{\\partial V}{\\partial t}=\\frac{1}{r}\\frac{\\partial^2V}{\\partial x^2}"
           ],
           [
             "m",
-            "\\ell_{\\rm reached}\\sim\\sqrt{t/(rc)}"
+            "\\ell_{\\mathrm{reached}}\\sim\\sqrt{t/(rc)}"
           ],
           [
             "m",
@@ -2051,7 +2051,7 @@
           ],
           [
             "m",
-            "\\Pi=\\frac12kx^2-\\frac{\\varepsilon AV^2}{2(d_0-x)}"
+            "\\Pi=\\frac{1}{2}kx^2-\\frac{\\varepsilon AV^2}{2(d_0-x)}"
           ],
           [
             "m",
@@ -2072,15 +2072,15 @@
         "items": [
           [
             "m",
-            "x_{\\rm pi}=d_0/3"
+            "x_{\\mathrm{pi}}=d_0/3"
           ],
           [
             "m",
-            "V_{\\rm pi}^2=\\frac{8kd_0^3}{27\\varepsilon A}"
+            "V_{\\mathrm{pi}}^2=\\frac{8kd_0^3}{27\\varepsilon A}"
           ],
           [
             "m",
-            "\\omega^2=\\frac1m\\left[k-\\frac{\\varepsilon AV^2}{(d_0-x_{\\rm eq})^3}\\right]"
+            "\\omega^2=\\frac{1}{m}\\left[k-\\frac{\\varepsilon AV^2}{(d_0-x_{\\mathrm{eq}})^3}\\right]"
           ],
           [
             "why",
@@ -2101,7 +2101,7 @@
           ],
           [
             "m",
-            "F=\\frac{Q^2}{2\\varepsilon A};\\quad x_{\\rm eq}=\\frac{Q^2}{2k\\varepsilon A}"
+            "F=\\frac{Q^2}{2\\varepsilon A};\\quad x_{\\mathrm{eq}}=\\frac{Q^2}{2k\\varepsilon A}"
           ],
           [
             "why",

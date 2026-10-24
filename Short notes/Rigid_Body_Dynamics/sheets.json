@@ -54,7 +54,7 @@
           ],
           [
             "m",
-            "\\Delta\\theta=\\omega_0t+\\frac12\\alpha t^2"
+            "\\Delta\\theta=\\omega_0t+\\frac{1}{2}\\alpha t^2"
           ],
           [
             "m",
@@ -120,7 +120,7 @@
           ],
           [
             "m",
-            "v_P=|\\omega|\\,CP_{\\rm inst}"
+            "v_P=|\\omega|\\,CP_{\\mathrm{inst}}"
           ],
           [
             "why",
@@ -164,7 +164,7 @@
           ],
           [
             "m",
-            "K=\\frac12I_A\\omega^2"
+            "K=\\frac{1}{2}I_A\\omega^2"
           ],
           [
             "p",
@@ -205,7 +205,7 @@
           ],
           [
             "m",
-            "I_{\\rm end}=Ml^2/3"
+            "I_{\\mathrm{end}}=Ml^2/3"
           ],
           [
             "why",
@@ -238,7 +238,7 @@
           ],
           [
             "m",
-            "I_{\\rm edge\\parallel x}=Mb^2/3"
+            "I_{\\mathrm{edge}\\parallel x}=Mb^2/3"
           ],
           [
             "m",
@@ -263,7 +263,7 @@
           ],
           [
             "m",
-            "I_{\\rm end}(\\phi)=\\frac{Ml^2}{3}\\sin^2\\phi"
+            "I_{\\mathrm{end}}(\\phi)=\\frac{Ml^2}{3}\\sin^2\\phi"
           ],
           [
             "why",
@@ -308,7 +308,7 @@
           ],
           [
             "m",
-            "I_{\\rm diameter}=MR^2/2"
+            "I_{\\mathrm{diameter}}=MR^2/2"
           ],
           [
             "why",
@@ -316,11 +316,11 @@
           ],
           [
             "m",
-            "I_{\\rm tangent,in-plane}=3MR^2/2"
+            "I_{\\mathrm{tangent},in-plane}=3MR^2/2"
           ],
           [
             "m",
-            "I_{\\rm rim\\ normal}=2MR^2"
+            "I_{\\mathrm{rim}\\ normal}=2MR^2"
           ],
           [
             "trap",
@@ -341,15 +341,15 @@
           ],
           [
             "m",
-            "I_{\\rm diameter}=MR^2/4"
+            "I_{\\mathrm{diameter}}=MR^2/4"
           ],
           [
             "m",
-            "I_{\\rm rim\\ normal}=3MR^2/2"
+            "I_{\\mathrm{rim}\\ normal}=3MR^2/2"
           ],
           [
             "m",
-            "I_{\\rm tangent,in-plane}=5MR^2/4"
+            "I_{\\mathrm{tangent},in-plane}=5MR^2/4"
           ],
           [
             "why",
@@ -374,11 +374,11 @@
           ],
           [
             "m",
-            "I_z=\\frac12M(a^2+b^2)"
+            "I_z=\\frac{1}{2}M(a^2+b^2)"
           ],
           [
             "m",
-            "I_{\\rm diameter}=\\frac14M(a^2+b^2)"
+            "I_{\\mathrm{diameter}}=\\frac{1}{4}M(a^2+b^2)"
           ],
           [
             "why",
@@ -448,15 +448,15 @@
           ],
           [
             "m",
-            "I_{\\rm axial}=MR^2/2"
+            "I_{\\mathrm{axial}}=MR^2/2"
           ],
           [
             "m",
-            "I_{\\rm transverse}=M(3R^2+l^2)/12"
+            "I_{\\mathrm{transverse}}=M(3R^2+l^2)/12"
           ],
           [
             "m",
-            "dI_{\\rm transverse}=(R^2/4+z^2)dm"
+            "dI_{\\mathrm{transverse}}=(R^2/4+z^2)dm"
           ],
           [
             "why",
@@ -477,11 +477,11 @@
           ],
           [
             "m",
-            "I_{\\rm axial}=M(a^2+b^2)/2"
+            "I_{\\mathrm{axial}}=M(a^2+b^2)/2"
           ],
           [
             "m",
-            "I_{\\rm transverse}=M[3(a^2+b^2)+l^2]/12"
+            "I_{\\mathrm{transverse}}=M[3(a^2+b^2)+l^2]/12"
           ],
           [
             "why",
@@ -489,11 +489,11 @@
           ],
           [
             "m",
-            "\\mathrm{thin\\ wall}:\\ I_{\\rm axial}=MR^2"
+            "\\mathrm{thin\\ wall}:\\ I_{\\mathrm{axial}}=MR^2"
           ],
           [
             "m",
-            "I_{\\rm transverse}=M(6R^2+l^2)/12"
+            "I_{\\mathrm{transverse}}=M(6R^2+l^2)/12"
           ],
           [
             "trap",
@@ -518,7 +518,7 @@
           ],
           [
             "m",
-            "I_C=2MR^2/5,\\quad I_{\\rm tangent}=7MR^2/5"
+            "I_C=2MR^2/5,\\quad I_{\\mathrm{tangent}}=7MR^2/5"
           ],
           [
             "why",
@@ -543,11 +543,11 @@
           ],
           [
             "m",
-            "I_{\\rm thin}=2MR^2/3"
+            "I_{\\mathrm{thin}}=2MR^2/3"
           ],
           [
             "m",
-            "I_{\\rm thick}=\\frac{2M}{5}\\frac{b^5-a^5}{b^3-a^3}"
+            "I_{\\mathrm{thick}}=\\frac{2M}{5}\\frac{b^5-a^5}{b^3-a^3}"
           ],
           [
             "why",
@@ -621,7 +621,7 @@
           ],
           [
             "m",
-            "x_C=\\frac1M\\int_0^l x(cx)dx=2l/3"
+            "x_C=\\frac{1}{M}\\int_0^l x(cx)dx=2l/3"
           ],
           [
             "m",
@@ -662,7 +662,7 @@
           ],
           [
             "m",
-            "I_{\\rm diameter}=I_z/2"
+            "I_{\\mathrm{diameter}}=I_z/2"
           ],
           [
             "why",
@@ -687,11 +687,11 @@
           ],
           [
             "m",
-            "I_{\\rm axis}=\\int_0^h\\frac12(Rz/h)^2dm"
+            "I_{\\mathrm{axis}}=\\int_0^h\\frac{1}{2}(Rz/h)^2dm"
           ],
           [
             "m",
-            "I_{\\rm axis}=3MR^2/10"
+            "I_{\\mathrm{axis}}=3MR^2/10"
           ],
           [
             "why",
@@ -762,7 +762,7 @@
           ],
           [
             "m",
-            "I_A=\\frac12MR^2+MR^2=\\frac32MR^2"
+            "I_A=\\frac{1}{2}MR^2+MR^2=\\frac32MR^2"
           ],
           [
             "p",
@@ -770,7 +770,7 @@
           ],
           [
             "m",
-            "I_B=\\frac14MR^2+MR^2=\\frac54MR^2"
+            "I_B=\\frac{1}{4}MR^2+MR^2=\\frac54MR^2"
           ],
           [
             "why",
@@ -778,11 +778,11 @@
           ],
           [
             "m",
-            "I_{\\rm ring,tangent\\ in\\ plane}=\\frac32MR^2"
+            "I_{\\mathrm{ring},tangent\\ in\\ plane}=\\frac32MR^2"
           ],
           [
             "m",
-            "I_{\\rm ring,rim\\ normal}=2MR^2"
+            "I_{\\mathrm{ring},rim\\ normal}=2MR^2"
           ],
           [
             "p",
@@ -807,7 +807,7 @@
           ],
           [
             "m",
-            "I_{\\rm disc,diameter}=MR^2/4"
+            "I_{\\mathrm{disc},diameter}=MR^2/4"
           ],
           [
             "trap",
@@ -836,7 +836,7 @@
           ],
           [
             "m",
-            "I_{\\rm rectangle,normal}=\\frac{M(a^2+b^2)}{12}"
+            "I_{\\mathrm{rectangle},normal}=\\frac{M(a^2+b^2)}{12}"
           ],
           [
             "why",
@@ -897,7 +897,7 @@
           ],
           [
             "m",
-            "\\vec\\tau_B=\\vec\\tau_A-\\vec r_{B/A}\\times\\vec F_{\\rm net}"
+            "\\vec\\tau_B=\\vec\\tau_A-\\vec r_{B/A}\\times\\vec F_{\\mathrm{net}}"
           ],
           [
             "p",
@@ -1058,7 +1058,7 @@
         "items": [
           [
             "m",
-            "\\vec\\tau_{\\rm ext,O}=\\frac{d\\vec L_O}{dt}"
+            "\\vec\\tau_{\\mathrm{ext},O}=\\frac{d\\vec L_O}{dt}"
           ],
           [
             "p",
@@ -1074,7 +1074,7 @@
           ],
           [
             "m",
-            "\\Delta L_z=\\int\\tau_{{\\rm ext},z}\\,dt"
+            "\\Delta L_z=\\int\\tau_{{\\mathrm{ext}},z}\\,dt"
           ],
           [
             "p",
@@ -1185,7 +1185,7 @@
           ],
           [
             "m",
-            "v-R\\omega=V_{\\rm belt}"
+            "v-R\\omega=V_{\\mathrm{belt}}"
           ],
           [
             "p",
@@ -1198,7 +1198,7 @@
         "items": [
           [
             "m",
-            "v_{\\rm top}=2v,\\quad v_{\\rm bottom}=0"
+            "v_{\\mathrm{top}}=2v,\\quad v_{\\mathrm{bottom}}=0"
           ],
           [
             "p",
@@ -1231,11 +1231,11 @@
         "items": [
           [
             "m",
-            "K=\\frac12Mv^2+\\frac12I_C\\omega^2"
+            "K=\\frac{1}{2}Mv^2+\\frac{1}{2}I_C\\omega^2"
           ],
           [
             "m",
-            "K=\\frac12(I_C+MR^2)\\omega^2"
+            "K=\\frac{1}{2}(I_C+MR^2)\\omega^2"
           ],
           [
             "p",
@@ -1251,7 +1251,7 @@
           ],
           [
             "m",
-            "K=\\frac12M(1+\\beta)v^2,\\quad\\beta=I_C/(MR^2)"
+            "K=\\frac{1}{2}M(1+\\beta)v^2,\\quad\\beta=I_C/(MR^2)"
           ],
           [
             "p",
@@ -1379,7 +1379,7 @@
           ],
           [
             "m",
-            "K_{\\rm rot}/K=\\frac{\\beta}{1+\\beta}"
+            "K_{\\mathrm{rot}}/K=\\frac{\\beta}{1+\\beta}"
           ],
           [
             "p",
@@ -1395,7 +1395,7 @@
           ],
           [
             "m",
-            "h_{\\rm stop}=\\frac{(1+\\beta)v_0^2}{2g}"
+            "h_{\\mathrm{stop}}=\\frac{(1+\\beta)v_0^2}{2g}"
           ],
           [
             "p",
@@ -1424,7 +1424,7 @@
           ],
           [
             "m",
-            "v_{\\rm disc}/v_{\\rm hoop}=\\sqrt{4/3}"
+            "v_{\\mathrm{disc}}/v_{\\mathrm{hoop}}=\\sqrt{4/3}"
           ],
           [
             "p",
@@ -1576,7 +1576,7 @@
           ],
           [
             "m",
-            "x_*=v_0t_*-\\frac12s\\mu_k gt_*^2"
+            "x_*=v_0t_*-\\frac{1}{2}s\\mu_k gt_*^2"
           ],
           [
             "p",
@@ -1691,7 +1691,7 @@
           ],
           [
             "m",
-            "a_{\\rm upper}=\\frac{F(\\cos\\phi+r/R)}{M(1+\\beta)}"
+            "a_{\\mathrm{upper}}=\\frac{F(\\cos\\phi+r/R)}{M(1+\\beta)}"
           ],
           [
             "p",
@@ -1819,7 +1819,7 @@
         "items": [
           [
             "m",
-            "I=\\frac12MR^2"
+            "I=\\frac{1}{2}MR^2"
           ],
           [
             "m",
@@ -1856,7 +1856,7 @@
           ],
           [
             "m",
-            "Mgh=\\frac12Mv^2+\\frac12I(v/r)^2"
+            "Mgh=\\frac{1}{2}Mv^2+\\frac{1}{2}I(v/r)^2"
           ],
           [
             "why",
@@ -1934,7 +1934,7 @@
           ],
           [
             "m",
-            "Q=\\frac12mv^2\\frac{I_0}{I_0+md^2}"
+            "Q=\\frac{1}{2}mv^2\\frac{I_0}{I_0+md^2}"
           ],
           [
             "p",
@@ -1959,7 +1959,7 @@
         "items": [
           [
             "m",
-            "\\frac12I_f\\omega_+^2=(Mg l/2+mgd)(1-\\cos\\theta)"
+            "\\frac{1}{2}I_f\\omega_+^2=(Mg l/2+mgd)(1-\\cos\\theta)"
           ],
           [
             "p",
@@ -2000,7 +2000,7 @@
           ],
           [
             "m",
-            "\\Delta L_O=\\int\\tau_{\\rm ext,O}\\,dt"
+            "\\Delta L_O=\\int\\tau_{\\mathrm{ext},O}\\,dt"
           ],
           [
             "why",
@@ -2127,7 +2127,7 @@
         "items": [
           [
             "m",
-            "b_{\\rm cp}=I_O/(Md)"
+            "b_{\\mathrm{cp}}=I_O/(Md)"
           ],
           [
             "p",
@@ -2135,7 +2135,7 @@
           ],
           [
             "m",
-            "\\mathrm{uniform\\ rod}:\\quad b_{\\rm cp}=2l/3"
+            "\\mathrm{uniform\\ rod}:\\quad b_{\\mathrm{cp}}=2l/3"
           ],
           [
             "why",
@@ -2185,7 +2185,7 @@
           ],
           [
             "m",
-            "\\mu_s\\geq\\frac12\\cot\\theta"
+            "\\mu_s\\geq\\frac{1}{2}\\cot\\theta"
           ],
           [
             "why",
@@ -2214,11 +2214,11 @@
           ],
           [
             "m",
-            "\\tan\\theta_{\\rm tip}=b/h"
+            "\\tan\\theta_{\\mathrm{tip}}=b/h"
           ],
           [
             "m",
-            "\\tan\\theta_{\\rm slide}=\\mu_s"
+            "\\tan\\theta_{\\mathrm{slide}}=\\mu_s"
           ],
           [
             "why",
@@ -2230,7 +2230,7 @@
           ],
           [
             "m",
-            "F_{\\rm tip}=Mgb/y,\\quad F_{\\rm slide}=\\mu_s Mg"
+            "F_{\\mathrm{tip}}=Mgb/y,\\quad F_{\\mathrm{slide}}=\\mu_s Mg"
           ],
           [
             "p",
@@ -2247,7 +2247,7 @@
           ],
           [
             "m",
-            "\\vec g_{\\rm eff}=\\vec g-\\vec A"
+            "\\vec g_{\\mathrm{eff}}=\\vec g-\\vec A"
           ],
           [
             "p",
@@ -2263,7 +2263,7 @@
           ],
           [
             "m",
-            "A_{\\rm tip}=gb/h"
+            "A_{\\mathrm{tip}}=gb/h"
           ],
           [
             "p",
@@ -2280,7 +2280,7 @@
           ],
           [
             "m",
-            "D_N=\\frac l2\\sum_{n=1}^{N}\\frac1n"
+            "D_N=\\frac l2\\sum_{n=1}^{N}\\frac{1}{n}"
           ],
           [
             "p",
@@ -2324,7 +2324,7 @@
           ],
           [
             "m",
-            "Mg(l/2)\\sin\\theta=\\frac12(Ml^2/3)\\omega^2"
+            "Mg(l/2)\\sin\\theta=\\frac{1}{2}(Ml^2/3)\\omega^2"
           ],
           [
             "m",
@@ -2407,7 +2407,7 @@
         "items": [
           [
             "m",
-            "v_{\\rm top}^2\\geq gq"
+            "v_{\\mathrm{top}}^2\\geq gq"
           ],
           [
             "m",
@@ -2486,11 +2486,11 @@
         "items": [
           [
             "m",
-            "l_{\\rm eq}=\\frac{I_O}{Md}=d+\\frac{k_C^2}{d}"
+            "l_{\\mathrm{eq}}=\\frac{I_O}{Md}=d+\\frac{k_C^2}{d}"
           ],
           [
             "m",
-            "d_{\\rm opt}=k_C,\\quad l_{\\rm eq,min}=2k_C"
+            "d_{\\mathrm{opt}}=k_C,\\quad l_{\\mathrm{eq},min}=2k_C"
           ],
           [
             "p",
@@ -2506,11 +2506,11 @@
           ],
           [
             "m",
-            "T_{\\rm rod,end}=2\\pi\\sqrt{2l/(3g)}"
+            "T_{\\mathrm{rod},end}=2\\pi\\sqrt{2l/(3g)}"
           ],
           [
             "m",
-            "T_{\\rm disc,rim}=2\\pi\\sqrt{3R/(2g)}"
+            "T_{\\mathrm{disc},rim}=2\\pi\\sqrt{3R/(2g)}"
           ],
           [
             "p",
@@ -2531,7 +2531,7 @@
           ],
           [
             "m",
-            "K=\\frac12M(1+\\beta)q^2\\dot\\theta^2"
+            "K=\\frac{1}{2}M(1+\\beta)q^2\\dot\\theta^2"
           ],
           [
             "why",
@@ -2576,7 +2576,7 @@
           ],
           [
             "m",
-            "\\frac{T}{T_{\\rm simple}}=\\sqrt{1+\\beta}"
+            "\\frac{T}{T_{\\mathrm{simple}}}=\\sqrt{1+\\beta}"
           ],
           [
             "p",
@@ -2679,7 +2679,7 @@
           ],
           [
             "m",
-            "v_{C,*}=\\frac12\\sqrt{gl\\sin\\theta_0}"
+            "v_{C,*}=\\frac{1}{2}\\sqrt{gl\\sin\\theta_0}"
           ],
           [
             "why",
@@ -2753,7 +2753,7 @@
           ],
           [
             "m",
-            "K_{\\rm spin}=\\frac12\\vec\\omega\\cdot\\mathbf I_C\\vec\\omega"
+            "K_{\\mathrm{spin}}=\\frac{1}{2}\\vec\\omega\\cdot\\mathbf I_C\\vec\\omega"
           ],
           [
             "p",
@@ -2795,7 +2795,7 @@
         "items": [
           [
             "m",
-            "\\vec\\tau_C=\\left(\\frac{d\\vec L_C}{dt}\\right)_{\\rm body}+\\vec\\omega\\times\\vec L_C"
+            "\\vec\\tau_C=\\left(\\frac{d\\vec L_C}{dt}\\right)_{\\mathrm{body}}+\\vec\\omega\\times\\vec L_C"
           ],
           [
             "p",
@@ -2973,11 +2973,11 @@
         "items": [
           [
             "m",
-            "K=\\frac12I\\omega^2"
+            "K=\\frac{1}{2}I\\omega^2"
           ],
           [
             "m",
-            "\\frac KM=\\frac14(\\omega R)^2\\quad\\mathrm{(solid\\ disc)}"
+            "\\frac KM=\\frac{1}{4}(\\omega R)^2\\quad\\mathrm{(solid\\ disc)}"
           ],
           [
             "p",
@@ -3006,7 +3006,7 @@
           ],
           [
             "m",
-            "\\left(\\frac KM\\right)_{\\max}=\\frac{2\\sigma_{\\rm allow}}{\\rho(3+\\nu)}"
+            "\\left(\\frac KM\\right)_{\\max}=\\frac{2\\sigma_{\\mathrm{allow}}}{\\rho(3+\\nu)}"
           ],
           [
             "p",
@@ -3052,7 +3052,7 @@
           ],
           [
             "m",
-            "(K/M)_{\\max,ring}=\\sigma_{\\rm allow}/(2\\rho)"
+            "(K/M)_{\\max,ring}=\\sigma_{\\mathrm{allow}}/(2\\rho)"
           ],
           [
             "why",
@@ -3093,7 +3093,7 @@
           ],
           [
             "m",
-            "I_C(R)\\simeq\\frac12m(R)R^2"
+            "I_C(R)\\simeq\\frac{1}{2}m(R)R^2"
           ],
           [
             "why",
@@ -3114,7 +3114,7 @@
           ],
           [
             "m",
-            "K_{\\rm roll}=\\frac34m(R)v_C^2"
+            "K_{\\mathrm{roll}}=\\frac34m(R)v_C^2"
           ],
           [
             "p",

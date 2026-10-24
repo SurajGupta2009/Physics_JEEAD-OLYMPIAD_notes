@@ -385,7 +385,7 @@
           ],
           [
             "m",
-            "s_n = u(1\\,\\mathrm{s}) + \\frac{1}{2}a(2n - 1)(1\\,\\mathrm{s})^2 \\implies [s_n] = [L]"
+            "s_n = u(1\\,\\mathrm{s}) + \\frac{1}{2}a(2n - 1)(1\\,\\mathrm{s})^2 \\Rightarrow [s_n] = [L]"
           ],
           [
             "why",
@@ -524,7 +524,7 @@
           ],
           [
             "m",
-            "N = a \\times 10^b \\quad (1 \\le |a| < 10):\\ \\ \\text{sig figs of } N \\equiv \\text{digits in } a"
+            "N = a \\times 10^b \\quad (1 \\leqslant |a| < 10):\\ \\ \\text{sig figs of } N \\equiv \\text{digits in } a"
           ],
           [
             "trap",
@@ -686,7 +686,7 @@
           ],
           [
             "m",
-            "|X - Y| \\le \\Delta_{\\mathrm{comb}}, \\qquad \\Delta_{\\mathrm{comb}} = \\sqrt{(\\Delta X)^2 + (\\Delta Y)^2}"
+            "|X - Y| \\leqslant \\Delta_{\\mathrm{comb}}, \\qquad \\Delta_{\\mathrm{comb}} = \\sqrt{(\\Delta X)^2 + (\\Delta Y)^2}"
           ],
           [
             "p",
@@ -764,11 +764,11 @@
           ],
           [
             "m",
-            "-\\frac{dR_{\\mathrm{eq}}}{R_{\\mathrm{eq}}^2} = -\\frac{dR_1}{R_1^2} - \\frac{dR_2}{R_2^2} \\implies \\Delta R_{\\mathrm{eq}} = R_{\\mathrm{eq}}^2\\!\\left(\\frac{\\Delta R_1}{R_1^2} + \\frac{\\Delta R_2}{R_2^2}\\right)"
+            "-\\frac{dR_{\\mathrm{eq}}}{R_{\\mathrm{eq}}^2} = -\\frac{dR_1}{R_1^2} - \\frac{dR_2}{R_2^2} \\Rightarrow \\Delta R_{\\mathrm{eq}} = R_{\\mathrm{eq}}^2\\!\\left(\\frac{\\Delta R_1}{R_1^2} + \\frac{\\Delta R_2}{R_2^2}\\right)"
           ],
           [
             "m",
-            "\\mathrm{Mirror\\ /\\ Lens}\\ \\ \\frac{1}{f} = \\frac{1}{v} \\pm \\frac{1}{u} \\implies \\Delta f = f^2\\!\\left(\\frac{\\Delta v}{v^2} + \\frac{\\Delta u}{u^2}\\right)"
+            "\\mathrm{Mirror\\ /\\ Lens}\\ \\ \\frac{1}{f} = \\frac{1}{v} \\pm \\frac{1}{u} \\Rightarrow \\Delta f = f^2\\!\\left(\\frac{\\Delta v}{v^2} + \\frac{\\Delta u}{u^2}\\right)"
           ],
           [
             "why",
@@ -1019,7 +1019,7 @@
           ],
           [
             "m",
-            "y=a x^n \\implies \\ln y = n\\ln x + \\ln a\\ (\\mathrm{slope}\\ n,\\ \\mathrm{int}\\ \\ln a)"
+            "y=a x^n \\Rightarrow \\ln y = n\\ln x + \\ln a\\ (\\mathrm{slope}\\ n,\\ \\mathrm{int}\\ \\ln a)"
           ],
           [
             "m",
@@ -1114,7 +1114,7 @@
           ],
           [
             "m",
-            "N\\ \\mathrm{continuous\\ swings:}\\ t=N T \\implies \\Delta T = \\frac{\\Delta t_{\\mathrm{sw}}}{N} \\propto \\frac{1}{N}"
+            "N\\ \\mathrm{continuous\\ swings:}\\ t=N T \\Rightarrow \\Delta T = \\frac{\\Delta t_{\\mathrm{sw}}}{N} \\propto \\frac{1}{N}"
           ],
           [
             "m",
@@ -1217,7 +1217,7 @@
           ],
           [
             "m",
-            "p = \\dim\\ker(D) = n - \\mathrm{rank}(D) \\implies F(\\Pi_1, \\Pi_2, \\dots, \\Pi_p) = 0"
+            "p = \\dim\\ker(D) = n - \\mathrm{rank}(D) \\Rightarrow F(\\Pi_1, \\Pi_2, \\dots, \\Pi_p) = 0"
           ],
           [
             "why",
@@ -1234,7 +1234,7 @@
           ],
           [
             "m",
-            "\\Pi_1 = \\frac{v}{\\sqrt{g / k}}, \\qquad \\Pi_2 = \\frac{\\gamma k^2}{\\rho g}\\ (\\text{Bond}^{-1}) \\implies v = \\sqrt{\\frac{g}{k}}\\,\\Phi\\!\\left(\\frac{\\gamma k^2}{\\rho g}\\right)"
+            "\\Pi_1 = \\frac{v}{\\sqrt{g / k}}, \\qquad \\Pi_2 = \\frac{\\gamma k^2}{\\rho g}\\ (\\text{Bond}^{-1}) \\Rightarrow v = \\sqrt{\\frac{g}{k}}\\,\\Phi\\!\\left(\\frac{\\gamma k^2}{\\rho g}\\right)"
           ],
           [
             "p",
@@ -1333,7 +1333,7 @@
           ],
           [
             "m",
-            "\\mathrm{Ship\\ waves\\ (Froude\\ match):}\\ \\frac{v_m}{\\sqrt{g L_m}} = \\frac{v_p}{\\sqrt{g L_p}} \\implies v_m = \\frac{v_p}{5}"
+            "\\mathrm{Ship\\ waves\\ (Froude\\ match):}\\ \\frac{v_m}{\\sqrt{g L_m}} = \\frac{v_p}{\\sqrt{g L_p}} \\Rightarrow v_m = \\frac{v_p}{5}"
           ],
           [
             "why",
@@ -1371,7 +1371,7 @@
           ],
           [
             "m",
-            "m g h \\sim W_{\\mathrm{muscle}} \\implies (\\lambda^3) g h \\sim \\lambda^3 \\implies h \\propto \\lambda^0"
+            "m g h \\sim W_{\\mathrm{muscle}} \\Rightarrow (\\lambda^3) g h \\sim \\lambda^3 \\Rightarrow h \\propto \\lambda^0"
           ],
           [
             "why",
@@ -1445,7 +1445,7 @@
           ],
           [
             "m",
-            "S_{xx}=5.0,\\ S_{xy}=9.70 \\implies b=1.94,\\quad a=0.15"
+            "S_{xx}=5.0,\\ S_{xy}=9.70 \\Rightarrow b=1.94,\\quad a=0.15"
           ],
           [
             "p",
@@ -1474,7 +1474,7 @@
           ],
           [
             "m",
-            "w_i = \\sigma_i^{-2} \\implies b = \\frac{\\sum w_i(x_i-\\bar{x}_w)(y_i-\\bar{y}_w)}{\\sum w_i(x_i-\\bar{x}_w)^2}"
+            "w_i = \\sigma_i^{-2} \\Rightarrow b = \\frac{\\sum w_i(x_i-\\bar{x}_w)(y_i-\\bar{y}_w)}{\\sum w_i(x_i-\\bar{x}_w)^2}"
           ]
         ]
       }
@@ -1631,7 +1631,7 @@
           ],
           [
             "m",
-            "-\\frac{R_{\\mathrm{tot}}}{t_{\\mathrm{on}}^2} + \\frac{R_b}{t_{\\mathrm{off}}^2} = 0 \\implies \\frac{t_{\\mathrm{on}}}{t_{\\mathrm{off}}} = \\sqrt{\\frac{R_{\\mathrm{tot}}}{R_b}}"
+            "-\\frac{R_{\\mathrm{tot}}}{t_{\\mathrm{on}}^2} + \\frac{R_b}{t_{\\mathrm{off}}^2} = 0 \\Rightarrow \\frac{t_{\\mathrm{on}}}{t_{\\mathrm{off}}} = \\sqrt{\\frac{R_{\\mathrm{tot}}}{R_b}}"
           ],
           [
             "why",
@@ -1648,7 +1648,7 @@
           ],
           [
             "m",
-            "m = R_{\\mathrm{true}}(1 - m\\tau) \\implies R_{\\mathrm{true}} = \\frac{m}{1 - m\\tau}, \\qquad m = \\frac{R_{\\mathrm{true}}}{1 + R_{\\mathrm{true}}\\tau}"
+            "m = R_{\\mathrm{true}}(1 - m\\tau) \\Rightarrow R_{\\mathrm{true}} = \\frac{m}{1 - m\\tau}, \\qquad m = \\frac{R_{\\mathrm{true}}}{1 + R_{\\mathrm{true}}\\tau}"
           ],
           [
             "why",
@@ -1705,7 +1705,7 @@
           ],
           [
             "m",
-            "I_{\\mathrm{pivot}} = m L^2 + \\frac{2}{5} m r_{\\mathrm{bob}}^2 \\implies L_{\\mathrm{eff}} = L_{\\mathrm{cm}}\\!\\left(1 + \\frac{2 r_{\\mathrm{bob}}^2}{5 L_{\\mathrm{cm}}^2}\\right)"
+            "I_{\\mathrm{pivot}} = m L^2 + \\frac{2}{5} m r_{\\mathrm{bob}}^2 \\Rightarrow L_{\\mathrm{eff}} = L_{\\mathrm{cm}}\\!\\left(1 + \\frac{2 r_{\\mathrm{bob}}^2}{5 L_{\\mathrm{cm}}^2}\\right)"
           ],
           [
             "m",

@@ -92,11 +92,11 @@
     "items": [
      [
       "m",
-      "1\\ \\mathrm T=1\\ \\mathrm{N\\,s\\,C^{-1}m^{-1}}"
+      "1\\ \\mathrm{T}=1\\ \\mathrm{N\\,s\\,C^{-1}m^{-1}}"
      ],
      [
       "m",
-      "B_\\oplus\\simeq50\\ \\mu\\mathrm T"
+      "B_\\oplus\\simeq50\\ \\mu\\mathrm{T}"
      ],
      [
       "p",
@@ -112,7 +112,7 @@
      ],
      [
       "m",
-      "1\\ \\mathrm{gauss}=10^{-4}\\ \\mathrm T"
+      "1\\ \\mathrm{gauss}=10^{-4}\\ \\mathrm{T}"
      ],
      [
       "check",
@@ -194,7 +194,7 @@
      ],
      [
       "m",
-      "p_{\\rm helix}=\\frac{2\\pi m v_\\parallel}{|q|B}"
+      "p_{\\mathrm{helix}}=\\frac{2\\pi m v_\\parallel}{|q|B}"
      ],
      [
       "p",
@@ -330,7 +330,7 @@
     "items": [
      [
       "m",
-      "E=10^5\\ \\mathrm{V/m},\\ B=0.10\\ \\mathrm T\\ \\Rightarrow\\ v=10^6\\ \\mathrm{m/s}"
+      "E=10^5\\ \\mathrm{V/m},\\ B=0.10\\ \\mathrm{T}\\ \\Rightarrow\\ v=10^6\\ \\mathrm{m/s}"
      ],
      [
       "p",
@@ -403,7 +403,7 @@
      ],
      [
       "m",
-      "r\\le d:\\ t=\\pi m/|q|B,\\ \\text{exit }2r\\ \\text{away}"
+      "r\\leqslant d:\\ t=\\pi m/|q|B,\\ \\text{exit }2r\\ \\text{away}"
      ],
      [
       "p",
@@ -449,7 +449,7 @@
     "items": [
      [
       "m",
-      "p\\ \\text{at}\\ 2\\times10^6\\ \\mathrm{m/s}\\ \\text{in}\\ 0.30\\ \\mathrm T:\\ r=6.96\\ \\mathrm{cm}"
+      "p\\ \\text{at}\\ 2\\times10^6\\ \\mathrm{m/s}\\ \\text{in}\\ 0.30\\ \\mathrm{T}:\\ r=6.96\\ \\mathrm{cm}"
      ],
      [
       "p",
@@ -493,7 +493,7 @@
     "items": [
      [
       "m",
-      "\\tfrac12mv^2=qV,\\quad r=\\frac{mv}{qB}=\\frac1B\\sqrt{\\frac{2mV}{q}}"
+      "\\frac{1}{2}mv^2=qV,\\quad r=\\frac{mv}{qB}=\\frac{1}{B}\\sqrt{\\frac{2mV}{q}}"
      ],
      [
       "p",
@@ -518,7 +518,7 @@
     "items": [
      [
       "m",
-      "\\frac{\\Delta r}{r}=\\frac12\\frac{\\Delta m}{m}"
+      "\\frac{\\Delta r}{r}=\\frac{1}{2}\\frac{\\Delta m}{m}"
      ],
      [
       "m",
@@ -538,7 +538,7 @@
      ],
      [
       "m",
-      "\\frac{\\Delta r}{r}=\\frac12\\frac{\\Delta m}{m}"
+      "\\frac{\\Delta r}{r}=\\frac{1}{2}\\frac{\\Delta m}{m}"
      ]
     ]
    },
@@ -572,7 +572,7 @@
     "items": [
      [
       "m",
-      "m=235u:\\ r=0.441\\ \\mathrm m"
+      "m=235u:\\ r=0.441\\ \\mathrm{m}"
      ],
      [
       "m",
@@ -641,7 +641,7 @@
     "items": [
      [
       "m",
-      "N_{\\rm turns}=\\frac{K_{\\max}}{2qV_0},\\qquad t=N/f"
+      "N_{\\mathrm{turns}}=\\frac{K_{\\max}}{2qV_0},\\qquad t=N/f"
      ],
      [
       "p",
@@ -699,7 +699,7 @@
      ],
      [
       "m",
-      "K=27\\ \\mathrm{MeV}\\ \\text{at}\\ 1.5\\ \\mathrm T,\\ R=0.5\\ \\mathrm m"
+      "K=27\\ \\mathrm{MeV}\\ \\text{at}\\ 1.5\\ \\mathrm{T},\\ R=0.5\\ \\mathrm{m}"
      ],
      [
       "p",
@@ -768,7 +768,7 @@
      ],
      [
       "m",
-      "B_{\\rm mirror}=\\frac{B_0}{\\sin^2\\theta_0}"
+      "B_{\\mathrm{mirror}}=\\frac{B_0}{\\sin^2\\theta_0}"
      ],
      [
       "p",
@@ -793,7 +793,7 @@
      ],
      [
       "m",
-      "\\theta_{\\rm lc}=\\arcsin\\sqrt{B_0/B_{\\max}}"
+      "\\theta_{\\mathrm{lc}}=\\arcsin\\sqrt{B_0/B_{\\max}}"
      ],
      [
       "p",
@@ -818,7 +818,7 @@
     "items": [
      [
       "m",
-      "B_{\\max}/B_0=10:\\ \\theta_{\\rm lc}=18^\\circ"
+      "B_{\\max}/B_0=10:\\ \\theta_{\\mathrm{lc}}=18^\\circ"
      ],
      [
       "m",
@@ -1064,7 +1064,7 @@
     "items": [
      [
       "m",
-      "E=10^4\\ \\mathrm{V/m},\\ B=0.1\\ \\mathrm T:\\ v_d=10^5\\ \\mathrm{m/s}"
+      "E=10^4\\ \\mathrm{V/m},\\ B=0.1\\ \\mathrm{T}:\\ v_d=10^5\\ \\mathrm{m/s}"
      ],
      [
       "p",
@@ -1129,7 +1129,7 @@
     "items": [
      [
       "m",
-      "\\frac{p}{q}=Br,\\qquad p[\\mathrm{MeV}/c]=300\\,B[\\mathrm T]\\,r[\\mathrm m]"
+      "\\frac{p}{q}=Br,\\qquad p[\\mathrm{MeV}/c]=300\\,B[\\mathrm{T}]\\,r[\\mathrm{m}]"
      ],
      [
       "p",
@@ -1187,7 +1187,7 @@
      ],
      [
       "m",
-      "B\\sim1\\ \\mathrm T,\\ r\\sim\\mathrm{m}\\Rightarrow p\\sim300\\ \\mathrm{MeV}/c"
+      "B\\sim1\\ \\mathrm{T},\\ r\\sim\\mathrm{m}\\Rightarrow p\\sim300\\ \\mathrm{MeV}/c"
      ],
      [
       "p",
@@ -1400,7 +1400,7 @@
     "items": [
      [
       "m",
-      "\\mathbf B_{\\rm total}=\\sum_i\\mathbf B_i"
+      "\\mathbf B_{\\mathrm{total}}=\\sum_i\\mathbf B_i"
      ],
      [
       "m",
@@ -1425,11 +1425,11 @@
     "items": [
      [
       "m",
-      "I=10\\ \\mathrm A,\\ d=10\\ \\mathrm{cm}:\\ B=20\\ \\mu\\mathrm T"
+      "I=10\\ \\mathrm{A},\\ d=10\\ \\mathrm{cm}:\\ B=20\\ \\mu\\mathrm{T}"
      ],
      [
       "m",
-      "\\text{Earth}\\simeq50\\ \\mu\\mathrm T"
+      "\\text{Earth}\\simeq50\\ \\mu\\mathrm{T}"
      ],
      [
       "p",
@@ -1469,11 +1469,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm centre}=\\frac{\\mu_0I}{2R}"
+      "B_{\\mathrm{centre}}=\\frac{\\mu_0I}{2R}"
      ],
      [
       "m",
-      "B_{\\rm arc}=\\frac{\\mu_0I\\theta_0}{4\\pi R}"
+      "B_{\\mathrm{arc}}=\\frac{\\mu_0I\\theta_0}{4\\pi R}"
      ],
      [
       "p",
@@ -1489,7 +1489,7 @@
      ],
      [
       "m",
-      "B_{\\rm centre}=\\frac{\\mu_0I}{2R},\\qquad B_{\\rm arc}=\\frac{\\mu_0I\\theta_0}{4\\pi R}"
+      "B_{\\mathrm{centre}}=\\frac{\\mu_0I}{2R},\\qquad B_{\\mathrm{arc}}=\\frac{\\mu_0I\\theta_0}{4\\pi R}"
      ]
     ]
    },
@@ -1646,7 +1646,7 @@
     "items": [
      [
       "m",
-      "B_{\\rm in}=\\mu_0nI,\\quad B_{\\rm out}\\approx0\\ \\ (L\\gg R)"
+      "B_{\\mathrm{in}}=\\mu_0nI,\\quad B_{\\mathrm{out}}\\approx0\\ \\ (L\\gg R)"
      ],
      [
       "p",
@@ -1748,11 +1748,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm axis}=\\frac{\\mu_0}{4\\pi}\\frac{2\\mu}{r^3}"
+      "B_{\\mathrm{axis}}=\\frac{\\mu_0}{4\\pi}\\frac{2\\mu}{r^3}"
      ],
      [
       "m",
-      "B_{\\rm eq}=\\frac{\\mu_0}{4\\pi}\\frac{\\mu}{r^3}"
+      "B_{\\mathrm{eq}}=\\frac{\\mu_0}{4\\pi}\\frac{\\mu}{r^3}"
      ],
      [
       "p",
@@ -1806,7 +1806,7 @@
     "items": [
      [
       "m",
-      "\\mu_{\\rm loop}=NIA"
+      "\\mu_{\\mathrm{loop}}=NIA"
      ],
      [
       "m",
@@ -1854,7 +1854,7 @@
     "items": [
      [
       "m",
-      "\\oint_C\\mathbf B\\cdot d\\mathbf l=\\mu_0 I_{\\rm enc}"
+      "\\oint_C\\mathbf B\\cdot d\\mathbf l=\\mu_0 I_{\\mathrm{enc}}"
      ],
      [
       "p",
@@ -1879,11 +1879,11 @@
     "items": [
      [
       "m",
-      "I_{\\rm enc}=I_\\odot-I_\\otimes"
+      "I_{\\mathrm{enc}}=I_\\odot-I_\\otimes"
      ],
      [
       "m",
-      "\\oint\\mathbf B\\cdot d\\mathbf l=2\\ \\mathrm A\\to2.5\\ \\mu\\mathrm{T\\,m}"
+      "\\oint\\mathbf B\\cdot d\\mathbf l=2\\ \\mathrm{A}\\to2.5\\ \\mu\\mathrm{T\\,m}"
      ],
      [
       "p",
@@ -1977,7 +1977,7 @@
      ],
      [
       "m",
-      "B_{\\rm thick}=\\frac{\\mu_0Ir}{2\\pi a^2}\\ (r<a)"
+      "B_{\\mathrm{thick}}=\\frac{\\mu_0Ir}{2\\pi a^2}\\ (r<a)"
      ],
      [
       "p",
@@ -2002,11 +2002,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm sheet}=\\frac{\\mu_0K}{2}"
+      "B_{\\mathrm{sheet}}=\\frac{\\mu_0K}{2}"
      ],
      [
       "m",
-      "B_{\\rm solenoid}=\\mu_0nI,\\ B_{\\rm end}=\\frac{\\mu_0nI}{2}"
+      "B_{\\mathrm{solenoid}}=\\mu_0nI,\\ B_{\\mathrm{end}}=\\frac{\\mu_0nI}{2}"
      ],
      [
       "p",
@@ -2031,11 +2031,11 @@
     "items": [
      [
       "m",
-      "J\\ \\text{inner},\\ I_{\\rm enc}=I\\frac{r^2-b^2}{c^2-b^2}"
+      "J\\ \\text{inner},\\ I_{\\mathrm{enc}}=I\\frac{r^2-b^2}{c^2-b^2}"
      ],
      [
       "m",
-      "B_{\\rm gap}=\\frac{\\mu_0I}{2\\pi r}"
+      "B_{\\mathrm{gap}}=\\frac{\\mu_0I}{2\\pi r}"
      ],
      [
       "p",
@@ -2060,7 +2060,7 @@
     "items": [
      [
       "m",
-      "B_{\\rm toroid}=\\frac{\\mu_0NI}{2\\pi r}"
+      "B_{\\mathrm{toroid}}=\\frac{\\mu_0NI}{2\\pi r}"
      ],
      [
       "m",
@@ -2104,7 +2104,7 @@
      ],
      [
       "m",
-      "\\mathbf B_{\\rm gap}=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf d"
+      "\\mathbf B_{\\mathrm{gap}}=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf d"
      ],
      [
       "p",
@@ -2120,7 +2120,7 @@
      ],
      [
       "m",
-      "\\mathbf B_{\\rm gap}=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf d"
+      "\\mathbf B_{\\mathrm{gap}}=\\frac{\\mu_0}{2}\\mathbf J\\times\\mathbf d"
      ]
     ]
    },
@@ -2129,7 +2129,7 @@
     "items": [
      [
       "m",
-      "\\mathbf B_{\\rm gap}=\\mathbf B_{\\rm full}-\\mathbf B_{\\rm missing\\ arc}"
+      "\\mathbf B_{\\mathrm{gap}}=\\mathbf B_{\\mathrm{full}}-\\mathbf B_{\\mathrm{missing}\\ arc}"
      ],
      [
       "p",
@@ -2281,7 +2281,7 @@
     "items": [
      [
       "m",
-      "I=10\\ \\mathrm A,\\ L=0.5\\ \\mathrm m,\\ B=0.2\\ \\mathrm T:\\ F=1\\ \\mathrm N"
+      "I=10\\ \\mathrm{A},\\ L=0.5\\ \\mathrm{m},\\ B=0.2\\ \\mathrm{T}:\\ F=1\\ \\mathrm{N}"
      ],
      [
       "p",
@@ -2494,7 +2494,7 @@
     "items": [
      [
       "m",
-      "1\\ \\mathrm A:\\ \\frac FL=2\\times10^{-7}\\ \\mathrm{N/m}\\ \\text{at }d=1\\ \\mathrm m"
+      "1\\ \\mathrm{A}:\\ \\frac FL=2\\times10^{-7}\\ \\mathrm{N/m}\\ \\text{at }d=1\\ \\mathrm{m}"
      ],
      [
       "p",
@@ -2621,7 +2621,7 @@
     "items": [
      [
       "m",
-      "u_B=\\frac{B^2}{2\\mu_0},\\qquad F_{\\rm halves}=\\frac{B^2A}{2\\mu_0}"
+      "u_B=\\frac{B^2}{2\\mu_0},\\qquad F_{\\mathrm{halves}}=\\frac{B^2A}{2\\mu_0}"
      ],
      [
       "p",
@@ -2675,7 +2675,7 @@
     "items": [
      [
       "m",
-      "1\\ \\mathrm T\\to3.98\\times10^{5}\\ \\mathrm{Pa}\\approx4\\ \\mathrm{atm}"
+      "1\\ \\mathrm{T}\\to3.98\\times10^{5}\\ \\mathrm{Pa}\\approx4\\ \\mathrm{atm}"
      ],
      [
       "m",
@@ -2777,11 +2777,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm disc}=\\frac{\\mu_0\\sigma\\omega R}{2}"
+      "B_{\\mathrm{disc}}=\\frac{\\mu_0\\sigma\\omega R}{2}"
      ],
      [
       "m",
-      "B_{\\rm shell}=\\frac23\\mu_0\\sigma\\omega R"
+      "B_{\\mathrm{shell}}=\\frac23\\mu_0\\sigma\\omega R"
      ],
      [
       "p",
@@ -2802,7 +2802,7 @@
     "items": [
      [
       "m",
-      "\\mu=3.1\\times10^{-6}\\ \\mathrm{A\\,m^2}\\ \\text{for }1\\ \\mu\\mathrm C,\\ R=10\\ \\mathrm{cm},\\ 100\\ \\mathrm{rev/s}"
+      "\\mu=3.1\\times10^{-6}\\ \\mathrm{A\\,m^2}\\ \\text{for }1\\ \\mu\\mathrm{C},\\ R=10\\ \\mathrm{cm},\\ 100\\ \\mathrm{rev/s}"
      ],
      [
       "p",
@@ -2867,11 +2867,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm inside}=\\tfrac23\\mu_0M"
+      "B_{\\mathrm{inside}}=\\frac23\\mu_0M"
      ],
      [
       "m",
-      "\\mu=\\tfrac43\\pi R^3M"
+      "\\mu=\\frac43\\pi R^3M"
      ],
      [
       "p",
@@ -2887,7 +2887,7 @@
      ],
      [
       "m",
-      "B_{\\rm in}=\\frac23\\mu_0M\\ \\text{(sphere)}"
+      "B_{\\mathrm{in}}=\\frac23\\mu_0M\\ \\text{(sphere)}"
      ]
     ]
    },
@@ -2969,7 +2969,7 @@
     "items": [
      [
       "m",
-      "\\mathbf H=\\frac{\\mathbf B}{\\mu_0}-\\mathbf M,\\qquad \\oint\\mathbf H\\cdot d\\mathbf l=I_{\\rm free}"
+      "\\mathbf H=\\frac{\\mathbf B}{\\mu_0}-\\mathbf M,\\qquad \\oint\\mathbf H\\cdot d\\mathbf l=I_{\\mathrm{free}}"
      ],
      [
       "p",
@@ -3027,7 +3027,7 @@
      ],
      [
       "m",
-      "\\chi_{\\rm water}\\approx-9\\times10^{-6}"
+      "\\chi_{\\mathrm{water}}\\approx-9\\times10^{-6}"
      ],
      [
       "p",
@@ -3108,7 +3108,7 @@
      ],
      [
       "m",
-      "\\chi_{\\rm dia}=-\\frac{\\mu_0 n Ze^2\\langle r^2\\rangle}{6m_e}"
+      "\\chi_{\\mathrm{dia}}=-\\frac{\\mu_0 n Ze^2\\langle r^2\\rangle}{6m_e}"
      ]
     ]
    },
@@ -3146,11 +3146,11 @@
     "items": [
      [
       "m",
-      "\\chi_{\\rm dia}\\sim-10^{-5}"
+      "\\chi_{\\mathrm{dia}}\\sim-10^{-5}"
      ],
      [
       "m",
-      "\\chi_{\\rm para}=\\mu_0n\\mu^2/k_BT"
+      "\\chi_{\\mathrm{para}}=\\mu_0n\\mu^2/k_BT"
      ],
      [
       "p",
@@ -3248,7 +3248,7 @@
     "items": [
      [
       "m",
-      "w_{\\rm cycle}=\\oint H\\,dB"
+      "w_{\\mathrm{cycle}}=\\oint H\\,dB"
      ],
      [
       "m",
@@ -3273,7 +3273,7 @@
     "items": [
      [
       "m",
-      "B_s(\\mathrm{Fe})=2.1\\ \\mathrm T,\\quad T_c=1043\\ \\mathrm K"
+      "B_s(\\mathrm{Fe})=2.1\\ \\mathrm{T},\\quad T_c=1043\\ \\mathrm{K}"
      ],
      [
       "m",
@@ -3366,7 +3366,7 @@
      ],
      [
       "m",
-      "B=\\mu_r\\mu_0 nI\\ \\text{(below }B_s\\approx2.1\\ \\mathrm T)"
+      "B=\\mu_r\\mu_0 nI\\ \\text{(below }B_s\\approx2.1\\ \\mathrm{T})"
      ]
     ]
    },
@@ -3429,7 +3429,7 @@
     "items": [
      [
       "m",
-      "B_s(\\mathrm{Fe})\\approx2.1\\ \\mathrm T"
+      "B_s(\\mathrm{Fe})\\approx2.1\\ \\mathrm{T}"
      ],
      [
       "m",
@@ -3469,11 +3469,11 @@
     "items": [
      [
       "m",
-      "B_H=B\\cos\\theta_{\\rm dip},\\quad B_V=B\\sin\\theta_{\\rm dip}"
+      "B_H=B\\cos\\theta_{\\mathrm{dip}},\\quad B_V=B\\sin\\theta_{\\mathrm{dip}}"
      ],
      [
       "m",
-      "\\tan\\theta_{\\rm dip}=\\frac{B_V}{B_H}"
+      "\\tan\\theta_{\\mathrm{dip}}=\\frac{B_V}{B_H}"
      ],
      [
       "p",
@@ -3489,7 +3489,7 @@
      ],
      [
       "m",
-      "B_H=B\\cos\\theta_{\\rm dip},\\qquad B_V=B\\sin\\theta_{\\rm dip}"
+      "B_H=B\\cos\\theta_{\\mathrm{dip}},\\qquad B_V=B\\sin\\theta_{\\mathrm{dip}}"
      ]
     ]
    },
@@ -3498,11 +3498,11 @@
     "items": [
      [
       "m",
-      "\\tan\\theta_{\\rm dip}=2\\tan\\lambda"
+      "\\tan\\theta_{\\mathrm{dip}}=2\\tan\\lambda"
      ],
      [
       "m",
-      "B=B_{\\rm eq}\\sqrt{1+3\\sin^2\\lambda}"
+      "B=B_{\\mathrm{eq}}\\sqrt{1+3\\sin^2\\lambda}"
      ],
      [
       "p",
@@ -3518,7 +3518,7 @@
      ],
      [
       "m",
-      "\\tan\\theta_{\\rm dip}=2\\tan\\lambda"
+      "\\tan\\theta_{\\mathrm{dip}}=2\\tan\\lambda"
      ]
     ]
    },
@@ -3527,7 +3527,7 @@
     "items": [
      [
       "m",
-      "B_{\\rm coil}=B_H\\tan\\theta"
+      "B_{\\mathrm{coil}}=B_H\\tan\\theta"
      ],
      [
       "m",
@@ -3560,7 +3560,7 @@
      ],
      [
       "m",
-      "I_{\\rm core}\\sim2\\times10^{9}\\ \\mathrm A"
+      "I_{\\mathrm{core}}\\sim2\\times10^{9}\\ \\mathrm{A}"
      ],
      [
       "p",
@@ -3872,7 +3872,7 @@
     "items": [
      [
       "m",
-      "\\mathcal E=\\int_{\\rm rod}(\\mathbf v\\times\\mathbf B)\\cdot d\\mathbf l"
+      "\\mathcal E=\\int_{\\mathrm{rod}}(\\mathbf v\\times\\mathbf B)\\cdot d\\mathbf l"
      ],
      [
       "p",
@@ -3962,7 +3962,7 @@
     "items": [
      [
       "m",
-      "W_{\\rm mech}=\\int i^2R\\,dt+\\Delta U_{\\rm field}"
+      "W_{\\mathrm{mech}}=\\int i^2R\\,dt+\\Delta U_{\\mathrm{field}}"
      ],
      [
       "p",
@@ -3983,7 +3983,7 @@
     "items": [
      [
       "m",
-      "v_{\\rm t}\\propto\\frac{m}{\\mu^2},\\qquad F=Kv"
+      "v_{\\mathrm{t}}\\propto\\frac{m}{\\mu^2},\\qquad F=Kv"
      ],
      [
       "p",
@@ -4008,7 +4008,7 @@
     "items": [
      [
       "m",
-      "\\mathbf F_{\\rm on\\ rod}=-\\mathbf F_{\\rm on\\ source}"
+      "\\mathbf F_{\\mathrm{on}\\ rod}=-\\mathbf F_{\\mathrm{on}\\ source}"
      ],
      [
       "p",
@@ -4064,7 +4064,7 @@
      ],
      [
       "m",
-      "x_\\infty=v_0\\tau,\\qquad \\tfrac12mv_0^2=\\int i^2R\\,dt"
+      "x_\\infty=v_0\\tau,\\qquad \\frac{1}{2}mv_0^2=\\int i^2R\\,dt"
      ]
     ]
    },
@@ -4073,7 +4073,7 @@
     "items": [
      [
       "m",
-      "v=v_{\\rm t}(1-e^{-t/\\tau}),\\qquad v_{\\rm t}=\\frac{FR}{B^2l^2}"
+      "v=v_{\\mathrm{t}}(1-e^{-t/\\tau}),\\qquad v_{\\mathrm{t}}=\\frac{FR}{B^2l^2}"
      ],
      [
       "p",
@@ -4094,7 +4094,7 @@
     "items": [
      [
       "m",
-      "Fv_{\\rm t}=i^2R,\\qquad \\tfrac12(m+M)v_{\\rm t}^2\\ \\text{approached}"
+      "Fv_{\\mathrm{t}}=i^2R,\\qquad \\frac{1}{2}(m+M)v_{\\mathrm{t}}^2\\ \\text{approached}"
      ],
      [
       "p",
@@ -4110,7 +4110,7 @@
      ],
      [
       "m",
-      "P_{\\rm mech}=Fv,\\qquad P_{\\rm elec}=\\mathcal E i=i^2R"
+      "P_{\\mathrm{mech}}=Fv,\\qquad P_{\\mathrm{elec}}=\\mathcal E i=i^2R"
      ],
      [
       "check",
@@ -4123,7 +4123,7 @@
     "items": [
      [
       "m",
-      "\\tau_{\\rm rail}=\\frac{mR}{B^2l^2},\\qquad \\tau_{\\rm RL}=\\frac LR"
+      "\\tau_{\\mathrm{rail}}=\\frac{mR}{B^2l^2},\\qquad \\tau_{\\mathrm{RL}}=\\frac LR"
      ],
      [
       "p",
@@ -4163,7 +4163,7 @@
     "items": [
      [
       "m",
-      "\\mathcal E=\\frac12B\\omega L^2"
+      "\\mathcal E=\\frac{1}{2}B\\omega L^2"
      ],
      [
       "p",
@@ -4188,7 +4188,7 @@
     "items": [
      [
       "m",
-      "\\mathcal E=\\frac12B\\omega a^2"
+      "\\mathcal E=\\frac{1}{2}B\\omega a^2"
      ],
      [
       "p",
@@ -4373,7 +4373,7 @@
     "items": [
      [
       "m",
-      "\\omega=\\frac{Bl}{\\sqrt{mL_{\\rm ind}}}"
+      "\\omega=\\frac{Bl}{\\sqrt{mL_{\\mathrm{ind}}}}"
      ],
      [
       "p",
@@ -4438,7 +4438,7 @@
     "items": [
      [
       "m",
-      "E_{\\rm in}=\\frac r2\\dot B,\\qquad E_{\\rm out}=\\frac{R^2}{2r}\\dot B"
+      "E_{\\mathrm{in}}=\\frac r2\\dot B,\\qquad E_{\\mathrm{out}}=\\frac{R^2}{2r}\\dot B"
      ],
      [
       "p",
@@ -4532,7 +4532,7 @@
     "items": [
      [
       "m",
-      "p=eB_{\\rm orb}R,\\qquad \\dot p=eE=\\frac{eR}{2}\\frac{d\\langle B\\rangle}{dt}"
+      "p=eB_{\\mathrm{orb}}R,\\qquad \\dot p=eE=\\frac{eR}{2}\\frac{d\\langle B\\rangle}{dt}"
      ],
      [
       "p",
@@ -4548,7 +4548,7 @@
      ],
      [
       "m",
-      "B_{\\rm orb}=\\frac12\\langle B\\rangle\\ \\text{(2:1 condition)}"
+      "B_{\\mathrm{orb}}=\\frac{1}{2}\\langle B\\rangle\\ \\text{(2:1 condition)}"
      ]
     ]
    },
@@ -4557,7 +4557,7 @@
     "items": [
      [
       "m",
-      "\\langle B\\rangle=\\frac{\\Phi}{\\pi R^2}=2B_{\\rm orb}"
+      "\\langle B\\rangle=\\frac{\\Phi}{\\pi R^2}=2B_{\\mathrm{orb}}"
      ],
      [
       "p",
@@ -4611,7 +4611,7 @@
     "items": [
      [
       "m",
-      "e\\frac{d\\Phi}{dt}\\ \\text{per turn},\\qquad K_{\\max}=eB_{\\rm orb}cR\\ \\text{(relativistic)}"
+      "e\\frac{d\\Phi}{dt}\\ \\text{per turn},\\qquad K_{\\max}=eB_{\\mathrm{orb}}cR\\ \\text{(relativistic)}"
      ],
      [
       "p",
@@ -4655,7 +4655,7 @@
     "items": [
      [
       "m",
-      "F=k\\sigma B^2V_{\\rm eff}\\,v,\\qquad \\tau=\\frac{m}{k\\sigma B^2V_{\\rm eff}}"
+      "F=k\\sigma B^2V_{\\mathrm{eff}}\\,v,\\qquad \\tau=\\frac{m}{k\\sigma B^2V_{\\mathrm{eff}}}"
      ],
      [
       "p",
@@ -4680,7 +4680,7 @@
     "items": [
      [
       "m",
-      "P\\sim\\sigma B^2v^2V_{\\rm eff}"
+      "P\\sim\\sigma B^2v^2V_{\\mathrm{eff}}"
      ],
      [
       "p",
@@ -4725,7 +4725,7 @@
      ],
      [
       "m",
-      "\\delta_{\\rm Fe}(25\\ \\mathrm{kHz})\\approx0.1\\ \\mathrm{mm}"
+      "\\delta_{\\mathrm{Fe}}(25\\ \\mathrm{kHz})\\approx0.1\\ \\mathrm{mm}"
      ],
      [
       "check",
@@ -4794,7 +4794,7 @@
      ],
      [
       "m",
-      "V_{\\rm rms}=\\frac{NBA\\omega}{\\sqrt2}"
+      "V_{\\mathrm{rms}}=\\frac{NBA\\omega}{\\sqrt{2}}"
      ],
      [
       "check",
@@ -4807,7 +4807,7 @@
     "items": [
      [
       "m",
-      "V=\\mathcal E+IR\\ \\text{(motor)},\\qquad V=\\mathcal E_{\\rm gen}-IR"
+      "V=\\mathcal E+IR\\ \\text{(motor)},\\qquad V=\\mathcal E_{\\mathrm{gen}}-IR"
      ],
      [
       "p",
@@ -4836,7 +4836,7 @@
     "items": [
      [
       "m",
-      "\\tau_{\\rm mech}=\\frac{\\mathcal E i}{\\omega},\\qquad P_{\\rm mech}=\\mathcal E i=i^2(R+R_{\\rm int})"
+      "\\tau_{\\mathrm{mech}}=\\frac{\\mathcal E i}{\\omega},\\qquad P_{\\mathrm{mech}}=\\mathcal E i=i^2(R+R_{\\mathrm{int}})"
      ],
      [
       "p",
@@ -4852,7 +4852,7 @@
      ],
      [
       "m",
-      "\\mathcal E i=i^2R_L+i^2R_{\\rm int}\\ \\text{(energy audit)}"
+      "\\mathcal E i=i^2R_L+i^2R_{\\mathrm{int}}\\ \\text{(energy audit)}"
      ],
      [
       "check",
@@ -4905,7 +4905,7 @@
     "items": [
      [
       "m",
-      "\\oint\\mathbf E\\cdot d\\mathbf l=1.0\\ \\mathrm V\\ \\text{(lead loop)}"
+      "\\oint\\mathbf E\\cdot d\\mathbf l=1.0\\ \\mathrm{V}\\ \\text{(lead loop)}"
      ],
      [
       "p",
@@ -5024,7 +5024,7 @@
     "items": [
      [
       "m",
-      "L=\\frac{N\\Phi}{I},\\qquad \\mathcal E_{\\rm self}=-L\\frac{dI}{dt}"
+      "L=\\frac{N\\Phi}{I},\\qquad \\mathcal E_{\\mathrm{self}}=-L\\frac{dI}{dt}"
      ],
      [
       "p",
@@ -5040,7 +5040,7 @@
      ],
      [
       "m",
-      "1\\ \\mathrm H=1\\ \\mathrm{Wb\\,A^{-1}}=1\\ \\mathrm{V\\,s\\,A^{-1}}"
+      "1\\ \\mathrm{H}=1\\ \\mathrm{Wb\\,A^{-1}}=1\\ \\mathrm{V\\,s\\,A^{-1}}"
      ],
      [
       "check",
@@ -5082,7 +5082,7 @@
     "items": [
      [
       "m",
-      "U=\\tfrac12LI^2=\\int\\frac{B^2}{2\\mu_0}\\,dV"
+      "U=\\frac{1}{2}LI^2=\\int\\frac{B^2}{2\\mu_0}\\,dV"
      ],
      [
       "p",
@@ -5111,7 +5111,7 @@
     "items": [
      [
       "m",
-      "L_{\\rm real}=L_{\\rm ideal}(1+\\text{parasitics})"
+      "L_{\\mathrm{real}}=L_{\\mathrm{ideal}}(1+\\text{parasitics})"
      ],
      [
       "p",
@@ -5127,7 +5127,7 @@
      ],
      [
       "m",
-      "f_{\\rm self}=\\frac{1}{2\\pi\\sqrt{L C_{\\rm parasitic}}}"
+      "f_{\\mathrm{self}}=\\frac{1}{2\\pi\\sqrt{L C_{\\mathrm{parasitic}}}}"
      ]
     ]
    }
@@ -5196,7 +5196,7 @@
      ],
      [
       "m",
-      "L_{\\rm toroid}=\\frac{\\mu_0N^2A}{2\\pi r}"
+      "L_{\\mathrm{toroid}}=\\frac{\\mu_0N^2A}{2\\pi r}"
      ],
      [
       "check",
@@ -5209,7 +5209,7 @@
     "items": [
      [
       "m",
-      "L'_{\\rm 2wire}=\\frac{\\mu_0}{\\pi}\\ln\\frac da,\\qquad L_{\\rm loop}\\approx\\mu_0R\\left[\\ln\\frac{8R}{a}-2\\right]"
+      "L'_{\\mathrm{2wire}}=\\frac{\\mu_0}{\\pi}\\ln\\frac da,\\qquad L_{\\mathrm{loop}}\\approx\\mu_0R\\left[\\ln\\frac{8R}{a}-2\\right]"
      ],
      [
       "p",
@@ -5327,7 +5327,7 @@
      ],
      [
       "m",
-      "0\\le k\\le1,\\qquad M=k\\sqrt{L_1L_2}"
+      "0\\leqslant k\\le1,\\qquad M=k\\sqrt{L_1L_2}"
      ],
      [
       "check",
@@ -5369,7 +5369,7 @@
     "items": [
      [
       "m",
-      "U=\\tfrac12L_1I_1^2+\\tfrac12L_2I_2^2\\pm MI_1I_2"
+      "U=\\frac{1}{2}L_1I_1^2+\\frac{1}{2}L_2I_2^2\\pm MI_1I_2"
      ],
      [
       "p",
@@ -5385,7 +5385,7 @@
      ],
      [
       "m",
-      "F=\\frac12 I^2\\frac{dM}{dx}\\ \\text{(fixed currents)}"
+      "F=\\frac{1}{2} I^2\\frac{dM}{dx}\\ \\text{(fixed currents)}"
      ],
      [
       "check",
@@ -5442,7 +5442,7 @@
     "items": [
      [
       "m",
-      "i=i_0e^{-t/\\tau},\\qquad \\int i^2R\\,dt=\\tfrac12Li_0^2"
+      "i=i_0e^{-t/\\tau},\\qquad \\int i^2R\\,dt=\\frac{1}{2}Li_0^2"
      ],
      [
       "p",
@@ -5496,7 +5496,7 @@
     "items": [
      [
       "m",
-      "\\frac{dI}{dt}=\\frac{V}{L},\\qquad t_{\\rm charge}=\\frac{LI}{V}"
+      "\\frac{dI}{dt}=\\frac{V}{L},\\qquad t_{\\mathrm{charge}}=\\frac{LI}{V}"
      ],
      [
       "p",
@@ -5540,7 +5540,7 @@
     "items": [
      [
       "m",
-      "U=\\tfrac12LI^2=\\frac{B^2}{2\\mu_0}\\times\\text{volume}"
+      "U=\\frac{1}{2}LI^2=\\frac{B^2}{2\\mu_0}\\times\\text{volume}"
      ],
      [
       "p",
@@ -5556,7 +5556,7 @@
      ],
      [
       "m",
-      "u_B=\\frac{B^2}{2\\mu_0}=4\\times10^5\\ \\mathrm{J/m^3}\\ \\text{at }1\\ \\mathrm T"
+      "u_B=\\frac{B^2}{2\\mu_0}=4\\times10^5\\ \\mathrm{J/m^3}\\ \\text{at }1\\ \\mathrm{T}"
      ],
      [
       "check",
@@ -5610,7 +5610,7 @@
      ],
      [
       "m",
-      "U_C=\\frac{q^2}{2C},\\qquad U_L=\\tfrac12LI^2"
+      "U_C=\\frac{q^2}{2C},\\qquad U_L=\\frac{1}{2}LI^2"
      ],
      [
       "check",
@@ -5692,7 +5692,7 @@
     "items": [
      [
       "m",
-      "L_{\\rm series}=L_1+L_2\\pm2M"
+      "L_{\\mathrm{series}}=L_1+L_2\\pm2M"
      ],
      [
       "p",
@@ -5721,7 +5721,7 @@
     "items": [
      [
       "m",
-      "W=\\tfrac12L_1I_1^2+\\tfrac12L_2I_2^2\\pm MI_1I_2"
+      "W=\\frac{1}{2}L_1I_1^2+\\frac{1}{2}L_2I_2^2\\pm MI_1I_2"
      ],
      [
       "p",
@@ -5737,7 +5737,7 @@
      ],
      [
       "m",
-      "M=\\frac{L_{\\rm aiding}-L_{\\rm opposing}}{4}"
+      "M=\\frac{L_{\\mathrm{aiding}}-L_{\\mathrm{opposing}}}{4}"
      ],
      [
       "check",
@@ -5877,7 +5877,7 @@
     "items": [
      [
       "m",
-      "q\\leftrightarrow x,\\quad i\\leftrightarrow v,\\quad \\frac1C\\leftrightarrow k"
+      "q\\leftrightarrow x,\\quad i\\leftrightarrow v,\\quad \\frac{1}{C}\\leftrightarrow k"
      ],
      [
       "p",
@@ -5933,7 +5933,7 @@
      ],
      [
       "m",
-      "V_{\\rm peak}=325\\ \\mathrm V\\ \\text{for}\\ 230\\ \\mathrm V\\ \\text{mains}"
+      "V_{\\mathrm{peak}}=325\\ \\mathrm{V}\\ \\text{for}\\ 230\\ \\mathrm{V}\\ \\text{mains}"
      ],
      [
       "check",
@@ -5946,7 +5946,7 @@
     "items": [
      [
       "m",
-      "I_{\\rm rms}=\\sqrt{\\langle i^2\\rangle}=\\frac{I_0}{\\sqrt2}"
+      "I_{\\mathrm{rms}}=\\sqrt{\\langle i^2\\rangle}=\\frac{I_0}{\\sqrt{2}}"
      ],
      [
       "p",
@@ -5975,7 +5975,7 @@
     "items": [
      [
       "m",
-      "\\langle i\\rangle_{\\rm half}=\\frac{2I_0}{\\pi}=0.637I_0"
+      "\\langle i\\rangle_{\\mathrm{half}}=\\frac{2I_0}{\\pi}=0.637I_0"
      ],
      [
       "p",
@@ -5991,7 +5991,7 @@
      ],
      [
       "m",
-      "I_{\\rm rms}=\\frac{I_0}{\\sqrt2}=0.707I_0,\\qquad I_{\\rm avg}=\\frac{2I_0}{\\pi}=0.637I_0"
+      "I_{\\mathrm{rms}}=\\frac{I_0}{\\sqrt{2}}=0.707I_0,\\qquad I_{\\mathrm{avg}}=\\frac{2I_0}{\\pi}=0.637I_0"
      ]
     ]
    },
@@ -6000,7 +6000,7 @@
     "items": [
      [
       "m",
-      "\\mathrm{sq}:I_0;\\qquad\\mathrm{tri}:\\frac{I_0}{\\sqrt3}"
+      "\\mathrm{sq}:I_0;\\qquad\\mathrm{tri}:\\frac{I_0}{\\sqrt{3}}"
      ],
      [
       "p",
@@ -6274,7 +6274,7 @@
      ],
      [
       "m",
-      "I_{\\rm line}=\\sqrt{I_R^2+(I_C-I_L)^2}"
+      "I_{\\mathrm{line}}=\\sqrt{I_R^2+(I_C-I_L)^2}"
      ],
      [
       "check",
@@ -6331,7 +6331,7 @@
     "items": [
      [
       "m",
-      "V_R+V_L+V_C\\neq V_{\\rm source}"
+      "V_R+V_L+V_C\\neq V_{\\mathrm{source}}"
      ],
      [
       "p",
@@ -6454,7 +6454,7 @@
     "items": [
      [
       "m",
-      "Q=\\frac{\\omega_0L}{R}=\\frac1R\\sqrt{\\frac LC}=\\frac{V_L}{V_0}"
+      "Q=\\frac{\\omega_0L}{R}=\\frac{1}{R}\\sqrt{\\frac LC}=\\frac{V_L}{V_0}"
      ],
      [
       "p",
@@ -6552,7 +6552,7 @@
     "items": [
      [
       "m",
-      "P=V_{\\rm rms}I_{\\rm rms}\\cos\\phi=\\tfrac12V_0I_0\\cos\\phi"
+      "P=V_{\\mathrm{rms}}I_{\\mathrm{rms}}\\cos\\phi=\\frac{1}{2}V_0I_0\\cos\\phi"
      ],
      [
       "p",
@@ -6568,7 +6568,7 @@
      ],
      [
       "m",
-      "P=\\langle vi\\rangle=\\tfrac12V_0I_0\\cos\\phi"
+      "P=\\langle vi\\rangle=\\frac{1}{2}V_0I_0\\cos\\phi"
      ],
      [
       "check",
@@ -6679,7 +6679,7 @@
     "items": [
      [
       "m",
-      "Y=\\frac1Z=\\sqrt{G^2+(B_C-B_L)^2}"
+      "Y=\\frac{1}{Z}=\\sqrt{G^2+(B_C-B_L)^2}"
      ],
      [
       "p",
@@ -6695,7 +6695,7 @@
      ],
      [
       "m",
-      "I_{\\rm line}=V Y,\\qquad G=\\frac1R,\\ B_C=\\omega C,\\ B_L=\\frac1{\\omega L}"
+      "I_{\\mathrm{line}}=V Y,\\qquad G=\\frac{1}{R},\\ B_C=\\omega C,\\ B_L=\\frac{1}{\\omega L}"
      ],
      [
       "check",
@@ -6708,7 +6708,7 @@
     "items": [
      [
       "m",
-      "I_{\\rm line}=\\frac{V}{R},\\qquad I_{\\rm tank}=QI_{\\rm line}"
+      "I_{\\mathrm{line}}=\\frac{V}{R},\\qquad I_{\\mathrm{tank}}=QI_{\\mathrm{line}}"
      ],
      [
       "p",
@@ -6724,7 +6724,7 @@
      ],
      [
       "m",
-      "Z_{\\rm parallel}(\\omega_0)=R\\ \\text{(max)}\\ \\text{for the ideal tank}"
+      "Z_{\\mathrm{parallel}}(\\omega_0)=R\\ \\text{(max)}\\ \\text{for the ideal tank}"
      ],
      [
       "check",
@@ -6766,7 +6766,7 @@
     "items": [
      [
       "m",
-      "Y_{\\rm total}=\\sum Y_k,\\qquad \\phi=\\arg Z"
+      "Y_{\\mathrm{total}}=\\sum Y_k,\\qquad \\phi=\\arg Z"
      ],
      [
       "p",
@@ -6884,7 +6884,7 @@
      ],
      [
       "m",
-      "P=\\tfrac12\\mathrm{Re}(\\tilde V\\tilde I^*)"
+      "P=\\frac{1}{2}\\mathrm{Re}(\\tilde V\\tilde I^*)"
      ],
      [
       "check",
@@ -7020,7 +7020,7 @@
     "items": [
      [
       "m",
-      "P_{\\rm loss}=I^2R_{\\rm line}=\\frac{P^2R_{\\rm line}}{V^2}"
+      "P_{\\mathrm{loss}}=I^2R_{\\mathrm{line}}=\\frac{P^2R_{\\mathrm{line}}}{V^2}"
      ],
      [
       "p",
@@ -7060,7 +7060,7 @@
     "items": [
      [
       "m",
-      "V_{\\rm avg}=\\frac{V_0}{\\pi}\\ \\text{(half)},\\qquad \\frac{2V_0}{\\pi}\\ \\text{(full)}"
+      "V_{\\mathrm{avg}}=\\frac{V_0}{\\pi}\\ \\text{(half)},\\qquad \\frac{2V_0}{\\pi}\\ \\text{(full)}"
      ],
      [
       "p",
@@ -7076,7 +7076,7 @@
      ],
      [
       "m",
-      "V_{\\rm rms}=\\frac{V_0}{2}\\ \\text{(half)},\\qquad \\frac{V_0}{\\sqrt2}\\ \\text{(full)}"
+      "V_{\\mathrm{rms}}=\\frac{V_0}{2}\\ \\text{(half)},\\qquad \\frac{V_0}{\\sqrt{2}}\\ \\text{(full)}"
      ],
      [
       "check",
@@ -7118,7 +7118,7 @@
     "items": [
      [
       "m",
-      "X_C(2f)=\\frac{1}{2\\pi(2f)C}\\ll R_{\\rm load}"
+      "X_C(2f)=\\frac{1}{2\\pi(2f)C}\\ll R_{\\mathrm{load}}"
      ],
      [
       "p",
@@ -7147,7 +7147,7 @@
     "items": [
      [
       "m",
-      "V_{\\rm drop}\\approx0.7\\ \\mathrm V\\ \\text{per Si diode}"
+      "V_{\\mathrm{drop}}\\approx0.7\\ \\mathrm{V}\\ \\text{per Si diode}"
      ],
      [
       "p",
@@ -7314,7 +7314,7 @@
     "items": [
      [
       "m",
-      "d=R:\\ B(0)=\\frac{8}{5\\sqrt5}\\frac{\\mu_0NI}{R}"
+      "d=R:\\ B(0)=\\frac{8}{5\\sqrt{5}}\\frac{\\mu_0NI}{R}"
      ],
      [
       "m",
@@ -7343,7 +7343,7 @@
     "items": [
      [
       "m",
-      "N=100,\\ R=20\\ \\mathrm{cm},\\ I=1\\ \\mathrm A:\\ B=0.45\\ \\mathrm{mT}"
+      "N=100,\\ R=20\\ \\mathrm{cm},\\ I=1\\ \\mathrm{A}:\\ B=0.45\\ \\mathrm{mT}"
      ],
      [
       "p",
@@ -7441,11 +7441,11 @@
     "items": [
      [
       "m",
-      "B_{\\rm in}=\\tfrac23\\mu_0M"
+      "B_{\\mathrm{in}}=\\frac23\\mu_0M"
      ],
      [
       "m",
-      "\\mathbf H=-N_d\\mathbf M,\\ N_d=\\tfrac13"
+      "\\mathbf H=-N_d\\mathbf M,\\ N_d=\\frac{1}{3}"
      ],
      [
       "p",
@@ -7499,7 +7499,7 @@
      ],
      [
       "m",
-      "B_{\\rm pole}=\\tfrac23\\mu_0M\\ \\text{continuous}"
+      "B_{\\mathrm{pole}}=\\frac23\\mu_0M\\ \\text{continuous}"
      ],
      [
       "p",
@@ -7524,7 +7524,7 @@
      ],
      [
       "m",
-      "N_{\\rm sphere}=\\tfrac13"
+      "N_{\\mathrm{sphere}}=\\frac{1}{3}"
      ],
      [
       "p",
@@ -7568,7 +7568,7 @@
      ],
      [
       "m",
-      "B_{\\rm surface}=\\frac{\\mu_0I}{2\\pi a}"
+      "B_{\\mathrm{surface}}=\\frac{\\mu_0I}{2\\pi a}"
      ],
      [
       "p",
@@ -7609,7 +7609,7 @@
      ],
      [
       "m",
-      "B_{\\rm support}=\\sqrt{2\\mu_0 mg/A}\\approx0.35\\ \\mathrm T"
+      "B_{\\mathrm{support}}=\\sqrt{2\\mu_0 mg/A}\\approx0.35\\ \\mathrm{T}"
      ]
     ]
    },
@@ -7622,7 +7622,7 @@
      ],
      [
       "m",
-      "B_{\\rm inside}=\\frac{\\mu_0K_0}{2}"
+      "B_{\\mathrm{inside}}=\\frac{\\mu_0K_0}{2}"
      ],
      [
       "p",
@@ -7647,7 +7647,7 @@
      ],
      [
       "m",
-      "1\\ \\mathrm T\\to3.98\\times10^{5}\\ \\mathrm{Pa}"
+      "1\\ \\mathrm{T}\\to3.98\\times10^{5}\\ \\mathrm{Pa}"
      ],
      [
       "p",
@@ -7707,7 +7707,7 @@
      ],
      [
       "m",
-      "\\mathbf v=\\mathbf v_d+\\mathbf v_{\\rm circle}"
+      "\\mathbf v=\\mathbf v_d+\\mathbf v_{\\mathrm{circle}}"
      ]
     ]
    },
@@ -7716,7 +7716,7 @@
     "items": [
      [
       "m",
-      "v_{\\rm top}=3v_d\\ \\text{in a loop}"
+      "v_{\\mathrm{top}}=3v_d\\ \\text{in a loop}"
      ],
      [
       "m",
@@ -7770,7 +7770,7 @@
     "items": [
      [
       "m",
-      "E=2.0\\times10^3\\ \\mathrm{V/m},\\ B=0.020\\ \\mathrm T"
+      "E=2.0\\times10^3\\ \\mathrm{V/m},\\ B=0.020\\ \\mathrm{T}"
      ],
      [
       "m",
@@ -7834,7 +7834,7 @@
      ],
      [
       "m",
-      "T_g:T_b:T_d\\sim10^{-2}:10^{-1}:1\\ \\mathrm s"
+      "T_g:T_b:T_d\\sim10^{-2}:10^{-1}:1\\ \\mathrm{s}"
      ]
     ]
    },
@@ -7843,7 +7843,7 @@
     "items": [
      [
       "m",
-      "T_d\\propto\\frac1K"
+      "T_d\\propto\\frac{1}{K}"
      ],
      [
       "m",
@@ -7876,7 +7876,7 @@
      ],
      [
       "m",
-      "\\Delta E_{\\rm turn}=88.5\\ \\mathrm{keV}\\frac{E^4[\\mathrm{GeV}]}{r[\\mathrm m]}"
+      "\\Delta E_{\\mathrm{turn}}=88.5\\ \\mathrm{keV}\\frac{E^4[\\mathrm{GeV}]}{r[\\mathrm{m}]}"
      ],
      [
       "p",
@@ -7901,7 +7901,7 @@
     "items": [
      [
       "m",
-      "p[\\mathrm{GeV}/c]=0.3\\,B[\\mathrm T]\\,r[\\mathrm m]"
+      "p[\\mathrm{GeV}/c]=0.3\\,B[\\mathrm{T}]\\,r[\\mathrm{m}]"
      ],
      [
       "m",
@@ -7999,7 +7999,7 @@
     "items": [
      [
       "m",
-      "\\chi_{\\rm water}\\approx-9\\times10^{-6}"
+      "\\chi_{\\mathrm{water}}\\approx-9\\times10^{-6}"
      ],
      [
       "m",
@@ -8028,7 +8028,7 @@
      ],
      [
       "m",
-      "\\chi_{\\rm Larmor}\\sim-10^{-5}"
+      "\\chi_{\\mathrm{Larmor}}\\sim-10^{-5}"
      ],
      [
       "p",
@@ -8080,7 +8080,7 @@
      ],
      [
       "m",
-      "\\mu=0.58\\ \\mathrm{A\\,m^2},\\ B_H=25\\ \\mu\\mathrm T"
+      "\\mu=0.58\\ \\mathrm{A\\,m^2},\\ B_H=25\\ \\mu\\mathrm{T}"
      ],
      [
       "check",
@@ -8093,11 +8093,11 @@
     "items": [
      [
       "m",
-      "I_{\\rm core}\\sim2\\times10^9\\ \\mathrm A"
+      "I_{\\mathrm{core}}\\sim2\\times10^9\\ \\mathrm{A}"
      ],
      [
       "m",
-      "B_{\\rm heart}\\sim100\\ \\mathrm{pT}"
+      "B_{\\mathrm{heart}}\\sim100\\ \\mathrm{pT}"
      ],
      [
       "p",
@@ -8147,11 +8147,11 @@
     "items": [
      [
       "m",
-      "\\tan\\theta_{\\rm dip}=2\\tan\\lambda"
+      "\\tan\\theta_{\\mathrm{dip}}=2\\tan\\lambda"
      ],
      [
       "m",
-      "B=B_{\\rm eq}\\sqrt{1+3\\sin^2\\lambda}"
+      "B=B_{\\mathrm{eq}}\\sqrt{1+3\\sin^2\\lambda}"
      ],
      [
       "p",
@@ -8191,7 +8191,7 @@
     "items": [
      [
       "m",
-      "\\mathcal E=\\frac12B\\omega a^2"
+      "\\mathcal E=\\frac{1}{2}B\\omega a^2"
      ],
      [
       "p",
@@ -8207,7 +8207,7 @@
      ],
      [
       "m",
-      "\\tau=\\frac12 IBa^2=\\frac{\\mathcal E I}{\\omega}"
+      "\\tau=\\frac{1}{2} IBa^2=\\frac{\\mathcal E I}{\\omega}"
      ]
     ]
    },
@@ -8326,7 +8326,7 @@
      ],
      [
       "m",
-      "p=\\frac{e\\Phi}{2\\pi r}=eB_{\\rm orb}r\\ \\Rightarrow\\ B_{\\rm orb}=\\frac12\\langle B\\rangle"
+      "p=\\frac{e\\Phi}{2\\pi r}=eB_{\\mathrm{orb}}r\\ \\Rightarrow\\ B_{\\mathrm{orb}}=\\frac{1}{2}\\langle B\\rangle"
      ],
      [
       "check",
@@ -8339,7 +8339,7 @@
     "items": [
      [
       "m",
-      "B_{\\rm orb}r=\\frac{\\Phi}{2\\pi r}"
+      "B_{\\mathrm{orb}}r=\\frac{\\Phi}{2\\pi r}"
      ],
      [
       "p",
@@ -8384,7 +8384,7 @@
      ],
      [
       "m",
-      "p=eB_{\\rm orb}R=36\\ \\mathrm{MeV}/c\\ \\text{for}\\ R=0.3\\ \\mathrm m,\\ 0.4\\ \\mathrm T"
+      "p=eB_{\\mathrm{orb}}R=36\\ \\mathrm{MeV}/c\\ \\text{for}\\ R=0.3\\ \\mathrm{m},\\ 0.4\\ \\mathrm{T}"
      ],
      [
       "check",
@@ -8397,7 +8397,7 @@
     "items": [
      [
       "m",
-      "\\Delta\\Phi=\\pi R^2\\langle B\\rangle=0.226\\ \\mathrm Wb"
+      "\\Delta\\Phi=\\pi R^2\\langle B\\rangle=0.226\\ \\mathrm{Wb}"
      ],
      [
       "p",
@@ -8457,7 +8457,7 @@
      ],
      [
       "m",
-      "v_{\\rm t}=\\frac{mg}{K}=0.18\\ \\mathrm{m/s}\\ \\text{for}\\ 7.5\\ \\mathrm g"
+      "v_{\\mathrm{t}}=\\frac{mg}{K}=0.18\\ \\mathrm{m/s}\\ \\text{for}\\ 7.5\\ \\mathrm{g}"
      ],
      [
       "check",
@@ -8470,7 +8470,7 @@
     "items": [
      [
       "m",
-      "mgv_{\\rm t}=Kv_{\\rm t}^2"
+      "mgv_{\\mathrm{t}}=Kv_{\\mathrm{t}}^2"
      ],
      [
       "p",
@@ -8515,7 +8515,7 @@
      ],
      [
       "m",
-      "B_c=\\sqrt{\\frac{2m\\omega_0}{k\\sigma V}}\\approx0.08\\ \\mathrm T"
+      "B_c=\\sqrt{\\frac{2m\\omega_0}{k\\sigma V}}\\approx0.08\\ \\mathrm{T}"
      ],
      [
       "check",
@@ -8617,7 +8617,7 @@
      ],
      [
       "m",
-      "F=\\frac12 I^2\\frac{dL}{dx}\\ \\text{(fixed flux, same force)}"
+      "F=\\frac{1}{2} I^2\\frac{dL}{dx}\\ \\text{(fixed flux, same force)}"
      ]
     ]
    },
@@ -8626,7 +8626,7 @@
     "items": [
      [
       "m",
-      "\\Lambda=\\Phi_{\\rm ext}+LI=\\text{const}"
+      "\\Lambda=\\Phi_{\\mathrm{ext}}+LI=\\text{const}"
      ],
      [
       "p",
@@ -8715,7 +8715,7 @@
      ],
      [
       "m",
-      "F=ILB=0.30\\ \\mathrm N,\\qquad P=\\mathcal E I=2.3\\ \\mathrm{kW}"
+      "F=ILB=0.30\\ \\mathrm{N},\\qquad P=\\mathcal E I=2.3\\ \\mathrm{kW}"
      ],
      [
       "check",
@@ -8744,7 +8744,7 @@
      ],
      [
       "m",
-      "F=I_1I_2\\frac{dM}{dz}\\approx98\\ \\mathrm N,\\qquad v\\approx5\\ \\mathrm{m/s}"
+      "F=I_1I_2\\frac{dM}{dz}\\approx98\\ \\mathrm{N},\\qquad v\\approx5\\ \\mathrm{m/s}"
      ],
      [
       "check",
@@ -8757,7 +8757,7 @@
     "items": [
      [
       "m",
-      "\\tfrac12mv^2=0.24\\ \\mathrm J\\ \\text{vs}\\ 16\\ \\mathrm J\\ \\text{heat}"
+      "\\frac{1}{2}mv^2=0.24\\ \\mathrm{J}\\ \\text{vs}\\ 16\\ \\mathrm{J}\\ \\text{heat}"
      ],
      [
       "p",
@@ -8830,7 +8830,7 @@
     "items": [
      [
       "m",
-      "I=\\frac{L_1I_0}{L_1+L_2}=1.0\\ \\mathrm A"
+      "I=\\frac{L_1I_0}{L_1+L_2}=1.0\\ \\mathrm{A}"
      ],
      [
       "p",
@@ -9015,7 +9015,7 @@
     "items": [
      [
       "m",
-      "V_{\\rm reflected}=+V\\ \\text{(open end)}"
+      "V_{\\mathrm{reflected}}=+V\\ \\text{(open end)}"
      ],
      [
       "p",
@@ -9031,7 +9031,7 @@
      ],
      [
       "m",
-      "V_{\\rm open}=2V,\\qquad I_{\\rm short}=2I"
+      "V_{\\mathrm{open}}=2V,\\qquad I_{\\mathrm{short}}=2I"
      ],
      [
       "check",
@@ -9044,7 +9044,7 @@
     "items": [
      [
       "m",
-      "\\frac{B^2}{2\\mu_0}=0.4\\ \\mathrm{MJ/m^3}\\ \\text{at}\\ 1\\ \\mathrm T"
+      "\\frac{B^2}{2\\mu_0}=0.4\\ \\mathrm{MJ/m^3}\\ \\text{at}\\ 1\\ \\mathrm{T}"
      ],
      [
       "p",
@@ -9273,7 +9273,7 @@
     "items": [
      [
       "m",
-      "V_{\\rm line}=\\sqrt3 V_{\\rm phase}"
+      "V_{\\mathrm{line}}=\\sqrt{3} V_{\\mathrm{phase}}"
      ],
      [
       "p",
@@ -9416,7 +9416,7 @@
      ],
      [
       "m",
-      "\\omega_{\\rm balance}=\\frac{1}{RC},\\qquad \\beta=\\frac13"
+      "\\omega_{\\mathrm{balance}}=\\frac{1}{RC},\\qquad \\beta=\\frac{1}{3}"
      ]
     ]
    },
@@ -9425,7 +9425,7 @@
     "items": [
      [
       "m",
-      "q_+=\\frac{q_1+q_2}{\\sqrt2},\\qquad q_-=\\frac{q_1-q_2}{\\sqrt2}"
+      "q_+=\\frac{q_1+q_2}{\\sqrt{2}},\\qquad q_-=\\frac{q_1-q_2}{\\sqrt{2}}"
      ],
      [
       "p",
@@ -9494,7 +9494,7 @@
     "items": [
      [
       "m",
-      "I_{\\rm fault}=\\frac{230}{0.1}=2.3\\ \\mathrm{kA}"
+      "I_{\\mathrm{fault}}=\\frac{230}{0.1}=2.3\\ \\mathrm{kA}"
      ],
      [
       "p",
@@ -9510,7 +9510,7 @@
      ],
      [
       "m",
-      "\\tfrac12 LI^2=53\\ \\mathrm J\\ \\text{in the wiring field}"
+      "\\frac{1}{2} LI^2=53\\ \\mathrm{J}\\ \\text{in the wiring field}"
      ]
     ]
    },
@@ -9519,7 +9519,7 @@
     "items": [
      [
       "m",
-      "45\\ \\mathrm T\\to800\\ \\mathrm{MPa}"
+      "45\\ \\mathrm{T}\\to800\\ \\mathrm{MPa}"
      ],
      [
       "p",
@@ -9548,7 +9548,7 @@
     "items": [
      [
       "m",
-      "I_{\\rm rms}=I_0\\ \\text{(square)},\\qquad I_{\\rm rms}=\\frac{I_0}{\\sqrt3}\\ \\text{(triangle)}"
+      "I_{\\mathrm{rms}}=I_0\\ \\text{(square)},\\qquad I_{\\mathrm{rms}}=\\frac{I_0}{\\sqrt{3}}\\ \\text{(triangle)}"
      ],
      [
       "p",

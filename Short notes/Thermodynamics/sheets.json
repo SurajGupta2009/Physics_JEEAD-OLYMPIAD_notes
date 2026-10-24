@@ -55,7 +55,7 @@
         "items": [
           [
             "m",
-            "T(\\mathrm K)=t(^{\\circ}\\mathrm C)+273.15"
+            "T(\\mathrm{K})=t(^{\\circ}\\mathrm{C})+273.15"
           ],
           [
             "m",
@@ -153,11 +153,11 @@
         "items": [
           [
             "m",
-            "\\beta_{\\rm app}=\\beta_\\ell-\\beta_{\\rm vessel}"
+            "\\beta_{\\mathrm{app}}=\\beta_\\ell-\\beta_{\\mathrm{vessel}}"
           ],
           [
             "m",
-            "V_{\\rm spill}\\simeq V_0\\beta_{\\rm app}\\Delta T"
+            "V_{\\mathrm{spill}}\\simeq V_0\\beta_{\\mathrm{app}}\\Delta T"
           ],
           [
             "m",
@@ -203,7 +203,7 @@
         "items": [
           [
             "m",
-            "\\frac{\\Delta\\tau}{\\tau}\\simeq\\frac12\\alpha\\Delta T"
+            "\\frac{\\Delta\\tau}{\\tau}\\simeq\\frac{1}{2}\\alpha\\Delta T"
           ],
           [
             "p",
@@ -285,7 +285,7 @@
         "items": [
           [
             "m",
-            "\\sum_iQ_i+Q_{\\rm vessel}=0"
+            "\\sum_iQ_i+Q_{\\mathrm{vessel}}=0"
           ],
           [
             "m",
@@ -310,7 +310,7 @@
         "items": [
           [
             "m",
-            "Q_{\\rm melt}=m_iL_f"
+            "Q_{\\mathrm{melt}}=m_iL_f"
           ],
           [
             "p",
@@ -350,7 +350,7 @@
           ],
           [
             "m",
-            "P=\\frac13\\frac{Nm}{V}\\langle v^2\\rangle"
+            "P=\\frac{1}{3}\\frac{Nm}{V}\\langle v^2\\rangle"
           ],
           [
             "p",
@@ -371,15 +371,15 @@
         "items": [
           [
             "m",
-            "P=\\frac13\\rho v_{\\rm rms}^2"
+            "P=\\frac{1}{3}\\rho v_{\\mathrm{rms}}^2"
           ],
           [
             "m",
-            "\\frac12m\\langle v^2\\rangle=\\frac32k_BT"
+            "\\frac{1}{2}m\\langle v^2\\rangle=\\frac32k_BT"
           ],
           [
             "m",
-            "K_{\\rm trans}=\\frac32nRT"
+            "K_{\\mathrm{trans}}=\\frac32nRT"
           ],
           [
             "p",
@@ -425,11 +425,11 @@
         "items": [
           [
             "m",
-            "v_{\\rm rms}=\\sqrt{\\frac{3RT}{M}}"
+            "v_{\\mathrm{rms}}=\\sqrt{\\frac{3RT}{M}}"
           ],
           [
             "m",
-            "1\\ \\mathrm{kPa\\,L}=1\\ \\mathrm J"
+            "1\\ \\mathrm{kPa\\,L}=1\\ \\mathrm{J}"
           ],
           [
             "p",
@@ -473,7 +473,7 @@
           ],
           [
             "m",
-            "v_{\\rm rms}=\\sqrt{3RT/M}"
+            "v_{\\mathrm{rms}}=\\sqrt{3RT/M}"
           ],
           [
             "p",
@@ -494,11 +494,11 @@
         "items": [
           [
             "m",
-            "\\lambda=\\frac{1}{\\sqrt2\\pi d^2\\nu}"
+            "\\lambda=\\frac{1}{\\sqrt{2}\\pi d^2\\nu}"
           ],
           [
             "m",
-            "\\lambda=\\frac{k_BT}{\\sqrt2\\pi d^2P}"
+            "\\lambda=\\frac{k_BT}{\\sqrt{2}\\pi d^2P}"
           ],
           [
             "p",
@@ -540,11 +540,11 @@
         "items": [
           [
             "m",
-            "\\Gamma=\\frac14\\nu\\bar v"
+            "\\Gamma=\\frac{1}{4}\\nu\\bar v"
           ],
           [
             "m",
-            "\\frac1{4\\pi}\\int_{\\rm hemi}\\cos\\theta\\,d\\Omega=\\frac14"
+            "\\frac{1}{4\\pi}\\int_{\\mathrm{hemi}}\\cos\\theta\\,d\\Omega=\\frac{1}{4}"
           ],
           [
             "m",
@@ -609,7 +609,7 @@
         "items": [
           [
             "m",
-            "C_{V,\\rm vib\\ active\\ diatomic}=7R/2"
+            "C_{V,\\mathrm{vib}\\ active\\ diatomic}=7R/2"
           ],
           [
             "p",
@@ -630,15 +630,15 @@
         "items": [
           [
             "m",
-            "C_{V,\\rm tot}=\\sum_i n_iC_{V,i}"
+            "C_{V,\\mathrm{tot}}=\\sum_i n_iC_{V,i}"
           ],
           [
             "m",
-            "\\gamma_{\\rm mix}=1+\\frac{n_{\\rm tot}R}{\\sum_i n_iC_{V,i}}"
+            "\\gamma_{\\mathrm{mix}}=1+\\frac{n_{\\mathrm{tot}}R}{\\sum_i n_iC_{V,i}}"
           ],
           [
             "m",
-            "M_{\\rm mix}=\\frac{\\sum_i n_iM_i}{n_{\\rm tot}}"
+            "M_{\\mathrm{mix}}=\\frac{\\sum_i n_iM_i}{n_{\\mathrm{tot}}}"
           ],
           [
             "p",
@@ -699,11 +699,11 @@
         "items": [
           [
             "m",
-            "\\Delta U=Q-W_{\\rm by}"
+            "\\Delta U=Q-W_{\\mathrm{by}}"
           ],
           [
             "m",
-            "Q>0:\\ \\mathrm{in},\\quad W_{\\rm by}>0:\\ \\mathrm{out}"
+            "Q>0:\\ \\mathrm{in},\\quad W_{\\mathrm{by}}>0:\\ \\mathrm{out}"
           ],
           [
             "p",
@@ -724,11 +724,11 @@
         "items": [
           [
             "m",
-            "\\delta W_{\\rm by}=P_{\\rm ext}\\,dV"
+            "\\delta W_{\\mathrm{by}}=P_{\\mathrm{ext}}\\,dV"
           ],
           [
             "m",
-            "W_{\\rm by}=\\int_{V_1}^{V_2}P_{\\rm ext}\\,dV"
+            "W_{\\mathrm{by}}=\\int_{V_1}^{V_2}P_{\\mathrm{ext}}\\,dV"
           ],
           [
             "p",
@@ -749,7 +749,7 @@
         "items": [
           [
             "m",
-            "\\Delta U_{\\rm ideal}=nC_V(T_2-T_1)"
+            "\\Delta U_{\\mathrm{ideal}}=nC_V(T_2-T_1)"
           ],
           [
             "m",
@@ -774,7 +774,7 @@
         "items": [
           [
             "m",
-            "\\Delta U=W_{\\rm electrical,in}=\\mathcal P t"
+            "\\Delta U=W_{\\mathrm{electrical},in}=\\mathcal P t"
           ],
           [
             "p",
@@ -864,11 +864,11 @@
         "items": [
           [
             "m",
-            "C_{\\rm path}=\\frac{\\delta Q}{n\\,dT}"
+            "C_{\\mathrm{path}}=\\frac{\\delta Q}{n\\,dT}"
           ],
           [
             "m",
-            "C_{\\rm path}=C_V+\\frac{P}{n}\\frac{dV}{dT}"
+            "C_{\\mathrm{path}}=C_V+\\frac{P}{n}\\frac{dV}{dT}"
           ],
           [
             "p",
@@ -889,11 +889,11 @@
         "items": [
           [
             "m",
-            "Q_V=2079\\ \\mathrm J,\\quad W_V=0"
+            "Q_V=2079\\ \\mathrm{J},\\quad W_V=0"
           ],
           [
             "m",
-            "Q_P=2910\\ \\mathrm J,\\quad W_P=831\\ \\mathrm J"
+            "Q_P=2910\\ \\mathrm{J},\\quad W_P=831\\ \\mathrm{J}"
           ],
           [
             "p",
@@ -1139,11 +1139,11 @@
         "items": [
           [
             "m",
-            "T_2=300\\sqrt2=424.3\\ \\mathrm K"
+            "T_2=300\\sqrt{2}=424.3\\ \\mathrm{K}"
           ],
           [
             "m",
-            "C_s=-R/2,\\quad Q\\simeq-517\\ \\mathrm J"
+            "C_s=-R/2,\\quad Q\\simeq-517\\ \\mathrm{J}"
           ],
           [
             "p",
@@ -1262,7 +1262,7 @@
           ],
           [
             "m",
-            "W=(P_0A+Mg)x+\\frac12kx^2"
+            "W=(P_0A+Mg)x+\\frac{1}{2}kx^2"
           ],
           [
             "p",
@@ -1298,7 +1298,7 @@
         "items": [
           [
             "m",
-            "P_{\\rm ext}=0\\ \\Rightarrow\\ W=0"
+            "P_{\\mathrm{ext}}=0\\ \\Rightarrow\\ W=0"
           ],
           [
             "m",
@@ -1327,11 +1327,11 @@
         "items": [
           [
             "m",
-            "W=P_{\\rm ext}(V_2-V_1)"
+            "W=P_{\\mathrm{ext}}(V_2-V_1)"
           ],
           [
             "m",
-            "nC_V(T_2-T_1)=Q-P_{\\rm ext}(V_2-V_1)"
+            "nC_V(T_2-T_1)=Q-P_{\\mathrm{ext}}(V_2-V_1)"
           ],
           [
             "p",
@@ -1377,7 +1377,7 @@
         "items": [
           [
             "m",
-            "\\Delta S_{\\rm sudden}=nC_V\\ln(500/300)-nR\\ln2>0"
+            "\\Delta S_{\\mathrm{sudden}}=nC_V\\ln(500/300)-nR\\ln2>0"
           ],
           [
             "p",
@@ -1413,11 +1413,11 @@
         "items": [
           [
             "m",
-            "\\sum\\Delta U_i=0,\\quad W_{\\rm net}=Q_{\\rm net}"
+            "\\sum\\Delta U_i=0,\\quad W_{\\mathrm{net}}=Q_{\\mathrm{net}}"
           ],
           [
             "m",
-            "\\eta=\\frac{W_{\\rm net}}{Q_{\\rm in}}=1-\\frac{Q_{\\rm out}}{Q_{\\rm in}}"
+            "\\eta=\\frac{W_{\\mathrm{net}}}{Q_{\\mathrm{in}}}=1-\\frac{Q_{\\mathrm{out}}}{Q_{\\mathrm{in}}}"
           ],
           [
             "p",
@@ -1438,7 +1438,7 @@
         "items": [
           [
             "m",
-            "W_{\\rm triangle}=\\frac12\\Delta P\\Delta V"
+            "W_{\\mathrm{triangle}}=\\frac{1}{2}\\Delta P\\Delta V"
           ],
           [
             "p",
@@ -1459,11 +1459,11 @@
         "items": [
           [
             "m",
-            "W_{\\rm net}=P_0V_0(2\\ln2-1)"
+            "W_{\\mathrm{net}}=P_0V_0(2\\ln2-1)"
           ],
           [
             "m",
-            "Q_{\\rm in}=P_0V_0(C_V/R+2\\ln2)"
+            "Q_{\\mathrm{in}}=P_0V_0(C_V/R+2\\ln2)"
           ],
           [
             "p",
@@ -1484,11 +1484,11 @@
         "items": [
           [
             "m",
-            "\\delta Q_{\\rm rev}=T\\,dS"
+            "\\delta Q_{\\mathrm{rev}}=T\\,dS"
           ],
           [
             "m",
-            "Q_{\\rm rev,net}=\\oint T\\,dS"
+            "Q_{\\mathrm{rev},net}=\\oint T\\,dS"
           ],
           [
             "p",
@@ -1574,7 +1574,7 @@
           ],
           [
             "m",
-            "Q_c/T_c-Q_h/T_h=S_{\\rm gen}\\ge0"
+            "Q_c/T_c-Q_h/T_h=S_{\\mathrm{gen}}\\ge0"
           ],
           [
             "p",
@@ -1631,15 +1631,15 @@
         "items": [
           [
             "m",
-            "Q_h=Q_c+W_{\\rm in}"
+            "Q_h=Q_c+W_{\\mathrm{in}}"
           ],
           [
             "m",
-            "\\mathrm{COP}_R=Q_c/W_{\\rm in}"
+            "\\mathrm{COP}_R=Q_c/W_{\\mathrm{in}}"
           ],
           [
             "m",
-            "\\mathrm{COP}_H=Q_h/W_{\\rm in}"
+            "\\mathrm{COP}_H=Q_h/W_{\\mathrm{in}}"
           ],
           [
             "m",
@@ -1664,11 +1664,11 @@
         "items": [
           [
             "m",
-            "\\mathrm{COP}_R\\le T_c/(T_h-T_c)"
+            "\\mathrm{COP}_R\\leqslant T_c/(T_h-T_c)"
           ],
           [
             "m",
-            "\\mathrm{COP}_H\\le T_h/(T_h-T_c)"
+            "\\mathrm{COP}_H\\leqslant T_h/(T_h-T_c)"
           ],
           [
             "p",
@@ -1693,7 +1693,7 @@
           ],
           [
             "m",
-            "\\dot Q_c=1350\\ \\mathrm W,\\quad\\dot Q_h=1500\\ \\mathrm W"
+            "\\dot Q_c=1350\\ \\mathrm{W},\\quad\\dot Q_h=1500\\ \\mathrm{W}"
           ],
           [
             "m",
@@ -1783,11 +1783,11 @@
         "items": [
           [
             "m",
-            "T_2\\simeq689\\ \\mathrm K,\\quad T_3\\simeq1378\\ \\mathrm K"
+            "T_2\\simeq689\\ \\mathrm{K},\\quad T_3\\simeq1378\\ \\mathrm{K}"
           ],
           [
             "m",
-            "T_4=600\\ \\mathrm K,\\quad\\eta\\simeq56.5\\%"
+            "T_4=600\\ \\mathrm{K},\\quad\\eta\\simeq56.5\\%"
           ],
           [
             "p",
@@ -1833,7 +1833,7 @@
           ],
           [
             "m",
-            "Q_{h,\\rm ext}=nRT_h\\ln r"
+            "Q_{h,\\mathrm{ext}}=nRT_h\\ln r"
           ],
           [
             "m",
@@ -1873,15 +1873,15 @@
         "items": [
           [
             "m",
-            "dS=\\delta Q_{\\rm rev}/T"
+            "dS=\\delta Q_{\\mathrm{rev}}/T"
           ],
           [
             "m",
-            "\\Delta S_{\\rm sys}=\\int\\frac{\\delta Q}{T_b}+S_{\\rm gen}"
+            "\\Delta S_{\\mathrm{sys}}=\\int\\frac{\\delta Q}{T_b}+S_{\\mathrm{gen}}"
           ],
           [
             "m",
-            "S_{\\rm gen}\\ge0"
+            "S_{\\mathrm{gen}}\\ge0"
           ],
           [
             "p",
@@ -1927,15 +1927,15 @@
         "items": [
           [
             "m",
-            "\\Delta S_{\\rm bath}=-Q_{\\rm into\\ system}/T_{\\rm bath}"
+            "\\Delta S_{\\mathrm{bath}}=-Q_{\\mathrm{into}\\ system}/T_{\\mathrm{bath}}"
           ],
           [
             "m",
-            "\\Delta S_{\\rm body}=C\\ln(T_2/T_1)"
+            "\\Delta S_{\\mathrm{body}}=C\\ln(T_2/T_1)"
           ],
           [
             "m",
-            "\\Delta S_{\\rm phase}=mL/T_{\\rm transition}"
+            "\\Delta S_{\\mathrm{phase}}=mL/T_{\\mathrm{transition}}"
           ],
           [
             "p",
@@ -1956,11 +1956,11 @@
         "items": [
           [
             "m",
-            "\\Delta S_{\\rm free}=nR\\ln(V_2/V_1)>0"
+            "\\Delta S_{\\mathrm{free}}=nR\\ln(V_2/V_1)>0"
           ],
           [
             "m",
-            "\\Delta S_{\\rm system,cycle}=0"
+            "\\Delta S_{\\mathrm{system},cycle}=0"
           ],
           [
             "m",
@@ -2000,7 +2000,7 @@
         "items": [
           [
             "m",
-            "\\Delta S_{\\rm total}=Q(1/T_c-1/T_h)>0"
+            "\\Delta S_{\\mathrm{total}}=Q(1/T_c-1/T_h)>0"
           ],
           [
             "p",
@@ -2025,11 +2025,11 @@
           ],
           [
             "m",
-            "S_{\\rm gen}=C_1\\ln(T_f/T_1)+C_2\\ln(T_f/T_2)"
+            "S_{\\mathrm{gen}}=C_1\\ln(T_f/T_1)+C_2\\ln(T_f/T_2)"
           ],
           [
             "m",
-            "S_{\\rm gen}\\simeq C\\delta^2/(4\\bar T^2)"
+            "S_{\\mathrm{gen}}\\simeq C\\delta^2/(4\\bar T^2)"
           ],
           [
             "p",
@@ -2127,7 +2127,7 @@
           ],
           [
             "m",
-            "R_{\\rm th}=L/(kA),\\quad\\dot Q=\\Delta T/R_{\\rm th}"
+            "R_{\\mathrm{th}}=L/(kA),\\quad\\dot Q=\\Delta T/R_{\\mathrm{th}}"
           ],
           [
             "p",
@@ -2148,11 +2148,11 @@
         "items": [
           [
             "m",
-            "R_{\\rm series}=\\sum_iR_i"
+            "R_{\\mathrm{series}}=\\sum_iR_i"
           ],
           [
             "m",
-            "1/R_{\\rm parallel}=\\sum_i1/R_i"
+            "1/R_{\\mathrm{parallel}}=\\sum_i1/R_i"
           ],
           [
             "m",
@@ -2177,7 +2177,7 @@
         "items": [
           [
             "m",
-            "\\mathcal P_{\\rm net}=\\epsilon\\sigma A(T^4-T_0^4)"
+            "\\mathcal P_{\\mathrm{net}}=\\epsilon\\sigma A(T^4-T_0^4)"
           ],
           [
             "m",
@@ -2202,11 +2202,11 @@
         "items": [
           [
             "m",
-            "C\\,dT/dt=\\mathcal P_{\\rm in}-\\mathcal P_{\\rm out}"
+            "C\\,dT/dt=\\mathcal P_{\\mathrm{in}}-\\mathcal P_{\\mathrm{out}}"
           ],
           [
             "m",
-            "T_{\\rm eq}=\\left[\\frac{S_\\odot(1-\\mathcal A)}{4\\epsilon\\sigma}\\right]^{1/4}"
+            "T_{\\mathrm{eq}}=\\left[\\frac{S_\\odot(1-\\mathcal A)}{4\\epsilon\\sigma}\\right]^{1/4}"
           ],
           [
             "p",
@@ -2300,7 +2300,7 @@
           ],
           [
             "m",
-            "h_{\\rm rad}=4\\epsilon\\sigma T_0^3"
+            "h_{\\mathrm{rad}}=4\\epsilon\\sigma T_0^3"
           ],
           [
             "m",
@@ -2365,7 +2365,7 @@
         "items": [
           [
             "m",
-            "P_{\\rm gas}A=P_0A+Mg+kx"
+            "P_{\\mathrm{gas}}A=P_0A+Mg+kx"
           ],
           [
             "p",
@@ -2394,7 +2394,7 @@
           ],
           [
             "m",
-            "\\omega=\\sqrt{(k+k_g)/M_{\\rm eff}}"
+            "\\omega=\\sqrt{(k+k_g)/M_{\\mathrm{eff}}}"
           ],
           [
             "p",
@@ -2444,7 +2444,7 @@
           ],
           [
             "m",
-            "m_{\\rm payload}=V(\\rho_{\\rm out}-\\rho_{\\rm in})-m_{\\rm shell}"
+            "m_{\\mathrm{payload}}=V(\\rho_{\\mathrm{out}}-\\rho_{\\mathrm{in}})-m_{\\mathrm{shell}}"
           ],
           [
             "p",
@@ -2505,11 +2505,11 @@
         "items": [
           [
             "m",
-            "\\Delta S_{\\rm mix}=-R\\sum_i n_i\\ln x_i"
+            "\\Delta S_{\\mathrm{mix}}=-R\\sum_i n_i\\ln x_i"
           ],
           [
             "m",
-            "x_i=n_i/n_{\\rm tot}"
+            "x_i=n_i/n_{\\mathrm{tot}}"
           ],
           [
             "p",
@@ -2534,7 +2534,7 @@
           ],
           [
             "m",
-            "C_{V,\\rm vib}=R\\frac{x^2e^x}{(e^x-1)^2},\\quad x=\\Theta_v/T"
+            "C_{V,\\mathrm{vib}}=R\\frac{x^2e^x}{(e^x-1)^2},\\quad x=\\Theta_v/T"
           ],
           [
             "p",
@@ -2624,7 +2624,7 @@
         "items": [
           [
             "m",
-            "f_{\\rm beam}(v)\\propto vf(v)\\propto v^3e^{-av^2}"
+            "f_{\\mathrm{beam}}(v)\\propto vf(v)\\propto v^3e^{-av^2}"
           ],
           [
             "m",
@@ -2632,11 +2632,11 @@
           ],
           [
             "m",
-            "v_{p,\\rm beam}=\\sqrt{3k_BT/m}"
+            "v_{p,\\mathrm{beam}}=\\sqrt{3k_BT/m}"
           ],
           [
             "m",
-            "\\langle E\\rangle_{\\rm beam}=2k_BT"
+            "\\langle E\\rangle_{\\mathrm{beam}}=2k_BT"
           ],
           [
             "p",
@@ -2661,7 +2661,7 @@
           ],
           [
             "m",
-            "dT/T=\\frac13dN/N"
+            "dT/T=\\frac{1}{3}dN/N"
           ],
           [
             "m",
@@ -2686,7 +2686,7 @@
         "items": [
           [
             "m",
-            "\\Lambda=\\frac{mv_{\\rm esc}^2}{2k_BT}=\\frac{3v_{\\rm esc}^2}{2v_{\\rm rms}^2}"
+            "\\Lambda=\\frac{mv_{\\mathrm{esc}}^2}{2k_BT}=\\frac{3v_{\\mathrm{esc}}^2}{2v_{\\mathrm{rms}}^2}"
           ],
           [
             "m",
@@ -2813,7 +2813,7 @@
         "items": [
           [
             "m",
-            "\\Gamma_{\\rm env}>\\Gamma_d:\\ \\mathrm{dry\\ instability}"
+            "\\Gamma_{\\mathrm{env}}>\\Gamma_d:\\ \\mathrm{dry\\ instability}"
           ],
           [
             "p",
@@ -2911,7 +2911,7 @@
         "items": [
           [
             "m",
-            "\\int_{v_\\ell}^{v_g}(P-P_{\\rm sat})\\,dv=0"
+            "\\int_{v_\\ell}^{v_g}(P-P_{\\mathrm{sat}})\\,dv=0"
           ],
           [
             "m",
@@ -2984,7 +2984,7 @@
           ],
           [
             "m",
-            "h=u_{\\rm int}+Pv"
+            "h=u_{\\mathrm{int}}+Pv"
           ],
           [
             "p",
@@ -3038,7 +3038,7 @@
           ],
           [
             "m",
-            "T_{i,\\rm upper}\\simeq2a/(Rb)"
+            "T_{i,\\mathrm{upper}}\\simeq2a/(Rb)"
           ],
           [
             "p",
@@ -3059,7 +3059,7 @@
         "items": [
           [
             "m",
-            "\\Delta s_{\\rm ideal,throttle}=-R\\ln(P_2/P_1)>0"
+            "\\Delta s_{\\mathrm{ideal},throttle}=-R\\ln(P_2/P_1)>0"
           ],
           [
             "p",
@@ -3095,15 +3095,15 @@
         "items": [
           [
             "m",
-            "U=a_{\\rm rad}T^4V,\\quad P=a_{\\rm rad}T^4/3"
+            "U=a_{\\mathrm{rad}}T^4V,\\quad P=a_{\\mathrm{rad}}T^4/3"
           ],
           [
             "m",
-            "a_{\\rm rad}=4\\sigma/c"
+            "a_{\\mathrm{rad}}=4\\sigma/c"
           ],
           [
             "m",
-            "S=\\frac43a_{\\rm rad}T^3V"
+            "S=\\frac43a_{\\mathrm{rad}}T^3V"
           ],
           [
             "p",
@@ -3128,7 +3128,7 @@
           ],
           [
             "m",
-            "4a_{\\rm rad}T^3V\\,dT=-\\frac43a_{\\rm rad}T^4dV"
+            "4a_{\\mathrm{rad}}T^3V\\,dT=-\\frac43a_{\\mathrm{rad}}T^4dV"
           ],
           [
             "m",
@@ -3222,11 +3222,11 @@
         "items": [
           [
             "m",
-            "W_{\\rm useful}=W_{\\rm total}-P_0\\Delta V"
+            "W_{\\mathrm{useful}}=W_{\\mathrm{total}}-P_0\\Delta V"
           ],
           [
             "m",
-            "W_{\\rm lost}=T_0S_{\\rm gen}"
+            "W_{\\mathrm{lost}}=T_0S_{\\mathrm{gen}}"
           ],
           [
             "p",

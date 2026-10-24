@@ -8,7 +8,7 @@
   "cards": [
     {
       "card": "The centre of mass: the mass-weighted average position",
-      "used_px": 868,
+      "used_px": 860,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -29,7 +29,7 @@
     },
     {
       "card": "Physical meaning and symmetry shortcuts (cont.)",
-      "used_px": 632,
+      "used_px": 630,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -92,28 +92,28 @@
     },
     {
       "card": "Composite bodies: cut, place, average (cont.)",
-      "used_px": 776,
+      "used_px": 766,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Composite bodies: cut, place, average (cont.)",
-      "used_px": 697,
+      "used_px": 685,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drills: holes, plates, and three-mass systems (cont.)",
-      "used_px": 792,
+      "used_px": 782,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Shift the origin: the invariance habit",
-      "used_px": 713,
+      "used_px": 709,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -169,7 +169,7 @@
     },
     {
       "card": "COM motion drills (cont.)",
-      "used_px": 616,
+      "used_px": 610,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -288,49 +288,49 @@
     },
     {
       "card": "The pair that prices every 1-D collision (cont.)",
-      "used_px": 856,
+      "used_px": 854,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The pair that prices every 1-D collision (cont.)",
-      "used_px": 555,
+      "used_px": 553,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked with the invariants: the P32 set (source)",
-      "used_px": 508,
+      "used_px": 502,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked with the invariants: the P32 set (source) (cont.)",
-      "used_px": 445,
+      "used_px": 437,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked with the invariants: the P32 set (source) (cont.)",
-      "used_px": 575,
+      "used_px": 571,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drill set (each: compute, then audit)",
-      "used_px": 592,
+      "used_px": 584,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drill set (each: compute, then audit) (cont.)",
-      "used_px": 678,
+      "used_px": 664,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -400,28 +400,28 @@
     },
     {
       "card": "K_loss = 1/2 mu (u1-u2)^2 (1-e^2): the complete energy bill (cont.",
-      "used_px": 750,
+      "used_px": 738,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Energy ledgers in two-stage problems",
-      "used_px": 832,
+      "used_px": 822,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Energy ledgers in two-stage problems (cont.)",
-      "used_px": 787,
+      "used_px": 776,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The reduced mass itself (cont.)",
-      "used_px": 802,
+      "used_px": 787,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -456,42 +456,42 @@
     },
     {
       "card": "Numbers: J_d, J_r and the peak-force language",
-      "used_px": 537,
+      "used_px": 528,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Numbers: J_d, J_r and the peak-force language (cont.)",
-      "used_px": 657,
+      "used_px": 653,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Numbers: J_d, J_r and the peak-force language (cont.)",
-      "used_px": 743,
+      "used_px": 732,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Where the phase picture is used",
-      "used_px": 923,
+      "used_px": 918,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Where the phase picture is used (cont.)",
-      "used_px": 784,
+      "used_px": 767,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Micro-set: impulse-decomposition drills (cont.)",
-      "used_px": 604,
+      "used_px": 594,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -505,7 +505,7 @@
     },
     {
       "card": "Oblique collisions: decompose on the line of impact (cont.)",
-      "used_px": 906,
+      "used_px": 902,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -519,28 +519,28 @@
     },
     {
       "card": "Worked template: at-rest target, impact parameter set by geomet.",
-      "used_px": 588,
+      "used_px": 578,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked template: at-rest target, impact parameter set by geometr.",
-      "used_px": 583,
+      "used_px": 573,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked template: at-rest target, impact parameter set by geometr.",
-      "used_px": 587,
+      "used_px": 579,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked template: at-rest target, impact parameter set by geometr.",
-      "used_px": 823,
+      "used_px": 814,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -554,42 +554,42 @@
     },
     {
       "card": "Fixed walls and inclines as 2-D collisions (cont.)",
-      "used_px": 761,
+      "used_px": 754,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "2-D collision drills (cont.)",
-      "used_px": 887,
+      "used_px": 878,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Equal masses, elastic, target at rest: the velocities separate at 90 d.",
-      "used_px": 832,
+      "used_px": 826,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Equal masses, elastic, target at rest: the velocities separate at 90 d.",
-      "used_px": 688,
+      "used_px": 680,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Equal masses, elastic, target at rest: the velocities separate at 90 d.",
-      "used_px": 799,
+      "used_px": 791,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Equal masses, elastic, target at rest: the velocities separate at 90 d.",
-      "used_px": 778,
+      "used_px": 770,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -603,7 +603,7 @@
     },
     {
       "card": "Reading exam questions on the 90-degree rule (cont.)",
-      "used_px": 907,
+      "used_px": 897,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -617,7 +617,7 @@
     },
     {
       "card": "Drills on the 90-degree family",
-      "used_px": 793,
+      "used_px": 779,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -631,126 +631,126 @@
     },
     {
       "card": "The two-stage protocol: momentum first, energy second (cont.)",
-      "used_px": 703,
+      "used_px": 697,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The two-stage protocol: momentum first, energy second (cont.)",
-      "used_px": 711,
+      "used_px": 697,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The two-stage protocol: momentum first, energy second (cont.)",
-      "used_px": 505,
+      "used_px": 503,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The two-stage protocol: momentum first, energy second (cont.)",
+      "used_px": 743,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bullet-through-block: two final velocities, one momentum law (con.",
+      "used_px": 607,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bullet-through-block: two final velocities, one momentum law (con.",
       "used_px": 747,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
-      "card": "Bullet-through-block: two final velocities, one momentum law (con.",
-      "used_px": 613,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Bullet-through-block: two final velocities, one momentum law (con.",
-      "used_px": 751,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
       "card": "Energy fraction in the ballistic pendulum (the examiner favourite)",
-      "used_px": 914,
+      "used_px": 904,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Energy fraction in the ballistic pendulum (the examiner favourite).",
-      "used_px": 594,
+      "used_px": 582,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Two-stage drills",
-      "used_px": 876,
+      "used_px": 865,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Two-stage drills (cont.)",
-      "used_px": 669,
+      "used_px": 661,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Collision then spring: which compression is larger, sticking or elas.",
-      "used_px": 536,
+      "used_px": 530,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Collision then spring: which compression is larger, sticking or elas.",
-      "used_px": 506,
+      "used_px": 502,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Collision then spring: which compression is larger, sticking or elas.",
-      "used_px": 739,
+      "used_px": 727,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Collision then spring: which compression is larger, sticking or elas.",
-      "used_px": 676,
+      "used_px": 666,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Spring released between two blocks (source Q18, corrected)",
-      "used_px": 705,
+      "used_px": 695,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Spring released between two blocks (source Q18, corrected) (cont.)",
-      "used_px": 636,
+      "used_px": 628,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Spring released between two blocks (source Q18, corrected) (cont.)",
-      "used_px": 675,
+      "used_px": 665,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Spring-compression variants that appear in exams",
-      "used_px": 587,
+      "used_px": 585,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -764,140 +764,140 @@
     },
     {
       "card": "Spring-compression variants that appear in exams (cont.)",
-      "used_px": 688,
+      "used_px": 676,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Post-collision energy drills (cont.)",
-      "used_px": 798,
+      "used_px": 790,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM frame: where collisions become trivial",
-      "used_px": 703,
+      "used_px": 699,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM frame: where collisions become trivial (cont.)",
-      "used_px": 704,
+      "used_px": 700,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM frame: where collisions become trivial (cont.)",
-      "used_px": 660,
+      "used_px": 648,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM frame: where collisions become trivial (cont.)",
-      "used_px": 734,
+      "used_px": 726,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM-frame recipe for 2-D scattering",
-      "used_px": 545,
+      "used_px": 539,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM-frame recipe for 2-D scattering (cont.)",
-      "used_px": 600,
+      "used_px": 592,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The CM-frame recipe for 2-D scattering (cont.)",
-      "used_px": 533,
+      "used_px": 527,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "CM language for explosions and multi-body problems",
-      "used_px": 939,
+      "used_px": 925,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "CM language for explosions and multi-body problems (cont.)",
-      "used_px": 639,
+      "used_px": 637,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "CM language for explosions and multi-body problems (cont.)",
-      "used_px": 716,
+      "used_px": 702,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "CM-frame drills (cont.)",
-      "used_px": 609,
+      "used_px": 599,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Picking mass up and throwing it down: F = m_dot v",
-      "used_px": 703,
+      "used_px": 699,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Picking mass up and throwing it down: F = m_dot v (cont.)",
-      "used_px": 542,
+      "used_px": 538,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Picking mass up and throwing it down: F = m_dot v (cont.)",
-      "used_px": 457,
+      "used_px": 455,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Picking mass up and throwing it down: F = m_dot v (cont.)",
-      "used_px": 784,
+      "used_px": 782,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sand thrown off: the full belt audit",
-      "used_px": 633,
+      "used_px": 625,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sand thrown off: the full belt audit (cont.)",
-      "used_px": 888,
+      "used_px": 880,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sand thrown off: the full belt audit (cont.)",
-      "used_px": 815,
+      "used_px": 811,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -911,76 +911,62 @@
     },
     {
       "card": "Drills: flux and belt",
-      "used_px": 744,
+      "used_px": 742,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drills: flux and belt (cont.)",
-      "used_px": 697,
+      "used_px": 693,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Delta v = v_e ln(m0/m_f): the rocket equation (cont.)",
-      "used_px": 815,
+      "used_px": 809,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Delta v = v_e ln(m0/m_f): the rocket equation (cont.)",
-      "used_px": 959,
+      "used_px": 949,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Delta v = v_e ln(m0/m_f): the rocket equation (cont.)",
-      "used_px": 856,
+      "used_px": 844,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Thrust and power; the burn-rate freedom (cont.)",
-      "used_px": 883,
+      "used_px": 875,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The variable-mass ledger for exams",
-      "used_px": 800,
+      "used_px": 798,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The variable-mass ledger for exams (cont.)",
-      "used_px": 576,
+      "used_px": 568,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Rocket drills",
-      "used_px": 747,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
-      "used_px": 713,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
       "used_px": 737,
       "available_px": 1040,
       "body_pt": 11.52,
@@ -988,189 +974,196 @@
     },
     {
       "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
-      "used_px": 676,
+      "used_px": 705,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
-      "used_px": 579,
+      "used_px": 729,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
-      "used_px": 647,
+      "used_px": 668,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
+      "used_px": 573,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Chains and jets: momentum flux is m_dot v on top of the carried w.",
+      "used_px": 639,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain landing on a scale (preview of OLY-01) (cont.)",
-      "used_px": 654,
+      "used_px": 648,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain-lift and jet drills",
-      "used_px": 679,
+      "used_px": 670,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain-lift and jet drills (cont.)",
-      "used_px": 665,
+      "used_px": 657,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Which flux problem is which",
-      "used_px": 586,
+      "used_px": 582,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Which flux problem is which (cont.)",
-      "used_px": 511,
+      "used_px": 509,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Man on a boat: the COM stays fixed, the parts slide apart",
-      "used_px": 700,
+      "used_px": 694,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Man on a boat: the COM stays fixed, the parts slide apart (cont.)",
-      "used_px": 720,
+      "used_px": 710,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Man on a boat: the COM stays fixed, the parts slide apart (cont.)",
-      "used_px": 718,
+      "used_px": 714,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Block on a movable wedge - the same COM law in 2-D",
-      "used_px": 803,
+      "used_px": 800,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Block on a movable wedge - the same COM law in 2-D (cont.)",
-      "used_px": 841,
+      "used_px": 834,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Block on a movable wedge - the same COM law in 2-D (cont.)",
-      "used_px": 742,
+      "used_px": 738,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Internal-motion drills (cont.)",
-      "used_px": 676,
+      "used_px": 668,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When the COM is NOT fixed: external horizontal forces",
-      "used_px": 461,
+      "used_px": 456,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When the COM is NOT fixed: external horizontal forces (cont.)",
-      "used_px": 595,
+      "used_px": 591,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When the COM is NOT fixed: external horizontal forces (cont.)",
-      "used_px": 795,
+      "used_px": 787,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bounce heights: e = sqrt(h2/h1) and the geometric ladder (cont.)",
-      "used_px": 945,
+      "used_px": 927,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bounce heights: e = sqrt(h2/h1) and the geometric ladder (cont.)",
-      "used_px": 892,
+      "used_px": 876,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Series sums and the energy ladder",
-      "used_px": 883,
+      "used_px": 870,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Series sums and the energy ladder (cont.)",
-      "used_px": 620,
+      "used_px": 613,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bounce drills",
-      "used_px": 499,
+      "used_px": 491,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bounce drills (cont.)",
-      "used_px": 589,
+      "used_px": 583,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bouncing-ball question types",
-      "used_px": 816,
+      "used_px": 810,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bouncing-ball question types (cont.)",
-      "used_px": 791,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Bouncing off a MOVING wall: the wall's speed enters the restitution.",
-      "used_px": 814,
+      "used_px": 779,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1184,98 +1177,105 @@
     },
     {
       "card": "Bouncing off a MOVING wall: the wall's speed enters the restitution.",
-      "used_px": 732,
+      "used_px": 802,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Bouncing off a MOVING wall: the wall's speed enters the restitution.",
+      "used_px": 724,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Moving platform (the energy-pump machine) (cont.)",
-      "used_px": 933,
+      "used_px": 924,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Wall-collision drills",
-      "used_px": 828,
+      "used_px": 820,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Wall-collision drills (cont.)",
-      "used_px": 783,
+      "used_px": 775,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Bouncing between two walls: compose wall frames (cont.)",
-      "used_px": 639,
+      "used_px": 635,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The ten examiner traps, sharpened",
-      "used_px": 681,
+      "used_px": 680,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The ten examiner traps, sharpened (cont.)",
-      "used_px": 806,
+      "used_px": 803,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Trap 11 (source C9, corrected): equal bounce angles are NOT free",
-      "used_px": 916,
+      "used_px": 914,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Trap 11 (source C9, corrected): equal bounce angles are NOT free (.",
-      "used_px": 755,
+      "used_px": 747,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Trap 12 (source P5 ambiguity): velocity exchange is 1-D only",
-      "used_px": 634,
+      "used_px": 630,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Trap 12 (source P5 ambiguity): velocity exchange is 1-D only (cont.",
-      "used_px": 792,
+      "used_px": 788,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sign traps and arithmetic traps",
-      "used_px": 833,
+      "used_px": 821,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sign traps and arithmetic traps (cont.)",
-      "used_px": 693,
+      "used_px": 691,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Triage: route by keyword before touching a number (cont.)",
-      "used_px": 726,
+      "used_px": 722,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1289,21 +1289,21 @@
     },
     {
       "card": "Validity map: when each formula breaks",
-      "used_px": 825,
+      "used_px": 816,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Validity map: when each formula breaks (cont.)",
-      "used_px": 524,
+      "used_px": 520,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Pre-submission audit (ten points)",
-      "used_px": 681,
+      "used_px": 679,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1331,28 +1331,28 @@
     },
     {
       "card": "Mixed-constraint problems: collision plus string, rod or hinge (con.",
-      "used_px": 740,
+      "used_px": 734,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The boxed ledger: six formulas that run the chapter (cont.)",
-      "used_px": 811,
+      "used_px": 801,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Limits checklist (each formula, one limit)",
-      "used_px": 850,
+      "used_px": 843,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Limits checklist (each formula, one limit) (cont.)",
-      "used_px": 739,
+      "used_px": 737,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1366,7 +1366,7 @@
     },
     {
       "card": "Rebuild-the-formula drills (60 seconds each)",
-      "used_px": 544,
+      "used_px": 534,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1408,140 +1408,140 @@
     },
     {
       "card": "Variant geometry: the strand lifted from a pile and released",
-      "used_px": 711,
+      "used_px": 705,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Variant geometry: the strand lifted from a pile and released (cont.)",
-      "used_px": 756,
+      "used_px": 752,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why the naive answer is 2mg (and why it fails)",
-      "used_px": 819,
+      "used_px": 807,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why the naive answer is 2mg (and why it fails) (cont.)",
-      "used_px": 860,
+      "used_px": 852,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain-flux problem set",
-      "used_px": 892,
+      "used_px": 884,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain-flux problem set (cont.)",
-      "used_px": 652,
+      "used_px": 638,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Scattering limits: what mass ratios do to the exit angles (cont.)",
-      "used_px": 905,
+      "used_px": 889,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Scattering limits: what mass ratios do to the exit angles (cont.)",
-      "used_px": 648,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Scattering limits: what mass ratios do to the exit angles (cont.)",
-      "used_px": 735,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Worked: the maximum-deflection geometry",
-      "used_px": 855,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Worked: the maximum-deflection geometry (cont.)",
-      "used_px": 589,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Worked: the maximum-deflection geometry (cont.)",
-      "used_px": 519,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Olympiad problem patterns (source OL2 family)",
-      "used_px": 580,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Olympiad problem patterns (source OL2 family) (cont.)",
       "used_px": 636,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
+      "card": "Scattering limits: what mass ratios do to the exit angles (cont.)",
+      "used_px": 720,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked: the maximum-deflection geometry",
+      "used_px": 841,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked: the maximum-deflection geometry (cont.)",
+      "used_px": 577,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Worked: the maximum-deflection geometry (cont.)",
+      "used_px": 513,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Olympiad problem patterns (source OL2 family)",
+      "used_px": 572,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Olympiad problem patterns (source OL2 family) (cont.)",
+      "used_px": 630,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
       "card": "Drills on the circle locus",
-      "used_px": 404,
+      "used_px": 398,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drills on the circle locus (cont.)",
-      "used_px": 445,
+      "used_px": 438,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Drills on the circle locus (cont.)",
-      "used_px": 711,
+      "used_px": 707,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When a finite force acts for a blink: the impulse approximation (co.",
-      "used_px": 922,
+      "used_px": 916,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When a finite force acts for a blink: the impulse approximation (co.",
-      "used_px": 911,
+      "used_px": 899,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When a finite force acts for a blink: the impulse approximation (co.",
-      "used_px": 847,
+      "used_px": 845,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1576,224 +1576,224 @@
     },
     {
       "card": "Ball on a vertically moving platform: the energy-pump machine",
-      "used_px": 708,
+      "used_px": 702,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Ball on a vertically moving platform: the energy-pump machine (c.",
-      "used_px": 539,
+      "used_px": 535,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Ball on a vertically moving platform: the energy-pump machine (c.",
-      "used_px": 688,
+      "used_px": 686,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Ball on a vertically moving platform: the energy-pump machine (c.",
-      "used_px": 564,
+      "used_px": 562,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Ball on a vertically moving platform: the energy-pump machine (c.",
-      "used_px": 826,
+      "used_px": 816,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked: ball dropped in a lift rising at constant speed U (cont.)",
-      "used_px": 800,
+      "used_px": 796,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Platform-machine drills",
-      "used_px": 900,
+      "used_px": 890,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Platform-machine drills (cont.)",
-      "used_px": 795,
+      "used_px": 783,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Resonance locking on an oscillating platform (cont.)",
-      "used_px": 634,
+      "used_px": 628,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain over a smooth peg: the full solution, including the moment it.",
-      "used_px": 867,
+      "used_px": 857,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain over a smooth peg: the full solution, including the moment it.",
-      "used_px": 704,
+      "used_px": 700,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain over a smooth peg: the full solution, including the moment it.",
-      "used_px": 819,
+      "used_px": 817,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain over a smooth peg: the full solution, including the moment it.",
-      "used_px": 620,
+      "used_px": 616,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Chain over a smooth peg: the full solution, including the moment it.",
-      "used_px": 522,
+      "used_px": 512,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked numbers and the released-from-x0 variant",
-      "used_px": 768,
+      "used_px": 754,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked numbers and the released-from-x0 variant (cont.)",
-      "used_px": 537,
+      "used_px": 531,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked numbers and the released-from-x0 variant (cont.)",
-      "used_px": 473,
+      "used_px": 471,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Worked numbers and the released-from-x0 variant (cont.)",
-      "used_px": 563,
+      "used_px": 555,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Peg-problem toolkit and drills (cont.)",
-      "used_px": 476,
+      "used_px": 467,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Peg-problem toolkit and drills (cont.)",
-      "used_px": 645,
+      "used_px": 641,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Peg-problem toolkit and drills (cont.)",
-      "used_px": 693,
+      "used_px": 687,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Tension along the moving chain (cont.)",
-      "used_px": 558,
+      "used_px": 548,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why rockets have stages: drop the dead metal",
-      "used_px": 707,
+      "used_px": 701,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why rockets have stages: drop the dead metal (cont.)",
-      "used_px": 877,
+      "used_px": 869,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why rockets have stages: drop the dead metal (cont.)",
-      "used_px": 400,
+      "used_px": 398,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Why rockets have stages: drop the dead metal (cont.)",
-      "used_px": 620,
+      "used_px": 616,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Optimal split and the multistage ladder",
-      "used_px": 514,
+      "used_px": 512,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Optimal split and the multistage ladder (cont.)",
-      "used_px": 717,
+      "used_px": 713,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Optimal split and the multistage ladder (cont.)",
-      "used_px": 715,
+      "used_px": 711,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Staging drills (cont.)",
-      "used_px": 678,
+      "used_px": 675,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Inverse staging: sizing the rocket for a mission",
-      "used_px": 760,
+      "used_px": 756,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Inverse staging: sizing the rocket for a mission (cont.)",
-      "used_px": 723,
+      "used_px": 712,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
@@ -1828,280 +1828,280 @@
     },
     {
       "card": "Jet drills",
-      "used_px": 539,
+      "used_px": 534,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Jet drills (cont.)",
-      "used_px": 618,
+      "used_px": 608,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Efficiency curve of a turbine stage",
-      "used_px": 724,
+      "used_px": 708,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Efficiency curve of a turbine stage (cont.)",
-      "used_px": 701,
+      "used_px": 697,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Folded chain released over a smooth edge: v = y sqrt(2g/L) (cont.)",
-      "used_px": 692,
+      "used_px": 684,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Folded chain released over a smooth edge: v = y sqrt(2g/L) (cont.)",
-      "used_px": 658,
+      "used_px": 652,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Folded chain released over a smooth edge: v = y sqrt(2g/L) (cont.)",
-      "used_px": 786,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Folded chain released over a smooth edge: v = y sqrt(2g/L) (cont.)",
-      "used_px": 897,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Variant geometries and the ambiguity guard (cont.)",
-      "used_px": 948,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Fold drills (cont.)",
-      "used_px": 653,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Fold as a variable-mass Atwood",
-      "used_px": 769,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Fold as a variable-mass Atwood (cont.)",
-      "used_px": 718,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
-      "used_px": 747,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
-      "used_px": 785,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
-      "used_px": 612,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The two-frame argument in one paragraph (cont.)",
-      "used_px": 621,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The two-frame argument in one paragraph (cont.)",
-      "used_px": 763,
-      "available_px": 1040,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The two-frame argument in one paragraph (cont.)",
       "used_px": 778,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
+      "card": "Folded chain released over a smooth edge: v = y sqrt(2g/L) (cont.)",
+      "used_px": 889,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Variant geometries and the ambiguity guard (cont.)",
+      "used_px": 934,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fold drills (cont.)",
+      "used_px": 645,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fold as a variable-mass Atwood",
+      "used_px": 757,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Fold as a variable-mass Atwood (cont.)",
+      "used_px": 712,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
+      "used_px": 737,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
+      "used_px": 781,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "Why momentum must be gamma m v (source OL5) (cont.)",
+      "used_px": 608,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The two-frame argument in one paragraph (cont.)",
+      "used_px": 613,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The two-frame argument in one paragraph (cont.)",
+      "used_px": 757,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
+      "card": "The two-frame argument in one paragraph (cont.)",
+      "used_px": 770,
+      "available_px": 1040,
+      "body_pt": 11.52,
+      "explanation_pt": 11.04
+    },
+    {
       "card": "What to carry back into classical mechanics (cont.)",
-      "used_px": 651,
+      "used_px": 647,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Gamma drills",
-      "used_px": 688,
+      "used_px": 675,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Gamma drills (cont.)",
-      "used_px": 669,
+      "used_px": 660,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Cart under a hopper: the full variable-mass ledger",
-      "used_px": 733,
+      "used_px": 727,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Cart under a hopper: the full variable-mass ledger (cont.)",
-      "used_px": 485,
+      "used_px": 481,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Cart under a hopper: the full variable-mass ledger (cont.)",
-      "used_px": 759,
+      "used_px": 751,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sprinkler cart and jet recoil (the same ledger)",
-      "used_px": 514,
+      "used_px": 512,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Sprinkler cart and jet recoil (the same ledger) (cont.)",
-      "used_px": 569,
+      "used_px": 565,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Hopper drills",
-      "used_px": 648,
+      "used_px": 642,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Hopper drills (cont.)",
-      "used_px": 513,
+      "used_px": 509,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Explicit solutions of the loading-engine ODE",
-      "used_px": 549,
+      "used_px": 541,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Explicit solutions of the loading-engine ODE (cont.)",
-      "used_px": 614,
+      "used_px": 605,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When momentum needs calculus: the three integration patterns",
-      "used_px": 816,
+      "used_px": 806,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When momentum needs calculus: the three integration patterns (co.",
-      "used_px": 636,
+      "used_px": 626,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When momentum needs calculus: the three integration patterns (co.",
-      "used_px": 813,
+      "used_px": 805,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "When momentum needs calculus: the three integration patterns (co.",
-      "used_px": 717,
+      "used_px": 707,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The separable-equation toolkit for mechanics",
-      "used_px": 488,
+      "used_px": 480,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "The separable-equation toolkit for mechanics (cont.)",
-      "used_px": 528,
+      "used_px": 522,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Integration drills",
-      "used_px": 584,
+      "used_px": 576,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Integration drills (cont.)",
-      "used_px": 679,
+      "used_px": 667,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Integration drills (cont.)",
-      "used_px": 738,
+      "used_px": 726,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04
     },
     {
       "card": "Linearise around the fixed point: the exponential departure (cont.)",
-      "used_px": 696,
+      "used_px": 686,
       "available_px": 1040,
       "body_pt": 11.52,
       "explanation_pt": 11.04

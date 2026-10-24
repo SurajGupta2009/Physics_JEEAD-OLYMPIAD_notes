@@ -120,7 +120,7 @@
           ],
           [
             "m",
-            "B_\\phi(r)=\\frac{\\mu_0 I_c r}{2\\pi a^2}\\ (r\\le a), \\qquad B_\\phi(r)=\\frac{\\mu_0 I_c}{2\\pi r}\\ (r\\ge a)"
+            "B_\\phi(r)=\\frac{\\mu_0 I_c r}{2\\pi a^2}\\ (r\\leqslant a), \\qquad B_\\phi(r)=\\frac{\\mu_0 I_c}{2\\pi r}\\ (r\\geqslant a)"
           ],
           [
             "why",
@@ -381,7 +381,7 @@
           ],
           [
             "m",
-            "\\nabla\\cdot(\\varepsilon\\mathbf{E})=0 \\implies \\nabla\\cdot\\mathbf{E} = -\\frac{\\mathbf{E}\\cdot\\nabla\\varepsilon}{\\varepsilon} \\neq 0"
+            "\\nabla\\cdot(\\varepsilon\\mathbf{E})=0 \\Rightarrow \\nabla\\cdot\\mathbf{E} = -\\frac{\\mathbf{E}\\cdot\\nabla\\varepsilon}{\\varepsilon} \\neq 0"
           ],
           [
             "why",
@@ -417,7 +417,7 @@
           ],
           [
             "m",
-            "\\phi = k_x x + k_y y + k_z z \\mp \\omega t \\implies \\hat{\\mathbf{k}} = \\pm\\frac{(k_x, k_y, k_z)}{\\sqrt{k_x^2 + k_y^2 + k_z^2}}"
+            "\\phi = k_x x + k_y y + k_z z \\mp \\omega t \\Rightarrow \\hat{\\mathbf{k}} = \\pm\\frac{(k_x, k_y, k_z)}{\\sqrt{k_x^2 + k_y^2 + k_z^2}}"
           ],
           [
             "why",
@@ -657,7 +657,7 @@
           ],
           [
             "m",
-            "u_B = \\frac{(E/v)^2}{2\\mu} = \\frac{\\mu\\varepsilon E^2}{2\\mu} = \\frac{1}{2}\\varepsilon E^2 = u_E \\implies u = \\varepsilon E^2 = \\frac{B^2}{\\mu}"
+            "u_B = \\frac{(E/v)^2}{2\\mu} = \\frac{\\mu\\varepsilon E^2}{2\\mu} = \\frac{1}{2}\\varepsilon E^2 = u_E \\Rightarrow u = \\varepsilon E^2 = \\frac{B^2}{\\mu}"
           ],
           [
             "why",
@@ -876,7 +876,7 @@
           ],
           [
             "m",
-            "\\frac{2\\mathcal{P}_{\\mathrm{beam}}}{c} = m g \\implies \\mathcal{P}_{\\mathrm{beam}} = \\frac{1}{2} m g c"
+            "\\frac{2\\mathcal{P}_{\\mathrm{beam}}}{c} = m g \\Rightarrow \\mathcal{P}_{\\mathrm{beam}} = \\frac{1}{2} m g c"
           ],
           [
             "why",
@@ -1230,7 +1230,7 @@
           ],
           [
             "m",
-            "\\mathbf{S}(a) = -\\frac{V I}{2\\pi a \\ell}\\,\\hat{\\mathbf{r}} \\implies \\mathcal{P}_{\\mathrm{in}} = |\\mathbf{S}(a)|(2\\pi a \\ell) = V I = I^2 R"
+            "\\mathbf{S}(a) = -\\frac{V I}{2\\pi a \\ell}\\,\\hat{\\mathbf{r}} \\Rightarrow \\mathcal{P}_{\\mathrm{in}} = |\\mathbf{S}(a)|(2\\pi a \\ell) = V I = I^2 R"
           ],
           [
             "why",
@@ -1569,7 +1569,7 @@
           ],
           [
             "m",
-            "P V^{4/3} = \\mathrm{const}, \\qquad T V^{1/3} = \\mathrm{const} \\quad (\\gamma_{\\mathrm{photon}} = \\tfrac{4}{3})"
+            "P V^{4/3} = \\mathrm{const}, \\qquad T V^{1/3} = \\mathrm{const} \\quad (\\gamma_{\\mathrm{photon}} = \\frac{4}{3})"
           ],
           [
             "p",

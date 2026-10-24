@@ -65,7 +65,7 @@
         "items": [
           [
             "m",
-            "\\sigma_{\\rm working}=\\frac{\\sigma_{\\rm yield}}{n},\\quad n\\approx1.5\\text{ to }3"
+            "\\sigma_{\\mathrm{working}}=\\frac{\\sigma_{\\mathrm{yield}}}{n},\\quad n\\approx1.5\\text{ to }3"
           ],
           [
             "p",
@@ -86,7 +86,7 @@
         "items": [
           [
             "m",
-            "\\varepsilon_{\\rm elastic}\\lesssim10^{-3}\\ \\text{for metals}"
+            "\\varepsilon_{\\mathrm{elastic}}\\lesssim10^{-3}\\ \\text{for metals}"
           ],
           [
             "m",
@@ -127,7 +127,7 @@
         "items": [
           [
             "m",
-            "\\nu=-\\frac{\\varepsilon_{\\rm lat}}{\\varepsilon_{\\rm long}}"
+            "\\nu=-\\frac{\\varepsilon_{\\mathrm{lat}}}{\\varepsilon_{\\mathrm{long}}}"
           ],
           [
             "m",
@@ -206,7 +206,7 @@
           ],
           [
             "m",
-            "\\nu\\to\\tfrac12:\\ B\\to\\infty;\\qquad \\nu\\to-1:\\ G\\to\\infty"
+            "\\nu\\to\\frac{1}{2}:\\ B\\to\\infty;\\qquad \\nu\\to-1:\\ G\\to\\infty"
           ],
           [
             "p",
@@ -268,7 +268,7 @@
         "items": [
           [
             "m",
-            "\\frac{1}{k_{\\rm tot}}=\\sum_i\\frac{1}{k_i}"
+            "\\frac{1}{k_{\\mathrm{tot}}}=\\sum_i\\frac{1}{k_i}"
           ],
           [
             "m",
@@ -293,7 +293,7 @@
         "items": [
           [
             "m",
-            "k_{\\rm tot}=\\sum_i k_i,\\qquad \\frac{F_1}{F_2}=\\frac{k_1}{k_2}"
+            "k_{\\mathrm{tot}}=\\sum_i k_i,\\qquad \\frac{F_1}{F_2}=\\frac{k_1}{k_2}"
           ],
           [
             "m",
@@ -359,11 +359,11 @@
         "items": [
           [
             "m",
-            "\\Delta L_{\\rm free}=\\alpha L\\Delta T"
+            "\\Delta L_{\\mathrm{free}}=\\alpha L\\Delta T"
           ],
           [
             "m",
-            "\\sigma_{\\rm th}=Y\\alpha\\Delta T,\\qquad F=Y\\alpha\\Delta T\\,A"
+            "\\sigma_{\\mathrm{th}}=Y\\alpha\\Delta T,\\qquad F=Y\\alpha\\Delta T\\,A"
           ],
           [
             "p",
@@ -475,11 +475,11 @@
         "items": [
           [
             "m",
-            "U=\\tfrac12F\\Delta L=\\tfrac12k\\Delta L^2"
+            "U=\\frac{1}{2}F\\Delta L=\\frac{1}{2}k\\Delta L^2"
           ],
           [
             "m",
-            "u=\\tfrac12\\sigma\\varepsilon=\\frac{\\sigma^2}{2Y}=\\frac{Y\\varepsilon^2}{2}"
+            "u=\\frac{1}{2}\\sigma\\varepsilon=\\frac{\\sigma^2}{2Y}=\\frac{Y\\varepsilon^2}{2}"
           ],
           [
             "p",
@@ -500,11 +500,11 @@
         "items": [
           [
             "m",
-            "mg\\Delta=\\tfrac12k\\Delta^2\\ \\Rightarrow\\ \\Delta=\\frac{2mg}{k}=2\\Delta_{\\rm st}"
+            "mg\\Delta=\\frac{1}{2}k\\Delta^2\\ \\Rightarrow\\ \\Delta=\\frac{2mg}{k}=2\\Delta_{\\mathrm{st}}"
           ],
           [
             "m",
-            "\\sigma_{\\rm peak}=2\\sigma_{\\rm st}"
+            "\\sigma_{\\mathrm{peak}}=2\\sigma_{\\mathrm{st}}"
           ],
           [
             "p",
@@ -525,11 +525,11 @@
         "items": [
           [
             "m",
-            "mg(h+\\Delta)=\\tfrac12k\\Delta^2"
+            "mg(h+\\Delta)=\\frac{1}{2}k\\Delta^2"
           ],
           [
             "m",
-            "\\Delta=\\Delta_{\\rm st}\\left(1+\\sqrt{1+\\frac{2h}{\\Delta_{\\rm st}}}\\right),\\qquad F_{\\max}\\approx\\sqrt{2hmgk}"
+            "\\Delta=\\Delta_{\\mathrm{st}}\\left(1+\\sqrt{1+\\frac{2h}{\\Delta_{\\mathrm{st}}}}\\right),\\qquad F_{\\max}\\approx\\sqrt{2hmgk}"
           ],
           [
             "p",
@@ -674,7 +674,7 @@
           ],
           [
             "m",
-            "\\delta_{\\rm tip}=\\frac{FL^3}{3YI},\\qquad I_{\\rm rect}=\\frac{bh^3}{12}"
+            "\\delta_{\\mathrm{tip}}=\\frac{FL^3}{3YI},\\qquad I_{\\mathrm{rect}}=\\frac{bh^3}{12}"
           ],
           [
             "p",
@@ -711,7 +711,7 @@
         "items": [
           [
             "m",
-            "U_{\\rm rec}=\\tfrac12\\sigma\\varepsilon,\\qquad U_{\\rm lost}=\\oint\\sigma\\,d\\varepsilon"
+            "U_{\\mathrm{rec}}=\\frac{1}{2}\\sigma\\varepsilon,\\qquad U_{\\mathrm{lost}}=\\oint\\sigma\\,d\\varepsilon"
           ],
           [
             "m",
@@ -765,7 +765,7 @@
           ],
           [
             "m",
-            "P_{\\rm fail}=\\min(P_{cr},P_y)"
+            "P_{\\mathrm{fail}}=\\min(P_{cr},P_y)"
           ],
           [
             "p",
@@ -786,7 +786,7 @@
         "items": [
           [
             "m",
-            "n=\\frac{\\sigma_{\\rm yield}}{\\sigma_{\\rm working}}\\ \\text{or}\\ \\frac{P_{\\rm fail}}{P_{\\rm working}}"
+            "n=\\frac{\\sigma_{\\mathrm{yield}}}{\\sigma_{\\mathrm{working}}}\\ \\text{or}\\ \\frac{P_{\\mathrm{fail}}}{P_{\\mathrm{working}}}"
           ],
           [
             "m",
@@ -848,11 +848,11 @@
         "items": [
           [
             "m",
-            "\\text{self-weight: }\\tfrac12mgL/AY"
+            "\\text{self-weight: }\\frac{1}{2}mgL/AY"
           ],
           [
             "m",
-            "\\text{sudden load: }2\\Delta_{\\rm st}"
+            "\\text{sudden load: }2\\Delta_{\\mathrm{st}}"
           ],
           [
             "m",
@@ -881,7 +881,7 @@
         "items": [
           [
             "m",
-            "Y_{\\rm steel}=2.0\\times10^{11}\\ \\mathrm{Pa},\\quad G_{\\rm steel}=8.0\\times10^{10}\\ \\mathrm{Pa}"
+            "Y_{\\mathrm{steel}}=2.0\\times10^{11}\\ \\mathrm{Pa},\\quad G_{\\mathrm{steel}}=8.0\\times10^{10}\\ \\mathrm{Pa}"
           ],
           [
             "m",
@@ -889,7 +889,7 @@
           ],
           [
             "m",
-            "B_{\\rm water}=2.2\\times10^{9}\\ \\mathrm{Pa},\\quad \\rho_{\\rm steel}=7800\\ \\mathrm{kg\\,m^{-3}}"
+            "B_{\\mathrm{water}}=2.2\\times10^{9}\\ \\mathrm{Pa},\\quad \\rho_{\\mathrm{steel}}=7800\\ \\mathrm{kg\\,m^{-3}}"
           ],
           [
             "p",
@@ -1005,7 +1005,7 @@
           ],
           [
             "m",
-            "\\omega_{\\rm vib}=\\sqrt{k_a/m}\\sim10^{13}\\ \\mathrm{s^{-1}}"
+            "\\omega_{\\mathrm{vib}}=\\sqrt{k_a/m}\\sim10^{13}\\ \\mathrm{s^{-1}}"
           ],
           [
             "p",
@@ -1030,7 +1030,7 @@
           ],
           [
             "m",
-            "B_{\\rm steel}\\approx1.6\\times10^{11}\\ \\mathrm{Pa}\\ \\ (Y=200\\ \\mathrm{GPa},\\ \\nu=0.29)"
+            "B_{\\mathrm{steel}}\\approx1.6\\times10^{11}\\ \\mathrm{Pa}\\ \\ (Y=200\\ \\mathrm{GPa},\\ \\nu=0.29)"
           ],
           [
             "p",
@@ -1067,7 +1067,7 @@
         "items": [
           [
             "m",
-            "U=\\tfrac12ks^2+\\tfrac16\\gamma s^3,\\qquad \\gamma=U^{\\prime\\prime\\prime}(r_0)<0"
+            "U=\\frac{1}{2}ks^2+\\frac{1}{6}\\gamma s^3,\\qquad \\gamma=U^{\\prime\\prime\\prime}(r_0)<0"
           ],
           [
             "m",
@@ -1117,7 +1117,7 @@
         "items": [
           [
             "m",
-            "\\sigma_{\\rm th}=Y\\alpha\\Delta T,\\qquad \\Delta L_{\\rm free}=\\alpha L\\Delta T"
+            "\\sigma_{\\mathrm{th}}=Y\\alpha\\Delta T,\\qquad \\Delta L_{\\mathrm{free}}=\\alpha L\\Delta T"
           ],
           [
             "m",
@@ -1183,11 +1183,11 @@
         "items": [
           [
             "m",
-            "\\int_0^L\\tfrac12YA\\left(\\frac{du}{dx}\\right)^2dx=\\tfrac12k\\delta^2\\ \\ (u=\\delta x/L)"
+            "\\int_0^L\\frac{1}{2}YA\\left(\\frac{du}{dx}\\right)^2dx=\\frac{1}{2}k\\delta^2\\ \\ (u=\\delta x/L)"
           ],
           [
             "m",
-            "\\tfrac12k\\delta^2=Mg(h+\\delta)+\\tfrac12mg\\delta"
+            "\\frac{1}{2}k\\delta^2=Mg(h+\\delta)+\\frac{1}{2}mg\\delta"
           ],
           [
             "p",
@@ -1233,11 +1233,11 @@
         "items": [
           [
             "m",
-            "c=\\sqrt{Y/\\rho},\\qquad t_{\\rm transit}\\sim\\frac{L}{c}"
+            "c=\\sqrt{Y/\\rho},\\qquad t_{\\mathrm{transit}}\\sim\\frac{L}{c}"
           ],
           [
             "m",
-            "2\\ \\mathrm{m}\\ \\text{steel rod}:\\ t_{\\rm transit}\\approx0.4\\ \\mathrm{ms}"
+            "2\\ \\mathrm{m}\\ \\text{steel rod}:\\ t_{\\mathrm{transit}}\\approx0.4\\ \\mathrm{ms}"
           ],
           [
             "p",
@@ -1258,7 +1258,7 @@
         "items": [
           [
             "m",
-            "\\omega=\\sqrt{k/(M+m/3)},\\qquad \\delta(t)=\\delta_{\\rm eq}\\left(1-\\cos\\omega t\\right)"
+            "\\omega=\\sqrt{k/(M+m/3)},\\qquad \\delta(t)=\\delta_{\\mathrm{eq}}\\left(1-\\cos\\omega t\\right)"
           ],
           [
             "m",
@@ -1324,11 +1324,11 @@
         "items": [
           [
             "m",
-            "\\lambda_{\\rm steel}=\\frac{2.5\\times10^{8}}{7800\\times9.8}\\approx3.3\\ \\mathrm{km}"
+            "\\lambda_{\\mathrm{steel}}=\\frac{2.5\\times10^{8}}{7800\\times9.8}\\approx3.3\\ \\mathrm{km}"
           ],
           [
             "m",
-            "\\lambda_{\\rm wood}\\approx7\\ \\mathrm{km},\\quad \\lambda_{\\rm bone}\\approx10\\ \\mathrm{km}"
+            "\\lambda_{\\mathrm{wood}}\\approx7\\ \\mathrm{km},\\quad \\lambda_{\\mathrm{bone}}\\approx10\\ \\mathrm{km}"
           ],
           [
             "p",
@@ -1353,7 +1353,7 @@
           ],
           [
             "m",
-            "h_{\\rm hydraulic}\\sim100\\ \\mathrm{m}\\ \\ (\\text{cavitation and embolism})"
+            "h_{\\mathrm{hydraulic}}\\sim100\\ \\mathrm{m}\\ \\ (\\text{cavitation and embolism})"
           ],
           [
             "p",
@@ -1486,11 +1486,11 @@
         "items": [
           [
             "m",
-            "\\tau_{\\max}=\\frac{3}{2}\\frac{V}{A}\\ \\text{(rectangle)},\\qquad \\delta_{\\rm shear}\\sim\\frac{VL}{GA}"
+            "\\tau_{\\max}=\\frac{3}{2}\\frac{V}{A}\\ \\text{(rectangle)},\\qquad \\delta_{\\mathrm{shear}}\\sim\\frac{VL}{GA}"
           ],
           [
             "m",
-            "\\text{slender beam: }\\frac{\\delta_{\\rm shear}}{\\delta_{\\rm bend}}\\sim\\left(\\frac{h}{L}\\right)^2"
+            "\\text{slender beam: }\\frac{\\delta_{\\mathrm{shear}}}{\\delta_{\\mathrm{bend}}}\\sim\\left(\\frac{h}{L}\\right)^2"
           ],
           [
             "p",
@@ -1556,7 +1556,7 @@
           ],
           [
             "m",
-            "P_y=\\sigma_yA,\\qquad P_{\\rm fail}=\\min(P_{cr},P_y)"
+            "P_y=\\sigma_yA,\\qquad P_{\\mathrm{fail}}=\\min(P_{cr},P_y)"
           ],
           [
             "p",
@@ -1718,7 +1718,7 @@
         "items": [
           [
             "m",
-            "F=\\sigma_fA,\\qquad \\left.\\frac{\\sigma_f}{\\rho}\\right|_{\\rm silk}=7.7\\times10^{5}\\ \\mathrm{m^2s^{-2}}"
+            "F=\\sigma_fA,\\qquad \\left.\\frac{\\sigma_f}{\\rho}\\right|_{\\mathrm{silk}}=7.7\\times10^{5}\\ \\mathrm{m^2s^{-2}}"
           ],
           [
             "m",
@@ -1759,7 +1759,7 @@
         "items": [
           [
             "m",
-            "v_{\\rm rod}=\\sqrt{\\frac{Y}{\\rho}},\\qquad v_S=\\sqrt{\\frac{G}{\\rho}},\\qquad v_P=\\sqrt{\\frac{B+\\frac43G}{\\rho}}"
+            "v_{\\mathrm{rod}}=\\sqrt{\\frac{Y}{\\rho}},\\qquad v_S=\\sqrt{\\frac{G}{\\rho}},\\qquad v_P=\\sqrt{\\frac{B+\\frac43G}{\\rho}}"
           ],
           [
             "p",
@@ -1780,7 +1780,7 @@
         "items": [
           [
             "m",
-            "G=\\rho v_S^2,\\qquad B+\\tfrac43G=\\rho v_P^2"
+            "G=\\rho v_S^2,\\qquad B+\\frac43G=\\rho v_P^2"
           ],
           [
             "m",
@@ -1830,7 +1830,7 @@
         "items": [
           [
             "m",
-            "v_{\\rm rod}=\\sqrt{Y/\\rho}\\ \\text{is also the sound speed in a bar}"
+            "v_{\\mathrm{rod}}=\\sqrt{Y/\\rho}\\ \\text{is also the sound speed in a bar}"
           ],
           [
             "m",

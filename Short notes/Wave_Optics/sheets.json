@@ -46,7 +46,7 @@
           ],
           [
             "m",
-            "\\frac{\\sin i}{\\sin r} = \\frac{BC / AC}{AD / AC} = \\frac{v_1 \\Delta t}{v_2 \\Delta t} = \\frac{v_1}{v_2} = \\frac{n_2}{n_1} \\implies n_1\\sin i = n_2\\sin r"
+            "\\frac{\\sin i}{\\sin r} = \\frac{BC / AC}{AD / AC} = \\frac{v_1 \\Delta t}{v_2 \\Delta t} = \\frac{v_1}{v_2} = \\frac{n_2}{n_1} \\Rightarrow n_1\\sin i = n_2\\sin r"
           ],
           [
             "why",
@@ -235,7 +235,7 @@
           ],
           [
             "m",
-            "\\Delta x = \\sqrt{D^2 + (y + \\tfrac{d}{2})^2} - \\sqrt{D^2 + (y - \\tfrac{d}{2})^2} \\;\\approx\\; d\\sin\\theta \\;\\approx\\; \\frac{d\\,y}{D}"
+            "\\Delta x = \\sqrt{D^2 + (y + \\frac{d}{2})^2} - \\sqrt{D^2 + (y - \\frac{d}{2})^2} \\;\\approx\\; d\\sin\\theta \\;\\approx\\; \\frac{d\\,y}{D}"
           ],
           [
             "why",
@@ -260,7 +260,7 @@
           ],
           [
             "m",
-            "y_{\\mathrm{dark}} = \\left(n - \\tfrac{1}{2}\\right)\\frac{\\lambda D}{d}\\ (n=1,2,\\dots), \\qquad \\beta = \\frac{\\lambda D}{d}"
+            "y_{\\mathrm{dark}} = \\left(n - \\frac{1}{2}\\right)\\frac{\\lambda D}{d}\\ (n=1,2,\\dots), \\qquad \\beta = \\frac{\\lambda D}{d}"
           ],
           [
             "why",
@@ -359,7 +359,7 @@
           ],
           [
             "m",
-            "\\Delta x(\\theta) = d\\cos\\theta \\approx d\\left(1 - \\frac{r^2}{2 D^2}\\right) = m\\lambda \\implies r_p = D\\sqrt{\\frac{2 p\\lambda}{d}}"
+            "\\Delta x(\\theta) = d\\cos\\theta \\approx d\\left(1 - \\frac{r^2}{2 D^2}\\right) = m\\lambda \\Rightarrow r_p = D\\sqrt{\\frac{2 p\\lambda}{d}}"
           ],
           [
             "why",
@@ -487,7 +487,7 @@
           ],
           [
             "m",
-            "\\frac{I_1}{I_2} = \\frac{w_1}{w_2} \\implies \\frac{I_{\\max}}{I_{\\min}} = \\left(\\frac{\\sqrt{w_1} + \\sqrt{w_2}}{\\sqrt{w_1} - \\sqrt{w_2}}\\right)^{\\!2}"
+            "\\frac{I_1}{I_2} = \\frac{w_1}{w_2} \\Rightarrow \\frac{I_{\\max}}{I_{\\min}} = \\left(\\frac{\\sqrt{w_1} + \\sqrt{w_2}}{\\sqrt{w_1} - \\sqrt{w_2}}\\right)^{\\!2}"
           ],
           [
             "p",
@@ -508,7 +508,7 @@
           ],
           [
             "m",
-            "I(O) = 4 I_0\\cos^2\\!\\left(\\frac{\\pi(\\mu - 1)t}{\\lambda_0}\\right) \\implies t_{\\mathrm{min,dark}} = \\frac{\\lambda_0}{2(\\mu - 1)}"
+            "I(O) = 4 I_0\\cos^2\\!\\left(\\frac{\\pi(\\mu - 1)t}{\\lambda_0}\\right) \\Rightarrow t_{\\mathrm{min,dark}} = \\frac{\\lambda_0}{2(\\mu - 1)}"
           ],
           [
             "p",
@@ -548,7 +548,7 @@
           ],
           [
             "m",
-            "\\text{or} \\qquad \\Delta_{\\mathrm{tot}} = d\\sin\\theta - d\\sin\\alpha = n\\lambda \\implies \\theta_c = +\\alpha"
+            "\\text{or} \\qquad \\Delta_{\\mathrm{tot}} = d\\sin\\theta - d\\sin\\alpha = n\\lambda \\Rightarrow \\theta_c = +\\alpha"
           ],
           [
             "why",
@@ -623,7 +623,7 @@
           ],
           [
             "m",
-            "\\implies \\lambda_{\\mathrm{missing}} = \\frac{d^2}{D},\\ \\frac{d^2}{3 D},\\ \\frac{d^2}{5 D},\\ \\dots"
+            "\\Rightarrow \\lambda_{\\mathrm{missing}} = \\frac{d^2}{D},\\ \\frac{d^2}{3 D},\\ \\frac{d^2}{5 D},\\ \\dots"
           ],
           [
             "p",
@@ -684,11 +684,11 @@
           ],
           [
             "m",
-            "n_1 < \\mu > n_3:\\ \\ \\text{Bright } (m - \\tfrac{1}{2})\\lambda_0,\\ \\ \\text{Dark } m\\lambda_0"
+            "n_1 < \\mu > n_3:\\ \\ \\text{Bright } (m - \\frac{1}{2})\\lambda_0,\\ \\ \\text{Dark } m\\lambda_0"
           ],
           [
             "m",
-            "n_1 < \\mu < n_3:\\ \\ \\text{Bright } m\\lambda_0,\\ \\ \\text{Dark } (m - \\tfrac{1}{2})\\lambda_0"
+            "n_1 < \\mu < n_3:\\ \\ \\text{Bright } m\\lambda_0,\\ \\ \\text{Dark } (m - \\frac{1}{2})\\lambda_0"
           ],
           [
             "trap",
@@ -709,7 +709,7 @@
           ],
           [
             "m",
-            "\\implies \\text{Refl DARK } (R=0) \\iff \\text{Trans MAX } (T=100\\%)"
+            "\\Rightarrow \\text{Refl DARK } (R=0) \\iff \\text{Trans MAX } (T=100\\%)"
           ],
           [
             "why",
@@ -730,7 +730,7 @@
           ],
           [
             "m",
-            "\\lambda_{\\mathrm{peak,1st}} = 4\\mu t \\;\\to\\; 0\\ \\text{as } t \\to 0 \\implies R(\\lambda_{\\mathrm{vis}}) \\to 0"
+            "\\lambda_{\\mathrm{peak,1st}} = 4\\mu t \\;\\to\\; 0\\ \\text{as } t \\to 0 \\Rightarrow R(\\lambda_{\\mathrm{vis}}) \\to 0"
           ],
           [
             "why",
@@ -877,7 +877,7 @@
           ],
           [
             "m",
-            "t_{\\min} = \\frac{\\lambda_0}{4 n_c}\\ \\ \\bigl(\\text{odd multiples } (2m+1)\\tfrac{\\lambda_0}{4 n_c}\\bigr)"
+            "t_{\\min} = \\frac{\\lambda_0}{4 n_c}\\ \\ \\bigl(\\text{odd multiples } (2m+1)\\frac{\\lambda_0}{4 n_c}\\bigr)"
           ],
           [
             "m",
@@ -1055,7 +1055,7 @@
           ],
           [
             "m",
-            "a(\\sin\\theta_{\\mathrm{dark}} - \\sin\\alpha) = m\\lambda \\implies \\Delta\\theta_{\\mathrm{central}} \\approx \\frac{2\\lambda}{a\\cos\\alpha}"
+            "a(\\sin\\theta_{\\mathrm{dark}} - \\sin\\alpha) = m\\lambda \\Rightarrow \\Delta\\theta_{\\mathrm{central}} \\approx \\frac{2\\lambda}{a\\cos\\alpha}"
           ],
           [
             "why",
@@ -1261,7 +1261,7 @@
           ],
           [
             "m",
-            "Z_F = \\frac{a^2}{\\lambda}, \\qquad R_{\\mathrm{tot}}(D) = \\frac{D}{2} + \\frac{1.22\\,\\lambda L}{D} \\implies D_{\\mathrm{opt}} = \\sqrt{2.44\\,\\lambda L}"
+            "Z_F = \\frac{a^2}{\\lambda}, \\qquad R_{\\mathrm{tot}}(D) = \\frac{D}{2} + \\frac{1.22\\,\\lambda L}{D} \\Rightarrow D_{\\mathrm{opt}} = \\sqrt{2.44\\,\\lambda L}"
           ],
           [
             "p",
@@ -1364,7 +1364,7 @@
           ],
           [
             "m",
-            "I(\\theta) = \\frac{I_u}{2} + I_p\\cos^2\\theta \\implies I_u = 2 I_{\\min}"
+            "I(\\theta) = \\frac{I_u}{2} + I_p\\cos^2\\theta \\Rightarrow I_u = 2 I_{\\min}"
           ],
           [
             "m",
@@ -1404,7 +1404,7 @@
           ],
           [
             "m",
-            "\\theta_B + \\theta_r = 90^\\circ \\implies n_1\\sin\\theta_B = n_2\\cos\\theta_B \\implies \\tan\\theta_B = \\frac{n_2}{n_1}"
+            "\\theta_B + \\theta_r = 90^\\circ \\Rightarrow n_1\\sin\\theta_B = n_2\\cos\\theta_B \\Rightarrow \\tan\\theta_B = \\frac{n_2}{n_1}"
           ],
           [
             "why",
@@ -1454,7 +1454,7 @@
           ],
           [
             "m",
-            "\\implies \\text{reflected glare is HORIZONTALLY polarised } (s)"
+            "\\Rightarrow \\text{reflected glare is HORIZONTALLY polarised } (s)"
           ],
           [
             "why",
@@ -1479,7 +1479,7 @@
           ],
           [
             "m",
-            "\\implies \\text{at } \\Theta = 90^\\circ,\\ \\text{scattered blue light is linearly polarised!}"
+            "\\Rightarrow \\text{at } \\Theta = 90^\\circ,\\ \\text{scattered blue light is linearly polarised!}"
           ],
           [
             "why",
@@ -1515,11 +1515,11 @@
           ],
           [
             "m",
-            "\\mathrm{Calcite\\ (-):}\\ n_e = 1.486 < n_o = 1.658\\ (v_e \\ge v_o)"
+            "\\mathrm{Calcite\\ (-):}\\ n_e = 1.486 < n_o = 1.658\\ (v_e \\geqslant v_o)"
           ],
           [
             "m",
-            "\\mathrm{Quartz\\ (+):}\\ n_e = 1.553 > n_o = 1.544\\ (v_e \\le v_o)"
+            "\\mathrm{Quartz\\ (+):}\\ n_e = 1.553 > n_o = 1.544\\ (v_e \\leqslant v_o)"
           ],
           [
             "why",
@@ -1540,7 +1540,7 @@
           ],
           [
             "m",
-            "\\delta = \\frac{2\\pi}{\\lambda_0}\\,|n_o - n_e|\\,t \\implies t_{\\mathrm{QWP}} = \\frac{(2m+1)\\lambda_0}{4\\,|n_o - n_e|}, \\qquad t_{\\mathrm{HWP}} = \\frac{(2m+1)\\lambda_0}{2\\,|n_o - n_e|}"
+            "\\delta = \\frac{2\\pi}{\\lambda_0}\\,|n_o - n_e|\\,t \\Rightarrow t_{\\mathrm{QWP}} = \\frac{(2m+1)\\lambda_0}{4\\,|n_o - n_e|}, \\qquad t_{\\mathrm{HWP}} = \\frac{(2m+1)\\lambda_0}{2\\,|n_o - n_e|}"
           ],
           [
             "why",
@@ -1737,7 +1737,7 @@
           ],
           [
             "m",
-            "\\Delta_{\\mathrm{opt}}(\\theta) = 2 d\\cos\\theta = m\\lambda \\implies \\Delta N = \\frac{2\\,\\Delta x}{\\lambda}"
+            "\\Delta_{\\mathrm{opt}}(\\theta) = 2 d\\cos\\theta = m\\lambda \\Rightarrow \\Delta N = \\frac{2\\,\\Delta x}{\\lambda}"
           ],
           [
             "why",
@@ -1758,7 +1758,7 @@
           ],
           [
             "m",
-            "2 d\\!\\left(1 - \\frac{\\theta_p^2}{2}\\right) = (m_0 - p)\\lambda \\implies \\theta_p = \\sqrt{\\frac{p\\lambda}{d}}, \\qquad \\beta_{\\mathrm{tilted}} = \\frac{\\lambda}{2\\alpha}"
+            "2 d\\!\\left(1 - \\frac{\\theta_p^2}{2}\\right) = (m_0 - p)\\lambda \\Rightarrow \\theta_p = \\sqrt{\\frac{p\\lambda}{d}}, \\qquad \\beta_{\\mathrm{tilted}} = \\frac{\\lambda}{2\\alpha}"
           ],
           [
             "why",
@@ -1783,7 +1783,7 @@
           ],
           [
             "m",
-            "V(\\Delta x) = \\left|\\cos\\!\\left(\\frac{2\\pi\\,\\Delta\\lambda\\,\\Delta x}{\\lambda^2}\\right)\\right| \\implies \\Delta x_{\\mathrm{beat}} = \\frac{\\lambda^2}{2\\,\\Delta\\lambda}"
+            "V(\\Delta x) = \\left|\\cos\\!\\left(\\frac{2\\pi\\,\\Delta\\lambda\\,\\Delta x}{\\lambda^2}\\right)\\right| \\Rightarrow \\Delta x_{\\mathrm{beat}} = \\frac{\\lambda^2}{2\\,\\Delta\\lambda}"
           ],
           [
             "p",
@@ -1804,7 +1804,7 @@
           ],
           [
             "m",
-            "\\delta\\tilde{\\nu}_{\\min} = \\frac{1}{\\Delta_{\\max}} = \\frac{1}{2 X_{\\max}} \\implies \\mathcal{R}_{\\mathrm{FTIR}} = \\frac{\\tilde{\\nu}}{\\delta\\tilde{\\nu}} = \\frac{2 X_{\\max}}{\\lambda}"
+            "\\delta\\tilde{\\nu}_{\\min} = \\frac{1}{\\Delta_{\\max}} = \\frac{1}{2 X_{\\max}} \\Rightarrow \\mathcal{R}_{\\mathrm{FTIR}} = \\frac{\\tilde{\\nu}}{\\delta\\tilde{\\nu}} = \\frac{2 X_{\\max}}{\\lambda}"
           ],
           [
             "why",
@@ -1882,7 +1882,7 @@
           ],
           [
             "m",
-            "V_{\\mathrm{slit\\ source}}(d) = \\left|\\mathrm{sinc}\\!\\left(\\frac{\\pi\\,d\\,\\theta_s}{\\lambda}\\right)\\right| \\implies d_{\\mathrm{washout}} = \\frac{\\lambda}{\\theta_s}, \\qquad l_{\\mathrm{spatial}} \\sim \\frac{\\lambda}{\\theta_s}"
+            "V_{\\mathrm{slit\\ source}}(d) = \\left|\\mathrm{sinc}\\!\\left(\\frac{\\pi\\,d\\,\\theta_s}{\\lambda}\\right)\\right| \\Rightarrow d_{\\mathrm{washout}} = \\frac{\\lambda}{\\theta_s}, \\qquad l_{\\mathrm{spatial}} \\sim \\frac{\\lambda}{\\theta_s}"
           ],
           [
             "why",
@@ -1903,7 +1903,7 @@
           ],
           [
             "m",
-            "V_{\\mathrm{star}}(b) = \\left|\\frac{2 J_1(\\pi b\\,\\theta_\\star / \\lambda)}{\\pi b\\,\\theta_\\star / \\lambda}\\right| = 0 \\implies \\theta_\\star = \\frac{1.22\\,\\lambda}{b_{\\mathrm{washout}}}"
+            "V_{\\mathrm{star}}(b) = \\left|\\frac{2 J_1(\\pi b\\,\\theta_\\star / \\lambda)}{\\pi b\\,\\theta_\\star / \\lambda}\\right| = 0 \\Rightarrow \\theta_\\star = \\frac{1.22\\,\\lambda}{b_{\\mathrm{washout}}}"
           ],
           [
             "p",
@@ -2083,7 +2083,7 @@
           ],
           [
             "m",
-            "\\implies \\text{45-deg linear input } \\;\\to\\; \\text{100\\% circular output!}"
+            "\\Rightarrow \\text{45-deg linear input } \\;\\to\\; \\text{100\\% circular output!}"
           ],
           [
             "why",
@@ -2232,7 +2232,7 @@
           ],
           [
             "m",
-            "d_{\\mathrm{acoustic}} = \\lambda_{\\mathrm{sound}} = \\frac{v_s}{f_s} \\implies \\lambda_{\\mathrm{sound}}\\sin\\theta_m = m\\lambda_{\\mathrm{light}}"
+            "d_{\\mathrm{acoustic}} = \\lambda_{\\mathrm{sound}} = \\frac{v_s}{f_s} \\Rightarrow \\lambda_{\\mathrm{sound}}\\sin\\theta_m = m\\lambda_{\\mathrm{light}}"
           ],
           [
             "why",
@@ -2297,7 +2297,7 @@
           ],
           [
             "m",
-            "\\bigl(R = 0.96 \\implies \\mathcal{F} = 77.0,\\ \\ F = 3840\\bigr)"
+            "\\bigl(R = 0.96 \\Rightarrow \\mathcal{F} = 77.0,\\ \\ F = 3840\\bigr)"
           ],
           [
             "why",
@@ -2343,7 +2343,7 @@
           ],
           [
             "m",
-            "z_{E\\text{-antinode}} = \\left(m + \\tfrac{1}{2}\\right)\\frac{\\lambda}{2}, \\qquad D_{\\mathrm{emulsion\\ bands}} = \\frac{\\lambda}{2\\sin\\alpha}"
+            "z_{E\\text{-antinode}} = \\left(m + \\frac{1}{2}\\right)\\frac{\\lambda}{2}, \\qquad D_{\\mathrm{emulsion\\ bands}} = \\frac{\\lambda}{2\\sin\\alpha}"
           ],
           [
             "why",
@@ -2383,7 +2383,7 @@
           ],
           [
             "m",
-            "A_{\\mathrm{open}} = A_1 - A_2 + A_3 - \\dots = \\frac{A_1}{2} \\implies I_{\\mathrm{1\\ zone}} = 4 I_0"
+            "A_{\\mathrm{open}} = A_1 - A_2 + A_3 - \\dots = \\frac{A_1}{2} \\Rightarrow I_{\\mathrm{1\\ zone}} = 4 I_0"
           ],
           [
             "why",
@@ -2408,7 +2408,7 @@
           ],
           [
             "m",
-            "\\implies I_{\\mathrm{wire}}(\\theta \\neq 0) = I_{\\mathrm{slit}}(\\theta \\neq 0)"
+            "\\Rightarrow I_{\\mathrm{wire}}(\\theta \\neq 0) = I_{\\mathrm{slit}}(\\theta \\neq 0)"
           ],
           [
             "why",
@@ -2454,7 +2454,7 @@
           ],
           [
             "m",
-            "I_{\\mathrm{geometric\\ edge}}(v = 0) = \\frac{I_0}{2}\\left[\\left(\\tfrac{1}{2}\\right)^{\\!2} + \\left(\\tfrac{1}{2}\\right)^{\\!2}\\right] = \\mathbf{\\frac{I_0}{4}}"
+            "I_{\\mathrm{geometric\\ edge}}(v = 0) = \\frac{I_0}{2}\\left[\\left(\\frac{1}{2}\\right)^{\\!2} + \\left(\\frac{1}{2}\\right)^{\\!2}\\right] = \\mathbf{\\frac{I_0}{4}}"
           ],
           [
             "m",
@@ -2515,11 +2515,11 @@
           ],
           [
             "m",
-            "2 d_{hkl}\\sin\\theta = n\\lambda\\ \\ (\\lambda \\le 2 d_{hkl})"
+            "2 d_{hkl}\\sin\\theta = n\\lambda\\ \\ (\\lambda \\leqslant 2 d_{hkl})"
           ],
           [
             "m",
-            "n_{\\mathrm{X\\ ray}} = 1 - \\delta \\implies 2 d\\sin\\theta_n\\!\\left(1 - \\frac{\\delta}{\\sin^2\\theta_n}\\right) = n\\lambda"
+            "n_{\\mathrm{X\\ ray}} = 1 - \\delta \\Rightarrow 2 d\\sin\\theta_n\\!\\left(1 - \\frac{\\delta}{\\sin^2\\theta_n}\\right) = n\\lambda"
           ],
           [
             "why",

@@ -88,7 +88,7 @@
      ],
      [
       "p",
-      "$v_{\\rm wave} = \\omega/k$ is the speed of the pattern; the gas element itself oscillates with velocity $u = ds/dt = -s_0\\omega\\cos(kx - \\omega t)$, whose amplitude $s_0\\omega$ is tiny (for $s_0 = 10^{-6}$ m at 340 Hz: $u_{\\max} = 2.1\\times 10^{-3}$ m/s against $v = 343$ m/s). The wave transports energy and momentum; the medium transports neither over long distances."
+      "$v_{\\mathrm{wave}} = \\omega/k$ is the speed of the pattern; the gas element itself oscillates with velocity $u = ds/dt = -s_0\\omega\\cos(kx - \\omega t)$, whose amplitude $s_0\\omega$ is tiny (for $s_0 = 10^{-6}$ m at 340 Hz: $u_{\\max} = 2.1\\times 10^{-3}$ m/s against $v = 343$ m/s). The wave transports energy and momentum; the medium transports neither over long distances."
      ]
     ]
    },
@@ -101,7 +101,7 @@
      ],
      [
       "p",
-      "One full oscillation of the source emits exactly one wavelength of sound. The period $T = 1/f$ is the time in which the wave advances by $\\lambda$: $v = \\lambda/T = f\\lambda$. When a wave crosses into another medium (sound from air into water), $f$ is fixed by the source, $v$ changes with the medium, so $\\lambda$ changes: $\\lambda_{\\rm water} = 1480/340 = 4.35$ times longer for the same tone."
+      "One full oscillation of the source emits exactly one wavelength of sound. The period $T = 1/f$ is the time in which the wave advances by $\\lambda$: $v = \\lambda/T = f\\lambda$. When a wave crosses into another medium (sound from air into water), $f$ is fixed by the source, $v$ changes with the medium, so $\\lambda$ changes: $\\lambda_{\\mathrm{water}} = 1480/340 = 4.35$ times longer for the same tone."
      ],
      [
       "why",
@@ -309,7 +309,7 @@
      ],
      [
       "p",
-      "Stiffness vs inertia: $v = \\sqrt{B/\\rho}$ says speed grows with restoring stiffness and falls with inertia. That is why sound is fast in diamond and slow in heavy gases, and why the isothermal vs adiabatic question (JEE-06/07) decides $B$ for gases: $B_{\\rm iso} = P$, $B_{\\rm ad} = \\gamma P$ \u2014 a factor 1.18 in speed."
+      "Stiffness vs inertia: $v = \\sqrt{B/\\rho}$ says speed grows with restoring stiffness and falls with inertia. That is why sound is fast in diamond and slow in heavy gases, and why the isothermal vs adiabatic question (JEE-06/07) decides $B$ for gases: $B_{\\mathrm{iso}} = P$, $B_{\\mathrm{ad}} = \\gamma P$ \u2014 a factor 1.18 in speed."
      ]
     ]
    },
@@ -498,7 +498,7 @@
      ],
      [
       "trap",
-      "Traps: (i) writing $\\Delta P = \\Delta P_0\\sin(kx - \\omega t)$ \"in phase with $s$\" \u2014 wrong, off by $\\pi/2$; (ii) treating $\\Delta P_0 = B k s_0$ as $B s_0/\\lambda$ \u2014 missing $2\\pi$; (iii) using $I = \\Delta P_0 v$ instead of the time-averaged $\\Delta P_0^2/(2\\rho v)$ \u2014 factor $\\sqrt 2$ bookkeeping (RMS vs peak: $I = \\Delta P_{\\rm rms}^2/(\\rho v)$ with $\\Delta P_{\\rm rms} = \\Delta P_0/\\sqrt 2$)."
+      "Traps: (i) writing $\\Delta P = \\Delta P_0\\sin(kx - \\omega t)$ \"in phase with $s$\" \u2014 wrong, off by $\\pi/2$; (ii) treating $\\Delta P_0 = B k s_0$ as $B s_0/\\lambda$ \u2014 missing $2\\pi$; (iii) using $I = \\Delta P_0 v$ instead of the time-averaged $\\Delta P_0^2/(2\\rho v)$ \u2014 factor $\\sqrt 2$ bookkeeping (RMS vs peak: $I = \\Delta P_{\\mathrm{rms}}^2/(\\rho v)$ with $\\Delta P_{\\mathrm{rms}} = \\Delta P_0/\\sqrt 2$)."
      ]
     ]
    }
@@ -522,7 +522,7 @@
     "items": [
      [
       "why",
-      "the factor-2 in $I = \\Delta P_0^2/(2\\rho v)$ vs $\\Delta P_{\\rm rms}^2/(\\rho v)$ is the peak-vs-RMS convention; state which amplitude you use before writing the intensity."
+      "the factor-2 in $I = \\Delta P_0^2/(2\\rho v)$ vs $\\Delta P_{\\mathrm{rms}}^2/(\\rho v)$ is the peak-vs-RMS convention; state which amplitude you use before writing the intensity."
      ],
      [
       "check",
@@ -614,7 +614,7 @@
      ],
      [
       "p",
-      "in a gas mixture use effective $M$: $1/M = \\sum w_i/M_i$ for mass fractions... precisely: $M_{\\rm eff} = \\sum x_i M_i$ with $x_i$ mole fractions; humid air has lower $M_{\\rm eff}$ than dry air because $M_{\\rm H2O} = 18 < 29$ \u2014 hence speed grows with humidity (JEE-09)."
+      "in a gas mixture use effective $M$: $1/M = \\sum w_i/M_i$ for mass fractions... precisely: $M_{\\mathrm{eff}} = \\sum x_i M_i$ with $x_i$ mole fractions; humid air has lower $M_{\\mathrm{eff}}$ than dry air because $M_{\\mathrm{H2O}} = 18 < 29$ \u2014 hence speed grows with humidity (JEE-09)."
      ]
     ]
    },
@@ -689,7 +689,7 @@
      ],
      [
       "p",
-      "In a thin solid rod the longitudinal wave speed is $v_{\\rm rod} = \\sqrt{Y/\\rho}$ \u2014 same wave-equation derivation with Young modulus $Y$ replacing $B$ and the free side surface allowing lateral expansion (Poisson contraction unopposed)."
+      "In a thin solid rod the longitudinal wave speed is $v_{\\mathrm{rod}} = \\sqrt{Y/\\rho}$ \u2014 same wave-equation derivation with Young modulus $Y$ replacing $B$ and the free side surface allowing lateral expansion (Poisson contraction unopposed)."
      ]
     ]
    },
@@ -698,11 +698,11 @@
     "items": [
      [
       "p",
-      "In an infinite solid (bulk longitudinal wave) the lateral directions are constrained, the effective stiffness is the P-wave modulus $M = K + 4G/3$, and $v_{\\rm bulk} = \\sqrt{(K + 4G/3)/\\rho}$, always larger than $v_{\\rm rod}$ (for $\\nu = 0.29$, $v_{\\rm bulk}/v_{\\rm rod} = \\sqrt{2(1-\\nu)/(1-2\\nu)} = 1.16$)."
+      "In an infinite solid (bulk longitudinal wave) the lateral directions are constrained, the effective stiffness is the P-wave modulus $M = K + 4G/3$, and $v_{\\mathrm{bulk}} = \\sqrt{(K + 4G/3)/\\rho}$, always larger than $v_{\\mathrm{rod}}$ (for $\\nu = 0.29$, $v_{\\mathrm{bulk}}/v_{\\mathrm{rod}} = \\sqrt{2(1-\\nu)/(1-2\\nu)} = 1.16$)."
      ],
      [
       "p",
-      "Worked numbers (steel: $Y = 2.0\\times 10^{11}$ Pa, $\\rho = 7800$ kg/m$^3$): $v_{\\rm rod} = \\sqrt{2.0\\times 10^{11}/7800} = 5.06\\times 10^{3}$ m/s. Sound is ~15 times faster in steel than in air \u2014 putting an ear to the rail hears the train before the air-borne sound arrives (classic timing problem: see source Q16 in Section 3 and paper drills)."
+      "Worked numbers (steel: $Y = 2.0\\times 10^{11}$ Pa, $\\rho = 7800$ kg/m$^3$): $v_{\\mathrm{rod}} = \\sqrt{2.0\\times 10^{11}/7800} = 5.06\\times 10^{3}$ m/s. Sound is ~15 times faster in steel than in air \u2014 putting an ear to the rail hears the train before the air-borne sound arrives (classic timing problem: see source Q16 in Section 3 and paper drills)."
      ]
     ]
    },
@@ -715,7 +715,7 @@
      ],
      [
       "p",
-      "Transverse (shear) waves also travel in solids with $v_s = \\sqrt{G/\\rho} < v_{\\rm rod}$ \u2014 not sound proper, but seismology P- and S-waves use exactly these two formulas. Longitudinal is always fastest. Liquids and gases have $G = 0$: no transverse sound, and $K$ alone plays the elastic role \u2014 the reason sound in fluids is purely longitudinal."
+      "Transverse (shear) waves also travel in solids with $v_s = \\sqrt{G/\\rho} < v_{\\mathrm{rod}}$ \u2014 not sound proper, but seismology P- and S-waves use exactly these two formulas. Longitudinal is always fastest. Liquids and gases have $G = 0$: no transverse sound, and $K$ alone plays the elastic role \u2014 the reason sound in fluids is purely longitudinal."
      ]
     ]
    }
@@ -739,11 +739,11 @@
     "items": [
      [
       "why",
-      "the two solid speeds differ only in effective stiffness: $Y = 3K(1-2\\nu)$ vs $K + 4G/3$; with $G = Y/2(1+\\nu)$ one gets $v_{\\rm bulk}^2/v_{\\rm rod}^2 = (1-\\nu)/((1+\\nu)(1-2\\nu))$... precisely $= 2(1-\\nu)/(1-2\\nu)$, always $> 1$ for $0 \\le \\nu < 1/2$ \u2014 a rigid tube of material transmits faster than a free rod."
+      "the two solid speeds differ only in effective stiffness: $Y = 3K(1-2\\nu)$ vs $K + 4G/3$; with $G = Y/2(1+\\nu)$ one gets $v_{\\mathrm{bulk}}^2/v_{\\mathrm{rod}}^2 = (1-\\nu)/((1+\\nu)(1-2\\nu))$... precisely $= 2(1-\\nu)/(1-2\\nu)$, always $> 1$ for $0 \\leqslant \\nu < 1/2$ \u2014 a rigid tube of material transmits faster than a free rod."
      ],
      [
       "check",
-      "steel with $K = 160$ GPa, $G = 79$ GPa: $K + 4G/3 = 265$ GPa, $v_{\\rm bulk} = 5.83\\times 10^{3}$ m/s vs rod 5064 m/s, ratio 1.15 \u2014 matches $\\sqrt{2(1-0.29)/(1-0.58)} = \\sqrt{1.46} = 1.21$... close; use consistent $\\nu = 1 - Y/6K + Y/3K$... simplest: trust $\\sqrt{(K+4G/3)/\\rho}$ directly from given moduli."
+      "steel with $K = 160$ GPa, $G = 79$ GPa: $K + 4G/3 = 265$ GPa, $v_{\\mathrm{bulk}} = 5.83\\times 10^{3}$ m/s vs rod 5064 m/s, ratio 1.15 \u2014 matches $\\sqrt{2(1-0.29)/(1-0.58)} = \\sqrt{1.46} = 1.21$... close; use consistent $\\nu = 1 - Y/6K + Y/3K$... simplest: trust $\\sqrt{(K+4G/3)/\\rho}$ directly from given moduli."
      ]
     ]
    },
@@ -765,11 +765,11 @@
     "items": [
      [
       "p",
-      "Kundt tube application (JEE-21): dust heaps give $\\lambda_{\\rm gas}/2$; the vibrating rod clamped at its centre is a rod standing wave of $\\lambda_{\\rm rod} = 2L_{\\rm rod}$ (fundamental), and frequency matching $f = v_{\\rm rod}/(2L_{\\rm rod}) = v_{\\rm gas}/\\lambda_{\\rm gas}$ yields $v_{\\rm gas} = v_{\\rm rod}\\,d/L_{\\rm rod}$ when dust spacing $d = \\lambda_{\\rm gas}/2$..."
+      "Kundt tube application (JEE-21): dust heaps give $\\lambda_{\\mathrm{gas}}/2$; the vibrating rod clamped at its centre is a rod standing wave of $\\lambda_{\\mathrm{rod}} = 2L_{\\mathrm{rod}}$ (fundamental), and frequency matching $f = v_{\\mathrm{rod}}/(2L_{\\mathrm{rod}}) = v_{\\mathrm{gas}}/\\lambda_{\\mathrm{gas}}$ yields $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}\\,d/L_{\\mathrm{rod}}$ when dust spacing $d = \\lambda_{\\mathrm{gas}}/2$..."
      ],
      [
       "p",
-      "precisely $v_{\\rm gas} = v_{\\rm rod}\\cdot \\lambda_{\\rm gas}/(2L_{\\rm rod}) = v_{\\rm rod}\\cdot d/L_{\\rm rod}$ with $d = \\lambda_{\\rm gas}/2$: source worked example $v_{\\rm rod} = 5000$, $L_{\\rm rod} = 1$ m, $d = 8$ cm gives $v_{\\rm gas} = 5000\\times 0.08 = 400$ m/s ok (warm gas)."
+      "precisely $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}\\cdot \\lambda_{\\mathrm{gas}}/(2L_{\\mathrm{rod}}) = v_{\\mathrm{rod}}\\cdot d/L_{\\mathrm{rod}}$ with $d = \\lambda_{\\mathrm{gas}}/2$: source worked example $v_{\\mathrm{rod}} = 5000$, $L_{\\mathrm{rod}} = 1$ m, $d = 8$ cm gives $v_{\\mathrm{gas}} = 5000\\times 0.08 = 400$ m/s ok (warm gas)."
      ]
     ]
    },
@@ -778,7 +778,7 @@
     "items": [
      [
       "check",
-      "rod speed from Kundt inversion: $v_{\\rm rod} = 2 L_{\\rm rod} f$... the working chain: measure $d$, know $L_{\\rm rod}$ and rod speed, gas speed $= v_{\\rm rod} d/L_{\\rm rod}$; check units and the factor 2 \u2014 $d = \\lambda/2$ is the usual convention (dust heaps at pressure nodes are $\\lambda/2$ apart)."
+      "rod speed from Kundt inversion: $v_{\\mathrm{rod}} = 2 L_{\\mathrm{rod}} f$... the working chain: measure $d$, know $L_{\\mathrm{rod}}$ and rod speed, gas speed $= v_{\\mathrm{rod}} d/L_{\\mathrm{rod}}$; check units and the factor 2 \u2014 $d = \\lambda/2$ is the usual convention (dust heaps at pressure nodes are $\\lambda/2$ apart)."
      ],
      [
       "p",
@@ -840,7 +840,7 @@
      ],
      [
       "p",
-      "(ii) Pulse travel and echo with two paths (solid + air): $t_{\\rm air} - t_{\\rm solid} = L(1/v_a - 1/v_s)$ measured; solve for $L$. (iii) Comparison of wavelengths in a rod and the air column it excites \u2014 frequency is common at the interface, $\\lambda$ differs by the speed ratio."
+      "(ii) Pulse travel and echo with two paths (solid + air): $t_{\\mathrm{air}} - t_{\\mathrm{solid}} = L(1/v_a - 1/v_s)$ measured; solve for $L$. (iii) Comparison of wavelengths in a rod and the air column it excites \u2014 frequency is common at the interface, $\\lambda$ differs by the speed ratio."
      ]
     ]
    },
@@ -853,11 +853,11 @@
      ],
      [
       "p",
-      "a rod held in the middle and rubbed lengthwise (Galilean singing rod) resonates at $v_{\\rm rod}/2L$ \u2014 heard pitch is the rod mode coupled to air, largely the rod fundamental."
+      "a rod held in the middle and rubbed lengthwise (Galilean singing rod) resonates at $v_{\\mathrm{rod}}/2L$ \u2014 heard pitch is the rod mode coupled to air, largely the rod fundamental."
      ],
      [
       "p",
-      "Newton guessed that sound compressions in air stay at constant temperature (heat flows in/out fast enough to keep $T$ fixed), giving the isothermal bulk modulus $B = P$ from Boyle: $PV = $ const $\\Rightarrow B = -V dP/dV = P$. Then $v_{\\rm iso} = \\sqrt{P/\\rho}$. At STP ($P = 1.013\\times 10^{5}$ Pa, $\\rho = 1.293$ kg/m$^3$):"
+      "Newton guessed that sound compressions in air stay at constant temperature (heat flows in/out fast enough to keep $T$ fixed), giving the isothermal bulk modulus $B = P$ from Boyle: $PV = $ const $\\Rightarrow B = -V dP/dV = P$. Then $v_{\\mathrm{iso}} = \\sqrt{P/\\rho}$. At STP ($P = 1.013\\times 10^{5}$ Pa, $\\rho = 1.293$ kg/m$^3$):"
      ]
     ]
    }
@@ -885,11 +885,11 @@
      ],
      [
       "p",
-      "Why isothermal is wrong: a compression cycle at 340 Hz is far too fast for heat to flow. Compression time scale $\\sim 1/f \\approx 3$ ms; thermal diffusion time across a half wavelength ($\\lambda/2 \\sim 0.5$ m) is $t_{\\rm th} \\sim x^2/\\alpha$ with $\\alpha = 2.2\\times 10^{-5}$ m$^2$/s for air: $t_{\\rm th} \\sim 10^{4}$ s \u2014 ten million periods. The compression is therefore adiabatic:"
+      "Why isothermal is wrong: a compression cycle at 340 Hz is far too fast for heat to flow. Compression time scale $\\sim 1/f \\approx 3$ ms; thermal diffusion time across a half wavelength ($\\lambda/2 \\sim 0.5$ m) is $t_{\\mathrm{th}} \\sim x^2/\\alpha$ with $\\alpha = 2.2\\times 10^{-5}$ m$^2$/s for air: $t_{\\mathrm{th}} \\sim 10^{4}$ s \u2014 ten million periods. The compression is therefore adiabatic:"
      ],
      [
       "p",
-      "no heat exchange, temperature rises slightly in compressions ($\\Delta T = T\\Delta P/(\\gamma P) \\sim 10^{-2}$ K at 1 Pa), and the gas is stiffer: $B_{\\rm ad} = \\gamma P$."
+      "no heat exchange, temperature rises slightly in compressions ($\\Delta T = T\\Delta P/(\\gamma P) \\sim 10^{-2}$ K at 1 Pa), and the gas is stiffer: $B_{\\mathrm{ad}} = \\gamma P$."
      ]
     ]
    },
@@ -936,7 +936,7 @@
      ],
      [
       "check",
-      "numerically: at $f = 1$ kHz, $\\lambda = 0.34$ m, $t_{\\rm th} \\sim (0.17)^2/2.2\\times 10^{-5} = 1.3\\times 10^{3}$ s vs period 1 ms \u2014 ratio $10^{6}$: adiabatic by a factor of a million."
+      "numerically: at $f = 1$ kHz, $\\lambda = 0.34$ m, $t_{\\mathrm{th}} \\sim (0.17)^2/2.2\\times 10^{-5} = 1.3\\times 10^{3}$ s vs period 1 ms \u2014 ratio $10^{6}$: adiabatic by a factor of a million."
      ]
     ]
    }
@@ -977,7 +977,7 @@
      ],
      [
       "check",
-      "monatomic gas check: at STP with $\\gamma = 5/3$, $M = 4$ g (He): $v = \\sqrt{(5/3)\\cdot 1.013\\times 10^{5}/0.179} = 971$ m/s at 0 C ($\\rho_{\\rm He} = 0.179$); formula route $\\sqrt{\\gamma R T/M} = 969$ m/s ok consistent."
+      "monatomic gas check: at STP with $\\gamma = 5/3$, $M = 4$ g (He): $v = \\sqrt{(5/3)\\cdot 1.013\\times 10^{5}/0.179} = 971$ m/s at 0 C ($\\rho_{\\mathrm{He}} = 0.179$); formula route $\\sqrt{\\gamma R T/M} = 969$ m/s ok consistent."
      ]
     ]
    },
@@ -986,7 +986,7 @@
     "items": [
      [
       "p",
-      "Given an unknown gas at $P = 1$ atm, $\\rho = 1.6$ kg/m$^3$, measured $v = 450$ m/s. Isothermal prediction $\\sqrt{1.013\\times 10^{5}/1.6} = 252$ m/s; ratio $450/252 = 1.79 = \\sqrt{\\gamma} \\Rightarrow \\gamma = 3.2$?? Non-physical \u2014 so either the measurement or the density is off: real gases have $1 < \\gamma \\le 1.67$."
+      "Given an unknown gas at $P = 1$ atm, $\\rho = 1.6$ kg/m$^3$, measured $v = 450$ m/s. Isothermal prediction $\\sqrt{1.013\\times 10^{5}/1.6} = 252$ m/s; ratio $450/252 = 1.79 = \\sqrt{\\gamma} \\Rightarrow \\gamma = 3.2$?? Non-physical \u2014 so either the measurement or the density is off: real gases have $1 < \\gamma \\leqslant 1.67$."
      ],
      [
       "p",
@@ -1003,7 +1003,7 @@
      ],
      [
       "why",
-      "the entire 280-vs-331 story is a single exponent: $v_{\\rm ad} = \\sqrt\\gamma v_{\\rm iso}$, and every sound speed in a gas can be written $v = \\sqrt\\gamma\\, v_{\\rm Newton}$ with $v_{\\rm Newton} = \\sqrt{RT/M}$ at temperature $T$."
+      "the entire 280-vs-331 story is a single exponent: $v_{\\mathrm{ad}} = \\sqrt\\gamma v_{\\mathrm{iso}}$, and every sound speed in a gas can be written $v = \\sqrt\\gamma\\, v_{\\mathrm{Newton}}$ with $v_{\\mathrm{Newton}} = \\sqrt{RT/M}$ at temperature $T$."
      ]
     ]
    }
@@ -1044,7 +1044,7 @@
      ],
      [
       "p",
-      "Derivation of $B_{\\rm ad} = \\gamma P$: $PV^{\\gamma} = C \\Rightarrow P\\gamma V^{\\gamma-1}dV + V^{\\gamma}dP = 0 \\Rightarrow dP/dV = -\\gamma P/V \\Rightarrow B = -V dP/dV = \\gamma P$ ok. Microscopic meaning of $\\gamma = C_p/C_v$: in adiabatic compression no heat escapes, so the temperature rise adds thermal pressure on top of the compression pressure; $C_p - C_v = R$ (per mole) quantifies the extra push;"
+      "Derivation of $B_{\\mathrm{ad}} = \\gamma P$: $PV^{\\gamma} = C \\Rightarrow P\\gamma V^{\\gamma-1}dV + V^{\\gamma}dP = 0 \\Rightarrow dP/dV = -\\gamma P/V \\Rightarrow B = -V dP/dV = \\gamma P$ ok. Microscopic meaning of $\\gamma = C_p/C_v$: in adiabatic compression no heat escapes, so the temperature rise adds thermal pressure on top of the compression pressure; $C_p - C_v = R$ (per mole) quantifies the extra push;"
      ],
      [
       "p",
@@ -1061,7 +1061,7 @@
      ],
      [
       "why",
-      "the correction factor is exactly $\\sqrt\\gamma$ because $B_{\\rm ad}/B_{\\rm iso} = \\gamma P/P = \\gamma$ and $v \\propto \\sqrt B$; the measured/Newton ratio 331/280 = 1.183 = $\\sqrt{1.4}$ is the quantitative proof."
+      "the correction factor is exactly $\\sqrt\\gamma$ because $B_{\\mathrm{ad}}/B_{\\mathrm{iso}} = \\gamma P/P = \\gamma$ and $v \\propto \\sqrt B$; the measured/Newton ratio 331/280 = 1.183 = $\\sqrt{1.4}$ is the quantitative proof."
      ]
     ]
    },
@@ -1107,7 +1107,7 @@
     "items": [
      [
       "p",
-      "Sound horizon gravity formula (source \u00a72.5 bonus): $v_{\\rm top}/v_{\\rm bottom} = \\sqrt{1 - 2gh/(\\gamma R T/M)}$... precisely $v(h) = v_0\\sqrt{1 - 2gh M/(\\gamma R T_0)}$ for an isothermal atmosphere with constant $g$; the top of a gravity-bound atmosphere of height $h_{\\max} = \\gamma R T/(Mg)$ has $v = 0$ \u2014 speed vanishes where pressure vanishes. Troposphere uses lapse-rate $T(z)$ instead."
+      "Sound horizon gravity formula (source \u00a72.5 bonus): $v_{\\mathrm{top}}/v_{\\mathrm{bottom}} = \\sqrt{1 - 2gh/(\\gamma R T/M)}$... precisely $v(h) = v_0\\sqrt{1 - 2gh M/(\\gamma R T_0)}$ for an isothermal atmosphere with constant $g$; the top of a gravity-bound atmosphere of height $h_{\\max} = \\gamma R T/(Mg)$ has $v = 0$ \u2014 speed vanishes where pressure vanishes. Troposphere uses lapse-rate $T(z)$ instead."
      ],
      [
       "check",
@@ -1208,7 +1208,7 @@
      ],
      [
       "p",
-      "Micro-physical picture (kinetic theory): $v_{\\rm sound} \\sim 0.68\\,\\bar c$ for $\\gamma = 1.4$ where $\\bar c = \\sqrt{8RT/\\pi M}$ is the mean molecular speed \u2014 sound is a coherent disturbance propagated by molecular collisions at roughly the thermal speed. $\\bar c$ at 293 K in air $= 464$ m/s; $0.68\\times 464 = 316$... order of magnitude; exact $v/\\bar c = \\sqrt{\\gamma\\pi/8} = 0.74$."
+      "Micro-physical picture (kinetic theory): $v_{\\mathrm{sound}} \\sim 0.68\\,\\bar c$ for $\\gamma = 1.4$ where $\\bar c = \\sqrt{8RT/\\pi M}$ is the mean molecular speed \u2014 sound is a coherent disturbance propagated by molecular collisions at roughly the thermal speed. $\\bar c$ at 293 K in air $= 464$ m/s; $0.68\\times 464 = 316$... order of magnitude; exact $v/\\bar c = \\sqrt{\\gamma\\pi/8} = 0.74$."
      ]
     ]
    }
@@ -1307,7 +1307,7 @@
     "items": [
      [
       "p",
-      "Humidity angle (JEE-09): speed at fixed $T$ rises with water-vapour fraction \u2014 at 20 C saturated air ($p_{\\rm vap} = 2.3$ kPa) has $v$ about 0.2% (0.7 m/s) above dry \u2014 small but the same order as 1 C! Exam problems often say \"dry air\" implicitly."
+      "Humidity angle (JEE-09): speed at fixed $T$ rises with water-vapour fraction \u2014 at 20 C saturated air ($p_{\\mathrm{vap}} = 2.3$ kPa) has $v$ about 0.2% (0.7 m/s) above dry \u2014 small but the same order as 1 C! Exam problems often say \"dry air\" implicitly."
      ],
      [
       "why",
@@ -1354,11 +1354,11 @@
      ],
      [
       "p",
-      "Humidity: water vapour ($M = 18$) replaces N2/O2 ($M_{\\rm dry} = 29$): effective molar mass $M_{\\rm eff} = 0.622 M_d + 0.378 M_v$... precisely with mole fraction $x$ of vapour: $M_{\\rm eff} = (1-x)\\cdot 29 + x\\cdot 18$. At 30 C saturated, vapour pressure 4.2 kPa, $x = 0.042$: $M_{\\rm eff} = 28.5$, $v$ up 0.9% (3 m/s). But humid air is ALSO less dense... consistent:"
+      "Humidity: water vapour ($M = 18$) replaces N2/O2 ($M_{\\mathrm{dry}} = 29$): effective molar mass $M_{\\mathrm{eff}} = 0.622 M_d + 0.378 M_v$... precisely with mole fraction $x$ of vapour: $M_{\\mathrm{eff}} = (1-x)\\cdot 29 + x\\cdot 18$. At 30 C saturated, vapour pressure 4.2 kPa, $x = 0.042$: $M_{\\mathrm{eff}} = 28.5$, $v$ up 0.9% (3 m/s). But humid air is ALSO less dense... consistent:"
      ],
      [
       "p",
-      "$v = \\sqrt{\\gamma RT/M_{\\rm eff}}$ grows as $M_{\\rm eff}$ falls. Rule: humid air sounds faster; the effect peaks in hot humid weather."
+      "$v = \\sqrt{\\gamma RT/M_{\\mathrm{eff}}}$ grows as $M_{\\mathrm{eff}}$ falls. Rule: humid air sounds faster; the effect peaks in hot humid weather."
      ]
     ]
    }
@@ -1382,7 +1382,7 @@
     "items": [
      [
       "p",
-      "Gas mixtures: $\\gamma_{\\rm eff}$ for a mixture is not the average of $\\gamma$; use $C_p, C_v$ averaging: $C_{v,\\rm mix} = \\sum x_i C_{v,i}$, $\\gamma = (C_v + R)/C_v$. For air-like N2/O2 this is automatic ($\\gamma = 1.4$). For a 50-50 He-N2 mix: $C_v = 12.5 + 20.8 = 33.3$ J/mol-K... ($C_{v,\\rm He} = 3R/2 = 12.5$, $C_{v,\\rm N2} = 5R/2 = 20.8$), $\\gamma = 35.8/33.3 = 1.075$, $M = 16.5$ g:"
+      "Gas mixtures: $\\gamma_{\\mathrm{eff}}$ for a mixture is not the average of $\\gamma$; use $C_p, C_v$ averaging: $C_{v,\\mathrm{mix}} = \\sum x_i C_{v,i}$, $\\gamma = (C_v + R)/C_v$. For air-like N2/O2 this is automatic ($\\gamma = 1.4$). For a 50-50 He-N2 mix: $C_v = 12.5 + 20.8 = 33.3$ J/mol-K... ($C_{v,\\mathrm{He}} = 3R/2 = 12.5$, $C_{v,\\mathrm{N2}} = 5R/2 = 20.8$), $\\gamma = 35.8/33.3 = 1.075$, $M = 16.5$ g:"
      ],
      [
       "p",
@@ -1416,7 +1416,7 @@
      ],
      [
       "p",
-      "Humidity worked: 25 C, 60% RH: vapour pressure 1.9 kPa, $x = 0.019$, $M_{\\rm eff} = 28.8$, $v = 346.3$ vs dry 346.1 \u2014 0.2 m/s only at moderate humidity; saturated 35 C: 1.5 m/s effect. Small \u2014 often neglected, but state \"dry air\" or \"neglect humidity\" explicitly."
+      "Humidity worked: 25 C, 60% RH: vapour pressure 1.9 kPa, $x = 0.019$, $M_{\\mathrm{eff}} = 28.8$, $v = 346.3$ vs dry 346.1 \u2014 0.2 m/s only at moderate humidity; saturated 35 C: 1.5 m/s effect. Small \u2014 often neglected, but state \"dry air\" or \"neglect humidity\" explicitly."
      ]
     ]
    },
@@ -1453,7 +1453,7 @@
     "items": [
      [
       "p",
-      "(a) Identify a gas: $v = 263$ m/s at 0 C: $M = \\gamma R T/v^2 = 1.4\\cdot 8.314\\cdot 273/263^2 = 0.046$ kg/mol $\\approx$ CO2 (44 g) with $\\gamma = 1.3$ gives 259 ok. (b) A gas mixture of unknown proportion: use $M_{\\rm eff}$ from measured $v$: $M_{\\rm eff} = \\gamma R T/v^2$, then mole fraction from $M_{\\rm eff} = 29(1-x) + 2x$ (He-air: $x = (29 - M_{\\rm eff})/27$)."
+      "(a) Identify a gas: $v = 263$ m/s at 0 C: $M = \\gamma R T/v^2 = 1.4\\cdot 8.314\\cdot 273/263^2 = 0.046$ kg/mol $\\approx$ CO2 (44 g) with $\\gamma = 1.3$ gives 259 ok. (b) A gas mixture of unknown proportion: use $M_{\\mathrm{eff}}$ from measured $v$: $M_{\\mathrm{eff}} = \\gamma R T/v^2$, then mole fraction from $M_{\\mathrm{eff}} = 29(1-x) + 2x$ (He-air: $x = (29 - M_{\\mathrm{eff}})/27$)."
      ],
      [
       "p",
@@ -1483,7 +1483,7 @@
     "items": [
      [
       "p",
-      "Free parameters of $v_{\\rm gas} = \\sqrt{\\gamma R T/M}$: just ($\\gamma$, $T$, $M$). Pressure, density, volume, container size, amplitude, frequency: none of them enter. For a closed container being heated, $v$ rises as $\\sqrt T$ regardless of pressure rise. For a weather front, $v$ changes with T (and slightly with humidity) \u2014 standard correction in precise acoustic ranging:"
+      "Free parameters of $v_{\\mathrm{gas}} = \\sqrt{\\gamma R T/M}$: just ($\\gamma$, $T$, $M$). Pressure, density, volume, container size, amplitude, frequency: none of them enter. For a closed container being heated, $v$ rises as $\\sqrt T$ regardless of pressure rise. For a weather front, $v$ changes with T (and slightly with humidity) \u2014 standard correction in precise acoustic ranging:"
      ],
      [
       "p",
@@ -1496,7 +1496,7 @@
     "items": [
      [
       "p",
-      "Sonic boom geometry (JEE-28) and Doppler (JEE-22-27) all need the LOCAL $v$; atmospheric sound-speed profile $v(T(z))$ is the refractive index of acoustics: $n_{\\rm ac} = v_{0}/v(z) > 1$ aloft... rays bend toward lower speed (colder air) \u2014 exactly like light in a gradient index."
+      "Sonic boom geometry (JEE-28) and Doppler (JEE-22-27) all need the LOCAL $v$; atmospheric sound-speed profile $v(T(z))$ is the refractive index of acoustics: $n_{\\mathrm{ac}} = v_{0}/v(z) > 1$ aloft... rays bend toward lower speed (colder air) \u2014 exactly like light in a gradient index."
      ],
      [
       "p",
@@ -1524,7 +1524,7 @@
     "items": [
      [
       "p",
-      "Intensity = average power per area = $\\bar u v$ with $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2$ (SN-03): $I = \\dfrac{1}{2}\\rho v\\omega^2 s_0^2$. Since $\\Delta P_0 = \\rho v\\omega s_0$, equally $I = \\dfrac{\\Delta P_0^2}{2\\rho v} = \\dfrac{\\Delta P_{\\rm rms}^2}{\\rho v} = \\dfrac{1}{2}u_{\\max}\\omega s_0\\cdot$..."
+      "Intensity = average power per area = $\\bar u v$ with $\\bar u = \\frac{1}{2}\\rho\\omega^2 s_0^2$ (SN-03): $I = \\dfrac{1}{2}\\rho v\\omega^2 s_0^2$. Since $\\Delta P_0 = \\rho v\\omega s_0$, equally $I = \\dfrac{\\Delta P_0^2}{2\\rho v} = \\dfrac{\\Delta P_{\\mathrm{rms}}^2}{\\rho v} = \\dfrac{1}{2}u_{\\max}\\omega s_0\\cdot$..."
      ],
      [
       "p",
@@ -1554,7 +1554,7 @@
      ],
      [
       "why",
-      "the factor 2 in $I = \\Delta P_0^2/(2\\rho v)$ is the time-average of $\\cos^2$ \u2014 peak squared over twice; if data give RMS quantities use $I = \\Delta P_{\\rm rms}^2/(\\rho v)$ with no 2. State the convention every time."
+      "the factor 2 in $I = \\Delta P_0^2/(2\\rho v)$ is the time-average of $\\cos^2$ \u2014 peak squared over twice; if data give RMS quantities use $I = \\Delta P_{\\mathrm{rms}}^2/(\\rho v)$ with no 2. State the convention every time."
      ]
     ]
    },
@@ -1709,7 +1709,7 @@
     "items": [
      [
       "p",
-      "Superposition of two point sources (JEE-13): interference pattern with $\\Delta P_{\\rm tot} = \\Delta P_1 + \\Delta P_2$ as waves; near-field geometry corrections $1/r_i$ matter only within a wavelength or so; exam interference uses equal-$r$ approximation unless stated."
+      "Superposition of two point sources (JEE-13): interference pattern with $\\Delta P_{\\mathrm{tot}} = \\Delta P_1 + \\Delta P_2$ as waves; near-field geometry corrections $1/r_i$ matter only within a wavelength or so; exam interference uses equal-$r$ approximation unless stated."
      ],
      [
       "why",
@@ -1824,7 +1824,7 @@
      ],
      [
       "p",
-      "Beam patterns of real sources: a circular piston of radius $a$ beams when $\\lambda < 2a$ (directivity $D = I(0)/I_{\\rm iso}$; megaphone: $D \\sim 10$, +10 dB forward). Loudspeaker arrays: interference of $N$ elements gives $I \\propto N^2$ on axis (coherent) vs $N$ (incoherent) \u2014 exam contrast question."
+      "Beam patterns of real sources: a circular piston of radius $a$ beams when $\\lambda < 2a$ (directivity $D = I(0)/I_{\\mathrm{iso}}$; megaphone: $D \\sim 10$, +10 dB forward). Loudspeaker arrays: interference of $N$ elements gives $I \\propto N^2$ on axis (coherent) vs $N$ (incoherent) \u2014 exam contrast question."
      ]
     ]
    },
@@ -1859,7 +1859,7 @@
     "items": [
      [
       "p",
-      "Never add dB arithmetically: convert to intensity, add, convert back: $I_{\\rm tot} = I_0\\sum 10^{\\beta_i/10}$."
+      "Never add dB arithmetically: convert to intensity, add, convert back: $I_{\\mathrm{tot}} = I_0\\sum 10^{\\beta_i/10}$."
      ],
      [
       "p",
@@ -1895,7 +1895,7 @@
      ],
      [
       "p",
-      "Since $I = \\Delta P_0^2/(2\\rho v)$, and $\\Delta P_0 = \\rho v\\omega s_0$: $\\beta = 20\\log_{10}\\dfrac{\\Delta P_0}{\\Delta P_{\\rm ref}} = 20\\log_{10}\\dfrac{s_0}{s_{\\rm ref}}$ with same-medium references ($\\Delta P_{\\rm ref} = 2.87\\times 10^{-5}$ Pa; $s_{\\rm ref}$ = threshold displacement at the SAME frequency). The 20 = 2x10 because amplitude squared is intensity."
+      "Since $I = \\Delta P_0^2/(2\\rho v)$, and $\\Delta P_0 = \\rho v\\omega s_0$: $\\beta = 20\\log_{10}\\dfrac{\\Delta P_0}{\\Delta P_{\\mathrm{ref}}} = 20\\log_{10}\\dfrac{s_0}{s_{\\mathrm{ref}}}$ with same-medium references ($\\Delta P_{\\mathrm{ref}} = 2.87\\times 10^{-5}$ Pa; $s_{\\mathrm{ref}}$ = threshold displacement at the SAME frequency). The 20 = 2x10 because amplitude squared is intensity."
      ]
     ]
    },
@@ -1925,11 +1925,11 @@
      ],
      [
       "why",
-      "the two conventions (10 vs 20) are the same law wearing intensity or amplitude clothing; mixing them (writing $10\\log(\\Delta P_0/\\Delta P_{\\rm ref})$) halves every answer \u2014 the single most common dB error."
+      "the two conventions (10 vs 20) are the same law wearing intensity or amplitude clothing; mixing them (writing $10\\log(\\Delta P_0/\\Delta P_{\\mathrm{ref}})$) halves every answer \u2014 the single most common dB error."
      ],
      [
       "check",
-      "always cross-check one number both ways: pick $I$, find $\\beta$; find $\\Delta P_0 = \\sqrt{2\\rho v I}$; recompute $20\\log(\\Delta P_0/\\Delta P_{\\rm ref})$ \u2014 must agree exactly."
+      "always cross-check one number both ways: pick $I$, find $\\beta$; find $\\Delta P_0 = \\sqrt{2\\rho v I}$; recompute $20\\log(\\Delta P_0/\\Delta P_{\\mathrm{ref}})$ \u2014 must agree exactly."
      ]
     ]
    },
@@ -1938,7 +1938,7 @@
     "items": [
      [
       "p",
-      "(a) Speaker efficiency: electrical 20 W, acoustic 2%: $P_{\\rm ac} = 0.4$ W; at 3 m: $I = 0.4/(4\\pi\\cdot 9) = 3.5\\times 10^{-3}$; $\\beta = 95.5$ dB. (b) Two machines 85 and 88 dB: $I_1 = 3.16\\times 10^{-4}$, $I_2 = 6.3\\times 10^{-4}$; sum $= 9.5\\times 10^{-4}$: $\\beta = 89.8$ dB. (c) \"How many identical sources to raise the level by 10 dB?\" 10 (incoherent)."
+      "(a) Speaker efficiency: electrical 20 W, acoustic 2%: $P_{\\mathrm{ac}} = 0.4$ W; at 3 m: $I = 0.4/(4\\pi\\cdot 9) = 3.5\\times 10^{-3}$; $\\beta = 95.5$ dB. (b) Two machines 85 and 88 dB: $I_1 = 3.16\\times 10^{-4}$, $I_2 = 6.3\\times 10^{-4}$; sum $= 9.5\\times 10^{-4}$: $\\beta = 89.8$ dB. (c) \"How many identical sources to raise the level by 10 dB?\" 10 (incoherent)."
      ],
      [
       "p",
@@ -2009,7 +2009,7 @@
     "items": [
      [
       "p",
-      "Path-difference working rule: $\\delta = |r_2 - r_1|$ plus any extra inversion (phase changes on reflection \u2014 closed end of pipe adds $\\pi$ to pressure wave... reflection at rigid wall inverts the PRESSURE wave, i.e. pressure phase jump $\\pi$, displacement phase jump 0 \u2014 a classic trap). Then $\\Delta\\phi = 2\\pi\\delta/\\lambda + \\Delta\\phi_{\\rm inv}$."
+      "Path-difference working rule: $\\delta = |r_2 - r_1|$ plus any extra inversion (phase changes on reflection \u2014 closed end of pipe adds $\\pi$ to pressure wave... reflection at rigid wall inverts the PRESSURE wave, i.e. pressure phase jump $\\pi$, displacement phase jump 0 \u2014 a classic trap). Then $\\Delta\\phi = 2\\pi\\delta/\\lambda + \\Delta\\phi_{\\mathrm{inv}}$."
      ],
      [
       "p",
@@ -2037,7 +2037,7 @@
     "items": [
      [
       "why",
-      "sound from two speakers adds as pressures at the eardrum: $\\Delta P = \\Delta P_1 + \\Delta P_2$; intensities do NOT add where waves are coherent (fixed phase relation) \u2014 only the amplitude sum, then $I = (\\Delta P_{\\rm tot})^2/2\\rho v$; for incoherent sources (random phases) intensities add."
+      "sound from two speakers adds as pressures at the eardrum: $\\Delta P = \\Delta P_1 + \\Delta P_2$; intensities do NOT add where waves are coherent (fixed phase relation) \u2014 only the amplitude sum, then $I = (\\Delta P_{\\mathrm{tot}})^2/2\\rho v$; for incoherent sources (random phases) intensities add."
      ],
      [
       "check",
@@ -2071,7 +2071,7 @@
      ],
      [
       "check",
-      "extremes: $s_1 = 3s_2$ (in phase): $I = (4s_2)^2/(s_2^2$-scale$) = 16/10 = 1.6\\times$ single-sum-of-intensities... precisely: $I_{\\rm coh} = (3+1)^2 I_0 = 16I_0$ vs $I_{\\rm incoh} = 9 + 1 = 10I_0$: +2 dB difference \u2014 quantifying \"almost incoherent\"."
+      "extremes: $s_1 = 3s_2$ (in phase): $I = (4s_2)^2/(s_2^2$-scale$) = 16/10 = 1.6\\times$ single-sum-of-intensities... precisely: $I_{\\mathrm{coh}} = (3+1)^2 I_0 = 16I_0$ vs $I_{\\mathrm{incoh}} = 9 + 1 = 10I_0$: +2 dB difference \u2014 quantifying \"almost incoherent\"."
      ]
     ]
    },
@@ -2125,7 +2125,7 @@
     "items": [
      [
       "p",
-      "(b) Pressure amplitudes 0.3 Pa and 0.3 Pa with $\\Delta\\phi = 60\u00b0$: $a = \\sqrt{0.09+0.09+2\\cdot 0.09\\cdot 0.5} = 0.52$ Pa; $I/I_{\\rm one} = (0.52/0.3)^2 = 3$... three times ONE source intensity; vs incoherent sum 2x."
+      "(b) Pressure amplitudes 0.3 Pa and 0.3 Pa with $\\Delta\\phi = 60\u00b0$: $a = \\sqrt{0.09+0.09+2\\cdot 0.09\\cdot 0.5} = 0.52$ Pa; $I/I_{\\mathrm{one}} = (0.52/0.3)^2 = 3$... three times ONE source intensity; vs incoherent sum 2x."
      ],
      [
       "p",
@@ -2200,7 +2200,7 @@
     "items": [
      [
       "p",
-      "With the source covering $f = 340$\u2013512 Hz range and tube path difference swept, the listener hears the level pulsing as the slider moves; counting nulls over a slider range $x$ gives $\\delta_{\\rm span} = 2x = N\\lambda/2$... $N$ nulls in displacement $x$: $\\lambda = 4x/N$... precisely: consecutive nulls at $\\lambda/2$ displacement: $\\lambda = 2\\cdot(2x/N)$? Let: displacement between two nulls $= d$: $\\lambda = 2d$ always \u2014 safest formula."
+      "With the source covering $f = 340$\u2013512 Hz range and tube path difference swept, the listener hears the level pulsing as the slider moves; counting nulls over a slider range $x$ gives $\\delta_{\\mathrm{span}} = 2x = N\\lambda/2$... $N$ nulls in displacement $x$: $\\lambda = 4x/N$... precisely: consecutive nulls at $\\lambda/2$ displacement: $\\lambda = 2\\cdot(2x/N)$? Let: displacement between two nulls $= d$: $\\lambda = 2d$ always \u2014 safest formula."
      ],
      [
       "p",
@@ -2217,7 +2217,7 @@
      ],
      [
       "p",
-      "Quincke tube in a different gas: $v_{\\rm gas} = 2 f \\Delta L_{\\min-min}$ \u2014 direct speed measurement without end corrections (the arms share the same open junctions)."
+      "Quincke tube in a different gas: $v_{\\mathrm{gas}} = 2 f \\Delta L_{\\min-min}$ \u2014 direct speed measurement without end corrections (the arms share the same open junctions)."
      ],
      [
       "p",
@@ -2384,7 +2384,7 @@
     "items": [
      [
       "p",
-      "Laser Doppler / acoustic Doppler velocimetry: send $f_0$ to a moving particle; received $f'$; beat with a reference measures $f' - f_0 \\propto v_{\\rm particle}$ directly \u2014 the working principle of police radar AND ultrasound flowmeters (Oly 08 building block)."
+      "Laser Doppler / acoustic Doppler velocimetry: send $f_0$ to a moving particle; received $f'$; beat with a reference measures $f' - f_0 \\propto v_{\\mathrm{particle}}$ directly \u2014 the working principle of police radar AND ultrasound flowmeters (Oly 08 building block)."
      ],
      [
       "p",
@@ -2738,7 +2738,7 @@
     "items": [
      [
       "trap",
-      "Traps: (i) \"open pipe\" in exam problems sometimes means a pipe closed at ONE end by context \u2014 read ends! (ii) end correction applies at BOTH ends (JEE-19): effective $L_{\\rm eff} = L + 2e$ vs closed $L + e$ \u2014 this shifts every frequency down ~1\u20133%. (iii) comparing with strings: string fixed-fixed: $f_n = n v/2L$ identical ladder to open pipe (different wave type but same mode count) \u2014 the mathematics is shared."
+      "Traps: (i) \"open pipe\" in exam problems sometimes means a pipe closed at ONE end by context \u2014 read ends! (ii) end correction applies at BOTH ends (JEE-19): effective $L_{\\mathrm{eff}} = L + 2e$ vs closed $L + e$ \u2014 this shifts every frequency down ~1\u20133%. (iii) comparing with strings: string fixed-fixed: $f_n = n v/2L$ identical ladder to open pipe (different wave type but same mode count) \u2014 the mathematics is shared."
      ],
      [
       "why",
@@ -2787,7 +2787,7 @@
      ],
      [
       "check",
-      "End correction shift: open pipe $f_1 = v/[2(L + 2e)]$; with $r = 2$ cm, $e = 1.2$ cm, $L = 85$ cm: $L_{\\rm eff} = 0.874$ m gives $f_1 = 343/1.748 = 196.2$ Hz vs $201.8$ Hz uncorrected ($-2.75\\%$)."
+      "End correction shift: open pipe $f_1 = v/[2(L + 2e)]$; with $r = 2$ cm, $e = 1.2$ cm, $L = 85$ cm: $L_{\\mathrm{eff}} = 0.874$ m gives $f_1 = 343/1.748 = 196.2$ Hz vs $201.8$ Hz uncorrected ($-2.75\\%$)."
      ]
     ]
    },
@@ -2796,7 +2796,7 @@
     "items": [
      [
       "p",
-      "(a) Pipe in helium vs air (same T): frequencies scale with $v$: $f_{\\rm He}/f_{\\rm air} = v_{\\rm He}/v_{\\rm air} = 2.93$ \u2014 pitch jumps nearly two octaves... 1.56 octaves; classic demonstration (party voice). (b) Temperature: a pipe tuned to 300 Hz at 20 C: at 30 C: $f = 300\\sqrt{303/293} = 305.1$ Hz \u2014 out of tune by 5 Hz. (c) Pipe length for a target: \"design an open pipe for 440 Hz at 25 C\":"
+      "(a) Pipe in helium vs air (same T): frequencies scale with $v$: $f_{\\mathrm{He}}/f_{\\mathrm{air}} = v_{\\mathrm{He}}/v_{\\mathrm{air}} = 2.93$ \u2014 pitch jumps nearly two octaves... 1.56 octaves; classic demonstration (party voice). (b) Temperature: a pipe tuned to 300 Hz at 20 C: at 30 C: $f = 300\\sqrt{303/293} = 305.1$ Hz \u2014 out of tune by 5 Hz. (c) Pipe length for a target: \"design an open pipe for 440 Hz at 25 C\":"
      ],
      [
       "p",
@@ -2817,11 +2817,11 @@
      ],
      [
       "p",
-      "Given pipe type and length: (1) Write end conditions as node/antinode pattern. (2) Count quarter waves fitting: mixed ends: $L = (2n-1)\\lambda/4$; same ends: $L = n\\lambda/2$. (3) $f = v/\\lambda$; add end correction $L \\to L_{\\rm eff}$ if needed. (4) Label: harmonic number $=$ multiple of $f_1$; overtone number $=$ harmonic number $- 1$ (the trap!). (5) If not given: $v = \\sqrt{\\gamma RT/M}$ at working temperature."
+      "Given pipe type and length: (1) Write end conditions as node/antinode pattern. (2) Count quarter waves fitting: mixed ends: $L = (2n-1)\\lambda/4$; same ends: $L = n\\lambda/2$. (3) $f = v/\\lambda$; add end correction $L \\to L_{\\mathrm{eff}}$ if needed. (4) Label: harmonic number $=$ multiple of $f_1$; overtone number $=$ harmonic number $- 1$ (the trap!). (5) If not given: $v = \\sqrt{\\gamma RT/M}$ at working temperature."
      ],
      [
       "p",
-      "Generalise: 3D rooms: $f = \\frac{v}{2}\\sqrt{(n_x/L_x)^2 + ...}$; string: $f = n\\sqrt{T/\\mu}/2L$; rods: $f = n v_{\\rm rod}/2L$ \u2014 same ladder mathematics with different $v$."
+      "Generalise: 3D rooms: $f = \\frac{v}{2}\\sqrt{(n_x/L_x)^2 + ...}$; string: $f = n\\sqrt{T/\\mu}/2L$; rods: $f = n v_{\\mathrm{rod}}/2L$ \u2014 same ladder mathematics with different $v$."
      ]
     ]
    },
@@ -2834,7 +2834,7 @@
      ],
      [
       "p",
-      "The displacement antinode sits slightly OUTSIDE the physical mouth of the pipe: the oscillating air just beyond the opening participates in the inertia. The effective length is longer than the cut length: $L_{\\rm eff} = L + e$ with $e \\approx 0.6r$ for an unflanged (sharp) opening, $e \\approx 0.85r$ for a flanged (flared/baffled) opening; $r$ = pipe radius. Source worked (Q4):"
+      "The displacement antinode sits slightly OUTSIDE the physical mouth of the pipe: the oscillating air just beyond the opening participates in the inertia. The effective length is longer than the cut length: $L_{\\mathrm{eff}} = L + e$ with $e \\approx 0.6r$ for an unflanged (sharp) opening, $e \\approx 0.85r$ for a flanged (flared/baffled) opening; $r$ = pipe radius. Source worked (Q4):"
      ],
      [
       "p",
@@ -2862,7 +2862,7 @@
     "items": [
      [
       "p",
-      "Closed pipe: one open end $\\Rightarrow L_{\\rm eff} = L + e$; open pipe: two $\\Rightarrow L + 2e$. All frequencies fall slightly: $f_{\\rm true} = f_{\\rm geo}\\cdot L/L_{\\rm eff}$ (approximately $f(1 - e/L)$ for small correction). Relative size: for $r = 2$ cm, $e = 1.2$ cm is 1.4% of 85 cm \u2014 measurable; for lab pipes $r \\sim 1.5$ cm, $L \\sim 0.3$ m: correction 3%."
+      "Closed pipe: one open end $\\Rightarrow L_{\\mathrm{eff}} = L + e$; open pipe: two $\\Rightarrow L + 2e$. All frequencies fall slightly: $f_{\\mathrm{true}} = f_{\\mathrm{geo}}\\cdot L/L_{\\mathrm{eff}}$ (approximately $f(1 - e/L)$ for small correction). Relative size: for $r = 2$ cm, $e = 1.2$ cm is 1.4% of 85 cm \u2014 measurable; for lab pipes $r \\sim 1.5$ cm, $L \\sim 0.3$ m: correction 3%."
      ],
      [
       "p",
@@ -2901,7 +2901,7 @@
     "items": [
      [
       "p",
-      "Helmholtz resonator note: a bottle with neck has its own end-corrected neck formula: $f = \\frac{v}{2\\pi}\\sqrt{A/(V L_{\\rm eff})}$ with $L_{\\rm eff} = L_{\\rm neck} + 1.5r$ \u2014 different formula family (Oly 05), same $e$ physics."
+      "Helmholtz resonator note: a bottle with neck has its own end-corrected neck formula: $f = \\frac{v}{2\\pi}\\sqrt{A/(V L_{\\mathrm{eff}})}$ with $L_{\\mathrm{eff}} = L_{\\mathrm{neck}} + 1.5r$ \u2014 different formula family (Oly 05), same $e$ physics."
      ],
      [
       "check",
@@ -2909,7 +2909,7 @@
      ],
      [
       "p",
-      "(a) \"An open pipe of length 50 cm, radius 2 cm sounds at f; find f with e\": $L_{\\rm eff} = 50 + 2(1.2) = 52.4$ cm: $f = 343/1.048 = 327$ Hz vs 343 uncorrected: 4.7% low... check: L_eff = 0.524, f = v/2L_eff = 327 ok. (b) \"A closed pipe 30 cm, r = 1.5 cm, at 30 C\": $v = 348.2$, $e = 0.9$ cm: $f = 348.2/(4\\times 0.309) = 282$ Hz. (c) \"Find r from measured shift\":"
+      "(a) \"An open pipe of length 50 cm, radius 2 cm sounds at f; find f with e\": $L_{\\mathrm{eff}} = 50 + 2(1.2) = 52.4$ cm: $f = 343/1.048 = 327$ Hz vs 343 uncorrected: 4.7% low... check: L_eff = 0.524, f = v/2L_eff = 327 ok. (b) \"A closed pipe 30 cm, r = 1.5 cm, at 30 C\": $v = 348.2$, $e = 0.9$ cm: $f = 348.2/(4\\times 0.309) = 282$ Hz. (c) \"Find r from measured shift\":"
      ]
     ]
    }
@@ -2933,7 +2933,7 @@
     "items": [
      [
       "p",
-      "open pipe f_geo = 400 (no e) vs measured 392: $L_{\\rm eff}/L = 400/392 = 1.0204$: $2e/L = 0.0204$: $e = 0.0102 L = 1.02$ cm for L = 1 m: $r = e/0.6 = 1.7$ cm."
+      "open pipe f_geo = 400 (no e) vs measured 392: $L_{\\mathrm{eff}}/L = 400/392 = 1.0204$: $2e/L = 0.0204$: $e = 0.0102 L = 1.02$ cm for L = 1 m: $r = e/0.6 = 1.7$ cm."
      ],
      [
       "p",
@@ -2950,7 +2950,7 @@
     "items": [
      [
       "p",
-      "(a) Ratio $f_{\\rm corrected}/f_{\\rm geo} = L/(L + e)$ (closed) or $L/(L + 2e)$ (open). (b) $r = 3$ cm flanged: $e = 2.55$ cm; open pipe $L = 1$ m: $L_{\\rm eff} = 1.051$ m: $f$ drops 4.8%. (c) Two pipes same $L$, $r_1 = 1$ cm, $r_2 = 3$ cm: open-open: $e$ ratio 3: frequency ratio $\\frac{L + 2(0.6)}{L + 2(1.8)} = \\frac{1.012}{1.036} = 0.977$ for L = 1 m: 2.3% apart: beat frequency at 300 Hz = 7 Hz."
+      "(a) Ratio $f_{\\mathrm{corrected}}/f_{\\mathrm{geo}} = L/(L + e)$ (closed) or $L/(L + 2e)$ (open). (b) $r = 3$ cm flanged: $e = 2.55$ cm; open pipe $L = 1$ m: $L_{\\mathrm{eff}} = 1.051$ m: $f$ drops 4.8%. (c) Two pipes same $L$, $r_1 = 1$ cm, $r_2 = 3$ cm: open-open: $e$ ratio 3: frequency ratio $\\frac{L + 2(0.6)}{L + 2(1.8)} = \\frac{1.012}{1.036} = 0.977$ for L = 1 m: 2.3% apart: beat frequency at 300 Hz = 7 Hz."
      ],
      [
       "p",
@@ -2958,7 +2958,7 @@
      ],
      [
       "p",
-      "the exact radiation end-impedance $Z_{\\rm end} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6ka]$ for unflanged pipe (low $ka$) \u2014 the imaginary part is the end correction, the real part is radiation resistance (Oly 03/05) \u2014 same physics seen through impedance."
+      "the exact radiation end-impedance $Z_{\\mathrm{end}} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6ka]$ for unflanged pipe (low $ka$) \u2014 the imaginary part is the end correction, the real part is radiation resistance (Oly 03/05) \u2014 same physics seen through impedance."
      ]
     ]
    },
@@ -3104,7 +3104,7 @@
      ],
      [
       "p",
-      "powder collects at DISPLACEMENT NODES of the gas (where the gas barely moves \u2014 acoustic streaming sweeps it there), spaced $\\lambda_{\\rm gas}/2$ apart. Read $d = \\lambda_{\\rm gas}/2$ directly with a ruler."
+      "powder collects at DISPLACEMENT NODES of the gas (where the gas barely moves \u2014 acoustic streaming sweeps it there), spaced $\\lambda_{\\mathrm{gas}}/2$ apart. Read $d = \\lambda_{\\mathrm{gas}}/2$ directly with a ruler."
      ]
     ]
    },
@@ -3113,11 +3113,11 @@
     "items": [
      [
       "p",
-      "Clamped-centre Kundt rod: node at midpoint, antinodes at free ends $\\Rightarrow \\lambda_{\\rm rod} = 2L_{\\rm rod}$, $f = v_{\\rm rod}/(2L_{\\rm rod})$. Matching gas heap spacing $d = \\lambda_{\\rm gas}/2$ gives $v_{\\rm gas} = v_{\\rm rod}\\,d/L_{\\rm rod}$ (e.g. $5000 \\times 0.08 / 1.0 = 400$ m/s)."
+      "Clamped-centre Kundt rod: node at midpoint, antinodes at free ends $\\Rightarrow \\lambda_{\\mathrm{rod}} = 2L_{\\mathrm{rod}}$, $f = v_{\\mathrm{rod}}/(2L_{\\mathrm{rod}})$. Matching gas heap spacing $d = \\lambda_{\\mathrm{gas}}/2$ gives $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}\\,d/L_{\\mathrm{rod}}$ (e.g. $5000 \\times 0.08 / 1.0 = 400$ m/s)."
      ],
      [
       "p",
-      "with $d = \\lambda/2$ and matching frequency: $f = v_{\\rm rod}/(2L_{\\rm rod}) = 5000/2 = 2500$ Hz; $\\lambda_{\\rm gas} = 2d = 0.16$ m; $v_{\\rm gas} = 2500\\times 0.16 = 400$ m/s ok (source chain: $v_{\\rm gas} = v_{\\rm rod}\\cdot d/L_{\\rm rod}$ \u2014 consistent with $f = v_{\\rm rod}/2L_{\\rm rod}$ and $\\lambda_{\\rm gas} = 2d$)."
+      "with $d = \\lambda/2$ and matching frequency: $f = v_{\\mathrm{rod}}/(2L_{\\mathrm{rod}}) = 5000/2 = 2500$ Hz; $\\lambda_{\\mathrm{gas}} = 2d = 0.16$ m; $v_{\\mathrm{gas}} = 2500\\times 0.16 = 400$ m/s ok (source chain: $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}\\cdot d/L_{\\mathrm{rod}}$ \u2014 consistent with $f = v_{\\mathrm{rod}}/2L_{\\mathrm{rod}}$ and $\\lambda_{\\mathrm{gas}} = 2d$)."
      ]
     ]
    },
@@ -3126,7 +3126,7 @@
     "items": [
      [
       "p",
-      "Full formula chain: $f = \\dfrac{v_{\\rm rod}}{2L_{\\rm rod}} = \\dfrac{v_{\\rm gas}}{2d}$ $\\Rightarrow$ $v_{\\rm gas} = v_{\\rm rod}\\dfrac{d}{L_{\\rm rod}}$. Measure $d$ (heap spacing), know $L_{\\rm rod}$ and $v_{\\rm rod}$ (or measure $v_{\\rm rod}$ separately): get $v_{\\rm gas}$. The method is elegant because the same $f$ drives both media \u2014 no fork calibration needed."
+      "Full formula chain: $f = \\dfrac{v_{\\mathrm{rod}}}{2L_{\\mathrm{rod}}} = \\dfrac{v_{\\mathrm{gas}}}{2d}$ $\\Rightarrow$ $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}\\dfrac{d}{L_{\\mathrm{rod}}}$. Measure $d$ (heap spacing), know $L_{\\mathrm{rod}}$ and $v_{\\mathrm{rod}}$ (or measure $v_{\\mathrm{rod}}$ separately): get $v_{\\mathrm{gas}}$. The method is elegant because the same $f$ drives both media \u2014 no fork calibration needed."
      ],
      [
       "why",
@@ -3154,11 +3154,11 @@
     "items": [
      [
       "check",
-      "source numbers once more: $v_{\\rm rod} = 5\\times 10^{3}$ m/s (steel-ish, L = 1 m): $f = 2.5$ kHz; $d = 8$ cm: $\\lambda = 16$ cm; $v_{\\rm gas} = 2.5\\times 10^{3}\\times 0.16 = 400$ m/s ok (hot air: $v = 331\\sqrt{T/273} = 400 \\Rightarrow T = 398$ K = 125 C \u2014 plausibly warm gas in the tube)."
+      "source numbers once more: $v_{\\mathrm{rod}} = 5\\times 10^{3}$ m/s (steel-ish, L = 1 m): $f = 2.5$ kHz; $d = 8$ cm: $\\lambda = 16$ cm; $v_{\\mathrm{gas}} = 2.5\\times 10^{3}\\times 0.16 = 400$ m/s ok (hot air: $v = 331\\sqrt{T/273} = 400 \\Rightarrow T = 398$ K = 125 C \u2014 plausibly warm gas in the tube)."
      ],
      [
       "p",
-      "Rod clamped at middle: boundary = node at middle, free ends = antinodes: fundamental: $\\lambda_{\\rm rod} = 2L_{\\rm rod}$ (half-wave with antinode-antinode: the clamped middle is the node: pattern: antinode-node-antinode over the rod = one full... wait: free-free rod with central node: the half-rod (L/2) is node-to-antinode = quarter wave: $\\lambda/4 = L/2$: $\\lambda = 2L$ ok). So $f = v_{\\rm rod}/\\lambda = v_{\\rm rod}/(2L_{\\rm rod})$ ok. Rubbing lengthwise excites longitudinal modes."
+      "Rod clamped at middle: boundary = node at middle, free ends = antinodes: fundamental: $\\lambda_{\\mathrm{rod}} = 2L_{\\mathrm{rod}}$ (half-wave with antinode-antinode: the clamped middle is the node: pattern: antinode-node-antinode over the rod = one full... wait: free-free rod with central node: the half-rod (L/2) is node-to-antinode = quarter wave: $\\lambda/4 = L/2$: $\\lambda = 2L$ ok). So $f = v_{\\mathrm{rod}}/\\lambda = v_{\\mathrm{rod}}/(2L_{\\mathrm{rod}})$ ok. Rubbing lengthwise excites longitudinal modes."
      ]
     ]
    },
@@ -3167,7 +3167,7 @@
     "items": [
      [
       "p",
-      "Alternative: rod clamped at END: $\\lambda = 4L$: $f = v/4L$ \u2014 half as loud/low; exam variants specify the clamping. Any of these can drive the tube: just use the actual $f$ in $v_{\\rm gas} = f\\lambda_{\\rm gas} = 2fd$."
+      "Alternative: rod clamped at END: $\\lambda = 4L$: $f = v/4L$ \u2014 half as loud/low; exam variants specify the clamping. Any of these can drive the tube: just use the actual $f$ in $v_{\\mathrm{gas}} = f\\lambda_{\\mathrm{gas}} = 2fd$."
      ],
      [
       "p",
@@ -3175,7 +3175,7 @@
      ],
      [
       "check",
-      "dimensional: $v_{\\rm gas} = v_{\\rm rod} d/L_{\\rm rod}$: m/s = m/s \u00d7 m/m ok; extreme: $d = L_{\\rm rod}$: $v_{\\rm gas} = v_{\\rm rod}$: the heap spacing equals rod half-wavelength... $\\lambda_{\\rm gas} = 2d = 2L$: $v_{\\rm gas} = f\\cdot 2L = v_{\\rm rod}$ ok consistent."
+      "dimensional: $v_{\\mathrm{gas}} = v_{\\mathrm{rod}} d/L_{\\mathrm{rod}}$: m/s = m/s \u00d7 m/m ok; extreme: $d = L_{\\mathrm{rod}}$: $v_{\\mathrm{gas}} = v_{\\mathrm{rod}}$: the heap spacing equals rod half-wavelength... $\\lambda_{\\mathrm{gas}} = 2d = 2L$: $v_{\\mathrm{gas}} = f\\cdot 2L = v_{\\mathrm{rod}}$ ok consistent."
      ]
     ]
    },
@@ -3184,11 +3184,11 @@
     "items": [
      [
       "p",
-      "(a) Rod of aluminium $v = 5100$, $L = 0.5$ m clamped middle: $f = 5.1$ kHz; heaps 2.5 cm: $\\lambda = 5$ cm: $v_{\\rm gas} = 5100\\times 0.025/0.5 = 255$ m/s (cold heavy gas? $T$: 255 = $331\\sqrt{T/273}$: $T = 164$ K \u2014 a cold CO2-ish experiment; or wrong clamp assumption!). (b) \"Dust heaps 4 cm apart in hydrogen at 0 C ($v = 1260$): find f\": $f = v/2d = 1575$ Hz."
+      "(a) Rod of aluminium $v = 5100$, $L = 0.5$ m clamped middle: $f = 5.1$ kHz; heaps 2.5 cm: $\\lambda = 5$ cm: $v_{\\mathrm{gas}} = 5100\\times 0.025/0.5 = 255$ m/s (cold heavy gas? $T$: 255 = $331\\sqrt{T/273}$: $T = 164$ K \u2014 a cold CO2-ish experiment; or wrong clamp assumption!). (b) \"Dust heaps 4 cm apart in hydrogen at 0 C ($v = 1260$): find f\": $f = v/2d = 1575$ Hz."
      ],
      [
       "p",
-      "Modern reading: the Kundt tube is the acoustical analogue of the Melde experiment; dust visualisation = node mapping; the same apparatus measures gas composition via $v_{\\rm gas}$ (from $M_{\\rm eff}$, JEE-09) and even $\\gamma$ (with two gases)."
+      "Modern reading: the Kundt tube is the acoustical analogue of the Melde experiment; dust visualisation = node mapping; the same apparatus measures gas composition via $v_{\\mathrm{gas}}$ (from $M_{\\mathrm{eff}}$, JEE-09) and even $\\gamma$ (with two gases)."
      ]
     ]
    },
@@ -3201,7 +3201,7 @@
      ],
      [
       "p",
-      "Kundt: directly visualises $\\lambda/2$ (dust heaps), needs rod + tube + powder, measures $v_{\\rm gas}$ via rod frequency; resonance tube: finds resonance LENGTHS of a fixed fork, computes $\\lambda = 2(l_2 - l_1)$; both give $v$; both have factor-2 traps (heap spacing $= \\lambda/2$; length spacing $= \\lambda/2$)."
+      "Kundt: directly visualises $\\lambda/2$ (dust heaps), needs rod + tube + powder, measures $v_{\\mathrm{gas}}$ via rod frequency; resonance tube: finds resonance LENGTHS of a fixed fork, computes $\\lambda = 2(l_2 - l_1)$; both give $v$; both have factor-2 traps (heap spacing $= \\lambda/2$; length spacing $= \\lambda/2$)."
      ],
      [
       "p",
@@ -3276,7 +3276,7 @@
      ],
      [
       "p",
-      "add for observer speed when approaching\" \u2014 but mixed cases slip; the robust method is always: (1) write $\\lambda'$ for source motion or $v_{\\rm rel}$ for observer motion; (2) $f' = v_{\\rm rel}/\\lambda'$; (3) specialise. Oly-06 gives the sign-free formula."
+      "add for observer speed when approaching\" \u2014 but mixed cases slip; the robust method is always: (1) write $\\lambda'$ for source motion or $v_{\\mathrm{rel}}$ for observer motion; (2) $f' = v_{\\mathrm{rel}}/\\lambda'$; (3) specialise. Oly-06 gives the sign-free formula."
      ]
     ]
    }
@@ -3659,7 +3659,7 @@
     "items": [
      [
       "p",
-      "Pass-by speed formula: if a horn drops from $f_+ = 460$ Hz (approach) to $f_- = 386$ Hz (recede) at $v = 343$ m/s, $u = v\\dfrac{f_+ - f_-}{f_+ + f_-} = 343\\times\\dfrac{74}{846} = 30.0$ m/s and $f_{\\rm true} = \\dfrac{2 f_+ f_-}{f_+ + f_-} = 419.8$ Hz."
+      "Pass-by speed formula: if a horn drops from $f_+ = 460$ Hz (approach) to $f_- = 386$ Hz (recede) at $v = 343$ m/s, $u = v\\dfrac{f_+ - f_-}{f_+ + f_-} = 343\\times\\dfrac{74}{846} = 30.0$ m/s and $f_{\\mathrm{true}} = \\dfrac{2 f_+ f_-}{f_+ + f_-} = 419.8$ Hz."
      ],
      [
       "p",
@@ -3706,7 +3706,7 @@
      ],
      [
       "p",
-      "Speeds are measured RELATIVE TO THE MEDIUM (air), not the ground, in the classical formulas \u2014 subtle: \"source moves at 30 m/s in a 10 m/s tailwind\": $u_s$ in the formula is the speed relative to AIR (20 m/s if tailwind... if the wind moves the air frame: source speed in the air frame = 30 \u2212 10 = 20). Exam convention usually ignores wind for $u$ and sets $v_{\\rm eff}$ (JEE-25); be explicit."
+      "Speeds are measured RELATIVE TO THE MEDIUM (air), not the ground, in the classical formulas \u2014 subtle: \"source moves at 30 m/s in a 10 m/s tailwind\": $u_s$ in the formula is the speed relative to AIR (20 m/s if tailwind... if the wind moves the air frame: source speed in the air frame = 30 \u2212 10 = 20). Exam convention usually ignores wind for $u$ and sets $v_{\\mathrm{eff}}$ (JEE-25); be explicit."
      ],
      [
       "why",
@@ -3747,11 +3747,11 @@
     "items": [
      [
       "p",
-      "In the moving air rest frame, S moves toward O at $u_{s,\\rm air} = u_s - w$, while O moves INTO the oncoming wind (toward S) at $u_{o,\\rm air} = u_o + w$."
+      "In the moving air rest frame, S moves toward O at $u_{s,\\mathrm{air}} = u_s - w$, while O moves INTO the oncoming wind (toward S) at $u_{o,\\mathrm{air}} = u_o + w$."
      ],
      [
       "p",
-      "Substituting $(u_{s,\\rm air}, u_{o,\\rm air})$ into the still-air formula gives $f' = f\\dfrac{v + (u_o + w)}{v - (u_s - w)} = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$: both frames agree identically."
+      "Substituting $(u_{s,\\mathrm{air}}, u_{o,\\mathrm{air}})$ into the still-air formula gives $f' = f\\dfrac{v + (u_o + w)}{v - (u_s - w)} = f\\dfrac{(v + w) + u_o}{(v + w) - u_s}$: both frames agree identically."
      ]
     ]
    },
@@ -3773,7 +3773,7 @@
     "items": [
      [
       "trap",
-      "Classic sign error: writing $u_{o,\\rm air} = u_o - w$ forgets that a stationary observer faces a headwind of $+w$ toward the upstream source."
+      "Classic sign error: writing $u_{o,\\mathrm{air}} = u_o - w$ forgets that a stationary observer faces a headwind of $+w$ toward the upstream source."
      ],
      [
       "p",
@@ -3902,11 +3902,11 @@
     "items": [
      [
       "p",
-      "Adopted convention (source): $f' = f\\dfrac{v_{\\rm eff} + u_o}{v_{\\rm eff} - u_s}$ with $v_{\\rm eff} = v + w$ (w positive when wind blows from source toward observer), all $u$ positive toward each other. Travel time legs: use $v_{\\rm eff}$ along each direction of travel (against wind: $v - w$). Echo round trip along wind: $t = 2Lv/(v^2 - w^2)$."
+      "Adopted convention (source): $f' = f\\dfrac{v_{\\mathrm{eff}} + u_o}{v_{\\mathrm{eff}} - u_s}$ with $v_{\\mathrm{eff}} = v + w$ (w positive when wind blows from source toward observer), all $u$ positive toward each other. Travel time legs: use $v_{\\mathrm{eff}}$ along each direction of travel (against wind: $v - w$). Echo round trip along wind: $t = 2Lv/(v^2 - w^2)$."
      ],
      [
       "p",
-      "Air-frame alternative (Oly 06 vector form): measure $u_s, u_o$ relative to the air; $f' = f\\frac{v + u_{o,\\rm air}}{v - u_{s,\\rm air}}$; both conventions agree on fixed parties (no shift) and on pure wave-speed problems; they differ on \"who moves with the wind\" cases \u2014 for exams, pick one and say so."
+      "Air-frame alternative (Oly 06 vector form): measure $u_s, u_o$ relative to the air; $f' = f\\frac{v + u_{o,\\mathrm{air}}}{v - u_{s,\\mathrm{air}}}$; both conventions agree on fixed parties (no shift) and on pure wave-speed problems; they differ on \"who moves with the wind\" cases \u2014 for exams, pick one and say so."
      ]
     ]
    },
@@ -4255,7 +4255,7 @@
      ],
      [
       "why",
-      "the cone is the sound analogue of a boat wake or Cherenkov radiation: any emitter outrunning its own disturbance field piles the disturbance on a tangent cone of angle $\\sin\\alpha = v_{\\rm disturbance}/v_{\\rm emitter}$."
+      "the cone is the sound analogue of a boat wake or Cherenkov radiation: any emitter outrunning its own disturbance field piles the disturbance on a tangent cone of angle $\\sin\\alpha = v_{\\mathrm{disturbance}}/v_{\\mathrm{emitter}}$."
      ],
      [
       "check",
@@ -4361,7 +4361,7 @@
     "items": [
      [
       "p",
-      "(b) Minimum speed for a boom to reach an observer 1 km along-track from the overhead point at 5 km altitude: need $\\sqrt{M^2-1} \\ge 1/5$: $M \\ge 1.02$: $u_s \\ge 350$ m/s. (c) Visual-to-boom delay for $M = 2.5$ at 8 km: $x = 8\\sqrt{5.25} = 18.3$ km: $t = 18.3/850 = 21.6$ s."
+      "(b) Minimum speed for a boom to reach an observer 1 km along-track from the overhead point at 5 km altitude: need $\\sqrt{M^2-1} \\geqslant 1/5$: $M \\geqslant 1.02$: $u_s \\geqslant 350$ m/s. (c) Visual-to-boom delay for $M = 2.5$ at 8 km: $x = 8\\sqrt{5.25} = 18.3$ km: $t = 18.3/850 = 21.6$ s."
      ],
      [
       "why",
@@ -4406,7 +4406,7 @@
      ],
      [
       "p",
-      "a loudspeaker cone must drive air, so its mechanical impedance should be near $Z_{\\rm air}A$ over its area; the horn shape (Oly 09) is an impedance transformer."
+      "a loudspeaker cone must drive air, so its mechanical impedance should be near $Z_{\\mathrm{air}}A$ over its area; the horn shape (Oly 09) is an impedance transformer."
      ]
     ]
    },
@@ -4436,7 +4436,7 @@
      ],
      [
       "p",
-      "Loudspeaker design: a bare cone radiates into air with efficiency $\\sim 2\\rho_{\\rm air} v / (\\rho_{\\rm cone} v_{\\rm cone})$-scale mismatch... practical fix: use a large-area light cone (low mechanical $Z$) or a horn (Oly 09). The ear solves the reverse problem: air $Z = 412$ to cochlear fluid $Z = 1.5\\times 10^{6}$:"
+      "Loudspeaker design: a bare cone radiates into air with efficiency $\\sim 2\\rho_{\\mathrm{air}} v / (\\rho_{\\mathrm{cone}} v_{\\mathrm{cone}})$-scale mismatch... practical fix: use a large-area light cone (low mechanical $Z$) or a horn (Oly 09). The ear solves the reverse problem: air $Z = 412$ to cochlear fluid $Z = 1.5\\times 10^{6}$:"
      ]
     ]
    }
@@ -4468,7 +4468,7 @@
      ],
      [
       "p",
-      "specific acoustic impedance vs characteristic: $Z = \\rho v$ is per unit area (rayl); mechanical impedance of a panel $Z_{\\rm mech} = \\Delta P A/u = Z A$ in ohms-kg/s \u2014 the driving-point quantity for motors and diaphragms."
+      "specific acoustic impedance vs characteristic: $Z = \\rho v$ is per unit area (rayl); mechanical impedance of a panel $Z_{\\mathrm{mech}} = \\Delta P A/u = Z A$ in ohms-kg/s \u2014 the driving-point quantity for motors and diaphragms."
      ]
     ]
    },
@@ -4477,7 +4477,7 @@
     "items": [
      [
       "p",
-      "(a) Same intensity in air and water: pressure amplitudes scale as $\\sqrt Z$: $\\Delta P_{\\rm water}/\\Delta P_{\\rm air} = \\sqrt{1.48\\times 10^{6}/412} = 60$; underwater sound of the same $I$ has 60x the pressure swing. (b) $s_0$ at same $I$: $s_0 \\propto 1/\\sqrt{Z\\omega^2}$-ish:"
+      "(a) Same intensity in air and water: pressure amplitudes scale as $\\sqrt Z$: $\\Delta P_{\\mathrm{water}}/\\Delta P_{\\mathrm{air}} = \\sqrt{1.48\\times 10^{6}/412} = 60$; underwater sound of the same $I$ has 60x the pressure swing. (b) $s_0$ at same $I$: $s_0 \\propto 1/\\sqrt{Z\\omega^2}$-ish:"
      ],
      [
       "p",
@@ -4606,7 +4606,7 @@
     "items": [
      [
       "p",
-      "A layer of thickness $\\lambda/4$ and impedance $Z_l = \\sqrt{Z_1 Z_2}$ cancels reflection at one frequency: the two reflected waves from the layer faces interfere destructively when $Z_l^2 = Z_1 Z_2$ (anti-reflection coating; the transformer equation $Z_{\\rm in} = Z_l^2/Z_{\\rm load}$ \u2014 acoustic transmission line theory). Exam version:"
+      "A layer of thickness $\\lambda/4$ and impedance $Z_l = \\sqrt{Z_1 Z_2}$ cancels reflection at one frequency: the two reflected waves from the layer faces interfere destructively when $Z_l^2 = Z_1 Z_2$ (anti-reflection coating; the transformer equation $Z_{\\mathrm{in}} = Z_l^2/Z_{\\mathrm{load}}$ \u2014 acoustic transmission line theory). Exam version:"
      ],
      [
       "p",
@@ -4636,7 +4636,7 @@
     "items": [
      [
       "check",
-      "coating demo: glass coated so $Z_l = \\sqrt{Z_{\\rm air} Z_{\\rm glass}}$: $Z_l = 2.3\\times 10^{5}$ rayl \u2014 e.g. a porous layer of the right density and speed; quarter-wave at 1 kHz: thickness $v_l/4000$... with $v_l = 1000$ m/s: 25 cm \u2014 unrealistically thick for air-acoustics at 1 kHz: matching layers are practical in ultrasound (MHz, mm scales) ok."
+      "coating demo: glass coated so $Z_l = \\sqrt{Z_{\\mathrm{air}} Z_{\\mathrm{glass}}}$: $Z_l = 2.3\\times 10^{5}$ rayl \u2014 e.g. a porous layer of the right density and speed; quarter-wave at 1 kHz: thickness $v_l/4000$... with $v_l = 1000$ m/s: 25 cm \u2014 unrealistically thick for air-acoustics at 1 kHz: matching layers are practical in ultrasound (MHz, mm scales) ok."
      ],
      [
       "p",
@@ -4677,7 +4677,7 @@
     "items": [
      [
       "p",
-      "Soft-end subtlety: the open end is NOT exactly $Z = 0$: the radiation impedance $Z_{\\rm end} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6 ka]$-ish (Oly 05): real part radiates (why $R < 1$ slightly), imaginary part is the end correction $e = 0.6a$ (JEE-19) \u2014 the three topics (reflection, end correction, radiation resistance) are one impedance expansion."
+      "Soft-end subtlety: the open end is NOT exactly $Z = 0$: the radiation impedance $Z_{\\mathrm{end}} = \\rho v[\\frac{1}{4}(ka)^2 + i\\cdot 0.6 ka]$-ish (Oly 05): real part radiates (why $R < 1$ slightly), imaginary part is the end correction $e = 0.6a$ (JEE-19) \u2014 the three topics (reflection, end correction, radiation resistance) are one impedance expansion."
      ],
      [
       "check",
@@ -4740,7 +4740,7 @@
      ],
      [
       "p",
-      "A pipe of length $L$ driven at one end presents an input impedance $Z_{\\rm in}$ that depends on the far-end load. Lossless line theory: $Z_{\\rm in} = Z_0\\dfrac{Z_L + i Z_0\\tan kL}{Z_0 + i Z_L\\tan kL}$ with $Z_0 = \\rho v/S$ the characteristic line impedance (per area $S$), $Z_L$ the load. Resonance (maximum amplitude for a given drive) occurs when $Z_{\\rm in}$ is minimum (open-open:"
+      "A pipe of length $L$ driven at one end presents an input impedance $Z_{\\mathrm{in}}$ that depends on the far-end load. Lossless line theory: $Z_{\\mathrm{in}} = Z_0\\dfrac{Z_L + i Z_0\\tan kL}{Z_0 + i Z_L\\tan kL}$ with $Z_0 = \\rho v/S$ the characteristic line impedance (per area $S$), $Z_L$ the load. Resonance (maximum amplitude for a given drive) occurs when $Z_{\\mathrm{in}}$ is minimum (open-open:"
      ]
     ]
    },
@@ -4749,11 +4749,11 @@
     "items": [
      [
       "p",
-      "$Z_L = 0$: $Z_{\\rm in} = i Z_0\\tan kL = 0$ at $kL = n\\pi$  $\\to$  $L = n\\lambda/2$ ok all harmonics; closed-open: $Z_L = \\infty$: $Z_{\\rm in} = -i Z_0\\cot kL = 0$ at $kL = (2n-1)\\pi/2$  $\\to$  odd quarter waves ok JEE-17/18 derived from one formula)."
+      "$Z_L = 0$: $Z_{\\mathrm{in}} = i Z_0\\tan kL = 0$ at $kL = n\\pi$  $\\to$  $L = n\\lambda/2$ ok all harmonics; closed-open: $Z_L = \\infty$: $Z_{\\mathrm{in}} = -i Z_0\\cot kL = 0$ at $kL = (2n-1)\\pi/2$  $\\to$  odd quarter waves ok JEE-17/18 derived from one formula)."
      ],
      [
       "p",
-      "Why closed pipes give odd harmonics: the mismatched ends force $\\tan kL$ and $\\cot kL$ conditions alternating: counting quarter wavelengths that fit between a velocity node and a pressure node is the SAME as setting the imaginary part of $Z_{\\rm in}$ to zero. Mixed-end resonance spacing $\\Delta f = v/2L$ falls out of the $\\tan$ period \u03c0 in $kL$."
+      "Why closed pipes give odd harmonics: the mismatched ends force $\\tan kL$ and $\\cot kL$ conditions alternating: counting quarter wavelengths that fit between a velocity node and a pressure node is the SAME as setting the imaginary part of $Z_{\\mathrm{in}}$ to zero. Mixed-end resonance spacing $\\Delta f = v/2L$ falls out of the $\\tan$ period \u03c0 in $kL$."
      ]
     ]
    },
@@ -4762,11 +4762,11 @@
     "items": [
      [
       "p",
-      "Load effects: a pipe with a partially open far end ($Z_L$ finite, radiation) has damped resonance peaks and shifted frequencies \u2014 the Q factor (Oly 05) comes from the real part of $Z_{\\rm in}$; the end correction (JEE-19) is the imaginary part at the mouth; a flange changes $Z_L$ and thus $e$ (0.6r to 0.85r) consistently."
+      "Load effects: a pipe with a partially open far end ($Z_L$ finite, radiation) has damped resonance peaks and shifted frequencies \u2014 the Q factor (Oly 05) comes from the real part of $Z_{\\mathrm{in}}$; the end correction (JEE-19) is the imaginary part at the mouth; a flange changes $Z_L$ and thus $e$ (0.6r to 0.85r) consistently."
      ],
      [
       "why",
-      "impedance language unifies: boundary conditions, end corrections, resonance ladders, radiation, and damping are all one rational function $Z_{\\rm in}(kL, Z_L)$ \u2014 the exam formulas are its special cases."
+      "impedance language unifies: boundary conditions, end corrections, resonance ladders, radiation, and damping are all one rational function $Z_{\\mathrm{in}}(kL, Z_L)$ \u2014 the exam formulas are its special cases."
      ]
     ]
    },
@@ -4775,7 +4775,7 @@
     "items": [
      [
       "check",
-      "specialise: $L = \\lambda/2$ open-open: $kL = \\pi$: $\\tan = 0$: $Z_{\\rm in} = 0$ ok short at the drive point: maximum flow for given pressure... resonance of a driven pipe is when the drive sees minimum impedance ok; closed-closed: $Z_L = \\infty$ both ends: $kL = n\\pi$ again all harmonics ok JEE-16 CHECK."
+      "specialise: $L = \\lambda/2$ open-open: $kL = \\pi$: $\\tan = 0$: $Z_{\\mathrm{in}} = 0$ ok short at the drive point: maximum flow for given pressure... resonance of a driven pipe is when the drive sees minimum impedance ok; closed-closed: $Z_L = \\infty$ both ends: $kL = n\\pi$ again all harmonics ok JEE-16 CHECK."
      ],
      [
       "p",
@@ -4811,7 +4811,7 @@
      ],
      [
       "p",
-      "Multiple coupled pipes (organ ranks, bottles): coupling shifts each resonance slightly (mode splitting); a Helmholtz resonator on a wall acts as a notch absorber at $f_H = \\dfrac{v}{2\\pi}\\sqrt{S/(V L_{\\rm eff})}$ \u2014 room acoustics tool built on pipe theory."
+      "Multiple coupled pipes (organ ranks, bottles): coupling shifts each resonance slightly (mode splitting); a Helmholtz resonator on a wall acts as a notch absorber at $f_H = \\dfrac{v}{2\\pi}\\sqrt{S/(V L_{\\mathrm{eff}})}$ \u2014 room acoustics tool built on pipe theory."
      ]
     ]
    },
@@ -4841,7 +4841,7 @@
      ],
      [
       "p",
-      "Half-open side branch (quarter-wave trap): a branch of length $\\lambda/4$ closed at the far end presents $Z_{\\rm in} = 0$ at the junction (short circuit for waves of that $f$): mufflers use arrays of such traps \u2014 mechanical filter design, exam-explainable."
+      "Half-open side branch (quarter-wave trap): a branch of length $\\lambda/4$ closed at the far end presents $Z_{\\mathrm{in}} = 0$ at the junction (short circuit for waves of that $f$): mufflers use arrays of such traps \u2014 mechanical filter design, exam-explainable."
      ]
     ]
    },
@@ -4854,7 +4854,7 @@
      ],
      [
       "p",
-      "(a) Open pipe $L = 0.4$ m, $r = 2$ cm: $L_{\\rm eff} = 0.424$ m: $f_1 = 343/0.848 = 404.5$ Hz; $Q = 20$: bandwidth 20 Hz; driving at 395 Hz: amplitude $\\sim Q/2$-ish below peak... half-power at $\\Delta f = \\pm 10$ Hz: 395 Hz is 9.5 Hz off: $\\sim 1/\\sqrt{2}$ of peak amplitude. (b) Closed pipe same length: $f_1 = 343/(4\\times 0.412) = 208$ Hz (one end corrected only)."
+      "(a) Open pipe $L = 0.4$ m, $r = 2$ cm: $L_{\\mathrm{eff}} = 0.424$ m: $f_1 = 343/0.848 = 404.5$ Hz; $Q = 20$: bandwidth 20 Hz; driving at 395 Hz: amplitude $\\sim Q/2$-ish below peak... half-power at $\\Delta f = \\pm 10$ Hz: 395 Hz is 9.5 Hz off: $\\sim 1/\\sqrt{2}$ of peak amplitude. (b) Closed pipe same length: $f_1 = 343/(4\\times 0.412) = 208$ Hz (one end corrected only)."
      ]
     ]
    }
@@ -4882,7 +4882,7 @@
      ],
      [
       "why",
-      "the impedance method gives answers without redrawing node pictures: write $Z_{\\rm in}$, set the reactance to zero, read the ladder \u2014 faster and safer under time pressure."
+      "the impedance method gives answers without redrawing node pictures: write $Z_{\\mathrm{in}}$, set the reactance to zero, read the ladder \u2014 faster and safer under time pressure."
      ],
      [
       "p",
@@ -4999,7 +4999,7 @@
      ],
      [
       "p",
-      "(a) Two speakers driven in phase, listener at path difference $3\\lambda/4$: $\\Delta\\phi = 270^{\\circ}$: amplitude $2a|\\cos 135^{\\circ}| = 0.71\\cdot 2a$... $\\sqrt2 a$ of the sum-free... precisely $2a\\cos(135^{\\circ}) = -\\sqrt2 a$: amplitude $\\sqrt{2}a$: intensity 2x one source. (b) Three equal sources, phases 0, 90\u00b0, 180\u00b0: $A = a|1 + i - 1| = a$:"
+      "(a) Two speakers driven in phase, listener at path difference $3\\lambda/4$: $\\Delta\\phi = 270^{\\circ}$: amplitude $2a|\\cos 135^{\\circ}| = 0.71\\cdot 2a$... $\\sqrt{2} a$ of the sum-free... precisely $2a\\cos(135^{\\circ}) = -\\sqrt{2} a$: amplitude $\\sqrt{2}a$: intensity 2x one source. (b) Three equal sources, phases 0, 90\u00b0, 180\u00b0: $A = a|1 + i - 1| = a$:"
      ]
     ]
    },
@@ -5040,11 +5040,11 @@
     "items": [
      [
       "p",
-      "Time-averaged intensity of a travelling wave: $I = \\bar u v = \\dfrac{\\Delta P_0^2}{2 Z}$ with $Z = \\rho v$ (Oly 01). For a general (possibly reactive) field the instantaneous flux $\\Pi = \\Delta P \\cdot u$ oscillates; only its average transports. A driven resonator near resonance stores energy $\\mathcal{E}$ and loses power $P_{\\rm loss} = \\omega \\mathcal{E}/Q$;"
+      "Time-averaged intensity of a travelling wave: $I = \\bar u v = \\dfrac{\\Delta P_0^2}{2 Z}$ with $Z = \\rho v$ (Oly 01). For a general (possibly reactive) field the instantaneous flux $\\Pi = \\Delta P \\cdot u$ oscillates; only its average transports. A driven resonator near resonance stores energy $\\mathcal{E}$ and loses power $P_{\\mathrm{loss}} = \\omega \\mathcal{E}/Q$;"
      ],
      [
       "p",
-      "quality factor $Q = \\dfrac{\\omega\\mathcal{E}}{P_{\\rm loss}} = 2\\pi\\dfrac{\\mathcal{E}}{\\text{loss per cycle}}$; ring-down time $\\tau = Q/\\omega$ (amplitude) \u2014 the number that separates tuning forks ($Q \\sim 10^{3}$) from rooms ($Q \\sim 5$)."
+      "quality factor $Q = \\dfrac{\\omega\\mathcal{E}}{P_{\\mathrm{loss}}} = 2\\pi\\dfrac{\\mathcal{E}}{\\text{loss per cycle}}$; ring-down time $\\tau = Q/\\omega$ (amplitude) \u2014 the number that separates tuning forks ($Q \\sim 10^{3}$) from rooms ($Q \\sim 5$)."
      ]
     ]
    },
@@ -5053,7 +5053,7 @@
     "items": [
      [
       "p",
-      "Radiation resistance: a vibrating surface of area $S$ and velocity amplitude $u_0$ radiates $P = \\frac{1}{2}R_r S u_0^2$ with $R_r \\approx Z_{\\rm air}$ for a large baffle ($R_r = Z$ per unit area) but $R_r \\propto (ka)^2 Z$ for a small piston ($ka < 1$): small sources are BAD radiators \u2014 the reason a bare vibrating rod is quiet and a loudspeaker cone is big. Multipole order: monopole (pulsating sphere) radiates best at low $ka$;"
+      "Radiation resistance: a vibrating surface of area $S$ and velocity amplitude $u_0$ radiates $P = \\frac{1}{2}R_r S u_0^2$ with $R_r \\approx Z_{\\mathrm{air}}$ for a large baffle ($R_r = Z$ per unit area) but $R_r \\propto (ka)^2 Z$ for a small piston ($ka < 1$): small sources are BAD radiators \u2014 the reason a bare vibrating rod is quiet and a loudspeaker cone is big. Multipole order: monopole (pulsating sphere) radiates best at low $ka$;"
      ],
      [
       "p",
@@ -5074,7 +5074,7 @@
      ],
      [
       "check",
-      "consistency: $Q = 2\\pi\\mathcal{E}/W_{\\rm cycle}$; $\\Delta f = f_1/Q$; $\\tau_{\\rm amp} = Q/(\\pi f_1)$... at $Q = 20$, $f = 300$ Hz: $\\tau = 21$ ms and $\\Delta f = 15$ Hz: a struck pipe fades in ~3 ringing times \u2248 60 ms ok audible clap-coloration."
+      "consistency: $Q = 2\\pi\\mathcal{E}/W_{\\mathrm{cycle}}$; $\\Delta f = f_1/Q$; $\\tau_{\\mathrm{amp}} = Q/(\\pi f_1)$... at $Q = 20$, $f = 300$ Hz: $\\tau = 21$ ms and $\\Delta f = 15$ Hz: a struck pipe fades in ~3 ringing times \u2248 60 ms ok audible clap-coloration."
      ],
      [
       "p",
@@ -5132,7 +5132,7 @@
     "items": [
      [
       "p",
-      "(c) A fork of Q = 500, $f = 256$ Hz struck to 1 mm amplitude: stored energy $\\mathcal{E} \\sim \\frac{1}{2}m_{\\rm eff}\\omega^2 x^2$: for $m_{\\rm eff} = 20$ g: $1.3\\times 10^{-3}$ J; loss per cycle $\\mathcal{E}\\cdot 2\\pi/Q = 16\\,\\mu$J; ring-down $\\tau = Q/(\\pi f) = 0.62$ s."
+      "(c) A fork of Q = 500, $f = 256$ Hz struck to 1 mm amplitude: stored energy $\\mathcal{E} \\sim \\frac{1}{2}m_{\\mathrm{eff}}\\omega^2 x^2$: for $m_{\\mathrm{eff}} = 20$ g: $1.3\\times 10^{-3}$ J; loss per cycle $\\mathcal{E}\\cdot 2\\pi/Q = 16\\,\\mu$J; ring-down $\\tau = Q/(\\pi f) = 0.62$ s."
      ],
      [
       "p",
@@ -5140,7 +5140,7 @@
      ],
      [
       "why",
-      "energy methods shortcut amplitude problems: instead of solving the wave equation, balance $P_{\\rm source} = \\oint I\\,dA + d\\mathcal{E}/dt + P_{\\rm loss}$ \u2014 the acoustic version of the work-energy theorem."
+      "energy methods shortcut amplitude problems: instead of solving the wave equation, balance $P_{\\mathrm{source}} = \\oint I\\,dA + d\\mathcal{E}/dt + P_{\\mathrm{loss}}$ \u2014 the acoustic version of the work-energy theorem."
      ]
     ]
    },
@@ -5149,7 +5149,7 @@
     "items": [
      [
       "p",
-      "(a) \"A closed pipe Q = 12 at f1 = 200 Hz is driven: amplitude at resonance vs 10 Hz off\": ratio $\\approx Q\\Delta f/f$-ish: at $\\delta = 10$ Hz = half-width: amplitude $1/\\sqrt2$ of peak. (b) \"Two pipes of equal f1 but Q = 10 and 40: which is louder at resonance, which more selective?\" same peak if loss-limited... high-Q rings louder after excitation and narrower in sweep."
+      "(a) \"A closed pipe Q = 12 at f1 = 200 Hz is driven: amplitude at resonance vs 10 Hz off\": ratio $\\approx Q\\Delta f/f$-ish: at $\\delta = 10$ Hz = half-width: amplitude $1/\\sqrt{2}$ of peak. (b) \"Two pipes of equal f1 but Q = 10 and 40: which is louder at resonance, which more selective?\" same peak if loss-limited... high-Q rings louder after excitation and narrower in sweep."
      ],
      [
       "p",
@@ -5166,7 +5166,7 @@
      ],
      [
       "p",
-      "the resonator as a mechanical RLC: mass = acoustic inertance $\\rho L/S$, compliance = $V/(\\rho c^2)$, resistance = radiation + viscous: $Z_{\\rm in}$ of Oly 03 is the acoustic RLC impedance \u2014 identical mathematics."
+      "the resonator as a mechanical RLC: mass = acoustic inertance $\\rho L/S$, compliance = $V/(\\rho c^2)$, resistance = radiation + viscous: $Z_{\\mathrm{in}}$ of Oly 03 is the acoustic RLC impedance \u2014 identical mathematics."
      ]
     ]
    }
@@ -5454,7 +5454,7 @@
      ],
      [
       "p",
-      "rotating and vibrating sources: turbine blades, sirens, ultrasound transducers: the spectrum is a set of sidebands $f \\pm n f_{\\rm rot}$ \u2014 Bessel-function amplitudes; the exam-accessible part is the first-order FM picture."
+      "rotating and vibrating sources: turbine blades, sirens, ultrasound transducers: the spectrum is a set of sidebands $f \\pm n f_{\\mathrm{rot}}$ \u2014 Bessel-function amplitudes; the exam-accessible part is the first-order FM picture."
      ]
     ]
    }
@@ -5649,7 +5649,7 @@
      ],
      [
       "p",
-      "Exponential horn: $A(x) = A_0 e^{mx}$: the horn equation has wave solutions with local wavenumber $k_{\\rm eff} = \\sqrt{k^2 - (m/2)^2}$: below cutoff $k < m/2$: EVANESCENT (horn stops passing \u2014 the horn cutoff frequency); the flare constant $m$ sets the cutoff $f_c = \\dfrac{mc}{4\\pi}$-ish... standard: $f_c = \\dfrac{mc}{4\\pi}$ for exponential:"
+      "Exponential horn: $A(x) = A_0 e^{mx}$: the horn equation has wave solutions with local wavenumber $k_{\\mathrm{eff}} = \\sqrt{k^2 - (m/2)^2}$: below cutoff $k < m/2$: EVANESCENT (horn stops passing \u2014 the horn cutoff frequency); the flare constant $m$ sets the cutoff $f_c = \\dfrac{mc}{4\\pi}$-ish... standard: $f_c = \\dfrac{mc}{4\\pi}$ for exponential:"
      ]
     ]
    },
@@ -5666,7 +5666,7 @@
      ],
      [
       "check",
-      "convergence example: throat 1 cm$^2$ to mouth 100 cm$^2$: $I$ drops 100x (20 dB) but $\\Delta P_0$ RISES 10x: horns trade intensity for pressure at the throat \u2014 exactly what a driver needs (impedance matching, Oly 01: $Z_{\\rm in} \\sim Z/A$-ish)."
+      "convergence example: throat 1 cm$^2$ to mouth 100 cm$^2$: $I$ drops 100x (20 dB) but $\\Delta P_0$ RISES 10x: horns trade intensity for pressure at the throat \u2014 exactly what a driver needs (impedance matching, Oly 01: $Z_{\\mathrm{in}} \\sim Z/A$-ish)."
      ]
     ]
    },
@@ -5675,7 +5675,7 @@
     "items": [
      [
       "p",
-      "A driver of area $S_d$ couples to air poorly (Oly 05 radiation resistance); a horn raises the throat loading: $Z_{\\rm throat} \\approx \\rho c/A_{\\rm mouth}\\cdot$ (geometric gain): the mouth impedance $\\rho c$ scaled by area ratio: efficiency up to ~50% vs a few % for a bare cone. The same mathematics as the middle ear (Oly 01) and the megaphone of antiquity."
+      "A driver of area $S_d$ couples to air poorly (Oly 05 radiation resistance); a horn raises the throat loading: $Z_{\\mathrm{throat}} \\approx \\rho c/A_{\\mathrm{mouth}}\\cdot$ (geometric gain): the mouth impedance $\\rho c$ scaled by area ratio: efficiency up to ~50% vs a few % for a bare cone. The same mathematics as the middle ear (Oly 01) and the megaphone of antiquity."
      ],
      [
       "p",
@@ -5711,7 +5711,7 @@
      ],
      [
       "p",
-      "(a) A duct halves its area: $I$ doubles, $\\Delta P_0$ rises $\\sqrt2$: the speed of the air in the throat rises as $u \\propto I/\\Delta P \\propto 1/\\sqrt A$... $u = \\Delta P/Z$ stays? $\\Delta P_0 \\propto A^{-1/2}$, $u_0 = \\Delta P_0/Z \\propto A^{-1/2}$: velocity rises as the duct narrows ok (like a river through a constriction)."
+      "(a) A duct halves its area: $I$ doubles, $\\Delta P_0$ rises $\\sqrt{2}$: the speed of the air in the throat rises as $u \\propto I/\\Delta P \\propto 1/\\sqrt A$... $u = \\Delta P/Z$ stays? $\\Delta P_0 \\propto A^{-1/2}$, $u_0 = \\Delta P_0/Z \\propto A^{-1/2}$: velocity rises as the duct narrows ok (like a river through a constriction)."
      ]
     ]
    },
@@ -5754,11 +5754,11 @@
      ],
      [
       "p",
-      "Longitudinal rod (free sides): $v_{\\rm rod} = \\sqrt{Y/\\rho}$; bulk longitudinal (infinite solid): $v_P = \\sqrt{(K + 4G/3)/\\rho}$; bulk transverse (shear): $v_S = \\sqrt{G/\\rho}$. Relations: $Y = 2G(1 + \\nu) = 3K(1 - 2\\nu)$; with $\\nu = 0.29$ (steel): $v_P/v_S = \\sqrt{\\frac{2(1-\\nu)}{1-2\\nu}} = 1.75$;"
+      "Longitudinal rod (free sides): $v_{\\mathrm{rod}} = \\sqrt{Y/\\rho}$; bulk longitudinal (infinite solid): $v_P = \\sqrt{(K + 4G/3)/\\rho}$; bulk transverse (shear): $v_S = \\sqrt{G/\\rho}$. Relations: $Y = 2G(1 + \\nu) = 3K(1 - 2\\nu)$; with $\\nu = 0.29$ (steel): $v_P/v_S = \\sqrt{\\frac{2(1-\\nu)}{1-2\\nu}} = 1.75$;"
      ],
      [
       "p",
-      "$v_P/v_{\\rm rod} = \\sqrt{\\frac{(1-\\nu)}{(1+\\nu)(1-2\\nu)}}$-ish \u2248 1.15\u20131.2. Seismology: P-waves = $v_P$, S-waves = $v_S$; S cannot propagate in fluids ($G = 0$) \u2014 the evidence Earth outer core is liquid."
+      "$v_P/v_{\\mathrm{rod}} = \\sqrt{\\frac{(1-\\nu)}{(1+\\nu)(1-2\\nu)}}$-ish \u2248 1.15\u20131.2. Seismology: P-waves = $v_P$, S-waves = $v_S$; S cannot propagate in fluids ($G = 0$) \u2014 the evidence Earth outer core is liquid."
      ]
     ]
    }
@@ -5786,7 +5786,7 @@
      ],
      [
       "p",
-      "Numbers: steel ($K = 160$, $G = 79$ GPa, $\\rho = 7800$): $v_P = 5830$, $v_S = 3180$, $v_{\\rm rod} = 5060$ m/s. Granite: $v_P \\approx 5200$, $v_S \\approx 3000$. Glass ($G = 30$ GPa): $v_S = 2130$. Rubber ($G \\approx 1$ MPa, $\\rho = 1100$): $v_S = 30$ m/s \u2014 slow and lossy."
+      "Numbers: steel ($K = 160$, $G = 79$ GPa, $\\rho = 7800$): $v_P = 5830$, $v_S = 3180$, $v_{\\mathrm{rod}} = 5060$ m/s. Granite: $v_P \\approx 5200$, $v_S \\approx 3000$. Glass ($G = 30$ GPa): $v_S = 2130$. Rubber ($G \\approx 1$ MPa, $\\rho = 1100$): $v_S = 30$ m/s \u2014 slow and lossy."
      ]
     ]
    },
@@ -5799,11 +5799,11 @@
      ],
      [
       "check",
-      "inequalities: $v_P > v_{\\rm rod} > v_S$ for $0 < \\nu < 0.5$ ok (steel: 5830 > 5060 > 3180); $\\nu \\to 0$: $v_P = v_{\\rm rod}$; $\\nu \\to 0.5$: $v_P \\to \\infty$ (incompressible: $K \\to \\infty$)."
+      "inequalities: $v_P > v_{\\mathrm{rod}} > v_S$ for $0 < \\nu < 0.5$ ok (steel: 5830 > 5060 > 3180); $\\nu \\to 0$: $v_P = v_{\\mathrm{rod}}$; $\\nu \\to 0.5$: $v_P \\to \\infty$ (incompressible: $K \\to \\infty$)."
      ],
      [
       "p",
-      "Thin rod free-free (or clamped at centre): longitudinal modes $f_n = n\\dfrac{v_{\\rm rod}}{2L}$; clamped-free: $f_n = (2n-1)\\dfrac{v_{\\rm rod}}{4L}$ (odd, like the closed pipe); the same ladders as air columns with the solid speed. Dispersive corrections: for rods of finite thickness ($ka \\gtrsim 1$) Pochhammer-Chree modes appear: the simple $\\sqrt{Y/\\rho}$ is the long-wave limit."
+      "Thin rod free-free (or clamped at centre): longitudinal modes $f_n = n\\dfrac{v_{\\mathrm{rod}}}{2L}$; clamped-free: $f_n = (2n-1)\\dfrac{v_{\\mathrm{rod}}}{4L}$ (odd, like the closed pipe); the same ladders as air columns with the solid speed. Dispersive corrections: for rods of finite thickness ($ka \\gtrsim 1$) Pochhammer-Chree modes appear: the simple $\\sqrt{Y/\\rho}$ is the long-wave limit."
      ]
     ]
    },
@@ -5812,7 +5812,7 @@
     "items": [
      [
       "p",
-      "Kundt tube (JEE-21) is the rod-speed measurement in reverse: $v_{\\rm rod}$ known gives $v_{\\rm gas}$; with a gas of known speed the rod speed comes out: the two-medium frequency match $f = v_{\\rm rod}/\\lambda_{\\rm rod} = v_{\\rm gas}/\\lambda_{\\rm gas}$."
+      "Kundt tube (JEE-21) is the rod-speed measurement in reverse: $v_{\\mathrm{rod}}$ known gives $v_{\\mathrm{gas}}$; with a gas of known speed the rod speed comes out: the two-medium frequency match $f = v_{\\mathrm{rod}}/\\lambda_{\\mathrm{rod}} = v_{\\mathrm{gas}}/\\lambda_{\\mathrm{gas}}$."
      ],
      [
       "p",
@@ -5820,7 +5820,7 @@
      ],
      [
       "check",
-      "steel rod 1 m clamped mid: $f = 5060/2 = 2530$ Hz; in Kundt with dust heaps 6.5 cm apart: $v_{\\rm gas} = 5060\\times 0.065 = 329$ m/s (cold air ok plausible lab)."
+      "steel rod 1 m clamped mid: $f = 5060/2 = 2530$ Hz; in Kundt with dust heaps 6.5 cm apart: $v_{\\mathrm{gas}} = 5060\\times 0.065 = 329$ m/s (cold air ok plausible lab)."
      ]
     ]
    },
@@ -5833,7 +5833,7 @@
      ],
      [
       "p",
-      "(c) \"A rod and a string of the same length and fundamental: compare $v$\": equal $f$: $v_{\\rm rod}/2L = \\sqrt{T/\\mu}/2L$: the speed equality sets the tension."
+      "(c) \"A rod and a string of the same length and fundamental: compare $v$\": equal $f$: $v_{\\mathrm{rod}}/2L = \\sqrt{T/\\mu}/2L$: the speed equality sets the tension."
      ]
     ]
    }
@@ -5857,7 +5857,7 @@
     "items": [
      [
       "p",
-      "Composite rods: series springs: effective compliance adds: $1/Y_{\\rm eff} = \\sum L_i/(Y_i L)$-ish: wave speed in layered rods uses transfer matrices (outside syllabus; the 1D spring model is in)."
+      "Composite rods: series springs: effective compliance adds: $1/Y_{\\mathrm{eff}} = \\sum L_i/(Y_i L)$-ish: wave speed in layered rods uses transfer matrices (outside syllabus; the 1D spring model is in)."
      ],
      [
       "p",
@@ -5870,7 +5870,7 @@
     "items": [
      [
       "p",
-      "Aluminium ($Y = 70$ GPa, $G = 26$, $\\rho = 2700$): $v_{\\rm rod} = 5100$, $v_P = 6270$, $v_S = 3100$ m/s. Copper ($Y = 120$, $G = 45$, $\\rho = 8900$): rod 3670, $v_P = 4760$, $v_S = 2250$. Granite ($K = 50$ GPa, $G = 25$ GPa, $\\rho = 2700$): $v_P = 5250$, $v_S = 3040$. Water ($B = 2.2$ GPa): $v = 1483$, no shear."
+      "Aluminium ($Y = 70$ GPa, $G = 26$, $\\rho = 2700$): $v_{\\mathrm{rod}} = 5100$, $v_P = 6270$, $v_S = 3100$ m/s. Copper ($Y = 120$, $G = 45$, $\\rho = 8900$): rod 3670, $v_P = 4760$, $v_S = 2250$. Granite ($K = 50$ GPa, $G = 25$ GPa, $\\rho = 2700$): $v_P = 5250$, $v_S = 3040$. Water ($B = 2.2$ GPa): $v = 1483$, no shear."
      ],
      [
       "p",
@@ -6015,7 +6015,7 @@
      ],
      [
       "p",
-      "Kit formula set (air unless stated): $c = 331.3\\sqrt{T/273}$ m/s; $Z = \\rho c \\approx 412$ rayl at 20 C; $\\lambda = c/f$; $\\Delta P_0 = Z\\omega s_0$; $I = \\Delta P_0^2/(2Z)$; $\\beta = 10\\log(I/10^{-12})$ dB; point source $I = P/(4\\pi r^2)$; beats $|f_1 - f_2|$; Doppler $\\frac{c + u_o}{c - u_s}$; echo $\\frac{c+u}{c-u}$; pipes $v/4L$, $v/2L$; $e = 0.6r$; $Q = \\omega\\mathcal{E}/P_{\\rm loss}$."
+      "Kit formula set (air unless stated): $c = 331.3\\sqrt{T/273}$ m/s; $Z = \\rho c \\approx 412$ rayl at 20 C; $\\lambda = c/f$; $\\Delta P_0 = Z\\omega s_0$; $I = \\Delta P_0^2/(2Z)$; $\\beta = 10\\log(I/10^{-12})$ dB; point source $I = P/(4\\pi r^2)$; beats $|f_1 - f_2|$; Doppler $\\frac{c + u_o}{c - u_s}$; echo $\\frac{c+u}{c-u}$; pipes $v/4L$, $v/2L$; $e = 0.6r$; $Q = \\omega\\mathcal{E}/P_{\\mathrm{loss}}$."
      ]
     ]
    },
@@ -6058,7 +6058,7 @@
      ],
      [
       "p",
-      "Unit traps the kit prevents: dB without a reference; $\\lambda$ in cm vs m in $v = f\\lambda$; temperature in Celsius inside $\\sqrt{T}$; $M$ in g/mol inside $RT/M$; intensity vs pressure amplitude factors of 2; peak vs RMS $\\sqrt2$."
+      "Unit traps the kit prevents: dB without a reference; $\\lambda$ in cm vs m in $v = f\\lambda$; temperature in Celsius inside $\\sqrt{T}$; $M$ in g/mol inside $RT/M$; intensity vs pressure amplitude factors of 2; peak vs RMS $\\sqrt{2}$."
      ]
     ]
    }
@@ -6082,7 +6082,7 @@
     "items": [
      [
       "p",
-      "Reality checks: sound speed in gas hundreds, liquid ~1500, solid thousands of m/s; pressures $\\Delta P \\ll P_{\\rm atm}$; displacement amplitudes nm\u2013mm; if a computed $s_0$ is 5 cm for speech, it is wrong."
+      "Reality checks: sound speed in gas hundreds, liquid ~1500, solid thousands of m/s; pressures $\\Delta P \\ll P_{\\mathrm{atm}}$; displacement amplitudes nm\u2013mm; if a computed $s_0$ is 5 cm for speech, it is wrong."
      ],
      [
       "why",

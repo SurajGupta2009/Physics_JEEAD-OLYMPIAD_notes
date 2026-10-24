@@ -372,7 +372,7 @@
           ],
           [
             "m",
-            "\\Delta x=ut+\\frac12at^2=\\frac{u+v}{2}t"
+            "\\Delta x=ut+\\frac{1}{2}at^2=\\frac{u+v}{2}t"
           ],
           [
             "why",
@@ -406,7 +406,7 @@
           ],
           [
             "m",
-            "\\{v=u+at,\\quad \\Delta x=ut+\\tfrac12at^2,\\quad v^2=u^2+2a\\Delta x\\}"
+            "\\{v=u+at,\\quad \\Delta x=ut+\\frac{1}{2}at^2,\\quad v^2=u^2+2a\\Delta x\\}"
           ],
           [
             "check",
@@ -456,7 +456,7 @@
           ],
           [
             "m",
-            "t_{\\rm up}=\\frac{u}{g},\\qquad H=\\frac{u^2}{2g}"
+            "t_{\\mathrm{up}}=\\frac{u}{g},\\qquad H=\\frac{u^2}{2g}"
           ],
           [
             "check",
@@ -490,7 +490,7 @@
           ],
           [
             "m",
-            "y(t)=y_0+ut-\\frac12gt^2,\\qquad v(t)=u-gt"
+            "y(t)=y_0+ut-\\frac{1}{2}gt^2,\\qquad v(t)=u-gt"
           ],
           [
             "check",
@@ -641,7 +641,7 @@
           ],
           [
             "m",
-            "v\\,dv=a(x)\\,dx,\\qquad \\frac12(v^2-v_0^2)=\\int_{x_0}^{x}a(X)\\,dX"
+            "v\\,dv=a(x)\\,dx,\\qquad \\frac{1}{2}(v^2-v_0^2)=\\int_{x_0}^{x}a(X)\\,dX"
           ],
           [
             "trap",
@@ -809,7 +809,7 @@
           ],
           [
             "m",
-            "a_{AB}=a_A-a_B,\\quad r(t)=r_0+v_{AB,0}t+\\tfrac12a_{AB}t^2"
+            "a_{AB}=a_A-a_B,\\quad r(t)=r_0+v_{AB,0}t+\\frac{1}{2}a_{AB}t^2"
           ],
           [
             "why",
@@ -876,7 +876,7 @@
           ],
           [
             "m",
-            "t_{\\rm stop}=\\frac{u}{b},\\qquad d_{\\rm brake}=\\frac{u^2}{2b}"
+            "t_{\\mathrm{stop}}=\\frac{u}{b},\\qquad d_{\\mathrm{brake}}=\\frac{u^2}{2b}"
           ],
           [
             "check",
@@ -893,7 +893,7 @@
           ],
           [
             "m",
-            "d_{\\rm stop}=u t_r+\\frac{u^2}{2b}"
+            "d_{\\mathrm{stop}}=u t_r+\\frac{u^2}{2b}"
           ],
           [
             "trap",
@@ -977,7 +977,7 @@
           ],
           [
             "m",
-            "x=v_0\\cos\\theta\\,t,\\quad y=v_0\\sin\\theta\\,t-\\tfrac12gt^2"
+            "x=v_0\\cos\\theta\\,t,\\quad y=v_0\\sin\\theta\\,t-\\frac{1}{2}gt^2"
           ],
           [
             "trap",
@@ -994,7 +994,7 @@
           ],
           [
             "m",
-            "\\Delta y_{\\rm fall}=\\tfrac12gt^2"
+            "\\Delta y_{\\mathrm{fall}}=\\frac{1}{2}gt^2"
           ],
           [
             "check",
@@ -1027,7 +1027,7 @@
           ],
           [
             "m",
-            "-h=-\\tfrac12gt^2\\Rightarrow t=\\sqrt{\\frac{2h}{g}}"
+            "-h=-\\frac{1}{2}gt^2\\Rightarrow t=\\sqrt{\\frac{2h}{g}}"
           ],
           [
             "check",
@@ -1078,7 +1078,7 @@
           ],
           [
             "m",
-            "t=2\\ \\mathrm{s},\\quad R=30\\ \\mathrm{m},\\quad v_{\\rm impact}=25\\ \\mathrm{m/s}"
+            "t=2\\ \\mathrm{s},\\quad R=30\\ \\mathrm{m},\\quad v_{\\mathrm{impact}}=25\\ \\mathrm{m/s}"
           ],
           [
             "check",
@@ -1111,7 +1111,7 @@
           ],
           [
             "m",
-            "0=v_0\\sin\\theta\\,T-\\tfrac12gT^2\\Rightarrow T=\\frac{2v_0\\sin\\theta}{g}"
+            "0=v_0\\sin\\theta\\,T-\\frac{1}{2}gT^2\\Rightarrow T=\\frac{2v_0\\sin\\theta}{g}"
           ],
           [
             "trap",
@@ -1363,7 +1363,7 @@
           ],
           [
             "m",
-            "\\tfrac12gt^2-v_0\\sin\\theta\\,t+(y_f-y_0)=0"
+            "\\frac{1}{2}gt^2-v_0\\sin\\theta\\,t+(y_f-y_0)=0"
           ],
           [
             "trap",
@@ -1498,7 +1498,7 @@
           ],
           [
             "m",
-            "\\beta_{\\max}=45^\\circ-\\frac{\\alpha}{2},\\quad \\theta_{\\rm horiz}=45^\\circ+\\frac{\\alpha}{2}"
+            "\\beta_{\\max}=45^\\circ-\\frac{\\alpha}{2},\\quad \\theta_{\\mathrm{horiz}}=45^\\circ+\\frac{\\alpha}{2}"
           ],
           [
             "check",
@@ -1565,7 +1565,7 @@
           ],
           [
             "m",
-            "y_{\\rm env}=\\frac{v_0^2}{2g}-\\frac{gx^2}{2v_0^2}"
+            "y_{\\mathrm{env}}=\\frac{v_0^2}{2g}-\\frac{gx^2}{2v_0^2}"
           ],
           [
             "trap",
@@ -1582,7 +1582,7 @@
           ],
           [
             "m",
-            "y_{\\rm env}(0)=\\frac{v_0^2}{2g},\\qquad x_{\\rm ground}=\\frac{v_0^2}{g}"
+            "y_{\\mathrm{env}}(0)=\\frac{v_0^2}{2g},\\qquad x_{\\mathrm{ground}}=\\frac{v_0^2}{g}"
           ],
           [
             "check",
@@ -2073,7 +2073,7 @@
           ],
           [
             "m",
-            "\\rho_{\\rm launch}=\\frac{v_0^2}{g|\\cos\\theta|},\\quad \\rho_{\\rm apex}=\\frac{v_0^2\\cos^2\\theta}{g}"
+            "\\rho_{\\mathrm{launch}}=\\frac{v_0^2}{g|\\cos\\theta|},\\quad \\rho_{\\mathrm{apex}}=\\frac{v_0^2\\cos^2\\theta}{g}"
           ],
           [
             "trap",
@@ -2459,7 +2459,7 @@
           ],
           [
             "m",
-            "d_{\\rm reaction}=v_0t_r"
+            "d_{\\mathrm{reaction}}=v_0t_r"
           ],
           [
             "check",
@@ -2476,7 +2476,7 @@
           ],
           [
             "m",
-            "d_{\\rm brake}=\\frac{v_0^2}{2b},\\qquad t_b=\\frac{v_0}{b}"
+            "d_{\\mathrm{brake}}=\\frac{v_0^2}{2b},\\qquad t_b=\\frac{v_0}{b}"
           ],
           [
             "trap",
@@ -2493,7 +2493,7 @@
           ],
           [
             "m",
-            "d_{\\rm total}=v_0t_r+\\frac{v_0^2}{2b}"
+            "d_{\\mathrm{total}}=v_0t_r+\\frac{v_0^2}{2b}"
           ],
           [
             "why",
@@ -2510,7 +2510,7 @@
           ],
           [
             "m",
-            "d_{\\rm total}=10+40=50\\ \\mathrm{m}"
+            "d_{\\mathrm{total}}=10+40=50\\ \\mathrm{m}"
           ],
           [
             "check",
@@ -2627,7 +2627,7 @@
           ],
           [
             "m",
-            "x=v_{0x}t-\\tfrac12a_wt^2,\\quad y=v_{0y}t-\\tfrac12gt^2"
+            "x=v_{0x}t-\\frac{1}{2}a_wt^2,\\quad y=v_{0y}t-\\frac{1}{2}gt^2"
           ],
           [
             "trap",
@@ -2644,7 +2644,7 @@
           ],
           [
             "m",
-            "R=v_{0x}T-\\tfrac12a_wT^2=R_0-\\tfrac12a_wT^2"
+            "R=v_{0x}T-\\frac{1}{2}a_wT^2=R_0-\\frac{1}{2}a_wT^2"
           ],
           [
             "check",
@@ -2711,7 +2711,7 @@
           ],
           [
             "m",
-            "\\mathbf r_p=\\mathbf v_0t+\\tfrac12\\mathbf g t^2,\\quad\\mathbf r_T=\\mathbf r_0+\\mathbf v_Tt"
+            "\\mathbf r_p=\\mathbf v_0t+\\frac{1}{2}\\mathbf g t^2,\\quad\\mathbf r_T=\\mathbf r_0+\\mathbf v_Tt"
           ],
           [
             "trap",
@@ -2728,7 +2728,7 @@
           ],
           [
             "m",
-            "\\mathbf v_0(t)=\\frac{\\mathbf r_0}{t}+\\mathbf v_T-\\tfrac12\\mathbf g t"
+            "\\mathbf v_0(t)=\\frac{\\mathbf r_0}{t}+\\mathbf v_T-\\frac{1}{2}\\mathbf g t"
           ],
           [
             "why",
@@ -2829,7 +2829,7 @@
           ],
           [
             "m",
-            "\\delta_E\\approx\\tfrac12a_ET^2=\\Omega v_NT^2\\sin\\lambda"
+            "\\delta_E\\approx\\frac{1}{2}a_ET^2=\\Omega v_NT^2\\sin\\lambda"
           ],
           [
             "why",
@@ -2913,7 +2913,7 @@
           ],
           [
             "m",
-            "\\dot D_{\\rm sep}\\leq v_T-v_P<0"
+            "\\dot D_{\\mathrm{sep}}\\leq v_T-v_P<0"
           ],
           [
             "check",

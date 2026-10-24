@@ -11,7 +11,6 @@ from pathlib import Path
 import json, re, io, struct
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-import imagequant
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -226,7 +225,7 @@ def _strip_trns(raw: bytes) -> bytes:
 
 
 def save_clean_indexed(im_rgb: Image.Image, out_path: Path, margin: int = 125):
-    q = imagequant.quantize_pil_image(im_rgb.convert('RGB'), dithering_level=0.0, max_colors=8)
+    q = im_rgb.convert('RGB').quantize(colors=8, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
     arr = np.asarray(q, dtype=np.uint8).copy()
     pal = list(q.getpalette())
     bg = int(np.argmax(np.bincount(arr.ravel())))
