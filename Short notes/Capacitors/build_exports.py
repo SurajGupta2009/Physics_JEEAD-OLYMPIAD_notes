@@ -1,164 +1,264 @@
-"""Build separate JEE and Olympiad exports, with the combined set always JEE first."""
+"""Build the printable deliverables for the JEE-only Capacitors notes.
+
+    python3 build_exports.py          # render, then PDF + ZIP + README + gallery
+    python3 build_exports.py --check  # verify only, no writes
+
+Outputs (all in this folder):
+    capacitors-short-notes.pdf   7 pages, exact A4, bookmarks per sheet
+    capacitors-a4-pngs.zip       the 7 PNGs + PRINTING.txt
+    README.md / index.html       regenerated page index and offline gallery
+"""
 from pathlib import Path
 from html import escape
-import json, zipfile
+import json, sys, zipfile
 from PIL import Image
 from reportlab import rl_config
-rl_config.useA85 = 0  # Lossless binary PDF streams; avoid ASCII85 size overhead.
+rl_config.useA85 = 0
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 
-ROOT=Path(__file__).resolve().parent
-PARTS=('JEE','Olympiad')
-PDFS={'All':'capacitors-short-notes.pdf','JEE':'capacitors-jee.pdf','Olympiad':'capacitors-olympiad.pdf'}
-ZIPS={'All':'capacitors-a4-pngs.zip','JEE':'capacitors-jee-pngs.zip','Olympiad':'capacitors-olympiad-pngs.zip'}
+ROOT = Path(__file__).resolve().parent
+PDF = 'capacitors-short-notes.pdf'
+ZIP = 'capacitors-a4-pngs.zip'
+TITLES = {
+    'JEE-01-conductor-toolkit': 'Conductors, Gauss and potential - the four facts',
+    'JEE-02-capacitance-geometries': 'Capacitance, the slab rule and three geometries',
+    'JEE-03-networks': 'Island method, bridges, cube, ladder, star-delta',
+    'JEE-04-energy-battery-heat': 'Energy, the fixed-Q / fixed-V fork, heat on joining',
+    'JEE-05-force-insertion': 'Plate force, dielectric pull, image charge, movable plate',
+    'JEE-06-dielectrics': 'Dielectrics: layers vs patches, ratings, six checks',
+    'JEE-07-rc-and-ac': 'RC transients, switch rules, ripple and reactance',
+}
 
-STYLE='''
-@font-face{font-family:Patrick;src:url('fonts/PatrickHand-Regular.ttf')}*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#f3f5f0;color:#153149;font:16px/1.6 system-ui,sans-serif}header,main,footer{max-width:1040px;margin:auto;padding:32px 24px}
-header{padding-top:52px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:12px;color:#087d7d;font-weight:700}
-h1{font:clamp(42px,7vw,72px)/1.1 Patrick,cursive;margin:20px 0}h1 em{font-style:normal;color:#087d7d}.intro{max-width:810px;color:#516875}
-.button{display:inline-block;background:#087d7d;color:white;border-radius:8px;padding:12px 18px;text-decoration:none;margin:8px 8px 8px 0}.secondary{background:#dceee9;color:#153149}
-nav{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}nav a{font-size:12px;text-decoration:none;color:#31545e;background:white;border:1px solid #cbded9;padding:6px 10px;border-radius:16px}
-.part-head{padding:22px 0 30px;scroll-margin-top:18px}.part-head h2{font:40px/1.15 Patrick,cursive;margin:8px 0}.part-head p{color:#516875}
-article{background:white;border:1px solid #cbded9;border-radius:12px;margin-bottom:32px;overflow:hidden;scroll-margin-top:16px}.label{display:flex;align-items:center;gap:16px;padding:14px 20px;background:#eff8f5}.label span{font-size:12px;color:#087d7d;white-space:nowrap}.label h3{flex:1;font:27px/1.2 Patrick,cursive;margin:0}.label a{font-size:12px;color:#087d7d;white-space:nowrap}.caption{margin:12px 20px;color:#516875;font-size:14px}img{display:block;width:100%;height:auto}a{color:#087d7d}footer{font-size:13px;color:#516875}
-@media(max-width:600px){header,main,footer{padding:20px 10px}.label{padding:10px;gap:8px}.label h3{font-size:21px}.label a{font-size:11px}}
-@page{size:A4 portrait;margin:0}@media print{header,footer,.label,.caption,.part-head{display:none}body,main{margin:0;padding:0;background:white;max-width:none}article{border:0;border-radius:0;margin:0;break-after:page;width:210mm;height:297mm}article:last-child{break-after:auto}img{width:210mm;height:297mm}}
+PRINTING = '''CAPACITORS - JEE MAIN + ADVANCED (single edition)
+
+7 sheets, one continuous reading order, JEE only.
+The Olympiad extension sheets were retired on 2026-10-24; the six ideas that
+are genuine JEE methods were merged into these pages (see AUDIT.md).
+
+Every PNG is 2480 x 3508 pixels with 300 DPI metadata, one column, about 10 mm
+safe margins. Print A4 portrait, one sheet per page, Fit to page - never
+Fill/Crop, and keep automatic landscape rotation off.
+Use the PDF for predictable pagination.
+
+Colour code on every sheet:
+  teal numbers   teaching section, in the order you should read them
+  cream box      the result to remember (formulae)
+  green box      a worked example with real numbers
+  red box        TRAP - the specific wrong move examiners set up
+  grey box       comparison table
+  green strip    REMEMBER - the one line to carry into the exam
 '''
 
-def build():
-    data=json.loads((ROOT/'sheets.json').read_text())
-    groups={part:[p for p in data if p['section']==part] for part in PARTS}
-    assert [p['section'] for p in data]==['JEE']*len(groups['JEE'])+['Olympiad']*len(groups['Olympiad'])
-    for p in data:
-        with Image.open(ROOT/(p['slug']+'.png')) as im:
-            assert im.size==(2480,3508)
-            assert all(abs(v-300)<.02 for v in im.info['dpi'])
-            im.verify()
-    instructions='''CAPACITORS: JEE FIRST, OLYMPIAD SECOND
 
-Part I: JEE-*.png (11 sheets). Read these first for the capacitor chapter.
-Part II: Olympiad-*.png (6 sheets). Optional specialised extensions after the JEE core.
-The distinction is relevance to this chapter's JEE preparation, not difficulty.
-Each part has its own page numbers, PNG ZIP and exact-A4 PDF.
-The combined exports contain JEE first, then Olympiad.
+def load():
+    data = json.loads((ROOT / 'sheets.json').read_text())
+    sheets = data['sheets']
+    assert [s['section'] for s in sheets] == ['JEE'] * len(sheets), 'JEE-only edition'
+    return sheets
 
-Every PNG is 2480 x 3508 pixels with 300 DPI metadata.
-Print A4 portrait, one image per page. Select Fit to page, not Fill/Crop.
-Keep photo cropping and automatic landscape rotation off.
-Artwork includes approximately 10 mm safe margins.
-For predictable pagination use the PDF. Colour is recommended.
-Teal WHY lines explain physical meaning; red WATCH lines mark conditions/traps.
 
-Scope nuance: basic AC and impedance are JEE topics elsewhere in the syllabus.
-Specialised filters, probe compensation and oscillators are placed in this
-extension set rather than interrupting the capacitor-chapter reading sequence.
-This is a study grouping, not a guarantee about what can never appear in an exam.
-'''
-    (ROOT/'PRINTING.txt').write_text(instructions)
-    for label,selection in [('All',data),*groups.items()]:
-        pdf=canvas.Canvas(str(ROOT/PDFS[label]),pagesize=A4,pageCompression=1)
-        pdf.setTitle(f'Capacitors — {label} — {len(selection)} A4 sheets')
-        pdf.setAuthor('Physics JEE Advanced / Olympiad Notes')
-        for p in selection:
-            pdf.bookmarkPage(p['slug'])
-            pdf.addOutlineEntry(f"{p['section']} {p['part_page']:02}: {p['title']}",p['slug'],level=0)
-            pdf.drawImage(str(ROOT/(p['slug']+'.png')),0,0,width=A4[0],height=A4[1]);pdf.showPage()
-        pdf.save()
-        with zipfile.ZipFile(ROOT/ZIPS[label],'w',zipfile.ZIP_DEFLATED) as z:
-            for p in selection:
-                relative=p['slug']+'.png';z.write(ROOT/relative,relative)
-            z.writestr('PRINTING.txt',instructions)
-    descriptions={
-        'JEE':'Part I — JEE Mains + Advanced: core capacitor ideas and useful applications, including harder derivable problems. No specialised extension sheet is needed to finish this part.',
-        'Olympiad':'Part II — Olympiad / extensions: microscopic models, specialised AC circuits, coupled dynamics, matrix/image/conformal tools and instability theory. Read after Part I.'}
-    sections=[]
-    for part in PARTS:
-        rows=groups[part];n=len(rows)
-        nav=''.join(f'<a href="#{part}-{p["part_page"]}">{p["part_page"]:02} {escape(p["title"])}</a>' for p in rows)
-        section=f'''<section aria-labelledby="{part}-title"><div class="part-head" id="{part}">
-<div class="eyebrow">{n} sheets · own page numbering · A4 portrait</div>
-<h2 id="{part}-title">{'Part I · JEE' if part=='JEE' else 'Part II · Olympiad / Extensions'}</h2>
-<p>{escape(descriptions[part])}</p>
-<a class="button" href="{ZIPS[part]}" download>Download {part} PNGs · ZIP</a>
-<a class="button secondary" href="{PDFS[part]}" download>{part} A4 PDF</a><nav>{nav}</nav></div>'''
-        for p in rows:
-            name=p['slug']+'.png';i=p['part_page']
-            section+=f'''<article id="{part}-{i}"><div class="label"><span>{part} {i:02} / {n:02}</span>
-<h3>{escape(p['title'])}</h3><a href="{name}" download>Download PNG</a></div>
-<p class="caption">{escape(p['subtitle'])}</p><a href="{name}" target="_blank" rel="noopener" aria-label="Open {part} sheet {i} full size">
-<img src="{name}" width="2480" height="3508" alt="{part} A4 capacitor notes: {escape(p['title'])}" loading="lazy"></a></article>'''
-        sections.append(section+'</section>')
-    html='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Capacitors · JEE first, Olympiad second</title><style>'''+STYLE+'''</style></head><body><header>
-<div class="eyebrow">11 JEE sheets + 6 extension sheets · 300 DPI</div><h1>Capacitors.<br><em>JEE first. Explore next.</em></h1>
-<p class="intro">Complete the JEE-focused capacitor revision before opening the separate Olympiad / extension part. This is a relevance-based split, not an easy-versus-hard split: useful difficult applications remain in JEE.</p>
-<a class="button" href="#JEE">Start Part I · JEE</a><a class="button secondary" href="#Olympiad">Go to extensions</a>
-<p><a href="capacitors-a4-pngs.zip" download>Combined PNG ZIP</a> · <a href="capacitors-short-notes.pdf" download>Combined A4 PDF</a> · <a href="SCOPE.md">What moved, and why</a></p>
-<p class="intro"><strong>Print:</strong> A4 portrait · one image per page · Fit to page, not Fill/Crop. Every PNG is 2480 × 3508 at 300 DPI. Explanations, colours and diagram labels are preserved.</p></header><main>'''+''.join(sections)+'''</main><footer>
-Basic AC remains relevant to JEE in its own chapter; specialised circuit applications here are kept in the extension sequence, as requested. The grouping does not predict every possible examination question.<br>
-Based on <a href="../../capacitors/Capacitors.md">Capacitors.md</a>. Full proofs and the practice paper remain in the original chapter.
-<a href="PRINTING.txt">Print instructions</a> · <a href="README.md">Index and rebuild instructions</a> · Patrick Hand (SIL OFL).
-</footer></body></html>'''
-    (ROOT/'index.html').write_text(html)
-    rows='\n'.join(f'| {p["section"]} {p["part_page"]:02} | [{p["title"]}]({p["slug"]}.png) | {p["source"]} |' for p in data)
-    readme='''# Capacitors — JEE first, Olympiad second
+def check_pngs(sheets):
+    for s in sheets:
+        with Image.open(ROOT / (s['slug'] + '.png')) as im:
+            assert im.size == (2480, 3508), (s['slug'], im.size)
+            assert all(abs(v - 300) < .02 for v in im.info['dpi']), s['slug']
 
-**17 A4 portrait PNGs: 11 JEE sheets followed by 6 Olympiad/extension sheets.**
-Handwritten-style prose, teacher explanations, accurate equations, colours, labelled diagrams and graphs are preserved.
 
-Files are stored directly in `Short notes/Capacitors/`; PNG prefixes preserve the two parts.
+def build_pdf(sheets):
+    out = ROOT / PDF
+    c = canvas.Canvas(str(out), pagesize=A4, pageCompression=1)
+    c.setTitle('Capacitors - JEE Main + Advanced short notes')
+    for i, s in enumerate(sheets, 1):
+        key = f'p{i}'
+        c.bookmarkPage(key)
+        c.addOutlineEntry(f'{i:02}/{len(sheets)}: {s["title"]}', key, level=0)
+        c.drawImage(str(ROOT / (s['slug'] + '.png')), 0, 0, width=A4[0], height=A4[1],
+                    preserveAspectRatio=False, mask=None)
+        c.showPage()
+    c.save()
+    return out
 
-## Downloads
 
-| Part | PNG bundle | A4 PDF |
-|---|---|---|
-| **Part I: JEE — read first** | [11 JEE PNGs](capacitors-jee-pngs.zip) | [JEE PDF](capacitors-jee.pdf) |
-| Part II: Olympiad / extensions | [6 extension PNGs](capacitors-olympiad-pngs.zip) | [Extension PDF](capacitors-olympiad.pdf) |
-| Combined — JEE then Olympiad | [All 17 PNGs](capacitors-a4-pngs.zip) | [Combined PDF](capacitors-short-notes.pdf) |
+def build_zip(sheets):
+    out = ROOT / ZIP
+    with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        for s in sheets:
+            z.write(ROOT / (s['slug'] + '.png'), s['slug'] + '.png')
+        z.writestr('PRINTING.txt', PRINTING)
+    return out
 
-- [Offline gallery, grouped by part](index.html)
-- [Scope decisions and old-page mapping](SCOPE.md)
+
+def build_readme(sheets):
+    rows = '\n'.join(f'| {i} | {TITLES[s["slug"]]} | [`{s["slug"]}.png`]({s["slug"]}.png) |'
+                     for i, s in enumerate(sheets, 1))
+    text = f'''# Capacitors - JEE Main + Advanced
+
+**{len(sheets)} A4 sheets, one column, JEE only.** Hand-written style, but written the
+way a teacher builds the chapter: result first, then the symbols, a worked number,
+the trap, and one line to remember.
+
+| download | what it is |
+|---|---|
+| [Combined A4 PDF]({PDF}) | all {len(sheets)} sheets, exact A4, one sheet per page |
+| [All PNGs]({ZIP}) | the same {len(sheets)} images at 300 dpi, plus printing notes |
+
+- [Offline gallery](index.html) - open in any browser, no server needed
 - [Printing instructions](PRINTING.txt)
-- [Detailed chapter](../../capacitors/Capacitors.md)
+- [What was kept and what was cut](AUDIT.md) - the Olympiad retirement, item by item
+- [Editable source](sheets.json) - generated by [author_notes.py](author_notes.py)
+- [Renderer](render_sheets.py) - [reusable figures](figures.py)
 
-The PNGs and PDFs live directly in this chapter folder. PNG filenames begin with **`JEE-`** or **`Olympiad-`**, with independent page numbering and a visible part label on every sheet. Combined exports put all JEE pages first. The previous mixed edition has been replaced, not left beside the new edition to confuse the reading order.
+## Reading order
 
-## How the boundary was chosen
+Each page is one lesson. Sections inside a page are numbered; the tag on the right
+says what kind of box the section ends in.
 
-**Relevance, not toughness.** JEE retains core electrostatics, capacitance, dielectrics, energy, force, charge conservation, networks and ordinary RC applications. Harder but useful applications such as bridges, cube networks, ladders and liquid rise stay there. Breakdown ratings are brought into the JEE checklist.
+| # | page | file |
+|---|---|---|
+{rows}
 
-Specialised microscopic response, dispersive materials, compensation/oscillators, coupled RC eigenmodes, capacitance matrices, reciprocity, exact image/conformal tools, spheroids, porous electrodes and instability theory go in the extension part. Previous **page 12 is now Olympiad 02**, and **page 14 is now Olympiad 05**. Mixed pages were actually edited: basic branch charge stays in JEE, matrix dynamics moves out; exact two-wire formulas move out, ordinary connected-sphere reasoning stays in.
+## What is on each page
 
-This is a **chapter-focused study grouping**, not a claim that every extension topic is absent from the entire JEE syllabus. In particular AC impedance belongs in JEE's AC chapter; specialised filters, compensated probes and threshold circuits are kept here as extras. See `SCOPE.md`.
+1. **Conductors.** Four facts about equilibrium, why $E=0$ does not mean $V=0$,
+   the Gauss protocol, and the six standard fields in a table.
+2. **Capacitance and geometry.** $C=Q/V$ with the net-charge trap, the plate
+   formula, the single slab rule that covers dielectric, metal and vacuum,
+   overlap area and fringing, $n$ plates, then sphere, cylinder and connected
+   spheres.
+3. **Networks.** Series/parallel with the energy split, the four-step island
+   method, balanced bridge, the cube, the infinite ladder, star-delta, and
+   charge through a branch.
+4. **Energy and the battery.** Why the half is there, the fixed-$Q$ vs fixed-$V$
+   table, the battery ledger, and the heat bill for two capacitors joined.
+5. **Force.** Plate force and the missing half (the trap that costs marks),
+   dielectric pull and liquid rise, charged-sphere pressure, image charge above a
+   grounded plane, and a plate on a spring.
+6. **Dielectrics.** What polarisation changes at fixed $Q$ or fixed $V$, layers
+   vs patches with the interface conditions, dielectric strength and ratings,
+   and six checks before you hand in.
+7. **Transients and AC.** The three-number method, charging/discharging/heat,
+   the $t=0^+$ and $t=\\infty$ rules, ripple, $X_C$ and series $RC$, and why a
+   meter changes the reading.
 
 ## Print specification
 
-Every PNG is **2480 × 3508 at 300 DPI**, A4 portrait proportions, with approximately 10 mm safe margins. Body text is 11.5 pt equivalent, explanations 11 pt, equations nominally 12 pt with occasional width fitting down to 10 pt. PDF media boxes are exact A4, 210 × 297 mm.
+2480 x 3508 px, 300 dpi, A4 portrait, about 10 mm safe margins, one sheet per
+page. Print **Fit to page**, not photo-style Fill/Crop. Colour is recommended;
+the trap boxes stay distinguishable in greyscale because they are also labelled.
 
-Print **A4, portrait, one sheet per page, Fit to page / printable area**. Do not select photo-style Fill/Crop. Colour is recommended; labels retain meaning in grayscale.
+## Why this edition exists
 
-## Page index
-
-| Part / local page | PNG | Source |
-|---|---|---|
-'''+rows+'''
-
-## Rebuild and test
-
-```sh
-python -m pip install -r "Short notes/Capacitors/requirements.txt"
-python "Short notes/Capacitors/render_sheets.py"
-python "Short notes/Capacitors/build_exports.py"
-python "Short notes/Capacitors/test_exports.py"
-```
-
-`sheets.json` contains editable content, section assignment, independent numbering and old-page mapping. `render_sheets.py` checks formula parsing, text width and overflow without shrinking body type. `layout-checks.json` records every card. Export tests cover dimensions, DPI, safe margins, ordering, section membership, ZIP contents, local links, A4 PDF page boxes and representative physics.
-
-These are conceptual short notes, not every worked exercise; the detailed source retains derivations and the complete paper/solutions. Patrick Hand is under the SIL Open Font License in `fonts/OFL.txt`.
+The first edition was 17 sheets in a two-column card grid: 4 concepts per sheet,
+about 280 words per page, and two of every three pages empty. The Olympiad part
+added specialised physics that JEE does not examine. This edition keeps every JEE
+topic (coverage table in [AUDIT.md](AUDIT.md)), merges the six Olympiad ideas that
+are real JEE **methods**, and packs the chapter into {len(sheets)} dense pages in
+teaching order.
 '''
-    (ROOT/'README.md').write_text(readme)
-    counts={part:len(rows) for part,rows in groups.items()}
-    print(f'Built {len(data)} sheets in order {counts}; separate and combined PDFs/ZIPs; grouped gallery.')
+    (ROOT / 'README.md').write_text(text)
+    return ROOT / 'README.md'
 
-if __name__=='__main__':build()
+
+def build_index(sheets):
+    cards = []
+    for i, s in enumerate(sheets, 1):
+        cards.append(f'''<article id="{s['slug']}">
+  <div class="label"><span>PAGE {i:02} / {len(sheets):02}</span><h3>{escape(s['title'])}</h3>
+  <a href="{s['slug']}.png">PNG</a></div>
+  <p class="caption">{escape(TITLES[s['slug']])}</p>
+  <a href="{s['slug']}.png"><img src="{s['slug']}.png" alt="{escape(s['title'])}" loading="lazy"></a>
+</article>''')
+    html = f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Capacitors - JEE short notes</title>
+<style>
+@font-face{{font-family:Patrick;src:url('fonts/PatrickHand-Regular.ttf')}}
+*{{box-sizing:border-box}}html{{scroll-behavior:smooth}}
+body{{margin:0;background:#f3f5f0;color:#153149;font:16px/1.6 system-ui,sans-serif}}
+header,main,footer{{max-width:1040px;margin:auto;padding:28px 22px}}
+header{{padding-top:46px}}.eyebrow{{text-transform:uppercase;letter-spacing:.15em;font-size:12px;color:#087d7d;font-weight:700}}
+h1{{font:clamp(40px,6vw,64px)/1.1 Patrick,cursive;margin:14px 0}}h1 em{{font-style:normal;color:#087d7d}}
+.intro{{max-width:820px;color:#516875}}
+.button{{display:inline-block;background:#087d7d;color:#fff;border-radius:8px;padding:12px 18px;text-decoration:none;margin:8px 8px 8px 0}}
+.secondary{{background:#dceee9;color:#153149}}
+nav{{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}}
+nav a{{font-size:12px;text-decoration:none;color:#31545e;background:#fff;border:1px solid #cbded9;padding:6px 10px;border-radius:16px}}
+article{{background:#fff;border:1px solid #cbded9;border-radius:12px;margin-bottom:34px;overflow:hidden}}
+.label{{display:flex;align-items:center;gap:14px;padding:14px 20px;background:#eff8f5}}
+.label span{{font-size:12px;color:#087d7d;white-space:nowrap}}
+.label h3{{flex:1;font:26px/1.2 Patrick,cursive;margin:0}}
+.label a{{font-size:12px;color:#087d7d;white-space:nowrap}}
+.caption{{margin:12px 20px;color:#516875;font-size:14px}}
+img{{display:block;width:100%;height:auto}}a{{color:#087d7d}}
+footer{{font-size:13px;color:#516875}}
+@page{{size:A4 portrait;margin:0}}
+@media print{{header,footer,.label,.caption{{display:none}}body,main{{margin:0;padding:0;background:#fff;max-width:none}}
+article{{border:0;border-radius:0;margin:0;break-after:page;width:210mm;height:297mm}}article:last-child{{break-after:auto}}
+img{{width:210mm;height:297mm}}}}
+</style></head><body>
+<header>
+<div class="eyebrow">Short notes / capacitors / JEE only</div>
+<h1>Capacitors, <em>seven pages</em></h1>
+<p class="intro">{len(sheets)} single-column sheets in teaching order. Every page carries a
+result box, a worked number, a trap and a remember line. Olympiad-only material was
+retired; the JEE methods that came out of it are marked <strong>KEPT</strong>.</p>
+<a class="button" href="{PDF}">Combined A4 PDF</a>
+<a class="button secondary" href="{ZIP}">All PNGs</a>
+<a class="button secondary" href="AUDIT.md">What was cut</a>
+<nav>{''.join(f'<a href="#{s["slug"]}">{i:02} {escape(s["title"])}</a>' for i, s in enumerate(sheets, 1))}</nav>
+</header>
+<main>
+{chr(10).join(cards)}
+</main>
+<footer><p>Print A4 portrait, one sheet per page, Fit to page. 2480 x 3508 px at 300 dpi.</p></footer>
+</body></html>
+'''
+    (ROOT / 'index.html').write_text(html)
+    return ROOT / 'index.html'
+
+
+def verify(sheets):
+    from pypdf import PdfReader
+    check_pngs(sheets)
+    pdf = PdfReader(ROOT / PDF)
+    assert len(pdf.pages) == len(sheets), 'PDF page count'
+    for page in pdf.pages:
+        assert abs(float(page.mediabox.width) - A4[0]) < .01
+        assert abs(float(page.mediabox.height) - A4[1]) < .01
+    names = [i.title for i in pdf.outline]
+    assert len(names) == len(sheets), 'bookmarks'
+    with zipfile.ZipFile(ROOT / ZIP) as z:
+        assert z.testzip() is None
+        assert z.namelist() == [s['slug'] + '.png' for s in sheets] + ['PRINTING.txt']
+        for s in sheets:
+            assert z.read(s['slug'] + '.png') == (ROOT / (s['slug'] + '.png')).read_bytes()
+    return True
+
+
+def main():
+    sheets = load()
+    if '--check' in sys.argv:
+        verify(sheets)
+        print(f'PASS: {len(sheets)} sheets, PDF and ZIP verified')
+        return
+    check_pngs(sheets)
+    for old in ('capacitors-jee.pdf', 'capacitors-olympiad.pdf',
+                'capacitors-jee-pngs.zip', 'capacitors-olympiad-pngs.zip'):
+        p = ROOT / old
+        if p.exists():
+            p.unlink()
+            print(f'removed retired export {old}')
+    build_pdf(sheets)
+    (ROOT / 'PRINTING.txt').write_text(PRINTING)
+    build_zip(sheets)
+    build_readme(sheets)
+    build_index(sheets)
+    verify(sheets)
+    size = (ROOT / PDF).stat().st_size / 1e6
+    print(f'built {PDF} ({len(sheets)} pages, {size:.1f} MB), {ZIP}, README.md, index.html')
+
+
+if __name__ == '__main__':
+    main()

@@ -22,18 +22,23 @@ cd capacitors && python3 -m http.server 8000
 
 ## Handwritten-style visual revision
 
-The A4, 300 DPI short notes are now ordered by **relevance rather than difficulty**:
+The A4, 300 DPI short notes are a **JEE-only single edition**: 7 dense single-column
+sheets in teaching order (conductors -> definition and geometry -> networks ->
+energy and the battery -> force and image charge -> dielectrics -> transients and AC).
+Each page carries a result box, a worked number, a trap and a remember line.
 
-1. **Part I — JEE Mains + Advanced: 11 sheets.** Core capacitor concepts, explanatory one-liners, useful harder applications, networks, dielectrics and ordinary RC problems.
-2. **Part II — Olympiad / extensions: 6 sheets.** Specialised material response, AC applications, coupled dynamics, matrix/image/conformal methods and instability theory. Former mixed pages 12 and 14 are in this part.
+The former Olympiad extension set was retired on 2026-10-24. The six items that were
+genuine JEE **methods** (image charge above a plane, movable plate with a spring,
+relaxation timing, meter loading, reservoir ripple, image-force energy bookkeeping)
+were merged into the JEE pages; the rest were dropped and, where they belong to
+another chapter, logged as hand-offs.
 
-- [JEE PNG ZIP](../Short%20notes/Capacitors/capacitors-jee-pngs.zip) · [JEE A4 PDF](../Short%20notes/Capacitors/capacitors-jee.pdf)
-- [Olympiad PNG ZIP](../Short%20notes/Capacitors/capacitors-olympiad-pngs.zip) · [Olympiad A4 PDF](../Short%20notes/Capacitors/capacitors-olympiad.pdf)
-- [Grouped offline gallery](../Short%20notes/Capacitors/index.html)
-- [Combined 17-sheet ZIP](../Short%20notes/Capacitors/capacitors-a4-pngs.zip) · [Combined A4 PDF](../Short%20notes/Capacitors/capacitors-short-notes.pdf)
-- [Scope decisions and previous-page mapping](../Short%20notes/Capacitors/SCOPE.md)
+- [PNG ZIP](../Short%20notes/Capacitors/capacitors-a4-pngs.zip) · [A4 PDF](../Short%20notes/Capacitors/capacitors-short-notes.pdf)
+- [Offline gallery](../Short%20notes/Capacitors/index.html) · [Page index](../Short%20notes/Capacitors/README.md)
+- [What was kept and what was cut, item by item](../Short%20notes/Capacitors/AUDIT.md)
 
-The PNGs live in root-level `Short notes/Capacitors/JEE-*.png` and `Short notes/Capacitors/Olympiad-*.png`. All combined exports place JEE first. This is a chapter-focused study grouping, not an assertion that basic AC is absent from the overall JEE syllabus. Retain the full chapter for proofs and worked solutions.
+The PNGs live in `Short%20notes/Capacitors/` as `JEE-01-…png` to `JEE-07-…png`.
+Retain the full chapter below for proofs and worked solutions.
 
 ## What is in the folder
 

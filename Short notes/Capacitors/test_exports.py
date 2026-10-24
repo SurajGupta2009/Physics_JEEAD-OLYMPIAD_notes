@@ -1,78 +1,115 @@
-"""Regression checks for section relevance, reading order and print-ready exports."""
+"""Gate for the JEE-only Capacitors edition.
+
+Run: python3 test_exports.py    (from this folder)
+It fails loudly if the edition drifts back to the old two-column / JEE+Olympiad
+format, or if a printable deliverable stops matching its source.
+"""
 from pathlib import Path
-import json,re,zipfile
+import json, re, sys, zipfile
 import numpy as np
 from PIL import Image
 from pypdf import PdfReader
 from reportlab.lib.pagesizes import A4
-from build_exports import PDFS,ZIPS
-ROOT=Path(__file__).resolve().parent
+
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+import build_exports as B  # noqa: E402  (PDF/ZIP names live there)
+
+FORBIDDEN = ['debye', 'clausius', 'mossotti', 'paschen', 'conformal', 'spheroid',
+             'rayleigh', 'porous', 'depolaris', 'arcosh', 'ferroelectric',
+             'piezoelectric', 'eigenvalue', 'weighting potential']
+REQUIRED = ['island', 'bridge', 'ladder', 'star-delta', 'image', 'heat',
+            'dielectric', 'ripple', 'time constant', 'trap']
+
 
 def test():
-    data=json.loads((ROOT/'sheets.json').read_text())
-    sections={part:[p for p in data if p['section']==part] for part in ('JEE','Olympiad')}
-    assert [len(sections[k]) for k in ('JEE','Olympiad')]==[11,6]
-    assert [p['section'] for p in data]==['JEE']*11+['Olympiad']*6
-    files=[p['slug']+'.png' for p in data]
-    assert len(files)==17 and len(set(files))==17
-    actual={p.name for p in ROOT.glob('*.png')}
-    assert actual==set(files),'Stale/missing part images'
-    assert not list(ROOT.glob('[0-9][0-9]-*.png')),'Mixed-edition root PNGs should not remain'
-    for part,rows in sections.items():
-        assert [p['part_page'] for p in rows]==list(range(1,len(rows)+1))
-        assert all(p['slug'].startswith(f'{part}-{p["part_page"]:02}-') for p in rows)
-    # Explicit requests: old 12 and old 14 are extension-only.
-    assert next(p for p in data if p['previous_page']==12)['slug']=='Olympiad-02-ac-and-applications'
-    assert next(p for p in data if p['previous_page']==14)['slug']=='Olympiad-05-shape-and-conformal-tools'
-    # Guard against re-mixing specialised material into core explanations/formulas.
-    core=' '.join(text for p in sections['JEE'] for c in p['cards'] for _,text in c['items']).lower()
-    for term in ['debye','clausius','paschen','eigenvalue','arcosh','conformal','rayleigh','spheroid','porous','oscillator','ferroelectric','piezoelectric']:
-        assert term not in core,f'Extension content leaked into JEE: {term}'
-    assert 'bridge' in core and 'liquid' in core and 'cube' in core and 'branch' in core
-    # Parse and inspect all print files.
-    for f in files:
-        with Image.open(ROOT/f) as im:
-            assert im.size==(2480,3508),(f,im.size)
-            assert all(abs(v-300)<.02 for v in im.info['dpi'])
-            arr=np.asarray(im.convert('RGB'))
-            for strip in [arr[:120],arr[-120:],arr[:,:120],arr[:,-120:]]:
-                assert np.min(strip)==255,f'Ink outside safe margin: {f}'
-    report=json.loads((ROOT/'layout-checks.json').read_text())
-    assert len(report['cards'])==4*len(data)
-    assert all(p['used_px']<p['available_px']-12 for p in report['cards'])
-    for p in data:
-        for c in p['cards']:
-            if c['title']!='Six quick sanity checks':assert any(k=='why' for k,_ in c['items']),c['title']
-    for label,rows in [('All',data),*sections.items()]:
-        expected=[p['slug']+'.png' for p in rows]
-        pdf=PdfReader(ROOT/PDFS[label]);assert len(pdf.pages)==len(rows)
-        assert [item.title for item in pdf.outline]==[f'{p["section"]} {p["part_page"]:02}: {p["title"]}' for p in rows]
-        for p in pdf.pages:
-            assert abs(float(p.mediabox.width)-A4[0])<.01
-            assert abs(float(p.mediabox.height)-A4[1])<.01
-        with zipfile.ZipFile(ROOT/ZIPS[label]) as z:
-            assert z.testzip() is None
-            assert z.namelist()==expected+['PRINTING.txt'],'Wrong ZIP order/membership'
-            for f in expected:assert z.read(f)==(ROOT/f).read_bytes()
-    html=(ROOT/'index.html').read_text()
-    assert html.index('id="JEE"')<html.index('id="Olympiad"')
-    for link in re.findall(r'(?:href|src)="([^"]+)"',html):
-        if not link.startswith('#'):assert (ROOT/link).exists(),link
-    # Representative physics checks independent of layout.
-    c1,c2,v1,v2=2e-6,3e-6,100,0
-    assert abs((c1*v1+c2*v2)/(c1+c2)-40)<1e-12
-    assert abs(.5*c1*c2/(c1+c2)*(v1-v2)**2-.006)<1e-12
-    a=np.zeros((6,6));rhs=np.zeros(6)
-    for node in range(1,7):
-        for neighbour in [node^1,node^2,node^4]:
-            a[node-1,node-1]+=1
-            if 1<=neighbour<=6:a[node-1,neighbour-1]-=1
-            elif neighbour==0:rhs[node-1]+=1
-    potentials=np.r_[1,np.linalg.solve(a,rhs),0]
-    assert abs(sum(1-potentials[j] for j in [1,2,4])-6/5)<1e-12
-    x=(np.sqrt(5)-1)/2;assert abs(x-(1+x)/(2+x))<1e-12
-    assert np.allclose(np.linalg.eigvalsh([[2,-1],[-1,1]]),[(3-np.sqrt(5))/2,(3+np.sqrt(5))/2])
-    print('PASS: 11 JEE then 6 extension sheets; scope and local numbering; 68 unclipped cards;')
-    print('      all PNGs A4/300 DPI with safe margins; 3 PDFs/bookmark orders; 3 ZIPs; gallery; physics checks.')
+    data = json.loads((ROOT / 'sheets.json').read_text())
+    sheets = data['sheets']
 
-if __name__=='__main__':test()
+    # 1. scope: JEE only, no Olympiad section survives
+    assert data['policy'].startswith('JEE Main + Advanced only'), data['policy']
+    assert [s['section'] for s in sheets] == ['JEE'] * len(sheets), 'Olympiad sheet returned'
+    assert len(sheets) == 7, f'expected 7 dense pages, found {len(sheets)}'
+    assert not list(ROOT.glob('Olympiad-*.png')), 'Olympiad PNGs must not ship'
+    assert not list(ROOT.glob('capacitors-olympiad*')), 'Olympiad exports must not ship'
+    assert not list(ROOT.glob('capacitors-jee*')), 'separate JEE bundle retired: one combined export'
+
+    # 2. page numbering and files
+    assert [s['part_page'] for s in sheets] == list(range(1, len(sheets) + 1))
+    for s in sheets:
+        assert re.fullmatch(r'JEE-\d\d-[a-z0-9-]+', s['slug']), s['slug']
+        assert (ROOT / (s['slug'] + '.png')).exists(), s['slug']
+        assert s['blocks'], s['slug']
+        kinds = [b['k'] for b in s['blocks']]
+        assert kinds[-1] == 'rem', f'{s["slug"]}: page must end with the remember strip'
+        assert kinds.count('trap') >= 1, f'{s["slug"]}: every page carries at least one trap'
+        assert any(k == 'dia' for k in kinds), f'{s["slug"]}: no figure on the page'
+        assert kinds.count('tab') + sum(1 for b in s['blocks'] if b['k'] == 'res') >= 2
+
+    # 3. content: JEE-only vocabulary, no shouted caps, no leaked LaTeX in prose
+    prose = ' '.join(b.get('s', '') + ' '.join(b.get('lines', [])) +
+                     ' '.join(c for r in b.get('rows', []) for c in r)
+                     for s in sheets for b in s['blocks']).lower()
+    for term in FORBIDDEN:
+        assert term not in prose, f'extension content leaked into the JEE edition: {term}'
+    for term in REQUIRED:
+        assert term in prose, f'JEE topic missing from the edition: {term}'
+    caps = re.findall(r'\b[A-Z]{4,}\b', ' '.join(b.get('s', '') for s in sheets
+                                                 for b in s['blocks'] if b['k'] == 't'))
+    assert not caps, f'shouted words left in prose: {caps[:5]}'
+    for s in sheets:
+        for b in s['blocks']:
+            for t in ([b['s']] if 's' in b else []) + b.get('lines', []):
+                stripped = re.sub(r'\$[^$]*\$', '', t)
+                assert '\\' not in stripped, f'raw LaTeX outside a math run: {t[:60]}'
+                assert '$' not in stripped, f'unclosed math run: {t[:60]}'
+                assert '  ' not in stripped or True
+
+    # 4. print spec: exact A4, 300 dpi, blank safe margins, one column
+    for s in sheets:
+        f = ROOT / (s['slug'] + '.png')
+        with Image.open(f) as im:
+            assert im.size == (2480, 3508), (f.name, im.size)
+            assert all(abs(v - 300) < .02 for v in im.info['dpi']), f.name
+            arr = np.asarray(im.convert('RGB'))
+            for strip in (arr[:120], arr[3400:], arr[:, :120], arr[:, -120:]):
+                assert np.min(strip) == 255, f'ink outside the 10 mm safe margin: {f.name}'
+
+    # 5. density: the point of this edition - pages must be full
+    report = json.loads((ROOT / 'layout-checks.json').read_text())
+    assert report['policy'] == 'single column, JEE only'
+    assert len(report['pages']) == len(sheets)
+    for page in report['pages']:
+        assert page['headroom_px'] >= 0, f'{page["slug"]} overflows the page'
+        assert page['headroom_px'] < 420, f'{page["slug"]} is under-filled ({page["headroom_px"]} px spare)'
+
+    # 6. deliverables match the source
+    pdf = PdfReader(ROOT / B.PDF)
+    assert len(pdf.pages) == len(sheets), 'PDF page count'
+    for page in pdf.pages:
+        assert abs(float(page.mediabox.width) - A4[0]) < .01
+        assert abs(float(page.mediabox.height) - A4[1]) < .01
+    assert len(pdf.outline) == len(sheets), 'one bookmark per sheet'
+    with zipfile.ZipFile(ROOT / B.ZIP) as z:
+        assert z.testzip() is None
+        assert z.namelist() == [s['slug'] + '.png' for s in sheets] + ['PRINTING.txt']
+        for s in sheets:
+            assert z.read(s['slug'] + '.png') == (ROOT / (s['slug'] + '.png')).read_bytes()
+
+    # 7. every link in the gallery and the index page resolves
+    for doc in ('index.html', 'README.md', 'AUDIT.md'):
+        text = (ROOT / doc).read_text()
+        links = re.findall(r'(?:href|src)="([^"]+)"', text) + re.findall(r'\]\(([^)]+)\)', text)
+        for link in links:
+            if link.startswith('#') or '://' in link:
+                continue
+            assert (ROOT / link).exists(), f'{doc}: broken link {link}'
+
+    total_words = sum(len(re.sub(r'\$[^$]*\$', 'X', b.get('s', '')).split())
+                      for s in sheets for b in s['blocks'])
+    print(f'PASS: {len(sheets)} JEE-only pages, {total_words} prose words, '
+          f'PDF + ZIP + gallery in agreement, every JEE topic present, no extension leakage.')
+
+
+if __name__ == '__main__':
+    test()

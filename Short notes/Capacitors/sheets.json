@@ -1,2159 +1,801 @@
-[
+{
+ "edition": "capacitors-jee-dense-v2",
+ "canvas": [
+  2480,
+  3508
+ ],
+ "dpi": 300,
+ "policy": "JEE Main + Advanced only; Olympiad sheets retired 2026-10-24 (see AUDIT.md)",
+ "sheets": [
   {
-    "slug": "JEE-01-foundations",
-    "title": "Charge, field & conductors",
-    "subtitle": "Start with the conductor: its boundary conditions determine the field.",
-    "source": "Chapter 1",
-    "diagrams": [
-      "sphere_fields",
-      "cavity"
-    ],
-    "takeaway": "Zero field means constant potential, not necessarily zero potential.",
-    "cards": [
-      {
-        "title": "Charge and superposition",
-        "items": [
-          [
-            "p",
-            "Charge is conserved and quantised: q = ne. Add electric fields as vectors, but potentials as signed scalars."
-          ],
-          [
-            "m",
-            "\\vec E=\\sum_i\\frac{q_i(\\vec r-\\vec r_i)}{4\\pi\\varepsilon_0|\\vec r-\\vec r_i|^3}"
-          ],
-          [
-            "m",
-            "V=\\sum_i\\frac{q_i}{4\\pi\\varepsilon_0|\\vec r-\\vec r_i|}"
-          ],
-          [
-            "why",
-            "Coulomb's inverse-square law applies directly to point charges. Extended conductors generally redistribute charge; do not replace them by centre charges unless symmetry or a distant-field approximation permits it."
-          ]
-        ]
-      },
-      {
-        "title": "Gauss and potential",
-        "items": [
-          [
-            "m",
-            "\\oint\\vec E\\cdot d\\vec A=Q_{\\mathrm{enclosed}}/\\varepsilon_0"
-          ],
-          [
-            "m",
-            "V_B-V_A=-\\int_A^B\\vec E\\cdot d\\vec l"
-          ],
-          [
-            "m",
-            "\\vec E=-\\nabla V;\\quad\\Phi=\\frac{q\\Omega}{4\\pi\\varepsilon_0}"
-          ],
-          [
-            "p",
-            "The last result is flux through a patch subtending solid angle Omega at a point charge."
-          ],
-          [
-            "why",
-            "Gauss always holds; it yields E easily only when symmetry makes the field magnitude and direction known on a suitable surface."
-          ]
-        ]
-      },
-      {
-        "title": "Equilibrium conductor",
-        "items": [
-          [
-            "p",
-            "Inside metal: E = 0; the entire connected conductor is equipotential. The external field is normal to its surface."
-          ],
-          [
-            "m",
-            "E_{\\mathrm{out},n}=\\sigma/\\varepsilon_0"
-          ],
-          [
-            "why",
-            "A tangential field would keep free charge moving. Equilibrium is reached only after charges rearrange to cancel it."
-          ],
-          [
-            "p",
-            "Excess charge resides on surfaces. Grounding fixes potential and allows charge exchange; isolation fixes net charge, not potential."
-          ],
-          [
-            "trap",
-            "A conductor need not be neutral when grounded, and need not have V = 0 when its internal field is zero."
-          ]
-        ]
-      },
-      {
-        "title": "Cavities and shielding",
-        "items": [
-          [
-            "p",
-            "A charge +q in a cavity of a neutral isolated conductor induces -q on the cavity wall and +q on the outer surface."
-          ],
-          [
-            "why",
-            "A Gaussian surface wholly inside the metal has zero flux. Its enclosed charge must therefore vanish."
-          ],
-          [
-            "p",
-            "An empty closed cavity is shielded from external static fields. With a charge inside, the cavity field is generally nonzero."
-          ],
-          [
-            "m",
-            "V_{\\mathrm{sphere}}(r<R)=\\frac{Q}{4\\pi\\varepsilon_0R}"
-          ],
-          [
-            "m",
-            "V_{\\mathrm{sphere}}(r>R)=\\frac{Q}{4\\pi\\varepsilon_0r}"
-          ]
-        ]
-      }
-    ],
-    "previous_page": 1,
-    "section": "JEE",
-    "part_page": 1,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-01-conductor-toolkit",
+   "section": "JEE",
+   "page": 1,
+   "part_page": 1,
+   "title": "A conductor decides the field before you calculate",
+   "sub": "Four facts about metal answer most electrostatics questions. Fix them first, then reach for a formula.",
+   "source": "Concepts from Capacitors.md ch.1-2",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "Equilibrium: the four facts",
+     "tag": "RESULT"
+    },
+    {
+     "k": "t",
+     "s": "Inside a conductor at equilibrium the field is zero, so the whole piece of metal - cavity walls included - is one equipotential. Just outside, the field is normal to the surface and equals $E=\\sigma/\\varepsilon_0$, and excess charge sits on the outer surface."
+    },
+    {
+     "k": "t",
+     "s": "The reason is self-correction: a tangential field would keep pushing free electrons until it cancelled itself, so only the normal part survives."
+    },
+    {
+     "k": "res",
+     "t": "learn these four",
+     "lines": [
+      "$E_{\\mathrm{inside}}=0$;  the conductor is a single potential",
+      "just outside: $E=\\sigma/\\varepsilon_0$, perpendicular to the metal",
+      "a cavity holding $+q$ shows $-q$ inside and $+q$ on the outer surface",
+      "an empty cavity is shielded from outside fields"
+     ]
+    },
+    {
+     "k": "trap",
+     "s": "$E=0$ is not $V=0$. A charged shell has no field inside and still sits at $V=kQ/R$: zero slope, non-zero height."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "Potential is the number that adds"
+    },
+    {
+     "k": "t",
+     "s": "Outside a sphere $V=kQ/r$ and $E=kQ/r^2$; inside a shell $V=kQ/R$ is constant while $E=0$. The link is $V_B-V_A=-\\int_A^B\\vec E\\cdot d\\vec l$, that is $\\vec E=-\\nabla V$: a field is a slope, a potential is a height."
+    },
+    {
+     "k": "ex",
+     "t": "one line of numbers",
+     "lines": [
+      "Radius $10\\ \\mathrm{cm}$, charge $1\\ \\mu\\mathrm{C}$: $V_s=9.0\\times10^4\\ \\mathrm{V}$, $E_s=9.0\\times10^5\\ \\mathrm{V/m}$. Both fall off outside as $1/r$ and $1/r^2$."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Gauss in three steps",
+     "tag": "RESULT"
+    },
+    {
+     "k": "t",
+     "s": "Symmetry first: name the surface where $|\\vec E|$ is constant and $\\vec E$ is parallel or perpendicular to $d\\vec A$. Then write $\\oint\\vec E\\cdot d\\vec A=Q_{\\mathrm{enc}}/\\varepsilon_0$. Only then take $E$ outside the integral."
+    },
+    {
+     "k": "tab",
+     "head": [
+      "source",
+      "field at distance r",
+      "note"
+     ],
+     "rows": [
+      [
+       "point charge, outside a sphere",
+       "$kQ/r^2$",
+       "the starting point"
+      ],
+      [
+       "inside a uniform solid sphere",
+       "$\\rho r/3\\varepsilon_0$",
+       "zero at the centre"
+      ],
+      [
+       "long line, $\\lambda$ per length",
+       "$\\lambda/2\\pi\\varepsilon_0 r$",
+       "falls as $1/r$"
+      ],
+      [
+       "large sheet, $\\sigma$ per face",
+       "$\\sigma/2\\varepsilon_0$",
+       "away on both sides"
+      ],
+      [
+       "conductor surface",
+       "$\\sigma/\\varepsilon_0$",
+       "one side only"
+      ],
+      [
+       "infinite slab, half-width $a$",
+       "$\\rho x/\\varepsilon_0$",
+       "outside: $\\rho a/\\varepsilon_0$"
+      ]
+     ],
+     "w": [
+      0.44,
+      0.3,
+      0.26
+     ]
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "What this buys in capacitor problems"
+    },
+    {
+     "k": "t",
+     "s": "A capacitor is two conductors, and only the field between them sets the terminal voltage. Grounding fixes $V=0$ and lets charge flow; isolation fixes net charge and leaves $V$ free. Order of work: name the terminals, say what is fixed, then compute."
+    },
+    {
+     "k": "trap",
+     "s": "One charged plate gives $\\sigma/2\\varepsilon_0$, but a capacitor gap gives $\\sigma/\\varepsilon_0$ - two plates, two contributions. Charging one plate alone does not set the gap field."
+    },
+    {
+     "k": "dia",
+     "key": "sphere_fields",
+     "h": 560,
+     "cap": "Flat potential, zero field inside; the step at $r=R$ is where the charge sits."
+    },
+    {
+     "k": "rem",
+     "s": "Say where the charge sits, then what the potential is. Neither step needs a capacitor formula."
+    }
+   ]
   },
   {
-    "slug": "JEE-02-plates-and-capacitance",
-    "title": "Capacitance & parallel plates",
-    "subtitle": "Capacitance measures charge needed per volt, not how much charge is already present.",
-    "source": "Chapter 2",
-    "diagrams": [
-      "plates",
-      "metal_slab"
-    ],
-    "takeaway": "Identify the two terminals and the potential reference before writing C = Q/V.",
-    "cards": [
-      {
-        "title": "What C actually means",
-        "items": [
-          [
-            "m",
-            "C=\\frac{Q}{V_+-V_-};\\quad 1\\,{\\mathrm{F}}=1\\,{\\mathrm{C}/V}"
-          ],
-          [
-            "p",
-            "For an ordinary two-terminal capacitor, plate charges are +Q and -Q. The pair's net charge is zero, not Q."
-          ],
-          [
-            "why",
-            "In a linear material, scaling every source charge scales every potential by the same factor. Their ratio is therefore set by geometry and permittivity."
-          ],
-          [
-            "p",
-            "An isolated conductor has its second terminal at infinity: C = Q/V, with V(infinity) = 0."
-          ],
-          [
-            "trap",
-            "Nonlinear dielectrics may require differential capacitance dQ/dV; constant C is then only an approximation."
-          ]
-        ]
-      },
-      {
-        "title": "Derive the plate formula",
-        "items": [
-          [
-            "p",
-            "Two large facing plates of area A, gap d, filled with uniform permittivity epsilon:"
-          ],
-          [
-            "m",
-            "E=\\frac{Q}{\\varepsilon A},\\quad V=Ed,\\quad C=\\frac{\\varepsilon A}{d}"
-          ],
-          [
-            "why",
-            "Fields of opposite plates add in the gap and cancel outside in the infinite-plate idealisation."
-          ],
-          [
-            "p",
-            "More overlap area stores more charge per volt. A larger gap needs more voltage for the same charge, so capacitance falls."
-          ],
-          [
-            "trap",
-            "Use overlap area, not the sum of both plate areas. Require d much smaller than the plate dimensions; edges produce fringing."
-          ]
-        ]
-      },
-      {
-        "title": "Metal inserted in the gap",
-        "items": [
-          [
-            "p",
-            "A neutral floating metal slab of thickness t fills the overlap area without touching either plate."
-          ],
-          [
-            "m",
-            "C=\\frac{\\varepsilon_0 A}{d-t}"
-          ],
-          [
-            "why",
-            "E = 0 inside the slab, so only the remaining vacuum thickness contributes to the voltage drop. Induced charges appear on its two faces."
-          ],
-          [
-            "p",
-            "Moving the slab changes the two vacuum gaps separately but not their sum: its position is irrelevant in the ideal model."
-          ],
-          [
-            "trap",
-            "Connecting the slab to a terminal changes the conductor topology. Do not reuse the floating-slab formula blindly."
-          ]
-        ]
-      },
-      {
-        "title": "Many plates and unequal charges",
-        "items": [
-          [
-            "p",
-            "For n identical interleaved plates, alternate plates wired to the two terminals:"
-          ],
-          [
-            "m",
-            "C=(n-1)\\frac{\\varepsilon A}{d}"
-          ],
-          [
-            "why",
-            "There are n - 1 active gaps, all with the same voltage, so their capacitances add in parallel."
-          ],
-          [
-            "p",
-            "If large equal plates carry net charges Q1 and Q2, facing charges are +(Q1-Q2)/2 and its negative, neglecting edges and external asymmetry."
-          ],
-          [
-            "m",
-            "V_1-V_2=\\frac{(Q_1-Q_2)d}{2\\varepsilon_0 A}"
-          ],
-          [
-            "trap",
-            "Net plate charge can differ from charge on the facing surface."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 2,
-    "section": "JEE",
-    "part_page": 2,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-02-capacitance-geometries",
+   "section": "JEE",
+   "page": 2,
+   "part_page": 2,
+   "title": "Capacitance: one definition, one plate rule, three geometries",
+   "sub": "Charge needed per volt. Geometry and medium set it; the charge already stored does not.",
+   "source": "Concepts from Capacitors.md ch.2-3",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "The definition, used correctly"
+    },
+    {
+     "k": "t",
+     "s": "$C=Q/V$, with $V$ the potential difference between the conductors and $Q$ the charge on the positive one. Scale every charge and every potential scales with it, so the ratio is geometry and medium only. An isolated conductor has its second plate at infinity: a sphere gives $C=4\\pi\\varepsilon_0R$."
+    },
+    {
+     "k": "trap",
+     "s": "A capacitor holds $+Q$ and $-Q$, so its net charge is zero. \"Charge on the capacitor\" always means the positive plate; writing $Q$ for the pair is the first mistake in the chapter."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "Parallel plates, and the slab that covers everything",
+     "tag": "RESULT"
+    },
+    {
+     "k": "t",
+     "s": "Opposite plates give $E=Q/\\varepsilon_0A$ in the gap and cancel outside. Then $V=Ed$ and the ratio is the plate formula. A slab of thickness $t$ replaces part of the gap, and one expression covers dielectric, metal and vacuum."
+    },
+    {
+     "k": "res",
+     "t": "plate, dielectric, metal",
+     "lines": [
+      "$C=\\dfrac{\\varepsilon_0A}{d}$;  with $K$ filling the gap $C=\\dfrac{K\\varepsilon_0A}{d}$;  with a slab $C=\\dfrac{\\varepsilon_0A}{d-t+t/K}$",
+      "metal is the limit $K\\to\\infty$: $C=\\dfrac{\\varepsilon_0A}{d-t}$;  two layers: $\\dfrac{1}{C}=\\dfrac{t_1}{K_1\\varepsilon_0A}+\\dfrac{t_2}{K_2\\varepsilon_0A}$",
+      "$\\varepsilon_0=8.85\\times10^{-12}\\ \\mathrm{F/m}$, $\\ 4\\pi\\varepsilon_0=1.11\\times10^{-10}\\ \\mathrm{F/m}$"
+     ]
+    },
+    {
+     "k": "ex",
+     "t": "two plates, two answers",
+     "lines": [
+      "Area $100\\ \\mathrm{cm^2}$, gap $1\\ \\mathrm{mm}$: air gives $88.5\\ \\mathrm{pF}$, $K=5$ gives $443\\ \\mathrm{pF}$. Doubling the gap halves $C$; only the total thickness of each layer matters, never where a slab sits."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Stacks, patches and unequal plates"
+    },
+    {
+     "k": "t",
+     "s": "Interleaved plates are gaps in parallel: $n$ plates give $n-1$ gaps and $C=(n-1)\\varepsilon_0A/d$. Two facing plates carrying $Q_1,Q_2$ settle with facing charges $\\pm(Q_1-Q_2)/2$, so $V_1-V_2=(Q_1-Q_2)d/2\\varepsilon_0A$."
+    },
+    {
+     "k": "trap",
+     "s": "Use the overlap area, never the sum of the two plate areas. And $C=\\varepsilon_0A/d$ assumes $d$ is small compared with the plate width; fringing at the edges always adds a little."
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Sphere, cylinder, and connected conductors",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "derive once, then quote",
+     "lines": [
+      "concentric spheres: $C=4\\pi\\varepsilon_0\\dfrac{ab}{b-a}$;  $b\\to\\infty$ returns the isolated sphere",
+      "coaxial cylinders: $C=\\dfrac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$",
+      "two distant spheres with opposite charges: $C\\simeq4\\pi\\varepsilon_0\\dfrac{ab}{a+b}$",
+      "sphere of radius $a$ coated to $b$ with dielectric $K$: $\\dfrac{1}{C}=\\dfrac{(1/a-1/b)/K+1/b}{4\\pi\\varepsilon_0}$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Two spheres on a long wire share potential, not charge: $Q_a/Q_b=a/b$, so the smaller one carries the larger surface field $kQ/R^2$. That is why a pointed conductor sparks first."
+    },
+    {
+     "k": "dia",
+     "key": "slab_cases",
+     "h": 420,
+     "cap": "Every gap is the plate formula with the filled thickness replaced by $t/K$; metal is the limit $K\\to\\infty$."
+    },
+    {
+     "k": "rem",
+     "s": "$C$ is geometry plus medium. Name the terminals, then either quote a standard result or integrate $E$ once."
+    }
+   ]
   },
   {
-    "slug": "JEE-03-capacitor-geometries",
-    "title": "The geometry toolbox",
-    "subtitle": "One method everywhere: assign charge, find E, integrate the voltage, then divide.",
-    "source": "Chapter 2",
-    "diagrams": [
-      "shells",
-      "coax"
-    ],
-    "takeaway": "Derive standard geometries with Gauss and potential; connected conductors share potential, not charge.",
-    "cards": [
-      {
-        "title": "Concentric spheres",
-        "items": [
-          [
-            "p",
-            "Inner radius a, outer shell inner radius b; homogeneous dielectric epsilon between them."
-          ],
-          [
-            "m",
-            "E(r)=\\frac{Q}{4\\pi\\varepsilon r^2}"
-          ],
-          [
-            "m",
-            "V=\\frac{Q}{4\\pi\\varepsilon}(1/a-1/b)"
-          ],
-          [
-            "m",
-            "C=4\\pi\\varepsilon\\frac{ab}{b-a}"
-          ],
-          [
-            "why",
-            "Spherical Gaussian surfaces make E uniform on each radius. Only the field between a and b contributes to the terminal voltage."
-          ],
-          [
-            "p",
-            "As b tends to infinity: isolated sphere C = 4 pi epsilon a. For b-a much smaller than a, recover the plate formula with area 4 pi a squared."
-          ]
-        ]
-      },
-      {
-        "title": "Coaxial cylinders",
-        "items": [
-          [
-            "p",
-            "Long coaxial conductors, radii a and b, length L; neglect end fields."
-          ],
-          [
-            "m",
-            "E(r)=\\frac{Q}{2\\pi\\varepsilon Lr}"
-          ],
-          [
-            "m",
-            "C=\\frac{2\\pi\\varepsilon L}{\\ln(b/a)}"
-          ],
-          [
-            "why",
-            "Cylindrical spreading makes E fall as 1/r. Integrating 1/r creates the logarithm."
-          ],
-          [
-            "p",
-            "Radial dielectric layers behave as series voltage drops:"
-          ],
-          [
-            "m",
-            "\\frac{1}{C/L}=\\sum_i\\frac{\\ln(r_{i+1}/r_i)}{2\\pi\\varepsilon_i}"
-          ]
-        ]
-      },
-      {
-        "title": "Two connected distant spheres",
-        "items": [
-          [
-            "p",
-            "Spheres of radii a and b are joined by a long thin wire. Separation is much greater than either radius, so mutual effects are neglected."
-          ],
-          [
-            "m",
-            "V_a=V_b;\\quad Q_a/a=Q_b/b"
-          ],
-          [
-            "m",
-            "Q_a=Q\\frac{a}{a+b};\\quad Q_b=Q\\frac{b}{a+b}"
-          ],
-          [
-            "m",
-            "\\frac{E_a}{E_b}=\\frac{b}{a}"
-          ],
-          [
-            "why",
-            "A conducting connection enforces equal potentials, not equal charge. The smaller sphere has the larger surface field."
-          ],
-          [
-            "trap",
-            "Do not use these distant-sphere results for nearby spheres: induced charge makes the surface distributions nonuniform."
-          ]
-        ]
-      },
-      {
-        "title": "Useful composite geometries",
-        "items": [
-          [
-            "p",
-            "Two distant spheres of radii a,b carrying opposite charges:"
-          ],
-          [
-            "m",
-            "C\\simeq4\\pi\\varepsilon_0\\frac{ab}{a+b}"
-          ],
-          [
-            "p",
-            "Only valid when separation greatly exceeds both radii. A conducting sphere a coated with dielectric K out to b:"
-          ],
-          [
-            "m",
-            "\\frac{1}{C}=\\frac{(1/a-1/b)/K+1/b}{4\\pi\\varepsilon_0}"
-          ],
-          [
-            "why",
-            "Add the voltage drop through the dielectric shell to the vacuum drop from b to infinity."
-          ],
-          [
-            "trap",
-            "Logarithms need dimensionless ratios. Isolated capacitance has scale epsilon0 times length; C per length has scale epsilon0."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 3,
-    "section": "JEE",
-    "part_page": 3,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-03-networks",
+   "section": "JEE",
+   "page": 3,
+   "part_page": 3,
+   "title": "Networks: islands, bridges, ladders",
+   "sub": "Wires make islands. Charge is conserved on each island, not on each capacitor - that one sentence solves every network.",
+   "source": "Concepts from Capacitors.md ch.6-7",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "Series, parallel, and where the energy goes"
+    },
+    {
+     "k": "res",
+     "t": "combinations",
+     "lines": [
+      "series: $\\dfrac{1}{C_{\\mathrm{eq}}}=\\sum\\dfrac{1}{C_i}$, same charge, voltages add as $1/C$",
+      "parallel: $C_{\\mathrm{eq}}=\\sum C_i$, same voltage, charges add as $C$",
+      "energy: series $\\dfrac{U_i}{U}=\\dfrac{C_{\\mathrm{eq}}}{C_i}$,  parallel $\\dfrac{U_i}{U}=\\dfrac{C_i}{C_{\\mathrm{eq}}}$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "In series the smallest capacitor takes the largest voltage, so a chain is limited by its weakest member, not by the sum of the ratings. In parallel each one sees the full voltage."
+    },
+    {
+     "k": "trap",
+     "s": "Series or parallel is decided by the wires, not by how the symbols are drawn - redraw first. A precharged middle island also breaks the \"equal charge in series\" rule."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "The island method that never fails",
+     "tag": "METHOD"
+    },
+    {
+     "k": "t",
+     "s": "Use it whenever a network cannot be folded with confidence. It is charge conservation, written once per conductor."
+    },
+    {
+     "k": "res",
+     "t": "four steps",
+     "lines": [
+      "1. Mark the islands: plates joined by a wire are one electrode.",
+      "2. Label each: grounded $\\Rightarrow V=0$; battery-connected $\\Rightarrow$ difference fixed; floating $\\Rightarrow$ net charge fixed.",
+      "3. For every floating island write $\\sum_j C_{ij}(V_i-V_j)=Q_i^{\\mathrm{initial}}$, keeping the plate signs.",
+      "4. Solve for the potentials, then read each capacitor as $q=C\\,\\Delta V$."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Bridges, symmetry, standard results",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "worth memorising",
+     "lines": [
+      "balanced bridge: $\\dfrac{C_1}{C_2}=\\dfrac{C_3}{C_4}$; the bridge capacitor then carries no charge",
+      "cube of twelve equal $C$: opposite vertices $\\dfrac{6C}{5}$, edge $\\dfrac{12C}{7}$, face diagonal $\\dfrac{4C}{3}$",
+      "infinite ladder (series $C$, shunt $C$): $X=\\dfrac{\\sqrt5-1}{2}C$",
+      "star-delta with $S=ab+bc+ca$: arms $x=S/b$, $y=S/c$, $z=S/a$;  back: $C_{12}=xy/(x+y+z)$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Each result comes from equal potentials, not from the drawing: fold two nodes only after proving the excitation treats them alike, and state the terminals."
+    },
+    {
+     "k": "trap",
+     "s": "Do not copy the resistor star-delta across. The capacitor star arm is a sum of products divided by one branch, the reciprocal arrangement of the resistor rule."
+    },
+    {
+     "k": "ex",
+     "t": "reduce, then audit the pieces",
+     "lines": [
+      "$6\\ \\mu\\mathrm{F}$ and $3\\ \\mu\\mathrm{F}$ in series give $2\\ \\mu\\mathrm{F}$; with $4\\ \\mu\\mathrm{F}$ in parallel, $C_{\\mathrm{eq}}=6\\ \\mu\\mathrm{F}$. At $12\\ \\mathrm{V}$: $Q=72\\ \\mu\\mathrm{C}$, $U=432\\ \\mu\\mathrm{J}$.",
+      "Audit: the series pair holds $24\\ \\mu\\mathrm{C}$ at $4\\ \\mathrm{V}$ and $8\\ \\mathrm{V}$, the $4\\ \\mu\\mathrm{F}$ holds $48\\ \\mu\\mathrm{C}$ - and $24+48=72$."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Charge through a wire"
+    },
+    {
+     "k": "t",
+     "s": "It is not $C\\Delta V$ in general. Cut the circuit with a surface crossed by that wire only; the charge that crossed equals the change in enclosed plate charge, signs included."
+    },
+    {
+     "k": "dia",
+     "key": "bridge",
+     "h": 280,
+     "cap": "Balanced means $V_X=V_Y$: delete the bridge. Otherwise write one island equation at $X$ and one at $Y$."
+    },
+    {
+     "k": "rem",
+     "s": "Name the terminals, mark the islands, conserve charge island by island. Folding is a shortcut that must be justified."
+    }
+   ]
   },
   {
-    "slug": "JEE-04-energy-and-battery",
-    "title": "Energy & the battery fork",
-    "subtitle": "The first question is not which formula to use, but what is being held fixed.",
-    "source": "Chapter 3",
-    "diagrams": [
-      "energy_triangle",
-      "fixed_fork"
-    ],
-    "takeaway": "At fixed V, the battery is part of the energy accounting—not an optional correction.",
-    "cards": [
-      {
-        "title": "Why the factor one-half?",
-        "items": [
-          [
-            "m",
-            "dU=V\\,dq;\\quad U=\\int_0^Q\\frac{q}{C}dq"
-          ],
-          [
-            "m",
-            "U=\\frac{Q^2}{2C}=\\frac{1}{2} QV=\\frac{1}{2} CV^2"
-          ],
-          [
-            "why",
-            "Voltage rises during charging. The average charging voltage is V/2, so the work is a triangle under the V-q graph, not a rectangle."
-          ],
-          [
-            "p",
-            "For a linear nondispersive dielectric:"
-          ],
-          [
-            "m",
-            "u=\\frac{1}{2}\\varepsilon E^2;\\quad U=\\int u\\,d\\mathcal V"
-          ],
-          [
-            "p",
-            "For a conductor, energy lies in the electric field outside the metal, not in its zero-field bulk."
-          ]
-        ]
-      },
-      {
-        "title": "Isolated: fix Q",
-        "items": [
-          [
-            "p",
-            "After removing the battery and insulating each terminal, no charge can cross the terminal boundary."
-          ],
-          [
-            "m",
-            "U(x)=\\frac{Q^2}{2C(x)}"
-          ],
-          [
-            "m",
-            "F_x=-\\left(\\frac{dU}{dx}\\right)_Q=\\frac{Q^2 C'(x)}{2C(x)^2}"
-          ],
-          [
-            "why",
-            "A mechanical change that increases C lowers field energy at fixed Q. The released energy can perform mechanical work."
-          ],
-          [
-            "p",
-            "Example: double a vacuum plate gap. C halves; Q and E stay fixed; V and U double. External work supplies the energy increase."
-          ]
-        ]
-      },
-      {
-        "title": "Connected: fix V",
-        "items": [
-          [
-            "p",
-            "An ideal battery maintains terminal voltage by exchanging charge with the plates."
-          ],
-          [
-            "m",
-            "\\Pi=U-VQ=-\\frac{1}{2} C(x)V^2"
-          ],
-          [
-            "m",
-            "F_x=-\\left(\\frac{d\\Pi}{dx}\\right)_V=\\frac{1}{2} V^2C'(x)"
-          ],
-          [
-            "why",
-            "The battery gains or loses energy when charge flows. Differentiating field energy alone gives the wrong sign for the force."
-          ],
-          [
-            "trap",
-            "At the same instantaneous Q = CV, fixed-Q and fixed-V methods give the SAME force. The constraints affect how the state changes, not the force at that state."
-          ]
-        ]
-      },
-      {
-        "title": "Energy bookkeeping",
-        "items": [
-          [
-            "p",
-            "For a slow fixed-V capacitance increase delta C:"
-          ],
-          [
-            "m",
-            "W_{\\mathrm{battery}}=V^2\\Delta C"
-          ],
-          [
-            "m",
-            "\\Delta U=\\frac{1}{2} V^2\\Delta C"
-          ],
-          [
-            "m",
-            "W_{\\mathrm{mech},out}=\\frac{1}{2} V^2\\Delta C"
-          ],
-          [
-            "why",
-            "Only half the battery work increases stored field energy; the rest can emerge as mechanical work in a quasistatic lossless motion."
-          ],
-          [
-            "m",
-            "W_{\\mathrm{sources}}=\\Delta U+H+W_{\\mathrm{mech},out}"
-          ],
-          [
-            "p",
-            "At fixed Q with no source or loss, mechanical work out equals -delta U."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 4,
-    "section": "JEE",
-    "part_page": 4,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-04-energy-battery-heat",
+   "section": "JEE",
+   "page": 4,
+   "part_page": 4,
+   "title": "Energy, the battery, and the heat bill",
+   "sub": "One question decides every sign: is the charge held fixed, or the voltage?",
+   "source": "Concepts from Capacitors.md ch.4, ch.10",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "Stored energy and the missing half",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "energy",
+     "lines": [
+      "$U=\\dfrac{Q^2}{2C}=\\dfrac12 QV=\\dfrac12 CV^2$;  per unit volume $u=\\dfrac12\\varepsilon_0E^2$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Charge is pushed in while the voltage climbs from $0$ to $V$, so the work is the area of a triangle, not a rectangle - hence the half. The energy lives in the field in the gap; the metal holds no field and stores nothing."
+    },
+    {
+     "k": "ex",
+     "t": "the check that catches sign errors",
+     "lines": [
+      "$2\\ \\mu\\mathrm{F}$ at $100\\ \\mathrm{V}$: $Q=200\\ \\mu\\mathrm{C}$ and $U=0.1\\ \\mathrm{J}$. Pull the plates to twice the gap with the battery off: $C$ halves, $Q$ stays, so $V$ and $U$ double - you supplied that work."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "The one fork: fixed Q or fixed V",
+     "tag": "TABLE"
+    },
+    {
+     "k": "tab",
+     "head": [
+      "after full dielectric insertion",
+      "fixed $Q$ (battery off)",
+      "fixed $V$ (battery on)"
+     ],
+     "rows": [
+      [
+       "$C$",
+       "grows by $K$",
+       "grows by $K$"
+      ],
+      [
+       "$V$",
+       "falls by $K$",
+       "unchanged"
+      ],
+      [
+       "$E$ in the gap",
+       "falls by $K$",
+       "unchanged, $V/d$"
+      ],
+      [
+       "$Q$",
+       "unchanged",
+       "grows by $K$"
+      ],
+      [
+       "$U$",
+       "falls by $K$",
+       "grows by $K$"
+      ],
+      [
+       "battery work",
+       "zero",
+       "$V^2\\Delta C$"
+      ]
+     ],
+     "w": [
+      0.4,
+      0.3,
+      0.3
+     ]
+    },
+    {
+     "k": "t",
+     "s": "At the same instant both columns describe the same force, because $Q=CV$ is the same state. The constraint decides how the state moves next, not what the force is now."
+    },
+    {
+     "k": "trap",
+     "s": "Battery work is not field energy. At fixed $V$ the cell keeps feeding charge as $C$ grows, so differentiating $\\frac12CV^2$ alone gives the force with the wrong sign."
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Bookkeeping for one move, and the heat bill",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "two ledgers",
+     "lines": [
+      "slab drawn in at fixed $V$: battery supplies $V^2\\Delta C$, field energy rises $\\frac12V^2\\Delta C$, the other half leaves as mechanical work or heat",
+      "two capacitors joined: $V_f=\\dfrac{C_1V_1+C_2V_2}{C_1+C_2}$,  heat $H=\\dfrac{C_1C_2}{2(C_1+C_2)}(V_1-V_2)^2$",
+      "charging an empty $C$ from a cell $E$: cell does $CE^2$, capacitor keeps $\\frac12CE^2$, half is lost whatever $R$ is"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "The loss does not depend on the resistance: a small $R$ gives a large current for a short time and the same integral. Only an ideal zero-$R$, zero-$L$ connection is singular."
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Two results worth carrying"
+    },
+    {
+     "k": "t",
+     "s": "Heat is never negative, and it equals $\\frac12C(V_0-V_\\infty)^2$ whenever a single capacitor settles to a new voltage. Energy decays twice as fast as voltage in any RC decay, because $U\\propto V^2$."
+    },
+    {
+     "k": "ex",
+     "t": "numbers on the heat bill",
+     "lines": [
+      "$C_1=2\\ \\mu\\mathrm{F}$ at $100\\ \\mathrm{V}$, $C_2=3\\ \\mu\\mathrm{F}$ uncharged. Joined: $V_f=40\\ \\mathrm{V}$, and $H=\\frac12\\cdot\\frac{6}{5}\\ \\mu\\mathrm{F}\\cdot(100)^2=6\\ \\mathrm{mJ}$.",
+      "Check: before $10\\ \\mathrm{mJ}$, after $4\\ \\mathrm{mJ}$ - the missing $6\\ \\mathrm{mJ}$ is the heat."
+     ]
+    },
+    {
+     "k": "dia",
+     "key": "energy_triangle",
+     "h": 510,
+     "cap": "Work is the area under the $V$-$q$ line. A triangle, so the half."
+    },
+    {
+     "k": "rem",
+     "s": "Fixed $Q$: differentiate $U$. Fixed $V$: differentiate $U-QV$, or add the battery term by hand."
+    }
+   ]
   },
   {
-    "slug": "JEE-05-force-and-insertion",
-    "title": "Pressure, insertion & liquid rise",
-    "subtitle": "Find C(x), state the constraint, then use virtual work instead of a difficult force integral.",
-    "source": "Chapters 3 and 5",
-    "diagrams": [
-      "insertion",
-      "liquid"
-    ],
-    "takeaway": "A dielectric is pulled toward larger capacitance at fixed Q as well as fixed V.",
-    "cards": [
-      {
-        "title": "The field acting on a plate",
-        "items": [
-          [
-            "m",
-            "p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac{1}{2}\\varepsilon_0 E_{\\mathrm{out}}^2"
-          ],
-          [
-            "p",
-            "This vacuum conductor pressure uses the field immediately outside the surface."
-          ],
-          [
-            "why",
-            "A surface element does not push itself. The field from other charges is half the total surface field, explaining the factor 1/2."
-          ],
-          [
-            "p",
-            "For ideal homogeneous parallel plates, attraction magnitude:"
-          ],
-          [
-            "m",
-            "F=\\frac{Q^2}{2\\varepsilon A}=\\frac{\\varepsilon A V^2}{2d^2}"
-          ],
-          [
-            "trap",
-            "Do not write F = QE using the total gap field; the correct magnitude is QE/2."
-          ]
-        ]
-      },
-      {
-        "title": "A partly inserted slab",
-        "items": [
-          [
-            "p",
-            "Plate length L, width w, gap d; slab K fills the gap through inserted length x. Neglect fringe corrections."
-          ],
-          [
-            "m",
-            "C(x)=\\frac{\\varepsilon_0 w}{d}[L+(K-1)x]"
-          ],
-          [
-            "m",
-            "F_{\\mathrm{in}}=\\frac{\\varepsilon_0(K-1)w}{2d}V^2"
-          ],
-          [
-            "why",
-            "The filled and empty areas are parallel capacitors. Increasing overlap increases C, so the force pulls the slab inward."
-          ],
-          [
-            "p",
-            "At fixed V, force is constant. At fixed Q, use instantaneous V = Q/C(x): the force decreases as the slab moves in."
-          ]
-        ]
-      },
-      {
-        "title": "Why a dielectric liquid climbs",
-        "items": [
-          [
-            "p",
-            "Two vertical plates at fixed V draw dielectric liquid between them. Height h is above the outside reservoir; ignore capillarity."
-          ],
-          [
-            "m",
-            "h=\\frac{\\varepsilon_0(K-1)V^2}{2\\rho g d^2}"
-          ],
-          [
-            "why",
-            "Raising the liquid replaces air with dielectric and increases C. Electric work pays for the gain in gravitational energy."
-          ],
-          [
-            "p",
-            "The electric force per unit plate width is epsilon0(K-1)V squared/(2d); balance it against the raised liquid's weight per width, rho g d h."
-          ],
-          [
-            "trap",
-            "Here h scales as V squared / d squared, not d to the minus fourth at fixed V."
-          ]
-        ]
-      },
-      {
-        "title": "Self-energy and mechanical checks",
-        "items": [
-          [
-            "p",
-            "For an isolated conducting sphere of radius R:"
-          ],
-          [
-            "m",
-            "U=\\frac{Q^2}{8\\pi\\varepsilon_0R}"
-          ],
-          [
-            "m",
-            "p=\\frac{Q^2}{32\\pi^2\\varepsilon_0R^4}"
-          ],
-          [
-            "why",
-            "Expanding the sphere increases its capacitance and lowers its fixed-Q energy. The released energy corresponds to outward electric pressure."
-          ],
-          [
-            "p",
-            "A uniformly charged solid sphere instead has U = 3Q squared/(20 pi epsilon0 R). Charge distribution matters."
-          ],
-          [
-            "trap",
-            "A symmetric charged sphere has no net translational force even though its surface experiences outward stress."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 5,
-    "section": "JEE",
-    "part_page": 5,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-05-force-insertion",
+   "section": "JEE",
+   "page": 5,
+   "part_page": 5,
+   "title": "Force: plates, dielectrics and one image charge",
+   "sub": "Find C(x), state the constraint, differentiate. Never integrate the field unless the question asks for the pressure at a point.",
+   "source": "Concepts from Capacitors.md ch.5, plus the image method",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "Force on a plate",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "the two forms",
+     "lines": [
+      "attraction: $F=\\dfrac{Q^2}{2\\varepsilon_0A}=\\dfrac{\\varepsilon_0AV^2}{2d^2}$;  pressure $p=\\dfrac{\\sigma^2}{2\\varepsilon_0}$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "The factor $\\frac12$ is the physics: a plate does not pull on itself, so only the field of the other plate (half the total gap field) acts on it. Equivalently, $F=-dU/dx$ at fixed $Q$, or $-d(U-QV)/dx$ at fixed $V$."
+    },
+    {
+     "k": "trap",
+     "s": "Do not write $F=QE$ with the full gap field $\\sigma/\\varepsilon_0$. The correct force is $QE/2$; that factor is the whole question."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "A dielectric is always pulled inward",
+     "tag": "RESULT"
+    },
+    {
+     "k": "res",
+     "t": "slab and liquid",
+     "lines": [
+      "slab entering by $x$: $C(x)=\\dfrac{\\varepsilon_0w}{d}[L+(K-1)x]$,  $F=\\dfrac{\\varepsilon_0(K-1)w}{2d}V^2$",
+      "at fixed $V$ that force is constant; at fixed $Q$ use $V=Q/C(x)$ and it falls as the slab goes in",
+      "liquid climbing between plates: $h=\\dfrac{\\varepsilon_0(K-1)V^2}{2\\rho gd^2}$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "The force always points toward larger capacitance, at fixed $Q$ as well as at fixed $V$; only the size of the force differs. For the liquid, balance the electric force per unit width against the weight $\\rho gdh$ of the raised column."
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Energy of a charged sphere, and the pressure it feels"
+    },
+    {
+     "k": "t",
+     "s": "An isolated conducting sphere has $U=Q^2/8\\pi\\varepsilon_0R$ and an outward surface pressure $Q^2/32\\pi^2\\varepsilon_0R^4$. Expanding it increases $C$ and lowers $U$, which is where the outward push comes from. A uniformly charged solid sphere is different: $U=3Q^2/20\\pi\\varepsilon_0R$, because the charge is spread through the volume."
+    },
+    {
+     "k": "trap",
+     "s": "A symmetric charged sphere feels no net translational force, even though every surface element is pushed outward. Net force and pressure are different questions."
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Image charge: the one extension worth keeping",
+     "tag": "KEPT"
+    },
+    {
+     "k": "t",
+     "s": "For a charge above a grounded conducting plane, replace the plane by a mirror charge $-q$ at depth $h$. It is a bookkeeping device, valid only above the plane, and it answers a whole family of JEE questions in one line."
+    },
+    {
+     "k": "res",
+     "t": "charge q at height h above a grounded plane",
+     "lines": [
+      "$F=\\dfrac{q^2}{16\\pi\\varepsilon_0h^2}$ with separation $2h$;  $W=\\dfrac{q^2}{16\\pi\\varepsilon_0h}$;  induced charge on the plane $=-q$",
+      "the field at the surface gives surface charge density $\\sigma=-qh/2\\pi(\\rho^2+h^2)^{3/2}$"
+     ]
+    },
+    {
+     "k": "trap",
+     "s": "The energy is half of $q\\times$ the image potential. Writing $q^2/8\\pi\\varepsilon_0h$ double counts the work of building the induced charge."
+    },
+    {
+     "k": "h",
+     "n": "5",
+     "t": "Stretch: a plate on a spring"
+    },
+    {
+     "k": "t",
+     "s": "A plate held at gap $d$ above a fixed plate by a spring of stiffness $k$ is the cleanest test of force plus stability. Equilibrium needs $kx=\\varepsilon_0AV^2/2(d-x)^2$, and the two solutions merge at $x=d/3$, where $V^2=8kd^3/27\\varepsilon_0A$: beyond that voltage the plate snaps down. At fixed charge the force $Q^2/2\\varepsilon_0A$ does not depend on the gap, so no snap-down is possible."
+    },
+    {
+     "k": "dia",
+     "key": "insertion",
+     "h": 405,
+     "cap": "The filled part and the empty part are two capacitors in parallel; increasing the overlap raises C, so the slab is pulled in."
+    },
+    {
+     "k": "rem",
+     "s": "Write C(x), name the constraint, differentiate the right energy. Force always points to larger C."
+    }
+   ]
   },
   {
-    "slug": "JEE-06-network-foundations",
-    "title": "Networks: charge on islands",
-    "subtitle": "Wires define conductor islands. Conservation applies to each isolated island, not to each capacitor.",
-    "source": "Chapter 4",
-    "diagrams": [
-      "series_parallel",
-      "floating_node"
-    ],
-    "takeaway": "Use the node-charge equation whenever a network cannot be reduced with confidence.",
-    "cards": [
-      {
-        "title": "Series: the real condition",
-        "items": [
-          [
-            "m",
-            "\\frac{1}{C_{\\mathrm{eq}}}=\\sum_i\\frac{1}{C_i}"
-          ],
-          [
-            "m",
-            "V_i=Q/C_i;\\quad V_1/V_2=C_2/C_1"
-          ],
-          [
-            "why",
-            "The intermediate conductor island cannot change its net charge. If initially neutral and attached only to two capacitors, their facing charges must balance."
-          ],
-          [
-            "trap",
-            "Equal series charge fails on a precharged island or an island with additional branches."
-          ],
-          [
-            "p",
-            "The smallest capacitor takes the largest voltage. Check every element's rating; total safe voltage is not always the sum of all individual ratings."
-          ]
-        ]
-      },
-      {
-        "title": "Parallel and energy division",
-        "items": [
-          [
-            "m",
-            "C_{\\mathrm{eq}}=\\sum_i C_i;\\quad Q_i=C_i V"
-          ],
-          [
-            "why",
-            "Capacitors connected between the same two nodes have identical voltage differences. Their terminal charges add."
-          ],
-          [
-            "p",
-            "Parallel: stored energy is proportional to C. In an initially neutral series chain, stored energy is inversely proportional to C."
-          ],
-          [
-            "m",
-            "\\left(\\frac{U_i}{U}\\right)_{\\mathrm{series}}=\\frac{C_{\\mathrm{eq}}}{C_i}"
-          ],
-          [
-            "m",
-            "\\left(\\frac{U_i}{U}\\right)_{\\mathrm{parallel}}=\\frac{C_i}{C_{\\mathrm{eq}}}"
-          ],
-          [
-            "trap",
-            "Series/parallel is about connections, not whether symbols are drawn in a straight line."
-          ]
-        ]
-      },
-      {
-        "title": "The method that never fails",
-        "items": [
-          [
-            "p",
-            "Set terminal A to V and B to zero. Assign an unknown potential to each remaining floating island."
-          ],
-          [
-            "m",
-            "q_i^{\\mathrm{initial}}=\\sum_j C_{ij}(V_i-V_j)"
-          ],
-          [
-            "why",
-            "Each attached plate carries C times its voltage relative to the neighbouring node. Summing these signed plate charges gives the island's conserved net charge."
-          ],
-          [
-            "m",
-            "Q_A=\\sum_j C_{Aj}(V_A-V_j)"
-          ],
-          [
-            "p",
-            "For an initially uncharged passive network, Ceq = QA/V. Precharge can add an offset charge and must be tracked separately."
-          ]
-        ]
-      },
-      {
-        "title": "Sources and switching topology",
-        "items": [
-          [
-            "p",
-            "A grounded island has known V = 0; a floating island has known net charge. A battery imposes a difference of potentials."
-          ],
-          [
-            "why",
-            "A battery-connected island is not isolated: charge can enter through the cell. Do not impose both a prescribed potential and an unjustified neutrality condition."
-          ],
-          [
-            "p",
-            "Before moving a switch: mark all plate charges and their signs. After moving it: redraw merged islands, add their initial charges, then impose final constraints."
-          ],
-          [
-            "trap",
-            "Conserve charge on the correct isolated conductor, not automatically the sum of the positive labels printed on capacitors."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 6,
-    "section": "JEE",
-    "part_page": 6,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
+   "slug": "JEE-06-dielectrics",
+   "section": "JEE",
+   "page": 6,
+   "part_page": 6,
+   "title": "Dielectrics: what changes, what does not",
+   "sub": "A dielectric polarises. Whether the field falls depends on the constraint, and whether it is a layer or a patch decides the formula.",
+   "source": "Concepts from Capacitors.md ch.8, ch.11",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "What the material does"
+    },
+    {
+     "k": "t",
+     "s": "Molecules stretch and align, putting bound charge on the faces. That bound charge opposes the free charge, so at fixed free charge the field and the voltage fall by $K$ while $C$ rises by $K$. With the battery still on, $V$ is pinned, the field stays $V/d$, and the cell pushes in extra free charge."
+    },
+    {
+     "k": "res",
+     "t": "one-line summary",
+     "lines": [
+      "fixed $Q$: $E=\\dfrac{E_0}{K}$, $V=\\dfrac{V_0}{K}$, $C=KC_0$, $U=\\dfrac{U_0}{K}$",
+      "fixed $V$: $E=E_0=\\dfrac{V}{d}$, $C=KC_0$, $Q=KQ_0$, $U=KU_0$"
+     ]
+    },
+    {
+     "k": "trap",
+     "s": "\"A dielectric always reduces the field\" is false. It reduces $E$ only at fixed charge; with the battery on and the gap full, $E$ is untouched and the charge grows instead."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "Two golden cases: layers or patches",
+     "tag": "RESULT"
+    },
+    {
+     "k": "t",
+     "s": "Cut the capacitor the right way and the geometry names the rule. Stack layers along the field: the same flux crosses each, so voltages add - series. Place patches across the area: they share the voltage, so charges add - parallel."
+    },
+    {
+     "k": "res",
+     "t": "both cases on one page",
+     "lines": [
+      "layers (series): $C=\\dfrac{\\varepsilon_0A}{d-t+t/K}$;  half the thickness filled: $C=\\dfrac{2KC_0}{K+1}$",
+      "patches (parallel): $C=\\dfrac{\\varepsilon_0A}{d}\\left[1+(K-1)\\dfrac{x}{L}\\right]$;  half the area filled: $C=C_0\\dfrac{K+1}{2}$",
+      "no free charge at the interface: $D_{1n}=D_{2n}$ and $E_{1t}=E_{2t}$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "The interface conditions are the reason the two cases differ: normal $D$ is continuous, so $E$ drops by $K$ across a layer; tangential $E$ is continuous, so the field is unbroken along a patch."
+    },
+    {
+     "k": "trap",
+     "s": "Which case is which? Cut the plates into pieces and you have patches. Cut across the gap and you have layers. A metal slab is the layer recipe with $K\\to\\infty$."
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "Dielectric strength sets the design",
+     "tag": "RATING"
+    },
+    {
+     "k": "res",
+     "t": "ratings",
+     "lines": [
+      "breakdown: $V_{\\max}=E_bd$ for a nearly uniform field;  best stored density $\\dfrac12\\varepsilon E_b^2$",
+      "air: $E_b\\approx3\\times10^6\\ \\mathrm{V/m}=3\\ \\mathrm{kV/mm}$; a $0.1\\ \\mathrm{mm}$ gap holds about $300\\ \\mathrm{V}$",
+      "in series the smallest capacitor takes the largest voltage: check each element, not the total"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Large $K$ buys capacitance, not safety: useful energy storage needs both a large $K$ and a large $E_b$. Sharp edges and trapped voids concentrate the local field far above $V/d$, so real capacitors fail below the average-field estimate."
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Six checks before you hand in"
+    },
+    {
+     "k": "t",
+     "s": "Dimensions: an isolated body has $C\\sim\\varepsilon_0\\times$ length. Limits: $K\\to1$ returns vacuum, $b\\to\\infty$ returns the isolated sphere. Signs: heat cannot be negative and a dielectric is always pulled toward larger $C$. Endpoints: a transient starts and ends at values the circuit allows. Stability: check curvature when equilibrium is asked. Ratings: compare each local field with $E_b$."
+    },
+    {
+     "k": "dia",
+     "key": "dielectric_layers",
+     "h": 540,
+     "cap": "Layers in series: same normal $D$, voltages add. Patches in parallel: same $V$, charges add."
+    },
+    {
+     "k": "rem",
+     "s": "Fixed $Q$ the field falls by $K$; fixed $V$ it does not. Layers add voltages; patches add charges."
+    }
+   ]
   },
   {
-    "slug": "JEE-07-network-tools",
-    "title": "Bridges, symmetry & ladders",
-    "subtitle": "Simplifications are consequences of equal potentials—not guesses from a symmetric-looking drawing.",
-    "source": "Chapter 4",
-    "diagrams": [
-      "bridge",
-      "ladder"
-    ],
-    "takeaway": "Always state the terminal choice: the same object can have different measured capacitances.",
-    "cards": [
-      {
-        "title": "Balanced and unbalanced bridges",
-        "items": [
-          [
-            "p",
-            "Upper path A-C1-X-C2-B; lower path A-C3-Y-C4-B; bridge C5 joins X to Y."
-          ],
-          [
-            "m",
-            "\\frac{C_1}{C_2}=\\frac{C_3}{C_4}\\Rightarrow V_X=V_Y"
-          ],
-          [
-            "why",
-            "Each path divides the terminal voltage in the same ratio. The bridge has zero voltage and carries no charge if initially uncharged."
-          ],
-          [
-            "p",
-            "Otherwise set VA = V, VB = 0 and solve:"
-          ],
-          [
-            "m",
-            "C_1(V_X-V)+C_2V_X+C_5(V_X-V_Y)=0"
-          ],
-          [
-            "m",
-            "C_3(V_Y-V)+C_4V_Y+C_5(V_Y-V_X)=0"
-          ]
-        ]
-      },
-      {
-        "title": "Cube: fold only equal-potential nodes",
-        "items": [
-          [
-            "p",
-            "All twelve cube edges have capacitance C. Across opposite vertices, the three neighbours of each terminal form equipotential groups."
-          ],
-          [
-            "m",
-            "3C,\\;6C,\\;3C\\quad\\hbox{in series}"
-          ],
-          [
-            "m",
-            "C_{\\mathrm{opposite}}=6C/5"
-          ],
-          [
-            "p",
-            "Other terminal choices: across an edge, 12C/7; across a face diagonal, 4C/3."
-          ],
-          [
-            "why",
-            "The excitation must preserve the symmetry used to merge nodes. Changing the terminal pair changes which nodes are equivalent."
-          ],
-          [
-            "trap",
-            "Never merge nodes just because their positions look similar on paper."
-          ]
-        ]
-      },
-      {
-        "title": "Delta-star for capacitors",
-        "items": [
-          [
-            "p",
-            "Delta edges a=C12, b=C23, c=C31. Define S = ab + bc + ca. Equivalent star arms to nodes 1,2,3:"
-          ],
-          [
-            "m",
-            "x=S/b,\\quad y=S/c,\\quad z=S/a"
-          ],
-          [
-            "p",
-            "Reverse transformation, for star arms x,y,z:"
-          ],
-          [
-            "m",
-            "C_{12}=\\frac{xy}{x+y+z}"
-          ],
-          [
-            "m",
-            "C_{23}=\\frac{yz}{x+y+z},\\quad C_{31}=\\frac{zx}{x+y+z}"
-          ],
-          [
-            "why",
-            "Eliminate the neutral central node from its charge equation. These preserve the external charge-voltage relations."
-          ],
-          [
-            "trap",
-            "Do not copy resistor delta-star values unchanged."
-          ]
-        ]
-      },
-      {
-        "title": "Infinite self-similar ladder",
-        "items": [
-          [
-            "p",
-            "One stage: series C, then shunt C to the lower rail, followed by the same infinite remainder X."
-          ],
-          [
-            "m",
-            "X=\\frac{C(C+X)}{2C+X}"
-          ],
-          [
-            "m",
-            "X^2+CX-C^2=0"
-          ],
-          [
-            "m",
-            "X=\\frac{\\sqrt{5}-1}{2}C"
-          ],
-          [
-            "why",
-            "Removing one repeat unit leaves an identical infinite network. The negative quadratic root is rejected because passive equivalent capacitance is positive."
-          ],
-          [
-            "p",
-            "For finite ladders, start at the far end and repeatedly apply the same reduction. State which end is open or terminated."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 7,
-    "section": "JEE",
-    "part_page": 7,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
-  },
-  {
-    "slug": "JEE-08-dielectric-geometry",
-    "title": "Dielectrics: field & geometry",
-    "subtitle": "A dielectric polarises; whether E changes depends on the constraint and the orientation.",
-    "source": "Chapter 5",
-    "diagrams": [
-      "dielectric_layers",
-      "polarisation"
-    ],
-    "takeaway": "Layers along the field add voltage drops; side-by-side patches add terminal charges.",
-    "cards": [
-      {
-        "title": "Free versus bound charge",
-        "items": [
-          [
-            "m",
-            "\\vec P=\\varepsilon_0\\chi_e\\vec E;\\quad K=1+\\chi_e"
-          ],
-          [
-            "m",
-            "\\vec D=\\varepsilon_0\\vec E+\\vec P=\\varepsilon\\vec E"
-          ],
-          [
-            "m",
-            "\\sigma_b=\\vec P\\cdot\\hat n;\\quad\\rho_b=-\\nabla\\cdot\\vec P"
-          ],
-          [
-            "m",
-            "\\oint\\vec D\\cdot d\\vec A=Q_{\\mathrm{free}}"
-          ],
-          [
-            "why",
-            "Molecular positive and negative charges shift slightly. Their bound surface charges oppose the original field at fixed free charge."
-          ],
-          [
-            "p",
-            "D is useful because its flux counts only free charge; it does not mean bound charge has no physical effect."
-          ]
-        ]
-      },
-      {
-        "title": "Interface conditions",
-        "items": [
-          [
-            "m",
-            "D_{2n}-D_{1n}=\\sigma_{\\mathrm{free}}"
-          ],
-          [
-            "m",
-            "E_{2t}=E_{1t}"
-          ],
-          [
-            "p",
-            "With no free interface charge, normal D is continuous and normal E varies inversely with permittivity."
-          ],
-          [
-            "m",
-            "\\frac{\\tan\\theta_1}{\\tan\\theta_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}"
-          ],
-          [
-            "p",
-            "Angles are measured from the interface normal; assume no free surface charge for this refraction result."
-          ],
-          [
-            "why",
-            "Tangential E must match because an electrostatic closed-loop integral is zero. Normal D follows directly from a small Gaussian pillbox."
-          ]
-        ]
-      },
-      {
-        "title": "Layered gap: series",
-        "items": [
-          [
-            "m",
-            "\\frac{1}{C}=\\sum_i\\frac{t_i}{\\varepsilon_i A}"
-          ],
-          [
-            "m",
-            "D=Q_{\\mathrm{free}}/A;\\quad E_i=D/\\varepsilon_i"
-          ],
-          [
-            "p",
-            "For vacuum plus a dielectric slab of thickness t:"
-          ],
-          [
-            "m",
-            "C=\\frac{\\varepsilon_0 A}{d-t+t/K}"
-          ],
-          [
-            "why",
-            "The same normal free-charge flux passes through every layer, while their voltage drops add. The weak-permittivity layer has the larger field."
-          ],
-          [
-            "p",
-            "Half the thickness filled: C = 2K C0/(K+1). As K tends to infinity, recover the metal-slab effective gap."
-          ]
-        ]
-      },
-      {
-        "title": "Area patches and full insertion",
-        "items": [
-          [
-            "m",
-            "C=\\sum_i\\frac{\\varepsilon_i A_i}{d}"
-          ],
-          [
-            "p",
-            "Half the area filled through the full gap: C = C0(K+1)/2. Each patch sees the same voltage and E = V/d."
-          ],
-          [
-            "why",
-            "Here charges add at common voltage, unlike thickness layers where voltage drops add at common D."
-          ],
-          [
-            "p",
-            "Full K insertion, battery removed: Q fixed, C grows K-fold; V, E and U fall by K."
-          ],
-          [
-            "p",
-            "Full K insertion, battery connected: V and E fixed; C, Q and U grow K-fold."
-          ],
-          [
-            "trap",
-            "A dielectric does NOT always reduce E. At fixed V in a completely filled ideal gap, E remains V/d."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 8,
-    "section": "JEE",
-    "part_page": 8,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
-  },
-  {
-    "slug": "JEE-09-rc-basics",
-    "title": "DC circuits & one RC transient",
-    "subtitle": "Every single-mode transient is determined by its starting value, final value and time constant.",
-    "source": "Chapter 6",
-    "diagrams": [
-      "charging",
-      "thevenin"
-    ],
-    "takeaway": "A capacitor is open at DC steady state, but its final voltage can be nonzero.",
-    "cards": [
-      {
-        "title": "The three-number method",
-        "items": [
-          [
-            "m",
-            "V_C(t)=V_\\infty+(V_0-V_\\infty)e^{-t/\\tau}"
-          ],
-          [
-            "m",
-            "\\tau=R_{\\mathrm{th}}C"
-          ],
-          [
-            "p",
-            "Find V0 from the pre-switch state, V infinity from the final DC resistor circuit, and Rth looking into the capacitor terminals."
-          ],
-          [
-            "why",
-            "Replacing the rest of a linear single-capacitor circuit by its Thevenin source leaves the same first-order differential equation."
-          ],
-          [
-            "trap",
-            "Voltage is continuous across switching only when there is no impulse current. Conflicting ideal source constraints need a more physical model."
-          ]
-        ]
-      },
-      {
-        "title": "Find the Thevenin resistance",
-        "items": [
-          [
-            "p",
-            "Remove the capacitor. Find the open-circuit terminal voltage for V infinity. To find Rth, short independent voltage sources and open independent current sources."
-          ],
-          [
-            "p",
-            "Keep dependent sources active; apply a test source if necessary."
-          ],
-          [
-            "why",
-            "The resistance seen from the capacitor determines how quickly a small voltage error can drive restoring current."
-          ],
-          [
-            "m",
-            "V_\\infty=V_s\\frac{R_2}{R_1+R_2}"
-          ],
-          [
-            "m",
-            "R_{\\mathrm{th}}=R_1\\parallel R_2"
-          ],
-          [
-            "p",
-            "These results apply to a capacitor across R2 in the divider drawn below."
-          ]
-        ]
-      },
-      {
-        "title": "Charging from an ideal cell",
-        "items": [
-          [
-            "p",
-            "Initially uncharged C, source emf E, single series R:"
-          ],
-          [
-            "m",
-            "V_C=E(1-e^{-t/(RC)})"
-          ],
-          [
-            "m",
-            "q=CE(1-e^{-t/(RC)}),\\quad i=\\frac ER e^{-t/(RC)}"
-          ],
-          [
-            "why",
-            "As capacitor voltage rises, the voltage left across the resistor falls, so the charging current decays."
-          ],
-          [
-            "p",
-            "At one time constant: voltage reaches 63.2% and current falls to 36.8%. After five time constants: 99.3% charged."
-          ],
-          [
-            "m",
-            "t=-RC\\ln(1-V_C/E)"
-          ]
-        ]
-      },
-      {
-        "title": "Discharge and energy decay",
-        "items": [
-          [
-            "m",
-            "V_C=V_0e^{-t/(RC)};\\quad |i|=\\frac{V_0}{R}e^{-t/(RC)}"
-          ],
-          [
-            "m",
-            "U=U_0e^{-2t/(RC)}"
-          ],
-          [
-            "m",
-            "t_{1/2,V}=RC\\ln2;\\quad t_{1/2,U}=\\frac{1}{2} RC\\ln2"
-          ],
-          [
-            "why",
-            "Energy is proportional to voltage squared, so it decays twice as fast in the exponential exponent."
-          ],
-          [
-            "p",
-            "If leakage resistance Rp remains across a capacitor, it slowly discharges with time constant Rp C. At exact infinite time its voltage reaches zero unless a source maintains it."
-          ],
-          [
-            "trap",
-            "Time constant belongs to the actual post-switch topology, not automatically to the resistor nearest the capacitor."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 10,
-    "section": "JEE",
-    "part_page": 9,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
-  },
-  {
-    "slug": "JEE-10-switching-and-heat",
-    "title": "Charge sharing, heat & branch charge",
-    "subtitle": "Conserve charge on isolated islands; use energy separately to find the heat released.",
-    "source": "Chapters 3, 4 and 6",
-    "diagrams": [
-      "discharge",
-      "floating_node"
-    ],
-    "takeaway": "Charge conservation fixes the final voltage; it does not imply field-energy conservation.",
-    "cards": [
-      {
-        "title": "Joining two capacitors",
-        "items": [
-          [
-            "p",
-            "Choose a common polarity convention; V1 and V2 are signed initial voltages. Join corresponding plates through resistance."
-          ],
-          [
-            "m",
-            "V_f=\\frac{C_1V_1+C_2V_2}{C_1+C_2}"
-          ],
-          [
-            "m",
-            "C_s=\\frac{C_1C_2}{C_1+C_2}"
-          ],
-          [
-            "m",
-            "H=\\frac{1}{2} C_s(V_1-V_2)^2"
-          ],
-          [
-            "why",
-            "The connected conductor islands conserve charge, but current dissipates energy while the voltage mismatch disappears."
-          ],
-          [
-            "p",
-            "Opposite-polarity connection is handled by a negative initial voltage, not a separate memorised formula."
-          ]
-        ]
-      },
-      {
-        "title": "Time scale and the paradox",
-        "items": [
-          [
-            "m",
-            "V_1(t)-V_2(t)=(V_1-V_2)e^{-t/(RC_s)}"
-          ],
-          [
-            "p",
-            "The connecting resistance R sets the redistribution time, not the total energy lost after settling."
-          ],
-          [
-            "why",
-            "Smaller R gives a larger current for a shorter time. The integral of i squared R remains the same."
-          ],
-          [
-            "p",
-            "If several series resistors carry the same current, their heats divide in the resistance ratio."
-          ],
-          [
-            "trap",
-            "An ideal zero-resistance, zero-inductance connection is singular. Real leads radiate and have inductance; an ideal lossless LC circuit oscillates instead of settling."
-          ]
-        ]
-      },
-      {
-        "title": "Step charging energy balance",
-        "items": [
-          [
-            "m",
-            "W_{\\mathrm{cell}}=CE^2;\\quad U_f=H=\\frac{1}{2} CE^2"
-          ],
-          [
-            "p",
-            "For a single RC settling from V0 toward a constant Thevenin voltage Vth:"
-          ],
-          [
-            "m",
-            "H=\\frac{1}{2} C(V_0-V_{\\mathrm{th}})^2"
-          ],
-          [
-            "m",
-            "H(t)=\\frac{1}{2} CE^2(1-e^{-2t/(RC)})"
-          ],
-          [
-            "p",
-            "The time-dependent expression assumes charging an initially uncharged C from E."
-          ],
-          [
-            "why",
-            "At Vc = E/2, time is RC ln2 and 3/4 of the total heat has already been released. Initial current is largest."
-          ]
-        ]
-      },
-      {
-        "title": "Charge through a cell or branch",
-        "items": [
-          [
-            "p",
-            "Choose a conductor boundary crossed by only the branch whose transported charge is wanted. Add every capacitor-plate charge inside, with signs."
-          ],
-          [
-            "m",
-            "Q_{\\mathrm{branch},in}=\\Delta\\!\\left(\\sum_{\\mathrm{inside}}q_{\\mathrm{plate}}\\right)"
-          ],
-          [
-            "why",
-            "The change of net enclosed charge must equal net charge entering through that branch. This gives total transported charge directly from endpoint states."
-          ],
-          [
-            "p",
-            "The battery work is its emf times the signed charge it supplies. For several sources, sum their separate contributions."
-          ],
-          [
-            "trap",
-            "Do not use Ceq times delta V blindly after rewiring: island boundaries and initial charges matter."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 11,
-    "section": "JEE",
-    "part_page": 10,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
-  },
-  {
-    "slug": "JEE-11-revision-checklist",
-    "title": "JEE revision & safe-use checklist",
-    "subtitle": "Finish the capacitor chapter here: core concepts, useful applications and checks before moving to extensions.",
-    "source": "Chapter 8 and formula sheet",
-    "diagrams": [
-      "master_map",
-      "drill"
-    ],
-    "takeaway": "This is the end of Part I. The remaining sheets are optional extensions, not prerequisites for the JEE core.",
-    "cards": [
-      {
-        "title": "The reliable solving sequence",
-        "items": [
-          [
-            "p",
-            "1. Define terminals, voltage polarity and what Q means."
-          ],
-          [
-            "p",
-            "2. Redraw all wires as conductor islands; mark grounded, floating and battery-connected parts."
-          ],
-          [
-            "p",
-            "3. State what remains fixed: free charge, voltage, geometry or a source constraint."
-          ],
-          [
-            "p",
-            "4. Reduce only genuine series/parallel groups; otherwise write node-charge equations."
-          ],
-          [
-            "p",
-            "5. For mechanics, find C(x) and differentiate the appropriate energy. For a transient, find V0, V infinity and Rth."
-          ],
-          [
-            "why",
-            "Most difficult-looking capacitor questions are ordinary conservation laws applied to a carefully chosen system boundary."
-          ]
-        ]
-      },
-      {
-        "title": "Dielectric strength and ratings",
-        "items": [
-          [
-            "m",
-            "V_{\\max}\\simeq E_b d;\\quad u_{\\max}=\\frac{1}{2}\\varepsilon E_b^2"
-          ],
-          [
-            "p",
-            "Use a roughly uniform field and a linear dielectric. Choose a working voltage below the breakdown rating; avoid treating the maximum as a safe operating target."
-          ],
-          [
-            "why",
-            "Breakdown depends on local field. A sharp edge or defect can fail even when the average V/d appears acceptable."
-          ],
-          [
-            "p",
-            "In series, the smallest capacitor takes the largest voltage for equal charge. Check each capacitor separately, not only the total applied voltage."
-          ],
-          [
-            "trap",
-            "A larger dielectric constant increases C, but high energy storage also requires high dielectric strength."
-          ]
-        ]
-      },
-      {
-        "title": "Six quick sanity checks",
-        "items": [
-          [
-            "p",
-            "Dimensions: C has farads; an isolated body's C scales as epsilon0 times length."
-          ],
-          [
-            "p",
-            "Limits: K to 1 should recover vacuum; outer spherical radius to infinity should recover an isolated sphere."
-          ],
-          [
-            "p",
-            "Signs: dissipated heat cannot be negative; force on an inserted dielectric points toward larger C."
-          ],
-          [
-            "p",
-            "Endpoints: a transient must begin and end at the values implied by the actual circuit."
-          ],
-          [
-            "p",
-            "Stability: effective energy curvature must be positive."
-          ],
-          [
-            "p",
-            "Ratings: test local fields and each element's voltage, not only total applied voltage."
-          ]
-        ]
-      },
-      {
-        "title": "Numbers and conceptual anchors",
-        "items": [
-          [
-            "m",
-            "\\varepsilon_0=8.854\\times10^{-12}\\ {\\mathrm{F}/m}"
-          ],
-          [
-            "m",
-            "4\\pi\\varepsilon_0=1.113\\times10^{-10}\\ {\\mathrm{F}/m}"
-          ],
-          [
-            "p",
-            "A 1 cm isolated sphere has C about 1.11 pF. Air breakdown is roughly 3 kV/mm for macroscopic gaps, but condition-dependent."
-          ],
-          [
-            "p",
-            "Fixed Q, full dielectric insertion: voltage and field energy decrease. Fixed V: stored energy increases because the source supplies charge."
-          ],
-          [
-            "why",
-            "Same state Q = CV means same instantaneous force, even though the two constraints lead to different subsequent motion."
-          ],
-          [
-            "trap",
-            "These sheets complement the full practice paper."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 16,
-    "section": "JEE",
-    "part_page": 11,
-    "scope_note": "Core capacitor concepts and useful electrostatic/RC applications; difficulty is not the boundary."
-  },
-  {
-    "slug": "Olympiad-01-material-response",
-    "title": "Microscopic & dispersive dielectrics",
-    "subtitle": "EXTENSION: microscopic material models and frequency-dependent response, beyond the core capacitor chapter.",
-    "source": "Chapter 5",
-    "diagrams": [
-      "debye",
-      "paschen"
-    ],
-    "takeaway": "Distinguish intrinsic electrostatic storage from leakage, delayed polarisation and breakdown.",
-    "cards": [
-      {
-        "title": "From dipoles to permittivity",
-        "items": [
-          [
-            "m",
-            "p=\\alpha E_{\\mathrm{local}};\\quad E_{\\mathrm{local}}=E+P/(3\\varepsilon_0)"
-          ],
-          [
-            "m",
-            "\\frac{K-1}{K+2}=\\frac{N\\alpha}{3\\varepsilon_0}"
-          ],
-          [
-            "p",
-            "This Lorentz / Clausius-Mossotti model assumes an isotropic local-field description."
-          ],
-          [
-            "m",
-            "\\alpha_e=\\frac{e^2}{m\\omega_0^2},\\quad\\alpha_{\\mathrm{orient}}=\\frac{p_0^2}{3k_BT}"
-          ],
-          [
-            "why",
-            "Electronic polarisation is charge-cloud distortion; orientational polarisation is partial alignment of permanent dipoles against thermal agitation."
-          ],
-          [
-            "p",
-            "Orientational response weakens as temperature rises at fixed number density."
-          ]
-        ]
-      },
-      {
-        "title": "Debye relaxation and losses",
-        "items": [
-          [
-            "p",
-            "Use time dependence exp(i omega t) and K* = K' - i K double-prime."
-          ],
-          [
-            "m",
-            "K^*=K_\\infty+\\frac{K_s-K_\\infty}{1+i\\omega\\tau}"
-          ],
-          [
-            "m",
-            "K''=\\frac{(K_s-K_\\infty)\\omega\\tau}{1+(\\omega\\tau)^2}"
-          ],
-          [
-            "m",
-            "\\tan\\delta=K''/K'"
-          ],
-          [
-            "why",
-            "Dipoles cannot follow a rapidly changing field instantly. Their lag dissipates energy and makes the apparent permittivity frequency-dependent."
-          ],
-          [
-            "p",
-            "K double-prime peaks at omega tau = 1; tan delta peaks instead at sqrt(Ks/Kinfinity)."
-          ]
-        ]
-      },
-      {
-        "title": "Heat, leakage and memory",
-        "items": [
-          [
-            "m",
-            "P_{\\mathrm{loss}}/\\mathcal V=\\omega\\varepsilon_0K'\\tan\\delta\\,E_{\\mathrm{rms}}^2"
-          ],
-          [
-            "m",
-            "\\tan\\delta\\simeq\\omega C R_s\\simeq\\frac{1}{\\omega C R_p}"
-          ],
-          [
-            "p",
-            "Small-loss series ESR and parallel leakage are approximate equivalent models at a chosen frequency."
-          ],
-          [
-            "why",
-            "A real capacitor stores energy and dissipates some. Dielectric absorption adds slow internal modes: a discharged capacitor can recover voltage."
-          ],
-          [
-            "p",
-            "Ferroelectrics show hysteresis and bias/temperature dependence. Piezoelectric strain S = d33 E; free thickness change is d33 V."
-          ],
-          [
-            "trap",
-            "Stored energy is not generally CV squared/2 when C is strongly nonlinear."
-          ]
-        ]
-      },
-      {
-        "title": "Gas breakdown and small gaps",
-        "items": [
-          [
-            "m",
-            "V_b=f(pd)\\quad\\mathrm{(Paschen\\ law)}"
-          ],
-          [
-            "p",
-            "For classical gas discharge, breakdown depends on the product of gas pressure p and gap d. Air has a minimum near 330 V under the relevant discharge assumptions."
-          ],
-          [
-            "why",
-            "Avalanche growth competes with the probability of electron collisions. The pressure-gap product controls the number of opportunities for ionisation."
-          ],
-          [
-            "p",
-            "At very small gaps, field emission and tunnelling can invalidate a classical-gas model. Sharp features and voids concentrate local fields."
-          ],
-          [
-            "trap",
-            "The Paschen minimum is not an absolute voltage limit for every microscopic discharge mechanism."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 9,
-    "section": "Olympiad",
-    "part_page": 1,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
-  },
-  {
-    "slug": "Olympiad-02-ac-and-applications",
-    "title": "AC, dividers & timing circuits",
-    "subtitle": "EXTENSION: filters, compensated probes, threshold oscillators and slow-charging applications.",
-    "source": "Chapter 6 and formula sheet",
-    "diagrams": [
-      "bode",
-      "oscillator"
-    ],
-    "takeaway": "Always identify where the output voltage is measured before choosing a filter formula.",
-    "cards": [
-      {
-        "title": "Impedance and the low-pass",
-        "items": [
-          [
-            "m",
-            "i=C\\frac{dV_C}{dt};\\quad Z_C=\\frac{1}{i\\omega C}"
-          ],
-          [
-            "p",
-            "Sinusoidal current leads capacitor voltage by 90 degrees. For a series RC, output across C:"
-          ],
-          [
-            "m",
-            "H(\\omega)=\\frac{1}{1+i\\omega RC}"
-          ],
-          [
-            "m",
-            "|H|=\\frac{1}{\\sqrt{1+(\\omega RC)^2}}"
-          ],
-          [
-            "m",
-            "f_c=\\frac{1}{2\\pi RC};\\quad\\phi=-\\arctan(\\omega RC)"
-          ],
-          [
-            "why",
-            "At high frequency, C has small impedance and its output voltage is small. At cutoff: -3 dB and -45 degrees."
-          ]
-        ]
-      },
-      {
-        "title": "High-pass and compensated divider",
-        "items": [
-          [
-            "p",
-            "Output across R in the same series RC:"
-          ],
-          [
-            "m",
-            "H=\\frac{i\\omega RC}{1+i\\omega RC}"
-          ],
-          [
-            "p",
-            "Compensated divider: upper arm R1 parallel C1, lower arm R2 parallel C2; output across lower arm."
-          ],
-          [
-            "m",
-            "\\frac{V(0^+)}{V_s}=\\frac{C_1}{C_1+C_2},\\quad\\frac{V(\\infty)}{V_s}=\\frac{R_2}{R_1+R_2}"
-          ],
-          [
-            "m",
-            "R_1C_1=R_2C_2"
-          ],
-          [
-            "why",
-            "Matching these time constants makes the fast capacitive division equal the slow resistive division, eliminating step-response distortion."
-          ]
-        ]
-      },
-      {
-        "title": "Relaxation timing",
-        "items": [
-          [
-            "p",
-            "Charge from Vlo to Vhi toward Vs through R:"
-          ],
-          [
-            "m",
-            "t_c=RC\\ln\\frac{V_s-V_{\\mathrm{lo}}}{V_s-V_{\\mathrm{hi}}}"
-          ],
-          [
-            "p",
-            "Discharge from Vhi to Vlo toward zero through Rd:"
-          ],
-          [
-            "m",
-            "t_d=R_dC\\ln(V_{\\mathrm{hi}}/V_{\\mathrm{lo}})"
-          ],
-          [
-            "p",
-            "For thresholds Vs/3 and 2Vs/3 and equal charge/discharge resistances: T = 2RC ln2."
-          ],
-          [
-            "why",
-            "A switching threshold converts a monotonic exponential into a repeated oscillation. The asymptotic voltage must lie beyond the threshold to reach it."
-          ]
-        ]
-      },
-      {
-        "title": "Ripple, gentle charging and noise",
-        "items": [
-          [
-            "m",
-            "\\Delta V\\simeq I_{\\mathrm{load}}\\Delta t/C"
-          ],
-          [
-            "p",
-            "A reservoir capacitor supplies load charge between recharge events; choose C from the allowed ripple and longest recharge interval."
-          ],
-          [
-            "m",
-            "H_{\\mathrm{ramp}}\\simeq RC^2V^2/T\\quad(T\\gg RC)"
-          ],
-          [
-            "why",
-            "Slowly ramping the source keeps resistor current small, avoiding the unavoidable half-energy loss of a sudden voltage step."
-          ],
-          [
-            "m",
-            "V_{\\mathrm{rms},noise}=\\sqrt{k_BT/C}"
-          ],
-          [
-            "p",
-            "At 300 K and 1 pF: about 64 microvolt. Above self-resonance, lead inductance can dominate: a real capacitor is no longer capacitive."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 12,
-    "section": "Olympiad",
-    "part_page": 2,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
-  },
-  {
-    "slug": "Olympiad-03-coupled-rc-and-measurement",
-    "title": "Coupled RC & specialised models",
-    "subtitle": "EXTENSION: coupled modes, measurement loading and exact wire-to-wire / wire-to-plane capacitances.",
-    "source": "Chapter 6 and advanced practice",
-    "diagrams": [
-      "coupled_chain",
-      "two_modes"
-    ],
-    "takeaway": "A single exponential is a model choice: identify the independent dynamic variables before assigning one time constant.",
-    "cards": [
-      {
-        "title": "Several independent storage modes",
-        "items": [
-          [
-            "m",
-            "\\mathbf C\\dot{\\mathbf V}+\\mathbf G\\mathbf V=\\mathbf b"
-          ],
-          [
-            "p",
-            "Use independent node voltages after applying source and charge constraints. The matrices describe capacitive storage and resistive conduction."
-          ],
-          [
-            "m",
-            "V(t)=V_\\infty+\\sum_k A_ke^{-\\lambda_k t}"
-          ],
-          [
-            "why",
-            "Each independent relaxation mode has its own rate. A measured voltage can contain several exponentials, or hide a mode through symmetry."
-          ],
-          [
-            "p",
-            "For an invertible reduced capacitance matrix, rates are eigenvalues of C inverse G. Counting drawn capacitors alone is not sufficient."
-          ]
-        ]
-      },
-      {
-        "title": "An equal-R, equal-C example",
-        "items": [
-          [
-            "p",
-            "Two nodes each have C to ground. An ideal source drives node 1 through R; another R joins nodes 1 and 2 (diagram below)."
-          ],
-          [
-            "m",
-            "RC\\dot V_1=V_s-2V_1+V_2"
-          ],
-          [
-            "m",
-            "RC\\dot V_2=V_1-V_2"
-          ],
-          [
-            "m",
-            "\\lambda_\\pm=\\frac{3\\pm\\sqrt{5}}{2RC}"
-          ],
-          [
-            "why",
-            "The two node voltages can relax in different combinations. The eigenvalues of the conductance-storage system give two distinct time scales."
-          ],
-          [
-            "p",
-            "After a constant source step, both final voltages equal Vs. Initial voltages determine how strongly each mode appears."
-          ]
-        ]
-      },
-      {
-        "title": "Measuring can change the voltage",
-        "items": [
-          [
-            "p",
-            "An isolated capacitor Cs at voltage V0 is connected to an initially uncharged meter input capacitance Cm. Neglect leakage during the reading."
-          ],
-          [
-            "m",
-            "V_{\\mathrm{read}}=V_0\\frac{C_s}{C_s+C_m}"
-          ],
-          [
-            "why",
-            "The meter needs charge to raise its own input voltage. Charge sharing lowers the original source-capacitor voltage."
-          ],
-          [
-            "m",
-            "V_{\\mathrm{rms},noise}=\\sqrt{k_BT/C}"
-          ],
-          [
-            "p",
-            "The thermal voltage scale is about 64 microvolt at 300 K and 1 pF. Small capacitance is sensitive, but more vulnerable to loading and noise."
-          ]
-        ]
-      },
-      {
-        "title": "Wires and the ground plane",
-        "items": [
-          [
-            "p",
-            "Two equal long wires: radius a, centre spacing D > 2a, homogeneous surrounding dielectric."
-          ],
-          [
-            "m",
-            "\\frac{C}{L}=\\frac{\\pi\\varepsilon}{\\operatorname{arcosh}(D/2a)}"
-          ],
-          [
-            "p",
-            "For D much larger than a, denominator becomes ln(D/a). One wire at centre height h > a above a grounded plane:"
-          ],
-          [
-            "m",
-            "\\frac{C}{L}=\\frac{2\\pi\\varepsilon}{\\operatorname{arcosh}(h/a)}"
-          ],
-          [
-            "why",
-            "The ground plane is an equipotential midway between a wire and its opposite image. The wire-to-plane voltage is half the pair voltage."
-          ]
-        ]
-      }
-    ],
-    "section": "Olympiad",
-    "part_page": 3,
-    "previous_page": null,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
-  },
-  {
-    "slug": "Olympiad-04-matrices-and-images",
-    "title": "Matrices, reciprocity & images",
-    "subtitle": "Advanced tools simplify boundary conditions; they do not replace charge and energy bookkeeping.",
-    "source": "Chapter 7",
-    "diagrams": [
-      "image_plane",
-      "image_sphere"
-    ],
-    "takeaway": "Image charges are mathematical replacements in the physical region—not extra real charges.",
-    "cards": [
-      {
-        "title": "Many conductors and reciprocity",
-        "items": [
-          [
-            "m",
-            "Q_i=\\sum_j C_{ij}V_j;\\quad C_{ij}=C_{ji}"
-          ],
-          [
-            "m",
-            "U=\\frac{1}{2}\\sum_i Q_iV_i=\\frac{1}{2}\\mathbf V^T\\mathbf C\\mathbf V"
-          ],
-          [
-            "p",
-            "With a fixed reference: diagonal terms positive, off-diagonal terms nonpositive. If invertible, P = C inverse."
-          ],
-          [
-            "m",
-            "\\sum_i Q_iV'_i=\\sum_i Q'_iV_i"
-          ],
-          [
-            "why",
-            "Reciprocity follows from symmetric C for the same geometry and linear dielectric."
-          ],
-          [
-            "p",
-            "Floating fixes Q; grounding fixes V."
-          ]
-        ]
-      },
-      {
-        "title": "Weighting potential and signal",
-        "items": [
-          [
-            "p",
-            "Set the selected electrode to unit potential and every other electrode to zero, with the moving charge removed. Call the resulting potential phi_w."
-          ],
-          [
-            "m",
-            "\\Delta Q_{\\mathrm{electrode}}=-q\\Delta\\phi_w"
-          ],
-          [
-            "m",
-            "i_{\\mathrm{electrode}}=-q\\vec v\\cdot\\nabla\\phi_w"
-          ],
-          [
-            "why",
-            "The weighting field measures how strongly each point couples to the selected electrode. It is not the actual driving field."
-          ],
-          [
-            "p",
-            "For parallel plates separated by d, phi_w = x/d when the selected electrode is at x = d. Current sign here means the rate of induced electrode charge."
-          ]
-        ]
-      },
-      {
-        "title": "Charge above a grounded plane",
-        "items": [
-          [
-            "p",
-            "Replace a grounded plane by image -q at the mirror point. A real +q at height h feels:"
-          ],
-          [
-            "m",
-            "|F|=\\frac{q^2}{16\\pi\\varepsilon_0h^2}"
-          ],
-          [
-            "m",
-            "U=-\\frac{q^2}{16\\pi\\varepsilon_0h}"
-          ],
-          [
-            "m",
-            "\\sigma(\\rho)=-\\frac{qh}{2\\pi(\\rho^2+h^2)^{3/2}}"
-          ],
-          [
-            "why",
-            "The opposite image enforces V = 0 on the plane. The real force equals the image force, but induction energy is one-half q times image potential."
-          ],
-          [
-            "trap",
-            "Use separation 2h in Coulomb's force; the field is not that of an image only h away."
-          ]
-        ]
-      },
-      {
-        "title": "Grounded versus neutral sphere",
-        "items": [
-          [
-            "p",
-            "Real q at distance d > a from a grounded sphere's centre. Place an image on the same radial line:"
-          ],
-          [
-            "m",
-            "q'=-qa/d;\\quad r'=a^2/d"
-          ],
-          [
-            "m",
-            "|F|=\\frac{q^2ad}{4\\pi\\varepsilon_0(d^2-a^2)^2}"
-          ],
-          [
-            "why",
-            "The chosen image makes the entire spherical surface an equipotential at zero, not merely its nearest point."
-          ],
-          [
-            "p",
-            "For an isolated neutral sphere, add a central image +qa/d so total image charge is zero. Its force contribution must also be included."
-          ],
-          [
-            "trap",
-            "A grounded-sphere force formula is not automatically valid for a neutral floating sphere."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 13,
-    "section": "Olympiad",
-    "part_page": 4,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
-  },
-  {
-    "slug": "Olympiad-05-shape-and-conformal-tools",
-    "title": "Shape, conformal maps & pores",
-    "subtitle": "Geometry controls both charge storage and where the electric field becomes dangerously large.",
-    "source": "Chapters 6 and 7",
-    "diagrams": [
-      "wedge",
-      "pore"
-    ],
-    "takeaway": "A large total capacitance does not imply a small local field or rapid access to all stored charge.",
-    "cards": [
-      {
-        "title": "Spheroids: needle to disc",
-        "items": [
-          [
-            "p",
-            "Semiaxis c along the symmetry axis, transverse semiaxis a. Prolate c > a; let f squared = c squared - a squared."
-          ],
-          [
-            "m",
-            "C=\\frac{4\\pi\\varepsilon_0 f}{\\ln[(c+f)/a]}"
-          ],
-          [
-            "p",
-            "Oblate a > c: f squared = a squared - c squared; eta = arctan(f/c)."
-          ],
-          [
-            "m",
-            "C=4\\pi\\varepsilon_0f/\\eta"
-          ],
-          [
-            "p",
-            "Limits: sphere C = 4 pi epsilon0 a; thin disc C = 8 epsilon0 a; long needle C approximately 4 pi epsilon0 c / ln(2c/a)."
-          ],
-          [
-            "why",
-            "Tip curvature concentrates charge and local field. For an ellipsoidal inclusion the depolarising factor similarly controls its internal field."
-          ]
-        ]
-      },
-      {
-        "title": "Ellipsoidal inclusions and voids",
-        "items": [
-          [
-            "m",
-            "E_{\\mathrm{in}}=\\frac{E_0}{1+L(\\varepsilon_i/\\varepsilon_m-1)}"
-          ],
-          [
-            "m",
-            "L_1+L_2+L_3=1"
-          ],
-          [
-            "p",
-            "Here L is the depolarising factor along the applied field. Sphere: 1/3; axial needle: approaches 0; thin disc normal to field: approaches 1."
-          ],
-          [
-            "why",
-            "Polarisation charges on an inclusion's surface create an opposing field whose strength depends on shape."
-          ],
-          [
-            "p",
-            "An air disc-shaped crack normal to E in a K host sees about K E0. An axial needle-shaped void sees about E0. Thin cracks can therefore be much worse defects."
-          ]
-        ]
-      },
-      {
-        "title": "Wedges and corner fields",
-        "items": [
-          [
-            "p",
-            "Two conducting faces at angles 0 and beta, radii r0 to R, held at 0 and V; beta in radians."
-          ],
-          [
-            "m",
-            "\\phi=V\\theta/\\beta;\\quad E_\\theta=-V/(\\beta r)"
-          ],
-          [
-            "m",
-            "C'=\\frac{\\varepsilon}{\\beta}\\ln(R/r_0)"
-          ],
-          [
-            "m",
-            "E_{\\mathrm{corner}}\\propto r^{\\pi/\\beta-1}"
-          ],
-          [
-            "p",
-            "In the corner expression, beta is the vacuum opening angle between equipotential conductor faces. A knife edge has beta = 2 pi and E proportional to r to the minus one-half."
-          ],
-          [
-            "why",
-            "An analytic conformal map preserves 2D Laplace solutions; changing coordinates can turn a hard conductor shape into a simple strip."
-          ]
-        ]
-      },
-      {
-        "title": "Porous electrodes: delayed storage",
-        "items": [
-          [
-            "p",
-            "Pore resistance per length r, capacitance per length c:"
-          ],
-          [
-            "m",
-            "c\\frac{\\partial V}{\\partial t}=\\frac{1}{r}\\frac{\\partial^2V}{\\partial x^2}"
-          ],
-          [
-            "m",
-            "\\ell_{\\mathrm{reached}}\\sim\\sqrt{t/(rc)}"
-          ],
-          [
-            "m",
-            "Z_{\\infty}=(1-i)\\sqrt{r/(2\\omega c)}"
-          ],
-          [
-            "why",
-            "Charge must travel through resistance to reach deeper internal surface. Only part of the large geometric capacitance is accessible at short times."
-          ],
-          [
-            "p",
-            "Initially Q scales as square root of t. Full charging needs t of order rc L squared. A finite closed pore has low-frequency C = cL and ESR = rL/3."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 14,
-    "section": "Olympiad",
-    "part_page": 5,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
-  },
-  {
-    "slug": "Olympiad-06-stability-and-drops",
-    "title": "Pull-in, oscillations & charged drops",
-    "subtitle": "EXTENSION: electromechanical instability and charged-drop shape stability, not a prerequisite for JEE capacitor problems.",
-    "source": "Chapters 3 and 7",
-    "diagrams": [
-      "pull_in",
-      "drop"
-    ],
-    "takeaway": "A force-balance solution is not enough: test stability under the actual electrical constraint.",
-    "cards": [
-      {
-        "title": "Voltage-driven movable plate",
-        "items": [
-          [
-            "p",
-            "Spring stiffness k, initial gap d0, closing displacement x; plate area A and homogeneous epsilon."
-          ],
-          [
-            "m",
-            "\\Pi=\\frac{1}{2}kx^2-\\frac{\\varepsilon AV^2}{2(d_0-x)}"
-          ],
-          [
-            "m",
-            "kx=\\frac{\\varepsilon AV^2}{2(d_0-x)^2}"
-          ],
-          [
-            "why",
-            "Closing the gap strengthens voltage-driven attraction faster than the spring's restoring force. The stable and unstable equilibria can merge."
-          ],
-          [
-            "m",
-            "\\Pi''=k-\\frac{\\varepsilon AV^2}{(d_0-x)^3}>0"
-          ]
-        ]
-      },
-      {
-        "title": "Pull-in and small oscillations",
-        "items": [
-          [
-            "m",
-            "x_{\\mathrm{pi}}=d_0/3"
-          ],
-          [
-            "m",
-            "V_{\\mathrm{pi}}^2=\\frac{8kd_0^3}{27\\varepsilon A}"
-          ],
-          [
-            "m",
-            "\\omega^2=\\frac{1}{m}\\left[k-\\frac{\\varepsilon AV^2}{(d_0-x_{\\mathrm{eq}})^3}\\right]"
-          ],
-          [
-            "why",
-            "Near pull-in, effective spring stiffness tends to zero, so the small-oscillation frequency softens to zero."
-          ],
-          [
-            "p",
-            "Use this formula only about a stable equilibrium and for small displacement. The one-third stroke limit assumes ideal parallel plates and a linear spring."
-          ]
-        ]
-      },
-      {
-        "title": "What changes at fixed charge?",
-        "items": [
-          [
-            "m",
-            "U_Q=\\frac{Q^2(d_0-x)}{2\\varepsilon A}"
-          ],
-          [
-            "m",
-            "F=\\frac{Q^2}{2\\varepsilon A};\\quad x_{\\mathrm{eq}}=\\frac{Q^2}{2k\\varepsilon A}"
-          ],
-          [
-            "why",
-            "The ideal fixed-Q electric force is independent of gap. It shifts the spring equilibrium but does not soften its stiffness."
-          ],
-          [
-            "m",
-            "\\omega=\\sqrt{k/m}"
-          ],
-          [
-            "p",
-            "There is no voltage-type fold before contact in this ideal model. Contact, fringing or charge leakage can invalidate it."
-          ],
-          [
-            "trap",
-            "Do not carry the voltage-driven pull-in result into a charge-controlled problem."
-          ]
-        ]
-      },
-      {
-        "title": "Rayleigh limit of a liquid drop",
-        "items": [
-          [
-            "p",
-            "A conducting drop of radius R and surface tension gamma in vacuum has electric surface pressure:"
-          ],
-          [
-            "m",
-            "p_e=\\frac{Q^2}{32\\pi^2\\varepsilon_0R^4}"
-          ],
-          [
-            "m",
-            "Q_R^2=64\\pi^2\\varepsilon_0\\gamma R^3"
-          ],
-          [
-            "m",
-            "V_R=2\\sqrt{\\gamma R/\\varepsilon_0}"
-          ],
-          [
-            "why",
-            "Above the Rayleigh limit, a shape deformation can lower total energy: surface tension can no longer stabilise the charged sphere."
-          ],
-          [
-            "p",
-            "This is a shape-instability result, not simply radial expansion at fixed volume. Real drops may also be limited by gas breakdown or charge emission."
-          ]
-        ]
-      }
-    ],
-    "previous_page": 15,
-    "section": "Olympiad",
-    "part_page": 6,
-    "scope_note": "Specialised theory or applications beyond this chapter-focused JEE revision sequence."
+   "slug": "JEE-07-rc-and-ac",
+   "section": "JEE",
+   "page": 7,
+   "part_page": 7,
+   "title": "RC transients, and the capacitor in AC",
+   "sub": "One capacitor plus resistors is always three numbers. Then two switch rules answer the rest.",
+   "source": "Concepts from Capacitors.md ch.9-10, JEE parts of ch.12",
+   "blocks": [
+    {
+     "k": "h",
+     "n": "1",
+     "t": "Three numbers, every time",
+     "tag": "METHOD"
+    },
+    {
+     "k": "res",
+     "t": "the three-number method",
+     "lines": [
+      "$V(t)=V_\\infty+(V_0-V_\\infty)e^{-t/\\tau}$,  $\\tau=R_{\\mathrm{th}}C$",
+      "$V_0$: capacitor voltage before switching - it cannot jump",
+      "$V_\\infty$: remove the capacitor (open) and solve the resistors",
+      "$R_{\\mathrm{th}}$: resistance seen from the capacitor terminals, sources killed, dependent sources kept"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Clock: one time constant is 63 %, two 86 %, three 95 %, five 99.3 %. Inverting the exponential is the most used line in the chapter: $t=\\tau\\ln\\dfrac{V_\\infty-V_0}{V_\\infty-V(t)}$."
+    },
+    {
+     "k": "h",
+     "n": "2",
+     "t": "Charging, discharging, heat"
+    },
+    {
+     "k": "res",
+     "t": "one capacitor, one resistor",
+     "lines": [
+      "charge from a cell $E$: $V_C=E(1-e^{-t/RC})$,  $i=\\dfrac{E}{R}e^{-t/RC}$",
+      "discharge: $V=V_0e^{-t/RC}$ and $U=U_0e^{-2t/RC}$ - energy dies twice as fast as voltage",
+      "settling heat: $H=\\dfrac12C(V_0-V_\\infty)^2$, independent of $R$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "Leakage is why a real capacitor loses its voltage: a resistance $R_p$ across it decays the charge with time constant $R_pC$."
+    },
+    {
+     "k": "h",
+     "n": "3",
+     "t": "The two switch rules",
+     "tag": "KEPT"
+    },
+    {
+     "k": "res",
+     "t": "t = 0+ and t = infinity",
+     "lines": [
+      "at $t=0^+$: an uncharged capacitor behaves like a wire; a charged one like a fixed voltage source",
+      "at $t=\\infty$: every capacitor is an open circuit",
+      "so a step into a capacitive divider divides by $C$; the final state divides by $R$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "These two rules answer an initial-and-final question with no differential equation - which is most of what is asked."
+    },
+    {
+     "k": "ex",
+     "t": "worked to the last digit",
+     "lines": [
+      "$2\\ \\mu\\mathrm{F}$ at $10\\ \\mathrm{V}$ discharged through $1\\ \\mathrm{M}\\Omega$: $\\tau=2\\ \\mathrm{s}$, so at $t=2\\ \\mathrm{s}$ the voltage is $10e^{-1}=3.68\\ \\mathrm{V}$.",
+      "Energy falls from $100\\ \\mu\\mathrm{J}$ to $13.5\\ \\mu\\mathrm{J}$; the missing $86.5\\ \\mu\\mathrm{J}$ is heat in the resistor."
+     ]
+    },
+    {
+     "k": "h",
+     "n": "4",
+     "t": "Reservoir capacitor and AC"
+    },
+    {
+     "k": "res",
+     "t": "ripple and reactance",
+     "lines": [
+      "ripple: $\\Delta V\\approx I_{\\mathrm{load}}\\Delta t/C$ - a $1\\ \\mathrm{A}$ load fed every $10\\ \\mathrm{ms}$ with $0.5\\ \\mathrm{V}$ ripple needs $20\\ \\mathrm{mF}$",
+      "$X_C=\\dfrac{1}{\\omega C}$, $\\omega=2\\pi f$;  current leads the voltage by $90^\\circ$",
+      "series $RC$: $Z=\\sqrt{R^2+X_C^2}$,  $\\phi=-\\arctan(X_C/R)$;  at $X_C=R$ the current leads by $45^\\circ$"
+     ]
+    },
+    {
+     "k": "t",
+     "s": "\"Blocks DC, passes AC\": at high frequency $X_C\\to0$ it is a short, at DC it is an open."
+    },
+    {
+     "k": "trap",
+     "s": "At DC steady state a capacitor is open, but its voltage need not be zero. Replacing it by a wire is the $t=0^+$ picture, not the final one."
+    },
+    {
+     "k": "h",
+     "n": "5",
+     "t": "The meter changes the reading",
+     "tag": "KEPT"
+    },
+    {
+     "k": "t",
+     "s": "A voltmeter of input capacitance $C_m$ across an isolated capacitor $C_s$ shares the charge and reads $V_0C_s/(C_s+C_m)$. It is the joining-two-capacitors result in disguise, and the reason a small capacitor needs a high-impedance probe."
+    },
+    {
+     "k": "dia",
+     "key": "charging",
+     "h": 370,
+     "cap": "Voltage rises as $1-e^{-t/\\tau}$ while current falls as $e^{-t/\\tau}$; their areas settle the energy books."
+    },
+    {
+     "k": "rem",
+     "s": "Three numbers: $V_0$, $V_\\infty$, $\\tau=R_{\\mathrm{th}}C$. At $t=0^+$ a capacitor is a wire or a source; at $t=\\infty$ it is open."
+    }
+   ]
   }
-]
+ ]
+}

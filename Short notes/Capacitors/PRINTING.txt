@@ -1,19 +1,18 @@
-CAPACITORS: JEE FIRST, OLYMPIAD SECOND
+CAPACITORS - JEE MAIN + ADVANCED (single edition)
 
-Part I: JEE-*.png (11 sheets). Read these first for the capacitor chapter.
-Part II: Olympiad-*.png (6 sheets). Optional specialised extensions after the JEE core.
-The distinction is relevance to this chapter's JEE preparation, not difficulty.
-Each part has its own page numbers, PNG ZIP and exact-A4 PDF.
-The combined exports contain JEE first, then Olympiad.
+7 sheets, one continuous reading order, JEE only.
+The Olympiad extension sheets were retired on 2026-10-24; the six ideas that
+are genuine JEE methods were merged into these pages (see AUDIT.md).
 
-Every PNG is 2480 x 3508 pixels with 300 DPI metadata.
-Print A4 portrait, one image per page. Select Fit to page, not Fill/Crop.
-Keep photo cropping and automatic landscape rotation off.
-Artwork includes approximately 10 mm safe margins.
-For predictable pagination use the PDF. Colour is recommended.
-Teal WHY lines explain physical meaning; red WATCH lines mark conditions/traps.
+Every PNG is 2480 x 3508 pixels with 300 DPI metadata, one column, about 10 mm
+safe margins. Print A4 portrait, one sheet per page, Fit to page - never
+Fill/Crop, and keep automatic landscape rotation off.
+Use the PDF for predictable pagination.
 
-Scope nuance: basic AC and impedance are JEE topics elsewhere in the syllabus.
-Specialised filters, probe compensation and oscillators are placed in this
-extension set rather than interrupting the capacitor-chapter reading sequence.
-This is a study grouping, not a guarantee about what can never appear in an exam.
+Colour code on every sheet:
+  teal numbers   teaching section, in the order you should read them
+  cream box      the result to remember (formulae)
+  green box      a worked example with real numbers
+  red box        TRAP - the specific wrong move examiners set up
+  grey box       comparison table
+  green strip    REMEMBER - the one line to carry into the exam

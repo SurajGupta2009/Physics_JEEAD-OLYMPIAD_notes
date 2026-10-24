@@ -1,486 +1,60 @@
 {
-  "canvas": [
-    2480,
-    3508
-  ],
-  "dpi": 300,
-  "safe_margin_px": 125,
-  "cards": [
-    {
-      "card": "Charge and superposition",
-      "used_px": 761,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Gauss and potential",
-      "used_px": 849,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Equilibrium conductor",
-      "used_px": 835,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Cavities and shielding",
-      "used_px": 772,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "What C actually means",
-      "used_px": 852,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Derive the plate formula",
-      "used_px": 850,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Metal inserted in the gap",
-      "used_px": 904,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Many plates and unequal charges",
-      "used_px": 894,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Concentric spheres",
-      "used_px": 915,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Coaxial cylinders",
-      "used_px": 785,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Two connected distant spheres",
-      "used_px": 895,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Useful composite geometries",
-      "used_px": 832,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Why the factor one-half?",
-      "used_px": 923,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Isolated: fix Q",
-      "used_px": 861,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Connected: fix V",
-      "used_px": 804,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Energy bookkeeping",
-      "used_px": 867,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The field acting on a plate",
-      "used_px": 906,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "A partly inserted slab",
-      "used_px": 753,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Why a dielectric liquid climbs",
-      "used_px": 930,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Self-energy and mechanical checks",
-      "used_px": 915,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Series: the real condition",
-      "used_px": 836,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Parallel and energy division",
-      "used_px": 967,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The method that never fails",
-      "used_px": 910,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Sources and switching topology",
-      "used_px": 866,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Balanced and unbalanced bridges",
-      "used_px": 772,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Cube: fold only equal-potential nodes",
-      "used_px": 913,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Delta-star for capacitors",
-      "used_px": 843,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Infinite self-similar ladder",
-      "used_px": 913,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Free versus bound charge",
-      "used_px": 854,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Interface conditions",
-      "used_px": 817,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Layered gap: series",
-      "used_px": 833,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Area patches and full insertion",
-      "used_px": 905,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The three-number method",
-      "used_px": 842,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Find the Thevenin resistance",
-      "used_px": 934,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Charging from an ideal cell",
-      "used_px": 720,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Discharge and energy decay",
-      "used_px": 952,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Joining two capacitors",
-      "used_px": 921,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Time scale and the paradox",
-      "used_px": 840,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Step charging energy balance",
-      "used_px": 790,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Charge through a cell or branch",
-      "used_px": 947,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "The reliable solving sequence",
-      "used_px": 964,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Dielectric strength and ratings",
-      "used_px": 904,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Six quick sanity checks",
-      "used_px": 855,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Numbers and conceptual anchors",
-      "used_px": 934,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "From dipoles to permittivity",
-      "used_px": 868,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Debye relaxation and losses",
-      "used_px": 866,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Heat, leakage and memory",
-      "used_px": 941,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Gas breakdown and small gaps",
-      "used_px": 892,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Impedance and the low-pass",
-      "used_px": 774,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "High-pass and compensated divider",
-      "used_px": 786,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Relaxation timing",
-      "used_px": 763,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Ripple, gentle charging and noise",
-      "used_px": 960,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Several independent storage modes",
-      "used_px": 904,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "An equal-R, equal-C example",
-      "used_px": 902,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Measuring can change the voltage",
-      "used_px": 832,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Wires and the ground plane",
-      "used_px": 769,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Many conductors and reciprocity",
-      "used_px": 924,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Weighting potential and signal",
-      "used_px": 843,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Charge above a grounded plane",
-      "used_px": 900,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Grounded versus neutral sphere",
-      "used_px": 905,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Spheroids: needle to disc",
-      "used_px": 889,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Ellipsoidal inclusions and voids",
-      "used_px": 809,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Wedges and corner fields",
-      "used_px": 891,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Porous electrodes: delayed storage",
-      "used_px": 872,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Voltage-driven movable plate",
-      "used_px": 769,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Pull-in and small oscillations",
-      "used_px": 749,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "What changes at fixed charge?",
-      "used_px": 933,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    },
-    {
-      "card": "Rayleigh limit of a liquid drop",
-      "used_px": 935,
-      "available_px": 1010,
-      "body_pt": 11.52,
-      "explanation_pt": 11.04
-    }
-  ]
+ "canvas": [
+  2480,
+  3508
+ ],
+ "dpi": 300,
+ "safe_margin_px": 132,
+ "policy": "single column, JEE only",
+ "pages": [
+  {
+   "slug": "JEE-01-conductor-toolkit",
+   "blocks": 16,
+   "end_px": 3159,
+   "headroom_px": 161,
+   "fill": 0.054
+  },
+  {
+   "slug": "JEE-02-capacitance-geometries",
+   "blocks": 15,
+   "end_px": 3156,
+   "headroom_px": 164,
+   "fill": 0.055
+  },
+  {
+   "slug": "JEE-03-networks",
+   "blocks": 16,
+   "end_px": 3305,
+   "headroom_px": 15,
+   "fill": 0.005
+  },
+  {
+   "slug": "JEE-04-energy-battery-heat",
+   "blocks": 16,
+   "end_px": 3265,
+   "headroom_px": 55,
+   "fill": 0.018
+  },
+  {
+   "slug": "JEE-05-force-insertion",
+   "blocks": 18,
+   "end_px": 3301,
+   "headroom_px": 19,
+   "fill": 0.006
+  },
+  {
+   "slug": "JEE-06-dielectrics",
+   "blocks": 16,
+   "end_px": 3269,
+   "headroom_px": 51,
+   "fill": 0.017
+  },
+  {
+   "slug": "JEE-07-rc-and-ac",
+   "blocks": 18,
+   "end_px": 3298,
+   "headroom_px": 22,
+   "fill": 0.007
+  }
+ ]
 }

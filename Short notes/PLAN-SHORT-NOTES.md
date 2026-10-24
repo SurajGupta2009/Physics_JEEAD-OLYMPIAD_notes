@@ -143,3 +143,32 @@ Success check after Phase 5: **cards per sheet rises from 4 → ≈ 6–8**, **s
 
 ---
 *Prepared on `arena/eb89ea71-physics-jeead-olympiad-notes`. Baseline: 17 chapters, 652 sheets, two-column card grid, 48 pt body text.*
+
+---
+
+## 12. Progress against this plan (2026-10-24)
+
+The owner changed the brief before Phase 1 ran: **drop the Olympiad material, keep
+only what is a JEE Main/Advanced method, and compress hard**. The plan below is kept
+as the density specification it always was (single column, 6-8 items per page,
+expanded concepts); the section split it assumes is superseded by the JEE-only rule.
+
+**Capacitors is done** and is the reference implementation for every other chapter:
+
+| | baseline (Phase 0) | now |
+|---|---|---|
+| pages | 17 (11 JEE + 6 Olympiad) | **7, JEE only** |
+| layout | 2x2 card grid, two columns | single column, 4-6 sections per page |
+| prose per page | 267 words | ~330 words, every item a full sentence |
+| figures | 2 per page, fixed | 1 per page, chosen for that page's concept |
+| exports | 3 PDFs + 3 ZIPs | 1 PDF + 1 ZIP |
+| per-page content | cards only | result box + worked numbers + trap + remember |
+
+What made it shorter was **not** deleting physics: the eleven JEE sheets were
+repacked into teaching order, the six Olympiad sheets were audited item by item
+(`Capacitors/AUDIT.md`), and only six of their ideas - all methods - were merged in.
+
+The next chapters follow the same recipe, with the audit done first for each:
+`Rigid_Body_Dynamics` -> `Thermodynamics` -> `Kinematics` -> `Electrostatics` are the
+natural follow-ups, in that order, because each has a clean JEE core and a separable
+extension tail.
