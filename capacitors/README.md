@@ -22,10 +22,12 @@ cd capacitors && python3 -m http.server 8000
 
 ## Handwritten-style visual revision
 
-The A4, 300 DPI short notes are a **JEE-only single edition**: 7 dense single-column
-sheets in teaching order (conductors -> definition and geometry -> networks ->
-energy and the battery -> force and image charge -> dielectrics -> transients and AC).
-Each page carries a result box, a worked number, a trap and a remember line.
+The A4, 300 DPI short notes are a **JEE-only single edition**: 9 dense single-column
+sheets in teaching order (conductors -> plate formula and the slab rule -> sphere and
+cylinder -> networks -> energy and the battery -> force from energy -> image charge
+and stability -> dielectrics -> transients and AC). Every page opens with the physical
+reason, derives each formula that follows in three to five lines, and carries two
+diagrams, a worked number, a trap and a remember line.
 
 The former Olympiad extension set was retired on 2026-10-24. The six items that were
 genuine JEE **methods** (image charge above a plane, movable plate with a spring,

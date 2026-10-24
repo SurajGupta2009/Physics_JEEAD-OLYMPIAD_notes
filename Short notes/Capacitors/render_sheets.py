@@ -350,7 +350,7 @@ def b_dia(im, b, y):
     total = art + caph + 24
     d.rounded_rectangle((X0, y, X1, y + total), radius=16, fill='white', outline=TEAL_EDGE, width=3)
     fig = plt.figure(figsize=((CW - 40) / DPI, art / DPI), dpi=DPI, facecolor='white')
-    ax = fig.add_axes([.085, .27, .88, .64])
+    ax = fig.add_axes([.09, .28, .87, .63])
     caption = figure(ax, b['key'])
     buf = io.BytesIO()
     fig.savefig(buf, format='png', dpi=DPI, facecolor='white')
@@ -364,8 +364,97 @@ def b_dia(im, b, y):
     return y + total + 16
 
 
+
+def b_why(im, b, y):
+    """One-line physical reason, teal rule, no fill - reads as a margin note."""
+    d = ImageDraw.Draw(im)
+    pad, ind = 14, 18
+    ls = wrap(b['s'], 38, 11.5, CW - ind - pad)
+    body = sum(38 * LEAD for _ in ls)
+    d.rectangle((X0 + 6, y + 6, X0 + 12, y + body + 2), fill=TEAL)
+    yy = y
+    for line in ls:
+        xx = X0 + ind + pad
+        sp = tw(' ', font(38))
+        for t in line:
+            if t[0] == 't':
+                d.text((xx, yy), t[1], font=font(38), fill='#22525c')
+                xx += t[2] + sp
+            else:
+                d._image.paste(t[1], (int(xx), int(yy)), t[1])
+                xx += t[1].width + sp
+        yy += 38 * LEAD
+    return yy + 10
+
+
+def b_der(im, b, y):
+    """Short derivation: titled, numbered steps, maths inline. Cream, teal rule."""
+    d = ImageDraw.Draw(im)
+    pad, ind = 18, 22
+    size = 38
+    label = b.get('t', 'DERIVE')
+    widths = CW - ind - pad
+    lines = []
+    for step in b['lines']:
+        ls = wrap(step, size, 11.5, widths)
+        h = sum(max(size * LEAD, max([t[1].height for t in l if t[0] == 'm'] or [0])) for l in ls)
+        lines.append((ls, h))
+    headh = 34
+    total = pad + headh + sum(h + 2 for _, h in lines) + pad - 4
+    d.rounded_rectangle((X0, y, X1, y + total), radius=12, fill='#fbfcf7', outline='#dfe7dc', width=2)
+    d.rectangle((X0, y + 8, X0 + 8, y + total - 8), fill=TEAL)
+    lf = font(22)
+    d.text((X0 + ind + pad, y + pad - 4), label.upper(), font=lf, fill=TEAL)
+    yy = y + pad + headh
+    for ls, _ in lines:
+        for line in ls:
+            xx = X0 + ind + pad
+            sp = tw(' ', font(size))
+            lh = size * 1.16
+            for t in line:
+                if t[0] == 't':
+                    d.text((xx, yy), t[1], font=font(size), fill=INK)
+                    xx += t[2] + sp
+                else:
+                    d._image.paste(t[1], (int(xx), int(yy)), t[1])
+                    lh = max(lh, t[1].height)
+                    xx += t[1].width + sp
+            yy += max(lh, size * LEAD)
+        yy += 2
+    return y + total + 10
+
+
+def b_dias(im, b, y):
+    """Two figures side by side, each with its own caption."""
+    d = ImageDraw.Draw(im)
+    items = b['items']
+    gap = 16
+    wbox = (CW - gap) // 2
+    art = b.get('h', 300)
+    caph = 0
+    for it in items:
+        if it.get('cap'):
+            caph = max(caph, 30 * LEAD * len(wrap(it['cap'], 26, 9.5, wbox - 30)))
+    total = art + caph + 40
+    for i, it in enumerate(items):
+        x = X0 + i * (wbox + gap)
+        d.rounded_rectangle((x, y, x + wbox, y + total), radius=14, fill='white', outline=TEAL_EDGE, width=2)
+        fig = plt.figure(figsize=((wbox - 20) / DPI, art / DPI), dpi=DPI, facecolor='white')
+        ax = fig.add_axes([.13, .22, .84, .70])
+        figure(ax, it['key'])
+        buf = io.BytesIO()
+        fig.savefig(buf, format='png', dpi=DPI, facecolor='white')
+        plt.close(fig)
+        buf.seek(0)
+        im.paste(Image.open(buf).convert('RGB'), (x + 10, int(y) + 8))
+        if it.get('cap'):
+            text(it['cap'], x + 16, y + art + 18, wbox - 30, size=26, color=TEAL, mathpt=9, lead=1.12, gap=0, im=im)
+    return y + total + 14
+
+
 RENDER = {'h': b_head, 't': b_p, 'm': b_m, 'res': b_res, 'ex': b_ex,
-          'trap': b_trap, 'tab': b_tab, 'rem': b_rem, 'dia': b_dia}
+          'trap': b_trap, 'tab': b_tab, 'rem': b_rem, 'dia': b_dia,
+          'why': b_why, 'der': b_der, 'dias': b_dias}
 
 
 def preflight():
@@ -378,6 +467,9 @@ def preflight():
                 texts.append(b['s'])
             for k in ('lines',):
                 texts += b.get(k, [])
+            for it in b.get('items', []):
+                if it.get('cap'):
+                    texts.append(it['cap'])
             for row in b.get('rows', []):
                 texts += row
             for t in texts:
@@ -417,7 +509,11 @@ def render():
         d.rectangle((X0, y + 6, X0 + 210, y + 13), fill=TEAL)
         y += 34
 
+        nsec = 0
         for b in sh['blocks']:
+            if b['k'] == 'h':
+                nsec += 1
+                b = dict(b, n=str(nsec))
             y0 = y
             y = RENDER[b['k']](im, b, y)
             if __import__('os').environ.get('TRACE'):

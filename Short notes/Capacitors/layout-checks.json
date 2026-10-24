@@ -9,52 +9,66 @@
  "pages": [
   {
    "slug": "JEE-01-conductor-toolkit",
-   "blocks": 16,
-   "end_px": 3159,
-   "headroom_px": 161,
-   "fill": 0.054
+   "blocks": 17,
+   "end_px": 3152,
+   "headroom_px": 168,
+   "fill": 0.056
   },
   {
-   "slug": "JEE-02-capacitance-geometries",
+   "slug": "JEE-02-plate-and-slab",
    "blocks": 15,
-   "end_px": 3156,
-   "headroom_px": 164,
-   "fill": 0.055
+   "end_px": 3262,
+   "headroom_px": 58,
+   "fill": 0.019
   },
   {
-   "slug": "JEE-03-networks",
-   "blocks": 16,
-   "end_px": 3305,
-   "headroom_px": 15,
-   "fill": 0.005
+   "slug": "JEE-03-geometries",
+   "blocks": 14,
+   "end_px": 3274,
+   "headroom_px": 46,
+   "fill": 0.015
   },
   {
-   "slug": "JEE-04-energy-battery-heat",
-   "blocks": 16,
+   "slug": "JEE-04-networks",
+   "blocks": 17,
+   "end_px": 3255,
+   "headroom_px": 65,
+   "fill": 0.022
+  },
+  {
+   "slug": "JEE-05-energy-battery",
+   "blocks": 14,
+   "end_px": 3258,
+   "headroom_px": 62,
+   "fill": 0.021
+  },
+  {
+   "slug": "JEE-06-force-on-plates",
+   "blocks": 13,
+   "end_px": 3289,
+   "headroom_px": 31,
+   "fill": 0.01
+  },
+  {
+   "slug": "JEE-07-images-and-stability",
+   "blocks": 14,
    "end_px": 3265,
    "headroom_px": 55,
    "fill": 0.018
   },
   {
-   "slug": "JEE-05-force-insertion",
-   "blocks": 18,
-   "end_px": 3301,
-   "headroom_px": 19,
-   "fill": 0.006
-  },
-  {
-   "slug": "JEE-06-dielectrics",
+   "slug": "JEE-08-dielectrics",
    "blocks": 16,
-   "end_px": 3269,
-   "headroom_px": 51,
-   "fill": 0.017
+   "end_px": 3238,
+   "headroom_px": 82,
+   "fill": 0.027
   },
   {
-   "slug": "JEE-07-rc-and-ac",
-   "blocks": 18,
-   "end_px": 3298,
-   "headroom_px": 22,
-   "fill": 0.007
+   "slug": "JEE-09-rc-and-ac",
+   "blocks": 15,
+   "end_px": 3215,
+   "headroom_px": 105,
+   "fill": 0.035
   }
  ]
 }

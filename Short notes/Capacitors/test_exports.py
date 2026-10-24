@@ -19,7 +19,7 @@ FORBIDDEN = ['debye', 'clausius', 'mossotti', 'paschen', 'conformal', 'spheroid'
              'rayleigh', 'porous', 'depolaris', 'arcosh', 'ferroelectric',
              'piezoelectric', 'eigenvalue', 'weighting potential']
 REQUIRED = ['island', 'bridge', 'ladder', 'star-delta', 'image', 'heat',
-            'dielectric', 'ripple', 'time constant', 'trap']
+            'dielectric', 'ripple', 'time constant', 'cube', 'series', 'parallel']
 
 
 def test():
@@ -29,7 +29,7 @@ def test():
     # 1. scope: JEE only, no Olympiad section survives
     assert data['policy'].startswith('JEE Main + Advanced only'), data['policy']
     assert [s['section'] for s in sheets] == ['JEE'] * len(sheets), 'Olympiad sheet returned'
-    assert len(sheets) == 7, f'expected 7 dense pages, found {len(sheets)}'
+    assert len(sheets) == 9, f'expected 9 dense pages, found {len(sheets)}'
     assert not list(ROOT.glob('Olympiad-*.png')), 'Olympiad PNGs must not ship'
     assert not list(ROOT.glob('capacitors-olympiad*')), 'Olympiad exports must not ship'
     assert not list(ROOT.glob('capacitors-jee*')), 'separate JEE bundle retired: one combined export'
@@ -43,11 +43,19 @@ def test():
         kinds = [b['k'] for b in s['blocks']]
         assert kinds[-1] == 'rem', f'{s["slug"]}: page must end with the remember strip'
         assert kinds.count('trap') >= 1, f'{s["slug"]}: every page carries at least one trap'
-        assert any(k == 'dia' for k in kinds), f'{s["slug"]}: no figure on the page'
-        assert kinds.count('tab') + sum(1 for b in s['blocks'] if b['k'] == 'res') >= 2
+        # v3 rule: every result on a page must be derived on that page
+        assert kinds.count('der') >= 1, f'{s["slug"]}: no DERIVE block'
+        assert kinds.count('res') + kinds.count('tab') >= 1, f'{s["slug"]}: no result box or table'
+        figs = sum(len(b['items']) if b['k'] == 'dias' else (1 if b['k'] == 'dia' else 0)
+                   for b in s['blocks'])
+        assert figs >= 2, f'{s["slug"]}: only {figs} figure(s)'
+        # numbered headings must run 1..n in order
+        nums = [b['n'] for b in s['blocks'] if b['k'] == 'h']
+        assert nums == [str(i) for i in range(1, len(nums) + 1)], f'{s["slug"]}: section numbers {nums}'
 
     # 3. content: JEE-only vocabulary, no shouted caps, no leaked LaTeX in prose
-    prose = ' '.join(b.get('s', '') + ' '.join(b.get('lines', [])) +
+    prose = ' '.join(str(b.get('s', '')) + ' ' + str(b.get('t', '')) + ' ' +
+                     ' '.join(b.get('lines', [])) +
                      ' '.join(c for r in b.get('rows', []) for c in r)
                      for s in sheets for b in s['blocks']).lower()
     for term in FORBIDDEN:
@@ -107,8 +115,14 @@ def test():
 
     total_words = sum(len(re.sub(r'\$[^$]*\$', 'X', b.get('s', '')).split())
                       for s in sheets for b in s['blocks'])
+    ders = sum(1 for s in sheets for b in s['blocks'] if b['k'] == 'der')
+    figs = sum(len(b['items']) if b['k'] == 'dias' else (1 if b['k'] == 'dia' else 0)
+               for s in sheets for b in s['blocks'])
+    assert ders >= len(sheets) * 3, f'only {ders} derivations'
+    assert figs >= len(sheets) * 2, f'only {figs} figures'
     print(f'PASS: {len(sheets)} JEE-only pages, {total_words} prose words, '
-          f'PDF + ZIP + gallery in agreement, every JEE topic present, no extension leakage.')
+          f'{ders} derivations, {figs} figures, PDF + ZIP + gallery in agreement, '
+          f'every JEE topic present, no extension leakage.')
 
 
 if __name__ == '__main__':

@@ -1,13 +1,14 @@
 # Capacitors - JEE Main + Advanced
 
-**7 A4 sheets, one column, JEE only.** Hand-written style, but written the
-way a teacher builds the chapter: result first, then the symbols, a worked number,
-the trap, and one line to remember.
+**9 A4 sheets, one column, JEE only.** Hand-written style, but written the
+way a teacher builds the chapter: the physical reason first, then a three-to-five
+line derivation of every formula that follows, then a worked number, the trap, and
+one line to remember. Every page carries two diagrams.
 
 | download | what it is |
 |---|---|
-| [Combined A4 PDF](capacitors-short-notes.pdf) | all 7 sheets, exact A4, one sheet per page |
-| [All PNGs](capacitors-a4-pngs.zip) | the same 7 images at 300 dpi, plus printing notes |
+| [Combined A4 PDF](capacitors-short-notes.pdf) | all 9 sheets, exact A4, one sheet per page |
+| [All PNGs](capacitors-a4-pngs.zip) | the same 9 images at 300 dpi, plus printing notes |
 
 - [Offline gallery](index.html) - open in any browser, no server needed
 - [Printing instructions](PRINTING.txt)
@@ -22,36 +23,41 @@ says what kind of box the section ends in.
 
 | # | page | file |
 |---|---|---|
-| 1 | Conductors, Gauss and potential - the four facts | [`JEE-01-conductor-toolkit.png`](JEE-01-conductor-toolkit.png) |
-| 2 | Capacitance, the slab rule and three geometries | [`JEE-02-capacitance-geometries.png`](JEE-02-capacitance-geometries.png) |
-| 3 | Island method, bridges, cube, ladder, star-delta | [`JEE-03-networks.png`](JEE-03-networks.png) |
-| 4 | Energy, the fixed-Q / fixed-V fork, heat on joining | [`JEE-04-energy-battery-heat.png`](JEE-04-energy-battery-heat.png) |
-| 5 | Plate force, dielectric pull, image charge, movable plate | [`JEE-05-force-insertion.png`](JEE-05-force-insertion.png) |
-| 6 | Dielectrics: layers vs patches, ratings, six checks | [`JEE-06-dielectrics.png`](JEE-06-dielectrics.png) |
-| 7 | RC transients, switch rules, ripple and reactance | [`JEE-07-rc-and-ac.png`](JEE-07-rc-and-ac.png) |
+| 1 | Why a conductor is field-free: four facts, each derived | [`JEE-01-conductor-toolkit.png`](JEE-01-conductor-toolkit.png) |
+| 2 | Plate formula derived, and the one slab rule | [`JEE-02-plate-and-slab.png`](JEE-02-plate-and-slab.png) |
+| 3 | Sphere and cylinder: Gauss, integrate, divide | [`JEE-03-geometries.png`](JEE-03-geometries.png) |
+| 4 | Series, parallel, island method, bridge, ladder, star-delta | [`JEE-04-networks.png`](JEE-04-networks.png) |
+| 5 | Energy derived, the fixed-Q / fixed-V fork, heat bill | [`JEE-05-energy-battery.png`](JEE-05-energy-battery.png) |
+| 6 | Force from energy: plates, dielectric slab, liquid rise | [`JEE-06-force-on-plates.png`](JEE-06-force-on-plates.png) |
+| 7 | Image charge, and the plate that snaps down | [`JEE-07-images-and-stability.png`](JEE-07-images-and-stability.png) |
+| 8 | Why the field falls by K, layers vs patches, ratings | [`JEE-08-dielectrics.png`](JEE-08-dielectrics.png) |
+| 9 | The RC differential equation solved, switch rules, AC | [`JEE-09-rc-and-ac.png`](JEE-09-rc-and-ac.png) |
 
 ## What is on each page
 
-1. **Conductors.** Four facts about equilibrium, why $E=0$ does not mean $V=0$,
-   the Gauss protocol, and the six standard fields in a table.
-2. **Capacitance and geometry.** $C=Q/V$ with the net-charge trap, the plate
-   formula, the single slab rule that covers dielectric, metal and vacuum,
-   overlap area and fringing, $n$ plates, then sphere, cylinder and connected
-   spheres.
-3. **Networks.** Series/parallel with the energy split, the four-step island
+1. **Conductors.** Why $E=0$ inside, why $E$ is normal at the surface, the
+   pillbox giving $\sigma/arepsilon_0$, the cavity, the Gauss protocol, and the
+   six standard fields in a table.
+2. **The plate formula.** Why $C$ is geometry only, $C=arepsilon_0A/d$ from
+   the two plate fields, the slab rule $arepsilon_0A/(d-t+t/K)$ with dielectric
+   and metal as its two limits, two layers, $n$ plates, unequal plates.
+3. **Sphere and cylinder.** Potential of a shell, $4\piarepsilon_0ab/(b-a)$,
+   $2\piarepsilon_0L/\ln(b/a)$, connected spheres and the field ratio $b/a$.
+4. **Networks.** Series/parallel derived from the middle island, the island
    method, balanced bridge, the cube, the infinite ladder, star-delta, and
    charge through a branch.
-4. **Energy and the battery.** Why the half is there, the fixed-$Q$ vs fixed-$V$
-   table, the battery ledger, and the heat bill for two capacitors joined.
-5. **Force.** Plate force and the missing half (the trap that costs marks),
-   dielectric pull and liquid rise, charged-sphere pressure, image charge above a
-   grounded plane, and a plate on a spring.
-6. **Dielectrics.** What polarisation changes at fixed $Q$ or fixed $V$, layers
-   vs patches with the interface conditions, dielectric strength and ratings,
-   and six checks before you hand in.
-7. **Transients and AC.** The three-number method, charging/discharging/heat,
-   the $t=0^+$ and $t=\infty$ rules, ripple, $X_C$ and series $RC$, and why a
-   meter changes the reading.
+5. **Energy and the battery.** Why the half is there, field density, the
+   fixed-$Q$ vs fixed-$V$ fork with numbers, and the heat bill for two capacitors
+   joined.
+6. **Force from energy.** $F=-dU/dx$ and $\Pi=U-QV$, charged-sphere pressure,
+   plate force and the missing half, dielectric pull, liquid rise.
+7. **Image charge and stability.** The mirror construction, why it is allowed,
+   induced charge, and the spring-held plate that snaps down.
+8. **Dielectrics.** Why the field falls by $K$ at fixed $Q$ and does not at fixed
+   $V$, layers vs patches, dielectric strength, six checks before you hand in.
+9. **Transients and AC.** The differential equation solved once, the three-number
+   method, $t=0^+$ and $t=\infty$ rules, ripple, $X_C$ and series $RC$, meter
+   loading.
 
 ## Print specification
 
@@ -65,5 +71,5 @@ The first edition was 17 sheets in a two-column card grid: 4 concepts per sheet,
 about 280 words per page, and two of every three pages empty. The Olympiad part
 added specialised physics that JEE does not examine. This edition keeps every JEE
 topic (coverage table in [AUDIT.md](AUDIT.md)), merges the six Olympiad ideas that
-are real JEE **methods**, and packs the chapter into 7 dense pages in
+are real JEE **methods**, and packs the chapter into 9 dense pages in
 teaching order.

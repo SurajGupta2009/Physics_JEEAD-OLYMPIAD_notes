@@ -1,6 +1,6 @@
 # Scope of the Capacitors short notes
 
-**Current edition (2026-10-24): JEE Main + Advanced only, 7 sheets.**
+**Current edition (2026-10-24): JEE Main + Advanced only, 9 sheets.**
 
 This chapter used to be split into 11 "JEE" sheets and 6 "Olympiad / extension"
 sheets, with separate bundles for each part. That split is retired. The Olympiad

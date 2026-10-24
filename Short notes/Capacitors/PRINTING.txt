@@ -1,6 +1,6 @@
 CAPACITORS - JEE MAIN + ADVANCED (single edition)
 
-7 sheets, one continuous reading order, JEE only.
+9 sheets, one continuous reading order, JEE only.
 The Olympiad extension sheets were retired on 2026-10-24; the six ideas that
 are genuine JEE methods were merged into these pages (see AUDIT.md).
 
@@ -11,6 +11,8 @@ Use the PDF for predictable pagination.
 
 Colour code on every sheet:
   teal numbers   teaching section, in the order you should read them
+  teal rule      DERIVE - the two-to-four line derivation of the next result
+  green note     WHY - the physical reason, before any algebra
   cream box      the result to remember (formulae)
   green box      a worked example with real numbers
   red box        TRAP - the specific wrong move examiners set up

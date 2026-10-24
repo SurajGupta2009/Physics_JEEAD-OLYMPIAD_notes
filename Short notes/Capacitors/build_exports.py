@@ -21,18 +21,20 @@ ROOT = Path(__file__).resolve().parent
 PDF = 'capacitors-short-notes.pdf'
 ZIP = 'capacitors-a4-pngs.zip'
 TITLES = {
-    'JEE-01-conductor-toolkit': 'Conductors, Gauss and potential - the four facts',
-    'JEE-02-capacitance-geometries': 'Capacitance, the slab rule and three geometries',
-    'JEE-03-networks': 'Island method, bridges, cube, ladder, star-delta',
-    'JEE-04-energy-battery-heat': 'Energy, the fixed-Q / fixed-V fork, heat on joining',
-    'JEE-05-force-insertion': 'Plate force, dielectric pull, image charge, movable plate',
-    'JEE-06-dielectrics': 'Dielectrics: layers vs patches, ratings, six checks',
-    'JEE-07-rc-and-ac': 'RC transients, switch rules, ripple and reactance',
+    'JEE-01-conductor-toolkit': 'Why a conductor is field-free: four facts, each derived',
+    'JEE-02-plate-and-slab': 'Plate formula derived, and the one slab rule',
+    'JEE-03-geometries': 'Sphere and cylinder: Gauss, integrate, divide',
+    'JEE-04-networks': 'Series, parallel, island method, bridge, ladder, star-delta',
+    'JEE-05-energy-battery': 'Energy derived, the fixed-Q / fixed-V fork, heat bill',
+    'JEE-06-force-on-plates': 'Force from energy: plates, dielectric slab, liquid rise',
+    'JEE-07-images-and-stability': 'Image charge, and the plate that snaps down',
+    'JEE-08-dielectrics': 'Why the field falls by K, layers vs patches, ratings',
+    'JEE-09-rc-and-ac': 'The RC differential equation solved, switch rules, AC',
 }
 
 PRINTING = '''CAPACITORS - JEE MAIN + ADVANCED (single edition)
 
-7 sheets, one continuous reading order, JEE only.
+9 sheets, one continuous reading order, JEE only.
 The Olympiad extension sheets were retired on 2026-10-24; the six ideas that
 are genuine JEE methods were merged into these pages (see AUDIT.md).
 
@@ -43,6 +45,8 @@ Use the PDF for predictable pagination.
 
 Colour code on every sheet:
   teal numbers   teaching section, in the order you should read them
+  teal rule      DERIVE - the two-to-four line derivation of the next result
+  green note     WHY - the physical reason, before any algebra
   cream box      the result to remember (formulae)
   green box      a worked example with real numbers
   red box        TRAP - the specific wrong move examiners set up
@@ -95,8 +99,9 @@ def build_readme(sheets):
     text = f'''# Capacitors - JEE Main + Advanced
 
 **{len(sheets)} A4 sheets, one column, JEE only.** Hand-written style, but written the
-way a teacher builds the chapter: result first, then the symbols, a worked number,
-the trap, and one line to remember.
+way a teacher builds the chapter: the physical reason first, then a three-to-five
+line derivation of every formula that follows, then a worked number, the trap, and
+one line to remember. Every page carries two diagrams.
 
 | download | what it is |
 |---|---|
@@ -120,26 +125,29 @@ says what kind of box the section ends in.
 
 ## What is on each page
 
-1. **Conductors.** Four facts about equilibrium, why $E=0$ does not mean $V=0$,
-   the Gauss protocol, and the six standard fields in a table.
-2. **Capacitance and geometry.** $C=Q/V$ with the net-charge trap, the plate
-   formula, the single slab rule that covers dielectric, metal and vacuum,
-   overlap area and fringing, $n$ plates, then sphere, cylinder and connected
-   spheres.
-3. **Networks.** Series/parallel with the energy split, the four-step island
+1. **Conductors.** Why $E=0$ inside, why $E$ is normal at the surface, the
+   pillbox giving $\sigma/\varepsilon_0$, the cavity, the Gauss protocol, and the
+   six standard fields in a table.
+2. **The plate formula.** Why $C$ is geometry only, $C=\varepsilon_0A/d$ from
+   the two plate fields, the slab rule $\varepsilon_0A/(d-t+t/K)$ with dielectric
+   and metal as its two limits, two layers, $n$ plates, unequal plates.
+3. **Sphere and cylinder.** Potential of a shell, $4\pi\varepsilon_0ab/(b-a)$,
+   $2\pi\varepsilon_0L/\ln(b/a)$, connected spheres and the field ratio $b/a$.
+4. **Networks.** Series/parallel derived from the middle island, the island
    method, balanced bridge, the cube, the infinite ladder, star-delta, and
    charge through a branch.
-4. **Energy and the battery.** Why the half is there, the fixed-$Q$ vs fixed-$V$
-   table, the battery ledger, and the heat bill for two capacitors joined.
-5. **Force.** Plate force and the missing half (the trap that costs marks),
-   dielectric pull and liquid rise, charged-sphere pressure, image charge above a
-   grounded plane, and a plate on a spring.
-6. **Dielectrics.** What polarisation changes at fixed $Q$ or fixed $V$, layers
-   vs patches with the interface conditions, dielectric strength and ratings,
-   and six checks before you hand in.
-7. **Transients and AC.** The three-number method, charging/discharging/heat,
-   the $t=0^+$ and $t=\\infty$ rules, ripple, $X_C$ and series $RC$, and why a
-   meter changes the reading.
+5. **Energy and the battery.** Why the half is there, field density, the
+   fixed-$Q$ vs fixed-$V$ fork with numbers, and the heat bill for two capacitors
+   joined.
+6. **Force from energy.** $F=-dU/dx$ and $\Pi=U-QV$, charged-sphere pressure,
+   plate force and the missing half, dielectric pull, liquid rise.
+7. **Image charge and stability.** The mirror construction, why it is allowed,
+   induced charge, and the spring-held plate that snaps down.
+8. **Dielectrics.** Why the field falls by $K$ at fixed $Q$ and does not at fixed
+   $V$, layers vs patches, dielectric strength, six checks before you hand in.
+9. **Transients and AC.** The differential equation solved once, the three-number
+   method, $t=0^+$ and $t=\infty$ rules, ripple, $X_C$ and series $RC$, meter
+   loading.
 
 ## Print specification
 

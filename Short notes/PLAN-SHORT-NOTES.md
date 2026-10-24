@@ -157,12 +157,18 @@ expanded concepts); the section split it assumes is superseded by the JEE-only r
 
 | | baseline (Phase 0) | now |
 |---|---|---|
-| pages | 17 (11 JEE + 6 Olympiad) | **7, JEE only** |
+| pages | 17 (11 JEE + 6 Olympiad) | **9, JEE only** |
 | layout | 2x2 card grid, two columns | single column, 4-6 sections per page |
-| prose per page | 267 words | ~330 words, every item a full sentence |
-| figures | 2 per page, fixed | 1 per page, chosen for that page's concept |
+| prose per page | 267 words | ~340 words, every item a full sentence |
+| derivations | none (results quoted) | **39 DERIVE blocks, 4-5 per page** |
+| figures | 2 per page, fixed | **2 per page, redrawn for that page's concept** |
 | exports | 3 PDFs + 3 ZIPs | 1 PDF + 1 ZIP |
-| per-page content | cards only | result box + worked numbers + trap + remember |
+| per-page content | cards only | WHY + DERIVE + result box + worked numbers + trap + remember |
+
+The second pass fixed the failure mode of the first: density without derivation reads
+as a formula sheet with no base. Every quoted result now has its three-to-five-line
+derivation and a one-line physical reason above it, and the figures were rebuilt
+(explicit canvas per figure, no clipping, no captions over axis labels).
 
 What made it shorter was **not** deleting physics: the eleven JEE sheets were
 repacked into teaching order, the six Olympiad sheets were audited item by item

@@ -97,7 +97,7 @@ as "stretch" on the sheet so a student knows it is optional.*
 
 ## 2. What happened to the eleven JEE sheets
 
-No JEE topic was deleted. The eleven sheets were **repacked into seven** by
+No JEE topic was deleted. The eleven sheets were **repacked into nine** (the force page was split out) by
 removing duplication and reordering into teaching sequence:
 
 | old sheet | topic carried | new home |

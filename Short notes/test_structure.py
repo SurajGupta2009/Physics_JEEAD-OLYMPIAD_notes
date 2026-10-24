@@ -37,7 +37,10 @@ def test():
         total_zips += len(all_zips)
         if chapter.name in EXPORTS:
             assert not list(chapter.glob('Olympiad-*.png')), f'{chapter.name} is JEE-only'
-    assert len(all_dirs) == 17 and total_pngs == 642 and total_pdfs == 49 and total_zips == 49, (
+    # Capacitors is the JEE-only edition, so its sheet count comes from its own source
+    cap = json.loads((ROOT / 'Capacitors' / 'sheets.json').read_text())['sheets']
+    assert total_pngs == 635 + len(cap), (total_pngs, len(cap))
+    assert len(all_dirs) == 17 and total_pdfs == 49 and total_zips == 49, (
         len(all_dirs), total_pngs, total_pdfs, total_zips
     )
     documents=[ROOT/'README.md',ROOT/'index.html',ROOT.parent/'README.md',ROOT.parent/'capacitors/README.md',ROOT.parent/'rotational-mechanics/README.md']
